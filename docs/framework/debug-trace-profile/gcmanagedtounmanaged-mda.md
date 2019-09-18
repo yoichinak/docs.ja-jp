@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7417f837-805e-4fed-a430-ca919c8421dc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7bb4779e300df71a5d075a322bcac8398ce42f34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afc0fd47e51723a7b3ba1b07dffc49260f88917d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754441"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052782"
 ---
 # <a name="gcmanagedtounmanaged-mda"></a>gcManagedToUnmanaged MDA
 `gcManagedToUnmanaged` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) は、スレッドがマネージド コードからアンマネージド コードに遷移する時に、毎回ガベージ コレクションがなされるようにします。  
@@ -30,7 +30,7 @@ ms.locfileid: "61754441"
 ## <a name="cause"></a>原因  
  アンマネージド コンポーネントがマネージド COM オブジェクトを正しくカウントする参照でない場合、ランタイムは、アンマネージド コンポーネントがオブジェクトへの参照を保持していると、COM に公開されたマネージド オブジェクトを収集できます。 ランタイムはガベージ コレクション中に <xref:System.Runtime.InteropServices.Marshal.Release%2A> を呼び出すので、ユーザー コンポーネントがガベージ コレクションの発生前にオブジェクトを使用すると、それは収集されないことになります。 これが非確定の原因です。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決策  
  このアシスタントを有効にすると、オブジェクトが収集の対象になってから <xref:System.Runtime.InteropServices.Marshal.Release%2A> が呼び出されるまでの時間が短縮し、収集されるオブジェクトへのアクセスを最初に試みるアンマネージ コンポーネントの追跡に役立ちます。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
@@ -52,6 +52,6 @@ ms.locfileid: "61754441"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
-- [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../interop/interop-marshaling.md)
+- [gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)

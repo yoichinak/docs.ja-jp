@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List control type
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
-ms.openlocfilehash: e0214e454754ac09f1271770f6975c00180a4584
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ed358947fc1dc1d29010a1a31c6c6603567f8734
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964237"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71041454"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>UI オートメーションによる List コントロール型のサポート
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "69964237"
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
- 次の表に、リスト コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーの 2 つのビューを示し、それぞれのビューに含めることができる内容について説明します。 コントロール ビューでは、コントロールである要素のみが表示されます。また、コンテンツ ビューでは、冗長な情報がツリーから除外されます。 たとえば、コンボ ボックスのラベルに使用されるテキスト コントロールは、 `ComboBox NameProperty`として公開されます。 このテキスト コントロールは、このようにコントロール ビューを介して既に公開されているため、2 回公開する必要はありません。したがって、コンテンツ ビューからは除外されます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーの詳細については、[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)をご覧ください。  
+ 次の表に、リスト コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーの 2 つのビューを示し、それぞれのビューに含めることができる内容について説明します。 コントロール ビューでは、コントロールである要素のみが表示されます。また、コンテンツ ビューでは、冗長な情報がツリーから除外されます。 たとえば、コンボ ボックスのラベルに使用されるテキスト コントロールは、 `ComboBox NameProperty`として公開されます。 このテキスト コントロールは、このようにコントロール ビューを介して既に公開されているため、2 回公開する必要はありません。したがって、コンテンツ ビューからは除外されます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーの詳細については、[UI Automation Tree Overview](ui-automation-tree-overview.md)をご覧ください。  
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
@@ -52,7 +52,7 @@ List コントロール型 (リスト コントロールなど) を実装する�
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、リスト コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティの詳細については、「[クライアントの UI オートメーションのプロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)」を参照してください。  
+ 次の表に、リスト コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティの詳細については、「[クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|[値]|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -71,7 +71,7 @@ List コントロール型 (リスト コントロールなど) を実装する�
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns-and-properties"></a>必須の UI オートメーション コントロール パターンおよびプロパティ  
- 次の表に、リスト コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターンを示します。 コントロール パターンについて詳しくは、「 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)」をご覧ください。  
+ 次の表に、リスト コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターンを示します。 コントロール パターンについて詳しくは、「 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)」をご覧ください。  
   
 |コントロール パターン/パターン プロパティ|サポート/値|メモ|  
 |---------------------------------------|--------------------|-----------|  
@@ -85,7 +85,7 @@ List コントロール型 (リスト コントロールなど) を実装する�
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
- 次の表に、すべてのリスト コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」をご覧ください。  
+ 次の表に、すべてのリスト コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](ui-automation-events-overview.md)」をご覧ください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート/値|メモ|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
@@ -107,5 +107,5 @@ List コントロール型 (リスト コントロールなど) を実装する�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Automation.ControlType.List>
-- [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI オートメーション コントロール型の概要](ui-automation-control-types-overview.md)
+- [UI オートメーションの概要](ui-automation-overview.md)

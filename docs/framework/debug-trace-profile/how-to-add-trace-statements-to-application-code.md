@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 626e9823bbf7d379a21ae353a9189485259f3c42
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948009"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052736"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>方法: アプリケーション コードにトレース ステートメントを追加する
 トレースで最も頻繁に使用されるメソッドは、出力をリスナーに書き込むためのメソッドです。**Write**、 **WriteIf**、 **WriteLine**、 **WriteLineIf**、 **Assert**、および**Fail**。 これらのメソッドは、次の2つのカテゴリに分けることができます。**Write**、 **WriteLine**、および**Fail**はすべて無条件に出力を生成します。一方、 **WriteIf**、 **WriteLineIf**、および**Assert**はブール条件をテストし、条件の値に基づいて書き込みまたは書き込みを行いません。 **WriteIf** と **WriteLineIf** は条件が `true` の場合に出力を生成し、**Assert** は条件が `false` の場合に出力を生成します。  
@@ -90,7 +90,7 @@ ms.locfileid: "69948009"
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
-- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [方法: トレーススイッチを作成、初期化、および構成する](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [トレース リスナー](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [アプリケーションのトレースとインストルメント](tracing-and-instrumenting-applications.md)
+- [方法: トレーススイッチを作成、初期化、および構成する](how-to-create-initialize-and-configure-trace-switches.md)
+- [トレース スイッチ](trace-switches.md)
+- [トレース リスナー](trace-listeners.md)

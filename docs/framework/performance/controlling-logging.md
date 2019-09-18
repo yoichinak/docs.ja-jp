@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1648af8c3dc407581714e8e863fe4972d6ffadbc
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 45df41e10dc81bc6011e5329723bca55925825f9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894940"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046683"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework のログ記録の制御
 
@@ -85,7 +85,7 @@ Provider                                 GUID
 
 ## <a name="viewing-clr-etw-events"></a>CLR ETW イベントの表示
 
-CLR ETW イベントを表示するには、以下のコマンドを使用します。 イベントの詳細については、「[CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)」を参照してください。
+CLR ETW イベントを表示するには、以下のコマンドを使用します。 イベントの詳細については、「[CLR ETW イベント](clr-etw-events.md)」を参照してください。
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>Tracerpt を使用して CLR ETW イベントを表示するには
 
@@ -114,4 +114,4 @@ CLR ETW イベントを表示するには、以下のコマンドを使用しま
 ## <a name="see-also"></a>関連項目
 
 - [Windows パフォーマンス ツールキット](/windows-hardware/test/wpt/)
-- [共通言語ランタイムの ETW イベント](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [共通言語ランタイムの ETW イベント](etw-events-in-the-common-language-runtime.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce93ea321c0441208e223efc22cf1f50e98b827c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1a15d30ea4d6e0f4456460248e96428419117d85
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044134"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049436"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native とコンパイル
 
@@ -82,7 +82,7 @@ ms.locfileid: "70044134"
 
 - COM 相互運用。
 
-必要なメタデータや実装コードが実行時に存在しない場合は、.NET ネイティブ ランタイムが例外をスローします。 これらの例外を回避し、必要なメタデータと実装コードが .NET ネイティブ ツール チェーンによって組み込まれたことを確認するには、[ランタイム ディレクティブ ファイル](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)という XML ファイルを使用します。このファイルでは、実行時に利用可能であることが必要なメタデータまたは実装コードを含むプログラム要素を指定し、それらのプログラム要素にランタイム ポリシーを割り当てます。 .NET ネイティブ ツール チェーンでコンパイルした Windows ストア プロジェクトに追加される既定のランタイム ディレクティブ ファイルは次のとおりです。
+必要なメタデータや実装コードが実行時に存在しない場合は、.NET ネイティブ ランタイムが例外をスローします。 これらの例外を回避し、必要なメタデータと実装コードが .NET ネイティブ ツール チェーンによって組み込まれたことを確認するには、[ランタイム ディレクティブ ファイル](runtime-directives-rd-xml-configuration-file-reference.md)という XML ファイルを使用します。このファイルでは、実行時に利用可能であることが必要なメタデータまたは実装コードを含むプログラム要素を指定し、それらのプログラム要素にランタイム ポリシーを割り当てます。 .NET ネイティブ ツール チェーンでコンパイルした Windows ストア プロジェクトに追加される既定のランタイム ディレクティブ ファイルは次のとおりです。
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -96,7 +96,7 @@ ms.locfileid: "70044134"
 
 ## <a name="net-native-and-ngen"></a>.NET ネイティブと NGEN
 
-[ネイティブ イメージ ジェネレーター](../../../docs/framework/tools/ngen-exe-native-image-generator.md) (NGEN) は、アセンブリをネイティブ コードにコンパイルして、ローカル コンピューター上のネイティブ イメージ キャッシュにインストールします。 ただし、NGEN は、ネイティブ コードを生成するという点では .NET ネイティブと同じですが、いくつかの重要な点で .NET ネイティブと異なります。
+[ネイティブ イメージ ジェネレーター](../tools/ngen-exe-native-image-generator.md) (NGEN) は、アセンブリをネイティブ コードにコンパイルして、ローカル コンピューター上のネイティブ イメージ キャッシュにインストールします。 ただし、NGEN は、ネイティブ コードを生成するという点では .NET ネイティブと同じですが、いくつかの重要な点で .NET ネイティブと異なります。
 
 - NGEN は、特定のメソッドのネイティブ イメージを利用できない場合に、コードの JIT 処理にフォールバックします。 このため、NGEN が JIT コンパイルにフォールバックする必要がある場合に備えて、メタデータと IL をネイティブ イメージに組み込んでおく必要があります。 これに対して、.NET ネイティブではネイティブ イメージのみが生成され、JIT コンパイルにフォールバックすることはありません。 その結果、一部のリフレクション、シリアル化、および相互運用機能のシナリオに必要なメタデータのみを保持すれは十分です。
 
@@ -108,5 +108,5 @@ ms.locfileid: "70044134"
 
 - [メタデータと自己言及的なコンポーネント](../../standard/metadata-and-self-describing-components.md)
 - [.NET ネイティブ内 (Channel 9 ビデオ)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
-- [リフレクションおよび .NET ネイティブ](../../../docs/framework/net-native/reflection-and-net-native.md)
-- [.NET ネイティブの一般的なトラブルシューティング](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+- [リフレクションおよび .NET ネイティブ](reflection-and-net-native.md)
+- [.NET ネイティブの一般的なトラブルシューティング](net-native-general-troubleshooting.md)

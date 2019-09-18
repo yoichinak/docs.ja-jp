@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35560b966d5fba60ac35b2eb1e559e196fc868f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea7f48ab61c16cb0430717074f1b1feab4827763
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754540"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052590"
 ---
 # <a name="invalidiunknown-mda"></a>invalidIUnknown MDA
 `invalidIUnknown` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) は、無効な `IUnknown` ポインターがネイティブ コードからマネージド コードに渡されるとアクティブ化されます。 `IUnknown` インターフェイスが照会されたときに、`IUnknown` は、成功したことを返すことができませんでした。  
@@ -26,7 +26,7 @@ ms.locfileid: "61754540"
 ## <a name="cause"></a>原因  
  CLR に渡された COM インターフェイスで、`QueryInterface` の実装が正しくありません。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決策  
  `QueryInterface` の実装を修正します。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
@@ -48,5 +48,5 @@ ms.locfileid: "61754540"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../interop/interop-marshaling.md)

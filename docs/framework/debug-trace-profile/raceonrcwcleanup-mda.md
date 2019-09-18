@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca3b28d0d27af0a752de894f5856b76939b01e09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07b6c674e2608ac46bf9870ae26afc2fc1ec99ba
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967241"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052351"
 ---
 # <a name="raceonrcwcleanup-mda"></a>raceOnRCWCleanup MDA
 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> メソッドなどのコマンドを使用して [ランタイム呼び出し可能ラッパー](../../standard/native-interop/runtime-callable-wrapper.md) (RCW: Runtime Callable Wrapper) を解放する呼び出しがなされた時点でその RCW が使用中であることを共通言語ランタイム (CLR: Common Language Runtime) が検出すると、`raceOnRCWCleanup` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) がアクティブ化されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "69967241"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA は CLR に影響しません。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>出力  
  エラーを説明するメッセージです。  
   
 ## <a name="configuration"></a>構成  
@@ -49,5 +49,5 @@ ms.locfileid: "69967241"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../interop/interop-marshaling.md)

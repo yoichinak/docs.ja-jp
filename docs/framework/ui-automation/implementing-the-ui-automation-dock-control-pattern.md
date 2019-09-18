@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: 9bc4f80569dc2bab68e3f65c9e99df72df372171
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b72d7f9a68c2309f2bd1a73741ac621cde1f3115
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968916"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043464"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>UI オートメーション Dock コントロール パターンの実装
 > [!NOTE]
@@ -19,9 +19,9 @@ ms.locfileid: "69968916"
   
  ここでは、プロパティに関する情報など、 <xref:System.Windows.Automation.Provider.IDockProvider>を実装するガイドラインと規則について説明します。 その他のリファレンスへのリンクは、トピックの最後に記載します。  
   
- <xref:System.Windows.Automation.DockPattern> コントロール パターンは、ドッキング コンテナー内のコントロールのドッキング プロパティを公開するために使用します。 ドッキング コンテナーは、子要素を互いに水平方向または垂直方向に整列できるコントロールです。 このコントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)」をご覧ください。  
+ <xref:System.Windows.Automation.DockPattern> コントロール パターンは、ドッキング コンテナー内のコントロールのドッキング プロパティを公開するために使用します。 ドッキング コンテナーは、子要素を互いに水平方向または垂直方向に整列できるコントロールです。 このコントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)」をご覧ください。  
   
- ![2 つのドッキングされた子を持つドッキングコンテナー。](../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
+ ![2 つのドッキングされた子を持つドッキングコンテナー。](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
 "Class View" ウィンドウが DockPosition.Right に "Error List" ウィンドウが DockPosition.Bottom にそれぞれ配置された Visual Studio のドッキングの例  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
@@ -57,8 +57,8 @@ ms.locfileid: "69968916"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI Automation コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI オートメーション プロバイダーでのコントロール パターンのサポート](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI Automation ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI オートメーションにおけるキャッシュの使用](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI Automation コントロール パターンの概要](ui-automation-control-patterns-overview.md)
+- [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
+- [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
+- [UI Automation ツリーの概要](ui-automation-tree-overview.md)
+- [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)

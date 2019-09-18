@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80473e01581a372c193c4b816a37166b73d57824
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: fa6d3832dcd842631d290e046b5e32908ce4bb7e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854150"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052535"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 `jitCompilationStart` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) が起動すると、Just-In-Time (JIT) コンパイラが関数のコンパイルを開始した時刻が報告されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "70854150"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA は、メソッドが JIT コンパイルされる前にメッセージをログに記録します。そのため、この MDA を有効にすると、パフォーマンスに大きな影響が出ます。 メソッドがインラインの場合、この MDA は別個のメッセージを生成しません。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>出力  
  次のコード サンプルでは、サンプル出力を確認できます。 ここでは、アセンブリ Test で、クラス "ns2.CO" のメソッド "m" が JIT コンパイルされたことを出力で確認できます。  
   
 ```output
@@ -160,5 +160,5 @@ namespace ns2
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../interop/interop-marshaling.md)

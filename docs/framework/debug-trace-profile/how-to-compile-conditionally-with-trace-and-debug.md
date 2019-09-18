@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1692b93e09ec972e537e4a375774eeeb865bd58c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d06d1ef8e1508aefa8c9ed9327b89f58ff6976fa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043430"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052747"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>方法: トレースとデバッグを指定して条件付きコンパイルを実行する
 開発時にアプリケーションをデバッグするときは、トレース出力とデバッグ出力の両方が Visual Studio の [出力] ウィンドウに表示されます。 ただし、配置されるアプリケーションにトレース機能を組み込むには、**TRACE** コンパイラ ディレクティブを有効にして、インストルメント化されたアプリケーションをコンパイルする必要があります。 これにより、コンパイルされたアプリケーションのリリース バージョンに、トレース コードが組み込まれます。 **TRACE** ディレクティブを有効にしないと、コンパイル時にすべてのトレース コードが無視され、配置する実行可能コードに含まれなくなります。  
@@ -97,10 +97,10 @@ ms.locfileid: "70043430"
   
 ## <a name="see-also"></a>関連項目
 
-- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [方法: トレーススイッチを作成、初期化、および構成する](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [トレース リスナー](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [方法: アプリケーションコードにトレースステートメントを追加する](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [アプリケーションのトレースとインストルメント](tracing-and-instrumenting-applications.md)
+- [方法: トレーススイッチを作成、初期化、および構成する](how-to-create-initialize-and-configure-trace-switches.md)
+- [トレース スイッチ](trace-switches.md)
+- [トレース リスナー](trace-listeners.md)
+- [方法: アプリケーションコードにトレースステートメントを追加する](how-to-add-trace-statements-to-application-code.md)
 - [方法: Visual Studio のコマンドラインのための環境変数を設定する](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [方法: コマンド ライン コンパイラを起動する](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

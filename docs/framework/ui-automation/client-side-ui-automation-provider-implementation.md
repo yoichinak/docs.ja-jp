@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9079dfa03ab81bfa6875e43bfa8a6e5351e0a35d
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 28179ecd27c98f1de5662908ced3ea0e49cb87ad
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015117"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043955"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>クライアント側 UI オートメーション プロバイダーの実装
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "70015117"
   
  [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)]には、標準[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]コントロールと Windows フォームコントロールのプロバイダーが用意されています。 また、フォールバックプロバイダーは、別の[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]サーバー側プロバイダーまたはプロキシによって処理されないが、Microsoft Active Accessibility 実装があるコントロールに対して、部分的なサポートを提供します。 これらすべてのプロバイダーは、自動的に読み込まれ、クライアント アプリケーションから使用できるようになります。  
   
- および Windows フォームコントロールの[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]サポートの詳細については、「 [UI オートメーションによる標準コントロールのサポート](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)」を参照してください。  
+ および Windows フォームコントロールの[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]サポートの詳細については、「 [UI オートメーションによる標準コントロールのサポート](ui-automation-support-for-standard-controls.md)」を参照してください。  
   
  アプリケーションが他のクライアント側プロバイダーを登録することもできます。  
   
@@ -51,5 +51,5 @@ ms.locfileid: "70015117"
   
 ## <a name="see-also"></a>関連項目
 
-- [クライアント側 UI オートメーション プロバイダーの作成](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
-- [クライアント アプリケーションに UI オートメーション プロバイダーを実装する](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+- [クライアント側 UI オートメーション プロバイダーの作成](create-a-client-side-ui-automation-provider.md)
+- [クライアント アプリケーションに UI オートメーション プロバイダーを実装する](implement-ui-automation-providers-in-a-client-application.md)

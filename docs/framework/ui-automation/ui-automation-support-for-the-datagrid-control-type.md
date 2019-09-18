@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 1427e91174d2a4ad0ded17086774dc799850d7d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0677e600864954040ac650afaf647f2c4e30e351
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914125"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71041817"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>UI オートメーションによる DataGrid コントロール型のサポート
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "69914125"
  以下の各セクションで、DataGrid コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の要件は、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]、 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]のいずれの場合も、すべてのデータ グリッド コントロールに適用されます。  
   
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
- 次の表では、データ グリッド コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含まれる可能性のある内容について説明します。 ツリーの[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]詳細については、「 [UI オートメーションツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)」を参照してください。  
+ 次の表では、データ グリッド コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含まれる可能性のある内容について説明します。 ツリーの[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]詳細については、「 [UI オートメーションツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー - コントロール ビュー|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー - コンテンツ ビュー|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
@@ -32,7 +32,7 @@ ms.locfileid: "69914125"
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、データ グリッド コントロールに特に関連する値または定義を持つプロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティの詳細については、「[クライアントの UI オートメーションのプロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)」を参照してください。  
+ 次の表に、データ グリッド コントロールに特に関連する値または定義を持つプロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティの詳細については、「[クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
   
 |プロパティ|値|メモ|  
 |--------------|-----------|-----------|  
@@ -48,7 +48,7 @@ ms.locfileid: "69914125"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|「ノート」をご覧ください。|データ グリッド コントロールは、通常、静的テキスト ラベルから `Name` プロパティの列を取得します。 静的なテキスト ラベルがない場合は、アプリケーション開発者が `Name` のプロパティ値を割り当てる必要があります。 `Name` プロパティの値が、編集コントロールのテキストの内容になることは決してありません。|  
   
 ## <a name="required-ui-automation-control-patterns"></a>必須の UI オートメーション コントロール パターン  
- 次の表に、すべてのデータ グリッド コントロールでサポートされなければならないコントロール パターンを示します。 コントロール パターンについて詳しくは、「 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)」をご覧ください。  
+ 次の表に、すべてのデータ グリッド コントロールでサポートされなければならないコントロール パターンを示します。 コントロール パターンについて詳しくは、「 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)」をご覧ください。  
   
 |コントロール パターン|サポート|メモ|  
 |---------------------|-------------|-----------|  
@@ -69,7 +69,7 @@ ms.locfileid: "69914125"
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
- 次の表に、すべてのデータ グリッド コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」をご覧ください。  
+ 次の表に、すべてのデータ グリッド コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](ui-automation-events-overview.md)」をご覧ください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|メモ|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
@@ -91,7 +91,7 @@ ms.locfileid: "69914125"
 ## <a name="date-grid-control-type-example"></a>データ グリッド コントロール型の例  
  次の図に、DataGrid コントロール型を実装するリスト ビュー コントロールを示します。  
   
- ![2 つのデータ項目を持つリストビューコントロールのグラフィック](../../../docs/framework/ui-automation/media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
+ ![2 つのデータ項目を持つリストビューコントロールのグラフィック](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
   
  以下には、リスト ビュー コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューが表示されています。 オートメーションの各要素のコントロール パターンが、かっこ内に示されています。  
   
@@ -104,5 +104,5 @@ ms.locfileid: "69914125"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Automation.ControlType.DataGrid>
-- [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI オートメーション コントロール型の概要](ui-automation-control-types-overview.md)
+- [UI オートメーションの概要](ui-automation-overview.md)

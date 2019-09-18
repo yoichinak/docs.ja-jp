@@ -2,12 +2,12 @@
 title: インターネット インフォメーション サービスでホストされる WCF サービスの配置
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895103"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053314"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>インターネット インフォメーション サービスでホストされる WCF サービスの配置
 
@@ -29,7 +29,7 @@ IIS でホストされる WCF サービスの作成に関する詳細なチュ�
 
 IIS でホストされる WCF サービスが正常に機能するためには、WCF、IIS、および ASP.NET をインストールする必要があります。 WCF (.NET Framework の一部として)、ASP.NET、および IIS のインストール手順は、オペレーティングシステムによって異なります。 WCF と .NET Framework のインストールの詳細については、「[開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)」を参照してください。 Windows 10 に IIS をインストールするには、**コントロールパネル**の **[プログラムと機能]** を開き、 **[Windows の機能の有効化または無効化]** を選択します。 **Windows の機能** で、**インターネットインフォメーションサービス**を選択し、 **OK**を選択します。
 
-![IIS が強調表示されている Windows の機能](media/windows-features-iis.png)
+![IIS が強調表示されている Windows の機能](./media/windows-features-iis.png)
 
 他のオペレーティングシステムに IIS をインストールする手順については、「windows [Vista および windows 7 に](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7)Iis をインストールする」および「 [Windows Server 2012 R2 に Iis 8.5 をインストール](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2)する」を参照してください。
 

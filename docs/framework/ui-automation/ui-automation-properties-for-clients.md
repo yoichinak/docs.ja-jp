@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 6f02a4825206da0dd4949083cc54f555a8ae40b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9c92ea154a078ff5a059edd82f06b8f3d5bab239
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914454"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042133"
 ---
 # <a name="ui-automation-properties-for-clients"></a>クライアントの UI オートメーション プロパティ
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "69914454"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティは読み取り専用です。 コントロールのプロパティを設定するには、適切なコントロール パターンのメソッドを使用する必要があります。 たとえば、スクロール ウィンドウの位置の値を変更する場合は、 <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> を使用します。  
   
- パフォーマンスを向上させるために、 <xref:System.Windows.Automation.AutomationElement> オブジェクトを取得したときに、コントロールおよびコントロール パターンのプロパティ値をキャッシュできます。 詳細については、「 [UI オートメーションクライアントでのキャッシュ](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)」を参照してください。  
+ パフォーマンスを向上させるために、 <xref:System.Windows.Automation.AutomationElement> オブジェクトを取得したときに、コントロールおよびコントロール パターンのプロパティ値をキャッシュできます。 詳細については、「 [UI オートメーションクライアントでのキャッシュ](caching-in-ui-automation-clients.md)」を参照してください。  
   
 ## <a name="property-ids"></a>プロパティ ID  
  プロパティ識別子 (IDs) は、オブジェクトに<xref:System.Windows.Automation.AutomationProperty>カプセル化される一意の定数値です。 UI オートメーションクライアントアプリケーションは、 <xref:System.Windows.Automation.AutomationElement>クラスまたは適切なコントロールパターンクラス (など<xref:System.Windows.Automation.ScrollPattern>) からこれらの id を取得します。 UI オートメーション プロバイダーは、 <xref:System.Windows.Automation.AutomationElementIdentifiers> またはコントロール パターン識別子クラスの 1 つ ( <xref:System.Windows.Automation.ScrollPatternIdentifiers>など) からこれらを取得します。  
@@ -99,6 +99,6 @@ ms.locfileid: "69914454"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI オートメーション クライアントにおけるキャッシュ](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [UI オートメーション イベントのサブスクライブ](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [UI オートメーション クライアントにおけるキャッシュ](caching-in-ui-automation-clients.md)
+- [サーバー側 UI オートメーション プロバイダーの実装](server-side-ui-automation-provider-implementation.md)
+- [UI オートメーション イベントのサブスクライブ](subscribe-to-ui-automation-events.md)

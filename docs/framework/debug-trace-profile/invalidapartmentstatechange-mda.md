@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ff68ce5f612255f41ce3a7c6f2526c3a340cfcd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ed4933ae59223c0674d2e36428894cbc3a07933f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967315"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052658"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
 `invalidApartmentStateChange` マネージド デバッグ アシスタント (MDS) は、次の 2 つのどちらかの問題によってアクティブ化されます。  
@@ -47,7 +47,7 @@ ms.locfileid: "69967315"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA は CLR に影響しません。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>出力  
  現在のスレッドの COM アパートメント状態、およびコードが適用しようとした状態。  
   
 ## <a name="configuration"></a>構成  
@@ -80,5 +80,5 @@ namespace ApartmentStateMDA
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../interop/interop-marshaling.md)

@@ -1,17 +1,17 @@
 ---
-title: <Subtypes> 要素 (.NET ネイティブ)
+title: <Subtypes>要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e0ec1ed73148b319217a70cc3be99b486be2f8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2af1acc02b18c5b97ef66ccae9b70c1f5327bff4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866854"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049126"
 ---
-# <a name="subtypes-element-net-native"></a>\<Subtypes > 要素 (.NET ネイティブ)
+# <a name="subtypes-element-net-native"></a>\<サブタイプ > 要素 (.NET ネイティブ)
 それを含む型から継承されたすべてのクラスに実行時ポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -49,9 +49,9 @@ ms.locfileid: "61866854"
   
 ## <a name="all-attributes"></a>すべての属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
+|*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -60,7 +60,7 @@ ms.locfileid: "61866854"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
+|[\<Type>](type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>Remarks  
  `<Subtypes>` 要素は、それを含む型のすべてのサブタイプにポリシーを適用します。 派生型および基底クラスに異なるポリシーを適用する場合に使用します。  
@@ -91,7 +91,7 @@ ms.locfileid: "61866854"
   
 ## <a name="see-also"></a>関連項目
 
-- [\<型 > 要素](../../../docs/framework/net-native/type-element-net-native.md)
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<> 要素を入力します](type-element-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ要素](runtime-directive-elements.md)
+- [ランタイム ディレクティブ ポリシーの設定](runtime-directive-policy-settings.md)

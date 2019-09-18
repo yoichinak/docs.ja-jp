@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ec8180da9637ec2b2c4e1b432773b4f9f1ac908b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913802"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049180"
 ---
 # <a name="serialization-and-metadata"></a>シリアル化とメタデータ
 
@@ -22,7 +22,7 @@ ms.locfileid: "69913802"
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>サードパーティ シリアライザー
 
- Newtonsoft.JSON などのサードパーティ シリアライザーは通常リフレクション ベースです。 シリアル化データのバイナリ ラージ オブジェクト (BLOB) の場合、対象の型のフィールドを名前で検索することで、データ内のフィールドが具象型に割り当てられます。 少なくとも、これらのライブラリを使用すると、`List<Type>` コレクションでシリアル化または逆シリアル化しようとする <xref:System.Type> オブジェクトごとに [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外が発生します。  
+ Newtonsoft.JSON などのサードパーティ シリアライザーは通常リフレクション ベースです。 シリアル化データのバイナリ ラージ オブジェクト (BLOB) の場合、対象の型のフィールドを名前で検索することで、データ内のフィールドが具象型に割り当てられます。 少なくとも、これらのライブラリを使用すると、`List<Type>` コレクションでシリアル化または逆シリアル化しようとする <xref:System.Type> オブジェクトごとに [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外が発生します。  
   
  これらのシリアライザーでメタデータの欠落により引き起こされる問題に対処する最も簡単な方法は、1 つの名前空間 (`App.Models` など) でシリアル化に使用される型を収集し、`Serialize` メタデータ ディレクティブを適用することです。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "69913802"
 <Namespace Name="App.Models" Serialize="Required PublicAndInternal" />  
 ```  
   
- この例で使用されている構文の詳細については、「[\<Namespace> 要素](../../../docs/framework/net-native/namespace-element-net-native.md)」を参照してください。  
+ この例で使用されている構文の詳細については、「[\<Namespace> 要素](namespace-element-net-native.md)」を参照してください。  
   
 <a name="Microsoft"></a>
 ## <a name="microsoft-serializers"></a>Microsoft のシリアライザー
@@ -67,11 +67,11 @@ ms.locfileid: "69913802"
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- この例で使用されている構文の詳細については、「[\<Type> 要素](../../../docs/framework/net-native/type-element-net-native.md)」を参照してください。  
+ この例で使用されている構文の詳細については、「[\<Type> 要素](type-element-net-native.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [\<> 要素を入力します](../../../docs/framework/net-native/type-element-net-native.md)
-- [\<Namespace > 要素](../../../docs/framework/net-native/namespace-element-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ要素](runtime-directive-elements.md)
+- [\<> 要素を入力します](type-element-net-native.md)
+- [\<Namespace > 要素](namespace-element-net-native.md)

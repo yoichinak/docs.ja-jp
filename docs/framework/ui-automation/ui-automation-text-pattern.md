@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
-ms.openlocfilehash: 27d5bcee34bcbfa101f381a569428a64a45da0b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7985e6cf3eaa810a893b0b5183a1c141a041768
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954092"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040512"
 ---
 # <a name="ui-automation-text-pattern"></a>UI オートメーション テキスト パターン
 > [!NOTE]
@@ -22,14 +22,14 @@ ms.locfileid: "69954092"
  このトピックには、の[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]テキスト要素のプログラミングを開始する際に役立つ概要と操作方法に関するトピックが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [UI オートメーション TextPattern の概要](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [TextPattern および埋め込みオブジェクトの概要](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [方法トピック](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+ [UI オートメーション TextPattern の概要](ui-automation-textpattern-overview.md)  
+ [TextPattern および埋め込みオブジェクトの概要](textpattern-and-embedded-objects-overview.md)  
+ [方法トピック](ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Automation.Text>  
   
 ## <a name="see-also"></a>関連項目
 
-- [UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
-- [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [UI オートメーション コントロール パターン](ui-automation-control-patterns.md)
+- [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)

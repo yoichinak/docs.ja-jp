@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3a1fb8a48cf6dbfc4edd6387fb35297c9c047270
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d14ba8724659172711da44e7bb249e9d20768dbc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854040"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052334"
 ---
 # <a name="reentrancy-mda"></a>reentrancy MDA
 `reentrancy` マネージド デバッグ アシスタント (MDA) は、前のマネージド コードからネイティブ コードへの切り替えが遷移順序を守って実行されなかった場合に、ネイティブ コードからマネージド コードへの遷移が試みられるとアクティブになります。  
@@ -45,7 +45,7 @@ ms.locfileid: "70854040"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA は CLR に影響しません。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>出力  
  MDA は、無効な再入が試みられていることを報告します。  これが発生している理由と、問題の解決方法を確認するには、スレッドのスタックを調べます。 サンプルの出力を次に示します。  
   
 ```output
@@ -106,4 +106,4 @@ public class Reenter
   
 ## <a name="see-also"></a>関連項目
 
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

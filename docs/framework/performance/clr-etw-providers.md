@@ -7,28 +7,28 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec83bfd08277c79f15904d50a85e43cc61ecd527
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 93a0271c521de6e390e323d92e93a5e7bf94444f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894700"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046736"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW プロバイダー
 共通言語ランタイム (CLR: Common Language Runtime) には、ランタイム プロバイダーとランダウン プロバイダーという 2 つのプロバイダーがあります。  
   
  ランタイム プロバイダーは、有効になっているキーワードに応じてイベントを発生させます (キーワードとはイベントのカテゴリです)。 たとえば、ローダー イベントを収集するには `LoaderKeyword` キーワードを有効にします。  
   
- Windows イベントトレーシング (ETW) イベントは、.etl 拡張子を持つファイルに記録されます。このファイルは、必要に応じてコンマ区切り値 (.csv) ファイルで後から処理できます。 .etl ファイルを .csv ファイルに変換する方法の詳細については、「[.NET Framework のログ記録の制御](../../../docs/framework/performance/controlling-logging.md)」を参照してください。  
+ Windows イベントトレーシング (ETW) イベントは、.etl 拡張子を持つファイルに記録されます。このファイルは、必要に応じてコンマ区切り値 (.csv) ファイルで後から処理できます。 .etl ファイルを .csv ファイルに変換する方法の詳細については、「[.NET Framework のログ記録の制御](controlling-logging.md)」を参照してください。  
   
 ## <a name="the-runtime-provider"></a>ランタイム プロバイダー  
  ランタイム プロバイダーは、メインの CLR ETW プロバイダーです。  
   
  CLR ランタイム プロバイダーの GUID は e13c0d23-ccbc-4e12-931b-d9cc2eee27e4 です。  
   
- 一般に利用可能なツールを使用して CLR ETW イベントを記録および表示する方法の例については、「[.NET Framework のログ記録の制御](../../../docs/framework/performance/controlling-logging.md)」を参照してください。  
+ 一般に利用可能なツールを使用して CLR ETW イベントを記録および表示する方法の例については、「[.NET Framework のログ記録の制御](controlling-logging.md)」を参照してください。  
   
- `LoaderKeyword` などのキーワードを使用する以外にも、発生頻度が高いイベントを記録するためのキーワードを有効にしなければならない場合があります。 `StartEnumerationKeyword` キーワードと `EndEnumerationKeyword` キーワードはこれらのイベントを有効にします。概要については、「[CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)」(CLR ETW のキーワードおよびレベル) を参照してください。  
+ `LoaderKeyword` などのキーワードを使用する以外にも、発生頻度が高いイベントを記録するためのキーワードを有効にしなければならない場合があります。 `StartEnumerationKeyword` キーワードと `EndEnumerationKeyword` キーワードはこれらのイベントを有効にします。概要については、「[CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」(CLR ETW のキーワードおよびレベル) を参照してください。  
   
 ## <a name="the-rundown-provider"></a>ランダウン プロバイダー  
  ランダウン プロバイダーは、一部の特殊な用途で有効にする必要があります。 ただし、大半のユーザーにとっては、ランタイム プロバイダーで十分です。  
@@ -93,4 +93,4 @@ ms.locfileid: "70894700"
   
 ## <a name="see-also"></a>関連項目
 
-- [共通言語ランタイムの ETW イベント](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [共通言語ランタイムの ETW イベント](etw-events-in-the-common-language-runtime.md)

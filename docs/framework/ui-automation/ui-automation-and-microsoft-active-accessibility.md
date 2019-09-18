@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 8aadcc213e92fd53490f639f37dc8d8f62762c2c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 63b00f8eb35fa58ea0257d5e996fc2c51a248040
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946482"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042581"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI オートメーションと Microsoft Active Accessibility
 > [!NOTE]
@@ -110,7 +110,7 @@ ms.locfileid: "69946482"
 |ROLE_SYSTEM_OUTLINEITEM|ツリー項目|  
 |ROLE_SYSTEM_WINDOW|[Window]|  
   
- さまざまなコントロール型の詳細については、「 [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)」を参照してください。  
+ さまざまなコントロール型の詳細については、「 [UI Automation Control Types](ui-automation-control-types.md)」を参照してください。  
   
 <a name="States_and_Properties"></a>   
 ## <a name="states-and-properties"></a>状態とプロパティ  
@@ -176,7 +176,7 @@ ms.locfileid: "69946482"
 |STATE_SYSTEM_HOTTRACKED|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_PRESSED|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
   
- プロパティ識別子の完全な[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]一覧については、「 [UI オートメーションプロパティの概要](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)」を参照してください。  
+ プロパティ識別子の完全な[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]一覧については、「 [UI オートメーションプロパティの概要](ui-automation-properties-overview.md)」を参照してください。  
   
 <a name="uiautomation_events_compare"></a>   
 ## <a name="events"></a>イベント  
@@ -251,4 +251,4 @@ ms.locfileid: "69946482"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI オートメーションの基礎](../../../docs/framework/ui-automation/index.md)
+- [UI オートメーションの基礎](index.md)

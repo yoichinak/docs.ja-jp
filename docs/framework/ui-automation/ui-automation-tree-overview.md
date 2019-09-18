@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: 7dd799b32d51c7e24e6717561aab549e7e7f1fbe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adb1d10e659254b5fa326e7c598107d768aa2685
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954005"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040404"
 ---
 # <a name="ui-automation-tree-overview"></a>UI オートメーション ツリーの概要
 > [!NOTE]
@@ -57,4 +57,4 @@ ms.locfileid: "69954005"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Automation.AutomationElement>
-- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI オートメーションの概要](ui-automation-overview.md)

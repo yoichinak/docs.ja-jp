@@ -2,12 +2,12 @@
 title: SQL と CLR の型マッピング
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: b209283f5d4e87d1faab06184bda3f79bf1adaed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
-ms.translationtype: HT
+ms.openlocfilehash: 6710c58a430c35dae41a1a381335019fd3e75192
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792522"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053040"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL と CLR の型マッピング
 LINQ to SQL では、リレーショナル データベースのデータ モデルが、任意のプログラミング言語で表されるオブジェクト モデルに対応付けられています。 アプリケーションが実行されると、LINQ to SQL は、オブジェクト モデルの統合言語クエリを SQL に変換し、それをデータベースに送信して実行します。 データベースから結果が返されると、LINQ to SQL はその結果をプログラミング言語で操作できるオブジェクトに変換し直します。  
@@ -44,7 +44,7 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
 ## <a name="type-mapping-run-time-behavior-matrix"></a>型マッピングと実行時動作の関係  
  次の図は、データがデータベースから取得されるときやデータベースに保存されるときに、特定の型マッピングで行われる実行時の動作を示しています。 シリアル化を除き、LINQ to SQL では、このマトリックスに指定されていない CLR または SQL Server のデータ型のマッピングはサポートされません。 シリアル化のサポートの詳細については、「[バイナリシリアル化](#BinarySerialization)」を参照してください。  
  
-![SQL CLR データ型マッピングテーブルへの SQL Server](media/sql-clr-type-mapping.png)
+![SQL CLR データ型マッピングテーブルへの SQL Server](./media/sql-clr-type-mapping.png)
 
 > [!NOTE]
 > 一部の型マッピングでは、データベースに対する変換操作中にオーバーフローやデータ損失の例外が発生することがあります。  

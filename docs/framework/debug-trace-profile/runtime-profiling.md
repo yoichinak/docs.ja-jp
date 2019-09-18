@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2486316cf582da09eaa8998d06efb8a4e4ea3a88
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 163022256dfbeb303a500d9c1d574054c5b550d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967210"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052299"
 ---
 # <a name="runtime-profiling"></a>ランタイム プロファイリング
 プロファイリングは、任意の開発シナリオまたは配置シナリオでパフォーマンス データを収集する方法の 1 つです。 このセクションは、アプリケーションのパフォーマンスに関する情報の収集を必要とする開発者およびシステム管理者を対象にしています。  
@@ -34,7 +34,7 @@ ms.locfileid: "69967210"
   
 3. パフォーマンス モニターのツールバーで、 **[追加]** アイコン (正符号) をクリックします (表示されている場合)。 表示されていない場合は、モニター ウィンドウで右クリックし、 **[カウンターの追加]** オプションを選択します。  
   
-     **[接続の追加]** ダイアログ ボックスが表示されます。 **[使用可能なカウンター]** リスト ボックスに、使用可能なパフォーマンス オブジェクトが表示されます。 .NET Framework アプリケーション用には、さまざまな定義済みのオブジェクトがあります。これには、メモリ管理 ( **.NET CLR メモリ**)、相互運用性 ( **.NET CLR の相互運用性**)、例外処理 ( **.NET CLR 例外**)、およびマルチスレッド ( **.NET CLR LocksAndThreads**) が含まれます。 各パフォーマンス オブジェクトには、個々 のパフォーマンス カウンターが多数含まれています。 パフォーマンス モニターで使用可能なパフォーマンス カウンターの一覧は、「 [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)と共にインストールされる .NET Framework パフォーマンス カウンター内のデータをグラフィカルに表示します。  
+     **[接続の追加]** ダイアログ ボックスが表示されます。 **[使用可能なカウンター]** リスト ボックスに、使用可能なパフォーマンス オブジェクトが表示されます。 .NET Framework アプリケーション用には、さまざまな定義済みのオブジェクトがあります。これには、メモリ管理 ( **.NET CLR メモリ**)、相互運用性 ( **.NET CLR の相互運用性**)、例外処理 ( **.NET CLR 例外**)、およびマルチスレッド ( **.NET CLR LocksAndThreads**) が含まれます。 各パフォーマンス オブジェクトには、個々 のパフォーマンス カウンターが多数含まれています。 パフォーマンス モニターで使用可能なパフォーマンス カウンターの一覧は、「 [Performance Counters](performance-counters.md)と共にインストールされる .NET Framework パフォーマンス カウンター内のデータをグラフィカルに表示します。  
   
 4. パフォーマンス オブジェクトの名前の横にあるチェック ボックスをオンにすると、サポートされている個々のパフォーマンス カウンターの一覧が表示されます。  
   
@@ -46,15 +46,15 @@ ms.locfileid: "69967210"
   
      **[選択したオブジェクトのインスタンス]** リスト ボックスで、アプリケーション名をクリックして、そのアプリケーションのパフォーマンス カウンターを監視します。  
   
-     複数のバージョンのランタイムを区別する必要がある場合、または同じ名前を持つ複数のアプリケーション間のあいまいさを解消する必要がある場合は、レジストリ キーも変更する必要があります。 詳細については、「 [パフォーマンス カウンターとインプロセス side-by-side アプリケーション](../../../docs/framework/debug-trace-profile/performance-counters-and-in-process-side-by-side-applications.md)」を参照してください。  
+     複数のバージョンのランタイムを区別する必要がある場合、または同じ名前を持つ複数のアプリケーション間のあいまいさを解消する必要がある場合は、レジストリ キーも変更する必要があります。 詳細については、「 [パフォーマンス カウンターとインプロセス side-by-side アプリケーション](performance-counters-and-in-process-side-by-side-applications.md)」を参照してください。  
   
 > [!NOTE]
 > パフォーマンス コンソールの実行中に新しいパフォーマンス カウンターがインストールされた場合は、新しいカウンターが表示されるように、パフォーマンス コンソールを停止して再起動してください。  
   
- 特定のゾーンまたはリモート共有に存在するアセンブリをプロファイリングする場合は、リモート アセンブリがパフォーマンス カウンターを実行するコンピューターに対して完全な信頼関係を持っていることを確認してください。 アセンブリが十分な信頼関係を持っていない場合、パフォーマンス カウンターは機能しません。 さまざまなゾーンへの信頼の付与については、「[Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)」を参照してください。  
+ 特定のゾーンまたはリモート共有に存在するアセンブリをプロファイリングする場合は、リモート アセンブリがパフォーマンス カウンターを実行するコンピューターに対して完全な信頼関係を持っていることを確認してください。 アセンブリが十分な信頼関係を持っていない場合、パフォーマンス カウンターは機能しません。 さまざまなゾーンへの信頼の付与については、「[Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../tools/caspol-exe-code-access-security-policy-tool.md)」を参照してください。  
   
 > [!NOTE]
-> .NET Framework 4 がインストールされているシステムでは、.net を使用して開発されたアプリケーションのパフォーマンスカウンターのデータが、 **.NET Clr データ**や **.net clr ネットワーク**などの一部のカテゴリに表示されない場合があります。フレームワーク1.1。 このような場合、[\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 要素をアプリケーションの構成ファイルに追加することで、このデータを表示するようにパフォーマンス モニターを構成できます。  
+> .NET Framework 4 がインストールされているシステムでは、.net を使用して開発されたアプリケーションのパフォーマンスカウンターのデータが、 **.NET Clr データ**や **.net clr ネットワーク**などの一部のカテゴリに表示されない場合があります。フレームワーク1.1。 このような場合、[\<forcePerformanceCounterUniqueSharedMemoryReads>](../configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 要素をアプリケーションの構成ファイルに追加することで、このデータを表示するようにパフォーマンス モニターを構成できます。  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>プログラムを使用したパフォーマンス カウンターの読み取りと作成  
  .NET Framework には、パフォーマンスコンソールで使用できるのと同じパフォーマンス情報にプログラムでアクセスするために使用できるクラスが用意されています。 また、これらのクラスを使用すると、カスタム パフォーマンス カウンターを作成できます。 次の表では、.NET Framework に用意されているパフォーマンス監視クラスの一部について説明します。  
@@ -68,4 +68,4 @@ ms.locfileid: "69967210"
   
 ## <a name="see-also"></a>関連項目
 
-- [パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [パフォーマンス カウンター](performance-counters.md)

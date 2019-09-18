@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0c4177faca86fab9934f1cae57f02f8e42a2ae0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 14ed06bbd09d7551707628060b460584816e4711
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943379"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046293"
 ---
 # <a name="net-performance-tips"></a>.NET のパフォーマンスに関するヒント
-*パフォーマンス*という用語は、プログラムの実行速度を表す一般的な用語です。 ソース コード内で特定の基本規則に従うことにより、実行速度を上げることができることもあります。 プログラムによっては、コードを綿密に調べることが重要で、プロファイラーを使用して、可能な限り速く実行しているかどうかを確認することが必要な場合もあります。 一方、記述どおりに許容可能な速度でコードが実行されているため、このような最適化が必要ないプログラムもあります。 ここでは、パフォーマンスの低下が発生する一般的な状況と、パフォーマンスを向上させるためのヒント、およびパフォーマンスに関する追加のトピックについて説明します。 パフォーマンスの計画と計測の詳細については、「[Performance](../../../docs/framework/performance/index.md)」(パフォーマンス) を参照してください。  
+*パフォーマンス*という用語は、プログラムの実行速度を表す一般的な用語です。 ソース コード内で特定の基本規則に従うことにより、実行速度を上げることができることもあります。 プログラムによっては、コードを綿密に調べることが重要で、プロファイラーを使用して、可能な限り速く実行しているかどうかを確認することが必要な場合もあります。 一方、記述どおりに許容可能な速度でコードが実行されているため、このような最適化が必要ないプログラムもあります。 ここでは、パフォーマンスの低下が発生する一般的な状況と、パフォーマンスを向上させるためのヒント、およびパフォーマンスに関する追加のトピックについて説明します。 パフォーマンスの計画と計測の詳細については、「[Performance](index.md)」(パフォーマンス) を参照してください。  
   
 ## <a name="boxing-and-unboxing"></a>ボックス化とボックス化解除  
  たとえば、<xref:System.Collections.ArrayList?displayProperty=nameWithType> などの非ジェネリック コレクション クラスで、頻繁に値型をボックス化する必要がある状況では、値型の使用を回避するのが最も適しています。 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> などのジェネリック コレクションを使用することで、値型のボックス化を回避できます。 ボックス化とボックス化解除は、負荷の大きい処理です。 値型をボックス化するときは、完全に新しいオブジェクトを作成する必要があります。 これには、単純な参照割り当てと比較して最大 20 倍もの時間がかかることがあります。 また、ボックス化を解除するときは、キャストのプロセスで代入の 4 倍の時間がかかることがあります。 詳細については、「[ボックス化とボックス化解除](../../csharp/programming-guide/types/boxing-and-unboxing.md)」を参照してください。  
@@ -44,6 +44,6 @@ ms.locfileid: "69943379"
   
 ## <a name="see-also"></a>関連項目
 
-- [パフォーマンス](../../../docs/framework/performance/index.md)
+- [パフォーマンス](index.md)
 - [Visual Basic プログラミング ガイド](../../visual-basic/programming-guide/index.md)
 - [C# プログラミング ガイド](../../csharp/programming-guide/index.md)

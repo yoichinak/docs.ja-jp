@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5657e55856845404c5f8f063bd69d51614a234c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 752a6a5f9608aa260f192ee3e9e0709b7a10e27e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614283"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052285"
 ---
 # <a name="trace-listeners"></a>トレース リスナー
 **Trace**、**Debug**、および <xref:System.Diagnostics.TraceSource> を使用するときには、送信されたメッセージを収集して記録するための機構が必要です。 トレース メッセージは*リスナー*によって受け取られます。 リスナーの目的は、トレース メッセージの収集、格納、およびルーティングを行うことです。 リスナーにより、トレース出力が適切な場所 (ログ、ウィンドウ、またはテキスト ファイル) に送られます。  
@@ -40,7 +40,7 @@ ms.locfileid: "64614283"
   
 - <xref:System.Diagnostics.XmlWriterTraceListener> は、トレース出力またはデバッグ出力を、XML でエンコードされたデータとして <xref:System.IO.TextWriter> または <xref:System.IO.Stream> (<xref:System.IO.FileStream> など) に送ります。  
   
- <xref:System.Diagnostics.DefaultTraceListener> 以外のリスナーが **Debug** 出力、**Trace** 出力、および <xref:System.Diagnostics.TraceSource> 出力を受け取るようにする場合は、目的のリスナーを `Listeners` コレクションに追加する必要があります。 詳細については、「[方法 :作成し、トレース リスナーを初期化](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)と[方法。TraceSource とフィルターをトレース リスナーと共に使用](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)します。 **Listeners** コレクションのすべてのリスナーは、トレース出力のメソッドから同じメッセージを受け取ります。 たとえば、**TextWriterTraceListener** と **EventLogTraceListener** という 2 つのリスナーを設定したとします。 各リスナーは同一のメッセージを受け取ります。 この場合、**TextWriterTraceListener** はストリームに出力を送り、**EventLogTraceListener** はイベント ログに出力を送るなどの動作が可能です。  
+ <xref:System.Diagnostics.DefaultTraceListener> 以外のリスナーが **Debug** 出力、**Trace** 出力、および <xref:System.Diagnostics.TraceSource> 出力を受け取るようにする場合は、目的のリスナーを `Listeners` コレクションに追加する必要があります。 詳細については、「[方法 :トレースリスナー](how-to-create-and-initialize-trace-listeners.md)の作成と初期化[を行い、次の方法を実行します。TraceSource とフィルターをトレースリスナー](how-to-use-tracesource-and-filters-with-trace-listeners.md)と共に使用します。 **Listeners** コレクションのすべてのリスナーは、トレース出力のメソッドから同じメッセージを受け取ります。 たとえば、**TextWriterTraceListener** と **EventLogTraceListener** という 2 つのリスナーを設定したとします。 各リスナーは同一のメッセージを受け取ります。 この場合、**TextWriterTraceListener** はストリームに出力を送り、**EventLogTraceListener** はイベント ログに出力を送るなどの動作が可能です。  
   
  出力を **Listeners** コレクションに送る方法を次の例に示します。  
   
@@ -82,5 +82,5 @@ System.Diagnostics.Trace.Listeners.Add(
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TraceListener>
-- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [アプリケーションのトレースとインストルメント](tracing-and-instrumenting-applications.md)
+- [トレース スイッチ](trace-switches.md)

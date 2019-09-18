@@ -2,12 +2,12 @@
 title: レコード
 description: レコードがF#名前付きの値の単純な集計を表す方法について説明します。メンバーを使用することもできます。
 ms.date: 06/09/2019
-ms.openlocfilehash: d92a1a7517e5b05ee687926df29f33fab123b4dd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1ba002407b1ccbcbceed32df8636fb860e89e3b6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627286"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053940"
 ---
 # <a name="records"></a>レコード
 
@@ -26,7 +26,7 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>Remarks
 
-前の構文では、 *typename*はレコード型の名前、 *label1*と*label2*は*ラベル*と呼ばれる値の名前、type1 と*type1*はこれらの値の型です。 *メンバーリスト*は、型のメンバーの省略可能なリストです。  属性を使用し`[<Struct>]`て、参照型であるレコードではなく、構造体レコードを作成できます。
+前の構文では、 *typename*はレコード型の名前、 *label1*と*label2*は*ラベル*と*呼ばれる値*の名前、 *type1 と type1*はこれらの値の型です。 *メンバーリスト*は、型のメンバーの省略可能なリストです。  属性を使用し`[<Struct>]`て、参照型であるレコードではなく、構造体レコードを作成できます。
 
 次に例をいくつか示します。
 
@@ -108,7 +108,8 @@ type Person =
 and Address =
   { Line1: string
     Line2: string
-    PostCode: string }
+    PostCode: string
+    Occupant: Person }
 ```
 
 `and`キーワードを使用せずに前の例を定義すると、コンパイルされません。 相互再帰的な定義にはキーワードが必要です。`and`

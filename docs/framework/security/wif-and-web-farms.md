@@ -3,17 +3,17 @@ title: WIF および Web ファーム
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 32d2875ebe0a46b9f9b1856ed70a30114793e492
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851523"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045250"
 ---
 # <a name="wif-and-web-farms"></a>WIF および Web ファーム
 Windows Identity Foundation (WIF) を使用して、Web ファームに展開されている証明書利用者 (RP) アプリケーションのリソースをセキュリティで保護するには、ファーム内の別のコンピューターで実行されている RP アプリケーションのインスタンスのトークンを WIF が処理できるように、特定の手順を実行する必要があります。 この処理には、セッション トークン シグネチャの検証、セッション トークンの暗号化と復号化、再生されたセキュリティ トークンの検出が含まれます。  
   
- 一般的に、(RP が単一のコンピューターで実行されているか、Web ファームで実行されているかにかかわらず) RP アプリケーションのリソースをセキュリティで保護するために WIF を使用する場合、セキュリティ トークン サービス (STS) から取得されたセキュリティ トークンに基づいて、クライアントとの間にセッションが確立します。 これは、WIF を使用して保護されているすべてのアプリケーション リソースについて、STS での認証をクライアントに強制することを避けるためです。 WIF がセッションを処理する方法については、「[WIF Session Management](../../../docs/framework/security/wif-session-management.md)」(WIF セッション管理) を参照してください。  
+ 一般的に、(RP が単一のコンピューターで実行されているか、Web ファームで実行されているかにかかわらず) RP アプリケーションのリソースをセキュリティで保護するために WIF を使用する場合、セキュリティ トークン サービス (STS) から取得されたセキュリティ トークンに基づいて、クライアントとの間にセッションが確立します。 これは、WIF を使用して保護されているすべてのアプリケーション リソースについて、STS での認証をクライアントに強制することを避けるためです。 WIF がセッションを処理する方法については、「[WIF Session Management](wif-session-management.md)」(WIF セッション管理) を参照してください。  
   
  既定の設定が使用される場合、WIF は次の処理を実行します。  
   
@@ -40,7 +40,7 @@ Windows Identity Foundation (WIF) を使用して、Web ファームに展開さ
     </securityTokenHandlers>  
     ```  
   
-- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> から派生させ、分散キャッシュを実装します。つまり、RP が実行される可能性があるファーム内のすべてのコンピューターからアクセスできるキャッシュです。 構成ファイルに [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 要素を指定して、分散キャッシュを使用するように RP を構成します。 必要に応じて、派生クラスの <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> メソッドをオーバーライドして、`<sessionSecurityTokenCache>` 要素の子要素を実装することができます。  
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> から派生させ、分散キャッシュを実装します。つまり、RP が実行される可能性があるファーム内のすべてのコンピューターからアクセスできるキャッシュです。 構成ファイルに [\<sessionSecurityTokenCache>](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 要素を指定して、分散キャッシュを使用するように RP を構成します。 必要に応じて、派生クラスの <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> メソッドをオーバーライドして、`<sessionSecurityTokenCache>` 要素の子要素を実装することができます。  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ Windows Identity Foundation (WIF) を使用して、Web ファームに展開さ
   
      分散キャッシュを実装するには、カスタム キャッシュ用に WCF フロント エンドを用意する方法があります。 WCF キャッシュ サービスの詳細については、「[WCF キャッシュ サービス](#BKMK_TheWCFCachingService)」を参照してください。 キャッシュ サービスを呼び出すために RP アプリケーションが使用できる WCF クライアントの実装の詳細については、「[WCF キャッシュ クライアント](#BKMK_TheWCFClient)」を参照してください。  
   
-- アプリケーションで再生されたトークンを検出する場合、<xref:System.IdentityModel.Tokens.TokenReplayCache> から派生させ、[\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 構成要素内のトークン再生キャッシュ サービスを示すことで、トークン再生キャッシュの場合に同様の分散キャッシュ戦略に従う必要があります。  
+- アプリケーションで再生されたトークンを検出する場合、<xref:System.IdentityModel.Tokens.TokenReplayCache> から派生させ、[\<tokenReplayCache>](../configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 構成要素内のトークン再生キャッシュ サービスを示すことで、トークン再生キャッシュの場合に同様の分散キャッシュ戦略に従う必要があります。  
   
 > [!IMPORTANT]
 > このトピックの XML とコード例はすべて、 [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408)サンプルから取得されています。  
@@ -137,7 +137,7 @@ namespace WcfSessionSecurityTokenCacheService
   
 <a name="BKMK_TheWCFClient"></a>   
 ## <a name="the-wcf-caching-client"></a>WCF キャッシュ クライアント  
- このセクションでは、<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> から派生し、呼び出しをキャッシュ サービスにデリゲートするクラスの実装について説明します。 次の XML のように、[\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 要素でこのクラスを使用するように RP アプリケーションを構成します。  
+ このセクションでは、<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> から派生し、呼び出しをキャッシュ サービスにデリゲートするクラスの実装について説明します。 次の XML のように、[\<sessionSecurityTokenCache>](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 要素でこのクラスを使用するように RP アプリケーションを構成します。  
   
 ```xml  
 <caches>  
@@ -255,4 +255,4 @@ namespace CacheLibrary
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>
-- [WIF セッション管理](../../../docs/framework/security/wif-session-management.md)
+- [WIF セッション管理](wif-session-management.md)

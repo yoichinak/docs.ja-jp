@@ -9,12 +9,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 3f373c3947b45443ca4031ecdc3d5e40608ec84c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d342e4382cfe227e477ab87c2ca428834010768e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911554"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042161"
 ---
 # <a name="ui-automation-events-overview"></a>UI オートメーション イベントの概要
 > [!NOTE]
@@ -79,10 +79,10 @@ ms.locfileid: "69911554"
   
  イベントを識別するために使用する <xref:System.Windows.Automation.AutomationEvent> オブジェクトは、 <xref:System.Windows.Automation.AutomationElementIdentifiers> およびコントロール パターン識別子クラス ( <xref:System.Windows.Automation.DockPatternIdentifiers>など) のフィールドからプロバイダーによって取得されます。 等価のフィールドが、 <xref:System.Windows.Automation.AutomationElement> およびコントロール パターン クラス ( <xref:System.Windows.Automation.DockPattern>など) のフィールドからクライアント アプリケーションによって取得されます。  
   
- イベント識別子の一覧については、「 [UI Automation Events for Clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)」を参照してください。  
+ イベント識別子の一覧については、「 [UI Automation Events for Clients](ui-automation-events-for-clients.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [クライアントの UI オートメーション イベント](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
-- [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [UI オートメーション イベントのサブスクライブ](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [クライアントの UI オートメーション イベント](ui-automation-events-for-clients.md)
+- [サーバー側 UI オートメーション プロバイダーの実装](server-side-ui-automation-provider-implementation.md)
+- [UI オートメーション イベントのサブスクライブ](subscribe-to-ui-automation-events.md)

@@ -3,12 +3,12 @@ title: WSFederation 認証モジュールの概要
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: eaf53a352238161ccec1b481649074d322954905
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 26cd022ded8dddcfcf695c89b3cf4b90d3ceb2ef
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851506"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044933"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 認証モジュールの概要
 Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-FAM) を通じて ASP.NET アプリケーションでのフェデレーション認証をサポートします。 このトピックは、フェデレーション認証の動作とその使用方法の理解に役立ちます。  
@@ -35,7 +35,7 @@ Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-F
   
  WS-FAM を構成して、未認証の要求のリダイレクト先に対して STS を指定します。 WIF では次の 2 つの方法でユーザーを認証できます。  
   
-1. パッシブリダイレクト:認証されていないユーザーが保護されたリソースにアクセスしようとしたときに、ログインページを必要とせずに単純に STS にリダイレクトする場合は、これが適切な方法です。 STS はユーザーの ID を検証し、そのユーザーの適切なクレームを含むセキュリティ トークンを発行します。 このオプションでは WS-FAM を HTTP モジュールのパイプラインに追加する必要があります。 Identity and Access Tool for Visual Studio 2012 を使用することで、WS-FAM を使用して STS でフェデレーションを実行するようアプリケーションの構成ファイルを変更できます。 詳細については、「[Visual Studio 2012 の ID およびアクセス ツール](../../../docs/framework/security/identity-and-access-tool-for-vs.md)」を参照してください。  
+1. パッシブリダイレクト:認証されていないユーザーが保護されたリソースにアクセスしようとしたときに、ログインページを必要とせずに単純に STS にリダイレクトする場合は、これが適切な方法です。 STS はユーザーの ID を検証し、そのユーザーの適切なクレームを含むセキュリティ トークンを発行します。 このオプションでは WS-FAM を HTTP モジュールのパイプラインに追加する必要があります。 Identity and Access Tool for Visual Studio 2012 を使用することで、WS-FAM を使用して STS でフェデレーションを実行するようアプリケーションの構成ファイルを変更できます。 詳細については、「[Visual Studio 2012 の ID およびアクセス ツール](identity-and-access-tool-for-vs.md)」を参照してください。  
   
 2. RP アプリケーションのサインイン ページ用の分離コードから <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> メソッドまたは <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> メソッドを呼び出すことができます。  
   
@@ -54,11 +54,11 @@ Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-F
   
  次の図は、ユーザーが STS に認証されており、セキュリティ トークンが <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> によって処理されるときに発生する状況を詳細に示します。  
   
- ![パッシブ リダイレクトを使用するトークン処理のタイミング](../../../docs/framework/security/media/signinusingpassiveredirect-tokenprocessing.gif "SignInUsingPassiveRedirect_TokenProcessing")  
+ ![パッシブ リダイレクトを使用するトークン処理のタイミング](./media/signinusingpassiveredirect-tokenprocessing.gif "SignInUsingPassiveRedirect_TokenProcessing")  
   
  次の図は、ユーザーのセキュリティ トークンがクッキーにシリアル化されていて <xref:System.IdentityModel.Services.SessionAuthenticationModule> 先に取得されている場合に発生する状況を詳細に示します。  
   
- ![コントロールを使用するサインインを示す SAM タイミング図](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
+ ![コントロールを使用するサインインを示す SAM タイミング図](./media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>イベント  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>、<xref:System.IdentityModel.Services.SessionAuthenticationModule>、および親クラス <xref:System.IdentityModel.Services.HttpModuleBase> は、HTTP 要求処理のさまざまな段階でイベントを発生させます。 これらのイベントは、ASP.NET アプリケーション`global.asax`のファイルで処理できます。  
@@ -94,7 +94,7 @@ Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-F
 > <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> または <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> により発生したイベント中は、<xref:System.IdentityModel.Services.SessionAuthenticationModule> プロパティを使用しないでください。 これは、イベントは認証プロセス中に発生するが、<xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> は認証プロセスの後に設定されるためです。  
   
 ### <a name="configuration-of-federated-authentication"></a>フェデレーション認証の構成  
- WS-FAM と SAM は [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 要素で構成されます。 [\<wsFederation>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md) の子要素は、WS-FAM プロパティの既定値 (<xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A> プロパティや <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A> プロパティなど) を構成します (これらの値は、一部の WS-FAM イベントのハンドラーを用意することにより要求ごとに変更できます (<xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> など))。SAM で使用される cookie ハンドラーは [\<cookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) 子要素によって構成されます。 WIF には <xref:System.IdentityModel.Services.ChunkedCookieHandler> クラスに実装されている既定の cookie ハンドラーが用意されており、チャンク サイズは [\<chunkedCookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md) 要素で設定できます。 `<federationConfiguration>` 要素は <xref:System.IdentityModel.Configuration.IdentityConfiguration> を参照し、この要素にはアプリケーションで使用される他の WIF コンポーネント (<xref:System.Security.Claims.ClaimsAuthenticationManager>、<xref:System.Security.Claims.ClaimsAuthorizationManager> など) の構成が用意されています。 ID の構成は、`<federationConfiguration>` 要素の `identityConfigurationName` 属性で [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 名前付き要素を指定することで明示的に参照できます。 ID 構成を明示的に参照しない場合、既定の ID 構成が使用されます。  
+ WS-FAM と SAM は [\<federationConfiguration>](../configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 要素で構成されます。 [\<wsFederation>](../configure-apps/file-schema/windows-identity-foundation/wsfederation.md) の子要素は、WS-FAM プロパティの既定値 (<xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A> プロパティや <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A> プロパティなど) を構成します (これらの値は、一部の WS-FAM イベントのハンドラーを用意することにより要求ごとに変更できます (<xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> など))。SAM で使用される cookie ハンドラーは [\<cookieHandler>](../configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) 子要素によって構成されます。 WIF には <xref:System.IdentityModel.Services.ChunkedCookieHandler> クラスに実装されている既定の cookie ハンドラーが用意されており、チャンク サイズは [\<chunkedCookieHandler>](../configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md) 要素で設定できます。 `<federationConfiguration>` 要素は <xref:System.IdentityModel.Configuration.IdentityConfiguration> を参照し、この要素にはアプリケーションで使用される他の WIF コンポーネント (<xref:System.Security.Claims.ClaimsAuthenticationManager>、<xref:System.Security.Claims.ClaimsAuthorizationManager> など) の構成が用意されています。 ID の構成は、`<federationConfiguration>` 要素の `identityConfigurationName` 属性で [\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 名前付き要素を指定することで明示的に参照できます。 ID 構成を明示的に参照しない場合、既定の ID 構成が使用されます。  
   
  次の XML は、ASP.NET の証明書利用者 (RP) アプリケーションの構成を示します。 <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> および <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> 構成セクションは `<configSections>` 要素の下に追加されます。 SAM および WS-FAM は、`<system.webServer>`/`<modules>` 要素の下にある HTTP モジュールに追加されます。 最後に、WIF コンポーネントは `<system.identityModel>`/`<identityConfiguration>` および `<system.identityModel.services>`/`<federationConfiguration>` 要素の下に構成されます。 この構成では、既定のクッキー ハンドラーであり、`<cookieHandler>` 要素で指定されたクッキー ハンドラー型ではない、チャンクされたクッキー ハンドラーを指定します。  
   
@@ -143,4 +143,4 @@ Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-F
 
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
-- [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
+- [\<federationConfiguration>](../configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, getting text attributes
 - text attributes, getting
 ms.assetid: fdefc6c3-b836-4cfe-8dec-1484bfdc5551
-ms.openlocfilehash: 559f0ee3bf1da1b33ff73b116c67ed2849cbe782
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9bb2b2260c4638fea941e2f26b503c1cfe3d9ba7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966392"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042918"
 ---
 # <a name="obtain-text-attributes-using-ui-automation"></a>UI オートメーションを使用してテキスト属性を取得する
 > [!NOTE]
@@ -36,9 +36,9 @@ ms.locfileid: "69966392"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI オートメーション TextPattern の概要](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
-- [UI オートメーションを使用した、テキスト ボックスへのコンテンツの追加](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
-- [UI オートメーションを使用した、テキストの検索と強調表示](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
-- [UI Automation コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI オートメーションを使用して混合テキスト属性の詳細を取得する](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)
+- [UI オートメーション TextPattern の概要](ui-automation-textpattern-overview.md)
+- [UI オートメーションを使用した、テキスト ボックスへのコンテンツの追加](add-content-to-a-text-box-using-ui-automation.md)
+- [UI オートメーションを使用した、テキストの検索と強調表示](find-and-highlight-text-using-ui-automation.md)
+- [UI Automation コントロール パターンの概要](ui-automation-control-patterns-overview.md)
+- [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
+- [UI オートメーションを使用して混合テキスト属性の詳細を取得する](obtain-mixed-text-attribute-details-using-ui-automation.md)

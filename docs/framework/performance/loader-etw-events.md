@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf874f9422db0038a421d5f61ce18d8af8ec401e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6177bdff873feb75eb15dba53bcdb5197260fa9d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616311"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046391"
 ---
 # <a name="loader-etw-events"></a>ローダー ETW イベント
 <a name="top"></a> これらのイベントは、アプリケーションのドメイン、アセンブリ、およびモジュールのロードとアンロードに関連する情報を収集します。  
   
- すべてのローダー イベントは、 `LoaderKeyword` (0x8) キーワードで発生します。 `DCStart` および `DCEnd` のイベントは、`StartRundown`/`EndRundown` が有効になっている `LoaderRundownKeyword` (0x8) で発生します。 (詳細については、「 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)」を参照してください)。  
+ すべてのローダー イベントは、 `LoaderKeyword` (0x8) キーワードで発生します。 `DCStart` および `DCEnd` のイベントは、`StartRundown`/`EndRundown` が有効になっている `LoaderRundownKeyword` (0x8) で発生します。 (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
   
  ローダー イベントは、次のように細分化されています。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "64616311"
 |フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|アプリケーション ドメインの一意の識別子。|  
-|AppDomainFlags|win:UInt32|0x1:既定のドメイン。<br /><br /> 0x2:実行可能ファイル。<br /><br /> 0x4:アプリケーション ドメイン、ビット 28 ~ 31 です。このドメインのポリシーを共有します。<br /><br /> 0:共有ドメイン。|  
+|AppDomainFlags|win:UInt32|0x1既定のドメイン。<br /><br /> 0x2ァイル.<br /><br /> 0x4アプリケーションドメイン、ビット 28-31:このドメインのポリシーを共有しています。<br /><br /> 0共有ドメイン。|  
 |AppDomainName|win:UnicodeString|わかりやすいアプリケーション ドメイン名。 プロセスの有効期間中に変更することがあります。|  
 |AppDomainIndex|win:UInt32|このアプリケーション ドメインのインデックス。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
@@ -88,7 +88,7 @@ ms.locfileid: "64616311"
 |AssemblyID|win:UInt64|アセンブリの一意の ID。|  
 |AppDomainID|win:UInt64|このアセンブリのドメインの ID。|  
 |BindingID|win:UInt64|アセンブリ バインディングを一意に識別する ID。|  
-|AssemblyFlags|win:UInt32|0x1:ドメインに依存しないアセンブリ。<br /><br /> 0x2:動的アセンブリ。<br /><br /> 0x4:アセンブリには、ネイティブ イメージがあります。<br /><br /> 0x8:収集可能なアセンブリ。|  
+|AssemblyFlags|win:UInt32|0x1ドメイン中立アセンブリ。<br /><br /> 0x2動的アセンブリ。<br /><br /> 0x4アセンブリにはネイティブイメージがあります。<br /><br /> 0x8収集可能アセンブリ。|  
 |AssemblyName|win:UnicodeString|完全修飾アセンブリ名。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
@@ -120,7 +120,7 @@ ms.locfileid: "64616311"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|モジュールの一意な ID。|  
 |AssemblyID|win:UInt64|このモジュールが存在するアセンブリの ID。|  
-|ModuleFlags|win:UInt32|0x1:ドメイン中立的なモジュール。<br /><br /> 0x2:モジュールには、ネイティブ イメージがあります。<br /><br /> 0x4:動的モジュール。<br /><br /> 0x8:マニフェスト モジュール。|  
+|ModuleFlags|win:UInt32|0x1ドメイン中立モジュール。<br /><br /> 0x2モジュールにネイティブイメージがあります。<br /><br /> 0x4動的モジュール。<br /><br /> 0x8マニフェストモジュール。|  
 |Reserved1|win:UInt32|予約済みのフィールド。|  
 |ModuleILPath|win:UnicodeString|モジュールの Microsoft intermediate language (MSIL) のイメージのパス、またはそれが動的アセンブリ (null で終わる) である場合は動的モジュール名。|  
 |ModuleNativePath|win:UnicodeString|モジュール ネイティブ イメージがある場合、そのパス (null で終わる)。|  
@@ -167,7 +167,7 @@ ms.locfileid: "64616311"
 |ModuleID|win:UInt64|このモジュールが所属するアセンブリを識別します。|  
 |AssemblyID|win:UInt64|このモジュールが存在するアセンブリの ID。|  
 |AppDomainID|win:UInt64|このモジュールを使用する、アプリケーション ドメインの ID。|  
-|ModuleFlags|win:UInt32|0x1:ドメイン中立的なモジュール。<br /><br /> 0x2:モジュールには、ネイティブ イメージがあります。<br /><br /> 0x4:動的モジュール。<br /><br /> 0x8:マニフェスト モジュール。|  
+|ModuleFlags|win:UInt32|0x1ドメイン中立モジュール。<br /><br /> 0x2モジュールにネイティブイメージがあります。<br /><br /> 0x4動的モジュール。<br /><br /> 0x8マニフェストモジュール。|  
 |Reserved1|win:UInt32|予約済みのフィールド。|  
 |ModuleILPath|win:UnicodeString|モジュールの MSIL のイメージのパス、またはそれが動的アセンブリ (null で終わる) である場合は動的モジュール名。|  
 |ModuleNativePath|win:UnicodeString|モジュール ネイティブ イメージがある場合、そのパス (null で終わる)。|  
@@ -214,4 +214,4 @@ ms.locfileid: "64616311"
   
 ## <a name="see-also"></a>関連項目
 
-- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW イベント](clr-etw-events.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 45e1cd9bdfcbcf592ce6708496282e2e66a4a2e3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8db2e6cbd1f0c0dd61ecb8e147133b8c608ea8f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914390"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042039"
 ---
 # <a name="ui-automation-providers-overview"></a>UI オートメーション プロバイダーの概要
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "69914390"
 ### <a name="navigation"></a>ナビゲーション  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要素は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーとしてクライアントに公開されます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、要素間を移動することによって、ツリーを構成します。 ナビゲーションは、親、兄弟、または子を指す要素ごとに、プロバイダーによって有効にされます。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーのクライアントビューの詳細については、「 [UI オートメーションツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)」を参照してください。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーのクライアントビューの詳細については、「 [UI オートメーションツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
   
 ### <a name="views"></a>Views  
  次の表に示すように、クライアントは 3 つのプリンシパル ビューで [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーを表示できます。  
@@ -57,7 +57,7 @@ ms.locfileid: "69914390"
 |コントロール ビュー|コントロールである要素が含まれます。|  
 |コンテンツ ビュー|コンテンツである要素が含まれます。|  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーのクライアントビューの詳細については、「 [UI オートメーションツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)」を参照してください。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーのクライアントビューの詳細については、「 [UI オートメーションツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
   
  コンテンツ要素またはコントロール要素としての要素の定義はプロバイダー実装で行う必要があります。 コントロール要素はコンテンツ要素であることもないこともありますが、コンテンツ要素はすべてコントロール要素です。  
   
@@ -78,4 +78,4 @@ ms.locfileid: "69914390"
   
 ## <a name="see-also"></a>関連項目
 
-- [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [サーバー側 UI オートメーション プロバイダーの実装](server-side-ui-automation-provider-implementation.md)

@@ -2,12 +2,12 @@
 title: Mac 用 Visual Studio での F# の概要します。
 description: を Visual Studio for Mac と共F#に使用する方法について説明します。
 ms.date: 07/03/2018
-ms.openlocfilehash: 679ed1ea28f5d0e0d910dbd407b38d1d2f0314f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d3604178f93cf17d21f25b09084be7e7977378b5
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629757"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082979"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Mac 用 Visual Studio での F# の概要します。
 
@@ -35,7 +35,7 @@ Visual Studio for Mac の最も基本的なプロジェクトの1つは、コン
 
 前のコードサンプルでは、と`square`いう名前`x`の入力を受け取り、それを単独で乗算する関数が定義されています。  でF#は[型の推定](../language-reference/type-inference.md)が使用さ`x`れるため、の型を指定する必要はありません。  コンパイラF#は、乗算が有効な型を認識し、が呼び出される方法`x` `square`に基づいて型をに割り当てます。  マウスポインター `square`を合わせると、次のように表示されます。
 
-```
+```console
 val square: x:int -> int
 ```
 
@@ -51,7 +51,7 @@ val square: x:int -> int
 
 コンソールウィンドウに次の出力が表示され、Visual Studio for Mac ポップアップされます。
 
-```
+```console
 12 squared is 144!
 ```
 
@@ -63,7 +63,7 @@ F# 対話型ウィンドウは、最適な機能では、Visual F# の Visual St
 
 使用を開始するには、 `square`コードで定義されている関数を強調表示します。  次に、トップレベルメニューの **[編集]** をクリックします。  次に選択**選択範囲を F# Interactive に送信**します。  これには、F# 対話型ウィンドウで、コードが実行されます。  または、選択範囲を右クリックし、選択**選択範囲を F# Interactive に送信**します。  F#対話型ウィンドウが表示され、次のようなウィンドウが表示されます。
 
-```
+```console
 >
 
 val square : x:int -> int
@@ -73,7 +73,7 @@ val square : x:int -> int
 
 これは、関数をポイントした`square`ときに前に見た関数の関数シグネチャと同じです。  `square`が F# Interactive プロセスで定義されている、ここではさまざまな値を呼び出すことができます。
 
-```
+```console
 > square 12;;
 val it : int = 144
 >square 13;;
@@ -82,7 +82,7 @@ val it : int = 169
 
 これにより、関数が実行され、結果が`it`新しい名前にバインドされ、の`it`型と値が表示されます。  各行は、で`;;`終了する必要があることに注意してください。  これは、どのように F# Interactive を知っている、関数呼び出しが完了するとします。  対話型でF#新しい関数を定義することもできます。
 
-```
+```console
 > let isOdd x = x % 2 <> 0;;
 
 val isOdd : x:int -> bool
@@ -93,14 +93,14 @@ val it : bool = false
 
 上のでは新しい関数`isOdd`が定義されています。これはを`int`受け取り、それが奇数かどうかを確認します。  この関数を呼び出すと、異なる入力で何が返されるかを確認できます。  関数呼び出しの中で関数を呼び出すことができます。
 
-```
+```console
 > isOdd (square 15);;
 val it : bool = true
 ```
 
 [パイプ転送演算子](../language-reference/symbol-and-operator-reference/index.md)を使用して、値を次の2つの関数にパイプライン処理することもできます。
 
-```
+```console
 > 15 |> square |> isOdd;;
 val it : bool = true
 ```

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3ea64668272b6625a9e43c9610496a7e7392129
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 41f6b67ff63d096cc1fa2c599abb06c9c1129952
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854032"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052308"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 `releaseHandleFailed` マネージド デバッグ アシスタント (MDA) は、<xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> から派生するクラスの <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドが `false` を返すときに、開発者に通知するためにアクティブ化されます。  
@@ -52,7 +52,7 @@ ms.locfileid: "70854032"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA は CLR に影響しません。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>出力  
  <xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> でエラーが発生し、ハンドルを適切に解放できないことを示すメッセージ。 例えば:  
   
 ```output
@@ -93,5 +93,5 @@ bool ReleaseHandle()
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../interop/interop-marshaling.md)

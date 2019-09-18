@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 916523acf1d270830a2cb1fb5ae50e26d055404c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4e4b5822306fa8f4e6b4437f4a1bef92b53a86b9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927012"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046132"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>規模が大きく、応答性の高い .NET Framework アプリの作成
 この記事では、大規模な .NET Framework アプリや、ファイルやデータベースなど大量のデータを処理するアプリのパフォーマンス改善のヒントを説明します。 説明するヒントは C# および Visual Basic コンパイラを マネージド コードで作成し直した際に得られたものです。この記事では C# コンパイラでの実際の例をいくつか紹介します。 
@@ -39,7 +39,7 @@ ms.locfileid: "70927012"
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>ファクト 3:優れたツールですべての違いを実現  
  優れたツールを使用すれば、最も大きなパフォーマンスの問題 (CPU、メモリ、またはディスク) の詳細を迅速に確認し、このようなボトルネックを引き起こしているコードを特定できます。 Microsoft には、 [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)や[perfview](https://www.microsoft.com/download/details.aspx?id=28567)などのさまざまなパフォーマンスツールが付属しています。 
   
- PerfView は、ディスク I/O、GC イベント、メモリなどの深刻な問題に取り組む際に役立つ極めて強力な無償のツールです。 パフォーマンスに関連する [Windows イベント トレーシング](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) イベントをキャプチャし、アプリ別、プロセス別、スタック別、およびスレッド別に情報を容易に確認できます。 PerfView は、アプリによって割り当てられるメモリの種類と量、そしてメモリの割り当てにどの関数またはコール スタックがどの程度関与しているのかを示します。 詳細については、ツールに付属している詳しいヘルプ トピック、デモ、ビデオ (Channel 9 の [PerfView チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial) など) を参照してください。 
+ PerfView は、ディスク I/O、GC イベント、メモリなどの深刻な問題に取り組む際に役立つ極めて強力な無償のツールです。 パフォーマンスに関連する [Windows イベント トレーシング](../wcf/samples/etw-tracing.md) (ETW) イベントをキャプチャし、アプリ別、プロセス別、スタック別、およびスレッド別に情報を容易に確認できます。 PerfView は、アプリによって割り当てられるメモリの種類と量、そしてメモリの割り当てにどの関数またはコール スタックがどの程度関与しているのかを示します。 詳細については、ツールに付属している詳しいヘルプ トピック、デモ、ビデオ (Channel 9 の [PerfView チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial) など) を参照してください。 
   
 ### <a name="fact-4-its-all-about-allocations"></a>ファクト 4:すべての割り当てについて  
  応答性の高い .NET Framework アプリ開発の要となるのはアルゴリズム (例: バブル ソートの代わりにクイック ソートを使用) であると思うかもしれませんが、それは正しくありません。 応答性の高いアプリを開発する上で最も重要なのは、メモリの割り当てです。これは特に、アプリが非常に大規模であり大量データを処理する場合に該当します。 
@@ -465,7 +465,7 @@ class Compilation { /*...*/
 
 - [このトピックのプレゼンテーションビデオ](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [パフォーマンス プロファイリングのビギナーズ ガイド](/visualstudio/profiling/beginners-guide-to-performance-profiling)
-- [パフォーマンス](../../../docs/framework/performance/index.md)
+- [パフォーマンス](index.md)
 - [.NET のパフォーマンスに関するヒント](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Channel 9 PerfView のチュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)

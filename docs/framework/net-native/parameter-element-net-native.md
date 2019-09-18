@@ -1,17 +1,17 @@
 ---
-title: <Parameter> 要素 (.NET ネイティブ)
+title: <Parameter>要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d2dbff544f991712ad26f2cb12d638801b5a3fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c9a462e75df535504d0e98c22c34c11ff7af7d8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867057"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049345"
 ---
-# <a name="parameter-element-net-native"></a>\<パラメーター > 要素 (.NET ネイティブ)
+# <a name="parameter-element-net-native"></a>\<Parameter > 要素 (.NET ネイティブ)
 メソッドに渡された引数の型にリフレクション ポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,7 +37,7 @@ ms.locfileid: "61867057"
   
 |属性|属性の型|説明|  
 |---------------|--------------------|-----------------|  
-|`Name`|全般|必須の属性です。 パラメーターの名前。 たとえば、メソッド シグネチャ `String.CompareTo(Object value)` の場合、`Name` 属性の値は "value" です。|  
+|`Name`|全般|必須の属性です。 パラメーター名。 たとえば、メソッド シグネチャ `String.CompareTo(Object value)` の場合、`Name` 属性の値は "value" です。|  
 |`Activate`|リフレクション|省略可能な属性です。 コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。|  
 |`Browse`|リフレクション|省略可能な属性です。 プログラム要素に関する情報の照会を制御しますが、実行時アクセスは有効にしません。|  
 |`Dynamic`|リフレクション|省略可能な属性です。 コンストラクター、メソッド、フィールド、プロパティ、およびイベントを含むすべての型のメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。|  
@@ -51,15 +51,15 @@ ms.locfileid: "61867057"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |*parameter_name*|ポリシーが適用されるメソッド パラメーターの名前。 たとえば、メソッド シグネチャ `String.CompareTo(Object value)` の場合、`Name` 属性の値は "value" です。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
+|*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -68,14 +68,14 @@ ms.locfileid: "61867057"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|コンストラクターまたはメソッドにランタイム リフレクション ポリシーを適用します。|  
+|[\<Method>](method-element-net-native.md)|コンストラクターまたはメソッドにランタイム リフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>Remarks  
- `<Parameter>` 要素は [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 要素の子で、特定のメソッド パラメーターにポリシーを適用するために使用されます。 特定のメソッド パラメーターは、型ではなく名前で指定されます。 `Activate` や `Dynamic` などのポリシーの種類を表す属性が 1 つ以上必要です。  
+ `<Parameter>` 要素は [\<Method>](method-element-net-native.md) 要素の子で、特定のメソッド パラメーターにポリシーを適用するために使用されます。 特定のメソッド パラメーターは、型ではなく名前で指定されます。 `Activate` や `Dynamic` などのポリシーの種類を表す属性が 1 つ以上必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [\<Method> 要素](../../../docs/framework/net-native/method-element-net-native.md)
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [\<Method> 要素](method-element-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ ポリシーの設定](runtime-directive-policy-settings.md)
+- [ランタイム ディレクティブ要素](runtime-directive-elements.md)

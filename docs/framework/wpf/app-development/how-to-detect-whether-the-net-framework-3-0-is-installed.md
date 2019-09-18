@@ -1,19 +1,19 @@
 ---
-title: '方法: .NET Framework 3.0 がインストールされているかどうかを確認する'
+title: '方法: .NET Framework 3.0 がインストールされているかどうかの確認'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WinFX Runtime user-agent string
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: e307125a2a8de3edc4df2fc1022c6e3de1904879
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960243"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053446"
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>方法: .NET Framework 3.0 がインストールされているかどうかを確認する
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>方法: .NET Framework 3.0 がインストールされているかどうかの確認
 管理者が Microsoft .NET Framework アプリケーションをシステムに配置するには、まず、.NET Framework ランタイムが存在することを確認する必要があります。 このトピックでは、.NET Framework がシステムに存在するかどうかを確認するために管理者が使用できる HTML/JavaScript で記述されたスクリプトについて説明します。  
   
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "69960243"
 ## <a name="detect-the-net-clr-user-agent-string"></a>".NET CLR" ユーザーエージェント文字列の検出  
  .NET Framework がインストールされている場合、MSI は UserAgent 文字列に ".NET CLR" とバージョン番号を追加します。 次の例は、単純な HTML ページに埋め込まれたスクリプトを示しています。 このスクリプトは、UserAgent 文字列を検索して .NET Framework がインストールされているかどうかを確認し、検索結果にステータスメッセージを表示します。  
   
-```  
+```html  
 <HTML>  
   <HEAD>  
     <TITLE>Test for the .NET Framework 3.0</TITLE>  

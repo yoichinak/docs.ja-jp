@@ -6,27 +6,27 @@ helpviewer_keywords:
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-ms.openlocfilehash: 8fff4d62e07bdfd4ecc27d2692c391251afdd6d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 586965dd4094e81fd830a09b64604cf33f195630
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971835"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053775"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod ディレクティブ
-XAML プロセッサが、バッキング型を解決した後、オブジェクトを初期化するために使用するコンス トラクター以外の方法を指定します。  
+バッキング型を解決した後に、XAML プロセッサがオブジェクトを初期化するために使用する必要があるコンストラクター以外のメソッドを指定します。  
   
-## <a name="xaml-attribute-usage-no-xarguments"></a>XAML 属性使用状況、x: 引数なし  
+## <a name="xaml-attribute-usage-no-xarguments"></a>XAML 属性の使用、x:Arguments なし  
   
-```  
+```xaml  
 <object x:FactoryMethod="methodname"...>  
   ...  
 </object>  
 ```  
   
-## <a name="xaml-attribute-usage-xarguments-as-elements"></a>XAML 属性使用状況、個の要素として X:arguments  
+## <a name="xaml-attribute-usage-xarguments-as-elements"></a>XAML 属性の使用法、x:Arguments as 要素  
   
-```  
+```xaml  
 <object x:FactoryMethod="methodname"...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
@@ -38,23 +38,23 @@ XAML プロセッサが、バッキング型を解決した後、オブジェク
   
 |||  
 |-|-|  
-|`methodname`|文字列のメソッド名として指定されたインスタンスを初期化するために XAML プロセッサが呼び出すメソッドの`object`します。 「解説」を参照してください。|  
-|`oneOrMoreObjectElements`|ファクトリ メソッドのパラメーターを指定するオブジェクトのオブジェクトの要素の 1 つ以上 順序は重要です。ファクトリ メソッドに引数を渡す必要があります、順序のことを示します。|  
+|`methodname`|として`object`指定されたインスタンスを初期化するために XAML プロセッサが呼び出すメソッドの文字列メソッド名。 「解説」を参照してください。|  
+|`oneOrMoreObjectElements`|ファクトリメソッドのパラメーターを指定するオブジェクトの1つ以上のオブジェクト要素。 順序は重要です。これは、引数をファクトリメソッドに渡す順序を示します。|  
   
 ## <a name="remarks"></a>Remarks  
- 場合`methodname`インスタンス メソッドを修飾することもできません。  
+ が`methodname`インスタンスメソッドの場合、修飾することはできません。  
   
- ファクトリ メソッドとしての静的メソッドがサポートされています。 場合`methodname`静的メソッドでは、`methodname`として提供されて、 *typeName*.*methodName*の組み合わせを*typeName*静的ファクトリ メソッドを定義するクラスの名前します。 *typeName*マップされた xmlns 内の型を参照している場合のプレフィックスで修飾することができます。 *typeName*より異なる型を指定できます`typeof(object)`します。  
+ ファクトリメソッドとしての静的メソッドがサポートされています。 が`methodname`静的メソッドの場合、 `methodname`は*typeName*として指定されます。*methodName*の組み合わせ。ここで、 *typeName*は、静的ファクトリメソッドを定義するクラスに名前を指定します。 マップされた xmlns 内の型を参照する場合は、 *typeName*をプレフィックスで修飾できます。 *typeName*は、とは異なる型`typeof(object)`にすることができます。  
   
- ファクトリ メソッドは、関連するオブジェクトの要素をサポートする型の宣言されたパブリック メソッドである必要があります。  
+ ファクトリメソッドは、関連するオブジェクト要素をバッキングする型の宣言されたパブリックメソッドである必要があります。  
   
- ファクトリ メソッドには、関連するオブジェクトに割り当てることができるインスタンスを返す必要があります。 ファクトリ メソッドには null を返すことはありません。  
+ ファクトリメソッドは、関連するオブジェクトに割り当て可能なインスタンスを返す必要があります。 ファクトリメソッドは null を返すことはできません。  
   
- `x:Arguments` ファクトリ メソッドのシグネチャに最適なものの原則で動作します。 一致するパラメーターの数を最初に評価します。 パラメーターの数に一致する 1 つ以上の場合は、パラメーターの型は、評価と最適な一致を確認しが。 評価のこのフェーズの後にあいまいさが残る、XAML プロセッサの動作は未定義です。  
+ `x:Arguments`ファクトリメソッドのシグネチャに最適な原則を使用して動作します。 照合では、最初にパラメーター数が評価されます。 パラメーターの数に一致する候補が複数ある場合は、パラメーターの型が評価され、最適な一致が決定されます。 この評価フェーズの後もあいまいさが残っている場合、XAML プロセッサの動作は未定義です。  
   
- `x:FactoryMethod`要素の使用方法で、一般的な意味では、プロパティ要素による使用できないためはディレクティブのマークアップは、親オブジェクト要素の型を参照していません。 要素の使用方法は、属性の使用方法よりは一般的です。 `x:Arguments` 組み合わせて (属性または要素のいずれかの使用法) を使用することができます`x:FactoryMethod`要素の使用方法が、これは具体的には表示されません、使用状況のセクションでします。  
+ 一般的な意味では、要素の使用法はプロパティ要素の使用ではありません。これは、ディレクティブマークアップが、包含するオブジェクト要素の型を参照しないためです。`x:FactoryMethod` 要素の使用法が属性の使用法よりも低いことが想定されています。 `x:Arguments`(属性または要素の使用法) を要素の`x:FactoryMethod`使用法と共に使用できますが、これは使用方法のセクションでは特に示されていません。  
   
- `x:FactoryMethod` 要素には、他のすべてのプロパティ要素が前に指定する必要がありますのいずれかの必要があります前`x:Arguments`も、要素として提供されており、任意の初期化/コンテンツ/内部のテキストのテキストの前にする必要があります。  
+ `x:FactoryMethod`要素は他のプロパティ要素の前に置く必要がある`x:Arguments`ため、は要素として指定されたの前に記述する必要があり、コンテンツ/内部テキスト/初期化テキストの前に記述する必要があります。  
   
 ## <a name="see-also"></a>関連項目
 

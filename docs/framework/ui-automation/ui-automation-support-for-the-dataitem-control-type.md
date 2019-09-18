@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: 7ba338a2eeb222dc8c807bc3a2bb4d1baf7de39d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 63d957eaaff7503aa8ba4dde9d836aea28f419ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912003"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71041804"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>UI オートメーションによる DataItem コントロール型のサポート
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "69912003"
  以下の各セクションで、DataItem コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の要件は、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]、 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]のいずれの場合も、すべてのデータ項目コントロールに適用されます。  
   
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
- 次の表に、データ項目コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]詳細については、「 [UI オートメーションツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)」を参照してください。  
+ 次の表に、データ項目コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]詳細については、「 [UI オートメーションツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー - コントロール ビュー|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー - コンテンツ ビュー|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
@@ -33,7 +33,7 @@ ms.locfileid: "69912003"
  データ グリッド内のデータ項目要素は、さまざまなオブジェクトをホストできます。たとえば、別のレイヤーのデータ項目や、テキスト、イメージ、エディット コントロールなどの特定のグリッド要素をホストできます。 データ項目要素に特定のオブジェクトの役割がある場合は、その要素を特定のコントロール型 (たとえば、グリッド内の選択可能なデータ項目の場合は ListItem コントロール型など) として公開する必要があります。  
   
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、データ項目コントロールに特に関連する値または定義を持つプロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティの詳細については[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)をご覧ください。  
+ 次の表に、データ項目コントロールに特に関連する値または定義を持つプロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティの詳細については[クライアントの UI オートメーション プロパティ](ui-automation-properties-for-clients.md)をご覧ください。  
   
 |プロパティ|値|メモ|  
 |--------------|-----------|-----------|  
@@ -51,7 +51,7 @@ ms.locfileid: "69912003"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|「ノート」をご覧ください。|データ項目コントロールには、主要なテキスト要素が常に含まれています。この要素は、その項目に対してユーザーが最も意味的な識別子として連想するものに関連しています。|  
   
 ## <a name="required-ui-automation-control-patterns"></a>必須の UI オートメーション コントロール パターン  
- 次の表に、すべてのデータ項目コントロールでサポートされなければならない [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] コントロール パターンを示します。 コントロール パターンについて詳しくは、「 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)」をご覧ください。  
+ 次の表に、すべてのデータ項目コントロールでサポートされなければならない [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] コントロール パターンを示します。 コントロール パターンについて詳しくは、「 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)」をご覧ください。  
   
 |コントロール パターン|サポート|メモ|  
 |---------------------|-------------|-----------|  
@@ -69,7 +69,7 @@ ms.locfileid: "69912003"
  データ項目の `SetFocus` 要素で [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] を呼び出すときに、 [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] の場合は正常に値を返し、データ項目サブツリー内でフォーカスを編集に設定します。  
   
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
- 次の表に、すべてのデータ項目コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」をご覧ください。  
+ 次の表に、すべてのデータ項目コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](ui-automation-events-overview.md)」をご覧ください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|メモ|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
@@ -90,7 +90,7 @@ ms.locfileid: "69912003"
 ## <a name="dataitem-control-type-example"></a>DataItem コントロール型の例  
  次の図は、列の豊富な情報をサポートするリスト ビュー コントロール内の DataItem コントロール型を示しています。  
   
- ![2 つのデータ項目を持つリストビューコントロールのグラフィック](../../../docs/framework/ui-automation/media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
+ ![2 つのデータ項目を持つリストビューコントロールのグラフィック](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
   
  以下には、データ項目コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューが表示されています。 オートメーションの各要素のコントロール パターンが、かっこ内に示されています。 グループ "Contoso" は、データ グリッド ホスト コントロールのグリッドの一部でもあります。  
   
@@ -103,5 +103,5 @@ ms.locfileid: "69912003"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Automation.ControlType.DataItem>
-- [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI オートメーション コントロール型の概要](ui-automation-control-types-overview.md)
+- [UI オートメーションの概要](ui-automation-overview.md)

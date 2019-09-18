@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b8d84f8ea9cf8f94cb7a2b155c5d40c6de2979a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d916aa5e19b8ce583984d9a8e9708d34cf0adfb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941697"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049537"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException クラス (.NET ネイティブ)
 **Windows アプリ用 .NET (Windows 10 用)、.NET ネイティブのみ**  
@@ -22,7 +22,7 @@ ms.locfileid: "69941697"
  **名前空間:** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
-> `MissingInteropDataException`クラスは、.NET ネイティブツールチェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。  
+> `MissingInteropDataException`クラスは、.NET ネイティブツールチェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。  
   
 ## <a name="syntax"></a>構文  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -72,7 +72,7 @@ ms.locfileid: "69941697"
 ## <a name="usage-details"></a>使用方法の詳細  
  `MissingInteropDataException` 例外は、型情報が使用できないために COM または Windows ランタイム コンポーネントへのメソッド呼び出しが正常に行えない場合にスローされます。  
   
- 実行時にアプリで使用できるメタデータは、ランタイムディレクティブ (xml 構成) ファイル\*(.xml) によって定義されます。 アプリからこの例外がスローされないようにするには、このファイルを変更して、実行時に存在する必要があるメタデータを定義する必要があります。 このエラーに対する最も一般的な対処法は、ランタイム ディレクティブ ファイルの適切なプログラム要素に `MarshalObject`、`MarshalDelegate`、または `MarshalStructure` 属性を追加することです。 このファイルの形式の詳細については、「[Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)」(ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス) を参照してください。  
+ 実行時にアプリで使用できるメタデータは、ランタイムディレクティブ (xml 構成) ファイル\*(.xml) によって定義されます。 アプリからこの例外がスローされないようにするには、このファイルを変更して、実行時に存在する必要があるメタデータを定義する必要があります。 このエラーに対する最も一般的な対処法は、ランタイム ディレクティブ ファイルの適切なプログラム要素に `MarshalObject`、`MarshalDelegate`、または `MarshalStructure` 属性を追加することです。 このファイルの形式の詳細については、「[Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md)」(ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス) を参照してください。  
   
 > [!IMPORTANT]
 > この例外はアプリケーションで必要なメタデータを実行時に使用できないことを示しているため、この例外に `try`/`catch` ブロックで対処しないでください。 代わりに、例外の原因を診断し、その原因を解消するために、ランタイム ディレクティブ ファイルに適切なエントリを追加します。  
@@ -82,5 +82,5 @@ ms.locfileid: "69941697"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Exception?displayProperty=nameWithType>
-- [MissingMetadataException クラス](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [MissingMetadataException クラス](missingmetadataexception-class-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)

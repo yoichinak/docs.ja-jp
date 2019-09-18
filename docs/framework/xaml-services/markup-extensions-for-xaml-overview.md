@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 5c29899846e7210c02b6bcc2b677b05581a5c6b1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adcd224e30d541f27b1583389ca63b6f8a32fc38
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939705"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053854"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML のマークアップ拡張機能の概要
 マークアップ拡張機能は、プリミティブでも特定の XAML 型でもない値を取得するための XAML の手法です。 属性による使用では、マークアップ拡張機能は、左中かっこ `{` でマークアップ拡張機能スコープに入り、右中かっこ `}` で終了するという、既知の文字シーケンスを使用します。 .NET Framework XAML サービスを使用する場合は、System.Xaml アセンブリから XAML 言語の定義済みのマークアップ拡張機能をいくつか使用できます。 また、System.Xaml で定義された <xref:System.Windows.Markup.MarkupExtension> クラスからサブクラスを作成し、独自のマークアップ拡張機能を定義することもできます。 あるいは、特定のフレームワークを既に参照している場合は、そのフレームワークによって定義されたマークアップ拡張機能を使用することができます。  
@@ -73,7 +73,7 @@ ms.locfileid: "69939705"
   
  たとえば、 `Collate` マークアップ拡張機能が、モードを表す位置指定引数 ( `CollationMode` 列挙定数として指定される) が 1 つのモードのみをサポートするとします。 この場合は、次の形式のコンストラクターが必要になります。  
   
-```  
+```csharp  
 public Collate(CollationMode collationMode) {...}  
 ```  
   
@@ -91,7 +91,7 @@ public Collate(CollationMode collationMode) {...}
   
  引数が位置指定引数と呼ばれるのは、使用の中でトークンに出会う順序が、割り当てられたコンストラクター パラメーターの位置的な順序に対応するからです。 たとえば、次のようなコンストラクター シグネチャについて考えてみます。  
   
-```  
+```csharp  
 public Collate(CollationMode collationMode, object collateThis) {...}  
 ```  
   

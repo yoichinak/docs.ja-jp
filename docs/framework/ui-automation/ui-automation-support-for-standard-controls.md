@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: d83713a81e7675a68482890c2401f1a0a6803abc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6cbf31c8a1cdf6e853e56445d22f4a7513bd1859
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914225"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042007"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>UI オートメーションによる標準コントロールのサポート
 > [!NOTE]
@@ -169,4 +169,4 @@ ms.locfileid: "69914225"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI オートメーション コントロール型](../../../docs/framework/ui-automation/ui-automation-control-types.md)
+- [UI オートメーション コントロール型](ui-automation-control-types.md)

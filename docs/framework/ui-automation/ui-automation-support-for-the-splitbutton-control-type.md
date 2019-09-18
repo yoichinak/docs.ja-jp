@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Split Button
 - UI Automation, Split Button control type
 ms.assetid: 14b05ccf-bcd8-4045-9bae-f7679cd98711
-ms.openlocfilehash: 7e8a8ec53a46d28bc37c7061332e18b39de450cd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b3b8346ca77110b811ee0b226bfa2b4cbf2e18db
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954682"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71041098"
 ---
 # <a name="ui-automation-support-for-the-splitbutton-control-type"></a>UI オートメーションによる SplitButton コントロール型のサポート
 > [!NOTE]
@@ -24,14 +24,14 @@ ms.locfileid: "69954682"
  以下の各セクションで、SplitButton コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要件は、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]、 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]のいずれの場合も、すべての分割ボタン コントロールに適用されます。  
   
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
- 次の表に、分割ボタン コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]詳細については、「 [UI オートメーションツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)」を参照してください。  
+ 次の表に、分割ボタン コントロールに関連する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューとコンテンツ ビューを示し、それぞれのビューに含めることができる内容について説明します。 ツリーの[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]詳細については、「 [UI オートメーションツリーの概要](ui-automation-tree-overview.md)」を参照してください。  
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
 |SplitButton<br /><br /> <ul><li>Image (0 または 1)</li><li>Text (0 または 1)</li><li>Button (1 または 2)<br /><br /> <ul><li>Menu (0 または 1。ExpandCollapse パターンをサポートするボタンの子として表示されます)</li><li>MenuItem (1 個以上)</li></ul></li></ul>|SplitButton<br /><br /> -MenuItem (1 対多)|  
   
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、分割ボタン コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティの詳細については[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)をご覧ください。  
+ 次の表に、分割ボタン コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティの詳細については[クライアントの UI オートメーション プロパティ](ui-automation-properties-for-clients.md)をご覧ください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|[値]|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -48,7 +48,7 @@ ms.locfileid: "69954682"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|分割ボタン コントロールは、エンド ユーザーに表示されます。|  
   
 ## <a name="required-ui-automation-control-patterns"></a>必須の UI オートメーション コントロール パターン  
- 次の表に、分割ボタン コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターンを示します。 コントロール パターンの詳細については、「 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)」を参照してください。  
+ 次の表に、分割ボタン コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターンを示します。 コントロール パターンの詳細については、「 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)」を参照してください。  
   
 |コントロール パターン|サポート|メモ|  
 |---------------------|-------------|-----------|  
@@ -56,7 +56,7 @@ ms.locfileid: "69954682"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|必須|分割ボタンには、必ずオプションの一覧を展開できる機能があります。|  
   
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
- 次の表に、すべての分割ボタン コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」をご覧ください。  
+ 次の表に、すべての分割ボタン コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](ui-automation-events-overview.md)」をご覧ください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|メモ|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
@@ -71,7 +71,7 @@ ms.locfileid: "69954682"
 ## <a name="splitbutton-control-example"></a>SplitButton コントロールの例  
  次の図は、データ グリッド コントロールの SplitButton コントロール型を示しています。  
   
- ![分割ボタン](../../../docs/framework/ui-automation/media/uiauto-splitbutton-detailed.gif "uiauto_splitbutton_detailed")  
+ ![分割ボタン](./media/uiauto-splitbutton-detailed.gif "uiauto_splitbutton_detailed")  
   
  以下に、データ グリッド コントロールと分割ボタン コントロールに関連する UI オートメーション ツリーのコントロール ビューとコンテンツ ビューを示します。 オートメーションの各要素のコントロール パターンが、かっこ内に示されています。  
   
@@ -82,5 +82,5 @@ ms.locfileid: "69954682"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Automation.ControlType.SplitButton>
-- [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI オートメーション コントロール型の概要](ui-automation-control-types-overview.md)
+- [UI オートメーションの概要](ui-automation-overview.md)

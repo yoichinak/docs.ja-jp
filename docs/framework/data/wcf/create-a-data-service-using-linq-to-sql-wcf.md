@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: 7a1075b680ec3310e1bd8d712579872333c6ebed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6489e451f3790e38ea821104fd2aca5a8c091ba6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791055"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052998"
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>方法: LINQ to SQL データソース (WCF Data Services) を使用してデータサービスを作成する
 
@@ -52,7 +52,7 @@ WCF Data Services は、エンティティデータをデータサービスと�
 
 2. **[新しい項目の追加]** ダイアログボックスで、 **[Web]** カテゴリの **[WCF Data Service]** テンプレートを選択します。
 
-   ![Visual Studio 2015 の WCF Data Service 項目テンプレート](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015 の WCF Data Service 項目テンプレート](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > **WCF Data Service**テンプレートは visual studio 2015 で使用できますが、visual studio 2017 では使用できません。

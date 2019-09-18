@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7969c0a3f5f828f1a1c0d4f33b82881130c6e15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949254"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046386"
 ---
 # <a name="method-etw-events"></a>メソッド ETW イベント
 
@@ -36,7 +36,7 @@ CLR メソッド イベントは、さらに次のように細分化されます
 
 ## <a name="clr-method-events"></a>CLR メソッド イベント
 
-次の表に、キーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)」を参照してください)。
+次の表に、キーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。
 
 |イベントを発生させるキーワード|レベル|
 |-----------------------------------|-----------|
@@ -63,7 +63,7 @@ CLR メソッド イベントは、さらに次のように細分化されます
 |MethodStartAddress|win:UInt64|メソッドの開始アドレス。|
 |MethodSize|win:UInt32|メソッドのサイズ。|
 |MethodToken|win:UInt32|動的メソッドおよび JIT ヘルパーの場合は 0。|
-|MethodFlags|win:UInt32|0x1:動的メソッド。<br /><br /> 0x2:ジェネリック メソッド。<br /><br /> 0x4:コードの JIT コンパイルされたメソッド (それ以外の場合の NGEN ネイティブ イメージ コード)。<br /><br /> 0x8:ヘルパー メソッドです。|
+|MethodFlags|win:UInt32|0x1動的メソッド。<br /><br /> 0x2ジェネリックメソッド。<br /><br /> 0x4JIT コンパイルコードメソッド (それ以外の場合は NGEN ネイティブイメージコード)。<br /><br /> 0x8ヘルパーメソッド。|
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
 
 [ページのトップへ](#top)
@@ -130,7 +130,7 @@ CLR メソッド イベントは、さらに次のように細分化されます
 |MethodStartAddress|win:UInt64|開始アドレス。|
 |MethodSize|win:UInt32|メソッドの長さ。|
 |MethodToken|win:UInt32|動的メソッドおよび JIT ヘルパーの場合は 0。|
-|MethodFlags|win:UInt32|0x1:動的メソッド。<br /><br /> 0x2:ジェネリック メソッド。<br /><br /> 0x4:(それ以外の場合、NGen.exe によって生成された) メソッドを JIT コンパイル<br /><br /> 0x8:ヘルパー メソッドです。|
+|MethodFlags|win:UInt32|0x1動的メソッド。<br /><br /> 0x2ジェネリックメソッド。<br /><br /> 0x4JIT コンパイルメソッド (それ以外の場合は Ngen.exe によって生成される)<br /><br /> 0x8ヘルパーメソッド。|
 |MethodNameSpace|win:UnicodeString|メソッドに関連付けられた完全な名前空間名。|
 |MethodName|win:UnicodeString|メソッドに関連付けられた完全クラス名。|
 |MethodSignature|win:UnicodeString|メソッドのシグネチャ (型名のコンマ区切りリスト)。|
@@ -172,4 +172,4 @@ CLR メソッド イベントは、さらに次のように細分化されます
 
 ## <a name="see-also"></a>関連項目
 
-- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW イベント](clr-etw-events.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af558e6712d58e208bf05cdb7a0f847ec4517f0f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eafbd5b1dfa8eeee386cdcf49652aeeee9d635a8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614306"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052392"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework のパフォーマンス カウンター
-ここで見つかりますパフォーマンス カウンターの一覧では、 [Windows パフォーマンス モニター](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)します。  
+このトピックでは、 [Windows パフォーマンスモニター](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)で検出できるパフォーマンスカウンターの一覧を示します。  
   
 - [例外パフォーマンス カウンター](#exception)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "64614306"
 |パフォーマンス カウンター|説明|  
 |-------------------------|-----------------|  
 |**# of Exceps Thrown**|アプリケーションの開始後にスローされた例外の総数を表示します。 この数には、.NET 例外と .NET 例外に変換されるアンマネージ例外の両方が含まれます。 たとえば、アンマネージド コードから返された HRESULT は、マネージド コードの例外に変換されます。<br /><br /> このカウンターには、処理済みの例外と未処理の例外の両方が含まれます。 再スローされる例外は、再びカウントされます。|  
-|**# of Exceps Thrown / Sec**|1 秒間にスローされた例外の数を表示します。 この数には、.NET 例外と .NET 例外に変換されるアンマネージ例外の両方が含まれます。 たとえば、アンマネージド コードから返された HRESULT は、マネージド コードの例外に変換されます。<br /><br /> このカウンターには、処理済みの例外と未処理の例外の両方が含まれます。 このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集の間隔で割った値が表示されます。 このカウンターは、大規模な場合、潜在的なパフォーマンスの問題を示すインジケーター (> 100 件) の例外がスローされます。|  
+|**# of Exceps Thrown / Sec**|1 秒間にスローされた例外の数を表示します。 この数には、.NET 例外と .NET 例外に変換されるアンマネージ例外の両方が含まれます。 たとえば、アンマネージド コードから返された HRESULT は、マネージド コードの例外に変換されます。<br /><br /> このカウンターには、処理済みの例外と未処理の例外の両方が含まれます。 このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集の間隔で割った値が表示されます。 このカウンターは、大きな (> 百) 個の例外がスローされた場合に発生する可能性のあるパフォーマンスの問題を示す指標です。|  
 |**# of Filters / Sec**|1 秒間に実行された .NET 例外フィルターの数を表示します。 例外フィルターの評価は、例外が処理済みかどうかに関係なくなされます。<br /><br /> このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集間隔で割った値が表示されます。|  
 |**# of Finallys / Sec**|1 秒間に実行された finally ブロックの数を表示します。 finally ブロックは、try ブロックがどのように終了されたかに関係なく必ず実行されます。  例外に対して実行された finally ブロックだけがカウントされます。通常のコード パスで実行された finally ブロックは、このカウンターではカウントされません。<br /><br /> このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集間隔で割った値が表示されます。|  
 |**Throw to Catch Depth / Sec**|1 秒間に走査されたスタック フレーム (例外をスローしたフレームから例外を処理したフレームまで) の数を表示します。 このカウンターは、例外ハンドラーに入ったときに 0 にリセットされます。したがって、入れ子になった例外ではハンドラーからハンドラーへのスタックの深さを示します。<br /><br /> このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集間隔で割った値が表示されます。|  
@@ -69,7 +69,7 @@ ms.locfileid: "64614306"
 |**% Time in Jit**|前回の JIT コンパイル フェーズ後に JIT コンパイルに費やされた経過時間の割合を示します。 このカウンターは、JIT コンパイル フェーズが終了するごとに、更新されます。 JIT コンパイル フェーズは、メソッドまたはその依存関係がコンパイルされたときに発生します。|  
 |**IL Bytes Jitted / sec**|1 秒間に JIT コンパイルされる MSIL バイト数を表示します。 このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集間隔で割った値が表示されます。|  
 |**Standard Jit Failures**|アプリケーションの開始後に JIT コンパイラがコンパイルに失敗したピーク メソッド数を表示します。 このエラーは、MSIL の検査に失敗したときや JIT コンパイラに内部エラーが検出されたときに発生します。|  
-|**Total # of IL Bytes Jitted**|アプリケーションの開始後に JIT コンパイラでコンパイルされた MSIL のバイト総数を表示します。 このカウンターは、**# of IL Bytes Jitted** カウンターと同じです。|  
+|**Total # of IL Bytes Jitted**|アプリケーションの開始後に JIT コンパイラでコンパイルされた MSIL のバイト総数を表示します。 このカウンターは、 **# of IL Bytes Jitted** カウンターと同じです。|  
   
 <a name="loading"></a>   
 ## <a name="loading-performance-counters"></a>読み込みパフォーマンス カウンター  
@@ -217,7 +217,7 @@ ms.locfileid: "64614306"
   
  ネットワーク パフォーマンス カウンターにアクセスして管理するには、<xref:System.Diagnostics.PerformanceCounter> および <xref:System.Diagnostics> 名前空間内の関連クラスを使用します。 ネットワーク パフォーマンス カウンターは、Windows パフォーマンス モニター コンソールでも参照できます。  
   
- ネットワーク パフォーマンス カウンターは、使用される構成ファイルで有効になっている必要があります。 すべてのネットワーク パフォーマンス カウンターは、構成ファイル内の 1 つの設定で有効または無効にされます。 ネットワーク パフォーマンス カウンターを個別に有効または無効にすることはできません。 詳細については、「[\<performanceCounter> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)」を参照してください。  
+ ネットワーク パフォーマンス カウンターは、使用される構成ファイルで有効になっている必要があります。 すべてのネットワーク パフォーマンス カウンターは、構成ファイル内の 1 つの設定で有効または無効にされます。 ネットワーク パフォーマンス カウンターを個別に有効または無効にすることはできません。 詳細については、「[\<performanceCounter> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md)」を参照してください。  
   
  ネットワーク カウンターが有効であると、per-AppDomain カウンターとグローバル パフォーマンス カウンターの両方が作成され、更新されます。 無効にすると、アプリケーションはどのネットワーク パフォーマンス カウンターのデータも提供しません。  
   
@@ -237,7 +237,7 @@ for (int i = 0; i < Array.Length; i++)
   
 - ".NET CLR Networking 4.0.0.0" - 上に示したすべてのソケット カウンターと、.NET Framework Version 4 以降でサポートされている新しいパフォーマンス カウンター。 これらの新しいカウンターは、<xref:System.Net.HttpWebRequest> オブジェクトに関するパフォーマンス情報を提供します。  
   
- アプリケーションでパフォーマンス カウンターにアクセスして管理する方法の詳細については、「[パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)」を参照してください。  
+ アプリケーションでパフォーマンス カウンターにアクセスして管理する方法の詳細については、「[パフォーマンス カウンター](performance-counters.md)」を参照してください。  
   
 <a name="security"></a>   
 ## <a name="security-performance-counters"></a>セキュリティ パフォーマンス カウンター  
@@ -253,5 +253,5 @@ for (int i = 0; i < Array.Length; i++)
   
 ## <a name="see-also"></a>関連項目
 
-- [パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)
-- [ランタイム プロファイリング](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+- [パフォーマンス カウンター](performance-counters.md)
+- [ランタイム プロファイリング](runtime-profiling.md)

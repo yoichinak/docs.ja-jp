@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI Automation, registering provider assemblies
 - provider assemblies, registering
 ms.assetid: a03af4d9-2771-43cc-b07b-d468dca23190
-ms.openlocfilehash: ed45b7e5d60e42f03bce8b9dc4abbf8226916304
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 18a63a955fdf782670bb60dfc6845261990cdcd1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966354"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042779"
 ---
 # <a name="register-a-client-side-provider-assembly"></a>クライアント側プロバイダー アセンブリの登録
 > [!NOTE]
@@ -31,4 +31,4 @@ ms.locfileid: "69966354"
   
 ## <a name="see-also"></a>関連項目
 
-- [クライアント側 UI オートメーション プロバイダーの作成](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
+- [クライアント側 UI オートメーション プロバイダーの作成](create-a-client-side-ui-automation-provider.md)

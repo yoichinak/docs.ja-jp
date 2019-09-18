@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, enabling navigation in provider
 - navigation, enabling in UI Automation provider
 ms.assetid: 3cb6092a-58c9-4ca0-84a5-0e54d5d00a0d
-ms.openlocfilehash: 6410a0f8a991f1dc21a298972182ec630723f627
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 729d8c117599ca6d9aa011de6b3cf0e9a86cbea3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932607"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043816"
 ---
 # <a name="enable-navigation-in-a-ui-automation-fragment-provider"></a>UI オートメーション フラグメント プロバイダーでのナビゲーションの有効化
 > [!NOTE]
@@ -29,5 +29,5 @@ ms.locfileid: "69932607"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI オートメーション プロバイダーの概要](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [UI オートメーション プロバイダーの概要](ui-automation-providers-overview.md)
+- [サーバー側 UI オートメーション プロバイダーの実装](server-side-ui-automation-provider-implementation.md)

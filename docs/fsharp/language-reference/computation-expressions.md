@@ -2,16 +2,16 @@
 title: コンピュテーション式
 description: 制御フローの構造とバインディングを使用してF#シーケンス処理および結合できる、で計算を記述するための便利な構文を作成する方法について説明します。
 ms.date: 03/15/2019
-ms.openlocfilehash: bca328a09ff61fb76d30960221ee3350fcc25fc1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 9222be5a585914761d3001d6649b196030eec05e
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106571"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083055"
 ---
 # <a name="computation-expressions"></a>コンピュテーション式
 
-のF#コンピュテーション式は、制御フローの構造とバインディングを使用して、シーケンス処理および結合できる計算を作成するための便利な構文を提供します。 計算式の種類によっては、monads、モノ id、monads トランスフォーマー、およびアプリケーションを表現する方法と考えることができます。 ただし、Haskell のような他の言語とは異なり、それらは1つの抽象化に関連付けられておらず、マクロやその他の形式のメタプログラミングに依存せず、便利で状況依存の構文を実現できません。
+のF#コンピュテーション式は、制御フローの構造とバインディングを使用して、シーケンス処理および結合できる計算を作成するための便利な構文を提供します。 計算式の種類によっては、monads、モノ id、monads トランスフォーマー、およびアプリケーションを表現する方法と考えることができます。 ただし、Haskell*のような*他の言語とは異なり、それらは1つの抽象化に関連付けられておらず、マクロやその他の形式のメタプログラミングに依存せず、便利で状況依存の構文を実現できません。
 
 ## <a name="overview"></a>概要
 
@@ -32,7 +32,7 @@ ms.locfileid: "70106571"
 
 すべての計算式の形式は次のとおりです。
 
-```
+```fsharp
 builder-expr { cexper }
 ```
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
-ms.openlocfilehash: ca46eb01ee8a18e83cecbc26b2e9bf82778c210b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 450a3f3a4969287181aa031ab581b85447bfde56
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954082"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040422"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>UI オートメーション テキスト パターンに関する「方法」トピック
 > [!NOTE]
@@ -22,9 +22,9 @@ ms.locfileid: "69954082"
  このセクションには、UI オートメーションテキストパターンの使用方法について説明するトピックが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [UI オートメーションを使用した、テキスト ボックスへのコンテンツの追加](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [UI オートメーションを使用した、テキストの検索と強調表示](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [UI オートメーションを使用してテキスト属性を取得する](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
- [UI オートメーションを使用して混合テキスト属性の詳細を取得する](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
- [UI オートメーションを使用したテキストのスキャン](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [UI オートメーションを使用した、埋め込みオブジェクトへのアクセス](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+ [UI オートメーションを使用した、テキスト ボックスへのコンテンツの追加](add-content-to-a-text-box-using-ui-automation.md)  
+ [UI オートメーションを使用した、テキストの検索と強調表示](find-and-highlight-text-using-ui-automation.md)  
+ [UI オートメーションを使用してテキスト属性を取得する](obtain-text-attributes-using-ui-automation.md)  
+ [UI オートメーションを使用して混合テキスト属性の詳細を取得する](obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [UI オートメーションを使用したテキストのスキャン](traverse-text-using-ui-automation.md)  
+ [UI オートメーションを使用した、埋め込みオブジェクトへのアクセス](access-embedded-objects-using-ui-automation.md)

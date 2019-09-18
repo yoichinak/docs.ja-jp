@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: b56fc09b33a846fe94a52e19dc4b9c806d79c121
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f4ce2d996d5a1a6ecd149118b7499650882a732f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044105"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042290"
 ---
 # <a name="ui-automation-events-for-clients"></a>クライアントの UI オートメーション イベント
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "70044105"
 > [!NOTE]
 > あらゆるイベントが、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] プロバイダーによって生成されるわけではないことに注意してください。 たとえば、すべてのプロパティ変更が、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] および [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] コントロールの標準プロキシ プロバイダーによるイベント生成を引き起こすわけではありません。  
   
- イベントの詳細なビュー [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については、「 [UI Automation イベントの概要](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」を参照してください。  
+ イベントの詳細なビュー [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については、「 [UI Automation イベントの概要](ui-automation-events-overview.md)」を参照してください。  
   
 <a name="Subscribing_to_Events"></a>   
 ## <a name="subscribing-to-events"></a>イベントのサブスクライブ  
@@ -44,7 +44,7 @@ ms.locfileid: "70044105"
 > ウィンドウを閉じるイベントを処理するには、イベント ハンドラーに渡される引数の型を <xref:System.Windows.Automation.WindowClosedEventArgs> にキャストします。 ウィンドウの [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 要素は無効になるため、`sender` パラメーターを使用して情報を取得することはできないので、代わりに <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A> を使用します。  
   
 > [!CAUTION]
-> アプリケーションが自身の [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] からイベントを受け取る可能性がある場合、イベントのサブスクリプションまたはサブスクリプションの解除にアプリケーションの [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] スレッドを使用しないでください。 使用すると、予期しない動作を招く可能性があります。 詳細については、「 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)」を参照してください。  
+> アプリケーションが自身の [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] からイベントを受け取る可能性がある場合、イベントのサブスクリプションまたはサブスクリプションの解除にアプリケーションの [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] スレッドを使用しないでください。 使用すると、予期しない動作を招く可能性があります。 詳細については、「 [UI Automation Threading Issues](ui-automation-threading-issues.md)」を参照してください。  
   
  シャットダウン時、またはアプリケーションで [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントに意味がなくなった場合、UI オートメーション クライアントが次のいずれかのメソッドを呼び出す必要があります。  
   
@@ -55,11 +55,11 @@ ms.locfileid: "70044105"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> を使用して登録されたイベント ハンドラーの登録を解除します。|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|登録済みのすべてのイベント ハンドラーの登録を解除します。|  
   
- コード例については、「 [UI オートメーションイベントのサブスクライブ](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)」を参照してください。  
+ コード例については、「 [UI オートメーションイベントのサブスクライブ](subscribe-to-ui-automation-events.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [UI オートメーション イベントのサブスクライブ](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
-- [UI オートメーション イベントの概要](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
-- [UI オートメーション プロパティの概要](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
+- [UI オートメーション イベントのサブスクライブ](subscribe-to-ui-automation-events.md)
+- [UI オートメーション イベントの概要](ui-automation-events-overview.md)
+- [UI オートメーション プロパティの概要](ui-automation-properties-overview.md)
 - [TrackFocus サンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

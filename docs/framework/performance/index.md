@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea61b3abf920a5261933f56c71011b50bcd52bb2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e58c7b3ce134139950de54d98b590ec2e6b0f3de
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927096"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046450"
 ---
 # <a name="net-framework-performance"></a>.NET Framework のパフォーマンス
 優れたパフォーマンスのアプリを作成する場合は、アプリのその他の機能を設計する場合と同様に、パフォーマンスについて設計および計画する必要があります。 Microsoft が提供するツールを使用して、アプリのパフォーマンスを測定し、必要に応じて、メモリの使用、コードのスループット コード、および応答性を向上させることができます。 ここでは、Microsoft が提供するパフォーマンス分析ツールの一覧と、アプリ開発の特定の領域のパフォーマンスに関する他のトピックへのリンクを示します。  
@@ -38,14 +38,14 @@ ms.locfileid: "70927096"
 |[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|複数のアプリが同じコンピューターで実行されているときに、アプリのメモリやストレージの使用量などの全体的なシステム パフォーマンスを特定するために使用します。 このツールは、[!INCLUDE[win8](../../../includes/win8-md.md)] 用の Windows アセスメント &amp; デプロイメント キット (ADK) の一部としてダウンロード センターから使用できます。 詳細については、「[Windows Performance Analyzer (Windows パフォーマンス アナライザー)](/windows-hardware/test/wpt/windows-performance-analyzer)」を参照してください。|  
   
 ### <a name="event-tracing-for-windows-etw"></a>Windows イベント トレーシング (ETW)  
- ETW は、実行中のコードに関する診断情報を取得できるようにする手法であり、前に説明したパフォーマンス ツールの多くで必要なテクノロジです。 ETW は、特定のイベントが .NET Framework アプリおよび Windows によって発生したときにログを作成します。 ETW を使用すると、ログの記録を動的に有効または無効にすることができ、稼動環境でアプリを再起動せずに詳細なトレースを実行できます。 .NET Framework は ETW イベントをサポートしており、ETW はパフォーマンス データを生成する多くのプロファイル ツールやパフォーマンス ツールで使用されます。 これらのツールは、ETW イベントを有効または無効にするため、ETW イベントの知識が役立ちます。 アプリの特定のコンポーネントに関するパフォーマンス情報を収集するために、特定の ETW イベントを使用できます。 .NET Framework での ETW のサポートの詳細については、「[共通言語ランタイムの ETW イベント](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)」と「[タスク並列ライブラリおよび PLINQ での ETW イベント](../../../docs/framework/performance/etw-events-in-task-parallel-library-and-plinq.md)」を参照してください。  
+ ETW は、実行中のコードに関する診断情報を取得できるようにする手法であり、前に説明したパフォーマンス ツールの多くで必要なテクノロジです。 ETW は、特定のイベントが .NET Framework アプリおよび Windows によって発生したときにログを作成します。 ETW を使用すると、ログの記録を動的に有効または無効にすることができ、稼動環境でアプリを再起動せずに詳細なトレースを実行できます。 .NET Framework は ETW イベントをサポートしており、ETW はパフォーマンス データを生成する多くのプロファイル ツールやパフォーマンス ツールで使用されます。 これらのツールは、ETW イベントを有効または無効にするため、ETW イベントの知識が役立ちます。 アプリの特定のコンポーネントに関するパフォーマンス情報を収集するために、特定の ETW イベントを使用できます。 .NET Framework での ETW のサポートの詳細については、「[共通言語ランタイムの ETW イベント](etw-events-in-the-common-language-runtime.md)」と「[タスク並列ライブラリおよび PLINQ での ETW イベント](etw-events-in-task-parallel-library-and-plinq.md)」を参照してください。  
   
 ## <a name="performance-by-app-type"></a>アプリの種類別のパフォーマンス  
  .NET Framework アプリの種類ごとに、パフォーマンスを評価するためのベスト プラクティス、考慮事項、およびツールがあります。 次の表では、特定の種類の .NET Framework アプリのパフォーマンスに関するトピックへのリンクを示します。  
   
 |アプリの種類|参照トピック|  
 |--------------|---------|  
-|すべてのプラットフォームに対応した .NET Framework アプリ|[ガベージ コレクションとパフォーマンス](../../standard/garbage-collection/performance.md)<br /><br /> [パフォーマンスに関するヒント](../../../docs/framework/performance/performance-tips.md)|  
+|すべてのプラットフォームに対応した .NET Framework アプリ|[ガベージ コレクションとパフォーマンス](../../standard/garbage-collection/performance.md)<br /><br /> [パフォーマンスに関するヒント](performance-tips.md)|  
 |C++、C#、および Visual Basic で記述された [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリ|[C++、C#、または Visual Basic を使った Windows ストア アプリのパフォーマンスのベスト プラクティス](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |Windows Presentation Foundation (WPF)|[WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[ASP.NET のパフォーマンスの概要](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
@@ -54,7 +54,7 @@ ms.locfileid: "70927096"
   
 |タイトル|説明|  
 |-----------|-----------------|  
-|[.NET Framework アプリケーションでのキャッシュ](../../../docs/framework/performance/caching-in-net-framework-applications.md)|データをキャッシュしてアプリケーションのパフォーマンスを向上させる手法について説明します。|  
-|[遅延初期化](../../../docs/framework/performance/lazy-initialization.md)|特にアプリの起動時にパフォーマンスを向上させるために、必要に応じてオブジェクトを初期化する方法について説明します。|  
-|[信頼性](../../../docs/framework/performance/reliability.md)|サーバー環境での非同期例外の発生防止について説明します。|  
-|[規模が大きく、応答性の高い .NET Framework アプリの作成](../../../docs/framework/performance/writing-large-responsive-apps.md)|マネージド コードで C# および Visual Basic コンパイラを再作成する際に得られたパフォーマンスに関するヒントを説明し、C# コンパイラでの実際の例をいくつか紹介します。|
+|[.NET Framework アプリケーションでのキャッシュ](caching-in-net-framework-applications.md)|データをキャッシュしてアプリケーションのパフォーマンスを向上させる手法について説明します。|  
+|[遅延初期化](lazy-initialization.md)|特にアプリの起動時にパフォーマンスを向上させるために、必要に応じてオブジェクトを初期化する方法について説明します。|  
+|[信頼性](reliability.md)|サーバー環境での非同期例外の発生防止について説明します。|  
+|[規模が大きく、応答性の高い .NET Framework アプリの作成](writing-large-responsive-apps.md)|マネージド コードで C# および Visual Basic コンパイラを再作成する際に得られたパフォーマンスに関するヒントを説明し、C# コンパイラでの実際の例をいくつか紹介します。|

@@ -31,59 +31,59 @@ helpviewer_keywords:
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b745fa6a78ab2a7ab0b3a94c9921883d3c56c1b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cb2a240a2e7e82b7015eb7a6d99c2117fa63045
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874623"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052898"
 ---
-# <a name="diagnose-errors-with-managed-debugging-assistants"></a>マネージ デバッグ アシスタントによるエラーを診断します。
+# <a name="diagnose-errors-with-managed-debugging-assistants"></a>マネージデバッグアシスタントを使用してエラーを診断する
 
 マネージド デバッグ アシスタント (MDA) は、共通言語ランタイム (CLR: Common Language Runtime) と連携してランタイム状態に関する情報を提供するデバッグ支援ツールです。 MDA は、これ以外の方法ではトラップできないランタイム イベントに関する情報メッセージを生成します。 MDA を使用すると、マネージド コードからアンマネージド コードへの遷移時に発生する、検出が難しいアプリケーション バグを分離できます。
 
-できます[有効または無効に](#enable-and-disable-mdas)すべての Mda を Windows レジストリにキーを追加するか、環境変数を設定します。 特定の MDA を有効にするには、アプリケーション構成設定を使用します。 一部の MDA については、アプリケーションの構成ファイルで追加の構成設定を個別に設定できます。 この構成ファイルはランタイムの読み込み時に解析されるため、MDA は、マネージド アプリケーションが起動する前に有効にする必要があります。 MDA は、既に起動しているアプリケーションに対して有効にできません。
+すべての Mda を[有効または無効](#enable-and-disable-mdas)にするには、Windows レジストリにキーを追加するか、環境変数を設定します。 特定の MDA を有効にするには、アプリケーション構成設定を使用します。 一部の MDA については、アプリケーションの構成ファイルで追加の構成設定を個別に設定できます。 この構成ファイルはランタイムの読み込み時に解析されるため、MDA は、マネージド アプリケーションが起動する前に有効にする必要があります。 MDA は、既に起動しているアプリケーションに対して有効にできません。
 
-次の表では、.NET Framework に付属する Mda を示します。
+次の表に、.NET Framework に付属している Mda を示します。
 
 |||
 |-|-|
-|[asynchronousThreadAbort](../../../docs/framework/debug-trace-profile/asynchronousthreadabort-mda.md)|[bindingFailure](../../../docs/framework/debug-trace-profile/bindingfailure-mda.md)|
-|[callbackOnCollectedDelegate](../../../docs/framework/debug-trace-profile/callbackoncollecteddelegate-mda.md)|[contextSwitchDeadlock](../../../docs/framework/debug-trace-profile/contextswitchdeadlock-mda.md)|
-|[dangerousThreadingAPI](../../../docs/framework/debug-trace-profile/dangerousthreadingapi-mda.md)|[dateTimeInvalidLocalFormat](../../../docs/framework/debug-trace-profile/datetimeinvalidlocalformat-mda.md)|
-|[dirtyCastAndCallOnInterface](../../../docs/framework/debug-trace-profile/dirtycastandcalloninterface-mda.md)|[disconnectedContext](../../../docs/framework/debug-trace-profile/disconnectedcontext-mda.md)|
-|[dllMainReturnsFalse](../../../docs/framework/debug-trace-profile/dllmainreturnsfalse-mda.md)|[exceptionSwallowedOnCallFromCom](../../../docs/framework/debug-trace-profile/exceptionswallowedoncallfromcom-mda.md)|
-|[failedQI](../../../docs/framework/debug-trace-profile/failedqi-mda.md)|[fatalExecutionEngineError](../../../docs/framework/debug-trace-profile/fatalexecutionengineerror-mda.md)|
-|[gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)|[gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)|
-|[illegalPrepareConstrainedRegion](../../../docs/framework/debug-trace-profile/illegalprepareconstrainedregion-mda.md)|[invalidApartmentStateChange](../../../docs/framework/debug-trace-profile/invalidapartmentstatechange-mda.md)|
-|[invalidCERCall](../../../docs/framework/debug-trace-profile/invalidcercall-mda.md)|[invalidFunctionPointerInDelegate](../../../docs/framework/debug-trace-profile/invalidfunctionpointerindelegate-mda.md)|
-|[invalidGCHandleCookie](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)|[invalidIUnknown](../../../docs/framework/debug-trace-profile/invalidiunknown-mda.md)|
-|[invalidMemberDeclaration](../../../docs/framework/debug-trace-profile/invalidmemberdeclaration-mda.md)|[invalidOverlappedToPinvoke](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)|
-|[invalidVariant](../../../docs/framework/debug-trace-profile/invalidvariant-mda.md)|[jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md)|
-|[loaderLock](../../../docs/framework/debug-trace-profile/loaderlock-mda.md)|[loadFromContext](../../../docs/framework/debug-trace-profile/loadfromcontext-mda.md)|
-|[marshalCleanupError](../../../docs/framework/debug-trace-profile/marshalcleanuperror-mda.md)|[marshaling](../../../docs/framework/debug-trace-profile/marshaling-mda.md)|
-|[memberInfoCacheCreation](../../../docs/framework/debug-trace-profile/memberinfocachecreation-mda.md)|[moduloObjectHashcode](../../../docs/framework/debug-trace-profile/moduloobjecthashcode-mda.md)|
-|[nonComVisibleBaseClass](../../../docs/framework/debug-trace-profile/noncomvisiblebaseclass-mda.md)|[notMarshalable](../../../docs/framework/debug-trace-profile/notmarshalable-mda.md)|
-|[openGenericCERCall](../../../docs/framework/debug-trace-profile/opengenericcercall-mda.md)|[overlappedFreeError](../../../docs/framework/debug-trace-profile/overlappedfreeerror-mda.md)|
-|[pInvokeLog](../../../docs/framework/debug-trace-profile/pinvokelog-mda.md)|[pInvokeStackImbalance](../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)|
-|[raceOnRCWCleanup](../../../docs/framework/debug-trace-profile/raceonrcwcleanup-mda.md)|[reentrancy](../../../docs/framework/debug-trace-profile/reentrancy-mda.md)|
-|[releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md)|[reportAvOnComRelease](../../../docs/framework/debug-trace-profile/reportavoncomrelease-mda.md)|
-|[streamWriterBufferedDataLost](../../../docs/framework/debug-trace-profile/streamwriterbuffereddatalost-mda.md)|[virtualCERCall](../../../docs/framework/debug-trace-profile/virtualcercall-mda.md)|
+|[asynchronousThreadAbort](asynchronousthreadabort-mda.md)|[bindingFailure](bindingfailure-mda.md)|
+|[callbackOnCollectedDelegate](callbackoncollecteddelegate-mda.md)|[contextSwitchDeadlock](contextswitchdeadlock-mda.md)|
+|[dangerousThreadingAPI](dangerousthreadingapi-mda.md)|[dateTimeInvalidLocalFormat](datetimeinvalidlocalformat-mda.md)|
+|[dirtyCastAndCallOnInterface](dirtycastandcalloninterface-mda.md)|[disconnectedContext](disconnectedcontext-mda.md)|
+|[dllMainReturnsFalse](dllmainreturnsfalse-mda.md)|[exceptionSwallowedOnCallFromCom](exceptionswallowedoncallfromcom-mda.md)|
+|[failedQI](failedqi-mda.md)|[fatalExecutionEngineError](fatalexecutionengineerror-mda.md)|
+|[gcManagedToUnmanaged](gcmanagedtounmanaged-mda.md)|[gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)|
+|[illegalPrepareConstrainedRegion](illegalprepareconstrainedregion-mda.md)|[invalidApartmentStateChange](invalidapartmentstatechange-mda.md)|
+|[invalidCERCall](invalidcercall-mda.md)|[invalidFunctionPointerInDelegate](invalidfunctionpointerindelegate-mda.md)|
+|[invalidGCHandleCookie](invalidgchandlecookie-mda.md)|[invalidIUnknown](invalidiunknown-mda.md)|
+|[invalidMemberDeclaration](invalidmemberdeclaration-mda.md)|[invalidOverlappedToPinvoke](invalidoverlappedtopinvoke-mda.md)|
+|[invalidVariant](invalidvariant-mda.md)|[jitCompilationStart](jitcompilationstart-mda.md)|
+|[loaderLock](loaderlock-mda.md)|[loadFromContext](loadfromcontext-mda.md)|
+|[marshalCleanupError](marshalcleanuperror-mda.md)|[marshaling](marshaling-mda.md)|
+|[memberInfoCacheCreation](memberinfocachecreation-mda.md)|[moduloObjectHashcode](moduloobjecthashcode-mda.md)|
+|[nonComVisibleBaseClass](noncomvisiblebaseclass-mda.md)|[notMarshalable](notmarshalable-mda.md)|
+|[openGenericCERCall](opengenericcercall-mda.md)|[overlappedFreeError](overlappedfreeerror-mda.md)|
+|[pInvokeLog](pinvokelog-mda.md)|[pInvokeStackImbalance](pinvokestackimbalance-mda.md)|
+|[raceOnRCWCleanup](raceonrcwcleanup-mda.md)|[reentrancy](reentrancy-mda.md)|
+|[releaseHandleFailed](releasehandlefailed-mda.md)|[reportAvOnComRelease](reportavoncomrelease-mda.md)|
+|[streamWriterBufferedDataLost](streamwriterbuffereddatalost-mda.md)|[virtualCERCall](virtualcercall-mda.md)|
 
-既定では、.NET Framework はすべてのマネージド デバッガーに対して MDA のサブセットをアクティブにします。 選択すると、Visual Studio で設定した既定値を表示する**Windows** > **例外設定**上、**デバッグ**メニューのおよび、を展開し、**マネージ デバッグ アシスタント**一覧。
+既定では、.NET Framework はすべてのマネージド デバッガーに対して MDA のサブセットをアクティブにします。 Visual Studio で既定のセットを表示するには、 **[デバッグ]** メニューの [ **Windows** > **例外設定**] を選択し、 **[マネージデバッグアシスタント]** の一覧を展開します。
 
-![Visual Studio での例外設定ウィンドウ](media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
+![Visual Studio の [例外設定] ウィンドウ](./media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
 
-## <a name="enable-and-disable-mdas"></a>無効にする Mda の有効化と
+## <a name="enable-and-disable-mdas"></a>Mda を有効または無効にする
 
 MDA は、レジストリ キー、環境変数、およびアプリケーション構成設定を使用して有効または無効にできます。 アプリケーション構成設定を使用するには、レジストリ キーまたは環境変数を有効にする必要があります。
 
 > [!TIP]
-> Mda を無効にすると、代わりに Visual Studio を防ぐため、MDA 通知を受け取るたびに MDA ダイアログ ボックスが表示されないことができます。 次のように選択します**Windows** > **例外設定**上、**デバッグ**メニューで、展開、**マネージ デバッグ アシスタント**。ボックスの一覧をオンまたはオフ、**スローされたときに中断**個々 の MDA に対してチェック ボックス。
+> Mda を無効にする代わりに、MDA の通知を受信するたびに、Visual Studio が MDA ダイアログボックスを表示しないようにすることができます。 これを行うには、 **[デバッグ]** メニューの [ **Windows** > **例外設定**] をクリックし、 **[マネージデバッグアシスタント]** の一覧を展開して、個々の MDA に対して スローされ **[たときにブレーク]** チェックボックスをオンまたはオフにします。
 
 ### <a name="registry-key"></a>レジストリ キー
 
-Mda を有効にするには追加、 **hkey_local_machine \software\microsoft\\します.Netframework \mda** Windows レジストリのサブキー (REG_SZ 型、値 1)。 という名前のテキスト ファイルに次の例をコピー *MDAEnable.reg*します。Windows レジストリ エディター (RegEdit.exe) を開くとの間、**ファイル**メニュー**インポート**します。 選択、 *MDAEnable.reg*ファイルをそのコンピューターで Mda を有効にします。 サブキーの設定の文字列値に**1** (の DWORD 値ではなく**1**) から MDA の設定を読み取ることができるように、 *ApplicationName.suffix*.mda.config ファイル。 たとえば、メモ帳の MDA 構成ファイルは notepad.exe.mda.config になります。
+Mda を有効にするには、 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\を追加します。Windows レジストリの Netframework\ MDA**サブキー (型 REG_SZ, 値 1)。 次の例を、 *Mdaenable*という名前のテキストファイルにコピーします。Windows レジストリエディター (Regedit.exe) を開き、 **[ファイル]** メニューの **[インポート]** をクリックします。 *Mdaenable .reg*ファイルを選択して、そのコンピューターで mda を有効にします。 サブキーを**1**に設定すると (DWORD 値が**1**ではない)、 *ApplicationName*... .config ファイルから mda 設定を読み取ることができます。 たとえば、メモ帳の MDA 構成ファイルには、notepad.exe という名前が付けられます。
 
 ```text
 Windows Registry Editor Version 5.00
@@ -101,11 +101,11 @@ Windows Registry Editor Version 5.00
 "MDA"="1"
 ```
 
-参照してください[アプリケーションに固有の構成設定](#application-specific-configuration-settings)詳細についてはします。 レジストリ設定は、COMPLUS_MDA 環境変数でオーバーライドできます。 参照してください[環境変数](#environment-variable)詳細についてはします。
+詳細については[、「アプリケーション固有の構成設定](#application-specific-configuration-settings)」を参照してください。 レジストリ設定は、COMPLUS_MDA 環境変数でオーバーライドできます。 詳細については、「[環境変数](#environment-variable)」を参照してください。
 
-Mda を無効にする MDA サブキーを設定**0** (0)、Windows レジストリ エディターを使用します。
+Mda を無効にするには、Windows レジストリエディターを使用して、MDA サブキーを**0** (ゼロ) に設定します。
 
-MDA には、レジストリ キーを追加しなくても、デバッガーにアタッチされているアプリケーションを実行すると既定で有効になるものがあります。 実行してこれらのアシスタントを無効にすることができます、 *MDADisable.reg*ファイルのこのセクションの説明のとおりです。
+MDA には、レジストリ キーを追加しなくても、デバッガーにアタッチされているアプリケーションを実行すると既定で有効になるものがあります。 これらのアシスタントを無効にするには、このセクションで前述したように*Mdadisable .reg*ファイルを実行します。
 
 ### <a name="environment-variable"></a>環境変数
 
@@ -131,7 +131,7 @@ MDA のアクティブ化は、COMPLUS_MDA 環境変数によって制御する�
 
 アプリケーションの MDA 構成ファイルでは、一部のアシスタントを個別に有効化、無効化、および構成できます。 MDA を構成する目的でアプリケーション構成ファイルの使用を有効にするには、MDA レジストリ キーまたは COMPLUS_MDA 環境変数を設定する必要があります。 アプリケーション構成ファイルは、通常、アプリケーションの実行可能ファイル (.exe) と同じディレクトリに置かれます。 このファイル名の形式は、*ApplicationName*.mda.config です (notepad.exe.mda.config など)。アプリケーション構成ファイルで有効にされたアシスタントには、そのアシスタントの動作を制御するために特別にデザインされた属性や要素が存在する場合があります。
 
-次の例では、有効にして構成する方法を示しています、[マーシャ リング](../../../docs/framework/debug-trace-profile/marshaling-mda.md):
+次の例は、[マーシャリング](marshaling-mda.md)を有効化および構成する方法を示しています。
 
 ```xml
 <mdaConfig>
@@ -148,7 +148,7 @@ MDA のアクティブ化は、COMPLUS_MDA 環境変数によって制御する�
 </mdaConfig>
 ```
 
-`Marshaling` MDA では、アプリケーションでのマネージド コードからアンマネージド コードへの遷移ごとに、アンマネージド型にマーシャリングされるマネージド型についての情報が出力されます。 `Marshaling` MDA は、メソッドの名前もをフィルター処理、および構造体のフィールドで、 **methodFilter**と**fieldFilter**子要素では、それぞれします。
+`Marshaling` MDA では、アプリケーションでのマネージド コードからアンマネージド コードへの遷移ごとに、アンマネージド型にマーシャリングされるマネージド型についての情報が出力されます。 MDA `Marshaling`は、 **methodfilter**および**fieldfilter**子要素で指定されたメソッドと構造体のフィールドの名前をそれぞれフィルター処理することもできます。
 
 次の例では、既定の設定を使用して複数の Mda を有効にする方法を示します。
 
@@ -166,18 +166,18 @@ MDA のアクティブ化は、COMPLUS_MDA 環境変数によって制御する�
 > [!IMPORTANT]
 > 構成ファイルに複数のアシスタントを指定する場合は、アルファベット順に記述する必要があります。 たとえば、`virtualCERCall` MDA と `invalidCERCall` MDA の両方を有効にする場合は、`<invalidCERCall />` エントリ、`<virtualCERCall />` エントリの順に追加する必要があります。 エントリがアルファベット順になっていない場合、ハンドルされない無効な構成ファイルであることを示す例外メッセージが表示されます。
 
-## <a name="mda-exceptions"></a>MDA 例外
+## <a name="mda-exceptions"></a>MDA の例外
 
-MDA を有効にするがアクティブなもときに、コードが実行されていないのデバッガーの下でします。 デバッガーが存在しない場合に MDA イベントが発生した場合、そのイベントはハンドルされない例外とは異なりますが、イベント メッセージはハンドルされない例外のダイアログ ボックスに表示されます。 このダイアログ ボックスが表示されないようにするには、デバッグ環境でコードを実行しているのではないときに、MDA を有効にする設定を削除します。
+MDA が有効になっている場合、デバッガーでコードが実行されていなくても、アクティブになります。 デバッガーが存在しない場合に MDA イベントが発生した場合、そのイベントはハンドルされない例外とは異なりますが、イベント メッセージはハンドルされない例外のダイアログ ボックスに表示されます。 このダイアログ ボックスが表示されないようにするには、デバッグ環境でコードを実行しているのではないときに、MDA を有効にする設定を削除します。
 
-Visual Studio 統合開発環境 (IDE) で、コードを実行するときは、特定の MDA イベントについて表示される [例外] ダイアログ ボックスを回避できます。 そのため、**デバッグ**] メニューの [選択**Windows** > **例外設定**します。 **例外設定**ウィンドウで、展開、**マネージ デバッグ アシスタント**、一覧表示し、オフ、**中断するとスローされます**個々 の MDA に対してチェック ボックス。 このダイアログ ボックスを使用することもできます。*を有効にする*MDA 例外ダイアログ ボックスが表示されます。
+Visual Studio 統合開発環境 (IDE: integrated development environment) でコードを実行すると、特定の MDA イベントに対して表示される [例外] ダイアログボックスを使用しないようにすることができます。 これを行うには、 **[デバッグ]** メニューの [ **Windows** > **例外設定**] をクリックします。 **[例外設定]** ウィンドウで、 **[マネージデバッグアシスタント]** の一覧を展開し、個々の MDA に対して スローされ **[たときにブレークする]** チェックボックスをオフにします。 また、このダイアログボックスを使用して、MDA の例外ダイアログボックスの表示を*有効*にすることもできます。
 
 ## <a name="mda-output"></a>MDA の出力
 
-MDA の出力は次の例は、出力を示しますに似ています、 `PInvokeStackImbalance` MDA:
+Mda の出力は次の例のようになります。 `PInvokeStackImbalance` mda からの出力が表示されます。
 
-**PInvoke 関数の呼び出し ' MDATest!MDATest.Program::StdCall' が、スタックのバランスが取れていません。これは、マネージ PInvoke シグネチャが非管理対象のターゲットのシグネチャと一致しないために、可能性があります。呼び出し規約と PInvoke シグネチャのパラメーターが、ターゲットのアンマネージ シグネチャを一致するかを確認します。**
+**PInvoke 関数 ' MDATest! ' を呼び出しています。MDATest. Program:: StdCall ' がスタックを不均衡にしました。マネージ PInvoke 署名がアンマネージターゲットシグネチャと一致しないことが原因である可能性があります。PInvoke 署名の呼び出し規約とパラメーターが、ターゲットのアンマネージシグネチャと一致することを確認します。**
 
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ、トレース、およびプロファイリング](../../../docs/framework/debug-trace-profile/index.md)
+- [デバッグ、トレース、およびプロファイリング](index.md)

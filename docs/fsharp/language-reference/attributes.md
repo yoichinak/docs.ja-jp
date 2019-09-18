@@ -2,12 +2,12 @@
 title: 属性
 description: 属性がF#プログラミングコンストラクトにメタデータを適用できるようにする方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: c9691a13ff1e9e892e93a967136a99849da25f1f
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 08d50f7f57b6c0a81221e8f635f77f67750d0ff9
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567508"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082937"
 ---
 # <a name="attributes"></a>属性
 
@@ -27,8 +27,8 @@ ms.locfileid: "69567508"
 
 *引数*は、属性の型のコンストラクターへの引数です。 属性に既定のコンストラクターがある場合は、引数リストとかっこを省略できます。 属性は、位置指定引数と名前付き引数の両方をサポートします。 *位置指定引数*は、出現する順序で使用される引数です。 名前付き引数は、属性にパブリックプロパティがある場合に使用できます。 これらを設定するには、引数リストで次の構文を使用します。
 
-```
-*property-name* = *property-value*
+```fsharp
+property-name = property-value
 ```
 
 このようなプロパティの初期化は任意の順序で行うことができますが、任意の位置指定引数に従う必要があります。 位置指定引数とプロパティの初期化を使用する属性の例を次に示します。

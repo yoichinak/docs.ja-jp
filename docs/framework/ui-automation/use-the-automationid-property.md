@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 3d1e514b1ff5f71982a3c0d35cfc190ff9327b4e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1699d39f5f456fe08b043e5b6a687d4c59d28e89
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044090"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040338"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID プロパティの使用
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "70044090"
   
  このトピックには、 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> を使用して [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー内の要素を配置する方法とタイミングを示すシナリオおよびサンプル コードが記載されています。  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> は、UI オートメーション要素をその兄弟から一意に識別します。 コントロール ID に関連するプロパティの識別子の詳細については、「 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)」を参照してください。  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> は、UI オートメーション要素をその兄弟から一意に識別します。 コントロール ID に関連するプロパティの識別子の詳細については、「 [UI Automation Properties Overview](ui-automation-properties-overview.md)」を参照してください。  
   
 > [!NOTE]
 > <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> では、ツリー全体で一意の ID は保証されません。これが役に立つには、通常、コンテナーとスコープ情報が必要です。 たとえば、アプリケーションには複数のトップレベルのメニュー項目を持つメニュー コントロールが含まれ、さらに、それらのメニュー項目に複数の子メニュー項目が含まれている場合があります。 これらの 2 次メニュー項目は、"Item1"、"Item 2" などの汎用スキームで識別され、トップレベルのメニュー項目間で子の識別子が重複することがあります。  
@@ -59,5 +59,5 @@ ms.locfileid: "70044090"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
-- [UI Automation ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [プロパティ条件に基づく UI オートメーション要素の検索](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [UI Automation ツリーの概要](ui-automation-tree-overview.md)
+- [プロパティ条件に基づく UI オートメーション要素の検索](find-a-ui-automation-element-based-on-a-property-condition.md)

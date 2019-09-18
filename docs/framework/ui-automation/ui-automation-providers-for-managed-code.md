@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 5f82f731-f1b5-4c8b-b47c-d11279a02574
-ms.openlocfilehash: c8829afda1b2b8c2b82ed9f7d569d1c2357a7b0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dd07b07d2ccf649952cddfcca47d30a12570b048
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914368"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042027"
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>マネージド コードの UI オートメーション プロバイダー
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "69914368"
  ここでは、カスタム[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]要素のプロバイダーを記述する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [UI オートメーション プロバイダーの概要](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [クライアント側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)  
- [方法トピック](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code-how-to-topics.md)
+ [サーバー側 UI オートメーション プロバイダーの実装](server-side-ui-automation-provider-implementation.md)  
+ [UI オートメーション プロバイダーの概要](ui-automation-providers-overview.md)  
+ [クライアント側 UI オートメーション プロバイダーの実装](client-side-ui-automation-provider-implementation.md)  
+ [方法トピック](ui-automation-providers-for-managed-code-how-to-topics.md)

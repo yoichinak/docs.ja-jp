@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ca7d98dba7f66aee96d0f2059086c442df17f5b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fec1bfb402f3b394ceb36590c3a880f82c5cb101
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660452"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052793"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
 `failedQI` マネージド デバッグ アシスタント (MDA: Managed Debugging Asssitant) は、ランタイムがランタイム呼び出し可能ラッパー (RCW: Runtime Callable Wrapper) の代わりに COM インターフェイス ポインター上の `QueryInterface` を呼び出し、その `QueryInterface` 呼び出しに失敗するとアクティブ化されます。  
@@ -31,13 +31,13 @@ ms.locfileid: "64660452"
   
 - OLE 所有のプロキシがエラー HRESULT を返しました。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決策  
  COM 規則についての MSDN ドキュメントを参照してください。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  `QueryInterface` 呼び出しに失敗すると、コンテキストが切り替えられ、エラー時に正しくないコンテキストであったことを確認するために、`QueryInterface` 呼び出しが再試行されます。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>出力  
  インターフェイスのマネージド名、インターフェイスの GUID、およびエラー HRESULT です。  
   
 ## <a name="configuration"></a>構成  
@@ -53,5 +53,5 @@ ms.locfileid: "64660452"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../interop/interop-marshaling.md)

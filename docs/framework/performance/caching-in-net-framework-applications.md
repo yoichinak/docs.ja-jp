@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: b1d9b12a46d674bf591457cdc90c66fc16818734
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 704efed96c18f23d34d8a583d3121fc08b9e22e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927044"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046783"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework アプリケーションでのキャッシュ
 キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "70927044"
 > [!NOTE]
 > <xref:System.Runtime.Caching.MemoryCache> クラスは、<xref:System.Web.Caching> 名前空間に定義されている ASP.NET キャッシュ オブジェクトに対してモデル化されています。 そのため、内部のキャッシュ ロジックは、旧バージョンの ASP.NET で提供されていたロジックと似ています。  
   
- を使用して WPF アプリケーションでをキャッシュする方法の例につい[ては、「チュートリアル:WPF アプリケーション](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)でのアプリケーションデータのキャッシュ。  
+ を使用して WPF アプリケーションでをキャッシュする方法の例につい[ては、「チュートリアル:WPF アプリケーション](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)でのアプリケーションデータのキャッシュ。  
   
 ## <a name="caching-in-aspnet-applications"></a>ASP.NET アプリケーションでのキャッシュ  
  <xref:System.Runtime.Caching> 名前空間のキャッシュ クラスには、ASP.NET のデータをキャッシュするための機能があります。  
@@ -79,5 +79,5 @@ ms.locfileid: "70927044"
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [チュートリアル: WPF アプリケーションでのアプリケーションデータのキャッシュ](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [チュートリアル: WPF アプリケーションでのアプリケーションデータのキャッシュ](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
 - [チュートリアル: ASP.NET でのアプリケーションデータのキャッシュ](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

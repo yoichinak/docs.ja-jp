@@ -6,21 +6,21 @@ helpviewer_keywords:
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: 74471ef7eec73c3bdab9299eb5c82af6545e9b6a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e9815e4c2c0740f213632681200e48c8e4786657
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662273"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043393"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>UI オートメーション Invoke コントロール パターンの実装
 
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。
 
 このトピックでは、イベントおよびプロパティに関する情報など、 <xref:System.Windows.Automation.Provider.IInvokeProvider>の実装のためのガイドラインと規則について説明します。 その他のリファレンスへのリンクは、トピックの最後に記載します。
 
-<xref:System.Windows.Automation.InvokePattern> コントロール パターンは、アクティブになったときに状態を保持せずに単一の明確なアクションを開始または実行するコントロールをサポートするために使用されます。 チェック ボックスやオプション ボタンなどの状態を保持するコントロールは、代わりに <xref:System.Windows.Automation.Provider.IToggleProvider> と <xref:System.Windows.Automation.Provider.ISelectionItemProvider> をそれぞれ実装する必要があります。 Invoke コントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)」を参照してください。
+<xref:System.Windows.Automation.InvokePattern> コントロール パターンは、アクティブになったときに状態を保持せずに単一の明確なアクションを開始または実行するコントロールをサポートするために使用されます。 チェック ボックスやオプション ボタンなどの状態を保持するコントロールは、代わりに <xref:System.Windows.Automation.Provider.IToggleProvider> と <xref:System.Windows.Automation.Provider.ISelectionItemProvider> をそれぞれ実装する必要があります。 Invoke コントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)」を参照してください。
 
 <a name="Implementation_Guidelines_and_Conventions"></a>
 
@@ -75,9 +75,9 @@ Invoke コントロール パターンを実装する場合は、次のガイド
 
 ## <a name="see-also"></a>関連項目
 
-- [UI Automation コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI オートメーション プロバイダーでのコントロール パターンのサポート](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI オートメーションを使用したコントロールの呼び出し](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
-- [UI Automation ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI オートメーションにおけるキャッシュの使用](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI Automation コントロール パターンの概要](ui-automation-control-patterns-overview.md)
+- [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
+- [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
+- [UI オートメーションを使用したコントロールの呼び出し](invoke-a-control-using-ui-automation.md)
+- [UI Automation ツリーの概要](ui-automation-tree-overview.md)
+- [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)

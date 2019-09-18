@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-ms.openlocfilehash: 5bcd629e306169c1f7a61a316d76203827a2d0fe
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a18de9a07839f5b01620311832b85667680c12ad
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364271"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053830"
 ---
 # <a name="xarguments-directive"></a>x:Arguments ディレクティブ
 XAML でのパラメーターなしのコンストラクターオブジェクト要素の宣言またはファクトリメソッドオブジェクトの宣言に対する構築引数をパッケージ化します。  
   
 ## <a name="xaml-element-usage-nonparameterless-constructor"></a>XAML 要素の使用法 (パラメーターなしのコンストラクター)  
   
-```  
+```xaml  
 <object ...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
@@ -28,7 +28,7 @@ XAML でのパラメーターなしのコンストラクターオブジェクト
   
 ## <a name="xaml-element-usage-factory-method"></a>XAML 要素の使用法 (ファクトリメソッド)  
   
-```  
+```xaml  
 <object x:FactoryMethod="methodName"...>  
   <x:Arguments>  
     oneOrMoreObjectElements  

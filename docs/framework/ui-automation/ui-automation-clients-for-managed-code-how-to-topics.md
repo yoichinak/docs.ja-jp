@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
-ms.openlocfilehash: 8c3107ce2ee20b3369a2ba462775ec7c8a1d3f6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a419f8ac8b94d4f33c7e771c68f230c80a24cbf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935115"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042533"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>マネージド コード用の UI オートメーション クライアントに関する「方法」トピック
 > [!NOTE]
@@ -21,11 +21,11 @@ ms.locfileid: "69935115"
  ここでは、クライアントアプリケーションでのの[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]機能を実装する方法について詳しく説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [プロパティ条件に基づく UI オートメーション要素の検索](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [TreeWalker を使用した UI オートメーション要素間の移動](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [リスト項目の UI オートメーション要素の検索](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
- [UI オートメーション要素のプロパティの取得](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
- [UI オートメーションにおけるキャッシュの使用](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [UI オートメーション イベントのサブスクライブ](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
- [クライアント側プロバイダー アセンブリの登録](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
- [AutomationID プロパティの使用](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+ [プロパティ条件に基づく UI オートメーション要素の検索](find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [TreeWalker を使用した UI オートメーション要素間の移動](navigate-among-ui-automation-elements-with-treewalker.md)  
+ [リスト項目の UI オートメーション要素の検索](find-a-ui-automation-element-for-a-list-item.md)  
+ [UI オートメーション要素のプロパティの取得](get-ui-automation-element-properties.md)  
+ [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)  
+ [UI オートメーション イベントのサブスクライブ](subscribe-to-ui-automation-events.md)  
+ [クライアント側プロバイダー アセンブリの登録](register-a-client-side-provider-assembly.md)  
+ [AutomationID プロパティの使用](use-the-automationid-property.md)

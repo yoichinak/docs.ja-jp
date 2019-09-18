@@ -10,19 +10,19 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 563802be655e0cb66c9a2735a64da9d7723c2a43
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e04085db0fa5a4c4170846dc4ac10d0131032a7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401516"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053809"
 ---
 # <a name="xclass-directive"></a>x:Class ディレクティブ
 マークアップと分離コードの間で部分クラスを結合するように、XAML マークアップのコンパイルを構成します。 コード部分クラスは、共通言語仕様 (CLS) 言語の個別のコードファイルで定義されます。一方、マークアップ部分クラスは、通常、XAML のコンパイル時にコード生成によって作成されます。  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法  
   
-```  
+```xaml  
 <object x:Class="namespace.classname"...>  
   ...  
 </object>  

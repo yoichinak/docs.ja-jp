@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements, navigating among
 - UI Automation, navigating among elements
 ms.assetid: afcd21dc-2ffa-48c9-9332-51269f44b7e9
-ms.openlocfilehash: 506cc4db3fcf255d270f72470a1f0d68e9cca7ce
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7ecf6edd37b656f7dd1d7e31506d0dd455592d9b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966422"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042977"
 ---
 # <a name="navigate-among-ui-automation-elements-with-treewalker"></a>TreeWalker を使用した UI オートメーション要素間の移動
 > [!NOTE]
@@ -37,4 +37,4 @@ ms.locfileid: "69966422"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI オートメーション要素の取得](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)
+- [UI オートメーション要素の取得](obtaining-ui-automation-elements.md)
