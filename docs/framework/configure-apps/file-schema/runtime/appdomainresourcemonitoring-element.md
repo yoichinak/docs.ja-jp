@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252823"
 ---
-# <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > 要素
+# <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring> 要素
 プロセスのライフサイクルにおいて、プロセスのすべてのアプリケーション ドメインの統計を収集するようにランタイムに指示します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
