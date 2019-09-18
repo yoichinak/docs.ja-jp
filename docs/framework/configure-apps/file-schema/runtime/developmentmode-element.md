@@ -18,11 +18,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252696"
 ---
-# <a name="developmentmode-element"></a>\<developmentMode > 要素
+# <a name="developmentmode-element"></a>\<developmentMode> 要素
 DEVPATH 環境変数によって指定されたディレクトリで、ランタイムがアセンブリの検索を行うかどうかを指定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode>**  
   
 ## <a name="syntax"></a>構文  
