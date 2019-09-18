@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 30c44b9f98bcc61d54b8103b6b40d14fd35715f4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589183"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053275"
 ---
 # <a name="interfaces-c-programming-guide"></a>インターフェイス (C# プログラミング ガイド)
 
@@ -27,7 +27,7 @@ ms.locfileid: "69589183"
 
 <xref:System.IEquatable%601> インターフェイスを実装するすべてのクラスまたは構造体は、インターフェイスで指定されたシグネチャに一致する <xref:System.IEquatable%601.Equals%2A> メソッドの定義を含む必要があります。 したがって、`IEquatable<T>` を実装するクラスが `Equals` メソッドを含むと想定したうえで、これを使用してクラスの 1 つのインスタンスが同じクラスの別のインスタンスと等しいかどうかを判定できます。  
   
-`IEquatable<T>` の定義は `Equals` の実装を提供しません。 インターフェイスは、シグネチャのみを定義します。 つまり、C# のインターフェイスは、すべてのメソッドが抽象的である抽象クラスに似ています。 クラスまたは構造体は複数のインターフェイスを実装できます。ただし、クラスが継承できるのは、抽象的かどうかに関係なく、1 つのクラスのみです。
+`IEquatable<T>` の定義は `Equals` の実装を提供しません。 クラスまたは構造体には複数のインターフェイスを実装できます。ただし、クラスは 1 つのクラスからのみ継承できます。
   
 抽象クラスの詳細については、「[抽象クラスとシール クラス、およびクラス メンバー](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)」を参照してください。  
   

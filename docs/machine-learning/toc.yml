@@ -35,12 +35,16 @@
           href: tutorials/sales-anomaly-detection.md
         - name: 画像内のオブジェクトを検出 (オブジェクト検出)
           href: tutorials/object-detection-onnx.md
+        - name: TensorFlow を使用したセンチメントの分類 (テキスト分類)
+          href: tutorials/text-classification-tf.md
     - name: ツール
       items:
         - name: モデル ビルダーを使った価格の予測
           href: tutorials/predict-prices-with-model-builder.md
         - name: ML.NET CLI を使用してセンチメントを分析する
           href: tutorials/mlnet-cli.md
+        - name: Model Builder と Razor Pages を使用したセンチメントの分析
+          href: tutorials/sentiment-analysis-model-builder.md
 - name: 概念
   items:
     - name: ML.NET タスク (モデル型)

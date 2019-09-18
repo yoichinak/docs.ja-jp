@@ -3,12 +3,12 @@ title: ML.NET のチュートリアル
 description: ML.NET のチュートリアルでは、カスタム AI ソリューションを構築し、これを .NET アプリケーションに統合する方法について説明しています。
 ms.custom: seodec18
 ms.date: 07/08/2019
-ms.openlocfilehash: dfc4779a94ae74e35095f654571c6e7c43f295a0
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 6d5b622194cbaa20ed4e7283e6f1ea66f16a7b47
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671882"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054010"
 ---
 # <a name="mlnet-tutorials"></a>ML.NET のチュートリアル 
 
@@ -22,6 +22,7 @@ ms.locfileid: "68671882"
 - [画像分類](image-classification.md): 既存の TensorFlow モデルを再トレーニングし、ML.NET を使ってカスタム画像分類器を作成する方法を示します。
 - [異常検出](sales-anomaly-detection.md): 製品売上データの解析用に異常検出アプリケーションを構築する方法を示します。
 - [画像内のオブジェクトを検出](object-detection-onnx.md): 事前トレーニング済みの ONNX モデルを使って画像内のオブジェクトを検出する方法を示します。
+- [映画レビューのセンチメント分類](text-classification-tf.md): 事前トレーニング済みの TensorFlow モデルを読み込んで、映画のレビューを分類する方法を示します。
 
 ## <a name="next-steps"></a>次の手順
 
