@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d635100c4e8214a7a8659c2d3e4da61825cf243
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 860f524820e6b92e58f4a593e2ddf651a5e7094d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966306"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052909"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
 `dangerousThreadingAPI` マネージド デバッグ アシスタント (MDA) は、現在のスレッド以外のスレッドで <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> メソッドが呼び出されるとアクティブになります。  
@@ -38,7 +38,7 @@ ms.locfileid: "69966306"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA は CLR に影響しません。 危険なスレッド処理操作に関するデータを報告するだけです。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>出力  
  MDA は、アクティブになった原因である危険なスレッド処理メソッドを示します。  
   
 ## <a name="configuration"></a>構成  
@@ -70,5 +70,5 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Thread>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
 - [lock ステートメント](../../csharp/language-reference/keywords/lock-statement.md)

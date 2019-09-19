@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 1d3c3628a32439d4847505e234b12b084b47ba3d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8c597738d656b32e7b4c75246027b726f425c6ef
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854121"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053018"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>方法: ADO.NET Entity Framework データソース (WCF Data Services) を使用してデータサービスを作成する
 
@@ -57,7 +57,7 @@ Entity Framework は、Visual Studio プロジェクトの外部に Entity Frame
 
 4. **[新しい項目の追加]** ダイアログボックスで、 **[Web]** カテゴリの **[WCF Data Service]** テンプレートを選択します。
 
-   ![Visual Studio 2015 の WCF Data Service 項目テンプレート](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015 の WCF Data Service 項目テンプレート](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > **WCF Data Service**テンプレートは visual studio 2015 で使用できますが、visual studio 2017 では使用できません。
