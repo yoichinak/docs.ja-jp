@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 549030b7e5f7544f593e5aa481a6dc85d5a85329
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943820"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046409"
 ---
 # <a name="lazy-initialization"></a>遅延初期化
 オブジェクトの*遅延初期化*とは、初めて使用されるまでオブジェクトの作成が延期されることを意味します。 (このトピックでは、*遅延初期化*と*遅延インスタンス化*を同じ意味の言葉として使っています。)遅延初期化は主に、パフォーマンスの改善、無駄な計算処理の回避、プログラムのメモリ要件の縮小を目的として利用されます。 最も一般的なシナリオ:  
@@ -62,7 +62,7 @@ ms.locfileid: "69943820"
  既定では、<xref:System.Lazy%601> オブジェクトはスレッド セーフです。 つまり、コンストラクターがスレッドセーフの種類を指定しない場合、スレッドセーフな <xref:System.Lazy%601> オブジェクトが作成されます。 マルチスレッド シナリオの場合、スレッドセーフな <xref:System.Lazy%601> オブジェクトの <xref:System.Lazy%601.Value%2A> プロパティにアクセスした最初のスレッドが、すべてのスレッドのすべての後続アクセスで、オブジェクトを初期化します。すべてのスレッドが同じデータを共有します。 そのため、どのスレッドがオブジェクトを初期化するかは問題ではありません。競合状態に害はありません。  
   
 > [!NOTE]
-> 例外キャッシュを利用すれば、エラー状態にもこの一貫性が及びます。 詳細については、次のセクションの「[遅延オブジェクトの例外](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects)」を参照してください。  
+> 例外キャッシュを利用すれば、エラー状態にもこの一貫性が及びます。 詳細については、次のセクションの「[遅延オブジェクトの例外](lazy-initialization.md#ExceptionsInLazyObjects)」を参照してください。  
   
  次の例では、同じ `Lazy<int>` インスタンスで、3 つの別個のスレッドに対して同じ値が与えられています。  
   
@@ -157,4 +157,4 @@ ms.locfileid: "69943820"
 - [マネージ スレッド処理の基本](../../standard/threading/managed-threading-basics.md)
 - [スレッドおよびスレッド処理](../../standard/threading/threads-and-threading.md)
 - [タスク並列ライブラリ (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [方法: オブジェクトの遅延初期化を実行する](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [方法: オブジェクトの遅延初期化を実行する](how-to-perform-lazy-initialization-of-objects.md)

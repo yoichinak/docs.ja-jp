@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e24cd05bb1c1ed9425c9be8bc02cb92dc488005
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8c47091d943aa0d710cec1af83e039bca9ee2d2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935725"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046253"
 ---
 # <a name="reliability-best-practices"></a>信頼性に関するベスト プラクティス
 
@@ -91,7 +91,7 @@ SQL Server は、デッド ロックやリソースの制約が発生すると�
 
 <xref:System.Runtime.InteropServices.SafeHandle> は <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> の代わりに使う機能ではないことに注意してください。  依然としてリソース競合の可能性はあり、オペレーティング システムのリソースを明示的に破棄するとパフォーマンス上の利点があります。  リソースの明示的な破棄を行っている `finally` ブロックが最後まで実行されない可能性があることだけは理解しておいてください。
 
-<xref:System.Runtime.InteropServices.SafeHandle> を使うと、ハンドルを解放する処理 (オペレーティング システム ハンドル解放ルーチンに状態を渡す、ハンドルのセットをループで解放する、など) を実行する独自の <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドを実装できます。  CLR はこのメソッドが実行されることを保証します。  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実装の作成者には、あらゆる状況においてハンドルが解放されることを保証する責任があります。 解放できないとハンドルがリークされ、多くの場合、ハンドルに関連付けられているネイティブ リソースがリークすることになります。 したがって、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実装が呼び出し時に使用できない可能性があるリソースの割り当てを必要としないように、<xref:System.Runtime.InteropServices.SafeHandle> 派生クラスを構成することが不可欠です。 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実装内で失敗する可能性があるメソッドの呼び出しは、コードがそのようなエラーを処理し、コントラクトを完了してネイティブ ハンドルを解放できる場合に限り、許容されることに注意してください。 デバッグのため、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> には、致命的なエラーが発生してリソースを解放できない場合に `false` に設定できる戻り値 <xref:System.Boolean> があります。 このようにすると、[releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) MDA がアクティブ化されて (有効になっている場合)、問題を特定するのに役立ちます。 他にはどのような影響もランタイムに与えません。<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> は同じリソースに対して再び呼び出されることはなく、結果としてハンドルはリークされます。
+<xref:System.Runtime.InteropServices.SafeHandle> を使うと、ハンドルを解放する処理 (オペレーティング システム ハンドル解放ルーチンに状態を渡す、ハンドルのセットをループで解放する、など) を実行する独自の <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドを実装できます。  CLR はこのメソッドが実行されることを保証します。  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実装の作成者には、あらゆる状況においてハンドルが解放されることを保証する責任があります。 解放できないとハンドルがリークされ、多くの場合、ハンドルに関連付けられているネイティブ リソースがリークすることになります。 したがって、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実装が呼び出し時に使用できない可能性があるリソースの割り当てを必要としないように、<xref:System.Runtime.InteropServices.SafeHandle> 派生クラスを構成することが不可欠です。 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実装内で失敗する可能性があるメソッドの呼び出しは、コードがそのようなエラーを処理し、コントラクトを完了してネイティブ ハンドルを解放できる場合に限り、許容されることに注意してください。 デバッグのため、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> には、致命的なエラーが発生してリソースを解放できない場合に `false` に設定できる戻り値 <xref:System.Boolean> があります。 このようにすると、[releaseHandleFailed](../debug-trace-profile/releasehandlefailed-mda.md) MDA がアクティブ化されて (有効になっている場合)、問題を特定するのに役立ちます。 他にはどのような影響もランタイムに与えません。<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> は同じリソースに対して再び呼び出されることはなく、結果としてハンドルはリークされます。
 
 <xref:System.Runtime.InteropServices.SafeHandle> が適さない特定の状況があります。  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドは <xref:System.GC> ファイナライザー スレッドで実行できるので、特定のスレッドで解放する必要があるすべてのハンドルは、<xref:System.Runtime.InteropServices.SafeHandle> にラップされていてはなりません。
 
@@ -316,4 +316,4 @@ CER は、<xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstraine
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.ConstrainedExecution>
-- [SQL Server プログラミングとホスト保護属性](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
+- [SQL Server プログラミングとホスト保護属性](sql-server-programming-and-host-protection-attributes.md)

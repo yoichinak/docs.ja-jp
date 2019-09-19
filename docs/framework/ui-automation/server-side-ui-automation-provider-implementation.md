@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 5fd17f9ca9d83ab3b226ce9fc0a4aebca4f9352a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044152"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042766"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>サーバー側 UI オートメーション プロバイダーの実装
 
@@ -34,7 +34,7 @@ Windows Presentation Foundation (WPF) 要素の実装と非[!INCLUDE[TLA2#tla_wp
 
 ## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Windows Presentation Foundation 要素によるプロバイダーの実装
 
-このトピックの詳細については、「 [WPF カスタム コントロールの UI オートメーション](../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)」を参照してください。
+このトピックの詳細については、「 [WPF カスタム コントロールの UI オートメーション](../wpf/controls/ui-automation-of-a-wpf-custom-control.md)」を参照してください。
 
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>
 
@@ -121,7 +121,7 @@ HWND ベースのコントロールのプロバイダーは通常、次のプロ
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> は通常、ホスト プロバイダーによって提供されます。 たとえば、カスタム コントロールが <xref:System.Windows.Forms.Control>から派生している場合、名前はこのコントロールの `Text` プロパティから派生します。
 
-コード例については、「 [Return Properties from a UI Automation Provider](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)」を参照してください。
+コード例については、「 [Return Properties from a UI Automation Provider](return-properties-from-a-ui-automation-provider.md)」を参照してください。
 
 <a name="Events_in_Non_WPF_Providers"></a>
 
@@ -191,9 +191,9 @@ HWND ベースのコントロールのプロバイダーは通常、次のプロ
 
 ## <a name="see-also"></a>関連項目
 
-- [UI オートメーション プロバイダーの概要](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [サーバー側 UI オートメーション プロバイダーの公開](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
-- [UI オートメーション プロバイダーからのプロパティの返却](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [UI オートメーション プロバイダーからのイベントの発生](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
-- [UI オートメーション フラグメント プロバイダーでのナビゲーションの有効化](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
-- [UI オートメーション プロバイダーでのコントロール パターンのサポート](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [UI オートメーション プロバイダーの概要](ui-automation-providers-overview.md)
+- [サーバー側 UI オートメーション プロバイダーの公開](expose-a-server-side-ui-automation-provider.md)
+- [UI オートメーション プロバイダーからのプロパティの返却](return-properties-from-a-ui-automation-provider.md)
+- [UI オートメーション プロバイダーからのイベントの発生](raise-events-from-a-ui-automation-provider.md)
+- [UI オートメーション フラグメント プロバイダーでのナビゲーションの有効化](enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [UI オートメーション プロバイダーでのコントロール パターンのサポート](support-control-patterns-in-a-ui-automation-provider.md)
