@@ -3,16 +3,16 @@ title: WIF 3.5 と WIF 4.5 間での名前空間マッピング
 ms.date: 03/30/2017
 ms.assetid: a092d98c-444d-4336-a644-63c2e11e96c8
 author: BrucePerlerMS
-ms.openlocfilehash: ef5801ccfdda22b1c89c22ea9c2b14ea0855ed26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d967ce931e81ca14645e7464943e1411264d6ca2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670034"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045404"
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>WIF 3.5 と WIF 4.5 間での名前空間マッピング
 
-.NET 4.5 以降では、Windows Identity Foundation (WIF) は .NET Framework に完全に統合されています。 この統合により、名前の変更および WIF の名前空間と API サーフェスの統合が行われました。 このトピックでは、いくつかのガイダンスと、WIF 3.5 の名前空間と WIF 4.5 の名前空間の間の一般的なマッピングを示します。 すべてを網羅するものではなく、使い慣れた WIF 3.5 のクラスが WIF 4.5 のどこで見つかるかについての一般的な情報を提供するだけです。 WIF 3.5 と WIF 4.5 の間の違いについては、「[Windows Identity Foundation 4.5 の新機能](../../../docs/framework/security/whats-new-in-wif.md)」を参照してください。 WIF 3.5 を使ってビルドされたアプリケーションを WIF 4.5 に移行する方法のガイダンスについては、「[Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)」(WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移行するためのガイドライン) を参照してください。
+.NET 4.5 以降では、Windows Identity Foundation (WIF) は .NET Framework に完全に統合されています。 この統合により、名前の変更および WIF の名前空間と API サーフェスの統合が行われました。 このトピックでは、いくつかのガイダンスと、WIF 3.5 の名前空間と WIF 4.5 の名前空間の間の一般的なマッピングを示します。 すべてを網羅するものではなく、使い慣れた WIF 3.5 のクラスが WIF 4.5 のどこで見つかるかについての一般的な情報を提供するだけです。 WIF 3.5 と WIF 4.5 の間の違いについては、「[Windows Identity Foundation 4.5 の新機能](whats-new-in-wif.md)」を参照してください。 WIF 3.5 を使ってビルドされたアプリケーションを WIF 4.5 に移行する方法のガイダンスについては、「[Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5](guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)」(WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移行するためのガイドライン) を参照してください。
 
 ## <a name="wif-35-to-wif-45-namespace-map"></a>WIF 3.5 から WIF 4.5 への名前空間のマッピング
 
@@ -48,5 +48,5 @@ WIF 3.5 では `Microsoft.IdentityModel` 名前空間に集められていた WI
 
 ## <a name="see-also"></a>関連項目
 
-- [Windows Identity Foundation 4.5 の新機能](../../../docs/framework/security/whats-new-in-wif.md)
-- [WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移行するためのガイドライン](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+- [Windows Identity Foundation 4.5 の新機能](whats-new-in-wif.md)
+- [WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移行するためのガイドライン](guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)

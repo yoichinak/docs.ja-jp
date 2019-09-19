@@ -10,12 +10,12 @@ helpviewer_keywords:
 - events, subscribing to
 - listening for events
 ms.assetid: b688effa-b3e8-4b05-944d-05ed89a245aa
-ms.openlocfilehash: fa3e289f042af3e55e8fc56528c29d5701c33d25
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1e148869f619729c72eae67892d4767eed9f8fb3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961142"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042640"
 ---
 # <a name="subscribe-to-ui-automation-events"></a>UI オートメーション イベントのサブスクライブ
 > [!NOTE]
@@ -40,4 +40,4 @@ ms.locfileid: "69961142"
 - <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>
 - <xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>
 - <xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>
-- [UI オートメーション イベントの概要](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
+- [UI オートメーション イベントの概要](ui-automation-events-overview.md)
