@@ -17,11 +17,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252667"
 ---
-# <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > 要素
+# <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack> 要素
 スレッドの起動時にスレッド スタック全体をコミットするかどうかを指定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<disableCommitThreadStack>**  
   
 ## <a name="syntax"></a>構文  
