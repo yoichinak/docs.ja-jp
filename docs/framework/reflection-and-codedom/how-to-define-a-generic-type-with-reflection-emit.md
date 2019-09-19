@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544d04236a8f1b824a15c6ee7912020346841076
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b9781e7ef8edde182a13779a01e042cb44c92881
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912529"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045997"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>方法: リフレクション出力を使用してジェネリック型を定義する
 このトピックでは、2 種類のパラメーターを持つ単純なジェネリック型を作成する方法、クラス制約、インターフェイス制約、特殊な制約をパラメーターに適用する方法、パラメーターの型や戻り値の型としてクラスの型パラメーターを使用するメンバーを作成する方法を紹介します。  
   
 > [!IMPORTANT]
-> メソッドはジェネリック型に属し、その型の型パラメーターを使用するだけであるため、ジェネリックではありません。 メソッドがジェネリックになるのは、そのメソッドが独自の型パラメーター リストを持つ場合だけです。 ジェネリック型のほとんどのメソッドは、この例のように、ジェネリックではありません。 ジェネリック メソッドの出力の例については、「[方法: リフレクション出力を使用してジェネリック メソッドを定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)」を参照してください。  
+> メソッドはジェネリック型に属し、その型の型パラメーターを使用するだけであるため、ジェネリックではありません。 メソッドがジェネリックになるのは、そのメソッドが独自の型パラメーター リストを持つ場合だけです。 ジェネリック型のほとんどのメソッドは、この例のように、ジェネリックではありません。 ジェネリック メソッドの出力の例については、「[方法: リフレクション出力を使用してジェネリック メソッドを定義する](how-to-define-a-generic-method-with-reflection-emit.md)」を参照してください。  
   
 ### <a name="to-define-a-generic-type"></a>ジェネリック型を定義するには  
   
@@ -121,7 +121,7 @@ ms.locfileid: "69912529"
   
  このプログラムには、ジェネリック型に関する情報を一覧表示するメソッドと、ある型パラメーターに対する特殊な制約を一覧表示するメソッドが含まれます。 完成した `Sample` クラスに関する情報の表示にこれらのメソッドが使用されます。  
   
- このプログラムでは、完成したモジュールが `GenericEmitExample1.dll` としてディスクに保存されます。そのため、[Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) で開き、`Sample` クラスの MSIL を調べることができます。  
+ このプログラムでは、完成したモジュールが `GenericEmitExample1.dll` としてディスクに保存されます。そのため、[Ildasm.exe (IL Disassembler)](../tools/ildasm-exe-il-disassembler.md) で開き、`Sample` クラスの MSIL を調べることができます。  
   
  [!code-cpp[EmitGenericType#1](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#1)]
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]

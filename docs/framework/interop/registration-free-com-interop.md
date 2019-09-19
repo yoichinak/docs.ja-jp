@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3134477198f0cd4c821bea456450e98cc73c6ad2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0ae92232b1d50d1381b6873e21a4c185db6efd25
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957469"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051648"
 ---
 # <a name="registration-free-com-interop"></a>登録を必要としない COM 相互運用機能
 登録を必要としない COM 相互運用機能は、アセンブリ情報を格納するために Windows レジストリを使用しないで、コンポーネントをアクティブにします。 展開中にコンピューター上のコンポーネントを登録するのではなく、バインディングとアクティベーションに関する情報を含む Win32 スタイルのマニフェスト ファイルをデザイン時に作成します。 レジストリ キーではなく、これらのマニフェスト ファイルが、オブジェクトのアクティベーションを指示します。  
@@ -56,4 +56,4 @@ ms.locfileid: "69957469"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
+- [方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する](configure-net-framework-based-com-components-for-reg.md)

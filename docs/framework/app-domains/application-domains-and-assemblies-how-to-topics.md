@@ -7,25 +7,25 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8104d7cd6aa5a26fa69df7be838ea9b7cb2cc44
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: b5d7f97a4ec67e4932aaee922897a16362f6a78c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971769"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053237"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>アプリケーション ドメインとアセンブリに関する方法のトピック
 次のセクションには、アプリケーション ドメインとアセンブリを使用したプログラミングの概念に関するドキュメントに用意されているすべての方法トピックへのリンクが含まれています。  
   
  **アプリケーション ドメイン**  
   
-- [方法: アプリケーション ドメインを作成する](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+- [方法: アプリケーション ドメインを作成する](how-to-create-an-application-domain.md)  
   
-- [方法: アプリケーション ドメインをアンロードする](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+- [方法: アプリケーション ドメインをアンロードする](how-to-unload-an-application-domain.md)  
   
-- [方法: アプリケーション ドメインを構成する](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+- [方法: アプリケーション ドメインを構成する](how-to-configure-an-application-domain.md)  
   
-- [方法: アプリケーション ドメインにアセンブリを読み込む](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
+- [方法: アプリケーション ドメインにアセンブリを読み込む](how-to-load-assemblies-into-an-application-domain.md)  
   
 - [方法: アセンブリから型およびメンバーの情報を取得する](../reflection-and-codedom/get-type-member-information.md)  
   
@@ -47,12 +47,12 @@ ms.locfileid: "70971769"
   
 - [方法: アセンブリをグローバル アセンブリ キャッシュにインストールする](install-assembly-into-gac.md)  
   
-- [方法: グローバル アセンブリ キャッシュの内容を表示する](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+- [方法: グローバル アセンブリ キャッシュの内容を表示する](how-to-view-the-contents-of-the-gac.md)  
   
-- [方法: グローバル アセンブリ キャッシュからアセンブリを削除する](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+- [方法: グローバル アセンブリ キャッシュからアセンブリを削除する](how-to-remove-an-assembly-from-the-gac.md)  
   
 - [方法: アセンブリの内容を表示する](../../standard/assembly/view-contents.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [アプリケーション ドメインとアセンブリ](../../../docs/framework/app-domains/index.md)
+- [アプリケーション ドメインとアセンブリ](index.md)

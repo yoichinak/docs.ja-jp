@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0f732eb7b6ee77cb6b16130fc41655922127c3b
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
-ms.translationtype: HT
+ms.openlocfilehash: 9ee68d0da3b7f23d4de0192da076ef6f71d6d222
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469681"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051635"
 ---
 # <a name="specifying-a-character-set"></a>文字セットの指定
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> フィールドは文字列のマーシャリングを制御し、DLL の関数名をプラットフォーム呼び出しが見つけるしくみを決定します。 このトピックでは、両方の動作について説明します。  
@@ -149,6 +149,6 @@ extern "C" int MessageBox(
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [マネージド コードでのプロトタイプの作成](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [プラットフォーム呼び出しの例](../../../docs/framework/interop/platform-invoke-examples.md)
-- [プラットフォーム呼び出しによるデータのマーシャリング](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [マネージド コードでのプロトタイプの作成](creating-prototypes-in-managed-code.md)
+- [プラットフォーム呼び出しの例](platform-invoke-examples.md)
+- [プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)

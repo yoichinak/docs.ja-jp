@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18a8748c3175ec7e251116f478069d313ab28d7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7e5a57664c5d86ebf394ce026608be9a55872eb8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299242"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045533"
 ---
 # <a name="working-with-resx-files-programmatically"></a>プログラムによる .resx ファイルの使用
 XML リソース (.resx) ファイルは適切に定義された XML で構成する必要があり、特定のスキーマに従ったヘッダーの後に、名前と値のペアになったデータが続きます。そのため、手動で作成するとエラーが発生しやすくなります。 代わりに、.NET クラス ライブラリの型とメンバーを使用して、.resx ファイルをプログラムで作成できます。 また、.NET クラス ライブラリを使用して、.resx ファイルに格納されているリソースを取得することもできます。 このトピックでは、 <xref:System.Resources> 名前空間の型とメンバーを使って、.resx ファイルを操作する方法を説明します。
@@ -46,9 +46,9 @@ XML リソース (.resx) ファイルは適切に定義された XML で構成�
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
 
 > [!TIP]
-> [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) を使用して .resx ファイルを作成することもできます。 コンパイル時に、Visual Studio は [リソース ファイル ジェネレーター (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使って、.resx ファイルをバイナリ リソース (.resources) ファイルに変換し、アプリケーション アセンブリかサテライト アセンブリのいずれかに埋め込みます。
+> [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) を使用して .resx ファイルを作成することもできます。 コンパイル時に、Visual Studio は [リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を使って、.resx ファイルをバイナリ リソース (.resources) ファイルに変換し、アプリケーション アセンブリかサテライト アセンブリのいずれかに埋め込みます。
 
-.resx ファイルをランタイムの実行可能ファイルに埋め込むことや、サテライト アセンブリにコンパイルすることはできません。 [リソース ファイル ジェネレーター (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)を使って、.resx ファイルをバイナリ リソース (.resources) ファイルに変換する必要があります。 結果として得られる .resources ファイルは、アプリケーション アセンブリやサテライト アセンブリに埋め込むことができます。 詳細については、「 [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)」を参照してください。
+.resx ファイルをランタイムの実行可能ファイルに埋め込むことや、サテライト アセンブリにコンパイルすることはできません。 [リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)を使って、.resx ファイルをバイナリ リソース (.resources) ファイルに変換する必要があります。 結果として得られる .resources ファイルは、アプリケーション アセンブリやサテライト アセンブリに埋め込むことができます。 詳細については、「 [Creating Resource Files](creating-resource-files-for-desktop-apps.md)」を参照してください。
 
 ## <a name="enumerate-resources"></a>リソースを列挙する
  場合によっては、.resx ファイルから、特定のリソースではなく、すべてのリソースを取得したいことがあります。 これを行うには、.resx ファイル内のすべてのリソースの列挙子を提供する <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> クラスを使います。 <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> クラスは <xref:System.Collections.IDictionaryEnumerator>を実装します。これは、ループの反復処理ごとに特定のリソースを示す <xref:System.Collections.DictionaryEntry> を返します。 その <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> プロパティはリソースのキーを返し、その <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> プロパティはリソースの値を返します。
@@ -69,7 +69,7 @@ XML リソース (.resx) ファイルは適切に定義された XML で構成�
 ## <a name="convert-resx-files-to-binary-resources-files"></a>.resx ファイルをバイナリの .resources ファイルに変換する
  .resx ファイルを埋め込みバイナリ リソース (.resources) ファイルに変換することには、大きな利点があります。 .resx ファイルは、アプリケーション開発中の読み取りや保守を容易に行うことができますが、完成したアプリケーションに含まれることはほとんどありません。 .resx ファイルがアプリケーションと共に配布される場合、アプリケーションの実行可能ファイルとそれに付随するライブラリとは異なる独立したファイルとして存在します。 これに対し、.resources ファイルは、アプリケーションの実行可能ファイルやそれに付随するアセンブリに埋め込まれます。 また、ローカライズされたアプリケーションの場合、実行時に .resx ファイルに依存すると、開発者がリソース フォールバックを処理することになります。 これに対し、埋め込みの .resources ファイルを含むサテライト アセンブリのセットが作成された場合、共通言語ランタイムがリソース フォールバック プロセスを処理します。
 
- .resx ファイルを .resources ファイルに変換するには、 [リソース ファイル ジェネレーター (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)を使います。リソース ファイル ジェネレーターの基本的な構文は次のとおりです。
+ .resx ファイルを .resources ファイルに変換するには、 [リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)を使います。リソース ファイル ジェネレーターの基本的な構文は次のとおりです。
 
  **Resgen.exe** *.resxFilename*
 
@@ -81,12 +81,12 @@ XML リソース (.resx) ファイルは適切に定義された XML で構成�
 
  **csc** *filename* **.cs /resource:** *.resourcesFilename*
 
- [アセンブリ リンカー (AL.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)を使って、.resources ファイルをサテライト アセンブリに埋め込むこともできます。アセンブリ リンカーの基本的な構文は次のとおりです。
+ [アセンブリ リンカー (AL.exe)](../tools/al-exe-assembly-linker.md)を使って、.resources ファイルをサテライト アセンブリに埋め込むこともできます。アセンブリ リンカーの基本的な構文は次のとおりです。
 
  **al** *resourcesFilename* **/out:** *assemblyFilename*
 
 ## <a name="see-also"></a>関連項目
 
-- [リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [Resgen.exe (リソース ファイル ジェネレーター)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
-- [Al.exe (アセンブリ リンカー)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [リソース ファイルの作成](creating-resource-files-for-desktop-apps.md)
+- [Resgen.exe (リソース ファイル ジェネレーター)](../tools/resgen-exe-resource-file-generator.md)
+- [Al.exe (アセンブリ リンカー)](../tools/al-exe-assembly-linker.md)

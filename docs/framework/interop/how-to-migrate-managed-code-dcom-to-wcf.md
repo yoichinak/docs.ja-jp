@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fad8a73c41379cac7523db6266951b8abab26e27
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e2e37de4d3032db6d9578eae7ba0be5c1e39f39d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626293"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051754"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>方法: マネージ コード DCOM を WCF に移行する
 Windows Communication Foundation (WCF) は、分散コンポーネント オブジェクト モデル (DCOM) と比較して、分散環境でサーバーとクライアントの間でマネージド コードを呼び出すための、推奨されているセキュリティで保護された選択肢です。 この記事では、以下のシナリオで、DCOM から WCF にコードを移行する方法を示します。  
@@ -20,9 +20,9 @@ Windows Communication Foundation (WCF) は、分散コンポーネント オブ�
   
 - リモート サービスからクライアントに参照渡しでオブジェクトを返す  
   
- セキュリティ上の理由で、WCF では、クライアントからサービスに参照渡しでオブジェクトを送信することはできません。 クライアントとサーバーの間で対話を必要とするシナリオは、WCF で双方向サービスを使用することによって実現できます。  双方向サービスの詳細については、「[双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)」を参照してください。  
+ セキュリティ上の理由で、WCF では、クライアントからサービスに参照渡しでオブジェクトを送信することはできません。 クライアントとサーバーの間で対話を必要とするシナリオは、WCF で双方向サービスを使用することによって実現できます。  双方向サービスの詳細については、「[双方向サービス](../wcf/feature-details/duplex-services.md)」を参照してください。  
   
- WCF サービスの作成方法、およびそれらのサービスのクライアントの作成方法について詳しくは、「[基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)」、「[サービスの設計と実装](../../../docs/framework/wcf/designing-and-implementing-services.md)」および「[クライアントを構築する](../../../docs/framework/wcf/building-clients.md)」を参照してください。  
+ WCF サービスの作成方法、およびそれらのサービスのクライアントの作成方法について詳しくは、「[基本的な WCF プログラミング](../wcf/basic-wcf-programming.md)」、「[サービスの設計と実装](../wcf/designing-and-implementing-services.md)」および「[クライアントを構築する](../wcf/building-clients.md)」を参照してください。  
   
 ## <a name="dcom-example-code"></a>DCOM コード例  
  これらのシナリオでは、WCF を使用して示されている DCOM インターフェイスに、以下の構造があります。  
@@ -82,7 +82,7 @@ public interface ICustomerManager
 ### <a name="step-2-define-the-data-contract"></a>手順 2: データ コントラクトを定義する  
  次に、サービスとクライアントの間でデータが交換される方法を説明する、サービスのデータ コントラクトを作成する必要があります。  データ コントラクトで説明されたクラスは、[<xref:System.Runtime.Serialization.DataContractAttribute>] 属性でマークする必要があります。 クライアントとサーバーの両方に対して表示する個々のプロパティやフィールドは、[<xref:System.Runtime.Serialization.DataMemberAttribute>] 属性でマークする必要があります。 データ コントラクト内のクラスから派生した型を許可するには、[<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性でそれらを区別する必要があります。 WCF は、サービス インターフェイス内の型と既知の型として識別される型だけを、シリアル化または逆シリアル化します。 既知の型ではない型を使用しようとすると、例外が発生します。  
   
- データ コントラクトの詳細については、「[データ コントラクト](../../../docs/framework/wcf/samples/data-contracts.md)」を参照してください。  
+ データ コントラクトの詳細については、「[データ コントラクト](../wcf/samples/data-contracts.md)」を参照してください。  
   
 ```csharp  
 [DataContract]  
@@ -170,7 +170,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-5-run-the-service"></a>手順 5: サービスを実行する  
- 最後に、サービス アプリに次の行を追加して、アプリを起動することにより、コンソール アプリケーション内で自己ホストすることができます。 WCF サービス アプリケーションをホストするその他の方法について詳しくは、「[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)」を参照してください。  
+ 最後に、サービス アプリに次の行を追加して、アプリを起動することにより、コンソール アプリケーション内で自己ホストすることができます。 WCF サービス アプリケーションをホストするその他の方法について詳しくは、「[ホスティング サービス](../wcf/hosting-services.md)」を参照してください。  
   
 ```csharp  
 ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
@@ -423,7 +423,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
   
 ## <a name="see-also"></a>関連項目
 
-- [基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [サービスの設計と実装](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)
-- [双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [基本的な WCF プログラミング](../wcf/basic-wcf-programming.md)
+- [サービスの設計と実装](../wcf/designing-and-implementing-services.md)
+- [クライアントを構築する](../wcf/building-clients.md)
+- [双方向サービス](../wcf/feature-details/duplex-services.md)

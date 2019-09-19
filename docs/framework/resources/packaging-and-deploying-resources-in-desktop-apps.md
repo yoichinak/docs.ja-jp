@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
-ms.translationtype: HT
+ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851605"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045581"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET アプリでのリソースのパッケージ化と配置
 
@@ -58,7 +58,7 @@ ms.locfileid: "70851605"
 アプリケーションのリソースをパッケージ化するときは、共通言語ランタイムで想定されているリソース名前付け規則を使って、リソースに名前を付ける必要があります。 ランタイムは、そのカルチャ名でリソースを識別します。 各カルチャには一意の名前が指定されています。通常は、言語に関連付けられた小文字 2 文字のカルチャ名と、必要に応じて、国または地域に関連付けられた大文字 2 文字のサブカルチャ名を組み合わせたものです。 カルチャ名の後にダッシュ (-) で区切ってサブカルチャ名は記述します。 日本で話される日本語は ja-JP、米国で話される英語は en-US、ドイツで話されるドイツ語は de-DE、オーストリアで話されるドイツ語は de-AT などとなります。 [Windows でサポートされている言語/地域名の一覧](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)の「**Language tag (言語タグ)** 」列をご覧ください。 カルチャ名は、[BCP 47](https://tools.ietf.org/html/bcp47) によって定義されている標準に準拠します。
 
 > [!NOTE]
-> リソース ファイルの作成については、「[リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)」および「[サテライト アセンブリの作成](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)」をご覧ください。
+> リソース ファイルの作成については、「[リソース ファイルの作成](creating-resource-files-for-desktop-apps.md)」および「[サテライト アセンブリの作成](creating-satellite-assemblies-for-desktop-apps.md)」をご覧ください。
 
 <a name="cpconpackagingdeployingresourcesanchor1"></a>
 
@@ -73,9 +73,9 @@ ms.locfileid: "70851605"
 .NET Framework のリソース フォールバック プロセスには次の手順が含まれます。
 
 > [!TIP]
-> [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 構成要素を使うことで、リソース フォールバック プロセスおよびランタイムがリソース アセンブリをプローブするプロセスを、最適化できる場合があります。 詳しくは、「[リソース フォールバック プロセスの最適化](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)」セクションをご覧ください。
+> [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 構成要素を使うことで、リソース フォールバック プロセスおよびランタイムがリソース アセンブリをプローブするプロセスを、最適化できる場合があります。 詳しくは、「[リソース フォールバック プロセスの最適化](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)」セクションをご覧ください。
 
-1. ランタイムは最初に、[グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)で、アプリケーションに対して要求されたカルチャと一致するアセンブリを調べます。
+1. ランタイムは最初に、[グローバル アセンブリ キャッシュ](../app-domains/gac.md)で、アプリケーションに対して要求されたカルチャと一致するアセンブリを調べます。
 
      グローバル アセンブリ キャッシュには、多くのアプリケーションで共有されるリソース アセンブリを格納できます。 これにより、作成するすべてのアプリケーションのディレクトリ構造に特定のリソース セットを含める必要がなくなります。 アセンブリへの参照が見つかると、ランタイムは要求されたリソースのアセンブリを検索します。 アセンブリでエントリが見つかると、ランタイムは要求されたリソースを使います。 エントリが見つからない場合は、検索を続けます。
 
@@ -112,13 +112,13 @@ ms.locfileid: "70851605"
 
 次の条件が満たされていれば、ランタイムがサテライト アセンブリでリソースを検索するプロセスを最適化することができます。
 
-- サテライト アセンブリが、コード アセンブリと同じ場所に配置されていること。 コード アセンブリが[グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)にインストールされている場合、サテライト アセンブリもグローバル アセンブリ キャッシュにインストールされます。 コード アセンブリがディレクトリにインストールされている場合、サテライト アセンブリはそのディレクトリのカルチャ固有のフォルダーにインストールされます。
+- サテライト アセンブリが、コード アセンブリと同じ場所に配置されていること。 コード アセンブリが[グローバル アセンブリ キャッシュ](../app-domains/gac.md)にインストールされている場合、サテライト アセンブリもグローバル アセンブリ キャッシュにインストールされます。 コード アセンブリがディレクトリにインストールされている場合、サテライト アセンブリはそのディレクトリのカルチャ固有のフォルダーにインストールされます。
 
 - サテライト アセンブリは、オンデマンドではインストールされません。
 
 - アプリケーションのコードは、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> イベントを処理しません。
 
-次の例に示すように、アプリケーション構成ファイルで [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 要素を指定し、その `enabled` 属性を `true` に設定することにより、サテライト アセンブリのプローブを最適化します。
+次の例に示すように、アプリケーション構成ファイルで [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 要素を指定し、その `enabled` 属性を `true` に設定することにより、サテライト アセンブリのプローブを最適化します。
 
 ```xml
 <configuration>
@@ -128,7 +128,7 @@ ms.locfileid: "70851605"
 </configuration>
 ```
 
-サテライト アセンブリの最適化されたプローブは、オプトイン機能です。 つまり、アプリケーションの構成ファイルに `enabled` 属性が `true` に設定されている [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 要素が存在しない限り、ランタイムは「[リソース フォールバック プロセス](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1)」で説明されている手順に従います。 その場合、サテライト アセンブリをプローブするプロセスは次のように変更されます。
+サテライト アセンブリの最適化されたプローブは、オプトイン機能です。 つまり、アプリケーションの構成ファイルに `enabled` 属性が `true` に設定されている [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 要素が存在しない限り、ランタイムは「[リソース フォールバック プロセス](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1)」で説明されている手順に従います。 その場合、サテライト アセンブリをプローブするプロセスは次のように変更されます。
 
 - ランタイムは、親コード アセンブリの場所を使って、サテライト アセンブリをプローブします。 親アセンブリがグローバル アセンブリ キャッシュにインストールされている場合、ランタイムはアプリケーションのディレクトリではなくキャッシュ内をプローブします。 親アセンブリがアプリケーション ディレクトリにインストールされている場合、ランタイムはグローバル アセンブリ キャッシュではなくアプリケーション ディレクトリをプローブします。
 
@@ -186,7 +186,7 @@ Greeting=Bon jour!
 Greeting=Добрый день
 ```
 
-コマンド ラインから[リソース ファイル ジェネレーター (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を実行することで、これら 2 つのファイルを .resources にコンパイルします。 フランス語リソースの場合、コマンドは次のようになります。
+コマンド ラインから[リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を実行することで、これら 2 つのファイルを .resources にコンパイルします。 フランス語リソースの場合、コマンドは次のようになります。
 
 **resgen.exe resources.fr.txt**
 
@@ -194,7 +194,7 @@ Greeting=Добрый день
 
 **resgen.exe resources.ru.txt**
 
-コマンド ラインから[アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) を実行することにより、.resources ファイルをダイナミック リンク ライブラリに埋め込みます。フランス語リソースの場合のコマンドは次のとおりです。
+コマンド ラインから[アセンブリ リンカー (Al.exe)](../tools/al-exe-assembly-linker.md) を実行することにより、.resources ファイルをダイナミック リンク ライブラリに埋め込みます。フランス語リソースの場合のコマンドは次のとおりです。
 
 **al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**
 
@@ -233,7 +233,7 @@ Bon jour!
 
 ## <a name="see-also"></a>関連項目
 
-- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)
-- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)
-- [リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [サテライト アセンブリの作成](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [デスクトップ アプリケーションのリソース](index.md)
+- [グローバル アセンブリ キャッシュ](../app-domains/gac.md)
+- [リソース ファイルの作成](creating-resource-files-for-desktop-apps.md)
+- [サテライト アセンブリの作成](creating-satellite-assemblies-for-desktop-apps.md)

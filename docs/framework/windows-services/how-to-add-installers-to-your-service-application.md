@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: 335bff660e401d8fbaf531f1c1f3ccc166d1c70a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 99e2376c50f0b47cc21002b2926818707188805e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952506"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053649"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>方法: サービス アプリケーションにインストーラーを追加する
 Visual Studio には、サービス アプリケーションに関連付けられているリソースをインストールできるインストール コンポーネントが付属しています。 インストール コンポーネントは、個々のサービスをインストール先のシステムに登録し、サービス コントロール マネージャーにサービスが存在することを認識させます。 サービス アプリケーションを操作するときは、[プロパティ] ウィンドウでリンクを選択して、適切なインストーラーをプロジェクトに自動的に追加することができます。  
@@ -47,11 +47,11 @@ Visual Studio には、サービス アプリケーションに関連付けら�
   
     |[値]|結果|  
     |-----------|------------|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|インストールの後、サービスを手動で開始する必要があります。 詳細については、「[方法 :サービスを開始する](../../../docs/framework/windows-services/how-to-start-services.md)」を参照してください。|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|インストールの後、サービスを手動で開始する必要があります。 詳細については、「[方法 :サービスを開始する](how-to-start-services.md)」を参照してください。|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|サービスは、コンピューターが再起動されるたびに、自動的に開始します。|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|サービスは開始できません。|  
   
-6. サービスが実行するセキュリティ コンテキストを決定するには、<xref:System.ServiceProcess.ServiceProcessInstaller> コンポーネントをクリックし、適切なプロパティ値を設定します。 詳細については、「[方法 :サービスのセキュリティ コンテキストを指定する](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)」を参照してください。  
+6. サービスが実行するセキュリティ コンテキストを決定するには、<xref:System.ServiceProcess.ServiceProcessInstaller> コンポーネントをクリックし、適切なプロパティ値を設定します。 詳細については、「[方法 :サービスのセキュリティ コンテキストを指定する](how-to-specify-the-security-context-for-services.md)」を参照してください。  
   
 7. カスタム処理を実行する必要があるメソッドをオーバーライドします。  
   
@@ -62,7 +62,7 @@ Visual Studio には、サービス アプリケーションに関連付けら�
   
 ## <a name="see-also"></a>関連項目
 
-- [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [方法: サービスをインストールおよびアンインストールする](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [方法: サービスを開始する](../../../docs/framework/windows-services/how-to-start-services.md)
-- [方法: サービスのセキュリティ コンテキストを指定する](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+- [Windows サービス アプリケーションの概要](introduction-to-windows-service-applications.md)
+- [方法: サービスをインストールおよびアンインストールする](how-to-install-and-uninstall-services.md)
+- [方法: サービスを開始する](how-to-start-services.md)
+- [方法: サービスのセキュリティ コンテキストを指定する](how-to-specify-the-security-context-for-services.md)

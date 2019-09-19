@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8826b73c02c4d4c54458f08581c0c35238201f6
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: db9571a2d07bcdf9830ef93cd07a5dae912f4677
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662400"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051715"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>タイプ ライブラリのアセンブリとしてのインポート
 
@@ -36,7 +36,7 @@ ms.locfileid: "67662400"
 
 設計時専用の相互運用機能アセンブリを使用する場合は、COM コンポーネントの作成者によってパブリッシュされたプライマリ相互運用機能アセンブリから型情報を埋め込むことができます。 ただし、アプリケーションを使用してプライマリ相互運用機能アセンブリを展開する必要はありません。
 
-設計時専用の相互運用機能アセンブリを使用すると、ほとんどのアプリケーションは、COM コンポーネントのすべての機能を使用しないため、アプリケーションのサイズが小さくなります。 型情報を埋め込む場合に、コンパイラは非常に効率的です。アプリケーションが、COM インターフェイスでメソッドの一部のみを使用する場合、コンパイラは、使用されないメソッドを埋め込みません。 型情報が埋め込まれているアプリケーションが、そのような別のアプリケーションと対話するか、プライマリ相互運用機能アセンブリを使用するアプリケーションと対話する場合、共通言語ランタイムは、型等価性の規則を使用して、同じ名前の 2 つの型が同じ COM 型を表すかどうかを判断します。 COM オブジェクトを使用するためにこれらの規則を理解する必要はありません。 ただし、規則に興味がある場合は、「[Type Equivalence and Embedded Interop Types](../../../docs/framework/interop/type-equivalence-and-embedded-interop-types.md)」(型の等価性と埋め込まれた相互運用機能型) を参照してください。
+設計時専用の相互運用機能アセンブリを使用すると、ほとんどのアプリケーションは、COM コンポーネントのすべての機能を使用しないため、アプリケーションのサイズが小さくなります。 型情報を埋め込む場合に、コンパイラは非常に効率的です。アプリケーションが、COM インターフェイスでメソッドの一部のみを使用する場合、コンパイラは、使用されないメソッドを埋め込みません。 型情報が埋め込まれているアプリケーションが、そのような別のアプリケーションと対話するか、プライマリ相互運用機能アセンブリを使用するアプリケーションと対話する場合、共通言語ランタイムは、型等価性の規則を使用して、同じ名前の 2 つの型が同じ COM 型を表すかどうかを判断します。 COM オブジェクトを使用するためにこれらの規則を理解する必要はありません。 ただし、規則に興味がある場合は、「[Type Equivalence and Embedded Interop Types](type-equivalence-and-embedded-interop-types.md)」(型の等価性と埋め込まれた相互運用機能型) を参照してください。
 
 ## <a name="generating-metadata"></a>メタデータ ファイルの生成
 
@@ -46,11 +46,11 @@ COM タイプ ライブラリには、Loanlib.tlb などの .tlb 拡張子を持
 
 - Visual Studio
 
-  Visual Studio は、タイプ ライブラリ内の COM 型をアセンブリ内のメタデータに自動的に変換します。 手順については、「[方法:タイプ ライブラリへの参照を追加する](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)」にあります。
+  Visual Studio は、タイプ ライブラリ内の COM 型をアセンブリ内のメタデータに自動的に変換します。 手順については、「[方法:タイプ ライブラリへの参照を追加する](how-to-add-references-to-type-libraries.md)」にあります。
 
-- [タイプ ライブラリ インポーター (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [タイプ ライブラリ インポーター (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)
 
-  タイプ ライブラリ インポーターは、結果の相互運用機能のファイルのメタデータを調整するコマンド ライン オプションを提供し、既存のタイプ ライブラリから型をインポートし、相互運用機能アセンブリと名前空間を生成します。 手順については、「[方法:相互運用機能アセンブリをタイプ ライブラリから生成する](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)」をご覧ください。
+  タイプ ライブラリ インポーターは、結果の相互運用機能のファイルのメタデータを調整するコマンド ライン オプションを提供し、既存のタイプ ライブラリから型をインポートし、相互運用機能アセンブリと名前空間を生成します。 手順については、「[方法:相互運用機能アセンブリをタイプ ライブラリから生成する](how-to-generate-interop-assemblies-from-type-libraries.md)」をご覧ください。
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> クラス
 
@@ -75,12 +75,12 @@ COM タイプ ライブラリには、Loanlib.tlb などの .tlb 拡張子を持
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
-- [.NET Framework への COM コンポーネントの公開](../../../docs/framework/interop/exposing-com-components.md)
+- [.NET Framework への COM コンポーネントの公開](exposing-com-components.md)
 - [タイプ ライブラリからアセンブリへの変換の要約](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp.exe (タイプ ライブラリ インポーター)](../tools/tlbimp-exe-type-library-importer.md)
 - [標準ラッパーのカスタマイズ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [マネージド コードでの COM 型の使用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [相互運用プロジェクトのコンパイル](../../../docs/framework/interop/compiling-an-interop-project.md)
-- [相互運用アプリケーションの配置](../../../docs/framework/interop/deploying-an-interop-application.md)
-- [方法: タイプ ライブラリへの参照を追加する](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
-- [方法: 相互運用機能アセンブリをタイプ ライブラリから生成する](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
+- [相互運用プロジェクトのコンパイル](compiling-an-interop-project.md)
+- [相互運用アプリケーションの配置](deploying-an-interop-application.md)
+- [方法: タイプ ライブラリへの参照を追加する](how-to-add-references-to-type-libraries.md)
+- [方法: 相互運用機能アセンブリをタイプ ライブラリから生成する](how-to-generate-interop-assemblies-from-type-libraries.md)

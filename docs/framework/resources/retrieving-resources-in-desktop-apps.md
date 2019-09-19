@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3b396210cf77cacf3d03439af24de40d2dadeee
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: f4c44bdb4be4c90c20cd6bdb56db6cd3380535c7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971167"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045610"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>デスクトップ アプリケーションのリソースの取得
 ローカライズされたリソースを NET Framework デスクトップ アプリケーションで使用する場合は、既定カルチャまたはニュートラル カルチャ用のリソースをメイン アセンブリと共にパッケージ化し、アプリでサポートされている言語またはカルチャごとに個別のサテライト アセンブリを作成することが理想的です。 名前付きリソースには、次のセクションで説明する <xref:System.Resources.ResourceManager> クラスを使用してアクセスすることができます。 目的のリソースをメイン アセンブリおよびサテライト アセンブリに埋め込まない場合でも、.resources バイナリ ファイルには直接アクセスすることができます。詳細については、「 [.resources ファイルからのリソースの取得](#from_file) 」セクションを参照してください。  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリでリソースを取得するには、Windows デベロッパー センターの「 [Windows ストア アプリでのリソースの作成と取得](https://go.microsoft.com/fwlink/p/?LinkID=241674) 」を参照してください。  
@@ -38,7 +38,7 @@ ms.locfileid: "70971167"
   
 - 2 つのパラメーターを持つオーバー ロード。1 つは、リソースの名前が含まれる文字列で、もう 1 つは、リソースが取得されるカルチャを表す <xref:System.Globalization.CultureInfo> オブジェクトです。 そのカルチャ用に設定されたリソースが見つからない場合、リソース マネージャーはフォールバック規則を使用して適切なリソースを取得します。 詳細については、 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>メソッド、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>メソッド、および <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> メソッドを参照してください。  
   
- リソース マネージャーでは、アプリケーションでカルチャ固有のリソースを取得する方法を、リソース フォールバック プロセスを使用して制御します。 詳細については、「 [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)」の「リソース フォールバック プロセス」セクションを参照してください。 <xref:System.Resources.ResourceManager> オブジェクトをインスタンス化する方法については、 <xref:System.Resources.ResourceManager> クラスに関するトピックの「ResourceManager オブジェクトのインスタンス化」セクションを参照してください。  
+ リソース マネージャーでは、アプリケーションでカルチャ固有のリソースを取得する方法を、リソース フォールバック プロセスを使用して制御します。 詳細については、「 [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)」の「リソース フォールバック プロセス」セクションを参照してください。 <xref:System.Resources.ResourceManager> オブジェクトをインスタンス化する方法については、 <xref:System.Resources.ResourceManager> クラスに関するトピックの「ResourceManager オブジェクトのインスタンス化」セクションを参照してください。  
   
 ### <a name="retrieving-string-data-an-example"></a>文字列データの取得: 例  
  次の例では、 <xref:System.Resources.ResourceManager.GetString%28System.String%29> メソッドを呼び出すことで、現在の UI カルチャの文字列リソースを取得します。 ここでは、英語 (米国) カルチャ用のニュートラル文字列リソースと、フランス語 (フランス) カルチャおよびロシア語 (ロシア) カルチャ用のローカライズされたリソースが対象となります。 次の英語 (米国) リソースは、Strings.txt という名前のファイルに入っています。  
@@ -138,11 +138,11 @@ GetObject.exe
   
  メイン アセンブリのバージョン管理のサポートは、 <xref:System.Resources.SatelliteContractVersionAttribute> 属性で指定されます。 この属性をアプリのメイン アセンブリで指定すると、サテライト アセンブリを更新しなくてもメイン アセンブリの更新および再展開を行うことができます。 メイン アセンブリを更新すると、メイン アセンブリのバージョン番号はインクリメントされますが、サテライト コントラクト バージョン番号はそのままで変わりありません。 リソース マネージャーは、要求されたリソースを取得するとき、この属性で指定されたサテライト アセンブリのバージョンを読み込みます。  
   
- 発行者ポリシー アセンブリでは、サテライト アセンブリのバージョン管理をサポートしています。 メイン アセンブリを更新することなく、サテライト アセンブリの更新および再展開を行うことができます。 サテライト アセンブリを更新すると、そのバージョン番号はインクリメントされ、発行者ポリシー アセンブリと一緒に出力されます。 発行者ポリシー アセンブリ内では、新しいサテライト アセンブリが旧バージョンと互換性があるように指定します。 リソース マネージャーでは、 <xref:System.Resources.SatelliteContractVersionAttribute> 属性を使用してサテライト アセンブリのバージョンを特定しますが、アセンブリ ローダーは、発行元ポリシーで指定されたサテライト アセンブリのバージョンにバインドします。 発行者ポリシー アセンブリの詳細については、「 [発行者ポリシー ファイルを作成する](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)」を参照してください。  
+ 発行者ポリシー アセンブリでは、サテライト アセンブリのバージョン管理をサポートしています。 メイン アセンブリを更新することなく、サテライト アセンブリの更新および再展開を行うことができます。 サテライト アセンブリを更新すると、そのバージョン番号はインクリメントされ、発行者ポリシー アセンブリと一緒に出力されます。 発行者ポリシー アセンブリ内では、新しいサテライト アセンブリが旧バージョンと互換性があるように指定します。 リソース マネージャーでは、 <xref:System.Resources.SatelliteContractVersionAttribute> 属性を使用してサテライト アセンブリのバージョンを特定しますが、アセンブリ ローダーは、発行元ポリシーで指定されたサテライト アセンブリのバージョンにバインドします。 発行者ポリシー アセンブリの詳細については、「 [発行者ポリシー ファイルを作成する](../configure-apps/how-to-create-a-publisher-policy.md)」を参照してください。  
   
- アセンブリの完全なバージョン管理サポートを有効にするには、 [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md) 内に厳密な名前を付けたアセンブリを展開し、アプリケーション ディレクトリ内に厳密な名前を持たないアセンブリを展開することをお勧めします。 厳密な名前を付けたアセンブリをアプリケーション ディレクトリに展開すると、更新時に、サテライト アセンブリのバージョン番号をインクリメントできなくなります。 そのため、インプレース更新を実行する必要があります。インプレース更新では、既存のコードを更新されたコードに置き換えて、同じバージョン番号を維持します。 たとえば、サテライト アセンブリのバージョン 1.0.0.0 を、完全に指定されたアセンブリ名 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" で更新する場合は、完全に指定された同じアセンブリ名 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" でコンパイルされた更新済みの myApp.resources.dll で上書きします。 サテライト アセンブリ ファイルに対してインプレース更新を使用すると、サテライト アセンブリのバージョンをアプリケーションで正確に特定するのが難しくなります。  
+ アセンブリの完全なバージョン管理サポートを有効にするには、 [グローバル アセンブリ キャッシュ](../app-domains/gac.md) 内に厳密な名前を付けたアセンブリを展開し、アプリケーション ディレクトリ内に厳密な名前を持たないアセンブリを展開することをお勧めします。 厳密な名前を付けたアセンブリをアプリケーション ディレクトリに展開すると、更新時に、サテライト アセンブリのバージョン番号をインクリメントできなくなります。 そのため、インプレース更新を実行する必要があります。インプレース更新では、既存のコードを更新されたコードに置き換えて、同じバージョン番号を維持します。 たとえば、サテライト アセンブリのバージョン 1.0.0.0 を、完全に指定されたアセンブリ名 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" で更新する場合は、完全に指定された同じアセンブリ名 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" でコンパイルされた更新済みの myApp.resources.dll で上書きします。 サテライト アセンブリ ファイルに対してインプレース更新を使用すると、サテライト アセンブリのバージョンをアプリケーションで正確に特定するのが難しくなります。  
   
- アセンブリのバージョン管理の詳細については、「 [アセンブリのバージョン管理](../../standard/assembly/versioning.md) 」と「 [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
+ アセンブリのバージョン管理の詳細については、「 [アセンブリのバージョン管理](../../standard/assembly/versioning.md) 」と「 [ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>.resources ファイルからのリソースの取得  
@@ -204,7 +204,7 @@ csc Example.cs
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Resources.ResourceManager>
-- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)
-- [リソースのパッケージ化と配置](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [デスクトップ アプリケーションのリソース](index.md)
+- [リソースのパッケージ化と配置](packaging-and-deploying-resources-in-desktop-apps.md)
+- [ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)
 - [Windows ストア アプリでのリソースの作成と取得](https://go.microsoft.com/fwlink/p/?LinkID=241674)

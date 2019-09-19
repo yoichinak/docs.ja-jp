@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7b1f6798f1aaa778eaf95de996584848c672351
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f2bdaef52bbc4cac0abfcbf8724f3c5c602bc8f0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956678"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045799"
 ---
 # <a name="security-issues-in-reflection-emit"></a>リフレクション出力のセキュリティ関連事項
 .NET Framework には、Microsoft Intermediate Language (MSIL) を出力する方法が 3 種類ありますが、それぞれに固有のセキュリティ問題があります。  
@@ -36,7 +36,7 @@ ms.locfileid: "69956678"
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>動的アセンブリ  
- 動的アセンブリを作成するには、<xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> メソッドのオーバーロードを使用します。 コンピューター全体のセキュリティ ポリシーが削除されたため、このメソッドのほとんどのオーバーロードは .NET Framework 4 では推奨されていません。 (「[セキュリティの変更](../../../docs/framework/security/security-changes.md)」をご覧ください。)残りのオーバーロードは、信頼レベルに関係なく、任意のコードによって実行できます。 これらのオーバーロードは 2 つのグループに分けられます。1 つは、動的アセンブリの作成時に適用する属性の一覧を指定するグループで、もう 1 つは属性の一覧を指定しないグループです。 アセンブリの透過性モデルを指定しない場合は、アセンブリの作成時に <xref:System.Security.SecurityRulesAttribute> 属性を適用することによって、出力アセンブリから透過性モデルが継承されます。  
+ 動的アセンブリを作成するには、<xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> メソッドのオーバーロードを使用します。 コンピューター全体のセキュリティ ポリシーが削除されたため、このメソッドのほとんどのオーバーロードは .NET Framework 4 では推奨されていません。 (「[セキュリティの変更](../security/security-changes.md)」をご覧ください。)残りのオーバーロードは、信頼レベルに関係なく、任意のコードによって実行できます。 これらのオーバーロードは 2 つのグループに分けられます。1 つは、動的アセンブリの作成時に適用する属性の一覧を指定するグループで、もう 1 つは属性の一覧を指定しないグループです。 アセンブリの透過性モデルを指定しない場合は、アセンブリの作成時に <xref:System.Security.SecurityRulesAttribute> 属性を適用することによって、出力アセンブリから透過性モデルが継承されます。  
   
 > [!NOTE]
 > <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> メソッドを使用すると、動的アセンブリの作成後に適用する属性は、そのアセンブリがディスクに保存され、メモリに再び読み込まれるまでは有効になりません。  
@@ -139,7 +139,7 @@ ms.locfileid: "69956678"
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>バージョン情報  
- .NET Framework 4 以降では、コンピューター全体のセキュリティ ポリシーが削除され、セキュリティ透過性が既定の適用機構になりました。 「[セキュリティの変更](../../../docs/framework/security/security-changes.md)」をご覧ください。  
+ .NET Framework 4 以降では、コンピューター全体のセキュリティ ポリシーが削除され、セキュリティ透過性が既定の適用機構になりました。 「[セキュリティの変更](../security/security-changes.md)」をご覧ください。  
   
  .NET Framework 2.0 Service Pack 1 以降では、動的アセンブリと動的メソッドを出力するときに、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> フラグを指定する必要がなくなりました。 このフラグは、それ以前のすべてのバージョンの .NET Framework では必要となります。  
   
@@ -151,9 +151,9 @@ ms.locfileid: "69956678"
  最終的に、.NET Framework 2.0 SP1 では、匿名でホストされるメソッドが導入されました。  
   
 ### <a name="obtaining-information-on-types-and-members"></a>型およびメンバーの情報の取得  
- .NET Framework 2.0 以降から、非パブリックな型とメンバーに関する情報を取得する際にアクセス許可は不要になりました。 動的メソッドを出力するために必要な情報を取得するには、リフレクションを使用します。 たとえば、<xref:System.Reflection.MethodInfo> オブジェクトを使用してメソッド呼び出しを出力します。 以前のバージョンの .NET Framework では、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> フラグを指定する必要があります。 詳しくは、「[リフレクションに関するセキュリティ上の考慮事項](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)」をご覧ください。  
+ .NET Framework 2.0 以降から、非パブリックな型とメンバーに関する情報を取得する際にアクセス許可は不要になりました。 動的メソッドを出力するために必要な情報を取得するには、リフレクションを使用します。 たとえば、<xref:System.Reflection.MethodInfo> オブジェクトを使用してメソッド呼び出しを出力します。 以前のバージョンの .NET Framework では、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> フラグを指定する必要があります。 詳しくは、「[リフレクションに関するセキュリティ上の考慮事項](security-considerations-for-reflection.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [リフレクションに関するセキュリティ上の考慮事項](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
-- [動的メソッドおよびアセンブリの出力](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)
+- [リフレクションに関するセキュリティ上の考慮事項](security-considerations-for-reflection.md)
+- [動的メソッドおよびアセンブリの出力](emitting-dynamic-methods-and-assemblies.md)

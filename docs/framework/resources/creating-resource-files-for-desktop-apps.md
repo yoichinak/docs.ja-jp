@@ -12,26 +12,26 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55eda4ce2fd109715076f81d53e93a80d40cbfa3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
-ms.translationtype: HT
+ms.openlocfilehash: 893b6e6e61e23bdc0da1902407017a836bc6cbe8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851578"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045680"
 ---
 # <a name="create-resource-files-for-net-apps"></a>.NET アプリ用のリソース ファイルを作成する
 
 リソース ファイルにリソース (文字列、イメージ、オブジェクト データなど) を追加して、アプリケーションで簡単に使用できるようにすることが可能です。 .NET Framework では、次の 5 つの方法でリソース ファイルを作成できます。
 
-- 文字列リソースを格納するテキスト ファイルを作成します。 [リソース ファイル ジェネレーター (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用すると、テキスト ファイルをバイナリ リソース (.resources) ファイルに変換できます。 次に、そのバイナリ リソース ファイルを、言語コンパイラを使用してアプリケーションの実行可能ファイルまたはアプリケーション ライブラリに埋め込むか、[アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) を使用してサテライト アセンブリに埋め込むことができます。 詳細については、「[テキスト ファイル内のリソース](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#TextFiles)」を参照してください。
+- 文字列リソースを格納するテキスト ファイルを作成します。 [リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を使用すると、テキスト ファイルをバイナリ リソース (.resources) ファイルに変換できます。 次に、そのバイナリ リソース ファイルを、言語コンパイラを使用してアプリケーションの実行可能ファイルまたはアプリケーション ライブラリに埋め込むか、[アセンブリ リンカー (Al.exe)](../tools/al-exe-assembly-linker.md) を使用してサテライト アセンブリに埋め込むことができます。 詳細については、「[テキスト ファイル内のリソース](creating-resource-files-for-desktop-apps.md#TextFiles)」を参照してください。
 
-- 文字列、イメージ、またはオブジェクト データを格納する XML リソース (.resx) ファイルを作成します。 [リソース ファイル ジェネレーター (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用すると、.resx ファイルをバイナリ リソース (.resources) ファイルに変換できます。 次に、そのバイナリ リソース ファイルを、言語コンパイラを使用してアプリケーションの実行可能ファイルまたはアプリケーション ライブラリに埋め込むか、[アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) を使用してサテライト アセンブリに埋め込むことができます。 詳細については、「[.resx ファイル内のリソース](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResxFiles)」を参照してください。
+- 文字列、イメージ、またはオブジェクト データを格納する XML リソース (.resx) ファイルを作成します。 [リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を使用すると、.resx ファイルをバイナリ リソース (.resources) ファイルに変換できます。 次に、そのバイナリ リソース ファイルを、言語コンパイラを使用してアプリケーションの実行可能ファイルまたはアプリケーション ライブラリに埋め込むか、[アセンブリ リンカー (Al.exe)](../tools/al-exe-assembly-linker.md) を使用してサテライト アセンブリに埋め込むことができます。 詳細については、「[.resx ファイル内のリソース](creating-resource-files-for-desktop-apps.md#ResxFiles)」を参照してください。
 
-- <xref:System.Resources> 名前空間の型を使用して、XML リソース (.resx) ファイルをプログラムによって作成します。 .resx ファイルを作成し、そのリソースを列挙して、特定のリソースを名前で取得することができます。 詳細については、「[プログラムによる .resx ファイルの使用](../../../docs/framework/resources/working-with-resx-files-programmatically.md)」のトピックを参照してください。
+- <xref:System.Resources> 名前空間の型を使用して、XML リソース (.resx) ファイルをプログラムによって作成します。 .resx ファイルを作成し、そのリソースを列挙して、特定のリソースを名前で取得することができます。 詳細については、「[プログラムによる .resx ファイルの使用](working-with-resx-files-programmatically.md)」のトピックを参照してください。
 
-- バイナリ リソース (.resources) ファイルをプログラムによって作成します。 次に、そのファイルを、言語コンパイラを使用してアプリケーションの実行可能ファイルまたはアプリケーション ライブラリに埋め込むか、[アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) を使用してサテライト アセンブリに埋め込むことができます。 詳細については、「[.resources ファイル内のリソース](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles)」を参照してください。
+- バイナリ リソース (.resources) ファイルをプログラムによって作成します。 次に、そのファイルを、言語コンパイラを使用してアプリケーションの実行可能ファイルまたはアプリケーション ライブラリに埋め込むか、[アセンブリ リンカー (Al.exe)](../tools/al-exe-assembly-linker.md) を使用してサテライト アセンブリに埋め込むことができます。 詳細については、「[.resources ファイル内のリソース](creating-resource-files-for-desktop-apps.md#ResourcesFiles)」を参照してください。
 
-- [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) を使用してリソース ファイルを作成し、そのファイルをプロジェクトに追加します。 Visual Studio には、リソースを追加、削除、および変更するためのリソース エディターがあります。 コンパイル時には、リソース ファイルが自動的にバイナリ .resources ファイルに変換されて、アプリケーション アセンブリまたはサテライト アセンブリに埋め込まれます。 詳細については、「[Visual Studio のリソース ファイル](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles)」を参照してください。
+- [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) を使用してリソース ファイルを作成し、そのファイルをプロジェクトに追加します。 Visual Studio には、リソースを追加、削除、および変更するためのリソース エディターがあります。 コンパイル時には、リソース ファイルが自動的にバイナリ .resources ファイルに変換されて、アプリケーション アセンブリまたはサテライト アセンブリに埋め込まれます。 詳細については、「[Visual Studio のリソース ファイル](creating-resource-files-for-desktop-apps.md#VSResFiles)」を参照してください。
 
 <a name="TextFiles"></a>
 ## <a name="resources-in-text-files"></a>テキスト ファイル内のリソース
@@ -78,9 +78,9 @@ HelpMenuName=Help
 EmptyString=
 ```
 
- .NET Framework 4.5 以降および .NET Core のすべてのバージョンでは、`#ifdef`*symbol*... `#endif` および `#if !`*symbol*... `#endif` コンストラクトを使用した条件付きコンパイルが、テキスト ファイルでサポートされています。 次に、`/define` スイッチと[リソース ファイル ジェネレーター (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用して、シンボルを定義できます。 各リソースには、独自の `#ifdef`*symbol*... `#endif` または `#if !`*symbol*... `#endif` コンストラクトが必要です。 `#ifdef` ステートメントを使用した場合、*シンボル*を定義した場合に関連付けられたリソースが .resources ファイルに追加されます。定義していない場合は追加されません。 `#if !` ステートメントを使用した場合、*シンボル*を定義していない場合に関連付けられたリソースが .resources ファイルに追加されます。定義した場合は追加されません。
+ .NET Framework 4.5 以降および .NET Core のすべてのバージョンでは、`#ifdef`*symbol*... `#endif` および `#if !`*symbol*... `#endif` コンストラクトを使用した条件付きコンパイルが、テキスト ファイルでサポートされています。 次に、`/define` スイッチと[リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を使用して、シンボルを定義できます。 各リソースには、独自の `#ifdef`*symbol*... `#endif` または `#if !`*symbol*... `#endif` コンストラクトが必要です。 `#ifdef` ステートメントを使用した場合、*シンボル*を定義した場合に関連付けられたリソースが .resources ファイルに追加されます。定義していない場合は追加されません。 `#if !` ステートメントを使用した場合、*シンボル*を定義していない場合に関連付けられたリソースが .resources ファイルに追加されます。定義した場合は追加されません。
 
- テキスト ファイルでは、コメントはオプションです。コメントの行頭にはセミコロン (;) またはシャープ記号 (#) が付きます。 コメントの行はファイル内の任意の場所に配置できます。 [リソース ファイル ジェネレーター (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用して作成されたコンパイル済みの .resources ファイルにはコメントが含まれません。
+ テキスト ファイルでは、コメントはオプションです。コメントの行頭にはセミコロン (;) またはシャープ記号 (#) が付きます。 コメントの行はファイル内の任意の場所に配置できます。 [リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を使用して作成されたコンパイル済みの .resources ファイルにはコメントが含まれません。
 
  テキスト ファイル内の空白行はすべて空白と見なされて無視されます。
 
@@ -92,13 +92,13 @@ OKButton=OK
 CancelButton=Cancel
 ```
 
- テキスト ファイルに *name* が重複して出現する場合、[リソース ファイル ジェネレーター (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) によって警告が表示され、2 番目の名前が無視されます。
+ テキスト ファイルに *name* が重複して出現する場合、[リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) によって警告が表示され、2 番目の名前が無視されます。
 
  *value* に改行文字を含めることはできませんが、C 言語形式のエスケープ文字で、改行を表す `\n` やタブを表す `\t` は使用できます。エスケープする場合は、円記号を含めることができます (たとえば、"\\\\")。 空の文字列を使用することもできます。
 
- リトル エンディアンまたはビッグ エンディアンのバイト順の UTF-8 エンコーディングまたは UTF-16 エンコーディングを使用して、テキスト ファイル形式でリソースを保存する必要があります。 ただし、.txt ファイルを .resources ファイルに変換する[リソース ファイル ジェネレーター (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) では、ファイルを既定では UTF-8 として扱います。 UTF-16 でエンコードされたファイルを Resgen.exe が認識できるようにする場合は、ファイルの先頭に Unicode バイト順マーク (U+FEFF) を置く必要があります。
+ リトル エンディアンまたはビッグ エンディアンのバイト順の UTF-8 エンコーディングまたは UTF-16 エンコーディングを使用して、テキスト ファイル形式でリソースを保存する必要があります。 ただし、.txt ファイルを .resources ファイルに変換する[リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) では、ファイルを既定では UTF-8 として扱います。 UTF-16 でエンコードされたファイルを Resgen.exe が認識できるようにする場合は、ファイルの先頭に Unicode バイト順マーク (U+FEFF) を置く必要があります。
 
- テキスト形式のリソース ファイルを .NET アセンブリに埋め込むには、[リソース ファイル ジェネレーター (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用してファイルをバイナリ リソース (.resources) ファイルに変換する必要があります。 次に、その .resources ファイルを、言語コンパイラを使用して .NET アセンブリに埋め込むか、[アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) を使用してサテライト アセンブリに埋め込むことができます。
+ テキスト形式のリソース ファイルを .NET アセンブリに埋め込むには、[リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を使用してファイルをバイナリ リソース (.resources) ファイルに変換する必要があります。 次に、その .resources ファイルを、言語コンパイラを使用して .NET アセンブリに埋め込むか、[アセンブリ リンカー (Al.exe)](../tools/al-exe-assembly-linker.md) を使用してサテライト アセンブリに埋め込むことができます。
 
  次の例では、単純な "Hello World" コンソール アプリケーションで、GreetingResources.txt という名前のテキスト形式のリソース ファイルを使用します。 このテキスト ファイルでは、ユーザーに名前の入力を求め、あいさつ文を表示する 2 つの文字列 (`prompt` および `greeting`) を定義します。
 
@@ -172,12 +172,12 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 > [!IMPORTANT]
-> .resx ファイルは定義されている形式の整形式 XML で構成する必要があるため、特に文字列以外のリソースが .resx ファイルに格納されている場合に、.resx ファイルを手動で操作することはお勧めしません。 代わりに、[Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) では、.resx ファイルを作成および操作するための透過的なインターフェイスが提供されています。 詳細については、「[Visual Studio のリソース ファイル](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles)」を参照してください。 .resx ファイルは、プログラムによって作成および操作することもできます。 詳細については、「[プログラムによる .resx ファイルの使用](../../../docs/framework/resources/working-with-resx-files-programmatically.md)」を参照してください。
+> .resx ファイルは定義されている形式の整形式 XML で構成する必要があるため、特に文字列以外のリソースが .resx ファイルに格納されている場合に、.resx ファイルを手動で操作することはお勧めしません。 代わりに、[Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) では、.resx ファイルを作成および操作するための透過的なインターフェイスが提供されています。 詳細については、「[Visual Studio のリソース ファイル](creating-resource-files-for-desktop-apps.md#VSResFiles)」を参照してください。 .resx ファイルは、プログラムによって作成および操作することもできます。 詳細については、「[プログラムによる .resx ファイルの使用](working-with-resx-files-programmatically.md)」を参照してください。
 
 <a name="ResourcesFiles"></a>
 ## <a name="resources-in-resources-files"></a>.resources ファイル内のリソース
 
-<xref:System.Resources.ResourceWriter?displayProperty=nameWithType> クラスを使用すると、プログラムによってコードから直接、バイナリ リソース (.resources) ファイルを作成できます。 また、[リソース ファイル ジェネレーター (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用して、テキスト ファイルまたは .resx ファイルから .resources ファイルを作成することもできます。 .resources ファイルには、文字列データに加えて、バイナリ データ (バイト配列) およびオブジェクト データを格納できます。 .resources ファイルをプログラムによって作成するには、次の手順が必要です。
+<xref:System.Resources.ResourceWriter?displayProperty=nameWithType> クラスを使用すると、プログラムによってコードから直接、バイナリ リソース (.resources) ファイルを作成できます。 また、[リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を使用して、テキスト ファイルまたは .resx ファイルから .resources ファイルを作成することもできます。 .resources ファイルには、文字列データに加えて、バイナリ データ (バイト配列) およびオブジェクト データを格納できます。 .resources ファイルをプログラムによって作成するには、次の手順が必要です。
 
 1. 一意のファイル名を付けて <xref:System.Resources.ResourceWriter> オブジェクトを作成します。 そのためには、ファイル名またはファイル ストリームを <xref:System.Resources.ResourceWriter> クラス コンストラクターに指定します。
 
@@ -193,12 +193,12 @@ csc greeting.cs -resource:GreetingResources.resources
  [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
  [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]
 
- 作成した .resources ファイルは、言語コンパイラの `/resource` スイッチを追加してランタイム実行可能ファイルまたはライブラリに埋め込むか、[アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) を使用してサテライト アセンブリに埋め込むことができます。
+ 作成した .resources ファイルは、言語コンパイラの `/resource` スイッチを追加してランタイム実行可能ファイルまたはライブラリに埋め込むか、[アセンブリ リンカー (Al.exe)](../tools/al-exe-assembly-linker.md) を使用してサテライト アセンブリに埋め込むことができます。
 
 <a name="VSResFiles"></a>
 ## <a name="resource-files-in-visual-studio"></a>Visual Studio でのリソース ファイル
 
-[Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) プロジェクトにリソース ファイルを追加すると、プロジェクト ディレクトリに .resx ファイルが作成されます。 Visual Studio には、文字列、イメージ、およびバイナリ オブジェクトを追加するためのリソース エディターがあります。 このエディターは静的データのみを処理するように設計されているので、プログラム オブジェクトを格納するために使用することはできません。オブジェクト データは、.resx ファイルまたは .resources ファイルにプログラムによって書き込む必要があります。 詳しくは、「[プログラムによる .resx ファイルの使用](../../../docs/framework/resources/working-with-resx-files-programmatically.md)」および「[.resources ファイル内のリソース](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles)」セクションをご覧ください。
+[Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) プロジェクトにリソース ファイルを追加すると、プロジェクト ディレクトリに .resx ファイルが作成されます。 Visual Studio には、文字列、イメージ、およびバイナリ オブジェクトを追加するためのリソース エディターがあります。 このエディターは静的データのみを処理するように設計されているので、プログラム オブジェクトを格納するために使用することはできません。オブジェクト データは、.resx ファイルまたは .resources ファイルにプログラムによって書き込む必要があります。 詳しくは、「[プログラムによる .resx ファイルの使用](working-with-resx-files-programmatically.md)」および「[.resources ファイル内のリソース](creating-resource-files-for-desktop-apps.md#ResourcesFiles)」セクションをご覧ください。
 
 ローカライズされたリソースを追加する場合は、メイン リソース ファイルと同じルート ファイル名を指定します。 ファイル名内でカルチャを指定する必要もあります。 たとえば、Resources.resx という名前のリソース ファイルを追加する場合に、英語 (米国) とフランス語 (フランス) の各カルチャ用にローカライズされたリソースを保持するには、Resources.en-US.resx および Resources.fr-FR.resx という名前のリソース ファイルを作成します。 また、アプリケーションの既定のカルチャも指定しておく必要があります。 この情報は、特定のカルチャ用にローカライズされたリソースが見つからない場合に、どのカルチャのリソースを使用するか決定するために使用されます。 既定のカルチャを指定するには、Visual Studio のソリューション エクスプローラーで、プロジェクト名を右クリックし、[アプリケーション] をポイントして、 **[アセンブリ情報]** をクリックします。次に、 **[ニュートラル言語]** ボックスの一覧で適切な言語/カルチャをクリックします。
 
@@ -207,5 +207,5 @@ csc greeting.cs -resource:GreetingResources.resources
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Resources>
-- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)
-- [リソースのパッケージ化と配置](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [デスクトップ アプリケーションのリソース](index.md)
+- [リソースのパッケージ化と配置](packaging-and-deploying-resources-in-desktop-apps.md)

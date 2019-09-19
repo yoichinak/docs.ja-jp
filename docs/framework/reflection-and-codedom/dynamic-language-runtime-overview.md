@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b550f504ecbc05e6790652ee1432da3a26ceacb6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e6b6de8f0a178914c46ba5a65dfb56795cf23c71
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915575"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046123"
 ---
 # <a name="dynamic-language-runtime-overview"></a>動的言語ランタイムの概要
 
@@ -76,7 +76,7 @@ CLR と同様に、DLR は .NET Framework の一部であり、.NET Framework �
 ## <a name="dlr-architecture"></a>DLR のアーキテクチャ
  動的言語ランタイムのアーキテクチャを次の図に示します。
 
- ![動的言語ランタイム アーキテクチャの概要](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview") DLR アーキテクチャ
+ ![動的言語ランタイム アーキテクチャの概要](./media/dlr-archoverview.png "DLR_ArchOverview") DLR アーキテクチャ
 
  DLR は、動的言語のサポートを強化するために一連のサービスを CLR に追加します。 これらのサービスには、次のようなものが含まれます。
 

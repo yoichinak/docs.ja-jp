@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: 6eba8202f0284b7b1054585039f12da9364ca1e9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894198"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051767"
 ---
 # <a name="how-to-implement-callback-functions"></a>方法: コールバック関数を実装する
 次の手順と例は、マネージド アプリケーションがプラットフォーム呼び出しを使用して、ローカル コンピューター上の各ウィンドウのハンドル値を出力する方法を示しています。 具体的には、この手順と例では **EnumWindows** 関数を使用してウィンドウのリストをステップスルーし、(CallBack という名前の) マネージド コールバック関数を使用してウィンドウ ハンドルの値を出力します。  
@@ -38,7 +38,7 @@ ms.locfileid: "70894198"
   
 4. コールバック関数がその作業を完了する前にガベージ コレクターがデリゲートをクリアしないようにしてください。 デリゲートをパラメーターとして渡した場合、または構造内のフィールドとして含まれるデリゲートを渡した場合、デリゲートは呼び出しの間収集されないままです。 したがって、次の列挙例と同様に、コールバック関数はその作業を呼び出しが戻る前に完了するので、マネージド呼び出し元による追加操作を必要としません。  
   
-     ただし、呼び出しが戻った後にコールバック関数を呼び出せる場合、マネージド呼び出し元は、コールバック関数が終了するまでデリゲートが収集されないようにしておくための対策を講じる必要があります。 ガベージ コレクションを回避する方法の詳細については、プラットフォーム呼び出しによる「[相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)」を参照してください。  
+     ただし、呼び出しが戻った後にコールバック関数を呼び出せる場合、マネージド呼び出し元は、コールバック関数が終了するまでデリゲートが収集されないようにしておくための対策を講じる必要があります。 ガベージ コレクションを回避する方法の詳細については、プラットフォーム呼び出しによる「[相互運用マーシャリング](interop-marshaling.md)」を参照してください。  
   
 ## <a name="example"></a>例  
   
@@ -131,5 +131,5 @@ int main()
   
 ## <a name="see-also"></a>関連項目
 
-- [コールバック関数](../../../docs/framework/interop/callback-functions.md)
-- [DLL 関数の呼び出し](../../../docs/framework/interop/calling-a-dll-function.md)
+- [コールバック関数](callback-functions.md)
+- [DLL 関数の呼び出し](calling-a-dll-function.md)

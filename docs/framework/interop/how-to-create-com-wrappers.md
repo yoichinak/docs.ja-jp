@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 56a88a5719fc5630baf2f31ee62fd463980661c2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971833"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051806"
 ---
 # <a name="how-to-create-com-wrappers"></a>方法: COM ラッパーを作成する
 
@@ -45,7 +45,7 @@ Visual Studio 2005 では、プロジェクトに参照として COM ラッパ�
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>.NET Framework ツールを使用してランタイム呼び出し可能ラッパーを作成するには  
   
-- [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) ツールを実行します。  
+- [Tlbimp.exe (タイプ ライブラリ インポーター)](../tools/tlbimp-exe-type-library-importer.md) ツールを実行します。  
   
  このツールは、元のタイプ ライブラリで定義された型のランタイム メタデータを含むアセンブリを作成します。  
   
@@ -67,11 +67,11 @@ Visual Studio 2005 では、プロジェクトに参照として COM ラッパ�
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>.NET Framework ツールを使用して COM 呼び出し可能ラッパーを作成するには  
   
-[Regasm.exe (アセンブリ登録ツール)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) を実行します。  
+[Regasm.exe (アセンブリ登録ツール)](../tools/regasm-exe-assembly-registration-tool.md) を実行します。  
   
 このツールはアセンブリ メタデータを読み取り、必要なエントリをレジストリに追加します。 その結果、COM クライアントで .NET Framework クラスを透過的に作成できるようになります。 アセンブリは、ネイティブ COM クラスの場合と同じように使用することができます。  
   
-任意のディレクトリにあるアセンブリで Regasm.exe を実行してから、[Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) を実行して、そのアセンブリをグローバル アセンブリ キャッシュに移動することができます。 アセンブリを移動しても場所のレジストリ エントリが無効になることはありません。これは、アセンブリが他の場所で見つからない場合に常にグローバル アセンブリ キャッシュが調べられるからです。  
+任意のディレクトリにあるアセンブリで Regasm.exe を実行してから、[Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](../tools/gacutil-exe-gac-tool.md) を実行して、そのアセンブリをグローバル アセンブリ キャッシュに移動することができます。 アセンブリを移動しても場所のレジストリ エントリが無効になることはありません。これは、アセンブリが他の場所で見つからない場合に常にグローバル アセンブリ キャッシュが調べられるからです。  
   
 ## <a name="see-also"></a>関連項目
 

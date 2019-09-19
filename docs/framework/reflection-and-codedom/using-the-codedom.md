@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 336a0fb5bc0fca5dd6ef917a2eeaf0908680d12b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 56b0b76e8dc137cbb9346f97604c2d53435c1fe6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591499"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045740"
 ---
 # <a name="using-the-codedom"></a>CodeDOM の使用方法
 CodeDOM には一般的なさまざま種類のソース コード要素を表す型が用意されています。 オブジェクト グラフをアセンブルする CodeDOM 要素を使用すると、ソース コード モデルを構築するプログラムをデザインできます。 このオブジェクト グラフは、サポートされているプログラミング言語用の CodeDOM コード ジェネレーターを使用して、ソース コードとしてレンダリングできます。 また、CodeDOM を使用して、ソース コードをバイナリ アセンブリにコンパイルすることもできます。  
@@ -120,7 +120,7 @@ CodeDOM には一般的なさまざま種類のソース コード要素を表�
  [!code-csharp[CodeDomExample#19](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#19)]
  [!code-vb[CodeDomExample#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#19)]  
   
- これで、<xref:System.CodeDom.CodeCompileUnit> という名前の `compileUnit` に、簡単な Hello World プログラムの CodeDOM グラフが追加されました。 CodeDOM グラフからのコードの生成およびコンパイルについては、「[CodeDOM グラフからのソース コードの生成およびプログラムのコンパイル](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)」を参照してください。  
+ これで、<xref:System.CodeDom.CodeCompileUnit> という名前の `compileUnit` に、簡単な Hello World プログラムの CodeDOM グラフが追加されました。 CodeDOM グラフからのコードの生成およびコンパイルについては、「[CodeDOM グラフからのソース コードの生成およびプログラムのコンパイル](generating-and-compiling-source-code-from-a-codedom-graph.md)」を参照してください。  
   
 ### <a name="more-information-on-building-a-codedom-graph"></a>CodeDOM グラフの構築に関する詳細  
  CodeDOM では、共通言語ランタイムをサポートするプログラミング言語の一般的なさまざまな種類のコード要素をサポートします。 CodeDOM は、プログラミング言語のすべての機能を表す要素を提供するようにはデザインされていません。 CodeDOM 要素で簡単に表すことができないコードは、<xref:System.CodeDom.CodeSnippetExpression>、<xref:System.CodeDom.CodeSnippetStatement>、<xref:System.CodeDom.CodeSnippetTypeMember>、または <xref:System.CodeDom.CodeSnippetCompileUnit> にカプセル化できます。 ただし、CodeDOM ではコードを自動的に他の言語に変換することはできません。  

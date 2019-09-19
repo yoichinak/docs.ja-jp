@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fff2d3309e5f8872a9333bf3d2f86e52bd67ea5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: ac60fa96b7c9ce6991f89e8c6a37ff5da4a34a50
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971776"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051777"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>方法: Tlbimp.exe を使用してプライマリ相互運用機能アセンブリを生成する
 
 プライマリ相互運用機能アセンブリを生成するには、次の 2 つの方法があります。
 
-- Windows SDK によって提供される[タイプ ライブラリ インポーター (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) を使用します。
+- Windows SDK によって提供される[タイプ ライブラリ インポーター (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) を使用します。
 
-  プライマリ相互運用機能アセンブリを生成する最も簡単な方法は、[Tlbimp.exe (タイプ ライブラリ インポーター)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) を使用することです。 Tlbimp.exe は、次の保護機能を提供します。
+  プライマリ相互運用機能アセンブリを生成する最も簡単な方法は、[Tlbimp.exe (タイプ ライブラリ インポーター)](../tools/tlbimp-exe-type-library-importer.md) を使用することです。 Tlbimp.exe は、次の保護機能を提供します。
 
   - 新規の相互運用機能アセンブリを作成するときには、その前に登録されている他のプライマリ相互運用機能アセンブリを調べて、入れ子になったタイプ ライブラリの参照がないかを確認してください。
 
@@ -71,4 +71,4 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: プライマリ相互運用機能アセンブリを登録する](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+- [方法: プライマリ相互運用機能アセンブリを登録する](how-to-register-primary-interop-assemblies.md)

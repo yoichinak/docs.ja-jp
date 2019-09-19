@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a224093b47241d951b463a7f3e0be389bba2806
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 857bad224d1a88c7011a42d0595b17b1810381aa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043726"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046056"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>方法: リフレクション出力を使用してジェネリック メソッドを定義する
 
@@ -27,7 +27,7 @@ ms.locfileid: "70043726"
 3 番目の手順では、ジェネリック メソッドを呼び出す方法を示します。
 
 > [!IMPORTANT]
-> メソッドはジェネリック型に属し、その型の型パラメーターを使用するだけであるため、ジェネリックではありません。 メソッドがジェネリックになるのは、そのメソッドが独自の型パラメーター リストを持つ場合だけです。 この例のように、ジェネリック メソッドは非ジェネリック型で表すことができます。 ジェネリック型の非ジェネリック メソッドの例については、「[方法:リフレクション出力を使用してジェネリック型を定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)」をご覧ください。
+> メソッドはジェネリック型に属し、その型の型パラメーターを使用するだけであるため、ジェネリックではありません。 メソッドがジェネリックになるのは、そのメソッドが独自の型パラメーター リストを持つ場合だけです。 この例のように、ジェネリック メソッドは非ジェネリック型で表すことができます。 ジェネリック型の非ジェネリック メソッドの例については、「[方法:リフレクション出力を使用してジェネリック型を定義する](how-to-define-a-generic-type-with-reflection-emit.md)」をご覧ください。
 
 ### <a name="to-define-a-generic-method"></a>ジェネリック メソッドを定義するには
 
@@ -36,7 +36,7 @@ ms.locfileid: "70043726"
     [!code-csharp[GenericMethodHowTo#20](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#20)]
     [!code-vb[GenericMethodHowTo#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#20)]
 
-2. 動的アセンブリと動的モジュールを定義して、ジェネリック メソッドが属する型を格納します。 この場合、アセンブリには `DemoMethodBuilder1` という名前のモジュールが 1 つだけ含まれます。モジュール名はアセンブリ名に拡張子が付いたものです。 この例では、アセンブリをディスクに保存したうえで実行するため、<xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> を指定します。 [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) を使用すると、DemoMethodBuilder1.dll をチェックし、手順 1. に示すメソッドの Microsoft Intermediate Language (MSIL) と比較できます。
+2. 動的アセンブリと動的モジュールを定義して、ジェネリック メソッドが属する型を格納します。 この場合、アセンブリには `DemoMethodBuilder1` という名前のモジュールが 1 つだけ含まれます。モジュール名はアセンブリ名に拡張子が付いたものです。 この例では、アセンブリをディスクに保存したうえで実行するため、<xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> を指定します。 [Ildasm.exe (IL Disassembler)](../tools/ildasm-exe-il-disassembler.md) を使用すると、DemoMethodBuilder1.dll をチェックし、手順 1. に示すメソッドの Microsoft Intermediate Language (MSIL) と比較できます。
 
     [!code-csharp[GenericMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#2)]
     [!code-vb[GenericMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#2)]
@@ -156,7 +156,7 @@ ms.locfileid: "70043726"
 
 メソッドは、`TInput` の配列である仮パラメーターを 1 つ持ちます。 メソッドは、入力配列のすべての要素を格納する `TOutput` のインスタンスを返します。 `TOutput` は <xref:System.Collections.Generic.ICollection%601> ジェネリック インターフェイスを実装するジェネリック コレクション型に指定できます。
 
-コードを実行すると、動的アセンブリが DemoGenericMethod1.dll という名前で保存され、[Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) を使用してチェックできます。
+コードを実行すると、動的アセンブリが DemoGenericMethod1.dll という名前で保存され、[Ildasm.exe (IL Disassembler)](../tools/ildasm-exe-il-disassembler.md) を使用してチェックできます。
 
 > [!NOTE]
 > コードを出力する方法を習得するためのよい方法は、出力しようとしているタスクを実行するプログラムを Visual Basic、C#、または Visual C++ で記述し、逆アセンブラーを使用して、コンパイラによって生成された MSIL をチェックすることです。
@@ -169,4 +169,4 @@ ms.locfileid: "70043726"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [方法: リフレクション出力を使用してジェネリック型を定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+- [方法: リフレクション出力を使用してジェネリック型を定義する](how-to-define-a-generic-type-with-reflection-emit.md)

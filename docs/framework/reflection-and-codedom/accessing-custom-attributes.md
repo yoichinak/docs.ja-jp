@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6955c24c12936ef37bedea2a1dd290bac45a5a2e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: 5b8eafa4f3f8a3fd81772c4521f26323019d012c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894912"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046154"
 ---
 # <a name="accessing-custom-attributes"></a>カスタム属性へのアクセス
 属性がプログラム要素に関連付けられると、リフレクションを使用して、その存在と値をクエリすることができます。 .NET Framework バージョン 1.0 および 1.1 では、カスタム属性は実行コンテキストで検証されます。 .NET Framework バージョン 2.0 では、新しい読み込みコンテキスト (リフレクションのみのコンテキスト) が提供されます。これを使用して、実行のために読み込むことができないコードを検証できます。  
   
 ## <a name="the-reflection-only-context"></a>リフレクションのみのコンテキスト  
- リフレクションのみのコンテキストに読み込まれたコードは、実行することができません。 つまり、コンストラクターを実行する必要があるため、カスタム属性のインスタンスは作成できないということです。 リフレクションのみのコンテキストにカスタム属性を読み込み、検証するには、<xref:System.Reflection.CustomAttributeData> クラスを使用します。 静的な <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> メソッドの適切なオーバーロードを使用して、このクラスのインスタンスを取得できます。 「[方法:リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
+ リフレクションのみのコンテキストに読み込まれたコードは、実行することができません。 つまり、コンストラクターを実行する必要があるため、カスタム属性のインスタンスは作成できないということです。 リフレクションのみのコンテキストにカスタム属性を読み込み、検証するには、<xref:System.Reflection.CustomAttributeData> クラスを使用します。 静的な <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> メソッドの適切なオーバーロードを使用して、このクラスのインスタンスを取得できます。 「[方法:リフレクションのみのコンテキストにアセンブリを読み込む](how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
   
 ## <a name="the-execution-context"></a>実行コンテキスト  
  実行コンテキストの属性をクエリする主なリフレクション メソッドは、<xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> と <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> です。  
@@ -76,5 +76,5 @@ public class LocalizationExtenderProvider
 
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
-- [型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [リフレクションに関するセキュリティ上の考慮事項](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+- [型情報の表示](viewing-type-information.md)
+- [リフレクションに関するセキュリティ上の考慮事項](security-considerations-for-reflection.md)

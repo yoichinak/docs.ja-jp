@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e1eff9d1ef9f36c80f71e738fdd4dc56a9b6ec6
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: eef52827bfe36977c9c4c844f4f431e7404adc97
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894146"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051676"
 ---
 # <a name="passing-structures"></a>構造体の受け渡し
 多くのアンマネージド 関数では、構造体のメンバー (Visual Basic ではユーザー定義型) またはマネージド コードで定義されたクラスのメンバーがパラメーターとして渡されることを期待しています。 プラットフォーム呼び出しを使って構造体またはクラスをアンマネージ コードに渡す場合は、元のレイアウトやアラインメントを保持するための追加情報を提供する必要があります。 このトピックでは、フォーマットされた型を定義するために使用する <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性について説明します。 マネージ構造体やマネージド クラスの場合は、**LayoutKind** 列挙型によって提供される想定されたレイアウト動作から選択できます。  
@@ -177,6 +177,6 @@ public class TestPlatformInvoke
   
 ## <a name="see-also"></a>関連項目
 
-- [DLL 関数の呼び出し](../../../docs/framework/interop/calling-a-dll-function.md)
+- [DLL 関数の呼び出し](calling-a-dll-function.md)
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

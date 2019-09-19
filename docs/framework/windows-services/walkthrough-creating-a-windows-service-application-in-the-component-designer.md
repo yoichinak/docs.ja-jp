@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
-ms.translationtype: HT
+ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545322"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053480"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>チュートリアル: Windows サービス アプリを作成する
 
@@ -28,7 +28,7 @@ ms.locfileid: "69545322"
 
 2. **[Windows サービス (.NET Framework)]** プロジェクト テンプレートに移動して選択します。 これを見つけるには、 **[インストール済み]** の **[Visual C#]** または **[Visual Basic]** を展開し、 **[Windows デスクトップ]** を選択します。 または、右上の検索ボックスに「*Windows サービス*」と入力して **Enter** キーを押します。
 
-   ![Visual Studio の [新しいプロジェクト] ダイアログの Windows サービス アプリ テンプレート](media/new-project-dialog.png)
+   ![Visual Studio の [新しいプロジェクト] ダイアログの Windows サービス アプリ テンプレート](./media/new-project-dialog.png)
 
    > [!NOTE]
    > **[Windows サービス]** テンプレートが表示されない場合は、 **.NET デスクトップ開発**ワークロードのインストールが必要である可能性があります。
@@ -51,11 +51,11 @@ ms.locfileid: "69545322"
 
 2. ポップアップ ウィンドウで **[はい]** を選択します。
 
-    ![名前の変更のプロンプト](media/windows-service-rename.png "Windows サービスの名前の変更のプロンプト")
+    ![名前の変更のプロンプト](./media/windows-service-rename.png "Windows サービスの名前の変更のプロンプト")
 
 3. **[デザイン]** タブで、ショートカット メニューから **[プロパティ]** を選択します。 **[プロパティ]** ウィンドウで **ServiceName** の値を *MyNewService* に変更します。
 
-    ![サービスのプロパティ](media/windows-service-properties.png "Windows サービスのプロパティ")
+    ![サービスのプロパティ](./media/windows-service-properties.png "Windows サービスのプロパティ")
 
 4. **[ファイル]** メニューから **[すべて保存]** を選択します。
 
@@ -162,7 +162,7 @@ ms.locfileid: "69545322"
    Private eventId As Integer = 1
    ```
 
-すべての作業をメイン スレッド上で実行する代わりに、バックグラウンド ワーカー スレッドを使用してタスクを実行できます。 詳細については、<xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName> を参照してください。
+すべての作業をメイン スレッド上で実行する代わりに、バックグラウンド ワーカー スレッドを使用してタスクを実行できます。 詳細については、「 <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName> 」を参照してください。
 
 ### <a name="define-what-occurs-when-the-service-is-stopped"></a>サービスの停止時の処理を定義する
 
@@ -340,7 +340,7 @@ Windows サービスを実行するには、まず、サービスをインスト
 
      このテキストは **[サービス]** ウィンドウの **[説明]** 列に表示され、サービスに関する説明をユーザーに示します。
 
-    ![サービス ウィンドウのサービスの説明](media/windows-service-description.png "サービスの説明")
+    ![サービス ウィンドウのサービスの説明](./media/windows-service-description.png "サービスの説明")
 
 6. <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> プロパティにテキストを追加します。 たとえば、*MyNewService Display Name* です。
 
@@ -350,7 +350,7 @@ Windows サービスを実行するには、まず、サービスをインスト
 
 8. 完了すると、 **[プロパティ]** ウィンドウは次の図のようになります。
 
-     ![Windows サービスのインストーラー プロパティ](media/windows-service-installer-properties.png "Windows サービスのインストーラー プロパティ")
+     ![Windows サービスのインストーラー プロパティ](./media/windows-service-installer-properties.png "Windows サービスのインストーラー プロパティ")
 
 9. **[ProjectInstaller]** の **[デザイン]** ビューで、 **[serviceProcessInstaller1]** (Visual C# プロジェクトの場合) または **[ServiceProcessInstaller1]** (Visual Basic プロジェクトの場合) を選択してから、ショートカット メニューから **[プロパティ]** を選択します。 ドロップダウン リストから <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> プロパティを <xref:System.ServiceProcess.ServiceAccount.LocalSystem> に設定します。
 
@@ -497,7 +497,7 @@ Windows サービスを構築済みであるため、サービスをインスト
 
      **[サービス]** 内にサービスが一覧表示されます。サービスは、サービスに対して設定した表示名でアルファベット順に表示されます。
 
-     ![[サービス] ウィンドウの MyNewService。](media/windowsservices-serviceswindow.PNG)
+     ![[サービス] ウィンドウの MyNewService。](./media/windowsservices-serviceswindow.PNG)
 
 2. サービスを開始するには、サービスのショートカット メニューから **[開始]** を選択します。
 
@@ -516,7 +516,7 @@ Windows サービスを構築済みであるため、サービスをインスト
 
 3. **MyNewLog** (または、手順に従ってコマンド ライン引数を追加した場合は **MyLogFile1**) の一覧を見つけて展開します。 サービスが実行した 2 つの操作 (開始および停止) のエントリが表示されます。
 
-     ![イベント ビューアーを使用してイベント ログの項目を表示する](media/windows-service-event-viewer.png)
+     ![イベント ビューアーを使用してイベント ログの項目を表示する](./media/windows-service-event-viewer.png)
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 
@@ -542,7 +542,7 @@ Windows サービス アプリが不要になったら、削除することが�
 
 - インストールしたサービスにコマンドを送信できる <xref:System.ServiceProcess.ServiceController> コンポーネントの使用法を調べます。
 
-- アプリケーションの実行時にイベント ログを作成するのではなく、アプリケーションのインストール時にインストーラーを使用してイベント ログを作成します。 アプリケーションをアンインストールすると、イベント ログはインストーラーによって削除されます。 詳細については、<xref:System.Diagnostics.EventLogInstaller> を参照してください。
+- アプリケーションの実行時にイベント ログを作成するのではなく、アプリケーションのインストール時にインストーラーを使用してイベント ログを作成します。 アプリケーションをアンインストールすると、イベント ログはインストーラーによって削除されます。 詳細については、「 <xref:System.Diagnostics.EventLogInstaller> 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2b62e6fea6da46e6307b35dd1c3372420dced80
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 255892e4dd3938028f488f80d8fba367590976f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648510"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051615"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>Windows ストア アプリ用 .NET 用 MEF
 <xref:System.Composition?displayProperty=nameWithType> とその子名前空間には、Managed Extensibility Framework (MEF) を使用して拡張可能な [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリを開発するための型が含まれています。 これらの名前空間は、[!INCLUDE[win8](../../../includes/win8-md.md)] オペレーティング システムの [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] サブセットの一部です。  
   
- これらの名前空間は、.NET Framework で配布されているコア クラス ライブラリの一部ではありません。 これらの名前空間をインストールするには、Visual Studio でプロジェクトを開き、**[プロジェクト]** メニューの **[NuGet パッケージの管理]** をクリックし、Microsoft.Composition パッケージをオンライン検索します。  
+ これらの名前空間は、.NET Framework で配布されているコア クラス ライブラリの一部ではありません。 これらの名前空間をインストールするには、Visual Studio でプロジェクトを開き、 **[プロジェクト]** メニューの **[NuGet パッケージの管理]** をクリックし、Microsoft.Composition パッケージをオンライン検索します。  
   
 - <xref:System.Composition?displayProperty=nameWithType> は、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリのコア MEF を構成するクラスを提供します。  
   
@@ -30,4 +30,4 @@ ms.locfileid: "64648510"
 
 - [Windows ストア アプリ用 .NET の概要](https://go.microsoft.com/fwlink/p/?LinkID=238312)
 - [Windows ストア アプリ用 .NET – サポートされている API](https://go.microsoft.com/fwlink/p/?LinkID=247912)
-- [MEF (Managed Extensibility Framework)](../../../docs/framework/mef/index.md)
+- [MEF (Managed Extensibility Framework)](index.md)

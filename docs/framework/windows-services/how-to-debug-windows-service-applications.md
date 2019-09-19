@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 74f834261d464430547ba3e1113db0ea780f593e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 860f2ae22eb6510dc1f1a454ae3e51ccb366078b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044443"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053619"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>方法: Windows サービス アプリケーションをデバッグする
 サービスは、Visual Studio 内からではなく、サービス コントロール マネージャーのコンテキスト内から実行する必要があります。 そのため、サービスのデバッグは、その他の種類の Visual Studio アプリケーションをデバッグするように単純ではありません。 サービスのデバッグを行うには、サービスを起動してから、サービスを実行しているプロセスにデバッガーをアタッチします。 これにより、Visual Studio のすべての標準デバッグ機能を使用して、アプリケーションをデバッグできるようになります。  
@@ -29,7 +29,7 @@ ms.locfileid: "70044443"
  この記事ではローカル コンピューターで実行されているサービスのデバッグについて説明しますが、リモート コンピューターで実行されている Windows サービスをデバッグすることもできます。 「[リモート デバッグ](/visualstudio/debugger/debug-installed-app-package)」をご覧ください。  
   
 > [!NOTE]
-> サービス コントロール マネージャーではすべてのサービスの開始試行に対して 30 秒の制限が適用されるため、<xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドのデバッグが困難になる場合があります。 詳細については、[トラブルシューティング:Windows サービスのデバッグ](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md)に関するページをご覧ください。  
+> サービス コントロール マネージャーではすべてのサービスの開始試行に対して 30 秒の制限が適用されるため、<xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドのデバッグが困難になる場合があります。 詳細については、[トラブルシューティング:Windows サービスのデバッグ](troubleshooting-debugging-windows-services.md)に関するページをご覧ください。  
   
 > [!WARNING]
 > デバッグに有用な情報を取得するためには、Visual Studio デバッガーは、デバッグ対象のバイナリのシンボル ファイルを検索する必要があります。 Visual Studio に組み込まれているサービスをデバッグしている場合は、シンボル ファイル (.pdb ファイル) は実行可能ファイルまたはライブラリと同じフォルダーにあり、デバッガーはそれらを自動的に読み込みます。 構築していないサービスをデバッグしている場合は、最初にサービスのシンボルを検索し、デバッガーでこれらを検出できるようにする必要があります。 「[Specify Symbol (.pdb) and Source Files in the Visual Studio Debugger (Visual Studio デバッガーでシンボル ファイル (.pdb) とソース ファイルを指定する)](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)」をご覧ください。 システム プロセスをデバッグしているか、サービスにシステム呼び出しのシンボルを含めたい場合は、Microsoft シンボル サーバーを追加する必要があります。 [シンボルによるデバッグ](/windows/desktop/DxTechArts/debugging-with-symbols)に関する記事をご覧ください。  
@@ -38,9 +38,9 @@ ms.locfileid: "70044443"
   
 1. サービスをデバッグ構成で構築します。  
   
-2. サービスをインストールします。 詳細については、「[方法 :サービスをインストールおよびアンインストールする](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)」を参照してください。  
+2. サービスをインストールします。 詳細については、「[方法 :サービスをインストールおよびアンインストールする](how-to-install-and-uninstall-services.md)」を参照してください。  
   
-3. **サービス コントロール マネージャー**、**サーバー エクスプローラー**、またはコードで、サービスを起動します。 詳細については、「[方法 :サービスを開始する](../../../docs/framework/windows-services/how-to-start-services.md)」を参照してください。  
+3. **サービス コントロール マネージャー**、**サーバー エクスプローラー**、またはコードで、サービスを起動します。 詳細については、「[方法 :サービスを開始する](how-to-start-services.md)」を参照してください。  
   
 4. システム プロセスにアタッチすることができるように、管理者資格情報を使用して Visual Studio を起動します。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "70044443"
   
 10. コード内で使用する任意のブレークポイントを設定します。  
   
-11. サービス コントロール マネージャーを起動し、停止、一時停止、再開の各コマンドを送信してサービスを操作して、ブレークポイントをヒットします。 サービス コントロール マネージャーの実行方法の詳細については、「[方法:サービスを開始する](../../../docs/framework/windows-services/how-to-start-services.md)」を参照してください。 [トラブルシューティング:Windows サービスのデバッグ](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md)に関するページもご覧ください。  
+11. サービス コントロール マネージャーを起動し、停止、一時停止、再開の各コマンドを送信してサービスを操作して、ブレークポイントをヒットします。 サービス コントロール マネージャーの実行方法の詳細については、「[方法:サービスを開始する](how-to-start-services.md)」を参照してください。 [トラブルシューティング:Windows サービスのデバッグ](troubleshooting-debugging-windows-services.md)に関するページもご覧ください。  
   
 ## <a name="debugging-tips-for-windows-services"></a>Windows サービスのデバッグのヒント  
  サービスのプロセスにアタッチすると、そのサービスのコードのほとんど (すべてではない) をデバッグすることができます。 たとえば、サービスが既に開始されているため、そのサービスの <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッド内のコード、またはサービスをこの方法で読み込むために使用されている `Main` メソッド内のコードは、デバッグすることができません。 この制限に対処する方法の 1 つは、デバッグ専用の一時的な "ダミー" サービスを作成し、サービス アプリケーションに追加することです。 サービスを両方ともインストールし、ダミー サービスを開始してサービス プロセスを読み込むことができます。 "ダミー" サービスがプロセスを起動した後は、Visual Studio の **[デバッグ]** メニューで、サービス プロセスへのアタッチを行うことができます。  
@@ -115,7 +115,7 @@ ms.locfileid: "70044443"
   
 ## <a name="see-also"></a>関連項目
 
-- [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [方法: サービスをインストールおよびアンインストールする](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [方法: サービスを開始する](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Windows サービス アプリケーションの概要](introduction-to-windows-service-applications.md)
+- [方法: サービスをインストールおよびアンインストールする](how-to-install-and-uninstall-services.md)
+- [方法: サービスを開始する](how-to-start-services.md)
 - [サービスのデバッグ](/windows/desktop/Services/debugging-a-service)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b3f7363ec5f8c954dd55a9500dcf8f2e302424f
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: c932587c13532e14c956f3ebd058ae41d30519dc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894892"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046040"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>方法: CodeDOM を使用してクラスを作成する
 2 つのフィールド、3 つのプロパティ、1 つのメソッド、1 つのコンストラクター、1 つのエントリ ポイントを含むクラスを生成する CodeDOM グラフを作成し、コンパイルする方法を次に示します。  
@@ -120,5 +120,5 @@ The object:
   
 ## <a name="see-also"></a>関連項目
 
-- [CodeDOM の使用方法](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
-- [CodeDOM グラフからのソース コードの生成およびコンパイル](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)
+- [CodeDOM の使用方法](using-the-codedom.md)
+- [CodeDOM グラフからのソース コードの生成およびコンパイル](generating-and-compiling-source-code-from-a-codedom-graph.md)

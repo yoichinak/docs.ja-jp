@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ef6a31ba9589ded9527d15e90724d0d04749579
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946846"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051841"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>アンマネージ DLL 関数の処理
 プラットフォーム呼び出しは、マネージド コードがダイナミック リンク ライブラリ (DLL) に実装されたアンマネージド関数 (Windows API に含まれているものなど) を呼び出すことを可能にするサービスです。 これはエクスポートされた関数を見つけて呼び出し、必要に応じて相互運用の境界を越えて、その引数 (整数、文字列、配列、構造体、その他) をマーシャリングします。  
@@ -29,15 +29,15 @@ ms.locfileid: "69946846"
   
 #### <a name="to-consume-exported-dll-functions"></a>エクスポートされた DLL 関数を使用するには  
   
-1. [DLL 内の関数を識別します](../../../docs/framework/interop/identifying-functions-in-dlls.md)。  
+1. [DLL 内の関数を識別します](identifying-functions-in-dlls.md)。  
   
      少なくとも、関数の名前とそれを含んでいる DLL の名前を指定する必要があります。  
   
-2. [DLL 関数を保持するクラスを作成します](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)。  
+2. [DLL 関数を保持するクラスを作成します](creating-a-class-to-hold-dll-functions.md)。  
   
      既存のクラスを使用して、アンマネージ関数ごとに個別のクラスを作成するか、または関連するアンマネージ関数のセットを格納する 1 つのクラスを作成できます。  
   
-3. [マネージド コードでプロトタイプを作成します](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)。  
+3. [マネージド コードでプロトタイプを作成します](creating-prototypes-in-managed-code.md)。  
   
      [Visual Basic] **Declare** ステートメントを **Function** および **Lib** キーワードと共に使用します。 いくつかのまれなケースでは、**DllImportAttribute** を **Shared Function** キーワードと共に使用できます。 それらのケースについては、このセクションで後述します。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "69946846"
   
      [C++] **DllImportAttribute** を使用して DLL と関数を指定します。 ラッパー メソッドまたは関数を **extern "C"** でマークします。  
   
-4. [DLL 関数を呼び出します](../../../docs/framework/interop/calling-a-dll-function.md)。  
+4. [DLL 関数を呼び出します](calling-a-dll-function.md)。  
   
-     他のマネージド メソッドと同様の方法で、マネージド クラスのメソッドを呼び出します。 [構造体の受け渡し](../../../docs/framework/interop/passing-structures.md)および[コールバック関数の実装](../../../docs/framework/interop/callback-functions.md)は、特殊なケースです。  
+     他のマネージド メソッドと同様の方法で、マネージド クラスのメソッドを呼び出します。 [構造体の受け渡し](passing-structures.md)および[コールバック関数の実装](callback-functions.md)は、特殊なケースです。  
   
- プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)」を参照してください。  
+ プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)」を参照してください。  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>プラットフォーム呼び出しの詳細  
  プラットフォーム呼び出しは、エクスポート関数を検索して、その引数を実行時にマーシャリングするために、メタデータに依存します。 次に、このプロセスの図を示します。  
@@ -73,6 +73,6 @@ ms.locfileid: "69946846"
 
 ## <a name="see-also"></a>関連項目
 
-- [アンマネージ コードとの相互運用](../../../docs/framework/interop/index.md)
-- [プラットフォーム呼び出しの例](../../../docs/framework/interop/platform-invoke-examples.md)
-- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+- [アンマネージ コードとの相互運用](index.md)
+- [プラットフォーム呼び出しの例](platform-invoke-examples.md)
+- [相互運用マーシャリング](interop-marshaling.md)

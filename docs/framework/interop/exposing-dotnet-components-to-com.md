@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: db4380e97cf4d556248f42981b350160710f1dd8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205803"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051817"
 ---
 # <a name="exposing-net-components-to-com"></a>COM への .NET コンポーネントの公開
 
@@ -27,7 +27,7 @@ ms.locfileid: "70205803"
 
      マネージド コード内のカスタム属性は、コンポーネントの相互運用性を強化できます。
 
-- [COM 用にアセンブリをパッケージ化する](../../../docs/framework/interop/packaging-an-assembly-for-com.md)。
+- [COM 用にアセンブリをパッケージ化する](packaging-an-assembly-for-com.md)。
 
      COM 開発者から、アセンブリの参照と展開に必要な手順をまとめるように求められる場合があります。
 
@@ -35,11 +35,11 @@ ms.locfileid: "70205803"
 
 ## <a name="to-consume-a-managed-type-from-com"></a>COM からマネージド型を使用するには
 
-1. [COM にアセンブリを登録する](../../../docs/framework/interop/registering-assemblies-with-com.md)。
+1. [COM にアセンブリを登録する](registering-assemblies-with-com.md)。
 
      アセンブリ (およびタイプ ライブラリ) 内の型は、デザイン時に登録する必要があります。 インストーラーでアセンブリが登録されない場合は、Regasm.exe を使用するように COM 開発者に指示します。
 
-2. [COM から .NET 型を参照する](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)。
+2. [COM から .NET 型を参照する](how-to-reference-net-types-from-com.md)。
 
      COM 開発者は、現在使用しているのと同じツールと手法を使用して、アセンブリ内の型を参照できます。
 
@@ -53,5 +53,5 @@ ms.locfileid: "70205803"
 
 ## <a name="see-also"></a>関連項目
 
-- [アンマネージ コードとの相互運用](../../../docs/framework/interop/index.md)
-- [COM 相互運用機能のサンプル:COM クライアントおよび .NET サーバー](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [アンマネージ コードとの相互運用](index.md)
+- [COM 相互運用機能のサンプル:COM クライアントおよび .NET サーバー](com-interop-sample-com-client-and-net-server.md)

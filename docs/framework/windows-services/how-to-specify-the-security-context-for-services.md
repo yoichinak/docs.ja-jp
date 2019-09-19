@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 88dc9c40a2b8ff0ac9bba26c991ba2a4ac2dcb43
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: dd2a9c4485e151d4cb1c9d5ae3a95a69fcc416d4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952430"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053578"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>方法: サービスのセキュリティ コンテキストを指定する
 既定では、サービスはログインしているユーザーのセキュリティ コンテキストとは異なるセキュリティ コンテキストで実行します。 サービスは `LocalSystem` という名前の既定のシステム アカウントのコンテキストで実行し、このコンテキストはサービスに対してユーザーとは異なるシステム リソースへのアクセス特権を付与します。 この動作を変更し、サービスの実行が異なるユーザー アカウントで行われるように指定することができます。  
@@ -35,7 +35,7 @@ ms.locfileid: "69952430"
   
 ### <a name="to-specify-the-security-context-for-a-service"></a>サービスのセキュリティ コンテキストを指定するには  
   
-1. サービスの作成後、必要なインストーラーを追加します。 詳細については、「[方法 :サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」を参照してください。  
+1. サービスの作成後、必要なインストーラーを追加します。 詳細については、「[方法 :サービス アプリケーションにインストーラーを追加する](how-to-add-installers-to-your-service-application.md)」を参照してください。  
   
 2. デザイナーで、`ProjectInstaller` クラスにアクセスし、対象となるサービスのサービス プロセス インストーラーをクリックします。  
   
@@ -46,6 +46,6 @@ ms.locfileid: "69952430"
   
 ## <a name="see-also"></a>関連項目
 
-- [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [方法: サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
-- [方法: Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Windows サービス アプリケーションの概要](introduction-to-windows-service-applications.md)
+- [方法: サービス アプリケーションにインストーラーを追加する](how-to-add-installers-to-your-service-application.md)
+- [方法: Windows サービスを作成する](how-to-create-windows-services.md)

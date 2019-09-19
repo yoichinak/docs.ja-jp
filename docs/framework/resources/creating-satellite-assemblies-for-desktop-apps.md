@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29739625d29db6dc7c3876007f1e733b15f5c026
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970988"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045699"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>デスクトップ アプリケーションに対するサテライト アセンブリの作成
 
@@ -54,7 +54,7 @@ ms.locfileid: "70970988"
 
 - サテライト アセンブリのカルチャに関する情報は、アセンブリのメタデータに含まれている必要があります。 サテライト アセンブリのメタデータにカルチャ名を格納するには、サテライト アセンブリにリソースを埋め込むために [Assembly Linker](../tools/al-exe-assembly-linker.md) を使用する際に `/culture` オプションを指定します。
 
-[グローバル アセンブリ キャッシュ](../../framework/app-domains/gac.md)内にインストールしないアプリケーションについて、サンプルのディレクトリ構造と位置に関する要件を次の図に示します。 拡張子が .txt および .resources の項目は、最終的なアプリケーションには付属していません。 それらは、最終的なサテライト リソース アセンブリを作成するために使用する中間リソース ファイルです。 この例では、.txt ファイルを .resx ファイルに置き換えることができます。 詳細については、「[リソースのパッケージ化と配置](packaging-and-deploying-resources-in-desktop-apps.md)」を参照してください。
+[グローバル アセンブリ キャッシュ](../app-domains/gac.md)内にインストールしないアプリケーションについて、サンプルのディレクトリ構造と位置に関する要件を次の図に示します。 拡張子が .txt および .resources の項目は、最終的なアプリケーションには付属していません。 それらは、最終的なサテライト リソース アセンブリを作成するために使用する中間リソース ファイルです。 この例では、.txt ファイルを .resx ファイルに置き換えることができます。 詳細については、「[リソースのパッケージ化と配置](packaging-and-deploying-resources-in-desktop-apps.md)」を参照してください。
 
 次の図は、サテライト アセンブリ ディレクトリを示しています。
 
@@ -95,8 +95,8 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 2. 英語 (en) がアプリケーションの既定のカルチャであることを示すには、次の <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 属性をアプリケーションの AssemblyInfo ファイル、またはアプリケーションのメイン アセンブリにコンパイルされるメイン ソース コード ファイルに追加します。
   
-     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
-     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+    [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+    [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3. 次のように、アプリケーションに他のカルチャ (en-US、fr-FR および ru-RU) のサポートを追加します。  
   
@@ -150,17 +150,19 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
  その後、例を実行できます。 サポートされているカルチャのいずれかがランダムに選択され、現在のカルチャになり、ローカライズされたあいさつ文が表示されます。
   
 <a name="SN"></a>   
+
 ## <a name="installing-satellite-assemblies-in-the-global-assembly-cache"></a>グローバル アセンブリ キャッシュへのサテライト アセンブリのインストール  
- ローカル アプリケーション サブディレクトリにアセンブリをインストールする代わりに、グローバル アセンブリ キャッシュにインストールすることができます。 これは、複数のアプリケーションで使用されるクラス ライブラリのリソース アセンブリとクラス ライブラリがある場合に特に便利です。
+ローカル アプリケーション サブディレクトリにアセンブリをインストールする代わりに、グローバル アセンブリ キャッシュにインストールすることができます。 これは、複数のアプリケーションで使用されるクラス ライブラリのリソース アセンブリとクラス ライブラリがある場合に特に便利です。
   
- アセンブリをグローバル アセンブリ キャッシュにインストールするには、アセンブリに厳密な名前が必要です。 厳密な名前のアセンブリには、有効な公開/秘密キーのペアで署名されます。 これらには、バインド要求を満たすために使用するアセンブリを判別するためにランタイムが使用するバージョン情報が含まれています。 厳密な名前とバージョン管理の詳細については、「[アセンブリのバージョン管理](../../standard/assembly/versioning.md)」を参照してください。 厳密な名前の詳細については、「[厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)」を参照してください。
+アセンブリをグローバル アセンブリ キャッシュにインストールするには、アセンブリに厳密な名前が必要です。 厳密な名前のアセンブリには、有効な公開/秘密キーのペアで署名されます。 これらには、バインド要求を満たすために使用するアセンブリを判別するためにランタイムが使用するバージョン情報が含まれています。 厳密な名前とバージョン管理の詳細については、「[アセンブリのバージョン管理](../../standard/assembly/versioning.md)」を参照してください。 厳密な名前の詳細については、「[厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)」を参照してください。
   
- 通常、アプリケーションの開発中に、最終的な公開/秘密キーのペアにアクセスすることはありません。 サテライト アセンブリをグローバル アセンブリ キャッシュ内にインストールし、そのアセンブリが確実に予期したとおりに機能するようにするために、遅延署名と呼ばれる技術を使用できます。 アセンブリに遅延署名する場合、厳密な名前による署名のために、ビルド時にファイル内のスペースを予約しておいてください。 実際の署名は、最終的な公開/秘密キーのペアが利用可能になるまで遅延されます。 遅延署名の詳細については、「[アセンブリへの遅延署名](../../standard/assembly/delay-sign.md)」を参照してください。
+通常、アプリケーションの開発中に、最終的な公開/秘密キーのペアにアクセスすることはありません。 サテライト アセンブリをグローバル アセンブリ キャッシュ内にインストールし、そのアセンブリが確実に予期したとおりに機能するようにするために、遅延署名と呼ばれる技術を使用できます。 アセンブリに遅延署名する場合、厳密な名前による署名のために、ビルド時にファイル内のスペースを予約しておいてください。 実際の署名は、最終的な公開/秘密キーのペアが利用可能になるまで遅延されます。 遅延署名の詳細については、「[アセンブリへの遅延署名](../../standard/assembly/delay-sign.md)」を参照してください。
   
 ### <a name="obtaining-the-public-key"></a>公開キーの取得  
- アセンブリに遅延署名するには、公開キーにアクセスする必要があります。 実際の公開キーを取得するには、最終的な署名を行う社内の組織から取得するか、[厳密な名前ツール (Sn.exe)](../tools/sn-exe-strong-name-tool.md) を使用して公開キーを作成します。
+
+アセンブリに遅延署名するには、公開キーにアクセスする必要があります。 実際の公開キーを取得するには、最終的な署名を行う社内の組織から取得するか、[厳密な名前ツール (Sn.exe)](../tools/sn-exe-strong-name-tool.md) を使用して公開キーを作成します。
   
- 次の Sn.exe コマンドでは、テスト用の公開/秘密キーのペアを作成します。 **–k** オプションは、Sn.exe で新しいキー ペアを作成し、TestKeyPair.snk という名前のファイルに格納するように指定します。
+次の Sn.exe コマンドでは、テスト用の公開/秘密キーのペアを作成します。 **–k** オプションは、Sn.exe で新しいキー ペアを作成し、TestKeyPair.snk という名前のファイルに格納するように指定します。
   
 ```console
 sn –k TestKeyPair.snk
@@ -196,7 +198,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>グローバル アセンブリ キャッシュへのサテライト アセンブリのインストール
 
-ランタイムはリソース フォールバック プロセスでリソースを検索するときに、まず、[グローバル アセンブリ キャッシュ](../../framework/app-domains/gac.md)内を調べます (詳細については、「[リソースのパッケージ化と配置](packaging-and-deploying-resources-in-desktop-apps.md)」トピックの「リソース フォールバック プロセス」セクションを参照してください)。サテライト アセンブリが厳密な名前で署名されたらすぐに[グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) を使用して、グローバル アセンブリ キャッシュにインストールできます。
+ランタイムはリソース フォールバック プロセスでリソースを検索するときに、まず、[グローバル アセンブリ キャッシュ](../app-domains/gac.md)内を調べます (詳細については、「[リソースのパッケージ化と配置](packaging-and-deploying-resources-in-desktop-apps.md)」トピックの「リソース フォールバック プロセス」セクションを参照してください)。サテライト アセンブリが厳密な名前で署名されたらすぐに[グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) を使用して、グローバル アセンブリ キャッシュにインストールできます。
 
 次の Gacutil.exe コマンドでは、グローバル アセンブリ キャッシュに StringLibrary.resources.dll をインストールします。
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 5be803e2f4face60318a4c9ed12f1b58edaeace6
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 75fd3aba88bdffbe536ad5dab14996913d0a9d22
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044423"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053570"
 ---
 # <a name="how-to-start-services"></a>方法: サービスを開始する
 
@@ -28,7 +28,7 @@ ms.locfileid: "70044423"
 
 ### <a name="to-specify-how-a-service-should-start"></a>サービスの起動方法を指定するには
 
-1. サービスの作成後、必要なインストーラーを追加します。 詳細については、「[方法 :サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」をご覧ください。
+1. サービスの作成後、必要なインストーラーを追加します。 詳細については、「[方法 :サービス アプリケーションにインストーラーを追加する](how-to-add-installers-to-your-service-application.md)」をご覧ください。
 
 2. デザイナーで、対象となるサービスのインストーラーをクリックします。
 
@@ -80,6 +80,6 @@ ms.locfileid: "70044423"
 
 ## <a name="see-also"></a>関連項目
 
-- [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [方法: Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [方法: サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Windows サービス アプリケーションの概要](introduction-to-windows-service-applications.md)
+- [方法: Windows サービスを作成する](how-to-create-windows-services.md)
+- [方法: サービス アプリケーションにインストーラーを追加する](how-to-add-installers-to-your-service-application.md)

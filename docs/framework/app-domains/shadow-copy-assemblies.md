@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e38f70ded85e8db36068c19fdd1708511817db
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: df1c86f2d75b0046af851585e943e13d668d8c55
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040729"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053081"
 ---
 # <a name="shadow-copying-assemblies"></a>アセンブリのシャドウ コピー
 
@@ -76,7 +76,7 @@ ms.locfileid: "70040729"
 
 .NET Framework 4 以降は、起動時の既定の動作として、アプリケーション ディレクトリ内にある各アセンブリのファイルの日時を、シャドウ コピーのディレクトリ内にあるコピーのファイルの日時と直接比較します。 アセンブリが更新されている場合は、.NET Framework の以前のバージョンと同じ手順を使用してそれをコピーし、そうでない場合は、シャドウ コピーのディレクトリ内にあるコピーが読み込まれます。
 
-結果としてのパフォーマンスの改善は、アセンブリの変更頻度が小さく、通常はアセンブリの小さなサブセット内で変更が生じるようなアプリケーションで最大となります。 アプリケーション内のアセンブリの大部分が頻繁に変更される場合は、新しい既定動作によって、パフォーマンスが低下する可能性があります。 [\<shadowCopyVerifyByTimestamp> 要素](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)を構成ファイルに `enabled="false"` と共に追加することによって、.NET Framework の以前のバージョンの起動動作を復元できます。
+結果としてのパフォーマンスの改善は、アセンブリの変更頻度が小さく、通常はアセンブリの小さなサブセット内で変更が生じるようなアプリケーションで最大となります。 アプリケーション内のアセンブリの大部分が頻繁に変更される場合は、新しい既定動作によって、パフォーマンスが低下する可能性があります。 [\<shadowCopyVerifyByTimestamp> 要素](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)を構成ファイルに `enabled="false"` と共に追加することによって、.NET Framework の以前のバージョンの起動動作を復元できます。
 
 <a name="ObsoleteMethods"></a>
 
@@ -90,4 +90,4 @@ ms.locfileid: "70040729"
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [\<shadowCopyVerifyByTimestamp> 要素](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<shadowCopyVerifyByTimestamp> 要素](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

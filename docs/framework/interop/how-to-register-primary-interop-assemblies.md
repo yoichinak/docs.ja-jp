@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e61ae55673cbf745ea4c637c5206efe41d8ab276
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e0eeaee969eda5e4d0ea1a119991456668c7d44f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946675"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051734"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>方法: プライマリ相互運用機能アセンブリを登録する
 
@@ -24,7 +24,7 @@ ms.locfileid: "69946675"
 
  サードパーティの COM 型を公開する予定がない場合でも、プライマリ相互運用機能アセンブリを使用することで、COM コンポーネントとの相互運用のタスクを容易に実行できます。 ただし、この方法では、プライマリ相互運用機能アセンブリで定義された型に対してベンダーが加える可能性のある変更から隔離されることはありません。 使用するアプリケーションでそのような隔離が必要な場合は、プライマリ相互運用機能アセンブリを使用する代わりに独自の相互運用アセンブリを生成してください。
 
- 取得したすべてのプライマリ相互運用機能アセンブリを開発コンピューターに登録してからでなければ、Visual Studio でそれらを参照できません。 Visual Studio は、初めて COM タイプ ライブラリから型を参照するときに、プライマリ相互運用機能アセンブリを検索して使用します。 Visual Studio は、タイプ ライブラリに関連付けられているプライマリ相互運用機能アセンブリが見つからない場合、それを取得するように求めるプロンプトを出すか、または相互運用機能アセンブリを代わりに作成することを申し出ます。 同じように、[タイプ ライブラリ インポーター (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) も、レジストリを使用してプライマリ相互運用機能アセンブリを見つけます。
+ 取得したすべてのプライマリ相互運用機能アセンブリを開発コンピューターに登録してからでなければ、Visual Studio でそれらを参照できません。 Visual Studio は、初めて COM タイプ ライブラリから型を参照するときに、プライマリ相互運用機能アセンブリを検索して使用します。 Visual Studio は、タイプ ライブラリに関連付けられているプライマリ相互運用機能アセンブリが見つからない場合、それを取得するように求めるプロンプトを出すか、または相互運用機能アセンブリを代わりに作成することを申し出ます。 同じように、[タイプ ライブラリ インポーター (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) も、レジストリを使用してプライマリ相互運用機能アセンブリを見つけます。
 
  Visual Studio を使用する予定がない限り、プライマリ相互運用機能アセンブリを登録する必要はありませんが、登録には次の 2 つの利点があります。
 
@@ -32,7 +32,7 @@ ms.locfileid: "69946675"
 
 - 将来のいつか、Visual Studio を使用して登録されていないプライマリ相互運用機能アセンブリのある型を参照する場合に、間違えて新しい相互運用機能アセンブリを生成して使用してしまうことを回避できます。
 
-[アセンブリ登録ツール (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) を使用して、プライマリ相互運用機能アセンブリを登録します。
+[アセンブリ登録ツール (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) を使用して、プライマリ相互運用機能アセンブリを登録します。
 
 ## <a name="to-register-a-primary-interop-assembly"></a>プライマリ相互運用機能アセンブリを登録する方法
 
