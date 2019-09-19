@@ -101,7 +101,7 @@ ms.locfileid: "69608372"
 
 ### <a name="integer-division"></a>整数の除算
 
-整数型のオペランドに対する `/` 演算子の結果は、整数型で、2 つのオペランドの商を 0 方向に丸めたものと等しくなります。
+整数型のオペランドに対する `/` 演算子の結果は、整数型で、2 つのオペランドの商の小数部分を切り捨てたものと等しくなります
 
 [!code-csharp-interactive[integer division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerDivision)]
 
@@ -163,7 +163,7 @@ ms.locfileid: "69608372"
 
 デリゲートの削除には、`-` 演算子を使用することもできます。 詳細については、「[`-` 演算子](subtraction-operator.md)」の記事を参照してください。
 
-## <a name="compound-assignment"></a>複合代入。
+## <a name="compound-assignment"></a>複合代入
 
 2 項演算子 `op` の場合、このフォームの複合代入式
 
@@ -194,7 +194,7 @@ x = x op y
 次の算術演算子の一覧は、優先度が高い順に並べられています。
 
 - 後置インクリメント演算子 `x++` と後置デクリメント演算子 `x--`
-- 前置インクリメント演算子 `++x` とデクリメント演算子 `--x`および単項演算子 `+` と `-`
+- 前置インクリメント演算子 `++x` と前置デクリメント演算子 `--x`および単項演算子 `+` と `-`
 - 乗算演算子 `*`、`/`、`%`
 - 加法演算子 `+` と `-`
 

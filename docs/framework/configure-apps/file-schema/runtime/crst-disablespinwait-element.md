@@ -1,5 +1,5 @@
 ---
-title: < Crst_DisableSpinWait > 要素
+title: < Crst_DisableSpinWait> 要素
 ms.date: 04/18/2019
 f1_keywords:
 - Crst_DisableSpinWait

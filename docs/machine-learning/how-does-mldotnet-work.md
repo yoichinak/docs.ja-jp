@@ -125,7 +125,7 @@ ML.NET モデルは、予測される出力に到達するために入力デー�
 
 [データの準備方法](./how-to-guides/prepare-data-ml-net.md)に関する記事では、データ準備を適用する方法が全般的に説明されています。
 
-すべての[使用できる変換](./resources/transforms.md)の付録については、リソース セクションを参照してください。
+[使用可能なすべての変換](./resources/transforms.md) についての付録は、リソース セクションを参照してください。
 
 ## <a name="model-evaluation"></a>モデル評価
 
@@ -156,7 +156,7 @@ ML.NET モデルは、予測される出力に到達するために入力デー�
         // RMS error: 0.19
 ```
 
-評価メトリックから、誤差が少ないことと、予測される出力とテスト出力の間の相関度が高いことがわかります。 簡単でしたね。 実際の例で優れたモデル メトリックを実現するには、さらに調整が必要です。
+評価メトリックから、誤差が少ないことと、予測される出力とテスト出力の間の相関度が高いことがわかります。 簡単ですね。 実際の例で優れたモデル メトリックを実現するには、さらに調整が必要です。
 
 ## <a name="mlnet-architecture"></a>ML.NET のアーキテクチャ
 
@@ -175,8 +175,8 @@ ML.NET アプリケーションは <xref:Microsoft.ML.MLContext> オブジェク
 ||予測|<xref:Microsoft.ML.ForecastingCatalog>||
 ||ランキング|<xref:Microsoft.ML.RankingCatalog>||
 ||回帰|<xref:Microsoft.ML.RegressionCatalog>||
-||推奨事項|<xref:Microsoft.ML.RecommendationCatalog>|`Microsoft.ML.Recommender` NuGet パッケージを取得する|
-||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|`Microsoft.ML.TimeSeries` NuGet パッケージを取得する|
+||推奨事項|<xref:Microsoft.ML.RecommendationCatalog>|`Microsoft.ML.Recommender` NuGet パッケージを追加|
+||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|`Microsoft.ML.TimeSeries` NuGet パッケージを追加|
 |モデルの使用法 ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 上記の各カテゴリの作成方法に移動できます。 Visual Studio を使用すると、IntelliSense を介してカタログが表示されます。

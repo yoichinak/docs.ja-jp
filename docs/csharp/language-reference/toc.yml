@@ -152,7 +152,7 @@
               href: keywords/try-finally.md
             - name: try-catch-finally
               href: keywords/try-catch-finally.md
-        - name: checked と unchecked
+        - name: Checked と Unchecked
           items:
             - name: 概要
               href: keywords/checked-and-unchecked.md
@@ -164,7 +164,7 @@
           href: keywords/fixed-statement.md
         - name: lock ステートメント
           href: keywords/lock-statement.md
-    - name: メソッド パラメーター
+    - name: メソッドのパラメーター
       items:
         - name: パラメーターを渡す
           href: keywords/method-parameters.md
@@ -293,7 +293,7 @@
       displayName: '>, <, >=, <=, greater, less'
     - name: メンバー アクセス演算子
       href: operators/member-access-operators.md
-      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
     - name: 型テストとキャスト演算子
       href: operators/type-testing-and-cast.md
       displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
