@@ -1,14 +1,16 @@
 ---
 title: ファイルとその他のソースからデータを読み込む
 description: このハウツーでは、処理とトレーニング用のデータを ML.NET に読み込む方法について説明します。 データは、もともとはファイルか、またはデータベース、JSON、XML、メモリ内コレクションなどのその他のデータソースに格納されています。
-ms.date: 08/01/2019
+ms.date: 09/11/2019
+author: luisquintanilla
+ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: d5f3aab14a60a8c9860dc67f1cc98f3b1b3188ed
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 4008f38bf4a20113a3f5c865e38222e5b82f2acc
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733369"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991361"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>ファイルとその他のソースからデータを読み込む
 
@@ -31,7 +33,7 @@ public class HousingData
 {
     [LoadColumn(0)]
     public float Size { get; set; }
- 
+
     [LoadColumn(1, 3)]
     [VectorType(3)]
     public float[] HistoricalPrices { get; set; }
@@ -51,7 +53,8 @@ public class HousingData
 > [!IMPORTANT]
 > [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) は、ファイルからデータを読み込む場合にのみ必要です。
 
-列は次のように読み込みます。 
+列は次のように読み込みます。
+
 - `HousingData` クラスの `Size` や `CurrentPrices` のように個々の列。
 - `HousingData` クラスの `HistoricalPrices` のようにベクター形式で一度に複数の列。
 
@@ -102,13 +105,65 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
+## <a name="load-data-from-a-relational-database"></a>リレーショナル データベースからデータを読み込む
+
+> [!NOTE]
+> DatabaseLoader は現在のところ、プレビュー段階です。 [Microsoft.ML.Experimental](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) および [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) NuGet パッケージを参照することで使用できます。
+
+ML.NET では、SQL Server、Azure SQL Database、Oracle、SQLite、PostgreSQL、Progress、IBM DB2 など数多くの、[`System.Data`](xref:System.Data) でサポートされている多様なリレーショナル データベースからのデータの読み込みがサポートされています。
+
+`House` という名前のテーブルと、次のスキーマが指定されたデータベースがあるとします。
+
+```SQL
+CREATE TABLE [House] (
+    [HouseId] int NOT NULL IDENTITY,
+    [Size] real NOT NULL,
+    [Price] real NOT NULL
+    CONSTRAINT [PK_House] PRIMARY KEY ([HouseId])
+);
+```
+
+データは `HouseData` などのクラスでモデル化できます。
+
+```csharp
+public class HouseData
+{
+    public float Size { get; set; }
+
+    public float Price { get; set; }
+}
+```
+
+次に、アプリケーション内で `DatabaseLoader` を作成します。
+
+```csharp
+MLContext mlContext = new MLContext();
+
+DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
+```
+
+接続文字列と、データベースで実行される SQL コマンドを定義して、`DatabaseSource` インスタンスを作成します。 このサンプルでは、LocalDB の SQL Server データベースをファイル パスと共に使用します。 ただし、DatabaseLoader では、オンプレミスとクラウドのデータベースに対して、その他のすべての有効な接続文字列がサポートされています。
+
+```csharp
+string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
+
+string sqlCommand = "SELECT Size,Price FROM House";
+
+DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance,connectionString,sqlCommand);
+```
+
+最後に、`Load` メソッドを使用して [`IDataView`](xref:Microsoft.ML.IDataView) にデータを読み込みます。
+
+```csharp
+IDataView data = loader.Load(dbSource);
+```
+
 ## <a name="load-data-from-other-sources"></a>その他のソースからデータを読み込む
 
 ファイル内の格納データの読み込みに加え、ML.NET では、以下のようなソースからのデータの読み込みがサポートされています。
 
 - メモリ内コレクション
 - JSON/XML
-- データベース
 
 ストリーミング ソースを使用する場合、ML.NET では入力がメモリ内コレクション形式であると想定される点に注意してください。 そのため、JSON/XML などのソースを使用するときは、必ずデータをメモリ内コレクション形式にします。
 
@@ -141,7 +196,7 @@ HousingData[] inMemoryCollection = new HousingData[]
 [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) メソッドを使用してメモリ内コレクションを [`IDataView`](xref:Microsoft.ML.IDataView) に読み込みます。
 
 > [!IMPORTANT]
-> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) では、この読み込み元の [`IEnumerable`](xref:System.Collections.IEnumerable) がスレッドセーフであると想定されています。 
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) では、この読み込み元の [`IEnumerable`](xref:System.Collections.IEnumerable) がスレッドセーフであると想定されています。
 
 ```csharp
 // Create MLContext
