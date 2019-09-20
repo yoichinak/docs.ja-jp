@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ab6ff2ba6e0f3f1ea9e34de80b67276a990bc83b
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254174"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151843"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType レジストリの設定
 このトピックでは、WPF アプリケーションで使用される Microsoft ClearType レジストリ設定の概要について説明します。  
@@ -63,7 +63,7 @@ ms.locfileid: "70254174"
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>ガンマ レベル  
- ガンマ レベルとは、ピクセル値と輝度間の非線形リレーションシップのことです。 ガンマ レベル設定は、ディスプレイ デバイスの物理特性に対応する必要があります。対応していない場合、レンダリング出力にゆがみが発生する場合があります。 たとえば、テキストの表示が広すぎたり狭すぎたりする場合や、色縁がグリフの縦線の端に表示される場合などがあります。  
+ ガンマ レベルとは、ピクセル値と輝度間の非線形リレーションシップのことです。 ガンマ レベル設定は、ディスプレイ デバイスの物理特性に対応する必要があります。対応していない場合、レンダリング出力にゆがみが発生する場合があります。 たとえば、テキストの表示幅が広すぎる場合や狭すぎる場合、または色フリンジがグリフの垂直方向の端に表示される場合があります。  
   
  ガンマ レベルは、1000 から 2200 の範囲の整数値です。 既定のレベルは 1900 です。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "70254174"
 ## <a name="pixel-structure"></a>ピクセル構造  
  ピクセル構造は、ディスプレイ デバイスを構成するピクセルの種類を示します。 ピクセル構造は、次の 3 種類のいずれかとして定義されます。  
   
-|種類|Value|説明|  
+|型|[値]|説明|  
 |----------|-----------|-----------------|  
 |フラット|0|ディスプレイ デバイスにピクセル構造がありません。 つまり、各色の光源がピクセル領域に均等に拡散しています。これは、グレースケール レンダリングと呼ばれます。 標準のディスプレイ デバイスはこのようにして機能します。 表示されるテキストに ClearType が適用されることはありません。|  
 |RGB|1|ディスプレイ デバイスのピクセルは、赤、緑、青の順の 3 つのストライプで構成されます。 表示されるテキストに ClearType が適用されます。|  
