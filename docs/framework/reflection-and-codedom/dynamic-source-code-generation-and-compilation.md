@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8feb94f3d57c25d634bd51b8f41eca42d5e5757a
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: HT
+ms.openlocfilehash: 5fb95ab7ff4fcac7169238d90637d7b83078d6dd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220310"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046111"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>動的なソース コードの生成とコンパイル
 .NET Framework には、CodeDOM (Code Document Object Model) と呼ばれるメカニズムが備わっています。CodeDOM を使用すると、ソース コードを出力するプログラム開発者は、レンダリング対象となるコードを表す単一のモデルに基づいて、実行時に複数のプログラミング言語でソース コードを生成することができます。  
@@ -31,19 +31,19 @@ ms.locfileid: "56220310"
  .NET Framework には、<xref:Microsoft.CSharp.CSharpCodeProvider> 用、<xref:Microsoft.JScript.JScriptCodeProvider> 用、および <xref:Microsoft.VisualBasic.VBCodeProvider> 用のコード ジェネレーターとコード コンパイラが用意されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [CodeDOM の使用方法](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
+ [CodeDOM の使用方法](using-the-codedom.md)  
  CodeDOM の一般的な使用方法を説明し、CodeDOM を使って簡単なオブジェクト グラフを構築する例を示します。  
   
- [CodeDOM グラフからのソース コードの生成およびプログラムのコンパイル](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)  
+ [CodeDOM グラフからのソース コードの生成およびプログラムのコンパイル](generating-and-compiling-source-code-from-a-codedom-graph.md)  
  ソース コードを生成する方法と、生成されたコードを `System.CodeDom.Compiler` 名前空間で定義されているクラスを使って外部コンパイラでコンパイルする方法について説明します。  
   
- [方法: CodeDOM を使用して XML ドキュメント ファイルを作成する](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
+ [方法: CodeDOM を使用して XML ドキュメント ファイルを作成する](how-to-create-an-xml-documentation-file-using-codedom.md)  
  CodeDOM を使用して XML ドキュメントのコメント付きのコードを生成する方法、および生成されたコードをコンパイルして XML ドキュメントとして出力する方法について説明します。  
   
- [方法: CodeDOM を使用してクラスを作成する](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
+ [方法: CodeDOM を使用してクラスを作成する](how-to-create-a-class-using-codedom.md)  
  CodeDOM を使用してフィールド、プロパティ、メソッド、コンストラクター、およびエントリ ポイントを持つクラスを生成する方法を説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  <xref:System.CodeDom>  
  共通言語ランタイムを対象とするプログラミング言語のコード要素を表す要素を定義します。  
   
