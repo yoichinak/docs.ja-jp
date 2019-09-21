@@ -5,15 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
-ms.openlocfilehash: 8151d426d1f0d3da5a5ce5fe795635348efd9696
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: b794666501fb27d2f73a6050f85df3725050982e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423524"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589855"
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>C++ テンプレートと C# ジェネリックの違い (C# プログラミング ガイド)
-C# ジェネリックと C++ テンプレートのいずれも、パラメーター化された型のサポートを提供する言語機能です。 ただし、これら 2 つにはさまざまな違いがあります。 構文レベルでは、C# ジェネリックの場合、パラメーター化された型の取り扱いが単純であり、C++ テンプレートのような複雑さがありません。 さらに、C++ テンプレートで提供されるすべての機能が、C# でも提供されるわけではありません。 実装レベルでは、C# ジェネリック型の代入は実行時に行われ、その結果、インスタンス化されたオブジェクトのジェネリック型情報が保存されるという点が最も大きな違いです。 詳細については、「[ランタイムのジェネリック](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)」を参照してください。  
+C# ジェネリックと C++ テンプレートのいずれも、パラメーター化された型のサポートを提供する言語機能です。 ただし、これら 2 つにはさまざまな違いがあります。 構文レベルでは、C# ジェネリックの場合、パラメーター化された型の取り扱いが単純であり、C++ テンプレートのような複雑さがありません。 さらに、C++ テンプレートで提供されるすべての機能が、C# でも提供されるわけではありません。 実装レベルでは、C# ジェネリック型の代入は実行時に行われ、その結果、インスタンス化されたオブジェクトのジェネリック型情報が保存されるという点が最も大きな違いです。 詳細については、「[ランタイムのジェネリック](./generics-in-the-run-time.md)」を参照してください。  
   
  C# ジェネリックと C++ テンプレートの主な違いを以下に示します。  
   
@@ -35,6 +35,6 @@ C# ジェネリックと C++ テンプレートのいずれも、パラメータ
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ジェネリックの概要](../../../csharp/programming-guide/generics/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [ジェネリックの概要](./index.md)
 - [テンプレート](/cpp/cpp/templates-cpp)

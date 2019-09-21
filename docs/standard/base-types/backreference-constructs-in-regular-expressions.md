@@ -15,12 +15,12 @@ ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d478ae9e1db86718236da73917d772820707ea03
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 11df25617a618cdc835ca6555c671a187ce09f8d
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678359"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991642"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>正規表現での前方参照構成体
 
@@ -95,7 +95,7 @@ ms.locfileid: "57678359"
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
 
-ただし、*name* が数字の文字列表現であり、その位置のキャプチャ グループに数値名が明示的に割り当てられている場合、正規表現パーサーではその序数位置でキャプチャ グループを識別することはできません。 代わりに、<xref:System.ArgumentException> をスローします。次の例の唯一のキャプチャ グループには "2" という名前が付けられています。 `\k` コンストラクトが "1" という名前の前方参照を定義するために使用されているため、正規表現パーサーは最初のキャプチャ グループを識別できず、例外をスローします。
+ただし、*name* が数字の文字列表現であり、その位置のキャプチャ グループに数値名が明示的に割り当てられている場合、正規表現パーサーではその序数位置でキャプチャ グループを識別することはできません。 代わりに、<xref:System.ArgumentException> がスローされます。 次の例の唯一のキャプチャ グループには "2" という名前が付けられています。 `\k` コンストラクトが "1" という名前の前方参照を定義するために使用されているため、正規表現パーサーは最初のキャプチャ グループを識別できず、例外をスローします。
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]

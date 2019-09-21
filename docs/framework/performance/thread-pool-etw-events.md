@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50ecb2aad84bd5b6c32f655b1dbbd34cf03a5b29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624289"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046184"
 ---
 # <a name="thread-pool-etw-events"></a>スレッド プール ETW イベント
 <a name="top"></a> これらのイベントは、ワーカー スレッドと I/O スレッドに関する情報を収集します。  
@@ -28,7 +28,7 @@ ms.locfileid: "64624289"
  これらのイベントは、ランタイムのワーカー スレッドのプールに関連付けられており、スレッド イベントに関する通知 (スレッドが作成されたり停止されたりした場合など) を提供します。 ワーカー スレッド プールは、スレッドの数が計測されたスループットに基づいて計算されるアダプティブ アルゴリズムを使用して、コンカレンシー制御を実行します。 ワーカー スレッド プール イベントを使用すると、アプリケーションで使用されるスレッド プールの様子や特定のワークロードがコンカレンシー制御に与える影響などを理解することができます。  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart および ThreadPoolWorkerThreadStop  
- 次の表に、これらのイベントのキーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)」を参照してください)。  
+ 次の表に、これらのイベントのキーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
   
 |イベントを発生させるキーワード|レベル|  
 |-----------------------------------|-----------|  
@@ -131,7 +131,7 @@ ms.locfileid: "64624289"
 ## <a name="io-thread-events"></a>I/O スレッド イベント  
  これらのスレッド プール イベントは、I/O スレッド プール (完了ポート) にあるスレッドで発生します。これは非同期です。  
   
-### <a name="iothreadcreatev1"></a>IOThreadCreate_V1  
+### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -152,7 +152,7 @@ ms.locfileid: "64624289"
 |NumRetired|win:UInt64|提供終了になったワーカー スレッドの数。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
-### <a name="iothreadretirev1"></a>IOThreadRetire_V1  
+### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -173,7 +173,7 @@ ms.locfileid: "64624289"
 |NumRetired|win:UInt64|提供終了になった I/O スレッドの数。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
-### <a name="iothreadunretirev1"></a>IOThreadUnretire_V1  
+### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -217,4 +217,4 @@ ms.locfileid: "64624289"
   
 ## <a name="see-also"></a>関連項目
 
-- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW イベント](clr-etw-events.md)

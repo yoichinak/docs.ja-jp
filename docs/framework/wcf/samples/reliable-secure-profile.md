@@ -2,35 +2,35 @@
 title: Reliable Secure Profile
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: e1895da0805a5282fc328b0c8d48d7042a1e5784
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7cfc028c5cf1ba5cfba009cd29c89f07c64fd9c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787570"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044802"
 ---
 # <a name="reliable-secure-profile"></a>Reliable Secure Profile
-このサンプルでは WCF を構成する方法と[Reliable Secure Profile](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP)。 このサンプルの実装を[Make Connection](https://go.microsoft.com/fwlink/?LinkId=178141) RSP 仕様に基づいて信頼性の高いセキュリティで保護されたバインディングを作成するセキュリティで保護されたチャネルをチャネルと信頼性の高いメッセージングと共に、必要に応じて構成できます。  
+このサンプルでは、WCF および[Reliable Secure Profile](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP) を作成する方法を示します。 このサンプルでは、信頼できるメッセージと共に構成できる[Make 接続](https://go.microsoft.com/fwlink/?LinkId=178141)チャネルの実装と、必要に応じてセキュリティで保護されたチャネルを使用して、RSP 仕様に基づく信頼できるセキュリティで保護されたバインディングを作成する方法を示します。  
   
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
 ## <a name="discussion"></a>説明  
  このサンプルでは、信頼できる非同期の双方向メッセージ交換シナリオを示します。 サービスには双方向コントラクトがあり、クライアントには双方向コールバック コントラクトが実装されます。 クライアントからサービスに対して要求が開始され、要求に対しては個別の接続で応答する必要があります。 要求メッセージは信頼できる方法で送信されます。 クライアントでは、終端にある待機エンドポイントを開きません。 したがって、クライアントは "Make Connection" 要求を使用してサービスをポーリングし、サービスはこの "Make Connection" 要求のバック チャネルで応答を返信します。 このサンプルでは、クライアントで待機エンドポイントを公開せずに (また、ファイアウォールの例外を設けずに)、HTTP を介してセキュリティで保護された信頼できる双方向通信を実現する方法を示します。  
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. 開く、 **ReliableSecureProfile**ソリューション。  
+1. **ReliableSecureProfile**ソリューションを開きます。  
   
-2. 右クリックして、**サービス**プロジェクト**ソリューション エクスプ ローラー**を選択します**デバッグ**、**新しいインスタンスを開始**コンテキスト メニュー。 サービス ホストが開始されます。  
+2. **ソリューションエクスプローラー**で**サービス**プロジェクトを右クリックし、コンテキストメニューの **[デバッグ]** 、 **[新しいインスタンスを開始]** の順に選択します。 サービス ホストが開始されます。  
   
-3. 右クリックして、**クライアント**プロジェクト**ソリューション エクスプ ローラー**を選択します**デバッグ**、**新しいインスタンスを開始**コンテキスト メニュー。 クライアントが開始されます。  
+3. **ソリューションエクスプローラー**で**クライアント**プロジェクトを右クリックし、コンテキストメニューの **[デバッグ]** 、 **[新しいインスタンスを開始]** の順に選択します。 クライアントが開始されます。  
   
 4. クライアント コンソール ウィンドウのプロンプトに任意の文字列を入力し、Enter キーを押します。入力文字列がサービスに送信され、この文字列のハッシュが計算されます。  
   

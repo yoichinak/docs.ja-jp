@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd0611cc8a6d257192b389b023c4dcda8f1b7ec3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634421"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895227"
 ---
 # <a name="details-of-regular-expression-behavior"></a>正規表現の動作の詳細
 .NET Framework の正規表現エンジンはバックトラッキング型の正規表現マッチャーであり、Perl、Python、Emacs、および Tcl で使われているのと同じ従来型の非決定性有限オートマトン (NFA) エンジンを採用しています。 このエンジンは、awk、egrep、または lex に見られるような、より高速であるが制限が多い、純粋な正規表現決定性有限オートマトン (DFA) エンジンとは異なります。 また、標準化されているが低速な POSIX NFA とも異なります。 次のセクションでは、これら 3 種類の正規表現エンジンについて説明し、.NET Framework の正規表現が従来型 NFA エンジンを使って実装されている理由について説明します。  
@@ -31,7 +31,7 @@ ms.locfileid: "64634421"
  従来型 NFA エンジンは、DFA エンジンや POSIX NFA エンジンよりも文字列の一致をより厳密に制御するため、プログラマに人気があります。 NFA エンジンは、最悪の場合には実行速度が遅くなることもありますが、あいまいさを少なくし、バックトラッキングを制限するパターンを使用すると、一致する文字列を線形時間または多項式時間で見つけるように調整できます。 言い換えると、NFA エンジンはパフォーマンスと引き換えに能力と柔軟性を向上させますが、ほとんどの場合、正規表現が適切に記述されていれば十分に許容できるパフォーマンスを実現でき、バックトラッキングによってパフォーマンスが指数関数的に低下する状況は回避されます。  
   
 > [!NOTE]
->  過度なバックトラッキングによって発生するパフォーマンスの低下と、そのような問題を回避する正規表現の作成方法については、「[バックトラッキング](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)」をご覧ください。  
+> 過度なバックトラッキングによって発生するパフォーマンスの低下と、そのような問題を回避する正規表現の作成方法については、「[バックトラッキング](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)」をご覧ください。  
   
 ## <a name="net-framework-engine-capabilities"></a>.NET Framework エンジンの機能  
  従来型の NFA エンジンの長所を利用するために、.NET Framework の正規表現エンジンには、プログラマがバックトラッキング エンジンを調整できるようにするための構成体セットが組み込まれています。 それらの構成体を使用すると、高速検索を実行したり、他の展開よりも特定の展開を優先させたりできます。  
@@ -43,7 +43,7 @@ ms.locfileid: "64634421"
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
   
-     この正規表現の最長一致バージョンと最短一致バージョンは、次の表に示すように定義されています。  
+     この正規表現の最長一致バージョンと最短一致バージョンは、次の表に示すように定義されています。
   
     |パターン|説明|  
     |-------------|-----------------|  
@@ -98,7 +98,7 @@ ms.locfileid: "64634421"
     |`^`|行の先頭から照合を開始します。|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|文字列 `<PRIVATE>` の後に空白文字が続くパターンの 0 回または 1 回の出現と一致します。 一致文字列を `Pvt` という名前のキャプチャ グループに代入します。|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|`Pvt` キャプチャ グループが存在する場合は、1 個以上の単語文字の後に 0 個または 1 個の区切り記号と 1 つの空白文字が続くパターンの 1 回以上の出現と一致します。 部分文字列を最初のキャプチャ グループに代入します。|  
-    |<code>&#124;((\w+\p{P}?\s)+))<code>|`Pvt` キャプチャ グループが存在しない場合は、1 個以上の単語文字の後に 0 個または 1 個の区切り記号と 1 つの空白文字が続くパターンの 1 回以上の出現と一致します。 部分文字列を 3 番目のキャプチャ グループに代入します。|  
+    |<code>&#124;((\w+\p{P}?\s)+))</code>|`Pvt` キャプチャ グループが存在しない場合は、1 個以上の単語文字の後に 0 個または 1 個の区切り記号と 1 つの空白文字が続くパターンの 1 回以上の出現と一致します。 部分文字列を 3 番目のキャプチャ グループに代入します。|  
     |`\r?$`|行末または文字列の末尾と一致します。|  
   
      条件付き評価について詳しくは、「[代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)」をご覧ください。  
@@ -129,13 +129,13 @@ ms.locfileid: "64634421"
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
-     正規表現 `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$` は、次の表に示すように定義されています。  
+     正規表現 ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` は、次の表に示すように定義されています。  
   
     |パターン|説明|  
     |-------------|-----------------|  
     |`^`|文字列の先頭から照合を開始します。|  
     |`[A-Z0-9]`|任意の数字または英数字と一致します。 (比較では、大文字と小文字を区別しません。)|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Match zero or more occurrences of any word character, or any of the following characters:  -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124;, or ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|任意の単語文字の 0 回以上の繰り返し、または次の文字のいずれかと一致します: -、!、#、$、%、&、'、.、\*、+、/、=、?、^、\`、{、}、&#124;、~。|  
     |`(?<=[A-Z0-9])`|前の文字を後読みします。これは数字または英数字である必要があります。 (比較では、大文字と小文字を区別しません。)|  
     |`$`|入力文字列の末尾で照合を終了します。|  
   

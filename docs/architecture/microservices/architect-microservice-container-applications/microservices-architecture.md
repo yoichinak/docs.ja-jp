@@ -55,7 +55,7 @@ ms.locfileid: "68672989"
 - **Jimmy Nilsson。チャンク クラウド コンピューティング** \
   <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
-- **Cesar de la Torre。Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル** (ダウンロード可能な e-book)
+- **Cesar de la Torre。Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル** (ダウンロード可能な e-book) \
   <https://aka.ms/dockerlifecycleebook>
 
 >[!div class="step-by-step"]

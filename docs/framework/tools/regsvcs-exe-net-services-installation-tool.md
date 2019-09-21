@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0dc05294ae762b4f896bb7f514df102c1f948fe0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dccf1b841d048ae460b89fd97da833aadb988422
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623410"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971812"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET サービス インストール ツール)
 .NET サービス インストール ツールは、次のアクションを実行します。  
@@ -33,7 +33,7 @@ ms.locfileid: "64623410"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
       regsvcs [/c | /fc | /u] [/tlb:typeLibraryFile] [/extlb]  
 [/reconfig] [/componly] [/appname:applicationName]  
 [/nologo] [/quiet]assemblyFile.dll   
@@ -43,7 +43,7 @@ ms.locfileid: "64623410"
   
 |引数|説明|  
 |--------------|-----------------|  
-|*assemblyFile.dll*|ソース アセンブリ ファイル。 アセンブリは、厳密な名前で署名する必要があります。 詳しくは、「[厳密な名前でのアセンブリへの署名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)」をご覧ください。|  
+|*assemblyFile.dll*|ソース アセンブリ ファイル。 アセンブリは、厳密な名前で署名する必要があります。 詳しくは、「[厳密な名前でのアセンブリへの署名](../../standard/assembly/sign-strong-name.md)」をご覧ください。|  
   
 |オプション|説明|  
 |------------|-----------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "64623410"
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
 ## <a name="remarks"></a>解説  
- Regsvcs.exe には、*assemblyFile.dll* で指定されているソース アセンブリ ファイルが必要です。 このアセンブリは、厳密な名前で署名する必要があります。 厳密な名前での署名について詳しくは、「[厳密な名前でのアセンブリへの署名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)」をご覧ください。 対象アプリケーションおよびタイプ ライブラリの名前は、オプションです。 引数 *applicationName* はソース アセンブリ ファイルから生成できます。存在しない場合は、Regsvcs.exe によって作成されます。 引数 *typelibraryfile* にはタイプ ライブラリ名を指定できます。 タイプ ライブラリ名を指定しない場合、Regsvcs.exe は既定値としてアセンブリ名を使用します。  
+ Regsvcs.exe には、*assemblyFile.dll* で指定されているソース アセンブリ ファイルが必要です。 このアセンブリは、厳密な名前で署名する必要があります。 厳密な名前での署名について詳しくは、「[厳密な名前でのアセンブリへの署名](../../standard/assembly/sign-strong-name.md)」をご覧ください。 対象アプリケーションおよびタイプ ライブラリの名前は、オプションです。 引数 *applicationName* はソース アセンブリ ファイルから生成できます。存在しない場合は、Regsvcs.exe によって作成されます。 引数 *typelibraryfile* にはタイプ ライブラリ名を指定できます。 タイプ ライブラリ名を指定しない場合、Regsvcs.exe は既定値としてアセンブリ名を使用します。  
   
  Regsvcs.exe がコンポーネントのメソッドを登録する場合は、それらのメソッドに対する[確認要求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100))と[リンク確認要求](../../../docs/framework/misc/link-demands.md)の影響を受けます。 このツールは完全に信頼された環境で実行されるため、アクセス許可に対するほとんどの確認要求は成功します。 ただし、Regsvcs.exe では、<xref:System.Security.Permissions.StrongNameIdentityPermission> または <xref:System.Security.Permissions.PublisherIdentityPermission> に対する確認要求やリンク確認要求によって保護されたメソッドを含むコンポーネントを登録することはできません。  
   
@@ -76,18 +76,18 @@ ms.locfileid: "64623410"
 ## <a name="examples"></a>使用例  
  `myTest.dll` に含まれるすべてのパブリック クラスを `myTargetApp` (既存の COM+ アプリケーション) に追加し、タイプ ライブラリ `myTest.tlb` を生成するコマンドを次に示します。  
   
-```  
+```console  
 regsvcs /appname:myTargetApp myTest.dll  
 ```  
   
  `myTest.dll` に含まれるすべてのパブリック クラスを `myTargetApp` (既存の COM+ アプリケーション) に追加し、タイプ ライブラリ `newTest.tlb` を生成するコマンドを次に示します。  
   
-```  
+```console  
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  
 ```  
   
 ## <a name="see-also"></a>関連項目
 
 - [ツール](../../../docs/framework/tools/index.md)
-- [方法: 厳密な名前でアセンブリに署名する](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [方法: 厳密な名前でアセンブリに署名する](../../standard/assembly/sign-strong-name.md)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

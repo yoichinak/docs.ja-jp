@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b1223839be3747b04810d6b5bd131733c41631f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1679e283a801044ad5a0baed89f17e6acc74259c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614387"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052455"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 `moduloObjectHashcode` マネージド デバッグ アシスタント (MDA) は、<xref:System.Object.GetHashCode%2A> メソッドによって返されるハッシュ コードに対してモジュロ演算を実行するように、<xref:System.Object> クラスの動作を変更します。 この MDA の既定の係数は 1 であり、これにより <xref:System.Object.GetHashCode%2A> はすべてのオブジェクトに対して 0 を返すようになります。  
@@ -38,7 +38,7 @@ ms.locfileid: "64614387"
   
  キー変更のハッシュ コードの計算に使われるアルゴリズムがランタイムのあるバージョンから別のバージョンに変更された場合、<xref:System.Collections.Hashtable> からの列挙の順序が変わる可能性があります。 ハッシュ テーブルからのキーまたは値の列挙順序にプログラムが依存しているかどうかは、この MDA を有効にすることでテストできます。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決策  
  オブジェクト ID の代わりに、ハッシュ コードを使わないでください。 ハッシュ コードを比較しないように、<xref:System.Object.Equals%2A?displayProperty=nameWithType> メソッドのオーバーライドを実装します。  
   
  ハッシュ テーブル内のキーまたは値の列挙の順序への依存関係を作成しないでください。  
@@ -46,7 +46,7 @@ ms.locfileid: "64614387"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA を有効にすると、アプリケーションの速度が低下します。 この MDA は、返されたハッシュ コードを取得し、代わりに係数で除算したときの余りを返します。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>出力  
  この MDA に出力はありません。  
   
 ## <a name="configuration"></a>構成  
@@ -64,4 +64,4 @@ ms.locfileid: "64614387"
 
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

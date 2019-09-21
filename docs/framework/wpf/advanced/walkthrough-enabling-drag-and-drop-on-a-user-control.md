@@ -8,12 +8,12 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 80fd55be9230729cb8336be91c1d8fb4f7f3f080
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 172e49c2c255db4d24d2180f919b1305326b5e82
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364251"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991809"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>チュートリアル: ユーザー コントロールでのドラッグ アンド ドロップの有効化
 
@@ -80,7 +80,7 @@ ms.locfileid: "68364251"
 
 2. 次の XAML を開始<xref:System.Windows.Window>タグに追加して、現在のアプリケーションへの XML 名前空間参照を作成します。
 
-    ```
+    ```xaml
     xmlns:local="clr-namespace:DragDropExample"
     ```
 
@@ -311,7 +311,7 @@ ms.locfileid: "68364251"
 
     - <xref:System.Windows.UIElement.Drop>イベントが既に処理されているかどうかを確認します。 たとえば、 <xref:System.Windows.UIElement.Drop>イベントを処理する別の円に円がドロップされた場合、その円を含むパネルにもハンドルを表示させたくありません。
 
-    - イベントが処理されない場合は、Ctrl キーが押されたかどうかを確認します。  <xref:System.Windows.UIElement.Drop>
+    - イベントが処理されない場合は、Ctrl キーが押されたかどうかを確認します。 <xref:System.Windows.UIElement.Drop>
 
     - が発生し<xref:System.Windows.UIElement.Drop>たときに Ctrl キーを押すと、によって円コントロールのコピーが作成さ<xref:System.Windows.Controls.Panel.Children%2A>れ、の<xref:System.Windows.Controls.StackPanel>コレクションに追加されます。
 

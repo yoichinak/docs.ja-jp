@@ -8,75 +8,75 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab7cbac98af24e89ec4da3cc9737b0cadf5cc394
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7324ddb63f000f55a16c4963c808f658aa9098a7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789780"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787319"
 ---
 # <a name="ialink-interface"></a>IALink インターフェイス
-.NET Framework アセンブリの構築に役立ちます。 その他のものは、インターフェイスには、マルチ モジュール アセンブリのアセンブリ マニフェストの作成、厳密な名前によるアセンブリの署名および netmodule の作成を補助するメソッドが含まれています。  
+.NET Framework アセンブリの構築に役立ちます。 特に、インターフェイスには、マルチモジュールアセンブリのアセンブリマニフェストの作成、厳密な名前を使用したアセンブリへの署名、および netmodule の作成を支援するメソッドが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [AddFile メソッド](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
+ [AddFile メソッド](addfile-method.md)  
   
- [AddImport メソッド](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
+ [AddImport メソッド](addimport-method.md)  
   
- [CloseAssembly メソッド](../../../../docs/framework/unmanaged-api/alink/closeassembly-method.md)  
+ [CloseAssembly メソッド](closeassembly-method.md)  
   
- [CloseEnum メソッド](../../../../docs/framework/unmanaged-api/alink/closeenum-method.md)  
+ [CloseEnum メソッド](closeenum-method.md)  
   
- [EmbedResource メソッド](../../../../docs/framework/unmanaged-api/alink/embedresource-method.md)  
+ [EmbedResource メソッド](embedresource-method.md)  
   
- [EmitAssemblyCustomAttribute メソッド](../../../../docs/framework/unmanaged-api/alink/emitassemblycustomattribute-method.md)  
+ [EmitAssemblyCustomAttribute メソッド](emitassemblycustomattribute-method.md)  
   
- [EmitManifest メソッド](../../../../docs/framework/unmanaged-api/alink/emitmanifest-method.md)  
+ [EmitManifest メソッド](emitmanifest-method.md)  
   
- [EndMerge メソッド](../../../../docs/framework/unmanaged-api/alink/endmerge-method.md)  
+ [EndMerge メソッド](endmerge-method.md)  
   
- [EnumCustomAttributes メソッド](../../../../docs/framework/unmanaged-api/alink/enumcustomattributes-method.md)  
+ [EnumCustomAttributes メソッド](enumcustomattributes-method.md)  
   
- [EnumImportTypes メソッド](../../../../docs/framework/unmanaged-api/alink/enumimporttypes-method.md)  
+ [EnumImportTypes メソッド](enumimporttypes-method.md)  
   
- [ExportNestedType メソッド](../../../../docs/framework/unmanaged-api/alink/exportnestedtype-method.md)  
+ [ExportNestedType メソッド](exportnestedtype-method.md)  
   
- [ExportNestedTypeForwarder メソッド](../../../../docs/framework/unmanaged-api/alink/exportnestedtypeforwarder-method.md)  
+ [ExportNestedTypeForwarder メソッド](exportnestedtypeforwarder-method.md)  
   
- [ExportType メソッド](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)  
+ [ExportType メソッド](exporttype-method.md)  
   
- [ExportTypeForwarder メソッド](../../../../docs/framework/unmanaged-api/alink/exporttypeforwarder-method.md)  
+ [ExportTypeForwarder メソッド](exporttypeforwarder-method.md)  
   
- [FreeWin32ResBlob メソッド](../../../../docs/framework/unmanaged-api/alink/freewin32resblob-method.md)  
+ [FreeWin32ResBlob メソッド](freewin32resblob-method.md)  
   
- [GetAssemblyRefHash メソッド](../../../../docs/framework/unmanaged-api/alink/getassemblyrefhash-method.md)  
+ [GetAssemblyRefHash メソッド](getassemblyrefhash-method.md)  
   
- [GetResolutionScope メソッド](../../../../docs/framework/unmanaged-api/alink/getresolutionscope-method.md)  
+ [GetResolutionScope メソッド](getresolutionscope-method.md)  
   
- [GetScope メソッド](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
+ [GetScope メソッド](getscope-method.md)  
   
- [GetWin32ResBlob メソッド](../../../../docs/framework/unmanaged-api/alink/getwin32resblob-method.md)  
+ [GetWin32ResBlob メソッド](getwin32resblob-method.md)  
   
- [ImportFile メソッド](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)  
+ [ImportFile メソッド](importfile-method.md)  
   
- [ImportFile2 メソッド](../../../../docs/framework/unmanaged-api/alink/importfile2-method.md)  
+ [ImportFile2 メソッド](importfile2-method.md)  
   
- [ImportTypes メソッド](../../../../docs/framework/unmanaged-api/alink/importtypes-method.md)  
+ [ImportTypes メソッド](importtypes-method.md)  
   
- "Init"メソッド  
+ "Init メソッド"  
   
- [LinkResource メソッド](../../../../docs/framework/unmanaged-api/alink/linkresource-method.md)  
+ [LinkResource メソッド](linkresource-method.md)  
   
- [PreCloseAssembly メソッド](../../../../docs/framework/unmanaged-api/alink/precloseassembly-method.md)  
+ [PreCloseAssembly メソッド](precloseassembly-method.md)  
   
- [SetAssemblyFile メソッド](../../../../docs/framework/unmanaged-api/alink/setassemblyfile-method.md)  
+ [SetAssemblyFile メソッド](setassemblyfile-method.md)  
   
- [SetAssemblyProps メソッド](../../../../docs/framework/unmanaged-api/alink/setassemblyprops-method.md)  
+ [SetAssemblyProps メソッド](setassemblyprops-method.md)  
   
- [SetNonAssemblyFlags メソッド](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
+ [SetNonAssemblyFlags メソッド](setnonassemblyflags-method.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [ALink API](index.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [Al.exe (アセンブリ リンカー)](../../tools/al-exe-assembly-linker.md)

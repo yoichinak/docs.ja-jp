@@ -2,12 +2,12 @@
 title: アクティブ パターン
 description: アクティブ パターンを使用して、F# プログラミング言語で入力データを分割する名前付きのパーティションを定義する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 12f423abe05e649e0b527ed04124b991feb5d592
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0c1315f2386b3cea2def698f4725e4c1cf030609
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629951"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083077"
 ---
 # <a name="active-patterns"></a>アクティブ パターン
 
@@ -42,7 +42,7 @@ let (|identifier|_|) [arguments ] valueToMatch = expression
 
 このプログラムの出力は次のとおりです。
 
-```
+```console
 7 is odd
 11 is odd
 32 is even
@@ -54,7 +54,7 @@ let (|identifier|_|) [arguments ] valueToMatch = expression
 
 上記のプログラムの出力は次のようになります。
 
-```
+```console
 Red
  Red: 255 Green: 0 Blue: 0
  Hue: 360.000000 Saturation: 1.000000 Brightness: 0.500000
@@ -84,7 +84,7 @@ BlanchedAlmond
 
 前の例の出力は次のようになります。
 
-```
+```console
 1.100000 : Floating point
 0 : Integer
 0.000000 : Floating point
@@ -98,7 +98,7 @@ Something else : Not matched.
 
 出力は次のとおりです。
 
-```
+```console
 1 is a cube and a square
 8 is a cube
 27 is a cube
@@ -119,7 +119,7 @@ Something else : Not matched.
 
 前のコードの出力は次のようになります。
 
-```
+```console
 12/22/2008 12:00:00 AM 1/1/2009 12:00:00 AM 1/15/2008 12:00:00 AM 12/28/1995 12:00:00 AM
 ```
 
@@ -129,7 +129,7 @@ Something else : Not matched.
 
 前のコードの出力は次のようになります。
 
-```
+```console
 Hello, random citizen!
 Hello, George!
 ```

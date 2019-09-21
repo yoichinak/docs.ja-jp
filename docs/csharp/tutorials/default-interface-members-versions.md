@@ -3,12 +3,12 @@ title: C# で既定のインターフェイス メンバーを使用してイン
 description: この高度なチュートリアルでは、既存のインターフェイスを実装するすべてのクラスと構造体を損なうことなく、そのインターフェイスの定義に新しい機能を安全に追加する方法について説明します。
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877918"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926701"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>チュートリアル: C# 8.0 で既定のインターフェイス メンバーを使用してインターフェイスを更新する
 
@@ -17,6 +17,7 @@ ms.locfileid: "65877918"
 このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
+>
 > * 実装を含むメソッドを追加して、インターフェイスを安全に拡張します。
 > * パラメーター化された実装を作成して、柔軟性を高めます。
 > * 実装者がオーバーライドの形でより具体的な実装を提供できるようにします。
@@ -37,7 +38,7 @@ ms.locfileid: "65877918"
 
 チームは、これらのインターフェイスからユーザー向けのライブラリを構築し、顧客にとってより良いエクスペリエンスを作り出すことができました。 目標は、既存の顧客との関係を深め、新しい顧客との関係を改善することでした。
 
-次回のリリースのためにライブラリをアップグレードする時期になりました。 求められている機能の 1 つは、注文数が多い顧客向けにロイヤルティ割引を有効にすることです。 この新しいロイヤルティ割引は、顧客が注文するたびに適用されます。 この特定の割引は、各顧客のプロパティです。 ICustomer の各実装で、ロイヤルティ割引に対して異なるルールを設定できます。 
+次回のリリースのためにライブラリをアップグレードする時期になりました。 求められている機能の 1 つは、注文数が多い顧客向けにロイヤルティ割引を有効にすることです。 この新しいロイヤルティ割引は、顧客が注文するたびに適用されます。 この特定の割引は、各顧客のプロパティです。 `ICustomer` の各実装で、ロイヤルティ割引に対して異なるルールを設定できます。 
 
 この機能を追加する最も自然な方法は、ロイヤルティ割引を適用するメソッドを使用して `ICustomer` インターフェイスを拡張することです。 この設計の提案から、経験豊富な開発者の間で次のような懸念が起こりました。「リリース済みのインターフェイスは変更できません。 これは破壊的変更です」 C# 8.0 では、インターフェイスをアップグレードするための "*既定のインターフェイス実装*" が追加されました。 ライブラリ作成者はインターフェイスに新しいメンバーを追加し、それらのメンバーに既定の実装を指定することができます。
 
@@ -47,7 +48,7 @@ ms.locfileid: "65877918"
 
 チームは、最も可能性の高い既定の実装、つまり顧客に対するロイヤルティ割引について合意しました。
 
-アップグレードでは、2 つのプロパティを設定する機能を提供する必要があります。割引の対象となるために必要な注文数と、割引の割合です。 これは、既定のインターフェイス メンバーに最適なシナリオです。 ICustomer インターフェイスにメソッドを追加し、最も可能性の高い実装を提供することができます。 すべての既存の実装とすべての新しい実装では、既定の実装を使用することも、独自の実装を提供することもできます。
+アップグレードでは、2 つのプロパティを設定する機能を提供する必要があります。割引の対象となるために必要な注文数と、割引の割合です。 これは、既定のインターフェイス メンバーに最適なシナリオです。 `ICustomer` インターフェイスにメソッドを追加し、最も確実な実装を提供することができます。 すべての既存の実装とすべての新しい実装では、既定の実装を使用することも、独自の実装を提供することもできます。
 
 まず、実装に新しいメソッドを追加します。
 
@@ -87,6 +88,6 @@ ms.locfileid: "65877918"
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
 
-[GitHub のサンプル リポジトリ] で、全体の完成したコードを確認できます ([GitHub のサンプル リポジトリ](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship)でスターター アプリケーションを入手できます)。
+[GitHub 上の サンプル リポジトリ](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship)で完成したコード全体を確認できます。 [GitHub 上の サンプル リポジトリ](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship)でスターター アプリケーションを入手できます。
 
 これらの新機能は、新しいメンバーに妥当な既定の実装がある場合に、インターフェイスを安全に更新できることを意味します。 複数のクラスから実装できる 1 つの機能的なアイデアを表現するように、慎重にインターフェイスを設計してください。 その結果、同じ機能的なアイデアに対して新しい要件が見つかったときに、そのインターフェイス定義を簡単にアップグレードできるようになります。

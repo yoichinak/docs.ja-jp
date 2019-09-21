@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff750e6140b1eda8f6537c2f51b9f4769c1d892c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e8b1db291fbaf19ae9086fe1e2b76a475d198e19
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645553"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894561"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>方法: サンドボックスで部分信頼コードを実行する
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -57,7 +57,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      また、"Internet" など、既存の名前付きアクセス許可セットを使用することもできます。  
   
-    ```  
+    ```csharp
     Evidence ev = new Evidence();  
     ev.AddHostEvidence(new Zone(SecurityZone.Internet));  
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
@@ -275,4 +275,4 @@ class Sandboxer : MarshalByRefObject
   
 ## <a name="see-also"></a>関連項目
 
-- [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全なコーディングのガイドライン](../../standard/security/secure-coding-guidelines.md)

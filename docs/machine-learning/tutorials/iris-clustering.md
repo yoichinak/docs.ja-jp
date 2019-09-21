@@ -2,16 +2,15 @@
 title: 'チュートリアル: あやめ花の分類 - K-means クラスタリング'
 description: クラスタリングのシナリオで ML.NET を使用する方法について説明します
 author: pkulikov
-ms.author: johalex
 ms.date: 05/16/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 965408a180245712ceda2c3c17bdf42755af1c2c
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: e2aaeb8abc6981b420329f194aa7b82c90cae00a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402451"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929098"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>チュートリアル: ML.NET でクラスタリングを使用してあやめの花を分類する
 
@@ -19,6 +18,7 @@ ms.locfileid: "67402451"
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
+>
 > - 問題を把握する
 > - 適切な機械学習タスクを選択する
 > - データを準備する
@@ -72,7 +72,7 @@ ms.locfileid: "67402451"
 入力データと予測のためのクラスを作成します。
 
 1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
-1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*IrisData.cs*」に変更します。 次に、 **[追加]** を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*IrisData.cs*」に変更します。 次に **[追加]** を選択します。
 1. 以下の `using` ディレクティブを新しいファイルに追加します。
 
    [!code-csharp[Add necessary usings](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#Usings)]
@@ -160,7 +160,7 @@ ms.locfileid: "67402451"
 テスト データのインスタンスを格納するための `TestIrisData` クラスを作成します。
 
 1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
-1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*TestIrisData.cs*」に変更します。 次に、 **[追加]** を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*TestIrisData.cs*」に変更します。 次に **[追加]** を選択します。
 1. 次の例に示すように、静的になるようにクラスを変更します。
 
    [!code-csharp[Make class static](~/samples/machine-learning/tutorials/IrisFlowerClustering/TestIrisData.cs#Static)]
@@ -186,6 +186,7 @@ Distances: 11.69127 0.02159119 25.59896
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
+>
 > - 問題を把握する
 > - 適切な機械学習タスクを選択する
 > - データを準備する

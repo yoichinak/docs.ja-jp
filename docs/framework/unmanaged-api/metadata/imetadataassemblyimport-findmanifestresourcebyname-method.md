@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf61da362251577acadb83915404eba7508b3099
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aaaae5bda88d1fbc9949a080c5765127fd112bde
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905066"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855956"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName メソッド
-指定した名前、マニフェスト リソースへのポインターを取得します。  
+指定した名前のマニフェストリソースへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT FindManifestResourceByName (  
     [in]  LPCWSTR                szName,   
     [out] mdManifestResource     *ptkManifestResource  
@@ -38,20 +38,20 @@ HRESULT FindManifestResourceByName (
   
 ## <a name="parameters"></a>パラメーター  
  `szName`  
- [in]リソースの名前。  
+ からリソースの名前。  
   
  `ptkManifestResource`  
- [out]配列の格納に使用される、`mdManifestResource`マニフェスト リソースを表すメタデータ トークン。  
+ 入出力`mdManifestResource`メタデータトークンを格納するために使用される配列。それぞれがマニフェストリソースを表します。  
   
 ## <a name="remarks"></a>Remarks  
- `FindManifestResourceByName`メソッドは、参照を解決するための共通言語ランタイムによって使用されている標準の規則を使用します。  
+ メソッド`FindManifestResourceByName`は、参照を解決するために共通言語ランタイムによって採用されている標準の規則を使用します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ**Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 519ce34fc1f86220dfd0f3f7e19e3a50fba06087
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
-ms.translationtype: HT
+ms.openlocfilehash: 739f0efdb50f8eba4875a42d5173f741b6ee94b3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469451"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051899"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 型と非 Blittable 型
 ほとんどのデータ型の表現はマネージド メモリとアンマネージド メモリの両方で共通しているため、相互運用マーシャラーによる特別な処理は必要ありません。 これらの型は、マネージド コードとアンマネージド コード間での受け渡しの際に変換が必要でないため、*blittable 型*と呼ばれます。  
@@ -53,7 +53,7 @@ ms.locfileid: "65469451"
   
  オブジェクト参照は blittable ではありません。 これには、単独では blittable なオブジェクトへの参照の配列も含まれます。 たとえば、blittable な構造体は定義できますが、それらの構造体への参照の配列を含む blittable 型は定義できません。  
   
- blittable 型の配列と、blittable 型のメンバーだけを含むクラスは、最適化のために、マーシャリング時にコピーされるのではなく[固定](../../../docs/framework/interop/copying-and-pinning.md)されます。 これらの型は、呼び出し元と呼び出し先が同じアパートメントに属する場合には、In/Out パラメーターとしてマーシャリングされるように見えることがあります。 ただし、そのような型は実際には In パラメーターとしてマーシャリングされるため、引数を In/Out パラメーターとしてマーシャリングする必要がある場合には、<xref:System.Runtime.InteropServices.InAttribute> 属性と <xref:System.Runtime.InteropServices.OutAttribute> 属性を適用する必要があります。  
+ blittable 型の配列と、blittable 型のメンバーだけを含むクラスは、最適化のために、マーシャリング時にコピーされるのではなく[固定](copying-and-pinning.md)されます。 これらの型は、呼び出し元と呼び出し先が同じアパートメントに属する場合には、In/Out パラメーターとしてマーシャリングされるように見えることがあります。 ただし、そのような型は実際には In パラメーターとしてマーシャリングされるため、引数を In/Out パラメーターとしてマーシャリングする必要がある場合には、<xref:System.Runtime.InteropServices.InAttribute> 属性と <xref:System.Runtime.InteropServices.OutAttribute> 属性を適用する必要があります。  
   
  一部のマネージド データ型は、アンマネージド環境では異なる表現が必要です。 これらの非 blittable データ型は、マーシャリングできる形式に変換する必要があります。 たとえば、マネージド文字列は、文字列オブジェクトに変換しないとマーシャリングできないので、非 blittable 型です。  
   
@@ -61,18 +61,18 @@ ms.locfileid: "65469451"
   
 |非 blittable 型|説明|  
 |-------------------------|-----------------|  
-|[System.Array](../../../docs/framework/interop/default-marshaling-for-arrays.md)|C スタイルの配列または `SAFEARRAY` に変換されます。|  
+|[System.Array](default-marshaling-for-arrays.md)|C スタイルの配列または `SAFEARRAY` に変換されます。|  
 |[System.Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|1、2、または 4 バイトの値に変換されます。`true` の場合は 1 または -1 になります。|  
 |[System.Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Unicode 文字または ANSI 文字に変換されます。|  
 |[System.Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|クラス インターフェイスに変換されます。|  
-|[System.Object](../../../docs/framework/interop/default-marshaling-for-objects.md)|バリアントまたはインターフェイスに変換されます。|  
-|[System.Mdarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|C スタイルの配列または `SAFEARRAY` に変換されます。|  
-|[System.String](../../../docs/framework/interop/default-marshaling-for-strings.md)|null 参照で終わる文字列または BSTR に変換されます。|  
+|[System.Object](default-marshaling-for-objects.md)|バリアントまたはインターフェイスに変換されます。|  
+|[System.Mdarray](default-marshaling-for-arrays.md)|C スタイルの配列または `SAFEARRAY` に変換されます。|  
+|[System.String](default-marshaling-for-strings.md)|null 参照で終わる文字列または BSTR に変換されます。|  
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|固定メモリ レイアウトを持つ構造体に変換されます。|  
-|[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|C スタイルの配列または `SAFEARRAY` に変換されます。|  
+|[System.Szarray](default-marshaling-for-arrays.md)|C スタイルの配列または `SAFEARRAY` に変換されます。|  
   
- クラス型とオブジェクト型は COM 相互運用でのみサポートされます。 Visual Basic、C#、および C++ の対応する型については、[クラス ライブラリの概要](../../../docs/standard/class-library-overview.md)に関する記事を参照してください。  
+ クラス型とオブジェクト型は COM 相互運用でのみサポートされます。 Visual Basic、C#、および C++ の対応する型については、[クラス ライブラリの概要](../../standard/class-library-overview.md)に関する記事を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [既定のマーシャリング動作](../../../docs/framework/interop/default-marshaling-behavior.md)
+- [既定のマーシャリング動作](default-marshaling-behavior.md)

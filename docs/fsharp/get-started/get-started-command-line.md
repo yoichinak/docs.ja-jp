@@ -2,49 +2,49 @@
 title: コマンド ライン ツールの F# の概要します。
 description: 任意のオペレーティング システム (Windows、macOs または Linux) で .NET Core CLI を使用した F# で簡単なマルチ プロジェクト ソリューションを構築する方法について説明します。
 ms.date: 03/26/2018
-ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1376b6b5384f380c06a96cdc568ad108de8a6e5f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938698"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855827"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>.NET Core CLI を使用した F# の概要します。
 
-この記事では、どのできますを開始する F# .NET Core CLI を使用したオペレーティング システム (Windows、macOS、または Linux) でについて説明します。 コンソール アプリケーションによって呼び出されるクラス ライブラリを使用したマルチ プロジェクト ソリューションを構築する経由になります。
+この記事では、どのできますを開始する F# .NET Core CLI を使用したオペレーティング システム (Windows、macOS、または Linux) でについて説明します。 コンソールアプリケーションによって呼び出されるクラスライブラリを使用して、複数のプロジェクトから成るソリューションを構築します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-を開始するには、、の最新バージョンをインストールする必要があります[.NET Core SDK](https://www.microsoft.com/net/download/)します。
+まず、最新の[.NET Core SDK](https://dotnet.microsoft.com/download)をインストールする必要があります。
 
-この記事では、方法を知っているコマンドラインを使用して、任意のテキスト エディターを前提としています。 それを既に使用しない場合[Visual Studio Code](get-started-vscode.md) F# 用のテキスト エディターとして便利なオプションです。
+この記事では、コマンドラインの使用方法を理解し、適切なテキストエディターを使用することを前提としています。 それを既に使用しない場合[Visual Studio Code](get-started-vscode.md) F# 用のテキスト エディターとして便利なオプションです。
 
-## <a name="build-a-simple-multi-project-solution"></a>単純なマルチ プロジェクト ソリューションをビルドします。
+## <a name="build-a-simple-multi-project-solution"></a>単純な複数プロジェクトソリューションの構築
 
-コマンド プロンプト/ターミナルを開きを使用して、[新しい dotnet](../../core/tools/dotnet-new.md)という新しいソリューション ファイルを作成するコマンド`FSNetCore`:
+コマンドプロンプト/ターミナルを開き、 [dotnet new](../../core/tools/dotnet-new.md)コマンドを使用して、という名前`FSNetCore`の新しいソリューションファイルを作成します。
 
 ```console
 dotnet new sln -o FSNetCore
 ```
 
-前のコマンドを実行した後は、次のディレクトリ構造が生成されます。
+前のコマンドを実行すると、次のディレクトリ構造が生成されます。
 
 ```console
 FSNetCore
     ├── FSNetCore.sln
 ```
 
-### <a name="write-a-class-library"></a>クラス ライブラリを作成します。
+### <a name="write-a-class-library"></a>クラスライブラリを記述する
 
-ディレクトリに移動*FSNetCore*します。
+ディレクトリを*Fsnetcore*に変更します。
 
-使用して、`dotnet new`コマンド、クラス ライブラリ プロジェクトを作成、 **src**ライブラリという名前のフォルダー。
+コマンドを`dotnet new`使用して、"ライブラリ" という名前の**src**フォルダーにクラスライブラリプロジェクトを作成します。
 
 ```console
 dotnet new classlib -lang F# -o src/Library
 ```
 
-前のコマンドを実行した後は、次のディレクトリ構造が生成されます。
+前のコマンドを実行すると、次のディレクトリ構造が生成されます。
 
 ```console
 └── FSNetCore
@@ -55,7 +55,7 @@ dotnet new classlib -lang F# -o src/Library
             └── Library.fsproj
 ```
 
-内容を置き換える`Library.fs`を次のコード。
+の`Library.fs`内容を次のコードに置き換えます。
 
 ```fsharp
 module Library
@@ -66,29 +66,29 @@ let getJsonNetJson value =
     sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value (JsonConvert.SerializeObject(value))
 ```
 
-ライブラリ プロジェクトに Newtonsoft.Json NuGet パッケージを追加します。
+ライブラリプロジェクトに Newtonsoft. Json パッケージを追加します。
 
 ```console
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
-追加、`Library`プロジェクトを`FSNetCore`ソリューションを使用して、 [dotnet sln 追加](../../core/tools/dotnet-sln.md)コマンド。
+[Dotnet sln add](../../core/tools/dotnet-sln.md)コマンドを`FSNetCore`使用して、ソリューションにプロジェクトを追加します。`Library`
 
 ```console
 dotnet sln add src/Library/Library.fsproj
 ```
 
-実行`dotnet build`プロジェクトをビルドします。 作成するときに、未解決の依存関係が復元されます。
+を`dotnet build`実行してプロジェクトをビルドします。 未解決の依存関係は、ビルド時に復元されます。
 
-### <a name="write-a-console-application-that-consumes-the-class-library"></a>クラス ライブラリを使用するコンソール アプリケーションを作成します。
+### <a name="write-a-console-application-that-consumes-the-class-library"></a>クラスライブラリを使用するコンソールアプリケーションを作成する
 
-使用して、`dotnet new`コマンド、コンソール アプリケーションを作成、 **src**アプリという名前のフォルダー。
+コマンドを`dotnet new`使用して、App という名前の**src**フォルダーにコンソールアプリケーションを作成します。
 
 ```console
 dotnet new console -lang F# -o src/App
 ```
 
-前のコマンドを実行した後は、次のディレクトリ構造が生成されます。
+前のコマンドを実行すると、次のディレクトリ構造が生成されます。
 
 ```console
 └── FSNetCore
@@ -102,7 +102,7 @@ dotnet new console -lang F# -o src/App
             └── Library.fsproj
 ```
 
-内容を置き換える、`Program.fs`を次のコード ファイル。
+`Program.fs`ファイルの内容を次のコードに置き換えます。
 
 ```fsharp
 open System
@@ -119,21 +119,21 @@ let main argv =
     0 // return an integer exit code
 ```
 
-参照を追加、`Library`プロジェクトを使用して[dotnet 参照の追加](../../core/tools/dotnet-add-reference.md)します。
+[Dotnet add reference](../../core/tools/dotnet-add-reference.md)を使用`Library`して、プロジェクトへの参照を追加します。
 
 ```console
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
-追加、`App`プロジェクトを`FSNetCore`ソリューションを使用して、`dotnet sln add`コマンド。
+次の`FSNetCore` `App` コマンドを使用して、`dotnet sln add`ソリューションにプロジェクトを追加します。
 
 ```console
 dotnet sln add src/App/App.fsproj
 ```
 
-NuGet の依存関係を復元`dotnet restore`実行`dotnet build`プロジェクトをビルドします。
+NuGet の依存関係を`dotnet restore`復元し`dotnet build` 、を実行してプロジェクトをビルドします。
 
-ディレクトリに、`src/App`コンソール プロジェクトとプロジェクトを渡すことを実行`Hello World`引数として。
+`src/App`コンソールプロジェクトにディレクトリを変更し、引数とし`Hello World`てを渡してプロジェクトを実行します。
 
 ```console
 cd src/App

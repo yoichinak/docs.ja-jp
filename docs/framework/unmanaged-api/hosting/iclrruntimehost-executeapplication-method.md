@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca8db6fd1296420011dcbfbbb0e5682f8a484dc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38938de335e5f0d7cb8051554c400f16df012362
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768815"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965357"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication メソッド
-マニフェスト ベースの ClickOnce 配置のシナリオで使用すると、新しいドメインでアクティブ化するアプリケーションを指定します。 これらのシナリオの詳細については、次を参照してください。 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)します。  
+新しいドメインでアクティブ化するアプリケーションを指定するために、マニフェストベースの ClickOnce 配置シナリオで使用されます。 これらのシナリオの詳細については、「 [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,48 +42,48 @@ HRESULT ExecuteApplication(
   
 ## <a name="parameters"></a>パラメーター  
  `pwzAppFullName`  
- [in]に対して定義されている、アプリケーションの完全名<xref:System.ApplicationIdentity>します。  
+ からに<xref:System.ApplicationIdentity>定義されているアプリケーションの完全名。  
   
  `dwManifestPaths`  
- [in]含まれる文字列の数、`ppwzManifestPaths`配列。  
+ から`ppwzManifestPaths`配列に格納されている文字列の数。  
   
  `ppwzManifestPaths`  
- [in] オプション。 アプリケーションのマニフェストのパスを含む文字列配列。  
+ [in] オプション。 アプリケーションのマニフェストパスを格納する文字列配列。  
   
  `dwActivationData`  
- [in]含まれる文字列の数、`ppwzActivationData`配列。  
+ から`ppwzActivationData`配列に格納されている文字列の数。  
   
  `ppwzActivationData`  
- [in] オプション。 Web 経由でデプロイされたアプリケーションの URL のクエリ文字列部分などのアプリケーションのアクティベーション データを含む文字列配列。  
+ [in] オプション。 Web に配置されたアプリケーションの URL のクエリ文字列部分など、アプリケーションのアクティベーションデータを格納する文字列配列。  
   
  `pReturnValue`  
- [out]アプリケーションのエントリ ポイントから返される値。  
+ 入出力アプリケーションのエントリポイントから返される値。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|S_OK|`ExecuteApplication`正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="remarks"></a>Remarks  
- `ExecuteApplication` 新しく作成されたアプリケーション ドメインで ClickOnce アプリケーションをアクティブ化に使用されます。  
+ `ExecuteApplication`は、新しく作成されたアプリケーションドメインで ClickOnce アプリケーションをアクティブ化するために使用されます。  
   
- `pReturnValue`出力パラメーターが、アプリケーションによって返される値に設定します。 場合は null の値を指定する場合`pReturnValue`、`ExecuteApplication`失敗しませんが、値を返さない。  
+ `pReturnValue`出力パラメーターは、アプリケーションによって返される値に設定されます。 に`pReturnValue`null 値を指定した場合、 `ExecuteApplication`は失敗しませんが、値を返しません。  
   
 > [!IMPORTANT]
->  呼び出すのではない、 [Start メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)メソッドを呼び出す前に、`ExecuteApplication`マニフェスト ベースのアプリケーションをアクティブ化するメソッド。 場合、`Start`メソッドが最初に、呼び出された、`ExecuteApplication`メソッドの呼び出しが失敗します。  
+> `ExecuteApplication`メソッドを呼び出してからマニフェストベースのアプリケーションをアクティブ化する前に、 [Start メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)メソッドを呼び出さないでください。 メソッドが最初`ExecuteApplication`に呼び出された場合、メソッドの呼び出しは失敗します。 `Start`  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

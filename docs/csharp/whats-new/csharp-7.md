@@ -3,35 +3,36 @@ title: C# 7.0 の新機能 - C# ガイド
 description: C# 言語のバージョン 7.0 での新機能の概要を説明します。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 0f26a9647503ebb667d961fefaa05a25a71ec6f5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347459"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926571"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 の新機能
 
 C# 7.0 では、C# 言語に多くの新機能が追加されます。
-* [`out` 変数](#out-variables)
+
+- [`out` 変数](#out-variables)
   - `out` の値は、それが使用されるメソッドの引数としてインラインで宣言できます。
-* [タプル](#tuples)
+- [タプル](#tuples)
   - 複数のパブリック フィールドを含む、軽量で名前のない型を作成できます。 コンパイラおよび IDE ツールでは、このような型のセマンティクスが認識されます。
-* [破棄](#discards)
+- [破棄](#discards)
   - 破棄は、割り当てられた値を考慮しない場合に割り当てで使用された、一時的な書き込み専用の値です。 タプルおよびユーザー定義の型を分解する場合や、メソッドを `out` パラメーターを使用して呼び出す場合に特に便利です。
-* [パターン一致](#pattern-matching)
+- [パターン一致](#pattern-matching)
   - これらの型のメンバーの任意の型と値に基づいて、分岐ロジックを作成できます。
-* [`ref` ローカル変数と戻り値](#ref-locals-and-returns)
+- [`ref` ローカル変数と戻り値](#ref-locals-and-returns)
   - メソッドのローカル変数と戻り値は、他のストレージへの参照になります。
-* [ローカル関数](#local-functions)
+- [ローカル関数](#local-functions)
   - 関数を他の関数の中に入れ子にして、関数のスコープと可視性を制限することができます。
-* [式形式のメンバーの追加](#more-expression-bodied-members)
+- [式形式のメンバーの追加](#more-expression-bodied-members)
   - 式を使用して作成できるメンバーが増加しました。
-* [`throw` 式](#throw-expressions)
+- [`throw` 式](#throw-expressions)
   - `throw` がステートメントだったためにこれまで許可されなかったコード コンストラクトで例外をスローできるようになりました。
-* [一般化された async の戻り値の型](#generalized-async-return-types)
+- [一般化された async の戻り値の型](#generalized-async-return-types)
   - `async` 修飾子を使って宣言したメソッドは、`Task` と `Task<T>` に加えて他の型を返すことができます。
-* [数値リテラルの構文の改善](#numeric-literal-syntax-improvements)
+- [数値リテラルの構文の改善](#numeric-literal-syntax-improvements)
   - 新しいトークンにより、数値定数の読みやすさが向上します。
 
 この記事の残りでは、各機能の概要について説明します。 機能ごとに、その背後にある論拠のほか、 構文についても説明します。 `dotnet try` グローバル ツールを使って、これらの機能をご自身の環境で調べることができます。
@@ -51,9 +52,9 @@ C# 7.0 では、C# 言語に多くの新機能が追加されます。
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* コードが読みやすくなる。
+- コードが読みやすくなる。
   - out 変数は、使用する場所で宣言します。その場所より上にある別の行で宣言しません。
-* 初期値を割り当てる必要がない。
+- 初期値を割り当てる必要がない。
   - `out` 変数は、メソッド呼び出し内の使用場所で宣言することにより、割り当てる前に誤って使用することがなくなります。
 
 ## <a name="tuples"></a>タプル
@@ -95,10 +96,10 @@ C# には、設計の意図を説明するために使用される、クラス�
 
 次のシナリオでは破棄はサポートされません。
 
-* タプルまたはユーザー定義の型を分解する場合。
-* [out](../language-reference/keywords/out-parameter-modifier.md) パラメーターを使用してメソッドを呼び出す場合。
-* [is](../language-reference/keywords/is.md) および [switch](../language-reference/keywords/switch.md) ステートメントによるパターン マッチング操作。
-* 割り当ての値を破棄として明示的に識別する必要がある場合の、スタンドアロン識別子。
+- タプルまたはユーザー定義の型を分解する場合。
+- [out](../language-reference/keywords/out-parameter-modifier.md) パラメーターを使用してメソッドを呼び出す場合。
+- [is](../language-reference/keywords/is.md) および [switch](../language-reference/keywords/switch.md) ステートメントによるパターン マッチング操作。
+- 割り当ての値を破棄として明示的に識別する必要がある場合の、スタンドアロン識別子。
 
 次の例では、ある都市の 2 つの異なる年度のデータを含む 6 つのタプルを戻す `QueryCityDataForYears` メソッドを定義しています。 この例のメソッド呼び出しでは、メソッドによって戻された 2 つの人口の値のみが考慮されているため、タプルの残りの値はタプルの分解時に破棄として扱われます。
 
@@ -180,15 +181,15 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 
 C# 言語には、`ref` ローカル変数と戻り値の誤用を防ぐ規則がいくつかあります。
 
-* メソッド シグネチャと、メソッド内のすべての `return` ステートメントに `ref` キーワードを追加する必要があります。
+- メソッド シグネチャと、メソッド内のすべての `return` ステートメントに `ref` キーワードを追加する必要があります。
   - それにより、メソッド全体でメソッドは参照渡しで返すことになります。
-* `ref return` は値の変数か `ref` 変数に割り当てることができます。
+- `ref return` は値の変数か `ref` 変数に割り当てることができます。
   - 呼び出し元により、戻り値がコピーされるかどうかが制御されます。 戻り値を割り当てるとき、`ref` 修飾子を省略すると、呼び出し元はストレージの参照ではなく、値のコピーを求めることになります。
-* 標準的なメソッドの戻り値を `ref` ローカル変数に割り当てることはできません。
+- 標準的なメソッドの戻り値を `ref` ローカル変数に割り当てることはできません。
   - したがって、`ref int i = sequence.Count();` のようなステートメントは使用できません。
-* 有効期間がメソッドの実行期間を超えない変数に `ref` を返すことはできません。
+- 有効期間がメソッドの実行期間を超えない変数に `ref` を返すことはできません。
   - つまり、ローカル変数または類似のスコープの変数への参照を返すことはできません。
-* `ref` ローカル変数と戻り値は、非同期メソッドと共に使用することはできません。
+- `ref` ローカル変数と戻り値は、非同期メソッドと共に使用することはできません。
   - コンパイラは、非同期メソッドが戻るときに、参照先の変数が、最終的な値に設定されているかどうかを認識できません。
 
 ref ローカル変数および ref 戻り値の追加により、値のコピーを回避したり、逆参照操作を複数回実行したりすることで、より効率的なアルゴリズムを実現できます。

@@ -2,24 +2,24 @@
 title: アーキテクチャとデザイン
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: c15bbeb22918b20010fddf373d1e80b7ff27f97c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 50fc643fecf4b188123c556d754b3cbfa529e5e9
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422782"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251717"
 ---
 # <a name="architecture-and-design"></a>アーキテクチャとデザイン
 
-SQL 生成モジュール、[サンプル プロバイダー](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)コマンド ツリーを表す式ツリー上のビジターとして実装されます。 生成は、式ツリーを介した単一のパスで行われます。
+[サンプルプロバイダー](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)の SQL 生成モジュールは、コマンドツリーを表す式ツリーのビジターとして実装されます。 生成は、式ツリーを介した単一のパスで行われます。
 
-ツリーのノードはボトムアップ方式で処理されます。 最初に、中間構造が生成されます。SqlSelectStatement または SqlBuilder を両方実装する ISqlFragment します。 次に、文字列である SQL ステートメントがその構造から生成されます。 中間構造には 2 つの理由があります。
+ツリーのノードはボトムアップ方式で処理されます。 まず、中間構造が生成されます。ISqlFragment を実装する SqlSelectStatement または SqlBuilder。 次に、文字列である SQL ステートメントがその構造から生成されます。 中間構造には 2 つの理由があります。
 
 - 論理上、SQL SELECT ステートメントは順序を無視して挿入されます。 FROM 句に参加するノードは、WHERE 句、GROUP BY 句、および ORDER BY 句に参加するノードの前にアクセスされます。
 
 - 別名の名前を変更するには、名前の変更中に競合が発生しないように、使用されているすべての別名を識別する必要があります。 SqlBuilder で名前変更の選択を遅らせるには、Symbol オブジェクトを使用して、名前変更の候補となる列を表します。
 
-![図](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
+![ダイアグラム](./media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
 
 最初のフェーズでは、式ツリーにアクセスしている間、式が SqlSelectStatement にグループ化され、結合がフラット化され、結合の別名がフラット化されます。 この段階では、Symbol オブジェクトは、名前変更が可能な列または入力の別名を表します。
 
@@ -27,7 +27,7 @@ SQL 生成モジュール、[サンプル プロバイダー](https://code.msdn.
 
 ## <a name="data-structures"></a>データ構造
 
-このセクションで使用される型の説明、[サンプル プロバイダー](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)使用して SQL ステートメントを作成することです。
+ここでは、SQL ステートメントの作成に使用する[サンプルプロバイダー](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)で使用される型について説明します。
 
 ### <a name="isqlfragment"></a>ISqlFragment
 
@@ -57,7 +57,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 
 #### <a name="sqlselectstatement"></a>SqlSelectStatement
 
-SqlSelectStatement は、"SELECT... の図形の正規 SQL SELECT ステートメントを表します FROM  .. WHERE … グループ化してください. ORDER BY"。
+SqlSelectStatement は、"SELECT..." という形の標準の SQL SELECT ステートメントを表します。 差出人。 WHERE … グループ化... ORDER BY "です。
 
 各 SQL 句は StringBuilder によって表されます。 また、Distinct が指定されているかどうか、およびステートメントが最上位かどうかを追跡します。 ステートメントが最上位ではなく、ステートメントに TOP 句も含まれていない場合は、ORDER BY 句は省略されます。
 
@@ -86,7 +86,7 @@ internal sealed class SqlSelectStatement : ISqlFragment {
 
 #### <a name="topclause"></a>TopClause
 
-TopClause は SqlSelectStatement の TOP 式を表します。 TopCount プロパティは、選択する必要がある TOP 行の数を示します。  WithTies が true の場合、TopClause は、DbLimitExpression から構築されました。
+TopClause は SqlSelectStatement の TOP 式を表します。 TopCount プロパティは、選択する必要がある TOP 行の数を示します。  WithTies が true の場合、TopClause は DbLimitExpression から構築されています。
 
 ```csharp
 class TopClause : ISqlFragment {
@@ -227,15 +227,15 @@ IsParentAJoin プロパティは、特定の結合をフラット化できるか
 
 入力の別名のリダイレクトは、シンボル テーブルによって行われます。
 
-入力の別名のリダイレクトを説明するための最初の例を参照してください[コマンド ツリーのベスト プラクティスからの SQL の生成](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)します。  この例では、"a" を投影の "b" にリダイレクトする必要がありました。
+入力のエイリアスのリダイレクトについては、「[コマンドツリーからの SQL の生成-ベストプラクティス](generating-sql-from-command-trees-best-practices.md)」の最初の例を参照してください。  この例では、"a" を投影の "b" にリダイレクトする必要がありました。
 
-SqlSelectStatement オブジェクトが作成されると、ノードへの入力であるエクステントが SqlSelectStatement の From プロパティに配置されます。 シンボル (\<symbol_b >) は、そのエクステントを表す入力バインディング名 ("b") と"AS"に基づいて作成 + \<symbol_b > が From 句に追加されます。  シンボルは FromExtents プロパティにも追加されます。
+SqlSelectStatement オブジェクトが作成されると、ノードへの入力であるエクステントが SqlSelectStatement の From プロパティに配置されます。 シンボル (\<symbol_b >) は、入力バインディング名 ("b") に基づいて作成されます。これは、エクステントおよび\<"AS" + symbol_b > が from 句に追加されることを表します。  シンボルは FromExtents プロパティにも追加されます。
 
-シンボルは、入力バインディング名をリンクするシンボル テーブルにも追加されます ("b"、 \<symbol_b >)。
+シンボルはシンボルテーブルにも追加され、入力バインド名がそれにリンクされます (" \<b"、symbol_b >)。
 
-後続のノードが SqlSelectStatement を再利用する場合、シンボル テーブルにエントリが追加され、その入力バインディング名がそのシンボルにリンクされます。 この例では、入力バインディング名が"a"の DbProjectExpression は、SqlSelectStatement を再利用を追加 ("a"、 \< symbol_b >) をテーブルにします。
+後続のノードが SqlSelectStatement を再利用する場合、シンボル テーブルにエントリが追加され、その入力バインディング名がそのシンボルにリンクされます。 この例では、入力バインディング名が "a" の dbprojectexpression は、sqlselectstatement を再利用し、テーブルに (" \< a"、symbol_b >) を追加します。
 
-SqlSelectStatement を再利用しているノードの入力バインディング名を式で参照すると、その参照は、シンボル テーブルを使用して、リダイレクトされた正しいシンボルに解決されます。 "A.x"から"a"が解決されると、シンボルを解決する"a"を表す DbVariableReferenceExpression にアクセス中に\<symbol_b >。
+SqlSelectStatement を再利用しているノードの入力バインディング名を式で参照すると、その参照は、シンボル テーブルを使用して、リダイレクトされた正しいシンボルに解決されます。 "A" を表す DbVariableReferenceExpression にアクセスしているときに "a.x" から "a" が解決されると、 \<シンボル symbol_b > に解決されます。
 
 ### <a name="join-alias-flattening"></a>結合の別名のフラット化
 
@@ -243,7 +243,7 @@ SqlSelectStatement を再利用しているノードの入力バインディン�
 
 ### <a name="column-name-and-extent-alias-renaming"></a>列名およびエクステントの別名の名前変更
 
-列名とエクステントの別名の名前変更の問題を解決するには別名を使った SQL 生成のフェーズの 2 番目のセクションで説明されている生成の 2 番目のフェーズで置換されるシンボルを使用しています。文字列のコマンドを生成しています。
+列名とエクステントの別名の名前変更の問題は、「SQL 生成の第2段階」で説明されているジェネレーションの2番目のフェーズでエイリアスに置き換えられるだけのシンボルを使用してアドレス指定されます。文字列コマンドを生成しています。
 
 ## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>SQL 生成の最初のフェーズ:式ツリーへのアクセス
 
@@ -345,7 +345,7 @@ ORDER BY sk1, sk2, ...
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>
 ```
 
-場所\<leftSqlSelectStatement > および\<rightSqlSelectStatement > は Sqlselectstatement の入力のそれぞれにアクセスして取得したと\<表します > は、対応する操作 (UNION ALL など)。
+ここ\<で、左の sqlselectstatement > と\<右上 sqlselectstatement > は、各入力\<にアクセスすることによって取得される sqlselectstatement であり、setop > は対応する操作 (UNION ALL など) です。
 
 ### <a name="dbscanexpression"></a>DbScanExpression
 
@@ -401,7 +401,7 @@ UNION ALL SELECT <visit-result-argN> as X
 
 特別な処理が必要な関数、およびその関数の適切なハンドラーを追跡するには、ディクショナリを使用します。
 
-ユーザー定義関数は、(arg1, arg2,..., argn) に変換されます。
+ユーザー定義関数は、NamespaceName. FunctionName (arg1, arg2,..., argn) に変換されます。
 
 ### <a name="dbelementexpression"></a>DbElementExpression
 
@@ -435,7 +435,7 @@ DbIsEmptyExpression は次のように変換されます。
 IsEmpty(input) = Not Exists(input)
 ```
 
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成の 2 番目のフェーズ:文字列コマンドの生成
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成の2番目のフェーズ:String コマンドを生成する
 
 文字列 SQL コマンドを生成すると、SqlSelectStatement によって、シンボルの実際の別名が生成されます。これにより、列名とエクステントの別名の名前変更に関する問題が解決されます。
 
@@ -443,8 +443,8 @@ IsEmpty(input) = Not Exists(input)
 
 列の名前変更は、Symbol オブジェクトを文字列に書き込むときに行われます。 最初のフェーズの AddDefaultColumns は、特定の列のシンボルの名前を変更する必要があるかどうかを判断します。 2 番目のフェーズでは、生成された名前が AllColumnNames で使用される名前と競合しないことを確認するために、名前の変更のみが行われます。
 
-エクステントの別名と列の両方の一意の名前を生成するために使用\<existing_name > _n n はまだ使用されていない最小の別名です。 すべての別名のグローバル リストを使用すると、連鎖名前変更の必要性が高くなります。
+エクステントの別名と列の両方で一意の名前を生成\<するには、existing_name > _n を使用します。ここで、n はまだ使用されていない最小のエイリアスです。 すべての別名のグローバル リストを使用すると、連鎖名前変更の必要性が高くなります。
 
 ## <a name="see-also"></a>関連項目
 
-- [サンプル プロバイダーでの SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+- [サンプル プロバイダーでの SQL 生成](sql-generation-in-the-sample-provider.md)

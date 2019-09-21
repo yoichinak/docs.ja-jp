@@ -13,12 +13,12 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: 9ac1d749d18a9d02ce28f8cf600495f345ec0e89
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: aadb24c43d49acb3e71490efd156b14d9fc5f133
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489268"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587973"
 ---
 # <a name="list-c-programming-guide"></a>\<list> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -36,7 +36,7 @@ ms.locfileid: "57489268"
 </list>  
 ```  
   
-## <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>parameters  
  `term`  
  定義される用語であり、`description` で定義されます。  
   
@@ -50,12 +50,12 @@ ms.locfileid: "57489268"
   
  リストまたはテーブルでは、必要な数の \<item> ブロックを使用できます。  
   
- コンパイル時に [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。  
+ コンパイル時に [/doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
  [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ドキュメント コメントとして推奨されるタグ](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# プログラミング ガイド](../index.md)
+- [ドキュメント コメントとして推奨されるタグ](./recommended-tags-for-documentation-comments.md)

@@ -14,18 +14,18 @@ helpviewer_keywords:
 - OnRender method [WPF], overriding
 - Panel control [WPF], overriding OnRender method
 ms.assetid: 57397834-a085-4e36-90ab-416fad98f341
-ms.openlocfilehash: c4539847368c1a5789e99ec92106d17077ed5943
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23c3353e130585ed83726816a467ca73f6aa9152
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770839"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666716"
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>方法: パネルの OnRender メソッドをオーバーライドする
-この例は、オーバーライドする方法を示します、<xref:System.Windows.Controls.Panel.OnRender%2A>メソッドの<xref:System.Windows.Controls.Panel>レイアウト要素にカスタムのグラフィカルな効果を追加するためにします。  
+この例では、レイアウト要素<xref:System.Windows.Controls.Panel.OnRender%2A>にカスタム<xref:System.Windows.Controls.Panel>のグラフィカル効果を追加するために、のメソッドをオーバーライドする方法を示します。  
   
 ## <a name="example"></a>例  
- 使用して、<xref:System.Windows.Controls.Panel.OnRender%2A>表示パネル要素にグラフィック効果を追加するにはメソッドです。 たとえば、このメソッドを使用すると、カスタム境界線や背景の効果を追加します。 A<xref:System.Windows.Media.DrawingContext>オブジェクトは、図形、テキスト、画像、またはビデオを描画するためのメソッドを提供する引数として渡されます。 その結果、このメソッドは、パネル オブジェクトのカスタマイズに役立ちます。  
+ レンダリングさ<xref:System.Windows.Controls.Panel.OnRender%2A>れた panel 要素にグラフィカルな効果を追加するには、メソッドを使用します。 たとえば、このメソッドを使用して、カスタムの罫線または背景効果を追加できます。 <xref:System.Windows.Media.DrawingContext>オブジェクトは、図形、テキスト、画像、またはビデオを描画するためのメソッドを提供する引数として渡されます。 このため、このメソッドは、panel オブジェクトをカスタマイズする場合に便利です。  
   
  [!code-csharp[LightWeightCustomPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LightWeightCustomPanel/CSharp/OffsetPanel.cs#1)]
  [!code-vb[LightWeightCustomPanel#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LightWeightCustomPanel/visualbasic/offsetpanel.vb#1)]  
@@ -34,5 +34,4 @@ ms.locfileid: "61770839"
 
 - <xref:System.Windows.Controls.Panel>
 - [パネルの概要](panels-overview.md)
-- [カスタム放射状パネルのサンプル](https://go.microsoft.com/fwlink/?LinkID=159982)
 - [方法トピック](panel-how-to-topics.md)

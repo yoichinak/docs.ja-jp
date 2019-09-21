@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3c03a6dadae98d75b06b96bb3cde67db4747b8c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628933"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950869"
 ---
 # <a name="asynchronous-programming-model-apm"></a>非同期プログラミング モデル (APM)
 <xref:System.IAsyncResult> デザイン パターンを使用する非同期操作は `BeginOperationName` と `EndOperationName` という名前の、各 *OperationName* 非同期操作を開始および終了する 2 種類のメソッドとして実装されます。 たとえば、 <xref:System.IO.FileStream> クラスは、 <xref:System.IO.FileStream.BeginRead%2A> および <xref:System.IO.FileStream.EndRead%2A> メソッドを提供して、非同期的にファイルからバイトを読み取ります。 これらのメソッドは非同期バージョンの <xref:System.IO.FileStream.Read%2A> メソッドを実装します。  
   
 > [!NOTE]
->  .NET Framework 4 以降では、タスク並列ライブラリによって非同期/並列プログラミングの新しいモデルが提供されます。 詳細については、「 [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) 」および「 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)」を参照してください。  
+> .NET Framework 4 以降では、タスク並列ライブラリによって非同期/並列プログラミングの新しいモデルが提供されます。 詳細については、「 [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) 」および「 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)」を参照してください。  
   
  `BeginOperationName` を呼び出した後、アプリケーションは別のスレッドで非同期操作が行われている間も、スレッドの呼び出しに関する命令の実行を続行できます。 `BeginOperationName` の呼び出しごとに、アプリケーションでは `EndOperationName` も呼び出して、操作の結果を取得する必要があります。  
   
@@ -48,10 +48,10 @@ ms.locfileid: "64628933"
  `EndOperationName` が呼び出されるときに <xref:System.IAsyncResult> オブジェクトによって表される非同期操作が完了していない場合、`EndOperationName` は非同期操作が完了するまで、呼び出し元スレッドをブロックします。 非同期操作によってスローされた例外は、`EndOperationName` メソッドからスローされます。 同じ <xref:System.IAsyncResult> を使用して `EndOperationName` メソッドを複数回呼び出す場合の効果は定義されません。 同様に、関連する Begin メソッドによって返されたのではない <xref:System.IAsyncResult> を使用した `EndOperationName` メソッドの呼び出しも定義されません。  
   
 > [!NOTE]
->  どちらの未定義シナリオの場合でも、実装者は <xref:System.InvalidOperationException>のスローを検討する必要があります。  
+> どちらの未定義シナリオの場合でも、実装者は <xref:System.InvalidOperationException>のスローを検討する必要があります。  
   
 > [!NOTE]
->  このデザイン パターンの実装者は <xref:System.IAsyncResult.IsCompleted%2A> を true に設定し、非同期コールバック メソッドを呼び出して (指定されている場合)、 <xref:System.IAsyncResult.AsyncWaitHandle%2A>をシグナリングすることで、非同期操作の完了を呼び出し元に通知する必要があります。  
+> このデザイン パターンの実装者は <xref:System.IAsyncResult.IsCompleted%2A> を true に設定し、非同期コールバック メソッドを呼び出して (指定されている場合)、 <xref:System.IAsyncResult.AsyncWaitHandle%2A>をシグナリングすることで、非同期操作の完了を呼び出し元に通知する必要があります。  
   
  アプリケーション開発者には、非同期操作の結果にアクセスするための、デザイン上の選択肢がいくつかあります。 どの選択が適切になるかは、アプリケーションが操作の完了前に実行できる命令を持っているかどうかによって変わります。 非同期操作の結果を受け取るまで、アプリケーションが別の作業を実行できない場合は、結果が使用可能になるまで、そのアプリケーションをブロックする必要があります。 非同期操作が完了するまでブロックするには、次に示す方法の 1 つを使用します。  
   

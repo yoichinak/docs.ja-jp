@@ -2,18 +2,18 @@
 title: カスタム追跡
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: fff88c50dd2004d4491e050258ef760c033f6de5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 32abf1dc4c9607b4a86f836fa2c759af1dbf1b69
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622565"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989411"
 ---
 # <a name="custom-tracking"></a>カスタム追跡
 このサンプルでは、カスタムの追跡参加要素を作成し、追跡データをコンソールに出力する方法を示します。 また、ユーザー定義データが設定された <xref:System.Activities.Tracking.CustomTrackingRecord> オブジェクトを出力する方法も示します。 コンソール ベースの追跡参加要素は、コードで作成された追跡プロファイル オブジェクトを使用して、ワークフローで出力された <xref:System.Activities.Tracking.TrackingRecord> オブジェクトをフィルター処理します。
 
 ## <a name="sample-details"></a>サンプルの詳細
- Windows Workflow Foundation (WF) は、ワークフロー インスタンスの実行を追跡できる追跡インフラストラクチャを提供します。 追跡ランタイムは、ワークフロー ライフサイクルに関連するイベント、ワークフロー アクティビティのイベント、およびカスタム追跡イベントを出力するワークフロー インスタンスを実装しています。 次の表で、追跡インフラストラクチャの主要コンポーネントの詳細を説明します。
+ Windows Workflow Foundation (WF) は、ワークフローインスタンスの実行を追跡するための追跡インフラストラクチャを提供します。 追跡ランタイムは、ワークフロー ライフサイクルに関連するイベント、ワークフロー アクティビティのイベント、およびカスタム追跡イベントを出力するワークフロー インスタンスを実装しています。 次の表で、追跡インフラストラクチャの主要コンポーネントの詳細を説明します。
 
 |コンポーネント|説明|
 |---------------|-----------------|
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }
 ```
 
- 完全な追跡参加要素は ConsoleTrackingParticipant.cs ファイルで実装します。次のコード例は、カスタム追跡参加要素の <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> メソッドです。
+ 完全な追跡参加要素は、ConsoleTrackingParticipant.cs ファイルに実装されます。 カスタム追跡参加要素の<xref:System.Activities.Tracking.TrackingParticipant.Track%2A>メソッドを次のコード例に示します。
 
 ```csharp
 protected override void Track(TrackingRecord record, TimeSpan timeout)
@@ -112,7 +112,7 @@ invoker.Extensions.Add(customTrackingParticipant);
 
 - <xref:System.Activities.Tracking.CustomTrackingRecord> オブジェクトは、レコードと一緒に出力する必要があるユーザー定義データを使用して作成および設定します。
 
-- <xref:System.Activities.Tracking.CustomTrackingRecord>の追跡メソッドを呼び出すことによって生成されますが、<xref:System.Activities.ActivityContext>します。
+- は、<xref:System.Activities.ActivityContext>の track メソッドを呼び出すことによって出力されます。<xref:System.Activities.Tracking.CustomTrackingRecord>
 
  次の例では、カスタム アクティビティ内で <xref:System.Activities.Tracking.CustomTrackingRecord> オブジェクトを出力する方法を示します。
 
@@ -133,20 +133,20 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1. Visual Studio 2010 を使用して、CustomTrackingSample.sln ソリューション ファイルを開きます。
+1. Visual Studio 2010 を使用して、CustomTrackingSample .sln ソリューションファイルを開きます。
 
 2. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
 3. ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。
 
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>関連項目
 

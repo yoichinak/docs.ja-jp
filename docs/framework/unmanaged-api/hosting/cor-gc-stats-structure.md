@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 630c365c8710388ae3e913bedece0fb710da7cd9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1085bec812d797d3fbe4ea63ef447d4c466149f2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768138"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965056"
 ---
-# <a name="corgcstats-structure"></a>COR_GC_STATS 構造体
-共通言語ランタイム (CLR) のガベージ コレクションのメカニズムについての統計情報を提供します。  
+# <a name="cor_gc_stats-structure"></a>COR_GC_STATS 構造体
+共通言語ランタイム (CLR) のガベージコレクション機構に関する統計情報を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,28 +48,28 @@ typedef struct _COR_GC_STATS {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`Flags`|フィールドの値を計算し、返される必要がありますを示します。|  
-|`ExplicitGCCount`|外部要求によって強制的に実行されたガベージ コレクションの数を示します。|  
-|`GenCollectionsTaken`|生成されるたびに実行されたガベージ コレクションの数を示します。|  
-|`CommittedKBytes`|すべてのヒープでコミットされたキロバイト単位の合計数。|  
-|`ReservedKBytes`|すべてのヒープで予約されているキロバイト数の合計。|  
-|`Gen0HeapSizeKBytes`|ジェネレーション 0 ヒープのサイズ。|  
-|`Gen1HeapSizeKBytes`|ジェネレーション 1 のヒープのサイズ。|  
-|`Gen2HeapSizeKBytes`|ジェネレーション 2 のヒープのサイズ。|  
-|`LargeObjectHeapSizeKBytes`|大きなオブジェクト ヒープのサイズ。|  
-|`KBytesPromotedFromGen0`|ジェネレーション 0 からジェネレーション 1 に昇格したオブジェクトのサイズ。|  
-|`KBytesPromotedFromGen1`|ジェネレーション 1 からジェネレーション 2 に昇格したオブジェクトのサイズ。|  
+|`Flags`|計算および返されるフィールド値を示します。|  
+|`ExplicitGCCount`|外部要求によって強制されたガベージコレクションの数を示します。|  
+|`GenCollectionsTaken`|生成のたびに実行されるガベージコレクションの数を示します。|  
+|`CommittedKBytes`|すべてのヒープでコミットされた合計キロバイト数。|  
+|`ReservedKBytes`|すべてのヒープに予約されているキロバイト数の合計です。|  
+|`Gen0HeapSizeKBytes`|ジェネレーションゼロヒープのサイズ (kb 単位)。|  
+|`Gen1HeapSizeKBytes`|ジェネレーション1のヒープのサイズ (kb 単位)。|  
+|`Gen2HeapSizeKBytes`|ジェネレーション2のヒープのサイズ (kb 単位)。|  
+|`LargeObjectHeapSizeKBytes`|ラージオブジェクトヒープのサイズ (kb 単位)。|  
+|`KBytesPromotedFromGen0`|ジェネレーション0からジェネレーション1に昇格されたオブジェクトのサイズ (kb 単位)。|  
+|`KBytesPromotedFromGen1`|ジェネレーション1からジェネレーション2に昇格されたオブジェクトのサイズ (kb 単位)。|  
   
 ## <a name="remarks"></a>Remarks  
- [Iclrgcmanager::getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)メソッドが必要です、`Flags`のフィールド、`COR_GC_STATS`構造体の 1 つまたは複数の値に設定する、 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)を指定する列挙型統計情報では、設定します。  
+ [ICLRGCManager:: getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)メソッドでは、 `Flags`設定する統計を指定するために、 `COR_GC_STATS`構造体のフィールドを[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)列挙の1つ以上の値に設定する必要があります。  
   
- 次の表は、2 つに、この構造体によって提供される統計[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)列挙値、`COR_GC_COUNTS`と`COR_GC_MEMORYUSAGE`します。  
+ 次の表は、この構造体によって提供される統計を、 `COR_GC_COUNTS`と`COR_GC_MEMORYUSAGE`の2つの [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) 列挙値にマップします。  
   
-|COR_GC_COUNTS で指定されました。|COR_GC_MEMORYUSAGE で指定されました。|  
+|指定された COR_GC_COUNTS|指定された COR_GC_MEMORYUSAGE|  
 |----------------------------------|---------------------------------------|  
 |`ExplicitGCCount`<br /><br /> `GenCollectionsTaken`|`CommittedKBytes`<br /><br /> `ReservedKBytes`<br /><br /> `Gen0HeapSizeKBytes`<br /><br /> `Gen1HeapSizeKBytes`<br /><br /> `Gen2HeapSizeKBytes`<br /><br /> `LargeObjectHeapSizeKBytes`<br /><br /> `KBytesPromotedFromGen0`<br /><br /> `KBytesPromotedFromGen1`|  
   
- 使用状況の例は次のとおりです。  
+ 使用例を次に示します。  
   
 ```cpp  
 COR_GC_STATS GCStats;  
@@ -78,16 +78,16 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** GCHost.idl  
+ **ヘッダー:** GCHost  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ホスト構造体](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [自動メモリ管理](../../../../docs/standard/automatic-memory-management.md)
-- [ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)
+- [自動メモリ管理](../../../standard/automatic-memory-management.md)
+- [ガベージ コレクション](../../../standard/garbage-collection/index.md)

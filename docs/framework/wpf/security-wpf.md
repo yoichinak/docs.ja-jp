@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 6bd597cd2719fb96b8633f724da46a76e416b454
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 019035247b1316eb236b025d4527c42bb6ef526c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817901"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962822"
 ---
 # <a name="security-wpf"></a>セキュリティ (WPF)
 <a name="introduction"></a>Windows Presentation Foundation (WPF) のスタンドアロンアプリケーションとブラウザーでホストされるアプリケーションを開発する場合は、セキュリティモデルを考慮する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]スタンドアロンアプリケーションは、Windows インストーラー (.msi)、XCopy、または ClickOnce を使用してデプロイされているかどうかにかかわらず、無制限のアクセス許可 (CAS**FullTrust**アクセス許可セット) で実行されます。 部分的に信頼されたスタンドアロンの WPF アプリケーションを ClickOnce で展開することはサポートされていません。 ただし、完全に信頼されたホストアプリケーションでは、.NET Framework <xref:System.AppDomain>アドインモデルを使用して部分信頼を作成できます。 詳細については、「 [WPF アドインの概要](./app-development/wpf-add-ins-overview.md)」を参照してください。  
@@ -65,7 +65,7 @@ ms.locfileid: "68817901"
 |アプリケーション コード|コンパイルされたコード分離を含む XAML リソース。<br /><br /> \- または -<br /><br /> **ページ**のビルドの種類を使用してプロジェクトに追加される XAML ファイル。|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
->  アプリケーションデータファイルとパック[!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]の詳細については、「 [WPF アプリケーションのリソースファイル、コンテンツファイル、およびデータファイル](./app-development/wpf-application-resource-content-and-data-files.md)」を参照してください。  
+> アプリケーションデータファイルとパック[!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]の詳細については、「 [WPF アプリケーションのリソースファイル、コンテンツファイル、およびデータファイル](./app-development/wpf-application-resource-content-and-data-files.md)」を参照してください。  
   
  これらのコンテンツ タイプのファイルは、ユーザーまたはプログラムを使用して移動できます。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68817901"
      ![[セキュリティの設定] ダイアログボックスを表示するスクリーンショット。](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
   
 > [!NOTE]
->  [インターネット オプション] ダイアログ ボックスは、Internet Explorer から開くこともできます。 **[ツール]** をクリックし、 **[インターネットオプション]** をクリックします。  
+> [インターネット オプション] ダイアログ ボックスは、Internet Explorer から開くこともできます。 **[ツール]** をクリックし、 **[インターネットオプション]** をクリックします。  
   
  Windows Internet Explorer 7 以降では、.NET Framework に特化した次のセキュリティ設定が含まれています。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "68817901"
  WPF <xref:System.Windows.Controls.WebBrowser>コントロールは、Web コンテンツをホストするために使用できます。 WPF <xref:System.Windows.Controls.WebBrowser>コントロールは、基になる WebBrowser ActiveX コントロールをラップします。 Wpf は、wpf <xref:System.Windows.Controls.WebBrowser>コントロールを使用して信頼されていない Web コンテンツをホストするときに、アプリケーションのセキュリティを確保するためのサポートを提供します。 ただし、一部のセキュリティ機能は、 <xref:System.Windows.Controls.WebBrowser>コントロールを使用してアプリケーションで直接適用する必要があります。 WebBrowser ActiveX コントロールの詳細については、「 [Webbrowser コントロールの概要とチュートリアル](https://go.microsoft.com/fwlink/?LinkId=179388)」を参照してください。  
   
 > [!NOTE]
->  このセクションは、 <xref:System.Windows.Controls.Frame> <xref:System.Windows.Controls.WebBrowser>を使用して HTML コンテンツに移動するため、コントロールにも適用されます。  
+> このセクションは、 <xref:System.Windows.Controls.Frame> <xref:System.Windows.Controls.WebBrowser>を使用して HTML コンテンツに移動するため、コントロールにも適用されます。  
   
  信頼され<xref:System.Windows.Controls.WebBrowser>ていない Web コンテンツをホストするために WPF コントロールを使用する場合、 <xref:System.AppDomain>アプリケーションは、悪意のある可能性のある HTML スクリプトコードからアプリケーションコードを分離するために、部分信頼を使用する必要があります。 これは、アプリケーションが<xref:System.Windows.Controls.WebBrowser.InvokeScript%2A>メソッド<xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>とプロパティを使用してホストされているスクリプトと対話する場合に特に当てはまります。 詳細については、「 [WPF アドインの概要](./app-development/wpf-add-ins-overview.md)」を参照してください。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "68817901"
  機能コントロールは、WebBrowser ActiveX オブジェクトをインスタンス化するプロセスによって適用されます。 そのため、信頼されていないコンテンツに移動できるスタンドアロン アプリケーションを作成する場合は、その他の機能コントロールを有効にすることを検討すべきです。  
   
 > [!NOTE]
->  この推奨事項は、MSHTML および SHDOCVW ホスト セキュリティの一般的な推奨事項に基づいています。 詳細については[、「MSHTML ホストのセキュリティに関する FAQ」を参照してください。第 2](https://go.microsoft.com/fwlink/?LinkId=179396)部のパート[I と MSHTML ホストのセキュリティに関する FAQ:II](https://go.microsoft.com/fwlink/?LinkId=179415)のパート ii。  
+> この推奨事項は、MSHTML および SHDOCVW ホスト セキュリティの一般的な推奨事項に基づいています。 詳細については[、「MSHTML ホストのセキュリティに関する FAQ」を参照してください。第 2](https://go.microsoft.com/fwlink/?LinkId=179396)部のパート[I と MSHTML ホストのセキュリティに関する FAQ:II](https://go.microsoft.com/fwlink/?LinkId=179415)のパート ii。  
   
  実行可能ファイルでは、レジストリ値を 1 に設定して以下の機能コントロールを有効にすることを検討してください。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "68817901"
  Internet Explorer で実行されている XBAP にも、標準のスタンドアロン アプリケーションよりも高いレベルのセキュリティが適用されます。 この追加のセキュリティが必要になるのは、Internet Explorer (したがって、WebBrowser ActiveX コントロール) が[!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)]既定[!INCLUDE[win7](../../../includes/win7-md.md)]でおよびでは保護モードで実行されるためです。 保護モードの詳細については、「 [Internet Explorer の保護モードの概要と操作](https://go.microsoft.com/fwlink/?LinkId=179393)」を参照してください。  
   
 > [!NOTE]
->  インターネットゾーン<xref:System.Windows.Controls.WebBrowser> <xref:System.Security.SecurityException>内で、WPF コントロールを含む XBAP を Firefox で実行しようとすると、がスローされます。 これは、WPF セキュリティ ポリシーが原因です。  
+> インターネットゾーン<xref:System.Windows.Controls.WebBrowser> <xref:System.Security.SecurityException>内で、WPF コントロールを含む XBAP を Firefox で実行しようとすると、がスローされます。 これは、WPF セキュリティ ポリシーが原因です。  
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>部分信頼クライアント アプリケーションに対する APTCA の無効化  
@@ -241,7 +241,7 @@ ms.locfileid: "68817901"
  部分信頼クライアント アプリケーションに対してアセンブリを無効にする必要がある場合は、レジストリ キーおよび値を作成する更新プログラムを作成します。  
   
 > [!NOTE]
->  コア .NET Framework アセンブリは、マネージアプリケーションを実行するために必要なため、この方法で無効にしても影響を受けません。 APTCA アセンブリの無効化のサポートは、主にサードパーティ アプリケーションを対象にしたものです。  
+> コア .NET Framework アセンブリは、マネージアプリケーションを実行するために必要なため、この方法で無効にしても影響を受けません。 APTCA アセンブリの無効化のサポートは、主にサードパーティ アプリケーションを対象にしたものです。  
   
 <a name="LooseContentSandboxing"></a>   
 ## <a name="sandbox-behavior-for-loose-xaml-files"></a>Loose XAML ファイルに対するサンドボックスの動作  
@@ -258,7 +258,7 @@ ms.locfileid: "68817901"
  このように設定すると、外部コンテンツは、アプリケーションをホストするプロセスとは異なるプロセスに読み込まれます。 このプロセスは既定のインターネット ゾーン アクセス許可セットに限定されており、ホスト アプリケーションとクライアント コンピューターから外部コンテンツを効果的に分離します。  
   
 > [!NOTE]
->  スタンドアロンアプリケーションの[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Navigation.NavigationWindow>または<xref:System.Windows.Controls.Frame>からのルースファイルへの移動は、プレゼンテーションホストプロセスを含む WPF ブラウザーホスティングインフラストラクチャに基づいて実装されますが、セキュリティレベルは[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]との Internet Explorer でコンテンツが直接読み込まれる場合 (これは[!INCLUDE[win7](../../../includes/win7-md.md)]引き続き、プレゼンテーションホストを通じて行われます) よりも少し少ないです。 これは、Web ブラウザーを使用しているスタンドアロン WPF アプリケーションに、Internet Explorer の保護モード セキュリティ機能が追加されていないためです。  
+> スタンドアロンアプリケーションの[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Navigation.NavigationWindow>または<xref:System.Windows.Controls.Frame>からのルースファイルへの移動は、プレゼンテーションホストプロセスを含む WPF ブラウザーホスティングインフラストラクチャに基づいて実装されますが、セキュリティレベルは[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]との Internet Explorer でコンテンツが直接読み込まれる場合 (これは[!INCLUDE[win7](../../../includes/win7-md.md)]引き続き、プレゼンテーションホストを通じて行われます) よりも少し少ないです。 これは、Web ブラウザーを使用しているスタンドアロン WPF アプリケーションに、Internet Explorer の保護モード セキュリティ機能が追加されていないためです。  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>セキュリティを向上する WPF アプリケーションを開発するためのリソース  

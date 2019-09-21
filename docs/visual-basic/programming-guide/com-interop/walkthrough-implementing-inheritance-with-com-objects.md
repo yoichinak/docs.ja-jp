@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: f632df919417c04701727be3e99eb2bf3f6ff1f7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7cbf71d7a2bbd1e94864e785894fdea41d522486
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627037"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053332"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>チュートリアル: COM オブジェクトを使用した継承の実装 (Visual Basic)
 
@@ -22,15 +22,15 @@ Visual Basic クラスは、以前の`Public`バージョンの Visual Basic で
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>このチュートリアルで使用する COM オブジェクトをビルドするには
+## <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>このチュートリアルで使用する COM オブジェクトをビルドするには
 
 1. Visual Basic 6.0 で、新しい ActiveX DLL プロジェクトを開きます。 という名前`Project1`のプロジェクトが作成されます。 このクラスには、 `Class1`という名前のクラスがあります。
 
-2. **Project Explorer**で、[ **project1**] を右クリックし、[ **project1 のプロパティ**] をクリックします。 [**プロジェクトのプロパティ**] ダイアログボックスが表示されます。
+2. **Project Explorer**で、 **[project1]** を右クリックし、 **[project1 のプロパティ]** をクリックします。 **[プロジェクトのプロパティ]** ダイアログボックスが表示されます。
 
-3. [**プロジェクトのプロパティ**] ダイアログボックス`ComObject1`の **[全般**] タブで、[プロジェクト**名**] フィールドに「」と入力してプロジェクト名を変更します。
+3. **[プロジェクトのプロパティ]** ダイアログボックス`ComObject1`の **[全般**] タブで、プロジェクト **[名]** フィールドに「」と入力してプロジェクト名を変更します。
 
-4. **プロジェクトエクスプローラー**で、を右クリック`Class1`し、[**プロパティ**] をクリックします。 クラスの [**プロパティ**] ウィンドウが表示されます。
+4. **プロジェクトエクスプローラー**で、を右クリック`Class1`し、 **[プロパティ]** をクリックします。 クラスの **[プロパティ]** ウィンドウが表示されます。
 
 5. プロパティをに`MathFunctions`変更します。 `Name`
 
@@ -67,16 +67,16 @@ Visual Basic クラスは、以前の`Public`バージョンの Visual Basic で
     End Function
     ```
 
-10. [**ファイル**] メニューの [ **ComObject1**の作成] をクリックして、COM オブジェクトを作成し、登録します。
+10. **[ファイル]** メニューの **[ComObject1]** の作成 をクリックして、COM オブジェクトを作成し、登録します。
 
     > [!NOTE]
     > Visual Basic で作成されたクラスを COM オブジェクトとして公開することもできますが、これは真の COM オブジェクトではなく、このチュートリアルでは使用できません。 詳細については、「 [.NET Framework アプリケーションでの COM 相互運用性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)」を参照してください。
 
 ## <a name="interop-assemblies"></a>相互運用機能アセンブリ
 
-次の手順では、アンマネージコード (COM オブジェクトなど) と Visual Studio で使用されるマネージコードの間のブリッジとして機能する相互運用機能アセンブリを作成します。 Visual Basic によって作成された相互運用機能アセンブリは、com オブジェクトとの間で移動するときに、パラメーターと戻り値を同等のデータ型にパッケージ化するプロセスなど、com オブジェクトの操作の詳細の多くを処理します。 Visual Basic アプリケーション内の参照は、実際の COM オブジェクトではなく、相互運用機能アセンブリを指します。
+次の手順では、アンマネージコード (COM オブジェクトなど) と Visual Studio で使用されるマネージコードの間のブリッジとして機能する相互運用機能アセンブリを作成します。 Visual Basic に*よって作成*された相互運用機能アセンブリは、com オブジェクトとの間で移動するときに、パラメーターと戻り値を同等のデータ型にパッケージ化するプロセスなど、com オブジェクトの操作の詳細の多くを処理します。 Visual Basic アプリケーション内の参照は、実際の COM オブジェクトではなく、相互運用機能アセンブリを指します。
 
-#### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Visual Basic 2005 以降のバージョンで COM オブジェクトを使用するには
+### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Visual Basic 2005 以降のバージョンで COM オブジェクトを使用するには
 
 1. 新しい Visual Basic Windows アプリケーション プロジェクトを開きます。
 
@@ -84,15 +84,15 @@ Visual Basic クラスは、以前の`Public`バージョンの Visual Basic で
 
      **[参照の追加]** ダイアログ ボックスが表示されます。
 
-3. [ **COM** ] タブで、[ `ComObject1` **コンポーネント名**] ボックスの一覧をダブルクリックし、[ **OK**] をクリックします。
+3. **[COM]** タブで、[ `ComObject1` **コンポーネント名**] ボックスの一覧をダブルクリックし、 **[OK]** をクリックします。
 
 4. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。
 
      **[新しい項目の追加]** ダイアログ ボックスが表示されます。
 
-5. [**テンプレート**] ペインで、[**クラス**] をクリックします。
+5. **[テンプレート]** ペインで、 **[クラス]** をクリックします。
 
-     既定のファイル名`Class1.vb`は、[**名前**] フィールドに表示されます。 このフィールドを MathClass に変更し、[**追加**] をクリックします。 これにより、と`MathClass`いう名前のクラスが作成され、そのコードが表示されます。
+     既定のファイル名`Class1.vb`は、 **[名前]** フィールドに表示されます。 このフィールドを MathClass に変更し、 **[追加]** をクリックします。 これにより、と`MathClass`いう名前のクラスが作成され、そのコードが表示されます。
 
 6. COM クラスを継承するために、 `MathClass`の先頭に次のコードを追加します。
 
@@ -108,7 +108,7 @@ Visual Basic クラスは、以前の`Public`バージョンの Visual Basic で
 
 新しいクラスは、COM オブジェクトの基底クラスのプロパティを継承し、メソッドをオーバーロードして、クラスを拡張する新しいメソッドを定義します。
 
-#### <a name="to-test-the-inherited-class"></a>継承されたクラスをテストするには
+### <a name="to-test-the-inherited-class"></a>継承されたクラスをテストするには
 
 1. スタートアップフォームにボタンを追加し、それをダブルクリックしてコードを表示します。
 

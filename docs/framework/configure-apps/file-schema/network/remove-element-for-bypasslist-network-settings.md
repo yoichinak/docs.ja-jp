@@ -10,20 +10,20 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: a04cca3e57af5cc422776c5b2444a140e86f98b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99c18bd5b779845d52831b4a9591eaf4d5e5530b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674468"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920964"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<削除 > bypasslist (ネットワーク設定) の要素
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<bypasslist の > 要素の削除 (ネットワーク設定)
 
-プロキシ バイ パスの一覧から IP アドレスまたは DNS 名を削除します。
+プロキシバイパスリストから IP アドレスまたは DNS 名を削除します。
 
-\<configuration>\
+\<configuration>
 \<system.net>\
-\<defaultProxy>\
+\<defaultProxy > \
 \<bypasslist>\
 \<remove>
 
@@ -53,15 +53,15 @@ ms.locfileid: "61674468"
 
 |**要素**|**説明**|
 |-----------------|---------------------|
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|一連のプロキシを使用しないアドレスを記述する正規表現を提供します。|
+|[bypasslist](bypasslist-element-network-settings.md)|プロキシを使用しないアドレスを記述する一連の正規表現を提供します。|
 
 ## <a name="remarks"></a>Remarks
 
-`remove`要素は、IP アドレスまたはプロキシ サーバーをバイパスするアドレスのリストから DNS サーバー名を記述する正規表現を削除します。 アドレスは、構成ファイルで、または構成階層のより高いレベルで既に定義されてです。
+要素`remove`は、プロキシサーバーをバイパスするアドレスの一覧から、IP アドレスまたは DNS サーバー名を記述する正規表現を削除します。 これらのアドレスは、構成ファイルで既に定義されているか、構成階層の上位レベルに定義されています。
 
-値、`address`属性は、一連の IP アドレスまたはホスト名を記述する正規表現をする必要があります。
+`address`属性の値は、一連の IP アドレスまたはホスト名を表す正規表現である必要があります。
 
-正規表現の詳細についてを参照してください。[.NET framework の正規表現](../../../../../docs/standard/base-types/regular-expressions.md)します。
+正規表現の詳細については、「」を参照してください。[正規表現を .NET Framework](../../../../standard/base-types/regular-expressions.md)します。
 
 ## <a name="configuration-files"></a>構成ファイル
 
@@ -69,7 +69,7 @@ ms.locfileid: "61674468"
 
 ## <a name="example"></a>例
 
-次の例では、adventure-works.com のドメインの以前の定義を削除し、バイパス リストに contoso.com ドメインを追加します。
+次の例では、adventure-works.com ドメインの以前の定義を削除し、contoso.com ドメインをバイパスリストに追加します。
 
 ```xml
 <configuration>
@@ -87,4 +87,4 @@ ms.locfileid: "61674468"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

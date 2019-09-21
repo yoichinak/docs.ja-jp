@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 72771ee494b6be7142ce3f9bec43dcb8aa8a8401
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 2bbbac098096b46c659c4efde2d1c998c8e2d9ae
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363084"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608383"
 ---
 # <a name="value-types-c-reference"></a>値型 (C# リファレンス)
 
@@ -32,7 +32,7 @@ ms.locfileid: "68363084"
 
 参照型とは異なり、値型から新しい型を派生することはできません。 ただし、参照型の場合と同様に、構造体はインターフェイスを実装できます。
 
-値型の変数は既定で `null` にすることはできません。 ただし、対応する [null 許容型](../../../csharp/programming-guide/nullable-types/index.md)の変数を `null` にすることはできます。
+値型の変数は既定で `null` にすることはできません。 ただし、対応する [null 許容型](../../programming-guide/nullable-types/index.md)の変数を `null` にすることはできます。
 
 各値型には、その型の既定値を初期化する暗黙のパラメーターなしのコンストラクターがあります。 値型の既定値の詳細については、「[既定値の一覧表](default-values-table.md)」を参照してください。
 

@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 311f4c025072162e0cfb6b87587f8602d33fcd19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3174d463744303e8c90ed0b2e1a4d86ed08fbcfb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646877"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947696"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>インスタンスを経由する共有メンバーへのアクセスです。正規の式は評価されません。
-クラスまたは構造体のインスタンス変数を使用するアクセス、`Shared`変数、プロパティ、プロシージャ、またはそのクラスまたは構造体で定義されているイベント。 この警告は、インスタンス変数をクラスまたは構造体、定数または列挙型、または入れ子になったクラスまたは構造体などの暗黙的な共有メンバーへのアクセスに使用する場合にも発生します。  
+クラスまたは構造体のインスタンス変数は、そのクラスまた`Shared`は構造体で定義されている変数、プロパティ、プロシージャ、またはイベントにアクセスするために使用されます。 この警告は、クラスまたは構造体の暗黙的に共有されるメンバー (定数、列挙型、または入れ子になったクラスまたは構造体) へのアクセスにインスタンス変数が使用されている場合にも発生することがあります。  
   
- メンバーの共有の目的は、そのメンバーのコピーが 1 つだけを作成し、その 1 つのコピーのクラスまたは構造体が宣言されているすべてのインスタンスを使用できるようにすること。 アクセスするには、この目的で矛盾がある、`Shared`メンバーがそのクラスまたは構造体の個々 のインスタンスを保持する変数ではなく、クラスまたは構造の名前を使用します。  
+ メンバーを共有する目的は、そのメンバーのコピーを1つだけ作成し、そのコピーを、宣言されているクラスまたは構造体のすべてのインスタンスで使用できるようにすることです。 クラスまたは構造体の個々のインスタンス`Shared`を保持する変数ではなく、クラスまたは構造体の名前を使用してメンバーにアクセスするために、この目的と一貫性があります。  
   
- アクセス、`Shared`インスタンス変数によるメンバーが難しく、コード、メンバーであるという事実を隠すことで理解する`Shared`します。 さらに、このようなアクセスが式の一部である場合、ように、他のアクションを実行するには`Function`共有メンバーのインスタンスを返すプロシージャでは、Visual Basic は、式とそれ以外の場合、その他のアクションをバイパスします。  
+ インスタンス変数を使用して`Shared`メンバーにアクセスすると、メンバーがであるという事実を隠ぺいすることで、コードを理解しづらくなる可能性があります。`Shared` さらに、このようなアクセスが、共有メンバーのインスタンスを返す`Function`プロシージャなど、他のアクションを実行する式の一部である場合、Visual Basic は式およびそれ以外で実行されるその他のアクションをバイパスします。  
   
- 詳細と例では、次を参照してください。 [Shared](../../../visual-basic/language-reference/modifiers/shared.md)します。  
+ 詳細と例については、「[共有](../../../visual-basic/language-reference/modifiers/shared.md)」を参照してください。  
   
  既定では、このメッセージは警告です。 警告を表示しない方法や、警告をエラーとして扱う方法の詳細については、「 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)」を参照してください。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "64646877"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- クラスまたは定義する構造体の名前を使用して、`Shared`に次の例に示すように、アクセスするメンバー。  
+- 次の例に示すように、アクセスする`Shared`メンバーを定義するクラスまたは構造体の名前を使用します。  
   
 ```vb  
 Public Class testClass  
@@ -53,9 +53,9 @@ End Module
 ```  
   
 > [!NOTE]
->  2 つのプログラミング要素が同じ名前を持つ場合は、スコープの影響についてアラートが。 使用してインスタンスを宣言する場合、前の例で`Dim testClass as testClass = Nothing`、コンパイラを呼び出す`testClass.sayHello()`クラス名、および警告なしでメソッドのアクセスが発生するとします。  
+> 2つのプログラミング要素が同じ名前の場合に、スコープの効果に関する警告を出します。 前の例では、を使用`Dim testClass as testClass = Nothing`してインスタンスを宣言する場合、コンパイラはの`testClass.sayHello()`呼び出しをクラス名を通じてメソッドのアクセスとして処理しますが、警告は発生しません。  
   
 ## <a name="see-also"></a>関連項目
 
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Visual Basic におけるスコープ](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic 内のスコープ](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

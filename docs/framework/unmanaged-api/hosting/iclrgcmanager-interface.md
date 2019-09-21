@@ -16,42 +16,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e284f94ad0dac9523bd6267e7bc1034a079503d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 76d1071ddde1509f16fd786afa4c05c05224d051
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380289"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966208"
 ---
 # <a name="iclrgcmanager-interface"></a>ICLRGCManager インターフェイス
-ホストが共通言語ランタイムのガベージ コレクション システムと対話できるようにするメソッドを提供します。  
+ホストが共通言語ランタイムのガベージコレクションシステムと対話できるようにするメソッドを提供します。  
   
 > [!NOTE]
->  以降、.NET Framework 4.5 を使えば、 [iclrgcmanager 2::setgcstartuplimitsex](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)ガベージ コレクション セグメントのサイズと、ガベージ コレクション システムのジェネレーション 0 の最大サイズの値を設定する方法大きい、`DWORD`はによって課される制限、 [SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md)メソッド。  
+> .NET Framework 4.5 以降では、 [ICLRGCManager2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)メソッドを使用してガベージコレクションセグメントのサイズを設定できます。ガベージコレクションシステムのジェネレーション0の最大サイズは、 `DWORD` [SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md)メソッドによって課される制限。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Collect メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-collect-method.md)|指定したジェネレーションのガベージ コレクションを強制します。|  
-|[GetStats メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)|ガベージ コレクション システムに関する現在の統計情報のセットを取得します。|  
-|[SetGCStartupLimits メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md)|ガベージ コレクション セグメントのサイズと、ガベージ コレクション システムのジェネレーション 0 の最大サイズを設定します。|  
+|[Collect メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-collect-method.md)|指定したジェネレーションのガベージコレクションを強制的に実行します。|  
+|[GetStats メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)|ガベージコレクションシステムに関する現在の統計のセットを取得します。|  
+|[SetGCStartupLimits メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md)|ガベージコレクションセグメントのサイズとガベージコレクションシステムのジェネレーション0の最大サイズを設定します。|  
   
 ## <a name="remarks"></a>Remarks  
- 共通言語ランタイム (CLR) で、管理対象のガベージ コレクションのメカニズムを実装する<xref:System.GC>型。 ガベージ コレクションのシステムの詳細については、次を参照してください。[ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)します。  
+ 共通言語ランタイム (CLR) は、マネージ<xref:System.GC>型を使用してガベージコレクション機構を実装します。 ガベージコレクションシステムの詳細については、「[ガベージコレクション](../../../standard/garbage-collection/index.md)」を参照してください。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [自動メモリ管理](../../../../docs/standard/automatic-memory-management.md)
+- [自動メモリ管理](../../../standard/automatic-memory-management.md)
 - [COR_GC_STATS 構造体](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [ICLRControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [CLR ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)

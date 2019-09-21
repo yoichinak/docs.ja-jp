@@ -4,12 +4,12 @@ description: .NET ライブラリのバージョン管理に関するベスト �
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 9250e48707c0ea72cdf8bef9663f5a3516309b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204744"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969017"
 ---
 # <a name="versioning"></a>バージョン管理
 
@@ -53,7 +53,7 @@ NuGet パッケージ バージョンは、最も開発者の目に留まるバ�
 
 Windows .NET Framework の CLR では、厳密な名前のアセンブリを読み込むには、完全一致が求められます。 たとえば、`Libary1, Version=1.0.0.0` が `Newtonsoft.Json, Version=11.0.0.0` への参照を使ってコンパイルされたとします。 .NET Framework は、該当の正確なバージョンである `11.0.0.0` のみを読み込みます。 実行時に別のバージョンを読み込むには、バインド リダイレクトが .NET アプリケーションの構成ファイルに追加される必要があります。
 
-アセンブリ バージョンと組み合わせた厳密な名前によって、[厳密なアセンブリ バージョンの読み込み](../../framework/app-domains/assembly-versioning.md)が可能になります。 ライブラリに厳密な名前を付与すると多くのメリットがありますが、しばしば、アセンブリが見つからないという実行時例外に陥り、修正のために`app.config`/`web.config` の[バインド リダイレクトを要求する](../../framework/configure-apps/redirect-assembly-versions.md)必要があります。 .NET Core アセンブリの読み込みが厳密ではなくなり、.NET Core CLR は、実行時により新しいバージョンでアセンブリを自動的に読み込みます。
+アセンブリ バージョンと組み合わせた厳密な名前によって、[厳密なアセンブリ バージョンの読み込み](../assembly/versioning.md)が可能になります。 ライブラリに厳密な名前を付与すると多くのメリットがありますが、しばしば、アセンブリが見つからないという実行時例外に陥り、修正のために`app.config`/`web.config` の[バインド リダイレクトを要求する](../../framework/configure-apps/redirect-assembly-versions.md)必要があります。 .NET Core アセンブリの読み込みが厳密ではなくなり、.NET Core CLR は、実行時により新しいバージョンでアセンブリを自動的に読み込みます。
 
 **✔️ 検討** AssemblyVersion にメジャー バージョンのみを含める。
 

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
-ms.openlocfilehash: 8403f9d9be88f34e473fd3512f5499193245d227
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f86e9100489ddf35d8ef5f98e386306a7dbfd4ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607050"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784178"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>XSD としての DataSet スキーマ情報の書き込み
-<xref:System.Data.DataSet> のスキーマを XML スキーマ定義言語 (XSD) スキーマとして書き込むと、このスキーマを XML ドキュメントに転送できます。このとき関連データを含む定義、または関連データを含まない定義ができます。 XML スキーマは、ファイル、ストリームに書き込むことが、 <xref:System.Xml.XmlWriter>、または文字列が厳密に型を生成するために役立ちます**データセット**します。 詳細については厳密に型指定**データセット**、オブジェクトを参照してください[型指定されたデータセット](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)します。  
+<xref:System.Data.DataSet> のスキーマを XML スキーマ定義言語 (XSD) スキーマとして書き込むと、このスキーマを XML ドキュメントに転送できます。このとき関連データを含む定義、または関連データを含まない定義ができます。 XML スキーマは、ファイル、ストリーム、 <xref:System.Xml.XmlWriter>、または文字列に書き込むことができます。厳密に型指定された**データセット**を生成する場合に便利です。 厳密に型指定された**dataset**オブジェクトの詳細については、「[型付き dataset](typed-datasets.md)」を参照してください。  
   
- XML スキーマでテーブルの列を表現する方法を指定することができますを使用して、 **ColumnMapping**のプロパティ、<xref:System.Data.DataColumn>オブジェクト。 詳細については、「XML 要素属性、およびテキストを列の割り当て」を参照してください[書き込み DataSet の内容を XML データとして](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)します。  
+ テーブルの列を XML スキーマで表す方法は、 <xref:System.Data.DataColumn>オブジェクトの**ColumnMapping**プロパティを使用して指定できます。 詳細については、「 [DataSet の内容を Xml データとして書き込む](writing-dataset-contents-as-xml-data.md)」の「xml 要素、属性、およびテキストへの列のマッピング」を参照してください。  
   
- スキーマを記述する、**データセット**ファイルに、XML スキーマとしてストリーム、または**XmlWriter**を使用して、 **WriteXmlSchema**のメソッド、**データセット**します。 **WriteXmlSchema**結果の XML スキーマの変換先を指定する 1 つのパラメーターを受け取ります。 次のコード例の XML スキーマを記述する方法を示します、**データセット**ファイル ファイル名を含む文字列を渡すことによって、<xref:System.IO.StreamWriter>オブジェクト。  
+ **Dataset**のスキーマを XML スキーマとして、ファイル、ストリーム、または**XmlWriter**に書き込むには、**データセット**の**WriteXmlSchema**メソッドを使用します。 **WriteXmlSchema**は、結果の XML スキーマの出力先を指定するパラメーターを1つ受け取ります。 次のコード例では、ファイル名と<xref:System.IO.StreamWriter>オブジェクトを含む文字列を渡すことによって、**データセット**の XML スキーマをファイルに書き込む方法を示します。  
   
 ```vb  
 dataSet.WriteXmlSchema("Customers.xsd")  
@@ -39,7 +39,7 @@ dataSet.WriteXmlSchema(writer);
 writer.Close();  
 ```  
   
- スキーマを取得する、**データセット**、XML スキーマ文字列として書き込むには、使用、 **GetXmlSchema**メソッドを次の例に示すようにします。  
+ **DataSet**のスキーマを取得し、XML スキーマ文字列として書き込むには、次の例に示すように、 **getxmlschema**メソッドを使用します。  
   
 ```vb  
 Dim schemaString As String = dataSet.GetXmlSchema()  
@@ -51,8 +51,8 @@ string schemaString = dataSet.GetXmlSchema();
   
 ## <a name="see-also"></a>関連項目
 
-- [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DataSet 内容の XML データとしての書き込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
-- [型指定されたデータセット](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
-- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataSet での XML の使用](using-xml-in-a-dataset.md)
+- [DataSet 内容の XML データとしての書き込み](writing-dataset-contents-as-xml-data.md)
+- [型指定されたデータセット](typed-datasets.md)
+- [DataSet、DataTable、および DataView](index.md)
+- [ADO.NET の概要](../ado-net-overview.md)

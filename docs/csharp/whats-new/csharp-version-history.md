@@ -3,12 +3,12 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 304c433e7f15301b77e8b2440e27795dcdea345c
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363881"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893168"
 ---
 # <a name="the-history-of-c"></a>C\# の歴史
 
@@ -19,16 +19,16 @@ ms.locfileid: "68363881"
 
 C# のビルド ツールでは、言語の最新のメジャー リリースが言語の既定のバージョンと見なされます。 メジャー リリースの間には、このセクションの他の記事で詳しく説明するポイント リリースが存在することがあります。 ポイント リリースで最新の機能を使用するには、[コンパイラ言語バージョンを構成](../language-reference/configure-language-version.md)し、バージョンを選択する必要があります。 C# 7.0 以降、3 つのポイント リリースがありました。
 
-* [C# 7.3](csharp-7-3.md):
+- [C# 7.3](csharp-7-3.md):
   - C# 7.3 は [Visual Studio 2017 バージョン 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) および [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md) 以降で利用可能です。
-* [C# 7.2](csharp-7-2.md):
+- [C# 7.2](csharp-7-2.md):
   - C# 7.2 は [Visual Studio 2017 バージョン 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) および [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 以降で利用可能です。
-* [C# 7.1](csharp-7-1.md):
+- [C# 7.1](csharp-7-1.md):
   - C# 7.1 は [Visual Studio 2017 バージョン 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) および [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 以降で利用可能です。
 
 ## <a name="c-version-10"></a>C# バージョン 1.0
 
-振り返ってみると、C# バージョン 1.0 は Java によく似ていました。 [ECMA で掲げられた設計目標の一環](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)として、C# は "シンプルかつモダンな汎用オブジェクト指向言語" を目指していました。  当時、Java に似ていることは、初期の設計目標を達成したことを意味していました。
+振り返ってみると、Visual Studio.net 2002 でリリースされた C# バージョン 1.0 は Java に似ていました。 [ECMA で掲げられた設計目標の一環](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)として、C# は "シンプルかつモダンな汎用オブジェクト指向言語" を目指していました。  当時、Java に似ていることは、初期の設計目標を達成したことを意味していました。
 
 しかし、今 C# 1.0 を振り返ってみると、少し混乱するかもしれません。 現在では当たり前となっている組み込みの非同期機能や、ジェネリック関連の優れた機能の一部は備わっていませんでした。 実際、ジェネリック全体がなかったのです。  そして [LINQ](../linq/index.md) も、 まだ使用できませんでした。 このような追加機能が登場するまでにはまだ数年かかります。
 
@@ -100,7 +100,7 @@ C# バージョン 3.0 は、Visual Studio 2008 と共に 2007 年後半に登�
 
 ## <a name="c-version-40"></a>C# バージョン 4.0
 
-C# バージョン 4.0 は、バージョン 3.0 の革新的なステータスに応えるための困難な時期だったと言えるでしょう。 バージョン 3.0 で C# は Java の影から脱却して、主要な言語となったのです。 この言語は急速に洗練されました。
+Visual Studio 2010 でリリースされた C# バージョン 4.0 は、バージョン 3.0 の革新的なステータスに応えるための困難な時期だったと言えるでしょう。 バージョン 3.0 で C# は Java の影から脱却して、主要な言語となったのです。 この言語は急速に洗練されました。
 
 次のバージョンでは、いくつかの興味深い新機能が導入されました。
 
@@ -117,14 +117,14 @@ C# バージョン 4.0 は、バージョン 3.0 の革新的なステータス�
 
 ## <a name="c-version-50"></a>C# バージョン 5.0
 
-C# バージョン 5.0 は、この言語の専心的なバージョンでした。 このバージョンに対するほぼすべての努力が、非同期プログラミングの `async` および `await` モデルというもう一つの革新的な言語の概念に注がれました。  主要な機能の一覧を次に示します。
+Visual Studio 2012 でリリースされた C# バージョン 5.0 は、この言語の専心的なバージョンでした。 このバージョンに対するほぼすべての努力が、非同期プログラミングの `async` および `await` モデルというもう一つの革新的な言語の概念に注がれました。  主要な機能の一覧を次に示します。
 
 - [非同期メンバー](../async.md)
 - [呼び出し元情報属性](../programming-guide/concepts/caller-information.md)
 
 ### <a name="see-also"></a>関連項目
 
-* [コード プロジェクト:C# 5.0 の呼び出し元情報属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [コード プロジェクト:C# 5.0 の呼び出し元情報属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 呼び出し元情報属性を使用すると、さまざまな定型リフレクション コードを使用しなくても、実行しているコンテキストに関する情報を簡単に取得できます。 診断とログ記録のタスクでは、さまざまな用途があります。
 
@@ -132,7 +132,7 @@ C# バージョン 5.0 は、この言語の専心的なバージョンでした
 
 ## <a name="c-version-60"></a>C# バージョン 6.0
 
-C# バージョン 3.0 と 5.0 では、主要な新機能がオブジェクト指向言語に追加されました。 バージョン 6.0 では、主要な目玉機能を投入する代わりに、C# プログラミングをより生産的にする多くの小さな機能をリリースしました。 その一部を次に示します。
+C# バージョン 3.0 と 5.0 では、主要な新機能がオブジェクト指向言語に追加されました。 Visual Studio 2013 と共にリリースされたバージョン 6.0 では、主要な目玉機能を投入する代わりに、C# プログラミングをより生産的にする多くの小さな機能をリリースしました。 その一部を次に示します。
 
 - [静的インポート](./csharp-6.md#using-static)
 - [例外フィルター](./csharp-6.md#exception-filters)
@@ -154,7 +154,7 @@ C# バージョン 3.0 と 5.0 では、主要な新機能がオブジェクト�
 
 ## <a name="c-version-70"></a>C# バージョン 7.0
 
-最新のメジャー バージョンが C# バージョン 7.0 です。 このバージョンには、C# 6.0 から続くいくつかの革新的で優れた機能がありますが、サービスとしてのコンパイラはありません。 新機能の一部を次に示します。
+Visual Studio 2017 でリリースされた最新のメジャー バージョンが C# バージョン 7.0 です。 このバージョンには、C# 6.0 から続くいくつかの革新的で優れた機能がありますが、サービスとしてのコンパイラはありません。 新機能の一部を次に示します。
 
 - [out 変数](./csharp-7.md#out-variables)
 - [タプルと分解](./csharp-7.md#tuples)

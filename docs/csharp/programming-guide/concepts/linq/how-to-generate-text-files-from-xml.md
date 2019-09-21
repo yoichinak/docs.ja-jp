@@ -2,20 +2,20 @@
 title: '方法: XML からテキスト ファイルを生成する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 2890128e4dacbac5279b928d9b9bcc097cbe669a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76fcca69236ef97374855ebbb19259aa5e119ea0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530452"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253594"
 ---
 # <a name="how-to-generate-text-files-from-xml-c"></a>方法: XML からテキスト ファイルを生成する (C#)
 この例では、XML ファイルからコンマ区切り (CSV) ファイルを生成する方法について説明します。  
   
 ## <a name="example"></a>例  
- この例の C# バージョンでは、メソッド構文と `Aggregate` 演算子を使用して、1 つの式で XML ドキュメントから CSV ファイルを生成します。 詳細については、「[LINQ でのクエリ構文とメソッド構文](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)」を参照してください。  
+ この例の C# バージョンでは、メソッド構文と `Aggregate` 演算子を使用して、1 つの式で XML ドキュメントから CSV ファイルを生成します。 詳細については、「[LINQ でのクエリ構文とメソッド構文](./query-syntax-and-method-syntax-in-linq.md)」を参照してください。  
   
- この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)」。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:顧客と注文 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)」。  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -46,7 +46,7 @@ Console.WriteLine(csv);
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
 HUNGC,Hungry Coyote Import Store,Yoshi Latimer,Sales Representative,(503) 555-6874,City Center Plaza 516 Main St.,Elgin,OR,97827,USA  
 LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orchestra Terrace,Walla Walla,WA,99362,USA  
@@ -55,4 +55,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>関連項目
 
-- [プロジェクションと変換 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [プロジェクションと変換 (LINQ to XML) (C#)](./projections-and-transformations-linq-to-xml.md)

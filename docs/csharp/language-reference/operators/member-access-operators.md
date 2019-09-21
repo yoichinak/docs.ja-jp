@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 4f1d79497f255f52a87dce44f1b5b8709adfada7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 5ff5e68fbce320076e6d18e9e139b418a15bba77
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401480"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924640"
 ---
 # <a name="member-access-operators-c-reference"></a>メンバー アクセス演算子 (C# リファレンス)
 
@@ -145,9 +145,9 @@ if (handler != null)
 
 ### <a name="other-usages-of-"></a>() の他の使用方法
 
-式に含まれる演算を評価する順序を指定する場合にもかっこを使用します。 詳細については、「[演算子](../../programming-guide/statements-expressions-operators/operators.md)」記事の「[かっこの追加](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses)」セクションを参照してください。 優先順位順に並べられた演算子の一覧については、「[C# 演算子](index.md)」を参照してください。
+式に含まれる演算を評価する順序を調整する場合にもかっこを使用します。 詳細については、[C# 演算子](index.md)に関するページを参照してください。
 
-明示的な型変換を実行する[キャスト式](type-testing-and-conversion-operators.md#cast-operator-)でも、かっこが使われます。
+明示的な型変換を実行する[キャスト式](type-testing-and-cast.md#cast-operator-)でも、かっこが使われます。
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
@@ -167,3 +167,4 @@ if (handler != null)
 - [C# リファレンス](../index.md)
 - [C# 演算子](index.md)
 - [?? (Null 合体演算子)](null-coalescing-operator.md)
+- [:: 演算子](namespace-alias-qualifier.md)

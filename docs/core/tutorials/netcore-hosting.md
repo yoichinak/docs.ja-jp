@@ -4,12 +4,12 @@ description: .NET Core ランタイムの動作を制御する必要がある高
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: d3bdaacd4be776e0e9fff01698cca360ea4c9c6d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: ec63e1b87c4161dcd0dd3ab37aadbef53d4b3219
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402024"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970858"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>ネイティブ コードから .NET ランタイムを制御するカスタム .NET Core ホストを作成する
 
@@ -23,7 +23,7 @@ ms.locfileid: "67402024"
 
 ホストはネイティブ アプリケーションであるため、このチュートリアルでは、C++ アプリケーションを構築して .NET Core をホスティングする方法について説明します。 C++ 開発環境が必要になります ([Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) に付属のものなど)。
 
-ホストをテストするための単純な .NET Core アプリケーションも必要です。そのため、[.NET Core SDK](https://www.microsoft.com/net/core) をインストールし、[小さい .NET Core テスト アプリを作成](../../core/tutorials/with-visual-studio.md)してください ('Hello World' アプリなど)。 新しい .NET Core コンソール プロジェクト テンプレートで作成される 'Hello World' アプリで十分です。
+ホストをテストするための単純な .NET Core アプリケーションも必要です。そのため、[.NET Core SDK](https://dotnet.microsoft.com/download) をインストールし、[小さい .NET Core テスト アプリを作成](with-visual-studio.md)してください ('Hello World' アプリなど)。 新しい .NET Core コンソール プロジェクト テンプレートで作成される 'Hello World' アプリで十分です。
 
 ## <a name="hosting-apis"></a>ホスト API
 .NET Core をホストするために使用できる API が 3 種類あります。 このドキュメント (および関連する[サンプル](https://github.com/dotnet/samples/tree/master/core/hosting)) では、すべてのオプションについて説明します。
@@ -44,6 +44,7 @@ dotnet/samples GitHub リポジトリには、以下のチュートリアルで�
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>ステップ 1 - HostFxr を読み込んで、エクスポートされたホスティング関数を取得する
 
 `nethost` ライブラリでは、`hostfxr` ライブラリを検索するための `get_hostfxr_path` 関数が提供されています。 `hostfxr` ライブラリでは、.NET Core ランタイムをホストするための関数が公開されています。 関数の完全な一覧については、[`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) および[ネイティブ ホスティング デザインのドキュメント](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md)をご覧ください。 サンプルとこのチュートリアルでは以下を使います。
+
 * `hostfxr_initialize_for_runtime_config`:ホスト コンテキストを初期化し、指定されたランタイム構成を使って .NET Core ランタイムの初期化を準備します。
 * `hostfxr_get_runtime_delegate`:ランタイム機能に対するデリゲートを取得します。
 * `hostfxr_close`:ホスト コンテキストを閉じます。
@@ -134,7 +135,7 @@ mscoree.h をホストする API (下記参照) とは異なり、CoreCLRHost.h 
 
 ### <a name="step-5---run-managed-code"></a>手順 5 - マネージド コードを実行する
 
-ランタイムが起動すると、ホストではマネージド コードを呼び出せるようになります。 これにはさまざまな方法があります。 このチュートリアルにリンクされているサンプル コードでは、`coreclr_create_delegate` 関数を使用して静的マネージド メソッドのデリゲートが作成されます。 この API は、[アセンブリ名](../../framework/app-domains/assembly-names.md)、名前空間で修飾された型名、メソッド名を入力として取得し、メソッドの呼び出しに使用できるデリゲートを返します。
+ランタイムが起動すると、ホストではマネージド コードを呼び出せるようになります。 これにはさまざまな方法があります。 このチュートリアルにリンクされているサンプル コードでは、`coreclr_create_delegate` 関数を使用して静的マネージド メソッドのデリゲートが作成されます。 この API は、[アセンブリ名](../../standard/assembly/names.md)、名前空間で修飾された型名、メソッド名を入力として取得し、メソッドの呼び出しに使用できるデリゲートを返します。
 
 [!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
@@ -230,7 +231,7 @@ AppDomain が稼働したら、ホストはマネージド コードを実行で
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
-別の選択肢としては、`ExecuteAssembly` がホストのニーズを満たさない場合、`CreateDelegate` を利用し、静的マネージド メソッドの関数ポインターを作成します。 その場合、ホストにそれが呼び出すメソッドのシグネチャを通知する必要があります (関数ポインターの種類を作成する目的で)。ただし、アセンブリのエントリ ポイント以外のコードを呼び出す柔軟性が許可されます。 2 番目のパラメーターに指定されたアセンブリ名は、読み込むライブラリの[フル マネージド アセンブリ名](../../framework/app-domains/assembly-names.md)です。
+別の選択肢としては、`ExecuteAssembly` がホストのニーズを満たさない場合、`CreateDelegate` を利用し、静的マネージド メソッドの関数ポインターを作成します。 その場合、ホストにそれが呼び出すメソッドのシグネチャを通知する必要があります (関数ポインターの種類を作成する目的で)。ただし、アセンブリのエントリ ポイント以外のコードを呼び出す柔軟性が許可されます。 2 番目のパラメーターに指定されたアセンブリ名は、読み込むライブラリの[フル マネージド アセンブリ名](../../standard/assembly/names.md)です。
 
 ```C++
 void *pfnDelegate = NULL;

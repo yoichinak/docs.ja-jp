@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: d2d05e0c3bb24c44bf78dc41074b8759270cf49b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636514"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895180"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>方法: 基本的な WCF Web HTTP サービスを作成する
 
-Windows Communication Foundation (WCF) Web エンドポイントを公開するサービスを作成することができます。 Web エンドポイントは、XML または JSON でデータを送信します。SOAP エンベロープはありません。 ここでは、このようなエンドポイントを公開する方法を示します。
+Windows Communication Foundation (WCF) を使用すると、Web エンドポイントを公開するサービスを作成できます。 Web エンドポイントは、XML または JSON でデータを送信します。SOAP エンベロープはありません。 ここでは、このようなエンドポイントを公開する方法を示します。
 
 > [!NOTE]
 > Web エンドポイントをセキュリティで保護する唯一の方法は、トランスポート セキュリティを使用する HTTPS を介してエンドポイントを公開することです。 メッセージ ベースのセキュリティを使用する場合、セキュリティ情報は通常 SOAP ヘッダーに配置されます。SOAP 以外のエンドポイントに送信するメッセージには SOAP エンベロープが含まれないため、セキュリティ情報を配置する場所がなく、トランスポート セキュリティに依存する必要があります。
@@ -49,13 +49,13 @@ Windows Communication Foundation (WCF) Web エンドポイントを公開する�
     > [!NOTE]
     > エンド ポイントを追加しない場合は、<xref:System.ServiceModel.Web.WebServiceHost> が自動的に既定のエンド ポイントを作成します。 <xref:System.ServiceModel.Web.WebServiceHost> は、他にも <xref:System.ServiceModel.Description.WebHttpBehavior> を追加し、HTTP ヘルプ ページと Web サービス記述言語 (WSDL) GET 機能を無効にすることによって、メタデータ エンドポイントが既定の HTTP エンドポイントに干渉しないようにします。
     >
-    >  URL が "" である SOAP 以外のエンドポイントを追加すると、エンドポイント上の操作の呼び出しを行うときに予期しない動作が発生します。 この理由は、リッスン エンドポイントの URI は、(WCF サービスのベース アドレスを参照するときに表示されるページ) のヘルプ ページの URI と同じです。
+    >  URL が "" である SOAP 以外のエンドポイントを追加すると、エンドポイント上の操作の呼び出しを行うときに予期しない動作が発生します。 これは、エンドポイントのリッスン URI が、ヘルプページ (WCF サービスのベースアドレスを参照するときに表示されるページ) と同じであるためです。
 
      これを回避するには、次のいずれかの操作を行います。
 
     - SOAP 以外のエンドポイントについては、空ではない URI を指定するようにします。
 
-    - ヘルプ ページを無効にします。 これは、次のコードで実行できます。
+    - ヘルプ ページを無効にします。 これは、次のコードを使用して行うことができます。
 
      [!code-csharp[htBasicService#4](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#4)]
      [!code-vb[htBasicService#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#4)]
@@ -67,7 +67,7 @@ Windows Communication Foundation (WCF) Web エンドポイントを公開する�
 
      このサンプルでは、コンソール アプリケーションで Web スタイル サービスをホストする方法を示します。 IIS からこのようなサービスをホストすることもできます。 これを行うには、次のコードに示すように、.svc ファイルで <xref:System.ServiceModel.Activation.WebServiceHostFactory> クラスを指定します。
 
-    ```
+    ```text
     <%ServiceHost
         language=c#
         Debug="true"
@@ -77,7 +77,7 @@ Windows Communication Foundation (WCF) Web エンドポイントを公開する�
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Internet Explorer で GET にマッピングされたサービス操作を呼び出すには
 
-1. Internet Explorer を開き「"`http://localhost:8000/EchoWithGet?s=Hello, world!`"ENTER キーを押します。 URL には、サービスのベース アドレスが含まれています (`http://localhost:8000/`)、エンドポイントの相対アドレス ("")、アンパサンドで区切られた名前付きパラメーターの一覧の後にサービス操作呼び出し ("EchoWithGet") と疑問符 () (&)。
+1. Internet Explorer を開き、「`http://localhost:8000/EchoWithGet?s=Hello, world!`」と入力して、enter キーを押します。 URL には、サービスのベースアドレス (`http://localhost:8000/`)、エンドポイントの相対アドレス ("")、呼び出すサービス操作 ("EchoWithGet")、アンパサンド (&) で区切られた名前付きパラメーターのリストが含まれています。
 
 ## <a name="to-call-service-operations-in-code"></a>コードからサービス操作を呼び出すには
 

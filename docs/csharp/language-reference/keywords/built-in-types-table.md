@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 5db982c0a94814bfece087eb4db119a4df246094
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 1f7248a23d53fb90202595defbf70e231bd1d5d3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330967"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605975"
 ---
 # <a name="built-in-types-table-c-reference"></a>組み込み型の一覧表 (C# リファレンス)
 
@@ -47,7 +47,7 @@ int x = 123;
 System.Int32 y = 123;
 ```
 
-[typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) 演算子を使用して、指定した型を表す <xref:System.Type?displayProperty=nameWithType> インスタンスを取得します。
+[typeof](../operators/type-testing-and-cast.md#typeof-operator) 演算子を使用して、指定した型を表す <xref:System.Type?displayProperty=nameWithType> インスタンスを取得します。
 
 ```csharp
 Type stringType = typeof(string);
@@ -63,8 +63,8 @@ Console.WriteLine(doubleType.FullName);
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [値型](value-types.md)
 - [参照型](reference-types.md)

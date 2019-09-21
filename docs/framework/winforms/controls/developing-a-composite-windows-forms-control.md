@@ -7,55 +7,51 @@ helpviewer_keywords:
 - composite controls [Windows Forms], Windows Forms
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-ms.openlocfilehash: 2d6220a95d20cc0ab8ea1cdeb396804dfbcef8a1
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 9ccbf3de3f5c65b99a06c29ffce4c96896d11fae
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211485"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015955"
 ---
-# <a name="develop-a-composite-windows-forms-control"></a>複合 Windows フォーム コントロールを開発します。
+# <a name="develop-a-composite-windows-forms-control"></a>複合 Windows フォームコントロールの開発
 
-異なる複数の Windows フォーム コントロールを組み合わせることによって、複合 Windows フォーム コントロールを開発できます。 派生した複合コントロール<xref:System.Web.UI.UserControl>ユーザー コントロールと呼ばれます。 基底クラス <xref:System.Windows.Forms.UserControl> は、子コントロールに対してキーボード ルーティングを提供し、子コントロールがフォーカスを受け取れるようにします。 ユーザー コントロールの例は、次を参照してください。、<xref:System.Windows.Forms.UserControl>サンプルは、[方法。Windows フォーム コントロールに属性を適用](how-to-apply-attributes-in-windows-forms-controls.md)します。
+異なる複数の Windows フォーム コントロールを組み合わせることによって、複合 Windows フォーム コントロールを開発できます。 から<xref:System.Web.UI.UserControl>派生する複合コントロールは、ユーザーコントロールと呼ばれます。 基底クラス <xref:System.Windows.Forms.UserControl> は、子コントロールに対してキーボード ルーティングを提供し、子コントロールがフォーカスを受け取れるようにします。 ユーザーコントロールの例については、「 <xref:System.Windows.Forms.UserControl> [方法:Windows フォームコントロール](how-to-apply-attributes-in-windows-forms-controls.md)に属性を適用します。
 
-Visual Studio での Windows フォーム デザイナーは、ユーザー コントロールを作成するための豊富なデザイン時サポートを提供します。
+Visual Studio の Windows フォームデザイナーには、ユーザーコントロールを作成するための豊富なデザイン時サポートが用意されています。
 
-- [方法: 内のコントロールを表示、ツールボックス項目 ダイアログ ボックスの選択](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [方法: [ツールボックスアイテムの選択] ダイアログボックスにコントロールを表示する](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 
-- [チュートリアル: Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化します。](serializing-collections-designerserializationvisibilityattribute.md)
+- [チュートリアル: DesignerSerializationVisibilityAttribute を使用した標準型のコレクションのシリアル化](serializing-collections-designerserializationvisibilityattribute.md)
 
-- [チュートリアル: ビジュアルを含む Windows フォーム コントロールからの継承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [チュートリアル: ビジュアルを使用した Windows フォームコントロールからの継承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 
-- [方法: コントロールにツールボックス ビットマップを指定します。](how-to-provide-a-toolbox-bitmap-for-a-control.md)
+- [方法: コントロールのツールボックスビットマップを指定する](how-to-provide-a-toolbox-bitmap-for-a-control.md)
 
-- [方法: 継承可能な既存の Windows フォーム コントロール](how-to-inherit-from-existing-windows-forms-controls.md)
+- [方法: 既存の Windows フォームコントロールから継承する](how-to-inherit-from-existing-windows-forms-controls.md)
 
 - [チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
 
-- [方法: コントロール クラスから継承します。](how-to-inherit-from-the-control-class.md)
+- [方法: コントロールクラスから継承する](how-to-inherit-from-the-control-class.md)
 
-- [方法: UserControl の実行時の動作をテストします。](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [方法: UserControl の実行時の動作をテストする](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 
-- [方法: デザイン時にコントロールをフォームの端を揃える](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [方法: デザイン時にコントロールをフォームの端に揃える](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
 
-- [方法: UserControl クラスを継承します。](how-to-inherit-from-the-usercontrol-class.md)
+- [方法: UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)
 
-- [方法: Windows フォームのコントロールの作成](how-to-author-controls-for-windows-forms.md)
+- [方法: Windows フォームの作成者コントロール](how-to-author-controls-for-windows-forms.md)
 
-- [方法: 複合コントロールを作成](how-to-author-composite-controls.md)
+- [方法: 複合コントロールの作成](how-to-author-composite-controls.md)
 
-- [チュートリアル: Visual Basic による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [チュートリアル: ビジュアルを使用した複合コントロールの作成C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 
-- [チュートリアル: ビジュアルを含む複合コントロールの作成C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [チュートリアル: Visual Studio のデザイン時機能を利用する Windows フォームコントロールの作成](creating-a-wf-control-design-time-features.md)
 
-- [チュートリアル: Visual Basic による Windows フォーム コントロールから継承します。](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-
-- [チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](creating-a-wf-control-design-time-features.md)
-
-- [方法: デザイン時機能を活用した Windows フォーム コントロールを作成します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [方法: デザイン時機能を利用する Windows フォームコントロールを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: Windows フォーム コントロールに属性を適用します。](how-to-apply-attributes-in-windows-forms-controls.md)
+- [方法: Windows フォームコントロールでの属性の適用](how-to-apply-attributes-in-windows-forms-controls.md)
 - [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)

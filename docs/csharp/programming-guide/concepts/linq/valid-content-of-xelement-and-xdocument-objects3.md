@@ -2,12 +2,12 @@
 title: XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: c179f2e57abf0e2028ec58428e75c8df786b4214
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1ad5b18e3bbc2143a56f9c8e7b34354761b4e42f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483276"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590939"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ
 ここでは、コンストラクターやメソッドに渡すことができる有効な引数について説明します。これらのコンストラクターやメソッドは、コンテンツを要素やドキュメントに追加するためのものです。  
@@ -45,7 +45,7 @@ ms.locfileid: "66483276"
   
 - <xref:System.Xml.Linq.XAttribute>  
   
-- <xref:System.Collections.Generic.IEnumerable%601> を実装する任意の型  
+- <xref:System.Collections.Generic.IEnumerable%601> を実装するすべての型  
   
  オブジェクトが <xref:System.Collections.Generic.IEnumerable%601> を実装している場合、オブジェクト内のコレクションが列挙され、コレクション内のすべての項目が追加されます。 コレクションに <xref:System.Xml.Linq.XNode> オブジェクトまたは <xref:System.Xml.Linq.XAttribute> オブジェクトが含まれている場合、コレクション内の各項目が個別に追加されます。 コレクションにテキスト (またはテキストに変換されるオブジェクト) が含まれている場合、コレクション内のテキストが連結され、1 つのテキスト ノードとして追加されます。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66483276"
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>コンテンツの追加が可能なコンストラクターと関数  
  次のメソッドを使用すると、<xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XDocument> に子コンテンツを追加できます。  
   
-|メソッド|説明|  
+|Method|説明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.%23ctor%2A>|<xref:System.Xml.Linq.XElement> を構築します。|  
 |<xref:System.Xml.Linq.XDocument.%23ctor%2A>|<xref:System.Xml.Linq.XDocument> を構築します。|  
@@ -90,4 +90,4 @@ ms.locfileid: "66483276"
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [XML ツリーの作成 (C#)](./linq-to-xml-overview.md)

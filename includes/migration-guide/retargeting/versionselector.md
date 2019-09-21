@@ -1,12 +1,13 @@
 ---
-ms.openlocfilehash: 2999ac197ac7fd3ab46a0745ad072a95db05d466
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f647732f2e8657aebb58d57848c876956c30a90
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757772"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70963580"
 ---
-> [!div class="op_multi_selector" title1="From .NET Framework Version" title2="To .NET Framework Version"]
+> [!div class="op_multi_selector" title1=".NET Framework のバージョン下限" title2=".NET Framework のバージョン上限"]
+>
 > - [(4.0 | 4.5)](~/docs/framework/migration-guide/retargeting/4.0-4.5.md)
 > - [(4.0 | 4.5.1)](~/docs/framework/migration-guide/retargeting/4.0-4.5.1.md)
 > - [(4.0 | 4.5.2)](~/docs/framework/migration-guide/retargeting/4.0-4.5.2.md)

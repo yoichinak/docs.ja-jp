@@ -9,32 +9,33 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
-ms.openlocfilehash: 21da5564bfeec01d448c23d3e734bdd16fc1566b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a003b91cd4db5db2790a20db97dbaa4d8925e96
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666431"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972361"
 ---
 # <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>方法: ToolStrip コントロールにトグル ボタンを作成する
-ユーザーには、トグル ボタンがクリックすると、くぼんで表示し、もう一度ボタンをクリックするまで、くぼんだ外観を保持します。  
-  
-### <a name="to-create-a-toggling-toolstripbutton"></a>切り替えのオブジェクトを作成するには  
-  
-- 次のコード例などのコードを使用します。 このコードでは、フォームが含まれている前提としています、<xref:System.Windows.Forms.ToolStrip>コントロール、およびその<xref:System.Windows.Forms.ToolStrip.Items%2A>コレクションに含まれる、<xref:System.Windows.Forms.ToolStripButton>と呼ばれる`toolStripButton1`します。 呼ばれるイベント ハンドラーを設定することも想定`toolStripButton1_CheckedChanged`します。  
-  
-    ```vb  
-    toolStripButton1.CheckOnClick = True  
-    toolStripButton1.CheckedChanged AddressOf _  
-    EventHandler(toolStripButton1_CheckedChanged);  
-    ```  
-  
-    ```csharp  
-    toolStripButton1.CheckOnClick = true;  
-    toolStripButton1.CheckedChanged += new _  
-    EventHandler(toolStripButton1_CheckedChanged);  
-    ```  
-  
+
+ユーザーがトグルボタンをクリックすると、くぼんで表示され、ユーザーがボタンを再度クリックするまで、くぼんだ外観を保持します。
+
+## <a name="to-create-a-toggling-toolstripbutton"></a>切り替え ToolStripButton を作成するには
+
+- 次のコード例のようなコードを使用します。 このコードは<xref:System.Windows.Forms.ToolStrip> 、フォームにコントロールが含まれており、その<xref:System.Windows.Forms.ToolStrip.Items%2A>コレクションに<xref:System.Windows.Forms.ToolStripButton>が`toolStripButton1`呼び出されたが含まれていることを前提としています。 また、という`toolStripButton1_CheckedChanged`イベントハンドラーがあることを前提としています。
+
+    ```vb
+    toolStripButton1.CheckOnClick = True
+    toolStripButton1.CheckedChanged AddressOf _
+    EventHandler(toolStripButton1_CheckedChanged);
+    ```
+
+    ```csharp
+    toolStripButton1.CheckOnClick = true;
+    toolStripButton1.CheckedChanged += new _
+    EventHandler(toolStripButton1_CheckedChanged);
+    ```
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.ToolStripButton>

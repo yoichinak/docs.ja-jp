@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24ab27a8724107bac96c9fae695fb791b00bfa5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 751694985248346187eff016ef7a4a8054cb1212
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782582"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798302"
 ---
-# <a name="qualifiersetget-function"></a>QualifierSet_Get 関数
+# <a name="qualifierset_get-function"></a>QualifierSet_Get 関数
 指定した名前付き修飾子が取得されます。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -44,44 +44,44 @@ HRESULT QualifierSet_Get (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`   
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`   
-[in]ポインター、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンス。
+から[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンスへのポインター。
 
 `wszName`   
-[in]値が要求された修飾子の名前。
+から値を要求する修飾子の名前。
 
 `lFlags`   
-[in] 予約されています。 このパラメーターは、0 を指定する必要があります。
+[in] 予約されています。 このパラメーターには0を指定する必要があります。
 
 `pVal`   
-[out]成功した場合、正しい型および修飾子の値。 関数が失敗した場合、`VARIANT`によって示される`pVal`は変更されません。 このパラメーターが場合`null`パラメーターは無視されます。
+入出力成功した場合は、修飾子の正しい型と値。 関数が失敗`VARIANT`した場合、が指す`pVal`を変更することはできません。 このパラメーターが`null`の場合、パラメーターは無視されます。
 
 `plFlavor`   
-[out]要求された修飾子の修飾子のフレーバー ビットを受け取る LONG へのポインター。 このパラメーターを指定できますフレーバー情報が望ましくない場合`null`します。 
+入出力要求された修飾子の修飾子フレーバービットを受け取る LONG へのポインター。 フレーバー情報が必要でない場合、このパラメーターは`null`にすることができます。 
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定した修飾子が存在しません。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが有効ではありません。 |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定された修飾子は存在しません。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
   
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get)メソッド。
+この関数は、 [IWbemQualifierSet:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get)メソッドの呼び出しをラップします。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: c50aaf413f08c2e4cbe3f8ce8c057e5841067c92
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870611"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926151"
 ---
 # <a name="tutorial-create-an-item-template"></a>チュートリアル: 項目テンプレートを作成する
 
@@ -19,6 +19,7 @@ ms.locfileid: "67870611"
 シリーズのこのパートで学習する内容は次のとおりです。
 
 > [!div class="checklist"]
+>
 > * 項目テンプレートのクラスを作成する
 > * テンプレートの構成フォルダーとファイルを作成する
 > * ファイル パスからテンプレートをインストールする
@@ -27,7 +28,7 @@ ms.locfileid: "67870611"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* [.NET Core 2.2 SDK](https://www.microsoft.com/net/core) 以降のバージョン。
+* [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) 以降のバージョン。
 * 参照記事「[dotnet new のカスタム テンプレート](../tools/custom-templates.md)」を確認しておきます。
 
   この参照記事では、テンプレートの基本と、テンプレートをまとめる方法が説明されています。 ここでは、この情報の一部を繰り返して示します。

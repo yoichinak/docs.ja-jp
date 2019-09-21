@@ -3,21 +3,21 @@ title: '方法: WIF を使用してクレーム対応 ASP.NET MVC Web アプリ�
 ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
-ms.openlocfilehash: f2ac263d8869c770594283923a45c7c53c9df4cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4d245288b04d8ed3d997bc5572b40c7f8a9334e5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626129"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045448"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>方法: WIF を使用してクレーム対応 ASP.NET MVC Web アプリケーションをビルドする
-## <a name="applies-to"></a>対象  
+## <a name="applies-to"></a>適用対象  
   
 - Microsoft® Windows® Identity Foundation (WIF)  
   
 - ASP.NET® MVC  
   
-## <a name="summary"></a>まとめ  
+## <a name="summary"></a>Summary  
  この操作方法では、簡単なクレーム対応 ASP.NET MVC Web アプリケーションを作成するための詳細な手順を示します。 また、クレーム ベースの認証を正常に実装するために簡単なクレーム対応 ASP.NET MVC Web アプリケーションをテストする方法も示します。 この操作方法には、セキュリティ トークン サービス (STS) の詳細な作成手順は含まれていません。既に STS が構成済みであると想定します。  
   
 ## <a name="contents"></a>目次  
@@ -53,17 +53,17 @@ ms.locfileid: "64626129"
   
 #### <a name="to-create-simple-aspnet-mvc-application"></a>簡単な ASP.NET MVC アプリケーションを作成するには  
   
-1. Visual Studio を起動し、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。  
+1. Visual Studio を起動し、 **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順にクリックします。  
   
-2. **[新しいプロジェクト]** ウィンドウで、**[ASP.NET MVC 3 Web アプリケーション]** をクリックします。  
+2. **[新しいプロジェクト]** ウィンドウで、 **[ASP.NET MVC 3 Web アプリケーション]** をクリックします。  
   
 3. **[名前]** で、「`TestApp`」と入力して **[OK]** を押します。  
   
-4. **[新しい ASP.NET MVC 3 プロジェクト]** ダイアログで、使用可能なテンプレートから **[インターネット アプリケーション]** を選択し、**[ビュー エンジン]** が **[Razor]** に設定されていることを確認して **[OK]** をクリックします。  
+4. **[新しい ASP.NET MVC 3 プロジェクト]** ダイアログで、使用可能なテンプレートから **[インターネット アプリケーション]** を選択し、 **[ビュー エンジン]** が **[Razor]** に設定されていることを確認して **[OK]** をクリックします。  
   
 5. 新しいプロジェクトが開いたら、**ソリューション エクスプローラー**で **[TestApp]** プロジェクトを右クリックして **[プロパティ]** オプションを選択します。  
   
-6. プロジェクトのプロパティ ページで、左側の **[Web]** タブをクリックし、**[ローカル IIS Web サーバーを使用する]** オプションが選択されていることを確認します。  
+6. プロジェクトのプロパティ ページで、左側の **[Web]** タブをクリックし、 **[ローカル IIS Web サーバーを使用する]** オプションが選択されていることを確認します。  
   
 ## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a>手順 2 – クレーム ベースの認証用の ASP.NET MVC アプリケーションを構成する  
  この手順では、構成エントリを ASP.NET MVC Web アプリケーションの *Web.config* 構成ファイルに追加して、クレーム対応にします。  
@@ -100,7 +100,7 @@ ms.locfileid: "64626129"
     <authentication mode="None" />  
     ```  
   
-4. 以下の Windows Identity Foundation 関連の構成エントリを追加し、ASP.NET アプリケーションの URL とポート番号が、**\<audienceUris>** エントリ、**\<wsFederation>** 要素の **realm** 属性、および **\<wsFederation>** 要素の **reply** 属性の値と一致することを確認します。 また、**issuer** の値がセキュリティ トークン サービス (STS) URL に適したものであることを確認します。  
+4. 以下の Windows Identity Foundation 関連の構成エントリを追加し、ASP.NET アプリケーションの URL とポート番号が、 **\<audienceUris>** エントリ、 **\<wsFederation>** 要素の **realm** 属性、および **\<wsFederation>** 要素の **reply** 属性の値と一致することを確認します。 また、**issuer** の値がセキュリティ トークン サービス (STS) URL に適したものであることを確認します。  
   
     ```xml  
     <system.identityModel>  
@@ -218,4 +218,4 @@ ms.locfileid: "64626129"
   
 ## <a name="related-items"></a>関連項目  
   
-- [方法: WIF を使用してクレーム対応 ASP.NET Web フォーム アプリケーションを構築します。](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [方法: WIF を使用してクレーム対応 ASP.NET Web フォームアプリケーションをビルドする](how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7dfaedad48291ac09f6959bc7b314ae0d9da76e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 570e48788a11045882ef546bf6bc22315c2a02b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742045"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777279"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType メソッド
-エクスポート可能として入れ子にされた型を指定します。 [ExportType メソッド](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)入れ子になったエクスポートの種類をこともできますが、このメソッドが高速です。  
+入れ子にされた型をエクスポート可能として指定します。 [Exporttype メソッド](exporttype-method.md)も入れ子になった型をエクスポートできますが、このメソッドの方が高速です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,34 +43,34 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- エクスポートするアセンブリの ID。  
+ エクスポート元のアセンブリの ID。  
   
  `FileToken`  
- ファイルのトークンまたはエクスポート可能にする型を定義するファイルのアセンブリ。  
+ エクスポート可能にする型を定義するファイルのトークンまたはアセンブリ。  
   
  `TypeToken`  
- エクスポート可能にする型のトークンを入力します。  
+ エクスポート可能にする型の型トークン。  
   
  `ParentType`  
- 親の種類のトークンです。  
+ 親の種類のトークン。  
   
  `pszTypename`  
  エクスポートする完全修飾型名。  
   
  `dwFlags`  
- `ComType` フラグなど`tdPublic`または`tdNested`します。 この値に渡される[DefineExportedType メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)します。  
+ `ComType``tdPublic` や`tdNested`などのフラグ。 この値は、この[メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
   
  `pType`  
  エクスポートされた型のトークンを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 9c434ce0f5934509489a7deeced9e9e579d9cf7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2b7b54ab569a3f03363b2f30bf595c2087b9fe70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152907"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963953"
 ---
 # <a name="managing-connections"></a>接続の管理
 HTTP を使用してデータ リソースに接続するアプリケーションは、.NET Framework の <xref:System.Net.ServicePoint> クラスと <xref:System.Net.ServicePointManager> クラスを使用してインターネットに対する接続を管理し、最適なスケールとパフォーマンスを達成することができます。  
@@ -36,7 +36,7 @@ HTTP を使用してデータ リソースに接続するアプリケーショ�
  クライアントとサーバー間の接続数は、アプリケーションのスループットに大きな影響を及ぼす可能性があります。 既定で、<xref:System.Net.HttpWebRequest> クラスを使用するアプリケーションは、特定のサーバーに対して最大で 2 つの永続的な接続を使用しますが、最大接続数はアプリケーションごとに設定できます。  
   
 > [!NOTE]
->  HTTP/1.1 仕様では、アプリケーションからの接続数をサーバーごとに 2 接続に制限しています。  
+> HTTP/1.1 仕様では、アプリケーションからの接続数をサーバーごとに 2 接続に制限しています。  
   
  最適な接続数は、アプリケーションが実行されている実際の条件によって変わります。 アプリケーションに使用できる接続数を増やしても、アプリケーションのパフォーマンスに影響しない可能性があります。 接続数を増やした場合の影響を判断するには、接続数を変えながらパフォーマンス テストを実行します。 アプリケーションが使用する接続数を変更するには、次のコード例のように、アプリケーションの初期化時に **ServicePointManager** クラスの静的な <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> プロパティを変更します。  
   

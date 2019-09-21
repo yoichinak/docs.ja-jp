@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-ms.openlocfilehash: ffb24468c81cb4ec9f41645f8888c2c4ba021609
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da4e5e8fe4682191a0c8e2b0ce6a7b945fe63deb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033580"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781476"
 ---
 # <a name="how-to-use-scalar-valued-user-defined-functions"></a>方法: スカラー値のユーザー定義関数を使用する
 <xref:System.Data.Linq.Mapping.FunctionAttribute> 属性を使用することによって、クラスで定義されているクライアント メソッドを、ユーザー定義関数に対応付けることができます。 メソッドの本体は、メソッド呼び出しの目的を反映する式を構築し、変換および実行のためにその式を <xref:System.Data.Linq.DataContext> に渡します。  
   
 > [!NOTE]
->  直接実行は、関数がクエリの外部で呼び出される場合のみ発生します。 詳細については、「[方法 :ユーザー定義関数をインラインで呼び出す](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)します。  
+> 直接実行は、関数がクエリの外部で呼び出される場合のみ発生します。 詳細については、「[方法 :ユーザー定義関数をインライン](how-to-call-user-defined-functions-inline.md)で呼び出します。  
   
 ## <a name="example"></a>例  
  次の SQL コードは、スカラー値のユーザー定義関数 `ReverseCustName()` を示しています。  
@@ -39,4 +39,4 @@ END
   
 ## <a name="see-also"></a>関連項目
 
-- [ユーザー定義関数](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+- [ユーザー定義関数](user-defined-functions.md)

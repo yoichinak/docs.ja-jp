@@ -2,18 +2,18 @@
 title: 非同期プログラムにおける制御フロー (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: d8d9f1dd0963ee9074122473e0eeab9254866660
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599734"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204446"
 ---
 # <a name="control-flow-in-async-programs-c"></a>非同期プログラムにおける制御フロー (C#)
 
 `async` キーワードと `await` キーワードを使用すると、非同期のプログラムの作成と保守をより簡単に行えます。 ただし、プログラムがどのように動作するかを理解しないと、その結果は予想に反するものになる場合があります。 このトピックでは、簡単な非同期プログラムによる制御フローをトレースして、制御があるメソッドから別のメソッドに移るタイミングと、その都度転送される情報について説明します。
 
-一般に、[async (C#)](../../../../csharp/language-reference/keywords/async.md) 修飾子を使用した非同期コードを含むメソッドをマークします。 async 修飾子でマークされたメソッドでは、[await (C#)](../../../../csharp/language-reference/keywords/await.md) 演算子を使用して、呼び出される非同期処理の終了をメソッドが待機する場所を指定できます。 詳細については、「[Async および Await を使用した非同期プログラミング (C#)](../../../../csharp/programming-guide/concepts/async/index.md)」を参照してください。
+一般に、[async (C#)](../../../language-reference/keywords/async.md) 修飾子を使用した非同期コードを含むメソッドをマークします。 async 修飾子でマークされたメソッドでは、[await (C#)](../../../language-reference/operators/await.md) 演算子を使用して、呼び出される非同期処理の終了をメソッドが待機する場所を指定できます。 詳細については、「[Async および Await を使用した非同期プログラミング (C#)](./index.md)」を参照してください。
 
 次の例では、非同期メソッドを使用して、指定した Web サイトのコンテンツを文字列としてダウンロードし、その文字列の長さを表示します。 この例には、次の 2 つのメソッドが含まれています。
 
@@ -60,7 +60,7 @@ public partial class MainWindow : Window
 
 「1」から「6」までのそれぞれのラベルの位置は、プログラムの現在の状態に関する情報を表示します。 次の出力が生成されます。
 
-```text
+```output
 ONE:   Entering startButton_Click.
            Calling AccessTheWebAsync.
 
@@ -101,7 +101,7 @@ Length of the downloaded string: 33946.
 
 1. ダウンロードしたファイルを解凍し、Visual Studio を開始します。
 
-2. メニュー バーで、**[ファイル]** > **[開く]** > **[プロジェクト/ソリューション]** を選択します。
+2. メニュー バーで、 **[ファイル]**  >  **[開く]**  >  **[プロジェクト/ソリューション]** を選択します。
 
 3. 解凍したサンプル コードが含まれるフォルダーに移動し、ソリューション (.sln) ファイルを開き、**F5** キーを押してプロジェクトをビルドし、実行します。
 
@@ -113,19 +113,19 @@ Length of the downloaded string: 33946.
 
 1. Visual Studio を起動します。
 
-2. メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。
+2. メニュー バーで、 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。
 
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
-3. **[インストール済み]** > **[Visual C#]** > **[Windows Desktop]** カテゴリを選択し、プロジェクト テンプレートの一覧から **[WPF アプリ]** を選択します。
+3. **[インストール済み]**  >  **[Visual C#]**  >  **[Windows Desktop]** カテゴリを選択し、プロジェクト テンプレートの一覧から **[WPF アプリ]** を選択します。
 
-4. プロジェクトの名前として「`AsyncTracer`」と入力し、**[OK]** をクリックします。
+4. プロジェクトの名前として「`AsyncTracer`」と入力し、 **[OK]** をクリックします。
 
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。
 
 5. Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。
 
-     タブが表示されない場合は、**ソリューション エクスプローラー**で MainWindow.xaml のショートカット メニューを開き、**[コードの表示]** を選択します。
+     タブが表示されない場合は、**ソリューション エクスプローラー**で MainWindow.xaml のショートカット メニューを開き、 **[コードの表示]** を選択します。
 
 6. MainWindow.xaml の **XAML** ビューで、コードを次のコードに置き換えます。
 
@@ -147,7 +147,7 @@ Length of the downloaded string: 33946.
 
 7. <xref:System.Net.Http> への参照を追加します。
 
-8. **ソリューション エクスプローラー**で MainWindow.xaml.cs のショートカット メニューを開き、**[コードの表示]** を選択します。
+8. **ソリューション エクスプローラー**で MainWindow.xaml.cs のショートカット メニューを開き、 **[コードの表示]** を選択します。
 
 9. MainWindow.xaml.cs のコードを次のコードに置き換えます。
 
@@ -236,11 +236,11 @@ Length of the downloaded string: 33946.
     }
     ```
 
-10. **F5** キーを押してプログラムを実行し、**[スタート]** を複数回クリックします。
+10. **F5** キーを押してプログラムを実行し、 **[スタート]** を複数回クリックします。
 
     次の出力が表示されます。
 
-    ```text
+    ```output
     ONE:   Entering startButton_Click.
                Calling AccessTheWebAsync.
 
@@ -274,9 +274,9 @@ Length of the downloaded string: 33946.
 
 `startButton_Click` が `AccessTheWebAsync` を呼び出し、`AccessTheWebAsync` が非同期 <xref:System.Net.Http.HttpClient> メソッド <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> を呼び出すと、最初の 2 行の表示行がパスをトレースします。 次の図は、メソッドからメソッドへの呼び出しを示しています。
 
-![手順 1. と 2.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
+![手順 1. と 2.](./media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
 
-`AccessTheWebAsync` と `client.GetStringAsync` の戻り値の型はどちらも <xref:System.Threading.Tasks.Task%601> です。 `AccessTheWebAsync` では、TResult は整数です。 `GetStringAsync` では、TResult は文字列です。 非同期メソッドの戻り値の型について詳しくは、「[非同期の戻り値の型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)」を参照してください。
+`AccessTheWebAsync` と `client.GetStringAsync` の戻り値の型はどちらも <xref:System.Threading.Tasks.Task%601> です。 `AccessTheWebAsync` では、TResult は整数です。 `GetStringAsync` では、TResult は文字列です。 非同期メソッドの戻り値の型について詳しくは、「[非同期の戻り値の型 (C#)](./async-return-types.md)」を参照してください。
 
 タスクを返す非同期のメソッドは、制御が呼び出し元に戻ると、タスク インスタンスを返します。 `await` 演算子が呼び出されたメソッドで実行されるか、または呼び出されたメソッドが終了すると、非同期メソッドから呼び出し元に制御が戻ります。 「3」から「6」のラベルの付いた表示行はこのプロセスの部分をトレースします。
 
@@ -292,7 +292,7 @@ Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com")
 
  このタスクは `client.GetStringAsync` により実際の文字列が最終的に生成される約束と見なすことができます。 `AccessTheWebAsync` には `client.GetStringAsync` から約束された文字列に依存しない処理がある場合、その処理は `client.GetStringAsync` を待機している間は、続行できます。 この例では、"THREE" のラベルの付いた行の出力は、独立した処理を行う機会を表します。
 
-```
+```output
 THREE: Back in AccessTheWebAsync.
            Task getStringTask is started.
            About to await getStringTask & return a Task<int> to startButton_Click.
@@ -306,7 +306,7 @@ string urlContents = await getStringTask;
 
  次の図は `client.GetStringAsync` から `getStringTask` への割り当てへの制御フロー、および `getStringTask` の作成から await 演算子のアプリケーションへの制御フローを示しています。
 
- ![手順 3.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")
+ ![手順 3.](./media/asynctrace-three.png "AsyncTrace-Three")
 
  await 式は `AccessTheWebAsync` が制御を返すまで `client.GetStringAsync` を中断します。 その間、コントロールは `AccessTheWebAsync` の呼び出し元である `startButton_Click` に戻されます。
 
@@ -327,7 +327,7 @@ Task<int> getLengthTask = AccessTheWebAsync();
 
  `AccessTheWebAsync` と同様に、`startButton_Click` は、非同期タスク (`getLengthTask`) の結果に依存しない処理を、タスクが待機するまで続行できます。 次の出力行はその処理を表します。
 
-```
+```output
 FOUR:  Back in startButton_Click.
            Task getLengthTask is started.
            About to await getLengthTask -- no caller to return to.
@@ -341,13 +341,13 @@ int contentLength = await getLengthTask;
 
  次の図で、矢印は `AccessTheWebAsync` の await 式から `getLengthTask` への値の割り当てへの制御のフロー、および `startButton_Click` が待機するまでの `getLengthTask` の通常の処理を示しています。
 
- ![手順 4.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")
+ ![手順 4.](./media/asynctrace-four.png "AsyncTrace-FOUR")
 
 ### <a name="step-five"></a>手順 5.
 
 `client.GetStringAsync` が終了を通知すると、`AccessTheWebAsync` の処理は中断から解放され、await ステートメントを越えて続行できます。 次の出力行は、処理の再開を表します。
 
-```
+```output
 FIVE:  Back in AccessTheWebAsync.
            Task getStringTask is complete.
            Processing the return statement.
@@ -358,7 +358,7 @@ FIVE:  Back in AccessTheWebAsync.
 
  次の図は、`client.GetStringAsync` (および `getStringTask`) が完了した後の制御の移動を示します。
 
- ![手順 5.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")
+ ![手順 5.](./media/asynctrace-five.png "AsyncTrace-FIVE")
 
  `AccessTheWebAsync` は完了するまで実行され、完了を待機していた `startButton_Click` に制御が戻ります。
 
@@ -368,7 +368,7 @@ FIVE:  Back in AccessTheWebAsync.
 
 次の出力行は、`startButton_Async` の処理の再開を表します。
 
-```
+```output
 SIX:   Back in startButton_Click.
            Task getLengthTask is finished.
            Result from AccessTheWebAsync is stored in contentLength.
@@ -383,11 +383,11 @@ int contentLength = await getLengthTask;
 
  次の図は `AccessTheWebAsync` から `startButton_Click` に制御が戻ることを示しています。
 
- ![手順 6.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")
+ ![手順 6.](./media/asynctrace-six.png "AsyncTrace-SIX")
 
 ## <a name="see-also"></a>関連項目
 
-- [Async および Await を使用した非同期プログラミング (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [非同期の戻り値の型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async および Await を使用した非同期プログラミング (C#)](./index.md)
+- [非同期の戻り値の型 (C#)](./async-return-types.md)
+- [チュートリアル: Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async Sample:非同期プログラムにおける制御フロー (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

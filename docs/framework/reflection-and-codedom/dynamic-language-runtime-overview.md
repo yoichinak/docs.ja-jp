@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c624866a23eb32f57953847e8a229f6fa5e7b4bb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: e6b6de8f0a178914c46ba5a65dfb56795cf23c71
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632965"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046123"
 ---
 # <a name="dynamic-language-runtime-overview"></a>動的言語ランタイムの概要
 
@@ -76,7 +76,7 @@ CLR と同様に、DLR は .NET Framework の一部であり、.NET Framework �
 ## <a name="dlr-architecture"></a>DLR のアーキテクチャ
  動的言語ランタイムのアーキテクチャを次の図に示します。
 
- ![動的言語ランタイム アーキテクチャの概要](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview") DLR アーキテクチャ
+ ![動的言語ランタイム アーキテクチャの概要](./media/dlr-archoverview.png "DLR_ArchOverview") DLR アーキテクチャ
 
  DLR は、動的言語のサポートを強化するために一連のサービスを CLR に追加します。 これらのサービスには、次のようなものが含まれます。
 
@@ -95,7 +95,7 @@ DLR では、呼び出しサイトのバインダーを使用して、.NET Frame
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
-- [共通言語ランタイム](../../../docs/standard/clr.md)
+- [共通言語ランタイム](../../standard/clr.md)
 - [式ツリー (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [式ツリー (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [チュートリアル: 動的オブジェクトの作成と使用](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [チュートリアル: 動的オブジェクトの作成と使用](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

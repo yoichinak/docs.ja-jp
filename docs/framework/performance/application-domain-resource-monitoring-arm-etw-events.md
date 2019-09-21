@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac396e1a5b83f33068266553024c37ef436c150d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e4002ae248022a9e4380c79174109494b5e4ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616631"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046769"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>アプリケーション ドメインのリソース監視 (ARM) ETW イベント
 <a name="top"></a> これらのイベントは、アプリケーション ドメインの状態に関する詳細な診断の情報を提供します。 これらのイベントを使用することもできますが、アプリケーション ドメインのリソース監視 (ARM) の機能を使用しても同じ情報を得られます。  
@@ -33,7 +33,7 @@ ms.locfileid: "64616631"
 ## <a name="threadcreated-event"></a>ThreadCreated イベント  
  このイベントは、ランダウン プロバイダーで `ThreadDC` としても発生します  ( `AppDomainResourceManagementRundownKeyword` キーワードで発生)。 これは、このカテゴリでランダウン プロバイダーで発生する唯一のイベントです。  
   
- 次の表に、キーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)」を参照してください)。  
+ 次の表に、キーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
   
 |イベントを発生させるキーワード|レベル|  
 |-----------------------------------|-----------|  
@@ -158,4 +158,4 @@ ms.locfileid: "64616631"
   
 ## <a name="see-also"></a>関連項目
 
-- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW イベント](clr-etw-events.md)

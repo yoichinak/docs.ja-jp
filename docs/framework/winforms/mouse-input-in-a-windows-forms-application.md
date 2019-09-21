@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, mouse input
 ms.assetid: 743c2f3c-219e-4a52-b6b8-2657096a2da6
-ms.openlocfilehash: 3b4e9eff3f5c4c032e75ded0913ce2cc6051498d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91bbf61029d52cf1d434136ee72ef389ca499ebc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800738"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949900"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Windows フォーム アプリケーションにおけるマウス入力
 Windows フォームには、さまざまなマウス イベントがあり、カスタマイズされたマウス カーソル、マウスのキャプチャ、ドラッグ アンド ドロップ動作もサポートされています。  
@@ -21,7 +21,7 @@ Windows フォームには、さまざまなマウス イベントがあり、�
  [Windows フォームにおけるマウス イベント](mouse-events-in-windows-forms.md)  
  マウス イベントが発生する順序と、特定のコントロール内でマウス イベントが発生するしくみについて説明します。  
   
- [方法: 数回のクリックを区別し、ダブルクリックします。](how-to-distinguish-between-clicks-and-double-clicks.md)  
+ [方法: クリックとダブルクリックを区別する](how-to-distinguish-between-clicks-and-double-clicks.md)  
  シングルクリックとダブルクリックを使用して、互換性のないアクションを開始する方法について説明します。  
   
  [Windows フォームにおけるマウス ポインター](mouse-pointers-in-windows-forms.md)  
@@ -34,5 +34,5 @@ Windows フォームには、さまざまなマウス イベントがあり、�
  ドラッグ アンド ドロップ動作を実装する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [マウスへのアクセス](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
+ [マウスへのアクセス](../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
  Visual Basic を使用したマウスへのアクセスに関するトピックの一覧を示します。

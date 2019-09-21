@@ -7,16 +7,16 @@ helpviewer_keywords:
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 7aa820d87ec36f1963183b7e4e2e46de998a08c9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 36ca18adc392643107b43a947656846f3b94a2eb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487509"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597349"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>暗黙的に型指定される配列 (C# プログラミング ガイド)
 
-配列インスタンスの型が、配列初期化子で指定された要素から推論される暗黙的に型指定された配列を作成できます。 暗黙的に型指定された変数の規則は、暗黙的に型指定された配列にも適用されます。 詳細については、「[暗黙的に型指定されるローカル変数](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。
+配列インスタンスの型が、配列初期化子で指定された要素から推論される暗黙的に型指定された配列を作成できます。 暗黙的に型指定された変数の規則は、暗黙的に型指定された配列にも適用されます。 詳細については、「[暗黙的に型指定されるローカル変数](../classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。
 
 暗黙的に型指定された配列は通常、匿名型、オブジェクト、コレクション初期化子と共にクエリ式で使用されます。
 
@@ -34,10 +34,10 @@ ms.locfileid: "57487509"
 
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [暗黙的に型指定されるローカル変数](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)
-- [配列](../../../csharp/programming-guide/arrays/index.md)
-- [匿名型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-- [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [var](../../../csharp/language-reference/keywords/var.md)
-- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [暗黙的に型指定されるローカル変数](../classes-and-structs/implicitly-typed-local-variables.md)
+- [配列](./index.md)
+- [匿名型](../classes-and-structs/anonymous-types.md)
+- [オブジェクト初期化子とコレクション初期化子](../classes-and-structs/object-and-collection-initializers.md)
+- [var](../../language-reference/keywords/var.md)
+- [LINQ クエリ式](../linq-query-expressions/index.md)

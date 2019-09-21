@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8db9f2051a0401e01f233f9c959e015eb657bdac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401426"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965477"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>方法: ObservableCollection を作成およびバインドする
 この例では、 <xref:System.Collections.ObjectModel.ObservableCollection%601>クラスから派生したコレクションを作成してバインドする方法を示します。これは、項目が追加または削除されたときに通知を提供するコレクションクラスです。  
@@ -136,7 +136,7 @@ End Class
  `NameItemTemplate` の定義は、ここには示していません。  
   
 > [!NOTE]
->  コレクション内のオブジェクトは、「[バインディング ソースの概要](binding-sources-overview.md)」で説明されている要件を満たす必要があります。 特に、または<xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay>を使用している場合 (ソースプロパティが[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]動的に変更されたときにを更新する場合など) は、次の<xref:System.ComponentModel.INotifyPropertyChanged>ような適切なプロパティ変更通知機構を実装する必要があります。インターフェイス。  
+> コレクション内のオブジェクトは、「[バインディング ソースの概要](binding-sources-overview.md)」で説明されている要件を満たす必要があります。 特に、または<xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay>を使用している場合 (ソースプロパティが[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]動的に変更されたときにを更新する場合など) は、次の<xref:System.ComponentModel.INotifyPropertyChanged>ような適切なプロパティ変更通知機構を実装する必要があります。インターフェイス。  
   
  詳しくは、「[データ バインディングの概要](data-binding-overview.md)」の「コレクションへのバインド」をご覧ください。  
   

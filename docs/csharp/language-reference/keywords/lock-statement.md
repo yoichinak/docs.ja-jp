@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: c7d5d4ef7d812e186813cd08f9e4e2adf2ab1a58
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 70fcd8041946f2b1db3b37de79318b87771ee676
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306653"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168776"
 ---
 # <a name="lock-statement-c-reference"></a>lock ステートメント (C# リファレンス)
 
@@ -47,14 +47,14 @@ finally
 
 このコードでは [try...finally](try-finally.md) ブロックが使用されているため、`lock` ステートメントの本文内で例外がスローされた場合でもロックは解放されます。
 
-`lock` ステートメントの本体で [await](await.md) キーワードを使用することはできません。
+`lock` ステートメントの本文で [await](../operators/await.md) 演算子を使用することはできません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 共有リソースへのスレッド アクセスを同期する場合、専用オブジェクト インスタンス (`private readonly object balanceLock = new object();` など) またはコードの関連のない部分によってロック オブジェクトとして使用される可能性がない別のインスタンスをロックします。 異なる共有リソースに対して同じロック オブジェクト インスタンスを使用することは避けてください。デッドロックやロックの競合が発生する可能性があります。 特に、以下をロック オブジェクトとして使用しないでください。
 
 - `this`。ロックとして呼び出し元に使用される可能性があります。
-- <xref:System.Type> インスタンス。[typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) 演算子またはリフレクションによって取得される可能性があります。
+- <xref:System.Type> インスタンス。[typeof](../operators/type-testing-and-cast.md#typeof-operator) 演算子またはリフレクションによって取得される可能性があります。
 - 文字列リテラルを含む文字列インスタンス。[インターン処理](/dotnet/api/system.string.intern#remarks)される可能性があります。
 
 ## <a name="example"></a>例
@@ -65,7 +65,7 @@ finally
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の [lock ステートメント](~/_csharplang/spec/statements.md#the-lock-statement)に関するセクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -73,6 +73,5 @@ finally
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
 - [C# リファレンス](../index.md)
-- [C# のキーワード](index.md)
-- [ステートメントのキーワード](statement-keywords.md)
+- [C# キーワード](index.md)
 - [同期プリミティブの概要](../../../standard/threading/overview-of-synchronization-primitives.md)

@@ -1,31 +1,34 @@
 ---
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。 この記事は、プレビュー 5 での最新のものです。
-ms.date: 02/12/2019
-ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.date: 09/10/2019
+ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363894"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926524"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
-C# 言語では、既に試すことができる多くの機能強化が行われています。 
+C# 言語では、既に試すことができる多くの機能強化が行われています。
 
 - [読み取り専用メンバー](#readonly-members)
 - [既定のインターフェイス メンバー](#default-interface-members)
 - [パターン マッチングの拡張機能](#more-patterns-in-more-places):
-  * [switch 式](#switch-expressions)
-  * [プロパティのパターン](#property-patterns)
-  * [タプル パターン](#tuple-patterns)
-  * [位置指定パターン](#positional-patterns)
+  - [switch 式](#switch-expressions)
+  - [プロパティのパターン](#property-patterns)
+  - [タプル パターン](#tuple-patterns)
+  - [位置指定パターン](#positional-patterns)
 - [using 宣言](#using-declarations)
 - [静的ローカル関数](#static-local-functions)
 - [破棄可能な ref 構造体](#disposable-ref-structs)
 - [Null 許容参照型](#nullable-reference-types)
 - [非同期ストリーム](#asynchronous-streams)
 - [インデックスと範囲](#indices-and-ranges)
+- [null 合体割り当て](#null-coalescing-assignment)
+- [構築されたアンマネージド型](#unmanaged-constructed-types)
+- [verbatim 補間文字列の拡張](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
 > この記事の最後の更新は、C# 8.0 プレビュー 5 に関するものです。
@@ -376,7 +379,8 @@ await foreach (var number in GenerateSequence())
 
 範囲とインデックスでは、配列、<xref:System.Span%601>、または <xref:System.ReadOnlySpan%601> 内の部分範囲を指定するための簡潔な構文が提供されます。
 
-この言語のサポートでは、2 つの新しい型と 2 つの新しい演算子を使用しています。
+この言語のサポートでは、次の 2 つの新しい型と 2 つの新しい演算子を使用しています。
+
 - <xref:System.Index?displayProperty=nameWithType> はシーケンスとしてインデックスを表します。
 - `^` 演算子。シーケンスの末尾から相対的なインデックスを指定します。
 - <xref:System.Range?displayProperty=nameWithType> はシーケンスのサブ範囲を表します。
@@ -444,3 +448,52 @@ var text = words[phrase];
 ```
 
 チュートリアルでのインデックスと範囲について詳しくは、「[Indices and ranges (インデックスと範囲)](../tutorials/ranges-indexes.md)」で調べることができます。
+
+## <a name="null-coalescing-assignment"></a>null 合体割り当て
+
+C# 8.0 では、null 合体割り当て演算子 `??=` が導入されています。 左側のオペランドが `null` に評価された場合にのみ、`??=` 演算子を使用して右側のオペランドの値を左側のオペランドに割り当てることができます。
+
+```csharp
+List<int> numbers = null;
+int? i = null;
+
+numbers ??= new List<int>();
+numbers.Add(i ??= 17);
+numbers.Add(i ??= 20);
+
+Console.WriteLine(string.Join(' ', numbers));  // output: 17 17
+Console.WriteLine(i);  // output: 17
+```
+
+詳細については、「[?? and ??= 演算子](../language-reference/operators/null-coalescing-operator.md)」の記事を参照してください。
+
+## <a name="unmanaged-constructed-types"></a>構築されたアンマネージド型
+
+C# 7.3 以前では、構築された型 (1 つ以上の型引数を含む型) を[アンマネージド型](../language-reference/builtin-types/unmanaged-types.md)にすることはできません。 C# 8.0 以降、アンマネージド型のフィールドのみが含まれている場合、構築された値型はアンマネージドになります。
+
+たとえば、次の `Coords<T>` ジェネリック型の定義があるとします。
+
+```csharp
+public struct Coords<T>
+{
+    public T X;
+    public T Y;
+}
+```
+
+この `Coords<int>` 型は、C# 8.0 以降ではアンマネージド型です。 あらゆるアンマネージド型の場合と同様に、この型の変数へのポインターを作成したり、この型のインスタンスの[スタックにメモリ ブロックを割り当て](../language-reference/operators/stackalloc.md)たりすることができます。
+
+```csharp
+Span<Coords<int>> coordinates = stackalloc[]
+{
+    new Coords<int> { X = 0, Y = 0 },
+    new Coords<int> { X = 0, Y = 3 },
+    new Coords<int> { X = 4, Y = 0 }
+};
+```
+
+詳細については、「[アンマネージド型](../language-reference/builtin-types/unmanaged-types.md)」を参照してください。
+
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>verbatim 補間文字列の拡張
+
+verbatim [補間](../language-reference/tokens/interpolated.md)文字列において、`$` および `@` のトークンの順序は任意です。`$@"..."` と `@$"..."` は両方とも有効な verbatim 補間文字列です。 以前のバージョンの C# では、`$` トークンは `@` トークンの前に記述する必要があります。

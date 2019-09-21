@@ -6,12 +6,12 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d9889ce389eed73a9af0a3f72dcca6ec476cae15
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627747"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796500"
 ---
 # <a name="default-values-table-c-reference"></a>既定値の一覧表 (C# リファレンス)
 
@@ -28,13 +28,13 @@ ms.locfileid: "68627747"
 |[struct](struct.md)|すべての値型フィールドが既定値に設定され、すべての参照型フィールドが `null` に設定された値。|
 |任意の [null 許容値型](../../programming-guide/nullable-types/index.md)|<xref:System.Nullable%601.HasValue%2A> プロパティが `false` で、<xref:System.Nullable%601.Value%2A> プロパティが未定義のインスタンス。 その規定値は、null 許容値型の "*null*" 値とも呼ばれます。|
 
-[既定の値式](../../programming-guide/statements-expressions-operators/default-value-expressions.md)を使用して、次の例に示すように、型の既定値を生成します。
+次の例に示すように、型の既定値を生成するには [default 演算子](../operators/default.md)を使います。
 
 ```csharp
 int a = default(int);
 ```
 
-C# 7.1 以降、[`default` リテラル](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference)を使用して、その型の既定値に変数を初期化できます。
+C# 7.1 以降、[`default` リテラル](../operators/default.md#default-literal)を使用して、その型の既定値に変数を初期化できます。
 
 ```csharp
 int a = default;

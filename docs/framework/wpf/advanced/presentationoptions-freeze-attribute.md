@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3e0cee293a9585b972b0145da953976ed94b74c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772841"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991421"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze 属性
-セット、<xref:System.Windows.Freezable.IsFrozen%2A>状態`true`で格納している<xref:System.Windows.Freezable>要素。 既定の動作を<xref:System.Windows.Freezable>せず、`PresentationOptions:Freeze`属性が指定される<xref:System.Windows.Freezable.IsFrozen%2A>は`false`の読み込み時間、および [全般] に依存<xref:System.Windows.Freezable>時の動作。  
+`true` <xref:System.Windows.Freezable.IsFrozen%2A> 親<xref:System.Windows.Freezable>要素の状態をに設定します。 `PresentationOptions:Freeze` <xref:System.Windows.Freezable.IsFrozen%2A> 属性が指定さ<xref:System.Windows.Freezable>れてい<xref:System.Windows.Freezable>ないの既定の動作では、読み込み時にが実行時の一般的な動作に依存します。`false`  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法  
   
-```  
+```xaml  
 <object  
   xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
@@ -31,15 +31,15 @@ ms.locfileid: "61772841"
   
 |||  
 |-|-|  
-|`PresentationOptions`|XML 1.0 仕様に従って、任意の有効なプレフィックス文字列を指定できる XML 名前空間プレフィックス。 プレフィックス`PresentationOptions`はこのドキュメントでの識別目的で使用します。|  
-|`freezableElement`|いずれかをインスタンス化する要素のクラスを派生する<xref:System.Windows.Freezable>します。|  
+|`PresentationOptions`|Xml 1.0 の仕様に従って、任意の有効なプレフィックス文字列を指定できる XML 名前空間プレフィックス。 このドキュメント`PresentationOptions`では、識別のためにプレフィックスが使用されます。|  
+|`freezableElement`|の<xref:System.Windows.Freezable>派生クラスをインスタンス化する要素。|  
   
 ## <a name="remarks"></a>Remarks  
- `Freeze`属性は、唯一の属性またはその他のプログラミング要素で定義されて、 `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` XML 名前空間。 `Freeze` Ignorable としてを使用して、指定することができますように具体的には、この特別な名前空間の属性が存在する[mc: Ignorable 属性](mc-ignorable-attribute.md)ルート要素の宣言の一部として。 理由を`Freeze`が無視できる必要がありますでないため、すべて[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサの実装に固定することは、<xref:System.Windows.Freezable>ロード時にこの機能はありませんの一部、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]仕様。  
+ 属性は、 `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` XML 名前空間で定義されている唯一の属性またはその他のプログラミング要素です。 `Freeze` 属性`Freeze`は、ルート要素宣言の一部として[mc: ignorable 属性](mc-ignorable-attribute.md)を使用して、無視可能として指定できるように、この特別な名前空間に存在します。 が無視できる`Freeze`理由は、すべて[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]のプロセッサ実装が読み込み時にを<xref:System.Windows.Freezable>フリーズできるわけではないためです。この機能は[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]仕様の一部ではありません。  
   
- 処理する機能、`Freeze`属性は、具体的に組み込まれている、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]処理プロセッサ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]用にコンパイルされたアプリケーション。 属性は、任意のクラスでサポートされていないと、属性構文が拡張または変更します。 独自に実装している場合[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサの固定動作することもできます、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサの処理時に、`Freeze`属性<xref:System.Windows.Freezable>の読み込み時に要素。  
+ `Freeze`属性を処理する機能は、コンパイルされたアプリケーション[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]のを処理[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]するプロセッサに特に組み込まれています。 属性はどのクラスでもサポートされていません。また、属性の構文は拡張または変更できません。 独自[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]のプロセッサを実装する場合は、読み込み時に<xref:System.Windows.Freezable>要素の`Freeze`属性を処理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]するときに、 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサのフリーズ動作を並列処理することを選択できます。  
   
- 任意の値、`Freeze`以外の属性`true`(いない大文字小文字を区別)、負荷時のエラーが生成されます。 (を指定する、`Freeze`属性として`false`、エラーではありませんが、既定値設定するためにはない`false`は何も行いません)。  
+ `Freeze` 以外`true`の属性の値 (大文字と小文字は区別されません) は、読み込み時間エラーを生成します。 ( `Freeze`属性をとし`false`て指定するのはエラーではなく、既に既定値で`false`あるため、をに設定することはできません)。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -2,12 +2,12 @@
 title: FILESTREAM データ
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 4edd03a38f8f5df6cb4fb9c2446f966dfe601564
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 87bed5dd345c240cc00b2c36aa976ec53fe63b93
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490065"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794099"
 ---
 # <a name="filestream-data"></a>FILESTREAM データ
 
@@ -20,11 +20,11 @@ varbinary(max) 列に FILESTREAM 属性を指定すると、SQL Server ではデ
 
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM の SqlClient サポート
 
-SQL server、.NET Framework Data Provider <xref:System.Data.SqlClient>、読み取りと書き込みを使用して FILESTREAM データをサポートしています、<xref:System.Data.SqlTypes.SqlFileStream>クラスで定義されている、<xref:System.Data.SqlTypes>名前空間。 `SqlFileStream` は <xref:System.IO.Stream> クラスを継承します。このクラスは、データのストリームへの読み込みと書き込みを行うためのメソッドを提供します。 ストリームからデータを読み取ると、データはストリームからバイトの配列などのデータ構造に転送されます。 書き込みを行うと、データはデータ構造からストリームに転送されます。
+SQL Server <xref:System.Data.SqlClient>の .NET Framework Data Provider では、は、 <xref:System.Data.SqlTypes>名前空間で定義されて<xref:System.Data.SqlTypes.SqlFileStream>いるクラスを使用した FILESTREAM データの読み取りと書き込みをサポートしています。 `SqlFileStream` は <xref:System.IO.Stream> クラスを継承します。このクラスは、データのストリームへの読み込みと書き込みを行うためのメソッドを提供します。 ストリームからデータを読み取ると、データはストリームからバイトの配列などのデータ構造に転送されます。 書き込みを行うと、データはデータ構造からストリームに転送されます。
 
 ### <a name="creating-the-sql-server-table"></a>SQL Server テーブルの作成
 
-次の Transact-SQL ステートメントによって、従業員の名前の付いたテーブルが作成され、データ行が挿入されます。 FILESTREAM ストレージを有効にすると、このテーブルを次のようなコード例と共に使用できます。 SQL Server オンライン ブックのリソースへのリンクは、このトピックの最後にあります。
+次の Transact-SQL ステートメントによって、従業員の名前の付いたテーブルが作成され、データ行が挿入されます。 FILESTREAM ストレージを有効にすると、このテーブルを次のようなコード例と共に使用できます。 SQL Server オンラインブックのリソースへのリンクについては、このトピックの最後に記載されています。
 
 ```sql
 CREATE TABLE employees
@@ -40,7 +40,7 @@ Values(1, 0x00, default)
 GO
 ```
 
-### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>例:FILESTREAM データを挿入し、読み取り、上書き、
+### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>例:FILESTREAM データの読み取り、上書き、および挿入
 
 次のサンプルでは、FILESTREAM からデータを読み取る方法を示します。 コードはファイルへの論理パスを取得し、`FileAccess` を `Read` に、`FileOptions` を `SequentialScan` に設定します。 次に、コードは SqlFileStream からバイトをバッファーに読み取ります。 バイトはコンソール ウィンドウに書き込まれます。
 
@@ -171,22 +171,22 @@ namespace FileStreamTest
 }
 ```
 
-別のサンプルを参照してください。[保存し、ファイル ストリーム列にバイナリ データをフェッチする方法](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)します。
+別のサンプルについては、「[ファイルストリーム列にバイナリデータを格納およびフェッチする方法](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)」を参照してください。
 
 ## <a name="resources-in-sql-server-books-online"></a>SQL Server オンライン ブックの関連トピック
 
-FILESTREAM の詳細なドキュメントについては、SQL Server オンライン ブックの次のセクションにあります。
+FILESTREAM の完全なドキュメントは、SQL Server オンラインブックの次のセクションにあります。
 
 |トピック|説明|
 |-----------|-----------------|
 |[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|FILESTREAM ストレージを使用するタイミング、および SQL Server データベース エンジンと NTFS ファイル システムを統合する方法について説明します。|
-|[FILESTREAM データ用のクライアント アプリケーションを作成します。](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|FILESTREAM データを操作するための Windows API 関数について説明します。|
-|[FILESTREAM と他の SQL Server 機能](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|FILESTREAM データを SQL Server の他の機能と共に使用する際の注意事項、ガイドライン、および制限事項について説明します。|
+|[FILESTREAM データ用のクライアントアプリケーションの作成](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|FILESTREAM データを操作するための Windows API 関数について説明します。|
+|[FILESTREAM とその他の SQL Server 機能](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|FILESTREAM データを SQL Server の他の機能と共に使用する際の注意事項、ガイドライン、および制限事項について説明します。|
 
 ## <a name="see-also"></a>関連項目
 
-- [SQL Server データ型と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [ADO.NET でのデータの取得および変更](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [コード アクセス セキュリティと ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [SQL Server のバイナリ データと大きな値のデータ](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET の概要](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [SQL Server データ型と ADO.NET](sql-server-data-types.md)
+- [ADO.NET でのデータの取得および変更](../retrieving-and-modifying-data.md)
+- [コード アクセス セキュリティと ADO.NET](../code-access-security.md)
+- [SQL Server のバイナリ データと大きな値のデータ](sql-server-binary-and-large-value-data.md)
+- [ADO.NET の概要](../ado-net-overview.md)

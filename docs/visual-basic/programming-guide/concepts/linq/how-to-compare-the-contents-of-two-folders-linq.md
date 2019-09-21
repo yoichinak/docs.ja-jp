@@ -1,15 +1,15 @@
 ---
-title: '方法: 2 つのフォルダー (LINQ) (Visual Basic) の内容を比較します。'
+title: '方法: 2つのフォルダーの内容を比較する (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 75283faf25e7a26055b1122eb45e23c510fc6b39
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5db73b57cfa21de4f1d14299ed7956a322876898
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593008"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940673"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>方法: 2 つのフォルダー (LINQ) (Visual Basic) の内容を比較します。
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>方法: 2つのフォルダーの内容を比較する (LINQ) (Visual Basic)
 この例では、2 つのファイル リストを比較する 3 つの方法を示します。  
   
 - 2 つのファイル リストが同一であるかどうかを指定するブール値をクエリする方法  
@@ -19,7 +19,7 @@ ms.locfileid: "65593008"
 - 1 つのフォルダーにあり、もう 1 つのフォルダーにはないファイルを取得するために、差集合をクエリする方法  
   
     > [!NOTE]
-    >  ここに示す方法は、任意の型のオブジェクトのシーケンスを比較するために適用させることができます。  
+    > ここに示す方法は、任意の型のオブジェクトのシーケンスを比較するために適用させることができます。  
   
  ここに示す `FileComparer` クラスは、標準クエリ演算子と共に、カスタム比較演算子クラスを使用する方法を示します。 このクラスは、実際のシナリオで使用することは想定されていません。 各フォルダーの内容が同一であるかどうかを判断するために、各ファイルの名前と長さ (バイト) を使用するだけです。 実際のシナリオでは、この比較演算子を変更して、より厳密に等しいかどうかをチェックします。  
   
@@ -114,7 +114,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- VB.NET コンソール アプリケーション プロジェクトを作成、 `Imports` System.Linq 名前空間のステートメント。
+ VB.NET コンソールアプリケーションプロジェクトを作成します。 `Imports`これには、System. Linq 名前空間のステートメントを使用します。
  
 ## <a name="see-also"></a>関連項目
 

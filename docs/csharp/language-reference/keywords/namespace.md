@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: df921ecc670bf12411dc8b0d828d6c19bb0a1aec
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8cc1d1461a33ab94f8ae399d6ff40f26eaf7f74a
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422748"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039453"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# リファレンス)
 
@@ -52,24 +52,15 @@ C# ソース ファイル内に名前空間を明示的に宣言しているか�
 
 [!code-csharp[csrefKeywordsNamespace#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#3)]
 
-## <a name="related-resources"></a>関連資料
-
-名前空間の使用方法の詳細については、次のトピックを参照してください。
-
-- [名前空間](../../programming-guide/namespaces/index.md)
-
-- [名前空間の使用](../../programming-guide/namespaces/using-namespaces.md)
-
-- [方法: グローバル名前空間エイリアスを使用する](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
-
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)に関する記事の「[名前空間](~/_csharplang/spec/namespaces.md)」に関するセクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../language-reference/index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
-- [C# のキーワード](index.md)
+- [C# リファレンス](../index.md)
+- [C# キーワード](index.md)
 - [using](using-directive.md)
 - [using static](using-static.md)
+- [名前空間エイリアス修飾子 `::`](../operators/namespace-alias-qualifier.md)
+- [名前空間](../../programming-guide/namespaces/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 58dc070e1642773f39f9ab2a9037ca60175b27cf
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 5fe464f2b79fa1f7b0674c049110d32f2ad32335
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401291"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944819"
 ---
 # <a name="panels-overview"></a>パネルの概要
 <xref:System.Windows.Controls.Panel>要素は、要素のサイズと大きさ、位置、および子コンテンツの配置を制御するコンポーネントです。 に[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、いくつかの<xref:System.Windows.Controls.Panel>定義済み要素と、カスタム<xref:System.Windows.Controls.Panel>要素を作成する機能が用意されています。  
@@ -118,7 +118,7 @@ ms.locfileid: "68401291"
 ### <a name="dockpanel"></a>DockPanel  
  要素<xref:System.Windows.Controls.DockPanel>は、子<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>コンテンツ要素で設定されている添付プロパティを使用して、コンテナーの端に沿ってコンテンツを配置します。 が<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>または<xref:System.Windows.Controls.Dock.Top> に設定されている場合は、子要素を互いに上または下に<xref:System.Windows.Controls.Dock.Bottom>配置します。 が<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>または<xref:System.Windows.Controls.Dock.Left> に<xref:System.Windows.Controls.Dock.Right>設定されている場合は、子要素が互いの左側または右側に配置されます。 プロパティ<xref:System.Windows.Controls.DockPanel.LastChildFill%2A>は、 <xref:System.Windows.Controls.DockPanel>の子として追加された最後の要素の位置を決定します。  
   
- を使用<xref:System.Windows.Controls.DockPanel>すると、一連のボタンなど、関連するコントロールのグループを配置できます。 または、これを使用して、[!INCLUDE[TLA#tla_outlook](../../../../includes/tlasharptla-outlook-md.md)] に見られるのと同様の "ウィンドウ形式の" [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を作成できます。  
+ を使用<xref:System.Windows.Controls.DockPanel>すると、一連のボタンなど、関連するコントロールのグループを配置できます。 または、これを使用して、Microsoft Outlook と[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]同様の "ペイン" を作成することもできます。  
   
 #### <a name="sizing-to-content"></a>コンテンツに合わせたサイズの変更  
  <xref:System.Windows.FrameworkElement.Height%2A>プロパティと<xref:System.Windows.FrameworkElement.Width%2A>プロパティが指定されて<xref:System.Windows.Controls.DockPanel>いない場合、のコンテンツにサイズが調整されます。 サイズは、子要素のサイズに合うように、増減させることができます。 ただし、これらのプロパティが指定されていて、次に指定された子<xref:System.Windows.Controls.DockPanel>要素の領域がなくなった場合、はその子要素または後続の子要素を表示せず、後続の子要素を測定しません。  
@@ -149,7 +149,7 @@ ms.locfileid: "68401291"
  で定義されている<xref:System.Windows.Controls.Grid>列と行で<xref:System.Windows.GridUnitType.Star>は、残りの領域を均等に分散するためにサイズ変更を利用できます。 行<xref:System.Windows.GridUnitType.Star>または列の高さまたは幅としてが選択されている場合、その列または行は使用可能な残りの領域の重み付け比率を受け取ります。 これは、列また<xref:System.Windows.GridUnitType.Auto>は行内のコンテンツのサイズに基づいて領域を均等に分散するとは対照的です。 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] を使用する場合、この値は `*` または `2*` と表現されます。 最初のケースでは、行または列は使用可能なスペース領域を 1 回受け取り、2 番目のケースでは 2 回受け取ることになります。 この手法を組み合わせて、 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>と<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>の`Stretch`値を使用して領域を均等に分散することにより、レイアウト領域を画面領域の割合でパーティション分割することができます。 <xref:System.Windows.Controls.Grid>は、この方法で領域を分散できる唯一のレイアウトパネルです。  
   
 #### <a name="defining-and-using-a-grid"></a>グリッドの定義と使用  
- 次の例に、[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] スタート メニューで使用可能な [ファイル名を指定して実行] ダイアログ ボックスに見られるのと同様の [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を構築する方法を示します。  
+ 次の例では、Windows の[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [スタート] メニューにある [実行] ダイアログにあるのと同様のをビルドする方法を示します。  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

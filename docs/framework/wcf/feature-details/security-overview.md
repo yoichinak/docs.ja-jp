@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: f1c0fba82761d42324eb53655b36ef7a3570d5b3
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: ae03684449e902c0d05744a19671169f2e0b8be2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868906"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949355"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Windows Communication Foundation セキュリティの概要
 Windows Communication Foundation (WCF) は、SOAP メッセージベースの分散プログラミングプラットフォームです。データを保護するには、クライアントとサービス間のメッセージをセキュリティで保護することが不可欠です。 WCF では、既存のセキュリティインフラストラクチャと SOAP メッセージに対して認識されているセキュリティ標準の両方に基づいて、セキュリティで保護されたメッセージを交換するための相互運用可能なプラットフォームが提供されます。  
   
 > [!NOTE]
->  WCF セキュリティの包括的なガイドについては、「 [Wcf セキュリティガイダンス](https://go.microsoft.com/fwlink/?LinkID=158912)」を参照してください。  
+> WCF セキュリティの包括的なガイドについては、「 [Wcf セキュリティガイダンス](https://go.microsoft.com/fwlink/?LinkID=158912)」を参照してください。  
   
  WCF では、HTTPS、Windows 統合セキュリティ、ユーザー認証のためのユーザー名とパスワードなど、既存のテクノロジを使用してセキュリティで保護された分散アプリケーションを構築している場合に、使い慣れた概念を使用します。 WCF は、既存のセキュリティインフラストラクチャと統合するだけでなく、セキュリティで保護された SOAP メッセージを使用して、Windows のみのドメインを超えた分散セキュリティも拡張します。 既存のプロトコルに加えて SOAP をプロトコルとして使用するという大きな利点があるため、WCF では既存のセキュリティメカニズムを実装することを検討してください。 たとえば、ユーザー名とパスワードや X.509 証明書など、クライアントまたはサービスを識別する資格情報には、相互運用可能な XML ベースの SOAP プロファイルがあります。 このプロファイルを使用して、XML デジタル署名や XML 暗号化などの公開仕様を利用するセキュリティで保護されたメッセージ交換を行います。 仕様の一覧については、「[システム指定の相互運用性バインディングでサポートされる Web サービスプロトコル](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)」を参照してください。  
   

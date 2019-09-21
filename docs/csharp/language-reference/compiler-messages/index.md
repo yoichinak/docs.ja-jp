@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: c4ece5ccf8c31beb2847a50f9cf894959acf23b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3714223209a3298706960625ea383e42dc2b2154
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61975261"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69607174"
 ---
 # <a name="c-compiler-errors"></a>C# コンパイラ エラー
 
@@ -31,8 +31,8 @@ ms.locfileid: "61975261"
   
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
-- [申し訳ありませんが、この C# エラーに関する詳細情報はありません。](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
+- [C# コンパイラ オプション](../compiler-options/index.md)
+- [申し訳ありませんが、この C# エラーに関する詳細情報はありません。](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
 - [[ビルド] ページ (プロジェクト デザイナー) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
-- [-warn (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)
-- [/nowarn (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)
+- [-warn (C# コンパイラ オプション)](../compiler-options/warn-compiler-option.md)
+- [/nowarn (C# コンパイラ オプション)](../compiler-options/nowarn-compiler-option.md)

@@ -4,12 +4,12 @@ description: .NET Core グローバル ツールとそれらに使用できる .
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 29499d28629e483d66e25b8ecdbd5817effba439
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9ff7e33a50eb0c5fb649b44dda6d72412a134584
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631742"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202592"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET core グローバル ツールの概要
 
@@ -63,7 +63,7 @@ dotnet tool install -g <package-name> --version <version-number>
 
 インストールが成功すると、ツールの呼び出しに使用したコマンドとインストールされたバージョンを示す、次の例のようなメッセージが表示されます。
 
-```
+```output
 You can invoke the tool using the following command: dotnetsay
 Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 ```
@@ -129,7 +129,7 @@ dotnet --list-runtimes
 .NET Core CLI は、初めて使用したときに既定の場所を PATH 環境変数に追加しようとします。 ただし、次のようなシナリオでは、既定の場所が PATH に追加されない場合があります。
 
 * `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` 環境変数を設定している場合
-* macOS で、*.pkg* ではなく *.tar.gz* ファイルを使用して .NET Core SDK をインストールしている場合
+* macOS で、 *.pkg* ではなく *.tar.gz* ファイルを使用して .NET Core SDK をインストールしている場合
 * Linux で、パスを構成するためにシェル環境ファイルを編集する必要がある場合
 
 ## <a name="other-cli-commands"></a>その他の CLI コマンド

@@ -4,12 +4,12 @@ description: このチュートリアルでは、Web サイトのコメントか
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 2dc4d68eb6a3aa5890e4d091e33c4624d79317e9
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: f89174204c13b907db5a41ed374e1a31c61dcf11
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238371"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929025"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>チュートリアル: ML.NET の二項分類を使用して Web サイトのコメントのセンチメントを分析する
 
@@ -17,21 +17,22 @@ ms.locfileid: "68238371"
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
-> * コンソール アプリケーションを作成する
-> * データの準備
-> * データを読み込む
-> * モデルを構築してトレーニングする
-> * モデルを評価する
-> * モデルを使用して予測する
-> * 結果を見る
+>
+> - コンソール アプリケーションを作成する
+> - データの準備
+> - データを読み込む
+> - モデルを構築してトレーニングする
+> - モデルを評価する
+> - モデルを使用して予測する
+> - 結果を見る
 
 このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) リポジトリで確認できます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)が ".NET Core クロスプラット フォーム開発" ワークロードと共にインストールされている
+- [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)が ".NET Core クロスプラット フォーム開発" ワークロードと共にインストールされている
 
-* [UCI Sentiment Labeled Sentences データセット](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (ZIP ファイル)
+- [UCI Sentiment Labeled Sentences データセット](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (ZIP ファイル)
 
 ## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
 
@@ -62,8 +63,8 @@ ms.locfileid: "68238371"
 
 2. 最近ダウンロードしたデータセット ファイルのパスと保存したモデル ファイルのパスを保持するために、2 つのグローバル フィールドを作成します。
 
-    * `_dataPath` には、モデルのトレーニングに使用するデータ セットのパスが含まれます。
-    * `_modelPath` には、トレーニング済みのモデルを保存するパスが含まれます。
+    - `_dataPath` には、モデルのトレーニングに使用するデータ セットのパスが含まれます。
+    - `_modelPath` には、トレーニング済みのモデルを保存するパスが含まれます。
 
 3. `Main` メソッドのすぐ上にある行に次のコードを追加して、それらのパスを指定します。
 
@@ -125,9 +126,9 @@ ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)�
 
     `LoadData()` メソッドは次のタスクを実行します。
 
-    * データを読み込みます。
-    * 読み込んだデータセットを、トレーニングデータセットとテスト データセットに分割します。
-    * 分割されたトレーニングデータセットとテスト データセットを返します。
+    - データを読み込みます。
+    - 読み込んだデータセットを、トレーニングデータセットとテスト データセットに分割します。
+    - 分割されたトレーニングデータセットとテスト データセットを返します。
 
 4. `LoadData()` メソッドの最初の行として、次のコードを追加します。
 
@@ -157,10 +158,10 @@ ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)�
 
     `BuildAndTrainModel()` メソッドは次のタスクを実行します。
 
-    * データを抽出して変換します。
-    * モデルをトレーニングする。
-    * テスト データに基づいてセンチメントを予測する。
-    * モデルを返します。
+    - データを抽出して変換します。
+    - モデルをトレーニングする。
+    - テスト データに基づいてセンチメントを予測する。
+    - モデルを返します。
 
 2. `Main()` メソッドの直後に、次のコードを使用して `BuildAndTrainModel()` メソッドを作成します。
 
@@ -225,10 +226,10 @@ ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)�
 
     `Evaluate()` メソッドは次のタスクを実行します。
 
-    * テスト データ セットを読み込む。
-    * BinaryClassification エバリュエーターを作成します。
-    * モデルを評価し、メトリックを作成する。
-    * メトリックを表示する。
+    - テスト データ セットを読み込む。
+    - BinaryClassification エバリュエーターを作成します。
+    - モデルを評価し、メトリックを作成する。
+    - メトリックを表示する。
 
 2. `BuildAndTrainModel()` メソッドの呼び出しのすぐ下に、次のコードを使用して、`Main()` メソッドからの新しいメソッドの呼び出しを追加します。
 
@@ -252,11 +253,11 @@ ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)�
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayMetrics "Display selected metrics")]
 
-* `Accuracy` メトリックでは、モデルの正確度が取得されます。これは、テスト セットに含まれる正しい予測の割合です。
+- `Accuracy` メトリックでは、モデルの正確度が取得されます。これは、テスト セットに含まれる正しい予測の割合です。
 
-* `AreaUnderRocCurve` メトリックは、そのモデルで肯定的クラスと否定的クラスが正しく分類されている信用度を示します。 `AreaUnderRocCurve` を可能な限り 1 に近づけることが目標です。
+- `AreaUnderRocCurve` メトリックは、そのモデルで肯定的クラスと否定的クラスが正しく分類されている信用度を示します。 `AreaUnderRocCurve` を可能な限り 1 に近づけることが目標です。
 
-* `F1Score` メトリックでは、モデルの F1 スコアが取得されます。これは[精度](../resources/glossary.md#precision)と[再現率](../resources/glossary.md#recall)間のバランスのメジャーです。  `F1Score` を可能な限り 1 に近づけることが目標です。
+- `F1Score` メトリックでは、モデルの F1 スコアが取得されます。これは[精度](../resources/glossary.md#precision)と[再現率](../resources/glossary.md#recall)間のバランスのメジャーです。  `F1Score` を可能な限り 1 に近づけることが目標です。
 
 ### <a name="predict-the-test-data-outcome"></a>テスト データの結果を予測する
 
@@ -271,10 +272,10 @@ ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)�
 
     `UseModelWithSingleItem()` メソッドは次のタスクを実行します。
 
-    * テスト データの 1 つのコメントを作成する。
-    * テスト データに基づいてセンチメントを予測する。
-    * テスト データと予測をレポート用に結合する。
-    * 予測された結果を表示する。
+    - テスト データの 1 つのコメントを作成する。
+    - テスト データに基づいてセンチメントを予測する。
+    - テスト データと予測をレポート用に結合する。
+    - 予測された結果を表示する。
 
 2. `Evaluate()` メソッドの呼び出しのすぐ下に、次のコードを使用して、`Main()` メソッドからの新しいメソッドの呼び出しを追加します。
 
@@ -315,10 +316,10 @@ ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)�
 
     `UseModelWithBatchItems()` メソッドは次のタスクを実行します。
 
-    * バッチ テスト データを作成します。
-    * テスト データに基づいてセンチメントを予測する。
-    * テスト データと予測をレポート用に結合する。
-    * 予測された結果を表示する。
+    - バッチ テスト データを作成します。
+    - テスト データに基づいてセンチメントを予測する。
+    - テスト データと予測をレポート用に結合する。
+    - 予測された結果を表示する。
 
 2. `UseModelWithSingleItem()` メソッドの呼び出しのすぐ下に、次のコードを使用して、`Main` メソッドからの新しいメソッドの呼び出しを追加します。
 
@@ -383,13 +384,14 @@ Press any key to continue . . .
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
-> * コンソール アプリケーションを作成する
-> * データの準備
-> * データを読み込む
-> * モデルを構築してトレーニングする
-> * モデルを評価する
-> * モデルを使用して予測する
-> * 結果を見る
+>
+> - コンソール アプリケーションを作成する
+> - データの準備
+> - データを読み込む
+> - モデルを構築してトレーニングする
+> - モデルを評価する
+> - モデルを使用して予測する
+> - 結果を見る
 
 さらに詳しく学習するには、次のチュートリアルに進んでください。
 > [!div class="nextstepaction"]

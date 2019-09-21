@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 70cef109e4f2947fb4e38b9bfd19433257cce136
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dc4c0336c8a67a1b4e70f71ba5f5406da1fbb2ff
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663506"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972374"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 このモジュールが一部となるアセンブリの名前を指定します。  
@@ -26,30 +26,30 @@ ms.locfileid: "64663506"
   
 |用語|定義|  
 |---|---|  
-|`assembly_name`|このモジュールの一部となるアセンブリの名前。|  
+|`assembly_name`|このモジュールが含まれるアセンブリの名前。|  
   
 ## <a name="remarks"></a>Remarks  
- コンパイラ プロセス、`-moduleassemblyname`オプション場合にのみ、`-target:module`オプションが指定されました。 これにより、コンパイラでモジュールを作成します。 コンパイラによって作成されたモジュールがで指定されたアセンブリに対してのみ有効ですが、`-moduleassemblyname`オプション。 別のアセンブリでモジュールを配置する場合は、実行時エラーが発生します。  
+ オプションが指定さ`-moduleassemblyname`れて`-target:module`いる場合にのみ、コンパイラはオプションを処理します。 これにより、コンパイラによってモジュールが作成されます。 コンパイラによって作成されたモジュールは、 `-moduleassemblyname`オプションで指定されたアセンブリに対してのみ有効です。 モジュールを別のアセンブリに配置すると、実行時エラーが発生します。  
   
- `-moduleassemblyname`オプションは、次に該当する場合にのみ必要があります。  
+ `-moduleassemblyname`オプションは、次の条件に該当する場合にのみ必要です。  
   
-- モジュール内のデータ型へのアクセスを必要な`Friend`参照先アセンブリの型。  
+- モジュール内のデータ型は、参照され`Friend`たアセンブリの型にアクセスする必要があります。  
   
-- 参照アセンブリがモジュールをビルドするアセンブリにフレンド アセンブリのアクセスを付与します。  
+- 参照アセンブリは、モジュールがビルドされるアセンブリへのフレンドアセンブリアクセスを許可されています。  
   
- モジュールの作成方法の詳細については、次を参照してください。 [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)します。 フレンド アセンブリの詳細については、次を参照してください。[フレンド アセンブリ](../../../standard/assembly/friend-assemblies.md)します。  
+ モジュールの作成の詳細については、「 [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)」を参照してください。 フレンドアセンブリの詳細については、「[フレンドアセンブリ](../../../standard/assembly/friend.md)」を参照してください。  
   
 > [!NOTE]
->  `-moduleassemblyname`オプションは、Visual Studio 開発環境内からは使用できません。 コマンド プロンプトからコンパイルするときにのみ、は使用できます。  
+> この`-moduleassemblyname`オプションは、Visual Studio 開発環境内からは使用できません。コマンドプロンプトからコンパイルする場合にのみ使用できます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: マルチファイル アセンブリをビルドする](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [方法: マルチファイル アセンブリをビルドする](../../../framework/app-domains/build-multifile-assembly.md)
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
-- [-参照 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [.NET のアセンブリ](../../../standard/assembly/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [フレンド アセンブリ](../../../standard/assembly/friend-assemblies.md)
+- [フレンド アセンブリ](../../../standard/assembly/friend.md)

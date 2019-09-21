@@ -4,12 +4,12 @@ description: Visual Studio Code を使用した、C# で初めての .NET Core �
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1268a943d7cbf1033531a6c51f42c6fd672eaed3
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 03a2edcbb3414cfd63006603424a3ca1eade528f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401837"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849455"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# および Visual Studio Code の使用を開始する
 
@@ -18,7 +18,7 @@ ms.locfileid: "67401837"
 ## <a name="prerequisites"></a>必須コンポーネント
 
 1. [Visual Studio Code](https://code.visualstudio.com/) のインストール。
-2. [.NET Core SDK](https://www.microsoft.com/net/download/core) のインストール。
+2. [.NET Core SDK](https://dotnet.microsoft.com/download) のインストール。
 3. Visual Studio Code の [C# 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)のインストール。 Visual Studio Code に拡張機能をインストールする方法については、[VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery) を参照してください。
 
 ## <a name="hello-world"></a>Hello World
@@ -27,22 +27,22 @@ ms.locfileid: "67401837"
 
 1. プロジェクトを開く
 
-    * Visual Studio Code を開きます。
-    * 左側のメニューで [エクスプローラー] アイコンをクリックし、 **[フォルダーを開く]** をクリックします。
-    * メイン メニューから **[ファイル]** 、 **[フォルダーを開く]** の順に選択し、C# プロジェクトを保存するフォルダーを開き、 **[フォルダーの選択]** をクリックします。 ここで、*Hello World* という名前のプロジェクトのフォルダーを作成します。
+    - Visual Studio Code を開きます。
+    - 左側のメニューで [エクスプローラー] アイコンをクリックし、 **[フォルダーを開く]** をクリックします。
+    - メイン メニューから **[ファイル]** 、 **[フォルダーを開く]** の順に選択し、C# プロジェクトを保存するフォルダーを開き、 **[フォルダーの選択]** をクリックします。 ここで、*Hello World* という名前のプロジェクトのフォルダーを作成します。
 
       ![Visual Studio Code の [フォルダーを開く]](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. C# プロジェクトを初期化する
-    * Visual Studio Code から統合ターミナルを開きます。メイン メニューで **[表示]** 、 **[統合端末]** の順に選択してください。
-    * ターミナル ウィンドウで、`dotnet new console` と入力します。
-    * このコマンドで、フォルダーに `HelloWorld.csproj` という名前の C# プロジェクト ファイルとともに、単純な "Hello World" プログラムが既に書き込まれた `Program.cs` ファイルが作成されます。
+    - Visual Studio Code から統合ターミナルを開きます。メイン メニューで **[表示]** 、 **[統合端末]** の順に選択してください。
+    - ターミナル ウィンドウで、`dotnet new console` と入力します。
+    - このコマンドで、フォルダーに `HelloWorld.csproj` という名前の C# プロジェクト ファイルとともに、単純な "Hello World" プログラムが既に書き込まれた `Program.cs` ファイルが作成されます。
 
       ![dotnet new コマンド](media/with-visual-studio-code/dotnet-new-command.png)
 
 3. ビルド資産を解決する
 
-    * **.NET Core 1.x** の場合、「`dotnet restore`」と入力します。 `dotnet restore` を実行すると、プロジェクトのビルドに必要な .NET Core パッケージにアクセスします。
+    - **.NET Core 1.x** の場合、「`dotnet restore`」と入力します。 `dotnet restore` を実行すると、プロジェクトのビルドに必要な .NET Core パッケージにアクセスします。
 
       ![dotnet restore コマンド](media/with-visual-studio-code/dotnet-restore-command.png)
 
@@ -50,7 +50,7 @@ ms.locfileid: "67401837"
 
 4. "Hello World" プログラムを実行する
 
-    * 「`dotnet run`」と入力します。
+    - 「`dotnet run`」と入力します。
 
       ![dotnet run コマンド](media/with-visual-studio-code/dotnet-run-command.png)
 
@@ -79,7 +79,7 @@ ms.locfileid: "67401837"
     ![ブレークポイントの設定](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
 6. デバッグを開始するには、<kbd>F5 キー</kbd>または緑色の矢印を選択します。 デバッガーは、前述の手順で設定したブレークポイントに達すると、プログラムの実行を停止します。
-    * デバッグ中は左上のペインにローカル変数が表示され、デバッグ コンソールを使用できます。
+    - デバッグ中は左上のペインにローカル変数が表示され、デバッグ コンソールを使用できます。
 
 7. 上部にある青色の矢印を選択してデバッグを継続するか、上部にある赤色の四角形を選択して停止します。
 

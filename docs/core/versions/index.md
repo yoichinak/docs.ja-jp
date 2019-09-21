@@ -4,12 +4,12 @@ description: この記事では、.NET Core SDK と ランタイムをバージ�
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4674cd8750f5a5e628945c1712ac579d88385b94
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646866"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849291"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
 
@@ -34,10 +34,10 @@ SDK バージョン番号の 3 番目の位置には、マイナー番号とパ�
 
 (\*) 上記の表では、今後リリースされる 2.2 .NET Core Runtime が例として使用されています。 .NET Core 2.1 に対する最初の SDK が 2.1.300 であることが、履歴アーティファクトで示されていたからです。 詳細については、「[.NET Core のバージョンの選択](selection.md)」を参照してください。
 
-注: 
+注:
 
-* SDK において、ランタイムの機能更新プログラムの前に 10 の機能更新プログラムがある場合、バージョン番号は 1000 シリーズに展開され、番号は 2.2.1000 のようになります。これは 2.2.900 に続く機能リリースを示しています。 このような状況が発生することは想定されていません。
-* 機能リリースなしで 99 のパッチ リリースは、発生しません。 リリースがこの数に近づくと、機能リリースが強制的に適用されます。
+- SDK において、ランタイムの機能更新プログラムの前に 10 の機能更新プログラムがある場合、バージョン番号は 1000 シリーズに展開され、番号は 2.2.1000 のようになります。これは 2.2.900 に続く機能リリースを示しています。 このような状況が発生することは想定されていません。
+- 機能リリースなしで 99 のパッチ リリースは、発生しません。 リリースがこの数に近づくと、機能リリースが強制的に適用されます。
 
 詳細については、[dotnet/designs](https://github.com/dotnet/designs/pull/29) リポジトリにある初期の提案を参照してください。
 
@@ -55,24 +55,24 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 `MAJOR` は次のときに増分されます。
 
-* 製品に重大な変更が加えられた。または製品の方向性が新しくなった。
-* 互換性に影響する変更が行われた。 互換性に影響する変更の受け入れには大きな制約があります。
-* 古いバージョンがサポート対象から除外された。
-* 既存の依存関係の新しい `MAJOR` バージョンが採用された。
+- 製品に重大な変更が加えられた。または製品の方向性が新しくなった。
+- 互換性に影響する変更が行われた。 互換性に影響する変更の受け入れには大きな制約があります。
+- 古いバージョンがサポート対象から除外された。
+- 既存の依存関係の新しい `MAJOR` バージョンが採用された。
 
 `MINOR` は次のときに増分されます。
 
-* パブリック API アクセス領域が追加された。
-* 新しい動作が追加された。
-* 既存の依存関係の新しい `MINOR` バージョンが採用された。
-* 新しい依存関係が導入された。
+- パブリック API アクセス領域が追加された。
+- 新しい動作が追加された。
+- 既存の依存関係の新しい `MINOR` バージョンが採用された。
+- 新しい依存関係が導入された。
 
 `PATCH` は次のときに増分されます。
 
-* バグの修正が行われた。
-* より新しいプラットフォームのサポートが追加された。
-* 既存の依存関係の新しい `PATCH` バージョンが採用された。
-* 前のケースのいずれかに一致しない他の変更。
+- バグの修正が行われた。
+- より新しいプラットフォームのサポートが追加された。
+- 既存の依存関係の新しい `PATCH` バージョンが採用された。
+- 前のケースのいずれかに一致しない他の変更。
 
 複数の変更が存在する場合、個々の変更によって影響を受ける最高位置の要素が増分され、それに続く要素はゼロにリセットされます。 たとえば、`MAJOR` が増分され、`MINOR` と `PATCH` はゼロにリセットされます。 `MINOR` が増分されるときには、`PATCH` はゼロにリセットされますが、`MAJOR` は変更されません。
 
@@ -108,6 +108,6 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 - [ターゲット フレームワーク](../../standard/frameworks.md)
 - [.NET Core の配布パッケージ](../build/distribution-packaging.md)
-- [.NET Core サポート ライフサイクルのファクト シート](https://www.microsoft.com/net/core/support)
+- [.NET Core サポート ライフサイクルのファクト シート](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET core 2 + バージョン バインディング](https://github.com/dotnet/designs/issues/3)
 - [.NET Core の Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-core/)

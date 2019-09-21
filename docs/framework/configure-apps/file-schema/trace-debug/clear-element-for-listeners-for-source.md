@@ -7,21 +7,21 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 63d3bb272fcdbee2c59b0569c85f8183cdac8666
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 768d51a74b4c31d1250d2f5d6517f760f886e0a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673786"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920558"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<クリア > 要素の\<リスナー > の\<ソース >
+# <a name="clear-element-for-listeners-for-source"></a>\<ソース > の\<リスナー \<> の > 要素をクリアします
 トレース ソースの `Listeners` コレクションを消去します。  
   
  \<configuration>  
 \<system.diagnostics>  
 \<ソース >  
 \<ソース >  
-\<listeners>  
+\<リスナー >  
 \<clear>  
   
 ## <a name="syntax"></a>構文  
@@ -47,16 +47,16 @@ ms.locfileid: "61673786"
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
 |`sources`|トレース メッセージを開始するトレース ソースを保持します。|  
 |`source`|トレース メッセージを開始するトレース ソースを指定します。|  
-|`listeners`|収集、格納、およびメッセージをルーティングするリスナーを指定します。|  
+|`listeners`|メッセージを収集、格納、およびルーティングするリスナーを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- `<clear>`要素からすべてのリスナーを削除して、`Listeners`トレース ソースのコレクションを含む、 <xref:System.Diagnostics.DefaultTraceListener>。 使用することができます、`<clear>`要素を使用する前に、`<add>`要素をコレクション内の他のアクティブなリスナーが存在しないことを特定します。  
+ 要素`<clear>`は`Listeners` 、<xref:System.Diagnostics.DefaultTraceListener>を含む、トレースソースのコレクションからすべてのリスナーを削除します。 要素を使用`<add>`し`<clear>`て、コレクション内に他のアクティブなリスナーが存在しないことを特定することができます。  
   
 ## <a name="configuration-file"></a>構成ファイル  
- この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
+ この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、`<clear>`要素を使用する前に、`<add>`リスナーを追加する要素`console`と`textListener`を`Listeners`トレース ソースのコレクション`TraceSourceApp`します。  
+ 次の例では、要素を`<clear>`使用し`<add>`て`console`リスナー `textListener`を追加してから、トレースソース`Listeners` `TraceSourceApp`のコレクションに追加する方法を示します。  
   
 ```xml  
 <configuration>  
@@ -88,5 +88,5 @@ ms.locfileid: "61673786"
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)
+- [トレース リスナー](../../../debug-trace-profile/trace-listeners.md)

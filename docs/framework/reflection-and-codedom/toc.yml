@@ -16,6 +16,8 @@
           href: dynamically-loading-and-using-types.md
         - name: '方法: リフレクションのみのコンテキストにアセンブリを読み込む'
           href: how-to-load-assemblies-into-the-reflection-only-context.md
+        - name: '方法: リフレクションを使用して型とメンバーの情報を取得する'
+          href: get-type-member-information.md
         - name: カスタム属性へのアクセス
           href: accessing-custom-attributes.md
         - name: 完全修飾型名の指定

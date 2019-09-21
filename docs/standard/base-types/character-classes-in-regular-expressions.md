@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 0b70545c2252d6e8b82d6f4d57522ac4bb2481d8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 53dcbcfdcc9a8d04840bc91a563b6514153b9577
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490877"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963429"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正規表現での文字クラス
 
@@ -51,7 +51,7 @@ ms.locfileid: "66490877"
  .NET は、文字クラスの減算式をサポートしています。これにより、ある文字クラスから別の文字クラスを除外した結果を文字のセットとして定義できます。 詳細については、「[文字クラス減算](#CharacterClassSubtraction)」を参照してください。  
   
 > [!NOTE]
->  カテゴリ別の文字に一致する文字クラス (単語文字に一致する [\w](#WordCharacter)、Unicode カテゴリに一致する [\p{}](#CategoryOrBlock) など) は、<xref:System.Globalization.CharUnicodeInfo> クラスを使用して文字カテゴリに関する情報を提供します。  .NET Framework 4.6.2 以降の文字カテゴリは、[Unicode 標準バージョン 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) に基づいています。 .NET Framework 4 から .NET Framework 4.6.1 では、[Unicode Standard バージョン 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/) に基づいています。  
+> カテゴリ別の文字に一致する文字クラス (単語文字に一致する [\w](#WordCharacter)、Unicode カテゴリに一致する [\p{}](#CategoryOrBlock) など) は、<xref:System.Globalization.CharUnicodeInfo> クラスを使用して文字カテゴリに関する情報を提供します。  .NET Framework 4.6.2 以降の文字カテゴリは、[Unicode 標準バージョン 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) に基づいています。 .NET Framework 4 から .NET Framework 4.6.1 では、[Unicode Standard バージョン 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/) に基づいています。  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>文字グループの肯定: [ ]  
@@ -141,7 +141,7 @@ ms.locfileid: "66490877"
  文字グループの否定における先頭のキャレット文字 (`^`) は、文字グループが文字グループの肯定ではなく文字グループの否定であることを示し、省略できません。  
   
 > [!IMPORTANT]
->  大規模な正規表現パターンにおける文字グループの否定は、ゼロ幅アサーションではありません。 つまり、正規表現エンジンは、文字グループの否定を評価した後に、入力文字列内で 1 文字進みます。  
+> 大規模な正規表現パターンにおける文字グループの否定は、ゼロ幅アサーションではありません。 つまり、正規表現エンジンは、文字グループの否定を評価した後に、入力文字列内で 1 文字進みます。  
   
  文字グループの否定を含む一般的な正規表現パターンをいくつか次の表に示します。  
   
@@ -177,7 +177,7 @@ ms.locfileid: "66490877"
      [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]  
   
 > [!NOTE]
->  `.` 文字クラスは `\n` を除く任意の文字と一致するので、このクラスも `\r` (復帰文字、\u000D) と一致します。  
+> `.` 文字クラスは `\n` を除く任意の文字と一致するので、このクラスも `\r` (復帰文字、\u000D) と一致します。  
   
 - 文字グループの肯定または文字グループの否定に含まれているピリオドは、文字クラスではなくリテラルのピリオド文字として扱われます。 詳細については、このトピックで前述した「[文字グループの肯定](#PositiveGroup)」および「[文字グループの否定](#NegativeGroup)」を参照してください。 ピリオド文字 (`.`) を文字クラスとしても文字グループの肯定のメンバーとしても含む正規表現を定義する例を次に示します。 正規表現 `\b.*[.?!;:](\s|\z)` はワード境界から開始し、ピリオドを含む 5 つの句読点のいずれかが検出されるまで任意の文字と一致し、空白文字または文字列の末尾と一致します。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "66490877"
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  `.` 言語要素は任意の文字と一致するので、正規表現パターンが任意の文字と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「 [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)」を参照してください。  
+> `.` 言語要素は任意の文字と一致するので、正規表現パターンが任意の文字と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「 [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)」を参照してください。  
   
 <a name="CategoryOrBlock"></a>   
 ## <a name="unicode-category-or-unicode-block-p"></a>Unicode カテゴリまたは Unicode ブロック: \p{}  
@@ -251,7 +251,7 @@ ms.locfileid: "66490877"
  ECMAScript 準拠の動作が指定された場合、`\w` は `[a-zA-Z_0-9]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
   
 > [!NOTE]
->  `\w` 言語要素は単語に使用される任意の文字と一致するので、正規表現パターンが単語に使用される任意の文字の後に特定の単語に使用される文字が続く語と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「 [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)」を参照してください。  
+> `\w` 言語要素は単語に使用される任意の文字と一致するので、正規表現パターンが単語に使用される任意の文字の後に特定の単語に使用される文字が続く語と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「 [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)」を参照してください。  
   
  `\w` 言語要素を使用して単語内の重複する文字を照合する例を次に示します。 この例では、次のように解釈できる正規表現パターン `(\w)\1` を定義しています。  
   
@@ -287,7 +287,7 @@ ms.locfileid: "66490877"
  ECMAScript 準拠の動作が指定された場合、`\W` は `[^a-zA-Z_0-9]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
   
 > [!NOTE]
->  `\W` 言語要素は単語に使用されない任意の文字と一致するので、正規表現パターンが単語に使用されない任意の文字の後に特定の単語に使用されない文字が続く語と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「[正規表現での量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)」を参照してください。  
+> `\W` 言語要素は単語に使用されない任意の文字と一致するので、正規表現パターンが単語に使用されない任意の文字の後に特定の単語に使用されない文字が続く語と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「[正規表現での量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)」を参照してください。  
   
  `\W` 文字クラスの例を次に示します。  この例では、単語の後に 1 つまたは 2 つの単語に使用されない文字 (空白や句読点など) が続く場合に一致する正規表現パターン `\b(\w+)(\W){1,2}` を定義しています。 この正規表現の解釈を次の表に示します。  
   
@@ -452,7 +452,7 @@ ms.locfileid: "66490877"
 |0250 ～ 02AF|`IsIPAExtensions`|  
 |02B0 ～ 02FF|`IsSpacingModifierLetters`|  
 |0300 ～ 036F|`IsCombiningDiacriticalMarks`|  
-|0370 ～ 03FF|`IsGreek`<br /><br /> \- または -<br /><br /> `IsGreekandCoptic`|  
+|0370 ～ 03FF|`IsGreek`<br /><br /> または<br /><br /> `IsGreekandCoptic`|  
 |0400 ～ 04FF|`IsCyrillic`|  
 |0500 ～ 052F|`IsCyrillicSupplement`|  
 |0530 ～ 058F|`IsArmenian`|  
@@ -496,7 +496,7 @@ ms.locfileid: "66490877"
 |2000 ～ 206F|`IsGeneralPunctuation`|  
 |2070 ～ 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 ～ 20CF|`IsCurrencySymbols`|  
-|20D0 ～ 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> \- または -<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 ～ 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> または<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 ～ 214F|`IsLetterlikeSymbols`|  
 |2150 ～ 218F|`IsNumberForms`|  
 |2190 ～ 21FF|`IsArrows`|  
@@ -552,7 +552,7 @@ ms.locfileid: "66490877"
 |FFF0 ～ FFFF|`IsSpecials`|  
   
 <a name="CharacterClassSubtraction"></a>   
-## <a name="character-class-subtraction-basegroup---excludedgroup"></a>文字クラスの減算: [base_group - [excluded_group]]  
+## <a name="character-class-subtraction-base_group---excluded_group"></a>文字クラスの減算: [base_group - [excluded_group]]  
  文字クラスは、文字のセットを定義します。 文字クラス減算によって、ある文字クラスから別の文字クラスの文字を除外した文字セットが生成されます。  
   
  文字クラス減算式の形式は次のとおりです。  

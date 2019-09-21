@@ -3,12 +3,12 @@ title: 式ツリーの説明
 description: 式ツリーについて、また、外部実行のためのアルゴリズム変換と実行前のコード検査で式ツリーがいかに役立つかについて説明します。
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c5d4b2ad54fab547567d430f11a31542a11d03f3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613422"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104807"
 ---
 # <a name="expression-trees-explained"></a>式ツリーの説明
 
@@ -33,11 +33,11 @@ var sum = 1 + 2;
 見た目では、ステートメント全体が 1 つのツリーです。ルート ノードから始めて、ツリーの各ノードをたどり、ステートメントを構成するコードを確認することができます。
 
 - 代入 (`var sum = 1 + 2;`) ありの変数宣言ステートメント
-  * 暗黙的な変数の型宣言 (`var sum`)
+  - 暗黙的な変数の型宣言 (`var sum`)
     - 暗黙的な var キーワード (`var`)
     - 変数名の宣言 (`sum`)
-  * 代入演算子 (`=`)
-  * 二項加算式 (`1 + 2`)
+  - 代入演算子 (`=`)
+  - 二項加算式 (`1 + 2`)
     - 左オペランド (`1`)
     - 加算演算子 (`+`)
     - 右オペランド (`2`)

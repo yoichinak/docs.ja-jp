@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dec878c92e2e2196ab2d586a78578b7244a41a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aed70a78e2513f4d63fbf8ca8868f26efbac9ae8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742240"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787655"
 ---
 # <a name="addimport-method"></a>AddImport メソッド
 アセンブリにインポートを追加します。  
@@ -40,25 +40,25 @@ HRESULT AddImport(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- 追加する対象のアセンブリの一意の ID。  
+ 補強するアセンブリの一意の ID。  
   
  `ImportToken`  
- 一意の ID の取得から[ImportFile メソッド](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)ファイルをインポートするのです。  
+ インポートするファイルの[Importfile メソッド](importfile-method.md)から取得された一意の ID。  
   
  `dwFlags`  
- COM + FileDef フラグなど`ffContainsNoMetaData`と`ffWriteable`します。 `dwFlags` 渡される[DefineFile メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)します。  
+ `ffContainsNoMetaData` や`ffWriteable`などの com + filedef フラグ。 `dwFlags`は、[メソッド](../metadata/imetadataassemblyemit-definefile-method.md)に渡されます。  
   
  `pFileToken`  
- 結果のファイルの ID を受け取るトークンへのポインター。  
+ 結果ファイルの ID を受け取るトークンへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

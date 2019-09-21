@@ -5,30 +5,30 @@ helpviewer_keywords:
 - data binding [WPF], getting binding objects from bound target properties
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
-ms.openlocfilehash: 7c7392bc11af57b2e9f27e2302f36efb59d40e9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7aacc2145ffe98ec7b58afb3b2e3dca151ef0ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933407"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965432"
 ---
 # <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>方法: バインドされているターゲット プロパティからのバインディング オブジェクトの取得
 この例では、データにバインドされているターゲット プロパティからバインディング オブジェクトを取得する方法を示します。  
   
 ## <a name="example"></a>例  
- 取得するには、次を行うことができます、<xref:System.Windows.Data.Binding>オブジェクト。  
+ <xref:System.Windows.Data.Binding>オブジェクトを取得するには、次の操作を実行します。  
   
  [!code-csharp[BindValidation#GetBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml.cs#getbinding)]  
   
 > [!NOTE]
->  ターゲット オブジェクトの複数のプロパティがデータ バインディングを使用している可能性があるため、バインディングの依存関係プロパティを指定する必要があります。  
+> ターゲット オブジェクトの複数のプロパティがデータ バインディングを使用している可能性があるため、バインディングの依存関係プロパティを指定する必要があります。  
   
- また、取得できます、<xref:System.Windows.Data.BindingExpression>しの値を取得し、<xref:System.Windows.Data.BindingExpression.ParentBinding%2A>プロパティ。  
+ または、を取得<xref:System.Windows.Data.BindingExpression>し、 <xref:System.Windows.Data.BindingExpression.ParentBinding%2A>プロパティの値を取得することもできます。  
   
  コード例全体については、「[バインディングの検証のサンプル](https://go.microsoft.com/fwlink/?LinkID=159972)」をご覧ください。  
   
 > [!NOTE]
->  バインドがある場合、<xref:System.Windows.Data.MultiBinding>を使用して、 <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>します。 ある場合、<xref:System.Windows.Data.PriorityBinding>を使用して、 <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>します。 ターゲット プロパティを使用してバインドされているかどうかがない場合、 <xref:System.Windows.Data.Binding>、 <xref:System.Windows.Data.MultiBinding>、または<xref:System.Windows.Data.PriorityBinding>、使用することができます<xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>します。  
+> バインディングがの<xref:System.Windows.Data.MultiBinding>場合は、. <xref:System.Windows.Data.BindingOperations><xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>を使用します。 がの<xref:System.Windows.Data.PriorityBinding>場合は、. <xref:System.Windows.Data.BindingOperations><xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>を使用します。 <xref:System.Windows.Data.Binding>ターゲットプロパティが<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A> <xref:System.Windows.Data.BindingOperations>、、または<xref:System.Windows.Data.PriorityBinding>を使用してバインドされているかどうかが不明な場合は、. を使用できます。 <xref:System.Windows.Data.MultiBinding>  
   
 ## <a name="see-also"></a>関連項目
 

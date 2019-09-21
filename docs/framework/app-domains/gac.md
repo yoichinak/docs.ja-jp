@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 858d651523ac6196aa2dcad008ea53674eb01b04
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
-ms.translationtype: HT
+ms.openlocfilehash: 1a2ac0c7fb5f89c7d6b9daba8da7b37d1135acb6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832842"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053181"
 ---
 # <a name="global-assembly-cache"></a>グローバル アセンブリ キャッシュ
 共通言語ランタイムがインストールされている各コンピューターには、グローバル アセンブリ キャッシュと呼ばれる、コンピューター全体にわたって使用されるコード キャッシュがあります。 グローバル アセンブリ キャッシュは、そのコンピューター上の複数のアプリケーションで共有するように特別に指定されたアセンブリを格納します。  
@@ -25,16 +25,16 @@ ms.locfileid: "66832842"
  アセンブリを共有するには、必要な場合にだけそれらのアセンブリをグローバル アセンブリ キャッシュにインストールします。 一般的には、明らかにアセンブリを共有する必要がある場合を除いて、アセンブリの依存関係はプライベートにし、アセンブリはアプリケーション ディレクトリに配置します。 また、COM 相互運用またはアンマネージ コードからアセンブリにアクセスできるようにするために、アセンブリをグローバル アセンブリ キャッシュにインストールする必要はありません。  
   
 > [!NOTE]
->  アセンブリのグローバル アセンブリ キャッシュへのインストールを明示的に避けたい場合もあります。 アプリケーションを構成するアセンブリの 1 つをグローバル アセンブリ キャッシュに配置した場合は、アプリケーション ディレクトリをコピーする **xcopy** コマンドを使用してアプリケーションをレプリケートしたりインストールしたりすることはできなくなります。 この場合、グローバル アセンブリ キャッシュ内に配置したアセンブリも移動する必要があります。  
+> アセンブリのグローバル アセンブリ キャッシュへのインストールを明示的に避けたい場合もあります。 アプリケーションを構成するアセンブリの 1 つをグローバル アセンブリ キャッシュに配置した場合は、アプリケーション ディレクトリをコピーする **xcopy** コマンドを使用してアプリケーションをレプリケートしたりインストールしたりすることはできなくなります。 この場合、グローバル アセンブリ キャッシュ内に配置したアセンブリも移動する必要があります。  
   
  アセンブリをグローバル アセンブリ キャッシュに配置するには、次の 2 つの方法があります。  
   
 - グローバル アセンブリ キャッシュを扱えるように設計されたインストーラーを使用する。 これは、アセンブリをグローバル アセンブリ キャッシュにインストールするための推奨オプションです。  
   
-- Windows Software Development Kit (SDK) に用意されている[グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) という開発者ツールを使用する。  
+- Windows SDK に用意されている、[グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) という開発者ツールを使用する。  
   
     > [!NOTE]
-    >  配置時に、Windows Installer を使用して、アセンブリをグローバル アセンブリ キャッシュにインストールします。 グローバル アセンブリ キャッシュ ツールの使用は、開発時のみに限定してください。グローバル アセンブリ キャッシュ ツールでは、Windows インストーラーを使用した場合に提供されるアセンブリ参照カウントやその他の機能が提供されません。  
+    > 配置時に、Windows Installer を使用して、アセンブリをグローバル アセンブリ キャッシュにインストールします。 グローバル アセンブリ キャッシュ ツールの使用は、開発時のみに限定してください。グローバル アセンブリ キャッシュ ツールでは、Windows インストーラーを使用した場合に提供されるアセンブリ参照カウントやその他の機能が提供されません。  
   
  .NET Framework 4 以降では、グローバル アセンブリ キャッシュの既定の場所は **%windir%\Microsoft.NET\assembly** です。 .NET Framework の以前のバージョンでは、既定の場所は **%windir%\assembly** です。  
   
@@ -44,6 +44,6 @@ ms.locfileid: "66832842"
   
 ## <a name="see-also"></a>関連項目
 
-- [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
-- [アセンブリとグローバル アセンブリ キャッシュの使用](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
-- [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [.NET のアセンブリ](../../standard/assembly/index.md)
+- [アセンブリとグローバル アセンブリ キャッシュの使用](working-with-assemblies-and-the-gac.md)
+- [厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)

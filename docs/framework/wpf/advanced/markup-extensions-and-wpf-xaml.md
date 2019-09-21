@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 25f6cbbc1df8a4a2b4ad9025b2381d26153e4b66
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 562eea34af44a8fb24199e81477a4cb2ddb1046c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364444"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991831"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>マークアップ拡張機能と WPF XAML
 ここでは XAML のマークアップ拡張の概念について、構文規則、目的、その基になるクラス オブジェクト モデルなどを説明します。 マークアップ拡張は、XAML 言語、および XAML サービスの .NET 実装の一般的な機能です。 ここでは、WPF XAML で使用するマークアップ拡張について特に詳しく説明します。  
@@ -50,7 +50,7 @@ ms.locfileid: "68364444"
 - `x:Array` は、XAML 構文での一般的な配列の作成をサポートします。WPF 基本要素とコントロール モデルで提供されているコレクションのサポートをあえて使用しない場合に使用します。 詳細については、「[x:Array Markup Extension](../../xaml-services/x-array-markup-extension.md)」を参照してください。  
   
 > [!NOTE]
->  `x:` プレフィックスは、XAML 言語の組み込みに対する標準的な XAML 名前空間マッピングのために、XAML ファイルまたは稼働環境のルート要素で使用します。 たとえば、WPF アプリケーションの Visual Studio テンプレートは、この`x:`マッピングを使用して XAML ファイルを開始します。 独自の XAML 名前空間マッピングに別のプレフィックス トークンを選ぶこともできますが、このドキュメントでは、WPF の既定の名前空間や、特定のフレームワークに関連のないその他の XAML 名前空間ではなく、XAML 言語の XAML 名前空間の一部として定義されているエンティティを識別する手段として、既定の `x:` マッピングを想定します。  
+> `x:` プレフィックスは、XAML 言語の組み込みに対する標準的な XAML 名前空間マッピングのために、XAML ファイルまたは稼働環境のルート要素で使用します。 たとえば、WPF アプリケーションの Visual Studio テンプレートは、この`x:`マッピングを使用して XAML ファイルを開始します。 独自の XAML 名前空間マッピングに別のプレフィックス トークンを選ぶこともできますが、このドキュメントでは、WPF の既定の名前空間や、特定のフレームワークに関連のないその他の XAML 名前空間ではなく、XAML 言語の XAML 名前空間の一部として定義されているエンティティを識別する手段として、既定の `x:` マッピングを想定します。  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>WPF 固有のマークアップ拡張  
@@ -71,7 +71,7 @@ ms.locfileid: "68364444"
 - `ComponentResourceKey` と `ThemeDictionary` は、リソースのルックアップをサポートします。特に、カスタム コントロールでパッケージ化されるリソースとテーマを対象としています。 詳細については、「[ComponentResourceKey マークアップ拡張機能](componentresourcekey-markup-extension.md)」、「[ThemeDictionary のマークアップ拡張機能](themedictionary-markup-extension.md)」、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。  
   
 <a name="StarExtension"></a>   
-## <a name="extension-classes"></a>*Extension クラス  
+## <a name="extension-classes"></a>\*拡張クラス  
  一般的な xaml 言語と WPF 固有のマークアップ拡張機能の両方について、各マークアップ拡張機能の動作は、 `*Extension`から<xref:System.Windows.Markup.MarkupExtension>派生し<xref:System.Windows.Markup.StaticExtension.ProvideValue%2A>たクラスを通じて xaml プロセッサに対して識別され、b. 各拡張にあるこのメソッドは、マークアップ拡張の評価時に返されるオブジェクトを提供します。 返されるオブジェクトは、通常、マークアップ拡張に渡されたさまざまな文字列トークンに基づいて評価されます。  
   
  たとえば、クラスは<xref:System.Windows.StaticResourceExtension> 、実際のリソース検索の表面実装を提供し、 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>その実装が要求されたオブジェクトを返すようにします。そのため、特定の実装の入力を、リソースをで`x:Key`検索します。 既存のマークアップ拡張を使用している場合は、この実装の詳細の大部分は重要ではありません。  
@@ -88,7 +88,7 @@ ms.locfileid: "68364444"
 - 個別の区切られたトークンに等号が含まれない場合、各トークンはコンストラクター引数として扱われます。 各コンストラクター パラメーターは、そのシグネチャで想定される型として、そのシグネチャで想定される適切な順序で指定する必要があります。  
   
     > [!NOTE]
-    >  XAML プロセッサは、ペアの数の引数の数に一致するコンストラクターを呼び出す必要があります。 このため、カスタムマークアップ拡張機能を実装する場合は、同じ引数カウントを持つ複数のコンストラクターを指定しないでください。 パラメーターの数が同じマークアップ拡張コンストラクター パスが複数存在する場合の XAML プロセッサの動作は、定義されていません。ただし、マークアップ拡張の型定義がこのような状態になっていると、使用方法に関する例外が XAML プロセッサからスローされる可能性があることを想定しておく必要があります。  
+    > XAML プロセッサは、ペアの数の引数の数に一致するコンストラクターを呼び出す必要があります。 このため、カスタムマークアップ拡張機能を実装する場合は、同じ引数カウントを持つ複数のコンストラクターを指定しないでください。 パラメーターの数が同じマークアップ拡張コンストラクター パスが複数存在する場合の XAML プロセッサの動作は、定義されていません。ただし、マークアップ拡張の型定義がこのような状態になっていると、使用方法に関する例外が XAML プロセッサからスローされる可能性があることを想定しておく必要があります。  
   
 - 個別に区切られたトークンに等号が含まれている場合、XAML プロセッサは最初にマークアップ拡張機能のパラメーターなしのコンストラクターを呼び出します。 その後、各 "名前=値" のペアは、マークアップ拡張に存在するプロパティ名、およびそのプロパティに割り当てる値として解釈されます。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "68364444"
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>XAML の使用におけるマークアップ拡張の入れ子  
  複数のマークアップ拡張を入れ子にすることができます。各マークアップ拡張は、最も深いものが最初に評価されます。 たとえば、次のような使用方法があります。  
   
-```  
+```xaml  
 <Setter Property="Background"  
   Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" />  
 ```  

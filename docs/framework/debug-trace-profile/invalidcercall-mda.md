@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a68aac2a92a0569e288da858e4a4e4695fd5eaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d508beb697e07f7d3b960b6627b9a07ffe25adf4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754429"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052634"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 `invalidCERCall` マネージド デバッグ アシスタント (MDA) は、制約された実行領域 (CER) グラフ内で信頼契約がないかまたは過度に脆弱な契約を持つメソッドの呼び出しがある場合に、アクティブ化されます。 脆弱な契約とは、最悪のケースの状態の破損が、呼び出しに渡されるインスタンスよりも大きい範囲であることを宣言する契約です。つまり、<xref:System.AppDomain> またはプロセスの状態が破損するか、または CER 内で呼び出されたときにその結果を常に確定的に計算できるとは限りません。  
@@ -33,7 +33,7 @@ ms.locfileid: "61754429"
   
  弱い契約または存在しない契約を持つメソッドは、予期しない方法で失敗する可能性があるため、ランタイムは、レイジーな JIT コンパイル、ジェネリック ディクショナリの読み込み、スレッドの中断などによって発生する、メソッドからの独自の予期しないエラーを削除しようとしません。 つまり、この MDA がアクティブになっているときは、ランタイムが、定義されている CER に呼び出されたメソッドを含めなかったことを意味します。引き続きこのサブツリーを準備すると潜在的なエラーが隠される可能性があるので、呼び出し先はこのノードで終了しました。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決策  
  有効な信頼契約を関数に追加するか、その関数呼び出しを使用しないでください。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
@@ -58,4 +58,4 @@ ms.locfileid: "61754429"
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

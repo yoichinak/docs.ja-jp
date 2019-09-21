@@ -2,18 +2,18 @@
 title: Interop アクティビティと .NET Framework 4 内の .NET Framework 3.0 WF アクティビティの使用
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: baca65da29fd0b18bd61f9b79ce82429faaed432
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 3e7382b25e68c1b01bd11e015b9864ae32f25f9b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364140"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965954"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Interop アクティビティと .NET Framework 4 内の .NET Framework 3.0 WF アクティビティの使用
 <xref:System.Activities.Statements.Interop> アクティビティは、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ワークフロー内に [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) アクティビティをラップする [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) アクティビティです。 WF 3 アクティビティは、単一のリーフ アクティビティまたはツリー全体のアクティビティです。 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] アクティビティの実行 (取り消しおよび例外処理を含む) および保持は、実行中の [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ワークフロー インスタンスのコンテキスト内で発生します。  
   
 > [!NOTE]
->  ワークフロー <xref:System.Activities.Statements.Interop>のプロジェクトで **[ターゲットフレームワーク]** の設定が **[.NET Framework 4.5]** に設定されていない限り、アクティビティはワークフローデザイナーツールボックスに表示されません。  
+> ワークフロー <xref:System.Activities.Statements.Interop>のプロジェクトで **[ターゲットフレームワーク]** の設定が **[.NET Framework 4.5]** に設定されていない限り、アクティビティはワークフローデザイナーツールボックスに表示されません。  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>WF 3 アクティビティと Interop アクティビティを使用するための基準  
  <xref:System.Activities.Statements.Interop> アクティビティ内で WF 3 アクティビティを正常に実行するには、次の基準を満たす必要があります。  

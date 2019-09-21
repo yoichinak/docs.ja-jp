@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c06a20e3d6cf3030da1cc63435423e087408aa6
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4b079809fa76097cd575d96c70d17d1c6c85e3a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301505"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968539"
 ---
 # <a name="substitutions-in-regular-expressions"></a>正規表現での置換
 <a name="Top"></a> 置換は、置換パターン内でのみ認識される言語要素です。 置換では、正規表現パターンを使用して、入力文字列内の一致するテキストを置換するテキストの全体または一部を定義します。 置換パターンは、1 個以上の置換と、リテラル文字で構成されます。 置換パターンは、 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> パラメーターを持つ `replacement` メソッドのオーバーロードおよび <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドに対して用意されています。 メソッドは、一致するパターンを、 `replacement` パラメーターで定義されているパターンで置換します。  
@@ -44,7 +44,7 @@ ms.locfileid: "66301505"
  正規表現パターンと置換の両方に使用できる文字は `$` 文字だけですが、この文字の意味はコンテキストによって異なります。 正規表現パターンでは、 `$` は文字列の末尾に一致するアンカーです。 置換パターンでは、 `$` は置換の先頭を示します。  
   
 > [!NOTE]
->  正規表現の中で置換パターンに似た機能を利用するには、前方参照を使用します。 前方参照の詳細については、「 [前方参照構成体](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)」を参照してください。  
+> 正規表現の中で置換パターンに似た機能を利用するには、前方参照を使用します。 前方参照の詳細については、「 [前方参照構成体](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)」を参照してください。  
   
 <a name="Numbered"></a>   
 ## <a name="substituting-a-numbered-group"></a>番号付きグループの置換  

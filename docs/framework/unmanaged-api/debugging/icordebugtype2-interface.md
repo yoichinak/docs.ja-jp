@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e953fa129308527f63df8dd8c5061252f8be57b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c2f2c1e4c95c61eab4c9da6103d4ac479b4bbdb4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772434"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936055"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 インターフェイス
-基本データ型または複合 (ユーザー定義) の型の型の識別子を取得する ICorDebugType インターフェイスを拡張します。  
+によって、テキスト型または複合型 (ユーザー定義型) の型識別子を取得するために、を拡張します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド||  
 |------------|-|  
-|[GetTypeID メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|取得、 [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)この種類。|  
+|[GetTypeID メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|この型の[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)を取得します。|  
   
 ## <a name="remarks"></a>Remarks  
- このインターフェイスは、ICorDebugType インターフェイスの論理拡張機能です。  
+ このインターフェイスは、テキストの型インターフェイスの論理上の拡張機能です。  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="example"></a>例  
- 次のコード フラグメントの使用を示しています、 [icordebugtype 2::gettypeid](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)メソッド。  
+ 次のコードフラグメントは、 [ICorDebugType2:: GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)メソッドの使用方法を示しています。  
   
 ```cpp  
 // (error checking omitted for brevity)  
@@ -55,11 +55,11 @@ pType2->GetTypeID(&id);
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   

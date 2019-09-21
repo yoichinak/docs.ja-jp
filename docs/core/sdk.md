@@ -3,16 +3,16 @@ title: .NET Core SDK の概要
 description: .NET Core プロジェクトの作成に使用するライブラリとツールのセットである .NET Core SDK について説明します。
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: 0231c08f780455c4956c044815a2e80cef4d827e
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: f4c4982bacaf58c1b8c7db6c5319bd314e89b7ed
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733388"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566249"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK の概要
 
-.NET Core ソフトウェア開発キット (SDK) は一連のライブラリとツールであり、開発者はこれを利用して .NET Core のアプリケーションやライブラリを作成できます。 それには、アプリケーションのビルドと実行に使用される次のコンポーネントが含まれています。
+.NET Core SDK は一連のライブラリとツールであり、開発者はこれを利用して .NET Core のアプリケーションやライブラリを作成できます。 それには、アプリケーションのビルドと実行に使用される次のコンポーネントが含まれています。
 
 - .NET Core CLI ツール。
 - .NET Core ライブラリとランタイム。

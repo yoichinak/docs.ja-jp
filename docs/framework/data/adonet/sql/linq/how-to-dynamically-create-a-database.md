@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: e5d66b49782d5f26b6d487e655aca6fbd6bdfb1a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4cadf20cdadb39483f26a29619cae058eac47e50
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623862"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793652"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>方法: データベースを動的に作成する
 LINQ to SQL では、オブジェクト モデルをリレーショナル データベースに対応付けます。 マッピングを有効化するには、属性ベースの対応付けか、リレーショナル データベースの構造を記述した外部マッピング ファイルを使用します。 いずれの場合も、<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドを使用してデータベースの新しいインスタンスを作成するために必要な、リレーショナル データベースに関する十分な情報が提供されます。  
@@ -26,7 +26,7 @@ LINQ to SQL では、オブジェクト モデルをリレーショナル デー
  接続文字列で .mdf ファイルまたは単にカタログ名を使用することにより、SQL Server でも <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドを使用できます。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、接続文字列を使用して、作成するデータベースおよびデータベースの作成先となるサーバーを定義します。  
   
 > [!NOTE]
->  可能な限り、データベースへの接続には Windows 統合セキュリティを使用してください。これにより、接続文字列にパスワードを含める必要がなくなります。  
+> 可能な限り、データベースへの接続には Windows 統合セキュリティを使用してください。これにより、接続文字列にパスワードを含める必要がなくなります。  
   
 ## <a name="example"></a>例  
  次のコードは、MyDVDs.mdf という名前の新しいデータベースを作成する例です。  
@@ -50,8 +50,8 @@ LINQ to SQL では、オブジェクト モデルをリレーショナル デー
   
 ## <a name="see-also"></a>関連項目
 
-- [属性ベースの対応付け](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [外部マップ](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [SQL と CLR の型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [データの変更と変更の送信](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [属性ベースの対応付け](attribute-based-mapping.md)
+- [外部マップ](external-mapping.md)
+- [SQL と CLR の型マッピング](sql-clr-type-mapping.md)
+- [背景情報](background-information.md)
+- [データの変更と変更の送信](making-and-submitting-data-changes.md)

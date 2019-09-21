@@ -2,12 +2,12 @@
 title: クライアント:チャネル ファクトリとチャネル
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 9a54607e54950ace1fda5b97e4df885119259f3c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3dfcca0d5492a3fa376ec184f4bdd9bfa03b53c0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664937"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795865"
 ---
 # <a name="client-channel-factories-and-channels"></a>クライアント:チャネル ファクトリとチャネル
 ここでは、チャネル ファクトリとチャネルの作成について説明します。  
@@ -15,22 +15,22 @@ ms.locfileid: "64664937"
 ## <a name="channel-factories-and-channels"></a>チャネル ファクトリとチャネル  
  チャネル ファクトリには、チャネルを作成する役割があります。 チャネル ファクトリによって作成されるチャネルは、メッセージの送信に使用されます。 このチャネルは、上の層からメッセージを取得し、必要な処理を実行し、そのメッセージを下の層に送信する必要があります。 このプロセスを説明する図を次に示します。  
   
- ![クライアント ファクトリおよびチャネル](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure2highlevelfactgoriesc.gif "wcfc_WCFChannelsigure2HIghLevelFactgoriesc")  
+ ![クライアントファクトリとチャネル](./media/wcfc-wcfchannelsigure2highlevelfactgoriesc.gif "wcfc_WCFChannelsigure2HIghLevelFactgoriesc")  
 チャネル ファクトリがチャネルを作成します。  
   
  終了時に、チャネル ファクトリは、作成したチャネルのうちまだ閉じていないチャネルを閉じる必要があります。 チャネル リスナーを閉じたとき、新しいチャネルの受け入れだけが停止され、既存のチャネルは開いたままで、メッセージの受信を続行できるので、ここに示すモデルは非対称です。  
   
- WCF では、このプロセスの基本クラス ヘルパーを提供します。 (このトピックで説明するチャネル ヘルパー クラスの図では、次を参照してください[チャネル モデルの概要](../../../../docs/framework/wcf/extending/channel-model-overview.md)。)。  
+ WCF には、このプロセスの基底クラスヘルパーが用意されています。 (このトピックで説明するチャネルヘルパークラスの図については、「[チャネルモデルの概要](channel-model-overview.md)」を参照してください)。  
   
-- <xref:System.ServiceModel.Channels.CommunicationObject>クラスが実装する<xref:System.ServiceModel.ICommunicationObject>および適用のステップ 2 で説明されているステート マシン[開発チャネル](../../../../docs/framework/wcf/extending/developing-channels.md)します。  
+- クラス<xref:System.ServiceModel.Channels.CommunicationObject>は、「[チャネルの開発](developing-channels.md)」の手順 2. で説明されているステートマシンを実装<xref:System.ServiceModel.ICommunicationObject>し、適用します。  
   
 - <xref:System.ServiceModel.Channels.ChannelManagerBase> クラスには <xref:System.ServiceModel.Channels.CommunicationObject> が実装され、<xref:System.ServiceModel.Channels.ChannelFactoryBase?displayProperty=nameWithType> と <xref:System.ServiceModel.Channels.ChannelListenerBase?displayProperty=nameWithType> の統合基本クラスが提供されます。 <xref:System.ServiceModel.Channels.ChannelManagerBase> クラスは、<xref:System.ServiceModel.Channels.ChannelBase> を実装する基本クラスである <xref:System.ServiceModel.Channels.IChannel> との組み合わせによって動作します。
   
-- <xref:System.ServiceModel.Channels.ChannelFactoryBase>クラスが実装する<xref:System.ServiceModel.Channels.ChannelManagerBase>と<xref:System.ServiceModel.Channels.IChannelFactory>し、統合、`CreateChannel`を 1 つにオーバー ロード`OnCreateChannel`抽象メソッド。
+- クラス<xref:System.ServiceModel.Channels.ChannelFactoryBase>は、 <xref:System.ServiceModel.Channels.ChannelManagerBase>と<xref:System.ServiceModel.Channels.IChannelFactory>を実装し`CreateChannel` 、オーバーロードを`OnCreateChannel` 1 つの抽象メソッドに統合します。
   
 - <xref:System.ServiceModel.Channels.ChannelListenerBase> クラスは、<xref:System.ServiceModel.Channels.IChannelListener> を実装しています。 基本状態管理を行います。 
   
- 次の説明がに基づいて、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。  
+ 次の説明は、トランスポートに[基づいています。UDP](../samples/transport-udp.md)サンプル。  
   
 ### <a name="creating-a-channel-factory"></a>チャネル ファクトリの作成  
  `UdpChannelFactory` は <xref:System.ServiceModel.Channels.ChannelFactoryBase> から派生します。 サンプルでは、<xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> をオーバーライドして、メッセージ エンコーダーのメッセージ バージョンにアクセスできるようにします。 さらに、<xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> をオーバーライドして、ステート マシンの移行時に <xref:System.ServiceModel.Channels.BufferManager> のインスタンスを破棄します。  
@@ -55,7 +55,7 @@ this.socket.Close();
 base.OnClose(timeout);  
 ```  
   
- 実装`Send()`と`BeginSend()` /`EndSend()`します。 この実装は、2 つの主要セクションに分かれます。 最初に、メッセージを次のようにシリアル化してバイト配列で表します。  
+ および`Send()`を`BeginSend()`実装し`EndSend()`ます。 / この実装は、2 つの主要セクションに分かれます。 最初に、メッセージを次のようにシリアル化してバイト配列で表します。  
   
 ```csharp  
 ArraySegment<byte> messageBuffer = EncodeMessage(message);  
@@ -75,4 +75,4 @@ this.socket.SendTo(
   
 ## <a name="see-also"></a>関連項目
 
-- [チャネルの開発](../../../../docs/framework/wcf/extending/developing-channels.md)
+- [チャネルの開発](developing-channels.md)

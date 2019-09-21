@@ -3,21 +3,21 @@ title: '方法: WIF を使用してクレーム対応 ASP.NET Web フォーム �
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 0d334faabb342ea351c2418c79a86443cb0ce98d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 45ad084013cbcafdf0d7c4ac3e0fd952305232c4
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910582"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851560"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>方法: WIF を使用してクレーム対応 ASP.NET Web フォーム アプリケーションをビルドする
-## <a name="applies-to"></a>対象  
+## <a name="applies-to"></a>適用対象  
   
 - Microsoft® Windows® Identity Foundation (WIF)  
   
 - ASP.NET® Web フォーム  
   
-## <a name="summary"></a>まとめ  
+## <a name="summary"></a>Summary  
  この操作方法では、簡単なクレーム対応 ASP.NET Web フォーム アプリケーションを作成するための詳細な手順を示します。 また、フェデレーション認証を正常に実装するために簡単なクレーム対応 ASP.NET Web フォーム アプリケーションをテストする方法も示します。 この操作方法には、セキュリティ トークン サービス (STS) の詳細な作成手順は含まれていません。既に STS が構成済みであると想定します。  
   
 ## <a name="contents"></a>目次  
@@ -51,11 +51,11 @@ ms.locfileid: "64910582"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>簡単な ASP.NET アプリケーションを作成するには  
   
-1. Visual Studio を起動し、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。  
+1. Visual Studio を起動し、 **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順にクリックします。  
   
-2. **[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。  
+2. **[新しいプロジェクト]** ウィンドウで、 **[ASP.NET Web フォーム アプリケーション]** をクリックします。  
   
-3. **[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。  
+3. **[名前]** で、「`TestApp`」と入力し、 **[OK]** を押します。  
   
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>手順 2 – クレーム ベースの認証用の ASP.NET Web フォーム アプリケーションを構成する  
  この手順では、構成エントリを ASP.NET Web フォーム アプリケーションの *Web.config* 構成ファイルに追加して、クレーム対応にします。  
@@ -103,7 +103,7 @@ ms.locfileid: "64910582"
     </system.webServer>  
     ```  
   
-5. 以下の Windows Identity Foundation 関連の構成エントリを追加し、ASP.NET アプリケーションの URL とポート番号が、**\<audienceUris>** エントリ、**\<wsFederation>** 要素の **realm** 属性、および **\<wsFederation>** 要素の **reply** 属性の値と一致することを確認します。 また、**issuer** の値がセキュリティ トークン サービス (STS) URL に適したものであることを確認します。  
+5. 以下の Windows Identity Foundation 関連の構成エントリを追加し、ASP.NET アプリケーションの URL とポート番号が、 **\<audienceUris>** エントリ、 **\<wsFederation>** 要素の **realm** 属性、および **\<wsFederation>** 要素の **reply** 属性の値と一致することを確認します。 また、**issuer** の値がセキュリティ トークン サービス (STS) URL に適したものであることを確認します。  
   
     ```xml  
     <system.identityModel>  
@@ -138,8 +138,8 @@ ms.locfileid: "64910582"
   
 1. **TestApp** プロジェクトの下にある **Default.aspx** ファイルを開き、既存のマークアップを次のマークアップに置き換えます。  
   
-    ```  
-    %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
+    ```aspx-csharp
+    <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
   
     <!DOCTYPE html>  
   
@@ -161,7 +161,7 @@ ms.locfileid: "64910582"
 2. **Default.aspx** を保存し、**Default.aspx.cs** という名前の分離コード ファイルを開きます。  
   
     > [!NOTE]
-    >  **Default.aspx.cs** は、ソリューション エクスプローラーで **Default.aspx** の下に隠れていることがあります。 **Default.aspx.cs** が表示されない場合は、**Default.aspx** の横の三角形をクリックして展開します。  
+    > **Default.aspx.cs** は、ソリューション エクスプローラーで **Default.aspx** の下に隠れていることがあります。 **Default.aspx.cs** が表示されない場合は、**Default.aspx** の横の三角形をクリックして展開します。  
   
 3. **Default.aspx.cs** の **Page_Load** メソッド内の既存のコードを次のコードに置き換えます。  
   

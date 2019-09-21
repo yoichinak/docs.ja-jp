@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 871ad81cd83c40d7299f39ede404e274b95b2ac0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9897e396424b9076da8f30c61b5a14cfa9539690
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778456"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795424"
 ---
-# <a name="createasmnameobjflags-enumeration"></a>CREATE_ASM_NAME_OBJ_FLAGS 列挙型
-属性を指定します、 [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)オブジェクトは、によって作成時に、 [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)関数。  
+# <a name="create_asm_name_obj_flags-enumeration"></a>CREATE_ASM_NAME_OBJ_FLAGS 列挙型
+[Createassemblynameobject](createassemblynameobject-function.md)関数によって構築されるときに、 [IAssemblyName Interface](iassemblyname-interface.md)オブジェクトの属性を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,20 +44,20 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`CANOF_PARSE_DISPLAY_NAME`|渡されたパラメーターが、テキスト id であることを示します。|  
+|`CANOF_PARSE_DISPLAY_NAME`|渡されたパラメーターがテキスト形式の id であることを示します。|  
 |`CANOF_SET_DEFAULT_VALUES`|いくつかの既定値を設定します。|  
-|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|フレンド アセンブリのルール (名前と公開キーのみ) を確認します。 このメンバーは、内部使用のみです。|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|組み合わせ、`CANOF_PARSE_DISPLAY_NAME`と`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`フラグ。 このメンバーは、内部使用のみです。|  
+|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|フレンドアセンブリの規則 (名前と公開キーのみ) を確認します。 このメンバーは内部でのみ使用されます。|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|フラグ`CANOF_PARSE_DISPLAY_NAME` と`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`フラグの組み合わせ。 このメンバーは内部でのみ使用されます。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [CreateAssemblyNameObject 関数](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)
-- [Fusion 列挙型](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)
+- [CreateAssemblyNameObject 関数](createassemblynameobject-function.md)
+- [Fusion 列挙型](fusion-enumerations.md)

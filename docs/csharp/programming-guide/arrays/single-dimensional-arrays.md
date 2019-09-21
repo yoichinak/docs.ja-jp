@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: d221cb9071a2c58f9d7068d5a43dd3a750ba716b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 17c384ec327d4a80ed614dce6254baa5bfb2e960
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398559"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597304"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>1 次元配列 (C# プログラミング ガイド)
 
@@ -19,7 +19,7 @@ ms.locfileid: "67398559"
   
  [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
- この配列は、`array[0]` から `array[4]` の要素を含んでいます。 [new](../../../csharp/language-reference/operators/new-operator.md) 演算子を使用して、配列を作成し、配列要素を既定値に初期化します。 この例では、すべての配列要素はゼロに初期化されます。  
+ この配列は、`array[0]` から `array[4]` の要素を含んでいます。 [new](../../language-reference/operators/new-operator.md) 演算子を使用して、配列を作成し、配列要素を既定値に初期化します。 この例では、すべての配列要素はゼロに初期化されます。  
   
  同じ方法では、文字列要素を格納する配列を宣言できます。 次に例を示します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67398559"
   
  [!code-csharp[csProgGuideArrays#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#9)]  
   
- C# 3.0 で暗黙的に型指定される配列が導入されます。 詳細については、「[暗黙的に型指定される配列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)」を参照してください。  
+ C# 3.0 で暗黙的に型指定される配列が導入されます。 詳細については、「[暗黙的に型指定される配列](./implicitly-typed-arrays.md)」を参照してください。  
   
 ## <a name="value-type-and-reference-type-arrays"></a>値の型と参照型の配列
 
@@ -55,12 +55,12 @@ ms.locfileid: "67398559"
   
  このステートメントの結果は、`SomeType` が値型か参照型かによって決まります。 値型の場合、ステートメントはそれそれが型 `SomeType` である 10 個の要素の配列を作成します。 `SomeType` が参照型の場合、ステートメントは、それぞれが null 参照に初期化される 10 個の要素の配列を作成します。  
   
- 値型と参照型の詳細については、「[型](../../../csharp/language-reference/keywords/types.md)」を参照してください。  
+ 値型と参照型の詳細については、「[型](../../language-reference/keywords/types.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Array>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [配列](../../../csharp/programming-guide/arrays/index.md)
-- [多次元配列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
-- [ジャグ配列](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+- [C# プログラミング ガイド](../index.md)
+- [配列](./index.md)
+- [多次元配列](./multidimensional-arrays.md)
+- [ジャグ配列](./jagged-arrays.md)

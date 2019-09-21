@@ -18,12 +18,12 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 71da71d1331e9eab818a7492daa230f758840762
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 248d434f7aad56d84d952fa27cf49f3d370f4a1c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634665"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934828"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正規表現での文字のエスケープ
 正規表現の円記号 (\\) は、次のいずれかを示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "64634665"
 - エスケープされていない言語構成要素として解釈される文字は、文字どおりに解釈する必要があること。 たとえば、中かっこ (`{`) は量指定子の定義を開始しますが、円記号とそれに続く中かっこ (`\{`) は、正規表現エンジンで中かっこに一致させる必要があることを示します。 同様に、1 つの円記号はエスケープされた言語構成要素の開始を示しますが、2 つの円記号 (`\\`) は、正規表現エンジンで円記号に一致させる必要があることを示します。  
   
 > [!NOTE]
->  文字エスケープは、正規表現では認識されますが、置換パターンでは認識されません。  
+> 文字エスケープは、正規表現では認識されますが、置換パターンでは認識されません。  
   
 ## <a name="character-escapes-in-net"></a>.NET での文字のエスケープ  
  次の表は、.NET の正規表現でサポートされている文字エスケープの一覧です。  

@@ -3,15 +3,15 @@ title: WIF 構成スキーマの規則
 ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
-ms.openlocfilehash: 39ed32bb7e926f275e996b09e746c879c6d3fe9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c02d467260a5197cdd01a3819f8a323655a8a08f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909325"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045094"
 ---
 # <a name="wif-configuration-schema-conventions"></a>WIF 構成スキーマの規則
-このトピックでは、Windows Identity Foundation (WIF) 構成トピックを通して利用される規則について説明し、[\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) セクションと [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) セクションで利用されるいくつかの一般的な機能と属性について説明します。  
+このトピックでは、Windows Identity Foundation (WIF) 構成トピックを通して利用される規則について説明し、[\<system.identityModel>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) セクションと [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) セクションで利用されるいくつかの一般的な機能と属性について説明します。  
   
 <a name="BKMK_Modes"></a>   
 ## <a name="modes"></a>モード  
@@ -21,9 +21,7 @@ ms.locfileid: "61909325"
 ## <a name="timespan-values"></a>TimeSpan 値  
  <xref:System.TimeSpan> は属性の種類として使用されます。許可される形式については、<xref:System.TimeSpan.Parse%28System.String%29> メソッドをご覧ください。 この形式は、次の仕様に準拠しています。  
   
-```  
-[ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]  
-```  
+`[ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]`  
   
  たとえば、"30"、"30.00:00"、"30.00:00:00" はすべて 30 日を意味します。"00:05"、"00:05:00"、"0.00:05:00.00" はすべて 5 分を意味します。  
   
@@ -46,5 +44,5 @@ ms.locfileid: "61909325"
   
 ## <a name="see-also"></a>関連項目
 
-- [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
-- [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)
+- [\<system.identityModel>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
+- [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)

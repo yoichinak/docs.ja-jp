@@ -6,15 +6,15 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: f277758a10b045a6365adfe931ce95d64eb8e445
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7f52df0283cf057c1cd6cc4fa87c0086da7e61d2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608573"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253002"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>インターフェイスのインデクサー (C# プログラミング ガイド)
-[interface](../../../csharp/language-reference/keywords/interface.md) でインデクサーを宣言することができます。 インターフェイスのインデクサーのアクセサーは、[クラス](../../../csharp/language-reference/keywords/class.md)のインデクサーのアクセサーと次の点で異なります。  
+[interface](../../language-reference/keywords/interface.md) でインデクサーを宣言することができます。 インターフェイスのインデクサーのアクセサーは、[クラス](../../language-reference/keywords/class.md)のインデクサーのアクセサーと次の点で異なります。  
   
 - インターフェイスのアクセサーは、修飾子は使用しません。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "64608573"
   
  前の例では、インターフェイス メンバーの完全修飾名を使用して明示的なインターフェイス メンバーの実装を使用することができます。 次に例を示します。  
   
-```  
+```csharp  
 string ISomeInterface.this[int index]   
 {   
 }   
@@ -43,7 +43,7 @@ string ISomeInterface.this[int index]
   
  ただし、完全修飾名は、クラスが同じインデクサーの署名を持つ 2 つ以上のインターフェイスを実装するときにあいまいさを避けるためにのみ必要です。 たとえば、`Employee` クラスが 2 つのインターフェイス `ICitizen` と `IEmployee` を実装し、両方のインターフェイスが同じインデクサーの署名を持っている場合、明示的なインターフェイス メンバーの実装が必要です。 つまり、次のインデクサーの宣言があります。  
   
-```  
+```csharp  
 string IEmployee.this[int index]   
 {   
 }   
@@ -51,7 +51,7 @@ string IEmployee.this[int index]
   
  これは、`IEmployee` インターフェイス上でインデクサーを実装します。次の宣言があります。  
   
-```  
+```csharp  
 string ICitizen.this[int index]
 {   
 }   
@@ -61,7 +61,7 @@ string ICitizen.this[int index]
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [インデクサー](../../../csharp/programming-guide/indexers/index.md)
-- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [インターフェイス](../../../csharp/programming-guide/interfaces/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [インデクサー](./index.md)
+- [プロパティ](../classes-and-structs/properties.md)
+- [インターフェイス](../interfaces/index.md)

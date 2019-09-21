@@ -2,22 +2,23 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 43415d9eac5e61f42006aecb3248dec9811eb3e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6167a4ad56a9481a9f695b770605991a0a88d2d9
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758133"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399415"
 ---
 # <a name="transactedbatching"></a>\<transactedBatching >
 
 受信操作でトランザクション バッチがサポートされるかどうかを指定します。
 
-\<system.ServiceModel>\
-\<behaviors>\
-\<endpointBehaviors>\
-\<動作 > \
-\<transactedBatching >
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<transactedBatching >**  
 
 ## <a name="syntax"></a>構文
 
@@ -43,7 +44,7 @@ ms.locfileid: "61758133"
 
 |要素|説明|
 |-------------|-----------------|
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|エンドポイントの動作を指定します。|
+|[\<behavior>](behavior-of-endpointbehaviors.md)|エンドポイントの動作を指定します。|
 
 ## <a name="remarks"></a>Remarks
 

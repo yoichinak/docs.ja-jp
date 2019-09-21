@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16f4155cefea20868185febb3d2a566dc1524cc4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817943"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956283"
 ---
 # <a name="wpf-windows-overview"></a>WPF ウィンドウの概要
 ユーザーは、Windows を通じて Windows Presentation Foundation (WPF) スタンドアロンアプリケーションと対話します。 ウィンドウの主な目的は、データを視覚化してユーザーがデータと対話できるコンテンツをホストすることです。 スタンド[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アロンアプリケーションは、 <xref:System.Windows.Window>クラスを使用して独自のウィンドウを提供します。 このトピックで<xref:System.Windows.Window>は、スタンドアロンアプリケーションでのウィンドウの作成と管理の基礎について説明します。  
   
 > [!NOTE]
->  ブラウザーでホスト[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]されるアプリケーション[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]は、 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]やルースページを含め、独自のウィンドウを提供しません。 代わりに、Windows Internet Explorer によって提供される windows でホストされます。 「 [WPF XAML ブラウザーアプリケーションの概要](wpf-xaml-browser-applications-overview.md)」を参照してください。  
+> ブラウザーでホスト[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]されるアプリケーション[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]は、 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]やルースページを含め、独自のウィンドウを提供しません。 代わりに、Windows Internet Explorer によって提供される windows でホストされます。 「 [WPF XAML ブラウザーアプリケーションの概要](wpf-xaml-browser-applications-overview.md)」を参照してください。  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>ウィンドウ クラス  
@@ -88,14 +88,14 @@ ms.locfileid: "68817943"
   
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]マークアップファイルと分離コードファイルを連携できるようにするには、次のものが必要です。  
   
-- マークアップでは`Window` 、要素に属性`x:Class`を含める必要があります。 アプリケーションがビルドされると、マークアップ`x:Class`ファイルにが存在する[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]ことにより`partial` 、は、から<xref:System.Windows.Window>派生したクラスを作成し、 `x:Class`属性で指定された名前を持ちます。 その[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ためには、`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`スキーマ( ) の名前空間宣言を追加する必要があります。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 生成さ`partial`れたクラス`InitializeComponent`は、メソッドを実装します。このメソッドは、イベントを登録し、マークアップで実装されるプロパティを設定するために呼び出されます。  
+- マークアップでは`Window` 、要素に属性`x:Class`を含める必要があります。 アプリケーションがビルドされると、マークアップ`x:Class`ファイルにが存在することにより、Microsoft build engine (MSBuild `partial` ) によって<xref:System.Windows.Window> 、から派生するクラス`x:Class`が作成され、属性によって指定された名前になります。 その[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ためには、`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`スキーマ( ) の名前空間宣言を追加する必要があります。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 生成さ`partial`れたクラス`InitializeComponent`は、メソッドを実装します。このメソッドは、イベントを登録し、マークアップで実装されるプロパティを設定するために呼び出されます。  
   
 - 分離コードでは、クラスは、マークアップ`partial`で`x:Class`属性によって指定された名前と同じ名前を持つクラスである必要<xref:System.Windows.Window>があり、から派生する必要があります。 これにより、分離コードファイルは、アプリケーションのビルド`partial`時にマークアップファイル用に生成されたクラスに関連付けることができます (「 [WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)」を参照してください)。  
   
 - 分離コードでは、クラス<xref:System.Windows.Window>は、 `InitializeComponent`メソッドを呼び出すコンストラクターを実装する必要があります。 `InitializeComponent`マークアップファイルの生成さ`partial`れたクラスによって実装され、イベントを登録し、マークアップで定義されているプロパティを設定します。  
   
 > [!NOTE]
->  を使用<xref:System.Windows.Window> [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]してプロジェクトに新しいを追加すると、はマークアップと分離コードの両方を使用して実装され、マークアップファイルと分離コードファイルの関連付けを作成するために必要な構成が<xref:System.Windows.Window>含まれます。ここで説明します。  
+> を使用<xref:System.Windows.Window> [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]してプロジェクトに新しいを追加すると、はマークアップと分離コードの両方を使用して実装され、マークアップファイルと分離コードファイルの関連付けを作成するために必要な構成が<xref:System.Windows.Window>含まれます。ここで説明します。  
   
  この構成を使用すると、マークアップで[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ウィンドウの外観を定義し、分離コードでその動作を実装することに集中できます。 次の例では、ボタン、マークアップで[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]実装されたウィンドウ、およびボタンの<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベントのイベントハンドラーが、分離コードで実装されています。  
   
@@ -106,13 +106,13 @@ ms.locfileid: "68817943"
   
 <a name="ConfiguringWindowForMSBuild"></a>   
 ## <a name="configuring-a-window-definition-for-msbuild"></a>MSBuild 用のウィンドウ定義の構成  
- ウィンドウを実装する方法によって、がどの[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]ように構成されるかが決まります。 マークアップと分離コードの両方[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して定義されたウィンドウの場合:  
+ ウィンドウを実装する方法によって、MSBuild に対してどのように構成されるかが決まります。 マークアップと分離コードの両方[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して定義されたウィンドウの場合:  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]マークアップファイルは、 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]項目とし`Page`て構成されます。  
+- XAML マークアップファイルは、MSBuild `Page`項目として構成されます。  
   
-- 分離コードファイルは、項目と[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]し`Compile`て構成されます。  
+- 分離コードファイルは、MSBuild `Compile`項目として構成されます。  
   
- これは、次[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]のプロジェクトファイルに示されています。  
+ これは、次の MSBuild プロジェクトファイルに示されています。  
   
 ```xml  
 <Project ...  
@@ -149,7 +149,7 @@ ms.locfileid: "68817943"
  を呼び出す<xref:System.Windows.Window.Show%2A>ことによって開かれるウィンドウは、モードレスウィンドウです。つまり、アプリケーションは、ユーザーが同じアプリケーション内の他のウィンドウをアクティブ化できるモードで動作します。  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>は、ダイアログボックスなどのウィンドウをモーダルとして開くために呼び出されます。 詳細については、「[ダイアログボックスの概要](dialog-boxes-overview.md)」を参照してください。  
+> <xref:System.Windows.Window.ShowDialog%2A>は、ダイアログボックスなどのウィンドウをモーダルとして開くために呼び出されます。 詳細については、「[ダイアログボックスの概要](dialog-boxes-overview.md)」を参照してください。  
   
  が<xref:System.Windows.Window.Show%2A>呼び出されると、ウィンドウは、ユーザー入力を受け取ることを許可するインフラストラクチャを確立するために表示される前に、初期化作業を実行します。 ウィンドウが初期化<xref:System.Windows.Window.SourceInitialized>されると、イベントが発生し、ウィンドウが表示されます。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "68817943"
  ウィンドウを初めて開いたときには、アクティブウィンドウになります ([ <xref:System.Windows.Window.ShowActivated%2A> `false`設定] で表示されている場合を除く)。 *アクティブウィンドウ*は、キーストロークやマウスクリックなど、現在ユーザー入力をキャプチャしているウィンドウです。 ウィンドウがアクティブになると、イベントが<xref:System.Windows.Window.Activated>発生します。  
   
 > [!NOTE]
->  ウィンドウを最初に開い<xref:System.Windows.FrameworkElement.Loaded>たときに、 <xref:System.Windows.Window.ContentRendered> <xref:System.Windows.Window.Activated>イベントとイベントが発生するのは、イベントが発生した後だけです。 これを念頭に置いて、が発生したときに<xref:System.Windows.Window.ContentRendered> 、ウィンドウを効果的に開いていると見なすことができます。  
+> ウィンドウを最初に開い<xref:System.Windows.FrameworkElement.Loaded>たときに、 <xref:System.Windows.Window.ContentRendered> <xref:System.Windows.Window.Activated>イベントとイベントが発生するのは、イベントが発生した後だけです。 これを念頭に置いて、が発生したときに<xref:System.Windows.Window.ContentRendered> 、ウィンドウを効果的に開いていると見なすことができます。  
   
  ウィンドウがアクティブになった後で、ユーザーは同じアプリケーションの別のウィンドウをアクティブ化したり、別のアプリケーションをアクティブ化したりできます。 これが発生すると、現在アクティブなウィンドウが非アクティブ<xref:System.Windows.Window.Deactivated>になり、イベントが発生します。 同様に、ユーザーが現在非アクティブになって<xref:System.Windows.Window.Activated>いるウィンドウを選択すると、ウィンドウが再びアクティブになり、が発生します。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "68817943"
  バックグラウンドタスクが完了すると、メソッドを呼び出す<xref:System.Windows.Window.Activate%2A>ことにより、ユーザーにより緊急通知を行うことができます。 が呼び出されたときに<xref:System.Windows.Window.Activate%2A> 、ユーザーが別のアプリケーションと対話している場合は、ウィンドウのタスクバーボタンが点滅します。 ユーザーが現在のアプリケーションと対話している場合<xref:System.Windows.Window.Activate%2A>は、を呼び出すとウィンドウが前面に表示されます。  
   
 > [!NOTE]
->  イベント<xref:System.Windows.Application.Activated?displayProperty=nameWithType> と<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>イベントを使用して、アプリケーションスコープのアクティブ化を処理できます。  
+> イベント<xref:System.Windows.Application.Activated?displayProperty=nameWithType> と<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>イベントを使用して、アプリケーションスコープのアクティブ化を処理できます。  
   
 <a name="Closing_a_Window"></a>   
 ### <a name="closing-a-window"></a>ウィンドウを閉じる  
@@ -262,9 +262,9 @@ ms.locfileid: "68817943"
  が<xref:System.Windows.Window.Closing>処理されない場合、または処理されても取り消されない場合は、ウィンドウが閉じます。 ウィンドウが実際に閉じられる<xref:System.Windows.Window.Closed>直前に、が発生します。 この時点で、ウィンドウが閉じるのを防ぐことはできません。  
   
 > [!NOTE]
->  アプリケーションは、メインアプリケーションウィンドウが閉じるか (「」を参照<xref:System.Windows.Application.MainWindow%2A>) または最後のウィンドウを閉じるときに自動的にシャットダウンするように構成できます。 詳細については、「<xref:System.Windows.Application.ShutdownMode%2A>」を参照してください。  
+> アプリケーションは、メインアプリケーションウィンドウが閉じるか (「」を参照<xref:System.Windows.Application.MainWindow%2A>) または最後のウィンドウを閉じるときに自動的にシャットダウンするように構成できます。 詳細については、「<xref:System.Windows.Application.ShutdownMode%2A>」を参照してください。  
   
- ウィンドウは、非クライアント領域とクライアント領域に用意されている機構を使用して明示的に閉じることができますが、次のように、アプリケーション[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]の他の部分での動作の結果として暗黙的に閉じることもできます。  
+ ウィンドウは、非クライアント領域とクライアント領域に用意されている機構を使用して明示的に閉じることができますが、次のようなアプリケーションまたはウィンドウの他の部分での動作の結果として、ウィンドウを暗黙的に閉じることもできます。  
   
 - ユーザーは、Windows をログオフまたはシャットダウンします。  
   
@@ -275,7 +275,7 @@ ms.locfileid: "68817943"
 - <xref:System.Windows.Application.Shutdown%2A> が呼ばれたとき。  
   
 > [!NOTE]
->  ウィンドウを閉じると、再度開くことはできません。  
+> ウィンドウを閉じると、再度開くことはできません。  
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>ウィンドウの有効期間イベント  
@@ -377,7 +377,7 @@ ms.locfileid: "68817943"
  最大化された状態のウィンドウは、最大サイズに拡張されます。これは、 <xref:System.Windows.FrameworkElement.MaxHeight%2A>、、 <xref:System.Windows.FrameworkElement.MaxWidth%2A>および<xref:System.Windows.Window.SizeToContent%2A>の各プロパティによって決まります。 最小化されたウィンドウと同様、最大化されたウィンドウは、サイズ変更グリップを使用したり、境界線をドラッグしたりすることによってサイズ変更できません。  
   
 > [!NOTE]
->  ウィンドウが現在最大化<xref:System.Windows.Window.Top%2A>または<xref:System.Windows.FrameworkElement.Width%2A>最小化されている場合でも、ウィンドウの、 <xref:System.Windows.Window.Left%2A>、、および<xref:System.Windows.FrameworkElement.Height%2A>の各プロパティの値は、常に通常の状態の値を表します。  
+> ウィンドウが現在最大化<xref:System.Windows.Window.Top%2A>または<xref:System.Windows.FrameworkElement.Width%2A>最小化されている場合でも、ウィンドウの、 <xref:System.Windows.Window.Left%2A>、、および<xref:System.Windows.FrameworkElement.Height%2A>の各プロパティの値は、常に通常の状態の値を表します。  
   
  ウィンドウの状態を構成するには、 <xref:System.Windows.Window.WindowState%2A>プロパティを設定します。次<xref:System.Windows.WindowState>の列挙値のいずれかを指定できます。  
   

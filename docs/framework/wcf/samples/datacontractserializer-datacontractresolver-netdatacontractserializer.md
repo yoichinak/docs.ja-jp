@@ -2,12 +2,12 @@
 title: DataContractSerializer と DataContractResolver を使用した NetDataContractSerializer 機能の提供
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: 0378f8d6e21f44eb1f39e9ebf51ef0dfaf8d8e8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7102e60c8b5302d4f3bc83b356dbc7de117f57a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990406"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039863"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>DataContractSerializer と DataContractResolver を使用した NetDataContractSerializer 機能の提供
 このサンプルでは、<xref:System.Runtime.Serialization.DataContractSerializer> を適切な <xref:System.Runtime.Serialization.DataContractResolver> と共に使用して、<xref:System.Runtime.Serialization.NetDataContractSerializer> と同じ機能を提供する方法を示します。 このサンプルで示すのは、<xref:System.Runtime.Serialization.DataContractResolver> を作成して <xref:System.Runtime.Serialization.DataContractSerializer> に追加する方法です。
@@ -57,27 +57,27 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1. Visual Studio 2012 を使用して、DCRSample.sln ソリューション ファイルを開きます。
+1. Visual Studio 2012 を使用して、DCRSample .sln ソリューションファイルを開きます。
 
-2. ソリューション ファイルを右クリックし **プロパティ**します。
+2. ソリューションファイルを右クリックし、 **[プロパティ]** を選択します。
 
-3. **ソリューション プロパティ ページ**ダイアログで、**共通プロパティ**、**スタートアップ プロジェクト**を選択します**マルチ スタートアップ プロジェクト:** します。
+3. **[ソリューションプロパティページ]** ダイアログボックスの **[共通プロパティ**] の **[スタートアッププロジェクト]** で、 **[マルチスタートアッププロジェクト:]** を選択します。
 
-4. 次に、 **DCSwithDCR**プロジェクトで、**開始**から、**アクション**ドロップダウンします。
+4. **DCSwithDCR**プロジェクトの横にある **[アクション]** ドロップダウンから **[開始]** を選択します。
 
-5. 次に、 **NetDCS**プロジェクトで、**開始**から、**アクション**ドロップダウンします。
+5. **Netdcs**プロジェクトの横にある **[アクション]** ドロップダウンから **[開始]** を選択します。
 
-6. クリックして**OK**ダイアログ ボックスを閉じます。
+6. **[OK]** をクリックしてダイアログを閉じます。
 
 7. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
 8. ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。
 
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - marshaling data, COM interop
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16f94e8b85a1bedb8b7791c2b7fcaf6d154ba1b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
-ms.translationtype: HT
+ms.openlocfilehash: 3dd667f681e9b6749f33d6ccfd91035477c56030
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833522"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051693"
 ---
 # <a name="marshaling-data-with-com-interop"></a>COM 相互運用機能によるデータのマーシャリング
 COM 相互運用は、マネージド コードから COM オブジェクトを使用すること、およびマネージド オブジェクトを COM に公開することの、両方の操作をサポートします。 COM との間でデータをマーシャリングする操作のサポートは広範で、ほとんどの場合、正しいマーシャリング動作が提供されます。  
   
- Windows Software Development Kit (SDK) には、次の COM 相互運用ツールが含まれています。  
+ Windows SDK には、以下の COM 相互運用ツールが含まれています。  
   
-- [タイプ ライブラリ インポーター (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)、これは COM タイプ ライブラリを相互運用アセンブリに変換します。 このアセンブリから、相互運用マーシャリング サービスは、マネージド メモリとアンマネージド メモリ間のデータ マーシャリングを実行するラッパーを生成します。  
+- [タイプ ライブラリ インポーター (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)、これは COM タイプ ライブラリを相互運用アセンブリに変換します。 このアセンブリから、相互運用マーシャリング サービスは、マネージド メモリとアンマネージド メモリ間のデータ マーシャリングを実行するラッパーを生成します。  
   
-- [タイプ ライブラリ エクスポーター (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)、これは COM タイプ ライブラリをアセンブリから生成して、メソッド呼び出しの際にマーシャリングを実行するラッパーを生成します。  
+- [タイプ ライブラリ エクスポーター (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md)、これは COM タイプ ライブラリをアセンブリから生成して、メソッド呼び出しの際にマーシャリングを実行するラッパーを生成します。  
   
  以下のセクションは、マーシャラーに追加の型情報を提供できる (またはその必要がある) ときに、相互運用ラッパーをカスタマイズするためのプロセスについて説明するトピックにリンクしています。  
   
@@ -28,7 +28,7 @@ COM 相互運用は、マネージド コードから COM オブジェクトを�
 [方法: ラッパーを手動で作成する](how-to-create-wrappers-manually.md)   
 マネージド ソース コードにおいて COM ラッパーを手動で作成する方法について説明します。 
  
- [方法: マネージド コード DCOM を WCF に移行する](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)  
+ [方法: マネージド コード DCOM を WCF に移行する](how-to-migrate-managed-code-dcom-to-wcf.md)  
  最も安全なソリューションのために、マネージド DCOM コードを WCF に移行する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  

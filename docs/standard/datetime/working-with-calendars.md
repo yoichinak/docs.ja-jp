@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28e1979b6ceb1b343764900cc7d49a576a7a4030
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: dafa7cdaa38180e458a34fd34316f134aa443040
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630551"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929128"
 ---
 # <a name="working-with-calendars"></a>カレンダーの使用
 
@@ -30,39 +30,39 @@ ms.locfileid: "68630551"
 
 .Net のすべてのカレンダーは、 <xref:System.Globalization.Calendar?displayProperty=nameWithType>基本カレンダーの実装を提供するクラスから派生します。 <xref:System.Globalization.Calendar> クラスを継承するクラスの 1 つに <xref:System.Globalization.EastAsianLunisolarCalendar> クラスがあります。これは、すべての太陰太陽暦の基本クラスです。 .NET には、次のカレンダー実装が含まれています。
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>。中国の太陰太陽暦を表します。
+- <xref:System.Globalization.ChineseLunisolarCalendar>。中国の太陰太陽暦を表します。
 
-* <xref:System.Globalization.GregorianCalendar>。グレゴリオ暦を表します。 この暦は、<xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 列挙体で定義されるサブタイプ (アラビア語や中東フランス語など) にさらに分けられます。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> プロパティは、グレゴリオ暦のサブタイプを指定します。
+- <xref:System.Globalization.GregorianCalendar>。グレゴリオ暦を表します。 この暦は、<xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 列挙体で定義されるサブタイプ (アラビア語や中東フランス語など) にさらに分けられます。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> プロパティは、グレゴリオ暦のサブタイプを指定します。
 
-* <xref:System.Globalization.HebrewCalendar>。ヘブライ暦を表します。
+- <xref:System.Globalization.HebrewCalendar>。ヘブライ暦を表します。
 
-* <xref:System.Globalization.HijriCalendar>。回教暦を表します。
+- <xref:System.Globalization.HijriCalendar>。回教暦を表します。
 
-* <xref:System.Globalization.JapaneseCalendar>。和暦を表します。
+- <xref:System.Globalization.JapaneseCalendar>。和暦を表します。
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>。日本の太陰太陽暦を表します。
+- <xref:System.Globalization.JapaneseLunisolarCalendar>。日本の太陰太陽暦を表します。
 
-* <xref:System.Globalization.JulianCalendar>。ユリウス暦を表します。
+- <xref:System.Globalization.JulianCalendar>。ユリウス暦を表します。
 
-* <xref:System.Globalization.KoreanCalendar>。韓国暦を表します。
+- <xref:System.Globalization.KoreanCalendar>。韓国暦を表します。
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>。韓国の太陰太陽暦を表します。
+- <xref:System.Globalization.KoreanLunisolarCalendar>。韓国の太陰太陽暦を表します。
 
-* <xref:System.Globalization.PersianCalendar>。ペルシャ暦を表します。
+- <xref:System.Globalization.PersianCalendar>。ペルシャ暦を表します。
 
-* <xref:System.Globalization.TaiwanCalendar>。台湾暦を表します。
+- <xref:System.Globalization.TaiwanCalendar>。台湾暦を表します。
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>。台湾の太陰太陽暦を表します。
+- <xref:System.Globalization.TaiwanLunisolarCalendar>。台湾の太陰太陽暦を表します。
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>。タイ仏暦を表します。
+- <xref:System.Globalization.ThaiBuddhistCalendar>。タイ仏暦を表します。
 
-* <xref:System.Globalization.UmAlQuraCalendar>。ウムアルクラ暦を表します。
+- <xref:System.Globalization.UmAlQuraCalendar>。ウムアルクラ暦を表します。
 
 暦は、次の 2 とおりの方法で使用できます。
 
-* 特定のカルチャで使用される暦として使用する。 <xref:System.Globalization.CultureInfo> オブジェクトにはそれぞれ、現在の暦 (オブジェクトで現在使用している暦) があります。 あらゆる日付と時刻の値の文字列形式には、現在のカルチャとその現在の暦が自動的に反映されます。 通常、現在の暦は、カルチャの既定の暦になります。 <xref:System.Globalization.CultureInfo>また、オブジェクトには、カルチャで使用できる追加のカレンダーを含む、オプションのカレンダーもあります。
+- 特定のカルチャで使用される暦として使用する。 <xref:System.Globalization.CultureInfo> オブジェクトにはそれぞれ、現在の暦 (オブジェクトで現在使用している暦) があります。 あらゆる日付と時刻の値の文字列形式には、現在のカルチャとその現在の暦が自動的に反映されます。 通常、現在の暦は、カルチャの既定の暦になります。 <xref:System.Globalization.CultureInfo>また、オブジェクトには、カルチャで使用できる追加のカレンダーを含む、オプションのカレンダーもあります。
 
-* 特定のカルチャに依存しないスタンドアロンの暦として使用する。 この場合、暦が反映された値として日付を表すには、<xref:System.Globalization.Calendar> のメソッドを使用します。
+- 特定のカルチャに依存しないスタンドアロンの暦として使用する。 この場合、暦が反映された値として日付を表すには、<xref:System.Globalization.Calendar> のメソッドを使用します。
 
 <xref:System.Globalization.ChineseLunisolarCalendar>、<xref:System.Globalization.JapaneseLunisolarCalendar>、<xref:System.Globalization.JulianCalendar>、<xref:System.Globalization.KoreanLunisolarCalendar>、<xref:System.Globalization.PersianCalendar>、および <xref:System.Globalization.TaiwanLunisolarCalendar> の 6 つの Calendar クラスは、スタンドアロンの暦としてのみ使用できます。 これらは、どのカルチャでも、既定の暦またはオプションの暦としては使用されません。
 
@@ -139,6 +139,7 @@ ms.locfileid: "68630551"
 
 > [!IMPORTANT]
 > <xref:System.Globalization.JapaneseCalendar> と<xref:System.Globalization.JapaneseLunisolarCalendar>の新しい時代 (年号) である Reiwa era は、2019年5月1日から開始されます。 この変更は、これらのカレンダーを使用するすべてのアプリケーションに影響します。 詳細については、次の記事を参照してください。
+>
 > - [.Net の日本語の暦で新しい時代 (年号) を処理](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)する。これは、複数の時代 (年号) を持つ暦をサポートするために .net に追加された機能を文書にし、複数の時代 (年号) の暦を処理するときのベストプラクティスについて説明
 > - [日本語時代の変更に備えてアプリケーションを準備](/windows/uwp/design/globalizing/japanese-era-change)します。これにより、Windows でのアプリケーションのテストに関する情報が提供され、時代 (年号) の変化に対応できるようになります。
 > - [.NET Framework 用の新しい日本語の時代 (年号) の更新の概要](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework)。新しい和暦の時代 (年号) に関連する Windows の各バージョンの更新プログラムを一覧 .NET Framework 表示し、複数の時代 (年号) のサポートに関する新しい .NET Framework 機能について説明します。アプリケーションのテストについては、「」を参照してください。
@@ -243,7 +244,7 @@ ms.locfileid: "68630551"
    |  |  |
    |--|--|
    |キー | HKEY_LOCAL_MACHINE\Software\Microsoft\.netframework\ appcontext |
-   |名前 | EnforceJapaneseEraYearRanges を切り替えます。 |
+   |Name | EnforceJapaneseEraYearRanges を切り替えます。 |
    |型 | REG_SZ |
    |値 | true |
 
@@ -318,7 +319,7 @@ Parameter name: year
    |  |  |
    |--|--|
    |キー | HKEY_LOCAL_MACHINE\Software\Microsoft\.netframework\ appcontext |
-   |Name | FormatJapaneseFirstYearAsANumber を切り替えます。 |
+   |名前 | FormatJapaneseFirstYearAsANumber を切り替えます。 |
    |型 | REG_SZ |
    |値 | true |
 
@@ -356,7 +357,7 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
    |  |  |
    |--|--|  
    |キー | HKEY_LOCAL_MACHINE\Software\Microsoft\.netframework\ appcontext |
-   |名前 | EnforceLegacyJapaneseDateParsing を切り替えます。 |
+   |Name | EnforceLegacyJapaneseDateParsing を切り替えます。 |
    |型 | REG_SZ |
    |値 | true | 
 

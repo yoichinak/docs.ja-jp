@@ -2,24 +2,24 @@
 title: CoordinatorRecoveryLogEntryCorrupt
 ms.date: 03/30/2017
 ms.assetid: 3cd0c3e3-84c8-4d43-a561-a8851c78e565
-ms.openlocfilehash: faf4a07badb71588c601cd9390e4d8e3f187e629
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de9d27e74088b1bac9c8a401c5af2b119fc8e90e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969651"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797989"
 ---
 # <a name="coordinatorrecoverylogentrycorrupt"></a>CoordinatorRecoveryLogEntryCorrupt
 Id:139  
   
- 重大度:Error  
+ 順Error  
   
- カテゴリ:TransactionBridge  
+ [カテゴリ]:TransactionBridge  
   
 ## <a name="description"></a>説明  
  このイベントは、コーディネーターの回復ログ エントリが破損し、逆シリアル化できなかったことを示します。 このエラーが原因で、データの損失が発生することがあります。 イベントには、トランザクション ID、回復データ (Base64 エンコード)、例外、プロセス名、およびプロセス ID が表示されます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [イベント ログ](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [イベント一覧](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [イベント ログ](index.md)
+- [イベント一覧](events-general-reference.md)

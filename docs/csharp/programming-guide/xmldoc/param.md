@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: ffa3bd066ce753f2b953f2d6d0a70a3bf65293ff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e2e9bd4478ceaf2f491aba0aa3db8bae7857f28d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468033"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587924"
 ---
 # <a name="param-c-programming-guide"></a>\<param> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -23,7 +23,7 @@ ms.locfileid: "57468033"
 <param name="name">description</param>  
 ```  
   
-## <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>parameters  
  `name`  
  メソッド パラメーターの名前です。 名前は二重引用符 (" ") で囲みます。  
   
@@ -35,12 +35,12 @@ ms.locfileid: "57468033"
   
  \<param> タグのテキストは、IntelliSense、オブジェクト ブラウザー、コード コメント Web レポートに表示されます。  
   
- コンパイル時に [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。  
+ コンパイル時に [/doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
  [!code-csharp[csProgGuideDocComments#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#1)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ドキュメント コメントとして推奨されるタグ](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# プログラミング ガイド](../index.md)
+- [ドキュメント コメントとして推奨されるタグ](./recommended-tags-for-documentation-comments.md)

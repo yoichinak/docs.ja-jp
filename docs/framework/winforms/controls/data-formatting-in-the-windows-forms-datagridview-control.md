@@ -6,30 +6,30 @@ helpviewer_keywords:
 - data [Windows Forms], formatting in grids
 - data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
-ms.openlocfilehash: b5c055bdd12a4bede6e77233726c697de424a055
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5966f16238999655d6072c1127e5bf16aefde5e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011431"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969186"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールでのデータの書式設定
-<xref:System.Windows.Forms.DataGridView>コントロールがセルの値と、親列に表示するデータ型間の自動変換を提供します。 たとえば、テキスト ボックスの列は、日付、時刻、数、および列挙の値の文字列形式を表示し、ユーザーが入力した文字列値をデータ ストアに必要な種類に変換します。  
+コントロール<xref:System.Windows.Forms.DataGridView>は、セル値と親列に表示されるデータ型の間の自動変換を提供します。 たとえば、テキストボックスの列では、日付、時刻、数値、列挙値の文字列形式を表示し、ユーザーが入力した文字列値をデータストアで必要な型に変換します。  
   
-## <a name="formatting-with-the-datagridviewcellstyle-class"></a>DataGridViewCellStyle クラスを使用して書式設定  
- <xref:System.Windows.Forms.DataGridView>によってセル値の基本的なデータの書式設定コントロールを提供します、<xref:System.Windows.Forms.DataGridViewCellStyle>クラス。 使用することができます、<xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>プロパティで説明されている書式指定子を使用して現在の既定のカルチャの形式の日付、時刻、数、および列挙値を[型の書式設定](../../../standard/base-types/formatting-types.md)します。 これらの値を使用して特定のカルチャの書式を設定することもできます、<xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>プロパティ。 指定した形式は、データを表示して、ユーザーが指定された形式で入力したデータの解析に使用されます。  
+## <a name="formatting-with-the-datagridviewcellstyle-class"></a>DataGridViewCellStyle クラスを使用した書式設定  
+ コントロール<xref:System.Windows.Forms.DataGridView>は、クラスを<xref:System.Windows.Forms.DataGridViewCellStyle>使用したセル値の基本的なデータ書式設定を提供します。 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>プロパティを使用して、現在の既定のカルチャの日付、時刻、数値、および列挙値の書式を設定するには、「[型の書式設定](../../../standard/base-types/formatting-types.md)」で説明されている書式指定子を使用します。 また、プロパティを使用して、 <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>特定のカルチャに対してこれらの値を書式設定することもできます。 指定された形式は、データの表示と、ユーザーが指定した形式で入力したデータの解析の両方に使用されます。  
   
- <xref:System.Windows.Forms.DataGridViewCellStyle>クラス wordwrap、テキストの配置、およびデータベースの null 値のカスタム表示の追加の書式設定プロパティを提供します。 詳細については、「[方法 :書式設定データの Windows フォーム DataGridView コントロール](how-to-format-data-in-the-windows-forms-datagridview-control.md)します。  
+ クラス<xref:System.Windows.Forms.DataGridViewCellStyle>には、折り返し、テキストの配置、および null データベース値のカスタム表示に関する追加の書式設定プロパティが用意されています。 詳細については、「[方法 :Windows フォーム DataGridView コントロール](how-to-format-data-in-the-windows-forms-datagridview-control.md)でデータの書式を設定します。  
   
-## <a name="formatting-with-the-cellformatting-event"></a>CellFormatting イベントに書式設定  
- 基本的な書式設定しても、ニーズが満たしていない場合は、カスタムのデータのハンドラーで書式設定を行うことができます、<xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>イベント。 <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs>ハンドラーに渡されますが、<xref:System.Windows.Forms.ConvertEventArgs.Value%2A>最初に、セルの値を格納するプロパティ。 通常、この値は自動的に、表示型に変換します。 値を自分で変換するには、設定、<xref:System.Windows.Forms.ConvertEventArgs.Value%2A>プロパティを表示型の値。  
+## <a name="formatting-with-the-cellformatting-event"></a>CellFormatting 設定イベントを使用した書式設定  
+ 基本的な書式設定がニーズに合わない場合は、 <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>イベントのハンドラーにカスタムデータ書式を提供できます。 <xref:System.Windows.Forms.ConvertEventArgs.Value%2A>ハンドラーに<xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs>渡されるには、最初にセル値を格納するプロパティがあります。 通常、この値は自動的に表示の種類に変換されます。 値を自分で変換するには<xref:System.Windows.Forms.ConvertEventArgs.Value%2A> 、プロパティを表示型の値に設定します。  
   
 > [!NOTE]
->  セルの書式指定文字列が有効な場合、オーバーライドの変更、<xref:System.Windows.Forms.ConvertEventArgs.Value%2A>プロパティ値を設定しない限り、<xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied%2A>プロパティを`true`します。  
+> 書式指定文字列がセルに対して有効になっている場合、 <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied%2A>プロパティをに`true`設定しない限り、プロパティ値の変更はオーバーライドされます。  
   
- <xref:System.Windows.Forms.DataGridView.CellFormatting>イベントを設定する際にも役立ちます<xref:System.Windows.Forms.DataGridViewCellStyle>値に基づいて、個々 のセルのプロパティ。 詳細については、「[方法 :Windows フォーム DataGridView コントロールでデータの書式設定をカスタマイズ](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)します。  
+ イベント<xref:System.Windows.Forms.DataGridView.CellFormatting>は、個々のセルのプロパティを値<xref:System.Windows.Forms.DataGridViewCellStyle>に基づいて設定する場合にも便利です。 詳細については、「[方法 :Windows フォーム DataGridView コントロール](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)でデータの書式設定をカスタマイズします。  
   
- ユーザーが指定した値の既定の解析もニーズを満たしていない場合を処理できます、<xref:System.Windows.Forms.DataGridView.CellParsing>のイベント、<xref:System.Windows.Forms.DataGridView>カスタム解析を提供するコントロール。  
+ ユーザー指定の値の既定の解析がニーズに合わない場合は、 <xref:System.Windows.Forms.DataGridView.CellParsing> <xref:System.Windows.Forms.DataGridView>コントロールのイベントを処理してカスタム解析を提供できます。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -37,5 +37,5 @@ ms.locfileid: "62011431"
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - [Windows フォーム DataGridView コントロールでのデータの表示](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Windows フォーム DataGridView コントロールでのセルのスタイル](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [方法: 書式設定データの Windows フォーム DataGridView コントロール](how-to-format-data-in-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォーム DataGridView コントロールでデータの書式設定をカスタマイズします。](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォーム DataGridView コントロールでのデータの書式設定](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォーム DataGridView コントロールでのデータ書式設定のカスタマイズ](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

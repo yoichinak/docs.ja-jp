@@ -1,17 +1,17 @@
 ---
-title: <AttributeImplies> 要素 (.NET ネイティブ)
+title: <AttributeImplies>要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d59f1f48be19a21ccc7ee5bb73cebfffc387fec2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d15d572ee70e9c7a8cb29010d6debbd1874e5ae2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868541"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049902"
 ---
-# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies > 要素 (.NET ネイティブ)
+# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies 要素 (.NET ネイティブ) を意味します
 それを含む属性が適用されるコード要素のポリシーを定義します。  
   
 ## <a name="syntax"></a>構文  
@@ -49,9 +49,9 @@ ms.locfileid: "61868541"
   
 ## <a name="all-attributes"></a>すべての属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
+|*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -60,7 +60,7 @@ ms.locfileid: "61868541"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
+|[\<Type>](type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>Remarks  
  `<AttributeImplies>` 要素は、それを含む型が属性 (つまり、<xref:System.Attribute?displayProperty=nameWithType> から継承されるクラス) である場合に使用されます。 特定のプログラム要素に属性が適用される場合、`<AttributeImplies>` 要素によって定義されるポリシーがそのプログラム要素に適用されます。  
@@ -69,7 +69,7 @@ ms.locfileid: "61868541"
   
 ## <a name="see-also"></a>関連項目
 
-- [\<型 > 要素](../../../docs/framework/net-native/type-element-net-native.md)
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<> 要素を入力します](type-element-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ要素](runtime-directive-elements.md)
+- [ランタイム ディレクティブ ポリシーの設定](runtime-directive-policy-settings.md)

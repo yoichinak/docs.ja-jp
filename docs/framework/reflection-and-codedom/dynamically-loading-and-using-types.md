@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
-ms.translationtype: HT
+ms.openlocfilehash: 21d0425de072c91cf7111162e405f826e00e849d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469676"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046092"
 ---
 # <a name="dynamically-loading-and-using-types"></a>型の動的な読み込みおよび使用
 リフレクションは、言語コンパイラで使用される、暗黙の遅延バインディングを実装するインフラストラクチャを提供します。 バインディングとは、一意に指定した型に対応する宣言 (つまり、実装) を検索するプロセスです。 このプロセスがコンパイル時ではなく、実行時に発生する場合、それは遅延バインディングと呼ばれます。 Visual Basic のコードでは、暗黙の遅延バインディングを使用できます。Visual Basic のコンパイラからは、オブジェクトの型の取得にリフレクションを使用するヘルパー メソッドが呼び出されます。 ヘルパー メソッドに渡される引数により、実行時に適切なメソッドが呼び出されます。 これらの引数は、メソッドを呼び出すインスタンス (オブジェクト)、呼び出されたメソッド名 (文字列)、呼び出されたメソッドに渡される引数 (オブジェクトの配列) です。  
   
  次の例では、Visual Basic コンパイラがリフレクションを暗黙的に使用して、コンパイル時には型が不明なオブジェクトのメソッドを呼び出します。 **HelloWorld** クラスには、**PrintHello** メソッドに渡される、"Hello World" とこれに連結されたいくつかのテキストを出力する **PrintHello** メソッドがあります。 この例で呼び出される **PrintHello** メソッドは、実際には <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType> です。Visual Basic コードでは、オブジェクトの型 (helloObj) が実行時ではなく (遅延バインディング) コンパイル時に認識された (事前バインディング) かのように **PrintHello** メソッドを呼び出します。  
   
-```  
-Imports System  
+```vb
 Module Hello  
     Sub Main()  
         ' Sets up the variable.  
@@ -44,7 +43,7 @@ End Module
 ## <a name="custom-binding"></a>カスタム バインド  
  コンパイラが暗黙的に遅延バインディングに使用するだけではなく、コードでリフレクションを使用して、明示的に遅延バインディングを実現できます。  
   
- [共通言語ランタイム](../../../docs/standard/clr.md)では、複数のプログラミング言語をサポートしていますが、バインド規則は言語によって異なります。 事前バインディングの場合、コード ジェネレーターがバインディングを完全に制御できます。 ただし、リフレクションによる遅延バインディングでは、カスタム バインドでバインディングを制御する必要があります。 <xref:System.Reflection.Binder> クラスには、メンバーの選択と呼び出しのカスタム コントロールがあります。  
+ [共通言語ランタイム](../../standard/clr.md)では、複数のプログラミング言語をサポートしていますが、バインド規則は言語によって異なります。 事前バインディングの場合、コード ジェネレーターがバインディングを完全に制御できます。 ただし、リフレクションによる遅延バインディングでは、カスタム バインドでバインディングを制御する必要があります。 <xref:System.Reflection.Binder> クラスには、メンバーの選択と呼び出しのカスタム コントロールがあります。  
   
  カスタム バインドを使用すると、実行時にアセンブリを読み込み、そのアセンブリ内の型についての情報を取得し、必要な型を指定し、その後でメソッドを呼び出したり、その型のフィールドやプロパティにアクセスしたりできます。 この方法は、コンパイル時にオブジェクトの型を特定できない場合、たとえば、オブジェクトの型がユーザーの入力に依存するような場合に便利です。  
   
@@ -67,7 +66,7 @@ End Module
   
  **BindToMethod** は、呼び出す <xref:System.Reflection.MethodBase> を返します。このような呼び出しが不可能な場合は、null 参照 (Visual Basic では **Nothing**) を返します。 通常は含まれますが、**MethodBase** の戻り値は、*match* パラメーターに含める必要はありません。  
   
- ByRef 引数が存在する場合、呼び出し元はそれらを取得することが必要な場合があります。 したがって、**BindToMethod** が引数配列を操作した場合、クライアントは、**Binder** を使用して、引数配列を元の形態に対応付けることができます。 これを行うには、呼び出し元は引数の順序が変わらないことが保証される必要があります。 引数が名前によって渡されるとき、**Binder** は呼び出し元が参照する引数配列の順序を変更します。 詳細については、「<xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>」を参照してください。  
+ ByRef 引数が存在する場合、呼び出し元はそれらを取得することが必要な場合があります。 したがって、**BindToMethod** が引数配列を操作した場合、クライアントは、**Binder** を使用して、引数配列を元の形態に対応付けることができます。 これを行うには、呼び出し元は引数の順序が変わらないことが保証される必要があります。 引数が名前によって渡されるとき、**Binder** は呼び出し元が参照する引数配列の順序を変更します。 詳細については、「 <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType> 」を参照してください。  
   
  利用可能なメンバーのセットは、その型と任意の基本型に定義されているメンバーです。 <xref:System.Reflection.BindingFlags> を指定した場合、いずれかのアクセシビリティのメンバーがそのセットに返されます。 **BindingFlags.NonPublic** を指定しない場合、バインダーはアクセシビリティ規則を適用する必要があります。 **Public** または **NonPublic** のバインディング フラグを指定した場合、**Instance** または **Static** バインディング フラグも指定しないと、メンバーは返されません。  
   
@@ -79,7 +78,7 @@ End Module
   
  コード例のケース 3 では、値が "5.5" の **String** 型の実引数が **Double** 型の仮引数のメソッドに渡されます。 呼び出しが成功するには、文字列値 "5.5" を倍精度浮動小数点値に変換する必要があります。 この変換は、**ChangeType** が実行します。  
   
- **ChangeType** は、次の表の無損失または[拡大強制型変換](../../../docs/standard/base-types/type-conversion.md)のみを行います。  
+ **ChangeType** は、次の表の無損失または[拡大強制型変換](../../standard/base-types/type-conversion.md)のみを行います。  
   
 |変換元の型|変換後の型|  
 |-----------------|-----------------|  
@@ -103,5 +102,5 @@ End Module
 
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
-- [型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [.NET Framework における型変換](../../../docs/standard/base-types/type-conversion.md)
+- [型情報の表示](viewing-type-information.md)
+- [.NET Framework における型変換](../../standard/base-types/type-conversion.md)

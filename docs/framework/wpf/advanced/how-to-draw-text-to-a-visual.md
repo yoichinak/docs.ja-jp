@@ -10,21 +10,21 @@ helpviewer_keywords:
 - text [WPF], drawing to visuals
 - drawing [WPF], text to visuals
 ms.assetid: fee4003c-e8a6-46ec-babd-2c7f4231a101
-ms.openlocfilehash: 1ea31540ad59ab419e209e4133bcb88640cc01fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd760a06150098d0fff17dbdce95b55a0e5fe713
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776169"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963843"
 ---
 # <a name="how-to-draw-text-to-a-visual"></a>方法: ビジュアルにテキストを描画する
-次の例では、テキストを描画する方法を示しています、<xref:System.Windows.Media.DrawingVisual>を使用して、<xref:System.Windows.Media.DrawingContext>オブジェクト。 描画コンテキストが呼び出しによって返される、<xref:System.Windows.Media.DrawingVisual.RenderOpen%2A>のメソッドを<xref:System.Windows.Media.DrawingVisual>オブジェクト。 グラフィックスとテキストを描画コンテキストに描画できます。  
+オブジェクト<xref:System.Windows.Media.DrawingContext>を<xref:System.Windows.Media.DrawingVisual>使用してにテキストを描画する方法を次の例に示します。 描画コンテキストは、 <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> <xref:System.Windows.Media.DrawingVisual>オブジェクトのメソッドを呼び出すことによって返されます。 描画コンテキストにグラフィックスやテキストを描画できます。  
   
- 描画コンテキストにテキストを描画するために使用して、<xref:System.Windows.Media.DrawingContext.DrawText%2A>のメソッドを<xref:System.Windows.Media.DrawingContext>オブジェクト。 コンテンツを描画コンテキストに描画が完了したら、呼び出し、<xref:System.Windows.Media.DrawingContext.Close%2A>メソッドを描画コンテキストを閉じるし、内容を保持します。  
+ 描画コンテキストにテキストを描画するには、 <xref:System.Windows.Media.DrawingContext.DrawText%2A> <xref:System.Windows.Media.DrawingContext>オブジェクトのメソッドを使用します。 描画コンテキストへのコンテンツの描画が完了したら、 <xref:System.Windows.Media.DrawingContext.Close%2A>メソッドを呼び出して描画コンテキストを閉じ、コンテンツを永続化します。  
   
 ## <a name="example"></a>例  
  [!code-csharp[DrawingVisualSample#110](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#110)]
  [!code-vb[DrawingVisualSample#110](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#110)]  
   
 > [!NOTE]
->  上記のコードの抽出元となった完全なコード サンプルについては、「[DrawingVisual を使用したヒット テストのサンプル](https://go.microsoft.com/fwlink/?LinkID=159994)」を参照してください。
+> 上記のコードの抽出元となった完全なコード サンプルについては、「[DrawingVisual を使用したヒット テストのサンプル](https://go.microsoft.com/fwlink/?LinkID=159994)」を参照してください。

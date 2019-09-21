@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 2f907d097f52f13e733713d8ad68cc2390b051ed
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a264ec3fa1232a058a3bfbabbe8b84712cf87322
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364236"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956410"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>カスタム型およびライブラリの XAML 関連の CLR 属性
 このトピックでは .NET Framework XAML サービスによって定義される共通言語ランタイム (CLR) の属性について説明します。 また、アプリケーションからアセンブリまたは型への XAML 関連のシナリオを持つ .NET Framework で定義されているその他の CLR 属性についても説明します。 これらの CLR 属性を持つ属性アセンブリ、型、またはメンバーは、型に関連する XAML 型システム情報を提供します。 Xaml ノードストリームを直接処理したり、専用の XAML リーダーと XAML ライターを使用したりするために .NET Framework XAML サービスを使用するすべての XAML コンシューマーに情報が提供されます。  
@@ -266,7 +266,7 @@ ms.locfileid: "68364236"
 - アセンブリに XAML 言語サポートを定義し、 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>に`http://schemas.microsoft.com/winfx/2006/xaml`を設定します。 この場合は、通常、プレフィックス`x`を昇格させる必要があります。  
   
 > [!NOTE]
->  Xaml サービスも .NET Framework xaml 関連の属性<xref:System.Windows.Markup.RootNamespaceAttribute>を定義します。 この属性は、プロジェクトシステムサポートのアセンブリレベルの属性であり、XAML カスタム型には関連しません。  
+> Xaml サービスも .NET Framework xaml 関連の属性<xref:System.Windows.Markup.RootNamespaceAttribute>を定義します。 この属性は、プロジェクトシステムサポートのアセンブリレベルの属性であり、XAML カスタム型には関連しません。  
   
 ## <a name="see-also"></a>関連項目
 

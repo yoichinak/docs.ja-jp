@@ -1,17 +1,17 @@
 ---
 title: ML.NET の概要とそのしくみ
 description: ML.NET を使用すると、オンラインまたはオフラインのどちらのシナリオでも、.NET アプリケーションに機械学習を追加できます。 この機能により、データを使った自動予測をアプリケーションで利用できるようになります。ML.NET を使うためにネットワークに接続する必要はありません。 この記事では、ML.NET の機械学習の基本について説明します。
-ms.date: 07/17/2019
+ms.date: 08/26/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 23e71e86b75854042068b6a68f90cf995749ee58
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: d49a4bdfec133fe805bc9d534e04edf2f9ca5726
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331584"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929409"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET の概要とそのしくみ
 
@@ -82,6 +82,7 @@ ML.NET を使用して作成できる予測の種類の例を次に示します�
 ## <a name="code-workflow"></a>コードのワークフロー
 
 次の図は、アプリケーション コードの構造とモデル開発の反復処理を表しています。
+
 - トレーニング データを収集して **IDataView** オブジェクトに読み込む
 - 特徴を抽出し、機械学習アルゴリズムを適用するように操作のパイプラインを指定する
 - パイプラインに対して **Fit()** を呼び出してモデルをトレーニングする
@@ -110,7 +111,7 @@ ML.NET モデルは、予測される出力に到達するために入力デー�
 
 より複雑なモデルでは、取引の説明文を使用して金融取引をカテゴリに分類します。
 
-各トランザクションの説明を特徴セットに分類するには、冗長な単語と文字を削除し、単語と文字の組み合わせを数えます。 特徴セットは、トレーニング データ内の一連のカテゴリに基づいて線形モデルをトレーニングするために使用されます。 新しい説明がトレーニング セット内の説明に似ているほど、同じカテゴリに割り当てられる可能性が高くなります。 
+各取引の説明を特徴セットに分類するには、冗長な単語と文字を削除し、単語と文字の組み合わせを数えます。 特徴セットは、トレーニング データ内の一連のカテゴリに基づいて線形モデルをトレーニングするために使用されます。 新しい説明がトレーニング セット内の説明に似ているほど、同じカテゴリに割り当てられる可能性が高くなります。 
 
 ![テキスト分類モデル](./media/text-classification-model.svg)
 
@@ -124,7 +125,7 @@ ML.NET モデルは、予測される出力に到達するために入力デー�
 
 [データの準備方法](./how-to-guides/prepare-data-ml-net.md)に関する記事では、データ準備を適用する方法が全般的に説明されています。
 
-すべての[使用できる変換](./resources/transforms.md)の付録については、リソース セクションを参照してください。
+[使用可能なすべての変換](./resources/transforms.md) についての付録は、リソース セクションを参照してください。
 
 ## <a name="model-evaluation"></a>モデル評価
 
@@ -155,7 +156,7 @@ ML.NET モデルは、予測される出力に到達するために入力デー�
         // RMS error: 0.19
 ```
 
-評価メトリックから、誤差が少ないことと、予測される出力とテスト出力の間の相関度が高いことがわかります。 簡単でしたね。 実際の例で優れたモデル メトリックを実現するには、さらに調整が必要です。
+評価メトリックから、誤差が少ないことと、予測される出力とテスト出力の間の相関度が高いことがわかります。 簡単ですね。 実際の例で優れたモデル メトリックを実現するには、さらに調整が必要です。
 
 ## <a name="mlnet-architecture"></a>ML.NET のアーキテクチャ
 
@@ -174,8 +175,8 @@ ML.NET アプリケーションは <xref:Microsoft.ML.MLContext> オブジェク
 ||予測|<xref:Microsoft.ML.ForecastingCatalog>||
 ||ランキング|<xref:Microsoft.ML.RankingCatalog>||
 ||回帰|<xref:Microsoft.ML.RegressionCatalog>||
-||推奨事項|<xref:Microsoft.ML.RecommendationCatalog>|`Microsoft.ML.Recommender` NuGet パッケージを取得する|
-||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|`Microsoft.ML.TimeSeries` NuGet パッケージを取得する|
+||推奨事項|<xref:Microsoft.ML.RecommendationCatalog>|`Microsoft.ML.Recommender` NuGet パッケージを追加|
+||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|`Microsoft.ML.TimeSeries` NuGet パッケージを追加|
 |モデルの使用法 ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 上記の各カテゴリの作成方法に移動できます。 Visual Studio を使用すると、IntelliSense を介してカタログが表示されます。
@@ -229,7 +230,7 @@ ML.NET アプリケーションは <xref:Microsoft.ML.MLContext> オブジェク
 
 ML.NET 機械学習パイプラインの中心には [DataView](xref:Microsoft.ML.IDataView) オブジェクトがあります。
 
-パイプライン内の各変換には、入力スキーマ (変換で入力にあると想定されているデータの名前、型、およびサイズ) と、出力スキーマ (変換によって変換後に生成されるデータの名前、型、およびサイズ) があります。 
+パイプライン内の各変換には、入力スキーマ (変換で入力にあると想定されているデータの名前、型、およびサイズ) と、出力スキーマ (変換によって変換後に生成されるデータの名前、型、およびサイズ) があります。 次のドキュメントでは、[IDataView インターフェイスとその型システム](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html)について詳しく説明しています。
 
 パイプライン内の 1 つの変換からの出力スキーマが次の変換の入力スキーマと一致しない場合、ML.NET から例外がスローされます。
 

@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4ae9710b99c85cfcbe3de2669c7ee85d0d24ef4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 56a88a5719fc5630baf2f31ee62fd463980661c2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629344"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051806"
 ---
 # <a name="how-to-create-com-wrappers"></a>方法: COM ラッパーを作成する
 
 Visual Studio 2005 の機能または .NET Framework のツールである Tlbimp.exe と Regasm.exe を使用して、COM (コンポーネント オブジェクト モデル) ラッパーを作成することができます。 どちらの方法でも以下の 2 種類の COM ラッパーが作成されます。
 
-- タイプ ライブラリからの[ランタイム呼び出し可能ラッパー](../../../docs/standard/native-interop/runtime-callable-wrapper.md)。マネージド コードで COM オブジェクトを実行します。
+- タイプ ライブラリからの[ランタイム呼び出し可能ラッパー](../../standard/native-interop/runtime-callable-wrapper.md)。マネージド コードで COM オブジェクトを実行します。
 
-- 必要なレジストリ設定を含む [COM 呼び出し可能ラッパー](../../../docs/standard/native-interop/com-callable-wrapper.md)。ネイティブ アプリケーションでマネージド オブジェクトを実行します。
+- 必要なレジストリ設定を含む [COM 呼び出し可能ラッパー](../../standard/native-interop/com-callable-wrapper.md)。ネイティブ アプリケーションでマネージド オブジェクトを実行します。
 
 Visual Studio 2005 では、プロジェクトに参照として COM ラッパーを追加できます。
 
@@ -45,7 +45,7 @@ Visual Studio 2005 では、プロジェクトに参照として COM ラッパ�
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>.NET Framework ツールを使用してランタイム呼び出し可能ラッパーを作成するには  
   
-- [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) ツールを実行します。  
+- [Tlbimp.exe (タイプ ライブラリ インポーター)](../tools/tlbimp-exe-type-library-importer.md) ツールを実行します。  
   
  このツールは、元のタイプ ライブラリで定義された型のランタイム メタデータを含むアセンブリを作成します。  
   
@@ -55,7 +55,7 @@ Visual Studio 2005 では、プロジェクトに参照として COM ラッパ�
   
 1. ネイティブ コードで実行するマネージド クラス用のクラス ライブラリ プロジェクトを作成します。 このクラスには、パラメーターなしのコンストラクターが含まれている必要があります。  
   
-     AssemblyInfo ファイルで、アセンブリの 4 つの部分で構成される完全なバージョン番号があることを確認します。 この番号は、Windows レジストリでバージョンを管理するために必要となります。 バージョン番号の詳細については、「[アセンブリのバージョン管理](../../../docs/framework/app-domains/assembly-versioning.md)」を参照してください。  
+     AssemblyInfo ファイルで、アセンブリの 4 つの部分で構成される完全なバージョン番号があることを確認します。 この番号は、Windows レジストリでバージョンを管理するために必要となります。 バージョン番号の詳細については、「[アセンブリのバージョン管理](../../standard/assembly/versioning.md)」を参照してください。  
   
 2. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
@@ -67,13 +67,13 @@ Visual Studio 2005 では、プロジェクトに参照として COM ラッパ�
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>.NET Framework ツールを使用して COM 呼び出し可能ラッパーを作成するには  
   
-[Regasm.exe (アセンブリ登録ツール)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) を実行します。  
+[Regasm.exe (アセンブリ登録ツール)](../tools/regasm-exe-assembly-registration-tool.md) を実行します。  
   
 このツールはアセンブリ メタデータを読み取り、必要なエントリをレジストリに追加します。 その結果、COM クライアントで .NET Framework クラスを透過的に作成できるようになります。 アセンブリは、ネイティブ COM クラスの場合と同じように使用することができます。  
   
-任意のディレクトリにあるアセンブリで Regasm.exe を実行してから、[Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) を実行して、そのアセンブリをグローバル アセンブリ キャッシュに移動することができます。 アセンブリを移動しても場所のレジストリ エントリが無効になることはありません。これは、アセンブリが他の場所で見つからない場合に常にグローバル アセンブリ キャッシュが調べられるからです。  
+任意のディレクトリにあるアセンブリで Regasm.exe を実行してから、[Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](../tools/gacutil-exe-gac-tool.md) を実行して、そのアセンブリをグローバル アセンブリ キャッシュに移動することができます。 アセンブリを移動しても場所のレジストリ エントリが無効になることはありません。これは、アセンブリが他の場所で見つからない場合に常にグローバル アセンブリ キャッシュが調べられるからです。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム呼び出し可能ラッパー](../../../docs/standard/native-interop/runtime-callable-wrapper.md)
-- [COM 呼び出し可能ラッパー](../../../docs/standard/native-interop/com-callable-wrapper.md)
+- [ランタイム呼び出し可能ラッパー](../../standard/native-interop/runtime-callable-wrapper.md)
+- [COM 呼び出し可能ラッパー](../../standard/native-interop/com-callable-wrapper.md)

@@ -2,12 +2,12 @@
 title: 連結クエリのパフォーマンス (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 1ccb7dfec57a4aeea8329456084ca99f5ca3124d
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 7deff9205e6535877efabd85257baa5b3906f41a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690001"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253120"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>連結クエリのパフォーマンス (LINQ to XML) (C#)
 
@@ -37,7 +37,7 @@ foreach (var i in query2)
 
 この例を実行すると、次の出力が生成されます。
 
-```
+```output
 4
 ```
 
@@ -53,6 +53,6 @@ foreach (var i in query2)
 
 したがって、`query2` の反復は最初のクエリのソースにある項目数に直接比例します。つまり線形時間となります。 対応する Visual Basic の例でも、同じパフォーマンス プロファイルがあります。
 
-反復子の詳細については、「[yield](../../../../csharp/language-reference/keywords/yield.md)」を参照してください。
+反復子の詳細については、「[yield](../../../language-reference/keywords/yield.md)」を参照してください。
 
-クエリの連結に関する詳細なチュートリアルについては、「[チュートリアル: クエリの連結](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」を参照してください。
+クエリの連結に関する詳細なチュートリアルについては、「[チュートリアル: クエリの連結](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」を参照してください。

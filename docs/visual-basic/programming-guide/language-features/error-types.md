@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: 030986111a50ab59c605a1d683fedc118d10b260
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ab554b60f7ba44ee0b92b76e1362ffdbb25f2afb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626615"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965365"
 ---
 # <a name="error-types-visual-basic"></a>エラーの種類 (Visual Basic)
 Visual Basic では、エラーは構文エラー、実行時エラー、および論理エラーの3つのカテゴリのいずれかに分類されます。
@@ -24,7 +24,7 @@ Visual Basic では、エラーは構文エラー、実行時エラー、およ�
  *構文エラー*は、コードの記述中に表示されるエラーです。 Visual Studio を使用している場合、コード**エディター**ウィンドウでコードを入力すると、Visual Basic によってコードがチェックされ、単語のスペルミスや言語要素の不適切な使用などの誤りが発生した場合に警告が表示されます。 コマンドラインからコンパイルした場合、Visual Basic には、構文エラーに関する情報を含むコンパイラエラーが表示されます。 構文エラーは、最も一般的なエラーの種類です。 コーディング環境では、問題が発生するとすぐに簡単に修正できます。
 
 > [!NOTE]
->  ステートメント`Option Explicit`は、構文エラーを回避するための1つの手段です。 これにより、アプリケーションで使用されるすべての変数が事前に宣言されます。 そのため、これらの変数がコード内で使用されている場合は、すべての活字エラーが即座にキャッチされ、修正できます。
+> ステートメント`Option Explicit`は、構文エラーを回避するための1つの手段です。 これにより、アプリケーションで使用されるすべての変数が事前に宣言されます。 そのため、これらの変数がコード内で使用されている場合は、すべての活字エラーが即座にキャッチされ、修正できます。
 
 ## <a name="run-time-errors"></a>実行時エラー
  *実行時エラー*は、コードをコンパイルして実行した後にのみ表示されるエラーです。 このようなコードには、構文エラーがないにもかかわらず、実行できないと思われるコードが含まれます。 たとえば、ファイルを開くためのコード行が正しく記述されているとします。 ただし、ファイルが存在しない場合、アプリケーションはファイルを開くことができず、例外がスローされます。 ほとんどのランタイムエラーは、問題のあるコードを書き直すか、[例外処理](../../language-reference/statements/try-catch-finally-statement.md)を使用して再コンパイルし、再実行することによって修正できます。

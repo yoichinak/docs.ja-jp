@@ -2,12 +2,12 @@
 title: dotnet restore コマンド
 description: dotnet restore コマンドを使用して、依存関係とプロジェクト固有のツールを復元する方法について説明します。
 ms.date: 05/29/2018
-ms.openlocfilehash: 17bbbe33e7cb7b13d6fb1c0e44bb77dd2bbe7020
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1e0e1fbf6ab5f595773a072242440e30865fed16
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626355"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969763"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -19,9 +19,11 @@ ms.locfileid: "68626355"
 
 ## <a name="synopsis"></a>構文
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-```
+```console
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
     [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity] [--interactive]
 dotnet restore [-h|--help]
@@ -29,7 +31,7 @@ dotnet restore [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```
+```console
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache]
     [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
 dotnet restore [-h|--help]
@@ -55,15 +57,15 @@ dotnet restore [-h|--help]
 
 `dotnet restore` によって無視される、特定の設定が 3 つあります。
 
-* [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
+- [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
 
   バインド リダイレクトは、`<PackageReference>` 要素では機能しません。また、.NET Core では、NuGet パッケージの `<PackageReference>` 要素のみサポートされます。
 
-* [solution](/nuget/schema/nuget-config-file#solution-section)
+- [solution](/nuget/schema/nuget-config-file#solution-section)
 
   これは、Visual Studio 固有の設定であり、.NET Core には適用されません。 .NET Core では、`packages.config` ファイルは使用されず、代わりに NuGet パッケージの `<PackageReference>` 要素が使用されます。
 
-* [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
+- [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
   この設定は、信頼できるパッケージの[クロスプラットフォーム検証が NuGet でまだサポートされていない](https://github.com/NuGet/Home/issues/7939)ため、適用されません。
 
@@ -177,7 +179,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-復元操作時に使用する NuGet パッケージのソースを指定します。 これにより、"*nuget.config*" ファイルに指定されているすべてのソースがオーバーライドされます。 このオプションを複数回指定することによって、複数のソースを指定できます。
+復元操作時に使用する NuGet パッケージのソースを指定します。 これにより、*nuget.exe* ファイルで指定されているすべてのソースがオーバーライドされ、`<packageSource>` 要素が存在しないかのように *nuget.exe* ファイルが効果的に読み取られます。 このオプションを複数回指定することによって、複数のソースを指定できます。
 
 `--verbosity <LEVEL>`
 

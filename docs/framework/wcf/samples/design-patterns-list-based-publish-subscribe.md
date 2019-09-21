@@ -2,20 +2,20 @@
 title: デザイン パターン:リストに基づく公開/定期受信
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 1b99908c1b83bb0d75e295b7a12e8c5933fe86a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650118"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928841"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>デザイン パターン:リストに基づく公開/定期受信
-このサンプルでは、Windows Communication Foundation (WCF) プログラムとして実装されたリストに基づく公開/定期受信パターンを示します。  
+このサンプルは、Windows Communication Foundation (WCF) プログラムとして実装されているリストベースのパブリッシュ/サブスクライブパターンを示しています。  
   
 > [!NOTE]
->  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
+> このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
- リストに基づく公開/定期受信デザイン パターンは、Microsoft Patterns & Practices の文書に記載されて[統合パターン](https://go.microsoft.com/fwlink/?LinkId=95894)します。 公開/定期受信パターンは、情報トピックを定期受信する受信者のコレクションに情報を渡します。 リストに基づく公開/定期受信では、サブスクライバのリストが保持されます。 共有情報が存在する場合は、コピーがリスト上の各サブスクライバに送信されます。 このサンプルでは、動的なリストに基づく公開/定期受信パターンを示します。これにより、クライアントは必要に応じて何度でも定期受信または定期受信の解除ができます。  
+ リストベースのパブリッシュ/サブスクライブのデザインパターンについては、Microsoft のパターン & プラクティスの発行、[統合パターン](https://go.microsoft.com/fwlink/?LinkId=95894)に関するページを参照してください。 公開/定期受信パターンは、情報トピックを定期受信する受信者のコレクションに情報を渡します。 リストに基づく公開/定期受信では、サブスクライバのリストが保持されます。 共有情報が存在する場合は、コピーがリスト上の各サブスクライバに送信されます。 このサンプルでは、動的なリストに基づく公開/定期受信パターンを示します。これにより、クライアントは必要に応じて何度でも定期受信または定期受信の解除ができます。  
   
  リストに基づく公開/定期受信のサンプルは、クライアント、サービス、およびデータ ソース プログラムで構成されています。 クライアントとデータ ソース プログラムは、複数を実行できます。 クライアントはサービスを定期受信し、通知を受信して、定期受信を解除します。 データ ソース プログラムはサービスに情報を送信し、現在のすべてのサブスクライバでその情報が共有されるようにします。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "64650118"
   
  サービスは、双方向通信を使用します。 `ISampleContract` サービス コントラクトは `ISampleClientCallback` コールバック コントラクトと対になっています。 サービスは Subscribe および Unsubscribe サービス操作を実装します。クライアントはこれらのサービス操作を使用してサブスクライバのリストに参加またはリストへの参加を解除します。 サービスは、さらに `PublishPriceChange` サービス操作も実装します。データ ソース プログラムはこれを呼び出して、新しい情報をサービスに提供します。 クライアント プログラムは `PriceChange` サービス操作を実装します。サービスはこれを呼び出して、すべてのサブスクライバに価格の変更を通知します。  
   
-```  
+```csharp  
 // Create a service contract and define the service operations.  
 // NOTE: The service operations must be declared explicitly.  
 [ServiceContract(SessionMode=SessionMode.Required,  
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  サービスは、すべてのサブスクライバに新しい情報を通知する機構として、.NET Framework イベントを使用します。 クライアントが Subscribe を呼び出してサービスに参加すると、イベント ハンドラが提供されます。 クライアントがサービスへの参加を解除すると、イベントからイベント ハンドラの定期受信が解除されます。 データ ソースが価格の変更を報告するサービスを呼び出すと、サービスはイベントを発生させます。 これにより、サービスの各インスタンスが呼び出されます。このサービスは定期受信した各クライアントのサービスで、この呼び出しによって各インスタンスのイベント ハンドラが実行されます。 各イベント ハンドラは、コールバック関数を使用してクライアントに情報を渡します。  
   
-```  
+```csharp  
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  
@@ -112,25 +112,25 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには  
   
-1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
 2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>サンプルを同じコンピューターで実行するには  
   
-1. 次のアドレスを入力して、ブラウザーを使用して、サービスにアクセスできることのテスト:`http://localhost/servicemodelsamples/service.svc`します。 これに応答して、確認ページが表示されます。  
+1. 次のアドレス`http://localhost/servicemodelsamples/service.svc`を入力して、ブラウザーを使用してサービスにアクセスできることをテストします。 これに応答して、確認ページが表示されます。  
   
-2. Client.exe を \client\bin 実行\\、言語固有のフォルダーの下。 クライアント アクティビティがクライアント コンソール ウィンドウに表示されます。 複数のクライアントを起動します。  
+2. 言語固有のフォルダーの下\\にある、から client.exe を実行します。 クライアント アクティビティがクライアント コンソール ウィンドウに表示されます。 複数のクライアントを起動します。  
   
-3. \Datasource\bin から Datasource.exe を実行\\、言語固有のフォルダーの下。 データ ソース アクティビティがコンソール ウィンドウに表示されます。 データ ソースがサービスに情報を送信すると、その情報は各クライアントに渡されます。  
+3. /Datasource\bin\\から、言語固有のフォルダーにあるデータソースを実行します。 データ ソース アクティビティがコンソール ウィンドウに表示されます。 データ ソースがサービスに情報を送信すると、その情報は各クライアントに渡されます。  
   
-4. クライアント、データ ソース、およびサービス プログラムが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
+4. クライアント、データソース、およびサービスプログラムが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 ### <a name="to-run-the-sample-across-machines"></a>サンプルを複数コンピューターで実行するには  
   
 1. サービス コンピュータを設定します。  
   
-    1. サービス コンピューターで、ServiceModelSamples という仮想ディレクトリを作成します。 バッチ ファイル Setupvroot.bat ファイル、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ディスク ディレクトリと仮想ディレクトリを作成するために使用できます。  
+    1. サービス コンピューターで、ServiceModelSamples という仮想ディレクトリを作成します。 [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)で作成したバッチファイルを使用すると、ディスクディレクトリと仮想ディレクトリを作成できます。  
   
     2. サービス プログラム ファイルを %SystemDrive%\Inetpub\wwwroot\servicemodelsamples からサービス コンピューターの ServiceModelSamples 仮想ディレクトリにコピーします。 \bin ディレクトリのファイルが含まれていることを確認してください。  
   
@@ -153,10 +153,10 @@ public class PriceChangeEventArgs : EventArgs
 5. データ ソース コンピューターで、コマンド プロンプトから Datasource.exe を起動します。  
   
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  

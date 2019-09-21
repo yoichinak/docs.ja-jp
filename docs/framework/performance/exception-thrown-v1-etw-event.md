@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd322d25d91bb277a4c817594c968c28a6d61d68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91abd9e6f31380b7e8cd3df1a14aa5c5722901ba
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723018"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046511"
 ---
-# <a name="exception-thrownv1-etw-event"></a>Exception Thrown_V1 ETW イベント
+# <a name="exception-thrown_v1-etw-event"></a>Exception Thrown_V1 ETW イベント
 このイベントは、スローされる例外に関する情報をキャプチャします。  
   
- イベントが発生するキーワードとイベントのレベルを次の表に示します  (詳細については、「 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)」を参照してください)。  
+ イベントが発生するキーワードとイベントのレベルを次の表に示します (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
   
 |イベントを発生させるキーワード|レベル|  
 |-----------------------------------|-----------|  
@@ -25,7 +25,7 @@ ms.locfileid: "61723018"
   
  次の表にイベント情報を示します。  
   
-|event|イベント ID|いつ発生するか|  
+|イベント|イベント ID|いつ発生するか|  
 |-----------|--------------|-----------------|  
 |`ExceptionThrown_V1`|80|マネージド例外がスローされます。|  
   
@@ -37,9 +37,9 @@ ms.locfileid: "61723018"
 |例外メッセージ|win:UnicodeString|実際の例外メッセージ。|  
 |EIPCodeThrow|win:Pointer|例外が発生した命令ポインター。|  
 |ExceptionHR|win:UInt32|例外 [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679)。|  
-|ExceptionFlags|win:UInt16|0x01:HasInnerException (を参照してください[CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)Visual Basic のドキュメントで)。<br /><br /> 0x02:IsNestedException。<br /><br /> 0x04:IsRethrownException。<br /><br /> 0x08:IsCorruptedStateException (プロセスの状態が破損していることを示します。 表示[破損状態例外を処理](https://go.microsoft.com/fwlink/?LinkId=179681)msdn)。<br /><br /> 0x10:IsCLSCompliant (から派生した例外<xref:System.Exception>が CLS に準拠していません。 それ以外は CLS 準拠)。|  
+|ExceptionFlags|win:UInt16|0x01HasInnerException (Visual Basic ドキュメントの「 [CLR ETW イベント](clr-etw-events.md)」を参照してください)。<br /><br /> 除くIsNestedException.<br /><br /> 0x04IsRethrownException.<br /><br /> 0x08IsCorruptedStateException (プロセスの状態が破損していることを示します。「MSDN で[破損状態の例外を処理](https://go.microsoft.com/fwlink/?LinkId=179681)する」を参照してください)。<br /><br /> 0x10IsCLSCompliant (から<xref:System.Exception>派生する例外は cls に準拠していますが、それ以外の場合は cls に準拠していません)。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW イベント](clr-etw-events.md)

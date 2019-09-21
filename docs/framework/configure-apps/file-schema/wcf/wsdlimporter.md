@@ -2,21 +2,22 @@
 title: <wsdlImporter>
 ms.date: 03/30/2017
 ms.assetid: 986b2165-8430-4dba-b1b8-00396841bb96
-ms.openlocfilehash: 1f34486296465b3ea0b5b05bd9492062c85ad8c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 317921a66fa3b8d1f0026d676ea674b67732b3df
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670249"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854759"
 ---
 # <a name="wsdlimporter"></a>\<wsdlImporter >
 WS-Policy が添付された Web サービス記述言語 (WSDL) 1.1 メタデータをインポートするすべての WSDL インポーターを指定します。  
   
-\<system.ServiceModel >  
-\<client>  
-\<matadata>  
-\<wsdlImporters>  
-\<wsdlImporter >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<クライアント >** ](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<メタデータ >** ](metadata.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsdlImporters >** ](wsdlimporters.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<wsdlImporter >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,7 +45,7 @@ WS-Policy が添付された Web サービス記述言語 (WSDL) 1.1 メタデ�
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<wsdlImporters>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|WS-Policy が添付された Web サービス記述言語 (WSDL) 1.1 メタデータをインポートするすべての WSDL インポーターを指定します。|  
+|[\<wsdlImporters >](wsdlimporters.md)|WS-Policy が添付された Web サービス記述言語 (WSDL) 1.1 メタデータをインポートするすべての WSDL インポーターを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
  WSDL インポーターは、メタデータのインポートに加えて、コントラクトおよびエンドポイント情報を表すさまざまなクラスにその情報を変換するために使用されます。 コントラクトおよびエンドポイントの情報やプロパティを選択的にインポートできます。これらは、任意のインポート エラーを公開し、インポートおよび変換プロセスに関連する型情報を受け取ります。 また、任意のポリシー ドキュメント、WSDL ドキュメント、WSDL 拡張、および XML スキーマ ドキュメントにアクセスするためのバインディング情報およびプロパティのインポートもサポートします。  
@@ -56,5 +57,5 @@ WS-Policy が添付された Web サービス記述言語 (WSDL) 1.1 メタデ�
 - <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>
 - <xref:System.ServiceModel.Description.MetadataImporter>
 - <xref:System.ServiceModel.Description.WsdlImporter>
-- [WCF クライアントの構成](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [クライアント](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [WCF クライアントの構成](../../../wcf/feature-details/client-configuration.md)
+- [クライアント](../../../wcf/feature-details/clients.md)

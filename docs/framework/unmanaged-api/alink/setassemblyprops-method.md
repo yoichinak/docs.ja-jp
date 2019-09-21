@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e9f51799ea56cb1e5819d708a0e4a8136a94f3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 180eb1a3129cfcd96668ecfee11947c15c5e0915
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741484"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776914"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps メソッド
-アセンブリ レベルのプロパティを割り当てます。  
+アセンブリレベルのプロパティを割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,22 +42,22 @@ HRESULT SetAssemblyProps(
  アセンブリの ID。  
   
  `FileToken`  
- プロパティを定義するファイルです。 場合に NULL が`AssemblyID`バインドされていない netmodule では示されません。  
+ プロパティを定義するファイルです。 がバインドされ`AssemblyID`ていない .netmodule を示していない場合は、NULL にすることができます。  
   
  `Option`  
- 変更することを示します。  
+ 変更するオプションを示します。  
   
  `Value`  
  オプションの新しい値。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

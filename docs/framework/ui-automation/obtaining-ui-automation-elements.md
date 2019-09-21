@@ -5,21 +5,21 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 89c9397ba579f04d81eee7af6363f8fee3abfe1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46de1b5de8ef7585919d331e6bf4b1537739ae1d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033198"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042882"
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI オートメーション要素の取得
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  このトピックでは、 <xref:System.Windows.Automation.AutomationElement> 要素の [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] オブジェクトを取得するさまざまな方法について説明します。  
   
 > [!CAUTION]
->  クライアント アプリケーションが独自のユーザー インターフェイスで要素の検索を試行する可能性がある場合は、すべての [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の呼び出しを個別のスレッドで実行する必要があります。 詳細については、「 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)」を参照してください。  
+> クライアント アプリケーションが独自のユーザー インターフェイスで要素の検索を試行する可能性がある場合は、すべての [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の呼び出しを個別のスレッドで実行する必要があります。 詳細については、「 [UI Automation Threading Issues](ui-automation-threading-issues.md)」を参照してください。  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>ルート要素  
@@ -28,7 +28,7 @@ ms.locfileid: "62033198"
  デスクトップのルート要素 (すべての要素が派生する) が静的 <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> プロパティから取得されます。  
   
 > [!CAUTION]
->  通常、 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>の直接の子のみの取得を試行する必要があります。 子孫の検索は、数百または数千もの要素を反復処理する場合があり、スタック オーバーフローを引き起こす可能性があります。 下位レベルの特定の要素を取得しようとする場合、アプリケーション ウィンドウから、または下位レベルのコンテナーから検索を開始する必要があります。  
+> 通常、 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>の直接の子のみの取得を試行する必要があります。 子孫の検索は、数百または数千もの要素を反復処理する場合があり、スタック オーバーフローを引き起こす可能性があります。 下位レベルの特定の要素を取得しようとする場合、アプリケーション ウィンドウから、または下位レベルのコンテナーから検索を開始する必要があります。  
   
 <a name="Using_Conditions"></a>   
 ## <a name="conditions"></a>条件  
@@ -85,7 +85,7 @@ ms.locfileid: "62033198"
 ### <a name="from-an-event"></a>イベントから  
  アプリケーションが [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを受信するときに、イベント ハンドラーに渡されるソース オブジェクトは <xref:System.Windows.Automation.AutomationElement>です。 たとえば、フォーカス変更イベントをサブスクライブしている場合、 <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> に渡されるソースはフォーカスを受け取った要素になります。  
   
- 詳細については、「 [Subscribe to UI Automation Events](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)」を参照してください。  
+ 詳細については、「 [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md)」を参照してください。  
   
 ### <a name="from-a-point"></a>ポイントから  
  画面座標 (たとえば、カーソル位置) がある場合、静的 <xref:System.Windows.Automation.AutomationElement> メソッドを使用して <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> を取得できます。  
@@ -98,6 +98,6 @@ ms.locfileid: "62033198"
   
 ## <a name="see-also"></a>関連項目
 
-- [プロパティ条件に基づく UI オートメーション要素の検索](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [TreeWalker を使用した UI オートメーション要素間の移動](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI Automation ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [プロパティ条件に基づく UI オートメーション要素の検索](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [TreeWalker を使用した UI オートメーション要素間の移動](navigate-among-ui-automation-elements-with-treewalker.md)
+- [UI Automation ツリーの概要](ui-automation-tree-overview.md)

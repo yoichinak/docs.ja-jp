@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25c5ffa89e6ce4e589b8f12a7b8518272426c9e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f165ab5b79abbc2b5464f40a27a580d26af163a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597798"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106951"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>IDisposable を実装するオブジェクトの使用
 
 共通言語ランタイムのガベージ コレクターは、アンマネージド オブジェクトによって使用されているメモリを解放しますが、アンマネージド リソースを使用する型は、これらのアンマネージド リソースに割り当てられたメモリが解放されるように <xref:System.IDisposable> インターフェイスを実装しています。 <xref:System.IDisposable> を実装するオブジェクトを使い終わったら、オブジェクトの <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> の実装を呼び出す必要があります。 2 つの方法のいずれかでこれを行うことができます。  
   
-* C# の `using` ステートメントまたは Visual Basic の `Using` ステートメントを使用します。  
+- C# の `using` ステートメントまたは Visual Basic の `Using` ステートメントを使用します。  
   
-* `try/finally` ブロックを実装します。  
+- `try/finally` ブロックを実装します。  
 
 ## <a name="the-using-statement"></a>using ステートメント
 
@@ -49,9 +49,9 @@ C# の `using` ステートメントおよび Visual Basic の `Using` ステー
 
 `using` ステートメントで `try/finally` ブロックをラップする代わりに、`try/finally` ブロックを直接実装することもできます。 これは、個人のコーディング スタイルであることも、次のいずれかの理由からそうすることもあります。  
   
-* `catch` ブロックでスローされた例外をすべて処理する `try` ブロックを含めるため。 そうしないと、`try/catch` ブロックがない場合に `using` ブロック内でスローされた例外と同様に、`using` ステートメントによってスローされた例外は処理されません。  
+- `catch` ブロックでスローされた例外をすべて処理する `try` ブロックを含めるため。 そうしないと、`try/catch` ブロックがない場合に `using` ブロック内でスローされた例外と同様に、`using` ステートメントによってスローされた例外は処理されません。  
   
-* 宣言されたブロックに対してスコープがローカルでない <xref:System.IDisposable> を実装するオブジェクトをインスタンス化するため。  
+- 宣言されたブロックに対してスコープがローカルでない <xref:System.IDisposable> を実装するオブジェクトをインスタンス化するため。  
   
 次の例は前の例に似ていますが、`try/catch/finally` ブロックを使用して、<xref:System.IO.StreamReader> オブジェクトのインスタンス化、使用、破棄を実行し、<xref:System.IO.StreamReader> コンストラクターと <xref:System.IO.StreamReader.ReadToEnd%2A> メソッドによってスローされた例外を処理しています。 `finally` メソッドを呼び出す前に <xref:System.IDisposable> を実装するオブジェクトが `null` でないことを <xref:System.IDisposable.Dispose%2A> ブロックのコードがチェックしていることに注意してください。 これを行わない場合、実行時に <xref:System.NullReferenceException> 例外が発生する可能性があります。  
   
@@ -63,5 +63,5 @@ C# の `using` ステートメントおよび Visual Basic の `Using` ステー
 ## <a name="see-also"></a>関連項目
 
 - [アンマネージ リソースのクリーンアップ](../../../docs/standard/garbage-collection/unmanaged.md)
-- [using ステートメント (C# リファレンス)](~/docs/csharp/language-reference/keywords/using-statement.md)
-- [Using ステートメント (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)
+- [using ステートメント (C# リファレンス)](../../csharp/language-reference/keywords/using-statement.md)
+- [Using ステートメント (Visual Basic)](../../visual-basic/language-reference/statements/using-statement.md)

@@ -2,12 +2,12 @@
 title: クエリの連結の例 (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: 8685db7461a1ce97c7a9c0045ed842fa4ac1a1f6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 45e3a4f341ca8eb06ff0f553e0f933956e6c6546
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486200"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205421"
 ---
 # <a name="chaining-queries-example-c"></a>クエリの連結の例 (C#)
 この例は前の例に基づいており、2 つのクエリ (どちらのクエリも遅延実行とレイジー評価を使用している) を連結した場合の結果について説明します。  
@@ -64,7 +64,7 @@ class Program
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 ToUpper: source >abc<  
 AppendString: source >ABC<  
 Main: str >ABC!!!<  
@@ -84,8 +84,8 @@ Main: str >GHI!!!<
   
  このチュートリアルの次のトピックでは、中間結果の具体化について説明します。  
   
-- [中間結果の具体化 (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+- [中間結果の具体化 (C#)](./intermediate-materialization.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: クエリの連結 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [チュートリアル: クエリの連結 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

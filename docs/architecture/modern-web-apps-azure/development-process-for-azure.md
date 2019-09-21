@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 286ffdb73425794e5979cde902e21ebd90a26969
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675149"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849589"
 ---
 # <a name="development-process-for-azure"></a>Azure の開発プロセス
 
@@ -28,7 +28,7 @@ ms.locfileid: "68675149"
 
 **Visual Studio 2017。** *Visual Studio 2017* を使用する場合、 *.NET Core クロスプラットフォームの開発* ワークロードがインストールされている限り、ASP.NET Core アプリケーションを構築できます。 図 10-1 には、Visual Studio 2017 の必要なワークロードのセットアップ ダイアログが示されています。
 
-![](./media/image10-1.png)
+![Visual Studio 2017 での .NET Core ワークロードのインストール](./media/image10-1.png)
 
 **図 10-1** Visual Studio 2017 での .NET Core ワークロードのインストール。
 
@@ -36,7 +36,7 @@ ms.locfileid: "68675149"
 
 **Visual Studio Code と dotnet CLI** (Mac、Linux および Windows 用のクロスプラット フォーム ツール)。 任意の開発言語をサポートする軽量なクロスプラットフォーム エディターを選択すると、Microsoft Visual Studio Code と dotnet CLI を使用することができます。 これらの製品は、開発者のワークフローを効率化する、簡単かつ堅牢性の高いエクスペリエンスを提供します。 さらに、Visual Studio Code は C\# および Web 開発の拡張機能をサポートし、エディター内での IntelliSense およびショートカット タスクを提供します。
 
-[.NET Core SDK をダウンロードする](https://www.microsoft.com/net/download/core)
+[.NET Core SDK をダウンロードする](https://dotnet.microsoft.com/download)
 
 [Visual Studio Code をダウンロードする](https://code.visualstudio.com/download)
 

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-ms.openlocfilehash: ea56c99d7d122dd20fc217f8ecb2937bcf81bec3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f24c558b1d5303b2417416beb14555539f498ea
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923267"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797274"
 ---
 # <a name="client-channel-level-programming"></a>クライアントのチャネル レベルのプログラミング
-このトピックを使用せず、Windows Communication Foundation (WCF) クライアント アプリケーションを記述する方法を説明します、<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>クラスとその関連付けられたオブジェクト モデルです。  
+このトピックでは、クラスとそれに<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>関連付けられているオブジェクトモデルを使用せずに、Windows Communication Foundation (WCF) クライアントアプリケーションを記述する方法について説明します。  
   
 ## <a name="sending-messages"></a>メッセージの送信  
  メッセージを送信し、応答を受信して処理できるようにするには、次の手順に従う必要があります。  
@@ -29,7 +29,7 @@ ms.locfileid: "61923267"
 5. すべてのチャネル オブジェクトを閉じます。  
   
 #### <a name="creating-a-binding"></a>バインディングの作成  
- 受信側の場合と同様に (を参照してください[サービス チャネル レベルのプログラミング](../../../../docs/framework/wcf/extending/service-channel-level-programming.md))、メッセージの開始を送信するバインディングを作成します。 この例では、新しい <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> を作成し、その要素コレクションに <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> を追加します。  
+ 受信側のケース (「[サービスチャネルレベルのプログラミング](service-channel-level-programming.md)」を参照) と同様に、メッセージの送信はバインドを作成することによって開始されます。 この例では、新しい <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> を作成し、その要素コレクションに <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> を追加します。  
   
 #### <a name="building-a-channelfactory"></a>ChannelFactory のビルド  
  <xref:System.ServiceModel.Channels.IChannelListener?displayProperty=nameWithType> を作成する代わりに、今回はバインディングで型パラメーターを <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> にして <xref:System.ServiceModel.ChannelFactory.CreateFactory%2A?displayProperty=nameWithType> を呼び出すことで、<xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType> を作成します。 チャネル リスナーは受信メッセージを待機する側で使用されますが、チャネル ファクトリはチャネルを作成するために通信を開始する側で使用されます。 チャネル リスナーと同様に、チャネル ファクトリも使用する前に開く必要があります。  

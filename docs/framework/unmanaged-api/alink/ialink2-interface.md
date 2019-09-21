@@ -8,41 +8,41 @@ helpviewer_keywords:
 ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 487f3d7b31e0b7bd09dbaff7b823678118f68092
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a876e4db7656c7a9976aee61931af29078e410c0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789767"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777172"
 ---
 # <a name="ialink2-interface"></a>IALink2 インターフェイス
-補完、 [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)などの新しいメタデータ インターフェイスを操作するメソッドを宣言することで[IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)します。 さらに、IALink2 元 IALink インターフェイス経由で追加の使用の柔軟性を提供するメソッドを宣言します。  
+[IMetaDataEmit2 インターフェイス](../metadata/imetadataemit2-interface.md)などの新しいメタデータインターフェイスを操作するメソッドを宣言して、 [ialink インターフェイス](ialink-interface.md)を補完します。 また、IALink2 は、元の IALink インターフェイスよりも追加の使用の柔軟性を提供するメソッドを宣言します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [AddFile2 メソッド](../../../../docs/framework/unmanaged-api/alink/addfile2-method.md)  
+ [AddFile2 メソッド](addfile2-method.md)  
   
- [EmitAssembly メソッド](../../../../docs/framework/unmanaged-api/alink/emitassembly-method.md)  
+ [EmitAssembly メソッド](emitassembly-method.md)  
   
- [EmitInternalExportedTypes メソッド](../../../../docs/framework/unmanaged-api/alink/emitinternalexportedtypes-method.md)  
+ [EmitInternalExportedTypes メソッド](emitinternalexportedtypes-method.md)  
   
- [GetFileDef メソッド](../../../../docs/framework/unmanaged-api/alink/getfiledef-method.md)  
+ [GetFileDef メソッド](getfiledef-method.md)  
   
  GetPublicKeyToken メソッド  
   
- [GetScope2 メソッド](../../../../docs/framework/unmanaged-api/alink/getscope2-method.md)  
+ [GetScope2 メソッド](getscope2-method.md)  
   
- [ImportFileEx メソッド](../../../../docs/framework/unmanaged-api/alink/importfileex-method.md)  
+ [ImportFileEx メソッド](importfileex-method.md)  
   
- [ImportFileEx2 メソッド](../../../../docs/framework/unmanaged-api/alink/importfileex2-method.md)  
+ [ImportFileEx2 メソッド](importfileex2-method.md)  
   
- [ImportTypes2 メソッド](../../../../docs/framework/unmanaged-api/alink/importtypes2-method.md)  
+ [ImportTypes2 メソッド](importtypes2-method.md)  
   
- [SetAssemblyFile2 メソッド](../../../../docs/framework/unmanaged-api/alink/setassemblyfile2-method.md)  
+ [SetAssemblyFile2 メソッド](setassemblyfile2-method.md)  
   
- [SetPEKind メソッド](../../../../docs/framework/unmanaged-api/alink/setpekind-method.md)  
+ [SetPEKind メソッド](setpekind-method.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [ALink API](index.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [Al.exe (アセンブリ リンカー)](../../tools/al-exe-assembly-linker.md)

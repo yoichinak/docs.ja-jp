@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - by keyword [C#]
 ms.assetid: efe6f0e3-be40-4df2-a144-c7db968ae052
-ms.openlocfilehash: d8632c9fd722a7e9864628013e87b24d7e6633c5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 23daf2aaf5d9456c76c5b2ac889243b1ed31b077
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241302"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602227"
 ---
 # <a name="by-c-reference"></a>by (C# リファレンス)
 
-`by` コンテキスト キーワードは、クエリ式の `group` 句で使用され、返される項目をグループ化する方法を指定します。 詳しくは、「[group 句](../../../csharp/language-reference/keywords/group-clause.md)」をご覧ください。
+`by` コンテキスト キーワードは、クエリ式の `group` 句で使用され、返される項目をグループ化する方法を指定します。 詳しくは、「[group 句](./group-clause.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -27,4 +27,4 @@ ms.locfileid: "53241302"
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [LINQ クエリ式](../../programming-guide/linq-query-expressions/index.md)

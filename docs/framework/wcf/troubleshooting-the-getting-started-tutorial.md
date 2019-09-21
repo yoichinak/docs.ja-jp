@@ -1,100 +1,102 @@
 ---
-title: Get のトラブルシューティングでは、Windows Communication Foundation のチュートリアルを開始
+title: Windows Communication Foundation チュートリアルの開始に関するトラブルシューティング
 ms.date: 01/25/2019
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 8089e0fee262d07be591069982b1aacfbeae2521
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10a2f8f718d802a7aab067b882f0d5cf3dc28dca
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791470"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928574"
 ---
-# <a name="troubleshoot-the-get-started-with-windows-communication-foundation-tutorials"></a>Get のトラブルシューティングでは、Windows Communication Foundation のチュートリアルを開始
+# <a name="troubleshoot-the-get-started-with-windows-communication-foundation-tutorials"></a>Windows Communication Foundation チュートリアルの開始に関するトラブルシューティング
 
-この記事では、最も一般的な問題とエラーで手順を実行した場合に発生する可能性がありますソリューションを提供します、[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。 
+この記事で[は、チュートリアルの手順を実行する際に直面する可能性がある最も一般的な問題とエラーの解決策を示します。Windows Communication Foundation アプリケーション](getting-started-tutorial.md)の概要」をご覧ください。 
   
 ## <a name="common-problems"></a>一般的な問題
 
-**ハード ドライブ上のプロジェクト ファイルが見つからない**
+**ハードドライブにプロジェクトファイルが見つかりません。**
 
- Visual Studio でプロジェクト ファイルを保存する*C:\Users\\&lt;ユーザー名&gt;\source\repos*します。  
+ Visual Studio では、プロジェクトファイルは *\\C:\Users&gt;&lt;のユーザー名 \ ソース*に保存されます。  
 
-**見つからない、 *App.config*によって生成されたファイル*Svcutil.exe*します。**
+***Svcutil.exe*によって生成された*app.config*ファイルが見つかりません。**
 
- Visual Studio で、**既存項目の追加**ウィンドウでは、既定では、次の拡張子を持つファイルのみが表示されます。 
+ Visual Studio では、 **[既存項目の追加]** ウィンドウには、既定で次の拡張子を持つファイルのみが表示されます。 
+
 - *.cs* 
 - *.resx* 
-- *.settings*
+- *. 設定*
 - *.xsd* 
 - *.wsdl*
 
-すべてのファイルの種類を表示するには、次のように選択します**すべてのファイル (\*。\*)。** の右上隅にあるドロップダウン リストで、**既存項目の追加**ウィンドウ。  
+すべてのファイルの種類を表示するには、 **[既存項目の追加]** ウィンドウの右下隅にあるドロップダウンリストで [**すべてのファイル (\*.\*)** ] を選択します。  
   
 ## <a name="common-errors"></a>一般的なエラー
 
-### <a name="compile-the-service-application"></a>サービス アプリケーションをコンパイルします。 
+### <a name="compile-the-service-application"></a>サービスアプリケーションをコンパイルする 
 
-**エラー BC30420 'GettingStartedHost.Module1' で ' Sub Main' が見つかりませんでした。**
+**エラー BC30420 ' Sub Main ' が ' Getting ' に見つかりませんでした。**
 
-Visual Basic アプリケーションのエントリ ポイントが正しくないです。 次の変更を行います。
+Visual Basic アプリケーションのエントリポイントが正しくありません。 次のように変更します。
 
-   1. **ソリューション エクスプ ローラー**ウィンドウで、 **GettingStartedHost**フォルダー、および選択**プロパティ**ショートカット メニューから。
-    a.  **GettingStartedHost**  ウィンドウの**スタートアップ オブジェクト**を選択します**Service.Program** (または、特定のアプリケーションのエントリ ポイント) の一覧から。 
-    b.  メイン メニューで、次のように選択します。**ファイル** > **すべて保存**します。
+   1. **[ソリューションエクスプローラー]** ウィンドウで、[ **Getting] ホスト**フォルダーを選択し、ショートカットメニューの **[プロパティ]** をクリックします。
+    a. **[Gettingstartup ホスト]** ウィンドウで、 **[スタートアップオブジェクト]** の一覧から **[Service. プログラム]** (または特定のアプリケーションのエントリポイント) を選択します。 
+    b. メインメニューから、[**ファイル** > ] **[すべてを保存]** を選択します。
 
-### <a name="run-the-service-application"></a>サービス アプリケーションを実行します。 
+### <a name="run-the-service-application"></a>サービスアプリケーションを実行する 
 
-**HTTP は URL を登録できませんでした ' http:\//+: 8000/GettingStarted/CalculatorService '。プロセスにこの名前空間へのアクセス権がありません。** 
+**Http は URL ' http:\//+: 8000/gettingstarted/計算 atorservice ' を登録できませんでした。プロセスにこの名前空間へのアクセス権がありません。** 
 
- 適切なアクセスの場合に、管理者特権で Windows Communication Foundation (WCF) サービスをホストしているプロセスを開始します。
-- For Visual Studio:Visual Studio のプログラムを選択して、**開始**] メニューの [クリックして**詳細** > **管理者として実行**ショートカット メニューから。
-- コンソール ウィンドウ。選択**コマンド プロンプト**で、**開始**] メニューの [クリックして**詳細** > **管理者として実行**ショートカットからメニュー。
-- Windows explorer:実行可能ファイルを選択し、選択**管理者として実行**ショートカット メニューから。
+ 適切なアクセスを行うには、管理者特権で Windows Communication Foundation (WCF) サービスをホストするプロセスを開始します。
 
-### <a name="compile-the-client-application"></a>クライアント アプリケーションをコンパイルします。
+- Visual Studio の場合: **[スタート]** メニューで Visual Studio プログラムを選択し、ショートカットメニューの [**管理者として実行** **] を** > クリックします。
+- コンソールウィンドウの場合: **[スタート]** メニューの **[コマンドプロンプト]** を選択し、ショートカットメニューから [**管理者として実行** **] を選択** > します。
+- エクスプローラーの場合:実行可能ファイルを選択し、ショートカットメニューから **[管理者として実行]** を選択します。
 
-**'CalculatorClient' の定義を含まない '\<メソッド名 >' 拡張メソッド'\<メソッド名 >' 型 'CalculatorClient' が見つかりませんでしたの最初の引数を受け付ける (が存在することを使用して、ディレクティブ、またはアセンブリ参照。)**  
+### <a name="compile-the-client-application"></a>クライアントアプリケーションをコンパイルする
 
-マークする方法だけ、`ServiceOperationAttribute`属性が一般公開されています。 省略した場合、`ServiceOperationAttribute`のメソッドからの属性、`ICalculator`インターフェイス、コンパイル時にこのエラー メッセージが表示されます。  
+**' 電卓 atorclient ' に '\<method name > ' の定義が含まれていません。また、' 電卓 atorclient ' 型の最初の引数を受け付ける拡張メソッド '\<method name > ' が見つかりませんでした。 using ディレクティブが指定されていないか、アセンブリ参照)**  
 
-**型または名前空間名 'CalculatorClient' が見つかりませんでした (が存在することを使用して、ディレクティブまたはアセンブリ参照)。**
+`ServiceOperationAttribute`属性でマークしたメソッドだけがパブリックに公開されます。 `ICalculator`インターフェイスのメソッドから`ServiceOperationAttribute`属性を省略すると、コンパイル中にこのエラーメッセージが表示されます。  
 
- 追加しない場合にこのエラーが発生する、 *generatedProxy.cs* (または*generatedProxy.vb*) ファイルをクライアント プロジェクトでそれらを生成したときに、 *Svcutil.exe*ツール.  
+**型または名前空間の名前 ' 電卓 Atorclient ' が見つかりませんでした。 using ディレクティブまたはアセンブリ参照が指定されていないことを確認してください。**
 
-### <a name="run-the-client-application"></a>クライアント アプリケーションを実行します。
+ *GeneratedProxy.cs* (または生成された *.vb*) ファイルを*svcutil.exe*ツールで生成したときに、クライアントプロジェクトに追加しない場合、このエラーが発生します。  
 
-**未処理の例外:System.servicemodel.endpointnotfoundexception::接続できませんでした ' http:\//localhost:8000 GettingStarted/CalculatorService '。TCP エラー コード 10061:接続は行われません、ターゲット コンピューターによって拒否されたためです。**
+### <a name="run-the-client-application"></a>クライアントアプリケーションを実行する
 
-このエラーは、最初にサービスを開始せず、クライアント アプリケーションを実行する場合に発生します。 最初に、サービスを開始するホスト アプリケーションを実行し、クライアント アプリケーションを実行します。
+**ハンドルされない例外:EndpointNotFoundException:' Http:\//localhost: 8000/gettingstarted/電卓 atorservice ' に接続できませんでした。TCP エラーコード 10061:ターゲットコンピューターがアクティブに拒否したため、接続できませんでした。**
 
-### <a name="use-the-svcutilexe-tool"></a>Svcutil.exe ツールを使用します。
+このエラーは、最初にサービスを開始せずにクライアントアプリケーションを実行した場合に発生します。 最初に、ホストアプリケーションを実行してサービスを開始し、クライアントアプリケーションを実行します。
+
+### <a name="use-the-svcutilexe-tool"></a>Svcutil.exe ツールを使用する
    
-**'Svcutil' は内部または外部コマンド、operable program,、またはバッチ ファイルとして認識されていません。**
+**' Svcutil ' は、内部コマンド、外部コマンド、操作可能なプログラム、またはバッチファイルとして認識されません。**
 
- *Svcutil.exe*システム パスである必要があります。 最も簡単なソリューションでは、Visual Studio コマンド プロンプトを使用します。 **開始**メニューの 、 **Visual Studio\<バージョン >** ディレクトリを選択して**開発者コマンド プロンプト for VS\<バージョン >**. このコマンド プロンプトでは、Visual Studio の一部として出荷されるすべてのツールの正しい場所をシステム パスを設定します。  
+ *Svcutil.exe*はシステムパスになければなりません。 最も簡単な解決策は、Visual Studio コマンドプロンプトを使用することです。 **[スタート]** メニューから [ **Visual Studio \<バージョン >** ディレクトリ] を選択し、[ **VS \<バージョン >** ] で [開発者コマンドプロンプト] を選択します。 このコマンドプロンプトでは、Visual Studio の一部として出荷されたすべてのツールの正しい場所にシステムパスを設定します。  
   
-### <a name="run-the-service-and-client-applications"></a>サービスとクライアント アプリケーションを実行します。
+### <a name="run-the-service-and-client-applications"></a>サービスとクライアントアプリケーションを実行する
 
-**System.ServiceModel.Security.SecurityNegotiationException:SOAP セキュリティ ネゴシエーション 'http:\//localhost:8000 GettingStarted/CalculatorService' ターゲット 'http:\//localhost:8000 GettingStarted/CalculatorService' に失敗しました**  
+**System.servicemodel.security.securitynegotiationexception の場合:ターゲット ' http:\/\//localhost: 8000/gettingstarted/計算 atorservice ' に対する ' http:/localhost: 8000/gettingstarted/計算 atorservice ' による SOAP セキュリティネゴシエーションが失敗しました**  
 
-ネットワーク接続がないドメインに参加しているコンピューターでこのエラーが発生します。 コンピューターをネットワークに接続します。 または、サービスとクライアントの両方のセキュリティをオフにします。 
+このエラーは、ネットワークに接続されていないドメインに参加しているコンピューターで発生します。 コンピューターをネットワークに接続するか、サービスとクライアントの両方のセキュリティをオフにします。 
 
-セキュリティを無効にします。
+セキュリティをオフにするには:
 
-- サービスの交換を作成するコード、`WSHttpBinding`を次のコード。  
+- サービスの場合は、を作成`WSHttpBinding`するコードを次のコードに置き換えます。  
   
     ```csharp
     // Step 3: Add a service endpoint.
     selfhost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(SecurityMode.None), "CalculatorService");  
     ```
 
-- 構成ファイルで、クライアントは、更新、 **\<セキュリティ >** の下の要素、 **\<バインド >** 要素として次のとおりです。  
+- クライアントの構成ファイルで、次のように、  **\<binding >** 要素の下の **\<セキュリティ >** 要素を更新します。  
   
     ```xml
     <binding name="WSHttpBinding_ICalculator" security mode="None" />
     ```  
 
 ## <a name="see-also"></a>関連項目  
- [WCF アプリケーションを概要します。](getting-started-tutorial.md)  
- [WCF トラブルシューティング クイック スタート](wcf-troubleshooting-quickstart.md)  
- [セットアップ問題のトラブルシューティング](troubleshooting-setup-issues.md)
+ [WCF アプリケーションを使ってみる](getting-started-tutorial.md)  
+ [WCF トラブルシューティングクイックスタート](wcf-troubleshooting-quickstart.md)  
+ [セットアップに関する問題のトラブルシューティング](troubleshooting-setup-issues.md)

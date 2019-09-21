@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: e0f2c6300f8dccb8cc316527af9c75f6a40ff2df
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: a5c32afc913443787ad8371f31f1fe330b126398
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661897"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792757"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>シーケンスの要素の取得またはスキップ
 <xref:System.Linq.Queryable.Take%2A> 演算子を使用すると、シーケンス内の指定された数の要素を返し、残りをスキップできます。  
@@ -18,9 +18,9 @@ ms.locfileid: "67661897"
  <xref:System.Linq.Queryable.Skip%2A> 演算子を使用すると、シーケンス内の指定された数の要素をスキップし、残りを返すことができます。  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> と <xref:System.Linq.Enumerable.Skip%2A> を SQL Server 2000 に対するクエリで使用する場合は、いくつかの制限があります。 詳細については、「Skip 例外と Take 例外を SQL Server 2000」エントリを参照してください。[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)します。  
+> <xref:System.Linq.Enumerable.Take%2A> と <xref:System.Linq.Enumerable.Skip%2A> を SQL Server 2000 に対するクエリで使用する場合は、いくつかの制限があります。 詳細については、「[トラブルシューティング](troubleshooting.md)」の「SQL Server 2000 でのスキップと Take 例外」を参照してください。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 変換<xref:System.Linq.Queryable.Skip%2A>サブクエリを使用して、SQL を使用した、`NOT EXISTS`句。 この変換には、次のような制限があります。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は<xref:System.Linq.Queryable.Skip%2A> 、SQL `NOT EXISTS`句でサブクエリを使用して変換されます。 この変換には、次のような制限があります。  
   
 - 引数は、セットである必要があります。 順序が指定されていてもマルチセットはサポートされません。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "67661897"
  SQL での順序付けの制限により、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、<xref:System.Linq.Queryable.Take%2A> 演算子または <xref:System.Linq.Queryable.Skip%2A> 演算子の引数の順序を、演算子の結果に移動することを試みます。  
   
 > [!NOTE]
->  変換は、SQL Server 2000 と SQL Server 2005 で異なります。 使用して行う場合<xref:System.Linq.Queryable.Skip%2A>複雑なクエリで SQL Server 2005 を使用します。  
+> 変換は SQL Server 2000 と SQL Server 2005 で異なります。 を複雑なクエリと<xref:System.Linq.Queryable.Skip%2A>共に使用する場合は、SQL Server 2005 を使用します。  
   
- 次を考慮[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL Server 2000 のクエリ。  
+ SQL Server 2000 に[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]対する次のクエリについて考えてみます。  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
@@ -80,5 +80,5 @@ ORDER BY [t0].[CustomerID]
   
 ## <a name="see-also"></a>関連項目
 
-- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [標準クエリ演算子の変換](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [クエリの例](query-examples.md)
+- [標準クエリ演算子の変換](standard-query-operator-translation.md)

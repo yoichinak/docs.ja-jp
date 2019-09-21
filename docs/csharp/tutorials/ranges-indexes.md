@@ -3,12 +3,12 @@ title: インデックスと範囲を使用してデータの範囲を調べる
 description: この高度なチュートリアルでは、インデックスと範囲を使用してデータを調べ、シーケンシャル データ セットのスライスを調べる方法について説明します。
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 118d3c9ccad98ec02195c2b5e26a2ca203990adf
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557184"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926637"
 ---
 # <a name="indices-and-ranges"></a>インデックスと範囲
 
@@ -17,13 +17,15 @@ ms.locfileid: "65557184"
 このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
-> * シーケンス内の範囲に構文を使用します。
-> * 各シーケンスの開始と終了に関する設計上の決定について説明します。
-> * <xref:System.Index> 型と <xref:System.Range> 型のシナリオについて説明します。
+>
+> - シーケンス内の範囲に構文を使用します。
+> - 各シーケンスの開始と終了に関する設計上の決定について説明します。
+> - <xref:System.Index> 型と <xref:System.Range> 型のシナリオについて説明します。
 
 ## <a name="language-support-for-indices-and-ranges"></a>インデックスと範囲の言語サポート
 
 この言語のサポートでは、2 つの新しい型と 2 つの新しい演算子を使用しています。
+
 - <xref:System.Index?displayProperty=nameWithType> はシーケンスとしてインデックスを表します。
 - `^` 演算子。シーケンスの末尾から相対的なインデックスを指定します。
 - <xref:System.Range?displayProperty=nameWithType> はシーケンスのサブ範囲を表します。

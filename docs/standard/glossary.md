@@ -3,12 +3,12 @@ title: .NET 用語集
 description: .NET のドキュメントで使われている用語からいくつか選択してその意味を説明します。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674511"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929078"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -38,7 +38,7 @@ ASP.NET は、ASP.NET Core を含む ASP.NET の両方の実装を指す包括�
 
 ## <a name="assembly"></a>アセンブリ
 
-アプリケーションまたは他のアセンブリから呼び出すことができる API のコレクションを含む *.dll*/*.exe* ファイル。
+アプリケーションまたは他のアセンブリから呼び出すことができる API のコレクションを含む *.dll*/ *.exe* ファイル。
 
 アセンブリは、インターフェイス、クラス、構造体、列挙型、デリゲートなどの種類を含むことができます。 プロジェクトの *bin* フォルダー内のアセンブリは、"*バイナリ*" と呼ばれることもあります。 「[ライブラリ](#library)」もご覧ください。
 
@@ -85,9 +85,10 @@ Linux、Windows、iOS など、複数の異なるオペレーティング シス
 一般に、特定のテクノロジに基づくアプリケーションの開発と展開を容易にする API の包括的なコレクション。 この一般的な意味でのアプリケーション フレームワークの例としては、ASP.NET Core や Windows フォームなどがあります。 「[ライブラリ](#library)」もご覧ください。
 
 以下の語句で使われている "フレームワーク" という用語には、さらに具体的な技術的意味があります。
-* [.NET Framework](#net-framework)
-* [ターゲット フレームワーク](#target-framework)
-* [TFM (ターゲット フレームワーク モニカー)](#tfm)
+
+- [.NET Framework](#net-framework)
+- [ターゲット フレームワーク](#target-framework)
+- [TFM (ターゲット フレームワーク モニカー)](#tfm)
 
 既存のドキュメントでは、[.NET の実装](#implementation-of-net)を指して "フレームワーク" が使われていることがあります。 たとえば、.NET Core をフレームワークと呼んでいる場合があります。 このような混乱を招く使用法をドキュメントから除去することが予定されています。
 
@@ -206,7 +207,7 @@ UWP は、.NET Native によってサポートされる最初のアプリケー�
 
 ## <a name="package"></a>package
 
-NuGet パッケージ &mdash; または単にパッケージ &mdash; は、同じ名前の 1 つまたは複数のアセンブリと、作成者名などの追加メタデータを含む、*.zip* ファイルです。
+NuGet パッケージ &mdash; または単にパッケージ &mdash; は、同じ名前の 1 つまたは複数のアセンブリと、作成者名などの追加メタデータを含む、 *.zip* ファイルです。
 
 *.zip* ファイルは、拡張子が *.nupkg* であり、複数のターゲット フレームワークとバージョンで使う *.dll* ファイルや *.xml* ファイルなどのアセットを含むことができます。 アプリまたはライブラリでインストールされるときに、アプリまたはライブラリで指定されているターゲット フレームワークに基づいて適切なアセットが選択されます。 インターフェイスを定義するアセットは *ref* フォルダーにあり、実装を定義するアセットは *lib* フォルダーにあります。
 

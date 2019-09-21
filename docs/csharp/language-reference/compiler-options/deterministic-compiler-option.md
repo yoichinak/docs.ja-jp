@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c6d0c7128becb154955664cfdcf96d020de9369
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e77c14a1c3a4ba11b8ae6556be4f1c3c0cd42788
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480665"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202920"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -22,7 +22,7 @@ ms.locfileid: "59480665"
 
 ## <a name="syntax"></a>構文
 
-```
+```console
 -deterministic
 ```
 
@@ -56,5 +56,5 @@ ms.locfileid: "59480665"
 
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

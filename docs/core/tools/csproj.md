@@ -2,12 +2,12 @@
 title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 ms.date: 04/08/2019
-ms.openlocfilehash: a9b1caf6068a7161258a6825ed16894ac41b3be7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 13239b5235138cc6994841bbb81f8f12e661e337
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397529"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969839"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -389,7 +389,7 @@ nuget.exe および Visual Studio パッケージ マネージャーで強制す
 
 ## <a name="assemblyinfo-properties"></a>AssemblyInfo プロパティ
 
-通常、*AssemblyInfo* ファイル内に存在していた[アセンブリ属性](../../framework/app-domains/set-assembly-attributes.md)は、プロパティから自動的に生成されるようになりました。
+通常、*AssemblyInfo* ファイル内に存在していた[アセンブリ属性](../../standard/assembly/set-attributes.md)は、プロパティから自動的に生成されるようになりました。
 
 ### <a name="properties-per-attribute"></a>属性ごとのプロパティ
 

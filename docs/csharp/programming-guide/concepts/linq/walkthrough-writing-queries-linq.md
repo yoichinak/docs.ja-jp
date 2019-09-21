@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: C# でのクエリの作成 (LINQ)'
+title: チュートリアル:C# でのクエリの作成 (LINQ)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 083c1e4b6ab8c25956ffcf2288ac32d940f23bc2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483224"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924103"
 ---
-# <a name="walkthrough-writing-queries-in-c-linq"></a>チュートリアル: C# でのクエリの作成 (LINQ)
+# <a name="walkthrough-writing-queries-in-c-linq"></a>チュートリアル:C# でのクエリの作成 (LINQ)
 このチュートリアルでは、LINQ クエリ式の記述に使用される C# 言語機能について説明します。  
   
 ## <a name="create-a-c-project"></a>C# プロジェクトの作成  
   
 > [!NOTE]
->  以下に示すのは Visual Studio 用の手順です。 別の開発環境を使用している場合は、System.Core.dll への参照と <xref:System.Linq?displayProperty=nameWithType> 名前空間の `using` ディレクティブを使用したコンソール プロジェクトを作成してください。  
+> 以下に示すのは Visual Studio 用の手順です。 別の開発環境を使用している場合は、System.Core.dll への参照と <xref:System.Linq?displayProperty=nameWithType> 名前空間の `using` ディレクティブを使用したコンソール プロジェクトを作成してください。  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>Visual Studio でプロジェクトを作成するには  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66483224"
   
 - リスト自体は、コレクション初期化子で初期化されます。  
   
- この全体的なデータ構造は、コンストラクターへの明示的な呼び出しや、明示的なメンバー アクセスを行うことなく初期化され、インスタンス化されます。 これらの新機能について詳しくは、「[自動実装プロパティ](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)」および「[オブジェクト初期化子とコレクション初期化子](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)」をご覧ください。  
+ この全体的なデータ構造は、コンストラクターへの明示的な呼び出しや、明示的なメンバー アクセスを行うことなく初期化され、インスタンス化されます。 これらの新機能について詳しくは、「[自動実装プロパティ](../../classes-and-structs/auto-implemented-properties.md)」および「[オブジェクト初期化子とコレクション初期化子](../../classes-and-structs/object-and-collection-initializers.md)」をご覧ください。  
   
 #### <a name="to-add-the-data-source"></a>データ ソースを追加するには  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66483224"
   
 #### <a name="to-create-a-simple-query"></a>簡単なクエリを作成するには  
   
-- アプリケーションの `Main` メソッドで、シンプルなクエリを作成します。このクエリでは、実行時に、最初のテストの点数が 90 を超える全生徒のリストを生成するようにします。 `Student` オブジェクト全体が選択されているため、クエリの型は `IEnumerable<Student>` です。 コードでは、[var](../../../../csharp/language-reference/keywords/var.md) キーワードを使用して暗黙的型指定を使用することもできますが、結果を明確に示すために、明示的型指定を使用します。 (`var` について詳しくは、「[暗黙的に型指定されたローカル変数](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)」をご覧ください。)  
+- アプリケーションの `Main` メソッドで、シンプルなクエリを作成します。このクエリでは、実行時に、最初のテストの点数が 90 を超える全生徒のリストを生成するようにします。 `Student` オブジェクト全体が選択されているため、クエリの型は `IEnumerable<Student>` です。 コードでは、[var](../../../language-reference/keywords/var.md) キーワードを使用して暗黙的型指定を使用することもできますが、結果を明確に示すために、明示的型指定を使用します。 (`var` について詳しくは、「[暗黙的に型指定されたローカル変数](../../classes-and-structs/implicitly-typed-local-variables.md)」をご覧ください。)  
   
      なお、クエリの範囲変数 (`student`) は、ソース内の各 `Student` への参照として機能し、各オブジェクトのメンバー アクセスを提供します。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66483224"
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     詳しくは、「[where 句](../../../../csharp/language-reference/keywords/where-clause.md)」をご覧ください。  
+     詳しくは、「[where 句](../../../language-reference/keywords/where-clause.md)」をご覧ください。  
   
 ## <a name="modify-the-query"></a>クエリの変更  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66483224"
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
-     詳しくは、「[orderby 句](../../../../csharp/language-reference/keywords/orderby-clause.md)」をご覧ください。  
+     詳しくは、「[orderby 句](../../../language-reference/keywords/orderby-clause.md)」をご覧ください。  
   
 #### <a name="to-group-the-results"></a>結果をグループ化するには  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66483224"
   
 3. アプリケーションを実行し、 **[コンソール]** ウィンドウで結果を表示します。  
   
-     詳しくは、「[group 句](../../../../csharp/language-reference/keywords/group-clause.md)」をご覧ください。  
+     詳しくは、「[group 句](../../../language-reference/keywords/group-clause.md)」をご覧ください。  
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>変数を暗黙的に型指定するには  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66483224"
   
      [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
-     [var](../../../../csharp/language-reference/keywords/var.md) について詳しくは、「[暗黙的に型指定されたローカル変数](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)」をご覧ください。  
+     [var](../../../language-reference/keywords/var.md) について詳しくは、「[暗黙的に型指定されたローカル変数](../../classes-and-structs/implicitly-typed-local-variables.md)」をご覧ください。  
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>グループをキー値で順序付けるには  
   
@@ -153,11 +153,11 @@ ms.locfileid: "66483224"
   
      [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
-     詳しくは、「[let 句](../../../../csharp/language-reference/keywords/let-clause.md)」をご覧ください。  
+     詳しくは、「[let 句](../../../language-reference/keywords/let-clause.md)」をご覧ください。  
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>クエリ式でメソッド構文を使用するには  
   
-1. 「[LINQ でのクエリ構文とメソッド構文](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)」で説明したように、一部のクエリ操作は、メソッド構文を使用することでのみ表現できます。 次のコードは、ソース シーケンス内の各 `Student` の合計点数を計算し、そのクエリの結果に対して `Average()` メソッドを呼び出して、クラスの平均点数を計算します。
+1. 「[LINQ でのクエリ構文とメソッド構文](./query-syntax-and-method-syntax-in-linq.md)」で説明したように、一部のクエリ操作は、メソッド構文を使用することでのみ表現できます。 次のコードは、ソース シーケンス内の各 `Student` の合計点数を計算し、そのクエリの結果に対して `Average()` メソッドを呼び出して、クラスの平均点数を計算します。
   
      [!code-csharp[csLINQGettingStarted#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#19)]  
   
@@ -174,15 +174,15 @@ ms.locfileid: "66483224"
 ## <a name="next-steps"></a>次の手順  
  C# でのクエリ操作の基本が理解できたら、興味がある種類の LINQ プロバイダーについて、ドキュメントやサンプルを読んでみましょう。  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)  
+ [LINQ to XML (C#)](./linq-to-xml-overview.md)  
   
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ to Objects (C#)](./linq-to-objects.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [統合言語クエリ (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [LINQ クエリ式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [統合言語クエリ (LINQ) (C#)](./index.md)
+- [LINQ クエリ式](../../linq-query-expressions/index.md)

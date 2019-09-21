@@ -1,19 +1,19 @@
 ---
-title: '方法: LINQ クエリのカスタム メソッドを追加する (C#)'
+title: 方法:LINQ クエリのカスタム メソッドを追加する (C#)
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: 5aca346c182d63967f02a7f5444c5fd6d86ae3d1
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: fcf6814c8b3076a18e807a378796094a9ce2cf84
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610900"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594151"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>方法: LINQ クエリのカスタム メソッドを追加する (C#)
+# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>方法:LINQ クエリのカスタム メソッドを追加する (C#)
 
 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスに拡張メソッドを追加することで、LINQ クエリに使用できるメソッド セットを拡張できます。 たとえば一連の値から単一の値を求めるために、平均値や最大値を求める標準的な演算に加えて、独自の集計メソッドを作成することができます。 また、一連の値を受け取って別の一連の値を返す特定のデータ変換やカスタム フィルターの働きを持ったメソッドを作成することもできます。 このようなメソッドには、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A>、<xref:System.Linq.Enumerable.Reverse%2A> があります。
 
-<xref:System.Collections.Generic.IEnumerable%601> インターフェイスを拡張すると、列挙可能なコレクションにカスタム メソッドを適用できます。 詳細については、「[拡張メソッド](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)」を参照してください。
+<xref:System.Collections.Generic.IEnumerable%601> インターフェイスを拡張すると、列挙可能なコレクションにカスタム メソッドを適用できます。 詳細については、「[拡張メソッド](../../classes-and-structs/extension-methods.md)」を参照してください。
 
 ## <a name="adding-an-aggregate-method"></a>集計メソッドの追加
 
@@ -217,4 +217,4 @@ foreach (var element in query)
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [拡張メソッド](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [拡張メソッド](../../classes-and-structs/extension-methods.md)

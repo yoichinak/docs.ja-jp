@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 895c49fb1fde56a1c9bf8b3a0ecf9de4f29f9972
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 305c29e33f6cd421f39004e09d27c75b02ba8354
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591217"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912550"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>チュートリアル: My.Application.Log による情報の書き込み先の確認 (Visual Basic)
 
@@ -27,7 +27,7 @@ ms.locfileid: "65591217"
 1. アセンブリの構成ファイルを見つけます。 アセンブリを開発中の段階では、**ソリューション エクスプローラー**から Visual Studio の app.config にアクセスできます。 開発が終了すると、構成ファイルはアセンブリの名前に ".config" を付け加えたファイル名で、アセンブリと同じディレクトリに配置されています。
 
     > [!NOTE]
-    >  アセンブリによっては、構成ファイルがない場合もあります。
+    > アセンブリによっては、構成ファイルがない場合もあります。
 
     構成ファイルは XML ファイルです。
 

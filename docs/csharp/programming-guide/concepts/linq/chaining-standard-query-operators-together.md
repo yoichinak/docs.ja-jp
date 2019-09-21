@@ -2,15 +2,15 @@
 title: 標準クエリ演算子の連結 (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: e09b918ab6c33c8e3ccae6f99826dd86f4a2d1e6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 37df654b2bfdcc135460e5ded2ceec1eca33b35a
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487615"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204212"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>標準クエリ演算子の連結 (C#)
-これは、「[チュートリアル:クエリの連結 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」の最後のトピックです。  
+これは、「[チュートリアル:クエリの連結 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」の最後のトピックです。  
   
  標準クエリ演算子も連結することができます。 たとえば、<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> 演算子を挿入することができます。また、この演算子はレイジー方式でも機能します。 この演算子によって中間結果が具体化されることはありません。  
   
@@ -75,7 +75,7 @@ class Program
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 ToUpper: source >abc<  
 ToUpper: source >def<  
 AppendString: source >DEF<  
@@ -85,4 +85,3 @@ ToUpper: source >ghi<
 AppendString: source >GHI<  
 Main: str >GHI!!!<  
 ```  
-  

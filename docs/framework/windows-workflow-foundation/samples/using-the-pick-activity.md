@@ -2,12 +2,12 @@
 title: Pick アクティビティの使用
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 50946571c1ca3b3fb66d7da11e402f61739c9962
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 03b9ff7f552ad0cdcfbe9c46121a2f46f35de52a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637773"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037876"
 ---
 # <a name="using-the-pick-activity"></a>Pick アクティビティの使用
 このサンプルでは、<xref:System.Activities.Statements.Pick> アクティビティを使用する方法を示します。
@@ -22,33 +22,33 @@ ms.locfileid: "65637773"
 ## <a name="discussion"></a>説明
  このサンプルには、デザイナー ワークフローとコード化されたワークフローがあります。
 
- デザイナーのワークフローのデザイナー バージョンのサンプルでは、デザイナーでワークフローを作成する方法を示します。 次のファイルがあります。
+ デザイナーのワークフローデザイナーのサンプルでは、デザイナーでワークフローを作成する方法を示しています。 次のファイルがあります。
 
-- Program.cs:含まれています、`Main`サンプル ワークフローを実行する関数。
+- Program.cs:サンプルワークフローを実行する関数が含まれています。`Main`
 
-- Readstring.cs:コンソールからいくつかの入力を読み取るカスタム アクティビティ。
+- ReadString.cs:コンソールから一部の入力を読み取るカスタムアクティビティ。
 
-- Sequence1.xaml:Pick を使用するデザイナーを使用して作成されたワークフローです。
+- Sequence1:Pick を使用するデザイナーを使用して作成されたワークフロー。
 
- コード化されたワークフロー コード化されたバージョンのサンプルでは、デザイナーでワークフローを作成する方法を示します。 次のファイルがあります。
+ コード化されたワークフローサンプルのコード化されたバージョンは、デザイナーでワークフローを作成する方法を示しています。 次のファイルがあります。
 
-- Program.cs:含まれています、`Main`サンプル ワークフローを実行する関数。
+- Program.cs:サンプルワークフローを実行する関数が含まれています。`Main`
 
-- Readstring.cs:コンソールからいくつかの入力を読み取るカスタム アクティビティ。
+- ReadString.cs:コンソールから一部の入力を読み取るカスタムアクティビティ。
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1. Visual Studio 2010 を使用して、Pick.sln ソリューション ファイルを開きます。
+1. Visual Studio 2010 を使用して、.sln ソリューションファイルを開きます。
 
 2. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
 3. ソリューションを実行するには、F5 キーを押します。
 
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

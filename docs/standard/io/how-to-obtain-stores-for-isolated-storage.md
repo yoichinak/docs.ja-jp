@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ef65356d84016462941850ef9b9d6210debc62c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6fbc78c379951e05869a433875d057c49d44594
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622692"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969260"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>方法: 分離ストレージでストアを取得する
 分離ストアでは、データ コンパートメント内の仮想ファイル システムを公開します。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> クラスでは、分離ストアと対話するためのいくつかのメソッドが提供されます。 ストアを作成して取得するために、<xref:System.IO.IsolatedStorage.IsolatedStorageFile> では次の 3 つの静的メソッドが提供されます。  
@@ -62,4 +62,4 @@ ms.locfileid: "64622692"
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
 - [分離ストレージ](../../../docs/standard/io/isolated-storage.md)
 - [分離のタイプ](../../../docs/standard/io/types-of-isolation.md)
-- [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [.NET のアセンブリ](../assembly/index.md)

@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 71d5bbf7eb2df4065362031f30840635062a9298
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f8cb573d051970414f3962057f6329683eea5bd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583499"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782397"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>複数のアクティブな結果セットの有効化
 複数のアクティブな結果セット (MARS : Multiple Active Result Set) は、SQL Server で動作する機能であり、複数のバッチを単一の接続で実行することができます。 SQL Server で使用できるように MARS が有効になっているときは、使用中の各コマンド オブジェクトは接続にセッションを追加します。  
   
 > [!NOTE]
->  単一の MARS セッションは、MARS 用に 1 つの論理接続を開いた後、アクティブな各コマンドにつき 1 つの論理接続を開きます。  
+> 単一の MARS セッションは、MARS 用に 1 つの論理接続を開いた後、アクティブな各コマンドにつき 1 つの論理接続を開きます。  
   
 ## <a name="enabling-and-disabling-mars-in-the-connection-string"></a>接続文字列で MARS を有効または無効にする  
   
 > [!NOTE]
->  次の接続文字列のサンプルを使用して**AdventureWorks** SQL Server に含まれているデータベース。 指定されている接続文字列は、データベースが MSSQL1 という名前のサーバーにインストールされていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
+> 次の接続文字列では、SQL Server に含まれるサンプルの**AdventureWorks**データベースを使用します。 指定されている接続文字列は、データベースが MSSQL1 という名前のサーバーにインストールされていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
   
  既定では、MARS 機能は無効になっています。 この機能を有効にするには、キーワード ペア "MultipleActiveResultSet=True" を接続文字列に追加します。 "True" は、MARS を有効にするための唯一の有効な値です。 次の例では、SQL Server のインスタンスに接続し、MARS が有効になるよう指定する方法について説明します。  
   
@@ -62,13 +62,13 @@ string connectionString = "Data Source=MSSQL1;" +
  SELECT ステートメント内の WAITFOR ステートメントは、待機中、つまり最初の行が作成されるまではトランザクションを生成しません。 これは、WAITFOR ステートメントが待機している間は、同一の接続内では他のいかなるバッチも実行されないことを意味します。  
   
 ### <a name="mars-session-cache"></a>MARS セッションのキャッシュ  
- MARS を有効にして接続が開かれている場合、論理セッションが作成されます。このセッションによってオーバーヘッドが増加します。 オーバーヘッドを最小限に抑え、パフォーマンスを向上させる**SqlClient**接続内で、MARS セッションをキャッシュします。 キャッシュには、最大 10 個の MARS セッションが含まれます。 ユーザーがこの値を変更することはできません。 セッションが限度に達すると新しいセッションが作成され、エラーは生成されません。 キャッシュとそのキャッシュに含まれるセッションは、接続ごとに作成されます。接続をまたいで共有されることはありません。 セッションが解放されると、プールの上限に達している場合を除き、セッションはプールに返されます。 キャッシュ プールがいっぱいになっている場合、セッションは閉じられます。 MARS セッションの有効期限は終了しません。 クリーンアップされるのは、接続オブジェクトが破棄されるときだけです。 MARS セッションのキャッシュはプリロードされません。 アプリケーションがさらに多くのセッションを要求したときに読み込まれます。  
+ MARS を有効にして接続が開かれている場合、論理セッションが作成されます。このセッションによってオーバーヘッドが増加します。 オーバーヘッドを最小限に抑え、パフォーマンスを向上させるために、 **SqlClient**は接続内に MARS セッションをキャッシュします。 キャッシュには、最大 10 個の MARS セッションが含まれます。 ユーザーがこの値を変更することはできません。 セッションが限度に達すると新しいセッションが作成され、エラーは生成されません。 キャッシュとそのキャッシュに含まれるセッションは、接続ごとに作成されます。接続をまたいで共有されることはありません。 セッションが解放されると、プールの上限に達している場合を除き、セッションはプールに返されます。 キャッシュ プールがいっぱいになっている場合、セッションは閉じられます。 MARS セッションの有効期限は終了しません。 クリーンアップされるのは、接続オブジェクトが破棄されるときだけです。 MARS セッションのキャッシュはプリロードされません。 アプリケーションがさらに多くのセッションを要求したときに読み込まれます。  
   
 ### <a name="thread-safety"></a>スレッド セーフ  
  MARS 操作は、スレッド セーフではありません。  
   
-### <a name="connection-pooling"></a>接続プール  
- MARS の有効な接続は、その他の接続と同じようにプールされます。 アプリケーションが 2 つの接続を開き、その一方は MARS が有効で他方は MARS が無効になっている場合、それら 2 つの接続は別々のプールに入れられます。 詳しくは、「[SQL Server の接続プール (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)」をご覧ください。  
+### <a name="connection-pooling"></a>接続のプール  
+ MARS の有効な接続は、その他の接続と同じようにプールされます。 アプリケーションが 2 つの接続を開き、その一方は MARS が有効で他方は MARS が無効になっている場合、それら 2 つの接続は別々のプールに入れられます。 詳しくは、「[SQL Server の接続プール (ADO.NET)](../sql-server-connection-pooling.md)」をご覧ください。  
   
 ### <a name="sql-server-batch-execution-environment"></a>SQL Server のバッチ実行環境  
  接続を開くとき、既定の環境が定義されます。 この環境は、MARS の論理セッションにコピーされます。  
@@ -81,7 +81,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
 - データベース コンテキスト (現在のデータベース)  
   
-- 実行状態変数 (たとえば、@@ERROR、@@ROWCOUNT、@@FETCH_STATUS @@IDENTITY)  
+- 実行状態変数 (@ERROR例、@、@@ROWCOUNT、@@FETCH_STATUS @@IDENTITY)  
   
 - 最上位の一時テーブル  
   
@@ -90,15 +90,15 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="parallel-execution"></a>並列実行  
  MARS は、アプリケーション内で複数の接続に対するすべての要件を削除するようには設計されていません。 アプリケーションがサーバーに対するコマンドの完全な並列実行を必要とする場合、複数の接続を使用する必要があります。  
   
- たとえば、次のようなシナリオがあるとします。 2 つのコマンド オブジェクトが作成され、一方は結果セットを処理し、もう一方はデータを更新するとします。それらは MARS を介して共通の接続を共有します。 このシナリオで、`Transaction`します。`Commit` 次の例外を生成する最初のコマンド オブジェクトのすべての結果を読み取られるまでの更新で失敗します。  
+ たとえば、次のようなシナリオがあるとします。 2 つのコマンド オブジェクトが作成され、一方は結果セットを処理し、もう一方はデータを更新するとします。それらは MARS を介して共通の接続を共有します。 このシナリオでは`Transaction`、です。`Commit` 最初のコマンドオブジェクトですべての結果が読み取られるまで、更新は失敗し、次の例外が発生します。  
   
- メッセージ:別のセッションで使用中のトランザクション コンテキスト。  
+ メッセージ:トランザクションコンテキストが別のセッションによって使用されています。  
   
- ソース: .NET SqlClient データ プロバイダー  
+ ソース: .NET SqlClient Data Provider  
   
  期待される出力: (null)  
   
- 受信。System.Data.SqlClient.SqlException  
+ 受け取らSqlException (システム)  
   
  このシナリオに対応するには、次の 3 つの方法があります。  
   
@@ -113,5 +113,5 @@ string connectionString = "Data Source=MSSQL1;" +
   
 ## <a name="see-also"></a>関連項目
 
-- [複数のアクティブな結果セット (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [複数のアクティブな結果セット (MARS)](multiple-active-result-sets-mars.md)
+- [ADO.NET の概要](../ado-net-overview.md)

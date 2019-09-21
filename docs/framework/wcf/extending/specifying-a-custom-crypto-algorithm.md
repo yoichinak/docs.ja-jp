@@ -2,12 +2,12 @@
 title: カスタム暗号アルゴリズムの指定
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: b365c3c8e74adcad03246a227d6593c49f8b3993
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55200732b392c15a25853af28ecdf9e32d092da4
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768707"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849105"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>カスタム暗号アルゴリズムの指定
 WCF では、データの暗号化やデジタル署名の計算を行う際に使用するカスタム暗号アルゴリズムを指定できます。 そのためには、次の手順に従います。  
@@ -105,11 +105,11 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- 下のセクションで、<`cryptoClasses`> 要素が、SHA256CryptoServiceProvider とエイリアス"SHA256CSP"の間のマッピングを作成します。 <`nameEntry`> 要素は、"SHA256CSP"エイリアスと指定した URL 間のマッピングを作成します (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm )。  
+ <`cryptoClasses`> 要素の下のセクションで、SHA256CryptoServiceProvider とエイリアス "SHA256CSP" の間のマッピングを作成します。 <`nameEntry`> 要素は、"SHA256CSP" エイリアスと指定された URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ) の間のマッピングを作成します。  
   
  コードでカスタム アルゴリズムを登録するには、<xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> メソッドを使用します。 このメソッドによって、両方のマッピングを作成します。 次の例は、このメソッドを呼び出す方法を示しています。  
   
-```  
+```csharp
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
 // SHA256CryptoServiceProvider hash algorithm object.  
 CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.com/CustomAlgorithms/CustomHashAlgorithm");  
@@ -123,11 +123,11 @@ WSHttpBinding binding = new WSHttpBinding();
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
 ```  
   
- 完全なコード例では、次を参照してください。、 [WCF セキュリティ暗号化方式の指定](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md)サンプル。  
+ 完全なコード例については、「 [WCF セキュリティサンプルでの暗号化の俊敏性](../samples/cryptographic-agility-in-wcf-security.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [サービスのセキュリティ保護](../../../../docs/framework/wcf/securing-services.md)
-- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [サービスおよびクライアントのセキュリティ保護](../feature-details/securing-services-and-clients.md)
+- [サービスのセキュリティ保護](../securing-services.md)
+- [セキュリティの概要](../feature-details/security-overview.md)
+- [セキュリティの概念](../feature-details/security-concepts.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 3ea5519259ba2ee31bfd6bc25f6bedf1f1250799
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 61cd7b61a586afa2addd55acff7cac6d16d92a1f
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401548"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374525"
 ---
 # <a name="control-authoring-overview"></a>コントロールの作成の概要
 
@@ -197,7 +197,7 @@ ms.locfileid: "68401548"
 
 以下のガイドラインに従って、カスタム コントロールに添付プロパティを実装する必要があります。
 
-- `public` <xref:System.Windows.DependencyProperty> `readonly` `Property` `static` メソッドを使用して作成された、PropertyName という形式のがあります。 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> に<xref:System.Windows.DependencyProperty.RegisterAttached%2A>渡されるプロパティ名は*PropertyName*と一致する必要があります。
+- `public` <xref:System.Windows.DependencyProperty> `readonly` `Property` `static`メソッドを使用して作成された、PropertyName という形式のがあります。 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> に<xref:System.Windows.DependencyProperty.RegisterAttached%2A>渡されるプロパティ名は*PropertyName*と一致する必要があります。
 
 - `Set` *PropertyName* および `Get` *PropertyName* という名前の `public``static` CLR メソッドのペアを実装します。 どちらのメソッドも、から<xref:System.Windows.DependencyProperty>派生したクラスを最初の引数として受け取る必要があります。 また、`Set` *PropertyName* メソッドでは、プロパティの登録データ型と同じ型の引数も受け取ります。 `Get` *PropertyName*メソッドでは、同じ型の値を返す必要があります。 `Set` *PropertyName*メソッドがない場合、プロパティは読み取り専用としてマークされます。
 
@@ -264,7 +264,7 @@ ms.locfileid: "68401548"
 
 すべてのテーマのリソースを定義する必要はありません。 特定のテーマについてリソースが定義されていない場合、コントロールはリソースの `Classic.xaml` を確認します。 現在のテーマに対応するファイルや `Classic.xaml` でリソースが定義されていない場合、コントロールは汎用のリソースを使用します。汎用のリソースは、`generic.xaml` という名前のリソース ディクショナリ ファイルにあります。  `generic.xaml` ファイルは、テーマ固有のリソース ディクショナリ ファイルと同じフォルダーに配置されています。 `generic.xaml` は、特定の Windows テーマには対応していませんが、テーマ レベルのディクショナリであることに変わりありません。
 
-[テーマおよび UI オートメーションがサポートされた NumericUpDown カスタム コントロールのサンプル](https://go.microsoft.com/fwlink/?LinkID=160025)には、`NumericUpDown` コントロール用の 2 つのリソース ディクショナリが含まれています。1 つは generic.xaml で、もう 1 つは Luna.NormalColor.xaml です。  アプリケーションを実行し、Windows XP のシルバーのテーマと別のテーマを切り替えて、2 つのコントロール テンプレートの違いを確認できます。 (Windows Vista を使用している場合は、Luna.NormalColor.xaml を Aero.NormalColor.xaml という名前に変更し、Windows クラシック テーマと Windows Vista の既定のテーマなど、2 つのテーマを切り替えることができます)。
+また[C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)は[Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown カスタムコントロールと、テーマと UI オートメーションサポートのサンプルには、 `NumericUpDown`コントロール用の2つのリソースディクショナリが含まれています。1つは汎用 .xaml で、もう1つは Luna にあります。 
 
 を<xref:System.Windows.Controls.ControlTemplate>テーマ固有のリソースディクショナリファイルに配置する場合は、次の例に示すように、コントロールの静的コンストラクターを作成<xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29>し、で<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>メソッドを呼び出す必要があります。
 

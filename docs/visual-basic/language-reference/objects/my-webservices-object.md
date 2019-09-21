@@ -1,5 +1,5 @@
 ---
-title: My.WebServices オブジェクト (Visual Basic)
+title: My.user オブジェクト (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.WebServices
@@ -7,58 +7,58 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: a60f32c4f581e42f240fca55ce496776c5511ba3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c887f9b7c5a41c0aa02016354c46d5507b103d25
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050287"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918180"
 ---
 # <a name="mywebservices-object"></a>My.WebServices オブジェクト
-プロパティは、作成して、現在のプロジェクトによって参照される各 XML Web サービスの 1 つのインスタンスへのアクセスを提供します。  
+現在のプロジェクトによって参照される各 XML Web サービスの1つのインスタンスを作成してアクセスするためのプロパティを提供します。  
   
 ## <a name="remarks"></a>Remarks  
- `My.WebServices` オブジェクトは、現在のプロジェクトにより参照されている各 Web サービスのインスタンスを提供します。 各インスタンスは要求に応じてインスタンス化されます。 これらの Web サービスには `My.WebServices` オブジェクトのプロパティを介してアクセスできます。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じになります。 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> から継承されたクラスはすべて Web サービスです。 Web サービスをプロジェクトに追加する方法の詳細については、次を参照してください。[にアクセスするアプリケーションの Web サービス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)します。  
+ `My.WebServices` オブジェクトは、現在のプロジェクトにより参照されている各 Web サービスのインスタンスを提供します。 各インスタンスは要求に応じてインスタンス化されます。 これらの Web サービスには `My.WebServices` オブジェクトのプロパティを介してアクセスできます。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じになります。 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> から継承されたクラスはすべて Web サービスです。 プロジェクトへの Web サービスの追加については、「[アプリケーション Web サービス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)へのアクセス」を参照してください。  
   
- `My.WebServices`オブジェクトは、現在のプロジェクトに関連付けられている Web サービスのみを公開します。 参照される Dll で宣言されている Web サービスへのアクセスは行いません。 DLL を提供する Web サービスにアクセスするには、フォームで、Web サービスの修飾名を使用する必要があります*DllName*.*WebServiceName*します。 詳細については、次を参照してください。[にアクセスするアプリケーションの Web サービス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)します。  
+ オブジェクト`My.WebServices`は、現在のプロジェクトに関連付けられている Web サービスだけを公開します。 参照先の Dll で宣言されている Web サービスへのアクセスを提供しません。 DLL が提供する Web サービスにアクセスするには、Web サービスの修飾名を*DllName*の形式で使用する必要があります。*Webservicename*。 詳細については、「[アプリケーション Web サービスへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)」を参照してください。  
   
- オブジェクトとそのプロパティでは、Web アプリケーションを使用できません。  
+ オブジェクトとそのプロパティは、Web アプリケーションでは使用できません。  
   
 ## <a name="properties"></a>プロパティ  
- 各プロパティ、`My.WebServices`オブジェクトは、現在のプロジェクトによって参照される Web サービスのインスタンスへのアクセスを提供します。 プロパティの名前が同じプロパティがアクセスする Web サービスの名前とプロパティの型が、Web サービスの型と同じです。  
+ `My.WebServices`オブジェクトの各プロパティは、現在のプロジェクトによって参照されている Web サービスのインスタンスへのアクセスを提供します。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じです。プロパティの型は、Web サービスの型と同じです。  
   
 > [!NOTE]
->  Web サービスにアクセスするためのプロパティ名は、名前の競合がある場合*RootNamespace*_*Namespace*\_*ServiceName*します。 たとえば、という名前の 2 つの Web サービス`Service1`します。 ルート名前空間ではこれらのサービスのいずれかのかどうかは`WindowsApplication1`と名前空間に`Namespace1`を使用して、そのサービスにアクセス`My.WebServices.WindowsApplication1_Namespace1_Service1`します。  
+> 名前の競合がある場合、Web サービスにアクセスするためのプロパティ名は*RootNamespace*_*Namespace*\_*ServiceName*です。 たとえば、という名前`Service1`の2つの Web サービスを考えてみます。 これらのサービスのいずれかがルート名前空間`WindowsApplication1`および名前空間`Namespace1`にある場合は、を使用`My.WebServices.WindowsApplication1_Namespace1_Service1`してそのサービスにアクセスします。  
   
- 初めてアクセスしたときの 1 つ、`My.WebServices`オブジェクトのプロパティでは、Web サービスの新しいインスタンスを作成し、格納します。 そのプロパティの後続のアクセスは、Web サービスのインスタンスを返します。  
+ `My.WebServices`オブジェクトのいずれかのプロパティに初めてアクセスすると、Web サービスの新しいインスタンスが作成され、保存されます。 そのプロパティの後続のアクセスでは、Web サービスのインスタンスが返されます。  
   
- Web サービスを処分するには、割り当てることで`Nothing`をその Web サービスのプロパティ。 プロパティ set アクセス操作子を割り当てます`Nothing`に格納されている値。 以外の任意の値を割り当てた場合`Nothing`プロパティの setter がスローされます、<xref:System.ArgumentException>例外。  
+ Web サービスのプロパティにを割り当てる`Nothing`ことによって、web サービスを破棄できます。 プロパティ set アクセス操作`Nothing`子は、格納されている値に割り当てられます。 以外`Nothing`の値をプロパティに割り当てた場合、setter は<xref:System.ArgumentException>例外をスローします。  
   
- プロパティかどうかをテストすることができます、`My.WebServices`オブジェクトを使用して、Web サービスのインスタンスを格納する、`Is`または`IsNot`演算子。 これらの演算子を使用するには、プロパティの値をチェックする`Nothing`します。  
+ `Is`また`My.WebServices` は`IsNot`演算子を使用して、オブジェクトのプロパティに Web サービスのインスタンスが格納されているかどうかをテストできます。 これらの演算子を使用すると、プロパティの値がで`Nothing`あるかどうかを確認できます。  
   
 > [!NOTE]
->  通常、`Is`または`IsNot`オペレーターは、比較を実行するプロパティの値を読み取ることがあります。 ただし、プロパティが現在格納されている場合`Nothing`プロパティ、Web サービスの新しいインスタンスを作成し、し、そのインスタンスを返します。 ただし、Visual Basic コンパイラがのプロパティを処理、`My.WebServices`でき、特別に、オブジェクト、`Is`または`IsNot`演算子をその値を変更することがなく、プロパティの状態を確認します。  
+> 通常、 `Is`または`IsNot`演算子は、比較を実行するためにプロパティの値を読み取る必要があります。 ただし、プロパティが現在を格納`Nothing`している場合は、プロパティによって Web サービスの新しいインスタンスが作成され、そのインスタンスが返されます。 ただし、Visual Basic コンパイラは、 `My.WebServices`オブジェクトのプロパティを特別に処理し、または`IsNot`演算子が`Is`値を変更せずにプロパティの状態を確認できるようにします。  
   
 ## <a name="example"></a>例  
- この例では、`FahrenheitToCelsius`のメソッド、 `TemperatureConverter` XML Web サービスでは、結果を返します。  
+ この例では`FahrenheitToCelsius` 、 `TemperatureConverter` XML Web サービスのメソッドを呼び出し、その結果を返します。  
   
  [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
   
- この例を動作させるには、プロジェクトがという名前の Web サービスを参照する必要があります`Converter`、し、その Web サービスを公開する必要があります、`ConvertTemperature`メソッド。 詳細については、次を参照してください。[にアクセスするアプリケーションの Web サービス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)します。  
+ この例を機能させるには、プロジェクトでという名前`Converter`の web サービスを参照し、その`ConvertTemperature` web サービスがメソッドを公開する必要があります。 詳細については、「[アプリケーション Web サービスへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)」を参照してください。  
   
- このコードは、Web アプリケーション プロジェクトでは機能しません。  
+ このコードは、Web アプリケーションプロジェクトでは機能しません。  
   
 ## <a name="requirements"></a>必要条件  
   
-### <a name="availability-by-project-type"></a>プロジェクトの種類ごとの可用性  
+### <a name="availability-by-project-type"></a>プロジェクトの種類別の可用性  
   
 |プロジェクトの種類|使用可能|  
 |---|---|  
 |Windows アプリケーション|**はい**|  
 |クラス ライブラリ|**はい**|  
 |コンソール アプリケーション|**はい**|  
-|Windows コントロール ライブラリ|**はい**|  
-|Web コントロール ライブラリ|**はい**|  
+|Windows コントロールライブラリ|**はい**|  
+|Web コントロールライブラリ|**はい**|  
 |Windows サービス|**はい**|  
 |Web サイト|いいえ|  
   

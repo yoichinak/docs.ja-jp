@@ -2,12 +2,12 @@
 title: アトミック化された XName および XNamespace オブジェクト (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
-ms.openlocfilehash: 0d21397e6885b892f6ac1904e38bd85a78ae07ab
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: bc5066440d87f5485ae9099d7a7f4f5e9e66b4ec
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487601"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204276"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>アトミック化された XName および XNamespace オブジェクト (LINQ to XML) (C#)
 <xref:System.Xml.Linq.XName> オブジェクトと <xref:System.Xml.Linq.XNamespace> オブジェクトは "*アトミック化*" されています。つまり、同じ修飾名を含んでいる場合は、同じオブジェクトを参照します。 これによってクエリのパフォーマンスが向上します。これは、2 つのアトミック化された名前の等価性を比べる場合に、基になる中間言語が、2 つの参照が同じオブジェクトを指しているかどうかを判別するだけで済むためです。 基になるコードは、時間のかかる文字列比較を行う必要がありません。  
@@ -41,7 +41,7 @@ else
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 r1 and r2 have names that refer to the same instance.  
 The name of r1 and the name in 'n' refer to the same instance.  
 ```  

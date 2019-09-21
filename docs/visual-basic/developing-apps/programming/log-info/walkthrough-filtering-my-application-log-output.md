@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: af1dc3e1ce22112d76ad566873f40c1c2ac05c9d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591287"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968695"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>チュートリアル: My.Application.Log の出力のフィルター処理 (Visual Basic)
 このチュートリアルでは、`My.Application.Log` オブジェクトの既定のログ フィルター処理を変更して、`Log` オブジェクトからリスナーに渡される情報や、リスナーによって記述される情報を制御する方法について説明します。 構成情報はアプリケーションの構成ファイルに保存されるため、ロギングの動作はアプリケーションをビルドした後でも変更できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "65591287"
      アプリケーションのデバッグ出力ウィンドウを表示する方法について詳しくは、「[出力ウィンドウ](/visualstudio/ide/reference/output-window)」をご覧ください。 アプリケーションのログ ファイルの場所については、「[チュートリアル:My.Application.Log による情報の書き込み先の確認](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)」を参照してください。  
   
     > [!NOTE]
-    >  既定では、アプリケーションはアプリケーションの終了時にログ ファイルの出力をフラッシュします。  
+    > 既定では、アプリケーションはアプリケーションの終了時にログ ファイルの出力をフラッシュします。  
   
      上の例では、<xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> メソッドの 2 回目の呼び出しと <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> メソッドの呼び出しでログが出力されます。`WriteEntry` メソッドの最初と最後の呼び出しでは出力されません。 これは、`WriteEntry` と `WriteException` の重大度レベルが "Information" と "Error" であるためです。これらはどちらも、`My.Application.Log` オブジェクトの既定のログ フィルター処理で許可されます。 これに対し、重大度レベルが "Start" および "Stop" のイベントについては、ログ出力が生成されません。  
   
@@ -65,15 +65,15 @@ ms.locfileid: "65591287"
 |`Off`|すべてのメッセージがブロックされます。|  
   
 > [!NOTE]
->  `WriteEntry` メソッドと `WriteException` メソッドにはそれぞれ、重大度レベルを指定しないオーバー ロードがあります。 `WriteEntry` オーバー ロードの暗黙的な重大度レベルは "Information" で、`WriteException` オーバー ロードの暗黙的な重大度レベルは "Error" です。  
+> `WriteEntry` メソッドと `WriteException` メソッドにはそれぞれ、重大度レベルを指定しないオーバー ロードがあります。 `WriteEntry` オーバー ロードの暗黙的な重大度レベルは "Information" で、`WriteException` オーバー ロードの暗黙的な重大度レベルは "Error" です。  
   
  次の表は、前の例に示したログ出力について説明したものです。 既定の `DefaultSwitch` 設定 (Information) では、`WriteEntry` メソッドに対する 2 番目の呼び出しと、`WriteException` メソッドに対する呼び出しでのみ、ログ出力が生成されます。  
   
 #### <a name="to-log-only-activity-tracing-events"></a>アクティビティ トレース イベントだけを記録するには  
   
-1. **ソリューション エクスプローラー**で app.config を右クリックし、**[開く]** を選択します。  
+1. **ソリューション エクスプローラー**で app.config を右クリックし、 **[開く]** を選択します。  
   
-     - または -  
+     または  
   
      app.config ファイルがない場合は、次の操作を行います。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "65591287"
 9. `value` 属性の値を "Information" に戻します。  
   
     > [!NOTE]
-    >  `DefaultSwitch` スイッチの設定では、`My.Application.Log` のみが制御されます。 .NET Framework の <xref:System.Diagnostics.Trace?displayProperty=nameWithType> クラスと <xref:System.Diagnostics.Debug?displayProperty=nameWithType> クラスの動作が変えられることはありません。  
+    > `DefaultSwitch` スイッチの設定では、`My.Application.Log` のみが制御されます。 .NET Framework の <xref:System.Diagnostics.Trace?displayProperty=nameWithType> クラスと <xref:System.Diagnostics.Debug?displayProperty=nameWithType> クラスの動作が変えられることはありません。  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>My.Application.Log リスナーの個別のフィルター処理  
  前の例では、すべての `My.Application.Log` 出力のフィルター処理を変更する方法について説明しました。 この例では、個別のログ リスナーをフィルター処理する方法について説明します。 既定では、アプリケーションには、アプリケーションのデバッグ出力とログ ファイルに情報を書き込む 2 つのリスナーがあります。  
@@ -146,9 +146,9 @@ ms.locfileid: "65591287"
   
 #### <a name="to-log-only-activity-tracing-events"></a>アクティビティ トレース イベントだけを記録するには  
   
-1. **ソリューション エクスプローラー**で app.config を右クリックし、**[開く]** を選択します。  
+1. **ソリューション エクスプローラー**で app.config を右クリックし、 **[開く]** を選択します。  
   
-     - または -  
+     または  
   
      app.config ファイルがない場合は、次の操作を行います。  
   

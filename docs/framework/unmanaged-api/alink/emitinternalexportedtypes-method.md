@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15174480c4345f2514572701a5525f0f192ad120
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 04103ad305e0ae97669f3e07e06f03c2cdb4dfbd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742100"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787520"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes メソッド
-アセンブリに追加された型を出力します。 既知の内部型が追加された後は、このメソッドを呼び出します。  
+アセンブリに追加された型を出力します。 既知の内部型が追加された後に、このメソッドを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,13 +40,13 @@ HRESULT EmitInternalExportedTypes(
  アセンブリの ID。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [ALink API](index.md)

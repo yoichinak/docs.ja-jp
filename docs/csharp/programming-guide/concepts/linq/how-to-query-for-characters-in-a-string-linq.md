@@ -1,15 +1,15 @@
 ---
-title: '方法: 文字列内の文字をクエリする (LINQ) (C#)'
+title: 方法:文字列内の文字をクエリする (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: b31dfb4c9fb7f7efc439a1703f13aafca3053e6a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1212ebcf264aab756eca1acb81ae617c2218a065
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584444"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592892"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>方法: 文字列内の文字をクエリする (LINQ) (C#)
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>方法:文字列内の文字をクエリする (LINQ) (C#)
 <xref:System.String> クラスはジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装しているため、任意の文字列を文字のシーケンスとしてクエリできます。 ただし、これは LINQ の一般的な使用方法ではありません。 複雑なパターン一致操作には、<xref:System.Text.RegularExpressions.Regex> クラスを使用してください。  
   
 ## <a name="example"></a>例  
@@ -59,5 +59,5 @@ class QueryAString
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [方法: LINQ クエリと正規表現を組み合わせる (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+- [LINQ と文字列 (C#)](./linq-and-strings.md)
+- [方法: LINQ クエリと正規表現を組み合わせる (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)

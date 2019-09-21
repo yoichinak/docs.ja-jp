@@ -2,12 +2,12 @@
 title: Func および Action 汎用デリゲート (Visual Basic) の変性の使用
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: f2f45a9b6536859499f882b4cd585595176208f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce560f6246469620032ececa4afeeffe69baf407
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787271"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664357"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Func および Action 汎用デリゲート (Visual Basic) の変性の使用
 以下の例では、`Func` 汎用デリゲートと `Action` 汎用デリゲートの共変性と反変性を使用して、メソッドの再利用を可能にし、コードの柔軟性を高める方法を示します。  
@@ -92,4 +92,4 @@ End Class
 ## <a name="see-also"></a>関連項目
 
 - [共変性と反変性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
-- [ジェネリック](~/docs/standard/generics/index.md)
+- [ジェネリック](../../../../standard/generics/index.md)

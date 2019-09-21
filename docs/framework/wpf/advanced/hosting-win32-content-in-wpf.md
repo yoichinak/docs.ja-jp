@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: 10bdeae8fe46f78e60d278fdbe93883a1c6bd356
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b598b55c72096daac2487e4c52584abf9735f257
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629887"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991470"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF での Win32 コンテンツのホスト
 
@@ -70,14 +70,14 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 
 WS_CHILD スタイルと DS_CONTROL スタイルを使用して、ダイアログボックスを子 HWND にすることができます。 ダイアログが定義されているリソースファイル (.rc) に移動し、ダイアログの定義の先頭を見つけます。
 
-```
+```text
 IDD_DIALOG1 DIALOGEX 0, 0, 303, 121
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 ```
 
 2番目の行を次のように変更します。
 
-```
+```text
 STYLE DS_SETFONT | WS_CHILD | WS_BORDER | DS_CONTROL
 ```
 

@@ -882,12 +882,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 168e72e3f9f09c1f13e9d34cc1048f1dfacc2592
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 6f5a76e5d90a8d3b1cf6284af2e753f56494af74
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052756"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597372"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>申し訳ありませんが、この C# エラーに関する詳細情報はありません。
 申し訳ありませんが、このエラーに関する特定の情報はありません。 Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。 または、次のフォーラムのいずれかを使用して他の開発者に質問することができます。  
@@ -905,10 +905,10 @@ ms.locfileid: "66052756"
  Visual C# に関する質問と問題についてのフォーラムを提供します。  
   
  関連項目:  
- [Visual C# プログラマのための追加リソース](../../csharp/getting-started/additional-resources.md)  
+ [Visual C# プログラマのための追加リソース](../getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../csharp/programming-guide/index.md)
-- [C# リファレンス](../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../programming-guide/index.md)
+- [C# リファレンス](../language-reference/index.md)
 - [ご意見](/visualstudio/ide/talk-to-us)

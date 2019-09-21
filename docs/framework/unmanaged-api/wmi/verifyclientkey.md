@@ -1,6 +1,6 @@
 ---
 title: VerifyClientKey 関数 (アンマネージ API リファレンス)
-description: VerifyClientKey 関数により、クライアント キーが適切なセキュリティ。
+description: VerifyClientKey 関数によって、クライアントキーのセキュリティが適切であることが確認されます。
 ms.date: 11/06/2017
 api_name:
 - VerifyClientKey
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4b51fe4510f4172227d9afd049eb6815790a165
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b674e959ab93cf76b84e2af41e875a50b7d115f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783088"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798189"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey 関数
 クライアント キーに適切なセキュリティが確実に含められます。  
@@ -36,17 +36,17 @@ LONG VerifyClientKey();
 
 ## <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は`ERROR_SUCCESS`(0)。
+関数が成功した場合、戻り値`ERROR_SUCCESS`は (0) になります。
 
-戻り値で定義されたゼロ以外のエラー コードは、関数が失敗した場合、 *WinError.h*します。
+関数が失敗した場合、戻り値は、 *winerror.h*で定義されている0以外のエラーコードです。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** WMINet_Utils.def  
+ **ヘッダー:** WMINet_Utils  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

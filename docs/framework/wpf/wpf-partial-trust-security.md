@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 34beee309f080c53ecb16436beb0c4c6be7733e5
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: c3ec6ca6feba975517a9f982bb58e4b061516a61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796791"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962803"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信頼セキュリティ
 <a name="introduction"></a>一般に、インターネットアプリケーションは、重要なシステムリソースへの直接アクセスを制限して、悪意のある損害を防ぐ必要があります。 既定では、HTML およびクライアント側のスクリプト言語は、重要なシステムリソースにアクセスできません。 Windows Presentation Foundation (WPF) ブラウザーでホストされるアプリケーションは、ブラウザーから起動できるため、同様の制限のセットに準拠している必要があります。 これらの制限を適用[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]するために、はコードアクセスセキュリティ (CAS) と ClickOnce の両方に依存しています (「 [WPF のセキュリティ方針-プラットフォームセキュリティ](wpf-security-strategy-platform-security.md)」を参照してください)。 既定では、ブラウザーでホストされるアプリケーションは、インターネット、ローカルイントラネット、またはローカルコンピューターのどちらから起動するかに関係なく、インターネットゾーンの CA のアクセス許可セットを要求します。 すべてのアクセス許可のセットよりも少ないアプリケーションで実行されるアプリケーションは、部分信頼で実行されていると言います。  
@@ -50,7 +50,7 @@ ms.locfileid: "68796791"
 |編集|スペルチェック<br /><br /> RichTextBox<br /><br /> プレーンテキストとインククリップボードのサポート<br /><br /> ユーザーが開始した貼り付け<br /><br /> 選択したコンテンツのコピー|  
 |コントロール|一般的なコントロール|  
   
- この表では[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 、これらの機能について大まかに説明します。 詳細については[!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] 、「」 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]を参照してください。 また、次の機能には、特別な考慮事項など、部分的な信頼の実行に関する詳細情報が含まれています。  
+ この表では[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 、これらの機能について大まかに説明します。 詳細については、Windows SDK で、の[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]各メンバーが必要とするアクセス許可について説明します。 また、次の機能には、特別な考慮事項など、部分的な信頼の実行に関する詳細情報が含まれています。  
   
 - [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](「 [XAML の概要 (WPF)](./advanced/xaml-overview-wpf.md)」を参照してください)。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68796791"
 |インターネット|"信頼されていません" というメッセージが表示され、失敗する|証明書を使用して XBAP に署名します。|  
   
 > [!NOTE]
->  前の表で説明した動作は、ClickOnce の信頼されたデプロイモデルに従っていない完全信頼 Xbap 用です。  
+> 前の表で説明した動作は、ClickOnce の信頼されたデプロイモデルに従っていない完全信頼 Xbap 用です。  
   
  一般に、許可されたアクセス許可を超える可能性のあるコードは、スタンドアロンとブラウザーの両方でホストされるアプリケーションの間で共有される共通コードである可能性があります。 Ca と[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]は、このシナリオを管理するためのいくつかの手法を提供します。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68796791"
  アクセス許可を確認する必要がある場合は、CA を使用してアクセス許可を確認することが適切な方法です。 ただし、この手法は通常の処理の一部として例外をキャッチすることに依存しますが、一般的には推奨されず、パフォーマンスの問題が発生する可能性があります。 代わりに、がインターネット[!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)]ゾーンのサンドボックス内でのみ実行される場合は<xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> 、プロパティを使用できます[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]。このプロパティは、に対して true を返します。  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>アプリケーションがブラウザーで実行されているかどうかを識別するだけで、アプリケーションが実行されているアクセス許可のセットは区別されません。  
+> <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>アプリケーションがブラウザーで実行されているかどうかを識別するだけで、アプリケーションが実行されているアクセス許可のセットは区別されません。  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>アクセス許可の管理  
@@ -149,7 +149,7 @@ ms.locfileid: "68796791"
 |Web ブラウザー|HTML への安全なフレームナビゲーション|[はい]|[はい]|  
   
 > [!NOTE]
->  切り取りと貼り付けは、ユーザーが開始したときに部分信頼でのみ許可されます。  
+> 切り取りと貼り付けは、ユーザーが開始したときに部分信頼でのみ許可されます。  
   
  アクセス許可を増やす必要がある場合は、プロジェクトの設定と ClickOnce アプリケーションマニフェストを変更する必要があります。 詳細については、「[WPF XAML ブラウザー アプリケーションの概要](./app-development/wpf-xaml-browser-applications-overview.md)」をご覧ください。 次のドキュメントも役に立つ場合があります。  
   

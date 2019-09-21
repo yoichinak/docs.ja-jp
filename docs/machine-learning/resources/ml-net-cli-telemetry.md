@@ -2,14 +2,14 @@
 title: ML.NET CLI によるテレメトリ収集
 description: 分析のために使用状況の情報を収集する ML.NET CLI テレメトリ機能、収集されるデータ、機能を無効にする方法について説明します。 また、.NET の使用許諾契約と Microsoft GDPR 準拠に関する情報のリンクも紹介します。
 ms.topic: conceptual
-ms.date: 05/05/2019
+ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: eab1e37d7d0d47251c4f92422730b105cf2db265
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433794"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929277"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI によるテレメトリ収集
 
@@ -36,14 +36,14 @@ ms.locfileid: "68433794"
 
 ML.NET CLI のテレメトリ機能は既定で有効です。
 
-`DOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を `1` または `true` に設定して、製品利用統計情報の機能をオプトアウトします。 この環境変数は、.NET CLI ツールにグローバルに適用されます。
+`MLDOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を `1` または `true` に設定して、製品利用統計情報の機能をオプトアウトします。 この環境変数は、ML.NET CLI ツールにグローバルに適用されます。
 
 ## <a name="data-points-collected"></a>収集されるデータ ポイント
 
 この機能は次のデータを収集します。
 
 - 呼び出されたコマンド (`auto-train` など)
-- 使用されたコマンド ライン パラメーターの名前 (つまり "dataset-name、label-column-name、ml-task、output-path、max-exploration-time、verbosity")
+- 使用されたコマンド ライン パラメーターの名前 ("dataset-name、label-column-name、ml-task、output-path、max-exploration-time、verbosity")
 - ハッシュされた MAC アドレス: マシンの暗号化された (SHA256) 匿名で一意の ID
 - 呼び出しのタイムスタンプ
 - 地理的位置を特定するためにのみ使用される 3 オクテットの IP アドレス (完全な IP アドレスではない)
@@ -52,12 +52,13 @@ ML.NET CLI のテレメトリ機能は既定で有効です。
 - データセット ファイルサイズ バケット
 - オペレーティング システムとバージョン
 - タスク パラメーターの値:カテゴリ値 (`regression`、`binary-classification`、`multiclass-classification` など)
-- ML.NET CLI バージョン (つまり 0.3.27703.4)
+- ML.NET CLI バージョン (0.3.27703.4)
 
 データは [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) テクノロジを使用して Microsoft サーバーに安全に送信され、制限されたアクセスの下で保持され、厳格なセキュリティ コントロールの下で安全な [Azure Storage](https://azure.microsoft.com/services/storage/) システムから使用されます。
 
 ### <a name="data-points-not-collected"></a>収集されないデータ ポイント
 テレメトリ機能では、以下は収集 "*されません*"。
+
 - ユーザー名などの個人データ
 - データ セットのファイル名
 - データセット ファイルのデータ
@@ -73,6 +74,7 @@ Microsoft による ML.NET CLI の配布には、[マイクロソフト ソフ�
 `mlnet auto-train` などの [ML.NET CLI コマンド](../reference/ml-net-cli-reference.md)を初めて実行すると、ML.NET CLI ツールにテレメトリをオプトアウトする方法が説明された開示テキストが表示されます。 テキストは、実行している CLI のバージョンによって多少異なります。
 
 ## <a name="see-also"></a>関連項目
+
 - [ML.NET CLI リファレンス](../reference/ml-net-cli-reference.md)
 - [マイクロソフト ソフトウェア ライセンス条項:Microsoft .NET ライブラリ](https://aka.ms/dotnet-core-eula)
 - [Microsoft におけるプライバシー](https://www.microsoft.com/trustcenter/privacy/)

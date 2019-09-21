@@ -15,25 +15,25 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: b869898a20008343b6c6cbe4bc7e399fc86fb232
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f361526c44f8fbb9ab282fe15ae109b67e8f01dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054017"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922754"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>方法: Windows フォームの ComboBox または ListBox コントロールをデータにバインドする
-バインドすることができます、<xref:System.Windows.Forms.ComboBox>と<xref:System.Windows.Forms.ListBox>データベース内のデータの参照などのタスクを実行するデータに新しいデータの入力または既存のデータを編集します。  
+<xref:System.Windows.Forms.ComboBox> と<xref:System.Windows.Forms.ListBox>をデータにバインドすると、データベース内のデータの参照、新しいデータの入力、既存のデータの編集などのタスクを実行できます。  
   
-### <a name="to-bind-a-combobox-or-listbox-control"></a>ComboBox または ListBox コントロールにバインドするには  
+### <a name="to-bind-a-combobox-or-listbox-control"></a>ComboBox または ListBox コントロールをバインドするには  
   
-1. 設定、`DataSource`プロパティをデータ ソース オブジェクト。 データ ソースには、<xref:System.Windows.Forms.BindingSource>データ、データ テーブル、データ ビュー、データセットにバインドするデータ マネージャー、配列、または表示を実装するクラス、<xref:System.Collections.IList>インターフェイス。 詳細については、次を参照してください。 [Data Sources Supported by Windows Forms](../data-sources-supported-by-windows-forms.md)します。  
+1. `DataSource`プロパティをデータソースオブジェクトに設定します。 使用できるデータソースに<xref:System.Windows.Forms.BindingSource>は、データへのバインド、データテーブル、データビュー、データセット、データビューマネージャー、配列、または<xref:System.Collections.IList>インターフェイスを実装する任意のクラスが含まれます。 詳細については、「 [Windows フォームでサポートされるデータソース](../data-sources-supported-by-windows-forms.md)」を参照してください。  
   
-2. テーブルにバインドする場合は、設定、`DisplayMember`プロパティをデータ ソース内の列の名前にします。  
+2. テーブルにバインドする場合は、 `DisplayMember`プロパティをデータソース内の列の名前に設定します。  
   
      \- または -  
   
-     バインドしている場合、 <xref:System.Collections.IList>、画面メンバー リスト内の型のパブリック プロパティを設定します。  
+     にバインドする場合は<xref:System.Collections.IList>、表示メンバーをリスト内の型のパブリックプロパティに設定します。  
   
     ```vb  
     Private Sub BindComboBox()  
@@ -51,7 +51,7 @@ ms.locfileid: "62054017"
     ```  
   
     > [!NOTE]
-    >  実装されていないデータ ソースにバインドするかどうか、<xref:System.ComponentModel.IBindingList>インターフェイスなど、 <xref:System.Collections.ArrayList>、データ ソースが更新されたときに、バインドされたコントロールのデータは更新されません。 などがある場合、コンボ ボックスにバインドする<xref:System.Collections.ArrayList>にデータを追加し、 <xref:System.Collections.ArrayList>、コンボ ボックスではこれらの新しい項目は表示されません。 ただし、呼び出すことで更新するコンボ ボックスを強制することができます、<xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A>と<xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A>のインスタンスでメソッド、<xref:System.Windows.Forms.BindingContext>コントロールがバインドされるクラスします。  
+    > など、 <xref:System.ComponentModel.IBindingList>インターフェイス<xref:System.Collections.ArrayList>を実装していないデータソースにバインドされている場合、データソースの更新時にバインドされたコントロールのデータは更新されません。 たとえば、に<xref:System.Collections.ArrayList>バインドされたコンボボックスがあり、 <xref:System.Collections.ArrayList>にデータが追加されている場合、これらの新しい項目はコンボボックスに表示されません。 ただし、コントロールがバインドされている<xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> <xref:System.Windows.Forms.BindingContext>クラスのインスタンスでメソッドと<xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A>メソッドを呼び出すことにより、コンボボックスを強制的に更新できます。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01fa0cf9811e72333b091858e2f78a80dda1d9ef
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641038"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969100"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework での side-by-side 実行
 side-by-side 実行は、アプリケーションまたはコンポーネントの複数のバージョンを同じコンピューターで実行する機能です。 共通言語ランタイムの複数のバージョン、および 1 つの共通言語ランタイムを使用するアプリケーションとコンポーネントの複数のバージョンを同じコンピューターで同時に実行できます。  
@@ -35,7 +35,7 @@ side-by-side 実行は、アプリケーションまたはコンポーネント�
   
 - 厳密な名前付きアセンブリ  
   
-     side-by-side 実行機能は、厳密な名前付きアセンブリを使用して、型情報をアセンブリの特定のバージョンにバインドします。 これによって、アプリケーションまたはコンポーネントが、アセンブリの無効なバージョンをバインドするのを防げます。 また、厳密な名前付きアセンブリによって、1 つのファイルの複数のバージョンが同じコンピューター上に存在することが可能で、アプリケーションはこれらを使用できます。 詳細については、「[厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)」を参照してください。  
+     side-by-side 実行機能は、厳密な名前付きアセンブリを使用して、型情報をアセンブリの特定のバージョンにバインドします。 これによって、アプリケーションまたはコンポーネントが、アセンブリの無効なバージョンをバインドするのを防げます。 また、厳密な名前付きアセンブリによって、1 つのファイルの複数のバージョンが同じコンピューター上に存在することが可能で、アプリケーションはこれらを使用できます。 詳細については、「[厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)」を参照してください。  
   
 - バージョンを認識するコード ストレージ  
   
@@ -75,17 +75,17 @@ side-by-side 実行は、アプリケーションまたはコンポーネント�
   
  アプリケーション構成ファイルが存在する場合は、次のプロセスの結果に基づいて、ランタイムは読み込むランタイムの適切なバージョンを決定します。  
   
-1. ランタイムは、アプリケーション構成ファイルの [\<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)を調べます。 **\<supportedRuntime>** 要素で指定されたサポートされるランタイム バージョンが 1 つ以上が見つかった場合、ランタイムは最初の **\<supportedRuntime>** 要素で指定されているランタイム バージョンを読み込みます。 このバージョンが利用できない場合、ランタイムは **\<supportedRuntime>** の次の要素を調べ、指定されているランタイム バージョンを読み込むようにしようとします。 このランタイム バージョンが利用できない場合は、**\<supportedRuntime>** の後続の要素を調べます。 サポートされるランタイム バージョンがどれも利用できない場合、ランタイムはランタイム バージョンの読み込みに失敗し、ユーザーに対してメッセージが表示されます (手順 3. 参照)。  
+1. ランタイムは、アプリケーション構成ファイルの [\<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)を調べます。 **\<supportedRuntime>** 要素で指定されたサポートされるランタイム バージョンが 1 つ以上が見つかった場合、ランタイムは最初の **\<supportedRuntime>** 要素で指定されているランタイム バージョンを読み込みます。 このバージョンが利用できない場合、ランタイムは **\<supportedRuntime>** の次の要素を調べ、指定されているランタイム バージョンを読み込むようにしようとします。 このランタイム バージョンが利用できない場合は、 **\<supportedRuntime>** の後続の要素を調べます。 サポートされるランタイム バージョンがどれも利用できない場合、ランタイムはランタイム バージョンの読み込みに失敗し、ユーザーに対してメッセージが表示されます (手順 3. 参照)。  
   
 2. ランタイムはアプリケーションの実行可能ファイルの PE ファイル ヘッダーを読み込みます。 PE ファイル ヘッダーで指定されたランタイム バージョンが利用できる場合、ランタイムはこのバージョンを読み込みます。 指定されたランタイム バージョンが利用できない場合は、PE ヘッダーのランタイム バージョンと互換性があると Microsoft によって決められたランタイム バージョンがランタイムによって検索されます。 このバージョンが見つからない場合、プロセスは手順 3. に進みます。  
   
 3. ランタイムは、アプリケーションがサポートしているランタイム バージョンが利用できないことを示すメッセージを表示します。 ランタイムは読み込まれません。  
   
     > [!NOTE]
-    >  このメッセージが表示されないようにするには、レジストリ キー HKLM\Software\Microsoft\\.NETFramework の値 NoGuiFromShim を使用するか、環境変数 COMPLUS_NoGuiFromShim を使用します。 たとえば、無人インストールや Windows サービスなど、一般にはユーザーとの対話が不要なアプリケーションの場合、このメッセージを抑制できます。 このメッセージを抑制すると、ランタイムによって、イベント ログにメッセージが書き込まれます。  レジストリ値 NoGuiFromShim を 1 に設定すると、コンピューター上のすべてのアプリケーションで、このメッセージが抑制されます。 別の方法として、COMPLUS_NoGuiFromShim 環境変数を 1 に設定すると、特定のユーザー コンテキストで実行されるアプリケーションについてメッセージを抑制できます。  
+    > このメッセージが表示されないようにするには、レジストリ キー HKLM\Software\Microsoft\\.NETFramework の値 NoGuiFromShim を使用するか、環境変数 COMPLUS_NoGuiFromShim を使用します。 たとえば、無人インストールや Windows サービスなど、一般にはユーザーとの対話が不要なアプリケーションの場合、このメッセージを抑制できます。 このメッセージを抑制すると、ランタイムによって、イベント ログにメッセージが書き込まれます。  レジストリ値 NoGuiFromShim を 1 に設定すると、コンピューター上のすべてのアプリケーションで、このメッセージが抑制されます。 別の方法として、COMPLUS_NoGuiFromShim 環境変数を 1 に設定すると、特定のユーザー コンテキストで実行されるアプリケーションについてメッセージを抑制できます。  
   
 > [!NOTE]
->  ランタイム バージョンが読み込まれた後、アセンブリ バインディングのリダイレクトによって、.NET Framework アセンブリの異なるバージョンを読み込むように指定されることがあります。 これらのバインディングのリダイレクトは、リダイレクトされた特定のアセンブリだけに影響します。  
+> ランタイム バージョンが読み込まれた後、アセンブリ バインディングのリダイレクトによって、.NET Framework アセンブリの異なるバージョンを読み込むように指定されることがあります。 これらのバインディングのリダイレクトは、リダイレクトされた特定のアセンブリだけに影響します。  
   
 ## <a name="partially-qualified-assembly-names-and-side-by-side-execution"></a>部分修飾アセンブリ名と side-by-side 実行  
  部分限定アセンブリ参照は、side-by-side 実行の潜在的な問題の原因となり得るので、アプリケーション ディレクトリ内のアセンブリへのバインドだけで使用します。 開発するコード内では、部分限定アセンブリ参照は使用しないでください。  
@@ -107,7 +107,7 @@ publicKeyToken=...,
  アセンブリの読み込みステートメントが `myAssembly` を参照するたびに、構成ファイルのこれらの設定により、ランタイムは部分修飾された `myAssembly` 参照を完全限定参照に自動的に変換します。 たとえば、Assembly.Load("myAssembly") は Assembly.Load("myAssembly, version=1.0.0.0, publicKeyToken=..., culture=neutral") に変換されます。  
   
 > [!NOTE]
->  **LoadWithPartialName** メソッドを使用すると、グローバル アセンブリ キャッシュから部分参照アセンブリを読み込むのを禁止する共通言語ランタイムの制限をバイパスできます。 このメソッドは、side-by-side 実行で問題になりやすいので、リモート処理のシナリオだけで使用してください。  
+> **LoadWithPartialName** メソッドを使用すると、グローバル アセンブリ キャッシュから部分参照アセンブリを読み込むのを禁止する共通言語ランタイムの制限をバイパスできます。 このメソッドは、side-by-side 実行で問題になりやすいので、リモート処理のシナリオだけで使用してください。  
   
 ## <a name="related-topics"></a>関連トピック  
   
@@ -116,7 +116,7 @@ publicKeyToken=...,
 |[方法: 自動バインディング リダイレクトを有効/無効にする](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|アプリケーションをアセンブリの特定のバージョンにバインドする方法について説明します。|  
 |[アセンブリ バインディングのリダイレクトの構成](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|.NET Framework アセンブリの特定のバージョンへのアセンブリ バインドの参照をリダイレクトする方法について説明します。|  
 |[インプロセスの side-by-side 実行](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|インプロセスのランタイム ホストの並行アクティブ化を使用して、1 つのプロセスで複数のバージョンの CLR を実行する方法について説明します。|  
-|[共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|アセンブリの概念的な概要を説明します。|  
+|[.NET のアセンブリ](../../standard/assembly/index.md)|アセンブリの概念的な概要を説明します。|  
 |[アプリケーション ドメイン](../../../docs/framework/app-domains/application-domains.md)|アプリケーション ドメインの概念的な概要を説明します。|  
   
 ## <a name="reference"></a>関連項目  

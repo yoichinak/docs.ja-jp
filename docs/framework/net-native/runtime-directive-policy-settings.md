@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93352fffbe155183687a9b666d2fe5541428fca9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 33253c249842824a529f4e8b24d4ca4228733041
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64752014"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049214"
 ---
 # <a name="runtime-directive-policy-settings"></a>ランタイム ディレクティブ ポリシーの設定
 
 > [!NOTE]
->  このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。 プレビュー版は、[Microsoft Connect Web サイト](https://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。
+> このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。 プレビュー版は、[Microsoft Connect Web サイト](https://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。
 
-.NET ネイティブのランタイム ディレクティブ ポリシー設定は、実行時に型と型のメンバーのメタデータが使用可能かどうかを決定します。 必要なメタデータがない場合、COM または Windows ランタイムへの .NET Framework 型のリフレクション、シリアル化と逆シリアル化、またはマーシャリングを利用する操作が失敗し、例外をスローする可能性があります。 最も一般的な例外は、[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) と、[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) (相互運用の場合) です。
+.NET ネイティブのランタイム ディレクティブ ポリシー設定は、実行時に型と型のメンバーのメタデータが使用可能かどうかを決定します。 必要なメタデータがない場合、COM または Windows ランタイムへの .NET Framework 型のリフレクション、シリアル化と逆シリアル化、またはマーシャリングを利用する操作が失敗し、例外をスローする可能性があります。 最も一般的な例外は、[MissingMetadataException](missingmetadataexception-class-net-native.md) と、[MissingInteropDataException](missinginteropdataexception-class-net-native.md) (相互運用の場合) です。
 
-実行時ポリシー設定は、ランタイム ディレクティブ (.rd.xml) ファイルによって制御されます。 各ランタイム ディレクティブは、アセンブリ ([\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 要素)、型 ([\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 要素)、またはメソッド ([\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 要素) などの特定のプログラム要素のポリシーを定義します。 ディレクティブには、次のセクションで説明する、リフレクション ポリシー種類、シリアル化ポリシー種類、および相互運用ポリシー種類を定義する属性が 1 つ以上含まれています。 属性の値はポリシー設定を定義します。
+実行時ポリシー設定は、ランタイム ディレクティブ (.rd.xml) ファイルによって制御されます。 各ランタイム ディレクティブは、アセンブリ ([\<Assembly>](assembly-element-net-native.md) 要素)、型 ([\<Type>](type-element-net-native.md) 要素)、またはメソッド ([\<Method>](method-element-net-native.md) 要素) などの特定のプログラム要素のポリシーを定義します。 ディレクティブには、次のセクションで説明する、リフレクション ポリシー種類、シリアル化ポリシー種類、および相互運用ポリシー種類を定義する属性が 1 つ以上含まれています。 属性の値はポリシー設定を定義します。
 
 ## <a name="policy-types"></a>ポリシーの種類
 
@@ -36,22 +36,22 @@ ms.locfileid: "64752014"
 
   |要素|Activate|参照|動的|
   |-------------|--------------|------------|-------------|
-  |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|
-  |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|
-  |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|
-  |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|
-  |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|
-  |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|
-  |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|
-  |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|
-  |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|
-  |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|
-  |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|
-  |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|
-  |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|
-  |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|
-  |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|
-  |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|
+  |[\<Application>](application-element-net-native.md)|✓|✓|✓|
+  |[\<Assembly>](assembly-element-net-native.md)|✓|✓|✓|
+  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✓|✓|✓|
+  |[\<Event>](event-element-net-native.md)||✓|✓|
+  |[\<Field>](field-element-net-native.md)||✓|✓|
+  |[\<GenericParameter>](genericparameter-element-net-native.md)|✓|✓|✓|
+  |[\<ImpliesType>](impliestype-element-net-native.md)|✓|✓|✓|
+  |[\<Method>](method-element-net-native.md)||✓|✓|
+  |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)||✓|✓|
+  |[\<Namespace>](namespace-element-net-native.md)|✓|✓|✓|
+  |[\<Parameter>](parameter-element-net-native.md)|✓|✓|✓|
+  |[\<Property>](property-element-net-native.md)||✓|✓|
+  |[\<Subtypes>](subtypes-element-net-native.md)|✓|✓|✓|
+  |[\<Type>](type-element-net-native.md)|✓|✓|✓|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✓|✓|✓|
+  |[\<TypeParameter>](typeparameter-element-net-native.md)|✓|✓|✓|
 
 - シリアル化ポリシー種類は、実行時にシリアル化と逆シリアル化で使用できるメタデータを決定します。
 
@@ -67,22 +67,22 @@ ms.locfileid: "64752014"
 
   |要素|シリアル化|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|
   |-------------|---------------|----------------------------|--------------------------------|-------------------|
-  |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|
-  |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|||||
-  |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|✓||||
-  |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|✓|
-  |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|||||
-  |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||
-  |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|✓||||
-  |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|
-  |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|
-  |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Application>](application-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Assembly>](assembly-element-net-native.md)|✓|✓|✓|✓|
+  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Event>](event-element-net-native.md)|||||
+  |[\<Field>](field-element-net-native.md)|✓||||
+  |[\<GenericParameter>](genericparameter-element-net-native.md)|✓|✓|✓|✓|
+  |[\<ImpliesType>](impliestype-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Method>](method-element-net-native.md)|||||
+  |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|||||
+  |[\<Namespace>](namespace-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Parameter>](parameter-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Property>](property-element-net-native.md)|✓||||
+  |[\<Subtypes>](subtypes-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Type>](type-element-net-native.md)|✓|✓|✓|✓|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✓|✓|✓|✓|
+  |[\<TypeParameter>](typeparameter-element-net-native.md)|✓|✓|✓|✓|
 
 - 相互運用ポリシー種類は、COM および Windows ランタイムに参照型、値型、および関数ポインターを渡すために実行時に使用できるメタデータを決定します。
 
@@ -96,22 +96,22 @@ ms.locfileid: "64752014"
 
   |要素|MarshalObject|MarshalDelegate|MarshalStructure|
   |-------------|-------------------|---------------------|----------------------|
-  |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|
-  |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|
-  |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|
-  |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||||
-  |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||||
-  |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|
-  |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|
-  |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||||
-  |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||
-  |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|
-  |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|
-  |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||||
-  |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|
-  |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|
-  |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|
-  |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|
+  |[\<Application>](application-element-net-native.md)|✓|✓|✓|
+  |[\<Assembly>](assembly-element-net-native.md)|✓|✓|✓|
+  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✓|✓|✓|
+  |[\<Event>](event-element-net-native.md)||||
+  |[\<Field>](field-element-net-native.md)||||
+  |[\<GenericParameter>](genericparameter-element-net-native.md)|✓|✓|✓|
+  |[\<ImpliesType>](impliestype-element-net-native.md)|✓|✓|✓|
+  |[\<Method>](method-element-net-native.md)||||
+  |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)||||
+  |[\<Namespace>](namespace-element-net-native.md)|✓|✓|✓|
+  |[\<Parameter>](parameter-element-net-native.md)|✓|✓|✓|
+  |[\<Property>](property-element-net-native.md)||||
+  |[\<Subtypes>](subtypes-element-net-native.md)|✓|✓|✓|
+  |[\<Type>](type-element-net-native.md)|✓|✓|✓|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✓|✓|✓|
+  |[\<TypeParameter>](typeparameter-element-net-native.md)|✓|✓|✓|
 
 ## <a name="policy-settings"></a>ポリシーの設定
 
@@ -132,5 +132,5 @@ ms.locfileid: "64752014"
 
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ要素](runtime-directive-elements.md)

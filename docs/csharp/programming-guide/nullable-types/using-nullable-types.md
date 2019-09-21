@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 75b8889f5f1f1b0dab4aa365daa34ef5ae226b02
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306652"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588835"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Null 許容型の使用 (C# プログラミング ガイド)
 
@@ -21,7 +21,7 @@ Null 許容型は、`Nullable<T>` または `T?` のいずれかの形式で参�
   
 ## <a name="declaration-and-assignment"></a>宣言と代入
 
-値型は、対応する Null 許容型に暗黙的に変換できるので、基になる値型の場合と同様に Null 許容型に値を代入します。 `null` 値を代入することもできます。  次に例を示します。
+値型は、対応する Null 許容型に暗黙的に変換できるので、基になる値型の場合と同様に Null 許容型に値を代入します。 `null` 値を代入することもできます。  例:
   
 [!code-csharp[declare and assign](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#1)]
 
@@ -53,7 +53,7 @@ Null 許容型の値を Null 非許容型に代入する必要がある場合は
 
 Null 許容型の値が null の場合に使用される値を、基になる値型の既定値にする場合は、<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> メソッドを使用します。
   
-Null 許容型を Null 非許容型に明示的にキャストすることができます。 次に例を示します。  
+Null 許容型を Null 非許容型に明示的にキャストすることができます。 例:  
   
 [!code-csharp[explicit cast](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#6)]
 
@@ -63,7 +63,7 @@ Null 非許容値型は、対応する Null 許容型に暗黙的に変換され
   
 ## <a name="operators"></a>演算子
 
-値型向けに存在している定義済みの単項演算子、2 項演算子およびすべてのユーザー定義演算子は、Null 許容型でも使用できます。 これらの演算子では、1 つまたは両方のオペランドが null の場合は null 値が生成され、null 以外の場合は、含まれている値に基づいて結果が算出されます。 次に例を示します。  
+値型向けに存在している定義済みの単項演算子、2 項演算子およびすべてのユーザー定義演算子は、Null 許容型でも使用できます。 これらの演算子では、1 つまたは両方のオペランドが null の場合は null 値が生成され、null 以外の場合は、含まれている値に基づいて結果が算出されます。 例:  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
 
@@ -95,5 +95,5 @@ Null 許容値型は、次の規則に従って[ボックス化](../types/boxing
 ## <a name="see-also"></a>関連項目
 
 - [Null 許容型](index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミング ガイド](../index.md)
 - [What Exactly Does 'Lifted' mean? ('Lifted' の正確な意味)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

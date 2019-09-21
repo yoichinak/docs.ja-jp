@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9a02b608-e7bb-4041-a452-a7fed26fd008
-ms.openlocfilehash: 825ba2a32e7c75e922ca08386b9f6efede7b2693
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 766ede90b14f07e2799c2715daf62aaeeeaa83f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904073"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782241"
 ---
 # <a name="how-to-retrieve-entity-conflict-information"></a>方法: エンティティの競合情報を取得する
-<xref:System.Data.Linq.ObjectChangeConflict> クラスのオブジェクトを使用して、<xref:System.Data.Linq.ChangeConflictException> 例外によって発生する競合に関する情報を提供できます。 詳細については、次を参照してください。[オプティミスティック同時実行制御。概要](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)します。  
+<xref:System.Data.Linq.ObjectChangeConflict> クラスのオブジェクトを使用して、<xref:System.Data.Linq.ChangeConflictException> 例外によって発生する競合に関する情報を提供できます。 詳細については[、「オプティミスティック同時実行制御」を参照してください。概要](optimistic-concurrency-overview.md)。  
   
 ## <a name="example"></a>例  
  次の例では、累積した競合のリストを反復処理します。  
@@ -23,4 +23,4 @@ ms.locfileid: "61904073"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 変更の競合を管理します。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [方法: 変更の競合を管理する](how-to-manage-change-conflicts.md)

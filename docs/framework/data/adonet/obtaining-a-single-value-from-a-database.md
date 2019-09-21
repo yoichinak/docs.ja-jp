@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
-ms.openlocfilehash: 5eb81fd2a64f06f1252f71e251e58df568e7407c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb43d21546a0e98e87aab23db9213309b62320b9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772074"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794752"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>データベースからの単一の値の取得
-テーブルやデータ ストリームの形式ではなく、単に 1 つの値をデータベース情報として返すことが必要な場合があります。 たとえば、数などの集約関数の結果を返すようにする可能性があります (\*)、SUM(Price)、または AVG(Quantity) します。 **コマンド**オブジェクトを使用して 1 つの値を返す機能を提供する、 **ExecuteScalar**メソッド。 **ExecuteScalar**メソッドはスカラー値、結果セットの最初の行の最初の列の値として返します。  
+テーブルやデータ ストリームの形式ではなく、単に 1 つの値をデータベース情報として返すことが必要な場合があります。 たとえば、COUNT (\*)、SUM (Price)、AVG (Quantity) などの集計関数の結果を返すことができます。 **Command**オブジェクトは、 **ExecuteScalar**メソッドを使用して単一の値を返す機能を提供します。 **ExecuteScalar**メソッドは、結果セットの最初の行の最初の列の値として、スカラー値としてを返します。  
   
  <xref:System.Data.SqlClient.SqlCommand> を使用して新しい値をデータベースに挿入するコード サンプルを次に示します。 挿入したレコードの ID 列の値を取得するために、<xref:System.Data.SqlClient.SqlCommand.ExecuteScalar%2A> メソッドが使用されています。  
   
@@ -22,7 +22,7 @@ ms.locfileid: "61772074"
   
 ## <a name="see-also"></a>関連項目
 
-- [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [コマンドの実行](../../../../docs/framework/data/adonet/executing-a-command.md)
-- [DbConnection、DbCommand、および DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [コマンドおよびパラメーター](commands-and-parameters.md)
+- [コマンドの実行](executing-a-command.md)
+- [DbConnection、DbCommand、および DbException](dbconnection-dbcommand-and-dbexception.md)
+- [ADO.NET の概要](ado-net-overview.md)

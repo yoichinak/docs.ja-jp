@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59a25eb9b854f0f303d8b1d97db40406c2818df8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 867157b329218b79c8cc1255b2158bbe83666531
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626276"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045361"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>アンマネージド コードの安全なコーディングのガイドライン
 一部のライブラリ コードは、アンマネージド コードを呼び出す必要があります (たとえば、Win32 などのネイティブ コード API)。 これは、マネージド コード用のセキュリティの境界の外部に出ることなので、注意が必要です。 セキュリティ的に中立なコードである場合、コードとそのコードを呼び出すコードは、アンマネージド コードのアクセス許可 (<xref:System.Security.Permissions.SecurityPermission> フラグを指定した <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> ) を持つ必要があります。  
   
- しかし、呼び出し元がこのような強力なアクセス許可を持つことが不適切な場合もあります。 このようなケースでは、信頼されるコードが、「 [ラッパー コードの保護](../../../docs/framework/misc/securing-wrapper-code.md)」で説明したマネージド ラッパーまたはライブラリ コードのように、仲介役になってしまう可能性があります。 基になるアンマネージド コードの機能が総合的に安全な場合は、それを直接公開できます。それ以外の場合は、最初に適切なアクセス許可のチェック (確認要求: demand) が必要です。  
+ しかし、呼び出し元がこのような強力なアクセス許可を持つことが不適切な場合もあります。 このようなケースでは、信頼されるコードが、「 [ラッパー コードの保護](../misc/securing-wrapper-code.md)」で説明したマネージド ラッパーまたはライブラリ コードのように、仲介役になってしまう可能性があります。 基になるアンマネージド コードの機能が総合的に安全な場合は、それを直接公開できます。それ以外の場合は、最初に適切なアクセス許可のチェック (確認要求: demand) が必要です。  
   
  コードがアンマネージド コードを呼び出すとき、呼び出し元にアンマネージド コードへのアクセス許可を与えたくない場合は、その権限をアサートする必要があります。 アサーションは、フレーム内でのスタック ウォークをブロックします。 このプロセスで、セキュリティ ホールを作らないように注意が必要です。 通常、これは、呼び出し元の適切なアクセス許可を確認要求し、アンマネージド コードを使用して、アクセス許可で認められていることだけを実行し、それ以上のことは実行しないことを意味します。 日付関数の時刻の取得など、いくつかのケースでは、セキュリティ チェックを一切行わずにアンマネージド コードを呼び出し元に直接公開することがあります。 どのようなケースでも、アサートを行うコードはセキュリティ対策を実施することが必要です。  
   
@@ -53,4 +53,4 @@ ms.locfileid: "64626276"
   
 ## <a name="see-also"></a>関連項目
 
-- [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全なコーディングのガイドライン](../../standard/security/secure-coding-guidelines.md)

@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK セマンティック モデルの使用
 description: この概要は、コードのセマンティック モデルを理解して操作するために使用する型を理解するためのものです。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: cf34e2ab9688325f58cb54755db4142a883fca77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c594447bb553f488d60fe83900e2f141608b570f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357489"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105666"
 ---
 # <a name="work-with-semantics"></a>セマンティクスの使用
 
@@ -51,8 +51,8 @@ ms.locfileid: "33357489"
 
 セマンティック モデルは、1 つのソース ファイルに対するすべてのセマンティック情報を表します。 これを使用して以下を検出できます。 
 
-* ソース内の特定の場所で参照されているシンボル。
-* 任意の式の結果の型。
-* エラーや警告など、すべての診断情報。
-* ソース領域内外への変数のフロー状態。
-* より予測的な質問に対する回答。
+- ソース内の特定の場所で参照されているシンボル。
+- 任意の式の結果の型。
+- エラーや警告など、すべての診断情報。
+- ソース領域内外への変数のフロー状態。
+- より予測的な質問に対する回答。

@@ -1,6 +1,6 @@
 ---
 title: CloneEnumWbemClassObject 関数 (アンマネージ API リファレンス)
-description: CloneEnumWbemClassObject 関数では、列挙子の論理コピーを作成します。
+description: CloneEnumWbemClassObject 関数は、列挙子の論理コピーを作成します。
 ms.date: 11/06/2017
 api_name:
 - CloneEnumWbemClassObject
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab660769a49cf12b129cb7f44b8378053a231f8c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1605314f94fd82d2a2cd7be105dde9e273f607bc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761630"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798699"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject 関数
 列挙型内での位置を維持して、列挙子の論理コピーが作成されます。
@@ -45,56 +45,56 @@ HRESULT CloneEnumWbemClassObject (
 ## <a name="parameters"></a>パラメーター
 
 `ppEnum`\
-[out]新しいへのポインターを受け取る[IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)します。
+入出力新しい[IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)へのポインターを受け取ります。
 
 `authLevel`\
-[in]承認レベル。
+から承認レベル。
 
 `impLevel`\
-[in]偽装レベル。
+から偽装レベル。
 
 `pCurrentEnumWbemClassObject`\
-[out]ポインター、 [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)クローンを作成するインスタンス。
+入出力複製する[IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)インスタンスへのポインター。
 
 `strUser`\
-[in]ユーザー名。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
+からユーザー名。 詳細については、「 [Connectserverwmi](connectserverwmi.md)関数」を参照してください。
 
 `strPassword`\
-[in]パスワードです。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
+からパスワード。 詳細については、「 [Connectserverwmi](connectserverwmi.md)関数」を参照してください。
 
-`strAuthority`\ [in] ユーザーのドメイン名。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
+`strAuthority`\ [入力] ユーザーのドメイン名。 詳細については、「 [Connectserverwmi](connectserverwmi.md)関数」を参照してください。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 一般的なエラーが発生しました。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 十分なメモリが使用可能な操作を完了します。 |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 現在のプロセスと WMI のリモート プロシージャ コール (RPC) リンクに失敗しました。 |
-| `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 使用可能なメモリが不足しているため、操作を完了できません。 |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 現在のプロセスと WMI の間のリモートプロシージャコール (RPC) リンクが失敗しました。 |
+| `WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
 
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)メソッド。
+この関数は、 [IEnumWbemClassObject:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)メソッドの呼び出しをラップします。
 
-このメソッドは、「ベスト エフォート」コピーのみです。 多くの CIM オブジェクトの動的な性質のためことは新しい列挙子がソースの列挙子と同じオブジェクトのセットを列挙できません。
+このメソッドは、"ベストエフォート" コピーだけを行います。 多くの CIM オブジェクトは動的な性質を持つため、新しい列挙子がソース列挙子と同じオブジェクトのセットを列挙しない可能性があります。
 
-呼び出すことによって追加のエラー情報を取得するには、関数呼び出しに失敗した場合、 [GetErrorInfo](geterrorinfo.md)関数。
+関数呼び出しが失敗した場合は、 [GetErrorInfo](geterrorinfo.md)関数を呼び出して追加のエラー情報を取得できます。
 
 ## <a name="example"></a>例
 
-例については、次を参照してください。、 [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)メソッド。
+例については、 [IEnumWbemClassObject:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)メソッドを参照してください。
 
 ## <a name="requirements"></a>必要条件
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。
 
- **ヘッダー:** WMINet_Utils.idl
+ **ヘッダー:** WMINet_Utils
 
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

@@ -2,12 +2,12 @@
 title: '条件式: if...そうしたら。。。さも'
 description: でF#条件式を記述して、異なるコードの分岐を実行する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 825149bf296eded3cc2b4d8847ba4d82bea40cdc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d9763f37cd9170c42e968282b54a3ce925e92591
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630398"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083034"
 ---
 # <a name="conditional-expressions-ifthenelse"></a>条件式:`if...then...else`
 
@@ -31,7 +31,7 @@ if boolean-expression then expression1 [ else expression2 ]
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
 
-```
+```console
 10 is less than 20
 What is your name? John
 How old are you? 9

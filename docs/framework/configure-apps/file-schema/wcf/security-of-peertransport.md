@@ -2,22 +2,23 @@
 title: <security> の <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: 1aff79bf5867a3a1ebe05e3f812475dac4b413e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 270ca844f586be256b6483653c868d1cc4396657
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670496"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399778"
 ---
-# <a name="security-of-peertransport"></a>\<セキュリティ > の\<peerTransport >
+# <a name="security-of-peertransport"></a>\<peertransport > \<のセキュリティ >
 ピア チャネルに関連付けられたセキュリティ設定を格納します。使用される認証の種類とメッセージ トランスポートで使用されるセキュリティを含みます。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<binding>  
-\<peerTransport >  
-\<セキュリティ >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<peerTransport >** ](peertransport.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<セキュリティ >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +39,7 @@ ms.locfileid: "61670496"
   
 ## <a name="mode-attribute"></a>mode 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |`None`|セキュリティを無効にします。|  
 |`Transport`|セキュリティは、HTTPS を使用して確保されます。|  
@@ -49,23 +50,23 @@ ms.locfileid: "61670496"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|カスタム バインドのピア トランスポートを定義します。 この要素には、サービスと対話するときに使用される資格情報を指定する `clientCredentialType` 属性があります。 この属性は <xref:System.ServiceModel.PeerTransportCredentialType> 型です。<br /><br /> この要素は <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement> 型です。|  
+|[\<transport>](transport-of-peertransport.md)|カスタム バインドのピア トランスポートを定義します。 この要素には、サービスと対話するときに使用される資格情報を指定する `clientCredentialType` 属性があります。 この属性は <xref:System.ServiceModel.PeerTransportCredentialType> 型です。<br /><br /> この要素は <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<peerTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|カスタム バインドのピア トランスポートを定義します。|  
+|[\<peerTransport >](peertransport.md)|カスタム バインドのピア トランスポートを定義します。|  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [トランスポート セキュリティ](../../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [トランスポート セキュリティ](../../../wcf/feature-details/transport-security.md)
+- [トランスポート](../../../wcf/feature-details/transports.md)
+- [トランスポートの選択](../../../wcf/feature-details/choosing-a-transport.md)
+- [バインディング](../../../wcf/bindings.md)
+- [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

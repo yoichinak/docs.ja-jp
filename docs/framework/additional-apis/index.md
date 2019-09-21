@@ -10,18 +10,18 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0aed6f32bbd3ffdc9446e9d17be2d90c62444ee1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675365"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053242"
 ---
 # <a name="additional-class-libraries-and-apis"></a>追加のクラス ライブラリと API
 
-.NET Framework は絶えず進化しています。 クロス プラットフォーム開発を向上させ、新しい機能を早期導入、新機能はアウトオブ バンド (OOB) リリースします。 ここでは、ドキュメントが用意されている OOB プロジェクトの一覧を示します。  
+.NET Framework は絶えず進化しています。 クロスプラットフォームの開発を改善し、新しい機能を早期に導入するために、新機能がアウトオブバンド (OOB) でリリースされます。 ここでは、ドキュメントが用意されている OOB プロジェクトの一覧を示します。  
   
-さらに、いくつかのライブラリは、特定のプラットフォームまたは .NET Framework の実装を対象にしています。 たとえば、<xref:System.Text.CodePagesEncodingProvider>クラスが .NET Framework を使用して開発された UWP アプリで使用できるコード ページ エンコーディングを使用します。 ここでは、これらのライブラリの一覧も示します。  
+さらに、いくつかのライブラリは、特定のプラットフォームまたは .NET Framework の実装を対象にしています。 たとえば<xref:System.Text.CodePagesEncodingProvider> 、クラスを使用すると、.NET Framework を使用して開発された UWP アプリでコードページエンコーディングを使用できるようになります。 ここでは、これらのライブラリの一覧も示します。  
   
 ## <a name="oob-projects"></a>OOB プロジェクト
   
@@ -36,7 +36,7 @@ ms.locfileid: "61675365"
   
 | プロジェクト | 説明 |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | 拡張、<xref:System.Text.EncodingProvider>クラスのコード ページ エンコーディングをユニバーサル Windows プラットフォームを対象とするアプリを使用できるようにします。 |  
+| <xref:System.Text.CodePagesEncodingProvider> | <xref:System.Text.EncodingProvider>クラスを拡張して、ユニバーサル Windows プラットフォームを対象とするアプリでコードページエンコーディングを使用できるようにします。 |  
   
 ## <a name="private-apis"></a>プライベート API  
 
@@ -44,22 +44,22 @@ ms.locfileid: "61675365"
   
 | API 名 |
 | -------- |
-| [System.Net.Connection クラス](../../../docs/framework/additional-apis/connection.md) |
-| [System.Net.Connection.m\_WriteList フィールド](../../../docs/framework/additional-apis/m_writelist.md) |
-| [System.Net.ConnectionGroup クラス](../../../docs/framework/additional-apis/connectiongroup.md) |
-| [System.Net.ConnectionGroup.m\_ConnectionList フィールド](../../../docs/framework/additional-apis/m_connectionlist.md) |
-| [System.Net.CoreResponseData クラス](../../../docs/framework/additional-apis/coreresponsedata.md) |
-| [System.Net.CoreResponseData.m\_ResponseHeaders Field](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
-| [System.Net.CoreResponseData.m\_StatusCode フィールド](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
-| [System.Net.HttpWebRequest します。\_AutoRedirects フィールド](../../../docs/framework/additional-apis/_autoredirects.md) |
-| [System.Net.HttpWebRequest します。\_CoreResponse フィールド](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
-| [System.Net.HttpWebRequest します。\_HttpResponse フィールド](../../../docs/framework/additional-apis/_httpresponse.md) |
-| [System.Net.ServicePoint.m\_ConnectionGroupList Field](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |
-| [System.Net.ServicePointManager.s\_ServicePointTable Field](../../../docs/framework/additional-apis/s_servicepointtable.md) |
-| [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes Field](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |
-| [System.Windows.Forms.Design.DataMemberFieldEditor Class](../../../docs/framework/additional-apis/datamemberfieldeditor-class.md) |
-| [System.Windows.Forms.Design.DataMemberListEditor Class](../../../docs/framework/additional-apis/datamemberlisteditor-class.md) |
+| [System .Net. Connection クラス](connection.md) |
+| [System .net. 接続. m\_writelist フィールド](m_writelist.md) |
+| [システム .Net. ConnectionGroup クラス](connectiongroup.md) |
+| [System .net. connectiongroup. m\_connectiongroup フィールド](m_connectionlist.md) |
+| [CoreResponseData クラス](coreresponsedata.md) |
+| [System.Net.CoreResponseData.m\_ResponseHeaders Field](coreresponsedata_m_responseheaders.md) |
+| [CoreResponseData の\_StatusCode フィールド](coreresponsedata_m_statuscode.md) |
+| [HttpWebRequest。\_Autoredirects フィールド](_autoredirects.md) |
+| [HttpWebRequest。\_CoreResponse フィールド](httpwebrequest__coreresponse.md) |
+| [HttpWebRequest。\_Httpresponse.cache フィールド](_httpresponse.md) |
+| [System.Net.ServicePoint.m\_ConnectionGroupList Field](m_connectiongrouplist.md) |
+| [System.Net.ServicePointManager.s\_ServicePointTable Field](s_servicepointtable.md) |
+| [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes Field](s-isdebuggercheckdisabledfortestpurposes-field.md) |
+| [System.Windows.Forms.Design.DataMemberFieldEditor Class](datamemberfieldeditor-class.md) |
+| [System.Windows.Forms.Design.DataMemberListEditor Class](datamemberlisteditor-class.md) |
   
 ## <a name="see-also"></a>関連項目
 
-- [NET Framework および特別なリリース](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
+- [NET Framework および特別なリリース](../get-started/the-net-framework-and-out-of-band-releases.md)

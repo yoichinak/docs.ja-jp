@@ -9,18 +9,18 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b3ad3d0c3223d5baf937ca22fd48d46a80979aac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629877"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913671"
 ---
 # <a name="how-to-localize-an-application"></a>方法: アプリケーションをローカライズする
 このチュートリアルでは、LocBaml ツールを使用して、ローカライズされたアプリケーションを作成する方法について説明します。  
   
 > [!NOTE]
->  LocBaml ツールは、実稼働可能なアプリケーションではありません。 それはローカリゼーション API の一部を使用するサンプルとして提供されており、ローカリゼーション ツールを記述する方法を例示します。  
+> LocBaml ツールは、実稼働可能なアプリケーションではありません。 それはローカリゼーション API の一部を使用するサンプルとして提供されており、ローカリゼーション ツールを記述する方法を例示します。  
   
 <a name="Introduction"></a>   
 ## <a name="overview"></a>概要  
@@ -28,19 +28,19 @@ ms.locfileid: "68629877"
   
 <a name="Requirements"></a>   
 ## <a name="requirements"></a>必要条件  
- この説明の過程で、コマンド ラインから実行するコンパイラである [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] を使用します。  
+ この説明では、コマンドラインから実行するコンパイラである Microsoft build engine (MSBuild) を使用します。  
   
- また、プロジェクト ファイルを使用するよう指示されます。 とプロジェクトファイルの使用[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]方法については、「[ビルドと配置](../app-development/building-and-deploying-wpf-applications.md)」を参照してください。  
+ また、プロジェクト ファイルを使用するよう指示されます。 MSBuild とプロジェクトファイルの使用方法については、「[ビルドと配置](../app-development/building-and-deploying-wpf-applications.md)」を参照してください。  
   
  この説明のすべての例では、カルチャとして en-US (英語-米国) を使用します。 別の言語をインストールしなくても、この例の手順全体の作業を行えます。  
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>サンプルのアプリケーションの作成  
- このステップでは、ローカリゼーション用のアプリケーションを準備します。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のサンプルでは、この説明のコード サンプルで使用される HelloApp のサンプルが提供されています。 このサンプルを使用する場合は、 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] [LocBaml ツールサンプル](https://go.microsoft.com/fwlink/?LinkID=160016)からファイルをダウンロードします。  
+ このステップでは、ローカリゼーション用のアプリケーションを準備します。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のサンプルでは、この説明のコード サンプルで使用される HelloApp のサンプルが提供されています。 このサンプルを使用する場合は、 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] [LocBaml ツールサンプル](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)からファイルをダウンロードします。  
   
 1. ローカリゼーションを開始するポイントまで、アプリケーションを開発します。  
   
-2. [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] がメイン アセンブリとサテライト アセンブリ (.resources.dll の拡張子が付いたファイル) を生成してニュートラルな言語リソースを含めるように、プロジェクト ファイルの開発言語を指定します。 HelloApp サンプルのプロジェクト ファイルは HelloApp.csproj です。 このファイルに、以下のように特定される開発言語があります。  
+2. プロジェクトファイルで開発言語を指定して、MSBuild がニュートラル言語リソースを格納するメインアセンブリとサテライトアセンブリ (.resources 拡張子を持つファイル) を生成するようにします。 HelloApp サンプルのプロジェクト ファイルは HelloApp.csproj です。 このファイルに、以下のように特定される開発言語があります。  
   
      `<UICulture>en-US</UICulture>`  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68629877"
     - **な**詳細モードの情報を表示します。  
   
     > [!NOTE]
-    >  ツールの実行時にオプションの一覧が必要な場合は、「 **LocBaml** 」と入力し、enter キーを押します。  
+    > ツールの実行時にオプションの一覧が必要な場合は、「 **LocBaml** 」と入力し、enter キーを押します。  
   
 <a name="parse_dll"></a>   
 ## <a name="use-locbaml-to-parse-a-file"></a>LocBaml を使用してファイルを解析する  
@@ -121,7 +121,7 @@ ms.locfileid: "68629877"
      **LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**  
   
     > [!NOTE]
-    >  入力ファイル HelloApp.resources.dll が LocBaml.exe と同じディレクトリに存在しない場合は、いずれかのファイルを移動して両方のファイルが同じディレクトリにあるようにします。  
+    > 入力ファイル HelloApp.resources.dll が LocBaml.exe と同じディレクトリに存在しない場合は、いずれかのファイルを移動して両方のファイルが同じディレクトリにあるようにします。  
   
 3. LocBaml を実行してファイルを解析する際、出力はコンマ区切り (.csv ファイル) またはタブ区切り (.txt ファイル) された 7 つのフィールドで構成されます。 HelloApp.resources.dll の解析済みの .csv ファイルを次に示します。
 
@@ -151,7 +151,7 @@ ms.locfileid: "68629877"
   
    |BAML 名|リソース キー|Category|読みやすさ|変更可能性|コメント|値|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|無視|FALSE|FALSE||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|無視|false|false||#Text1;#Text2|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|なし|true|true||Hello World|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|なし|true|true||Goodbye World|
   
@@ -172,7 +172,7 @@ ms.locfileid: "68629877"
      **LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**  
   
     > [!NOTE]
-    >  入力ファイル Hello.csv が実行可能ファイル LocBaml.exe と同じディレクトリに存在しない場合は、いずれかのファイルを移動して、両方のファイルが同じディレクトリにあるようにします。  
+    > 入力ファイル Hello.csv が実行可能ファイル LocBaml.exe と同じディレクトリに存在しない場合は、いずれかのファイルを移動して、両方のファイルが同じディレクトリにあるようにします。  
   
 2. C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll ディレクトリにある古い HelloApp.resources.dll ファイルを新規作成した HelloApp.resources.dll ファイルに置き換えます。  
   

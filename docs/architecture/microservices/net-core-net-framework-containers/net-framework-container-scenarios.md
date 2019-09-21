@@ -2,12 +2,12 @@
 title: Docker コンテナー用 .NET Framework を選択するタイミング
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Docker コンテナー用 .NET Framework を選択するタイミング'
 ms.date: 01/07/2019
-ms.openlocfilehash: 53164654710775320f023df9fb56a78506bd3a1a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0b948017c3bbbcc8c43d5d2d9698d9a1a6f9deed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675739"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784084"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker コンテナー用 .NET Framework を選択するタイミング
 
@@ -57,7 +57,7 @@ Microsoft やサードパーティ製のプラットフォームの中には、.
 - **.NET Framework から .NET Core への移植**  
     [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
-- **Docker 上の .NET Core のガイド** [https://docs.microsoft.com/dotnet/core/docker/intro-net-docker](../../../core/docker/intro-net-docker.md)
+- **Docker 上の .NET Core のガイド** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
 - **.NET コンポーネントの概要**  
     [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)

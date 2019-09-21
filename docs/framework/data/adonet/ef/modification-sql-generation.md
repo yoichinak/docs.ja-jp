@@ -2,18 +2,18 @@
 title: 変更 SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 13ed7186981e82d47f00b6a38a4328ed75f527f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034139"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854294"
 ---
 # <a name="modification-sql-generation"></a>変更 SQL 生成
 
 ここでは、SQL:1999 準拠のデータベース プロバイダーのための変更 SQL 生成モジュールを開発する方法について説明します。 このモジュールは、変更コマンド ツリーを適切な SQL INSERT ステートメント、UPDATE ステートメント、または DELETE ステートメントに変換します。
 
-Select ステートメントの SQL 生成の詳細については、次を参照してください。 [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)します。
+Select ステートメントの SQL 生成の詳細については、「 [sql の生成](sql-generation.md)」を参照してください。
 
 ## <a name="overview-of-modification-command-trees"></a>変更コマンド ツリーの概要
 
@@ -27,11 +27,11 @@ DbModificationCommandTree は、DbCommandTree から継承される変更 DML �
 
 - DbDeleteCommandTree
 
-DbModificationCommandTree とその実装によって生成される、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]常に単一行の操作を表します。 ここでは、これら 3 つの種類の実装と、.NET Framework Version 3.5 における制約について説明します。
+Entity Framework によって生成される DbModificationCommandTree とその実装は、常に単一行演算を表します。 ここでは、これら 3 つの種類の実装と、.NET Framework Version 3.5 における制約について説明します。
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
+![ダイアグラム](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
-DbModificationCommandTree には、変更操作のターゲット セットを表す Target プロパティがあります。 入力セットを定義する Target の Expression プロパティは、常に DbScanExpression です。  DbScanExpression は、どちらか、テーブルまたはビューを表すことができます。 または一連のデータ定義クエリ メタデータ プロパティを"Defining Query"、ターゲットの場合は null 以外。
+DbModificationCommandTree には、変更操作のターゲット セットを表す Target プロパティがあります。 入力セットを定義する Target の Expression プロパティは、常に DbScanExpression です。  DbScanExpression は、テーブルまたはビューを表すことができます。また、対象のメタデータプロパティの "定義クエリ" が null 以外の場合は、クエリで定義されたデータのセットを表すことができます。
 
 モデル内で定義クエリを使用してセットが定義されているが、対応する変更操作のための関数が指定されていない場合、クエリを表す DbScanExpression は、変更のターゲットとしてプロバイダーにのみ影響を与えます。 プロバイダーによっては、このようなシナリオはサポートされません (たとえば、SqlClient ではサポートされません)。
 
@@ -74,11 +74,11 @@ Value は、プロパティを更新するための新しい値を指定しま�
 
 Predicate は、ターゲット コレクションのどのメンバーを更新または削除する必要があるかを判定するために使用される述語を指定します。 これは、DbExpressions の次のサブセットから構成される式ツリーです。
 
-- Equals 型の DbComparisonExpression、右辺の子、DbPropertyExpression として以下に制限されていると、左辺の子は DbConstantExpression です。
+- DbComparisonExpression が Equals で、右側の子が DbPropertyExpression で、次のように制限されており、左側の子が DbConstantExpression になっています。
 
 - DbConstantExpression
 
-- 以下として制限 DbPropertyExpression で DbIsNullExpression
+- DbPropertyExpression を以下の制限付きで DbIsNullExpression
 
 - 対応する DbModificationCommandTree の Target への参照を表す、DbVariableReferenceExpression に対する DbPropertyExpression。
 
@@ -90,11 +90,11 @@ Predicate は、ターゲット コレクションのどのメンバーを更新
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>サンプル プロバイダーでの変更 SQL 生成
 
-[Entity Framework サンプル プロバイダー](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)をサポートする ADO.NET データ プロバイダーのコンポーネントを示して、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]します。 このサンプルは、SQL Server 2005 データベースを対象としており、System.Data.SqlClient ADO.NET 2.0 データ プロバイダーの最上位にラッパーとして実装されます。
+[Entity Framework サンプルプロバイダー](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)は、Entity Framework をサポートする ADO.NET データプロバイダーのコンポーネントを示しています。 このサンプルは、SQL Server 2005 データベースを対象としており、System.Data.SqlClient ADO.NET 2.0 データ プロバイダーの最上位にラッパーとして実装されます。
 
 SQL Generation\DmlSqlGenerator.cs ファイル内にあるサンプル プロバイダーの変更 SQL 生成モジュールは、DbModificationCommandTree を入力として受け取り、単一の変更 SQL ステートメントを生成します。この後に、DbModificationCommandTree によって指定された場合にリーダーを返す SELECT ステートメントが続く場合もあります。 生成されたコマンドの構造は、対象の SQL Server データベースの影響を受けます。
 
-### <a name="helper-classes-expressiontranslator"></a>ヘルパー クラス。ExpressionTranslator
+### <a name="helper-classes-expressiontranslator"></a>ヘルパークラス:ExpressionTranslator
 
 ExpressionTranslator は、DbExpression 型のすべての変更コマンド ツリー プロパティのための一般的な軽量のトランスレーターです。 このトランスレーターは、変更コマンド ツリーのプロパティを制限する式の型の変換のみをサポートし、特定の制約を考慮して構築されています。
 
@@ -116,7 +116,7 @@ DbPropertyExpression のインスタンスが常に入力テーブルを表す�
 
 サンプル プロバイダーで指定されている DbInsertCommandTree に対して生成される挿入コマンドは、以下に示す 2 つの挿入テンプレートのどちらかに基づいています。
 
-1 つ目のテンプレートには、SetClauses のリストの値を受け取って挿入を実行するコマンドと、挿入された行の Returning プロパティが null 以外の場合にその Returning プロパティで指定されたプロパティを返す SELECT ステートメントが含まれています。 述語要素"\@ @ROWCOUNT > 0" は行が挿入された場合は true。 述語要素"keyMemberI = keyValueI &#124; scope_identity()"図形は、"keyMemberI = scope_identity()"keyMemberI がストア生成キーの場合 scope_identity() では、identity (に挿入された最後の id 値を返すためにのみ列のストア生成)。
+1 つ目のテンプレートには、SetClauses のリストの値を受け取って挿入を実行するコマンドと、挿入された行の Returning プロパティが null 以外の場合にその Returning プロパティで指定されたプロパティを返す SELECT ステートメントが含まれています。 述語要素 "\@ @ROWCOUNT > 0" は、行が挿入された場合に true になります。 述語要素 "keyMemberI = keyValueI &#124; scope_identity ()" は、keymemberi がストアによって生成されたキーである場合にのみ、図形 "keymemberi = scope_identity ()" を受け取ります。これは、scope_identity () が id に挿入された最後の id 値を返すためです (ストアによって生成された列)。
 
 ```sql
 -- first insert Template
@@ -212,7 +212,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-Set 句が偽の set 句 ("@i = 0") set 句が指定されていない場合にのみです。 これは、ストア計算列が再計算されるようにするためです。
+Set 句には、set 句が指定さ@iれていない場合にのみ、偽の set 句 ("= 0") が設定されます。 これは、ストア計算列が再計算されるようにするためです。
 
 Returning プロパティが null でない場合にのみ、SELECT ステートメントが生成され、Returning プロパティに指定されたプロパティが返されます。
 
@@ -302,4 +302,4 @@ where ([CategoryID] = @p0)
 
 ## <a name="see-also"></a>関連項目
 
-- [Entity Framework データ プロバイダーの作成](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Entity Framework データ プロバイダーの作成](writing-an-ef-data-provider.md)

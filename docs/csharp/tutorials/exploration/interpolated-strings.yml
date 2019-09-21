@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 70d63f460ad2e67fe60cd8d5130e8ff22889d8be
-  ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+  ms.openlocfilehash: eb4b1571b4d00d90034148f7b595f4499859ce4b
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/24/2019
-  ms.locfileid: "66195951"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850947"
 items:
 - durationInMinutes: 2
   content: >
@@ -40,7 +40,7 @@ items:
     上記の例には、すべての挿入文字列式に含める必要がある次の 2 つの要素が含まれています。
 
 
-    - 始まりの引用符文字の前の `$` で始まる文字列リテラル。 `$` シンボルと引用符文字の間にスペースを挿入することはできません  (スペースが含まれている場合の動作を確認したい場合は、対話型ウィンドウで `$` 文字の後にスペースを挿入し、更新されたコードを実行します。 C# コンパイラには "予期しない '$' 文字です" と示されます)。
+    - 始まりの引用符文字の前の `$` で始まる文字列リテラル。 `$` シンボルと引用符文字の間にスペースを挿入することはできません (スペースが含まれている場合の動作を確認したい場合は、対話型ウィンドウで `$` 文字の後にスペースを挿入し、更新されたコードを実行します。 C# コンパイラには "予期しない '$' 文字です" と示されます)。
 
 
     - 1 つ以上の*補間式*。 補間式は、始めかっこと終わりかっこ (`{` と `}`) で示されます。 かっこ内に (`null` を含む) 値を返す C# 式を配置できます。
@@ -125,7 +125,7 @@ items:
 
     > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - content: >-
-    文字列補間の対話式チュートリアルはこれで終了です。 下の **C# のコレクション**のリンクをクリックして、次の対話式チュートリアルを開始することができます。また、[.NET サイト](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)にアクセスして .NET Core SDK をダウンロードし、ご利用のコンピューター上でプロジェクトを作成し、コーディングを続けることもできます。 "学習の継続" の手順では、これらのチュートリアルに戻ります。
+    文字列補間の対話式チュートリアルはこれで終了です。 下の **C# のコレクション**のリンクをクリックして、次の対話式チュートリアルを開始することができます。また、[.NET サイト](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)にアクセスして .NET Core SDK をダウンロードし、ご利用のコンピューター上でプロジェクトを作成し、コーディングを続けることもできます。 "次の手順" セクションでは、これらのチュートリアルに戻ります。
 
 
     詳細については、[文字列補間](../../language-reference/tokens/interpolated.md)に関するトピックを参照してください。

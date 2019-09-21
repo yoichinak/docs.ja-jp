@@ -9,26 +9,26 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing rows
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
-ms.openlocfilehash: 1f6312f9ac8520b2131e1d2d7a7fb996aee6060e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0dba318e6aa35761f4e9471fdb13b65644747b57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651590"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966504"
 ---
 # <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>方法: 行テンプレートを使用して Windows フォーム DataGridView コントロールの行をカスタマイズする
-<xref:System.Windows.Forms.DataGridView>コントロール データ バインディングを使用または呼び出すときに、コントロールに追加されるすべての行の基礎として行テンプレートを使用して、<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType>メソッドを使用する既存の行を指定することなしです。  
+コントロール<xref:System.Windows.Forms.DataGridView>は、データバインディングを使用してコントロールに追加するすべての行の基礎として、または使用する既存<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType>の行を指定せずにメソッドを呼び出すと、行テンプレートを使用します。  
   
- 行テンプレートを使用してよりも行の動作と外観をより細かく制御、<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>プロパティを提供します。 行のテンプレートと、いずれかを設定できます<xref:System.Windows.Forms.DataGridViewRow>を含むプロパティ<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>します。  
+ 行テンプレートを使用すると、 <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>プロパティよりも行の外観と動作をより細かく制御できます。 行テンプレートを使用して、など<xref:System.Windows.Forms.DataGridViewRow> <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>のプロパティを設定できます。  
   
- これは、状況によっては、特定の効果を実現するために行のテンプレートを使用する必要があります。 行の高さ情報を格納できないなど、<xref:System.Windows.Forms.DataGridViewCellStyle>ので、すべての行で使用される既定の高さを変更する行のテンプレートを使用する必要があります。 行のテンプレートから派生した独自のクラスを作成する際にも役立ちます<xref:System.Windows.Forms.DataGridViewRow>コントロールに新しい行を追加するときに使用してカスタムの型を必要とします。  
+ 場合によっては、行テンプレートを使用して特定の効果を実現する必要があります。 たとえば、行の高さ情報をに格納<xref:System.Windows.Forms.DataGridViewCellStyle>することはできません。そのため、行テンプレートを使用して、すべての行で使用される既定の高さを変更する必要があります。 行テンプレートは、から<xref:System.Windows.Forms.DataGridViewRow>派生した独自のクラスを作成し、新しい行がコントロールに追加されたときにカスタム型を使用する場合にも役立ちます。  
   
 > [!NOTE]
->  行のテンプレートは、行が追加されたときにのみ使用されます。 行テンプレートを変更することで既存の行を変更することはできません。  
+> 行テンプレートは、行が追加された場合にのみ使用されます。 行テンプレートを変更して既存の行を変更することはできません。  
   
 ### <a name="to-use-the-row-template"></a>行テンプレートを使用するには  
   
-- 取得したオブジェクトのプロパティを設定、<xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>プロパティ。  
+- <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>プロパティから取得したオブジェクトのプロパティを設定します。  
   
      [!code-cpp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CPP/datagridviewrowtemplate.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CS/datagridviewrowtemplate.cs#1)]

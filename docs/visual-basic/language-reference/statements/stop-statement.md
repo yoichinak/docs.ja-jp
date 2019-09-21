@@ -12,12 +12,12 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: 80d6734945324f3f517b256051486273f6b687ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a617038ec51d98c62b6cf7e3c124c8af01305bac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783853"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957621"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop ステートメント (Visual Basic)
 実行を中断します。  
@@ -29,15 +29,15 @@ Stop
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 配置できる`Stop`ステートメントの実行を中断する手順で任意の場所。 使用して、`Stop`ステートメントは、コード内のブレークポイントの設定に似ています。  
+ ステートメントをプロシージャ`Stop`内の任意の場所に配置して、実行を中断することができます。 `Stop`ステートメントを使用することは、コードにブレークポイントを設定することと似ています。  
   
- `Stop`ステートメントのとは異なり、実行を中断`End`、すべてのファイルを終了したり、コンパイル済み実行可能 (.exe) ファイルで検出された場合を除き、任意の変数をクリアしません。  
+ ステートメント`Stop`は実行を中断します`End`が、とは異なり、コンパイルされた実行可能 (.exe) ファイルに存在しない限り、ファイルを閉じたり変数をクリアしたりすることはありません。  
   
 > [!NOTE]
->  場合、`Stop`統合開発環境 (IDE) の外部で実行されているコードのステートメントが検出された場合、デバッガーが呼び出されます。 これは、コードがデバッグ、または製品のモードでコンパイルするかどうかに関係なく当てはまります。  
+> 統合開発環境 (IDE: integrated development environment) の外部で実行されているコードでステートメントが検出されると、デバッガーが呼び出されます。`Stop` これは、コードがデバッグモードとリテールモードのどちらでコンパイルされたかに関係なく当てはまります。  
   
 ## <a name="example"></a>例  
- この例では、`Stop`ステートメント内の各繰り返しの実行を中断、`For...Next`ループします。  
+ この例では`Stop` 、ステートメントを使用し`For...Next`て、ループを通じて各反復処理の実行を中断します。  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   

@@ -2,12 +2,12 @@
 title: 署名または暗号化、あるいはその両方が行われたカスタム ヘッダーの作成
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: 76bfb6040f6b78765ed42ce7fbf86cdbd62c1e48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d737647f8c0442a3d6fa0d077a1ffe2c251ea043
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857377"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856176"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>署名または暗号化、あるいはその両方が行われたカスタム ヘッダーの作成
 WCF クライアントを使用して WCF 以外のサービスを呼び出す場合、状況によっては、カスタム SOAP ヘッダーが必要です。 WCF には正規化のバグがあり、署名および暗号化されたカスタム ヘッダーは、WCF 以外のサービスで使用できません。 この問題は、既定の XML 名前空間に対する正規化の誤りが原因で発生します。 この問題が生じるのは、署名または暗号化、あるいはその両方が行われたカスタム ヘッダーを持つ、WCF 以外のサービスを呼び出す場合のみです。  サービスは、受信したメッセージに署名または暗号化、あるいはその両方が行われたカスタム ヘッダーが含まれている場合、署名を検証できません。 この回避策では正規化のバグを回避し、WCF 以外のサービスとの相互運用が可能になりますが、WCF サービスとの相互運用性は妨げられません。  
@@ -15,7 +15,7 @@ WCF クライアントを使用して WCF 以外のサービスを呼び出す�
 ## <a name="defining-the-custom-header"></a>カスタム ヘッダーの定義  
  カスタム ヘッダーは、メッセージ コントラクトを定義し、ヘッダーとして送信するメンバーを <xref:System.ServiceModel.MessageHeaderAttribute> 属性を使用してマークすることで定義されます。 正規化のバグを回避するには、XML シリアライザーが既定の名前空間の宣言ではなくプレフィックスによってカスタム ヘッダーの名前空間を宣言する必要があります。 次のコードは、メッセージ ヘッダーとして使用されるデータ型を正しい名前空間宣言で定義する方法を示します。  
   
-```  
+```csharp
 [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.648")]  
 [System.SerializableAttribute()]  
 [System.Diagnostics.DebuggerStepThroughAttribute()]  
@@ -45,7 +45,7 @@ public partial class msgHeaderElement
   
  このコードでは、XML シリアライザーによってシリアル化される `msgHeaderElement` という新しい型を宣言しています。 この型のインスタンスがシリアル化されると、名前空間が "h" プレフィックスで定義されるため、正規化のバグが回避されます。  この後、次の例に示すように、メッセージ コントラクトによって `msgHeaderElement` のインスタンスを定義し、<xref:System.ServiceModel.MessageHeaderAttribute> 属性でそのインスタンスをマークします。  
   
-```  
+```csharp
 [MessageContract]  
 public  class MyMessageContract  
 {  

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee30d4f32e05fab27ae70052b28d3d152594cf90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778417"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795369"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader 関数
-指定したファイルの履歴のリーダーを作成します。  
+指定されたファイルの履歴リーダーを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,26 +37,26 @@ HRESULT CreateHistoryReader (
   
 ## <a name="parameters"></a>パラメーター  
  `wzFilePath`  
- [in]ファイル パス。  
+ からファイルパス。  
   
  `ppHistoryReader`  
- [out]正常に完了には、履歴リーダーへのポインターが含まれています。  
+ 入出力正常に完了した場合は、履歴リーダーへのポインターが含まれます。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、次の表で説明されている値だけでなく、WinError.h で定義されている標準の COM エラー コードを返します。  
+ このメソッドは、次の表で説明する値に加えて、Winerror.h で定義されている標準 COM エラーコードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドが正常に完了したことを示します。|  
-|E_INVALIDARG|示します`wzFilePath`または`ppHistoryReader`の参照を null に設定されます。|  
+|E_INVALIDARG|または`wzFilePath` `ppHistoryReader`が null 参照に設定されていることを示します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ライブラリ:** Fusion.dll  
+ **ライブラリ**Fusion .dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion グローバル静的関数](fusion-global-static-functions.md)

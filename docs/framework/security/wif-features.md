@@ -3,24 +3,25 @@ title: WIF の機能
 ms.date: 03/30/2017
 ms.assetid: 7e13cae9-7cd1-491f-aa75-0735320a7be6
 author: BrucePerlerMS
-ms.openlocfilehash: faccf8a9705355943a74daa975fc0d88a420a1f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c8abac5a4b35eba6969272388609084217c0ae92
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592249"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045055"
 ---
 # <a name="wif-features"></a>WIF の機能
-- [Visual Studio 2012 の ID およびアクセス ツール](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
+
+- [Visual Studio 2012 の ID およびアクセス ツール](identity-and-access-tool-for-vs.md)  
   
-- [WIF セッション管理](../../../docs/framework/security/wif-session-management.md)  
+- [WIF セッション管理](wif-session-management.md)  
   
-- [WIF および Web ファーム](../../../docs/framework/security/wif-and-web-farms.md)  
+- [WIF および Web ファーム](wif-and-web-farms.md)  
   
-- [WSFederation 認証モジュールの概要](../../../docs/framework/security/wsfederation-authentication-module-overview.md)  
+- [WSFederation 認証モジュールの概要](wsfederation-authentication-module-overview.md)  
   
-- [WSTrustChannelFactory および WSTrustChannel](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)  
+- [WSTrustChannelFactory および WSTrustChannel](wstrustchannelfactory-and-wstrustchannel.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [Windows Identity Foundation](../../../docs/framework/security/index.md)
+- [Windows Identity Foundation](index.md)

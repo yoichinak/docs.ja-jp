@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de85d264d709da747fab636f40c99bc0d0752251
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c3a6892dbed172c0be3b036014d393657dbc8593
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742357"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777521"
 ---
 # <a name="addfile2-method"></a>AddFile2 メソッド
-アセンブリには、ファイルを追加します。 非バインド モジュールの作成にも使用できます。  
+アセンブリにファイルを追加します。 は、バインドされていないモジュールを作成するためにも使用できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,28 +41,28 @@ HRESULT AddFile2(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ファイルを追加するアセンブリの ID。  
+ ファイルが追加されるアセンブリの ID。  
   
  `pszFilename`  
  追加するファイルの名前。  
   
  `dwFlags`  
- COM +`FileDef`などフラグ`ffContainsNoMetaData`と`ffWriteable`します。 `dwFlags` 渡される[DefineFile メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)します。  
+ Com `FileDef` + フラグ ( `ffContainsNoMetaData`や`ffWriteable`など)。 `dwFlags`は、[メソッド](../metadata/imetadataassemblyemit-definefile-method.md)に渡されます。  
   
  `pEmitter`  
- インターフェイスを[IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)インターフェイス。  
+ [IMetaDataEmit2 インターフェイス](../metadata/imetadataemit2-interface.md)インターフェイスへのインターフェイス。  
   
  `pFileToken`  
  追加するファイルの ID を受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [ALink API](index.md)

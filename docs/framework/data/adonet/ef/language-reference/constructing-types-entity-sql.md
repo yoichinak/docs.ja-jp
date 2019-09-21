@@ -2,22 +2,22 @@
 title: コンストラクター (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-ms.openlocfilehash: d43793b1d514b9dd81f524a30cd5bf1622aa5258
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7113aaf1c2caa982a8ab4751928856c1271570cb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64632220"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251118"
 ---
 # <a name="constructing-types-entity-sql"></a>コンストラクター (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 次の 3 つの種類のコンス トラクターを提供します。 行コンス トラクター、名前付きの型のコンス トラクター、およびコレクション コンス トラクター。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]には、行コンストラクター、名前付きの型コンストラクター、およびコレクションコンストラクターの3種類のコンストラクターが用意されています。  
   
 ## <a name="row-constructors"></a>行コンストラクター  
- 1 つまたは複数の値から構造的に型付けされた匿名レコードを構築するには、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] の行コンストラクターを使用します。 行コンストラクターの結果の型は、行の構築に使用された値の型に対応するフィールド型を持つ行型です。 たとえば、次の式は型の値を構築します`Record(a int, b string, c int)`:。  
+ 1 つまたは複数の値から構造的に型付けされた匿名レコードを構築するには、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] の行コンストラクターを使用します。 行コンストラクターの結果の型は、行の構築に使用された値の型に対応するフィールド型を持つ行型です。 たとえば、次の式は型`Record(a int, b string, c int)`の値を構築します。  
   
  `ROW(1 AS a, "abc" AS b, a + 34 AS c)`  
   
- 行コンストラクターで式の別名が指定されていなければ、Entity Framework は別名の生成を試みます。 詳細については、「別名規則」セクションを参照してください。[識別子](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)します。  
+ 行コンストラクターで式の別名が指定されていなければ、Entity Framework は別名の生成を試みます。 詳細については、「[識別子](identifiers-entity-sql.md)」の「エイリアスの規則」セクションを参照してください。  
   
  次の規則は、行コンストラクターで別名を定義する式に適用されます。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "64632220"
   
 - 同じ行コンストラクター内の 2 つの式に同じ別名を指定することはできません。  
   
- 行コンス トラクターの詳細については、次を参照してください。[行](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)します。  
+ 行コンストラクターの詳細については、「 [row](row-entity-sql.md)」を参照してください。  
   
 ## <a name="collection-constructors"></a>コレクション コンストラクター  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] のコレクション コンストラクターを使用して、値のリストからマルチセットのインスタンスを作成します。 コンストラクターのすべての値は、相互に互換性のある型 `T` でなければなりません。また、コンストラクターは `Multiset<T>` 型のコレクションを生成します。 たとえば、次の式は整数のコレクションを作成します。  
@@ -38,7 +38,7 @@ ms.locfileid: "64632220"
   
  `multiset() {}`  
   
- 詳細については、次を参照してください。 [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)します。  
+ 詳細については、「[マルチセット](multiset-entity-sql.md)」を参照してください。  
   
 ## <a name="named-type-constructors-namedtype-initializers"></a>名前付きの型コンストラクター (NamedType 初期化子)  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、型コンストラクター (初期化子) を使用して、名前付きの複合型およびエンティティ型のインスタンスを作成できます。 たとえば、次の式は `Person` 型のインスタンスを作成します。  
@@ -61,10 +61,10 @@ ms.locfileid: "64632220"
   
  コンストラクターに対する引数は、型の属性の宣言と同じ順序であると見なされます。  
   
- 詳細については、次を参照してください。[という名前の型コンス トラクター](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)します。  
+ 詳細については、「[名前付きの型コンストラクター](named-type-constructor-entity-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [型システム](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)
+- [Entity SQL の概要](entity-sql-overview.md)
+- [型システム](type-system-entity-sql.md)

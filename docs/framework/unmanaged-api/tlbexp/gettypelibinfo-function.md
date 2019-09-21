@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916d62a2b79a44d92611e735c6f9bbb3e01970e2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d8ea7df9396e9199d04ad5609daa9d2b01761f36
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782741"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798893"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 関数
-調べることで指定したタイプ ライブラリに関する情報を返します、 [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr)構造体。  
+指定したタイプライブラリに関する情報を返します。そのためには、その[Tlibattr](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr)構造体を調べます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,38 +41,38 @@ HRESULT GetTypeLibInfo(
   
 ## <a name="parameters"></a>パラメーター  
  `szFile`  
- [in]タイプ ライブラリのファイル名。  
+ からタイプライブラリのファイル名。  
   
  `pTypeLibID`  
- [out]タイプ ライブラリの GUID です。  
+ 入出力タイプライブラリの GUID。  
   
  `pTypeLibLCID`  
- [out]タイプ ライブラリのローカリゼーション ID。  
+ 入出力タイプライブラリのローカライズ ID。  
   
  `pTypeLibPlatform`  
- [out]A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind)タイプ ライブラリの対象のオペレーティング システムを識別するフラグ。 一般的な値は SYS_WIN32 および SYS_WIN64 です。  
+ 入出力タイプライブラリのターゲットオペレーティングシステムを識別する[SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind)フラグ。 共通値は SYS_WIN32 と SYS_WIN64 です。  
   
  `pTypeLibMajorVer`  
- [out]タイプ ライブラリのメジャー バージョン番号。 たとえば、バージョン*x.y*、メジャー バージョン番号は*x*します。  
+ 入出力タイプライブラリのメジャーバージョン番号。 たとえば、バージョン*x.y*の場合、メジャーバージョン番号は*x*になります。  
   
  `pTypeLibMinorVer`  
- [out]タイプ ライブラリのマイナー バージョン番号。 たとえば、バージョン*x.y*、マイナー バージョン番号は*y*します。  
+ 入出力タイプライブラリのマイナーバージョン番号。 たとえば、バージョン*x.y*の場合、マイナーバージョン番号は*y*になります。  
   
 ## <a name="remarks"></a>Remarks  
- `GetTypeLibInfo`関数を呼び出して、 [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)します。 このツールは、共通言語ランタイム (CLR) アセンブリで型を記述するタイプ ライブラリを生成します。  
+ この関数は、 [tlbexp.exe (タイプライブラリエクスポーター)](../../tools/tlbexp-exe-type-library-exporter.md)によって呼び出されます。 `GetTypeLibInfo` このツールは、共通言語ランタイム (CLR) アセンブリ内の型を記述するタイプライブラリを生成します。  
   
- 任意のパラメーターが null 関数を返します、`HRESULT`の`E_POINTER`します。 それ以外の場合は、 `S_OK`を返します。  
+ いずれか`HRESULT`のパラメーターが null の場合、関数は`E_POINTER`のを返します。 それ以外の場合は、 `S_OK`を返します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** TlbRef.h  
+ **ヘッダー:** Tlf .h  
   
- **ライブラリ:** TlbRef.lib  
+ **ライブラリ**Tlf .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Tlbexp ヘルパー関数](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [Tlbexp ヘルパー関数](index.md)
 - [LoadTypeLibEx 関数](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

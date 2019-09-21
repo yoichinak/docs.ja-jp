@@ -13,18 +13,18 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: f8d0d5e65101ffda0edaaeabdea2870287ba0f1f
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 06056b492439531aa60becbb7bca250a439bfb68
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400844"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567428"
 ---
 # <a name="property-change-events"></a>プロパティ変更イベント
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] では、プロパティ値の変更に応答して発生するさまざまなイベントが定義されています。 通常、プロパティは依存関係プロパティです。 イベント自体はルーティングイベントであり、標準の共通言語ランタイム (CLR) イベントである場合もあります。 要素ツリーを通じて適切にルーティングされるプロパティ変更もあれば、プロパティが変更されたオブジェクトにのみ関係するプロパティ変更もあるため、イベントの定義はシナリオによって異なります。  
   
 ## <a name="identifying-a-property-change-event"></a>プロパティ変更イベントの識別  
- シグネチャ パターンまたは名前付けパターンに基づいてプロパティ変更を報告するすべてのイベントが、プロパティ変更イベントとして明示的に識別されるわけではありません。 通常、[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] ドキュメント内のイベントの説明では、イベントがプロパティ値の変更に直接結び付くものであるかどうかが示されており、プロパティとイベントのクロス リファレンスが提供されます。  
+ シグネチャ パターンまたは名前付けパターンに基づいてプロパティ変更を報告するすべてのイベントが、プロパティ変更イベントとして明示的に識別されるわけではありません。 一般に、SDK ドキュメント内のイベントの説明は、イベントがプロパティ値の変更に直接関連付けられているかどうかを示し、プロパティとイベント間の相互参照を提供します。  
   
 ### <a name="routedpropertychanged-events"></a>RoutedPropertyChanged イベント  
  特定のイベントでは、プロパティ変更イベントで明示的に使用されるイベント データ型とデリゲートを使用します。 イベントデータ型は<xref:System.Windows.RoutedPropertyChangedEventArgs%601>で、デリゲートは<xref:System.Windows.RoutedPropertyChangedEventHandler%601>です。 イベント データもデリゲートも、ジェネリック型パラメーターを使用します。これは、ハンドラーを定義するときに、変更するプロパティの実際の型を指定するために使用されるものです。 イベントデータには、 <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A>とという2つのプロパティが含まれています。これらは両方と<xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>もイベントデータの型引数として渡されます。  

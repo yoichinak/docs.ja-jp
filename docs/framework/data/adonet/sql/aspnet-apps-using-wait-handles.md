@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.openlocfilehash: 0a17755af4027238393890545c051a063d607b6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1d97ed04de25d4db0fbf17e26a1d169d356a72c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877761"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794398"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>待機ハンドルを使用した ASP.NET アプリケーション
 アプリケーションが一度に 1 つの非同期操作しか処理しない場合は、コールバック モデルとポーリング モデルが非同期操作の処理に役立ちます。 Wait モデルを使用することで、複数の非同期操作をより柔軟に処理できます。 Wait モデルには Wait (Any) モデルと Wait (All) モデルの 2 つがあり、モデルの実装に使用される <xref:System.Threading.WaitHandle> メソッドに指定されます。  
@@ -21,8 +21,8 @@ ms.locfileid: "61877761"
   
  Wait モデルの利点が活かされるのは、ある程度の長さの複数の操作を別々のサーバーで実行する必要があるときや、サーバーがすべてのクエリを同時に処理できるほど強力であるときです。 次に示す例では、3 つのクエリが、さまざまな長さの WAITFOR コマンドを小規模な SELECT クエリに追加することで、長いプロセスをエミュレートします。  
   
-## <a name="example-wait-any-model"></a>例:Wait (Any) モデル  
- 次の例は Wait (Any) モデルを示しています。 3 つの非同期プロセスが開始されると、<xref:System.Threading.WaitHandle.WaitAny%2A> メソッドが呼び出され、3 つのプロセスのいずれかの完了を待機します。 プロセスが 1 つ完了するたびに <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> メソッドが呼び出され、その結果生成される <xref:System.Data.SqlClient.SqlDataReader> オブジェクトが読み込まれます。 実際のアプリケーションでは、この時点で、<xref:System.Data.SqlClient.SqlDataReader> を使用してページの一部にデータを挿入することが多いでしょう。 この単純な例では、プロセスに対応するテキスト ボックスにプロセスが完了した時刻が追加されます。 これらをまとめると、テキスト ボックスでは、ポイントを説明します。コードは、プロセスが完了するたびに実行されます。  
+## <a name="example-wait-any-model"></a>例:待機 (任意) モデル  
+ 次の例は Wait (Any) モデルを示しています。 3 つの非同期プロセスが開始されると、<xref:System.Threading.WaitHandle.WaitAny%2A> メソッドが呼び出され、3 つのプロセスのいずれかの完了を待機します。 プロセスが 1 つ完了するたびに <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> メソッドが呼び出され、その結果生成される <xref:System.Data.SqlClient.SqlDataReader> オブジェクトが読み込まれます。 実際のアプリケーションでは、この時点で、<xref:System.Data.SqlClient.SqlDataReader> を使用してページの一部にデータを挿入することが多いでしょう。 この単純な例では、プロセスに対応するテキスト ボックスにプロセスが完了した時刻が追加されます。 次のように、テキストボックス内の時刻が示されています。コードは、プロセスが完了するたびに実行されます。  
   
  この例を設定するには、新しい ASP.NET Web Site プロジェクトを作成します。 1 つの <xref:System.Web.UI.WebControls.Button> コントロールと 4 つの <xref:System.Web.UI.WebControls.TextBox> コントロールをページに配置します (コントロールの名前は既定の名前のままにします)。  
   
@@ -312,10 +312,10 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="example-wait-all-model"></a>例:Wait (All) モデル  
+## <a name="example-wait-all-model"></a>例:待機 (すべて) モデル  
  次の例は Wait (All) モデルを示しています。 3 つの非同期プロセスが開始されると、<xref:System.Threading.WaitHandle.WaitAll%2A> メソッドが呼び出され、プロセスの完了を待機します。  
   
- Wait (Any) モデルの例と同様に、プロセスに対応するテキスト ボックスにプロセスが完了した時刻が追加されます。 ここでも、テキスト ボックスでは、ポイントを示しています。次のコード、<xref:System.Threading.WaitHandle.WaitAny%2A>メソッドは、すべてのプロセスが完了した後にのみ実行されます。  
+ Wait (Any) モデルの例と同様に、プロセスに対応するテキスト ボックスにプロセスが完了した時刻が追加されます。 ここでも、テキストボックスの時刻は次のようになります。メソッドの後<xref:System.Threading.WaitHandle.WaitAny%2A>に続くコードは、すべてのプロセスが完了した後に実行されます。  
   
  この例を設定するには、新しい ASP.NET Web Site プロジェクトを作成します。 1 つの <xref:System.Web.UI.WebControls.Button> コントロールと 4 つの <xref:System.Web.UI.WebControls.TextBox> コントロールをページに配置します (コントロールの名前は既定の名前のままにします)。  
   
@@ -581,5 +581,5 @@ void Button1_Click(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>関連項目
 
-- [非同期操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [非同期操作](asynchronous-operations.md)
+- [ADO.NET の概要](../ado-net-overview.md)

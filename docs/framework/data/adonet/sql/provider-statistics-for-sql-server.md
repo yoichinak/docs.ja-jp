@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: de05a8783fa957c459006e3ec27d9e8668e7226c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b6fa4207531e86cbde8657d0c47596f22c886f89
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422631"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791870"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server のプロバイダー統計情報
 .NET Framework version 2.0 以降では、.NET Framework Data Provider for SQL Server によって実行時の統計がサポートされています。 統計情報を有効にするには、有効な接続オブジェクトを作成した後で、<xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> オブジェクトの <xref:System.Data.SqlClient.SqlConnection> プロパティを `True` に設定する必要があります。 統計情報が有効にされると、<xref:System.Collections.IDictionary> オブジェクトの <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> メソッドを通じて <xref:System.Data.SqlClient.SqlConnection> 参照を取得することにより、"時間単位のスナップショット" として統計情報を確認できます。 名前と値がペアになったディクショナリ エントリのセットとして、一覧を列挙します。 これらの名前と値のペアは順序付けられていません。 いつでも <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> オブジェクトの <xref:System.Data.SqlClient.SqlConnection> メソッドを呼び出して、カウンターをリセットすることができます。 統計情報収集が有効になっていない場合、例外は生成されません。 また、<xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> が最初に呼び出されるずに <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> が呼び出されると、取得される値は各エントリの初期値になります。 統計情報を有効にしてからアプリケーションをしばらく実行した後で統計情報を無効にした場合、取得される値には、統計情報が無効にされた時点までに収集された値が含まれます。 すべての統計情報の値は、接続ごとに収集されます。  
   
 ## <a name="statistical-values-available"></a>使用できる統計情報の値  
- 現在、Microsoft SQL Server プロバイダーから使用できる項目は 18 種類あります。 使用してアクセスできる使用可能な項目の数、**カウント**のプロパティ、<xref:System.Collections.IDictionary>インターフェイスによって返される参照<xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>します。 共通言語ランタイムを使用して、すべてのプロバイダー統計情報のカウンター<xref:System.Int64>型 (**長い**c# および Visual Basic で)、64 ビット幅であります。 最大値、 **int64**によって定義されているデータ型、 **int64。MaxValue**フィールド、((2^63)-1))。 カウンターの値がこの最大値に達すると、これ以降カウンターは正確ではないと見なされます。 つまり、 **int64。MaxValue**-1((2^63)-2) は、事実上すべての統計の最大有効値。  
+ 現在、Microsoft SQL Server プロバイダーから使用できる項目は 18 種類あります。 使用できる項目の数には、によって返される<xref:System.Collections.IDictionary>インターフェイス参照の Count プロパティ<xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>を使用してアクセスできます。 プロバイダー統計のすべてのカウンターは、共通言語ランタイム<xref:System.Int64>型 (**long** in C#と Visual Basic) を使用します。これは64ビット幅です。 Int64 で定義されている**int64**データ型の最大値 **。MaxValue**フィールド、は ((2 ^ 63)-1)) です。 カウンターの値がこの最大値に達すると、これ以降カウンターは正確ではないと見なされます。 これは、int64 であることを意味**します。MaxValue**-1 ((2 ^ 63)-2) は、事実上、任意の統計の有効な最大値です。  
   
 > [!NOTE]
->  プロバイダーの統計情報を返すためにディクショナリが使用されているのは、返される統計情報の数値、名前、および順序が今後変更される可能性があるためです。 アプリケーションでは、ディクショナリ内で見つかった特定の値に依存する必要はありませんが、値が存在するかどうかや、この値に応じて分岐させるかどうかを確認する必要があります。  
+> プロバイダーの統計情報を返すためにディクショナリが使用されているのは、返される統計情報の数値、名前、および順序が今後変更される可能性があるためです。 アプリケーションでは、ディクショナリ内で見つかった特定の値に依存する必要はありませんが、値が存在するかどうかや、この値に応じて分岐させるかどうかを確認する必要があります。  
   
  次の表では、使用可能な現在の統計情報の値が説明されています。 個々の値のキー名は、Microsoft .NET Framework の地域別バージョン全体でローカライズされているわけではないことに注意してください。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67422631"
  次のコンソール アプリケーションは、接続で統計情報を有効にして、4 つの各統計情報の値を取得し、コンソール ウィンドウに出力する方法を示します。  
   
 > [!NOTE]
->  次の例は、サンプル**AdventureWorks** SQL Server に含まれているデータベース。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
+> 次の例では、SQL Server に含まれるサンプルの**AdventureWorks**データベースを使用します。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
   
 ```vb  
 Option Strict On  
@@ -204,7 +204,7 @@ namespace CS_Stats_Console_GetValue
  次のコンソール アプリケーションは、接続で統計情報を有効にし、使用可能なすべての統計情報の値を列挙子を使って取得して、コンソール ウィンドウに出力する方法を示します。  
   
 > [!NOTE]
->  次の例は、サンプル**AdventureWorks** SQL Server に含まれているデータベース。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
+> 次の例では、SQL Server に含まれるサンプルの**AdventureWorks**データベースを使用します。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。  
   
 ```vb  
 Option Strict On  
@@ -340,5 +340,5 @@ namespace CS_Stats_Console_GetAll
   
 ## <a name="see-also"></a>関連項目
 
-- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server と ADO.NET](index.md)
+- [ADO.NET の概要](../ado-net-overview.md)

@@ -4,12 +4,12 @@ description: .NET でのサーバー アプリのビルド時に考慮する必�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 6bdcb002c2e37f45c298259c2867a631b38152ca
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630866"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799257"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>サーバー アプリ用 .NET Core と .NET Framework の選択
 
@@ -17,18 +17,18 @@ ms.locfileid: "68630866"
 
 次のような場合、サーバー アプリケーションには .NET Core を使用します。
 
-* クロスプラット フォームが必要である。
-* マイクロサービスが対象である。
-* Docker コンテナーを使用している。
-* 高パフォーマンスでスケーラブルなシステムが必要である。
-* 1 つのアプリケーションに複数の .NET バージョンが必要である。
+- クロスプラット フォームが必要である。
+- マイクロサービスが対象である。
+- Docker コンテナーを使用している。
+- 高パフォーマンスでスケーラブルなシステムが必要である。
+- 1 つのアプリケーションに複数の .NET バージョンが必要である。
 
 次のような場合、サーバー アプリケーションには .NET Framework を使用します。
 
-* 現在、アプリで .NET Framework を使用している (移行ではなく拡張することをお勧めします)。
-* アプリが .NET Core で使用できないサードパーティ製の .NET ライブラリや NuGet パッケージを使用している。
-* アプリで、.NET Core で使用できない .NET テクノロジを使用している。
-* アプリで、.NET Core をサポートしていないプラットフォームを使用している。
+- 現在、アプリで .NET Framework を使用している (移行ではなく拡張することをお勧めします)。
+- アプリが .NET Core で使用できないサードパーティ製の .NET ライブラリや NuGet パッケージを使用している。
+- アプリで、.NET Core で使用できない .NET テクノロジを使用している。
+- アプリで、.NET Core をサポートしていないプラットフォームを使用している。 .NET Core は Windows、macOS、Linux でサポートされています。
 
 ## <a name="when-to-choose-net-core"></a>どのような場合に .NET Core を選択すべきか
 
@@ -85,15 +85,15 @@ Docker コンテナーは、オンプレミスの Linux または Windows イン
 
 一部の .NET Framework テクノロジは .NET Core では使用できません。 その一部は、.NET Core の今後のリリースで使用できるようになる可能性があります。 それ以外は .NET Core の対象となる新しいアプリケーション パターンには適用されず、使用可能にならない可能性があります。 .NET Core にはない最も一般的なテクノロジを、以下のリストに示します。
 
-* ASP.NET Web フォーム アプリケーション:ASP.NET Web フォームは、.NET Framework でのみ使用できます。 ASP.NET Core は、ASP.NET Web フォームに使用できません。 ASP.NET Web フォームが .NET Core で使用できるようになる予定はありません。
+- ASP.NET Web フォーム アプリケーション:ASP.NET Web フォームは、.NET Framework でのみ使用できます。 ASP.NET Core は、ASP.NET Web フォームに使用できません。 ASP.NET Web フォームが .NET Core で使用できるようになる予定はありません。
 
-* ASP.NET Web ページ アプリケーション:ASP.NET Web ページは、ASP.NET Core に含まれていません。 
+- ASP.NET Web ページ アプリケーション:ASP.NET Web ページは、ASP.NET Core に含まれていません。 
 
-* WCF サービスの実装。 現在のところ、.NET Core から WCF サービスを利用する [WCF クライアント ライブラリ](https://github.com/dotnet/wcf)がある場合でも、WCF サーバーの実装は .NET Framework でのみ可能です。 このシナリオは .NET Core の現在の計画に含まれていませんが、将来に向けて検討中です。
+- WCF サービスの実装。 現在のところ、.NET Core から WCF サービスを利用する [WCF クライアント ライブラリ](https://github.com/dotnet/wcf)がある場合でも、WCF サーバーの実装は .NET Framework でのみ可能です。 このシナリオは .NET Core の現在の計画に含まれていませんが、将来に向けて検討中です。
 
-* ワークフローに関連するサービス:.Windows Workflow Foundation (WF)、ワークフロー サービス (1 つのサービスに WCF と WF) および WCF Data Services (旧称: "ADO.NET Data Services") は、NET Framework でのみ使用できます。  WF/WCF+WF/WCF Data Services を .NET Core に導入する予定はありません。
+- ワークフローに関連するサービス:.Windows Workflow Foundation (WF)、ワークフロー サービス (1 つのサービスに WCF と WF) および WCF Data Services (旧称: "ADO.NET Data Services") は、NET Framework でのみ使用できます。  WF/WCF+WF/WCF Data Services を .NET Core に導入する予定はありません。
 
-* 言語のサポート:Visual Basic と F# は現在 .NET Core でサポートされていますが、サポートされないプロジェクトの種類もあります。 サポートされるプロジェクト テンプレートの一覧については、[dotnet new のテンプレート オプション](../core/tools/dotnet-new.md#arguments)に関するセクションを参照してください。
+- 言語のサポート:Visual Basic と F# は現在 .NET Core でサポートされていますが、サポートされないプロジェクトの種類もあります。 サポートされるプロジェクト テンプレートの一覧については、[dotnet new のテンプレート オプション](../core/tools/dotnet-new.md#arguments)に関するセクションを参照してください。
 
 公式のロードマップに加え、.NET Core に移植される予定のフレームワークが他にもあります。 詳細な一覧については、[port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) とマークされている CoreFX の論点を参照してください。 この一覧は、Microsoft がそれらのコンポーネントを .NET Core に導入する予定ではありません。 単に、コミュニティからの希望をまとめたものです。 `port-to-core` とマークされているいずれかのコンポーネントに関心がある場合は、GitHub のディスカッションに参加してください。 また、一覧に欠けている点があるとお考えの場合は、[CoreFX リポジトリ](https://github.com/dotnet/corefx/issues/new)に登録してください。
 
@@ -108,6 +108,6 @@ Microsoft やサードパーティ製のプラットフォームの中には、.
 - [ターゲット フレームワーク](frameworks.md)
 - [.NET Core のガイド](../core/index.md)
 - [.NET Framework から .NET Core への移植](../core/porting/index.md)
-- [.NET および Docker の概要](../core/docker/intro-net-docker.md)
+- [.NET および Docker の概要](../core/docker/introduction.md)
 - [.NET コンポーネントの概要](components.md)
 - [.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ](../architecture/microservices/index.md)

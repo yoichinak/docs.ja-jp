@@ -7,26 +7,26 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 342c570bff89d4c03780cdc280199c722b53890a
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: c9f7a0bc3a7a41a77db3c90c2f88fb5ddfd7bfa0
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170465"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971075"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework のバージョンおよび依存関係
 .NET Framework の各バージョンには、共通言語ランタイム (CLR)、基底クラス ライブラリ、およびその他のマネージド ライブラリが含まれています。 このトピックでは、.NET Framework の各バージョンの主要な機能について説明し、基になっている CLR のバージョンおよび関連する開発環境に関する情報と、Windows オペレーティング システムでインストールされる .NET Framework のバージョンを示します。  
   
 > [!NOTE]
->  .NET Framework のダウンロードとインストールの詳細については、「[開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)」を参照してください。  
+> .NET Framework のダウンロードとインストールの詳細については、「[開発者向けの .NET Framework のインストール](../install/guide-for-developers.md)」を参照してください。  
   
  次の表に、.NET Framework のバージョン履歴を要約し、各バージョンと Visual Studio、Windows、および Windows Server との関係を示します。 Visual Studio ではマルチターゲット機能が提供されているため、記載されている .NET Framework のバージョンに限定される必要はありません。  
   
  新しい各バージョンの .NET Framework には、1 つ前のバージョンの機能が含まれると共に、新機能が追加されています。 CLR は独自のバージョン番号で識別されます。 .NET Framework のバージョン番号はリリースごとにインクリメントされますが、CLR のバージョンは必ずしもインクリメントされるわけではありません。 たとえば、.NET Framework 4、4.5、およびそれ以降のリリースには CLR 4 が含まれますが、.NET Framework 2.0、3.0、3.5 には CLR 2.0 が含まれます。 (CLR の Version 3 はありません)。  
   
- サポートされるオペレーティング システムの全一覧については、[システム要件](../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。 ダウンロードについては、「[開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)」を参照してください。 コンピューターにインストールされている .NET Framework のバージョンを確認する方法については、「[方法:インストールされている .NET Framework バージョンを確認する](how-to-determine-which-versions-are-installed.md)」を参照してください。  
+ サポートされるオペレーティング システムの全一覧については、[システム要件](../get-started/system-requirements.md)に関するページを参照してください。 ダウンロードについては、「[開発者向けの .NET Framework のインストール](../install/guide-for-developers.md)」を参照してください。 コンピューターにインストールされている .NET Framework のバージョンを確認する方法については、「[方法:インストールされている .NET Framework バージョンを確認する](how-to-determine-which-versions-are-installed.md)」を参照してください。  
   
- 次の表の "**このバージョンを含む/インストール可能な Windows**" 列および "**このバージョンを含む/インストール可能な Windows Server**" 列に ✓マークが付いているオペレーティング システム バージョンにインストールされている .NET Framework のバージョンを、[コントロール パネルで有効にする](../../../docs/framework/install/dotnet-35-windows-10.md) (Windows の場合) かサーバー マネージャーで有効にする (Windows Server の場合) 必要があります。  
+ 次の表の "**このバージョンを含む/インストール可能な Windows**" 列および "**このバージョンを含む/インストール可能な Windows Server**" 列に ✓マークが付いているオペレーティング システム バージョンにインストールされている .NET Framework のバージョンを、[コントロール パネルで有効にする](../install/dotnet-35-windows-10.md) (Windows の場合) かサーバー マネージャーで有効にする (Windows Server の場合) 必要があります。  
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
  
@@ -53,7 +53,7 @@ ms.locfileid: "67170465"
 
 <sup>\*</sup>&nbsp;&nbsp;このオペレーティング システムで [[コントロール パネル] (Windows の場合) または [サーバー マネージャー] (Windows Server の場合)](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel) を使用して、.NET Framework を有効にする必要があります。
 
- 一般に、コンピューターにインストールされている .NET Framework のバージョンはアンインストールしないでください。使用するアプリケーションが特定のバージョンに依存しており、バージョンが削除されると破損する可能性があるからです。 1 台のコンピューターに複数バージョンの .NET Framework を同時に読み込むことができます。 これは、以前のバージョンをアンインストールすることなく、.NET Framework をインストールできることを意味します。 詳細については、[概要](../../../docs/framework/get-started/index.md)に関するページを参照してください。
+ 一般に、コンピューターにインストールされている .NET Framework のバージョンはアンインストールしないでください。使用するアプリケーションが特定のバージョンに依存しており、バージョンが削除されると破損する可能性があるからです。 1 台のコンピューターに複数バージョンの .NET Framework を同時に読み込むことができます。 これは、以前のバージョンをアンインストールすることなく、.NET Framework をインストールできることを意味します。 詳細については、[概要](../get-started/index.md)に関するページを参照してください。
 
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>.NET Framework 4.5 以降のバージョンをターゲットにして実行する  
  .NET Framework 4.5 はお使いのコンピューター上の .NET Framework 4 を置き換えるインプレース更新であり、同様に .NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2、4.8 は .NET Framework 4.5 のインプレース更新です。つまり、同じランタイム バージョンを使用しますが、アセンブリのバージョンが更新され、新しい型とメンバーが含まれます。 これらの更新プログラムのいずれかをインストールした後、.NET Framework 4、.NET Framework 4.5、NET Framework 4.6、または .NET Framework 4.7 アプリは、再コンパイルを必要とせずに実行を継続します。 ただし、逆はできません。 .NET Framework の新しいバージョンをターゲットとするアプリを .NET Framework の以前のバージョンで実行することは推奨されていません。 たとえば、.NET Framework 4.6 をターゲットとするアプリを .NET Framework 4.5 上で実行することは推奨されていません。 次のガイドラインが適用されます。  
@@ -64,19 +64,19 @@ ms.locfileid: "67170465"
   
      .NET framework 4.5.1 および .NET Framework 4.5 は、ここでは例として使用されているだけです。 この原則は、実行されているシステムにインストールされているものより新しい .NET Framework のバージョンをターゲットにするアプリに適用されます。  
   
- .NET Framework での変更によって、アプリケーション コードの変更が必要になる場合があります。 .NET Framework 4.5 以降のバージョンを使って既存のアプリを実行する前に、[アプリケーションの互換性](application-compatibility.md)に関するページを確認してください。 現行バージョンのインストールについては、「[開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)」を参照してください。 .NET Framework のサポートの詳細については、Microsoft サポート オンラインの [Microsoft .NET Framework のサポート ライフサイクル ポリシー](https://go.microsoft.com/fwlink/?LinkId=196607)に関するページを参照してください。  
+ .NET Framework での変更によって、アプリケーション コードの変更が必要になる場合があります。 .NET Framework 4.5 以降のバージョンを使って既存のアプリを実行する前に、[アプリケーションの互換性](application-compatibility.md)に関するページを確認してください。 現行バージョンのインストールについては、「[開発者向けの .NET Framework のインストール](../install/guide-for-developers.md)」を参照してください。 .NET Framework のサポートの詳細については、Microsoft サポート オンラインの [Microsoft .NET Framework のサポート ライフサイクル ポリシー](https://go.microsoft.com/fwlink/?LinkId=196607)に関するページを参照してください。  
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>以前のバージョンのアプリの対象化と実行  
 
-.NET Framework 2.0、3.0 および 3.5 は、同じバージョンの CLR (CLR 2.0) でビルドされています。 これらのバージョンは 1 つのインストールの連続したレイヤーを表します。 各バージョンは、以前のバージョンの上にインクリメンタル方式でビルドされます。 コンピューターでバージョン 2.0、3.0、および 3.5 を side-by-side で実行することはできません。 バージョン 3.5 をインストールすると、2.0 と 3.0 のレイヤーが自動的に取得され、バージョン 2.0、3.0、および 3.5 を対象としてビルドされたアプリケーションはすべて、バージョン 3.5 で実行できます。 ただし、.NET Framework 4 ではこのレイヤーによる方法は終了しており、以降のリリース (.NET Framework 4.5、4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7. 4.7.1、4.7.2、4.8) も単独インストールの連続するレイヤーを表します。  NET Framework 4 以降では、インプロセスの side-by-side ホスティングを使用して、1 つのプロセスの中で複数のバージョンの CLR を実行できます。 詳細については、「[アセンブリと side-by-side 実行](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)」を参照してください。  
+.NET Framework 2.0、3.0 および 3.5 は、同じバージョンの CLR (CLR 2.0) でビルドされています。 これらのバージョンは 1 つのインストールの連続したレイヤーを表します。 各バージョンは、以前のバージョンの上にインクリメンタル方式でビルドされます。 コンピューターでバージョン 2.0、3.0、および 3.5 を side-by-side で実行することはできません。 バージョン 3.5 をインストールすると、2.0 と 3.0 のレイヤーが自動的に取得され、バージョン 2.0、3.0、および 3.5 を対象としてビルドされたアプリケーションはすべて、バージョン 3.5 で実行できます。 ただし、.NET Framework 4 ではこのレイヤーによる方法は終了しており、以降のリリース (.NET Framework 4.5、4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7. 4.7.1、4.7.2、4.8) も単独インストールの連続するレイヤーを表します。  NET Framework 4 以降では、インプロセスの side-by-side ホスティングを使用して、1 つのプロセスの中で複数のバージョンの CLR を実行できます。 詳細については、「[アセンブリと side-by-side 実行](../../standard/assembly/side-by-side-execution.md)」を参照してください。  
   
- さらに、アプリケーションがバージョン 2.0、3.0、または 3.5 を対象とする場合、ユーザーがアプリケーションを実行する前に、Windows 8、Windows 8.1、または Windows 10 のコンピューター上で .NET Framework 3.5 を有効にするように求められる場合があります。 詳細については、[Windows 10、Windows 8.1、Windows 8 への .NET Framework 3.5 のインストール](../../../docs/framework/install/dotnet-35-windows-10.md)に関するページを参照してください。  
+ さらに、アプリケーションがバージョン 2.0、3.0、または 3.5 を対象とする場合、ユーザーがアプリケーションを実行する前に、Windows 8、Windows 8.1、または Windows 10 のコンピューター上で .NET Framework 3.5 を有効にするように求められる場合があります。 詳細については、[Windows 10、Windows 8.1、Windows 8 への .NET Framework 3.5 のインストール](../install/dotnet-35-windows-10.md)に関するページを参照してください。  
   
 ## <a name="next-steps"></a>次の手順  
   
-- .NET Framework を初めて使用する場合は、[概要](../../../docs/framework/get-started/overview.md)に関するページを参照して、主な概念と機能の概要を確認してください。  
+- .NET Framework を初めて使用する場合は、[概要](../get-started/overview.md)に関するページを参照して、主な概念と機能の概要を確認してください。  
   
-- .NET Framework 4.5 とそのポイント リリースでの新機能と機能強化については、「[.NET Framework の新機能](../../../docs/framework/whats-new/index.md)」を参照してください。  
+- .NET Framework 4.5 とそのポイント リリースでの新機能と機能強化については、「[.NET Framework の新機能](../whats-new/index.md)」を参照してください。  
   
 - .NET Framework 4 から .NET Framework 4.5 およびそのポイント リリースへのアプリの移行の詳細については、[移行ガイド](index.md)に関するページを参照してください。  
   
@@ -86,4 +86,4 @@ ms.locfileid: "67170465"
 
 - [バージョンの互換性](version-compatibility.md)
 - [Microsoft .NET Framework のサポート ライフサイクル ポリシー](https://go.microsoft.com/fwlink/?LinkId=196607)
-- [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](../install/troubleshoot-blocked-installations-and-uninstallations.md)

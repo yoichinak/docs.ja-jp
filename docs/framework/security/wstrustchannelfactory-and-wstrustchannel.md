@@ -3,12 +3,12 @@ title: WSTrustChannelFactory および WSTrustChannel
 ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
-ms.openlocfilehash: d129775137759cf7f006ce6501279978f4ab2595
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e00f3ae25a50c2fb3f34f4c04d02cde574b3da17
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633170"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044918"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory および WSTrustChannel
 Windows Communication Foundation (WCF) をよくご存じの方は、WCF クライアントが既にフェデレーションに対応していることを理解されていると思います。 <xref:System.ServiceModel.WSFederationHttpBinding> または同様のカスタム バインドを使用して WCF クライアントを構成することで、サービスに対するフェデレーション認証を有効にすることができます。
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) をよくご存じの方は、WCF クラ�
 
 - WIF を単独で使用して、STS からトークンを取得し、WCF クライアントがこのトークンを使用して認証できるようにする。 詳細については、[ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) サンプルを参照してください。
 
- 最初のシナリオでは、一目瞭然です。既存の WCF クライアントは引き続き WIF 証明書利用者および Sts を使用します。 このトピックでは、残りの 2 つのシナリオについて説明します。
+ 最初のシナリオは、次のとおりです。既存の WCF クライアントは、WIF 証明書利用者と STSs と引き続き動作します。 このトピックでは、残りの 2 つのシナリオについて説明します。
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>ActAs または OnBehalfOf を使用した既存の WCF クライアントの拡張
 一般的な ID 委任シナリオでは、クライアントは、中間層サービスを呼び出します。この中間層サービスによって、バックエンド サービスが呼び出されます。 中間層サービスは、クライアントとして、またはクライアントの代わりに機能します。
@@ -33,7 +33,7 @@ Windows Communication Foundation (WCF) をよくご存じの方は、WCF クラ�
 > [!TIP]
 > ActAs と OnBehalfOf の違い
 >
-> Ws-trust プロトコルの観点: から
+> WS-TRUST プロトコルの観点から:
 >
 > 1. ActAs RST 要素は、要求元が 2 つの個別のエンティティに関するクレームを含んだトークンを要求していることを示します。それは、要求元と、ActAs 要素内のトークンによって表される外部エンティティです。
 > 2. OnBehalfOf RST 要素は、要求元が 1 つのエンティティに関するクレームだけを含んだトークンを要求していることを示します。それは、OnBehalfOf 要素内のトークンによって表される外部エンティティです。
@@ -81,7 +81,7 @@ SecurityToken token = channel.Issue(rst, out rstr);
 
 `out` メソッドで <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> パラメーターを指定することで、クライアント側で検査するために RSTR にアクセスできます。
 
-ここまでは、トークンを取得する方法のみを説明しました。 <xref:System.ServiceModel.Security.WSTrustChannel> オブジェクトから返されるトークンは、証明書利用者に対して認証を行うために必要な情報がすべて格納された `GenericXmlSecurityToken` オブジェクトです。 次のコード例では、このトークンを使用する方法を示します。
+ここまでは、トークンを取得する方法しか説明していませんでした。 <xref:System.ServiceModel.Security.WSTrustChannel> オブジェクトから返されるトークンは、証明書利用者に対して認証を行うために必要な情報がすべて格納された `GenericXmlSecurityToken` オブジェクトです。 次のコード例では、このトークンを使用する方法を示します。
 
 ```csharp
 IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token );
@@ -102,4 +102,4 @@ serviceChannel.Hello("Hi!");
 
 ## <a name="see-also"></a>関連項目
 
-- [WIF の機能](../../../docs/framework/security/wif-features.md)
+- [WIF の機能](wif-features.md)

@@ -3,15 +3,15 @@ title: .NET Standard
 description: .NET Standard、そのバージョン、.NET Standard をサポートする .NET 実装について説明します。
 author: mairaw
 ms.author: mairaw
-ms.date: 02/25/2019
+ms.date: 08/30/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 16aa1cd43db0b10c4617b4fa92783c75a4ba5303
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f479bbec504a965fde08af6d000d4be75ca85f8d
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755206"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205606"
 ---
 # <a name="net-standard"></a>.NET Standard
 

@@ -2,20 +2,21 @@
 title: <add> の <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: c71a58b13e89bedb5eed24d784c82fb1525f7625
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: adf4cd7f02db6535c5950443d09476a9a5ff63fb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701438"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850308"
 ---
-# <a name="add-of-transportconfigurationtype"></a>\<add> of \<transportConfigurationType>
+# <a name="add-of-transportconfigurationtype"></a>\<transportConfigurationType > の\<> の追加
 この要素は、特定のトランスポートの種類を識別するキーと値のペアです。  
   
- \<system.ServiceModel >  
-\<serviceHostingEnvironment >  
-\<transportConfigurationTypes>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceHostingEnvironment >** ](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<transportConfigurationTypes >** ](transportconfigurationtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +46,7 @@ ms.locfileid: "61701438"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|特定のトランスポートを実装する型のコレクション。|  
+|[\<transportConfigurationTypes>](transportconfigurationtypes.md)|特定のトランスポートを実装する型のコレクション。|  
   
 ## <a name="example"></a>例  
   
@@ -63,4 +64,4 @@ ms.locfileid: "61701438"
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [ホスティング](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [ホスティング](../../../wcf/feature-details/hosting.md)

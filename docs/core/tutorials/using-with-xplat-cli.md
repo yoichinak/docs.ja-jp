@@ -1,16 +1,17 @@
 ---
 title: CLI を使用する .NET Core に関する概要
 description: Windows、Linux、または macOS の .NET Core での、.NET Core コマンド ライン インターフェイス (CLI) の使用方法を段階的に説明するチュートリアル。
-author: cartermp
-ms.date: 09/10/2018
+author: thraka
+ms.author: adegeo
+ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 92ca5149ad5f0e4a50c809a316123fbf77d4152d
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: c42a34bc13ff9fb5d8eb5a85b461360915e2c68f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545365"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849338"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Windows/Linux/macOS の .NET Core でのコマンド ラインの使用に関する概要
 
@@ -20,7 +21,7 @@ ms.locfileid: "58545365"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [.NET Core SDK 2.1](https://www.microsoft.com/net/download/core).
+- [.NET Core SDK 2.1](https://dotnet.microsoft.com/download) 以降のバージョン。
 - ユーザーが選んだテキスト エディターまたはコード エディター。
 
 ## <a name="hello-console-app"></a>Hello コンソール アプリ
@@ -46,8 +47,8 @@ dotnet run
 
    プロジェクト ファイルでは、依存関係を復元し、プログラムをビルドするために必要なすべてのものを指定します。
 
-   * `OutputType` タグは、実行可能ファイル (つまり、コンソール アプリケーション) をビルドすることを示します。
-   * `TargetFramework` タグは、対象の .NET 実装を指定します。 高度なシナリオでは、複数の対象フレームワークを指定し、1 回の操作でそれらすべてにビルドすることができます。 このチュートリアルでは、.NET Core 2.1 の場合のビルドについてのみ説明します。
+   - `OutputType` タグは、実行可能ファイル (つまり、コンソール アプリケーション) をビルドすることを示します。
+   - `TargetFramework` タグは、対象の .NET 実装を指定します。 高度なシナリオでは、複数の対象フレームワークを指定し、1 回の操作でそれらすべてにビルドすることができます。 このチュートリアルでは、.NET Core 2.1 の場合のビルドについてのみ説明します。
 
    `Program.cs`:
 
@@ -153,10 +154,23 @@ dotnet run
    377
    ```
 
-以上です。 これで、ここで学習した基本的な概念を利用し、自分だけのプログラムを作成できます。
+## <a name="publish-your-app"></a>アプリケーションの発行
 
-このチュートリアルで紹介した、アプリケーションを実行するコマンドと手順は、開発時にのみ利用されます。 アプリの展開に進むときは、.NET Core アプリの別の[展開方法](../deploying/index.md)や [`dotnet publish`](../tools/dotnet-publish.md) コマンドを利用した方が効果的な場合もあります。
+アプリを配布する準備ができたら、[`dotnet publish`](../tools/dotnet-publish.md) コマンドを使って、_bin\\debug\\netcoreapp2.1\\publish\\_ に _publish_ フォルダーを生成します (Windows 以外のシステムの場合は `/` を使います)。 dotnet ランタイムが既にインストールされている他のプラットフォームには、_publish_ フォルダーの内容を配布できます。
+
+[dotnet](../tools/dotnet.md) コマンドを使って、発行されたアプリを実行できます。
+
+```console
+$ dotnet bin\Debug\netcoreapp2.1\publish\Hello.dll
+Hello World!
+```
+
+## <a name="conclusion"></a>まとめ
+
+以上です。 これで、ここで学習した基本的な概念を利用し、自分だけのプログラムを作成できます。
 
 ## <a name="see-also"></a>関連項目
 
 - [.NET Core CLI ツールを使用したプロジェクトの整理およびテスト](testing-with-cli.md)
+- [CLI を使用して .NET Core アプリを公開する](../deploying/deploy-with-cli.md)
+- [アプリの展開についてさらに学習する](../deploying/index.md)

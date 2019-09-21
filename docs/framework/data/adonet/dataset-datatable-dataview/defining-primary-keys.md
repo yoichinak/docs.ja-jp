@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: 84c84cb8fc0ee484b09c69c72571a19c335b58f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f87b1b730eecf0edad75bd87ca8b491b96e1d2b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607312"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784710"
 ---
 # <a name="defining-primary-keys"></a>主キーの定義
 通常、データベース テーブルには、テーブル内の各行を一意に識別する単一の列または複数の列があります。 行を識別するこのような列を、主キーと呼びます。  
   
- 1 つを指定すると<xref:System.Data.DataColumn>として、<xref:System.Data.DataTable.PrimaryKey%2A>の<xref:System.Data.DataTable>、テーブルが自動的に設定、<xref:System.Data.DataColumn.AllowDBNull%2A>プロパティには、列の**false**と<xref:System.Data.DataColumn.Unique%2A>プロパティを**true**します。 複数列プライマリ キーの場合のみ、 **AllowDBNull**プロパティが自動的に設定**false**します。  
+ <xref:System.Data.DataColumn> <xref:System.Data.DataColumn.AllowDBNull%2A> <xref:System.Data.DataColumn.Unique%2A>のと<xref:System.Data.DataTable>して単一のを指定すると、テーブルによって自動的に列のプロパティが false に設定され、プロパティが true に設定されます。 <xref:System.Data.DataTable.PrimaryKey%2A> 複数列の主キーについては、 **Allowdbnull**プロパティのみが自動的に**false**に設定されます。  
   
- **PrimaryKey**のプロパティを<xref:System.Data.DataTable>値として 1 つまたは複数の配列を受け取る**DataColumn**オブジェクトの場合、次の例に示すようにします。 最初の例は、1 つの列を主キーとして定義しています。  
+ の **PrimaryKey プロパティ**は、次の例に示すように、1つ以上の DataColumn オブジェクトの配列をその値として受け取ります。<xref:System.Data.DataTable> 最初の例は、1 つの列を主キーとして定義しています。  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustID")}  
@@ -68,6 +68,6 @@ workTable.PrimaryKey = keyColumn;
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Data.DataTable>
-- [DataTable スキーマの定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataTable スキーマの定義](datatable-schema-definition.md)
+- [DataTables](datatables.md)
+- [ADO.NET の概要](../ado-net-overview.md)

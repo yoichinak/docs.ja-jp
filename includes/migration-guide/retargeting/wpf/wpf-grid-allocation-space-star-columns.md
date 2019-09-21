@@ -6,7 +6,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68235547"
 ---
-### <a name="wpf-grid-allocation-of-space-to-star-columns"></a>WPF Grid での *-column への領域の割り当て
+### <a name="wpf-grid-allocation-of-space-to-star-columns"></a>WPF Grid での -column への領域の割り当て
 
 |   |   |
 |---|---|

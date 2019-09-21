@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ba68425fe37c5b939da22edad38bb03afd2b9068
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062959"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117332"
 ---
 # <a name="get-started-with-c"></a>C\# の使用を開始する
 
@@ -21,21 +21,21 @@ ms.locfileid: "65062959"
 
 次のトピックを参照できます。
 
-* [C# 言語と .NET Framework の概要](introduction-to-the-csharp-language-and-the-net-framework.md)
+- [C# 言語と .NET Framework の概要](introduction-to-the-csharp-language-and-the-net-framework.md)
 
      C# 言語および .NET の概要を示します。
 
-* [Visual Studio 2017 での .NET Core を使用した C# Hello World アプリケーションの構築](../../core/tutorials/with-visual-studio.md)
+- [Visual Studio 2017 での .NET Core を使用した C# Hello World アプリケーションの構築](../../core/tutorials/with-visual-studio.md)
 
-   Visual Studio の最新リリースである Visual Studio 2017 では、Windows 統合開発環境で、アプリケーションのコーディング、コンパイル、実行、デバッグ、プロファイル、および発行を行うことができます。
+   Visual Studio 2019 では、Windows または Mac 統合開発環境で、アプリケーションのコーディング、コンパイル、実行、デバッグ、プロファイル、および発行を行うことができます。
 
    このトピックでは、単純な Hello World アプリケーションを作成して実行した後、やや対話的な Hello World アプリケーションとして実行するための修正を行います。 アプリケーションのビルドと実行が完了したら、[デバッグ](../../core/tutorials/debugging-with-visual-studio.md)方法と[発行](../../core/tutorials/publishing-with-visual-studio.md)方法も学習することで、.NET Core でサポートされている任意のプラットフォームでアプリケーションを実行できるようにします。
 
-* [Visual Studio 2017 での C# と .NET Core を使用したクラス ライブラリの構築](../../core/tutorials/library-with-visual-studio.md)
+- [Visual Studio 2017 での C# と .NET Core を使用したクラス ライブラリの構築](../../core/tutorials/library-with-visual-studio.md)
 
    クラス ライブラリを使用して、別のアプリケーションから呼び出すことができる型と型のメンバーを定義できます。 このトピックでは、文字列が大文字で始まるかどうかを決定する単一のメソッドがあるクラス ライブラリを作成できます。 ライブラリの構築が完了したら、[単体テスト](../../core/tutorials/testing-library-with-visual-studio.md)を開発して、それが期待どおりに動作することを確認した後、[そのライブラリを使用したいアプリケーション](../../core/tutorials/consuming-library-with-visual-studio.md)で使用できるようにします。
 
-* [C# および Visual Studio Code の使用を開始する](../../core/tutorials/with-visual-studio-code.md)
+- [C# および Visual Studio Code の使用を開始する](../../core/tutorials/with-visual-studio-code.md)
 
    Visual Studio Code は、最新の Web アプリケーションやクラウド アプリケーションのビルドとデバッグ向けに最適化された無料コード エディターです。 IntelliSense をサポートしており、Linux、macOS、Windows で使用できます。
 
@@ -43,18 +43,18 @@ ms.locfileid: "65062959"
 
 ## <a name="related-sections"></a>関連項目
 
-* [C# プログラミング ガイド](../../csharp/programming-guide/index.md)
+- [C# プログラミング ガイド](../programming-guide/index.md)
 
     C# プログラミングの概念に関する情報を提供し、C# でさまざまなタスクを実行する方法について説明します。
 
-* [C# リファレンス](../../csharp/language-reference/index.md)
+- [C# リファレンス](../language-reference/index.md)
 
     C# のキーワード、演算子、プリプロセッサ ディレクティブ、コンパイラ オプション、およびコンパイラのエラーと警告に関する詳細なリファレンス情報を紹介します。
 
-* [チュートリアル](../../csharp/walkthroughs.md)
+- [チュートリアル](../walkthroughs.md)
 
     C# を使用するプログラミングのチュートリアルと、各チュートリアルに関する簡単な説明へのリンクを示します。
 
 ## <a name="see-also"></a>関連項目
 
-- * [Visual Studio を使用した C# 開発](/visualstudio/get-started/csharp/)
+- [Visual Studio を使用した C# 開発](/visualstudio/get-started/csharp/)

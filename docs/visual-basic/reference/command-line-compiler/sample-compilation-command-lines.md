@@ -8,33 +8,34 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: 0771ed41d6c58ce7cc98435b405f5819e45393db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7879c23bc64269c793c21b61b84d6f0fd4bdc24
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916761"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046291"
 ---
-# <a name="sample-compilation-command-lines-visual-basic"></a>コンパイル コマンドラインのサンプル (Visual Basic)
-Visual Studio 内から Visual Basic プログラムをコンパイルする代わりに、実行可能ファイル (.exe) ファイルまたはダイナミック リンク ライブラリ (.dll) ファイルを生成するためにコマンドラインからコンパイルすることができます。  
-  
- Visual Basic のコマンド ライン コンパイラでは、入力を制御し、ファイル、アセンブリ、およびデバッグ、およびプリプロセッサ オプションの出力オプションの完全なセットをサポートします。 各オプションは 2 つの交換形式で使用できます:`-option`と`/option`します。 このドキュメントの表示のみ、`-option`フォーム。  
-  
- 次の表では、独自の用途を変更するサンプルのコマンドラインを示します。  
-  
-|目的|用途|  
-|--------|---------|  
-|.Vb というファイルをコンパイルして File.exe を作成します。|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|  
-|.Vb というファイルをコンパイルして File.dll を作成します。|`vbc -target:library File.vb`|  
-|.Vb というファイルをコンパイルして My.exe を作成します。|`vbc -out:My.exe File.vb`|  
-|.Vb というファイルをコンパイルし、ライブラリと File.dll をという名前の参照アセンブリの両方を作成|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
-|最適化で、現在のディレクトリ内のすべての Visual Basic ファイルをコンパイルして、 `DEBUG` File2.exe を生成するシンボルを定義するには、|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|  
-|ロゴや警告を表示せず、デバッグ バージョンの File2.dll を作成、現在のディレクトリ内のすべての Visual Basic ファイルをコンパイルします。|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|  
-|Something.dll に現在のディレクトリ内のすべての Visual Basic ファイルをコンパイルします。|`vbc -target:library -out:Something.dll *.vb`|  
-  
+# <a name="sample-compilation-command-lines-visual-basic"></a>コンパイルコマンドラインのサンプル (Visual Basic)
+
+Visual Studio 内から Visual Basic プログラムをコンパイルする代わりに、コマンドラインからコンパイルして、実行可能 (.exe) ファイルまたはダイナミックリンクライブラリ (.dll) ファイルを生成することもできます。
+
+Visual Basic のコマンドラインコンパイラは、入力ファイル、出力ファイル、アセンブリ、およびデバッグオプションとプリプロセッサオプションを制御するオプションの完全なセットをサポートしています。 各オプションは`-option` 、と`/option`の2つの交換可能な形式で使用できます。 このドキュメントでは、 `-option`フォームのみを示します。
+
+次の表に、自分で使用するために変更できるサンプルコマンドラインを示します。
+
+|目的|使用|
+|--------|---------|
+|ファイル .vb をコンパイルして、ファイルを作成します。|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
+|ファイル .vb をコンパイルし、ファイル .dll を作成します。|`vbc -target:library File.vb`|
+|ファイル .vb をコンパイルして、.exe を作成します。|`vbc -out:My.exe File.vb`|
+|ファイル .vb をコンパイルし、ファイル .dll という名前のライブラリと参照アセンブリの両方を作成します。|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
+|最適化をオンにし`DEBUG` 、定義したシンボルを使用して、現在のディレクトリにあるすべての Visual Basic ファイルをコンパイルします。|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
+|現在のディレクトリにあるすべての Visual Basic ファイルをコンパイルし、ロゴまたは警告を表示せずに、File2 のデバッグバージョンを生成します。|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
+|現在のディレクトリにあるすべての Visual Basic ファイルを何らかの .dll にコンパイルします。|`vbc -target:library -out:Something.dll *.vb`|
+
 > [!TIP]
->  関連付けられているに関する情報を表示するには、Visual Studio IDE を使用してプロジェクトをビルドするときに**vbc**出力 ウィンドウでのコンパイラ オプションがコマンド。 この情報を表示するには、開く、[オプション ダイアログ ボックス、プロジェクトとソリューションをビルドおよび実行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)、し、設定、 **MSBuild プロジェクト ビルドの出力の詳細**に**標準**または、詳細度の高いレベル。   
-  
+> Visual Studio IDE を使用してプロジェクトをビルドする場合、関連付けられている**vbc.exe**コマンドに関する情報を [出力] ウィンドウのコンパイラオプションと共に表示できます。 この情報を表示するには、[オプション] ダイアログボックス、[プロジェクトとソリューション]、[ビルドと実行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)] の順に開き、 **MSBuild プロジェクトのビルド出力の詳細**レベルを **[標準]** または [高レベルの詳細 に設定します。
+
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)

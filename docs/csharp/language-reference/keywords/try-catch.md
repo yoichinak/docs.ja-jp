@@ -11,18 +11,16 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 28bf939cb7da760400486c52bb07649826628c1c
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8f901bd8ab5dcdcf4f5674e3f235267c9f535725
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422586"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168717"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# リファレンス)
 
 try-catch ステートメントは、`try` ブロックと、それに続く 1 つ以上の `catch` 句で構成されます。この句にはさまざまな例外のハンドラーを指定します。
-
-## <a name="remarks"></a>コメント
 
 例外がスローされると、共通言語ランタイム (CLR) によって、この例外を処理する `catch` ステートメントが検索されます。 現在実行されているメソッドにそのような `catch` ブロックが含まれていない場合、CLR は現在のメソッドを呼び出したメソッドを検索し、呼び出し履歴の上位を検索していきます。 `catch` ブロックが見つからない場合、CLR はハンドルされていない例外のメッセージをユーザーに表示し、プログラムの実行を停止します。
 
@@ -131,15 +129,16 @@ static void Main()
 catch の詳細については、「[try-catch-finally](try-catch-finally.md)」を参照してください。
 
 ## <a name="exceptions-in-async-methods"></a>非同期メソッドの例外
-非同期メソッドは [async](async.md) 修飾子でマークされ、通常は 1 つ以上の await 式またはステートメントが含まれます。 await 式では、[await](await.md) 演算子が <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> に適用されます。
+
+非同期メソッドは [async](async.md) 修飾子でマークされ、通常は 1 つ以上の await 式またはステートメントが含まれます。 await 式では、[await](../operators/await.md) 演算子が <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> に適用されます。
 
 コントロールが非同期メソッドの `await` に到達すると、メソッドの進行状況は、待機中のタスクが完了するまで中断されます。 タスクが完了すると、メソッドで実行を再開できます。 詳細については、「[Async および Await を使用した非同期プログラミング](../../programming-guide/concepts/async/index.md)」と「[非同期プログラムにおける制御フロー](../../programming-guide/concepts/async/control-flow-in-async-programs.md)」を参照してください。
 
 `await` が適用される完了したタスクは、タスクを返すメソッドでハンドルされない例外が発生したことが原因で、違反状態になる場合があります。 タスクを待機すると例外がスローされます。 タスクを返す非同期処理が取り消された場合に、取り消された状態でタスクを終了することもできます。 取り消されたタスクを待機すると、`OperationCanceledException` がスローされます。 非同期処理を取り消す方法の詳細については、「[非同期アプリケーションの微調整](../../programming-guide/concepts/async/fine-tuning-your-async-application.md)」を参照してください。
 
-例外をキャッチするには、`try` ブロックでタスクを待機し、関連付けられている `catch` ブロックで例外をキャッチします。 例については、「使用例」のセクションを参照してください。
+例外をキャッチするには、`try` ブロックでタスクを待機し、関連付けられている `catch` ブロックで例外をキャッチします。 例については、[async メソッドの例](#async-method-example)に関するセクションを参照してください。
 
-待機中の非同期メソッドで複数の例外が発生したことが原因で、タスクが違反状態になることがあります。 たとえば、タスクは <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> の呼び出しの結果になることがあります。 このようなタスクを待機すると、1 つの例外のみがキャッチされます。どの例外がキャッチされるかは予測できません。 例については、「使用例」のセクションを参照してください。
+待機中の非同期メソッドで複数の例外が発生したことが原因で、タスクが違反状態になることがあります。 たとえば、タスクは <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> の呼び出しの結果になることがあります。 このようなタスクを待機すると、1 つの例外のみがキャッチされます。どの例外がキャッチされるかは予測できません。 例については、[Task.WhenAll の例](#taskwhenall-example)に関するセクションを参照してください。
 
 ## <a name="example"></a>例
 
@@ -147,7 +146,7 @@ catch の詳細については、「[try-catch-finally](try-catch-finally.md)」
 
 [!code-csharp[csrefKeywordsExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#2)]
 
-## <a name="example"></a>例
+## <a name="two-catch-blocks-example"></a>2 つの catch ブロックの例
 
 次の例では、2 種類の catch ブロックが使用され、特殊性が最も高い最初の例外がキャッチされます。
 
@@ -157,7 +156,7 @@ catch の詳細については、「[try-catch-finally](try-catch-finally.md)」
 
 [!code-csharp[csrefKeywordsExceptions#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#3)]
 
-## <a name="example"></a>例
+## <a name="async-method-example"></a>非同期メソッドの例
 
 次の例では、非同期メソッドの例外処理を示します。 非同期タスクからスローされる例外をキャッチするには、`try` ブロックに `await` 式を配置し、`catch` ブロックで例外をキャッチします。
 
@@ -167,7 +166,7 @@ catch の詳細については、「[try-catch-finally](try-catch-finally.md)」
 
 [!code-csharp[csAsyncExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncexceptions/cs/class1.cs#2)]  
 
-## <a name="example"></a>例
+## <a name="taskwhenall-example"></a>Task.WhenAll の例
 
 次の例では、複数のタスクで複数の例外が発生する可能性がある例外処理について説明します。 `try` ブロックは <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> の呼び出しで返されるタスクを待機します。 WhenAll が適用される 3 つのタスクが完了すると、このタスクは完了します。
 
@@ -177,7 +176,7 @@ catch の詳細については、「[try-catch-finally](try-catch-finally.md)」
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の「[try ステートメント](~/_csharplang/spec/statements.md#the-try-statement)」セクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

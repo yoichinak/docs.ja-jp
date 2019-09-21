@@ -2,18 +2,19 @@
 title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: 885cfad7be42f7c48b4c061f3293d667eb5d4ad8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd984b2ab89060451b1b2d02c324e803766908ce
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772347"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397724"
 ---
-# <a name="netpipe"></a>\<net.pipe>
+# <a name="netpipe"></a>\<net.pipe >
 名前付きパイプ接続の有効期間を管理し、名前付きパイプを介して到着するアクティベーション要求を処理する名前付きパイプ アクティベーション サービスの構成設定を指定します。  
   
- \<system.serviceModel.activation>  
-\<net.pipe>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel. activation >** ](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<net.pipe >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,20 +52,20 @@ ms.locfileid: "61772347"
 |属性|説明|  
 |---------------|-----------------|  
 |`maxPendingAccepts`|整数は、共有サービスの待機エンドポイントで同時に受け入れる未処理のスレッドの最大数を示しています。 既定値は 2 です。|  
-|`maxPendingConnections`|ディスパッチを待機できる最大接続数を指定する整数。 既定値は 100 です。|  
+|`maxPendingConnections`|ディスパッチを待機できる最大接続数を指定する整数。 既定値は、100 です。|  
 |`receiveTimeout`|フレーム データを読み取り、基礎となる接続から接続ディスパッチを実行するタイムアウトを指定する <xref:System.TimeSpan> です。 既定値は "00:00:10" です。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|格納する構成要素のコレクションを`securityIdentifier`属性を WCF サービスをホストし、共有サービスへの接続アクセスが許可されるプロセスのユーザー アカウントを指定します。|  
+|[\<allowAccounts>](allowaccounts.md)|WCF サービスをホストするプロセスのユーザー `securityIdentifier`アカウントを指定する属性を含む構成要素のコレクション。共有サービスへの接続アクセス権が付与されます。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|リスナー プロセス SMSvcHost.exe の設定が含まれています。|  
+|[\<system.serviceModel.activation >](system-servicemodel-activation.md)|リスナー プロセス SMSvcHost.exe の設定が含まれています。|  
   
 ## <a name="see-also"></a>関連項目
 

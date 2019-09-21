@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a928dde8615589cbc8e502a9b5dd033beded4c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 48bd536cedd6a9689cdb18cca457ff06473396b5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086755"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051865"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>COM 相互運用の例: COM クライアントと .NET サーバー
 [COM クライアント](#cpconcominteropsamplecomclientnetserveranchor1)と [.NET サーバー](#cpconcominteropsamplecomclientnetserveranchor2)を相互運用して、住宅ローンの計算を行うサンプルを次に示します。 この例では、クライアントはマネージド `Loan` クラスのインスタンスを作成して呼び出し、4 つの引数 (そのうち 1 つは 0) をこのインスタンスに渡し、計算結果を表示します。 このセクション全体で、このサンプルのコード例を使用します。  
@@ -391,4 +391,4 @@ namespace LoanLib {
   
 ## <a name="see-also"></a>関連項目
 
-- [COM への .NET Framework コンポーネントの公開](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [COM への .NET Framework コンポーネントの公開](exposing-dotnet-components-to-com.md)

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 0eb3ef7db422d5cbbe70bd5633798b8d3787452d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f923ce73760fa42a2c435d346f9d1097a5ed82f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705039"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664052"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<削除 > authenticationModules (ネットワーク設定) の要素
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<authenticationModules の > 要素を削除する (ネットワーク設定)
 アプリケーションから認証モジュールを削除します。  
   
  \<configuration>  
@@ -49,12 +49,12 @@ ms.locfileid: "61705039"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|ネットワーク要求の認証に使用されるモジュールを指定します。|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|ネットワーク要求を認証するために使用するモジュールを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- `remove`要素は、構成ファイルで、または構成階層のより高いレベルで既に定義されている認証モジュールを削除します。  
+ 要素`remove`は、構成ファイルまたは構成階層の上位レベルで定義された認証モジュールを削除します。  
   
- 値、`type`属性が有効なクラス名にする必要があります。  
+ `type`属性の値は、有効なクラス名である必要があります。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
@@ -76,4 +76,4 @@ ms.locfileid: "61705039"
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

@@ -2,39 +2,39 @@
 title: OLE DB データ型のマッピング
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: a5c4b7264b9f8abb842fff3295d53ed8ab626671
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 969433b2582771a0ed57217180c2795f9359956f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584525"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783486"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB データ型のマッピング
-次の表は、.NET Framework Data Provider for ADO および OLE DB からのデータ型の推定の .NET Framework 型を示します (<xref:System.Data.OleDb>)。 <xref:System.Data.OleDb.OleDbDataReader> の型指定されたアクセサー メソッドも示します。  
+次の表は、ADO および OLE DB (<xref:System.Data.OleDb>) の .NET Framework Data Provider のデータ型に対して推論された .NET Framework 型を示しています。 <xref:System.Data.OleDb.OleDbDataReader> の型指定されたアクセサー メソッドも示します。  
   
-|ADO 型|OLE DB 型|.NET Framework 型|.NET framework の型指定されたアクセサー|  
+|ADO 型|OLE DB 型|.NET Framework 型|.NET Framework 型指定されたアクセサー|  
 |--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |adBigInt|DBTYPE_I8|Int64|GetInt64()|  
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  
-|adBoolean|DBTYPE_BOOL|ブール型|GetBoolean()|  
+|adBoolean|DBTYPE_BOOL|Boolean|GetBoolean()|  
 |adBSTR|DBTYPE_BSTR|String|GetString()|  
-|adChapter|DBTYPE_HCHAPTER|`DataReader` によってサポートされます。 参照してください[DataReader によるデータの取得](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)します。|GetValue()|  
+|adChapter|DBTYPE_HCHAPTER|`DataReader` によってサポートされます。 「 [DataReader を使用したデータの取得](retrieving-data-using-a-datareader.md)」を参照してください。|GetValue()|  
 |adChar|DBTYPE_STR|String|GetString()|  
-|adCurrency|DBTYPE_CY|Decimal (10 進数型)|GetDecimal()|  
+|adCurrency|DBTYPE_CY|Decimal|GetDecimal()|  
 |adDate|DBTYPE_DATE|DateTime|GetDateTime()|  
 |adDBDate|DBTYPE_DBDATE|DateTime|GetDateTime()|  
 |adDBTime|DBTYPE_DBTIME|DateTime|GetDateTime()|  
 |adDBTimeStamp|DBTYPE_DBTIMESTAMP|DateTime|GetDateTime()|  
-|adDecimal|DBTYPE_DECIMAL|Decimal (10 進数型)|GetDecimal()|  
-|adDouble|DBTYPE_R8|倍精度浮動小数点型|GetDouble()|  
+|adDecimal|DBTYPE_DECIMAL|Decimal|GetDecimal()|  
+|adDouble|DBTYPE_R8|Double|GetDouble()|  
 |adError|DBTYPE_ERROR|ExternalException|GetValue()|  
 |adFileTime|DBTYPE_FILETIME|DateTime|GetDateTime()|  
 |adGUID|DBTYPE_GUID|GUID|GetGuid()|  
-|adIDispatch|DBTYPE_IDISPATCH *|Object|GetValue()|  
+|adIDispatch|DBTYPE_IDISPATCH *|オブジェクト|GetValue()|  
 |adInteger|DBTYPE_I4|Int32|GetInt32()|  
-|adIUnknown|DBTYPE_IUNKNOWN *|Object|GetValue()|  
-|adNumeric|DBTYPE_NUMERIC|Decimal (10 進数型)|GetDecimal()|  
-|adPropVariant|DBTYPE_PROPVARIANT|Object|GetValue()|  
+|adIUnknown|DBTYPE_IUNKNOWN *|オブジェクト|GetValue()|  
+|adNumeric|DBTYPE_NUMERIC|Decimal|GetDecimal()|  
+|adPropVariant|DBTYPE_PROPVARIANT|オブジェクト|GetValue()|  
 |adSingle|DBTYPE_R4|Single|GetFloat()|  
 |adSmallInt|DBTYPE_I2|Int16|GetInt16()|  
 |adTinyInt|DBTYPE_I1|Byte|GetByte()|  
@@ -42,14 +42,14 @@ ms.locfileid: "65584525"
 |adUnsignedInt|DBTYPE_UI4|UInt32|GetValue()|  
 |adUnsignedSmallInt|DBTYPE_UI2|UInt16|GetValue()|  
 |adUnsignedTinyInt|DBTYPE_UI1|Byte|GetByte()|  
-|adVariant|DBTYPE_VARIANT|Object|GetValue()|  
+|adVariant|DBTYPE_VARIANT|オブジェクト|GetValue()|  
 |adWChar|DBTYPE_WSTR|String|GetString()|  
 |adUserDefined|DBTYPE_UDT|サポート外||  
 |adVarNumeric|DBTYPE_VARNUMERIC|サポート外||  
   
- \* OLE DB 型の`DBTYPE_IUNKNOWN`と`DBTYPE_IDISPATCH`、オブジェクト参照はポインターのマーシャ リングされた表現。  
+ \*OLE DB 型`DBTYPE_IUNKNOWN`および`DBTYPE_IDISPATCH`の場合、オブジェクト参照はポインターのマーシャリングされた表現になります。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET でのデータの取得および変更](retrieving-and-modifying-data.md)
+- [ADO.NET の概要](ado-net-overview.md)

@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: c8c47091d943aa0d710cec1af83e039bca9ee2d2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833802"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046253"
 ---
 # <a name="reliability-best-practices"></a>信頼性に関するベスト プラクティス
 
@@ -91,7 +91,7 @@ SQL Server は、デッド ロックやリソースの制約が発生すると�
 
 <xref:System.Runtime.InteropServices.SafeHandle> は <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> の代わりに使う機能ではないことに注意してください。  依然としてリソース競合の可能性はあり、オペレーティング システムのリソースを明示的に破棄するとパフォーマンス上の利点があります。  リソースの明示的な破棄を行っている `finally` ブロックが最後まで実行されない可能性があることだけは理解しておいてください。
 
-<xref:System.Runtime.InteropServices.SafeHandle> を使うと、ハンドルを解放する処理 (オペレーティング システム ハンドル解放ルーチンに状態を渡す、ハンドルのセットをループで解放する、など) を実行する独自の <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドを実装できます。  CLR はこのメソッドが実行されることを保証します。  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実装の作成者には、あらゆる状況においてハンドルが解放されることを保証する責任があります。 解放できないとハンドルがリークされ、多くの場合、ハンドルに関連付けられているネイティブ リソースがリークすることになります。 したがって、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実装が呼び出し時に使用できない可能性があるリソースの割り当てを必要としないように、<xref:System.Runtime.InteropServices.SafeHandle> 派生クラスを構成することが不可欠です。 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実装内で失敗する可能性があるメソッドの呼び出しは、コードがそのようなエラーを処理し、コントラクトを完了してネイティブ ハンドルを解放できる場合に限り、許容されることに注意してください。 デバッグのため、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> には、致命的なエラーが発生してリソースを解放できない場合に `false` に設定できる戻り値 <xref:System.Boolean> があります。 このようにすると、[releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) MDA がアクティブ化されて (有効になっている場合)、問題を特定するのに役立ちます。 他にはどのような影響もランタイムに与えません。<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> は同じリソースに対して再び呼び出されることはなく、結果としてハンドルはリークされます。
+<xref:System.Runtime.InteropServices.SafeHandle> を使うと、ハンドルを解放する処理 (オペレーティング システム ハンドル解放ルーチンに状態を渡す、ハンドルのセットをループで解放する、など) を実行する独自の <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドを実装できます。  CLR はこのメソッドが実行されることを保証します。  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実装の作成者には、あらゆる状況においてハンドルが解放されることを保証する責任があります。 解放できないとハンドルがリークされ、多くの場合、ハンドルに関連付けられているネイティブ リソースがリークすることになります。 したがって、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実装が呼び出し時に使用できない可能性があるリソースの割り当てを必要としないように、<xref:System.Runtime.InteropServices.SafeHandle> 派生クラスを構成することが不可欠です。 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実装内で失敗する可能性があるメソッドの呼び出しは、コードがそのようなエラーを処理し、コントラクトを完了してネイティブ ハンドルを解放できる場合に限り、許容されることに注意してください。 デバッグのため、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> には、致命的なエラーが発生してリソースを解放できない場合に `false` に設定できる戻り値 <xref:System.Boolean> があります。 このようにすると、[releaseHandleFailed](../debug-trace-profile/releasehandlefailed-mda.md) MDA がアクティブ化されて (有効になっている場合)、問題を特定するのに役立ちます。 他にはどのような影響もランタイムに与えません。<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> は同じリソースに対して再び呼び出されることはなく、結果としてハンドルはリークされます。
 
 <xref:System.Runtime.InteropServices.SafeHandle> が適さない特定の状況があります。  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドは <xref:System.GC> ファイナライザー スレッドで実行できるので、特定のスレッドで解放する必要があるすべてのハンドルは、<xref:System.Runtime.InteropServices.SafeHandle> にラップされていてはなりません。
 
@@ -117,7 +117,7 @@ SQL Server は、デッド ロックやリソースの制約が発生すると�
 
 CLR は、スレッドの単なる中止ではなく、<xref:System.AppDomain> のティアダウンが必要な場合を知るため、コードがロック状態であることを認識する必要があります。  スレッドの中止は、スレッドで使われているデータが不整合な状態のままになる可能性があるため、危険な場合があります。 したがって、<xref:System.AppDomain> 全体をリサイクルする必要があります。  ロックを識別できないと、デッドロックまたは不適切な結果になる可能性があります。 ロック領域を識別するには、<xref:System.Threading.Thread.BeginCriticalRegion%2A> および <xref:System.Threading.Thread.EndCriticalRegion%2A> メソッドを使います。  これらは <xref:System.Threading.Thread> クラスの静的メソッドであり、現在のスレッドにのみ適用され、あるスレッドのロック カウントを別のスレッドが編集するのを防ぐのに役立ちます。
 
-これらのメソッドを使う [lock ステートメント](~/docs/csharp/language-reference/keywords/lock-statement.md)を使うだけでなく、この CLR 通知が組み込まれている <xref:System.Threading.Monitor.Enter%2A> および <xref:System.Threading.Monitor.Exit%2A> を使うこともお勧めします。
+これらのメソッドを使う [lock ステートメント](../../csharp/language-reference/keywords/lock-statement.md)を使うだけでなく、この CLR 通知が組み込まれている <xref:System.Threading.Monitor.Enter%2A> および <xref:System.Threading.Monitor.Exit%2A> を使うこともお勧めします。
 
 スピン ロックや <xref:System.Threading.AutoResetEvent> などの他のロック メカニズムは、これらのメソッドを呼び出して、クリティカルなセクションに入ったことを CLR に通知する必要があります。  これらのメソッドはロックを取得しません。コードがクリティカル セクションで実行していて、スレッドを中止すると共有状態の一貫性がなくなることを、CLR に通知します。  カスタム <xref:System.Threading.ReaderWriterLock> クラスなどの独自のロックの種類を定義している場合は、これらのロック カウント メソッドを使います。
 
@@ -143,7 +143,7 @@ CLR は、スレッドの単なる中止ではなく、<xref:System.AppDomain> �
 
 ### <a name="locks-do-not-work-process-wide-or-between-application-domains"></a>プロセス全体またはアプリケーション ドメイン間ではロックが機能しない
 
-以前は、<xref:System.Threading.Monitor.Enter%2A> および [lock ステートメント](~/docs/csharp/language-reference/keywords/lock-statement.md)は、グローバルなプロセス ロックの作成に使われていました。  たとえば、これは、非共有アセンブリからの <xref:System.Type> インスタンスなどの <xref:System.AppDomain> のアジャイル クラス、<xref:System.Threading.Thread> オブジェクト、インターン処理された文字列、およびリモート処理を使ってアプリケーション ドメイン間で共有される文字列でのロック時に発生します。  これらのロックはプロセス全体ではなくなりました。  プロセス全体にわたるアプリケーション間ドメイン ロックの存在を識別するには、ロック内のコードが、ディスク上のファイルやデータベースなどの、外部の永続リソースを使っているかどうかを確認します。
+以前は、<xref:System.Threading.Monitor.Enter%2A> および [lock ステートメント](../../csharp/language-reference/keywords/lock-statement.md)は、グローバルなプロセス ロックの作成に使われていました。  たとえば、これは、非共有アセンブリからの <xref:System.Type> インスタンスなどの <xref:System.AppDomain> のアジャイル クラス、<xref:System.Threading.Thread> オブジェクト、インターン処理された文字列、およびリモート処理を使ってアプリケーション ドメイン間で共有される文字列でのロック時に発生します。  これらのロックはプロセス全体ではなくなりました。  プロセス全体にわたるアプリケーション間ドメイン ロックの存在を識別するには、ロック内のコードが、ディスク上のファイルやデータベースなどの、外部の永続リソースを使っているかどうかを確認します。
 
 保護されたコードが外部リソースを使っている場合、そのコードが複数のアプリケーション ドメインで同時に実行することがあるため、<xref:System.AppDomain> 内でロックを取得すると問題が発生する可能性があることに注意してください。  これは、1 つのログ ファイルへの書き込み、またはプロセス全体のソケットへのバインドで、問題になる場合があります。  これらの変更は、名前付きの <xref:System.Threading.Mutex> または <xref:System.Threading.Semaphore> インスタンスを使う以外に、マネージド コードを使ってプロセスのグローバルなロックを取得する簡単な方法はないことを意味します。  2 つのアプリケーション ドメインで同時に実行しないコードを作成するか、<xref:System.Threading.Mutex> または <xref:System.Threading.Semaphore> クラスを使ってください。  既存のコードを変更できない場合は、この同期を実現するために Win32 名前付きミューテックスを使わないでください。なぜなら、ファイバー モードで実行するということは、同じオペレーティング システム スレッドでミューテックスを取得して解放することが保証されないことを意味します。  アンマネージド コードを使ってロックを同期するのではなく、マネージド <xref:System.Threading.Mutex> クラス、または名前付きの <xref:System.Threading.ManualResetEvent>、<xref:System.Threading.AutoResetEvent>、または <xref:System.Threading.Semaphore> を使って、CLR が認識する方法でコード ロックを同期する必要があります。
 
@@ -241,11 +241,11 @@ SQL Server の場合、同期またはスレッド化を導入するために使
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>アンマネージ コードで無期限にブロックしない
 
-マネージド コード内ではなくアンマネージド コード内でブロックすると、CLR がスレッドを中止できないため、サービス拒否攻撃を受ける可能性があります。  ブロックされたスレッドは、少なくとも一部の非常に安全でない操作を実行せずに、CLR が <xref:System.AppDomain> をアンロードするのを妨げます。  Windows を使用したブロックの同期プリミティブでは、許容できないものの明白な例です。  呼び出しでブロック`ReadFile`ソケットで避ける必要があります可能であれば、理想的には、Windows API はこのような操作がタイムアウトする機構を提供します。
+マネージド コード内ではなくアンマネージド コード内でブロックすると、CLR がスレッドを中止できないため、サービス拒否攻撃を受ける可能性があります。  ブロックされたスレッドは、少なくとも一部の非常に安全でない操作を実行せずに、CLR が <xref:System.AppDomain> をアンロードするのを妨げます。  Windows 同期プリミティブを使用したブロックは、許可できないことを明確に示したものです。  ソケット`ReadFile`でのの呼び出しでのブロックは、可能であれば回避する必要があります。理想的には、Windows API は、このような操作のためのメカニズムを提供することをお勧めします。
 
 ネイティブを呼び出すメソッドでは、合理的な有限のタイムアウトで Win32 呼び出しを使うのが理想的です。  ユーザーがタイムアウトを指定できる場合は、何らかの特定のセキュリティ アクセス許可なしでは、ユーザーが無限のタイムアウトを指定できないようにする必要があります。  ガイドラインとしては、メソッドが 10 秒以上ブロックする場合は、タイムアウトをサポートするバージョンを使うか、CLR のサポートを追加する必要があります。
 
-問題のある Api のいくつかの例を示します。  パイプ (匿名と名前付きのどちらも) はタイムアウトを指定して作成できます。ただし、コードでは、NMPWAIT_WAIT_FOREVER を指定して `CreateNamedPipe` と `WaitNamedPipe` を呼び出さないようにする必要があります。  さらに、タイムアウトを指定した場合でも、予期しないブロックが発生する可能性があります。  匿名パイプで `WriteFile` を呼び出すと、すべてのバイトが書き込まれるまでブロックします。つまり、バッファーに読み取られていないデータがある場合、リーダーがパイプのバッファー内の領域を解放するまで、`WriteFile` の呼び出しをブロックします。  ソケットでは、タイムアウト メカニズムを優先する API を常に使う必要があります。
+問題のある Api の例をいくつか次に示します。  パイプ (匿名と名前付きのどちらも) はタイムアウトを指定して作成できます。ただし、コードでは、NMPWAIT_WAIT_FOREVER を指定して `CreateNamedPipe` と `WaitNamedPipe` を呼び出さないようにする必要があります。  さらに、タイムアウトを指定した場合でも、予期しないブロックが発生する可能性があります。  匿名パイプで `WriteFile` を呼び出すと、すべてのバイトが書き込まれるまでブロックします。つまり、バッファーに読み取られていないデータがある場合、リーダーがパイプのバッファー内の領域を解放するまで、`WriteFile` の呼び出しをブロックします。  ソケットでは、タイムアウト メカニズムを優先する API を常に使う必要があります。
 
 #### <a name="code-analysis-rule"></a>コード分析ルール
 
@@ -265,7 +265,7 @@ COM シングルスレッド アパートメント (STA) を使用するコー�
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>可能な限りアンマネージ メモリを避ける
 
-オペレーティング システム ハンドルと同じように、アンマネージ メモリはリークする可能性があります。 可能であれば、[stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) を使ってスタック上のメモリを使うか、[fixed ステートメント](~/docs/csharp/language-reference/keywords/fixed-statement.md) や byte[] を使う <xref:System.Runtime.InteropServices.GCHandle> などの固定されたマネージド オブジェクトを使うようにします。 最終的には <xref:System.GC> がこれらをクリーンアップします。 ただし、アンマネージ メモリを割り当てる必要がある場合は、<xref:System.Runtime.InteropServices.SafeHandle> から派生するクラスを使ってメモリの割り当てをラップすることを考えます。
+オペレーティング システム ハンドルと同じように、アンマネージ メモリはリークする可能性があります。 可能であれば、[stackalloc](../../csharp/language-reference/operators/stackalloc.md) を使ってスタック上のメモリを使うか、[fixed ステートメント](../../csharp/language-reference/keywords/fixed-statement.md) や byte[] を使う <xref:System.Runtime.InteropServices.GCHandle> などの固定されたマネージド オブジェクトを使うようにします。 最終的には <xref:System.GC> がこれらをクリーンアップします。 ただし、アンマネージ メモリを割り当てる必要がある場合は、<xref:System.Runtime.InteropServices.SafeHandle> から派生するクラスを使ってメモリの割り当てをラップすることを考えます。
 
 <xref:System.Runtime.InteropServices.SafeHandle> が適切ではないケースが少なくとも 1 つあることに注意してください。  メモリの割り当てや解放を行う COM メソッド呼び出しでは、1 つの DLL が `CoTaskMemAlloc` を使ってメモリを割り当てた後、別の DLL が `CoTaskMemFree` でそのメモリを解放するのが一般的です。  これらの場所で <xref:System.Runtime.InteropServices.SafeHandle> を使うのは、他の DLL がメモリの有効期間を制御できるようにする代わりに、アンマネージ メモリの有効期間を <xref:System.Runtime.InteropServices.SafeHandle> の有効期間に結び付けようとするため不適切です。
 
@@ -277,7 +277,7 @@ COM シングルスレッド アパートメント (STA) を使用するコー�
 
 #### <a name="code-analysis-rule"></a>コード分析ルール
 
-すべてのオブジェクトまたはすべての例外をキャッチしているマネージド コード内のすべての catch ブロックを確認します。  C#、つまり、両方のフラグを設定`catch`{}と`catch(Exception)`{}します。  例外の種類を非常に限定的にすることを考えます。または、コードを調べて、予期しない例外の種類をキャッチした場合に不適切に動作しないことを確認します。
+すべてのオブジェクトまたはすべての例外をキャッチしているマネージド コード内のすべての catch ブロックを確認します。  でC#は、これはと`catch`の`catch(Exception)`両方{}にフラグを行う{}ことを意味します。  例外の種類を非常に限定的にすることを考えます。または、コードを調べて、予期しない例外の種類をキャッチした場合に不適切に動作しないことを確認します。
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>マネージド スレッドが Win32 スレッド (ファイバー) であると想定してはならない
 
@@ -316,4 +316,4 @@ CER は、<xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstraine
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.ConstrainedExecution>
-- [SQL Server プログラミングとホスト保護属性](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
+- [SQL Server プログラミングとホスト保護属性](sql-server-programming-and-host-protection-attributes.md)

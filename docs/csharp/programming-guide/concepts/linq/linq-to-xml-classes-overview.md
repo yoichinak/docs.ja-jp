@@ -2,12 +2,12 @@
 title: LINQ to XML クラスの概要 (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: 6e7e25a0faa659dc362cf1184951c9e5fa49ca18
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 55be666fc0db0becb12ec8b525e7fc443536e1df
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484450"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591890"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>LINQ to XML クラスの概要 (C#)
 このトピックでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 名前空間内の <xref:System.Xml.Linq> クラスの一覧を示し、各クラスについて簡単に説明します。  
@@ -15,7 +15,7 @@ ms.locfileid: "66484450"
 ## <a name="linq-to-xml-classes"></a>LINQ to XML クラス  
   
 ### <a name="xattribute-class"></a>XAttribute クラス  
- <xref:System.Xml.Linq.XAttribute> は XML 属性を表します。 詳細と例については、「[XAttribute クラスの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/xattribute-class-overview.md)」を参照してください。  
+ <xref:System.Xml.Linq.XAttribute> は XML 属性を表します。 詳細と例については、「[XAttribute クラスの概要 (C#)](./xattribute-class-overview.md)」を参照してください。  
   
 ### <a name="xcdata-class"></a>XCData クラス  
  <xref:System.Xml.Linq.XCData> は、CDATA テキスト ノードを表します。  
@@ -34,16 +34,16 @@ ms.locfileid: "66484450"
  <xref:System.Xml.Linq.XDeclaration> は、XML 宣言を表します。 XML 宣言は、ドキュメントの XML バージョンとエンコーディングを宣言するために使用されます。 また、XML 宣言では、XML ドキュメントがスタンドアロンかどうかを指定します。 ドキュメントがスタンドアロンである場合、外部 DTD、または内部サブセットから参照されている外部パラメーター エンティティのいずれかに外部マークアップ宣言がありません。  
   
 ### <a name="xdocument-class"></a>XDocument クラス  
- <xref:System.Xml.Linq.XDocument> は、XML ドキュメントを表します。 詳細と例については、「[XDocument クラスの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md)」を参照してください。  
+ <xref:System.Xml.Linq.XDocument> は、XML ドキュメントを表します。 詳細と例については、「[XDocument クラスの概要 (C#)](./xdocument-class-overview.md)」を参照してください。  
   
 ### <a name="xdocumenttype-class"></a>XDocumentType クラス  
  <xref:System.Xml.Linq.XDocumentType> は、XML ドキュメント型定義 (DTD) を表します。  
   
 ### <a name="xelement-class"></a>XElement クラス  
- <xref:System.Xml.Linq.XElement> は、XML 要素を表します。 詳細と例については、「[XElement クラスの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md)」を参照してください。  
+ <xref:System.Xml.Linq.XElement> は、XML 要素を表します。 詳細と例については、「[XElement クラスの概要 (C#)](./xelement-class-overview.md)」を参照してください。  
   
 ### <a name="xname-class"></a>XName クラス  
- <xref:System.Xml.Linq.XName> は、要素の名前 (<xref:System.Xml.Linq.XElement>) および属性 (<xref:System.Xml.Linq.XAttribute>) を表します。 詳細と例については、「[XDocument クラスの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md)」を参照してください。  
+ <xref:System.Xml.Linq.XName> は、要素の名前 (<xref:System.Xml.Linq.XElement>) および属性 (<xref:System.Xml.Linq.XAttribute>) を表します。 詳細と例については、「[XDocument クラスの概要 (C#)](./xdocument-class-overview.md)」を参照してください。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、XML 名ができる限り単純になるように設計されています。 XML 名は、その複雑さのために XML の高度な領域として扱われることがよくあります。 この複雑さの原因として考えられるのは、開発者がプログラミングで通常使用する名前空間ではなく、名前空間プレフィックスです。 名前空間プレフィックスは、XML を入力するときに必要なキー ストロークを減らしたり、XML を読みやすくしたりするために役立ちます。 しかし、プレフィックスは、完全な XML 名前空間を使用するためのショートカットに過ぎないことが多く、必要ない場合がほとんどです。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、すべてのプレフィックスを対応する XML 名前空間に解決することで、XML 名を簡素化しています。 プレフィックスが必要であれば、<xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A> メソッドを介して使用できます。  
   
@@ -88,4 +88,4 @@ ms.locfileid: "66484450"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML プログラミングの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [LINQ to XML プログラミングの概要 (C#)](./linq-to-xml-overview.md)

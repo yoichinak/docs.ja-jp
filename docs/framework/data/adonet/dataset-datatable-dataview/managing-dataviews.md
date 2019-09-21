@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: df03c68193a1068b4bdf0b6ed0923b3bbb8a046a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e85fccddf6359791ea702667a36b44f611815dc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785412"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784507"
 ---
 # <a name="managing-dataviews"></a>DataViews の管理
-<xref:System.Data.DataViewManager> のすべてのテーブルのビュー設定を管理するには、<xref:System.Data.DataView> を使用します。 グリッドなど、リレーションシップをナビゲートする複数のテーブルにバインドするコントロールがある場合、 **DataViewManager**は最適です。  
+<xref:System.Data.DataViewManager> のすべてのテーブルのビュー設定を管理するには、<xref:System.Data.DataView> を使用します。 リレーションシップを移動するグリッドなど、複数のテーブルにバインドするコントロールがある場合は、 **DataViewManager**が理想的です。  
   
- **DataViewManager**のコレクションを含む<xref:System.Data.DataViewSetting>オブジェクト内のテーブルのビュー設定に使用される、<xref:System.Data.DataSet>します。 <xref:System.Data.DataViewSettingCollection> 1 つ含まれる<xref:System.Data.DataViewSetting>内の各テーブルのオブジェクトを**データセット**します。 既定値を設定する**ApplyDefaultSort**、**並べ替え**、 **RowFilter**、および**RowStateFilter**によって参照されるテーブルのプロパティ使用してその**DataViewSetting**します。 参照することができます、 **DataViewSetting**名前または序数参照は、その特定のテーブル オブジェクトへの参照を渡すことによって、特定のテーブルにします。 コレクションにアクセスすることができます**DataViewSetting**内のオブジェクトを**DataViewManager**を使用して、 **DataViewSettings**プロパティ。  
+ **DataViewManager**には、 <xref:System.Data.DataViewSetting> <xref:System.Data.DataSet>内のテーブルのビュー設定を設定するために使用されるオブジェクトのコレクションが含まれています。 に<xref:System.Data.DataViewSettingCollection>は、 <xref:System.Data.DataViewSetting> **データセット**内のテーブルごとに1つのオブジェクトが格納されます。 参照されるテーブルの既定の**Applydefaultsort**、 **Sort**、 **RowFilter**、 **Rowstatefilter**の各プロパティは、 **DataViewSetting**を使用して設定できます。 特定のテーブルの**DataViewSetting**は、名前または序数参照を使用して参照することも、特定のテーブルオブジェクトへの参照を渡すことによって参照することもできます。 **DataViewManager**内の**DataViewSetting**オブジェクトのコレクションには、 **DataViewSettings**プロパティを使用してアクセスできます。  
   
- 次のコード例の塗りつぶしを**データセット**、SQL Server と**Northwind**データベース テーブル**顧客**、**注文**、および**注文の詳細を**、テーブル間のリレーションシップを作成しを使用して、 **DataViewManager**既定を設定する**DataView**設定、およびバインドを**DataGrid**を**DataViewManager**します。 例では、既定値を設定する**DataView**のすべてのテーブルの設定、**データセット**、テーブルの主キーで並べ替える (**ApplyDefaultSort**  =  **true**) の並べ替え順序を変更し、**顧客**を並べ替えるにはテーブル**CompanyName**します。  
+ 次のコード例では、**データセット**に**Northwind**データベーステーブル SQL Server、**顧客**、**注文**、および**注文の詳細**を入力して、テーブル間のリレーションシップを作成し、 **DataViewManager**を使用します。既定の**DataView**設定を設定し、 **DataGrid**を**DataViewManager**にバインドします。 この例では、テーブルの主キーによって並べ替えられるように、**データセット**内のすべてのテーブルの既定の**DataView**設定を設定し (**applydefaultsort** = **true**)、 **Customers**テーブルの並べ替え順序をに変更します。**CompanyName**で並べ替えます。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -125,5 +125,5 @@ grid.SetDataBinding(viewManager, "Customers");
 - <xref:System.Data.DataViewManager>
 - <xref:System.Data.DataViewSetting>
 - <xref:System.Data.DataViewSettingCollection>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataViews](dataviews.md)
+- [ADO.NET の概要](../ado-net-overview.md)

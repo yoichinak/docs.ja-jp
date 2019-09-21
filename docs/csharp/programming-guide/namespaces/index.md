@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 79b7057b1f6a9cdba2215124160b28efb9a1c0be
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629519"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039490"
 ---
 # <a name="namespaces-c-programming-guide"></a>名前空間 (C# プログラミング ガイド)
 
@@ -44,13 +44,12 @@ C# プログラミングでは、名前空間が 2 つの方法でよく使用�
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)に関する記事の「[名前空間](~/_csharplang/spec/namespaces.md)」に関するセクションを参照してください。
   
 ## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
 - [名前空間の使用](using-namespaces.md)
-- [方法: グローバル名前空間エイリアスを使用する](how-to-use-the-global-namespace-alias.md)
 - [方法: My 名前空間を使用する](how-to-use-the-my-namespace.md)
 - [識別子名](../inside-a-program/identifier-names.md)
 - [using ディレクティブ](../../language-reference/keywords/using-directive.md)

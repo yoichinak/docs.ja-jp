@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cf09732a-ab54-4d98-89e2-4d0a1f28fbce
-ms.openlocfilehash: 99c52b93cee858511d50aba2f30f2b9f96d91ccd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e4a36829107480a44980c7210b39c21231c67f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034373"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786453"
 ---
 # <a name="creating-autoincrement-columns"></a>AutoIncrement 列の作成
-列値を一意にするために、新しい行がテーブルに追加されたときに列値が自動的にインクリメントされるように設定できます。 自動インクリメントを作成する<xref:System.Data.DataColumn>、設定、<xref:System.Data.DataColumn.AutoIncrement%2A>プロパティには、列の**true**します。 <xref:System.Data.DataColumn>で定義されている値から開始し、<xref:System.Data.DataColumn.AutoIncrementSeed%2A>プロパティ、各行の値を追加し、 **AutoIncrement**列で定義されている値が、<xref:System.Data.DataColumn.AutoIncrementStep%2A>列のプロパティ。  
+列値を一意にするために、新しい行がテーブルに追加されたときに列値が自動的にインクリメントされるように設定できます。 自動インクリメント<xref:System.Data.DataColumn>を作成するには、列<xref:System.Data.DataColumn.AutoIncrement%2A>のプロパティを**true**に設定します。 次<xref:System.Data.DataColumn>に、は、 <xref:System.Data.DataColumn.AutoIncrementSeed%2A>プロパティで定義されている値で始まり、各行が追加されると、列の<xref:System.Data.DataColumn.AutoIncrementStep%2A>プロパティで定義されている値によって AutoIncrement 列の値が増加します。  
   
- **AutoIncrement**列、お勧め、<xref:System.Data.DataColumn.ReadOnly%2A>のプロパティ、 **DataColumn**に設定する**true**します。  
+ **Autoincrement**列の場合は、 **DataColumn**の<xref:System.Data.DataColumn.ReadOnly%2A>プロパティを**true**に設定することをお勧めします。  
   
  値 200 から開始して 3 ずつインクリメントする列を作成する方法を次の例に示します。  
   
@@ -38,6 +38,6 @@ workColumn.AutoIncrementStep = 3;
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Data.DataColumn>
-- [DataTable スキーマの定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataTable スキーマの定義](datatable-schema-definition.md)
+- [DataTables](datatables.md)
+- [ADO.NET の概要](../ado-net-overview.md)

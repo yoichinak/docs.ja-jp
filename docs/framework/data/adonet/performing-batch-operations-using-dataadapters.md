@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8667cffb032daf0043915d3bee7127ef9b70756b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878294"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794506"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>DataAdapter を使用したバッチ操作の実行
 ADO.NET のバッチ サポートを利用すると、<xref:System.Data.Common.DataAdapter> は、<xref:System.Data.DataSet> または <xref:System.Data.DataTable> から INSERT、UPDATE、および DELETE の各操作を 1 操作ずつサーバーに送信するのではなく、グループ化してサーバーに送信できます。 こうすることで、サーバーへのラウンド トリップの回数が減少し、大幅なパフォーマンスの向上が期待できます。 バッチ更新は、SQL Server (<xref:System.Data.SqlClient>) および Oracle (<xref:System.Data.OracleClient>) の .NET データ プロバイダーでサポートされています。  
@@ -24,7 +24,7 @@ ADO.NET のバッチ サポートを利用すると、<xref:System.Data.Common.D
 ## <a name="using-the-updatebatchsize-property"></a>UpdateBatchSize プロパティの使用  
  バッチ更新を有効にする場合、DataAdapter の <xref:System.Data.IDbCommand.UpdatedRowSource%2A>、`UpdateCommand` および `InsertCommand` の `DeleteCommand` プロパティ値を、<xref:System.Data.UpdateRowSource.None> または <xref:System.Data.UpdateRowSource.OutputParameters> に設定する必要があります。 バッチ更新を実行する際、<xref:System.Data.IDbCommand.UpdatedRowSource%2A> または <xref:System.Data.UpdateRowSource.FirstReturnedRecord> のコマンドの <xref:System.Data.UpdateRowSource.Both> プロパティ値は、無効になります。  
   
- `UpdateBatchSize` プロパティを使用するプロシージャを次に示します。 このプロシージャは、2 つの引数を<xref:System.Data.DataSet>オブジェクトを表す列を持つ、 **ProductCategoryID**と**名前**フィールド、 **Production.ProductCategory**テーブル、およびバッチ サイズ (バッチ内の行の数) を表す整数。 このコードにより、新しい <xref:System.Data.SqlClient.SqlDataAdapter> オブジェクトが作成され、その <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> プロパティ、<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> プロパティ、および <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> プロパティが設定されます。 このコードは、<xref:System.Data.DataSet> オブジェクトによって行が変更済みになっていることを前提としています。 このオブジェクトは、`UpdateBatchSize` プロパティを設定し、更新を実行します。  
+ `UpdateBatchSize` プロパティを使用するプロシージャを次に示します。 このプロシージャは2つの引数<xref:System.Data.DataSet>を受け取り**ます。** このオブジェクトには、 **productcategoryid**テーブルと**Name**フィールドを表す列と、バッチサイズを表す整数 (バッチ内の行。 このコードにより、新しい <xref:System.Data.SqlClient.SqlDataAdapter> オブジェクトが作成され、その <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> プロパティ、<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> プロパティ、および <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> プロパティが設定されます。 このコードは、<xref:System.Data.DataSet> オブジェクトによって行が変更済みになっていることを前提としています。 このオブジェクトは、`UpdateBatchSize` プロパティを設定し、更新を実行します。  
   
 ```vb  
 Public Sub BatchUpdate( _  
@@ -126,7 +126,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>バッチ更新に関連するイベントおよびエラーの処理  
- **DataAdapter**の 2 つの更新に関連するイベントがあります。**RowUpdating**と**RowUpdated**します。 以前のバージョンの ADO.NET では、バッチ処理が無効になっていると、処理された行ごとにこれらのイベントがそれぞれ生成されます。 **RowUpdating**の更新が行われる前に生成および**RowUpdated**データベースの更新が完了した後に生成されます。  
+ **DataAdapter**には、次の2つの更新関連イベントがあります。**RowUpdating**と**RowUpdated**。 以前のバージョンの ADO.NET では、バッチ処理が無効になっていると、処理された行ごとにこれらのイベントがそれぞれ生成されます。 **RowUpdating**は、更新が行われる前に生成され、データベースの更新が完了した後に**RowUpdated**が生成されます。  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>バッチ更新とイベント動作の違い  
  バッチ処理が有効になっている場合、1 度のデータベース操作で複数の行が更新されます。 このため、`RowUpdated` イベントは処理された各行ごとに発生しますが、`RowUpdating` イベントは各バッチ処理につき、1 つしか発生しません。 バッチ処理が無効になっている場合、1 対 1 のインターリーブを伴う 2 つのイベントが発生します。つまり、1 つの行に対し、`RowUpdating` イベントが 1 つ、`RowUpdated` イベントが 1 つ発生します。すべての行が処理されるまで、次の行に対して `RowUpdating` イベントが 1 つ、`RowUpdated` イベントが 1 つ発生します。  
@@ -143,7 +143,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
 ## <a name="see-also"></a>関連項目
 
-- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [DataAdapter によるデータ ソースの更新](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [DataAdapter のイベント処理](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapter と DataReader](dataadapters-and-datareaders.md)
+- [DataAdapter によるデータ ソースの更新](updating-data-sources-with-dataadapters.md)
+- [DataAdapter のイベント処理](handling-dataadapter-events.md)
+- [ADO.NET の概要](ado-net-overview.md)

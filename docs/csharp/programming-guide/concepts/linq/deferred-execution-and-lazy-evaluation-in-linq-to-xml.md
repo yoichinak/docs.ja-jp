@@ -2,12 +2,12 @@
 title: LINQ to XML における遅延実行とレイジー評価 (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 1f68a6c7de943d4a38ad0e5777298368e1c4e554
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9cf28afb5b7b8b3047c8b1b21915ffe7409eb25e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487556"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594565"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>LINQ to XML における遅延実行とレイジー評価 (C#)
 クエリと軸の操作は、多くの場合、遅延実行を使用するように実装されています。 このトピックでは、遅延実行の要件と利点、および実装に関する注意点について説明します。  
@@ -17,7 +17,7 @@ ms.locfileid: "66487556"
   
  LINQ テクノロジでは、コア <xref:System.Linq?displayProperty=nameWithType> クラスのメンバーにおいても、<xref:System.Xml.Linq.Extensions?displayProperty=nameWithType> などのさまざまな LINQ 名前空間の拡張メソッドにおいても、遅延実行が広く利用されています。  
   
- C# 言語では、反復子ブロック内で [yield](../../../../csharp/language-reference/keywords/yield.md) キーワード (`yield-return` ステートメントの形式) を使用することにより、遅延実行が直接サポートされます。 このような反復子は <xref:System.Collections.IEnumerator> 型または <xref:System.Collections.Generic.IEnumerator%601> 型 (または派生型) のコレクションを返します。  
+ C# 言語では、反復子ブロック内で [yield](../../../language-reference/keywords/yield.md) キーワード (`yield-return` ステートメントの形式) を使用することにより、遅延実行が直接サポートされます。 このような反復子は <xref:System.Collections.IEnumerator> 型または <xref:System.Collections.Generic.IEnumerator%601> 型 (または派生型) のコレクションを返します。  
   
 ## <a name="eager-vs-lazy-evaluation"></a>集中評価とレイジー評価  
  遅延実行を実装するメソッドを記述するときは、レイジー評価と集中評価のどちらを使用してメソッドを実装するかについても決定する必要があります。  
@@ -31,11 +31,11 @@ ms.locfileid: "66487556"
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルの次のトピックでは、遅延実行について説明します。  
   
-- [遅延実行の例 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [遅延実行の例 (C#)](./deferred-execution-example.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: クエリの連結 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
-- [概念と用語 (関数型変換) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
-- [集計操作 (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)
-- [yield](../../../../csharp/language-reference/keywords/yield.md)
+- [チュートリアル:クエリの連結 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [概念と用語 (関数型変換) (C#)](./concepts-and-terminology-functional-transformation.md)
+- [集計操作 (C#)](./aggregation-operations.md)
+- [yield](../../../language-reference/keywords/yield.md)

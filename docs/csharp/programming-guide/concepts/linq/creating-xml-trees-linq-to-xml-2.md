@@ -2,17 +2,17 @@
 title: C# での XML ツリーの作成 (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 37970b58519f5ff28165b45ebc729cc0a7f447d3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a77171ebbc07e54f6988fb97aff197b4c6d31721
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487505"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594629"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>C# での XML ツリーの作成 (LINQ to XML)
 ここでは、C# での XML ツリーの作成について説明します。  
   
- LINQ クエリの結果を <xref:System.Xml.Linq.XElement> のコンテンツとして使用する方法については、「[関数型構築 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)」を参照してください。  
+ LINQ クエリの結果を <xref:System.Xml.Linq.XElement> のコンテンツとして使用する方法については、「[関数型構築 (LINQ to XML)](./functional-construction-linq-to-xml.md)」を参照してください。  
   
 ## <a name="constructing-elements"></a>要素の構築
  <xref:System.Xml.Linq.XElement> コンストラクターと <xref:System.Xml.Linq.XAttribute> コンストラクターのシグネチャを使用すると、要素または属性のコンテンツを引数としてコンストラクターに渡すことができます。 いずれかのコンストラクターは任意の数の引数を受け取るため、任意の数の子要素を渡すことができます。 もちろん、それらの子要素のそれぞれに、さらに子要素を含めることもできます。 いずれの要素にも、任意の数の属性を追加できます。  
@@ -42,7 +42,7 @@ XElement contacts =
 ## <a name="xelement-constructors"></a>XElement コンストラクター  
  <xref:System.Xml.Linq.XElement> クラスは、関数型構築で次のコンストラクターを使用します。 <xref:System.Xml.Linq.XElement> のコンストラクターはこれ以外にも存在しますが、関数型構築に使用されないものはこの一覧に示していません。  
   
-|コンストラクター|説明|  
+|Constructor|説明|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|<xref:System.Xml.Linq.XElement> を作成します。 `name` パラメーターには要素の名前を指定し、`content` には要素のコンテンツを指定します。|  
 |`XElement(XName name)`|指定した名前で <xref:System.Xml.Linq.XElement> を初期化して、<xref:System.Xml.Linq.XName> を作成します。|  
@@ -236,4 +236,4 @@ Console.WriteLine("Child2 was {0}",
 
 ## <a name="see-also"></a>関連項目
 
-- [XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [XML ツリーの作成 (C#)](./linq-to-xml-overview.md)

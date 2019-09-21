@@ -12,12 +12,12 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 17dd992edbec5ce444b53ed42b2b486282618672
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b05e944a37e16fc1fcc422271be00c09a271a33
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315804"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602405"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C# コンパイラ オプション)
 **-warn** オプションは、コンパイラが表示する警告レベルを指定します。  
@@ -41,9 +41,9 @@ ms.locfileid: "59315804"
 |4 (既定)|レベルの 3 の警告に加え、情報のための警告を表示します。|  
   
 ## <a name="remarks"></a>解説  
- エラーまたは警告に関する情報を取得するには、ヘルプの索引でエラー コードを検索することができます。 エラーまたは警告に関する情報を取得する他の方法については、「[C# コンパイラ エラー](../../../csharp/language-reference/compiler-messages/index.md)」を参照してください。  
+ エラーまたは警告に関する情報を取得するには、ヘルプの索引でエラー コードを検索することができます。 エラーまたは警告に関する情報を取得する他の方法については、「[C# コンパイラ エラー](../compiler-messages/index.md)」を参照してください。  
   
- すべての警告をエラーとして扱う場合は [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) を使用します。 特定の警告を無効にするには、[-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) を使用します。  
+ すべての警告をエラーとして扱う場合は [-warnaserror](./warnaserror-compiler-option.md) を使用します。 特定の警告を無効にするには、[-nowarn](./nowarn-compiler-option.md) を使用します。  
   
  **-w** は **-warn** の省略形です。  
   
@@ -66,5 +66,5 @@ csc -warn:1 in.cs
   
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

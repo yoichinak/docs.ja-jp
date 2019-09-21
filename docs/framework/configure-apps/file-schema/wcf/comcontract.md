@@ -2,18 +2,20 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: 5d6bfb1e4aa1651cd8c3a869f681d71cfb15725c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751875"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850030"
 ---
-# <a name="comcontract"></a>\<comContract>
+# <a name="comcontract"></a>\<comContract >
 COM+ 統合サービス コントラクトを指定します。  
   
- \<system.ServiceModel >  
-\<comContracts>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts >** ](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<comContract >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,9 +51,9 @@ COM+ 統合サービス コントラクトを指定します。
   
 |属性|説明|  
 |---------------|-----------------|  
-|コントラクト|コントラクトの種類を含む文字列。|  
+|コントラクト (contract)|コントラクトの種類を含む文字列。|  
 |name|コントラクト名を含む文字列。|  
-|namespace|コントラクトの名前空間を含む文字列。|  
+|名前空間|コントラクトの名前空間を含む文字列。|  
 |requiresSession|コントラクトをセッションの多いバインディングでのみ使用できるかどうかを指定するブール値。 サービスが初期化される場合、統合ランタイムは、この設定が、使用されるバインディングの種類と一貫していることを保証します。 コントラクト内の 1 つ以上のバインディングが競合する場合は、例外が生成されます。 このプロパティが `false` で、一方向のチャネルを使用し、いずれかの [out] パラメーターが存在する場合は、例外も発生します。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -69,7 +71,7 @@ COM+ 統合サービス コントラクトを指定します。
 |comContracts|`comContract` 要素のコレクションを含みます。|  
   
 ## <a name="remarks"></a>Remarks  
- COM + 統合サービス コントラクトは、現在に制限されて、`http://tempuri.org`名前空間、およびコントラクト名がサポートする COM インターフェイスから派生します。 ただし、構成ファイルの `comContracts` セクションと `comContract` 要素を使用して代替を指定することができます。 たとえば、次の構成を使用して、名前空間、コントラクト名、組み込まれるユーザー定義型、およびサービス コントラクトのその他の設定を指定できます。  
+ 現在、com + 統合サービスコントラクトは`http://tempuri.org`名前空間に限定されており、コントラクト名はサポートする COM インターフェイスから派生します。 ただし、構成ファイルの `comContracts` セクションと `comContract` 要素を使用して代替を指定することができます。 たとえば、次の構成を使用して、名前空間、コントラクト名、組み込まれるユーザー定義型、およびサービス コントラクトのその他の設定を指定できます。  
   
 ```xml  
 <comContracts>
@@ -92,6 +94,6 @@ COM+ 統合サービス コントラクトを指定します。
 
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [COM+ アプリケーションとの統合](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [方法: COM + サービス設定を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [COM+ アプリケーションとの統合](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [方法: COM + サービス設定の構成](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

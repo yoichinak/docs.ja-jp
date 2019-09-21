@@ -7,16 +7,16 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: ef00c80cd51551fe12283835b3c3d51317c2aa6d
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 63b00f8eb35fa58ea0257d5e996fc2c51a248040
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434023"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042581"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI オートメーションと Microsoft Active Accessibility
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  Microsoft Active Accessibility は、アプリケーションをアクセス可能にするための以前のソリューションでした。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] は [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] の新しいユーザー補助モデルであり、その目的は支援技術製品と自動テスト ツールのニーズを解決することです。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]は、Active Accessibility に対する多くの機能強化を提供します。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "68434023"
 |ROLE_SYSTEM_OUTLINEITEM|ツリー項目|  
 |ROLE_SYSTEM_WINDOW|[Window]|  
   
- さまざまなコントロール型の詳細については、「 [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)」を参照してください。  
+ さまざまなコントロール型の詳細については、「 [UI Automation Control Types](ui-automation-control-types.md)」を参照してください。  
   
 <a name="States_and_Properties"></a>   
 ## <a name="states-and-properties"></a>状態とプロパティ  
@@ -176,7 +176,7 @@ ms.locfileid: "68434023"
 |STATE_SYSTEM_HOTTRACKED|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_PRESSED|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
   
- プロパティ識別子の完全な[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]一覧については、「 [UI オートメーションプロパティの概要](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)」を参照してください。  
+ プロパティ識別子の完全な[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]一覧については、「 [UI オートメーションプロパティの概要](ui-automation-properties-overview.md)」を参照してください。  
   
 <a name="uiautomation_events_compare"></a>   
 ## <a name="events"></a>イベント  
@@ -251,4 +251,4 @@ ms.locfileid: "68434023"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI オートメーションの基礎](../../../docs/framework/ui-automation/index.md)
+- [UI オートメーションの基礎](index.md)

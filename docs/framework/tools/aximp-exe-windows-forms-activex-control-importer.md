@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69cc2459f1944c8101be9c58b1462217ee7ac78f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a5f76f60c8474b1503dc4cebeeafe241cd40be96
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629571"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970604"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows フォーム ActiveX コントロール インポーター)
 ActiveX コントロール インポーターは、ActiveX コントロール用の COM タイプ ライブラリに属する型定義を Windows フォーム コントロールに変換します。  
@@ -30,7 +30,7 @@ ActiveX コントロール インポーターは、ActiveX コントロール用
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 aximp [options]{file.dll | file.ocx}  
 ```  
   
@@ -42,14 +42,14 @@ aximp [options]{file.dll | file.ocx}
   
 |オプション|説明|  
 |------------|-----------------|  
-|`/delaysign`|Aximp.exe が遅延署名を使用して、生成されたコントロールに名前を割り当てるように指定します。 `/keycontainer:`、`/keyfile:`、または `/publickey:` オプションのいずれかで、このオプションを指定する必要があります。 遅延署名プロセスの詳細については、「[アセンブリへの遅延署名](../../../docs/framework/app-domains/delay-sign-assembly.md)」を参照してください。|  
+|`/delaysign`|Aximp.exe が遅延署名を使用して、生成されたコントロールに名前を割り当てるように指定します。 `/keycontainer:`、`/keyfile:`、または `/publickey:` オプションのいずれかで、このオプションを指定する必要があります。 遅延署名プロセスの詳細については、「[アセンブリへの遅延署名](../../standard/assembly/delay-sign.md)」を参照してください。|  
 |`/help`|このツールのコマンド構文とオプションを表示します。|  
 |`/keycontainer:` *containerName*|*containerName* で指定されたキー コンテナーの公開キーと秘密キーのペアを使用して、生成されたコントロールに厳密な名前で署名します。|  
 |`/keyfile:` *filename*|*filename* にある発行者の正式な公開キーと秘密キーのペアを使用して、生成されたコントロールに厳密な名前で署名します。|  
 |`/nologo`|Microsoft 著作権情報を表示しません。|  
 |`/out:` *filename*|作成するアセンブリの名前を指定します。|  
 |`/publickey:` *filename*|*filename* で指定されたファイルの公開キーを使用して、生成されたコントロールに厳密な名前で署名します。|  
-|`/rcw:` *filename*|新しいものを生成する代わりに、指定したランタイム呼び出し可能ラッパーを使用します。 複数のインスタンスを指定できます。 現在のディレクトリは相対パスに使用されます。 詳細については、「[Runtime Callable Wrapper](../../../docs/standard/native-interop/runtime-callable-wrapper.md)」 (ランタイム呼び出し可能ラッパー) を参照してください。|  
+|`/rcw:` *filename*|新しいものを生成する代わりに、指定したランタイム呼び出し可能ラッパーを使用します。 複数のインスタンスを指定できます。 現在のディレクトリは相対パスに使用されます。 詳細については、「[Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md)」 (ランタイム呼び出し可能ラッパー) を参照してください。|  
 |`/silent`|成功メッセージを表示しません。|  
 |`/source`|Windows フォーム ラッパーの C# ソース コードを生成します。|  
 |`/verbose`|詳細出力モードを指定します。進行状況に関する追加情報が表示されます。|  
@@ -62,7 +62,7 @@ aximp [options]{file.dll | file.ocx}
  ActiveX コントロール用の Windows フォーム プロキシ (Ax は ActiveX を表します): Ax*progid*.dll  
   
 > [!NOTE]
->  ActiveX コントロールのメンバーの名前が .NET Framework で定義された名前と一致する場合、Aximp.exe は、AxHost 派生クラスを作成するときにメンバー名の前に "Ctl" を付けます。 たとえば、ActiveX コントロールに "Layout" というメンバーが含まれている場合、.NET Framework 内で Layout イベントが定義されているため、メンバー名は、AxHost 派生クラスでは "CtlLayout" に変更されます。  
+> ActiveX コントロールのメンバーの名前が .NET Framework で定義された名前と一致する場合、Aximp.exe は、AxHost 派生クラスを作成するときにメンバー名の前に "Ctl" を付けます。 たとえば、ActiveX コントロールに "Layout" というメンバーが含まれている場合、.NET Framework 内で Layout イベントが定義されているため、メンバー名は、AxHost 派生クラスでは "CtlLayout" に変更されます。  
   
  これらの生成されたファイルは、[Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) などのツールでチェックできます。  
   
@@ -75,7 +75,7 @@ aximp [options]{file.dll | file.ocx}
 ## <a name="example"></a>例  
  Media Player コントロール `msdxm.ocx` の MediaPlayer.dll と AxMediaPlayer.dll を生成するコマンドを次に示します。  
   
-```  
+```console 
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   

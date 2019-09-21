@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-ms.openlocfilehash: e7934ed5e71005cfd28271298ff6ce1eb8829a0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4b83834fb7aaf64a696b85bd2c8da47cfba2397
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701373"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927215"
 ---
-# <a name="add-element-for-sharedlisteners"></a>\<追加 > 要素の\<上 sharedListeners >
-`sharedListeners` コレクションにリスナーを追加します。 `sharedListeners` リスナーのコレクションは、 [\<ソース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)または[\<トレース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)を参照できます。  既定でリスナーに、`sharedListeners`でコレクションが配置されていない、`Listeners`コレクション。 名前で追加する必要があります、 [\<ソース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)または[\<トレース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)します。 リスナーを取得することはできません、`sharedListeners`実行時にコード内のコレクション。  
+# <a name="add-element-for-sharedlisteners"></a>\<sharedListeners > の > \<要素の追加
+`sharedListeners` コレクションにリスナーを追加します。 `sharedListeners`[任意\<のソース >](source-element.md)または[ \<トレース >](trace-element.md)が参照できるリスナーのコレクションです。  既定では、 `sharedListeners`コレクション内のリスナーは`Listeners`コレクション内に配置されません。 これらのファイルは、 [ \<ソース >](source-element.md)または[ \<トレース >](trace-element.md)に名前で追加する必要があります。 実行時にコードで`sharedListeners`コレクション内のリスナーを取得することはできません。  
   
  \<configuration>  
-&nbsp;&nbsp;\<system.diagnostics>  
-&nbsp;&nbsp;&nbsp;&nbsp;\<上の sharedListeners > 要素  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<追加 >  
+&nbsp;&nbsp;\<システム診断 >  
+&nbsp;&nbsp;&nbsp;&nbsp;\<sharedListeners > 要素  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<> の追加  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,16 +40,16 @@ ms.locfileid: "61701373"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`name`|必須の属性です。<br /><br /> 共有リスナーを追加するために使用するリスナーの名前を指定します、`Listeners`コレクション。|  
-|`type`|必須の属性です。<br /><br /> リスナーの種類を指定します。 指定された条件に一致する文字列を使用する必要があります[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)します。|  
-|`initializeData`|省略可能な属性です。<br /><br /> 指定したクラスのコンス トラクターに渡された文字列。|  
-|`traceOutputOptions`|省略可能な属性です。<br/><br/>1 つ以上の文字列表現<xref:System.Diagnostics.TraceOptions>トレース出力に書き込まれるデータを示す列挙型メンバー。 複数の項目は、コンマで区切られます。 既定値は、"None"です。|
+|`name`|必須の属性です。<br /><br /> 共有リスナーを`Listeners`コレクションに追加するために使用されるリスナーの名前を指定します。|  
+|`type`|必須の属性です。<br /><br /> リスナーの種類を指定します。 [「完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」で指定した要件を満たす文字列を使用する必要があります。|  
+|`initializeData`|省略可能な属性です。<br /><br /> 指定したクラスのコンストラクターに渡される文字列。|  
+|`traceOutputOptions`|省略可能な属性です。<br/><br/>トレース出力に書き込まれるデータ<xref:System.Diagnostics.TraceOptions>を示す1つ以上の列挙メンバーの文字列形式。 複数の項目は、コンマで区切られます。 既定値は "None" です。|
 
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|`sharedListeners` コレクションのリスナーにフィルターを追加します。|  
+|[\<filter>](filter-element-for-add-for-sharedlisteners.md)|`sharedListeners` コレクションのリスナーにフィルターを追加します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -57,30 +57,30 @@ ms.locfileid: "61701373"
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
-|`sharedListeners`|任意のソースまたは trace 要素を参照できるリスナーのコレクション。|  
+|`sharedListeners`|任意のソースまたはトレース要素が参照できるリスナーのコレクション。|  
   
 ## <a name="remarks"></a>Remarks  
- .NET Framework に付属するリスナー クラスから派生、<xref:System.Diagnostics.TraceListener>クラス。 値、`name`属性を使用する共有リスナーを追加して、`Listeners`トレースまたはトレース ソースのいずれかのコレクション。 値、`initializeData`属性を作成するリスナーの種類によって異なります。 指定する必要はないすべてのトレース リスナー`initializeData`します。  
+ .NET Framework に付属しているリスナークラスは、 <xref:System.Diagnostics.TraceListener>クラスから派生します。 `name`属性の値は、トレースまたはトレースソースの`Listeners`コレクションに共有リスナーを追加するために使用されます。 `initializeData`属性の値は、作成するリスナーの種類によって異なります。 すべてのトレースリスナーでを指定`initializeData`する必要はありません。  
   
 > [!NOTE]
->  使用すると、`initializeData`属性、コンパイラの警告「、'initializeData' 属性は宣言されていません」. を取得する可能性があります この警告は、構成設定は、抽象基本クラスに対しても検証するために発生します。 <xref:System.Diagnostics.TraceListener>、これを認識しません、`initializeData`属性。 通常、パラメーターを受け取るコンス トラクターを持つトレース リスナーの実装のためには、この警告を無視できます。  
+> `initializeData`属性を使用すると、"initializedata" 属性が宣言されていないことを示すコンパイラの警告が表示されることがあります。 この警告は、 <xref:System.Diagnostics.TraceListener> `initializeData`属性を認識しない抽象基本クラスに対して構成設定が検証されるために発生します。 通常、パラメーターを受け取るコンストラクターを持つトレースリスナーの実装では、この警告を無視できます。  
   
- 次の表は、.NET Framework に含まれているトレース リスナーの表示し、の値を記述、`initializeData`属性。  
+ 次の表に、.NET Framework に含まれているトレースリスナーとその`initializeData`属性の値を示します。  
   
-|トレース リスナー クラス|initializeData 属性値|  
+|トレースリスナークラス|initializeData 属性値|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener>|`useErrorStream`値、<xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>コンス トラクター。  設定、`initializeData`属性を"`true`「書き込むトレースとデバッグの出力を標準エラー ストリームに設定」`false`"標準出力ストリームに書き込む。|  
-|<xref:System.Diagnostics.DelimitedListTraceListener>|ファイルの名前、<xref:System.Diagnostics.DelimitedListTraceListener>に書き込みます。|  
-|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|既存のイベント ログ ソースの名前。|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|ファイルの名前を<xref:System.Diagnostics.EventSchemaTraceListener>に書き込みます。|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|ファイルの名前を<xref:System.Diagnostics.TextWriterTraceListener>に書き込みます。|  
-|<xref:System.Diagnostics.XmlWriterTraceListener>|ファイルの名前を<xref:System.Diagnostics.XmlWriterTraceListener>に書き込みます。|  
+|<xref:System.Diagnostics.ConsoleTraceListener>|コンストラクターの値`useErrorStream` <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> 。  トレース出力`initializeData`およびデバッグ出力`true`を標準エラーストリームに書き込むには、属性を "" に設定します`false`。標準出力ストリームに書き込むには、"" に設定します。|  
+|<xref:System.Diagnostics.DelimitedListTraceListener>|が<xref:System.Diagnostics.DelimitedListTraceListener>書き込むファイルの名前。|  
+|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|既存のイベントログソースの名前。|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|が<xref:System.Diagnostics.EventSchemaTraceListener>書き込み先となるファイルの名前。|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|が<xref:System.Diagnostics.TextWriterTraceListener>書き込み先となるファイルの名前。|  
+|<xref:System.Diagnostics.XmlWriterTraceListener>|が<xref:System.Diagnostics.XmlWriterTraceListener>書き込み先となるファイルの名前。|  
   
 ## <a name="configuration-file"></a>構成ファイル  
- この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
+ この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します`<add>`要素を追加する、 <xref:System.Diagnostics.TextWriterTraceListener> `textListener`を`sharedListeners`コレクション。   `textListener` 名前で追加、`Listeners`トレース ソースのコレクション`TraceSourceApp`します。 `textListener`ファイル myListener.log にリスナーがトレース出力を書き込みます。  
+ 次の例は、要素を`<add>`使用して<xref:System.Diagnostics.TextWriterTraceListener> `textListener`を`sharedListeners`コレクションに追加する方法を示しています。   `textListener`は、トレースソース`Listeners` `TraceSourceApp`のコレクションに名前によって追加されます。 リスナー `textListener`は、トレース出力をファイル mylistener .log に書き込みます。  
   
 ```xml  
 <configuration>  
@@ -112,5 +112,5 @@ ms.locfileid: "61701373"
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)
+- [トレース リスナー](../../../debug-trace-profile/trace-listeners.md)

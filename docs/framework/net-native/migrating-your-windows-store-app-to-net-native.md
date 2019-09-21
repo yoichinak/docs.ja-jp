@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c830b7097d12017348d8669071ec6d7c122bfe44
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: fdff7aa92e4c1c357c83b625a6daadbf0a8d556b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364080"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049514"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows ストア アプリの .NET ネイティブへの移行
 
-.NET ネイティブは、Windows ストアまたは開発者のコンピューターでアプリの静的なコンパイルを行います。 これは、デバイス上で Just-In-Time (JIT) コンパイラまたは [ネイティブ イメージ ジェネレーター (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) によって Windows ストア アプリに対して実行される動的なコンパイルとは異なります。 違いにかかわらず、.NET ネイティブは[Windows ストアアプリ用 .net](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)との互換性を維持しようとします。 ほとんどの場合、Windows ストアアプリ用 .NET で動作するものは、.NET ネイティブでも動作します。  ただし、動作に違いがある場合もあります。 このドキュメントでは、Windows ストアアプリ用の標準 .NET と、次の領域の .NET ネイティブにおけるこれらの違いについて説明します。
+.NET ネイティブは、Windows ストアまたは開発者のコンピューターでアプリの静的なコンパイルを行います。 これは、デバイス上で Just-In-Time (JIT) コンパイラまたは [ネイティブ イメージ ジェネレーター (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) によって Windows ストア アプリに対して実行される動的なコンパイルとは異なります。 違いにかかわらず、.NET ネイティブは[Windows ストアアプリ用 .net](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)との互換性を維持しようとします。 ほとんどの場合、Windows ストアアプリ用 .NET で動作するものは、.NET ネイティブでも動作します。  ただし、動作に違いがある場合もあります。 このドキュメントでは、Windows ストアアプリ用の標準 .NET と、次の領域の .NET ネイティブにおけるこれらの違いについて説明します。
 
 - [全般的なランタイムの違い](#Runtime)
 
@@ -55,7 +55,7 @@ ms.locfileid: "68364080"
 
 たとえば、データ バインディングは、プロパティ名を関数にマップするためにアプリを必要とします。 Windows ストア アプリ用 .NET では、共通言語ランタイムが自動的にリフレクションを使用して、マネージド型および公開されているネイティブ型にこの機能を提供します。 .NET ネイティブでは、データのバインド先となる型のメタデータがコンパイラによって自動的に含まれます。
 
-.NET ネイティブコンパイラでは、 <xref:System.Collections.Generic.List%601>やなどの一般的に使用されるジェネリック型を処理することもできます。これはヒントやディレクティブを必要と<xref:System.Collections.Generic.Dictionary%602>せずに機能します。 [dynamic](~/docs/csharp/language-reference/keywords/dynamic.md) キーワードも、一定の制限の下でサポートされます。
+.NET ネイティブコンパイラでは、 <xref:System.Collections.Generic.List%601>やなどの一般的に使用されるジェネリック型を処理することもできます。これはヒントやディレクティブを必要と<xref:System.Collections.Generic.Dictionary%602>せずに機能します。 [dynamic](../../csharp/language-reference/keywords/dynamic.md) キーワードも、一定の制限の下でサポートされます。
 
 > [!NOTE]
 > アプリを .NET ネイティブに移植するときは、すべての動的コードパスを十分にテストする必要があります。
@@ -67,7 +67,7 @@ ms.locfileid: "68364080"
 - コンパイラでインスタンス化を決定できないため、リフレクション対象のジェネリック型をランタイム ディレクティブで指定する必要があります。 これは、すべてのコードを含める必要があるだけではなく、ジェネリック型へのリフレクションによって無限サイクルが生じる可能性があるためです (たとえば、ジェネリック型でジェネリック メソッドが呼び出された場合)。
 
 > [!NOTE]
-> ランタイム ディレクティブは、ランタイム ディレクティブ (.rd.xml) ファイルで定義されます。 このファイルの使用方法に関する全般的な情報は、「[.NET ネイティブの概要](../../../docs/framework/net-native/getting-started-with-net-native.md)」(.NET ネイティブの概要) をご覧ください。 ランタイム ディレクティブについては、「 [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)」をご覧ください。
+> ランタイム ディレクティブは、ランタイム ディレクティブ (.rd.xml) ファイルで定義されます。 このファイルの使用方法に関する全般的な情報は、「[.NET ネイティブの概要](getting-started-with-net-native.md)」(.NET ネイティブの概要) をご覧ください。 ランタイム ディレクティブについては、「 [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)」をご覧ください。
 
 .NET ネイティブには、開発者が既定のセットの外部でリフレクションをサポートする必要のある型を判断するのに役立つプロファイリングツールも含まれています。
 
@@ -129,7 +129,7 @@ Windows ストアアプリ用 .NET と .NET ネイティブの動作には、リ
 
 - 多次元配列の動的作成はサポートされません。 そのような配列は通常、 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> パラメーターを含む `lengths` メソッドのオーバーロードを呼び出すか、 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> メソッドを呼び出すことで作成されます。
 
-- 4 つ以上の次元を持つ多次元配列 (つまり、 <xref:System.Array.Rank%2A?displayProperty=nameWithType> プロパティ値が 4 以上のもの) はサポートされません。 代わりに [ジャグ配列](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (配列の配列) を使用してください。 たとえば、 `array[x,y,z]` は無効ですが、 `array[x][y][z]` は有効です。
+- 4 つ以上の次元を持つ多次元配列 (つまり、 <xref:System.Array.Rank%2A?displayProperty=nameWithType> プロパティ値が 4 以上のもの) はサポートされません。 代わりに [ジャグ配列](../../csharp/programming-guide/arrays/jagged-arrays.md) (配列の配列) を使用してください。 たとえば、 `array[x,y,z]` は無効ですが、 `array[x][y][z]` は有効です。
 
 - 多次元配列の共変性はサポートされず、実行時に <xref:System.InvalidCastException> 例外を発生させます。
 
@@ -159,7 +159,7 @@ Windows ストアアプリ用 .NET と .NET ネイティブの動作には、リ
 
 **その他の API**
 
-- 属性[](xref:System.Type.GUID) <xref:System.PlatformNotSupportedException> が<xref:System.Runtime.InteropServices.GuidAttribute>型に適用されていない場合、TypeInfo プロパティは例外をスローします。 GUID は主に COM サポートで使用されます。
+- <xref:System.Runtime.InteropServices.GuidAttribute> 属性が型に適用されていない場合、[TypeInfo.GUID](xref:System.Type.GUID) プロパティは <xref:System.PlatformNotSupportedException> 例外をスローします。 GUID は主に COM サポートで使用されます。
 
 - メソッド<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>は、.NET ネイティブの短い日付を含む文字列を正しく解析します。 ただし、Microsoft サポート技術情報の記事 [KB2803771](https://support.microsoft.com/kb/2803771) と [KB2803755](https://support.microsoft.com/kb/2803755)で説明されている日付と時刻の解析の変更に対する互換性は保持されません。
 
@@ -665,7 +665,7 @@ Windows ストアアプリプロジェクトの単体テストライブラリで
 
 ## <a name="see-also"></a>関連項目
 
-- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [はじめに](getting-started-with-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Windows ストアアプリ用 .NET の概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

@@ -8,56 +8,59 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28197b22b379b84c34e7fdf8991472e082c8cb42
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052444"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855742"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>方法: XPS ファイルをプログラムにより印刷する
-1 つのオーバー ロードを使用することができます、<xref:System.Printing.PrintQueue.AddJob%2A>メソッドを印刷する[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]ファイルを開くことがなく、<xref:System.Windows.Controls.PrintDialog>や、原則として、任意[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]まったくです。  
-  
- 印刷することも[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]多くを使用してファイルを<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>と<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>のメソッド、<xref:System.Windows.Xps.XpsDocumentWriter>します。 この詳細については、「[XPS ドキュメントの印刷](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))」を参照してください。  
-  
- 印刷[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]を使用して、<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>または<xref:System.Windows.Controls.PrintDialog.PrintVisual%2A>のメソッド、<xref:System.Windows.Controls.PrintDialog>コントロール。 [印刷ダイアログ ボックスの呼び出し](how-to-invoke-a-print-dialog.md)に関するページをご覧ください。  
-  
-## <a name="example"></a>例  
- 3 つのパラメーターを使用する主な手順<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>メソッドは、次のとおりです。 詳細は、下記の例に示します。  
-  
-1. プリンターが XPSDrv プリンターかどうかを確認します  (XPSDrv の詳細については、「[印刷の概要](printing-overview.md)」を参照してください)。  
-  
-2. プリンターが XPSDrv プリンターでない場合は、スレッドのアパートメントをシングル スレッドに設定します。  
-  
-3. プリント サーバーと印刷キューのオブジェクトをインスタンス化します。  
-  
-4. ジョブ名、印刷するファイルを指定するメソッドを呼び出し、<xref:System.Boolean>プリンターが XPSDrv プリンターかどうかどうかを示すフラグします。  
-  
- ディレクトリ内のすべての [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ファイルをバッチ印刷する方法を次の例に示します。 アプリケーションは、ディレクトリ、3 つのパラメーターを指定するユーザーを要求が<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>メソッドは必要ありません、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]します。 このメソッドは、そのメソッドに渡すことができる [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ファイル名とパスが記述された任意のコード パスで使用できます。  
-  
- 3 つのパラメーター<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>のオーバー ロード<xref:System.Printing.PrintQueue.AddJob%2A>シングル スレッド アパートメントで実行する必要があるたびに、<xref:System.Boolean>パラメーターが`false`が XPSDrv 以外のプリンターが使用されている場合があります。 ただし、[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] の既定のアパートメントの状態は、マルチ スレッドです。 この例では XPSDrv 以外のプリンターを前提にしているため、この既定の状態を逆にする必要があります。  
-  
- 既定の状態を変更する方法は 2 つあります。 単に追加する方法の 1 つは、 <xref:System.STAThreadAttribute> (つまり、"`[System.STAThreadAttribute()]`") のアプリケーションの最初の行のすぐ上`Main`メソッド (通常は"`static void Main(string[] args)`")。 多くのアプリケーションが必要です、`Main`メソッドが 2 番目のメソッドがあるため、マルチ スレッド アパートメント状態をある: を呼び出して<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>アパートメント状態が に設定されている別のスレッドで<xref:System.Threading.ApartmentState.STA>で<xref:System.Threading.Thread.SetApartmentState%2A>します。 次の例では、この 2 番目の方法を使用します。  
-  
- インスタンス化しての例では、開始、それに応じて、<xref:System.Threading.Thread>オブジェクトを渡す、 **PrintXPS**メソッドとして、<xref:System.Threading.ThreadStart>パラメーター。 (**PrintXPS** メソッドは、例の後半で定義されます)。次に、そのスレッドをシングル スレッド アパートメントに設定します。 それ以降の `Main` メソッドのコードは、この新しいスレッドを開始します。  
-  
- この例の要点は、`static`**staticBatchXPSPrinter.PrintXPS** メソッド内にあります。 プリント サーバーとキューを作成すると、[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ファイルを含むディレクトリを指定するように求められます。 ディレクトリの存在との存在を検証した後\*.xps ファイルが、メソッドは、印刷キューにこのような各ファイルを追加します。 この例に渡しているために、プリンターが XPSDrv 以外の場合が前提としています。`false`の最後のパラメーターを<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>メソッド。 このため、このメソッドはファイル内の [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] マークアップを検証してから、そのマークアップをプリンターのページ記述言語に変換しようとします。 検証に失敗すると、例外がスローされます。 このコード例では、その例外をキャッチし、ユーザーに例外の発生を通知してから、次の [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ファイルの処理に進みます。  
-  
- [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
- [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
-  
- XPSDrv プリンターを使用している場合は、最後のパラメーターを `true` に設定できます。 その場合、[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] はプリンターのページ記述言語であるため、メソッドはファイルの検証や別のページ記述言語への変換を行わずにファイルをプリンターに送ります。 アプリケーションを変更するには特定デザイン時にするかどうか、アプリケーションで使用される XPSDrv プリンターでない場合、<xref:System.Printing.PrintQueue.IsXpsDevice%2A>プロパティとその検出内容に従って分岐します。  
-  
- 最初にあるので XPSDrv プリンターをいくつか使用可能なリリースの直後に[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]Microsoft .NET Framework では、XPSDrv 以外のプリンターが XPSDrv プリンターとして偽装するために必要があります。 そのためには、アプリケーションを実行しているコンピューターで、以下のレジストリ キーのファイルの一覧に Pipelineconfig.xml を追加します。  
-  
- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>* \DependentFiles  
-  
- ここで、*\<PseudoXPSPrinter* は任意の印刷キューです。 その後、コンピューターを再起動する必要があります。  
-  
- このに渡すことにより`true`の最後のパラメーターとして<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>が例外を発生させることがなく *\<PseudoXPSPrinter >* XPSDrv プリンターではありません印刷されません。  
-  
- **注**わかりやすくするため、上記の例ではのプレゼンスを使用して、 \*.xps 拡張機能は、ファイルのテストとして[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]します。 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ファイルには、この拡張子を付ける必要はありません。 [isXPS.exe (isXPS 適合性ツール)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) は、ファイルが [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] かどうかをテストする 1 つの手段です。  
-  
+
+メソッドの1つのオーバーロードを<xref:System.Printing.PrintQueue.AddJob%2A>使用して、 <xref:System.Windows.Controls.PrintDialog> XML Paper Specification (XPS) ファイルを出力することができます。 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]またはを開く必要はありません。
+
+また、多数<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A?displayProperty=nameWithType>のメソッドと<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A?displayProperty=nameWithType>メソッドを使用して XPS ファイルを印刷することもできます。 詳細については、「 [XPS ドキュメントの印刷](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))」を参照してください。
+
+XPS を印刷するもう1つの方法<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A?displayProperty=nameWithType>は<xref:System.Windows.Controls.PrintDialog.PrintVisual%2A?displayProperty=nameWithType> 、メソッドまたはメソッドを使用することです。 [印刷ダイアログ ボックスの呼び出し](how-to-invoke-a-print-dialog.md)に関するページをご覧ください。
+
+## <a name="example"></a>例
+
+3つのパラメーター <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>を持つメソッドを使用する主な手順は次のとおりです。 詳細は、下記の例に示します。
+
+1. プリンターが XPSDrv プリンターかどうかを確認します (XPSDrv の詳細については、「[印刷の概要](printing-overview.md)」を参照してください)。
+
+2. プリンターが XPSDrv プリンターでない場合は、スレッドのアパートメントをシングル スレッドに設定します。
+
+3. プリント サーバーと印刷キューのオブジェクトをインスタンス化します。
+
+4. ジョブ名、印刷するファイル、および<xref:System.Boolean>プリンターが XPSDrv プリンターであるかどうかを示すフラグを指定して、メソッドを呼び出します。
+
+次の例は、ディレクトリ内のすべての XPS ファイルをバッチ印刷する方法を示しています。 アプリケーションはディレクトリを指定するようにユーザーに要求しますが、 <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> 3 つのパラメーターを[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]持つメソッドはを必要としません。 これは、XPS ファイル名とパスが含まれているすべてのコードパスで使用できます。
+
+の3つの<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>パラメーターの<xref:System.Printing.PrintQueue.AddJob%2A>オーバーロードは、 <xref:System.Boolean>パラメーターがの場合は`false`常に1つのスレッドアパートメントで実行する必要があります。これは、XPSDrv 以外のプリンターが使用されているときに行う必要があります。 ただし、.NET の既定のアパートメント状態は、複数のスレッドになります。 この例では XPSDrv 以外のプリンターを前提にしているため、この既定の状態を逆にする必要があります。
+
+既定の状態を変更する方法は 2 つあります。 1つの方法として<xref:System.STAThreadAttribute> 、アプリケーション`static void Main(string[] args)`の`Main`メソッドの`[System.STAThreadAttribute()]`最初の行 (通常は "") のすぐ上に (つまり、"") を追加するだけです。 ただし、多くのアプリケーションでは`Main` 、メソッドにマルチスレッドアパートメント状態がある必要があるため、2番目のメソッドが<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>あります。の呼び出しを、 <xref:System.Threading.ApartmentState.STA>アパートメント状態がに<xref:System.Threading.Thread.SetApartmentState%2A>設定された別のスレッドに配置します。 次の例では、この 2 番目の方法を使用します。
+
+したがって、この例では、 <xref:System.Threading.Thread>まずオブジェクトをインスタンス化し、 <xref:System.Threading.ThreadStart>パラメーターとして**printxps**メソッドを渡します。 (**PrintXPS** メソッドは、例の後半で定義されます)。次に、そのスレッドをシングル スレッド アパートメントに設定します。 それ以降の `Main` メソッドのコードは、この新しいスレッドを開始します。
+
+この例の要点は、`static`**staticBatchXPSPrinter.PrintXPS** メソッド内にあります。 プリントサーバーとキューを作成した後、メソッドは XPS ファイルを含むディレクトリの入力をユーザーに求めます。 ディレクトリが存在することと\*、そのディレクトリに .xps ファイルが存在することを検証した後、メソッドは、このようなファイルを印刷キューに追加します。 この例では、プリンターが非 XPSDrv であることを前提と`false`しています。 <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>そのため、メソッドの最後のパラメーターに渡します。 このため、メソッドは、ファイル内の XPS マークアップを、プリンターのページ記述言語への変換を試みる前に検証します。 検証に失敗すると、例外がスローされます。 このコード例では、例外をキャッチし、そのことをユーザーに通知した後、次の XPS ファイルの処理に移ります。
+
+[!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
+[!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]
+
+XPSDrv プリンターを使用している場合は、最後のパラメーターを `true` に設定できます。 この場合、XPS はプリンターのページ記述言語であるため、このメソッドは、ファイルを検証したり、別のページ記述言語に変換したりせずに、そのファイルをプリンターに送信します。 アプリケーションが XPSDrv プリンターを使用するかどうかがデザイン時にわからない場合は、アプリケーションを変更して、 <xref:System.Printing.PrintQueue.IsXpsDevice%2A>プロパティを読み取って、内容に従って分岐するようにすることができます。
+
+と Microsoft .NET Framework の[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]リリース後すぐに使用できる XPSDrv プリンターがほとんどないため、XPSDrv 以外のプリンターを XPSDrv プリンターとして偽装することが必要になる場合があります。 そのためには、アプリケーションを実行しているコンピューターで、以下のレジストリ キーのファイルの一覧に Pipelineconfig.xml を追加します。
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\ *\<PseudoXPSPrinter>* \DependentFiles
+
+ここで、 *\<PseudoXPSPrinter* は任意の印刷キューです。 その後、コンピューターを再起動する必要があります。
+
+このような偽装により、 `true`例外を発生させ<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>ずにの最後のパラメーターとして渡すことができますが、  *\<PseudoXPSPrinter >* は実際には XPSDrv プリンターではないため、出力されるのはガベージのみです。
+
+> [!NOTE]
+> わかりやすくするために、上記の例では\*、ファイルが xps であることをテストするために、.xps 拡張子の存在を使用します。 ただし、XPS ファイルにはこの拡張機能は必要ありません。 [Isxps (Isxps 適合性ツール)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))は、XPS の有効性をテストするための1つの方法です。
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Printing.PrintQueue>
@@ -66,7 +69,7 @@ ms.locfileid: "62052444"
 - <xref:System.STAThreadAttribute>
 - [XPS ドキュメント](/windows/desktop/printdocs/documents)
 - [XPS ドキュメントの印刷](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))
-- [マネージ コードとアンマネージ スレッド処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [マネージスレッド処理とアンマネージスレッド処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
 - [isXPS.exe (isXPS 適合性ツール)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
 - [WPF のドキュメント](documents-in-wpf.md)
 - [印刷の概要](printing-overview.md)

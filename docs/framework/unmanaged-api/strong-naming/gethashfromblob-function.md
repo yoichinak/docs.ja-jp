@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba049723710b378a90d17c67735a05e8a09d05d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 59b4df08157ce14a58393e54b671e8f41b8998ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636857"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799235"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob 関数
 
 指定したハッシュ アルゴリズムを使用して、指定したメモリ アドレスにあるアセンブリのハッシュが取得されます。
 
-この関数は非推奨とされました。 使用して、 [iclrstrongname::gethashfromblob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)メソッド代わりにします。
+この関数は非推奨とされます。 代わりに[ICLRStrongName:: GetHashFromBlob](../hosting/iclrstrongname-gethashfromblob-method.md)メソッドを使用してください。
 
 ## <a name="syntax"></a>構文
 
@@ -45,30 +45,30 @@ HRESULT GetHashFromBlob (
 ## <a name="parameters"></a>パラメーター
 
 `pbBlob`\
-[in]ハッシュされるメモリ ブロックのアドレスへのポインター。
+からハッシュされるメモリブロックのアドレスへのポインター。
 
 `cchBlob`\
-[in]メモリ ブロックの長さ、(バイト単位)。
+からメモリブロックの長さ (バイト単位)。
 
 `piHashAlg`\
-[入力、出力]ハッシュ アルゴリズムを指定する定数。 既定のアルゴリズムに 0 を使用します。
+[入力、出力]ハッシュアルゴリズムを指定する定数。 既定のアルゴリズムには0を使用します。
 
 `pbHash`\
-[out]返されたハッシュ バッファー。
+入出力返されたハッシュバッファー。
 
 `cchHash`\
-[in]要求の最大サイズの`pbHash`します。
+から要求された最大`pbHash`サイズ。
 
 `pchHash`\
-[out]サイズ (バイト単位)、返された`pbHash`します。
+入出力返さ`pbHash`れたのサイズ (バイト単位)。
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。
 
-**ヘッダー:** StrongName.h
+**ヘッダー:** StrongName
 
-**ライブラリ:** MsCorEE.dll でリソースとして含まれます
+**ライブラリ**Mscoree.dll にリソースとして含まれています
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

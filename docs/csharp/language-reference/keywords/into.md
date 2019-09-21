@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: b209062a2a3e563ea8e70cb7883d9bbfa3662231
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc1e2ee004c21bb3d05155eec3e42ea80bf641a1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631517"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608636"
 ---
 # <a name="into-c-reference"></a>into (C# リファレンス)
 
@@ -32,5 +32,5 @@ ms.locfileid: "54631517"
 ## <a name="see-also"></a>関連項目
 
 - [クエリ キーワード (LINQ)](query-keywords.md)
-- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [LINQ クエリ式](../../programming-guide/linq-query-expressions/index.md)
 - [group 句](group-clause.md)

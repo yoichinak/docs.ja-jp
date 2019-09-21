@@ -5,78 +5,78 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 7301d52cf2c55394f731a8b7af5427e5fa66ba88
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d090a6e89a470958dd323c3f249ed0658dc1cefa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591951"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955097"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic においてカルチャが文字列に与える影響
-このヘルプ ページは、Visual Basic がカルチャ情報を使用して、文字列の変換との比較を実行する方法について説明します。  
+このヘルプページでは、Visual Basic がカルチャ情報を使用して文字列の変換と比較を実行する方法について説明します。  
   
 ## <a name="when-to-use-culture-specific-strings"></a>カルチャ固有の文字列を使用する場合  
- 通常、カルチャに固有の文字列に示されているすべてのデータを使用してと、ユーザーからの読み取りをアプリケーションの内部データのカルチャで不変の文字列を使用する必要があります。  
+ 通常は、ユーザーに表示されるすべてのデータに対してカルチャ固有の文字列を使用し、アプリケーションの内部データにカルチャに依存しない文字列を使用する必要があります。  
   
- たとえばを文字列として日付を入力するユーザーを求めるアプリケーション、ユーザーが自分のカルチャに基づく文字列を書式設定ことが予想され、アプリケーションでは、文字列を適切に変換する必要があります。 アプリケーションでは、ユーザー インターフェイスでは、その日付を提示する場合は、ユーザーのカルチャで表示する必要があります。  
+ たとえば、アプリケーションがユーザーに文字列として日付を入力するように要求した場合、ユーザーはカルチャに従って文字列を書式設定する必要があり、アプリケーションは文字列を適切に変換する必要があります。 その後、アプリケーションでその日付がユーザーインターフェイスに表示された場合は、ユーザーのカルチャに示されます。  
   
- ただし、アプリケーションは、中央のサーバーに、日付をアップロードする場合、は、可能性のあるさまざまな日付形式の間で混乱を避けるため、1 つの特定のカルチャに従って文字列を書式設定する必要があります。  
+ ただし、アプリケーションが中央サーバーに日付をアップロードする場合は、異なる日付形式間の混乱を防ぐために、特定のカルチャに従って文字列の書式を設定する必要があります。  
   
 ## <a name="culture-sensitive-functions"></a>カルチャに依存する関数  
- すべての Visual Basic の文字列変換関数 (を除き、`Str`と`Val`関数)、アプリケーションのカルチャ情報を使用して変換および比較がアプリケーションのカルチャに適切であるかどうかを確認ユーザー。  
+ すべての Visual Basic 文字列変換関数 ( `Str`および`Val`関数を除く) では、アプリケーションのカルチャ情報を使用して、変換と比較がアプリケーションのカルチャに適していることを確認します。ユーザーズ.  
   
- キーが正常に文字列変換関数を使用して別のカルチャ設定を持つコンピューターで実行されるアプリケーションでどの関数を使用して、特定のカルチャ設定と現在のカルチャ設定を使用するを理解することです。 アプリケーションのカルチャの設定は、既定では、設定から継承される、カルチャ、オペレーティング システムのことを確認します。 詳細については、次を参照してください。 <xref:Microsoft.VisualBasic.Strings.Asc%2A>、 <xref:Microsoft.VisualBasic.Strings.AscW%2A>、 <xref:Microsoft.VisualBasic.Strings.Chr%2A>、 <xref:Microsoft.VisualBasic.Strings.ChrW%2A>、 <xref:Microsoft.VisualBasic.Strings.Format%2A>、 <xref:Microsoft.VisualBasic.Conversion.Hex%2A>、 <xref:Microsoft.VisualBasic.Conversion.Oct%2A>、および[型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)します。  
+ カルチャ設定が異なるコンピューターで実行されるアプリケーションで文字列変換関数を正常に使用するための鍵は、特定のカルチャ設定を使用し、現在のカルチャ設定を使用する関数について理解することです。 既定では、アプリケーションのカルチャ設定は、オペレーティングシステムのカルチャ設定から継承されていることに注意してください。 詳細については<xref:Microsoft.VisualBasic.Strings.Asc%2A>、「」 <xref:Microsoft.VisualBasic.Strings.ChrW%2A>、「」、「」、「」、「」、および「[型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)」を参照してください<xref:Microsoft.VisualBasic.Conversion.Hex%2A> <xref:Microsoft.VisualBasic.Strings.AscW%2A>。 <xref:Microsoft.VisualBasic.Strings.Chr%2A> <xref:Microsoft.VisualBasic.Strings.Format%2A> <xref:Microsoft.VisualBasic.Conversion.Oct%2A>  
   
- `Str` (数値を文字列に変換) と`Val`文字列や数値の間で変換するときに (文字列数値からに変換) 関数がアプリケーションのカルチャ情報を使用しないでください。 代わりに、有効な 10 進区切り記号としてピリオド (.) のみを認識できるとします。 これらの関数のカルチャに対応して類似のものは次のとおりです。  
+ (数値を文字列に変換します`Val` ) および (文字列を数値に変換) 関数は、文字列と数値を変換するときに、アプリケーションのカルチャ情報を使用しません。 `Str` 代わりに、ピリオド (.) のみが有効な小数点区切り記号として認識されます。 これらの関数のカルチャに対応するアナログは次のとおりです。  
   
-- **現在のカルチャを使用する変換。** `CStr`と`Format`関数は、数値を文字列に変換し、`CDbl`と`CInt`関数では、文字列を数値に変換します。  
+- **現在のカルチャを使用する変換。** 関数`CStr`と`Format`関数は、数値を文字列に変換し、 `CDbl`関数`CInt`と関数は文字列を数値に変換します。  
   
-- **特定のカルチャを使用する変換。** 各数値のオブジェクトには、 `ToString(IFormatProvider)` 、文字列に数値を変換するメソッドと`Parse(String, IFormatProvider)`文字列を数値に変換するメソッド。 たとえば、`Double`型を提供、<xref:System.Double.ToString%28System.IFormatProvider%29>と<xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29>メソッド。  
+- **特定のカルチャを使用する変換。** 各数値オブジェクトには`ToString(IFormatProvider)` 、数値を文字列に変換するメソッド`Parse(String, IFormatProvider)`と、文字列を数値に変換するメソッドがあります。 たとえば`Double` 、型にはメソッドと<xref:System.Double.ToString%28System.IFormatProvider%29> <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29>メソッドが用意されています。  
   
  詳細については、次のトピックを参照してください。 <xref:Microsoft.VisualBasic.Conversion.Str%2A> および <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
   
-## <a name="using-a-specific-culture"></a>特定のカルチャを使用します。  
- (文字列として書式設定) の日付を Web サービスに送信するアプリケーションを開発していることを想像してください。 この場合、アプリケーションでは、文字列変換のため、特定のカルチャを使用する必要があります。 その理由を示すためには、日付の使用の結果を検討してください。<xref:System.DateTime.ToString>メソッド。返しますが、アプリケーションでそのメソッドを使用して、2005 年 7 月 4 日の日付の書式設定するかどうかは"7/4/2005 12時 00分: 00 AM"、米国英語 (EN-US) カルチャの実行とは"04.07.2005 00時 00分: 00"ドイツ (DE-DE) のカルチャに実行するとします。  
+## <a name="using-a-specific-culture"></a>特定のカルチャを使用する  
+ たとえば、文字列形式の日付を Web サービスに送信するアプリケーションを開発しているとします。 この場合、アプリケーションでは、文字列変換に特定のカルチャを使用する必要があります。 理由を説明するために、日付の<xref:System.DateTime.ToString>メソッドを使用した結果を考えてみましょう。アプリケーションでこのメソッドを使用して2005年7月4日の日付が書式設定されている場合、米国 English (en-us) カルチャで実行すると "7/4/2005 12:00:00 AM" が返されますが、ドイツ語 (de) カルチャで実行すると "04.07.2005 00:00:00" が返されます。  
   
- 使用する必要がある、特定のカルチャの形式で文字列の変換を実行する必要がある場合、 `CultureInfo` .NET Framework に組み込まれているクラス。 新規に作成することができます`CultureInfo`カルチャの名前を渡すことによって、特定のカルチャのオブジェクト、<xref:System.Globalization.CultureInfo.%23ctor%2A>コンス トラクター。 サポートされているカルチャの名前にある、<xref:System.Globalization.CultureInfo>ヘルプ ページのクラス。  
+ 特定のカルチャ形式で文字列変換を実行する必要がある場合は、.NET Framework に`CultureInfo`組み込まれているクラスを使用する必要があります。 カルチャ名を<xref:System.Globalization.CultureInfo.%23ctor%2A>コンストラクターに`CultureInfo`渡すことによって、特定のカルチャの新しいオブジェクトを作成できます。 サポートされているカルチャ名は<xref:System.Globalization.CultureInfo> 、クラスのヘルプページに記載されています。  
   
- インスタンスを取得する代わりに、*インバリアント カルチャ*から、<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>プロパティ。 インバリアント カルチャが英語のカルチャに基づきますが、いくつか違いがあります。 たとえば、インバリアント カルチャでは、12 時間制ではなく、24 時間制を指定します。  
+ または、 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>プロパティから*インバリアントカルチャ*のインスタンスを取得することもできます。 インバリアントカルチャは英語のカルチャに基づいていますが、いくつかの違いがあります。 たとえば、インバリアントカルチャでは、12時間形式ではなく、24時間制が指定されています。  
   
- 日付をカルチャの文字列に変換するには、渡す、<xref:System.Globalization.CultureInfo>日オブジェクトのオブジェクト<xref:System.DateTime.ToString%28System.IFormatProvider%29>メソッド。 たとえば、次のコードが表示されます"07/04/2005 00時 00分: 00"アプリケーションのカルチャ設定に関係なく、します。  
+ 日付をカルチャの文字列に変換するには、 <xref:System.Globalization.CultureInfo>オブジェクトを date オブジェクトの<xref:System.DateTime.ToString%28System.IFormatProvider%29>メソッドに渡します。 たとえば、次のコードでは、アプリケーションのカルチャ設定に関係なく、"07/04/2005 00:00:00" が表示されます。  
   
  [!code-vb[VbVbalrConcepts#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#1)]  
   
 > [!NOTE]
->  日付リテラルは常に英語のカルチャに従って解釈されます。  
+> 日付リテラルは、常に英語のカルチャに従って解釈されます。  
   
 ## <a name="comparing-strings"></a>文字列の比較  
- これには、文字列比較が必要な 2 つの重要な状況があります。  
+ 文字列を比較する必要がある重要な状況には、次の2つがあります。  
   
-- **ユーザーに表示するためのデータの並べ替え** 現在のカルチャに基づく文字列を適切に並べ替えるための操作を使用します。  
+- **ユーザーに表示するデータを並べ替えます。** 文字列が適切に並べ替えられるように、現在のカルチャに基づいた操作を使用します。  
   
-- **アプリケーション内部の 2 つの文字列が (通常はセキュリティの目的で) 正確に一致するかどうかを決定します。** 現在のカルチャを無視して操作を使用します。  
+- **2つのアプリケーション内部文字列が完全に一致するかどうかを判断する (通常はセキュリティ上の理由で)。** 現在のカルチャを無視する操作を使用します。  
   
- 両方の種類の Visual Basic での比較を行うことができます<xref:Microsoft.VisualBasic.Strings.StrComp%2A>関数。 省略可能な指定`Compare`比較の種類を制御する引数:`Text`ほとんどの入力と出力の`Binary`完全一致を判断するためです。  
+ Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A>関数を使用すると、両方の種類の比較を実行できます。 比較の種類`Compare`を制御する省略可能な引数を`Text`指定します。完全`Binary`一致を確認するためのほとんどの入力と出力に使用します。  
   
- `StrComp`関数は、並べ替え順序に基づいて 2 つの比較対象の文字列間のリレーションシップを示す整数を返します。 結果の正の値は、最初の文字列が 2 番目の文字列より大きいことを示します。 負の結果は、最初の文字列が小さく、および 0 は、文字列の間に等しいかどうかを示しますを示します。  
+ 関数`StrComp`は、並べ替え順序に基づいて比較される2つの文字列の間の関係を示す整数を返します。 結果の正の値は、最初の文字列が2番目の文字列より大きいことを示します。 結果が負の値の場合は、最初の文字列が小さいことを示し、0は文字列の等価性を示します。  
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- .NET Framework のパートナーを使用することも、`StrComp`関数の場合、<xref:System.String.Compare%2A?displayProperty=nameWithType>メソッド。 これは、文字列の基本クラスの静的、オーバー ロードされたメソッドです。 次の例では、このメソッドを使用する方法を示しています。  
+ `StrComp`関数の .NET Framework パートナー <xref:System.String.Compare%2A?displayProperty=nameWithType> (メソッド) を使用することもできます。 これは、基本文字列クラスの静的でオーバーロードされたメソッドです。 次の例は、このメソッドの使用方法を示しています。  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   
- その他のオーバー ロードを使用する比較を実行する方法をより細かく制御するには<xref:System.String.Compare%2A>メソッド。 <xref:System.String.Compare%2A?displayProperty=nameWithType>メソッドが使用できる、`comparisonType`引数を使用する比較の種類を指定します。  
+ 比較の実行方法を細かく制御するには、 <xref:System.String.Compare%2A>メソッドの追加のオーバーロードを使用します。 メソッドでは、 `comparisonType`引数を使用して、使用する比較の種類を指定できます。 <xref:System.String.Compare%2A?displayProperty=nameWithType>  
   
-|場合は値`comparisonType`引数|比較の種類|使用に適した状況|  
+|引数の`comparisonType`値|比較の種類|使用に適した状況|  
 |---|---|---|  
-|`Ordinal`|文字列のコンポーネントのバイト数に基づく比較。|この値を比較するときに使用します。 大文字の識別子、セキュリティ関連の設定、またはバイト数を正確に一致する必要があります、その他の非言語的な識別子。|  
-|`OrdinalIgnoreCase`|文字列のコンポーネントのバイト数に基づく比較。<br /><br /> `OrdinalIgnoreCase` インバリアント カルチャ情報を使用して、2 つの文字が異なる場合にのみ大文字と小文字を決定します。|比較するときに、この値を使用します。 大文字の識別子、セキュリティ関連の設定、および Windows に格納されたデータ。|  
-|`CurrentCulture` または `CurrentCultureIgnoreCase`|現在のカルチャで文字列の解釈に基づく比較。|比較するときに、これらの値を使用します。 ユーザー、ほとんどのユーザー入力、および言語的解釈を必要とするその他のデータに表示されるデータ。|  
-|`InvariantCulture` または `InvariantCultureIgnoreCase`|インバリアント カルチャで文字列の解釈に基づく比較。<br /><br /> これは異なる、`Ordinal`と`OrdinalIgnoreCase`、インバリアント カルチャの許容範囲外の文字を等価のインバリアント文字として扱われるためです。|固定の並べ替え順序が必要なデータを保持するか、言語関連データの表示を比較するときにのみ、これらの値を使用します。|  
+|`Ordinal`|文字列のコンポーネントバイトに基づく比較。|大文字と小文字を区別する識別子、セキュリティ関連の設定、またはバイトが正確に一致する必要があるその他の非言語識別子を比較する場合は、この値を使用します。|  
+|`OrdinalIgnoreCase`|文字列のコンポーネントバイトに基づく比較。<br /><br /> `OrdinalIgnoreCase`インバリアントカルチャ情報を使用して、2つの文字の大文字と小文字が区別されるかどうかを判断します。|大文字と小文字を区別しない識別子、セキュリティ関連の設定、および Windows に格納されているデータを比較する場合は、この値を使用します。|  
+|`CurrentCulture` または `CurrentCultureIgnoreCase`|現在のカルチャにおける文字列の解釈に基づく比較。|ユーザーに表示されるデータ、ほとんどのユーザー入力、および言語の解釈を必要とするその他のデータを比較するときに、これらの値を使用します。|  
+|`InvariantCulture` または `InvariantCultureIgnoreCase`|インバリアントカルチャにおける文字列の解釈に基づく比較。<br /><br /> これは、 `Ordinal`とと`OrdinalIgnoreCase`は異なります。インバリアントカルチャは、受け入れられた範囲外の文字を等価の不変文字として扱います。|これらの値は、持続データを比較する場合、または固定の並べ替え順序を必要とする言語関連のデータを表示する場合にのみ使用してください。|  
   
 ### <a name="security-considerations"></a>セキュリティの考慮事項  
- アプリケーションがセキュリティ上の決定の比較またはケース変更操作の結果に基づくかどうかは、操作を使用する必要があります、<xref:System.String.Compare%2A?displayProperty=nameWithType>メソッド、およびパス`Ordinal`または`OrdinalIgnoreCase`の`comparisonType`引数。  
+ アプリケーションで、比較または大文字と小文字の変更操作の結果に基づいてセキュリティの決定を行う場合<xref:System.String.Compare%2A?displayProperty=nameWithType>は、メソッドを使用`OrdinalIgnoreCase`し、 `comparisonType`または引数にまたはを渡し`Ordinal`ます。  
   
 ## <a name="see-also"></a>関連項目
 

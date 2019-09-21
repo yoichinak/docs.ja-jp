@@ -5,19 +5,20 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 0ebc4fa3029e16c5ee89da7d9af8b89924b2c4dc
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 9dcc1837ca9c5c1fae3cd6a2a9d03b7e80423627
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833355"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040382"
 ---
 # <a name="command-line-build-with-cscexe"></a>csc.exe を使用したコマンド ラインからのビルド
+
 C# コンパイラは、その実行可能ファイルの名前 (*csc.exe*) をコマンド プロンプトに入力することによって呼び出します。
 
-**Visual Studio 用開発者コマンド プロンプト** ウィンドウを使用した場合、必要なすべての環境変数が設定されます。 このツールを表示する方法については、「[Visual Studio 用開発者コマンド プロンプト](../../../framework/tools/developer-command-prompt-for-vs.md)」トピックをご覧ください。 
+**Visual Studio 用開発者コマンド プロンプト** ウィンドウを使用した場合、必要なすべての環境変数が設定されます。 このツールを表示する方法については、「[Visual Studio 用開発者コマンド プロンプト](../../../framework/tools/developer-command-prompt-for-vs.md)」トピックをご覧ください。
 
-標準のコマンド プロンプト ウィンドウを使用する場合は、コンピューター上の任意のサブディレクトリから *csc.exe* を呼び出すことができるようにパスを修正する必要があります。 また、*vsvars32.bat* を実行して、コマンド ライン ビルドをサポートするための適切な環境変数を設定する必要があります。 *vsvars32.bat* について、その検索および実行方法に関する手順など、詳細情報については「[方法:Visual Studio のコマンドラインのための環境変数を設定する](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)」をご覧ください。
+標準のコマンド プロンプト ウィンドウを使用する場合は、コンピューター上の任意のサブディレクトリから *csc.exe* を呼び出すことができるようにパスを修正する必要があります。 また、*vsvars32.bat* を実行して、コマンド ライン ビルドをサポートするための適切な環境変数を設定する必要があります。 *vsvars32.bat* について、その検索および実行方法に関する手順など、詳細情報については「[方法:Visual Studio のコマンドラインのための環境変数を設定する](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)」をご覧ください。
 
 Windows Software Development Kit (SDK) のみがインストールされているコンピューターでは、**SDK コマンド プロンプト** ( **[Microsoft .NET Framework SDK]** メニュー オプションから開くことができます) で C# コンパイラを使用できます。
 
@@ -26,7 +27,7 @@ MSBuild を使用して、プログラムによって C# プログラムをビ�
 通常、実行可能ファイル *csc.exe* は、*Windows* ディレクトリの Microsoft.NET\Framework\\ *\<バージョン>* フォルダーに格納されています。 ただし、この格納場所は、特定のコンピューターの構成によって異なる場合があります。 複数のバージョンの .NET Framework がコンピューターにインストールされている場合、このファイルのバージョンが複数見つかります。 このようなインストールの詳細については、「[方法: インストールされている .NET Framework バージョンを確認する](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。
 
 > [!TIP]
->  Visual Studio IDE を使用してプロジェクトをビルドすると、**csc** コマンドとその関連するコンパイラ オプションが**出力**ウィンドウに表示されます。 この情報を表示するには、[方法:ビルド ログ ファイルの表示、保存、および構成に関するページ](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)の手順に従って、ログ データの詳細レベルを **[標準]** または **[詳細]** に変更します。 プロジェクトをリビルドした後、C# コンパイラの呼び出しを見つけるために**出力**ウィンドウで **csc** を検索します。
+> Visual Studio IDE を使用してプロジェクトをビルドすると、**csc** コマンドとその関連するコンパイラ オプションが**出力**ウィンドウに表示されます。 この情報を表示するには、[方法:ビルド ログ ファイルの表示、保存、および構成に関するページ](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)の手順に従って、ログ データの詳細レベルを **[標準]** または **[詳細]** に変更します。 プロジェクトをリビルドした後、C# コンパイラの呼び出しを見つけるために**出力**ウィンドウで **csc** を検索します。
 
  **このトピックの内容**
 
@@ -59,7 +60,7 @@ C# コンパイラは、オペレーティング システムのコマンド ラ
 - *File.cs* をコンパイルして *File.exe* を作成します。
 
 ```console
-csc File.cs 
+csc File.cs
 ```
 
 - *File.cs* をコンパイルして *File.dll* を作成します。
@@ -97,10 +98,10 @@ C# コンパイラを起動してもオブジェクト ( *.obj*) ファイルは
 
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
-- [アルファベット順の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-- [カテゴリ別の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-by-category.md)
-- [Main() とコマンドライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [コマンド ライン引数](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)
-- [方法: コマンド ライン引数の表示に関するページ](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Main() の戻り値](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+- [C# コンパイラ オプション](./index.md)
+- [アルファベット順の C# コンパイラ オプションの一覧](./listed-alphabetically.md)
+- [カテゴリ別の C# コンパイラ オプションの一覧](./listed-by-category.md)
+- [Main() とコマンドライン引数](../../programming-guide/main-and-command-args/index.md)
+- [コマンド ライン引数](../../programming-guide/main-and-command-args/command-line-arguments.md)
+- [方法: コマンド ライン引数の表示に関するページ](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Main() の戻り値](../../programming-guide/main-and-command-args/main-return-values.md)

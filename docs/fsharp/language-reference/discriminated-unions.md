@@ -2,12 +2,12 @@
 title: 判別共用体
 description: 判別共用体のF#使用方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 940bc51f49e283c31846dd2047b749769b919838
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 79da6c6ff9d3699818014d86f6c95edc3e43b4c1
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630348"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083041"
 ---
 # <a name="discriminated-unions"></a>判別共用体
 
@@ -87,7 +87,7 @@ let getShapeHeight shape =
 判別F#共用体では、単一の型をラップするためにドメインモデリングでよく使用されます。 パターンマッチングを使用して基になる値を簡単に抽出することもできます。 1つのケースに一致式を使用する必要はありません。
 
 ```fsharp
-let ([UnionCaseName] [values]) = [UnionValue]
+let ([UnionCaseIdentifier] [values]) = [UnionValue]
 ```
 
 この動作を次の例で示します。
@@ -142,7 +142,7 @@ type Multicase =
 
 出力は次のとおりです。
 
-```
+```console
 Area of circle that has radius 15.000000: 706.858347
 Area of square that has side 10.000000: 100.000000
 Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
@@ -200,10 +200,10 @@ type Shape =
 
 判別共用体では、一般的に次の属性が見られます。
 
-* `[<RequireQualifiedAccess>]`
-* `[<NoEquality>]`
-* `[<NoComparison>]`
-* `[<Struct>]`
+- `[<RequireQualifiedAccess>]`
+- `[<NoEquality>]`
+- `[<NoComparison>]`
+- `[<Struct>]`
 
 ## <a name="see-also"></a>関連項目
 

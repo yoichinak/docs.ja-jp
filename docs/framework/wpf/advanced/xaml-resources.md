@@ -7,150 +7,150 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: f92519ca1f960961f95722bce5c8e1f3b4419292
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 738a4f397b1677b867126c7bb439b027f951baa0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662192"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958815"
 ---
 # <a name="xaml-resources"></a>XAML リソース
-リソースは、アプリケーション内の別の場所で再利用できるオブジェクトです。 リソースの例には、ブラシ、スタイルが含まれます。 この概要でのリソースを使用する方法を説明します[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。 作成し、コードを使用して、またはコードの間で同じ意味でリソースにアクセスすることができますもと[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。 詳細については、次を参照してください。[リソースとコード](resources-and-code.md)します。  
+リソースは、アプリケーションのさまざまな場所で再利用できるオブジェクトです。 リソースの例としては、ブラシやスタイルなどがあります。 この概要では、の[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]リソースを使用する方法について説明します。 また、コードを使用してリソースを作成してアクセスしたり、 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]コードとを区別したりすることもできます。 詳細については、「[リソースとコード](resources-and-code.md)」を参照してください。  
   
 > [!NOTE]
->  このトピックで説明されているリソース ファイルは、リソース ファイルで説明されているものと異なる[WPF アプリケーションのリソース、コンテンツ、およびデータ ファイル](../app-development/wpf-application-resource-content-and-data-files.md)しで説明されている埋め込みまたはリンクされたリソースとは異なる[管理アプリケーション リソース (.NET)](/visualstudio/ide/managing-application-resources-dotnet)します。  
+> このトピックで説明するリソースファイルは、「 [WPF アプリケーションリソース、コンテンツ、およびデータファイル](../app-development/wpf-application-resource-content-and-data-files.md)」で説明されているリソースファイルとは異なり、「[アプリケーションリソースの管理 (.net)」で説明されている埋め込みリソースまたはリンクされたリソースとは異なります](/visualstudio/ide/managing-application-resources-dotnet)。  
 
 <a name="usingresources"></a>   
-## <a name="using-resources-in-xaml"></a>XAML でリソースの使用  
- 次の例では、定義、<xref:System.Windows.Media.SolidColorBrush>リソース ページのルート要素として。 例では、リソースを参照しなどのいくつかの子要素のプロパティを設定するため、 <xref:System.Windows.Shapes.Ellipse>、 <xref:System.Windows.Controls.TextBlock>、および<xref:System.Windows.Controls.Button>します。  
+## <a name="using-resources-in-xaml"></a>XAML でのリソースの使用  
+ 次の例では<xref:System.Windows.Media.SolidColorBrush> 、ページのルート要素のリソースとしてを定義します。 次に、リソースを参照し、このリソースを使用して<xref:System.Windows.Shapes.Ellipse> <xref:System.Windows.Controls.TextBlock>、、 <xref:System.Windows.Controls.Button>、などのいくつかの子要素のプロパティを設定します。  
   
  [!code-xaml[FEResourceSH_snip#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xaml)]  
   
- フレームワーク レベルのすべての要素 (<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>) が、<xref:System.Windows.FrameworkElement.Resources%2A>リソースを含むプロパティであるプロパティ (として、 <xref:System.Windows.ResourceDictionary>) リソースを定義します。 任意の要素には、リソースを定義できます。 ただし、リソースが、これはルート要素で定義された最も多くの場合、<xref:System.Windows.Controls.Page>の例です。  
+ すべてのフレームワークレベル要素 (<xref:System.Windows.FrameworkElement>また<xref:System.Windows.FrameworkContentElement>は) に<xref:System.Windows.FrameworkElement.Resources%2A>は、リソースを定義するリソース (として<xref:System.Windows.ResourceDictionary>) を含むプロパティであるプロパティがあります。 任意の要素にリソースを定義できます。 ただし、多くの場合、リソースはルート要素 (例では<xref:System.Windows.Controls.Page> ) で定義されています。  
   
- リソース ディクショナリ内の各リソースは、一意キーを持つ必要があります。 使って一意のキーを割り当てるマークアップでリソースを定義するときに、 [X:key ディレクティブ](../../xaml-services/x-key-directive.md)します。 通常、キーは、文字列。ただし、設定することできますも、その他のオブジェクトの種類に適切なマークアップ拡張機能を使用しています。 リソースの文字列以外のキーで特定の機能領域で使用されます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、特にのスタイル、コンポーネントのリソース、およびデータのスタイル設定します。  
+ リソースディクショナリ内の各リソースには、一意のキーが必要です。 マークアップでリソースを定義する場合は、 [X:Key ディレクティブ](../../xaml-services/x-key-directive.md)を使用して一意のキーを割り当てます。 通常、キーは文字列です。ただし、適切なマークアップ拡張機能を使用して、他のオブジェクトの種類に設定することもできます。 リソースの文字列以外のキーは[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、の特定の機能領域 (特に、スタイル、コンポーネントリソース、データスタイル) で使用されます。  
   
- リソースを定義した後は、キーの名前を示すリソース マークアップ拡張構文を使用してプロパティ値を使用するリソースを参照できます。  
+ リソースを定義した後、キー名を指定するリソースマークアップ拡張構文を使用して、プロパティ値に使用するリソースを参照できます。次に例を示します。  
   
  [!code-xaml[FEResourceSH_snip#KeyNameUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#keynameusage)]  
   
- 前の例では、ときに、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ローダーは、値を処理`{StaticResource MyBrush}`の<xref:System.Windows.Controls.Control.Background%2A>プロパティ<xref:System.Windows.Controls.Button>、リソースの検索ロジックは最初のリソース ディクショナリにチェック、<xref:System.Windows.Controls.Button>要素。 場合<xref:System.Windows.Controls.Button>のリソース キーの定義がない`MyBrush`(そうでない、そのリソースのコレクションが空)、参照は、次の親要素をチェック<xref:System.Windows.Controls.Button>、これは<xref:System.Windows.Controls.Page>します。 したがってでリソースを定義する場合、<xref:System.Windows.Controls.Page>ルート要素では、論理ツリー内のすべての要素、<xref:System.Windows.Controls.Page>がアクセスできるし、任意のプロパティの値の設定の同じリソースを再利用することができます、<xref:System.Type>をリソース表します。 前の例で、同じ`MyBrush`リソースは、2 つの異なるプロパティを設定:<xref:System.Windows.Controls.Control.Background%2A>の<xref:System.Windows.Controls.Button>、および<xref:System.Windows.Shapes.Shape.Fill%2A>の<xref:System.Windows.Shapes.Rectangle>します。  
+ 前の例では、ローダー [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]がの<xref:System.Windows.Controls.Button> `{StaticResource MyBrush}` <xref:System.Windows.Controls.Control.Background%2A>プロパティの値を処理するときに、リソース検索ロジック<xref:System.Windows.Controls.Button>はまず、要素のリソースディクショナリをチェックします。 に<xref:System.Windows.Controls.Button>リソースキー `MyBrush`の定義がない (そのリソースコレクションが空である) 場合、参照は次にの<xref:System.Windows.Controls.Button>親要素を確認します (つまり<xref:System.Windows.Controls.Page>、)。 したがって、 <xref:System.Windows.Controls.Page>ルート要素でリソースを定義すると、 <xref:System.Windows.Controls.Page>の論理ツリー内のすべての要素がそのリソースにアクセスできるようになります。また、同じリソースを再利用して、リソース<xref:System.Type>に対するを受け入れるプロパティの値を設定することもできます。を. 前の例では、同じ`MyBrush`リソースによって、 <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Controls.Control.Background%2A>の<xref:System.Windows.Controls.Button> <xref:System.Windows.Shapes.Rectangle>とのの2つの異なるプロパティが設定されています。  
   
 <a name="staticdynamic"></a>   
 ## <a name="static-and-dynamic-resources"></a>静的および動的なリソース  
- リソースは、静的リソースまたは動的リソースのいずれかとして参照できます。 いずれかを使用して、これは、 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)または[DynamicResource マークアップ拡張機能](dynamicresource-markup-extension.md)します。 マークアップ拡張機能の機能である[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]オブジェクト参照を指定するには、マークアップ拡張機能属性文字列を処理し、オブジェクトを返すことによって起こります、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ローダー。 マークアップ拡張機能の動作の詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
+ リソースは、静的リソースと動的リソースのどちらかとして参照できます。 これは、 [StaticResource マークアップ拡張](staticresource-markup-extension.md)機能または[Dynamicresource マークアップ拡張機能](dynamicresource-markup-extension.md)のいずれかを使用して行います。 マークアップ拡張機能は、マーク[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]アップ拡張機能によって属性文字列を処理し、オブジェクトを[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ローダーに返すことで、オブジェクト参照を指定できるようにする機能です。 マークアップ拡張機能の動作の詳細については、「[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)」を参照してください。  
   
- マークアップ拡張機能を使用する場合は、その特定のマークアップ拡張機能によって処理される文字列形式の 1 つまたは複数のパラメーターではなく設定されるプロパティのコンテキストで評価される通常提供します。 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)すべての利用可能なリソース ディクショナリ内でそのキーの値を参照して、キーを処理します。 これは、読み込みプロセスを静的リソース参照を受け取るプロパティの値を割り当てる必要がある場合に、ポイントの読み込み中に発生します。 [DynamicResource マークアップ拡張機能](dynamicresource-markup-extension.md)代わりにプロセス式、およびその式を作成して、キー残り評価されていないアプリケーションが実際に実行されるまで、どの時点で、式が評価され、値を指定します。  
+ マークアップ拡張機能を使用する場合、通常は、設定されるプロパティのコンテキストで評価されるのではなく、特定のマークアップ拡張機能によって処理される1つ以上のパラメーターを文字列形式で指定します。 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)は、使用可能なすべてのリソースディクショナリでそのキーの値を検索することによって、キーを処理します。 読み込み中に発生します。これは、読み込みプロセスが静的リソース参照を受け取るプロパティ値を割り当てる必要がある時点です。 代わりに、 [Dynamicresource マークアップ拡張機能](dynamicresource-markup-extension.md)は、式を作成することによってキーを処理します。この式は、アプリケーションが実際に実行されるまで未評価のままです。その時点で、式が評価され、値が提供されます。  
   
- リソースを参照すると次の考慮事項は静的リソース参照または動的リソース参照を使用するかどうかを与えることができます。  
+ リソースを参照する場合、次の考慮事項は、静的リソース参照と動的リソース参照のどちらを使用するかに影響する可能性があります。  
   
-- アプリケーションのリソースを作成する方法の全体的なデザイン (アプリケーションでは、ページごとに疎[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]リソースの唯一のアセンブリで)。  
+- アプリケーションのリソースを作成する方法の全体的な設計 (リソースのみのアセンブリでは、アプリケーション内で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]は、アプリケーション内では疎ではありません)。  
   
-- アプリケーションの機能: アプリケーションの要件の一部をリアルタイムでリソースを更新していますか?  
+- アプリケーションの機能: アプリケーションの要件のリアルタイムの部分でリソースを更新していますか。  
   
-- リソース参照の種類のそれぞれの検索動作します。  
+- そのリソース参照型のそれぞれの参照動作。  
   
-- 特定のプロパティまたはリソースの種類、およびそれらの型のネイティブの動作。  
+- 特定のプロパティまたはリソースの種類、およびそれらの型のネイティブな動作。  
   
-### <a name="static-resources"></a>静的なリソース  
- 静的リソースは、次の状況に最適な作業を参照します。  
+### <a name="static-resources"></a>静的リソース  
+ 静的リソース参照は、次のような状況に最も適しています。  
   
-- アプリケーションの設計は集中ディクショナリでは、リソースのページへのアプリケーション レベルのリソースのすべての最もします。 静的リソース参照は、ページの再読み込みなどの実行時の動作に基づいて再評価されないと、したがってするは、リソースごとに必要なときに、多数の動的リソース参照を使用しないようにするパフォーマンスが向上し、アプリケーションの設計。  
+- アプリケーションの設計では、すべてのリソースのほとんどがページまたはアプリケーションレベルのリソースディクショナリに集中しています。 静的リソース参照は、ページの再読み込みなどの実行時の動作に基づいて再評価されることはないため、リソースごとに不要な動的リソース参照を大量に回避すると、パフォーマンス上の利点があります。アプリケーションの設計。  
   
-- 含まれていないプロパティの値を設定する、<xref:System.Windows.DependencyObject>または<xref:System.Windows.Freezable>します。  
+- <xref:System.Windows.DependencyObject>またはにないプロパティの値を設定しようとしています。<xref:System.Windows.Freezable>  
   
-- DLL にコンパイルし、アプリケーションの一部としてパッケージ化またはアプリケーション間で共有されるリソース ディクショナリを作成します。  
+- DLL にコンパイルされるリソースディクショナリを作成し、アプリケーションの一部としてパッケージ化するか、アプリケーション間で共有します。  
   
-- カスタム コントロールのテーマを作成し、テーマ内で使用されているリソースを定義します。 この場合は、通常たくない動的リソース参照の検索動作は、検索結果は予測可能で自己完結型のテーマにように代わりに静的リソース参照の動作をしますか。 動的リソース参照で、テーマでの参照のままもが、実行時まで評価し、テーマが適用されている、ローカルのいくつかの要素を参照しようとして、テーマ キーを再定義し、ローカルの要素を前に分類されます可能性があります。検索で自体テーマ。 その場合は、テーマは予期したとおりに動作しません。  
+- カスタムコントロールのテーマを作成し、テーマ内で使用されるリソースを定義します。 この場合、動的リソース参照の参照動作は通常は必要ありません。代わりに、静的なリソース参照の動作を使用して、参照が予測可能であり、テーマに自己完結している必要があります。 動的リソース参照を使用すると、テーマ内の参照が実行可能になるまでは評価されません。また、テーマが適用されると、テーマが参照しようとしているキーが一部のローカル要素によって再定義され、ローカル要素が前になります。検索でテーマ自体に。 そのような場合は、テーマが期待どおりに動作しません。  
   
-- 多数の依存関係プロパティを設定するのには、リソースを使用しています。 依存関係プロパティでは、有効な値がプロパティ システムによって有効になっているため、読み込み時に評価される依存関係プロパティの値を指定する場合、依存関係プロパティ reevaluated 式を確認する必要はありませんおよび返すことができますをキャッシュします最後の有効な値。 この方法は、パフォーマンスが向上します。  
+- リソースを使用して、多数の依存関係プロパティを設定しています。 依存関係プロパティの有効な値のキャッシュは、プロパティシステムによって有効になります。したがって、読み込み時に評価できる依存関係プロパティの値を指定する場合、依存関係プロパティは再評価式を確認する必要がなく、最後の有効な値。 この手法は、パフォーマンス上の利点があります。  
   
-- すべてのコンシューマーの基になるリソースを変更するかを使用して、各コンシューマーの書き込み可能な個別のインスタンスを保持したい、 [x: 共有属性](../../xaml-services/x-shared-attribute.md)します。  
+- すべてのコンシューマーの基になるリソースを変更する必要がある場合、または[X:Shared 属性](../../xaml-services/x-shared-attribute.md)を使用してコンシューマーごとに個別の書き込み可能インスタンスを保持する場合。  
   
-#### <a name="static-resource-lookup-behavior"></a>静的リソース参照動作  
+#### <a name="static-resource-lookup-behavior"></a>静的リソース参照の動作  
   
-1. プロパティを設定する要素によって定義されたリソース ディクショナリ内で要求されたキーの参照プロセスを確認します。  
+1. 参照プロセスは、プロパティを設定する要素によって定義されたリソースディクショナリ内で、要求されたキーを確認します。  
   
-2. 参照プロセスは、親要素とそのリソース ディクショナリにし、論理ツリーを上を走査します。 これは、ルート要素に達するまで続きます。  
+2. 次に、参照プロセスによって論理ツリーが上位に、親要素とそのリソースディクショナリに向かって走査されます。 これは、ルート要素に到達するまで続行されます。  
   
-3. 次に、アプリケーションのリソースがチェックされます。 アプリケーション リソースで定義されているリソース ディクショナリ内では、<xref:System.Windows.Application>オブジェクト、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
+3. 次に、アプリケーションリソースが確認されます。 アプリケーションリソースは、 <xref:System.Windows.Application> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションのオブジェクトによって定義されたリソースディクショナリ内のリソースです。  
   
- リソース ディクショナリ内の静的リソース参照では、既に定義されている構文的リソース参照の前にリソースを参照する必要があります。 静的リソース参照では、前方参照を解決できません。 このため、静的リソース参照を使用する場合する必要があります構造を設計する、リソース ディクショナリで、または各リソース ディクショナリの先頭付近に、リソースで使用するためのリソースが定義されているようにします。  
+ リソースディクショナリ内からの静的リソース参照は、リソース参照の前に既に定義されているリソースを参照する必要があります。 前方参照は、静的リソース参照によって解決できません。 このため、静的なリソース参照を使用する場合は、リソースディクショナリの構造を設計する必要があります。これは、リソースを使用することを目的としたリソースが、それぞれのリソースディクショナリの先頭に定義されているか、その近くに定義されているかを示します。  
   
- 静的リソース参照は、テーマまたはシステム リソースを拡張できますが、だけであるためこれはサポートされて、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ローダーによって要求が遅延します。 ページの読み込み時にランタイムのテーマは、アプリケーションに正しく適用できるように、遅延する必要があります。 ただし、テーマまたはシステム リソースは推奨されませんとしてのみ存在することが知られているキーに静的リソースを参照します。 これは、テーマがリアルタイムでユーザーが変更された場合、このような参照が再評価されないためにです。 テーマまたはシステム リソースを要求すると、動的リソース参照はより信頼性の高いです。 テーマ要素自体が別のリソースを要求したときに例外です。 これらの参照の前に説明した理由から、静的リソース参照があります。  
+ 静的リソース参照は、テーマまたはシステムリソースに拡張できますが、これはローダーが[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]要求を延期することによってのみサポートされます。 遅延は、ページが読み込まれるときのランタイムテーマがアプリケーションに適切に適用されるようにするために必要です。 ただし、にのみ存在することがわかっているキーへの静的リソース参照は、テーマまたはシステムリソースとしてのみ存在することをお勧めします。 これは、ユーザーがリアルタイムでテーマを変更した場合に、このような参照が再評価されないためです。 動的リソース参照は、テーマまたはシステムリソースを要求するときに信頼性が高くなります。 例外は、テーマ要素自体が別のリソースを要求する場合です。 これらの参照は、前述の理由により、静的なリソース参照である必要があります。  
   
- 静的リソース参照が見つからない場合は、例外動作によって異なります。 リソースが延期された場合は、実行時に例外が発生します。 リソースを遅延しませんが、読み込み時に、例外が発生します。  
+ 静的リソース参照が見つからない場合の例外動作は異なります。 リソースが遅延された場合は、実行時に例外が発生します。 リソースが遅延されていない場合は、読み込み時に例外が発生します。  
   
 ### <a name="dynamic-resources"></a>動的リソース  
- 次の状況に最適な動的リソース。  
+ 動的リソースは、次のような状況で最適に機能します。  
   
-- リソースの値は、実行時までわからない条件によって異なります。 これには、システム リソース、または他のユーザー設定可能なリソースが含まれます。 によって公開されていると、システムのプロパティを参照する set アクセス操作子の値を作成するなど<xref:System.Windows.SystemColors>、 <xref:System.Windows.SystemFonts>、または<xref:System.Windows.SystemParameters>します。 これらの値は、ユーザーとオペレーティング システムのランタイム環境から最終的になるため、完全に動的です。 ページ レベル リソースへのアクセス、変更のキャプチャをする必要がありますも、変更できるアプリケーション レベルのテーマもあります。  
+- リソースの値は、ランタイムまで不明な条件に依存します。 これには、システムリソース、またはユーザーが設定できるリソースが含まれます。 たとえば、、 <xref:System.Windows.SystemColors> <xref:System.Windows.SystemFonts>、または<xref:System.Windows.SystemParameters>によって公開されているシステムプロパティを参照する setter 値を作成できます。 これらの値は、最終的にユーザーおよびオペレーティングシステムのランタイム環境から取得されるため、真に動的です。 また、変更できるアプリケーションレベルのテーマがある場合もあります。この場合、ページレベルのリソースへのアクセスでも変更をキャプチャする必要があります。  
   
-- 作成するカスタム コントロールのテーマのスタイルを参照します。  
+- カスタムコントロールのテーマスタイルを作成または参照している。  
   
-- 内容を調整する、<xref:System.Windows.ResourceDictionary>アプリケーションの有効期間中にします。  
+- アプリケーションの有効期間<xref:System.Windows.ResourceDictionary>中にの内容を調整する場合。  
   
-- 前方参照が必要に、依存関係を持つ構造の複雑なリソースがあります。 静的リソース参照は、前方参照をサポートしていませんが、動的リソース参照をサポートしてそれらのリソースが、実行時まで評価する必要がないため、前方参照でないため、関連する概念。  
+- 相互依存関係を持つ複雑なリソース構造があり、前方参照が必要になる場合があります。 静的リソース参照では前方参照はサポートされていませんが、動的リソース参照では、リソースをランタイムに評価する必要がなく、前方参照が関連する概念ではないため、動的リソース参照はこれらをサポートします。  
   
-- コンパイルまたはワーキング セットの観点から、特に大規模なリソースを参照しているし、ページが読み込まれるときにすぐに、リソースを使用しない場合があります。 静的リソース参照を常に読み込む[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ページの読み込み。 ただし、動的リソース参照まで読み込まれませんが、実際に使用します。  
+- コンパイルまたはワーキングセットの観点から特に大きいリソースを参照しているため、ページの読み込み時にリソースがすぐには使用されない可能性があります。 静的リソース参照は、ページ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]が読み込まれるときに常に読み込まれます。ただし、動的リソース参照は、実際に使用されるまで読み込まれません。  
   
-- Set アクセス操作子の値がテーマやその他のユーザー設定の影響を受けるその他の値を元のスタイルを作成します。  
+- テーマまたはその他のユーザー設定の影響を受ける他の値からセッター値が取得される可能性があるスタイルを作成しています。  
   
-- 要素が親を再指定論理ツリーでアプリケーションの有効期間中にリソースを適用します。 リソース ルックアップ スコープを変更して、親を変更することもありますので、する場合は、リソースに再評価をこの要素の新しい範囲に基づく、常に使用して、動的リソース参照。  
+- アプリケーションの有効期間中に論理ツリー内で親される可能性のある要素にリソースを適用しています。 親を変更すると、リソースルックアップスコープも変更される可能性があるため、新しいスコープに基づいて親要素のリソースを再評価するには、常に動的リソース参照を使用します。  
   
-#### <a name="dynamic-resource-lookup-behavior"></a>動的リソース参照動作  
- 呼び出す場合、動的リソース参照のリソースの検索の動作は、コード内の検索の動作に対応して<xref:System.Windows.FrameworkElement.FindResource%2A>または<xref:System.Windows.FrameworkElement.SetResourceReference%2A>します。  
+#### <a name="dynamic-resource-lookup-behavior"></a>動的リソース参照の動作  
+ 動的リソース参照のリソース参照動作は、または<xref:System.Windows.FrameworkElement.FindResource%2A> <xref:System.Windows.FrameworkElement.SetResourceReference%2A>を呼び出すと、コードの参照動作と同じです。  
   
-1. プロパティを設定する要素によって定義されたリソース ディクショナリ内で要求されたキーの参照プロセスを確認します。  
+1. 参照プロセスは、プロパティを設定する要素によって定義されたリソースディクショナリ内で、要求されたキーを確認します。  
   
-    - 要素が定義されている場合、<xref:System.Windows.FrameworkElement.Style%2A>プロパティ、<xref:System.Windows.Style.Resources%2A>ディクショナリ内で、<xref:System.Windows.Style>がチェックされます。  
+    - 要素がプロパティ<xref:System.Windows.FrameworkElement.Style%2A> <xref:System.Windows.Style.Resources%2A>を定義している場合は、 <xref:System.Windows.Style>内のディクショナリがチェックされます。  
   
-    - 要素が定義されている場合、<xref:System.Windows.Controls.Control.Template%2A>プロパティ、<xref:System.Windows.FrameworkTemplate.Resources%2A>ディクショナリ内で、<xref:System.Windows.FrameworkTemplate>がチェックされます。  
+    - 要素がプロパティ<xref:System.Windows.Controls.Control.Template%2A> <xref:System.Windows.FrameworkTemplate.Resources%2A>を定義している場合は、 <xref:System.Windows.FrameworkTemplate>内のディクショナリがチェックされます。  
   
-2. 参照プロセスは、親要素とそのリソース ディクショナリにし、論理ツリーを上を走査します。 これは、ルート要素に達するまで続きます。  
+2. 次に、参照プロセスによって論理ツリーが上位に、親要素とそのリソースディクショナリに向かって走査されます。 これは、ルート要素に到達するまで続行されます。  
   
-3. 次に、アプリケーションのリソースがチェックされます。 アプリケーション リソースで定義されているリソース ディクショナリ内では、<xref:System.Windows.Application>オブジェクト、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
+3. 次に、アプリケーションリソースが確認されます。 アプリケーションリソースは、 <xref:System.Windows.Application> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションのオブジェクトによって定義されたリソースディクショナリ内のリソースです。  
   
-4. 現在アクティブなテーマのテーマのリソース ディクショナリがチェックされます。 実行時にテーマが変更された場合、値が再評価されます。  
+4. 現在アクティブなテーマのテーマリソースディクショナリがチェックされます。 実行時にテーマが変更された場合、値は再評価されます。  
   
-5. システム リソースがチェックされます。  
+5. システムリソースがチェックされます。  
   
- (あれば) 例外の動作が異なります。  
+ 例外の動作 (存在する場合) は、次のように異なります。  
   
-- リソースが要求した場合、<xref:System.Windows.FrameworkElement.FindResource%2A>を呼び出すし、見つからなかった、例外が発生します。  
+- リソースが<xref:System.Windows.FrameworkElement.FindResource%2A>呼び出しによって要求され、が見つからなかった場合は、例外が発生します。  
   
-- リソースが要求した場合、<xref:System.Windows.FrameworkElement.TryFindResource%2A>を呼び出すし、見つからなかった、例外は発生しませんが、返される値は`null`します。 設定されるプロパティを受け入れない場合`null`、詳細な例外が発生することも可能にし、(これは設定されている個々 のプロパティに依存)。  
+- リソースが<xref:System.Windows.FrameworkElement.TryFindResource%2A>呼び出しによって要求され、が見つからなかった場合は、例外は発生しませんが`null`、戻り値はになります。 設定するプロパティがを受け入れ`null`ない場合でも、より深い例外が発生する可能性があります (これは、設定されている個々のプロパティによって異なります)。  
   
-- 動的リソース参照によってリソースが要求されたかどうか[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]が見つかりませんでしたとし、動作は、[全般] プロパティ システムによって異なりますが、全般的な動作は、リソースが存在するレベルのプロパティ設定操作が発生しなかったかのようです。 たとえばの背景を設定しようとした場合、評価できないリソースを使用して、個々 のボタン要素値の設定はありません、結果がプロパティ システムと値の優先順位の他の参加者から有効な値が決まることができます。 たとえば、バック グラウンド値がローカルに定義されたボタンのスタイル、またはテーマ スタイルから決まる場合があります。 テーマ スタイルによって定義されていないプロパティの場合は、失敗したリソースの評価後に有効な値は、プロパティ メタデータの既定値から取得可能性があります。  
+- リソースがの[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]動的リソース参照によって要求され、見つからなかった場合、動作は一般的なプロパティシステムによって異なりますが、一般的な動作は、リソースが存在するレベルでプロパティ設定操作が行われなかった場合と同じです。 たとえば、評価できないリソースを使用して個々の button 要素の背景を設定しようとした場合、値は設定されませんが、プロパティシステムと値の優先順位の他の参加者から有効な値を取得できます。 たとえば、背景値は、ローカルに定義されたボタンスタイルまたはテーマスタイルから取得される場合があります。 テーマスタイルで定義されていないプロパティの場合、リソースの評価に失敗した後の有効値は、プロパティメタデータの既定値から取得される可能性があります。  
   
 #### <a name="restrictions"></a>制約  
- 動的リソース参照では、いくつか注目すべき制限があります。 次の少なくとも 1 つは true である必要があります。  
+ 動的リソース参照には、いくつかの注目すべき制限があります。 少なくとも次のいずれかが true である必要があります。  
   
-- 設定されているプロパティのプロパティである必要があります、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>します。 プロパティをバックアップする必要がある、<xref:System.Windows.DependencyProperty>します。  
+- 設定するプロパティは、 <xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>のプロパティである必要があります。 このプロパティは、 <xref:System.Windows.DependencyProperty>でサポートされている必要があります。  
   
-- 内の値が参照されて、 <xref:System.Windows.Style><xref:System.Windows.Setter>します。  
+- 参照は、 <xref:System.Windows.Style> <xref:System.Windows.Setter>内の値を対象としています。  
   
-- 設定されているプロパティのプロパティである必要があります、<xref:System.Windows.Freezable>いずれかの値として提供されている、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>プロパティ、または<xref:System.Windows.Setter>値。  
+- 設定する<xref:System.Windows.Freezable>プロパティは、プロパティ<xref:System.Windows.FrameworkElement> <xref:System.Windows.FrameworkContentElement>またはプロパティの値または値として指定されたのプロパティである必要があります。<xref:System.Windows.Setter>  
   
- プロパティが設定されている必要があるので、<xref:System.Windows.DependencyProperty>または<xref:System.Windows.Freezable>プロパティ、プロパティ変更のほとんどに伝達できます UI プロパティの変更 (動的なリソースが変更された値) の受信がプロパティ システムによって確認するためです。 ほとんどのコントロールが場合は、コントロールの別のレイアウトを強制的にロジックを含む、<xref:System.Windows.DependencyProperty>変更とプロパティがレイアウトに影響を与えます。 ただし、すべてのプロパティがある、 [DynamicResource マークアップ拡張機能](dynamicresource-markup-extension.md)それらの値として、UI にリアルタイムで更新するように値を提供する保証されます。 その機能は、によって、プロパティと、プロパティ、またはアプリケーションの論理構造を所有する型によって使用異なる場合がありますもします。  
+ 設定するプロパティはプロパティ<xref:System.Windows.DependencyProperty>または<xref:System.Windows.Freezable>プロパティである必要があるため、プロパティの変更 (動的リソース値の変更) がプロパティシステムによって確認されるため、ほとんどのプロパティ変更が UI に反映される可能性があります。 ほとんどのコントロールには、 <xref:System.Windows.DependencyProperty>変更やそのプロパティがレイアウトに影響を与える可能性がある場合に、コントロールの別のレイアウトを強制的に適用するロジックが含まれます。 ただし、 [Dynamicresource マークアップ拡張機能](dynamicresource-markup-extension.md)が値として使用されているすべてのプロパティでは、UI でリアルタイムに更新されるように値を提供することが保証されています。 この機能は、プロパティによって異なりますが、プロパティを所有する型やアプリケーションの論理構造によっても異なる場合があります。  
   
 <a name="stylesimplicitkeys"></a>   
-## <a name="styles-datatemplates-and-implicit-keys"></a>スタイル、Datatemplate、および暗黙的なキー  
- 以前では、示されていました内の項目をすべて、<xref:System.Windows.ResourceDictionary>キーを持っている必要があります。 ただし、いないわけでは、明示的なすべてのリソースである必要があります`x:Key`します。 いくつかのオブジェクト型では、別のプロパティの値に関連付けられた、キー値をリソースとして定義されている場合に暗黙のキーをサポートします。 一方、暗黙のキーと呼ばれます、`x:Key`属性は、明示的なキー。 明示的なキーを指定することによって、暗黙のキーを上書きできます。  
+## <a name="styles-datatemplates-and-implicit-keys"></a>スタイル、DataTemplates、および暗黙のキー  
+ 前に、内の<xref:System.Windows.ResourceDictionary>すべての項目にキーが必要であることが示されていました。 ただし、これは、すべてのリソースに明示的`x:Key`なが必要であるという意味ではありません。 オブジェクトの種類によっては、リソースとして定義されている場合、キー値が別のプロパティの値に関連付けられている場合に、暗黙的なキーをサポートします。 これは暗黙のキー `x:Key`として知られていますが、属性は明示的なキーです。 明示的なキーを指定することで、暗黙のキーを上書きできます。  
   
- リソースの 1 つの非常に重要なシナリオは、定義する場合、<xref:System.Windows.Style>します。 実際を<xref:System.Windows.Style>スタイルは本質的に再利用するためのものであるため、リソース ディクショナリのエントリとしてはほぼ常に定義します。 スタイルの詳細については、次を参照してください。[スタイルとテンプレート](../controls/styling-and-templating.md)します。  
+ リソースの非常に重要なシナリオの1つは<xref:System.Windows.Style>、を定義する場合です。 実際、は、 <xref:System.Windows.Style>スタイルが本質的に再利用されることを意図しているため、ほとんどの場合、リソースディクショナリ内のエントリとして定義されます。 スタイルの詳細については、「スタイル[とテンプレート](../controls/styling-and-templating.md)」を参照してください。  
   
- コントロールのスタイルで作成およびできる暗黙のキーを参照します。 コントロールの既定の外観を定義するテーマ スタイルは、この暗黙のキーに依存します。 要求の観点からは、暗黙のキーは、<xref:System.Type>コントロール自体の。 リソースの定義の観点からは、暗黙のキーは、<xref:System.Windows.Style.TargetType%2A>のスタイル。 そのため、カスタム コントロールのテーマを作成する場合、既存のテーマ スタイルを使用して対話するスタイルを作成する必要はありませんを指定する、 [X:key ディレクティブ](../../xaml-services/x-key-directive.md)を<xref:System.Windows.Style>します。 テーマ スタイルを使用する場合はまったく任意のスタイルを指定する必要はありません。 たとえば、次のスタイル定義の動作、場合でも、<xref:System.Windows.Style>キーにするリソースは表示されません。  
+ コントロールのスタイルは、を使用して作成することも、暗黙的なキーを使用して参照することもできます。 コントロールの既定の外観を定義するテーマスタイルは、この暗黙のキーに依存します。 要求の観点から見た暗黙のキーは、 <xref:System.Type>コントロール自体のです。 リソースの定義の観点からの暗黙のキーは<xref:System.Windows.Style.TargetType%2A> 、スタイルのです。 したがって、カスタムコントロールのテーマを作成していて、既存のテーマスタイルと対話するスタイルを作成している場合は、その<xref:System.Windows.Style>に対して[x:Key ディレクティブ](../../xaml-services/x-key-directive.md)を指定する必要はありません。 また、テーマ付きスタイルを使用する場合は、スタイルを指定する必要はありません。 たとえば、次のスタイル定義は、 <xref:System.Windows.Style>リソースがキーを持っていないように見える場合でも動作します。  
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- あるスタイル実際には、キーが: 暗黙のキー `typeof(` <xref:System.Windows.Controls.Button>`)`します。 マークアップでは、指定することができます、<xref:System.Windows.Style.TargetType%2A>型として直接指定して (または、必要に応じて使用することができます[{X:type...}](../../xaml-services/x-type-markup-extension.md) 返す、<xref:System.Type>します。  
+ このスタイルには、暗黙のキー `typeof(` <xref:System.Windows.Controls.Button> `)`というキーが実際に含まれています。 マークアップでは、を型<xref:System.Windows.Style.TargetType%2A>名として直接指定できます (または、必要に応じて[{x:Type...}](../../xaml-services/x-type-markup-extension.md)を使用することもできます)。 を返す場合<xref:System.Type>は。  
   
- 使用される既定のテーマ スタイルのメカニズムを通じて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のランタイム スタイルとしてスタイルが適用されることを<xref:System.Windows.Controls.Button> ページで、場合でも、<xref:System.Windows.Controls.Button>自体を指定しません、<xref:System.Windows.FrameworkElement.Style%2A>プロパティまたは特定のリソーススタイルへの参照します。 ページで定義されているスタイルはテーマ ディクショナリのスタイルと同じキーを使用して、テーマ ディクショナリ スタイルより参照シーケンスの前にあります。 指定することだけでした`<Button>Hello</Button>` ページで、およびスタイルで定義されている任意の場所で<xref:System.Windows.Style.TargetType%2A>の`Button`そのボタンに適用されます。 同じ型の値を持つスタイルを明示的に引き続きキーことができる場合は、 <xref:System.Windows.Style.TargetType%2A>、わかりやすくするため、マークアップでは省略可能です。  
+ によっ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]て使用される既定のテーマスタイル機構を使用して、そのスタイルは<xref:System.Windows.Controls.Button> 、その<xref:System.Windows.FrameworkElement.Style%2A>プロパティまたは特定の<xref:System.Windows.Controls.Button>リソースを指定しようとしない場合でも、ページ上ののランタイムスタイルとして適用されます。スタイルへの参照。 ページで定義されているスタイルは、テーマ辞書のスタイルと同じキーを使用して、参照シーケンスの前にテーマディクショナリのスタイルよりも前にあります。 ページ内の任意`<Button>Hello</Button>`の`Button`場所を指定するだけで、で<xref:System.Windows.Style.TargetType%2A>定義したスタイルがそのボタンに適用されます。 必要に応じて、マークアップでわかりやすくするために、と<xref:System.Windows.Style.TargetType%2A>同じ型の値を持つスタイルを明示的にキー指定することもできますが、これは省略可能です。  
   
- 場合、スタイルの暗黙的なキーは、コントロールに適用されません<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>は`true`(またを注意<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>ネイティブの動作、コントロール クラスではなく明示的に、コントロールのインスタンスの一部として設定することがあります)。 また、暗黙的なキーの派生クラスのシナリオをサポートするために、制御する必要がありますオーバーライド<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>(の一部として提供されるすべての既存コントロール[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]これを行う)。 スタイル、テーマ、およびコントロールのデザインの詳細については、次を参照してください。[スタイルのコントロールを設計するためのガイドライン](../controls/guidelines-for-designing-stylable-controls.md)します。  
+ がの場合<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> 、スタイルの暗黙のキーはコントロールに適用されませ<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>ん (これは`true` 、コントロールのインスタンスで明示的にではなく、コントロールクラスのネイティブ動作の一部として設定されることもあります)。 また、派生クラスのシナリオで暗黙のキーをサポートするには、コントロール<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>をオーバーライドする必要があります ( [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の一部として提供されるすべての既存のコントロール)。 スタイル、テーマ、およびコントロールのデザインの詳細については、「[スタイルコントロールを設計するためのガイドライン](../controls/guidelines-for-designing-stylable-controls.md)」を参照してください。  
   
- <xref:System.Windows.DataTemplate> 暗黙のキーがあります。 暗黙のキーを<xref:System.Windows.DataTemplate>は、<xref:System.Windows.DataTemplate.DataType%2A>プロパティの値。 <xref:System.Windows.DataTemplate.DataType%2A> 明示的に使用するのではなく、型の名前として指定することも[{X:type...}](../../xaml-services/x-type-markup-extension.md). 詳細については、次を参照してください。[データ テンプレートの概要](../data/data-templating-overview.md)します。  
+ <xref:System.Windows.DataTemplate>には、暗黙のキーもあります。 の<xref:System.Windows.DataTemplate>暗黙のキー <xref:System.Windows.DataTemplate.DataType%2A>は、プロパティ値です。 <xref:System.Windows.DataTemplate.DataType%2A>は、 [{x:Type...}](../../xaml-services/x-type-markup-extension.md)を明示的に使用するのではなく、型の名前として指定することもできます。 詳細については、「[データテンプレートの概要](../data/data-templating-overview.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac83a0b27a965721dabe1bdf2e05afbdc9b9c961
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a0604161ed6e7c3ead4a2e518daebc8414689af
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704779"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252706"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly > 要素
-各アセンブリのバインディング ポリシーとアセンブリの場所をカプセル化します。 1 つを使用して、`dependentAssembly`各アセンブリの要素。  
+各アセンブリのバインディング ポリシーとアセンブリの場所をカプセル化します。 アセンブリごと`dependentAssembly`に1つの要素を使用します。  
   
- \<configuration>  
-\<runtime>  
-\<assemblyBinding>  
-\<dependentAssembly>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,8 +43,8 @@ ms.locfileid: "61704779"
   
 |要素|説明|  
 |-------------|-----------------|  
-|`assemblyIdentity`|アセンブリに関する識別情報が含まれています。 この要素は、それぞれに含める必要がある`dependentAssembly`要素。|  
-|`codeBase`|コンピューターにインストールされていない場合に、ランタイムで、共有アセンブリに見つけることができますを指定します。|  
+|`assemblyIdentity`|アセンブリに関する識別情報を格納します。 この要素は、各`dependentAssembly`要素に含める必要があります。|  
+|`codeBase`|ランタイムがコンピューターにインストールされていない場合に、共有アセンブリを見つけることができる場所を指定します。|  
 |`bindingRedirect`|1 つのアセンブリ バージョンを別のバージョンにリダイレクトします。|  
 |`publisherPolicy`|ランタイムがこのアセンブリの発行者ポリシーを適用するかどうかを指定します。|  
   
@@ -57,7 +57,7 @@ ms.locfileid: "61704779"
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="example"></a>例  
- 次の例では、2 つのアセンブリのアセンブリ情報をカプセル化する方法を示します。  
+ 次の例は、2つのアセンブリのアセンブリ情報をカプセル化する方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ ms.locfileid: "61704779"
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)
+- [アセンブリ バージョンのリダイレクト](../../redirect-assembly-versions.md)

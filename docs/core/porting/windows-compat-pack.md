@@ -4,12 +4,12 @@ description: Windows 互換機能パックとそれを使用して既存の .NET
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: c4fd888e0fbce86ab317f18fd77374af5d3ca244
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717896"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202564"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Windows 互換機能パックを使用してコードを .NET Core に移植する
 
@@ -43,7 +43,7 @@ Windows 専用 API やプラットフォーム非依存 API など、約 20,000 
 * Windows ランタイム キャッシュ
 * Windows サービス
 
-詳細については、[互換機能パックの仕様](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)をご覧ください。
+詳細については、[互換機能パックの仕様](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)に関するページを参照してください。
 
 ## <a name="get-started"></a>作業開始
 
@@ -53,7 +53,7 @@ Windows 専用 API やプラットフォーム非依存 API など、約 20,000 
 
 3. Windows に留まる場合、すでに用意はできています。
 
-4. .NET Core アプリケーションまたは .NET Standard ライブラリを Linux または macOS で実行する場合、[API Analyzer](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) を使用し、プラットフォーム非依存で機能しない API の使用を見つけます。
+4. .NET Core アプリケーションまたは .NET Standard ライブラリを Linux または macOS で実行する場合、[API Analyzer](../../standard/analyzers/api-analyzer.md) を使用し、プラットフォーム非依存で機能しない API の使用を見つけます。
 
 5. そのような API の使用を取り除くか、プラットフォーム非依存の代替で置換するか、プラットフォーム チェックで保護します (以下参照)。
 

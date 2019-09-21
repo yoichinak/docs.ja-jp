@@ -2,19 +2,20 @@
 title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: 70fb2df1d37af23d9ec19932806989ce3329bf3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9291c38af28c18d20e23e34e8316b4a9fe523123
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768915"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855121"
 ---
-# <a name="messagelogging"></a>\<messageLogging>
+# <a name="messagelogging"></a>\<messageLogging >
 この要素は Windows Communication Foundation (WCF) のメッセージ ログ機能の設定を定義します。  
   
- \<system.ServiceModel >  
-\<診断 >  
-\<messageLogging>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<診断 >** ](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<messageLogging >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -127,4 +128,4 @@ ms.locfileid: "61768915"
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement>
-- [メッセージ ログの構成](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [メッセージ ログの構成](../../../wcf/diagnostics/configuring-message-logging.md)

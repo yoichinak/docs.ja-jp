@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 804a295cf74067eb23ed8e8c860252a1f2fcf5d5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a89ea76d78431ae8833602588379d5150e473710
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770192"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938306"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask メソッド
-共通言語ランタイム (CLR) が新しいタスクを作成することを明示的に要求します。  
+共通言語ランタイム (CLR) によって新しいタスクが作成されることを明示的に要求します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,34 +37,34 @@ HRESULT CreateTask (
   
 ## <a name="parameters"></a>パラメーター  
  `pTask`  
- [out]新しく作成されたのアドレスへのポインター [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)、または null の場合は、タスクを作成できませんでした。  
+ 入出力新しく作成された[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)のアドレスへのポインター、またはタスクを作成できなかった場合は null。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|メソッドが正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|S_OK|メソッドが正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
-|E_OUTOFMEMORY|メモリが不足していますが、要求されたリソースを割り当てることができます。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|E_OUTOFMEMORY|要求されたリソースを割り当てるのに十分なメモリがありません。|  
   
 ## <a name="remarks"></a>Remarks  
- ユーザー コードで型を使用してスレッドを作成するときに、CLR が初期化時に自動的に新しいタスクを作成、<xref:System.Threading>名前空間には、スレッド プールのサイズを増加する場合またはします。 また、アンマネージ コードがマネージ関数の呼び出しを行うときにも、タスクを作成します。  
+ CLR は、初期化時、ユーザーコードが<xref:System.Threading>名前空間の型を使用してスレッドを作成するとき、またはスレッドプールのサイズが増加したときに、新しいタスクを自動的に作成します。 また、アンマネージコードがマネージ関数を呼び出す場合にも、タスクが作成されます。  
   
- `CreateTask` により、CLR が新しいタスクを作成することが明示的に要求をホストできます。 たとえば、ホストは、このメソッドを呼び出してデータ構造を呼び出すことができます。  
+ `CreateTask`CLR によって新しいタスクが作成されることをホストが明示的に要求できるようにします。 たとえば、ホストはこのメソッドを呼び出して、データ構造を事前に初期化できます。  
   
 > [!IMPORTANT]
->  新しいタスクが中断状態に返され、ホストを明示的に呼び出すまで、中断されたまま[ihosttask::start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)します。  
+> 新しいタスクは中断状態で返され、ホストが明示的に[IHostTask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)を呼び出すまで中断されたままになります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

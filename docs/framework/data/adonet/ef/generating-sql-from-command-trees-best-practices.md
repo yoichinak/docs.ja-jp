@@ -2,12 +2,12 @@
 title: 'コマンド ツリーからの SQL の生成: ベスト プラクティス'
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606668"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855003"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>コマンド ツリーからの SQL の生成: ベスト プラクティス
 
@@ -125,7 +125,7 @@ ON b.y = d.z
 
 ## <a name="join-alias-flattening"></a>結合の別名のフラット化
 
-出力コマンド ツリーの他の関係式とは異なり、DbJoinExpression は 2 つの列から成る行として結果の型を出力します。この 2 つの列のそれぞれが、いずれか 1 つの入力に対応しています。 結合から生じたスカラー プロパティにアクセスする、DbPropertyExpression が構築されると、1 つの DbPropertyExpression になります。
+出力コマンド ツリーの他の関係式とは異なり、DbJoinExpression は 2 つの列から成る行として結果の型を出力します。この 2 つの列のそれぞれが、いずれか 1 つの入力に対応しています。 DbPropertyExpression を構築して、結合からのスカラープロパティにアクセスする場合は、別の DbPropertyExpression を使用します。
 
 例として、例 2 の "a.b.y" と例 3 の "b.c.y" が挙げられます。 ただし、対応する SQL ステートメントでは、これらは "b.y" になります。 この別名の再設定は、結合の別名のフラット化と呼ばれます。
 
@@ -137,16 +137,16 @@ ON b.y = d.z
 
 ## <a name="avoid-select-"></a>SELECT * の回避
 
-ベース テーブルから選択する際には `SELECT *` を使用しないでください。 ストレージ モデル、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]アプリケーションは、データベース テーブルに含まれる列のサブセットのみを含めることがあります。 この場合、`SELECT *` によって正しくない結果が生成される可能性があります。 代わりに、関与する式の結果の型の列名を使用して、関与するすべての列を指定してください。
+ベース テーブルから選択する際には `SELECT *` を使用しないでください。 Entity Framework アプリケーションのストレージモデルには、データベーステーブル内の列のサブセットのみを含めることができます。 この場合、`SELECT *` によって正しくない結果が生成される可能性があります。 代わりに、関与する式の結果の型の列名を使用して、関与するすべての列を指定してください。
 
 ## <a name="reuse-of-expressions"></a>式の再利用
 
-式は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によって渡されたクエリ コマンド ツリーで再利用できます。 各式は、クエリ コマンド ツリーで 1 回しか使用できないわけではありません。
+式は、Entity Framework によって渡されたクエリコマンドツリーで再利用できます。 各式は、クエリ コマンド ツリーで 1 回しか使用できないわけではありません。
 
 ## <a name="mapping-primitive-types"></a>プリミティブ型のマッピング
 
-概念 (EDM) 型をプロバイダー型にマップする場合は、さまざまな値に対応できるように、最も幅の広い型 (Int32) にマップする必要があります。 BLOB の種類と同様に、多くの操作を使用できない型へのマッピングを回避することも、(たとえば、 `ntext` SQL server)。
+概念 (EDM) 型をプロバイダー型にマップする場合は、さまざまな値に対応できるように、最も幅の広い型 (Int32) にマップする必要があります。 また、BLOB の種類など、多くの操作では使用できない型 ( `ntext` SQL Server など) にマッピングすることは避けてください。
 
 ## <a name="see-also"></a>関連項目
 
-- [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [SQL 生成](sql-generation.md)

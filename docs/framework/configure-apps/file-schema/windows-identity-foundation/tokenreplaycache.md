@@ -3,20 +3,21 @@ title: <tokenReplayCache>
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: 1567c669b5e682a7a771d7bedc95a8effa474e36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f3a95fd0a39f199eaf13c7509aff22caa0e3b66
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790508"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251785"
 ---
 # <a name="tokenreplaycache"></a>\<tokenReplayCache>
-トークン再生キャッシュ サービスまたはセキュリティ トークン ハンドラー コレクションに登録します。  
+トークン再生キャッシュをサービスまたはセキュリティトークンハンドラーコレクションに登録します。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<caches>  
-\<tokenReplayCache>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<システムの >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<構成 >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<キャッシュ >** ](caches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tokenReplayCache >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +39,7 @@ ms.locfileid: "61790508"
   
 |属性|説明|  
 |---------------|-----------------|  
-|型|派生した型、<xref:System.IdentityModel.Tokens.TokenReplayCache>クラス。 詳細については、ユーザー設定を指定する方法についての`type`、[カスタム型の参照] を参照してください。
+|型|<xref:System.IdentityModel.Tokens.TokenReplayCache>クラスから派生する型。 カスタム`type`を指定する方法の詳細については、「[カスタム型参照]」を参照してください。
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -47,13 +48,13 @@ ms.locfileid: "61790508"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|サービスまたはセキュリティ トークン ハンドラー コレクションで使用されるキャッシュを登録します。|  
+|[\<キャッシュ >](caches.md)|サービスまたはセキュリティトークンハンドラーコレクションによって使用されるキャッシュを登録します。|  
   
 ## <a name="remarks"></a>Remarks  
- トークン再生キャッシュを使用して、再生されたトークンを検出できます。 トークン リプレイ検出が有効になっている、 [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)要素もトークンの最大有効期限を指定します。  
+ トークン再生キャッシュは、再生されたトークンを検出するために使用されます。 トークンリプレイ検出は、トークンの最大有効期間を指定する[ \<tokenreplaydetection >](tokenreplaydetection.md)要素によって有効にされます。  
   
 ## <a name="example"></a>例  
- 次の XML は、再生されたトークンを検出するためのカスタム キャッシュの構成を示しています。  
+ 次の XML は、再生されたトークンを検出するためのカスタムキャッシュの構成を示しています。  
   
 ```xml  
 <caches>  
@@ -65,4 +66,4 @@ ms.locfileid: "61790508"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IdentityModel.Tokens.TokenReplayCache>
-- [\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)
+- [\<tokenReplayDetection>](tokenreplaydetection.md)

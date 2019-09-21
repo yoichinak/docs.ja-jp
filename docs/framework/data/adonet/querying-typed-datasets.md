@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-ms.openlocfilehash: d956fd5f07c108146d20623bcf811266380c132c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55714c4dae73cd17a849cc35681797dfa4266e3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651741"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782968"
 ---
 # <a name="query-typed-datasets"></a>型指定されたデータセットのクエリ
 
-場合のスキーマ、 <xref:System.Data.DataSet> 、型指定されたを使用することをお勧めします。 アプリケーションのデザイン時に認識が<xref:System.Data.DataSet>LINQ to DataSet を使用する場合。 型指定された<xref:System.Data.DataSet>から派生したクラスには、<xref:System.Data.DataSet>します。 したがって、型指定されたデータセットは <xref:System.Data.DataSet> のすべてのメソッド、イベント、およびプロパティを継承します。 さらに、型指定された<xref:System.Data.DataSet>厳密に型指定されたメソッド、イベント、およびプロパティを提供します。 つまり、コレクションベースのメソッドを使用せずに名前でテーブルおよび列にアクセスできます。 これによりクエリが簡素化され、読みやすくなります。 詳細については、次を参照してください。[型指定されたデータセット](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)します。
+アプリケーションのデザイン時に<xref:System.Data.DataSet>のスキーマがわかっている場合は、LINQ to DataSet を使用するとき<xref:System.Data.DataSet>に、型指定されたを使用することをお勧めします。 型指定<xref:System.Data.DataSet>されたは、 <xref:System.Data.DataSet>から派生するクラスです。 したがって、型指定されたデータセットは <xref:System.Data.DataSet> のすべてのメソッド、イベント、およびプロパティを継承します。 さらに、型<xref:System.Data.DataSet>指定されたは、厳密に型指定されたメソッド、イベント、およびプロパティを提供します。 つまり、コレクションベースのメソッドを使用せずに名前でテーブルおよび列にアクセスできます。 これによりクエリが簡素化され、読みやすくなります。 詳細については、「型指定された[データセット](./dataset-datatable-dataview/typed-datasets.md)」をご覧ください。
 
-LINQ to DataSet がに対する型指定されたクエリの実行をサポートしても<xref:System.Data.DataSet>します。 型指定された<xref:System.Data.DataSet>、ジェネリックを使用する必要はありません<xref:System.Data.DataRowExtensions.Field%2A>メソッドまたは<xref:System.Data.DataRowExtensions.SetField%2A>列データにアクセスするメソッド。 型情報が含まれているために、プロパティ名はコンパイル時に使用可能な<xref:System.Data.DataSet>します。 LINQ to DataSet では、実行時の代わりに、コードがコンパイルされるときに、型の不一致エラーがキャッチされるように、適切な型として列の値へのアクセスを提供します。
+LINQ to DataSet は、型指定<xref:System.Data.DataSet>されたに対するクエリもサポートしています。 型指定<xref:System.Data.DataSet>されたを使用する場合、列データにアクセス<xref:System.Data.DataRowExtensions.SetField%2A>するためにジェネリック<xref:System.Data.DataRowExtensions.Field%2A>メソッドまたはメソッドを使用する必要はありません。 型情報はに<xref:System.Data.DataSet>含まれるため、コンパイル時にプロパティ名を使用できます。 LINQ to DataSet は、列の値へのアクセスを正しい型として提供するため、実行時ではなく、コードをコンパイルするときに型の不一致エラーがキャッチされます。
 
-型指定されたクエリを開始する前に<xref:System.Data.DataSet>を使用して、クラスを生成する必要があります、**データセット デザイナー** Visual Studio でします。 詳細については、次を参照してください。[作成し、データセットを構成](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio)します。
+型指定<xref:System.Data.DataSet>されたのクエリを開始するには、Visual Studio の**データセットデザイナー**を使用してクラスを生成する必要があります。 詳細については、「[データセットの作成と構成](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -60,6 +60,6 @@ Next
 
 ## <a name="see-also"></a>関連項目
 
-- [DataSet のクエリ](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [複数テーブルにまたがるクエリ](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
-- [単一テーブルのクエリ](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
+- [DataSet のクエリ](querying-datasets-linq-to-dataset.md)
+- [複数テーブルにまたがるクエリ](cross-table-queries-linq-to-dataset.md)
+- [単一テーブルのクエリ](single-table-queries-linq-to-dataset.md)

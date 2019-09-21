@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75ba3fd634b108c996e848f48000ffcd0600b00c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e66196e2bd2cb326ca3f5badc67bcf8d81e5fc3c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774587"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799160"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob 構造体
-公開/秘密キーのペアの公開キーをバイナリ形式で表します。  
+公開キーと秘密キーのペアの公開キーをバイナリ形式で表します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,24 +41,24 @@ typedef struct {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`SigAlgId`|署名アルゴリズムの識別子 (型の`ALG_ID`WinCrypt.h で定義されている、) の公開キー。|  
-|`HashAlgId`|ハッシュ アルゴリズムの識別子 (型の`ALG_ID`WinCrypt.h で定義されている、) の公開キー。|  
-|`cbPublicKey`|(バイト単位)、キーの長さ。|  
-|`PublicKey`|CryptoAPI によって返される形式でキーの値を含む可変長バイト配列を指定します。|  
+|`SigAlgId`|公開キーの署名アルゴリズム (wincrypt .h `ALG_ID`で定義されている型の) の識別子。|  
+|`HashAlgId`|公開キーのハッシュアルゴリズム (wincrypt .h `ALG_ID`で定義されている型の) の識別子。|  
+|`cbPublicKey`|キーの長さ (バイト単位)。|  
+|`PublicKey`|CryptoAPI によって返される形式のキー値を格納する可変長バイト配列。|  
   
 ## <a name="remarks"></a>Remarks  
- `PublicKeyBlob`構造が使用者[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)、 [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)、および他の厳密な名前の関数を公開/秘密キーのペアの公開キーを表します。  
+ 構造体は、公開キーと秘密キーのペアの公開キーを表すために、 [StrongNameGetPublicKey](strongnamegetpublickey-function.md)、[StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)、およびその他の厳密な名前関数によって使用されます。`PublicKeyBlob`  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [StrongNameGetPublicKey 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)
-- [StrongNameSignatureGeneration 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)
+- [StrongNameGetPublicKey 関数](strongnamegetpublickey-function.md)
+- [StrongNameSignatureGeneration 関数](strongnamesignaturegeneration-function.md)

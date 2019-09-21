@@ -2,12 +2,12 @@
 title: Linux コンテナーとして AKS/Kubernetes クラスターにデプロイされる ASP.NET Core 2.2 アプリケーションをビルドする
 description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
 ms.date: 02/25/2019
-ms.openlocfilehash: 89843e0041c12f001f974360da2e5903499155d1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672579"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848753"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Linux コンテナーとして AKS/Kubernetes オーケストレーターにデプロイされる ASP.NET Core 2.2 アプリケーションをビルドする
 
@@ -43,7 +43,7 @@ ASP.NET Core 2.2 をフレームワークとして選択したことを確認し
 
 **図 4-37**. ASP.NET Core 2.2 と Web API プロジェクトの種類の選択
 
-以前のバージョンの .NET Core をお持ちの場合は、<https://www.microsoft.com/net/download/core#/sdk> から 2.2 のバージョンをダウンロードしてインストールすることができます。
+以前のバージョンの .NET Core をお持ちの場合は、<https://dotnet.microsoft.com/download> から 2.2 のバージョンをダウンロードしてインストールすることができます。
 
 プロジェクトの作成時またはその後に、Docker サポートを追加できるため、いつでもプロジェクトを Docker でコンテナー化することができます。 プロジェクトの作成後に Docker サポートを追加するには、ソリューション エクスプローラーでプロジェクト ノードを右クリックし、コンテキスト メニューで **[追加]**  >  **[Docker サポート]** の順に選択します。
 

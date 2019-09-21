@@ -2,18 +2,18 @@
 title: トランスポート セキュリティを使用したメッセージのセキュリティ保護
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: a8a7e9422679927636ae2dc9b6a2ab34202ee74c
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: b0507590914e2e8cda7e5e599914a9e3d7b0acd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331513"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911704"
 ---
 # <a name="securing-messages-using-transport-security"></a>トランスポート セキュリティを使用したメッセージのセキュリティ保護
 ここでは、キューに送信されるメッセージをセキュリティで保護するために使用できるメッセージ キュー (MSMQ) トランスポート セキュリティについて説明します。  
   
 > [!NOTE]
->  このトピックを読む前に、「[セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)」を読むことをお勧めします。  
+> このトピックを読む前に、「[セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)」を読むことをお勧めします。  
   
  次の図は、Windows Communication Foundation (WCF) を使用したキュー通信の概念モデルを示しています。 この図および用語を使用して、トランスポート セキュリティの概念について解説します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68331513"
  Windows セキュリティを選択した場合は、Active Directory 統合が必要となります。 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> が既定のトランスポート セキュリティ モードです。 これが設定されると、WCF チャネルは MSMQ メッセージに Windows SID をアタッチし、Active Directory から取得した内部証明書を使用します。 MSMQ は、この内部証明書を使用してメッセージをセキュリティで保護します。 受信側キュー マネージャーは、Active Directory を使用して一致する証明書を検索し、クライアントを認証します。また、SID がクライアントの SID と一致するかどうかをチェックします。 この認証手順は、認証を要求するようにターゲット キューがマークされていない場合でも、内部的 (`WindowsDomain` 認証モードの場合) または外部的 (`Certificate` 認証モードの場合) に生成された証明書がメッセージに添付されているときに実行されます。  
   
 > [!NOTE]
->  キューを作成する際に認証キューとしてマークすることにより、そのキューにメッセージを送信するクライアントに対して認証を求めることができます。 これにより、認証されたメッセージだけをキューに受け入れることができます。  
+> キューを作成する際に認証キューとしてマークすることにより、そのキューにメッセージを送信するクライアントに対して認証を求めることができます。 これにより、認証されたメッセージだけをキューに受け入れることができます。  
   
  また、メッセージに添付された SID は、キューにメッセージを送信する権限をクライアントが持つことを確認するためにターゲット キューの ACL をチェックする目的でも使用されます。  
   
@@ -76,13 +76,13 @@ ms.locfileid: "68331513"
  メッセージの署名に加えて、MSMQ メッセージは、ターゲット キューをホストする受信側キュー マネージャーに属する Active Directory から取得した証明書の公開キーを使用して暗号化されます。 送信側キュー マネージャーは、MSMQ メッセージが送信時に暗号化されているかどうかを確認します。 受信側キュー マネージャーは、内部証明書の秘密キーを使用して MSMQ メッセージを復号化し、クリア テキストでメッセージをキューに格納します (認証と承認が完了している場合)。  
   
 > [!NOTE]
->  メッセージを暗号化するには、Active Directory にアクセスでき (`UseActiveDirectory` の <xref:System.ServiceModel.NetMsmqBinding> プロパティが `true` に設定されている)、かつ <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> と <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> の両方で Active Directory を使用できる必要があります。  
+> メッセージを暗号化するには、Active Directory にアクセスでき (`UseActiveDirectory` の <xref:System.ServiceModel.NetMsmqBinding> プロパティが `true` に設定されている)、かつ <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> と <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> の両方で Active Directory を使用できる必要があります。  
   
 #### <a name="none-protection-level"></a>保護のないレベル  
  <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> を <xref:System.Net.Security.ProtectionLevel.None> に設定することにより指定されます。 この値は、他の認証モードに対しては無効です。  
   
 > [!NOTE]
->  MSMQ メッセージが署名されている場合は、キューの状態 (つまり、認証キューであるかどうか) に関係なく、添付されている (内部または外部) 証明書を使用してメッセージが署名されているかどうかがチェックされます。  
+> MSMQ メッセージが署名されている場合は、キューの状態 (つまり、認証キューであるかどうか) に関係なく、添付されている (内部または外部) 証明書を使用してメッセージが署名されているかどうかがチェックされます。  
   
 ### <a name="msmq-encryption-algorithm"></a>MSMQ の暗号化アルゴリズム  
  暗号化アルゴリズムは、ネットワーク上の MSMQ メッセージを暗号化するために使用されるアルゴリズムを指定します。 このプロパティは、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> を <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> に設定している場合にのみ使用します。  

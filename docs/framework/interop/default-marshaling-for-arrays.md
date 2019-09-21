@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f29420038276739623c534656a94e13080637c6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 96300808ba3024a138678494200b10ef722c6fd9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626364"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894233"
 ---
 # <a name="default-marshaling-for-arrays"></a>配列に対する既定のマーシャリング
 全体がマネージド コードで構成されるアプリケーションでは、共通言語ランタイムは、配列型を In/Out パラメーターとして渡します。 これに対し、相互運用マーシャラーは、既定で In パラメーターとして配列を渡します。  
@@ -55,7 +55,7 @@ ms.locfileid: "64626364"
   
  **アンマネージ シグネチャ**  
   
-```  
+```cpp
 HRESULT New1([in] SAFEARRAY( int ) ar);  
 HRESULT New2([in] SAFEARRAY( DATE ) ar);  
 HRESULT New3([in, out] SAFEARRAY( BSTR ) *ar);  
@@ -95,7 +95,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
   
  **アンマネージ シグネチャ**  
   
-```  
+```cpp
 HRESULT New1(int ar[10]);  
 HRESULT New2(double ar[10][20]);  
 HRESULT New3(LPWStr ar[10]);  
@@ -124,7 +124,7 @@ void New2([MarshalAs(UnmanagedType.LPArray,
   
  **アンマネージ シグネチャ**  
   
-```  
+```cpp
 HRESULT New1(int ar[]);  
 HRESULT New2(int ArSize, [size_is(ArSize)] double ar[]);  
 HRESULT New3(int ElemCnt, [length_is(ElemCnt)] LPStr ar[]);  
@@ -175,7 +175,7 @@ void New3(ref String ar);
  アンマネージド コードからマネージド コードに配列をマーシャリングする場合、マーシャラーはパラメーターに関連付けられた **MarshalAsAttribute** をチェックして配列サイズを決定します。 配列サイズが指定されていない場合は、1 つの要素のみがマーシャリングされます。  
   
 > [!NOTE]
->  **MarshalAsAttribute** は、マネージド配列のアンマネージド コードへのマーシャリングには影響しません。 その方向では、配列サイズは検査で決定されます。 マネージド配列のサブセットをマーシャリングする方法はありません。  
+> **MarshalAsAttribute** は、マネージド配列のアンマネージド コードへのマーシャリングには影響しません。 その方向では、配列サイズは検査で決定されます。 マネージド配列のサブセットをマーシャリングする方法はありません。  
   
  相互運用マーシャラーは、**CoTaskMemAlloc** メソッドと **CoTaskMemFree** メソッドを使用してメモリの割り当てと取得を行います。 アンマネージ コードによって実行されるメモリの割り当てでは、これらのメソッドも使用する必要があります。  
   
@@ -185,12 +185,12 @@ void New3(ref String ar);
 |マネージド配列型|エクスポート|  
 |------------------------|-----------------|  
 |**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 型はシグネチャで提供されます。 ランクは常に 1 で、下限は常に 0 です。 サイズは実行時に常に把握されています。|  
-|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 型、ランク、境界はシグネチャで提供されます。 サイズは実行時に常に把握されています。|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 型、ランク、境界、およびサイズは実行時に常に把握されています。|  
+|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 型、ランク、境界はシグネチャで提供されます。 サイズは実行時に常に把握されています。|  
+|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 型、ランク、境界、およびサイズは実行時に常に把握されています。|  
   
  LPSTR または LPWSTR を含む構造体の配列に関連する OLE オートメーションの制限があります。  そのため、**String** フィールドは **UnmanagedType.BSTR** としてマーシャリングする必要があります。 この操作を行わない場合、例外がスローされます。  
   
-### <a name="elementtypeszarray"></a>ELEMENT_TYPE_SZARRAY  
+### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
  **ELEMENT_TYPE_SZARRAY** パラメーター (1 次元配列) を含むメソッドが .NET アセンブリからタイプ ライブラリにエクスポートされるときに、配列パラメーターが特定の型の **SAFEARRAY** に変換されます。 同じ変換規則が配列要素型に適用されます。 マネージド配列の内容はマネージド メモリから **SAFEARRAY** に自動的にコピーされます。 次に例を示します。  
   
 #### <a name="managed-signature"></a>マネージド シグネチャ  
@@ -207,8 +207,8 @@ void New(String[] ar );
   
 #### <a name="unmanaged-signature"></a>アンマネージ シグネチャ  
   
-```  
-HRESULT New([in] SAFEARRAY( long ) ar);   
+```cpp
+HRESULT New([in] SAFEARRAY( long ) ar);
 HRESULT New([in] SAFEARRAY( BSTR ) ar);  
 ```  
   
@@ -240,15 +240,15 @@ void New([MarshalAs(UnmanagedType.LPArray, ArraySubType=
   
 #### <a name="unmanaged-signature"></a>アンマネージ シグネチャ  
   
-```  
-HRESULT New(long ar[]);   
-HRESULT New(BSTR ar[]);   
+```cpp
+HRESULT New(long ar[]);
+HRESULT New(BSTR ar[]);
 HRESULT New(LPStr ar[]);  
 ```  
   
  マーシャラーには配列をマーシャリングするために必要な長さ情報がありますが、配列の長さは通常、呼び出し先に長さを伝えるために個別の引数として渡されます。  
   
-### <a name="elementtypearray"></a>ELEMENT_TYPE_ARRAY  
+### <a name="element_type_array"></a>ELEMENT_TYPE_ARRAY  
  **ELEMENT_TYPE_ARRAY** パラメーターを含むメソッドが .NET アセンブリからタイプ ライブラリにエクスポートされるときに、配列パラメーターが特定の型の **SAFEARRAY** に変換されます。 マネージド配列の内容はマネージド メモリから **SAFEARRAY** に自動的にコピーされます。 次に例を示します。  
   
 #### <a name="managed-signature"></a>マネージド シグネチャ  
@@ -265,8 +265,8 @@ void New( String [,] ar );
   
 #### <a name="unmanaged-signature"></a>アンマネージ シグネチャ  
   
-```  
-HRESULT New([in] SAFEARRAY( long ) ar);   
+```cpp
+HRESULT New([in] SAFEARRAY( long ) ar);
 HRESULT New([in] SAFEARRAY( BSTR ) ar);  
 ```  
   
@@ -294,8 +294,8 @@ void New([MarshalAs(UnmanagedType.LPARRAY,
   
 #### <a name="unmanaged-signature"></a>アンマネージ シグネチャ  
   
-```  
-HRESULT New(long ar[]);   
+```cpp
+HRESULT New(long ar[]);
 HRESULT New(LPStr ar[]);  
 ```  
   
@@ -311,8 +311,8 @@ Sub [New](ar()()() As Long)
 void New(long [][][] ar );  
 ```  
   
-### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- <xref:System.Array?displayProperty=nameWithType> パラメーターを含むメソッドが .NET アセンブリからタイプ ライブラリにエクスポートされるときに、配列パラメーターが特定の型の **_Array** インターフェイスに変換されます。 マネージド配列の内容には、**_Array** インターフェイスのメソッドとプロパティを介してのみアクセスできます。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性を使用することで、**System.Array** を **SAFEARRAY** としてマーシャリングすることもできます。 セーフ配列としてマーシャリングすると、配列要素はバリアントとしてマーシャリングされます。 次に例を示します。  
+### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
+ <xref:System.Array?displayProperty=nameWithType> パラメーターを含むメソッドが .NET アセンブリからタイプ ライブラリにエクスポートされるときに、配列パラメーターが特定の型の **_Array** インターフェイスに変換されます。 マネージド配列の内容には、 **_Array** インターフェイスのメソッドとプロパティを介してのみアクセスできます。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性を使用することで、**System.Array** を **SAFEARRAY** としてマーシャリングすることもできます。 セーフ配列としてマーシャリングすると、配列要素はバリアントとしてマーシャリングされます。 次に例を示します。  
   
 #### <a name="managed-signature"></a>マネージド シグネチャ  
   
@@ -328,8 +328,8 @@ void New2( [MarshalAs(UnmanagedType.Safe array)] System.Array ar );
   
 #### <a name="unmanaged-signature"></a>アンマネージ シグネチャ  
   
-```  
-HRESULT New([in] _Array *ar);   
+```cpp
+HRESULT New([in] _Array *ar);
 HRESULT New([in] SAFEARRAY(VARIANT) ar);  
 ```  
   
@@ -338,7 +338,7 @@ HRESULT New([in] SAFEARRAY(VARIANT) ar);
   
 #### <a name="unmanaged-representation"></a>アンマネージ表現  
   
-```  
+```cpp
 struct MyStruct {  
     short s1[128];  
 }  

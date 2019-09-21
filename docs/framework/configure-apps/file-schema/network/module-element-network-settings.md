@@ -8,12 +8,12 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 0d108f2350d82666e3dc24f0f6854fe64ea4755f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 851a63b41dfb5d3b4058e1373148f48d47d9d6ae
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674490"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664069"
 ---
 # <a name="module-element-network-settings"></a>\<module> 要素 (ネットワーク設定)
 新しいプロキシ モジュールをアプリケーションに追加します。  
@@ -38,7 +38,7 @@ ms.locfileid: "61674490"
   
 |**属性**|**説明**|  
 |-------------------|---------------------|  
-|`type`|完全修飾型名 (によって示される、<xref:System.Type.FullName%2A>プロパティ) とアセンブリ名 (によって示される、<xref:System.Reflection.Assembly.FullName%2A>プロパティ)、プロキシを実装する、コンマで区切られました。|  
+|`type`|プロキシを実装する、( <xref:System.Type.FullName%2A>プロパティによって示される) 完全修飾型名と、コンマで区切られたアセンブリ名 ( <xref:System.Reflection.Assembly.FullName%2A>プロパティによって示されます)。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -47,18 +47,18 @@ ms.locfileid: "61674490"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
- `module`要素を実装するプロキシ クラスの登録、<xref:System.Net.IWebProxy>インターフェイス。 プロキシ クラスを登録した後`module`サポートされているプロキシを使用して情報を要求するために使用できます。  
+ 要素`module`は、 <xref:System.Net.IWebProxy>インターフェイスを実装するプロキシクラスを登録します。 プロキシクラスを登録した`module`後、を使用して、サポートされているプロキシ経由で情報を要求できます。  
   
- 値、`type`属性がモジュールのクラス名と名前の対応するダイナミック リンク ライブラリ (DLL) にする必要があります。  
+ `type`属性の値は、モジュールのクラス名と、対応するダイナミックリンクライブラリ (DLL) の名前にする必要があります。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、カスタムのプロキシ クラスを登録します。  
+ 次の例では、カスタムプロキシクラスを登録します。  
   
 ```xml  
 <configuration>  
@@ -75,4 +75,4 @@ ms.locfileid: "61674490"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Net.IWebProxy?displayProperty=nameWithType>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

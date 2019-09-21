@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ab754da005dcc16fc71c3a59728e4ff6848fbbb1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300636"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666305"
 ---
 # <a name="task-based-asynchronous-programming"></a>タスク ベースの非同期プログラミング
 
@@ -256,11 +256,11 @@ Visual Studio を使用している場合、プロジェクトを **[新しい�
 
 ## <a name="tasks-without-delegates"></a>デリゲートなしのタスク
 
-<xref:System.Threading.Tasks.Task> を使用して、固有のユーザー デリゲートではなく外部コンポーネントによって実行される非同期操作をカプセル化する場合があります。 操作が非同期プログラミング モデルの Begin/End パターンに基づいている場合、<xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> メソッドを使用できます。 そうでない場合は、<xref:System.Threading.Tasks.TaskCompletionSource%601> オブジェクトを使用して、タスク内の操作をラップして、<xref:System.Threading.Tasks.Task> を外部からプログラミング可能にする利点を活用できます。たとえば、例外の反映および継続のサポートです。 詳細については、「<xref:System.Threading.Tasks.TaskCompletionSource%601>」を参照してください。
+<xref:System.Threading.Tasks.Task> を使用して、固有のユーザー デリゲートではなく外部コンポーネントによって実行される非同期操作をカプセル化する場合があります。 操作が非同期プログラミング モデルの Begin/End パターンに基づいている場合、<xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> メソッドを使用できます。 そうでない場合は、<xref:System.Threading.Tasks.TaskCompletionSource%601> オブジェクトを使用して、タスク内の操作をラップして、<xref:System.Threading.Tasks.Task> を外部からプログラミング可能にする利点を活用できます。たとえば、例外の反映および継続のサポートです。 詳細については、<xref:System.Threading.Tasks.TaskCompletionSource%601> を参照してください。
 
 ## <a name="custom-schedulers"></a>カスタム スケジューラ
 
-アプリケーションまたはライブラリのほとんどの開発者は、タスクを実行するプロセッサ、他のタスクと動作を同期する方法、<xref:System.Threading.ThreadPool?displayProperty=nameWithType> でスケジュールする方法などについては気にしません。 気にするのは、ホスト コンピューター上でできるだけ効率的に実行することだけです。 スケジュールの詳細についてより詳細に制御する必要がある場合、タスク並列ライブラリでは、既定のタスク スケジューラの設定を構成でき、さらにカスタム スケジューラを利用することもできます。 詳細については、「<xref:System.Threading.Tasks.TaskScheduler>」を参照してください。
+アプリケーションまたはライブラリのほとんどの開発者は、タスクを実行するプロセッサ、他のタスクと動作を同期する方法、<xref:System.Threading.ThreadPool?displayProperty=nameWithType> でスケジュールする方法などについては気にしません。 気にするのは、ホスト コンピューター上でできるだけ効率的に実行することだけです。 スケジュールの詳細についてより詳細に制御する必要がある場合、タスク並列ライブラリでは、既定のタスク スケジューラの設定を構成でき、さらにカスタム スケジューラを利用することもできます。 詳細については、<xref:System.Threading.Tasks.TaskScheduler> を参照してください。
 
 ## <a name="related-data-structures"></a>関連のデータ構造
 
@@ -268,7 +268,7 @@ TPL には、並列のシナリオおよび順次的なシナリオの両方に�
 
 ## <a name="custom-task-types"></a>カスタムのタスクの型
 
-<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> または <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> から継承しないことをお勧めします。 代わりに、<xref:System.Threading.Tasks.Task.AsyncState%2A> プロパティを使用して、追加のデータまたは状態を <xref:System.Threading.Tasks.Task> オブジェクトまたは <xref:System.Threading.Tasks.Task%601> オブジェクトに関連付けることをおすすめします。 拡張メソッドを使用して、<xref:System.Threading.Tasks.Task> クラスおよび <xref:System.Threading.Tasks.Task%601> クラスの機能を拡張することもできます。 拡張メソッドの詳細については、[拡張メソッド (C# プログラミングガイド)](~/docs/csharp/programming-guide/classes-and-structs/extension-methods.md) と[拡張メソッド (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/procedures/extension-methods.md) に関する記事を参照してください。
+<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> または <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> から継承しないことをお勧めします。 代わりに、<xref:System.Threading.Tasks.Task.AsyncState%2A> プロパティを使用して、追加のデータまたは状態を <xref:System.Threading.Tasks.Task> オブジェクトまたは <xref:System.Threading.Tasks.Task%601> オブジェクトに関連付けることをおすすめします。 拡張メソッドを使用して、<xref:System.Threading.Tasks.Task> クラスおよび <xref:System.Threading.Tasks.Task%601> クラスの機能を拡張することもできます。 拡張メソッドの詳細については、[拡張メソッド (C# プログラミングガイド)](../../csharp/programming-guide/classes-and-structs/extension-methods.md) と[拡張メソッド (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md) に関する記事を参照してください。
 
 <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> から継承する必要がある場合、<xref:System.Threading.Tasks.Task.Run%2A>、<xref:System.Threading.Tasks.Task.Run%2A>、または <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>、または <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> の各クラスを使用して、カスタムのタスクの型のインスタンスを作成することはできません。これらのクラスで作成されるのは、<xref:System.Threading.Tasks.Task> および <xref:System.Threading.Tasks.Task%601> オブジェクトだけであるためです。 また、<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory>、および <xref:System.Threading.Tasks.TaskFactory%601> で提供されるタスク継続機構でも、<xref:System.Threading.Tasks.Task> オブジェクトと <xref:System.Threading.Tasks.Task%601> オブジェクトしか作成されないため、これらの機構を使用してカスタムのタスクの型のインスタンスを作成することはできません。
 

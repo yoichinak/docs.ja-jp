@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 0ff89f2d5ffa177b9413f6a2925bb05729e053a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592893"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791745"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server でのスナップショット分離
 スナップショット分離により、OLTP アプリケーションのコンカレンシーが向上しています。  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>スナップショット分離と行バージョン管理について  
- トランザクションごとに更新された行バージョンが保持されるスナップショット分離を有効にすると**tempdb**します。 一意のトランザクション シーケンス番号が各トランザクションを識別し、これらの一意の番号がそれぞれの行バージョン用に記録されます。 トランザクションは、シーケンス番号がトランザクションのシーケンス番号よりも前にある、最新の行バージョンを処理します。 トランザクションが開始された後で作成された最新の行バーションは、トランザクションにより無視されます。  
+ スナップショット分離を有効にすると、各トランザクションの更新された行バージョンが**tempdb**に保持されます。 一意のトランザクション シーケンス番号が各トランザクションを識別し、これらの一意の番号がそれぞれの行バージョン用に記録されます。 トランザクションは、シーケンス番号がトランザクションのシーケンス番号よりも前にある、最新の行バージョンを処理します。 トランザクションが開始された後で作成された最新の行バーションは、トランザクションにより無視されます。  
   
  "スナップショット" という用語は、トランザクション内のすべてのクエリが、トランザクションの開始時点のデータベースの状態に基づいて、データベースの同じバージョン、つまりスナップショットを参照するという事実を表しています。 ロックは、スナップショット トランザクション内の基になるデータ行やデータ ページでは取得されません。スナップショット トランザクションでは、先に開始されてまだ完了していないトランザクションによりブロックされることなく、他のトランザクションを実行できます。 データを変更するトランザクションは、データを読み取るトランザクションをブロックしません。また、データを読み取るトランザクションは、データを書き込むトランザクションをブロックしません。この理由は、通常、これらのトランザクションは SQL Server の既定の READ COMMITTED 分離レベルにあるためです。 また、ブロック不可の動作は、複雑なトランザクションのデッドロックの可能性を大幅に軽減します。  
   
  スナップショット分離では、オプティミスティック コンカレンシー モデルを使用します。 スナップショット トランザクションは、トランザクションの開始後に変更されたデータに対して変更をコミットしようとすると、このトランザクションがロールバックし、エラーになります。 このエラーは、変更されるデータにアクセスする、SELECT ステートメントの UPDLOCK ヒントを使用することにより回避できます。 詳細については、SQL Server オンライン ブックの「ロックのヒント」を参照してください。  
   
- スナップショット分離は、トランザクション内で使用する前に、ALLOW_SNAPSHOT_ISOLATION ON データベース オプションを設定して有効にする必要があります。 一時データベースに行バージョンを格納するためのメカニズムがアクティブになります (**tempdb**)。 Transact-SQL ALTER DATABASE ステートメントで使用する、各データベース内のスナップショット分離を有効にする必要があります。 この点では、スナップショット分離は、構成を必要としない READ COMMITTED、REPEATABLE READ、SERIALIZABLE、および READ UNCOMMITTED の従来の分離レベルとは異なります。 次のステートメントは、スナップショット分離をアクティブにして、既定の READ COMMITTED 動作を SNAPSHOT で置き換えます。  
+ スナップショット分離は、トランザクション内で使用する前に、ALLOW_SNAPSHOT_ISOLATION ON データベース オプションを設定して有効にする必要があります。 これにより、一時データベース (**tempdb**) に行バージョンを格納するためのメカニズムがアクティブになります。 Transact-SQL ALTER DATABASE ステートメントで使用する、各データベース内のスナップショット分離を有効にする必要があります。 この点では、スナップショット分離は、構成を必要としない READ COMMITTED、REPEATABLE READ、SERIALIZABLE、および READ UNCOMMITTED の従来の分離レベルとは異なります。 次のステートメントは、スナップショット分離をアクティブにして、既定の READ COMMITTED 動作を SNAPSHOT で置き換えます。  
   
 ```sql  
 ALTER DATABASE MyDatabase  
@@ -49,7 +49,7 @@ SET READ_COMMITTED_SNAPSHOT ON
   
 - SERIALIZABLE は、最も限定度の高い分離レベルで、トランザクションが完了するまで全範囲のキーをロックし、そのロックを保持します。 この分離レベルは、REPEATABLE READ を含みます。また、トランザクションが完了するまでは、トランザクションにより読み取られる範囲内に、他のトランザクションによって新しい行が挿入されないようにする制限を追加します。  
   
- 詳細についてを参照してください、[トランザクション ロックおよび行のバージョン管理ガイド](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)します。  
+ 詳細については、「[トランザクションのロックおよび行のバージョン管理ガイド」](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)を参照してください。  
   
 ### <a name="snapshot-isolation-level-extensions"></a>スナップショット分離レベルの拡張機能  
  SQL Server では、SNAPSHOT 分離レベルの導入および READ COMMITTED の追加実装と共に、SQL-92 分離レベルの拡張機能が導入されました。 READ_COMMITTED_SNAPSHOT 分離レベルは、すべてのトランザクションの READ COMMITTED を自動的に置き換えることができます。  
@@ -59,24 +59,24 @@ SET READ_COMMITTED_SNAPSHOT ON
 - READ_COMMITTED_SNAPSHOT データベース オプションは、スナップショット分離がデータベース内で有効になっている場合に、既定の READ COMMITTED 分離レベルの動作を決定します。 READ_COMMITTED_SNAPSHOT ON を明示的に指定していない場合、READ COMMITTED はすべての暗黙のトランザクションに適用されます。 これにより、READ_COMMITTED_SNAPSHOT OFF (既定) を設定した場合と同じ動作が生成されます。 READ_COMMITTED_SNAPSHOT OFF が有効になっている場合、データベース エンジンは共有ロックを使用して、既定の分離レベルを強制適用します。 READ_COMMITTED_SNAPSHOT データベース オプションが ON に設定されている場合、データベース エンジンは、ロックを使用してデータを保護せずに、既定として行バージョン管理とスナップショット分離を使用します。  
   
 ## <a name="how-snapshot-isolation-and-row-versioning-work"></a>スナップショット分離と行バージョン管理の機能について  
- SQL Server データベース エンジンが、元の行でのコピーを格納するスナップショット分離レベルが有効にすると、行が更新されるたびに**tempdb**行にトランザクション シーケンス番号を追加します。 発生するイベントのシーケンスは次のとおりです。  
+ スナップショット分離レベルが有効になっている場合、行が更新されるたびに、SQL Server データベースエンジンによって、元の行のコピーが**tempdb**に格納され、その行にトランザクションシーケンス番号が追加されます。 発生するイベントのシーケンスは次のとおりです。  
   
 - 新しいトランザクションが開始され、トランザクション シーケンス番号が割り当てられます。  
   
-- データベース エンジンが、トランザクション内の行を読み取りから行バージョンを取得**tempdb**シーケンス番号は、最も近いと、トランザクション シーケンス番号よりも低い。  
+- データベースエンジンは、トランザクション内の行を読み取り、その行バージョンを**tempdb**から取得します。この行のシーケンス番号は、トランザクションのシーケンス番号に最も近い、またはそれよりも小さい値に設定されています。  
   
 - データベース エンジンは、スナップショット トランザクションの開始時点でアクティブだったコミットされていないトランザクションのトランザクション シーケンス番号の一覧内に、トランザクション シーケンス番号があるかどうかを確認します。  
   
-- トランザクションから行のバージョンの読み込み**tempdb**トランザクションの開始時点で最新だった。 トランザクションが開始された後で挿入された新しい行は、シーケンス番号の値がトランザクション シーケンス番号の値よりも大きくなるため確認されません。  
+- トランザクションは、トランザクションの開始時点で現在の行のバージョンを**tempdb**から読み取ります。 トランザクションが開始された後で挿入された新しい行は、シーケンス番号の値がトランザクション シーケンス番号の値よりも大きくなるため確認されません。  
   
-- 現在のトランザクションで行バージョンがあるため、トランザクションの開始後に削除された行が表示されます**tempdb**下限のシーケンス番号の値にします。  
+- 現在のトランザクションでは、トランザクションの開始後に削除された行が表示されます。これは、シーケンス番号の値が小さい**tempdb**に行バージョンが存在するためです。  
   
  スナップショット分離の適用により、トランザクションは、基になるテーブル上でロックを受け付けたり配置したりすることなく、トランザクションの開始時に存在したすべてのデータを確認します。 その結果、競合がある状況でパフォーマンスが向上することになります。  
   
  スナップショット トランザクションでは、他のトランザクションによって行が更新されないようにするロックは使用せずに、常にオプティミスティック コンカレンシーを使用します。 スナップショット トランザクションは、トランザクションの開始後に変更された行への更新をコミットしようとすると、このトランザクションがロールバックし、エラーになります。  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>ADO.NET でのスナップショット分離の使用  
- スナップショット分離は、<xref:System.Data.SqlClient.SqlTransaction> クラスによって ADO.NET 内でサポートされます。 開始する必要があります、データベースがスナップショット分離が有効になって READ_COMMITTED_SNAPSHOT ON が構成されていない場合、<xref:System.Data.SqlClient.SqlTransaction>を使用して、 **IsolationLevel.Snapshot**列挙値を呼び出すときに、 <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>メソッド。 このコード フラグメントでは、接続は開かれている <xref:System.Data.SqlClient.SqlConnection> オブジェクトであることを前提としています。  
+ スナップショット分離は、<xref:System.Data.SqlClient.SqlTransaction> クラスによって ADO.NET 内でサポートされます。 データベースでスナップショット分離が有効になっているが、READ_COMMITTED_SNAPSHOT で構成されていない場合<xref:System.Data.SqlClient.SqlTransaction>は、 <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>メソッドを呼び出すときに、IsolationLevel 列挙値を使用してを開始する必要があります。 このコード フラグメントでは、接続は開かれている <xref:System.Data.SqlClient.SqlConnection> オブジェクトであることを前提としています。  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  
@@ -91,20 +91,20 @@ SqlTransaction sqlTran =
 ### <a name="example"></a>例  
  ロックされたデータにアクセスしようとすることにより、分離レベルがそれぞれどのように動作するのかを、次の例に示します。このサンプルは、実行用のコードで使用されることは想定していません。  
   
- 接続するコード、 **AdventureWorks**サンプルでは、SQL Server データベースとという名前のテーブルを作成します。 **TestSnapshot**を 1 行のデータを挿入します。 コードには ALTER DATABASE Transact-SQL ステートメントを使用し、データベースのスナップショット分離を有効にします。このとき、既定の READ COMMITTED 分離レベルの動作を有効なままにし、READ_COMMITTED_SNAPSHOT オプションは設定しません。 続いてコードは、次のアクションを実行します。  
+ このコードは、SQL Server の**AdventureWorks**サンプルデータベースに接続し、 **testsnapshot**という名前のテーブルを作成して、1行のデータを挿入します。 コードには ALTER DATABASE Transact-SQL ステートメントを使用し、データベースのスナップショット分離を有効にします。このとき、既定の READ COMMITTED 分離レベルの動作を有効なままにし、READ_COMMITTED_SNAPSHOT オプションは設定しません。 続いてコードは、次のアクションを実行します。  
   
 - 更新トランザクションを開始するために、SERIALIZABLE 分離レベルを使用する sqlTransaction1 を開始し、完了しないようにします。 これには、テーブルがロックするという効果があります。  
   
-- 2 番目の接続を開き、SNAPSHOT 分離レベルを使用してデータを読み取るする 2 番目のトランザクションを開始、 **TestSnapshot**テーブル。 スナップショット分離が有効になっているため、このトランザクションは、sqlTransaction1 が開始する前に存在していたデータを読み取ることができます。  
+- 2番目の接続を開き、スナップショット分離レベルを使用して2番目のトランザクションを開始し、 **testsnapshot**テーブル内のデータを読み取ります。 スナップショット分離が有効になっているため、このトランザクションは、sqlTransaction1 が開始する前に存在していたデータを読み取ることができます。  
   
 - 3 つ目の接続を開いて、READ COMMITTED 分離レベルを使ってトランザクションを開始し、テーブル内のデータの読み取りを試みます。 この場合、コードはデータを読み取れません。コードは最初のトランザクション内のテーブルに置かれたロックを超えて読み取りを行うことができず、タイムアウトになるためです。REPEATABLE READ 分離レベルと SERIALIZABLE 分離レベルが使用されている場合は、これらの分離レベルも、最初のトランザクション内に置かれたロックを超えて読み取りを行うことができないため、同じ結果になります。  
   
 - 4 つ目の接続を開き、sqlTransaction1 内でコミットされていない値のダーティ リードを実行する READ UNCOMMITTED 分離レベルを使用し、トランザクションを開始します。 最初のトランザクションがコミットされていない場合、この値は実際にデータベース内には存在しません。  
   
-- 最初のトランザクションをロールバックし、削除することによってクリーンアップ、 **TestSnapshot**スナップショット分離のテーブルおよびオフにすると、 **AdventureWorks**データベース。  
+- **Testsnapshot**テーブルを削除し、 **AdventureWorks**データベースのスナップショット分離をオフにすることで、最初のトランザクションをロールバックし、クリーンアップします。  
   
 > [!NOTE]
->  次の例では、接続プールを無効にした状態で同じ接続文字列を使用します。 接続をプールした場合、その分離レベルをリセットしても、サーバー側の分離レベルはリセットされません。 その結果、同じプールされた内部接続を使用する後続の接続は、プールされた接続と同じ分離レベルで開始されることになります。 接続プールを無効にする代わりに、各接続について分離レベルを明示的に設定することもできます。  
+> 次の例では、接続プールを無効にした状態で同じ接続文字列を使用します。 接続をプールした場合、その分離レベルをリセットしても、サーバー側の分離レベルはリセットされません。 その結果、同じプールされた内部接続を使用する後続の接続は、プールされた接続と同じ分離レベルで開始されることになります。 接続プールを無効にする代わりに、各接続について分離レベルを明示的に設定することもできます。  
   
  [!code-csharp[DataWorks SnapshotIsolation.Demo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.Demo/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.Demo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.Demo/VB/source.vb#1)]  
@@ -112,19 +112,19 @@ SqlTransaction sqlTran =
 ### <a name="example"></a>例  
  データ変更が行われている間のスナップショット分離の動作の例を次に示します。 コードは、次のアクションを実行します。  
   
-- 接続する、 **AdventureWorks**サンプル データベースと有効のスナップショット分離します。  
+- **AdventureWorks**サンプルデータベースに接続し、スナップショット分離を有効にします。  
   
-- という名前のテーブルを作成します。 **TestSnapshotUpdate**サンプル データの 3 つの行を挿入します。  
+- **Testsnapshotupdate**という名前のテーブルを作成し、サンプルデータを3行挿入します。  
   
 - SNAPSHOT 分離を使って sqlTransaction1 を開始し、完了しないようにします。 3 行のデータがトランザクション内で選択されます。  
   
-- 1 秒あたりの作成**SqlConnection**に**AdventureWorks**し、sqltransaction1 内で選択した行のいずれかの値を更新する READ COMMITTED 分離レベルを使用して 2 番目のトランザクションを作成します。  
+- **AdventureWorks**に対して2番目の**SqlConnection**を作成し、READ COMMITTED 分離レベルを使用して2番目のトランザクションを作成し、sqlTransaction1 で選択した行の1つの値を更新します。  
   
 - sqlTransaction2 をコミットします。  
   
-- sqlTransaction1 に戻り、sqlTransaction1 がコミットした行と同じ行の更新を試みます。 エラー 3960 が発生し、sqlTransaction1 は自動的にロールバックされます。 **SqlException.Number**と**SqlException.Message**コンソール ウィンドウに表示されます。  
+- sqlTransaction1 に戻り、sqlTransaction1 がコミットした行と同じ行の更新を試みます。 エラー 3960 が発生し、sqlTransaction1 は自動的にロールバックされます。 **SqlException**と**SqlException**がコンソールウィンドウに表示されます。  
   
-- スナップショット分離をオフにクリーンアップ コードを実行します**AdventureWorks**を削除し、 **TestSnapshotUpdate**テーブル。  
+- **AdventureWorks**でスナップショット分離を無効にし、 **testsnapshotupdate**テーブルを削除するクリーンアップコードを実行します。  
   
  [!code-csharp[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  
@@ -143,6 +143,6 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>関連項目
 
-- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server と ADO.NET](index.md)
+- [ADO.NET の概要](../ado-net-overview.md)
 - [トランザクションのロックおよび行のバージョン管理ガイド](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

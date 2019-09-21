@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647912"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966956"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>XPathNavigator による XML データの挿入
 <xref:System.Xml.XPath.XPathNavigator> クラスは、XML ドキュメント内に兄弟ノード、子ノード、および属性ノードを挿入するためのメソッドのセットを提供します。 これらのメソッドを使用するには、<xref:System.Xml.XPath.XPathNavigator> オブジェクトが編集可能である必要があります。つまり、その <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> プロパティを `true` にする必要があります。  
@@ -236,7 +236,7 @@ navigator.SetTypedValue(DateTime.Now);
 - <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内と <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内の両方で、プレフィックスと名前空間 URI が同じ場合、新たに挿入されたノードに対する新しい名前空間宣言は追加されません。  
   
 > [!NOTE]
->  上記の説明は、プレフィックスとして空の `string` (たとえば、既定の名前空間宣言) を使用した名前空間宣言にも適用されます。  
+> 上記の説明は、プレフィックスとして空の `string` (たとえば、既定の名前空間宣言) を使用した名前空間宣言にも適用されます。  
   
  発生する可能性のある `xml:lang` の競合は次のとおりです。  
   

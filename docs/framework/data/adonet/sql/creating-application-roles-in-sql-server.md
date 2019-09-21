@@ -2,18 +2,18 @@
 title: SQL Server でのアプリケーション ロールの作成
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 7934c58f837cd5a4b01f823701025190be3dfe6d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 212bda6f64829792e965dd6714428a05b30c995b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910719"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794275"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>SQL Server でのアプリケーション ロールの作成
 アプリケーション ロールは、データベース ロールやユーザーに対してではなく、アプリケーションに権限を割り当てる手段です。 ユーザーはデータベースに接続し、アプリケーション ロールをアクティブ化して、そのアプリケーションに付与された権限を使用することになります。 アプリケーション ロールに付与された権限は、接続している間のみ有効です。  
   
 > [!IMPORTANT]
->  アプリケーション ロールは、クライアント アプリケーションが接続文字列でアプリケーション ロール名とパスワードを渡すことによってアクティブ化されます。 2 層アプリケーションでは、パスワードをクライアント コンピューターに保存する必要があるため、セキュリティ上の脆弱性を伴います。 3 層アプリケーションでは、アプリケーションのユーザーがアクセスできないような形でパスワードを保存できます。  
+> アプリケーション ロールは、クライアント アプリケーションが接続文字列でアプリケーション ロール名とパスワードを渡すことによってアクティブ化されます。 2 層アプリケーションでは、パスワードをクライアント コンピューターに保存する必要があるため、セキュリティ上の脆弱性を伴います。 3 層アプリケーションでは、アプリケーションのユーザーがアクセスできないような形でパスワードを保存できます。  
   
 ## <a name="application-role-features"></a>アプリケーション ロールの特徴  
  アプリケーション ロールには次の特徴があります。  
@@ -47,20 +47,20 @@ ms.locfileid: "64910719"
   
  以下の代替策を検討する必要があります。  
   
-- EXECUTE AS ステートメントに NO REVERT 句と WITH COOKIE 句を指定してコンテキスト切り替えを行う。 ログインにマップされていないユーザー アカウントをデータベースに作成し、 このアカウントに権限を割り当てるようにします。 EXECUTE AS はパスワード ベースではなく、権限ベースであるため、非ログイン ユーザーで使用した方が高いセキュリティを確保できます。 詳細については、次を参照してください。 [SQL Server での借用を使用したアクセス許可をカスタマイズする](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)します。  
+- EXECUTE AS ステートメントに NO REVERT 句と WITH COOKIE 句を指定してコンテキスト切り替えを行う。 ログインにマップされていないユーザー アカウントをデータベースに作成し、 このアカウントに権限を割り当てるようにします。 EXECUTE AS はパスワード ベースではなく、権限ベースであるため、非ログイン ユーザーで使用した方が高いセキュリティを確保できます。 詳細については、「 [SQL Server で権限借用を使用してアクセス許可をカスタマイズ](customizing-permissions-with-impersonation-in-sql-server.md)する」を参照してください。  
   
-- 証明書を使ってストアド プロシージャに署名し、そのプロシージャを実行するのに必要な権限だけを付与する。 詳細については、次を参照してください。 [SQL Server でのストアド プロシージャの署名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)します。  
+- 証明書を使ってストアド プロシージャに署名し、そのプロシージャを実行するのに必要な権限だけを付与する。 詳細については、「 [SQL Server でのストアドプロシージャ](signing-stored-procedures-in-sql-server.md)への署名」を参照してください。  
   
 ## <a name="external-resources"></a>外部リソース  
  詳細については、次のリソースを参照してください。  
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[アプリケーション ロール](/sql/relational-databases/security/authentication-access/application-roles)|SQL Server 2008 でアプリケーション ロールを作成および使用する方法について説明します。|  
+|[アプリケーションロール](/sql/relational-databases/security/authentication-access/application-roles)|SQL Server 2008 でアプリケーション ロールを作成および使用する方法について説明します。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server セキュリティの概要](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET アプリケーションのセキュリティ保護](../securing-ado-net-applications.md)
+- [SQL Server セキュリティの概要](overview-of-sql-server-security.md)
+- [SQL Server におけるアプリケーション セキュリティのシナリオ](application-security-scenarios-in-sql-server.md)
+- [ADO.NET の概要](../ado-net-overview.md)

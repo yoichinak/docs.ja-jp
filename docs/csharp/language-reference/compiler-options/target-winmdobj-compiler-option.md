@@ -2,12 +2,12 @@
 title: -target:winmdobj (C# コンパイラ オプション)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 9cc85bf582d737114bc0e621a9568bbb9acb791b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fe1332f9ed6de9c50c2509e29f22ed7c0e57ade9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319301"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606360"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (C# コンパイラ オプション)
 **-target:winmdobj** コンパイラ オプションを使用すると、コンパイラは、Windows ランタイム バイナリ (.winmd) ファイルに変換できる .winmdobj 中間ファイルを作成します。 .winmd ファイルは、マネージド言語プログラムだけでなく JavaScript および C++ プログラムでも使用できます。  
@@ -23,17 +23,17 @@ ms.locfileid: "59319301"
   
  **-target:winmdobj** コンパイラ オプションを使用してコンパイルされたファイルの出力は、WimMDExp エクスポート ツール用の入力としてのみ使用するように設計されています。 .winmdobj ファイル自体は直接参照されません。  
   
- [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) オプションを使用しない限り、出力ファイル名は最初の入力ファイルと同じになります。 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) メソッドは必要ありません。  
+ [-out](./out-compiler-option.md) オプションを使用しない限り、出力ファイル名は最初の入力ファイルと同じになります。 [Main](../../programming-guide/main-and-command-args/index.md) メソッドは必要ありません。  
   
- コマンド プロンプトで -target:winmdobj オプションを指定すると、次の **-out** または [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) オプションまでのすべてのファイルが、Windows プログラムを作成するために使用されます。  
+ コマンド プロンプトで -target:winmdobj オプションを指定すると、次の **-out** または [-target:module](./target-module-compiler-option.md) オプションまでのすべてのファイルが、Windows プログラムを作成するために使用されます。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Windows ストア アプリ用に Visual Studio IDE でこのコンパイラ オプションを設定するには  
   
-1. **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、**[プロパティ]** を選択します。  
+1. **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロパティ]** を選択します。  
   
 2. **[アプリケーション]** タブを選択します。  
   
-3. **[出力の種類]** リストで、**[WinMD ファイル]** を選択します。  
+3. **[出力の種類]** リストで、 **[WinMD ファイル]** を選択します。  
   
      **[WinMD ファイル]** オプションは、[!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] アプリケーション テンプレートでのみ使用できます。  
   
@@ -48,5 +48,5 @@ csc -target:winmdobj filename.cs
   
 ## <a name="see-also"></a>関連項目
 
-- [-target (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [-target (C# コンパイラ オプション)](./target-compiler-option.md)
+- [C# コンパイラ オプション](./index.md)

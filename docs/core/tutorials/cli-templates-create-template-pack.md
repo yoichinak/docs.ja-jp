@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: df8c33856195ba7feacd32203e4a885997b50ad2
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 4bd51f579231b13b0831ef7114c2a648c55cd6a2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870631"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926079"
 ---
 # <a name="tutorial-create-a-template-pack"></a>チュートリアル: テンプレート パックを作成する
 
@@ -19,7 +19,8 @@ ms.locfileid: "67870631"
 シリーズのこのパートで学習する内容は次のとおりです。
 
 > [!div class="checklist"]
-> * テンプレート パックをビルドするための _.csproj* プロジェクトを作成する
+>
+> * テンプレート パックをビルドするための \*.csproj プロジェクトを作成する
 > * パックのためのプロジェクト ファイルを構成する
 > * NuGet パッケージ ファイルからテンプレートをインストールする
 > * パッケージ ID を使用してテンプレートをアンインストールする

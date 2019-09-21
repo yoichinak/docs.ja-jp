@@ -3,12 +3,12 @@ title: Windows における .NET Core の前提条件
 description: Windows コンピューターで .NET Core アプリケーションを開発および実行する場合に必要な依存関係について説明します。
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 1921ef565c2d04624009f7684e439ddba1cdf57e
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 7b2bf2b8353c4f02fa11e9e7531e0d936007be0b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331077"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970280"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows における .NET Core の前提条件
 
@@ -61,6 +61,8 @@ ms.locfileid: "68331077"
 
 Visual Studio 2017 での変更の詳細については、[リリース ノート](/visualstudio/releasenotes/vs2017-relnotes)を参照してください。
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 Visual Studio 2017 で .NET Core 2.2 SDK を使用して .NET Core アプリを開発するには:
@@ -97,8 +99,9 @@ Visual Studio で .NET Core 1.x アプリを開発するには、( **[その他�
 
 > [!IMPORTANT]
 > .NET Core 1.x の開発に Visual Studio 2015 を使用することはできますが、次の理由からお勧めできません。
-  > * .NET Core Tooling は、サポートされていないプレビュー バージョンです。
-  > * プロジェクトは、非推奨の project.json ベースです。
+>
+> * .NET Core Tooling は、サポートされていないプレビュー バージョンです。
+> * プロジェクトは、非推奨の project.json ベースです。
 >
 > プロジェクト形式の変更の詳細については、[変更点の概要](./tools/cli-msbuild-architecture.md)に関するページをご覧ください。
 

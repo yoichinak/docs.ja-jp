@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: 0d96b9af0eaee81da8532c1facbfa8b1d1a8128f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c31f1243b1394bfe826b02c14c73faf402640849
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633497"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608415"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (C# リファレンス)
 
@@ -41,8 +41,8 @@ unchecked コンテキストでは、式が変換先の型の範囲外の値を�
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [Checked と Unchecked](checked-and-unchecked.md)
 - [checked](checked.md)

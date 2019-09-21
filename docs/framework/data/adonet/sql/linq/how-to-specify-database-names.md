@@ -2,12 +2,12 @@
 title: '方法: データベースの名前を指定する'
 ms.date: 03/30/2017
 ms.assetid: b80f0fd2-7f75-45fe-9e12-496f80f183df
-ms.openlocfilehash: a43a7ac541adb984eeb8bb88b7ab96db86baf26c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0daf754edf624410e0ea725acd6c266ccb7828dc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037571"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781583"
 ---
 # <a name="how-to-specify-database-names"></a>方法: データベースの名前を指定する
 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 属性の <xref:System.Data.Linq.Mapping.DatabaseAttribute> プロパティを使用すると、接続によってデータベースの名前が提供されない場合に、名前を指定できます。  
@@ -24,5 +24,5 @@ ms.locfileid: "62037571"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to SQL オブジェクト モデル](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [方法: コード エディターを使用してエンティティ クラスをカスタマイズします。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [LINQ to SQL オブジェクト モデル](the-linq-to-sql-object-model.md)
+- [方法: コードエディターを使用してエンティティクラスをカスタマイズする](how-to-customize-entity-classes-by-using-the-code-editor.md)

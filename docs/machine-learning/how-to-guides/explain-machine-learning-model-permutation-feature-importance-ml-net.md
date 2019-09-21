@@ -1,16 +1,16 @@
 ---
 title: Permutation Feature Importance を使用したモデル予測の説明
 description: ML.NET の Permutation Feature Importance を使ってモデルの特徴の重要度を理解する
-ms.date: 05/02/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 1037a1f1c21ef2c9b9a87a070a7d2003c1e76eb4
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 9617582c79b2278e3a68e7acf84568247b81eca1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307370"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167654"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Permutation Feature Importance を使用してモデル予測を説明する
 
@@ -50,7 +50,7 @@ Permutation Feature Importance (PFI) を使用した予測に対する特徴の�
 2,98,16,1,0.25,10,5,1,8,689,13,36,12
 ```
 
-このサンプルのデータは、`HousingPriceData` のようなクラスでモデル化できます。
+このサンプルのデータは、`HousingPriceData` のようなクラスでモデル化し、[`IDataView`](xref:Microsoft.ML.IDataView) にロードできます。
 
 ```csharp
 class HousingPriceData
@@ -96,8 +96,6 @@ class HousingPriceData
     public float Price { get; set; }
 }
 ```
-
-データを [`IDataView`](xref:Microsoft.ML.IDataView) に読み込みます。
 
 ## <a name="train-the-model"></a>モデルをトレーニングする
 

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - raw input [WPF]
 - FilterInputMessage method [WPF]
 ms.assetid: 4d74c6cf-7d1d-49ff-96c1-231340ce54f5
-ms.openlocfilehash: bd696752a287a78533d55c0fd3ad9986a32bd180
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1453946766e33843ae9e56f7a7f4dbf1678b81b5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052210"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991382"
 ---
 # <a name="filterinputmessage"></a>FilterInputMessage
 E_NOTIMPL が返されない限り、メッセージを受信するたびに PresentationHost.exe によって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT FilterInputMessage( [in] MSG* pMsg ) ;  
 ```  
   
@@ -33,14 +33,14 @@ HRESULT FilterInputMessage( [in] MSG* pMsg ) ;
   
  S_FALSE - フィルターはこのメッセージを処理しました。それ以降の処理は実行されません。  
   
- E_NOTIMPL – この値が返された場合[FilterInputMessage](filterinputmessage.md)は再度呼び出されません。 この値は、カスタムの進行状況の提供のみを対象とするホスト アプリケーションから返されることがあります。PresentationHost.exe へのエラー ユーザー インターフェイスは、PresentationHost.exe からの未加工の入力メッセージの転送を対象としていません。  
+ E_NOTIMPL –この値が返される場合、 [Filterinputmessage](filterinputmessage.md)は再度呼び出されません。 この値は、カスタムの進行状況の提供のみを対象とするホスト アプリケーションから返されることがあります。PresentationHost.exe へのエラー ユーザー インターフェイスは、PresentationHost.exe からの未加工の入力メッセージの転送を対象としていません。  
   
 ## <a name="remarks"></a>Remarks  
  PresentationHost.exe は、キーボード、マウス、およびリモート コントロールなどのさまざまな未加工入力デバイスのターゲットになります。 場合によって、ホスト アプリケーションでの動作は PresentationHost.exe で使用される入力に依存します。 たとえば、ホスト アプリケーションは、特定のユーザー インターフェイス要素を表示するかどうかを判断するために、特定の入力メッセージの受信に依存することがあります。  
   
- ホスト アプリケーションがこれらの動作を提供するために必要な入力メッセージを受信するには、PresentationHost.exe では、呼び出すことによってホストされるアプリケーションに適切な未加工の入力メッセージを転送[FilterInputMessage](filterinputmessage.md)します。  
+ これらの動作を提供するためにホストアプリケーションが必要な入力メッセージを受信できるようにするために、stsadm.exe は、 [Filterinputmessage](filterinputmessage.md)を呼び出すことによって、ホストされているアプリケーションに適切な未加工の入力メッセージを転送します。  
   
- ホストされるアプリケーションがによって返される未加工の入力デバイス (ヒューマン インターフェイス デバイス) のセットを登録して未加工の入力メッセージを受信[GetRawInputDevices](getrawinputdevices.md)します。  
+ ホストされるアプリケーションは、 [GetRawInputDevices](getrawinputdevices.md)によって返される未加工の入力デバイス (ヒューマンインターフェイスデバイス) のセットに登録することによって、未加工の入力メッセージを受信します。  
   
 ## <a name="see-also"></a>関連項目
 

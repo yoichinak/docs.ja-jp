@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: ad4384f8cc2a1d0c15f8c7681e6e5d8bf75e4451
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8ab1fa8fc163ed50e51801769d40e61483e8ed5b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343689"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912631"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>方法: ツール バー コントロールにボタンを追加する
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
+> <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
- 不可欠な部分、<xref:System.Windows.Forms.ToolBar>コントロールは、ボタンを追加します。 メニュー コマンドに簡単にアクセスを提供するこれらを使用できますか、または、メニュー構造では使用できないユーザーにコマンドを公開するアプリケーションのユーザー インターフェイスの別の領域に配置することができます。  
+ <xref:System.Windows.Forms.ToolBar>コントロールの不可欠な部分は、コントロールに追加するボタンです。 これらは、メニューコマンドに簡単にアクセスできるようにするために使用できます。また、アプリケーションのユーザーインターフェイスの別の領域に配置して、メニュー構造では使用できないコマンドをユーザーに公開することもできます。  
   
- 次の例では、あると想定する<xref:System.Windows.Forms.ToolBar>Windows フォームにコントロールが追加されました (`Form1`)。  
+ 次の例では、 <xref:System.Windows.Forms.ToolBar>コントロールが Windows フォーム (`Form1`) に追加されていることを前提としています。  
   
-### <a name="to-add-buttons-programmatically"></a>プログラムでボタンを追加するには  
+### <a name="to-add-buttons-programmatically"></a>プログラムによってボタンを追加するには  
   
-1. プロシージャでは、ツールバーのボタンの作成に追加して、<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>コレクション。  
+1. 手順では、ツールバーのボタンを<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>コレクションに追加して作成します。  
   
-2. 使用して、ボタンのインデックスを渡すことによって、各ボタンのプロパティ設定を指定、<xref:System.Windows.Forms.ToolBar.Buttons%2A>プロパティ。  
+2. <xref:System.Windows.Forms.ToolBar.Buttons%2A>プロパティを使用してボタンのインデックスを渡すことによって、個々のボタンのプロパティ設定を指定します。  
   
-     次の例でフォームを前提としています、<xref:System.Windows.Forms.ToolBar>コントロールが既に追加されています。  
+     次の例では、フォームに<xref:System.Windows.Forms.ToolBar>コントロールが既に追加されていることを前提としています。  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>コレクションには、0 から始まるコレクションがあるので、それに応じてコードを続行する必要があります。  
+    > コレクション<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>は0から始まるコレクションであるため、コードはそれに従って続行する必要があります。  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -151,7 +151,7 @@ ms.locfileid: "59343689"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.ToolBar>
-- [方法: ツール バー ボタンのアイコンを定義します。](how-to-define-an-icon-for-a-toolbar-button.md)
-- [方法: ツール バー ボタンのメニュー イベントのトリガー](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [方法: ツールバーボタンのアイコンを定義する](how-to-define-an-icon-for-a-toolbar-button.md)
+- [方法: ツールバーボタンのトリガーメニューイベント](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar コントロールの概要](toolbar-control-overview-windows-forms.md)
 - [ToolBar コントロール](toolbar-control-windows-forms.md)

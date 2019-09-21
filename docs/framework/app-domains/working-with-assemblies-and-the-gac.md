@@ -10,22 +10,23 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 363410baea1706211acaa639f1704e91230723a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 0331e0ad30743d5f0bba125e8e61e636e1c2a5be
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592739"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053021"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>アセンブリとグローバル アセンブリ キャッシュの使用
+
 あるアセンブリを複数のアプリケーションで共有する場合は、そのアセンブリをグローバル アセンブリ キャッシュ内にインストールできます。 共通言語ランタイムをインストールしている各コンピューターは、このコードをコンピューター全体で使用できます。 グローバル アセンブリ キャッシュは、そのコンピューター上の複数のアプリケーションで共有するように指定されたアセンブリを格納します。 グローバル アセンブリ キャッシュ内にインストールされるアセンブリは、厳密な名前を持つ必要があります。  
   
 > [!NOTE]
->  グローバル アセンブリ キャッシュ内に配置されるアセンブリは、アセンブリ名とファイル名の拡張子を除く部分が一致している必要があります。 たとえば、アセンブリ名が myAssembly のアセンブリの場合、ファイル名は myAssembly.exe または myAssembly.dll である必要があります。  
+> グローバル アセンブリ キャッシュ内に配置されるアセンブリは、アセンブリ名とファイル名の拡張子を除く部分が一致している必要があります。 たとえば、アセンブリ名が myAssembly のアセンブリの場合、ファイル名は myAssembly.exe または myAssembly.dll である必要があります。  
   
- アセンブリの共有が必要な場合にだけ、アセンブリをグローバル アセンブリ キャッシュにインストールします。 一般的には、明らかにアセンブリを共有する必要がある場合を除いて、アセンブリの依存関係はプライベートにし、アセンブリはアプリケーション ディレクトリに配置します。 また、COM 相互運用 (機能) またはアンマネージ コードからアセンブリにアクセスできるようにするために、アセンブリをグローバル アセンブリ キャッシュにインストールする必要はありません。  
+アセンブリの共有が必要な場合にだけ、アセンブリをグローバル アセンブリ キャッシュにインストールします。 一般的には、明らかにアセンブリを共有する必要がある場合を除いて、アセンブリの依存関係はプライベートにし、アセンブリはアプリケーション ディレクトリに配置します。 また、COM 相互運用 (機能) またはアンマネージ コードからアセンブリにアクセスできるようにするために、アセンブリをグローバル アセンブリ キャッシュにインストールする必要はありません。  
   
- アセンブリをグローバル アセンブリ キャッシュにインストールする理由は、いくつか考えられます。  
+アセンブリをグローバル アセンブリ キャッシュにインストールする理由は、いくつか考えられます。  
   
 - 共有の場所。  
   
@@ -46,30 +47,31 @@ ms.locfileid: "64592739"
  アセンブリのグローバル アセンブリ キャッシュへのインストールを明示的に避けたい場合もあります。 アプリケーションを構成するアセンブリの 1 つをグローバル アセンブリ キャッシュに配置した場合は、アプリケーション ディレクトリをコピーする XCOPY を使用してアプリケーションをレプリケートしたりインストールしたりすることはできなくなります。 この場合は、グローバル アセンブリ キャッシュ内のアセンブリも移動する必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: アセンブリをグローバル アセンブリ キャッシュにインストールする](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
- アセンブリをグローバル アセンブリ キャッシュにインストールする方法について説明します。  
+[方法: アセンブリをグローバル アセンブリ キャッシュにインストールする](install-assembly-into-gac.md)  
+アセンブリをグローバル アセンブリ キャッシュにインストールする方法について説明します。  
   
- [方法: グローバル アセンブリ キャッシュの内容を表示する](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
- [グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) を使用して、グローバル アセンブリ キャッシュの内容を表示する方法について説明します。  
+[方法: グローバル アセンブリ キャッシュの内容を表示する](how-to-view-the-contents-of-the-gac.md)  
+[グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) を使用して、グローバル アセンブリ キャッシュの内容を表示する方法について説明します。  
   
- [方法: グローバル アセンブリ キャッシュからアセンブリを削除する](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
- [グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) を使用して、グローバル アセンブリ キャッシュからアセンブリを削除する方法について説明します。  
+[方法: グローバル アセンブリ キャッシュからアセンブリを削除する](how-to-remove-an-assembly-from-the-gac.md)  
+[グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) を使用して、グローバル アセンブリ キャッシュからアセンブリを削除する方法について説明します。  
   
- [サービス コンポーネントとグローバル アセンブリ キャッシュの使用](../../../docs/framework/app-domains/use-serviced-components-with-the-gac.md)  
- サービス コンポーネント (マネージド COM+ コンポーネント) をグローバル アセンブリ キャッシュに配置する必要がある理由について説明します。  
+[サービス コンポーネントとグローバル アセンブリ キャッシュの使用](use-serviced-components-with-the-gac.md)  
+サービス コンポーネント (マネージド COM+ コンポーネント) をグローバル アセンブリ キャッシュに配置する必要がある理由について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)  
- アセンブリの作成の概要を説明します。  
+
+[アセンブリの作成](../../standard/assembly/create.md)  
+アセンブリの作成の概要を説明します。  
   
- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)  
- グローバル アセンブリ キャッシュについて説明します。  
+[グローバル アセンブリ キャッシュ](gac.md)  
+グローバル アセンブリ キャッシュについて説明します。  
   
- [方法: アセンブリの内容を表示する](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- [Ildasm.exe (IL 逆アセンブラー)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) を使用して、アセンブリ内の MSIL (Microsoft Intermediate Language) 情報を表示する方法について説明します。  
+[方法: アセンブリの内容を表示する](../../standard/assembly/view-contents.md)  
+[Ildasm.exe (IL 逆アセンブラー)](../tools/ildasm-exe-il-disassembler.md) を使用して、アセンブリ内の MSIL (Microsoft Intermediate Language) 情報を表示する方法について説明します。  
   
- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- 共通言語ランタイムが、アプリケーションを構成するアセンブリを検出して読み込む方法について説明します。  
+[ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)  
+共通言語ランタイムが、アプリケーションを構成するアセンブリを検出して読み込む方法について説明します。  
   
- [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- マネージド アプリケーションを構成するブロックであるアセンブリについて説明します。
+[アセンブリを使用したプログラミング](../../standard/assembly/program.md)  
+マネージド アプリケーションを構成するブロックであるアセンブリについて説明します。

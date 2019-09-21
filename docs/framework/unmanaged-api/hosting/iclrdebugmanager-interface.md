@@ -16,42 +16,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22c3a480e2b68377e300df1083b3178ee4e2d2a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a408995793caf879f8d5624ab727102c4859195
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969859"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959607"
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager インターフェイス
-Id とフレンドリ名を関連付ける一連のタスクをホストできるようにするメソッドを提供します。  
+ホストが一連のタスクを識別子とフレンドリ名に関連付けることができるようにするメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[BeginConnection メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)|ホストとデバッガーは、id とフレンドリ名を関連付けるタスクの間の新しい接続を確立します。|  
-|[EndConnection メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)|タスクの一覧と、識別子とフレンドリ名の間の関連付けを削除します。|  
+|[BeginConnection メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)|ホストとデバッガーの間の新しい接続を確立して、タスクを識別子とフレンドリ名に関連付けます。|  
+|[EndConnection メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)|タスクのリストと id とフレンドリ名の間の関連付けを削除します。|  
 |[GetDacl メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-getdacl-method.md)|このメソッドは実装されていません。|  
 |[IsDebuggerAttached メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-isdebuggerattached-method.md)|デバッガーがプロセスにアタッチされているかどうかを示す値を取得します。|  
-|[SetConnectionTasks メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|リストを関連付けます[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)識別子とフレンドリ名を持つインスタンス。|  
+|[SetConnectionTasks メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)インスタンスのリストを識別子とフレンドリ名に関連付けます。|  
 |[SetDacl メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)|このメソッドは実装されていません。|  
-|[SetSymbolReadingPolicy メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|プログラム データベース (PDB) ファイルを読み取るためのポリシーを設定します。 ポリシーは、呼び出し履歴で行番号およびファイルに関する情報が含まれているかどうかを判断します。|  
+|[SetSymbolReadingPolicy メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|プログラムデータベース (PDB) ファイルを読み取るためのポリシーを設定します。 ポリシーは、行番号とファイルに関する情報が呼び出し履歴に含まれるかどうかを決定します。|  
   
 ## <a name="remarks"></a>Remarks  
- シナリオをデバッグするには、ホストは、独自のプログラミング ロジックに従ってタスクをグループ化をする可能性があります。 たとえばをグループ化は、開発者は、プロセスで実行されているすべてのタスクではなく、開発者の Api で必要なタスクのみを参照してください。 `ICLRDebugManager` この種のグループ化を実装するためにホストできるようにします。  
+ デバッグシナリオでは、ホストは、独自のプログラミングロジックに従ってタスクをグループ化することが必要になる場合があります。 たとえば、グループ化により、開発者は、プロセスで実行されているすべてのタスクを表示するのではなく、開発者の Api に必要なタスクのみを参照できます。 `ICLRDebugManager`ホストがこの種のグループ化を実装できるようにします。  
   
 > [!IMPORTANT]
->  次の 3 つ`ICLRDebugManager`メソッド、 `BeginConnection`、`SetConnectionTasks`と`EndConnection`、互いに依存します。 期待どおりに動作する特定の順序で呼び出す必要があります。  
+> 、 `ICLRDebugManager` `BeginConnection` `EndConnection`、およびの3つのメソッドは相互に依存しています。`SetConnectionTasks` これらは、想定どおりに動作するために、指定された順序で呼び出される必要があります。  
   
- グループ化、および識別子とホストは、グループに割り当てます。 フレンドリ名ありませんにとって意味のある共通言語ランタイム (CLR)。 CLR は、デバッガーを利用して、情報を渡すだけです。  
+ グループ化、およびホストがグループに割り当てる識別子とフレンドリ名は、共通言語ランタイム (CLR) には意味がありません。 CLR は、情報をデバッガーに渡すだけです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 74cfc6a425e82014bbcf5093f52f476ff09db130
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad3f7949e01a387c3c7de2a0702d11b106ea0040
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796559"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922210"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>名前付き引数と省略可能な引数 (C# プログラミング ガイド)
 C# 4 では、名前付き引数と省略可能な引数が導入されています。 *名前付き引数*を使用すると、パラメーター リストのパラメーターの位置ではなく、パラメーター名に引数を関連付けることによって、特定のパラメーターの引数を指定できます。 *省略可能な引数*を使用すると、一部のパラメーターの引数を省略できます。 両方の手法をメソッド、インデクサー、コンストラクター、デリゲートで使用できます。  
@@ -47,7 +47,7 @@ C# 4 では、名前付き引数と省略可能な引数が導入されていま
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _C# 7.2 以降_ 。正しい位置で使用されます。 下の例では、パラメーター `orderNum` は正しい位置にありますが、明示的に名前が付けられていません。
+- _C# 7.2 以降_。正しい位置で使用されます。 下の例では、パラメーター `orderNum` は正しい位置にありますが、明示的に名前が付けられていません。
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
@@ -70,9 +70,9 @@ C# 4 では、名前付き引数と省略可能な引数が導入されていま
   
 - 定数式  
   
-- `new ValType()` 形式の式です。`ValType` は、[enum](../../../csharp/language-reference/keywords/enum.md) や [struct](../../../csharp/programming-guide/classes-and-structs/structs.md) のような値型になります。  
+- `new ValType()` 形式の式です。`ValType` は、[enum](../../language-reference/keywords/enum.md) や [struct](./structs.md) のような値型になります。  
   
-- [default(ValType)](../../../csharp/language-reference/operators/default.md) 形式の式です。`ValType` は値型です。  
+- [default(ValType)](../../language-reference/operators/default.md) 形式の式です。`ValType` は値型です。  
   
  省略可能なパラメーターは、パラメーター リストの末尾で必須パラメーターの後に定義されます。 呼び出し元は、連続する省略可能なパラメーターのいずれか 1 つに対して引数を指定する場合、先行するすべての省略可能なパラメーターに引数を指定する必要があります。 引数リストでは、スペースをコンマで区切ることはできません。 たとえば、次のコードでは、1 つの必須パラメーターと 2 つの省略可能パラメーターでインスタンス メソッド `ExampleMethod` が定義されます。  
   
@@ -91,7 +91,7 @@ C# 4 では、名前付き引数と省略可能な引数が導入されていま
  ![ExampleMethod メソッドの IntelliSense クイック インフォを示すスクリーンショット。](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
->  また、.NET <xref:System.Runtime.InteropServices.OptionalAttribute> クラスを使用して省略可能なパラメーターを宣言することもできます。 `OptionalAttribute` パラメーターに既定値は必要ありません。  
+> また、.NET <xref:System.Runtime.InteropServices.OptionalAttribute> クラスを使用して省略可能なパラメーターを宣言することもできます。 `OptionalAttribute` パラメーターに既定値は必要ありません。  
   
 ## <a name="example"></a>例  
  次の例では、`ExampleClass` のコンストラクターに省略可能なパラメーターが 1 つあります。 `ExampleMethod` インスタンス メソッドには、`required` という 1 つの必須パラメーターと、`optionalstr` と `optionalint` という 2 つの省略可能なパラメーターがあります。 `Main` のコードに示すように、いくつかの異なる方法でコンストラクターとメソッドを呼び出すことができます。  
@@ -113,7 +113,7 @@ C# 4 では、名前付き引数と省略可能な引数が導入されていま
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- 詳細情報と例については、「[方法: Office プログラミングで名前付き引数と省略可能な引数を使用する](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)」と「[方法: Visual C# の機能を使用して Office 相互運用オブジェクトにアクセスする](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)」をご覧ください。  
+ 詳細情報と例については、「[方法: Office プログラミングで名前付き引数と省略可能な引数を使用する](./how-to-use-named-and-optional-arguments-in-office-programming.md)」と「[方法: Visual C# の機能を使用して Office 相互運用オブジェクトにアクセスする](../interop/how-to-access-office-onterop-objects.md)」をご覧ください。  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  名前付き引数と省略可能な引数を使用すると、オーバーロードの解決に次のように影響します。  
@@ -129,7 +129,7 @@ C# 4 では、名前付き引数と省略可能な引数が導入されていま
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: Office プログラミングで名前付き引数と省略可能な引数を使用する](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [dynamic 型の使用](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [コンストラクターの使用](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
-- [インデクサーの使用](../../../csharp/programming-guide/indexers/using-indexers.md)
+- [方法: Office プログラミングで名前付き引数と省略可能な引数を使用する](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [dynamic 型の使用](../types/using-type-dynamic.md)
+- [コンストラクターの使用](./using-constructors.md)
+- [インデクサーの使用](../indexers/using-indexers.md)

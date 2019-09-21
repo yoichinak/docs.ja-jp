@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
-ms.openlocfilehash: 0c1526e32ddc64cb4124c6f8205d58deef911dd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6eb46c6479adc69eaf65b34c69aa69977b4d62ef
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802480"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972389"
 ---
-# <a name="friend-assembly-reference-reference-is-invalid"></a>フレンド アセンブリ参照\<参照 > が無効です
-フレンド アセンブリ参照\<参照 > が無効です。 厳密な名前の署名つきアセンブリはその InternalsVisibleTo 宣言内で公開キーを指定しなければなりません。  
+# <a name="friend-assembly-reference-reference-is-invalid"></a>フレンドアセンブリ参照\<の参照 > が無効です
+フレンドアセンブリ参照\<の参照 > が無効です。 厳密な名前の署名つきアセンブリはその InternalsVisibleTo 宣言内で公開キーを指定しなければなりません。  
   
- 渡すアセンブリ名、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>属性コンス トラクターは、厳密な名前のアセンブリを識別しますは含まれません、`PublicKey`属性。  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>属性コンストラクターに渡されたアセンブリ名は、厳密な名前を持つアセンブリを識別しますが`PublicKey` 、属性は含まれません。  
   
  **エラー ID:** BC31535  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1. 厳密な名前のフレンド アセンブリの公開キーを確認します。 渡されるアセンブリ名の一部として、公開キーを含めて、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>属性のコンス トラクターを使用して、`PublicKey`属性。  
+1. 厳密な名前のフレンドアセンブリの公開キーを決定します。 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性`PublicKey`を使用して、属性コンストラクターに渡すアセンブリ名の一部として公開キーを含めます。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Reflection.AssemblyName>
-- [フレンド アセンブリ](../../../standard/assembly/friend-assemblies.md)
+- [フレンド アセンブリ](../../../standard/assembly/friend.md)

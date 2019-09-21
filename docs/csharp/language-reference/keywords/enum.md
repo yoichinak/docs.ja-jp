@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: e33877d2a5e79866bbef12cd9fec5cb11b044240
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: fb11fb1a81b8407e2585e32d4217e08a75ea19b0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433859"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605822"
 ---
 # <a name="enum-c-reference"></a>enum (C# リファレンス)
 
@@ -99,7 +99,7 @@ int x = (int)Day.Sun;
 - [C# リファレンス](../index.md)
 - [列挙型](../../programming-guide/enumeration-types.md)
 - [C# のキーワード](index.md)
-- [整数型](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
+- [整数型](../builtin-types/integral-numeric-types.md)
 - [組み込み型の一覧表](built-in-types-table.md)
 - [暗黙的な数値変換の一覧表](implicit-numeric-conversions-table.md)
 - [明示的な数値変換の一覧表](explicit-numeric-conversions-table.md)

@@ -2,12 +2,12 @@
 title: '方法: 省略可能な要素をフィルター処理する (C#)'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 9b2ee9bf0cbed5504b96937fb37cf98728a15335
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710123"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253828"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>方法: 省略可能な要素をフィルター処理する (C#)
 要素に対するフィルター処理が、その要素が XML ドキュメント内に存在しているかどうか明確でない場合でも必要になることがあります。 特定の要素が子要素を持たない場合、その要素に対するフィルター処理によって null 参照例外が発生しないように検索を実行する必要があります。 次の例では、`Child5` 要素には `Type` 子要素はありませんが、クエリは正常に実行されます。  
@@ -47,7 +47,7 @@ foreach(string str in cList)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -89,7 +89,7 @@ foreach (string str in cList)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -100,5 +100,5 @@ Child Four Text
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [射影操作 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- [標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)
+- [射影操作 (C#)](./projection-operations.md)

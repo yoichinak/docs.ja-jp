@@ -3,12 +3,12 @@ title: セマンティック解析の概要
 description: このチュートリアルでは、.NET コンパイラ SDK を使用したセマンティック解析の概要を説明します。
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 188104c3430b4ca32578cd35d3e161a6eb0e0e1a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 80a814054ab95a5b6585289e8580a725b18ca44e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611745"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252945"
 ---
 # <a name="get-started-with-semantic-analysis"></a>セマンティック解析の概要
 
@@ -39,8 +39,8 @@ ms.locfileid: "59611745"
 
 次のようにして、新しい C# の **Stand-Alone Code Analysis Tool** プロジェクトを作成します。
 
-* Visual Studio で、**[ファイル]**、**[新規]**、**[プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
-* **[Visual C#]**、**[機能拡張]** で、**[Stand-Alone Code Analysis Tool]** を選択します。
+* Visual Studio で、 **[ファイル]** 、 **[新規]** 、 **[プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
+* **[Visual C#]** 、 **[機能拡張]** で、 **[Stand-Alone Code Analysis Tool]** を選択します。
 * プロジェクトに "**SemanticQuickStart**" という名前を付け、[OK] をクリックします。
 
 前述の基本的な "Hello World!" プログラムを 分析します。
@@ -78,7 +78,7 @@ Hello World プログラムのテキストを `Program` クラスの定数とし
 
 プログラムを実行します。次の出力が表示されるはずです。
 
-```
+```output
 System.Collections
 System.Configuration
 System.Deployment
@@ -103,7 +103,7 @@ Press any key to continue . . .
 
 先のコードでは、名前にバインドしてシンボルを見つける方法を確認できます。 C# プログラムには、バウンドできて名前ではない式が他にあります。 この機能を見るために、単純な文字列リテラルのバインドにアクセスしましょう。
 
-"Hello World" プログラムに <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LiteralExpressionSyntax?displayProperty=nameWithType> が含まれ、"Hello, World!"  文字列がコンソールに表示されます。
+"Hello World" プログラムに <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LiteralExpressionSyntax?displayProperty=nameWithType> が含まれ、"Hello, World!" 文字列がコンソールに表示されます。
 
 プログラムの中で 1 つの文字列リテラルを見つけることで、 "Hello, World!" 文字列が見つかります。 構文ノードが見つかったら、セマンティック モデルからそのノードの型情報を取得します。 次のコードを `Main` メソッドに追加します。
 
@@ -135,7 +135,7 @@ LINQ クエリ構文で完全クエリをビルドし、コンソールにすべ
 
 プログラムをビルドして実行します。 次の出力が表示されます。
 
-```
+```output
 Join
 Substring
 Trim

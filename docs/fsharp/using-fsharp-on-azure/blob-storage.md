@@ -3,12 +3,12 @@ title: F# を使用した Azure Blob Storage の概要
 description: Azure Blob storage を使用して、非構造化データをクラウドに格納します。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: c8b42339ff1d76f262e956b5e34cc598e0fc855d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c765f38cba7642e813a5966d3b7754c5ce45abbd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630512"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107122"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F を使用して Azure Blob storage を使ってみる\#
 
@@ -186,9 +186,9 @@ Blob を削除するには、まず blob の参照を取得し`Delete` 、次に
 
 複数のクライアントまたは複数のプロセスインスタンスからの blob への同時アクセスをサポートするには、 **etag**または**リース**を使用できます。
 
-* **Etag** -blob またはコンテナーが別のプロセスによって変更されたことを検出する方法を提供します。
+- **Etag** -blob またはコンテナーが別のプロセスによって変更されたことを検出する方法を提供します。
 
-* **リース**-一定期間、blob への排他、更新、書き込み、または削除のアクセス権を取得する方法を提供します。
+- **リース**-一定期間、blob への排他、更新、書き込み、または削除のアクセス権を取得する方法を提供します。
 
 詳細については、「 [Microsoft Azure Storage での同時実行の管理](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/)」を参照してください。
 

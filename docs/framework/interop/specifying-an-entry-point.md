@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6065e06fa4fb51cd0cd746a1619f8a611f2fc30b
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 410c8bdb63b56a78dbfa64c21344fdcd6a6656c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064104"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051612"
 ---
 # <a name="specifying-an-entry-point"></a>エントリ ポイントの指定
 エントリ ポイントは、DLL 内の関数の位置を識別します。 マネージド プロジェクト内では、対象となる関数の元の名前または序数エントリ ポイントによって、その関数が相互運用の境界にまたがって識別されます。 また、エントリ ポイントを別の名前に割り当てて、関数の名前を事実上変更できます。  
@@ -43,7 +43,7 @@ Friend Class NativeMethods
 End Class
 ```
   
- 定義に **Alias** キーワードを含めることで、**MessageBox** エントリ ポイントを **MsgBox** に置き換えることができます。その例を次に示します。 どちらの例でも、**Auto** キーワードを使って、エントリ ポイントの文字セットのバージョンを指定する手間を省いています。 文字セットの選択の詳細については、「[文字セットの指定](../../../docs/framework/interop/specifying-a-character-set.md)」を参照してください。  
+ 定義に **Alias** キーワードを含めることで、**MessageBox** エントリ ポイントを **MsgBox** に置き換えることができます。その例を次に示します。 どちらの例でも、**Auto** キーワードを使って、エントリ ポイントの文字セットのバージョンを指定する手間を省いています。 文字セットの選択の詳細については、「[文字セットの指定](specifying-a-character-set.md)」を参照してください。  
   
 ```vb
 Friend Class NativeMethods
@@ -93,6 +93,6 @@ extern "C" int MsgBox(
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [マネージド コードでのプロトタイプの作成](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [プラットフォーム呼び出しの例](../../../docs/framework/interop/platform-invoke-examples.md)
-- [プラットフォーム呼び出しによるデータのマーシャリング](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [マネージド コードでのプロトタイプの作成](creating-prototypes-in-managed-code.md)
+- [プラットフォーム呼び出しの例](platform-invoke-examples.md)
+- [プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)

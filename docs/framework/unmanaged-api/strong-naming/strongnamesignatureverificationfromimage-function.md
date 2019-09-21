@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df2eb9d454f2037ef5f2a09d1309d52a8365e715
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c22339b7d48e89f99d1500cfdda53f00f1234b80
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782683"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799072"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>StrongNameSignatureVerificationFromImage 関数
 メモリに既にマップされているアセンブリが、関連付けられている公開キーに対して有効であるかどうかが確認されます。  
   
- この関数は非推奨とされました。 使用して、 [ICLRStrongName::StrongNameVerificationFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)メソッド代わりにします。  
+ この関数は非推奨とされます。 代わりに[ICLRStrongName:: StrongNameVerificationFromImage](../hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,47 +41,47 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
   
 ## <a name="parameters"></a>パラメーター  
  `pbBase`  
- [in]マップされているアセンブリ マニフェストの相対仮想アドレス。  
+ からマップされたアセンブリマニフェストの相対仮想アドレス。  
   
  `dwLength`  
- [in]マップされたイメージのバイト単位のサイズ。  
+ からマップされたイメージのサイズ (バイト単位)。  
   
  `dwInFlags`  
- [in]検証の動作に影響するフラグ。 次の値がサポートされています。  
+ から検証の動作に影響を与えるフラグ。 次の値がサポートされています。  
   
-- `SN_INFLAG_FORCE_VER` (0x00000001) - レジストリ設定を上書きする必要がある場合でも、強制的に検証します。  
+- `SN_INFLAG_FORCE_VER`(0x00000001)-レジストリ設定を上書きする必要がある場合でも、検証を強制的に実行します。  
   
-- `SN_INFLAG_INSTALL` (0x00000002) - これはこのイメージ上で実行される最初の認証であることを指定します。  
+- `SN_INFLAG_INSTALL`(0x00000002)-これがこのイメージに対して実行される最初の検証であることを指定します。  
   
-- `SN_INFLAG_ADMIN_ACCESS` (0x00000004) のキャッシュで管理者特権を持つユーザーにのみアクセスを許可することを指定します。  
+- `SN_INFLAG_ADMIN_ACCESS`(0x00000004)-キャッシュが管理者特権を持つユーザーのみにアクセスを許可することを指定します。  
   
-- `SN_INFLAG_USER_ACCESS` (0x00000008) のアセンブリが現在のユーザーのみがアクセスできることを指定します。  
+- `SN_INFLAG_USER_ACCESS`(0x00000008)-現在のユーザーのみがアセンブリにアクセスできるように指定します。  
   
-- `SN_INFLAG_ALL_ACCESS` (0x00000010) - キャッシュはしないことを指定のアクセス制限を保証します。  
+- `SN_INFLAG_ALL_ACCESS`(0x00000010)-キャッシュがアクセス制限の保証を提供しないことを指定します。  
   
-- `SN_INFLAG_RUNTIME` (0x80000000) - 内部デバッグのために予約されています。  
+- `SN_INFLAG_RUNTIME`(0x80000000)-内部デバッグ用に予約されています。  
   
  `pdwOutFlags`  
- [out]追加の出力情報用のフラグです。 次の値がサポートされています。  
+ 入出力追加の出力情報のフラグ。 次の値がサポートされています。  
   
-- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - この値に設定が`false`レジストリ設定のために、検証が成功したことを指定します。  
+- `SN_OUTFLAG_WAS_VERIFIED`(0x00000001)-この値は、レジストリ`false`設定によって検証が成功したことを指定するためにに設定されます。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 正常に終了します。それ以外の場合、`false`します。  
+ `true`正常に完了した場合は。それ以外`false`の場合は。  
   
 ## <a name="remarks"></a>Remarks  
- 場合、`StrongNameSignatureVerificationFromImage`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
+ 関数が正常に完了しない場合は、[StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出して、最後に生成されたエラーを取得します。`StrongNameSignatureVerificationFromImage`  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** Mscoree.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [StrongNameSignatureVerificationFromImage メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameSignatureVerificationFromImage メソッド](../hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)

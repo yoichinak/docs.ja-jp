@@ -1,6 +1,6 @@
 ---
 title: PutClassWmi 関数 (アンマネージ API リファレンス)
-description: PutClassWmi 関数では、新しいクラスを作成します。 または、既存のものを更新します。
+description: PutClassWmi 関数は、新しいクラスを作成するか、既存のクラスを更新します。
 ms.date: 11/06/2017
 api_name:
 - PutClassWmi
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 422de614d2e2ddb93cc1e932a8672e1e8269b2c0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7fcf879705135e0093868b48580a37f9d46aa594
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636643"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798384"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi 関数
 
@@ -43,65 +43,65 @@ HRESULT PutClassWmi (
 ## <a name="parameters"></a>パラメーター
 
 `pObject`\
-[in]有効なクラス定義へのポインター。 すべての必要なプロパティ値が正しく初期化する必要があります。
+から有効なクラス定義へのポインター。 この値は、必要なすべてのプロパティ値で正しく初期化されている必要があります。
 
 `lFlags`\
-[in]この関数の動作に影響するフラグの組み合わせ。 次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+からこの関数の動作に影響を与えるフラグの組み合わせ。 次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 場合設定、WMI では、修正済みのフレーバーで、修飾子は保存されません。 <br> 指定しない場合、このオブジェクトがローカライズされていないことと、すべての修飾子がこのインスタンスに格納されていること前提は、セット。 |
-| `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | 存在したり、既に存在する場合は、上書きしない場合は、クラスを作成します。 |
-| `WBEM_FLAG_UPDATE_ONLY` | 1 | クラスを更新します。 クラスは、呼び出しの成功に存在する必要があります。 |
-| `WBEM_FLAG_CREATE_ONLY` | 2 | クラスを作成します。 クラスが既に存在する場合、呼び出しが失敗します。 |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | フラグには、半同期的メソッドの呼び出しが行わします。 |
-| `WBEM_FLAG_OWNER_UPDATE` | 0x10000 | 呼び出すときに、プッシュのプロバイダーはこのフラグを指定する必要があります`PutClassWmi`をこのクラスが変更されたことを示します。 |
-| `WBEM_FLAG_UPDATE_COMPATIBLE` | 0 | クラスが派生クラスを持たないとそのクラスのインスタンスがない場合に更新するできるようにします。 説明の修飾子などの重要でない修飾子だけを変更した場合、更新プログラムは、すべてのケースでことも可能に。 クラスのインスタンスには、または変更が重要な修飾子には、更新プログラムは失敗します。 |
-| `WBEM_FLAG_UPDATE_SAFE_MODE` | 0x20 | 変更に子クラスを任意の競合が発生しない限り、子クラスがある場合でもクラスの更新が可能です。 たとえば、このフラグは、子クラスのいずれかで記述されていない基底クラスに追加する新しいプロパティを使用できます。 クラスのインスタンスの場合、更新は失敗します。 |
-| `WBEM_FLAG_UPDATE_FORCE_MODE` | 0x40 | 競合する子クラスが存在する場合は、クラスの更新プログラムを強制的にします。 たとえば、このフラグは、更新プログラム クラス修飾子は、子クラスで定義されていて、基底クラスが、同じ修飾子を追加しようとしています。 既存のものと競合します。 強制モードでは、子クラスに競合する修飾子を削除することによって tis 競合を解決します。 |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 設定した場合、WMI は、修正されたフレーバーを持つ修飾子を格納しません。 <br> 設定されていない場合は、このオブジェクトがローカライズされていないと見なされ、すべての修飾子がこのインスタンスと共に格納されます。 |
+| `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | クラスが存在しない場合は作成し、既に存在する場合は上書きします。 |
+| `WBEM_FLAG_UPDATE_ONLY` | 1 | クラスを更新します。 呼び出しを成功させるには、クラスが存在している必要があります。 |
+| `WBEM_FLAG_CREATE_ONLY` | 2 | クラスを作成します。 クラスが既に存在する場合、呼び出しは失敗します。 |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | このフラグにより、半同期呼び出しが発生します。 |
+| `WBEM_FLAG_OWNER_UPDATE` | 0x10000 | プッシュプロバイダーは、このクラスが変更`PutClassWmi`されたことを示すためにを呼び出す場合に、このフラグを指定する必要があります。 |
+| `WBEM_FLAG_UPDATE_COMPATIBLE` | 0 | 派生クラスとそのクラスのインスタンスが存在しない場合に、クラスを更新できるようにします。 また、説明の修飾子などの重要でない修飾子だけが変更された場合にも、すべての更新が可能になります。 クラスにインスタンスがある場合、または重要な修飾子が変更された場合、更新は失敗します。 |
+| `WBEM_FLAG_UPDATE_SAFE_MODE` | 0x20 | 変更によって子クラスとの競合が発生しない限り、子クラスがある場合でも、クラスを更新できます。 たとえば、このフラグを使用すると、前に子クラスには記載されていなかった基本クラスに新しいプロパティを追加できます。 クラスにインスタンスがある場合、更新は失敗します。 |
+| `WBEM_FLAG_UPDATE_FORCE_MODE` | 0x40 | 競合する子クラスが存在する場合に、クラスを強制的に更新します。 たとえば、このフラグは、子クラスでクラス修飾子が定義されている場合に更新を強制します。基底クラスは、既存の修飾子と競合する同じ修飾子を追加しようとします。 Force モードでは、子クラスの競合している修飾子を削除することによって、このような競合が解決されます。 |
 
 `pCtx`\
-[in]この値は、通常、`null`します。 ポインターは、それ以外の場合、 [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)インスタンスを要求されたクラスを提供しているプロバイダーによって使用されることができます。
+から通常、この値は`null`です。 それ以外の場合は、要求されたクラスを提供しているプロバイダーが使用できる[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)インスタンスへのポインターです。
 
 `ppCallResult`\
-[out]場合`null`、このパラメーターは使用されません。 場合`lFlags`を含む`WBEM_FLAG_RETURN_IMMEDIATELY`、関数を直ちに返します`WBEM_S_NO_ERROR`します。 `ppCallResult`パラメーターは、新しいへのポインターを受け取ります[IWbemCallResult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult)オブジェクト。
+入出力の`null`場合、このパラメーターは使用されません。 に`lFlags`が`WBEM_FLAG_RETURN_IMMEDIATELY`含まれている場合、 `WBEM_S_NO_ERROR`関数はを使用してすぐにを返します。 パラメーター `ppCallResult`は、新しい[IWbemCallResult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult)オブジェクトへのポインターを受け取ります。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0x80041003 | ユーザーには、作成またはクラスを変更するアクセス許可がありません。 |
-| `WBEM_E_FAILED` | 0x80041001 | 不明なエラーが発生しました。 |
-| `WBEM_E_INVALID_CLASS` | 0x80041010 | 指定したクラスが無効です。 通常、これが示す`pObject`インスタンス オブジェクトを指定します。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | ユーザーには、クラスを作成または変更するためのアクセス許可がありません。 |
+| `WBEM_E_FAILED` | 0x80041001 | 特定できないエラーが発生しました。 |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | 指定されたクラスは無効です。 通常、これは、 `pObject`がインスタンスオブジェクトを指定することを示します。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが有効ではありません。 |
 | `WBEM_E_INVALID OPERATION` | 0x80041016 | 指定されたクラス名が無効です。 |
-| `WBEM_E_CLASS_HAS_CHILDREN` | 0x80041025 | サブクラスを無効にする変更が試行されました。 |
-| `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY`フラグが指定されましたが、クラスが既に存在します。 |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` 指定された`lFlags`クラスが見つかりません。 |
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | クラスの必須プロパティがすべてではなく設定されています。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI は、おそらく停止および再起動されました。 呼び出す[ConnectServerWmi](connectserverwmi.md)もう一度です。 |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 現在のプロセスと WMI のリモート プロシージャ コール (RPC) リンクに失敗しました。 |
-| `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+| `WBEM_E_CLASS_HAS_CHILDREN` | 0x8004-5 | サブクラスを無効にする変更を加えようとしました。 |
+| `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY`フラグが指定されましたが、このクラスは既に存在します。 |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`がで`lFlags`指定されましたが、クラスが見つかりませんでした。 |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80040 | クラスの必須プロパティがすべて設定されていません。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するために必要なメモリが不足しています。 |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI が停止し、再起動されたことがあります。 [Connectserverwmi](connectserverwmi.md)を再度呼び出します。 |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 現在のプロセスと WMI の間のリモートプロシージャコール (RPC) リンクが失敗しました。 |
+| `WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
 
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemServices::PutClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-putclass)メソッド。
+この関数は、 [IWbemServices::P utClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-putclass)メソッドの呼び出しをラップします。
 
-ユーザーは、アンダー スコア文字で開始または終了する名前を持つクラスを作成しない可能性があります。
+ユーザーは、名前の先頭または末尾にアンダースコア文字を持つクラスを作成することはできません。
 
-呼び出すことによって追加のエラー情報を取得するには、関数呼び出しに失敗した場合、 [GetErrorInfo](geterrorinfo.md)関数。
+関数呼び出しが失敗した場合は、 [GetErrorInfo](geterrorinfo.md)関数を呼び出して追加のエラー情報を取得できます。
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。
 
-**ヘッダー:** WMINet_Utils.idl
+**ヘッダー:** WMINet_Utils
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

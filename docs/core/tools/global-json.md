@@ -3,12 +3,12 @@ title: global.json の概要
 description: .NET Core CLI コマンドを実行するときに global.json ファイルを使用して .NET Core SDK のバージョンを設定する方法について説明します。
 ms.date: 12/03/2018
 ms.custom: updateeachrelease, seodec18
-ms.openlocfilehash: a3d90e39401ece8d106d89a7533b7c1e1e4433cd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3c3793011560cd7428e47bd3340d0a935247760f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632398"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849600"
 ---
 # <a name="globaljson-overview"></a>global.json の概要
 
@@ -51,13 +51,13 @@ ms.locfileid: "65632398"
 
 ## <a name="globaljson-and-the-net-core-cli"></a>global.json と .NET Core CLI
 
-*global.json* ファイルでバージョンを設定するには、使用可能なバージョンがわかっていると便利です。 サポートされている使用可能な SDK の完全な一覧は、[.NET のダウンロード](https://www.microsoft.com/net/download/all) サイトで確認できます。 .NET Core 2.1 SDK 以降では、次のコマンドを実行して、お使いのコンピューターに既にインストールされている SDK のバージョンを確認できます。
+*global.json* ファイルでバージョンを設定するには、使用可能なバージョンがわかっていると便利です。 サポートされている使用可能な SDK の完全な一覧は、[.NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core) ページで確認できます。 .NET Core 2.1 SDK 以降では、次のコマンドを実行して、お使いのコンピューターに既にインストールされている SDK のバージョンを確認できます。
 
 ```console
 dotnet --list-sdks
 ```
 
-.NET Core SDK の別のバージョンをコンピューターにインストールするには、[.NET のダウンロード](https://www.microsoft.com/net/download/all) サイトにアクセスしてください。
+.NET Core SDK の別のバージョンをコンピューターにインストールするには、[.NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core) ページにアクセスしてください。
 
 次の例のような [dotnet new](dotnet-new.md) コマンドを実行することにより、新しい *global.json* ファイルを現在のディレクトリに作成できます。
 

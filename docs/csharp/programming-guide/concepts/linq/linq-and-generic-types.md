@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 891acd56939a2cff8eb377512a8a516f8a189034
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8ec2a599a6762d62d101f7660892a6d85a100794
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487432"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591940"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ とジェネリック型 (C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリは、.NET Framework のバージョン 2.0 で導入されたジェネリック型に基づいています。 クエリを記述するために、ジェネリックについて詳しく知っておく必要ありません。 ただし、次の 2 つの基本的な概念を理解しておくと役立ちます。  
@@ -20,22 +20,22 @@ ms.locfileid: "66487432"
   
 2. <xref:System.Collections.Generic.IEnumerable%601> は、`foreach` ステートメントを使用してジェネリック コレクションのクラスを列挙できるようにするインターフェイスです。 <xref:System.Collections.ArrayList> などの非ジェネリック コレクション クラスが <xref:System.Collections.IEnumerable> をサポートするように、ジェネリック コレクション クラスは、<xref:System.Collections.Generic.IEnumerable%601> をサポートします。  
   
- ジェネリックの詳細については、「[ジェネリック](../../../../csharp/programming-guide/generics/index.md)」を参照してください。  
+ ジェネリックの詳細については、「[ジェネリック](../../generics/index.md)」を参照してください。  
   
 ## <a name="ienumerablet-variables-in-linq-queries"></a>LINQ クエリの IEnumerable<T\> 変数  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ変数は、<xref:System.Collections.Generic.IEnumerable%601>、または <xref:System.Linq.IQueryable%601> などの派生型として型指定されます。 `IEnumerable<Customer>` として型指定されたクエリ変数が見つかった場合は、クエリが実行されたときに 0 個以上の `Customer` オブジェクトのシーケンスが作成されることを意味します。  
   
  [!code-csharp[csLINQGettingStarted#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#34)]  
   
- 詳細については、「[LINQ クエリ操作での型の関係](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)」を参照してください。  
+ 詳細については、「[LINQ クエリ操作での型の関係](./type-relationships-in-linq-query-operations.md)」を参照してください。  
   
 ## <a name="letting-the-compiler-handle-generic-type-declarations"></a>コンパイラによるジェネリック型の宣言の処理  
- 必要に応じて、[var](../../../../csharp/language-reference/keywords/var.md) キーワードを使用することにより、ジェネリックの構文を回避することもできます。 `var` キーワードは、`from` 句で指定されたデータ ソースを調べてクエリ変数の型を推論するようにコンパイラに指示します。 次の例では、前の例と同じコンパイル済みのコードが生成されます。  
+ 必要に応じて、[var](../../../language-reference/keywords/var.md) キーワードを使用することにより、ジェネリックの構文を回避することもできます。 `var` キーワードは、`from` 句で指定されたデータ ソースを調べてクエリ変数の型を推論するようにコンパイラに指示します。 次の例では、前の例と同じコンパイル済みのコードが生成されます。  
   
  [!code-csharp[csLINQGettingStarted#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#35)]  
   
- `var` キーワードは、変数の型が明らかな場合、または入れ子にされたジェネリック型 (グループ クエリで生成されたものなど) を明示的に指定する必要がない場合に便利です。 一般に、`var` を使用すると、他の開発者にとってコードが読みにくくなる可能性があることを理解しておくことをお勧めします。 詳細については、「[暗黙的に型指定されるローカル変数](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。  
+ `var` キーワードは、変数の型が明らかな場合、または入れ子にされたジェネリック型 (グループ クエリで生成されたものなど) を明示的に指定する必要がない場合に便利です。 一般に、`var` を使用すると、他の開発者にとってコードが読みにくくなる可能性があることを理解しておくことをお勧めします。 詳細については、「[暗黙的に型指定されるローカル変数](../../classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ジェネリック](../../../../csharp/programming-guide/generics/index.md)
+- [ジェネリック](../../generics/index.md)

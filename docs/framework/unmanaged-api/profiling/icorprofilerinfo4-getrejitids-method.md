@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d2d48e5fb070ec0334de579d2e28146177a87b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 805ceb60d2ac122df2382656b95b7bf5e7509bfc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049480"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855946"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs メソッド
-JIT 再コンパイルのすべてのバージョン指定の関数も割り当てられているを識別する Id の配列を返します。 これには、後で元に戻されますが (たとえば、元に戻された関数を含むアプリケーション ドメインでは、使用中で) ときに解放されていない関数の JIT 再コンパイルのバージョンが含まれます。  
+割り当てられている指定された関数のすべての JIT 再コンパイルバージョンを識別する Id の配列を返します。 これには、後で元に戻されたがまだ解放されていない関数の JIT 再コンパイルバージョンが含まれます (たとえば、元に戻された関数を含むアプリケーションドメインがまだ使用されている場合など)。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetReJITIDs (  
      [in]  FunctionID          functionId,  
      [in]  ULONG               cReJitIds,  
@@ -39,26 +39,26 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in]`FunctionID`関数インスタンスのバージョンを列挙するのです。  
+ からバージョンを列挙する対象の関数インスタンスの。`FunctionID`  
   
  `cReJitIds`  
- [in]JIT 再コンパイルの Id の割り当ての数、`reJitIds`配列。  
+ から`reJitIds`配列に割り当てられた JIT 再コンパイル済み id の数。  
   
  `pcReJitIds`  
- [out]実際に JIT 再コンパイルの Id の数。  
+ 入出力JIT 再コンパイルされた Id の実際の数。  
   
  `reJitIds`  
- [out]指定した関数の JIT 再コンパイルの Id を含む、呼び出し元が割り当てた配列。  
+ 入出力指定した関数の JIT 再コンパイルされた Id を格納する、呼び出し元が割り当てた配列。  
   
 ## <a name="remarks"></a>Remarks  
- `GetReJITIDs` 指定された関数のインスタンスのアクティブな JIT 再コンパイルの Id を列挙します。 他の同時使用状況パターンに従って`ICorProfilerInfo`呼び出し元が割り当てたバッファーを受け取る関数をします。  
+ `GetReJITIDs`指定された関数インスタンスのアクティブな JIT 再コンパイル済み Id を列挙します。 これは、呼び出し元が割り当てた`ICorProfilerInfo`バッファーを受け入れる他の関数と同じ使用パターンに従います。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー:** Corprof.idl、Corprof.idl  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: bceb6283e202dfa699115edd6e0a1a040095783d
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7319d424b84d5edd41fc255e3aea763da55961a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58028704"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606734"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>カテゴリ別の C# コンパイラ オプションの一覧
 
@@ -102,7 +102,7 @@ ms.locfileid: "58028704"
 |[-nologo](nologo-compiler-option.md)|コンパイラの著作権情報が表示されないようにします。|
 |[-recurse](recurse-compiler-option.md)|コンパイルするソース ファイルをサブディレクトリで検索します。|
 |[-subsystemversion](subsystemversion-compiler-option.md)|実行可能ファイルが使用できるサブシステムの最低限のバージョンを指定します。|
-|[/unsafe](unsafe-compiler-option.md)|[unsafe](../../../csharp/language-reference/keywords/unsafe.md) キーワードを使用するコードのコンパイルを有効にします。|
+|[/unsafe](unsafe-compiler-option.md)|[unsafe](../keywords/unsafe.md) キーワードを使用するコードのコンパイルを有効にします。|
 |[-utf8output](utf8output-compiler-option.md)|UTF-8 エンコードを使用してコンパイラ出力を表示します。|
 |-parallel[+&#124;-]|同時実行ビルドを使用する (+) かどうかを指定します。|
 |-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA1 (既定値) または SHA256 です。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|

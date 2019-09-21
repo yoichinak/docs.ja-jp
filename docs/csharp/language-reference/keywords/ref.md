@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 5b45a24e719a03d052c88b5afd64bbe13eb0793e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: f11137b3c13bb9e8670c4df25fedf3251724a088
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610067"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566892"
 ---
 # <a name="ref-c-reference"></a>ref (C# リファレンス)
 
@@ -22,7 +22,7 @@ ms.locfileid: "67610067"
 - メソッド シグネチャとメソッドの呼び出しで、参照によってメソッドに引数を渡します。 詳細については、「[参照渡しで引数を渡す](#passing-an-argument-by-reference)」を参照してください。
 - メソッド シグネチャで、参照渡しで呼び出し元に値を返します。 詳細については、[参照戻り値](#reference-return-values)に関するページを参照してください。
 - メンバーの本文で、参照戻り値が、呼び出し元によって変更される参照としてローカルに格納されること、または、通常はローカル変数が参照渡しによって別の値にアクセスすることを示します。 詳細については、「[ref ローカル変数](#ref-locals)」を参照してください。
-- `struct` の宣言で、`ref struct` または `ref readonly struct` を宣言します。 詳細については、「[ref 構造体型](#ref-struct-types)」を参照してください。
+- `struct` の宣言で、`ref struct` または `readonly ref struct` を宣言します。 詳細については、「[ref 構造体型](#ref-struct-types)」を参照してください。
 
 ## <a name="passing-an-argument-by-reference"></a>参照渡しで引数を渡す
 

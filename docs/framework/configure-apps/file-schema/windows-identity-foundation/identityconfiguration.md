@@ -3,19 +3,20 @@ title: <identityConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
 author: BrucePerlerMS
-ms.openlocfilehash: 91d64ce0d6a5cdbf32fec4a476fb111afe9a7952
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fa8c574fd5663606cf081f1000a24884306edfe
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791704"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251996"
 ---
 # <a name="identityconfiguration"></a>\<identityConfiguration>
 
-サービス レベルの id の設定を指定します。
+サービスレベルの id 設定を指定します。
 
- \<system.identityModel>\
-\<identityConfiguration>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<システムの >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<構成 >**  
 
 ## <a name="syntax"></a>構文
 
@@ -37,59 +38,59 @@ ms.locfileid: "61791704"
 
 |属性|説明|
 |---------------|-----------------|
-|name|Id の構成セクションの名前。 この名前を使用して、特定の構成セクションを参照することができます。 ない場合は`name`属性を指定すると、セクションは、既定の構成を定義します。 既定の構成は常に、パッシブ フェデレーション シナリオの使用します。 詳細については、次を参照してください。、 [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)要素。|
-|saveBootstrapContext|セッション トークンにブートス トラップ トークンを含める必要があるかどうかを指定します。 設定して、値がトークン ハンドラー コレクションに設定することも可能性があります、`saveBootstrapContext`属性を[ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)要素。 トークン ハンドラー コレクションに設定値は、サービスの設定値をオーバーライドします。|
-|maximumClockSkew|A<xref:System.TimeSpan>許可されている最大のクロック スキューを指定します。 サインイン セッションの有効期限の検証などの時間を区別する操作を実行するときは、最大の許可されている時刻のずれを制御します。 既定値は 5 分間、"00: 継続"。 指定する方法の詳細についての<xref:System.TimeSpan>値を参照してください[Timespan 値](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)します。 設定して、最大クロック スキューがトークン ハンドラー コレクションに設定することも可能性があります、`maximumClockSkew`属性を[ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)要素。 トークン ハンドラー コレクションに設定値は、サービスの設定値をオーバーライドします。|
+|name|Id 構成セクションの名前。 この名前を使用して、特定の構成セクションを参照することができます。 `name`属性が指定されていない場合、セクションでは既定の構成を定義します。 既定の構成は、パッシブフェデレーションシナリオでは常に使用されます。 詳細については、「 [ \<federationConfiguration >](federationconfiguration.md)要素」を参照してください。|
+|saveBootstrapContext|ブートストラップトークンをセッショントークンに含める必要があるかどうかを指定します。 また、 `saveBootstrapContext` [ \<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)要素の属性を設定することによって、トークンハンドラーコレクションに値を設定することもできます。 トークンハンドラーコレクションに設定された値は、サービスで設定された値よりも優先されます。|
+|maximumClockSkew|許容される最大のクロックスキューを指定する。<xref:System.TimeSpan> サインインセッションの有効期限の検証など、時間を区別する操作を実行するときに許容される最大のクロックスキューを制御します。 既定値は5分 "00:05:00" です。 値を指定<xref:System.TimeSpan>する方法の詳細については、「 [Timespan values](../windows-workflow-foundation/index.md)」を参照してください。 SecurityTokenHandlerConfiguration > 要素の`maximumClockSkew`属性[を設定することによって、トークンハンドラーコレクションに最大クロックスキューを設定することもできます。 \<](securitytokenhandlerconfiguration.md) トークンハンドラーコレクションに設定された値は、サービスで設定された値よりも優先されます。|
 
 ### <a name="child-elements"></a>子要素
 
 |要素|説明|
 |-------------|-----------------|
-|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|セッション トークンやトークン リプレイ検出のために使用されるキャッシュを登録します。 サービス レベルまたはセキュリティ トークン ハンドラー コレクションに指定できます。 省略可能です。|
-|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|トークン ハンドラーを使用して証明書の検証の設定を制御します。 サービス レベルまたはセキュリティ トークン ハンドラー コレクションに指定できます。 省略可能です。|
-|[\<claimsAuthenticationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|入力方向の要求のクレーム認証マネージャーを登録します。 省略可能です。|
-|[\<claimsAuthorizationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|入力方向の要求のクレーム承認マネージャーを登録します。 省略可能です。|
-|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|必要な受信セキュリティ トークンのクレームのセットを指定します。 省略可能です。|
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|セキュリティ トークン ハンドラーのコレクションを指定します。 セキュリティ トークン ハンドラーの 0 個以上のコレクションを指定することができます。 省略可能です。|
-|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|トークン リプレイ検出が有効にし、トークンの有効期限を指定します。 サービス レベルまたはセキュリティ トークン ハンドラー コレクションに指定できます。 任意。|
+|[\<キャッシュ >](caches.md)|セッショントークンとトークンリプレイ検出に使用されるキャッシュを登録します。 は、サービスレベルまたはセキュリティトークンハンドラーコレクションで指定できます。 任意。|
+|[\<certificateValidation >](certificatevalidation.md)|トークンハンドラーが証明書を検証するために使用する設定を制御します。 は、サービスレベルまたはセキュリティトークンハンドラーコレクションで指定できます。 任意。|
+|[\<claimsAuthenticationManager>](claimsauthenticationmanager.md)|入力方向の要求に対して要求認証マネージャーを登録します。 任意。|
+|[\<claimsAuthorizationManager >](claimsauthorizationmanager.md)|入力方向の要求に対して要求承認マネージャーを登録します。 任意。|
+|[\<claimTypeRequired>](claimtyperequired.md)|受信セキュリティトークンに必要な要求のセットを指定します。 任意。|
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|セキュリティトークンハンドラーのコレクションを指定します。 セキュリティトークンハンドラーの0個以上のコレクションを指定できます。 任意。|
+|[\<tokenReplayDetection>](tokenreplaydetection.md)|トークンリプレイ検出を有効にし、トークンの有効期限を指定します。 は、サービスレベルまたはセキュリティトークンハンドラーコレクションで指定できます。 任意。|
 
 ### <a name="parent-elements"></a>親要素
 
 |要素|説明|
 |-------------|-----------------|
-|[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|アプリケーションの Windows Identity Foundation (WIF) オプションを有効にするための構成を提供します。|
+|[\<system.identityModel>](system-identitymodel.md)|アプリケーションで Windows Identity Foundation (WIF) オプションを有効にするための構成を提供します。|
 
 ## <a name="remarks"></a>Remarks
 
-それぞれに一意の名前を複数の id 構成を定義することがあります。 動作は次のとおりです。
+複数の id 構成を定義し、それぞれに一意の名前を指定できます。 動作は次のとおりです。
 
-1. ない場合は`<identityConfiguration>`要素が指定されています。 既定の id 構成では、実行時に作成され、既定値が入力されます。
+1. `<identityConfiguration>`要素が指定されていない場合は。 既定の id 構成は、実行時に作成され、既定値が設定されます。
 
-2. 場合、1 つ`<identityConfiguration>`要素が指定されています。 既定の id 構成することをお勧めします。 という名前または名前のないかどうかは関係ありません。
+2. 1つ`<identityConfiguration>`の要素が指定されている場合。 これは既定の id 構成です。 名前が付けられているか名前が付いていないかは関係ありません。
 
-3. 複数`<identityConfiguration>`の要素を指定します。 名前のない要素には、既定の id 構成を指定します。 お勧めする複数指定するときに`<identityConfiguration>`要素、うち 1 つはならない名前付き。
+3. 複数`<identityConfiguration>`の要素が指定されている場合。 無名の要素は、既定の id 構成を指定します。 複数`<identityConfiguration>`の要素を指定する場合は、そのうちの1つを名前のないものにすることをお勧めします。
 
 > [!WARNING]
-> 複数指定する場合`<identityConfiguration>`要素、うち 1 つはならない名前付き。 名前のない要素が既定の id 構成になります。
+> 複数`<identityConfiguration>`の要素を指定する場合は、そのうちの1つを名前なしにする必要があります。 名前のない要素が既定の id 構成になります。
 
- 指定された設定の一部、`<identityConfiguration>`要素は、セキュリティ トークン ハンドラー コレクションの設定によって、または個々 のセキュリティ トークン ハンドラーの設定によってオーバーライドできます。
-
-> [!IMPORTANT]
-> 使用する場合、<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>または<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>コードによって参照される id の構成で信頼性情報ベースのアクセス制御を提供するクラス、`<federationConfiguration>`要素は、クレーム承認マネージャーとを使用して、ポリシーを構成します。承認の判断。 これは Windows Communication Foundation (WCF) アプリケーションまたは Web ベースでないアプリケーションなど、受動的な Web シナリオではないシナリオであっても、当てはまります。 アプリケーションが、パッシブの Web アプリケーションではない場合、 [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)要素 (とその子ポリシー要素、存在する場合) の参照先の id 構成だけに適用される設定。 その他のすべての設定は無視されます。 詳細については、次を参照してください。、 [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)要素。
-
-`<identityConfiguration>`要素が表される、<xref:System.IdentityModel.Configuration.IdentityConfigurationElement>クラス。 Id の構成セクションがによって表される、<xref:System.IdentityModel.Configuration.IdentityConfiguration>クラス。
+ `<identityConfiguration>`要素で指定された設定の一部は、セキュリティトークンハンドラーコレクションの設定、または個々のセキュリティトークンハンドラーの設定によって上書きできます。
 
 > [!IMPORTANT]
-> 子要素として、次の要素を指定する、`<identityConfiguration>`動作は旧バージョンとの互換性のため引き続きサポートされています。 要素は推奨されていません。 これらの要素を指定する必要があります、代わりに、 [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)要素。
+> クラスまたは<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>クラスを使用して、コードにクレームベースのアクセス制御を提供する場合、 `<federationConfiguration>`要素によって参照される id 構成によって、要求承認マネージャーと、 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>承認の決定。 これは、Windows Communication Foundation (WCF) アプリケーションや Web ベースではないアプリケーションなど、パッシブな Web シナリオではないシナリオでも当てはまります。 アプリケーションがパッシブな Web アプリケーション[ \<](claimsauthorizationmanager.md)でない場合は、参照される id 構成の claimsAuthorizationManager > 要素 (およびその子ポリシー要素が存在する場合) が適用される唯一の設定です。 その他の設定はすべて無視されます。 詳細については、「 [ \<federationConfiguration >](federationconfiguration.md)要素」を参照してください。
+
+要素は、 <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>クラスによって表されます。 `<identityConfiguration>` Id 構成セクションは、 <xref:System.IdentityModel.Configuration.IdentityConfiguration>クラスによって表されます。
+
+> [!IMPORTANT]
+> `<identityConfiguration>`要素の子要素として次の要素を指定することは非推奨とされますが、旧バージョンとの互換性のために動作は引き続きサポートされています。 代わりに、これらの要素を[ \<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)要素の下に指定する必要があります。
 >
-> - [\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)
-> - [\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)
-> - [\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)
-> - [\<serviceTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)
+> - [\<audienceUris>](audienceuris.md)
+> - [\<issuerNameRegistry >](issuernameregistry.md)
+> - [\<issuerTokenResolver >](issuertokenresolver.md)
+> - [\<serviceTokenResolver>](servicetokenresolver.md)
 
 ## <a name="example"></a>例
 
-次の例では、"alternateConfiguration"をという名前の id 構成を作成します。 Id の構成では、既定の設定を指定します。
+次の例では、"alternateConfiguration" という名前の id 構成を作成します。 Id 構成では、既定の設定を指定します。
 
 ```xml
 <system.identityModel>

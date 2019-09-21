@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da73df97524b9e394fac795daf14a3f0fb1f4e3d
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 410f95b373e079fe959068a6540642a6ad043e95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661383"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952819"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework のアクセシビリティの新機能
 
@@ -22,7 +22,7 @@ ms.locfileid: "67661383"
 
 ## <a name="accessibility-switches"></a>アクセシビリティのスイッチ
 
-アプリのターゲットが .NET Framework 4.7 である場合、またはそれより前のバージョンがターゲットであっても実行環境が .NET Framework 4.7.1 以降である場合は、ユーザー補助機能を使用するようにアプリを構成できます。 また、アプリのターゲットが 4.7.1 .NET Framework 以降である場合は、従来の機能を使用するように (そして、ユーザー補助機能を利用しないように) アプリを構成することもできます。 ユーザー補助機能が含まれる .NET Framework の各バージョンには、バージョン固有のアクセシビリティ スイッチがあります。これを、アプリケーションの構成ファイルの [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素に追加します。 サポートされているスイッチは次のとおりです。
+アプリのターゲットが .NET Framework 4.7 である場合、またはそれより前のバージョンがターゲットであっても実行環境が .NET Framework 4.7.1 以降である場合は、ユーザー補助機能を使用するようにアプリを構成できます。 また、アプリのターゲットが 4.7.1 .NET Framework 以降である場合は、従来の機能を使用するように (そして、ユーザー補助機能を利用しないように) アプリを構成することもできます。 ユーザー補助機能が含まれる .NET Framework の各バージョンには、バージョン固有のアクセシビリティ スイッチがあります。これを、アプリケーションの構成ファイルの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素に追加します。 サポートされているスイッチは次のとおりです。
 
 |Version|切り替え|
 |---|---|
@@ -32,7 +32,7 @@ ms.locfileid: "67661383"
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>アクセシビリティ拡張機能の利用
 
-.NET Framework 4.7.1 以降をターゲット対象とするアプリケーションでは、この新しいユーザー補助機能が既定で有効になっています。 また、それより前のバージョンの .NET Framework がターゲットであっても、実行環境が .NET Framework 4.7.1 以降であるアプリケーションの場合は、アプリケーションの構成ファイルの [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素にスイッチを追加し、値を `false` に設定することで、古いアクセシビリティ動作を利用しないことを (そして、それにより向上したアクセシビリティ機能改善を利用することを) 選択できます。 .NET Framework 4.7.1 で導入されたアクセシビリティの機能強化を有効にする方法を次に示します。
+.NET Framework 4.7.1 以降をターゲット対象とするアプリケーションでは、この新しいユーザー補助機能が既定で有効になっています。 また、それより前のバージョンの .NET Framework がターゲットであっても、実行環境が .NET Framework 4.7.1 以降であるアプリケーションの場合は、アプリケーションの構成ファイルの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素にスイッチを追加し、値を `false` に設定することで、古いアクセシビリティ動作を利用しないことを (そして、それにより向上したアクセシビリティ機能改善を利用することを) 選択できます。 .NET Framework 4.7.1 で導入されたアクセシビリティの機能強化を有効にする方法を次に示します。
 
 ```xml
 <runtime>
@@ -41,7 +41,7 @@ ms.locfileid: "67661383"
 </runtime>
 ```
 
-新しいバージョンの .NET Framework のユーザー補助機能を選択する場合は、古いバージョンの .NET Framework の機能も明示的に選択する必要があります。 .NET Framework 4.7.1 と 4.7.2 両方のアクセシビリティ機能改善を利用するようにアプリを構成するには、次の [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素が必要です。
+新しいバージョンの .NET Framework のユーザー補助機能を選択する場合は、古いバージョンの .NET Framework の機能も明示的に選択する必要があります。 .NET Framework 4.7.1 と 4.7.2 両方のアクセシビリティ機能改善を利用するようにアプリを構成するには、次の [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素が必要です。
 
 ```xml
 <runtime>
@@ -50,7 +50,7 @@ ms.locfileid: "67661383"
 </runtime>
 ```
 
-.NET Framework 4.7.1、4.7.2、4.8 のアクセシビリティ機能改善を利用するようにアプリを構成するには、次の [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素が必要です。
+.NET Framework 4.7.1、4.7.2、4.8 のアクセシビリティ機能改善を利用するようにアプリを構成するには、次の [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素が必要です。
 
 ```xml
 <runtime>
@@ -61,7 +61,7 @@ ms.locfileid: "67661383"
 
 ### <a name="restoring-legacy-behavior"></a>従来の動作に戻す
 
-アプリケーションがバージョン 4.7.1 以降の .NET Framework をターゲットにしている場合、アプリケーションの構成ファイルの [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素にスイッチを追加し、値を `true` に設定することで、アクセシビリティ機能を無効にできます。 たとえば、次の構成は、.NET Framework 4.7.2 で導入されたユーザー補助機能を無効にします。
+アプリケーションがバージョン 4.7.1 以降の .NET Framework をターゲットにしている場合、アプリケーションの構成ファイルの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素にスイッチを追加し、値を `true` に設定することで、アクセシビリティ機能を無効にできます。 たとえば、次の構成は、.NET Framework 4.7.2 で導入されたユーザー補助機能を無効にします。
 
 ```xml
 <runtime>

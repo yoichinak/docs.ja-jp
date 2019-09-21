@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 85e971d3464b6f2a073288e7f8b5406563598f79
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f722977928604e5876e52a7329eef5c933bf2a7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634753"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046471"
 ---
 # <a name="anchors-in-regular-expressions"></a>正規表現のアンカー
 <a name="top"></a> アンカー (アトミック ゼロ幅アサーション) は、文字列が一致する位置を指定します。 検索式でアンカーを使用した場合、正規表現エンジンは、後方の文字列を読み込んだり、文字に一致させたりすることはしません。指定された位置での一致のみが検索されます。 たとえば、 `^` は、行または文字列の先頭に一致する必要があることを指定します。 したがって、正規表現 `^http:` は、"http:" が行の先頭にある場合にのみ一致します。 次の表は、.NET の正規表現でサポートされているアンカーの一覧です。  
@@ -57,8 +57,8 @@ ms.locfileid: "64634753"
   
 |パターン|説明|  
 |-------------|-----------------|  
-|`^`|入力文字列の先頭から (または、<xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションを指定してメソッドが呼び出された場合は行の先頭から) 照合を開始します。|  
-|`((\w+(\s?)){2,}`|1 個以上の単語文字の後に 0 個または 1 個の空白が続くパターンが、2 回繰り返される部分に一致します。 これが最初のキャプチャ グループです。 この式では、2 番目と 3 番目のキャプチャ グループも定義されます。2 番目はキャプチャ ワードで、3 番目はキャプチャされたスペースで構成されます。|  
+|`^`|入力文字列の先頭から (または、 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションを指定してメソッドが呼び出された場合は行の先頭から) 照合を開始します。|  
+|`((\w+(\s?)){2,}`|1 個以上の単語文字の後に 0 個または 1 個の空白が続くパターンが少なくとも 2 回繰り返される部分に一致します。 これが最初のキャプチャ グループです。 この式では、2 番目と 3 番目のキャプチャ グループも定義されます。2 番目はキャプチャ ワードで、3 番目はキャプチャされた空白で構成されます。|  
 |`,\s`|コンマおよびそれに続く空白文字に一致します。|  
 |`(\w+\s\w+)`|1 個以上の単語文字の後に 1 個の空白が続き、さらに 1 個以上の単語文字が続くパターンに一致します。 これが 4 番目のキャプチャ グループです。|  
 |`,`|コンマに一致します。|  

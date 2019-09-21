@@ -1,5 +1,5 @@
 ---
-title: '方法: 非同期データ サービス クエリ (WCF Data Services) を実行します。'
+title: '方法: 非同期データサービスクエリの実行 (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
-ms.openlocfilehash: f89a5004afeffe5aa9a28cb2d43374aede8a935e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14bfc138c5ece45184fb939f19aaf3d7e73e7294
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936527"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790570"
 ---
-# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>方法: 非同期データ サービス クエリ (WCF Data Services) を実行します。
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアント ライブラリを使用して、クエリの実行や変更の保存などのクライアント サーバー操作を非同期で実行できます。 詳細については、次を参照してください。[非同期操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)します。  
+# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>方法: 非同期データサービスクエリの実行 (WCF Data Services)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアント ライブラリを使用して、クエリの実行や変更の保存などのクライアント サーバー操作を非同期で実行できます。 詳細については、「[非同期操作](asynchronous-operations-wcf-data-services.md)」を参照してください。  
   
 > [!NOTE]
->  特定のスレッドでコールバックが呼び出される必要のあるアプリケーションでは、<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> メソッドの実行を明示的にマーシャリングする必要があります。 詳細については、次を参照してください。[非同期操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)します。  
+> 特定のスレッドでコールバックが呼び出される必要のあるアプリケーションでは、<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> メソッドの実行を明示的にマーシャリングする必要があります。 詳細については、「[非同期操作](asynchronous-operations-wcf-data-services.md)」を参照してください。  
   
- このトピックの例では、Northwind サンプル データ サービスおよび自動生成されたクライアント データ サービス クラスを使用します。 このサービスとクライアント データ クラスを作成を完了すると、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)します。  
+ このトピックの例では、Northwind サンプル データ サービスおよび自動生成されたクライアント データ サービス クラスを使用します。 このサービスとクライアントデータクラスは、 [WCF Data Services のクイックスタート](quickstart-wcf-data-services.md)を完了したときに作成されます。  
   
 ## <a name="example"></a>例  
  次の例では、<xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> メソッドを呼び出してクエリを開始することで、非同期クエリを実行する方法を示します。 インライン デリゲートは、<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> メソッドを呼び出してクエリ結果を表示します。  
@@ -31,4 +31,4 @@ ms.locfileid: "61936527"
   
 ## <a name="see-also"></a>関連項目
 
-- [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Data Services クライアント ライブラリ](wcf-data-services-client-library.md)

@@ -5,18 +5,18 @@ ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: e0ff3fe98fcd9ced0063d2bec85928504ea19bab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1366e8f5f79a8e695e52c405e20a894861453ae7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743194"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781769"
 ---
 # <a name="how-to-map-inheritance-hierarchies"></a>方法: 継承階層を割り当てる
-[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] で継承の割り当てを実装するには、以下の手順で示すように、継承階層のルート クラスで属性および属性プロパティを指定する必要があります。 Visual Studio を使用して開発者は、オブジェクト リレーショナル デザイナーを使用して、継承階層を割り当てることができます。 「[方法:O/R デザイナーを使用して継承を構成する](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)」を参照してください。  
+[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] で継承の割り当てを実装するには、以下の手順で示すように、継承階層のルート クラスで属性および属性プロパティを指定する必要があります。 Visual Studio を使用する開発者は、オブジェクトリレーショナルデザイナーを使用して継承階層をマップできます。 「[方法:O/R デザイナーを使用して継承を構成する](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)」を参照してください。  
   
 > [!NOTE]
->  サブクラスには特別な属性やプロパティは必要ありません。 特に、サブクラスに <xref:System.Data.Linq.Mapping.TableAttribute> 属性がない点に注意してください。  
+> サブクラスには特別な属性やプロパティは必要ありません。 特に、サブクラスに <xref:System.Data.Linq.Mapping.TableAttribute> 属性がない点に注意してください。  
   
 ### <a name="to-map-an-inheritance-hierarchy"></a>継承階層を割り当てるには  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67743194"
   
 5. 1 つの <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> 属性にのみ、<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> プロパティを追加します。  
   
-     このプロパティを指定する役割を果たします、*フォールバック*マッピングのいずれかとも、データベース テーブルからの識別子の値が一致しない場合に<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>継承マッピング内の値。  
+     このプロパティは、データベーステーブルの識別子の値が継承マッピングのどの<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>値とも一致しない場合に、フォールバックマッピングを指定するために機能します。  
   
 6. <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> 属性に <xref:System.Data.Linq.Mapping.ColumnAttribute> プロパティを追加します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67743194"
 ## <a name="example"></a>例  
   
 > [!NOTE]
->  Visual Studio を使用している場合は、継承を構成するオブジェクト リレーショナル デザイナーを使用できます。 「[方法:O/R デザイナーを使用して継承を構成する](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
+> Visual Studio を使用している場合は、オブジェクトリレーショナルデザイナーを使用して継承を構成できます。 「[方法:O/R デザイナーを使用して継承を構成する](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
   
  次のコード例では、`Vehicle` をルート クラスとして定義し、ここまでの手順を実装して、[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] の階層構造を指定します。  
   
@@ -52,5 +52,5 @@ ms.locfileid: "67743194"
   
 ## <a name="see-also"></a>関連項目
 
-- [継承のサポート](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)
-- [方法: コード エディターを使用してエンティティ クラスをカスタマイズします。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [継承のサポート](inheritance-support.md)
+- [方法: コードエディターを使用してエンティティクラスをカスタマイズする](how-to-customize-entity-classes-by-using-the-code-editor.md)

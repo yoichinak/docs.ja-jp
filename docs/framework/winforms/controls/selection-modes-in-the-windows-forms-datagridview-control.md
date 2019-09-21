@@ -5,45 +5,47 @@ helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cfe80d5ccb73208f1c61a2ac6c9963343d398bcb
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902669"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046415"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールの選択モード
-アプリケーション内のユーザー選択に基づいてアクションを実行したい場合があります、<xref:System.Windows.Forms.DataGridView>コントロール。 によって、アクション可能な選択の種類を制限します。 たとえば、アプリケーションは、現在選択されているレコードのレポートを印刷できます。 ここでは、構成にする可能性があります、<xref:System.Windows.Forms.DataGridView>コントロールに常に、行内でクリックしてできるようには、全体の行を選択し、一度に 1 つだけその行を選択できるようにします。  
-  
- 設定で許可されている選択内容を指定することができます、<xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType>プロパティを次のいずれか<xref:System.Windows.Forms.DataGridViewSelectionMode>列挙値。  
-  
-|DataGridViewSelectionMode 値|説明|  
-|-------------------------------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|セルをクリックするを選択します。 選択範囲の行および列ヘッダーを使用できません。|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|セルをクリックするを選択します。 列見出しをクリックすると、全体の列が選択されます。 列ヘッダーは、並べ替えに使用できません。|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>|セルまたは列ヘッダーをクリックすると、列全体を選択します。 列ヘッダーは、並べ替えに使用できません。|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>|セルまたは行ヘッダーをクリックすると、行全体を選択します。|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>|既定の選択モード。 セルをクリックするを選択します。 行ヘッダーをクリックすると、全体の行が選択されます。|  
-  
+
+場合によっては、アプリケーションで、 <xref:System.Windows.Forms.DataGridView>コントロール内のユーザーの選択に基づいてアクションを実行する必要があります。 アクションによっては、可能な選択の種類を制限することができます。 たとえば、現在選択されているレコードのレポートをアプリケーションで印刷できるとします。 この場合は、行内の任意の場所<xref:System.Windows.Forms.DataGridView>をクリックすると常に行全体が選択されるようにコントロールを構成し、一度に1行しか選択できないようにすることができます。
+
+<xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType>プロパティを次<xref:System.Windows.Forms.DataGridViewSelectionMode>の列挙値のいずれかに設定することによって、許可される選択を指定できます。
+
+|DataGridViewSelectionMode 値|説明|
+|-------------------------------------|-----------------|
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|セルをクリックすると、そのセルが選択されます。 行と列のヘッダーを選択に使用することはできません。|
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|セルをクリックすると、そのセルが選択されます。 列ヘッダーをクリックすると、列全体が選択されます。 列ヘッダーを並べ替えに使用することはできません。|
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>|セルまたは列ヘッダーをクリックすると、列全体が選択されます。 列ヘッダーを並べ替えに使用することはできません。|
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>|セルまたは行ヘッダーをクリックすると、行全体が選択されます。|
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>|既定の選択モード。 セルをクリックすると、そのセルが選択されます。 行ヘッダーをクリックすると、行全体が選択されます。|
+
 > [!NOTE]
->  実行時に自動的に選択モードを変更すると、現在の選択が解除されます。  
-  
- 既定では、ユーザー選択できます複数の行、列、またはセル、マウスをドラッグして ctrl キーまたは shift キーを押しながらを拡張または変更、選択範囲を選択するか、コントロール内のすべてのセルの選択を左上のヘッダー セルをクリックします。 この動作を防ぐためには、設定、<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>プロパティを`false`します。  
-  
- <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>と<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>モードを選択し、DEL キーを押して行を削除するユーザーを許可します。 現在のセルが編集モードでない場合にのみ、ユーザーが行を削除できる、<xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A>プロパティに設定されて`true`、基になるデータ ソースは、ユーザーによる行の削除をサポートしています。 これらの設定では、プログラムによる行の削除されないことに注意してください。  
-  
-## <a name="programmatic-selection"></a>プログラムの選択  
- 現在の選択モードでは、プログラムの選択とユーザーの選択の動作を制限します。 設定してプログラムで現在の選択範囲を変更することができます、`Selected`任意のセル、行、または表示されている列のプロパティ、<xref:System.Windows.Forms.DataGridView>コントロール。 使用してコントロールのすべてのセルを選択することも、<xref:System.Windows.Forms.DataGridView.SelectAll%2A>選択モードに応じてのメソッド。 選択範囲をクリアするには、使用、<xref:System.Windows.Forms.DataGridView.ClearSelection%2A>メソッド。  
-  
- 場合、<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>プロパティに設定されて`true`、追加することができます<xref:System.Windows.Forms.DataGridView>要素をまたは変更することで、選択範囲から削除、`Selected`要素のプロパティ。 それ以外の場合、設定、`Selected`プロパティを`true`の 1 つの要素は、選択範囲からの他の要素を自動的に削除されます。  
-  
- 値を変更することに注意してください、<xref:System.Windows.Forms.DataGridView.CurrentCell%2A>プロパティが現在の選択範囲を変更しません。  
-  
- 現在選択されているセル、行、または列のコレクションを取得することができます、 <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>、 <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>、および<xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>のプロパティ、<xref:System.Windows.Forms.DataGridView>コントロール。 コントロール内のすべてのセルが選択されている場合は、これらのプロパティにアクセスする効率的です。 この場合、パフォーマンスの低下を避けるため、使用、<xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>メソッド最初。 さらに、選択されたセルの数を決定するこれらのコレクションにアクセスする行、または列はできない効率的です。 代わりに、使用する必要があります、 <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>、 <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A>、または<xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A>に渡して、メソッド、<xref:System.Windows.Forms.DataGridViewElementStates.Selected>値。  
-  
+> 実行時に選択モードを変更すると、現在の選択範囲が自動的にクリアされます。
+
+既定では、複数の行、列、またはセルを選択してマウスでドラッグしたり、CTRL キーまたは SHIFT キーを押しながら選択範囲を拡張または変更したり、左上のヘッダーセルをクリックしてコントロール内のすべてのセルを選択したりすることができます。 この動作を回避するには<xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 、プロパティ`false`をに設定します。
+
+モード<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> と<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>モードでは、ユーザーが行を選択して del キーを押すことにより、行を削除できます。 ユーザーが行を削除できるのは、現在のセルが編集モード<xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A>ではなく、プロパティがに`true`設定されていて、基になるデータソースがユーザーによる行の削除をサポートしている場合のみです。 これらの設定では、プログラムによる行の削除が妨げられないことに注意してください。
+
+## <a name="programmatic-selection"></a>プログラムによる選択
+
+現在の選択モードでは、ユーザーが選択するだけでなく、プログラムによる選択の動作が制限されます。 コントロールに存在するセル、行、または`Selected`列のプロパティを設定することにより、現在の選択項目をプログラムで変更できます。 <xref:System.Windows.Forms.DataGridView> 選択モードに応じて、 <xref:System.Windows.Forms.DataGridView.SelectAll%2A>メソッドを使用してコントロール内のすべてのセルを選択することもできます。 選択範囲をクリアするには<xref:System.Windows.Forms.DataGridView.ClearSelection%2A> 、メソッドを使用します。
+
+プロパティがに`true`設定されている場合は<xref:System.Windows.Forms.DataGridView> 、要素の`Selected`プロパティを変更することによって、要素を追加したり、選択から削除したりできます。 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> それ以外の場合`Selected` 、1 `true`つの要素に対してプロパティをに設定すると、その他の要素が自動的に選択から削除されます。
+
+<xref:System.Windows.Forms.DataGridView.CurrentCell%2A>プロパティの値を変更しても、現在の選択内容は変更されないことに注意してください。
+
+現在選択されているセル、行、または列のコレクションを取得<xref:System.Windows.Forms.DataGridView.SelectedCells%2A>する<xref:System.Windows.Forms.DataGridView.SelectedRows%2A>には<xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> 、 <xref:System.Windows.Forms.DataGridView>コントロールの、、の各プロパティを使用します。 コントロールのすべてのセルが選択されている場合、これらのプロパティへのアクセスは非効率的です。 この場合、パフォーマンスが低下しないようにする<xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>には、最初にメソッドを使用します。 また、選択したセル、行、または列の数を決定するために、これらのコレクションにアクセスするのは効率的ではありません。 代わりに、、 <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A>、または<xref:System.Windows.Forms.DataGridView.GetCellCount%2A>のいずれか<xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A>のメソッドを使用し<xref:System.Windows.Forms.DataGridViewElementStates.Selected>て、値を渡す必要があります。
+
 > [!TIP]
->  選択されたセルのプログラムによる使用方法を示すコード例が記載されて、<xref:System.Windows.Forms.DataGridView>クラスの概要。  
-  
+> 選択したセルのプログラムによる使用方法を示すコード例に<xref:System.Windows.Forms.DataGridView>ついては、「クラスの概要」を参照してください。
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.DataGridView>
@@ -51,4 +53,4 @@ ms.locfileid: "61902669"
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
 - [Windows フォーム DataGridView コントロールでの選択およびクリップボードの使用](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォーム DataGridView コントロールの選択モードを設定します。](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォーム DataGridView コントロールの選択モードを設定する](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

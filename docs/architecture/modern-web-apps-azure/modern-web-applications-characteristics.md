@@ -4,12 +4,12 @@ description: ASP.NET Core と Azure を使用した最新の Web アプリケー
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: f4fe18d7361f7d67c29fb7dab53132237f709280
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d3848f3b0cf993930bfc3801ce40c5eac30f094d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672909"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374086"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>最新の Web アプリケーションの特徴
 
@@ -24,9 +24,9 @@ ASP.NET Core は、最新の Web アプリケーションとクラウドベー�
 
 このガイダンスには、いくつかの原則と推奨事項を示す参照アプリケーション _eShopOnWeb_ が含まれています。 このアプリケーションは単純なオンライン ストアです。シャツ、コーヒー マグなどの商品のカタログを閲覧することができます。 この参照アプリケーションは、わかりやすくするために意図的に単純にしています。
 
-**図 2-1** eShopOnWeb
+![eShopOnWeb](./media/image2-1.png)
 
-![](./media/image2-1.png)
+**図 2-1** eShopOnWeb
 
 > ### <a name="reference-application"></a>参照アプリケーション
 >

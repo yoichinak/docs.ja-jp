@@ -6,15 +6,15 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: f8924f5a1e93a616b114506f383242fd2fde615c
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 6d1a39008ebb965649104c2e74241780731911bb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433571"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596039"
 ---
 # <a name="static-constructors-c-programming-guide"></a>静的コンストラクター (C# プログラミング ガイド)
-静的コンストラクターは、任意の [static](../../../csharp/language-reference/keywords/static.md) データを初期化するため、または 1 回だけ実行する必要がある特定のアクションを実行するために使います。 最初のインスタンスが作成され前、または静的メンバーが参照される前に、自動的に呼び出されます。  
+静的コンストラクターは、任意の [static](../../language-reference/keywords/static.md) データを初期化するため、または 1 回だけ実行する必要がある特定のアクションを実行するために使います。 最初のインスタンスが作成され前、または静的メンバーが参照される前に、自動的に呼び出されます。  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
  
@@ -31,9 +31,9 @@ ms.locfileid: "68433571"
 
 - ユーザーは、プログラムで静的コンストラクターが実行されるタイミングを制御できません。
   
-- 静的コンストラクターは、最初のインスタンスが作成され前、または静的メンバーが参照される前に、[クラス](../../../csharp/language-reference/keywords/class.md)を初期化するために自動的に呼び出されます。 静的コンストラクターは、インスタンス コンストラクターの前に実行されます。 イベントまたはデリゲートに割り当てられている静的メソッドが呼び出されるときは型の静的コンストラクターが呼び出されますが、割り当てられるときは呼び出されないことに注意してください。 静的フィールド変数初期化子が静的コンストラクターのクラスに存在する場合、初期化子は、静的コンストラクターの実行の直前に、クラス宣言に出現するテキストの順序で実行されます。
+- 静的コンストラクターは、最初のインスタンスが作成され前、または静的メンバーが参照される前に、[クラス](../../language-reference/keywords/class.md)を初期化するために自動的に呼び出されます。 静的コンストラクターは、インスタンス コンストラクターの前に実行されます。 イベントまたはデリゲートに割り当てられている静的メソッドが呼び出されるときは型の静的コンストラクターが呼び出されますが、割り当てられるときは呼び出されないことに注意してください。 静的フィールド変数初期化子が静的コンストラクターのクラスに存在する場合、初期化子は、静的コンストラクターの実行の直前に、クラス宣言に出現するテキストの順序で実行されます。
 
-- 静的フィールドを初期化するための静的コンストラクターを提供しないと、すべての静的フィールドは、「[既定値の一覧表](../../../csharp/language-reference/keywords/default-values-table.md)」で示されている既定値に初期化されます。 
+- 静的フィールドを初期化するための静的コンストラクターを提供しないと、すべての静的フィールドは、「[既定値の一覧表](../../language-reference/keywords/default-values-table.md)」で示されている既定値に初期化されます。 
   
 - 静的コンストラクターが例外をスローした場合、ランタイムがその静的コンストラクターを再度呼び出すことはなく、その型は、プログラムが実行しているアプリケーション ドメインの有効期間中、初期化されないままになります。 ほとんどの場合、静的コンストラクターで型をインスタンス化できないとき、または静的コンストラクター内でハンドルされない例外が発生したときは、<xref:System.TypeInitializationException> 例外がスローされます。 ソース コードで明示的に定義されていない暗黙的な静的コンストラクターでは、トラブルシューティングの際に中間言語 (IL) のコードを調べることが必要になる場合があります。
 
@@ -61,10 +61,10 @@ ms.locfileid: "68433571"
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [静的クラスと静的クラス メンバー](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
-- [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [C# プログラミング ガイド](../index.md)
+- [クラスと構造体](./index.md)
+- [コンストラクター](./constructors.md)
+- [静的クラスと静的クラス メンバー](./static-classes-and-static-class-members.md)
+- [ファイナライザー](./destructors.md)
 - [コンストラクターのデザインのガイドライン](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
 - [セキュリティの警告 - CA2121: 静的コンストラクターはプライベートでなければなりません](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)

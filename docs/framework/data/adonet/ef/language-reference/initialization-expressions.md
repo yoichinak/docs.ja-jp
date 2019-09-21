@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 78bafcad0a0f34c74ea58f107621ad145c1b405b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5d6656ab77f7ad0f7366a230d98b95cff5b2677b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631528"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854435"
 ---
 # <a name="initialization-expressions"></a>初期化式
 初期化式は、新しいオブジェクトを初期化します。 初期化式は、ほとんどの新しい C# 3.0 および Visual Basic 9.0 初期化式を含め、ほとんどがサポートされています。 次の型は、LINQ to Entities クエリによって初期化して返すことができます。  
   
 - 0 個以上の型指定されたエンティティ オブジェクトのコレクション、または概念モデルで定義された複合型のプロジェクション。  
   
-- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] でサポートされる CLR 型。  
+- Entity Framework によってサポートされる CLR 型。
   
 - インライン コレクション。  
   
@@ -48,4 +48,4 @@ ms.locfileid: "64631528"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Entities クエリ内の式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+- [LINQ to Entities クエリ内の式](expressions-in-linq-to-entities-queries.md)

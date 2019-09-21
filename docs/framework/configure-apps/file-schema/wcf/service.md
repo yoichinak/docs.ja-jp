@@ -2,19 +2,20 @@
 title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: 68bddc01b02d9885b3f0fc4c2cbc5c3249de03f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c12f57d68de870123d92c8a101e2999c24bb988f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670400"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855022"
 ---
-# <a name="service"></a>\<service>
+# <a name="service"></a>\<サービス >
 `service` 要素には Windows Communication Foundation (WCF) サービスの設定が含まれます。 また、サービスを公開するエンドポイントも含まれます。  
   
- \<system.ServiceModel >  
-\<services>  
-\<service>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<サービス >** ](services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<サービス >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,14 +39,14 @@ ms.locfileid: "61670400"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|このサービスを公開する `endpoint` 要素のコレクション。|  
-|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|このサービス インスタンスのホストを指定します。 この要素は <xref:System.ServiceModel.Configuration.HostElement> 型です。|  
+|[\<endpoint>](endpoint-element.md)|このサービスを公開する `endpoint` 要素のコレクション。|  
+|[\<ホスト >](host.md)|このサービス インスタンスのホストを指定します。 この要素は <xref:System.ServiceModel.Configuration.HostElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|すべての WCF 構成要素のルート要素です。|  
+|[\<services>](services.md)|すべての WCF 構成要素のルート要素です。|  
   
 ## <a name="remarks"></a>Remarks  
  サービスは、設定ファイルの `services` セクションで定義されます。 アセンブリには、任意の数のサービスを含めることができます。 各サービスには、独自の `service` 設定セクションがあります。 このセクションとその内容は、サービス コントラクト、動作、および特定のサービスのエンドポイントを定義します。  
@@ -71,4 +72,4 @@ ms.locfileid: "61670400"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Configuration.ServiceElement>
-- [サービスの構成](../../../../../docs/framework/wcf/configuring-services.md)
+- [サービスの構成](../../../wcf/configuring-services.md)

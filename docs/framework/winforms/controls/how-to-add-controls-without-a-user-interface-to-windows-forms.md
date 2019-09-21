@@ -14,39 +14,39 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 49bf927085d29b60c1d9cf5d61df3894495349db
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: bc1f844e5a2cf4d4f3b64ebf20e935f36ff85e12
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210413"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987084"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>方法: ユーザー インターフェイスを持たないコントロールを Windows フォームに追加する
 
-非ビジュアル コントロール (またはコンポーネント) は、アプリケーションに機能を提供します。 他のコントロールとは異なり、コンポーネントは、ユーザーにユーザー インターフェイスを提供しないし、ので、Windows フォーム デザイナー画面に表示する必要はありません。 コンポーネントはフォームに追加するときに、Windows フォーム デザイナーはすべてのコンポーネントが表示されるフォームの下部にあるサイズ変更可能なトレイを表示します。 コントロールがコンポーネント トレイに追加されたら、コンポーネントを選択し、フォーム上の他のコントロールと同様に、そのプロパティを設定することができます。
+非可視のコントロール (またはコンポーネント) は、アプリケーションに機能を提供します。 他のコントロールとは異なり、コンポーネントはユーザーにユーザーインターフェイスを提供しないため、Windows フォームデザイナー画面に表示する必要はありません。 コンポーネントがフォームに追加されると、すべてのコンポーネントが表示されるフォームの下部に、サイズ変更可能なトレイ Windows フォームデザイナーが表示されます。 コンポーネントトレイにコントロールが追加されたら、コンポーネントを選択し、フォーム上の他のコントロールと同様にそのプロパティを設定できます。
 
-## <a name="add-a-component-to-a-windows-form"></a>Windows フォームにコンポーネントを追加します。
+## <a name="add-a-component-to-a-windows-form"></a>Windows フォームへのコンポーネントの追加
 
-1. Visual Studio で、フォームを開きます。 詳細については、「[方法: デザイナーで Windows フォームを表示](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))します。
+1. Visual Studio でフォームを開きます。 詳細については、「[方法: デザイナー](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))で Windows フォームを表示します。
 
-2. **ツールボックス**コンポーネントをクリックし、フォームにドラッグします。
+2. **ツールボックス**でコンポーネントをクリックし、フォームにドラッグします。
 
-     コンポーネントがコンポーネント トレイに表示されます。
+     コンポーネントがコンポーネントトレイに表示されます。
 
-さらに、コンポーネントは、実行時にフォームに追加できます。 これは、コンポーネントにはユーザー インターフェイスを持つコントロールとは異なり、ビジュアルの式があるないため、特に一般的なシナリオです。 次の例で、<xref:System.Windows.Forms.Timer>実行時にコンポーネントを追加します。 (Visual Studio には、別のタイマーの数値が含まれています。 この場合は、Windows フォームを使用して、<xref:System.Windows.Forms.Timer>コンポーネント。 Visual Studio の別のタイマーの詳細については、次を参照してください[サーバー ベースのタイマーの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))。)。
+また、実行時にコンポーネントをフォームに追加することもできます。 これは、特に、ユーザーインターフェイスを持つコントロールとは異なり、コンポーネントにはビジュアル式がないため、一般的なシナリオです。 次の例では、 <xref:System.Windows.Forms.Timer>コンポーネントが実行時に追加されます。 (Visual Studio にはさまざまなタイマーが含まれていることに注意してください<xref:System.Windows.Forms.Timer> 。この場合は、Windows フォームコンポーネントを使用します。 Visual Studio でのさまざまなタイマーの詳細については、「[サーバーベースのタイマーの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))」を参照してください)。
 
 > [!CAUTION]
-> コンポーネントには、効果的に機能するコンポーネントに設定する必要がありますコントロールに固有のプロパティが多くの場合があります。 場合、<xref:System.Windows.Forms.Timer>設定する次のコンポーネント、`Interval`プロパティ。 プロジェクトにあるプロパティを設定する、そのコンポーネントに必要なコンポーネントを追加するときにしてください。
+> コンポーネントには、多くの場合、コンポーネントを効果的に機能させるために設定する必要があるコントロール固有のプロパティがあります。 以下の<xref:System.Windows.Forms.Timer>コンポーネントの場合は、 `Interval`プロパティを設定します。 コンポーネントをプロジェクトに追加するときは、そのコンポーネントに必要なプロパティを設定します。
 
-## <a name="add-a-component-to-a-windows-form-programmatically"></a>Windows フォームにコンポーネントをプログラムで追加します。
+## <a name="add-a-component-to-a-windows-form-programmatically"></a>プログラムによって Windows フォームにコンポーネントを追加する
 
-1. インスタンスを作成、<xref:System.Windows.Forms.Timer>コード内のクラス。
+1. コードで<xref:System.Windows.Forms.Timer>クラスのインスタンスを作成します。
 
-2. 設定、`Interval`タイマーのティック間の時間を決定するプロパティ。
+2. タイマーの`Interval`タイマー刻みの間隔を決定するには、プロパティを設定します。
 
 3. コンポーネントに必要なその他のプロパティを構成します。
 
-     次のコードの作成を示しています、<xref:System.Windows.Forms.Timer>でその`Interval`プロパティ セット。
+     次のコードは、 <xref:System.Windows.Forms.Timer> `Interval`プロパティセットを使用したの作成を示しています。
 
     ```vb
     Public Sub CreateTimer()
@@ -75,14 +75,13 @@ ms.locfileid: "65210413"
     ```
 
     > [!IMPORTANT]
-    > 悪意のあるユーザー コントロールを参照することで、ローカル コンピューターがネットワーク経由のセキュリティ リスクを公開する可能性があります。 誤ってそれをプロジェクトに追加した後に、有害なカスタム コントロールを作成する悪意のあるユーザーの場合の問題のみなります。
+    > 悪意のある UserControl を参照することにより、ネットワーク経由でローカルコンピューターをセキュリティ上のリスクにさらすことがあります。 これは、悪意のあるユーザーが有害なカスタムコントロールを作成した後、誤ってプロジェクトに追加した場合にのみ問題になります。
 
 ## <a name="see-also"></a>関連項目
 
 - [Windows フォーム コントロール](index.md)
-- [方法: Windows フォームにコントロールを追加します。](how-to-add-controls-to-windows-forms.md)
-- [方法: Windows フォームに ActiveX コントロールを追加します。](how-to-add-activex-controls-to-windows-forms.md)
-- [方法: Windows フォーム間でコントロールをコピーします。](how-to-copy-controls-between-windows-forms.md)
+- [方法: コントロールを Windows フォームに追加する](how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォームに ActiveX コントロールを追加する](how-to-add-activex-controls-to-windows-forms.md)
 - [Windows フォームへのコントロールの追加](putting-controls-on-windows-forms.md)
 - [各 Windows フォーム コントロールのラベル設定とショートカットの作成](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

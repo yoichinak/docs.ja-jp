@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: da5e72b96fec35404e7e9ae7930f3430143487d2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769464"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929306"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework Analyzer
 
@@ -23,6 +23,7 @@ ms.locfileid: "59769464"
 .NET Security Analyzer は、それを実行するすべてのプロジェクトで、NuGet パッケージとしてインストールする必要があります。 1 人の開発者がそれをプロジェクトに追加すれば十分です。 アナライザー パッケージはプロジェクト依存関係であり、更新済みのソリューションが与えられると、あらゆる開発者のコンピューターで実行されます。
 
 .NET Framework Analyzer は [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) NuGet パッケージで配布されます。 このパッケージは、.NET Framework に固有のアナライザーのみ提供します。これにはセキュリティ アナライザーが含まれています。 多くの場合、[Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet パッケージが必要になります。 FxCopAnalyzers 集合パッケージには、Framework.Analyzers パッケージに含まれているすべてのフレームワーク アナライザーと次のアナライザーが含まれています。
+
 - [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers):.NET Standard API の一般的なガイダンスを提供します。
 - [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers):アナライザー固有の .NET Core API を提供します。
 - [Text.Analyzers](https://www.nuget.org/packages/Text.Analyzers):コメントなど、コードとして含まれているテキストのガイダンスを提供します。

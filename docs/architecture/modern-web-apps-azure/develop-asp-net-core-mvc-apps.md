@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 51feb770e84af170bf31a6ba363a1d9e72616284
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675279"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373779"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリを開発する
 
@@ -43,7 +43,7 @@ ASP.NET Core アプリの中心となる機能は、受信した要求を送信�
 ASP.NET Core MVC アプリは、規則ルートと属性ルートのどちらか一方または両方を使用できます。 規則ルートはコードで定義されており、次の例のような構文を使ってルーティングの "_規則_" を指定します。
 
 ```csharp
-app.UseMvc(routes =>;
+app.UseMvc(routes =>
 {
     routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}");
 });
@@ -67,7 +67,7 @@ public class HomeController : Controller
 ルートは [HttpGet] や同様の属性で指定することができ、[Route] 属性を別途追加する必要はありません。 次に示すように、属性ルートではトークンを使って、コントローラーやアクションの名前を繰り返し指定する必要性を軽減することもできます。
 
 ```csharp
-[Route("[controller\]")]
+[Route("[controller]")]
 public class ProductsController : Controller
 {
     [Route("")] // Matches 'Products'
@@ -131,7 +131,7 @@ public class Startup
         var builder = new ConfigurationBuilder()
         .SetBasePath(env.ContentRootPath)
         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-        .AddJsonFile(\$"appsettings.{env.EnvironmentName}.json", optional: true);
+        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
     }
 }
 ```
@@ -176,9 +176,9 @@ ASP.NET Core UI プロジェクトは、UI レベルの処理を行いますが�
 
 ASP.NET Core MVC では、この目的のために区分 (Area) がサポートされています。 区分を使うと、各区分フォルダー内にコントローラー フォルダーとビュー フォルダー (および関連するすべてのモデル) のセットを個別に作成できます。 図 7-1 は、区分を使用したフォルダー構造の例です。
 
-![](./media/image7-1.png)
+![区分編成の例](./media/image7-1.png)
 
-図 7-1 区分編成の例
+**図 7-1**。 区分編成の例
 
 区分を使う場合は、属性を使って、コントローラーが属する区分の名前でコントローラーを装飾する必要があります。
 
@@ -208,7 +208,7 @@ app.UseMvc(routes =>
 ASP.NET Core は、組み込みの規則の種類を使って、その動作を制御します。 これらの規則は変更したり置き換えたりできます。 たとえば、名前空間に基づいて特定のコントローラーの機能名を自動的に取得する規則を作成できます (これは通常、コントローラーが存在するフォルダーに関連付けられます)。
 
 ```csharp
-FeatureConvention : IControllerModelConvention
+public class FeatureConvention : IControllerModelConvention
 {
     public void Apply(ControllerModel controller)
     {
@@ -245,7 +245,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 ![要求は、承認フィルター、リソース フィルター、モデル バインド、アクション フィルター、アクションの実行とアクション結果の変換、例外フィルター、結果フィルター、結果の実行を介して処理されます。 終了間際に、要求は結果フィルターとリソース フィルターのみで処理されてから、クライアントに送信される応答になります。](./media/image7-2.png)
 
-図 7-2 フィルターと要求パイプラインを通過する要求実行の流れ。
+**図 7-2**。 フィルターと要求パイプラインを通過する要求実行の流れ。
 
 通常、フィルターは属性として実装されるので、コントローラーまたはアクションにフィルターを適用できます (グローバルでも可能)。 この方法で追加したフィルターをアクション レベルで指定すると、コントローラー レベルで指定されたフィルターをオーバーライドするか、その上に構築されて、それ自体がグローバル フィルターをオーバーライドします。 たとえば、\[Route\] 属性を使って、コントローラーとアクションの間にルートを作成できます。 同様に、コントローラー レベルで承認を構成した後、次の例に示すように、個々のアクションでオーバーライドできます。
 
@@ -334,9 +334,9 @@ ASP.NET Core Identity は、アプリケーションのログイン機能をサ�
 
 [個別のユーザー アカウント] オプションを選択した場合、新しいプロジェクト テンプレートには ASP.NET Core Identity が含まれます。 このテンプレートには、登録、ログイン、外部ログイン、パスワードを忘れた場合、および追加機能のサポートが含まれています。
 
-![](./media/image7-3.png)
+![[個別のユーザー アカウント] を選択して Identity を事前構成する](./media/image7-3.png)
 
-図 7-3 [個別のユーザー アカウント] を選択して Identity を事前構成する。
+**図 7-3**。 [個別のユーザー アカウント] を選択して Identity を事前構成する。
 
 Identity のサポートは、Startup の ConfigureServices と Configure の両方で構成されます。
 
@@ -474,9 +474,9 @@ public class Program
     public static void Main(string[] args)
     {
         StartConnectionAsync();
-        _connection.On("receiveMessage", (arguments) =>;
+        _connection.On("receiveMessage", (arguments) =>
         {
-            Console.WriteLine(\$"{arguments\[0\]} said: {arguments\[1\]}");
+            Console.WriteLine($"{arguments[0]} said: {arguments[1]}");
         });
         Console.ReadLine();
         StopConnectionAsync();
@@ -563,13 +563,13 @@ Kestrel Web サーバーでホストされる ASP.NET Core アプリケーショ
 
 ![インターネットに対する Kestrel](./media/image7-5.png)
 
-図 7-5 リバース プロキシ サーバーの背後の Kestrel でホストされている ASP.NET
+**図 7-5**。 リバース プロキシ サーバーの背後の Kestrel でホストされている ASP.NET
 
 リバース プロキシが役に立つもう 1 つのシナリオは、SSL/HTTPS を使って複数のアプリケーションをセキュリティ保護する場合です。 この場合、リバース プロキシでは SSL だけを構成する必要があります。 リバース プロキシ サーバーと Kestrel の間の通信は、HTTP で行われます (図 7-6 を参照)。
 
-![](./media/image7-6.png)
+![HTTPS で保護されたリバース プロキシ サーバーの背後でホストされている ASP.NET](./media/image7-6.png)
 
-図 7-6 HTTPS で保護されたリバース プロキシ サーバーの背後でホストされている ASP.NET
+**図 7-6**。 HTTPS で保護されたリバース プロキシ サーバーの背後でホストされている ASP.NET
 
 急速に普及しているアプローチは ASP.NET Core アプリケーションを Docker コンテナーでホストする方法で、ローカルにホストしたり、クラウド ベースのホスト用に Azure に展開したりできます。 Docker コンテナーは、Kestrel で実行されるアプリケーションのコードを格納することができ、上記のように、リバース プロキシ サーバーの背後に展開されます。
 

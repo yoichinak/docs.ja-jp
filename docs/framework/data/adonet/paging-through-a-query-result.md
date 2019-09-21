@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 023efcc15d7080afc1583f4ad8984e152b86cf23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1dbaa159314bf7bb05ff75287f601f619834fd7c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878385"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794617"
 ---
 # <a name="paging-through-a-query-result"></a>クエリ結果のページング
 クエリ結果のページングとは、クエリ結果をデータの小さなサブセット、つまりページに分けて返すプロセスです。 クエリ結果のページングは、結果を管理しやすい小さな単位でユーザーに表示するために行われる一般的な処理です。  
   
- **DataAdapter**のオーバー ロードによって、データのページのみを返す機能が提供、**入力**メソッド。 ただし、このできない可能性がありますので、大規模なクエリ結果のページングの最適な選択肢ですが、 **DataAdapter**ターゲットを塗りつぶします<xref:System.Data.DataTable>または<xref:System.Data.DataSet>のみ、要求されたレコードを返すリソースで、クエリ全体は引き続き使用されます。 クエリ全体を返す必要があるリソースを使用せずにデータ ソースから 1 ページ分のデータを返すには、必要な行だけ返すように限定する抽出条件をクエリに追加します。  
+ **DataAdapter**は、 **Fill**メソッドのオーバーロードを使用して、データのページのみを返す機能を提供します。 ただし、これは大規模なクエリの結果をページングする場合には最適な選択肢ではない可能性<xref:System.Data.DataTable>が<xref:System.Data.DataSet>あります。 **DataAdapter**がターゲットまたは要求されたレコードのみを格納する場合でも、クエリ全体を返すリソースが引き続き使用されるためです. クエリ全体を返す必要があるリソースを使用せずにデータ ソースから 1 ページ分のデータを返すには、必要な行だけ返すように限定する抽出条件をクエリに追加します。  
   
- 使用する、**入力**、データのページを返す方法を指定する、 **startRecord**パラメーター、データのページの最初のレコードと**maxRecords**パラメーターの数データのページのレコード。  
+ **Fill**メソッドを使用してデータページを返すには、データページの最初のレコードに対して**startrecord**パラメーターを指定し、データページのレコード数に**maxRecords**パラメーターを指定します。  
   
- 次のコード例を使用する方法を示しています、**入力**ページ サイズが 5 つのレコードをクエリ結果の最初のページを返します。  
+ 次のコード例は、 **Fill**メソッドを使用して、ページサイズが5レコードのクエリ結果の最初のページを返す方法を示しています。  
   
 ```vb  
 Dim currentIndex As Integer = 0  
@@ -46,7 +46,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- 前の例では、**データセット**だけが 5 つのレコードが全体に格納されます**注文**テーブルが返されます。 入力する、**データセット**それら同じ 5 つのレコードが、5 つのレコードだけを返すと、TOP を使用して、次のコード例のように、SQL ステートメントの WHERE 句。  
+ 前の例では、**データセット**には5つのレコードしか入力されていませんが、 **Orders**テーブル全体が返されます。 **データセット**に同じ5つのレコードを格納し、5つのレコードのみを返すには、次のコード例に示すように、SQL ステートメントで TOP 句と WHERE 句を使用します。  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -83,7 +83,7 @@ string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- オーバー ロードを使用してレコードの次のページを返す、**入力**を受け取るメソッド、 **startRecord**と**maxRecords**パラメーターによって、現在のレコード インデックスをインクリメントします。ページ サイズと塗りつぶしテーブル。 レコードの 1 つだけのページが追加された場合でも、データベース サーバーで全体のクエリ結果を返すことに注意してください、**データセット**します。 次のデータ ページを格納する前にテーブル行をクリアするコード サンプルを次に示します。 データベース サーバーとのやり取りを減らすために、ローカルのキャッシュに、返された一定数の行を保存することもできます。  
+ **Startrecord**パラメーターと**maxRecords**パラメーターを受け取る**Fill**メソッドのオーバーロードを使用してレコードの次のページを返すには、現在のレコードインデックスをページサイズだけインクリメントし、テーブルに入力します。 **データセット**に追加されるレコードのページが1つだけであっても、データベースサーバーはクエリ結果全体を返すことに注意してください。 次のデータ ページを格納する前にテーブル行をクリアするコード サンプルを次に示します。 データベース サーバーとのやり取りを減らすために、ローカルのキャッシュに、返された一定数の行を保存することもできます。  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -125,5 +125,5 @@ adapter.Fill(dataSet, "Orders");
   
 ## <a name="see-also"></a>関連項目
 
-- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapter と DataReader](dataadapters-and-datareaders.md)
+- [ADO.NET の概要](ado-net-overview.md)

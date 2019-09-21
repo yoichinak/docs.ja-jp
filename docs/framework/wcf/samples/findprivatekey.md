@@ -1,103 +1,103 @@
 ---
-title: FindPrivateKey サンプルの WCF
+title: FindPrivateKey サンプル-WCF
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: b89d135d7412f10cb9de1e4bda1aaab14b29cbf0
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4ba4316489c1494da9421bea5c513e44c6eb50a7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490772"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989882"
 ---
 # <a name="findprivatekey-sample"></a>FindPrivateKey サンプル
 
 証明書ストア内の特定の X.509 証明書に関連付けられている秘密キー ファイルの場所と名前を見つけることが困難な場合があります。 FindPrivateKey.exe ツールを使用すると、この処理を容易に実行できます。
 
 > [!IMPORTANT]
-> FindPrivateKey は、使用する前にコンパイルする必要があるサンプルです。 参照してください、 [FindPrivateKey プロジェクトをビルドする](#to-build-the-findprivatekey-project)FindPrivateKey ツールをビルドする方法についてのセクション。
+> FindPrivateKey は、使用する前にコンパイルする必要があるサンプルです。 FindPrivateKey ツールのビルド方法については、「 [FindPrivateKey プロジェクトをビルドするに](#to-build-the-findprivatekey-project)は」セクションを参照してください。
 
-X.509 証明書は、コンピューターの管理者または任意のユーザーによってインストールされます。 ただし、証明書は、別のアカウントで実行されているサービスによってアクセスできます。 たとえば、ネットワーク サービス アカウント。
+X.509 証明書は、コンピューターの管理者または任意のユーザーによってインストールされます。 ただし、別のアカウントで実行されているサービスが証明書にアクセスする可能性があります。 たとえば、NETWORK SERVICE アカウントなどです。
 
 別のアカウントでは、秘密キー ファイルへアクセスできない場合があります。これは、証明書が最初にこのアカウントによってインストールされていないからです。 FindPrivateKey ツールでは、指定された X.509 証明書の秘密キー ファイルの場所を検索できます。 特定の X.509 証明書の秘密キー ファイルの場所がわかれば、このファイルに対するアクセス許可の追加または削除を実行できます。
 
-セキュリティ証明書を使用するサンプルの FindPrivateKey ツールを使用して、 *Setup.bat*ファイル。 秘密キー ファイルが見つかったら、その他のツールをなど、使用できる*Cacls.exe*ファイルに適切なアクセス権を設定します。
+セキュリティのために証明書を使用するサンプルでは、*セットアップの .bat*ファイルで FindPrivateKey ツールを使用します。 秘密キーファイルが見つかったら、 *cacls.exe*などの他のツールを使用して、ファイルに対する適切なアクセス権を設定できます。
 
-自己ホスト型の実行可能ファイルなどのユーザー アカウントで Windows Communication Foundation (WCF) サービスを実行している場合は、ユーザー アカウントがファイルに読み取り専用アクセスを持つことを確認します。 WCF サービスでは、インターネット インフォメーション サービス (IIS) を実行するときに、サービスが実行する既定のアカウントは IIS 7 と以前のバージョンで、ネットワーク サービスまたは IIS 7.5、およびそれ以降のバージョンのアプリケーション プール Id です。 詳細については、次を参照してください。[アプリケーション プール Id](/iis/manage/configuring-security/application-pool-identities)します。
+自己ホスト型実行可能ファイルなどのユーザーアカウントで Windows Communication Foundation (WCF) サービスを実行する場合は、そのユーザーアカウントにファイルへの読み取り専用アクセス権があることを確認します。 インターネットインフォメーションサービス (IIS) で WCF サービスを実行する場合、サービスを実行する既定のアカウントは、IIS 7 以前のバージョンのネットワークサービス、または IIS 7.5 以降のバージョンのアプリケーションプール Id です。 詳細については、「[アプリケーションプール id](/iis/manage/configuring-security/application-pool-identities)」を参照してください。
 
 ## <a name="examples"></a>使用例
 
-対象のプロセスは読み取り権限がない証明書にアクセスするときに次の例のような例外メッセージを参照してください。
+プロセスに読み取り権限がない証明書にアクセスすると、次の例のような例外メッセージが表示されます。
 
-```
+```output
 System.ArgumentException was unhandled
 Message="The certificate 'CN=localhost' must have a private key that is capable of key exchange.  The process must have access rights for the private key."
 Source="System.ServiceModel"
 ```
 
-これが発生して FindPrivateKey ツールを使用して、秘密キー ファイルを検索し、サービスが実行されているプロセスの右へのアクセスを設定します。 たとえば、これは行えます Cacls.exe ツールを使用して次の例に示すように。
+この場合は、FindPrivateKey ツールを使用して秘密キーファイルを検索し、サービスが実行されているプロセスのアクセス権を設定します。 たとえば、次の例に示すように、Cacls.exe ツールを使用してこれを行うことができます。
 
-```
+```console
 cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /E /G "NETWORK SERVICE":R
 ```
 
 #### <a name="to-build-the-findprivatekey-project"></a>FindPrivateKey プロジェクトをビルドするには
 
-プロジェクトをダウンロードするには、次を参照してください。 [Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)します。
+プロジェクトをダウンロードするには、 [Windows Communication Foundation (WCF) および Windows Workflow Foundation (WF) のサンプル .NET Framework 4 を](https://www.microsoft.com/download/details.aspx?id=21459)参照してください。
 
-1. ファイル エクスプ ローラーを開きに移動、 *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS*サンプルがインストールされているディレクトリの場所の下のフォルダー。
+1. ファイルエクスプローラーを開き、サンプルをインストールしたディレクトリの場所にある*WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS*フォルダーに移動します。
 
 2. .sln ファイルのアイコンをダブルクリックして、このファイルを Visual Studio で開きます。
 
-3. **ビルド**メニューの **ソリューションのリビルド**します。
+3. **[ビルド]** メニューの **[ソリューションのリビルド]** をクリックします。
 
-4. ソリューションをビルドするには、ファイルが生成されます。FindPrivateKey.exe します。
+4. ソリューションをビルドすると、ファイルが生成されます。FindPrivateKey。
 
-## <a name="conventionscommand-line-entries"></a>規則-コマンドラインのエントリ
+## <a name="conventionscommand-line-entries"></a>規則-コマンドラインエントリ
 
- "[*オプション*]"は省略可能なパラメーターのセットを表します。
+ "[*option*]" は省略可能なパラメーターのセットを表します。
 
- "{*オプション*}"は必須パラメーターのセットを表します。
+ "{*option*}" は、必須パラメーターのセットを表します。
 
- "*option1* &#124; *option2*"オプションのセットから選択を表します。
+ "*オプション 1* &#124; *option2*" は、オプションのセット間の選択を表します。
 
- "\<*値*>"を入力するパラメーター値を表します。
+ "\<*value*>" は、入力するパラメーター値を表します。
 
-## <a name="usage"></a>使用法
+## <a name="usage"></a>使用方法
 
-```
+```console
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]
 ```
 
 この場合、
 
-```
-       <subjectName> The subject name of the certificate
-       <thumbprint>  The thumbprint of the certificate (You can use the Certmgr.exe tool to find this)
-       -f            output file name only
-       -d            output directory only
-       -a            output absolute file name
-```
+| パラメーター         | 説明                                                                       |
+|-----------------|-----------------------------------------------------------------------------------|
+| `<subjectName>` | 証明書のサブジェクト名                                               |
+| `<thumbprint>`  | 証明書のサムプリント (この検索には、Certmgr.exe ツールを使用できます) |
+| `-f`            | 出力ファイル名のみ                                                             |
+| `-d`            | 出力ディレクトリのみ                                                             |
+| `-a`            | 出力の絶対ファイル名                                                         |
 
-コマンド プロンプト パラメーターが指定されていない場合は、このヘルプ テキストが表示されます。
+コマンドプロンプトでパラメーターが指定されていない場合は、この情報を含むヘルプテキストが表示されます。
 
 ## <a name="examples"></a>使用例
 
-この例のサブジェクト名を持つ証明書のファイル名を検索する"CN = localhost"、現在のユーザーの個人用ストアにします。
+この例では、現在のユーザーの個人用ストアで、サブジェクト名が "CN = localhost" の証明書のファイル名を検索します。
 
-```
+```console
 FindPrivateKey My CurrentUser -n "CN=localhost"
 ```
 
-この例のサブジェクト名を持つ証明書のファイル名を検索する"CN = localhost"、個人用の出力ディレクトリの完全なパスと、現在のユーザーのストアします。
+この例では、"CN = localhost" というサブジェクト名を持つ証明書のファイル名を現在のユーザーの個人用ストアに検索し、完全なディレクトリパスを出力します。
 
-```
+```console
 FindPrivateKey My CurrentUser -n "CN=localhost" -a
 ```
 
 この例では、ローカル コンピューターの Personal ストアで、"03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52" というサムプリントを持つ証明書のファイル名を検索します。
 
-```
+```console
 FindPrivateKey My LocalMachine -t "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52"
 ```

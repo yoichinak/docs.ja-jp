@@ -5,19 +5,19 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: dbef816a995d9f4909a887f017da29bab6fc3702
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672055"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015648"
 ---
 # <a name="cleartype-overview"></a>ClearType の概要
 このトピックでは、 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]で検出された Microsoft の ClearType テクノロジの概要について説明します。  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>テクノロジの概要  
- ClearType は、によって[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]開発されたソフトウェアテクノロジで、ラップトップの画面、Pocket PC の画面、フラットパネルモニターなど、既存の lcd (液晶ディスプレイ) でのテキストの読みやすさを向上させます。  ClearType は、LCD 画面のすべてのピクセルで個々の垂直色のストライプ要素にアクセスすることによって機能します。 ClearType より前は、コンピューターが表示できる最小の詳細レベルは1ピクセルですが、LCD モニターで ClearType が実行されているため、テキストの特徴をピクセルの幅で表示できるようになりました。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。  
+ ClearType は、Microsoft によって開発されたソフトウェアテクノロジで、ラップトップの画面、Pocket PC の画面、フラットパネルモニターなど、既存の Lcd (液晶ディスプレイ) でのテキストの読みやすさを向上させます。  ClearType は、LCD 画面のすべてのピクセルで個々の垂直色のストライプ要素にアクセスすることによって機能します。 ClearType より前は、コンピューターが表示できる最小の詳細レベルは1ピクセルですが、LCD モニターで ClearType が実行されているため、テキストの特徴をピクセルの幅で表示できるようになりました。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。  
   
  で[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]使用できる cleartype は、Microsoft Windows グラフィックスデバイスインターフェイス (GDI) で見つかったバージョンに対していくつかの機能強化が施された最新世代の cleartype です。  
   
@@ -55,7 +55,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
 ## <a name="hardware-acceleration"></a>ハードウェアの高速化  
  の ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]では、ハードウェアの高速化を利用してパフォーマンスを向上させ、CPU の負荷とシステムメモリの要件を減らすことができます。 グラフィックスカードのピクセルシェーダーとビデオメモリを使用することにより、特にアニメーションが使用される場合に、ClearType によってテキストのレンダリングが高速になります。  
   
- の cleartype [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]では、システム全体の cleartype 設定は変更されません。 で[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ClearType を無効[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]にすると、アンチエイリアシングがグレースケールモードに設定されます。 また、の[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] cleartype では、 [cleartype チューナー PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)の設定は変更されません。  
+ の cleartype [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]では、システム全体の cleartype 設定は変更されません。 Windows で ClearType を無効[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]にすると、アンチエイリアシングがグレースケールモードに設定されます。 また、の[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] cleartype では、 [cleartype チューナー PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)の設定は変更されません。  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のアーキテクチャ設計における決定事項の 1 つに、解像度に依存しないレイアウトによる高解像度 DPI モニターのサポート向上があります。高解像度モニターの普及は進みつつあるからです。 この決定を受けて、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ではエイリアス化されたテキスト レンダリングや、一部の東アジア言語フォントのビットマップをサポートしないことになりました。これらはどちらも解像度に依存するためです。  
   

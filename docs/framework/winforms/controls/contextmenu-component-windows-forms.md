@@ -10,25 +10,25 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-ms.openlocfilehash: cc5d5af4ef49abb7f5f89a99d5cc799eb96a5c61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 760a800e7e7fe0ef13a333525aa45088bea736d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955949"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962172"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu コンポーネント (Windows フォーム)
 > [!NOTE]
->  `MenuStrip`と`ContextMenuStrip`が置換または追加する機能、<xref:System.Windows.Forms.MainMenu>と<xref:System.Windows.Forms.ContextMenu>、以前のバージョン コントロール<xref:System.Windows.Forms.MainMenu>と<xref:System.Windows.Forms.ContextMenu>を選択した場合に、旧バージョンとの互換性と将来の使用のため保持されます。  
+> <xref:System.Windows.Forms.MainMenu> とは、<xref:System.Windows.Forms.ContextMenu>以前のバージョン<xref:System.Windows.Forms.MainMenu>のとのコントロールに置き換えて機能を追加しますが、を選択した場合は、下位互換性と将来の使用の両方で保持されます。<xref:System.Windows.Forms.ContextMenu> `ContextMenuStrip` `MenuStrip`  
   
- Windows フォーム`ContextMenu`コンポーネントを使用して、選択したオブジェクトに関連付けられているコマンドを頻繁に使用されるを簡単にアクセスできるショートカット メニューをユーザーに提供します。 ショートカット メニュー内の項目は、多くの場合、アプリケーションで別の場所に表示されるメインのメニューから項目のサブセットです。 ショートカット メニューは、マウスを右クリックして、通常は使用できます。 Windows フォームで他のコントロールと関連付けられています。  
+ Windows フォーム`ContextMenu`コンポーネントは、選択したオブジェクトに関連付けられている、頻繁に使用するコマンドのショートカットメニューをユーザーに提供するために使用されます。 ショートカットメニューの項目は、多くの場合、アプリケーションの他の場所に表示されるメインメニューの項目のサブセットです。 ショートカットメニューは、通常、マウスを右クリックすると表示されます。 Windows フォームは、他のコントロールに関連付けられています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ContextMenu コンポーネントの概要](contextmenu-component-overview-windows-forms.md)  
- 一般的な概念が導入されています、`ContextMenu`コンポーネントで、選択したオブジェクトに関連付けられた、頻繁に使用されるコマンドのメニューを作成することができます。  
+ ユーザーが選択したオブジェクト`ContextMenu`に関連付けられている頻繁に使用するコマンドのメニューを作成できるようにする、コンポーネントの一般的な概念について説明します。  
   
- [方法: 追加し、Windows フォーム ContextMenu コンポーネントのメニュー項目の削除](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
- 追加し、Windows フォームのショートカット メニュー項目を削除する方法について説明します。  
+ [方法: Windows フォーム ContextMenu コンポーネントでのメニュー項目の追加と削除](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ Windows フォームでショートカットメニュー項目を追加および削除する方法について説明します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.ContextMenu>  

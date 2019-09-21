@@ -1,5 +1,5 @@
 ---
-title: '方法: サービス操作 (WCF Data Services) の定義します。'
+title: '方法: サービス操作の定義 (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: dbd14ba9ed24fb3f18946e817f61f8cbf2e9b1b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3154fadeda400440f68a184b430b7ff15a02203d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936553"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780079"
 ---
-# <a name="how-to-define-a-service-operation-wcf-data-services"></a>方法: サービス操作 (WCF Data Services) の定義します。
+# <a name="how-to-define-a-service-operation-wcf-data-services"></a>方法: サービス操作の定義 (WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] は、サーバー上でサービス操作として定義されたメソッドを公開します。 サービス操作では、サーバーで定義されているメソッドに URI を介してアクセスを提供するデータ サービスを使用します。 サービス操作を定義するには、適用、[`WebGet]`または`[WebInvoke]`属性をメソッド。 クエリ演算子をサポートするために、サービス操作を返す必要があります、<xref:System.Linq.IQueryable%601>インスタンス。 サービス操作は、<xref:System.Data.Services.DataService%601.CurrentDataSource%2A> の <xref:System.Data.Services.DataService%601> プロパティを介して、基になるデータ ソースにアクセスできます。 詳細については、次を参照してください。[サービス操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)します。
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] は、サーバー上でサービス操作として定義されたメソッドを公開します。 サービス操作を使用すると、データサービスは、サーバーで定義されているメソッドに URI を通じてアクセスできるようになります。 サービス操作を定義するには、[`WebGet]`また`[WebInvoke]`は属性をメソッドに適用します。 クエリ演算子をサポートするには、サービス操作が<xref:System.Linq.IQueryable%601>インスタンスを返す必要があります。 サービス操作は、<xref:System.Data.Services.DataService%601.CurrentDataSource%2A> の <xref:System.Data.Services.DataService%601> プロパティを介して、基になるデータ ソースにアクセスできます。 詳細については、「[サービス操作](service-operations-wcf-data-services.md)」を参照してください。
 
-このトピックの例では、`GetOrdersByCity` という名前のサービス操作を定義します。このサービス操作は、<xref:System.Linq.IQueryable%601> オブジェクトおよび関連する `Orders` オブジェクトのフィルターされた `Order_Details` インスタンスを返します。 この例は、Northwind サンプル データ サービスのデータ ソースである <xref:System.Data.Objects.ObjectContext> インスタンスにアクセスします。 このサービスの作成を完了すると、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)します。
+このトピックの例では、`GetOrdersByCity` という名前のサービス操作を定義します。このサービス操作は、<xref:System.Linq.IQueryable%601> オブジェクトおよび関連する `Orders` オブジェクトのフィルターされた `Order_Details` インスタンスを返します。 この例は、Northwind サンプル データ サービスのデータ ソースである <xref:System.Data.Objects.ObjectContext> インスタンスにアクセスします。 このサービスは、 [WCF Data Services のクイックスタート](quickstart-wcf-data-services.md)を完了したときに作成されます。
 
 ### <a name="to-define-a-service-operation-in-the-northwind-data-service"></a>Northwind データ サービスのサービス操作を定義するには
 
@@ -57,4 +57,4 @@ ms.locfileid: "61936553"
 
 ## <a name="see-also"></a>関連項目
 
-- [WCF Data Services の定義](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [WCF Data Services の定義](defining-wcf-data-services.md)

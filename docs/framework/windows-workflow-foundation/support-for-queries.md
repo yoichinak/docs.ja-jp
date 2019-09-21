@@ -2,39 +2,39 @@
 title: クエリのサポート
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: db3580d0a29353aac027bddd8f040d3085d674af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e281b5ae7a41bd282f8e7c7eb9db6f99ef5487f3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665302"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948939"
 ---
 # <a name="support-for-queries"></a>クエリのサポート
 SQL Workflow Instance Store は、一連の既知のプロパティをストアに記録します。 ユーザーは、これらのプロパティに基づいてインスタンスのクエリを実行できます。 これらの既知のプロパティの一部を次の一覧に示します。  
   
-- **サイトの名前。** サービスが存在する Web サイトの名前。  
+- **サイト名。** サービスが存在する Web サイトの名前。  
   
-- **相対アプリケーション パス。** Web サイトを基準としたアプリケーションの相対パス。  
+- **相対アプリケーションパス。** Web サイトを基準としたアプリケーションの相対パス。  
   
-- **相対サービス パス:** アプリケーションを基準としたサービスの相対パス。  
+- **相対サービスパス。** アプリケーションを基準としたサービスの相対パス。  
   
-- **サービスの名前。** サービスの名前。  
+- **サービス名。** サービスの名前。  
   
-- **Service Namespace です。** サービスが使用する名前空間の名称。  
+- **サービスの名前空間。** サービスが使用する名前空間の名称。  
   
 - **現在のコンピューター。**  
   
-- **最後のコンピューター**します。 ワークフロー サービスのインスタンスが最後に実行されたコンピューター。  
+- **最後のコンピューター**。 ワークフロー サービスのインスタンスが最後に実行されたコンピューター。  
   
 > [!NOTE]
->  ワークフロー サービス ホストを使用する自己ホスト型のシナリオでは、最後の 4 つのプロパティにのみ値が指定されます。 ワークフロー アプリケーション シナリオでは、最後のプロパティにのみ値が指定されます。  
+> ワークフロー サービス ホストを使用する自己ホスト型のシナリオでは、最後の 4 つのプロパティにのみ値が指定されます。 ワークフロー アプリケーション シナリオでは、最後のプロパティにのみ値が指定されます。  
   
- ワークフロー ランタイムは、最初の 3 つのプロパティの値を指定します。 ワークフロー サービス ホストの値を提供する、**中断の理由**プロパティ。 SQL Workflow Instance Store 自体によって値が提供、**最後に更新されたコンピューター**プロパティ。  
+ ワークフロー ランタイムは、最初の 3 つのプロパティの値を指定します。 ワークフローサービスホストは、 **Suspend Reason**プロパティの値を提供します。 SQL Workflow Instance Store 自体は、**最後に更新されたコンピューター**プロパティの値を提供します。  
   
- また、SQL Workflow Instance Store の機能により、永続性データベースで値を格納したり、クエリで使用したりするカスタム プロパティを指定することができます。 カスタムの昇格の詳細については、次を参照してください。[ストア拡張](store-extensibility.md)します。  
+ また、SQL Workflow Instance Store の機能により、永続性データベースで値を格納したり、クエリで使用したりするカスタム プロパティを指定することができます。 カスタムプロモーションの詳細については、「[ストアの拡張機能](store-extensibility.md)」を参照してください。  
   
 ## <a name="views"></a>Views  
- インスタンス ストアには、次のビューがあります。 参照してください[永続性データベース スキーマ](persistence-database-schema.md)の詳細。  
+ インスタンス ストアには、次のビューがあります。 詳細については、「[永続性データベーススキーマ](persistence-database-schema.md)」を参照してください。  
   
 ### <a name="the-instances-view"></a>Instances ビュー  
  Instances ビューには、次のフィールドがあります。  
@@ -69,7 +69,7 @@ SQL Workflow Instance Store は、一連の既知のプロパティをストア�
   
 15. **EncodingOption**  
   
-16. **ReadWritePrimitiveDataProperties**  
+16. **読み取られること**  
   
 17. **WriteOnlyPrimitiveDataProperties**  
   
@@ -86,12 +86,12 @@ SQL Workflow Instance Store は、一連の既知のプロパティをストア�
   
 3. **RelativeApplicationPath**  
   
-4. **サービス名**  
+4. **ServiceName**  
   
 5. **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>InstancePromotedProperties ビュー  
- InstancePromotedProperties ビューには、次のフィールドがあります。 詳細については、昇格させたプロパティは、次を参照してください。、[ストア拡張](store-extensibility.md)トピック。  
+ InstancePromotedProperties ビューには、次のフィールドがあります。 昇格させたプロパティの詳細については、[ストアの機能拡張](store-extensibility.md)に関するトピックを参照してください。  
   
 1. **InstanceId**  
   
@@ -99,4 +99,4 @@ SQL Workflow Instance Store は、一連の既知のプロパティをストア�
   
 3. **PromotionName**  
   
-4. **Value #** (さまざまなフィールドから**Value1**に**Value64**)。
+4. **値 #** ( **Value1**から**Value64**までのフィールドの範囲)。

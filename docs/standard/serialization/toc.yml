@@ -1,8 +1,12 @@
 - name: シリアル化
   href: index.md
   items:
-    - name: シリアル化に関する「方法」トピック
-      href: serialization-how-to-topics.md
+    - name: JSON シリアル化
+      items:
+        - name: 概要
+          href: system-text-json-overview.md
+        - name: JSON をシリアル化および逆シリアル化する方法
+          href: system-text-json-how-to.md
     - name: バイナリ シリアル化
       href: binary-serialization.md
       items:
@@ -27,6 +31,8 @@
     - name: XML シリアル化および SOAP シリアル化
       href: xml-and-soap-serialization.md
       items:
+        - name: シリアル化に関する「方法」トピック
+          href: serialization-how-to-topics.md
         - name: '方法: 派生クラスのシリアル化を制御する'
           href: how-to-control-serialization-of-derived-classes.md
         - name: XML シリアル化の概要
@@ -67,23 +73,23 @@
           href: add-element-for-schemaimporterextensions.md
         - name: <xmlSerializer> 要素
           href: xmlserializer-element.md
-    - name: シリアル化ツール
-      href: serialization-tools.md
-      items:
-        - name: XML シリアライザー ジェネレーター ツール (Sgen.exe)
-          href: xml-serializer-generator-tool-sgen-exe.md
-        - name: XML Schema Definition Tool (Xsd.exe)
-          href: xml-schema-definition-tool-xsd-exe.md
-    - name: シリアル化のサンプル
-      href: serialization-samples.md
-      items:
-        - name: 基本的なシリアル化の技術サンプル
-          href: basic-serialization-technology-sample.md
-        - name: XmlSerializer によるカスタム シリアル化順序
-          href: custom-serialization-order-with-xmlserializer.md
-        - name: SchemaImporterExtension の技術サンプル
-          href: schemaimporterextension-technology-sample.md
-        - name: バージョン間の耐性があるシリアル化に対応する技術サンプル
-          href: version-tolerant-serialization-technology-sample.md
-        - name: Web サービス ジェネリック シリアル化の技術サンプル
-          href: web-services-generics-serialization-technology-sample.md
+        - name: シリアル化ツール
+          href: serialization-tools.md
+          items:
+            - name: XML シリアライザー ジェネレーター ツール (Sgen.exe)
+              href: xml-serializer-generator-tool-sgen-exe.md
+            - name: XML Schema Definition Tool (Xsd.exe)
+              href: xml-schema-definition-tool-xsd-exe.md
+        - name: シリアル化のサンプル
+          href: serialization-samples.md
+          items:
+            - name: 基本的なシリアル化の技術サンプル
+              href: basic-serialization-technology-sample.md
+            - name: XmlSerializer によるカスタム シリアル化順序
+              href: custom-serialization-order-with-xmlserializer.md
+            - name: SchemaImporterExtension の技術サンプル
+              href: schemaimporterextension-technology-sample.md
+            - name: バージョン間の耐性があるシリアル化に対応する技術サンプル
+              href: version-tolerant-serialization-technology-sample.md
+            - name: Web サービス ジェネリック シリアル化の技術サンプル
+              href: web-services-generics-serialization-technology-sample.md

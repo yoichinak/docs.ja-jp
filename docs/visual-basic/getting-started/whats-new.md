@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 49c39e12aa67b1f36fc46c21f5d2b23223b3264d
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238647"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895259"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic の新機能
 
@@ -21,9 +21,12 @@ ms.locfileid: "68238647"
 
 ## <a name="current-version"></a>現在のバージョン
 
-Visual Basic 15.8 / Visual Studio 2017 バージョン 15.8 新機能については、「[Visual Basic 15.8](#visual-basic-158)」をご覧ください
+Visual Basic 16.0/Visual Studio 2019 バージョン 16.0  
+新機能については、「[Visual Basic 16.0](#visual-basic-160)」を参照してください。
 
 ## <a name="previous-versions"></a>以前のバージョン
+
+Visual Basic 15.8 / Visual Studio 2017 バージョン 15.8 新機能については、「[Visual Basic 15.8](#visual-basic-158)」をご覧ください
 
 Visual Basic 15.5 / Visual Studio 2017 バージョン 15.5 新機能については、「[Visual Basic 15.5](#visual-basic-155)」をご覧ください
 
@@ -47,11 +50,26 @@ Visual Basic / Visual Studio .NET 2003 ビット シフト演算子、ループ�
 
 Visual Basic / Visual Studio .NET 2002 Visual Basic .NET の最初のリリース
 
+## <a name="visual-basic-160"></a>Visual Basic 16.0
+Visual Basic 16.0 は、Visual Basic ランタイム (microsoft.visualbasic.dll) より多くの機能を .NET Core に多く提供することに重点を置いており、.NET Core に重点を置いた Visual Basic の最初のバージョンです。 Visual Basic ランタイムの多くの部分は WinForms に依存しており、これらは Visual Basic の今後のバージョンで追加される予定です。 
+
+Visual Basic 15.8 以前のバージョンと比べて、**コメントはステートメント内のより多くの場所で使用できます**。コメントは、空白行、ステートメントの最後、または暗黙の行継続が許可されているステートメント内の特定の場所でのみ使用できます。 Visual Basic 16.0 以降では、コメントは、明示的な行継続の後と、スペースとその後にアンダースコアで始まる行のステートメント内でも使用できます。
+
+```vb
+Public Sub Main()
+    cmd.CommandText = ' Comment is allowed here without _
+        "SELECT * FROM Titles JOIN Publishers " _ ' This is a comment
+        & "ON Publishers.PubId = Titles.PubID " _
+ _ ' This is a comment on a line without code
+        & "WHERE Publishers.State = 'CA'"
+End Sub
+```
+
 ## <a name="visual-basic-158"></a>Visual Basic 15.8
 
 **浮動小数点から整数への変換の最適化**
 
-以前のバージョンの Visual Basic では、[倍精度浮動小数点型](../language-reference/data-types/double-data-type.md)と[単精度浮動小数点型](../language-reference/data-types/single-data-type.md)の値の整数への変換で比較的低いパフォーマンスが提供されていました。 Visual Basic 15.8 では、次のいずれかのメソッドによって返された値を[固有の Visual Basic 整数変換の関数](../language-reference/functions/type-conversion-functions.md) (CByte、CShort、CInt、CLng、CSByte、CUShort、CUInt、CULng) の 1 つに渡すとき、または [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) が `Off` に設定されているときに、値が整数型に暗黙的にキャストされる次のいずれかのメソッドによって返されるときに、浮動小数点の整数への変換のパフォーマンスが大幅に向上します。
+以前のバージョンの Visual Basic では、[倍精度浮動小数点型](../language-reference/data-types/double-data-type.md)と[単精度浮動小数点型](../language-reference/data-types/single-data-type.md)の値の整数への変換で比較的低いパフォーマンスが提供されていました。 Visual Basic 15.8 では、次のいずれかのメソッドによって返された値を[固有の Visual Basic 整数変換の関数](../language-reference/functions/type-conversion-functions.md) (CByte、CShort、CInt、CLng、CSByte、CUShort、CUInt、CULng) の 1 つに渡すとき、または [Option Strict](../language-reference/statements/option-strict-statement.md) が `Off` に設定されているときに、値が整数型に暗黙的にキャストされる次のいずれかのメソッドによって返されるときに、浮動小数点の整数への変換のパフォーマンスが大幅に向上します。
 
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>

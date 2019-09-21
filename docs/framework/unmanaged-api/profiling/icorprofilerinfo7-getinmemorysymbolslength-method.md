@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo7::GetInMemorySymbolsLength メソッド
+title: 'ICorProfilerInfo7:: Getinmemoryシンボルの長さメソッド'
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo7.GetInMemorySymbolsLength
@@ -11,17 +11,17 @@ api_type:
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03c70b97e7af9fdc76c579c5940e2436232f6bc2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 157b0e215f8afa58cccb3d54a65baa9c307ba966
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748655"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955428"
 ---
-# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7::GetInMemorySymbolsLength メソッド
+# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7:: Getinmemoryシンボルの長さメソッド
 [.NET Framework 4.6.1 以降のバージョンでのみでサポート]  
   
- メモリ内のシンボルのストリームの長さを返します。  
+ メモリ内シンボルストリームの長さを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,28 +34,28 @@ HRESULT GetInMemorySymbolsLength(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleId`  
- [in]メモリ内のストリームを含むモジュールの識別子です。  
+ からメモリ内ストリームを格納しているモジュールの識別子。  
   
- pCountSymbolBytes  
- [out]ポインターを`DWORD`メソッドが戻るときに、バイト単位のストリームの長さを格納する値。  
+ Pcountシンボルバイト数  
+ 入出力メソッドから制御が`DWORD`戻るときに、ストリーム長がバイト単位で格納されている値へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドを返します`S_OK`かどうかメモリ ストリームの長さを決定できますはゼロ (0) 場合でもです。  
+ メモリストリームの`S_OK`長さがゼロ (0) であっても、このメソッドはを返します。  
   
- メソッドを返します`CORPROF_E_MODULE_IS_DYNAMIC`を使用して、メソッドが作成された場合<xref:System.Reflection.Emit?displayProperty=nameWithType>します。  
+ メソッドがを`CORPROF_E_MODULE_IS_DYNAMIC`使用して<xref:System.Reflection.Emit?displayProperty=nameWithType>作成された場合、メソッドはを返します。  
   
 ## <a name="remarks"></a>Remarks  
- モジュールは、メモリ内のシンボルには、ストリームの長さに置かれます。`pCountSymbolBytes`します。 モジュールは、メモリ内のシンボルを持っていない場合`*pCountSymbolBytes = 0`します。  
+ モジュールにメモリ内シンボルがある場合は、ストリームの長さがに`pCountSymbolBytes`配置されます。 モジュールにメモリ内シンボル`*pCountSymbolBytes = 0`がない場合は。  
   
 > [!NOTE]
->  現在の実装は、Reflection.Emit をサポートしていません。 かどうか、モジュールは、Reflection.Emit を使用して作成された、メソッドを返します`CORPROF_E_MODULE_IS_DYNAMIC`します。  
+> 現在の実装では、リフレクションはサポートされていません。 モジュールがリフレクションを使用して作成された場合、メソッド`CORPROF_E_MODULE_IS_DYNAMIC`はを返します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー:** Corprof.idl、Corprof.idl  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

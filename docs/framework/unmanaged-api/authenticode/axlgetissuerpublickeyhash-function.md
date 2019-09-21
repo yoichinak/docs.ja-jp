@@ -10,14 +10,14 @@ api_type:
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de55594db68e084009a095a083e065fbd0b8f0df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4b101a912eb58ed14f81d847ea2fd6ce9f22c065
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741335"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787095"
 ---
-# <a name="axlgetissuerpublickeyhash-function"></a>\_AxlGetIssuerPublicKeyHash 関数
+# <a name="_axlgetissuerpublickeyhash-function"></a>\_AxlGetIssuerPublicKeyHash 関数
 指定された証明書の署名に使用する秘密キーに関連付けられている公開キーの SHA-1 ハッシュを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -31,7 +31,7 @@ HRESULT _AxlGetIssuerPublicKeyHash (
   
 ## <a name="parameters"></a>パラメーター  
  `pChainContext`  
- [in] CSP 公開キー BLOB。 参照してください、 [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)構造体。  
+ [in] CSP 公開キー BLOB。 [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob)構造体を参照してください。  
   
  `ppwszPublicKeyHash`  
  [out] 16 進エンコードされた公開キー トークンを受け取るための WCHAR * へのポインター。  
@@ -41,4 +41,4 @@ HRESULT _AxlGetIssuerPublicKeyHash (
   
 ## <a name="see-also"></a>関連項目
 
-- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [Authenticode](index.md)

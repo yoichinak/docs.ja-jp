@@ -5,40 +5,40 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 68b2f75681bef6c43b7eb2072d6e9266408ca102
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 09cee2f2b2c3288c835912c9f311bf2511c7b0d0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607180"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785914"
 ---
 # <a name="sorting-and-filtering-data"></a>データの並べ替えとフィルター処理
 <xref:System.Data.DataView> には、<xref:System.Data.DataTable> のデータの並べ替えとフィルター処理を行うさまざまな方法が用意されています。  
   
 - <xref:System.Data.DataView.Sort%2A> プロパティを使用すれば、1 列または複数列の並べ替え順序を指定し、ASC (昇順) パラメーターと DESC (降順) パラメーターを含めることができます。  
   
-- <xref:System.Data.DataView.ApplyDefaultSort%2A> プロパティを使用すると、テーブルの主キー列 (1 列または複数列) に基づいて、昇順の並べ替え順序を自動的に作成できます。 <xref:System.Data.DataView.ApplyDefaultSort%2A> 場合にのみ適用されます、**並べ替え**プロパティが null 参照または空の文字列と、テーブルが定義されている主キーを持っている場合。  
+- <xref:System.Data.DataView.ApplyDefaultSort%2A> プロパティを使用すると、テーブルの主キー列 (1 列または複数列) に基づいて、昇順の並べ替え順序を自動的に作成できます。 <xref:System.Data.DataView.ApplyDefaultSort%2A>**Sort**プロパティが null 参照または空の文字列の場合、およびテーブルに主キーが定義されている場合にのみ適用されます。  
   
-- <xref:System.Data.DataView.RowFilter%2A> プロパティを使用すると、列の値に基づいて行のサブセットを指定できます。 詳細については、有効な式の**RowFilter**プロパティに関するリファレンス情報を参照してください、<xref:System.Data.DataColumn.Expression%2A>のプロパティ、<xref:System.Data.DataColumn>クラス。  
+- <xref:System.Data.DataView.RowFilter%2A> プロパティを使用すると、列の値に基づいて行のサブセットを指定できます。 **RowFilter**プロパティの有効な式の詳細については、 <xref:System.Data.DataColumn.Expression%2A> <xref:System.Data.DataColumn>クラスのプロパティの参照情報を参照してください。  
   
-     取得、データのサブセットの動的なビューを提供することではなく、データの特定のクエリの結果を使用する場合、<xref:System.Data.DataView.Find%2A>または<xref:System.Data.DataView.FindRows%2A>のメソッド、 **DataView**最高のパフォーマンスを実現するためには設定、 **RowFilter**プロパティ。 設定、 **RowFilter**プロパティは、アプリケーションにオーバーヘッドを追加し、パフォーマンスが低下は、データのインデックスを再構築します。 **RowFilter**プロパティは、最適な使用データ バインド アプリケーションでバインドされたコントロールがフィルター処理された結果が表示されます。 **検索**と**FindRows**メソッドは、再構築するインデックスを必要とせず、現在のインデックスを活用します。 詳細については、**検索**と**FindRows**メソッドを参照してください[行の検索](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)します。  
+     データのサブセットの動的ビューを提供するのではなく、データに対する特定のクエリの結果を返す場合は、 **DataView**のメソッド<xref:System.Data.DataView.Find%2A>また<xref:System.Data.DataView.FindRows%2A>はメソッドを使用して、 **RowFilter**プロパティ。 **RowFilter**プロパティを設定すると、データのインデックスが再構築され、アプリケーションにオーバーヘッドが追加され、パフォーマンスが低下します。 **RowFilter**プロパティは、バインドされたコントロールがフィルター処理された結果を表示するデータバインドアプリケーションで最適に使用されます。 **Find**メソッドと**FindRows**メソッドは、インデックスの再構築を必要とせずに、現在のインデックスを利用します。 **Find**メソッドと**FindRows**メソッドの詳細については、「[行の検索](finding-rows.md)」を参照してください。  
   
-- <xref:System.Data.DataView.RowStateFilter%2A> プロパティを使用して、表示する行バージョンを指定できます。 **DataView**に応じてを公開する行バージョンを暗黙的に管理、 **RowState**の基になる行のできます。 たとえば場合、 **RowStateFilter**に設定されている**DataViewRowState.Deleted**、 **DataView**公開、**元**の行のバージョンすべて**Deleted**行があるためありません**現在**行バージョン。 使用して、公開される行の行バージョンを指定できます、 **RowVersion**のプロパティ、 **DataRowView**します。  
+- <xref:System.Data.DataView.RowStateFilter%2A> プロパティを使用して、表示する行バージョンを指定できます。 **DataView**は、基になる行の**RowState**に応じて、公開する行バージョンを暗黙的に管理します。 たとえば、 **Rowstatefilter**が DataViewRowState に設定されている場合、 **DataView**は、**現在**の行バージョンがないため、**削除さ**れたすべての行の**元**の行バージョンを公開し**ます**。 **DataRowView**の**RowVersion**プロパティを使用して、公開されている行バージョンを特定できます。  
   
-     次の表は、オプションの**DataViewRowState**します。  
+     次の表は、 **DataViewRowState**のオプションを示しています。  
   
     |DataViewRowState のオプション|説明|  
     |------------------------------|-----------------|  
-    |**CurrentRows**|**現在**行バージョンのすべて**Unchanged**、 **Added**、および**Modified**行。 既定値です。|  
-    |**追加**|**現在**行バージョンのすべて**Added**行。|  
-    |**削除**|**元**行バージョンのすべて**Deleted**行。|  
-    |**ModifiedCurrent**|**現在**行バージョンのすべて**Modified**行。|  
-    |**ModifiedOriginal**|**元**行バージョンのすべて**Modified**行。|  
+    |**CurrentRows**|**変更** **され**ていない、追加、および**変更**されたすべての行の**現在**の行バージョン。 既定値です。|  
+    |**れ**|**追加された**すべての行の**現在**の行バージョン。|  
+    |**削除**|**削除された**すべての行の**元**の行バージョン。|  
+    |**ModifiedCurrent**|すべての**変更**された行の**現在**の行バージョン。|  
+    |**ModifiedOriginal**|**変更**されたすべての行の**元**の行バージョン。|  
     |**None**|行がありません。|  
-    |**OriginalRows**|**元**行バージョンのすべて**Unchanged**、 **Modified**、および**Deleted**行。|  
-    |**変更なし**|**現在**行バージョンのすべて**Unchanged**行。|  
+    |**OriginalRows**|**変更**されていない、**変更** **された、および削除された**すべての行の**元**の行バージョン。|  
+    |**Unchanged**|**変更**されていないすべての行の**現在**の行バージョン。|  
   
- 行の状態と行のバージョンの詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。  
+ 行の状態と行のバージョンの詳細については、「[行の状態と](row-states-and-row-versions.md)行のバージョン」を参照してください。  
   
  在庫数が標準在庫数以下である製品を、仕入先 ID (supplier ID) で並べ替え、さらに製品名 (product name) で並べ替えたビューを作成するコード サンプルを次に示します。  
   
@@ -62,5 +62,5 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 - <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataViews](dataviews.md)
+- [ADO.NET の概要](../ado-net-overview.md)

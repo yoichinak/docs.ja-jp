@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9936d56582afd160bf3464d18efd3acf47c7af60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584385"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924494"
 ---
 # <a name="finalizers-c-programming-guide"></a>ファイナライザー (C# プログラミング ガイド)
 ガベージ コレクターによってクラス インスタンスが収集されている場合は、ファイナライザー (**デストラクター**とも呼ばれます) を使用して、最終的に必要なすべてのクリーンアップが実行されます。  
@@ -56,7 +56,7 @@ protected override void Finalize()
  つまり、派生が最も多いクラスから派生が最も少ないクラスまで、継承チェーンのすべてのインスタンスに対して、`Finalize` メソッドが再帰的に呼び出されます。  
   
 > [!NOTE]
->  空のファイナライザーは使用しないでください。 ファイナライザーがクラスに存在するときは、エントリが `Finalize` キューで作成されます。 ファイナライザーを呼び出すと、ガベージ コレクターが呼び出され、このキューを処理します。 ファイナライザーが空の場合、パフォーマンスを不必要に低下させるだけです。  
+> 空のファイナライザーは使用しないでください。 ファイナライザーがクラスに存在するときは、エントリが `Finalize` キューで作成されます。 ファイナライザーを呼び出すと、ガベージ コレクターが呼び出され、このキューを処理します。 ファイナライザーが空の場合、パフォーマンスを不必要に低下させるだけです。  
   
  ファイナライザーがいつ呼び出されるかはガベージ コレクターによって決定されるため、プログラマは制御できません。 ガベージ コレクターは、アプリケーションが使用していないオブジェクトをチェックします。 終了処理が可能なオブジェクトと考えられる場合、ファイナライザー (存在する場合) を呼び出し、オブジェクトの格納に使用されているメモリを解放します。 
  
@@ -76,7 +76,7 @@ protected override void Finalize()
   
 - [Dispose メソッドの実装](../../../standard/garbage-collection/implementing-dispose.md)  
   
-- [using ステートメント](../../../csharp/language-reference/keywords/using-statement.md)  
+- [using ステートメント](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>例  
  次の例では、継承チェーンを形成する 3 つのクラスを作成します。 `First` が基底クラスであり、`Second` は `First` から派生し、`Third` は `Second` から派生します。 3 つのクラスのいずれにもファイナライザーがあります。 `Main` では、派生が最も多いクラスのインスタンスが作成されます。 プログラムを実行すると、3 つのクラスのファイナライザーが派生が最も多いクラスから派生が最も少ないクラスの順に自動的に呼び出されます。  
@@ -90,6 +90,6 @@ protected override void Finalize()
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IDisposable>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [C# プログラミング ガイド](../index.md)
+- [コンストラクター](./constructors.md)
 - [ガベージ コレクション](../../../standard/garbage-collection/index.md)

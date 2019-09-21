@@ -2,20 +2,21 @@
 title: <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: ee7a0c23adca883af279addf9d1f221bd4056d00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aefe7beec7335d80341e670961800907c2bd0200
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772412"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855101"
 ---
-# <a name="namespacetable"></a>\<namespaceTable>
+# <a name="namespacetable"></a>\<namespaceTable >
 
 名前空間とプレフィックスのマッピングを含む要素セットを定義する構成セクションを表します。これは、ルーティングの XPath フィルターで使用されます。
 
-**\<system.serviceModel>**   
-&nbsp;&nbsp;**\<ルーティング >**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable>**
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ルーティング >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<namespaceTable >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,13 +43,13 @@ ms.locfileid: "61772412"
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<フィルター >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | XPath 式に使用される名前空間とプレフィックスのマッピングを定義します。 |
+| [ **\<フィルター >** ](filter.md) | XPath 式に使用される名前空間とプレフィックスのマッピングを定義します。 |
 
 ### <a name="parent-elements"></a>親要素
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<ルーティング >**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Windows Communication Foundation (WCF) の種類を指定するルーティング フィルター セットを定義する構成セクションを表します<xref:System.ServiceModel.Dispatcher.MessageFilter>受信メッセージの評価とルーティング テーブルをするターゲット エンドポイントを定義するときに使用される。フィルターが一致したときにメッセージを送信します。 |
+| [ **\<ルーティング >** ](routing.md) | 一連のルーティングフィルターを定義するための構成セクションを表します。これにより、受信メッセージ<xref:System.ServiceModel.Dispatcher.MessageFilter>を評価するときに使用する Windows Communication Foundation (WCF) の種類、およびターゲットエンドポイントを定義するルーティングテーブルを決定します。フィルターが一致したときにメッセージをに送信します。 |
 
 ## <a name="see-also"></a>関連項目
 

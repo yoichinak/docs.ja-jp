@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: eea1439337b29fee51c422238425491fc2345211
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d6f5f76787c1110e91b245a3dd2425450b4db7e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037558"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781390"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>一連の数値の平均値の取得
 <xref:System.Linq.Enumerable.Average%2A> 演算子は、一連の数値の平均値を計算します。  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] で整数値の `Average` が変換されるときには、倍精度浮動小数点数ではなく整数として計算されます。  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] で整数値の `Average` が変換されるときには、倍精度浮動小数点数ではなく整数として計算されます。  
   
 ## <a name="example"></a>例  
  次の例は、`Freight` テーブルの `Orders` の平均値を返します。  
@@ -116,4 +116,4 @@ ms.locfileid: "62037558"
   
 ## <a name="see-also"></a>関連項目
 
-- [集計クエリ](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+- [集計クエリ](aggregate-queries.md)

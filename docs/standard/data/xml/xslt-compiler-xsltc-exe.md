@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8480e2d6817d0367e89542c0e6c89cd26183dd5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a0c34eebda789f6561195c89e2660ae77603dc0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774899"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923281"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT コンパイラ (xsltc.exe)
 XSLT コンパイラ (xsltc.exe) は、XSLT スタイル シートをコンパイルしてアセンブリを生成します。 コンパイルしたスタイル シートを <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> メソッドに直接渡すことができます。 xsltc.exe を使用して署名があるアセンブリを生成することはできません。  
@@ -47,7 +47,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
  XSLT ソリューションは、複数のスタイル シート モジュールで構成できます。 xsltc.exe ツールを使用して、スタイル シートからアセンブリを生成できます。 このアセンブリを <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> メソッドに直接渡すことができます。 XSLT の配置シナリオによっては、これによってパフォーマンス コストを削減できます。  
   
 > [!NOTE]
->  アプリケーションには、コンパイル済みのアセンブリも参照として含める必要があります。  
+> アプリケーションには、コンパイル済みのアセンブリも参照として含める必要があります。  
   
  xsltc.exe ツールでは、クラス名 (`/class:`*name*) やアセンブリ名 (`/out:`*assemblyName*) が検証されません。 名前が無効である場合、共通言語ランタイムによってエラーがスローされます。  
   

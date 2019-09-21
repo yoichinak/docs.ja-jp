@@ -4,12 +4,12 @@ description: 転移学習と ML.NET を使用して画像分類 TensorFlow モ�
 ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: eb6e3d3f3a33aa7360802ce1bc6c16532539c828
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804757"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929238"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>チュートリアル: 転移学習と ML.NET を使用して TensorFlow 画像分類子を再トレーニングする
 
@@ -19,6 +19,7 @@ ms.locfileid: "67804757"
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
+>
 > * 問題を把握する
 > * トレーニング済みのモデルを再利用して調整する
 > * 画像を分類する
@@ -58,9 +59,9 @@ ms.locfileid: "67804757"
 画像分類は、画像を次のような複数のカテゴリに自動的に分類することができる一般的な機械学習タスクです。
 
 * 画像から人の顔を検出するかどうか。
-* 猫と犬の検出。
+* 猫と犬を検出する。
 
- または、次の画像のように、画像が食品、おもちゃ、またはアプライアンスのいずれであるかを判断する場合。
+ または、次のような各画像で、食品、おもちゃ、または電化製品の画像であるかどうかを判別する。
 
 ![ピザの画像](./media/image-classification/220px-Pepperoni_pizza.jpg)
 ![テディ ベアの画像](./media/image-classification/119px-Nalle_-_a_small_brown_teddy_bear.jpg)
@@ -95,7 +96,7 @@ ms.locfileid: "67804757"
 * おもちゃ
 * アプライアンス
 
-レイヤーは、[多項ロジスティック回帰アルゴリズム](https://en.wikipedia.org/wiki/Multinomial_logistic_regression)を使用して正しいカテゴリを可能な限り早く見つけます。 このアルゴリズムでは、確率を使用して答えを決定し、正しいカテゴリに 1 つの値を与え、他のカテゴリに 0 の値を与えます。  
+レイヤーは、[多項ロジスティック回帰アルゴリズム](https://en.wikipedia.org/wiki/Multinomial_logistic_regression)を使用して正しいカテゴリを可能な限り早く見つけます。 このアルゴリズムでは、確率を使用して答えを決定し、正しいカテゴリに 1 の値を与え、他のカテゴリに 0 の値を与えます。  
 
 ### <a name="dataset"></a>DataSet
 
@@ -128,7 +129,7 @@ toaster2.png    appliance
 
 2. **Microsoft.ML NuGet パッケージ**をインストールします。
 
-    ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として "nuget.org" を選択し、[参照] タブを選択し、"**Microsoft.ML**" を検索します。 **[バージョン]** ドロップダウンをクリックし、一覧から **1.0.0** パッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.ImageAnalytics v1.0.0** と **Microsoft.ML.TensorFlow v0.12.0** について、これらの手順を繰り返します。
+    ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として "nuget.org" を選択し、[参照] タブを選択し、"**Microsoft.ML**" を検索します。 **[バージョン]** ドロップダウンをクリックし、一覧から **1.0.0** パッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.ImageAnalytics v1.0.0** と **Microsoft.ML.TensorFlow v0.12.0** についても、これらの手順を繰り返します。
 
 ### <a name="prepare-your-data"></a>データを準備する
 
@@ -273,7 +274,7 @@ ML.NET には、次の 3 つの主要な概念があります。[データ](../r
 
 `ReuseAndTuneInceptionModel()` メソッドは次のタスクを実行します。
 
-* データを読み込む
+* データを読み込みます。
 * データを抽出して変換します。
 * TensorFlow モデルにスコアを付けます。
 * モデルを調整 (再トレーニング) します。
@@ -480,6 +481,7 @@ Press any key to close this window . . .
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
+>
 > * 問題を把握する
 > * トレーニング済みのモデルを再利用して調整する
 > * 読み込み済みのモデルを使用して画像を分類する

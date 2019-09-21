@@ -5,12 +5,12 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: 7ec22acf33884a5da0062b6e7aaded5dd4a0c665
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: db42ba4916aad739bd2c9d8b547f16022fce44bd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539300"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104945"
 ---
 # <a name="select-the-net-core-version-to-use"></a>使用する .NET Core のバージョンを選択する
 
@@ -32,8 +32,8 @@ ms.locfileid: "67539300"
 
 SDK コマンドには `dotnet new` または `dotnet run` が含まれています。 .NET Core CLI の場合、どの `dotnet` コマンドに対しても SDK バージョンを選択する必要があります。 以下のような場合でも、既定でマシンにインストールされている最新の SDK が使用されます。
 
-* このプロジェクトは、.NET Core ランタイムの以前のバージョンをターゲットとしています。
-* .NET Core SDK の最新バージョンはプレビュー バージョンです。
+- このプロジェクトは、.NET Core ランタイムの以前のバージョンをターゲットとしています。
+- .NET Core SDK の最新バージョンはプレビュー バージョンです。
 
 以前のバージョンの .NET Core ランタイムをターゲットにしているとき、SDK の最新の機能と機能改善を活用できます。 すべてのプロジェクトに同じ SDK ツールを使用し、異なるプロジェクトで複数のランタイム バージョンの .NET Core をターゲットにできます。
 

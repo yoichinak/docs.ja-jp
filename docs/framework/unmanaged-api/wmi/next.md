@@ -1,6 +1,6 @@
 ---
-title: 次の関数 (アンマネージ API リファレンス)
-description: 次の関数は、列挙体では、次のプロパティを取得します。
+title: Next 関数 (アンマネージ API リファレンス)
+description: 次の関数は、列挙体の次のプロパティを取得します。
 ms.date: 11/06/2017
 api_name:
 - Next
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5b456feeb1cb09e4957e470344146cf4358d8c7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 95cea4cb3e7e7df2b6b52256a440b9a8d544f2db
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636182"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798411"
 ---
-# <a name="next-function"></a>次の関数
-呼び出しで開始する列挙体では、次のプロパティを取得します。 [BeginEnumeration](beginenumeration.md)します。
+# <a name="next-function"></a>Next 関数
+[Beginenumeration](beginenumeration.md)への呼び出しで始まる列挙体の次のプロパティを取得します。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -45,64 +45,64 @@ HRESULT Next (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`\
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`\
-[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
+から[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンスへのポインター。
 
 `lFlags`\
-[in] 予約されています。 このパラメーターは、0 を指定する必要があります。
+[in] 予約されています。 このパラメーターには0を指定する必要があります。
 
 `pstrName`\
-[out]新しい`BSTR`プロパティ名を格納しています。 このパラメーターに設定することができます`null`名前が必要ない場合。
+入出力プロパティ名`BSTR`を格納している新しい。 名前が不要な場合は`null` 、このパラメーターをに設定できます。
 
 `pVal`\
-[out]A`VARIANT`のプロパティの値が格納されます。 このパラメーターに設定することができます`null`場合は、値は必要ありません。 関数は、エラー コードを返した場合、`VARIANT`に渡される`pVal`は左未変更の状態します。
+入出力プロパティの値を格納した。`VARIANT` 値が不要な場合は`null` 、このパラメーターをに設定できます。 関数がエラーコードを返す場合、に`VARIANT`渡され`pVal`たは変更されずに残ります。
 
 `pvtType`\
-[out]ポインターを`CIMTYPE`変数 (、`LONG`にプロパティの型が配置されます)。 このプロパティの値を指定できます、 `VT_NULL_VARIANT`、この場合は、プロパティの実際の型を決定するために必要です。 このパラメーターは指定できますも`null`します。
+入出力`CIMTYPE` 変数`LONG` (プロパティの型が配置される) へのポインター。 このプロパティの値には、を`VT_NULL_VARIANT`指定できます。この場合、プロパティの実際の型を決定する必要があります。 このパラメーターは、に`null`することもできます。
 
 `plFlavor`\
-[out]`null`、またはプロパティの原点の情報を受信する値。 使用可能な値 [注釈] セクションを参照してください。
+入出力`null`、またはプロパティの配信元に関する情報を受け取る値。 使用可能な値については、[解説] セクションを参照してください。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 一般的なエラーが発生しました。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | 呼び出しがなかった、 [ `BeginEnumeration` ](beginenumeration.md)関数。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 新しい列挙を開始するのに十分なメモリがあります。 |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | リモート プロシージャを呼び出す間、現在のプロセスと Windows の管理に失敗しました。 |
-| `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | 列挙には、プロパティがあります。 |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | 関数の[`BeginEnumeration`](beginenumeration.md)呼び出しがありませんでした。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 新しい列挙を開始するために必要なメモリが不足しています。 |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 現在のプロセスと Windows の管理の間のリモートプロシージャコールが失敗しました。 |
+| `WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | 列挙体にはそれ以上のプロパティがありません。 |
 
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemClassObject::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-next)メソッド。
+この関数は、 [IWbemClassObject:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-next)メソッドの呼び出しをラップします。
 
-このメソッドは、システムのプロパティも返します。
+このメソッドは、システムプロパティも返します。
 
-プロパティの基になる型がオブジェクトのパス、日付または時刻、または別の特殊な種類の場合は、し、返される型では十分な情報が含まれませんしません。 呼び出し元を確認する必要があります、`CIMTYPE`指定したプロパティ、プロパティがオブジェクト参照を日付または時刻、または別の特殊な種類を判断します。
+プロパティの基になる型がオブジェクトパス、日付または時刻、または別の特殊な型である場合、返される型には十分な情報が含まれていません。 呼び出し元は、プロパティ`CIMTYPE`がオブジェクト参照、日付または時刻、または別の特殊な型であるかどうかを判断するために、指定されたプロパティのを調べる必要があります。
 
-場合`plFlavor`は`null`、`LONG`値が次のように、プロパティの発生元に関する情報を受信します。
+が`plFlavor`でない`null`場合、 `LONG`この値は、次のように、プロパティの配信元に関する情報を受け取ります。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | プロパティは、標準のシステム プロパティです。 |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | クラス。プロパティは、親クラスから継承されます。 <br> インスタンス。プロパティを親クラスから継承したときに変更されていないインスタンスがします。  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | クラス。プロパティは、派生クラスに属しています。 <br> インスタンス。インスタンスでプロパティを変更します。つまり、値が指定されましたまたは修飾子が追加または変更します。 |
+| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | プロパティは、標準のシステムプロパティです。 |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | クラスの場合:プロパティは、親クラスから継承されます。 <br> インスタンスの場合:親クラスから継承されているプロパティは、インスタンスによって変更されていません。  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | クラスの場合:プロパティは、派生クラスに属しています。 <br> インスタンスの場合:プロパティは、インスタンスによって変更されます。つまり、値が指定されたか、または修飾子が追加または変更されたことを示します。 |
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。
 
-**ヘッダー:** WMINet_Utils.idl
+**ヘッダー:** WMINet_Utils
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

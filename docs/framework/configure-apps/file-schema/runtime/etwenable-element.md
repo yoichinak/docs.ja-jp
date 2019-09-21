@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba411114bfb853e06c83adb42713d43f1452d9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb4d0ed5b33170c40aacb32bebbf1b59ca659be4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704805"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252614"
 ---
 # <a name="etwenable-element"></a>\<etwEnable > 要素
 共通言語ランタイム イベントで Windows イベント トレーシング (ETW) を有効にするかどうかを指定します。  
   
- \<configuration> 要素  
-\<runtime> 要素  
-\<etwEnabled>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<etwEnabled >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,8 +40,8 @@ ms.locfileid: "61704805"
   
 |値|説明|  
 |-----------|-----------------|  
-|true|ETW を有効にします。 これは、Windows、Windows Vista および Windows Server 2008 オペレーティング システム以降のバージョンの既定値です。|  
-|False|ETW を無効にします。 これは、Windows の以前のバージョンの既定値です。|  
+|true|ETW を有効にします。 Windows Vista および Windows Server 2008 オペレーティングシステム以降のバージョンの Windows では、これが既定です。|  
+|False|ETW を無効にします。 これは、以前のバージョンの Windows では既定です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -54,13 +54,13 @@ ms.locfileid: "61704805"
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- ETW は Windows Vista 以降、既定で有効です。 アプリケーションの ETW を無効にするのにには、この要素を使用します。 Windows の以前のバージョンでは、アプリケーションの ETW を有効にするのにこの要素を使用します。  
+ Windows Vista 以降では、ETW は既定で有効になっています。 アプリケーションの ETW を無効にするには、この要素を使用します。 以前のバージョンの Windows では、この要素を使用して、アプリケーションの ETW を有効にします。  
   
 > [!NOTE]
->  ETW を有効になっているか、レジストリ設定を使用して、サーバーでグローバルに無効にします。 参照してください[.NET Framework のログ記録を制御する](../../../../../docs/framework/performance/controlling-logging.md)します。  
+> ETW は、レジストリ設定を使用して、サーバー上でグローバルに有効または無効にすることができます。 「 [.NET Framework のログ記録の制御](../../../performance/controlling-logging.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、アプリケーションの ETW トレースを有効にする方法を示します。  
+ 次の例は、アプリケーションの ETW トレースを有効にする方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -72,6 +72,6 @@ ms.locfileid: "61704805"
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [.NET Framework のログ記録の制御](../../../../../docs/framework/performance/controlling-logging.md)
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)
+- [.NET Framework のログ記録の制御](../../../performance/controlling-logging.md)

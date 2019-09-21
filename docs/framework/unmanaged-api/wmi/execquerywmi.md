@@ -1,6 +1,6 @@
 ---
 title: ExecQueryWmi 関数 (アンマネージ API リファレンス)
-description: ExecQueryWmi 関数では、オブジェクトを取得するクエリを実行します。
+description: ExecQueryWmi 関数は、オブジェクトを取得するクエリを実行します。
 ms.date: 11/06/2017
 api_name:
 - ExecQueryWmi
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3db6ddf51b8e83635f594c4716b57551475dc96f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b8547d306819e85b838f1160d9912dd43e42f2f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636579"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798689"
 ---
 # <a name="execquerywmi-function"></a>ExecQueryWmi 関数
 
@@ -50,86 +50,86 @@ HRESULT ExecQueryWmi (
 ## <a name="parameters"></a>パラメーター
 
 `strQueryLanguage`\
-[in]Windows の管理でサポートされる有効なクエリ言語を含む文字列。 WMI クエリ言語の頭字語である"WQL"必要があります。
+からWindows Management でサポートされている有効なクエリ言語を含む文字列。 これは、WMI Query Language の頭字語である "WQL" である必要があります。
 
 `strQuery`\
-[in]クエリのテキスト。 このパラメーターを `null` とすることはできません。
+からクエリのテキスト。 このパラメーターを `null` とすることはできません。
 
 `lFlags`\
-[in]この関数の動作に影響するフラグの組み合わせ。 次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+からこの関数の動作に影響を与えるフラグの組み合わせ。 次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-| 定数 | 値  | 説明  |
+| 定数 | Value  | 説明  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | セット、関数は、現在の接続のロケールのローカライズされた名前空間に格納されている修正済みの修飾子を取得します。 場合、 <br/> 指定しない場合、セット、関数は、即時の名前空間に格納されている修飾子のみを取得します。 |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | フラグには、半同期的メソッドの呼び出しが行わします。 |
-| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 関数は、順方向専用の列挙子を返します。 呼び出しは許可されませんが、通常、順方向専用の列挙子は、高速と従来の列挙子より少ないメモリを使用して、[複製](clone.md)します。 |
-| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI は、リリースされるまでに、列挙内のオブジェクトへのポインターを保持します。 |
-| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | 返されるオブジェクトがあるのに十分な情報にそのためことにより、そのシステムのプロパティなど **_path**、 **_ _relpath**と **_ _server**、いない`null`。 |
-| `WBEM_FLAG_PROTOTYPE` | 2 | このフラグは、プロトタイプの作成に使用されます。 クエリを実行しないと、代わりに、通常の結果オブジェクトのようなオブジェクトを返します。 |
-| `WBEM_FLAG_DIRECT_READ` | 0x200 | エラーの原因は直接の親クラスまたはサブクラスに関係なく指定されたクラスのプロバイダーへのアクセスです。 |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 設定すると、関数は、現在の接続のロケールのローカライズされた名前空間に格納されている修正された修飾子を取得します。 <br/> 設定されていない場合、関数は、イミディエイト名前空間に格納されている修飾子だけを取得します。 |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | このフラグにより、半同期呼び出しが発生します。 |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 関数は、順方向専用の列挙子を返します。 通常、順方向専用の列挙子は、従来の列挙子よりも高速で使用されるメモリが少なくなりますが、[複製](clone.md)の呼び出しは許可されません。 |
+| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI は、列挙体が解放されるまで、そのオブジェクトへのポインターを保持します。 |
+| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | 返されたオブジェクトに十分な情報が含まれていることを確認して、 **__ PATH**、 **__RELPATH**、 **__ SERVER**などの`null`システムプロパティがないようにします。 |
+| `WBEM_FLAG_PROTOTYPE` | 2 | このフラグは、プロトタイプを行うために使用されます。 クエリは実行されず、代わりに通常の結果オブジェクトのように見えるオブジェクトを返します。 |
+| `WBEM_FLAG_DIRECT_READ` | 0x200 | 親クラスまたはサブクラスに関係なく、指定されたクラスのプロバイダーに直接アクセスします。 |
 
-推奨されるフラグは`WBEM_FLAG_RETURN_IMMEDIATELY`と`WBEM_FLAG_FORWARD_ONLY`最適なパフォーマンス。
+最適なパフォーマンスを`WBEM_FLAG_RETURN_IMMEDIATELY`得る`WBEM_FLAG_FORWARD_ONLY`ために、推奨されるフラグはとです。
 
 `pCtx`\
-[in]この値は、通常、`null`します。 ポインターは、それ以外の場合、 [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)インスタンスを要求されたクラスを提供しているプロバイダーによって使用されることができます。
+から通常、この値は`null`です。 それ以外の場合は、要求されたクラスを提供しているプロバイダーが使用できる[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)インスタンスへのポインターです。
 
 `ppEnum`\
-[out]エラーが発生しない場合は、クエリの結果セットのインスタンスを取得する呼び出し元を許可する列挙子へのポインターを受け取ります。 クエリでは、0 個のインスタンスを含む結果セットを持つことができます。 参照してください、[解説](#remarks)詳細についてはします。
+入出力エラーが発生しなかった場合、は、呼び出し元がクエリの結果セット内のインスタンスを取得できるようにする列挙子へのポインターを受け取ります。 クエリには、インスタンスがゼロの結果セットを含めることができます。 詳細については、「[解説](#remarks)」を参照してください。
 
 `authLevel`\
-[in]承認レベル。
+から承認レベル。
 
 `impLevel`\
-[in]偽装レベル。
+から偽装レベル。
 
 `pCurrentNamespace`\
-[in]ポインター、 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)現在の名前空間を表すオブジェクト。
+から現在の名前空間を表す[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)オブジェクトへのポインター。
 
 `strUser`\
-[in]ユーザー名。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
+からユーザー名。 詳細については、「 [Connectserverwmi](connectserverwmi.md)関数」を参照してください。
 
 `strPassword`\
-[in]パスワードです。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
+からパスワード。 詳細については、「 [Connectserverwmi](connectserverwmi.md)関数」を参照してください。
 
 `strAuthority`\
-[in]ユーザーのドメイン名。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
+からユーザーのドメイン名。 詳細については、「 [Connectserverwmi](connectserverwmi.md)関数」を参照してください。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0x80041003 | ユーザーには、1 つ以上の関数が返すことができるクラスを表示するアクセス許可がありません。 |
-| `WBEM_E_FAILED` | 0x80041001 | 不明なエラーが発生しました。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
-| `WBEM_E_INVALID_QUERY` | 0x80041017 | クエリでは、構文エラーがありました。 |
-| `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | 要求されたクエリ言語がサポートされていません。 |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | 関数が返すことのできる1つ以上のクラスを表示するアクセス許可がユーザーにありません。 |
+| `WBEM_E_FAILED` | 0x80041001 | 特定できないエラーが発生しました。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが有効ではありません。 |
+| `WBEM_E_INVALID_QUERY` | 0x80041017 | クエリで構文エラーが発生しました。 |
+| `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | 要求されたクエリ言語はサポートされていません。 |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | クエリが複雑すぎます。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI は、おそらく停止および再起動されました。 呼び出す[ConnectServerWmi](connectserverwmi.md)もう一度です。 |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 現在のプロセスと WMI のリモート プロシージャ コール (RPC) リンクに失敗しました。 |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | クエリでは、存在しないクラスを指定します。 |
-| `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するために必要なメモリが不足しています。 |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI が停止し、再起動されたことがあります。 [Connectserverwmi](connectserverwmi.md)を再度呼び出します。 |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 現在のプロセスと WMI の間のリモートプロシージャコール (RPC) リンクが失敗しました。 |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | このクエリでは、存在しないクラスが指定されています。 |
+| `WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
 
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemServices::ExecQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execquery)メソッド。
+この関数は、 [IWbemServices:: ExecQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execquery)メソッドの呼び出しをラップします。
 
-この関数で指定されたクエリの処理、`strQuery`パラメーターと、呼び出し元が、クエリ結果のアクセス時に使用する列挙子を作成します。 列挙子がへのポインター、 [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)インターフェイスは、クエリ結果はをとおして利用可能なクラスのオブジェクトのインスタンス、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インターフェイス。
+この関数は、 `strQuery`パラメーターで指定されたクエリを処理し、呼び出し元がクエリ結果にアクセスするための列挙子を作成します。 列挙子は、 [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)インターフェイスへのポインターです。クエリの結果は、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インターフェイスを通じて使用できるクラスオブジェクトのインスタンスです。
 
-数に制限は`AND`と`OR`WQL クエリで使用できるキーワードです。 WMI を返す可能性が多数の複雑なクエリで使用される WQL キーワード、 `WBEM_E_QUOTA_VIOLATION` (または 0x8004106c) としてのエラー コード、`HRESULT`値。 WQL キーワードの制限は、クエリの複雑な方法に依存します。
+WQL クエリで使用できるキーワードと`AND` `OR`キーワードの数には制限があります。 複雑なクエリで使用される WQL キーワードの数が多いと、WMI `WBEM_E_QUOTA_VIOLATION`が (または 0x8004106c) エラーコード`HRESULT`を値として返すことがあります。 WQL キーワードの制限は、クエリの複雑さによって異なります。
 
-呼び出すことによって追加のエラー情報を取得するには、関数呼び出しに失敗した場合、 [GetErrorInfo](geterrorinfo.md)関数。
+関数呼び出しが失敗した場合は、 [GetErrorInfo](geterrorinfo.md)関数を呼び出して追加のエラー情報を取得できます。
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。
 
-**ヘッダー:** WMINet_Utils.idl
+**ヘッダー:** WMINet_Utils
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

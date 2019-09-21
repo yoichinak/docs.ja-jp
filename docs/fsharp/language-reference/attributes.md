@@ -2,12 +2,12 @@
 title: 属性
 description: 属性がF#プログラミングコンストラクトにメタデータを適用できるようにする方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 3f3c3469192c09aa51f31ef3f00aca0196e3c382
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 08d50f7f57b6c0a81221e8f635f77f67750d0ff9
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630078"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082937"
 ---
 # <a name="attributes"></a>属性
 
@@ -27,8 +27,8 @@ ms.locfileid: "68630078"
 
 *引数*は、属性の型のコンストラクターへの引数です。 属性に既定のコンストラクターがある場合は、引数リストとかっこを省略できます。 属性は、位置指定引数と名前付き引数の両方をサポートします。 *位置指定引数*は、出現する順序で使用される引数です。 名前付き引数は、属性にパブリックプロパティがある場合に使用できます。 これらを設定するには、引数リストで次の構文を使用します。
 
-```
-*property-name* = *property-value*
+```fsharp
+property-name = property-value
 ```
 
 このようなプロパティの初期化は任意の順序で行うことができますが、任意の位置指定引数に従う必要があります。 位置指定引数とプロパティの初期化を使用する属性の例を次に示します。
@@ -70,35 +70,34 @@ ms.locfileid: "68630078"
   </tr>
   <tr>
     <td>アセンブリ</td>
-    <td><pre lang="fsharp"><code>[&lt;assembly: AssemblyVersionAttribute("1.0.0.0")&gt;]<code></pre></td> 
+    <td><pre lang="fsharp"><code>[&lt;assembly: AssemblyVersionAttribute("1.0.0.0")&gt;]</code></pre></td> 
   </tr>
   <tr>
     <td>return</td>
-    <td><pre lang="fsharp"><code>let function1 x : [&lt;return: Obsolete&gt;] int = x + 1<code></pre></td> 
+    <td><pre lang="fsharp"><code>let function1 x : [&lt;return: Obsolete&gt;] int = x + 1</code></pre></td> 
   </tr>
   <tr>
     <td>フィールド</td>
-    <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int<code></pre></td> 
+    <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int</code></pre></td> 
   </tr>
   <tr>
     <td>property</td>
-    <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x<code></pre></td> 
+    <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x</code></pre></td> 
   </tr>
   <tr>
     <td>param</td>
-    <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10<code></pre></td> 
+    <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td> 
   </tr>
   <tr>
     <td>型</td>
     <td>
         <pre lang="fsharp"><code>
-        [&lt;type: StructLayout(Sequential)&gt;] 
-        type MyStruct = 
-        struct 
-        x : byte
-        y : int
-        end
-        <code></pre>
+[&lt;type: StructLayout(Sequential)&gt;] 
+type MyStruct = 
+struct 
+x : byte
+y : int
+end</code></pre>
     </td>
   </tr>
 </table>

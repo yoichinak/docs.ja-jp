@@ -5,23 +5,23 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: c5dce6895ed9962cf20808417c50569db48de6d9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434072"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042356"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI オートメーション コントロール パターンの概要
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  この概要では、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] コントロール パターンについて説明します。 コントロール パターンは、コントロール型や外観に関係なく、コントロールの機能を分類したり公開したりするための手段です。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、コントロールの一般的な動作を表すコントロール パターンを使用します。 たとえば、呼び出し可能なコントロール (ボタンなど) には Invoke コントロール パターンを使用し、スクロール バーを持つコントロール (リスト ボックス、リスト ビュー、コンボ ボックスなど) には Scroll コントロール パターンを使用します。 コントロール パターンごとに別の機能を表すため、コントロール パターンを組み合わせて、特定のコントロールでサポートされる機能の完全なセットを表すことができます。  
   
 > [!NOTE]
->  集約コントロール (親によって公開される機能のために [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] を提供する子コントロールで構築されるもの) は、各子コントロールに通常関連付けられるすべてのコントロール パターンを実装する必要があります。 一方、これらの同じコントロール パターンを子コントロールで実装する必要はありません。  
+> 集約コントロール (親によって公開される機能のために [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] を提供する子コントロールで構築されるもの) は、各子コントロールに通常関連付けられるすべてのコントロール パターンを実装する必要があります。 一方、これらの同じコントロール パターンを子コントロールで実装する必要はありません。  
   
 <a name="uiautomation_control_pattern_includes"></a>   
 ## <a name="ui-automation-control-pattern-components"></a>UI オートメーションのコントロール パターン コンポーネント  
@@ -70,12 +70,12 @@ ms.locfileid: "68434072"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|状態を切り替えることができるコントロールに使用されます。 たとえば、チェック ボックスやチェック可能なメニュー項目。|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|サイズ変更、移動、または回転を行えるコントロールに使用されます。 Transform コントロール パターンの一般的な用途は、デザイナー、フォーム、グラフィカル エディター、および描画アプリケーションでの使用です。|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|クライアントで、値の範囲をサポートしないコントロールで値を取得したり、設定したりできます。 たとえば、日時指定のピッカーなどがあります。|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|[!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] オペレーティング システムの基本概念であるウィンドウに固有の情報を公開します。 ウィンドウのコントロールの例として、最上位のアプリケーション ウィンドウ ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]や [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]など)、 [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] 子ウィンドウ、ダイアログがあります。|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|[!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] オペレーティング システムの基本概念であるウィンドウに固有の情報を公開します。 ウィンドウであるコントロールの例としては、トップレベル[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]アプリケーション[!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]ウィンドウ (、など)、マルチドキュメントインターフェイス (MDI) 子ウィンドウ、およびダイアログがあります。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI オートメーション クライアントのコントロール パターン マッピング](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)
-- [クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [クライアントの UI オートメーション イベント](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
+- [UI オートメーション クライアントのコントロール パターン マッピング](control-pattern-mapping-for-ui-automation-clients.md)
+- [UI オートメーションの概要](ui-automation-overview.md)
+- [クライアントの UI オートメーション プロパティ](ui-automation-properties-for-clients.md)
+- [クライアントの UI オートメーション イベント](ui-automation-events-for-clients.md)

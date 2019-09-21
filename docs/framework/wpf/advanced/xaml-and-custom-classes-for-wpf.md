@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: 8b47c43e897004a6c7eb3d2f8b2a2b9bb625e158
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 9fe53ed4d677f5604911c02d0426ed1b567d51e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400831"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917321"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF における XAML とカスタム クラス
 共通言語ランタイム (CLR) フレームワークで実装されている XAML は、任意の共通言語ランタイム (CLR) 言語でカスタムクラスまたは構造体を定義し、そのクラスに XAML マークアップを使用してアクセスする機能をサポートしています。 同じマークアップファイル内で[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]定義された型とカスタム型の組み合わせを使用できます。通常は、カスタム型を XAML 名前空間プレフィックスにマップします。 このトピックでは、カスタムクラスが XAML 要素として使用できるようにするために満たす必要がある要件について説明します。  
@@ -69,7 +69,7 @@ ms.locfileid: "68400831"
  CLR イベントとして使用できるようにするには、イベントを、パラメーターなしのコンストラクターをサポートするクラスのパブリックイベントとして、または派生クラスでイベントにアクセスできる抽象クラスで公開する必要があります。 簡単にルーティングイベントとして使用するためには、clr イベントに明示`add`的`remove`なメソッドとメソッドを実装する必要があります。 <xref:System.Windows.UIElement.RemoveHandler%2A>このメソッドは、clr イベント<xref:System.Windows.UIElement.AddHandler%2A>シグネチャのハンドラーを追加および削除し、それらのハンドラーをに転送します。メソッド. これらのメソッドは、イベントがアタッチされているインスタンス上のルーティングイベントハンドラーストアにハンドラーを追加または削除します。  
   
 > [!NOTE]
->  を使用して<xref:System.Windows.UIElement.AddHandler%2A>、ルーティングイベントのハンドラーを直接登録したり、ルーティングイベントを公開する CLR イベントを意図的に定義したりすることはできません。 通常、この方法は推奨されません。イベントはハンドラーをアタッチするための XAML 属性構文を有効にせず、生成されたクラスはその型の機能の透明度の低い XAML ビューを提供します。  
+> を使用して<xref:System.Windows.UIElement.AddHandler%2A>、ルーティングイベントのハンドラーを直接登録したり、ルーティングイベントを公開する CLR イベントを意図的に定義したりすることはできません。 通常、この方法は推奨されません。イベントはハンドラーをアタッチするための XAML 属性構文を有効にせず、生成されたクラスはその型の機能の透明度の低い XAML ビューを提供します。  
   
 <a name="Collection_Properties"></a>   
 ## <a name="writing-collection-properties"></a>コレクションのプロパティの書き込み  
@@ -92,7 +92,7 @@ ms.locfileid: "68400831"
  CLR の各型には`Add`メソッドがあります。このメソッドは、オブジェクトグラフの作成時に、XAML プロセッサによって使用され、基になるコレクションに項目を追加します。  
   
 > [!NOTE]
->  ジェネリック`List`および`Dictionary`インターフェイス[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (<xref:System.Collections.Generic.IList%601>および) は、XAML プロセッサによるコレクションの検出ではサポートされていません。 <xref:System.Collections.Generic.IDictionary%602> ただし、 <xref:System.Collections.Generic.List%601>クラスは、直接実装するか<xref:System.Collections.Generic.Dictionary%602> 、基底クラス<xref:System.Collections.IDictionary>として<xref:System.Collections.IList>直接実装するため、基底クラスとして使用できます。  
+> ジェネリック`List`および`Dictionary`インターフェイス[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (<xref:System.Collections.Generic.IList%601>および) は、XAML プロセッサによるコレクションの検出ではサポートされていません。 <xref:System.Collections.Generic.IDictionary%602> ただし、 <xref:System.Collections.Generic.List%601>クラスは、直接実装するか<xref:System.Collections.Generic.Dictionary%602> 、基底クラス<xref:System.Collections.IDictionary>として<xref:System.Collections.IList>直接実装するため、基底クラスとして使用できます。  
   
  コレクションを受け取るプロパティを宣言するときは、そのプロパティ値が型の新しいインスタンスでどのように初期化されるかに注意してください。 プロパティを依存関係プロパティとして実装していない場合は、コレクション型コンストラクターを呼び出すバッキングフィールドをプロパティに使用するのが適切です。 プロパティが依存関係プロパティの場合は、既定の型コンストラクターの一部としてコレクションプロパティを初期化する必要がある場合があります。 これは、依存関係プロパティの既定値がメタデータから取得されるためです。通常は、コレクションプロパティの初期値を静的な共有コレクションにする必要がありません。 含まれている型のインスタンスごとにコレクションインスタンスが存在している必要があります。 詳細については、「[カスタム依存関係プロパティ](custom-dependency-properties.md)」を参照してください。  
   

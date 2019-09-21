@@ -5,44 +5,44 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: 49d11556d3703331b4cdf5bf83a69f6b15bca8ed
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: df6806cd77e7ff109d79f7ba61866763de4c7fc1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881992"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790367"
 ---
 # <a name="quickstart-wcf-data-services"></a>クイック スタート (WCF Data Services)
 
-このクイック スタートでは、WCF Data Services に精通することが、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]一連のトピックをサポートするタスクを[Getting Started](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)します。
+このクイックスタートでは、 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] [はじめに](getting-started-with-wcf-data-services.md)のトピックをサポートする一連のタスクを使用して WCF Data Services とについて理解することができます。
 
-## <a name="what-youll-learn"></a>学習内容
+## <a name="what-youll-learn"></a>学習する内容
 
-このクイック スタートでは、最初のタスクでは、Northwind サンプル データベースから OData フィードを公開するデータ サービスを作成する方法を示します。 後半のトピックでは、OData アクセスは Web ブラウザーを使用してフィードし、も、変更する Windows Presentation Foundation (WPF) クライアント ライブラリを使用して、OData を使用するクライアント アプリケーションがフィードを作成します。
+このクイックスタートの最初のタスクでは、データサービスを作成して、Northwind サンプルデータベースから OData フィードを公開する方法を示します。 後のトピックでは、Web ブラウザーを使用して OData フィードにアクセスします。また、クライアントライブラリを使用して OData フィードを使用する Windows Presentation Foundation (WPF) クライアントアプリケーションを作成します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 このクイック スタートを最後まで行うには、次のコンポーネントがインストールされている必要があります。
 
 - Visual Studio
 
-- SQL Server のインスタンス。 これは、Visual Studio 2015、またはの一部として既定のインストールに含まれている SQL Server Express が含まれています。、**データ ストレージと処理**Visual Studio 2017 のワークロード。
+- SQL Server のインスタンス。 これには、visual Studio 2015 の既定のインストールに含まれる SQL Server Express、または Visual Studio 2017 の**データストレージと処理**ワークロードの一部として含まれるが含まれます。
 
 - Northwind サンプル データベース。 このサンプル データベースをダウンロードするには、ダウンロード ページ「 [SQL Server 用サンプル データベース](https://go.microsoft.com/fwlink/?linkid=24758)」を参照してください。
 
-## <a name="wcf-data-services-quickstart-tasks"></a>WCF data services クイック スタートのタスク
+## <a name="wcf-data-services-quickstart-tasks"></a>WCF data services クイックスタートのタスク
 
- [データ サービスを作成します。](../../../../docs/framework/data/wcf/creating-the-data-service.md)
+ [データサービスを作成する](creating-the-data-service.md)
 
  ASP.NET アプリケーションの定義、データ モデルの定義、データ サービスの作成、およびリソースへのアクセスの有効化を行います。
 
- [Web ブラウザーからサービスへのアクセスします。](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
+ [Web ブラウザーからサービスにアクセスする](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
  Visual Studio からサービスを開始し、公開されているフィードに対して Web ブラウザーから HTTP GET 要求を送信してサービスにアクセスします。
 
- [.NET Framework クライアント アプリケーションを作成します。](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
+ [.NET Framework クライアントアプリケーションを作成する](creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
 
- OData フィードの使用、Windows のコントロールにデータをバインド、バインドされたコントロールでデータを変更する WPF アプリを作成し、データ サービスにバックアップを作成、変更を送信します。
+ OData フィードを使用する WPF アプリを作成し、データを Windows コントロールにバインドして、バインドされたコントロールのデータを変更した後、変更内容をデータサービスに送り返します。
 
 > [!NOTE]
 > クイック スタートを完了したプロジェクト ファイルは、「 [WCF Data Services ドキュメントのサンプル](https://go.microsoft.com/fwlink/?LinkId=179994) 」ページからダウンロードできます。
@@ -50,8 +50,8 @@ ms.locfileid: "65881992"
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [クイック スタートを開始します。](../../../../docs/framework/data/wcf/creating-the-data-service.md)
+> [クイックスタートを開始する](creating-the-data-service.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)
+- [ADO.NET Entity Framework](../adonet/ef/index.md)

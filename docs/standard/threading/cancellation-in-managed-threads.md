@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdf8d41a99328a8c8fd31eca974e52082abb7e79
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3e39ee597f5142f2b3ccbd4ded49e59d6700ec8a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490791"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960143"
 ---
 # <a name="cancellation-in-managed-threads"></a>マネージド スレッドのキャンセル
 .NET Framework 4 以降、.NET Framework では、非同期操作または長時間にわたる同期操作に対する連携によるキャンセルのために、統一されたモデルが使用されます。 このモデルは、キャンセル トークンと呼ばれる軽量のオブジェクトに基づいています。 新しいスレッドまたは新しいタスクの作成などによって 1 つ以上のキャンセル可能な操作を呼び出すオブジェクトは、各操作にトークンを渡します。 次いで、個々の操作は他の操作にトークンのコピーを渡すことができます。 その後、トークンを作成したオブジェクトは、操作が実行している処理を停止するように、そのトークンを使用してその操作に要求できます。 キャンセル要求は、要求側のオブジェクトからのみ発行できます。各リスナーは要求を確認し、適切な時に定期的にその要求に応答する必要があります。  
@@ -31,7 +31,7 @@ ms.locfileid: "66490791"
 - キャンセルの通知を提供する <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> メソッドを呼び出します。  
   
 > [!IMPORTANT]
->  <xref:System.Threading.CancellationTokenSource> クラスは、<xref:System.IDisposable> インターフェイスを実装します。 キャンセル トークン ソースの使用を終えた後は、必ず <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType> メソッドを呼び出して、キャンセル トークン ソースが保持しているアンマネージ リソースを解放する必要があります。  
+> <xref:System.Threading.CancellationTokenSource> クラスは、<xref:System.IDisposable> インターフェイスを実装します。 キャンセル トークン ソースの使用を終えた後は、必ず <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType> メソッドを呼び出して、キャンセル トークン ソースが保持しているアンマネージ リソースを解放する必要があります。  
   
  トークンのソースとそのトークンのすべてのコピーの間の関係を次の図に示します。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66490791"
  次の例では、要求側のオブジェクトで <xref:System.Threading.CancellationTokenSource> オブジェクトを作成した後、その <xref:System.Threading.CancellationTokenSource.Token%2A> プロパティをキャンセル可能な操作に渡します。 要求を受け取る側の操作では、ポーリングによってトークンの <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> プロパティの値を監視します。 値が `true` になったら、リスナーは適切な方法で終了できます。 この例では、メソッドの終了だけを行っています。多くの場合はこの処理だけで十分です。  
   
 > [!NOTE]
->  この例では、新しいキャンセル フレームワークが従来の API と互換性があることを示すために、<xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> メソッドを使用しています。 推奨される新しい <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 型を使用する例については、「[方法:タスクとその子を取り消す](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)」を参照してください。  
+> この例では、新しいキャンセル フレームワークが従来の API と互換性があることを示すために、<xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> メソッドを使用しています。 推奨される新しい <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 型を使用する例については、「[方法:タスクとその子を取り消す](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)」を参照してください。  
   
  [!code-csharp[Cancellation#1](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex1.cs#1)]
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  

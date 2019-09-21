@@ -12,24 +12,24 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 4d2290622e648030f150d9bb06ce1f3000145759
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 440086bfd5384fc46aec2997dbdd9937f7a1b65f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211465"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964327"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>方法: Windows フォームで実行時にイベント ハンドラーを作成する
 
-Visual Studio で、Windows フォーム デザイナーを使用してイベントを作成するだけでなく実行時にイベント ハンドラーを作成することもできます。 これにより、プログラムが最初に起動したときにイベント ハンドラーを接続する代わりに、コード内に記述されている条件に基づいて、実行時にイベント ハンドラーを接続できます。
+Visual Studio の Windows フォームデザイナーを使用してイベントを作成するだけでなく、実行時にイベントハンドラーを作成することもできます。 これにより、プログラムが最初に起動したときにイベント ハンドラーを接続する代わりに、コード内に記述されている条件に基づいて、実行時にイベント ハンドラーを接続できます。
 
-## <a name="create-an-event-handler-at-run-time"></a>実行時にイベント ハンドラーを作成します。
+## <a name="create-an-event-handler-at-run-time"></a>実行時にイベントハンドラーを作成する
 
-1. イベント ハンドラーを追加するフォームを開きます。
+1. イベントハンドラーを追加するフォームを開きます。
 
 2. 処理するイベントに対応するメソッド シグネチャを持つメソッドをフォームに追加します。
 
-     処理された場合など、<xref:System.Windows.Forms.Control.Click>のイベントを<xref:System.Windows.Forms.Button>コントロールでは、次のようメソッドを作成すると。
+     たとえば、 <xref:System.Windows.Forms.Control.Click> <xref:System.Windows.Forms.Button>コントロールのイベントを処理する場合は、次のようなメソッドを作成します。
 
     ```vb
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -57,7 +57,7 @@ Visual Studio で、Windows フォーム デザイナーを使用してイベン
 
 4. イベント ハンドラーをどのフォームまたはコントロールに対して作成するかを指定します。
 
-5. フォームのクラスのメソッドに、イベントを処理するためのイベント ハンドラーを指定するコードを追加します。 たとえば、次のコードには、イベント ハンドラーを指定します。`button1_Click`ハンドル、<xref:System.Windows.Forms.Control.Click>のイベントを<xref:System.Windows.Forms.Button>コントロール。
+5. フォームのクラスのメソッドに、イベントを処理するためのイベント ハンドラーを指定するコードを追加します。 たとえば、次のコードでは、イベントハンドラー `button1_Click`が<xref:System.Windows.Forms.Button>コントロール<xref:System.Windows.Forms.Control.Click>のイベントを処理することを指定しています。
 
     ```vb
     AddHandler Button1.Click, AddressOf Button1_Click
@@ -71,10 +71,10 @@ Visual Studio で、Windows フォーム デザイナーを使用してイベン
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
     ```
 
-     <xref:System.ComponentModel.EventHandlerList.AddHandler%2A>上の Visual Basic コードに示すメソッドは、ボタンの click イベント ハンドラーを確立します。
+     上<xref:System.ComponentModel.EventHandlerList.AddHandler%2A>の Visual Basic コードで示されているメソッドは、ボタンのクリックイベントハンドラーを確立します。
 
 ## <a name="see-also"></a>関連項目
 
 - [Windows フォーム内でのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)
 - [イベント ハンドラーの概要](event-handlers-overview-windows-forms.md)
-- [Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

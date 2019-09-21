@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661535"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608372"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術演算子 (C# リファレンス)
 
@@ -45,7 +45,7 @@ ms.locfileid: "67661535"
 
 ## <a name="increment-operator-"></a>インクリメント演算子 ++
 
-単項インクリメント演算子 `++` は、オペランドを 1 ずつインクリメントします。 このオペランドは、変数、[プロパティ](../../programming-guide/classes-and-structs/properties.md)のアクセス、または[インデクサー](../../../csharp/programming-guide/indexers/index.md)のアクセスである必要があります。
+単項インクリメント演算子 `++` は、オペランドを 1 ずつインクリメントします。 このオペランドは、変数、[プロパティ](../../programming-guide/classes-and-structs/properties.md)のアクセス、または[インデクサー](../../programming-guide/indexers/index.md)のアクセスである必要があります。
 
 インクリメント演算子は、後置インクリメント演算子である `x++` と、前置インクリメント演算子である`++x` という 2 つの形式でサポートされます。
 
@@ -63,7 +63,7 @@ ms.locfileid: "67661535"
 
 ## <a name="decrement-operator---"></a>デクリメント演算子 --
 
-単項デクリメント演算子 `--` は、オペランドを 1 ずつデクリメントします。 このオペランドは、変数、[プロパティ](../../programming-guide/classes-and-structs/properties.md)のアクセス、または[インデクサー](../../../csharp/programming-guide/indexers/index.md)のアクセスである必要があります。
+単項デクリメント演算子 `--` は、オペランドを 1 ずつデクリメントします。 このオペランドは、変数、[プロパティ](../../programming-guide/classes-and-structs/properties.md)のアクセス、または[インデクサー](../../programming-guide/indexers/index.md)のアクセスである必要があります。
 
 デクリメント演算子は、後置デクリメント演算子である `x--` と、前置デクリメント演算子である `--x` という 2 つの形式でサポートされます。
 
@@ -101,7 +101,7 @@ ms.locfileid: "67661535"
 
 ### <a name="integer-division"></a>整数の除算
 
-整数型のオペランドに対する `/` 演算子の結果は、整数型で、2 つのオペランドの商を 0 方向に丸めたものと等しくなります。
+整数型のオペランドに対する `/` 演算子の結果は、整数型で、2 つのオペランドの商の小数部分を切り捨てたものと等しくなります
 
 [!code-csharp-interactive[integer division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerDivision)]
 
@@ -163,15 +163,15 @@ ms.locfileid: "67661535"
 
 デリゲートの削除には、`-` 演算子を使用することもできます。 詳細については、「[`-` 演算子](subtraction-operator.md)」の記事を参照してください。
 
-## <a name="compound-assignment"></a>複合代入。
+## <a name="compound-assignment"></a>複合代入
 
-2 項演算子 `op` の場合、フォームの複合代入式
+2 項演算子 `op` の場合、このフォームの複合代入式
 
 ```csharp
 x op= y
 ```
 
-上記の式は、次の式と同じです。
+は、次の式と同じです。
 
 ```csharp
 x = x op y
@@ -194,9 +194,9 @@ x = x op y
 次の算術演算子の一覧は、優先度が高い順に並べられています。
 
 - 後置インクリメント演算子 `x++` と後置デクリメント演算子 `x--`
-- 前置インクリメント演算子 `++x` とデクリメント演算子 `--x`および単項演算子 `+` と `-`
+- 前置インクリメント演算子 `++x` と前置デクリメント演算子 `--x`および単項演算子 `+` と `-`
 - 乗算演算子 `*`、`/`、`%`
-- 加法 `+` および `-` 演算子
+- 加法演算子 `+` と `-`
 
 2 項算術演算子は左結合です。 つまり、優先度が同じ演算子は、左から右に評価されます。
 

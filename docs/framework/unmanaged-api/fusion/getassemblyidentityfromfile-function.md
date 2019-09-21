@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 581c675cfb69503e6366471a469ffed1a2d13b1a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2657ac619bb86bc200de9ce229bf82e4339f78d6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745236"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796299"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile 関数
-ポインターを取得、 `IUnknown` 、指定したオブジェクト`IID`のアセンブリにある指定したファイル パス。  
+指定したファイルパス`IUnknown`のアセンブリ内で`IID` 、指定したを持つオブジェクトへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,22 +40,22 @@ HRESULT GetAssemblyIdentityFromFile (
   
 ## <a name="parameters"></a>パラメーター  
  `pwzFilePath`  
- [in]要求されたアセンブリへの有効なパス。  
+ から要求されたアセンブリへの有効なパス。  
   
  `riid`  
- [in]`IID`返すインターフェイスの。  
+ から返さ`IID`れるインターフェイスの。  
   
  `ppIdentity`  
- [out]返されるインターフェイス ポインター。  
+ 入出力返されたインターフェイスポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [IUnknown](/cpp/atl/iunknown)
-- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion グローバル静的関数](fusion-global-static-functions.md)

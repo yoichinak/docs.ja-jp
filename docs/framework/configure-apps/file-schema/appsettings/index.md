@@ -9,29 +9,29 @@ helpviewer_keywords:
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: cd836f9ebd4d22ad6542c1fadc204b1ea67d1c26
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d02f9f952c0ca7651d27571111a2d29f3d1130fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300780"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921297"
 ---
 # <a name="app-settings-schema"></a>アプリ設定スキーマ
 
 ファイル パス、XML Web サービス URL、またはアプリケーションのその他のカスタム構成情報など、カスタム アプリケーションの設定が含まれています。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md)
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)
 
 | 要素 | 説明 |
 | ------- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | アプリケーションの設定を制御する **\<add>** 、 **\<clear>** 、 **\<remove>** のタグが含まれます。 省略可能な **file** 属性があります。 |
-| [ **\<add>** ](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | 設定を定義します。 **\<appSettings>** の子です。 **key** 属性と **value** 属性が必要です。 |
-| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | すべての設定をクリアします。 **\<appSettings>** の子です。 属性はありません。 |
-| [ **\<remove>** ](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | 設定を削除します。 **\<appSettings>** の子です。 **key** 属性が必要です。 |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | アプリケーションの設定を制御する **\<add>** 、 **\<clear>** 、 **\<remove>** のタグが含まれます。 省略可能な **file** 属性があります。 |
+| [ **\<add>** ](add-element-for-appsettings.md) | 設定を定義します。 **\<appSettings>** の子です。 **key** 属性と **value** 属性が必要です。 |
+| [ **\<clear>** ](clear-element-for-appsettings.md) | すべての設定をクリアします。 **\<appSettings>** の子です。 属性はありません。 |
+| [ **\<remove>** ](remove-element-for-appsettings.md) | 設定を削除します。 **\<appSettings>** の子です。 **key** 属性が必要です。 |
 
 ## <a name="appsettings-element"></a>\<appSettings> 要素
 
@@ -72,5 +72,5 @@ ms.locfileid: "66300780"
 
 ## <a name="see-also"></a>関連項目
 
-- [アプリケーション設定の概要](~/docs/framework/winforms/advanced/application-settings-overview.md)
-- [アプリケーション設定アーキテクチャ](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [アプリケーション設定の概要](../../../winforms/advanced/application-settings-overview.md)
+- [アプリケーション設定アーキテクチャ](../../../winforms/advanced/application-settings-architecture.md)

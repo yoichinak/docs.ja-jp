@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 04671bb0-40c0-4465-86e5-77986f454661
-ms.openlocfilehash: eeac6272f176ac8e780b72b0076d032ad9e8f108
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f28351a29915bebd698e00113bb05647d8412b4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903228"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781995"
 ---
 # <a name="how-to-directly-execute-sql-commands"></a>方法: SQL コマンドを直接実行する
 <xref:System.Data.Linq.DataContext> 接続を使用すると仮定して、オブジェクトを返さない SQL コマンドを実行するために <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> を使用できます。  
@@ -23,5 +23,5 @@ ms.locfileid: "61903228"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: SQL クエリを直接実行します。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)
-- [データベースとの通信](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)
+- [方法: SQL クエリを直接実行する](how-to-directly-execute-sql-queries.md)
+- [データベースとの通信](communicating-with-the-database.md)

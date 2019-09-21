@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07d84506a7c07bde09b3b46ea608b1874842c3ac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 145a53363c9d7aca622ee0b1ccb2700e5984397d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616388"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046424"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT トレース ETW イベント
 <a name="top"></a> これらのイベントは、Just-in-time (JIT) インライン展開と JIT 末尾呼び出しの成功または失敗に関する情報を収集します。  
@@ -27,7 +27,7 @@ ms.locfileid: "64616388"
 ## <a name="jit-inlining-events"></a>JIT インライン展開イベント  
   
 ### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed イベント  
- 次の表に、キーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)」を参照してください)。  
+ 次の表に、キーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
   
 |イベントを発生させるキーワード|レベル|  
 |-----------------------------------|-----------|  
@@ -151,4 +151,4 @@ ms.locfileid: "64616388"
   
 ## <a name="see-also"></a>関連項目
 
-- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW イベント](clr-etw-events.md)

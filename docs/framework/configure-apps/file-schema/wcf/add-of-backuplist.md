@@ -2,21 +2,22 @@
 title: <add> の <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 03bf1bbb8156e4722d987e171d9034747ac6bb61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80726cc22cb56013c85c7704c28579b1337666c9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701204"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850545"
 ---
-# <a name="add-of-backuplist"></a>\<add> of \<backupList>
+# <a name="add-of-backuplist"></a>\<backupList > の\<> の追加
 バックアップ エンドポイント要素を定義する構成要素を表します。  
   
- \<system.serviceModel>  
-\<ルーティング >  
-\<backupLists >  
-\<backupList>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ルーティング >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<backupLists >** ](backuplists.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<backupList >** ](backuplist.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> の追加**  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,9 +29,6 @@ ms.locfileid: "61701204"
     </backupList>
   </backupLists>
 </routing>
-```  
-  
-```csharp  
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -49,7 +47,7 @@ ms.locfileid: "61701204"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<ルーティング >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|プライマリ エンドポイントに接続できない場合に使用するルーティング サービスが希望されるエンドポイントの一覧が含まれています。|  
+|[\<ルーティング >](routing.md)|プライマリエンドポイントに到達できない場合に、ルーティングサービスで使用するエンドポイントの一覧が含まれています。|  
   
 ## <a name="see-also"></a>関連項目
 

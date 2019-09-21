@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7de0a869925816da6df8f17e14ab92964aec8d11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d14ba8724659172711da44e7bb249e9d20768dbc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874186"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052334"
 ---
 # <a name="reentrancy-mda"></a>reentrancy MDA
 `reentrancy` マネージド デバッグ アシスタント (MDA) は、前のマネージド コードからネイティブ コードへの切り替えが遷移順序を守って実行されなかった場合に、ネイティブ コードからマネージド コードへの遷移が試みられるとアクティブになります。  
@@ -35,7 +35,7 @@ ms.locfileid: "61874186"
   
  この問題は常に、アプリケーション コードが原因で発生します。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決策  
  この MDA をアクティブにしたスレッドのスタック トレースを確認します。  スレッドがマネージド コードの不正な呼び出しを試みています。  スタック トレースでは、この拡張ポイントを使っているアプリケーションのコード、この拡張ポイントを提供しているオペレーティング システムのコード、および拡張ポイントによって中断されたマネージド コードが、示されているはずです。  
   
  たとえば、ベクトル化例外ハンドラー内からのマネージド コードの呼び出しの試みによってアクティブ化された MDA が表示されます。  スタックには、オペレーティング システムの例外処理コードと、<xref:System.DivideByZeroException> や <xref:System.AccessViolationException> などの例外をトリガーするマネージド コードが表示されます。  
@@ -48,7 +48,7 @@ ms.locfileid: "61874186"
 ## <a name="output"></a>出力  
  MDA は、無効な再入が試みられていることを報告します。  これが発生している理由と、問題の解決方法を確認するには、スレッドのスタックを調べます。 サンプルの出力を次に示します。  
   
-```  
+```output
 Additional Information: Attempting to call into managed code without   
 transitioning out first.  Do not attempt to run managed code inside   
 low-level native extensibility points. Managed Debugging Assistant   
@@ -106,4 +106,4 @@ public class Reenter
   
 ## <a name="see-also"></a>関連項目
 
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

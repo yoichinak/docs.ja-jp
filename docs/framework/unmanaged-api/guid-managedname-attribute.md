@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48ad6e4d1d03d8362123e65f16907880b18893f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f14d00f17a61576a50e26d3cbcf734a10ed3c03a
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777911"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895020"
 ---
-# <a name="guidmanagedname-attribute"></a>GUID_ManagedName 属性
-コンポーネント オブジェクト モデル (COM) ライブラリの管理対象名前空間名を指定するカスタム インターフェイス属性を定義します。  
+# <a name="guid_managedname-attribute"></a>GUID_ManagedName 属性
+コンポーネントオブジェクトモデル (COM) ライブラリのマネージ名前空間名を指定するカスタムインターフェイス属性を定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```idl
 [  
    custom(GUID_ManagedName, value)  
 ]  
@@ -36,27 +36,27 @@ ms.locfileid: "61777911"
   
 ## <a name="parameters"></a>パラメーター  
  `value`  
- ライブラリの管理対象名前空間の名前。  
+ ライブラリのマネージ名前空間の名前。  
   
 ## <a name="definition"></a>定義  
- `GUID_ManagedName` 定義されます Cor.h とおり。  
+ `GUID_ManagedName`は、Cor で次のように定義されています。  
   
-```  
+```cpp
 // {0F21F359-AB84-41e8-9A78-36D110E6D2F9}  
 EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1, 0x10, 0xe6, 0xd2, 0xf9);  
 ```  
   
 ## <a name="remarks"></a>Remarks  
- カスタム インターフェイス属性は、タイプ ライブラリ内のオブジェクトのメタデータを定義します。  
+ カスタムインターフェイス属性は、タイプライブラリ内のオブジェクトのメタデータを定義します。  
   
- 使用<xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType>または<xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType>属性から管理対象の名前を取得します。  
+ 属性<xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType>から<xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType>マネージ名を取得するには、またはを使用します。  
   
- 詳細については、次を参照してください。[インターフェイス属性](/cpp/windows/interface-attributes)Visual c のリファレンス ドキュメント。  
+ 詳細については、ビジュアルC++リファレンスドキュメントの「[インターフェイス属性](/cpp/windows/attributes/interface-attributes)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例を使用してライブラリの定義、`GUID_ManagedName`属性。  
+ 次の例は、 `GUID_ManagedName`属性を使用したライブラリ定義を示しています。  
   
-```  
+```idl
 [  
    ...  
    custom(GUID_ManagedName, Microsoft.VisualStudio.CommandBars.dll")  
@@ -68,4 +68,4 @@ library Microsoft_VisualStudio_CommandBars
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** Cor.h
+ **ヘッダー:** Cor

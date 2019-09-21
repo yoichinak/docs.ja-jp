@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: f0510b9e3f31686e22532f21989cb95905522286
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: afafe5d1eaddaef3b9f0069908b365e40ea4ed29
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879894"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785687"
 ---
 # <a name="connection-string-builders"></a>接続文字列ビルダー
-以前のバージョンの ADO.NET では、コンパイル時に接続文字列の連結された文字列値のチェックが発生しなかった、実行時に、正しくないキーワードが生成されるように、<xref:System.ArgumentException>します。 .NET Framework データ プロバイダーの各接続文字列キーワードは、構築の有効な接続文字列を手動で行う場合は、困難に異なる構文がサポートされています。 この問題に対処するには、ADO.NET 2.0 には、各 .NET Framework データ プロバイダー用の新しい接続文字列ビルダーが導入されました。 各データ プロバイダーは、<xref:System.Data.Common.DbConnectionStringBuilder> から継承した、厳密に型指定された接続文字列ビルダー クラスを提供しています。 次の表は、.NET Framework データ プロバイダーと、関連付けられている接続文字列ビルダー クラスを示します。  
+以前のバージョンの ADO.NET では、文字列値が連結された接続文字列のコンパイル時チェックは行われませんでした<xref:System.ArgumentException>。そのため、実行時に、正しくないキーワードがを生成しました。 各 .NET Framework データプロバイダーでは、接続文字列キーワードに対して異なる構文がサポートされていたため、手動で有効な接続文字列を構築することは困難です。 この問題に対処するために、ADO.NET 2.0 では、.NET Framework データプロバイダーごとに新しい接続文字列ビルダーが導入されました。 各データ プロバイダーは、<xref:System.Data.Common.DbConnectionStringBuilder> から継承した、厳密に型指定された接続文字列ビルダー クラスを提供しています。 次の表に、.NET Framework データプロバイダーとそれに関連付けられている接続文字列ビルダークラスを示します。  
   
 |プロバイダー|ConnectionStringBuilder クラス|  
 |--------------|-----------------------------------|  
@@ -59,7 +59,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  接続文字列ビルダーには、<xref:System.String> を引数として受け取るオーバーロード コンストラクターがあります。この引数に対して接続文字列を部分的に指定しておき、それ以外の部分をユーザー入力で補完することも可能です。 部分的な接続文字列は構成ファイルに保存し、実行時に取得できます。  
   
 > [!NOTE]
->  構成ファイルへのプログラム アクセスは <xref:System.Configuration> 名前空間によって実現できます。Web アプリケーションの場合は <xref:System.Web.Configuration.WebConfigurationManager> を、Windows アプリケーションの場合は <xref:System.Configuration.ConfigurationManager> を使用します。 接続文字列と構成ファイルの使用方法の詳細については、次を参照してください。[接続文字列と構成ファイル](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)します。  
+> 構成ファイルへのプログラム アクセスは <xref:System.Configuration> 名前空間によって実現できます。Web アプリケーションの場合は <xref:System.Web.Configuration.WebConfigurationManager> を、Windows アプリケーションの場合は <xref:System.Configuration.ConfigurationManager> を使用します。 接続文字列と構成ファイルの操作の詳細については、「[接続文字列と構成ファイル](connection-strings-and-configuration-files.md)」を参照してください。  
   
 ### <a name="example"></a>例  
  この例では、接続文字列の一部を構成ファイルから取得し、<xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> の <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A> プロパティ、<xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> プロパティ、および <xref:System.Data.SqlClient.SqlConnectionStringBuilder> プロパティを設定することによって接続文字列全体を作成します。 構成ファイルは次のように定義されています。  
@@ -74,13 +74,13 @@ initial catalog="AdventureWorks;NewValue=Bad"
 ```  
   
 > [!NOTE]
->  このコードを実行するには、プロジェクトで `System.Configuration.dll` を参照設定する必要があります。  
+> このコードを実行するには、プロジェクトで `System.Configuration.dll` を参照設定する必要があります。  
   
  [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/CS/source.cs#1)]
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [接続文字列](../../../../docs/framework/data/adonet/connection-strings.md)
-- [プライバシーとデータ セキュリティ](../../../../docs/framework/data/adonet/privacy-and-data-security.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [接続文字列](connection-strings.md)
+- [プライバシーとデータ セキュリティ](privacy-and-data-security.md)
+- [ADO.NET の概要](ado-net-overview.md)

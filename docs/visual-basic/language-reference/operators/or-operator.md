@@ -15,15 +15,15 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: 0277b6f24e62ed5f0cad3dae225c86fffc4c09b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d11a6d009f6ecfea9fb1a86b00c67b87d5555dc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013518"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955841"
 ---
 # <a name="or-operator-visual-basic"></a>Or 演算子 (Visual Basic)
-2 つの論理和演算を実行します。`Boolean`式、または 2 つの数値式のビットごとの論理和。  
+2 `Boolean`つの式の場合は論理和、2つの数値式の場合はビットごとの和を実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,18 +33,18 @@ result = expression1 Or expression2
   
 ## <a name="parts"></a>指定項目  
  `result`  
- 必須。 すべて`Boolean`または数値式です。 `Boolean`比較、`result`は 2 つの包括的論理和`Boolean`値。 ビットごとの演算`result`は 2 つの数値ビット パターンの包括的論理和を表す数値です。  
+ 必須。 `Boolean` Or 数値式。 比較`Boolean`のため`result`に、は2つ`Boolean`の値の包括論理和です。 ビットごとの演算`result`の場合、は、2つの数値ビットパターンの包括的なビットごとの和を表す数値です。  
   
  `expression1`  
- 必須。 すべて`Boolean`または数値式です。  
+ 必須。 `Boolean` Or 数値式。  
   
  `expression2`  
- 必須。 すべて`Boolean`または数値式です。  
+ 必須。 `Boolean` Or 数値式。  
   
 ## <a name="remarks"></a>Remarks  
- `Boolean`比較、`result`は`False`場合にのみ、両方`expression1`と`expression2`に評価される`False`します。 次の表はどのように`result`決定されます。  
+ 比較`Boolean`の場合`result` 、 `False`はとの`expression1`両方`False`がに評価される場合にのみになります。 `expression2` 次の表は、 `result`がどのように決定されるかを示しています。  
   
-|場合`expression1`は|`expression2`は|値`result`は|  
+|が`expression1`の場合|と`expression2`は|の`result`値はです。|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`True`|  
@@ -52,11 +52,11 @@ result = expression1 Or expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
->  `Boolean` 、比較、`Or`演算子では、両方の式では、プロシージャの呼び出しを含めることが常に評価されます。 [OrElse 演算子](../../../visual-basic/language-reference/operators/orelse-operator.md)実行*ショート サーキット*、つまり、その場合`expression1`は`True`、し`expression2`は評価されません。  
+> 比較では、演算子`Or`は常に両方の式を評価します。これにはプロシージャ呼び出しを含めることができます。 `Boolean` [OrElse 演算子](../../../visual-basic/language-reference/operators/orelse-operator.md)は*ショートサーキット*を実行します。つまり、 `expression1`が`True`の場合`expression2` 、は評価されません。  
   
- ビットごとの演算、`Or`演算子が 2 つの数値式で同じ位置にビットのビット単位の比較を実行し、対応するでビットを設定`result`次の表に従ってします。  
+ ビットごとの演算の`Or`場合、演算子は2つの数値式で同一の位置指定ビットのビットごと`result`の比較を実行し、次の表に従って、に対応するビットを設定します。  
   
-|場合にビット`expression1`は|ビットと`expression2`は|内のビット`result`は|  
+|の`expression1`ビットがの場合|との`expression2`ビットは|の`result`ビットはです。|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|1|  
 |1|0|1|  
@@ -64,29 +64,29 @@ result = expression1 Or expression2
 |0|0|0|  
   
 > [!NOTE]
->  論理/ビット処理演算子の他の算術演算子や関係演算子よりも優先順位の低いため、ビットごとの演算は、正確に実行されるようにかっこで囲む必要があります。  
+> 論理演算子とビット処理演算子は、他の算術演算子および関係演算子より優先順位が低いので、ビットごとの演算は、正確な実行を保証するためにかっこで囲む必要があります。  
   
 ## <a name="data-types"></a>データの種類  
- いずれかのオペランドで構成される場合`Boolean`式と 1 つの数値式では、Visual Basic に変換します、`Boolean`式を数値に (– 1 `True` 0 `False`) し、ビットごとの演算を実行します。  
+ `Boolean`オペランドが1つの式と1つの数値式で構成され`Boolean`ている場合、Visual Basic は式を数値`True`に変換し`False`(の場合は–1、の場合は 0)、ビットごとの演算を実行します。  
   
- `Boolean`比較、結果のデータ型は`Boolean`します。 ビット単位の比較結果のデータ型は数値型のデータ型に適した`expression1`と`expression2`します。 「リレーショナルとビットごとの比較」表を参照して[演算子結果のデータ型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)します。  
+ 比較の場合、結果のデータ型は`Boolean`になります。 `Boolean` ビットごとの比較の場合、結果のデータ型は、および`expression1` `expression2`のデータ型に適した数値型になります。 「[演算子の結果のデータ型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)」の「リレーショナルおよびビットごとの比較」の表を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
- `Or`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、再定義された動作を確認ください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ 演算子はオーバーロードできます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `Or` コードでこのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`Or`オペレーターが 2 つの式の包括的論理和演算を実行します。 結果は、`Boolean`を表す値が 2 つの式のいずれかどうか`True`します。  
+ 次の例では`Or` 、演算子を使用して、2つの式の包括論理和を実行します。 結果は、2 `Boolean`つの式のいずれかがで`True`あるかどうかを表す値です。  
   
  [!code-vb[VbVbalrOperators#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#35)]  
   
- 前の例の結果を生成する`True`、 `True`、および`False`、それぞれします。  
+ 前の例では、 `True` `True`それぞれ、、 `False`およびの結果が生成されます。  
   
 ## <a name="example"></a>例  
- 次の例では、`Or`オペレーターが 2 つの数値式のビットごとの包括的論理和を実行します。 オペランドの対応するビットのいずれかを 1 に設定されている場合、結果のパターンのビットが設定されます。  
+ 次の例では`Or` 、演算子を使用して、2つの数値式の個々のビットに対して包括的論理和を実行します。 オペランドの対応するビットのいずれかが1に設定されている場合、結果パターンのビットは設定されます。  
   
  [!code-vb[VbVbalrOperators#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#36)]  
   
- 前の例では、それぞれ 10、14、および 14 の結果を生成します。  
+ 前の例では、それぞれ10、14、14の結果が生成されます。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -94,4 +94,4 @@ result = expression1 Or expression2
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [OrElse 演算子](../../../visual-basic/language-reference/operators/orelse-operator.md)
-- [Visual Basic での論理とビット処理演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic の論理演算子とビット処理演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

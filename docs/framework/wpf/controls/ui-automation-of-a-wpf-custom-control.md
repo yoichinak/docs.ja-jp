@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 0d663acc195b36fdc95c196f2233ae997fbd9195
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ef045ffaac47c6cb196d821c25d96c4d2cd7bf88
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132770"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254249"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF カスタム コントロールの UI オートメーション
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] は、オートメーション クライアントが使用してさまざまなプラットフォームやフレームワークのユーザー インターフェイスを調査または操作できる、単一の汎用的なインターフェイスを提供します。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] では、品質保証 (テスト) のコードとスクリーン リーダーなどのユーザー補助アプリケーションの両方を使用して、ユーザー インターフェイス要素を調べて、他のコードからその要素を使用してユーザーの操作をシュミレーションできます。 すべてのプラットフォームにまたがる [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] について詳しくは、「ユーザー補助機能」を参照してください。  
@@ -24,38 +24,38 @@ ms.locfileid: "59132770"
 
 <a name="AutomationPeerClasses"></a>   
 ## <a name="automation-peer-classes"></a>オートメーション ピア クラス  
- WPF のサポートを制御する[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]から派生するピア クラスのツリーを通じて<xref:System.Windows.Automation.Peers.AutomationPeer>します。 規則上、ピア クラス名は、コントロールのクラス名で始まり、"AutomationPeer" で終わります。 たとえば、<xref:System.Windows.Automation.Peers.ButtonAutomationPeer>のピア クラスには、<xref:System.Windows.Controls.Button>コントロール クラス。 ピア クラスは、[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] コントロール型とほぼ同等ですが、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 要素専用です。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] インターフェイスを介して WPF アプリケーションにアクセスするオートメーション コードは、オートメーション ピアを直接使用しませんが、同じプロセス空間のオートメーション コードは、オートメーション ピアを直接使用できます。  
+ WPF コントロールは[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 、から<xref:System.Windows.Automation.Peers.AutomationPeer>派生するピアクラスのツリーを通じてサポートされます。 規則上、ピア クラス名は、コントロールのクラス名で始まり、"AutomationPeer" で終わります。 たとえば、は<xref:System.Windows.Automation.Peers.ButtonAutomationPeer> 、 <xref:System.Windows.Controls.Button>コントロールクラスのピアクラスです。 ピア クラスは、[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] コントロール型とほぼ同等ですが、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 要素専用です。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] インターフェイスを介して WPF アプリケーションにアクセスするオートメーション コードは、オートメーション ピアを直接使用しませんが、同じプロセス空間のオートメーション コードは、オートメーション ピアを直接使用できます。  
   
 <a name="BuiltInAutomationPeerClasses"></a>   
 ## <a name="built-in-automation-peer-classes"></a>組み込みのオートメーション ピア クラス  
- 要素は、ユーザーからのインターフェイス アクティビティを受け入れる場合、またはスクリーン リーダー アプリケーションのユーザーが必要とする情報が含まれている場合、オートメーション ピア クラスを実装します。 すべての WPF のビジュアル要素にオートメーション ピアがあるわけではありません。 オートメーション ピアを実装するクラスの例は、 <xref:System.Windows.Controls.Button>、 <xref:System.Windows.Controls.TextBox>、および<xref:System.Windows.Controls.Label>します。 オートメーション ピアを実装していないクラスの例は、クラスから派生した<xref:System.Windows.Controls.Decorator>など<xref:System.Windows.Controls.Border>、およびクラスに基づく<xref:System.Windows.Controls.Panel>など<xref:System.Windows.Controls.Grid>と<xref:System.Windows.Controls.Canvas>します。  
+ 要素は、ユーザーからのインターフェイス アクティビティを受け入れる場合、またはスクリーン リーダー アプリケーションのユーザーが必要とする情報が含まれている場合、オートメーション ピア クラスを実装します。 すべての WPF のビジュアル要素にオートメーション ピアがあるわけではありません。 オートメーションピアを実装するクラスの例<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.Label>して、、、があります。 オートメーションピアを実装しないクラスの例として、など<xref:System.Windows.Controls.Decorator>のから<xref:System.Windows.Controls.Border>派生するクラスや、 <xref:System.Windows.Controls.Grid>や<xref:System.Windows.Controls.Panel> <xref:System.Windows.Controls.Canvas>などのに基づくクラスがあります。  
   
- 基本<xref:System.Windows.Controls.Control>クラスには、対応するピア クラスがありません。 ピア クラスから派生したカスタム コントロールに対応する必要がある場合<xref:System.Windows.Controls.Control>からカスタム ピア クラスを派生させる必要があります<xref:System.Windows.Automation.Peers.FrameworkElementAutomationPeer>します。  
+ 基底<xref:System.Windows.Controls.Control>クラスに対応するピアクラスがありません。 から<xref:System.Windows.Controls.Control>派生したカスタムコントロールに対応するピアクラスが必要な場合は、から<xref:System.Windows.Automation.Peers.FrameworkElementAutomationPeer>カスタムピアクラスを派生させる必要があります。  
   
 <a name="SecurityConsiderations"></a>   
 ## <a name="security-considerations-for-derived-peers"></a>派生ピアのセキュリティに関する考慮事項  
- オートメーション ピアは、部分信頼環境で実行する必要があります。 UIAutomationClient アセンブリ内のコードは部分信頼環境で動作するように構成されていないため、オートメーション ピア コードでそのアセンブリを参照しないでください。 代わりに、UIAutomationTypes アセンブリのクラスを使用する必要があります。 たとえば、使用する必要があります、<xref:System.Windows.Automation.AutomationElementIdentifiers>クラスに対応する UIAutomationTypes アセンブリから、 <xref:System.Windows.Automation.AutomationElement> UIAutomationClient アセンブリ内のクラス。 オートメーション ピア コードで UIAutomationTypes アセンブリを参照すると安全です。  
+ オートメーション ピアは、部分信頼環境で実行する必要があります。 UIAutomationClient アセンブリ内のコードは部分信頼環境で動作するように構成されていないため、オートメーション ピア コードでそのアセンブリを参照しないでください。 代わりに、UIAutomationTypes アセンブリのクラスを使用する必要があります。 たとえば、uiautomationtypes.dll アセンブリの<xref:System.Windows.Automation.AutomationElementIdentifiers>クラス<xref:System.Windows.Automation.AutomationElement>を使用する必要があります。これは、uiautomationclient.dll アセンブリのクラスに対応しています。 オートメーション ピア コードで UIAutomationTypes アセンブリを参照すると安全です。  
   
 <a name="PeerNavigation"></a>   
 ## <a name="peer-navigation"></a>ピア ナビゲーション  
- オートメーション ピアを特定すると、プロセス内コードは、オブジェクトを呼び出すことによってピア ツリーを移動できます<xref:System.Windows.Automation.Peers.AutomationPeer.GetChildren%2A>と<xref:System.Windows.Automation.Peers.AutomationPeer.GetParent%2A>メソッド。 間のナビゲーション[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のピアの実装によって、コントロール内の要素がサポートされている、<xref:System.Windows.Automation.Peers.AutomationPeer.GetChildrenCore%2A>メソッド。 UI オートメーション システムは、このメソッドを呼び出して、コントロール内に含まれるサブ要素のツリーを構築します。たとえば、リスト ボックス内の項目を一覧表示します。 既定の<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetChildrenCore%2A?displayProperty=nameWithType>メソッドは、オートメーション ピアのツリーを構築する要素のビジュアル ツリーを走査します。 カスタム コントロールは、このメソッドをオーバーライドして子要素をオートメーション クライアントに公開し、情報を伝達するまたはユーザーによる操作を許可する要素のオートメーション ピアを返します。  
+ オートメーションピアを見つけた後、インプロセスコードは、オブジェクトの<xref:System.Windows.Automation.Peers.AutomationPeer.GetChildren%2A>メソッドと<xref:System.Windows.Automation.Peers.AutomationPeer.GetParent%2A>メソッドを呼び出すことによって、ピアツリー内を移動できます。 コントロール内[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の要素間のナビゲーションは、ピアの<xref:System.Windows.Automation.Peers.AutomationPeer.GetChildrenCore%2A>メソッドの実装によってサポートされています。 UI オートメーション システムは、このメソッドを呼び出して、コントロール内に含まれるサブ要素のツリーを構築します。たとえば、リスト ボックス内の項目を一覧表示します。 既定<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetChildrenCore%2A?displayProperty=nameWithType>のメソッドは、要素のビジュアルツリーを走査して、オートメーションピアのツリーを構築します。 カスタム コントロールは、このメソッドをオーバーライドして子要素をオートメーション クライアントに公開し、情報を伝達するまたはユーザーによる操作を許可する要素のオートメーション ピアを返します。  
   
 <a name="Customizations"></a>   
 ## <a name="customizations-in-a-derived-peer"></a>派生ピアのカスタマイズ  
- すべてのクラスから派生する<xref:System.Windows.UIElement>と<xref:System.Windows.ContentElement>、プロテクト仮想メソッドを含む<xref:System.Windows.UIElement.OnCreateAutomationPeer%2A>。 WPF 呼び出し<xref:System.Windows.UIElement.OnCreateAutomationPeer%2A>各コントロールのオートメーション ピア オブジェクトを取得します。 オートメーション コードは、ピアを使用して、コントロールの特性と機能に関する情報を取得し、対話型の使用をシミュレートします。 オートメーションをサポートするカスタム コントロールをオーバーライドする必要があります<xref:System.Windows.UIElement.OnCreateAutomationPeer%2A>から派生したクラスのインスタンスを返すと<xref:System.Windows.Automation.Peers.AutomationPeer>します。 たとえば、カスタム コントロールから派生、<xref:System.Windows.Controls.Primitives.ButtonBase>クラス、によって返されるオブジェクト<xref:System.Windows.UIElement.OnCreateAutomationPeer%2A>から派生する必要があります<xref:System.Windows.Automation.Peers.ButtonBaseAutomationPeer>します。  
+ から<xref:System.Windows.UIElement>派生し<xref:System.Windows.ContentElement> 、保護された仮想メソッド<xref:System.Windows.UIElement.OnCreateAutomationPeer%2A>を含むすべてのクラス。 WPF は<xref:System.Windows.UIElement.OnCreateAutomationPeer%2A> 、各コントロールのオートメーションピアオブジェクトを取得するためにを呼び出します。 オートメーション コードは、ピアを使用して、コントロールの特性と機能に関する情報を取得し、対話型の使用をシミュレートします。 オートメーションをサポートするカスタムコントロールは、 <xref:System.Windows.UIElement.OnCreateAutomationPeer%2A>をオーバーライドし、から<xref:System.Windows.Automation.Peers.AutomationPeer>派生したクラスのインスタンスを返す必要があります。 たとえば、カスタムコントロールが<xref:System.Windows.Controls.Primitives.ButtonBase>クラスから派生している場合、によって<xref:System.Windows.UIElement.OnCreateAutomationPeer%2A>返されるオブジェクトは<xref:System.Windows.Automation.Peers.ButtonBaseAutomationPeer>から派生する必要があります。  
   
  カスタム コントロールを実装する場合、カスタム コントロールに固有の動作を説明する基本オートメーション ピア クラスからの「コア」メソッドをオーバーライドする必要があります。  
   
 ### <a name="override-oncreateautomationpeer"></a>OnCreateAutomationPeer のオーバーライド  
- 上書き、<xref:System.Windows.UIElement.OnCreateAutomationPeer%2A>から直接または間接的に派生する必要があります、プロバイダー オブジェクトを返すように、カスタム コントロールのメソッドを<xref:System.Windows.Automation.Peers.AutomationPeer>します。  
+ カスタムコントロールの<xref:System.Windows.Automation.Peers.AutomationPeer>メソッドをオーバーライドして、プロバイダーオブジェクトを返すようにします。プロバイダーオブジェクトは、から直接または間接的に派生する必要<xref:System.Windows.UIElement.OnCreateAutomationPeer%2A>があります。  
   
 ### <a name="override-getpattern"></a>GetPattern のオーバーライド  
- オートメーション ピアは、サーバー側の [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] プロバイダーの実装の一部を簡略化しますが、カスタム コントロール オートメーション ピアでもパターン インターフェイスを処理する必要があります。 非 WPF プロバイダーと同様にピアがでインターフェイスの実装を提供することでコントロール パターンをサポート、<xref:System.Windows.Automation.Provider?displayProperty=nameWithType>名前空間など<xref:System.Windows.Automation.Provider.IInvokeProvider>します。 コントロール パターンのインターフェイスは、ピア自体または別のオブジェクトによって実装できます。 ピアの実装の<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>指定のパターンをサポートするオブジェクトを返します。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] コードの呼び出し、<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>メソッドを指定し、<xref:System.Windows.Automation.Peers.PatternInterface>列挙値。 オーバーライド<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>を指定したパターンを実装するオブジェクトを返す必要があります。 基本型の実装を呼び出すことができます、コントロールがカスタム パターンの実装を持たない場合<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>をこの種類のコントロールのパターンがサポートされていない場合、実装、または null のいずれかを取得します。 値の範囲内にカスタムの NumericUpDown コントロールを設定するなど、その[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]ピアを実装、<xref:System.Windows.Automation.Provider.IRangeValueProvider>インターフェイス。 次の例はどのようにピアの<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>に応答するメソッドをオーバーライド、<xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType>値。  
+ オートメーション ピアは、サーバー側の [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] プロバイダーの実装の一部を簡略化しますが、カスタム コントロール オートメーション ピアでもパターン インターフェイスを処理する必要があります。 非 WPF プロバイダーと同様に、ピアは、などの名前空間<xref:System.Windows.Automation.Provider?displayProperty=nameWithType> <xref:System.Windows.Automation.Provider.IInvokeProvider>にインターフェイスの実装を提供することによって、コントロールパターンをサポートします。 コントロール パターンのインターフェイスは、ピア自体または別のオブジェクトによって実装できます。 ピアのの<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>実装は、指定されたパターンをサポートするオブジェクトを返します。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]コードは<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>メソッドを呼び出し、 <xref:System.Windows.Automation.Peers.PatternInterface>列挙値を指定します。 の<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>オーバーライドは、指定されたパターンを実装するオブジェクトを返す必要があります。 コントロールにパターンのカスタム実装がない場合は、の<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>基本型の実装を呼び出して、その実装を取得するか、このコントロール型に対してパターンがサポートされていない場合は null を呼び出すことができます。 たとえば、カスタム NumericUpDown コントロールを範囲内の値に設定して、その[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]ピアがインターフェイスを<xref:System.Windows.Automation.Provider.IRangeValueProvider>実装するようにすることができます。 次の例は、 <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType>値に応答するためにピアのメソッドがどのようにオーバーライドされるかを示しています。  
   
  [!code-csharp[CustomControlNumericUpDown#GetPattern](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
  [!code-vb[CustomControlNumericUpDown#GetPattern](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  
   
- A<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>メソッドではサブ要素をパターン プロバイダーとしても指定できます。 次のコードはどのように<xref:System.Windows.Controls.ItemsControl>転送スクロール パターン処理の内部のピアに<xref:System.Windows.Controls.ScrollViewer>コントロール。  
+ メソッド<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>では、サブ要素をパターンプロバイダーとして指定することもできます。 次のコードは、 <xref:System.Windows.Controls.ItemsControl>がスクロールパターンの処理を内部<xref:System.Windows.Controls.ScrollViewer>コントロールのピアに転送する方法を示しています。  
   
 ```csharp  
 public override object GetPattern(PatternInterface patternInterface)  
@@ -99,19 +99,19 @@ Public Class Class1
 End Class  
 ```  
   
- このコード パターン処理のサブ要素を指定するにはサブ要素オブジェクトを取得を使用してピアを作成、<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.CreatePeerForElement%2A>メソッドを設定、<xref:System.Windows.Automation.Peers.AutomationPeer.EventsSource%2A>を現在のピアでは、新しいピアのプロパティを新しいピアを返します。 設定<xref:System.Windows.Automation.Peers.AutomationPeer.EventsSource%2A>サブ要素で、オートメーション ピア ツリーに表示されない、サブ要素を防止し、サブ要素によって生成されるすべてのイベントを指定で指定したコントロールからのものとして<xref:System.Windows.Automation.Peers.AutomationPeer.EventsSource%2A>します。 <xref:System.Windows.Controls.ScrollViewer>コントロールはオートメーション ツリーで表示されずから生成するスクロール イベントが表示されます、<xref:System.Windows.Controls.ItemsControl>オブジェクト。  
+ パターン処理のサブ要素を指定するために、このコードはサブ要素オブジェクトを取得し、 <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.CreatePeerForElement%2A>メソッドを使用し<xref:System.Windows.Automation.Peers.AutomationPeer.EventsSource%2A>てピアを作成し、新しいピアのプロパティを現在のピアに設定し、新しいピアを返します。 サブ<xref:System.Windows.Automation.Peers.AutomationPeer.EventsSource%2A>要素にを設定すると、そのサブ要素がオートメーションピアツリーに表示されなくなり、サブ要素によって発生し<xref:System.Windows.Automation.Peers.AutomationPeer.EventsSource%2A>たすべてのイベントがで指定されたコントロールから送信されるように指定されます。 コントロールはオートメーションツリーに表示されず、生成されたスクロールイベントは<xref:System.Windows.Controls.ItemsControl>オブジェクトから発生したものとして表示されます。 <xref:System.Windows.Controls.ScrollViewer>  
   
 ### <a name="override-core-methods"></a>「コア」メソッドのオーバーライド  
- オートメーション コードは、ピア クラスのパブリック メソッドを呼び出して、コントロールに関する情報を取得します。 コントロールに関する情報を提供するには、コントロールの実装が基本オートメーション ピア クラスで提供されているものとは異なる場合に、"Core" で終わる名前を持つ各メソッドをオーバーライドします。 少なくとも、コントロールを実装する必要があります、<xref:System.Windows.Automation.Peers.AutomationPeer.GetClassNameCore%2A>と<xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore%2A>メソッドは、次の例に示すようにします。  
+ オートメーション コードは、ピア クラスのパブリック メソッドを呼び出して、コントロールに関する情報を取得します。 コントロールに関する情報を提供するには、コントロールの実装が基本オートメーション ピア クラスで提供されているものとは異なる場合に、"Core" で終わる名前を持つ各メソッドをオーバーライドします。 少なくとも、次の例に示す<xref:System.Windows.Automation.Peers.AutomationPeer.GetClassNameCore%2A>よう<xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore%2A>に、コントロールにはメソッドとメソッドを実装する必要があります。  
   
  [!code-csharp[CustomControlNumericUpDown#CoreOverrides](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#coreoverrides)]
  [!code-vb[CustomControlNumericUpDown#CoreOverrides](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#coreoverrides)]  
   
- 実装<xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore%2A>を返すことによって、コントロールを説明する<xref:System.Windows.Automation.ControlType>値。 返すことができますが<xref:System.Windows.Automation.ControlType.Custom?displayProperty=nameWithType>コントロールを正確に説明されている場合より特定のコントロール型の 1 つ返す必要があります。 戻り値<xref:System.Windows.Automation.ControlType.Custom?displayProperty=nameWithType>、プロバイダーを実装するための追加作業が必要です[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]、および[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]クライアント製品は、コントロールの構造、キーボード操作、および可能なコントロール パターンを予測することはできません。  
+ の<xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore%2A>実装では、値を<xref:System.Windows.Automation.ControlType>返すことによってコントロールを記述します。 を返す<xref:System.Windows.Automation.ControlType.Custom?displayProperty=nameWithType>ことはできますが、コントロールが正確に記述されていれば、より具体的なコントロール型の1つを返す必要があります。 の<xref:System.Windows.Automation.ControlType.Custom?displayProperty=nameWithType>戻り値には、プロバイダーがを実装[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]するための追加の作業が必要であり、クライアント製品は制御構造、キーボード操作、および考えられるコントロールパターンを予測できません。  
   
- 実装、<xref:System.Windows.Automation.Peers.AutomationPeer.IsContentElementCore%2A>と<xref:System.Windows.Automation.Peers.AutomationPeer.IsControlElementCore%2A>メソッドは、コントロールがデータの内容が含まれていますか (またはその両方) をユーザー インターフェイスで対話型のロールかどうかを示します。 既定では、両方のメソッドが `true` を返します。 これらの設定は、オートメーション ツリーをフィルター処理するこれらのメソッドを使用できるスクリーン リーダーなどのオートメーション ツールの使いやすさを向上します。 場合、 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> 、サブ要素ピアに、サブ要素ピアの処理メソッド転送パターン<xref:System.Windows.Automation.Peers.AutomationPeer.IsControlElementCore%2A>メソッドは、オートメーション ツリーからのサブ要素ピアを非表示に false を返します。 などのスクロール、<xref:System.Windows.Controls.ListBox>によって処理されます、 <xref:System.Windows.Controls.ScrollViewer>、およびオートメーション ピアを<xref:System.Windows.Automation.Peers.PatternInterface.Scroll?displayProperty=nameWithType>によって返される、<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>のメソッド、<xref:System.Windows.Automation.Peers.ScrollViewerAutomationPeer>関連付けられている、<xref:System.Windows.Automation.Peers.ListBoxAutomationPeer>します。そのため、<xref:System.Windows.Automation.Peers.AutomationPeer.IsControlElementCore%2A>のメソッド、<xref:System.Windows.Automation.Peers.ScrollViewerAutomationPeer>返します`false`するように、<xref:System.Windows.Automation.Peers.ScrollViewerAutomationPeer>オートメーション ツリーには表示されません。  
+ <xref:System.Windows.Automation.Peers.AutomationPeer.IsContentElementCore%2A>メソッドと<xref:System.Windows.Automation.Peers.AutomationPeer.IsControlElementCore%2A>メソッドを実装して、コントロールにデータコンテンツが含まれているか、ユーザーインターフェイス (またはその両方) で対話的なロールを満たしているかを示します。 既定では、両方のメソッドが `true` を返します。 これらの設定は、オートメーション ツリーをフィルター処理するこれらのメソッドを使用できるスクリーン リーダーなどのオートメーション ツールの使いやすさを向上します。 メソッドがサブ要素ピアにパターン処理を転送する場合、サブ要素<xref:System.Windows.Automation.Peers.AutomationPeer.IsControlElementCore%2A>ピアのメソッドは false を返して、オートメーションツリーからサブ要素ピアを非表示にすることができます。 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> たとえば<xref:System.Windows.Controls.ListBox> 、でのスクロールは、に<xref:System.Windows.Controls.ScrollViewer>よって処理され、 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>の<xref:System.Windows.Automation.Peers.PatternInterface.Scroll?displayProperty=nameWithType>オートメーションピアは、 <xref:System.Windows.Automation.Peers.ListBoxAutomationPeer>に関連付けら<xref:System.Windows.Automation.Peers.ScrollViewerAutomationPeer>れているのメソッドによって返されます。したがって、 <xref:System.Windows.Automation.Peers.AutomationPeer.IsControlElementCore%2A>のメソッド<xref:System.Windows.Automation.Peers.ScrollViewerAutomationPeer>はを`false` <xref:System.Windows.Automation.Peers.ScrollViewerAutomationPeer>返し、がオートメーションツリーに表示されないようにします。  
   
- オートメーション ピアは、コントロールに適切な既定値を提供する必要があります。 含めることによって、コントロールを参照する XAML がコア メソッドのピア実装をオーバーライドできることに注意してください<xref:System.Windows.Automation.AutomationProperties>属性。 たとえば、次の XAML は、カスタマイズされた [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] プロパティが 2 つあるボタンを作成します。  
+ オートメーション ピアは、コントロールに適切な既定値を提供する必要があります。 コントロールを参照する XAML は、属性を含める<xref:System.Windows.Automation.AutomationProperties>ことによって、コアメソッドのピア実装をオーバーライドすることができます。 たとえば、次の XAML は、カスタマイズされた [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] プロパティが 2 つあるボタンを作成します。  
   
 ```xaml  
 <Button AutomationProperties.Name="Special"   
@@ -119,7 +119,7 @@ End Class
 ```  
   
 ### <a name="implement-pattern-providers"></a>パターン プロバイダーの実装  
- 所有している要素がから直接派生している場合に、カスタム プロバイダーによって実装されるインターフェイスが明示的に宣言される<xref:System.Windows.Controls.Control>します。 たとえば、次のコードがのピアを宣言、<xref:System.Windows.Controls.Control>範囲の値を実装します。  
+ 所有要素がから<xref:System.Windows.Controls.Control>直接派生している場合は、カスタムプロバイダーによって実装されるインターフェイスが明示的に宣言されます。 たとえば、次のコードでは<xref:System.Windows.Controls.Control> 、範囲値を実装するのピアを宣言しています。  
   
 ```csharp  
 public class RangePeer1 : FrameworkElementAutomationPeer, IRangeValueProvider { }  
@@ -132,7 +132,7 @@ Public Class RangePeer1
 End Class  
 ```  
   
- 所有しているコントロールがなど特定の種類のコントロールから派生している場合<xref:System.Windows.Controls.Primitives.RangeBase>ピアは、同等の派生ピア クラスから派生できます。 この場合は、ピアはから派生が<xref:System.Windows.Automation.Peers.RangeBaseAutomationPeer>の基本実装を提供する<xref:System.Windows.Automation.Provider.IRangeValueProvider>します。 次のコードは、そのようなピアの宣言を示します。  
+ 所有して<xref:System.Windows.Controls.Primitives.RangeBase>いるコントロールがなどの特定の種類のコントロールから派生している場合は、同等の派生ピアクラスからピアを派生させることができます。 この場合、ピアは、の<xref:System.Windows.Automation.Peers.RangeBaseAutomationPeer> <xref:System.Windows.Automation.Provider.IRangeValueProvider>基本実装を提供するから派生します。 次のコードは、そのようなピアの宣言を示します。  
   
 ```csharp  
 public class RangePeer2 : RangeBaseAutomationPeer { }  
@@ -144,10 +144,10 @@ Public Class RangePeer2
 End Class  
 ```  
   
- 実装の例は、「[NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://go.microsoft.com/fwlink/?LinkID=160025)」を参照してください。  
+実装の例について[C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)は、「」または[Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown カスタムコントロールを実装して使用するソースコードを参照してください。  
   
 ### <a name="raise-events"></a>イベントを発生させる  
- オートメーション クライアントは、オートメーション イベントをサブスクライブできます。 カスタム コントロールが呼び出すことによってコントロールの状態に対する変更を報告する必要があります、<xref:System.Windows.Automation.Peers.AutomationPeer.RaiseAutomationEvent%2A>メソッド。 同様に、プロパティ値が変化するときに呼び出す、<xref:System.Windows.Automation.Peers.AutomationPeer.RaisePropertyChangedEvent%2A>メソッド。 次のコードは、コントロール コード内からピア オブジェクトを取得し、イベントを発生させるメソッドを呼び出す方法を示しています。 最適化として、このコードは、このイベント型のリスナーがいるかどうかを判断します。 リスナーがいる場合にのみイベントを発生させると、不要なオーバーヘッドを回避し、コントロールの応答性を維持できます。  
+ オートメーション クライアントは、オートメーション イベントをサブスクライブできます。 カスタムコントロールは、メソッドを呼び出すことによっ<xref:System.Windows.Automation.Peers.AutomationPeer.RaiseAutomationEvent%2A>て、コントロールの状態の変更を報告する必要があります。 同様に、プロパティ値が変更された<xref:System.Windows.Automation.Peers.AutomationPeer.RaisePropertyChangedEvent%2A>場合は、メソッドを呼び出します。 次のコードは、コントロール コード内からピア オブジェクトを取得し、イベントを発生させるメソッドを呼び出す方法を示しています。 最適化として、このコードは、このイベント型のリスナーがいるかどうかを判断します。 リスナーがいる場合にのみイベントを発生させると、不要なオーバーヘッドを回避し、コントロールの応答性を維持できます。  
   
  [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
  [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
@@ -155,5 +155,6 @@ End Class
 ## <a name="see-also"></a>関連項目
 
 - [UI オートメーションの概要](../../ui-automation/ui-automation-overview.md)
-- [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://go.microsoft.com/fwlink/?LinkID=160025)
 - [サーバー側 UI オートメーション プロバイダーの実装](../../ui-automation/server-side-ui-automation-provider-implementation.md)
+- [GitHub の NumericUpDown カスタムC#コントロール ()](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)  
+- [GitHub の NumericUpDown カスタムコントロール (Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic)

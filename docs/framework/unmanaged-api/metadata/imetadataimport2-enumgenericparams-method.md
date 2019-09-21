@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7edd2eeafcce6a22c3256d0684a9c4f961b34002
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39e3e71185051435afcf03d51ec62742c080b02a
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049896"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855714"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams メソッド
-トークンのジェネリック パラメーター トークンを指定した TypeDef または MethodDef に関連付けられた配列の列挙子を取得します。  
+指定した TypeDef または MethodDef トークンに関連付けられているジェネリックパラメータートークンの配列の列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT EnumGenericParams (  
    [in, out] HCORENUM     *phEnum,   
    [in]  mdToken          tk,  
@@ -44,30 +44,30 @@ HRESULT EnumGenericParams (
  [入力、出力]列挙子へのポインター。  
   
  `tk`  
- [in]ジェネリック パラメーターを持つが列挙する TypeDef または MethodDef トークンです。  
+ からジェネリックパラメーターを列挙する TypeDef または MethodDef トークン。  
   
  `rGenericParams`  
- [out]列挙するために、ジェネリック パラメーターの配列。  
+ 入出力列挙するジェネリックパラメーターの配列。  
   
  `cMax`  
- [in]配置するトークンの要求の最大数`rGenericParams`します。  
+ からに`rGenericParams`格納するトークンの要求された最大数。  
   
  `pcGenericParams`  
- [out]返されたトークンの数に配置`rGenericParams`します。  
+ 入出力に`rGenericParams`格納された、返されたトークンの数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` 正常に返されます。|  
-|`S_FALSE`|`phEnum` メンバーの要素がありません。 この場合、 `pcGenericParams` 0 (ゼロ) に設定されます。|  
+|`S_OK`|`EnumGenericParams`正常に返されました。|  
+|`S_FALSE`|`phEnum`にメンバー要素がありません。 この場合、 `pcGenericParams`は 0 (ゼロ) に設定されます。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ**Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

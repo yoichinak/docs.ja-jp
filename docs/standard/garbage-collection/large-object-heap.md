@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70ea0110f22e741908ad857fa501553d93c4b98d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753956"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929138"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows システムの大きなオブジェクト ヒープ
 
@@ -132,7 +132,7 @@ LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメント�
 
 2. 既知の他の領域を調べつくしたが、確認されたパフォーマンス上の問題を説明できる原因が見つからなかった。
 
-メモリと CPU の基礎の詳細については、ブログの「[Understand the problem before you try to find a solution](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/)」 (解決策を見つける前に問題を理解する) を参照してください。
+メモリと CPU の基礎の詳細については、ブログの「[Understand the problem before you try to find a solution](https://devblogs.microsoft.com/dotnet/understand-the-problem-before-you-try-to-find-a-solution/)」 (解決策を見つける前に問題を理解する) を参照してください。
 
 次のツールを使用して、LOH のパフォーマンスに関するデータを収集することができます。
 
@@ -168,13 +168,13 @@ LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメント�
 
 ガベージ コレクターは、ヒープで行われる内容とその理由を理解するのに役立つ、豊富な ETW イベントのセットを提供します。 次のブログ記事には、ETW を使用して GC イベントを収集および理解する方法が示されています。
 
-- [GC ETW イベント - 1](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
+- [GC ETW イベント - 1](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/)
 
-- [GC ETW イベント - 2](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
+- [GC ETW イベント - 2](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/)
 
-- [GC ETW イベント - 3](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
+- [GC ETW イベント - 3](https://devblogs.microsoft.com/dotnet/gc-etw-events-3/)
 
-- [GC ETW イベント - 4](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
+- [GC ETW イベント - 4](https://devblogs.microsoft.com/dotnet/gc-etw-events-4/)
 
 一時 LOH の割り当てによる過度の世代 2 の GC を特定するには、GC のトリガー理由の列を確認します。 大きな一時オブジェクトのみを割り当てる簡単なテストの場合は、次の [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) コマンド ラインを使用して、ETW イベントに関する情報を収集できます。
 

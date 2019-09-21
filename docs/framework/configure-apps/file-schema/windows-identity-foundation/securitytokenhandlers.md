@@ -3,19 +3,20 @@ title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 017309436660991c69da569e9cc4219e842ecaa3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793836"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251873"
 ---
 # <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
-エンドポイントに登録されているセキュリティ トークン ハンドラーのコレクションを指定します。  
+エンドポイントに登録されているセキュリティトークンハンドラーのコレクションを指定します。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<システムの >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<構成 >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<securityTokenHandlers >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,26 +36,26 @@ ms.locfileid: "61793836"
   
 |属性|説明|  
 |---------------|-----------------|  
-|name|トークン ハンドラー コレクションの名前を指定します。 フレームワークによって認識される唯一の値は、"ActAs"と"OnBehalfOf"です。 トークン ハンドラー コレクションにこれらの名前のいずれかを指定する場合、コレクションをそれぞれトークン ActAs または OnBehalfOf を処理するときに使用します。|  
+|name|トークンハンドラーコレクションの名前を指定します。 フレームワークによって認識される値は、"ActAs" と "OnBehalfOf" だけです。 これらのいずれかの名前でトークンハンドラーコレクションが指定されている場合、ActAs または OnBehalfOf トークンをそれぞれ処理するときにコレクションが使用されます。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|トークン ハンドラー コレクションには、セキュリティ トークン ハンドラーを追加します。|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|トークン ハンドラー コレクションからすべてのセキュリティ トークン ハンドラーをクリアします。|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|トークン ハンドラー コレクションからセキュリティ トークン ハンドラーを削除します。|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|トークン ハンドラーのコレクションの構成を提供します。|  
+|[\<add>](add.md)|トークンハンドラーコレクションにセキュリティトークンハンドラーを追加します。|  
+|[\<clear>](clear.md)|すべてのセキュリティトークンハンドラーをトークンハンドラーコレクションから削除します。|  
+|[\<remove>](remove.md)|トークンハンドラーコレクションからセキュリティトークンハンドラーを削除します。|  
+|[\<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)|トークンハンドラーのコレクションの構成を提供します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|サービス レベルの id の設定を指定します。|  
+|[\<identityConfiguration>](identityconfiguration.md)|サービスレベルの id 設定を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- サービス構成では、セキュリティ トークン ハンドラーの 1 つまたは複数の名前付きコレクションを指定できます。 使用してコレクションの名前を指定することができます、`name`属性。 フレームワークを処理する唯一の名前とは、"ActAs"と"OnBehalfOf"です。 ハンドラーは、これらのコレクションに存在する場合で使用されるセキュリティ トークン サービス (STS)、既定のハンドラーではなく処理するときに`ActAs`と`OnBehalfOf`トークンです。  
+ サービス構成では、セキュリティトークンハンドラーの1つ以上の名前付きコレクションを指定できます。 `name`属性を使用して、コレクションの名前を指定できます。 フレームワークによって処理される名前は、"ActAs" と "OnBehalfOf" だけです。 これらのコレクションにハンドラーが存在する場合は、 `ActAs` `OnBehalfOf`トークンの処理時に既定のハンドラーではなく、Security Token Service (STS) によって使用されます。  
   
- 既定では、コレクションは、次の種類のハンドラーで設定されます: <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>、 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>、 <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>、 <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>、 <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>、 <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>、および<xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>します。 使用して、コレクションを変更することができます、 `<add>`、 `<remove>`、および`<clear>`要素。 特定の型の 1 つのハンドラーのみがコレクションに存在することを確認する必要があります。 たとえば、次のハンドラーからの派生、<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>クラスか、ハンドラーまたは<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>両方ではなく 1 つのコレクションで構成することがあります。  
+ 既定では<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>、コレクションには<xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>、 <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler> <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler> <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>、、、、、 、およびの各ハンドラー型が設定されます。<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> コレクションは、 `<add>` `<remove>`、、および`<clear>`の各要素を使用して変更できます。 コレクション内に存在する特定の種類のハンドラーが1つだけであることを確認する必要があります。 たとえば、 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>クラスからハンドラーを派生させる場合、ハンドラーまたはが<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 1 つのコレクションで構成されていることがありますが、両方を構成することはできません。  
   
- 使用して、`<securityTokenHandlerConfiguration>`要素をコレクション内で、ハンドラーの構成設定を指定します。 この要素で指定された設定をオーバーライドを通じてサービスに指定されている、 [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)要素。 いくつかのハンドラー (いくつかの組み込みハンドラー型を含む) の子要素を追加の構成をサポートできる、`<add>`要素。 ハンドラーで指定した設定では、コレクションまたはサービスに指定した同等の設定をオーバーライドします。
+ コレクション内`<securityTokenHandlerConfiguration>`のハンドラーの構成設定を指定するには、要素を使用します。 この要素によって指定された設定は、サービスで指定された設定よりも、ユーザー [ \<構成 >](identityconfiguration.md)要素を介してオーバーライドされます。 いくつかの組み込みハンドラー型を含む一部のハンドラーは、 `<add>`要素の子要素を通じて追加の構成をサポートできます。 ハンドラーに指定された設定は、コレクションまたはサービスで指定された同等の設定よりも優先されます。

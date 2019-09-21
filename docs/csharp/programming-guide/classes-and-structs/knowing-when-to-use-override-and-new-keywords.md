@@ -7,16 +7,16 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: eae57ae1f285e7f0e44c49e3d54fbd81bb4be591
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 00751cd8eac7979fe94d890ddeb7d13edb233f9e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398429"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596473"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Override キーワードと New キーワードを使用する場合について (C# プログラミング ガイド)
 
-C# では、派生クラスのメソッドを基底クラスのメソッドと同じ名前にすることができます。 [new](../../../csharp/language-reference/keywords/new-modifier.md) および [override](../../../csharp/language-reference/keywords/override.md) キーワードを使って、メソッドでの処理を指定できます。 `override` 修飾子は基底クラスの `virtual`メソッドを "*拡張*" し、`new` 修飾子はアクセス可能な基底クラスのメソッドを "*非表示*" にします。 このトピックの例ではその違いを示します。  
+C# では、派生クラスのメソッドを基底クラスのメソッドと同じ名前にすることができます。 [new](../../language-reference/keywords/new-modifier.md) および [override](../../language-reference/keywords/override.md) キーワードを使って、メソッドでの処理を指定できます。 `override` 修飾子は基底クラスの `virtual`メソッドを "*拡張*" し、`new` 修飾子はアクセス可能な基底クラスのメソッドを "*非表示*" にします。 このトピックの例ではその違いを示します。  
   
  コンソール アプリケーションで、次の 2 つのクラス `BaseClass` と `DerivedClass` を宣言します。 `DerivedClass` は `BaseClass`を継承します。  
   
@@ -115,7 +115,7 @@ public new void Method2()
 }  
 ```  
   
- もう一度プログラムを実行し、出力が変わらないことを確認します。 また、警告が表示されなくなったことを確認します。 `new` を使うことにより、それによって修飾されるメンバーが基底クラスから継承されたメンバーを隠ぺいすることを了解していることを明示します。 継承による名前の非表示について詳しくは、「[new 修飾子](../../../csharp/language-reference/keywords/new-modifier.md)」をご覧ください。  
+ もう一度プログラムを実行し、出力が変わらないことを確認します。 また、警告が表示されなくなったことを確認します。 `new` を使うことにより、それによって修飾されるメンバーが基底クラスから継承されたメンバーを隠ぺいすることを了解していることを明示します。 継承による名前の非表示について詳しくは、「[new 修飾子](../../language-reference/keywords/new-modifier.md)」をご覧ください。  
   
  この動作を `override` を使ったときの効果と比較するため、次のメソッドを `DerivedClass` に追加します。 `override` 修飾子を追加する位置は、`public` の前でも後でもかまいません。  
   
@@ -545,8 +545,8 @@ namespace OverrideAndNew2
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Override キーワードと New キーワードによるバージョン管理](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
-- [base](../../../csharp/language-reference/keywords/base.md)
-- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+- [C# プログラミング ガイド](../index.md)
+- [クラスと構造体](./index.md)
+- [Override キーワードと New キーワードによるバージョン管理](./versioning-with-the-override-and-new-keywords.md)
+- [base](../../language-reference/keywords/base.md)
+- [abstract](../../language-reference/keywords/abstract.md)

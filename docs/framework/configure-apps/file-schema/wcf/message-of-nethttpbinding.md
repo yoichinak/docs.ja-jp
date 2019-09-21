@@ -2,22 +2,23 @@
 title: <message> の <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 5bc953b4a1fad90aec5db507469368e7b21bb7e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 793e0541b1714d2afaafc634a9e9435e5243fa19
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768967"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397834"
 ---
-# <a name="message-of-nethttpbinding"></a>\<メッセージ > の\<netHttpBinding >
-メッセージ レベル セキュリティの設定を定義、 [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)します。  
+# <a name="message-of-nethttpbinding"></a>\<netHttpBinding > の\<メッセージ >
+[ \<NetHttpBinding >](nethttpbinding.md)のメッセージレベルのセキュリティの設定を定義します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<netHttpBinding>  
-\<binding>  
-\<セキュリティ >  
-\<message>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<セキュリティ >** ](security-of-nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<メッセージ >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,15 +34,15 @@ ms.locfileid: "61768967"
   
 |属性|説明|  
 |---------------|-----------------|  
-|algorithmSuite|メッセージの暗号化とキー ラップ アルゴリズムを設定します。 この属性は、アルゴリズムとキー サイズを指定する <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。 これらのアルゴリズムは、Security Policy Language (WS-SecurityPolicy) の仕様で指定されているアルゴリズムに対応付けられています。<br /><br /> 既定値は `Basic256` です。|  
+|algorithmSuite|メッセージの暗号化とキー ラップ アルゴリズムを設定します。 この属性は、アルゴリズムとキー サイズを指定する <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。 これらのアルゴリズムは、セキュリティ ポリシー言語 (WS-SecurityPolicy) 仕様で指定されたアルゴリズムにマップされます。<br /><br /> 既定値は `Basic256` です。|  
 |clientCredentialType|メッセージ ベースのセキュリティを使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。 既定値は `UserName` です。|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|UserName|-ユーザー名資格情報を使用してサーバーにクライアントを認証する必要があります。 この資格情報を使用して指定する必要があります、<`clientCredentials`> 要素。<br />WCF は、パスワード ダイジェストの送信、またはパスワードを使用して、このようなキーを使用して、メッセージ セキュリティのためのキーの派生をサポートしていません。 そのため、WCF トランスポートは、UserName 資格情報を使用する場合にセキュリティで保護することを強制します。 `basicHttpBinding` の場合は、SSL チャネルの設定が必要です。|  
-|証明書|証明書を使用してクライアントをサーバーに認証するように要求します。 ここでクライアント資格情報を使用して指定する必要があります <`clientCredentials`> と <`clientCertificate`>。 さらに、メッセージのセキュリティ モードを使用する場合は、クライアントにサービス証明書を準備する必要があります。 ここでサービス資格情報を使用して指定する必要があります<xref:System.ServiceModel.Description.ClientCredentials>クラスまたは`ClientCredentials`動作の要素と、サービスの指定を使用して証明書の\<serviceCertificate > serviceCredentials の要素。|  
+|UserName|-クライアントがユーザー名資格情報を使用してサーバーに対して認証される必要があります。 この資格情報は、<`clientCredentials`> 要素を使用して指定する必要があります。<br />-WCF では、パスワードダイジェストの送信や、パスワードを使用したキーの派生、およびメッセージセキュリティのためのこのようなキーの使用はサポートされていません。 そのため、ユーザー名の資格情報を使用する場合、WCF はトランスポートをセキュリティで保護するように強制します。 `basicHttpBinding` の場合は、SSL チャネルの設定が必要です。|  
+|証明書|証明書を使用してクライアントをサーバーに認証するように要求します。 この場合のクライアント資格情報は、<`clientCredentials`> と <`clientCertificate`> を使用して指定する必要があります。 さらに、メッセージのセキュリティ モードを使用する場合は、クライアントにサービス証明書を準備する必要があります。 この場合のサービス資格情報は、クラスまたは<xref:System.ServiceModel.Description.ClientCredentials> `ClientCredentials`動作要素を使用して指定し、serviceCredentials の\<serviceCertificate > 要素を使用してサービス証明書を指定する必要があります。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -50,7 +51,7 @@ ms.locfileid: "61768967"
   
 |要素|説明|  
 |-------------|-----------------|  
-|<`security`> 要素の <`netHttpBinding`>|セキュリティ機能を定義、<`netHttpBinding`> 要素。|  
+|<`security`< の > 要素`netHttpBinding`>|<`netHttpBinding`> 要素のセキュリティ機能を定義します。|  
   
 ## <a name="example"></a>例  
  このサンプルでは、basicHttpBinding とメッセージ セキュリティを使用するアプリケーションを実装する方法を示します。 サービスの次の構成例では、エンドポイント定義によって basicHttpBinding が指定され、`Binding1` という名前のバインディング構成が参照されます。 サービスがクライアントに対してサービス自体を認証するために使用する証明書は、`behaviors` 要素の下にある構成ファイルの `serviceCredentials` セクションで設定されます。 クライアントがサービスに対してクライアント自体を認証するために使用する証明書に適用される検証モードも、`behaviors` 要素の下にある `clientCertificate` セクションで設定されます。  
@@ -121,8 +122,8 @@ ms.locfileid: "61768967"
   
 ## <a name="see-also"></a>関連項目
 
-- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../wcf/feature-details/securing-services-and-clients.md)
+- [バインディング](../../../wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a4bd64d4c8232f9b6448baf98ee73ee497ccd5ca
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593328"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972106"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>チュートリアル: カスタム ログ リスナーの作成 (Visual Basic)
 このチュートリアルでは、カスタム ログ リスナーを作成する方法と、`My.Application.Log` オブジェクトの出力を待機するように構成する方法について説明します。  
@@ -29,11 +29,11 @@ ms.locfileid: "64593328"
      <xref:System.Security.Permissions.HostProtectionAttribute> 属性は、<xref:System.Diagnostics.TraceListener.Write%2A> および <xref:System.Diagnostics.TraceListener.WriteLine%2A> メソッドに適用されます。これは、各メソッドの属性を基底クラスのメソッドに一致させるためです。 <xref:System.Security.Permissions.HostProtectionAttribute> 属性を使用すると、コードを実行するホストは、コードがホスト保護の同期を公開していることを確認できます。  
   
     > [!NOTE]
-    >  <xref:System.Security.Permissions.HostProtectionAttribute> 属性は、共通言語ランタイムをホストし、ホスト保護を実装している SQL Server などのアンマネージ アプリケーションでのみ有効になります。  
+    > <xref:System.Security.Permissions.HostProtectionAttribute> 属性は、共通言語ランタイムをホストし、ホスト保護を実装している SQL Server などのアンマネージ アプリケーションでのみ有効になります。  
   
  `My.Application.Log` でログ リスナーが使用されるようにするには、ログ リスナーを含むアセンブリに厳密な名前を付ける必要があります。  
   
- 次の手順では、厳密な名前付きのログ リスナー アセンブリを作成するための簡単な手順を示します。 詳しくは、「[厳密な名前付きアセンブリの作成と使用](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)」をご覧ください。  
+ 次の手順では、厳密な名前付きのログ リスナー アセンブリを作成するための簡単な手順を示します。 詳しくは、「[厳密な名前付きアセンブリの作成と使用](../../../../standard/assembly/create-use-strong-named.md)」をご覧ください。  
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>ログ リスナー アセンブリに厳密な名前を付けるには  
   
@@ -76,7 +76,7 @@ ms.locfileid: "64593328"
   
 1. **ソリューション エクスプローラー** で app.config を右クリックし、 **[開く]** を選択します。  
   
-     - または -  
+     または  
   
      app.config ファイルがある場合は、次の操作を行います。  
   

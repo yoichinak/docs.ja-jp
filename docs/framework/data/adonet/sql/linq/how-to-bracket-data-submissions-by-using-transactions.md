@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 94044a31-de90-479b-935a-8159b4ae5c5a
-ms.openlocfilehash: 3e58c6f2849ed9714b3356662dae313ab9d11696
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a4c5ba7c4938b48fe489e43ff4a3ff806bd8916
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037865"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793805"
 ---
 # <a name="how-to-bracket-data-submissions-by-using-transactions"></a>方法: データ送信をトランザクションで囲む
-データベースへの送信を <xref:System.Transactions.TransactionScope> で囲むことができます。 詳細については、次を参照してください。[トランザクション サポート](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)します。  
+データベースへの送信を <xref:System.Transactions.TransactionScope> で囲むことができます。 詳細については、「[トランザクションのサポート](transaction-support.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次のコードでは、データベース送信を <xref:System.Transactions.TransactionScope> で囲みます。  
@@ -23,6 +23,6 @@ ms.locfileid: "62037865"
   
 ## <a name="see-also"></a>関連項目
 
-- [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [データの変更と変更の送信](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
-- [トランザクションのサポート](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)
+- [サンプル データベースのダウンロード](downloading-sample-databases.md)
+- [データの変更と変更の送信](making-and-submitting-data-changes.md)
+- [トランザクションのサポート](transaction-support.md)

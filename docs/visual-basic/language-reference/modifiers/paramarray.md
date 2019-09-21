@@ -8,23 +8,23 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic]
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-ms.openlocfilehash: b9dee0fc876c6e7a02d085db7db4bf1c5dd2c68d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fc5d1afd9e9723e6b3c58e100b0519ef8fdfab4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053913"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968364"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
-プロシージャのパラメーターが指定した型の要素の省略可能な配列を受け取ることを指定します。 `ParamArray` パラメーター リストの最後のパラメーターでのみ使用できます。  
+プロシージャパラメーターが、指定された型の要素のオプションの配列を受け取ることを指定します。 `ParamArray`は、パラメーターリストの最後のパラメーターでのみ使用できます。  
   
 ## <a name="remarks"></a>Remarks  
- `ParamArray` プロシージャに任意の数の引数を渡すことができます。 A`ParamArray`を使用してパラメーターが常に宣言[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)します。  
+ `ParamArray`プロシージャに任意の数の引数を渡すことができます。 パラメーターは常に [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) を使用して宣言されます。`ParamArray`  
   
- 1 つまたは複数の引数を指定できます、`ParamArray`適切なデータの配列を渡すことによってパラメーターの型、値、または何ものコンマ区切りの一覧にします。 詳細については、"呼び出しを ParamArray"を参照してください[パラメーター配列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)します。  
+ 適切なデータ型の配列、コンマ区切り`ParamArray`の値のリスト、または何も指定しないで、パラメーターに1つ以上の引数を渡すことができます。 詳細については、「[パラメーター配列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)」の「ParamArray の呼び出し」を参照してください。  
   
 > [!IMPORTANT]
->  無限に増大することができる配列を処理するたびに、アプリケーションの内部の容量を超過してしまう可能性があります。 呼び出し元のコードからパラメーターの配列を受け取る場合その長さをテスト、アプリケーションが大きすぎる場合は、適切な手順を実行してください。  
+> 無限に大きくなる可能性がある配列を処理する場合、アプリケーションの内部容量がオーバーランするリスクがあります。 呼び出し元のコードからパラメーター配列を受け取る場合は、その長さをテストし、アプリケーションにとって大きすぎる場合は適切な手順を実行する必要があります。  
   
  `ParamArray` 修飾子は、次のコンテキストで使用できます。  
   

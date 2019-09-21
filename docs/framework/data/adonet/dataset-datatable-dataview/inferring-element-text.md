@@ -2,15 +2,15 @@
 title: 要素のテキストの推論
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: 6ffe8f2fbf01fbe8dfa9d78f3dfb9e39b6e80b16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fdd110a14ddfd6065ed552171a8d76ef64e2fb5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879633"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784539"
 ---
 # <a name="inferring-element-text"></a>要素のテキストの推論
-要素がテキストを含む、名前の新しい列 (属性を持つ要素) などに繰り返される要素は、テーブルとして推論される子要素がない場合**TableName_Text**要素に対して推論されるテーブルに追加されます。 要素に含まれているテキストはテーブルの行に追加され、新しい列に格納されます。 **ColumnMapping**新しい列のプロパティに設定する**MappingType.SimpleContent**します。  
+要素にテキストが含まれており、テーブルとして推論される子要素がない場合 (属性を持つ要素や要素が繰り返される場合など)、 **TableName_Text**という名前の新しい列が、要素に対して推論されるテーブルに追加されます。 要素に含まれているテキストはテーブルの行に追加され、新しい列に格納されます。 新しい列の**ColumnMapping**プロパティは、 **Mappingtype. SimpleContent**に設定されます。  
   
  たとえば、次のような XML があるとします。  
   
@@ -20,11 +20,11 @@ ms.locfileid: "61879633"
 </DocumentElement>  
 ```  
   
- 推論プロセスという名前のテーブルが生成されます**Element1** 2 つの列: **attr1**と**Element1_Text**します。 **ColumnMapping**のプロパティ、 **attr1**列に設定する**MappingType.Attribute**します。 **ColumnMapping**のプロパティ、 **Element1_Text**列に設定する**MappingType.SimpleContent**します。  
+ 推論プロセスでは、 **attr1**と**Element1_Text**の2つの列を持つ**Element1**という名前のテーブルが生成されます。 **Attr1**列の**ColumnMapping**プロパティは、 **mappingtype. Attribute**に設定されます。 **Element1_Text**列の**ColumnMapping**プロパティは、 **mappingtype. SimpleContent**に設定されます。  
   
- **データセット:** DocumentElement  
+ **セット**DocumentElement  
   
- **テーブル:** Element1  
+ **一覧**Element1  
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
@@ -40,11 +40,11 @@ ms.locfileid: "61879633"
 </Element1>  
 ```  
   
- 推論プロセスという名前のテーブルが生成されます**Element1**という 1 つの列を持つ**ChildElement1**します。 テキスト、 **ChildElement1**要素は、テーブルの行に含まれます。 その他のテキストは無視されます。 **ColumnMapping**のプロパティ、 **ChildElement1**列に設定する**MappingType.Element**します。  
+ 推論プロセスでは、 **ChildElement1**という名前の1つの列を持つ**Element1**という名前のテーブルが生成されます。 **ChildElement1**要素のテキストは、テーブルの行に含まれます。 その他のテキストは無視されます。 **ChildElement1**列の**ColumnMapping**プロパティは、 **mappingtype. Element**に設定されます。  
   
- **データセット:** DocumentElement  
+ **セット**DocumentElement  
   
- **テーブル:** Element1  
+ **一覧**Element1  
   
 |ChildElement1|  
 |-------------------|  
@@ -52,9 +52,9 @@ ms.locfileid: "61879633"
   
 ## <a name="see-also"></a>関連項目
 
-- [XML からの DataSet リレーショナル構造の推論](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [XML からの DataSet の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [XML の DataSet スキーマ情報の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [XML からの DataSet リレーショナル構造の推論](inferring-dataset-relational-structure-from-xml.md)
+- [XML からの DataSet の読み込み](loading-a-dataset-from-xml.md)
+- [XML の DataSet スキーマ情報の読み込み](loading-dataset-schema-information-from-xml.md)
+- [DataSet での XML の使用](using-xml-in-a-dataset.md)
+- [DataSet、DataTable、および DataView](index.md)
+- [ADO.NET の概要](../ado-net-overview.md)

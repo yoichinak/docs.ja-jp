@@ -11,15 +11,15 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: 8374cdf6526061dfd463574887c2e98d25010910
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c027964d185d7f69c0a56a4386bedc2d8f9d2eac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582790"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912337"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit ステートメント (Visual Basic)
-ファイルでは、すべての変数の明示的な宣言を強制または変数の暗黙的な宣言を許可します。  
+ファイル内のすべての変数の明示的な宣言を強制的に実行するか、変数の暗黙的な宣言を許可します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,21 +29,21 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>指定項目  
  `On`  
- 省略可能です。 により、`Option Explicit`をチェックします。 場合`On`または`Off`が指定されていない、既定値は`On`します。  
+ 任意。 チェック`Option Explicit`を有効にします。 `On`また`On` はが指定されていない場合、既定値はになります。`Off`  
   
  `Off`  
- 省略可能です。 無効にします`Option Explicit`をチェックします。  
+ 任意。 チェック`Option Explicit`を無効にします。  
   
 ## <a name="remarks"></a>Remarks  
- ときに`Option Explicit On`または`Option Explicit`を使用してすべての変数を明示的に宣言する必要がありますが、ファイルに表示されます、`Dim`または`ReDim`ステートメント。 宣言されていない変数名を使用しようとすると、コンパイル時にエラーが発生します。 `Option Explicit Off`ステートメントは、変数の暗黙的な宣言を使用できます。  
+ また`Option Explicit On`は`Option Explicit`がファイルに含まれている場合は、 `Dim`または`ReDim`ステートメントを使用して、すべての変数を明示的に宣言する必要があります。 宣言されていない変数名を使用しようとすると、コンパイル時にエラーが発生します。 ステートメント`Option Explicit Off`では、変数を暗黙的に宣言できます。  
   
  使用した場合、`Option Explicit` ステートメントはファイル内で他のソース コード ステートメントよりも前に記述する必要があります。  
   
 > [!NOTE]
->  設定`Option Explicit`に`Off`は一般にないことをお勧めします。 変数名のスペルを 1 か所以上間違えると、プログラムの実行時に予期しない結果を招く可能性があります。  
+> 通常`Option Explicit` 、 `Off`をに設定することはお勧めできません。 変数名のスペルを 1 か所以上間違えると、プログラムの実行時に予期しない結果を招く可能性があります。  
   
-## <a name="when-an-option-explicit-statement-is-not-present"></a>ときに Option Explicit のステートメントが存在しません。  
- ソース コードが含まれていない場合、`Option Explicit`ステートメントでは、 **Option Explicit**の設定、 [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)使用されます。 コマンド ライン コンパイラを使用する場合、 [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)コンパイラ オプションを使用します。  
+## <a name="when-an-option-explicit-statement-is-not-present"></a>Option Explicit ステートメントが存在しない場合  
+ ソースコードに`Option Explicit`ステートメントが含まれていない場合は、[[コンパイル] ページ (プロジェクトデザイナー (Visual Basic))](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)の [**明示的な設定] オプション**が使用されます。 コマンドラインコンパイラを使用する場合は、 [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)コンパイラオプションを使用します。  
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>IDE で Option Explicit を設定するには  
   
@@ -51,16 +51,16 @@ Option Explicit { On | Off }
   
 2. **[コンパイル]** タブをクリックします。  
   
-3. 値を設定、 **Option Explicit**ボックス。  
+3. **[Option Explicit]** ボックスに値を設定します。  
   
- 新しいプロジェクトを作成するときに、 **Option Explicit**の設定、**コンパイル**タブに設定されている、 **Option Explicit**での設定、 **VBの既定値** ダイアログ ボックス。 アクセスする、**既定値は VB**  ダイアログ ボックスで、**ツール** メニューのをクリックして**オプション**。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、**[VISUAL BASIC の既定値]** をクリックします。 初期の既定の設定で**VB の既定値**は`On`します。  
+ 新しいプロジェクトを作成する場合、 **[コンパイル]** タブの **[明示的]** な設定 オプションは、VB の **[既定値]** ダイアログボックスの **[明示的]** 設定に設定されています。 VB の **[既定値]** ダイアログボックスにアクセスするには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、 **[VISUAL BASIC の既定値]** をクリックします。 既定では、 **VB**の既定の`On`設定はです。  
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>コマンドラインで Option Explicit を設定するには  
   
-- 含める、 [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)コンパイラ オプションで、 **vbc**コマンド。  
+- **Vbc.exe**コマンドに[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)コンパイラオプションを含めます。  
   
 ## <a name="example"></a>例  
- 次の例では、`Option Explicit`すべての変数の明示的な宣言を強制するステートメント。 宣言されていない変数を使用すると場合、コンパイル時にエラーが発生します。  
+ 次の例では`Option Explicit` 、ステートメントを使用して、すべての変数の明示的な宣言を強制的に実行します。 宣言されていない変数を使用しようとすると、コンパイル時にエラーが発生します。  
   
  [!code-vb[VbVbalrStatements#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#47)]  
   

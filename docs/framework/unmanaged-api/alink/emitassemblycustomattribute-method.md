@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7dfcc2db3f1f0d8646f903fedb1eb06b39928d00
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77d54f6c8f67dda5132518d1fbd579a91ce82071
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742119"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777442"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute メソッド
-アセンブリ レベルのカスタム属性を設定する呼び出し。  
+を呼び出して、アセンブリレベルのカスタム属性を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,31 +46,31 @@ HRESULT EmitAssemblyCustomAttribute(
  アセンブリの ID。  
   
  `FileToken`  
- 属性を定義するファイルです。 場合に NULL が`AssemblyID`バインドされていない netmodule では示されません。  
+ 属性をなするファイル。 がバインドされ`AssemblyID`ていない .netmodule を示していない場合は、NULL にすることができます。  
   
  `tkType`  
  カスタム属性の型。  
   
  `pCustomValue`  
- カスタム値のデータ。  
+ カスタム値データ。  
   
  `cbCustomValue`  
- カスタム値のデータの長さ。  
+ カスタム値データの長さ。  
   
  `bSecurity`  
- カスタム属性がアセンブリの署名に関連する場合は TRUE。  
+ カスタム属性がアセンブリ署名に関連付けられている場合は TRUE。  
   
  `bAllowMulti`  
- 複数の属性が出力する場合は TRUE。  
+ 複数の属性を出力する場合は TRUE。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

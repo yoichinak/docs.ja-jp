@@ -3,12 +3,12 @@ title: LINQ の使用
 description: このチュートリアルでは、LINQ を使用してシーケンスを生成し、LINQ クエリで使用するためのメソッドを作成し、先行評価と遅延評価を区別する方法を説明します。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 72bb7475fc6b18650e0870bf99c4b8ddbac3ec9f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609308"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926612"
 ---
 # <a name="working-with-linq"></a>LINQ の使用
 
@@ -30,7 +30,7 @@ ms.locfileid: "67609308"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。 インストールの手順については、[.NET Core](https://www.microsoft.com/net/core) のページを参照してください。 このアプリケーションは、Windows、Ubuntu Linux、OS X または Docker コンテナーで実行できます。 お好みのコード エディターをインストールしてください。 次の説明では、オープン ソースのクロス プラットフォーム エディターである [Visual Studio Code](https://code.visualstudio.com/) を使用しています。 しかし、他の使い慣れたツールを使用しても構いません。
+お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。 インストールの手順については、[.NET Core のダウンロード](https://dotnet.microsoft.com/download) ページを参照してください。 このアプリケーションは、Windows、Ubuntu Linux、OS X または Docker コンテナーで実行できます。 お好みのコード エディターをインストールしてください。 次の説明では、オープン ソースのクロス プラットフォーム エディターである [Visual Studio Code](https://code.visualstudio.com/) を使用しています。 しかし、他の使い慣れたツールを使用しても構いません。
 
 ## <a name="create-the-application"></a>アプリケーションを作成する
 
@@ -142,7 +142,7 @@ public static void Main(string[] args)
 
 ただし、標準ライブラリの中には利用できるシャッフル メソッドがないので、自分で作成する必要があります。 作成するシャッフル メソッドには、LINQ ベースのプログラムで使用できるさまざまなテクニックが例示されているので、このプロセスの各部分を手順を追って説明します。
 
-LINQ クエリから返される <xref:System.Collections.Generic.IEnumerable%601> を操作する方法に対していくつかの機能を追加するには、[拡張メソッド](../../csharp/programming-guide/classes-and-structs/extension-methods.md)と呼ばれる特別な種類のメソッドをいくつか記述する必要があります。 手短に言うと、拡張メソッドとは、既に存在する型に機能を追加する際に、元の型を変更せずに新しい機能を追加するという特別な目的を持つ*静的メソッド*です。
+LINQ クエリから返される <xref:System.Collections.Generic.IEnumerable%601> を操作する方法に対していくつかの機能を追加するには、[拡張メソッド](../programming-guide/classes-and-structs/extension-methods.md)と呼ばれる特別な種類のメソッドをいくつか記述する必要があります。 手短に言うと、拡張メソッドとは、既に存在する型に機能を追加する際に、元の型を変更せずに新しい機能を追加するという特別な目的を持つ*静的メソッド*です。
 
 `Extensions.cs` という名前の新しい *static* クラス ファイルをプログラムに追加した後、最初の拡張メソッドをビルドすることで、自分の拡張メソッドに新しいホームを与えます。
 
@@ -339,6 +339,7 @@ public static void Main(string[] args)
 ## <a name="conclusion"></a>まとめ
 
 このプロジェクトでは、以下を扱いました。
+
 - LINQ クエリを使用してデータを集計して、意味のあるシーケンスにする
 - 拡張メソッドを記述して、LINQ クエリに独自のカスタム機能を追加する
 - LINQ クエリによって速度の低下のようなパフォーマンスの問題が発生する可能性があるコード内の領域を見つける
@@ -347,6 +348,7 @@ public static void Main(string[] args)
 LINQ の他に、マジシャンがカードのトリックで使用するテクニックについて少し学びました。 マジシャンは、すべてのカードをデッキのどこに移動させるかを制御できるため、ファロー シャッフルを使用しています。 これがわかったからといって、種明かしをしてマジックを台無しにしないでください。
 
 LINQ の詳細については、以下を参照してください。
+
 - [統合言語クエリ (LINQ)](../programming-guide/concepts/linq/index.md)
   - [LINQ の概要](../programming-guide/concepts/linq/index.md)
   - [LINQ クエリの基本操作 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)

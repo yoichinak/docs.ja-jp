@@ -2,19 +2,21 @@
 title: <udpTransportSettings>
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: f5be9681dc69fd68dfdfa90f4eb305dc4aa4514b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb2ec84caa79f33e1e469592d0eca63d8f461dac
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788753"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854863"
 ---
-# <a name="udptransportsettings"></a>\<udpTransportSettings>
-この構成要素の UDP トランスポート設定を公開する[ \<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)します。  
+# <a name="udptransportsettings"></a>\<Udpannouncementendpoint >
+この構成要素は、 [ \<udpDiscoveryEndpoint >](udpdiscoveryendpoint.md)の UDP トランスポート設定を公開します。  
   
-\<system.ServiceModel >  
-\<standardEndpoints>  
-\<udpDiscoveryEndpoint>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<standardEndpoints >** ](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<udpDiscoveryEndpoint >** ](udpdiscoveryendpoint.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<updTransportSettings >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,7 +54,7 @@ ms.locfileid: "61788753"
 |maxReceivedMessageSize|バインディングで処理できるメッセージの最大サイズを指定する整数。<br /><br /> 既定値は 65507 です。|  
 |maxUnicastRetransmitCount|メッセージを (最初に送信した後に) 再送信する最大回数を指定する整数。  メッセージをユニキャスト アドレスに送信し、対応する RelatesTo ヘッダーの付いた応答メッセージを受信すると、再送信は早期に (再送信の回数が構成された回数に到達する前に) 終了することがあります。<br /><br /> 既定値は 1 です。|  
 |multicastInterfaceId|マルチホーム コンピューター上でマルチキャスト トラフィックを送受信するときに使用するネットワーク アダプターを一意に識別する文字列。 実行時には、トランスポートは、この属性値を使用してインターフェイスのインデックスを参照します。このインデックスは、その後、`IP_MULTICAST_IF` および `IPV6_MULTICAST_IF` のソケット オプションの設定に使用されます。  マルチキャスト グループに参加するときには、同じインターフェイス インデックスが使用されます (該当する場合)。<br /><br /> 既定値は `null` です。|  
-|socketReceiveBufferSize|基になる WinSock ソケットの受信バッファー サイズを指定する整数。<br /><br /> 受信チャネルのユーザーは、バインディング上のこの属性を使用して、データ受信時のシステム動作を制御できます。  たとえば、受信 WCF メッセージを最大しきい値で利用するアプリケーションがある場合、この属性値よりも大きい値を使用すると、アプリケーションが処理できるようになるまで待機している間、メッセージを WinSock バッファーにスタックできます。  同じ状況で低い値を使用すると、メッセージが破棄される原因となる場合があります。 この属性は、基になる WinSock を公開します。`SO_RCVBUF`ソケット オプション。この属性値が少なくとものサイズである必要があります`maxReceivedMessageSize`します。   小さい値に設定する、`maxReceivedMessageSize`ランタイム例外が発生します。<br /><br /> 既定値は 65536 です。|  
+|socketReceiveBufferSize|基になる WinSock ソケットの受信バッファー サイズを指定する整数。<br /><br /> 受信チャネルのユーザーは、バインディング上のこの属性を使用して、データ受信時のシステム動作を制御できます。  たとえば、受信 WCF メッセージを最大しきい値で利用するアプリケーションがある場合、この属性値よりも大きい値を使用すると、アプリケーションが処理できるようになるまで待機している間、メッセージを WinSock バッファーにスタックできます。  同じ状況で低い値を使用すると、メッセージが破棄される原因となる場合があります。 この属性は、基に`SO_RCVBUF`なる WinSock ソケットオプションを公開します。この属性値は、以上の`maxReceivedMessageSize`サイズである必要があります。   これをより`maxReceivedMessageSize`小さい値に設定すると、ランタイム例外が発生します。<br /><br /> 既定値は 65536 です。|  
 |timeToLive|マルチキャスト パケットが走査できるネットワーク セグメント ホップの数を指定する整数。  この属性は、`IP_MULTICAST_TTL` および `IP_TTL` ソケット オプションに関連付けられている機能を公開します。<br /><br /> 既定値は 1 です。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -62,7 +64,7 @@ ms.locfileid: "61788753"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<udpDiscoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|固定探索コントラクトと UDP トランスポート バインディングを持つ標準エンドポイント。|  
+|[\<udpDiscoveryEndpoint >](udpdiscoveryendpoint.md)|固定探索コントラクトと UDP トランスポート バインディングを持つ標準エンドポイント。|  
   
 ## <a name="see-also"></a>関連項目
 

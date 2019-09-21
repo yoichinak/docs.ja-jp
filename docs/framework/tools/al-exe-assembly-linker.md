@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 7f83c67354e96e1da3a30ab2e30fffe026c4646b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832774"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971348"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (アセンブリ リンカー)
 
 アセンブリ リンカーは、モジュールまたはリソース ファイルのいずれかである 1 つ以上のファイルから、アセンブリのマニフェストを含むファイルを生成します。 モジュールとは、アセンブリ マニフェストを含まない中間言語 (IL: Intermediate Language) ファイルのことです。
 
 > [!NOTE]
-> Visual Studio 2008 以降では、C# と Visual Basic のどちらのコンパイラを使用しても、Win32 マニフェストはアセンブリに自動的に埋め込まれます。 詳細については、「[/win32manifest (C# コンパイラ オプション)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md)」を参照してください。
+> Visual Studio 2008 以降では、C# と Visual Basic のどちらのコンパイラを使用しても、Win32 マニフェストはアセンブリに自動的に埋め込まれます。 詳細については、「[/win32manifest (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)」を参照してください。
 
 このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
 
@@ -41,7 +41,7 @@ al sources options
 | ------ | ----------- |
 |`file`[,`target`]|`file` (モジュール) の内容を `target` で名前が指定されたファイルにコピーします。 コピーが完了すると、*Al.exe* は `target` をコンパイルしてアセンブリを生成します。|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|`file` で指定したリソースをアセンブリ マニフェストを含むイメージに埋め込みます。*Al.exe* は、`file` の内容をポータブル実行可能 (PE) イメージにコピーします。<br /><br /> `name` パラメーターは、リソースの内部識別子です。 既定では、リソースはアセンブリでパブリックに指定されており、他のアセンブリから参照できます。 `private` を指定すると、そのリソースを他のアセンブリから参照できなくなります。<br /><br /> `file` が[リソース ファイル ジェネレーター (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) や開発環境などで作成された .NET Framework リソース ファイルである場合は、<xref:System.Resources> のメンバーを使用してそのファイルにアクセスできます。 詳細については、<xref:System.Resources.ResourceManager> を参照してください。 それ以外のすべてのリソースに対しては、`GetManifestResource` の <xref:System.Reflection.Assembly>* メソッドを使用して、実行時にリソースにアクセスします。<br /><br /> リソース ファイルだけが *Al.exe* に渡された場合は、出力ファイルはサテライト リソース アセンブリになります。|
-|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|リソース ファイルをアセンブリにリンクします。 `file` によって指定されたリソースがアセンブリの一部になります。ファイルはコピーされません。 `file` パラメーターには、任意のファイル形式を指定できます。 たとえば、`file` パラメーターとしてネイティブ DLL を指定できます。 このようにすると、ネイティブ DLL はアセンブリの一部になるので、グローバル アセンブリ キャッシュにインストールして、アセンブリ内のマネージド コードからアクセスできます。 **/linkresource** コンパイラ オプションを使用して、これを実行することもできます。 詳しくは、「[/linkresource (C# コンパイラ オプション)](~/docs/csharp/language-reference/compiler-options/linkresource-compiler-option.md)」をご覧ください。<br /><br /> `name` パラメーターは、リソースの内部識別子です。 `target` パラメーターは、*Al.exe* が `file` をコピーする対象のパスおよびファイル名を指定します *。* コピーが完了すると、*Al.exe* は `target` をコンパイルしてアセンブリを生成します。 既定では、リソースはアセンブリでパブリックに指定されており、他のアセンブリから参照できます。 `private` を指定すると、そのリソースを他のアセンブリから参照できなくなります。<br /><br /> `file` がリソース ファイル ジェネレーター (*Resgen.exe*) や開発環境などで作成された .NET Framework リソース ファイルである場合は、<xref:System.Resources> 名前空間のメンバーを使用してそのファイルにアクセスできます。 詳細については、<xref:System.Resources.ResourceManager> を参照してください。 それ以外のすべてのリソースに対しては、`GetManifestResource` クラスの <xref:System.Reflection.Assembly>* メソッドを使用して、実行時にリソースにアクセスします。<br /><br /> リソース ファイルだけが *Al.exe* に渡された場合は、出力ファイルはサテライト リソース アセンブリになります。|
+|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|リソース ファイルをアセンブリにリンクします。 `file` によって指定されたリソースがアセンブリの一部になります。ファイルはコピーされません。 `file` パラメーターには、任意のファイル形式を指定できます。 たとえば、`file` パラメーターとしてネイティブ DLL を指定できます。 このようにすると、ネイティブ DLL はアセンブリの一部になるので、グローバル アセンブリ キャッシュにインストールして、アセンブリ内のマネージド コードからアクセスできます。 **/linkresource** コンパイラ オプションを使用して、これを実行することもできます。 詳しくは、「[/linkresource (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)」をご覧ください。<br /><br /> `name` パラメーターは、リソースの内部識別子です。 `target` パラメーターは、*Al.exe* が `file` をコピーする対象のパスおよびファイル名を指定します *。* コピーが完了すると、*Al.exe* は `target` をコンパイルしてアセンブリを生成します。 既定では、リソースはアセンブリでパブリックに指定されており、他のアセンブリから参照できます。 `private` を指定すると、そのリソースを他のアセンブリから参照できなくなります。<br /><br /> `file` がリソース ファイル ジェネレーター (*Resgen.exe*) や開発環境などで作成された .NET Framework リソース ファイルである場合は、<xref:System.Resources> 名前空間のメンバーを使用してそのファイルにアクセスできます。 詳細については、<xref:System.Resources.ResourceManager> を参照してください。 それ以外のすべてのリソースに対しては、`GetManifestResource` クラスの <xref:System.Reflection.Assembly>* メソッドを使用して、実行時にリソースにアクセスします。<br /><br /> リソース ファイルだけが *Al.exe* に渡された場合は、出力ファイルはサテライト リソース アセンブリになります。|
 
 指定できる `options` を次に示します。 **/out** オプションは必ず指定する必要があります。
 
@@ -108,7 +108,7 @@ al sources options
 |al1015|メッセージ ファイル 'alinkui.dll' が見つかりません<br /><br /> *Al.exe* には *Alinkui.dll* が必要です。 このファイルがパス上にあるかどうかを確認してください。 必要な場合は、製品 CD から Alinkui.dll をコピーしてください。|
 |al1016|有効な入力ファイルが指定されませんでした<br /><br /> *Al.exe* には、アセンブリ情報を含んでいない 1 つ以上の入力ファイルを指定する必要があります。|
 |al1017|ターゲット ファイル名が指定されませんでした<br /><br /> ターゲット ファイル名の指定に必要な **/out** オプションが存在しませんでした。|
-|al1018|必要なファイル 'file' を読み込めませんでした<br /><br /> 特定の DLL ファイルを読み込めません。 Visual Studio または Windows Software Development Kit (SDK) を再インストールします。|
+|al1018|必要なファイル 'file' を読み込めませんでした<br /><br /> 特定の DLL ファイルを読み込めません。 Visual Studio または Windows SDK を再インストールしてください。|
 |al1019|アセンブリを作成中にメタデータが失敗しました — 理由<br /><br /> メッセージに示された原因により、アセンブリの生成が中断されました。 たとえば、 **/win32res** オプションで指定したファイルが見つからない場合に、このエラーが発生します。|
 |al1020|含まれているアセンブリ 'file' を無視します<br /><br /> 指定した入力ファイルにアセンブリが含まれています。 アセンブリを含むファイルを *Al.exe* 入力ファイルとして指定することはできません。|
 |al1021|'設定' : 今までの設定をオーバーライドしています<br /><br /> モジュールには、カスタム属性によって割り当てられた可能性のある特定の設定について値が指定されていましたが、*Al.exe* コマンド ライン オプションを使用して渡された値によって、この値がオーバーライドされました。|
@@ -178,5 +178,5 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 - [ツール](../../../docs/framework/tools/index.md)
 - [*Sn.exe* (厳密名ツール)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [*Gacutil.exe* (グローバル アセンブリ キャッシュ ツール)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
-- [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [アセンブリを使用したプログラミング](../../standard/assembly/program.md)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -10,65 +10,65 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: ee38caedc5d5a29d2221d6e5a6bf6cf74617bf8c
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 859dc75169e443d07361951692a428507886fa2e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859722"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947811"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>方法: 現在、印刷ジョブが印刷可能であるかどうかを検出する
-印刷キューは常に使用できません、1 日 24 時間です。 特定の時間帯で使用できないように設定可能な開始と終了時のプロパティがあります。 たとえば、この機能は、特定の部門午後 5 時以降後に排他的に使用するプリンターを予約するは使用できます。 その部門は、別のキュー サービスの他の部門よりプリンターを使用して、必要があります。 他の部署のキューは午後 5 時以降に設定されます、する部門用のキューに設定できるときに常に利用できます。  
+印刷キューは、1日24時間利用できるとは限りません。 開始時刻と終了時刻のプロパティがあり、特定の時間帯に使用できないように設定できます。 この機能を使用すると、たとえば、午後5時以降に特定の部門を排他的に使用するようにプリンターを予約することができます。 この部門では、他の部署が使用するものとは異なるキューを使用します。 他の部門のキューは、午後5時から使用不可になるように設定されますが、優先される部署のキューは常に使用可能になるように設定できます。  
   
- さらに、印刷ジョブ自体は、指定した期間内のみで印刷できるように設定できます。  
+ さらに、印刷ジョブ自体は、指定された期間内にのみ印刷できるように設定できます。  
   
- <xref:System.Printing.PrintQueue>と<xref:System.Printing.PrintSystemJobInfo>Api の Microsoft .NET Framework で公開されるクラスがリモートで、特定の印刷ジョブは、現在のところ、特定のキューに印刷できるかどうかを確認するための手段を提供します。  
+ Microsoft .NET <xref:System.Printing.PrintQueue> Framework <xref:System.Printing.PrintSystemJobInfo>の api で公開されているクラスとクラスは、特定の印刷ジョブを現在の時刻に特定のキューに出力できるかどうかをリモートで確認する手段を提供します。  
   
 ## <a name="example"></a>例  
- 次の例では、印刷ジョブに関する問題を診断できるサンプルを示します。  
+ 次の例は、印刷ジョブに関する問題を診断できるサンプルです。  
   
- この種類の関数の 2 つの主要な手順は次があります。  
+ この種の関数には、次の2つの主要な手順があります。  
   
-1. 読み取り、<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>と<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>のプロパティ、<xref:System.Printing.PrintQueue>現在の時刻がそれらの間がかどうかを判断します。  
+1. のプロパティと<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>プロパティを読み取って、現在の時刻が両者の間にあるかどうかを確認します。<xref:System.Printing.PrintQueue> <xref:System.Printing.PrintQueue.StartTimeOfDay%2A>  
   
-2. 読み取り、<xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A>と<xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A>のプロパティ、<xref:System.Printing.PrintSystemJobInfo>現在の時刻がそれらの間がかどうかを判断します。  
+2. のプロパティと<xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A>プロパティを読み取って、現在の時刻が両者の間にあるかどうかを確認します。<xref:System.Printing.PrintSystemJobInfo> <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A>  
   
- ただしこれらのプロパティがないという事実から<xref:System.DateTime>オブジェクト。 これらのプロパティは<xref:System.Int32>午前 0 時以降の分単位の数として 1 日の時間を表すオブジェクト。 さらに、this は午前 0 時では、現在のタイム ゾーンが午前 0 時 UTC (世界協定時刻) です。  
+ ただし、これらのプロパティがオブジェクトではない<xref:System.DateTime>という事実から、複雑な問題が発生します。 代わりに、午前<xref:System.Int32> 0 時からの時間を表すオブジェクトです。 さらに、現在のタイムゾーンでは午前0時ではなく、UTC (世界協定時刻) になります。  
   
- 最初のコード例は、静的メソッドを表示します。 **ReportQueueAndJobAvailability**、渡された、<xref:System.Printing.PrintSystemJobInfo>ジョブが現在の時刻に印刷できるかどうかを判断するヘルパー メソッドを呼び出すと、そうでない場合に印刷できる場合。 注意を<xref:System.Printing.PrintQueue>は、メソッドに渡されません。 これは、ため、<xref:System.Printing.PrintSystemJobInfo>でキューへの参照が含まれています、<xref:System.Printing.PrintSystemJobInfo.HostingPrintQueue%2A>プロパティ。  
+ 1つ目のコード例では、に渡された静的なメソッド**reportqueueandjobavailability**を示しています。このメソッドは、 <xref:System.Printing.PrintSystemJobInfo>ジョブを現在の時刻に印刷できるかどうかを判断するために、また、印刷可能な場合にはそのジョブを印刷できるかどうかを判断するためにヘルパーメソッドを <xref:System.Printing.PrintQueue>がメソッドに渡されないことに注意してください。 これは、に<xref:System.Printing.PrintSystemJobInfo> <xref:System.Printing.PrintSystemJobInfo.HostingPrintQueue%2A>プロパティのキューへの参照が含まれているためです。  
   
- 下位の方法には、オーバー ロードされた**ReportAvailabilityAtThisTime**いずれかのメソッド、<xref:System.Printing.PrintQueue>または<xref:System.Printing.PrintSystemJobInfo>をパラメーターとして。 **また**します。 以下は、これらのメソッドのすべてについて説明します。  
+ 下位メソッドに<xref:System.Printing.PrintQueue>は、パラメーターとしてまたはを<xref:System.Printing.PrintSystemJobInfo>受け取ることができる、オーバーロードされた**ReportAvailabilityAtThisTime**メソッドが含まれています。 TimeConverter もあります。 **ConvertToLocalHumanReadableTime**です。 これらのすべての方法については、以下で説明します。  
   
- **ReportQueueAndJobAvailability**かどうか、キューまたは印刷ジョブが使用可能なこの時点で確認するメソッドを開始します。 それらのいずれかが使用可能な場合は、それから、かどうかを使用できないキュー。 利用できないこのファクト テーブルとすると、キューが使用可能になるもう一度時間、メソッドが報告します。 ジョブを確認し、次回を報告が利用できない場合にまたがる場合に印刷できる場合。 最後に、ジョブが印刷できる最も早い時刻を報告します。 これは、次の 2 倍のそれ以降。  
+ **Reportqueueandjobavailability**メソッドは、キューまたは印刷ジョブが現時点で使用できないかどうかを確認することから始まります。 これらのいずれかが使用できない場合は、キューが使用できないかどうかを確認します。 使用できない場合は、メソッドによって、このファクトと、キューが再び使用可能になるまでの時間が報告されます。 次にジョブを確認し、使用できない場合は、次に印刷できる時間帯を報告します。 最後に、このメソッドは、ジョブが印刷できる最も早い時刻を報告します。 これは、次の2回の後に発生します。  
   
-- 印刷キューが次に利用できる時刻。  
+- 印刷キューが次に使用可能になる時刻。  
   
-- 印刷ジョブが次に利用可能な時間です。  
+- 印刷ジョブが次に使用可能になる時刻。  
   
- 、1 日の時間を報告するときに、<xref:System.DateTime.ToShortTimeString%2A>年、月、および日の出力からこのメソッドを抑制しますので、メソッドが呼び出されます。 特定の年、月、または日に印刷キューまたは印刷ジョブのいずれかの可用性を制限することはできません。  
+ 時間をレポートする場合、 <xref:System.DateTime.ToShortTimeString%2A>このメソッドは、出力からの年、月、および日を抑制するため、メソッドも呼び出されます。 印刷キューまたは印刷ジョブの可用性を、特定の年、月、または日に制限することはできません。  
   
  [!code-cpp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#reportqueueandjobavailability)]
  [!code-csharp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#reportqueueandjobavailability)]
  [!code-vb[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#reportqueueandjobavailability)]  
   
- 2 つのオーバー ロード、 **ReportAvailabilityAtThisTime**メソッドにのみ、それらに渡された型を除いて同一ですが、<xref:System.Printing.PrintQueue>バージョンを次に示します。  
+ **ReportAvailabilityAtThisTime**メソッドの2つのオーバーロードは、渡される型を除いて同じです。そのため<xref:System.Printing.PrintQueue> 、次のバージョンのみが表示されます。  
   
 > [!NOTE]
->  メソッドの型を除いて同一ですが、サンプルはジェネリック メソッドを作成していない理由の質問を発生させます**ReportAvailabilityAtThisTime\<T >** します。 理由は、このようなメソッドを持つクラスに制限する必要がある、**に実行**と**UntilTimeOfDay**メソッドを呼び出すと、プロパティがジェネリック メソッドのみに制限できる、1 つのクラスと両方に共通する唯一のクラス<xref:System.Printing.PrintQueue>と<xref:System.Printing.PrintSystemJobInfo>ツリーは、継承の<xref:System.Printing.PrintSystemObject>がこのようなプロパティがありません。  
+> メソッドが同じであるという事実は、型を除いて、このサンプルではジェネリックメソッド **\<ReportAvailabilityAtThisTime T >** が作成されないという問題が発生します。 その理由は、このようなメソッドは、メソッドが呼び出す**starttimeofday**プロパティと1対1の**timeofday**プロパティを持つクラスに制限する必要がありますが、ジェネリックメソッドは、単一のクラスにのみ制限でき、両方に共通する唯一のクラスに限定されます。継承ツリーのと<xref:System.Printing.PrintSystemJobInfo>には<xref:System.Printing.PrintSystemObject> 、そのようなプロパティはありません。 <xref:System.Printing.PrintQueue>  
   
- **ReportAvailabilityAtThisTime**メソッド (次のコード例で表示) の初期化ではまず、 <xref:System.Boolean> sentinel 変数`true`します。 リセットされます`false`キューが使用できない場合は、します。  
+ **ReportAvailabilityAtThisTime**メソッド (下のコード例を参照) は、 <xref:System.Boolean> sentinel 変数をに初期化する`true`ことから始まります。 キューが使用できない`false`場合は、にリセットされます。  
   
- メソッドを次に、かどうかをチェック、開始し、"until"時間は同じです。 メソッドが返されには、キューが使用可能な常にいる場合は、`true`します。  
+ 次に、メソッドは、start と "until" の時刻が同じかどうかを確認します。 これらの値がの場合、キューは常に使用可能な`true`ので、メソッドはを返します。  
   
- メソッドが静的なを使用して、キューが使用できない場合、すべての時間、<xref:System.DateTime.UtcNow%2A>として現在の時刻を取得するプロパティを<xref:System.DateTime>オブジェクト。 (ために、現地時刻は必要ありません、<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>と<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>プロパティが UTC 時刻では自体です)。  
+ キューが常に利用できない場合、メソッドは静的<xref:System.DateTime.UtcNow%2A>プロパティを使用し<xref:System.DateTime>て現在の時刻をオブジェクトとして取得します。 (プロパティ<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>と<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>プロパティは UTC 時刻であるため、現地時間は必要ありません)。  
   
- ただし、これら 2 つのプロパティは<xref:System.DateTime>オブジェクト。 <xref:System.Int32>分後に UTC 深夜の数と時間を表す。 変換することがしなくて済むよう、<xref:System.DateTime>分の深夜の後にオブジェクト。 インストールが完了したら、メソッドは"now"かどうかを確認するキューの開始の間、および"until"回、false の場合は"now"sentinel が 2 つの時刻の間ではないと、sentinel を返すセットは、単純にチェックします。  
+ ただし、これら2つのプロパティ<xref:System.DateTime>はオブジェクトではありません。 これらの<xref:System.Int32>値は、時刻を UTC から午前0時までの分数として表現しています。 そのため、 <xref:System.DateTime>オブジェクトを午前0時から分単位に変換する必要があります。 この処理が完了すると、メソッドは単に "now" がキューの先頭と "until" の間にあるかどうかを確認し、"now" が2回の間にない場合は sentinel を false に設定し、sentinel を返します。  
   
  [!code-cpp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#printqueuestartuntil)]
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- **また**メソッド (次のコード例で表示) では、説明が簡単なために、Microsoft .NET Framework で導入されたすべてのメソッドは使用しません。 メソッドには 2 段階の変換タスク: これを現地時刻に変換しなければならないとその分の後に、午前 0 時を表す整数値を取得し、人間が判読できる時間に変換する必要があります。 これを行う、最初に作成、 <xref:System.DateTime> UTC と、しを使用して午前 0 時に設定されているオブジェクト、<xref:System.DateTime.AddMinutes%2A>メソッドに渡された分数を加算するメソッド。 返されます。 新しい<xref:System.DateTime>メソッドに渡された元の時刻を表現します。 <xref:System.DateTime.ToLocalTime%2A>メソッドからこの現地時刻に変換します。  
+ **TimeConverter**メソッド (下記のコード例を参照) は Microsoft .NET Framework で導入されたメソッドを使用しないため、説明は簡単です。 メソッドには、2回の変換タスクがあります。これは、午前0時から午前0時を表す整数値を取得し、それを人間が判読できる時刻に変換し、現地時刻に変換する必要があります。 これを実現するには、 <xref:System.DateTime>最初に UTC の午前0時に設定された<xref:System.DateTime.AddMinutes%2A>オブジェクトを作成し、メソッドを使用して、メソッドに渡された分を追加します。 これは、メソッド<xref:System.DateTime>に渡された元の時刻を表す新しいを返します。 次<xref:System.DateTime.ToLocalTime%2A>に、メソッドはこれを現地時刻に変換します。  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]

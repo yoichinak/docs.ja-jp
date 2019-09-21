@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7cc4ecf710090b2cbe55657a85cb081b2fe33c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5187c20aaa4bd37401db3990e0f8a96a61e75418
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757899"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796378"
 ---
 # <a name="iinstallreferenceitem-interface"></a>IInstallReferenceItem インターフェイス
-グローバル アセンブリ キャッシュにインストールされている項目を表します。  
+グローバルアセンブリキャッシュにインストールされている項目を表します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetReference メソッド](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|ポインターを取得、`FUSION_INSTALL_REFERENCE`構造体によって表される`IInstallReferenceItem`します。|  
+|[GetReference メソッド](iinstallreferenceitem-getreference-method.md)|`FUSION_INSTALL_REFERENCE` この`IInstallReferenceItem`によって表される構造体へのポインターを取得します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [FUSION_INSTALL_REFERENCE 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+- [Fusion インターフェイス](fusion-interfaces.md)
+- [FUSION_INSTALL_REFERENCE 構造体](fusion-install-reference-structure.md)

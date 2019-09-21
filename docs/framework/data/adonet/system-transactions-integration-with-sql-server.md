@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 075eea42c65a822fc46ca14f820599567c35d231
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880593"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791365"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server と System.Transactions の統合
-.NET Framework version 2.0 に導入された新しいトランザクション フレームワークが経由でアクセスできる、<xref:System.Transactions>名前空間。 このフレームワークには、ADO.NET を含む、.NET Framework に完全に統合されている方法でトランザクションが公開されます。  
+.NET Framework バージョン2.0 では、 <xref:System.Transactions>名前空間を使用してアクセスできるトランザクションフレームワークが導入されました。 このフレームワークは、ADO.NET など、.NET Framework に完全に統合された方法でトランザクションを公開します。  
   
- プログラミングに関する機能強化に加えて<xref:System.Transactions>と ADO.NET は、トランザクションを使用する場合は、最適化を調整する共同作業できます。 昇格可能なトランザクションとは、必要に応じて完全な分散トランザクションに自動的に昇格する、軽量の (ローカル) トランザクションです。  
+ プログラミングの機能強化に加えて<xref:System.Transactions> 、ADO.NET を連携させることで、トランザクションを操作するときに最適化を調整できます。 昇格可能なトランザクションとは、必要に応じて完全な分散トランザクションに自動的に昇格する、軽量の (ローカル) トランザクションです。  
   
- ADO.NET 2.0 以降で<xref:System.Data.SqlClient>SQL Server を使用する場合は、昇格可能なトランザクションをサポートしています。 昇格可能なトランザクションは、必要な場合以外、分散トランザクションのオーバーヘッドの増加を引き起こすことはありません。 昇格可能なトランザクションは、自動、開発者による介入は必要ありません。  
+ ADO.NET 2.0 以降では<xref:System.Data.SqlClient> 、SQL Server を操作するときに、昇格可能なトランザクションをサポートしています。 昇格可能なトランザクションは、必要な場合以外、分散トランザクションのオーバーヘッドの増加を引き起こすことはありません。 昇格可能なトランザクションは自動的に行われ、開発者の介入は必要ありません。  
   
- 昇格可能なトランザクションは、.NET Framework Data Provider for SQL Server に使用する場合にのみ使用できます (`SqlClient`) と SQL Server。  
+ 昇格可能なトランザクションは、SQL Server で SQL Server (`SqlClient`) の .NET Framework Data Provider を使用する場合にのみ使用できます。  
   
 ## <a name="creating-promotable-transactions"></a>昇格可能なトランザクションの作成  
- .NET Framework Provider for SQL Server では、.NET Framework のクラスによって処理されますが、昇格可能なトランザクションのサポート<xref:System.Transactions>名前空間。 昇格可能なトランザクションでは、必要が生じるまで分散トランザクションの作成を延期することで、分散トランザクションが最適化されます。 必要なリソース マネージャーが 1 つだけである場合は、分散トランザクションは発生しません。  
+ SQL Server の .NET Framework プロバイダーは、昇格可能なトランザクションをサポートします。これは、.NET Framework <xref:System.Transactions>名前空間のクラスを通じて処理されます。 昇格可能なトランザクションでは、必要が生じるまで分散トランザクションの作成を延期することで、分散トランザクションが最適化されます。 必要なリソース マネージャーが 1 つだけである場合は、分散トランザクションは発生しません。  
   
 > [!NOTE]
->  部分信頼のシナリオで分散トランザクションに昇格するには、 <xref:System.Transactions.DistributedTransactionPermission> が必要です。  
+> 部分信頼のシナリオで分散トランザクションに昇格するには、 <xref:System.Transactions.DistributedTransactionPermission> が必要です。  
   
 ## <a name="promotable-transaction-scenarios"></a>昇格可能なトランザクションのシナリオ  
- 分散トランザクションは一般的にシステム リソースを大量に消費するため、トランザクションでアクセスされるすべてのリソース マネージャーを統合する、Microsoft Distributed Transaction Coordinator (MS DTC) で管理されます。 昇格可能なトランザクションは特殊な形式の<xref:System.Transactions>トランザクションに単純な SQL Server トランザクションの作業を効率よく委任します。 <xref:System.Transactions>、 <xref:System.Data.SqlClient>、および SQL Server は、必要に応じて完全な分散トランザクションに昇格、トランザクションの処理に必要な作業を調整します。  
+ 分散トランザクションは一般的にシステム リソースを大量に消費するため、トランザクションでアクセスされるすべてのリソース マネージャーを統合する、Microsoft Distributed Transaction Coordinator (MS DTC) で管理されます。 昇格可能なトランザクションは特殊な形式<xref:System.Transactions>のトランザクションであり、効率的に作業を単純な SQL Server トランザクションに委任します。 <xref:System.Transactions>、 <xref:System.Data.SqlClient>、および SQL Server トランザクションの処理に関連する作業を調整し、必要に応じて完全な分散トランザクションに昇格させます。  
   
  昇格可能なトランザクションを使用する利点は、アクティブな <xref:System.Transactions.TransactionScope> トランザクションによって接続が開かれ、その他の接続が開いていない場合に、完全な分散トランザクションによるオーバーヘッドが生じることなく、トランザクションが軽量なトランザクションとしてコミットされることです。  
   
@@ -52,10 +52,10 @@ ms.locfileid: "65880593"
  <xref:System.Transactions.TransactionScope>内で例外が発生した場合、そのトランザクションは矛盾しているとしてマークされ、破棄されます。 トランザクションは、 <xref:System.Transactions.TransactionScope> が破棄されるとロールバックされます。 例外が発生しない場合は、参加しているトランザクションがコミットされます。  
   
 > [!NOTE]
->  既定では、 `TransactionScope` クラスは、 <xref:System.Transactions.Transaction.IsolationLevel%2A> が `Serializable` であるトランザクションを作成します。 使用しているアプリケーションによっては、アプリケーション内での競合を回避するために、分離レベルを低下させる必要がある場合があります。  
+> 既定では、 `TransactionScope` クラスは、 <xref:System.Transactions.Transaction.IsolationLevel%2A> が `Serializable` であるトランザクションを作成します。 使用しているアプリケーションによっては、アプリケーション内での競合を回避するために、分離レベルを低下させる必要がある場合があります。  
   
 > [!NOTE]
->  データベース リソースを大量に消費するため、分散トランザクション内で実行するのは更新、挿入、削除だけにすることをお勧めします。 Select ステートメントを使用すると、データベース リソースが不必要にロックされることがあり、シナリオによっては選択にトランザクションを使用する必要がある場合があります。 処理済みのその他のリソース マネージャーに関係する場合以外、データベース以外の処理はトランザクションのスコープ外で実行する必要があります。 トランザクションのスコープ内で例外が発生するとトランザクションのコミットが防止されますが、 <xref:System.Transactions.TransactionScope> クラスでは、作成したコードによってトランザクションのスコープ外で行われた変更はロールバックされません。 トランザクションがロールバックされたときに何らかの動作を行うようにする場合は、 <xref:System.Transactions.IEnlistmentNotification> インターフェイスを独自に実装し、トランザクションに明示的に参加する必要があります。  
+> データベース リソースを大量に消費するため、分散トランザクション内で実行するのは更新、挿入、削除だけにすることをお勧めします。 Select ステートメントを使用すると、データベース リソースが不必要にロックされることがあり、シナリオによっては選択にトランザクションを使用する必要がある場合があります。 処理済みのその他のリソース マネージャーに関係する場合以外、データベース以外の処理はトランザクションのスコープ外で実行する必要があります。 トランザクションのスコープ内で例外が発生するとトランザクションのコミットが防止されますが、 <xref:System.Transactions.TransactionScope> クラスでは、作成したコードによってトランザクションのスコープ外で行われた変更はロールバックされません。 トランザクションがロールバックされたときに何らかの動作を行うようにする場合は、 <xref:System.Transactions.IEnlistmentNotification> インターフェイスを独自に実装し、トランザクションに明示的に参加する必要があります。  
   
 ## <a name="example"></a>例  
  <xref:System.Transactions> を使用する場合は、System.Transactions.dll への参照が必要になります。  
@@ -230,5 +230,5 @@ End Function
   
 ## <a name="see-also"></a>関連項目
 
-- [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [トランザクションと同時実行](transactions-and-concurrency.md)
+- [ADO.NET の概要](ado-net-overview.md)

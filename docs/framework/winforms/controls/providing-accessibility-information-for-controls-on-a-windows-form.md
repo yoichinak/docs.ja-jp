@@ -5,13 +5,17 @@ helpviewer_keywords:
 - Windows Forms controls, accessibility
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
+dev_langs:
+- csharp
+- vb
+- cpp
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: 3067c90978e6ebd680d10c1c4f9db131f19c9e44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 791944bd9e8f5520a571e6fb415d69022aa0bead
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614753"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991714"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Windows フォーム上のコントロールのユーザー補助情報の提供
 ユーザー補助機能は専用のプログラムおよびデバイスで、障碍を持つユーザーがコンピューターをより効果的に使用するよう助けます。 たとえば、視覚障碍者のためのスクリーン リーダーや、マウスまたはキーボードではなく音声コマンド入力を利用するユーザーのための音声入力ユーティリティがあります。 これらのユーザー補助機能は、Windows フォーム コントロールによって公開されているアクセシビリティのプロパティと連携します。 これらのプロパティとは:  
@@ -32,16 +36,17 @@ ms.locfileid: "64614753"
 ## <a name="accessibledefaultactiondescription-property"></a>AccessibleDefaultActionDescription プロパティ  
  この文字列は、コントロールの操作について説明します。 [プロパティ] ウィンドウには表示されず、コードでのみ設定できます。 次の例では、このプロパティをボタン コントロールに設定します。  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleDefaultActionDescription = _  
    "Closes the application."  
-  
-// C#  
+``` 
+
+```csharp  
 Button1.AccessibleDefaultActionDescription =   
    "Closes the application.";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleDefaultActionDescription =  
    "Closes the application.";  
 ```  
@@ -49,42 +54,45 @@ button1->AccessibleDefaultActionDescription =
 ## <a name="accessibledescription-property"></a>AccessibleDescription プロパティ  
  この文字列はコントロールについて説明します。 これは、[プロパティ] ウィンドウで、または次のようにコードで設定できます。  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleDescription = "A button with text 'Exit'."  
-  
-// C#  
+```
+
+```csharp  
 Button1.AccessibleDescription = "A button with text 'Exit'";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleDescription = "A button with text 'Exit'";  
 ```  
   
 ## <a name="accessiblename-property"></a>AccessibleName プロパティ  
  これは、ユーザー補助機能に報告されたコントロールの名前です。 これは、[プロパティ] ウィンドウで、または次のようにコードで設定できます。  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleName = "Order"  
-  
-// C#  
+```
+
+```csharp  
 Button1.AccessibleName = "Order";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleName = "Order";  
 ```  
   
 ## <a name="accessiblerole-property"></a>AccessibleRole プロパティ  
  このプロパティには <xref:System.Windows.Forms.AccessibleRole> 列挙型が含まれており、コントロールのユーザー インターフェイスの役割について説明します。 新しいコントロールは値が `Default`に設定されています。 つまり、 **ボタン** コントロールは既定値では **ボタン**として機能します。 コントロールに別の役割がある場合、このプロパティをリセットできます。 たとえば、 **PictureBox** コントロールを **Chart**として使用する場合、 **PictureBox**ではなく **Chart**としてユーザー補助機能が役割を報告するようにできます。 また、開発したカスタム コントロールにこのプロパティを指定することもできます。 このプロパティは、[プロパティ] ウィンドウで、または次のようにコードで設定できます。  
   
-```  
-' Visual Basic  
+```vb 
 PictureBox1.AccessibleRole = AccessibleRole.Chart  
-  
-// C#  
+```
+
+```csharp  
 PictureBox1.AccessibleRole = AccessibleRole.Chart;  
-  
-// C++  
+```
+
+```cpp  
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   

@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 7c0173879c692588cc2e15f0b14a5687bb0404fb
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4ff9bb537a31e28dbd4b878c1bc04c96262f85ac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300672"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927457"
 ---
-# <a name="remove-element-for-configsections"></a>\<削除 > 要素の\<configSections >
+# <a name="remove-element-for-configsections"></a>\<configsections の > \<要素を削除し >
 
 定義済みのセクション、またはセクション グループを削除します。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> の削除**
 
 ## <a name="syntax"></a>構文
 
@@ -34,13 +34,13 @@ ms.locfileid: "66300672"
 
 |           | 説明 |
 | --------- | ----------- |
-| **name**  | 必須の属性です。<br><br>セクションまたは削除するセクション グループの名前を指定します。 |
+| **name**  | 必須の属性です。<br><br>削除するセクションまたはセクショングループの名前を指定します。 |
 
 ## <a name="parent-element"></a>親要素
 
 |     | 説明 |
 | --- | ----------- |
-| [ **\<configSections >** 要素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 構成セクションと名前空間宣言が含まれています。 |
+| [要素 > configsections  **\<** ](configsections-element-for-configuration.md) | 構成セクションと名前空間の宣言が含まれています。 |
 
 ## <a name="child-elements"></a>子要素
 
@@ -48,13 +48,13 @@ ms.locfileid: "66300672"
 
 ## <a name="remarks"></a>Remarks
 
-使用することができます、 **\<削除 >** セクションおよびセクション グループを構成ファイル階層内の上位レベルで定義されているアプリケーションから削除する要素。
+[  **\<> の削除**] 要素を使用して、構成ファイル階層の上位レベルで定義されたセクションとセクショングループをアプリケーションから削除できます。
 
 ## <a name="example"></a>例
 
-次の例は、使用する方法を示します、 **\<削除 >** マシン構成ファイルで定義したセクションを削除するアプリケーション構成ファイル内の要素。
+次の例では、アプリケーション構成ファイルで **\<remove >** 要素を使用して、マシン構成ファイルで以前に定義したセクションを削除する方法を示します。
 
-マシン構成ファイルのコードは、次のセクションを宣言します **\<sampleSection >** :
+次のマシン構成ファイルのコードでは、セクション **\<sampleSection >** が宣言されています。
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ ms.locfileid: "66300672"
 </configuration>
 ```
 
-アプリケーション構成ファイルのコードは、次の削除、  **\<sampleSection >** セクション。 削除した後、アプリケーションが設定を取得できません **\<sampleSection >** します。
+次のアプリケーション構成ファイルのコードでは、  **\<sampleSection >** セクションが削除されます。 削除後、アプリケーションは **\<sampleSection >** の設定を取得できません。
 
 ```xml
 <!-- Application configuration file -->
@@ -82,8 +82,8 @@ ms.locfileid: "66300672"
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーション構成ファイル、マシン構成ファイルで使用できます (*Machine.config*)、および*Web.config*アプリケーション ディレクトリ レベルではないファイル。
+この要素は、アプリケーション構成ファイル、コンピューター構成ファイル (machine.config)、およびアプリケーションディレクトリレベルではない web.config ファイルで使用できます。
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイルスキーマ](index.md)

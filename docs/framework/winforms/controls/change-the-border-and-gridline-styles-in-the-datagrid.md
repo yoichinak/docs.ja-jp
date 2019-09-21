@@ -11,36 +11,36 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-ms.openlocfilehash: 7e68bb2f6a3bff0a0a5ff7f8011c2642c141eaf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebeca5f933eac4da2bf3d4f300866fd2ff52b32a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593441"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917672"
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールの境界線とグリッド線のスタイルを変更する
-<xref:System.Windows.Forms.DataGridView>コントロール、コントロールの境界線と、ユーザー エクスペリエンスを向上させるためにグリッド線の外観をカスタマイズすることができます。 グリッド線の色とだけでなく、コントロール内のセルの境界線スタイル コントロールの境界線のスタイルを変更することができます。 通常のセル、行のヘッダー セルと列ヘッダー セルの別のセルの境界線スタイルを適用することもできます。  
+<xref:System.Windows.Forms.DataGridView>コントロールを使用すると、コントロールの境界線とグリッド線の外観をカスタマイズして、ユーザーエクスペリエンスを向上させることができます。 コントロール内のセルの境界線スタイルに加えて、グリッド線の色とコントロールの境界線スタイルを変更できます。 また、通常のセル、行ヘッダーセル、および列ヘッダーセルに対して異なるセル境界線スタイルを適用することもできます。  
   
 > [!NOTE]
->  グリッド線の色でのみ使用、 <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>、<xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>と<xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical>の値、<xref:System.Windows.Forms.DataGridViewCellBorderStyle>列挙と<xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single>の値、<xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>列挙体。 これらの列挙体の他の値は、オペレーティング システムによって指定された色を使用します。 さらに、visual スタイルが有効な場合に、Windows XP およびを通じて Windows Server 2003 ファミリ、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>メソッド、<xref:System.Windows.Forms.DataGridView.GridColor%2A>プロパティの値は使用されません。  
+> グリッド線の色は<xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>、 <xref:System.Windows.Forms.DataGridViewCellBorderStyle>列挙体<xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal> <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>の、、の各値と列挙体の値でのみ使用されます。<xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> これらの列挙値の他の値は、オペレーティングシステムによって指定された色を使用します。 さらに、windows XP と windows Server 2003 ファミリ<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>で visual スタイルがメソッド<xref:System.Windows.Forms.DataGridView.GridColor%2A>を使用して有効になっている場合、プロパティ値は使用されません。  
   
-### <a name="to-change-the-gridline-color-programmatically"></a>プログラムで枠線の色を変更するには  
+### <a name="to-change-the-gridline-color-programmatically"></a>プログラムによってグリッド線の色を変更するには  
   
 - <xref:System.Windows.Forms.DataGridView.GridColor%2A> プロパティを設定します。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#031)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#031)]  
   
-### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>全体の DataGridView コントロールの境界線スタイルをプログラムで変更するには  
+### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>DataGridView コントロール全体の境界線スタイルをプログラムで変更するには  
   
 - <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> プロパティを <xref:System.Windows.Forms.BorderStyle> 列挙値のいずれかに設定します。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#032](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#032)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#032](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#032)]  
   
-### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>DataGridView セルの境界線スタイルをプログラムで変更するには  
+### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>DataGridView セルの罫線のスタイルをプログラムで変更するには  
   
-- 設定、 <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>、 <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>、および<xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A>プロパティ。  
+- 、 <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A> 、<xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>およびの各プロパティを<xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A>設定します。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#033)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#033)]  

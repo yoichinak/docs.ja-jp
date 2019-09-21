@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73f786c8f1080d0046889958e8b3bd3165870569
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 817d48e15f3a1d370e1953ca9c9aa8e10baa7f29
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187453"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916027"
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML 型サポートの実装に関するメモ
 このトピックでは、認識しておく必要があるいくつかの実装上の詳細について説明します。  
   
 ## <a name="list-mappings"></a>リストのマッピング  
- <xref:System.Collections.IList>、<xref:System.Collections.ICollection>、<xref:System.Collections.IEnumerable>、**Type[]**、<xref:System.String> 型は、XML スキーマ定義言語 (XSD) のリスト型を表現するために使用されます。  
+ <xref:System.Collections.IList>、<xref:System.Collections.ICollection>、<xref:System.Collections.IEnumerable>、**Type[]** 、<xref:System.String> 型は、XML スキーマ定義言語 (XSD) のリスト型を表現するために使用されます。  
   
 ## <a name="union-mappings"></a>ユニオンのマッピング  
- 共用体型は <xref:System.Xml.Schema.XmlAtomicValue> 型または <xref:System.String> 型を使用して表現されます。 したがって、変換前の型または変換後の型は常に <xref:System.String> または <xref:System.Xml.Schema.XmlAtomicValue> のどちらかである必要があります。  
+ ユニオン型は <xref:System.Xml.Schema.XmlAtomicValue> 型または <xref:System.String> 型を使用して表現されます。 したがって、変換前の型または変換後の型は常に <xref:System.String> または <xref:System.Xml.Schema.XmlAtomicValue> のどちらかである必要があります。  
   
- <xref:System.Xml.Schema.XmlSchemaDatatype> オブジェクトがリスト型を表す場合、このオブジェクトは入力文字列値をリストまたは複数のオブジェクトに変換します。 <xref:System.Xml.Schema.XmlSchemaDatatype> がユニオン型を表す場合は、ユニオンのメンバーの型として入力値が解析されます。 解析が失敗した場合は、変換が成功するか他のメンバーの型がなくなるまで、ユニオンの次のメンバーを使用して変換が試行されます。変換を試行するメンバーの型がなくなると、例外がスローされます。  
+ <xref:System.Xml.Schema.XmlSchemaDatatype> オブジェクトがリスト型を表す場合、このオブジェクトは入力文字列値をリストまたは複数のオブジェクトに変換します。 <xref:System.Xml.Schema.XmlSchemaDatatype> が共用体型を表す場合は、共用体のメンバーの型として入力値が解析されます。 解析が失敗した場合は、変換が成功するか他のメンバーの型がなくなるまで、ユニオンの次のメンバーを使用して変換が試行されます。変換を試行するメンバーの型がなくなると、例外がスローされます。  
   
 ## <a name="differences-between-clr-and-xml-data-types"></a>CLR 型と XML データ型の違い  
  CLR 型と XML データ型の間で発生する可能性のある不一致とその処理方法を次に示します。  
@@ -34,7 +34,7 @@ ms.locfileid: "50187453"
   
  <xref:System.TimeSpan> クラスは、この部分的な順序付けをサポートしません。 その代わりに、1 年および 1 か月に特定の日数 (それぞれ 365 日と 30 日) を使用します。  
   
- `xs:duration` 型の詳細については、W3C の 「[XML Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/)」(XML スキーマ 第 2 部: データ型の推奨事項) を参照してください。
+ `xs:duration` 型の詳細については、W3C の「[XML Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/)」 (XML スキーマ第 2 部: データ型の推奨事項) を参照してください。
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs:time、グレオリオ暦の日付、および System.DateTime  
  `xs:time` 値が <xref:System.DateTime> オブジェクトにマップされている場合、<xref:System.DateTime.MinValue> フィールドは <xref:System.DateTime> オブジェクトの日付プロパティ (<xref:System.DateTime.Year%2A>、<xref:System.DateTime.Month%2A>、<xref:System.DateTime.Day%2A> など) を可能な最小の <xref:System.DateTime> 値に初期化するために使用されます。  
@@ -42,7 +42,7 @@ ms.locfileid: "50187453"
  同様に、`xs:gMonth`、`xs:gDay`、`xs:gYear`、`xs:gYearMonth`、および `xs:gMonthDay` のインスタンスは、<xref:System.DateTime> オブジェクトにマップされます。 <xref:System.DateTime> オブジェクトの未使用のプロパティは、<xref:System.DateTime.MinValue> の値で初期化されます。  
   
 > [!NOTE]
->  内容が <xref:System.DateTime.Year%2A?displayProperty=nameWithType> として型指定されている場合は、`xs:gMonthDay` 値は信頼できません。 この場合、<xref:System.DateTime.Year%2A?displayProperty=nameWithType> 値は常に 1,904 に設定されています。  
+> 内容が <xref:System.DateTime.Year%2A?displayProperty=nameWithType> として型指定されている場合は、`xs:gMonthDay` 値は信頼できません。 この場合、<xref:System.DateTime.Year%2A?displayProperty=nameWithType> 値は常に 1,904 に設定されています。  
   
 ### <a name="xsanyuri-and-systemuri"></a>xs:anyURI および System.Uri  
  相対 URI を表す `xs:anyURI` のインスタンスが <xref:System.Uri> にマップされている場合、<xref:System.Uri> オブジェクトには基本 URI がありません。  

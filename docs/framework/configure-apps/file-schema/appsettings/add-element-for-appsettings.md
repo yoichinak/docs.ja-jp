@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: f8b426dc0e1e180afbfccce50d3b45774991a572
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 594ba4f289012e775e93acba98056b60bdd94cbd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301348"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927748"
 ---
 # <a name="add-element-for-appsettings"></a>\<appSettings>の\<add>要素
 
-カスタム アプリケーション設定を追加します。
+カスタムアプリケーション設定を追加します。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> の追加**
 
 ## <a name="syntax"></a>構文
 
@@ -43,7 +43,7 @@ ms.locfileid: "66301348"
 
 |     | 説明 |
 | --- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | ファイル パス、XML Web サービス URL、またはアプリケーションのその他のカスタム構成情報など、カスタム アプリケーションの設定が含まれています。 |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | ファイル パス、XML Web サービス URL、またはアプリケーションのその他のカスタム構成情報など、カスタム アプリケーションの設定が含まれています。 |
 
 ## <a name="child-elements"></a>子要素
 
@@ -51,7 +51,7 @@ ms.locfileid: "66301348"
 
 ## <a name="example"></a>例
 
-次の例では、アプリケーションの名前のカスタム構成設定を追加する方法を示します。
+次の例は、アプリケーション名のカスタム構成設定を追加する方法を示しています。
 
 ```xml
 <appSettings>
@@ -59,7 +59,7 @@ ms.locfileid: "66301348"
 </appSettings>
 ```
 
-次の例では、 `<add>` ASP.NET アプリケーションで 2 つの互換性設定を定義する要素。
+次の例では`<add>` 、要素を使用して、ASP.NET アプリケーションで2つの互換性設定を定義します。
 
 ```xml
 <appSettings>
@@ -70,4 +70,4 @@ ms.locfileid: "66301348"
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイルスキーマ](../index.md)

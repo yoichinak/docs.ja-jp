@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 361a6669d5d638bbb39bc646607cce212bbb3bfa
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 995362667ed0a203112744f03a036eabbcb784c8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504031"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608299"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 言語と .NET Framework の概要
 
@@ -44,9 +44,9 @@ C# は、タイプ セーフで洗練されたオブジェクト指向言語で�
   
  その他に、C# の参照ドキュメントを紹介します。  
   
-- C# 言語の概略については、「[C# 言語仕様](../../csharp/language-reference/language-specification/index.md)」の第 1 章を参照してください。  
+- C# 言語の概略については、「[C# 言語仕様](../language-reference/language-specification/index.md)」の第 1 章を参照してください。  
   
-- C# 言語の具体的な側面の詳細については、「[C# リファレンス](../../csharp/language-reference/index.md)」を参照してください。  
+- C# 言語の具体的な側面の詳細については、「[C# リファレンス](../language-reference/index.md)」を参照してください。  
   
 - [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] の詳細については、「[LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md)」を参照してください。  
 
@@ -68,5 +68,5 @@ C# は、タイプ セーフで洗練されたオブジェクト指向言語で�
   
 ## <a name="see-also"></a>関連項目
 
-- [C#](../../csharp/index.md)
+- [C#](../index.md)
 - [Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

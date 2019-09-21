@@ -2,12 +2,12 @@
 title: System.String メソッド
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: c988bf7f04b284b0d352cd9e495931543980fdba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 583c0d58562c1605f24b61489d481e19248ebed4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613754"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792496"
 ---
 # <a name="systemstring-methods"></a>System.String メソッド
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、次の <xref:System.String> メソッドをサポートしていません。  
@@ -15,7 +15,7 @@ ms.locfileid: "64613754"
 ## <a name="unsupported-systemstring-methods-in-general"></a>サポートされていない一般的な System.String メソッド  
  サポートされていない一般的な <xref:System.String> メソッドは次のとおりです。  
   
-- カルチャ対応のオーバー ロード (を受け取るメソッドを`CultureInfo`  /  `StringComparison`  /  `IFormatProvider`)。  
+- カルチャ対応のオーバーロード`CultureInfo`(を /  `StringComparison`  / 受け取るメソッド)。`IFormatProvider`  
   
 - `char` 配列を受け取るまたは生成するメソッド  
   
@@ -49,7 +49,7 @@ ms.locfileid: "64613754"
   
 - SQL Server で有効にされている照合順序があっても、クエリには適用されません。したがって、既定では、カルチャ依存で大文字と小文字を区別しない比較が行われます。 この動作は、大文字と小文字を区別する .NET Framework の既定の動作とは異なります。  
   
-- ときに`LastIndexOf`が 0 の場合、いずれかの文字列を返します`NULL`または見つかった位置が 0 です。  
+- が`LastIndexOf` 0 を返した場合、文字列`NULL`がであるか、見つかった位置が0です。  
   
 - 固定長文字列 (`CHAR`、`NCHAR`) では、データベースにおいて自動的に埋め込みが適用されるため、連結やその他の操作で予期しない結果が生じることがあります。  
   
@@ -57,4 +57,4 @@ ms.locfileid: "64613754"
   
 ## <a name="see-also"></a>関連項目
 
-- [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [データ型と関数](data-types-and-functions.md)

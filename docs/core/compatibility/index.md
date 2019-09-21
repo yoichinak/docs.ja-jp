@@ -5,10 +5,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 06/10/2019
 ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 09/02/2019
 ms.locfileid: "67736562"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core の破壊的変更を評価する

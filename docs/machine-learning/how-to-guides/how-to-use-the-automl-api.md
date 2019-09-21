@@ -3,12 +3,12 @@ title: ML.NET の自動 ML API を使用する方法
 description: ML.NET の自動 ML API によって、モデル構築プロセスが自動化され、展開できる状態のモデルが生成されます。 自動機械学習タスクの構成に使用できるオプションについて説明します。
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: d624b999384dd92d41033e385d01fe556e10a065
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960414"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929389"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET の自動機械学習 API を使用する方法
 
@@ -26,13 +26,14 @@ ms.locfileid: "65960414"
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.AutoML;
-    ...
+    // ...
     MLContext mlContext = new MLContext();
     IDataView trainDataView = mlContext.Data.LoadFromTextFile<SentimentIssue>("my-data-file.csv", hasHeader: true);
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>機械学習タスクの種類を選択する
 実験を作成する前に、解決する機械学習の問題の種類を決定します。 自動機械学習は、以下の ML タスクをサポートします。
+
 * 二項分類
 * 多クラス分類
 * 回帰
@@ -104,6 +105,7 @@ using Microsoft.ML.AutoML;
     ```
 
 ML タスクごとにサポートされるトレーナーの一覧は、以下の対応するリンクを参照してください。
+
 * [サポートされる二項分類アルゴリズム](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [サポートされる多クラス分類アルゴリズム](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [サポートされる回帰アルゴリズム](xref:Microsoft.ML.AutoML.RegressionTrainer)
@@ -210,6 +212,7 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 ```
 
 ML タスクごとに利用できるすべてのメトリックを次に示します。
+
 * [二項分類メトリック](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [多クラス分類メトリック](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
 * [回帰メトリック](xref:Microsoft.ML.AutoML.RegressionMetric)

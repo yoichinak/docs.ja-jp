@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 05/29/2018
-ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 49926b35b418e93237a159758903c535ec6c4006
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410364"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988541"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -18,6 +18,8 @@ ms.locfileid: "67410364"
 `dotnet test` - 単体テストを実行するために使用される .NET テスト ドライバー。
 
 ## <a name="synopsis"></a>構文
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -264,7 +266,7 @@ RunSettings について詳しくは、[vstest.console.exe:RunSettings 引数渡
 
 現在のディレクトリでプロジェクトのテストを実行し、trx 形式でテスト結果ファイルを生成します。
 
-`dotnet test --logger:trx`
+`dotnet test --logger trx`
 
 ## <a name="filter-option-details"></a>フィルター オプションの詳細
 

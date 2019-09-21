@@ -1,32 +1,25 @@
 ---
 title: dotnet migrate コマンド
 description: dotnet migrate コマンドは、プロジェクトとそのすべての依存関係を移行します。
-ms.date: 06/26/2019
-ms.openlocfilehash: 3304f666d15d9188cdae76a401747d91791f817f
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.date: 08/08/2019
+ms.openlocfilehash: 790c607070ff348ca7cfe30137268de18dcb0293
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539396"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990427"
 ---
 # <a name="dotnet-migrate"></a>dotnet の移行
 
-**このトピックの対象: ✓** .NET Core 1.x SDK 以降のバージョン
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**この記事の対象: ✓** .NET Core 1.x SDK **✓** .NET Core 2.x SDK
 
 ## <a name="name"></a>name
 
 `dotnet migrate` - Preview 2 .NET Core プロジェクトを .NET Core SDK スタイルのプロジェクトに移行します。
 
-> [!NOTE]
-> 次のプレビュー リリースでは、`dotnet migrate` が .NET Core 3.0 SDK から削除されます。
-
 ## <a name="synopsis"></a>構文
 
-```
+```console
 dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--report-file] [-s|--skip-project-references] [--skip-backup] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file]
 dotnet migrate [-h|--help]
 ```
@@ -49,6 +42,8 @@ dotnet migrate [-h|--help]
 既定では、移行操作は、標準出力 (STDOUT) に移行プロセスの状態を出力します。 `--report-file <REPORT_FILE>` オプションを使うと、指定したファイルに出力が保存を指定します。
 
 `dotnet migrate` コマンドは、有効な Preview 2 *project.json* ベースのプロジェクトのみをサポートします。 つまり、DNX または Preview 1 の *project.json* ベースのプロジェクトを MSBuild/csproj プロジェクトに直接移行するためには使えません。 最初にプロジェクトを Preview 2 *project.json* ベースのプロジェクトに手動で移行し、その後で `dotnet migrate` コマンドを使ってプロジェクトを移行する必要があります。
+
+`dotnet migrate` コマンドは、.NET Core 3.0 SDK 以降では使用できなくなりました。
 
 ## <a name="arguments"></a>引数
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: b12aeaeb5414d911abea4dfda654183ffa02b3e6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a2cf05dc6b288ffdaf1a20cf594231f48046a724
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398452"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596748"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>方法: ToString メソッドをオーバーライドする (C# プログラミング ガイド)
 
@@ -47,10 +47,10 @@ C# では、すべてのクラスまたは構造体が、暗黙的に <xref:Syst
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IFormattable>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [文字列](../../../csharp/programming-guide/strings/index.md)
-- [string](../../../csharp/language-reference/keywords/string.md)
-- [override](../../../csharp/language-reference/keywords/override.md)
-- [virtual](../../../csharp/language-reference/keywords/virtual.md)
+- [C# プログラミング ガイド](../index.md)
+- [クラスと構造体](./index.md)
+- [文字列](../strings/index.md)
+- [string](../../language-reference/keywords/string.md)
+- [override](../../language-reference/keywords/override.md)
+- [virtual](../../language-reference/keywords/virtual.md)
 - [型の書式設定](../../../standard/base-types/formatting-types.md)

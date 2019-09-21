@@ -3,12 +3,12 @@ title: WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移�
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: ad8ff2b6daaaf48975b86c637435b31fa1869e1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ba99a061d060ebe7740fe61846c3684b5c3085d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940570"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045479"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移行するためのガイドライン
 
@@ -32,7 +32,7 @@ WIF 3.5 では、WIF クラスはすべて `Microsoft.IdentityModel` アセン�
 
 WIF 3.5 クラスはすべて `Microsoft.IdentityModel` 名前空間 (`Microsoft.IdentityModel`、`Microsoft.IdentityModel.Tokens`、`Microsoft.IdentityModel.Web` など) の 1 つに含まれていました。 WIF 4.5 では、WIF クラスは [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) 名前空間、<xref:System.Security.Claims?displayProperty=nameWithType> 名前空間、および <xref:System.ServiceModel.Security?displayProperty=nameWithType> 名前空間に分散されています。 この再編成に加えて、一部の WIF 3.5 クラスは WIF 4.5 では削除されました。
 
-次の表に、より重要な WIF 4.5 の名前空間とそれに含まれるクラスの種類を示します。 WIF 3.5 および WIF 4.5 間で名前空間を対応付ける方法および WIF 4.5 で削除された名前空間とクラスの詳細については、「[Namespace Mapping between WIF 3.5 and WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)」(WIF 3.5 と WIF 4.5 間での名前空間マッピング) を参照してください。
+次の表に、より重要な WIF 4.5 の名前空間とそれに含まれるクラスの種類を示します。 WIF 3.5 および WIF 4.5 間で名前空間を対応付ける方法および WIF 4.5 で削除された名前空間とクラスの詳細については、「[Namespace Mapping between WIF 3.5 and WIF 4.5](namespace-mapping-between-wif-3-5-and-wif-4-5.md)」(WIF 3.5 と WIF 4.5 間での名前空間マッピング) を参照してください。
 
 |WIF 4.5 名前空間|説明|
 |-----------------------|-----------------|
@@ -86,23 +86,23 @@ WIF は現在、.NET Framework に統合されています。 ほとんどの .N
 
 次の一覧に、WIF 4.5 用の構成ファイルへの主要な変更を示します。
 
-- `<microsoft.identityModel>` セクションは、[\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) セクションになっています。
+- `<microsoft.identityModel>` セクションは、[\<system.identityModel>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) セクションになっています。
 
-- `<service>` 要素は、[\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 要素になっています。
+- `<service>` 要素は、[\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 要素になっています。
 
-- 新しいセクション [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) は、受動的な (WS-Federation) シナリオで動作を制御する設定を指定するために追加されました。
+- 新しいセクション [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) は、受動的な (WS-Federation) シナリオで動作を制御する設定を指定するために追加されました。
 
-- [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 要素とその子要素は、WIF 3.5 の `<service>` 要素から新しい `<system.identityModel.services>` 要素に移動されました。
+- [\<federationConfiguration>](../configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 要素とその子要素は、WIF 3.5 の `<service>` 要素から新しい `<system.identityModel.services>` 要素に移動されました。
 
-- WIF 3.5 では `<service>` 要素の直下のサービスレベルで指定できた複数の要素が、[\<securityTokenHandlerConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) 要素での指定に制限されました  (WIF 4.5 では、下位互換性を維持するため、これらは [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 要素で指定できます)。
+- WIF 3.5 では `<service>` 要素の直下のサービスレベルで指定できた複数の要素が、[\<securityTokenHandlerConfiguration>](../configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) 要素での指定に制限されました (WIF 4.5 では、下位互換性を維持するため、これらは [\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 要素で指定できます)。
 
-WIF 4.5 の構成要素の詳細な一覧については、「[WIF Configuration Schema](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)」(WIF 構成スキーマ) を参照してください。
+WIF 4.5 の構成要素の詳細な一覧については、「[WIF Configuration Schema](../configure-apps/file-schema/windows-identity-foundation/index.md)」(WIF 構成スキーマ) を参照してください。
 
 ### <a name="visual-studio-tooling-changes"></a>Visual Studio ツールの変更
 
 WIF 3.5 SDK では、スタンドアロンのフェデレーション ユーティリティである FedUtil.exe (FedUtil) が用意されており、これを使用して WIF 対応アプリケーションでの ID 管理をセキュリティ トークン サービス (STS) に外部委託できました。 このツールにより、WIF の設定がアプリケーション構成ファイルに追加され、アプリケーションは 1 つ以上の STS からセキュリティ トークンを取得できました。また **[STS サービス参照の追加]** ボタンによって Visual Studio に表示されました。 FedUtil は WIF 4.5 には付属していません。 代わりに、WIF 4.5 は Identity and Access Tool for Visual Studio 2012 という名前の新しい Visual Studio の拡張ツールをサポートします。これを使用することで、ID 管理を STS に外部委託するために必要な WIF の設定を備えたアプリケーションの構成ファイルを変更できます。 また Identity and Access Tool は、WIF 対応アプリケーションのテストに使用できる Local STS と呼ばれる STS を実装しています。 多くの場合、この機能により、開発中のソリューションをテストするのに WIF 3.5 で頻繁に必要とされたカスタム STS をビルドする必要がなくなりました。 したがって、STS のテンプレートは、Visual Studio 2012 でサポートされなくなりました。ただし、STS の開発をサポートするクラスは WIF 4.5 でも使用できます。
 
-拡張機能と Visual Studio Updates Manager から Identity and Access Tool をインストールすることができます。 または Code Gallery 上の次のページからダウンロードすることができます。[Identity and Access Tool for Visual Studio 2012 コード ギャラリー](https://go.microsoft.com/fwlink/?LinkID=245849)します。 Visual Studio ツールの変更を次のリストにまとめます。
+Visual Studio の Extensions and Updates Manager から Identity and Access Tool をインストールすることも、コードギャラリーの次のページからダウンロードすることもできます。[コードギャラリーの Visual Studio 2012 用 id およびアクセスツール](https://go.microsoft.com/fwlink/?LinkID=245849)。 Visual Studio ツールの変更を次のリストにまとめます。
 
 - [STS サービス参照の追加] 機能は削除されています。 その代わりとなるのが Identity and Access Tool です。
 
@@ -110,7 +110,7 @@ WIF 3.5 SDK では、スタンドアロンのフェデレーション ユーテ�
 
 - スタンドアロンのフェデレーション ユーティリティ (FedUtil) は WIF 4.5 では使用できません。 Identity and Access Tool を使用して、構成ファイルを変更し、ID 管理を STS に外部委託できます。
 
-Id およびアクセス ツールの詳細については、「[Identity and Access Tool for Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)」 (Visual Studio 2012 の ID およびアクセス ツール) を参照してください。
+Id およびアクセス ツールの詳細については、「[Identity and Access Tool for Visual Studio 2012](identity-and-access-tool-for-vs.md)」 (Visual Studio 2012 の ID およびアクセス ツール) を参照してください。
 
 <a name="BKMK_ToolingChanges"></a>
 
@@ -182,7 +182,7 @@ Add-WindowsFeature windows-identity-foundation
 
 ## <a name="see-also"></a>関連項目
 
-- [WIF 構成スキーマ](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)
-- [WIF 3.5 と WIF 4.5 間での名前空間マッピング](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
-- [Windows Identity Foundation 4.5 の新機能](../../../docs/framework/security/whats-new-in-wif.md)
-- [Visual Studio 2012 の ID およびアクセス ツール](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+- [WIF 構成スキーマ](../configure-apps/file-schema/windows-identity-foundation/index.md)
+- [WIF 3.5 と WIF 4.5 間での名前空間マッピング](namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Windows Identity Foundation 4.5 の新機能](whats-new-in-wif.md)
+- [Visual Studio 2012 の ID およびアクセス ツール](identity-and-access-tool-for-vs.md)

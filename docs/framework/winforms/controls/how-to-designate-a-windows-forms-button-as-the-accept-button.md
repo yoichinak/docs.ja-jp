@@ -11,22 +11,22 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: 22cc9da6-b913-4e04-9554-dee443ac5c3a
-ms.openlocfilehash: 8e608bb2cb4635ef1d29fd7a0aff3ac95fcd9af5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b21ee7da7a666a391be3bc5be57855eaa7ec8b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943911"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967369"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>方法: Windows フォームの Button コントロールを承認ボタンとして指定する
-任意の Windows フォームで指定することができます、<xref:System.Windows.Forms.Button>コントロールを承認ボタン、既定のボタンとも呼ばれます。 ユーザーが ENTER キーを押すと、フォームの他のコントロールにフォーカスがあるの既定のボタンがクリックされました。  
+任意の Windows フォームで、[accept] <xref:System.Windows.Forms.Button>ボタンとしてコントロールを指定できます (既定のボタンとも呼ばれます)。 ユーザーが ENTER キーを押すたびに、フォーム上の他のコントロールにフォーカスがあるかどうかに関係なく、既定のボタンがクリックされます。  
   
 > [!NOTE]
->  フォーカスを持つコントロールが別のボタン例外:、フォーカスのあるボタンをクリックする場合、-複数行テキスト ボックス、または ENTER キーをトラップするカスタム コントロール。  
+> この例外は、フォーカスのあるコントロールが別のボタンである場合です。この場合、フォーカスがあるボタン (複数行のテキストボックス)、または ENTER キーをトラップするカスタムコントロールがクリックされます。  
   
-### <a name="to-designate-the-accept-button"></a>同意する ボタンを指定するには  
+### <a name="to-designate-the-accept-button"></a>Accept ボタンを指定するには  
   
-1. フォームの設定<xref:System.Windows.Forms.Form.AcceptButton%2A>プロパティを適切な<xref:System.Windows.Forms.Button>コントロール。  
+1. フォームの<xref:System.Windows.Forms.Form.AcceptButton%2A>プロパティを適切な<xref:System.Windows.Forms.Button>コントロールに設定します。  
   
     ```vb  
     Private Sub SetDefault(ByVal myDefaultBtn As Button)  
@@ -54,6 +54,6 @@ ms.locfileid: "61943911"
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
 - [Button コントロールの概要](button-control-overview-windows-forms.md)
 - [Windows フォームの Button コントロールを選択する方法](ways-to-select-a-windows-forms-button-control.md)
-- [方法: Windows フォームのボタン クリックに応答するには](how-to-respond-to-windows-forms-button-clicks.md)
-- [方法: Windows フォームの Button をキャンセル ボタンとして指定します。](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
+- [方法: Windows フォームボタンのクリックに応答する](how-to-respond-to-windows-forms-button-clicks.md)
+- [方法: [キャンセル] ボタンとして Windows フォームボタンを指定する](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
 - [Button コントロール](button-control-windows-forms.md)

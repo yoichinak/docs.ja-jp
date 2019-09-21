@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b86775f78b02b09dd8fb7925a13625783520bce1
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 9d120dcf49f1c9097eee04434062a0363a7e144a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052670"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049976"
 ---
 # <a name="apis-that-rely-on-reflection"></a>リフレクションに依存する API
-場合によっては、コードでリフレクションを使用していない、明確なと、.NET ネイティブ ツール チェーンは実行時に必要なメタデータを保持するため。 このトピックでは、リフレクション API の一部であるとは見なされないが、正常に実行するためにリフレクションを必要とする、一般的な API と一般的なプログラミング パターンについて説明します。 これらをソース コードで使用している場合、これらに関する情報をランタイム ディレクティブ (.rd.xml) ファイルに追加して、これらの API を呼び出しても [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外やその他の例外が実行時にスローされないようにできます。  
+場合によっては、コードでのリフレクションの使用は明確ではないため、.NET ネイティブツールチェーンは実行時に必要なメタデータを保持しません。 このトピックでは、リフレクション API の一部であるとは見なされないが、正常に実行するためにリフレクションを必要とする、一般的な API と一般的なプログラミング パターンについて説明します。 これらをソース コードで使用している場合、これらに関する情報をランタイム ディレクティブ (.rd.xml) ファイルに追加して、これらの API を呼び出しても [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外やその他の例外が実行時にスローされないようにできます。  
   
 ## <a name="typemakegenerictype-method"></a>Type.MakeGenericType メソッド  
  ジェネリック型 `AppClass<T>` を動的にインスタンス化するには、次のようなコードを使用して <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> メソッドを呼び出します。  
@@ -27,13 +27,11 @@ ms.locfileid: "66052670"
   
  これにより、<xref:System.Type.GetType%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> メソッド呼び出しが成功し、有効な <xref:System.Type> オブジェクトが返されます。  
   
- ただし、インスタンス化されていないジェネリック型のメタデータを追加した場合でも、<xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> メソッドを呼び出すと、次のような [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外がスローされます。  
+ ただし、インスタンス化されていないジェネリック型のメタデータを追加した場合でも、<xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> メソッドを呼び出すと、次のような [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外がスローされます。  
   
-```  
-This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
+パフォーマンス上の理由から、次の種類のメタデータが削除されたため、この操作を実行できません:  
   
-App1.AppClass`1<System.Int32>.  
-```  
+`App1.AppClass`1 < system.string > '。  
   
  次のランタイム ディレクティブをランタイム ディレクティブ ファイルに追加すると、`Activate` の `AppClass<T>` に対する特定のインスタンス化の <xref:System.Int32?displayProperty=nameWithType> メタデータを追加できます。  
   
@@ -55,9 +53,9 @@ App1.AppClass`1<System.Int32>.
   
 - 呼び出すメソッドの `Browse` メタデータ。  パブリック メソッドの場合、それを含む型のパブリック `Browse` メタデータを追加しても、メソッドが含められます。  
   
-- メソッドの動的メタデータようにしますか呼び出すには、.NET ネイティブ ツール チェーンでは、リフレクション呼び出しデリゲートは削除されません。 メソッドの動的メタデータが欠落している場合、<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> メソッドを呼び出すと、次の例外がスローされます。  
+- リフレクション呼び出しデリゲートが .NET ネイティブツールチェーンによって削除されないようにするために、呼び出すメソッドの動的メタデータ。 メソッドの動的メタデータが欠落している場合、<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> メソッドを呼び出すと、次の例外がスローされます。  
   
-    ```  
+    ```output
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  
     ```  
   
@@ -78,7 +76,7 @@ App1.AppClass`1<System.Int32>.
   
  配列メタデータが存在しない場合、次のエラーが発生します。  
   
-```  
+```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
   
 App1.Class1[]  
@@ -94,5 +92,5 @@ Unfortunately, no further information is available.
   
 ## <a name="see-also"></a>関連項目
 
-- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [はじめに](getting-started-with-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)

@@ -2,12 +2,12 @@
 title: ODBC スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: ffe80120ceffbe29c0a117cf1194860c5782be8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0240e99d2420b0956d3c144f837b39e094bb78a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772048"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794719"
 ---
 # <a name="odbc-schema-collections"></a>ODBC スキーマ コレクション
 
@@ -15,13 +15,13 @@ ms.locfileid: "61772048"
 
 ## <a name="microsoft-sql-server-odbc-driver"></a>Microsoft SQL Server ODBC Driver
 
-Microsoft SQL Server ODBC Driver には、共通のスキーマ コレクションに加えて次の特定のスキーマ コレクションがサポートされています。
+Microsoft SQL Server ODBC ドライバーは、共通のスキーマコレクションに加えて次のスキーマコレクションをサポートしています。
 
-- [テーブル]
+- テーブル
 
-- Indexes
+- インデックス
 
-- 列
+- [列]
 
 - 手順
 
@@ -31,7 +31,7 @@ Microsoft SQL Server ODBC Driver には、共通のスキーマ コレクショ�
 
 - Views
 
-### <a name="tables-and-views"></a>Tables と Views
+### <a name="tables-and-views"></a>[テーブルとビュー]
 
 |ColumnName|DataType|
 |----------------|--------------|
@@ -41,7 +41,7 @@ Microsoft SQL Server ODBC Driver には、共通のスキーマ コレクショ�
 |TABLE_TYPE|String|
 |REMARKS|String|
 
-### <a name="indexes"></a>Indexes
+### <a name="indexes"></a>インデックス
 
 |ColumnName|DataType|
 |----------------|--------------|
@@ -61,7 +61,7 @@ Microsoft SQL Server ODBC Driver には、共通のスキーマ コレクショ�
 |SS_TYPE_SCHEMA|String|
 |SS_DATA_TYPE|Byte|
 
-### <a name="columns"></a>列
+### <a name="columns"></a>[列]
 
 |ColumnName|DataType|
 |----------------|--------------|
@@ -156,11 +156,11 @@ Microsoft SQL Server ODBC Driver には、共通のスキーマ コレクショ�
 
 ## <a name="microsoft-oracle-odbc-driver"></a>Microsoft Oracle ODBC Driver
 
-Microsoft SQL Server Oracle ODBC ドライバーは、共通のスキーマ コレクションに加えて次の特定のスキーマ コレクションをサポートしています。
+Microsoft SQL Server Oracle ODBC ドライバーは、共通のスキーマコレクションに加えて次のスキーマコレクションをサポートしています。
 
-- [テーブル]
+- テーブル
 
-- 列
+- [列]
 
 - 手順
 
@@ -170,9 +170,9 @@ Microsoft SQL Server Oracle ODBC ドライバーは、共通のスキーマ コ�
 
 - Views
 
-- Indexes
+- インデックス
 
-### <a name="tables-and-views"></a>Tables と Views
+### <a name="tables-and-views"></a>[テーブルとビュー]
 
 |ColumnName|DataType|
 |----------------|--------------|
@@ -182,7 +182,7 @@ Microsoft SQL Server Oracle ODBC ドライバーは、共通のスキーマ コ�
 |TABLE_TYPE|String|
 |REMARKS|String|
 
-### <a name="columns"></a>列
+### <a name="columns"></a>[列]
 
 |ColumnName|DataType|
 |----------------|--------------|
@@ -237,11 +237,11 @@ Microsoft SQL Server Oracle ODBC ドライバーは、共通のスキーマ コ�
 
 Microsoft Jet ODBC Driver は、共通のスキーマ コレクションに加えて次のスキーマ コレクションをサポートしています。
 
-- [テーブル]
+- テーブル
 
-- Indexes
+- インデックス
 
-- 列
+- [列]
 
 - 手順
 
@@ -251,7 +251,7 @@ Microsoft Jet ODBC Driver は、共通のスキーマ コレクションに加�
 
 - Views
 
-### <a name="tables-and-views"></a>Tables と Views
+### <a name="tables-and-views"></a>[テーブルとビュー]
 
 |ColumnName|DataType|
 |----------------|--------------|
@@ -261,7 +261,7 @@ Microsoft Jet ODBC Driver は、共通のスキーマ コレクションに加�
 |TABLE_TYPE|String|
 |REMARKS|String|
 
-### <a name="columns"></a>列
+### <a name="columns"></a>[列]
 
 |ColumnName|DataType|
 |----------------|--------------|
@@ -338,4 +338,4 @@ Microsoft Jet ODBC Driver は、共通のスキーマ コレクションに加�
 
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](ado-net-overview.md)

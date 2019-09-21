@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 62064286fecc4736f39ad790f0fd7f0e6d84b149
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa6d3832dcd842631d290e046b5e32908ce4bb7e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754272"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052535"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 `jitCompilationStart` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) が起動すると、Just-In-Time (JIT) コンパイラが関数のコンパイルを開始した時刻が報告されます。  
@@ -25,7 +25,7 @@ ms.locfileid: "61754272"
 ## <a name="cause"></a>原因  
  プログラムが依存するアセンブリの一部がネイティブ形式に生成されていないか、生成されていても正しく登録されていません。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決策  
  この MDA を有効にすると、JIT コンパイルされている関数を判断できます。 関数が含まれるアセンブリがネイティブ形式に生成され、正しく登録されているかどうかを判断します。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
@@ -34,12 +34,12 @@ ms.locfileid: "61754272"
 ## <a name="output"></a>出力  
  次のコード サンプルでは、サンプル出力を確認できます。 ここでは、アセンブリ Test で、クラス "ns2.CO" のメソッド "m" が JIT コンパイルされたことを出力で確認できます。  
   
-```  
+```output
 method name="Test!ns2.C0::m"  
 ```  
   
 ## <a name="configuration"></a>構成  
- 次の構成ファイルでは、最初に JIT コンパイルされたときに報告されるメソッドを絞り込むためのさまざまなフィルターを確認できます。 Name 属性の値を設定して、すべてのメソッドが報告されることを指定する\*します。  
+ 次の構成ファイルでは、最初に JIT コンパイルされたときに報告されるメソッドを絞り込むためのさまざまなフィルターを確認できます。 Name 属性の値をに\*設定することによって、すべてのメソッドを報告するように指定できます。  
   
 ```xml  
 <mdaConfig>  
@@ -160,5 +160,5 @@ namespace ns2
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../interop/interop-marshaling.md)

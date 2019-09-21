@@ -3,19 +3,20 @@ title: <caches>
 ms.date: 03/30/2017
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
 author: BrucePerlerMS
-ms.openlocfilehash: b1d04280ef993297102d446ba5a7db54e8404dd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80f435b52fd7657c5cd44538028d6080beffe0b5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750788"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252156"
 ---
-# <a name="caches"></a>\<caches>
-セッション トークンやトークン リプレイ検出のために使用されるキャッシュを登録します。  
+# <a name="caches"></a>\<キャッシュ >
+セッショントークンとトークンリプレイ検出に使用されるキャッシュを登録します。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<caches>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<システムの >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<構成 >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<キャッシュ >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,23 +39,23 @@ ms.locfileid: "61750788"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<sessionSecurityTokenCache>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)|サービスまたはセキュリティ トークン ハンドラー コレクションのセッション トークン キャッシュに登録します。|  
-|[\<tokenReplayCache>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)|トークン再生キャッシュ サービスまたはセキュリティ トークン ハンドラー コレクションに登録します。|  
+|[\<Sessionsecuritytokencache> >](sessionsecuritytokencache.md)|セッショントークンのキャッシュをサービスまたはセキュリティトークンハンドラーコレクションに登録します。|  
+|[\<tokenReplayCache>](tokenreplaycache.md)|トークン再生キャッシュをサービスまたはセキュリティトークンハンドラーコレクションに登録します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|サービス レベルの id の設定を指定します。|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|トークン ハンドラー コレクションのセキュリティの構成を提供します。|  
+|[\<identityConfiguration>](identityconfiguration.md)|サービスレベルの id 設定を指定します。|  
+|[\<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)|セキュリティトークンハンドラーのコレクションの構成を提供します。|  
   
 ## <a name="remarks"></a>Remarks  
- A`<caches>`下で、サービス レベルで要素を指定することができます、`<identityConfiguration>`要素またはセキュリティ トークン ハンドラー コレクション レベルの下で、`<securityTokenHandlerConfiguration>`要素。 トークン ハンドラー コレクションの設定は、サービスに指定されているものをオーバーライドします。  
+ 要素は、要素の`<identityConfiguration>`下のサービスレベルで指定することも、 `<securityTokenHandlerConfiguration>`要素の下のセキュリティトークンハンドラーコレクションレベルで指定することもできます。 `<caches>` トークンハンドラーコレクションの設定は、サービスで指定された設定よりも優先されます。  
   
- `<caches>`要素が表される、<xref:System.IdentityModel.Configuration.IdentityModelCachesElement>クラス。 構成済みのキャッシュがによって表される、<xref:System.IdentityModel.Configuration.IdentityModelCaches>クラス。  
+ 要素は、 <xref:System.IdentityModel.Configuration.IdentityModelCachesElement>クラスによって表されます。 `<caches>` 構成されたキャッシュは、 <xref:System.IdentityModel.Configuration.IdentityModelCaches>クラスによって表されます。  
   
 ## <a name="example"></a>例  
- 次の XML はセッション セキュリティ トークンを保持するためのカスタム キャッシュの構成 (<xref:System.IdentityModel.Tokens.SessionSecurityToken>)。 構成から取得されますが、`ClaimsAwareWebFarm`サンプル。  
+ 次の XML は、セッションセキュリティトークン (<xref:System.IdentityModel.Tokens.SessionSecurityToken>) を保持するためのカスタムキャッシュの構成を示しています。 この構成は、 `ClaimsAwareWebFarm`サンプルから取得されます。  
   
 ```xml  
 <caches>  

@@ -2,21 +2,22 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 819639eabf0332a34d6a7250159d24e42552f874
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e5f1d49e0e3bb5f52c5e18577d556d25539434a9
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423101"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400162"
 ---
-# <a name="namedpipetransport"></a>\<namedPipeTransport>
+# <a name="namedpipetransport"></a>\<namedPipeTransport >
 チャネルがカスタム バインドに含まれているときに名前付きパイプを使用してメッセージを転送するトランスポートを定義します。  
   
-\<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<binding>  
-\<namePipeTransport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<namedPipeTransport >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,24 +49,24 @@ ms.locfileid: "67423101"
   
 |要素|説明|  
 |-------------|-----------------|  
-|ChannelInitializationTimeout|取得または設定します、<xref:System.TimeSpan>チャネルができるの初期化ステータス切断されるまで最大時間を決定します。|  
+|ChannelInitializationTimeout|チャネルが切断さ<xref:System.TimeSpan>れるまでの初期化ステータスの最大時間を決定するを取得または設定します。|  
 |ConnectionBufferSize|クライアントまたサービスからネットワークでシリアル化されたメッセージのチャンクを転送するために使用されるバッファーのサイズを取得または設定します。|  
 |hostNameComparisonMode|URI で一致する場合にサービスに到達するためにホスト名を使用するかどうかを示す値を取得または設定します。|  
 |manualAddressing|メッセージの手動アドレス指定が必要かどうかを示す値を取得または設定します。|  
-|maxBufferPoolSize|取得またはトランスポートで使用するバッファー プールのバイト単位で最大のサイズを設定します。|  
+|maxBufferPoolSize|トランスポートで使用されるバッファープールの最大サイズ (バイト単位) を取得または設定します。|  
 |maxBufferSize|使用するバッファーの最大サイズを取得または設定します。 ストリーム メッセージの場合、この値は少なくともメッセージ ヘッダーで使用できる最大サイズにする必要があります。これは、バッファー モードで読み取られます。|  
 |maxOutputDelay|メッセージのチャンクまたは完全なメッセージを、送信前にメモリ内のバッファーに残したままにできる最長期間を取得または設定します。|  
-|maxPendingAccepts|取得またはサービスは、サービスへの着信接続を処理するためのリスナーで待機できるチャネルの最大数を設定します。|  
+|maxPendingAccepts|サービスがサービスへの着信接続を処理するためにリスナーで待機できるチャネルの最大数を取得または設定します。|  
 |maxPendingConnections|サービスでディスパッチを待機している最大接続数を取得または設定します。|  
-|maxReceivedMessageSize|取得し、受信できるをバイト単位で、メッセージの最大サイズを設定します。|  
+|maxReceivedMessageSize|受信できるメッセージの最大サイズをバイト単位で取得または設定します。|  
 |transferMode|接続指向のトランスポートでメッセージをバッファーするか、ストリーム配信するかを示す値を取得または設定します。|  
-|[\<connectionPoolSettings > の\<namedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|名前付きパイプ バインディングの追加の接続プール設定を指定します。|  
+|[\<namedPipeTransport > の\<connectionpoolsettings >](connectionpoolsettings.md)|名前付きパイプ バインディングの追加の接続プール設定を指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
+|[\<binding>](../../../misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
 ## <a name="remarks"></a>Remarks  
 このトランスポートは、"net.pipe://hostname/path" の形式の URI を使用します。 他の URI コンポーネントは省略可能です。  
@@ -78,9 +79,9 @@ ms.locfileid: "67423101"
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [トランスポート](../../../wcf/feature-details/transports.md)
+- [トランスポートの選択](../../../wcf/feature-details/choosing-a-transport.md)
+- [バインディング](../../../wcf/bindings.md)
+- [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 800bf80e5ba3e697c122bcf4b1bc0f302357d087
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 154a2543c62de545e8b2df711d6ad51989d0689d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401618"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964849"
 ---
 # <a name="dependency-property-metadata"></a>依存関係プロパティのメタデータ
 プロパティ[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]システムには、リフレクションまたは一般的な共通言語ランタイム (CLR) の特性によってプロパティについて報告できる値を超えるメタデータレポートシステムが含まれています。 依存関係プロパティのメタデータは、依存関係プロパティを定義するクラスで個別に割り当てることも、依存関係プロパティを別のクラスに追加する際に変更することもできます。また、依存関係プロパティをその定義元の基本クラスから継承するすべての派生クラスで明確にオーバーライドすることもできます。  
 
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このトピックでは、ユーザーが [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] クラスの既存の依存関係プロパティの使用という観点から依存関係プロパティを理解し、「[依存関係プロパティの概要](dependency-properties-overview.md)」トピックを通読していることを前提としています。 このトピックの例を理解するには、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] について理解し、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの作成方法に精通している必要があります。  
   
 <a name="dp_metadata_contents"></a>   
@@ -38,7 +38,7 @@ ms.locfileid: "68401618"
  次<xref:System.Windows.PropertyMetadata>に、クラスをから派生させることにより、WPF フレームワークレベルのクラスなどのアーキテクチャの区分に対して、より具体的なメタデータを提供します。 <xref:System.Windows.UIPropertyMetadata>アニメーションレポートを追加し<xref:System.Windows.FrameworkPropertyMetadata> 、前のセクションで説明した WPF フレームワークレベルのプロパティを提供します。 依存関係プロパティが登録されると、これら<xref:System.Windows.PropertyMetadata>の派生クラスに登録できます。 メタデータが検査されると、 <xref:System.Windows.PropertyMetadata>基本型を派生クラスにキャストして、より具体的なプロパティを調べることができる可能性があります。  
   
 > [!NOTE]
->  で<xref:System.Windows.FrameworkPropertyMetadata>指定できるプロパティ特性は、このドキュメントでは "flags" と呼ばれることもあります。 依存関係プロパティの登録またはメタデータのオーバーライドで使用する新しいメタデータインスタンスを作成する場合は、 <xref:System.Windows.FrameworkPropertyMetadataOptions>フラグ列挙体を使用してこれらの値を指定します。その後、列挙体の値を連結します。<xref:System.Windows.FrameworkPropertyMetadata>コンストラクター。 ただし、構築されると、これらのオプション特性は<xref:System.Windows.FrameworkPropertyMetadata> 、の構築列挙値ではなく一連のブール型プロパティとして内に公開されます。 これらのブール型プロパティを使用すると、目的の情報を取得するためにフラグ列挙値に対してマスクを適用することなく、各条件をチェックすることができます。 コンストラクターは、コンストラクターシグネチャ<xref:System.Windows.FrameworkPropertyMetadataOptions>の長さを適切に保つために、連結されたを使用します。一方、実際に構築されたメタデータは、メタデータのクエリをより直観的に行うために個別のプロパティを公開します。  
+> で<xref:System.Windows.FrameworkPropertyMetadata>指定できるプロパティ特性は、このドキュメントでは "flags" と呼ばれることもあります。 依存関係プロパティの登録またはメタデータのオーバーライドで使用する新しいメタデータインスタンスを作成する場合は、 <xref:System.Windows.FrameworkPropertyMetadataOptions>フラグ列挙体を使用してこれらの値を指定します。その後、列挙体の値を連結します。<xref:System.Windows.FrameworkPropertyMetadata>コンストラクター。 ただし、構築されると、これらのオプション特性は<xref:System.Windows.FrameworkPropertyMetadata> 、の構築列挙値ではなく一連のブール型プロパティとして内に公開されます。 これらのブール型プロパティを使用すると、目的の情報を取得するためにフラグ列挙値に対してマスクを適用することなく、各条件をチェックすることができます。 コンストラクターは、コンストラクターシグネチャ<xref:System.Windows.FrameworkPropertyMetadataOptions>の長さを適切に保つために、連結されたを使用します。一方、実際に構築されたメタデータは、メタデータのクエリをより直観的に行うために個別のプロパティを公開します。  
   
 <a name="override_or_subclass"></a>   
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>メタデータをオーバーライドする場合、クラスを派生する場合  
@@ -78,7 +78,7 @@ ms.locfileid: "68401618"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、添付プロパティは依存関係プロパティとして実装されます。 このことは、添付プロパティもプロパティ メタデータを持ち、これを個々のクラスでオーバーライドできることを意味します。 の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]添付プロパティのスコープに関する考慮事項は、通常<xref:System.Windows.DependencyObject> 、添付プロパティが設定されている場合があります。 したがって、 <xref:System.Windows.DependencyObject>クラスのインスタンスに設定されている可能性があるため、任意の派生クラスで、添付プロパティのメタデータをオーバーライドできます。 オーバーライドできるのは、既定値、コールバック、または WPF フレームワーク レベルの特性報告プロパティです。 添付プロパティがクラスのインスタンスで設定されている場合、そのオーバーライド プロパティ メタデータ特性が適用されます。 たとえば、プロパティが他では特に指定されていないときには、オーバーライド値がクラスのインスタンス上の添付プロパティの値として報告されるように、既定値をオーバーライドできます。  
   
 > [!NOTE]
->  プロパティ<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>は、添付プロパティには関係ありません。  
+> プロパティ<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>は、添付プロパティには関係ありません。  
   
 <a name="dp_add_owner"></a>   
 ### <a name="adding-a-class-as-an-owner-of-an-existing-dependency-property"></a>既存の依存関係プロパティの所有者としてのクラスの追加  

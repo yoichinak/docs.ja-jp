@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: cf87d8d2ac4531142288a8637f7fbeb9139382ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 486539d7abdc3e65847a0bc0e228b1b20a2b2c37
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545830"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602688"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (C# コンパイラ オプション)
 
@@ -29,7 +29,7 @@ ms.locfileid: "54545830"
 
 独自の System 名前空間およびオブジェクトを定義または作成する場合は、このオプションを使用します。
 
-**/nostdlib** を指定しない場合、(**-nostdlib-** を指定したことと同じで) mscorlib.dll がプログラムにインポートされます。 **-nostdlib** を指定することは、**-nostdlib+** を指定することと同じです。
+**/nostdlib** を指定しない場合、( **-nostdlib-** を指定したことと同じで) mscorlib.dll がプログラムにインポートされます。 **-nostdlib** を指定することは、 **-nostdlib+** を指定することと同じです。
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>このコンパイラ オプションを Visual Studio で使用するには
 
@@ -50,4 +50,4 @@ ms.locfileid: "54545830"
 
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)

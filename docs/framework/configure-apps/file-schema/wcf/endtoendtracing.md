@@ -2,19 +2,20 @@
 title: <endToEndTracing>
 ms.date: 03/30/2017
 ms.assetid: 5034f5de-bb60-4157-9ad4-58aaade094e0
-ms.openlocfilehash: 266b33e9b0386d0346a86ba8bd82cc65def4f0c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a274f15800c6a132994a2437943c83982de9de0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673057"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855296"
 ---
 # <a name="endtoendtracing"></a>\<endToEndTracing >
 サービス アプリケーションの実行中にエンドツーエンドのトレースのさまざまな側面を有効または無効にするための構成要素。  
   
- \<system.ServiceModel >  
-\<診断 >  
-\<endToEndTracing >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<診断 >** ](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<endToEndTracing >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +47,7 @@ ms.locfileid: "61673057"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<diagnostics>](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|管理者が行うランタイムの検査と管理の WCF 設定を定義します。|  
+|[\<診断 >](diagnostics.md)|管理者が行うランタイムの検査と管理の WCF 設定を定義します。|  
   
 ## <a name="see-also"></a>関連項目
 
@@ -54,4 +55,4 @@ ms.locfileid: "61673057"
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.EndToEndTracing%2A>
 - <xref:System.ServiceModel.Configuration.EndToEndTracingElement>
-- [エンドツーエンドのトレース](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+- [エンドツーエンドのトレース](../../../wcf/diagnostics/tracing/end-to-end-tracing.md)

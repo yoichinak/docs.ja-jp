@@ -3,12 +3,12 @@ title: project.json からの .NET Core の移行
 description: project.json を使って以前の .NET Core プロジェクトを移行する方法について説明します
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: f48728e647b57a8c5796bdc2119f72b58a49d80f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6334f06a998054cfaf766654dda59d87f5d23ed8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663343"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105305"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>project.json からの .NET Core プロジェクトの移行
 
@@ -31,14 +31,14 @@ ms.locfileid: "61663343"
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-*.xproj* ファイルまたは *.xproj* ファイルを参照するソリューションを開くと、**[一方向のアップグレード]** ダイアログが表示されます。 このダイアログには、移行されるプロジェクトが表示されます。
-ソリューション ファイルを開くと、ソリューション ファイルに指定されているすべてのプロジェクトが表示されます。 移行されるプロジェクトの一覧を確認し、**[OK]** を選択します。
+*.xproj* ファイルまたは *.xproj* ファイルを参照するソリューションを開くと、 **[一方向のアップグレード]** ダイアログが表示されます。 このダイアログには、移行されるプロジェクトが表示されます。
+ソリューション ファイルを開くと、ソリューション ファイルに指定されているすべてのプロジェクトが表示されます。 移行されるプロジェクトの一覧を確認し、 **[OK]** を選択します。
 
 ![移行されるプロジェクトの一覧が表示された [一方向のアップグレード] ダイアログ](media/one-way-upgrade.jpg)
 
-Visual Studio では、選択したプロジェクトが自動的に移行されます。 すべてのプロジェクトを選択していない状態でソリューションを移行すると、同じダイアログが開き、そのソリューションの残りのプロジェクトをアップグレードすることを確認するメッセージが表示されます。 プロジェクトが移行されたら、**ソリューション エクスプローラー** ウィンドウでプロジェクトを右クリックして、**[編集 \<プロジェクト名.csproj]** を選択し、そのコンテンツを表示して変更することができます。
+Visual Studio では、選択したプロジェクトが自動的に移行されます。 すべてのプロジェクトを選択していない状態でソリューションを移行すると、同じダイアログが開き、そのソリューションの残りのプロジェクトをアップグレードすることを確認するメッセージが表示されます。 プロジェクトが移行されたら、**ソリューション エクスプローラー** ウィンドウでプロジェクトを右クリックして、 **[編集 \<プロジェクト名.csproj]** を選択し、そのコンテンツを表示して変更することができます。
 
-移行されたファイル (*project.json*、*global.json*、*.xproj*、およびソリューション ファイル) は *Backup* フォルダーに移動されます。 移行されるソリューション ファイルは Visual Studio 2017 にアップグレードされ、以前のバージョンの Visual Studio ではそのソリューション ファイルを開くことができなくなります。
+移行されたファイル (*project.json*、*global.json*、 *.xproj*、およびソリューション ファイル) は *Backup* フォルダーに移動されます。 移行されるソリューション ファイルは Visual Studio 2017 にアップグレードされ、以前のバージョンの Visual Studio ではそのソリューション ファイルを開くことができなくなります。
 移行レポートを含む *UpgradeLog.htm* というファイルも保存され、自動的に開かれます。
 
 > [!IMPORTANT]
@@ -78,13 +78,13 @@ project.json および csproj 形式の比較については、「[project.json 
 
 .NET Core csproj 形式は、ツールの新しいプレリリース バージョンごとに変化し、進化しています。 以前のバージョンの csproj から最新バージョンにプロジェクト ファイルを移行するツールはないため、プロジェクト ファイルを手動で編集する必要があります。 実際の手順は、移行するプロジェクト ファイルのバージョンによって異なります。 バージョン間で加えられた変更内容に基づいて、考慮する必要があるガイダンスの一部を次に示します。
 
-* `<Project>` 要素からツールのバージョン プロパティを削除します (存在する場合)。
-* `<Project>` 要素から XML 名前空間 (`xmlns`) を削除します。
-* 存在しない場合は、`<Project>` 要素に `Sdk` 属性を追加し、`Microsoft.NET.Sdk` または `Microsoft.NET.Sdk.Web` に設定します。 この属性は、プロジェクトが SDK を使用することを指定するために使用します。 `Microsoft.NET.Sdk.Web` は Web アプリに使用されます。
-* プロジェクトの一番上と一番下から `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` および `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` ステートメントを削除します。 これらの import ステートメントは SDK で暗黙的に指定されているので、プロジェクトに含める必要はありません。
-* プロジェクトに `Microsoft.NETCore.App` または `NETStandard.Library` `<PackageReference>` アイテムがある場合は削除することをお勧めします。 これらのパッケージ参照は、[SDK で暗黙的に指定されています](https://aka.ms/sdkimplicitrefs)。
-* `Microsoft.NET.Sdk` `<PackageReference>` 要素がある場合は削除します。 SDK の参照は、`<Project>` 要素の `Sdk` 属性によって行われます。
-* [SDK で暗黙的に指定](../tools/csproj.md#default-compilation-includes-in-net-core-projects)されている [glob](https://en.wikipedia.org/wiki/Glob_(programming)) を削除します。 プロジェクトにこれらの glob を残すと、コンパイル アイテムが重複するため、ビルド時にエラーが発生します。
+- `<Project>` 要素からツールのバージョン プロパティを削除します (存在する場合)。
+- `<Project>` 要素から XML 名前空間 (`xmlns`) を削除します。
+- 存在しない場合は、`<Project>` 要素に `Sdk` 属性を追加し、`Microsoft.NET.Sdk` または `Microsoft.NET.Sdk.Web` に設定します。 この属性は、プロジェクトが SDK を使用することを指定するために使用します。 `Microsoft.NET.Sdk.Web` は Web アプリに使用されます。
+- プロジェクトの一番上と一番下から `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` および `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` ステートメントを削除します。 これらの import ステートメントは SDK で暗黙的に指定されているので、プロジェクトに含める必要はありません。
+- プロジェクトに `Microsoft.NETCore.App` または `NETStandard.Library` `<PackageReference>` アイテムがある場合は削除することをお勧めします。 これらのパッケージ参照は、[SDK で暗黙的に指定されています](https://aka.ms/sdkimplicitrefs)。
+- `Microsoft.NET.Sdk` `<PackageReference>` 要素がある場合は削除します。 SDK の参照は、`<Project>` 要素の `Sdk` 属性によって行われます。
+- [SDK で暗黙的に指定](../tools/csproj.md#default-compilation-includes-in-net-core-projects)されている [glob](https://en.wikipedia.org/wiki/Glob_(programming)) を削除します。 プロジェクトにこれらの glob を残すと、コンパイル アイテムが重複するため、ビルド時にエラーが発生します。
 
 これらの手順を実行すると、RTM .NET Core csproj 形式と完全に互換性のあるプロジェクトになります。
 

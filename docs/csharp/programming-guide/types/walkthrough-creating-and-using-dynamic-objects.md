@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 658fc0ef797e941e33e1d03f0e492b4cf2ef0801
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a4cb85eb94584cff20c9ff26b4aa6bacee4f9883
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608030"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252968"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>チュートリアル: 動的オブジェクトの作成と使用 (C# および Visual Basic)
 
@@ -22,7 +22,7 @@ ms.locfileid: "64608030"
   
  動的オブジェクトを使用すると、IronPython や IronRuby などの動的言語にも簡単にアクセスできます。 動的オブジェクトを使用して、実行時に解釈される動的スクリプトを参照することもできます。  
   
- 動的オブジェクトを参照するには、遅延バインディングを使用します。 C# では、遅延バインディング オブジェクトの型は `dynamic` として指定します。 Visual Basic では、遅延バインディング オブジェクトの型は `Object` として指定します。 詳しくは、「[dynamic](../../../csharp/language-reference/keywords/dynamic.md)」および「[事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)」をご覧ください。  
+ 動的オブジェクトを参照するには、遅延バインディングを使用します。 C# では、遅延バインディング オブジェクトの型は `dynamic` として指定します。 Visual Basic では、遅延バインディング オブジェクトの型は `Object` として指定します。 詳しくは、「[dynamic](../../language-reference/keywords/dynamic.md)」および「[事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)」をご覧ください。  
   
  カスタムの動的オブジェクトは、<xref:System.Dynamic?displayProperty=nameWithType> 名前空間内のクラスを使用して作成できます。 たとえば、<xref:System.Dynamic.ExpandoObject> を作成し、実行時にそのオブジェクトのメンバーを指定することもできます。 また、<xref:System.Dynamic.DynamicObject> クラスを継承する、独自の型を作成することもできます。 その後、<xref:System.Dynamic.DynamicObject> クラスのメンバーをオーバーライドして、実行時の動的機能を提供することができます。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "64608030"
   
 2. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-3. **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** ペインで、**[Windows]** が選択されていることを確認します。 **[テンプレート]** ペインの **[コンソール アプリケーション]** を選択します。 **[名前]** ボックスに `DynamicSample` と入力して、**[OK]** をクリックします。 新しいプロジェクトが作成されます。  
+3. **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** ペインで、 **[Windows]** が選択されていることを確認します。 **[テンプレート]** ペインの **[コンソール アプリケーション]** を選択します。 **[名前]** ボックスに `DynamicSample` と入力して、 **[OK]** をクリックします。 新しいプロジェクトが作成されます。  
   
-4. DynamicSample プロジェクトを右クリックし、**[追加]** をポイントした後、**[クラス]** をクリックします。 **[名前]** ボックスに `ReadOnlyFile` と入力して、**[OK]** をクリックします。 ReadOnlyFile クラスを含んだ新しいファイルが追加されます。  
+4. DynamicSample プロジェクトを右クリックし、 **[追加]** をポイントした後、 **[クラス]** をクリックします。 **[名前]** ボックスに `ReadOnlyFile` と入力して、 **[OK]** をクリックします。 ReadOnlyFile クラスを含んだ新しいファイルが追加されます。  
   
 5. ReadOnlyFile.cs ファイルまたは ReadOnlyFile.vb ファイルの先頭に、次のコードを追加して <xref:System.IO?displayProperty=nameWithType> および <xref:System.Dynamic?displayProperty=nameWithType> 名前空間をインポートします。  
 
@@ -93,11 +93,11 @@ ms.locfileid: "64608030"
   
 #### <a name="to-create-a-sample-text-file"></a>サンプルのテキスト ファイルを作成するには  
   
-1. DynamicSample プロジェクトを右クリックし、**[追加]** をポイントした後、**[新しい項目]** をクリックします。 **[インストールされたテンプレート]** ペインで **[全般]** をクリックし、**[テキスト ファイル]** テンプレートを選択します。 **[名前]** ボックスで、既定の名前である TextFile1.txt をそのままにし、**[追加]** をクリックします。 新しいテキスト ファイルがプロジェクトに追加されます。  
+1. DynamicSample プロジェクトを右クリックし、 **[追加]** をポイントした後、 **[新しい項目]** をクリックします。 **[インストールされたテンプレート]** ペインで **[全般]** をクリックし、 **[テキスト ファイル]** テンプレートを選択します。 **[名前]** ボックスで、既定の名前である TextFile1.txt をそのままにし、 **[追加]** をクリックします。 新しいテキスト ファイルがプロジェクトに追加されます。  
   
 2. TextFile1.txt ファイルに次のテキストをコピーします。  
   
-    ```  
+    ```text  
     List of customers and suppliers  
   
     Supplier: Lucerne Publishing (https://www.lucernepublishing.com/)  
@@ -131,11 +131,11 @@ ms.locfileid: "64608030"
   
 ### <a name="to-create-a-custom-dynamic-class"></a>カスタムの動的クラスを作成するには
   
-1. Visual Studio で、**[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。  
+1. Visual Studio で、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-2. **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** ペインで、**[Windows]** が選択されていることを確認します。 **[テンプレート]** ペインの **[コンソール アプリケーション]** を選択します。 **[名前]** ボックスに `DynamicIronPythonSample` と入力して、**[OK]** をクリックします。 新しいプロジェクトが作成されます。  
+2. **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** ペインで、 **[Windows]** が選択されていることを確認します。 **[テンプレート]** ペインの **[コンソール アプリケーション]** を選択します。 **[名前]** ボックスに `DynamicIronPythonSample` と入力して、 **[OK]** をクリックします。 新しいプロジェクトが作成されます。  
   
-3. Visual Basic を使用している場合は、DynamicIronPythonSample プロジェクトを右クリックし、**[プロパティ]** をクリックします。 **[参照]** タブをクリックします。**[追加]** ボタンをクリックします。 Visual C# を使用している場合は、**ソリューション エクスプローラー**で **[参照]** フォルダーを右クリックし、**[参照の追加]** をクリックします。  
+3. Visual Basic を使用している場合は、DynamicIronPythonSample プロジェクトを右クリックし、 **[プロパティ]** をクリックします。 **[参照]** タブをクリックします。 **[追加]** ボタンをクリックします。 Visual C# を使用している場合は、**ソリューション エクスプローラー**で **[参照]** フォルダーを右クリックし、 **[参照の追加]** をクリックします。  
   
 4. **[参照]** タブで、IronPython ライブラリがインストールされているフォルダーを参照します。 たとえば、 C:\Program Files\IronPython 2.6 for .NET 4.0 です。 **IronPython.dll**、**IronPython.Modules.dll**、**Microsoft.Scripting.dll**、および **Microsoft.Dynamic.dll** ライブラリを選択します。 **[OK]** をクリックします。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "64608030"
 
 - <xref:System.Dynamic?displayProperty=nameWithType>
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
-- [dynamic 型の使用](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [dynamic 型の使用](./using-type-dynamic.md)
 - [事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
 - [動的なインターフェイスの実装 (Microsoft TechNet からダウンロードできる PDF)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

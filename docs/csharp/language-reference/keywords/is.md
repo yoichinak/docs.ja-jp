@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 45e37dcb15e178fe37907e00cc14ef48c1bf230d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a04105137fad7cd3a25b869c3aa7fcbe91ed20ab
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306592"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566311"
 ---
 # <a name="is-c-reference"></a>is (C# リファレンス)
 
-`is` 演算子では、式の結果と指定された型との間に互換性があるかどうかが確認されるか、または (C# 7.0 以降では) パターンに対して式がテストされます。 型テストの `is` 演算子については、「[型テストおよび変換演算子](../operators/type-testing-and-conversion-operators.md)」記事の「[is 演算子](../operators/type-testing-and-conversion-operators.md#is-operator)」セクションをご覧ください。
+`is` 演算子では、式の結果と指定された型との間に互換性があるかどうかが確認されるか、または (C# 7.0 以降では) パターンに対して式がテストされます。 型テストの `is` 演算子について詳しくは、[型テストとキャスト演算子](../operators/type-testing-and-cast.md)に関する記事の「[is 演算子](../operators/type-testing-and-cast.md#is-operator)」セクションをご覧ください。
 
 ## <a name="pattern-matching-with-is"></a>`is` を使用したパターン マッチング
 
@@ -128,4 +128,4 @@ C#7.1 以降、*expr* はジェネリック型パラメーターとその制約�
 
 - [C# リファレンス](../index.md)
 - [C# キーワード](index.md)
-- [型テストおよび変換演算子](../operators/type-testing-and-conversion-operators.md)
+- [型テストとキャスト演算子](../operators/type-testing-and-cast.md)

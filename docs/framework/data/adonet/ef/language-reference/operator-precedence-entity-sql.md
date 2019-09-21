@@ -2,15 +2,15 @@
 title: 演算子の優先順位 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
-ms.openlocfilehash: 722ebe5f0ec530f8c7f86e9f9901451b060903f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d8c78f410708fd1aa843ee8f14f7243a9f686c0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760351"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249781"
 ---
 # <a name="operator-precedence-entity-sql"></a>演算子の優先順位 (Entity SQL)
-ときに、[!INCLUDE[esql](../../../../../../includes/esql-md.md)]クエリが複数の演算子、演算子の優先順位は、操作が実行されるシーケンスを決定します。 実行される順序により、クエリ結果の値は大きく変わります。  
+クエリに[!INCLUDE[esql](../../../../../../includes/esql-md.md)]複数の演算子がある場合、演算子の優先順位によって、操作が実行される順序が決まります。 実行される順序により、クエリ結果の値は大きく変わります。  
   
  演算子には、次の表に示す優先順位レベルが定義されています。 優先順位が高い演算子は、優先順位が低い演算子よりも前に評価されます。  
   
@@ -27,8 +27,8 @@ ms.locfileid: "61760351"
   
  式の中の 2 つの演算子が同じ優先順位レベルである場合は、クエリの中での位置に従って演算子は左から右へと評価されます。 たとえば、`x+y-z` は `(x+y)-z` と評価されます。  
   
- クエリの中で演算子の定義済みの優先順位をオーバーライドするには、かっこを使用します。 この場合、かっこ内のすべての演算が評価され、1 つの結果が作成されてから、かっこ外の演算子でこの結果が使用されます。 たとえば、`x+y*z`を乗算します`y`によって`z`し追加します`x`が`(x+y)*z`を追加します`x`に`y`には、結果を乗算`z`。  
+ クエリの中で演算子の定義済みの優先順位をオーバーライドするには、かっこを使用します。 この場合、かっこ内のすべての演算が評価され、1 つの結果が作成されてから、かっこ外の演算子でこの結果が使用されます。 たとえば、は`x+y*z` `x` `x` `z` `y` `(x+y)*z`とを加算した後、を追加しますが、結果はによって乗算されます。 `y` `z`  
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL の概要](entity-sql-overview.md)

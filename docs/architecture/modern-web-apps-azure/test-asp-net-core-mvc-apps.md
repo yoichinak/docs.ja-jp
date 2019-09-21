@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 941c73f9a8b7b4c4336adfaec45775feec738f51
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4e4ab71cc542767460e92be1510ccc5c5e0e7ce0
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672879"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374071"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリのテスト
 
@@ -34,32 +34,6 @@ ms.locfileid: "68672879"
 
 統合テストは多くの場合、セットアップと破棄のプロシージャが単体テストより複雑です。 たとえば、実際のデータベースに対して統合テストを行うとき、データベースをテスト実行前の既知の状態に戻す方法が必要になります。 新しいテストが追加され、運用データベース スキーマが拡大するにつれ、テスト スクリプトのサイズが増加し、より複雑になります。 大規模なシステムの多くでは、共有ソース管理の変更を調べる前に、開発者ワークステーションで完全な統合テスト スイートを実行することは実用的ではありません。 そのような場合、ビルド サーバーで統合テストを実行できることがあります。
 
-実装クラス `LocalFileImageService` では、指定された ID に対して、特定のフォルダーから画像ファイル データを取得して返すロジックが実装されます。
-
-```csharp
-public class LocalFileImageService : IImageService
-{
-    private readonly IHostingEnvironment _env;
-    public LocalFileImageService(IHostingEnvironment env)
-    {
-        _env = env;
-    }
-    public byte[] GetImageBytesById(int id)
-    {
-        try
-        {
-            var contentRoot = _env.ContentRootPath + "//Pics";
-            var path = Path.Combine(contentRoot, id + ".png");
-            return File.ReadAllBytes(path);
-        }
-        catch (FileNotFoundException ex)
-        {
-            throw new CatalogImageMissingException(ex);
-        }
-    }
-}
-```
-
 ### <a name="functional-tests"></a>機能テスト
 
 システムの一部のコンポーネントが正しく連動することを確認する目的で、統合テストは開発者の視点から記述されます。 機能テストはユーザーの視点から記述され、その要件に基づき、システムの正確性を検証します。 機能テストとは何か、単体テストとの比較で考えるとき、次の抜粋が類推として役に立ちます。
@@ -76,9 +50,9 @@ public class LocalFileImageService : IImageService
 
 Martin Fowler がテストをピラミッド図にしました。図 9-1 がその例です。
 
-![](./media/image9-1.png)
+![テストのピラミッド](./media/image9-1.png)
 
-図 9-1 テストのピラミッド
+**図 9-1** テストのピラミッド
 
 ピラミッドの各層はテストの種類を表し、その相対的な大きさはアプリケーションのために記述すべきテストの数を表します。 ご覧のように、単体テストの土台を大きくし、それより小さい統合テスト層が続き、さらに小さい機能テスト層が続くという構成が推奨されています。 各層には、理想的には、それより下の層では適切に実行できないテストのみを含めます。 特定のシナリオで必要とするテストの種類を決定するとき、このピラミッドを念頭に置いてください。
 
@@ -92,15 +66,15 @@ Martin Fowler がテストをピラミッド図にしました。図 9-1 がそ�
 
 一般的な方法は、‘src' フォルダーの下でアプリケーション プロジェクトを整理し、並列する ‘tests' フォルダーの下でアプリケーションのテスト プロジェクトを整理することです。 この整理方法が有効な場合、Visual Studio でこれに合ったソリューションを作成できます。
 
-![](./media/image9-2.png)
+![ソリューション内のテストの整理](./media/image9-2.png)
 
-図 9-2 ソリューションでテストを整理する
+**図 9-2** ソリューション内のテストの整理
 
 好きな方のテスト フレームワークを利用できます。 xUnit フレームワークは良好に動作し、ASP.NET Core と EF Core テストはすべてこれで記述されています。 図 9-3 のテンプレートを利用して Visual Studio で xUnit テスト プロジェクトを追加できます。あるいは、dotnet new xunit を利用し、CLI から追加できます。
 
-![](./media/image9-3.png)
+![Visual Studio で xUnit テスト プロジェクトを追加する](./media/image9-3.png)
 
-図 9-3 Visual Studio で xUnit テスト プロジェクトを追加する
+**図 9-3** Visual Studio で xUnit テスト プロジェクトを追加する
 
 ### <a name="test-naming"></a>テストの命名規則
 
@@ -124,7 +98,7 @@ Martin Fowler がテストをピラミッド図にしました。図 9-1 がそ�
 
 小さなテスト クラスをたくさん生成する上記のような命名規則に従う場合、フォルダーや名前空間を利用し、テストをさらに整理することをお勧めします。 図 9-4 では、テスト プロジェクト内のフォルダー別にテストを整理している手法を確認できます。
 
-![](./media/image9-4.png)
+![テストされるクラスに基づき、テスト クラスをフォルダーで分けて整理する](./media/image9-4.png)
 
 **図 9-4** テストされるクラスに基づき、テスト クラスをフォルダーで分けて整理します。
 
@@ -152,7 +126,7 @@ public IActionResult GetImage(int id)
 ファイル システムの動作の単体テストが直接実行できないために、ルートをテストできない場合、どのようなテストが残されているのでしょうか? 改良して単体テストを可能にすると、テスト ケースや、エラー処理など、足りない動作が見つかることがあります。 ファイルが見つからないとき、メトリックは何を行うのでしょうか? 何をすべきでしょうか? この例では、改良後のメソッドは次のようになります。
 
 ```csharp
-[HttpGet("[controller]/pic/{id}")\]
+[HttpGet("[controller]/pic/{id}")]
 public IActionResult GetImage(int id)
 {
     byte[] imageBytes;

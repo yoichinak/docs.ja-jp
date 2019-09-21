@@ -10,15 +10,15 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 811123ac195bbc92d9e690dcd828535daa246460
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 849983bb9cce6c9e0f41247a898747300fd29435
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878938"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588534"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>ボックス化とボックス化解除 (C# プログラミング ガイド)
-ボックス化とは、[値型](../../../csharp/language-reference/keywords/value-types.md)から `object` 型、またはその値型によって実装されている任意のインターフェイス型へ変換するプロセスのことです。 CLR により値型がボックス化されるとき、値は <xref:System.Object?displayProperty=nameWithType> インスタンス内部にラップされ、マネージド ヒープに格納されます。 ボックス化解除すると、値型がオブジェクトから抽出されます。 ボックス化は暗黙的に行われ、ボックス化解除すると明示的になります。 ボックス化とボックス化解除の概念は、任意の型の値をオブジェクトとして扱うという C# の型システムの統一されたビューに基づいています。  
+ボックス化とは、[値型](../../language-reference/keywords/value-types.md)から `object` 型、またはその値型によって実装されている任意のインターフェイス型へ変換するプロセスのことです。 CLR により値型がボックス化されるとき、値は <xref:System.Object?displayProperty=nameWithType> インスタンス内部にラップされ、マネージド ヒープに格納されます。 ボックス化解除すると、値型がオブジェクトから抽出されます。 ボックス化は暗黙的に行われ、ボックス化解除すると明示的になります。 ボックス化とボックス化解除の概念は、任意の型の値をオブジェクトとして扱うという C# の型システムの統一されたビューに基づいています。  
   
  次の例では、整数の変数 `i` を "*ボックス化*" し、オブジェクト `o` に代入しています。  
   
@@ -33,10 +33,10 @@ ms.locfileid: "65878938"
  [!code-csharp[csProgGuideTypes#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#47)]  
   
 ## <a name="performance"></a>パフォーマンス  
- 簡単な代入と比べて、ボックス化およびボックス化解除は負荷の大きいプロセスです。 値型をボックス化するときは、新しいオブジェクトを割り当てて構築する必要があります。 ボックス化ほどではありませんが、ボックス化解除に必要なキャストも大きな負荷がかかります。 詳しくは、「[パフォーマンス](../../../../docs/framework/performance/performance-tips.md)」をご覧ください。  
+ 簡単な代入と比べて、ボックス化およびボックス化解除は負荷の大きいプロセスです。 値型をボックス化するときは、新しいオブジェクトを割り当てて構築する必要があります。 ボックス化ほどではありませんが、ボックス化解除に必要なキャストも大きな負荷がかかります。 詳しくは、「[パフォーマンス](../../../framework/performance/performance-tips.md)」をご覧ください。  
   
 ## <a name="boxing"></a>ボックス化  
- ボックス化は、値型をガベージ コレクション ヒープに格納するために使用します。 ボックス化とは、[値型](../../../csharp/language-reference/keywords/value-types.md)から `object` 型、またはその値型によって実装されている任意のインターフェイス型への暗黙の変換のことです。 値型をボックス化すると、オブジェクト インスタンスがヒープに割り当てられ、値が新しいオブジェクトにコピーされます。  
+ ボックス化は、値型をガベージ コレクション ヒープに格納するために使用します。 ボックス化とは、[値型](../../language-reference/keywords/value-types.md)から `object` 型、またはその値型によって実装されている任意のインターフェイス型への暗黙の変換のことです。 値型をボックス化すると、オブジェクト インスタンスがヒープに割り当てられ、値が新しいオブジェクトにコピーされます。  
   
  値型の変数の宣言例を次に示します。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "65878938"
  [!code-csharp[csProgGuideTypes#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#16)]  
   
 ## <a name="unboxing"></a>ボックス化解除  
- ボックス化解除とは、`object` 型から[値型](../../../csharp/language-reference/keywords/value-types.md)へ、またはインターフェイス型からそのインターフェイスを実装している値型への明示的な変換のことです。 ボックス化解除では、次の処理が行われます。  
+ ボックス化解除とは、`object` 型から[値型](../../language-reference/keywords/value-types.md)へ、またはインターフェイス型からそのインターフェイスを実装している値型への明示的な変換のことです。 ボックス化解除では、次の処理が行われます。  
   
 - オブジェクト インスタンスが、指定された値型のボックス化された値であることを確認します。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "65878938"
 int j = (short) o;  
 ```  
   
- この行を次のように変更します。  
+ を次のように変更します。  
   
 ```csharp
 int j = (int) o;  
@@ -106,12 +106,12 @@ int j = (int) o;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="related-sections"></a>関連項目  
- 詳細情報  
+ 詳細:  
   
-- [参照型](../../../csharp/language-reference/keywords/reference-types.md)  
+- [参照型](../../language-reference/keywords/reference-types.md)  
   
-- [値型](../../../csharp/language-reference/keywords/value-types.md)  
+- [値型](../../language-reference/keywords/value-types.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# プログラミング ガイド](../index.md)

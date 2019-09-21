@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41070b5d51f0b613d7a6bbbc72b24a8c1793964d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: 6e15ef69c4777cdafe2e5861050a1ccc1f6a1a70
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586116"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046020"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>方法: リフレクションを使用してジェネリック型をチェックおよびインスタンス化する
 ジェネリック型の情報は、他の型の情報と同じ方法で取得します。つまり、ジェネリック型を表す <xref:System.Type> オブジェクトをチェックすることによって取得します。 根本的な違いとして、ジェネリック型には、そのジェネリック型パラメーターを表す <xref:System.Type> オブジェクトの一覧が含まれています。 このセクションでは、まず、ジェネリック型をチェックする手順を示します。  
@@ -119,6 +119,6 @@ ms.locfileid: "65586116"
 
 - <xref:System.Type>
 - <xref:System.Reflection.MethodInfo>
-- [リフレクションとジェネリック型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
-- [型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [ジェネリック](../../../docs/standard/generics/index.md)
+- [リフレクションとジェネリック型](reflection-and-generic-types.md)
+- [型情報の表示](viewing-type-information.md)
+- [ジェネリック](../../standard/generics/index.md)

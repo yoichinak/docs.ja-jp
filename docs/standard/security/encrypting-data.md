@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eeb92845d9b4eb40eef496ffaf5b35e38ed91423
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: fd74da9be6d6b02817c8969befdc292f6e814628
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301166"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968706"
 ---
 # <a name="encrypting-data"></a>データの暗号化
 対称暗号化と非対称暗号化は、異なるプロセスを使用して実行されます。 対称暗号化は、ストリーム上で実行されるため、大量のデータの暗号化に役立ちます。 非対称暗号化は、少ないバイト数で実行されるため、少量のデータにのみ役立ちます。  
@@ -43,7 +43,7 @@ CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateEncryptor()
  次の例は、ストリームの作成、ストリームの暗号化、ストリームへの書き込み、およびストリームを閉じるプロセス全体を示しています。 この例では、 **CryptoStream** クラスと **RijndaelManaged** クラスを使用して暗号化されたネットワーク ストリームを作成します。 <xref:System.IO.StreamWriter> クラスを使用して、暗号化されたストリームにメッセージが書き込まれます。  
   
 > [!NOTE]
->  また、この例を使用してファイルに書き込むこともできます。 それを行うには、 <xref:System.Net.Sockets.TcpClient> の参照を削除し、 <xref:System.Net.Sockets.NetworkStream> を <xref:System.IO.FileStream>に置き換えます。  
+> また、この例を使用してファイルに書き込むこともできます。 それを行うには、 <xref:System.Net.Sockets.TcpClient> の参照を削除し、 <xref:System.Net.Sockets.NetworkStream> を <xref:System.IO.FileStream>に置き換えます。  
   
 ```vb  
 Imports System  

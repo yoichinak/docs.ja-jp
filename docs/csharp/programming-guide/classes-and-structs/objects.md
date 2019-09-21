@@ -6,23 +6,23 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 1ba179c23d9b0e526cdc0dd436ca545377a0db81
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3319cfa6b98e3f4b9b8afa070c4784c03d2750ef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398421"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596389"
 ---
 # <a name="objects-c-programming-guide"></a>オブジェクト (C# プログラミング ガイド)
 クラスまたは構造体の定義は、型の動作を指定する設計図に似ています。 オブジェクトは基本的に、設計図に従って割り当てられて構成されたメモリのブロックです。 プログラムでは、同じクラスのオブジェクトを多数作成できます。 オブジェクトはインスタンスとも呼ばれ、名前付きの変数または配列やコレクションに格納できます。 クライアント コードとは、これらの変数を使ってメソッドを呼び出し、オブジェクトのパブリック プロパティにアクセスするコードです。 C# などのオブジェクト指向言語では、一般的なプログラムは動的に対話する複数のオブジェクトで構成されています。  
   
 > [!NOTE]
-> 静的な型の動作方法は、ここで説明する動作方法とは異なります。 詳細については、「[静的クラスと静的クラス メンバー](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)」を参照してください。
+> 静的な型の動作方法は、ここで説明する動作方法とは異なります。 詳細については、「[静的クラスと静的クラス メンバー](./static-classes-and-static-class-members.md)」を参照してください。
   
 ## <a name="struct-instances-vs-class-instances"></a>構造体インスタンスとクラス インスタンス  
  クラスは参照型であるため、クラスのオブジェクトの変数は、マネージド ヒープ上のオブジェクトのアドレスへの参照を保持します。 同じ型の 2 番目のオブジェクトが最初のオブジェクトに割り当てられた場合、両方の変数がそのアドレスにあるオブジェクトを参照します。 この点については、後で詳しく説明します。  
   
- クラスのインスタンスは、[new 演算子](../../../csharp/language-reference/operators/new-operator.md)を使って作成されます。 次の例では、`Person` が型で、`person1` と `person 2` がその型のインスタンスつまりオブジェクトです。  
+ クラスのインスタンスは、[new 演算子](../../language-reference/operators/new-operator.md)を使って作成されます。 次の例では、`Person` が型で、`person1` と `person 2` がその型のインスタンスつまりオブジェクトです。  
   
  [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
@@ -46,27 +46,27 @@ ms.locfileid: "67398421"
   
  <xref:System.ValueType?displayProperty=nameWithType> での `Equals` の実装は、構造体に存在するフィールドを特定できる必要があるため、リフレクションを使います。 独自の構造体を作成するときは、`Equals` メソッドをオーバーライドして、独自の型に固有の効率的な等値アルゴリズムを提供します。  
   
-- クラスの 2 つのインスタンスのフィールドの値が等しいかどうかを調べるには、<xref:System.Object.Equals%2A> メソッドまたは [== 演算子](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-)を使用できる場合があります。 ただし、この方法を使用できるのは、その型のオブジェクトにおける "等値" の意味のカスタム定義が、クラスのオーバーライドまたはオーバーロードによって提供されている場合だけです。 クラスは、<xref:System.IEquatable%601> インターフェイスまたは <xref:System.Collections.Generic.IEqualityComparer%601> インターフェイスを実装することもできます。 どちらのインターフェイスも、値の等価性をテストするために使うことができるメソッドを提供します。 `Equals` をオーバーライドするクラスをご自分で設計するときは、「[方法: 型の値の等価性を定義する](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)」および「<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>」に記載されているガイドラインに従ってください。  
+- クラスの 2 つのインスタンスのフィールドの値が等しいかどうかを調べるには、<xref:System.Object.Equals%2A> メソッドまたは [== 演算子](../../language-reference/operators/equality-operators.md#equality-operator-)を使用できる場合があります。 ただし、この方法を使用できるのは、その型のオブジェクトにおける "等値" の意味のカスタム定義が、クラスのオーバーライドまたはオーバーロードによって提供されている場合だけです。 クラスは、<xref:System.IEquatable%601> インターフェイスまたは <xref:System.Collections.Generic.IEqualityComparer%601> インターフェイスを実装することもできます。 どちらのインターフェイスも、値の等価性をテストするために使うことができるメソッドを提供します。 `Equals` をオーバーライドするクラスをご自分で設計するときは、「[方法: 型の値の等価性を定義する](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md)」および「<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>」に記載されているガイドラインに従ってください。  
   
 ## <a name="related-sections"></a>関連項目  
  詳細情報  
   
-- [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [クラス](./classes.md)  
   
-- [構造体](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [構造体](./structs.md)  
   
-- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [コンストラクター](./constructors.md)  
   
-- [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [ファイナライザー](./destructors.md)  
   
-- [イベント](../../../csharp/programming-guide/events/index.md)  
+- [イベント](../events/index.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [object](../../../csharp/language-reference/keywords/object.md)
-- [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [class](../../../csharp/language-reference/keywords/class.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [new 演算子](../../../csharp/language-reference/operators/new-operator.md)
+- [C# プログラミング ガイド](../index.md)
+- [object](../../language-reference/keywords/object.md)
+- [継承](./inheritance.md)
+- [class](../../language-reference/keywords/class.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [new 演算子](../../language-reference/operators/new-operator.md)
 - [共通型システム](../../../standard/base-types/common-type-system.md)

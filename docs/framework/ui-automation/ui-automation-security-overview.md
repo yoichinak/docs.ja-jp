@@ -5,17 +5,17 @@ helpviewer_keywords:
 - UI Automation, security model
 - security model, UI Automation
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
-ms.openlocfilehash: c74f770f917fc3b2a7d3a18c08270745dac68b12
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 8b798aef528cccdedb1fcaa53c1782632037600d
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422429"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133786"
 ---
 # <a name="ui-automation-security-overview"></a>UI オートメーションのセキュリティの概要
 
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。
 
 この概要では、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] における [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)]のセキュリティ モデルについて説明します。
 
@@ -41,7 +41,7 @@ UI オートメーション クライアントは、他のプロセスと通信�
 
 ## <a name="manifest-files"></a>マニフェスト ファイル
 
-マニフェスト ファイルが含まれていますが、保護されたシステムの UI にアクセスするアプリケーションを構築する必要があります、`uiAccess`属性、`requestedExecutionLevel`タグを次のようにします。
+保護されたシステム UI にアクセスするには、次のように、 `uiAccess` `requestedExecutionLevel`タグに属性を含むマニフェストファイルを使用してアプリケーションをビルドする必要があります。
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -57,6 +57,4 @@ UI オートメーション クライアントは、他のプロセスと通信�
 
 このコードの `level` 属性の値は一例にすぎません。
 
-`uiAccess` 既定では"false"つまり、属性を省略した場合、またはアセンブリのマニフェストが存在しない場合は、アプリケーションできなく保護対象の UI にアクセスします。
-
-詳細については[!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)]セキュリティ、アプリケーションの署名、およびアセンブリのマニフェストを作成する方法を参照してください[開発者のベスト プラクティスと最小限の特権環境でのアプリケーションのガイドライン](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480150(v=msdn.10))します。
+`uiAccess`既定値は "false" です。つまり、属性を省略した場合、またはアセンブリのマニフェストが存在しない場合、アプリケーションは保護された UI にアクセスできなくなります。

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4b7a5681840bf70eaebc824ff3d0dbeef3d1d799
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401436"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169094"
 ---
 # <a name="binding-sources-overview"></a>バインディング ソースの概要
 データ バインディングでは、バインディング ソース オブジェクトは、データの取得元のオブジェクトを表します。 このトピックでは、バインディング ソースとして使用できるオブジェクトの型について説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "68401436"
 ### <a name="other-characteristics"></a>その他の特性  
  その他の重要な点を次に示します。  
   
-- で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]オブジェクトを作成する場合、クラスにはパラメーターなしのコンストラクターが必要です。 などの[!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)]一部の言語C#では、パラメーターなしのコンストラクターが作成される場合があります。  
+- で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]オブジェクトを作成する場合、クラスにはパラメーターなしのコンストラクターが必要です。 などの一部の .NET 言語C#では、パラメーターなしのコンストラクターが作成される場合があります。  
   
 - バインディングのバインディング ソース プロパティとして使用するプロパティは、クラスのパブリック プロパティである必要があります。 明示的に定義されたインターフェイスのプロパティは、バインディングの目的ではアクセスできません。また、基本実装を持たない保護されたプロパティ、プライベート プロパティ、内部プロパティ、仮想プロパティも同様にバインディングの目的ではアクセスできません。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "68401436"
   
  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] バインディングのアクセス許可要件は同様です。 部分信頼サンドボックスでは、 <xref:System.Windows.Data.XmlDataProvider>指定されたデータにアクセスするためのアクセス許可がない場合、は失敗します。  
   
- 匿名型のオブジェクトは内部です。 完全信頼で実行されている場合にのみ、匿名型のプロパティにバインドできます。 匿名型の詳細については、「[Anonymous Types (C# Programming Guide)](~/docs/csharp/programming-guide/classes-and-structs/anonymous-types.md)」または「[Anonymous Types (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。  
+ 匿名型のオブジェクトは内部です。 完全信頼で実行されている場合にのみ、匿名型のプロパティにバインドできます。 匿名型の詳細については、「[Anonymous Types (C# Programming Guide)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)」または「[Anonymous Types (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。  
   
  部分信頼セキュリティの詳細については、「[WPF 部分信頼セキュリティ](../wpf-partial-trust-security.md)」を参照してください。  
   

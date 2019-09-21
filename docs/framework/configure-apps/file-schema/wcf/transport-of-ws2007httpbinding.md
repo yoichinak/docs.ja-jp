@@ -2,22 +2,23 @@
 title: <transport> の <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: a1540b53d4af76141c1daee60a6bddbbecd9d6da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ea60ccaba58bc0b3fa8f2263295bf1413d25e89
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788298"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399267"
 ---
-# <a name="transport-of-ws2007httpbinding"></a>\<トランスポート > の\<ws2007HttpBinding >
+# <a name="transport-of-ws2007httpbinding"></a>\<ws2007HttpBinding の\<トランスポート > >
 HTTP トランスポートの認証設定を定義します。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<ws2007HttpBinding >  
-\<binding>  
-\<セキュリティ >  
-\<transport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007HttpBinding >** ](ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<セキュリティ >** ](security-of-ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<トランスポート >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,7 +44,7 @@ HTTP トランスポートの認証設定を定義します。
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |なし|セキュリティを無効にします。|  
 |Basic|基本認証を使用します。|  
@@ -54,7 +55,7 @@ HTTP トランスポートの認証設定を定義します。
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |なし|セキュリティを無効にします。|  
 |Basic|基本認証を使用します。|  
@@ -70,7 +71,7 @@ HTTP トランスポートの認証設定を定義します。
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|セキュリティ機能を表す、 [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)要素。|  
+|[\<security>](security-of-ws2007httpbinding.md)|Ws2007HttpBinding > 要素の[ \<](ws2007httpbinding.md)セキュリティ機能を表します。|  
   
 ## <a name="see-also"></a>関連項目
 
@@ -78,8 +79,8 @@ HTTP トランスポートの認証設定を定義します。
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>
-- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../wcf/feature-details/securing-services-and-clients.md)
+- [バインディング](../../../wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 330e4e8b36f03b028786920422cd325b31d814e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61711201"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053275"
 ---
 # <a name="interfaces-c-programming-guide"></a>インターフェイス (C# プログラミング ガイド)
 
@@ -27,11 +27,11 @@ ms.locfileid: "61711201"
 
 <xref:System.IEquatable%601> インターフェイスを実装するすべてのクラスまたは構造体は、インターフェイスで指定されたシグネチャに一致する <xref:System.IEquatable%601.Equals%2A> メソッドの定義を含む必要があります。 したがって、`IEquatable<T>` を実装するクラスが `Equals` メソッドを含むと想定したうえで、これを使用してクラスの 1 つのインスタンスが同じクラスの別のインスタンスと等しいかどうかを判定できます。  
   
-`IEquatable<T>` の定義は `Equals` の実装を提供しません。 インターフェイスは、シグネチャのみを定義します。 つまり、C# のインターフェイスは、すべてのメソッドが抽象的である抽象クラスに似ています。 クラスまたは構造体は複数のインターフェイスを実装できます。ただし、クラスが継承できるのは、抽象的かどうかに関係なく、1 つのクラスのみです。
+`IEquatable<T>` の定義は `Equals` の実装を提供しません。 クラスまたは構造体には複数のインターフェイスを実装できます。ただし、クラスは 1 つのクラスからのみ継承できます。
   
 抽象クラスの詳細については、「[抽象クラスとシール クラス、およびクラス メンバー](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)」を参照してください。  
   
-インターフェイスには、メソッド、プロパティ、イベント、インデクサー、またはこれらの 4 種類のメンバーの任意の組み合わせを含めることができます。 例へのリンクについては、「[関連項目](../interfaces/index.md#BKMK_RelatedSections)」を参照してください。 インターフェイスには、定数、フィールド、演算子、インスタンス コンストラクター、ファイナライザー、または型を含めることはできません。 インターフェイスのメンバーは、自動的にパブリックに設定され、アクセス修飾子を含むことはできません。 メンバーを [static](../../language-reference/keywords/static.md) として宣言することもできません。  
+インターフェイスには、メソッド、プロパティ、イベント、インデクサー、またはこれらの 4 種類のメンバーの任意の組み合わせを含めることができます。 例へのリンクについては、「[関連項目](./index.md#BKMK_RelatedSections)」を参照してください。 インターフェイスには、定数、フィールド、演算子、インスタンス コンストラクター、ファイナライザー、または型を含めることはできません。 インターフェイスのメンバーは、自動的にパブリックに設定され、アクセス修飾子を含むことはできません。 メンバーを [static](../../language-reference/keywords/static.md) として宣言することもできません。  
   
 インターフェイスのメンバーを実装するには、実装するクラスの対応するメンバーがパブリックかつ非静的であり、インターフェイスのメンバーと同じ名前および署名を持つ必要があります。  
   

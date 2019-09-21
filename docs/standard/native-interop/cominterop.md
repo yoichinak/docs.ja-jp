@@ -4,12 +4,12 @@ description: .NET で COM ライブラリを相互運用する方法について
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 07/11/2019
-ms.openlocfilehash: 03ede2fc95f4114a4d80423bd7de2e46012a2431
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9355e2ae84da623ffa725f5b2ac1bdee25b966d8
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631426"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971888"
 ---
 # <a name="com-interop-in-net"></a>.NET での COM 相互運用
 

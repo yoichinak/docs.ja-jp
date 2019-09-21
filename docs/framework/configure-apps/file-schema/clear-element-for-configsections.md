@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: e79def513637937262d00b0edb1b0f7676fd120b
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: c06fca8b83638fb47bedb21863cb9b200cd211f3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300803"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927728"
 ---
-# <a name="clear-element-for-configsections"></a>\<クリア > 要素の\<configSections >
+# <a name="clear-element-for-configsections"></a>\<configsections の > \<要素をクリア >
 
 以前に定義されたセクションおよびセクション グループのすべてをクリアします。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<クリア >**
 
 ## <a name="syntax"></a>構文
 
@@ -34,13 +34,13 @@ ms.locfileid: "66300803"
 
 |           | 説明 |
 | --------- | ----------- |
-| **name**  | 必須の属性です。<br><br>セクションまたは削除するセクション グループの名前を指定します。 |
+| **name**  | 必須の属性です。<br><br>削除するセクションまたはセクショングループの名前を指定します。 |
 
 ## <a name="parent-element"></a>親要素
 
 |     | 説明 |
 | --- | ----------- |
-| [ **\<configSections >** 要素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 構成セクションと名前空間宣言が含まれています。 |
+| [要素 > configsections  **\<** ](configsections-element-for-configuration.md) | 構成セクションと名前空間の宣言が含まれています。 |
 
 ## <a name="child-elements"></a>子要素
 
@@ -48,13 +48,13 @@ ms.locfileid: "66300803"
 
 ## <a name="remarks"></a>Remarks
 
-**\<オフ >** 要素、または構成ファイル階層内の上位レベルにある現在の構成ファイルで既に定義されているアプリケーションからすべてのセクションおよびセクション グループを削除します。
+**\<Clear >** 要素は、現在の構成ファイルまたは構成ファイル階層の上位レベルで定義されたすべてのセクションとセクショングループをアプリケーションから削除します。
 
 ## <a name="example"></a>例
 
-この例は、マシン構成ファイルと、アプリケーション構成ファイルを定義しを使用する方法を示しています、 **\<オフ >** セクションで以前に定義を解除する、アプリケーション構成ファイル内の要素、マシン構成ファイル。
+この例では、コンピューター構成ファイルとアプリケーション構成ファイルを定義し、アプリケーション構成ファイルで **\<clear >** 要素を使用して、コンピューター構成で以前に定義したセクションをクリアする方法を示します。拡張子.
 
-マシン構成ファイルのコードは、次は、2 つのセクションを宣言します **\<sampleSection >** と **\<anotherSampleSection >** 、アプリケーションを読んでいる。構成ファイル:
+次のマシン構成ファイルのコードでは、アプリケーション構成ファイルの前に読み取られた **\<sampleSection >** と **\<anotherSampleSection >** の2つのセクションが宣言されています。
 
 ```xml
 <!-- Machine.config file -->
@@ -71,7 +71,7 @@ ms.locfileid: "66300803"
 </configuration>
 ```
 
-次のアプリケーション構成ファイルのコードでは、以前に宣言されたすべてのセクションをクリアします。 アプリケーションがコンピューターの構成ファイルで宣言されたセクションのいずれかの設定を取得または使用できません。 ただしから設定を使用して、  **\<anotherSection >** 後を備えているため、 **\<をオフに >** 要素。
+次のアプリケーション構成ファイルのコードは、以前に宣言されたすべてのセクションを消去します。 アプリケーションでは、コンピューターの構成ファイルで宣言されているセクションのいずれかで設定を使用または取得することはできません。 ただし、  **\<clear >** 要素の後にあるため、他の **\<セクション >** の設定を使用できます。
 
 ```xml
 <!-- Application configuration file -->
@@ -89,8 +89,8 @@ ms.locfileid: "66300803"
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーション構成ファイル、マシン構成ファイルで使用できます (*Machine.config*)、および*Web.config*アプリケーション ディレクトリ レベルではないファイル。
+この要素は、アプリケーション構成ファイル、コンピューター構成ファイル (machine.config)、およびアプリケーションディレクトリレベルではない web.config ファイルで使用できます。
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイルスキーマ](index.md)

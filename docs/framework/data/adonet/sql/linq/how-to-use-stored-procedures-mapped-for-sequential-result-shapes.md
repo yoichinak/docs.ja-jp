@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a73530de-5a4e-4d9c-8d66-abb19c225b11
-ms.openlocfilehash: e51ebacb3f6be849f7b871f2d12db3ea7476b117
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bae10e823a274304f21292cf55947a4d4eaccc10
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877072"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781458"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>方法: シーケンシャルな結果形状が割り当てられたストアド プロシージャを使用する
-この種類のストアド プロシージャでは、複数の結果形状が生成されますが、どの順序で結果が返されるかがわかります。 このシナリオは、返される結果のシーケンスがわからないシナリオと対照的です。 詳細については、「[方法 :複数の結果形状が割り当てられたストアド プロシージャを使用して、](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md)します。  
+この種類のストアド プロシージャでは、複数の結果形状が生成されますが、どの順序で結果が返されるかがわかります。 このシナリオは、返される結果のシーケンスがわからないシナリオと対照的です。 詳細については、「[方法 :複数の結果形状](how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md)にマップされたストアドプロシージャを使用します。  
   
 ## <a name="example"></a>例  
  次は、複数の結果形状をシーケンシャルに返すストアド プロシージャの T-SQL です。  
@@ -36,4 +36,4 @@ select * from customers
   
 ## <a name="see-also"></a>関連項目
 
-- [ストアド プロシージャ](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [ストアド プロシージャ](stored-procedures.md)

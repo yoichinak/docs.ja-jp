@@ -3,15 +3,15 @@ title: クレーム対応の ASP.NET Web アプリケーションを初めて構
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: db5060826d3bfcc259c098a160354892a050554c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 900ee49b4bf51eeb6e3b0c0cf6879cc12a0cb071
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422390"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045591"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>クレーム対応の ASP.NET Web アプリケーションを初めて構築する
-## <a name="applies-to"></a>対象  
+## <a name="applies-to"></a>適用対象  
   
 - Windows Identity Foundation (WIF)  
   
@@ -19,7 +19,7 @@ ms.locfileid: "67422390"
   
  このトピックでは、WIF を使用してクレーム対応 ASP.NET Web アプリケーションをビルドするシナリオの概要について説明します。 クレーム対応アプリケーションのシナリオには、通常、アプリケーション、エンド ユーザー、セキュリティ トークン サービス (STS) の 3 つ参加要素が存在します。 次の図は、このシナリオについて説明しています。  
   
- ![WIF 基本 Web アプリのコンポーネントを示す図。](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
+ ![WIF の基本的な Web アプリコンポーネントを示す図](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
 1. クレーム対応アプリケーションは、認証されていない要求を WIF で特定し、その要求を STS にリダイレクトします。  
   
@@ -33,20 +33,20 @@ ms.locfileid: "67422390"
   
  STS は、認証が正常に行われたときにトークンを発行するサービスです。 Microsoft では、2 つの業界標準 STS を提供します。  
   
-- [Active Directory フェデレーション サービス (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Active Directory フェデレーションサービス (AD FS) (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
-- [Windows Azure の Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
+- [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
- AD FS 2.0 は、Windows Server R2 に含まれており、設置型シナリオの STS として使用できます。 ACS は、Microsoft Azure プラットフォームの一部として提供されるクラウド サービスです。 テストまたは学習の目的で、他の STS を使用して、クレーム対応アプリケーションをビルドすることもできます。 たとえばの一部であるローカルの開発用 STS を使用することができます、 [Identity and Access Tool for Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849)は自由に利用できるオンライン。  
+ AD FS 2.0 は、Windows Server R2 に含まれており、設置型シナリオの STS として使用できます。 ACS は、Microsoft Azure プラットフォームの一部として提供されるクラウド サービスです。 テストまたは学習の目的で、他の STS を使用して、クレーム対応アプリケーションをビルドすることもできます。 たとえば、 [Visual Studio の Identity And Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)に含まれるローカル開発用 STS を使用して、オンラインで自由に入手できます。  
   
  WIF を使用してクレーム対応 ASP.NET アプリケーションを初めてビルドするには、次のいずれかの手順に従ってください。  
   
-- [方法: WIF を使用してクレーム対応 ASP.NET MVC Web アプリケーションを作成します。](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+- [方法: WIF を使用して要求に対応する ASP.NET MVC Web アプリケーションをビルドする](how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
-- [方法: WIF を使用してクレーム対応 ASP.NET Web フォーム アプリケーションを構築します。](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+- [方法: WIF を使用してクレーム対応 ASP.NET Web フォームアプリケーションをビルドする](how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
-- [方法: フォーム ベース認証を使用してクレーム対応 ASP.NET アプリケーションを構築します。](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+- [方法: フォームベースの認証を使用してクレーム対応 ASP.NET アプリケーションをビルドする](claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [WIF の概要](../../../docs/framework/security/getting-started-with-wif.md)
+- [WIF の概要](getting-started-with-wif.md)

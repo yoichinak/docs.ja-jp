@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5b5f7ce6a4ce8f542b3c49fe4749bfde23ecf84
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58919936bdc62d52437f429146f04c66d49294b2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744491"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796585"
 ---
 # <a name="iassemblynamegetversion-method"></a>IAssemblyName::GetVersion メソッド
-これによって参照されるアセンブリのバージョン情報を取得[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)オブジェクト。  
+この[IAssemblyName](iassemblyname-interface.md)オブジェクトによって参照されるアセンブリのバージョン情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,18 +38,18 @@ HRESULT GetVersion (
   
 ## <a name="parameters"></a>パラメーター  
  `pdwVersionHi`  
- [out]バージョンの上位 32 ビット。  
+ 入出力バージョンの上位32ビット。  
   
  `pdwVersionLow`  
- [out]バージョンの下位 32 ビット。  
+ 入出力バージョンの下位32ビット。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)

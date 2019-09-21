@@ -3,21 +3,22 @@ title: <serviceTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
-ms.openlocfilehash: 1143717882652fc8a03947327b5f1ea89dde7373
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 30a53c11b551623311f7ca3f957143fc702568a1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793810"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251847"
 ---
-# <a name="servicetokenresolver"></a>\<serviceTokenResolver>
-トークン ハンドラー コレクションのハンドラーによって使用されるサービス トークン リゾルバーを登録します。 サービス トークン リゾルバーを使用して、受信トークンおよびメッセージの暗号化トークンを解決します。  
+# <a name="servicetokenresolver"></a>\<serviceTokenResolver >
+トークンハンドラーコレクションのハンドラーによって使用されるサービストークンリゾルバーを登録します。 サービストークンリゾルバーは、受信トークンとメッセージの暗号化トークンを解決するために使用されます。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration>  
-\<serviceTokenResolver>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<システムの >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<構成 >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlerConfiguration >** ](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceTokenResolver >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +42,7 @@ ms.locfileid: "61793810"
   
 |属性|説明|  
 |---------------|-----------------|  
-|種類|サービス トークン リゾルバーの種類を指定します。 いずれか、<xref:System.IdentityModel.Selectors.SecurityTokenResolver>型または型から派生した、<xref:System.IdentityModel.Selectors.SecurityTokenResolver>クラス。 詳細を指定する方法については、`type`属性を [カスタム型の参照] を参照してください。 必須。|  
+|型|サービストークンリゾルバーの種類を指定します。 クラスから派生した型または型。<xref:System.IdentityModel.Selectors.SecurityTokenResolver> <xref:System.IdentityModel.Selectors.SecurityTokenResolver> `type`属性を指定する方法の詳細については、「[カスタム型参照]」を参照してください。 必須。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -50,18 +51,19 @@ ms.locfileid: "61793810"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|トークン ハンドラー コレクションのセキュリティの構成を提供します。|  
+|[\<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)|セキュリティトークンハンドラーのコレクションの構成を提供します。|  
   
 ## <a name="remarks"></a>Remarks  
- 着信トークンおよびメッセージの暗号化トークンを解決するのには、サービス トークン リゾルバーを使用できます。 着信トークン暗号化解除に使用されるキーの取得に使用されます。 指定する必要があります、`type`属性。 指定された型には、いずれかを指定できる<xref:System.IdentityModel.Selectors.SecurityTokenResolver>またはカスタム型から派生した、<xref:System.IdentityModel.Selectors.SecurityTokenResolver>クラス。  
+ サービストークンリゾルバーを使用して、受信トークンとメッセージの暗号化トークンを解決できます。 これは、受信トークンの暗号化を解除するために使用する必要があるキーを取得するために使用されます。 `type`属性を指定する必要があります。 指定できる型は、また<xref:System.IdentityModel.Selectors.SecurityTokenResolver>は<xref:System.IdentityModel.Selectors.SecurityTokenResolver>クラスから派生したカスタム型のいずれかです。  
   
- いくつかのトークン ハンドラーを使用すると、構成でサービス トークン リゾルバーの設定を指定できます。 セキュリティ トークン ハンドラー コレクションの指定された個々 のトークン ハンドラーの設定をオーバーライドします。  
+ 一部のトークンハンドラーでは、構成でサービストークンリゾルバーの設定を指定できます。 個々のトークンハンドラーの設定は、セキュリティトークンハンドラーコレクションで指定された設定よりも優先されます。  
   
 > [!NOTE]
->  指定する、`<serviceTokenResolver>`要素の子要素として、 [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)要素は非推奨とされましたが、旧バージョンとの互換性もサポートします。 上の設定、`<securityTokenHandlerConfiguration>`要素のオーバーライド、`<identityConfiguration>`要素。  
+> 要素を、指定した[ \<>](identityconfiguration.md)要素の子要素として指定することは推奨されていませんが、旧バージョンとの互換性のためにサポートされています。 `<serviceTokenResolver>` 要素の設定`<securityTokenHandlerConfiguration>`は、要素の設定`<identityConfiguration>`よりも優先されます。  
   
 ## <a name="example"></a>例  
   
 ```xml  
 <serviceTokenResolver type="MyNamespace.CustomTokenResolver, MyAssembly" />  
 ```
+ 

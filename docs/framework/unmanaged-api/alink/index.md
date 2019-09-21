@@ -8,37 +8,37 @@ helpviewer_keywords:
 ms.assetid: f4a84be2-309c-439c-b686-6facb85f4654
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d5c80a72eef31abaacedc52c9e63d561c30cc25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba9ea93ce2e2874da6c26eb364c14b421ea94794
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753432"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776927"
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>ALink API (アンマネージ API リファレンス)
 .NET Framework アセンブリと非バインド モジュールの作成をサポートします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [AssemblyAttributesGoHere](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)  
+ [AssemblyAttributesGoHere](assemblyattributesgohere.md)  
   
- [AssemblyAttributesGoHereM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)  
+ [AssemblyAttributesGoHereM](assemblyattributesgoherem.md)  
   
- [AssemblyAttributesGoHereS](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheres.md)  
+ [AssemblyAttributesGoHereS](assemblyattributesgoheres.md)  
   
- [AssemblyAttributesGoHereSM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheresm.md)  
+ [AssemblyAttributesGoHereSM](assemblyattributesgoheresm.md)  
   
- [AssemblyOptions 列挙型](../../../../docs/framework/unmanaged-api/alink/assemblyoptions-enumeration.md)  
+ [AssemblyOptions 列挙型](assemblyoptions-enumeration.md)  
   
- [CreateALink 関数](../../../../docs/framework/unmanaged-api/alink/createalink-function.md)  
+ [CreateALink 関数](createalink-function.md)  
   
- [GetALinkMessageDll 関数](../../../../docs/framework/unmanaged-api/alink/getalinkmessagedll-function.md)  
+ [GetALinkMessageDll 関数](getalinkmessagedll-function.md)  
   
- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [IALink インターフェイス](ialink-interface.md)  
   
- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [IALink2 インターフェイス](ialink2-interface.md)  
   
- [IALink3 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
+ [IALink3 インターフェイス](ialink3-interface.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [アンマネージ API リファレンス](../../../../docs/framework/unmanaged-api/index.md)
+- [アンマネージ API リファレンス](../index.md)

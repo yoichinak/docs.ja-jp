@@ -8,61 +8,61 @@ helpviewer_keywords:
 ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1605605f8510f7ccf5f0bbf2f3f6b09050a16025
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697668"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795307"
 ---
 # <a name="fusion-interfaces"></a>Fusion インターフェイス
-このセクションでは、fusion API がアプリケーションのリソースのプロパティにアクセスして、アプリケーションのリソースの正しいバージョンを見つけるために使用するアンマネージ インターフェイスについて説明します。  
+このセクションでは、アプリケーションのリソースのプロパティにアクセスするために fusion API が使用するアンマネージインターフェイスについて説明し、アプリケーションのリソースの正しいバージョンを特定します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [IAppIdAuthority インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)  
- アプリケーション id と参照キーの比較を生成するメソッドを提供します。  
+ [IAppIdAuthority インターフェイス](iappidauthority-interface.md)  
+ アプリケーション id と参照のキーを生成して比較するメソッドを提供します。  
   
- [IAssemblyCache インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  
- グローバル アセンブリ キャッシュの表現を提供します。  
+ [IAssemblyCache インターフェイス](iassemblycache-interface.md)  
+ グローバルアセンブリキャッシュの表現を提供します。  
   
- [IAssemblyCacheItem インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)  
- グローバル アセンブリ キャッシュ内の 1 つのアセンブリを表します。  
+ [IAssemblyCacheItem インターフェイス](iassemblycacheitem-interface.md)  
+ グローバルアセンブリキャッシュ内の1つのアセンブリを表します。  
   
- [IAssemblyEnum インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)  
- 配列の列挙子を表す`IAssemblyName`オブジェクト。  
+ [IAssemblyEnum インターフェイス](iassemblyenum-interface.md)  
+ オブジェクトの`IAssemblyName`配列の列挙子を表します。  
   
- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- 記述して、アセンブリの一意の id の操作のメソッドを提供します。  
+ [IAssemblyName インターフェイス](iassemblyname-interface.md)  
+ アセンブリの一意の id を記述および操作するためのメソッドを提供します。  
   
- [IDefinitionAppId インターフェイス](../../../../docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md)  
- 現在のスコープ内でアプリケーションを定義するコードの一意の識別子を表します。  
+ [IDefinitionAppId インターフェイス](idefinitionappid-interface.md)  
+ 現在のスコープ内のアプリケーションを定義するコードの一意の識別子を表します。  
   
- [IDefinitionIdentity インターフェイス](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)  
- 現在のスコープ内でアプリケーションを定義するコードの一意のシグネチャを表します。  
+ [IDefinitionIdentity インターフェイス](idefinitionidentity-interface.md)  
+ 現在のスコープ内のアプリケーションを定義するコードの一意の署名を表します。  
   
- [IEnumDefinitionIdentity インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md)  
- コレクションの列挙子として機能`IDefinitionIdentity`オブジェクト。  
+ [IEnumDefinitionIdentity インターフェイス](ienumdefinitionidentity-interface.md)  
+ オブジェクトの`IDefinitionIdentity`コレクションの列挙子として機能します。  
   
- [IEnumIDENTITY_ATTRIBUTE インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
- 現在のスコープ内のコード オブジェクトの属性の列挙子として機能します。  
+ [IEnumIDENTITY_ATTRIBUTE インターフェイス](ienumidentity-attribute-interface.md)  
+ 現在のスコープ内のコードオブジェクトの属性の列挙子として機能します。  
   
- [IEnumReferenceIdentity インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ienumreferenceidentity-interface.md)  
- コレクションの列挙子として機能`IReferenceIdentity`オブジェクト。  
+ [IEnumReferenceIdentity インターフェイス](ienumreferenceidentity-interface.md)  
+ オブジェクトの`IReferenceIdentity`コレクションの列挙子として機能します。  
   
- [IIdentityAuthority インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)  
- コード オブジェクトの id キーを管理します。  
+ [IIdentityAuthority インターフェイス](iidentityauthority-interface.md)  
+ コードオブジェクトの id キーを管理します。  
   
- [IInstallReferenceEnum インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)  
- グローバル アセンブリ キャッシュにインストールされている参照先アセンブリの列挙子を表します。  
+ [IInstallReferenceEnum インターフェイス](iinstallreferenceenum-interface.md)  
+ グローバルアセンブリキャッシュにインストールされている参照アセンブリの列挙子を表します。  
   
- [IInstallReferenceItem インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  
- グローバル アセンブリ キャッシュにインストールされている項目を表します。  
+ [IInstallReferenceItem インターフェイス](iinstallreferenceitem-interface.md)  
+ グローバルアセンブリキャッシュにインストールされている項目を表します。  
   
- [IReferenceAppId インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ireferenceappid-interface.md)  
- 現在のスコープ内でアプリケーションの一意の識別子への参照を表します。  
+ [IReferenceAppId インターフェイス](ireferenceappid-interface.md)  
+ 現在のスコープ内のアプリケーションの一意の識別子への参照を表します。  
   
- [IReferenceIdentity インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
- コード オブジェクトの一意のシグネチャへの参照を表します。  
+ [IReferenceIdentity インターフェイス](ireferenceidentity-interface.md)  
+ コードオブジェクトの一意の署名への参照を表します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Reflection>  
@@ -70,8 +70,8 @@ ms.locfileid: "61697668"
  <xref:System.Reflection.Emit>  
   
 ## <a name="related-sections"></a>関連項目  
- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [Fusion グローバル静的関数](fusion-global-static-functions.md)  
   
- [Fusion 列挙型](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)  
+ [Fusion 列挙型](fusion-enumerations.md)  
   
- [Fusion 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+ [Fusion 構造体](fusion-structures.md)

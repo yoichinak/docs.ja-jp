@@ -2,14 +2,14 @@
 title: .NET Framework から .NET Core にコードを移植する
 description: 移植プロセスを理解し、.NET Framework プロジェクトを .NET Core に移植する際に役立つツールを確認します。
 author: cartermp
-ms.date: 07/03/2019
+ms.date: 09/13/2019
 ms.custom: seodec18
-ms.openlocfilehash: c408beb97290c41d2ab6944b9d1f68bbc5e946fb
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: b6c02932b5d9c7ccc2743dd38dddf2904f9c24e4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609248"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039661"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>.NET Framework から .NET Core にコードを移植する
 
@@ -29,17 +29,19 @@ ms.locfileid: "67609248"
 
 3. [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md)使用して、アセンブリを分析し、その結果に基づいて移植を行う計画を作成します。
 
-   API Portability Analyzer ツールは、コンパイル済みアセンブリを分析し、レポートを生成します。これには、移植性に関する大まかな概要と、使用中の API のうちで .NET Core では利用できないものそれぞれについての内訳が記載されています。 このレポートをコードベースの分析と共に使用して、コードを移植する方法の計画を作成します。
+   API Portability Analyzer ツールは、コンパイル済みアセンブリを分析し、レポートを生成します。これには、移植性に関する大まかな概要と、ターゲットの .NET Core プラットフォームのパブリック公開領域にない使用中の各 API の内訳が記載されています。 このレポートをコードベースの分析と共に使用して、コードを移植する方法の計画を作成します。
 
-4. テスト コードを移植します。
+4. ターゲットの .NET Core バージョンにお使いのプロジェクト ファイルを変換したら、Roslyn ベースの [.NET API アナライザー](../../standard/analyzers/api-analyzer.md)を使用して、一部のプラットフォームに <xref:System.PlatformNotSupportedException> をスローする API と、発生する可能性のあるその他の互換性の問題を識別します。
+
+5. テスト コードを移植します。
 
    .NET Core への移植はコードベースにとって大きな変更となるため、コードの移植時にテストを実行できるように、テストを移植することを強くお勧めします。 MSTest、xUnit、NUnit はすべて .NET Core をサポートしています。
 
-5. 移植の計画を実行します。
+6. 移植の計画を実行します。
 
 移植プロセス中に使うと役立つツールを、次の一覧に示します。
 
-* .NET Portability Analyzer - [コマンド ライン ツール](https://github.com/Microsoft/dotnet-apiport/releases)または [Visual Studio 拡張機能](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)。.NET Framework とターゲットの .NET Core プラットフォームの間のコードの移植性に関するレポートを生成できるツールです。 レポートには、ターゲットの .NET Core プラットフォームにない型と API のアセンブリごとの内訳が含まれています。 詳細については、[.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) に関するページをご覧ください。 .NET Portability Analyzer ツールは不足している API の間のギャップを特定する助けになるため、移植を開始する前に実行することをお勧めします。
+* .NET Portability Analyzer - [コマンド ライン ツール](https://github.com/Microsoft/dotnet-apiport/releases)または [Visual Studio 拡張機能](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)。 .NET Framework とターゲットの .NET Core プラットフォームの間のコードの移植性に関するレポートを生成できるツールです。 レポートには、ターゲットの .NET Core プラットフォームにない型と API のアセンブリごとの内訳が含まれています。 詳細については、[.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) に関するページをご覧ください。 .NET Portability Analyzer ツールでは、特定のターゲットの .NET プラットフォームのパブリック公開領域で不足している API を特定できるため、移植を開始する前に実行することをお勧めします。
 * .NET API アナライザー - プラットフォームに <xref:System.PlatformNotSupportedException> をスローし、非推奨の API の呼び出しを検出し、さまざまなプラットフォームでの C# API の互換性リスクの可能性を検出する .NET Standard API を検出する Roslyn アナライザー。 詳細については、「[.NET API アナライザー](../../standard/analyzers/api-analyzer.md)」をご覧ください。 このアナライザーは .NET Core プロジェクトを作成した後、異なるプラットフォームでのランタイムの動作の違いを特定するために役立ちます。
 * Reverse Package Search - 型を検索し、その型を含むパッケージを検索するための[便利な Web サービス](https://packagesearch.azurewebsites.net)。
 

@@ -5,33 +5,30 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 5c92b7bfd5026b0569397dc05cca216fbdab0753
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: df87f00e6e03de67c3fb1adc28472c96f4a47ef4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689305"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015633"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>方法: Windows フォームに単純バインド コントロールを作成する
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>方法: Windows フォームに単純バインドコントロールを作成する
 
-*単純バインディング*コントロールでデータセット テーブルの列の値などの 1 つのデータ要素を表示することができます。 できます単純にバインドするコントロールの任意のプロパティのデータ値にします。
+*単純なバインド*では、データセットテーブルの列値など、1つのデータ要素をコントロールに表示できます。 コントロールの任意のプロパティをデータ値に単純にバインドできます。
 
-> [!NOTE]
-> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。
+## <a name="to-simple-bind-a-control"></a>コントロールを単純にバインドするには
 
-### <a name="to-simple-bind-a-control"></a>単純なコントロールをバインドする
+1. データ ソースに接続します。 詳細については、「[データソースへの接続](../data/adonet/connecting-to-a-data-source.md)」を参照してください。
 
-1. データ ソースに接続します。 詳細については、次を参照してください。[データ ソースに接続する](../data/adonet/connecting-to-a-data-source.md)します。
+2. Visual Studio でフォーム上のコントロールを選択し、 **[プロパティ]** ウィンドウを表示します。
 
-2. フォームのコントロールを選択し、表示、**プロパティ**ウィンドウ。
+3. **[(連結)]** プロパティを展開します。
 
-3. 展開、 **(DataBindings)** プロパティ。
+     最も頻繁にバインドされるプロパティは、 **([連結])** プロパティの下に表示されます。 たとえば、ほとんどのコントロールでは、 **Text**プロパティは最も頻繁にバインドされます。
 
-     最も頻繁にバインドされるプロパティは、下に表示されます、 **(DataBindings)** プロパティ。 たとえば、ほとんどのコントロールで、**テキスト**プロパティが最も頻繁にバインドされています。
+4. バインドするプロパティが一般的にバインドされるプロパティの1つでない場合は、 **[(詳細)]** ボックスの**省略記号**ボタン![(省略記号ボタン ([..](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)プロパティウィンドウ.]) をクリックして、 **[書式設定と詳細バインド**] ダイアログボックスで、そのコントロールのプロパティの完全な一覧が表示されます。
 
-4. たいプロパティのバインドが一般にバインドされるプロパティのいずれかをクリックして、**省略記号**ボタン (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)) で、 **(詳細設定)** ボックスを表示する、**フォーマットと詳細バインド**そのコントロールのプロパティの完全な一覧がダイアログ ボックス。
-
-5. バインドし、下のドロップダウン矢印をクリックします。 プロパティを選択**バインド**します。
+5. バインドするプロパティを選択し、 **[バインド]** の下にあるドロップダウン矢印をクリックします。
 
      使用できるデータ ソースの一覧が表示されます。
 
@@ -39,12 +36,12 @@ ms.locfileid: "66689305"
 
 7. バインド先の要素の名前をクリックします。
 
-8. 作業している場合、**フォーマットと詳細バインド**ダイアログ ボックスで、をクリックして **[ok]** に戻る、**プロパティ**ウィンドウ。
+8. **[書式設定と詳細バインド]** ダイアログボックスで作業している場合は、 **[OK]** をクリックして、 **[プロパティ]** ウィンドウに戻ります。
 
 9. コントロールの追加のプロパティをバインドする場合は、手順 3. ~ 7. を繰り返します。
 
     > [!NOTE]
-    > 単純バインド コントロールでは、1 つのデータ要素のみを表示するためには、Windows フォームに単純バインド コントロールにナビゲーション ロジックを含める非常に一般的です。
+    > 単純バインドコントロールにはデータ要素が1つだけ表示されるため、単純バインドコントロールを含む Windows フォームにナビゲーションロジックを含めるのが一般的です。
 
 ## <a name="see-also"></a>関連項目
 

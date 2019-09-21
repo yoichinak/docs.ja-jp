@@ -5,38 +5,38 @@ helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: 903928087d5ad9c51040ba6bf65639f44d8c7dd6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f72dcc25b158d793850069e5cc32c3a3c02fad17
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627436"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939209"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML リテラルでの空白文字 (Visual Basic)
-作成時に、Visual Basic コンパイラは XML リテラルの有意の空白文字だけが組み込まれて、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト。 余分な空白文字は組み込まれません。  
+Visual Basic コンパイラは、オブジェクトを[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]作成するときに、XML リテラルから有意な空白文字のみを組み込みます。 意味のない空白文字は組み込まれていません。  
   
-## <a name="significant-and-insignificant-white-space"></a>有意の空白文字  
- XML リテラルの空白文字は、のみの 3 つの領域には重要です。  
+## <a name="significant-and-insignificant-white-space"></a>有意で意味のない空白  
+ XML リテラルの空白文字は、3つの領域でのみ重要です。  
   
-- 属性値に含まれる場合。  
+- 属性値に含まれている場合。  
   
-- 要素のテキスト コンテンツの一部であるし、テキストには、その他の文字も含まれています。  
+- 要素のテキストコンテンツの一部であり、テキストに他の文字も含まれている場合。  
   
-- 要素のテキスト コンテンツの埋め込み式に含まれる場合。  
+- 要素のテキストコンテンツの埋め込み式に含まれている場合。  
   
- それ以外の場合、コンパイラとして意味のない空白文字を処理しでは、含まれません、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]リテラルのオブジェクト。  
+ それ以外の場合、コンパイラは空白文字を意味のないものとして[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]扱い、リテラルのオブジェクトには含まれません。  
   
- 余分な空白を XML リテラルに含めるには、文字列リテラルの空白を含む埋め込み式を使用します。  
+ XML リテラルに意味のない空白を含めるには、空白を含む文字列リテラルを含む埋め込み式を使用します。  
   
 > [!NOTE]
->  場合、 `xml:space` XML 要素リテラルの属性が表示されたら、Visual Basic コンパイラにはで属性が含まれています、<xref:System.Xml.Linq.XElement>オブジェクトが、この属性は、コンパイラによる空白の処理方法を変更していないを追加します。  
+> XML 要素リテラルに<xref:System.Xml.Linq.XElement> 属性が含まれている場合、VisualBasicコンパイラでは、オブジェクトに属性が含まれますが、この属性を追加しても、コンパイラが空白を処理する方法は変更されません。`xml:space`  
   
 ## <a name="examples"></a>使用例  
- 次の例には、外部と内部の 2 つの XML 要素が含まれています。 両方の要素には、そのテキスト コンテンツ内の空白が含まれます。 空白と XML 要素のみが含まれているため、外側の要素内の空白は意味はありません。 空白文字とテキストが含まれているために、内部の要素内の空白は重要です。  
+ 次の例には、outer と inner の2つの XML 要素が含まれています。 両方の要素には、テキストコンテンツ内に空白が含まれています。 外側の要素の空白文字は、空白と XML 要素のみが含まれているため、意味がありません。 内部要素の空白は、空白とテキストが含まれているため、重要です。  
   
  [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   
- 実行すると、このコードは、次のテキストを表示します。  
+ このコードを実行すると、次のテキストが表示されます。  
   
 ```xml  
 <outer>  

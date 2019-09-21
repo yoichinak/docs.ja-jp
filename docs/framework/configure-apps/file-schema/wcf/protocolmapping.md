@@ -2,18 +2,19 @@
 title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: e26044340bda84fe38b7e286edf833affa94b86c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be4224ef1a8b17653df8123aaf89e105a496355a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785490"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400021"
 ---
 # <a name="protocolmapping"></a>\<protocolMapping >
-トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と WCF バインディング間の既定のプロトコル マッピングのセットを定義する構成セクションを表します。 実行時に既定のエンドポイントを作成するときに、Windows Communication Foundation (WCF) が構成済みのマッピングではされ、特定に使用するバインディングをベース アドレスを決定します。  
+トランスポートプロトコルスキーム (http、net.tcp、net.pipe など) と WCF バインドとの一連の既定のプロトコルマッピングを定義するための構成セクションを表します。 実行時に既定のエンドポイントを作成すると、Windows Communication Foundation (WCF) によって、構成済みのマッピングが参照され、特定のベースアドレスに対して使用するバインドが決定されます。  
   
-[**\<system.serviceModel>**](system-servicemodel.md)  
-&nbsp;&nbsp;**\<protocolMapping >**  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<protocolMapping >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,7 +36,7 @@ ms.locfileid: "61785490"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<filters>](filters-of-routing.md)|トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と WCF バインディング間の既定のプロトコル マッピングが含まれています。|  
+|[\<filters>](filters-of-routing.md)|トランスポートプロトコルスキーム (http、net.tcp、net.pipe など) と WCF バインディング間の既定のプロトコルマッピングが含まれています。|  
   
 ### <a name="parent-elements"></a>親要素  
   

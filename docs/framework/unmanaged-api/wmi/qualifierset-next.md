@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_Next 関数 (アンマネージ API リファレンス)
-description: QualifierSet_Next 関数は、列挙体で、[次へ] 修飾子を取得します。
+description: QualifierSet_Next 関数は、列挙体の次の修飾子を取得します。
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Next
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ac5cc8633881749bdc167e1b3925a83f7adf3b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f97a19f236b87a7f4c5b2014aca6ee4abd338c63
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760303"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798285"
 ---
-# <a name="qualifiersetnext-function"></a>QualifierSet_Next 関数
+# <a name="qualifierset_next-function"></a>QualifierSet_Next 関数
 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) 関数の呼び出しによって開始された列挙型内の次の修飾子が返されます。   
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -44,50 +44,50 @@ HRESULT QualifierSet_Next (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`   
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`   
-[in]ポインター、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンス。
+から[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンスへのポインター。
 
 `lFlags`   
-[in] 予約されています。 このパラメーターは、0 を指定する必要があります。
+[in] 予約されています。 このパラメーターには0を指定する必要があります。
 
 `pstrName`   
-[out]修飾子の名前。 場合`null`、このパラメーターは無視されます。 それ以外`pstrName`、有効なをポイントする必要がありますいない`BSTR`またはメモリ リークが発生します。 かどうかは null でない関数は、常に割り当て、新しい`BSTR`を返す場合`WBEM_S_NO_ERROR`します。
+入出力修飾子の名前。 の`null`場合、このパラメーターは無視され`pstrName`ます。それ以外の場合`BSTR` 、は有効なを指していないか、メモリリークが発生します。 Null でない場合、関数は、を返し`BSTR` `WBEM_S_NO_ERROR`たときに、常に新しいを割り当てます。
 
 `pVal`   
-[out]成功した場合、修飾子の値。 関数が失敗した場合、`VARIANT`によって示される`pVal`は変更されません。 このパラメーターが場合`null`パラメーターは無視されます。
+入出力成功した場合は、修飾子の値。 関数が失敗`VARIANT`した場合、が指す`pVal`を変更することはできません。 このパラメーターが`null`の場合、パラメーターは無視されます。
 
 `plFlavor`   
-[out]修飾子のフレーバーを受信する長整数型へのポインター。 このパラメーターを指定できますフレーバー情報が望ましくない場合`null`します。 
+入出力修飾子のフレーバーを受け取る LONG へのポインター。 フレーバー情報が必要でない場合、このパラメーターは`null`にすることができます。 
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | 呼び出し元が呼び出さなかった[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)します。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 新しい列挙を開始するのに十分なメモリがあります。 |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | 列挙型でその他の修飾子が残されません。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが有効ではありません。 |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | 呼び出し元が[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)を呼び出しませんでした。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 新しい列挙を開始するために必要なメモリが不足しています。 |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | 列挙体にはそれ以上修飾子が残されていません。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
   
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemQualifierSet::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next)メソッド。
+この関数は、 [IWbemQualifierSet:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next)メソッドの呼び出しをラップします。
 
-呼び出す、`QualifierSet_Next`関数の戻り値までのすべての修飾子を列挙するために繰り返し関数`WBEM_S_NO_MORE_DATA`します。 列挙体を早い段階を終了するには、呼び出し、 [QualifierSet_EndEnumeration](qualifierset-endenumeration.md)関数。
+関数が返さ`QualifierSet_Next` `WBEM_S_NO_MORE_DATA`れるまで、すべての修飾子を列挙するには、関数を繰り返し呼び出します。 列挙型を早期に終了するには、 [QualifierSet_EndEnumeration](qualifierset-endenumeration.md)関数を呼び出します。
 
-列挙時に返される修飾子の順序は定義されません。
+列挙型の間に返される修飾子の順序は定義されていません。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

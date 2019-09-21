@@ -2,12 +2,12 @@
 title: LINQ to XML の概要 (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 6a7d681b52bbc6ce515e2202f3f448ce4ba79ced
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 313abae6e8a82414ead90d5a4fdab7406492784f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267952"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785236"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML の概要 (C#)
 
@@ -41,7 +41,7 @@ var filename = "PurchaseOrder.xml";
 var currentDirectory = Directory.GetCurrentDirectory();
 var purchaseOrderFilepath = Path.Combine(currentDirectory, filename);
 
-XElement purchaseOrder = XElement.Load($"{purchaseOrderFilepath}");
+XElement purchaseOrder = XElement.Load(purchaseOrderFilepath);
 
 IEnumerable<string> partNos =  from item in purchaseOrder.Descendants("Item")
                                select (string) item.Attribute("PartNumber");
@@ -61,7 +61,7 @@ var filename = "PurchaseOrder.xml";
 var currentDirectory = Directory.GetCurrentDirectory();
 var purchaseOrderFilepath = Path.Combine(currentDirectory, filename);
 
-XElement purchaseOrder = XElement.Load($"{purchaseOrderFilepath}");
+XElement purchaseOrder = XElement.Load(purchaseOrderFilepath);
 
 IEnumerable<XElement> pricesByPartNos =  from item in purchaseOrder.Descendants("Item")
                                  where (int) item.Element("Quantity") * (decimal) item.Element("USPrice") > 100
@@ -116,11 +116,11 @@ new XElement("Contacts",
 );
 ```
 
-詳しくは、「[XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md)」をご覧ください。
+詳しくは、「[XML ツリーの作成 (C#)](./creating-xml-trees-linq-to-xml-2.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-- [リファレンス (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md)
-- [LINQ to XML とDOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
-- [LINQ to XML とその他の XML テクノロジ](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
+- [リファレンス (LINQ to XML)](./reference-linq-to-xml.md)
+- [LINQ to XML とDOM (C#)](./linq-to-xml-vs-dom.md)
+- [LINQ to XML とその他の XML テクノロジ](./linq-to-xml-vs-other-xml-technologies.md)
 - <xref:System.Xml.Linq>

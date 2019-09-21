@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0e6250987997b8d1c833b7b33a985900510fb03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2adf53d1e29fda077cdcf7b79891f6271993109
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742138"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787583"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly メソッド
-アセンブリを作成します。 アセンブリ ファイルを除くその他のすべてのファイルが閉じられた後は、このメソッドを呼び出します。 バインドされていないモジュールを生成するときに、このメソッドを呼び出さないでください。  
+アセンブリを作成します。 アセンブリファイルを除く他のすべてのファイルが閉じられた後に、このメソッドを呼び出します。 バインドされていないモジュールを生成する場合は、このメソッドを呼び出さないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,13 +40,13 @@ HRESULT EmitAssembly(
  アセンブリの ID。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

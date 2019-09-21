@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12daac766a09c297bfa129f69342ebad20977e7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d5b3d1d39b5d4c5b7d4db073b3ffaf1c6b88373
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780138"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799102"
 ---
 # <a name="strongnamegetblob-function"></a>StrongNameGetBlob 関数
 指定したアドレスにある実行可能ファイルのバイナリ表現が、指定したバッファーに入れられます。  
   
- この関数は非推奨とされました。 使用して、 [iclrstrongname::strongnamegetblob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)メソッド代わりにします。  
+ この関数は非推奨とされます。 代わりに[ICLRStrongName:: StrongNameGetBLob](../hosting/iclrstrongname-strongnamegetblob-method.md)メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,31 +40,31 @@ BOOLEAN StrongNameGetBlob (
   
 ## <a name="parameters"></a>パラメーター  
  `wszFilePath`  
- [in]読み込まれる実行可能ファイルへの有効なパス。  
+ から読み込む実行可能ファイルへの有効なパス。  
   
  `pbBlob`  
- [in]実行可能ファイルを読み込むバッファー。  
+ から実行可能ファイルの読み込み先のバッファー。  
   
  `pcbBlob`  
- [入力、出力]最大サイズ (バイト単位) を要求された`pbBlob`します。 関数が戻るとき、実際のサイズをバイト単位の`pbBlob`します。  
+ [入力、出力]要求された最大サイズ (バイト`pbBlob`単位)。 戻り時に、の実際の`pbBlob`サイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 正常に終了します。それ以外の場合、`false`します。  
+ `true`正常に完了した場合は。それ以外`false`の場合は。  
   
 ## <a name="remarks"></a>Remarks  
- 場合、`StrongNameGetBlob`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
+ 関数が正常に完了しない場合は、[StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出して、最後に生成されたエラーを取得します。`StrongNameGetBlob`  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [StrongNameGetBlob メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
-- [StrongNameGetBlobFromImage メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameGetBlob メソッド](../hosting/iclrstrongname-strongnamegetblob-method.md)
+- [StrongNameGetBlobFromImage メソッド](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)

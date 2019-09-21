@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: C# の分岐とループ
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7122bda62465482340ebdd2b1dc37577de9a0e69
-  ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+  ms.openlocfilehash: af06d938f86841620784909b16e72d000452fc2a
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/09/2019
-  ms.locfileid: "67661017"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850674"
 items:
 - durationInMinutes: 1
   content: >
@@ -412,7 +412,7 @@ items:
 
     > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - content: >-
-    これで "C# の数値" に関する対話型チュートリアルは終了です。 下の**ブランチとループ**のリンクをクリックすることで次の対話式チュートリアルを開始することができます。また、[.NET サイト](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)にアクセスして .NET Core SDK をダウンロードし、ご利用のコンピューター上でプロジェクトを作成し、コーディングを続けることもできます。 "学習の継続" の手順では、これらのチュートリアルに戻ります。
+    これで "C# の数値" に関する対話型チュートリアルは終了です。 下の**ブランチとループ**のリンクをクリックすることで次の対話式チュートリアルを開始することができます。また、[.NET サイト](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)にアクセスして .NET Core SDK をダウンロードし、ご利用のコンピューター上でプロジェクトを作成し、コーディングを続けることもできます。 "次の手順" セクションでは、これらのチュートリアルに戻ります。
 
 
     C# の数値の詳細については、次のトピックで学習できます。

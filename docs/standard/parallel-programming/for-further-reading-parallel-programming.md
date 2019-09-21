@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 037891abe18d1e119ea1d84a9840ece58b5b3c3f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bbdbc7586396a13cacac216774e8937416be947e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969662"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929285"
 ---
 # <a name="for-further-reading-parallel-programming"></a>関連項目 (並列プログラミング)
 
@@ -22,7 +22,7 @@ ms.locfileid: "56969662"
 
 - 書籍「[Design Patterns for Decomposition and Coordination on Multicore Architectures](https://docs.microsoft.com/previous-versions/msp-n-p/ff963553(v=pandp.10))」は、.NET Framework 4 で導入された並列プログラミング サポートを使用する並列プログラミングのパターンについて説明しています。
 
-- [.NET の並列プログラミングに関するブログ](https://blogs.msdn.microsoft.com/pfxteam/)には、.NET の並列プログラミングに関する多くの詳細な記事が含まれています。
+- [.NET の並列プログラミングに関するブログ](https://devblogs.microsoft.com/pfxteam/)には、.NET の並列プログラミングに関する多くの詳細な記事が含まれています。
 
 - [.NET Framework による並列プログラミングのサンプル](https://code.msdn.microsoft.com/ParExtSamples) ページには、中度および高度な並列プログラミング手法を示す多くのサンプルが含まれています。
 

@@ -3,21 +3,21 @@ title: '方法: WIF を使用してサインイン状態を表示する'
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: 6d81bd2023886799f939fc9851db516a00aa92df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2500c6ded485fca76715425b9a52258e07be08d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742456"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851544"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>方法: WIF を使用してサインイン状態を表示する
-## <a name="applies-to"></a>対象  
+## <a name="applies-to"></a>適用対象  
   
 - Microsoft® Windows® Identity Foundation (WIF) 4.5  
   
 - ASP.NET® Web フォーム  
   
-## <a name="summary"></a>まとめ  
+## <a name="summary"></a>Summary  
  このトピックでは、WIF 対応 ASP.NET アプリケーションでサインイン状態を表示する方法について説明します。 WIF には、アプリケーションでクレームが認識されるようにする機能、およびアプリケーション リソースの認証と承認を管理する機能があります。  
   
 ## <a name="contents"></a>目次  
@@ -99,7 +99,7 @@ ms.locfileid: "67742456"
   
 2. **Default.aspx** ファイルの既存のマークアップを次のマークアップに置き換えます。  
   
-    ```  
+    ```aspx-csharp  
     <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
   
     <!DOCTYPE html>  
@@ -117,7 +117,7 @@ ms.locfileid: "67742456"
 3. **Default.aspx** を保存してから、**Default.aspx.cs** という名前の分離コード ファイルを開きます。  
   
     > [!NOTE]
-    >  **Default.aspx.cs** は、ソリューション エクスプローラーで **Default.aspx** の下に隠れていることがあります。 **Default.aspx.cs** が表示されない場合は、**Default.aspx** の横の三角形をクリックして展開します。  
+    > **Default.aspx.cs** は、ソリューション エクスプローラーで **Default.aspx** の下に隠れていることがあります。 **Default.aspx.cs** が表示されない場合は、**Default.aspx** の横の三角形をクリックして展開します。  
   
 4. **Default.aspx.cs** の既存のコードを次のコードに置き換えます。  
   
@@ -153,4 +153,4 @@ ms.locfileid: "67742456"
   
 1. Visual Studio で **F5** キーを押して、アプリケーションのデバッグを開始します。 エラーがなければ、新しいブラウザー ウィンドウが開きます。  
   
-2. ブラウザーが STS に自動的に要求をリダイレクトし、Default.aspx ページが開きます。 WIF が正しく構成されている場合は、次のテキストを表示するサイトが表示されます。 **"You are signed"** します。
+2. ブラウザーが STS に自動的に要求をリダイレクトし、Default.aspx ページが開きます。 WIF が適切に構成されている場合は、サイトに次のテキストが表示されます。 **"サインイン**しています"。

@@ -3,20 +3,20 @@ title: モデル構築用のデータを準備する
 description: ML.NET での変換を利用して、追加処理やモデルのビルドのためにデータを操作して準備する方法について説明します。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/25/2019
+ms.date: 09/11/2019
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 4452aef351f33df532f3c673307dedbbf71631b8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397720"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929367"
 ---
 # <a name="prepare-data-for-building-a-model"></a>モデル構築用のデータを準備する
 
 ML.NET を利用して、追加処理やモデルのビルドのためのデータを準備する方法について説明します。
 
-多くの場合、データは未整理であり、分散しています。 加えて、ML.NET 機械学習アルゴリズムでは、入力値などの特性が単一の数値ベクターになっていることを期待します。 したがって、データ準備の目標の 1 つは、データを ML.NET アルゴリズムから期待されている形式にすることです。 
+多くの場合、データは未整理であり、分散しています。 ML.NET 機械学習アルゴリズムでは、入力値などの特性が単一の数値ベクターになっていることを想定しています。 同様に、予測する値 (ラベル) は、カテゴリ データの場合は特に、エンコードする必要があります。 したがって、データ準備の目標の 1 つは、データを ML.NET アルゴリズムから期待されている形式にすることです。 
 
 ## <a name="filter-data"></a>データのフィルター処理
 

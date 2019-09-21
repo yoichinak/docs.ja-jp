@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c83e7abbd9f9425fab70325f7a77abb0f672bd15
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: dc8381f8059e37c6c520c2402289124a506188e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638761"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968413"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>マルチスレッド処理のためのデータの同期
 
@@ -51,17 +51,17 @@ ms.locfileid: "65638761"
  Visual Basic と C# の両方が、コード ブロックに特定の言語キーワード (C# の `lock` ステートメント、Visual Basic の `SyncLock` ステートメント) のマークを付けることをサポートしています。 スレッドによってコードが実行されると、ロックの取得が試行されます。 別のスレッドによってロックが既に取得されている場合、ロックが使用可能になるまでスレッドはブロックされます。 同期されているコード ブロック部分の実行をスレッドが終了すると、終了方法に関係なく、ロックが解放されます。  
   
 > [!NOTE]
->  `lock` ステートメントおよび `SyncLock` ステートメントは、<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> および <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> を使用して実装されるため、<xref:System.Threading.Monitor> の他のメソッドを、同期された領域内でこれらと組み合わせて使用できます。  
+> `lock` ステートメントおよび `SyncLock` ステートメントは、<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> および <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> を使用して実装されるため、<xref:System.Threading.Monitor> の他のメソッドを、同期された領域内でこれらと組み合わせて使用できます。  
   
  また、<xref:System.Runtime.CompilerServices.MethodImplAttribute> を <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType> の値で使用してメソッドを修飾することもできます。これにより、<xref:System.Threading.Monitor> またはメソッド全体をロックするためのコンパイラ キーワードの 1 つを使用した場合と同じ結果になります。  
   
  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> を使用すると、同期されたコード領域へのアクセスの待機などのブロック操作から、スレッドを切り離すことができます。 また、この **Thread.Interrupt** を使用することで、<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> などの操作からスレッドを切り離すこともできます。  
   
 > [!IMPORTANT]
->  `static` メソッド (Visual Basic では`Shared`) を保護するために、型 (C# の場合は`typeof(MyType)`、Visual Basic の場合は`GetType(MyType)`、C++ の場合は`MyType::typeid`) をロックしないでください。 代わりにプライベート静的オブジェクトを使用します。 同様に、C# の `this` (Visual Basic の場合は `Me`) を使用してインスタンス メソッドをロックしないでください。 代わりにプライベート オブジェクトを使用します。 クラスやインスタンスは、独自のコード以外のコードでもロックできますが、デッドロックやパフォーマンスの問題が発生する可能性があります。  
+> `static` メソッド (Visual Basic では`Shared`) を保護するために、型 (C# の場合は`typeof(MyType)`、Visual Basic の場合は`GetType(MyType)`、C++ の場合は`MyType::typeid`) をロックしないでください。 代わりにプライベート静的オブジェクトを使用します。 同様に、C# の `this` (Visual Basic の場合は `Me`) を使用してインスタンス メソッドをロックしないでください。 代わりにプライベート オブジェクトを使用します。 クラスやインスタンスは、独自のコード以外のコードでもロックできますが、デッドロックやパフォーマンスの問題が発生する可能性があります。  
   
 ### <a name="compiler-support"></a>コンパイラ サポート  
- Visual Basic と C# は、どちらも <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> と <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> を使用してオブジェクトをロックする言語キーワードをサポートします。 Visual Basic は [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) ステートメントをサポートしており、C# は [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) ステートメントをサポートしています。  
+ Visual Basic と C# は、どちらも <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> と <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> を使用してオブジェクトをロックする言語キーワードをサポートします。 Visual Basic は [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) ステートメントをサポートしており、C# は [lock](../../csharp/language-reference/keywords/lock-statement.md) ステートメントをサポートしています。  
   
  両方とも、コード ブロックで例外がスローされると、**lock** または **SyncLock** によって取得されたロックは自動的に解放されます。 C# コンパイラおよび Visual Basic コンパイラは **try**/**finally** ブロックを生成します。tryブロックは先頭に **Monitor.Enter** を含み、**finally** ブロックは **Monitor.Exit** を含みます。 **lock** ブロックまたは **SyncLock** ブロック内部で例外がスローされると、**finally** ハンドラーが実行され、任意のクリーンアップ作業を行えるようになります。  
   
@@ -74,5 +74,5 @@ ms.locfileid: "65638761"
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [スレッドおよびスレッド処理](../../../docs/standard/threading/threads-and-threading.md)
 - [同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
-- [SyncLock ステートメント](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
-- [lock ステートメント](~/docs/csharp/language-reference/keywords/lock-statement.md)
+- [SyncLock ステートメント](../../visual-basic/language-reference/statements/synclock-statement.md)
+- [lock ステートメント](../../csharp/language-reference/keywords/lock-statement.md)

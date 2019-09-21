@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862a224c696ebafb23b30add7c8e8d66e1846b4c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a17fae64f8cad58b09908212bae4cf62a156ed95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584464"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921519"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>方法: 初回例外通知を受け取る
 <xref:System.AppDomain> クラスの <xref:System.AppDomain.FirstChanceException>イベントを使用すると、共通言語ランタイムが例外ハンドラーの検索を開始する前に、例外がスローされたことを知らせる通知を受け取ることができます。
@@ -91,7 +91,7 @@ ms.locfileid: "65584464"
  `Thrower` メソッドが `AD1` で例外をスローするたびに、`AD1` で <xref:System.AppDomain.FirstChanceException> イベントが発生し、イベント ハンドラーによりメッセージが表示されます。 次に、ランタイムによって例外ハンドラーが検索されます。 最初のケースでは、例外ハンドラーは `AD1` で見つかります。 2 番目のケースでは、例外は `AD1` でハンドルされず、代わりに既定のアプリケーション ドメインでキャッチされます。
 
 > [!NOTE]
->  既定のアプリケーション ドメインの名前は、実行可能ファイルの名前と同じです。
+> 既定のアプリケーション ドメインの名前は、実行可能ファイルの名前と同じです。
 
  既定のアプリケーション ドメインに <xref:System.AppDomain.FirstChanceException> イベントのハンドラーを追加すると、既定のアプリケーション ドメインが例外をハンドルする前に、イベントが発生して処理されます。 これを確認するには、`Main()` の先頭に C# コード `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` (Visual Basic では `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException`) を追加します。
 

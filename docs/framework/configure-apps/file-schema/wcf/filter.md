@@ -2,18 +2,21 @@
 title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: bff19f106d86c73dea80b8b57bb73442eaa2cf9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e78275aaeb202405e327302455d56fa431d7f27
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704038"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855251"
 ---
 # <a name="filter"></a>\<フィルター >
 
-Windows Communication Foundation (WCF) の型を決定するルーティング フィルターを定義します。<xref:System.ServiceModel.Dispatcher.MessageFilter>も任意のサポート データまたはフィルターに必要なパラメーターとして、受信メッセージを評価するときに使用します。
+受信メッセージを評価するときに使用する Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>の種類、およびフィルターに必要なサポートデータまたはパラメーターを決定するルーティングフィルターを定義します。
 
-\<system.serviceModel> \<routing> \<filters> \<filter>
+[ **\<system.serviceModel>** ](system-servicemodel.md)\
+&nbsp;&nbsp;[ **\<ルーティング >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<フィルター >** ](filters-of-routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<フィルター >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +39,7 @@ Windows Communication Foundation (WCF) の型を決定するルーティング �
 
 | 属性  | 説明 |
 | ---------- | ----------- |
-| customType | フィルターとして使用されるカスタム型の完全修飾型名を示す文字列。 場合`filterType`に設定されている`custom`、この属性には作成するクラスの完全修飾型名が含まれています。  `filterData` カスタム型フィルターの評価時に使用する値を含めることもできます。 |
+| customType | フィルターとして使用されるカスタム型の完全修飾型名を示す文字列。 が`filterType` に`custom`設定されている場合、この属性には作成するクラスの完全修飾型名が含まれます。  `filterData`には、カスタム型フィルターの評価時に使用される値を含めることもできます。 |
 | filterData | フィルター データを示す文字列。 この属性を指定する方法の詳細については、「<xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>」を参照してください。 |
 | filterType | フィルターの種類を示す文字列。 この属性は <xref:System.ServiceModel.Routing.Configuration.FilterType> 型です。  `filterData` 属性を使用する方法の詳細については、「<xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>」を参照してください。 |
 | name       | フィルター要素の一意の名前を示す文字列。 |
@@ -49,7 +52,7 @@ Windows Communication Foundation (WCF) の型を決定するルーティング �
 
 | 要素 | 説明 |
 | ------- | ----------- |
-| [\<ルーティング >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Windows Communication Foundation (WCF) の種類を指定するルーティング フィルター セットを定義する構成セクション<xref:System.ServiceModel.Dispatcher.MessageFilter>受信メッセージを評価するときに使用されます。 |
+| [\<ルーティング >](routing.md) | 一連のルーティングフィルターを定義するための構成セクション。受信メッセージを評価するときに使用<xref:System.ServiceModel.Dispatcher.MessageFilter>する Windows Communication Foundation (WCF) の種類を決定します。 |
 
 ## <a name="see-also"></a>関連項目
 

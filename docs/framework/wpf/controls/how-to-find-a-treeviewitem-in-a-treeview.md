@@ -8,36 +8,36 @@ helpviewer_keywords:
 - TreeView control [WPF], finding a TreeViewItem
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-ms.openlocfilehash: 034ec2e57fb3b6a9b3a81f66f6888a68e2c113d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad72c7a7fb11dfe605db4119dde831b47dd7c5a4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910534"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962090"
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>方法: TreeView での TreeViewItem の検索
-<xref:System.Windows.Controls.TreeView>コントロールには、階層データを表示する便利な方法が用意されています。 場合、 <xref:System.Windows.Controls.TreeView> 、データ ソースにバインドされて、<xref:System.Windows.Controls.TreeView.SelectedItem%2A>プロパティは、選択したデータ オブジェクトを迅速に取得するための便利な方法を提供します。 通常、基になるデータ オブジェクトを使用することをお勧めがデータを格納しているプログラムで操作する必要がありますも<xref:System.Windows.Controls.TreeViewItem>します。 など、プログラムで展開する必要があります、<xref:System.Windows.Controls.TreeViewItem>でさまざまな項目を選択します。 または、<xref:System.Windows.Controls.TreeView>します。  
+コントロール<xref:System.Windows.Controls.TreeView>は、階層データを表示する便利な方法を提供します。 がデータソースにバインドされている場合<xref:System.Windows.Controls.TreeView.SelectedItem%2A> 、プロパティは、選択したデータオブジェクトを迅速に取得するための便利な方法を提供します。 <xref:System.Windows.Controls.TreeView> 通常は、基になるデータオブジェクトを操作することをお勧めします。ただし、を含む<xref:System.Windows.Controls.TreeViewItem>データをプログラムで操作することが必要になる場合があります。 たとえば、プログラムを使用して<xref:System.Windows.Controls.TreeViewItem>を展開したり、 <xref:System.Windows.Controls.TreeView>で別の項目を選択したりする必要がある場合があります。  
   
- 検索する、<xref:System.Windows.Controls.TreeViewItem>特定のデータ オブジェクトを格納しているの各レベルを走査する必要があります、<xref:System.Windows.Controls.TreeView>します。 内の項目を<xref:System.Windows.Controls.TreeView>パフォーマンスを向上させるために仮想化することもできます。 項目が仮想化の場合、する必要がありますまた、<xref:System.Windows.Controls.TreeViewItem>データ オブジェクトが含まれるかどうかを確認します。  
+ 特定のデータ<xref:System.Windows.Controls.TreeViewItem>オブジェクトを含むを検索するには、 <xref:System.Windows.Controls.TreeView>の各レベルを走査する必要があります。 の項目を仮想<xref:System.Windows.Controls.TreeView>化して、パフォーマンスを向上させることもできます。 項目が仮想化される可能性がある場合は、を<xref:System.Windows.Controls.TreeViewItem>認識してデータオブジェクトが含まれているかどうかを確認する必要もあります。  
   
 ## <a name="example"></a>例  
   
 ## <a name="description"></a>説明  
- 次の例で、<xref:System.Windows.Controls.TreeView>の特定のオブジェクトを返しますが、オブジェクトを含む<xref:System.Windows.Controls.TreeViewItem>します。 によって、各例では、<xref:System.Windows.Controls.TreeViewItem>がインスタンス化されるは、その子項目を検索できるようにします。 この例は、場合にも動作、<xref:System.Windows.Controls.TreeView>仮想化された項目を使用しません。  
+ 次の例では<xref:System.Windows.Controls.TreeView> 、特定のオブジェクトを検索し、それを<xref:System.Windows.Controls.TreeViewItem>含むオブジェクトを返します。 この例では、 <xref:System.Windows.Controls.TreeViewItem>子項目を検索できるように、各がインスタンス化されていることを確認します。 この例は、が仮想<xref:System.Windows.Controls.TreeView>化された項目を使用しない場合にも機能します。  
   
 > [!NOTE]
->  次の例のいずれかの動作<xref:System.Windows.Controls.TreeView>、基になるデータ モデルと検索に関係なくすべて<xref:System.Windows.Controls.TreeViewItem>オブジェクトが見つかるまでです。 パフォーマンスが向上するもう 1 つの手法では、指定したオブジェクトのデータ モデルを検索のデータの階層内の場所を追跡し、対応する、検索を<xref:System.Windows.Controls.TreeViewItem>で、<xref:System.Windows.Controls.TreeView>します。 パフォーマンスが向上する手法がデータ モデルの知識が必要ですし、特定の一般化することはできませんただし、<xref:System.Windows.Controls.TreeView>します。  
+> 次の例では、 <xref:System.Windows.Controls.TreeView>基になるデータモデルに関係なく、すべての<xref:System.Windows.Controls.TreeViewItem>に対して機能し、オブジェクトが見つかるまではすべて検索します。 パフォーマンスが向上するもう1つの方法は、指定されたオブジェクトのデータモデルを検索し、データ階層内での位置を追跡し<xref:System.Windows.Controls.TreeViewItem> 、 <xref:System.Windows.Controls.TreeView>で対応するを見つけることです。 ただし、パフォーマンスが優れている手法では、データモデルに関する知識が必要であり、 <xref:System.Windows.Controls.TreeView>特定のに対して一般化することはできません。  
   
 ## <a name="code"></a>コード  
  [!code-csharp[TreeViewFindTVI#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[TreeViewFindTVI#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#1)]  
   
- 前のコードが依存するカスタム<xref:System.Windows.Controls.VirtualizingStackPanel>という名前のメソッドを公開する`BringIntoView`します。 次のコード定義のカスタム<xref:System.Windows.Controls.VirtualizingStackPanel>します。  
+ 前のコードは、という<xref:System.Windows.Controls.VirtualizingStackPanel>名前`BringIntoView`のメソッドを公開するカスタムに依存しています。 次のコードは、カスタム<xref:System.Windows.Controls.VirtualizingStackPanel>を定義します。  
   
  [!code-csharp[TreeViewFindTVI#2](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#2)]
  [!code-vb[TreeViewFindTVI#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#2)]  
   
- 次の XAML を作成する方法を示しています、<xref:System.Windows.Controls.TreeView>カスタムを使用する<xref:System.Windows.Controls.VirtualizingStackPanel>します。  
+ 次の XAML は、カスタム<xref:System.Windows.Controls.TreeView> <xref:System.Windows.Controls.VirtualizingStackPanel>を使用するを作成する方法を示しています。  
   
  [!code-xaml[TreeViewFindTVI#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   

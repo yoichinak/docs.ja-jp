@@ -1,16 +1,16 @@
 ---
 title: クロス検証を使って機械学習モデルをトレーニングする
 description: ML.NET で、クロス検証を使用してより堅牢な機械学習モデルを構築する方法について説明します。 クロス検証は、データをいくつかのパーティションに分割し、それらのパーティション上で複数のアルゴリズムをトレーニングするトレーニングおよびモデル評価手法です。
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to,title-hack-0625
-ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: f29103d0cf59cdec10a641b05ce359bf95c01ccd
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397657"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169058"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation"></a>クロス検証を使って機械学習モデルをトレーニングする
 
@@ -30,7 +30,7 @@ Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($)
 1120.00, 47504.98, 45129.73, 43775.84, 46792.41
 ```
 
-データは `HousingData` などのクラスでモデル化できます。
+データは `HousingData` のようなクラスでモデル化し、[`IDataView`](xref:Microsoft.ML.IDataView) にロードできます。
 
 ```csharp
 public class HousingData
@@ -47,8 +47,6 @@ public class HousingData
     public float CurrentPrice { get; set; }
 }
 ```
-
-データを [`IDataView`](xref:Microsoft.ML.IDataView) に読み込みます。
 
 ## <a name="prepare-the-data"></a>データを準備する
 

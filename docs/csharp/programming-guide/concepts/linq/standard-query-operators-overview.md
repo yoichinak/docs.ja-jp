@@ -2,12 +2,12 @@
 title: 標準クエリ演算子の概要 (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 7ce3a13c98bf08eae79906f1806427741568155e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6419fef5c211995aa4d2bd0796a0d0336dc47a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537960"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590980"
 ---
 # <a name="standard-query-operators-overview-c"></a>標準クエリ演算子の概要 (C#)
 "*標準クエリ演算子*" は、LINQ パターンを形成するメソッドです。 これらのメソッドの大部分はシーケンスに対して機能します。ここでシーケンスとは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスまたは <xref:System.Linq.IQueryable%601> インターフェイスを実装している型のオブジェクトのことです。 標準クエリ演算子には、フィルター処理、プロジェクション、集計、並べ替えなどのクエリ機能が用意されています。  
@@ -67,7 +67,7 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>クエリ式の構文  
- 頻繁に使用される標準クエリ演算子の中には、C# および Visual Basic 言語専用のキーワード構文が使用されているものがあります。こうした構文では、標準クエリ演算子を、"*クエリ* *式*" の一部として呼び出すことができます。 専用キーワードおよびそれに対応する構文が使用されている標準クエリ演算子の詳細については、「[標準クエリ演算子のクエリ式構文 (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)」を参照してください。  
+ 頻繁に使用される標準クエリ演算子の中には、C# および Visual Basic 言語専用のキーワード構文が使用されているものがあります。こうした構文では、標準クエリ演算子を、"*クエリ* *式*" の一部として呼び出すことができます。 専用キーワードおよびそれに対応する構文が使用されている標準クエリ演算子の詳細については、「[標準クエリ演算子のクエリ式構文 (C#)](./query-expression-syntax-for-standard-query-operators.md)」を参照してください。  
   
 ## <a name="extending-the-standard-query-operators"></a>標準クエリ演算子の拡張  
  標準クエリ演算子のセットを拡張するには、対象のドメインまたはテクノロジに適したドメイン固有のメソッドを作成します。 また、標準クエリ演算子を、リモート評価、クエリ変換、最適化などの追加サービスが用意されている独自の実装で置き換えることもできます。 例については、「<xref:System.Linq.Enumerable.AsEnumerable%2A>」を参照してください。  
@@ -75,39 +75,39 @@ foreach (var obj in query)
 ## <a name="related-sections"></a>関連項目  
  次のリンクをクリックすると、さまざまな標準クエリ演算子に関する追加情報を機能別に確認することができます。  
   
- [データの並べ替え (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
+ [データの並べ替え (C#)](./sorting-data.md)  
   
- [セット操作 (C#)](../../../../csharp/programming-guide/concepts/linq/set-operations.md)  
+ [セット操作 (C#)](./set-operations.md)  
   
- [データのフィルター処理 (C#)](../../../../csharp/programming-guide/concepts/linq/filtering-data.md)  
+ [データのフィルター処理 (C#)](./filtering-data.md)  
   
- [量指定子操作 (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)  
+ [量指定子操作 (C#)](./quantifier-operations.md)  
   
- [射影操作 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)  
+ [射影操作 (C#)](./projection-operations.md)  
   
- [データのパーティション分割](../../../../csharp/programming-guide/concepts/linq/partitioning-data.md)  
+ [データのパーティション分割](./partitioning-data.md)  
   
- [結合演算 (C#)](../../../../csharp/programming-guide/concepts/linq/join-operations.md)  
+ [結合演算 (C#)](./join-operations.md)  
   
- [データのグループ化 (C#)](../../../../csharp/programming-guide/concepts/linq/grouping-data.md)  
+ [データのグループ化 (C#)](./grouping-data.md)  
   
- [生成操作 (C#)](../../../../csharp/programming-guide/concepts/linq/generation-operations.md)  
+ [生成操作 (C#)](./generation-operations.md)  
   
- [等価演算 (C#)](../../../../csharp/programming-guide/concepts/linq/equality-operations.md)  
+ [等価演算 (C#)](./equality-operations.md)  
   
- [要素操作 (C#)](../../../../csharp/programming-guide/concepts/linq/element-operations.md)  
+ [要素操作 (C#)](./element-operations.md)  
   
- [データ型の変換 (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md)  
+ [データ型の変換 (C#)](./converting-data-types.md)  
   
- [連結演算 (C#)](../../../../csharp/programming-guide/concepts/linq/concatenation-operations.md)  
+ [連結演算 (C#)](./concatenation-operations.md)  
   
- [集計操作 (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
+ [集計操作 (C#)](./aggregation-operations.md)  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [LINQ クエリの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
-- [標準クエリ演算子のクエリ式構文 (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [実行方法による標準クエリ演算子の分類 (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-- [拡張メソッド](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [LINQ クエリの概要 (C#)](./introduction-to-linq-queries.md)
+- [標準クエリ演算子のクエリ式構文 (C#)](./query-expression-syntax-for-standard-query-operators.md)
+- [実行方法による標準クエリ演算子の分類 (C#)](./classification-of-standard-query-operators-by-manner-of-execution.md)
+- [拡張メソッド](../../classes-and-structs/extension-methods.md)

@@ -16,106 +16,106 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2f474317493b3aac421ca1270ff461b97cfe027
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3119818934df765a8bbd9c05caaee04f9476069f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598071"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963518"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback インターフェイス
-プロファイラーがサブスクライブしているイベントが発生したときにコード プロファイラーに通知を共通言語ランタイム (CLR) によって使用されるメソッドを提供します。  
+プロファイラーがサブスクライブしたイベントが発生したときにコードプロファイラーに通知するために、共通言語ランタイム (CLR) によって使用されるメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[AppDomainCreationFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md)|アプリケーション ドメインが作成されたことをプロファイラーに通知します。|  
-|[AppDomainCreationStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationstarted-method.md)|アプリケーション ドメインが作成されていることをプロファイラーに通知します。|  
-|[AppDomainShutdownFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownfinished-method.md)|アプリケーション ドメインが、プロセスからアンロードされたことをプロファイラーに通知します。|  
-|[AppDomainShutdownStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md)|プロセスから、アプリケーション ドメインがアンロードされることをプロファイラーに通知します。|  
+|[AppDomainCreationFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md)|アプリケーションドメインが作成されたことをプロファイラーに通知します。|  
+|[AppDomainCreationStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationstarted-method.md)|アプリケーションドメインが作成中であることをプロファイラーに通知します。|  
+|[AppDomainShutdownFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownfinished-method.md)|アプリケーションドメインがプロセスからアンロードされたことをプロファイラーに通知します。|  
+|[AppDomainShutdownStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md)|アプリケーションドメインがプロセスからアンロードされていることをプロファイラーに通知します。|  
 |[AssemblyLoadFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md)|アセンブリの読み込みが完了したことをプロファイラーに通知します。|  
 |[AssemblyLoadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadstarted-method.md)|アセンブリが読み込まれていることをプロファイラーに通知します。|  
 |[AssemblyUnloadFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)|アセンブリがアンロードされたことをプロファイラーに通知します。|  
-|[AssemblyUnloadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md)|アセンブリがアンロードされることをプロファイラーに通知します。|  
-|[ClassLoadFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)|クラスの読み込みが完了したことをプロファイラーに通知します。|  
+|[AssemblyUnloadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md)|アセンブリがアンロードされていることをプロファイラーに通知します。|  
+|[ClassLoadFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)|クラスが読み込みを完了したことをプロファイラーに通知します。|  
 |[ClassLoadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)|クラスが読み込まれていることをプロファイラーに通知します。|  
-|[ClassUnloadFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)|クラスのアンロードが完了したことをプロファイラーに通知します。|  
-|[ClassUnloadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)|クラスがアンロードされることをプロファイラーに通知します。|  
-|[COMClassicVTableCreated メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)|指定された IID とクラスのランタイム呼び出し可能ラッパー (RCW) が作成されたことをプロファイラーに通知します。|  
+|[ClassUnloadFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)|クラスのアンロードが終了したことをプロファイラーに通知します。|  
+|[ClassUnloadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)|クラスがアンロードされていることをプロファイラーに通知します。|  
+|[COMClassicVTableCreated メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)|指定した IID およびクラスのランタイム呼び出し可能ラッパー (RCW) が作成されたことをプロファイラーに通知します。|  
 |[COMClassicVTableDestroyed メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)|RCW が破棄されていることをプロファイラーに通知します。|  
-|[ExceptionCatcherEnter メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)|適切な制御が渡されることをプロファイラーに通知`catch`ブロックします。|  
-|[ExceptionCatcherLeave メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)|コントロールが、適切なから渡されることをプロファイラーに通知`catch`ブロックします。|  
-|[ExceptionCLRCatcherExecute メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)|.NET Framework version 2.0 で廃止されました。|  
-|[ExceptionCLRCatcherFound メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherfound-method.md)|.NET Framework 2.0 で廃止します。|  
-|[ExceptionOSHandlerEnter メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionoshandlerenter-method.md)|実装されていません。 非管理対象の例外情報を必要とするプロファイラーでは、他の手段では、この情報を取得する必要があります。|  
-|[ExceptionOSHandlerLeave メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionoshandlerleave-method.md)|実装されていません。 非管理対象の例外情報を必要とするプロファイラーでは、他の手段では、この情報を取得する必要があります。|  
-|[ExceptionSearchCatcherFound メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchcatcherfound-method.md)|例外処理の検索フェーズでスローされた例外のハンドラーが見つかったことをプロファイラーに通知します。|  
-|[ExceptionSearchFilterEnter メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)|ユーザー フィルターが実行されていることをプロファイラーに通知します。|  
-|[ExceptionSearchFilterLeave メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)|ユーザー フィルターがだけ完了したことを実行するプロファイラーに通知します。|  
+|[ExceptionCatcherEnter メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)|適切な`catch`ブロックに制御が渡されていることをプロファイラーに通知します。|  
+|[ExceptionCatcherLeave メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)|適切な`catch`ブロックから制御が渡されていることをプロファイラーに通知します。|  
+|[ExceptionCLRCatcherExecute メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)|.NET Framework バージョン2.0 で廃止されました。|  
+|[ExceptionCLRCatcherFound メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherfound-method.md)|.NET Framework 2.0 で廃止されました。|  
+|[ExceptionOSHandlerEnter メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionoshandlerenter-method.md)|実装されていません。 アンマネージ例外情報を必要とするプロファイラーは、他の方法でこの情報を取得する必要があります。|  
+|[ExceptionOSHandlerLeave メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionoshandlerleave-method.md)|実装されていません。 アンマネージ例外情報を必要とするプロファイラーは、他の方法でこの情報を取得する必要があります。|  
+|[ExceptionSearchCatcherFound メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchcatcherfound-method.md)|例外処理の検索フェーズによってスローされた例外のハンドラーが見つかったことをプロファイラーに通知します。|  
+|[ExceptionSearchFilterEnter メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)|ユーザーフィルターが実行されていることをプロファイラーに通知します。|  
+|[ExceptionSearchFilterLeave メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)|ユーザーフィルターの実行が完了したことをプロファイラーに通知します。|  
 |[ExceptionSearchFunctionEnter メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)|例外処理の検索フェーズが関数に入ったことをプロファイラーに通知します。|  
-|[ExceptionSearchFunctionLeave メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionleave-method.md)|例外処理の検索フェーズで、関数の検索が完了したことをプロファイラーに通知します。|  
+|[ExceptionSearchFunctionLeave メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionleave-method.md)|例外処理の検索フェーズで関数の検索が終了したことをプロファイラーに通知します。|  
 |[ExceptionThrown メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionthrown-method.md)|例外がスローされたことをプロファイラーに通知します。|  
-|[ExceptionUnwindFinallyEnter メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)|例外のアンワインド フェーズの処理が入ることをプロファイラーに通知を`finally`句が指定された関数に含まれています。|  
-|[ExceptionUnwindFinallyLeave メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)|例外のアンワインド フェーズの処理が残っているプロファイラーに通知を`finally`句。|  
-|[ExceptionUnwindFunctionEnter メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionenter-method.md)|例外処理のアンワインド フェーズが関数に入ったことをプロファイラーに通知します。|  
-|[ExceptionUnwindFunctionLeave メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionleave-method.md)|例外処理のアンワインド フェーズの関数のアンワインドが完了したことをプロファイラーに通知します。|  
-|[FunctionUnloadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-functionunloadstarted-method.md)|関数のアンロードをランタイムが開始されたことをプロファイラーに通知します。|  
-|[Initialize メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)|CLR の新しいアプリケーションを起動するたびに、プロファイラーを初期化するために呼び出されます。|  
-|[JITCachedFunctionSearchFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|NGen.exe を使用して以前にコンパイルされた関数の検索が完了したことをプロファイラーに通知します。|  
-|[JITCachedFunctionSearchStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|NGen.exe を使用して以前にコンパイルされた関数の検索が開始されたことをプロファイラーに通知します。|  
+|[ExceptionUnwindFinallyEnter メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)|例外処理のアンワインドフェーズが、指定された`finally`関数に含まれる句を入力していることをプロファイラーに通知します。|  
+|[ExceptionUnwindFinallyLeave メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)|例外処理のアンワインドフェーズが句の`finally`後にあることをプロファイラーに通知します。|  
+|[ExceptionUnwindFunctionEnter メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionenter-method.md)|例外処理のアンワインドフェーズが関数に入ったことをプロファイラーに通知します。|  
+|[ExceptionUnwindFunctionLeave メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionleave-method.md)|例外処理のアンワインドフェーズが関数のアンワインドを完了したことをプロファイラーに通知します。|  
+|[FunctionUnloadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-functionunloadstarted-method.md)|ランタイムが関数のアンロードを開始したことをプロファイラーに通知します。|  
+|[Initialize メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)|新しい CLR アプリケーションが開始されるたびにプロファイラーを初期化するために呼び出されます。|  
+|[JITCachedFunctionSearchFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|以前に Ngen.exe を使用してコンパイルされた関数の検索が終了したことをプロファイラーに通知します。|  
+|[JITCachedFunctionSearchStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|以前に Ngen.exe を使用してコンパイルされた関数に対して検索が開始されたことをプロファイラーに通知します。|  
 |[JITCompilationFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)|JIT コンパイラが関数のコンパイルを完了したことをプロファイラーに通知します。|  
-|[JITCompilationStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)|ジャストイン タイム (JIT) コンパイラが関数のコンパイルを開始されたことをプロファイラーに通知します。|  
-|[JITFunctionPitched メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitfunctionpitched-method.md)|JIT コンパイルされた関数がメモリから削除されたことをプロファイラーに通知します。|  
-|[JITInlining メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md)|JIT コンパイラが別の関数に合わせて関数を挿入しようとしていますが、プロファイラーに通知します。|  
-|[ManagedToUnmanagedTransition メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)|マネージ コードからアンマネージ コードへの移行が発生したことをプロファイラーに通知します。|  
-|[ModuleAttachedToAssembly メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md)|モジュールが、親アセンブリに関連付けられていることをプロファイラーに通知します。|  
-|[ModuleLoadFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)|モジュールの読み込みが完了したことをプロファイラーに通知します。|  
+|[JITCompilationStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)|Just-in-time (JIT) コンパイラが関数のコンパイルを開始したことをプロファイラーに通知します。|  
+|[JITFunctionPitched メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitfunctionpitched-method.md)|JIT コンパイル済みの関数がメモリから削除されたことをプロファイラーに通知します。|  
+|[JITInlining メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md)|JIT コンパイラが別の関数と共に関数を挿入しようとしていることをプロファイラーに通知します。|  
+|[ManagedToUnmanagedTransition メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)|マネージコードからアンマネージコードへの遷移が発生したことをプロファイラーに通知します。|  
+|[ModuleAttachedToAssembly メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md)|モジュールが親アセンブリにアタッチされていることをプロファイラーに通知します。|  
+|[ModuleLoadFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)|モジュールが読み込みを終了したことをプロファイラーに通知します。|  
 |[ModuleLoadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadstarted-method.md)|モジュールが読み込まれていることをプロファイラーに通知します。|  
-|[ModuleUnloadFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadfinished-method.md)|モジュールのアンロードが完了したことをプロファイラーに通知します。|  
-|[ModuleUnloadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md)|モジュールがアンロードされることをプロファイラーに通知します。|  
-|[MovedReferences メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)|ガベージ コレクション中に移動されたオブジェクト参照をプロファイラーに通知します。|  
-|[ObjectAllocated メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)|オブジェクトの割り当てられたヒープ内のメモリ プロファイラーに通知します。|  
-|[ObjectReferences メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)|指定したオブジェクトによって参照されるメモリ内のオブジェクトをプロファイラーに通知します。|  
-|[ObjectsAllocatedByClass メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md)|前のガベージ コレクションの後に作成された指定した各クラスのインスタンスの数をプロファイラーに通知します。|  
-|[RemotingClientInvocationFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)|クライアントで、リモート処理呼び出しが完了するまで実行をプロファイラーに通知します。|  
+|[ModuleUnloadFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadfinished-method.md)|モジュールがアンロードを終了したことをプロファイラーに通知します。|  
+|[ModuleUnloadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md)|モジュールがアンロードされていることをプロファイラーに通知します。|  
+|[MovedReferences メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)|ガベージコレクション中に移動されたオブジェクト参照をプロファイラーに通知します。|  
+|[ObjectAllocated メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)|ヒープ内のメモリがオブジェクトに割り当てられたことをプロファイラーに通知します。|  
+|[ObjectReferences メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)|指定したオブジェクトによって参照されるメモリ内のオブジェクトに関する情報をプロファイラーに通知します。|  
+|[ObjectsAllocatedByClass メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md)|前のガベージコレクションの後に作成された、指定した各クラスのインスタンスの数をプロファイラーに通知します。|  
+|[RemotingClientInvocationFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)|リモート処理呼び出しがクライアントで完了まで実行されたことをプロファイラーに通知します。|  
 |[RemotingClientInvocationStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationstarted-method.md)|リモート処理呼び出しが開始されたことをプロファイラーに通知します。|  
-|[RemotingClientReceivingReply メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)|リモート処理呼び出しのサーバー側の部分が完了し、クライアントが受け取るようになりましたことをプロファイラーに通知し、応答を処理します。|  
-|[RemotingClientSendingMessage メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)|クライアントがサーバーに要求を送信しているプロファイラーに通知します。|  
-|[RemotingServerInvocationReturned メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md)|プロセスで、リモート メソッド呼び出しの要求に応答におけるメソッドの呼び出しが完了したことをプロファイラーに通知します。|  
-|[RemotingServerInvocationStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationstarted-method.md)|プロセスがリモート メソッド呼び出しの要求に応答でメソッドを呼び出すことをプロファイラーに通知します。|  
-|[RemotingServerReceivingMessage メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md)|プロセスがリモート メソッド呼び出しまたはアクティブ化要求を受信しているプロファイラーに通知します。|  
-|[RemotingServerSendingReply メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)|プロセスがリモート メソッド呼び出し要求の処理が完了して、チャネルを介して応答を送信しようとしていますが、プロファイラーに通知します。|  
-|[RootReferences メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)|ガベージ コレクション後のルート参照に関する情報をプロファイラーに通知します。|  
-|[RuntimeResumeFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)|ランタイムはランタイムのすべてのスレッドが再開し、通常の操作に返されますが、プロファイラーに通知します。|  
-|[RuntimeResumeStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)|ランタイムが実行時のすべてのスレッドを再開することをプロファイラーに通知します。|  
-|[RuntimeSuspendAborted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)|ランタイムで発生しているランタイムの中断が中止されたことをプロファイラーに通知します。|  
-|[RuntimeSuspendFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)|ランタイムの実行時のすべてのスレッドの中断が完了したことをプロファイラーに通知します。|  
-|[RuntimeSuspendStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)|ランタイムを実行時のすべてのスレッドを中断することをプロファイラーに通知します。|  
+|[RemotingClientReceivingReply メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)|リモート処理呼び出しのサーバー側の部分が完了し、クライアントが応答を受信および処理するようになったことをプロファイラーに通知します。|  
+|[RemotingClientSendingMessage メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)|クライアントがサーバーに要求を送信していることをプロファイラーに通知します。|  
+|[RemotingServerInvocationReturned メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md)|プロセスがリモートメソッド呼び出し要求に応答してメソッドの呼び出しを完了したことをプロファイラーに通知します。|  
+|[RemotingServerInvocationStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationstarted-method.md)|プロセスがリモートメソッド呼び出し要求に応答してメソッドを呼び出していることをプロファイラーに通知します。|  
+|[RemotingServerReceivingMessage メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md)|プロセスがリモートメソッド呼び出しまたはアクティブ化要求を受信していることをプロファイラーに通知します。|  
+|[RemotingServerSendingReply メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)|プロセスがリモートメソッド呼び出し要求の処理を完了したこと、およびチャネルを介して応答を送信しようとしていることをプロファイラーに通知します。|  
+|[RootReferences メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)|ガベージコレクション後のルート参照に関する情報をプロファイラーに通知します。|  
+|[RuntimeResumeFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)|ランタイムがすべてのランタイムスレッドを再開し、通常の動作に戻ったことをプロファイラーに通知します。|  
+|[RuntimeResumeStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)|ランタイムがすべてのランタイムスレッドを再開していることをプロファイラーに通知します。|  
+|[RuntimeSuspendAborted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)|実行中のランタイムの中断がランタイムによって中止されたことをプロファイラーに通知します。|  
+|[RuntimeSuspendFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)|ランタイムがすべてのランタイムスレッドの中断を完了したことをプロファイラーに通知します。|  
+|[RuntimeSuspendStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)|ランタイムがすべてのランタイムスレッドを中断しようとしていることをプロファイラーに通知します。|  
 |[RuntimeThreadResumed メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md)|指定したスレッドが中断された後に再開されたことをプロファイラーに通知します。|  
-|[RuntimeThreadSuspended メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)|指定したスレッドが、またはが中断するには、プロファイラーに通知します。|  
-|[Shutdown メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-shutdown-method.md)|アプリケーションのシャット ダウンをプロファイラーに通知します。|  
-|[ThreadAssignedToOSThread メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md)|特定のオペレーティング システム (OS) のスレッドを使用して、マネージ スレッドが実装されることをプロファイラーに通知します。|  
+|[RuntimeThreadSuspended メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)|指定したスレッドが中断されたか、中断されたことをプロファイラーに通知します。|  
+|[Shutdown メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-shutdown-method.md)|アプリケーションがシャットダウン中であることをプロファイラーに通知します。|  
+|[ThreadAssignedToOSThread メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md)|特定のオペレーティングシステム (OS) スレッドを使用してマネージスレッドが実装されていることをプロファイラーに通知します。|  
 |[ThreadCreated メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)|スレッドが作成されたことをプロファイラーに通知します。|  
 |[ThreadDestroyed メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)|スレッドが破棄されたことをプロファイラーに通知します。|  
-|[UnmanagedToManagedTransition メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)|アンマネージ コードからマネージ コードへの移行が発生したことをプロファイラーに通知します。|  
+|[UnmanagedToManagedTransition メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)|アンマネージコードからマネージコードへの遷移が発生したことをプロファイラーに通知します。|  
   
 ## <a name="remarks"></a>Remarks  
- CLR でメソッドを呼び出し、 `ICorProfilerCallback` (または[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) インターフェイスをイベントは、プロファイラーがサブスクライブしているときにプロファイラーに通知が発生します。 これは、コード プロファイラーを使用して、CLR 通信に使用するプライマリのコールバック インターフェイスです。  
+ CLR は、 `ICorProfilerCallback` (または[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) インターフェイスのメソッドを呼び出して、プロファイラーがサブスクライブしているイベントが発生したときにプロファイラーに通知します。 これは、CLR がコードプロファイラーと通信するときに使用する主要なコールバックインターフェイスです。  
   
- コード プロファイラーのメソッドを実装する必要があります、`ICorProfilerCallback`インターフェイス。 .NET Framework バージョン 2.0 以降では、プロファイラーを実装する必要がありますも、`ICorProfilerCallback2`メソッド。 各メソッドの実装では、失敗した場合の値が成功した場合は S_OK HRESULT または E_FAIL を返す必要があります。 現時点では、CLR を除く各コールバックによって返される HRESULT を無視[icorprofilercallback::objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)します。  
+ コードプロファイラーは、 `ICorProfilerCallback`インターフェイスのメソッドを実装する必要があります。 .NET Framework バージョン2.0 以降では、プロファイラーは`ICorProfilerCallback2`メソッドも実装する必要があります。 各メソッドの実装では、成功した場合は S_OK、失敗した場合は E_FAIL という値を持つ HRESULT を返す必要があります。 現在、CLR では、 [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)を除く各コールバックによって返される HRESULT は無視されます。  
   
- コード プロファイラーは、Microsoft Windows レジストリで、コンポーネント オブジェクト モデル (COM) オブジェクトを実装するを登録する必要があります、`ICorProfilerCallback`と`ICorProfilerCallback2`インターフェイス。 コード プロファイラーが呼び出すことで通知を受信する対象のイベントをサブスクライブ[icorprofilerinfo::seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)します。 プロファイラーの実装でこれは、通常[icorprofilercallback::initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)します。 プロファイラーは、イベントが実行されるときに、または実行中のランタイム プロセスがいつ発生したときに、ランタイムから通知を受信できます。  
+ Microsoft Windows レジストリでは、コードプロファイラーは、インターフェイス`ICorProfilerCallback`および`ICorProfilerCallback2`インターフェイスを実装するコンポーネントオブジェクトモデル (COM) オブジェクトを登録する必要があります。 コードプロファイラーは、 [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)を呼び出して、通知を受信するイベントをサブスクライブします。 これは通常、プロファイラーによる[ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)の実装で行われます。 その後、プロファイラーは、実行中のランタイムプロセスでイベントが発生するか、発生したばかりの場合に、ランタイムから通知を受け取ることができます。  
   
 > [!NOTE]
->  プロファイラーは、1 つの COM オブジェクトを登録します。 プロファイラーが .NET Framework version 1.0 または 1.1 では、COM オブジェクトがのメソッドのみを実装する必要があることを対象とするかどうかは`ICorProfilerCallback`します。 COM オブジェクトがのメソッドを実装する必要がありますも .NET Framework version 2.0 以降を対象とは、その場合`ICorProfilerCallback2`します。  
+> プロファイラーは、1つの COM オブジェクトを登録します。 プロファイラーが .NET Framework バージョン1.0 または1.1 を対象としている場合、その COM オブジェクトはの`ICorProfilerCallback`メソッドのみを実装する必要があります。 .NET Framework バージョン2.0 以降を対象としている場合、COM オブジェクトはの`ICorProfilerCallback2`メソッドも実装する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー:** Corprof.idl、Corprof.idl  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

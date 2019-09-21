@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 32593465c1a161aa1293b7b233539fa930c7e1d8
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: d983ee09704ff69fdedfa95a31942161162f73eb
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402209"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970650"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017 での .NET Core を使用した .NET Standard ライブラリのテスト
 
@@ -23,7 +23,10 @@ ms.locfileid: "67402209"
 
 単体テスト プロジェクトを作成するには、次の操作を行います。
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. **ソリューション エクスプローラー**で **[ClassLibraryProjects]** ソリューション ノードのコンテキスト メニューを開き、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
 
 1. **[新しいプロジェクトの追加]** ダイアログで、 **[Visual C#]** ノードを選択します。 次に、 **[.NET Core]** ノードを選び、 **[MSTest テスト プロジェクト (.NET Core)]** プロジェクト テンプレートを選びます。 **[名前]** テキスト ボックスに、プロジェクト名として "StringLibraryTest" と入力します。 **[OK]** を選択し、単体テスト プロジェクトを作成します。
@@ -52,7 +55,9 @@ ms.locfileid: "67402209"
 1. **[参照マネージャー]** ダイアログで、 **[プロジェクト]** ノードを展開し、 **[StringLibrary]** の横のボックスをオンにします。 `StringLibrary` アセンブリへの参照を追加すると、コンパイラで **StringLibrary** メソッドを見つけることができるようになります。 **[OK]** ボタンを選択します。 これによってクラス ライブラリ プロジェクト `StringLibrary` への参照が追加されます。
 
    ![Visual Studio のプロジェクト参照の追加ダイアログ](./media/testing-library-with-visual-studio/project-reference-manager.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. **ソリューション エクスプローラー**で **[ClassLibraryProjects]** ソリューション ノードのコンテキスト メニューを開き、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
 
 1. **[新しいプロジェクトの追加]** ダイアログで、 **[Visual Basic]** ノードを選択します。 次に、 **[.NET Core]** ノードを選び、 **[MSTest テスト プロジェクト (.NET Core)]** プロジェクト テンプレートを選びます。 **[名前]** テキスト ボックスに、プロジェクト名として "StringLibraryTest" と入力します。 **[OK]** を選択し、単体テスト プロジェクトを作成します。
@@ -81,6 +86,7 @@ ms.locfileid: "67402209"
 1. **[参照マネージャー]** ダイアログで、 **[プロジェクト]** ノードを展開し、 **[StringLibrary]** の横のボックスをオンにします。 `StringLibrary` アセンブリへの参照を追加すると、コンパイラで **StringLibrary** メソッドを見つけることができるようになります。 **[OK]** ボタンを選択します。 これによってクラス ライブラリ プロジェクト `StringLibrary` への参照が追加されます。
 
    ![Visual Studio のプロジェクト参照の追加ダイアログ - Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
+
 ---
 
 ## <a name="adding-and-running-unit-test-methods"></a>単体テスト メソッドの追加と実行
@@ -106,7 +112,8 @@ Assert メソッド | 関数
 
 テスト メソッドを作成するには
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp) 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. *UnitTest1.cs* コード ウィンドウで、コードを次のコードに置き換えます。
 
    [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
@@ -116,7 +123,9 @@ Assert メソッド | 関数
 1. メニュー バーで、 **[ファイル]**  >  **[名前を付けて UnitTest1.cs を保存]** の順に選択します。 **[名前を付けてファイルを保存]** ダイアログで、 **[保存]** ボタンの横にある矢印を選択して、 **[エンコード付きで保存]** を選択します。
 
    ![Visual Studio の [名前を付けてファイルを保存] ダイアログ - C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. *UnitTest1.vb* コード ウィンドウで、コードを次のコードに置き換えます。
 
     [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
@@ -126,6 +135,7 @@ Assert メソッド | 関数
 1. メニュー バーで、 **[ファイル]**  >  **[名前を付けて UnitTest1.vb を保存]** の順に選択します。 **[名前を付けてファイルを保存]** ダイアログで、 **[保存]** ボタンの横にある矢印を選択して、 **[エンコード付きで保存]** を選択します。
 
    ![Visual Studio の [名前を付けてファイルを保存] ダイアログ - Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+
 ---
 
 1. **[保存の確認]** ダイアログで **[はい]** ボタンを選択してファイルを保存します。

@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd46ea26532074c9ea42da4d07a38ed583aad076
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bb151d7c77104d8e24acefaac2e1f109b67f168
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789683"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796358"
 ---
 # <a name="ireferenceidentity-interface"></a>IReferenceIdentity インターフェイス
-コード オブジェクトの一意のシグネチャへの参照を表します。  
+コードオブジェクトの一意の署名への参照を表します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|新しいインターフェイス ポインターを取得`IReferenceIdentity`これと同じであるインスタンス`IReferenceIdentity`、指定した属性の変更を除く。|  
-|`IReferenceIdentity::EnumAttributes`|インターフェイス ポインターを取得、`IEnumIDENTITY_ATTRIBUTE`インスタンスに関連付けられた属性を含む`IReferenceIdentity`します。|  
-|`IReferenceIdentity::GetAttribute`|指定した名前空間の指定した名前の属性の値を取得します。|  
-|`IReferenceIdentity::SetAttribute`|指定した名前空間と、指定した値を指定した名前を持つ属性を設定します。|  
+|`IReferenceIdentity::Clone`|指定した属性の変更を`IReferenceIdentity`除き、この`IReferenceIdentity`と同一の新しいインスタンスへのインターフェイスポインターを取得します。|  
+|`IReferenceIdentity::EnumAttributes`|`IEnumIDENTITY_ATTRIBUTE` この`IReferenceIdentity`に関連付けられている属性を格納しているインスタンスへのインターフェイスポインターを取得します。|  
+|`IReferenceIdentity::GetAttribute`|指定した名前を使用して、指定した名前空間の属性の値を取得します。|  
+|`IReferenceIdentity::SetAttribute`|指定した名前空間と指定した名前を持つ属性を、指定した値に設定します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Isolation.h  
+ **ヘッダー:** 分離 .h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IEnumIDENTITY_ATTRIBUTE インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+- [Fusion インターフェイス](fusion-interfaces.md)
+- [IEnumIDENTITY_ATTRIBUTE インターフェイス](ienumidentity-attribute-interface.md)

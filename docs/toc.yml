@@ -160,8 +160,6 @@
           href: core/tutorials/with-visual-studio.md
         - name: Visual Studio 2017 で .NET Core を使用して Visual Basic Hello World アプリを構築する
           href: core/tutorials/vb-with-visual-studio.md
-        - name: プラグインがある .NET Core アプリケーションを作成する
-          href: core/tutorials/creating-app-with-plugin-support.md
         - name: 'Visual Studio 2017 を使用して C# または Visual Basic .NET Core の Hello World アプリケーションをデバッグする'
           href: core/tutorials/debugging-with-visual-studio.md
         - name: Visual Studio 2017 での Hello World アプリケーションの発行
@@ -191,11 +189,7 @@
         - name: .NET Core 2.0 の新機能
           href: core/whats-new/dotnet-core-2-0.md
     - name: アプリケーションの互換性
-      items:
-        - name: 破壊的変更を評価する
-          href: core/compatibility/index.md
-        - name: 破壊的変更のカテゴリ
-          href: core/compatibility/categories.md
+      href: core/compatibility/
     - name: チュートリアル
       href: core/tutorials/index.md
       items:
@@ -219,6 +213,8 @@
           href: core/tutorials/testing-with-cli.md
         - name: クロス プラットフォーム ツールによるライブラリの開発
           href: core/tutorials/libraries.md
+        - name: プラグインがある .NET Core アプリケーションを作成する
+          href: core/tutorials/creating-app-with-plugin-support.md
         - name: ASP.NET Core アプリケーションの開発
           href: core/tutorials/aspnet-core.md
         - name: ネイティブ コードからの .NET Core のホスト
@@ -262,11 +258,19 @@
     - name: Docker
       items:
         - name: .NET および Docker の概要
-          href: core/docker/intro-net-docker.md
+          href: core/docker/introduction.md
         - name: NET Core アプリのコンテナー化
           href: core/docker/build-container.md
         - name: Visual Studio のコンテナー ツール
           href: /visualstudio/containers/overview
+    - name: 診断ツール
+      items:
+        - name: 概要
+          href: core/diagnostics/index.md
+        - name: マネージド デバッガー
+          href: core/diagnostics/managed-debuggers.md
+        - name: ログとトレース
+          href: core/diagnostics/logging-tracing.md
     - name: 単体テスト
       href: core/testing/index.md
       items:
@@ -432,6 +436,28 @@
           href: core/porting/winforms.md
         - name: WPF プロジェクトを移植する
           href: core/porting/wpf.md
+    - name: 依存関係の読み込み
+      items:
+        - name: 概要
+          href: core/dependency-loading/overview.md
+        - name: AssemblyLoadContext について
+          href: core/dependency-loading/understanding-assemblyloadcontext.md
+        - name: 読み込みの詳細
+          items:
+            - name: 既定の依存関係プローブ
+              href: core/dependency-loading/default-probing.md
+            - name: マネージド アセンブリを読み込んでいます
+              href: core/dependency-loading/loading-managed.md
+            - name: サテライト アセンブリを読み込んでいます
+              href: core/dependency-loading/loading-resources.md
+            - name: アンマネージド ライブラリを読み込んでいます
+              href: core/dependency-loading/loading-unmanaged.md
+        - name: チュートリアル
+          items:
+            - name: プラグインがある .NET Core アプリケーションを作成する
+              href: core/tutorials/creating-app-with-plugin-support.md
+            - name: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法
+              href: standard/assembly/unloadability-howto.md
     - name: ソースから .NET Core をビルドする
       href: core/build/index.md
       items:
@@ -1044,24 +1070,6 @@
     - name: プログラミングの概念
       href: visual-basic/programming-guide/concepts/index.md
       items:
-        - name: アセンブリ
-          items:
-            - name: フレンド アセンブリ
-              items:
-                - name: '方法: 署名のないフレンド アセンブリを作成する'
-                  href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md
-                - name: '方法: 署名されたフレンド アセンブリを作成する'
-                  href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md
-            - name: '方法: コマンド ラインを使用してアセンブリを作成および使用する'
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
-            - name: '方法: ファイルがアセンブリであるかどうかを確認する'
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
-            - name: '方法: アセンブリを読み込み、アンロードする'
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md
-            - name: '方法: アセンブリを他のアプリケーションと共有する'
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-share-an-assembly-with-other-applications.md
-            - name: 'チュートリアル: マネージド アセンブリからの型の埋め込み'
-              href: visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md
         - name: Async および Await を使用した非同期プログラミング
           href: visual-basic/programming-guide/concepts/async/index.md
         - name: 属性

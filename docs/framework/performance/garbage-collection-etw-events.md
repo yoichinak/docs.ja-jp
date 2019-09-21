@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5e10a1dc1ad3230213a20b850741a6ec0468294
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ec90d022a0c72782f413a84b6fbd2c1b8d663a73
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616424"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046503"
 ---
 # <a name="garbage-collection-etw-events"></a>ガベージ コレクション ETW イベント
 <a name="top"></a> これらのイベントは、ガベージ コレクションに関連する情報を収集します。 ガベージ コレクションが実行された回数、ガベージ コレクションの間に解放されたメモリの量など、診断やデバッグに役立つ情報を入手できます。  
@@ -49,8 +49,8 @@ ms.locfileid: "64616424"
 - [GCTerminateConcurrentThread_V1 イベント](#gcterminateconcurrentthread_v1_event)  
   
 <a name="gcstart_v1_event"></a>   
-## <a name="gcstartv1-event"></a>GCStart_V1 イベント  
- 次の表に、キーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)」を参照してください)。  
+## <a name="gcstart_v1-event"></a>GCStart_V1 イベント  
+ 次の表に、キーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
   
 |イベントを発生させるキーワード|レベル|  
 |-----------------------------------|-----------|  
@@ -69,13 +69,13 @@ ms.locfileid: "64616424"
 |カウント|win:UInt32|*n*回めのガベージ コレクション。|  
 |奥行|win:UInt32|収集されるジェネレーション。|  
 |理由|win:UInt32|ガベージ コレクションが発生した理由:<br /><br /> 0x0 - 小さなオブジェクト ヒープの割り当て。<br /><br /> 0x1 - 強制実行。<br /><br /> 0x2 - メモリ不足。<br /><br /> 0x3 - 空。<br /><br /> 0x4 - 大きなオブジェクト ヒープの割り当て。<br /><br /> 0x5 - 領域不足 (小さなオブジェクト ヒープが対象)。<br /><br /> 0x6 - 領域不足 (大きなオブジェクト ヒープが対象)。<br /><br /> 0x7 - 強制実行されるが、ブロッキングとして強制されない。|  
-|型|win:UInt32|0x0 - バックグラウンド ガベージ コレクションの外部で発生するブロッキング ガベージ コレクション。<br /><br /> 0x1 - バックグラウンド ガベージ コレクション。<br /><br /> 0x2 - バックグラウンド ガベージ コレクションの実行中に発生するブロッキング ガベージ コレクション。|  
+|種類|win:UInt32|0x0 - バックグラウンド ガベージ コレクションの外部で発生するブロッキング ガベージ コレクション。<br /><br /> 0x1 - バックグラウンド ガベージ コレクション。<br /><br /> 0x2 - バックグラウンド ガベージ コレクションの実行中に発生するブロッキング ガベージ コレクション。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
  [ページのトップへ](#top)  
   
 <a name="gcend_v1_event"></a>   
-## <a name="gcendv1-event"></a>GCEnd_V1 イベント  
+## <a name="gcend_v1-event"></a>GCEnd_V1 イベント  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -99,7 +99,7 @@ ms.locfileid: "64616424"
  [ページのトップへ](#top)  
   
 <a name="gcheapstats_v1_event"></a>   
-## <a name="gcheapstatsv1-event"></a>GCHeapStats_V1 イベント  
+## <a name="gcheapstats_v1-event"></a>GCHeapStats_V1 イベント  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -134,7 +134,7 @@ ms.locfileid: "64616424"
  [ページのトップへ](#top)  
   
 <a name="gccreatesegment_v1_event"></a>   
-## <a name="gccreatesegmentv1-event"></a>GCCreateSegment_V1 イベント  
+## <a name="gccreatesegment_v1-event"></a>GCCreateSegment_V1 イベント  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -153,7 +153,7 @@ ms.locfileid: "64616424"
 |----------------|---------------|-----------------|  
 |アドレス|win:UInt64|セグメントのアドレス。|  
 |サイズ|win:UInt64|セグメントのサイズ。|  
-|型|win:UInt32|0x0 - 小さなオブジェクト ヒープ。<br /><br /> 0x1 - 大きなオブジェクト ヒープ。<br /><br /> 0x2 - 読み取り専用ヒープ。|  
+|種類|win:UInt32|0x0 - 小さなオブジェクト ヒープ。<br /><br /> 0x1 - 大きなオブジェクト ヒープ。<br /><br /> 0x2 - 読み取り専用ヒープ。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
  ガベージ コレクターによって割り当てられるセグメントのサイズは実装に固有であり、定期的な更新プログラムによる場合を含め、いつでも変更されることがあります。 アプリでは、セグメント サイズを推測することや、特定のセグメント サイズに依存することを絶対に避けてください。また、セグメントの割り当てに使用可能なメモリの量を構成しようとしてもなりません。  
@@ -161,7 +161,7 @@ ms.locfileid: "64616424"
  [ページのトップへ](#top)  
   
 <a name="gcfreesegment_v1_event"></a>   
-## <a name="gcfreesegmentv1-event"></a>GCFreeSegment_V1 イベント  
+## <a name="gcfreesegment_v1-event"></a>GCFreeSegment_V1 イベント  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -184,7 +184,7 @@ ms.locfileid: "64616424"
  [ページのトップへ](#top)  
   
 <a name="gcrestarteebegin_v1_event"></a>   
-## <a name="gcrestarteebeginv1-event"></a>GCRestartEEBegin_V1 イベント  
+## <a name="gcrestarteebegin_v1-event"></a>GCRestartEEBegin_V1 イベント  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -202,7 +202,7 @@ ms.locfileid: "64616424"
  [ページのトップへ](#top)  
   
 <a name="gcrestarteeend_v1_event"></a>   
-## <a name="gcrestarteeendv1-event"></a>GCRestartEEEnd_V1 イベント  
+## <a name="gcrestarteeend_v1-event"></a>GCRestartEEEnd_V1 イベント  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -220,7 +220,7 @@ ms.locfileid: "64616424"
  [ページのトップへ](#top)  
   
 <a name="gcsuspendee_v1_event"></a>   
-## <a name="gcsuspendeev1-event"></a>GCSuspendEE_V1 イベント  
+## <a name="gcsuspendee_v1-event"></a>GCSuspendEE_V1 イベント  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -244,7 +244,7 @@ ms.locfileid: "64616424"
  [ページのトップへ](#top)  
   
 <a name="gcsuspendeeend_v1_event"></a>   
-## <a name="gcsuspendeeendv1-event"></a>GCSuspendEEEnd_V1 イベント  
+## <a name="gcsuspendeeend_v1-event"></a>GCSuspendEEEnd_V1 イベント  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -262,7 +262,7 @@ ms.locfileid: "64616424"
  [ページのトップへ](#top)  
   
 <a name="gcallocationtick_v2_event"></a>   
-## <a name="gcallocationtickv2-event"></a>GCAllocationTick_V2 イベント  
+## <a name="gcallocationtick_v2-event"></a>GCAllocationTick_V2 イベント  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -290,7 +290,7 @@ ms.locfileid: "64616424"
  [ページのトップへ](#top)  
   
 <a name="gcfinalizersbegin_v1_event"></a>   
-## <a name="gcfinalizersbeginv1-event"></a>GCFinalizersBegin_V1 イベント  
+## <a name="gcfinalizersbegin_v1-event"></a>GCFinalizersBegin_V1 イベント  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -308,7 +308,7 @@ ms.locfileid: "64616424"
  [ページのトップへ](#top)  
   
 <a name="gcfinalizersend_v1_event"></a>   
-## <a name="gcfinalizersendv1-event"></a>GCFinalizersEnd_V1 イベント  
+## <a name="gcfinalizersend_v1-event"></a>GCFinalizersEnd_V1 イベント  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -331,7 +331,7 @@ ms.locfileid: "64616424"
  [ページのトップへ](#top)  
   
 <a name="gccreateconcurrentthread_v1_event"></a>   
-## <a name="gccreateconcurrentthreadv1-event"></a>GCCreateConcurrentThread_V1 イベント  
+## <a name="gccreateconcurrentthread_v1-event"></a>GCCreateConcurrentThread_V1 イベント  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -350,7 +350,7 @@ ms.locfileid: "64616424"
  [ページのトップへ](#top)  
   
 <a name="gcterminateconcurrentthread_v1_event"></a>   
-## <a name="gcterminateconcurrentthreadv1-event"></a>GCTerminateConcurrentThread_V1 イベント  
+## <a name="gcterminateconcurrentthread_v1-event"></a>GCTerminateConcurrentThread_V1 イベント  
  次の表に、キーワードとレベルを示します。  
   
 |イベントを発生させるキーワード|レベル|  
@@ -368,4 +368,4 @@ ms.locfileid: "64616424"
   
 ## <a name="see-also"></a>関連項目
 
-- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW イベント](clr-etw-events.md)

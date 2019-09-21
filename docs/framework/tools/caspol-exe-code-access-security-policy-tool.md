@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccb1d78f939d2faf90013392fc60d5597bc3922e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1c3fab258b23999cabce474afe728d1c50e1043f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489682"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971234"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (コード アクセス セキュリティ ポリシー ツール)
 ユーザーと管理者は、コード アクセス セキュリティ (CAS) ポリシー ツール (Caspol.exe) を使用して、コンピューター ポリシー レベル、ユーザー ポリシー レベル、およびエンタープライズ ポリシー レベルのセキュリティ ポリシーを変更できます。  
   
 > [!IMPORTANT]
->  .NET Framework 4 以降では、[\<legacyCasPolicy> 要素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)が `true` に設定されていない限り、Caspol.exe は CAS ポリシーに影響を与えません。 CasPol.exe によって表示または変更された設定は、CAS ポリシーの使用が選択されているアプリケーションにのみ影響します。 詳細については、「[セキュリティの変更点](../../../docs/framework/security/security-changes.md)」を参照してください。  
+> .NET Framework 4 以降では、[\<legacyCasPolicy> 要素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)が `true` に設定されていない限り、Caspol.exe は CAS ポリシーに影響を与えません。 CasPol.exe によって表示または変更された設定は、CAS ポリシーの使用が選択されているアプリケーションにのみ影響します。 詳細については、「[セキュリティの変更点](../../../docs/framework/security/security-changes.md)」を参照してください。  
   
 > [!NOTE]
->  64 ビット コンピューターには、64 ビット バージョンと 32 ビット バージョンの両方のセキュリティ ポリシーが含まれます。 32 ビット アプリケーションと 64 ビット アプリケーションの両方にポリシーの変更を適用するには、Caspol.exe の 32 ビット バージョンと 64 ビット バージョンの両方を実行します。  
+> 64 ビット コンピューターには、64 ビット バージョンと 32 ビット バージョンの両方のセキュリティ ポリシーが含まれます。 32 ビット アプリケーションと 64 ビット アプリケーションの両方にポリシーの変更を適用するには、Caspol.exe の 32 ビット バージョンと 64 ビット バージョンの両方を実行します。  
   
  コード アクセス セキュリティ ポリシー ツールは、.NET Framework および Visual Studio と共に自動的にインストールされます。 Caspol.exe は、32 ビット システムでは %windir%\Microsoft.NET\Framework\\*version* に、64 ビット システムでは %windir%\Microsoft.NET\Framework64\\*version* にあります。 (たとえば、場所は、64 ビット システムの .NET Framework 4 では %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe)。コンピューターで複数のバージョンの .NET Framework を side-by-side で実行している場合は、複数のバージョンのツールがインストールされると考えられます。 インストール ディレクトリからツールを実行できます。 ただし、インストール フォルダーに移動する必要のない[コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)を使用することをお勧めします。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66489682"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console
 caspol [options]  
 ```  
   
@@ -47,7 +47,7 @@ caspol [options]
   
 |オプション|説明|  
 |------------|-----------------|  
-|**-addfulltrust** *assembly_file*<br /><br /> or<br /><br /> **-af** *assembly_file*|カスタム セキュリティ オブジェクト (カスタム アクセス許可またはカスタム メンバーシップ条件) を実装するアセンブリを、特定のポリシー レベルの完全信頼アセンブリの一覧に追加します。 引数 *assembly_file* は、追加するアセンブリを指定します。 このファイルは、[厳密な名前](../../../docs/framework/app-domains/strong-named-assemblies.md)で署名する必要があります。 アセンブリに厳密な名前で署名するには、[厳密名ツール (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) を使用します。<br /><br /> カスタム アクセス許可を含むアクセス許可セットをポリシーに追加するたびに、そのカスタム アクセス許可を実装するアセンブリを、該当するポリシー レベルの完全信頼一覧に追加する必要があります。 セキュリティ ポリシー (コンピューター ポリシーなど) の中で使用されるカスタム セキュリティ オブジェクト (カスタム コード グループやメンバーシップ条件など) を実装するすべてのアセンブリを、完全信頼アセンブリの一覧に常に追加する必要があります。 **注意:** カスタム セキュリティ オブジェクトを実装するアセンブリが他のアセンブリを参照している場合は、参照先アセンブリを最初に完全信頼アセンブリの一覧に追加する必要があります。 Visual Basic、C++、および JScript を使用して作成されたカスタム セキュリティ オブジェクトは、それぞれ Microsoft.VisualBasic.dll、Microsoft.VisualC.dll、Microsoft.JScript.dll をこの順で参照します。 これらのアセンブリは、既定では、完全な信頼を持つアセンブリのリストには含まれていません。 カスタム セキュリティ オブジェクトを追加する前に、適切なアセンブリを完全な信頼のリストに追加する必要があります。 これができない場合は、セキュリティ システムが壊れ、すべてのアセンブリの読み込みに失敗します。 この状況では、Caspol.exe **-all -reset** オプションを使用してもセキュリティを修復できません。 セキュリティを修復するには、セキュリティ ファイルを手動で編集し、カスタム セキュリティ オブジェクトを削除する必要があります。|  
+|**-addfulltrust** *assembly_file*<br /><br /> or<br /><br /> **-af** *assembly_file*|カスタム セキュリティ オブジェクト (カスタム アクセス許可またはカスタム メンバーシップ条件) を実装するアセンブリを、特定のポリシー レベルの完全信頼アセンブリの一覧に追加します。 引数 *assembly_file* は、追加するアセンブリを指定します。 このファイルは、[厳密な名前](../../standard/assembly/strong-named.md)で署名する必要があります。 アセンブリに厳密な名前で署名するには、[厳密名ツール (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) を使用します。<br /><br /> カスタム アクセス許可を含むアクセス許可セットをポリシーに追加するたびに、そのカスタム アクセス許可を実装するアセンブリを、該当するポリシー レベルの完全信頼一覧に追加する必要があります。 セキュリティ ポリシー (コンピューター ポリシーなど) の中で使用されるカスタム セキュリティ オブジェクト (カスタム コード グループやメンバーシップ条件など) を実装するすべてのアセンブリを、完全信頼アセンブリの一覧に常に追加する必要があります。 **注意:** カスタム セキュリティ オブジェクトを実装するアセンブリが他のアセンブリを参照している場合は、参照先アセンブリを最初に完全信頼アセンブリの一覧に追加する必要があります。 Visual Basic、C++、および JScript を使用して作成されたカスタム セキュリティ オブジェクトは、それぞれ Microsoft.VisualBasic.dll、Microsoft.VisualC.dll、Microsoft.JScript.dll をこの順で参照します。 これらのアセンブリは、既定では、完全な信頼を持つアセンブリのリストには含まれていません。 カスタム セキュリティ オブジェクトを追加する前に、適切なアセンブリを完全な信頼のリストに追加する必要があります。 これができない場合は、セキュリティ システムが壊れ、すべてのアセンブリの読み込みに失敗します。 この状況では、Caspol.exe **-all -reset** オプションを使用してもセキュリティを修復できません。 セキュリティを修復するには、セキュリティ ファイルを手動で編集し、カスタム セキュリティ オブジェクトを削除する必要があります。|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> or<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|新しいコード グループをコード グループ階層に追加します。 *parent_label* または *parent_name* を指定できます。 *parent_label* 引数は、追加されているコード グループの親である、コード グループのラベル (1 や 1\.1 など) を指定します。 引数 *parent_name* は、追加するコード グループの親となるコード グループの名前を指定します。 *parent_label* と *parent_name* は交換して使用できるため、Caspol.exe がこの 2 つを区別できる必要があります。 したがって、*parent_name* の先頭を数字にすることはできません。 また、*parent_name* に含めることができるのは、A-Z、0-9、およびアンダースコア文字だけです。<br /><br /> 引数 *mship* は、新しいコード グループのメンバーシップ条件を指定します。 詳細については、このセクションの *mship* 引数の表を参照してください。<br /><br /> 引数 *pset_name* は、新しいコード グループと関連付けられるアクセス許可セットの名前です。 新しいグループに 1 つ以上の *flags* を設定することもできます。 詳細については、このセクションの *flags* 引数の表を参照してください。|  
 |**-addpset** {*psfile* &#124; *psfile* p*set_name*}<br /><br /> or<br /><br /> **-ap** {*named*_*psfile* &#124; *psfile* *pset_name*}|新しい名前付きアクセス許可セットをポリシーに追加します。 アクセス許可セットは XML で編集し、.xml ファイルとして格納する必要があります。 XML ファイルにアクセス許可セットの名前が含まれる場合は、そのファイル (*psfile*) だけが指定されます。 XML ファイルにアクセス許可セットの名前が含まれない場合は、XML ファイルの名前 (*psfile*) とアクセス許可セットの名前 (*pset_name*) の両方を指定する必要があります。<br /><br /> アクセス許可セットで使用するすべてのアクセス許可を、グローバル アセンブリ キャッシュ内にあるアセンブリに定義する必要があります。|  
 |**-a** **[ll]**|このオプションの後に続くすべてのオプションを、コンピューター、ユーザー、エンタープライズの各ポリシーに適用します。 **-all** オプションは、常に現在ログオンしているユーザーのポリシーを参照します。 現在のユーザー以外のユーザーのポリシーの参照方法については **-customall** オプションを参照してください。|  

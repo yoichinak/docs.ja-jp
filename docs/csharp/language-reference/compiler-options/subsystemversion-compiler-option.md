@@ -2,19 +2,19 @@
 title: -subsystemversion (C# コンパイラ オプション)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: cf1fb74f5d13817448bec2bcdc37510ff82f024d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f70389f87bf49ffccded4aef775c27ed0d034e1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377905"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922459"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (C# コンパイラ オプション)
 
 生成された実行可能ファイルが動作できるサブシステムの最小バージョンを指定します。これにより、実行可能ファイルが動作できる Windows のバージョンが決まります。 通常、このオプションを指定することで、実行可能ファイルが、Windows の以前のバージョンでは使用できない特定のセキュリティ機能を利用できるようになります。
 
 > [!NOTE]
->  サブシステム自体を指定するには、[-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) のコンパイラ オプションを使用します。
+> サブシステム自体を指定するには、[-target](./target-compiler-option.md) のコンパイラ オプションを使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -22,7 +22,7 @@ ms.locfileid: "66377905"
 -subsystemversion:major.minor
 ```
 
-## <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>parameters
 
 `major.minor`
 
@@ -44,17 +44,17 @@ ms.locfileid: "66377905"
 |Windows Server 2008|6.01|
 |[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|
 
-## <a name="default-values"></a>既定の値
+## <a name="default-values"></a>既定値
 
 **-subsystemversion** コンパイラ オプションの既定値は条件によって異なります。その条件を次に示します。
 
 - 次のコンパイラ オプションのいずれかが設定されている場合、既定値は 6.02 です。
 
-  - [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)
+  - [/target:appcontainerexe](./target-appcontainerexe-compiler-option.md)
 
-  - [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)
+  - [/target:winmdobj](./target-winmdobj-compiler-option.md)
 
-  - [-platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)
+  - [-platform:arm](./platform-compiler-option.md)
 
 - MSBuild を使用しており、.NET Framework 4.5 が対象で、さらにこの一覧で前に指定したコンパイラ オプションを設定していない場合、既定値は 6.00 です。
 
@@ -66,4 +66,4 @@ Visual Studio で **-subsystemversion** コンパイラ オプションを設定
 
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)

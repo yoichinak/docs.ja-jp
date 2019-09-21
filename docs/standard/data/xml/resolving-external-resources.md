@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b4ba0cbb25e2c83a33ffba99ccbb29d5b414b3c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664489"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918203"
 ---
 # <a name="resolving-external-resources"></a>外部リソースの解決
 **XmlDocument** クラスでは、外部のドキュメント型定義 (DTD)、エンティティ、スキーマなど、XML データのインラインでないリソースを検索するときに **XmlDocument** の **XmlResolver** プロパティを使用します。 これらのリソースは、ネットワーク上やローカル ドライブ上にあり、URI (Uniform Resource Identifier) で識別できます。 そのため、**XmlDocument** は、ドキュメント内にある **EntityReference** ノードを解決し、外部の DTD またはスキーマに基づいてドキュメントを検証することができます。  
@@ -48,7 +48,7 @@ ms.locfileid: "45664489"
  XmlResolver が正しい資格情報を持つように設定すれば、外部リソースにアクセスできます。  
   
 > [!NOTE]
->  **XmlResolver** プロパティを取得する方法はありません。 これは、資格情報が設定されている **XmlResolver** をユーザーが再利用するのを防ぐためです。 また、**XmlTextReader** または検証用の <xref:System.Xml.XmlReader> を使用して、リゾルバーが設定されている **XmlDocument** を読み込んだ場合、**XmlDocument** は、セキュリティ リスクを回避するために、**Load** フェーズの後、これらのリーダーのリゾルバーをキャッシュしません。  
+> **XmlResolver** プロパティを取得する方法はありません。 これは、資格情報が設定されている **XmlResolver** をユーザーが再利用するのを防ぐためです。 また、**XmlTextReader** または検証用の <xref:System.Xml.XmlReader> を使用して、リゾルバーが設定されている **XmlDocument** を読み込んだ場合、**XmlDocument** は、セキュリティ リスクを回避するために、**Load** フェーズの後、これらのリーダーのリゾルバーをキャッシュしません。  
   
  詳細については、<xref:System.Xml.XmlResolver> のリファレンス ページの「解説」を参照してください。  
   

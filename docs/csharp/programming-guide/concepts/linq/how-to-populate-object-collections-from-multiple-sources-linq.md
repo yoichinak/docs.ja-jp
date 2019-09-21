@@ -1,15 +1,15 @@
 ---
-title: '方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ) (C#)'
+title: 方法:複数のソースからオブジェクト コレクションにデータを設定する (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c00257db7f3c06cab55cd48f7472f07dd7b2a664
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584392"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593059"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ) (C#)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>方法:複数のソースからオブジェクト コレクションにデータを設定する (LINQ) (C#)
 
 この例では、さまざまなソースから一連の新しい型にデータをマージする方法を示します。
 
@@ -18,7 +18,7 @@ ms.locfileid: "65584392"
 
 ## <a name="to-create-the-data-file"></a>データ ファイルを作成するには
 
-names.csv ファイルと scores.csv ファイルをプロジェクト フォルダーにコピーします。このとき、「[方法:異種ファイルのコンテンツを結合する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)」の説明に従います。
+names.csv ファイルと scores.csv ファイルをプロジェクト フォルダーにコピーします。このとき、「[方法:異種ファイルのコンテンツを結合する (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)」の説明に従います。
 
 ## <a name="example"></a>例
 
@@ -107,7 +107,7 @@ class PopulateCollection
  */
 ```
 
-[select](../../../../csharp/language-reference/keywords/select-clause.md) 句では、オブジェクト初期化子を使用し、2 つのソースのデータを使用して新しい `Student` オブジェクトそれぞれをインスタンス化しています。
+[select](../../../language-reference/keywords/select-clause.md) 句では、オブジェクト初期化子を使用し、2 つのソースのデータを使用して新しい `Student` オブジェクトそれぞれをインスタンス化しています。
 
 クエリの結果を格納する必要がない場合は、名前付きの型よりも匿名型の方が便利です。 クエリが実行されたメソッドの外部にクエリ結果を渡す場合は、名前付きの型が必要になります。 次の例では、前の例と同じタスクを実行しますが、名前付きの型ではなく匿名型が使用します。
 
@@ -141,6 +141,6 @@ foreach (var student in queryNamesScores2)
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [オブジェクト初期化子とコレクション初期化子](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [匿名型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [LINQ と文字列 (C#)](./linq-and-strings.md)
+- [オブジェクト初期化子とコレクション初期化子](../../classes-and-structs/object-and-collection-initializers.md)
+- [匿名型](../../classes-and-structs/anonymous-types.md)

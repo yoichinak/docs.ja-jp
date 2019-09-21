@@ -4,12 +4,12 @@ description: .NET で P/Invoke を介してネイティブ関数を呼び出す�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: c6dcfdb9543abceb688fee2d73c242f1742ab27d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cda738a173cbe61cf49f79ceef78c533a5a879d9
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582554"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106796"
 ---
 # <a name="platform-invoke-pinvoke"></a>プラットフォーム呼び出し (P/Invoke)
 
@@ -21,9 +21,9 @@ P/Invoke は、アンマネージド ライブラリ内の構造体、コール�
 
 上の例は単純ですが、マネージド コードからアンマネージド 関数を呼び出すために必要なことを示しています。 この例の手順を説明します。
 
-* 1 行目は、必要なすべての項目を保持する名前空間 `System.Runtime.InteropServices` のステートメントの使用を示しています。
-* 7 行目で `DllImport` 属性を導入しています。 この属性は、ランタイムにアンマネージ DLL を読み込むように伝えるため、きわめて重要です。 渡された文字列は、ターゲット関数が入っている DLL です。 さらに、文字列のマーシャリングに使用する[文字セット](./charset.md)を指定します。 最後に、この関数が [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) を呼び出し、ランタイムでそのエラー コードをキャプチャしてユーザーが <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> を介して取得できるように指定します。
-* 8 行目は、P/Invoke 作業の最も重要な箇所です。 ここでは、アンマネージドと**正確に同じシグネチャ**を持つマネージド メソッドを定義しています。 宣言には新しいキーワード `extern` があることがわかります。これはランタイムに、これが外部メソッドであり、それを呼び出したときに、ランタイムが `DllImport` 属性に指定された DLL からそれを見つける必要があることを伝えます。
+- 1 行目は、必要なすべての項目を保持する名前空間 `System.Runtime.InteropServices` のステートメントの使用を示しています。
+- 7 行目で `DllImport` 属性を導入しています。 この属性は、ランタイムにアンマネージ DLL を読み込むように伝えるため、きわめて重要です。 渡された文字列は、ターゲット関数が入っている DLL です。 さらに、文字列のマーシャリングに使用する[文字セット](./charset.md)を指定します。 最後に、この関数が [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) を呼び出し、ランタイムでそのエラー コードをキャプチャしてユーザーが <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> を介して取得できるように指定します。
+- 8 行目は、P/Invoke 作業の最も重要な箇所です。 ここでは、アンマネージドと**正確に同じシグネチャ**を持つマネージド メソッドを定義しています。 宣言には新しいキーワード `extern` があることがわかります。これはランタイムに、これが外部メソッドであり、それを呼び出したときに、ランタイムが `DllImport` 属性に指定された DLL からそれを見つける必要があることを伝えます。
 
 例の残りの部分は、その他のマネージド メソッドと同じように、メソッドを呼び出しているだけです。
 
@@ -49,10 +49,10 @@ P/Invoke は、アンマネージド ライブラリ内の構造体、コール�
 
 次の例を確認してみましょう。
 
-* 例の 9 行目では、アンマネージ コードからのコールバックのシグネチャと一致するデリゲートを定義しています。 マネージド コードで `IntPtr` を使用して、LPARAM および HWND 型を表す方法に注意してください。
-* 13 行目と 14 行目では、user32.dll ライブラリから `EnumWindows` 関数を導入しています。
-* 17 - 20 行目は、デリゲートを実装しています。 この簡単な例では、ハンドルだけコンソールに出力します。
-* 最後に、24 行目で、外部メソッドを呼び出し、デリゲートを渡しています。
+- 例の 9 行目では、アンマネージ コードからのコールバックのシグネチャと一致するデリゲートを定義しています。 マネージド コードで `IntPtr` を使用して、LPARAM および HWND 型を表す方法に注意してください。
+- 13 行目と 14 行目では、user32.dll ライブラリから `EnumWindows` 関数を導入しています。
+- 17 - 20 行目は、デリゲートを実装しています。 この簡単な例では、ハンドルだけコンソールに出力します。
+- 最後に、24 行目で、外部メソッドを呼び出し、デリゲートを渡しています。
 
 Linux と macOS の例を、以下に示します。 それらの場合、`libc` C ライブラリに見つかる `ftw` 関数を使用します。 この関数は、ディレクトリ階層をスキャンするために使用し、そのパラメーターの 1 つとして、関数へのポインターを受け取ります。 上記のメソッドのシグネチャは次のとおりです。`int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`
 

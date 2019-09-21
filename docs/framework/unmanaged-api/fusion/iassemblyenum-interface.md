@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4eb64fc0badf94c93182e7bd6875337c411bcdef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0338c1e3e8890f08f87c80ec922071053d591935
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697434"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796675"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum インターフェイス
-配列の列挙子を表す`IAssemblyName`オブジェクト。  
+オブジェクトの`IAssemblyName`配列の列挙子を表します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Clone メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|これの簡易コピーを作成します。`IAssemblyEnum`オブジェクト。|  
-|[GetNextAssembly メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|次のポインターを取得`IAssemblyName`これに含まれる`IAssemblyEnum`オブジェクト。|  
-|[Reset メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|これをリセット`IAssemblyEnum`オブジェクトを開始位置。|  
+|[Clone メソッド](iassemblyenum-clone-method.md)|この`IAssemblyEnum`オブジェクトの簡易コピーを作成します。|  
+|[GetNextAssembly メソッド](iassemblyenum-getnextassembly-method.md)|`IAssemblyName` この`IAssemblyEnum`オブジェクトに格納されている次のへのポインターを取得します。|  
+|[Reset メソッド](iassemblyenum-reset-method.md)|この`IAssemblyEnum`オブジェクトを開始位置にリセットします。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Fusion インターフェイス](fusion-interfaces.md)
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)

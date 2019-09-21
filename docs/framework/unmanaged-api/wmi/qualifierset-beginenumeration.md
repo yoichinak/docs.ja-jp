@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f3987705486727a591dce1670cd369d909a0d4a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3b75c51ebddd78e447fed57b22a96c2d5c35004e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636230"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798352"
 ---
-# <a name="qualifiersetbeginenumeration-function"></a>QualifierSet_BeginEnumeration 関数
+# <a name="qualifierset_beginenumeration-function"></a>QualifierSet_BeginEnumeration 関数
 
 オブジェクトの修飾子の列挙子が列挙型の先頭にリセットされます。
 
@@ -42,47 +42,47 @@ HRESULT QualifierSet_BeginEnumeration (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`\
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`\
-[in]ポインター、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンス。
+から[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンスへのポインター。
 
 `lFlags`\
-[in]フラグまたはで説明されている値のビットごとの組み合わせ、[解説](#remarks)セクション列挙体に含める修飾子を指定します。
+から列挙体に含める修飾子を指定する、「[解説](#remarks)」で説明されているフラグまたは値のビットごとの組み合わせ。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lFlags` パラメーターが正しくありません。 |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | 2 番目の呼び出し`QualifierSet_BeginEnumeration`せずに、中間の呼び出しが行われた[ `QualifierSet_EndEnumeration`](qualifierset-endenumeration.md)します。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 新しい列挙を開始するのに十分なメモリがあります。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | への2回`QualifierSet_BeginEnumeration`目の呼び出しは、の間[`QualifierSet_EndEnumeration`](qualifierset-endenumeration.md)の呼び出しなしで行われました。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 新しい列挙を開始するために必要なメモリが不足しています。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
 
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemQualifierSet::BeginEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-beginenumeration)メソッド。
+この関数は、 [IWbemQualifierSet:: BeginEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-beginenumeration)メソッドの呼び出しをラップします。
 
-すべてのオブジェクトの修飾子を列挙するには、最初の呼び出しの前にこのメソッドを呼び出す[QualifierSet_Next](qualifierset-next.md)します。 修飾子が列挙される順序は、指定された列挙型のバリアントに保証します。
+オブジェクトのすべての修飾子を列挙するには、 [QualifierSet_Next](qualifierset-next.md)の最初の呼び出しの前にこのメソッドを呼び出す必要があります。 修飾子が列挙される順序は、特定の列挙体に対して不変であることが保証されます。
 
-フラグとして渡すことができる、`lEnumFlags`で引数が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+`lEnumFlags`引数として渡すことができるフラグは、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
 |  | 0 | すべての修飾子の名前を返します。 |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 現在のプロパティまたはオブジェクトに特定修飾子の名前のみを返します。 <br/> プロパティ。(上書きを含む)、プロパティに固有の修飾子のみとクラス定義から反映された修飾子いないに返されます。 <br/> インスタンス。インスタンス固有の修飾子名のみが返されます。 <br/> クラス。クラスを派生させる特定の修飾子のみを返します。
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 別のオブジェクトから修飾子の名前のみが反映される戻り値。 <br/> プロパティ。戻り値修飾子のみが反映されるこのプロパティに、クラス定義と、プロパティ自体から。 <br/> インスタンス。クラス定義からこれらの修飾子が反映される戻り値。 <br/> クラス。戻り値の修飾子名のみが親クラスから継承されます。 |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 現在のプロパティまたはオブジェクトに固有の修飾子の名前のみを返します。 <br/> プロパティの場合:プロパティに固有の修飾子 (オーバーライドを含む) だけを返します。クラス定義から伝達された修飾子は返しません。 <br/> インスタンスの場合:インスタンス固有の修飾子名だけを返します。 <br/> クラスの場合:派生するクラスに固有の修飾子だけを返します。
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 別のオブジェクトから伝達された修飾子の名前のみを返します。 <br/> プロパティの場合:プロパティ自体からではなく、クラス定義からこのプロパティに反映された修飾子だけを返します。 <br/> インスタンスの場合:クラス定義から伝達された修飾子だけを返します。 <br/> クラスの場合:親クラスから継承された修飾子名だけを返します。 |
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。
 
-**ヘッダー:** WMINet_Utils.idl
+**ヘッダー:** WMINet_Utils
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

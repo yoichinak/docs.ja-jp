@@ -5,50 +5,50 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: 58e65ee9d95329c3583515b99db47b87b3749c8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b4d566d377a3cda73bf8422caa798134d356f63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973785"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962567"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Windows フォームの DataGrid コントロール内の移動に使用できるキーボード ショートカット
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
+> <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
- 次の表に、Windows フォーム内のナビゲーションに使用できるキーボード ショートカット<xref:System.Windows.Forms.DataGrid>コントロール。  
+ 次の表に、Windows フォーム<xref:System.Windows.Forms.DataGrid>コントロール内のナビゲーションに使用できるキーボードショートカットを示します。  
   
 |アクション|ショートカット|  
 |------------|--------------|  
-|セルの入力を完了し、次のセルに下に移動します。<br /><br /> 子テーブルのリンクにフォーカスがある場合は、そのテーブルに移動します。|Enter|  
-|セルの編集モードの場合は、セルの編集をキャンセルします。<br /><br /> マーキーの選択の場合は、行の編集をキャンセルします。|Esc|  
-|セルを編集するときに、挿入ポイントの前に文字を削除します。|BACKSPACE キー|  
-|セルを編集するときに、カーソル位置の後の文字を削除します。|Del|  
-|現在の行の最初のセルに移動します。|ホーム|  
-|最後の現在の行のセルに移動します。|End|  
-|現在のセル内の文字を強調表示し、行の末尾にカーソルを置きます。 セルをダブルクリックした場合と同じ動作です。|F2|  
-|セルにフォーカスがある場合は、次の行のセルに移動します。<br /><br /> 行の最後のセルにフォーカスがある場合は、行の最初の子テーブルのリンクに移動し、それを展開します。<br /><br /> 子のリンクにフォーカスがある場合は、[次へ] の子のリンクに移動します。<br /><br /> 最後の子のリンクにフォーカスがある場合は、次の行の最初のセルに移動します。|Tab|  
-|セルにフォーカスがある場合は、行の前のセルに移動します。<br /><br /> 行の最初のセルにフォーカスがある場合は、前の行の最後の展開された子テーブルのリンクに移動または最後の前の行のセルに移動します。<br /><br /> 子のリンクにフォーカスがある場合は、以前の子へのリンクに移動します。<br /><br /> 最初の子のリンクにフォーカスがある場合は移動前の行のセルでは、最後にします。|Shift + Tab|  
-|タブ オーダー内で次のコントロールに移動します。|Ctrl + Tab|  
-|タブ オーダー内で前のコントロールに移動します。|Ctrl + Shift + Tab|  
-|子テーブルの場合に、親テーブルに移動します。 [戻る] ボタンをクリックすると同じ動作です。|Alt + ←|  
-|子テーブルへのリンクを展開します。 Alt キーを押しながら下方向は、選択したものだけでなく、すべてのリンクを展開します。|Alt キーを押しながら下方向キーまたは CTRL + プラス記号|  
-|子テーブルへのリンクを折りたたみます。 ALT + 上方向キーでは、選択したものだけでなく、すべてのリンクを折りたたみます。|ALT + 上方向キーまたは CTRL + マイナス記号|  
-|矢印の方向の右端の空白のセルに移動します。|CTRL + 方向キー|  
-|(子テーブルへのリンクを除く) の矢印の方向に選択範囲の 1 つの行を拡張します。|SHIFT + ↑ または ↓|  
-|(子テーブルへのリンクを除く) の矢印の向きの右端の空白行に選択範囲を拡大します。|CTRL + SHIFT + 上向き/下向きの矢印|  
+|セルエントリを完成させ、次のセルに下へ移動します。<br /><br /> フォーカスが子テーブルのリンクにある場合は、そのテーブルに移動します。|Enter|  
+|セルの編集モードの場合は、セルの編集をキャンセルします。<br /><br /> マーキーを選択した場合は、行の編集をキャンセルします。|Esc|  
+|セルを編集するときに、挿入位置の前にある文字を削除します。|行頭|  
+|セルを編集するときに、挿入位置の後の文字を削除します。|Del|  
+|現在の行の最初のセルに移動します。|Home|  
+|現在の行の最後のセルに移動します。|END|  
+|現在のセルの文字を強調表示し、行の末尾にカーソルを置きます。 セルをダブルクリックするのと同じ動作です。|F2|  
+|フォーカスがセルにある場合は、行の次のセルに移動します。<br /><br /> フォーカスが行の最後のセルにある場合は、行の最初の子テーブルリンクに移動し、それを展開します。<br /><br /> フォーカスが子リンクにある場合は、次の子リンクに移動します。<br /><br /> フォーカスが最後の子リンクにある場合は、次の行の最初のセルに移動します。|Tab|  
+|フォーカスがセルにある場合は、行の前のセルに移動します。<br /><br /> フォーカスが行の最初のセルにある場合は、前の行の最後に展開された子テーブルへのリンクに移動するか、前の行の最後のセルに移動します。<br /><br /> フォーカスが子リンクにある場合は、前の子リンクに移動します。<br /><br /> 最初の子リンクにフォーカスがある場合は、前の行の最後のセルに移動します。|Shift + Tab|  
+|タブオーダーの次のコントロールに移動します。|Ctrl + Tab|  
+|タブオーダーで、前のコントロールに移動します。|Ctrl + Shift + Tab|  
+|子テーブルの場合は、親テーブルに移動します。 [戻る] ボタンをクリックした場合と同じ動作です。|Alt + ←|  
+|子テーブルのリンクを展開します。 ALT + ↓キーを押すと、選択したリンクだけでなく、すべてのリンクが展開されます。|ALT + ↓または CTRL + プラス記号 (+)|  
+|子テーブルリンクを折りたたみます。 ALT + ↑キーを押すと、選択されているものだけでなく、すべてのリンクが折りたたまれます。|ALT + ↑または CTRL + マイナス記号|  
+|矢印の方向にある、空白以外の最も遠いセルに移動します。|CTRL + 方向キー|  
+|矢印の方向にある1行を選択します (子テーブルリンクは除く)。|SHIFT + ↑/↓|  
+|矢印の方向に (子テーブルリンクを除く)、選択範囲を最も遠い空白ではない行に拡張します。|CTRL + SHIFT + ↑/↓|  
 |左上隅のセルに移動します。|Ctrl + Home|  
 |右下のセルに移動します。|Ctrl + End|  
-|一番上の行を選択範囲を拡大します。|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>Home|  
-|一番下の行を選択範囲を拡大します。|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>End|  
-|(子テーブルへのリンクを除く) 現在の行を選択します。|SHIFT キーを押しながら SPACE キー|  
-|グリッド全体 (子テーブルへのリンクを除く) を選択します。|Ctrl + A|  
-|子テーブルにある場合、親の行を表示します。|Ctrl + PageDown|  
-|子テーブルにある場合、親の行を非表示にします。|Ctrl + PageUp|  
-|1 つの画面 (子テーブルへのリンクを除く) を選択範囲を拡大します。|Shift + PageDown|  
-|1 つの画面 (子テーブルへのリンクを除く) を選択範囲を拡大します。|Shift + PageUp|  
-|呼び出す、<xref:System.Windows.Forms.DataGrid.EndEdit%2A>メソッドが現在の行。|Ctrl + Enter|  
-|入力、<xref:System.DBNull.Value?displayProperty=nameWithType>編集モードでのセルに値。|Ctrl + 0|  
+|選択範囲を先頭行に拡張します。|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>Home|  
+|選択範囲を一番下の行に拡張します。|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>End|  
+|現在の行を選択します (子テーブルのリンクは除く)。|SHIFT + SPACE|  
+|グリッド全体を選択します (子テーブルリンクは除く)。|Ctrl + A|  
+|親の行を子テーブルに表示します。|Ctrl + PageDown|  
+|子テーブルの場合は、親の行を非表示にします。|Ctrl + PageUp|  
+|選択範囲を1画面下に拡張します (子テーブルリンクは除く)。|Shift + PageDown|  
+|選択範囲を1画面上に拡張します (子テーブルリンクは除く)。|Shift + PageUp|  
+|現在の<xref:System.Windows.Forms.DataGrid.EndEdit%2A>行に対してメソッドを呼び出します。|Ctrl + Enter|  
+|編集モードの場合は、セルに値を入力します。<xref:System.DBNull.Value?displayProperty=nameWithType>|Ctrl + 0|  
   
 ## <a name="see-also"></a>関連項目
 

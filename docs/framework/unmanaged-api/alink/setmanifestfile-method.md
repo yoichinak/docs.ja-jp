@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 825bb945e0d8662a4dadc9d688de6a677165df4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b293c30060107d18c6b609efc82c4128a73cc1c7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741469"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787207"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile メソッド
-使用すると、指定するか、リンカーがアセンブリを作成するときに使用するマニフェスト ファイルをリセットできます。  
+リンカーがアセンブリを作成するときに使用するマニフェストファイルを指定またはリセットできます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +37,20 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>パラメーター  
  `pszFile`  
   
- 内容が Win32 リソースの blob に格納するマニフェスト ファイルの名前。  
+ コンテンツが Win32 リソース blob に格納されるマニフェストファイルの名前。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="remarks"></a>Remarks  
- これを呼び出して、Win32ResBlob を求めます。 値、`pszFile`パラメーターは、内容の読み取りおよび RT_MANIFEST の ID で Win32 リソースにマニフェスト ファイルの名前。 NULL のパラメーターを使用して呼び出されると、以前に読み取られた、マニフェストはクリアされます。 これにより、1 つの初期化時に、リンカーの状態をリセットすることができます。  
+ Win32ResBlob を要求する前に、これを呼び出します。 `pszFile`パラメーターの値は、コンテンツが読み取られ、ID が RT_MANIFEST の Win32 リソースに格納されるマニフェストファイルの名前です。 NULL のパラメーターを使用して呼び出されると、以前に読み取られたマニフェストはクリアされます。 これにより、1つのリンカーの状態を初期化時間にリセットできます。  
   
 ## <a name="requirements"></a>必要条件  
- ALink.h が必要です。  
+ ALink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [IALink3 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [IALink3 インターフェイス](ialink3-interface.md)
+- [ALink API](index.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [Al.exe (アセンブリ リンカー)](../../tools/al-exe-assembly-linker.md)

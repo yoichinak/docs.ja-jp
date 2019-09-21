@@ -2,12 +2,12 @@
 title: ワークフロー実行プロパティ
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 0f87e58a034cbc11565fc74347e6b4362952093c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87775ba6efb9ec26ed2445e1f9d0944c379ba04f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669382"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988596"
 ---
 # <a name="workflow-execution-properties"></a>ワークフロー実行プロパティ
 CLR は、スレッド ローカル ストレージ (TLS) を介して各スレッドの実行コンテキストを維持します。 この実行コンテキストは、スレッド ID、アンビエント トランザクション、現在のアクセス許可セットなど、既知のスレッド プロパティに加えて、名前付きスロットのようなユーザー定義のスレッド プロパティを制御します。  
@@ -147,7 +147,7 @@ WorkflowInvoker.Invoke(wf);
   
  このワークフローを呼び出すと、次の出力がコンソール ウィンドウに書き込まれます。  
   
-```  
+```console  
 Start blue text.  
 Start red text.  
 Start default text.  
@@ -157,7 +157,7 @@ End default text.
 ```  
   
 > [!NOTE]
->  前の出力には示していませんが、コンソール ウィンドウの各テキスト行は、指定した色で表示されます。  
+> 前の出力には示していませんが、コンソール ウィンドウの各テキスト行は、指定した色で表示されます。  
   
  ワークフロー実行プロパティは、カスタム アクティビティ作成者が使用できます。また、このプロパティには、<xref:System.ServiceModel.Activities.CorrelationScope> や <xref:System.Activities.Statements.TransactionScope> などのアクティビティ向けにハンドル管理の機構も用意されています。  
   

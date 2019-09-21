@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 4a634f99542b2cf1a2cca9314c5eb648e841b158
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: bc3ce4b94bfc72e058d4660d01eb16ef0e0f11db
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661181"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588719"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>等価比較 (C# プログラミング ガイド)
 
@@ -24,11 +24,11 @@ ms.locfileid: "67661181"
   
  このコードでは、2 つのオブジェクトが作成されますが、代入ステートメント以降は、両方の参照が同一のオブジェクトを参照しています。 したがって、参照の等価性があります。 2 つの参照が同じオブジェクトを参照しているかどうかを判断するには、<xref:System.Object.ReferenceEquals%2A> メソッドを使用します。  
   
- 参照の等価性の概念は参照型のみに適用されます。 値型オブジェクトには参照の等価性がありません。これは、値型のインスタンスが変数に代入される場合、値のコピーが作成されるためです。 そのため、ボックス化を解除した 2 つの構造体でメモリ内の同じ場所を参照することはできません。 さらに、<xref:System.Object.ReferenceEquals%2A> を使用して 2 つの値型を比較する場合、オブジェクトに含まれている値がすべて同一である場合でも、結果は常に `false` になります。 これは、各変数が個別のオブジェクト インスタンスにボックス化されているためです。 詳細については、「[方法 :参照の等価性 (同値) をテストする](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)」をご覧ください。  
+ 参照の等価性の概念は参照型のみに適用されます。 値型オブジェクトには参照の等価性がありません。これは、値型のインスタンスが変数に代入される場合、値のコピーが作成されるためです。 そのため、ボックス化を解除した 2 つの構造体でメモリ内の同じ場所を参照することはできません。 さらに、<xref:System.Object.ReferenceEquals%2A> を使用して 2 つの値型を比較する場合、オブジェクトに含まれている値がすべて同一である場合でも、結果は常に `false` になります。 これは、各変数が個別のオブジェクト インスタンスにボックス化されているためです。 詳細については、[方法:参照の等価性 (同値) をテストする](./how-to-test-for-reference-equality-identity.md)」をご覧ください。  
 
 ## <a name="value-equality"></a>値の等価性
 
- 値が等価であるとは、2 つのオブジェクトが同じ値を含むことを意味します。 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)、[bool](../../../csharp/language-reference/keywords/bool.md) などのプリミティブ値型では、値が等価であることをテストするのは簡単です。 次の例に示すように、[==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) 演算子を使用できます。  
+ 値が等価であるとは、2 つのオブジェクトが同じ値を含むことを意味します。 [int](../../language-reference/builtin-types/integral-numeric-types.md)、[bool](../../language-reference/keywords/bool.md) などのプリミティブ値型では、値が等価であることをテストするのは簡単です。 次の例に示すように、[==](../../language-reference/operators/equality-operators.md#equality-operator-) 演算子を使用できます。  
   
 ```csharp  
 int a = GetOriginalValue();  
@@ -43,21 +43,21 @@ if( b == a)
   
  それ以外のほとんどの型については、値が等価であることをテストするのは、もっと複雑です。特定の型で等価性がどのように定義されるかを理解する必要があるからです。 複数のフィールドまたはプロパティを含むクラスおよび構造体では、多くの場合、値が等価であるとは、すべてのフィールドまたはプロパティが同一の値を含むことであると定義されます。 たとえば、pointA.X が pointB.X と等しく、pointA.Y が pointB.Y と等しい場合、2 つの `Point` オブジェクトは等価であると定義されます。  
   
- ただし、等価性を 1 つの型のすべてのフィールドに基づいて判断する必要はありません。 サブセットに基づいて判断できます。 所有していない型を比較する場合は、その型の等価性がどのように定義されるのかを明確に理解している必要があります。 独自のクラスおよび構造体で値が等しいかどうかを定義する方法の詳細については、「[方法: 型の値の等価性を定義する](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)」をご覧ください。  
+ ただし、等価性を 1 つの型のすべてのフィールドに基づいて判断する必要はありません。 サブセットに基づいて判断できます。 所有していない型を比較する場合は、その型の等価性がどのように定義されるのかを明確に理解している必要があります。 独自のクラスおよび構造体で値が等しいかどうかを定義する方法の詳細については、「[方法: 型の値の等価性を定義する](./how-to-define-value-equality-for-a-type.md)」をご覧ください。  
   
 ### <a name="value-equality-for-floating-point-values"></a>浮動小数点値での値の等価性
 
- バイナリのコンピューター上での浮動小数点演算には誤差があるため、浮動小数点値 ([double](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) および [float](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) の等価比較には問題があります。 詳細については、<xref:System.Double?displayProperty=nameWithType> のトピックの「解説」を参照してください。  
+ バイナリのコンピューター上での浮動小数点演算には誤差があるため、浮動小数点値 ([double](../../language-reference/builtin-types/floating-point-numeric-types.md) および [float](../../language-reference/builtin-types/floating-point-numeric-types.md)) の等価比較には問題があります。 詳細については、<xref:System.Double?displayProperty=nameWithType> のトピックの「解説」を参照してください。  
   
 ## <a name="related-topics"></a>関連トピック  
   
-|Title|説明|  
+|タイトル|説明|  
 |-----------|-----------------|  
-|[方法: 参照の等価性 (同値) をテストする](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)|2 つの変数に参照の等価性があるかどうかを確認する方法を説明します。|  
-|[方法: 型の値の等価性を定義する](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)|型の値の等価性にカスタムの定義を指定する方法を説明します。|  
-|[C# プログラミング ガイド](../../../csharp/programming-guide/index.md)|C# 言語の重要な機能に関する詳細情報へのリンクを示します。また、.NET Framework 経由でアクセスできる C# の機能について説明します。|  
-|[型](../../../csharp/programming-guide/types/index.md)|C# 型システムについて説明し、詳細情報へのリンクを示します。|  
+|[方法: 参照の等価性 (同値) をテストする](./how-to-test-for-reference-equality-identity.md)|2 つの変数に参照の等価性があるかどうかを確認する方法を説明します。|  
+|[方法: 型の値の等価性を定義する](./how-to-define-value-equality-for-a-type.md)|型の値の等価性にカスタムの定義を指定する方法を説明します。|  
+|[C# プログラミング ガイド](../index.md)|C# 言語の重要な機能に関する詳細情報へのリンクを示します。また、.NET Framework 経由でアクセスできる C# の機能について説明します。|  
+|[型](../types/index.md)|C# 型システムについて説明し、詳細情報へのリンクを示します。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# プログラミング ガイド](../index.md)

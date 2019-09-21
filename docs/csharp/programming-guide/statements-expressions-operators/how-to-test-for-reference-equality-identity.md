@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 057532cae42d7a0b6d11750ae0e33e43108cfda9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2b4b7b7bdd03077a78aa2a6375764fa86a885ef5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203588"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588633"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>方法: 参照の等価性 (同値) をテストする (C# プログラミング ガイド)
 独自の型で参照の等価性の比較をサポートするためにカスタム ロジックを実装する必要はありません。 この機能は、すべての型に対して <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 静的メソッドとして用意されています。  
@@ -29,4 +29,4 @@ ms.locfileid: "57203588"
   
 ## <a name="see-also"></a>関連項目
 
-- [等価比較](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)
+- [等価比較](./equality-comparisons.md)

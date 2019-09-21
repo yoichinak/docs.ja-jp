@@ -10,33 +10,33 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 1a486d0fadce8135fe01d9eecd611081c986bfae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01c441576cb4247933c053f2043296733f99fdeb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647687"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965420"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
-ある変数またはプロパティを読み込めるが書き込まれませんを指定します。  
+変数またはプロパティを読み取ることができても書き込まれないことを指定します。  
   
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="rules"></a>ルール  
   
-- **宣言コンテキスト。** `ReadOnly` は、モジュール レベルでのみ使用できます。 これは、意味の宣言のコンテキストを`ReadOnly`要素は、クラス、構造体、またはモジュールにある必要があるあり、ソース ファイル、名前空間、またはプロシージャにすることはできません。  
+- **宣言コンテキスト。** `ReadOnly` は、モジュール レベルでのみ使用できます。 つまり、 `ReadOnly`要素の宣言コンテキストはクラス、構造体、またはモジュールである必要があり、ソースファイル、名前空間、またはプロシージャにすることはできません。  
   
-- **結合された修飾子。** 指定することはできません`ReadOnly`と共に`Static`同じ宣言内。  
+- **結合された修飾子。** を同じ宣言`ReadOnly`内で`Static`と共に指定することはできません。  
   
-- **値を代入します。** コードの使用、`ReadOnly`プロパティは、その値を設定できません。 基になるストレージにアクセスするコードが割り当てるまたは値をいつでもでも変更します。  
+- **値の割り当て。** プロパティを使用`ReadOnly`するコードで値を設定することはできません。 ただし、基になるストレージにアクセスできるコードは、いつでも値を割り当てたり、変更したりできます。  
   
-     値を割り当てることができます、`ReadOnly`変数の宣言でのみ、またはクラスまたは構造体が定義されているのコンス トラクター。  
+     `ReadOnly`変数に値を割り当てることができるのは、その宣言または定義されているクラスまたは構造体のコンストラクター内の変数だけです。  
   
-## <a name="when-to-use-a-readonly-variable"></a>読み取り専用の変数を使用する場合  
- 状況を使用することはできません、 [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)宣言して定数値を代入します。 たとえば、`Const`ステートメントで割り当てるには、必要なデータ型を受け付けないことがありますまたはコンパイル時に定数式で値を計算することができません。 コンパイル時に値をも認識していない可能性があります。 このような場合は、使用することができます、`ReadOnly`定数値を保持する変数。  
+## <a name="when-to-use-a-readonly-variable"></a>ReadOnly 変数を使用する場合  
+ [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)を使用して定数値を宣言し、割り当てることができない場合があります。 たとえば、割り当てたい`Const`データ型がステートメントで受け入れられない場合や、コンパイル時に定数式を使用して値を計算できない場合があります。 コンパイル時に値がわからない場合もあります。 このような場合は、変数を`ReadOnly`使用して定数値を保持できます。  
   
 > [!IMPORTANT]
->  場合でも、変数自体がそのメンバーを変更できます、変数のデータ型が配列やクラスのインスタンスなど、参照型の場合`ReadOnly`します。 次に例を示します。  
+> 変数のデータ型が配列やクラスインスタンスなどの参照型である場合、変数自体が`ReadOnly`の場合でも、そのメンバーを変更できます。 次に例を示します。  
   
  `ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}`  
   
@@ -46,12 +46,12 @@ ms.locfileid: "64647687"
   
  `End Sub`  
   
- 初期化されると、配列が指す`characterArray()`およびを保持"x"、"y"、"z"です。 変数`characterArray`は`ReadOnly`、初期化; であると、その値を変更することはできません、新しい配列を割り当てることはできません。 ただし、配列メンバーの 1 つ以上の値を変更することができます。 次のプロシージャの呼び出し`changeArrayElement`、によって示される配列`characterArray()`およびを保持"x"、"M"、"z"です。  
+ 初期化されると、が指す`characterArray()`配列は、"x"、"y"、および "z" を保持します。 変数`characterArray` は`ReadOnly`であるため、初期化後に値を変更することはできません。つまり、新しい配列を割り当てることはできません。 ただし、1つまたは複数の配列メンバーの値を変更できます。 プロシージャ`changeArrayElement`の呼び出しの後、が指す`characterArray()`配列は、"x"、"M"、および "z" を保持します。  
   
- これは、プロシージャのパラメーターを宣言することのような[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)、呼び出し元引数自体を変更できなくなります、プロシージャがそのメンバーを変更するようになります。  
+ これは、プロシージャパラメーターを[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)に宣言するのと似ています。これにより、プロシージャが呼び出し元の引数自体を変更するのではなく、メンバーを変更することができます。  
   
 ## <a name="example"></a>例  
- 次の例では、定義、`ReadOnly`従業員が雇用された日付のプロパティ。 プロパティの値として内部的にクラス ストア、`Private`クラス内部の変数、そして唯一のコードは、その値を変更できます。 ただし、このプロパティは`Public`、およびクラスにアクセスできる任意のコードは、プロパティを読み取ることができます。  
+ 次の例では`ReadOnly` 、従業員が雇用された日付のプロパティを定義します。 クラスは、プロパティ値を`Private`変数として内部に格納します。クラス内のコードだけがその値を変更できます。 ただし、プロパティは`Public`であり、クラスにアクセスできるすべてのコードでプロパティを読み取ることができます。  
   
  [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]  
   

@@ -16,42 +16,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74863af1096f8600b8095e593c1f3c820c512e9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b830af5d59c0eb177d815451ecedbdc14121aaad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663857"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964757"
 ---
 # <a name="icordebugtype-interface"></a>ICorDebugType インターフェイス
-型、基本または複雑な (つまり、ユーザー定義) を表します。 型がジェネリックの場合、`ICorDebugType` はインスタンス化されたジェネリック型を表します。  
+基本または複合 (つまり、ユーザー定義) のいずれかの型を表します。 型がジェネリックの場合、`ICorDebugType` はインスタンス化されたジェネリック型を表します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[EnumerateTypeParameters メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|ジェネリックを参照する、ICorDebugTypeEnum へのインターフェイス ポインターを取得<xref:System.Type>これによって参照されるクラスのパラメーター`ICorDebugType`します。|  
-|[GetBase メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|インターフェイス ポインターを取得、`ICorDebugType`これによって参照されるクラスの基底クラスを参照する`ICorDebugType`が存在する場合は、します。|  
-|[GetClass メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|この型指定されたコンス トラクターを参照する、ICorDebugClass へのインターフェイス ポインターを取得`ICorDebugType`します。|  
-|[GetFirstTypeParameter メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|インターフェイス ポインターを取得、`ICorDebugType`を参照する最初のジェネリック<xref:System.Type>これによって参照されるクラスのコンス トラクターのパラメーター`ICorDebugType`します。|  
+|[EnumerateTypeParameters メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|<xref:System.Type> この`ICorDebugType`によって参照されるクラスのジェネリックパラメーターを参照する、ツールのインターフェイスポインターを取得します。|  
+|[GetBase メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|`ICorDebugType` この`ICorDebugType`によって参照されるクラス (存在する場合) の基本クラスを参照するへのインターフェイスポインターを取得します。|  
+|[GetClass メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|この`ICorDebugType`の型指定されたコンストラクターを参照する、によるクラスへのインターフェイスポインターを取得します。|  
+|[GetFirstTypeParameter メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|この<xref:System.Type> `ICorDebugType` によって参照されるクラスのコンストラクターの最初のジェネリックパラメーターを参照するへのインターフェイスポインターを取得します。`ICorDebugType`|  
 |[GetRank メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getrank-method.md)|配列型の次元数を取得します。|  
-|[GetStaticFieldValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)|指定したスタック フレームでトークンを指定したフィールドによって参照される静的フィールドの値を格納インターフェイス ポインターを取得します。|  
-|[GetType メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|共通言語ランタイムのネイティブな型を記述する CorElementType 値を取得します<xref:System.Type>これによって参照される`ICorDebugType`します。|  
+|[GetStaticFieldValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)|指定したスタックフレーム内の指定したフィールドトークンによって参照される静的フィールドの値を格納する、ICorDebugValue へのインターフェイスポインターを取得します。|  
+|[GetType メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|<xref:System.Type> この`ICorDebugType`によって参照される共通言語ランタイムのネイティブ型を記述する corelementtype 値を取得します。|  
   
 ## <a name="remarks"></a>Remarks  
- 場合は、型がジェネリック`ICorDebugClass`インスタンス化されていない型を表します。 `ICorDebugType`インターフェイスはジェネリック型のインスタンスを表します。 たとえば、ハッシュ テーブル\<K, V > で表されます`ICorDebugClass`一方、ハッシュ テーブル\<Int32, String > で表されます`ICorDebugType`します。  
+ 型がジェネリックの場合、 `ICorDebugClass`はインスタンス型を表します。 インターフェイス`ICorDebugType`は、インスタンス化されたジェネリック型を表します。 たとえば、ハッシュテーブル\<K、V > はで`ICorDebugClass`表されますが、\<hashtable Int32、String > はによっ`ICorDebugType`て表されます。  
   
- 非ジェネリック型は型が両方によって表される`ICorDebugClass`と`ICorDebugType`します。 後者のインターフェイスは、型のインスタンス化を処理するには、.NET Framework version 2.0 で導入されました。  
+ 非ジェネリック型は、と`ICorDebugClass` `ICorDebugType`の両方で表されます。 後者のインターフェイスは、型のインスタンス化を処理するために .NET Framework バージョン2.0 で導入されました。  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

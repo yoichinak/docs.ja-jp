@@ -3,12 +3,12 @@ title: dotnet コマンドの特権アクセス
 description: 特権アクセスを必要とする dotnet コマンドのベスト プラクティスについて説明します。
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 3d874a76eadbf5330c4e5efe4e86bfeca0a9b504
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: b6de87f375a584da25e160d79f51f1bc48f3c302
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410630"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969860"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>dotnet コマンドの特権アクセス
 
@@ -27,15 +27,17 @@ ms.locfileid: "67410630"
 
 次の指示では、実行に特権昇格を必要とする .NET Core ツールをインストール、実行、アンインストールするときの推奨方法を示しています。
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 ### <a name="install-the-global-tool"></a>グローバル ツールをインストールする
 
 フォルダー `%ProgramFiles%\dotnet-tools` が既に存在する場合、次を行い、そのディレクトリを記述または変更する許可が "Users" グループに与えられているかどうかを確認します。
 
-* `%ProgramFiles%\dotnet-tools` フォルダーを右クリックし、 **[プロパティ]** を選択します。 **[共通プロパティ]** ダイアログ ボックスが開きます。 
-* **[セキュリティ]** タブを選択します **[グループ名またはユーザー名]** で、"Users" グループにディレクトリを記述または変更する権限が与えられているかどうかを確認します。 
-* "Users" グループでディレクトリを記述または変更できる場合、*dotnet-tools* 以外のツールをインストールするとき、別のディレクトリ名を使用します。
+- `%ProgramFiles%\dotnet-tools` フォルダーを右クリックし、 **[プロパティ]** を選択します。 **[共通プロパティ]** ダイアログ ボックスが開きます。 
+- **[セキュリティ]** タブを選択します **[グループ名またはユーザー名]** で、"Users" グループにディレクトリを記述または変更する権限が与えられているかどうかを確認します。 
+- "Users" グループでディレクトリを記述または変更できる場合、*dotnet-tools* 以外のツールをインストールするとき、別のディレクトリ名を使用します。
 
 ツールをインストールするには、管理者特権のプロンプトで次のコマンドを実行します。 インストール中、*dotnet-tools* フォルダーが作成されます。
 
@@ -105,4 +107,4 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 
 ## <a name="see-also"></a>関連項目
 
-* [.NET Core グローバル ツールの概要](global-tools.md)
+- [.NET Core グローバル ツールの概要](global-tools.md)

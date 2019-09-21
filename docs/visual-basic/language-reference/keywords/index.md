@@ -10,21 +10,21 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61dc57b2e44e7b98fbce85e81491c76736c7ad78
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801562"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959965"
 ---
 # <a name="keywords-visual-basic"></a>キーワード (Visual Basic)
-次の表には、すべての Visual Basic 言語のキーワードが一覧表示します。  
+次の表は、すべての Visual Basic 言語キーワードを示しています。  
   
 ## <a name="reserved-keywords"></a>予約済みのキーワード  
  次のキーワードは*予約済み*であり、プログラミングの要素 (変数やプロシージャなど) の名前として使用できません。 ただし、名前を角かっこ (`[]`) で囲むと、この制約を回避できます。 詳細については、「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」の「エスケープされた名前」を参照してください。  
   
 > [!NOTE]
->  エスケープされた名前を使用すると、コードの可読性が低下し、検出しにくい微妙なエラーの原因となる可能性があるため、使用を避けてください。  
+> エスケープされた名前を使用すると、コードの可読性が低下し、検出しにくい微妙なエラーの原因となる可能性があるため、使用を避けてください。  
   
 |||||  
 |---|---|---|---|  
@@ -77,7 +77,7 @@ ms.locfileid: "61801562"
 |[>> 演算子](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[>>= 演算子](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`、 `GoSub`、 `Variant`、および`Wend`Visual Basic では使用されなくが予約されたキーワード、として保持されます。 `Let` キーワードは、意味が変更されました。 `Let` は、LINQ クエリで使用するようになっています。 詳細については、「[Let 句](../../../visual-basic/language-reference/queries/let-clause.md)」を参照してください。  
+> `EndIf`、 `GoSub`、 、および`Wend`は、Visual Basic では使用されなくなりましたが、予約済みキーワードとして保持されます。 `Variant` `Let` キーワードは、意味が変更されました。 `Let` は、LINQ クエリで使用するようになっています。 詳細については、「[Let 句](../../../visual-basic/language-reference/queries/let-clause.md)」を参照してください。  
   
 ## <a name="unreserved-keywords"></a>予約されていないキーワード  
  次のキーワードは予約されていません。したがって、プログラミングの要素の名前として使用できます。 ただし、コードの可読性が低下し、検出しにくい微妙なエラーの原因となる可能性があるため、これらのキーワードを要素の名前として使用することは避けてください。  

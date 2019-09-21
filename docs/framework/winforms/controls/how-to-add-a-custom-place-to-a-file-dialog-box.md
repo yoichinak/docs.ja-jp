@@ -9,18 +9,18 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: 129ebed6d0a2b075020e635c8463536f97629d2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 824c948fafd0a0995ad261389414d2d79918c8a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624105"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916350"
 ---
 # <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>方法: よく使用する場所をファイル ダイアログ ボックスに追加する
-[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] の既定の 開く] ダイアログ ボックスと 保存] ダイアログ ボックスには、左側に **[お気に入りリンク]** というタイトルの領域があります。 この領域にはカスタム プレイスという名称が付いています。 <xref:System.Windows.Forms.OpenFileDialog>と<xref:System.Windows.Forms.SaveFileDialog>クラスを使用すると、フォルダーを追加する、<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>コレクション。  
+[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] の既定の 開く ダイアログ ボックスと 保存 ダイアログ ボックスには、左側に **[お気に入りリンク]** というタイトルの領域があります。 この領域にはカスタム プレイスという名称が付いています。 クラスとクラスを使用すると<xref:System.Windows.Forms.SaveFileDialog> 、フォルダーを<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>コレクションに追加できます。 <xref:System.Windows.Forms.OpenFileDialog>  
   
 > [!NOTE]
->  カスタムの場所に表示するために、<xref:System.Windows.Forms.OpenFileDialog>または<xref:System.Windows.Forms.SaveFileDialog>、<xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A>にプロパティを設定する必要があります`true`(既定)。  
+> カスタムプレースを<xref:System.Windows.Forms.OpenFileDialog>またはに表示するに<xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A>は<xref:System.Windows.Forms.SaveFileDialog>、プロパティを (既定値) に`true`設定する必要があります。  
   
 ### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a>ファイル ダイアログ ボックスにカスタム プレイスを追加するには  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4b0f66d692a60590e4f301f1d31ff379078e2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 12de3cd1663d9dfea66f32fcb7f456d44e31dc60
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647250"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894597"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (分離ストレージ ツール)
 分離ストレージ ツールは、現在のユーザーに関するすべての既存ストアの一覧表示または削除を行います。  
@@ -26,7 +26,7 @@ ms.locfileid: "64647250"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 storeadm [/list][/machine][/remove][/roaming][/quiet]  
 ```  
   
@@ -45,7 +45,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 ## <a name="remarks"></a>解説  
  オプションを指定せずにコマンド ラインから Storeadm.exe を実行すると、Storeadm.exe に関する構文とオプションが表示されます。  
   
- 一般に、**/list** オプションと **/remove** オプションは同時に使用されますが、2 つ以上のオプションを指定した場合、それらのオプションはコマンド ラインに表示されている順序で実行されます。  
+ 一般に、 **/list** オプションと **/remove** オプションは同時に使用されますが、2 つ以上のオプションを指定した場合、それらのオプションはコマンド ラインに表示されている順序で実行されます。  
   
  アプリケーションは、ユーザー ストアまたはコンピューター ストアのいずれかを選択して保存できます。  
   
@@ -56,12 +56,12 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 - コンピューター ストアは、コンピューターのすべてのユーザーに共通で、コンピューターの共通ディレクトリに格納されます。  
   
     > [!NOTE]
-    >  コンピューター ストアは .NET Framework Version 2.0 で新たに追加されました。  
+    > コンピューター ストアは .NET Framework Version 2.0 で新たに追加されました。  
   
  ユーザーに対してローミングが実際に有効になっているかどうかは、Storeadm.exe の管理に影響を与えません。 オプションを指定せずに Storeadm.exe を実行した場合、すべてのアクションがローカル ストアに適用されます。 **/roaming** オプションを指定した場合は、すべてのアクションが、ローミングできるストアに適用されます。 **/machine** オプションを指定してこのツールを実行すると、すべてのアクションがコンピューター ストアに適用されます。  
   
 ## <a name="see-also"></a>関連項目
 
 - [ツール](../../../docs/framework/tools/index.md)
-- [分離ストレージ](../../../docs/standard/io/isolated-storage.md)
+- [分離ストレージ](../../standard/io/isolated-storage.md)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

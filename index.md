@@ -5,13 +5,13 @@ hide_bc: true
 title: .NET ドキュメント
 description: .NET で、C#、Visual Basic、および F# を使用して任意のプラットフォームでさまざまなアプリケーションを作成する方法を説明します。 API リファレンス、サンプル コード、チュートリアルなどを参照します。
 ms.custom: updateeachrelease
-ms.date: 12/04/2018
-ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.date: 09/04/2019
+ms.openlocfilehash: ec8b780100a41109f31084de0f37bec8c0fc680c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589986"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928945"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -80,8 +80,8 @@ ms.locfileid: "65589986"
                 <a data-default="true" href="#docs">ドキュメント</a>
                 <ul id="docs">
                     <li>
-                        <a href="#getstarted">開始するには</a>
-                        <ul id="getstarted" class="cardsF">
+                        <a href="#dotnetguides">.NET ガイド</a>
+                        <ul id="dotnetguides" class="cardsF">
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
@@ -94,6 +94,7 @@ ms.locfileid: "65589986"
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/standard/">.NET のガイド</a></h3>
                                                 <p><a href="/dotnet/standard/get-started">開始するには</a></p>
+                                                <p><a href="https://docs.microsoft.com/learn/browse/?roles=developer&products=dotnet">ハンズオン学習モジュール</a></p>
                                                 <p><a href="/dotnet/standard/tour">.NET のツアー</a></p>
                                                 <p><a href="/dotnet/standard/components">.NET アーキテクチャの概念</a></p>
                                             </div>
@@ -111,12 +112,12 @@ ms.locfileid: "65589986"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/core">.NET Core のガイド</a></h3>
+                                                <h3><a href="/dotnet/core/">.NET Core のガイド</a></h3>
                                                 <p><a href="/dotnet/core/get-started">開始するには</a></p>
-                                                <p><a href="/dotnet/core/tutorials">チュートリアル</a></p>
-                                                <p><a href="/dotnet/core/porting">.NET Framework からの移植</a></p>
-                                                <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
-                                                <p><a href="/ef/core/index">EF Core</a></p>
+                                                <p><a href="/dotnet/core/tutorials/">チュートリアル</a></p>
+                                                <p><a href="/dotnet/core/porting/">.NET Framework からの移植</a></p>
+                                                <p><a href="/aspnet/core/getting-started/">ASP.NET Core</a></p>
+                                                <p><a href="/ef/core/">EF Core</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -152,11 +153,11 @@ ms.locfileid: "65589986"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/xamarin">Xamarin</a></h3>
-                                                <p><a href="/xamarin/cross-platform">クロスプラットフォーム開発</a></p>
-                                                <p><a href="/xamarin/ios">Xamarin.iOS のガイド</a></p>
-                                                <p><a href="/xamarin/android">Xamarin.Android のガイド</a></p>
-                                                <p><a href="/xamarin/xamarin-forms">Xamarin.Forms のガイド</a></p>
+                                                <h3><a href="/xamarin/">Xamarin</a></h3>
+                                                <p><a href="/xamarin/cross-platform/">クロスプラットフォーム開発</a></p>
+                                                <p><a href="/xamarin/ios/">Xamarin.iOS のガイド</a></p>
+                                                <p><a href="/xamarin/android/">Xamarin.Android のガイド</a></p>
+                                                <p><a href="/xamarin/xamarin-forms/">Xamarin.Forms のガイド</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -172,11 +173,11 @@ ms.locfileid: "65589986"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/csharp">C# のガイド</a></h3>
-                                                <p><a href="/dotnet/csharp/getting-started">開始するには</a></p>
-                                                <p><a href="/dotnet/csharp/tour-of-csharp">C# のツアー</a></p>
-                                                <p><a href="/dotnet/csharp/whats-new">C# の新機能</a></p>
-                                                <p><a href="/dotnet/csharp/language-reference">C# 言語リファレンス</a></p>
+                                                <h3><a href="/dotnet/csharp/">C# のガイド</a></h3>
+                                                <p><a href="/dotnet/csharp/getting-started/">開始するには</a></p>
+                                                <p><a href="/dotnet/csharp/tour-of-csharp/">C# のツアー</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new/">C# の新機能</a></p>
+                                                <p><a href="/dotnet/csharp/language-reference/">C# 言語リファレンス</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -192,10 +193,10 @@ ms.locfileid: "65589986"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/fsharp">F# のガイド</a></h3>
-                                                <p><a href="/dotnet/fsharp/tutorials/getting-started">開始するには</a></p>
+                                                <h3><a href="/dotnet/fsharp/">F# のガイド</a></h3>
+                                                <p><a href="/dotnet/fsharp/get-started/">開始するには</a></p>
                                                 <p><a href="/dotnet/fsharp/tour">F# のツアー</a></p>
-                                                <p><a href="/dotnet/fsharp/language-reference">F# 言語リファレンス</a></p>
+                                                <p><a href="/dotnet/fsharp/language-reference/">F# 言語リファレンス</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -211,10 +212,10 @@ ms.locfileid: "65589986"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/visual-basic">Visual Basic のガイド</a></h3>
-                                                <p><a href="/dotnet/visual-basic/getting-started">開始するには</a></p>
-                                                <p><a href="/dotnet/visual-basic/walkthroughs">Visual Basic のツアー</a></p>
-                                                <p><a href="/dotnet/visual-basic/language-reference">Visual Basic の言語リファレンス</a></p>
+                                                <h3><a href="/dotnet/visual-basic/">Visual Basic のガイド</a></h3>
+                                                <p><a href="/dotnet/visual-basic/getting-started/">開始するには</a></p>
+                                                <p><a href="/dotnet/visual-basic/walkthroughs">チュートリアル</a></p>
+                                                <p><a href="/dotnet/visual-basic/language-reference/">Visual Basic の言語リファレンス</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -230,11 +231,11 @@ ms.locfileid: "65589986"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/machine-learning">ML.NET ガイド</a></h3>
-                                                <p><a href="/dotnet/machine-learning/tutorials">チュートリアル</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources">リソース</a></p>
+                                                <h3><a href="/dotnet/machine-learning/">ML.NET ガイド</a></h3>
+                                                <p><a href="/dotnet/machine-learning/tutorials/">チュートリアル</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources/">リソース</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">用語集</a></p>
-                                                <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API リファレンス</a></p>
+                                                <p><a href="/dotnet/api/?view=ml-dotnet">ML.NET API リファレンス</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -250,9 +251,9 @@ ms.locfileid: "65589986"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/spark">.NET for Apache Spark ガイド</a></h3>
-                                                <p><a href="/dotnet/spark/tutorials">チュートリアル</a></p>
-                                                <p><a href="/dotnet/spark/resources">リソース</a></p>
+                                                <h3><a href="/dotnet/spark/">.NET for Apache Spark ガイド</a></h3>
+                                                <p><a href="/dotnet/spark/tutorials/">チュートリアル</a></p>
+                                                <p><a href="/dotnet/spark/resources/">リソース</a></p>
                                                 <p><a href="/dotnet/api/?view=spark-dotnet">.NET for Apache Spark API リファレンス</a></p>
                                             </div>
                                         </div>
@@ -262,16 +263,53 @@ ms.locfileid: "65589986"
                             <li class="fullSpan">
                                 <div class="container footer">
                                     <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">.NET ドキュメントやサンプルへの投稿</a></p>
-                                    <p><a href="/dotnet/project-json">Visual Studio 2015/project.json バージョンのドキュメントの検索</a></p>
                                 </div>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#web">Web</a>
-                        <ul id="web" class="cardsC">
+                        <a href="#getstarted">概要</a>
+                        <ul id="getstarted" class="cardsC">
                             <li>
-                                <a href="https://www.asp.net/get-started">
+                                <a href="/dotnet/csharp/tutorials/intro-to-csharp/hello-world">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-csharp.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>C# の概要</h3>
+                                                    <p>クイック インタラクティブ スタート。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/core/get-started">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-dotnet-core.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>最初の .NET Core Docker アプリを構築する</h3>
+                                                    <p>最初の .NET Core コンソール アプリを構築する方法を説明します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -281,7 +319,31 @@ ms.locfileid: "65589986"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>最初の Web アプリの構築</h3>
+                                                    <h3>最初の Web アプリを構築する</h3>
+                                                    <p>最初の ASP.NET Core Web アプリを構築する方法を説明します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#web">Web</a>
+                        <ul id="web" class="cardsC">
+                            <li>
+                                <a href="https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-web-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>最初の Web アプリを構築する</h3>
                                                     <p>最初の ASP.NET Core Web アプリを構築する方法を説明します。</p>
                                                 </div>
                                             </div>
@@ -309,7 +371,7 @@ ms.locfileid: "65589986"
                                 </a>
                             </li>
                             <li>
-                                <a href="/aspnet/overview">
+                                <a href="/aspnet/core/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -319,8 +381,8 @@ ms.locfileid: "65589986"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>ASP.NET とは何ですか?</h3>
-                                                    <p>ASP.NET Web アプリケーションを構築する方法を説明します。</p>
+                                                    <h3>ASP.NET Core とは何ですか?</h3>
+                                                    <p>ASP.NET Core Web アプリケーションを構築する方法を説明します。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -360,25 +422,6 @@ ms.locfileid: "65589986"
                                                 <div class="cardText">
                                                     <h3>Windows コンテナーの ASP.NET MVC アプリ</h3>
                                                     <p>Docker を使用した ASP.NET MVC アプリのデプロイ方法について説明します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/aspnet/core/tutorials/xplat">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="/dotnet/images/hub/net-docs-web-6.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>ASP.NET Core のクロス プラットフォームのチュートリアル</h3>
-                                                    <p>ASP.NET Core を使用して Web アプリまたは Web API を構築する方法を説明します。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -431,7 +474,7 @@ ms.locfileid: "65589986"
                                 </a>
                             </li>
                             <li>
-                                <a href="/dotnet/fsharp/using-fsharp-on-azure">
+                                <a href="/dotnet/fsharp/using-fsharp-on-azure/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -456,7 +499,7 @@ ms.locfileid: "65589986"
                         <a href="#mobile">モバイル</a>
                         <ul id="mobile" class="cardsC">
                             <li>
-                                <a href="/xamarin/ios">
+                                <a href="/xamarin/ios/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -475,7 +518,7 @@ ms.locfileid: "65589986"
                                 </a>
                             </li>
                             <li>
-                                <a href="/xamarin/android">
+                                <a href="/xamarin/android/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -494,7 +537,7 @@ ms.locfileid: "65589986"
                                 </a>
                             </li>
                             <li>
-                                <a href="/xamarin/xamarin-forms">
+                                <a href="/xamarin/xamarin-forms/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -518,7 +561,7 @@ ms.locfileid: "65589986"
                         <a href="#desktop">デスクトップ</a>
                         <ul id="desktop" class="cardsC">
                             <li>
-                                <a href="/uwp">
+                                <a href="/uwp/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -538,7 +581,7 @@ ms.locfileid: "65589986"
                                 </a>
                             </li>
                             <li>
-                                <a href="/dotnet/framework/wpf/index">
+                                <a href="/dotnet/framework/wpf/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -558,7 +601,7 @@ ms.locfileid: "65589986"
                                 </a>
                             </li>
                             <li>
-                                <a href="/dotnet/framework/winforms/index">
+                                <a href="/dotnet/framework/winforms/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -577,7 +620,7 @@ ms.locfileid: "65589986"
                                 </a>
                             </li>
                             <li>
-                                <a href="/xamarin/mac">
+                                <a href="/xamarin/mac/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -682,10 +725,10 @@ ms.locfileid: "65589986"
                         </ul>
                     </li>
                     <li>
-                        <a href="#ml-ai">Machine Learning と AI</a>
+                        <a href="#ml-ai">機械学習と AI</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
-                                <a href="/dotnet/machine-learning">
+                                <a href="/dotnet/machine-learning/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -704,7 +747,7 @@ ms.locfileid: "65589986"
                                 </a>
                             </li>
                             <li>
-                                <a href="/azure/cognitive-services">
+                                <a href="/azure/cognitive-services/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -723,7 +766,7 @@ ms.locfileid: "65589986"
                                 </a>
                             </li>
                             <li>
-                                <a href="/azure/machine-learning">
+                                <a href="/azure/machine-learning/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

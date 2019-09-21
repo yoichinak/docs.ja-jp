@@ -9,21 +9,21 @@ helpviewer_keywords:
 - Canvas control [WPF], creating
 - Canvas control [WPF], using
 ms.assetid: 420b9487-9a15-477c-9489-a22a4dec7779
-ms.openlocfilehash: 33b98024699a88f56d27b7e5ab8d5216c906e7ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: edef660b2da2f09e0a6edbc0a87f0d1f26eb03da
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001001"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964229"
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>方法: Canvas を作成および使用する
-この例は、作成しのインスタンスを使用する方法を示しています。<xref:System.Windows.Controls.Canvas>します。  
+この例では、の<xref:System.Windows.Controls.Canvas>インスタンスを作成して使用する方法を示します。  
   
 ## <a name="example"></a>例  
- 次の例を明示的に 2 つ配置<xref:System.Windows.Controls.TextBlock>要素を使用して、<xref:System.Windows.Controls.Canvas.SetTop%2A>と<xref:System.Windows.Controls.Canvas.SetLeft%2A>メソッドの<xref:System.Windows.Controls.Canvas>します。 また、例、割り当て、<xref:System.Windows.Controls.Control.Background%2A>の色`LightSteelBlue`を<xref:System.Windows.Controls.Canvas>します。  
+ 次の例では、 <xref:System.Windows.Controls.TextBlock>のメソッド<xref:System.Windows.Controls.Canvas.SetTop%2A>と<xref:System.Windows.Controls.Canvas.SetLeft%2A>メソッドを使用し<xref:System.Windows.Controls.Canvas>て、2つの要素を明示的に配置しています。 また、この例で<xref:System.Windows.Controls.Control.Background%2A>は、 `LightSteelBlue` <xref:System.Windows.Controls.Canvas>の色をに割り当てています。  
   
 > [!NOTE]
->  使用すると[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]位置に<xref:System.Windows.Controls.TextBlock>、要素を使用して、<xref:System.Windows.Controls.Canvas.Top%2A>と<xref:System.Windows.Controls.Canvas.Left%2A>プロパティ。  
+> を使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]し<xref:System.Windows.Controls.Canvas.Top%2A>て要素<xref:System.Windows.Controls.TextBlock>を配置する場合は<xref:System.Windows.Controls.Canvas.Left%2A> 、プロパティとプロパティを使用します。  
   
  [!code-csharp[CanvasCode#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CanvasCode/CSharp/Canvas_Code.cs#1)]
  [!code-vb[CanvasCode#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasCode/VisualBasic/canvas_vb.vb#1)]  

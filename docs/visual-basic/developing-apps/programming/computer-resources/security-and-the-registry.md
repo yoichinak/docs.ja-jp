@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: dc0071d1fddf99bd712ebe8aea5c61bbc3522f93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2fdb8003365841a4eef298eb853765dd3bc4587d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839359"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916532"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>セキュリティとレジストリ (Visual Basic)
 ここでは、レジストリにデータを格納するときのセキュリティへの影響について説明します。  
@@ -36,7 +36,7 @@ ms.locfileid: "58839359"
  レジストリの値を作成するときは、その値が既存の値である場合の処理を決めておく必要があります。 悪意のあるユーザーによって作成された別のプロセスが既に値を作成し、アクセス権を持っている可能性があります。 レジストリ値にデータを設定すると、そのデータを他のプロセスから利用できるようになります。 これを回避するには、`GetValue` メソッドを使います。 このメソッドは、キーがまだ存在しない場合、`Nothing` を返します。  
   
 > [!IMPORTANT]
->  Web アプリケーションからレジストリを読み取るとき、現在のユーザーの ID は Web アプリケーションに実装されている認証と偽装によって決まります。  
+> Web アプリケーションからレジストリを読み取るとき、現在のユーザーの ID は Web アプリケーションに実装されている認証と偽装によって決まります。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -16,26 +16,26 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: cf70a5cc426b6c6075d1deb11aa2685c39a065c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d1862b1fc1398f0f8c2217b51c4efb93db639af
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640336"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957019"
 ---
 # <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>方法: Windows フォーム ContextMenu コンポーネントのメニュー項目を追加および削除する
-追加し、Windows フォームのショートカット メニュー項目を削除する方法について説明します。  
+Windows フォームでショートカットメニュー項目を追加および削除する方法について説明します。  
   
- Windows フォーム<xref:System.Windows.Forms.ContextMenu>コンポーネントは、選択したオブジェクトに関連するよく使用するコマンドのメニューを提供します。 ショートカット メニューに項目を追加するには追加することで<xref:System.Windows.Forms.MenuItem>オブジェクトを<xref:System.Windows.Forms.Menu.MenuItems%2A>コレクション。  
+ Windows フォーム<xref:System.Windows.Forms.ContextMenu>コンポーネントには、選択したオブジェクトに関連する頻繁に使用するコマンドのメニューが用意されています。 <xref:System.Windows.Forms.MenuItem> オブジェクト<xref:System.Windows.Forms.Menu.MenuItems%2A>をコレクションに追加することで、ショートカットメニューに項目を追加できます。  
   
- 項目を完全に; ショートカット メニューから削除することができます。ただし、実行時に非表示にするか、代わりに、項目を無効にするのには適切な時間がられます。  
+ ショートカットメニューから項目を完全に削除することができます。ただし、実行時には、代わりに項目を非表示にしたり無効にしたりする方が適切な場合があります。  
   
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.MenuStrip>と<xref:System.Windows.Forms.ContextMenuStrip>が置換または追加する機能、<xref:System.Windows.Forms.MainMenu>と<xref:System.Windows.Forms.ContextMenu>、以前のバージョン コントロール<xref:System.Windows.Forms.MainMenu>と<xref:System.Windows.Forms.ContextMenu>を選択した場合に、旧バージョンとの互換性と将来の使用のため保持されます。  
+> <xref:System.Windows.Forms.MainMenu> とは、<xref:System.Windows.Forms.ContextMenu>以前のバージョン<xref:System.Windows.Forms.MainMenu>のとのコントロールに置き換えて機能を追加しますが、を選択した場合は、下位互換性と将来の使用の両方で保持されます。<xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.ContextMenuStrip> <xref:System.Windows.Forms.MenuStrip>  
   
-### <a name="to-remove-items-from-a-shortcut-menu"></a>ショートカット メニューから項目を削除するには  
+### <a name="to-remove-items-from-a-shortcut-menu"></a>ショートカットメニューから項目を削除するには  
   
-1. 使用して、<xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A>または<xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A>のメソッド、<xref:System.Windows.Forms.Menu.MenuItems%2A>のコレクション、<xref:System.Windows.Forms.ContextMenu>特定のメニュー項目を削除するコンポーネント。  
+1. 特定のメニュー <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A>項目を削除<xref:System.Windows.Forms.Menu.MenuItems%2A>するに<xref:System.Windows.Forms.ContextMenu>は、コンポーネントのコレクションのメソッドまたはメソッドを使用します。 <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A>  
   
     ```vb  
     ' Removes the first item in the shortcut menu.  
@@ -58,9 +58,9 @@ ms.locfileid: "61640336"
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     - または -  
+     \- または -  
   
-2. 使用して、`Clear`のメソッド、`MenuItems`のコレクション、 <xref:System.Windows.Forms.ContextMenu>  メニューからすべての項目を削除するコンポーネント。  
+2. コンポーネントの`MenuItems`コレクションのメソッドを使用して、メニューからすべての項目を削除します。 `Clear` <xref:System.Windows.Forms.ContextMenu>  
   
     ```vb  
     ContextMenu1.MenuItems.Clear()  

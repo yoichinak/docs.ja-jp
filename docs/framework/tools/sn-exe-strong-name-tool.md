@@ -12,31 +12,31 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24a8c7ce090b286db9d86e0fc6c54ae33e7e2d5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191888"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971842"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (厳密名ツール)
-厳密名ツール (Sn.exe) は、[厳密な名前](../../../docs/framework/app-domains/strong-named-assemblies.md)を使用してアセンブリに署名する場合に役立ちます。 Sn.exe には、キーの管理、署名の生成、署名の検査に関する各オプションが用意されています。  
+厳密名ツール (Sn.exe) は、[厳密な名前](../../standard/assembly/strong-named.md)を使用してアセンブリに署名する場合に役立ちます。 Sn.exe には、キーの管理、署名の生成、署名の検査に関する各オプションが用意されています。  
   
 > [!WARNING]
 > セキュリティに関しては、厳格な名前に依存しないでください。 厳格な名前は、一意の ID を提供するだけです。
 
- 厳密な名前付けと厳密な名前付きアセンブリについて詳しくは、「[Strong-Named Assemblies](../../../docs/framework/app-domains/strong-named-assemblies.md)」 (厳密な名前付きアセンブリ) と「[How to: Sign an Assembly with a Strong Name](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)」 (方法: 厳密な名前でアセンブリに署名する) を参照してください。  
+ 厳密な名前付けと厳密な名前付きアセンブリについて詳しくは、「[Strong-Named Assemblies](../../standard/assembly/strong-named.md)」 (厳密な名前付きアセンブリ) と「[How to: Sign an Assembly with a Strong Name](../../standard/assembly/sign-strong-name.md)」 (方法: 厳密な名前でアセンブリに署名する) を参照してください。  
   
  厳密名ツールは Visual Studio と共に自動的にインストールされます。 このツールを開始するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
 
 > [!NOTE]
->  64 ビット コンピューターでは、Visual Studio 用開発者コマンド プロンプトを使用して 32 ビット バージョンの Sn.exe を、Visual Studio x64 Win64 コマンド プロンプトを使用して 64 ビット バージョンを実行してください。 
+> 64 ビット コンピューターでは、Visual Studio 用開発者コマンド プロンプトを使用して 32 ビット バージョンの Sn.exe を、Visual Studio x64 Win64 コマンド プロンプトを使用して 64 ビット バージョンを実行してください。 
   
  コマンド プロンプトに次のように入力します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 sn [-quiet][option [parameter(s)]]  
 ```  
   
@@ -67,60 +67,60 @@ sn [-quiet][option [parameter(s)]]
 |`-TS` `assembly` `infile`|`assembly` のキー ペアを使用して、`infile` に署名または部分署名されている署名を検査します。|  
 |-`TSc` `assembly` `container`|キー コンテナー `assembly` のキー ペアを使用して、`container` に署名または部分署名されている署名を検査します。|  
 |**-v** *assembly*|*assembly* 内の厳密な名前を検査します。ここで、*assembly* はアセンブリ マニフェストを含むファイルの名前です。|  
-|**-vf**  *assembly*|*assembly* 内の厳密な名前を検査します。 **-v** オプションとは異なり、**-vf** では **-Vr** オプションで無効化した場合であっても、検査を強制的に実行します。|  
-|**-Vk**  *regfile.reg* *assembly* [*userlist*] [*infile*]|指定したアセンブリを登録して検証をスキップするために使用できる登録エントリ (.reg) ファイルを作成します。 **-Vr** オプションに適用されるアセンブリ名前付け規則が **-Vk** オプションにも適用されます。 *userlist* オプションと *infile* オプションについては、**-Vr** オプションを参照してください。|  
+|**-vf**  *assembly*|*assembly* 内の厳密な名前を検査します。 **-v** オプションとは異なり、 **-vf** では **-Vr** オプションで無効化した場合であっても、検査を強制的に実行します。|  
+|**-Vk**  *regfile.reg* *assembly* [*userlist*] [*infile*]|指定したアセンブリを登録して検証をスキップするために使用できる登録エントリ (.reg) ファイルを作成します。 **-Vr** オプションに適用されるアセンブリ名前付け規則が **-Vk** オプションにも適用されます。 *userlist* オプションと *infile* オプションについては、 **-Vr** オプションを参照してください。|  
 |**-Vl**|コンピューター上の厳密な名前検査に関する、現在の設定を一覧表示します。|  
-|**-Vr**  *assembly* [*userlist*] [*infile*]|検査をスキップする *assembly* を登録します。 必要に応じて、検証の省略を適用する必要があるコンマで区切られたユーザー名のリストを指定できます。 *infile* を指定した場合、検査は実行されますが、検査時には *infile* 内の公開キーが使用されます。 指定した厳密な名前を持つアセンブリをすべて登録するには、*\*, strongname* という形式で *assembly* を指定します。 *strongname* は、トークン化した形式の公開キーを表す 16 進形式の文字列として指定します。 公開キー トークンの表示については、**-t** オプションと **-T** オプションを参照してください。 **注意:** このオプションは開発時だけ使用します。 検証省略リストにアセンブリを追加すると、セキュリティ上の脆弱性が生じます。 悪意のあるアセンブリは、検証省略リストに追加されたアセンブリの完全限定アセンブリ名 (アセンブリ名、バージョン、カルチャ、および公開キー トークン) を使用することによって、その ID を偽装できます。 これによって、悪意のあるアセンブリの検証も省略できます。|  
+|**-Vr**  *assembly* [*userlist*] [*infile*]|検査をスキップする *assembly* を登録します。 必要に応じて、検証の省略を適用する必要があるコンマで区切られたユーザー名のリストを指定できます。 *infile* を指定した場合、検査は実行されますが、検査時には *infile* 内の公開キーが使用されます。 指定した厳密な名前を持つアセンブリをすべて登録するには、 *\*, strongname* という形式で *assembly* を指定します。 *strongname* は、トークン化した形式の公開キーを表す 16 進形式の文字列として指定します。 公開キー トークンの表示については、 **-t** オプションと **-T** オプションを参照してください。 **注意:** このオプションは開発時だけ使用します。 検証省略リストにアセンブリを追加すると、セキュリティ上の脆弱性が生じます。 悪意のあるアセンブリは、検証省略リストに追加されたアセンブリの完全限定アセンブリ名 (アセンブリ名、バージョン、カルチャ、および公開キー トークン) を使用することによって、その ID を偽装できます。 これによって、悪意のあるアセンブリの検証も省略できます。|  
 |||  
 |**-Vu**  *assembly*|検査をスキップする *assembly* の登録を解除します。 **-Vr** オプションに適用される規則と同じアセンブリ名前付け規則が **-Vu** オプションにも適用されます。|  
 |**-Vx**|検査をスキップするエントリをすべて削除します。|  
 |**-?**|このツールのコマンド構文とオプションを表示します。|  
   
 > [!NOTE]
->  Sn.exe の全オプションでは大文字と小文字が区別されます。また、オプションが正しく認識されるためには、表記されたとおりに正確に入力する必要があります。  
+> Sn.exe の全オプションでは大文字と小文字が区別されます。また、オプションが正しく認識されるためには、表記されたとおりに正確に入力する必要があります。  
   
 ## <a name="remarks"></a>コメント  
  **-R** オプションと **-Rc** オプションは、署名を遅らせたアセンブリを処理する場合に便利です。 その場合、コンパイル時には公開キーだけが設定され、後で秘密キーが判明したときに署名が実行されます。  
   
 > [!NOTE]
->  レジストリなどの保護されたリソースに書き込むパラメーター (例: -**Vr)** の場合は、管理者として SN.exe を実行してください。  
+> レジストリなどの保護されたリソースに書き込むパラメーター (例: -**Vr)** の場合は、管理者として SN.exe を実行してください。  
   
 厳密な名前ツールでは、公開キーと秘密キーの組が `AT_SIGNATURE` アルゴリズム識別子を使用して生成されると想定されます。 `AT_KEYEXCHANGE` アルゴリズムを使用して生成された公開キー/秘密キーのペアでは、エラーが生成されます。 
 
 ## <a name="examples"></a>使用例  
  新しいランダム キー ペアを作成し、`keyPair.snk` に格納するコマンドを次に示します。  
   
-```  
+```console  
 sn -k keyPair.snk  
 ```  
   
  厳密な名前 CSP 内のコンテナー `keyPair.snk` 内の `MyContainer` にキーを格納するコマンドを次に示します。  
   
-```  
+```console  
 sn -i keyPair.snk MyContainer  
 ```  
   
  `keyPair.snk` から公開キーを抽出し、`publicKey.snk` に格納するコマンドを次に示します。  
   
-```  
+```console  
 sn -p keyPair.snk publicKey.snk  
 ```  
   
  公開キーおよび `publicKey.snk` に含まれている公開キーのトークンを表示するコマンドを次に示します。  
   
-```  
+```console  
 sn -tp publicKey.snk  
 ```  
   
  アセンブリ `MyAsm.dll` を検査するコマンドを次に示します。  
   
-```  
+```console  
 sn -v MyAsm.dll  
 ```  
   
  既定の CSP から `MyContainer` を削除するコマンドを次に示します。  
   
-```  
+```console  
 sn -d MyContainer  
 ```  
   
@@ -128,5 +128,5 @@ sn -d MyContainer
 
 - [ツール](../../../docs/framework/tools/index.md)
 - [Al.exe (アセンブリ リンカー)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

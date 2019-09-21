@@ -5,25 +5,25 @@ helpviewer_keywords:
 - progress controls
 - ProgressBar control [Windows Forms]
 ms.assetid: 5be6b642-e8a6-4565-8ebd-ae73c7b10dc9
-ms.openlocfilehash: 2ad6450e26777a4642f0b9c685c9f5e552b5fdc7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a941189eb8ca00de6fb2ef75cada5762c0bcc973
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012517"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968299"
 ---
 # <a name="progressbar-control-windows-forms"></a>ProgressBar コントロール (Windows フォーム)
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripProgressBar> コントロールは、<xref:System.Windows.Forms.ProgressBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ProgressBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
+> <xref:System.Windows.Forms.ToolStripProgressBar> コントロールは、<xref:System.Windows.Forms.ProgressBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ProgressBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
- Windows フォーム<xref:System.Windows.Forms.ProgressBar>コントロールを適切な数の水平のバーに配置された四角形を表示することで、操作の進行状況を示します。 アクションが完了すると、バーが入力されます。 進行状況バーがの方法を示す値を付与するために使用される一般的まで所要時間のかかる処理の待機時間 — たとえば、ときに大きなファイルが読み込まれます。  
+ Windows フォーム<xref:System.Windows.Forms.ProgressBar>コントロールは、適切な数の四角形を水平バーに表示することによって、アクションの進行状況を示します。 アクションが完了すると、バーは塗りつぶされます。 多くの場合、進行状況バーは、時間スプールアクションの完了を待機する時間をユーザーに示すために使用されます。たとえば、大きなファイルが読み込まれている場合などです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ProgressBar コントロールの概要](progressbar-control-overview-windows-forms.md)  
- 一般的な概念が導入されています、<xref:System.Windows.Forms.ProgressBar>コントロールで、操作の進行状況をグラフィカルに表示することができます。  
+ <xref:System.Windows.Forms.ProgressBar>コントロールの全般的な概念を紹介します。これにより、操作の進行状況をグラフィカルに表示できます。  
   
- [方法: Windows フォーム ProgressBar コントロールによって表示される値を設定します。](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
- によって表示される値を大きく方法について説明します、<xref:System.Windows.Forms.ProgressBar>コントロール。  
+ [方法: Windows フォーム ProgressBar コントロールによって表示される値を設定する](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
+ <xref:System.Windows.Forms.ProgressBar>コントロールによって表示される値を増やすさまざまな方法について説明します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.ProgressBar>  

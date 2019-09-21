@@ -2,21 +2,22 @@
 title: <add> の <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 280c516b17a133930bc4b6621a8c9bc7f4781085
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704545"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850566"
 ---
-# <a name="add-of-filters"></a>\<add> of \<filters>
+# <a name="add-of-filters"></a>\<フィルターの > \<を追加する >
 ログに記録するメッセージの種類を指定する XPath フィルター。  
   
- \<system.ServiceModel >  
-\<診断 >  
-\<messageLogging>  
-\<filters>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<診断 >** ](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<messageLogging >** ](messagelogging.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<フィルター >** ](filters.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,7 +34,7 @@ ms.locfileid: "61704545"
   
 |属性|説明|  
 |---------------|-----------------|  
-|フィルター|XPath 1.0 の式によって定義される、XML ドキュメントのクエリを指定する文字列。 詳細については、「 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 」を参照してください。|  
+|filter|XPath 1.0 の式によって定義される、XML ドキュメントのクエリを指定する文字列。 詳細については、「 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -42,7 +43,7 @@ ms.locfileid: "61704545"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|ログに記録されるメッセージの種類を制御する XPath フィルターのコレクションを格納します。|  
+|[\<filters>](filters.md)|ログに記録されるメッセージの種類を制御する XPath フィルターのコレクションを格納します。|  
   
 ## <a name="remarks"></a>Remarks  
  フィルターは、`logMessagesAtTransportLevel` を `true` に設定することによって指定されるトランスポート層でのみ適用されます。 サービス レベルおよび形式が正しくないメッセージ ログ記録は、フィルターの影響を受けません。  
@@ -79,5 +80,5 @@ ms.locfileid: "61704545"
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
-- [メッセージ ログの構成](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
-- [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [メッセージ ログの構成](../../../wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging >](messagelogging.md)

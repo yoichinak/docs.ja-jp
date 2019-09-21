@@ -17,12 +17,12 @@ ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ce495ce01c970fb46cc7e7e374994fd34a7730a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68bce927c6426fc32cd2fe26dcc488432199612d
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648973"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987206"
 ---
 # <a name="changing-case-in-net"></a>.NET の大文字と小文字の変更
 ユーザーからの入力を受け付けるアプリケーションを記述する場合、ユーザーがデータ入力に使用するケースを正確に予測することはできません。 多くの場合、特にユーザー インターフェイスにそれを表示する場合には、文字列に一貫性のあるケースを使用することが求められます。 次の表は、3 つのケース変更方式を示しています。 最初の 2 つの方式は、カルチャを受け入れるオーバーロードを提供します。  
@@ -34,7 +34,7 @@ ms.locfileid: "54648973"
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|文字列をタイトル ケースに変換します。|  
   
 > [!WARNING]
->  <xref:System.String.ToUpper%2A?displayProperty=nameWithType> と <xref:System.String.ToLower%2A?displayProperty=nameWithType> の方式を使用して、文字列を比較したり等しいかどうかをテストしたりする目的で、それらの文字列を変換するべきではないことに注意してください。 詳細については、「[大小混合文字の文字列を比較する](#Comparing)」セクションを参照してください。  
+> <xref:System.String.ToUpper%2A?displayProperty=nameWithType> と <xref:System.String.ToLower%2A?displayProperty=nameWithType> の方式を使用して、文字列を比較したり等しいかどうかをテストしたりする目的で、それらの文字列を変換するべきではないことに注意してください。 詳細については、「[大小混合文字の文字列を比較する](#Comparing)」セクションを参照してください。  
   
 <a name="Comparing"></a>   
 ## <a name="comparing-strings-of-mixed-case"></a>大小混合文字の文字列を比較する  

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], as objects
 ms.assetid: f76d4403-bd0a-42a0-9bc8-694c55b2c926
-ms.openlocfilehash: 8500cf508b77a0fa7e348ce0fe6b1f16fd2bab25
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fd4496e0f84953204ad8c3f40db699e911c3f477
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977172"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597361"
 ---
 # <a name="arrays-as-objects-c-programming-guide"></a>オブジェクトとしての配列 (C# プログラミング ガイド)
 
@@ -28,8 +28,8 @@ C# の配列は、実際はオブジェクトです。C や C++ の場合のよ�
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [配列](../../../csharp/programming-guide/arrays/index.md)
-- [1 次元配列](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
-- [多次元配列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
-- [ジャグ配列](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+- [C# プログラミング ガイド](../index.md)
+- [配列](./index.md)
+- [1 次元配列](./single-dimensional-arrays.md)
+- [多次元配列](./multidimensional-arrays.md)
+- [ジャグ配列](./jagged-arrays.md)

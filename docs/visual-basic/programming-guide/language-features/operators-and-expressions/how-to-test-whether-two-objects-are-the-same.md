@@ -1,5 +1,5 @@
 ---
-title: '方法: 2 つのオブジェクトが同じ (Visual Basic) であるかどうかをテストします。'
+title: 2 つのオブジェクトが等しいかどうかをテストする方法 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], reference
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64649679"
 ---
-# <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>方法: 2 つのオブジェクトが同じ (Visual Basic) であるかどうかをテストします。
+# <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>2 つのオブジェクトが等しいかどうかをテストする方法 (Visual Basic)
 オブジェクトを参照する 2 つの変数があれば、いずれかを使用できる、`Is`または`IsNot`演算子、または両方を同じインスタンスを参照しているかどうかを判断します。  
   
 ### <a name="to-test-whether-two-objects-are-the-same"></a>2 つのオブジェクトが等しいかどうかをテストするには  

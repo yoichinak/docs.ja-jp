@@ -12,40 +12,46 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: f1334ff7aa07f49139bfe684746ae9cc3cf8087c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 08e3eec08ba099e6f5c7796a459c55de09afa917
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663170"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929329"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 演算子 (Visual Basic)
-2 つの数値を除算し、残りの部分のみを返します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-number1 Mod number2  
-```  
-  
-## <a name="parts"></a>指定項目  
- `number1`  
- 必須。 任意の数式。  
-  
- `number2`  
- 必須。 任意の数式。  
-  
-## <a name="supported-types"></a>サポートされている型  
- すべての数値型。 これには、符号なしと浮動小数点型が含まれますと`Decimal`します。  
-  
+
+2つの数値を除算し、剰余だけを返します。
+
+## <a name="syntax"></a>構文
+
+```vb
+result = number1 Mod number2
+```
+
+## <a name="parts"></a>指定項目
+
+`result` \
+必須。 任意の数値変数またはプロパティ。
+
+`number1` \
+必須。 任意の数式。
+
+`number2` \
+必須。 任意の数式。
+
+## <a name="supported-types"></a>サポートされる型
+
+すべての数値型。 これには、符号なしおよび浮動小数点`Decimal`型とが含まれます。
+
 ## <a name="result"></a>結果
 
-結果は、剰余`number1`で除算`number2`します。 たとえば、式`14 Mod 4`2 に評価されます。  
+結果は、をで`number1` `number2`除算した後の剰余になります。 たとえば、式`14 Mod 4`は2に評価されます。
 
 > [!NOTE]
-> 間に相違がある*残りの部分*と*剰余*数学では、負の数値ごとに異なる結果にします。 `Mod` Visual Basic、.NET Framework で演算子`op_Modulus`演算子、および基になる[rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL 命令が剰余演算を実行します。
+> 算術の*剰余*と*剰余*の違いはありますが、負の数値の結果は異なります。 Visual Basic の`op_Modulus`演算子、.NET Framework 演算子、および基になる [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL 命令はすべて、剰余演算を実行します。`Mod`
 
-結果、`Mod`操作には、被除数の符号が保持されます`number1`、ため、正または負の値があります。 結果は常に、範囲内 (-`number2`、 `number2`)、排他的な。 例:
+`Mod`操作の結果は、 `number1`被除数の符号を保持します。したがって、正の値または負の値を指定できます。 結果は常に (-`number2`, `number2`) の範囲内にあり、排他的です。 例:
 
 ```vb
 Public Module Example
@@ -63,43 +69,53 @@ End Module
 '      -8 Mod -3 = -2
 ```
 
-## <a name="remarks"></a>Remarks  
- いずれか`number1`または`number2`浮動小数点の値は、浮動小数点除算の剰余が返されます。 結果のデータ型のデータ型の除算の結果としてすべての可能な値を保持できる最小のデータ型は、`number1`と`number2`します。  
-  
- 場合`number1`または`number2`に評価される[Nothing](../../../visual-basic/language-reference/nothing.md)、0 として扱われます。  
-  
- 関連する演算子を以下に示します。  
-  
-- [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)除算の商の整数を返します。 たとえば、式`14 \ 4`3 に評価されます。  
-  
-- [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)浮動小数点数として、残りの部分を含む、完全な商を返します。 たとえば、式`14 / 4`3.5 に評価されます。  
-  
-## <a name="attempted-division-by-zero"></a>0 による除算  
- 場合`number2`の動作を 0 に評価される、`Mod`演算子はオペランドのデータ型によって異なります。 整数の除算をスローする<xref:System.DivideByZeroException>例外。 浮動小数点除算が返されます<xref:System.Double.NaN>します。  
-  
-## <a name="equivalent-formula"></a>同等の数式  
- 式`a Mod b`は、次の数式のいずれかに相当します。  
-  
- `a - (b * (a \ b))`  
-  
- `a - (b * Fix(a / b))`  
-  
-## <a name="floating-point-imprecision"></a>浮動小数点は誤差  
- 浮動小数点数を使用するときに、常がない正確な 10 進表記メモリに注意してください。 これは、値の比較などの特定の操作から予期しない結果につながりますできますと`Mod`演算子。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
-  
-## <a name="overloading"></a>オーバーロード  
- `Mod`演算子は、*オーバー ロードされた*、つまり、クラスまたは構造体がその動作を再定義できます。 コードが適用される場合`Mod`クラスまたはそのようなオーバー ロードを含む構造体のインスタンスに再定義された動作を理解することを確認します。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
-  
-## <a name="example"></a>例  
- 次の例では、`Mod`演算子を 2 つの数値を除算し、残りの部分のみを返します。 どちらかの数値が浮動小数点数の場合は、残りの部分を表す浮動小数点数になります。  
-  
- [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]  
-  
-## <a name="example"></a>例  
- 次の例では、浮動小数点のオペランドの誤差の可能性を示します。 最初のステートメントでは、オペランドは`Double`0.2 であり、無限に繰り返される 0.20000000000000001 として格納されている値を持つバイナリ小数部分。 2 番目のステートメントでは、リテラルの型文字`D`強制的にオペランドは両方とも`Decimal`0.2 であり、正確に表現します。  
-  
- [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]  
-  
+## <a name="remarks"></a>Remarks
+
+または`number1` `number2`のいずれかが浮動小数点値の場合は、除算の浮動小数点の剰余が返されます。 結果のデータ型は、および`number1` `number2`のデータ型との除算によって得られるすべての値を保持できる最小のデータ型です。
+
+また`number1`は`number2`が[Nothing](../../../visual-basic/language-reference/nothing.md)に評価される場合、0として扱われます。
+
+関連する演算子は次のとおりです。
+
+- [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)は、除算の整数の商を返します。 たとえば、式`14 \ 4`は3に評価されます。
+
+- [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)は、剰余を含む完全な商を浮動小数点数として返します。 たとえば、式`14 / 4`は3.5 に評価されます。
+
+## <a name="attempted-division-by-zero"></a>0による除算を試行しました
+
+が`number2` 0 に評価される場合、 `Mod`演算子の動作はオペランドのデータ型によって異なります。
+
+- コンパイル時にを特定<xref:System.DivideByZeroException>できず`number2` 、コンパイル時にがゼロに評価された`number2`場合、が`BC30542 Division by zero occurred while evaluating this expression`コンパイル時エラーを生成する場合、整数除算は例外をスローします。
+- 浮動小数点除算はを<xref:System.Double.NaN?displayProperty=nameWithType>返します。
+
+## <a name="equivalent-formula"></a>同等の式
+
+式`a Mod b`は、次の数式のいずれかに相当します。
+
+`a - (b * (a \ b))`
+
+`a - (b * Fix(a / b))`
+
+## <a name="floating-point-imprecision"></a>浮動小数点おける誤差
+
+浮動小数点数を使用する場合は、メモリ内で常に正確な10進表現が使用されるわけではないことに注意してください。 これにより、値の比較や`Mod`演算子など、特定の操作によって予期しない結果が発生する可能性があります。 詳細については、「[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)」を参照してください。
+
+## <a name="overloading"></a>オーバーロード
+
+演算子はオーバーロードできます。つまり、クラスまたは構造体が動作を再定義できます。 `Mod` このようなオーバーロード`Mod`を含むクラスまたは構造体のインスタンスにコードを適用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
+
+## <a name="example"></a>例
+
+次の例では`Mod` 、演算子を使用して2つの数値を除算し、剰余だけを返します。 どちらかの数値が浮動小数点数の場合、結果は剰余を表す浮動小数点数になります。
+
+[!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]
+
+## <a name="example"></a>例
+
+次の例は、浮動小数点オペランドのおける誤差の可能性を示しています。 最初のステートメントでは、オペランドは`Double`で、0.2 は0.20000000000000001 の値が格納された無限の連続するバイナリ部分です。 2番目のステートメントでは、リテラル`D`の型文字は`Decimal`両方のオペランドを強制的ににし、0.2 は正確な表現を持ちます。
+
+[!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>
@@ -108,5 +124,5 @@ End Module
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [トラブルシューティング (データ型)](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic の算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
 - [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)

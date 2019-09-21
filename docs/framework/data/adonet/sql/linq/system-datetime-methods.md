@@ -2,12 +2,12 @@
 title: System.DateTime メソッド
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: 85af6f252362b811356d68a3ae220df2bb813882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fba695975645ecb86a06b17f0664fdf37f8866a0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876773"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792421"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime メソッド
 LINQ to SQL でサポートされている以下のメソッド、演算子、およびプロパティは、LINQ to SQL のクエリで使用できます。 メソッド、演算子、またはプロパティがサポートされていない場合は、LINQ to SQL でメンバーを変換して SQL Server で実行することはできません。 これらのメンバーはコード内で使用できますが、クエリが Transact-SQL に変換される前、またはデータベースから結果が取得された後で評価する必要があります。  
@@ -66,7 +66,7 @@ LINQ to SQL でサポートされている以下のメソッド、演算子、�
   
 ## <a name="see-also"></a>関連項目
 
-- [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [オブジェクト モデルの作成](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [SQL と CLR の型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [クエリの概念](query-concepts.md)
+- [オブジェクト モデルの作成](creating-the-object-model.md)
+- [SQL と CLR の型マッピング](sql-clr-type-mapping.md)
+- [データ型と関数](data-types-and-functions.md)

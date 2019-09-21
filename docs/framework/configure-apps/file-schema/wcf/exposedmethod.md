@@ -2,20 +2,22 @@
 title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 91eafa46aa73b5e6d359fcbe48f098f9f8a4d0f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46f2872fb289c2793c356ea179deb3ce52e6d65e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644317"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855312"
 ---
 # <a name="exposedmethod"></a>\<exposedMethod >
 COM+ コンポーネントのインターフェイスが Web サービスとして公開されるときに公開される COM+ メソッドを表します。  
   
- \<system.ServiceModel >  
-\<comContracts>  
-\<comContract>  
-\<メソッド >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts >** ](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContract >** ](comcontract.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<exposedMethods >** ](exposedmethods.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<exposedMethod >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +47,7 @@ COM+ コンポーネントのインターフェイスが Web サービスとし�
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<exposedMethods >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethods.md)|コレクション[ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)要素。|  
+|[\<exposedMethods >](exposedmethods.md)|[ \<ExposedMethod >](exposedmethod.md)要素のコレクション。|  
   
 ## <a name="remarks"></a>Remarks  
  COM+ 統合構成ツール (ComSvcConfig.exe) を使用して、COM インターフェイスから特定のメソッドを追加して、生成されるサービス コントラクトに表示できます。  
@@ -54,7 +56,7 @@ COM+ コンポーネントのインターフェイスが Web サービスとし�
   
  `ComSvcConfig.exe /i /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{TransferFunds,AddFunds,RemoveFunds} /hosting:complus`  
   
- ComSvcConfig.exe も実行すると、ときに一覧表示する前に説明したメソッドを次のサービス コントラクトが生成されます[ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)要素。  
+ また、comsvcconfig.exe を実行すると、前述のメソッドを[ \<exposedMethod >](exposedmethod.md)要素として一覧表示する次のサービスコントラクトが生成されます。  
   
 ```xml  
 <comContract contractType="{C551FBA9-E3AA-4272-8C2A-84BD8D290AC7}"
@@ -66,12 +68,12 @@ COM+ コンポーネントのインターフェイスが Web サービスとし�
 </comContract>
 ```  
   
- ランタイムの一覧に含まれるメソッドのみを追加することを反映して、サービス コントラクトを生成するサービスの初期化時、 [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)要素。 トレースは、サービス コントラクトに含まれないインターフェイス メソッド用に作成されます。  
+ サービスの初期化時に、ランタイムは、 [ \<exposedMethod >](exposedmethod.md)要素のリストに含まれるメソッドのみを反映し、追加することによって、サービスコントラクトの生成を試みます。 トレースは、サービス コントラクトに含まれないインターフェイス メソッド用に作成されます。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Configuration.ComMethodElementCollection>
 - <xref:System.ServiceModel.Configuration.ComMethodElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [COM+ アプリケーションとの統合](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [方法: COM + サービス設定を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [COM+ アプリケーションとの統合](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [方法: COM + サービス設定の構成](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

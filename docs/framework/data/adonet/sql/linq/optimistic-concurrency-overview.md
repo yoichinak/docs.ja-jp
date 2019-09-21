@@ -2,25 +2,25 @@
 title: オプティミスティック コンカレンシー:概要
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: a6e654ea1ae199cb086e9377454d05e6eaa03ad6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa7d423c0abc07e0d97f7d0d4d557aa11d675ee4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609965"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792928"
 ---
 # <a name="optimistic-concurrency-overview"></a>オプティミスティック コンカレンシー:概要
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] はオプティミスティック コンカレンシーをサポートします。 次の表でオプティミスティック同時実行制御を適用する条件[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ドキュメント。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] はオプティミスティック コンカレンシーをサポートします。 次の表では、ドキュメントで[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]オプティミスティック同時実行に適用される用語について説明します。  
   
 |用語|説明|  
 |-----------|-----------------|  
 |コンカレンシー|2 人以上のユーザーがデータベースの同じ行を同時に更新しようとした状況のことです。|  
 |コンカレンシーの競合|2 人以上のユーザーが、行の中の 1 つまたは複数の列に対し、互いに競合する値を送信しようとした状況のことです。|  
 |コンカレンシー制御|コンカレンシーの競合を解決するために使用する手法のことです。|  
-|オプティミスティック コンカレンシー|他のトランザクションが行の値に変更を加えていないかどうかをまず調べたうえで変更の送信を許可する手法のことです。<br /><br /> これと対照的*ペシミスティック同時実行制御*、同時実行の競合を回避するために、レコードをロックします。<br /><br /> *オプティミスティック*干渉することを確認する 1 つのトランザクションの可能性が考慮されるため、コントロールはこれと呼ばれます。|  
-|競合の解決|データベースを再度クエリしてから相違点を調整することによって競合する項目を更新する処理のことです。<br /><br /> オブジェクトを更新するときには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の変更トラッカーによって、以下のデータが記録されます。<br /><br /> 最初に、データベースから取得および更新に使用-の値を確認します。<br />-新しいデータベースの値後続のクエリから。<br /><br /> 次に [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、オブジェクトが競合しているかどうか (つまり 1 つまたは複数のメンバー値が変更されているかどうか) を判断します。 オブジェクトが競合している場合[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]競合がどのメンバーを決定します。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] が見つけたメンバーの競合は、競合の一覧に追加されます。|  
+|オプティミスティック コンカレンシー|他のトランザクションが行の値に変更を加えていないかどうかをまず調べたうえで変更の送信を許可する手法のことです。<br /><br /> ペシミスティック同時*実行制御*とは対照的に、同時実行の競合を避けるためにレコードをロックします。<br /><br /> *オプティミスティック*コントロールは、あるトランザクションが別のトランザクションに干渉する可能性が低いと見なされるため、このように呼ばれます。|  
+|競合の解決|データベースを再度クエリしてから相違点を調整することによって競合する項目を更新する処理のことです。<br /><br /> オブジェクトを更新するときには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の変更トラッカーによって、以下のデータが記録されます。<br /><br /> -最初にデータベースから取得され、更新チェックに使用される値。<br />-以降のクエリの新しいデータベース値。<br /><br /> 次に [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、オブジェクトが競合しているかどうか (つまり 1 つまたは複数のメンバー値が変更されているかどうか) を判断します。 オブジェクトが競合している場合[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 、は、どのメンバーが競合しているかを判断します。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] が見つけたメンバーの競合は、競合の一覧に追加されます。|  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]オブジェクト モデル、*オプティミスティック同時実行の競合*の両方の次の条件に該当する場合に発生します。  
+ オブジェクトモデルでは、次の両方の条件に該当する場合、*オプティミスティック同時実行制御の競合*が発生します。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]  
   
 - クライアントがデータベースに変更を送信しようとした。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "64609965"
  この競合を解決するためには、オブジェクトのどのメンバーが競合しているかを判別し、どのように対処するかを決定することが必要です。  
   
 > [!NOTE]
->  オプティミスティック コンカレンシーのチェックに関与するのは、<xref:System.Data.Linq.Mapping.UpdateCheck.Always> または <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> として割り当てられているメンバーのみです。 <xref:System.Data.Linq.Mapping.UpdateCheck.Never> と指定されているメンバーには、チェックは実行されません。 詳細については、「 <xref:System.Data.Linq.Mapping.UpdateCheck> 」を参照してください。  
+> オプティミスティック コンカレンシーのチェックに関与するのは、<xref:System.Data.Linq.Mapping.UpdateCheck.Always> または <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> として割り当てられているメンバーのみです。 <xref:System.Data.Linq.Mapping.UpdateCheck.Never> と指定されているメンバーには、チェックは実行されません。 詳細については、「 <xref:System.Data.Linq.Mapping.UpdateCheck> 」を参照してください。  
   
 ## <a name="example"></a>例  
  次のシナリオは、ユーザー 1 が、更新の手始めとして、データベースの行をクエリした状況です。 ユーザー 1 が取得した行には、Alfreds、Maria、および Sales という値が入っています。  
@@ -40,30 +40,30 @@ ms.locfileid: "64609965"
   
 ||管理者|Assistant|Department|  
 |------|-------------|---------------|----------------|  
-|元の状態|Alfreds|Maria|Sales|  
-|ユーザー 1|Alfred||Marketing|  
+|元の状態|Alfreds|Maria|販売|  
+|ユーザー 1|Alfred||マーケティング|  
 |ユーザー 2||Mary|サービス|  
   
- このような競合は、いくつかの方法で解決できます。 詳細については、「[方法 :変更の競合を管理](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)します。  
+ このような競合は、いくつかの方法で解決できます。 詳細については、「[方法 :変更の競合](how-to-manage-change-conflicts.md)を管理します。  
   
 ## <a name="conflict-detection-and-resolution-checklist"></a>競合の検出と解決のチェック リスト  
  競合の検出と解決は、さまざまな詳細レベルで行うことができます。 極端な方法としては、すべての競合を 3 つの方法 (<xref:System.Data.Linq.RefreshMode> を参照) のいずれかで 1 つで解決し、それ以外の考慮を一切加えないという方法もあります。 正反対の方法としては、競合している各メンバーについて、それぞれの競合の種類ごとに、特定の処理を指定するという方法もあります。  
   
 - オブジェクト モデルの <xref:System.Data.Linq.Mapping.UpdateCheck> オプションを指定または変更します。  
   
-     詳細については、「[方法 :同時実行の競合を検査するメンバーを指定](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)します。  
+     詳細については、「[方法 :同時実行の競合](how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)をテストするメンバーを指定します。  
   
 - <xref:System.Data.Linq.DataContext.SubmitChanges%2A> の呼び出しの try/catch ブロックで、例外がどの時点でスローされるかを指定します。  
   
-     詳細については、「[方法 :ときの同時実行例外がスローされる指定](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)します。  
+     詳細については、「[方法 :同時実行例外をいつスロー](how-to-specify-when-concurrency-exceptions-are-thrown.md)するかを指定します。  
   
 - 取得する競合の詳細さを判断し、それに応じたコードを try/catch ブロックに記述します。  
   
-     詳細については、「[方法 :エンティティの競合情報の取得](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)と[方法。メンバーの競合情報の取得](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)します。  
+     詳細については、「[方法 :エンティティの競合情報](how-to-retrieve-entity-conflict-information.md)を[取得し、次の操作を行います。メンバーの競合情報](how-to-retrieve-member-conflict-information.md)を取得します。  
   
-- 含める、 `try` / `catch`発見したさまざまな競合を解決する方法のコードします。  
+- 検出した`try`さまざまな競合を解決する方法を`catch`コードに/含めます。  
   
-     詳細については、「[方法 :データベースの値を保持して競合を解決](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)、[方法。データベースの値を上書きすることで競合を解決する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)、および[方法。データベースの値とマージして競合を解決](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)します。  
+     詳細については、「[方法 :データベースの値](how-to-resolve-conflicts-by-retaining-database-values.md)を保持して[競合を解決する方法:データベースの値](how-to-resolve-conflicts-by-overwriting-database-values.md)を上書きして競合[を解決し、次の操作を実行します。データベース値](how-to-resolve-conflicts-by-merging-with-database-values.md)とマージして競合を解決します。  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>競合の発見と解決をサポートする LINQ to SQL の型  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] で、オプティミスティック コンカレンシーの競合の解決をサポートするクラスと機能を以下に示します。  
@@ -90,4 +90,4 @@ ms.locfileid: "64609965"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 変更の競合を管理します。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [方法: 変更の競合を管理する](how-to-manage-change-conflicts.md)

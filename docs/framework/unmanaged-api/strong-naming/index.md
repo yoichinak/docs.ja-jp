@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ee08e9ca243ac086a0b75892bf9258246e8fd7c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a697d96864f336982c05b5bcc7c48efef2df0f6a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490664"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799205"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>厳密な名前付け (アンマネージ API リファレンス)
 厳密な名前付け API を使用すると、アセンブリに対する厳密な名前の署名をクライアントで管理できます。  
@@ -23,90 +23,90 @@ ms.locfileid: "66490664"
 ## <a name="in-this-section"></a>このセクションの内容  
   
 > [!NOTE]
->  .NET Framework 4 以降、これらの関数すべてが非推奨となりました。 推奨されている代わりの関数については、[ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) インターフェイスを参照してください。  
+> .NET Framework 4 以降、これらの関数すべてが非推奨となりました。 推奨されている代わりの関数については、[ICLRStrongName](../hosting/iclrstrongname-interface.md) インターフェイスを参照してください。  
   
- [GetHashFromAssemblyFile 関数](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
+ [GetHashFromAssemblyFile 関数](gethashfromassemblyfile-function.md)  
  指定したハッシュ アルゴリズムを使用して、指定したアセンブリ ファイルのハッシュ値が取得されます。 .NET Framework 4 以降では非推奨とされます。  
   
- [GetHashFromAssemblyFileW 関数](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfilew-function.md)  
+ [GetHashFromAssemblyFileW 関数](gethashfromassemblyfilew-function.md)  
  指定したハッシュ アルゴリズムを使用して、Unicode 文字列として指定したアセンブリ ファイルのハッシュ値が取得されます。 .NET Framework 4 以降では非推奨とされます。  
   
- [GetHashFromBlob 関数](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromblob-function.md)  
+ [GetHashFromBlob 関数](gethashfromblob-function.md)  
  指定したハッシュ アルゴリズムを使用して、指定したメモリ アドレスにあるアセンブリのハッシュが取得されます。 .NET Framework 4 以降では非推奨とされます。  
   
- [GetHashFromFile 関数](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md)  
+ [GetHashFromFile 関数](gethashfromfile-function.md)  
  指定したファイルの内容に対してハッシュが生成されます。  .NET Framework 4 以降では非推奨とされます。  
   
- [GetHashFromFileW 関数](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md)  
+ [GetHashFromFileW 関数](gethashfromfilew-function.md)  
  Unicode 文字列で指定されたファイルの内容に対してハッシュが作成されます。 .NET Framework 4 以降では非推奨とされます。  
   
- [GetHashFromHandle 関数](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromhandle-function.md)  
+ [GetHashFromHandle 関数](gethashfromhandle-function.md)  
  指定したハッシュ アルゴリズムを使用して、指定したファイル ハンドルを含むファイルの内容に対してハッシュが作成されます。  .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameCompareAssemblies 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamecompareassemblies-function.md)  
+ [StrongNameCompareAssemblies 関数](strongnamecompareassemblies-function.md)  
  厳密な名前の署名に基づいて 2 つのアセンブリが異なるかどうかが判定されます。 .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameErrorInfo 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)  
+ [StrongNameErrorInfo 関数](strongnameerrorinfo-function.md)  
  厳密な名前の関数のいずれかに基づいて最後に発生したエラー コードが取得されます。  
   
- [StrongNameFreeBuffer 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)  
- [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)、[StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)、または[StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md) などの厳密な名前の関数に対する前の呼び出しで割り当てられたメモリが解放されます。   .NET Framework 4 以降では非推奨とされます。  
+ [StrongNameFreeBuffer 関数](strongnamefreebuffer-function.md)  
+ [StrongNameGetPublicKey](strongnamegetpublickey-function.md)、[StrongNameTokenFromPublicKey](strongnametokenfrompublickey-function.md)、または[StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md) などの厳密な名前の関数に対する前の呼び出しで割り当てられたメモリが解放されます。   .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameGetBlob 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetblob-function.md)  
+ [StrongNameGetBlob 関数](strongnamegetblob-function.md)  
  指定したアドレスにある実行可能ファイルのバイナリ表現が、指定したバッファーに入れられます。 .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameGetBlobFromImage 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetblobfromimage-function.md)  
+ [StrongNameGetBlobFromImage 関数](strongnamegetblobfromimage-function.md)  
  指定したメモリ アドレスにあるアセンブリ イメージのバイナリ表現が取得されます。 .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameGetPublicKey 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)  
+ [StrongNameGetPublicKey 関数](strongnamegetpublickey-function.md)  
  秘密/公開キーの組から公開キーが取得されます。 .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameHashSize 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamehashsize-function.md)  
+ [StrongNameHashSize 関数](strongnamehashsize-function.md)  
  指定したハッシュ アルゴリズムを使用して、ハッシュに必須のバッファー サイズが取得されます。  .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameKeyDelete 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeydelete-function.md)  
+ [StrongNameKeyDelete 関数](strongnamekeydelete-function.md)  
  指定したキー コンテナーが削除されます。 .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameKeyGen 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygen-function.md)  
+ [StrongNameKeyGen 関数](strongnamekeygen-function.md)  
  厳密な名前を使用するために新しい公開/秘密キーの組が作成されます。  .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameKeyGenEx 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygenex-function.md)  
+ [StrongNameKeyGenEx 関数](strongnamekeygenex-function.md)  
  厳密な名前を使用するために、指定したキー サイズによって新しい公開/秘密キーの組が作成されます。 .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameKeyInstall 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeyinstall-function.md)  
+ [StrongNameKeyInstall 関数](strongnamekeyinstall-function.md)  
  公開/秘密キーの組がコンテナーにインポートされます。  .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameSignatureGeneration 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)  
+ [StrongNameSignatureGeneration 関数](strongnamesignaturegeneration-function.md)  
  指定したアセンブリに対して厳密な名前の署名が生成されます。   .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameSignatureGenerationEx 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegenerationex-function.md)  
+ [StrongNameSignatureGenerationEx 関数](strongnamesignaturegenerationex-function.md)  
  指定したフラグに基づいて、指定したアセンブリに対する厳密な名前の署名が作成されます。    .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameSignatureSize 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md)  
+ [StrongNameSignatureSize 関数](strongnamesignaturesize-function.md)  
  厳密な名前の署名のサイズが返されます。 .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameSignatureVerification 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md)  
+ [StrongNameSignatureVerification 関数](strongnamesignatureverification-function.md)  
  指定したパスにあるアセンブリ マニフェストに厳密な名前の署名が含まれるかどうかを示す値が取得されます。これは指定したフラグに従って確認されます。 .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameSignatureVerificationEx 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverificationex-function.md)  
+ [StrongNameSignatureVerificationEx 関数](strongnamesignatureverificationex-function.md)  
  指定したパスにあるアセンブリ マニフェストに厳密な名前の署名が含まれるかどうかを示す値が取得されます。  .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameSignatureVerificationFromImage 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverificationfromimage-function.md)  
+ [StrongNameSignatureVerificationFromImage 関数](strongnamesignatureverificationfromimage-function.md)  
  メモリに既にマップされているアセンブリが、関連付けられている公開キーに対して有効であるかどうかが確認されます。 .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameTokenFromAssembly 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)  
+ [StrongNameTokenFromAssembly 関数](strongnametokenfromassembly-function.md)  
  指定したアセンブリ ファイルから、厳密な名前トークンが作成されます。  .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameTokenFromAssemblyEx 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassemblyex-function.md)  
+ [StrongNameTokenFromAssemblyEx 関数](strongnametokenfromassemblyex-function.md)  
  指定したアセンブリ ファイルから厳密な名前のトークンが作成され、公開キーが返されます。 .NET Framework 4 以降では非推奨とされます。  
   
- [StrongNameTokenFromPublicKey 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
+ [StrongNameTokenFromPublicKey 関数](strongnametokenfrompublickey-function.md)  
  公開キーを表すトークンが取得されます。 .NET Framework 4 以降では非推奨とされます。  
   
- [PublicKeyBlob 構造体](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
+ [PublicKeyBlob 構造体](publickeyblob-structure.md)  
  公開/秘密キーの組の公開キーがバイナリ形式で表されます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
-- [アンマネージ API リファレンス](../../../../docs/framework/unmanaged-api/index.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)
+- [アンマネージ API リファレンス](../index.md)

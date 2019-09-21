@@ -2,12 +2,12 @@
 title: 追跡参加要素
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45a92c3ab710fc9bc86fbf269a4672f1d34737cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699806"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963680"
 ---
 # <a name="tracking-participants"></a>追跡参加要素
 追跡参加要素は、ワークフロー開発者が <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> オブジェクトにアクセスし、そのオブジェクトを処理する機能拡張ポイントです。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む標準の追跡参加要素が含まれています。 これで要件が満たされない場合は、カスタムの追跡参加要素を作成することもできます。  
@@ -15,7 +15,7 @@ ms.locfileid: "61699806"
 ## <a name="tracking-participants"></a>追跡参加要素  
  追跡インフラストラクチャを使用すると、送信の追跡レコードにフィルターを適用して、参加要素からレコードのサブセットに定期受信できるようになります。 フィルターを適用するメカニズムは、追跡プロファイルを通して行われます。  
   
- Windows Workflow Foundation (WF) で[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]追跡レコードを ETW セッションに書き込む追跡参加要素を提供します。 参加要素は、追跡固有の動作を構成ファイルに追加することによって、ワークフロー サービスで構成されます。 ETW 追跡参加要素を有効にすると、追跡レコードをイベント ビューアーで表示できます。 ETW ベースの追跡用の SDK のサンプルを使用すると、ETW ベースの追跡参加要素を使用した WF の追跡を理解するうえで便利です。  
+ の Windows Workflow Foundation (WF) [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]には、追跡レコードを ETW セッションに書き込む追跡参加要素が用意されています。 参加要素は、追跡固有の動作を構成ファイルに追加することによって、ワークフロー サービスで構成されます。 ETW 追跡参加要素を有効にすると、追跡レコードをイベント ビューアーで表示できます。 ETW ベースの追跡用の SDK のサンプルを使用すると、ETW ベースの追跡参加要素を使用した WF の追跡を理解するうえで便利です。  
   
 ## <a name="etw-tracking-participant"></a>ETW 追跡参加要素  
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] には、追跡レコードを ETW セッションに書き込む ETW 追跡参加要素が含まれています。 これは、アプリケーションのパフォーマンスやサーバーのスループットに与える影響を最小限に抑えたまま、非常に効率的な方法で実行されます。 標準の ETW 追跡参加要素を使用する利点は、受信する追跡レコードを他のアプリケーションや Windows イベント ビューアーのシステム ログで表示できることです。  
@@ -47,7 +47,7 @@ ms.locfileid: "61699806"
 ```  
   
 > [!NOTE]
->  `trackingProfile` または `<etwTracking/>` のように `<etwTracking profileName=""/>` の名前が指定されていない場合、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] と一緒にインストールされている Machine.config ファイルにある既定の追跡プロファイルが使用されます。  
+> `trackingProfile` または `<etwTracking/>` のように `<etwTracking profileName=""/>` の名前が指定されていない場合、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] と一緒にインストールされている Machine.config ファイルにある既定の追跡プロファイルが使用されます。  
   
  Machine.config ファイルでは、既定の追跡プロファイルはワークフロー インスタンスのレコードとエラーに定期受信されています。  
   
@@ -60,14 +60,14 @@ ms.locfileid: "61699806"
   
  次の図は、ETW 追跡参加要素を使用した追跡データ フローを示しています。 追跡データは、ETW セッションに到達すると、さまざまな方法でアクセスできます。 これらのイベントにアクセスする最も便利な方法の 1 つはイベント ビューアーを使用することです。イベント ビューアーは、アプリケーションやサービスのログを表示して追跡する Windows の一般的なツールです。  
   
- ![ETW 追跡プロバイダーを通じて追跡データのフロー。](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
+ ![ETW 追跡プロバイダーを使用した追跡データのフロー。](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
 ## <a name="tracking-participant-event-data"></a>追跡参加要素のイベント データ  
- 追跡参加要素は、追跡レコードごとに 1 つのイベントという形式で、ETW セッションに追跡イベント データをシリアル化します。  イベントは、100 ～ 199 までの範囲内の ID を使用して識別されます。 追跡イベントの定義については、追跡参加要素によって出力されたレコードを参照してください、[追跡イベントのリファレンス](tracking-events-reference.md)トピック。  
+ 追跡参加要素は、追跡レコードごとに 1 つのイベントという形式で、ETW セッションに追跡イベント データをシリアル化します。  イベントは、100 ～ 199 までの範囲内の ID を使用して識別されます。 追跡参加要素によって出力される追跡イベントレコードの定義については、「[追跡イベントのリファレンス](tracking-events-reference.md)」を参照してください。  
   
  ETW イベントのサイズは、ETW バッファーのサイズまたは ETW イベントの最大ペイロードのいずれか小さいほうの値に制限されます。 イベントのサイズが ETW のどちらかの制限を超えると、イベントが切り捨てられ、任意の方法でその内容が削除されます。 変数、引数、注釈、およびカスタム データは選択的に削除されません。 切り捨てが発生する場合は、イベント サイズが ETW の制限を超える原因となった値にかかわらず、これらのすべてが切り捨てられます。  削除されたデータは、`<item>..<item>` で置き換えられます。  
   
- 複雑な型変数、引数、およびカスタム データ項目は、使用して ETW イベント レコードにシリアル化、 [NetDataContractSerializer クラス](https://go.microsoft.com/fwlink/?LinkId=177537)します。 このクラスでは、シリアル化された XML ストリームに CRL 型情報が含まれます。  
+ 変数、引数、およびカスタムデータ項目の複合型は、 [NetDataContractSerializer クラス](https://go.microsoft.com/fwlink/?LinkId=177537)を使用して ETW イベントレコードにシリアル化されます。 このクラスでは、シリアル化された XML ストリームに CRL 型情報が含まれます。  
   
  ETW の制限によってペイロード データが切り捨てられると、ETW セッションに送信される追跡レコードの重複が生じる可能性があります。 このような状況は、複数のセッションがイベントをリッスンしており、セッションがそのイベントに対して異なるペイロードの制限を持っている場合に発生します。  
   
@@ -77,17 +77,17 @@ ms.locfileid: "61699806"
  ETW 追跡参加要素によって ETW セッションに書き込まれたイベントは、イベント ビューアーからアクセスできます (既定のプロバイダー ID を使用している場合)。 これによって、ワークフローが出力した追跡レコードをすぐに表示できます。  
   
 > [!NOTE]
->  ETW セッションに出力された追跡レコード イベントでは、100 ～ 199 の範囲のイベント ID を使用します。  
+> ETW セッションに出力された追跡レコード イベントでは、100 ～ 199 の範囲のイベント ID を使用します。  
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>イベント ビューアーで追跡レコードの表示を有効にするには  
   
 1. イベント ビューアー (EVENTVWR.EXE) を起動します。  
   
-2. 選択**イベント ビューアー、アプリケーションとサービス ログ、Microsoft、Windows では、アプリケーション サーバー-アプリケーション**します。  
+2. [**イベントビューアー]、[アプリケーションとサービスログ]、[Microsoft]、[Windows]、[アプリケーションサーバー-アプリケーション**] のどれかを選択します。  
   
-3. 右クリックし、いることを確認**ビュー、分析およびデバッグ ログ**が選択されています。 有効でない場合は、ログを選択するとログの横にチェック マークが表示されます。 これが表示されます、**分析**、 **Perf**、および**デバッグ**ログ。  
+3. 右クリックして、[**表示]、[分析とデバッグログの表示**] が選択されていることを確認します。 有効でない場合は、ログを選択するとログの横にチェック マークが表示されます。 これにより、**分析**ログ、**パフォーマンス**ログ、および**デバッグ**ログが表示されます。  
   
-4. 右クリックし、**分析**ログに記録し、**ログの有効化**します。 ログは %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl ファイルに含まれます。  
+4. **分析**ログを右クリックし、 **[ログの有効化]** を選択します。 ログは %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl ファイルに含まれます。  
   
 ## <a name="custom-tracking-participant"></a>カスタムの追跡参加要素  
  追跡参加要素 API では、ワークフロー ランタイムが出力する追跡レコードを処理するためのカスタム ロジックを含めることが可能なユーザー指定の追跡参加要素を使用して、追跡ランタイムを拡張できます。 カスタムの追跡参加要素を作成するためには、開発者が `Track` クラスの <xref:System.Activities.Tracking.TrackingParticipant> メソッドを実装する必要があります。 このメソッドは、ワークフロー ランタイムによって追跡レコードが出力されるときに呼び出されます。  
@@ -143,4 +143,4 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
 ## <a name="see-also"></a>関連項目
 
 - [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [App Fabric を使用したアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)

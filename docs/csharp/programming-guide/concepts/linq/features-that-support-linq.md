@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: bf9af90c9695ad9428a887a901a95282672a4f75
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 1029d34ae8823fe91c7e4bc92e168fcc1061c707
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722542"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594406"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ をサポートする C# の機能
 
@@ -26,11 +26,11 @@ var query = from str in stringArray
             select stringGroup;
 ```
 
-詳細については、「[LINQ クエリ式](../../../../csharp/programming-guide/linq-query-expressions/index.md)」を参照してください。
+詳細については、「[LINQ クエリ式](../../linq-query-expressions/index.md)」を参照してください。
 
 ## <a name="implicitly-typed-variables-var"></a>暗黙的に型指定された変数 (var)
 
-変数を宣言して初期化するときに、型を明示的に指定する代わりに、次に示すように [var](../../../../csharp/language-reference/keywords/var.md) 修飾子を使用すると、コンパイラが型を推論して代入するように指示できます。
+変数を宣言して初期化するときに、型を明示的に指定する代わりに、次に示すように [var](../../../language-reference/keywords/var.md) 修飾子を使用すると、コンパイラが型を推論して代入するように指示できます。
 
 ```csharp
 var number = 5;
@@ -42,7 +42,7 @@ var query = from str in stringArray
 
 `var` として宣言された変数は、明示的に型を指定した変数とまったく同じように厳密に型指定されます。 `var` を使用すると匿名型を作成できますが、ローカル変数にのみ使用できます。 また、暗黙的な型指定を使用して、配列を宣言することもできます。
 
-詳細については、「[暗黙的に型指定されるローカル変数](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。
+詳細については、「[暗黙的に型指定されるローカル変数](../../classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。
 
 ## <a name="object-and-collection-initializers"></a>オブジェクト初期化子とコレクション初期化子
 
@@ -66,11 +66,11 @@ var newLargeOrderCustomers = from o in IncomingOrders
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
 ```
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
-- [オブジェクト初期化子とコレクション初期化子](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [オブジェクト初期化子とコレクション初期化子](../../classes-and-structs/object-and-collection-initializers.md)
 
-- [標準クエリ演算子のクエリ式構文](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [標準クエリ演算子のクエリ式構文](./query-expression-syntax-for-standard-query-operators.md)
 
 ## <a name="anonymous-types"></a>匿名型
 
@@ -80,26 +80,26 @@ var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y
 select new {name = cust.Name, phone = cust.Phone};
 ```
 
-詳細については、「[匿名型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)」を参照してください。
+詳細については、「[匿名型](../../classes-and-structs/anonymous-types.md)」を参照してください。
 
 ## <a name="extension-methods"></a>拡張メソッド
 
 拡張メソッドは型に関連付けることができる静的メソッドであるため、その型のインスタンス メソッドと同じように呼び出すことができます。 この機能を使用すると、既存の型を実際に変更しなくても、その型に新しいメソッドを実質的に "追加" できます。 標準クエリ演算子は、<xref:System.Collections.Generic.IEnumerable%601> を実装する任意の型で [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ機能を実現する拡張メソッドのセットです。
 
-詳細については、「[拡張メソッド](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)」を参照してください。
+詳細については、「[拡張メソッド](../../classes-and-structs/extension-methods.md)」を参照してください。
 
 ## <a name="lambda-expressions"></a>ラムダ式
 
 ラムダ式は、=> 演算子を使用して関数本体からパラメーター入力を分離するインライン関数で、コンパイル時にデリゲートまたは式ツリーに変換されます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プログラミングでは、標準クエリ演算子に対する直接メソッド呼び出しを行う場合にラムダ式を使用します。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
-- [匿名関数](../../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+- [匿名関数](../../statements-expressions-operators/anonymous-functions.md)
 
-- [ラムダ式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [ラムダ式](../../statements-expressions-operators/lambda-expressions.md)
 
-- [式ツリー (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [式ツリー (C#)](../expression-trees/index.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [統合言語クエリ (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [統合言語クエリ (LINQ) (C#)](./index.md)

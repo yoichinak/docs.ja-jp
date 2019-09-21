@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-ms.openlocfilehash: b0037f56947a86627ee9ea84369527aec859a0f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 002a644ff5d48b25351228dcd74330707491d6c8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032605"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782096"
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>結合およびクロス積クエリの作成
 次の例は、複数のテーブルからの結果を組み合わせる方法を示しています。  
   
 ## <a name="example"></a>例  
- 次の例では、外部キー ナビゲーションを使用して、 `From` Visual Basic での句 (`from`句C#) ロンドンの顧客のすべての注文を選択します。  
+ 次の例では、Visual Basic ( `From` `from`のC#句) の句で外部キーナビゲーションを使用して、ロンドンの顧客のすべての注文を選択します。  
   
  [!code-csharp[DLinqQueryExamples#47](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#47)]
  [!code-vb[DLinqQueryExamples#47](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#47)]  
   
 ## <a name="example"></a>例  
- 次の例では、外部キー ナビゲーションを使用して、 `Where` Visual Basic での句 (`where`句C#) フィルター処理するための在庫切れ`Products`が`Supplier`米国の州が。  
+ 次の例`Where`で`Supplier`は、Visual Basic (`where`のC#句) の句で外部キーナビゲーションを使用して、米国内`Products`にがある在庫切れをフィルター処理します。  
   
  [!code-csharp[DLinqQueryExamples#48](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#48)]
  [!code-vb[DLinqQueryExamples#48](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#48)]  
   
 ## <a name="example"></a>例  
- 次の例では、外部キー ナビゲーションを使用して、 `From` Visual Basic での句 (`from`句C#) シアトルの従業員をフィルター処理し、その担当区域を一覧表示します。  
+ 次の例では、Visual Basic ( `From` `from`のC#句) の句で外部キーナビゲーションを使用して、シアトルの従業員をフィルター処理し、その担当区域を一覧表示します。  
   
  [!code-csharp[DLinqQueryExamples#49](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#49)]  
   
 ## <a name="example"></a>例  
- 次の例では、外部キー ナビゲーションを使用して、 `Select` Visual Basic での句 (`select`句C#) を他の 1 人の従業員が場所レポートされ、両方の従業員が、同じ従業員の組み合わせをフィルター処理する`City`します。  
+ 次の例で`Select`は、句で外部キーナビゲーションを使用して、Visual Basic (`select`のC#句) では、1人の従業員が別の従業員を報告し、両方`City`の従業員が同じである従業員のペアをフィルター処理します。  
   
  [!code-csharp[DLinqQueryExamples#50](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#50)]
  [!code-vb[DLinqQueryExamples#50](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50)]  
   
 ## <a name="example"></a>例  
- Visual Basic の例は、すべての顧客と注文を検索、顧客の注文が一致することにより、およびそのリスト内のすべての顧客の連絡先の名前が提供されることが保証されます。  
+ 次の Visual Basic 例では、すべての顧客と注文を検索し、注文が顧客と一致していることを確認し、そのリスト内のすべての顧客に対して連絡先名が提供されることを保証します。  
   
  [!code-vb[DLinqQueryExamples#50v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50v)]  
   
@@ -81,4 +81,4 @@ ms.locfileid: "62032605"
   
 ## <a name="see-also"></a>関連項目
 
-- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [クエリの例](query-examples.md)

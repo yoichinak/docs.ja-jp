@@ -3,12 +3,12 @@ title: 式ツリーの変換
 description: 式ツリーの各ノードにアクセスし、その式ツリーに変更を加えたコピーを構築する方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 4c14837c1d92845991d8ea9990b77eb9052757d8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a12c4d7fe9f65d6e9598259de1504b6f9987f38e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490074"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925839"
 ---
 # <a name="translating-expression-trees"></a>式ツリーの変換
 
@@ -124,7 +124,7 @@ private static int Aggregate(Expression exp)
 
 同じ式に対して実行すると、次の出力が生成されます。
 
-```
+```output
 10
 Found Addition Expression
 Computing Left node
@@ -161,7 +161,7 @@ Expression<Func<int> sum1 = () => 1 + (2 + (3 + 4));
 
 この式の実行の出力を次に示します。
 
-```
+```output
 Found Addition Expression
 Computing Left node
 Found Constant: 1
@@ -191,7 +191,7 @@ Computed sum: 10
 
 ## <a name="learning-more"></a>詳細情報
 
-このサンプルは、式ツリーで表されるアルゴリズムを走査し、解釈するために構築するコードのごく一部です。 式ツリーを別の言語に変換する汎用的なライブラリを構築するために必要なすべての作業の説明については、Matt Warren の[このシリーズ](https://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx)を参照してください。 式ツリーに含まれる任意のコードを変換する方法について、詳しく説明されています。
+このサンプルは、式ツリーで表されるアルゴリズムを走査し、解釈するために構築するコードのごく一部です。 式ツリーを別の言語に変換する汎用的なライブラリを構築するために必要なすべての作業の説明については、Matt Warren の[このシリーズ](https://blogs.msdn.microsoft.com/mattwar/2008/11/18/linq-building-an-iqueryable-provider-series/)を参照してください。 式ツリーに含まれる任意のコードを変換する方法について、詳しく説明されています。
 
 式ツリーの真の力がおわかりいただけたでしょうか。
 コードのセットを確認し、そのコードに必要な変更を加え、変更されたバージョンを実行することができます。 式ツリーは不変なので、既存のツリーのコンポーネントを使用して新しいツリーを作成できます。 その結果、変更した式ツリーの作成に必要なメモリ量が最小限に抑えられます。

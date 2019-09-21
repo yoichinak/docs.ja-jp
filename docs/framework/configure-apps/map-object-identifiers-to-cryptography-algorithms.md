@@ -8,15 +8,15 @@ helpviewer_keywords:
 - mapping object identifiers
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-ms.openlocfilehash: e035ff04a70a441f7f64bbc230ba6d8036fb2ace
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5aebac2d392d4540581dfe7c7afff0819968ac0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775779"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912542"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>暗号化アルゴリズムへのオブジェクト ID の割り当て
-データが 1 つのプログラムから別の送信時いない改ざんデジタル署名を確認します。 通常、デジタル署名がハッシュに署名するデータの数学関数を適用することによって計算されます。 署名のハッシュ値を書式設定時に、一部のデジタル署名アルゴリズムは、書式設定操作の一部として ASN.1 オブジェクト識別子 (OID) を追加します。 OID は、ハッシュを計算に使用されたアルゴリズムを識別します。 アルゴリズムは、カスタム アルゴリズムを使用する暗号化メカニズムを拡張するオブジェクトの識別子にマップできます。 次の例では、新しいハッシュ アルゴリズムにオブジェクト識別子をマップする方法を示します。  
+デジタル署名は、あるプログラムから別のプログラムに送信されるときに、データが改ざんされないようにします。 通常、デジタル署名は、署名されるデータのハッシュに数学関数を適用することによって計算されます。 署名するハッシュ値の書式を設定すると、一部のデジタル署名アルゴリズムでは、書式設定操作の一部として asn.1 オブジェクト識別子 (OID) が追加されます。 OID は、ハッシュの計算に使用されたアルゴリズムを識別します。 アルゴリズムをオブジェクト識別子にマップして、カスタムアルゴリズムを使用するように暗号化メカニズムを拡張することができます。 次の例では、オブジェクト識別子を新しいハッシュアルゴリズムにマップする方法を示します。  
   
 ```xml  
 <configuration>  
@@ -38,9 +38,9 @@ ms.locfileid: "61775779"
 </configuration>  
 ```  
   
- [ \<OidEntry > 要素](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)2 つの属性が含まれています。 **OID**属性は、オブジェクトの識別番号。 **名前**属性の値が、**名前**属性を[ \<nameEntry > 要素](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)します。 オブジェクト識別子は、簡易名にマップできる前に、アルゴリズム名からクラスへのマッピングする必要があります。  
+ [ \<OidEntry > 要素](./file-schema/cryptography/oidentry-element.md)には、2つの属性が含まれています。 **OID**属性は、オブジェクトの識別子番号です。 **Name**属性は、 [ \<nameentry > 要素](./file-schema/cryptography/nameentry-element.md)の**name**属性の値です。 オブジェクト識別子を簡易名にマップする前に、アルゴリズム名からクラスへのマッピングが必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [暗号化クラスの設定](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [暗号化クラスの設定](configure-cryptography-classes.md)
+- [Cryptographic Services](../../standard/security/cryptographic-services.md)

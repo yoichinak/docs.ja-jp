@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: cdfbab381360bfcbae6cf3849d0bf0e18fda24bc
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 246046fb5ac9b0c03df7df71ef426dc2ac6f0617
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377856"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168815"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 

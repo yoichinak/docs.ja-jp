@@ -2,12 +2,12 @@
 title: null 許容参照型
 description: この記事では、C# 8 で追加された null 許容参照型の概要を説明します。 新規および既存のプロジェクトにおいて、その機能によって null 参照例外に対する安全性がどのように提供されるかを学習します。
 ms.date: 02/19/2019
-ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195916"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851071"
 ---
 # <a name="nullable-reference-types"></a>null 許容参照型
 
@@ -56,20 +56,18 @@ name!.Length;
 
 ## <a name="nullable-contexts"></a>null 許容コンテキスト
 
-null 許容コンテキストでは、コンパイラによる参照型変数の解釈方法を細かく制御できます。 特定のソース行の **null 許容注釈コンテキスト**は、`enabled` または `disabled` です。 C# 8 より前のコンパイラでは、`disabled` null 許容コンテキスト内のすべてのコードがコンパイルされるものと考えることができます。すべての参照型は null になることができます。 **null 許容警告コンテキスト**は、`enabled`、`disabled`、または `safeonly` に設定することができます。 null 許容警告コンテキストでは、フロー分析を使用するコンパイラによって生成される警告が指定されます。
+null 許容コンテキストでは、コンパイラによる参照型変数の解釈方法を細かく制御できます。 特定のソース行の **null 許容注釈コンテキスト**は、`enabled` または `disabled` です。 C# 8 より前のコンパイラでは、`disabled` null 許容コンテキスト内のすべてのコードがコンパイルされるものと考えることができます。すべての参照型は null になることができます。 **null 許容警告コンテキスト**は、`enabled` または `disabled` に設定することができます。 null 許容警告コンテキストでは、フロー分析を使用するコンパイラによって生成される警告が指定されます。
 
 プロジェクトの null 許容注釈コンテキストと null 許容警告コンテキストは、`csproj` ファイルの `Nullable` 要素を使用して設定することができます。 この要素では、コンパイラによって型の null 値の許容が解釈される方法と、生成される警告を構成します。 有効な設定は次のとおりです。
 
 - `enable`:null 許容注釈コンテキストは**有効**です。 null 許容警告コンテキストは**有効**です。
   - 参照型の変数 (`string` など) は、null 非許容です。  null 値の許容のすべての警告は有効です。
-- `disable`:null 許容注釈コンテキストは**無効**です。 null 許容警告コンテキストは**無効**です。
-  - 参照型の変数は無関係であり、以前のバージョンの C# と同じです。 null 値の許容のすべての警告は無効です。
-- `safeonly`:null 許容注釈コンテキストは**有効**です。 null 許容警告コンテキストは**安全のみ**です。
-  - 参照型の変数は、null 非許容です。 安全性に関する null 値の許容のすべての警告は有効です。
 - `warnings`:null 許容注釈コンテキストは**無効**です。 null 許容警告コンテキストは**有効**です。
   - 参照型の変数は、無関係です。 null 値の許容のすべての警告は有効です。
-- `safeonlywarnings`:null 許容注釈コンテキストは**無効**です。 null 許容警告コンテキストは**安全のみ**です。
-  - 参照型の変数は、無関係です。 安全性に関する null 値の許容のすべての警告は有効です。
+- `annotations`:null 許容注釈コンテキストは**有効**です。 null 許容警告コンテキストは**無効**です。
+  - 参照型の変数は、無関係です。 null 値の許容のすべての警告は有効です。
+- `disable`:null 許容注釈コンテキストは**無効**です。 null 許容警告コンテキストは**無効**です。
+  - 参照型の変数は無関係であり、以前のバージョンの C# と同じです。 null 値の許容のすべての警告は無効です。
 
 > [!IMPORTANT]
 > `Nullable` 要素は以前、`NullableContextOptions` という名称でした。 Visual Studio 2019、16.2-p1 で名前が変わりました。 .NET Core SDK 3.0.100-preview5-011568 にはこの変更が行われていません。 .NET Core CLI をご利用の場合、次のプレビューが利用可能になるまで `NullableContextOptions` を使用する必要があります。
@@ -78,21 +76,12 @@ null 許容コンテキストでは、コンパイラによる参照型変数の
 
 - `#nullable enable`:null 許容注釈コンテキストと null 許容警告コンテキストを、**有効**に設定します。
 - `#nullable disable`:null 許容注釈コンテキストと null 許容警告コンテキストを、**無効**に設定します。
-- `#nullable safeonly`:null 許容注釈コンテキストを**有効**に設定し、null 許容警告コンテキストを**安全のみ**に設定します。
 - `#nullable restore`:null 許容注釈コンテキストと null 許容警告コンテキストを、プロジェクトの設定に戻します。
 - `#pragma warning disable nullable`:null 許容警告コンテキストを**無効**に設定します。
 - `#pragma warning enable nullable`:null 許容警告コンテキストを**有効**に設定します。
 - `#pragma warning restore nullable`:null 許容警告コンテキストをプロジェクトの設定に戻します。
-- `#pragma warning safeonly nullable`:null 許容警告コンテキストを**安全のみ**に設定します。
 
 既定の null 許容注釈および警告コンテキストは `disabled` です。 その決定は、既存のコードを変更せずにコンパイルできて新しい警告は生成されないことを意味します。
-
-null 許容警告コンテキストの `enabled` と `safeonly` の違いは、null 非許容参照への null 許容参照の割り当てに対する警告です。 次の割り当てに対し、`enabled` 警告コンテキストでは警告が生成されますが、`safeonly` 警告コンテキストでは生成されません。 一方、`s` が逆参照されている 2 行目では、`safeonly` コンテキストで警告が生成されます。
-
-```csharp
-string s = null; // warning when nullable warning context is enabled.
-var txt = s.ToString(); // warning when nullable warnings context is safeonly, or enabled.
-```
 
 ### <a name="nullable-annotation-context"></a>null 許容注釈コンテキスト
 
@@ -121,7 +110,7 @@ null 許容警告コンテキストは、null 許容注釈コンテキストと�
 1. 変数に null 以外の値が確実に割り当てられている。
 1. 変数または式は、それを逆参照する前に null かどうかをチェックされている。
 
-null 許容警告コンテキストが `enabled` または `safeonly` の場合、**null かもしれない**状態の変数または式を逆参照すると常に、コンパイラで警告が生成されます。 さらに、null 許容注釈コンテキストが `enabled` のときに、**null かもしれない**状態の変数または式を null 非許容参照型に割り当てると、警告が生成されます。
+null 許容警告コンテキストが `enabled` の場合、**null かもしれない**状態の変数または式を逆参照すると常に、コンパイラで警告が生成されます。 さらに、null 許容注釈コンテキストが `enabled` のときに、**null かもしれない**状態の変数または式を null 非許容参照型に割り当てると、警告が生成されます。
 
 ## <a name="learn-more"></a>詳細情報
 

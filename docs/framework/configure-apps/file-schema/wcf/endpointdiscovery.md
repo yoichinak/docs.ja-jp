@@ -2,21 +2,22 @@
 title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 125baba917a49135aaa426df2cfa1a4dbe8ac1e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98b1655f42b7b43604ed4ab9d66870ec204a9590
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700911"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398016"
 ---
-# <a name="endpointdiscovery"></a>\<endpointDiscovery>
+# <a name="endpointdiscovery"></a>\<endpointDiscovery >
 エンドポイントのさまざまな探索設定を指定します (探索可能性、スコープ、メタデータに対するカスタム拡張など)。  
   
-\<system.ServiceModel >  
-\<<behaviors>  
-\<endpointBehaviors>  
-\<behavior>  
-\<endpointDiscovery>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<endpointDiscovery >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,27 +43,27 @@ ms.locfileid: "61700911"
   
 |属性|説明|  
 |---------------|-----------------|  
-|enabled|このエンドポイントで見つけやすさが有効になっているかどうかを指定するブール値。 既定値は `false` です。|  
+|enabled|このエンドポイントで探索可能性が有効かどうかを指定するブール値です。 既定値は `false` です。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|エンドポイントのスコープ URI のコレクション。 複数の URI を 1 つのエンドポイントに関連付けることができます。|  
-|[\<拡張機能 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [の\<endpointDiscovery >]|エンドポイントで発行されるカスタム メタデータを指定できる、XML 要素のコレクション。|  
-|\<types>|検索するインターフェイスのコレクション。|  
+|[\<スコープ >](scopes.md)|エンドポイントのスコープ URI のコレクション。 複数の URI を 1 つのエンドポイントに関連付けることができます。|  
+|拡張機能 > [ endpointdiscovery>]\< [ \<](extensions.md)|エンドポイントで発行されるカスタム メタデータを指定できる、XML 要素のコレクション。|  
+|\<型 >|検索するインターフェイスのコレクション。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|動作の要素を指定します。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|動作の要素を指定します。|  
 |||  
   
 ## <a name="remarks"></a>Remarks  
- エンドポイントの動作構成に追加し、`enabled` 属性を `true` に設定すると、この構成要素の探索可能性が有効になります。 さらに、使用、 [\<スコープ >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)カスタム スコープ クエリ中にサービス エンドポイントのフィルター処理に使用できる Uri を指定する子要素だけでなく[\<拡張機能 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) (EPR、ContractTypeName、BindingName、スコープおよび ListenURI) は、標準の探索可能なメタデータと共に発行する必要のあるカスタム メタデータを指定する子要素。  
+ エンドポイントの動作構成に追加し、`enabled` 属性を `true` に設定すると、この構成要素の探索可能性が有効になります。 さらに、 [ \<スコープ >](scopes.md)子要素を使用して、クエリ[ \<](extensions.md)中にサービスエンドポイントをフィルター処理するために使用できるカスタムスコープ uri と、カスタムを指定する拡張 > 子要素を指定することができます。標準の探索可能なメタデータと共に公開する必要があるメタデータ (EPR、ContractTypeName、BindingName、Scope、ListenURI)。  
   
- この構成要素に依存、 [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)探索可能性のサービス レベルの制御を提供する要素。 場合、この要素の設定は無視されます、つまり[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)は、構成に存在しません。  
+ この構成要素は、 [ \<](servicediscovery.md)サービスレベルの探索可能性を提供する servicediscovery > 要素に依存します。 これは、 [ \<servicediscovery >](servicediscovery.md)が構成内に存在しない場合に、この要素の設定が無視されることを意味します。  
   
 ## <a name="example"></a>例  
  次の構成例では、フィルターのスコープと、エンドポイントで発行される拡張メタデータを指定しています。  

@@ -1,32 +1,33 @@
 ---
-title: ML.NET CLI を使用して二項分類子を自動生成する
+title: ML.NET CLI を使用してセンチメントを分析する
 description: サンプル データセットから ML モデルと関連する C# コードを自動的に生成する
 author: cesardl
 ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 592f9dc599a22427a2a79047cd9e96f36d2ae429
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053645"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972006"
 ---
-# <a name="auto-generate-a-binary-classifier-using-the-cli"></a>CLI を使用して二項分類子を自動生成する
+# <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI を使用してセンチメントを分析する
 
 ML.NET CLI を使用して ML.NET モデルと基礎となる C# コードを自動生成する方法について説明します。 データセットと実装する機械学習タスクを指定すると、CLI では、AutoML エンジンを使用してモデルの生成と展開のソース コードと、二項モデルが作成されます。
 
 このチュートリアルでは、次の手順を実行します。
 > [!div class="checklist"]
-> * 選択した機械学習タスク用にデータを準備する
-> * CLI から "mlnet auto-train" コマンドを実行する
-> * 品質メトリックの結果を確認する
-> * アプリケーションでモデルを使用するために生成された C# コードを理解する
-> * モデルのトレーニングに使用された生成済み C# コードを調べる
+>
+> - 選択した機械学習タスク用にデータを準備する
+> - CLI から "mlnet auto-train" コマンドを実行する
+> - 品質メトリックの結果を確認する
+> - アプリケーションでモデルを使用するために生成された C# コードを理解する
+> - モデルのトレーニングに使用された生成済み C# コードを調べる
 
 > [!NOTE]
-> このトピックは、現在プレビュー段階の ML.NET CLI ツールについて述べており、内容が変更される場合があります。 詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。
+> このトピックは、現在プレビュー段階の ML.NET CLI ツールについて述べており、内容が変更される場合があります。 詳細については、[ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) に関するページを参照してください。
 
 ML.NET CLI は ML.NET の一部であり、その主な目的は、ML.NET を学習する .NET 開発者のために ML.NET を "民主化" することなので、始めるときにゼロからコードを書く必要はありません。
 
@@ -47,7 +48,7 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 1. [UCI Sentiment Labeled Sentences データセット zip ファイル (次の注の引用を参照してください)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) をダウンロードし、任意のフォルダーに展開します。
 
     > [!NOTE]
-    > このチュートリアルで使用されるデータセットでは、「From Group to Individual Labels using Deep Features」 (Kotzias 他 KDD 2015) のものであり、UCI 機械学習リポジトリ (Dua, D. and Karra Taniskidou, E.(2017)) でホストされています。 UCI 機械学習リポジトリ [http://archive.ics.uci.edu/ml]。 カリフォルニア州アーバイン: カリフォルニア大学情報コンピュータサイエンス学部。
+    > このチュートリアルで使用されるデータセットでは、「From Group to Individual Labels using Deep Features」 (Kotzias 他 KDD 2015) のものであり、UCI 機械学習リポジトリ (Dua, D. and Karra Taniskidou, E.(2017)) でホストされています。 UCI 機械学習リポジトリ [http://archive.ics.uci.edu/ml ]。 カリフォルニア州アーバイン: カリフォルニア大学情報コンピュータサイエンス学部。
 
 2. `yelp_labelled.txt` ファイルを以前に作成した任意のフォルダー (`/cli-test` など) にコピーします。
 
@@ -94,7 +95,8 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 
     CLI からの出力が次のように表示されます。
 
-    <!-- markdownlint-disable MD023 -->
+    <!-- markdownlint-disable MD023 MD025 -->
+
     # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
     ![PowerShell 上の ML.NET CLI の auto-train](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
@@ -116,7 +118,7 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
     追加のメトリックや、さまざまなモデルの評価に使用される**メトリックに関するより詳細な情報** (正確度、AUC、AUCPR、F1 スコアなど) については、[ML.NET のメトリックの概要](../resources/metrics.md)に関する記事を参照してください。
 
     > [!NOTE]
-    >  これと同じデータセットを試し、`--max-exploration-time` に数分間 (たとえば 180 秒を指定するので 3 分間) を指定すると、このデータセット (かなり小規模で 1,000 行) に対して、トレーニング パイプライン構成が異なる優れた "最適なモデル" が自動的に検出されます。 
+    > これと同じデータセットを試し、`--max-exploration-time` に数分間 (たとえば 180 秒を指定するので 3 分間) を指定すると、このデータセット (かなり小規模で 1,000 行) に対して、トレーニング パイプライン構成が異なる優れた "最適なモデル" が自動的に検出されます。 
         
     大規模なデータセットを対象とした "運用環境対応モデル" である "最高/高品質" なモデルを見つけるには、通常、データセットのサイズに応じて、はるかに長い探索時間を指定して、CLI を使用した実験を行う必要があります。 実際のところ、多くの場合、特に行と列のデータセットが大きいと、数時間の探索時間が必要になることがあります。 
 
@@ -259,11 +261,12 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
-> * 選択した ML タスク (解決する問題) 用のデータを準備する
-> * CLI ツールで "mlnet auto-train" コマンドを実行する
-> * 品質メトリックの結果を確認する
-> * モデルを実行するために生成された C# コード (エンドユーザー アプリで使用するコード) を理解する
-> * "最高品質" のモデルのトレーニングに使用された生成済み C# コードを調べる (学習目的)
+>
+> - 選択した ML タスク (解決する問題) 用のデータを準備する
+> - CLI ツールで "mlnet auto-train" コマンドを実行する
+> - 品質メトリックの結果を確認する
+> - モデルを実行するために生成された C# コード (エンドユーザー アプリで使用するコード) を理解する
+> - "最高品質" のモデルのトレーニングに使用された生成済み C# コードを調べる (学習目的)
 
 > [!div class="nextstepaction"]
 > [ML.NET CLI を使用してモデルのトレーニングを自動化する](../automate-training-with-cli.md)

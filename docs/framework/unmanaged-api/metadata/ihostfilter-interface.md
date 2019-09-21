@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc22de2d30d0f928653206ab9e356577a84c572c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c437d1856e1aa9526516c0a1d1ca931d8ed25c80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044924"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965785"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter インターフェイス
-指定したトークンを処理することを示すメソッドを提供します。  
+指定したトークンが処理されることを示すメソッドを提供します。  
   
 > [!NOTE]
->  `IHostFilter`クライアントによってインターフェイスを実装する必要があります。  
+> インターフェイス`IHostFilter`は、クライアントによって実装される必要があります。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[MarkToken メソッド](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|指定したメタデータ トークンを処理することを示します。|  
+|[MarkToken メソッド](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|指定されたメタデータトークンが処理されることを示します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ**Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

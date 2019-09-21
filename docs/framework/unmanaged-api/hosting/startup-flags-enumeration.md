@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f254582d96b310c247778818fc0d5daaae0d911c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f39608b39be7d5c25b916fb20877aa73d6e5a8bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737265"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916232"
 ---
-# <a name="startupflags-enumeration"></a>STARTUP_FLAGS 列挙型
+# <a name="startup_flags-enumeration"></a>STARTUP_FLAGS 列挙型
 共通言語ランタイム (CLR: Common Language Runtime) の起動動作を示す値を含みます。 既定では、ガベージ コレクションは非同時実行で、基底クラス ライブラリだけがドメイン中立領域に読み込まれます。  
   
 ## <a name="syntax"></a>構文  
@@ -57,7 +57,7 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|同時実行ガベージ コレクションを使用することを指定します。 呼び出し元がサーバー ビルドと同時実行ガベージ コレクションをシングル プロセッサ コンピューター上で要求した場合は、代わりにワークステーション ビルドと非同時実行ガベージ コレクションが実行されます。 **注:** 同時実行ガベージ コレクションは、Intel Itanium アーキテクチャ (以前の IA-64) を実装する 64 ビット システム上で WOW64 x86 エミュレーターを実行しているアプリケーションではサポートされません。 64 ビット Windows システム上で WOW64 の使用に関する詳細については、次を参照してください。[を実行している 32 ビット アプリケーション](/windows/desktop/WinProg64/running-32-bit-applications)します。|  
+|`STARTUP_CONCURRENT_GC`|同時実行ガベージ コレクションを使用することを指定します。 呼び出し元がサーバー ビルドと同時実行ガベージ コレクションをシングル プロセッサ コンピューター上で要求した場合は、代わりにワークステーション ビルドと非同時実行ガベージ コレクションが実行されます。 **注:** 同時実行ガベージ コレクションは、Intel Itanium アーキテクチャ (以前の IA-64) を実装する 64 ビット システム上で WOW64 x86 エミュレーターを実行しているアプリケーションではサポートされません。 64ビット Windows システムでの WOW64 の使用の詳細については、「 [32 ビットアプリケーションの実行](/windows/desktop/WinProg64/running-32-bit-applications)」を参照してください。|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|ローダーの最適化を行う必要があることを指定します。|  
 |`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|どのアセンブリもドメイン中立として読み込まないことを指定します。|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|すべてのアセンブリをドメイン中立として読み込むことを指定します。|  
@@ -70,16 +70,16 @@ typedef enum {
 |`STARTUP_LEGACY_IMPERSONATION`|既定として偽装が非同期ポイント間をフローしないように指定します。|  
 |`STARTUP_DISABLE_COMMITTHREADSTACK`|スレッドが実行を開始するときにスレッド スタック全体をコミットしないことを指定します。|  
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|マネージド偽装およびプラットフォーム呼び出しによって実行された偽装が非同期ポイント間をフローするように指定します。 既定では、マネージド偽装だけが非同期ポイント間をフローします。|  
-|`STARTUP_TRIM_GC_COMMIT`|システム メモリが少ないときに、ガベージ コレクションによるコミットされた領域の使用量を抑えることを指定します。 参照してください`gcTrimCommitOnLowMemory`で[共有 Web ホストの最適化](../../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)します。|  
-|`STARTUP_ETW`|共通言語ランタイム イベントで Windows イベント トレーシング (ETW) が有効になっていることを指定します。 Windows Vista 以降、イベントのトレースは常に有効、ため、このフラグは影響を与えません。 参照してください[.NET Framework のログ記録を制御する](../../../../docs/framework/performance/controlling-logging.md)します。|  
-|`STARTUP_ARM`|アプリケーション ドメインのリソース監視が有効になっていることを指定します。 参照してください、<xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>プロパティと[ \<appDomainResourceMonitoring > 要素](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)します。|  
+|`STARTUP_TRIM_GC_COMMIT`|システム メモリが少ないときに、ガベージ コレクションによるコミットされた領域の使用量を抑えることを指定します。 `gcTrimCommitOnLowMemory` [共有 Web ホスティングの最適化](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md)については、「」を参照してください。|  
+|`STARTUP_ETW`|共通言語ランタイム イベントで Windows イベント トレーシング (ETW) が有効になっていることを指定します。 Windows Vista 以降では、イベントのトレースは常に有効になっているため、このフラグによる影響はありません。 「 [.NET Framework のログ記録の制御](../../../../docs/framework/performance/controlling-logging.md)」を参照してください。|  
+|`STARTUP_ARM`|アプリケーション ドメインのリソース監視が有効になっていることを指定します。 「Property and [ \<appDomainResourceMonitoring > 要素](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)」を参照してください。 <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ**Mscoree.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

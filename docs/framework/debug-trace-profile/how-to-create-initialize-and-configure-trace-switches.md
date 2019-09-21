@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c947dcd3fa3a71d5bbfdf742b106bf56d8444fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 13f89af41520fa023d8841d6dc6d7766e2abe6da
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596747"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052716"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>方法: トレース スイッチを作成、初期化、および構成する
 トレース スイッチを使用すると、トレース出力を有効/無効にしたり、トレースの出力をフィルター処理したりできます。  
@@ -65,7 +65,7 @@ ms.locfileid: "64596747"
  構成するスイッチの名前を指定するだけでなく、スイッチの値も指定する必要があります。 この値は整数です。 <xref:System.Diagnostics.BooleanSwitch> では、値 0 が**オフ**に相当し、0 以外の値が**オン**に相当します。 <xref:System.Diagnostics.TraceSwitch> では、0、1、2、3、および 4 が、それぞれ**オフ**、**エラー**、**警告**、**情報**、および**詳細**に相当します。 4 より大きい数値は**詳細**として扱われ、0 より小さい数値は**オフ**として扱われます。  
   
 > [!NOTE]
->  .NET Framework バージョン 2.0 では、スイッチの値を指定するためにテキストを使用できます。 たとえば、<xref:System.Diagnostics.BooleanSwitch> に対して `true` を指定したり、<xref:System.Diagnostics.TraceSwitch> に対して列挙値のテキスト形式である `Error` を指定したりできます。 `<add name="myTraceSwitch" value="Error" />` という行は、`<add name="myTraceSwitch" value="1" />` と同じです。  
+> .NET Framework バージョン 2.0 では、スイッチの値を指定するためにテキストを使用できます。 たとえば、<xref:System.Diagnostics.BooleanSwitch> に対して `true` を指定したり、<xref:System.Diagnostics.TraceSwitch> に対して列挙値のテキスト形式である `Error` を指定したりできます。 `<add name="myTraceSwitch" value="Error" />` という行は、`<add name="myTraceSwitch" value="1" />` と同じです。  
   
  エンドユーザーがアプリケーションのトレース スイッチを構成できるようにするため、アプリケーションのスイッチに関する詳細なドキュメントを提供する必要があります。 どのスイッチで何を制御するのか、およびスイッチのオン/オフを切り替える方法について詳しく説明してください。 また、.config ファイルのコメントに適切なヘルプを記載して、エンド ユーザーに提供する必要があります。  
   
@@ -73,13 +73,13 @@ ms.locfileid: "64596747"
   
 1. トレース スイッチを使用するには、「[Creating and initializing a trace switch](#create)」(トレース スイッチの作成と初期化) のセクションで説明されているように、まず、それらを作成してコードに配置する必要があります。  
   
-2. プロジェクトに構成ファイル (app.config または Web.config) が含まれない場合は、**[プロジェクト]** メニューから **[新しい項目の追加]** を選択します。  
+2. プロジェクトに構成ファイル (app.config または Web.config) が含まれない場合は、 **[プロジェクト]** メニューから **[新しい項目の追加]** を選択します。  
   
-    - **Visual Basic:** **新しい項目の追加** ダイアログ ボックスで、選択**アプリケーション構成ファイル**します。  
+    - **Visual Basic:** **[新しい項目の追加]** ダイアログボックスで、 **[アプリケーション構成ファイル]** を選択します。  
   
          アプリケーション構成ファイルが作成され、開かれます。 これは、XML ドキュメントであり、ルート要素は `<configuration>.` です。  
   
-    - **Visual C#:** **新しい項目の追加** ダイアログ ボックスで、選択**XML ファイル**します。 このファイルに **app.config** という名前を付けます。XML エディターで、XML 宣言の後に次の XML を追加します。  
+    - **Visual C#:** **[新しい項目の追加]** ダイアログボックスで、 **[XML ファイル]** を選択します。 このファイルに **app.config** という名前を付けます。XML エディターで、XML 宣言の後に次の XML を追加します。  
   
         ```xml  
         <configuration>  
@@ -127,7 +127,7 @@ ms.locfileid: "64596747"
   
 ## <a name="see-also"></a>関連項目
 
-- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [方法: アプリケーション コードにトレース ステートメントを追加します。](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [トレースおよびデバッグ設定のスキーマ](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [アプリケーションのトレースとインストルメント](tracing-and-instrumenting-applications.md)
+- [方法: アプリケーションコードにトレースステートメントを追加する](how-to-add-trace-statements-to-application-code.md)
+- [トレース スイッチ](trace-switches.md)
+- [トレースおよびデバッグ設定のスキーマ](../configure-apps/file-schema/trace-debug/index.md)

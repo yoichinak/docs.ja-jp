@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 344ae068-ff63-4a2e-8b00-af22e143675f
-ms.openlocfilehash: 0be17e7ceb6a5e5230d2619be350266d0282078c
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: c0f41d23264bbe5c9130cb5a0b03686331bc92b1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910805"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781622"
 ---
 # <a name="how-to-specify-when-concurrency-exceptions-are-thrown"></a>方法: コンカレンシー例外をいつスローするかを指定する
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、オプティミスティック コンカレンシーの競合によってオブジェクトが更新されないときに <xref:System.Data.Linq.ChangeConflictException> 例外がスローされます。 詳細については、次を参照してください。[オプティミスティック同時実行制御。概要](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)します。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、オプティミスティック コンカレンシーの競合によってオブジェクトが更新されないときに <xref:System.Data.Linq.ChangeConflictException> 例外がスローされます。 詳細については[、「オプティミスティック同時実行制御」を参照してください。概要](optimistic-concurrency-overview.md)。  
   
  変更内容をデータベースに送信する前に、コンカレンシー例外をどの時点でスローするかを指定できます。  
   
@@ -31,5 +31,5 @@ ms.locfileid: "64910805"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 変更の競合を管理します。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [データの変更と変更の送信](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [方法: 変更の競合を管理する](how-to-manage-change-conflicts.md)
+- [データの変更と変更の送信](making-and-submitting-data-changes.md)

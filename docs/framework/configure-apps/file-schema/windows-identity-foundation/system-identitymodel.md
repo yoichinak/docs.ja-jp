@@ -3,17 +3,18 @@ title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: 2f0040fb7084b9d53adbd1a114f1cfc62d58e5a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a54f5ce86aee1a5e831c0b10aa1471d4a82f40a5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793758"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251792"
 ---
 # <a name="systemidentitymodel"></a>\<system.identityModel>
-アプリケーションの Windows Identity Foundation (WIF) オプションを有効にするための構成を提供します。  
+アプリケーションで Windows Identity Foundation (WIF) オプションを有効にするための構成を提供します。  
   
- \<system.identityModel>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<システムの >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,7 +33,7 @@ ms.locfileid: "61793758"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|サービス レベルの id の設定を指定します。|  
+|[\<identityConfiguration>](identityconfiguration.md)|サービスレベルの id 設定を指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -41,10 +42,10 @@ ms.locfileid: "61793758"
 |`<configuration>`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
   
 ## <a name="remarks"></a>Remarks  
- 追加、`<system.identityModel>`サービスまたは Windows Identity Foundation (WIF) を使用するアプリケーションを構成する構成ファイルにセクション。 `<system.identityModel>`要素が表される、<xref:System.IdentityModel.Configuration.SystemIdentityModelSection>クラス。  
+ 構成ファイル`<system.identityModel>`にセクションを追加して、Windows Identity Foundation (WIF) を使用するようにサービスまたはアプリケーションを構成します。 要素は、 <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>クラスによって表されます。 `<system.identityModel>`  
   
 ## <a name="example"></a>例  
- 次の例は、追加する方法を示します、`<system.identityModel>`構成ファイルにセクション。 構成セクションと名前空間宣言を追加する必要があります最初、`<configSections>`要素。 追加することができ、`<system.IdentityModel>`要素を 1 つまたは複数の id 構成を指定する構成ファイル。  
+ 次の例は、構成ファイルに`<system.identityModel>`セクションを追加する方法を示しています。 最初に、構成セクションと名前空間の宣言を要素`<configSections>`の下に追加する必要があります。 次に、要素を`<system.IdentityModel>`構成ファイルに追加して、1つまたは複数の id 構成を指定できます。  
   
 ```xml  
 <configuration>  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 256d9c9b825081e3bcfafd6e0e09de825d046d20
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868804"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894547"
 ---
 # <a name="securing-exception-handling"></a>例外処理の保護
-Visual C と Visual Basic では、スタックをさらにフィルター式の実行前に、**finally**ステートメント。 **キャッチ**に関連付けられているブロックの後にそのフィルターが実行される、**finally**ステートメント。 詳細については、次を参照してください。[ユーザー フィルター例外](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)します。 このセクションでは、この注文のセキュリティへの影響を調べます。 フィルター ステートメントで順序を示す次の擬似コード例を検討してくださいと**finally**ステートメントを実行します。  
+Visual C と Visual Basic では、スタックをさらにフィルター式の実行前に、**finally**ステートメント。 **キャッチ**に関連付けられているブロックの後にそのフィルターが実行される、**finally**ステートメント。 詳細については、「[ユーザーフィルター例外の使用](../../standard/exceptions/using-user-filtered-exception-handlers.md)」を参照してください。 このセクションでは、この順序のセキュリティへの影響について説明します。 フィルター ステートメントで順序を示す次の擬似コード例を検討してくださいと**finally**ステートメントを実行します。  
   
 ```cpp  
 void Main()   
@@ -53,7 +53,7 @@ void Sub()
   
  このコードは、次を出力します。  
   
-```  
+```output
 Throw  
 Filter  
 Finally  
@@ -79,7 +79,7 @@ finally
 }  
 ```  
   
- この擬似コードは、任意のコードを実行するスタックの上位フィルターを使用できます。 他の同様の効果を必要とされる操作の例がいくつかのセキュリティ チェックをバイパスする内部フラグを設定、別の id の一時的な権限の借用またはスレッドに関連付けられているカルチャを変更します。 スレッドの状態に呼び出し元のフィルターのブロックから、コードの変更を分離する例外ハンドラーを導入することをお勧めします。 ただし、例外ハンドラーを正しく導入することが重要か、この問題は解消されません。 次の例では、スイッチ、UI カルチャが、任意の種類のスレッド状態の変更を同様に公開される可能性があります。  
+ この擬似コードを使用すると、スタックの上位にあるフィルターで任意のコードを実行できます。 その他の操作の例としては、別の id の一時的な偽装、セキュリティチェックをバイパスする内部フラグの設定、またはスレッドに関連付けられているカルチャの変更などがあります。 推奨される解決方法は、コードの変更を呼び出し元のフィルターブロックからスレッド状態に分離する例外ハンドラーを導入することです。 ただし、例外ハンドラーが正しく導入されていること、またはこの問題が解決されないことが重要です。 次の例では、UI カルチャを切り替えますが、あらゆる種類のスレッド状態変更が同様に公開される可能性があります。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -162,4 +162,4 @@ YourObject.YourMethod()
   
 ## <a name="see-also"></a>関連項目
 
-- [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全なコーディングのガイドライン](../../standard/security/secure-coding-guidelines.md)

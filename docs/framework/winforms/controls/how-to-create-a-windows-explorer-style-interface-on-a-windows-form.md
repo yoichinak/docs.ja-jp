@@ -6,53 +6,50 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 578fdf8e24803db0e0d80ff22aa5cebebbc2663e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34a5cd735c350688d9e83003806668e213932c85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615992"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960623"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>方法: Windows フォームで Windows エクスプローラー スタイルのインターフェイスを作成する
-Windows エクスプ ローラーは、準備ができて、慣れ親しんだのためのアプリケーションの一般的なユーザー インターフェイス選択です。  
-  
- Windows エクスプ ローラーは、基本的に、<xref:System.Windows.Forms.TreeView>コントロールと<xref:System.Windows.Forms.ListView>別のパネル上のコントロール。 パネルは、スプリッターによってサイズ変更可能で行われます。 このコントロールの配置は、情報の表示と参照は非常に効果的です。  
-  
- 次の手順では、Windows エクスプ ローラーのようなフォームでコントロールを配置する方法を示します。 Windows エクスプ ローラー アプリケーションのファイル参照機能を追加する方法は表示されません。  
-  
-> [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
-  
-### <a name="to-create-a-windows-explorer-style-windows-form"></a>Windows エクスプ ローラー スタイルの Windows フォームを作成するには  
-  
-1. 新しい Windows アプリケーション プロジェクトを作成 (**ファイル** > **新規** > **プロジェクト** > **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォーム アプリケーション**)。  
-  
-2. **ツールボックス**:  
-  
-    1. ドラッグ、<xref:System.Windows.Forms.SplitContainer>コントロールをフォームにします。  
-  
-    2. ドラッグ、<xref:System.Windows.Forms.TreeView>にコントロールを**SplitterPanel1** (のパネル、<xref:System.Windows.Forms.SplitContainer>マークされているコントロール**Panel1**)。  
-  
-    3. ドラッグ、<xref:System.Windows.Forms.ListView>にコントロールを**SplitterPanel2** (のパネル、<xref:System.Windows.Forms.SplitContainer>マークされているコントロール**Panel2**)。  
-  
-3. CTRL キーをクリックするとさらに 3 つすべてのコントロールを選択します。 選択すると、<xref:System.Windows.Forms.SplitContainer>コントロールをパネルではなく、スプリッター バーをクリックします。  
-  
+Windows Explorer は、アプリケーションのユーザーインターフェイスの一般的な選択肢であり、その準備が整っているためです。
+
+ Windows エクスプローラーは、基本的<xref:System.Windows.Forms.TreeView>にはコントロール<xref:System.Windows.Forms.ListView>であり、別のパネルのコントロールです。 パネルはスプリッターによってサイズ変更できるようになります。 このコントロールの配置は、情報を表示および参照するために非常に効果的です。
+
+ 次の手順では、Windows エクスプローラーのようなフォームでコントロールを配置する方法について説明します。 Windows Explorer アプリケーションのファイル参照機能を追加する方法については説明しません。
+
+## <a name="to-create-a-windows-explorer-style-windows-form"></a>Windows エクスプローラースタイルの Windows フォームを作成するには
+
+1. 新しい Windows アプリケーションプロジェクトを作成します ([**ファイル** > ] [**新しい** > **プロジェクト** > ] **[ビジュアルC# ]** または**Visual Basic** > **クラシックデスクトップ** > ) **Windows フォームアプリケーション**)。
+
+2. **ツールボックス**から:
+
+    1. コントロールを<xref:System.Windows.Forms.SplitContainer>フォームにドラッグします。
+
+    2. コントロールを<xref:System.Windows.Forms.TreeView> **SplitterPanel1** (Panel1 とマークされた<xref:System.Windows.Forms.SplitContainer>コントロールのパネル) にドラッグします。
+
+    3. コントロールを<xref:System.Windows.Forms.ListView> **SplitterPanel2** (Panel2 とマークされた<xref:System.Windows.Forms.SplitContainer>コントロールのパネル) にドラッグします。
+
+3. CTRL キーを押しながら3つのコントロールをすべて選択し、順番にクリックします。 <xref:System.Windows.Forms.SplitContainer>コントロールを選択するときは、パネルではなくスプリッターバーをクリックします。
+
     > [!NOTE]
-    >  使用しないでください、**すべて選択**コマンドを**編集**メニュー。 これを行う場合、次の手順で必要なプロパティでは表示されません、**プロパティ**ウィンドウ。  
-  
-4. **[プロパティ]** ウィンドウで、 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。  
-  
-5. F5 キーを押してアプリケーションを実行します。  
-  
-     フォームには、Windows エクスプ ローラーのような 2 つの部分のユーザー インターフェイスが表示されます。  
-  
+    > **[編集]** メニューの **[すべて選択]** コマンドを使用しないでください。 その場合、次の手順で必要なプロパティは、 **[プロパティ]** ウィンドウに表示されません。
+
+4. **[プロパティ]** ウィンドウで、 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。
+
+5. F5 キーを押してアプリケーションを実行します。
+
+     フォームには、Windows エクスプローラーと同様の2つの部分で構成されるユーザーインターフェイスが表示されます。
+
     > [!NOTE]
-    >  分割線をドラッグすると、パネルでは、自身サイズを変更します。  
-  
+    > スプリッターをドラッグすると、パネル自体のサイズが変更されます。
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成します。](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [方法: サイズ変更および位置指定動作を分割ウィンドウを定義します。](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
-- [方法: ウィンドウを水平方向に分割します。](how-to-split-a-window-horizontally.md)
+- [方法: Windows フォームを使用してマルチペインユーザーインターフェイスを作成する](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [方法: 分割ウィンドウでのサイズ変更および配置動作の定義](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [方法: ウィンドウを水平方向に分割する](how-to-split-a-window-horizontally.md)
 - [SplitContainer コントロール](splitcontainer-control-windows-forms.md)

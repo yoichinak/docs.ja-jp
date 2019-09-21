@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2c5c3bbbcf3cf4b87a5f68006c1625666d13926
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e471ee99af57ef980850c0a5d3e4f5f2973967ac
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753889"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796604"
 ---
 # <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName メソッド
-これによって参照されるアセンブリの単純な暗号化されていない名前を取得[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)オブジェクト。  
+この[IAssemblyName](iassemblyname-interface.md)オブジェクトによって参照されるアセンブリの単純な、暗号化されていない名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,18 +38,18 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>パラメーター  
  `lpcwBuffer`  
- [入力、出力]サイズ`pwzName`ワイド文字、終端の null 文字を含むです。  
+ [入力、出力]Null 終端文字`pwzName`を含むワイド文字ののサイズ。  
   
  `pwzName`  
- [out]参照アセンブリの名前を保持するバッファー。  
+ 入出力参照されたアセンブリの名前を保持するバッファー。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)

@@ -2,38 +2,38 @@
 title: WCF 分析トレース
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 95a4335ef41240e8cc85c06b7997c12d98800b1d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba4f1778059f7b960eebd42822048fa031e6961e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624234"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044544"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析トレース
-このサンプルは、Windows Communication Foundation (WCF) が ETW に書き込む分析トレースのストリームに独自のトレース イベントを追加する方法を示します[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]します。 分析トレースは、パフォーマンスを低下させずに簡単にサービスを確認できるようにするためのものです。 このサンプルは、使用する方法を示します、 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> Api を WCF サービスと統合されるイベントを記述します。  
+このサンプルでは、の ETW への[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]書き込みを Windows Communication Foundation (WCF) する分析トレースのストリームに独自のトレースイベントを追加する方法を示します。 分析トレースは、パフォーマンスを低下させずに簡単にサービスを確認できるようにするためのものです。 このサンプルでは、api を<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>使用して、WCF サービスと統合するイベントを作成する方法を示します。  
   
- 詳細については、 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> Api を参照してください<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>します。  
+ Api の<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>詳細については、 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>「」を参照してください。  
   
- Windows でのイベント トレースの詳細についてを参照してください。[デバッグの向上およびパフォーマンス調整 ETW を](https://go.microsoft.com/fwlink/?LinkId=166488)します。  
+ Windows のイベントトレースの詳細については、「 [ETW を使用したデバッグとパフォーマンスチューニングの向上](https://go.microsoft.com/fwlink/?LinkId=166488)」を参照してください。  
   
 ## <a name="disposing-eventprovider"></a>EventProvider の破棄  
- このサンプルでは、<xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> を実装した <xref:System.IDisposable?displayProperty=nameWithType> クラスを使用します。 WCF サービスのトレースを実装するときに使用できる可能性がありますが、<xref:System.Diagnostics.Eventing.EventProvider>のサービスの有効期間にわたってリソース。 そのため、読みやすくするためにも、このサンプルでは、ラップされた <xref:System.Diagnostics.Eventing.EventProvider> を破棄しません。 何かの理由で、サービスに対して別のトレースの要件を設定し、このリソースを破棄しなければならない場合は、アンマネージ リソースの破棄に関するベスト プラクティスに従ってこのサンプルを変更してください。 アンマネージ リソースを破棄に関する詳細については、次を参照してください。 [Dispose メソッドの実装](https://go.microsoft.com/fwlink/?LinkId=166436)します。  
+ このサンプルでは、<xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> を実装した <xref:System.IDisposable?displayProperty=nameWithType> クラスを使用します。 WCF サービスのトレースを実装する場合、サービスの有効期間にリソースを<xref:System.Diagnostics.Eventing.EventProvider>使用する可能性があります。 そのため、読みやすくするためにも、このサンプルでは、ラップされた <xref:System.Diagnostics.Eventing.EventProvider> を破棄しません。 何かの理由で、サービスに対して別のトレースの要件を設定し、このリソースを破棄しなければならない場合は、アンマネージ リソースの破棄に関するベスト プラクティスに従ってこのサンプルを変更してください。 アンマネージリソースの破棄の詳細については、「 [Dispose メソッドの実装](https://go.microsoft.com/fwlink/?LinkId=166436)」を参照してください。  
   
 ## <a name="self-hosting-vs-web-hosting"></a>自己ホスト型と Web ホスト  
- Web ホスト サービスでは、WCF の分析トレースは、"HostReference"は、サービスは、トレースの出力を識別するために使用をという名前のフィールドを指定します。 拡張可能なユーザー トレースをこのモデルに加えることができます。このサンプルで、そのためのベスト プラクティスを示します。 Web ホストの形式を参照場合に、パイプ '&#124;' 文字が実際には、最終的な表示文字列は、次のいずれかを指定できます。  
+ Web ホストサービスの場合、WCF の分析トレースでは、トレースを出力するサービスを識別するために使用される "HostReference" というフィールドが提供されます。 拡張可能なユーザー トレースをこのモデルに加えることができます。このサンプルで、そのためのベスト プラクティスを示します。 結果の文字列にパイプ文字 '&#124;' が実際に含まれている場合の Web ホスト参照の形式は、次のいずれかになります。  
   
 - アプリケーションがルート以外にある場合  
   
-     \<サイト名 >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
+     \<SiteName >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath&#124;>\<ServiceName >  
   
 - アプリケーションがルートにある場合  
   
-     \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
+     \<SiteName >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
- 自己ホスト型サービスは、WCF の分析トレースで"HostReference"フィールドは設定されません。 このサンプルの `WCFUserEventProvider` クラスは、自己ホスト型サービスで使用した場合も同じように動作します。  
+ 自己ホスト型サービスの場合、WCF の分析トレースでは、"HostReference" フィールドは設定されません。 このサンプルの `WCFUserEventProvider` クラスは、自己ホスト型サービスで使用した場合も同じように動作します。  
   
 ## <a name="custom-event-details"></a>カスタム イベントの詳細  
- WCF の ETW イベント プロバイダー マニフェストでは、サービス コード内から WCF サービスの作成者によって生成されるように設計された 3 つのイベントを定義します。 次の表に、その 3 つのイベントの概要を示します。  
+ WCF の ETW イベントプロバイダーマニフェストは、サービスコード内から WCF サービス作成者によって出力されるように設計された3つのイベントを定義します。 次の表に、その 3 つのイベントの概要を示します。  
   
 |event|説明|イベント ID|  
 |-----------|-----------------|--------------|  
@@ -43,79 +43,79 @@ ms.locfileid: "64624234"
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1. Visual Studio 2012 を使用して、WCFAnalyticTracingExtensibility.sln ソリューション ファイルを開きます。  
+1. Visual Studio 2012 を使用して、WCFAnalyticTracingExtensibility ソリューションファイルを開きます。  
   
 2. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。  
   
 3. ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。  
   
-     Web ブラウザーで次のようにクリックします。 **[calculator.svc]** します。 サービスの WSDL ドキュメントの URI がブラウザーに表示されます。 その URI をコピーします。  
+     Web ブラウザーで、 **[Calculator .svc]** をクリックします。 サービスの WSDL ドキュメントの URI がブラウザーに表示されます。 その URI をコピーします。  
   
-4. WCF テスト クライアント (WcfTestClient.exe) を実行します。  
+4. WCF テストクライアント (Wcftestclient.exe) を実行します。  
   
-     WCF テスト クライアント (WcfTestClient.exe) は`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`します。 既定の Visual Studio 2012 のインストール ディレクトリは`C:\Program Files\Microsoft Visual Studio 10.0`します。  
+     WCF テストクライアント (Wcftestclient.exe) は、に`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`あります。 既定の Visual Studio 2012 インストールディレクトリは`C:\Program Files\Microsoft Visual Studio 10.0`です。  
   
-5. 選択して、サービスを追加、WCF テスト クライアント内で**ファイル**、し**サービスの追加**します。  
+5. WCF テストクライアント内で、 **[ファイル]** を選択し、 **[サービスの追加]** をクリックしてサービスを追加します。  
   
      入力ボックスにエンドポイントのアドレスを追加します。  
   
-6. クリックして**OK**ダイアログ ボックスを閉じます。  
+6. **[OK]** をクリックしてダイアログを閉じます。  
   
-     下の左ペインで、ICalculator サービスが追加された**マイ サービス プロジェクト**します。  
+     ICalculator サービスは、左側のウィンドウの **[マイサービスプロジェクト]** の下に追加されます。  
   
 7. イベント ビューアー アプリケーションを開きます。  
   
-     サービスを呼び出す前に、イベント ビューアーを起動し、WCF サービスから生成された追跡イベントのイベント ログがリッスンしていることを確認します。  
+     サービスを呼び出す前に、イベントビューアーを開始し、WCF サービスから生成された追跡イベントをイベントログがリッスンしていることを確認します。  
   
-8. **開始**メニューの **管理ツール**、し**イベント ビューアー**します。 有効にする、**分析**と**デバッグ**ログ。  
+8. **スタート** メニューから **管理ツール** を選択し、**イベントビューアー** をクリックします。 **分析**ログと**デバッグ**ログを有効にします。  
   
-9. イベント ビューアーのツリー ビューでに移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し、。**アプリケーション サーバー-アプリケーション**します。 右クリックして**アプリケーション サーバー-アプリケーション**を選択します**ビュー**、し**分析およびデバッグ ログ**します。  
+9. イベントビューアーのツリービューで、 **[イベントビューアー]** 、 **[アプリケーションとサービスログ]** 、 **[Microsoft]** 、 **[Windows]** 、 **[アプリケーションサーバー-アプリケーション]** の順に移動します。 **[アプリケーションサーバー-アプリケーション]** を右クリックし、 **[表示]** をクリックして、[**分析およびデバッグログ] を表示**します。  
   
-     いることを確認、 **分析およびデバッグ ログ**オプションをオンにします。 有効にする、**分析**ログ。  
+     [**分析とデバッグログを表示**する] オプションがオンになっていることを確認します。 **分析**ログを有効にします。  
   
-     イベント ビューアーのツリー ビューでに移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 。**アプリケーション サーバー-アプリケーション**、し**分析**します。 右クリック**分析**選択**ログの有効化**します。  
+     イベントビューアーのツリービューで、 **[イベントビューアー]** 、 **[アプリケーションとサービスログ]** 、 **[Microsoft]** 、 **[Windows]** 、 **[アプリケーションサーバー-アプリケーション]** 、 **[分析]** の順に移動します。 **[分析]** を右クリックし、 **[ログを有効にする]** を選択します。  
   
 10. WCF テスト クライアントを使用してサービスをテストします。  
   
-    1. WCF テスト クライアントでのダブルクリック**Add()** ICalculator サービス ノードの下。  
+    1. WCF テストクライアントで、ICalculator service ノードの下の  **Add ()** をダブルクリックします。  
   
-         **Add()** メソッドが 2 つのパラメーターと共に右ペインに表示されます。  
+         **Add ()** メソッドが、右側のペインに2つのパラメーターと共に表示されます。  
   
     2. 最初のパラメーターに「2」と入力し、2 番目のパラメーターに「3」と入力します。  
   
-    3. クリックして**Invoke**メソッドを呼び出します。  
+    3. **[呼び出し]** をクリックしてメソッドを呼び出します。  
   
-11. 移動して、**イベント ビューアー**既に開いているウィンドウ。 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー-アプリケーション**します。  
+11. 既に開いている**イベントビューアー**ウィンドウにアクセスします。 **[イベントビューアー]** 、 **[アプリケーションとサービスログ]** 、 **[Microsoft]** 、 **[Windows]** 、 **[アプリケーションサーバー-アプリケーション]** の順に移動します。  
   
-12. 右クリックし、**分析**ノード**更新**します。  
+12. **[分析]** ノードを右クリックし、 **[更新]** を選択します。  
   
      右ペインにイベントが表示されます。  
   
 13. ID が 303 のイベントを探してダブルクリックして開き、内容を確認します。  
   
-     このイベントはによって作成された、 `Add()` ICalculator サービスのメソッドと等しく、ペイロードは"2 + 3 = 5"。  
+     このイベントは、ICalculator サービス`Add()`のメソッドによって生成され、"2 + 3 = 5" に等しいペイロードがあります。  
   
 #### <a name="to-clean-up-optional"></a>クリーンアップするには (省略可能)  
   
-1. 開いている**イベント ビューアー**します。  
+1. **イベントビューアー**を開きます。  
   
-2. 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**ログの無効化**します。  
+2. **[イベントビューアー]** 、 **[アプリケーションとサービスログ]** 、 **[Microsoft]** 、 **[Windows]** 、 **[アプリケーション-サーバー-アプリケーション]** の順に移動します。 **[分析]** を右クリックし、 **[ログを無効にする]** を選択します。  
   
-3. 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 **アプリケーション サーバー-アプリケーション**、し**分析**します。 右クリック**分析**選択**ログの消去**します。  
+3. **[イベントビューアー]** 、 **[アプリケーションとサービスログ]** 、 **[Microsoft]** 、 **[Windows]** 、 **[アプリケーション-サーバー-アプリケーション]** 、 **[分析]** の順に移動します。 **[分析]** を右クリックし、 **[ログの消去]** を選択します。  
   
-4. クリックして**オフ**イベントを消去します。  
+4. **[クリア]** をクリックすると、イベントがクリアされます。  
   
 ## <a name="known-issue"></a>既知の問題  
- 既知の問題がある、**イベント ビューアー** ETW イベントのデコードに失敗する可能性があります。 というエラー メッセージを参照してください可能性があります。"イベント ID の説明\<id > 元が Microsoft Windows のアプリケーション サーバー-アプリケーションが見つかりません。 このイベントを発生させるコンポーネントがローカル コンピューターにインストールされていないか、インストールが破損しています。 インストールしたり、ローカル コンピューターのコンポーネントを修復できます。" このエラーが発生した場合は、選択**更新**から、**アクション**メニュー。 これにより、イベントが正常にデコードされます。  
+ **イベントビューアー**には、ETW イベントのデコードに失敗する可能性がある既知の問題があります。 次のようなエラーメッセージが表示されることがあります。"ソース Microsoft-Windows- \<アプリケーションサーバーからのイベント id id > の説明が見つかりません。 このイベントを発生させるコンポーネントがローカル コンピューターにインストールされていないか、インストールが破損しています。 ローカルコンピューターにコンポーネントをインストールまたは修復できます。 " このエラーが発生した場合は、 **[アクション]** メニューの **[更新]** を選択します。 これにより、イベントが正常にデコードされます。  
   
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
 ## <a name="see-also"></a>関連項目
 

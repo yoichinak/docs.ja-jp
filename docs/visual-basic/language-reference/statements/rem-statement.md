@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: 3c63c5613b40cb2014c77a0a996e3acb2cc304d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16149ce42e3476cf07a62298f83734fee9ec7253
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783937"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957768"
 ---
 # <a name="rem-statement-visual-basic"></a>REM ステートメント (Visual Basic)
-プログラムのソース コードにコメントを記述するために使用します。  
+プログラムのソースコードに説明の解説を含めるために使用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,18 +32,18 @@ REM comment
   
 ## <a name="parts"></a>指定項目  
  `comment`  
- 省略可能です。 含めるコメントのテキスト。 スペースは間で必要な`REM`キーワードと`comment`します。  
+ 任意。 追加するコメントのテキスト。 キーワードと`REM` `comment`の間にはスペースが必要です。  
   
 ## <a name="remarks"></a>Remarks  
- 配置することができます、`REM`ステートメントまたは行に単独では別のステートメントの後にそれを配置できます。 `REM`ステートメントは、行の最後のステートメントである必要があります。 別のステートメントが続く場合、`REM`からそのステートメントをスペースで区切る必要があります。  
+ ステートメントを`REM`行に単独で配置することも、別のステートメントの後の行に配置することもできます。 `REM`ステートメントは、行の最後のステートメントである必要があります。 別のステートメントの後にある`REM`場合は、をスペースでそのステートメントから区切る必要があります。  
   
- 単一引用符を使用することができます (`'`) の代わりに`REM`します。 これはコメントが同じ行に依存して別のステートメントまたは行に単独ではかどうかに当てはまります。  
+ では`'` `REM`なく単一引用符 () を使用できます。 これは、コメントが同じ行で別のステートメントに続くか、または行に単独で存在するかにかかわらず当てはまります。  
   
 > [!NOTE]
->  続行することはできません、`REM`行連結シーケンスを使用してステートメント (`_`)。 コメントが開始されると、コンパイラは特別な意味の文字をチェックしません。 複数行にコメントを記述する場合は、別の操作を使用して`REM`ステートメントまたはコメント記号 (`'`) 行ごとにします。  
+> 行連結シーケンス ( `REM` `_`) を使用してステートメントを続行することはできません。 コメントが開始されると、コンパイラは文字が特別な意味を持つかどうかを検査しません。 複数行のコメントの場合は、各行`REM`に別のステートメントまたは`'`コメント記号 () を使用します。  
   
 ## <a name="example"></a>例  
- 次の例を示しています、`REM`ステートメントでは、プログラムにコメントを記述するために使用します。 単一引用符文字を使用する方法も示しています (`'`) の代わりに`REM`します。  
+ 次の例は、 `REM`ステートメントを示しています。これは、プログラムに説明の解説を含めるために使用されます。 また、の`'` `REM`代わりに単一引用符文字 () を使用する方法についても説明します。  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   

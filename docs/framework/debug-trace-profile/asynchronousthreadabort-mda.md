@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08f67ad363d0bd3efcc7a1eeedd1f48d3bae9407
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9bde6f6e625476712c5af516491ab9dd29b7dea3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875707"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052959"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
 `asynchronousThreadAbort` マネージド デバッグ アシスタント (MDA) は、スレッドが別のスレッドに非同期の中止処理を適用しようとするとアクティブになります。 同期のスレッド中止では、`asynchronousThreadAbort` MDA はアクティブになりません。
@@ -36,7 +36,7 @@ ms.locfileid: "61875707"
 
  問題に伴うランダム性により、原因を特定することが困難な場合があります。
 
-## <a name="resolution"></a>解像度
+## <a name="resolution"></a>解決策
  非同期のスレッド中止を使用する必要があるコード設計を避けます。 <xref:System.Threading.Thread.Abort%2A> の呼び出しを必要としない対象スレッドを中断するのにより適した方法はいくつかあります。 最も安全な方法は、対象スレッドの中断要求をシグナル通知する、共通プロパティなどの機構を導入することです。 対象スレッドは、特定の安全なチェックポイントでシグナルをチェックします。 中断が要求されたことが示されている場合は、適切にシャットダウンできます。
 
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響
@@ -73,4 +73,4 @@ void FireMda()
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Thread>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

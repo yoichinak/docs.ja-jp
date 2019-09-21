@@ -9,19 +9,19 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-ms.openlocfilehash: 44f5c918f19f84daf827ad4e8f3b6bfbc3e9f439
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92a1c8db43579048945d76082e3ebd2862efd7ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704506"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920436"
 ---
-# <a name="switches-element"></a>\<スイッチ > 要素
+# <a name="switches-element"></a>\<> 要素を切り替えます
 トレース スイッチと、トレース スイッチを設定するレベルを保持します。  
   
  \<configuration>  
 \<system.diagnostics>  
-\<switches>  
+\<スイッチ >  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,7 +40,7 @@ ms.locfileid: "61704506"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|トレース スイッチを設定するレベルを指定します。|  
+|[\<add>](add-element-for-switches.md)|トレース スイッチを設定するレベルを指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -50,10 +50,10 @@ ms.locfileid: "61704506"
 |`System.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- 構成ファイル内に配置して、トレース スイッチのレベルを変更できます。 スイッチの場合、 <xref:System.Diagnostics.BooleanSwitch>、オンとオフにすることができます。 スイッチの場合、<xref:System.Diagnostics.TraceSwitch>デバッグ メッセージをアプリケーションの出力やトレースの種類を指定するためにさまざまなレベルを割り当てることができます。  
+ トレーススイッチのレベルは、構成ファイルに配置することによって変更できます。 スイッチがの<xref:System.Diagnostics.BooleanSwitch>場合は、オンまたはオフにすることができます。 スイッチがの<xref:System.Diagnostics.TraceSwitch>場合は、別のレベルを割り当てて、アプリケーションが出力するトレースメッセージまたはデバッグメッセージの種類を指定できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、 **\<切り替える >** を設定する要素、`General`トレース スイッチを<xref:System.Diagnostics.TraceLevel>レベル、および有効にする、`Data`ブール トレース スイッチ。  
+ 次の例では、  **\<switch >** `General`要素を使用してトレーススイッチを<xref:System.Diagnostics.TraceLevel>レベル`Data`に設定し、ブール型のトレーススイッチを有効にする方法を示します。  
   
 ```xml  
 <configuration>  
@@ -71,4 +71,4 @@ ms.locfileid: "61704506"
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)

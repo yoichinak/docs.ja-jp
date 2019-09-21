@@ -4,12 +4,12 @@ description: .NET Core CLI ツールを使用して .NET Core ライブラリを
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 90d960c996acd5a34ffb2215344e123dabad1014
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212067"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849482"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>クロス プラットフォーム ツールによるライブラリの開発
 
@@ -17,7 +17,7 @@ ms.locfileid: "57212067"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-[.NET Core SDK と CLI](https://www.microsoft.com/net/core) がコンピューターにインストールされている必要があります。
+[.NET Core SDK と CLI](https://dotnet.microsoft.com/download) がコンピューターにインストールされている必要があります。
 
 このドキュメントで [.NET Framework](https://dotnet.microsoft.com) バージョンについて扱うセクションでは、.NET Framework が Windows コンピューターにインストールされている必要があります。
 
@@ -72,19 +72,20 @@ ms.locfileid: "57212067"
 
 最大数の開発者とプロジェクトを対象にしたい場合、基準となるターゲットは .NET Framework 4.0 です。 .NET Framework をターゲット設定するには、まず、サポートしたい .NET Framework バージョンに対応する正しいターゲット フレームワーク モニカー (TFM) を使用します。
 
-```
-.NET Framework 2.0   --> net20
-.NET Framework 3.0   --> net30
-.NET Framework 3.5   --> net35
-.NET Framework 4.0   --> net40
-.NET Framework 4.5   --> net45
-.NET Framework 4.5.1 --> net451
-.NET Framework 4.5.2 --> net452
-.NET Framework 4.6   --> net46
-.NET Framework 4.6.1 --> net461
-.NET Framework 4.6.2 --> net462
-.NET Framework 4.7   --> net47
-```
+| .NET Framework のバージョン | TFM      |
+| ---------------------- | -------- |
+| .NET Framework 2.0     | `net20`  |
+| .NET Framework 3.0     | `net30`  |
+| .NET Framework 3.5     | `net35`  |
+| .NET Framework 4.0     | `net40`  |
+| .NET Framework 4.5     | `net45`  |
+| .NET Framework 4.5.1   | `net451` |
+| .NET Framework 4.5.2   | `net452` |
+| .NET Framework 4.6     | `net46`  |
+| .NET Framework 4.6.1   | `net461` |
+| .NET Framework 4.6.2   | `net462` |
+| .NET Framework 4.7     | `net47`  |
+| .NET Framework 4.8     | `net48`  |
 
 この TFM をプロジェクト ファイルの `TargetFramework` セクションに挿入します。 .NET Framework 4.0 をターゲットとするライブラリを作成する例を次に示します。
 

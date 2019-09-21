@@ -2,12 +2,12 @@
 title: 属性の概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: 2ecc3fb0a3bf7365b6eec39e1c5086d99f2c5a19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c799b9be9b936beadde28374bd9882ebc6e2d9a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642456"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966316"
 ---
 # <a name="attributes-overview-visual-basic"></a>属性の概要 (Visual Basic)
 属性は、メタデータまたは宣言型の情報を、コード (アセンブリ、型、メソッド、プロパティなど) に関連付けるための優れた方法です。 属性をプログラム要素に関連付けると、*リフレクション*と呼ばれる手法を使用して、実行時にその属性を照会することができます。 詳細については、「[リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)」を参照してください。  
@@ -67,7 +67,7 @@ End Sub
 ```  
   
 > [!NOTE]
->  慣例により、属性名はすべて "Attribute" という単語で終わります。これは、.NET Framework の他の項目と区別するためです。 ただし、コード内で属性を使用する場合は、attribute サフィックスを指定する必要はありません。 たとえば、`[DllImport]` は `[DllImportAttribute]` と同等ですが、.NET Framework では `DllImportAttribute` は属性の実際の名前を表します。  
+> 慣例により、属性名はすべて "Attribute" という単語で終わります。これは、.NET Framework の他の項目と区別するためです。 ただし、コード内で属性を使用する場合は、attribute サフィックスを指定する必要はありません。 たとえば、`[DllImport]` は `[DllImportAttribute]` と同等ですが、.NET Framework では `DllImportAttribute` は属性の実際の名前を表します。  
   
 ### <a name="attribute-parameters"></a>属性のパラメーター  
  属性の多くは、位置指定パラメーター、名前のないパラメーター、または名前付きパラメーターを持っています。 位置指定パラメーターは、特定の順序で指定する必要があり、省略できません。名前付きパラメーターは省略可能で、任意の順序で指定することができます。 位置指定パラメーターは、最初に指定します。 たとえば、次の 3 つの属性は同等です。  
@@ -91,7 +91,7 @@ End Sub
   
  次の表に、使用可能な `target` の値を示します。  
   
-|対象の値|対象|  
+|対象の値|適用対象|  
 |------------------|----------------|  
 |`assembly`|アセンブリ全体|  
 |`module`|現在のアセンブリ モジュール (Visual Basic のモジュールとは異なります)|  
@@ -136,7 +136,7 @@ Module: CLSCompliant(True)>
   
 - [リフレクションを使用した属性へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
   
-- [方法: 属性 (Visual Basic) を使用して C/C++ の共用体を作成します。](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [方法: 属性を使用しC++て C/共用体を作成する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
 - [一般的な属性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
   

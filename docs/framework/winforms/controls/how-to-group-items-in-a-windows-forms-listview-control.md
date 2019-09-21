@@ -12,22 +12,22 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-ms.openlocfilehash: bbca1d76f747f53103095c916605ce7335207f51
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b4cd2b9ed23f377912270d33b1415ad39c9e80c0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882380"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966626"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>方法: Windows フォーム ListView コントロールの項目をグループ化する
-グループ化機能で、<xref:System.Windows.Forms.ListView>コントロール、グループ内のアイテムの関連する設定を表示できます。 これらのグループは、画面に含まれるグループのタイトルは水平方向のグループ ヘッダーで区切られます。 使用することができます<xref:System.Windows.Forms.ListView>グループ日付、または他の論理グループで、アルファベット順に項目をグループ化して簡単に大きい一覧を移動します。 次の図には、いくつかのグループ化された項目が表示されます。  
+<xref:System.Windows.Forms.ListView>コントロールのグループ化機能を使用すると、関連する項目のセットをグループに表示できます。 これらのグループは、グループタイトルを含む横方向のグループヘッダーによって画面上で区切られます。 グループを使用<xref:System.Windows.Forms.ListView>すると、項目をアルファベット順、日付形式、またはその他の論理グループ別にグループ化することで、大きなリストを簡単に移動できます。 次の図は、グループ化された項目を示しています。  
   
- ![偶数と奇数の ListView グループのスクリーン ショット。](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)  
+ ![奇数および偶数の ListView グループのスクリーンショット。](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)  
    
- グループ化を有効にするには、最初にデザイナーで、またはプログラムでは、1 つまたは複数のグループを作成する必要があります。 グループが定義された後に割り当てることができます<xref:System.Windows.Forms.ListView>項目をグループにします。 移動することも項目 1 つのグループから別にプログラムを使用します。  
+ グループ化を有効にするには、まずデザイナーまたはプログラムを使用して、1つ以上のグループを作成する必要があります。 グループを定義した後は、項目を<xref:System.Windows.Forms.ListView>グループに割り当てることができます。 プログラムを使用して、あるグループから別のグループに項目を移動することもできます。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ListView> のみ使用可能なグループ[!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]、アプリケーションを呼び出すと、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>メソッド。 以前のオペレーティング システムでは、グループに関するすべてのコードが影響を与えません、グループは表示されません。 詳細については、「 <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> 」を参照してください。  
+> <xref:System.Windows.Forms.ListView>グループは、アプリケーションが[!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]メソッドを<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>呼び出したときにのみ使用できます。 以前のオペレーティングシステムでは、グループに関連するすべてのコードは効果がなく、グループは表示されません。 詳細については、「 <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> 」を参照してください。  
   
 ### <a name="to-add-groups"></a>グループを追加するには  
   
@@ -38,19 +38,19 @@ ms.locfileid: "65882380"
   
 ### <a name="to-remove-groups"></a>グループを削除するには  
   
-1. 使用して、<xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A>または<xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A>のメソッド、<xref:System.Windows.Forms.ListView.Groups%2A>コレクション。  
+1. コレクションの<xref:System.Windows.Forms.ListView.Groups%2A>または<xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A>メソッドを使用します。 <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A>  
   
-     <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A>メソッドは 1 つのグループを削除、<xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A>メソッドは、一覧からすべてのグループを削除します。  
+     メソッド<xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A>は、1つのグループを<xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A>削除します。メソッドは、リストからすべてのグループを削除します。  
   
     > [!NOTE]
-    >  グループを削除する場合はそのグループ内の項目は削除されません。  
+    > グループを削除しても、そのグループ内の項目は削除されません。  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#22)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#22)]  
   
-### <a name="to-assign-items-to-groups-or-move-items-between-groups"></a>項目をグループに割り当てるか、グループ間で項目を移動するには  
+### <a name="to-assign-items-to-groups-or-move-items-between-groups"></a>グループに項目を割り当てる、またはグループ間で項目を移動するには  
   
-1. 設定、<xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType>個々 のアイテムのプロパティ。  
+1. 個々の<xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType>項目のプロパティを設定します。  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#23)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#23)]  
@@ -62,4 +62,4 @@ ms.locfileid: "65882380"
 - <xref:System.Windows.Forms.ListViewGroup>
 - [ListView コントロール](listview-control-windows-forms.md)
 - [ListView コントロールの概要](listview-control-overview-windows-forms.md)
-- [方法: Windows フォーム ListView コントロールで項目追加および削除](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [方法: Windows フォーム ListView コントロールを使用して項目を追加および削除する](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

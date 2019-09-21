@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1986ed730c6f0a1ba8a2d8e3c688e6872184da9d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f2dceeb2f0b3aa9f3147157e77087dffbf2d5f85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736756"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939032"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize メソッド
-このリーダーが、モジュールのファイル名と共に使用すると、関連付けられるメタデータ インポーターのインターフェイスで、シンボル リーダーを初期化します。  
+このリーダーが関連付けられるメタデータインポーターインターフェイスと、モジュールのファイル名を使用して、シンボルリーダーを初期化します。  
   
 > [!NOTE]
->  このメソッドは、1 回だけ呼び出すことができ、その他のリーダー メソッドの前に呼び出す必要があります。  
+> このメソッドを呼び出すことができるのは1回だけです。他のリーダーメソッドの前に呼び出す必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,25 +42,25 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>パラメーター  
  `importer`  
- [in]このリーダーが関連付けられるメタデータ インポーターのインターフェイス。  
+ からこのリーダーが関連付けられるメタデータインポーターインターフェイス。  
   
  `filename`  
- [in]モジュールのファイル名。 使用することができます、`pIStream`パラメーター代わりにします。  
+ からモジュールのファイル名。 代わりに、 `pIStream`パラメーターを使用できます。  
   
  `searchPath`  
- [in]検索するパス。 このパラメーターは省略できます。  
+ から検索するパス。 このパラメーターは省略できます。  
   
  `pIStream`  
- [in]ファイル ストリームは、filename パラメーターの代替として使用します。  
+ からファイルストリーム。 filename パラメーターの代わりに使用されます。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK を返します。それ以外の場合は E_FAIL またはその他のエラーコードを返します。  
   
 ## <a name="remarks"></a>Remarks  
- 1 つだけ指定する必要がある、`filename`または`pIStream`両方のパラメーター。 `searchPath` パラメーターは省略可能です。  
+ または`filename`パラメーターのいずれか1つだけを指定する必要があります。両方を指定することはできません。 `pIStream` `searchPath` パラメーターは省略可能です。  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e14bf59f5922a918b627af22c052c8efd9081e84
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302570"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602530"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C# コンパイラ オプション)
 指定されたリソースを出力ファイルに埋め込みます。  
@@ -38,11 +38,11 @@ ms.locfileid: "59302570"
  リソースのアクセシビリティ。パブリックまたはプライベートです。 既定値はパブリックです。  
   
 ## <a name="remarks"></a>解説  
- [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) を使用すると、リソースがアセンブリにリンクされ、リソース ファイルは出力ファイルに追加されません。  
+ [-linkresource](./linkresource-compiler-option.md) を使用すると、リソースがアセンブリにリンクされ、リソース ファイルは出力ファイルに追加されません。  
   
  既定では、リソースは、C# コンパイラを使用して作成されるときにアセンブリ内でパブリックになります。 リソースをプライベートにするには、アクセシビリティ修飾子として `private` を指定します。 `public` と `private` 以外のアクセシビリティは使用できません。  
   
- `filename` が [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) や開発環境などで作成された .NET Framework リソース ファイルである場合は、<xref:System.Resources> 名前空間のメンバーを使ってそのファイルにアクセスできます。 詳細については、「<xref:System.Resources.ResourceManager?displayProperty=nameWithType>」を参照してください。 それ以外のすべてのリソースに対しては、<xref:System.Reflection.Assembly> クラスの `GetManifestResource` メソッドを使用して、実行時にリソースにアクセスします。  
+ `filename` が [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) や開発環境などで作成された .NET Framework リソース ファイルである場合は、<xref:System.Resources> 名前空間のメンバーを使ってそのファイルにアクセスできます。 詳細については、<xref:System.Resources.ResourceManager?displayProperty=nameWithType> を参照してください。 それ以外のすべてのリソースに対しては、<xref:System.Reflection.Assembly> クラスの `GetManifestResource` メソッドを使用して、実行時にリソースにアクセスします。  
   
  **-res** は **-resource** の省略形です。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "59302570"
   
 2. **ソリューション エクスプローラー**で、埋め込むファイルを選択します。  
   
-3. 選択したファイルの **[プロパティ]** ウィンドウで、**[ビルド アクション]** を選択します。  
+3. 選択したファイルの **[プロパティ]** ウィンドウで、 **[ビルド アクション]** を選択します。  
   
 4. **[ビルド アクション]** を **[埋め込まれたリソース]** に設定します。  
   
@@ -69,5 +69,5 @@ csc -resource:rf.resource in.cs
   
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063350"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929358"
 ---
 # <a name="net-api-analyzer"></a>.NET API アナライザー
 
@@ -23,13 +23,14 @@ API アナライザーは、NuGet パッケージ [Microsoft.DotNet.Analyzers.Co
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* Visual Studio 2017 以降のバージョン、または Visual Studio for Mac (すべてのバージョン)。
+- Visual Studio 2017 以降のバージョン、または Visual Studio for Mac (すべてのバージョン)。
 
 ## <a name="discovering-deprecated-apis"></a>非推奨の API の検出
 
 ### <a name="what-are-deprecated-apis"></a>非推奨の API とは
 
 .NET ファミリは大規模な製品のセットであり、より適切に顧客のニーズに対応するため頻繁にアップグレードされています。 当然、API が廃止されたり新しいものに置き換えられたりすることがあります。 より優れた代替 API が存在する API は、非推奨と見なされます。 API が非推奨であり使ってはならないことを通知する手段の 1 つは、<xref:System.ObsoleteAttribute> 属性で API をマークすることです。 この方法の欠点は、すべての非推奨 API に対して診断 ID が 1 つしかないことです (C# の場合、[CS0612](../../csharp/misc/cs0612.md))。 これによって、次のことが起こります。
+
 - ケースごとに専用のドキュメントを作成できません。
 - 特定のカテゴリの警告を抑制できません。 すべてを抑制するか、まったく抑制しないかです。
 - 新しい非推奨 API をユーザーに通知するには、参照されているアセンブリまたは対象のパッケージを更新する必要があります。
@@ -50,8 +51,8 @@ ID をクリックすると、API が非推奨になった理由に関する詳�
 
 強調表示されたメンバーを右クリックして **[\<診断 ID> の非表示]** を選ぶと、警告を抑制できます。 警告を抑制するには 2 つの方法があります。 
 
-* [ローカル (ソース内)](#suppressing-warnings-locally)
-* [グローバル (抑制ファイル内)](#suppressing-warnings-globally) - 推奨
+- [ローカル (ソース内)](#suppressing-warnings-locally)
+- [グローバル (抑制ファイル内)](#suppressing-warnings-globally) - 推奨
 
 ### <a name="suppressing-warnings-locally"></a>警告をローカルに抑制する
 
@@ -95,11 +96,11 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 現時点では、アナライザーは次のケースを処理します。
 
-* <xref:System.PlatformNotSupportedException> (PC001) をスローする .NET Standard API の使用。
-* .NET Framework 4.6.1 (PC002) では利用できない .NET Standard API の使用。
-* UWP (PC003) に存在しないネイティブ API の使用。
-* Delegate.BeginInvoke および EndInvoke API (PC004) の使用。
-* 非推奨 (DEXXXX) としてマークされている API の使用。
+- <xref:System.PlatformNotSupportedException> (PC001) をスローする .NET Standard API の使用。
+- .NET Framework 4.6.1 (PC002) では利用できない .NET Standard API の使用。
+- UWP (PC003) に存在しないネイティブ API の使用。
+- Delegate.BeginInvoke および EndInvoke API (PC004) の使用。
+- 非推奨 (DEXXXX) としてマークされている API の使用。
 
 ## <a name="ci-machine"></a>CI マシン
 

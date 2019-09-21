@@ -1,17 +1,15 @@
 ---
 title: 'チュートリアル: 回帰を使用して価格を予測する'
 description: このチュートリアルでは、ML.NET を使用して、料金 (具体的にはニューヨーク市のタクシー運賃) を予測する回帰モデルを構築する方法を示します。
-author: jralexander
-ms.author: johalex
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 40f70b6d89bf19ae0b20cb00d56e9f7dceb48f61
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377785"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929446"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>チュートリアル: ML.NET で回帰を使用して価格を予測する
 
@@ -19,6 +17,7 @@ ms.locfileid: "66377785"
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
+>
 > * データを準備して理解する
 > * データを読み込んで変換する
 > * 学習アルゴリズムを選択する
@@ -65,7 +64,7 @@ ms.locfileid: "66377785"
 入力データと予測のためのクラスを作成します。
 
 1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
-1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを *TaxiTrip.cs* に変更します。 次に、 **[追加]** を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを *TaxiTrip.cs* に変更します。 次に **[追加]** を選択します。
 1. 以下の `using` ディレクティブを新しいファイルに追加します。
 
    [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#1 "Add necessary usings")]
@@ -271,6 +270,7 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 このチュートリアルでは、次の作業を行う方法を学びました。
 
 > [!div class="checklist"]
+>
 > * データを準備して理解する
 > * 学習パイプラインを作成する
 > * データを読み込んで変換する

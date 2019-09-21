@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: af39ba6e20fb1a7c9e1a356ef5015afd885dbbca
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4a3342e73fef3effd54f72e68283eb6085eef5b5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241169"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608449"
 ---
 # <a name="this-c-reference"></a>this (C# リファレンス)
 
 `this` キーワードはクラスの現在のインスタンスを参照します。拡張メソッドの最初のパラメーターの修飾子としても使用されます。
 
 > [!NOTE]
-> ここでは、クラス インスタンスでの `this` の使用について説明します。 拡張メソッドでの使用の詳細については、「[拡張メソッド](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)」を参照してください。
+> ここでは、クラス インスタンスでの `this` の使用について説明します。 拡張メソッドでの使用の詳細については、「[拡張メソッド](../../programming-guide/classes-and-structs/extension-methods.md)」を参照してください。
 
 `this` の一般的な使い方を次に示します。
 

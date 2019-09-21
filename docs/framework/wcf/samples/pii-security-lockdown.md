@@ -2,15 +2,15 @@
 title: PII セキュリティ ロックダウン
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 83c100459ca5cf522b9040a807008e66e1a5c9d8
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: f82d3f19a3bf6fc6a5ac038034880dafc03fcce1
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425423"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044799"
 ---
 # <a name="pii-security-lockdown"></a>PII セキュリティ ロックダウン
-このサンプルでは、によって、Windows Communication Foundation (WCF) サービスの複数のセキュリティ関連機能を制御する方法を示しています。  
+このサンプルでは、Windows Communication Foundation (WCF) サービスのセキュリティ関連のいくつかの機能を制御する方法を示します。  
   
 - サービスの構成ファイル内の機密情報を暗号化します。  
   
@@ -19,35 +19,35 @@ ms.locfileid: "67425423"
 - トレースおよびメッセージ ログで、個人を特定できる情報 (PII) のログ記録を制御します。  
   
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>説明  
- これらの各機能を単独または組み合わせて使用することにより、サービスのさまざまなセキュリティを制御できます。 WCF サービスのセキュリティ保護に説明するものではありません。  
+ これらの各機能を単独または組み合わせて使用することにより、サービスのさまざまなセキュリティを制御できます。 これは、WCF サービスをセキュリティで保護するための明確なガイドではありません。  
   
  .NET Framework の構成ファイルには、データベースに接続するための接続文字列などの機密情報を格納できます。 共有の Web ホストのシナリオでは、この情報をサービスの構成ファイル内で暗号化して、構成ファイル内に含まれるデータを偶発的に表示されないようにすることが望ましい場合があります。 .NET Framework 2.0 以降のバージョンでは、Windows データ保護アプリケーション プログラミング インターフェイス (DPAPI) または RSA 暗号化プロバイダを使用して、構成ファイルの一部を暗号化できます。 DPAPI または RSA を使用して aspnet_regiis.exe を実行すると、構成ファイルの選択部分を暗号化できます。  
   
- Web ホストのシナリオでは、他のサービスのサブディレクトリにサービスを設定できます。 構成値を決定する既定の意味的方法によると、入れ子になったディレクトリ内の構成ファイルで親ディレクトリの構成値をオーバーライドできます。 特定の状況では、さまざまな理由でこれが望ましくない場合があります。 WCF サービスの構成のサポートを使用して入れ子になったサービスの実行時に例外を生成する構成を入れ子になったために、構成値のロックには、構成値がオーバーライドされます。  
+ Web ホストのシナリオでは、他のサービスのサブディレクトリにサービスを設定できます。 構成値を決定する既定の意味的方法によると、入れ子になったディレクトリ内の構成ファイルで親ディレクトリの構成値をオーバーライドできます。 特定の状況では、さまざまな理由でこれが望ましくない場合があります。 WCF サービス構成は、入れ子になった構成値を使用して入れ子になったサービスを実行するときに、入れ子になった構成が例外を生成するように、構成値のロックをサポートします。  
   
- このサンプルでは、トレースおよびメッセージ ログによる、ユーザー名やパスワードなどの個人を特定できる既知の情報 (PII) のログ記録を制御する方法を示します。 既定では、既知の PII のログ記録は無効です。ただし特定の状況では、PII のログ記録はアプリケーションをデバック処理する際に重要になる場合があります。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。 さらに、このサンプルではトレースとメッセージ ログを使用します。 詳細については、次を参照してください。、[トレースとメッセージ ログ](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)サンプル。  
+ このサンプルでは、トレースおよびメッセージ ログによる、ユーザー名やパスワードなどの個人を特定できる既知の情報 (PII) のログ記録を制御する方法を示します。 既定では、既知の PII のログ記録は無効です。ただし特定の状況では、PII のログ記録はアプリケーションをデバック処理する際に重要になる場合があります。 このサンプルは、[はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)に基づいています。 さらに、このサンプルではトレースとメッセージ ログを使用します。 詳細については、[トレースとメッセージログ](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)のサンプルを参照してください。  
   
 ## <a name="encrypting-configuration-file-elements"></a>構成ファイルの要素の暗号化  
- 共有 Web ホストの環境をセキュリティ保護するには、機密情報が含まれる可能性のあるデータベース接続文字列など、特定の構成要素を暗号化することが望ましい場合があります。 たとえば、%windir%\microsoft.net\framework\v4.0.20728 .NET Framework フォルダーにある aspnet_regiis.exe ツールを使用して構成要素を暗号化できます。  
+ 共有 Web ホストの環境をセキュリティ保護するには、機密情報が含まれる可能性のあるデータベース接続文字列など、特定の構成要素を暗号化することが望ましい場合があります。 構成要素は、.NET Framework フォルダーにある aspnet_regiis.exe ツールを使用して暗号化できます。たとえば、%WINDIR%\Microsoft.NET\Framework\v4.0.20728. のようになります。  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>サンプルの Web.config で appSettings セクションの値を暗号化するには  
   
-1. -> 実行開始を使用してコマンド プロンプトのオープンしています. 入力`cmd` をクリック**OK**します。  
+1. [Start-> Run...] を使用してコマンドプロンプトを開きます。 「」 `cmd`と入力し、[ **OK]** をクリックします。  
   
 2. コマンド「`cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`」を実行して、現在の .NET Framework ディレクトリに移動します。  
   
 3. コマンド「`aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`」を実行して、Web.config フォルダーの appSettings 構成設定を暗号化します。  
   
- 構成ファイルのセクションを暗号化する方法についての詳細については、ASP.NET 構成では DPAPI でに関する記事を参照して見つかんだことができます ([Building Secure ASP.NET Applications:認証、承認、およびセキュリティ保護された通信](https://go.microsoft.com/fwlink/?LinkId=95137)) と ASP.NET の構成で RSA の使い方 ([How To:ASP.NET 2.0 の構成セクションを暗号化する RSA を使用して](https://go.microsoft.com/fwlink/?LinkId=95138))。  
+ 構成ファイルのセクションの暗号化の詳細については、「how to DPAPI on DPAPI in ASP.NET configuration ([Secure ASP.NET アプリケーションの構築)」を参照してください。認証、承認、セキュリティで保護](https://go.microsoft.com/fwlink/?LinkId=95137)された通信) と ASP.NET の構成 ([方法:RSA](https://go.microsoft.com/fwlink/?LinkId=95138)を使用して、ASP.NET 2.0 の構成セクションを暗号化します。  
   
 ## <a name="locking-configuration-file-elements"></a>構成ファイルの要素のロック  
  Web ホストのシナリオでは、サービスのサブディレクトリにサービスを設定できます。 こうした状況で、サブディレクトリ内のサービスの構成値を計算するには、Machine.config 内の値を調べ、続いて親ディレクトリの任意の Web.config ファイルとマージしてディレクトリ ツリーの下層に移動します。そして最後に、サービスが含まれるディレクトリ内の Web.config ファイルをマージします。 ほとんどの構成要素での既定の動作は、サブディレクトリ内の構成ファイルが、親ディレクトリに設定されている値をオーバーライドできるようにすることです。 特定の状況では、サブディレクトリ内の構成ファイルが、親ディレクトリの構成に設定されている値をオーバーライドしないようにするのが望ましい場合があります。  
@@ -87,7 +87,7 @@ ms.locfileid: "67425423"
 ```  
   
 > [!NOTE]
->  Machine.config ファイルの既定の場所は %WINDIR%\Microsoft.NET\Framework\v2.0.50727\CONFIG です。  
+> Machine.config ファイルの既定の場所は %WINDIR%\Microsoft.NET\Framework\v2.0.50727\CONFIG です。  
   
  `enableLoggingKnownPii` 属性が Machine.config にない場合、PII のログ記録は許可されません。  
   
@@ -117,26 +117,26 @@ ms.locfileid: "67425423"
  PII がログ記録されるのは、`enableLoggingKnownPii` が `true` に設定されていると共に、`logKnownPii` が `true` に設定されている場合だけです。  
   
 > [!NOTE]
->  System.Diagnostics は、構成ファイルの最初に表示されているソース以外の、すべてのソースのすべての属性を無視します。 `logKnownPii` 属性を構成ファイル内の 2 番目のソースに追加しても、結果は変わりません。  
+> System.Diagnostics は、構成ファイルの最初に表示されているソース以外の、すべてのソースのすべての属性を無視します。 `logKnownPii` 属性を構成ファイル内の 2 番目のソースに追加しても、結果は変わりません。  
   
 > [!IMPORTANT]
->  このサンプルを実行する際には、Machine.config を手動で変更します。Machine.config を変更する際は注意してください。値または構文が正しくない場合、すべての .NET Framework アプリケーションが実行できなくなる可能性があります。  
+> このサンプルを実行する際には、Machine.config を手動で変更します。Machine.config を変更する際は注意してください。値または構文が正しくない場合、すべての .NET Framework アプリケーションが実行できなくなる可能性があります。  
   
  また、DPAPI や RSA を使用して構成ファイルの要素を暗号化することもできます。 詳細については、次のリンクを参照してください。  
   
-- [セキュリティで保護された ASP.NET アプリケーションの構築:認証、承認、およびセキュリティで保護された通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [Secure ASP.NET アプリケーションの構築:認証、承認、セキュリティで保護された通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
-- [方法: ASP.NET 2.0 の構成セクションを暗号化する RSA を使用して](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [方法: RSA を使用して ASP.NET 2.0 の構成セクションを暗号化する](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルを設定、ビルド、および実行するには  
   
-1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
 2. Machine.config を編集して `enableLoggingKnownPii` 属性を `true` に設定し、必要に応じて親ノードを追加します。  
   
 3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-4. 1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+4. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
   
 #### <a name="to-clean-up-the-sample"></a>サンプルをクリーンアップするには  
   

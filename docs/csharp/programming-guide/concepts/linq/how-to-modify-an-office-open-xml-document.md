@@ -2,12 +2,12 @@
 title: '方法: Office Open XML ドキュメントを変更する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 3a6edd31ff2a22e32c979e1a6a548b212406cbf5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: cb80a450de104760f64c84e11829f6609d8ee177
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486651"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253536"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>方法: Office Open XML ドキュメントを変更する (C#)
 このトピックでは、Office Open XML ドキュメントを開き、それを変更して保存する例について説明します。  
@@ -141,9 +141,8 @@ class Program
   
  このプログラムを実行した後で `SampleDoc.docx` を開くと、このプログラムによってドキュメント内の最初の段落が大文字に変換されたかどうかを確認できます。  
   
- この例で「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」に記載されているサンプルの Open XML ドキュメントを使用して実行すると、次のように出力されます。  
+ この例で「[ソースとなる Office Open XML ドキュメントの作成 (C#)](./creating-the-source-office-open-xml-document.md)」に記載されているサンプルの Open XML ドキュメントを使用して実行すると、次のように出力されます。  
   
-```  
+```output  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
-  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bf0af444-890d-43e2-aeca-98589dd74ddf
-ms.openlocfilehash: 7d854a769ed580375e7463ba8661becc73ab8128
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb128a7303e47db6fb62c357b5eb3bcd2e10293b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032527"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247855"
 ---
 # <a name="convert-a-sequence-to-an-array"></a>方法 : シーケンスを配列に変換する
 シーケンスから配列を作成するには、<xref:System.Linq.Enumerable.ToArray%2A> を使用します。  
@@ -23,4 +23,4 @@ ms.locfileid: "62032527"
   
 ## <a name="see-also"></a>関連項目
 
-- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [クエリの例](query-examples.md)

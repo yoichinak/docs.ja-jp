@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: ec4ad84a39afe21ef77507732e5e0e417d45f3e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a001ac8b3d4b8cd9618b3ced7bdf578ebae2e22
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034524"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786600"
 ---
 # <a name="adding-data-to-a-datatable"></a>DataTable へのデータの追加
-<xref:System.Data.DataTable> を作成し、列と制約を使用してそのテーブルの構造を定義した後で、テーブルに新しいデータ行を追加できます。 新しい行を追加するには、新しい変数を <xref:System.Data.DataRow> 型として宣言します。 新しい**DataRow**を呼び出すと、オブジェクトが返されます、<xref:System.Data.DataTable.NewRow%2A>メソッド。 **DataTable**を作成し、 **DataRow**で定義されている、オブジェクトが、テーブルの構造に基づく、<xref:System.Data.DataColumnCollection>します。  
+<xref:System.Data.DataTable> を作成し、列と制約を使用してそのテーブルの構造を定義した後で、テーブルに新しいデータ行を追加できます。 新しい行を追加するには、新しい変数を <xref:System.Data.DataRow> 型として宣言します。 メソッドを <xref:System.Data.DataTable.NewRow%2A>呼び出すと、新しい DataRow オブジェクトが返されます。 次に、 <xref:System.Data.DataColumnCollection>で定義されているように、 **DataTable**はテーブルの構造に基づいて**DataRow**オブジェクトを作成します。  
   
- 次の例では、呼び出すことによって新しい行を作成する方法、 **NewRow**メソッド。  
+ 次の例では、 **newrow**メソッドを呼び出して新しい行を作成する方法を示します。  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- 新しい行にデータを挿入した後、**追加**メソッドを使用して、行を追加、 <xref:System.Data.DataRowCollection>、次のコードに示す。  
+ 新しい行にデータを挿入した後、 **add**メソッドを使用して、 <xref:System.Data.DataRowCollection>次のコードに示すように行をに追加します。  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- 呼び出すことも、**追加**として型指定された値の配列を渡すことによって新しい行を追加するメソッドを<xref:System.Object>次の例のようにします。  
+ **Add**メソッドを呼び出して新しい行を追加することもできます。次の例に示すように<xref:System.Object>、として型指定された値の配列を渡します。  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +57,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- として型指定された値の配列を渡す**オブジェクト**を**追加**メソッドは、テーブル内の新しい行を作成し、その列の値をオブジェクト配列内の値に設定します。 配列内の値は、テーブル内での列の順序に基づいて、列に順次的に割り当てられます。  
+ **Object**として型指定された値の配列を**Add**メソッドに渡すと、テーブル内に新しい行が作成され、その列の値がオブジェクト配列の値に設定されます。 配列内の値は、テーブル内での列の順序に基づいて、列に順次的に割り当てられます。  
   
- 次の例では、10 個の行を追加、新しく作成した**顧客**テーブル。  
+ 次の例では、新しく作成された**Customers**テーブルに10行を追加します。  
   
 ```vb  
 Dim workRow As DataRow  
@@ -91,5 +91,5 @@ for (int i = 0; i <= 9; i++)
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [DataTable 内のデータの操作](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataTable 内のデータの操作](manipulating-data-in-a-datatable.md)
+- [ADO.NET の概要](../ado-net-overview.md)

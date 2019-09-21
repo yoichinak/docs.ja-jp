@@ -3,12 +3,12 @@ title: 'チュートリアル: 最初のアナライザーとコード修正を�
 description: このチュートリアルでは、.NET Compiler SDK (Roslyn API) を使用してアナライザーとコード修正を作成する手順を詳しく説明します。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 45529a72e3c64a573bfc043fe44da29caed1a0c4
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870557"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105757"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>チュートリアル: 最初のアナライザーとコード修正を作成する
 
@@ -18,8 +18,8 @@ ms.locfileid: "67870557"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
-* [Visual Studio 2019](https://www.visualstudio.com/downloads)
+- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+- [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
 Visual Studio インストーラーで **.NET Compiler Platform SDK** をインストールする必要があります。
 
@@ -51,9 +51,9 @@ Console.WriteLine(x);
 
 変数を定数にすることができるかどうかを判断するために、構文解析、初期化子式の定数分析、および変数に書き込まれないというデータフロー分析が必要です。 .NET Compiler Platform には、この分析を簡単に実行できる API が用意されています。 最初の手順は、新しい C# の**コード修正を含むアナライザー** プロジェクトを作成することです。
 
-* Visual Studio で、 **[ファイル] > [新規] > [プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
-* **[Visual C#] > [Extensibility]** で、 **[Analyzer with code fix (.NET Standard)]\(コード修正付きアナライザー (.NET Standard)\)** を選択します。
-* プロジェクトに「**MakeConst**」という名前を付けて、[OK] をクリックします。
+- Visual Studio で、 **[ファイル] > [新規] > [プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
+- **[Visual C#] > [Extensibility]** で、 **[Analyzer with code fix (.NET Standard)]\(コード修正付きアナライザー (.NET Standard)\)** を選択します。
+- プロジェクトに「**MakeConst**」という名前を付けて、[OK] をクリックします。
 
 コード修正テンプレート付きアナライザー テンプレートを使用すると、アナライザーとコード修正を含むプロジェクト、単体テスト プロジェクト、VSIX プロジェクトという 3 つのプロジェクトが作成されます。 既定のスタートアップ プロジェクトは VSIX プロジェクトです。 **F5** キーを押して、VSIX プロジェクトを開始します。 これにより、新しいアナライザーが読み込まれた Visual Studio の 2 つ目のインスタンスが開始されます。
 
@@ -77,8 +77,8 @@ Console.WriteLine(x);
 
 このテンプレートを使用すると、**MakeConstAnalyzer.cs** ファイルに初期の `DiagnosticAnalyzer` クラスが作成されます。 この初期のアナライザーは、あらゆるアナライザーが持つ 2 つの重要な特性を示しています。
 
-* すべての診断アナライザーは、動作する言語を記述する `[DiagnosticAnalyzer]` 属性を提供する必要があります。
-* すべての診断アナライザーは、<xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> クラスから派生する必要があります。
+- すべての診断アナライザーは、動作する言語を記述する `[DiagnosticAnalyzer]` 属性を提供する必要があります。
+- すべての診断アナライザーは、<xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> クラスから派生する必要があります。
 
 このテンプレートは、アナライザーの一部である基本機能も示しています。
 
@@ -89,9 +89,9 @@ Console.WriteLine(x);
 
 最初の手順は、登録定数が "Make Const" アナライザーを示すように、登録定数と `Initialize` メソッドを更新することです。 ほとんどの文字列定数は、文字列リソース ファイルで定義されています。 ローカリゼーションを容易にするには、この手法に従うことをお勧めします。 **MakeConst** アナライザー プロジェクト用に **Resources.resx** ファイルを開きます。 これでリソース エディターが表示されます。 文字列リソースを次のように更新します。
 
-* `AnalyzerTitle` を "変数を定数に変更できる" に変更します。
-* `AnalyzerMessageFormat` を "定数に変更できる" に変更します。
-* `AnalyzerDescription` を "定数にする" に変更します。
+- `AnalyzerTitle` を "変数を定数に変更できる" に変更します。
+- `AnalyzerMessageFormat` を "定数に変更できる" に変更します。
+- `AnalyzerDescription` を "定数にする" に変更します。
 
 また、 **[アクセス修飾子]** ドロップダウンを `public` に変更します。 こうすることで、単体テストでこれらの定数を簡単に使用できるようになります。 完了すると、次の図のようにリソース エディターが表示されます。
 
@@ -329,15 +329,15 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 
 このテストも合格します。 次に、まだ処理していない条件の定数を追加します。
 
-* 既に const なので、既に `const` である宣言:
+- 既に const なので、既に `const` である宣言:
 
    [!code-csharp[already const declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#AlreadyConst "a declaration that is already const should not raise the diagnostic")]
 
-* 使用する価値がないため、初期化子がない宣言:
+- 使用する価値がないため、初期化子がない宣言:
 
    [!code-csharp[declarations that have no initializer](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#NoInitializer "a declaration that has no initializer should not raise the diagnostic")]
 
-* コンパイル時の定数にすることはできないため、初期化子が定数ではない宣言:
+- コンパイル時の定数にすることはできないため、初期化子が定数ではない宣言:
 
    [!code-csharp[declarations where the initializer isn't const](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#InitializerNotConstant "a declaration where the initializer is not a compile-time constant should not raise the diagnostic")]
 
@@ -364,9 +364,9 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 
 アナライザーの `AnalyzeNode` メソッドにいくつか拡張を追加して、これらの条件に一致するコードをフィルター処理する必要があります。 これらはすべて関連する条件なので、同様の変更でこれらすべての条件を修正します。 `AnalyzeNode` に次の変更を加えます。
 
-* セマンティック分析では、単一の変数宣言を調査しました。 このコードは、同じステートメントで宣言されたすべての変数を調査する `foreach` ループ内に配置する必要があります。
-* 宣言された各変数には初期化子が必要です。
-* 宣言された各変数の初期化子は、コンパイル時定数にする必要があります。
+- セマンティック分析では、単一の変数宣言を調査しました。 このコードは、同じステートメントで宣言されたすべての変数を調査する `foreach` ループ内に配置する必要があります。
+- 宣言された各変数には初期化子が必要です。
+- 宣言された各変数の初期化子は、コンパイル時定数にする必要があります。
 
 `AnalyzeNode` メソッドで、元のセマンティック分析を置き換えます。
 
@@ -487,11 +487,11 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 
 var' キーワードを正しい型名に置き換えるには、コード修正プロバイダーに少しコードを追加する必要があります。 **CodeFixProvider.cs** に戻ります。 追加するコードで、次の手順が実行されます。
 
-* 宣言が `var` 宣言かどうかを検査し、その場合は次の処理を実行します。
-* 推定型の新しい型を作成します。
-* 型宣言がエイリアスでないことを確認します。 その場合は、`const var` を宣言することができます。
-* `var` がこのプログラムの型名でないことを確認します (その場合、`const var` は有効です)。
-* 完全な型名を簡略化する
+- 宣言が `var` 宣言かどうかを検査し、その場合は次の処理を実行します。
+- 推定型の新しい型を作成します。
+- 型宣言がエイリアスでないことを確認します。 その場合は、`const var` を宣言することができます。
+- `var` がこのプログラムの型名でないことを確認します (その場合、`const var` は有効です)。
+- 完全な型名を簡略化する
 
 多数のコードが必要なようですが、 そうではありません。 `newLocal` を宣言し、初期化する行を次のコードに置き換えます。 `newModifiers` の初期化直後に配置します。
 
@@ -505,10 +505,10 @@ using Microsoft.CodeAnalysis.Simplification;
 
 テストを実行します。テストはすべて合格するはずです。 完成したアナライザーを実行してみてください。 Ctrl + F5 キーを押して Roslyn Preview 拡張機能が読み込まれた Visual Studio の 2 つ目のインスタンスでアナライザー プロジェクトを実行します。
 
-* 2 つ目の Visual Studio インスタンスで、新しい C# コンソール アプリケーション プロジェクトを作成し、`int x = "abc";` を Main メソッドに追加します。 最初のバグ修正のおかげで、このローカル変数宣言について警告は報告されません (ただし、想定どおりコンパイラ エラーが発生します)。
-* 次に、Main メソッドに `object s = "abc";` を追加します。 2 つ目のバグ修正のおかげで、警告は報告されません。
-* 最後に、`var` キーワードを使用する別のローカル変数を追加します。 警告が報告され、左側の下部に推奨が表示されます。
-* 波線にエディターのカレットを移動し、Ctrl + . キーを押します。 推奨されたコード修正が表示されます。 コード修正を選択して、var' キーワードが正しく処理されていることを確認します。
+- 2 つ目の Visual Studio インスタンスで、新しい C# コンソール アプリケーション プロジェクトを作成し、`int x = "abc";` を Main メソッドに追加します。 最初のバグ修正のおかげで、このローカル変数宣言について警告は報告されません (ただし、想定どおりコンパイラ エラーが発生します)。
+- 次に、Main メソッドに `object s = "abc";` を追加します。 2 つ目のバグ修正のおかげで、警告は報告されません。
+- 最後に、`var` キーワードを使用する別のローカル変数を追加します。 警告が報告され、左側の下部に推奨が表示されます。
+- 波線にエディターのカレットを移動し、Ctrl + . キーを押します。 推奨されたコード修正が表示されます。 コード修正を選択して、var' キーワードが正しく処理されていることを確認します。
 
 最後に、次のコードを追加します。
 

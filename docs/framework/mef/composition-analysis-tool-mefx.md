@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3777627caec7fc0d383804f71d9b7d3f09756fd
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392578"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894136"
 ---
 # <a name="composition-analysis-tool-mefx"></a>コンポジション分析ツール (Mefx)
 合成分析ツール (Mefx) は、Managed Extensibility Framework (MEF) のパートが含まれたライブラリ (.dll) ファイルとアプリケーション (.exe) ファイルを分析するコマンド ライン アプリケーションです。 Mefx の主な目的は、開発者が煩雑なトレース コードをアプリケーション自体に追加することなく、MEF アプリケーションの合成エラーを診断できるようにすることです。 また、Mefx は、サード パーティが提供するライブラリのパートについて理解する際にも役立ちます ここでは、Mefx の使用方法について説明し、構文のリファレンスを示します。  
@@ -26,18 +26,18 @@ ms.locfileid: "33392578"
 ## <a name="basic-syntax"></a>基本構文  
  Mefx は、次の形式でコマンド ラインから起動します。  
   
-```  
+```console
 mefx [files and directories] [action] [options]  
 ```  
   
  引数の最初のセットでは、分析対象のパートの読み込み元となるファイルとディレクトリを指定します。 `/file:` スイッチを使用してファイルを指定し、 `/directory:` スイッチを使用してディレクトリを指定します。 次の例に示すように、複数のファイルまたはディレクトリを指定できます。  
   
-```  
+```console  
 mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]  
 ```  
   
 > [!NOTE]
->  各 .dll または .exe は一度だけ読み込むようにしてください。 1 つのファイルを何度も読み込むと、ツールから間違った情報が返されることがあります。  
+> 各 .dll または .exe は一度だけ読み込むようにしてください。 1 つのファイルを何度も読み込むと、ツールから間違った情報が返されることがあります。  
   
  ファイルとディレクトリを指定した後、コマンドと、そのコマンドのオプションを指定する必要があります。  
   
@@ -45,7 +45,7 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
 ## <a name="listing-available-parts"></a>使用可能なパートの一覧を表示する  
  `/parts` アクションを使用すると、読み込んだファイルで宣言されているすべてのパートの一覧が表示されます。 結果は、パート名の単純なリストです。  
   
-```  
+```console
 mefx /file:MyAddIn.dll /parts  
 MyAddIn.AddIn  
 MyAddIn.MemberPart  
@@ -53,7 +53,7 @@ MyAddIn.MemberPart
   
  パートの詳細を参照する場合は、 `/verbose` オプションを使用します。 利用可能なすべてのパートの詳細が出力されます。 1 つのパートに関する詳細情報を入手する場合は、 `/type` アクションではなく `/parts`アクションを使用します。  
   
-```  
+```console  
 mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose  
 [Part] MyAddIn.MemberPart from: AssemblyCatalog (Assembly=" MyAddIn, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")  
   [Export] MyAddIn.MemberPart (ContractName=" MyAddIn.MemberPart")  
@@ -63,7 +63,7 @@ mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose
 ## <a name="listing-imports-and-exports"></a>インポートとエクスポートの一覧表示  
  `/imports` アクションと `/exports` アクションでは、インポートされたすべてのパートと、エクスポートされたすべてのパートがそれぞれ一覧表示されます。 `/importers` アクションまたは `/exporters` アクションを使用して、特定の型をインポートまたはエクスポートするパートを一覧表示することもできます。  
   
-```  
+```console  
 mefx /file:MyAddIn.dll /importers:MyAddin.MemberPart  
 MyAddin.AddIn  
 ```  
@@ -76,13 +76,13 @@ MyAddin.AddIn
   
  `/verbose` アクションで `/rejected` オプションを使用すると、拒否されたパートに関する詳細情報が出力されます。 次の例では、 `ClassLibrary1` という DLL に `AddIn` パートが含まれています。このパートは、 `MemberPart` パートと `ChainOne` パートをインポートします。 `ChainOne` は `ChainTwo`をインポートしますが、 `ChainTwo` が存在しません。 そのため、 `ChainOne` が拒否され、この拒否が原因で `AddIn` も拒否されることになります。  
   
-```  
+```console  
 mefx /file:ClassLibrary1.dll /rejected /verbose  
 ```  
   
  前のコマンドの完全な出力を次に示します。  
   
-```  
+```output
 [Part] ClassLibrary1.AddIn from: AssemblyCatalog (Assembly="ClassLibrary1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")  
   [Export] ClassLibrary1.AddIn (ContractName="ClassLibrary1.AddIn")  
   [Import] ClassLibrary1.AddIn.memberPart (ContractName="ClassLibrary1.MemberPart")  
@@ -114,7 +114,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
  前の例で `/causes` アクションを使用すると、 `ChainOne`に関する情報だけが示されます。このパートのインポートが満たされなかったことが、 `AddIn`が拒否された根本原因であるためです。 `/causes` アクションは、通常のオプションと `/verbose` オプションの両方で使用できます。  
   
 > [!NOTE]
->  ほとんどの場合、連鎖するエラーの根本原因を Mefx で診断できます。 ただし、パートがプログラムによってコンテナーに追加される場合、階層コンテナーが関係している場合、またはカスタムの `ExportProvider` 実装が関係している場合には、Mefx によって原因を診断することができません これらの状況では一般にエラーの診断が難しいため、できるだけ避けることをお勧めします。  
+> ほとんどの場合、連鎖するエラーの根本原因を Mefx で診断できます。 ただし、パートがプログラムによってコンテナーに追加される場合、階層コンテナーが関係している場合、またはカスタムの `ExportProvider` 実装が関係している場合には、Mefx によって原因を診断することができません これらの状況では一般にエラーの診断が難しいため、できるだけ避けることをお勧めします。  
   
 <a name="white_lists"></a>   
 ## <a name="white-lists"></a>ホワイト リスト  
@@ -122,7 +122,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
   
  "ClassLibrary1.ChainOne" というテキストが含まれた test.txt という名前のファイルがあるとします。 前の例で、 `/rejected` アクションに `/whitelist` オプションを指定して実行すると、次の出力が生成されます。  
   
-```  
+```console
 mefx /file:ClassLibrary1.dll /rejected /whitelist:test.txt  
 [Unexpected] ClassLibrary1.AddIn  
 ClassLibrary1.ChainOne  

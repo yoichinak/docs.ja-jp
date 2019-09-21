@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72cbcf1294f3d13f406d8db177f66fdc367c0758
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba6393d19909d8be762ee38b4c925987528d6304
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724448"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967351"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>XpathNavigator による XML データの変更
 <xref:System.Xml.XPath.XPathNavigator> クラスは、XML ドキュメント内のノードを変更するためのメソッドのセットを提供します。 これらのメソッドを使用するには、<xref:System.Xml.XPath.XPathNavigator> オブジェクトが編集可能である必要があります。つまり、その <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> プロパティを `true` にする必要があります。  
@@ -39,7 +39,7 @@ ms.locfileid: "54724448"
 |<xref:System.Xml.XPath.XPathNodeType.Namespace>|サポート範囲外。|  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNodeType.Namespace> ノードまたは <xref:System.Xml.XPath.XPathNodeType.Root> ノードの編集はサポートされません。  
+> <xref:System.Xml.XPath.XPathNodeType.Namespace> ノードまたは <xref:System.Xml.XPath.XPathNodeType.Root> ノードの編集はサポートされません。  
   
  <xref:System.Xml.XPath.XPathNavigator> クラスは、ノードの挿入および削除に使用されるメソッドのセットも提供しています。 XML ドキュメントのノードの挿入と削除の詳細については、「[XPathNavigator による XML データの挿入](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)」と「[XPathNavigator による XML データの削除](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)」のトピックを参照してください。  
   
@@ -109,7 +109,7 @@ navigator.SetTypedValue(DateTime.Now);
  <xref:System.Xml.XPath.XPathNavigator> クラスは、厳密に型指定された XML の記述の基本に W3C XML スキーマを使用します。 要素および属性には、W3C XML スキーマ ドキュメントに対する検証に基づいて、型情報を使用して注釈を付けることができます。 他の要素または属性を含めることができる要素は、複合型と呼ばれ、テキストの内容だけを含めることのできる要素は単純型と呼ばれます。  
   
 > [!NOTE]
->  属性には単純型しかありません。  
+> 属性には単純型しかありません。  
   
  要素または属性は、その型定義に固有のすべての規則に準拠している場合、スキーマ有効と見なされます。 単純型の要素 `xs:int` がスキーマ有効であるためには、-2,147,483,648 ～ 2,147,483,647 の数値を含む必要があります。 複合型の場合、要素のスキーマ有効性は、その子の要素および属性のスキーマ有効性に依存します。 したがって、要素が複合型定義に対して有効な場合、その子の要素および属性はすべて、それらの型定義に対して有効です。 同様に、要素の子の要素または属性のうち 1 つでもその型定義に対して無効か有効性が不明な場合、その要素も無効か有効性が不明になります。  
   
@@ -243,7 +243,7 @@ Console.WriteLine(navigator.OuterXml);
  <xref:System.Xml.XPath.XPathNavigator> オブジェクトを使用して、`xsi:nil` の値の `true` 属性を持つ有効な要素に内容を追加すると、その `xsi:nil` 属性の値は `false` に設定されます。  
   
 > [!NOTE]
->  `xsi:nil` 属性が `false` に設定された要素のコンテンツが削除されても、その属性の値は `true` に変更されません。  
+> `xsi:nil` 属性が `false` に設定された要素のコンテンツが削除されても、その属性の値は `true` に変更されません。  
   
 ## <a name="saving-an-xml-document"></a>XML ドキュメントの保存  
  ここに記載されている編集メソッドによる <xref:System.Xml.XmlDocument> オブジェクトに対する変更の保存は、<xref:System.Xml.XmlDocument> クラスのメソッドを使用して実行されます。 <xref:System.Xml.XmlDocument> オブジェクトに対する変更の保存に関する詳細については、「[ドキュメントの保存と書き込み](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)」を参照してください。  

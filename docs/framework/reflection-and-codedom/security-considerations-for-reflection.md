@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a581cc17859f7f4e0215017bfc405eae3cc15e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 852490c57a2954e9d56799ef8deebbef31d5f665
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660883"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045886"
 ---
 # <a name="security-considerations-for-reflection"></a>リフレクションに関するセキュリティ上の考慮事項
 
@@ -61,7 +61,7 @@ ms.locfileid: "67660883"
 
 コマンド ラインから実行されるアプリケーション コードは完全信頼で実行されます。 この場合、透過的とマークされていない限り、リフレクションを使用してセキュリティ クリティカルなメンバーにアクセスできます。 同じコードが部分信頼で実行される場合 (サンドボックス化されたアプリケーション ドメイン内など)、セキュリティ クリティカル コードにアクセスできるかどうかは、アセンブリの信頼レベルによって決まります。アセンブリが厳密な名前を持ち、グローバル アセンブリ キャッシュにインストールされている場合は、信頼されたアセンブリとして、セキュリティ クリティカルなメンバーを呼び出すことができます。 信頼されない場合は、透過的とマークされていなくても透過的として扱われ、セキュリティ クリティカルなメンバーにはアクセスできません。
 
-.NET Framework 4 のセキュリティ モデルの詳細については、「[.NET Framework におけるセキュリティの変更点](../../../docs/framework/security/security-changes.md)」を参照してください。
+.NET Framework 4 のセキュリティ モデルの詳細については、「[.NET Framework におけるセキュリティの変更点](../security/security-changes.md)」を参照してください。
 
 ## <a name="reflection-and-transparency"></a>リフレクションと透過
 
@@ -98,7 +98,7 @@ ms.locfileid: "67660883"
 
 ## <a name="serialization"></a>シリアル化
 
-シリアル化の目的で、<xref:System.Security.Permissions.SecurityPermission> に <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> フラグを指定することで、アクセシビリティに関係なく、シリアル化が可能な型のメンバーを取得および設定できるようになります。 このアクセス許可があると、コードで、インスタンスのプライベート状態を探索したり、変更したりできます。 型に対して適切なアクセス許可が与えられていると同時に、メタデータ内でシリアル化可能として[マークされている](../../../docs/standard/attributes/applying-attributes.md)必要があります。
+シリアル化の目的で、<xref:System.Security.Permissions.SecurityPermission> に <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> フラグを指定することで、アクセシビリティに関係なく、シリアル化が可能な型のメンバーを取得および設定できるようになります。 このアクセス許可があると、コードで、インスタンスのプライベート状態を探索したり、変更したりできます。 型に対して適切なアクセス許可が与えられていると同時に、メタデータ内でシリアル化可能として[マークされている](../../standard/attributes/applying-attributes.md)必要があります。
 
 ## <a name="parameters-of-type-methodinfo"></a>MethodInfo 型のパラメーター
 
@@ -117,9 +117,9 @@ ms.locfileid: "67660883"
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [セキュリティの変更](../../../docs/framework/security/security-changes.md)
-- [コード アクセス セキュリティ](../../../docs/framework/misc/code-access-security.md)
-- [リフレクション出力のセキュリティ関連事項](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [属性の適用](../../../docs/standard/attributes/applying-attributes.md)
-- [カスタム属性へのアクセス](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+- [セキュリティの変更](../security/security-changes.md)
+- [コード アクセス セキュリティ](../misc/code-access-security.md)
+- [リフレクション出力のセキュリティ関連事項](security-issues-in-reflection-emit.md)
+- [型情報の表示](viewing-type-information.md)
+- [属性の適用](../../standard/attributes/applying-attributes.md)
+- [カスタム属性へのアクセス](accessing-custom-attributes.md)

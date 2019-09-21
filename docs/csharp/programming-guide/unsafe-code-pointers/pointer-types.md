@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 704af9aae23571abdb82ae851066e3c03dbe7161
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 4d0801cd81e00c84be278b44730058798b0acfa9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433541"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588197"
 ---
 # <a name="pointer-types-c-programming-guide"></a>ポインター型 (C# プログラミング ガイド)
 
@@ -25,7 +25,7 @@ void* identifier; //allowed but not recommended
 
 ポインター型は [object](../../language-reference/keywords/object.md) を継承せず、ポインター型と `object` の間で変換を行う方法はありません。 また、ボックス化とボックス化解除もポインターをサポートしません。 ただし、異なるポインター型の間で変換したり、ポインター型と整数型の間で変換したりすることはできます。
 
-同じ 1 つの宣言で複数のポインターを宣言する場合、アスタリスク (*) は基底の型だけに記述します。各ポインター名のプレフィックスとしては使用しません。 次に例を示します。
+同じ 1 つの宣言で複数のポインターを宣言する場合、アスタリスク (*) は基底の型だけに記述します。各ポインター名のプレフィックスとしては使用しません。 例:
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -52,7 +52,7 @@ int* myVariable;
 
 この例の式 `*myVariable` は、`int` に含まれているアドレスの位置にある `myVariable` 変数を示しています。
 
-トピック「[fixed ステートメント](../../language-reference/keywords/fixed-statement.md)」および「[ポインター変換](../../programming-guide/unsafe-code-pointers/pointer-conversions.md)」に、ポインターの例がいくつか記載されています。 次の例は、`unsafe` キーワードと `fixed` ステートメントの使用例と、内部ポインターのインクリメント方法を示しています。  このコードは、コンソール アプリケーションの Main 関数に貼り付けて実行することができます これらの例は、[-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) コンパイラ オプションを設定してコンパイルする必要があります。
+トピック「[fixed ステートメント](../../language-reference/keywords/fixed-statement.md)」および「[ポインター変換](./pointer-conversions.md)」に、ポインターの例がいくつか記載されています。 次の例は、`unsafe` キーワードと `fixed` ステートメントの使用例と、内部ポインターのインクリメント方法を示しています。  このコードは、コンソール アプリケーションの Main 関数に貼り付けて実行することができます これらの例は、[-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) コンパイラ オプションを設定してコンパイルする必要があります。
 
 [!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
 
@@ -64,14 +64,14 @@ int* myVariable;
 
 次の表は、unsafe コンテキストでポインターに使用できる演算子とステートメントの一覧を示しています。
 
-|演算子/ステートメント|使用|
+|演算子/ステートメント|用途|
 |-------------------------|---------|
 |`*`|ポインターの間接参照を実行します。|
 |`->`|ポインター経由で構造体のメンバーにアクセスします。|
 |`[]`|ポインターにインデックスを付けます。|
 |`&`|変数のアドレスを取得します。|
-|`++` および `--`|ポインターをインクリメントおよびデクリメントします。|
-|`+` および `-`|ポインター演算を実行します。|
+|`++` と `--`|ポインターをインクリメントおよびデクリメントします。|
+|`+` と `-`|ポインター演算を実行します。|
 |`==`、`!=`、`<`、`>`、`<=`、`>=`|ポインターを比較します。|
 |[`stackalloc` 演算子](../../language-reference/operators/stackalloc.md)|スタックにメモリを割り当てます。|
 |[`fixed` ステートメント](../../language-reference/keywords/fixed-statement.md)|変数を一時的に固定して、そのアドレスを取得できるようにします。|

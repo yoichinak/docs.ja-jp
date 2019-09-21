@@ -4,12 +4,12 @@ description: .NET Core は、Windows、Linux、および Mac アプリを作成�
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 79a0c09074159160dd01b0c7970612f7058cc3fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6112851a3d9b46f02c26313e6537170786df10b
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614454"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117075"
 ---
 # <a name="net-core-guide"></a>.NET Core のガイド
 
@@ -21,9 +21,9 @@ ms.locfileid: "61614454"
 
 ## <a name="download-net-core-22"></a>.NET Core 2.2 のダウンロード
 
-[.NET Core  2.2 SDK](https://www.microsoft.com/net/download) をダウンロードして、Windows、macOS、または Linux マシンで .NET Core をお試しください。 Docker コンテナーを使用する方がよければ、[dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) にアクセスしてください。
+[.NET Core  2.2 SDK](https://dotnet.microsoft.com/download) をダウンロードして、Windows、macOS、または Linux マシンで .NET Core をお試しください。 Docker コンテナーを使用する方がよければ、[dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) にアクセスしてください。
 
-別の .NET Core バージョンを探している場合も、すべての .NET Core バージョンを [.NET Core のダウンロード](https://www.microsoft.com/net/download/archives)で入手できます。
+別の .NET Core バージョンを探している場合も、すべての .NET Core バージョンを [.NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core)で入手できます。
 
 ## <a name="net-core-22"></a>.NET Core 2.2
 
@@ -33,20 +33,20 @@ ms.locfileid: "61614454"
 
 .NET Core SDK をインストールしたらコマンド プロンプトを開きます。 次の `dotnet` コマンドを入力し、C# アプリケーションを作成して実行します。
 
-```console
+```dotnetcli
 dotnet new console
 dotnet run
 ```
 
 次の出力が表示されます。
 
-```console
+```output
 Hello World!
 ```
 
 ## <a name="support"></a>サポート
 
-.NET Core は、Microsoft Windows、macOS、Linux で[サポート](https://www.microsoft.com/net/support/policy)されています。 年に数回、通常は毎月、セキュリティと品質向上のために更新されます。
+.NET Core は、Microsoft Windows、macOS、Linux で[サポート](https://dotnet.microsoft.com/platform/support/policy)されています。 年に数回、通常は毎月、セキュリティと品質向上のために更新されます。
 
 .NET Core のバイナリ形式の配布は、Azure 内のマイクロソフトが管理するサーバーで構築されてテストされ、他のすべてのマイクロソフト製品と同様にサポートされます。
 

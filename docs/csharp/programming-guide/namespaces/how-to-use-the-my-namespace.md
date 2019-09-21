@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: 9621f6a01ef4e30bf34b97df3d2c3033e9b62a23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ff00a60d92ec6abbeb257abec76ed2812867f651
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316025"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588865"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>方法: My 名前空間を使用する (C# プログラミング ガイド)
 <xref:Microsoft.VisualBasic.MyServices> 名前空間 (Visual Basic では `My`) を使用すると、いくつもの .NET Framework クラスに簡単かつ直感的にアクセスでき、コンピューター、アプリケーション、設定、リソースなどと対話するコードを記述できます。 `MyServices` 名前空間は、もともとは Visual Basic で使用するものとして設計されましたが、C# アプリケーションでも使用できます。  
@@ -22,7 +22,7 @@ ms.locfileid: "59316025"
   
 #### <a name="to-add-a-reference-to-the-visual-basic-library"></a>Visual Basic ライブラリへの参照を追加するには  
   
-1. **ソリューション エクスプローラー**で、**[参照設定]** ノードを右クリックし、**[参照の追加]** をクリックします。  
+1. **ソリューション エクスプローラー**で、 **[参照設定]** ノードを右クリックし、 **[参照の追加]** をクリックします。  
   
 2. **[参照設定]** ダイアログ ボックスが表示されたら、一覧を下にスクロールし、Microsoft.VisualBasic.dll を選択します。  
   
@@ -41,6 +41,6 @@ ms.locfileid: "59316025"
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [名前空間](../../../csharp/programming-guide/namespaces/index.md)
-- [名前空間の使用](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+- [C# プログラミング ガイド](../index.md)
+- [名前空間](./index.md)
+- [名前空間の使用](./using-namespaces.md)

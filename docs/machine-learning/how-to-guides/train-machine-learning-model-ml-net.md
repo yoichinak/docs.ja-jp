@@ -1,16 +1,16 @@
 ---
 title: モデルのトレーニングと評価
 description: ML.NET を使用して、機械学習モデルの構築、メトリックの収集、およびパフォーマンスの測定を行う方法について説明します。 機械学習モデルによって、トレーニング データ内のパターンが識別され、新しいデータを使って予測が実行されます。
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: fc735f28bad91b9714d7e6bf2a9c7c620acacc4d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397642"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929342"
 ---
 # <a name="train-and-evaluate-a-model"></a>モデルのトレーニングと評価
 
@@ -20,7 +20,7 @@ ML.NET を使用して、機械学習モデルの構築、メトリックの収�
 
 機械学習モデルの目的は、トレーニング データ内のパターンを識別することです。 これらのパターンは、新しいデータを使用して予測を行うために使用されます。
 
-次のデータ モデルがあるとします。
+データは `HousingData` などのクラスでモデル化できます。
 
 ```csharp
 public class HousingData
@@ -38,7 +38,7 @@ public class HousingData
 }
 ```
 
-データを [`IDataView`](xref:Microsoft.ML.IDataView) に読み込みます。
+[`IDataView`](xref:Microsoft.ML.IDataView) にロードされた、次のデータがあるとします。
 
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -175,6 +175,7 @@ double rSquared = trainedModelMetrics.RSquared;
 ```
 
 前のコード サンプルの内容は次のとおりです。  
+
 1. テスト データ セットは、以前に定義されたデータ準備変換を使用して前処理されます。 
 2. トレーニング済み機械学習モデルは、テスト データに基づいて予測するために使用されます。
 3. `Evaluate` メソッドでは、テスト データ セットの `CurrentPrice` 列の値を新しく出力された予測の `Score` 列と比較して、回帰モデルのメトリックを計算します。そのうちの 1 つである R-2 乗値は `rSquared` 変数に格納されます。

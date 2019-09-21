@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751594"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796503"
 ---
-# <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 構造体
-アセンブリでは、1 つの属性に関する情報を格納および 3 つから成る`DWORD`秒。 各`DWORD`によって生成される文字バッファーへのオフセットです、`CurrentIntoBuffer`のメソッド、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)インターフェイス  
+# <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 構造体
+アセンブリ内の1つの属性に関する情報を格納し、 `DWORD`3 つので構成されます。 各`DWORD`は、 [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)インターフェイスの`CurrentIntoBuffer`メソッドによって生成される文字バッファーへのオフセットです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,20 +42,20 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`ofsNamespace`|最初の文字バッファーにオフセットします。 属性の名前空間ではなく、一連の null 文字は、このオフセットは追跡されません。 そのためは使用されません。|  
-|`ofsName`|文字バッファーへの 2 つ目のオフセット。 この場所は、属性の名前の先頭をマークします。|  
-|`ofsValue`|文字バッファーに 3 つ目のオフセット。 この場所は、属性の値の開始をマークします。|  
+|`ofsNamespace`|文字バッファー内の最初のオフセット。 このオフセットの後には、属性の名前空間は含まれませんが、一連の null 文字が続きます。 したがって、これは使用されません。|  
+|`ofsName`|文字バッファー内の2番目のオフセット。 この場所は、属性の名前の先頭を示します。|  
+|`ofsValue`|文字バッファーへの3番目のオフセット。 この場所は、属性の値の開始を示します。|  
   
 ## <a name="sample"></a>サンプル  
- 次の例は、最終的に設定されているいくつかの基本的な手順を示しています。`IDENTITY_ATTRIBUTE_BLOB`構造体。  
+ 次の例は、最終的に構造が設定`IDENTITY_ATTRIBUTE_BLOB`される基本的な手順を示しています。  
   
-1. 取得、 [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)アセンブリ。  
+1. アセンブリの[IReferenceIdentity](ireferenceidentity-interface.md)を取得します。  
   
-2. 呼び出す、`IReferenceIdentity::EnumAttributes`メソッドを取得し、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)します。  
+2. `IReferenceIdentity::EnumAttributes` メソッドを呼び出し、[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) を取得します。  
   
-3. 文字バッファーを作成し、としてキャスト、`IDENTITY_ATTRIBUTE_BLOB`構造体。  
+3. 文字バッファーを作成し、それを`IDENTITY_ATTRIBUTE_BLOB`構造体としてキャストします。  
   
-4. 呼び出す、`CurrentIntoBuffer`のメソッド、`IEnumIDENTITY_ATTRIBUTE`インターフェイス。 このメソッドは、属性をコピー `Namespace`、 `Name`、および`Value`文字バッファーにします。 これらの文字列に 3 つのオフセットで使用可能になる、`IDENTITY_ATTRIBUTE_BLOB`構造体。  
+4. インターフェイスのメソッドを`CurrentIntoBuffer`呼び出します。 `IEnumIDENTITY_ATTRIBUTE` このメソッドは、属性`Namespace` `Name`、、および`Value`を文字バッファーにコピーします。 これらの文字列への3つのオフセットは、 `IDENTITY_ATTRIBUTE_BLOB`構造体で使用できるようになります。  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -225,26 +225,26 @@ Exit:
  C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>出力例  
- Culture = neutral  
+ Culture = ニュートラル  
   
- 名前 = システム  
+ 名前 = System  
   
  processorArchitecture = MSIL  
   
  PublicKeyToken = b77a5c561934e089  
   
- バージョン 2.0.0.0 を =  
+ Version = 2.0.0.0  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Isolation.h  
+ **ヘッダー:** 分離 .h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IReferenceIdentity インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
-- [IEnumIDENTITY_ATTRIBUTE インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
-- [IDENTITY_ATTRIBUTE 構造体](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
-- [Fusion 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [IReferenceIdentity インターフェイス](ireferenceidentity-interface.md)
+- [IEnumIDENTITY_ATTRIBUTE インターフェイス](ienumidentity-attribute-interface.md)
+- [IDENTITY_ATTRIBUTE 構造体](identity-attribute-structure.md)
+- [Fusion 構造体](fusion-structures.md)

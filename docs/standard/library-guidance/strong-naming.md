@@ -4,16 +4,16 @@ description: .NET ライブラリに対する厳密な名前付けに関する�
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 79e44e89a94c1948ff29b9a8161f852c3a7c8cbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3a623f65d95d776e45af245a1fe241cc5ee25b93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640795"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70968969"
 ---
 # <a name="strong-naming"></a>厳密な名前付け
 
-厳密な名前付けとは、キーを使用してアセンブリに署名し、[厳格な名前付きのアセンブリ](../../framework/app-domains/strong-named-assemblies.md)を生成することです。 アセンブリに厳密な名前が付けられている場合、名前とアセンブリのバージョン番号に基づいて一意の ID が作成され、アセンブリの競合を防ぐのに役立ちます。
+厳密な名前付けとは、キーを使用してアセンブリに署名し、[厳格な名前付きのアセンブリ](../assembly/strong-named.md)を生成することです。 アセンブリに厳密な名前が付けられている場合、名前とアセンブリのバージョン番号に基づいて一意の ID が作成され、アセンブリの競合を防ぐのに役立ちます。
 
 厳密な名前付けの欠点は、Windows 上の .NET Framework で、アセンブリに厳密な名前が付けられると、アセンブリの厳密な読み込みが有効になることです。 厳密な名前付きのアセンブリの参照は、アセンブリによって参照されるバージョンと正確に一致する必要があります。その場合、開発者には、アセンブリを使用する際に[バインド リダイレクトの構成](../../framework/configure-apps/redirect-assembly-versions.md)が強制されます。
 

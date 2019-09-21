@@ -4,12 +4,12 @@ description: .NET でネイティブ コンポーネントとやり取りする�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063078"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923762"
 ---
 # <a name="native-interoperability-best-practices"></a>ネイティブ相互運用性のベスト プラクティス
 
@@ -33,7 +33,7 @@ ms.locfileid: "65063078"
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  既定値のままにします  | これが明示的に false に設定されている場合、失敗した HRESULT の戻り値は例外になります (そして結果として定義内の戻り値は null になります)。|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | API によって異なります  | API が GetLastError を使用し、Marshal.GetLastWin32Error を使用して値を取得する場合は、true に設定します。 API がエラーがあるという条件を設定している場合は、誤って上書きされないように他の呼び出しを行う前にエラーを取得します。|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None` (`CharSet.Ansi` の動作にフォールバックします)  | 定義内に文字列または文字が存在する場合は、明示的に `CharSet.Unicode` または `CharSet.Ansi` を使用します。 | これは、文字列のマーシャリング動作と `false` の場合の `ExactSpelling` の動作を指定します。 Unix では `CharSet.Ansi` は実際には UTF8 である点に注意してください。 "_ほとんど_" の場合、Windows では Unicode が使用され、Unix では UTF8 が使用されます。 詳細については、[文字セットのドキュメント](./charset.md)を参照してください。 |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None` (`CharSet.Ansi` の動作にフォールバックします)  | 定義内に文字列または文字が存在する場合は、明示的に `CharSet.Unicode` または `CharSet.Ansi` を使用します | これは、文字列のマーシャリング動作と `false` の場合の `ExactSpelling` の動作を指定します。 Unix では `CharSet.Ansi` は実際には UTF8 である点に注意してください。 "_ほとんど_" の場合、Windows では Unicode が使用され、Unix では UTF8 が使用されます。 詳細については、[文字セットのドキュメント](./charset.md)を参照してください。 |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | ランタイムで `CharSet` 設定の値に応じてサフィックスが "A" または "W" (`CharSet.Ansi` の場合は "A"、`CharSet.Unicode` の場合は "W") の代替の関数名が検索されないときに、これを true に設定し、わずかなパフォーマンス上のメリットを得ます。 |
 
 ## <a name="string-parameters"></a>文字列パラメーター
@@ -61,12 +61,13 @@ CharSet が Unicode の場合または引数が `[MarshalAs(UnmanagedType.LPWSTR
 
 **✔️ 推奨**: `ArrayPool` から `char[]` を使用するようにします。
 
-文字列のマーシャリングの詳細については、「[文字列に対する既定のマーシャリング](../../framework/interop/default-marshaling-for-strings.md)」と「[Customizing string marshalling (文字列のマーシャリングのカスタマイズ)](customize-parameter-marshaling.md#customizing-string-parameters)」を参照してください。
+文字列のマーシャリングの詳細については、「[文字列に対する既定のマーシャリング](../../framework/interop/default-marshaling-for-strings.md)」と「[文字列パラメーターのカスタマイズ](customize-parameter-marshaling.md#customizing-string-parameters)」を参照してください。
 
 > __Windows 固有__  
 > `[Out]` 文字列の場合、CLR は文字列を解放するために既定で `CoTaskMemFree` を使用します。また、`UnmanagedType.BSTR` とマークされている文字列の場合は `SysStringFree` を使用します。  
 **出力文字列バッファーがあるほとんどの API の場合:**  
-> 渡される文字数には、常に null が含まれています。 返された値が、渡された文字数より少ない場合、呼び出しは成功し、値は末尾の null を "*除いた*" 文字数になります。 それ以外の場合、カウントは null 文字を "*含む*" バッファーの必要なサイズになります。  
+> 渡される文字数には、常に null が含まれています。 返された値が、渡される文字数より少ない場合、呼び出しは成功し、値は末尾の null を ''*除いた*'' 文字数になります。 それ以外の場合、カウントは null 文字を "*含む*" バッファーの必要なサイズになります。  
+>
 > - 5 を渡し、4 を受け取る:文字列の長さは 4 文字であり、末尾に null が付きます。
 > - 5 を渡し、6 を受け取る:文字列の長さは 5 文字であり、null を保持するために 6 文字のバッファーが必要です。  
 > [Windows の文字列のデータ型](/windows/desktop/Intl/windows-data-types-for-strings)

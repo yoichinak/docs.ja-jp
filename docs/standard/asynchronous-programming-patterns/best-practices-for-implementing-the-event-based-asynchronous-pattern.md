@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 26e1fd4231964be5448229a6b3c7d90c0ba64499
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 561d0759af4f7557bae39540cbb00f8038726ddc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882511"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950805"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンを実装するための推奨される手順
 イベントベースの非同期パターンは、使い慣れたイベントおよびデリゲートのセマンティクスと共に、クラス内の非同期動作を公開する効果的な方法を提供します。 イベント ベースの非同期パターンを実装するには、いくつかの固有の動作要件に従う必要があります。 以降のセクションでは、イベントベースの非同期パターンに従うクラスを実装する際に検討すべき要件とガイドラインについて説明します。  
@@ -125,7 +125,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
  進行状況、インクリメンタル結果、および完了をクライアントに報告するため、<xref:System.ComponentModel.AsyncOperation.Post%2A> で <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> メソッドと <xref:System.ComponentModel.AsyncOperation> メソッドを呼び出します。 <xref:System.ComponentModel.AsyncOperation> は、クライアントのイベント ハンドラーに対する呼び出しを適切なスレッドまたはコンテキストにマーシャリングします。  
   
 > [!NOTE]
->  アプリケーション モデルのポリシーに対し明示的に準拠しないものの、イベント ベースの非同期パターンを使用する他のメリットを利用したい場合は、これらの規則を回避できます。 たとえば、Windows Forms でのクラス操作をフリー スレッド化するとします。 開発者がフリー スレッド化クラスの暗黙的な制限を理解している場合は、フリースレッド化クラスを作成できます。 コンソール アプリケーションは <xref:System.ComponentModel.AsyncOperation.Post%2A> 呼び出しの実行を同期しません。 これが原因で、`ProgressChanged` イベントが正しくない順序で発生することがあります。 <xref:System.ComponentModel.AsyncOperation.Post%2A> 呼び出しを順次実行するには、<xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> クラスを実装およびインストールします。  
+> アプリケーション モデルのポリシーに対し明示的に準拠しないものの、イベント ベースの非同期パターンを使用する他のメリットを利用したい場合は、これらの規則を回避できます。 たとえば、Windows Forms でのクラス操作をフリー スレッド化するとします。 開発者がフリー スレッド化クラスの暗黙的な制限を理解している場合は、フリースレッド化クラスを作成できます。 コンソール アプリケーションは <xref:System.ComponentModel.AsyncOperation.Post%2A> 呼び出しの実行を同期しません。 これが原因で、`ProgressChanged` イベントが正しくない順序で発生することがあります。 <xref:System.ComponentModel.AsyncOperation.Post%2A> 呼び出しを順次実行するには、<xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> クラスを実装およびインストールします。  
   
  <xref:System.ComponentModel.AsyncOperation> と <xref:System.ComponentModel.AsyncOperationManager> を使用して非同期操作を使用可能にする方法の詳細については、「[方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)」を参照してください。  
   

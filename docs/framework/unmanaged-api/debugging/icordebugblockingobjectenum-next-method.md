@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fd82418da26ab0cd32b007b4613d588dfa695eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e94e4da0eea06ce9cc0110002b1def9e4dd4989
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745291"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939151"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next メソッド
-指定した数を取得[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)列挙体の現在位置からのオブジェクト。  
+現在の位置から開始して、指定した数の[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)オブジェクトを列挙から取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,13 +38,13 @@ HRESULT Next([in] ULONG  celt,
   
 ## <a name="parameters"></a>パラメーター  
  `celt`  
- [in]取得するオブジェクトの数。  
+ から取得するオブジェクトの数。  
   
  `values`  
- [out]ポインターの配列[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)オブジェクト。  
+ 入出力[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)オブジェクトへのポインターの配列。  
   
  `pceltFetched`  
- [out]取得されたオブジェクトの数へのポインター。  
+ 入出力取得されたオブジェクトの数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT を返します。  
@@ -55,19 +55,19 @@ HRESULT Next([in] ULONG  celt,
 |S_FALSE|`pceltFetched` は `celt` と一致しません。|  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドが機能などの一般的な COM の列挙子。  
+ このメソッドは、一般的な COM 列挙子と同様に機能します。  
   
- 入力配列の値は以上である必要がありますサイズの`celt`します。 配列で塗りつぶされますか、[次へ]`celt`値よりも少ない場合は列挙体で、または残りのすべての値を持つ`celt`ままにします。 このメソッドが戻るとき`pceltFetched`取得された値の数で塗りつぶされます。 場合`values`無効なポインターが格納または未満であるバッファーを指す`celt`、または`pceltFetched`無効なポインターが、結果は未定義です。  
+ 入力配列の値は、少なくともサイズ`celt`にする必要があります。 配列には、列挙体の次`celt`の値、または残りのすべての値`celt`を格納します。 このメソッドから制御が`pceltFetched`戻るときに、取得された値の数がに格納されます。 に`values`無効なポインターが含まれている場合、または`celt`より小さいバッファー `pceltFetched`を指している場合、またはが無効なポインターの場合、結果は未定義になります。  
   
 > [!NOTE]
->  ただし、 [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)構造体を解放する必要はありません、その内部に"ICorDebugValue"インターフェイスが解放する必要があります。  
+> [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)構造体を解放する必要はありませんが、その中の "ICorDebugValue" インターフェイスは解放する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

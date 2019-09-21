@@ -5,16 +5,18 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 835e7c0cffbcd5857c33694586b4d63511ecadb8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614870"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926294"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core と .NET Standard の単体テスト
 
 .NET core では、簡単に単体テストを作成できます。 この記事では、単体テストについて紹介し、その他の種類のテストとの違いを示します。 ページの下部にあるリンクされたリソースは、テスト プロジェクトをソリューションに追加する方法を示します。 テスト プロジェクトを設定した後は、コマンドラインまたは Visual Studio を使用して単体テストを実行することができます。
+
+**ASP.NET Core** プロジェクトをテストしている場合は、「[ASP.NET Core の統合テスト](/aspnet/core/test/integration-tests#test-app-prerequisites)」を参照してください。
 
 .NET Core 2.0 以降では [.NET Standard 2.0](../../standard/net-standard.md) がサポートされます。単体テストはそのライブラリを使用して説明します。
 
@@ -36,11 +38,13 @@ C#、F#、Visual Basic 向けに組み込まれている .NET Core 2.0 以降の
 .NET Core プロジェクトでの単体テストの詳細については、次を参照してください。
 
 次に対する .NET Core 単体テスト プロジェクトがサポートされます。
+
 * [C#](../../csharp/index.md)
 * [F#](../../fsharp/index.md)
 * [Visual Basic](../../visual-basic/index.md) 
 
 また、次から選択することもできます。
+
 * [xUnit](https://xunit.github.io) 
 * [NUnit](https://nunit.org)
 * [MSTest](https://github.com/Microsoft/testfx-docs)

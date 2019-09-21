@@ -1,5 +1,5 @@
 ---
-title: '方法: 分割および連結コード (Visual Basic) ステートメント'
+title: '方法: コード内でのステートメントの分割と結合 (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb._
@@ -21,43 +21,44 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: d3656b924ebaca67c90dc602701c4cef9ce088b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0a77b161d81271a4cb7eecf2982a287debee6a5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648788"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991725"
 ---
-# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>方法: 分割および連結コード (Visual Basic) ステートメント
-コードを書くときにステートメントが長くなり、コード エディターでの水平方向スクロールが必要になるを作成する可能性があります。 方法は、これには影響しませんが、コードを実行、困難や他のユーザーをモニターに表示されるコードを読み取る。 このような場合は、1 つの長いステートメントを複数行に分割を検討してください。  
-  
-### <a name="to-break-a-single-statement-into-multiple-lines"></a>複数の行に 1 つのステートメントを分割するには  
-  
-- アンダー スコアである行連結文字を使用して (`_`)、改行をポイントします。 アンダースコアは、スペースの直後、および行終端記号 (キャリッジ リターン) の直前に指定する必要があります。  
-  
-    > [!NOTE]
-    >  場合によっては、行連結文字を省略した場合、Visual Basic コンパイラ暗黙的には引き続きステートメントで次のコード行。 行連結文字を省略できます構文要素については、「暗黙的な行継続」を参照してください[ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)します。  
-  
-     次の例では、ステートメントは行連結文字をすべて終了して 4 つの行が最後の行に分割されます。  
-  
-     [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]  
-  
-     このシーケンスを使用して、コード読みやすく、オンラインとタイミングの両方を印刷します。  
-  
-     行連結文字は、行の最後の文字である必要があります。 その他の同じ行に、それをフォローできません。  
-  
-     いくつかの制限の存在は行連結文字を使用することができますかたとえば、引数の名前の途中では使用できません。 行連結文字の引数リストを分割することができますが、個々 の引数の名前は残す必要があります。  
-  
-     行連結文字を使用してコメントを続行することはできません。 コンパイラは、特別な意味のコメント内の文字を確認しません。 複数行のコメントのコメント記号を繰り返します (`'`) 行ごとにします。  
-  
- 別の行に各ステートメントを配置することは推奨される方法が、Visual Basic は同じ行に複数のステートメントを配置することをもできます。  
-  
-### <a name="to-place-multiple-statements-on-the-same-line"></a>同じ行に複数のステートメントを配置するには  
-  
-- ステートメントをコロンで区切ります (`:`)、次の例のようにします。  
-  
-     [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
-  
+# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>方法: コード内でのステートメントの分割と結合 (Visual Basic)
+
+コードを記述するときに、コードエディターで水平スクロールを必要とする長いステートメントを作成する場合があります。 これはコードの実行方法には影響しませんが、モニターに表示されるコードをユーザーまたは他のユーザーが読み取ることが困難になります。 このような場合は、1つの long ステートメントを複数の行に分割することを検討してください。
+
+## <a name="to-break-a-single-statement-into-multiple-lines"></a>1つのステートメントを複数の行に分割するには
+
+行連結文字を使用します。これは、改行`_`する位置で、アンダースコア () です。 アンダースコアは、直後にスペースを付け、その直後に行終端記号 (キャリッジリターン) を付けるか、または (バージョン16.0 以降) コメントの後に復帰を続けます。
+
+  > [!NOTE]
+  > 場合によっては、行連結文字を省略すると、Visual Basic コンパイラは、次のコード行でステートメントを暗黙的に続行します。 行連結文字を省略できる構文要素の一覧については、「[ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)」の「暗黙的な行の連結」を参照してください。
+
+  次の例では、ステートメントは、行連結文字が最後の行以外のすべてを終了する4行に分割されます。
+
+  [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]
+
+  このシーケンスを使用すると、コードがオンラインでも印刷時でも読みやすくなります。
+
+  行連結文字は、行の最後の文字である必要があります。 同じ行の他の何にも従うことはできません。
+
+  行連結文字を使用できる場所については、いくつかの制限があります。たとえば、引数名の途中で使用することはできません。 行連結文字を使用して引数リストを分割することはできますが、引数の個々の名前はそのままにしておく必要があります。
+
+  行連結文字を使用してコメントを続行することはできません。 コンパイラは、コメント内の文字が特別な意味を持つかどうかを確認しません。 複数行のコメントの場合は、各行でコメント記号`'`() を繰り返します。
+
+ 各ステートメントを別々の行に配置することをお勧めしますが、Visual Basic 複数のステートメントを同じ行に配置することもできます。
+
+## <a name="to-place-multiple-statements-on-the-same-line"></a>複数のステートメントを同じ行に配置するには
+
+次の例のように、`:`ステートメントをコロン () で区切ります。
+
+  [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]
+
 ## <a name="see-also"></a>関連項目
 
 - [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

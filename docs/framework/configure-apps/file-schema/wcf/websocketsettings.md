@@ -2,19 +2,22 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80784f40130e572ae374bd9b26e701360dbfcaa5
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769747"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399133"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings >
 Web ソケット設定を指定するために使用される構成要素。  
   
-\<system.ServiceModel >  
-\<bindings>  
-\<netHttpBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<webSocketSettings >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,11 +54,11 @@ Web ソケット設定を指定するために使用される構成要素。
   
 ## <a name="transportusage-attribute"></a>transportUsage 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |WhenDuplex|コントラクトが双方向の場合に、Web ソケット プロトコルを使用します。|  
 |Always|コントラクトにかかわらず、常にWeb ソケット プロトコルを使用します。|  
-|Never|Web ソケット プロトコルを使用しません。|  
+|しない|Web ソケット プロトコルを使用しません。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -67,7 +70,7 @@ Web ソケット設定を指定するために使用される構成要素。
 |\<netHttpBinding>|NetHttpBinding を指定します。|  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、 \<webSocketSettings > 要素。  
+ 次の例は、webSocketSettings > 要素\<の使用方法を示しています。  
   
 ```xml  
 <netHttpBinding>
@@ -90,7 +93,7 @@ Web ソケット設定を指定するために使用される構成要素。
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [バインディング](../../../wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

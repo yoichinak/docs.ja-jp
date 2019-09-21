@@ -8,18 +8,18 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 2a043e71e15de8ffbd4a0e7296545b7af35a3e3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916644"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894273"
 ---
 # <a name="service-operations-wcf-data-services"></a>サービス操作 (WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、データ サービスでサービス操作を定義して、サーバーでメソッドを公開できます。 その他のデータ サービス リソースと同様に、サービス操作は URI によってアドレス指定できます。 サービス操作では、データ サービスでビジネス ロジックを公開できます (検証ロジックの実装、ロール ベースのセキュリティの適用、特殊なクエリ機能の公開など)。 サービス操作は、<xref:System.Data.Services.DataService%601> から派生するデータ クラスに追加されるメソッドです。 その他のすべてのデータ サービス リソースと同様に、パラメーターをサービス操作メソッドに指定できます。 たとえば、次のサービス操作 URI (に基づいて、[クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)データ サービス) の値を渡します`London`を`city`パラメーター。
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、データ サービスでサービス操作を定義して、サーバーでメソッドを公開できます。 その他のデータ サービス リソースと同様に、サービス操作は URI によってアドレス指定できます。 サービス操作では、データ サービスでビジネス ロジックを公開できます (検証ロジックの実装、ロール ベースのセキュリティの適用、特殊なクエリ機能の公開など)。 サービス操作は、<xref:System.Data.Services.DataService%601> から派生するデータ クラスに追加されるメソッドです。 その他のすべてのデータ サービス リソースと同様に、パラメーターをサービス操作メソッドに指定できます。 たとえば、次のサービス操作 URI ([クイックスタート](quickstart-wcf-data-services.md)データサービスに基づく) は、値`London`を`city`パラメーターに渡します。
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 ```
 
@@ -28,9 +28,9 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
 [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]
 
-<xref:System.Data.Services.DataService%601.CurrentDataSource%2A> の <xref:System.Data.Services.DataService%601> を使用して、データ サービスが使用するデータ ソースに直接アクセスできます。 詳細については、「[方法 :サービス操作を定義](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)します。
+<xref:System.Data.Services.DataService%601.CurrentDataSource%2A> の <xref:System.Data.Services.DataService%601> を使用して、データ サービスが使用するデータ ソースに直接アクセスできます。 詳細については、「[方法 :サービス操作](how-to-define-a-service-operation-wcf-data-services.md)を定義します。
 
-.NET Framework クライアント アプリケーションからサービス操作を呼び出す方法については、次を参照してください。[サービス操作を呼び出す](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)します。
+.NET Framework クライアントアプリケーションからサービス操作を呼び出す方法については、「[サービス操作の呼び出し](calling-service-operations-wcf-data-services.md)」を参照してください。
 
 ## <a name="service-operation-requirements"></a>サービス操作の要件
 
@@ -70,7 +70,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 
 メソッドの名前を URI の最初のパス セグメントに配置することによってサービス操作のアドレスを指定できます。 たとえば、次の URI の場合、`GetOrdersByState` オブジェクトの <xref:System.Linq.IQueryable%601> コレクションを返す `Orders` 操作にアクセスします。
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=true
 ```
 
@@ -86,7 +86,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
 
 サービス操作の戻り値の型によっては、パス セグメントやクエリ オプションをさらに URI に追加できます。 たとえば、次の URI は、関連する `GetOrdersByCity` オブジェクトと一緒に <xref:System.Linq.IQueryable%601> オブジェクトの `Orders` コレクションを `RequiredDate` の降順で返す `Order_Details` 操作にアクセスします。
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc
 ```
 
@@ -100,7 +100,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 > [!NOTE]
 > 元になるエンティティ セットの制限アクセスによって非表示にされている戻り値の型がサービス操作にある場合、サービス操作はクライアント アプリケーションで使用できません。
 
-詳細については、「[方法 :サービス操作を定義](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)します。
+詳細については、「[方法 :サービス操作](how-to-define-a-service-operation-wcf-data-services.md)を定義します。
 
 ## <a name="raising-exceptions"></a>例外の発生
 
@@ -111,4 +111,4 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 
 ## <a name="see-also"></a>関連項目
 
-- [インターセプター](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+- [インターセプター](interceptors-wcf-data-services.md)

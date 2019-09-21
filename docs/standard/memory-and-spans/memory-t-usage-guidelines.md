@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 171f6fd5a8b55d2e96a90a90d011a8166be6759d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68362908"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666412"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> と Span\<T> の使用ガイドライン
 
@@ -78,7 +78,7 @@ class Program
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
-この例を [`using`](~/docs/csharp/language-reference/keywords/using-statement.md) と記述することもできます。
+この例を [`using`](../../csharp/language-reference/keywords/using-statement.md) と記述することもできます。
 
 [!code-csharp[ownership-using](~/samples/snippets/standard/buffers/memory-t/owner-using/owner-using.cs)]
 
@@ -138,7 +138,7 @@ void DisplayBufferToConsole(ReadOnlyMemory<char> buffer);
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-`DisplayBufferToConsole` メソッドは、考えられるほぼすべてのバッファー型 (`T[]`、[stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) で割り当てられたストレージなど) で動作します。 <xref:System.String> を直接渡すこともできます。
+`DisplayBufferToConsole` メソッドは、考えられるほぼすべてのバッファー型 (`T[]`、[stackalloc](../../csharp/language-reference/operators/stackalloc.md) で割り当てられたストレージなど) で動作します。 <xref:System.String> を直接渡すこともできます。
 
 **規則 3:メソッドが Memory\<T> を受け入れて `void` を返した場合、メソッドが返した後に Memory\<T> インスタンスを使用してはならない。**
 
@@ -246,7 +246,7 @@ class Person
 
 **規則 9:同期的 p/invoke メソッドをラップしている場合、API は Span\<T> をパラメーターとして受け入れる必要がある。**
 
-規則 1 に従うと、<xref:System.Span%601> は一般に同期的 API に使用するために適した型です。 次の例のように、[`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) キーワードを介して <xref:System.Span%601> インスタンスを固定できます。
+規則 1 に従うと、<xref:System.Span%601> は一般に同期的 API に使用するために適した型です。 次の例のように、[`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) キーワードを介して <xref:System.Span%601> インスタンスを固定できます。
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -286,7 +286,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 
 **規則 10:同期的 p/invoke メソッドをラップしている場合、API は Memory\<T> をパラメーターとして受け入れる必要がある。**
 
-非同期操作で [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) キーワードは使用できないので、インスタンスが表す連続するメモリの種類に関係なく、<xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> メソッドを使用して <xref:System.Memory%601> インスタンスを固定します。 次の例は、この API を使用して非同期の p/invoke 呼び出しを実行する方法を示しています。
+非同期操作で [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) キーワードは使用できないので、インスタンスが表す連続するメモリの種類に関係なく、<xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> メソッドを使用して <xref:System.Memory%601> インスタンスを固定します。 次の例は、この API を使用して非同期の p/invoke 呼び出しを実行する方法を示しています。
 
 ```csharp
 using System.Runtime.InteropServices;

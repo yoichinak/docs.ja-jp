@@ -1,5 +1,5 @@
 ---
-title: '方法: 関連エンティティ (WCF Data Services) を読み込む'
+title: '方法: 関連エンティティの読み込み (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
-ms.openlocfilehash: 75e1d583d2a4d519619a440800cdeb1403fedac2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14b0ba988c96c270610208a4f944083bb333eac5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936497"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780018"
 ---
-# <a name="how-to-load-related-entities-wcf-data-services"></a>方法: 関連エンティティ (WCF Data Services) を読み込む
-関連付けられたエンティティを [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] で読み込む必要がある場合、<xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> クラスで <xref:System.Data.Services.Client.DataServiceContext> メソッドを使用できます。 使用することも、<xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>メソッドを<xref:System.Data.Services.Client.DataServiceQuery%601>に関連するエンティティを同じクエリの応答で頻繁に読み込むことが必要です。  
+# <a name="how-to-load-related-entities-wcf-data-services"></a>方法: 関連エンティティの読み込み (WCF Data Services)
+関連付けられたエンティティを [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] で読み込む必要がある場合、<xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> クラスで <xref:System.Data.Services.Client.DataServiceContext> メソッドを使用できます。 また、の<xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>メソッドを使用して<xref:System.Data.Services.Client.DataServiceQuery%601> 、関連エンティティを同じクエリ応答で集中的に読み込むように要求することもできます。  
   
- このトピックの例では、Northwind サンプル データ サービスおよび自動生成されたクライアント データ サービス クラスを使用します。 このサービスとクライアント データ クラスを作成を完了すると、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)します。  
+ このトピックの例では、Northwind サンプル データ サービスおよび自動生成されたクライアント データ サービス クラスを使用します。 このサービスとクライアントデータクラスは、 [WCF Data Services のクイックスタート](quickstart-wcf-data-services.md)を完了したときに作成されます。  
   
 ## <a name="example"></a>例  
  次の例は、返される各 `Customer` インスタンスに関連付けられた `Orders` を明示的に読み込む方法を示します。  
@@ -34,4 +34,4 @@ ms.locfileid: "61936497"
   
 ## <a name="see-also"></a>関連項目
 
-- [データ サービスに対するクエリ](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [データ サービスに対するクエリ](querying-the-data-service-wcf-data-services.md)

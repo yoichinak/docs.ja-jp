@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 75aec187452e2f9f442a5d4856fe6777c03f34c1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ea0fbceb1e778a2f26e0625a337b803f417b59eb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741983"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777249"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob メソッド
-Win32 リソースの blob と関連付けられているリソースを解放します。  
+Win32 リソース blob と関連付けられているリソースを解放します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,16 +36,16 @@ HRESULT FreeWin32ResBlob(
   
 ## <a name="parameters"></a>パラメーター  
  `ppResBlob`  
- 解放されるリソースの blob。 このメソッドは、blob のポインターを NULL に割り当てます。  
+ 解放されるリソース blob。 このメソッドは、blob ポインターを NULL に割り当てます。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

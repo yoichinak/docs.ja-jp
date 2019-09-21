@@ -8,18 +8,18 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2929167f5a7de96a868cd1ac884d2203d09dfb6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705169"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927530"
 ---
 # <a name="oidmap-element"></a>\<oidMap > 要素
-クラスへの ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。  
+クラスに対する asn.1 オブジェクト識別子 (OID) マッピングが含まれています。  
   
  \<configuration>  
-\<mscorlib>  
+\<mscorlib >  
 \<cryptographySettings >  
 \<oidMap>  
   
@@ -40,7 +40,7 @@ ms.locfileid: "61705169"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<oidEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|ASN.1 OID をフレンドリ名にマップします。|  
+|[\<oidEntry>](oidentry-element.md)|Asn.1 OID をフレンドリ名にマップします。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -51,7 +51,7 @@ ms.locfileid: "61705169"
 |`mscorlib`|`cryptographySettings`要素を含んでいます。|  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、  **\<oidMap >** 要素にそのハッシュ アルゴリズムの実装に ripemd-160 のハッシュ アルゴリズムの OID のマッピングが含まれます。  
+ 次の例では、  **\<oidMap >** 要素を使用して、RIPEMD-160 ハッシュアルゴリズムの OID とそのハッシュアルゴリズムの実装とのマッピングを格納する方法を示します。  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,8 @@ ms.locfileid: "61705169"
   
 ## <a name="see-also"></a>関連項目
 
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [暗号化アルゴリズムへのオブジェクト ID の割り当て](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [構成ファイル スキーマ](../index.md)
+- [暗号化設定スキーマ](index.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [暗号化クラスの設定](../../configure-cryptography-classes.md)
+- [暗号化アルゴリズムへのオブジェクト ID の割り当て](../../map-object-identifiers-to-cryptography-algorithms.md)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 451893cf09b0d1ebdfb33d0020376aa35240b6d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8c8e1b0d9a79ff22f3194e86cd580f3a7e199b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650994"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962028"
 ---
 # <a name="building-xml-schemas"></a>XML スキーマの作成
 <xref:System.Xml.Schema?displayProperty=nameWithType> 名前空間のクラスは、W3C (World Wide Web Consortium) 勧告『XML Schema』で定義された構造に割り当てられ、メモリ内に XML スキーマを作成する場合に使用できます。  
@@ -35,14 +35,14 @@ ms.locfileid: "54650994"
  要素および属性のコンテンツは、その型によって定義されます。 組み込みのスキーマの型を持つ要素と属性を作成するには、<xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> クラスを使用する組み込みの修飾名を使用して、<xref:System.Xml.Schema.XmlSchemaElement> クラスまたは <xref:System.Xml.Schema.XmlSchemaAttribute> クラスの <xref:System.Xml.XmlQualifiedName> プロパティを設定します。 要素と属性のユーザー定義型を作成するには、<xref:System.Xml.Schema.XmlSchemaSimpleType> または <xref:System.Xml.Schema.XmlSchemaComplexType> クラスを使用して単純型または複合型を新しく作成します。  
   
 > [!NOTE]
->  要素または属性の匿名の子である名前のない単純型または複合型 (属性に適用されるのは単純型のみ) を作成するには、<xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> クラスまたは <xref:System.Xml.Schema.XmlSchemaElement> クラスの <xref:System.Xml.Schema.XmlSchemaAttribute> プロパティではなく、<xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> クラスまたは <xref:System.Xml.Schema.XmlSchemaElement> クラスの <xref:System.Xml.Schema.XmlSchemaAttribute> プロパティを設定します。  
+> 要素または属性の匿名の子である名前のない単純型または複合型 (属性に適用されるのは単純型のみ) を作成するには、<xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> クラスまたは <xref:System.Xml.Schema.XmlSchemaElement> クラスの <xref:System.Xml.Schema.XmlSchemaAttribute> プロパティではなく、<xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> クラスまたは <xref:System.Xml.Schema.XmlSchemaElement> クラスの <xref:System.Xml.Schema.XmlSchemaAttribute> プロパティを設定します。  
   
  XML スキーマを使用すると、匿名の単純型と名前付きの単純型の両方を、他の単純型 (組み込み型またはユーザー定義型) から制限付きで派生させるか、または、他の単純型のリストまたは和集合として作成することができます。 <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> クラスを使用して単純型を作成する場合には、組み込みの `xs:string` 型を制限します。 また、<xref:System.Xml.Schema.XmlSchemaSimpleTypeList> または <xref:System.Xml.Schema.XmlSchemaSimpleTypeUnion> クラスを使用すると、リストまたは和集合の型を作成できます。 <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A?displayProperty=nameWithType> プロパティは、単純型の制限、リスト、または和集合を表します。  
   
  以下のコード サンプルでは、`FirstName` 要素の型は組み込み型の `xs:string`、`LastName` 要素の型は組み込み型 `xs:string` の制限となる名前付き単純型 (`MaxLength` ファセット値 20)、`CustomerId` 属性の型は組み込み型 `xs:positiveInteger` です。 `Customer` 要素は匿名の複合型で、そのパーティクルは `FirstName` 要素および `LastName` 要素のシーケンスとなり、その属性には `CustomerId` 属性が含まれます。  
   
 > [!NOTE]
->  また、複合型のパーティクルとして <xref:System.Xml.Schema.XmlSchemaChoice> クラスまたは <xref:System.Xml.Schema.XmlSchemaAll> クラスを使用して、`<xs:choice />` または `<xs:all />` セマンティクスをレプリケートすることもできます。  
+> また、複合型のパーティクルとして <xref:System.Xml.Schema.XmlSchemaChoice> クラスまたは <xref:System.Xml.Schema.XmlSchemaAll> クラスを使用して、`<xs:choice />` または `<xs:all />` セマンティクスをレプリケートすることもできます。  
   
  [!code-cpp[XmlSchemaCreateExample#3](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#3)]
  [!code-csharp[XmlSchemaCreateExample#3](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaCreateExample/CS/XmlSchemaCreateExample.cs#3)]
@@ -58,7 +58,7 @@ ms.locfileid: "54650994"
  <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A?displayProperty=nameWithType> メソッドは、XML スキーマの規則を基準としてカスタム スキーマを検証し、スキーマ コンパイル後のプロパティを使用できるようにします。  
   
 > [!NOTE]
->  SOM API のスキーマ コンパイル後のプロパティは、スキーマ検証後の情報セットとは異なります。  
+> SOM API のスキーマ コンパイル後のプロパティは、スキーマ検証後の情報セットとは異なります。  
   
  <xref:System.Xml.Schema.ValidationEventHandler> に追加される <xref:System.Xml.Schema.XmlSchemaSet> は、コールバック メソッド `ValidationCallback` を呼び出してスキーマ検証時の警告およびエラーを処理するデリゲートになります。  
   

@@ -9,24 +9,24 @@ helpviewer_keywords:
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee4d884a0efbeb6e57ed727396bf3bcb39979774
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: dc62fffe3ca51acf0f2098d2975665b91b052992
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172504"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930890"
 ---
 # <a name="regular-expression-examples"></a>正規表現の例
 このセクションでは、一般的なアプリケーションで正規表現を使用するときのコード例を示します。  
   
 > [!NOTE]
->  <xref:System.Web.RegularExpressions> 名前空間には、正規表現オブジェクトがたくさん含まれています。このオブジェクトは、HTML、XML、ASP.NET 文書の文字列を解析する事前定義済み正規表現パターンを実装します。 たとえば、<xref:System.Web.RegularExpressions.TagRegex> クラスは文字列の開始タグを識別します。<xref:System.Web.RegularExpressions.CommentRegex> クラスは文字列の ASP.NET コメントを識別します。  
+> <xref:System.Web.RegularExpressions> 名前空間には、正規表現オブジェクトがたくさん含まれています。このオブジェクトは、HTML、XML、ASP.NET 文書の文字列を解析する事前定義済み正規表現パターンを実装します。 たとえば、<xref:System.Web.RegularExpressions.TagRegex> クラスは文字列の開始タグを識別します。<xref:System.Web.RegularExpressions.CommentRegex> クラスは文字列の ASP.NET コメントを識別します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [例: HREFS のスキャン](../../../docs/standard/base-types/regular-expression-example-scanning-for-hrefs.md)  
+ [例:HREF のスキャン](../../../docs/standard/base-types/regular-expression-example-scanning-for-hrefs.md)  
  入力文字列を検索して、文字列内のすべての href="..." の値と位置を出力する例を示します。  
   
- [例: 日付形式の変更](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)  
+ [例:日付形式の変更](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)  
  mm/dd/yy 形式の日付を dd-mm-yy 形式の日付に置換する例を示します。  
   
  [方法: URL からプロトコルとポート番号を抽出する](../../../docs/standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md)  
@@ -38,7 +38,7 @@ ms.locfileid: "34172504"
  [方法: 文字列が有効な電子メール形式であるかどうかを検証する](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
  文字列が有効な電子メール形式であることを確認する例を次に示します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  <xref:System.Text.RegularExpressions>  
  .NET **System.Text.RegularExpressions** 名前空間のクラス ライブラリのリファレンス情報を示します。  
   
