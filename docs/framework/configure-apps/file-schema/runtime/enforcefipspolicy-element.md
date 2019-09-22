@@ -16,11 +16,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252645"
 ---
-# <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy > 要素
+# <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy> 要素
 暗号化アルゴリズムが連邦情報処理規格 (FIPS: Federal Information Processing Standard) に準拠する必要があるコンピューターの構成要件を強制するかどうかを指定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<enforceFIPSPolicy>**  
   
 ## <a name="syntax"></a>構文  
