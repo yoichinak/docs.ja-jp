@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: cf313f8197280bdbb943c12ef0c7a29284ec01a5
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 1a5320f47b880c2d84132d70e1d0be19d6de486b
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849763"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116208"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>dotnet テストと NUnit を使用した .NET Core での単体テスト F# ライブラリ
 
@@ -29,7 +29,7 @@ ms.locfileid: "70849763"
 シェル ウィンドウを開きます。 ソリューションを保存するための *unit-testing-with-fsharp* というディレクトリを作成します。
 この新しいディレクトリ内で、次のコマンドを実行して、クラス ライブラリとテスト プロジェクト用の新しいソリューション ファイルを作成します。
 
-```console
+```dotnetcli
 dotnet new sln
 ```
 
@@ -43,7 +43,7 @@ dotnet new sln
 
 *MathService* を現在のディレクトリとし、次のコマンドを実行してソース プロジェクトを作成します。
 
-```console
+```dotnetcli
 dotnet new classlib -lang F#
 ```
 
@@ -56,7 +56,7 @@ module MyMath =
 
 *unit-testing-with-fsharp* ディレクトリに戻ります。 次のコマンドを実行して、クラス ライブラリ プロジェクトをソリューションに追加します。
 
-```console
+```dotnetcli
 dotnet sln add .\MathService\MathService.fsproj
 ```
 
@@ -75,7 +75,7 @@ dotnet sln add .\MathService\MathService.fsproj
 
 *MathService.Tests* ディレクトリを現在のディレクトリとし、次のコマンドを使用して新しいプロジェクトを作成します。
 
-```console
+```dotnetcli
 dotnet new nunit -lang F#
 ```
 
@@ -91,7 +91,7 @@ dotnet new nunit -lang F#
 
 テスト プロジェクトには、単体テストを作成して実行するための、他のパッケージが必要です。 前の手順の `dotnet new` では、NUnit と NUnit のテスト アダプターを追加しました。 ここで、プロジェクトに別の依存関係として `MathService` クラス ライブラリを追加します。 次の [`dotnet add reference`](../tools/dotnet-add-reference.md) コマンドを使用します。
 
-```console
+```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
@@ -112,7 +112,7 @@ dotnet add reference ../MathService/MathService.fsproj
 
 *unit-testing-with-fsharp* ディレクトリ内で次のコマンドを実行します。
 
-```console
+```dotnetcli
 dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
 ```
 

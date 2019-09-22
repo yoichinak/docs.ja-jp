@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 9885f666e68b795b9b6aba9cf31f9750e30fd170
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 1528e578a978de38998b3f3f4b7beb72ff7422d4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512281"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117070"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>方法: WPF デスクトップ アプリを .NET Core に移植する
 
@@ -94,7 +94,7 @@ SolutionFolder
 
 プロジェクト ファイルを手動で作成しない場合は、Visual Studio または .NET Core SDK を使用して生成できます。 ただし、プロジェクト ファイル以外のプロジェクト テンプレートによって生成されるすべてのファイルを削除する必要があります。 SDK を使用するには、次のコマンドを **SolutionFolder** ディレクトリから実行します。
 
-```cli
+```dotnetcli
 dotnet new wpf -o MyWPFAppCore -n MyWPFCore
 ```
 
@@ -111,7 +111,7 @@ SolutionFolder
 
 **SolutionFolder** ディレクトリから Visual Studio または .NET Core CLI を使用して、**MyWPFCore.csproj** プロジェクトを **MyApps.sln** に追加できます。
 
-```cli
+```dotnetcli
 dotnet sln add .\MyWPFAppCore\MyWPFCore.csproj
 ```
 
@@ -187,7 +187,7 @@ dotnet sln add .\MyWPFAppCore\MyWPFCore.csproj
 
 ほとんどの場合、.NET Framework WPF アプリには、**packages.config** プロジェクトによって参照されるすべての NuGet パッケージの一覧を含むファイルがあります。 この一覧を調べて、.NET Core プロジェクトに追加する NuGet パッケージを決定できます。 たとえば、.NET Framework プロジェクトで `MahApps.Metro` NuGet パッケージが参照される場合、Visual Studio でそれをプロジェクトに追加します。 **SolutionFolder** ディレクトリから .NET Core CLI を使用してパッケージ参照を追加することもできます。
 
-```cli
+```dotnetcli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package MahApps.Metro -v 2.0.0-alpha0262
 ```
 
@@ -203,7 +203,7 @@ dotnet add .\MyWPFAppCore\MyWPFCore.csproj package MahApps.Metro -v 2.0.0-alpha0
 
 プロジェクトのコンパイルで問題が発生した場合は、.NET Framework では使用できるが .NET Core では使用できない Windows 専用 API が使用されている可能性があります。 [Windows 互換機能パック][compat-pack] NuGet パッケージのプロジェクトへの追加を試すことができます。 このパッケージは Windows でのみ実行され、約 20,000 の Windows API を .NET Core と .NET Standard プロジェクトに追加します。
 
-```cli
+```dotnetcli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package Microsoft.Windows.Compatibility
 ```
 

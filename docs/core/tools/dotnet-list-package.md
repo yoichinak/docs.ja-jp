@@ -2,12 +2,12 @@
 title: dotnet list package コマンド
 description: "\"dotnet list package\" コマンドでは、プロジェクトまたはソリューションのパッケージ参照を列挙する便利なオプションが提供されています。"
 ms.date: 06/26/2019
-ms.openlocfilehash: 48eef0ccc6acf2bbd6c1acf748870882d2480ce5
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: fe95f3898c5bd85956f4312eb4d20259227e9ff0
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168028"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117731"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -19,7 +19,7 @@ ms.locfileid: "70168028"
 
 ## <a name="synopsis"></a>構文
 
-```console
+```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
    [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
@@ -121,18 +121,18 @@ Project 'HelloPlugin' has the following package references
 
 * 特定のプロジェクトのパッケージ参照を一覧表示します。
 
-  ```console
+  ```dotnetcli
   dotnet list SentimentAnalysis.csproj package
   ```
 
 * プレリリース バージョンを含め、さらに新しいバージョンを使用できるパッケージ参照を一覧表示します。
 
-  ```console
+  ```dotnetcli
   dotnet list package --outdated --include-prerelease
   ```
 
 * 特定のターゲット フレームワークのパッケージ参照を一覧表示します。
 
-  ```console
+  ```dotnetcli
   dotnet list package --framework netcoreapp3.0
   ```

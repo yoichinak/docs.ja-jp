@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 7ef36be47648ae338b5fe70b75431006c99be31f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: b2a660d2fc42f0dfe932afce167058f7c1efc92b
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105213"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116508"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>方法: Windows Forms デスクトップ アプリを .NET Core に移植する
 
@@ -92,7 +92,7 @@ SolutionFolder
 
 プロジェクト ファイルを手動で作成しない場合は、Visual Studio または .NET Core SDK を使用して生成できます。 ただし、プロジェクト ファイル以外のプロジェクト テンプレートによって生成されるすべてのファイルを削除する必要があります。 SDK を使用するには、次のコマンドを **SolutionFolder** ディレクトリから実行します。
 
-```cli
+```dotnetcli
 dotnet new winforms -o MyFormsAppCore -n MyFormsCore
 ```
 
@@ -109,7 +109,7 @@ SolutionFolder
 
 **SolutionFolder** ディレクトリから Visual Studio または .NET Core CLI を使用して、**MyFormsCore.csproj** プロジェクトを **MyApps.sln** に追加できます。
 
-```cli
+```dotnetcli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 ```
 
@@ -167,7 +167,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 ほとんどの場合、.NET Framework Windows Forms アプリには、**packages.config** プロジェクトによって参照されるすべての NuGet パッケージの一覧を含むファイルがあります。 この一覧を調べて、.NET Core プロジェクトに追加する NuGet パッケージを決定できます。 たとえば、.NET Framework プロジェクトで `MetroFramework`、`MetroFramework.Design`、および `MetroFramework.Fonts` NuGet パッケージが参照されている場合は、**SolutionFolder** ディレクトリから Visual Studio または .NET Core CLI のいずれかを使用して、それぞれをプロジェクトに追加します。
 
-```cli
+```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework.Design
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework.Fonts
@@ -264,7 +264,7 @@ SolutionFolder
 
 次に、メインの .NET Core **MyFormsCore.csproj** プロジェクトに、新しい .NET Core Windows Forms 制御ライブラリへの参照を追加します。 **SolutionFolder** ディレクトリから、Visual Studio または .NET Core CLI のいずれかを使用して、参照を追加します。
 
-```cli
+```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj
 ```
 
@@ -280,7 +280,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\M
 
 プロジェクトのコンパイルで問題が発生した場合は、.NET Framework では使用できるが .NET Core では使用できない Windows 専用 API が使用されている可能性があります。 [Windows 互換機能パック][compat-pack] NuGet パッケージのプロジェクトへの追加を試すことができます。 このパッケージは Windows でのみ実行され、約 20,000 の Windows API を .NET Core と .NET Standard プロジェクトに追加します。
 
-```cli
+```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compatibility
 ```
 

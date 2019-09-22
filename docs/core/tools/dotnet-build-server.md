@@ -2,12 +2,12 @@
 title: dotnet build-server コマンド
 description: dotnet build-server コマンドは、ビルドによって起動されたサーバーとやり取りします。
 ms.date: 04/24/2019
-ms.openlocfilehash: b2dfd5f317466f18d9246bd1fb281a92c42f6d9d
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 89d1aba104e2cb07b46766a3768eed68d85a7aa7
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168109"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117762"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
@@ -23,7 +23,7 @@ ms.locfileid: "70168109"
 
 ## <a name="synopsis"></a>構文
 
-```console
+```dotnetcli
 dotnet build-server shutdown [--msbuild] [--razor] [--vbcscompiler]
 dotnet build-server shutdown [-h|--help]
 dotnet build-server [-h|--help]

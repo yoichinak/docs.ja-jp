@@ -3,12 +3,12 @@ title: dotnet nuget push コマンド
 description: dotnet nuget push コマンドでは、パッケージをサーバーにプッシュして発行します。
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 87557f606dead921961349fec4575394e6d359fd
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3299f79ec62aebdcdbef38f1e8b09a2dc5529ec4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202548"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117495"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -24,7 +24,7 @@ ms.locfileid: "70202548"
 
 ## <a name="synopsis"></a>構文
 
-```console
+```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
@@ -90,37 +90,37 @@ dotnet nuget push [-h|--help]
 
 * API キーを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
 * API キーを指定して、カスタム プッシュ ソース `https://customsource` に *foo.nupkg* をプッシュします。
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
 * 既定のプッシュ ソースに *foo.nupkg* をプッシュします。
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
 * 既定のシンボル ソースに *foo.symbols.nupkg* をプッシュします。
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
 * 360 秒のタイムアウトを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
 * 既定のプッシュ ソースに現在のディレクトリ内のすべての *.nupkg* ファイルをプッシュします。
 
-  ```console
+  ```dotnetcli
   dotnet nuget push *.nupkg
   ```
   

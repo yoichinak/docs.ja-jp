@@ -3,12 +3,12 @@ title: dotnet new のカスタム テンプレート
 description: あらゆる種類の .NET プロジェクトまたはファイルのカスタム テンプレートについて説明します。
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: be49e28d3aa09c9b3a3cb169ca39ff817a062b8f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7a599973a1914f0df187557e48718263f16546f3
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849850"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117807"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new のカスタム テンプレート
 
@@ -24,7 +24,7 @@ NuGet の *.nupkg* ファイルを直接参照するか、テンプレートが�
 
 [.NET Core SDK](https://dotnet.microsoft.com/download) をインストールすると、コンソール アプリ、クラス ライブラリ、単体テスト プロジェクト、ASP.NET Core アプリ ([Angular](https://angular.io/) プロジェクトと [React](https://facebook.github.io/react/) プロジェクトを含む)、構成ファイルなど、プロジェクトやファイルを作成するための 12 個を超える組み込みテンプレートが与えられます。 組み込みテンプレートの一覧を表示するには、`-l|--list` オプションを指定して `dotnet new` コマンドを実行します。
 
-```console
+```dotnetcli
 dotnet new --list
 ```
 
@@ -170,7 +170,7 @@ project_folder
 
 テンプレート パッケージをインストールするには、NuGet パッケージ識別子を使います。
 
-```console
+```dotnetcli
 dotnet new -i <NUGET_PACKAGE_ID>
 ```
 
@@ -178,7 +178,7 @@ dotnet new -i <NUGET_PACKAGE_ID>
 
 *.nupkg* NuGet パッケージ ファイルに対するパスを指定します。
 
-```console
+```dotnetcli
 dotnet new -i <PATH_TO_NUPKG_FILE>
 ```
 
@@ -186,7 +186,7 @@ dotnet new -i <PATH_TO_NUPKG_FILE>
 
 テンプレートはテンプレート フォルダーからインストールできます (上の例の *mytemplate1* フォルダーなど)。 *.template.config* フォルダーのフォルダー パスを指定します。 テンプレート ディレクトリへのパスは、絶対パスである必要はありません。 ただし、フォルダーからインストールされたテンプレートをアンインストールするには、絶対パスが必要です。
 
-```console
+```dotnetcli
 dotnet new -i <FILE_SYSTEM_DIRECTORY>
 ```
 
@@ -194,7 +194,7 @@ dotnet new -i <FILE_SYSTEM_DIRECTORY>
 
 他のパラメーターを何も指定しない uninstall コマンドでは、インストールされているすべてのテンプレートの一覧が表示されます。
 
-```console
+```dotnetcli
 dotnet new -u
 ```
 
@@ -230,13 +230,13 @@ Currently installed items:
 
 NuGet フィードまたは直接 *.nupkg* ファイルでパッケージをインストールした場合は、識別子を指定します。
 
-```console
+```dotnetcli
 dotnet new -u <NUGET_PACKAGE_ID>
 ```
 
 *.template.config* フォルダーに対するパスを指定してパッケージをインストールした場合は、その**絶対**パスを使ってパッケージをアンインストールします。 テンプレートの絶対パスは、`dotnet new -u` コマンドによって提供される出力で確認できます。 詳しくは、前の「[インストールされているテンプレートの一覧を取得する](#get-a-list-of-installed-templates)」セクションをご覧ください。
 
-```console
+```dotnetcli
 dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 ```
 
@@ -244,7 +244,7 @@ dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 
 テンプレートがインストールされたら、事前インストールされている他のテンプレートの場合と同様に、`dotnet new <TEMPLATE>` コマンドを実行してテンプレートを使用します。 テンプレートの設定で構成したテンプレート固有のオプションなど、[オプション](dotnet-new.md#options)を `dotnet new` コマンドに対して指定することもできます。 テンプレートの省略名 (短い名前) をコマンドに直接指定します。
 
-```console
+```dotnetcli
 dotnet new <TEMPLATE>
 ```
 

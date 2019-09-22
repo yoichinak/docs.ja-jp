@@ -4,12 +4,12 @@ description: グローバル ツールを作成する方法について説明し
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: f60e26d14e89b6b7c34b32bf9a114fe4ad691981
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5c2b1e459f0308f5f96eb041c10f4d7a7ae0ca20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202772"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117443"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>.NET Core CLI を使用して .NET Core グローバル ツールを作成する
 
@@ -23,7 +23,7 @@ ms.locfileid: "70202772"
 
 ここでの例のツールは、ASCII ボットを生成してメッセージを出力するコンソール アプリケーションです。 まず、新しい .NET Core コンソール アプリケーションを作成します。
 
-```console
+```dotnetcli
 dotnet new console -o botsay
 ```
 
@@ -117,7 +117,7 @@ static void ShowBot(string message)
 
 プロジェクトを実行して出力を確認します。 次のようにコマンドラインを変えて、異なる結果を表示してみてください。
 
-```csharp
+```dotnetcli
 dotnet run
 dotnet run -- "Hello from the bot"
 dotnet run -- hello from the bot
@@ -158,7 +158,7 @@ dotnet run -- hello from the bot
 
 次に、アプリケーション用の NuGet パッケージを作成します。
 
-```console
+```dotnetcli
 dotnet pack
 ```
 
@@ -166,7 +166,7 @@ dotnet pack
 
 パッケージを用意できたので、そのパッケージからツールをインストールします。
 
-```console
+```dotnetcli
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
@@ -188,6 +188,6 @@ Tool 'botsay' (version '1.0.0') was successfully installed.
 
 ツールの実験を完了したら、次のコマンドでツールを削除することができます。
 
-```console
+```dotnetcli
 dotnet tool uninstall -g botsay
 ```

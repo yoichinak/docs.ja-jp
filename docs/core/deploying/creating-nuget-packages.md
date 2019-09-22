@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: b86b2706968bf302a8421bcc8e12c32a97102e9e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d36a6ee7d524933577928daa9993fba8ce62f6c7
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632104"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116703"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>.NET Core コマンド ライン インターフェイス (CLI) ツールを使用して NuGet パッケージを作成する方法
 
@@ -33,7 +33,7 @@ cd src/SuperAwesomeLibrary
 
 その後、コマンド ラインから以下の 1 つのコマンドのみを実行します。
 
-```console
+```dotnetcli
 dotnet pack
 ```
 
@@ -49,7 +49,7 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 この場合、デバッグ可能なパッケージが生成されることに注意してください。 リリース バイナリと共に NuGet パッケージをビルドする場合、必要なのは、`--configuration` (または `-c`) スイッチを追加し、引数として `release` を使用することだけです。
 
-```console
+```dotnetcli
 dotnet pack --configuration release
 ```
 

@@ -2,12 +2,12 @@
 title: dotnet add package コマンド
 description: "'dotnet add package' コマンドは、NuGet パッケージ参照をプロジェクトに追加する便利なオプションを提供します。"
 ms.date: 06/26/2019
-ms.openlocfilehash: 124e42b1d5897802bb1698c8e22b7e76031391a2
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 9445cf686ec1733f5a8b3403b7efea3a544fbc99
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105162"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117800"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -96,19 +96,19 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 - `Newtonsoft.Json` NuGet パッケージをプロジェクトに追加する:
 
-  ```console
+  ```dotnetcli
   dotnet add package Newtonsoft.Json
   ```
 
 - 特定バージョンのパッケージをプロジェクトに追加する:
 
-  ```console
+  ```dotnetcli
   dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
   ```
 
 - 特定の NuGet ソースを使用してパッケージを追加する:
 
-  ```console
+  ```dotnetcli
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 

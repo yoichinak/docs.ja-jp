@@ -2,12 +2,12 @@
 title: dotnet list reference コマンド
 description: dotnet list 参照コマンドは、プロジェクト間参照を列挙する便利なオプションを提供します。
 ms.date: 06/26/2019
-ms.openlocfilehash: 1f87ff89997cdaa6d0095a4db9f28a2e7cb7e6a9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b4b82ca1e7aeb2b73d9f99aff1c97452b2166770
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421839"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117682"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
@@ -45,12 +45,12 @@ ms.locfileid: "67421839"
 
 * 指定したプロジェクトのプロジェクト参照を列挙する:
 
-  ```console
+  ```dotnetcli
   dotnet list app/app.csproj reference
   ```
 
 * 現在のディレクトリ内のプロジェクトのプロジェクト参照を列挙する:
 
-  ```console
+  ```dotnetcli
   dotnet list reference
   ```

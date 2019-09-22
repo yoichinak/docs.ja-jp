@@ -2,12 +2,12 @@
 title: dotnet-add reference コマンド
 description: dotnet add 参照コマンドは、プロジェクト間参照を追加する便利なオプションを提供します。
 ms.date: 06/26/2019
-ms.openlocfilehash: 867596058aad8f9c38918e6d6657709d0d0699b3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 06d10f6903251bc9d29ae856a900a20610565a14
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784048"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117781"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add 参照
 
@@ -65,18 +65,18 @@ ms.locfileid: "70784048"
 
 * プロジェクト参照を追加する:
 
-  ```console
+  ```dotnetcli
   dotnet add app/app.csproj reference lib/lib.csproj
   ```
 
 * 現在のディレクトリのプロジェクトに複数のプロジェクト参照を追加する:
 
-  ```console
+  ```dotnetcli
   dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
   ```
 
 * Linux/Unix で glob パターンを使って複数のプロジェクト参照を追加する:
 
-  ```console
+  ```dotnetcli
   dotnet add app/app.csproj reference **/*.csproj
   ```

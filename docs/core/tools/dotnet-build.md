@@ -2,12 +2,12 @@
 title: dotnet build コマンド
 description: dotnet build コマンドは、プロジェクトとそのすべての依存関係をビルドします。
 ms.date: 08/08/2019
-ms.openlocfilehash: e92555dad2bc76d8c72eca9a30be1d3a8b5924f7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0b353d60691fb4bb85536c68dc4ab248f45c3a76
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988534"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117754"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -23,7 +23,7 @@ ms.locfileid: "70988534"
 
 ## <a name="synopsis"></a>構文
 
-```console
+```dotnetcli
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
     [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
@@ -122,30 +122,30 @@ dotnet build [-h|--help]
 
 * プロジェクトとその依存関係をビルドします。
 
-  ```console
+  ```dotnetcli
   dotnet build
   ```
 
 * リリース構成を使用して、プロジェクトとその依存関係をビルドします。
 
-  ```console
+  ```dotnetcli
   dotnet build --configuration Release
   ```
 
 * 特定のランタイム (この例では、Ubuntu 18.04) 用にプロジェクトとその依存関係をビルドします。
 
-  ```console
+  ```dotnetcli
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
 * プロジェクトをビルドし、復元操作中に指定された NuGet パッケージ ソースを使用します (.NET Core 2.0 SDK 以降のバージョン)。
 
-  ```console
+  ```dotnetcli
   dotnet build --source c:\packages\mypackages
   ```
 
 * `-p` [MSBuild オプション](#msbuild)を使用してプロジェクトをビルドし、バージョン 1.2.3.4 をビルド パラメーターとして設定します。
 
-  ```console
+  ```dotnetcli
   dotnet build -p:Version=1.2.3.4
   ```

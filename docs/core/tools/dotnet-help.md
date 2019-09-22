@@ -2,12 +2,12 @@
 title: dotnet help コマンド
 description: dotnet help コマンドでは、指定したコマンドについてより詳細なドキュメントがオンラインで表示されます。
 ms.date: 08/08/2019
-ms.openlocfilehash: e76f858f2529afc50646473f1aab9d52730cff16
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 533f2c47fa7ec14d31368538092fec2490234820
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990460"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117711"
 ---
 # <a name="dotnet-help-reference"></a>dotnet help reference
 
@@ -45,6 +45,6 @@ ms.locfileid: "70990460"
 
 * ドキュメントの [dotnet new](dotnet-new.md) コマンドに関するページを開きます。
 
-  ```console
+  ```dotnetcli
   dotnet help new
   ```

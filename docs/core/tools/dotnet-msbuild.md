@@ -2,12 +2,12 @@
 title: dotnet msbuild コマンド
 description: dotnet msbuild コマンドは、MSBuild コマンド ラインへのアクセスを提供します。
 ms.date: 12/03/2018
-ms.openlocfilehash: 983fae6f4ecf875da0b155a668009984b5df50de
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b83f1272cdd4c5fcdb6b1e34aef7692e9acc01cd
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632028"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117707"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
@@ -33,24 +33,24 @@ ms.locfileid: "65632028"
 
 * プロジェクトとその依存関係をビルドします。
 
-  ```console
+  ```dotnetcli
   dotnet msbuild
   ```
 
 * リリース構成を使用して、プロジェクトとその依存関係をビルドします。
 
-  ```console
+  ```dotnetcli
   dotnet msbuild -p:Configuration=Release
   ```
 
 * 発行先を実行して、RID `osx.10.11-x64` に発行します。
 
-  ```console
+  ```dotnetcli
   dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64
   ```
 
 * プロジェクト全体と SDK に付属するすべてのターゲットをご覧ください。
 
-  ```console
+  ```dotnetcli
   dotnet msbuild -pp
   ```

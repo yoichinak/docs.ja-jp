@@ -4,12 +4,12 @@ description: .NET Core グローバル ツールとそれらに使用できる .
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9ff7e33a50eb0c5fb649b44dda6d72412a134584
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202592"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117455"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET core グローバル ツールの概要
 
@@ -49,7 +49,7 @@ ms.locfileid: "70202592"
 
 グローバル ツールをインストールするには、[dotnet tool install](dotnet-tool-install.md) .NET Core CLI コマンドを使用します。 次の例では、既定の場所にグローバル ツールをインストールする方法を示しています。
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -57,7 +57,7 @@ dotnet tool install -g dotnetsay
 
 ツールのプレリリース バージョンまたは特定のバージョンをインストールしようとしている場合は、次の形式を使用してバージョン番号を指定できます。
 
-```console
+```dotnetcli
 dotnet tool install -g <package-name> --version <version-number>
 ```
 
@@ -94,7 +94,7 @@ dotnetsay
 
 ツールの作成者が `dotnet` プロンプトのコンテキストにツールを表示するようにした場合は、次のように、`dotnet <command>` として呼び出す方法でツールを記述している場合があります。
 
-```console
+```dotnetcli
 dotnet doc
 ```
 
@@ -120,7 +120,7 @@ dotnet <command> --help
 
 発生する可能性がある別の問題は、以前のプレビュー時に作成されたグローバル ツールが、現在インストールされている .NET Core ランタイムで実行できない場合があることです。 次のコマンドを使用して、お使いのマシンにインストールされているランタイムを確認することができます。
 
-```console
+```dotnetcli
 dotnet --list-runtimes
 ```
 
@@ -141,24 +141,24 @@ dotnet --list-runtimes
 
 グローバル ツールで使用できるコマンドを調べるには、次のコマンドを使用します。
 
-```console
+```dotnetcli
 dotnet tool --help
 ```
 
 グローバル ツールを更新するには、ツールをアンインストールしてから、最新の安定バージョンで再インストールする必要があります。 グローバル ツールを更新するには、[dotnet tool update](dotnet-tool-update.md) コマンドを使用します。
 
-```console
+```dotnetcli
 dotnet tool update -g <packagename>
 ```
 
 [dotnet tool uninstall](dotnet-tool-uninstall.md) を使用してグローバル ツールを削除します。
 
-```console
+```dotnetcli
 dotnet tool uninstall -g <packagename>
 ```
 
 マシンに現在インストールされているすべてのグローバル ツールと、それらのバージョンとコマンドを表示するには、[dotnet tool list](dotnet-tool-list.md) コマンドを使用します。
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```

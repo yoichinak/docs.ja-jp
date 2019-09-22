@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Databricks にデ
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: db374a47140392577872f6635eb7275682a7a547
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f90d0fa4bdefe94dcf8390698e6445fad77a1bc2
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928555"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117937"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>.NET for Apache Spark アプリケーションを Databricks にデプロイする
 
@@ -49,7 +49,7 @@ ms.locfileid: "70928555"
 
    Linux では、次のコマンドを実行できます。
 
-   ```bash
+   ```dotnetcli
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 
