@@ -14,11 +14,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252604"
 ---
-# <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads > 要素
+# <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> 要素
 PerfCounter.dll が、.NET Framework バージョン 1.1 のアプリケーションの CategoryOptions レジストリ設定を使用してするかどうかを指定して、カテゴリ別の共有メモリとグローバル メモリのどちらからパフォーマンス カウンター データを読み込むかを決定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<forcePerformanceCounterUniqueSharedMemoryReads >**  
   
 ## <a name="syntax"></a>構文  
