@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 84ae47b984d6a1a207e6678e30991073ba02a438
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894748"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044005"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (タイプ ライブラリ エクスポーター)
 タイプ ライブラリ エクスポーターは、共通言語ランタイム アセンブリで定義されている型を記述するタイプ ライブラリを生成します。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -64,11 +64,11 @@ tlbexp assemblyName [options]
   
  アセンブリ全体が一度に変換されます。 Tlbexp.exe を使用しても、アセンブリで定義されている型のサブセットに関する型情報は生成できません。  
   
- Tlbexp.exe を使用して、[タイプ ライブラリ インポーター (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) でインポートしたアセンブリからタイプ ライブラリを生成することもできません。 代わりに、Tlbimp.exe でインポートした元のタイプ ライブラリを参照する必要があります。 しかし、Tlbimp.exe でインポートしたアセンブリを参照するアセンブリから、タイプ ライブラリをエクスポートすることはできます。 後の例を参照してください。  
+ Tlbexp.exe を使用して、[タイプ ライブラリ インポーター (Tlbimp.exe)](tlbimp-exe-type-library-importer.md) でインポートしたアセンブリからタイプ ライブラリを生成することもできません。 代わりに、Tlbimp.exe でインポートした元のタイプ ライブラリを参照する必要があります。 しかし、Tlbimp.exe でインポートしたアセンブリを参照するアセンブリから、タイプ ライブラリをエクスポートすることはできます。 後の例を参照してください。  
   
  Tlbexp.exe は、生成したタイプ ライブラリを現在のディレクトリ、または出力ファイルとして指定したディレクトリに格納します。 単一のアセンブリから複数のタイプ ライブラリが生成されることもあります。  
   
- Tlbexp.exe はタイプ ライブラリを生成しますが、生成したタイプ ライブラリの登録は行いません。 これは、タイプ ライブラリの生成と登録を両方とも行う[アセンブリ登録ツール (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) とは対照的です。 タイプ ライブラリを生成して COM に登録するには、Regasm.exe を使用します。  
+ Tlbexp.exe はタイプ ライブラリを生成しますが、生成したタイプ ライブラリの登録は行いません。 これは、タイプ ライブラリの生成と登録を両方とも行う[アセンブリ登録ツール (Regasm.exe)](regasm-exe-assembly-registration-tool.md) とは対照的です。 タイプ ライブラリを生成して COM に登録するには、Regasm.exe を使用します。  
   
  `/win32` オプションまたは `/win64` オプションを指定しないと、Tlbexp.exe はコンパイルを実行するコンピューターのタイプ (32 ビット コンピューターまたは 64 ビット コンピューター) に応じて、32 ビットまたは 64 ビットのタイプ ライブラリを生成します。 クロス コンパイルを行う場合は、32 ビット コンピューター上で `/win64` オプションを使用して 64 ビットのタイプ ライブラリを生成したり、64 ビット コンピューター上で `/win32` オプションを使用して 32 ビットのタイプ ライブラリを生成したりできます。 32 ビットのタイプ ライブラリでは、<xref:System.Runtime.InteropServices.ComTypes.SYSKIND> 値は <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32> に設定されます。 64 ビットのタイプ ライブラリでは、<xref:System.Runtime.InteropServices.ComTypes.SYSKIND> 値は <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64> に設定されます。 すべてのデータ型変換 (たとえば、`IntPtr` や `UIntPtr` などのポインター-サイズ データ型) は、適切に変換されます。  
   
@@ -132,8 +132,8 @@ tlbexp Sample.dll
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
-- [ツール](../../../docs/framework/tools/index.md)
-- [Regasm.exe (アセンブリ登録ツール)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
+- [ツール](index.md)
+- [Regasm.exe (アセンブリ登録ツール)](regasm-exe-assembly-registration-tool.md)
 - [アセンブリからタイプ ライブラリへの変換の要約](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
-- [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Tlbimp.exe (タイプ ライブラリ インポーター)](tlbimp-exe-type-library-importer.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

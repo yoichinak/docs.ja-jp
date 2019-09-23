@@ -19,12 +19,12 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: b05cd88fcb492ab27e1d311045b72208167508f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca9e1b9bf6235fdaeea25b8975155af429848ae3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963925"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047526"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM 認証および Kerberos 認証
 既定の NTLM 認証と Kerberos 認証は、呼び出し元のアプリケーションに関連付けられている Microsoft Windows NT ユーザー資格情報を使用して、サーバーで認証を試みます。 既定以外の NTLM 認証を使用する場合、アプリケーションは認証の種類を NTLM に設定し、次の例に示すように <xref:System.Net.NetworkCredential> オブジェクトを使用して、ユーザー名、パスワード、およびドメインをホストに渡します。  
@@ -64,5 +64,5 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
   
 ## <a name="see-also"></a>関連項目
 
-- [基本認証とダイジェスト認証](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
-- [インターネット認証](../../../docs/framework/network-programming/internet-authentication.md)
+- [基本認証とダイジェスト認証](basic-and-digest-authentication.md)
+- [インターネット認証](internet-authentication.md)

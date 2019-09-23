@@ -10,22 +10,22 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1aa3bbfafb760a3002a218ef52d87957af47c4de
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e8c9093faa80249a2c5898c1f250e97208764be6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894843"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044402"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (マネージド プロファイル ガイド付き最適化ツール)
 
-マネージド プロファイル ガイド付き最適化ツール (Mpgo.exe) は、[ネイティブ イメージ ジェネレーター (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) によって作成されたネイティブ イメージ アセンブリを最適化するために一般的なエンド ユーザー シナリオを使用するコマンド ライン ツールです。 このツールによって、プロファイル データを生成するトレーニング シナリオを実行できます。 [ネイティブ イメージ ジェネレーター (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) は、このデータを使用して、生成されたネイティブ イメージ アプリケーション アセンブリを最適化します。 トレーニングのシナリオでは、アプリケーションで予期される使用について試行します。 Mpgo.exe は、Visual Studio Ultimate 2012 以降のバージョンで使用できます。 Visual Studio 2013 以降では、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリを最適化するために Mpgo.exe も使用できます。  
+マネージド プロファイル ガイド付き最適化ツール (Mpgo.exe) は、[ネイティブ イメージ ジェネレーター (Ngen.exe)](ngen-exe-native-image-generator.md) によって作成されたネイティブ イメージ アセンブリを最適化するために一般的なエンド ユーザー シナリオを使用するコマンド ライン ツールです。 このツールによって、プロファイル データを生成するトレーニング シナリオを実行できます。 [ネイティブ イメージ ジェネレーター (Ngen.exe)](ngen-exe-native-image-generator.md) は、このデータを使用して、生成されたネイティブ イメージ アプリケーション アセンブリを最適化します。 トレーニングのシナリオでは、アプリケーションで予期される使用について試行します。 Mpgo.exe は、Visual Studio Ultimate 2012 以降のバージョンで使用できます。 Visual Studio 2013 以降では、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリを最適化するために Mpgo.exe も使用できます。  
   
 ガイド付き最適化のプロファイルは、トレーニング シナリオからデータを収集し、ネイティブ イメージのレイアウトを最適化するためにそのデータを使用することによって、アプリケーションの起動時間、メモリ使用率 (ワーキング セット サイズ)、およびスループットを向上させます。  
   
 中間言語 (IL) アセンブリの起動時間および作業セット サイズでパフォーマンスの問題が見つかった場合、Just-In-Time (JIT) コンパイルのコストを回避し、コード共有を容易にするために、最初に Ngen.exe を使用することをお勧めします。 さらなる向上が必要な場合は、アプリケーションを最適化するために Mpgo.exe を使用できます。 パフォーマンスの向上を評価するためのベースラインとして、最適化されていないネイティブ イメージ アセンブリからのパフォーマンス データを使用できます。 Mpgo.exe を使用することにより、コールド スタートの時間を短縮し、作業セットのサイズを縮小できます。 Mpgo.exe は、最適化されたネイティブ イメージ アセンブリを作成するために Ngen.exe で使用される IL アセンブリに情報を追加します。 詳しくは、.NET ブログ エントリの「[Improving Launch Performance for your Desktop Applications](https://go.microsoft.com/fwlink/p/?LinkId=248943)」 (デスクトップ アプリケーションの起動時のパフォーマンスの向上) をご覧ください。  
   
-このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、管理者の資格情報で Visual Studio 用開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用し、コマンド プロンプトで次のように入力します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、管理者の資格情報で Visual Studio 用開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用し、コマンド プロンプトで次のように入力します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
 デスクトップ アプリの場合:  
   
@@ -128,7 +128,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
   
 ## <a name="see-also"></a>関連項目
 
-- [Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Ngen.exe (ネイティブ イメージ ジェネレーター)](ngen-exe-native-image-generator.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)
 - [デスクトップ アプリケーションの起動時のパフォーマンスの向上](https://go.microsoft.com/fwlink/p/?LinkId=248943)
 - [.NET 4.5 のパフォーマンスの向上の概要](https://go.microsoft.com/fwlink/p/?LinkId=249131)

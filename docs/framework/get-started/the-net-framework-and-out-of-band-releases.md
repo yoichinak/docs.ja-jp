@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3aaf64c2f0738d2db607a2476890b033ff9d06a2
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: c1df04df8aa08fa66c91d03d4b67318b434a93d8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063046"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051964"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework および特別なリリース
 
@@ -23,11 +23,11 @@ ms.locfileid: "65063046"
 ## <a name="how-oob-packages-are-distributed"></a>OOB パッケージの配布方法
 共通言語ランタイム (CLR) のコア コンポーネントの OOB リリースは、.NET 用パッケージ マネージャーである [NuGet](https://www.nuget.org/) を通じて配布されます。 NuGet によって、Visual Studio のソリューション エクスプローラーから簡単に、.NET Framework プロジェクトを参照したり、ライブラリを追加したりすることができます。 NuGet は、Visual Studio 2012 以降のすべてのエディションに付属しています。 NuGet がインストールされているかどうかを確認するには、Visual Studio の **[ツール]** メニューの **[NuGet パッケージ マネージャー]** を検索します。 インストールされていない場合:
 
-1. Visual Studio のメニュー バーで、**[ツール]**、**[拡張機能と更新プログラム]** を選択します (Visual Studio 2010 では、**[拡張機能マネージャー]** を選択します)。
+1. Visual Studio のメニュー バーで、 **[ツール]** 、 **[拡張機能と更新プログラム]** を選択します (Visual Studio 2010 では、 **[拡張機能マネージャー]** を選択します)。
 
      **[拡張機能と更新プログラム]** ダイアログ ボックスが表示されます。
 
-2. **[オンライン]**、**[NuGet パッケージ マネージャー]** を選択し、**[ダウンロード]** を選択します。
+2. **[オンライン]** 、 **[NuGet パッケージ マネージャー]** を選択し、 **[ダウンロード]** を選択します。
 
 3. ダウンロードが完了したら、Visual Studio を再起動します。
 
@@ -36,13 +36,13 @@ ms.locfileid: "65063046"
 ## <a name="using-a-nuget-oob-package"></a>NuGet OOB パッケージの使用
  NuGet をインストールした後、Visual Studio のソリューション エクスプローラーを使用して NuGet パッケージの表示や、NuGet パッケージへの参照の追加を行うことができます:
 
-1. Visual Studio でプロジェクトのショートカット メニューを開き、**[NuGet パッケージの管理]** を選択します。 (このオプションは、**[プロジェクト]** メニューからも使用できます。)
+1. Visual Studio でプロジェクトのショートカット メニューを開き、 **[NuGet パッケージの管理]** を選択します。 (このオプションは、 **[プロジェクト]** メニューからも使用できます。)
 
-2. 左ペインで、**[オンライン]** を選択します。
+2. 左ペインで、 **[オンライン]** を選択します。
 
 3. プレリリースのパッケージを使用する場合は、中央のペインのドロップダウン リスト ボックスで **[安定版パッケージのみ]** の代わりに **[リリース前のパッケージを含める]** を選択します。
 
-4. 右ペインで、**[検索]** ボックスを使用して使用するパッケージを検索します。 Microsoft の一部のパッケージは、Microsoft .NET Framework のロゴで識別され、すべて発行者は Microsoft となっています。
+4. 右ペインで、 **[検索]** ボックスを使用して使用するパッケージを検索します。 Microsoft の一部のパッケージは、Microsoft .NET Framework のロゴで識別され、すべて発行者は Microsoft となっています。
 
  ![NuGet パッケージ マネージャーを示すスクリーンショット。](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 
@@ -55,4 +55,4 @@ ms.locfileid: "65063046"
 
 ## <a name="see-also"></a>関連項目
 
-- [はじめに](../../../docs/framework/get-started/index.md)
+- [はじめに](index.md)

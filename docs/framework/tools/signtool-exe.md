@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: f99b2fd4716b069d4ec7a21e369c5178990ce16d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894793"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044204"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (署名ツール)
 署名ツールはコマンド ライン ツールで、ファイルにデジタル署名を添付し、ファイルの署名を検証し、ファイルにタイム スタンプを付けます。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -39,10 +39,10 @@ signtool [command] [options] [file_name | ...]
   
 |コマンド|説明|  
 |-------------|-----------------|  
-|`catdb`|カタログ ファイルをカタログ データベースに追加したり、カタログ データベースから削除したりします。 カタログ データベースは、カタログ ファイルの自動検索で使用され、GUID によって識別されます。 `catdb` コマンドでサポートされているオプションの一覧については、「[catdb コマンド オプション](../../../docs/framework/tools/signtool-exe.md#catdb)」を参照してください。|  
-|`sign`|ファイルにデジタル署名します。 デジタル署名はファイルの改ざんを防止し、ユーザーが署名証明書に基づいて署名者を検証できるようにします。 `sign` コマンドでサポートされているオプションの一覧については、「[sign コマンド オプション](../../../docs/framework/tools/signtool-exe.md#sign)」を参照してください。|  
-|`Timestamp`|ファイルにタイム スタンプを付けます。 `TimeStamp` コマンドでサポートされているオプションの一覧については、「[TimeStamp コマンド オプション](../../../docs/framework/tools/signtool-exe.md#TimeStamp)」を参照してください。|  
-|`Verify`|ファイルのデジタル署名を検証します。そのために、署名証明書が信頼できる機関により発行されたかどうか、署名証明書が取り消されたかどうかを確認します。また、オプションで、署名証明書が特定のポリシーに対して有効になっているかどうかを確認します。 `Verify` コマンドでサポートされているオプションの一覧については、「[Verify コマンド オプション](../../../docs/framework/tools/signtool-exe.md#Verify)」を参照してください。|  
+|`catdb`|カタログ ファイルをカタログ データベースに追加したり、カタログ データベースから削除したりします。 カタログ データベースは、カタログ ファイルの自動検索で使用され、GUID によって識別されます。 `catdb` コマンドでサポートされているオプションの一覧については、「[catdb コマンド オプション](signtool-exe.md#catdb)」を参照してください。|  
+|`sign`|ファイルにデジタル署名します。 デジタル署名はファイルの改ざんを防止し、ユーザーが署名証明書に基づいて署名者を検証できるようにします。 `sign` コマンドでサポートされているオプションの一覧については、「[sign コマンド オプション](signtool-exe.md#sign)」を参照してください。|  
+|`Timestamp`|ファイルにタイム スタンプを付けます。 `TimeStamp` コマンドでサポートされているオプションの一覧については、「[TimeStamp コマンド オプション](signtool-exe.md#TimeStamp)」を参照してください。|  
+|`Verify`|ファイルのデジタル署名を検証します。そのために、署名証明書が信頼できる機関により発行されたかどうか、署名証明書が取り消されたかどうかを確認します。また、オプションで、署名証明書が特定のポリシーに対して有効になっているかどうかを確認します。 `Verify` コマンドでサポートされているオプションの一覧については、「[Verify コマンド オプション](signtool-exe.md#Verify)」を参照してください。|  
   
  次のオプションは、すべての署名ツール コマンドに適用されます。  
   
@@ -211,5 +211,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
   
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [ツール](index.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

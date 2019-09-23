@@ -21,17 +21,17 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: ddc4717c873e65311a8502e66f3edaf39dd89ff9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ee4dc87383153ae4e8df0a3bed7cce5220e65405
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133803"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048630"
 ---
 # <a name="configuring-internet-applications"></a>構成 (インターネット アプリケーションを)
-[\<system.Net> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 構成要素には、アプリケーションのネットワーク構成情報が含まれています。 [\<system.Net> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 要素を使用すると、プロキシ サーバーを設定し、接続管理パラメーターを設定し、カスタム認証および要求モジュールをアプリケーションに組み込むことができます。  
+[\<system.Net> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/system-net-element-network-settings.md) 構成要素には、アプリケーションのネットワーク構成情報が含まれています。 [\<system.Net> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/system-net-element-network-settings.md) 要素を使用すると、プロキシ サーバーを設定し、接続管理パラメーターを設定し、カスタム認証および要求モジュールをアプリケーションに組み込むことができます。  
   
- [\<defaultProxy> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) 要素は、`GlobalProxySelection` クラスによって返されるプロキシ サーバーを定義します。 独自の <xref:System.Net.HttpWebRequest.Proxy%2A> プロパティが特定の値に設定されていない <xref:System.Net.HttpWebRequest> はすべて、既定のプロキシを使用します。 プロキシ アドレスを設定するだけでなく、プロキシを使用しないサーバー アドレスの一覧を作成し、ローカル アドレスにプロキシを使用しないように指定できます。  
+ [\<defaultProxy> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) 要素は、`GlobalProxySelection` クラスによって返されるプロキシ サーバーを定義します。 独自の <xref:System.Net.HttpWebRequest.Proxy%2A> プロパティが特定の値に設定されていない <xref:System.Net.HttpWebRequest> はすべて、既定のプロキシを使用します。 プロキシ アドレスを設定するだけでなく、プロキシを使用しないサーバー アドレスの一覧を作成し、ローカル アドレスにプロキシを使用しないように指定できます。  
   
  Microsoft Internet Explorer の設定は構成の設定と組み合わせて使用され、構成の設定が優先されることに注意してください。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "59133803"
 </configuration>  
 ```  
   
- 特定のサーバーまたは他のすべてのサーバーに対して行うことができる持続接続の数を構成する場合は、[\<connectionManagement> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) 要素を使用します。 次の例では、サーバー `www.contoso.com` への 2 つの持続接続、IP アドレス 192.168.1.2 を持つサーバーへの 4 つの持続接続、および他のすべてのサーバーへの 1 つの持続接続が使用されるようにアプリケーションを構成します。  
+ 特定のサーバーまたは他のすべてのサーバーに対して行うことができる持続接続の数を構成する場合は、[\<connectionManagement> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) 要素を使用します。 次の例では、サーバー `www.contoso.com` への 2 つの持続接続、IP アドレス 192.168.1.2 を持つサーバーへの 4 つの持続接続、および他のすべてのサーバーへの 1 つの持続接続が使用されるようにアプリケーションを構成します。  
   
 ```xml  
 <configuration>  
@@ -68,7 +68,7 @@ ms.locfileid: "59133803"
 </configuration>  
 ```  
   
- カスタム認証モジュールは、[\<authenticationModules> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md) 要素で構成されます。 カスタム認証モジュールは <xref:System.Net.IAuthenticationModule> インターフェイスを実装する必要があります。  
+ カスタム認証モジュールは、[\<authenticationModules> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/authenticationmodules-element-network-settings.md) 要素で構成されます。 カスタム認証モジュールは <xref:System.Net.IAuthenticationModule> インターフェイスを実装する必要があります。  
   
  次の例では、カスタム認証モジュールを構成します。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "59133803"
 </configuration>  
 ```  
   
- [\<webRequestModules> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) 要素を使用し、カスタム プロトコル固有のモジュールを使用してインターネット リソースから情報を要求するようにアプリケーションを構成することができます。 指定されたモジュールは <xref:System.Net.IWebRequestCreate> インターフェイスを実装する必要があります。 既定の HTTP、HTTPS、およびファイル要求モジュールは、次の例のように、構成ファイルでカスタム モジュールを指定してオーバーライドすることができます。  
+ [\<webRequestModules> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) 要素を使用し、カスタム プロトコル固有のモジュールを使用してインターネット リソースから情報を要求するようにアプリケーションを構成することができます。 指定されたモジュールは <xref:System.Net.IWebRequestCreate> インターフェイスを実装する必要があります。 既定の HTTP、HTTPS、およびファイル要求モジュールは、次の例のように、構成ファイルでカスタム モジュールを指定してオーバーライドすることができます。  
   
 ```xml  
 <configuration>  
@@ -99,6 +99,6 @@ ms.locfileid: "59133803"
   
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
-- [ネットワーク設定スキーマ](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<system.Net> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [.NET Framework のネットワーク プログラミング](index.md)
+- [ネットワーク設定スキーマ](../configure-apps/file-schema/network/index.md)
+- [\<system.Net> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/system-net-element-network-settings.md)

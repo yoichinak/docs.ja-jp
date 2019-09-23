@@ -2,12 +2,12 @@
 title: イベントへのサブスクライブ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 統合イベントの発行とサブスクライブについて。
 ms.date: 10/02/2018
-ms.openlocfilehash: c0eaacce51b186191431bf827bb84d3a2d2b7b1f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ac9715c7c282be845e1e47516d06945c31f70209
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675869"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039775"
 ---
 # <a name="subscribing-to-events"></a>イベントへのサブスクライブ
 
@@ -301,8 +301,8 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>その他の技術情報
 
-- **メッセージのべき等性に従う** <br/>
-    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
+- **メッセージのべき等性に従う**  
+  <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>統合イベント メッセージの重複除去
 

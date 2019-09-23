@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 86058eb288b54a4bc316900f165ec61e4d05eb1f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 25aa7b7c88047a95af3cd1d8f99d96771f252ef4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457279"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052209"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile は、.NET Framework のサブセットで、.NET Framework 4 以前のバージョンに含まれ、クライアント アプリケーション用に最適化されていました。 .NET Framework は、Windows、Windows Phone、および Microsoft Azure 用の開発プラットフォームであり、マネージド アプリの実行環境と .NET Framework クラス ライブラリを提供します。 .NET Framework 4 以前のバージョンでは、2 種類の配置オプション (完全な .NET Framework と Client Profile) が用意されていました。 完全な .NET Framework に比べて、Client Profile では、配置の迅速化とアプリ インストール パッケージの小型化が実現されました。  
@@ -25,7 +25,7 @@ ms.locfileid: "66457279"
   
  ただし、.NET Framework 4 または 3.5 を対象とする場合、Client Profile の概要と用途については、.NET Framework 4 ドキュメントの「[.NET Framework Client Profile](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)」を参照してください。  
   
- .NET Framework 4.5 をインストールすると、.NET Framework 4 Client Profile は .NET Framework の完全バージョンに更新されます。 .NET Framework 4.5 のインストールの詳細については、「[開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)」を参照してください。  
+ .NET Framework 4.5 をインストールすると、.NET Framework 4 Client Profile は .NET Framework の完全バージョンに更新されます。 .NET Framework 4.5 のインストールの詳細については、「[開発者向けの .NET Framework のインストール](../install/guide-for-developers.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

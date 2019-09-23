@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 4d7020b6bc5049101ec08329d53d966771e38035
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 22e7c670f93293bd37edcb181c8130cdbe9ceb26
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168897"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047059"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>非同期クライアント ソケットの使用
 ネットワーク操作が完了するまで待機している間、非同期クライアント ソケットはアプリケーションを一時停止しません。 標準の .NET Framework 非同期プログラミング モデルを使用して、1 つのスレッドでネットワーク接続を処理しながら、アプリケーションは元のスレッドで実行を継続します。 ネットワークの使用量が多いアプリケーションや、ネットワーク操作が完了するのを待機してから完了することができないアプリケーションの場合、非同期ソケットが適しています。  
@@ -287,6 +287,6 @@ private static void ReceiveCallback( IAsyncResult ar ) {
   
 ## <a name="see-also"></a>関連項目
 
-- [同期クライアント ソケットの使用](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [リッスン (ソケットで)](../../../docs/framework/network-programming/listening-with-sockets.md)
-- [非同期クライアント ソケットの例](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+- [同期クライアント ソケットの使用](using-a-synchronous-client-socket.md)
+- [リッスン (ソケットで)](listening-with-sockets.md)
+- [非同期クライアント ソケットの例](asynchronous-client-socket-example.md)

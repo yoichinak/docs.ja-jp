@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f8046852f847cd5493a2ed17b491a39e494ce2b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969119"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052128"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>ランタイムがアセンブリを検索する方法
 
@@ -144,7 +144,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 3 番目に、ランタイムはマシン構成ファイルをチェックします。 このファイルは、Machine.config という名前で、ローカル コンピューターの、ランタイムがインストールされているルート ディレクトリの Config サブディレクトリにあります。 管理者は、このマシン構成ファイルを使用して、そのコンピューターに固有のアセンブリ バインディング制限を指定できます。 マシン構成ファイル内の設定は、ほかのすべての構成設定に優先します。ただし、これは、他のすべての構成設定をこのマシン構成ファイルに配置する必要があるという意味ではありません。 管理者ポリシー ファイルによって決定されるバージョンは最終的であり、オーバーライドすることはできません。 Machine.config ファイル内に指定されたオーバーライドは、すべてのアプリケーションに作用します。 構成ファイルの詳細については、「 [構成ファイルを使用してアプリを構成する方法](../configure-apps/index.md)」を参照してください。
 
 <a name="step2"></a> 
+
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>手順 2: 前に参照したアセンブリの検索
+
 要求されたアセンブリが以前の呼び出しでも要求されていた場合、共通言語ランタイムは既に読み込まれているアセンブリを使用します。 アプリケーションを構成するアセンブリの名前付けの場合、これが影響を及ぼすこともあります。 アセンブリの名前付けの詳細については、「 [アセンブリ名](../../standard/assembly/names.md)」を参照してください。
 
 アセンブリに対する前の要求が失敗している場合、そのアセンブリに対する後続の要求は、アセンブリの読み込みを試みることなく即座に失敗します。 .NET Framework Version 2.0 からは、アセンブリ バインディング エラーがキャッシュされ、キャッシュされた情報を使用してアセンブリの読み込みを試みるかどうかが判断されるようになりました。

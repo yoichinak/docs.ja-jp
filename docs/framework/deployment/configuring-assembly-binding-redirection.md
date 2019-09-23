@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3424e7a412a79266d3bd9f20061ff4a0cd89115
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7e2add2756106234227c7b2dd62ae107adc58854
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965758"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052177"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>アセンブリ バインディングのリダイレクトの構成
-既定では、アプリケーションは、アプリケーションのコンパイルに使用したランタイム バージョンと共に出荷された .NET Framework アセンブリのセットを使用します。 アプリケーション構成ファイルで .NET Framework アセンブリの特定のバージョンのアセンブリ バインディング参照をリダイレクトするには [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 要素の **appliesTo** 属性を使用できます。 このオプションの属性は、.NET Framework のバージョン番号を使用して、どのバージョンに適用するのかを示します。 **appliesTo** 属性が指定されていない場合、 **\<assemblyBinding>** 要素は、.NET Framework のすべてのバージョンに適用されます。  
+既定では、アプリケーションは、アプリケーションのコンパイルに使用したランタイム バージョンと共に出荷された .NET Framework アセンブリのセットを使用します。 アプリケーション構成ファイルで .NET Framework アセンブリの特定のバージョンのアセンブリ バインディング参照をリダイレクトするには [\<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 要素の **appliesTo** 属性を使用できます。 このオプションの属性は、.NET Framework のバージョン番号を使用して、どのバージョンに適用するのかを示します。 **appliesTo** 属性が指定されていない場合、 **\<assemblyBinding>** 要素は、.NET Framework のすべてのバージョンに適用されます。  
   
  **appliesTo** 属性は .NET Framework Version 1.1 で導入されたものであり、.NET Framework Version 1.0 では無視されます。 これは **appliesTo** 属性が指定されている場合でも、.NET Framework version 1.0 を使用している場合 **\<assemblyBinding>** のすべての要素が適用されることを意味します。  
   
@@ -55,8 +55,8 @@ ms.locfileid: "69965758"
 ## <a name="debugging-configuration-file-errors"></a>構成ファイル エラーのデバッグ  
  ランタイムは、アプリケーション ドメインが作成されるときに構成ファイルを一度解析し、コードをアプリケーション ドメインに読み込みます。 共通言語ランタイムは、エントリを無視することによって構成ファイルに含まれるエラーを処理します。 構成ファイルに不正な XML が含まれる場合、ランタイムは構成ファイル全体を無視します。 無効な XML に対しては、無効なセクションだけを無視します。  
   
- アセンブリ バインディングのリダイレクトが発生しているかどうかを調べることによって、構成ファイルが使用されているかどうかを判断できます。 [アセンブリ バインディング ログ ビューアー (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) を使用して、読み込まれたアセンブリを調べます。 すべてのアセンブリ バインドを見るには、レジストリで **ForceLog** のエントリを設定する必要があります。  
+ アセンブリ バインディングのリダイレクトが発生しているかどうかを調べることによって、構成ファイルが使用されているかどうかを判断できます。 [アセンブリ バインディング ログ ビューアー (Fuslogvw.exe)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) を使用して、読み込まれたアセンブリを調べます。 すべてのアセンブリ バインドを見るには、レジストリで **ForceLog** のエントリを設定する必要があります。  
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 自動バインディング リダイレクトを有効/無効にする](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [方法: 自動バインディング リダイレクトを有効/無効にする](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5033b32c1623885b5408f428ce4bc4202d50ce1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9a8d41228c46de0f18b5a92def0591d6373d3d69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894618"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044094"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS デバッガー拡張)
 
@@ -74,7 +74,7 @@ SOS デバッガー拡張 (SOS.dll) を使用して内部の共通言語ラン�
 |**IP2MD** \<*コード アドレス*>|JIT コンパイルされたコード内の指定したアドレスにある `MethodDesc` 構造体を表示します。|
 |`ListNearObj` (`lno`) *\<obj_address>*|指定したアドレスの前および後にあるオブジェクトを表示します。 このコマンドは、マネージド オブジェクトの開始時に (有効メソッド テーブルに基づいて) 有効であると考えられるガベージ コレクション ヒープ内のアドレス、および引数アドレスの後のオブジェクトを検索します。|
 |**MinidumpMode** **[0]** **[1]**|ミニダンプを使用するときに安全でないコマンドが実行されるのを防止します。<br /><br /> この機能を無効にするには **0** を渡し、機能を有効にするには **1** を渡します。 既定では、**MinidumpMode** の値は **0** に設定されます。<br /><br /> **.dump /m** コマンドまたは **.dump** コマンドで作成されるミニダンプの内容は CLR 固有のデータに制限され、このミニダンプは SOS コマンドのサブセットでのみ正しく実行できます。 一部のコマンドはメモリの必要領域が割り当てられていないか一部分しか割り当てられていないため、予期しないエラーが発生して失敗することがあります。 このオプションは、ミニダンプに対して安全でないコマンドが実行されるのを防止します。|
-|**Name2EE** \<*モジュール名*> \<*型またはメソッド名*><br /><br /> または<br /><br /> **Name2EE** \<*モジュール名*> **!** \<*型またはメソッド名*>|指定したモジュール内の指定した型またはメソッドの `MethodTable` 構造体および `EEClass` 構造体を表示します。<br /><br /> 指定したモジュールをプロセスに読み込む必要があります。<br /><br /> 適切な型名を取得するには、[Ildasm.exe (IL 逆アセンブラー)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) を使用してモジュールを参照します。 また、`*` を module name パラメーターとして渡すと、読み込まれているすべてのマネージド モジュールを検索できます。 *モジュール名*パラメーターには、`mscorlib`、`image00400000` など、デバッガーのモジュールの名前も指定できます。<br /><br /> このコマンドは、Windows のデバッガー構文 <`module`>`!`<`type`> をサポートします。 型は、完全修飾する必要があります。|
+|**Name2EE** \<*モジュール名*> \<*型またはメソッド名*><br /><br /> または<br /><br /> **Name2EE** \<*モジュール名*> **!** \<*型またはメソッド名*>|指定したモジュール内の指定した型またはメソッドの `MethodTable` 構造体および `EEClass` 構造体を表示します。<br /><br /> 指定したモジュールをプロセスに読み込む必要があります。<br /><br /> 適切な型名を取得するには、[Ildasm.exe (IL 逆アセンブラー)](ildasm-exe-il-disassembler.md) を使用してモジュールを参照します。 また、`*` を module name パラメーターとして渡すと、読み込まれているすべてのマネージド モジュールを検索できます。 *モジュール名*パラメーターには、`mscorlib`、`image00400000` など、デバッガーのモジュールの名前も指定できます。<br /><br /> このコマンドは、Windows のデバッガー構文 <`module`>`!`<`type`> をサポートします。 型は、完全修飾する必要があります。|
 |**ObjSize** [\<*オブジェクトのアドレス*>] &#124; **[-aggregate]** **[-stat]**|指定したオブジェクトのサイズを表示します。 パラメーターを何も指定しないで **ObjSize** コマンドを使用すると、マネージド スレッドで見つかったすべてのオブジェクトのサイズが表示され、プロセス内のすべてのガベージ コレクター ハンドル、およびそれらのハンドルが指すオブジェクトのサイズの合計が表示されます。 **ObjSize** コマンドの結果には、親オブジェクトに加え、すべての子オブジェクトのサイズが含まれます。<br /><br /> **-aggregate** オプションを **-stat** 引数と組み合わせて使用すると、まだルートがある型の詳細なビューを取得できます。 **!dumpheap -stat** と **!objsize -aggregate -stat** を使用することで、既にルートがなくなっているオブジェクトを判別し、メモリに関するさまざまな問題を診断できます。|
 |**PrintException** **[-nested]** **[-lines]** [\<*例外オブジェクトのアドレス*>]<br /><br /> または<br /><br /> **PE** **[-nested]** [\<*例外オブジェクトのアドレス*>]|指定したアドレスにある <xref:System.Exception> クラスから派生したすべてのオブジェクトのフィールドが表示および書式設定されます。 アドレスを指定しないで **PrintException** コマンドを使用すると、現在のスレッドで最後にスローされた例外が表示されます。<br /><br /> **-nested** オプションは、入れ子になった例外オブジェクトに関する詳細を表示します。<br /><br /> **-lines** オプションは、ソース情報を表示します (存在する場合)。<br /><br /> このコマンドを使用すると、バイナリ配列の `_stackTrace` フィールドを書式設定して表示できます。|
 |**ProcInfo** **[-env]** **[-time]** **[-mem]**|プロセスの環境変数、カーネル CPU 時間、およびメモリ使用率統計を表示します。|
@@ -206,5 +206,5 @@ WinDbg.exe と Visual Studio は、現在使用している Mscorwks.dll のバ�
 
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [ツール](index.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

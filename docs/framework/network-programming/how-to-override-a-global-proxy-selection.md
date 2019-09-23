@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
-ms.openlocfilehash: e5f4dc22ad75dc4d4f7dc30f44e6ae304403ef16
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 44845fb67aac4ff9ab9dda8cf4934153c8c4f23c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914527"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048269"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>方法: グローバル プロキシの選択をオーバーライドする
 この例では、`www.contoso.com` に **WebRequest** を送信し、ポート 80 の `alternateproxy` という名前のプロキシ サーバーでグローバル プロキシの選択をオーバーライドします。  
@@ -34,5 +34,5 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
   
 ## <a name="see-also"></a>関連項目
 
-- [アプリケーション プロトコルの使用](../../../docs/framework/network-programming/using-application-protocols.md)
-- [プロキシを介したインターネットへのアクセス](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [アプリケーション プロトコルの使用](using-application-protocols.md)
+- [プロキシを介したインターネットへのアクセス](accessing-the-internet-through-a-proxy.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20e5f166aad8bc2504ed27b93ec6730bcd26387d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5079f0243faefaab6ada23cc98f5214a616c1d22
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911595"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044362"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (ネイティブ イメージ ジェネレーター)
 
@@ -59,7 +59,7 @@ Ngen.exe とネイティブ イメージ サービスの使用に関する追加
 > [!NOTE]
 > .NET Framework バージョン 1.0 とバージョン 1.1 の Ngen.exe 構文は、「[ネイティブ イメージ ジェネレーター (Ngen.exe) のレガシ構文](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100))」に記されています。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
+このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
 
 コマンド プロンプトに次のように入力します。
 
@@ -392,7 +392,7 @@ Ngen.exe は、ネイティブ イメージを生成するときに上記の情�
 
      アセンブリに事前に与えられていたアクセス許可を制限するマシン セキュリティ ポリシーを変更すると、そのアセンブリのコンパイル済みのネイティブ イメージが無効になることがあります。
 
-     共通言語ランタイムがコード アクセス セキュリティを管理する方法と、アクセス許可を使用する方法の詳細については、「[コード アクセス セキュリティ](../../../docs/framework/misc/code-access-security.md)」を参照してください。
+     共通言語ランタイムがコード アクセス セキュリティを管理する方法と、アクセス許可を使用する方法の詳細については、「[コード アクセス セキュリティ](../misc/code-access-security.md)」を参照してください。
 
 <a name="Troubleshooting"></a>
 
@@ -404,13 +404,13 @@ Ngen.exe は、ネイティブ イメージを生成するときに上記の情�
 
 ### <a name="assembly-binding-log-viewer"></a>アセンブリ バインディング ログ ビューアー
 
-アプリケーションでネイティブ イメージが使用されているかどうかを確認するには、[Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) を使用できます。 バインディング ログ ビューアーのウィンドウの **[ログのカテゴリ]** ボックスで、 **[ネイティブ イメージ]** をクリックします。 Fuslogvw.exe は、ネイティブ イメージが拒否された理由に関する情報を提供します。
+アプリケーションでネイティブ イメージが使用されているかどうかを確認するには、[Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)](fuslogvw-exe-assembly-binding-log-viewer.md) を使用できます。 バインディング ログ ビューアーのウィンドウの **[ログのカテゴリ]** ボックスで、 **[ネイティブ イメージ]** をクリックします。 Fuslogvw.exe は、ネイティブ イメージが拒否された理由に関する情報を提供します。
 
 <a name="MDA"></a>
 
 ### <a name="the-jitcompilationstart-managed-debugging-assistant"></a>JITCompilationStart マネージド デバッグ アシスタント
 
-[jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md) マネージド デバッグ アシスタント (MDA) を使用すると、JIT コンパイラが関数のコンパイルを開始するタイミングを判別できます。
+[jitCompilationStart](../debug-trace-profile/jitcompilationstart-mda.md) マネージド デバッグ アシスタント (MDA) を使用すると、JIT コンパイラが関数のコンパイルを開始するタイミングを判別できます。
 
 <a name="OptOut"></a>
 
@@ -562,7 +562,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 
 ## <a name="native-image-task"></a>ネイティブ イメージ タスク
 
-ネイティブ イメージ タスクは、ネイティブ イメージを生成および保持する Windows タスクです。 ネイティブ イメージ タスクは、サポートされるシナリオでネイティブ イメージを自動的に生成し、解放します。 また、インストーラーが、[Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) を使用して、遅延時にネイティブ イメージを生成および更新できるようにします。
+ネイティブ イメージ タスクは、ネイティブ イメージを生成および保持する Windows タスクです。 ネイティブ イメージ タスクは、サポートされるシナリオでネイティブ イメージを自動的に生成し、解放します。 また、インストーラーが、[Ngen.exe (ネイティブ イメージ ジェネレーター)](ngen-exe-native-image-generator.md) を使用して、遅延時にネイティブ イメージを生成および更新できるようにします。
 
 各アーキテクチャを対象とするアプリケーションのコンパイルを許可するために、ネイティブ イメージ タスクはコンピューターでサポートされる CPU アーキテクチャごとに一度登録されます。
 
@@ -639,7 +639,7 @@ Ngen.exe は同期コマンドを実行し、ネイティブ イメージ サー
 
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
+- [ツール](index.md)
 - [マネージド実行プロセス](../../standard/managed-execution-process.md)
-- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

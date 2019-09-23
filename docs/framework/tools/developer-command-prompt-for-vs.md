@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877059"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044734"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 用開発者コマンド プロンプト
 
@@ -38,7 +38,7 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 ### <a name="in-windows-81"></a>Windows 8.1 の場合
 
-1. キーボードの Windows ロゴ キー ![キーボードの Windows ロゴ キー](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) を押すなどして、**[スタート]** 画面に 移動します。
+1. キーボードの Windows ロゴ キー ![キーボードの Windows ロゴ キー](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) を押すなどして、 **[スタート]** 画面に 移動します。
 
 2. **[スタート]** 画面で、**Ctrl**+**Tab** キーを押して **[アプリ]** の一覧を開き、`V`.と入力します。 インストールされているすべての Visual Studio コマンド プロンプトが含まれた一覧が表示されます。
 
@@ -46,9 +46,9 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 ### <a name="in-windows-8"></a>Windows 8 の場合
 
-1. キーボードの Windows ロゴ キー ![キーボードの Windows ロゴ キー](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) を押すなどして、**[スタート]** 画面に 移動します。
+1. キーボードの Windows ロゴ キー ![キーボードの Windows ロゴ キー](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) を押すなどして、 **[スタート]** 画面に 移動します。
 
-2. **[スタート]** 画面で、Windows ロゴ キー ![キーボードの Windows ロゴ キー](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)  `+ Z` を押します。
+2. **[スタート]** 画面で、Windows ロゴ キー ![キーボードの Windows ロゴ キー](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) `+ Z`。
 
 3. 画面下部にある**アプリ ビュー** アイコンを選択し、「`V`」と入力します。 インストールされているすべての Visual Studio コマンド プロンプトが含まれた一覧が表示されます。
 
@@ -56,9 +56,9 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 ### <a name="in-windows-7"></a>Windows 7 の場合
 
-1. **[スタート]** を選択し、**[すべてのプログラム]**、**[Microsoft Visual Studio]** の順に展開します。
+1. **[スタート]** を選択し、 **[すべてのプログラム]** 、 **[Microsoft Visual Studio]** の順に展開します。
 
-2. インストールされている Visual Studio のバージョンに応じて、**[Visual Studio Tools]**、**[Visual Studio コマンド プロンプト]**、または使用するコマンド プロンプトを選択します。
+2. インストールされている Visual Studio のバージョンに応じて、 **[Visual Studio Tools]** 、 **[Visual Studio コマンド プロンプト]** 、または使用するコマンド プロンプトを選択します。
 
 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) や[それ以前のバージョン](https://developer.microsoft.com/windows/downloads/sdk-archive)など、他の SDK をインストールしている場合、ARM、x86、または x64 の各アーキテクチャ用のコマンド プロンプトがさらに表示されることがあります。 各ツールのドキュメントを参照して、どのバージョンのコマンド プロンプトを使用する必要があるかを確認してください。
 
@@ -72,9 +72,9 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 1. Visual Studio を開きます。
 
-2. **[ツール]** メニューを選択し、**[外部ツール]** を選択します。
+2. **[ツール]** メニューを選択し、 **[外部ツール]** を選択します。
 
-3. **[外部ツール]** ダイアログ ボックスで、**[追加]** ボタンをクリックします。 新しいエントリが表示されます。
+3. **[外部ツール]** ダイアログ ボックスで、 **[追加]** ボタンをクリックします。 新しいエントリが表示されます。
 
 4. 新しいメニュー項目の **[タイトル]** を入力します (「`Command Prompt`」など)。
 
@@ -82,15 +82,15 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 6. **[引数]** フィールドに、使用する特定のコマンド プロンプトのある場所を指定します (`/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"` など。このコマンドでは、Visual Studio 2017 Enterprise でインストールされた開発者コマンド プロンプトが起動されます)。 この値は、Visual Studio のバージョン、エディション、インストール先に応じて変更します。
 
-7. **[初期ディレクトリ]** フィールドの値 (**[プロジェクト ディレクトリ]** など) を選択します。
+7. **[初期ディレクトリ]** フィールドの値 ( **[プロジェクト ディレクトリ]** など) を選択します。
 
 8. **[OK]** を選択します。
 
    新しいメニュー項目が追加され、このコマンド プロンプトに **[ツール]** メニューからアクセスできるようになります。
 
-   ![Visual Studio でのコマンド プロンプト メニュー項目](media/command-prompt-vs-menu.png)
+   ![Visual Studio でのコマンド プロンプト メニュー項目](./media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
+- [ツール](index.md)
 - [Visual Studio の外部ツール](/visualstudio/ide/managing-external-tools)

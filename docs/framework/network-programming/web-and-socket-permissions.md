@@ -15,12 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: fbb4e5d7171c50c06f55706df90240ffa205ee73
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1b993acbf20eac244e596075c3f826bba3211a1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967620"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046862"
 ---
 # <a name="web-and-socket-permissions"></a>Web およびソケットのアクセス許可
 <xref:System.Net> 名前空間を使用したアプリケーションのインターネット セキュリティは、<xref:System.Net.WebPermission> クラスと <xref:System.Net.SocketPermission> クラスで提供されます。 **WebPermission** クラスは、URI からデータを要求するか、URI をインターネットに提供するアプリケーションの権限を制御します。 **SocketPermission** クラスは、ソケットのホスト、ポート番号、およびトランスポート プロトコルに基づいて、アプリケーションが <xref:System.Net.Sockets.Socket> を使用してローカル ポートでデータを受け入れる権利、または別のアドレスでトランスポート プロトコルを使用してリモート デバイスに接続する権利を制御します。  
@@ -36,4 +36,4 @@ ms.locfileid: "69967620"
 ## <a name="see-also"></a>関連項目
 
 - [セキュリティ](../../standard/security/index.md)
-- [ネットワーク プログラミングにおけるセキュリティ](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [ネットワーク プログラミングにおけるセキュリティ](security-in-network-programming.md)

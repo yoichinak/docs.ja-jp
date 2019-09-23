@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623059"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047359"
 ---
 # <a name="proxy-configuration"></a>プロキシの構成
 プロキシ サーバーは、リソースに対するクライアント要求を処理します。 プロキシは、要求されたリソースをキャッシュから返したり、リソースが存在するサーバーに要求を転送したりできます。 プロキシは、リモート サーバーに送信された要求の数を減らすことで、ネットワークのパフォーマンスを向上できます。 プロキシを使用して、リソースへのアクセスを制限することもできます。  
@@ -24,7 +24,7 @@ ms.locfileid: "64623059"
 ## <a name="adaptive-proxies"></a>アダプティブ プロキシ  
  .NET Framework には、アダプティブと静的という 2 種類のプロキシがあります。 アダプティブ プロキシは、ネットワーク構成を変更するときに、その設定を調整します。 たとえば、ラップトップ ユーザーがダイヤルアップ ネットワーク接続を起動する場合、アダプティブ プロキシはこの変更を認識し、新しい構成スクリプトを検出して実行し、その設定を適切に調整します。  
   
- アダプティブ プロキシは、構成スクリプトによって構成されます (「[自動プロキシ検出](../../../docs/framework/network-programming/automatic-proxy-detection.md)」を参照)。 スクリプトは、一連のアプリケーション プロトコルと、各プロトコル用のプロキシを生成します。  
+ アダプティブ プロキシは、構成スクリプトによって構成されます (「[自動プロキシ検出](automatic-proxy-detection.md)」を参照)。 スクリプトは、一連のアプリケーション プロトコルと、各プロトコル用のプロキシを生成します。  
   
  ネットワーク環境での変更により、システムで新しい一連のプロキシを使用することが必要となる場合があります。 ネットワーク接続がダウンしたか、新しいネットワーク接続が開始された場合、システムは新しい環境で構成スクリプトの適切なソースを検出し、新しいスクリプトを実行する必要があります。  
   
@@ -79,4 +79,4 @@ ms.locfileid: "64623059"
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
-- [自動プロキシ検出](../../../docs/framework/network-programming/automatic-proxy-detection.md)
+- [自動プロキシ検出](automatic-proxy-detection.md)

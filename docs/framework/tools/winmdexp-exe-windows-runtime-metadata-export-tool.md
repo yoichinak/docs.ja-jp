@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0664a68d258380fd9e4824b80f0d7a244cb61e85
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0b3cf60d670e7fdfa624599bc0eeddc99219c202
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894778"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044017"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)
 Windows ランタイム メタデータ エクスポート ツール (Winmdexp.exe) は、.NET Framework モジュールを、Windows メタデータを含むファイルに変換します。 .NET Framework アセンブリと Windows ランタイム メタデータ ファイルでは同じ物理形式が使用されますが、メタデータ テーブルの内容に違いがあります。つまり、NET Framework アセンブリは自動的に Windows ランタイム コンポーネントとして使用できるわけではありません。 .NET Framework モジュールを Windows ランタイム コンポーネントに変換するプロセスは、"*エクスポート*" と呼ばれます。 .NET Framework 4.5 と .NET Framework 4.5.1 では、結果として生成される Windows メタデータ (.winmd) ファイルにメタデータと実装の両方が含まれます。  
   
  Visual Studio 2013 または Visual Studio 2012 で、C# および Visual Basic の **Windows ストア**にある **Windows ランタイム コンポーネント** テンプレートを使用する場合、コンパイラのターゲットは .winmdobj ファイルであり、後続のビルド ステップで Winmdexp.exe が呼び出され、.winmdobj ファイルが .winmd ファイルにエクスポートされます。 Windows ランタイム コンポーネントをビルドする場合は、この方法をお勧めします。 Visual Studio による制御より細かくビルド プロセスを制御する場合は、Winmdexp.exe ファイルを直接使用します。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -54,5 +54,5 @@ winmdexp [options] winmdmodule
 
 - [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [C# および Visual Basic での Windows ランタイム コンポーネントの作成](https://go.microsoft.com/fwlink/p/?LinkID=238313)
-- [Winmdexp.exe のエラー メッセージ](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
+- [Winmdexp.exe のエラー メッセージ](winmdexp-exe-error-messages.md)
 - [ビルド ツール、配置ツール、および構成ツール (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

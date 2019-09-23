@@ -2,12 +2,12 @@
 title: ピア名と PNRP ID
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: 8cdd5151d029436d11c78806cf7673861cc0d8a4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15b74317507f69d2339a2e5e49b54ae72cda1a7b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623117"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047500"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>ピア名と PNRP ID
 ピア名は通信のエンドポイントを表します。ピア名には、コンピューター、ユーザー、グループ、サービスのほか、ピアに関連付けられていて IPv6 アドレスに変換できるすべてのものを指定できます。 ピア名解決プロトコル (PNRP) は、クラウド メンバーの識別に使用される PNRP ID を作成するために、統計的に一意なピア名を取得します。  
@@ -20,7 +20,7 @@ ms.locfileid: "64623117"
  セキュリティで保護されたピア名は、所有者によってのみ登録され、公開キー暗号化によって保護されます。 セキュリティで保護されたピア名の所有者は、対応する秘密キーを持つピア エンティティであると想定されます。 秘密キーを使用して署名された、認定済みピア アドレス (CPA) によって、所有権を証明できます。 悪意のあるユーザーは、対応する秘密キーのないピア名の所有権を偽造できません。  
   
 ## <a name="pnrp-ids"></a>PNRP ID  
- ![PNRP ID](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
+ ![PNRP ID](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
   
  PNRP ID は次の部分で構成されています。  
   

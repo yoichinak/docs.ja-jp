@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f83c67354e96e1da3a30ab2e30fffe026c4646b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 7fdb364769be6d8c7c53ca05a7d7cb967678123a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971348"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044905"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (アセンブリ リンカー)
 
@@ -23,7 +23,7 @@ ms.locfileid: "70971348"
 > [!NOTE]
 > Visual Studio 2008 以降では、C# と Visual Basic のどちらのコンパイラを使用しても、Win32 マニフェストはアセンブリに自動的に埋め込まれます。 詳細については、「[/win32manifest (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)」を参照してください。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
+このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
 
 コマンド プロンプトに次のように入力します。
 
@@ -40,7 +40,7 @@ al sources options
 | ソース | 説明 |
 | ------ | ----------- |
 |`file`[,`target`]|`file` (モジュール) の内容を `target` で名前が指定されたファイルにコピーします。 コピーが完了すると、*Al.exe* は `target` をコンパイルしてアセンブリを生成します。|
-|**/embed[resource]:** `file`[,`name`[,`private`]]|`file` で指定したリソースをアセンブリ マニフェストを含むイメージに埋め込みます。*Al.exe* は、`file` の内容をポータブル実行可能 (PE) イメージにコピーします。<br /><br /> `name` パラメーターは、リソースの内部識別子です。 既定では、リソースはアセンブリでパブリックに指定されており、他のアセンブリから参照できます。 `private` を指定すると、そのリソースを他のアセンブリから参照できなくなります。<br /><br /> `file` が[リソース ファイル ジェネレーター (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) や開発環境などで作成された .NET Framework リソース ファイルである場合は、<xref:System.Resources> のメンバーを使用してそのファイルにアクセスできます。 詳細については、<xref:System.Resources.ResourceManager> を参照してください。 それ以外のすべてのリソースに対しては、`GetManifestResource` の <xref:System.Reflection.Assembly>* メソッドを使用して、実行時にリソースにアクセスします。<br /><br /> リソース ファイルだけが *Al.exe* に渡された場合は、出力ファイルはサテライト リソース アセンブリになります。|
+|**/embed[resource]:** `file`[,`name`[,`private`]]|`file` で指定したリソースをアセンブリ マニフェストを含むイメージに埋め込みます。*Al.exe* は、`file` の内容をポータブル実行可能 (PE) イメージにコピーします。<br /><br /> `name` パラメーターは、リソースの内部識別子です。 既定では、リソースはアセンブリでパブリックに指定されており、他のアセンブリから参照できます。 `private` を指定すると、そのリソースを他のアセンブリから参照できなくなります。<br /><br /> `file` が[リソース ファイル ジェネレーター (*Resgen.exe*)](resgen-exe-resource-file-generator.md) や開発環境などで作成された .NET Framework リソース ファイルである場合は、<xref:System.Resources> のメンバーを使用してそのファイルにアクセスできます。 詳細については、<xref:System.Resources.ResourceManager> を参照してください。 それ以外のすべてのリソースに対しては、`GetManifestResource` の <xref:System.Reflection.Assembly>* メソッドを使用して、実行時にリソースにアクセスします。<br /><br /> リソース ファイルだけが *Al.exe* に渡された場合は、出力ファイルはサテライト リソース アセンブリになります。|
 |**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|リソース ファイルをアセンブリにリンクします。 `file` によって指定されたリソースがアセンブリの一部になります。ファイルはコピーされません。 `file` パラメーターには、任意のファイル形式を指定できます。 たとえば、`file` パラメーターとしてネイティブ DLL を指定できます。 このようにすると、ネイティブ DLL はアセンブリの一部になるので、グローバル アセンブリ キャッシュにインストールして、アセンブリ内のマネージド コードからアクセスできます。 **/linkresource** コンパイラ オプションを使用して、これを実行することもできます。 詳しくは、「[/linkresource (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)」をご覧ください。<br /><br /> `name` パラメーターは、リソースの内部識別子です。 `target` パラメーターは、*Al.exe* が `file` をコピーする対象のパスおよびファイル名を指定します *。* コピーが完了すると、*Al.exe* は `target` をコンパイルしてアセンブリを生成します。 既定では、リソースはアセンブリでパブリックに指定されており、他のアセンブリから参照できます。 `private` を指定すると、そのリソースを他のアセンブリから参照できなくなります。<br /><br /> `file` がリソース ファイル ジェネレーター (*Resgen.exe*) や開発環境などで作成された .NET Framework リソース ファイルである場合は、<xref:System.Resources> 名前空間のメンバーを使用してそのファイルにアクセスできます。 詳細については、<xref:System.Resources.ResourceManager> を参照してください。 それ以外のすべてのリソースに対しては、`GetManifestResource` クラスの <xref:System.Reflection.Assembly>* メソッドを使用して、実行時にリソースにアクセスします。<br /><br /> リソース ファイルだけが *Al.exe* に渡された場合は、出力ファイルはサテライト リソース アセンブリになります。|
 
 指定できる `options` を次に示します。 **/out** オプションは必ず指定する必要があります。
@@ -54,14 +54,14 @@ al sources options
 |**/config[uration]:** `text`|アセンブリの Configuration フィールドに文字列を指定します。 `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> テキストが空の文字列の場合、Win32 Configuration リソースは単一の空白として表示されます。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyConfigurationAttribute>) として指定することもできます。|
 |**/copy[right]:** `text`|アセンブリの Copyright フィールドに文字列を指定します。 `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> **/win32res** を指定しないと、 **/copyright** が Win32 Copyright リソースとしてエクスプローラーに表示されます。<br /><br /> テキストが空の文字列の場合、Win32 Copyright リソースは単一の空白として表示されます。<br /><br /> **/win32res** を指定した場合は、Win32 リソース情報に対して **/copyright** は無効になります。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyCopyrightAttribute>) として指定することもできます。|
 |**/c[ulture]:** `text`|アセンブリに関連付けるカルチャ文字列を指定します。 カルチャとして有効な値は、RFC (Internet Requests for Comments) ドキュメント 1766 『Tags for the Identification of Languages』で定義されている値です。<br /><br /> `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 既定のカルチャ文字列はありません。 この文字列は、リフレクションを使用して表示するために使用できます。<br /><br /> 有効な `text` 文字列の詳細については、「<xref:System.Globalization.CultureInfo>」を参照してください。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyCultureAttribute>) として指定することもできます。|
-|**/delay[sign][+&#124;-]**|アセンブリに完全に署名するか、部分的に署名するかを指定します。 完全署名されたアセンブリを作成する場合は、 **/delaysign-** を使用します。 アセンブリに公開キーだけを含める場合は、 **/delaysign+** を使用します。<br /><br /> アセンブリに完全に署名するように指定すると、*Al.exe* はマニフェスト (アセンブリ メタデータ) を含むファイルをハッシュし、秘密キーでそのハッシュに署名します。 結果として得られるデジタル署名は、マニフェストを含むファイルに格納されます。 アセンブリが遅延署名される場合、*Al.exe* は署名を算出および格納するのでなく、後で署名を追加できるようにファイル内の空間を予約するだけとなります。<br /><br /> 既定値は **/delaysign-** です。<br /><br /> **/delaysign** オプションは、 **/keyfile** または **/keyname** と共に使用しない場合、無効になります。<br /><br /> たとえば、 **/delaysign+** を指定すると、テスト時にはアセンブリをグローバル キャッシュに格納できます。 テスト後に、アセンブリに秘密キーを含めることにより、そのアセンブリに完全署名できます。<br /><br /> メモ:[*Gacutil.exe* (グローバル アセンブリ キャッシュ ツール)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) を使用して遅延署名アセンブリをグローバル キャッシュに格納する前に、[*Sn.exe* (厳密名ツール)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) を使用してアセンブリを登録して検証をスキップします。 たとえば、`Sn.exe –Vr delaySignedAssembly` のようにします。 これは、開発にのみ使用してください。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyDelaySignAttribute>) として指定することもできます。|
+|**/delay[sign][+&#124;-]**|アセンブリに完全に署名するか、部分的に署名するかを指定します。 完全署名されたアセンブリを作成する場合は、 **/delaysign-** を使用します。 アセンブリに公開キーだけを含める場合は、 **/delaysign+** を使用します。<br /><br /> アセンブリに完全に署名するように指定すると、*Al.exe* はマニフェスト (アセンブリ メタデータ) を含むファイルをハッシュし、秘密キーでそのハッシュに署名します。 結果として得られるデジタル署名は、マニフェストを含むファイルに格納されます。 アセンブリが遅延署名される場合、*Al.exe* は署名を算出および格納するのでなく、後で署名を追加できるようにファイル内の空間を予約するだけとなります。<br /><br /> 既定値は **/delaysign-** です。<br /><br /> **/delaysign** オプションは、 **/keyfile** または **/keyname** と共に使用しない場合、無効になります。<br /><br /> たとえば、 **/delaysign+** を指定すると、テスト時にはアセンブリをグローバル キャッシュに格納できます。 テスト後に、アセンブリに秘密キーを含めることにより、そのアセンブリに完全署名できます。<br /><br /> メモ:[*Gacutil.exe* (グローバル アセンブリ キャッシュ ツール)](gacutil-exe-gac-tool.md) を使用して遅延署名アセンブリをグローバル キャッシュに格納する前に、[*Sn.exe* (厳密名ツール)](sn-exe-strong-name-tool.md) を使用してアセンブリを登録して検証をスキップします。 たとえば、`Sn.exe –Vr delaySignedAssembly` のようにします。 これは、開発にのみ使用してください。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyDelaySignAttribute>) として指定することもできます。|
 |**/descr[iption]:** `text`|アセンブリの <xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A> フィールドに文字列を指定します。 `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> **/win32res** を指定しないと、 **/description** が Win32 **Comments** リソースとしてエクスプローラーに表示されます。<br /><br /> テキストが空の文字列の場合、Win32 **Comments** リソースは単一の空白として表示されます。<br /><br /> **/win32res** を指定した場合は、Win32 リソース情報に対して **/description** は無効になります。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>) として指定することもできます。|
 |**/e[vidence]:** `file`|Security.Evidence のリソース名を持つアセンブリに `file` を埋め込みます。<br /><br /> 通常のリソースに対して Security.Evidence を使用することはできません。|
 |**/fileversion:** `version`|アセンブリの **File Version** フィールドに文字列を指定します。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> **/win32res** を指定しないと、 **/fileversion** が Win32 **File Version** リソースとして使用されます。 **/fileversion** を指定しないと、Win32 **Assembly Version** リソースによって Win32 **File Version** リソースが設定されます。<br /><br /> **/win32res** を指定した場合は、Win32 リソースに対して **/fileversion** は無効になります。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (AssemblyFileVersionAttribute) として指定することもできます。|
 |**/flags:** `flags`|アセンブリの `Flags` フィールドに値を指定します。 `flags` に指定できる値は次のとおりです。<br /><br /> 0x0000<br /> アセンブリは side-by-side 実行をサポートしています。<br /><br /> 0x0010<br /> アセンブリは別のバージョンが同じアプリケーション ドメインで実行されている場合には実行できません。<br /><br /> 0x0020<br /> アセンブリは別のバージョンが同じプロセスで実行されている場合には実行できません。<br /><br /> 0x0030<br /> アセンブリは別のバージョンが同じコンピューターで実行されている場合には実行できません。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyFlagsAttribute>) として指定することもできます。|
 |**/fullpaths**|エラー メッセージで報告されるすべてのファイルについて、*Al.exe* が絶対パスを使用するように指定します。|
 |**/help**|このツールのコマンド構文とオプションを表示します。|
-|**/keyf[ile]:** `filename`|アセンブリに署名するためのキー ペアまたは公開キーだけを含むファイル (`filename`) を指定します。 コンパイラは、アセンブリ マニフェストに公開キーを挿入し、最終的なアセンブリに秘密キーで署名します。 キー ファイルの生成、およびキー コンテナーへのキー ペアのインストールについては、「[厳密名ツール (*Sn.exe*)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)」を参照してください。<br /><br /> 遅延署名を使用する場合は、通常、このファイルには公開キーだけが含まれ、秘密キーは含まれません。<br /><br /> キー ペアの公開キー情報は、アセンブリの .publickey フィールドに表示されます。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyKeyFileAttribute>) として指定することもできます。<br /><br /> 同じコンパイルで、コマンド ライン オプションまたはカスタム属性によって **/keyfile** と **/keyname** の両方が指定された場合、*Al.exe* はまず、 **/keyname** で指定されたコンテナーを検索します。 成功すると、キー コンテナー内の情報を使用して、アセンブリが署名されます。 キー コンテナーを検出できなかった場合、*Al.exe* は **/keyfile** で指定されたファイルを検索します。 ファイルが検出された場合、アセンブリはキー ファイルの情報で署名され、キー情報はキー コンテナーにインストールされるため ([*Sn.exe*](../../../docs/framework/tools/sn-exe-strong-name-tool.md) の -i オプションと同様)、次のコンパイル時には **/keyname** オプションが有効となります。|
+|**/keyf[ile]:** `filename`|アセンブリに署名するためのキー ペアまたは公開キーだけを含むファイル (`filename`) を指定します。 コンパイラは、アセンブリ マニフェストに公開キーを挿入し、最終的なアセンブリに秘密キーで署名します。 キー ファイルの生成、およびキー コンテナーへのキー ペアのインストールについては、「[厳密名ツール (*Sn.exe*)](sn-exe-strong-name-tool.md)」を参照してください。<br /><br /> 遅延署名を使用する場合は、通常、このファイルには公開キーだけが含まれ、秘密キーは含まれません。<br /><br /> キー ペアの公開キー情報は、アセンブリの .publickey フィールドに表示されます。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyKeyFileAttribute>) として指定することもできます。<br /><br /> 同じコンパイルで、コマンド ライン オプションまたはカスタム属性によって **/keyfile** と **/keyname** の両方が指定された場合、*Al.exe* はまず、 **/keyname** で指定されたコンテナーを検索します。 成功すると、キー コンテナー内の情報を使用して、アセンブリが署名されます。 キー コンテナーを検出できなかった場合、*Al.exe* は **/keyfile** で指定されたファイルを検索します。 ファイルが検出された場合、アセンブリはキー ファイルの情報で署名され、キー情報はキー コンテナーにインストールされるため ([*Sn.exe*](sn-exe-strong-name-tool.md) の -i オプションと同様)、次のコンパイル時には **/keyname** オプションが有効となります。|
 |**/keyn[ame]:** `text`|キー ペアを保持するコンテナーを指定します。 これにより、公開キーがアセンブリ マニフェストに挿入され、アセンブリに署名 (厳密な名前が指定) されます。 次に、*Al.exe* は最終的なアセンブリに秘密キーで署名します。<br /><br /> *Sn.exe* を使用して、キー ペアを生成します。<br /><br /> キー情報は、アセンブリの .publickey フィールドに表示されます。<br /><br /> 空白が埋め込まれている場合は、`text` を二重引用符 (" ") で囲みます。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyKeyNameAttribute>) として指定することもできます。|
 |**/main:** `method`|モジュールを実行可能ファイルに変換するときに、エントリ ポイントとして使用するメソッドの完全修飾名 (`class`.`method`) を指定します。|
 |**/nologo**|*Al.exe* の起動時に、著作権情報またはロゴをコマンド ラインに表示しないようにします。|
@@ -83,7 +83,7 @@ al sources options
 
 すべての Visual Studio コンパイラは、アセンブリを生成します。 ただし、モジュール (マニフェストを含まないメタデータ) が 1 つ以上ある場合は、*Al.exe* を使用して、マニフェストを別個のファイルに含むアセンブリを作成できます。
 
-アセンブリのキャッシュへのインストール、キャッシュからの削除、およびキャッシュの内容の一覧表示を実行するには、[グローバル アセンブリ キャッシュ ツール (*Gacutil.exe*)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) を使用します。
+アセンブリのキャッシュへのインストール、キャッシュからの削除、およびキャッシュの内容の一覧表示を実行するには、[グローバル アセンブリ キャッシュ ツール (*Gacutil.exe*)](gacutil-exe-gac-tool.md) を使用します。
 
 ## <a name="errors-and-warnings"></a>エラーと警告
 
@@ -116,8 +116,8 @@ al sources options
 |al1023|リソース 'file' の埋め込みエラーです — 理由<br /><br /> メッセージに示された原因により、オペレーティング システムがアセンブリにリソース ファイルを埋め込めません。|
 |al1025|ComType レコード 'record' は無効なファイル レコード 'record' を指しています<br /><br /> 入力モジュール内のメタデータが無効です。 モジュールを作成したツールを修復する必要があります。|
 |al1026|指定されたバージョン 'version' は無効です<br /><br /> 有効な形式については、 **/version** オプションの説明を参照してください。|
-|al1028|キー ファイル 'file' は署名に必要な秘密キーがありません<br /><br /> 公開キーだけを保持したキー ファイルが **/keyfile** オプションに渡されました。 [厳密名ツール (*Sn.exe*)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) で次のようなコマンドを使用して、公開キーと秘密キーの両方を含むファイルを生成してください。<br /><br /> `sn -k keypair.snk.`|
-|al1029|キーのコンテナー名 'container' は存在しません<br /><br /> **/keyname** オプションに渡された値が有効なコンテナーではありません。 [厳密名ツール (*Sn.exe*)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) を使用してコンテナーを作成してください。|
+|al1028|キー ファイル 'file' は署名に必要な秘密キーがありません<br /><br /> 公開キーだけを保持したキー ファイルが **/keyfile** オプションに渡されました。 [厳密名ツール (*Sn.exe*)](sn-exe-strong-name-tool.md) で次のようなコマンドを使用して、公開キーと秘密キーの両方を含むファイルを生成してください。<br /><br /> `sn -k keypair.snk.`|
+|al1029|キーのコンテナー名 'container' は存在しません<br /><br /> **/keyname** オプションに渡された値が有効なコンテナーではありません。 [厳密名ツール (*Sn.exe*)](sn-exe-strong-name-tool.md) を使用してコンテナーを作成してください。|
 |al1030|適切な暗号サービスが正しくインストールされていないか、適切なキー プロバイダーがありません<br /><br /> 多くの場合は、オペレーティング システムを再インストールするか、キーの作成に使用した暗号ユーティリティをインストールする必要があります。|
 |al1031|アイコン 'file' を読み込み中にエラーが発生しました— 理由<br /><br /> *Al.exe* は、メッセージに示された原因により、 **/win32icon** オプションに渡されたファイルを読み取ることができません。|
 |al1032|'file' のリソースを生成中にエラーが発生しました — 理由<br /><br /> *Al.exe* は、ディスク容量の不足またはその他のエラーが原因でファイルを作成できません。 .ico ファイルを生成する **/win32icon** オプションを指定した場合や、リソース情報を持つファイルを生成する **/win32res** オプションを指定しなかった場合に、このエラーが発生します。<br /><br /> ファイル生成に関するこの問題を解決できない場合は、 **/win32res** を使用してください。/win32res は、バージョン情報やビットマップ (アイコン) 情報を含むファイルを指定します。|
@@ -127,7 +127,7 @@ al sources options
 |al1036|実行可能アプリケーションにエントリ ポイントが必要です<br /><br /> **/target:exe** オプションまたは **/target:win** オプションを使用する場合は、 **/main** オプションも指定する必要があります。|
 |al1037|エントリ ポイント メソッド 'main' が見つかりません<br /><br /> *Al.exe* は、 **/main** オプションで指定された位置で `Main` メソッドを見つけられません。|
 |al1039|グローバル アセンブリ キャッシュ マネージャーの初期化に失敗しました — 理由<br /><br /> Visual Studio または Windows SDK を再インストールしてください。|
-|al1040|キャッシュにアセンブリをインストールできませんでした — 理由<br /><br /> キャッシュにインストールできるのは署名されたアセンブリだけです。 詳細については、「[グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)」を参照してください。|
+|al1040|キャッシュにアセンブリをインストールできませんでした — 理由<br /><br /> キャッシュにインストールできるのは署名されたアセンブリだけです。 詳細については、「[グローバル アセンブリ キャッシュ](../app-domains/gac.md)」を参照してください。|
 |al1041|'method' : 署名または表示が正しくないか、ジェネリックであるため、エントリ ポイントになれません。<br /><br /> **/main** オプションで指定されたメソッドが、静的メソッドでないか、`int` または `void` を返さないか、ジェネリックであったか、無効な引数が含まれています。|
 |al1042|'exe':EXE を追加モジュールにすることはできません<br /><br /> アセンブリを含まない *.exe* ファイルが、*Al.exe* への入力ファイルとして指定されました。 *Al.exe* で入力ファイルとして指定できるのは、アセンブリを含まない *.dll* ファイルだけです。|
 |al1043|マニフェスト ファイル名 'name' をモジュール名と同じにすることはできません<br /><br /> **/out** オプションで指定する名前は、*Al.exe* に対する入力ファイルとして指定されるファイルと同じ名前にすることはできません。|
@@ -142,7 +142,7 @@ al sources options
 |al1052|ファイル 'filename' はアセンブリではありません<br /><br /> **/template** で指定したファイルには、アセンブリ メタデータが含まれている必要があります。 このエラーは、 **/template** で指定したファイルにアセンブリが含まれていないことを示します。|
 |al1053|'option' に指定されたバージョン 'version' は正常な 'major.minor.build.revision' フォーマットではありません<br /><br /> **/fileversion** オプションまたは **/productversion** オプションで指定されたバージョン情報の形式が正しくないことを、*Al.exe* が検出しました。|
 |al1054|'option' に指定されたバージョン 'version' は正常な 'major.minor.build.revision' フォーマットではありません<br /><br /> <xref:System.Resources.SatelliteContractVersionAttribute> で指定されたバージョン情報が不正であることを、*Al.exe* が検出しました。|
-|al1055|参照されたアセンブリ 'filename' は厳密な名前を持っていません<br /><br /> このエラーは、厳密な名前を持つアセンブリを作成するときに、厳密な名前を持たないアセンブリを参照した場合に発生します。 これを解決するには、厳密な名前でアセンブリを再生成するか、*Sn.exe* を使用してアセンブリに厳密な名前を追加する必要があります ([*Sn.exe*](../../../docs/framework/tools/sn-exe-strong-name-tool.md) についてのドキュメントを参照してください)。<br /><br /> このエラーは、一般的には COM モジュールへの参照を Visual Studio IDE を介して C# プロジェクトに追加するときなど、ラッパー アセンブリを介して COM オブジェクトを使用しているときに発生します。 このエラーを回避するために、プロジェクト プロパティ "Wrapper Assembly Key File/Name" で COM ラッパー アセンブリに対して厳密な名前のキー ファイルを指定できます。<br /><br /> tlbimp を介してラッパー アセンブリを作成する場合、厳密な名前をラッパー アセンブリに割り当てる方法については [tlbimp](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) ドキュメントを参照してください。<br /><br /> アセンブリが厳密な名前を持つ場合、そのアセンブリはグローバル アセンブリ キャッシュにインストールできます。 したがって、参照されるアセンブリもグローバル アセンブリ キャッシュに格納する必要があります。 グローバル アセンブリ キャッシュには、厳密な名前を持つアセンブリしか格納できません。|
+|al1055|参照されたアセンブリ 'filename' は厳密な名前を持っていません<br /><br /> このエラーは、厳密な名前を持つアセンブリを作成するときに、厳密な名前を持たないアセンブリを参照した場合に発生します。 これを解決するには、厳密な名前でアセンブリを再生成するか、*Sn.exe* を使用してアセンブリに厳密な名前を追加する必要があります ([*Sn.exe*](sn-exe-strong-name-tool.md) についてのドキュメントを参照してください)。<br /><br /> このエラーは、一般的には COM モジュールへの参照を Visual Studio IDE を介して C# プロジェクトに追加するときなど、ラッパー アセンブリを介して COM オブジェクトを使用しているときに発生します。 このエラーを回避するために、プロジェクト プロパティ "Wrapper Assembly Key File/Name" で COM ラッパー アセンブリに対して厳密な名前のキー ファイルを指定できます。<br /><br /> tlbimp を介してラッパー アセンブリを作成する場合、厳密な名前をラッパー アセンブリに割り当てる方法については [tlbimp](tlbimp-exe-type-library-importer.md) ドキュメントを参照してください。<br /><br /> アセンブリが厳密な名前を持つ場合、そのアセンブリはグローバル アセンブリ キャッシュにインストールできます。 したがって、参照されるアセンブリもグローバル アセンブリ キャッシュに格納する必要があります。 グローバル アセンブリ キャッシュには、厳密な名前を持つアセンブリしか格納できません。|
 |al1056|参照されたアセンブリ 'filename' はローカライズされたサテライト アセンブリです<br /><br /> <xref:System.Reflection.AssemblyCultureAttribute> 属性を使用して作成されたアセンブリが、現在のアセンブリの作成時に参照されました。 <xref:System.Reflection.AssemblyCultureAttribute> 属性は、ファイルがローカライズされたサテライト アセンブリであることを示します。サテライト アセンブリを参照することは、適切ではありません。 多くの場合、代わりにメインの親アセンブリを参照する必要があります。|
 |al1057|実行可能ファイルはローカライズできません。カルチャは常に空でなければなりません<br /><br /> アセンブリが **/target:exe** で作成されているのに、 **/culture** が指定されています。 *.exe* 内のアセンブリは、Culture フィールド内の情報を含むことができません。|
 |al1058|'file' はアセンブリです。モジュールとして追加することはできません<br /><br /> C++ のコンパイルで、 **/assemblymodule** (リンカー オプション) がアセンブリを含むファイルに渡されました。|
@@ -175,8 +175,8 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
-- [*Sn.exe* (厳密名ツール)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
-- [*Gacutil.exe* (グローバル アセンブリ キャッシュ ツール)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [ツール](index.md)
+- [*Sn.exe* (厳密名ツール)](sn-exe-strong-name-tool.md)
+- [*Gacutil.exe* (グローバル アセンブリ キャッシュ ツール)](gacutil-exe-gac-tool.md)
 - [アセンブリを使用したプログラミング](../../standard/assembly/program.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

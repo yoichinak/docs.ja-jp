@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 2bfb33944007f84992d95ebc35c04ab9b97b3a7d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3668975c31e9086ee15250dae939b75587f5c0c6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963981"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047661"
 ---
 # <a name="making-asynchronous-requests"></a>非同期要求を行う
 <xref:System.Net> クラスは、インターネット リソースへの非同期アクセスに .NET Framework の標準非同期プログラミング モデルを使用します。 <xref:System.Net.WebRequest> クラスの <xref:System.Net.WebRequest.BeginGetResponse%2A> および <xref:System.Net.WebRequest.EndGetResponse%2A> メソッドは、インターネット リソースの非同期要求の開始と完了を行います。  
@@ -336,4 +336,4 @@ End Class
   
 ## <a name="see-also"></a>関連項目
 
-- [データの要求](../../../docs/framework/network-programming/requesting-data.md)
+- [データの要求](requesting-data.md)

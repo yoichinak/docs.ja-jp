@@ -10,12 +10,12 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 57d0c3640c65d425ded63f53e32416053c3eb926
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c7324dcbc27c95c7d799592700d46c195e7d952b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624664"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048895"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net クラスのベスト プラクティス
 次の推奨事項は、<xref:System.Net> に含まれるクラスを最大限に活用するのに役立ちます。  
@@ -34,4 +34,4 @@ ms.locfileid: "64624664"
   
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
+- [.NET Framework のネットワーク プログラミング](index.md)

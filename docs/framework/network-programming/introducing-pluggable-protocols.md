@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 41a55df53f8b0dfd4eefc9bc4ecf6b2eef122c8d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 72b47b8159f9f6f0dc3a19c5cbf94335507d9e7d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394275"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047858"
 ---
 # <a name="introducing-pluggable-protocols"></a>プラグ可能なプロトコルの概要
 Microsoft .NET Framework は、アプリケーションにすばやく簡単に統合できる、複数層の拡張可能なインターネット サービスのマネージド実装を提供します。 <xref:System.Net> および <xref:System.Net.Sockets> の名前空間内のインターネット アクセス クラスは、Web ベース アプリケーションとインターネット ベース アプリケーションの両方を実装するために使用できます。  
@@ -68,6 +68,6 @@ Microsoft .NET Framework は、アプリケーションにすばやく簡単に�
   
 ## <a name="see-also"></a>関連項目
 
-- [プラグ可能なプロトコルのプログラミング](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
-- [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)
+- [プラグ可能なプロトコルのプログラミング](programming-pluggable-protocols.md)
+- [.NET Framework のネットワーク プログラミング](index.md)
+- [ネットワーク プログラミングのサンプル](network-programming-samples.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 63c0ef2c-44b5-4c54-9804-ba0b9b001ac7
-ms.openlocfilehash: 99bbff5a3350f55f04fdbd6ce7147b6597773322
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d569603fe22e5d8c8f59d21c2777c7c1bfcd531d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624586"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048294"
 ---
 # <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>方法: WebRequest でインターネットとの通信にプロキシを使用できるようにする
 この例では、<xref:System.Net.WebRequest> でインターネットとの通信にプロキシを使用できるようにするグローバル プロキシ インスタンスを作成します。 ここでは、プロキシ サーバーが `webproxy` という名前で、ポート 80 (標準 HTTP ポート) で通信を行うことを想定します。  
@@ -34,5 +34,5 @@ GlobalProxySelection.Select = proxyObject
   
 ## <a name="see-also"></a>関連項目
 
-- [アプリケーション プロトコルの使用](../../../docs/framework/network-programming/using-application-protocols.md)
-- [プロキシを介したインターネットへのアクセス](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [アプリケーション プロトコルの使用](using-application-protocols.md)
+- [プロキシを介したインターネットへのアクセス](accessing-the-internet-through-a-proxy.md)

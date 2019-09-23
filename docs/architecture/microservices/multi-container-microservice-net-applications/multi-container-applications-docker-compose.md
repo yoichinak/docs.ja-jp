@@ -2,12 +2,12 @@
 title: docker-compose.yml で複数のコンテナー アプリケーションを定義する
 description: docker-compose.yml を使用して複数コンテナーのアプリケーション用にマイクロサービスの構成を指定する方法。
 ms.date: 10/02/2018
-ms.openlocfilehash: 1b88d2267b12a33e125a7a1d2273654a50fd2d0f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8c0f1a654d27b32e613b84d3862198ad96f32e1c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253969"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039745"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する
 
@@ -463,11 +463,11 @@ ENTRYPOINT ["dotnet", "run"]
 
 #### <a name="additional-resources"></a>その他の技術情報
 
-- **ASP.NET Core を使用して最適化された Docker イメージをビルドする** \
-    <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
+- **ASP.NET Core を使用して最適化された Docker イメージをビルドする**  
+  <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
 
-- **.NET Core アプリケーションの Docker イメージのビルド** \
-    [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+- **.NET Core アプリケーションの Docker イメージのビルド**  
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 > [!div class="step-by-step"]
 > [前へ](data-driven-crud-microservice.md)

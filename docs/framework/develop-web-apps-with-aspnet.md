@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: b058e9df6b8ba5a9dd0066f9df1f4b233a00e162
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 2c659d433830a279a88fea766ceaa8efd7429b1f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69039388"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051973"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>ASP.NET で Web アプリを開発する
 
@@ -41,4 +41,4 @@ ASP.NET Core](/aspnet/core) の詳細については、以下を参照してく�
   
 ## <a name="see-also"></a>関連項目
 
-- [開発ガイド](../../docs/framework/development-guide.md)
+- [開発ガイド](development-guide.md)

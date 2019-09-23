@@ -6,20 +6,20 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ab80cfbd0ae2130f465216ca77812bda0002c24
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2bed01a74c5b3338df958a3e178c06602bd69866
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854007"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052118"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>CLR のアクティブ化に関する問題をデバッグする方法
 
-正しいバージョンの共通言語ランタイム (CLR) でアプリケーションを実行して問題が発生した場合、CLR アクティベーション ログを表示し、デバッグできます。 アプリケーションで予想とは異なる CLR バージョンが読み込まれるときでも、CLR がまったく読み込まれないときでも、アクティベーション問題の根本原因を突き止めるときにこのログが大変役立ちます。 [.NET Framework 初期化エラー:ユーザー エクスペリエンスの管理](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)では、アプリケーションに対して CLR が見つからない場合について説明されています。
+正しいバージョンの共通言語ランタイム (CLR) でアプリケーションを実行して問題が発生した場合、CLR アクティベーション ログを表示し、デバッグできます。 アプリケーションで予想とは異なる CLR バージョンが読み込まれるときでも、CLR がまったく読み込まれないときでも、アクティベーション問題の根本原因を突き止めるときにこのログが大変役立ちます。 [.NET Framework 初期化エラー:ユーザー エクスペリエンスの管理](initialization-errors-managing-the-user-experience.md)では、アプリケーションに対して CLR が見つからない場合について説明されています。
 
 HKEY_LOCAL_MACHINE レジストリ キーまたはシステム環境変数を利用すれば、CLR アクティベーション ログをシステム全体で有効にできます。 このログは、レジストリ キーまたは環境変数が削除されるまで生成されます。 あるいは、ユーザーまたはプロセスのローカル環境変数を利用し、別の範囲や期間でログを有効にできます。
 
-CLR アクティベーション ログと[アセンブリ バインド ログ](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)は完全に異なりますので混同しないでください。
+CLR アクティベーション ログと[アセンブリ バインド ログ](../tools/fuslogvw-exe-assembly-binding-log-viewer.md)は完全に異なりますので混同しないでください。
 
 ## <a name="to-enable-clr-activation-logging"></a>CLR アクティベーション ログを有効にするには
 
@@ -106,13 +106,13 @@ CLR アクティベーション ログは、CLR アクティベーションと A
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
     ```
 
-- **built with version** は、[ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) のようなメソッドに提供されたバイナリの構築に利用された CLR のバージョンです。
+- **built with version** は、[ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) のようなメソッドに提供されたバイナリの構築に利用された CLR のバージョンです。
 
     ```output
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
-- **feature-on-demand installation** は Windows 8 で .NET Framework 3.5 を有効にすることを指します。 このシナリオの詳細については、「[.NET Framework 初期化エラー:ユーザー エクスペリエンスの管理](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)」を参照してください。
+- **feature-on-demand installation** は Windows 8 で .NET Framework 3.5 を有効にすることを指します。 このシナリオの詳細については、「[.NET Framework 初期化エラー:ユーザー エクスペリエンスの管理](initialization-errors-managing-the-user-experience.md)」を参照してください。
 
     ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
@@ -120,5 +120,5 @@ CLR アクティベーション ログは、CLR アクティベーションと A
 
 ## <a name="see-also"></a>関連項目
 
-- [配置](../../../docs/framework/deployment/index.md)
-- [方法: .NET Framework 4 以降のバージョンをサポートするアプリを構成する](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [配置](index.md)
+- [方法: .NET Framework 4 以降のバージョンをサポートするアプリを構成する](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

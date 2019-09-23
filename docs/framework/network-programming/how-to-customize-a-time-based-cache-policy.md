@@ -9,12 +9,12 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 5df070bb2cfef42d60247cad39f2a2f76963bae8
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: c28c6daf9b873a19291b1636112eae6546412be2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894741"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048317"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>方法: 時間ベースのキャッシュ ポリシーをカスタマイズする
 時間ベースのキャッシュ ポリシーを作成する場合、最大有効期間、最小鮮度、最大期限延長、またはキャッシュ同期日付の値を指定することで、キャッシュの動作をカスタマイズできます。 <xref:System.Net.Cache.HttpRequestCachePolicy> オブジェクトは、これらの値の有効な組み合わせを指定できるようにする複数のコンストラクターを提供します。  
@@ -120,8 +120,8 @@ Level:Default MaxAge:36000 MinFresh:18000
   
 ## <a name="see-also"></a>関連項目
 
-- [ネットワーク アプリケーションのキャッシュ管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [キャッシュ ポリシー](../../../docs/framework/network-programming/cache-policy.md)
-- [場所ベースのキャッシュ ポリシー](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [時間ベースのキャッシュ ポリシー](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [ネットワーク アプリケーションのキャッシュ管理](cache-management-for-network-applications.md)
+- [キャッシュ ポリシー](cache-policy.md)
+- [場所ベースのキャッシュ ポリシー](location-based-cache-policies.md)
+- [時間ベースのキャッシュ ポリシー](time-based-cache-policies.md)
+- [\<requestCaching> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

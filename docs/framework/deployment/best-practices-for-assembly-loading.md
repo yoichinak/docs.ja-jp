@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53ad8f6187b4e9b1754094dae0ebfe6e05a1b78b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 727d1b4ecb17eafb448205aa0c7eea36c5545b98
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614138"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052218"
 ---
 # <a name="best-practices-for-assembly-loading"></a>アセンブリの読み込みのベスト プラクティス
 ここでは、<xref:System.InvalidCastException>、<xref:System.MissingMethodException>、およびその他のエラーの原因となることがある型 ID の問題を回避する方法について説明します。 また、次の推奨事項について説明します。  
@@ -44,7 +44,7 @@ ms.locfileid: "64614138"
   
 - 読み込み元コンテキストには、ローダーによって検索されない場所から読み込まれたアセンブリが含まれます。 たとえば、アドインが、アプリケーション パスではないディレクトリにインストールされることがあります。 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>、<xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType>、<xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> は、パスを使用して読み込むメソッドの例です。  
   
-- リフレクション専用コンテキストには、<xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> メソッドと <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> メソッドを使用して読み込まれたアセンブリが含まれます。 このコンテキスト内のコードは実行できないため、ここでは説明しません。 詳細については、「[方法 :リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
+- リフレクション専用コンテキストには、<xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> メソッドと <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> メソッドを使用して読み込まれたアセンブリが含まれます。 このコンテキスト内のコードは実行できないため、ここでは説明しません。 詳細については、「[方法 :リフレクションのみのコンテキストにアセンブリを読み込む](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
   
 - リフレクション出力を使用して一時動的アセンブリを出力した場合、そのアセンブリはどのコンテキストにも含まれません。 また、<xref:System.Reflection.Assembly.LoadFile%2A> メソッドを使用して読み込まれる大部分のアセンブリは、コンテキストなしで読み込まれます。バイト配列から読み込まれるアセンブリは、(ポリシーが適用された後の) アセンブリの ID がグローバル アセンブリ キャッシュ内に存在するように確立される場合を除き、コンテキストなしで読み込まれます。  
   

@@ -3,12 +3,12 @@ title: ML.NET コマンドライン インターフェイス (CLI) ツールを�
 description: ML.NET コマンドライン インターフェイス (CLI) ツールの概要とインストール。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 8b6de466a6cf72b44a16c80fc024671bc4e975e8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106895"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118000"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET コマンドライン インターフェイス (CLI) ツールをインストールする方法
 
@@ -33,7 +33,7 @@ ML.NET CLI のインストール方法は他の .NET グローバル ツール�
 
 次の例は、既定の NuGet フィードの場所に ML.NET CLI をインストールする方法を示しています。
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet
 ```
 
@@ -58,13 +58,13 @@ mlnet
 
 ツールのプレリリース バージョンまたは特定のバージョンをインストールしようとしている場合は、次の形式を使用して、[フレームワーク](../../standard/frameworks.md)を指定できます。
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 次のコマンドを入力して、パッケージが正しくインストールされているかどうかを確認することもできます。
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```
 
@@ -72,7 +72,7 @@ dotnet tool list -g
 
 ローカル コンピューターからパッケージをアンインストールするには、次のコマンドを入力します。
 
-```console
+```dotnetcli
 dotnet tool uninstall mlnet -g
 ```
 
@@ -80,7 +80,7 @@ dotnet tool uninstall mlnet -g
 
 ローカル コンピューターからパッケージを更新するには、次のコマンドを入力します。
 
-```console
+```dotnetcli
 dotnet tool update -g mlnet
 ```
 
@@ -100,7 +100,7 @@ ML.NET CLI は `System.CommandLine` に基づいているので、タブ補完�
 
 1. 次のコマンドを実行して、`dotnet-suggest` グローバル ツールをインストールします。
 
-    ```console
+    ```dotnetcli
     dotnet tool install dotnet-suggest -g
     ```
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b652fae47a321ca41e1f518e9077cd68f24c91c9
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e2b8f96e9a042681642225ad4e644c6fd1f001cb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894858"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044430"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework コマンド ライン デバッガー)
 .NET Framework コマンド ライン デバッガーは、.NET Framework 共通言語ランタイムを対象としたプログラムに含まれるバグの検索と修復について、ツールの販売元とアプリケーション開発者を支援するツールです。 このツールは、ランタイムのデバッグ API を使用してデバッグ サービスを提供します。 MDbg.exe を使用してもマネージド コードのデバッグしか実行できません。アンマネージド コードのデバッグはサポートされていません。  
@@ -106,5 +106,5 @@ mdbg>
   
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [ツール](index.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

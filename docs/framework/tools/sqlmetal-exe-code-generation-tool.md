@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 0d12196acab5a50f7dd6fc78e6dccc098cf3e2de
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894611"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044075"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (コード生成ツール)
 SqlMetal コマンドライン ツールは、.NET Framework の [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] コンポーネント用のコードとマッピングを生成します。 このトピックで後述するオプションを適用することにより、次のようなアクションを SqlMetal で実行できます。  
@@ -30,7 +30,7 @@ SqlMetal コマンドライン ツールは、.NET Framework の [!INCLUDE[vbtec
 > [!NOTE]
 > Visual Studio を使用する開発者は、オブジェクト リレーショナル デザイナーを使用してエンティティ クラスを生成することもできます。 コマンド ライン方式は、大きなデータベースにも適切に対応できます。 SqlMetal はコマンド ライン ツールであるため、ビルド プロセスでこれを使用できます。  
   
- このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。コマンド プロンプトで、次のように入力します。  
+ このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。コマンド プロンプトで、次のように入力します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -77,7 +77,7 @@ sqlmetal [options] [<input file>]
 |**/context:** *\<type>*|データ コンテキスト クラスの名前を指定します。 既定値:データベース名から派生します。|  
 |**/entitybase:** *\<type>*|生成されるコード内のエンティティ クラスの基本クラスを指定します。 既定値:エンティティの基本クラスなしです。|  
 |**/pluralize**|クラスとメンバーの名前を自動的に複数化または単数化します。<br /><br /> このオプションは、米国英語バージョンでのみ使用できます。|  
-|**/serialization:** *\<option>*|シリアル化可能なクラスを生成します。<br /><br /> 有効な *\<オプション>* :None と Unidirectional。 既定値:なし。<br /><br /> 詳細については、「[Serialization](../../../docs/framework/data/adonet/sql/linq/serialization.md)」 (シリアル化) を参照してください。|  
+|**/serialization:** *\<option>*|シリアル化可能なクラスを生成します。<br /><br /> 有効な *\<オプション>* :None と Unidirectional。 既定値:なし。<br /><br /> 詳細については、「[Serialization](../data/adonet/sql/linq/serialization.md)」 (シリアル化) を参照してください。|  
   
  **入力ファイル**  
   
@@ -134,6 +134,6 @@ sqlmetal [options] [<input file>]
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: Visual Basic または C# でオブジェクト モデルを生成する](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
-- [LINQ to SQL でのコード生成](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [外部マップ](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [方法: Visual Basic または C# でオブジェクト モデルを生成する](../data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [LINQ to SQL でのコード生成](../data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [外部マップ](../data/adonet/sql/linq/external-mapping.md)

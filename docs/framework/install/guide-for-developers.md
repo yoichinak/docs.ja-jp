@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de7df6ae2d6463d05d1680c288dd202edc639b09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949116"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051940"
 ---
 # <a name="install-the-net-framework-for-developers"></a>開発者向けの .NET Framework のインストール
 
@@ -28,7 +28,7 @@ ms.locfileid: "69949116"
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-.NET Framework の各バージョンの詳細と、コンピューターにどのバージョンがインストールされているかを判別する方法については、「[.NET Framework のバージョンおよび依存関係](../migration-guide/versions-and-dependencies.md)」と「[方法:インストールされている .NET Framework バージョンを確認する](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。
+.NET Framework の各バージョンの詳細と、コンピューターにどのバージョンがインストールされているかを判別する方法については、「[.NET Framework のバージョンおよび依存関係](../migration-guide/versions-and-dependencies.md)」と「[方法:インストールされている .NET Framework バージョンを確認する](../migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。
 
 > [!NOTE]
 > .NET Framework 3.5 の詳細については、「[Windows 8、Windows 8.1、および Windows 10 への .NET Framework 3.5 のインストール](dotnet-35-windows-10.md)」を参照してください。
@@ -227,7 +227,7 @@ Web インストーラーとオフライン インストーラーはどちらも
 
 - .NET Framework での経験がない場合は、[概要](../get-started/overview.md)を参照して、主な概念とコンポーネントの概要を確認してください。
 
-- .NET Framework 4.5 以降のすべてのバージョンでの新機能と機能強化については、「[新機能](../../../docs/framework/whats-new/index.md)」を参照してください。
+- .NET Framework 4.5 以降のすべてのバージョンでの新機能と機能強化については、「[新機能](../whats-new/index.md)」を参照してください。
 
 - アプリと一緒に .NET Framework を配置する方法の詳細については、「[.NET Framework 配置ガイド (開発者向け)](../deployment/deployment-guide-for-developers.md)」を参照してください。
 

@@ -5,23 +5,23 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 3f303583b1cff785ab0020e616fee58ef02a1c58
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 2502d542513ace1173b6c33a2399ce010620b888
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487039"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044462"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)
 
-MageUI.exe でサポートされている機能は、コマンド ライン ツール Mage.exe の機能と同じですが、MageUI.exe には、Windows ベースのユーザー インターフェイス (UI) があります。 このツールを使用すると、配置マニフェストおよびアプリケーション マニフェストを作成および編集でき、これらのマニフェストに署名することができます。 MageUI.exe で作成される新しいマニフェストは、[!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] を対象とします。 以前のバージョンの .NET Framework を対象にするには、以前のバージョンの MageUI.exe を使用する必要があります。 マニフェストに対してアセンブリの追加または削除を実行しても、既存のマニフェストに再署名しても、MageUI.exe は [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] を対象にするようにマニフェストを更新しません。 詳しくは、「[Mage.exe (マニフェストの生成および編集ツール)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)」をご覧ください。
+MageUI.exe でサポートされている機能は、コマンド ライン ツール Mage.exe の機能と同じですが、MageUI.exe には、Windows ベースのユーザー インターフェイス (UI) があります。 このツールを使用すると、配置マニフェストおよびアプリケーション マニフェストを作成および編集でき、これらのマニフェストに署名することができます。 MageUI.exe で作成される新しいマニフェストは、[!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] を対象とします。 以前のバージョンの .NET Framework を対象にするには、以前のバージョンの MageUI.exe を使用する必要があります。 マニフェストに対してアセンブリの追加または削除を実行しても、既存のマニフェストに再署名しても、MageUI.exe は [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] を対象にするようにマニフェストを更新しません。 詳しくは、「[Mage.exe (マニフェストの生成および編集ツール)](mage-exe-manifest-generation-and-editing-tool.md)」をご覧ください。
 
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
 
  Visual Studio には、2 つのバージョンの Mage.exe および MageUI.exe がコンポーネントとして含まれています。 バージョン情報を確認するには、MageUI.exe を実行し、 **[ヘルプ]** をクリックして、 **[バージョン情報]** をクリックします。 このドキュメントでは、バージョン 4.0.x.x の Mage.exe および MageUI.exe について説明します。
 
 > [!NOTE]
-> MageUI.exe は、MageUI.exe を使用して証明書で署名済みのアプリケーション マニフェストを保存する場合、[compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) 要素をサポートしません。 代わりに [Mage.exe](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md) を使用する必要があります。  
+> MageUI.exe は、MageUI.exe を使用して証明書で署名済みのアプリケーション マニフェストを保存する場合、[compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) 要素をサポートしません。 代わりに [Mage.exe](mage-exe-manifest-generation-and-editing-tool.md) を使用する必要があります。  
   
 ## <a name="uielement-list"></a>UIElement の一覧  
  次の表に、利用できるメニューおよびツール バー項目の一覧を表示します。  
@@ -92,7 +92,7 @@ MageUI.exe でサポートされている機能は、コマンド ライン ツ�
 |----------------|-----------------|  
 |**Name**|必須です。 アプリケーション マニフェストの名前です。 通常、ファイル名と同じです。|  
 |**Version**|必須です。 *N.N.N.N* という形式の配置バージョン番号です。 先頭のメジャー ビルド番号だけが必須です。 たとえば、アプリケーションのバージョンが 1.0 の場合、有効な値は、`1``1.0`、`1.0.0`、および `1.0.0.0` です。|  
-|**プロセッサ**|任意。 この配置を実行できるコンピューターのアーキテクチャです。 既定値は `msil` (Microsoft Intermediate Language) です。これは、すべてのマネージド アセンブリでの既定の形式です。 アプリケーションのアセンブリを特定のアーキテクチャ用にプリコンパイルした場合は、このフィールドを変更します。 プリコンパイルの詳細については、「[Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)」を参照してください。|  
+|**プロセッサ**|任意。 この配置を実行できるコンピューターのアーキテクチャです。 既定値は `msil` (Microsoft Intermediate Language) です。これは、すべてのマネージド アセンブリでの既定の形式です。 アプリケーションのアセンブリを特定のアーキテクチャ用にプリコンパイルした場合は、このフィールドを変更します。 プリコンパイルの詳細については、「[Ngen.exe (ネイティブ イメージ ジェネレーター)](ngen-exe-native-image-generator.md)」を参照してください。|  
 |**カルチャ**|任意。 このアプリケーションが実行される国/地域を、2 つの部分で構成される ISO のコードで指定します。 既定値は、`neutral` です。|  
 |**公開キー トークン**|省略可能です。 このアプリケーション マニフェストが署名されたときの公開キーです。 新しいマニフェストまたは未署名のマニフェストでは、このフィールドに [`Unsigned`] と表示されます。|  
   
@@ -194,4 +194,4 @@ MageUI.exe でサポートされている機能は、コマンド ライン ツ�
 
 - [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)
 - [チュートリアル: ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
-- [Mage.exe (マニフェストの生成および編集ツール)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [Mage.exe (マニフェストの生成および編集ツール)](mage-exe-manifest-generation-and-editing-tool.md)

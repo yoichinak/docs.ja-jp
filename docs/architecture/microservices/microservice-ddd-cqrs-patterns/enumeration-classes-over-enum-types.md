@@ -2,12 +2,12 @@
 title: 列挙型ではなく列挙型クラスを使用する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | enum のいくつかの制限を解決する方法として、代わりに Enumeration クラスを使用する方法を説明します。
 ms.date: 10/08/2018
-ms.openlocfilehash: ba687b700d7a6105baf71aa08a0d888afc9a8ec3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 575757b6022a9e7468c0ffc5d576dd16de3018f5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202732"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039928"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>enum 型の代わりに Enumeration クラスを使用する
 
@@ -99,7 +99,7 @@ public class CardType : Enumeration
 
 - **CardType.cs**。 eShopOnContainers のサンプル列挙型クラス。 \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs>
-    
+
 - **SmartEnum**. Ardalis - .NET で厳密に型指定されたスマートな列挙型を生成するためのクラス。 \
   <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 

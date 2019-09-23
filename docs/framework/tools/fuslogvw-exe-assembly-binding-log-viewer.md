@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6077acab533ecb755ae42b7c4359a6c77ff33449
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851245"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044678"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)
 
@@ -25,7 +25,7 @@ ms.locfileid: "70851245"
 > [!IMPORTANT]
 > fuslogvw.exe は、管理者特権で実行する必要があります。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、管理者の資格情報で Visual Studio 用開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
+このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、管理者の資格情報で Visual Studio 用開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
 
 コマンド プロンプトに次のように入力します。
 
@@ -60,7 +60,7 @@ fuslogvw
 
     - Application、Publisher、または Administrator バージョンのポリシーが適用されている場合は、その説明。
 
-    - [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)でのアセンブリの検出の有無。
+    - [グローバル アセンブリ キャッシュ](../app-domains/gac.md)でのアセンブリの検出の有無。
 
     - すべてのプローブ URL の一覧。
 
@@ -122,7 +122,7 @@ LOG: All probing URLs attempted and failed.
 
 ## <a name="binding-logs-for-native-images"></a>ネイティブ イメージのバインディング ログ
 
-既定では、Fuslogvw.exe は通常のアセンブリ バインド要求をログに記録します。 代わりに、[ネイティブ イメージ ジェネレーター (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) を使用して作成されたネイティブ イメージのアセンブリ バインドをログに記録することもできます。
+既定では、Fuslogvw.exe は通常のアセンブリ バインド要求をログに記録します。 代わりに、[ネイティブ イメージ ジェネレーター (Ngen.exe)](ngen-exe-native-image-generator.md) を使用して作成されたネイティブ イメージのアセンブリ バインドをログに記録することもできます。
 
 #### <a name="to-log-assembly-binds-for-native-images"></a>ネイティブ イメージのアセンブリ バインドをログに記録するには
 
@@ -218,7 +218,7 @@ Discarding native image.
 2. **[カスタム ログのパス]** テキスト ボックスにパスを入力します。
 
 > [!NOTE]
-> [アセンブリ バインディング ログ ビューアー (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) では、バインディング ログの格納に Internet Explorer (IE) のキャッシュを使用します。 IE キャッシュは時折破損することがあるため、[アセンブリ バインディング ログ ビューアー (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) の表示ウィンドウに新しいバインディング ログが表示されなくなることがあります。 IE キャッシュが破損した場合、.NET バインディング インフラストラクチャ (fusion) ではバインディング ログの読み書きができなくなります (この問題はカスタム ログ パスを使用している場合は発生しません)。破損を修復し、fusion でバインディング ログが再度表示されるようにするには、IE の [インターネット オプション] ダイアログで一時インターネット ファイルを削除して IE キャッシュを消去します。
+> [アセンブリ バインディング ログ ビューアー (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) では、バインディング ログの格納に Internet Explorer (IE) のキャッシュを使用します。 IE キャッシュは時折破損することがあるため、[アセンブリ バインディング ログ ビューアー (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) の表示ウィンドウに新しいバインディング ログが表示されなくなることがあります。 IE キャッシュが破損した場合、.NET バインディング インフラストラクチャ (fusion) ではバインディング ログの読み書きができなくなります (この問題はカスタム ログ パスを使用している場合は発生しません)。破損を修復し、fusion でバインディング ログが再度表示されるようにするには、IE の [インターネット オプション] ダイアログで一時インターネット ファイルを削除して IE キャッシュを消去します。
 >
 > アンマネージ アプリケーションが、`IHostAssemblyManager` インターフェイスと `IHostAssemblyStore` インターフェイスを実装して共通言語ランタイムをホストしている場合、ログ エントリを wininet キャッシュに格納できません。  これらのインターフェイスを実装したカスタム ホストのログ エントリを表示するには、別のログ パスを指定する必要があります。
 
@@ -234,7 +234,7 @@ Discarding native image.
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.TypeLoadException>
-- [ツール](../../../docs/framework/tools/index.md)
-- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)
-- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [ツール](index.md)
+- [グローバル アセンブリ キャッシュ](../app-domains/gac.md)
+- [ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

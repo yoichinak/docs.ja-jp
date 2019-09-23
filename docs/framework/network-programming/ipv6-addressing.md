@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 6243046e7e33a73f2479337cb64c2a236efcfafc
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 1bad43b96fc6f66724e5e40cdf0ae6d76b46d867
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662253"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047850"
 ---
 # <a name="ipv6-addressing"></a>IPv6 アドレス指定
 
@@ -77,5 +77,5 @@ IPv6 では、次のアドレスの種類を定義します。
 
 ## <a name="see-also"></a>関連項目
 
-- [インターネット プロトコル バージョン 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [ソケット](../../../docs/framework/network-programming/sockets.md)
+- [インターネット プロトコル バージョン 6](internet-protocol-version-6.md)
+- [ソケット](sockets.md)

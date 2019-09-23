@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: c3d5a7d6040038eb6d768815b1ae9e8ad45c5810
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2eb1174c98cdd88cc519559011659a2a277219b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109955"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047771"
 ---
 # <a name="listening-with-sockets"></a>リッスン (ソケットで)
 リスナーまたはサーバー ソケットは、ネットワーク上のポートを開き、クライアントがそのポートに接続するまで待機します。 他のネットワーク アドレス ファミリとプロトコルもありますが、この例では、TCP/IP ネットワーク用のリモート サービスを作成する方法を説明します。  
@@ -61,8 +61,8 @@ listener.Listen(100);
   
 ## <a name="see-also"></a>関連項目
 
-- [同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [非同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [クライアント ソケットの使用](../../../docs/framework/network-programming/using-client-sockets.md)
-- [方法: ソケットを作成する](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [ソケット](../../../docs/framework/network-programming/sockets.md)
+- [同期サーバー ソケットの使用](using-a-synchronous-server-socket.md)
+- [非同期サーバー ソケットの使用](using-an-asynchronous-server-socket.md)
+- [クライアント ソケットの使用](using-client-sockets.md)
+- [方法: ソケットを作成する](how-to-create-a-socket.md)
+- [ソケット](sockets.md)

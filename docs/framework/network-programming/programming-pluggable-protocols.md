@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072342"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047398"
 ---
 # <a name="programming-pluggable-protocols"></a>プラグ可能なプロトコルのプログラミング
 抽象クラスの <xref:System.Net.WebRequest> と <xref:System.Net.WebResponse> は、プラグ可能なプロトコルの基礎を提供します。 アプリケーションでは、<xref:System.Net.WebRequest> と <xref:System.Net.WebResponse> からプロトコル固有のクラスを派生することにより、使うプロトコルを指定しなくても、インターネット リソースにデータを要求して応答を読み取ることができます。  
@@ -33,7 +33,7 @@ ms.locfileid: "59072342"
   
 ## <a name="see-also"></a>関連項目
 
-- [WebRequest からの派生](../../../docs/framework/network-programming/deriving-from-webrequest.md)
-- [WebResponse からの派生](../../../docs/framework/network-programming/deriving-from-webresponse.md)
-- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
-- [方法: WebRequest を型キャストしてプロトコル固有のプロパティにアクセスする](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [WebRequest からの派生](deriving-from-webrequest.md)
+- [WebResponse からの派生](deriving-from-webresponse.md)
+- [.NET Framework のネットワーク プログラミング](index.md)
+- [方法: WebRequest を型キャストしてプロトコル固有のプロパティにアクセスする](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: c3c7d350132ee6c891633141fc5c4b280989e77f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 385a85d956a0de727e3c061ec447a3d53ad6c159
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366505"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054140"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>方法: アプリケーション イベント ログに書き込む (Visual Basic)
 
@@ -22,7 +22,7 @@ ms.locfileid: "57366505"
 
 イベント ログを参照するには、 **サーバー エクスプローラー** または **Windows イベント ビューアー**を使用できます。 詳細については、「 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)」を参照してください。
 
-### <a name="to-add-and-configure-the-event-log-listener"></a>イベント ログ リスナーを追加および構成するには
+## <a name="to-add-and-configure-the-event-log-listener"></a>イベント ログ リスナーを追加および構成するには
 
 1. **ソリューション エクスプローラー** で app.config を右クリックし、 **[開く]** を選択します。
 
@@ -61,11 +61,11 @@ ms.locfileid: "57366505"
     > [!NOTE]
     > 通常、アプリケーションがイベント ログに書き込むのはエラーのみです。 ログ出力のフィルター処理の詳細については、「[チュートリアル: My.Application.Log の出力をフィルター処理する](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)」を参照してください。
 
-### <a name="to-write-event-information-to-the-event-log"></a>イベント情報をイベント ログに書き込むには
+## <a name="to-write-event-information-to-the-event-log"></a>イベント情報をイベント ログに書き込むには
 
-- `My.Application.Log.WriteEntry` メソッドまたは `My.Application.Log.WriteException` メソッドを使用して、イベント ログに情報を書き込みます。 詳細については、「[方法 :ログ メッセージを書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)」と「[方法: 例外をログに記録する](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)」を参照してください。
+`My.Application.Log.WriteEntry` メソッドまたは `My.Application.Log.WriteException` メソッドを使用して、イベント ログに情報を書き込みます。 詳細については、「[方法 :ログ メッセージを書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)」と「[方法: 例外をログに記録する](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)」を参照してください。
 
-    アセンブリに対してイベント ログ リスナーを設定すると、そのアセンブリで `My.Application.Log` が書き込んだすべてのメッセージを受け取ります。
+アセンブリに対してイベント ログ リスナーを設定すると、そのアセンブリで `My.Application.Log` が書き込んだすべてのメッセージを受け取ります。
 
 ## <a name="see-also"></a>関連項目
 

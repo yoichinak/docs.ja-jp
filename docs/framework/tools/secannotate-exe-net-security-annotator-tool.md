@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07ac564b5a2b227a62b7073bb837ab8bd1f434fb
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 146aef8c1e085ee3146585c3b5b1cda8004b9f7e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894770"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044212"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET セキュリティ アノテーター ツール)
 .NET セキュリティ アノテーター ツール (SecAnnotate.exe) は、1 つ以上のアセンブリの `SecurityCritical` 部分と `SecuritySafeCritical` 部分を識別するコマンド ライン アプリケーションです。  
   
  Visual Studio 拡張機能である[セキュリティ アノテーター](https://go.microsoft.com/fwlink/?LinkId=198007)は、SecAnnotate.exe のグラフィカル ユーザー インターフェイスであり、Visual Studio から実行できます。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトで次のコマンドを入力します。*parameters* は、次のセクションで説明するパラメーターで、*assemblies* は、空白で区切られた 1 つ以上のアセンブリ名で構成されます。  
   

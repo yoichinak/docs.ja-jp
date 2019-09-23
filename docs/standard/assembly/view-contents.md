@@ -16,14 +16,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 8f27afafde0b83dfe886d218f3148d8ff07b30cb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 40ed31bb2231775bb2b6eb24586e07c8b07a85bb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972523"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053942"
 ---
 # <a name="how-to-view-assembly-contents"></a>方法: アセンブリの内容を表示する
+
 [Ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md) を使用して、ファイル内の MSIL (Microsoft Intermediate Language) 情報を表示できます。 内容を調べる対象のファイルがアセンブリの場合、この情報にはアセンブリの属性と共に他のモジュールやアセンブリへの参照が含まれることがあります。 この情報は、ファイルがアセンブリまたはアセンブリの一部かどうか、およびファイルに他のモジュールまたはアセンブリへの参照があるかどうかを判断するために役立ちます。  
   
 *Ildasm.exe* を使用してアセンブリの内容を表示するには、コマンド プロンプトで「**ildasm** \<*assembly name*>」と入力します。 たとえば、次のコマンドでは、*Hello.exe* アセンブリが逆アセンブルされます。  
@@ -35,6 +36,7 @@ ildasm Hello.exe
 アセンブリ マニフェスト情報を表示するには、MSIL 逆アセンブラー ウィンドウで **[マニフェスト]** アイコンをダブルクリックします。  
   
 ## <a name="example"></a>例  
+
 次の例では、基本の "Hello World" プログラムを使用します。 プログラムをコンパイルした後、*Ildasm.exe* を使用して *Hello.exe* アセンブリを逆アセンブルし、アセンブリ マニフェストを表示します。  
 
 ```cpp

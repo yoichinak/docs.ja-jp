@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8924ed14c597a691698180c7c362b80c41532c2c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d0cbe66870fc75da02ad56da73de86d4837c0c8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614105"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052135"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>side-by-side 実行用のコンポーネントを作成するためのガイドライン
 side-by-side 実行用にデザインしたマネージド アプリケーションまたはマネージド コンポーネントを作成するときのガイドラインを次に示します。  
@@ -60,9 +60,9 @@ side-by-side 実行用にデザインしたマネージド アプリケーショ
   
  アセンブリのバージョンは、アセンブリ バインディングのためにランタイムによって使用されます。 2 つの同一のアセンブリであっても、バージョン番号が異なると、ランタイムによって 2 つの異なるアセンブリとして扱われます。  
   
- [グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) では、ファイルのバージョン番号が新しい場合にのみ、アセンブリを置換できます。 一般的に、インストーラーは、アセンブリのバージョン番号が大きくない限り、アセンブリを上書きでインストールしません。  
+ [グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) では、ファイルのバージョン番号が新しい場合にのみ、アセンブリを置換できます。 一般的に、インストーラーは、アセンブリのバージョン番号が大きくない限り、アセンブリを上書きでインストールしません。  
   
 ## <a name="see-also"></a>関連項目
 
-- [side-by-side 実行](../../../docs/framework/deployment/side-by-side-execution.md)
-- [方法: 自動バインディング リダイレクトを有効/無効にする](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [side-by-side 実行](side-by-side-execution.md)
+- [方法: 自動バインディング リダイレクトを有効/無効にする](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

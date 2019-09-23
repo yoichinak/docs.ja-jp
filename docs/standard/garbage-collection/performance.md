@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e96160b0751e0377b429e63c1be6c6761c406096
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6409bbecdef2da03a18ed246cb90478b2a1fd7f6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664035"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054061"
 ---
 # <a name="garbage-collection-and-performance"></a>ガベージ コレクションとパフォーマンス
 
@@ -249,7 +249,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="GenBreak"></a>
 
-##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>ガベージ コレクションの終了時にブレークポイントを設定するには
+#### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>ガベージ コレクションの終了時にブレークポイントを設定するには
 
 - SOS デバッガー拡張が読み込まれた WinDbg で、次のコマンドを入力します。
 
@@ -301,7 +301,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="IsGC"></a>
 
-##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>問題の原因がガベージ コレクションにあるかどうかを確認するには
+### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>問題の原因がガベージ コレクションにあるかどうかを確認するには
 
 - 次の 2 つのメモリ パフォーマンス カウンターを調べます。
 
@@ -313,7 +313,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="OOMIsManaged"></a>
 
-##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>メモリ不足の例外がマネージド例外かどうかを確認するには
+### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>メモリ不足の例外がマネージド例外かどうかを確認するには
 
 1. SOS デバッガー拡張が読み込まれた WinDbg または Visual Studio デバッガーで、**pe** (print exception) コマンドを入力します。
 
@@ -347,7 +347,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="GetVM"></a>
 
-##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>予約できる仮想メモリの量を確認するには
+### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>予約できる仮想メモリの量を確認するには
 
 - SOS デバッガー拡張が読み込まれた WinDbg で次のコマンドを入力して、最も大きな空き領域を取得します。
 
@@ -381,7 +381,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="Physical"></a>
 
-##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>十分な物理メモリがあるかどうかを確認するには
+### <a name="to-determine-whether-there-is-enough-physical-memory"></a>十分な物理メモリがあるかどうかを確認するには
 
 1. Windows タスク マネージャーを起動します。
 
@@ -391,7 +391,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="ManagedHeapCommit"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>マネージド ヒープでコミットしているメモリの量を確認するには
+### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>マネージド ヒープでコミットしているメモリの量を確認するには
 
 - マネージド ヒープでコミットしているバイト数を確認するには、`# Total committed bytes` メモリ パフォーマンス カウンターを使用します。 ガベージ コレクターは、セグメントのチャンクを必要に応じてコミットします。すべてを同時にコミットするのではありません。
 
@@ -400,7 +400,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="ManagedHeapReserve"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>マネージド ヒープで予約されているメモリの量を確認するには
+### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>マネージド ヒープで予約されているメモリの量を確認するには
 
 - `# Total reserved bytes` メモリ パフォーマンス カウンターを使用します。
 
@@ -449,7 +449,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="ExamineGen2"></a>
 
-##### <a name="to-determine-large-objects-in-generation-2"></a>ジェネレーション 2 の大きいオブジェクトを確認するには
+### <a name="to-determine-large-objects-in-generation-2"></a>ジェネレーション 2 の大きいオブジェクトを確認するには
 
 - SOS デバッガー拡張が読み込まれた WinDbg または Visual Studio デバッガーで、次のコマンドを入力します。
 
@@ -489,7 +489,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="ObjRef"></a>
 
-##### <a name="to-determine-references-to-objects"></a>オブジェクトへの参照を確認するには
+### <a name="to-determine-references-to-objects"></a>オブジェクトへの参照を確認するには
 
 - SOS デバッガー拡張が読み込まれた WinDbg で次のコマンドを入力して、オブジェクトへの参照を表示します。
 
@@ -523,7 +523,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="Induce"></a>
 
-##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>ファイナライザーが実行されたかどうかを確認するには
+### <a name="to-determine-whether-a-finalizer-has-been-run"></a>ファイナライザーが実行されたかどうかを確認するには
 
 - 次のコードを含むテスト プログラムを実行します。
 
@@ -537,7 +537,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="Finalize"></a>
 
-##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>終了待機中のオブジェクトがないかどうかを確認するには
+### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>終了待機中のオブジェクトがないかどうかを確認するには
 
 1. SOS デバッガー拡張が読み込まれた WinDbg または Visual Studio デバッガーで、次のコマンドを入力します。
 
@@ -562,7 +562,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="Fragmented"></a>
 
-##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>マネージド ヒープの空き領域の容量を確認するには
+### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>マネージド ヒープの空き領域の容量を確認するには
 
 - SOS デバッガー拡張が読み込まれた WinDbg または Visual Studio デバッガーで、次のコマンドを入力します。
 
@@ -639,7 +639,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="Pinned"></a>
 
-##### <a name="to-determine-the-number-of-pinned-objects"></a>固定されたオブジェクトの数を確認するには
+### <a name="to-determine-the-number-of-pinned-objects"></a>固定されたオブジェクトの数を確認するには
 
 - SOS デバッガー拡張が読み込まれた WinDbg または Visual Studio デバッガーで、次のコマンドを入力します。
 
@@ -655,7 +655,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="TimeInGC"></a>
 
-##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>ガベージ コレクションの継続時間を確認するには
+### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>ガベージ コレクションの継続時間を確認するには
 
 - `% Time in GC` メモリ パフォーマンス カウンターを調べます。
 
@@ -743,7 +743,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="Triggered"></a>
 
-##### <a name="to-determine-what-triggered-a-garbage-collection"></a>ガベージ コレクションが発生した原因を確認するには
+### <a name="to-determine-what-triggered-a-garbage-collection"></a>ガベージ コレクションが発生した原因を確認するには
 
 - SOS デバッガー拡張が読み込まれた WinDbg または Visual Studio デバッガーで次のコマンドを入力して、すべてのスレッドとその呼び出し履歴を表示します。
 
@@ -822,7 +822,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="HighCPU"></a>
 
-##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>CPU の使用率が高いのはガベージ コレクションのためかどうかを確認するには
+### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>CPU の使用率が高いのはガベージ コレクションのためかどうかを確認するには
 
 - `% Time in GC` メモリ パフォーマンス カウンターの値と処理時間を互いに関連付けます。
 

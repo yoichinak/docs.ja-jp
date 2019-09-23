@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: fb14e195-fea5-4561-b9a8-60a67283edb9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ad78c9a277af23eebe357ef986ea59d16bb444e
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: aae87b60e207ebe406e863f123e1dc3e56aeb4f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833738"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051937"
 ---
 # <a name="run-net-framework-11-apps-on-windows-8-windows-81-or-windows-10"></a>Windows 8、Windows 8.1、または Windows 10 での .NET Framework 1.1 アプリの実行
 
-.NET Framework 1.1 は、[!INCLUDE[win8](../../../includes/win8-md.md)]、[!INCLUDE[win81](../../../includes/win81-md.md)]、[!INCLUDE[winserver8](../../../includes/winserver8-md.md)]、[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)]、または Windows 10 の各オペレーティング システムではサポートされていません。 場合によっては、アプリケーションの実行に .NET Framework 1.1 が特別に指定されています。 このような場合は、.NET Framework 3.5 SP1 以降のバージョンで実行するためにアプリケーションをアップグレードするように、独立ソフトウェア ベンダー (ISV) に連絡する必要があります。 詳細については、「[.NET Framework 1.1 からの移行](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)」を参照してください。
+.NET Framework 1.1 は、[!INCLUDE[win8](../../../includes/win8-md.md)]、[!INCLUDE[win81](../../../includes/win81-md.md)]、[!INCLUDE[winserver8](../../../includes/winserver8-md.md)]、[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)]、または Windows 10 の各オペレーティング システムではサポートされていません。 場合によっては、アプリケーションの実行に .NET Framework 1.1 が特別に指定されています。 このような場合は、.NET Framework 3.5 SP1 以降のバージョンで実行するためにアプリケーションをアップグレードするように、独立ソフトウェア ベンダー (ISV) に連絡する必要があります。 詳細については、「[.NET Framework 1.1 からの移行](../migration-guide/migrating-from-the-net-framework-1-1.md)」を参照してください。
 
 ## <a name="install-the-net-framework-11-from-a-cd-or-download-center"></a>CD またはダウンロード センターからの .NET Framework 1.1 のインストール
 
@@ -24,5 +24,5 @@ ms.locfileid: "66833738"
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework 1.1 からの移行](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)
-- [Windows 10、Windows 8.1、および Windows 8 への .NET Framework 3.5 のインストール](../../../docs/framework/install/dotnet-35-windows-10.md)
+- [.NET Framework 1.1 からの移行](../migration-guide/migrating-from-the-net-framework-1-1.md)
+- [Windows 10、Windows 8.1、および Windows 8 への .NET Framework 3.5 のインストール](dotnet-35-windows-10.md)

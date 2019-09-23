@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: b8d1ad081c8d783cd18054078a6eeb82428faa4d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894687"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044634"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL アセンブラー)
 
 IL アセンブラーは、ポータブル実行可能 (PE) ファイルを IL (Intermediate Language) から生成します (IL の詳細については、「[マネージド実行プロセス](../../standard/managed-execution-process.md)」を参照してください)。IL と必要なメタデータを含む実行可能ファイルを実行すると、IL が予測どおりに動作するかどうかを確認できます。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
+このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
 
 コマンド プロンプトに次のように入力します。
 
@@ -92,7 +92,7 @@ IL アセンブラーは、すべての既存メタデータ、およびラン�
 > [!NOTE]
 > .il ソース ファイルのコードの最後の行に、後続の空白または行末文字がない場合、コンパイルに失敗することがあります。
 
-*Ilasm.exe* と、その対をなすツール [*Ildasm.exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) を併用できます。 *Ildasm.exe* は、IL コードを含む PE ファイルを使用して、*Ilasm.exe* への入力として適したテキスト ファイルを作成します。 これは、必ずしもランタイム メタデータ属性のすべてをサポートしないプログラミング言語で記述されたコードをコンパイルするときなどに便利です。 コードをコンパイルし、その出力を *Ildasm.exe* で実行した後、生成された IL テキスト ファイルを手作業で編集して足りない属性を追加できます。 このテキスト ファイルを *Ilasm.exe* で実行すると、最終的な実行可能ファイルを生成できます。
+*Ilasm.exe* と、その対をなすツール [*Ildasm.exe*](ildasm-exe-il-disassembler.md) を併用できます。 *Ildasm.exe* は、IL コードを含む PE ファイルを使用して、*Ilasm.exe* への入力として適したテキスト ファイルを作成します。 これは、必ずしもランタイム メタデータ属性のすべてをサポートしないプログラミング言語で記述されたコードをコンパイルするときなどに便利です。 コードをコンパイルし、その出力を *Ildasm.exe* で実行した後、生成された IL テキスト ファイルを手作業で編集して足りない属性を追加できます。 このテキスト ファイルを *Ilasm.exe* で実行すると、最終的な実行可能ファイルを生成できます。
 
 この方法を使用して、異なるコンパイラによって生成された複数の PE ファイルから 1 つの PE ファイルを生成することもできます。
 
@@ -159,7 +159,7 @@ IL ファイル *myTestFile.il* をアセンブルして *.dll* ファイル *my
 ilasm myTestFile /dll /output:myNewTestFile.dll
 ```
 
-コンソールに "Hello World!" 記述するだけです。 このコードのコンパイル後に [*Ildasm.exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) ツールを使用して、IL ファイルを生成できます。
+コンソールに "Hello World!" 記述するだけです。 このコードのコンパイル後に [*Ildasm.exe*](ildasm-exe-il-disassembler.md) ツールを使用して、IL ファイルを生成できます。
 
 ```csharp
 using System;
@@ -229,7 +229,7 @@ public class Hello
 
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
-- [*Ildasm.exe* (IL 逆アセンブラー)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [ツール](index.md)
+- [*Ildasm.exe* (IL 逆アセンブラー)](ildasm-exe-il-disassembler.md)
 - [マネージド実行プロセス](../../standard/managed-execution-process.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

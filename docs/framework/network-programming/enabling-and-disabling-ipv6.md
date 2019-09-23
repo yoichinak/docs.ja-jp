@@ -2,12 +2,12 @@
 title: IPv6 の有効化と無効化
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 73dee0cb57674c8a2fa4ba2246162870ab1e3a10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 66c802dd5feb865faf7469cb7da04fbffcb4a2d6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083687"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048563"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>IPv6 の有効化と無効化
 IPv6 プロトコルを使用するには、IPv6 をサポートしているオペレーティング システムのバージョンを実行していることを確認し、オペレーティング システムとネットワーク クラスが正しく構成されていることを確認してください。  
@@ -24,7 +24,7 @@ IPv6 プロトコルを使用するには、IPv6 をサポートしているオ�
   
  System.Net 名前空間のすべてのクラスに対して IPv6 のサポートを有効にするには、コンピューターの構成ファイルまたはアプリケーションの構成ファイルを変更する必要があることに注意してください。 アプリケーション構成ファイルは、コンピューターの構成ファイルよりも優先されます。  
   
- IPv6 のサポートを有効にするようにコンピューター構成ファイル *machine.config* を変更する方法の例については、「[方法: IPv6 のサポートを有効にするようにコンピューター構成ファイルを変更する](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)」を参照してください。 また、オペレーティング システムの IPv6 のサポートが有効になっていることを確認してください。  
+ IPv6 のサポートを有効にするようにコンピューター構成ファイル *machine.config* を変更する方法の例については、「[方法: IPv6 のサポートを有効にするようにコンピューター構成ファイルを変更する](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)」を参照してください。 また、オペレーティング システムの IPv6 のサポートが有効になっていることを確認してください。  
   
  .NET Framework には、構成ファイル内に次のように設定された構成スイッチがあります。  
   
@@ -46,7 +46,7 @@ IPv6 プロトコルを使用するには、IPv6 をサポートしているオ�
   
 ## <a name="see-also"></a>関連項目
 
-- [インターネット プロトコル バージョン 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [ソケット](../../../docs/framework/network-programming/sockets.md)
-- [ネットワーク設定スキーマ](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<ipv6> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [インターネット プロトコル バージョン 6](internet-protocol-version-6.md)
+- [ソケット](sockets.md)
+- [ネットワーク設定スキーマ](../configure-apps/file-schema/network/index.md)
+- [\<ipv6> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

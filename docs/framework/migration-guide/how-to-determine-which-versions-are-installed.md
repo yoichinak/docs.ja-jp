@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0df5a5be2997958faa43ee67ae64fc37e1998414
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928418"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051594"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>方法: インストールされている .NET Framework バージョンを確認する
 
@@ -72,7 +72,7 @@ ms.locfileid: "70928418"
 
 3. **Release** という DWORD のエントリを探します。 それがある場合、.NET Framework 4.5 以降のバージョンがインストールされています。 その値は、.NET Framework の特定のバージョンのリリース キーです。 たとえば、次の図では、**Release** エントリの値は *378389* で、これは .NET Framework 4.5 のリリース キーです。
 
-     ![.NET Framework 4.5 のレジストリ エントリ](media/clr-installdir.png ".NET Framework 4.5 のレジストリ エントリ")
+     ![.NET Framework 4.5 のレジストリ エントリ](./media/clr-installdir.png ".NET Framework 4.5 のレジストリ エントリ")
 
 次の表は、.NET Framework 4.5 以降のバージョンに対する個々のオペレーティング システムでの **Release** DWORD 値の一覧です。
 
@@ -163,7 +163,7 @@ ms.locfileid: "70928418"
 
     次の図では、.NET Framework 3.5 のサブキーとその **Version** エントリを示しています。
 
-    ![.NET Framework 3.5 のレジストリ エントリ。](media/net-4-and-earlier.png ".NET Framework 3.5 以前のバージョン")
+    ![.NET Framework 3.5 のレジストリ エントリ。](./media/net-4-and-earlier.png ".NET Framework 3.5 以前のバージョン")
 
 <a name="net_c"></a>
 

@@ -2,12 +2,12 @@
 title: バージョン 3.5 のソケット パフォーマンスの強化
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 28f2543d1f8c81efd32ffbb644265fb5709a9bb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 577c033fc5639f9d9f50e413fd2cb55a75d48f2c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333289"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047238"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>バージョン 3.5 のソケット パフォーマンスの強化
 非同期ネットワーク I/O を利用して最高のパフォーマンスを達成するために、バージョン 3.5 で、<xref:System.Net.Sockets.Socket?displayProperty=nameWithType> クラスが機能強化されました。 <xref:System.Net.Sockets.Socket> クラスの機能強化の一環として、一連の新しいクラスが追加されました。これが提供する代替非同期パターンは、目的に特化した高パフォーマンスのソケット アプリケーションで利用できます。 この機能強化は、高いパフォーマンスを必要とするネットワーク サーバー アプリケーションのために設計されたものです。 あるアプリケーションで、機能強化された非同期パターンを排他的に、言い換えると、アプリケーションの高負荷領域 (大量のデータを受け取るときなど) のみで使用できます。  
@@ -39,5 +39,5 @@ ms.locfileid: "59333289"
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>
-- [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)
+- [ネットワーク プログラミングのサンプル](network-programming-samples.md)
 - [ソケットのコード例](socket-code-examples.md)

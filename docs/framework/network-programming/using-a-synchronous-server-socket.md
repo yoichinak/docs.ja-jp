@@ -17,12 +17,12 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: 43e1d54d4e74b49fdf1a8997d1cc89492c9412bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cbc02c755ceefa8f31439f121a98978b82f33fa2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117251"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047031"
 ---
 # <a name="using-a-synchronous-server-socket"></a>同期サーバー ソケットの使用
 同期サーバー ソケットは、ソケットで接続要求が受け取られるまでアプリケーションの実行を一時停止させます。 同期ソケットは動作のためにネットワークを多用するアプリケーションには適しませんが、単純なネットワーク アプリケーションには適しています。  
@@ -77,6 +77,6 @@ handler.Close();
   
 ## <a name="see-also"></a>関連項目
 
-- [非同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [同期サーバー ソケットの例](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
-- [リッスン (ソケットで)](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [非同期サーバー ソケットの使用](using-an-asynchronous-server-socket.md)
+- [同期サーバー ソケットの例](synchronous-server-socket-example.md)
+- [リッスン (ソケットで)](listening-with-sockets.md)

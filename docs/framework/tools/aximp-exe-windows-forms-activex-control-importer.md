@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5f76f60c8474b1503dc4cebeeafe241cd40be96
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: c879375a4b0622311c8731acc276ec79fe0217d5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970604"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044884"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows フォーム ActiveX コントロール インポーター)
 ActiveX コントロール インポーターは、ActiveX コントロール用の COM タイプ ライブラリに属する型定義を Windows フォーム コントロールに変換します。  
@@ -24,7 +24,7 @@ ActiveX コントロール インポーターは、ActiveX コントロール用
   
  ActiveX コントロールをホストするには、<xref:System.Windows.Forms.AxHost> から派生するラッパー コントロールを生成する必要があります。 ラッパー コントロールには、基になる ActiveX コントロールのインスタンスが 1 つ含まれます。 このインスタンスは、ActiveX コントロールとの通信方法を認識しますが、Windows フォーム コントロールとして表示されます。 生成されたコントロールは、ActiveX コントロールをホストし、そのプロパティ、メソッド、およびイベントを、生成されたコントロールのプロパティ、メソッド、およびイベントとして公開します。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -64,13 +64,13 @@ aximp [options]{file.dll | file.ocx}
 > [!NOTE]
 > ActiveX コントロールのメンバーの名前が .NET Framework で定義された名前と一致する場合、Aximp.exe は、AxHost 派生クラスを作成するときにメンバー名の前に "Ctl" を付けます。 たとえば、ActiveX コントロールに "Layout" というメンバーが含まれている場合、.NET Framework 内で Layout イベントが定義されているため、メンバー名は、AxHost 派生クラスでは "CtlLayout" に変更されます。  
   
- これらの生成されたファイルは、[Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) などのツールでチェックできます。  
+ これらの生成されたファイルは、[Ildasm.exe (IL Disassembler)](ildasm-exe-il-disassembler.md) などのツールでチェックできます。  
   
  Aximp.exe を使用して ActiveX WebBrowser コントロール (shdocvw.dll) 用の .NET アセンブリを生成する方法はサポートされていません。  
   
  shdocvw.dll に対して Aximp.exe を実行すると、ツールが実行されるディレクトリに shdocvw.dll という名前の別のファイルが常に作成されます。 この生成されたファイルが Documents ディレクトリおよび Settings ディレクトリに置かれると、Microsoft Internet Explorer や Windows エクスプローラーに対して問題を引き起こします。 コンピューターを再起動すると、Windows は shdocvw.dll のコピーを見つけるために、system32 ディレクトリの前に Documents and Settings ディレクトリを調べます。 Windows は Documents and Settings で見つけたコピーを使用して、マネージド ラッパーを読み込もうとします。 Internet Explorer と Windows エクスプローラーは、system32 ディレクトリにある shdocvw.dll のバージョンのレンダリング エンジンに依存しているため、正しく機能しません。 このような問題が発生したら、Documents ディレクトリおよび Settings ディレクトリにある shdocvw.dll を削除して、コンピューターを再起動します。  
   
- shdocvw.dll で Aximp.exe を使用して、アプリケーション開発で使用する .NET アセンブリを作成する場合にも、問題が発生する可能性があります。 この場合、アプリケーションは、システム バージョンと生成されたバージョンの両方の shdocvw.dll を読み込み、システム バージョンを優先します。 このとき、WebBrowser ActiveX コントロール内部の Web ページを読み込もうとすると、[開いて保存] ダイアログ ボックスが表示される場合があります。 ユーザーが **[開く]** をクリックすると、Internet Explorer で Web ページが開きます。 これは、Internet Explorer version 6 以前を実行しているコンピューターでのみ発生します。 この問題の発生を防ぐには、マネージド <xref:System.Windows.Forms.WebBrowser> コントロールまたは Visual Studio を使用してマネージド shdocvw.dll を生成します。詳細は「[方法: タイプ ライブラリへの参照を追加する](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)」にあります。  
+ shdocvw.dll で Aximp.exe を使用して、アプリケーション開発で使用する .NET アセンブリを作成する場合にも、問題が発生する可能性があります。 この場合、アプリケーションは、システム バージョンと生成されたバージョンの両方の shdocvw.dll を読み込み、システム バージョンを優先します。 このとき、WebBrowser ActiveX コントロール内部の Web ページを読み込もうとすると、[開いて保存] ダイアログ ボックスが表示される場合があります。 ユーザーが **[開く]** をクリックすると、Internet Explorer で Web ページが開きます。 これは、Internet Explorer version 6 以前を実行しているコンピューターでのみ発生します。 この問題の発生を防ぐには、マネージド <xref:System.Windows.Forms.WebBrowser> コントロールまたは Visual Studio を使用してマネージド shdocvw.dll を生成します。詳細は「[方法: タイプ ライブラリへの参照を追加する](../interop/how-to-add-references-to-type-libraries.md)」にあります。  
   
 ## <a name="example"></a>例  
  Media Player コントロール `msdxm.ocx` の MediaPlayer.dll と AxMediaPlayer.dll を生成するコマンドを次に示します。  
@@ -81,5 +81,5 @@ aximp c:\systemroot\system32\msdxm.ocx
   
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
-- [Ildasm.exe (IL 逆アセンブラー)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [ツール](index.md)
+- [Ildasm.exe (IL 逆アセンブラー)](ildasm-exe-il-disassembler.md)

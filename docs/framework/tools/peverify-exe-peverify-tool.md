@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac0b45db0e9aebae830155cbe2469514c392921d
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 4f0828409a8c57baecf7c81fd7a4df6e7844c7ce
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894833"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044334"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify ツール)
 PEVerify ツールは、Microsoft Intermediate Language (MSIL) を生成する開発者 (コンパイラの作成者、スクリプト エンジンの開発者など) が、生成する MSIL コードと関連メタデータがタイプ セーフ要件を満たしているかどうかを確認する場合に役立ちます。 一部のコンパイラでは、特定の言語構成を使用しなかった場合にだけ、検査可能でタイプ セーフなコードが生成されます。 このようなコンパイラを使用している場合、生成したコードがタイプ セーフかどうかを確認する必要があると思う開発者もいるはずです。 そのような場合は、ファイルに対して PEVerify ツールを実行し、MSIL とメタデータを検査できます。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -122,7 +122,7 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
   
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
-- [検証可能なタイプ セーフ コードの作成](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
+- [ツール](index.md)
+- [検証可能なタイプ セーフ コードの作成](../misc/code-access-security-basics.md#typesafe_code)
 - [タイプ セーフとセキュリティ](../../standard/security/key-security-concepts.md#type-safety-and-security)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

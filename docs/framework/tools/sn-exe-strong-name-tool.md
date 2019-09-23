@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 262ee168dabafcdc0b284f1ae5528843975a7e9d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971842"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044161"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (厳密名ツール)
 厳密名ツール (Sn.exe) は、[厳密な名前](../../standard/assembly/strong-named.md)を使用してアセンブリに署名する場合に役立ちます。 Sn.exe には、キーの管理、署名の生成、署名の検査に関する各オプションが用意されています。  
@@ -27,7 +27,7 @@ ms.locfileid: "70971842"
 
  厳密な名前付けと厳密な名前付きアセンブリについて詳しくは、「[Strong-Named Assemblies](../../standard/assembly/strong-named.md)」 (厳密な名前付きアセンブリ) と「[How to: Sign an Assembly with a Strong Name](../../standard/assembly/sign-strong-name.md)」 (方法: 厳密な名前でアセンブリに署名する) を参照してください。  
   
- 厳密名ツールは Visual Studio と共に自動的にインストールされます。 このツールを開始するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ 厳密名ツールは Visual Studio と共に自動的にインストールされます。 このツールを開始するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
 
 > [!NOTE]
 > 64 ビット コンピューターでは、Visual Studio 用開発者コマンド プロンプトを使用して 32 ビット バージョンの Sn.exe を、Visual Studio x64 Win64 コマンド プロンプトを使用して 64 ビット バージョンを実行してください。 
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |**-k** [*keysize*] *outfile*|指定したサイズの新しい <xref:System.Security.Cryptography.RSACryptoServiceProvider> キーを生成し、指定したファイルに書き込みます。  公開キーと秘密キーの両方がファイルに書き込みまれます。<br /><br /> キーのサイズを指定しない場合、Microsoft Enhanced Cryptographic Provider をインストールしている場合は既定で 1,024 ビットのキーが生成され、インストールしていない場合は既定で 512 ビットのキーが生成されます。<br /><br /> Microsoft Enhanced Cryptographic Provider をインストールしている場合、*keysize* パラメーターは、8 ビット間隔で 384 ビットから 16,384 ビットまでの長さのキーをサポートします。  Microsoft Enhanced Cryptographic Provider をインストールしていない場合は、8 ビット間隔で 384 ビットから 512 ビットまでの長さのキーをサポートします。|  
 |**-m** [**y** *&#124;* **n**]|キー コンテナーがコンピューターに固有であるか、ユーザーに固有であるかを指定します。 *y* を指定した場合、キー コンテナーはコンピューターに固有です。 *n* を指定した場合、キー コンテナーはユーザーに固有です。<br /><br /> y も n も指定しない場合は、現在の設定が表示されます。|  
 |**-o**  *infile* [*outfile*]|*infile* から公開キーを抽出し、.csv ファイルに格納します。 公開キーの各バイトはコンマで区切られます。 この形式は、ソース コード内で、キーへの参照を初期化済みの配列としてハードコーディングする場合に便利です。 *outfile* を指定しない場合、出力はクリップボードに保存されます。 **注:** このオプションでは、入力が公開キーのみであるかどうかの検証は行われません。 `infile` に秘密キーとのキー ペアが格納されていた場合、秘密キーも抽出されます。|  
-|**-p** *infile outfile* [*hashalg*]|*infile* 内のキー ペアから公開キーを抽出し、その公開キーを *outfile* に格納します。オプションで *hashalg* で指定された RSA アルゴリズムを使用します。 この公開キーは、[アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) の **/delaysign+** オプションと **/keyfile** オプションを使用して、アセンブリへの署名を遅らせるときに使用できます。 アセンブリの署名を遅らせた場合、コンパイル時には公開キーだけが設定され、後で秘密キーが判明したときに追加される署名用にファイル内の領域が予約されます。|  
+|**-p** *infile outfile* [*hashalg*]|*infile* 内のキー ペアから公開キーを抽出し、その公開キーを *outfile* に格納します。オプションで *hashalg* で指定された RSA アルゴリズムを使用します。 この公開キーは、[アセンブリ リンカー (Al.exe)](al-exe-assembly-linker.md) の **/delaysign+** オプションと **/keyfile** オプションを使用して、アセンブリへの署名を遅らせるときに使用できます。 アセンブリの署名を遅らせた場合、コンパイル時には公開キーだけが設定され、後で秘密キーが判明したときに追加される署名用にファイル内の領域が予約されます。|  
 |**-pc**  *container* *outfile* [*hashalg*]|*container* 内のキー ペアから公開キーを抽出し、*outfile* に格納します。 *hashalg* オプションを使用する場合、RSA アルゴリズムにより公開キーが抽出されます。|  
 |**-Pb** [**y** *&#124;* **n**]|厳密な名前を省略するポリシーが強制されるかどうかを指定します。 *y* を指定すると、完全に信頼されている <xref:System.AppDomain> に完全信頼アセンブリが読み込まれるとき、アセンブリの厳密な名前の検証は行われません。 *n* を指定した場合は、厳密な名前が正しいかどうかのみ検証されますが、特定の厳密な名前については確認されません。 <xref:System.Security.Permissions.StrongNameIdentityPermission> は、完全に信頼されているアセンブリには効果がありません。 厳密な名前の一致については、独自のチェックを実行する必要があります。<br /><br /> `y` も `n` も指定しない場合は、現在の設定が表示されます。 既定値は、`y` です。 **注:** 64 ビット コンピューターでは、Sn.exe の 32 ビットのインスタンスと 64 ビットのインスタンスの両方にこのパラメーターを設定する必要があります。|  
 |**-q** **[uiet]**|クワイエット モードを指定します。このモードでは、成功メッセージは表示されません。|  
@@ -126,7 +126,7 @@ sn -d MyContainer
   
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
-- [Al.exe (アセンブリ リンカー)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [ツール](index.md)
+- [Al.exe (アセンブリ リンカー)](al-exe-assembly-linker.md)
 - [厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

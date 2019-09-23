@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d13c2d2cc391e61c8ed764c26e5e5b5e7ea2a3bb
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 716513bdcf3ac1b8a2b2b29b23a8dc25a86a0d1c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851387"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044808"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (証明書マネージャー ツール)
 証明書マネージャー ツール (Certmgr.exe) は、証明書、証明書信頼リスト (CTL: Certificate Trust List)、および証明書失効リスト (CRL: Certificate Revocation List) を管理します。  
   
- 証明書マネージャーは Visual Studio と共に自動的にインストールされます。 ツールを開始するには、[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)を使用します。  
+ 証明書マネージャーは Visual Studio と共に自動的にインストールされます。 ツールを開始するには、[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)を使用します。  
   
 > [!NOTE]
 > 証明書マネージャー ツール (Certmgr.exe) はコマンド ライン ユーティリティですが、証明書 (Certmgr.msc) は Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップインです。 通常、Certmgr.msc は Windows のシステム ディレクトリにあるので、コマンド ラインで「`certmgr`」と入力すると、Visual Studio 用開発者コマンド プロンプトを開いていた場合でも証明書 MMC スナップインが読み込まれることがあります。 これは、PATH 環境変数で、スナップインのパスが証明書マネージャー ツールのパスよりも前に指定されているためです。 この問題が発生した場合は、実行可能ファイルのパスを指定して Certmgr.exe コマンドを実行できます。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
- X.509 証明書の概要については、「[証明書の使用](../../../docs/framework/wcf/feature-details/working-with-certificates.md)」を参照してください。  
+ X.509 証明書の概要については、「[証明書の使用](../wcf/feature-details/working-with-certificates.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "70851387"
  [!code-csharp[Tools.CertMgr#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tools.certmgr/cs/storenames1.cs#1)]
  [!code-vb[Tools.CertMgr#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tools.certmgr/vb/storenames1.vb#1)]  
   
- 証明書の詳細については、「[証明書の使用](../../../docs/framework/wcf/feature-details/working-with-certificates.md)」を参照してください。  
+ 証明書の詳細については、「[証明書の使用](../wcf/feature-details/working-with-certificates.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
  既定のシステム ストアである `my` を詳細出力モードで表示するコマンドを次に示します。  
@@ -139,6 +139,6 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
+- [ツール](index.md)
 - [Makecert.exe (証明書作成ツール)](/windows/desktop/SecCrypto/makecert)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

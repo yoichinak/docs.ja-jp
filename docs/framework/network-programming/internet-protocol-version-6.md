@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: 0851ad42cd5ce2dd6b49ad7656479d5237fd5874
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 367db4fa4e585d6066009dbd1afacb154829319a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647357"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047876"
 ---
 # <a name="internet-protocol-version-6"></a>インターネット プロトコル バージョン 6
 インターネット プロトコル バージョン 6 (IPv6) は、インターネットのネットワーク層の標準プロトコルの新しいスイートです。 IPv6 は、アドレスの不足、セキュリティ、自動構成、拡張性などに関して、インターネット プロトコル スイートの現在のバージョン (IPv4) が抱える多くの問題を解決するために設計されています。 IPv6 は、インターネットの機能を拡張して、ピア ツー ピア アプリケーションやモバイル アプリケーションなどの新しい種類のアプリケーションを有効にします。 現在の IPv4 プロトコルの主な問題を次に示します。  
@@ -42,7 +42,7 @@ ms.locfileid: "64647357"
   
 - 組み込み認証と機密性。  
   
- 詳細については、「[IPv6 アドレス指定](../../../docs/framework/network-programming/ipv6-addressing.md)」、「[IPv6 のルーティング](../../../docs/framework/network-programming/ipv6-routing.md)」、「[IPv6 の自動構成](../../../docs/framework/network-programming/ipv6-auto-configuration.md)」、「[IPv6 の有効化と無効化](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md)」、および「[方法:IPv6 のサポートを有効にするようにコンピューター構成ファイルを変更する](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)」を参照してください。  
+ 詳細については、「[IPv6 アドレス指定](ipv6-addressing.md)」、「[IPv6 のルーティング](ipv6-routing.md)」、「[IPv6 の自動構成](ipv6-auto-configuration.md)」、「[IPv6 の有効化と無効化](enabling-and-disabling-ipv6.md)」、および「[方法:IPv6 のサポートを有効にするようにコンピューター構成ファイルを変更する](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)」を参照してください。  
   
 ## <a name="references"></a>関連項目  
  [インターネット技術標準化委員会 (IETF)](https://www.ietf.org/) Web サイトで検索できる厳選した RFC ドキュメントを次に示します。  
@@ -60,5 +60,5 @@ ms.locfileid: "64647357"
 ## <a name="see-also"></a>関連項目
 
 - [IPv6 ソケットのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
-- [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)
-- [ソケット](../../../docs/framework/network-programming/sockets.md)
+- [ネットワーク プログラミングのサンプル](network-programming-samples.md)
+- [ソケット](sockets.md)

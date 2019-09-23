@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: d7d0dae2ffbec5e334057715cd1d8d44e52cec9d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6a52a38473e339b892673e7c1a2f9e1f58dad359
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910467"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048943"
 ---
 # <a name="automatic-proxy-detection"></a>自動プロキシ検出
 自動プロキシ検出は、Web プロキシ サーバーがシステムによって確認され、クライアントに代わって要求を送信する際に使用されるプロセスです。 この機能は、Web プロキシの自動検出 (WPAD) とも呼ばれます。 自動プロキシ検出を有効にすると、システムは、要求に使用できるプロキシのセットを返すプロキシ構成スクリプトを検索しようとします。 プロキシ構成スクリプトが見つかった場合、プロキシ情報、要求ストリーム、または <xref:System.Net.WebProxy> インスタンスを使用する要求に対する応答が取得されたときに、ローカル コンピューター上でスクリプトがダウンロード、コンパイル、および実行されます。  
@@ -44,7 +44,7 @@ ms.locfileid: "69910467"
   
  プロキシは、connectoid ごとに構成されます。 connectoid は、ネットワーク接続ダイアログにある項目で、物理ネットワーク デバイス (モデムまたはイーサネット カード) または仮想インターフェイス (ネットワーク デバイス経由で実行されている VPN 接続など) を指定することができます。 connectoid が変更された場合 (ワイヤレス接続でアクセス ポイントが変更された場合や、VPN が有効になった場合など)、プロキシ検出アルゴリズムが再度実行されます。  
   
- 既定では、プロキシの検出には Internet Explorer のプロキシ設定が使用されます。 アプリケーションが、対話型ではないアカウント (つまり、IE のプロキシ設定を構成するための便利な手段を持たないアカウント) で実行されている場合、または IE の設定とは異なるプロキシ設定を使用する必要がある場合は、[\<defaultProxy> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) と [\<proxy> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md) 要素が定義された構成ファイルを作成することで、プロキシを構成できます。  
+ 既定では、プロキシの検出には Internet Explorer のプロキシ設定が使用されます。 アプリケーションが、対話型ではないアカウント (つまり、IE のプロキシ設定を構成するための便利な手段を持たないアカウント) で実行されている場合、または IE の設定とは異なるプロキシ設定を使用する必要がある場合は、[\<defaultProxy> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) と [\<proxy> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/proxy-element-network-settings.md) 要素が定義された構成ファイルを作成することで、プロキシを構成できます。  
   
  要求を自分で作成する場合は、次のコード例に示すように、null の <xref:System.Net.WebRequest.Proxy%2A> を要求で使用することにより、要求レベルで自動プロキシ検出を無効にできます。  
   
@@ -71,4 +71,4 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
-- [\<system.Net> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [\<system.Net> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/system-net-element-network-settings.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP
 ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
-ms.openlocfilehash: d3fecb9fe78ca54f68d3c5a97dae5d5dd9fbb28d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d5b07617617ac28e4f7f72bc23a96b45a85dff75
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075419"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047978"
 ---
 # <a name="httplistener"></a>HttpListener
 <xref:System.Net.HttpListener> クラスは、プログラムによって制御できる HTTP プロトコル リスナーを提供します。 リスナーは、<xref:System.Net.HttpListener> オブジェクトの有効期間にわたってアクティブで、アプリケーション内で実行されます。  
@@ -26,4 +26,4 @@ ms.locfileid: "59075419"
 - [インターネット インフォメーションにおけるセキュリティ強化](https://go.microsoft.com/fwlink/?LinkID=178286)
 - [HttpListener ASPX ホスト アプリケーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=179560)
 - [HttpListener テクノロジのサンプル](https://go.microsoft.com/fwlink/?LinkID=179558)
-- [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)
+- [ネットワーク プログラミングのサンプル](network-programming-samples.md)

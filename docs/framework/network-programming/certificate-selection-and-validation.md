@@ -2,12 +2,12 @@
 title: 証明書の選択と検証
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: aea47360ab1bb9dad446a5a7b19a91ea688953c4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318352"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048747"
 ---
 # <a name="certificate-selection-and-validation"></a>証明書の選択と検証
 <xref:System.Net> クラスは、Secure Socket Layer (SSL) 接続の <xref:System.Security.Cryptography.X509Certificates> を選択および検証する方法を複数サポートしています。 クライアントは、サーバーに対する認証に 1 つまたは複数の証明書を選択できます。 サーバーは、クライアント証明書の認証に固有の属性が 1 つまたは複数あることを必須にすることができます。  
@@ -54,5 +54,5 @@ ms.locfileid: "59318352"
   
 ## <a name="see-also"></a>関連項目
 
-- [ネットワーク プログラミングにおけるセキュリティ](../../../docs/framework/network-programming/security-in-network-programming.md)
-- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
+- [ネットワーク プログラミングにおけるセキュリティ](security-in-network-programming.md)
+- [.NET Framework のネットワーク プログラミング](index.md)

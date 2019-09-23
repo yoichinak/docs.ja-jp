@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 0bbdab11201171bf8d730276c7f94cbc5317acdd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 54706293784d77e535cac582c99b1dd21a12e380
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101121"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048382"
 ---
 # <a name="how-to-create-a-socket"></a>方法: ソケットを作成する
 ソケットを使用してリモート デバイスと通信するには、ソケットをプロトコルとネットワーク アドレスの情報を使用して事前に初期化する必要があります。 <xref:System.Net.Sockets.Socket> クラスのコンストラクターには、アドレス ファミリ、ソケットの種類、およびソケットが接続を行うために使用するプロトコルの種類を指定するパラメーターがあります。  
@@ -62,5 +62,5 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
   
 ## <a name="see-also"></a>関連項目
 
-- [クライアント ソケットの使用](../../../docs/framework/network-programming/using-client-sockets.md)
-- [リッスン (ソケットで)](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [クライアント ソケットの使用](using-client-sockets.md)
+- [リッスン (ソケットで)](listening-with-sockets.md)

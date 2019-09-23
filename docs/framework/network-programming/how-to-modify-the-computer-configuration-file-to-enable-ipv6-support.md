@@ -2,12 +2,12 @@
 title: '方法: IPv6 のサポートを有効にするようにコンピューター構成ファイルを変更する'
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: af6eb8a334108c988967a555024b524e27d40f58
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 362e7af36d214df9f0454479e25a80af9d440b2b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959078"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048283"
 ---
 # <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>方法: IPv6 のサポートを有効にするようにコンピューター構成ファイルを変更する
 次のコード例では、IPv6 のサポートを有効にするようにコンピューター構成ファイルの *machine.config* を変更する方法を示します。 *machine.config* ファイルは、Windows がインストールされたディレクトリの *%Windir%\Microsoft.NET\Framework* フォルダーに格納されます。 コンピューターにインストールされた .NET Framework のバージョンごとに、 *%Windir%\Microsoft.NET\Framework* の下のフォルダーに別々の *machine.config* ファイルがあります (たとえば、*C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*)。  
@@ -37,6 +37,6 @@ ms.locfileid: "69959078"
   
 ## <a name="see-also"></a>関連項目
 
-- [IPv6 アドレス指定](../../../docs/framework/network-programming/ipv6-addressing.md)
-- [ネットワーク設定スキーマ](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<ipv6> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [IPv6 アドレス指定](ipv6-addressing.md)
+- [ネットワーク設定スキーマ](../configure-apps/file-schema/network/index.md)
+- [\<ipv6> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

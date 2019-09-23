@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e80e044fe01172c587ef029186035a64cdf0b42
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4038f8e4a3c012fab9df6019b5f9f19375f61f2a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971219"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044288"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (アセンブリ登録ツール)
 
 アセンブリ登録ツールは、1 つのアセンブリに含まれるメタデータを読み込み、必要なエントリをレジストリに追加します。これにより、COM クライアントによって .NET Framework クラスが自動的に作成されます。 クラスが登録されると、どの COM クライアントでも、そのクラスを COM クラスであるかのように使用できます。 クラスの登録は、アセンブリのインストール時に 1 回だけ行われます。 実際に登録されるまでは、アセンブリに含まれるクラスのインスタンスを COM から作成することはできません。
 
-ツールを実行するには、Visual Studio 用の開発者コマンド プロンプトを使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
+ツールを実行するには、Visual Studio 用の開発者コマンド プロンプトを使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
 
 コマンド プロンプトに次のように入力します。
 
@@ -56,13 +56,13 @@ regasm assemblyFile [options]
 
 **/regfile** オプションを使用すると、直接にレジストリを変更しなくても、レジストリ エントリを含む .reg ファイルを生成できます。 コンピューターのレジストリを更新するには、レジストリ エディター ツール (Regedit.exe) を使用して .reg ファイルをインポートします。 .reg ファイルには、ユーザー定義の登録機能で行われるレジストリの更新についての情報は含まれません。  **/regfile** オプションは、マネージド クラスのレジストリ エントリだけを生成します。  このオプションは、`TypeLibID` と `InterfaceID` のエントリは生成しません。
 
-**/tlb** オプションを指定すると、アセンブリ内で見つかった型を記述するタイプ ライブラリが Regasm.exe で生成および登録されます。 生成されたタイプ ライブラリは、現在の作業ディレクトリ、または出力ファイル用に指定されたディレクトリ内に格納されます。 他のアセンブリを参照するアセンブリについてタイプ ライブラリを生成すると、一度に複数のタイプ ライブラリが生成されることがあります。 タイプ ライブラリを使用して、Visual Studio などの開発用ツールに対して型情報を提供できます。 登録するアセンブリがタイプ ライブラリ インポーター ([Tlbimp.exe](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)) で生成されたアセンブリである場合には、 **/tlb** オプションを使用しないでください。 タイプ ライブラリからインポートされたアセンブリからは、タイプ ライブラリをエクスポートできません。 **/tlb** オプションを使用した場合の効果は、タイプ ライブラリ エクスポーター ([Tlbexp.exe](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)) と Regasm.exe を使用した場合と同じです。ただし、Tlbexp.exe では、生成されたタイプ ライブラリが登録されません。  **/tlb** オプションを使用してタイプ ライブラリを登録する場合、 **/tlb** オプションと **/unregister** オプションを使用してタイプ ライブラリの登録を解除できます。 この 2 つのオプションを使用すると、タイプ ライブラリとインターフェイス エントリの登録を解除でき、これによって、レジストリをかなり整理できます。
+**/tlb** オプションを指定すると、アセンブリ内で見つかった型を記述するタイプ ライブラリが Regasm.exe で生成および登録されます。 生成されたタイプ ライブラリは、現在の作業ディレクトリ、または出力ファイル用に指定されたディレクトリ内に格納されます。 他のアセンブリを参照するアセンブリについてタイプ ライブラリを生成すると、一度に複数のタイプ ライブラリが生成されることがあります。 タイプ ライブラリを使用して、Visual Studio などの開発用ツールに対して型情報を提供できます。 登録するアセンブリがタイプ ライブラリ インポーター ([Tlbimp.exe](tlbimp-exe-type-library-importer.md)) で生成されたアセンブリである場合には、 **/tlb** オプションを使用しないでください。 タイプ ライブラリからインポートされたアセンブリからは、タイプ ライブラリをエクスポートできません。 **/tlb** オプションを使用した場合の効果は、タイプ ライブラリ エクスポーター ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) と Regasm.exe を使用した場合と同じです。ただし、Tlbexp.exe では、生成されたタイプ ライブラリが登録されません。  **/tlb** オプションを使用してタイプ ライブラリを登録する場合、 **/tlb** オプションと **/unregister** オプションを使用してタイプ ライブラリの登録を解除できます。 この 2 つのオプションを使用すると、タイプ ライブラリとインターフェイス エントリの登録を解除でき、これによって、レジストリをかなり整理できます。
 
 COM で使用するためにアセンブリを登録すると、Regasm.exe は、ローカル コンピューターのレジストリにエントリを追加します。 より具体的には、バージョンに依存するレジストリ キーを作成して、同じアセンブリの複数のバージョンが同じコンピューターで side-by-side 実行できるようにします。 アセンブリが初めて登録される場合は、そのアセンブリの最上位キーが 1 つ作成され、特定のバージョンに対する一意なサブキーが作成されます。 アセンブリの新しいバージョンを登録するたびに、Regasm.exe は、新しいバージョンに対するサブキーを作成します。
 
 たとえば、COM で使用するために、マネージド コンポーネント myComp.dll のバージョン 1.0.0.0 を登録しているとします。 その後、myComp.dll バージョン 2.0.0.0 を登録します。 コンピューター上のすべての COM クライアント アプリケーションは myComp.dll バージョン 2.0.0.0 を使用しているため、myComponent.dll バージョン 1.0.0.0 を登録解除することにしました。 このレジストリ スキームでは、myComp.dll バージョン 1.0.0.0 のサブキーだけが削除されるため、バージョン 1.0.0.0 を登録解除できます。
 
-Regasm.exe を使用してアセンブリを登録した後で、そのアセンブリを[グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)内に登録すると、どの COM クライアントからもアクティブにできます。 アセンブリをアクティブにするアプリケーションが 1 つだけの場合は、そのアプリケーションのディレクトリ内にアセンブリを格納できます。
+Regasm.exe を使用してアセンブリを登録した後で、そのアセンブリを[グローバル アセンブリ キャッシュ](../app-domains/gac.md)内に登録すると、どの COM クライアントからもアクティブにできます。 アセンブリをアクティブにするアプリケーションが 1 つだけの場合は、そのアプリケーションのディレクトリ内にアセンブリを格納できます。
 
 ## <a name="examples"></a>使用例
 
@@ -86,8 +86,8 @@ regasm myTest.dll /tlb:myTest.tlb
 
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
-- [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)
-- [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [COM へのアセンブリの登録](../../../docs/framework/interop/registering-assemblies-with-com.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [ツール](index.md)
+- [Tlbexp.exe (タイプ ライブラリ エクスポーター)](tlbexp-exe-type-library-exporter.md)
+- [Tlbimp.exe (タイプ ライブラリ インポーター)](tlbimp-exe-type-library-importer.md)
+- [COM へのアセンブリの登録](../interop/registering-assemblies-with-com.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34cb8b0cebc64bf7244c522066700c94d33986a9
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 2db85781b48fd75c3d2ef70834fd8451647f6917
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894810"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044219"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (リソース ファイル ジェネレーター)
-リソース ファイル ジェネレーター (Resgen.exe) は、テキスト (.txt または .restext) ファイルおよび XML ベースのリソース形式 (.resx) ファイルを共通言語ランタイムのバイナリ (.resources) ファイルに変換します。この .resources ファイルは、ランタイム バイナリ実行可能ファイルまたはサテライト アセンブリに埋め込むことができます。 「[リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)」をご覧ください。  
+リソース ファイル ジェネレーター (Resgen.exe) は、テキスト (.txt または .restext) ファイルおよび XML ベースのリソース形式 (.resx) ファイルを共通言語ランタイムのバイナリ (.resources) ファイルに変換します。この .resources ファイルは、ランタイム バイナリ実行可能ファイルまたはサテライト アセンブリに埋め込むことができます。 「[リソース ファイルの作成](../resources/creating-resource-files-for-desktop-apps.md)」をご覧ください。  
   
  Resgen.exe は、次のタスクを実行する汎用のリソース変換ユーティリィティです。  
   
@@ -53,9 +53,9 @@ resgen
 resgen /?  
 ```  
   
- Resgen.exe を使用してバイナリ .resources ファイルを生成する場合は、言語コンパイラを使用して実行可能アセンブリにバイナリ ファイルを埋め込むか、[アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) を使用してサテライト アセンブリにコンパイルできます。  
+ Resgen.exe を使用してバイナリ .resources ファイルを生成する場合は、言語コンパイラを使用して実行可能アセンブリにバイナリ ファイルを埋め込むか、[アセンブリ リンカー (Al.exe)](al-exe-assembly-linker.md) を使用してサテライト アセンブリにコンパイルできます。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -77,7 +77,7 @@ resgen filename.extension [outputDirectory]
 |`useSourcePath`|入力ファイルの現在のディレクトリを使用して相対ファイル パスを解決することを指定します。|  
 |`/compile`|複数の .resx ファイルまたはテキスト ファイルを指定して、一括した操作で複数の .resources ファイルに変換できるようにします。 このオプションを指定しない場合、指定できる入力ファイル引数は 1 つだけです。 出力ファイルには、*filename*.resources という名前が付けられます。<br /><br /> このオプションは、`/str:` オプションと一緒に使用することはできません。<br /><br /> このオプションについて詳しくは、このトピックの「[複数のファイルのコンパイルまたは変換](#Multiple)」をご覧ください。|  
 |`/r:` `assembly`|指定されたアセンブリからメタデータを参照します。 これは、.resx ファイルを変換するときに使用され、Resgen.exe がオブジェクト リソースをシリアル化または非シリアル化できるようにします。 C# および Visual Basic コンパイラの `/reference:` や `/r:` オプションに似ています。|  
-|`filename.extension`|変換対象の入力ファイルの名前を指定します。 この表の前に示した 1 番目の長いコマンド ライン構文を使用する場合は、`extension` が以下のいずれかであることが必要です。<br /><br /> .txt または .restext<br /> .resources ファイルまたは .resx ファイルに変換するテキスト ファイル。 テキスト ファイルには、文字列リソースだけを含めることができます。 ファイル形式については、「[リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)」の「テキスト ファイル内のリソース」をご覧ください。<br /><br /> .resx<br /> .resources ファイルまたはテキスト (.txt または .restext) ファイルに変換する、XML ベースのリソース ファイル。<br /><br /> .resources<br /> .resx ファイルまたはテキスト (.txt または .restext) ファイルに変換するバイナリ リソース ファイル。<br /><br /> この表の前に示した 2 番目の短いコマンド ライン構文を使用する場合は、`extension` が以下のいずれかであることが必要です。<br /><br /> .exe または .dll<br /> 文字列リソースが [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションの開発で使用するための .resw ファイルに抽出される .NET Framework アセンブリ (実行可能ファイルまたはライブラリ)。|  
+|`filename.extension`|変換対象の入力ファイルの名前を指定します。 この表の前に示した 1 番目の長いコマンド ライン構文を使用する場合は、`extension` が以下のいずれかであることが必要です。<br /><br /> .txt または .restext<br /> .resources ファイルまたは .resx ファイルに変換するテキスト ファイル。 テキスト ファイルには、文字列リソースだけを含めることができます。 ファイル形式については、「[リソース ファイルの作成](../resources/creating-resource-files-for-desktop-apps.md)」の「テキスト ファイル内のリソース」をご覧ください。<br /><br /> .resx<br /> .resources ファイルまたはテキスト (.txt または .restext) ファイルに変換する、XML ベースのリソース ファイル。<br /><br /> .resources<br /> .resx ファイルまたはテキスト (.txt または .restext) ファイルに変換するバイナリ リソース ファイル。<br /><br /> この表の前に示した 2 番目の短いコマンド ライン構文を使用する場合は、`extension` が以下のいずれかであることが必要です。<br /><br /> .exe または .dll<br /> 文字列リソースが [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションの開発で使用するための .resw ファイルに抽出される .NET Framework アセンブリ (実行可能ファイルまたはライブラリ)。|  
 |`outputFilename.extension`|作成するリソース ファイルの名前および種類を指定します。<br /><br /> .txt ファイル、.restext ファイル、または .resx ファイルから .resources ファイルへ変換する場合、この引数は省略できます。 `outputFilename` を指定しないと、入力 `filename` ファイルに拡張子 .resources が追加され、そのファイルが `filename,extension` を含むディレクトリに書き込まれます。<br /><br /> .resources ファイルから変換する場合、引数 `outputFilename.extension` は必ず指定する必要があります。 .resources ファイルを XML ベースのリソース ファイルに変換する場合は、拡張子が .resx のファイル名を指定します。 .resources ファイルをテキスト ファイルに変換する場合は、拡張子が .txt または .restext のファイル名を指定します。 .resources ファイルを .txt ファイルに変換するのは、.resource ファイルに文字列値だけが含まれている場合に限ります。|  
 |`outputDirectory`|[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションの場合は、`filename.extension` に文字列リソースを含む .resw ファイルが書き込まれるディレクトリを指定します。 `outputDirectory` は既に存在している必要があります。|  
 |`/str:` `language[,namespace[,classname[,filename]]]`|`language` オプションで指定されたプログラミング言語で、厳密に型指定されたリソース クラス ファイルを作成します。 `language` は、次のリテラルの 1 つで構成できます:<br /><br /> -   C# の場合: `c#`、`cs`、または `csharp`。<br />-   Visual Basic の場合: `vb` または `visualbasic`。<br />-   VBScript の場合: `vbs` または `vbscript`。<br />-   C++ の場合: `c++`、`mc`、または `cpp`。<br />-   JavaScript の場合: `js`、`jscript`、または `javascript`。<br /><br /> `namespace` オプションではプロジェクトの既定の名前空間を指定し、`classname` オプションでは生成されるクラスの名前を指定し、`filename` オプションではクラス ファイルの名前を指定します。<br /><br /> `/str:` オプションは 1 つの入力ファイルにのみ対応しているため、`/compile` オプションと一緒に使用することはできません。<br /><br /> `namespace` を指定して、`classname` を指定しない場合、出力ファイル名からクラス名が派生します (たとえば、ピリオドがアンダースコアに置き換えられます)。 このため、厳密に型指定されたリソースが正常に機能しないことがあります。 この問題を回避するには、クラス名と出力ファイル名の両方を指定します。<br /><br /> このオプションについて詳しくは、このトピックの「[厳密に型指定されたリソース クラスの生成](#Strong)」をご覧ください。|  
@@ -90,14 +90,14 @@ resgen filename.extension [outputDirectory]
  テキスト (.txt または .restext) ファイルには、文字列リソースのみを含めることができます。 文字列リソースは、文字列を複数の言語に翻訳する必要があるアプリケーションを記述する場合に便利です。 たとえば、適切な文字列リソースを使用することで、メニュー文字列を簡単に地域固有の文字列に変更できます。 Resgen.exe は名前と値のペアを含むテキスト ファイルを読み取ります。名前はリソースを説明する文字列で、値はリソース文字列そのものです。  
   
 > [!NOTE]
-> .txt ファイルと .restext ファイルの形式については、「[リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)」の「テキスト ファイル内のリソース」をご覧ください。  
+> .txt ファイルと .restext ファイルの形式については、「[リソース ファイルの作成](../resources/creating-resource-files-for-desktop-apps.md)」の「テキスト ファイル内のリソース」をご覧ください。  
   
  リソースを格納するテキスト ファイルは、基本ラテンの範囲の文字だけ (U+007F まで) が含まれていない限り、UTF-8 エンコーディングまたは Unicode (UTF-16) エンコーディングで格納する必要があります。 Resgen.exe は、ANSI エンコーディングを使用して保存されたテキスト ファイルを処理するときに拡張 ANSI 文字を削除します。  
   
  Resgen.exe は、テキスト ファイルの中でリソース名が重複していないかどうかを確認します。 テキスト ファイルの中でリソース名が重複している場合は、警告メッセージが出され、2 つ目の値は無視されます。  
   
 ### <a name="resx-files"></a>.resx ファイル  
- .resx リソース ファイル形式は、XML エントリから構成されます。 テキスト ファイルの場合と同様に、これらの XML エントリの中に文字列リソースを指定できます。 .resx ファイルがテキスト ファイルよりも優れている点は、オブジェクトの指定や埋め込みもできることです。 .resx ファイルを表示してみると、埋め込みオブジェクト (画像など) のバイナリ形式を参照できます (このバイナリ情報がリソース マニフェストの一部に含まれている場合)。 テキスト ファイルと同様に、.resx ファイルはテキスト エディター (メモ帳や Microsoft Word など) で開き、内容を書き込み、解析、操作できます。 そのためには、XML のタグや .resx ファイルの構造を十分に知っておく必要があります。 .resx ファイル形式について詳しくは、「[リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)」の「.resx ファイル内のリソース」セクションをご覧ください。  
+ .resx リソース ファイル形式は、XML エントリから構成されます。 テキスト ファイルの場合と同様に、これらの XML エントリの中に文字列リソースを指定できます。 .resx ファイルがテキスト ファイルよりも優れている点は、オブジェクトの指定や埋め込みもできることです。 .resx ファイルを表示してみると、埋め込みオブジェクト (画像など) のバイナリ形式を参照できます (このバイナリ情報がリソース マニフェストの一部に含まれている場合)。 テキスト ファイルと同様に、.resx ファイルはテキスト エディター (メモ帳や Microsoft Word など) で開き、内容を書き込み、解析、操作できます。 そのためには、XML のタグや .resx ファイルの構造を十分に知っておく必要があります。 .resx ファイル形式について詳しくは、「[リソース ファイルの作成](../resources/creating-resource-files-for-desktop-apps.md)」の「.resx ファイル内のリソース」セクションをご覧ください。  
   
  文字列以外の埋め込みオブジェクトを含む .resources ファイルを作成するには、それらのオブジェクトを含む .resx ファイルを Resgen.exe で変換するか、<xref:System.Resources.ResourceWriter> クラスで提供されているメソッドを呼び出して、オブジェクト リソースをコードから直接ファイルに追加する必要があります。  
   
@@ -116,21 +116,21 @@ resgen filename.extension [outputDirectory]
 ## <a name="performing-specific-resgenexe-tasks"></a>特定の Resgen.exe タスクの実行  
  さまざまな方法で Resgen.exe を使用できます。テキストベースまたは XML ベースのリソース ファイルをバイナリ ファイルにコンパイルすることや、リソース ファイル形式を別のリソース ファイル形式に変換することや、<xref:System.Resources.ResourceManager> 機能をラップしてリソースへのアクセスを提供するクラスを生成することができます。 このセクションには、各タスクに関する詳細な情報があります。  
   
-- [リソースのバイナリ ファイルへのコンパイル](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
+- [リソースのバイナリ ファイルへのコンパイル](resgen-exe-resource-file-generator.md#Compiling)  
   
-- [リソース ファイルの種類間の変換](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
+- [リソース ファイルの種類間の変換](resgen-exe-resource-file-generator.md#Convert)  
   
-- [複数のファイルのコンパイルまたは変換](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
+- [複数のファイルのコンパイルまたは変換](resgen-exe-resource-file-generator.md#Multiple)  
   
-- [.resw ファイルへのリソースのエクスポート](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+- [.resw ファイルへのリソースのエクスポート](resgen-exe-resource-file-generator.md#Exporting)  
   
-- [リソースの条件付きコンパイル](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
+- [リソースの条件付きコンパイル](resgen-exe-resource-file-generator.md#Conditional)  
   
-- [厳密に型指定されたリソース クラスの生成](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
+- [厳密に型指定されたリソース クラスの生成](resgen-exe-resource-file-generator.md#Strong)  
   
 <a name="Compiling"></a>   
 ### <a name="compiling-resources-into-a-binary-file"></a>リソースのバイナリ ファイルへのコンパイル  
- Resgen.exe の最も一般的な用途は、テキスト ベースのリソース ファイル (.txt または .restext ファイル) または XML ベースのリソース ファイル (.resx ファイル) をバイナリ .resources ファイルにコンパイルすることです。 次に、出力ファイルは、言語コンパイラを使用してメインのアセンブリに、または[アセンブリ リンカー (AL.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) を使用してサテライト アセンブリに埋め込むことができます。  
+ Resgen.exe の最も一般的な用途は、テキスト ベースのリソース ファイル (.txt または .restext ファイル) または XML ベースのリソース ファイル (.resx ファイル) をバイナリ .resources ファイルにコンパイルすることです。 次に、出力ファイルは、言語コンパイラを使用してメインのアセンブリに、または[アセンブリ リンカー (AL.exe)](al-exe-assembly-linker.md) を使用してサテライト アセンブリに埋め込むことができます。  
   
  リソース ファイルをコンパイルする構文は次のとおりです。  
   
@@ -297,7 +297,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  厳密な型のリソース クラスのソース コードの生成に使用する言語。 指定できる値は、C# コードの場合は `cs`、`C#`、`csharp`、Visual Basic コードの場合は `vb`、`visualbasic`、VBScript コードの場合は `vbs`、`vbscript`、C++ コードの場合は `c++`、`mc`、`cpp` です。  
   
  *namespace*  
- 厳密に型指定したクラスを含む名前空間。 .resources ファイルおよびリソース クラスは、同じ名前空間を持つ必要があります。 `outputFilename` で名前空間を指定する場合については、「[リソースのバイナリ ファイルへのコンパイル](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)」をご覧ください。 *namespace* を省略すると、リソース クラスは、名前空間に含まれなくなります。  
+ 厳密に型指定したクラスを含む名前空間。 .resources ファイルおよびリソース クラスは、同じ名前空間を持つ必要があります。 `outputFilename` で名前空間を指定する場合については、「[リソースのバイナリ ファイルへのコンパイル](resgen-exe-resource-file-generator.md#Compiling)」をご覧ください。 *namespace* を省略すると、リソース クラスは、名前空間に含まれなくなります。  
   
  *classname*  
  厳密な型のリソース クラスの名前。 これは、.resources ファイルのルート名に対応する必要があります。 たとえば、Resgen.exe で MyCompany.Libraries.Strings.resources という名前の .resources ファイルが生成される場合、厳密に型指定されたリソース クラスの名前は Strings になります。 If *classname* を省略すると、生成されるクラスは `outputFilename` のルート名から派生します。 If `outputFilename` を省略すると、生成されるクラスは `inputFilename` のルート名から派生します。  
@@ -331,8 +331,8 @@ resgen StringResources.txt /str:vb,,StringResources
   
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
-- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)
-- [リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [Al.exe (アセンブリ リンカー)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [ツール](index.md)
+- [デスクトップ アプリケーションのリソース](../resources/index.md)
+- [リソース ファイルの作成](../resources/creating-resource-files-for-desktop-apps.md)
+- [Al.exe (アセンブリ リンカー)](al-exe-assembly-linker.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

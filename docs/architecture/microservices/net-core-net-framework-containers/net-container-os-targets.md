@@ -2,12 +2,12 @@
 title: .NET コンテナーで対象とする OS
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | .NET コンテナーで対象とする OS'
 ms.date: 01/07/2019
-ms.openlocfilehash: 6f160aeba5257722490788271e6f89359342cc0d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7380889374e69ca4d3c981a401af703c19263de5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675759"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039686"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET コンテナーで対象とする OS
 
@@ -27,33 +27,12 @@ Linux の場合、複数のディストリビューションを利用できま�
 
 Dockerfile ファイルにイメージ名を追加すると、次の例のように、使用するタグに応じてオペレーティング システムとバージョンを選択できます。
 
-<table>
-<thead>
-<tr class="header">
-<th>イメージ</th>
-<th>コメント</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>mcr.microsoft.com/dotnet/core/runtime:2.2</td>
-<td>.NET Core 2.2 マルチアーキテクチャ:Docker ホストに応じて、Linux と Windows Nano Server をサポートします。</td>
-</tr>
-<tr class="odd">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2</td>
-<td><p>ASP.NET Core 2.2 マルチアーキテクチャ:Docker ホストに応じて、Linux と Windows Nano Server をサポートします。</p>
-<p>aspnetcore イメージでは、ASP.NET Core 用に 少しの最適化が行われています。</p></td>
-</tr>
-<tr class="even">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine</td>
-<td>Linux Alpine ディストリビューションでの .NET Core 2.2 ランタイムのみ</td>
-</tr>
-<tr class="odd">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803</td>
-<td>Windows Nano Server (Windows Server バージョン 1803) では .NET Core 2.2 ランタイムのみ</td>
-</tr>
-</tbody>
-</table>
+| イメージ | コメント |
+|-------|----------|
+| mcr.microsoft.com/dotnet/core/runtime:2.2 | .NET Core 2.2 マルチアーキテクチャ:Docker ホストに応じて、Linux と Windows Nano Server をサポートします。 |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2 | ASP.NET Core 2.2 マルチアーキテクチャ:Docker ホストに応じて、Linux と Windows Nano Server をサポートします。 <br/> aspnetcore イメージでは、ASP.NET Core 用に 少しの最適化が行われています。 |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine | Linux Alpine ディストリビューションでの .NET Core 2.2 ランタイムのみ |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803 | Windows Nano Server (Windows Server バージョン 1803) では .NET Core 2.2 ランタイムのみ |
 
 > [!div class="step-by-step"]
 > [前へ](container-framework-choice-factors.md)

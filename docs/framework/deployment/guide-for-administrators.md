@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 793012b21ae6a3a597efaea23a6d3b6d1db58562
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379955"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052157"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 配置ガイド (管理者向け)
 
-この記事では、システム管理者が Microsoft System Center Configuration Manager を使用して .NET Framework 4.5 とそのシステムの依存関係をネットワーク経由で配置する方法を手順に沿って説明します。 ここでは、すべての対象のクライアント コンピューターが .NET Framework の最小要件を満たしていることを前提としています。 .NET Framework 4.5 のインストールに必要なソフトウェアとハードウェアの要件の一覧については、[システム要件](../../../docs/framework/get-started/system-requirements.md)に関する記事を参照してください。
+この記事では、システム管理者が Microsoft System Center Configuration Manager を使用して .NET Framework 4.5 とそのシステムの依存関係をネットワーク経由で配置する方法を手順に沿って説明します。 ここでは、すべての対象のクライアント コンピューターが .NET Framework の最小要件を満たしていることを前提としています。 .NET Framework 4.5 のインストールに必要なソフトウェアとハードウェアの要件の一覧については、[システム要件](../get-started/system-requirements.md)に関する記事を参照してください。
 
 > [!NOTE]
 > .NET Framework 4.5、System Center Configuration Manager、Active Directory など、このドキュメントで言及されるソフトウェアなどにはそれぞれ、ライセンス条項が適用されます。 このドキュメントの内容は、ライセンス条項がソフトウェアの適切なライセンス取得者によって確認され、同意されていることを前提にしています 記載の内容についても、ライセンス条項は効力があるものとします。
@@ -280,5 +280,5 @@ System Center 2012 Configuration Manager を使用して、インストール処
 
 ## <a name="see-also"></a>関連項目
 
-- [配置ガイド (開発者向け)](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [システム要件](../../../docs/framework/get-started/system-requirements.md)
+- [配置ガイド (開発者向け)](deployment-guide-for-developers.md)
+- [システム要件](../get-started/system-requirements.md)

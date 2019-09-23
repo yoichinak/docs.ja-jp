@@ -15,12 +15,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: 4a1b18f2c31bf8dad8cf32e2e5205cf3008e7b18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cffad6b4677a880bd63f5ae0232c639f7a262c59
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136046"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047252"
 ---
 # <a name="sockets"></a>ソケット
 <xref:System.Net.Sockets> 名前空間には、Windows ソケット インターフェイスのマネージド実装が含まれます。 <xref:System.Net> 名前空間のその他すべてのネットワーク アクセス クラスは、ソケットのこの実装の上に構築されます。  
@@ -31,6 +31,6 @@ ms.locfileid: "59136046"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: ソケットを作成する](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [方法: ソケットを作成する](how-to-create-a-socket.md)
 
-- [アプリケーション プロトコルの使用](../../../docs/framework/network-programming/using-application-protocols.md)
+- [アプリケーション プロトコルの使用](using-application-protocols.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: 33043652e11beb374843d43c9683ff4b7928eb3d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2d3d85ebd80f417ebd0fa0e619097e15f2a6a39b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112802"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048769"
 ---
 # <a name="cache-policy"></a>キャッシュ ポリシー
 キャッシュ ポリシーには、要求されたリソースのキャッシュ コピーを使用して要求を満たすことができるかどうかを決定するルールを定義します。 アプリケーションは、更新のクライアント キャッシュ要件を指定しますが、実質的なキャッシュ ポリシーは、クライアントのキャッシュ要件、サーバーのコンテンツ有効期限要件、およびサーバーの再検証要件によって決まります。 最新のコンテンツをクライアント アプリケーションに確実に返すために、クライアントのキャッシュ ポリシーとサーバーの要件の相互作用によって、常に最も保守的なキャッシュ ポリシーが適用されます。  
@@ -32,15 +32,15 @@ ms.locfileid: "59112802"
 |<xref:System.Net.Cache.HttpRequestCacheLevel>|場所ベースと時間ベースの <xref:System.Net.Cache.HttpRequestCachePolicy> オブジェクトの作成に使用される値を指定します。|  
 |<xref:System.Net.Cache.RequestCacheLevel>|場所ベースまたは <xref:System.Net.Cache.RequestCacheLevel.Default> 時間ベースの <xref:System.Net.Cache.RequestCachePolicy> オブジェクトの作成に使用される値を指定します。|  
   
- アプリケーションから発行されるすべての要求、または個々の要求に対してキャッシュ ポリシーを定義できます。 アプリケーションレベルのキャッシュ ポリシーと要求レベルのキャッシュ ポリシーの両方を指定すると、要求レベルのポリシーが使用されます。 アプリケーションレベルのキャッシュ ポリシーを指定するには、プログラム、またはアプリケーションやコンピューターの構成ファイルを使用します。 詳細については、「[\<requestCaching> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)」を参照してください。  
+ アプリケーションから発行されるすべての要求、または個々の要求に対してキャッシュ ポリシーを定義できます。 アプリケーションレベルのキャッシュ ポリシーと要求レベルのキャッシュ ポリシーの両方を指定すると、要求レベルのポリシーが使用されます。 アプリケーションレベルのキャッシュ ポリシーを指定するには、プログラム、またはアプリケーションやコンピューターの構成ファイルを使用します。 詳細については、「[\<requestCaching> 要素 (ネットワーク設定)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)」を参照してください。  
   
  キャッシュ ポリシーを作成するには、<xref:System.Net.Cache.RequestCachePolicy> クラスまたは <xref:System.Net.Cache.HttpRequestCachePolicy> クラスのインスタンスを作成して、ポリシー オブジェクトを作成する必要があります。 要求でポリシーを指定するには、要求の <xref:System.Net.WebRequest.CachePolicy%2A> プロパティをポリシー オブジェクトに設定します。 アプリケーションレベルのポリシーをプログラムで設定する場合は、<xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A> プロパティをポリシー オブジェクトに設定します。  
   
- キャッシュ ポリシーを作成し、利用する方法を示すコード例については、「[Configuring Caching in Network Applications](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)」(ネットワーク アプリケーションでのキャッシュの構成) を参照してください。  
+ キャッシュ ポリシーを作成し、利用する方法を示すコード例については、「[Configuring Caching in Network Applications](configuring-caching-in-network-applications.md)」(ネットワーク アプリケーションでのキャッシュの構成) を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ネットワーク アプリケーションのキャッシュ管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [場所ベースのキャッシュ ポリシー](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [時間ベースのキャッシュ ポリシー](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [ネットワーク アプリケーションでのキャッシュの構成](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
+- [ネットワーク アプリケーションのキャッシュ管理](cache-management-for-network-applications.md)
+- [場所ベースのキャッシュ ポリシー](location-based-cache-policies.md)
+- [時間ベースのキャッシュ ポリシー](time-based-cache-policies.md)
+- [ネットワーク アプリケーションでのキャッシュの構成](configuring-caching-in-network-applications.md)

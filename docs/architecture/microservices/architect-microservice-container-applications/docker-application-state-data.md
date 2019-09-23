@@ -2,12 +2,12 @@
 title: Docker アプリケーションの状態とデータ
 description: Docker アプリケーションでの状態とデータの管理。 マイクロサービスのインスタンスは再利用できませんが、データはそうではありません。マイクロ サービスでこれを処理する方法。
 ms.date: 09/20/2018
-ms.openlocfilehash: 9d7b0ff0e73267c6b80be2f1c956c3b4eae140e2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bd0ac007479dcd51f2c639881273b81d1fd8b6d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673129"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039580"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker アプリケーションの状態とデータ
 
@@ -47,7 +47,7 @@ Docker コンテナーから:
 
 図 4-5 に示すように、通常の Docker ボリュームは、コンテナー自体の外部 (ただし、ホスト サーバーまたは VM の物理的境界内) に格納できます。 ただし、Docker コンテナーは、あるホスト サーバーまたは VM から別のホスト サーバーまたは VM のボリュームにアクセスすることはできません。 つまり、このようなボリュームを使用した場合、さまざまな Docker ホスト上で実行されるコンテナーの間で共有されたデータを管理することはできません。しかし、リモート ホストをサポートするボリューム ドライバーを使用すれば、それを達成することが可能です。
 
-![リモート ホストをサポートするリモート ドライバーを使用していない場合、コンテナー間でのボリュームの共有は同一ホスト内でのみ可能です。 ](./media/image5.png)
+![リモート ホストをサポートするリモート ドライバーを使用していない場合、コンテナー間でのボリュームの共有は同一ホスト内でのみ可能です。](./media/image5.png)
 
 **図 4-5** コンテナーベースのアプリケーション向けのボリュームと外部データ ソース
 

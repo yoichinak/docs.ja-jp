@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410f95b373e079fe959068a6540642a6ad043e95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952819"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053723"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework のアクセシビリティの新機能
 
@@ -24,7 +24,7 @@ ms.locfileid: "69952819"
 
 アプリのターゲットが .NET Framework 4.7 である場合、またはそれより前のバージョンがターゲットであっても実行環境が .NET Framework 4.7.1 以降である場合は、ユーザー補助機能を使用するようにアプリを構成できます。 また、アプリのターゲットが 4.7.1 .NET Framework 以降である場合は、従来の機能を使用するように (そして、ユーザー補助機能を利用しないように) アプリを構成することもできます。 ユーザー補助機能が含まれる .NET Framework の各バージョンには、バージョン固有のアクセシビリティ スイッチがあります。これを、アプリケーションの構成ファイルの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素に追加します。 サポートされているスイッチは次のとおりです。
 
-|Version|切り替え|
+|Version|Switch|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -169,7 +169,7 @@ if (raiseMethod != null) {
 
 次の図は、ユーザーがキーボードを使用してボタンを選択したときのツールヒントを示しています。
 
-![ユーザーがキーボードを使用してボタンに移動したときのツールヒント](media/tooltip.png)
+![ユーザーがキーボードを使用してボタンに移動したときのツールヒント](./media/tooltip.png)
 
 <a name="wpf48" />
 
@@ -189,7 +189,7 @@ if (raiseMethod != null) {
 
 このプロパティを使用するには、単に XAML コードに追加して、適切なブラシまたはバインドを使用します。 結果のテキスト選択は次のようになります。
 
-![ユーザーがキーボードを使用してボタンに移動したときのツールヒント](media/selectiontextbrush-property.png)
+![ユーザーがキーボードを使用してボタンに移動したときのツールヒント](./media/selectiontextbrush-property.png)
 
 `SelectionBrush` と `SelectionTextBrush` プロパティを組み合わせて使用することで、背景色と前景色の適切な組み合わせを生成することができます。
 
@@ -482,11 +482,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   前: 
 
-  ![フォーカスを合わせた Expander コントロール (アクセシビリティ機能改善前)](media/expander-before.png)
+  ![フォーカスを合わせた Expander コントロール (アクセシビリティ機能改善前)](./media/expander-before.png)
 
   後: 
 
-  ![フォーカスを合わせた Expander コントロール (アクセシビリティ機能改善後)](media/expander-after.png)
+  ![フォーカスを合わせた Expander コントロール (アクセシビリティ機能改善後)](./media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> コントロールと <xref:System.Windows.Controls.RadioButton> コントロール
 
@@ -494,11 +494,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   前: 
 
-  ![フォーカスを合わせたハイ コントラストのラジオ ボタン (アクセシビリティ機能改善前)](media/radio-button-before.png)
+  ![フォーカスを合わせたハイ コントラストのラジオ ボタン (アクセシビリティ機能改善前)](./media/radio-button-before.png)
 
   後: 
 
-  ![フォーカスを合わせたハイ コントラストのラジオ ボタン (アクセシビリティ機能改善後)](media/radio-button-after.png)
+  ![フォーカスを合わせたハイ コントラストのラジオ ボタン (アクセシビリティ機能改善後)](./media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> コントロール
 
@@ -506,31 +506,31 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   前: 
 
-  ![無効にした ComboBox の枠線とテキスト (アクセシビリティ機能改善前)](media/combo-disabled-before.png)
+  ![無効にした ComboBox の枠線とテキスト (アクセシビリティ機能改善前)](./media/combo-disabled-before.png)
 
   後:   
 
-  ![無効にした ComboBox の枠線とテキスト (アクセシビリティ機能改善後)](media/combo-disabled-after.png)
+  ![無効にした ComboBox の枠線とテキスト (アクセシビリティ機能改善後)](./media/combo-disabled-after.png)
 
   また、無効にしているボタンにフォーカスを合わせたとき、正しいテーマ色が使用されます。
 
   前:
 
-  ![ボタンのテーマ色 (アクセシビリティ機能改善前)](media/button-themes-before.png) 
+  ![ボタンのテーマ色 (アクセシビリティ機能改善前)](./media/button-themes-before.png) 
 
   後: 
 
-  ![ボタンのテーマ色 (アクセシビリティ機能改善後)](media/button-themes-after.png) 
+  ![ボタンのテーマ色 (アクセシビリティ機能改善後)](./media/button-themes-after.png) 
 
   最後になりますが、.NET Framework 4.7 以前のバージョンでは、<xref:System.Windows.Controls.ComboBox> コントロールのスタイルを `Toolbar.ComboBoxStyleKey` に設定すると、ドロップダウンの矢印が見えなくなりました。 この問題は .NET Framework 4.7.1 以降で修正されています。 次に例を示します。
 
   前: 
 
-  ![Toolbar.ComboBoxStyleKey (アクセシビリティ機能改善前)](media/comboboxstylekey-before.png) 
+  ![Toolbar.ComboBoxStyleKey (アクセシビリティ機能改善前)](./media/comboboxstylekey-before.png) 
 
   後: 
 
-  ![Toolbar.ComboBoxStyleKey (アクセシビリティ機能改善後)](media/comboboxstylekey-after.png) 
+  ![Toolbar.ComboBoxStyleKey (アクセシビリティ機能改善後)](./media/comboboxstylekey-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid> コントロール
 
@@ -538,21 +538,21 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   前: 
 
-  ![並べ替えインジケーターの矢印 (アクセシビリティ機能改善前)](media/sort-indicator-before.png) 
+  ![並べ替えインジケーターの矢印 (アクセシビリティ機能改善前)](./media/sort-indicator-before.png) 
 
   後:   
 
-  ![並べ替えインジケーターの矢印 (アクセシビリティ機能改善後)](media/sort-indicator-after.png) 
+  ![並べ替えインジケーターの矢印 (アクセシビリティ機能改善後)](./media/sort-indicator-after.png) 
 
   また、.NET Framework 4.7 以前のバージョンでは、ハイ コントラスト モードでカーソルを合わせたとき、既定のリンク スタイルが正しくない色に変化しました。 これは .NET Framework 4.7.1 以降で修正されています。 同様に、.NET Framework 4.7.1 以降、<xref:System.Windows.Controls.DataGrid> チェックボックス列でキーボード フォーカス フィードバックに既定の色が使用されます。
 
   前: 
 
-  ![DataGrid の既定のリンク スタイル (アクセシビリティ機能改善前)](media/default-link-style-before.png) 
+  ![DataGrid の既定のリンク スタイル (アクセシビリティ機能改善前)](./media/default-link-style-before.png) 
 
   後:    
 
-  ![DataGrid の既定のリンク スタイル (アクセシビリティ機能改善後)](media/default-link-style-after.png) 
+  ![DataGrid の既定のリンク スタイル (アクセシビリティ機能改善後)](./media/default-link-style-after.png) 
 
 .NET Framework 4.7.1 での WPF アクセシビリティ機能改善の詳細については、「[WPF でのアクセシビリティの向上](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)」を参照してください。
 
@@ -583,11 +583,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   前:
 
-  ![無効にしたテキスト (アクセシビリティ機能改善前)](media/wf-disabled-before.png) 
+  ![無効にしたテキスト (アクセシビリティ機能改善前)](./media/wf-disabled-before.png) 
 
   後:
 
-  ![無効にしたテキスト (アクセシビリティ機能改善後)](media/wf-disabled-after.png) 
+  ![無効にしたテキスト (アクセシビリティ機能改善後)](./media/wf-disabled-after.png) 
 
 - スレッド例外ダイアログのハイ コントラストが改善されました。
 

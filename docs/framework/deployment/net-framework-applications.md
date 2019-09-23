@@ -7,23 +7,23 @@ helpviewer_keywords:
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7876e21286ee16f16fa51939b09ffd0583b134d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 92c7bbfe2c35aa1474c83eae49240af39b664714
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132614"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052045"
 ---
 # <a name="deploying-net-framework-applications"></a>.NET Framework アプリケーションの配置
 .NET Framework ドキュメントの本セクションでは、アセンブリの読み込み、アセンブリ参照の解決、およびネイティブ イメージの生成を使用したアプリケーションのパフォーマンス向上のためのガイドラインなど、.NET Framework アプリケーションを配置するための重要な情報を提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [ランタイムがアセンブリを検索する方法](how-the-runtime-locates-assemblies.md)  
  共通言語ランタイムが、アプリケーションを構成するアセンブリを検出し、バインドする方法について説明します。  
   
- [アセンブリの読み込みのベスト プラクティス](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+ [アセンブリの読み込みのベスト プラクティス](best-practices-for-assembly-loading.md)  
  <xref:System.InvalidCastException>、<xref:System.MissingMethodException>、およびその他のエラーの原因となることがある型 ID の問題を回避する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [開発ガイド](../../../docs/framework/development-guide.md)
+- [開発ガイド](../development-guide.md)

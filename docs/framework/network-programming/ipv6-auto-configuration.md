@@ -2,12 +2,12 @@
 title: IPv6 の自動構成
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 2c7f77bbdebe093b5e3bc706653ed203082d9c3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 95d9dce36c70b8f6c6b9f963c0842305a111d436
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647322"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047817"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 の自動構成
 IPv6 用の 1 つの重要な目標は、ノードのプラグ アンド プレイをサポートすることです。 つまり、IPv6 ネットワークにノードを接続して、それを人間の操作なしに自動的に構成できる必要があります。  
@@ -26,5 +26,5 @@ IPv6 用の 1 つの重要な目標は、ノードのプラグ アンド プレ�
   
 ## <a name="see-also"></a>関連項目
 
-- [インターネット プロトコル バージョン 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [ソケット](../../../docs/framework/network-programming/sockets.md)
+- [インターネット プロトコル バージョン 6](internet-protocol-version-6.md)
+- [ソケット](sockets.md)

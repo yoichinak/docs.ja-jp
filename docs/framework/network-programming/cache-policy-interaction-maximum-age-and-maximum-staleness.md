@@ -9,12 +9,12 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-ms.openlocfilehash: 3819882fe4a93016b25c10daa198a24fe7b0e951
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e21cfc28407ba67afdce8d72e5e52c12ab359059
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624679"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048840"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>キャッシュ ポリシーの相互作用 — 最大有効期間と最大期限延長
 最新のコンテンツをクライアント アプリケーションに確実に返すために、クライアントのキャッシュ ポリシーとサーバーの再検証要件の相互作用によって、常に最も保守的なキャッシュ ポリシーが適用されます。 このトピックの例はいずれも、1 月 1 日にキャッシュされ、1 月 4 日に期限切れになるリソースのキャッシュ ポリシーを示しています。  
@@ -37,9 +37,9 @@ ms.locfileid: "64624679"
   
 ## <a name="see-also"></a>関連項目
 
-- [ネットワーク アプリケーションのキャッシュ管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [キャッシュ ポリシー](../../../docs/framework/network-programming/cache-policy.md)
-- [場所ベースのキャッシュ ポリシー](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [時間ベースのキャッシュ ポリシー](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [ネットワーク アプリケーションでのキャッシュの構成](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
-- [キャッシュ ポリシーの相互作用 - 最大有効期間と最小鮮度](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)
+- [ネットワーク アプリケーションのキャッシュ管理](cache-management-for-network-applications.md)
+- [キャッシュ ポリシー](cache-policy.md)
+- [場所ベースのキャッシュ ポリシー](location-based-cache-policies.md)
+- [時間ベースのキャッシュ ポリシー](time-based-cache-policies.md)
+- [ネットワーク アプリケーションでのキャッシュの構成](configuring-caching-in-network-applications.md)
+- [キャッシュ ポリシーの相互作用 - 最大有効期間と最小鮮度](cache-policy-interaction-maximum-age-and-minimum-freshness.md)

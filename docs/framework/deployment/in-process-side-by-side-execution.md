@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2a33d3c4216ed8c5d79aef4017c6b9256fc1ad7c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911112"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052099"
 ---
 # <a name="in-process-side-by-side-execution"></a>インプロセスの side-by-side 実行
 .NET Framework 4 以降では、インプロセスの side-by-side ホスティングを使用して、1 つのプロセスで複数のバージョンの共通言語ランタイム (CLR) を実行できます。 既定では、マネージド COM コンポーネントは、プロセスに読み込まれている .NET Framework のバージョンに関係なく、コンポーネントがビルドされた .NET Framework のバージョンで実行されます。  
@@ -60,7 +60,7 @@ ms.locfileid: "69911112"
   
      インストールされている .NET Framework のバージョン: 以前のバージョンの .NET Framework および .NET Framework 4。  
   
-     対処方法: アプリケーション ディレクトリ内の[アプリケーション構成ファイル](../../../docs/framework/configure-apps/index.md)で、次のように設定された [\<startup> 要素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)と [\<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)を使用します。  
+     対処方法: アプリケーション ディレクトリ内の[アプリケーション構成ファイル](../configure-apps/index.md)で、次のように設定された [\<startup> 要素](../configure-apps/file-schema/startup/startup-element.md)と [\<supportedRuntime> 要素](../configure-apps/file-schema/startup/supportedruntime-element.md)を使用します。  
   
     ```xml  
     <configuration>  
@@ -175,5 +175,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>関連項目
 
-- [\<startup> 要素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<startup> 要素](../configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime> 要素](../configure-apps/file-schema/startup/supportedruntime-element.md)

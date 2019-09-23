@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: 9f7d6bfcaa0d1cc4eb6c83cb53120bec695fe85e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa3fc56dc461d4fe22e2ff391f3561d8834128d8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583473"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046876"
 ---
 # <a name="using-streams-on-the-network"></a>ネットワーク上でストリームを使用する
 .NET Framework では、ネットワーク リソースはストリームとして表されます。 .NET Framework は、ストリームを汎用的に扱うことで、次の機能を提供しています。  
@@ -104,5 +104,5 @@ sr.Close()
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: WebRequest クラスを使用してデータを要求する](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
-- [データの要求](../../../docs/framework/network-programming/requesting-data.md)
+- [方法: WebRequest クラスを使用してデータを要求する](how-to-request-data-using-the-webrequest-class.md)
+- [データの要求](requesting-data.md)

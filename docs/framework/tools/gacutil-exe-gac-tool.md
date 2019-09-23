@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 437d2d1bb026795dfa01a4c01ca12acf2b8f5792
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926874"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044662"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (グローバル アセンブリ キャッシュ ツール)
 
 グローバル アセンブリ キャッシュ ツールを使用すると、グローバル アセンブリ キャッシュとダウンロード キャッシュの内容を表示および操作できます。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
+このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
 
 コマンド プロンプトに次のように入力します。
 
@@ -66,7 +66,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/u**  *assemblyName*|アセンブリをグローバル アセンブリ キャッシュからアンインストールします。|
 |**/uf**  *assemblyName*|指定したアセンブリへのすべての参照を削除して、アセンブリを強制的にアンインストールします。<br /><br /> このオプションを指定するのは、 **/u** オプションと **/f** オプションを一緒に指定するのと同じです。 **注:** このオプションを使用しても、Microsoft Windows インストーラーを使用してインストールされたアセンブリを削除することはできません。 削除しようとすると、エラー メッセージが表示されます。|
 |**/ul** *assemblyListFile*|*assemblyListFile* で指定された 1 つ以上のアセンブリをグローバル アセンブリ キャッシュからアンインストールします。|
-|**/u** **[ngen]** *assemblyName*|指定したアセンブリをグローバル アセンブリ キャッシュからアンインストールします。 指定したアセンブリが既存の参照カウントを持っている場合、参照カウントは表示されますが、アセンブリはグローバル アセンブリ キャッシュから削除されません。 **注:** .NET Framework Version 2.0 では、`/ungen` はサポートされていません。 代わりに、[Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)の `uninstall` コマンドを使用します。 <br /><br /> .NET Framework Version 1.0 と 1.1 で **/ungen** を指定すると、Gacutil.exe はネイティブ イメージ キャッシュからアセンブリを削除します。 このキャッシュは、[Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) を使用して作成したアセンブリのネイティブ イメージを格納します。|
+|**/u** **[ngen]** *assemblyName*|指定したアセンブリをグローバル アセンブリ キャッシュからアンインストールします。 指定したアセンブリが既存の参照カウントを持っている場合、参照カウントは表示されますが、アセンブリはグローバル アセンブリ キャッシュから削除されません。 **注:** .NET Framework Version 2.0 では、`/ungen` はサポートされていません。 代わりに、[Ngen.exe (ネイティブ イメージ ジェネレーター)](ngen-exe-native-image-generator.md)の `uninstall` コマンドを使用します。 <br /><br /> .NET Framework Version 1.0 と 1.1 で **/ungen** を指定すると、Gacutil.exe はネイティブ イメージ キャッシュからアセンブリを削除します。 このキャッシュは、[Ngen.exe (ネイティブ イメージ ジェネレーター)](ngen-exe-native-image-generator.md) を使用して作成したアセンブリのネイティブ イメージを格納します。|
 |**/ur**  *assemblyName*<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|指定したアセンブリへの参照をグローバル アセンブリ キャッシュからアンインストールします。 アセンブリへの参照を削除するには、アセンブリをインストールしたときに **/i** オプションおよび **/r** (または **/ir**) オプションと共に指定したのと同じ *scheme*、*id* および *description* の各パラメーターを指定する必要があります。 これらのパラメーターとして指定できる有効な値については、 **/r** オプションを参照してください。<br /><br /> このオプションを指定するのは、 **/u** オプションと **/r** オプションを一緒に指定するのと同じです。|
 |**/?**|このツールのコマンド構文とオプションを表示します。|
 
@@ -180,7 +180,7 @@ gacutil /l
 
 ## <a name="see-also"></a>関連項目
 
-- [ツール](../../../docs/framework/tools/index.md)
-- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)
-- [Regasm.exe (アセンブリ登録ツール)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [ツール](index.md)
+- [グローバル アセンブリ キャッシュ](../app-domains/gac.md)
+- [Regasm.exe (アセンブリ登録ツール)](regasm-exe-assembly-registration-tool.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

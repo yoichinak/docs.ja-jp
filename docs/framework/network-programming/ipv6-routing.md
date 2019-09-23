@@ -2,12 +2,12 @@
 title: IPv6 のルーティング
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: caa1f33f46d13440eab18ba321ebcd8fa4eef129
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 93300107710164d755d578633b7fa6651f984987
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647276"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047786"
 ---
 # <a name="ipv6-routing"></a>IPv6 のルーティング
 柔軟なルーティング メカニズムは、IPv6 の利点です。 IPv4 ネットワーク ID が割り当てられた方法のために、インターネット バックボーン上にあるルーターは大規模なルーティング テーブルを保持する必要があります。 これらのルーターは、インターネット上の任意のノードに送られる可能性のあるパケットを転送するために、すべてのルートを知る必要があります。 アドレスを集計する機能により、IPv6 では、柔軟なアドレス指定が可能であり、ルーティング テーブルのサイズを大幅に縮小することができます。 この新しいアドレス指定アーキテクチャでは、中間のルーターは、ネットワークのローカル部分だけを追跡すれば、メッセージを適切に転送できます。  
@@ -35,5 +35,5 @@ ms.locfileid: "64647276"
   
 ## <a name="see-also"></a>関連項目
 
-- [インターネット プロトコル バージョン 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [ソケット](../../../docs/framework/network-programming/sockets.md)
+- [インターネット プロトコル バージョン 6](internet-protocol-version-6.md)
+- [ソケット](sockets.md)
