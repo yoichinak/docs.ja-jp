@@ -2,12 +2,12 @@
 title: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 description: Azure Kubernetes Service を使用して、アプリケーションをデプロイする方法について説明します。
 ms.date: 02/15/2019
-ms.openlocfilehash: 88e76b4b0a3686f4227a6aee1b7fbd2bfe55fdcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672629"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182370"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS) へのデプロイ
 
@@ -19,12 +19,12 @@ AKS を使用前に準備しておく前提条件は次のとおりです。
 - Windows の開発用コンピューター
   - Windows で開発者モードが有効にされている
   - Windows Subsystem for Linux
-- [Windows、Mac、または Linux](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) に Azure CLI がインストールされている
+- [Windows、Mac、または Linux](https://docs.microsoft.com/cli/azure/install-azure-cli) に Azure CLI がインストールされている
 
 > [!NOTE]
 > 次に関する完全な情報を検索するには:
 >
-> Azure-CLI: <https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest>
+> Azure-CLI: <https://docs.microsoft.com/cli/azure/index>
 >
 > Windows Subsystem for Linux: <https://docs.microsoft.com/windows/wsl/about>
 

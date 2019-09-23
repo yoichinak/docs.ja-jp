@@ -5,12 +5,12 @@ ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: e1dcc719738a2beb3e63463245d4721c5298cf85
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8d21ae5ae3aa4701ddd7d042d5069351c22864bb
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666658"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182549"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>ASP.NET Core Web API でのモデルのデプロイ
 
@@ -105,7 +105,7 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
 
 1つの予測を行うのに [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) を使用します。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) をお使いのアプリケーションで使用するには、必要に応じて作成しなければなりません。 その場合、ベストプラクティスとして、依存関係を挿入することを検討します。
 
-[ASP.NET Core での依存関係の挿入](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)については、リンク先で提供されている詳しい情報を確認してください。
+[ASP.NET Core での依存関係の挿入](/aspnet/core/fundamentals/dependency-injection)については、リンク先で提供されている詳しい情報を確認してください。
 
 1. *Startup.cs* を開き、ファイルの先頭に次の using ステートメントを追加します。
 
@@ -202,4 +202,4 @@ HTTP 要求の受信の処理をするために、コントローラーを作成
 
 ## <a name="next-steps"></a>次の手順
 
-- [Azure に配置する](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.1#deploy-the-app-to-azure)
+- [Azure に配置する](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)

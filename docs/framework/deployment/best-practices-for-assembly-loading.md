@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 727d1b4ecb17eafb448205aa0c7eea36c5545b98
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a95679f659f13956fd230f07e9401af9097a043c
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052218"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182470"
 ---
 # <a name="best-practices-for-assembly-loading"></a>アセンブリの読み込みのベスト プラクティス
 ここでは、<xref:System.InvalidCastException>、<xref:System.MissingMethodException>、およびその他のエラーの原因となることがある型 ID の問題を回避する方法について説明します。 また、次の推奨事項について説明します。  
@@ -154,7 +154,7 @@ ms.locfileid: "71052218"
  すべてのアセンブリをプローブ パスに置くことができない場合は、.NET Framework アドイン モデルの使用、アセンブリのグローバル アセンブリ キャッシュ内への配置、アプリケーション ドメインの作成などの代替手段を検討してください。  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>.NET アドイン モデルの使用を検討する  
- 読み込み元コンテキストを使用してアドインを実装している場合 (通常、これらはアプリケーション ベースにはインストールされません)、.NET Framework アドイン モデルを使用してください。 このモデルでは、アプリケーション ドメインまたはプロセス レベルでの分離が提供されます。アプリケーション ドメインを管理する必要はありません。 アドイン モデルの詳細については、「[アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))」を参照してください。  
+ 読み込み元コンテキストを使用してアドインを実装している場合 (通常、これらはアプリケーション ベースにはインストールされません)、.NET Framework アドイン モデルを使用してください。 このモデルでは、アプリケーション ドメインまたはプロセス レベルでの分離が提供されます。アプリケーション ドメインを管理する必要はありません。 アドイン モデルの詳細については、「[アドインおよび拡張機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))」を参照してください。  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>グローバル アセンブリ キャッシュの使用を検討する  
  アセンブリをグローバル アセンブリ キャッシュに配置すると、アプリケーション ベースの外部にある共有アセンブリ パスの利点を活用できます。既定の読み込みコンテキストのメリットが損なわれたり、その他のコンテキストのデメリットが生じたりすることはありません。  

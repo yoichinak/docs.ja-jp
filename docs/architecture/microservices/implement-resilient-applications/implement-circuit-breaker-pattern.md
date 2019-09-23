@@ -2,12 +2,12 @@
 title: サーキット ブレーカー パターンの実装
 description: サーキット ブレーカー パターンを HTTP 再試行の補助システムとして実装する方法について説明します。
 ms.date: 10/16/2018
-ms.openlocfilehash: f40a8eec50a4293e4dfb4df647ce3f69f6dc361b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eec14273cb9480df51d6e5865106ccfc045845c4
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674639"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181927"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>サーキット ブレーカー パターンを実装する
 
@@ -55,7 +55,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-上記のコード例では、HTTP 要求の再試行時、エラーが連続して 5 つ発生したとき、サーキットを中断する (またはオープン状態にする) ようにサーキット ブレーカー ポリシーが構成されています。 それが発生すると、サーキットは 30 秒間中断されます。その間、呼び出しは実際に配置されるのではなく、サーキット ブレーカーが働いてすぐに失敗します。  [関連する例外および HTTP 状態コード](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) は、ポリシーによって自動的にエラーとして解釈されます。  
+上記のコード例では、HTTP 要求の再試行時、エラーが連続して 5 つ発生したとき、サーキットを中断する (またはオープン状態にする) ようにサーキット ブレーカー ポリシーが構成されています。 それが発生すると、サーキットは 30 秒間中断されます。その間、呼び出しは実際に配置されるのではなく、サーキット ブレーカーが働いてすぐに失敗します。  [関連する例外および HTTP 状態コード](/aspnet/core/fundamentals/http-requests#handle-transient-faults) は、ポリシーによって自動的にエラーとして解釈されます。  
 
 サーキット ブレーカーは、HTTP 呼び出しを実行しているクライアント アプリケーションまたはサービスとは別の環境にデプロイされている特定のリソースに問題がある場合に、要求をフォールバック インフラストラクチャにリダイレクトするためにも使用する必要があります。 こうすれば、バックエンドのマイクロサービスのみに影響を与え、クライアント アプリケーションには影響を与えないデータセンターの停止が生じた場合に、クライアント アプリケーションはフォールバック サービスにリダイレクトできます。 Polly では、この[フェールオーバー ポリシー](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) シナリオを自動化するための新しいポリシーが計画されています。 
 
