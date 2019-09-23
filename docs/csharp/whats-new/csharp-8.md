@@ -2,12 +2,12 @@
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。 この記事は、プレビュー 5 での最新のものです。
 ms.date: 09/10/2019
-ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1d6d52692a9a3f8b6fa4e333f086a880c54106b4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926524"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117823"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
@@ -377,7 +377,7 @@ await foreach (var number in GenerateSequence())
 
 ## <a name="indices-and-ranges"></a>インデックスと範囲
 
-範囲とインデックスでは、配列、<xref:System.Span%601>、または <xref:System.ReadOnlySpan%601> 内の部分範囲を指定するための簡潔な構文が提供されます。
+範囲とインデックスでは、配列、[文字列](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601>、または <xref:System.ReadOnlySpan%601> 内の部分範囲を指定するための簡潔な構文が提供されます。
 
 この言語のサポートでは、次の 2 つの新しい型と 2 つの新しい演算子を使用しています。
 
