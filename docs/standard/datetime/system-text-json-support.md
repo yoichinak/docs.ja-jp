@@ -13,17 +13,17 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 83b1b3a7db63154dccc07325b1a1948a2db3953a
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 000a6b6dc892e65b50ae413ab3cb95d2a73ef0ef
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151820"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182579"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>TimeOffset support in での DateTime と DateTimeOffset のサポート
 
 System.string ライブラリは、ISO 8601:-2019 拡張プロファイルに従っ<xref:System.DateTime>て<xref:System.DateTimeOffset> 、との値を解析して書き込みます。
-[コンバーター](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0)は、を使用した<xref:System.Text.Json.JsonSerializer>シリアル化と逆シリアル化のためのカスタムサポートを提供します。
+[コンバーター](xref:System.Text.Json.Serialization.JsonConverter%601)は、を使用した<xref:System.Text.Json.JsonSerializer>シリアル化と逆シリアル化のためのカスタムサポートを提供します。
 およびを使用<xref:System.Text.Json.Utf8JsonReader>する場合は、 <xref:System.Text.Json.Utf8JsonWriter>カスタムサポートを実装することもできます。
 
 ## <a name="support-for-the-iso-8601-12019-format"></a>ISO 8601-1:2019 形式のサポート
@@ -67,7 +67,7 @@ System.string ライブラリは、ISO 8601:-2019 拡張プロファイルに従
 
 ### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>使用する場合<xref:System.Text.Json.JsonSerializer>
 
-シリアライザーでカスタムの解析または書式設定を実行する場合は、[カスタムコンバーター](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0)を実装できます。
+シリアライザーでカスタムの解析または書式設定を実行する場合は、[カスタムコンバーター](xref:System.Text.Json.Serialization.JsonConverter%601)を実装できます。
 以下は例です。
 
 #### <a name="using-datetimeoffsetparse-and-datetimeoffsettostring"></a>および`DateTime(Offset).Parse`を使用する`DateTime(Offset).ToString`

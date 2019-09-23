@@ -12,12 +12,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: fa30b7860bd8afdb68b0b54cd8d40f3e1ec86077
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b0e847061a30e93d36997ab603c52715e2730765
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949129"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182637"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>方法: UI であるアドインを作成する
 この例では、WPF スタンドアロンアプリケーションによってホストされる Windows Presentation Foundation (WPF) であるアドインを作成する方法を示します。  
@@ -28,7 +28,7 @@ ms.locfileid: "69949129"
   
  この例では、このシナリオを有効にする .NET Framework アドインモデルの WPF 拡張機能に焦点を当て、次のことを前提としています。  
   
-- パイプライン、アドイン、およびホスト開発を含む .NET Framework アドインモデルに関する知識。 これらの概念についてよく知らない場合は、「[アドインと拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))」を参照してください。 パイプライン、アドイン、およびホストアプリケーションの実装方法を示すチュートリアルについては、「 [チュートリアル:拡張可能なアプリケーション](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))を作成する。  
+- パイプライン、アドイン、およびホスト開発を含む .NET Framework アドインモデルに関する知識。 これらの概念についてよく知らない場合は、「[アドインと拡張機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))」を参照してください。 パイプライン、アドイン、およびホストアプリケーションの実装方法を示すチュートリアルについては、「 [チュートリアル:拡張可能なアプリケーション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))を作成する。  
   
 - .NET Framework アドインモデルに対する WPF 拡張機能に関する知識。 「 [WPF アドインの概要](wpf-add-ins-overview.md)」を参照してください。  
   
@@ -120,5 +120,5 @@ ms.locfileid: "69949129"
   
 ## <a name="see-also"></a>関連項目
 
-- [アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [アドインおよび拡張機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [WPF のアドインの概要](wpf-add-ins-overview.md)

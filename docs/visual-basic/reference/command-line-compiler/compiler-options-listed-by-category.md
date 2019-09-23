@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: d8a1e36c0932de9bf50c109ea979a1e358795388
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331540"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182569"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>カテゴリ別のコンパイラオプションの一覧 Visual Basic
 Visual Basic コマンドラインコンパイラは、Visual Studio 統合開発環境 (IDE) 内からプログラムをコンパイルするための代替手段として提供されています。 次に示すのは、機能カテゴリ別に並べ替えられた Visual Basic コマンドラインコンパイラオプションの一覧です。  
@@ -26,7 +26,7 @@ Visual Basic コマンドラインコンパイラは、Visual Studio 統合開�
 |`-modulename:<string>`|ソース モジュールの名前を指定します。|  
 |[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|コンパイラ出力用の言語を指定します。|
   
-## <a name="optimization"></a>Optimization  
+## <a name="optimization"></a>最適化  
   
 |オプション|目的|  
 |---|---|  
@@ -72,7 +72,7 @@ Visual Basic コマンドラインコンパイラは、Visual Studio 統合開�
 |[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|警告をエラーに昇格します。|  
 |`-ruleset:<file>`|特定の診断を無効にするルールセット ファイルを指定します。|  
   
-## <a name="help"></a>Help  
+## <a name="help"></a>ヘルプ  
   
 |オプション|目的|  
 |---|---|  
@@ -129,4 +129,4 @@ Visual Basic コマンドラインコンパイラは、Visual Studio 統合開�
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic コンパイラ オプション一覧 (アルファベット順)](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
-- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
+- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

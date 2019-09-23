@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 3fd07c9f2cdea3987602502cf242893b44aaddba
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 09c2879c0a46efe6258685d8201959a626735a85
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331575"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182651"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>アルファベット順に一覧表示さ Visual Basic コンパイラオプション
 Visual Basic コマンドラインコンパイラは、Visual Studio 統合開発環境 (IDE) からプログラムをコンパイルするための代替手段として提供されています。 アルファベット順に並べ替えられた Visual Basic のコマンドラインコンパイラオプションの一覧を次に示します。  
@@ -83,4 +83,4 @@ Visual Basic コマンドラインコンパイラは、Visual Studio 統合開�
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic コンパイラ オプション一覧 (カテゴリ別)](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
-- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
+- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

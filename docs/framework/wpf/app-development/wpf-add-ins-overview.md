@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 4fd8fe00fe6974bdcbf7b4af4da25150996de8c3
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a146f15a1c2755f254e198d471a42ca9ec29b072
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401696"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182533"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF アドインの概要
 
@@ -27,7 +27,7 @@ ms.locfileid: "68401696"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-.NET Framework アドインモデルに関する知識が必要です。 詳細については、「[アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))」を参照してください。
+.NET Framework アドインモデルに関する知識が必要です。 詳細については、「[アドインおよび拡張機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))」を参照してください。
 
 <a name="AddInsOverview"></a>
 
@@ -66,7 +66,7 @@ ms.locfileid: "68401696"
 このことからわかるように、堅牢なアドイン モデルの開発は簡単なことではありません。 このため、.NET Framework は、アドインモデルを構築するためのインフラストラクチャを提供します。
 
 > [!NOTE]
-> アドインの詳細については、「[アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))」を参照してください。
+> アドインの詳細については、「[アドインおよび拡張機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))」を参照してください。
 
 <a name="NETFrameworkAddInModelOverview"></a>
 
@@ -127,7 +127,7 @@ WPF の UI 型はリモート処理できません。 この問題を解決す�
 
 アドインがホストアプリケーションに UI を返すには、次のものが必要です。
 
-1. .NET Framework[アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))のドキュメントで説明されているように、ホストアプリケーション、アドイン、およびパイプラインを作成する必要があります。
+1. .NET Framework[アドインおよび拡張機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))のドキュメントで説明されているように、ホストアプリケーション、アドイン、およびパイプラインを作成する必要があります。
 
 2. コントラクトはを実装<xref:System.AddIn.Contract.IContract>し、UI を返すようにする必要があります。コントラクトは、型<xref:System.AddIn.Contract.INativeHandleContract>の戻り値を持つメソッドを宣言する必要があります。
 
@@ -147,7 +147,7 @@ UI を返すアドインの実装方法を示す例については、「UI を[�
 
 アドインが UI の場合は、次のものが必要です。
 
-1. .NET Framework[アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))のドキュメントで説明されているように、ホストアプリケーション、アドイン、およびパイプラインを作成する必要があります。
+1. .NET Framework[アドインおよび拡張機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))のドキュメントで説明されているように、ホストアプリケーション、アドイン、およびパイプラインを作成する必要があります。
 
 2. アドインのコントラクトインターフェイスはを実装<xref:System.AddIn.Contract.INativeHandleContract>する必要があります。
 
@@ -311,7 +311,7 @@ Wpf アドインのユーザーインターフェイスは、から<xref:System.
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.LoaderOptimizationAttribute>
-- [アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [アドインおよび拡張機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [アプリケーション ドメイン](../../app-domains/application-domains.md)
 - [.NET Framework リモート処理の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [オブジェクトをリモート処理可能にする](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))

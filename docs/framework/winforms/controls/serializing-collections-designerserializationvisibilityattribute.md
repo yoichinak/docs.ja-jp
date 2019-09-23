@@ -14,18 +14,18 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f051d7a51a5f4ff8debf40fafbb8acfd8f7098f5
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373689"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182627"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>チュートリアル: 標準型のコレクションをシリアル化する
 
 カスタムコントロールによって、コレクションがプロパティとして公開されることがあります。 このチュートリアルでは、クラスを<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>使用して、デザイン時にコレクションをシリアル化する方法を制御する方法について説明します。 コレクションプロパティに値を適用すると、プロパティが確実にシリアル化されます。 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>
 
-このトピックのコードを単一のリストとしてコピーするには、「[方法:DesignerSerializationVisibilityAttribute](/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))を使用して、標準型のコレクションをシリアル化します。
+このトピックのコードを単一のリストとしてコピーするには、「[方法:DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))を使用して、標準型のコレクションをシリアル化します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -129,11 +129,11 @@ ms.locfileid: "70373689"
 
 標準型のコレクションをシリアル化する方法を理解したら、カスタムコントロールをデザイン時環境により深く統合することを検討してください。 次のトピックでは、カスタムコントロールのデザイン時統合を強化する方法について説明します。
 
-- [デザイン時アーキテクチャ](/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
+- [デザイン時アーキテクチャ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
 
 - [Windows フォーム コントロールの属性](attributes-in-windows-forms-controls.md)
 
-- [デザイナーのシリアル化の概要](/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [デザイナーのシリアル化の概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 
 - [チュートリアル: Visual Studio のデザイン時機能を利用する Windows フォームコントロールの作成](creating-a-wf-control-design-time-features.md)
 

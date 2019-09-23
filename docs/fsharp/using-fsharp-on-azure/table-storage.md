@@ -3,12 +3,12 @@ title: F# を使用した Azure Table Storage の概要
 description: Azure Table storage または Azure Cosmos DB を使用して、構造化データをクラウドに格納します。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: f5fe2fe667b6d529bba4d29729a975c7890b5aba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 509435d47231040362586fa263fbecb1125f862b
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929004"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182605"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F を使用して Azure Table storage と Azure Cosmos DB Table API を開始する\#
 
@@ -30,19 +30,19 @@ Azure Table storage 用に作成されたアプリケーションは、コード
 
 ## <a name="about-this-tutorial"></a>このチュートリアルについて
 
-このチュートリアルでは、Azure Table storage またはなど、Azure Cosmos DB テーブル API、作成しテーブルの削除し挿入、更新、削除、およびテーブル データのクエリを使用していくつかの一般的なタスクを実行する F# コードを記述する方法を示します。
+このチュートリアルでは、Azure F# table storage または Azure Cosmos DB Table API を使用して、テーブルの作成と削除、テーブルデータの挿入、更新、削除、クエリなどの一般的なタスクを実行するコードを記述する方法について説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 このガイドを使用するには、最初に[Azure ストレージアカウント](/azure/storage/storage-create-storage-account)または[Azure Cosmos DB アカウント](https://azure.microsoft.com/try/cosmosdb/)を作成する必要があります。
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>作成して、F# スクリプトと開始 F# 対話型
+## <a name="create-an-f-script-and-start-f-interactive"></a>F#スクリプトを作成してF#対話形式で起動する
 
-この記事のサンプルは、F# アプリケーションまたは F# スクリプトのいずれかで使用できます。 F# スクリプトを作成するには、ファイルを作成、`.fsx`拡張機能の例では、 `tables.fsx`、F# 開発環境にします。
+この記事のサンプルは、 F#アプリケーションまたはF#スクリプトで使用できます。 スクリプトを作成するには、たとえば`tables.fsx`、 F#開発`.fsx`環境で拡張機能を使用してファイルを作成します。 F#
 
 次に、[パケット](https://fsprojects.github.io/Paket/)や`WindowsAzure.Storage` [NuGet](https://www.nuget.org/)などの[パッケージマネージャー](package-management.md)を使用して、 `#r`ディレクティブを`WindowsAzure.Storage.dll`使用してスクリプトにパッケージと参照をインストールします。 Microsoft Azure 名前空間`Microsoft.WindowsAzure.ConfigurationManager`を取得するために、に対してもう一度実行します。
 
-### <a name="add-namespace-declarations"></a>名前空間宣言を追加する
+### <a name="add-namespace-declarations"></a>名前空間宣言の追加
 
 ファイルの先頭`open`に次のステートメントを追加します。 `tables.fsx`
 
@@ -192,7 +192,7 @@ Azure Configuration Manager の使用は省略可能です。 .NET Framework の
 これで、Table storage の基本を学習できました。さらに複雑なストレージタスクと Azure Cosmos DB Table API については、次のリンク先を参照してください。
 
 - [Azure Cosmos DB Table API の概要](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [.NET 用ストレージクライアントライブラリのリファレンス](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [.NET 用ストレージクライアントライブラリのリファレンス](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
 - [Azure Storage 型プロバイダー](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Azure Storage チームのブログ](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [接続文字列の構成](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

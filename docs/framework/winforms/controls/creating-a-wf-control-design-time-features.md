@@ -13,12 +13,12 @@ ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: b72c449ab68c9bb2ceea6f8ee78abe6771b9a8bd
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 53824336e1ae47870e6acffe20340f145caf9b4d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016010"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182591"
 ---
 # <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>チュートリアル: デザイン時機能を利用するコントロールを作成する
 
@@ -34,7 +34,7 @@ ms.locfileid: "70016010"
 
 ![テキストと [開始] および [停止] ボタンを示すマーキーを表示するアプリ。](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
-完全なコードリストについて[は、「方法:デザイン時機能](/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))を利用する Windows フォームコントロールを作成します。
+完全なコードリストについて[は、「方法:デザイン時機能](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))を利用する Windows フォームコントロールを作成します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
