@@ -18,12 +18,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252593"
 ---
-# <a name="gcconcurrent-element"></a>\<gcConcurrent > 要素
+# <a name="gcconcurrent-element"></a>\<gcConcurrent> 要素
 
 共通言語ランタイムがガベージ コレクションを別のスレッドで実行するかどうかを指定します。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent>**  
 
 ## <a name="syntax"></a>構文
