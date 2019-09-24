@@ -1,15 +1,15 @@
 ---
 title: F# Interactive (fsi.exe) のリファレンス
-description: 学習方法F#Interactive (fsi.exe) は、実行に使用されるF#対話的に、コンソールで、またはを実行するコードF#スクリプト。
+description: 対話型 ( F# fsi.exe) を使用して、コンソールでコードF#を対話形式で実行したり、 F#スクリプトを実行したりする方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 297532315269cf75bf1cbb52a4e01d58cb97c99f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4e6ea1e42be180e88349acc9da7d5ef19a8ddedd
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641599"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214261"
 ---
-# <a name="interactive-programming-with-f"></a>F# による対話型プログラミング\#
+# <a name="interactive-programming-with-f"></a>F を使用した対話型プログラミング\#
 
 > [!NOTE]
 > この記事では、現時点の Windows のエクスペリエンスについてのみ説明します。  書き換えられる予定です。
@@ -19,19 +19,19 @@ ms.locfileid: "65641599"
 
 F# Interactive (fsi.exe) は、コンソールで F# コードを対話形式で実行したり、F# スクリプトを実行したりするために使用します。 つまり、F# Interactive は、F# 言語の REPL (Read、Evaluate、Print Loop) を実行します。
 
-コンソールから F# Interactive を実行するには、fsi.exe を実行します。  Fsi.exe で表示されます。
+コンソールから F# Interactive を実行するには、fsi.exe を実行します。  Fsi.exe は次の場所にあります。
 
 ```console
 C:\Program Files (x86)\Microsoft Visual Studio\2017\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
 ```
 
-場所`sku`か`Community`、 `Professional`、または`Enterprise`します。
+ここ`sku` `Community`で、は`Professional`、、 `Enterprise`またはです。
 
 使用できるコマンド ライン オプションについては、「[F# Interactive Options](../../language-reference/fsharp-interactive-options.md)」 (F# Interactive オプション) を参照してください。
 
 Visual Studio で F# Interactive を実行するには、ツール バーの **[F# Interactive]** というボタンをクリックするか、**Ctrl + Alt + F** キーを使用します。 この操作により、対話形式のウィンドウが開きます。このウィンドウは、F# Interactive セッションを実行するツール ウィンドウです 対話形式のウィンドウで実行するコードを選択し、**Alt + Enter** キーの組み合わせを押す方法もあります。 F# インタラクティブが **[F# Interactive]** というツール ウィンドウで開始されます。 このショートカット キーを使用するときは、エディター ウィンドウにフォーカスがあることを確認します。
 
-コンソールと Visual Studio のどちらを使用している場合でも、コマンド プロンプトが表示され、入力待ちの状態になります。 コード ファイルと同じようにコードを入力できます。 コードをコンパイルして実行するには、2 つのセミコロン (**;;**) を入力して、入力行を終了します。
+コンソールと Visual Studio のどちらを使用している場合でも、コマンド プロンプトが表示され、入力待ちの状態になります。 コード ファイルと同じようにコードを入力できます。 コードをコンパイルして実行するには、2 つのセミコロン ( **;;** ) を入力して、入力行を終了します。
 
 F# Interactive によってコードがコンパイルされ、成功すると、コードが実行され、コンパイルされた型のシグネチャと値が出力されます。 エラーが発生した場合は、エラー メッセージが出力されます。
 
@@ -39,11 +39,11 @@ F# Interactive によってコードがコンパイルされ、成功すると�
 
 Visual Studio で実行する場合、F# Interactive はプロジェクトとは独立して動作します。このため、たとえば、プロジェクトで定義された構成要素を F# Interactive で使用することはできません。使用するには、関数のコードを対話形式のウィンドウにコピーする必要があります。
 
-あるライブラリを参照するプロジェクトを開くと、**ソリューション エクスプローラー**で、F# Interactive のライブラリを参照できます。 F# Interactive のライブラリを参照するには、**[参照]** ノードを展開し、ライブラリのショートカット メニューを開き、**[F# Interactive に送信]** をクリックします。
+あるライブラリを参照するプロジェクトを開くと、**ソリューション エクスプローラー**で、F# Interactive のライブラリを参照できます。 F# Interactive のライブラリを参照するには、 **[参照]** ノードを展開し、ライブラリのショートカット メニューを開き、 **[F# Interactive に送信]** をクリックします。
 
-設定を調整することで、F# Interactive コマンド ライン引数 (オプション) を制御できます。 **[ツール]** メニューの **[オプション]** をクリックし、**[F# ツール]** を展開します。 変更できる 2 つの設定は、F# Interactive オプションおよび 64 ビット コンピューターで F# Interactive を実行する場合にのみ関連する **64 ビット F# Interactive** 設定です。 この設定によって、32 ビットまたは 64 ビット プロセスとして実行するかどうかを決定するためにコンピューター アーキテクチャを使用する、fsi.exe または fsianycpu.exe の専用の 64 ビット バージョンを実行するかどうかが決定されます。
+設定を調整することで、F# Interactive コマンド ライン引数 (オプション) を制御できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[F# ツール]** を展開します。 変更できる 2 つの設定は、F# Interactive オプションおよび 64 ビット コンピューターで F# Interactive を実行する場合にのみ関連する **64 ビット F# Interactive** 設定です。 この設定によって、32 ビットまたは 64 ビット プロセスとして実行するかどうかを決定するためにコンピューター アーキテクチャを使用する、fsi.exe または fsianycpu.exe の専用の 64 ビット バージョンを実行するかどうかが決定されます。
 
-## <a name="scripting-with-f"></a>F によるスクリプト\#
+## <a name="scripting-with-f"></a>F を使用したスクリプト作成\#
 スクリプトで使用されるファイル拡張子は **.fsx** または **.fsscript** です。 ソース コードをコンパイルし、後でそのコンパイル済みのアセンブリを実行する代わりに、**fsi.exe** を実行し、F# ソース コードのスクリプトのファイル名を指定するだけで、F# Interactive によってコードを読み取り、リアルタイムで実行することができます。
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>対話型、スクリプト、およびコンパイル型の環境の相違
@@ -86,7 +86,7 @@ printfn "%A" (MyAssembly.myFunction 10 40)
 
 出力は次のとおりです。
 
-```
+```console
 Command line arguments: 
 file1.fsx
 test
@@ -95,7 +95,7 @@ test
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----|-----------|
-|[F# Interactive オプション](../../language-reference/fsharp-interactive-options.md)|コマンドライン構文について説明し、オプション、F#対話形式で、fsi.exe します。|
+|[F# Interactive オプション](../../language-reference/fsharp-interactive-options.md)|F#対話型の fsi.exe のコマンドライン構文とオプションについて説明します。|
 |[F# Interactive ライブラリ リファレンス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|F# Interactive でコードを実行するときに使用できるライブラリ機能について説明します。|

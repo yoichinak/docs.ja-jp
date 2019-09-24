@@ -2,12 +2,12 @@
 title: 文字列
 description: "' String ' F#型が Unicode 文字のシーケンスとして不変テキストを表す方法について説明します。"
 ms.date: 07/05/2019
-ms.openlocfilehash: 284de939c90c4d9d4ea064fb4db1fb90a37038e2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 25f5d7ce5059ba5ddb4e938313c511734c2d7320
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627106"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216735"
 ---
 # <a name="strings"></a>文字列
 
@@ -16,9 +16,9 @@ ms.locfileid: "68627106"
 
 この`string`型は、変更できないテキストを Unicode 文字のシーケンスとして表します。 `string` は、.NET Framework の `System.String` のエイリアスです。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-文字列リテラルは引用符 (") で区切られます。 バックスラッシュ文字 ( \\ ) は、特定の特殊文字をエンコードするために使用されます。 円記号と次の文字は、*エスケープシーケンス*と呼ばれます。 エスケープ シーケンスが F# 文字列リテラルは、次の表に示すでサポートされています。
+文字列リテラルは引用符 (") で区切られます。 バックスラッシュ文字 ( \\ ) は、特定の特殊文字をエンコードするために使用されます。 円記号と次の文字は、*エスケープシーケンス*と呼ばれます。 次の表にF# 、文字列リテラルでサポートされているエスケープシーケンスを示します。
 
 |文字|エスケープ シーケンス|
 |---------|---------------|
@@ -27,7 +27,7 @@ ms.locfileid: "68627106"
 |フォーム フィード|`\f`|
 |改行|`\n`|
 |キャリッジ リターン|`\r`|
-|Tab|`\t`|
+|タブ|`\t`|
 |垂直タブ|`\v`|
 |円記号|`\\`|
 |引用符|`\"`|
@@ -71,7 +71,7 @@ let xmlFragment2 = """<book author="Milton, John" title="Paradise Lost">"""
 
 出力は次のとおりです。
 
-```
+```console
 abc
 def
 ```

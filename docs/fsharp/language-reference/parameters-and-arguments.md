@@ -1,13 +1,13 @@
 ---
 title: パラメーターと引数
-description: パラメーターを定義して、関数、メソッド、およびプロパティに引数を渡すのための F# 言語サポートについて説明します。
+description: パラメーターをF#定義し、関数、メソッド、およびプロパティに引数を渡すための言語サポートについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 67e82d031c4b22bc30a6f278d9698298ccff2e21
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e8094ffbc55870b5de75acb740aa2736ec6590a5
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106603"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216826"
 ---
 # <a name="parameters-and-arguments"></a>パラメーターと引数
 
@@ -56,7 +56,7 @@ let function2 param1 (param2a, param2b) param3 = ...
 
 出力は次のとおりです。
 
-```
+```console
 Data begins at 0 and ends at 4 in string Et tu, Brute?
 Et tu
 ```
@@ -105,11 +105,11 @@ let angle (Polar(_, theta)) = theta
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-詳細については、[コンストラクター (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05)を参照してください。
+詳細については、「[コンストラクター (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05)」を参照してください。
 
 ## <a name="optional-parameters"></a>省略可能なパラメーター
 
-パラメーター名の前に疑問符を使用して、メソッドの省略可能なパラメーターを指定できます。 使用して、オプションの種類がクエリを通常の方法でそのクエリを実行できるように、省略可能なパラメーターは F# オプションの種類として解釈されます、`match`式`Some`と`None`します。 省略可能なパラメーターは、バインディングを使用`let`して作成された関数ではなく、メンバーに対してのみ許可されます。
+パラメーター名の前に疑問符を使用して、メソッドの省略可能なパラメーターを指定できます。 省略可能なパラメーターは、 F#オプションの種類として解釈されるので、および`match` `None`で`Some`式を使用することによって、オプションの型が照会される通常の方法でクエリを実行できます。 省略可能なパラメーターは、バインディングを使用`let`して作成された関数ではなく、メンバーに対してのみ許可されます。
 
 またはなどのパラメーター名を使用して、既存の省略可能な値をメソッドに渡すことができます。`?arg=arg` `?arg=Some(3)` `?arg=None` これは、オプションの引数を別のメソッドに渡すメソッドを構築する場合に便利です。
 
@@ -121,7 +121,7 @@ let angle (Polar(_, theta)) = theta
 
 出力は次のとおりです。
 
-```
+```console
 Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 Baud Rate: 300 Duplex: Half Parity: true
@@ -200,7 +200,7 @@ example3 &y // Now 'y' is 3
 
 パラメーター配列は、 `ParamArray`属性を使用して定義します。 属性`ParamArray`は、最後のパラメーターにのみ適用できます。
 
-次のコードは、パラメーター配列を受け取るメソッドを持つ F# では、パラメーター配列と型の定義を .NET メソッドを呼び出して両方を示しています。
+次のコードは、パラメーター配列を受け取る .NET メソッドと、パラメーター配列を受け取るメソッドを持つのF#型の定義の両方を呼び出す方法を示しています。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
 

@@ -1,17 +1,17 @@
 ---
 title: クラス内の let 束縛
-description: クラス定義で 'let' のバインドを使用して、プライベート フィールドと F# クラスのプライベート関数を定義する方法について説明します。
+description: クラス定義で ' let ' バインディングを使用しF#て、クラスのプライベートフィールドとプライベート関数を定義する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 0086d3a91f85395c2bd0555f978c5d951c363357
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1366ab8f1f4f606fe5947a8fc4df10de49346b3e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627483"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216533"
 ---
 # <a name="let-bindings-in-classes"></a>クラス内の let バインド
 
-使用して、プライベート フィールドと F# クラスのプライベート関数を定義することができます`let`クラス定義にバインドします。
+クラス定義のバインディングを使用F# `let`して、クラスのプライベートフィールドとプライベート関数を定義できます。
 
 ## <a name="syntax"></a>構文
 
@@ -23,7 +23,7 @@ ms.locfileid: "68627483"
 [static] let [ rec ] binding1 [ and ... binding-n ]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 前の構文は、クラスの見出しと継承宣言の後、メンバー定義の前に記述されます。 構文は、クラスの外部`let`のバインドの場合と似ていますが、クラスで定義されている名前には、クラスに限定されたスコープがあります。 バインディング`let`は、プライベートフィールドまたは関数を作成します。データまたは関数を公開するには、プロパティまたはメンバーメソッドを宣言します。
 
@@ -39,7 +39,7 @@ ms.locfileid: "68627483"
 
 出力は次のとおりです。
 
-```
+```console
 10 52 1 204
 ```
 

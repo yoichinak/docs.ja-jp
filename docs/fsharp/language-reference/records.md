@@ -2,12 +2,12 @@
 title: レコード
 description: レコードがF#名前付きの値の単純な集計を表す方法について説明します。メンバーを使用することもできます。
 ms.date: 06/09/2019
-ms.openlocfilehash: 1ba002407b1ccbcbceed32df8636fb860e89e3b6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 874c5fa30a36f2778f7a43266316deb8c59d1d72
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053940"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216792"
 ---
 # <a name="records"></a>レコード
 
@@ -24,7 +24,7 @@ type [accessibility-modifier] typename =
     [ member-list ]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 前の構文では、 *typename*はレコード型の名前、 *label1*と*label2*は*ラベル*と*呼ばれる値*の名前、 *type1 と type1*はこれらの値の型です。 *メンバーリスト*は、型のメンバーの省略可能なリストです。  属性を使用し`[<Struct>]`て、参照型であるレコードではなく、構造体レコードを作成できます。
 
@@ -122,7 +122,7 @@ and Address =
 
 このコードの出力は次のようになります。
 
-```
+```console
 Point is at the origin.
 Point is on the x-axis. Value is 100.000000.
 Point is at (10.000000, 0.000000, -1.000000).
@@ -138,7 +138,7 @@ Union 型や structure 型と同様に、レコードには構造的等価性の
 
 このコードの出力は次のとおりです。
 
-```
+```console
 The records are equal.
 ```
 

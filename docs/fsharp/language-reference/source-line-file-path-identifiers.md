@@ -1,13 +1,13 @@
 ---
 title: ソース行、ファイル、およびパスの識別子
-description: 組み込み F# 識別子の値を使用するソース行番号、ディレクトリ、およびファイル名をコードにアクセスできるようにする方法について説明します。
+description: 組み込みのF#識別子値を使用して、コード内のソース行番号、ディレクトリ、およびファイル名にアクセスできるようにする方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ff36210edc75370f8baf9ee7be057f3ac0c3979
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f22c3dfb3cb106fbe45883ffd7de01feac30db00
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627118"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216751"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>ソース行、ファイル、およびパスの識別子
 
@@ -21,11 +21,11 @@ __SOURCE_DIRECTORY__
 __SOURCE_FILE__
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 これらの各値には`string`型があります。
 
-次の表は、ソース行、ファイル、および F# で使用できるパスの識別子を示します。 これらの識別子はプリプロセッサマクロではありません。これらは、コンパイラによって認識される組み込みの値です。
+次の表は、でF#使用できるソース行、ファイル、およびパスの識別子をまとめたものです。 これらの識別子はプリプロセッサマクロではありません。これらは、コンパイラによって認識される組み込みの値です。
 
 |定義済み識別子|説明|
 |---------------------|-----------|
@@ -43,7 +43,7 @@ __SOURCE_FILE__
 
 Output:
 
-```
+```console
 Line: 4
 Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo
 Source File: Program.fs

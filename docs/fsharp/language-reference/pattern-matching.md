@@ -1,19 +1,19 @@
 ---
 title: パターン マッチ
-description: 論理構造体を使用してデータを比較または構成要素にデータを分解したり、データから情報を抽出するパターンが F# の使用方法について説明します。
+description: でF#パターンを使用して、データを論理構造と比較したり、データを構成要素に分解したり、データから情報を抽出したりする方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 0e14fa00103742bbf5f054f8c04a7669ed767e63
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733463"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216800"
 ---
 # <a name="pattern-matching"></a>パターン マッチ
 
 パターンは、入力データの変換規則です。 データを論理構造と比較したり、データを構成要素に分解したり、さまざまな方法でデータから情報を抽出したりするために、F# 言語全体で使用されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>備考
 
 パターンは、`match` 式などの多くの言語構成要素で使用されます。 `let` バインディング、ラムダ式、および `try...with` 式に関連付けられている例外ハンドラーで関数の引数を処理する場合に使用されます。 詳細については、次を参照してください[match 式](match-expressions.md)、 [let バインディング](./functions/let-bindings.md)、[ラムダ式:、`fun`キーワード](./functions/lambda-expressions-the-fun-keyword.md)、および[例外:`try...with`式](./exception-handling/the-try-with-expression.md)します。
 
@@ -29,7 +29,7 @@ match expression with
 
 サポートされているパターンを次の表に示します。 実行時に、表に示されている順序で次の各パターンに対して入力がテストされます。パターンは、コードに示されているとおりに先頭から末尾へ、各行のパターンの左から右へ、再帰的に適用されます。
 
-|名前|説明|例|
+|name|説明|例|
 |----|-----------|-------|
 |定数パターン|数値、文字、リテラル文字列、列挙定数、または定義済みのリテラル識別子|`1.0`, `"test"`, `30`, `Color.Red`|
 |識別子パターン|判別共用体のケース値、例外ラベル、またはアクティブ パターンのケース|`Some(x)`<br /><br />`Failure(msg)`|
@@ -95,7 +95,7 @@ let matchShape shape =
 
 複数のフィールドを指定する場合は、区切り記号としてセミコロン (;) を使用します。
 
-```
+```fsharp
 match shape with
 | Rectangle(height = h; width = w) -> printfn "Rectangle with height %f and width %f" h w
 | _ -> ()

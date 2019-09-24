@@ -1,13 +1,13 @@
 ---
 title: シーケンス
-description: 大規模な順序付けられたデータのコレクションを持っていてもすべての要素を使用すると必ずしも期待しないときに、F# シーケンスを使用する方法について説明します。
+description: シーケンスを使用F#する方法について説明します。データの大きな順序で並べ替えられたコレクションがあり、必ずしもすべての要素を使用するとは限りません。
 ms.date: 02/19/2019
-ms.openlocfilehash: a57142c5d07455cff02b0b691ebccb9cb9f347fd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 63e878c2c11db25a08d449070ab779a6e6a2c2eb
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627172"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216762"
 ---
 # <a name="sequences"></a>シーケンス
 
@@ -22,7 +22,7 @@ ms.locfileid: "68627172"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-シーケンス式、順序の値を生成する F# 式で構成されます。 `yield`キーワードを使用して、シーケンスの一部となる値を生成できます。
+シーケンス式は、シーケンスのF#値を生成する式で構成されます。 `yield`キーワードを使用して、シーケンスの一部となる値を生成できます。
 
 次に例を示します。
 
@@ -62,7 +62,7 @@ ms.locfileid: "68627172"
 
 シーケンスは、[リスト](lists.md)と同じ機能の多くをサポートします。 シーケンスは、キー生成関数を使用したグループ化やカウントなどの操作もサポートします。 シーケンスは、サブシーケンスを抽出するためのさまざまな関数もサポートします。
 
-リスト、配列、セット、マップなどの多くのデータ型は、列挙可能なコレクションであるため、暗黙的にシーケンスされます。 実装する任意の .NET Framework データ型をさらに、引数が動作との共通の F# データ型では、シーケンスを受け取る関数`System.Collections.Generic.IEnumerable<'T>`します。 リストを引数として受け取る関数と比較します。この関数はリストを受け取ることしかできません。 型`seq<'T>`は、の`IEnumerable<'T>`型略称です。 つまり、任意の型を実装するジェネリック`System.Collections.Generic.IEnumerable<'T>`、設定を含む配列、リスト、および F#、およびもほとんど、.NET Framework コレクション型のマップと互換性のある、`seq`を入力し、シーケンスが必要とされる場所に使用することができます。
+リスト、配列、セット、マップなどの多くのデータ型は、列挙可能なコレクションであるため、暗黙的にシーケンスされます。 シーケンスを引数として受け取る関数は、を実装F# `System.Collections.Generic.IEnumerable<'T>`する任意の .NET Framework データ型に加えて、任意の共通データ型に対して機能します。 リストを引数として受け取る関数と比較します。この関数はリストを受け取ることしかできません。 型`seq<'T>`は、の`IEnumerable<'T>`型略称です。 これは、ジェネリック`System.Collections.Generic.IEnumerable<'T>`を実装する任意の型 (配列、リスト、セット、マップF#など) と、.NET Framework コレクション型のほとんどが`seq`型と互換性があり、シーケンスが必要な場合に使用できることを意味します.
 
 ## <a name="module-functions"></a>モジュール関数
 
@@ -82,7 +82,7 @@ ms.locfileid: "68627172"
 
 出力は次のようになります。
 
-```
+```console
 0 10 20 30 40
 ```
 
@@ -104,7 +104,7 @@ ms.locfileid: "68627172"
 
 出力は次のとおりです。
 
-```
+```console
 The sequence seq1 contains numbers from 0 to 20.
 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
@@ -134,7 +134,7 @@ The sequence fib contains Fibonacci numbers.
 
 エラーが発生する前の出力は次のとおりです。
 
-```
+```console
 1 4 9 16 25 
 1 4 9 16 25 36 49 64 81 100 
 1 4 9 16 25 
@@ -149,7 +149,7 @@ Seq を使用することにより、述語関数 (ブール関数) を指定し
 
 出力は次のとおりです。
 
-```
+```console
 1 4 9 
 36 49 64 81 100 
 16 25 36 49 64 81 100
@@ -171,7 +171,7 @@ Seq を使用することにより、述語関数 (ブール関数) を指定し
 
 初期シーケンス:
 
-```
+```console
 1.0 1.5 2.0 1.5 1.0 1.5 
 
 Windows of length 3: 
@@ -203,7 +203,7 @@ Moving average:
 
 出力は次のとおりです。
 
-```
+```console
 (1, 34) (2, 33) (0, 33)
 ```
 
@@ -217,7 +217,7 @@ Moving average:
 
 出力は次のとおりです。
 
-```
+```console
 (1, seq [1; 4; 7; 10; ...]) (2, seq [2; 5; 8; 11; ...]) (0, seq [3; 6; 9; 12; ...])
 ```
 

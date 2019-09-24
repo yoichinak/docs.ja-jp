@@ -1,13 +1,13 @@
 ---
 title: 'ループ: for...in 式'
-description: 参照してください方法 F# for….. 式で列挙可能なコレクション内のパターンの一致を反復処理するループ コンストラクトが使用されます。
+description: 詳細についF#ては、in 式ループコンストラクトは、列挙可能なコレクション内のパターンの一致を反復処理するために使用されます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 640b0f91f6c641f3b49a99dc67abe7e4c31911ea
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5a2ca59ca4199ece5d78010ff780e86ae2b25181
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630721"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216453"
 ---
 # <a name="loops-forin-expression"></a>ループ: for...in 式
 
@@ -20,7 +20,7 @@ for pattern in enumerable-expression do
     body-expression
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 式は、他の .net 言語`for each`のステートメントと比較できます。これは、列挙可能なコレクションの値をループ処理するために使用されるためです。 `for...in` ただし、 `for...in`では、コレクション全体に対して反復処理を行うのではなく、コレクションに対するパターンマッチングもサポートしています。
 
@@ -44,7 +44,7 @@ for pattern in enumerable-expression do
 
 出力は次のとおりです。
 
-```
+```console
 1
 5
 100
@@ -58,7 +58,7 @@ for pattern in enumerable-expression do
 
 出力は次のとおりです。
 
-```
+```console
 1 squared is 1
 2 squared is 4
 3 squared is 9
@@ -77,7 +77,7 @@ for pattern in enumerable-expression do
 
 Function1 の出力は次のようになります。
 
-```
+```console
 1 2 3 4 5 6 7 8 9 10
 ```
 
@@ -87,7 +87,7 @@ Function1 の出力は次のようになります。
 
 の出力は`function2`次のとおりです。
 
-```
+```console
 1 3 5 7 9
 ```
 
@@ -97,7 +97,7 @@ Function1 の出力は次のようになります。
 
 の出力は`function3`次のとおりです。
 
-```
+```console
 a b c d e f g h i j k l m n o p q r s t u v w x y z
 ```
 
@@ -107,7 +107,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 
 の出力は`function4`次のとおりです。
 
-```
+```console
 10 9 8 7 6 5 4 3 2 1 ... Lift off!
 ```
 
@@ -117,7 +117,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 
 この入力に`function5`よるの出力は次のとおりです。
 
-```
+```console
 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 ```
 
@@ -127,7 +127,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 
 出力は次のとおりです。
 
-```
+```console
 Number of elements in list1: 5
 ```
 

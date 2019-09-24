@@ -2,12 +2,12 @@
 title: '明示的なフィールド: Val キーワード'
 description: F# ' Val ' キーワードについて説明します。これは、型を初期化せずに、クラスまたは構造体の型に値を格納する場所を宣言するために使用されます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 13e0ba2875e8accfd1c0da0e1c6fef4973309f9b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fe339e33dae27ae226022a68dd8247d1ab1994b3
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627538"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216481"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>明示的なフィールド: Val キーワード
 
@@ -48,7 +48,7 @@ Primary コンストラクターを持つクラス型の明示的なフィール
 
 出力は次のとおりです。
 
-```
+```console
 11 12 abc
 30 def
 ```
@@ -65,16 +65,16 @@ Primary コンストラクターを持つクラス型の明示的なフィール
 
 出力は `11 xyz`になります。
 
-キーワードを使用しない`mutable` `mutable`フィールドで構造体を初期化する場合、割り当ては、割り当ての直後に破棄される構造体のコピーで機能します。 そのため、構造は変更されません。
+キーワードを使用しない`mutable`フィールドで`mutable`構造体を初期化する場合、割り当ては、割り当ての直後に破棄される構造体のコピーで機能します。 そのため、構造は変更されません。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
-明示的なフィールドは日常的に使用するためのものではありません。 通常、可能な場合は、明示的なフィールドでなく、クラスで `let` バインドを使用してください 明示的なフィールドは、特定の相互運用のシナリオ (ネイティブ API に対するプラットフォーム呼び出しで使用される構造体を定義する必要がある場合など) や COM 相互運用のシナリオで役立ちます。 詳細については、[外部関数](../functions/external-functions.md)を参照してください。 また、プライマリ コンストラクターを持たないクラスを生成する F# コード ジェネレーターを使用している場合にも、明示的なフィールドが必要になることがあります。 明示的なフィールドは、thread-static 変数や同様のコンストラクターでも役立ちます。 詳細については、「 `System.ThreadStaticAttribute` 」を参照してください。
+明示的なフィールドは日常的に使用するためのものではありません。 通常、可能な場合は、明示的なフィールドでなく、クラスで `let` バインドを使用してください 明示的なフィールドは、特定の相互運用のシナリオ (ネイティブ API に対するプラットフォーム呼び出しで使用される構造体を定義する必要がある場合など) や COM 相互運用のシナリオで役立ちます。 詳細については、次を参照してください。[外部関数](../functions/external-functions.md)します。 また、プライマリ コンストラクターを持たないクラスを生成する F# コード ジェネレーターを使用している場合にも、明示的なフィールドが必要になることがあります。 明示的なフィールドは、thread-static 変数や同様のコンストラクターでも役立ちます。 詳細については、「 `System.ThreadStaticAttribute` 」を参照してください。
 
 キーワード `member val` が型定義にまとめて表示された場合は、自動的に実装されたプロパティの定義です。 詳細については、「 [プロパティ](properties.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
 
 ## <a name="see-also"></a>関連項目
 
-- [Properties](properties.md)
+- [プロパティ](properties.md)
 - [メンバー](index.md)
 - [クラス内の `let` バインド](let-bindings-in-classes.md)

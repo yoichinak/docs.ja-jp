@@ -2,12 +2,12 @@
 title: 参照セル
 description: F#参照セルは、参照セマンティクスを使用して変更可能な値を作成できるストレージの場所です。
 ms.date: 05/16/2016
-ms.openlocfilehash: faaa4a6b54ff0366163b6821edff7fa4cb2f5a88
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2bca7797b272c0e7d5bf54df07041dc08e33709a
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627252"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216771"
 ---
 # <a name="reference-cells"></a>参照セル
 
@@ -19,7 +19,7 @@ ms.locfileid: "68627252"
 ref expression
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 値をカプセル化する新しい参照セルを作成するには、値の前に `ref` 演算子を指定します。 基になる値は変更可能なので、後で変更できます。
 
@@ -66,7 +66,7 @@ let ref x = { contents = x }
 
 出力は次のとおりです。
 
-```
+```console
 10
 10
 11
@@ -75,7 +75,7 @@ let ref x = { contents = x }
 
 `contents` フィールドは、他のバージョンの ML との互換性のために用意されており、コンパイル中に警告を生成します。 この警告を無効にするには、`--mlcompatibility` コンパイラ オプションを使用します。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。
 
-C# プログラマことを知っている`ref`と同じものでない (C#) `ref` F# でします。 の同等の構成F#体は、参照セルとは異なる概念である[byref](byrefs.md)です。
+C#のC#は、の場合と同じではないこと`ref`をF#プログラマが理解している`ref`必要があります。 の同等の構成F#体は、参照セルとは異なる概念である[byref](byrefs.md)です。
 
 として`mutable`マーク[された](./values/index.md)値`'a ref`は、クロージャによってキャプチャされた場合に自動的にに昇格される場合があります。
 

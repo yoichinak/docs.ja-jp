@@ -2,12 +2,12 @@
 title: イベント
 description: イベントをF#使用して関数呼び出しをユーザーアクションに関連付ける方法について説明します。これは GUI プログラミングで重要です。
 ms.date: 05/16/2016
-ms.openlocfilehash: 7c3f16204b762609323fc2bcdc05f80e85a298e8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e581d9c31c1b8f3c114b86c898011dec3bd52535
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917278"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216460"
 ---
 # <a name="events"></a>イベント
 
@@ -28,7 +28,7 @@ Windows フォームや WPF (Windows Presentation Foundation) などの GUI ラ�
 
 ## <a name="creating-custom-events"></a>カスタム イベントの作成
 
-F# イベントは、F# で表されます[イベント](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9)クラスを実装、 [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862)インターフェイス。 `IEvent`は、他の2つのインターフェイス`System.IObservable<'T>`の機能と[IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a)を組み合わせたインターフェイスです。 したがって、`Event` は、他の言語のデリゲートに相当する機能と、`IObservable` からの追加機能を備えていることになります。つまり、F# のイベントでは、イベントのフィルター処理がサポートされるほか、F# のファースト クラスの関数とラムダ式をイベント ハンドラーとして使用できます。 この機能は、[イベントモジュール](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)に用意されています。
+F#イベントは、 F# [ievent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862)インターフェイスを実装する[イベント](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9)クラスによって表されます。 `IEvent`は、他の2つのインターフェイス`System.IObservable<'T>`の機能と[IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a)を組み合わせたインターフェイスです。 したがって、`Event` は、他の言語のデリゲートに相当する機能と、`IObservable` からの追加機能を備えていることになります。つまり、F# のイベントでは、イベントのフィルター処理がサポートされるほか、F# のファースト クラスの関数とラムダ式をイベント ハンドラーとして使用できます。 この機能は、[イベントモジュール](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)に用意されています。
 
 他の任意の .NET Framework イベントと同様に動作するイベントをクラスに作成するには、`Event` をクラス内のフィールドとして定義する `let` バインディングをクラスに追加します。 目的のイベント引数の型を型引数として指定することも、指定せずにコンパイラによって適切な型を推論することもできます。 CLI イベントとしてイベントを公開するイベント メンバーも定義する必要があります。 このメンバーには [CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) 属性が必要です。 プロパティのように宣言されており、イベントの[発行](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e)プロパティを呼び出すだけで実装できます。 クラスのユーザーは、公開されたイベントの `Add` メソッドを使用してハンドラーを追加できます。 `Add` メソッドの引数はラムダ式にすることができます。 イベントの `Trigger` プロパティを使用すると、イベントを発生させて、引数をハンドラー関数に渡すことができます。 これを次のコード例に示します。 この例では、推論されているイベントの型引数はタプルで、ラムダ式の引数を表します。
 
@@ -36,7 +36,7 @@ F# イベントは、F# で表されます[イベント](https://msdn.microsoft.
 
 出力は次のとおりです。
 
-```
+```console
 Event1 occurred! Object data: Hello World!
 ```
 
@@ -46,7 +46,7 @@ Event1 occurred! Object data: Hello World!
 
 このコードの出力は、次のようになります。
 
-```
+```console
 Event occurred.
 Given a value: Event occurred.
 ```

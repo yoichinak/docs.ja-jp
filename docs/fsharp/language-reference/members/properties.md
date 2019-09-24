@@ -1,13 +1,13 @@
 ---
 title: プロパティ
-description: オブジェクトに関連付けられている値を表すメンバーである F# プロパティ、について説明します。
+description: オブジェクトにF#関連付けられている値を表すメンバーであるプロパティについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: c202927fd0022e042703640cd55fb632c7e36068
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c71d61e033501c2d535b5582c82d36ed8cb2241b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627414"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216418"
 ---
 # <a name="properties"></a>プロパティ
 
@@ -55,7 +55,7 @@ with set parameter =
 [ static ] member val [accessibility-modifier] PropertyName = initialization-expression [ with get, set ]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 プロパティは、オブジェクト指向プログラミングにおける "has a" リレーションシップを表します。これは、オブジェクトインスタンスに関連付けられているデータ、または静的なプロパティの場合は型を表します。
 
@@ -93,7 +93,7 @@ printfn "class1.ExplicitProperty = %d" class1.ExplicitProperty
 
 **出力**
 
-```
+```console
 class1.AutoProperty = 1853799794
 class1.AutoProperty = 1853799794
 class1.ExplicitProperty = 978922705

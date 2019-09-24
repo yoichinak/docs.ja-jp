@@ -1,25 +1,25 @@
 ---
 title: 'チュートリアル: 型プロバイダーを作成する'
-description: F# 3.0 で基本的な概念を説明するためにいくつかの単純型プロバイダーを調べることで、独自の F# 型プロバイダーを作成する方法について説明します。
+description: いくつかの単純型プロバイダー F#を調べてF#基本的な概念を説明することにより、3.0 で独自の型プロバイダーを作成する方法について説明します。
 ms.date: 02/02/2019
-ms.openlocfilehash: 800b5a670b7f25f462e1ce23c3d40fd2eab3b102
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8d1a1fedf03437ccbacd40616cc7dc3e1da435b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991863"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214275"
 ---
 # <a name="tutorial-create-a-type-provider"></a>チュートリアル: 型プロバイダーを作成する
 
 の型プロバイダー機構F#は、情報豊富なプログラミングをサポートするための重要な部分です。 このチュートリアルでは、基本的な概念を示すために単純な型プロバイダーをいくつか作成する過程を通して、独自の型プロバイダーを作成する方法を説明します。 のF#型プロバイダー機構の詳細については、「[型プロバイダー](index.md)」を参照してください。
 
-F#エコシステムには、一般的に使用されるインターネットおよびエンタープライズデータサービス用のさまざまな種類のプロバイダーが含まれています。 例:
+F#エコシステムには、一般的に使用されるインターネットおよびエンタープライズデータサービス用のさまざまな種類のプロバイダーが含まれています。 次に例を示します。
 
 - Fsharp.core には、JSON、XML、CSV、HTML ドキュメント形式の型プロバイダーが含まれてい[ます。](https://fsharp.github.io/FSharp.Data/)
 
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/)オブジェクトのマッピングと F# LINQ を通じて SQL データベースへのアクセスを厳密に型指定されたこれらのデータ ソースに対するクエリを提供します。
+- [Sqlprovider](https://fsprojects.github.io/SQLProvider/)は、これらのデータソースに対するオブジェクトマッピングとF# LINQ クエリを使用して、SQL データベースへの厳密に型指定されたアクセスを提供します。
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)一連の型プロバイダーがコンパイル時チェックが F# では、T-SQL の埋め込み。
+- [Fsharp.core](https://fsprojects.github.io/FSharp.Data.SqlClient/)には、の t-sql F#のコンパイル時チェック埋め込み用の型プロバイダーのセットが含まれています。
 
 - [Fsharp.core](https://fsprojects.github.io/FSharp.Data.TypeProviders/)は、SQL、Entity Framework、OData、および WSDL データサービスにアクセスするための .NET Framework プログラミングでのみ使用するための、以前の種類のプロバイダーのセットです。
 
@@ -53,7 +53,7 @@ F#エコシステムには、一般的に使用されるインターネットお
 
 ## <a name="a-simple-type-provider"></a>単純な型プロバイダー
 
-このサンプルは、ある Samples.HelloWorldTypeProvider、サンプルでは、ような`examples`のディレクトリ、 [F# 型プロバイダーの SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)します。 このプロバイダーは、次のコードが示すように、F# シグネチャ構文を使用して `Type1` 以外の詳細を省略することで、消去型 100 個を含む "型空間" を使用可能にします。 消去型の詳細については、このトピックで後述する「[指定された型の消去に関する詳細](#details-about-erased-provided-types)」を参照してください。
+このサンプルは HelloWorldTypeProvider です。これは、 [ F#型プロバイダー SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)の`examples`ディレクトリにあるサンプルと似ています。 このプロバイダーは、次のコードが示すように、F# シグネチャ構文を使用して `Type1` 以外の詳細を省略することで、消去型 100 個を含む "型空間" を使用可能にします。 消去型の詳細については、このトピックで後述する「[指定された型の消去に関する詳細](#details-about-erased-provided-types)」を参照してください。
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -128,7 +128,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 do()
 ```
 
-このプロバイダーを使用するには、Visual Studio の別のインスタンスを開き、F# スクリプトを作成して #r を次のコードに示すようを使用して、スクリプトからプロバイダーへの参照を追加します。
+このプロバイダーを使用するには、Visual Studio の別のインスタンスをF#開き、スクリプトを作成した後、次のコードに示すように、#r を使用してスクリプトからプロバイダーへの参照を追加します。
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -152,13 +152,13 @@ let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 
 print ステートメントを使ってこのプロバイダーをデバッグするには、プロバイダーの問題を明らかにするスクリプトを作成して、次のコードを使用します。
 
-```
+```console
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
 Visual Studio を使用してこのプロバイダーをデバッグするには、管理者資格情報を使用して Visual Studio の開発者コマンドプロンプトを開き、次のコマンドを実行します。
 
-```
+```console
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
@@ -175,7 +175,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-この型は、パブリックである必要があり、使用してマークする必要があります、 [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947)属性の個別の F# プロジェクト型を含むアセンブリを参照する際に、コンパイラは、型プロバイダーを識別するようにします。 *Config*パラメーターはオプションですが、および、存在する場合は、F# コンパイラを作成する型プロバイダーのインスタンスに関するコンテキスト構成情報が含まれています。
+この型はパブリックである必要があります。また、別F#のプロジェクトが型を含むアセンブリを参照しているときにコンパイラが型プロバイダーを認識するように、 [typeprovider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947)属性でマークする必要があります。 *Config*パラメーターは省略可能であり、存在する場合は、コンパイラにF#よって作成される型プロバイダーインスタンスのコンテキスト構成情報が含まれています。
 
 次に、 [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f)インターフェイスを実装します。 この場合、基本型として `TypeProviderForNamespaces` API の `ProvidedTypes` 型を使用します。 このヘルパー型は、集中的に指定された名前空間の有限のコレクションを指定できます。個々の名前空間には、集中的に指定された固定の型 (有限数) が直接含まれています。 このコンテキストでは、プロバイダー*集中的*は、必要または使用されていない場合でも型を生成します。
 
@@ -255,7 +255,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-このプロパティを取得すると、常に文字列 "Hello!" に評価されます。 プロパティの `GetterCode` は F# クォートを使用しますが、これはホスト コンパイラがプロパティを取得するために生成するコードを表します。 クォートの詳細については、[コード クォート (F#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)を参照してください。
+このプロパティを取得すると、常に文字列 "Hello!" に評価されます。 プロパティの `GetterCode` は F# クォートを使用しますが、これはホスト コンパイラがプロパティを取得するために生成するコードを表します。 引用符の詳細については、「[コードF#引用符」 ()](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)を参照してください。
 
 XML ドキュメントをプロパティに追加します。
 
@@ -899,7 +899,7 @@ let function1 () =
 
 ildasm.exe を使用して逆コンパイルされたコードのイメージを次に示します。
 
-```
+```il
 .class public abstract auto ansi sealed Module1
 extends [mscorlib]System.Object
 {
@@ -933,13 +933,11 @@ IL_0017:  ret
 
 **接続プロトコルのプロバイダー**一般に、OData や SQL 接続など、データおよびサービス接続プロトコル用のほとんどのプロバイダー dll の名前は、また`TypeProvider`は`TypeProviders`で終了する必要があります。 たとえば、次の文字列のような DLL 名を使用します。
 
-```
-  Fabrikam.Management.BasicTypeProviders.dll
-```
+`Fabrikam.Management.BasicTypeProviders.dll`
 
 指定された型が対応する名前空間のメンバーであり、実装した接続プロトコルを示すようにします。
 
-```
+```fsharp
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
@@ -1128,8 +1126,8 @@ F# の型プロバイダー メカニズムには、次の制約があります�
 
 多くの場合、型プロバイダーは、テスト スクリプト ファイル (script.fsx など) で fsc.exe を使用することによって、最も簡単にデバッグできます。 コマンド プロンプトからデバッガーを起動できます。
 
-```
-  devenv /debugexe fsc.exe script.fsx
+```console
+devenv /debugexe fsc.exe script.fsx
 ```
 
   stdout への出力のログを使用できます。

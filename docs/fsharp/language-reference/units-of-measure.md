@@ -1,13 +1,13 @@
 ---
 title: 測定単位
-description: どの浮動小数点をについて説明しますと F# の符号付き整数値には、測定単位を長さ、ボリューム、および大容量を示すために使用される通常を関連付けることができます。
+description: の浮動小数点値と符号付き整数F#値に関連付けられた測定単位を使用する方法について説明します。これは通常、長さ、量、および質量を示すために使用されます。
 ms.date: 05/16/2016
-ms.openlocfilehash: f97eac9984f934c55aff8cf9f287afbc3aa098f3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a81f7760301dc580e333d4659a72e6259d2c916b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630161"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216680"
 ---
 # <a name="units-of-measure"></a>測定単位
 
@@ -19,7 +19,7 @@ ms.locfileid: "68630161"
 [<Measure>] type unit-name [ = measure ]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 前の構文では、*単位名*を測定単位として定義しています。 省略可能な部分は、以前に定義した単位に基づいて新しいメジャーを定義するために使用されます。 たとえば、次の行では、メジャー `cm` (センチメートル) を定義しています。
 
@@ -81,7 +81,7 @@ let convertg2kg (x : float<g>) = x / 1000.0<g/kg>
 
 次のセッション例は、からの出力とこのコードへの入力を示しています。
 
-```
+```console
 Enter a temperature in degrees Fahrenheit.
 90
 That temperature in degrees Celsius is    32.22.
