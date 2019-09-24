@@ -39,7 +39,7 @@
       items:
         - name: クラス ライブラリの概要
           href: standard/class-library-overview.md
-        - name: 基本データ型
+        - name: 基本型
           href: standard/base-types/
     - name: .NET クラス ライブラリ
       href: standard/class-libraries.md
@@ -332,7 +332,7 @@
           href: core/tools/custom-templates.md
         - name: タブ補完を有効にする
           href: core/tools/enable-tab-autocomplete.md
-        - name: テレメトリ
+        - name: 製品利用統計情報
           href: core/tools/telemetry.md
         - name: global.json の概要
           href: core/tools/global-json.md
@@ -599,7 +599,7 @@
       href: csharp/tour-of-csharp/
     - name: 'C# の新機能'
       items:
-        - name: 'C# 8.0 - Preview 5'
+        - name: 'C# 8.0'
           href: csharp/whats-new/csharp-8.md
         - name: 'C# 7.3'
           href: csharp/whats-new/csharp-7-3.md
