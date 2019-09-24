@@ -1,0 +1,89 @@
+- name: WCF 開発者向け gRPC
+  href: index.md
+  items:
+    - name: はじめに
+      href: introduction.md
+    - name: gRPC の概要
+      href: grpc-overview.md
+      items:
+        - name: gRPC でいかにして RPC に近づくか
+          href: approach.md
+        - name: インターフェイス定義言語
+          href: interface-definition-language.md
+        - name: ネットワーク プロトコル
+          href: network-protocols.md
+        - name: WCF 開発者に gRPC が推奨される理由
+          href: Why-grpc.md
+    - name: プロトコル バッファー
+      href: protocol-buffers.md
+      items:
+        - name: Protobuf メッセージ
+          href: protobuf-messages.md
+        - name: Protobuf スカラー データ型
+          href: protobuf-data-types.md
+        - name: Protobuf 入れ子型
+          href: protobuf-nested-types.md
+        - name: リストと配列の繰り返しフィールド
+          href: protobuf-repeated.md
+        - name: Protobuf 予約フィールド
+          href: protobuf-reserved.md
+        - name: Protobuf のバリアント型の Any フィールドと OneOf フィールド
+          href: protobuf-any-oneof.md
+        - name: Protobuf 列挙型
+          href: protobuf-enums.md
+        - name: Protobuf のディクショナリのマップ
+          href: protobuf-maps.md
+    - name: WCF サービスと gRPC を比較する
+      href: wcf-services-to-grpc-comparison.md
+      items:
+        - name: WCF エンドポイントと gRPC メソッド
+          href: wcf-endpoints-grpc-methods.md
+        - name: WCF のバインドとトランスポート
+          href: wcf-bindings.md
+        - name: RPC の種類
+          href: rpc-types.md
+        - name: メタデータ
+          href: metadata.md
+        - name: エラー処理
+          href: error-handling.md
+        - name: WS-* プロトコル
+          href: ws-protocols.md
+    - name: WCF ソリューションを gRPC に移行する
+      href: migrate-wcf-to-grpc.md
+      items:
+        - name: 新しい ASP.NET Core gRPC プロジェクトを作成する
+          href: create-project.md
+        - name: WCF 要求/応答サービスを gRPC に移行する
+          href: migrate-request-reply.md
+        - name: WCF 双方向サービスを gRPC に移行する
+          href: migrate-duplex-services.md
+        - name: gRPC ストリーミング サービスと繰り返しフィールド
+          href: streaming-versus-repeated.md
+        - name: クライアント ライブラリ
+          href: client-libraries.md
+    - name: gRPC アプリケーションのセキュリティ
+      href: security.md
+      items:
+        - name: 資格情報を呼び出す
+          href: call-credentials.md
+        - name: チャンネルの資格情報
+          href: channel-credentials.md
+        - name: 暗号化
+          href: encryption.md
+    - name: 運用環境の gRPC
+      href: grpc-in-production.md
+      items:
+        - name: 自己ホスト アプリケーション
+          href: self-hosted.md
+        - name: Docker
+          href: docker.md
+        - name: Kubernetes
+          href: kubernetes.md
+        - name: gRPC とサービス メッシュ
+          href: service-mesh.md
+        - name: 負荷分散
+          href: load-balancing.md
+        - name: アプリケーション パフォーマンス管理
+          href: application-performance-management.md
+    - name: 付録
+      href: appendix.md

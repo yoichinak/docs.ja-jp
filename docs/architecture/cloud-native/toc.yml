@@ -1,0 +1,93 @@
+- name: Azure 向けクラウド ネイティブ .NET アプリの設計
+  href: index.md
+  items:
+    - name: クラウドネイティブなアプリケーションの概要
+      href: introduction.md
+      items:
+        - name: クラウド ネイティブの定義
+          href: definition.md
+        - name: クラウド ネイティブ向けアプリの候補
+          href: candidate-apps.md
+    - name: eShopOnContainers 参照アプリの概要
+      href: introduce-eshoponcontainers-reference-app.md
+      items:
+        - name: eShopOnContainers を Azure サービスにマッピングする
+          href: map-eshoponcontainers-azure-services.md
+        - name: eShopOnContainers を Azure にデプロイする
+          href: deploy-eshoponcontainers-azure.md
+        - name: 集中管理構成
+          href: centralized-configuration.md
+    - name: クラウドネイティブ .NET アプリケーションのスケーリング
+      href: scale-applications.md
+      items:
+        - name: コンテナーとコンテナー オーケストレーターの活用
+          href: leverage-containers-orchestrators.md
+        - name: サーバーレス関数の活用
+          href: leverage-serverless-functions.md
+        - name: コンテナーとサーバーレスの手法の組み合わせ
+          href: combine-containers-serverless-approaches.md
+        - name: Azure でコンテナーをデプロイする
+          href: deploy-containers-azure.md
+        - name: コンテナーとサーバーレスのアプリケーションのスケーリング
+          href: scale-containers-serverless.md
+        - name: その他のデプロイ オプション
+          href: other-deployment-options.md
+    - name: クラウドネイティブの通信パターン
+      href: communication-patterns.md
+      items:
+        - name: フロントエンドのクライアント通信
+          href: front-end-communication.md
+        - name: サービス間の通信
+          href: service-to-service-communication.md
+        - name: REST と gRPC
+          href: rest-grpc.md
+        - name: サービス メッシュ通信インフラストラクチャ
+          href: service-mesh-communication-infrastructure.md
+    - name: 分散データ
+      href: distributed-data.md
+      items:
+        - name: クラウドネイティブ データ パターン
+          href: data-patterns.md
+        - name: Azure のデータ ストレージ
+          href: azure-data-storage.md
+    - name: クラウドネイティブの回復性
+      href: resiliency.md
+      items:
+        - name: アプリケーションの回復性パターン
+          href: application-resiliency-patterns.md
+        - name: Azure を使用したクラウド インフラストラクチャの回復性
+          href: infrastructure-resiliency-azure.md
+        - name: 回復性のある通信
+          href: resilient-communications.md
+    - name: 監視と正常性
+      href: monitoring-health.md
+      items:
+        - name: 監視パターン
+          href: observability-patterns.md
+        - name: エラスティック スタックを使用したログ記録
+          href: logging-with-elastic-stack.md
+        - name: Azure Kubernetes Services での監視
+          href: monitoring-azure-kubernetes.md
+        - name: Azure Monitor
+          href: azure-monitor.md
+    - name: Identity
+      href: identity.md
+      items:
+        - name: クラウドネイティブのアプリにおける認証と承認
+          href: authentication-authorization.md
+        - name: Azure Active Directory
+          href: azure-active-directory.md
+        - name: Identity Server
+          href: identity-server.md
+    - name: セキュリティ
+      href: security.md
+      items:
+        - name: クラウドネイティブ アプリ向け Azure セキュリティ
+          href: azure-security.md
+    - name: クラウドネイティブ DevOps
+      href: devops.md
+      items:
+        - name: コードとしてのインフラストラクチャ
+          href: infrastructure-as-code.md
+        - name: クラウド ネイティブ アプリケーション バンドル
+          href: application-bundles.md

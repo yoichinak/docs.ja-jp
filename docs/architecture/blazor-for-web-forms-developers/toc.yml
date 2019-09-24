@@ -1,0 +1,31 @@
+- name: ASP.NET Web Forms 開発者向け Blazor 電子書籍
+  href: index.md
+  items:
+    - name: はじめに
+      href: introduction.md
+    - name: アーキテクチャの比較
+      href: architecture-comparison.md
+    - name: ホスティング モデル
+      href: hosting-models.md
+    - name: プロジェクトの構造
+      href: project-structure.md
+    - name: スタートアップ
+      href: app-startup.md
+    - name: コンポーネント
+      href: components.md
+    - name: ページ、ルーティング、レイアウト
+      href: pages-routing-layouts.md
+    - name: 状態管理
+      href: state-management.md
+    - name: フォームと検証
+      href: forms-validation.md
+    - name: データの扱い
+      href: data.md
+    - name: ミドルウェア
+      href: middleware.md
+    - name: 構成
+      href: config.md
+    - name: セキュリティ
+      href: security-authentication-authorization.md
+    - name: 移行
+      href: migration.md

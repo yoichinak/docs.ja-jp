@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: ba68425fe37c5b939da22edad38bb03afd2b9068
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b921db9abb65a1d470ada86784ecba1b649c9f09
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117332"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182439"
 ---
 # <a name="get-started-with-c"></a>C\# の使用を開始する
 
@@ -27,7 +27,7 @@ ms.locfileid: "71117332"
 
 - [Visual Studio 2017 での .NET Core を使用した C# Hello World アプリケーションの構築](../../core/tutorials/with-visual-studio.md)
 
-   Visual Studio 2019 では、Windows または Mac 統合開発環境で、アプリケーションのコーディング、コンパイル、実行、デバッグ、プロファイル、および発行を行うことができます。
+   Visual Studio では、Windows または Mac 統合開発環境で、アプリケーションのコーディング、コンパイル、実行、デバッグ、プロファイル、発行を行うことができます。
 
    このトピックでは、単純な Hello World アプリケーションを作成して実行した後、やや対話的な Hello World アプリケーションとして実行するための修正を行います。 アプリケーションのビルドと実行が完了したら、[デバッグ](../../core/tutorials/debugging-with-visual-studio.md)方法と[発行](../../core/tutorials/publishing-with-visual-studio.md)方法も学習することで、.NET Core でサポートされている任意のプラットフォームでアプリケーションを実行できるようにします。
 

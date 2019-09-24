@@ -1,17 +1,17 @@
 ---
 title: stackalloc 演算子 - C# リファレンス
 ms.custom: seodec18
-ms.date: 06/10/2019
+ms.date: 09/20/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: f211acaa8c47ab42a1f7f06cff6c35570cd22b75
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 9ef5f98f2b4973c5873417ecc9a71c187e7299b9
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433825"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182419"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc 演算子 (C# リファレンス)
 
@@ -31,6 +31,10 @@ ms.locfileid: "68433825"
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
+  C# 8.0 以降、次の例のように、<xref:System.Span%601> または <xref:System.ReadOnlySpan%601> 式が許可されるところでは、他の式の中で `stackalloc` 式を使用できます。
+
+  [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
+
   > [!NOTE]
   > スタックに割り当てられたメモリを操作するときは、できるだけ <xref:System.Span%601> 型または <xref:System.ReadOnlySpan%601> 型を使用することをお勧めします。
 
@@ -39,6 +43,8 @@ ms.locfileid: "68433825"
   [!code-csharp[stackalloc pointer](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
 
   前の例に示したように、ポインター型を操作するときは、`unsafe` コンテキストを使用する必要があります。
+
+  ポインター型の場合、ローカル変数宣言でのみ `stackalloc` 式を使用し、変数を初期化できます。
 
 新しく割り当てられたメモリの内容は未定義です。 C# 7.3 以降、配列初期化子構文を使用して、新しく割り当てられたメモリの内容を定義できます。 これを実行するさまざまな方法を次の例に示します。
 
