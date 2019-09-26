@@ -185,13 +185,13 @@ PathGeometry
 ## <a name="combined-geometries"></a>結合したジオメトリ  
  説明したように、前のセクション、<xref:System.Windows.Media.CombinedGeometry>オブジェクトと<xref:System.Windows.Media.Geometry.Combine%2A>メソッドが含まれるジオメトリで定義される領域を結合します。 <xref:System.Windows.Media.GeometryCombineMode>列挙型では、ジオメトリを結合する方法を指定します。 使用可能な値を<xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A>プロパティには: <xref:System.Windows.Media.GeometryCombineMode.Union>、 <xref:System.Windows.Media.GeometryCombineMode.Intersect>、 <xref:System.Windows.Media.GeometryCombineMode.Exclude>、および<xref:System.Windows.Media.GeometryCombineMode.Xor>します。  
   
- 次の例では、<xref:System.Windows.Media.CombinedGeometry>共用体の結合モードで定義されます。  両方<xref:System.Windows.Media.CombinedGeometry.Geometry1%2A>、 <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> 50 と <xref:system.windows.media.combinedgeometry.geometry2%2a> が、同じ半径の円として定義されます。  
+ 次の例では、<xref:System.Windows.Media.CombinedGeometry>共用体の結合モードで定義されます。  と<xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> は<xref:System.Windows.Media.CombinedGeometry.Geometry2%2A>両方とも同じ半径の円として定義されていますが、中心が50でオフセットされています。  
   
  [!code-xaml[GeometrySample#23](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#23)]  
   
  ![和集合結合モードの結果](./media/mil-task-combined-geometry-union.PNG "mil_task_combined_geometry_union")  
   
- 次の例では、<xref:System.Windows.Media.CombinedGeometry>の結合モードで定義されて<xref:System.Windows.Media.GeometryCombineMode.Xor>します。  両方<xref:System.Windows.Media.CombinedGeometry.Geometry1%2A>、 <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> 50 と <xref:system.windows.media.combinedgeometry.geometry2%2a> が、同じ半径の円として定義されます。  
+ 次の例では、<xref:System.Windows.Media.CombinedGeometry>の結合モードで定義されて<xref:System.Windows.Media.GeometryCombineMode.Xor>します。  と<xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> は<xref:System.Windows.Media.CombinedGeometry.Geometry2%2A>両方とも同じ半径の円として定義されていますが、中心が50でオフセットされています。  
   
  [!code-xaml[GeometrySample#24](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#24)]  
   

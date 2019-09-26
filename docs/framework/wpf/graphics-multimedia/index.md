@@ -49,7 +49,7 @@ ms.locfileid: "67663729"
 
 - イージング関数
 
-  イージング関数を使用してアニメーションを強化し、アニメーションの動作をより細かく制御できます。 たとえば、適用することができます、<xref:System.Windows.Media.Animation.ElasticEase>アニメーション <xref:system.windows.media.animation.elasticease> 動作、アニメーションにします。 詳細については、イージングの種類を参照してください、<xref:System.Windows.Media.Animation>名前空間。
+  イージング関数を使用してアニメーションを強化し、アニメーションの動作をより細かく制御できます。 たとえば、アニメーション<xref:System.Windows.Media.Animation.ElasticEase>にを適用して、アニメーションに springy 動作を与えることができます。 詳細については、イージングの種類を参照してください、<xref:System.Windows.Media.Animation>名前空間。
 
 <a name="graphics_and_rendering"></a>
 

@@ -5,13 +5,16 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
+dev_langs:
+- csharp
+- vb
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de25c3dcf33471a1aadb4445a83affab9c40914b
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957190"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306336"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションの作成
 
@@ -78,7 +81,7 @@ ms.locfileid: "69957190"
    ||AccessibleDescription|ピザのスライス|
    ||AccessibleName|会社のロゴ|
    ||イメージ|任意のアイコンまたはビットマップ|
-   |group1|名前|companyLabel|
+   |Label|名前|companyLabel|
    ||テキスト|おいしいピザ|
    ||TabIndex|1|
    ||AccessibleDescription|会社名|
@@ -86,7 +89,7 @@ ms.locfileid: "69957190"
    ||背景色|青|
    ||前景色|黄|
    ||Font Size|18|
-   |group1|Name|customerLabel|
+   |Label|名前|customerLabel|
    ||テキスト|名前(&N)|
    ||TabIndex|2|
    ||AccessibleDescription|顧客名のラベル|
@@ -97,7 +100,7 @@ ms.locfileid: "69957190"
    ||TabIndex|3|
    ||AccessibleDescription|顧客名|
    ||AccessibleName|顧客名|
-   |GroupBox|Name|sizeOptions|
+   |GroupBox|名前|sizeOptions|
    ||AccessibleDescription|ピザのサイズ オプション|
    ||AccessibleName|ピザのサイズ オプション|
    ||テキスト|ピザのサイズ|
@@ -113,13 +116,13 @@ ms.locfileid: "69957190"
    ||TabIndex|1|
    ||AccessibleDescription|ラージ サイズのピザ|
    ||AccessibleName|ラージ サイズのピザ|
-   |group1|Name|toppingsLabel|
+   |Label|名前|toppingsLabel|
    ||テキスト|トッピング(&T) (1 つ $0.75)|
    ||TabIndex|5|
    ||AccessibleDescription|トッピング ラベル|
    ||AccessibleName|トッピング ラベル|
    ||UseMnemonic|True|
-   |CheckedListBox|Name|トッピング|
+   |CheckedListBox|名前|トッピング|
    ||TabIndex|6|
    ||AccessibleDescription|選択可能なトッピング|
    ||AccessibleName|選択可能なトッピング|
@@ -129,7 +132,7 @@ ms.locfileid: "69957190"
    ||TabIndex|7|
    ||AccessibleDescription|注文の合計|
    ||AccessibleName|注文の合計|
-   |ボタン|Name|cancel|
+   |ボタン|名前|cancel|
    ||テキスト|キャンセル(&C)|
    ||TabIndex|8|
    ||AccessibleDescription|注文のキャンセル|
@@ -165,96 +168,88 @@ SystemInformation.HighContrast が `true` の場合、アプリケーション�
 1. ラベルの色をシステム カラーを設定するメソッドを作成します。
 
     ```vb
-    ' Visual Basic
     Private Sub SetColorScheme()
-       If SystemInformation.HighContrast Then
-          companyLabel.BackColor = SystemColors.Window
-          companyLabel.ForeColor = SystemColors.WindowText
-       Else
-          companyLabel.BackColor = Color.Blue
-          companyLabel.ForeColor = Color.Yellow
-       End If
+        If SystemInformation.HighContrast Then
+            companyLabel.BackColor = SystemColors.Window
+            companyLabel.ForeColor = SystemColors.WindowText
+        Else
+            companyLabel.BackColor = Color.Blue
+            companyLabel.ForeColor = Color.Yellow
+        End If
     End Sub
     ```
 
     ```csharp
-    // C#
     private void SetColorScheme()
     {
-       if (SystemInformation.HighContrast)
-       {
-          companyLabel.BackColor = SystemColors.Window;
-          companyLabel.ForeColor = SystemColors.WindowText;
-       }
-       else
-       {
-          companyLabel.BackColor = Color.Blue;
-          companyLabel.ForeColor = Color.Yellow;
-       }
+        if (SystemInformation.HighContrast)
+        {
+            companyLabel.BackColor = SystemColors.Window;
+            companyLabel.ForeColor = SystemColors.WindowText;
+        }
+        else
+        {
+            companyLabel.BackColor = Color.Blue;
+            companyLabel.ForeColor = Color.Yellow;
+        }
     }
     ```
 
-2. フォームのコンストラクターで `SetColorScheme` プロシージャを呼び出します (Visual Basic では `Public Sub New()`、Visual C# では `public class Form1`)。 Visual Basic でコンストラクターにアクセスするには、**Windows フォーム デザイナーで生成されたコード**というラベルが付いた領域を展開する必要があります。
+2. フォームのコンストラクターで `SetColorScheme` プロシージャを呼び出します (Visual Basic では `Public Sub New()`、Visual C# では `public Form1()`)。 Visual Basic でコンストラクターにアクセスするには、**Windows フォーム デザイナーで生成されたコード**というラベルが付いた領域を展開する必要があります。
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
+        InitializeComponent();
+        SetColorScheme();
     }
     ```
 
 3. 適切なシグネチャを持つイベント プロシージャを作成して、<xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> イベントに対応します。
 
     ```vb
-    ' Visual Basic
-    Protected Sub UserPreferenceChanged(ByVal sender As Object, _
-    ByVal e As Microsoft.Win32.UserPreferenceChangedEventArgs)
-       SetColorScheme()
+    Protected Sub UserPreferenceChanged(sender As Object, _
+    e As Microsoft.Win32.UserPreferenceChangedEventArgs)
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public void UserPreferenceChanged(object sender,
     Microsoft.Win32.UserPreferenceChangedEventArgs e)
     {
-       SetColorScheme();
+        SetColorScheme();
     }
     ```
 
 4. `InitializeComponents` への呼び出しの後でコードをフォームのコンストラクターに追加して、イベント プロシージャをシステム イベントにフックします。 このメソッドは `SetColorScheme` プロシージャを呼び出します。
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
-       AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
+        AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          += new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
+        InitializeComponent();
+        SetColorScheme();
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           += new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
     }
     ```
 
@@ -264,34 +259,27 @@ SystemInformation.HighContrast が `true` の場合、アプリケーション�
     > システム イベントのコードが、メイン アプリケーションとは別のスレッドを実行します。 イベントを解放しないと、プログラムが終了した後でも、イベントにフックするコードが実行されます。
 
     ```vb
-    ' Visual Basic
     Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
-       If disposing Then
-          If Not (components Is Nothing) Then
-             components.Dispose()
-          End If
-       End If
-       RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
-       MyBase.Dispose(disposing)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
+        MyBase.Dispose(disposing)
     End Sub
     ```
 
     ```csharp
-    // C#
-    protected override void Dispose( bool disposing )
+    protected override void Dispose(bool disposing)
     {
-       if( disposing )
-       {
-          if (components != null)
-          {
-             components.Dispose();
-          }
-       }
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
-       base.Dispose( disposing );
+        if(disposing && components != null)
+        {
+            components.Dispose();
+        }
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
+        base.Dispose( disposing );
     }
     ```
 

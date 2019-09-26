@@ -19,7 +19,7 @@ ms.locfileid: "61910095"
  2 つ以上のジオメトリから複合ジオメトリを作成するには、使用、<xref:System.Windows.Media.GeometryGroup>します。  
   
 ## <a name="example"></a>例  
- 次の例では、<xref:System.Windows.Media.CombinedGeometry>のジオメトリの結合モードで定義されて`Exclude`します。  両方<xref:System.Windows.Media.CombinedGeometry.Geometry1%2A>、 <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> 50 と <xref:system.windows.media.combinedgeometry.geometry2%2a> が、同じ半径の円として定義されます。  
+ 次の例では、<xref:System.Windows.Media.CombinedGeometry>のジオメトリの結合モードで定義されて`Exclude`します。  と<xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> は<xref:System.Windows.Media.CombinedGeometry.Geometry2%2A>両方とも同じ半径の円として定義されていますが、中心が50でオフセットされています。  
   
  [!code-xaml[GeometrySample#21](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#21)]  
   

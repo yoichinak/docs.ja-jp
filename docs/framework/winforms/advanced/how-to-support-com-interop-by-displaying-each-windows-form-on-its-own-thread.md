@@ -2,8 +2,7 @@
 title: '方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートする'
 ms.date: 03/30/2017
 dev_langs:
-- CSharp
-- VB
+- vb
 helpviewer_keywords:
 - COM interop [Windows Forms], Windows Forms
 - COM [Windows Forms]
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: 90bbd7df45424f8513598e9d7439d8ae6bf6f52c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 41af4d81995a0a4eac912ecce7dc70cf04f012cd
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040303"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306388"
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用をサポートする
 
@@ -53,5 +52,5 @@ Windows フォームが COM クライアント アプリケーションから正
 - [COM への .NET Framework コンポーネントの公開](../../interop/exposing-dotnet-components-to-com.md)
 - [COM 用のアセンブリのパッケージ化](../../interop/packaging-an-assembly-for-com.md)
 - [COM へのアセンブリの登録](../../interop/registering-assemblies-with-com.md)
-- [方法: ShowDialog メソッドで Windows フォームを表示して COM 相互運用をサポートする](com-interop-by-displaying-a-windows-form-shadow.md)
+- [2 つのオブジェクトが等しいかどうかをテストする方法ShowDialog メソッドで Windows フォームを表示して COM 相互運用をサポートする](com-interop-by-displaying-a-windows-form-shadow.md)
 - [Windows フォームおよびアンマネージ アプリケーションの概要](windows-forms-and-unmanaged-applications-overview.md)
