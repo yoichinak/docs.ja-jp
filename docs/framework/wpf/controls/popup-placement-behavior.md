@@ -8,10 +8,10 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: ca984aa724cf3f076d6073aa8b8179abfb91d26c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69951732"
 ---
 # <a name="popup-placement-behavior"></a>ポップアップの配置動作
@@ -98,14 +98,14 @@ ms.locfileid: "69951732"
   
 |PlacementMode|ターゲット オブジェクト|ターゲット領域|ターゲットの始点|ポップアップ配置ポイント|  
 |-------------------|-------------------|-----------------|-------------------|---------------------------|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>|適用できません。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>は無視されます。|画面。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、画面に対して相対的です。|ターゲット領域の左上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>|適用できません。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>は無視されます。|画面。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、画面に対して相対的です。|ターゲット領域の左上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>|該当なし。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>は無視されます。|画面。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、画面に対して相対的です。|ターゲット領域の左上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>|該当なし。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>は無視されます。|画面。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、画面に対して相対的です。|ターゲット領域の左上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Bottom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|ターゲット領域の左下隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Center>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|ターゲット領域の中央。|の<xref:System.Windows.Controls.Primitives.Popup>中央。|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|によっ<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>て定義されます。|によっ<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>て定義されます。|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Left>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|ターゲット領域の左上隅。|の右上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>|適用できません。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>は無視されます。|マウス ポインターの境界。 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>は無視されます。|ターゲット領域の左下隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>|適用できません。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>は無視されます。|マウス ポインターの境界。 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>は無視されます。|ターゲット領域の左上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>|該当なし。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>は無視されます。|マウス ポインターの境界。 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>は無視されます。|ターゲット領域の左下隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>|該当なし。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>は無視されます。|マウス ポインターの境界。 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>は無視されます。|ターゲット領域の左上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Relative>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|ターゲット領域の左上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|ターゲット領域の左上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Right>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|ターゲット領域の右上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
