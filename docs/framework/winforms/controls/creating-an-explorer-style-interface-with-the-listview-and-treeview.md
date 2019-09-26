@@ -14,10 +14,10 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
 ms.openlocfilehash: d80f8e3bc729689b274af520bc37fda8417b0407
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69658569"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>チュートリアル: デザイナーを使用した、ListView コントロールと TreeView コントロールを含むエクスプローラー スタイルのインターフェイスの作成
@@ -50,9 +50,9 @@ Visual Studio の利点の1つは、プロフェッショナルな外観の Wind
 
     1. <xref:System.Windows.Forms.Control.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。
 
-    2. <xref:System.Windows.Forms.ListView.View%2A> プロパティを <xref:System.Windows.Forms.View.Details> に設定します。
+    2. <xref:System.Windows.Forms.ListView.View%2A> プロパティを <xref:System.Windows.Forms.View.Details>に設定します。
 
-    3. [![ ] <xref:System.Windows.Forms.ListView.Columns%2A>プロパティの省略記号 (省略記号ボタン ([...] プロパティウィンドウ](./media/visual-studio-ellipsis-button.png)) をクリックして、columnheader コレクションエディターを開きます。 3つの列を追加<xref:System.Windows.Forms.ColumnHeader.Text%2A>し、それぞれ`Type`のプロパティ`Last Modified`を、、およびに`Name`それぞれ設定します。 **[OK]** をクリックしてダイアログ ボックスを閉じます。
+    3. []![ <xref:System.Windows.Forms.ListView.Columns%2A>プロパティの省略記号 (省略記号ボタン ([...] プロパティウィンドウ](./media/visual-studio-ellipsis-button.png)) をクリックして、columnheader コレクションエディター**を開きます**。 3つの列を追加<xref:System.Windows.Forms.ColumnHeader.Text%2A>し、それぞれ`Type`のプロパティ`Last Modified`を、、およびに`Name`それぞれ設定します。 **[OK]** をクリックしてダイアログ ボックスを閉じます。
 
     4. <xref:System.Windows.Forms.ListView.SmallImageList%2A> プロパティを `imageList1.` に設定します。
 
@@ -71,7 +71,7 @@ Visual Studio の利点の1つは、プロフェッショナルな外観の Wind
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]
 
-11. <xref:System.Windows.Forms.TreeView.NodeMouseClick>の `listview1`イベントを処理し、ノードがクリックされたときにノードの内容を設定するコードを実装します。 `treeview1` `Form1` クラスに次のコードを追加します。
+11. <xref:System.Windows.Forms.TreeView.NodeMouseClick>の`listview1`イベントを処理し、ノードがクリックされたときにノードの内容を設定するコードを実装します。 `treeview1` `Form1` クラスに次のコードを追加します。
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]

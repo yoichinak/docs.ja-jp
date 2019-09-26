@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6875ce0e7ae4cefa9b0c8abaded0dd4535bdf838
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740827"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274154"
 ---
-# <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION 構造体
-スレッドのフレームで現在アクティブな機能に関する情報が含まれます。 この構造が使用者、 [icordebugthread 2::getactivefunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)メソッド。  
+# <a name="cor_active_function-structure"></a>COR_ACTIVE_FUNCTION 構造体
+スレッドのフレームで現在アクティブな機能に関する情報が含まれます。 この構造体は、 [ICorDebugThread2:: GetActiveFunctions](icordebugthread2-getactivefunctions-method.md)メソッドによって使用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,22 +42,22 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`pAppDomain`|アプリケーション ドメインの所有者へのポインター、`ilOffset`フィールド。|  
-|`pModule`|モジュールの所有者へのポインター、`ilOffset`フィールド。|  
-|`pFunction`|関数の所有者へのポインター、`ilOffset`フィールド。|  
-|`ilOffset`|フレームの Microsoft intermediate language (MSIL) オフセット。|  
-|`flags`|将来の機能拡張予約されています。|  
+|`pAppDomain`|`ilOffset`フィールドのアプリケーションドメイン所有者へのポインター。|  
+|`pModule`|`ilOffset`フィールドのモジュール所有者へのポインター。|  
+|`pFunction`|`ilOffset`フィールドの関数所有者へのポインター。|  
+|`ilOffset`|フレームの MSIL (Microsoft 中間言語) オフセット。|  
+|`flags`|将来の拡張のために予約されています。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl  
+ **ヘッダー:** CorDebug .idl  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

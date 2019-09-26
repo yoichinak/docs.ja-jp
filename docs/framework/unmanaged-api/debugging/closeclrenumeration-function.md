@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9eb9bb1e4abeb98d8d0ba2b052612d918c45f22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a05a779d4a56eb8f881da1824d5ffaa363b5a01
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741087"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274280"
 ---
 # <a name="closeclrenumeration-function"></a>CloseCLREnumeration 関数
-有効な共通言語ランタイム (CLR) 継続スタートアップ イベントによって返されるハンドルの配列内にあるを閉じ、 [EnumerateCLRs 関数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)、ハンドルおよび文字列パス配列のメモリを解放します。  
+[列挙 Ateclrs 関数](enumerateclrs-function.md)によって返されるハンドルの配列にある有効な共通言語ランタイム (CLR) の継続スタートアップイベントをすべて閉じ、ハンドルおよび文字列パス配列のメモリを解放します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,17 +40,17 @@ HRESULT CloseCLREnumeration (
   
 ## <a name="parameters"></a>パラメーター  
  `pHandleArray`  
- [in]返されたイベント ハンドルの配列へのポインター、 [EnumerateCLRs 関数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)します。  
+ から[列挙機能](enumerateclrs-function.md)から返されたイベントハンドルの配列へのポインター。  
   
  `pStringArray`  
- [in]返される CLR 文字列パスの配列へのポインター、 [EnumerateCLRs 関数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)します。  
+ から[列挙型 Ateclrs 関数](enumerateclrs-function.md)から返された CLR 文字列パスの配列へのポインター。  
   
  `dwArrayLength`  
  [in] `pHandleArray` または `pStringArray` (これらは同じです) のサイズ (長さ) を含む DWORD。  
   
 ## <a name="return-value"></a>戻り値  
  S_OK  
- によって開かれたハンドル、 [EnumerateCLRs 関数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)が終了し、ハンドルおよび文字列の配列に割り当てられたメモリを解放します。  
+ [列挙 Ateclrs 関数](enumerateclrs-function.md)によって開かれたハンドルが閉じられ、ハンドルおよび文字列配列に割り当てられたメモリが解放されます。  
   
  E_INVALIDARG  
  `pHandleArray` の長さが、`dwArrayLength` に渡された長さと一致しません。  
@@ -58,11 +58,11 @@ HRESULT CloseCLREnumeration (
  E_FAIL (またはその他の E_ リターン コード)  
  `pHandleArray` および `pStringArray` のメモリを解放できません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** dbgshim.h  
+ **ヘッダー:** dbgshim. h  
   
- **ライブラリ:** dbgshim.dll  
+ **ライブラリ:** dbgshim .dll  
   
- **.NET framework のバージョン:** 3.5 SP1
+ **.NET Framework のバージョン:** 3.5 SP1

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 289a8427540c713758c3f155e72efffe9f3c85bc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69666801"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置

@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fa8de1a561e59e00d5bd9e78172d78b417aeff0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 22eeb8aba318d53efbc699d4492a86b2667bcfff
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951967"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274120"
 ---
 # <a name="cordebugcodeinvokekind-enumeration"></a>CorDebugCodeInvokeKind 列挙体
 エクスポートされた関数がマネージド コードを呼び出す方法を示します。  
@@ -41,14 +41,14 @@ typedef enum CorDebugCodeInvokeKind
 |`CODE_INVOKE_KIND_RETURN`|このメソッドは、戻り命令を使用してマネージド コードを呼び出します。 ステップ アウトは次のマネージド コードに到達する必要があります。|  
 |`CODE_INVOKE_KIND_TAILCALL`|このメソッドは、末尾呼び出しを使用してマネージド コードを呼び出します。 いずれかの呼び出し命令をシングル ステップ実行およびステップ オーバーすると、マネージド コードに到達します。|  
   
-## <a name="remarks"></a>Remarks  
- この列挙体は、マネージコードのステップ実行に関する情報を提供するために、 [ICorDebugProcess6:: GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md)メソッドによって使用されます。  
+## <a name="remarks"></a>コメント  
+ この列挙体は、マネージコードのステップ実行に関する情報を提供するために、 [ICorDebugProcess6:: GetExportStepInfo](icordebugprocess6-getexportstepinfo-method.md)メソッドによって使用されます。  
   
 > [!NOTE]
 > この列挙型は .NET ネイティブのデバッグ シナリオのみで使用することを目的としています。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug .idl、CorDebug. h  
   
@@ -58,5 +58,5 @@ typedef enum CorDebugCodeInvokeKind
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [列挙型のデバッグ](debugging-enumerations.md)
+- [デバッグ](index.md)

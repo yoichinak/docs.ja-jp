@@ -10,10 +10,10 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69666167"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>方法: デザイナーを使って Windows フォーム DataGrid コントロールの書式を設定する

@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d26cf45a0243d61757af5d9d0c00cf135ae15bdf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7ace405e2624f15b1cdb6d383222ae87c93289bb
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740861"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274092"
 ---
 # <a name="clrdatasourcetype-enumeration"></a>CLRDataSourceType 列挙型
 
-CLRDATA_IL_ADDRESS_MAP 構造で使用される値を提供します。
+CLRDATA_IL_ADDRESS_MAP 構造体によって使用される値を提供します。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,20 +41,20 @@ typedef enum
 
 | メンバー                        | 説明                           |
 | ----------------------------- | ------------------------------------- |
-| `CLRDATA_SOURCE_TYPE_INVALID` | 他に何も適用されることを示す |
+| `CLRDATA_SOURCE_TYPE_INVALID` | 他に何も適用されないことを示すには |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-この列挙体は、ランタイム内に収めるを任意のヘッダーまたはライブラリ ファイルでは公開されません。 これを使用するには、コード内に定義したよう列挙体を定義します。 これは、エイリアスも`CLRDATA_ENUM`で説明したよう[一般的なデータ型](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)します。
+この列挙体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 これを使用するには、コードで前述したように、列挙型を定義します。 これは、「 `CLRDATA_ENUM` [Common Data Types](../common-data-types-unmanaged-api-reference.md)」で説明されているように、という別名でもあります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
-**ライブラリ:** なし  
+**ライブラリ**なし  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [デバッグ](index.md)
+- [列挙型のデバッグ](debugging-enumerations.md)

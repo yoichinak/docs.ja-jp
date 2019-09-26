@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70016138"
 ---
 # <a name="opentype-font-features"></a>OpenType フォントの機能

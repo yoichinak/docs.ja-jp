@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cccb862a0dfd16eb0bbfe557e3c35373cd7e7b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec9c4f3afb8f3b7e75e22874996d57d29ce8cf16
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740812"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274214"
 ---
-# <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT 構造体
+# <a name="cor_array_layout-structure"></a>COR_ARRAY_LAYOUT 構造体
 メモリ内の配列オブジェクトのレイアウトに関する情報が提供されます。  
   
 ## <a name="syntax"></a>構文  
@@ -45,30 +45,30 @@ typedef struct COR_ARRAY_LAYOUT {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`componentID`|配列が含まれているオブジェクトの種類の識別子。|  
-|`componentType`|コンポーネントがガベージ コレクションの参照、値クラス、またはプリミティブであるかどうかを示す CorElementType 列挙値。|  
-|`firstElementOffset`|配列の最初の要素のオフセット。|  
+|`componentID`|配列に格納されているオブジェクトの型の識別子。|  
+|`componentType`|コンポーネントがガベージコレクション参照、値クラス、またはプリミティブであるかどうかを示す CorElementType 列挙値。|  
+|`firstElementOffset`|配列内の最初の要素へのオフセット。|  
 |`elementSize`|各要素のサイズ。|  
-|`countOffset`|配列内の要素の数にオフセットします。|  
-|`rankSize`|(バイト単位)、ランクのサイズ。|  
-|`numRanks`|配列のランクの数。|  
-|`rankOffset`|ランクの開始位置のオフセット。|  
+|`countOffset`|配列内の要素の数へのオフセット。|  
+|`rankSize`|ランクのサイズ (バイト単位)。|  
+|`numRanks`|配列内のランクの数。|  
+|`rankOffset`|ランクの開始位置を示すオフセット。|  
   
-## <a name="remarks"></a>Remarks  
- `rankSize`フィールドは、多次元配列のランクのサイズを指定します。 1 次元の配列も正確になります。  
+## <a name="remarks"></a>コメント  
+ この`rankSize`フィールドは、多次元配列内のランクのサイズを指定します。 これは、1次元配列に対しても正確です。  
   
- 値`numRanks`は 1 次元配列の 1 と`N`の多次元配列の`N`ディメンション。  
+ の`numRanks`値は、1次元`N`配列の場合は1、次元の`N`多次元配列の場合は1になります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

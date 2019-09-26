@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2baefa45deb8c13e8c1e627724fbe271b210a9ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36afee8af3de046683c55215a677a529b0837c77
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740886"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274255"
 ---
 # <a name="codechunkinfo-structure"></a>CodeChunkInfo 構造体
 
@@ -40,23 +40,23 @@ typedef struct _CodeChunkInfo {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`startAddr`|A`CORDB_ADDRESS`チャンクの開始アドレスを指定する値。|  
-|`length`|チャンクのバイト単位のサイズ。|  
+|`startAddr`|チャンクの開始アドレスを示す値です。`CORDB_ADDRESS`|  
+|`length`|チャンクのサイズ (バイト単位)。|  
   
-## <a name="remarks"></a>Remarks  
- コードの 1 つのチャンクは、関数などのコード オブジェクトの一部は、ネイティブ コードの領域です。  
+## <a name="remarks"></a>コメント  
+ コードの1つのチャンクは、関数などのコードオブジェクトの一部であるネイティブコードの領域です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl  
+ **ヘッダー:** CorDebug .idl  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [GetCodeChunks メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [GetCodeChunks メソッド](icordebugcode2-getcodechunks-method.md)
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

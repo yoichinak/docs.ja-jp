@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef142ed5284262fd758ff13af8207b2290938e77
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 292f6953fad0d65b368642543af107c73ec42ab5
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741151"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274112"
 ---
-# <a name="clrdebuggingprocessflags-enumeration"></a>CLR_DEBUGGING_PROCESS_FLAGS 列挙体
-使用される値を提供します、 [iclrdebugging::openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)メソッド。  
+# <a name="clr_debugging_process_flags-enumeration"></a>CLR_DEBUGGING_PROCESS_FLAGS 列挙体
+[ICLRDebugging:: OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md)メソッドによって使用される値を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,24 +40,24 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|このランタイムには、送信する非 catch アップ マネージ デバッガー イベントがあります。 キャッチアップおよび非 catch アップ イベントを区別する、「解説」を参照してください。|  
-|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|管理対象のイベントが保留中ですが、<xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>要求。|  
+|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|このランタイムには、送信するキャッチアップマネージデバッガーイベントがありません。 キャッチアップイベントと非キャッチアップイベントの違いについては、「解説」を参照してください。|  
+|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|保留中のマネージイベントは<xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> 、要求です。|  
   
-## <a name="remarks"></a>Remarks  
- キャッチアップ イベントには、プロセス、アプリケーション ドメイン、アセンブリ、モジュール、および現在の状態には、プロセスにアタッチした後、デバッガーになるスレッドの作成の通知が含まれます。 示されている非 catch-アップ イベント、`CLR_DEBUGGING_MANAGED_EVENT_PENDING`フラグを設定し、すべて他のデバッガー イベント、例外などを追加し、マネージ デバッグ アシスタント (MDA) 通知します。  
+## <a name="remarks"></a>コメント  
+ キャッチアップイベントには、プロセスにアタッチした後にデバッガーが現在の状態になるようにするプロセス、アプリケーションドメイン、アセンブリ、モジュール、スレッド作成通知が含まれます。 `CLR_DEBUGGING_MANAGED_EVENT_PENDING`フラグによって示されるキャッチアップ以外のイベントには、例外やマネージデバッグアシスタント (MDA) 通知など、他のすべてのデバッガーイベントが含まれます。  
   
- `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`フラグをランタイム終了例外とキャンセル可能なマネージ デバッガーをアタッチする要求を区別するために使用できます。  
+ `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`フラグにより、ランタイムは、終了した例外と、キャンセル可能なマネージデバッガーをアタッチする要求を区別できます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Metahost.idl、Metahost.h  
+ **ヘッダー:** メタホスト .idl、メタホスト .h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [列挙型のデバッグ](debugging-enumerations.md)
+- [デバッグ](index.md)

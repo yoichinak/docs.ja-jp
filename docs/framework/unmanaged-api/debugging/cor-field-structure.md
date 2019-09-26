@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2efe159eaa8b49d4d3825e9737593d0a12fc4d4c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f857f773f02da25fe6650000be777b8290f5af91
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740738"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274056"
 ---
-# <a name="corfield-structure"></a>COR_FIELD 構造体
+# <a name="cor_field-structure"></a>COR_FIELD 構造体
 オブジェクトのフィールドに関する情報が提供されます。  
   
 ## <a name="syntax"></a>構文  
@@ -41,23 +41,23 @@ typedef struct COR_FIELD{
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`token`|`mdFieldDef`フィールド情報を取得するために使用できるトークン。|  
-|`offset`|オブジェクトのフィールドのデータへのバイト オフセット。|  
-|`id`|A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)をこのフィールドの型を識別する値。|  
-|`fieldType`|フィールドの種類を示す CorElementType 列挙値。|  
+|`token`|フィールド情報を取得するために使用できるトークン。`mdFieldDef`|  
+|`offset`|オブジェクト内のフィールドデータへのオフセット (バイト単位)。|  
+|`id`|このフィールドの型を識別する[COR_TYPEID](cor-typeid-structure.md)値。|  
+|`fieldType`|フィールドの型を示す CorElementType 列挙値。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

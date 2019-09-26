@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ea71439c9a6c494c218a7cfc18508f4f8173b03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99fcf160b3e3b2b238520e3db5ba2e74b270380a
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740386"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274141"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason 列挙体
 指定されたオブジェクト上でスレッドがブロックされる理由を指定します。  
@@ -42,22 +42,22 @@ Typedef enum CorDebugBlockingReason
 |メンバー|説明|  
 |------------|-----------------|  
 |`BLOCKING_NONE`|内部使用のみ。|  
-|`BLOCKING_MONITOR_CRITICAL_SECTION`|スレッドがクリティカル セクションに関連付けられたオブジェクトのモニター ロックを取得しようとしています。 通常の 1 つを呼び出すときに発生、<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>または<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>メソッド。|  
-|`BLOCKING_MONITOR_EVENT`|スレッドは、オブジェクトのモニター ロックに関連付けられているイベントを待機しています。 通常の 1 つを呼び出すときに発生、 <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait`メソッド。|  
+|`BLOCKING_MONITOR_CRITICAL_SECTION`|スレッドが、オブジェクトのモニターロックに関連付けられているクリティカルセクションを取得しようとしています。 通常、このエラー <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>は、メソッドまたは<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>メソッドのいずれかを呼び出すと発生します。|  
+|`BLOCKING_MONITOR_EVENT`|スレッドが、オブジェクトのモニターロックに関連付けられているイベントを待機しています。 通常、これは、 <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait`メソッドのいずれかを呼び出すと発生します。|  
   
-## <a name="remarks"></a>Remarks  
- ときに、`BLOCKING_MONITOR_CRITICAL_SECTION`または`BLOCKING_MONITOR_EVENT`でメンバーが使用される、 [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)構造、`pBlockingObject`構造体の指すが入力されているオブジェクトを表す"ICorDebugValue"インターフェイスのメンバー. 実装も必ず、 [ICorDebugHeapValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md)インターフェイス。  
+## <a name="remarks"></a>コメント  
+ メンバーまたは`BLOCKING_MONITOR_EVENT`メンバーが[CorDebugBlockingObject](cordebugblockingobject-structure.md)構造体で使用され`pBlockingObject`ている場合、構造体のメンバーは、入力されるオブジェクトを表す "ICorDebugValue" インターフェイスを指します。 `BLOCKING_MONITOR_CRITICAL_SECTION` また、 [ICorDebugHeapValue3](icordebugheapvalue3-interface.md)インターフェイスを実装することも保証されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [列挙型のデバッグ](debugging-enumerations.md)
+- [デバッグ](index.md)
