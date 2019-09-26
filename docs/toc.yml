@@ -532,6 +532,8 @@
       href: framework/tools/
     - name: 追加のクラス ライブラリおよび API
       href: framework/additional-apis/
+- name: .NET デスクトップ ガイド - WPF
+  href: desktop-wpf/
 - name: 'C# のガイド'
   href: csharp/index.md
   items:
