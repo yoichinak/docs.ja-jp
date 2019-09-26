@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b85f878d8a391581fcc7419b3ca4d656eb5595af
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b42a71993cb120c88b90e867b7af23873b99d280
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660442"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039598"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017 で .NET Core を使用して C# Hello World アプリケーションを構築する
 
@@ -18,7 +18,7 @@ ms.locfileid: "69660442"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) が ".NET Core クロスプラット フォーム開発" とともにインストールされていること。 .NET Core 1.1 または .NET Core 2.0 のいずれかを使用して、アプリを開発することができます。
+[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) が ".NET Core クロスプラット フォーム開発" とともにインストールされていること。 .NET Core 2.1 以降のバージョンを使用してアプリを開発することができます。
 
 詳細については、「[Windows における .NET Core の前提条件](../windows-prerequisites.md)」を参照してください。
 

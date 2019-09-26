@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 37133a90ae5bfa18ae17c279caff40d0d30ea25c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 3cd1096a07b1de39d1961fdc8c5add56604804ea
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928924"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151833"
 ---
 # <a name="metadata-and-markdown-template"></a>メタデータとマークダウン テンプレート
 
@@ -276,26 +276,45 @@ UID に特殊文字 \`、\# または \* が含まれる場合、UID 値はそ�
 
 |name|マークダウン ラベル|
 |-----|-------|
+|.NET コンソール|dotnetcli|
 |ASP.NET (C#)|aspx-csharp|
 |ASP.NET (VB)|aspx-vb|
 |Azure CLI|azurecli|
 |AzCopy|azcopy|
+|Azure PowerShell|azurepowershell|
+|Bash|Bash|
 |C++|cpp|
+|C++/CX|cppcx|
+|C++/WinRT|cppwinrt|
 |C#|csharp|
 |C# (ブラウザー内)|csharp-interactive|
 |コンソール|コンソール|
+|CSHTML|cshtml|
+|DAX|dax|
+|Dockerfile|dockerfile|
 |F#|fsharp|
+|移動|go|
+|HTML|html|
+|HTTP|http|
 |Java|java|
 |JavaScript|javascript|
 |JSON|json|
+|Kusto クエリ言語|kusto|
+|Markdown|md|
 |NodeJS|nodejs|
 |Objective-C|objc|
+|OData|odata|
 |PHP|php|
+|PowerApps (ドット小数点区切り記号)|powerapps-dot|
+|PowerApps (コンマ小数点区切り記号)|powerapps-comma|
 |PowerShell|powershell|
 |Python|Python|
+|Q#|qsharp|
+|R|r|
 |Ruby|ruby|
 |SQL|sql|
 |Swift|swift|
+|TypeScript|typescript|
 |VB|VB|
 |XAML|xaml|
 |XML|xml|

@@ -1,17 +1,16 @@
 ---
-title: macOS での .NET Core の概要
+title: 'チュートリアル: macOS での Visual Studio Code を使用した .NET Core ソリューションの作成'
 description: このドキュメントでは、Visual Studio Code を使用して .NET Core ソリューションを作成する手順とワークフローを説明します。
-author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 572174cb09dbde03095fa9444989356038bab9b7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 5df43ae235b9fd901a65f7f8898bec67e24de682
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849350"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117371"
 ---
-# <a name="get-started-with-net-core-on-macos"></a>macOS での .NET Core の概要
+# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>チュートリアル: macOS での Visual Studio Code を使用した .NET Core ソリューションの作成
 
 このドキュメントでは、macOS 用の .NET Core ソリューションを作成する手順とワークフローを説明します。 プロジェクトと単体テストを作成し、デバッグ ツールを使用して、[NuGet](https://www.nuget.org/) からサードパーティ製ライブラリを組み込む方法について説明します。
 
@@ -32,21 +31,21 @@ Visual Studio Code C# 拡張機能をインストールするには、Visual Stu
 
 Visual Studio Code を開始します。 <kbd>Ctrl</kbd>+<kbd>\`</kbd> (バッククォートまたはアクサン グラーブ) キーを押すか、メニューから **[表示]、[統合ターミナル]** の順に選択し、Visual Studio Code で埋め込みターミナルを開きます。 Visual Studio Code の外部で作業を行う場合は、エクスプローラーの **[コマンド プロンプトで開く]** コマンド (Ma または Linux の場合は **[ターミナルで開く]** ) を使用して外部シェルを開くこともできます。
 
-1 つ以上の .NET Core プロジェクトのコンテナーとして機能する、ソリューション ファイルの作成を開始します。 ターミナルで、*golden* フォルダーを作成し、そのフォルダーを開きます。 このフォルダーはソリューションのルートです。 以下のように、[`dotnet new`](../tools/dotnet-new.md) コマンドを実行して新しいソリューション *golden.sln* を作成します。
+1 つ以上の .NET Core プロジェクトのコンテナーとして機能する、ソリューション ファイルの作成を開始します。 ターミナル内で、[`dotnet new`](../tools/dotnet-new.md) コマンドを実行し、*golden* という名前の新しいフォルダー内に、新しいソリューション *golden.sln* を作成します。
 
-```console
-dotnet new sln
+```dotnetcli
+dotnet new sln -o golden
 ```
 
-*golden* フォルダーから以下のコマンドを実行して、ライブラリ プロジェクトを作成します。*library* フォルダーには、*library.csproj* と *Class1.cs* という 2 つのファイルが生成されます。
+新しい *golden* フォルダーに移動し、以下のコマンドを実行して、ライブラリ プロジェクトを作成します。これにより、*library* フォルダーに *library.csproj* と *Class1.cs* の 2 つのファイルが生成されます。
 
-```console
+```dotnetcli
 dotnet new classlib -o library
 ```
 
 以下のように、[`dotnet sln`](../tools/dotnet-sln.md) コマンドを実行し、新しく作成された *library.csproj* プロジェクトをソリューションに追加します。
 
-```console
+```dotnetcli
 dotnet sln add library/library.csproj
 ```
 
@@ -64,7 +63,7 @@ dotnet sln add library/library.csproj
 
 このライブラリ メソッドでは、JSON 形式でオブジェクトのシリアル化と逆シリアル化を行います。 JSON のシリアル化および逆シリアル化をサポートするには、`Newtonsoft.Json` NuGet パッケージへの参照を追加します。 `dotnet add` コマンドにより、新しい項目がプロジェクトに追加されます。 NuGet パッケージへの参照を追加するには、[`dotnet add package`](../tools/dotnet-add-package.md) コマンドを使用して、パッケージの名前を指定します。
 
-```console
+```dotnetcli
 dotnet add library package Newtonsoft.Json
 ```
 
@@ -78,7 +77,7 @@ dotnet add library package Newtonsoft.Json
 
 [`dotnet restore`](../tools/dotnet-restore.md) を実行します ([注記参照](#dotnet-restore-note))。これにより、依存関係が復元され、*project.assets.json* ファイルなどの 3 つのファイルを含む *obj* フォルダーが *library* 内に作成されます。
 
-```console
+```dotnetcli
 dotnet restore
 ```
 
@@ -101,7 +100,7 @@ namespace Library
 
 [`dotnet build`](../tools/dotnet-build.md) コマンドを使用して、ライブラリをビルドします。 これにより、*golden/library/bin/Debug/netstandard1.4* に *library.dll* ファイルが生成されます。
 
-```console
+```dotnetcli
 dotnet build
 ```
 
@@ -109,19 +108,19 @@ dotnet build
 
 ライブラリのテスト プロジェクトをビルドします。 *golden* フォルダーから、次のようにして新しいテスト プロジェクトを作成します。
 
-```console
+```dotnetcli
 dotnet new xunit -o test-library
 ```
 
 次のようにしてテスト プロジェクトをソリューションに追加します。
 
-```console
+```dotnetcli
 dotnet sln add test-library/test-library.csproj
 ```
 
 コンパイラがライブラリ プロジェクトを見つけて使用できるように、前のセクションで作成したライブラリにプロジェクト参照を追加します。 次の [`dotnet add reference`](../tools/dotnet-add-reference.md) コマンドを使用します。
 
-```console
+```dotnetcli
 dotnet add test-library/test-library.csproj reference library/library.csproj
 ```
 
@@ -155,7 +154,7 @@ namespace TestApp
 
 *golden* フォルダーから、次のコマンドを実行します。
 
-```console
+```dotnetcli
 dotnet restore 
 dotnet test test-library/test-library.csproj
 ```
@@ -164,7 +163,7 @@ dotnet test test-library/test-library.csproj
 
 *UnitTest1.cs* ファイルを編集し、アサーションを `Assert.NotEqual` から `Assert.Equal` に変更します。 *golden* フォルダーから次のコマンドを実行し、テストを再実行します。今回は成功します。
 
-```console
+```dotnetcli
 dotnet test test-library/test-library.csproj
 ```
 
@@ -174,19 +173,19 @@ dotnet test test-library/test-library.csproj
 
 次のように、*golden* フォルダーから新しいコンソール アプリケーションを作成します。
 
-```console
+```dotnetcli
 dotnet new console -o app
 ```
 
 次のように、コンソール アプリ プロジェクトをソリューションに追加します。
 
-```console
+```dotnetcli
 dotnet sln add app/app.csproj
 ```
 
 次のように `dotnet add reference` コマンドを実行して、ライブラリに対する依存関係を作成します。
 
-```console
+```dotnetcli
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
@@ -205,7 +204,7 @@ using Library;
 
 次の `dotnet run` コマンドを実行して、実行可能ファイルを実行します。`dotnet run` の `-p` オプションは、メイン アプリケーションのプロジェクトを指定します。 アプリは "The answer is 42" という文字列を生成します。
 
-```console
+```dotnetcli
 dotnet run -p app/app.csproj
 ```
 

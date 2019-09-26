@@ -2,18 +2,18 @@
 title: 公式の .NET Docker イメージ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 公式の .NET Docker イメージ
 ms.date: 01/07/2019
-ms.openlocfilehash: b184e8f3606da8448a06a1cad90688958ecbce3a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 749485bfe07e0245493da67af915805f644a1897
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675709"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039632"
 ---
 # <a name="official-net-docker-images"></a>公式の .NET Docker イメージ
 
 公式の .NET Docker イメージは Microsoft により作成および最適化された Docker イメージです。 [Docker Hub](https://hub.docker.com/u/microsoft/) の Microsoft リポジトリで一般公開されています。 各リポジトリには、.NET のバージョンに応じて、また OS (Linux Debian、Alpine Linux、Windows Nano Server、Windows Server Core など) とそのバージョンに応じて、複数のイメージを含めることができます。
 
-.NET Core 2.1 以降は、ASP.NET Core 用を含むすべての .NET Core イメージが Docker Hub の .NET Core イメージ リポジトリ https://hub.docker.com/_/microsoft-dotnet-core/ で提供されています。
+.NET Core 2.1 以降は、ASP.NET Core 用を含むすべての .NET Core イメージが Docker Hub の .NET Core イメージ リポジトリ <https://hub.docker.com/\_/microsoft-dotnet-core/> で提供されています。
 
 イメージ リポジトリの多くではさまざまなタグを利用できるため、特定のフレームワーク バージョンだけでなく、OS (Linux ディストリビューションまたは Windows のバージョン) も選択できます。
 
@@ -43,10 +43,10 @@ Microsoft では開発者向けの Docker イメージをビルドするにあ�
 
 Docker Hub の .NET イメージ リポジトリを探索すると、タグで分類またはマークされた複数のイメージ バージョンを見つかります。 これらのタグは、次の示すように、必要とするバージョンに応じて使用するものを特定するのに役立ちます。
 
-| イメージ                                       | コメント                                                                                          |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Image | コメント |
+|-------|----------|
 | mcr.microsoft.com/dotnet/core/aspnet:**2.2** | ASP.NET Core、ランタイムのみ、ASP.NET Core の最適化、Linux および Windows (マルチアーキテクチャ) |
-| mcr.microsoft.com/dotnet/core/sdk:**2.2**    | .NET Core、SDK 含む、Linux および Windows (マルチアーキテクチャ)                                  |
+| mcr.microsoft.com/dotnet/core/sdk:**2.2** | .NET Core、SDK 含む、Linux および Windows (マルチアーキテクチャ) |
 
 > [!div class="step-by-step"]
 > [前へ](net-container-os-targets.md)

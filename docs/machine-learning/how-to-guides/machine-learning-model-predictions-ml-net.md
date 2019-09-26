@@ -1,16 +1,16 @@
 ---
 title: トレーニング済みモデルを使用して予測する
 description: トレーニング済みモデルを使用して予測する方法について説明します
-ms.date: 06/20/2019
+ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 33e0cb74342ca3e82ff5f108453d63e022d63d20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307397"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118015"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>トレーニング済みモデルを使用して予測する
 
@@ -43,14 +43,12 @@ public class HousingData
 このサンプルで使用されているアルゴリズムは線形回帰アルゴリズムなので、出力列の既定の名前は `Score` です。これは `PredictedPrice` プロパティの [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 属性によって定義されます。
 
 ```csharp
-class HousingPrediction : HousingData
+class HousingPrediction
 {
     [ColumnName("Score")]
     public float PredictedPrice { get; set; }
 }
 ```
-
-`HousingPrediction` データ モデルは `HousingData` を継承するので、モデルによって生成された出力と共に元の入力データを簡単に視覚化することができます。  
 
 ## <a name="set-up-a-prediction-pipeline"></a>予測パイプラインを設定する
 
@@ -90,7 +88,7 @@ HousingPrediction prediction = predictionEngine.Predict(inputData);
 
 `prediction` オブジェクトの `Score` プロパティにアクセスすると、`150079` のような値になります。
 
-## <a name="batch-prediction"></a>バッチ予測
+## <a name="multiple-predictions"></a>複数の予測
 
 次のデータがあるとして、[`IDataView`](xref:Microsoft.ML.IDataView) に読み込みます。 この場合、[`IDataView`](xref:Microsoft.ML.IDataView) の名前は `inputData` です。 `CurrentPrice` は新しいデータを使用して予測しようとしているターゲットまたはラベルなので、この時点では値がないと見なされます。
 

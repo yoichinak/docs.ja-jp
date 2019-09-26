@@ -2,12 +2,12 @@
 title: 永続インフラストラクチャとして NoSQL データベースを使用する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス | 永続性実装のオプションとして、NoSql データベースを使用することについて (特に Azure Cosmos DB)。
 ms.date: 10/08/2018
-ms.openlocfilehash: 7a8573f8f668a5b75f50acde57a2f4c42ce4d189
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d96d72fe675dfa830029e4311f2cf165a305c328
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374036"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039963"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>永続インフラストラクチャとして NoSQL データベースを使用する
 
@@ -280,7 +280,7 @@ services:
 
 ```
 
-`ConnectionString` 環境変数はこの方法で解決されます:`ESHOP_AZURE_COSMOSDB` グローバル変数が Azure Cosmos DB 接続文字列を使用して `.env` ファイルで定義されている場合、そのグローバル変数を使用してクラウド内の Azure Cosmos DB データベースにアクセスします。 定義されていない場合、mongodb://nosql.data 値を取得し、開発 mongodb コンテナーを使用します。
+`ConnectionString` 環境変数はこの方法で解決されます:`ESHOP_AZURE_COSMOSDB` グローバル変数が Azure Cosmos DB 接続文字列を使用して `.env` ファイルで定義されている場合、そのグローバル変数を使用してクラウド内の Azure Cosmos DB データベースにアクセスします。 定義されていない場合、`mongodb://nosql.data` 値を取得し、開発 mongodb コンテナーを使用します。
 
 次のコードは、eShopOnContainers に実装されているように、Azure Cosmos DB グローバル環境変数を持つ `.env` ファイルを示しています。
 
@@ -324,7 +324,7 @@ services:
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction>
 
 - **Azure Cosmos DB:.NET および Azure portal を使用して MongoDB API の Web アプリを構築する**  \
-  [https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
+  <https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet>
 
 - **ローカルの開発とテストでの Azure Cosmos DB Emulator の使用**  \
   <https://docs.microsoft.com/azure/cosmos-db/local-emulator>

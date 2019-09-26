@@ -3,16 +3,16 @@ title: インデックスと範囲を使用してデータの範囲を調べる
 description: この高度なチュートリアルでは、インデックスと範囲を使用してデータを調べ、シーケンシャル データ セットのスライスを調べる方法について説明します。
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926637"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117827"
 ---
 # <a name="indices-and-ranges"></a>インデックスと範囲
 
-範囲とインデックスには、<xref:System.Array>、<xref:System.Span%601>、または <xref:System.ReadOnlySpan%601> 内の 1 つの要素または範囲にアクセスできる簡潔な構文が用意されています。 これらの機能を使用すると、簡潔でわかりやすい構文でシーケンス内の各要素または要素の範囲にアクセスできるようになります。
+範囲とインデックスには、<xref:System.Array>、<xref:System.String>、<xref:System.Span%601>、または <xref:System.ReadOnlySpan%601> 内の 1 つの要素または範囲にアクセスできる簡潔な構文が用意されています。 これらの機能を使用すると、簡潔でわかりやすい構文でシーケンス内の各要素または要素の範囲にアクセスできるようになります。
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 
@@ -24,12 +24,12 @@ ms.locfileid: "70926637"
 
 ## <a name="language-support-for-indices-and-ranges"></a>インデックスと範囲の言語サポート
 
-この言語のサポートでは、2 つの新しい型と 2 つの新しい演算子を使用しています。
+この言語のサポートでは、次の 2 つの新しい型と 2 つの新しい演算子が使用されています。
 
 - <xref:System.Index?displayProperty=nameWithType> はシーケンスとしてインデックスを表します。
-- `^` 演算子。シーケンスの末尾から相対的なインデックスを指定します。
+- index from end 演算子の `^`。シーケンスの末尾から相対的なインデックスを指定します。
 - <xref:System.Range?displayProperty=nameWithType> はシーケンスのサブ範囲を表します。
-- 範囲演算子 (`..`)。範囲の先頭と末尾をそのオペランドとして指定します。
+- 範囲演算子の `..`。範囲の先頭と末尾をそのオペランドとして指定します。
 
 インデックスのルールから始めましょう。 配列 `sequence` を考えます。 `0` インデックスは `sequence[0]` と同じです。 `^0` インデックスは `sequence[sequence.Length]` と同じです。 `sequence[sequence.Length]` と同様に、`sequence[^0]` は例外をスローすることに注意してください。 任意の数値 `n` の場合、インデックス `^n` は `sequence[sequence.Length - n]` と同じです。
 

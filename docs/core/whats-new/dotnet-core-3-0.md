@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 09/05/2019
-ms.openlocfilehash: 2d18e7750e0c2e2a44028d1e906a8536e47d979d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.date: 09/17/2019
+ms.openlocfilehash: 08ad77fbad7ad468e45fe629041ded82544792f2
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394283"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116115"
 ---
-# <a name="whats-new-in-net-core-30-preview-9"></a>.NET Core 3.0 (プレビュー 9) の新機能
+# <a name="whats-new-in-net-core-30-release-candidate-1"></a>.NET Core 3.0 の新機能 (リリース候補 1)
 
-この記事では、.NET Core 3.0 (プレビュー 9 まで) の新機能について説明します。 最も大きな強化点の 1 つは、Windows デスクトップ アプリケーションのサポートです (Windows のみ)。 .NET Core 3.0 SDK コンポーネントの Windows デスクトップを使用して、Windows フォームおよび Windows Presentation Foundation (WPF) アプリケーションを移植することができます。 誤解のないように言うと、Windows Desktop コンポーネントは Windows でのみサポートされており、Windows にのみ含まれています。 詳細については、この記事で後述する「[Windows デスクトップ](#windows-desktop)」を参照してください。
+この記事では、.NET Core 3.0 (リリース候補 1 (RC1) まで) の新機能について説明します。 最も大きな強化点の 1 つは、Windows デスクトップ アプリケーションのサポートです (Windows のみ)。 .NET Core 3.0 SDK コンポーネントの Windows デスクトップを使用して、Windows フォームおよび Windows Presentation Foundation (WPF) アプリケーションを移植することができます。 誤解のないように言うと、Windows Desktop コンポーネントは Windows でのみサポートされており、Windows にのみ含まれています。 詳細については、この記事で後述する「[Windows デスクトップ](#windows-desktop)」を参照してください。
 
-.NET Core 3.0 では C# 8.0 のサポートが追加されています。 **C# の拡張機能**では、[Visual Studio 2019 16.3 プレビュー 3](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)、[Visual Studio for Mac 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019)、または [Visual Studio Code](https://code.visualstudio.com/) を使用することを強くお勧めします。
+.NET Core 3.0 では C# 8.0 のサポートが追加されています。 **C# の拡張機能**では、[Visual Studio 2019 16.3 プレビュー 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)、[Visual Studio for Mac 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019)、または [Visual Studio Code](https://code.visualstudio.com/) を使用することを強くお勧めします。
 
-[.NET Core 3.0 プレビュー 9 を今すぐダウンロード](https://aka.ms/netcore3download)して Windows、macOS、または Linux 上で使い始めましょう。
+[.NET Core 3.0 RC1 を今すぐダウンロード](https://aka.ms/netcore3download)して Windows、macOS、または Linux 上で使い始めましょう。
 
 各プレビュー リリースの詳細については、次の発表を参照してください。
 
+- [.NET Core 3.0 RC1 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)
 - [.NET Core 3.0 プレビュー 9 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
 - [.NET Core 3.0 Preview 8 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [.NET Core 3.0 Preview 7 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
@@ -36,9 +37,9 @@ ms.locfileid: "70394283"
 
 ## <a name="production-supported-preview"></a>運用環境でサポートされているプレビュー
 
-.NET Core プレビュー 9 は、Microsoft で運用の準備ができていると見なされており、完全にサポートされています。 Preview 7 以降、リリースでは、新機能を追加するのではなく、.NET Core 3.0 を洗練させることに焦点を当てています。 プレビュー 9 で変更された内容の詳細については、[プレビュー 9 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)に関する記事を参照してください。
+.NET Core RC1 は、Microsoft で運用の準備ができていると見なされており、完全にサポートされています。 Preview 7 以降、リリースでは、新機能を追加するのではなく、.NET Core 3.0 を洗練させることに焦点を当てています。 RC1 で変更された内容の詳細については、[RC1 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)に関する記事を参照してください。
 
-以前のプレビュー リリースを使用している場合は、"Go Live" のサポートを継続するためにプレビュー 9 に移行する必要があります。
+以前のプレビュー リリースを使用している場合は、"Go Live" のサポートを継続するために RC1 に移行する必要があります。
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows インストーラー
 
@@ -125,7 +126,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 または
 
-```console
+```dotnetcli
 dotnet publish -r win10-x64 /p:PublishSingleFile=true
 ```
 
@@ -147,7 +148,7 @@ dotnet publish -r win10-x64 /p:PublishSingleFile=true
 </PropertyGroup>
 ```
 
-```console
+```dotnetcli
 dotnet publish -r <rid> -c Release
 ```
 
@@ -197,7 +198,7 @@ ReadyToRun としてプロジェクトをコンパイルするには、次の手
 
 01. 自己完結型アプリを発行します。 たとえば、次のコマンドでは、Windows の 64 ビット版向けの自己完結型アプリが作成されます。
 
-    ```console
+    ```dotnetcli
     dotnet publish -c Release -r win-x64 --self-contained true
     ```
 
@@ -266,7 +267,7 @@ Windows デスクトップ コンポーネントは、Windows .NET Core 3.0 SDK 
 
 次の `dotnet` コマンドを使用して、新しい WPF または Windows フォーム アプリケーションを作成できます。
 
-```console
+```dotnetcli
 dotnet new wpf
 dotnet new winforms
 ```

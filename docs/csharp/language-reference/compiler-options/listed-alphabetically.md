@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 37eedc6d41867a6d5e6a49b8df5040c657bb2689
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 450463100782f98b6ded0781b1d3c19b0db97534
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602758"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151773"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>アルファベット順の C# コンパイラ オプションの一覧
 
@@ -29,7 +29,7 @@ ms.locfileid: "69602758"
 |[-baseaddress](baseaddress-compiler-option.md)|ビルドするライブラリのベース アドレスを指定します。|
 |[-bugreport](bugreport-compiler-option.md)|"障害報告" ファイルを作成します。 -errorreport:prompt または -errorreport:send と組み合わせて使用した場合、このファイルがクラッシュ情報と共に送信されます。|
 |[/checked](checked-compiler-option.md)|オーバーフロー チェックを生成するようコンパイラに指示します。|
-|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA1 (既定値) または SHA256 です。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。 |
+|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA256 (既定) または SHA1 です。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。 |
 |[-codepage](codepage-compiler-option.md)|ソース ファイルを開くときに使用するコードページを指定します。|
 |[-debug](debug-compiler-option.md)|デバッグ情報を生成します。|
 |[-define](define-compiler-option.md)|条件付きコンパイル シンボルを定義します。|

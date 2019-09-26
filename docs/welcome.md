@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0b4a2380bf2ddb59c181a07d7f8a006d6252d11f
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: bc525aeefe2c247c610886fae6ae7d79cb9e6517
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216854"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274334"
 ---
 # <a name="welcome-to-net"></a>.NET にようこそ
 
@@ -32,7 +32,7 @@ ms.locfileid: "71216854"
 - [Microsoft Build](https://www.microsoft.com/build)
 - [.NET Conf](https://www.dotnetconf.net/)
 - [Microsoft Connect()](https://www.microsoft.com/connectevent)
-- 
+
 .NET の実装およびサポートされている言語に追加された最新の機能の詳細については、次の記事を参照してください。
 
 - [.NET Core の新機能](core/whats-new/index.md)

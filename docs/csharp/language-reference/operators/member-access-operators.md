@@ -1,12 +1,14 @@
 ---
 title: メンバー アクセス演算子 - C# リファレンス
 description: 型のメンバーにアクセスするために使用できる C# 演算子について説明します。
-ms.date: 05/09/2019
+ms.date: 09/18/2019
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
 - '[]_CSharpKeyword'
 - ()_CSharpKeyword
+- ^_CSharpKeyword
+- .._CSharpKeyword
 helpviewer_keywords:
 - member access operators [C#]
 - member access operator [C#]
@@ -25,12 +27,17 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 5ff5e68fbce320076e6d18e9e139b418a15bba77
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+- ^ operator [C#]
+- index from end operator [C#]
+- hat operator [C#]
+- .. operator [C#]
+- range operator [C#]
+ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924640"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116134"
 ---
 # <a name="member-access-operators-c-reference"></a>メンバー アクセス演算子 (C# リファレンス)
 
@@ -40,6 +47,8 @@ ms.locfileid: "69924640"
 - [`[]` (配列要素またはインデクサー アクセス) ](#indexer-operator-): 配列要素または型のインデクサーにアクセスします
 - [`?.` および `?[]` (null 条件演算子)](#null-conditional-operators--and-): オペランドが null でない場合にのみ、メンバーまたは要素へのアクセス操作を実行します
 - [`()` (呼び出し)](#invocation-operator-): アクセスしたメソッドを呼び出すか、デリゲートを呼び出します
+- [`^` (末尾からのインデックス)](#index-from-end-operator-): 要素の位置がシーケンスの末尾からであることを示します
+- [`..` (範囲)](#range-operator-): シーケンス要素の範囲を取得するために使用できるインデックスの範囲を指定します
 
 ## <a name="member-access-operator-"></a>メンバー アクセス演算子 .
 
@@ -149,9 +158,37 @@ if (handler != null)
 
 明示的な型変換を実行する[キャスト式](type-testing-and-cast.md#cast-operator-)でも、かっこが使われます。
 
+## <a name="index-from-end-operator-"></a>末尾からのインデックス演算子 ^
+
+`^` 演算子は C# 8.0 以降で使用することができ、要素の位置がシーケンスの末尾からであることを示します。 長さが `length` のシーケンスの場合、`^n` は、シーケンスの先頭からのオフセットが `length - n` である要素を指します。 たとえば、`^1` は、シーケンスの最後の要素を指し、`^length` は、シーケンスの最初の要素を指します。
+
+[!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
+
+前の例で示すように、式 `^e` は <xref:System.Index?displayProperty=nameWithType> 型です。 式 `^e`で、`e` の結果は `int` に暗黙に変換される必要があります。
+
+さらに、`^` 演算子を[範囲演算子 ](#range-operator-) と組み合わせて使用してインデックスの範囲を作成することもできます。 詳細については、「[インデックスと範囲](../../tutorials/ranges-indexes.md)」を参照してください。
+
+## <a name="range-operator-"></a>範囲演算子 ..
+
+`..` 演算子は C# 8.0 以降で使用することができ、インデックスの範囲の先頭と末尾をオペランドとして指定します。 左側のオペランドは "*包含的*" で、範囲の先頭を含みます。 右側のオペランドは "*排他的*" で、範囲の末尾を含みません。 次の例で示すように、どちらのオペランドであっても、シーケンスの先頭または末尾からのインデックスとすることができます。
+
+[!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
+
+前の例で示すように、式 `a..b` は <xref:System.Range?displayProperty=nameWithType> 型です。 式 `a..b` で、`a` および `b` の結果は暗黙に `int` または <xref:System.Index> に変換される必要があります。
+
+`..` 演算子のオペランドのいずれかを省略して、変更可能な範囲を取得することができます。
+
+- `a..` は `a..^0` と同じです。
+- `..b` は `0..b` と同じです。
+- `..` は `0..^0` と同じです。
+
+[!code-csharp[ranges with omitted operands](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#RangesOptional)]
+
+詳細については、「[インデックスと範囲](../../tutorials/ranges-indexes.md)」を参照してください。
+
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
-`.` および `()` 演算子はオーバーロードできません。 `[]` 演算子も、オーバーロードできない演算子と見なされます。 ユーザー定義型を使用したインデックス作成をサポートするには、[インデクサー](../../programming-guide/indexers/index.md)を使用してください。
+`.`、`()`、`^`、および `..` の各演算子はオーバーロードできません。 `[]` 演算子も、オーバーロードできない演算子と見なされます。 ユーザー定義型を使用したインデックス作成をサポートするには、[インデクサー](../../programming-guide/indexers/index.md)を使用してください。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

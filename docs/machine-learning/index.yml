@@ -6,7 +6,7 @@ metadata:
   title: ML.NET のドキュメント - チュートリアル、API リファレンス
   meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
   ms.topic: landing-page
-  ms.date: 08/15/2019
+  ms.date: 09/16/2019
   ms.author: nakersha
   author: natke
 abstract:
@@ -28,12 +28,14 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">行列の因数分解を使用して映画レコメンダーを作成する</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">TensorFlow を使用してカスタム画像分類子を構築する</a>
           - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">ONNX を使用して画像内のオブジェクトを検出する</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/text-classification-tf">TensorFlow を使用して映画レビューのセンチメントを分類する</a>
       - type: paragraph
         text: 'グラフィカルな Visual Studio 拡張機能<b>モデル ビルダーの使用</b>:'
       - type: list
         style: unordered
         items:
           - html: <a href="/dotnet/machine-learning/tutorials/predict-prices-with-model-builder">モデル ビルダーを使った価格の予測</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis-model-builder">Razor Pages Web アプリケーションをビルドしてセンチメントを分析する</a>
       - type: paragraph
         text: '<b>ML.NET CLI の実行</b>:'
       - type: list

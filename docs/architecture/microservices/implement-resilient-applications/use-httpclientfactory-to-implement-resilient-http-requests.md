@@ -1,13 +1,13 @@
 ---
 title: HttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 description: .NET Core 2.1 以降で使用できる HttpClientFactory を使用して、`HttpClient` インスタンスを作成し、それをアプリケーションで簡単に使用できるようにする方法について説明します。
-ms.date: 01/07/2019
-ms.openlocfilehash: 68c841a6ba69a94eff420233124cf00fec506502
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 08/08/2019
+ms.openlocfilehash: 6c862171ee6b5eda6f95694878bfa43518a9bdfa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674479"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039973"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>HttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 
@@ -15,24 +15,26 @@ ms.locfileid: "68674479"
 
 ## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>.NET Core で使用可能な元の HttpClient クラスに関する問題
 
-よく知られている元の [HttpClient](/dotnet/api/system.net.http.httpclient?view=netstandard-2.0) クラスは、簡単に使用できますが、多くの開発者によって適切に使用されていない場合もあります。 
+よく知られている元の <xref:System.Net.Http.HttpClient> クラスは、簡単に使用できますが、場合によっては、多くの開発者が適切に使用していません。
 
 1 つ目の問題は、このクラスは破棄可能ですが、`HttpClient` オブジェクトを破棄しても、基になるソケットがすぐに解放されず、'ソケットの枯渇' という重大な問題が発生する場合があるため、`using` ステートメントで使用するのは最適な選択ではないということです。 この問題の詳細については、ブログ記事「[You're using HttpClient wrong and it is destabilizing your software (HttpClient の誤った使い方がソフトウェアを不安定にする)](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)」を参照してください。
 
-そのため、`HttpClient` は一度インスタンス化されたら、アプリケーションの有効期間にわたって再利用されることを目的としています。 すべての要求に対して `HttpClient` クラスをインスタンス化すると、高負荷の下で使用可能なソケットの数が枯渇してしまいます。 この問題により、`SocketException` エラーが発生します。 この問題を解決するために可能なアプローチは、HttpClient クライアントの使用に関するこの [Microsoft の記事](/dotnet/csharp/tutorials/console-webapiclient)で説明されているように、`HttpClient` オブジェクトをシングルトンまたは静的として作成することに基づいています。 
+そのため、`HttpClient` は一度インスタンス化されたら、アプリケーションの有効期間にわたって再利用されることを目的としています。 すべての要求に対して `HttpClient` クラスをインスタンス化すると、高負荷の下で使用可能なソケットの数が枯渇してしまいます。 この問題により、`SocketException` エラーが発生します。 この問題を解決するために可能なアプローチは、HttpClient クライアントの使用に関するこの [Microsoft の記事](../../../csharp/tutorials/console-webapiclient.md)で説明されているように、`HttpClient` オブジェクトをシングルトンまたは静的として作成することに基づいています。
 
-しかし、`HttpClient` には、シングルトンまたは静的オブジェクトとして使用した場合に発生する可能性がある 2 つ目の問題があります。 この場合、[.NET Core GitHub リポジトリでこの問題](https://github.com/dotnet/corefx/issues/11224)について説明されているように、シングルトンまたは静的 `HttpClient` は、DNS の変更を尊重しません。 
+しかし、`HttpClient` には、シングルトンまたは静的オブジェクトとして使用した場合に発生する可能性がある 2 つ目の問題があります。 この場合、dotnet/corefx GitHub リポジトリでこの[問題](https://github.com/dotnet/corefx/issues/11224)について説明されているように、シングルトンまたは静的 `HttpClient` では、DNS の変更が尊重されません。 
 
-これらの問題に対処し、`HttpClient` インスタンスの管理を容易にするため、.NET Core 2.1 では、新しい `HttpClientFactory` が導入されています。これは、Polly を統合することで、回復力のある HTTP 呼び出しを実装するためにも使用できます。   
+これらの問題に対処し、`HttpClient` インスタンスの管理を容易にするため、.NET Core 2.1 では、新しい `HttpClientFactory` が導入されています。これは、Polly を統合することで、回復力のある HTTP 呼び出しを実装するためにも使用できます。
+
+[Polly](http://www.thepollyproject.org/) は、事前に定義されたポリシーを緩やかでスレッドセーフな方法で使用することにより、開発者がアプリケーションに回復性を追加できるようにするための一時的な障害処理ライブラリです。
 
 ## <a name="what-is-httpclientfactory"></a>HttpClientFactory とは
 
 `HttpClientFactory` は次の目的のために設計されています。
 
-- 論理 HttpClients の名前付けと構成を一元化します。 たとえば、特定のマイクロサービスにアクセスするために事前に構成されているクライアント (サービス エージェント) を構成できます。
+- 論理 `HttpClient` オブジェクトの名前付けと構成を行うために、中央の場所を提供します。 たとえば、特定のマイクロサービスにアクセスするために事前に構成されているクライアント (サービス エージェント) を構成できます。
 - `HttpClient` でのハンドラーのデリゲートにより送信ミドルウェアの概念を体系化し、Polly ベースのミドルウェアを実装して、回復性のための Polly のポリシーを利用します。
-- `HttpClient` は既に、送信 HTTP 要求用にリンクできるハンドラーのデリゲートの概念を備えています。 ファクトリに http クライアントを登録できるほか、再試行、サーキット ブレーカーなどに Polly ポリシーが使えるようになる Polly ハンドラーを使用することができます。
-- HttpClientMessageHandler の有効期間を管理して、`HttpClient` の有効期間を自分で管理する際に発生する可能性がある上記の問題を回避します。 
+- `HttpClient` は既に、送信 HTTP 要求用にリンクできるハンドラーのデリゲートの概念を備えています。 ファクトリに HTTP クライアントを登録できるほか、Polly ハンドラーを使用して、再試行、サーキット ブレーカーなどに Polly ポリシーを使用することができます。
+- `HttpClientMessageHandlers` の有効期間を管理して、`HttpClient` の有効期間を自分で管理する際に発生する可能性がある上記の問題を回避します。
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>HttpClientFactory を使用する複数の方法
 
@@ -43,7 +45,7 @@ ms.locfileid: "68674479"
 - 型指定されたクライアントを使用する
 - 生成されたクライアントを使用する
 
-説明を簡潔にするため、このガイダンスでは、型指定されたクライアント (サービス エージェント パターン) を使用するための `HttpClientFactory` を使用する最も体系化されている方法を示します。ただし、すべてのオプションは文書化されており、現在、[HttpClientFactory の使用方法を説明しているこの記事](/aspnet/core/fundamentals/http-requests?#consumption-patterns)に一覧があります。  
+簡潔にするために、このガイダンスでは、型指定されたクライアント (サービス エージェント パターン) を使用する、`HttpClientFactory` を使用するための最も構造化された方法を示します。 しかし、すべてのオプションが記載されており、現在、[HttpClientFactory の使用方法が記載されたこの記事](/aspnet/core/fundamentals/http-requests#consumption-patterns)で一覧表示されています。
 
 ## <a name="how-to-use-typed-clients-with-httpclientfactory"></a>HttpClientFactory で型指定されたクライアントを使用する方法
 
@@ -55,7 +57,7 @@ ms.locfileid: "68674479"
 
 **図 8-4** 型指定されたクライアント クラスで HttpClientFactory を使用する。
 
-まず、アプリケーションに `HttpClientFactory` を設定し、`IServiceCollection` の `AddHttpClient()` 拡張メソッドを含む `Microsoft.Extensions.Http` パッケージへの参照を追加します。 この拡張メソッドは、インターフェイス `IHttpClientFactory` のシングルトンとして使用される `DefaultHttpClientFactory` を登録します。 これは `HttpMessageHandlerBuilder` の一時的な構成を定義します。 プールから取得されたこのメッセージ ハンドラー (`HttpMessageHandler` オブジェクト) は、ファクトリから返された `HttpClient` によって使用されます。
+まず、`IServiceCollection` に対する `AddHttpClient()` 拡張メソッドを含む `Microsoft.Extensions.Http` NuGet パッケージをインストールすることで、アプリケーションに `HttpClientFactory` を設定します。 この拡張メソッドは、インターフェイス `IHttpClientFactory` のシングルトンとして使用される `DefaultHttpClientFactory` を登録します。 これは `HttpMessageHandlerBuilder` の一時的な構成を定義します。 プールから取得されたこのメッセージ ハンドラー (`HttpMessageHandler` オブジェクト) は、ファクトリから返された `HttpClient` によって使用されます。
 
 次のコードで、`AddHttpClient()` を使用して、`HttpClient` を使用する必要がある型指定されたクライアント (エージェント サービス) を登録する方法を確認できます。
 
@@ -67,9 +69,32 @@ services.AddHttpClient<IBasketService, BasketService>();
 services.AddHttpClient<IOrderingService, OrderingService>();
 ```
 
-前のコードに示すようにクライアント サービスを登録し、次の段落で説明するように、各サービスに合わせて構成された `HttpClient` を `DefaultClientFactory` で作成します。
+前のコードに示されているように、クライアント サービスを登録すると、`DefaultClientFactory` によって、サービスごとに標準の `HttpClient` が作成されるようになります。
 
-クライアント サービス クラスを `AddHttpClient()` に登録するだけで、クラスに挿入される `HttpClient` オブジェクトには、登録時に提供される構成とポリシーが使用されるようになります。 以降のセクションでは、Polly の再試行またはサーキット ブレーカーのような、これらのポリシーを確認します。
+また、次のコードに示すように、登録にインスタンス固有の構成を追加し、ベース アドレスの構成や回復性ポリシーの追加などを行うこともできます。
+
+```csharp
+services.AddHttpClient<ICatalogService, CatalogService>(client =>
+{
+    client.BaseAddress = new Uri(Configuration["BaseUrl"])
+})
+    .AddPolicyHandler(GetRetryPolicy())
+    .AddPolicyHandler(GetCircuitBreakerPolicy());
+```
+
+例として、次のコードで上記のポリシーの 1 つを確認できます。
+
+```csharp
+static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
+{
+    return HttpPolicyExtensions
+        .HandleTransientHttpError()
+        .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+        .WaitAndRetryAsync(6, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
+}
+```
+
+[次の記事](implement-http-call-retries-exponential-backoff-polly.md)では、Polly の使用に関する詳細を確認できます。
 
 ### <a name="httpclient-lifetimes"></a>HttpClient の有効期間
 
@@ -82,7 +107,7 @@ services.AddHttpClient<IOrderingService, OrderingService>();
 ```csharp
 //Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
 services.AddHttpClient<ICatalogService, CatalogService>()
-                 .SetHandlerLifetime(TimeSpan.FromMinutes(5));  
+    .SetHandlerLifetime(TimeSpan.FromMinutes(5));
 ```
 
 型指定された各クライアントには、独自の構成済みハンドラーの有効期間の値を設定できます。 ハンドラーの有効期限を無効にするには、有効期間を `InfiniteTimeSpan` に設定します。
@@ -122,7 +147,7 @@ public class CatalogService : ICatalogService
 
 ### <a name="use-your-typed-client-classes"></a>型指定されたクライアント クラスを使用する
 
-最後に、型クラスを実装し、それを AddHttpClient() に登録すると、DI によって挿入されたサービスがある任意の場所でそれを使用できます。たとえば、次の eShopOnContainers のコードのように、任意の Razor ページ コードや、MVC Web アプリの任意のコントローラーで使用できます。
+最後に、型指定されたクラスを実装し、`AddHttpClient()` に登録したら、DI によってサービスを挿入できる場所であればどこでもそれらを使用できます。 たとえば、次の eShopOnContainers のコードのように、Razor ページ コード、または MVC Web アプリのコントローラーなどがあります。
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers
@@ -131,18 +156,18 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
     {
         private ICatalogService _catalogSvc;
 
-        public CatalogController(ICatalogService catalogSvc) => 
+        public CatalogController(ICatalogService catalogSvc) =>
                                                            _catalogSvc = catalogSvc;
 
-        public async Task<IActionResult> Index(int? BrandFilterApplied, 
-                                               int? TypesFilterApplied, 
-                                               int? page, 
+        public async Task<IActionResult> Index(int? BrandFilterApplied,
+                                               int? TypesFilterApplied,
+                                               int? page,
                                                [FromQuery]string errorMsg)
         {
             var itemsPage = 10;
-            var catalog = await _catalogSvc.GetCatalogItems(page ?? 0, 
-                                                            itemsPage, 
-                                                            BrandFilterApplied, 
+            var catalog = await _catalogSvc.GetCatalogItems(page ?? 0,
+                                                            itemsPage,
+                                                            BrandFilterApplied,
                                                             TypesFilterApplied);
             //… Additional code
         }
@@ -151,15 +176,18 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 }
 ```
 
-この時点までは、示されているコードは、通常の Http 要求を実行するだけですが、次のセクションでは、不思議なことが起こります。ポリシーを追加して、ハンドラーを登録済みの型指定されているクライアントにデリゲートするだけで、`HttpClient` によって実行されるすべての HTTP 要求が、指数バックオフを含む再試行、サーキット ブレーカー、またはその他の任意のカスタム デリゲート ハンドラーなど、回復力のあるポリシーを考慮して、追加のセキュリティ機能 (認証トークンの使用など) やその他のカスタム機能を実装するようになります。 
+この時点までは、示されているコードは、通常の Http 要求を実行するだけですが、次のセクションでは、不思議なことが起こります。ポリシーを追加して、ハンドラーを登録済みの型指定されているクライアントにデリゲートするだけで、`HttpClient` によって実行されるすべての HTTP 要求が、指数バックオフを含む再試行、サーキット ブレーカー、またはその他の任意のカスタム デリゲート ハンドラーなど、回復力のあるポリシーを考慮して、追加のセキュリティ機能 (認証トークンの使用など) やその他のカスタム機能を実装するようになります。
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-- **.NET Core で HttpClientFactory を使用する**\
-  [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+- **.NET Core で HttpClientFactory を使用する** \
+  [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **HttpClientFactory GitHub リポジトリ**\
+- **HttpClientFactory GitHub リポジトリ** \
   <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
+
+- **Polly (.NET の復元および一時的な障害処理ライブラリ)**  \
+  <http://www.thepollyproject.org/>
 
 >[!div class="step-by-step"]
 >[前へ](explore-custom-http-call-retries-exponential-backoff.md)

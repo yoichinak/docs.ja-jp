@@ -2,12 +2,12 @@
 title: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 description: Kubernetes アプリケーション ライフサイクルを開発しながら、高いスケーラビリティおよび可用性と Azure Dev Spaces の可能性のためにマイクロサービスと複数のコンテナー アプリケーションを調整するオプションについて説明します。
 ms.date: 09/20/2018
-ms.openlocfilehash: 9540ea3941e90b0f9ebfb79dff6f84bb368d0fb0
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: aef9dc2206c24d685610616a2a4d7850837b832d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991157"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040085"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -35,21 +35,10 @@ ms.locfileid: "70991157"
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>コンテナーのクラスタリング、オーケストレーション、スケジューリングのためのソフトウェア プラットフォーム
 
-### <a name="kubernetes"></a>Kubernetes
-
-![Kubernetes ロゴ](./media/image24.png)
-
-> [*Kubernetes*](https://kubernetes.io/) はオープンソースの製品であり、クラスターのインフラストラクチャとコンテナーのスケジューリングからオーケストレーションまでのさまざまな機能を提供します。 ホストのクラスター全体のアプリケーション コンテナーの展開、スケーリング、操作を自動化できます。
->
-> *Kubernetes* ではコンテナー中心のインフラストラクチャが提供され、アプリケーション コンテナーを論理ユニットにグループ化し、管理と検出を容易にします。
->
-> *Kubernetes* は Linux では完成されていますが、Windows では未完成です。
-
-### <a name="azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS)
-
-![Azure Kubernetes Service ロゴ](./media/image41.png)
-
-> [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) は Azure でのマネージド Kubernetes コンテナー オーケストレーション サービスで。これによって Kubernetes クラスターの管理、デプロイ、および操作が簡略化されます。
+|     |   |
+|-----|---|
+| **Kubernetes** <br> ![Kubernetes ロゴ](./media/image24.png) | [*Kubernetes*](https://kubernetes.io/) はオープンソースの製品であり、クラスターのインフラストラクチャとコンテナーのスケジューリングからオーケストレーションまでのさまざまな機能を提供します。 ホストのクラスター全体のアプリケーション コンテナーの展開、スケーリング、操作を自動化できます。 <br><br> *Kubernetes* ではコンテナー中心のインフラストラクチャが提供され、アプリケーション コンテナーを論理ユニットにグループ化し、管理と検出を容易にします。 <br><br> *Kubernetes* は Linux では完成されていますが、Windows では未完成です。 |
+| **Azure Kubernetes Service (AKS)** <br> ![Azure Kubernetes Service ロゴ](./media/image41.png) | [AKS](https://azure.microsoft.com/services/kubernetes-service/) は、Azure でのマネージド Kubernetes コンテナー オーケストレーション サービスです。これによって、Kubernetes クラスターの管理、デプロイ、操作が簡略化されます。 |
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure でのコンテナー ベースのオーケストレーターの使用
 

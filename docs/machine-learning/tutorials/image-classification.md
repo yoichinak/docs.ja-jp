@@ -4,12 +4,12 @@ description: 転移学習と ML.NET を使用して画像分類 TensorFlow モ�
 ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: eb6e3d3f3a33aa7360802ce1bc6c16532539c828
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e069abe44b77b1dc31b78ecec1971ccc73f2e012
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929238"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054078"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>チュートリアル: 転移学習と ML.NET を使用して TensorFlow 画像分類子を再トレーニングする
 
@@ -59,9 +59,9 @@ ms.locfileid: "70929238"
 画像分類は、画像を次のような複数のカテゴリに自動的に分類することができる一般的な機械学習タスクです。
 
 * 画像から人の顔を検出するかどうか。
-* 猫と犬を検出する。
+* 猫と犬の検出。
 
- または、次のような各画像で、食品、おもちゃ、または電化製品の画像であるかどうかを判別する。
+ または、次の画像のように、画像が食品、おもちゃ、またはアプライアンスのいずれであるかを判断する場合。
 
 ![ピザの画像](./media/image-classification/220px-Pepperoni_pizza.jpg)
 ![テディ ベアの画像](./media/image-classification/119px-Nalle_-_a_small_brown_teddy_bear.jpg)
@@ -96,7 +96,7 @@ ms.locfileid: "70929238"
 * おもちゃ
 * アプライアンス
 
-レイヤーは、[多項ロジスティック回帰アルゴリズム](https://en.wikipedia.org/wiki/Multinomial_logistic_regression)を使用して正しいカテゴリを可能な限り早く見つけます。 このアルゴリズムでは、確率を使用して答えを決定し、正しいカテゴリに 1 の値を与え、他のカテゴリに 0 の値を与えます。  
+レイヤーは、[多項ロジスティック回帰アルゴリズム](https://en.wikipedia.org/wiki/Multinomial_logistic_regression)を使用して正しいカテゴリを可能な限り早く見つけます。 このアルゴリズムでは、確率を使用して答えを決定し、正しいカテゴリに 1 つの値を与え、他のカテゴリに 0 の値を与えます。  
 
 ### <a name="dataset"></a>DataSet
 
@@ -129,7 +129,7 @@ toaster2.png    appliance
 
 2. **Microsoft.ML NuGet パッケージ**をインストールします。
 
-    ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として "nuget.org" を選択し、[参照] タブを選択し、"**Microsoft.ML**" を検索します。 **[バージョン]** ドロップダウンをクリックし、一覧から **1.0.0** パッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.ImageAnalytics v1.0.0** と **Microsoft.ML.TensorFlow v0.12.0** についても、これらの手順を繰り返します。
+    ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として "nuget.org" を選択し、[参照] タブを選択し、"**Microsoft.ML**" を検索します。 **[バージョン]** ドロップダウンをクリックし、一覧から **1.0.0** パッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.ImageAnalytics v1.0.0** と **Microsoft.ML.TensorFlow v0.12.0** について、これらの手順を繰り返します。
 
 ### <a name="prepare-your-data"></a>データを準備する
 
@@ -355,7 +355,7 @@ ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)�
 
 [!code-csharp[EnumerateDataViews](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#EnumerateDataViews)]
 
-`ReuseAndTuneInceptionModel()` メソッドの次の行として、`DisplayResults()` メソッドを呼び出してデータと予測を表示します。
+次のコードを追加して、`ReuseAndTuneInceptionModel()` メソッドの次の行としてデータと予測を表示します。
 
 [!code-csharp[CallDisplayResults1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallDisplayResults1)]
 
