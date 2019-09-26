@@ -5,13 +5,13 @@ hide_bc: true
 title: .NET ドキュメント
 description: .NET で、C#、Visual Basic、および F# を使用して任意のプラットフォームでさまざまなアプリケーションを作成する方法を説明します。 API リファレンス、サンプル コード、チュートリアルなどを参照します。
 ms.custom: updateeachrelease
-ms.date: 09/04/2019
-ms.openlocfilehash: ec8b780100a41109f31084de0f37bec8c0fc680c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.date: 09/23/2019
+ms.openlocfilehash: cb567ea473e99c3bbd3d63a2328d45e94ca742ff
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928945"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216699"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -36,7 +36,7 @@ ms.locfileid: "70928945"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-2.2">
+                <a href="/dotnet/api/?view=netcore-3.0">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -268,7 +268,7 @@ ms.locfileid: "70928945"
                         </ul>
                     </li>
                     <li>
-                        <a href="#getstarted">概要</a>
+                        <a href="#getstarted">開始するには</a>
                         <ul id="getstarted" class="cardsC">
                             <li>
                                 <a href="/dotnet/csharp/tutorials/intro-to-csharp/hello-world">
@@ -725,7 +725,7 @@ ms.locfileid: "70928945"
                         </ul>
                     </li>
                     <li>
-                        <a href="#ml-ai">機械学習と AI</a>
+                        <a href="#ml-ai">Machine Learning と AI</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
                                 <a href="/dotnet/machine-learning/">

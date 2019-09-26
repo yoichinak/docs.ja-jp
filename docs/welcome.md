@@ -3,14 +3,14 @@ title: .NET にようこそ
 description: .NET ファミリのテクノロジの概要です。
 author: mairaw
 ms.author: mairaw
-ms.date: 05/06/2019
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 2927b892f8f83366a46cb113b3f0233bbd168974
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0b4a2380bf2ddb59c181a07d7f8a006d6252d11f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855469"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216854"
 ---
 # <a name="welcome-to-net"></a>.NET にようこそ
 
@@ -29,10 +29,10 @@ ms.locfileid: "70855469"
 
 また、最新の .NET イベントもご確認ください。
 
-- [Microsoft Connect()](https://www.microsoft.com/connectevent)
-- [Microsoft Build 2018](https://channel9.msdn.com/Events/Build/2018)
+- [Microsoft Build](https://www.microsoft.com/build)
 - [.NET Conf](https://www.dotnetconf.net/)
-
+- [Microsoft Connect()](https://www.microsoft.com/connectevent)
+- 
 .NET の実装およびサポートされている言語に追加された最新の機能の詳細については、次の記事を参照してください。
 
 - [.NET Core の新機能](core/whats-new/index.md)
@@ -52,8 +52,15 @@ ms.locfileid: "70855469"
 - [Visual Basic のガイド](visual-basic/index.md)
 - [ML.NET ガイド](machine-learning/index.yml)
 - [.NET for Apache Spark](spark/index.yml)
+- [.NET アプリケーション アーキテクチャ](architecture/index.yml)
 
 また、「[.NET API リファレンス](/dotnet/api)」を参照することもできます。
+
+## <a name="videos"></a>ビデオ
+
+Web、モバイル、デスクトップ、C#、機械学習、コンテナー/Docker、データ アクセスなどに関するビデオをご覧ください。
+
+[.NET 101 ビデオ シリーズ](https://dotnet.microsoft.com/learn/videos)
 
 ## <a name="open-source"></a>ソースを開く
 
