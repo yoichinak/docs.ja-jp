@@ -2,12 +2,12 @@
 title: コンテナー ベース アプリケーション用の Azure コンピューティング プラットフォームの選択
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |コンテナーベースのアプリケーションのための Azure コンピューティングプラットフォームの選択
 ms.date: 05/04/2018
-ms.openlocfilehash: 64ae542e006bf7a5d7a0be08fe1cff9770552a77
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 54c5945326fb8a50a39c50552a413580926da2c7
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578345"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331965"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>コンテナー ベース アプリケーション用の Azure コンピューティング プラットフォームの選択
 
@@ -25,9 +25,9 @@ ms.locfileid: "69578345"
 
 アプリケーションのニーズをより詳しく分析した後、選択された製品が異なる場合があります。 ただし、出発点として、特定の優先順位に基づいて評価とテストを開始できる最初のガイダンスを用意することをお勧めします。
 
-次の図では、さまざまな種類のアプリの内訳と、Azure ホスティングの理想的なシナリオを確認できます。
+図1では、さまざまな種類のアプリの内訳と、Azure ホスティングの理想的なシナリオを確認できます。
 
-![](./media/image8.5.png)
+![図 1](./media/image8.5.png)
 
 > [!div class="step-by-step"]
 > [前へ](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
