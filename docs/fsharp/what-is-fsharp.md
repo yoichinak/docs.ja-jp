@@ -1,15 +1,15 @@
 ---
 title: F# とは
-description: どのような F# プログラミング言語とはなどの F# プログラミングについて説明します。 豊富なデータ型、関数、およびそれらがどのように組み合わされているかについて説明します。
+description: プログラミング言語のF#概要とF#プログラミングについて説明します。 豊富なデータ型、関数、およびそれらがどのように組み合わされているかについて説明します。
 ms.date: 08/03/2018
-ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630463"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332732"
 ---
-# <a name="what-is-f"></a>F とは\#
+# <a name="what-is-f"></a>F @ no__t の概要-0
 
 F#は、適切で保守が容易なコードを簡単に記述できるようにする関数型プログラミング言語です。
 
@@ -45,7 +45,7 @@ F#には、次のようなさまざまな機能があります。
 * パターン マッチング
 * 非同期プログラミング
 
-機能の完全なセットが記載されて、 [F# 言語リファレンス](./language-reference/index.md)します。
+機能の完全なセットについては、「 [ F#言語リファレンス](./language-reference/index.md)」を参照してください。
 
 ## <a name="rich-data-types"></a>豊富なデータ型
 
@@ -100,7 +100,7 @@ F#関数もファーストクラスであり、パラメーターとして渡し
 F#では、オブジェクトが完全にサポートされています。これは、データと機能をブレンドする必要がある場合に便利なデータ型です。 F#関数は、オブジェクトの操作に使用されます。
 
 ```fsharp
-type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
+type Set<'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided
@@ -110,7 +110,6 @@ type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
     interface IEnumerable<‘T>
     interface IReadOnlyCollection<‘T>
 
-[<RequireQualifiedAccess>]
 module Set =
     let isEmpty (set: Set<'T>) = set.IsEmpty
 
@@ -119,8 +118,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-でF#は、オブジェクト指向のコードを記述するのではなく、多くの場合、オブジェクトを操作する関数の別のデータ型として扱うコードを記述します。 などの機能[ジェネリック インターフェイス](./language-reference/interfaces.md)、[オブジェクト式](./language-reference/object-expressions.md)とを賢く利用[メンバー](./language-reference/members/index.md)は大規模な F# プログラムでは一般的です。
+でF#は、オブジェクト指向のコードを記述するのではなく、多くの場合、オブジェクトを操作する関数の別のデータ型として扱うコードを記述します。 [汎用インターフェイス](./language-reference/interfaces.md)、[オブジェクト式](./language-reference/object-expressions.md)、[メンバー](./language-reference/members/index.md)の慎重な使用などの機能は、大規模F#なプログラムでよく見られます。
 
 ## <a name="next-steps"></a>次の手順
 
-多数の F# の機能の詳細については、チェック アウト、 [F# のツアー](tour.md)します。
+より大きなF#機能セットの詳細については、 [ F#ツアー](tour.md)をご覧ください。
