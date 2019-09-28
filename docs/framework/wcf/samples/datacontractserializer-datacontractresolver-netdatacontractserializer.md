@@ -2,12 +2,12 @@
 title: DataContractSerializer と DataContractResolver を使用した NetDataContractSerializer 機能の提供
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: d7102e60c8b5302d4f3bc83b356dbc7de117f57a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e52b6da80100cbffb7dc8725d16c31a67bc19445
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039863"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351665"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>DataContractSerializer と DataContractResolver を使用した NetDataContractSerializer 機能の提供
 このサンプルでは、<xref:System.Runtime.Serialization.DataContractSerializer> を適切な <xref:System.Runtime.Serialization.DataContractResolver> と共に使用して、<xref:System.Runtime.Serialization.NetDataContractSerializer> と同じ機能を提供する方法を示します。 このサンプルで示すのは、<xref:System.Runtime.Serialization.DataContractResolver> を作成して <xref:System.Runtime.Serialization.DataContractSerializer> に追加する方法です。
@@ -33,10 +33,7 @@ class MyDataContractResolver : DataContractResolver
     public override Type ResolveName(string typeName, string typeNamespace, DataContractResolver knownTypeResolver)
     {
         Type type = knownTypeResolver.ResolveName(typeName, typeNamespace, null);
-        if (type == null)
-        {
-            type = Type.GetType(typeName + ", " + typeNamespace);
-        }
+        type ??= Type.GetType(typeName + ", " + typeNamespace);
         return type;
     }
 

@@ -1,5 +1,5 @@
 ---
-title: <type1>'<typename>'実装する必要があります'<methodname>'interface' の<interfacename>'
+title: <type1>'<typename>' は、インターフェイス '<interfacename>' に対して '<methodname>' を実装しなければなりません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30149
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-ms.openlocfilehash: 432f089bc77928308820d7456d930fba8dc513f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c387b0225375f4675042bef593b23a084305b4fd
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013609"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591592"
 ---
-# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 >'\<typename >' を実装する必要があります '\<methodname >' のインターフェイス'\<interfacename >'
-クラスまたは構造体がインターフェイスを実装するために要求しているインターフェイスによって定義されたプロシージャを実装していません。 インターフェイスのすべてのメンバーを実装する必要があります。  
+# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 > ' \< typename > ' は、インターフェイス ' 3interfacename @no__t ' に ' >-2methodname @no__t ' を実装しなければなりません
+インターフェイスを実装するクラスまたは構造体が要求しますが、インターフェイスによって定義されたプロシージャは実装しません。 インターフェイスのすべてのメンバーを実装する必要があります。  
   
  **エラー ID:** BC30149  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1. 同じ名前と、インターフェイスで定義されたシグネチャを持つプロシージャを宣言します。 必ず含めて、少なくとも`End Function`または`End Sub`ステートメント。  
+1. インターフェイスで定義されているものと同じ名前およびシグネチャを持つプロシージャを宣言します。 少なくとも @no__t 0 または `End Sub` ステートメントを含めてください。  
   
-2. 追加、`Implements`句の末尾に、`Function`または`Sub`ステートメント。 例えば:  
+2. @No__t-1 または `Sub` ステートメントの末尾に `Implements` 句を追加します。 以下に例を示します。  
   
-    ```  
+    ```vb  
     Public Sub DoSomething() Implements IBaseInterface.DoSomething  
     ```  
   

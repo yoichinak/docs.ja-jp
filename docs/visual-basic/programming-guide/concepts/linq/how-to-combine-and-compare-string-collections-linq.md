@@ -2,12 +2,12 @@
 title: '方法: 文字列コレクションを結合および比較する (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 7b56185b98d89572e6a8e3b9bc8ed54ad6ef7b37
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d521e56f9ae311eea53028ba189416db289839cd
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631042"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352886"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>方法: 文字列コレクションを結合および比較する (LINQ) (Visual Basic)
 
@@ -17,7 +17,7 @@ ms.locfileid: "68631042"
 
 1. 次の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。
 
-    ```
+    ```text
     Bankov, Peter
     Holm, Michael
     Garcia, Hugo
@@ -32,7 +32,7 @@ ms.locfileid: "68631042"
 
 2. 次の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。 2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。
 
-    ```
+    ```text
     Liu, Jinghao
     Bankov, Peter
     Holm, Michael
@@ -165,7 +165,7 @@ End Class
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-VB.NET コンソールアプリケーションプロジェクトを作成します。 `Imports`これには、System. Linq 名前空間のステートメントを使用します。
+VB.NET コンソールアプリケーションプロジェクトを作成します。これには、名前空間の @no__t 0 ステートメントを使用します。
 
 ## <a name="see-also"></a>関連項目
 

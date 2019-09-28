@@ -1,22 +1,22 @@
 ---
-title: '方法: CSV テキスト ファイル (LINQ) (Visual Basic) で列の値を計算します。'
+title: '方法: CSV テキストファイルでの列の値の計算 (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 21f4e6445824a6664b5eaa7ff793ee925aa06cef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c7874615d62b09f3317a3ef39c28a0e74fd349d1
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592991"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351759"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>方法: CSV テキスト ファイル (LINQ) (Visual Basic) で列の値を計算します。
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>方法: CSV テキストファイルでの列の値の計算 (LINQ) (Visual Basic)
 この例では、合計、平均、最小、最大などの集計計算を .csv ファイルの列に対して実行する方法について説明します。 ここで説明する例の原則は、他の種類の構造化テキストにも適用できます。  
   
 ### <a name="to-create-the-source-file"></a>ソース ファイルを作成するには  
   
 1. 次の行を scores.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 最初の列は学生 ID、それに続く列は 4 つの試験の点数を表していると仮定します。  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -143,7 +143,7 @@ End Class
  このクエリでは、<xref:System.String.Split%2A> メソッドを使用してテキストの各行が配列に変換されます。 各配列要素が列を表します。 最終的に、各列のテキストが数値表記に変換されます。 ファイルがタブ区切りファイルの場合、`Split` メソッドの引数を `\t` に変更します。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
-VB.NET コンソール アプリケーション プロジェクトを作成、 `Imports` System.Linq 名前空間のステートメント。
+VB.NET コンソールアプリケーションプロジェクトを作成します。これには、名前空間の @no__t 0 ステートメントを使用します。
   
 ## <a name="see-also"></a>関連項目
 

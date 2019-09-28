@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd74da9be6d6b02817c8969befdc292f6e814628
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d37f7980c3024fa545e5395a4614dcd41a111794
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968706"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353194"
 ---
 # <a name="encrypting-data"></a>データの暗号化
 対称暗号化と非対称暗号化は、異なるプロセスを使用して実行されます。 対称暗号化は、ストリーム上で実行されるため、大量のデータの暗号化に役立ちます。 非対称暗号化は、少ないバイト数で実行されるため、少量のデータにのみ役立ちます。  
@@ -160,13 +160,13 @@ public class main
   
  前の例を正しく実行するためには、 <xref:System.Net.Sockets.TcpClient> クラスで指定された IP アドレスとポート番号をリッスンしているプロセスが存在する必要があります。 リッスンしているプロセスが存在する場合は、コードがリッスンしているプロセスに接続して、Rijndael の対称アルゴリズムを使用してストリームを暗号化し、"Hello World!" を ストリームに書き込みます。 コードが正常に実行された場合、コンソールに次のテキストが表示されます。  
   
-```  
+```console  
 The message was sent.  
 ```  
   
  ただし、リッスンしているプロセスが見つからないか、例外が発生した場合、コードによってコンソールに次のテキストが表示されます。  
   
-```  
+```console  
 The connection failed.  
 ```  
   

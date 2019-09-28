@@ -2,12 +2,12 @@
 title: Word 文書内のテキストの検索 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: f05df74f09373af140766f601cfae26404ada1b8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9eb5eaa8326167501792745da047f904cf001c29
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630912"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352927"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Word 文書内のテキストの検索 (Visual Basic)
 
@@ -155,7 +155,7 @@ End Module
 
 この例を実行すると、次の出力が生成されます。
 
-```
+```console
 StyleName:Code >        Console.WriteLine("Hello World")<
 StyleName:Code >Hello World<
 ```
@@ -296,7 +296,7 @@ End Module
 
 この例を実行すると、次の出力が生成されます。
 
-```
+```console
 StyleName:Code ><
 ```
 
@@ -312,6 +312,6 @@ StyleName:Code ><
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [純粋関数によるリファクタリング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
 - [LINQ to XML での遅延実行とレイジー評価 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

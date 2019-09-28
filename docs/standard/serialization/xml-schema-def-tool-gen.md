@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 77bb567d2b7b8fff2b1b8de43b2d5fa36fffb3b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b2cd67a1c4f30e6fe246124be5b8f7081c539a6
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017983"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392863"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>方法: XML スキーマ定義ツールを使用してクラスと XML スキーマ ドキュメントを生成する
 XML スキーマ定義ツール (Xsd.exe) を使用して、クラスを説明する XML スキーマを生成したり、XML スキーマで定義されるクラスを生成したりできます。 次の手順では、これらの操作の実行方法を示します。  
@@ -23,11 +23,11 @@ XML スキーマ定義ツール (Xsd.exe) を使用して、クラスを説明�
   
 2. XML スキーマ定義ツールに XML スキーマを引数として渡します。XML スキーマ定義ツールは、次のように XML スキーマに正確に一致するクラスのセットを作成します。  
   
-    ```  
+    ```console  
     xsd mySchema.xsd  
     ```  
   
-     ツールは、2001 年 3 月 16 日付けの World Wide Web Consortium XML 仕様を参照するスキーマのみを処理できます。 つまり、XML スキーマ名前空間がある必要があります"http://www.w3.org/2001/XMLSchema"次の例に示すようにします。  
+     ツールは、2001 年 3 月 16 日付けの World Wide Web Consortium XML 仕様を参照するスキーマのみを処理できます。 言い換えると、次の例に示すように、XML スキーマ名前空間は "http://www.w3.org/2001/XMLSchema" である必要があります。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -46,7 +46,7 @@ XML スキーマ定義ツール (Xsd.exe) を使用して、クラスを説明�
   
 3. 次の例に示すように、DLL を引数として Xsd.exe に渡します。  
   
-    ```  
+    ```console  
     xsd MyFile.dll  
     ```  
   
@@ -59,5 +59,5 @@ XML スキーマ定義ツール (Xsd.exe) を使用して、クラスを説明�
 - [XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [XML スキーマ定義ツール (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [方法: オブジェクトをシリアル化します。](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [方法: オブジェクトを逆シリアル化します。](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [2 つのオブジェクトが等しいかどうかをテストする方法オブジェクトをシリアル化する @ no__t-0
+- [2 つのオブジェクトが等しいかどうかをテストする方法オブジェクトを逆シリアル化する @ no__t-0

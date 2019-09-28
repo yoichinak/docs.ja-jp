@@ -2,12 +2,12 @@
 title: AttributeUsage (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 1841171f2f3fc26ba9244c72c69960b765d39807
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84c3d175aede5d8066198592ffac601c0bd97620
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789117"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351814"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 カスタム属性クラスの使用方法を決定します。 `AttributeUsage` は、カスタム属性の定義に適用して新しい属性の適用方法を制御できる属性です。 明示的に適用するときの既定の設定は次のようになります。  
@@ -64,7 +64,7 @@ End Class
   
  この例では、`AllowMultiple` が `true` に設定されているので、`MultiUseAttr` を繰り返し適用できます。 示されているどちらの形式でも、複数の属性を適用できます。  
   
- `Inherited` を `false` に設定すると、属性化されたクラスから派生するクラスは属性を継承しません。 例えば:  
+ `Inherited` を `false` に設定すると、属性化されたクラスから派生するクラスは属性を継承しません。 以下に例を示します。  
   
 ```vb  
 Imports System  
@@ -88,7 +88,7 @@ End Class
   
  この例では、`Attr1` は継承によって `DClass` に適用されません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `AttributeUsage` 属性は、1 回だけ使用できる属性です。同じクラスに複数回適用することはできません。 `AttributeUsage` は <xref:System.AttributeUsageAttribute> の別名です。  
   
  詳細については、「[リフレクションを使用した属性へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)」を参照してください。  
@@ -151,7 +151,7 @@ End Class
   
 ## <a name="sample-output"></a>出力例  
   
-```  
+```console  
 Attributes on Base Class:  
 A1  
 A2  
@@ -166,7 +166,7 @@ A2
 - <xref:System.Attribute>
 - <xref:System.Reflection>
 - [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
-- [属性](../../../../standard/attributes/index.md)
+- [Attributes](../../../../standard/attributes/index.md)
 - [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
 - [カスタム属性の作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)

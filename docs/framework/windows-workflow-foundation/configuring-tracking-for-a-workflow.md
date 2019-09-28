@@ -2,18 +2,18 @@
 title: ワークフローの追跡の構成
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: d8d3293fd2b271c0e1a00a1fca30d5ecd166df12
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 889efc804bb45b384dfde5b4deb520a81d1e5486
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690571"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353055"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>ワークフローの追跡の構成
 
 ワークフローは、次の 3 つの方法で実行できます。
 
-- <xref:System.ServiceModel.Activities.WorkflowServiceHost> でホストする
+- でホストされる <xref:System.ServiceModel.Activities.WorkflowServiceHost>
 
 - <xref:System.Activities.WorkflowApplication> として実行する
 
@@ -50,9 +50,9 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>ワークフロー サービス追跡の構成
 
-ホストされている場合は、WCF サービスとしてワークフローを公開することができます、<xref:System.ServiceModel.Activities.WorkflowServiceHost>サービス ホスト。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> は、ワークフロー ベースのサービスの .NET ServiceHost の特殊な実装です。 ここでは、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] で実行されている <xref:System.ServiceModel.Activities.WorkflowServiceHost> ワークフロー サービスの追跡を構成する方法について説明します。 Web.config ファイル (Web ホスト サービスの場合) または App.config ファイル (コンソール アプリケーションなどのスタンドアロン アプリケーションでホストされるサービスの場合) を介し、サービス動作を指定して構成するか、またはコードを介し、サービス ホスト用に <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> コレクションに追跡固有の動作を追加して構成できます。
+@No__t-0 サービスホストでホストされている場合、ワークフローは WCF サービスとして公開できます。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> は、ワークフロー ベースのサービスの .NET ServiceHost の特殊な実装です。 ここでは、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] で実行されている <xref:System.ServiceModel.Activities.WorkflowServiceHost> ワークフロー サービスの追跡を構成する方法について説明します。 Web.config ファイル (Web ホスト サービスの場合) または App.config ファイル (コンソール アプリケーションなどのスタンドアロン アプリケーションでホストされるサービスの場合) を介し、サービス動作を指定して構成するか、またはコードを介し、サービス ホスト用に <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> コレクションに追跡固有の動作を追加して構成できます。
 
-ワークフロー サービスがホストされている<xref:System.ServiceModel.WorkflowServiceHost>、追加することができます、<xref:System.Activities.Tracking.EtwTrackingParticipant>を使用して、<`behavior`> 次の例に示すように構成ファイル内の要素。
+@No__t-0 でホストされているワークフローサービスでは、次の例に示すように、構成ファイルで < `behavior` > 要素を使用して <xref:System.Activities.Tracking.EtwTrackingParticipant> を追加できます。
 
 ```xml
 <behaviors>
@@ -67,7 +67,7 @@ instance.Extensions.Add(trackingParticipant);
 また、<xref:System.ServiceModel.WorkflowServiceHost> でホストされるワークフロー サービスの場合、コードを介して <xref:System.Activities.Tracking.EtwTrackingParticipant> 動作拡張を追加できます。 カスタムの追跡参加要素を追加するには、次のコード例のように、新しい動作拡張を作成し、それを <xref:System.ServiceModel.ServiceHost> に追加します。
 
 > [!NOTE]
-> カスタム追跡参加要素を追加するカスタム動作要素を作成する方法を示すサンプル コードを表示する場合を参照してください。、[追跡](./samples/tracking.md)サンプル。
+> カスタム追跡参加要素を追加するカスタム動作要素を作成する方法を示すサンプルコードを表示する場合は、[追跡](./samples/tracking.md)のサンプルを参照してください。
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -95,10 +95,7 @@ TrackingProfile GetProfile(string profileName, string displayName)
                 return null;
             }
 
-            if (profileName == null)
-            {
-                profileName = "";
-            }
+            profileName ??= "";
 
             //Find the profile with the specified profile name in the list of profile found in config
             var match = from p in new List<TrackingProfile>(trackingSection.TrackingProfiles)
@@ -137,11 +134,11 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> 追跡プロファイルの詳細についてを参照してください[追跡プロファイル](https://go.microsoft.com/fwlink/?LinkId=201310)します。
+> 追跡プロファイルの詳細については、「[追跡プロファイル](https://go.microsoft.com/fwlink/?LinkId=201310)」を参照してください。
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>WorkflowInvoker を使用した追跡の構成
 
-<xref:System.Activities.WorkflowInvoker> を使用して実行するワークフローの追跡を構成するには、追跡プロバイダーを拡張として <xref:System.Activities.WorkflowInvoker> インスタンスに追加します。 次のコード例は、[カスタム追跡](./samples/custom-tracking.md)サンプル。
+<xref:System.Activities.WorkflowInvoker> を使用して実行するワークフローの追跡を構成するには、追跡プロバイダーを拡張として <xref:System.Activities.WorkflowInvoker> インスタンスに追加します。 次のコード例は、[カスタム追跡](./samples/custom-tracking.md)サンプルからのものです。
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -151,41 +148,41 @@ invoker.Invoke();
 
 ### <a name="viewing-tracking-records-in-event-viewer"></a>イベント ビューアーでの追跡レコードの表示
 
-WF 実行 - 分析ログとデバッグ ログ - を追跡すると、特に興味深い 2 つのイベント ビューアーのログ記録があります。 Microsoft での両方に存在&#124;Windows&#124;アプリケーション サーバー-アプリケーション ノード。 このセクション含まれるログは、システム全体に影響を及ぼすイベントではなく、1 つのアプリケーションからのイベントを格納します。
+WF 実行 - 分析ログとデバッグ ログ - を追跡すると、特に興味深い 2 つのイベント ビューアーのログ記録があります。 どちらも [Microsoft&#124;Windows&#124;アプリケーションサーバー-アプリケーション] ノードの下に存在します。 このセクション含まれるログは、システム全体に影響を及ぼすイベントではなく、1 つのアプリケーションからのイベントを格納します。
 
 デバッグ トレースのイベントがデバッグ ログに書き込まれます。 イベント ビューアー内の WF のデバッグ トレース イベントを収集するには、デバッグ ログを有効にします。
 
-1. イベント ビューアーを開くには、次のようにクリックします。**開始**、 をクリックし、**を実行します。** [実行] ダイアログ ボックスで、次のように入力します。`eventvwr`します。
+1. イベントビューアーを開くには、**スタート** をクリックし、実行 をクリックし**ます。** [実行] ダイアログボックスで、「`eventvwr`」と入力します。
 
-2. イベント ビューアー ダイアログ ボックスで、展開、 **Applications and Services Logs**ノード。
+2. イベントビューアー ダイアログで、**アプリケーションとサービスログ** ノードを展開します。
 
-3. 展開、 **Microsoft**、 **Windows**、および**アプリケーション サーバー-アプリケーション**ノード。
+3. **[Microsoft]** 、 **[Windows]** 、 **[アプリケーションサーバー-アプリケーション]** ノードの順に展開します。
 
-4. 右クリックし、**デバッグ**ノードの下、**アプリケーション サーバー-アプリケーション**ノード、および選択**ログの有効化**します。
+4. **[アプリケーションサーバー-アプリケーション]** ノードの下にある **[デバッグ]** ノードを右クリックし、 **[ログの有効化]** を選択します。
 
 5. トレースが有効になっているアプリケーションを実行して追跡イベントを生成します。
 
-6. 右クリックし、**デバッグ**ノード**を更新します。** トレース イベントが中央ペインに表示されます。
+6. **デバッグ** ノードを右クリックし、更新 を選択し**ます。** トレース イベントが中央ペインに表示されます。
 
 WF 4 には、追跡レコードを ETW (Event Tracing for Windows) セッションに書き込む追跡参加要素が用意されています。 ETW 追跡参加要素は、追跡レコードを定期受信するように追跡プロファイルで構成されています。 追跡が有効な場合は、エラーの追跡レコードが ETW に出力されます。 ETW 追跡参加要素によって出力される追跡イベントに対応する ETW 追跡イベント (100 ～ 113 の範囲にある) が分析ログに書き込まれます。
 
 追跡レコードを表示するには、次の手順を実行します。
 
-1. イベント ビューアーを開くには、次のようにクリックします。**開始**、 をクリックし、**を実行します。** [実行] ダイアログ ボックスで、次のように入力します。`eventvwr`します。
+1. イベントビューアーを開くには、**スタート** をクリックし、実行 をクリックし**ます。** [実行] ダイアログボックスで、「`eventvwr`」と入力します。
 
-2. イベント ビューアー ダイアログ ボックスで、展開、 **Applications and Services Logs**ノード。
+2. イベントビューアー ダイアログで、**アプリケーションとサービスログ** ノードを展開します。
 
-3. 展開、 **Microsoft**、 **Windows**、および**アプリケーション サーバー-アプリケーション**ノード。
+3. **[Microsoft]** 、 **[Windows]** 、 **[アプリケーションサーバー-アプリケーション]** ノードの順に展開します。
 
-4. 右クリックし、**分析**ノードの下、**アプリケーション サーバー-アプリケーション**ノード、および選択**ログの有効化**します。
+4. **[アプリケーションサーバー-アプリケーション]** ノードの下の **[分析]** ノードを右クリックし、 **[ログの有効化]** を選択します。
 
 5. 追跡が有効になっているアプリケーションを実行して追跡レコードを生成します。
 
-6. 右クリックし、**分析**ノード**を更新します。** 追跡レコードが中央ペインに表示されます。
+6. **分析** ノードを右クリックし、更新 を選択し**ます。** 追跡レコードが中央ペインに表示されます。
 
-次の図は、イベント ビューアーの追跡イベントを示しています。
+次の図は、イベントビューアーでの追跡イベントを示しています。
 
-![追跡レコード イベント ビューアーの表示のスクリーン ショット。](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
+![追跡レコードを示すイベントビューアーのスクリーンショット。](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>アプリケーション固有のプロバイダー ID の登録
 
@@ -199,7 +196,7 @@ WF 4 には、追跡レコードを ETW (Event Tracing for Windows) セッショ
     </system.serviceModel>
     ```
 
-2. %Windir%\Microsoft.NET\Framework のマニフェスト ファイルをコピー\\\<最新バージョンの[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man 一時的な場所に名前を変更します。Microsoft.Windows.ApplicationServer.Applications_Provider1.man
+2. マニフェストファイルを%windir%\Microsoft.NET\Framework @ no__t-0 @ no__t-1latest バージョンの [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] > \Microsoft.Windows.ApplicationServer.Applications.man から一時的な場所にコピーし、名前をに変更します。ApplicationServer. Applications_Provider1.
 
 3. マニフェスト ファイルの GUID を新しい GUID に変更します。
 
@@ -225,7 +222,7 @@ WF 4 には、追跡レコードを ETW (Event Tracing for Windows) セッショ
 
 6. 次の手順に従ってリソース DLL を生成します。
 
-    1. Windows SDK をインストールします。 Windows SDK には、メッセージ コンパイラが含まれています ([mc.exe](https://go.microsoft.com/fwlink/?LinkId=184606)) およびリソース コンパイラ ([rc.exe](https://go.microsoft.com/fwlink/?LinkId=184605))。
+    1. Windows SDK をインストールします。 Windows SDK には、メッセージコンパイラ ([mc](https://go.microsoft.com/fwlink/?LinkId=184606)) とリソースコンパイラ ([rc .exe](https://go.microsoft.com/fwlink/?LinkId=184605)) が含まれています。
 
     2. Windows SDK コマンド プロンプトで、新しいマニフェスト ファイルに対して mc.exe を実行します。
 
@@ -247,13 +244,13 @@ WF 4 には、追跡レコードを ETW (Event Tracing for Windows) セッショ
         csc /target:library /win32res:Microsoft.Windows.ApplicationServer.Applications_Provider1.res NewProviderReg.cs /out:Microsoft.Windows.ApplicationServer.Applications_Provider1.dll
         ```
 
-    6. マニフェスト ファイルからのリソースとメッセージ dll 名を変更`Microsoft.Windows.ApplicationServer.Applications.Provider1.man`新しい dll 名にします。
+    6. マニフェストファイルのリソースとメッセージ dll の名前を `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` から新しい dll 名に変更します。
 
         ```xml
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
         ```
 
-    7. 使用[wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608)マニフェストを登録します。
+    7. [Wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608)を使用してマニフェストを登録します。
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
@@ -262,4 +259,4 @@ WF 4 には、追跡レコードを ETW (Event Tracing for Windows) セッショ
 ## <a name="see-also"></a>関連項目
 
 - [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [App Fabric を使用したアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)

@@ -2,12 +2,12 @@
 title: 複製とアタッチ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
-ms.openlocfilehash: 59ffedfdbb2820683f1e6cc232154688f5c29fc8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2849c648d8d280200d742663cbc7188b344d8306
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789104"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352965"
 ---
 # <a name="cloning-vs-attaching-visual-basic"></a>複製とアタッチ (Visual Basic)
 <xref:System.Xml.Linq.XNode> オブジェクト (<xref:System.Xml.Linq.XElement> を含む) や <xref:System.Xml.Linq.XAttribute> オブジェクトを新しいツリーに追加するときに、新しいコンテンツに親がない場合、単にオブジェクトが XML ツリーにアタッチされます。 新しいコンテンツに既に親があり、別の XML ツリーの一部となっている場合は、新しいコンテンツが複製されます。 新しく複製されたコンテンツは、XML ツリーにアタッチされます。  
@@ -45,11 +45,11 @@ Console.WriteLine("Child2 was {0}", _
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ツリー (Visual Basic) の作成](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML ツリーの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

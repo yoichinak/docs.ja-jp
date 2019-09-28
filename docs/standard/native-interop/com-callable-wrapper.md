@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 601f9a216bc2e11ccb34f1f3b3df267002efb01f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: ebfc8f79303f89b092dd0fb38237dffffe0a93ba
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631466"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353905"
 ---
 # <a name="com-callable-wrapper"></a>COM 呼び出し可能ラッパー
 
@@ -100,7 +100,7 @@ public class Mammal
 
 COM クライアントは、`_Mammal` という名前のクラス インターフェイスへのポインターを取得できます。 .NET Framework では、[タイプ ライブラリ エクスポーター (Tlbexp.exe)](../../framework/tools/tlbexp-exe-type-library-exporter.md) ツールを使用して、`_Mammal`インターフェイス定義を含むタイプ ライブラリを生成できます。 タイプ ライブラリ エクスポーターは、.NET Core ではサポートされません。 `Mammal` クラスが 1 つ以上のインターフェイスを実装した場合、それらのインターフェイスはコクラスの下に表示されます。
 
-```
+```console
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]
 interface _Mammal : IDispatch
 {

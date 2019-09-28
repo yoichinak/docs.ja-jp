@@ -13,12 +13,12 @@ helpviewer_keywords:
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: KrzysztofCwalina
-ms.openlocfilehash: 7cf98b8ed1957352f357c7a9d580b4fd567a1634
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4da14575d29582814d32a3050087b7acc0da802
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757496"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353704"
 ---
 # <a name="names-of-type-members"></a>型のメンバーの名前
 型は次のメンバーで構成されています: メソッド、プロパティ、イベント、コンストラクター、フィールド。 次のセクションは、型のメンバーに名前を付けるためのガイドラインを示しています。  
@@ -28,7 +28,7 @@ ms.locfileid: "61757496"
   
  **✓ DO** 動詞または動詞句は、メソッドの名前を指定します。  
   
-```  
+```csharp  
 public class String {  
     public int CompareTo(...);  
     public string[] Split(...);  
@@ -56,7 +56,7 @@ public class String {
   
  たとえば、次のプロパティは、`Color` という名前の列挙値を適切に取得および設定するため、プロパティは `Color` という名前になります。  
   
-```  
+```csharp  
 public enum Color {...}  
 public class Control {  
     public Color Color { get {...} set {...} }  
@@ -99,7 +99,7 @@ public class Control {
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
+ [ Framework のデザインガイドラインから、ピアソン教育, Inc. のアクセス許可によって @no__t。再利用可能な .NET ライブラリの規則、表現、パターン、2番目のエディション @ no__t-0 by Krzysztof Cwalina、および Addison-Wesley Professional によって Microsoft Windows 開発シリーズの一部として2008年10月22日に公開さ @no__t れました。  
   
 ## <a name="see-also"></a>関連項目
 

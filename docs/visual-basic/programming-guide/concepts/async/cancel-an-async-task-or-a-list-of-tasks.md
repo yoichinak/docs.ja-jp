@@ -2,12 +2,12 @@
 title: 非同期タスクまたはタスクの一覧のキャンセル (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 2b2fa7447c046f70c840791e7fe9bd874ff3795f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 73627455b1f4460edfe165126a388e961e98921f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630957"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353136"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>非同期タスクまたはタスクの一覧のキャンセル (Visual Basic)
 
@@ -125,16 +125,16 @@ ms.locfileid: "68630957"
     End Function
     ```
 
-5. プログラムの取り消しをしない場合、次の出力を生成します。
+5. プログラムをキャンセルしない場合は、次の出力が生成されます。
 
-    ```
+    ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    プログラムがコンテンツのダウンロードを終了する前に**キャンセル** ボタンをクリックすると、プログラムは次の出力を生成します。
+    プログラムがコンテンツのダウンロードを完了する前に **[キャンセル**] ボタンをクリックすると、次の出力が生成されます。
 
-    ```
+    ```console
     Ready to download.
     Download canceled.
     ```
@@ -222,9 +222,9 @@ ms.locfileid: "68630957"
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. プログラムの取り消しをしない場合、次の出力を生成します。
+5. プログラムをキャンセルしない場合は、次の出力が生成されます。
 
-    ```
+    ```console
     Length of the downloaded string: 35939.
 
     Length of the downloaded string: 237682.
@@ -244,7 +244,7 @@ ms.locfileid: "68630957"
 
     ダウンロードが完了する前に**キャンセル** ボタンをクリックすると、出力には取り消しの前に完了したダウンロードの長さが含まれています。
 
-    ```
+    ```console
     Length of the downloaded string: 35939.
 
     Length of the downloaded string: 237682.

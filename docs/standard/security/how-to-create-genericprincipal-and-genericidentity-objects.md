@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b47f4c093acb094188cbd5a8a0a0026c67eb3f2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f768242bffe619051779f87e950138ae9fcec6c
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795162"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353186"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>方法: GenericPrincipal オブジェクトと GenericIdentity オブジェクトを作成する
 
-使用することができます、<xref:System.Security.Principal.GenericIdentity>クラスと組み合わせて、 <xref:System.Security.Principal.GenericPrincipal> Windows ドメインの独立した存在する承認スキームを作成するクラス。
+@No__t-0 クラスを <xref:System.Security.Principal.GenericPrincipal> クラスと共に使用して、Windows ドメインとは無関係に存在する認証スキームを作成できます。
 
 ### <a name="to-create-a-genericprincipal-object"></a>GenericPrincipal オブジェクトを作成するには
 
@@ -48,7 +48,7 @@ ms.locfileid: "61795162"
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. 次のコードを使用して、プリンシパルを現在のスレッドに結合します。 これは、プリンシパルが何回かを検証する必要がある、アプリケーションでは、実行中の他のコードで検証する必要がある必要がありますまたはで検証する必要がある必要があります、<xref:System.Security.Permissions.PrincipalPermission>オブジェクト。 このような場合でも、プリンシパル オブジェクトをスレッドに結合せずにロール ベースの検証を行うことができます。 詳細については、「[プリンシパル オブジェクトの置き換え](../../../docs/standard/security/replacing-a-principal-object.md)」を参照してください。
+3. 次のコードを使用して、プリンシパルを現在のスレッドに結合します。 これは、プリンシパルを複数回検証する必要がある場合、アプリケーションで実行されている他のコードによって検証する必要がある場合、または @no__t 0 オブジェクトで検証する必要がある場合に役立ちます。 このような場合でも、プリンシパル オブジェクトをスレッドに結合せずにロール ベースの検証を行うことができます。 詳細については、「[プリンシパル オブジェクトの置き換え](../../../docs/standard/security/replacing-a-principal-object.md)」を参照してください。
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -136,7 +136,7 @@ public class Class1
 
 実行されると、アプリケーションの出力は次のようになります。
 
-```
+```console
 The Name is: MyIdentity
 The IsAuthenticated is: True
 Is this a Manager? True

@@ -8,44 +8,48 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: 755443a99a1ad8b0430a76d2dba1ff27472d4c9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af0b62d6cfacbcf94f527e049e07e51bf496a6cf
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945068"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392760"
 ---
 # <a name="call-statement-visual-basic"></a>Call ステートメント (Visual Basic)
-転送コントロールを`Function`、 `Sub`、またはダイナミック リンク ライブラリ (DLL) プロシージャ。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-[ Call ] procedureName [ (argumentList) ]  
-```  
-  
-## <a name="parts"></a>指定項目  
+
+@No__t-0、@no__t 1、またはダイナミックリンクライブラリ (DLL) プロシージャに制御を転送します。
+
+## <a name="syntax"></a>構文
+
+```vb
+[ Call ] procedureName [ (argumentList) ]
+```
+
+## <a name="parts"></a>指定項目
+
 |||
 |---|---|
 |`procedureName`|必須。 呼び出すプロシージャの名前。|
-|`argumentList`|省略可能です。 変数または呼び出された場合、プロシージャに渡される引数を表す式の一覧です。 複数の引数は、コンマで区切られます。 含める場合`argumentList`かっこで囲む必要があります。|
+|`argumentList`|任意。 プロシージャが呼び出されたときにプロシージャに渡される引数を表す変数または式のリスト。 複数の引数は、コンマで区切ります。 @No__t-0 を指定する場合は、かっこで囲む必要があります。|
 |||
   
-## <a name="remarks"></a>Remarks  
- 使用することができます、`Call`プロシージャを呼び出すときに、キーワード。 ほとんどのプロシージャ呼び出しについては、このキーワードを使用する必要はありません。  
-  
- 通常、使用、`Call`キーワード、識別子で呼び出された式が開始しない場合。 使用、`Call`キーワードの他の使用はお勧めしません。  
-  
- プロシージャは、値を返す場合、`Call`ステートメントでは、それを破棄します。  
-  
-## <a name="example"></a>例  
- 次のコードは 2 つの例で、`Call`キーワードは、プロシージャを呼び出すために必要な。 どちらの例では、呼び出された式が識別子で開始しません。  
-  
+## <a name="remarks"></a>コメント
+
+ プロシージャを呼び出すときには、`Call` キーワードを使用できます。 ほとんどのプロシージャ呼び出しでは、このキーワードを使用する必要はありません。
+
+ 通常、呼び出された式が識別子で始まらない場合は、`Call` キーワードを使用します。 他の用途には `Call` キーワードを使用しないことをお勧めします。
+
+ プロシージャが値を返す場合、`Call` ステートメントはそれを破棄します。
+
+## <a name="example"></a>例
+
+ 次のコードは、プロシージャを呼び出すために @no__t 0 キーワードが必要な2つの例を示しています。 どちらの例でも、呼び出された式の先頭が識別子ではありません。
+
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Function ステートメント](function-statement.md)
+- [Sub ステートメント](sub-statement.md)
+- [Declare ステートメント](declare-statement.md)
+- [ラムダ式](../../programming-guide/language-features/procedures/lambda-expressions.md)

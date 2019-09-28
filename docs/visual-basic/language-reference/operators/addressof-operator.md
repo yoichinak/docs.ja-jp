@@ -8,38 +8,38 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: 098ca95687d8b0e9f4ac90d5c7e0df9a9a0ad950
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ebadf5ded1a23fe46b8e16cf18ae265b5d3c255
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760378"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591653"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf 演算子 (Visual Basic)
-特定のプロシージャを参照するデリゲート インスタンスを作成します。  
+特定のプロシージャを参照するデリゲートインスタンスを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 AddressOf procedurename  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `procedurename`  
- 必須。 新しく作成されたデリゲートが参照するプロシージャを指定します。  
+ 必須。 新しく作成されたデリゲートによって参照されるプロシージャを指定します。  
   
-## <a name="remarks"></a>Remarks  
- `AddressOf`演算子は、sub またはで指定された関数を指すデリゲートを作成します。`procedurename`します。 ときに、指定したプロシージャは、インスタンス メソッド、デリゲートがインスタンスとメソッドの両方を参照します。 次に、デリゲートが呼び出されたときに、指定したインスタンスの指定されたメソッドが呼び出されます。  
+## <a name="remarks"></a>コメント  
+ @No__t-0 演算子は、`procedurename` によって指定されたサブまたは関数を指すデリゲートを作成します。 指定されたプロシージャがインスタンスメソッドの場合、デリゲートはインスタンスとメソッドの両方を参照します。 次に、デリゲートが呼び出されると、指定したインスタンスの指定したメソッドが呼び出されます。  
   
- `AddressOf` Delegate コンス トラクターのオペランドとして使用できる演算子またはにおいて、コンパイラによってデリゲートの型を決定するために使用できます。  
+ @No__t-0 演算子は、デリゲートコンストラクターのオペランドとして使用することも、コンパイラによってデリゲートの型を決定できるコンテキストで使用することもできます。  
   
 ## <a name="example"></a>例  
- この例では、`AddressOf`を処理するデリゲートを指定する演算子、`Click`ボタンのイベント。  
+ この例では、`AddressOf` 演算子を使用して、ボタンの @no__t イベントを処理するデリゲートを指定します。  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>例  
- 次の例では、`AddressOf`スレッドのスタートアップ関数を指定する演算子。  
+ 次の例では、`AddressOf` 演算子を使用して、スレッドのスタートアップ関数を指定します。  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   

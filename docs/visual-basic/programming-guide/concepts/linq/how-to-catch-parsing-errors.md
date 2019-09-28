@@ -1,15 +1,15 @@
 ---
-title: '方法: 解析 (Visual Basic) のエラーをキャッチします。'
+title: '方法: 解析エラーのキャッチ (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-ms.openlocfilehash: 1a5d01d4853a9fd0cc7f0a0e5071b394ab3f218b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0c0749e8bc6d3fb1a71595778bfc5effaaf8533
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855637"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352931"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a>方法: 解析 (Visual Basic) のエラーをキャッチします。
+# <a name="how-to-catch-parsing-errors-visual-basic"></a>方法: 解析エラーのキャッチ (Visual Basic)
 このトピックでは、形式が正しくないか無効な XML を検出する方法について説明します。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、<xref:System.Xml.XmlReader> を使用して実装されます。 形式が正しくない XML や無効な XML が [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] に渡されると、基になる <xref:System.Xml.XmlReader> クラスから例外がスローされます。 XML を解析するさまざまなメソッド (<xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType> など) はこの例外をキャッチしません。この例外は、アプリケーションでキャッチできます。  
@@ -35,7 +35,7 @@ End Try
   
  このコードを実行すると、次の例外がスローされます。  
   
-```  
+```console  
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   
@@ -43,4 +43,4 @@ The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line
   
 ## <a name="see-also"></a>関連項目
 
-- [(Visual Basic) の XML の解析](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML の解析 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

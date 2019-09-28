@@ -2,12 +2,12 @@
 title: ソース Office Open XML ドキュメントの作成 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: d01755442a9b64e0577ace4eb05c6818dac9a824
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 75030f3d1c2940cc84f81b85dca921497137439f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965250"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352947"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>ソース Office Open XML ドキュメントの作成 (Visual Basic)
 このトピックでは、このチュートリアルの他の例で使用する Office Open XML WordprocessingML ドキュメントを作成する方法について説明します。 この手順に従うと、それぞれの例に記載されているとおりの出力が得られます。  
@@ -24,7 +24,7 @@ ms.locfileid: "69965250"
   
 2. 新しい文書に次のテキストを貼り付けます。  
   
-    ```  
+    ```text  
     Parsing WordprocessingML with LINQ to XML  
   
     The following example prints to the console.  
@@ -55,4 +55,4 @@ ms.locfileid: "69965250"
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -2,12 +2,12 @@
 title: 非同期アプリでの再入の処理 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: bc8156b1d2baa53255870364e680d62d7b93a50f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 199b7ce2cb8b3f3b8e220f9e2bab7e9c39a8d033
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630941"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351988"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>非同期アプリでの再入の処理 (Visual Basic)
 
@@ -22,7 +22,7 @@ ms.locfileid: "68630941"
 
 次の例は、ユーザーが 1 度だけ **[Start]** をクリックした場合の出力を示しています。 ダウンロードされた Web サイトの一覧には、各サイトのサイズがバイト単位で表示されます。 合計バイト数は最後に表示されます。
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -37,7 +37,7 @@ TOTAL bytes returned:  890591
 
 ただし、ユーザーがボタンを複数回クリックすると、イベント ハンドラーは繰り返し呼び出され、ダウンロード プロセスはそのたびに再入力されます。 その結果、複数の非同期操作が同時に実行され、出力は結果をインターリーブするので、合計バイト数がややこしくなります。
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -94,7 +94,7 @@ TOTAL bytes returned:  890591
 
 処理の実行中に **[Start]** ボタンを利用できないようにするには、`StartButton_Click` イベント ハンドラーの上部にあるボタンを無効にします。 処理が完了しユーザーが再度アプリを実行できるようになったら、`Finally` ブロック内からこのボタンを再度有効にできます。
 
-次のコードはこの変更を示しています。変更の部分にはアスタリスクが付いています。 このトピックの最後にあるコードに変更を追加することも、完成したアプリを非同期のサンプル[からダウンロードすることもできます。Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」 (非同期の例: .NET デスクトップ アプリでの再入) からダウンロードします。 プロジェクト名は DisableStartButton です。
+次のコードはこの変更を示しています。変更の部分にはアスタリスクが付いています。 このトピックの最後にあるコードに変更を追加することも、完成したアプリを @no__t 0Async のサンプルからダウンロードすることもできます。Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」 (非同期の例: .NET デスクトップ アプリでの再入) からダウンロードします。 プロジェクト名は DisableStartButton です。
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -136,7 +136,7 @@ End Sub
         Dim cts As CancellationTokenSource
     ```
 
-2. `StartButton_Click` で、処理が既に実行されているかどうかを確認します。 の値が`Nothing`の`cts`場合、操作は既にアクティブになっていません。 値がでない`Nothing`場合、既に実行されている操作は取り消されます。
+2. `StartButton_Click` で、処理が既に実行されているかどうかを確認します。 @No__t-0 の値が-1 @no__t 場合、操作は既にアクティブになっていません。 値が @no__t 0 以外の場合、既に実行されている操作は取り消されます。
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -153,7 +153,7 @@ End Sub
     cts = newCTS
     ```
 
-4. の`StartButton_Click`最後に、現在のプロセスが完了したので、の`cts`値をに`Nothing`設定します。
+4. @No__t-0 の最後には、現在のプロセスが完了しているため、`cts` の値を `Nothing` に戻します。
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -245,9 +245,9 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-このアプリの実行中に複数回 **[Start]** ボタンをクリックすると、次の出力のような結果が生成されます。
+このアプリの実行中に何度も **[開始]** ボタンをクリックすると、次の出力のような結果が生成されます。
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -285,7 +285,7 @@ TOTAL bytes returned:  890591
 
 次の出力は、ユーザーが 1 度だけ **[Start]** ボタンをクリックした場合の結果を示しています。 文字ラベル A は、 **[Start]** ボタンが最初にクリックされた結果であることを示しています。 数字は、ダウンロード対象の一覧における URL の順序を示しています。
 
-```
+```console
 #Starting group A.
 #Task assigned for group A.
 
@@ -305,7 +305,7 @@ TOTAL bytes returned:  918876
 
 ユーザーが **[Start]** ボタンを 3 回クリックすると、アプリでは次のような出力が生成されます。 先頭にシャープ記号 (#) が付いている情報行は、アプリケーションの進行状況を追跡します。
 
-```
+```console
 #Starting group A.
 #Task assigned for group A.
 
@@ -479,7 +479,7 @@ End Function
 
 - 前のグループが出力を表示していても、グループを開始できます。その際、前のグループの出力の表示は中断されません。
 
-  ```
+  ```console
   #Starting group A.
   #Task assigned for group A. Download tasks are active.
 
@@ -513,11 +513,11 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- このタスクは`Nothing` 、最初に開始`FinishOneGroupAsync`したグループ A に対してのみ開始されます。 `pendingWork` `FinishOneGroupAsync` に達したとき、グループ A はまだ await 式を完了していません。 したがって、コントロールは `AccessTheWebAsync` に戻っておらず、`pendingWork` への最初の割り当ては発生していません。
+- @No__t 0 のタスクは、最初に開始されたグループ A に対してのみ `FinishOneGroupAsync` の開始時に `Nothing` になります。 `FinishOneGroupAsync` に達したとき、グループ A はまだ await 式を完了していません。 したがって、コントロールは `AccessTheWebAsync` に戻っておらず、`pendingWork` への最初の割り当ては発生していません。
 
 - 次の 2 行は、出力に必ず同時に表示されます。 `StartButton_Click` のグループ操作が開始してから、グループのタスクが `pendingWork` に割り当てられるまでの間、コードが中断されることは決してありません。
 
-  ```
+  ```console
   #Starting group B.
   #Task assigned for group B. Download tasks are active.
   ```
@@ -677,5 +677,5 @@ End Function
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: Async および Await を使用した Web へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [チュートリアル: Async および Await を使用した Web へのアクセス (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

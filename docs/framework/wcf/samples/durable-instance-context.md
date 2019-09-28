@@ -2,12 +2,12 @@
 title: 永続性インスタンス コンテキスト
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 85a00c6d100001fad429f1e58d716f0d7bedcceb
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 4c2e39aa257d4b4b9b3bd28e0cd469f09cae0766
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989984"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351627"
 ---
 # <a name="durable-instance-context"></a>永続性インスタンス コンテキスト
 
@@ -297,11 +297,7 @@ public object GetInstance(InstanceContext instanceContext, Message message)
 
     instance = storageManager.GetInstance(contextId, serviceType);
 
-    if (instance == null)
-    {
-        instance = Activator.CreateInstance(serviceType);
-    }
-
+    instance ??= Activator.CreateInstance(serviceType);
     return instance;
 }
 ```

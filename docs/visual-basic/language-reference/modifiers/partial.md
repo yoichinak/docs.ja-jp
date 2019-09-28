@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: dd7550b8b1e164c55bd97828d395b43a60c87cfb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: acfe47f52ede289093b3554a7dd190ef3f0e2c80
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929948"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592112"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 型宣言が、型の部分定義であることを示します。  
@@ -31,7 +31,7 @@ ms.locfileid: "69929948"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 [ <attrlist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] _  
 Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]  
     [ Inherits classname ]  
@@ -43,25 +43,25 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|項目|定義|  
 |---|---|  
-|`attrlist`|省略可能です。 この型に適用される属性の一覧です。 [属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)は山かっこ (`< >`) で囲む必要があります。|  
-|`accessmodifier`|省略可能です。 どのようなコードから型にアクセスできるのかを指定します。 「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
+|`attrlist`|任意。 この型に適用される属性の一覧です。 [属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)は山かっこ (`< >`) で囲む必要があります。|  
+|`accessmodifier`|任意。 どのようなコードから型にアクセスできるのかを指定します。 「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
 |`Shadows`|任意。 「[シャドウ](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。|  
-|`MustInherit`|省略可能です。 「 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)」を参照してください。|  
-|`NotInheritable`|省略可能です。 「 [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)」を参照してください。|  
+|`MustInherit`|任意。 「 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)」を参照してください。|  
+|`NotInheritable`|任意。 「 [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)」を参照してください。|  
 |`name`|必須。 この型の名前です。 同じ型の他のすべての部分宣言で定義されている名前と一致する必要があります。|  
-|`Of`|省略可能です。 これがジェネリック型であることを指定します。 「 [Visual Basic のジェネリック型」を](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)参照してください。|  
+|`Of`|任意。 これがジェネリック型であることを指定します。 「 [Visual Basic のジェネリック型」を](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)参照してください。|  
 |`typelist`|[を使用する](../../../visual-basic/language-reference/statements/of-clause.md)場合は必須です。 [型リスト](../../../visual-basic/language-reference/statements/type-list.md)を参照してください。|  
-|`Inherits`|省略可能です。 「 [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)」を参照してください。|  
+|`Inherits`|任意。 「 [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)」を参照してください。|  
 |`classname`|`Inherits` を使用する場合は必ず指定します。 このクラスの派生元のクラスまたはインターフェイスの名前です。|  
-|`Implements`|省略可能です。 「 [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)」を参照してください。|  
+|`Implements`|任意。 「 [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)」を参照してください。|  
 |`interfacenames`|`Implements` を使用する場合は必ず指定します。 この型が実装するインターフェイスの名前を指定します。|  
-|`variabledeclarations`|省略可能です。 この型の追加の変数やイベントを宣言するステートメントです。|  
-|`proceduredeclarations`|省略可能です。 この型の追加のプロシージャを宣言および定義するステートメントです。|  
+|`variabledeclarations`|任意。 この型の追加の変数やイベントを宣言するステートメントです。|  
+|`proceduredeclarations`|任意。 この型の追加のプロシージャを宣言および定義するステートメントです。|  
 |`End Class` または `End Structure`|この `Class` または `Structure` の部分定義を終了します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  Visual Basic では、部分クラス定義を使用して、生成されたコードとユーザーが作成したコードとを別々のソース ファイルに分離します。 たとえば、**Windows フォーム デザイナー**では、<xref:System.Windows.Forms.Form> などのコントロールに部分クラスを定義します。 これらのコントロールでは、生成されたコードを変更しないでください。  
   
  部分型を作成する際、クラス、構造体、インターフェイス、およびモジュールの作成に関するすべての規則 (修飾子の利用法や継承に関する規則など) が適用されます。  
@@ -99,5 +99,5 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 - [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [型の上位変換](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [部分メソッド](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

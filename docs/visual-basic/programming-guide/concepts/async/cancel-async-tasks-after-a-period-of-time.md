@@ -2,12 +2,12 @@
 title: 指定した時間の経過後の非同期タスクのキャンセル (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: 636e8ffc86ce2849d563094bb780943f57d9cfa4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b2c0428a6b8affa6b489e48daf4e008ee26e7f3
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958145"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352012"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>指定した時間の経過後の非同期タスクのキャンセル (Visual Basic)
 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> メソッドを使用すると、一定の時間が過ぎた後に非同期操作が完了するまで待たない場合に、その操作を取り消しできます。 このメソッドは、`CancelAfter` 式によって指定された時間内に完了しない、関連付けられたタスクの取り消しをスケジュールします。  
@@ -71,9 +71,9 @@ Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub  
 ```  
   
- プログラムを複数回実行して、出力がすべての Web サイトの出力を示したり、どの Web サイトの出力も示さなかったり、一部の Web サイトの出力を示したりすることを確認します。 出力例を次に示します。  
+ プログラムを複数回実行して、出力がすべての Web サイトの出力を示したり、どの Web サイトの出力も示さなかったり、一部の Web サイトの出力を示したりすることを確認します。 次の出力はサンプルです。  
   
-```  
+```console  
 Length of the downloaded string: 35990.  
   
 Length of the downloaded string: 407399.  
@@ -192,7 +192,7 @@ End Class
 ## <a name="see-also"></a>関連項目
 
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [チュートリアル: Async および Await を使用した Web へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [チュートリアル: Async および Await を使用した Web へのアクセス (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [非同期タスクまたはタスクの一覧のキャンセル (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
 - [非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [Async Sample:Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

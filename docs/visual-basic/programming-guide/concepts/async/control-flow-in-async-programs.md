@@ -2,12 +2,12 @@
 title: 非同期プログラムの制御フロー (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 265efde93cec87594a0407309b58b6bdf11817af
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 74942ec3d293485ea6aae3940d1715af8de67c90
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630595"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352120"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>非同期プログラムの制御フロー (Visual Basic)
 
@@ -16,7 +16,7 @@ ms.locfileid: "68630595"
 > [!NOTE]
 > `Async` キーワードおよび `Await` キーワードは、Visual Studio 2012 で導入されました。
 
-通常、[非同期修飾子を](../../../../visual-basic/language-reference/modifiers/async.md)使用して非同期コードを含むメソッドをマークします。 Async 修飾子でマークされたメソッドでは、 [Await (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md)演算子を使用して、呼び出された非同期処理が完了するまでメソッドが一時停止する場所を指定できます。 詳細については、「 [Async および Await を使用した非同期プログラミング」 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)を参照してください。
+通常、[非同期修飾子を使用して](../../../../visual-basic/language-reference/modifiers/async.md)非同期コードを含むメソッドをマークします。 Async 修飾子でマークされたメソッドでは、 [Await (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md)演算子を使用して、呼び出された非同期処理が完了するまでメソッドが一時停止する場所を指定できます。 詳細については、「 [Async および Await を使用した非同期プログラミング」 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)を参照してください。
 
 次の例では、非同期メソッドを使用して、指定した Web サイトのコンテンツを文字列としてダウンロードし、その文字列の長さを表示します。 この例には、次の 2 つのメソッドが含まれています。
 
@@ -64,7 +64,7 @@ End Class
 
 「1」から「6」までのそれぞれのラベルの位置は、プログラムの現在の状態に関する情報を表示します。 次の出力が生成されます。
 
-```
+```console
 ONE:   Entering startButton_Click.
            Calling AccessTheWebAsync.
 
@@ -222,7 +222,7 @@ Length of the downloaded string: 33946.
 
     次の出力が表示されます。
 
-    ```
+    ```console
     ONE:   Entering startButton_Click.
                Calling AccessTheWebAsync.
 
@@ -274,7 +274,7 @@ Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.micro
 
 このタスクは `client.GetStringAsync` により実際の文字列が最終的に生成される約束と見なすことができます。 `AccessTheWebAsync` には `client.GetStringAsync` から約束された文字列に依存しない処理がある場合、その処理は `client.GetStringAsync` を待機している間は、続行できます。 この例では、"THREE" のラベルの付いた行の出力は、独立した処理を行う機会を表します。
 
-```
+```console
 THREE: Back in AccessTheWebAsync.
            Task getStringTask is started.
            About to await getStringTask & return a Task<int> to startButton_Click.
@@ -286,7 +286,7 @@ THREE: Back in AccessTheWebAsync.
 Dim urlContents As String = Await getStringTask
 ```
 
-次の図は、から`client.GetStringAsync`への`getStringTask`割り当てへの制御フロー、およびの`getStringTask`作成から Await 演算子のアプリケーションへの制御フローを示しています。
+次の図は、`client.GetStringAsync` から @no__t への割り当てへの制御フロー、`getStringTask` の作成から Await 演算子の適用までのフローを示しています。
 
 ![手順 3.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")
 
@@ -307,9 +307,9 @@ await 式は `AccessTheWebAsync` が制御を返すまで `client.GetStringAsync
 Dim getLengthTask As Task(Of Integer) = AccessTheWebAsync()
 ```
 
-`AccessTheWebAsync` と同様に、`startButton_Click` は、非同期タスク (`getLengthTask`) の結果に依存しない処理を、タスクが待機するまで続行できます。 次の出力行はその処理を表します。
+`AccessTheWebAsync` と同様に、`startButton_Click` は、非同期タスク (`getLengthTask`) の結果に依存しない処理を、タスクが待機するまで続行できます。 次の出力行はその作業を表しています。
 
-```
+```console
 FOUR:  Back in startButton_Click.
            Task getLengthTask is started.
            About to await getLengthTask -- no caller to return to.
@@ -329,7 +329,7 @@ Dim contentLength As Integer = Await getLengthTask
 
 `client.GetStringAsync` が終了を通知すると、`AccessTheWebAsync` の処理は中断から解放され、await ステートメントを越えて続行できます。 次の出力行は、処理の再開を表します。
 
-```
+```console
 FIVE:  Back in AccessTheWebAsync.
            Task getStringTask is complete.
            Processing the return statement.
@@ -350,7 +350,7 @@ return ステートメントのオペランド `urlContents.Length` は `AccessT
 
 次の出力行は、`startButton_Async` の処理の再開を表します。
 
-```
+```console
 SIX:   Back in startButton_Click.
            Task getLengthTask is finished.
            Result from AccessTheWebAsync is stored in contentLength.
@@ -371,5 +371,5 @@ Dim contentLength As Integer = Await getLengthTask
 
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [非同期の戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [チュートリアル: Async および Await を使用した Web へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [チュートリアル: Async および Await を使用した Web へのアクセス (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async Sample:非同期プログラムにおける制御フロー (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

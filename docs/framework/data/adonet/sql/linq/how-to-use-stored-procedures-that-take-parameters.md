@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 4f2636d3bb248adbb6b912887012b0b9c246c590
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c2b657f704d072b987578be5520a58d007ecac37
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793064"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353019"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>方法: パラメーターを受け取るストアド プロシージャを使用する
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、出力パラメーターを参照パラメーターに対応付け、値型はパラメーターを null 許容型として宣言します。  
   
- 行セットを返すクエリで入力パラメーターを使用する方法の例については、 [「」を参照してください。行セット](how-to-return-rowsets.md)を返します。  
+ 行セットを返すクエリで入力パラメーターを使用する方法の例については、「@no__t」を参照してください。行セット @ no__t-0 を返します。  
   
 ## <a name="example"></a>例  
  次の例は、単一の入力パラメーター (顧客 ID) を受け取り、出力パラメーター (その顧客の売上合計) を返します。  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [ストアド プロシージャ](stored-procedures.md)
 - [サンプル データベースのダウンロード](downloading-sample-databases.md)
-- [Null 許容型の使用](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Null 許容値型の使用](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [null 許容値型](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

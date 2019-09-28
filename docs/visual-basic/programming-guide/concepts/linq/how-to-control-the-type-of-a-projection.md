@@ -1,15 +1,15 @@
 ---
-title: '方法: 射影 (Visual Basic) の種類を制御します。'
+title: '方法: プロジェクションの種類を制御する (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
-ms.openlocfilehash: dd09914a75a8d4b20ddf9ff452f046bf7671152f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ec53d1f8e0ae4957857d4b71fddd05205dee6b5
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051788"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351737"
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>方法: 射影 (Visual Basic) の種類を制御します。
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>方法: プロジェクションの種類を制御する (Visual Basic)
 射影は、1 つのデータのセットを取得し、フィルター処理し、その形式を変更し、その型も変更するプロセスです。 ほとんどのクエリ式は射影を実行します。 このセクション内のクエリ式は、ほとんどが <xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement> に評価されますが、射影の型を制御して別の型のコレクションを作成することができます。 このトピックでは、その方法について説明します。  
   
 ## <a name="example"></a>例  
@@ -79,7 +79,7 @@ End Sub
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 GREAL:Great Lakes Food Market:Howard Snyder  
 HUNGC:Hungry Coyote Import Store:Yoshi Latimer  
 LAZYK:Lazy K Kountry Store:John Steel  
@@ -89,4 +89,4 @@ LETSS:Let's Stop N Shop:Jaime Yorres
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq.Enumerable.Select%2A>
-- [射影と変換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [プロジェクションと変換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

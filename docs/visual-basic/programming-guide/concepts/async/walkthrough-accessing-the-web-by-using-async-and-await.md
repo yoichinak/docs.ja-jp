@@ -2,12 +2,12 @@
 title: 'チュートリアル: Async および Await を使用した Web へのアクセス (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 72132c4884f3d9bc94de447a122354b3e0dc2ee5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 2d9d3ea3d55fcd3a59039f4b8b93f37df35bf86d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928450"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351907"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>チュートリアル: Async および Await を使用した Web へのアクセス (Visual Basic)
 
@@ -217,7 +217,7 @@ async/await 機能を使用することで、非同期プログラムをより�
 
     次の一覧のような出力が表示されます。
 
-    ```
+    ```console
     msdn.microsoft.com/library/windows/apps/br211380.aspx        383832
     msdn.microsoft.com                                            33964
     msdn.microsoft.com/library/hh290136.aspx               225793
@@ -666,5 +666,5 @@ End Class
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [非同期の戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
 - [タスク ベースの非同期プログラミング (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)
-- [方法: Task.whenall (Visual Basic) を使用して非同期のチュートリアルを拡張する](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [方法: Async と Await を使用して複数の Web 要求を並列で作成する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [2 つのオブジェクトが等しいかどうかをテストする方法Task.whenall (Visual Basic) を使用して非同期のチュートリアルを拡張する](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [2 つのオブジェクトが等しいかどうかをテストする方法Async と Await を使用して複数の Web 要求を並列で作成する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

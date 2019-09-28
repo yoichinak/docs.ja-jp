@@ -2,12 +2,12 @@
 title: 遅延実行の例 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: 29f118b3e6d49840b94277f17858f1339f2fb08c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d1f66cbe246b609f634989625688965dd4e5c93
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977627"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351805"
 ---
 # <a name="deferred-execution-example-visual-basic"></a>遅延実行の例 (Visual Basic)
 このトピックでは、遅延実行とレイジー評価が LINQ to XML クエリの実行にどのように影響するかについて説明します。  
@@ -46,7 +46,7 @@ End Module
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console  
 ToUpper: source abc  
 Main: str ABC  
 ToUpper: source def  
@@ -61,4 +61,4 @@ Main: str GHI
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: 遅延実行 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [チュートリアル: 遅延実行 (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

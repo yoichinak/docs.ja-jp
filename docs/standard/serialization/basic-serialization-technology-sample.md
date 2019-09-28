@@ -2,12 +2,12 @@
 title: 基本的なシリアル化の技術サンプル
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 73bc600c7b4339c1f53ca6e366ae6030015ecfaf
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e5dcc9ec7cf6f996c97262b14020552286c530da
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663768"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353138"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本的なシリアル化の技術サンプル
 
@@ -25,7 +25,7 @@ ms.locfileid: "67663768"
 
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio を使用してサンプルをビルドするには
 
-1. ファイル エクスプ ローラーを開き、サンプルの言語固有のサブディレクトリのいずれかに移動します。
+1. ファイルエクスプローラーを開き、サンプルの言語固有のサブディレクトリのいずれかに移動します。
 
 2. 使用しているプログラミング言語に応じて、SerializationCS.sln ファイル、SerializationJSL.sln ファイル、または SerializationVB.sln ファイルのアイコンをダブルクリックして、このファイルを Visual Studio で開きます。
 
@@ -42,13 +42,13 @@ ms.locfileid: "67663768"
   > [!NOTE]
   > このサンプルでは、コンソール アプリケーションをビルドします。 出力を表示するには、コマンド プロンプトでこれを実行する必要があります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 このサンプル アプリケーションは、実行するテストを示すコマンド ライン パラメーターを受け取ります。 SOAP フォーマッタを使用して、ノード数 10 個のリストを **Test.xml** というファイルにシリアル化するには、**sx Test.xml 10** というパラメーターを使用します。
 
 たとえば、次のように入力します。
 
-```
+```console
 Serialize.exe -sx Test.xml 10
 ```
 
@@ -56,7 +56,7 @@ Serialize.exe -sx Test.xml 10
 
 たとえば、次のように入力します。
 
-```
+```console
 Serialize.exe -dx Test.xml
 ```
 
@@ -64,7 +64,7 @@ Serialize.exe -dx Test.xml
 
 たとえば、次のように入力します。
 
-```
+```console
 Serialize.exe -sb Test.bin 10000 >somefile.txt
 ```
 
@@ -72,11 +72,11 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 
 - ランタイム シリアル化
 
-  - <xref:System.Runtime.Serialization.IFormatter> いずれかを参照するために使用する<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>または<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>オブジェクト。
+  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> @no__t または @no__t 2 つのオブジェクトのいずれかを参照するために使用されます。
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> リンクのリストをバイナリ形式でストリームにシリアル化するために使用します。 バイナリ フォーマッタでは、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型でのみ理解できる形式を使用します。 ただし、データは簡潔です。
+  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> バイナリ形式でリンクリストをストリームにシリアル化するために使用されます。 バイナリ フォーマッタでは、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型でのみ理解できる形式を使用します。 ただし、データは簡潔です。
 
-  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> リンクされたリストを SOAP 形式でストリームにシリアル化するために使用します。 SOAP は標準の形式です。
+  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> は、SOAP 形式でリンクリストをストリームにシリアル化するために使用されます。 SOAP は標準の形式です。
 
 - ストリーム入出力
 
