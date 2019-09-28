@@ -9,7 +9,7 @@
       href: concepts/
     - name: ステートメント、式、および演算子
       href: statements-expressions-operators/
-    - name: 種類
+    - name: 型
       href: types/
     - name: クラスと構造体
       href: classes-and-structs/
@@ -31,9 +31,9 @@
       href: generics/
     - name: 名前空間
       href: namespaces/
-    - name: Null 許容型
+    - name: null 許容値型
       href: nullable-types/
-    - name: アンセーフ コードとポインター
+    - name: unsafe コードとポインター
       href: unsafe-code-pointers/
     - name: XML ドキュメントのコメント
       href: xmldoc/
