@@ -27,7 +27,7 @@ ms.locfileid: "68629711"
 
 ## <a name="give-the-value-a-name"></a>値に名前を付ける
 
-関数がファースト クラスの値である場合は、整数や文字列、その他の組み込みの型に名前を付けることができるのと同様に、関数に名前を付けることができる必要があります。 関数型プログラミングの記述では、これを "値に識別子をバインド(束縛)する" と表現しています。 F#では、 [ `let`バインディング](../language-reference/functions/let-bindings.md)を使用して`let <identifier> = <value>`名前を値にバインドします。 次に、2 つのコード例を示します。
+関数がファースト クラスの値である場合は、整数や文字列、その他の組み込みの型に名前を付けることができるのと同様に、関数に名前を付けることができる必要があります。 関数型プログラミングの記述では、これを "値に識別子を束縛する" と表現しています。 F#では、 [ `let`バインディング](../language-reference/functions/let-bindings.md)を使用して`let <identifier> = <value>`名前を値にバインドします。 次に、2 つのコード例を示します。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet20.fs)]
 
