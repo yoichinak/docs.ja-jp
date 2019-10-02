@@ -17,11 +17,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252548"
 ---
-# <a name="gcserver-element"></a>\<gcServer > 要素
+# <a name="gcserver-element"></a>\<gcServer> 要素
 共通言語ランタイムがサーバーのガベージ コレクションを実行するかどうかを指定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<gcServer>**  
   
 ## <a name="syntax"></a>構文  
@@ -65,7 +65,7 @@ ms.locfileid: "70252548"
  この要素は、アプリケーション構成ファイルでのみ使用できます。要素がマシン構成ファイルにある場合には無視されます。  
   
 > [!NOTE]
-> .NET Framework 4 以前のバージョンでは、サーバー ガベージ コレクションを有効にすると同時実行ガベージ コレクションが使用できません。 .NET Framework 4.5 以降では、サーバーのガベージコレクションは同時に実行されます。 非同時サーバーガベージコレクションを使用するには、 `<gcServer>`要素を`true`に`false` [ \<設定し、gcConcurrent > 要素](gcconcurrent-element.md)をに設定します。  
+> .NET Framework 4 以前のバージョンでは、サーバー ガベージ コレクションを有効にすると同時実行ガベージ コレクションが使用できません。 .NET Framework 4.5 以降では、サーバーのガベージコレクションは同時に実行されます。 非同時サーバーガベージコレクションを使用するには、 `<gcServer>`要素を`true`に [ \<gcConcurrent > 要素](gcconcurrent-element.md)を`false`に設定します。  
   
 ## <a name="example"></a>例  
  サーバー ガベージ コレクションを有効にする方法を次の例に示します。  
