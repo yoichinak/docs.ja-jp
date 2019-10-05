@@ -74,7 +74,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 アセンブリを読み込んでコードを実行するには、次のいずれかを行う必要があります。
 
-- アセンブリのサンドボックスを明示的に作成[します (「方法:サンドボックス](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)で部分信頼コードを実行します)。
+- アセンブリのサンドボックスを明示的に作成します（[「方法: サンドボックスで部分信頼コードを実行する」](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md) を参照してください）。
 
 - アセンブリのコードを完全信頼で実行します。 これを行うには、 `<loadFromRemoteSources>`要素を構成します。 以前のバージョンの .NET Framework で部分信頼で実行されるアセンブリが、.NET Framework 4 以降のバージョンで完全信頼で実行されるように指定できます。
 
