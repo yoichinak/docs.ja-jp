@@ -4,12 +4,12 @@ description: .NET Core での破壊的変更のカテゴリの分類方法につ
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: 68cd3580e80305e54b41610f05d939a6aff8b54d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: e15b0c566584571440eb09c7fb981874b7517c48
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "69577154"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698451"
 ---
 # <a name="breaking-change-categories"></a>破壊的変更のカテゴリ
 
@@ -49,4 +49,4 @@ ms.locfileid: "69577154"
 
 ## <a name="see-also"></a>関連項目
 
-[.NET Core の破壊的変更を評価する](index.md)
+- [.NET Core の破壊的変更を評価する](index.md)
