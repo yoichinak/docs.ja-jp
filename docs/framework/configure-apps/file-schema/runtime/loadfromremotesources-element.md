@@ -13,7 +13,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252477"
----し
+---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources> 要素
 リモートソースから読み込まれたアセンブリに .NET Framework 4 以降で完全信頼を付与するかどうかを指定します。
   
