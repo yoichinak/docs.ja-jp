@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 298ac8eae0a8b125ddf5f1ff35658f426f6b10aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8873b4938f654213bd659631175ba4526a35dcc3
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968581"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957338"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>属性に格納されている情報の取得
 カスタム属性の取得は簡単なプロセスです。 まず、取得する属性のインスタンスを宣言します。 次に、<xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> メソッドを使用して、取得する属性の値に新しい属性を初期化します。 新しい属性が初期化されたら、そのプロパティを使用して値を取得できるようになります。  
@@ -44,7 +44,7 @@ ms.locfileid: "69968581"
   
  このプログラムを実行すると、次のテキストが表示されます。  
   
-```  
+```console  
 The Name Attribute is: Joan Smith.  
 The Level Attribute is: 42.  
 The Reviewed Attribute is: True.  
@@ -52,7 +52,7 @@ The Reviewed Attribute is: True.
   
  属性が見つからない場合、**GetCustomAttribute** メソッドは `MyAttribute` を null 値に初期化します。 この例では、そのようなインスタンスの `MyAttribute` を確認し、属性が見つからない場合はユーザーに通知します。 クラス スコープ内に `DeveloperAttribute` 見つからない場合は、次のメッセージがコンソールに表示されます。  
   
-```  
+```console  
 The attribute was not found.   
 ```  
   

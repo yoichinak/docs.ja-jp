@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57198cb9fb0042a3a74589e2781b3db1a2b829f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee06454575afc16c904b60a2301feeb05debdcdf
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963379"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957175"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正規表現でのグループ化構成体
 グループ化構成体は、正規表現の部分式を表し、入力文字列の部分文字列をキャプチャします。 グループ化構成体を使用して、以下を実行できます。  
@@ -78,9 +78,7 @@ ms.locfileid: "69963379"
   
  正規表現パターンは次のとおりです。  
   
-```  
-(\w+)\s(\1)\W  
-```  
+`(\w+)\s(\1)\W`  
   
  次の表に、正規表現パターンがどのように解釈されるかを示します。  
   
@@ -95,15 +93,11 @@ ms.locfileid: "69963379"
 ## <a name="named-matched-subexpressions"></a>一致した名前付き部分式  
  次のグループ化構成体は、一致した部分式をキャプチャし、その部分式に名前または番号でアクセスできるようにします。  
   
-```  
-(?<name>subexpression)  
-```  
+`(?<name>subexpression)`  
   
  または  
   
-```  
-(?'name'subexpression)  
-```  
+`(?'name'subexpression)`  
   
  ここで、 *name* は有効なグループ名、 *subexpression* は有効な正規表現パターンです。 *name* は区切り記号を含まず、先頭が数字以外である必要があります。  
   
@@ -141,9 +135,7 @@ ms.locfileid: "69963379"
   
  正規表現パターンは次のとおりです。  
   
-```  
-(?<duplicateWord>\w+)\s\k<duplicateWord>\W(?<nextWord>\w+)  
-```  
+`(?<duplicateWord>\w+)\s\k<duplicateWord>\W(?<nextWord>\w+)`  
   
  次の表に、正規表現がどのように解釈されるかを示します。  
   
@@ -175,15 +167,11 @@ ms.locfileid: "69963379"
 ## <a name="balancing-group-definitions"></a>グループ定義の均等化  
  グループ定義の均等化では、既に定義されていたグループの定義を削除し、既に定義されていたグループと現在のグループの間隔を現在のグループに格納します。 このグループ化構成体の形式は次のとおりです。  
   
-```  
-(?<name1-name2>subexpression)  
-```  
+`(?<name1-name2>subexpression)`  
   
  または  
   
-```  
-(?'name1-name2' subexpression)  
-```  
+`(?'name1-name2' subexpression)`
   
  ここで、 *name1* は現在のグループ (省略可能) で、 *name2* は既に定義されていたグループで、 *subexpression* は有効な正規表現パターンです。 グループ定義の均等化では、 *name2* の定義を削除し、 *name2* と *name1* の間隔を *name1*に格納します。 *name2* グループが定義されていない場合、一致はバックトラックされます。 *name2* の最後の定義を削除すると、 *name2*の以前の定義がわかるため、この構成体によって、かっこや左右の角かっこなど入れ子になった構成体を追跡するカウンターとして *name2* グループのキャプチャのスタックを使用できます。  
   
@@ -199,9 +187,7 @@ ms.locfileid: "69963379"
   
  正規表現パターンは次のとおりです。  
   
-```  
-^[^<>]*(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*(?(Open)(?!))$  
-```  
+`^[^<>]*(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*(?(Open)(?!))$`  
   
  この正規表現パターンは、次のように解釈されます。  
   
@@ -254,9 +240,7 @@ ms.locfileid: "69963379"
 ## <a name="noncapturing-groups"></a>非キャプチャ グループ  
  次のグループ化構成体は、部分式と一致した部分文字列をキャプチャしません。  
   
-```  
-(?:subexpression)  
-```  
+`(?:subexpression)`
   
  ここで、 *subexpression* は有効な正規表現パターンです。 非キャプチャ グループ構成体は、通常、量指定子がグループに適用されるがグループによってキャプチャされた部分文字列は対象にならない場合に使用されます。  
   

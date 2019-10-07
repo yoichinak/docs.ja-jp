@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb70b0ef4c6e619418f8464b543795a59c2ddff5
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 89b527d4febb677512b3cdcf7cd47344d182ae26
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423783"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736862"
 ---
 # <a name="net-regular-expressions"></a>.NET の正規表現
 正規表現を使用すると、強力、柔軟、そして効率的な方法でテキストを処理できます。 正規表現の広範なパターン一致表記法を使用することで、大量のテキストをすばやく解析して特定の文字パターンを検索したり、決められたパターン (メール アドレスなど) と照らしてテキストを検証したりできるほか、テキストの部分文字列を抽出、編集、置換、または削除したり、抽出した文字列をコレクションに追加してレポートを生成したりすることもできます。 文字列処理や大量のテキストを解析する多くのアプリケーションにとって、正規表現は欠くことのできないツールです。  
@@ -37,21 +37,21 @@ ms.locfileid: "66423783"
   
 - テキストを識別する正規表現パターン。  
   
-     .NET では、正規表現のパターンが特殊な構文または言語で定義されます。この構文または言語には、Perl 5 の正規表現と互換性があるほか、右から左への一致処理など、いくつかの機能が追加されています。 詳細については、「[正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)」をご覧ください。  
+     .NET では、正規表現のパターンが特殊な構文または言語で定義されます。この構文または言語には、Perl 5 の正規表現と互換性があるほか、右から左への一致処理など、いくつかの機能が追加されています。 詳細については、「[正規表現言語 - クイック リファレンス](regular-expression-language-quick-reference.md)」をご覧ください。  
   
 - 正規表現パターンの解析対象となるテキスト。  
   
  <xref:System.Text.RegularExpressions.Regex> クラスのメソッドを使用すると、次のような処理を実行できます。  
   
-- 入力されたテキストに特定の正規表現パターンが出現するかどうかを調べるには、<xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> メソッドを呼び出します。 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> メソッドを使用してテキストを検証する例については、「[方法:文字列が有効な電子メール形式であるかどうかを検証する](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)」をご覧ください。  
+- 入力されたテキストに特定の正規表現パターンが出現するかどうかを調べるには、<xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> メソッドを呼び出します。 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> メソッドを使用してテキストを検証する例については、「[方法:文字列が有効な電子メール形式であるかどうかを検証する](how-to-verify-that-strings-are-in-valid-email-format.md)」をご覧ください。  
   
 - 正規表現パターンと一致したテキストを 1 つまたは全部取得するには、<xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> メソッドを呼び出します。 前者は、一致したテキストの情報を保持する <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> オブジェクトを返します。 後者は、解析対象のテキストに見つかった各一致につき 1 つの <xref:System.Text.RegularExpressions.MatchCollection> オブジェクトを含む <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> オブジェクトを返します。  
   
-- 正規表現パターンと一致したテキストを置換するには、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドを呼び出します。 <xref:System.Text.RegularExpressions.Regex.Replace%2A> メソッドを使用して日付形式を変更したり文字列から無効な文字を削除したりする例については、「[方法:文字列から無効な文字を取り除く](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)」と「[例:日付形式の変更](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)」を参照してください。  
+- 正規表現パターンと一致したテキストを置換するには、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドを呼び出します。 <xref:System.Text.RegularExpressions.Regex.Replace%2A> メソッドを使用して日付形式を変更したり文字列から無効な文字を削除したりする例については、「[方法:文字列から無効な文字を取り除く](how-to-strip-invalid-characters-from-a-string.md)」と「[例:日付形式の変更](regular-expression-example-changing-date-formats.md)」を参照してください。  
   
- 正規表現のオブジェクト モデルの概要については、「[正規表現のオブジェクト モデル](../../../docs/standard/base-types/the-regular-expression-object-model.md)」をご覧ください。  
+ 正規表現のオブジェクト モデルの概要については、「[正規表現のオブジェクト モデル](the-regular-expression-object-model.md)」をご覧ください。  
   
- 正規表現の言語について詳しくは、「[正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)」を参照するか、次の資料のいずれかをダウンロードして印刷してください。  
+ 正規表現の言語について詳しくは、「[正規表現言語 - クイック リファレンス](regular-expression-language-quick-reference.md)」を参照するか、次の資料のいずれかをダウンロードして印刷してください。  
   
  [Word (.docx) 形式のクイック リファレンス](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [PDF (.pdf) 形式のクイック リファレンス](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
@@ -62,16 +62,16 @@ ms.locfileid: "66423783"
 ### <a name="example-1-replacing-substrings"></a>例 1: 部分文字列の置換  
  氏名に敬称 (Mr.、Mrs.、Miss、または Ms.) が付いている場合がある名前が、宛先リストに含まれるとします。 そのリストから封筒のラベルを生成する場合に敬称が含まれないようにするには、次の例に示すように、正規表現を使用して敬称を削除します。  
   
- [!code-csharp[Conceptual.Regex#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
- [!code-vb[Conceptual.Regex#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
+ [!code-csharp[Conceptual.Regex#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
+ [!code-vb[Conceptual.Regex#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
   
  正規表現パターン `(Mr\.? |Mrs\.? |Miss |Ms\.? )` は、"Mr "、"Mr. "、"Mrs "、"Mrs. "、"Miss "、"Ms"、または "Ms. " の出現と一致します。 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドを呼び出すと、一致する文字列が <xref:System.String.Empty?displayProperty=nameWithType> に置き換えられます。つまり、元の文字列から削除されます。  
   
 ### <a name="example-2-identifying-duplicated-words"></a>例 2:重複する単語の識別  
  記述者が単語を誤って重複入力するというエラーがよくあります。 次の例に示すように、正規表現を使用して重複する単語を識別できます。  
   
- [!code-csharp[Conceptual.Regex#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
- [!code-vb[Conceptual.Regex#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
+ [!code-csharp[Conceptual.Regex#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
+ [!code-vb[Conceptual.Regex#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
   
  正規表現パターン `\b(\w+?)\s\1\b` は、次のように解釈できます。  
   
@@ -90,8 +90,8 @@ ms.locfileid: "66423783"
 ### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>例 3:カルチャに依存した正規表現の動的な構築  
  ここでは、正規表現による強力なテキスト処理と、.NET の柔軟なグローバリゼーション機能を組み合わせて使用する例を紹介します。 この例では、システムの現在のカルチャで用いられている通貨値の形式を調べるために、<xref:System.Globalization.NumberFormatInfo> オブジェクトが使用されています。 さらに、その情報を基に、テキストから通貨値を抽出する正規表現を動的に構築します。 検出された一致ごとに、数値文字列のみを含んだサブグループを抽出し、<xref:System.Decimal> 値に変換して、通算の合計を計算します。  
   
- [!code-csharp[Conceptual.Regex#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example.cs#1)]
- [!code-vb[Conceptual.Regex#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example.vb#1)]  
+ [!code-csharp[Conceptual.Regex#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example.cs#1)]
+ [!code-vb[Conceptual.Regex#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example.vb#1)]  
   
  現在 "英語 - 米国" (en-US) カルチャが使用されているコンピューターでは、`\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)` という正規表現が動的に作成されます。 この正規表現パターンは、次のように解釈できます。  
   
@@ -113,10 +113,10 @@ ms.locfileid: "66423783"
   
 |Title|説明|  
 |-----------|-----------------|  
-|[正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|正規表現を定義するために使う一連の文字、演算子、および構成体について説明します。|  
-|[正規表現のオブジェクト モデル](../../../docs/standard/base-types/the-regular-expression-object-model.md)|正規表現クラスの使用方法について詳しく説明し、コード例を示します。|  
-|[正規表現の動作の詳細](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|.NET の正規表現の機能と動作について説明します。|  
-|[正規表現の例](../../../docs/standard/base-types/regular-expression-examples.md)|正規表現の一般的な使用方法を示すコード例が用意されています。|  
+|[正規表現言語 - クイック リファレンス](regular-expression-language-quick-reference.md)|正規表現を定義するために使う一連の文字、演算子、および構成体について説明します。|  
+|[正規表現のオブジェクト モデル](the-regular-expression-object-model.md)|正規表現クラスの使用方法について詳しく説明し、コード例を示します。|  
+|[正規表現の動作の詳細](details-of-regular-expression-behavior.md)|.NET の正規表現の機能と動作について説明します。|  
+|[正規表現の例](regular-expression-examples.md)|正規表現の一般的な使用方法を示すコード例が用意されています。|  
   
 ## <a name="reference"></a>関連項目  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
