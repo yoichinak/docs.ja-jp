@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9cd2b0d426e8f31f6312a4951f94ed1c52929d9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cae4ce2e1d5cdef097f4095a7748f09b80d1acdb
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789659"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699079"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 への移行に関する問題
 
@@ -316,17 +316,9 @@ Namespace: <xref:System.Windows>、<xref:System.Windows.Automation.Peers>、<xre
 
 ## <a name="see-also"></a>関連項目
 
-### <a name="reference"></a>関連項目
-
 - [.NET Framework 4 における新しい型とメンバー](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff641764%28v=vs.100%29)
-
-### <a name="concepts"></a>概念
-
 - [.NET Framework 4 移行ガイド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)
 - [.NET Framework 4 の新機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)
 - [.NET Framework のバージョンの互換性](version-compatibility.md)
 - [.NET Framework 4 への Office ソリューションの移行](/visualstudio/vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later)
-
-### <a name="other-resources"></a>その他のリソース
-
 - [.NET Framework クラス ライブラリの互換性のために残されている機能](../whats-new/whats-obsolete.md)

@@ -2,12 +2,12 @@
 title: null 許容参照型
 description: この記事では、C# 8 で追加された null 許容参照型の概要を説明します。 新規および既存のプロジェクトにおいて、その機能によって null 参照例外に対する安全性がどのように提供されるかを学習します。
 ms.date: 02/19/2019
-ms.openlocfilehash: 05a8e14a7c51df685b3ffdf16aab997da0a8036f
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 213f0e3d9ad84628dab02a1dc483513783b2ad6e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332373"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699960"
 ---
 # <a name="nullable-reference-types"></a>null 許容参照型
 
@@ -58,14 +58,14 @@ name!.Length;
 
 null 許容コンテキストでは、コンパイラによる参照型変数の解釈方法を細かく制御できます。 特定のソース行の **null 許容注釈コンテキスト**は、`enabled` または `disabled` です。 C# 8 より前のコンパイラでは、`disabled` null 許容コンテキスト内のすべてのコードがコンパイルされるものと考えることができます。すべての参照型は null になることができます。 **null 許容警告コンテキスト**は、`enabled` または `disabled` に設定することができます。 null 許容警告コンテキストでは、フロー分析を使用するコンパイラによって生成される警告が指定されます。
 
-プロジェクトの null 許容注釈コンテキストと null 許容警告コンテキストは、*.csproj* ファイルの `Nullable` 要素を使用して設定することができます。 この要素では、コンパイラによって型の null 値の許容が解釈される方法と、生成される警告を構成します。 有効な設定は次のとおりです。
+プロジェクトの null 許容注釈コンテキストと null 許容警告コンテキストは、 *.csproj* ファイルの `Nullable` 要素を使用して設定することができます。 この要素では、コンパイラによって型の null 値の許容が解釈される方法と、生成される警告を構成します。 有効な設定は次のとおりです。
 
 - `enable`:null 許容注釈コンテキストは**有効**です。 null 許容警告コンテキストは**有効**です。
   - 参照型の変数 (`string` など) は、null 非許容です。  null 値の許容のすべての警告は有効です。
 - `warnings`:null 許容注釈コンテキストは**無効**です。 null 許容警告コンテキストは**有効**です。
   - 参照型の変数は、無関係です。 null 値の許容のすべての警告は有効です。
 - `annotations`:null 許容注釈コンテキストは**有効**です。 null 許容警告コンテキストは**無効**です。
-  - 参照型の変数は、無関係です。 null 値の許容のすべての警告は有効です。
+  - 参照型の変数は、無関係です。 null 値の許容のすべての警告は無効です。
 - `disable`:null 許容注釈コンテキストは**無効**です。 null 許容警告コンテキストは**無効**です。
   - 参照型の変数は無関係であり、以前のバージョンの C# と同じです。 null 値の許容のすべての警告は無効です。
 

@@ -3,12 +3,12 @@ title: C# プログラムの構造 - C# 言語のツアー
 description: C# プログラムの基本的な構造について説明します
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: e6b3e0d3b91d3dee8cbc8ac530323e23e0ce8b2a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634571"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834162"
 ---
 # <a name="program-structure"></a>プログラムの構造
 
@@ -20,7 +20,7 @@ C# における主要な組織的概念は、***プログラム***、***名前�
 
 このクラスの完全修飾名は `Acme.Collections.Stack` です。 このクラスには複数のメンバーが含まれています: `top` という名前のフィールドが 1 つ、`Push` と `Pop` という名前のメソッドが合わせて 2 つ、そして `Entry` という名前の入れ子になったクラスです。 `Entry` クラスにはさらに、3 つのメンバーが含まれています: `next` という名前のフィールド、`data` という名前のフィールド、およびコンストラクターです。 例のソース コードが `acme.cs` のファイルに保存されていることを前提に、次のコマンド ラインをご覧ください。
 
-```
+```console
 csc /t:library acme.cs
 ```
 
@@ -37,13 +37,13 @@ csc /t:library acme.cs
 
 プログラムが `example.cs` のファイルに格納されている場合、`example.cs` がコンパイルされると、acme.dll アセンブリはコンパイラの /r オプションを使用して参照できるようになります。
 
-```
+```console
 csc /r:acme.dll example.cs
 ```
 
 これにより `example.exe` という名前の実行可能なアセンブリが作成され、これが実行された場合に、次の出力が生成されます。
 
-```
+```console
 100
 10
 1
