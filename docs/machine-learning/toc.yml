@@ -99,7 +99,7 @@
           href: how-to-guides/install-ml-net-cli.md
         - name: 自動化された ML API を使用する
           href: how-to-guides/how-to-use-the-automl-api.md
-- name: 関連項目
+- name: 参照
   items:
     - name: API
       items:
@@ -115,6 +115,8 @@
           href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
 - name: リソース
   items:
+    - name: 概要
+      href: resources/index.md
     - name: 用語集
       href: resources/glossary.md
     - name: CLI テレメトリ
