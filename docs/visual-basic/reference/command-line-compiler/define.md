@@ -1,5 +1,5 @@
 ---
-title: -定義 (Visual Basic)
+title: -define (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - -d compiler option [Visual Basic]
@@ -9,33 +9,37 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: d0a483e7a3c9e9863db39e89d655cf172c1e8c81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b2c0173416418f67446c5441a93e5b06e93dc12
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649726"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002373"
 ---
-# <a name="-define-visual-basic"></a>-定義 (Visual Basic)
+# <a name="-define-visual-basic"></a>-define (Visual Basic)
 条件付きコンパイル定数を定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -define:["]symbol[=value][,symbol[=value]]["]  
-' -or-  
+```
+
+または
+
+```console  
 -d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|項目|定義|  
 |---|---|  
 |`symbol`|必須。 定義する記号。|  
-|`value`|省略可能です。 `symbol` に代入する値。 場合`value`文字列で、シーケンスのバック スラッシュ/引用符で囲みます (\\") 引用符の代わりにします。 値が指定されていない場合は、True として処理されます。|  
+|`value`|省略可能です。 `symbol` に代入する値。 @No__t-0 が文字列の場合、引用符ではなく円記号/引用符 (\\ ") で囲む必要があります。 値が指定されていない場合は、True として処理されます。|  
   
-## <a name="remarks"></a>Remarks  
- `-define`オプションを使用すると同様の効果には、`#Const`プリプロセッサ ディレクティブで定義された定数を除く、ソース ファイル内`-define`をパブリックにして、プロジェクト内のすべてのファイルに適用されます。  
+## <a name="remarks"></a>コメント  
+ @No__t-0 オプションは、ソースファイルで `#Const` プリプロセッサディレクティブを使用するのと同様の効果があります。ただし、`-define` で定義された定数はパブリックであり、プロジェクト内のすべてのファイルに適用されます。  
   
  このオプションで作成される記号を `#If`...`Then`...`#Else` ディレクティブで使用すると、ソース ファイルを条件付きでコンパイルできます。  
   
@@ -45,7 +49,7 @@ ms.locfileid: "61649726"
   
 |Visual Studio 統合開発環境で /define を設定するには|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.**[コンパイル]** タブをクリックします。<br />3.**[詳細設定]** をクリックします。<br />4.値を変更、**カスタム定数**ボックス。|  
+|1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[詳細設定]** をクリックします。<br />4。 **[カスタム定数]** ボックスの値を変更します。|  
   
 ## <a name="example"></a>例  
  2 つの条件付きコンパイル定数を定義して使用する場合のコード例を次に示します。  

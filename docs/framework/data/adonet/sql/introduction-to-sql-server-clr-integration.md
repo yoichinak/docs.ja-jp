@@ -2,12 +2,12 @@
 title: SQL Server の CLR 統合の概要
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: fb812a8e524148c507d26ea32e0b4263a4998153
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76c6fb4cb37807f286f1f1f2aeedbdea6c74fe38
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782264"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002146"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server の CLR 統合の概要
 CLR (共通言語ランタイム) は Microsoft .NET Framework の中核部分であり、あらゆる .NET Framework コードに対する実行環境を提供します。 CLR 内で実行されるコードを、マネージド コードと呼びます。 CLR では、JIT (Just-In-Time) コンパイル、メモリの割り当てと管理、タイプ セーフの確保、例外処理、スレッド管理、セキュリティなど、プログラムの実行に必要なさまざまな機能やサービスが提供されます。  
@@ -25,7 +25,7 @@ CLR (共通言語ランタイム) は Microsoft .NET Framework の中核部分�
 ## <a name="enabling-clr-integration"></a>CLR 統合の有効化  
  Microsoft SQL Server では共通言語ランタイム (CLR) 統合機能が既定でオフになっているため、CLR 統合を利用して実装されるオブジェクトを使用するには、CLR 統合機能を有効にする必要があります。 Transact-SQL を使用して CLR 統合を有効にするには、次に示すように、`clr enabled` ストアド プロシージャの `sp_configure` オプションを使用します。  
   
-```  
+```sql  
 sp_configure 'clr enabled', 1  
 GO  
 RECONFIGURE  

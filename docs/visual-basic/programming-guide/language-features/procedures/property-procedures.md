@@ -13,36 +13,36 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: b637f6a5f3ef367dfe769c2878878eeb938e3c81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3b57ae45815fbd91cad17cddbed4d01037eb92f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638816"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002090"
 ---
 # <a name="property-procedures-visual-basic"></a>Property プロシージャ (Visual Basic)
-プロパティ プロシージャは、一連のモジュール、クラスまたは構造体のカスタム プロパティを操作する Visual Basic ステートメントです。 プロパティ プロシージャとも呼ばれます*プロパティ アクセサー*します。  
+プロパティプロシージャは、モジュール、クラス、または構造体のカスタムプロパティを操作する一連の Visual Basic ステートメントです。 プロパティプロシージャは、*プロパティアクセサー*とも呼ばれます。  
   
- Visual Basic は、次のプロパティ プロシージャを提供します。  
+ Visual Basic には、次のプロパティプロシージャが用意されています。  
   
-- A`Get`プロパティの値を返します。 式でプロパティにアクセスするときに呼び出されます。  
+- @No__t 0 のプロシージャは、プロパティの値を返します。 これは、式のプロパティにアクセスするときに呼び出されます。  
   
-- A`Set`プロシージャに値をオブジェクト参照を含むプロパティを設定します。 プロパティに値を割り当てるときに呼び出されます。  
+- @No__t 0 のプロシージャは、オブジェクト参照を含む、プロパティを値に設定します。 これは、プロパティに値を割り当てるときに呼び出されます。  
   
- 使用して、ペアで、通常、プロパティ プロシージャを定義する、`Get`と`Set`プロパティが読み取り専用の場合は、ステートメントがからだけでいずれかの手順に定義することができます ([Get ステートメント](../../../../visual-basic/language-reference/statements/get-statement.md)) または書き込み専用 ([設定ステートメント](../../../../visual-basic/language-reference/statements/set-statement.md))。  
+ 通常は、`Get` および `Set` ステートメントを使用して、ペアでプロパティプロシージャを定義しますが、プロパティが読み取り専用 ([Get ステートメント](../../../../visual-basic/language-reference/statements/get-statement.md)) または書き込み専用 ([Set ステートメント](../../../../visual-basic/language-reference/statements/set-statement.md)) の場合は、いずれかのプロシージャだけを定義できます。  
   
- 省略することができます、`Get`と`Set`プロシージャの自動実装プロパティを使用する場合。 詳細については、「[自動実装プロパティ](./auto-implemented-properties.md)」を参照してください。  
+ 自動実装プロパティを使用する場合は、`Get` および `Set` プロシージャを省略できます。 詳細については、「[自動実装プロパティ](./auto-implemented-properties.md)」を参照してください。  
   
- プロパティは、クラス、構造、およびモジュールで定義できます。 プロパティは、`Public`どこからでも呼び出すことを意味する既定では、プロパティのコンテナーにアクセスできるアプリケーションでします。  
+ クラス、構造体、およびモジュールのプロパティを定義できます。 既定では、プロパティは @no__t 0 です。これは、プロパティのコンテナーにアクセスできるアプリケーション内の任意の場所から呼び出すことができることを意味します。  
   
- プロパティと変数の比較は、次を参照してください。[プロパティ間の相違点と Visual Basic における変数](./differences-between-properties-and-variables.md)します。  
+ プロパティと変数の比較については、「 [Visual Basic のプロパティと変数の違い](./differences-between-properties-and-variables.md)」を参照してください。  
   
 ## <a name="declaration-syntax"></a>宣言の構文  
- プロパティ自体がで囲まれたコードのブロックで定義されている、 [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)と`End Property`ステートメント。 このブロック内で各プロパティ プロシージャは、宣言ステートメントで囲まれた内部ブロックとして表示されます。 (`Get`または`Set`) と一致する`End`宣言します。  
+ プロパティ自体は、 [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)と `End Property` ステートメントで囲まれたコードのブロックによって定義されます。 このブロックの内部では、各プロパティプロシージャは、宣言ステートメント (`Get` または `Set`) および対応する `End` 宣言内に囲まれた内部ブロックとして表示されます。  
   
- プロパティと、プロシージャの宣言の構文は次のとおりです。  
+ プロパティとそのプロシージャを宣言する構文は次のとおりです。  
   
-```  
+```vb  
 [Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]  
     [AccessLevel] Get  
         ' Statements of the Get procedure.  
@@ -59,61 +59,61 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]  
 ```  
   
- `Modifiers`を指定できますアクセス レベルとオーバー ロード、オーバーライド、共有、およびシャドウ、に関する情報も、プロパティが読み取り専用または書き込み専用のかどうか。 `AccessLevel`上、`Get`または`Set`プロシージャには、プロパティ自体に指定されたアクセス レベルより限定的な任意のレベルがあります。 詳細については、次を参照してください。 [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)します。  
+ @No__t-0 は、オーバーロード、オーバーライド、共有、およびシャドウに関するアクセスレベルと情報、およびプロパティが読み取り専用であるか書き込み専用であるかを指定できます。 @No__t-1 または `Set` プロシージャの @no__t 0 は、プロパティ自体に対して指定されたアクセスレベルよりも制限の厳しい任意のレベルにすることができます。 詳細については、「 [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)」を参照してください。  
   
-### <a name="data-type"></a>データの種類  
- プロパティのデータ型とプリンシパルのアクセス レベルで定義されます、`Property`プロパティ プロシージャではなく、ステートメント。 プロパティは、1 つのデータ型を持つことができます。 たとえば、格納するプロパティを定義することはできません、`Decimal`値しますが、取得、`Double`値。  
+### <a name="data-type"></a>データ型  
+ プロパティのデータ型とプリンシパルアクセスレベルは、プロパティプロシージャではなく、`Property` ステートメントで定義されます。 プロパティは、データ型を1つだけ持つことができます。 たとえば、@no__t 0 の値を格納するプロパティを定義することはできませんが、`Double` の値を取得することはできません。  
   
-### <a name="access-level"></a>アクセス レベル  
- ただし、プロパティのプリンシパルのアクセス レベルを定義し、さらに、プロパティ プロシージャのいずれかでアクセス レベルを制限できます。 たとえば、定義することができます、`Public`プロパティを定義し、`Private Set`プロシージャ。 `Get`プロシージャまま`Public`します。 行うことができますのみがプリンシパルのアクセス レベルよりもより制限の厳しいと、プロパティの手順の 1 つだけに、アクセス レベルを変更できます。 詳細については、「[方法 :混合アクセス レベルでプロパティを宣言](./how-to-declare-a-property-with-mixed-access-levels.md)します。  
+### <a name="access-level"></a>アクセスレベル  
+ ただし、プロパティのプリンシパルアクセスレベルを定義し、そのプロパティプロシージャのいずれかでアクセスレベルをさらに制限することができます。 たとえば、`Public` プロパティを定義し、`Private Set` プロシージャを定義できます。 @No__t-0 のプロシージャは `Public` のままです。 アクセスレベルを変更できるのは、プロパティのプロシージャの1つだけです。このアクセスレベルは、プリンシパルアクセスレベルよりも制限されます。 詳細については、「[方法 :混合アクセスレベル @ no__t を使用してプロパティを宣言します。  
   
 ## <a name="parameter-declaration"></a>パラメーターの宣言  
- 各パラメーターのと同じ方法を宣言する[Sub プロシージャ](./sub-procedures.md)引き渡し方法がありますが、`ByVal`します。  
+ 各パラメーターは、[サブプロシージャ](./sub-procedures.md)に対して実行するのと同じ方法で宣言します。ただし、渡すメカニズムは `ByVal` である必要があります。  
   
- パラメーター リスト内の各パラメーターの構文は次のとおりです。  
+ パラメーターリストの各パラメーターの構文は次のとおりです。  
   
  `[Optional] ByVal [ParamArray] parametername As datatype`  
   
- パラメーターが省略可能な場合は、その宣言の一部として既定値も指定する必要があります。 既定値を指定する構文は次のとおりです。  
+ パラメーターが省略可能な場合は、宣言の一部として既定値を指定する必要もあります。 既定値を指定する構文は次のとおりです。  
   
  `Optional ByVal parametername As datatype = defaultvalue`  
   
 ## <a name="property-value"></a>プロパティ値  
- `Get`プロシージャ、戻り値は、プロパティの値として呼び出し元の式に渡されます。  
+ @No__t 0 のプロシージャでは、プロパティの値として呼び出し元の式に戻り値が指定されます。  
   
- `Set`プロシージャのパラメーターに新しいプロパティ値が渡される、`Set`ステートメント。 パラメーターを明示的に宣言する場合は、プロパティと同じデータ型で宣言する必要があります。 コンパイラは、暗黙のパラメーターを使用するパラメーターを宣言していない場合`Value`をプロパティに割り当てられる新しい値を表します。  
+ @No__t 0 のプロシージャでは、新しいプロパティ値が `Set` ステートメントのパラメーターに渡されます。 パラメーターを明示的に宣言する場合は、プロパティと同じデータ型を使用して宣言する必要があります。 パラメーターを宣言しない場合、コンパイラは、暗黙的なパラメーター `Value` を使用して、プロパティに割り当てられる新しい値を表します。  
   
 ## <a name="calling-syntax"></a>呼び出し構文  
- プロパティ プロシージャは、プロパティを参照することによって暗黙的を呼び出します。 使用するプロパティの名前、変数の名前を使用する場合と同じ方法は、省略できないすべての引数の値を指定する必要がありますが、引数リストをかっこで囲む必要があります。 引数が指定されていない場合、かっこを省略することができます。  
+ プロパティを参照することによって、プロパティプロシージャを暗黙的に呼び出します。 プロパティの名前は、変数の名前を使用するのと同じ方法で使用します。ただし、省略可能なすべての引数の値を指定する必要があります。また、引数リストをかっこで囲む必要があります。 引数を指定しない場合は、必要に応じてかっこを省略できます。  
   
- 暗黙的な呼び出しの構文、`Set`手順のとおりです。  
+ @No__t-0 プロシージャへの暗黙的な呼び出しの構文は次のとおりです。  
   
  `propertyname[(argumentlist)] = expression`  
   
- 暗黙的な呼び出しの構文、`Get`手順のとおりです。  
+ @No__t-0 プロシージャへの暗黙的な呼び出しの構文は次のとおりです。  
   
  `lvalue = propertyname[(argumentlist)]`  
   
  `Do While (propertyname[(argumentlist)] > expression)`  
   
 ### <a name="illustration-of-declaration-and-call"></a>宣言と呼び出しの図  
- 次のプロパティは、2 つの構成名、名、および、最後の名前として、完全な名前を格納します。 呼び出し元のコードを読み取るとき`fullName`、`Get`プロシージャは、2 つの構成名を結合し、完全な名前を返します。 呼び出し元のコードによって、新しい完全な名前を割り当てられるとき、`Set`プロシージャは、それを 2 つの部分に分割しようと試みます。 場所が見つからない場合すべて最初の名前として格納します。  
+ 次のプロパティは、完全名を2つの構成名 (名と姓) として格納します。 呼び出し元のコードが `fullName` を読み取る場合、`Get` プロシージャは2つの構成名を結合し、完全な名前を返します。 呼び出し元のコードによって新しい完全名が割り当てられると、`Set` プロシージャは、その名前を2つの構成名に分割しようとします。 スペースが見つからない場合は、そのすべてが最初の名前として格納されます。  
   
  [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
- 次の例では、一般的なプロパティ プロシージャの呼び出し`fullName`します。  
+ 次の例では、`fullName` のプロパティプロシージャへの一般的な呼び出しを示します。  
   
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [プロシージャ](./index.md)
+- [手順](./index.md)
 - [Function プロシージャ](./function-procedures.md)
 - [演算子プロシージャ](./operator-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Visual Basic でのプロパティと変数の違い](./differences-between-properties-and-variables.md)
-- [方法: プロパティを作成します。](./how-to-create-a-property.md)
-- [方法: プロパティ プロシージャを呼び出す](./how-to-call-a-property-procedure.md)
-- [方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す](./how-to-declare-and-call-a-default-property.md)
-- [方法: プロパティに値を格納します。](./how-to-put-a-value-in-a-property.md)
-- [方法: プロパティから値を取得します。](./how-to-get-a-value-from-a-property.md)
+- [Visual Basic のプロパティと変数の違い](./differences-between-properties-and-variables.md)
+- [2 つのオブジェクトが等しいかどうかをテストする方法プロパティ @ no__t を作成します。
+- [2 つのオブジェクトが等しいかどうかをテストする方法プロパティプロシージャ @ no__t を呼び出します。
+- [2 つのオブジェクトが等しいかどうかをテストする方法Visual Basic @ no__t の既定のプロパティを宣言して呼び出す-0
+- [2 つのオブジェクトが等しいかどうかをテストする方法プロパティ @ no__t に値を挿入します。
+- [2 つのオブジェクトが等しいかどうかをテストする方法プロパティ @ no__t から値を取得します。

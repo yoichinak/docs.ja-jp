@@ -2,14 +2,14 @@
 title: F# Interactive (fsi.exe) のリファレンス
 description: 対話型 ( F# fsi.exe) を使用して、コンソールでコードF#を対話形式で実行したり、 F#スクリプトを実行したりする方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 4e6ea1e42be180e88349acc9da7d5ef19a8ddedd
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 4e8521677cad5f4e62d2822837818292c55da96d
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214261"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002068"
 ---
-# <a name="interactive-programming-with-f"></a>F を使用した対話型プログラミング\#
+# <a name="interactive-programming-with-f"></a>F @ no__t を使用した対話型プログラミング-0
 
 > [!NOTE]
 > この記事では、現時点の Windows のエクスペリエンスについてのみ説明します。  書き換えられる予定です。
@@ -22,10 +22,10 @@ F# Interactive (fsi.exe) は、コンソールで F# コードを対話形式で
 コンソールから F# Interactive を実行するには、fsi.exe を実行します。  Fsi.exe は次の場所にあります。
 
 ```console
-C:\Program Files (x86)\Microsoft Visual Studio\2017\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
 ```
 
-ここ`sku` `Community`で、は`Professional`、、 `Enterprise`またはです。
+`sku` は `Community`、`Professional`、または `Enterprise` のいずれかです。
 
 使用できるコマンド ライン オプションについては、「[F# Interactive Options](../../language-reference/fsharp-interactive-options.md)」 (F# Interactive オプション) を参照してください。
 
@@ -43,7 +43,7 @@ Visual Studio で実行する場合、F# Interactive はプロジェクトとは
 
 設定を調整することで、F# Interactive コマンド ライン引数 (オプション) を制御できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[F# ツール]** を展開します。 変更できる 2 つの設定は、F# Interactive オプションおよび 64 ビット コンピューターで F# Interactive を実行する場合にのみ関連する **64 ビット F# Interactive** 設定です。 この設定によって、32 ビットまたは 64 ビット プロセスとして実行するかどうかを決定するためにコンピューター アーキテクチャを使用する、fsi.exe または fsianycpu.exe の専用の 64 ビット バージョンを実行するかどうかが決定されます。
 
-## <a name="scripting-with-f"></a>F を使用したスクリプト作成\#
+## <a name="scripting-with-f"></a>F @ no__t を使用したスクリプト作成-0
 スクリプトで使用されるファイル拡張子は **.fsx** または **.fsscript** です。 ソース コードをコンパイルし、後でそのコンパイル済みのアセンブリを実行する代わりに、**fsi.exe** を実行し、F# ソース コードのスクリプトのファイル名を指定するだけで、F# Interactive によってコードを読み取り、リアルタイムで実行することができます。
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>対話型、スクリプト、およびコンパイル型の環境の相違
