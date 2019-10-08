@@ -9,24 +9,24 @@ helpviewer_keywords:
 - mouse pointer (cursor), making objects follow
 - cursor (mouse pointer), making objects follow
 ms.assetid: 50b20415-14bc-405c-baf3-2fb254fffde3
-ms.openlocfilehash: b9b13b4eec3e42744ba2be6031ec841fb5f215e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ef3028b6c71b94a593d168ad6570c4aec12b86b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051599"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005068"
 ---
 # <a name="how-to-make-an-object-follow-the-mouse-pointer"></a>方法: オブジェクトをマウス ポインターに追従させる
-この例では、マウス ポインターを画面に移動すると、オブジェクトのサイズを変更する方法を示します。  
+この例では、マウスポインターが画面上を移動したときにオブジェクトの寸法を変更する方法を示します。  
   
- 例では、含まれています、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ファイルを作成する、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]および分離コード ファイルをイベント ハンドラーを作成します。  
+ この例には、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] を作成し、イベントハンドラーを作成する分離コードファイルを作成する @no__t 0 ファイルが含まれています。  
   
 ## <a name="example"></a>例  
- 次[!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)]を作成、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]から構成される、<xref:System.Windows.Shapes.Ellipse>内の<xref:System.Windows.Controls.StackPanel>、イベントのイベント ハンドラーをアタッチします、<xref:System.Windows.UIElement.MouseMove>イベント。  
+ 次の XAML は、<xref:System.Windows.Controls.StackPanel> 内の <xref:System.Windows.Shapes.Ellipse> で構成される @no__t 0 を作成し、<xref:System.Windows.UIElement.MouseMove> イベントのイベントハンドラーをアタッチします。  
   
  [!code-xaml[mouseMoveWithPointer#MouseMoveWithPointerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml#mousemovewithpointerxaml)]  
   
- 次のコードを作成、<xref:System.Windows.UIElement.MouseMove>イベント ハンドラー。  マウス ポインターを置いたとき、高さと幅、<xref:System.Windows.Shapes.Ellipse>して増減されます。  
+ 次のコードでは、<xref:System.Windows.UIElement.MouseMove> イベントハンドラーを作成します。  マウスポインターを動かすと、<xref:System.Windows.Shapes.Ellipse> の高さと幅が増減します。  
   
  [!code-csharp[mouseMoveWithPointer#MouseMovePointerGetPosition](~/samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml.cs#mousemovepointergetposition)]
  [!code-vb[mouseMoveWithPointer#MouseMovePointerGetPosition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/mouseMoveWithPointer/VisualBasic/Window1.xaml.vb#mousemovepointergetposition)]  

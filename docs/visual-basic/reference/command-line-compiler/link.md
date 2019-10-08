@@ -11,31 +11,35 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 7d68e55972336e304286e967d445f3589219b9a2
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e131b39e05badf0bb90fbbb14761571003156f85
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972318"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005514"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 指定したアセンブリ内の COM 型情報を、現在のコンパイル対象のプロジェクトで使用できるようにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -link:fileList  
-' -or-  
+```
+
+または  
+
+```console
 -l:fileList  
 ```  
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|項目|定義|  
 |---|---|  
 |`fileList`|必須。 アセンブリ ファイル名のコンマ区切りリスト。 ファイル名に空白が含まれている場合は、名前を二重引用符で囲みます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `-link` オプションを使用すると、埋め込み型情報を含むアプリケーションを配置できます。 その後、このアプリケーションは、埋め込み型情報を実装する、ランタイム アセンブリ内の型を使用できます。その際、ランタイム アセンブリへの参照は必要ありません。 ランタイム アセンブリのさまざまなバージョンが公開されている場合、埋め込み型情報を含むアプリケーションは、再コンパイルする必要なく、各種バージョンで動作できます。 例については、「[チュートリアル:マネージド アセンブリからの型の埋め込み](../../../standard/assembly/embed-types-visual-studio.md)」をご覧ください。  
   
  `-link` オプションの使用は、COM 相互運用を使用している場合に特に便利です。 COM 型を埋め込むことができるため、アプリケーションは、ターゲット コンピューター上にプライマリ相互運用機能アセンブリ (PIA) を必要としなくなります。 `-link` オプションを使用すると、コンパイラによって、COM 型情報は、参照先の相互運用アセンブリから結果としてコンパイルされるコードに埋め込まれます。 COM 型は、CLSID (GUID) 値によって識別されます。 その結果、同じ CLSID 値の同じ COM 型がインストールされているターゲット コンピューターでアプリケーションを実行できます。 Microsoft Office を自動化するアプリケーションが良い例です。 Office のようなアプリケーションは、通常、さまざまなバージョン間で同じ CLSID 値を保持するため、.NET Framework 4 以降がターゲット コンピューターにインストールされていて、参照先の COM 型に含まれているメソッド、プロパティ、またはイベントがアプリケーションで使用される限りは、そのアプリケーションで参照先の COM 型を使用できます。  
@@ -55,7 +59,7 @@ ms.locfileid: "70972318"
   
  アセンブリ参照が1つ以上存在するディレクトリを指定するには、 [-libpath](libpath.md)を使用します。  
   
- [/Reference](reference.md)コンパイラオプションと同様に、 `-link`コンパイラオプションは vbc.exe ファイルを使用します。このファイルは、頻繁に使用される .NET Framework アセンブリを参照します。 コンパイラで Vbc.exe ファイルを使用しない場合は、 [-noconfig](noconfig.md)コンパイラオプションを使用します。  
+ [/Reference](reference.md)コンパイラオプションと同様に、`-link` コンパイラオプションは、頻繁に使用される .NET Framework アセンブリを参照する vbc.exe 応答ファイルを使用します。 コンパイラで Vbc.exe ファイルを使用しない場合は、 [-noconfig](noconfig.md)コンパイラオプションを使用します。  
   
  `-link` の省略形は `-l` です。  
   
@@ -79,7 +83,7 @@ ms.locfileid: "70972318"
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>例  
- 次のコマンドラインは、および`OfficeApp.vb` `COMData2.dll`からの`COMData1.dll`ソースファイルと参照アセンブリ`OfficeApp.exe`をコンパイルし、を生成します。  
+ 次のコマンドラインは、ソースファイル `OfficeApp.vb` および参照アセンブリを `COMData1.dll` と `COMData2.dll` からコンパイルして、`OfficeApp.exe` を生成します。  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  

@@ -6,47 +6,47 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: fd6240faf702ccb5e543bfd6a7779284f38d8850
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91f2a27ed9b6fb296dbb9e50fc488fd012311890
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793914"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005508"
 ---
 # <a name="-main"></a>-main
 `Sub Main` プロシージャを格納するクラスまたはモジュールを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -main:location  
 ```  
   
 ## <a name="arguments"></a>引数  
  `location`  
- 必須。 クラスまたはを含むモジュールの名前、`Sub Main`プログラムの開始時に呼び出されるプロシージャです。 フォームのことが考えられます **-メイン: モジュール**または **-main:namespace.module**します。  
+ 必須。 プログラムの開始時に呼び出される @no__t 0 のプロシージャを含むクラスまたはモジュールの名前。 この形式は、 **main: module**または **-main: namespace. module**の形式にすることができます。  
   
-## <a name="remarks"></a>Remarks  
- 実行可能ファイルまたは Windows 実行可能プログラムを作成するときに、このオプションを使用します。 場合、 **-メイン**オプションを省略すると、コンパイラは、有効な共有の検索`Sub Main`ですべてのパブリック クラスとモジュール。  
+## <a name="remarks"></a>コメント  
+ このオプションは、実行可能ファイルまたは Windows 実行可能プログラムを作成するときに使用します。 **-Main**オプションを省略した場合、コンパイラは、すべてのパブリッククラスとモジュールで有効な共有 `Sub Main` を検索します。  
   
- 参照してください[Visual basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)のさまざまな形式の詳細については、`Main`プロシージャ。  
+ @No__t-1 プロシージャのさまざまな形式については、「 [Visual Basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)」を参照してください。  
   
- ときに`location`から継承するクラスは、 <xref:System.Windows.Forms.Form>、コンパイラは、既定値を用意`Main`クラスにない場合に、アプリケーションを開始するプロシージャ`Main`プロシージャ。 これにより、開発環境で作成したコマンドラインでコードをコンパイルできます。  
+ @No__t-0 が <xref:System.Windows.Forms.Form> から継承するクラスである場合、コンパイラは、クラスに @no__t 3 プロシージャがない場合にアプリケーションを起動する既定の `Main` プロシージャを提供します。 これにより、開発環境で作成されたコマンドラインでコードをコンパイルできます。  
   
  [!code-vb[VbVbalrCompiler#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#16)]  
   
-### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>設定 - Visual Studio 統合開発環境で主に  
+### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>Visual Studio 統合開発環境で-main を設定するには  
   
 1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2. **[アプリケーション]** タブをクリックします。  
   
-3. 確認、**アプリケーション フレームワークを有効にする**チェック ボックスをオンします。  
+3. **[アプリケーションフレームワークを有効にする]** チェックボックスがオンになっていないことを確認します。  
   
-4. 値を変更、**スタートアップ オブジェクト**ボックス。  
+4. **[スタートアップオブジェクト]** ボックスの値を変更します。  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`T2.vb`と`T3.vb`を指定している、`Sub Main`手順が記載されて、`Test2`クラス。  
+ 次のコードでは `T2.vb` と `T3.vb` をコンパイルし、`Sub Main` プロシージャが `Test2` クラスで見つかることを指定します。  
   
 ```console
 vbc t2.vb t3.vb -main:Test2  
@@ -55,6 +55,6 @@ vbc t2.vb t3.vb -main:Test2
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Visual Basic の main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Visual Basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 75c3e5842447a8f0812d5a90d7157f7a6a496936
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 46d726332806f7d1f6e80dd7df31867051276b45
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962445"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002349"
 ---
 # <a name="-bugreport"></a>-bugreport
 バグレポートをファイルするときに使用できるファイルを作成します。  
@@ -24,12 +24,12 @@ ms.locfileid: "69962445"
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|項目|定義|  
 |---|---|  
 |`file`|必須。 バグレポートを格納するファイルの名前。 名前にスペースが含まれている場合は、ファイル名を引用符 ("") で囲みます。|  
   
-## <a name="remarks"></a>Remarks  
- に`file`次の情報が追加されます。  
+## <a name="remarks"></a>コメント  
+ 次の情報が `file` に追加されます。  
   
 - コンパイル内のすべてのソースコードファイルのコピー。  
   
@@ -43,20 +43,20 @@ ms.locfileid: "69962445"
   
 - 問題の解決方法についての説明。確認を求めるメッセージが表示されます。  
   
- すべてのソースコードファイルのコピーがに`file`含まれているため、可能な限り最短のプログラムでコードの欠陥を再現することができます。  
+ すべてのソースコードファイルのコピーが `file` に含まれるため、可能な限り短いプログラムで (疑わしい) コードの欠陥を再現することができます。  
   
 > [!IMPORTANT]
-> オプション`-bugreport`を指定すると、機密情報を含むファイルが生成されます。 これには、現在の時刻、コンパイラのバージョン、.NET Framework バージョン、OS バージョン、ユーザー名、コンパイラが実行されたコマンドライン引数、すべてのソースコード、および参照アセンブリのバイナリ形式が含まれます。 このオプションにアクセスするには、web.config ファイルで ASP.NET アプリケーションのサーバー側コンパイルのコマンドラインオプションを指定します。 これを回避するには、machine.config ファイルを変更して、ユーザーがサーバーでコンパイルできないようにします。  
+> @No__t-0 オプションを指定すると、機密情報が含まれる可能性のあるファイルが生成されます。 これには、現在の時刻、コンパイラのバージョン、.NET Framework バージョン、OS バージョン、ユーザー名、コンパイラが実行されたコマンドライン引数、すべてのソースコード、および参照アセンブリのバイナリ形式が含まれます。 このオプションにアクセスするには、web.config ファイルで ASP.NET アプリケーションのサーバー側コンパイルのコマンドラインオプションを指定します。 これを回避するには、machine.config ファイルを変更して、ユーザーがサーバーでコンパイルできないようにします。  
   
- `-errorreport:prompt`このオプションが、 `-errorreport:queue`、または`-errorreport:send`で使用されていて、アプリケーションで内部コンパイラエラーが発生`file`した場合は、の情報が Microsoft Corporation に送信されます。 この情報は、Microsoft のエンジニアがエラーの原因を特定するのに役立ちます。また、Visual Basic の次のリリースの向上に役立つ場合があります。 既定では、情報は Microsoft に送信されません。 ただし、既定で有効になっている`-errorreport:queue`を使用してアプリケーションをコンパイルすると、アプリケーションはそのエラーレポートを収集します。 その後、コンピューターの管理者がログインすると、エラー報告システムにポップアップウィンドウが表示され、ログオン後に発生したエラーレポートを管理者が Microsoft に転送できるようになります。  
+ このオプションを `-errorreport:prompt`、`-errorreport:queue`、または `-errorreport:send` と共に使用し、アプリケーションで内部コンパイラエラーが発生した場合は、`file` の情報が Microsoft Corporation に送信されます。 この情報は、Microsoft のエンジニアがエラーの原因を特定するのに役立ちます。また、Visual Basic の次のリリースの向上に役立つ場合があります。 既定では、情報は Microsoft に送信されません。 ただし、既定で有効になっている `-errorreport:queue` を使用してアプリケーションをコンパイルすると、アプリケーションはそのエラーレポートを収集します。 その後、コンピューターの管理者がログインすると、エラー報告システムにポップアップウィンドウが表示され、ログオン後に発生したエラーレポートを管理者が Microsoft に転送できるようになります。  
   
 > [!NOTE]
-> この`/bugreport`オプションは、Visual Studio 開発環境内からは使用できません。コマンドラインからコンパイルする場合にのみ使用できます。  
+> @No__t-0 オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次の例で`T2.vb`は、すべてのバグ報告情報をコンパイルし`Problem.txt`てファイルに格納します。  
+ 次の例では、`T2.vb` をコンパイルし、すべてのバグ報告情報をファイル `Problem.txt` に格納します。  
   
-```  
+```console  
 vbc -bugreport:problem.txt t2.vb  
 ```  
   

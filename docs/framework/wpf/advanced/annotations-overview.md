@@ -9,21 +9,21 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: 861a757effee8d68d1e41682dd91ffadba20c536
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: dc9c4125f9ac3c44be41efe92b9e495599e5c130
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364380"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004037"
 ---
 # <a name="annotations-overview"></a>注釈の概要
 用紙にメモやコメントを書くことは普通の行為であり、人はそれを当たり前のことと思っています。 そのようなメモやコメントが "注釈" です。注釈をドキュメントに追加することで情報に目印を付け、興味のある内容を強調表示し、後で参照します。 印刷したドキュメントにメモを書くことは簡単で一般的な行為ですが、電子ドキュメントに個人的なコメントを追加する機能は利用できるとしても一般的に非常に限定されています。  
   
- このトピックでは、いくつかの一般的な種類の注釈 (特に付箋と強調表示) について説明します。また、Microsoft Annotations フレームワークが Windows Presentation Foundation を通じてアプリケーションでこれらの種類の注釈を容易にする方法を示します (WPF) ドキュメントの表示コントロール。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]注釈をサポートするドキュメント表示コントロール<xref:System.Windows.Controls.FlowDocumentReader>に<xref:System.Windows.Controls.FlowDocumentScrollViewer>は、および、 <xref:System.Windows.Controls.DocumentViewer>および<xref:System.Windows.Controls.FlowDocumentPageViewer>などの<xref:System.Windows.Controls.Primitives.DocumentViewerBase>から派生したコントロールが含まれます。  
+ このトピックでは、いくつかの一般的な種類の注釈 (特に付箋と強調表示) について説明します。また、Microsoft Annotations フレームワークが Windows Presentation Foundation を通じてアプリケーションでこれらの種類の注釈を容易にする方法を示します (WPF) ドキュメントの表示コントロール。  注釈をサポートする @no__t 0 のドキュメント表示コントロールには、<xref:System.Windows.Controls.FlowDocumentReader> と <xref:System.Windows.Controls.FlowDocumentScrollViewer>、および <xref:System.Windows.Controls.DocumentViewer> や <xref:System.Windows.Controls.FlowDocumentPageViewer> などの @no__t から派生したコントロールが含まれます。  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>付箋  
- 典型的な付箋とは、色の付いた小さな紙切れに情報を記入し、書類に "貼り付ける" というものです。 デジタル付箋は電子ドキュメントのために同様の機能を提供しますが、さまざまなコンテンツを追加できるという柔軟性があります。タイプしたテキスト、手書きのメモ ([!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] の "インク" ストロークなど)、Web リンクなどです。  
+ 典型的な付箋とは、色の付いた小さな紙切れに情報を記入し、書類に "貼り付ける" というものです。 デジタル付箋は、電子ドキュメントと同様の機能を提供しますが、入力したテキスト、手書きメモ (Tablet PC の "インク" ストロークなど)、Web リンクなど、他のさまざまな種類のコンテンツを柔軟に含めることができます。  
   
  次の図では、蛍光ペン、テキスト付箋、インク付箋で注釈を付けていることを確認できます。  
   
@@ -36,13 +36,13 @@ ms.locfileid: "68364380"
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>強調表示  
- 書面であれば、下線を引いたり、蛍光ペンでなぞったり、ドキュメント内の単語を囲んだり、余白に目印や注釈を付けたりするなど、さまざまな方法で書き込みを行い、興味のある項目を目立たせることができます。  Microsoft annotations Framework の注釈を強調表示すると、ドキュメント表示コントロールに[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]表示される情報をマークするための同様の機能が提供されます。  
+ 書面であれば、下線を引いたり、蛍光ペンでなぞったり、ドキュメント内の単語を囲んだり、余白に目印や注釈を付けたりするなど、さまざまな方法で書き込みを行い、興味のある項目を目立たせることができます。  Microsoft Annotations Framework の注釈を強調表示すると、@no__t 0 のドキュメント表示コントロールに表示される情報をマークするための同様の機能が提供されます。  
   
  次の図は、注釈の強調表示のサンプルです。  
   
  ![注釈の強調表示](./media/caf-callouts.png "CAF_Callouts")  
   
- 通常、ユーザーは、最初にテキストまたは目的の項目を選択し、右クリックして注釈の<xref:System.Windows.Controls.ContextMenu>オプションのを表示することで、注釈を作成します。  次の例は、 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ユーザーが注釈を作成および<xref:System.Windows.Controls.ContextMenu>管理するためにアクセスできるルーティングコマンドを使用してを宣言するために使用できるを示しています。  
+ 通常、注釈を作成するには、まずテキストまたは目的の項目を選択し、右クリックして注釈のオプションの @no__t 0 を表示します。  次の例は、ユーザーが注釈を作成および管理するためにアクセスできるルーティングコマンドを使用して <xref:System.Windows.Controls.ContextMenu> を宣言するために使用できる @no__t 0 を示しています。  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
@@ -75,4 +75,4 @@ ms.locfileid: "68364380"
 - [ContextMenu の概要](../controls/contextmenu-overview.md)
 - [コマンド実行の概要](commanding-overview.md)
 - [フロー ドキュメントの概要](flow-document-overview.md)
-- [方法: MenuItem にコマンドを追加する](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
+- [2 つのオブジェクトが等しいかどうかをテストする方法MenuItem @ no__t にコマンドを追加する

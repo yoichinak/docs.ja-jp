@@ -8,35 +8,35 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: 080a106fc1deeb54165511ed03d7c7c5d2060f21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe6ee470698504bc0434930cc9aa6de712e04254
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945198"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004674"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While 句 (Visual Basic)
 指定された条件が `true` である限り、コレクションの要素を含むようにし、残りの要素をバイパスします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 Take While expression  
 ```  
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|項目|定義|  
 |---|---|  
-|`expression`|必須。 要素をテストするための条件を表す式。 式を返す必要があります、`Boolean`値またはそれと同等の機能など、`Integer`として評価される、`Boolean`します。|  
+|`expression`|必須。 テスト要素の条件を表す式。 式は、@no__t 0 の値または同等の関数を返す必要があります。たとえば、`Boolean` として評価される `Integer` などです。|  
   
-## <a name="remarks"></a>Remarks  
- `Take While`句にはまで、指定されたクエリ結果の先頭から要素が含まれます`expression`返します`false`します。 後に、`expression`返します`false`クエリでは、残りのすべての要素をバイパスします。 `expression`残りの結果は無視されます。  
+## <a name="remarks"></a>コメント  
+ @No__t-0 句には、指定された `expression` が `false` を返すまで、クエリ結果の先頭からの要素が含まれます。 @No__t-0 が `false` を返した後、クエリは残りのすべての要素をバイパスします。 残りの結果については、`expression` は無視されます。  
   
- `Take While`句とは異なります、`Where`句を`Where`を特定の条件を満たすクエリからのすべての要素を含める句を使用できます。 `Take While`句には、条件が満たされていませんが、初めてまでのみの要素が含まれています。 `Take While`句は、順序付けられたクエリ結果を使用しているときに最も役立ちます。  
+ @No__t-0 句は、`Where` 句とは異なります。つまり、`Where` 句を使用して、特定の条件を満たすクエリのすべての要素を含めることができます。 @No__t-0 句には、最初に条件が満たされない限り、要素が含まれます。 @No__t-0 句は、順序付けられたクエリ結果を操作する場合に最も役立ちます。  
   
 ## <a name="example"></a>例  
- 次のコード例では、`Take While`句を任意の注文数が、最初の顧客が見つかるまで結果を取得します。  
+ 次のコード例では、`Take While` 句を使用して、注文のない最初の顧客が見つかるまで結果を取得します。  
   
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   

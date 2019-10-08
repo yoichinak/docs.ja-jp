@@ -5,21 +5,21 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 1ef18802ab3568df00e29eb4ccaf717f4bdf4863
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4f9c2700d8163988b7ea1e75bec1427778cf571c
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330995"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004894"
 ---
 # <a name="localization-attributes-and-comments"></a>ローカリゼーション属性とコメント
-[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] ソース コード内部の [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ローカリゼーション コメントはプロパティで、ローカライズのルールとヒントを提供するために開発者によって提供されます。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ローカリゼーション コメントには、ローカライズ可否属性と自由形式のローカリゼーション コメントの 2 つの情報が含まれます。 ローカライズ可否属性は、ローカライズするリソースを示すために [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ローカリゼーション API によって使用されます。 自由形式のコメントは、アプリケーションの作成者が含めたい任意の情報です。  
+@no__t 0 ローカライズコメントは、開発者がローカライズに関するルールとヒントを提供するために提供する、XAML ソースコード内のプロパティです。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ローカリゼーション コメントには、ローカライズ可否属性と自由形式のローカリゼーション コメントの 2 つの情報が含まれます。 ローカライズ可否属性は、ローカライズするリソースを示すために [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ローカリゼーション API によって使用されます。 自由形式のコメントは、アプリケーションの作成者が含めたい任意の情報です。  
 
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>ローカリゼーション コメント  
- マークアップ アプリケーションの作成者が、テキストの長さ、フォント ファミリ、またはフォント サイズの制約など、[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] に特定の要素の要件がある場合は、この情報を [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] コードのコメントによりローカライザーに伝達できます。 ソース コードにコメントを追加する手順は次のとおりです。  
+ マークアップアプリケーションの作成者が、テキストの長さ、フォントファミリ、またはフォントサイズの制約など、XAML の特定の要素に関する要件を持つ場合は、XAML コード内のコメントを使用して、この情報をローカライザーに渡すことができます。 ソース コードにコメントを追加する手順は次のとおりです。  
   
-1. アプリケーション開発者がローカリゼーション コメントを [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] ソース コードに追加します。  
+1. アプリケーション開発者は、XAML ソースコードにローカリゼーションコメントを追加します。  
   
 2. ビルド プロセス中に、.proj ファイル内でアセンブリ内に自由形式のローカリゼーション コメントを残すかどうか、コメントの一部を取り除くか、またはすべてのコメントを取り除くかのいずれかを指定できます。 取り除かれたコメントは、別のファイルに配置されます。 次のような `LocalizationDirectivesToLocFile` タグを使用して、オプションを指定します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68330995"
   
 5. 自由形式のコメントのみを含むローカリゼーション コメント ファイルは、後でローカライズ プロセスに組み込まれます。  
   
- 次の例では、ローカリゼーション コメントを [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] ファイルに追加する方法を示しています。  
+ 次の例は、XAML ファイルにローカリゼーションコメントを追加する方法を示しています。  
   
  `<TextBlock x:Id = "text01"`  
   
@@ -86,7 +86,7 @@ ms.locfileid: "68330995"
   
  次の表に、特殊なカテゴリの意味を示します。  
   
-|Category|説明|  
+|カテゴリ|説明|  
 |--------------|-------------|  
 |なし|ターゲット値に定義済みのカテゴリがありません。|  
 |継承|ターゲット値は、その親からそのカテゴリを継承します。|  

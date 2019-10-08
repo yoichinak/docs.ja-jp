@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: 5ec188e0345140297062d0a10dfbbc4a294bbb7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b853a6f2175009cbcbc01c14a6732b98e37e1a7f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781597"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003061"
 ---
 # <a name="how-to-return-rowsets"></a>方法: 行セットを返す
 この例では、データベースから行セットを返し、入力パラメーターを使用して結果をフィルター処理します。  
@@ -20,7 +20,7 @@ ms.locfileid: "70781597"
 ## <a name="example"></a>例  
  次の例は、顧客の行を返し、入力パラメーターを使用して、顧客が在住する市が "London" である行のみを返すストアド プロシージャを示しています。 例では、列挙可能な `CustomersByCityResult` クラスを想定しています。  
   
-```  
+```sql  
 CREATE PROCEDURE [dbo].[Customers By City]  
     (@param1 NVARCHAR(20))  
 AS  

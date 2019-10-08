@@ -9,46 +9,46 @@ helpviewer_keywords:
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-ms.openlocfilehash: 56ea692d6e65d94c497fbc9406e03b40648c55a2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8c7789c6af7b82ecb40ecd73d09f64aa1da3fd4b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663492"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005060"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 コンパイラが Visual Basic Runtime Library を参照せずにコンパイルするか、特定のランタイム ライブラリを参照してコンパイルするかを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -vbruntime:{ - | + | * | path }  
 ```  
   
 ## <a name="arguments"></a>引数  
  \-  
- Visual Basic ランタイム ライブラリへの参照なしでコンパイルします。  
+ Visual Basic ランタイムライブラリへの参照を使用せずにコンパイルします。  
   
  \+  
- 既定の Visual Basic ランタイム ライブラリへの参照を使用してコンパイルします。  
+ 既定の Visual Basic ランタイムライブラリへの参照を使用してコンパイルします。  
   
  \*  
- Visual Basic ランタイム ライブラリへの参照なしでコンパイルされ、アセンブリに、Visual Basic ランタイム ライブラリからのコア機能を埋め込みます。  
+ Visual Basic ランタイムライブラリへの参照を使用せずにコンパイルし、Visual Basic ランタイムライブラリからアセンブリにコア機能を埋め込みます。  
   
  `path`  
  指定したライブラリ (DLL) への参照を使用してコンパイルします。  
   
-## <a name="remarks"></a>Remarks  
- `-vbruntime`コンパイラ オプションでは、コンパイラが、Visual Basic ランタイム ライブラリへの参照しないでコンパイルされていることを指定することができます。 Visual Basic ランタイム ライブラリを参照しないでコンパイルする場合は、エラーまたは警告が Visual Basic ランタイム ヘルパーへの呼び出しを生成するコードまたは言語の構造に記録されます。 (A *Visual Basic ランタイム ヘルパー*特定言語のセマンティックを実行する実行時に呼び出される Microsoft.VisualBasic.dll で定義されている関数です)。  
+## <a name="remarks"></a>コメント  
+ @No__t-0 コンパイラオプションを使用すると、コンパイラが Visual Basic ランタイムライブラリへの参照を使用せずにコンパイルするように指定できます。 Visual Basic ランタイムライブラリへの参照を使用せずにコンパイルする場合、エラーまたは警告は、Visual Basic ランタイムヘルパーの呼び出しを生成するコードまたは言語コンストラクトに記録されます。 ( *Visual Basic ランタイムヘルパー*は、特定の言語のセマンティックを実行するために実行時に呼び出される、Microsoft によって定義される関数です)。  
   
- `-vbruntime+`オプションがない場合に発生するのと同じ動作を生成`-vbruntime`スイッチを指定します。 使用することができます、`-vbruntime+`前をオーバーライドするオプション`-vbruntime`スイッチ。  
+ @No__t-0 オプションは、`-vbruntime` スイッチが指定されていない場合に発生するのと同じ動作を生成します。 @No__t-0 オプションを使用して、前の `-vbruntime` スイッチを上書きできます。  
   
- ほとんどのオブジェクトの`My`型は、使用する場合は使用できません、`-vbruntime-`または`-vbruntime:path`オプション。  
+ @No__t-1 または `-vbruntime:path` オプションを使用する場合、`My` 型のほとんどのオブジェクトは使用できません。  
   
-## <a name="embedding-visual-basic-runtime-core-functionality"></a>Visual Basic ランタイムのコア機能の埋め込み  
- `-vbruntime*`オプションでは、ランタイム ライブラリへの参照なしでコンパイルすることができます。 代わりに、Visual Basic ランタイム ライブラリからのコア機能は、ユーザー アセンブリに埋め込まれます。 Visual Basic ランタイムが含まれていないプラットフォームでアプリケーションを実行している場合は、このオプションを使用できます。  
+## <a name="embedding-visual-basic-runtime-core-functionality"></a>埋め込み Visual Basic ランタイムコア機能  
+ @No__t-0 オプションを使用すると、ランタイムライブラリへの参照を使用せずにコンパイルできます。 代わりに、Visual Basic ランタイムライブラリのコア機能がユーザーアセンブリに埋め込まれます。 このオプションは、アプリケーションが Visual Basic ランタイムを含まないプラットフォームで実行されている場合に使用できます。  
   
- 次のランタイムのメンバーが埋め込まれます。  
+ 次のランタイムメンバーが埋め込まれています。  
   
 - <xref:Microsoft.VisualBasic.CompilerServices.Conversions> クラス  
   
@@ -78,17 +78,17 @@ ms.locfileid: "64663492"
   
 - <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> 定数  
   
-- 一部のオブジェクトの`My`型  
+- @No__t-0 型の一部のオブジェクト  
   
- 使用してコンパイルする場合、`-vbruntime*`オプションと、コードは、コア機能に埋め込まれていない Visual Basic ランタイム ライブラリからメンバーを参照、コンパイラには、メンバーが使用できないことを示すエラーが返されます。  
+ @No__t-0 オプションを使用してコンパイルし、コードがコア機能に埋め込まれていない Visual Basic ランタイムライブラリからメンバーを参照している場合、コンパイラは、メンバーが使用できないことを示すエラーを返します。  
   
-## <a name="referencing-a-specified-library"></a>指定したライブラリを参照します。  
- 使用することができます、 `path` Visual Basic ランタイム ライブラリの既定ではなくカスタム ランタイム ライブラリへの参照を使用してコンパイルする引数。  
+## <a name="referencing-a-specified-library"></a>指定したライブラリの参照  
+ @No__t-0 引数を使用すると、既定の Visual Basic ランタイムライブラリの代わりに、カスタムランタイムライブラリへの参照を使用してコンパイルできます。  
   
- 場合の値、`path`引数は、DLL への完全修飾パスがある場合、コンパイラでは、そのファイルは、ランタイム ライブラリとして使用します。 場合の値、 `path` DLL への完全修飾パス引数が、現在のフォルダーで識別された DLL を Visual Basic コンパイラがまず検索します。 使用して指定したパスを検索し、 [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)コンパイラ オプション。 場合、`-sdkpath`コンパイラ オプションが使用されない場合、コンパイラは、.NET Framework フォルダーで識別された DLL の検索 (`%systemroot%\Microsoft.NET\Framework\versionNumber`)。  
+ @No__t-0 引数の値が DLL への完全修飾パスの場合、コンパイラはそのファイルをランタイムライブラリとして使用します。 @No__t-0 引数の値が DLL への完全修飾パスではない場合、Visual Basic コンパイラは最初に現在のフォルダー内の特定の DLL を検索します。 次に、 [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)コンパイラオプションを使用して、指定したパスを検索します。 @No__t-0 コンパイラオプションが使用されていない場合、コンパイラは、識別された DLL を .NET Framework フォルダー (`%systemroot%\Microsoft.NET\Framework\versionNumber`) で検索します。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、`-vbruntime`カスタム ライブラリへの参照を使用してコンパイルするにはオプションです。  
+ 次の例は、`-vbruntime` オプションを使用して、カスタムライブラリへの参照を使用してコンパイルする方法を示しています。  
   
 ```console
 vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
@@ -96,7 +96,7 @@ vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic Core-Visual Studio 2010 SP1 での新しいコンパイル モード](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
+- [Visual Basic コア-Visual Studio 2010 SP1 の新しいコンパイルモード](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

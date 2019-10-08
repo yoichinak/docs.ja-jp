@@ -9,39 +9,39 @@ helpviewer_keywords:
 - -rootnamespace compiler option [Visual Basic]
 - rootnamespace compiler option [Visual Basic]
 ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
-ms.openlocfilehash: ff4b1729f1b9fb1d698b4b5b1e3711ce3d27b4db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4df4e74fc13c922f51f5b74c3c152bdea28b4431
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61639036"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005208"
 ---
 # <a name="-rootnamespace"></a>-rootnamespace
 すべての型宣言に対して名前空間を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -rootnamespace:namespace  
 ```  
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|項目|定義|  
 |---|---|  
 |`namespace`|現在のプロジェクトのすべての型宣言を囲む名前空間の名前。|  
   
-## <a name="remarks"></a>Remarks  
- 使用して、Visual Studio 統合開発環境で作成したプロジェクトをコンパイルする Visual Studio の実行可能ファイル (Devenv.exe) を使用する場合`-rootnamespace`の値を指定する、<xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A>プロパティ。 参照してください[Devenv コマンド ライン スイッチ](/visualstudio/ide/reference/devenv-command-line-switches)詳細についてはします。  
+## <a name="remarks"></a>コメント  
+ Visual studio の実行可能ファイル (Devenv.exe) を使用して、Visual Studio 統合開発環境で作成されたプロジェクトをコンパイルする場合は、`-rootnamespace` を使用して、<xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> プロパティの値を指定します。 詳細については、「 [Devenv コマンドラインスイッチ](/visualstudio/ide/reference/devenv-command-line-switches)」を参照してください。  
   
- 共通言語ランタイム MSIL 逆アセンブラーを使用して (`Ildasm.exe`) を出力ファイルの名前空間の名前を表示します。  
+ 共通言語ランタイムの MSIL 逆アセンブラー (`Ildasm.exe`) を使用して、出力ファイル内の名前空間の名前を表示します。  
   
-|Visual Studio 統合開発環境で-rootnamespace を設定するには|  
+|Visual Studio 統合開発環境で rootnamespace を設定するには|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.**[アプリケーション]** タブをクリックします。<br />3.値を変更、**ルート Namespace**ボックス。|  
+|1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[アプリケーション]** タブをクリックします。<br />3. **[ルート名前空間]** ボックスの値を変更します。|  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`In.vb`と名前空間のすべての型宣言を囲む`mynamespace`します。  
+ 次のコードでは `In.vb` をコンパイルし、名前空間 `mynamespace` のすべての型宣言を囲みます。  
   
 ```console
 vbc -rootnamespace:mynamespace in.vb  

@@ -13,19 +13,19 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 835b06c6107cd44d49c83cfe34102b0c2d2a4bb9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 192fe629493947ffe4e0aa8ade417b7701ff95b4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627399"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004598"
 ---
 # <a name="commanding-overview"></a>コマンド実行の概要
 <a name="introduction"></a> コマンド実行は [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の入力メカニズムであり、デバイス入力よりいっそうセマンティックなレベルでの入力処理を提供します。 コマンドの例は、多くのアプリケーションで見られる**コピー**、**切り取り**、**貼り付け**などの操作です。  
   
  この概要では、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でのコマンドとはどういうものか、コマンド実行モデルに含まれるクラス、アプリケーションでコマンドを作成して使用する方法を定義します。  
   
- このトピックは、次のセクションで構成されています。  
+ このトピックには、次のセクションが含まれます。  
   
 - [コマンドとは](#commands_at_10000_feet)  
   
@@ -173,7 +173,7 @@ ms.locfileid: "64627399"
 ## <a name="command-library"></a>コマンド ライブラリ  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、定義済みのコマンドのセットが用意されています。  コマンド ライブラリは、<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.MediaCommands>、<xref:System.Windows.Documents.EditingCommands>、<xref:System.Windows.Input.ComponentCommands> というクラスで構成されています。  これらのクラスでは、<xref:System.Windows.Input.ApplicationCommands.Cut%2A>、<xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> と <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>、<xref:System.Windows.Input.MediaCommands.Play%2A>、<xref:System.Windows.Input.MediaCommands.Stop%2A>、<xref:System.Windows.Input.MediaCommands.Pause%2A> などのコマンドが提供されます。  
   
- これらのコマンドの多くには、既定の入力バインディングのセットが含まれます。  たとえば、アプリケーションがコピー コマンドを処理することを指定すると、キーボード バインディング "Ctrl + C" が自動的に有効になります。また、[!INCLUDE[TLA2#tla_tpc](../../../../includes/tla2sharptla-tpc-md.md)] のペン ジェスチャや音声情報などの他の入力デバイスに対するバインディングも有効になります。  
+ これらのコマンドの多くには、既定の入力バインディングのセットが含まれます。  たとえば、アプリケーションでコピーコマンドを処理するように指定すると、キーボードバインド "CTRL + C" が自動的に取得されます。これには、Tablet PC のペンジェスチャや音声情報など、他の入力デバイスのバインドも表示されます。  
   
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使ってさまざまなコマンド ライブラリのコマンドを参照するときは、通常、静的なコマンド プロパティを公開するライブラリ クラスのクラス名を省略できます。 一般に、コマンド名に文字列としての曖昧さはなく、所有する型は、コマンドの論理グループを提供するために存在しますが、曖昧さの解消のためには必要ありません。 たとえば、詳細な `Command="ApplicationCommands.Cut"` ではなく`Command="Cut"` と指定できます。 これは、コマンドに対する [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサに組み込まれた便利なメカニズムです (つまり、これは <xref:System.Windows.Input.ICommand> の型コンバーターの動作であり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサは読み込み時にこれを参照します)。  
   
@@ -192,5 +192,5 @@ ms.locfileid: "64627399"
 - [入力の概要](input-overview.md)
 - [ルーティング イベントの概要](routed-events-overview.md)
 - [ICommandSource を実装する](how-to-implement-icommandsource.md)
-- [方法: コマンド メニュー アイテムを追加します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
+- [2 つのオブジェクトが等しいかどうかをテストする方法MenuItem @ no__t にコマンドを追加する
 - [カスタム RoutedCommand の作成のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

@@ -5,57 +5,57 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 378a6b1543181052c000fd58f7deeed88cabf1ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 771757afe214919649e13fda3990e1154be8e1e1
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622519"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004530"
 ---
 # <a name="attribute-list-visual-basic"></a>属性リスト (Visual Basic)
-宣言されたプログラミング要素に適用される属性を指定します。 複数の属性を指定するときは、コンマで区切ります。 1 つの属性の構文を次に示します。  
+宣言されたプログラミング要素に適用する属性を指定します。 複数の属性を指定するときは、コンマで区切ります。 1つの属性の構文を次に示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 [ attributemodifier ] attributename [ ( attributearguments | attributeinitializer ) ]  
 ```  
   
 ## <a name="parts"></a>指定項目  
 |||
 |---|---|
-|`attributemodifier`|ソース ファイルの先頭に適用される属性に必要です。 [アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)または[モジュール](../../../visual-basic/language-reference/modifiers/module-keyword.md)します。|
+|`attributemodifier`|ソースファイルの先頭で適用される属性に必要です。 [アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)または[モジュール](../../../visual-basic/language-reference/modifiers/module-keyword.md)を指定できます。|
 |`attributename`| 必須。 属性の名前。|
-|`attributearguments`|省略可能です。 この属性の位置指定引数のリスト。 複数の引数は、コンマで区切られます。|
-|`attributeinitializer`|省略可能です。 この属性の変数またはプロパティの初期化子の一覧です。 複数の初期化子は、コンマで区切られます。|
+|`attributearguments`|任意。 この属性の位置指定引数の一覧。 複数の引数は、コンマで区切ります。|
+|`attributeinitializer`|任意。 この属性の変数またはプロパティ初期化子のリスト。 複数の初期化子は、コンマで区切られます。|
   
-## <a name="remarks"></a>Remarks  
- ほぼすべてのプログラミング要素 (型、プロシージャ、プロパティ、およびなど) には、1 つまたは複数の属性を適用できます。 属性がアセンブリのメタデータに表示され、コードの注釈を設定または特定のプログラミング要素を使用する方法を指定するのに役立ちます。 Visual Basic と .NET Framework によって定義された属性を適用して、独自の属性を定義することができます。  
+## <a name="remarks"></a>コメント  
+ 1つまたは複数の属性を、ほぼすべてのプログラミング要素 (型、プロシージャ、プロパティなど) に適用できます。 属性は、アセンブリのメタデータに表示され、コードに注釈を付けたり、特定のプログラミング要素の使用方法を指定したりするのに役立ちます。 Visual Basic と .NET Framework で定義された属性を適用し、独自の属性を定義することができます。  
 
- 属性を使用する場合の詳細については、次を参照してください。[属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)します。 属性名には、次を参照してください。 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
+ 属性を使用する場合の詳細については、「[属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)」を参照してください。 属性名の詳細については、「宣言された[要素名](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。  
   
 ## <a name="rules"></a>ルール  
   
-- **配置。** 最も宣言されたプログラミング要素に属性を適用することができます。 配置する 1 つまたは複数の属性を適用する、*属性ブロック*要素宣言の先頭にします。 属性リストの各エントリには、適用する属性および修飾子と属性のこの呼び出しを使用する引数を指定します。  
+- **場所.** 最も宣言されたプログラミング要素に属性を適用できます。 1つまたは複数の属性を適用するには、要素宣言の先頭に*属性ブロック*を配置します。 属性リストの各エントリは、適用する属性、および属性のこの呼び出しに使用する修飾子と引数を指定します。  
   
-- **山かっこします。** 属性リストを指定する場合は、山かっこで囲む必要があります ("`<`「と」`>`")。  
+- **山かっこ。** 属性リストを指定する場合は、山かっこ ("`<`" と "`>`") で囲む必要があります。  
   
-- **宣言の一部です。** 属性は、個別のステートメントではなく、要素の宣言の一部である必要があります。 行連結シーケンスを使用することができます (" `_`") を複数のソース コード行に、宣言ステートメントを拡張します。  
+- **宣言の一部。** 属性は、個別のステートメントではなく、要素宣言の一部である必要があります。 行連結シーケンス ("`_`") を使用して、宣言ステートメントを複数のソースコード行に拡張することができます。  
   
-- **修飾子。** 属性の修飾子 (`Assembly`または`Module`) ソース ファイルの先頭のプログラミング要素に適用する属性が必要です。 ソース ファイルの先頭になっている要素に適用される属性では、属性の修飾子は使用できません。  
+- **ド.** ソースファイルの先頭でプログラミング要素に適用されるすべての属性には、属性修飾子 (`Assembly` または `Module`) が必要です。 ソースファイルの先頭にない要素に適用される属性では、属性修飾子は使用できません。  
   
-- **引数。** 属性のすべての位置指定引数には、任意の変数またはプロパティの初期化子が前にする必要があります。  
+- **数値.** 属性のすべての位置指定引数は、変数またはプロパティ初期化子の前に記述する必要があります。  
   
 ## <a name="example"></a>例  
- 次の例では、適用、<xref:System.Runtime.InteropServices.DllImportAttribute>属性のスケルトン定義を`Function`プロシージャ。  
+ 次の例では、<xref:System.Runtime.InteropServices.DllImportAttribute> 属性を `Function` プロシージャのスケルトン定義に適用します。  
   
  [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute> 属性付きの手順がアンマネージ ダイナミック リンク ライブラリ (DLL) のエントリ ポイントを表すことを示します。 属性は、位置指定引数として DLL 名と変数の初期化子とその他の情報を提供します。  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> は、属性付きプロシージャがアンマネージダイナミックリンクライブラリ (DLL) のエントリポイントを表すことを示します。 属性は、DLL 名を位置引数として指定し、その他の情報を変数初期化子として提供します。  
   
 ## <a name="see-also"></a>関連項目
 
 - [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
 - [Module \<キーワード>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
 - [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [方法: コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [2 つのオブジェクトが等しいかどうかをテストする方法コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

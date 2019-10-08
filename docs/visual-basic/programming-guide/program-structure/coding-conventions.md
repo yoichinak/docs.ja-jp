@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: 580a6e1caa78ea981b6d2be68a6e7c61e2ad55d7
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 18c309e22cccfa5d835394996fc6974d95825b65
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433821"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003112"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic のコーディング規則
 Microsoft は、ここで示すガイドラインに従ってサンプルおよびドキュメントを開発しています。 同じコーディング規則に従うと、次のような利点があります。  
@@ -36,7 +36,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 - タブを空白として挿入し、4 文字インデントによるスマート インデントを使用します。  
   
-- コード エディターでコードの書式を再整形するときは**コードの再フォーマット**を使用します。 詳細については、[オプション、[テキスト エディター]、基本 (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)を参照してください。  
+- コード エディターでコードの書式を再整形するときは**コードの再フォーマット**を使用します。 詳細については、次を参照してください。[オプション、[テキスト エディター]、基本 (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)です。  
   
 - 1 つの行には 1 つのステートメントのみを記述します。 Visual Basic の行区切り記号 (:) は使用しないでください。  
   
@@ -46,7 +46,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 - **コードの再フォーマット**が自動で行継続を整形しない場合、手動で継続行を1個のタブ ストップでインデントします。 ただし、リストの項目は常に左揃えにします。  
   
-    ```  
+    ```vb  
     a As Integer,  
     b As Integer  
     ```  

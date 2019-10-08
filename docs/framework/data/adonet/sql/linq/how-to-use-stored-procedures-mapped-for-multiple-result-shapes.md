@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: d32faf026789923ca4343271c9fd1b6bbdb068df
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 065e866ec5937c4af31c0b1563a7582cb4112eba
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793095"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003274"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>方法: 複数の結果形状が割り当てられたストアド プロシージャを使用する
-複数の結果形状を返すことができるストアド プロシージャの場合、戻り値の型を単一の射影形状として厳密に型指定することはできません。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は、考えられるすべてのプロジェクション型を生成できますが、返される順序を知ることはできません。  
+複数の結果形状を返すことができるストアド プロシージャの場合、戻り値の型を単一の射影形状として厳密に型指定することはできません。 @No__t-0 は可能なすべてのプロジェクション型を生成できますが、返される順序を知ることはできません。  
   
- このシナリオと対照的なのが、複数の結果形状をシーケンシャルに生成するストアド プロシージャです。 詳細については、「[方法 :シーケンシャルな結果形状](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)にマップされたストアドプロシージャを使用します。  
+ このシナリオと対照的なのが、複数の結果形状をシーケンシャルに生成するストアド プロシージャです。 詳細については、「[方法 :シーケンシャルな結果図形 @ no__t-0 にマップされたストアドプロシージャを使用します。  
   
  複数の結果型を返すストアド プロシージャには、プロシージャが返す可能性のある一連の型を示す <xref:System.Data.Linq.Mapping.ResultTypeAttribute> 属性を適用します。  
   
 ## <a name="example"></a>例  
  次の SQL コードの例では、結果形状は入力値 (`shape =1` または `shape = 2`) に応じて変わります。 どちらの射影が先に返されるかはわかりません。  
   
-```  
+``` sql
 CREATE PROCEDURE VariableResultShapes(@shape int)  
 AS  
 if(@shape = 1)  

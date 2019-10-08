@@ -7,17 +7,17 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 29ff388685c67d06d7c5866a46954d5ade72acb1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0e11f0e5751f6d5cc51c32994dc932fd7d3e9f61
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053357"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003989"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>WPF のブラウザーのホスト処理をサポートするネイティブ API
-Web ブラウザー [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]でのアプリケーションのホスティングは、WPF ホストから登録されたアクティブなドキュメントサーバー (DocObject とも呼ばれます) によって促進されます。 Internet Explorer は、アクティブなドキュメントを直接アクティブ化して統合できます。 Mozilla ブラウザーで xbap およびルース XAML ドキュメントをホストするため[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]に、には npapi プラグインが用意されています[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 。これにより、Internet Explorer のように、アクティブなドキュメントサーバーに同様のホスト環境が提供されます。 ただし、他のブラウザーやスタンドアロンアプリケーションで Xbap および XAML ドキュメントをホストする最も簡単な方法は、Internet Explorer Web ブラウザーコントロールを使用することです。 Web ブラウザーコントロールは、複雑な Active ドキュメントサーバーホスティング環境を提供しますが、独自のホストがその環境をカスタマイズおよび拡張し、現在アクティブなドキュメントオブジェクトと直接通信できるようにします。  
+Web ブラウザーでの WPF アプリケーションのホスティングは、WPF ホストの外部に登録されているアクティブなドキュメントサーバー (DocObject とも呼ばれます) によって容易に行うことができます。 Internet Explorer は、アクティブなドキュメントを直接アクティブ化して統合できます。 Mozilla ブラウザーで Xbap およびルース XAML ドキュメントをホストするために、WPF には NPAPI プラグインが用意されています。これにより、Internet Explorer のように WPF Active ドキュメントサーバーに同様のホスト環境が提供されます。 ただし、他のブラウザーやスタンドアロンアプリケーションで Xbap および XAML ドキュメントをホストする最も簡単な方法は、Internet Explorer Web ブラウザーコントロールを使用することです。 Web ブラウザーコントロールは、複雑な Active ドキュメントサーバーホスティング環境を提供しますが、独自のホストがその環境をカスタマイズおよび拡張し、現在アクティブなドキュメントオブジェクトと直接通信できるようにします。  
   
- Active [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]ドキュメントサーバーでは、 [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049)、 [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050)、 [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051)、 [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045)、 [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)など、いくつかの一般的なホスティングインターフェイスが実装されています。 Web ブラウザーコントロールでホストされている場合、これらのインターフェイスは、 [IWebBrowser2::D ocument](https://go.microsoft.com/fwlink/?LinkId=162048)プロパティによって返されるオブジェクトからクエリを実行できます。  
+ WPF Active ドキュメントサーバーは、 [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049)、 [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050)、 [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051)、 [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045)、 [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)など、いくつかの一般的なホスティングインターフェイスを実装します。 Web ブラウザーコントロールでホストされている場合、これらのインターフェイスは、 [IWebBrowser2::D ocument](https://go.microsoft.com/fwlink/?LinkId=162048)プロパティによって返されるオブジェクトからクエリを実行できます。  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
  WPF Active ドキュメントサーバーの[IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)の実装では、標準の OLE コマンドグループ (null コマンドグループ GUID を持つ) のナビゲーション関連およびブラウザー固有の多くのコマンドがサポートされています。 さらに、CGID_PresentationHost という名前のカスタムコマンドグループが認識されます。 現在、このグループ内に定義されているコマンドは1つだけです。  

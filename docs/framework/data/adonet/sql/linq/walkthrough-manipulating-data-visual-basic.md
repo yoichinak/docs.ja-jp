@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: a74216c53c45790b974938c7155e0b5e1043ac13
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7acce3f8483fab3c2978de7cbd1b9d875900f1d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792288"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003398"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>チュートリアル: データの操作 (Visual Basic)
 このチュートリアルでは、データベースに対してデータの追加、変更、および削除を行う、基本の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] シナリオ全体を示します。 顧客の追加、顧客名の変更、および注文の削除を行うため、サンプルの Northwind データベースのコピーを使用します。  
@@ -18,7 +18,7 @@ ms.locfileid: "70792288"
   
  このチュートリアルは、Visual Basic 開発設定を使用して記述されています。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  このチュートリアルの前提条件は次のとおりです。  
   
 - このチュートリアルでは、専用フォルダー ("c:\linqtest2") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。  
@@ -36,9 +36,9 @@ ms.locfileid: "70792288"
      詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   
 ## <a name="overview"></a>概要  
- このチュートリアルは、主に次の 6 つのタスクで構成されています。  
+ このチュートリアルは、主に次の 6 つの手順で構成されています。  
   
-- Visual Studio [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]でソリューションを作成する。  
+- Visual Studio で @no__t 0 ソリューションを作成する。  
   
 - プロジェクトにデータベース コード ファイルを追加します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "70792288"
 - これらの変更を Northwind データベースに送信します。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成する  
- この最初のタスクでは、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]プロジェクトをビルドして実行するために必要な参照を含む Visual Studio ソリューションを作成します。  
+ この最初のタスクでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] プロジェクトをビルドして実行するために必要な参照を含む Visual Studio ソリューションを作成します。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成するには  
   
@@ -66,7 +66,7 @@ ms.locfileid: "70792288"
 5. **[OK]** をクリックします。  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ の参照とディレクティブを追加する  
- このチュートリアルで使用するアセンブリは、既定ではプロジェクトにインストールされていない場合があります。 が`System.Data.Linq`プロジェクト内に参照として表示されていない場合 (**ソリューションエクスプローラー**で **[すべてのファイルを表示]** をクリックし、 **[参照]** ノードを展開)、次の手順で説明するように追加します。  
+ このチュートリアルで使用するアセンブリは、既定ではプロジェクトにインストールされていない場合があります。 @No__t-0 がプロジェクトに参照として表示されていない場合 (**ソリューションエクスプローラー**で **[すべてのファイルを表示]** をクリックし、 **[参照]** ノードを展開)、次の手順で説明するように追加します。  
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq を追加するには  
   
@@ -168,7 +168,7 @@ ms.locfileid: "70792288"
   
      次のようにコンソール ウィンドウが表示されます。  
   
-    ```  
+    ```console
     Customers matching CA before update:  
     Customer ID: CACTU  
     Customer ID: RICAR  

@@ -6,35 +6,35 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: 9d2e0c7b2b81a79f95fa852b3975f4512d87f8e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 522ac71767707ae90a3f1d11d45ef8b29471ae6c
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623990"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005116"
 ---
 # <a name="const-statement-visual-basic"></a>Const ステートメント (Visual Basic)
-宣言し、1 つまたは複数の定数を定義します。  
+1つ以上の定数を宣言して定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ]   
 Const constantlist  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `attributelist`  
- 省略可能です。 すべての定数に適用される属性の一覧は、このステートメントで宣言します。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)山かっこ ("`<`「と」`>`")。  
+ 任意。 このステートメントで宣言されているすべての定数に適用される属性のリスト。 山かっこ ("`<`" と "@no__t") の[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)を参照してください。  
   
  `accessmodifier`  
- 省略可能です。 これを使用して、どのようなコードがアクセスできるは、これらの定数を指定します。 [パブリック](../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../visual-basic/language-reference/modifiers/protected.md)、[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)、 [Protected Friend](../modifiers/protected-friend.md)、[プライベート](../../../visual-basic/language-reference/modifiers/private.md)、または[Private Protected](../../language-reference/modifiers/private-protected.md)します。
+ 任意。 これらの定数にアクセスできるコードを指定するには、これを使用します。 [Public](../../../visual-basic/language-reference/modifiers/public.md)、 [protected](../../../visual-basic/language-reference/modifiers/protected.md)、 [friend](../../../visual-basic/language-reference/modifiers/friend.md)、 [Protected Friend](../modifiers/protected-friend.md)、 [private](../../../visual-basic/language-reference/modifiers/private.md)、または[private](../../language-reference/modifiers/private-protected.md)を指定できます。
   
  `Shadows`  
- 省略可能です。 再宣言して、基底クラスでのプログラミング要素を非表示にするには、これを使用します。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
+ 任意。 基底クラスのプログラミング要素を再宣言および非表示にするには、これを使用します。 「[シャドウ](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。  
   
  `constantlist`  
- 必須。 このステートメントで宣言されている定数の一覧です。  
+ 必須。 このステートメントで宣言されている定数の一覧。  
   
  `constant` `[ ,` `constant` `... ]`  
   
@@ -42,62 +42,62 @@ Const constantlist
   
  `constantname` `[ As` `datatype` `] =` `initializer`  
   
-|パーツ|説明|  
+|要素|説明|  
 |----------|-----------------|  
 |`constantname`|必須。 定数の名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
-|`datatype`|場合に、必ず`Option Strict`は`On`します。 定数のデータ型。|  
-|`initializer`|必須。 式がコンパイル時に評価され、定数に割り当てられているです。|  
+|`datatype`|@No__t-0 が `On` の場合は必須です。 定数のデータ型。|  
+|`initializer`|必須。 コンパイル時に評価され、定数に割り当てられる式。|  
   
-## <a name="remarks"></a>Remarks  
- を、アプリケーションで変更されない値がある場合は、名前付き定数を定義し、リテラル値の代わりに使用します。 名前は、値よりも覚えやすい。 定数を 1 回だけ定義でき、コード内のさまざまな場所で使用できます。 以降のバージョンでは、値を再定義する必要がある場合、`Const`ステートメントは唯一の場所を変更する必要があります。  
+## <a name="remarks"></a>コメント  
+ アプリケーションで変更されない値がある場合は、名前付き定数を定義し、リテラル値の代わりに使用することができます。 名前は、値よりも覚えやすくなります。 定数は一度だけ定義し、コード内の多くの場所で使用できます。 後のバージョンで値を再定義する必要がある場合は、`Const` ステートメントだけを変更する必要があります。  
   
- 使用することができます`Const`モジュールまたはプロシージャ レベルでのみです。 つまり、*宣言コンテキスト*変数は、クラス、構造体、モジュール、プロシージャ、またはブロックする必要があり、ソース ファイル、名前空間、またはインターフェイスにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
+ @No__t-0 は、モジュールレベルまたはプロシージャレベルでのみ使用できます。 つまり、変数の*宣言コンテキスト*はクラス、構造体、モジュール、プロシージャ、またはブロックである必要があり、ソースファイル、名前空間、またはインターフェイスにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
- ローカル定数 (プロシージャ) 内にある既定で、パブリック アクセスに、アクセス修飾子を使用できません。 プライベート アクセスは、クラスとモジュールのメンバー (プロシージャ) の外部定数既定、構造体メンバー定数既定でパブリック アクセスします。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。  
+ ローカル定数 (プロシージャ内) は、既定でパブリックアクセスに設定され、アクセス修飾子を使用することはできません。 クラスとモジュールのメンバー定数 (プロシージャ以外) では、既定でプライベートアクセスが使用され、構造体メンバー定数は既定でパブリックアクセスになります。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。  
   
 ## <a name="rules"></a>ルール  
   
-- **宣言コンテキスト。** 定数宣言、プロシージャの外側のモジュール レベルでは、*メンバー定数*; クラス、構造体のメンバーであるか、宣言するモジュール。  
+- **宣言コンテキスト。** モジュールレベルで、プロシージャの外部で宣言された定数は、*メンバー定数*です。これは、それを宣言するクラス、構造体、またはモジュールのメンバーです。  
   
-     プロシージャ レベルで宣言された定数は、*ローカル定数*; プロシージャまたは宣言ブロックに対してローカルです。  
+     プロシージャレベルで宣言された定数は*ローカル定数*です。これは、それを宣言するプロシージャまたはブロックに対してローカルです。  
   
-- **属性。** ローカル定数ではなく、メンバーの定数にのみ、属性を適用することができます。 属性は、ローカル定数などの一時的なストレージの意味はないアセンブリのメタデータに情報を提供します。  
+- **アトリビュート.** 属性は、ローカル定数ではなく、メンバー定数にのみ適用できます。 属性は、アセンブリのメタデータに情報を提供します。これは、ローカル定数などの一時的なストレージには意味がありません。  
   
-- **修飾子。** すべての定数は、既定では、 `Shared`、 `Static`、および`ReadOnly`します。 定数を宣言するときに、これらのキーワードのいずれかを使用することはできません。  
+- **ド.** 既定では、すべての定数は `Shared`、`Static`、`ReadOnly` です。 定数を宣言するときに、これらのキーワードを使用することはできません。  
   
-     プロシージャ レベルで使用することはできません`Shadows`またはのいずれかのアクセス修飾子をローカル定数を宣言します。  
+     プロシージャレベルでは、`Shadows` または任意のアクセス修飾子を使用してローカル定数を宣言することはできません。  
   
-- **複数の定数。** 同じ宣言ステートメントで複数の定数を宣言することを指定する、`constantname`それぞれの一部です。 複数の定数は、コンマで区切られます。  
+- **複数の定数。** 同じ宣言ステートメントで複数の定数を宣言し、それぞれに対して @no__t 0 の部分を指定できます。 複数の定数は、コンマで区切られます。  
   
-## <a name="data-type-rules"></a>データ型のルール  
+## <a name="data-type-rules"></a>データ型ルール  
   
-- **データ型。** `Const`ステートメントは、変数のデータ型を宣言できます。 任意のデータ型または列挙型の名前を指定することができます。  
+- **データ型。** @No__t-0 ステートメントでは、変数のデータ型を宣言できます。 任意のデータ型または列挙型の名前を指定できます。  
   
-- **既定の型。** 指定しない場合`datatype`、定数のデータ型は、`initializer`します。 両方を指定する場合`datatype`と`initializer`のデータ型`initializer`に変換できる必要があります`datatype`します。 どちらの場合`datatype`も`initializer`が存在するデータ型の既定値は`Object`します。  
+- **既定の型。** @No__t-0 に指定しない場合、定数は `initializer` のデータ型になります。 @No__t-0 と `initializer` の両方を指定した場合、`initializer` のデータ型は `datatype` に変換可能である必要があります。 @No__t-0 も `initializer` も存在しない場合、データ型は既定で `Object` に設定されます。  
   
-- **さまざまな種類。** 異なる定数に異なるデータ型を指定するには、個別を使用して`As`を宣言する変数ごとの句。 ただし、一般的なを使用して、同じ型にするいくつかの定数を宣言することはできません`As`句。  
+- **異なる型。** 宣言する変数ごとに個別の `As` 句を使用して、異なる定数に異なるデータ型を指定できます。 ただし、共通の `As` 句を使用して、同じ型の複数の定数を宣言することはできません。  
   
-- **初期化します。** 内のすべての定数の値を初期化する必要があります`constantlist`します。 使用する`initializer`定数に割り当てられる式を指定します。 式には、リテラル、既に定義されている他の定数と既に定義されている列挙型メンバーの任意の組み合わせを指定できます。 算術演算および論理演算子を使用すると、このような要素を結合します。  
+- **イニシャライズ.** @No__t-0 のすべての定数の値を初期化する必要があります。 定数に割り当てられる式を指定するには、`initializer` を使用します。 式には、リテラルの任意の組み合わせ、既に定義されている他の定数、および既に定義されている列挙メンバーを使用できます。 算術演算子と論理演算子を使用すると、このような要素を組み合わせることができます。  
   
-     変数または関数で使用することはできません`initializer`します。 変換キーワードなどを使用するただし、`CByte`と`CShort`します。 使用することも`AscW`定数で呼び出す場合`String`または`Char`引数、コンパイル時に評価できるためです。  
+     @No__t-0 の変数または関数は使用できません。 ただし、`CByte` や `CShort` などの変換キーワードを使用することもできます。 @No__t-0 は、定数 `String` または `Char` 引数を使用して呼び出す場合にも使用できます。これはコンパイル時に評価されるためです。  
   
 ## <a name="behavior"></a>動作  
   
-- **スコープ。** ローカル定数は、そのプロシージャまたはブロック内からのみアクセスできます。 メンバー定数には、クラス、構造体、またはモジュール内で任意の場所からアクセスできます。  
+- **検索.** ローカル定数は、プロシージャまたはブロック内からのみアクセスできます。 メンバー定数は、クラス、構造体、またはモジュール内のどこからでもアクセスできます。  
   
-- **パス名です。** コード、クラスの外部で構造体、またはモジュール修飾する必要があります、クラス、構造体、モジュールの名前を持つメンバー定数の名前。 コードの外部プロシージャまたはブロックは、そのプロシージャまたはブロック内の任意のローカル定数を参照できません。  
+- **修飾。** クラス、構造体、またはモジュールの外部のコードでは、メンバー定数の名前を、そのクラス、構造体、またはモジュールの名前で修飾する必要があります。 プロシージャまたはブロックの外側のコードは、そのプロシージャまたはブロック内のローカル定数を参照できません。  
   
 ## <a name="example"></a>例  
- 次の例では、`Const`リテラル値の代わりに使用するための定数を宣言するステートメント。  
+ 次の例では、`Const` ステートメントを使用して、リテラル値の代わりに使用する定数を宣言します。  
   
  [!code-vb[VbVbalrStatements#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#13)]  
   
 ## <a name="example"></a>例  
- データ型の定数を定義した場合`Object`、Visual Basic コンパイラは、の型を提供、`initializer`の代わりに`Object`します。 次の例では、定数`naturalLogBase`実行時の型を持つ`Decimal`します。  
+ データ型が `Object` の定数を定義すると、Visual Basic コンパイラによって、`Object` ではなく `initializer` の型が指定されます。 次の例では、定数 `naturalLogBase` は実行時の型 `Decimal` です。  
   
  [!code-vb[VbVbalrStatements#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#87)]  
   
- 上記の例では、<xref:System.Type.ToString%2A>メソッドを<xref:System.Type>によって返されるオブジェクト、 [GetType 演算子](../../../visual-basic/language-reference/operators/gettype-operator.md)ため、<xref:System.Type>に変換できない`String`を使用して`CStr`します。  
+ 前の例では、 [GetType 演算子](../../../visual-basic/language-reference/operators/gettype-operator.md)によって返される <xref:System.Type> オブジェクトに対して <xref:System.Type.ToString%2A> メソッドを使用しています。 <xref:System.Type> は、`CStr` を使用して `String` に変換することはできません。  
   
 ## <a name="see-also"></a>関連項目
 

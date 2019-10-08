@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 95c9add0521208ef04ff47c071a2e04abc968f27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a83b636dd83534788f3a38971e0fef2919314f5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648738"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005633"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -18,11 +18,11 @@ ms.locfileid: "61648738"
 
 ## <a name="syntax"></a>構文
 
-```
+```console
 -deterministic
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 既定では、コンパイラはタイムスタンプと乱数から生成された GUID を追加するため、指定した入力のセットからのコンパイラの出力は固有になります。 `-deterministic` オプションを使用して、*決定論的アセンブリ*を生成します。そのバイナリ コンテンツは、入力が同じである限り、コンパイル全体で同一になります。
 

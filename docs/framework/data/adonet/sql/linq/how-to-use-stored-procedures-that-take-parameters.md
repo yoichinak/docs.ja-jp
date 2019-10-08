@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: c2b657f704d072b987578be5520a58d007ecac37
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: e9d77cd1dc82e1b103c5f0d9f3f447ed105acaec
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353019"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003247"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>方法: パラメーターを受け取るストアド プロシージャを使用する
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、出力パラメーターを参照パラメーターに対応付け、値型はパラメーターを null 許容型として宣言します。  
@@ -20,7 +20,7 @@ ms.locfileid: "71353019"
 ## <a name="example"></a>例  
  次の例は、単一の入力パラメーター (顧客 ID) を受け取り、出力パラメーター (その顧客の売上合計) を返します。  
   
-```  
+```sql
 CREATE PROCEDURE [dbo].[CustOrderTotal]   
 @CustomerID nchar(5),  
 @TotalSales money OUTPUT  

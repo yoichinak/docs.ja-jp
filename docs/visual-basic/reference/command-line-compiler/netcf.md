@@ -9,47 +9,47 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: 028fa148d0e5622648a5fdfff1789c3d0bfde057
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 3df7e622f97a5a1291736180e3964b1b3deaea2f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268288"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005453"
 ---
 # <a name="-netcf"></a>-netcf
 
-.NET Compact Framework を対象とするコンパイラを設定します。
+.NET Compact Framework を対象とするようにコンパイラを設定します。
 
 ## <a name="syntax"></a>構文
 
-```
+```console
 -netcf
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-`-netcf`オプションは、完全な .NET Framework ではなく、.NET Compact Framework を対象とする Visual Basic コンパイラ。 完全な .NET Framework でのみ存在する言語機能は無効です。
+@No__t-0 オプションを指定すると、Visual Basic コンパイラは完全な .NET Framework ではなく .NET Compact Framework を対象とします。 完全な .NET Framework にのみ存在する言語機能は無効になっています。
 
-`-netcf`オプションがと共に使用するように設計[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)します。 無効になっている言語機能`-netcf`同じ言語機能を対象となるファイルに存在しない`-sdkpath`します。
+@No__t-0 オプションは、 [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)と共に使用するように設計されています。 @No__t-0 によって無効にされた言語機能は、`-sdkpath` を対象とするファイルには存在しないものと同じ言語機能です。
 
 > [!NOTE]
-> `-netcf`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。 `-netcf` Visual Basic プロジェクトのデバイスが読み込まれるときにオプションを設定します。
+> @No__t-0 オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。 @No__t-0 オプションは、Visual Basic デバイスプロジェクトが読み込まれるときに設定されます。
 
-`-netcf`オプションは、次の言語機能を変更します。
+@No__t-0 オプションは、次の言語機能を変更します。
 
-- [エンド\<キーワード > ステートメント](../../../visual-basic/language-reference/statements/end-keyword-statement.md)キーワードで、プログラムの実行を終了するが無効になっています。 次のプログラムをコンパイルして実行なし`-netcf`がコンパイル時にでは失敗`-netcf`します。
+- [End \< キーワード > Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md)キーワードは、プログラムの実行を終了しますが、無効になっています。 次のプログラムは @no__t 0 を指定せずにコンパイルして実行しますが、コンパイル時に `-netcf` で失敗します。
 
   [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]
 
-- 遅延バインディングするには、すべての形式が無効です。 認識される遅延バインディング シナリオが発生した場合に、コンパイル時エラーが生成されます。 次のプログラムをコンパイルして実行なし`-netcf`がコンパイル時にでは失敗`-netcf`します。
+- すべての形式の遅延バインディングは無効になっています。 コンパイル時のエラーは、認識された遅延バインディングのシナリオが検出された場合に生成されます。 次のプログラムは @no__t 0 を指定せずにコンパイルして実行しますが、コンパイル時に `-netcf` で失敗します。
 
   [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]
 
-- [自動](../../../visual-basic/language-reference/modifiers/auto.md)、 [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)、および[Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)修飾子が無効になっています。 構文、 [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)ステートメントが変更にも`Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`します。 次のコードは、の効果を示しています。 `-netcf` 、コンパイル時にします。
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)、 [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)、および[Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)の各修飾子は無効になっています。 [Declare statement](../../../visual-basic/language-reference/statements/declare-statement.md)ステートメントの構文も `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]` に変更されています。 次のコードは、コンパイル時の `-netcf` の効果を示しています。
 
   [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]
 
-- Visual Basic から削除された Visual Basic 6.0 のキーワードを使用して、別のエラーを生成時に`-netcf`使用されます。 これには、次のキーワードのエラー メッセージに影響します。
+- Visual Basic から削除された Visual Basic 6.0 キーワードを使用すると、`-netcf` を使用した場合に別のエラーが生成されます。 これは、次のキーワードのエラーメッセージに影響します。
 
   - `Open`
 
@@ -85,7 +85,7 @@ ms.locfileid: "67268288"
 
 ## <a name="example"></a>例
 
-次のコードのコンパイル`Myfile.vb`C ドライブ上の .NET Compact Framework の既定のインストール ディレクトリで見つかった mscorlib.dll および Microsoft.VisualBasic.dll のバージョンを使用して、.NET Compact Framework を使用します。 通常、.NET Compact Framework の最新バージョンを使用するとします。
+次のコードでは、C ドライブの .NET Compact Framework の既定のインストールディレクトリにある mscorlib.dll と Microsoft. .dll のバージョンを使用して、.NET Compact Framework と `Myfile.vb` がコンパイルされます。 通常は、最新バージョンの .NET Compact Framework を使用します。
 
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb

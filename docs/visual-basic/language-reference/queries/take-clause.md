@@ -8,37 +8,37 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: cb109eaf43fee19b77ac690492b85919c9d78301
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32a4c7fd7f1e2f6fe640f3f53f15579f014759d5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054394"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004716"
 ---
 # <a name="take-clause-visual-basic"></a>Take 句 (Visual Basic)
 コレクションの先頭から、指定された数の連続する要素を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 Take count  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `count`  
- 必須。 返すシーケンスの要素の数に評価される式または値。  
+ 必須。 返されるシーケンスの要素数に評価される値または式。  
   
-## <a name="remarks"></a>Remarks  
- `Take`句によってクエリを指定された数結果一覧の先頭からの連続する要素にはが含まれます。 含まれる要素の数がで指定された、`count`パラメーター。  
+## <a name="remarks"></a>コメント  
+ @No__t-0 句を指定すると、クエリでは、結果リストの先頭から指定された数の連続する要素を含めることができます。 含める要素の数は、`count` パラメーターによって指定されます。  
   
- 使用することができます、`Take`句、`Skip`句をクエリの任意のセグメントからのデータの範囲を返します。 これを行うには、範囲の最初の要素のインデックスを渡す、`Skip`句とする範囲のサイズ、`Take`句。 ここで、`Take`後句を指定する必要があります、`Skip`句。  
+ @No__t-1 句を指定した `Take` 句を使用すると、クエリの任意のセグメントからデータの範囲を取得できます。 これを行うには、範囲の最初の要素のインデックスを `Skip` 句に、範囲のサイズを `Take` 句に渡します。 この場合は、`Skip` 句の後に `Take` 句を指定する必要があります。  
   
- 使用すると、`Take`クエリ句、する必要がありますも結果が可能にする順序で返されるように、`Take`に目的の結果に含める句。 クエリの結果を順序付けの詳細については、次を参照してください。 [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)します。  
+ クエリで `Take` 句を使用する場合、`Take` の句に意図した結果を含めることができる順序で結果が返されるようにすることも必要になる場合があります。 クエリ結果の順序付けの詳細については、「 [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)」を参照してください。  
   
- 使用することができます、`TakeWhile`句を指定した条件に応じて特定の要素のみを返すことを指定します。  
+ 指定された条件に応じて、特定の要素のみが返されるように指定するには、`TakeWhile` 句を使用します。  
   
 ## <a name="example"></a>例  
- 次のコード例では、`Take`句と組み合わせて、`Skip`句をページ内のクエリからデータを返します。 GetCustomers 関数は、`Skip`値、および使用して、指定された開始インデックスを作成するまで、リスト内の顧客をバイパスする句、`Take`句にそのインデックス値から開始のページが返されます。  
+ 次のコード例では、`Skip` 句と共に `Take` 句を使用して、ページ内のクエリからデータを返します。 GetCustomers 関数は、`Skip` 句を使用して、指定された開始インデックス値までリスト内の顧客をバイパスし、`Take` 句を使用して、そのインデックス値から始まる顧客のページを返します。  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

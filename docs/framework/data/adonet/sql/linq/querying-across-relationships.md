@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: be0aea66f0923b8b353f42cecc9360731efc7bb9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1675e4c6a610373e1c981b383ae0229739d96dd0
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792848"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003319"
 ---
 # <a name="querying-across-relationships"></a>リレーションシップを介したクエリの実行
 他のオブジェクトまたは他のオブジェクトのコレクションをクラス定義内で参照することは、データベース内の外部キー リレーションシップに直接対応します。 クエリを実行するときにこのリレーションシップを使用するには、ドット表記を使ってリレーションシップ プロパティにアクセスし、オブジェクト間を移動します。 これらのアクセス操作は、SQL で同等の複雑な結合または相関サブクエリとして変換されます。  
@@ -31,23 +31,23 @@ ms.locfileid: "70792848"
   
  リレーションシップが得られたので、クラスに定義されたリレーションシップ プロパティを参照してクエリを作成できます。 これらのリレーションシップ参照は、データベース内の外部キー リレーションシップに対応します。 これらのリレーションシップを使用する操作は、SQL で同等の複雑な結合として変換されます。 <xref:System.Data.Linq.Mapping.AssociationAttribute> 属性を使用してリレーションシップを定義している限りは、明示的な結合を [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] で記述する必要はありません。  
   
- この錯覚を維持するため[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]に、では*遅延読み込み*と呼ばれる手法が実装されています。 詳細については、「[遅延読み込みと即時読み込み](deferred-versus-immediate-loading.md)」を参照してください。  
+ この錯覚を維持するために、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は*遅延読み込み*と呼ばれる手法を実装しています。 詳細については、「[遅延読み込みと即時読み込み](deferred-versus-immediate-loading.md)」を参照してください。  
   
- ペアの`CustomerID` -一覧を射影するには、次のSQLクエリについて考えてみます。`OrderID`  
+ 次の SQL クエリを検討して、`CustomerID` @ no__t @ no__t ペアの一覧を射影します。  
   
-```  
+```sql
 SELECT t0.CustomerID, t1.OrderID  
 FROM   Customers AS t0 INNER JOIN  
           Orders AS t1 ON t0.CustomerID = t1.CustomerID  
 WHERE  (t0.City = @p0)  
 ```  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用して同じ結果を得るには、`Orders` クラスに既に存在する `Customer` プロパティ参照を使用します。 参照`Orders`は、次のコードのように、クエリを実行`CustomerID`して`OrderID`ペアを-射影するために必要な情報を提供します。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用して同じ結果を得るには、`Orders` クラスに既に存在する `Customer` プロパティ参照を使用します。 @No__t-0 参照は、次のコードのように、クエリを実行するために必要な情報を提供し、`CustomerID` @ no__t @ no__t の2つのペアを射影します。  
   
  [!code-csharp[DLinqQueryConcepts#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#5)]
  [!code-vb[DLinqQueryConcepts#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#5)]  
   
- 逆の操作も可能です。 つまり、`Orders` にクエリを実行し、その `Customer` リレーションシップ参照を使用して、関連付けられた `Customer` オブジェクトに関する情報にアクセスできます。 `CustomerID`次の`OrderID` - `Orders`コードでは、以前と同じペアを射影していますが、今回はではなくクエリを実行します。`Customers`  
+ 逆の操作も可能です。 つまり、`Orders` にクエリを実行し、その `Customer` リレーションシップ参照を使用して、関連付けられた `Customer` オブジェクトに関する情報にアクセスできます。 次のコードでは、以前と同じ @no__t 0 @ no__t @ no__t のペアをプロジェクトに射影していますが、今度は `Customers` ではなく `Orders` を照会しています。  
   
  [!code-csharp[DLinqQueryConcepts#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#6)]
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  

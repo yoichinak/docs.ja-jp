@@ -9,34 +9,38 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: 287a2ed3f54f85435a986d3a6ecd77f7009fb195
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33b1837415001253122388f7b4992abf6f96903f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938225"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005608"
 ---
 # <a name="-help---visual-basic"></a>-help, -? (Visual Basic)
 コンパイラ オプションを出力します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -help  
-' -or-  
+```
+
+または  
+
+```console
 -?  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このオプションをコンパイルに含めた場合、出力ファイルは作成されず、コンパイルも行われません。  
   
 > [!NOTE]
-> この`-help`オプションは、Visual Studio 開発環境内からは使用できません。コマンドラインからコンパイルする場合にのみ使用できます。  
+> @No__t-0 オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
   
 ## <a name="example"></a>例  
  次のコードは、コマンドラインからヘルプを表示します。  
   
-```  
+```console  
 vbc -help  
 ```  
   

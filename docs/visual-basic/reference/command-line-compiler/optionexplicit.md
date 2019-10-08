@@ -9,28 +9,28 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c0946b94bfe02d797d1a484088869375703eb6a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788948"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005310"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
-使用されるように、変数が宣言されていない場合は、コンパイラ エラーを報告します。  
+変数が使用される前に宣言されていない場合、コンパイラはエラーを報告します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -optionexplicit[+ | -]  
 ```  
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 省略可能です。 指定`-optionexplicit+`変数の明示的な宣言を要求します。 `-optionexplicit+`オプションと同じですが、既定`-optionexplicit`します。 `-optionexplicit-`オプションは、変数の暗黙的な宣言を使用できます。  
+ 任意。 変数の明示的な宣言が必要な場合は、`-optionexplicit+` を指定します。 @No__t-0 オプションは既定値で、`-optionexplicit` と同じです。 @No__t-0 オプションを指定すると、変数の暗黙的な宣言が有効になります。  
   
-## <a name="remarks"></a>Remarks  
- ソース コード ファイルが含まれている場合、 [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)、ステートメントよりも優先、`-optionexplicit`コマンド ライン コンパイラを設定します。  
+## <a name="remarks"></a>コメント  
+ ソースコードファイルに[Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)が含まれている場合、ステートメントは `-optionexplicit` コマンドラインコンパイラ設定をオーバーライドします。  
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Visual Studio IDE で-optionexplicit を設定するには  
   
@@ -38,10 +38,10 @@ ms.locfileid: "61788948"
   
 2. **[コンパイル]** タブをクリックします。  
   
-3. 値を変更、 **Option Explicit**ボックス。  
+3. **[Option Explicit]** ボックスの値を変更します。  
   
 ## <a name="example"></a>例  
- ときに、次のコードがコンパイル`-optionexplicit-`使用されます。  
+ @No__t-0 を使用すると、次のコードがコンパイルされます。  
   
  [!code-vb[VbVbalrCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionExplicitOff.vb#5)]  
   

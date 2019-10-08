@@ -6,19 +6,19 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: 0e0915a2534f950cec074632a59750c3f96b679d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbe3634d1fbc03acd56ef7276d65fd54493b9806
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962456"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002418"
 ---
 # <a name="-addmodule"></a>-addmodule
 指定ファイル内のすべての型情報を現在のコンパイル対象のプロジェクトで使用できるようにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -addmodule:fileList  
 ```  
   
@@ -26,17 +26,17 @@ ms.locfileid: "69962456"
  `fileList`  
  必須。 メタデータが含まれているものの、アセンブリマニフェストが含まれていないファイルのコンマ区切りのリスト。 スペースを含むファイル名は引用符 ("") で囲む必要があります。  
   
-## <a name="remarks"></a>Remarks  
- `fileList`パラメーターによって一覧表示されるファイルは、 `-target:module`オプションを使用して作成するか、 `-target:module`と同じ別のコンパイラを使用して作成する必要があります。  
+## <a name="remarks"></a>コメント  
+ @No__t-0 パラメーターによって指定されたファイルは、`-target:module` オプションを使用して作成するか、別のコンパイラを `-target:module` と同等に作成する必要があります。  
   
- で`-addmodule`追加されたすべてのモジュールは、実行時に出力ファイルと同じディレクトリに存在する必要があります。 つまり、コンパイル時に任意のディレクトリにモジュールを指定できますが、モジュールは実行時にアプリケーションディレクトリに存在する必要があります。 そうでない場合は、 <xref:System.TypeLoadException>エラーが表示されます。  
+ @No__t-0 で追加されたすべてのモジュールは、実行時に出力ファイルと同じディレクトリに存在する必要があります。 つまり、コンパイル時に任意のディレクトリにモジュールを指定できますが、モジュールは実行時にアプリケーションディレクトリに存在する必要があります。 そうでない場合は、@no__t 0 のエラーが表示されます。  
   
- (暗黙的または明示的に) を指定した場合を除き`-target:module` `-addmodule`、[-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)オプションを指定`-addmodule`すると、に渡すファイルはプロジェクトのアセンブリの一部になります。 アセンブリは、で`-addmodule`追加された1つ以上のファイルを含む出力ファイルを実行するために必要です。  
+ @No__t-2 で `-target:module` 以外の[-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)オプションを指定すると、`-addmodule` に渡すファイルはプロジェクトのアセンブリの一部になります。 1つ以上のファイルが `-addmodule` で追加された出力ファイルを実行するには、アセンブリが必要です。  
   
  アセンブリを含むファイルからメタデータをインポートするには、 [/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)を使用します。  
   
 > [!NOTE]
-> この`-addmodule`オプションは、Visual Studio 開発環境内からは使用できません。コマンドラインからコンパイルする場合にのみ使用できます。  
+> @No__t-0 オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
   
 ## <a name="example"></a>例  
  次のコードでは、モジュールを作成します。  
@@ -47,7 +47,7 @@ ms.locfileid: "69962456"
   
  [!code-vb[VbVbalrCompiler#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#48)]  
   
- を実行`t1`すると、が`802`出力されます。  
+ @No__t-0 を実行すると、`802` が出力されます。  
   
 ## <a name="see-also"></a>関連項目
 

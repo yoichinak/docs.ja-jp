@@ -8,33 +8,33 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 4848dec148bc528e7a30940643e3364f1bb5f805
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6fc7e9dcfbce938ad75b0f357c2bfa9cd10703a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939199"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005326"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 変数宣言でローカル型推論を使用できるようにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -optioninfer[+ | -]  
 ```  
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|項目|定義|  
 |---|---|  
 |`+` &#124; `-`|任意。 `-optioninfer+` を指定してローカル型推論を有効にするか、または `-optioninfer-` を指定してローカル型推論をブロックします。 `-optioninfer` オプションは、何も値を指定しない場合、`-optioninfer+` と同じです。 `-optioninfer` スイッチが存在しない場合の既定値も `-optioninfer+` です。 既定値は、Vbc.rsp 応答ファイル内に設定されています。|  
   
 > [!NOTE]
 > `-noconfig` オプションを使用すると、vbc.rsp に指定するのではなく、コンパイラの内部既定値を保持できます。 このオプションのコンパイラの既定値は `-optioninfer-` です。  
   
-## <a name="remarks"></a>Remarks  
- ソースコードファイルに[Option 推論ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)が含まれている場合、ステートメント`-optioninfer`はコマンドラインコンパイラ設定をオーバーライドします。  
+## <a name="remarks"></a>コメント  
+ ソースコードファイルに[Option 推論ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)が含まれている場合、ステートメントは `-optioninfer` コマンドラインコンパイラ設定をオーバーライドします。  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Visual Studio IDE で-optioninfer を設定するには  
   

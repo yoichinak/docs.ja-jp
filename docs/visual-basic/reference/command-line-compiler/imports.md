@@ -1,44 +1,44 @@
 ---
-title: -インポート (Visual Basic)
+title: -imports (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /imports compiler option [Visual Basic]
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 075eeccc7d80943d2757a97b9a355bbea3ef9d4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929e24a1ffd02d4e21ab1b925ddd59050b5d3cc4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663246"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005564"
 ---
-# <a name="-imports-visual-basic"></a>-インポート (Visual Basic)
+# <a name="-imports-visual-basic"></a>-imports (Visual Basic)
 指定したアセンブリから名前空間をインポートします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -imports:namespaceList  
 ```  
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|項目|定義|  
 |---|---|  
-|`namespaceList`|必須。 インポートする名前空間のコンマ区切りリスト。|  
+|`namespaceList`|必須。 インポートする名前空間のコンマ区切りの一覧。|  
   
-## <a name="remarks"></a>Remarks  
- `-imports`オプションは、現在のソース ファイルまたは参照先アセンブリのセット内で定義されている任意の名前空間をインポートします。  
+## <a name="remarks"></a>コメント  
+ @No__t-0 オプションは、ソースファイルの現在のセットまたは参照されているアセンブリの中で定義されているすべての名前空間をインポートします。  
   
- 指定された名前空間内のメンバー`-imports`コンパイルですべてのソース コード ファイルを利用できます。 使用して、 [Imports ステートメント (.NET Namespace よぶ型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)を 1 つのソース コード ファイルの名前空間を使用します。  
+ @No__t-0 で指定された名前空間のメンバーは、コンパイル時にすべてのソースコードファイルで使用できます。 [Imports ステートメント (.Net 名前空間と型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)を使用して、1つのソースコードファイルで名前空間を使用します。  
   
-|設定する]、[Visual Studio 統合開発環境のインポート|  
+|Visual Studio 統合開発環境で/imports を設定するには|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.**[参照]** タブをクリックします。<br />3.横にあるボックスに名前空間の名前を入力、**ユーザー インポートの追加**ボタンをクリックします。<br />4.をクリックして、**ユーザー インポートの追加**ボタンをクリックします。|  
+|1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[参照]** タブをクリックします。<br />3. **[ユーザーインポートの追加]** ボタンの横にあるボックスに、名前空間の名前を入力します。<br />4。 **[ユーザーインポートの追加]** ボタンをクリックします。|  
   
 ## <a name="example"></a>例  
- ときに、次のコードがコンパイル`/imports:system.globalization`を指定します。 それなしに正常にコンパイルする必要がありますか、`Imports System.Globalization`ステートメントは、ソース コード ファイルの先頭に必ず、またはプロパティとして完全修飾`System.Globalization.CultureInfo.CurrentCulture.Name`します。
+ @No__t-0 を指定すると、次のコードがコンパイルされます。 それがない場合、コンパイルが成功するには、ソースコードファイルの先頭に @no__t 0 ステートメントが含まれているか、プロパティが `System.Globalization.CultureInfo.CurrentCulture.Name` として完全に修飾されている必要があります。
 
 ```vb
 Module Example

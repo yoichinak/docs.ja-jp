@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: a5c32afc913443787ad8371f31f1fe330b126398
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7c98681493738b4e94ed14417fa1437efb6c12ac
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792757"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003310"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>シーケンスの要素の取得またはスキップ
 <xref:System.Linq.Queryable.Take%2A> 演算子を使用すると、シーケンス内の指定された数の要素を返し、残りをスキップできます。  
@@ -20,7 +20,7 @@ ms.locfileid: "70792757"
 > [!NOTE]
 > <xref:System.Linq.Enumerable.Take%2A> と <xref:System.Linq.Enumerable.Skip%2A> を SQL Server 2000 に対するクエリで使用する場合は、いくつかの制限があります。 詳細については、「[トラブルシューティング](troubleshooting.md)」の「SQL Server 2000 でのスキップと Take 例外」を参照してください。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は<xref:System.Linq.Queryable.Skip%2A> 、SQL `NOT EXISTS`句でサブクエリを使用して変換されます。 この変換には、次のような制限があります。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、SQL `NOT EXISTS` 句でサブクエリを使用して <xref:System.Linq.Queryable.Skip%2A> を変換します。 この変換には、次のような制限があります。  
   
 - 引数は、セットである必要があります。 順序が指定されていてもマルチセットはサポートされません。  
   
@@ -49,16 +49,16 @@ ms.locfileid: "70792757"
  SQL での順序付けの制限により、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、<xref:System.Linq.Queryable.Take%2A> 演算子または <xref:System.Linq.Queryable.Skip%2A> 演算子の引数の順序を、演算子の結果に移動することを試みます。  
   
 > [!NOTE]
-> 変換は SQL Server 2000 と SQL Server 2005 で異なります。 を複雑なクエリと<xref:System.Linq.Queryable.Skip%2A>共に使用する場合は、SQL Server 2005 を使用します。  
+> 変換は SQL Server 2000 と SQL Server 2005 で異なります。 複雑なクエリで <xref:System.Linq.Queryable.Skip%2A> を使用する場合は、SQL Server 2005 を使用します。  
   
- SQL Server 2000 に[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]対する次のクエリについて考えてみます。  
+ SQL Server 2000 では、次の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] クエリを考えてみます。  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、次に示すように、順序付けを SQL コードの最後に移動します。  
   
-```  
+```sql
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],  
 FROM [Customers] AS [t0]  
 WHERE (NOT (EXISTS(  

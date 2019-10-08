@@ -8,49 +8,49 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 22423877325806e6e6abe535ad98530eb924780e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d281fe07754f0471f8d6c0e31cf3ea890060504
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625908"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005349"
 ---
 # <a name="-optionstrict"></a>-optionstrict
-暗黙の型変換を制限するための厳密な型のセマンティクスを適用します。  
+厳密な型のセマンティクスを適用して、暗黙的な型変換を制限します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -optionstrict[+ | -]  
 -optionstrict[:custom]  
 ```  
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 省略可能です。 `-optionstrict+`オプションは、暗黙的な型変換を制限します。 このオプションの既定値は`-optionstrict-`します。 `-optionstrict+`オプションは、同じ`-optionstrict`します。 制限の緩やかな型のセマンティクスの両方を使用することができます。  
+ 任意。 @No__t-0 オプションを指定すると、暗黙的な型変換が制限されます。 このオプションの既定値は `-optionstrict-` です。 @No__t-0 オプションは `-optionstrict` と同じです。 寛容な型のセマンティクスには、両方を使用できます。  
   
  `custom`  
  必須。 厳密な言語セマンティクスが守られていない場合に警告します。  
   
-## <a name="remarks"></a>Remarks  
- ときに`-optionstrict+`は実際には拡大の唯一の型変換は暗黙的に行われたことができます。 暗黙的な縮小の割り当てなどの型変換を`Decimal`オブジェクトを整数型のオブジェクトを入力、エラーとして報告されます。  
+## <a name="remarks"></a>コメント  
+ @No__t-0 が有効な場合は、拡張型の変換のみを暗黙的に行うことができます。 整数型のオブジェクトへの @no__t 0 型オブジェクトの割り当てなど、暗黙的な縮小型変換は、エラーとして報告されます。  
   
- 暗黙的な縮小の型変換の警告を生成する`-optionstrict:custom`します。 使用`-nowarn:numberlist`特定の警告を無視して`-warnaserror:numberlist`特定の警告をエラーとして処理します。  
+ 暗黙的な縮小の型変換に関する警告を生成するには、`-optionstrict:custom` を使用します。 @No__t-0 を使用して特定の警告を無視し、`-warnaserror:numberlist` を使用すると、特定の警告をエラーとして扱うことができます。  
   
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Visual Studio IDE で-optionstrict を設定するには  
   
-1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **プロジェクト** メニューのをクリックして**プロパティ。**   
+1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **プロジェクト** メニューの プロパティ をクリックし**ます。**   
   
 2. **[コンパイル]** タブをクリックします。  
   
-3. 値を変更、 **Option Strict**ボックス。  
+3. **[Option Strict]** ボックスの値を変更します。  
   
-### <a name="to-set--optionstrict-programmatically"></a>-Optionstrict をプログラムで設定するには  
+### <a name="to-set--optionstrict-programmatically"></a>プログラムによって-optionstrict を設定するには  
   
-- 参照してください[Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)します。  
+- 「 [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`Test.vb`厳密な型のセマンティクスを使用しています。  
+ 次のコードは、厳密な型のセマンティクスを使用して `Test.vb` をコンパイルします。  
   
 ```console
 vbc -optionstrict+ test.vb  

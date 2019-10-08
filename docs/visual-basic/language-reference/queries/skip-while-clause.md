@@ -8,37 +8,37 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: 3d6caeb1938e8e53e8ec2575f740cd5e49496f62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f37a6fa1c9ba7fdf7978ac6853e4c2985bf72e7
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054420"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004698"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Skip While 句 (Visual Basic)
 指定された条件が `true` である限り、コレクションの要素をバイパスし、残りの要素を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 Skip While expression  
 ```  
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|項目|定義|  
 |---|---|  
-|`expression`|必須。 要素をテストするための条件を表す式。 式を返す必要があります、`Boolean`値またはそれと同等の機能など、`Integer`として評価される、`Boolean`します。|  
+|`expression`|必須。 テスト要素の条件を表す式。 式は、@no__t 0 の値または同等の関数を返す必要があります。たとえば、`Boolean` として評価される `Integer` などです。|  
   
-## <a name="remarks"></a>Remarks  
- `Skip While`句まで、指定されたクエリ結果の先頭から要素をバイパスする`expression`返します`false`します。 後`expression`返します`false`クエリは、残りのすべての要素を返します。 `expression`残りの結果は無視されます。  
+## <a name="remarks"></a>コメント  
+ @No__t-0 句は、指定された `expression` が `false` を返すまで、クエリ結果の先頭からの要素をバイパスします。 @No__t-0 `false` を返します。このクエリは、残りのすべての要素を返します。 残りの結果については、`expression` は無視されます。  
   
- `Skip While`句とは異なります、`Where`句を`Where`を特定の条件を満たさないクエリからすべての要素を除外する句を使用できます。 `Skip While`句は、条件が満たされていませんが、初めてまでのみ要素を除外します。 `Skip While`句は、順序付けられたクエリ結果を使用しているときに最も役立ちます。  
+ @No__t-0 句は `Where` 句とは異なり、`Where` 句を使用して、特定の条件を満たさないクエリからすべての要素を除外することができます。 @No__t-0 句では、最初に条件が満たされない限り、要素は除外されます。 @No__t-0 句は、順序付けられたクエリ結果を操作する場合に最も役立ちます。  
   
- 使用してクエリ結果の先頭からの結果の特定の数をバイパスできる、`Skip`句。  
+ @No__t-0 句を使用すると、クエリ結果の先頭から特定の数の結果をバイパスできます。  
   
 ## <a name="example"></a>例  
- 次のコード例では、`Skip While`米国から最初の顧客が見つかるまで、結果をバイパスする句。  
+ 次のコード例では、`Skip While` 句を使用して、米国の最初の顧客が見つかるまで結果をバイパスします。  
   
  [!code-vb[VbSimpleQuerySamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#3)]  
   

@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-ms.openlocfilehash: 994e5146e9cf49a9b31396d0b51e7be83bbb3cfb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 85309e46403b2f22f9afb760d4c4ae370c39246b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964784"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004097"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
-プレゼンテーションの cluster.exe [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]を使用してコンテンツをホストするアプリケーションは、このインターフェイスを実装して、ホストとプレゼンテーションの cluster.exe 間の統合ポイントを提供します。  
+プレゼンテーションの cluster.exe を介して [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のコンテンツをホストするアプリケーションは、このインターフェイスを実装して、ホストとプレゼンテーションの cluster.exe の間の統合ポイントを提供します。  
   
-## <a name="remarks"></a>Remarks  
- [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]Web ブラウザーなどのアプリケーションは、 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] XAML など[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]のコンテンツをホストできます。 コンテンツを[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]ホストする[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]ために、アプリケーションは[WebBrowser コントロール](https://go.microsoft.com/fwlink/?LinkId=97911)のインスタンスを作成します。 ホストされるため[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]に、は、 [WebBrowser コントロール](https://go.microsoft.com/fwlink/?LinkId=97911)に表示するホストにホストさ[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]れたコンテンツを提供する、プレゼンテーションの cluster.exe のインスタンスを作成します。  
+## <a name="remarks"></a>コメント  
+ Web ブラウザーなどの @no__t 0 のアプリケーションは、[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]、ルース XAML などの WPF コンテンツをホストできます。 WPF コンテンツをホストするために、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] のアプリケーションは[WebBrowser コントロール](https://go.microsoft.com/fwlink/?LinkId=97911)のインスタンスを作成します。 ホストされるようにするために、WPF は、ホストされている WPF コンテンツをホストに提供し、 [WebBrowser コントロール](https://go.microsoft.com/fwlink/?LinkId=97911)に表示するための、プレゼンテーション用の cluster.exe インスタンスを作成します。  
   
- によって有効`IWpfHostSupport`にされた統合によって、次のことを行うことができます。  
+ @No__t-0 によって有効にされた統合によって、次のようなプレゼンテーションを行うことができます。  
   
 - ホストアプリケーションが興味を持っている未加工の入力デバイス (ヒューマンインターフェイスデバイス) を検出し、登録します。  
   

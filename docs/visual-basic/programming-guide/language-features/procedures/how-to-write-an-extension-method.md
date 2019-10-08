@@ -6,12 +6,12 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 31ccb18e0e6d1569764ec2a67201d7f758129425
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: d01596d50db8ba1078e8ac82caa951418645c977
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332755"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004615"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>方法: 拡張メソッドを記述する (Visual Basic)
 
@@ -27,11 +27,13 @@ ms.locfileid: "71332755"
     Imports System.Runtime.CompilerServices
     ```
 
-3. 新規または既存のアプリケーションのモジュール内で、拡張属性を使用してメソッド定義を開始します。
+3. 新規または既存のアプリケーションのモジュール内で、 [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute)属性を使用してメソッド定義を開始します。
 
     ```vb
     <Extension()>
     ```
+ 
+   @No__t-0 属性は、Visual Basic[モジュール](../../../language-reference/statements/module-statement.md)内のメソッド (`Sub` または `Function` プロシージャ) にのみ適用できます。 @No__t 0 または `Structure` のメソッドに適用した場合、Visual Basic コンパイラによってエラー [BC36551](../../../misc/bc36551.md)が生成されます。 "拡張メソッドはモジュール内でのみ定義できます。"
 
 4. 通常の方法でメソッドを宣言します。ただし、最初のパラメーターの型は、拡張するデータ型である必要があります。
 

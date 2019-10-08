@@ -8,36 +8,36 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: ff298f001a2d865446436e8099a2fbbef593a00a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88166a040823cfefe623f672e556c364d652a7fc
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054199"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004732"
 ---
 # <a name="let-clause-visual-basic"></a>Let 句 (Visual Basic)
-値を計算し、クエリ内で新しい変数に代入します。  
+値を計算し、クエリ内の新しい変数に代入します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 Let variable = expression [, ...]  
 ```  
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|項目|定義|  
 |---|---|  
-|`variable`|必須。 指定された式の結果を参照に使用できるエイリアスです。|  
-|`expression`|必須。 評価し、指定された変数に代入する式。|  
+|`variable`|必須。 指定された式の結果を参照するために使用できるエイリアス。|  
+|`expression`|必須。 評価され、指定された変数に割り当てられる式。|  
   
-## <a name="remarks"></a>Remarks  
- `Let`句では、コンピューティングの各値がクエリの結果と、エイリアスを使用してそれらを参照することができます。 別名をなど、他の句で使用することができます、`Where`句。 `Let`句では、クエリに含まれる式の句の別名を指定でき、式の句が使用されるたびに、エイリアスを置き換えるため、読みやすくクエリ ステートメントを作成することができます。  
+## <a name="remarks"></a>コメント  
+ @No__t-0 句を使用すると、各クエリ結果の値を計算し、別名を使用してその値を参照できます。 別名は、`Where` 句などの他の句で使用できます。 @No__t-0 句を使用すると、クエリに含まれる式の句の別名を指定し、expression 句が使用されるたびに別名を置き換えることができるので、読みやすいクエリステートメントを作成できます。  
   
- 任意の数を含めることができます`variable`と`expression`で割り当て、`Let`句。 各割り当てをコンマ (,) で区切ります。  
+ @No__t-2 句には、任意の数の @no__t 0 と @no__t の割り当てを含めることができます。 各割り当てはコンマ (,) で区切ります。  
   
 ## <a name="example"></a>例  
- 次のコード例では、`Let`製品の 10% の割引を計算する句。  
+ 次のコード例では、`Let` 句を使用して、製品に対して 10% の割引を計算します。  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   
