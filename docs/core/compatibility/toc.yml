@@ -18,6 +18,8 @@
           href: 3.0.7-3.0.8.md
         - name: 3.0 Preview 8 - 3.0 Preview 9
           href: 3.0.8-3.0.9.md
+        - name: 3.0 Preview 9 - 3.0 RC1
+          href: 3.0.9-3.0rc1.md
     - name: カテゴリ別
       items:
         - name: CoreFx
@@ -26,6 +28,8 @@
           href: cryptography.md
         - name: グローバリゼーション
           href: globalization.md
+        - name: ネットワーキング
+          href: networking.md
         - name: Visual Basic
           href: visualbasic.md
         - name: ASP.NET Core (GitHub)

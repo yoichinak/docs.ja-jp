@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 53dcbcfdcc9a8d04840bc91a563b6514153b9577
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f6d96d14a4d05178a8f90c15edecb1318e8c5a36
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963429"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957194"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正規表現での文字クラス
 
@@ -59,17 +59,13 @@ ms.locfileid: "69963429"
   
  個別の文字の一覧を指定する構文は次のとおりです。  
 
-```  
-[*character_group*]  
-```
+`[*character_group*]`
 
  ここで、*character_group* は、入力文字列に含まれるなら一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
   
  文字の範囲を指定する構文は次のとおりです。  
   
-```  
-[firstCharacter-lastCharacter]  
-```  
+`[firstCharacter-lastCharacter]`  
   
  ここで、*firstCharacter* は範囲の最初の文字で、*lastCharacter* は範囲の最後の文字です。 文字範囲は連続する一連の文字で、範囲の最初の文字、ハイフン (-)、および範囲の最後の文字を指定することで定義されます。 2 つの文字の Unicode コード ポイントが隣接している場合、それらの文字は連続しています。 *firstCharacter* は、より低いコード ポイントを持つ文字にする必要があります。*lastCharacter* はより高いコード ポイントを持つ文字にする必要があります。
 
@@ -119,17 +115,13 @@ ms.locfileid: "69963429"
   
 個別の文字の一覧を指定する構文は次のとおりです。  
 
-```
-[*^character_group*]  
-```
+`[*^character_group*]`
 
  ここで、*character_group* は、入力文字列に含まれない場合に一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
   
  文字の範囲を指定する構文は次のとおりです。  
 
-```
-[^*firstCharacter*-*lastCharacter*]  
-```
+`[^*firstCharacter*-*lastCharacter*]`
 
 ここで、*firstCharacter* は範囲の最初の文字で、*lastCharacter* は範囲の最後の文字です。 文字範囲は連続する一連の文字で、範囲の最初の文字、ハイフン (-)、および範囲の最後の文字を指定することで定義されます。 2 つの文字の Unicode コード ポイントが隣接している場合、それらの文字は連続しています。 *firstCharacter* は、より低いコード ポイントを持つ文字にする必要があります。*lastCharacter* はより高いコード ポイントを持つ文字にする必要があります。
 
@@ -267,9 +259,7 @@ ms.locfileid: "69963429"
 ## <a name="non-word-character-w"></a>単語に使用されない文字: \W  
  `\W` は、単語に使用される文字以外の任意の文字と一致します。 \W 言語要素は、次の文字クラスと同じ結果をもたらします。  
   
-```  
-[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]  
-```  
+`[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`  
   
  つまり、次の表に示す Unicode カテゴリの文字を除く任意の文字と一致します。  
   
