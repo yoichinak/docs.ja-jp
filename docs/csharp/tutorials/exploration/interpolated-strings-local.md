@@ -4,22 +4,22 @@ description: このチュートリアルでは、C# で文字列補間機能を�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: b2bbab5705d78525ccae6a90b4f4f2a91064a06b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: e142c48cd944fd6119c697a299308dc9ce1203ca
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117829"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834134"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>文字列補間を使用し、書式設定された文字列を作成する
 
 このチュートリアルでは、C# で[文字列補間](../../language-reference/tokens/interpolated.md)を使用して、単一の結果の文字列に値を挿入する方法を説明します。 C# コードを記述し、コードをコンパイルおよび実行して結果を確認します。 チュートリアルには、値を文字列に挿入し、それらの値の書式をさまざまな方法で設定する方法を示す、一連のレッスンが含まれています。
 
-このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 また、使用しているブラウザーでこのチュートリアルの[対話型バージョン](interpolated-strings.yml)を完了することもできます。
+このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Windows、Linux、または macOS 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 また、使用しているブラウザーでこのチュートリアルの[対話型バージョン](interpolated-strings.yml)を完了することもできます。
 
 ## <a name="create-an-interpolated-string"></a>挿入文字列を作成する
 
-**interpolated** という名前のディレクトリを作成します。 それを現在のディレクトリにして、コンソール ウィンドウから次のコマンドを実行します。
+*interpolated* という名前のディレクトリを作成します。 それを現在のディレクトリにして、コンソール ウィンドウから次のコマンドを実行します。
 
 ```dotnetcli
 dotnet new console
@@ -27,7 +27,7 @@ dotnet new console
 
 このコマンドによって、現在のディレクトリに新しい .NET Core コンソール アプリケーションが作成されます。
 
-お好みのエディターで **Program.cs** を開き、`Console.WriteLine("Hello World!");` の行を次のコードで置き換えます。`<name>` は自分の名前に置き換えてください。
+お好みのエディターで *Program.cs* を開き、`Console.WriteLine("Hello World!");` の行を次のコードで置き換えます。`<name>` は自分の名前に置き換えてください。
 
 ```csharp
 var name = "<name>";

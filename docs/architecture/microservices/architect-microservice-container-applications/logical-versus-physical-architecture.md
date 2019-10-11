@@ -2,12 +2,12 @@
 title: 論理アーキテクチャと物理アーキテクチャ
 description: 論理アーキテクチャと物理アーキテクチャの違いを理解します。
 ms.date: 09/20/2018
-ms.openlocfilehash: c269369e9b5391e8d25ece46e6b08e34a82fbbba
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673059"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834399"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>論理アーキテクチャと物理アーキテクチャ
 
@@ -25,7 +25,7 @@ ms.locfileid: "68673059"
 
 図 4-8 に示すように、カタログ ビジネス マイクロサービスは、いくつかのサービスまたはプロセスで構成されている可能性があります。 また、複数の ASP.NET Web API サービス、または HTTP やその他のプロトコルを使用するその他の種類のサービスである可能性があります。 さらに重要な点は、これらのサービスが同じビジネス ドメインに対して一貫性がある限り、サービスは同じデータを共有できることです。
 
-![API サービス、検索サービス、SQL Server データベースを含むカタログ ビジネス マイクロサービスの図。](./media/image8.png)
+![物理サーバーを使用したカタログ ビジネス マイクロサービスの図。](./media/logical-versus-physical-architecture/multiple-physical-services.png)
 
 **図 4-8** 複数の物理サービスを持つビジネス マイクロサービス
 

@@ -35,7 +35,8 @@ Windows Communication Foundation (WCF) では、*フェデレーションサー�
   
 2. 生成された構成ファイルを適切なエディターで開きます。  
   
-3. 生成された[ \<発行者 >](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)と[ \<issuermetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)要素の属性と内容を確認します。 これらは[ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md) [\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)またはカスタムバインド要素のセキュリティ > 要素内にあります。 予期されたドメイン名やその他のアドレス情報がアドレスに含まれていることを確認します。 この情報をチェックすることは重要です。それは、クライアントがこれらのアドレスに対して認証を行い、ユーザー名とパスワードの組み合わせなどの情報を公開する可能性があるためです。 アドレスが予期されたアドレスではない場合、意図しない受信者に情報が公開されるおそれがあります。  
+3. 生成された[ \<発行者 >](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)と[ \<issuermetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)要素の属性と内容を確認します。 これらは [\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)またはカスタムバインド要素の[\<セキュリティ>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)要素内にあります。
+ 予期されたドメイン名やその他のアドレス情報がアドレスに含まれていることを確認します。 この情報をチェックすることは重要です。それは、クライアントがこれらのアドレスに対して認証を行い、ユーザー名とパスワードの組み合わせなどの情報を公開する可能性があるためです。 アドレスが予期されたアドレスではない場合、意図しない受信者に情報が公開されるおそれがあります。  
   
 4. コメントアウトされた <`alternativeIssuedTokenParameters`> 要素内の追加[ \<の issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)要素を調べます。 Svcutil.exe ツールを使用してフェデレーション サービスの構成を生成するときに、フェデレーション サービスまたは任意の中間セキュリティ トークン サービスが、発行者アドレスを指定せずに、複数のエンドポイントを公開するセキュリティ トークン サービスのメタデータ アドレスを指定している場合、生成された構成ファイルは最初のエンドポイントを参照します。 追加のエンドポイントは、構成ファイル内の <`alternativeIssuedTokenParameters`> 要素としてコメントアウトされます。  
   

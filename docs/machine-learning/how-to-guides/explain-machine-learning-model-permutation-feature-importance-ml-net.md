@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9617582c79b2278e3a68e7acf84568247b81eca1
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 8090e4565a7e55aaa9cc9939e61eb728a169de8d
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167654"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736871"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Permutation Feature Importance を使用してモデル予測を説明する
 
@@ -18,7 +18,7 @@ Permutation Feature Importance (PFI) を使用した予測に対する特徴の�
 
 機械学習モデルは、入力を受け取り、出力を生成するブラック ボックスと考えられることがよくあります。 出力に影響する中間手順や特徴間の相互作用は、あまり理解されていません。 医療など、日常生活の多くの側面に機械学習が導入されるにつれて、機械学習モデルが決定を下す理由を理解することの重要度が最も高くなりました。 たとえば、機械学習モデルによって診断が行われる場合、医療従事者には、その診断が下された要因を調べる方法が必要です。 適切な診断を提供することは、患者が迅速に回復するかどうかに大きな違いをもたらす可能性があります。 そのため、モデル内の説明可能性のレベルが高いほど、モデルによって行われた決定を医療従事者が承認または拒否する必要がある場合の信頼性が高くなります。
 
-モデルの説明にはさまざまな手法が使用されており、その 1 つに PFI があります。 PFI は、[Breiman の「*Random Forests (ランダム フォレスト)* 」論文](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (セクション 10 を参照してください) にインスパイアされた、分類および回帰モデルの説明に使用される手法です。 概要を説明すると、データセット全体に対して一度に 1 つの特徴のデータをランダムにシャッフルし、関心のあるパフォーマンス メトリックがどのくらい低下するかを計算するしくみです。 変更が大きいほど、その特徴の重要度は高くなります。 
+モデルの説明にはさまざまな手法が使用されており、その 1 つに PFI があります。 PFI は、[Breiman の「*Random Forests*」(ランダム フォレスト) 論文](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (セクション 10 を参照してください) にインスパイアされた、分類および回帰モデルの説明に使用される手法です。 概要を説明すると、データセット全体に対して一度に 1 つの特徴のデータをランダムにシャッフルし、関心のあるパフォーマンス メトリックがどのくらい低下するかを計算するしくみです。 変更が大きいほど、その特徴の重要度は高くなります。 
 
 さらに、最も重要な特徴を強調することで、モデル作成者はより重要な特徴のサブセットの使用に集中し、ノイズとトレーニング時間を減らすことができるようになります。
 

@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: e12a83d3932d11baa086310ab0be23fb431459fc
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 6a165c3e0f41603ef7233669d7148dd44b1d3ce6
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107189"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696760"
 ---
 # <a name="best-practices-for-exceptions"></a>例外の推奨事項
 
@@ -30,15 +30,15 @@ ms.locfileid: "70107189"
 
 発生する可能性があり、例外をトリガーする可能性がある状態に対し、例外を回避する方法で処理することを検討します。 たとえば、既に終了している接続を終了しようとすると、`InvalidOperationException` を受け取ります。 `if` ステートメントを使用して、終了しようとする前に接続状態を確認することで、これを回避することができます。
 
-[!code-cpp[Conceptual.Exception.Handling#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#2)]
-[!code-csharp[Conceptual.Exception.Handling#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
-[!code-vb[Conceptual.Exception.Handling#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]
+[!code-cpp[Conceptual.Exception.Handling#2](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#2)]
+[!code-csharp[Conceptual.Exception.Handling#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
+[!code-vb[Conceptual.Exception.Handling#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]
 
 終了する前に接続状態を確認しない場合は、`InvalidOperationException` 例外をキャッチする可能性があります。
 
-[!code-cpp[Conceptual.Exception.Handling#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
-[!code-csharp[Conceptual.Exception.Handling#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
-[!code-vb[Conceptual.Exception.Handling#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]
+[!code-cpp[Conceptual.Exception.Handling#3](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
+[!code-csharp[Conceptual.Exception.Handling#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
+[!code-vb[Conceptual.Exception.Handling#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]
 
 選択するメソッドは、予期されるイベント発生頻度によって決まります。
 
@@ -50,9 +50,9 @@ ms.locfileid: "70107189"
 
 クラスは、例外をトリガーする呼び出しを行うことを回避できるようにするメソッドとプロパティを提供できます。 たとえば、<xref:System.IO.FileStream> クラスには、ファイルの終端に到達したかどうかを判別するために役立つメソッドが用意されています。 これらは、ファイルの終端を越えて読み取りを実行しようとした場合にも例外がスローされないようにするために使用できます。 次の例では、例外をトリガーすることなく、ファイルの末尾まで読み取る方法を示します。
 
-[!code-cpp[Conceptual.Exception.Handling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
-[!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
-[!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
+[!code-cpp[Conceptual.Exception.Handling#5](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
+[!code-csharp[Conceptual.Exception.Handling#5](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
+[!code-vb[Conceptual.Exception.Handling#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
 
 例外が返されるのを回避するもう 1 つの方法は、非常に一般的なエラーの場合に、例外をスローする代わりに null (または既定値) を返すことです。 非常に一般的なエラーは、通常の制御の流れと見なすことができます。 このような場合は、null (または既定値) を返すことによって、アプリケーションのパフォーマンスへの影響を最小限に抑えることができます。
 
@@ -74,9 +74,9 @@ ms.locfileid: "70107189"
 
 カスタム例外が必要な場合は、適切に名前を付け、<xref:System.Exception> クラスから派生させます。 次に例を示します。
 
-[!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
-[!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
-[!code-vb[Conceptual.Exception.Handling#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]
+[!code-cpp[Conceptual.Exception.Handling#4](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
+[!code-csharp[Conceptual.Exception.Handling#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
+[!code-vb[Conceptual.Exception.Handling#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]
 
 ## <a name="include-three-constructors-in-custom-exception-classes"></a>カスタム例外クラスに 3 つのコンストラクターを含める
 
@@ -110,7 +110,11 @@ ms.locfileid: "70107189"
 
 ユーザーに対して表示されるエラー メッセージは、例外クラスの名前ではなく、スローされた例外の <xref:System.Exception.Message?displayProperty=nameWithType> プロパティから派生されます。 通常は、メッセージ文字列を[例外コンストラクター](xref:System.Exception.%23ctor%2A)の `message` 引数に渡すことで、<xref:System.Exception.Message?displayProperty=nameWithType> プロパティに値を割り当てます。
 
-ローカライズされたアプリケーションの場合は、アプリケーションがスローできるすべての例外に、ローカライズされたメッセージ文字列を指定する必要があります。 ローカライズされたエラー メッセージを指定するには、リソース ファイルを使用します。 アプリケーションのローカライズと、ローカライズされた文字列の取得の詳細については、[デスクトップ アプリケーションのリソース](../../framework/resources/index.md)と <xref:System.Resources.ResourceManager?displayProperty=nameWithType>に関するページを参照してください。
+ローカライズされたアプリケーションの場合は、アプリケーションがスローできるすべての例外に、ローカライズされたメッセージ文字列を指定する必要があります。 ローカライズされたエラー メッセージを指定するには、リソース ファイルを使用します。 アプリケーションのローカライズとローカライズされた文字列の取得の詳細については、次の記事を参照してください。
+
+- [方法: ローカライズされた例外メッセージを使用するユーザー定義の例外を作成する](how-to-create-localized-exception-messages.md)
+- [デスクトップ アプリケーションのリソース](../../framework/resources/index.md) 
+- <xref:System.Resources.ResourceManager?displayProperty=nameWithType>
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>カスタム例外で、必要に応じて追加のプロパティを提供する
 
@@ -124,9 +128,9 @@ ms.locfileid: "70107189"
 
 一般に、クラスはクラス実装内の複数の位置で同一の例外をスローします。 コードが長くなることを防ぐため、例外を作成して返すヘルパー メソッドを使用します。 次に例を示します。
 
-[!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
-[!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
-[!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]
+[!code-cpp[Conceptual.Exception.Handling#6](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
+[!code-csharp[Conceptual.Exception.Handling#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
+[!code-vb[Conceptual.Exception.Handling#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]
 
 場合によっては、例外のコンストラクターを使用して例外を作成する方が適切な場合もあります。 <xref:System.ArgumentException> などのグローバル例外クラスはその一例です。
 

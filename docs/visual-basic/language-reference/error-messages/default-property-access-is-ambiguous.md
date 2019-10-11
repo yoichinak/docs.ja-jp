@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: a36cfe8e5496bbfd1941afa8a46086491ae96a2a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: f76163d58f3f11d3ca946525a1604abc3ebba68d
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512745"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250368"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>\<インターフェイス '\<interfacename1 > ' の継承インターフェイスメンバー ' defaultpropertyname > ' と interface '\<の '\<defaultpropertyname > ' の間で、既定のプロパティアクセスがあいまいですある可能性が > '
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>既定のプロパティアクセスは、インターフェイス ' \<interfacename1 > ' の継承インターフェイスメンバー ' \<defaultpropertyname > ' と、インターフェイス ' \<interfacename2 > ' の ' \<defaultpropertyname > ' の間であいまいです
 
 インターフェイスは、2つのインターフェイスから継承し、それぞれが同じ名前の既定のプロパティを宣言します。 コンパイラは、この既定のプロパティへのアクセスを修飾なしで解決することはできません。 次に例を示します。
 
@@ -36,13 +36,13 @@ Public Class testClass
 End Class
 ```
 
-を指定`testObj(1)`すると、コンパイラはその値を既定のプロパティに解決しようとします。 ただし、継承されたインターフェイスにより、2つの既定のプロパティが考えられます。そのため、コンパイラはこのエラーを通知します。
+@No__t-0 を指定すると、コンパイラはその値を既定のプロパティに解決しようとします。 ただし、継承されたインターフェイスにより、2つの既定のプロパティが考えられます。そのため、コンパイラはこのエラーを通知します。
 
 **エラー ID:** BC30686
 
 ## <a name="to-correct-this-error"></a>このエラーを解決するには
 
-- 同じ名前のメンバーを継承しないようにしてください。 前の例では、 `testObj`がのメンバー ( `Iface2`たとえば、) を必要としない場合は、次のように宣言します。
+- 同じ名前のメンバーを継承しないようにしてください。 前の例では、`testObj` がのメンバー (たとえば、`Iface2`) を必要としない場合は、次のように宣言します。
 
   ```vb
   Dim testObj As Iface1
@@ -66,4 +66,4 @@ End Class
 
 ## <a name="see-also"></a>関連項目
 
-- [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [インターフェイス](../../programming-guide/language-features/interfaces/index.md)

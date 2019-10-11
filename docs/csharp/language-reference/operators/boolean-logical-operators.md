@@ -1,7 +1,7 @@
 ---
 title: ブール論理演算子 - C# リファレンス
 description: ブール オペランドを使用した論理否定演算、論理積演算 (AND)、および包含的および排他的論理和演算 (OR) を実行する C# 演算子について説明します。
-ms.date: 04/08/2019
+ms.date: 09/27/2019
 author: pkulikov
 f1_keywords:
 - '!_CSharpKeyword'
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 39f5be7a667b4e37e84246ef0bfeb03c0099d4b7
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353363"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698678"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>ブール論理演算子 (C# リファレンス)
 
@@ -54,6 +54,8 @@ ms.locfileid: "71353363"
 `!` 演算子は、そのオペランドの論理否定を計算します。 つまり、オペランドが `false` と評価された場合は `true`、オペランドが `true` と評価された場合は `false` が生成されます。
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
+
+C# 8.0 以降では、単項後置の `!` 演算子は null 免除演算子です。 有効な null 許容注釈コンテキストでは、それを使用して、null 許容参照型の式 `x` が null ではないことを宣言します (`x!`)。 詳細については、「[null 許容参照型](../../nullable-references.md)」を参照してください。
 
 ## <a name="logical-and-operator-"></a> 論理 AND 演算子 &amp;
 

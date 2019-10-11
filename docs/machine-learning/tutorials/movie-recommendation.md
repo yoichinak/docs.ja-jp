@@ -2,15 +2,15 @@
 title: 'チュートリアル: 映画レコメンダーをビルドする - マトリックス因子分解'
 description: このチュートリアルでは、.NET Core コンソール アプリケーションにおいて ML.NET によって映画レコメンダーを構築する方法を示します。 手順では C# と Visual Studio 2019 を使用します。
 author: briacht
-ms.date: 08/26/2019
+ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 4f80ebad0a280040e9f3329dc7b647bd53a48fa0
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1db2ad6c078cb6201b2a6a4e2f8572f589cee684
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929481"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700964"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>チュートリアル: ML.NET でマトリックス因子分解を使用して映画レコメンダーをビルドする
 
@@ -320,7 +320,10 @@ public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer
 
 [!code-csharp[PredictionEngine](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PredictionEngine "Create Prediction Engine")]
 
-[PredictionEngine クラス](xref:Microsoft.ML.PredictionEngine%602)は、データの 1 つのインスタンスを渡してから、このインスタンスで予測を実行できる便利な API です。
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) は、データの 1 つのインスタンスに対して予測を実行できる便利な API です。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。 シングル スレッド環境またはプロトタイプ環境で使用できます。 運用環境でパフォーマンスとスレッド セーフを向上させるには、`PredictionEnginePool` サービスを使用します。これにより、アプリケーション全体で使用するできる [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。 ASP.NET Core Web API で `PredictionEnginePool` を使用する方法については、[こちらのガイド](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)を参照してください。
+
+> [!NOTE]
+> `PredictionEnginePool` サービスの拡張機能は、現在プレビュー段階です。
 
 `testInput` と呼ばれる `MovieRating` のインスタンスを作成し、`UseModelForSinglePrediction()` メソッドの次のコード行として以下を追加することで、それを PredictionEngine に渡します。
 

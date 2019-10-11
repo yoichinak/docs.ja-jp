@@ -1,15 +1,15 @@
 ---
 title: 'チュートリアル: 回帰を使用して価格を予測する'
 description: このチュートリアルでは、ML.NET を使用して、料金 (具体的にはニューヨーク市のタクシー運賃) を予測する回帰モデルを構築する方法を示します。
-ms.date: 05/09/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 51617d14e84fa46464d7b44dbdb20afaf196924f
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929446"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957376"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>チュートリアル: ML.NET で回帰を使用して価格を予測する
 
@@ -188,7 +188,7 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 
 [!code-csharp[LoadTestDataset](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#15 "Load the test dataset")]
 
-次に、以下のコードを `EvaluateModel()` に追加して、`Test` データを変換します。
+次に、以下のコードを `Evaluate()` に追加して、`Test` データを変換します。
 
 [!code-csharp[PredictWithTransformer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
 
@@ -245,7 +245,10 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 
 [!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
 
-[PredictionEngine クラス](xref:Microsoft.ML.PredictionEngine%602)は、データの 1 つのインスタンスを渡してから、その予測を実行できる便利な API です。
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) は、データの 1 つのインスタンスに対して予測を実行できる便利な API です。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。 シングル スレッド環境またはプロトタイプ環境で使用できます。 運用環境でパフォーマンスとスレッド セーフを向上させるには、`PredictionEnginePool` サービスを使用します。これにより、アプリケーション全体で使用するできる [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。 ASP.NET Core Web API で `PredictionEnginePool` を使用する方法については、[こちらのガイド](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)を参照してください。
+
+> [!NOTE]
+> `PredictionEnginePool` サービスの拡張機能は、現在プレビュー段階です。
 
 このチュートリアルでは、このクラス内の 1 つのテスト用の旅行を使用します。 モデルを試行するために後で他のシナリオを追加できます。 `TaxiTrip` のインスタンスを作成して、`TestSinglePrediction()` メソッドでコストのトレーニング済みモデルの予測をテストするために、旅行を追加します。
 

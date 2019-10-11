@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2229dca07a3a723babe5bf202ce5ddc0c77a7374
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dbb196b5beb2fc04ff85f2924356699fd83f3ea6
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052189"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833670"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 配置ガイド (開発者向け)
 このトピックでは、.NET Framework 4.5 から [!INCLUDE[net_current](../../../includes/net-current-version.md)] までの任意のバージョンの .NET Framework を、それぞれのアプリと共にインストールする開発者向けの情報を提供します。
@@ -57,7 +57,7 @@ ms.locfileid: "71052189"
 
 - .NET Framework 4.5 以降では、ユーザーはセットアップ中に、実行されている .NET Framework アプリケーションの一覧を表示し、簡単に終了できます。 これにより、.NET Framework のインストールによるシステムの再起動を回避できます。 「 [システム再起動の削減](reducing-system-restarts.md)」を参照してください。
 
-- .NET Framework 4.5 またはそのポイント リリースのいずれかをアンインストールすると、前に存在していた .NET Framework 4 ファイルも削除されます。 .NET Framework 4 に戻る場合は、そのバージョンとすべての更新プログラムを再インストールする必要があります。 (「 [.NET Framework 4 のインストール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))」をご覧ください)。
+- .NET Framework 4.5 またはそのポイント リリースのいずれかをアンインストールすると、前に存在していた .NET Framework 4 ファイルも削除されます。 .NET Framework 4 に戻る場合は、そのバージョンとすべての更新プログラムを再インストールする必要があります。 「[.NET Framework 4 のインストール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))」を参照してください。
 
 - .NET Framework 4.5 再頒布可能パッケージは、2012 年 10 月 9 に更新されています。この更新により、Microsoft によって生成および署名されたファイルへのデジタル署名が途中で有効期限切れになるという、デジタル証明書の不適切なタイムスタンプに関連する問題が解決しました。 2012 年 8 月 16 日付けの .NET Framework 4.5 再頒布可能パッケージをインストールしていた場合は、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=245484)から最新の再頒布可能パッケージを入手して更新を行うことをお勧めします。 この問題について詳しくは、「 [マイクロソフト セキュリティ アドバイザリ (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)」をご覧ください。
 

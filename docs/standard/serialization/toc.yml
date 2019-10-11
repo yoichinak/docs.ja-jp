@@ -28,6 +28,8 @@
           href: how-to-chunk-serialized-data.md
         - name: '方法: .NET 標準オブジェクトがシリアル化可能なのかどうかを判断する'
           href: how-to-determine-if-netstandard-object-is-serializable.md
+        - name: サンプル
+          href: serialization-samples-binary.md
     - name: XML シリアル化および SOAP シリアル化
       href: xml-and-soap-serialization.md
       items:
@@ -73,23 +75,12 @@
           href: add-element-for-schemaimporterextensions.md
         - name: <xmlSerializer> 要素
           href: xmlserializer-element.md
-        - name: シリアル化ツール
+        - name: ツール
           href: serialization-tools.md
           items:
             - name: XML シリアライザー ジェネレーター ツール (Sgen.exe)
               href: xml-serializer-generator-tool-sgen-exe.md
             - name: XML Schema Definition Tool (Xsd.exe)
               href: xml-schema-definition-tool-xsd-exe.md
-        - name: シリアル化のサンプル
-          href: serialization-samples.md
-          items:
-            - name: 基本的なシリアル化の技術サンプル
-              href: basic-serialization-technology-sample.md
-            - name: XmlSerializer によるカスタム シリアル化順序
-              href: custom-serialization-order-with-xmlserializer.md
-            - name: SchemaImporterExtension の技術サンプル
-              href: schemaimporterextension-technology-sample.md
-            - name: バージョン間の耐性があるシリアル化に対応する技術サンプル
-              href: version-tolerant-serialization-technology-sample.md
-            - name: Web サービス ジェネリック シリアル化の技術サンプル
-              href: web-services-generics-serialization-technology-sample.md
+        - name: サンプル
+          href: serialization-samples-xml.md

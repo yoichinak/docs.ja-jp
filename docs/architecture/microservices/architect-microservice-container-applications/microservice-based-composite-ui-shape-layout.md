@@ -2,12 +2,12 @@
 title: マイクロサービスを基にしている複合 UI を作成する
 description: マイクロサービス アーキテクチャは、バックエンド専用ではありません。 フロントエンドで使用してピーク ビューを取得します。
 ms.date: 09/20/2018
-ms.openlocfilehash: 0d1825d6183b79a0e10f70fc6cfee6ca79a837d8
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 60e0e6d59738f3f1fec31226cb842ceb1af303e4
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817833"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834373"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>マイクロサービスを基にしている複合 UI を作成する
 
@@ -15,7 +15,7 @@ ms.locfileid: "68817833"
 
 図 4-20 に、モノリシック クライアント アプリケーションからマイクロサービスを利用するだけの簡単なアプローチを示します。 当然ながら、HTML および JavaScript の生成の間に ASP.NET MVC サービスを含めることが可能です。 図は簡単なものであり、マイクロサービスを利用している単一 (モノリシック) のクライアント UI が強調表示されています。またこれらのマイクロサービスでは、UI シェイプ (HTML および JavaScript) ではなく、ロジックとデータにのみ焦点を当てています。
 
-![個々のマイクロサービスに接続するモノリシック UI アプリケーション。](./media/image20.png)
+![マイクロサービスに接続するモノリシック UI アプリの図。](./media/microservice-based-composite-ui-shape-layout/monolith-ui-consume-microservices.png)
 
 **図 4-20** バックエンド マイクロサービスを利用するモノリシック UI アプリケーション
 
@@ -25,7 +25,7 @@ ms.locfileid: "68817833"
 
 図 4-21 に、この複合 UI アプローチのバージョンを示します。 これは、異なる手法に基づく細分化された部分を集計する他のマイクロサービスが存在する可能性があるため、簡略化されています。 それは、従来の Web アプローチ (ASP.NET MVC) または SPA (シングル ページ アプリケーション) のどちらを構築しているかに依存します。
 
-![複合 UI アプリケーションでは、各 UI セクションは、UI コンポジション マイクロサービスによって生成され、ミニゲートウェイのように機能します。](./media/image21.png)
+![多くのビュー モデルで構成された複合 UI の図。](./media/microservice-based-composite-ui-shape-layout/microservice-generate-composite-ui.png)
 
 **図 4-21** バックエンド マイクロサービスによって成形された複合 UI アプリケーションの例
 

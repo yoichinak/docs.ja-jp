@@ -3,24 +3,24 @@ title: 分岐とループ - C# の概要に関するチュートリアル
 description: 分岐とループに関するこのチュートリアルでは、C# のコードを記述して、この言語における、ステートメントを繰り返し実行するための条件付き分岐とループに対応している構文について学習します。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: d329a871265ae42918fbf81c42be6667710e4c75
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: a0701a63d6c3aece6bac4263cbcf8a682a623cf7
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850812"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834123"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>分岐およびループ ステートメントを使用した条件付きロジックについて説明します
 
 このチュートリアルでは、変数を調べ、その変数に基づいて実行パスを変更するコードを記述する方法について説明します。 C# コードを記述し、コードをコンパイルおよび実行して結果を確認します。 チュートリアルには、C# における分岐構造とループ構造を確認する一連のレッスンが含まれています。 これらのレッスンでは、C# 言語の基本を説明します。
 
-このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている、[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
+このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Windows、Linux、または macOS 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている、[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
 
 ## <a name="make-decisions-using-the-if-statement"></a>`if` ステートメントを使用した条件判定
 
-「**branches-tutorial**」という名前のディレクトリを作成します。 それを現在のディレクトリとし、`dotnet new console -n BranchesAndLoops -o .` を実行します。 このコマンドによって、現在のディレクトリに新しい .NET Core コンソール アプリケーションが作成されます。
+「*branches-tutorial*」という名前のディレクトリを作成します。 それを現在のディレクトリとし、`dotnet new console -n BranchesAndLoops -o .` を実行します。 このコマンドによって、現在のディレクトリに新しい .NET Core コンソール アプリケーションが作成されます。
 
-お好みのエディターで **Program.cs** を開き、`Console.WriteLine("Hello World!");` の行を次のコードで置き換えます。
+お好みのエディターで *Program.cs* を開き、`Console.WriteLine("Hello World!");` の行を次のコードで置き換えます。
 
 ```csharp
 int a = 5;

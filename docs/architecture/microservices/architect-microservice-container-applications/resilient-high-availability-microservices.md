@@ -2,12 +2,12 @@
 title: マイクロサービスの回復性と高可用性
 description: マイクロサービスの高可用性を実現するには、一時的なネットワークや依存関係のエラーに耐えるような設計が必要であり、回復性も求められます。
 ms.date: 09/20/2018
-ms.openlocfilehash: bb1bef0c9cc08e43aed80a29effe89587fb296f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675059"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834349"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>マイクロサービスの回復性と高可用性
 
@@ -46,7 +46,7 @@ Beat Pulse と呼ばれる優れたオープン ソース ライブラリを使�
 
 マイクロサービスベースのアプリケーションを作成するときには、複雑さを処理する必要があります。 もちろん、単一のマイクロサービスを扱うのは簡単ですが、数十または数百の種類の数千のマイクロサービスのインスタンスは複雑な問題です。 これは単なるマイクロサービス アーキテクチャの構築のことではありません。安定し、凝縮したシステムを構築する場合、高可用性、アドレス指定能力、回復力、正常性、および診断が必要です。
 
-![オーケストレーターは、マイクロ サービスを実行するためのサポート プラットフォームを指定します。](./media/image22.png)
+![マイクロサービスのサポート プラットフォームを提供するクラスターの図。](./media/resilient-high-availability-microservices/microservice-platform.png)
 
 **図 4-22** マイクロサービス プラットフォームは、アプリケーションの正常性の管理の基礎です
 

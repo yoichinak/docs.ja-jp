@@ -2,18 +2,18 @@
 title: Docker アプリの内部ループ開発ワークフロー
 description: Docker アプリケーションの開発の "内部ループ" ワークフローについて説明します。
 ms.date: 02/15/2019
-ms.openlocfilehash: 04e1b29e6a0cef89df05cc9124806c74a38b5249
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 565852511f3a837066d5da5cf0e3ab0a902dd7da
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214360"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956596"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker アプリの内部ループ開発ワークフロー
 
 DevOps サイクル全体にまたがる外部ループ ワークフローをトリガーする前に、各内部ループが各開発者のコンピューターで開始され、アプリ自体をコード化し、希望する言語またはプラットフォームを使用し、ローカルでテストされます (図 4-21)。 ただし、すべての場合において、選択する言語、フレームワーク、プラットフォームに関係なく、共通する重要な点が 1 つあります。 この特定のワークフローでは、常に Docker コンテナーを開発し、テストしますが、ローカルで行われます。
 
-![手順 1 - コード/実行/デバッグ](./media/image18.png)
+![内部ループ開発環境の概念を示す図。](./media/docker-apps-inner-loop-workflow/inner-loop-development-context.png)
 
 **図 4-21** 内部ループの開発コンテキスト
 
@@ -35,7 +35,7 @@ Docker をプロセスとして活用する内部ループ開発ワークフロ�
 
 図 4-22 では、Docker アプリをビルドするときに通常行う基本手順と各手順の詳細を確認できます。
 
-![ワークフローの概要:手順 1 - コード、手順 2 - Dockerfile を記述する、手順 3 - Dockerfile で定義されたイメージを作成する、手順 4 - docker-compose ファイルでサービスを定義する、手順 5 - コンテナーまたは作られたアプリを実行する、手順 6 - アプリをテストする、手順 7 - プッシュして外部ループを開始する (CI/CD パイプライン) か、開発を続ける](./media/image19.png)
+![コンテナー化されたアプリを作成するために必要な 7 つの手順を示す図。](./media/docker-apps-inner-loop-workflow/life-cycle-containerized-apps-docker-cli.png)
 
 **図 4-22** Docker CLI を利用し、Docker でコンテナー化されたアプリケーションのワークフローの概要
 
@@ -54,10 +54,10 @@ Mac または Windows 向けの最新版 Docker を使用すると、Docker ア�
 
 また、Docker CLI の使用時、実際にアプリケーションを開発できるよう、コード エディターが必要です。
 
-Microsoft からは Visual Studio Code が提供されます。これは Mac、Windows、Linux でサポートされている軽量のコード エディターであり、IntelliSense、[さまざまな言語のサポート](https://code.visualstudio.com/docs/languages/overview) (JavaScript、.NET、Go、Java、Ruby、Python、ほとんどの新しい言語)、[デバッグ](https://code.visualstudio.com/Docs/editor/debugging)、[Git との統合](https://code.visualstudio.com/Docs/editor/versioncontrol)、[拡張機能サポート](https://code.visualstudio.com/docs/extensions/overview)を提供します。 このエディターは、Mac および Linux の開発者に最適です。 Windows でも、完全な Visual Studio アプリケーションを使用できます。
+Microsoft からは Visual Studio Code が提供されます。これは Windows、Linux、macOS でサポートされている軽量のコード エディターであり、IntelliSense、[さまざまな言語のサポート](https://code.visualstudio.com/docs/languages/overview) (JavaScript、.NET、Go、Java、Ruby、Python、ほとんどの新しい言語)、[デバッグ](https://code.visualstudio.com/Docs/editor/debugging)、[Git との統合](https://code.visualstudio.com/Docs/editor/versioncontrol)、[拡張機能サポート](https://code.visualstudio.com/docs/extensions/overview)を提供します。 このエディターは、macOS および Linux の開発者に最適です。 Windows では、Visual Studio を使用することもできます。
 
 > [!TIP]
-> Windows、Mac、Linux 向けの Visual Studio Code をインストールする方法については、<https://code.visualstudio.com/docs/setup/setup-overview/> にお進みください。
+> Windows、Linux、または macOS 用の Visual Studio Code をインストールする手順については、「<https://code.visualstudio.com/docs/setup/setup-overview/>」を参照してください。
 >
 > Docker for Mac の設定方法については、<https://docs.docker.com/docker-for-mac/> にお進みください。
 
@@ -81,7 +81,7 @@ VS Code 用 Docker 拡張機能からは次の機能が提供されます。
 
 Docker 拡張機能をインストールするには、Ctrl + Shift + P キーを押しながら、「`ext install`」と入力し、Install Extension コマンドを実行して Marketplace 拡張機能一覧を表示します。 次に、図 4-23 のように、「**docker**」と入力して結果にフィルターを適用し、Docker Support 拡張機能を選択します。
 
-![VS Code 用 Docker 拡張機能の表示。](./media/image20.png)
+![VS Code 用 Docker 拡張機能の表示。](./media/docker-apps-inner-loop-workflow/install-docker-extension-vs-code.png)
 
 **図 4-23**. Visual Studio Code で Docker 拡張機能をインストールする
 
@@ -96,7 +96,7 @@ Docker 拡張機能をインストールするには、Ctrl + Shift + P キー�
 
 図 4-24 では、VS Code 用 Docker 拡張機能で docker-compose ファイルが追加される様子を確認できます。
 
-![VS Code 用 Docker 拡張機能のコンソール表示。](./media/image24.png)
+![VS Code 用 Docker 拡張機能のコンソール表示。](./media/docker-apps-inner-loop-workflow/add-docker-files-to-workspace-command.png)
 
 **図 4-24** **Add Docker files to Workspace コマンド**で追加された Docker ファイル
 
@@ -158,7 +158,7 @@ Docker の[この記事](https://docs.docker.com/engine/userguide/eng-image/base
 
 DockerFile を使用し、ローカル環境でイメージを作成するには、図 4-25 にあるように、docker build コマンドを使用できます (いくつかのコンテナー/サービスで構成されるアプリケーションに `docker-compose up --build` を実行することもできます)。
 
-![docker-compose ビルドのコンソール出力。ダウンロード進捗状況を確認できます。](./media/image25.png)
+![docker build コマンドのコンソール出力を示すスクリーンショット。](./media/docker-apps-inner-loop-workflow/run-docker-build-command.png)
 
 **図 4-25** docker build の実行
 
@@ -168,7 +168,7 @@ DockerFile を使用し、ローカル環境でイメージを作成するには
 
 図 4-26 にあるように、docker images コマンドを使用し、ローカル リポジトリ (開発コンピューター) の既存のイメージを検索できます。
 
-![コマンド docker イメージからのコンソール出力。既存のイメージを確認できます。](./media/image26.png)
+![コマンド docker イメージからのコンソール出力。既存のイメージを確認できます。](./media/docker-apps-inner-loop-workflow/view-existing-images-with-docker-images.png)
 
 **図 4-26** docker images を使用した既存のイメージの表示
 
@@ -223,13 +223,13 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 ほとんどの企業のシナリオでは、Docker アプリケーションは複数のサービスから構成されます。 そのとき、`docker-compose up` コマンドを実行できますが (図 4-27)、このコマンドでは、前に作成した docker-compose.yml ファイルが使用されます。 このコマンドを実行すると、作成されたアプリケーションがそのすべての関連コンテナーと共に展開されます。
 
-![docker-compose up コマンドからのコンソール出力。](./media/image27.png)
+![docker-compose up コマンドからのコンソール出力。](./media/docker-apps-inner-loop-workflow/results-docker-compose-up.png)
 
 **図 4-27** "docker-compose up" コマンドの実行結果
 
 VM を表現する図 4-28 で示すように、`docker-compose up` の実行後、Docker ホストにアプリケーションとその関連コンテナーを展開します。
 
-![マルチコンテナー アプリケーションを実行する VM](./media/image28.png)
+![マルチコンテナー アプリケーションを実行する VM](./media/docker-apps-inner-loop-workflow/vm-with-docker-containers-deployed.png)
 
 **図 4-28** Docker コンテナーが展開された VM
 
@@ -247,7 +247,7 @@ docker-machine {IP} {YOUR-CONTAINER-NAME}
 
 Docker ホストでブラウザーを開き、そのサイトに移動します。図 4-29 に示すように、アプリ/サービスが実行中であることを確認できるはずです。
 
-![ブラウザーに表示される localhost/API/values からの応答](./media/image29.png)
+![ブラウザーに表示される localhost/API/values からの応答](./media/docker-apps-inner-loop-workflow/test-docker-app-locally-localhost.png)
 
 **図 4-29** localhost を使用し、Docker アプリケーションをローカル テストする
 
@@ -255,7 +255,7 @@ Docker ホストでブラウザーを開き、そのサイトに移動します�
 
 ターミナルから CURL を使用することでこれをテストできます。 Windows への Docker インストールの場合、図 4-30 に示すように、既定の IP は 10.0.75.1 です。
 
-![CURL で http://10.0.75.1/API/values を取得したときのコンソール出力](./media/image30.png)
+![CURL で http://10.0.75.1/API/values を取得したときのコンソール出力](./media/docker-apps-inner-loop-workflow/test-docker-app-locally-curl.png)
 
 **図 4-30** CURL を使用した Docker アプリケーションのローカル テスト
 
@@ -265,9 +265,8 @@ Visual Studio Code では、Node.js かその他のプラットフォーム (.NE
 
 次のセクションで説明するように、Windows または Mac 向けの Visual Studio の使用時、Docker で .NET Core または .NET Framework コンテナーをデバッグすることもできます。
 
-> [!情報]
->
-> Node.js Docker コンテナーのデバッグに関する詳細については、<https://blog.docker.com/2016/07/live-debugging-docker/> と <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/> にお進みください。
+> [!TIP]
+> Node.js Docker コンテナーのデバッグの詳細については、<https://blog.docker.com/2016/07/live-debugging-docker/> と <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/> を参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](docker-apps-development-environment.md)

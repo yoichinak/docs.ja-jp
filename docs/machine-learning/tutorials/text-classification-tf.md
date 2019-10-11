@@ -1,17 +1,17 @@
 ---
 title: 'チュートリアル: 事前トレーニング済みの TensorFlow モデルを使用して映画レビューのセンチメントを分析する'
 description: このチュートリアルでは、事前トレーニング済みの TensorFlow モデルを使用して、Web サイトのセンチメントを分類する方法について示します。 センチメントの 2 項分類子は、Visual Studio を使用して開発された C# コンソール アプリケーションです。
-ms.date: 09/11/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 38b935814d713284dae1ca931b90c63bbcac332b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: e25e884769ad62d3d888986b1475000b543b24b1
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216896"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700940"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>チュートリアル: ML.NET で事前トレーニング済みの TensorFlow モデルを使用して映画レビューのセンチメントを分析する
 
@@ -211,7 +211,10 @@ ms.locfileid: "71216896"
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreatePredictionEngine)]
 
-    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) は、データの 1 つのインスタンスに対して予測を実行できる便利な API です。
+    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) は、データの 1 つのインスタンスに対して予測を実行できる便利な API です。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。 シングル スレッド環境またはプロトタイプ環境で使用できます。 運用環境でパフォーマンスとスレッド セーフを向上させるには、`PredictionEnginePool` サービスを使用します。これにより、アプリケーション全体で使用するできる [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。 ASP.NET Core Web API で `PredictionEnginePool` を使用する方法については、[こちらのガイド](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)を参照してください。
+
+    > [!NOTE]
+    > `PredictionEnginePool` サービスの拡張機能は、現在プレビュー段階です。
 
 1. コメントを追加して、`Predict()` メソッドでトレーニングされたモデルの予測をテストします。これには `MovieReview` のインスタンスを作成します。
 

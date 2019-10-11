@@ -1,15 +1,15 @@
 ---
-title: '方法: 子要素 (XPATH-LINQ to XML) を検索 (Visual Basic)'
+title: '方法: 子要素の検索 (XPath LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
-ms.openlocfilehash: 96ad54d6f89aefd004a7803baef855d656b8a82d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dac53f70882791fb05265d4a04444c98adff451
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855245"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249986"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>方法: 子要素 (XPATH-LINQ to XML) を検索 (Visual Basic)
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>方法: 子要素の検索 (XPath LINQ to XML) (Visual Basic)
 このトピックでは、XPath の子要素軸と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> メソッドを比較します。  
   
  XPath 式は `DeliveryNotes` です。  
@@ -41,11 +41,11 @@ Console.WriteLine(el1)
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console
 Results are identical  
 <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>  
 ```  
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath ユーザーの LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

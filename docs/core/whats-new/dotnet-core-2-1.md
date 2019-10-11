@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 519c55dbe8b55191b682067da558167f86199b7e
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ace8c644fd5aa13e29961b7eb44e923556571c75
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116229"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834257"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 の新機能
 

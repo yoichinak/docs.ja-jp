@@ -28,7 +28,7 @@ ms.locfileid: "71049878"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`xmlns`|XML 名前空間。 この値は常**に http://schemas.microsoft.com/netfx/2013/01/metadata""** です。|  
+|`xmlns`|XML 名前空間。 この値は常**に"http://schemas.microsoft.com/netfx/2013/01/metadata"** です。|  
   
 ## <a name="child-elements"></a>子要素  
   

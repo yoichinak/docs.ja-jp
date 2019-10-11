@@ -1,15 +1,15 @@
 ---
-title: '方法: 先行する (XPATH-LINQ to XML) の兄弟を検索 (Visual Basic)'
+title: '方法: 前の兄弟を検索 (XPath LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 59055718-d0a7-4db3-8901-18dd33587703
-ms.openlocfilehash: 4584a84df0e25b451a440c33e17c14cd78fc78bf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ad57c1b6f06843bd757257c8ecda637ad0e71b6
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021636"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250089"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>方法: 先行する (XPATH-LINQ to XML) の兄弟を検索 (Visual Basic)
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>方法: 前の兄弟を検索 (XPath LINQ to XML) (Visual Basic)
 このトピックでは、XPath の `preceding-sibling` 軸と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の子 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 軸を比較します。  
   
  XPath 式を次に示します。  
@@ -47,7 +47,7 @@ Next
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console
 Results are identical  
 <CompanyName>Great Lakes Food Market</CompanyName>  
 <ContactName>Howard Snyder</ContactName>  
@@ -57,4 +57,4 @@ Results are identical
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath ユーザーの LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

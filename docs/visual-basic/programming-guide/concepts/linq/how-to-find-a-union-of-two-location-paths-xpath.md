@@ -1,15 +1,15 @@
 ---
-title: '方法: 2 つの場所のパス (XPATH-LINQ to XML) の和集合を検索 (Visual Basic)'
+title: '方法: 2つのロケーションパス (XPath LINQ to XML) の和集合を検索する (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
-ms.openlocfilehash: 662cad329f4837d26b25d56f15d323fe623b05c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6905e6a7bd0cba37006b1fc3077ad72de36bcf56
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021675"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249947"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>方法: 2 つの場所のパス (XPATH-LINQ to XML) の和集合を検索 (Visual Basic)
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>方法: 2つのロケーションパス (XPath LINQ to XML) の和集合を検索する (Visual Basic)
 XPath を使用すると、2 つの XPath ロケーション パスの結果の和集合を検索できます。  
   
  XPath 式を次に示します。  
@@ -47,7 +47,7 @@ Next
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console
 Results are identical  
 <Category>A</Category>  
 <Price>24.50</Price>  
@@ -67,4 +67,4 @@ Results are identical
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath ユーザーの LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

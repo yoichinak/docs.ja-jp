@@ -2,12 +2,12 @@
 title: Docker アプリケーションの外側のループ DevOps ワークフローの手順
 description: DevOps の "外部ループ" ワークフローの手順について学習する
 ms.date: 02/15/2019
-ms.openlocfilehash: e7a82d2e5a5d503e5efbe9ac8242b163baab1286
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5687caff0c635e7add135654a8f564b2c509cbf8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673709"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834568"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker アプリケーションの外側のループ DevOps ワークフローの手順
 

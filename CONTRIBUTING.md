@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 23501575fb34f0291b3a6b795c197f45a86fd512
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104626"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71955969"
 ---
 # <a name="contributing"></a>コントリビューション
 
 .NET ドキュメントへの貢献に関心をお寄せいただきありがとうございます。
 
-> Microsoft のガイドラインをサイト全体のガイドに移す作業が進行中です。 
+> Microsoft のガイドラインをサイト全体のガイドに移す作業が進行中です。
 > 新しいガイダンスを表示するには、「[Microsoft Docs 共同作成者ガイド概要](https://docs.microsoft.com/contribute/)」を参照してください。
 
 このドキュメントでは、[.NET ドキュメント サイト](https://docs.microsoft.com/dotnet)でホストされる記事とコード サンプルを投稿するためのプロセスについて説明します。 投稿には、誤字の修正のような簡単なものから、新しい記事のような複雑なものまであります。
@@ -22,18 +22,19 @@ ms.locfileid: "70104626"
 
 このリポジトリには、.NET の概念に関するドキュメントが含まれています。 .NET ドキュメント サイトは、このリポジトリに加え、次の複数のリポジトリで構築されています。
 
-- [コード サンプルとスニペット](https://github.com/dotnet/samples)
-- [API リファレンス](https://github.com/dotnet/dotnet-api-docs)
-- [.NET Compiler Platform SDK リファレンス](https://github.com/dotnet/roslyn-api-docs)
-
-これらすべてのリポジトリに関する問題とタスクがここに記載されています。
+- [コード サンプルとスニペット](https://github.com/dotnet/samples)  
+    このリポジトリの問題とタスクについては、[dotnet/docs/issues](https://github.com/dotnet/docs/issues) で追跡されます。
+- [.NET API リファレンス](https://github.com/dotnet/dotnet-api-docs)  
+    このリポジトリの問題とタスクについては、[dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues) で追跡されます。
+- [.NET Compiler Platform SDK リファレンス](https://github.com/dotnet/roslyn-api-docs)  
+    このリポジトリの問題とタスクについては、[dotnet/docs/issues](https://github.com/dotnet/docs/issues) で追跡されます。
 
 ## <a name="process-for-contributing"></a>投稿のプロセス
 
 [Git と GitHub.com](https://guides.github.com/activities/hello-world/) の基本的な理解が必要です。
 
 **手順 1:** 少しの変更の場合 (たとえば、入力ミスを修正する場合や、すぐに pull request を開いてドキュメント内に見つけた問題に対処する場合) は、この手順をスキップします。 新しいコンテンツを書き込んだり、既存のコンテンツを完全に改訂したりすることに興味がある場合は、自分が何をしたいかを説明する[問題](https://github.com/dotnet/docs/issues)を開きます。
-**docs** フォルダーのコンテンツはセクションで構成され、それらが目次 (TOC) に反映されます。 TOC のどこにトピックを配置するかを明確にします。 提案に対するフィードバックを得ます。
+*docs* フォルダーのコンテンツはセクションで構成され、それらが目次 (TOC) に反映されます。 TOC のどこにトピックを配置するかを明確にします。 提案に対するフィードバックを得ます。
 
 または
 
@@ -43,7 +44,7 @@ ms.locfileid: "70104626"
 
 - **コンテンツの更新**。 このドキュメント セットは非常に大きいものであるため、コンテンツが簡単が古くなったり改訂が必要になったりします。 さらに、さまざまな理由で、一部のコンテンツでは、同じものが重複していたり、3 つも存在したりしています。 コンテンツの更新では、機能領域の中で個々のトピックが最新のものであるかコンテンツの改訂であるかを明らかにすることで重複を回避し、すべての一意のコンテンツがより小さなドキュメント セット内に保持されるようにする必要があります。
 
-- **新しいコンテンツの作成**。 ご自分で独自のトピックを作成することに興味がある場合は、Microsoft がドキュメント セットに追加したいと思っているトピックが問題の一覧に示されています。 ただし、トピックに取り掛かる前に Microsoft にお知らせください。 ここに記載されていないトピックを記述することに関心がある場合は、問題を開いてください。 
+- **新しいコンテンツの作成**。 ご自分で独自のトピックを作成することに興味がある場合は、Microsoft がドキュメント セットに追加したいと思っているトピックが問題の一覧に示されています。 ただし、トピックに取り掛かる前に Microsoft にお知らせください。 ここに記載されていないトピックを記述することに関心がある場合は、問題を開いてください。
 
 [未解決の問題](https://github.com/dotnet/docs/issues)の一覧を調べて、ご自分が興味のある問題に取り組むことを志願することもできます。 投稿できる問題には、[up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) ラベルがタグ付けされています。 
 
@@ -58,7 +59,7 @@ ms.locfileid: "70104626"
 手順 1 で、ご自分の記事について特定した TOC の場所に対応するフォルダーに移動します。
 そのフォルダーには、そのセクション内のすべての記事のマークダウン ファイルが格納されています。
 必要に応じて、ご自分のコンテンツ用のファイルを格納する新しいフォルダーを作成します。 そのセクションのメインの記事は *index.md* と呼ばれます。
-画像とその他の静的なリソース用に、記事を含むフォルダー内に **media** という名前のサブフォルダーを作成します (まだ存在していない場合)。 **media** フォルダーの中に、記事の名前のサブフォルダーを作成します (インデックス ファイル以外)。
+画像とその他の静的なリソース用に、記事を含むフォルダー内に *media* という名前のサブフォルダーを作成します (まだ存在していない場合)。 *media* フォルダーの中に、記事の名前のサブフォルダーを作成します (インデックス ファイル以外)。
 リポジトリのルートの下の *samples* フォルダー内に、大きなサイズのサンプルを含めます。
 
 適切なマークダウン構文に従ってください。 詳細については、[スタイル ガイド](./styleguide/template.md)を参照してください。
@@ -76,7 +77,7 @@ docs
             portability_report.png
 ```
 
-**手順 4:** ご自分のブランチから `dotnet/docs/master` に Pull Request (PR) を送信します。
+**手順 4:** ご自分のブランチから `dotnet/docs/master`、`dotnet/dotnet-api-docs/master`、または `dotnet/samples/master` に Pull Request (PR) を送信します。
 
 PR は*常に*マスター ブランチを対象にする必要があります。 ライブ ブランチを対象とする PR は*決して*開かないでください。
 
