@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 426420175a7d05f39859b9e217a888a8c01b6d63
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d76fa4b2352da18b5ef0e547ebc4e2e99d980b8
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740502"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273996"
 ---
-# <a name="cortypeid-structure"></a>COR_TYPEID 構造体
+# <a name="cor_typeid-structure"></a>COR_TYPEID 構造体
 型識別子が含まれます。  
   
 ## <a name="syntax"></a>構文  
@@ -39,24 +39,24 @@ typedef struct COR_TYPEID{
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`token1`|最初のトークンです。|  
-|`token2`|2 つ目のトークンです。|  
+|`token1`|最初のトークン。|  
+|`token2`|2番目のトークン。|  
   
-## <a name="remarks"></a>Remarks  
- `COR_TYPEID`数ガベージ コレクトされるオブジェクトに関する情報を提供するデバッグの方法で構造体が返されます。 その項目に関する追加情報を提供するその他のデバッグ方法の引数として渡すことができます。 たとえば、列挙することによって、 [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)オブジェクト、個々 が取得することができます[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)マネージ ヒープ上の個々 のオブジェクトを表すオブジェクト。 渡すことができますし、`COR_TYPEID`値から、`COR_HEAPOBJECT.type`フィールドを[icordebugprocess 5::gettypefortypeid](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)オブジェクトに関する型情報を提供する ICorDebugType オブジェクトを取得します。  
+## <a name="remarks"></a>コメント  
+ 構造`COR_TYPEID`体は、ガベージコレクションされるオブジェクトに関する情報を提供する多数のデバッグメソッドによって返されます。 その後、その項目に関する追加情報を提供する他のデバッグメソッドに引数として渡すことができます。 たとえば、COR_HEAPOBJECT [ICorDebugHeapEnum](icordebugheapenum-interface.md)オブジェクトを列挙することによって、マネージヒープ上の個々のオブジェクトを表す個々の[COR_HEAPOBJECT](cor-heapobject-structure.md)オブジェクトを取得できます。 次に、 `COR_HEAPOBJECT.type`フィールドの`COR_TYPEID`値を[ICorDebugProcess5:: gettypefortypeid](icordebugprocess5-gettypefortypeid-method.md)メソッドに渡して、オブジェクトに関する型情報を提供する、テキストオブジェクトを取得します。  
   
- A`COR_TYPEID`オブジェクトが不透明にする対象としています。 個別のフィールドをアクセスまたは操作する必要があります。 として指定された識別子として唯一使用することは、`out`メソッドの呼び出しと、ことができるパラメーターは、追加情報を提供するその他のメソッドに渡される、します。  
+ `COR_TYPEID`オブジェクトは不透明であることが想定されています。 個々のフィールドにアクセスしたり操作したりすることはできません。 唯一の用途は、メソッドの呼び出しで`out`パラメーターとして指定された識別子として使用され、さらに情報を提供するために他のメソッドに渡すことができます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

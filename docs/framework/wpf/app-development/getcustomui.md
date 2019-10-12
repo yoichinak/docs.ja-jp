@@ -4,46 +4,46 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: 30084143949d2243fd310448c52e6b861505ad66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9ef32912c2afb3c99e46e1e14bb3daa5a2e99af
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947967"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005710"
 ---
 # <a name="getcustomui"></a>GetCustomUI
-実装されている場合に、カスタムの進行状況とエラー メッセージをホストから取得する PresentationHost.exe によって呼び出されます。  
+実装されている場合、ホストからカスタムの進行状況とエラーメッセージを取得するために、プレゼンテーションの cluster.exe によって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgressClassName, [out] BSTR* pwzErrorAssemblyName, [out] BSTR* pwzErrorClassName );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `pwzProgressAssemblyName`  
   
- [out]ホストが指定した進行中のユーザー インターフェイスが含まれるアセンブリへのポインター。  
+ 入出力ホストから提供された進行状況のユーザーインターフェイスを格納しているアセンブリへのポインター。  
   
  `pwzProgressClassName`  
   
- [out]可能であれば、進行中のホストが指定したユーザー インターフェイスであるクラスの名前、[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]ファイルと<xref:System.Windows.Controls.Page>はその最上位要素です。 このクラスがで指定されているアセンブリに存在する`pwzProgressAssemblyName`します。  
+ 入出力ホストから提供された進行状況のユーザーインターフェイスであるクラスの名前。可能であれば、<xref:System.Windows.Controls.Page> の XAML ファイルは最上位の要素です。 このクラスは、`pwzProgressAssemblyName` によって指定されたアセンブリに存在します。  
   
  `pwzErrorAssemblyName`  
   
- [out]ホストが指定したエラーのユーザー インターフェイスが含まれるアセンブリへのポインター。  
+ 入出力ホストから提供されたエラーユーザーインターフェイスを格納しているアセンブリへのポインター。  
   
  `pwzErrorClassName`  
   
- [out]ホストが指定したエラーのユーザーであるクラスの名前インターフェイス、可能であれば、XAML ファイルで<xref:System.Windows.Controls.Page>はその最上位要素です。 このクラスがで指定されているアセンブリに存在する`pwzErrorAssemblyName`します。  
+ 入出力ホストから提供されたエラーユーザーインターフェイスであるクラスの名前。可能であれば、@no__t が0の XAML ファイルは最上位の要素です。 このクラスは、`pwzErrorAssemblyName` によって指定されたアセンブリに存在します。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  HRESULT:無視されます。  
   
-## <a name="remarks"></a>Remarks  
- ホスト アプリケーションは、PresentationHost.exe の既定のユーザー インターフェイスに準拠していない特定のテーマがあります。 大文字と小文字の場合は、ホスト アプリケーションを実装できます[GetCustomUI](getcustomui.md)進行状況とエラー ユーザー インターフェイスを PresentationHost.exe に戻ります。 PresentationHost.exe は常に呼び出さ[GetCustomUI](getcustomui.md)の既定のユーザー インターフェイスを使用する前にします。  
+## <a name="remarks"></a>コメント  
+ ホストアプリケーションには、ホストの既定のユーザーインターフェイスが準拠していない可能性がある特定のテーマが含まれている場合があります。 この場合、ホストアプリケーションは[GetCustomUI](getcustomui.md)を実装して、進行状況とエラーユーザーインターフェイスをプレゼンテーションの cluster.exe に返すことができます。 [GetCustomUI](getcustomui.md) は、既定のユーザーインターフェイスを使用する前に、常にを呼び出します。  
   
- この関数は、PresentationHost の初期化中に 1 回呼び出されます。  
+ この関数は、プレゼンテーションホストの初期化中に1回呼び出されます。  
   
 ## <a name="see-also"></a>関連項目
 
