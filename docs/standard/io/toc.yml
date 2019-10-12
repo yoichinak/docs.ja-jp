@@ -62,5 +62,7 @@
           href: how-to-use-anonymous-pipes-for-local-interprocess-communication.md
         - name: '方法: ネットワークのプロセス間通信で名前付きパイプを使用する'
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
+    - name: パイプライン
+      href: pipelines.md
     - name: メモリ マップト ファイル
       href: memory-mapped-files.md
