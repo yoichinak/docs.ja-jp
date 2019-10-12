@@ -29,7 +29,7 @@
         - name: '方法: .NET 標準オブジェクトがシリアル化可能なのかどうかを判断する'
           href: how-to-determine-if-netstandard-object-is-serializable.md
         - name: サンプル
-          href: serialization-samples-binary.md
+          href: samples-binary.md
     - name: XML シリアル化および SOAP シリアル化
       href: xml-and-soap-serialization.md
       items:
@@ -83,4 +83,4 @@
             - name: XML Schema Definition Tool (Xsd.exe)
               href: xml-schema-definition-tool-xsd-exe.md
         - name: サンプル
-          href: serialization-samples-xml.md
+          href: samples-xml.md
