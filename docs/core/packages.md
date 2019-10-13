@@ -4,12 +4,12 @@ description: パッケージ、メタパッケージ、フレームワークの�
 author: richlander
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: a03a4961b116b05468ac6c6ce5e648c07a77b7f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7b019686df195a8cebdce126f7a0b2d22548dc0e
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090499"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275767"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>パッケージ、メタパッケージ、フレームワーク
 
@@ -72,7 +72,7 @@ ms.locfileid: "59090499"
 主な .NET Core メタパッケージ:
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) - .NET Core 配布に含まれるライブラリについて記述します。 [`.NETCoreApp` フレームワーク](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj)を確立します。 よりサイズの小さな `NETStandard.Library` に依存します。
-- [Microsoft.AspNetCore.App](https://www.nuget.org/packages/Microsoft.AspNetCore.App) - ASP.NET Core と Entity Framework Core からのパッケージで、サポートされているすべてのパッケージが含まれます。ただし、サードパーティの依存関係が含まれるものを除きます。 詳細については、「[ASP.NET Core 2.1 以降に対応した Microsoft.AspNetCore.App メタパッケージ](/aspnet/core/fundamentals/metapackage)」を参照してください。
+- [Microsoft.AspNetCore.App](https://www.nuget.org/packages/Microsoft.AspNetCore.App) - ASP.NET Core と Entity Framework Core からのパッケージで、サポートされているすべてのパッケージが含まれます。ただし、サードパーティの依存関係が含まれるものを除きます。 詳細については、「[ASP.NET Core 2.1 以降に対応した Microsoft.AspNetCore.App メタパッケージ](/aspnet/core/fundamentals/metapackage-app)」を参照してください。
 - [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) - ASP.NET Core、Entity Framework Core、および ASP.NET Core と Entity Framework Core によって使用される内部依存関係およびサード パーティの依存関係からの、サポートされるすべてのパッケージが含まれます。 詳しくは、「[ASP.NET Core 2.x 用 Microsoft.AspNetCore.All メタパッケージ](/aspnet/core/fundamentals/metapackage)」をご覧ください。
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) - mscorlib ベースのポータブル クラス ライブラリ (PCL) を .NET Core で実行できるようにするための互換性ファサードのセットです。
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c3211752282b231e818d9af25322efbb6c93cf78
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 294c077b837899bd714deb2afd1bdff2b3185f38
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181819"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237391"
 ---
 ### <a name="types-in-microsoftvisualbasicapplicationservices-namespace-not-available"></a>Microsoft.VisualBasic.ApplicationServices 名前空間の型は使用できません
 
@@ -14,9 +14,9 @@ ms.locfileid: "71181819"
 
 .NET Core 3.0 Preview 8
 
-#### <a name="details"></a>説明
+#### <a name="change-description"></a>変更の説明
 
-<xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName> 名前空間の型は、一部の .NET Core 3.0 プレビュー リリースで使用できました。 .NET Core 3.0 Preview 9 以降では使用できなくなりました。
+<xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName> 名前空間の型は、一部の .NET Core 3.0 プレビュー リリースで使用できました。 それらは、.NET Core 3.0 Preview 9 以降では使用できなくなりました。
 
 これらの型は、今後のリリースでの不要なアセンブリの依存関係や破壊的変更を回避するために削除されました。
  

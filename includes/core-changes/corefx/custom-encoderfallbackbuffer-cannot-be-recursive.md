@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 4075eadf7cfb39c913b7657d43335bae5497deff
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 58d1c8cd3aff52703522391c14348bd81c108587
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216931"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237398"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>カスタム EncoderFallbackBuffer インスタンスが再帰的にフォールバックしない
 
 カスタム <xref:System.Text.EncoderFallbackBuffer> インスタンスが再帰的にフォールバックしません。 <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> を実装した場合、文字のシーケンスが変換先のエンコードに変換されるようにする必要があります。 それ以外の場合は、例外が発生します。
 
-#### <a name="details"></a>説明
+#### <a name="change-description"></a>変更の説明
 
 文字をバイトに変換する操作中に、ランタイムによって不適切な形式または変換不能な UTF-16 のシーケンスが検出され、それらの文字は <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> メソッドに渡されます。 元の変換不能なデータの代わりに置き換える文字は、`Fallback` メソッドによって決定されますが、これらの文字は、<xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> をループで呼び出すことによってドレインされます。
 
