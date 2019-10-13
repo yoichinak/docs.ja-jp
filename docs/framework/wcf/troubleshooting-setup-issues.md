@@ -2,15 +2,15 @@
 title: セットアップに関する問題のトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 358897917fff7097bc2907456f295d98ad6d431f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 326daab1f7df5f8a4ea4f74fd8890031f243f7f5
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645175"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291519"
 ---
 # <a name="troubleshooting-setup-issues"></a>セットアップに関する問題のトラブルシューティング
-このトピックでは、Windows Communication Foundation (WCF) がセットアップ問題のトラブルシューティングを行う方法について説明します。  
+このトピックでは、Windows Communication Foundation (WCF) のセットアップに関する問題をトラブルシューティングする方法について説明します。  
   
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>.NET Framework 3.0 の MSI 修復操作の実行では修復されない一部の Windows Communication Foundation レジストリ キー  
  次のいずれかのレジストリ キーを削除した場合  
@@ -38,38 +38,38 @@ ms.locfileid: "64645175"
   
 4. イベント ログまたはセットアップ トレース ログ ファイルに、次の例外のいずれかが記録される。  
   
-     ServiceModelReg [11:09:59:046]:System.ApplicationException:Unexpected result 3 executing E:\WINDOWS\system32\wbem\mofcomp.exe with "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
+     Servicemodelreg.exe [11:09:59:046]:ApplicationException:予期しない結果 3 "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof" で E:\WINDOWS\system32\wbem\mofcomp.exe を実行しています  
   
      または  
   
-     ServiceModelReg [07:19:33:843]:System.TypeInitializationException:'System.management.managementpath' の型の初期化子は、例外をスローしました。 ---> System.Runtime.InteropServices.COMException (0x80040154):次のエラーにより失敗しました。 CLSID {cf4cc405-e2c5-4ddd-b3ce-5e7582d8c9fa} を含むコンポーネントの COM クラス ファクトリを取得します。80040154.  
+     Servicemodelreg.exe [07:19:33:843]:TypeInitializationException:' System.string ' の型初期化子が例外をスローしました。 ---> InteropServices. COMException (0x80040154 が):次のエラーにより、CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} のコンポーネントの COM クラスファクトリを取得できませんでした:80040154。  
   
      または  
   
-     ServiceModelReg [07:19:32:750]:System.IO.FileNotFoundException:ファイルまたはアセンブリ 'C:\WINDOWS\system32\wbem\mofcomp.exe'、またはその依存関係の 1 つを読み込めませんでした。 指定されたファイルが見つかりません。  
+     Servicemodelreg.exe [07:19:32:750]:FileNotFoundException:ファイルまたはアセンブリ ' C:\WINDOWS\system32\wbem\mofcomp.exe ' またはその依存関係の1つを読み込むことができませんでした。 指定されたファイルが見つかりません。  
   
      ファイル名:'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
  上で説明した問題を解決するためには、次の手順を実行する必要があります。  
   
-1. 実行[WMI 診断ユーティリティ、バージョン 2.0](https://go.microsoft.com/fwlink/?LinkId=94685)の WMI サービスを修復します。 詳細については、このツールを使用して、次を参照してください。、 [WMI 診断ユーティリティ](https://go.microsoft.com/fwlink/?LinkId=94686)トピック。  
+1. [WMI Diagnosis Utility バージョン 2.0](https://go.microsoft.com/fwlink/?LinkId=94685)を実行して、WMI サービスを修復します。 このツールの使用方法の詳細については、「 [WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686) 」を参照してください。  
   
  使用して、.NET Framework 3.0 のインストールを修復、**プログラムの追加/削除**アプレットにある**コントロール パネルの**、または .NET Framework 3.0 をアンインストール/再インストールします。  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>.NET Framework 3.5 のインストール後に .NET Framework 3.0 を修復すると、.NET Framework 3.5 によって導入された machine.config 内の構成要素が削除される  
- [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] をインストールした後に .NET Framework 3.0 を修復すると、[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] によって導入された machine.config 内の構成要素が削除されます。 ただし、web.config は元の状態のままになります。 回避を修復するには[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]ARP、または使用を使用してその後、[ワークフロー サービス登録ツール (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)で、`/c`スイッチします。  
+ [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] をインストールした後に .NET Framework 3.0 を修復すると、[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] によって導入された machine.config 内の構成要素が削除されます。 ただし、web.config は元の状態のままになります。 回避策としては、この後に ARP を使用して [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] を修復するか、または `/c` スイッチを使用して[ワークフローサービス登録ツール (変更可能な reg .exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)を使用します。  
   
- [ワークフロー サービス登録ツール (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) %windir%\Microsoft.NET\framework\v3.5\ または %windir%\Microsoft.NET\framework64\v3.5\ にあります  
+ [ワークフローサービス登録ツール (microsoft.net \framework\v3.5\)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)は、%windir%\Microsoft.NET\framework64\v3.5\ またはにあります。  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>.NET Framework 3.5 のインストール後に WCF/WF Webhost に対して IIS を適切に構成する  
- ときに[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]のインストールは、追加の WCF に関連する IIS 構成設定を構成できない場合、インストール ログでエラー ログに記録し、続けます。 WorkflowServices アプリケーションを実行しようとしても、必要な構成設定がないため、実行することはできません。 たとえば、xoml やルール サービスの読み込みに失敗する可能性があります。  
+ @No__t-0 のインストールが WCF 関連の追加の IIS 構成設定の構成に失敗すると、インストールログにエラーが記録されて続行されます。 WorkflowServices アプリケーションを実行しようとしても、必要な構成設定がないため、実行することはできません。 たとえば、xoml やルール サービスの読み込みに失敗する可能性があります。  
   
- 回避策を使用して、この問題、[ワークフロー サービス登録ツール (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)で、`/c`スイッチをコンピューターの IIS スクリプト マップを適切に構成します。 [ワークフロー サービス登録ツール (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) %windir%\Microsoft.NET\framework\v3.5\ または %windir%\Microsoft.NET\framework64\v3.5\ にあります  
+ この問題を回避するには、[ワークフローサービス登録ツール (変更)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)を `/c` スイッチと共に使用して、コンピューター上で IIS スクリプトマップを適切に構成します。 [ワークフローサービス登録ツール (microsoft.net \framework\v3.5\)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)は、%windir%\Microsoft.NET\framework64\v3.5\ またはにあります。  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>アセンブリ 'System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' から型 'System.ServiceModel.Activation.HttpModule' を読み込むことができない  
- このエラーが発生します[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]がインストールされているし、WCF HTTP アクティブ化が有効になっているとします。 Visual Studio の次のコマンド ラインから開発者コマンド プロンプト内で実行の問題を解決するには。  
+ このエラーは、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] がインストールされ、WCF HTTP アクティブ化が有効になっている場合に発生します。 この問題を解決するには、Visual Studio の開発者コマンドプロンプト内から次のコマンドラインを実行します。  
   
-```Output  
+```console
 aspnet_regiis.exe -i -enable  
 ```  
   

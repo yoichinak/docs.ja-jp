@@ -2,12 +2,12 @@
 title: 相関関係のトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d4b7b4ecd724416256cf0b2499d7180200f4e75c
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932822"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291555"
 ---
 # <a name="troubleshooting-correlation"></a>相関関係のトラブルシューティング
 相関関係は、ワークフロー サービス メッセージを互いに関連付けたり、正しいワークフロー インスタンスに関連付けたりするために使用されますが、正しく構成されていないと、メッセージが受信されず、アプリケーションが正しく機能しなくなります。 ここでは、相関関係のトラブルシューティングのいくつかの方法の概要と、相関関係を使用するときに発生する一般的な問題について説明します。
@@ -53,7 +53,7 @@ class CustomFactory : WorkflowServiceHostFactory
 
  このハンドラーが呼び出されると、<xref:System.ServiceModel.UnknownMessageReceivedEventArgs.Message%2A> の <xref:System.ServiceModel.UnknownMessageReceivedEventArgs> プロパティを使用して次のようなメッセージを取得できます。
 
-```Output
+```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
   <s:Header>
     <To s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://localhost:8080/OrderService</To>
@@ -70,15 +70,15 @@ class CustomFactory : WorkflowServiceHostFactory
  <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived> ハンドラーにディスパッチされたメッセージを調べることで、メッセージがワークフロー サービスのインスタンスに関連付けられなかった理由の手がかりを得られる可能性があります。
 
 ## <a name="use-tracking-to-monitor-the-progress-of-the-workflow"></a>追跡によるワークフローの進行状況の監視
- 追跡を使用すると、ワークフローの進行状況を監視できます。 既定では、ワークフローのライフサイクル イベント、アクティビティのライフサイクル イベント、エラー伝達、およびブックマーク再開に対して追跡レコードが出力されます。 そのほかに、カスタム アクティビティでカスタム追跡レコードを出力することもできます。 相関関係のトラブルシューティングでは、アクティビティ追跡レコード、ブックマーク再開レコード、およびエラー伝達レコードが最も役立ちます。 アクティビティ追跡レコードを使用すると、ワークフローの現在の進行状況を確認したり、現在メッセージを待機しているメッセージング アクティビティを特定したりすることができます。 ブックマーク再開レコードを使用すると、ワークフローでメッセージが受信されたかどうかを確認できます。エラー伝達レコードは、ワークフローで発生したエラーの記録を提供します。 追跡を有効にするには、<xref:System.Activities.Tracking.TrackingParticipant> の <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> で目的の <xref:System.ServiceModel.Activities.WorkflowServiceHost> を指定します。 次の例では、 `ConsoleTrackingParticipant` (から、[カスタム追跡](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)サンプル) は、既定の追跡プロファイルを使用して構成します。
+ 追跡を使用すると、ワークフローの進行状況を監視できます。 既定では、ワークフローのライフサイクル イベント、アクティビティのライフサイクル イベント、エラー伝達、およびブックマーク再開に対して追跡レコードが出力されます。 そのほかに、カスタム アクティビティでカスタム追跡レコードを出力することもできます。 相関関係のトラブルシューティングでは、アクティビティ追跡レコード、ブックマーク再開レコード、およびエラー伝達レコードが最も役立ちます。 アクティビティ追跡レコードを使用すると、ワークフローの現在の進行状況を確認したり、現在メッセージを待機しているメッセージング アクティビティを特定したりすることができます。 ブックマーク再開レコードを使用すると、ワークフローでメッセージが受信されたかどうかを確認できます。エラー伝達レコードは、ワークフローで発生したエラーの記録を提供します。 追跡を有効にするには、<xref:System.Activities.Tracking.TrackingParticipant> の <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> で目的の <xref:System.ServiceModel.Activities.WorkflowServiceHost> を指定します。 次の例では、既定の追跡プロファイルを使用して `ConsoleTrackingParticipant` ([カスタム追跡](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)サンプルから) が構成されています。
 
 ```csharp
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- ConsoleTrackingParticipant などの追跡参加要素は、コンソール ウィンドウを持つ自己ホスト型ワークフロー サービスで使用できます。 Web ホスト サービスでは、永続的ストアへの追跡情報を記録する追跡参加要素に使用するかなど、組み込み<xref:System.Activities.Tracking.EtwTrackingParticipant>、または情報をファイルにログに記録するカスタム追跡参加要素。
+ ConsoleTrackingParticipant などの追跡参加要素は、コンソール ウィンドウを持つ自己ホスト型ワークフロー サービスで使用できます。 Web ホストサービスの場合は、追跡情報を永続ストアに記録する追跡参加要素を使用する必要があります。たとえば、組み込みの @no__t 0 や、情報をファイルに記録するカスタム追跡参加要素などです。
 
- 追跡と追跡、Web でホストされるワークフロー サービスの構成の詳細については、次を参照してください[ワークフロー追跡とトレース](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)、[ワークフローの追跡を構成する](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)、および[。追跡&#91;WF のサンプル&#93;](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)サンプル。
+ Web ホストワークフローサービスの追跡および追跡の構成の詳細については、「[ワークフローの追跡とトレース](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)」、「[ワークフローの追跡の構成](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)」、および「ワークフローの[追跡&#91;&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) 」のサンプルを参照してください。
 
 ## <a name="use-wcf-tracing"></a>WCF トレースの使用
  WCF トレースは、ワークフロー サービスのメッセージ フローのトレースを提供します。 このトレース情報は、相関関係 (特にコンテンツ ベースの相関関係) のトラブルシューティングに役立ちます。 トレースを有効にするには、`system.diagnostics` ファイル (Web ホスト ワークフロー サービスの場合) または `web.config` ファイル (自己ホスト型ワークフロー サービスの場合) の `app.config` セクションで目的のトレース リスナーを指定します。 トレース ファイルにメッセージの内容を含めるには、`true` の `logEntireMessage` セクションの `messageLogging` 要素で `diagnostics` に対して `system.serviceModel` を指定します。 次の例では、メッセージの内容を含むトレース情報を `service.svclog` という名前のファイルに書き込むように構成しています。
@@ -116,12 +116,12 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 </configuration>
 ```
 
- 含まれているトレース情報を表示する`service.svclog`、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)使用されます。 この方法を使用すると、渡されたメッセージの内容そのものを調べてコンテンツ ベースの相関関係の <xref:System.ServiceModel.CorrelationQuery> に一致するかどうかを確認できるため、コンテンツ ベースの相関関係のトラブルシューティングで特に便利です。 WCF トレースの詳細については、次を参照してください[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)、 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)、および[を使用して、アプリケーションのトラブルシューティングを行うのトレース](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
+ @No__t-0 に含まれるトレース情報を表示するには、[サービストレースビューアーツール (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)を使用します。 この方法を使用すると、渡されたメッセージの内容そのものを調べてコンテンツ ベースの相関関係の <xref:System.ServiceModel.CorrelationQuery> に一致するかどうかを確認できるため、コンテンツ ベースの相関関係のトラブルシューティングで特に便利です。 WCF トレースの詳細については、「[サービストレースビューアーツール (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)」、「[トレースの構成](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)」、および「トレースを使用した[アプリケーションのトラブルシューティング](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)」を参照してください。
 
 ## <a name="common-context-exchange-correlation-issues"></a>コンテキスト交換の相関関係の一般的な問題
  相関関係の中には、特定の種類のバインドが使用されていないと正しく機能しないものがあります。 たとえば、要求/応答の相関関係には <xref:System.ServiceModel.BasicHttpBinding> などの双方向のバインドが、コンテキスト交換の相関関係には <xref:System.ServiceModel.BasicHttpContextBinding> などのコンテキスト ベースのバインドが必要です。 双方向の操作はほとんどのバインドでサポートされているため、要求/応答の相関関係ではあまり問題になりませんが、コンテキスト ベースのバインドはわずかしかなく (<xref:System.ServiceModel.BasicHttpContextBinding>、<xref:System.ServiceModel.WSHttpContextBinding>、<xref:System.ServiceModel.NetTcpContextBinding> など)、 それらのいずれかが使用されていないと、ワークフロー サービスへの最初の呼び出しは成功しますが、その後の呼び出しが次の <xref:System.ServiceModel.FaultException> で失敗します。
 
-```Output
+```output
 There is no context attached to the incoming message for the service
 and the current operation is not marked with "CanCreateInstance = true".
 In order to communicate with this service check whether the incoming binding
@@ -131,9 +131,9 @@ supports the context protocol and has a valid context initialized.
  コンテキスト相関関係に使用されるコンテキスト情報は、双方向の操作が使用されている場合は <xref:System.ServiceModel.Activities.SendReply> から (コンテキスト相関関係を初期化する) <xref:System.ServiceModel.Activities.Receive> アクティビティに返され、操作が一方向の場合は呼び出し元によって指定されます。 コンテキストが呼び出し元によって送信されず、ワークフロー サービスからも返されない場合は、後続の操作が呼び出されたときに上述の <xref:System.ServiceModel.FaultException> が返されます。
 
 ## <a name="common-request-reply-correlation-issues"></a>要求/応答の相関関係の一般的な問題
- 要求-応答の相関関係を併用、 <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>ペアを使用してワークフロー サービスでは、双方向の操作を実装するために、 <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>ペアを別の web サイトでの双方向の操作を呼び出すサービス。 WCF サービスの双方向の操作を呼び出すときに、サービスは、従来できますまたは命令型コード ベースの WCF サービスは、ワークフロー サービスを指定できます。 要求/応答の相関関係を使用するには、<xref:System.ServiceModel.BasicHttpBinding> などの双方向のバインドを使用する必要があります。操作が双方向である必要もあります。
+ 要求/応答の相関関係は、@no__t 0 の @ no__t @ no__t のペアと共に使用して、ワークフローサービスに双方向の操作を実装し、別の Web サービスで双方向の操作を実行する <xref:System.ServiceModel.Activities.Send> @ no__t @ no__t のペアを使用します。 WCF サービスで双方向の操作を呼び出す場合、サービスは、従来の命令型のコードベースの WCF サービスにすることも、ワークフローサービスにすることもできます。 要求/応答の相関関係を使用するには、<xref:System.ServiceModel.BasicHttpBinding> などの双方向のバインドを使用する必要があります。操作が双方向である必要もあります。
 
- ワークフロー サービスが双方向の操作で、並行または重複している場合<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>または<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> によって提供される管理を処理しのペア、暗黙の関連付け<xref:System.ServiceModel.Activities.WorkflowServiceHost>、特に高負荷のシナリオでは不十分ですし、メッセージのルーティングを正しくない可能性があります。 この問題が発生しないようにするために、要求/応答の相関関係を使用する際には常に <xref:System.ServiceModel.Activities.CorrelationHandle> を明示的に指定することをお勧めします。 使用する場合、 **SendAndReceiveReply**と**ReceiveAndSendReply**テンプレートの [メッセージング] セクションから、**ツールボックス**、ワークフロー デザイナーで、 <xref:System.ServiceModel.Activities.CorrelationHandle>既定では明示的に構成します。 コードを使用してワークフローを作成する場合は、ペアの最初のアクティビティの <xref:System.ServiceModel.Activities.CorrelationHandle> で <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> を指定します。 次の例では、<xref:System.ServiceModel.Activities.Receive> で <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> を明示的に指定して <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> アクティビティを構成しています。
+ ワークフローサービスの双方向の操作が並列で実行されている場合、または重複 <xref:System.ServiceModel.Activities.Receive> @ no__t-1 @ no__t または <xref:System.ServiceModel.Activities.Send> @ no__t @ no__t のペアの場合は、<xref:System.ServiceModel.Activities.WorkflowServiceHost> によって提供される暗黙の相関関係ハンドルの管理では不十分である可能性があります (特に高負荷)シナリオとメッセージが正しくルーティングされない可能性があります。 この問題が発生しないようにするために、要求/応答の相関関係を使用する際には常に <xref:System.ServiceModel.Activities.CorrelationHandle> を明示的に指定することをお勧めします。 ワークフローデザイナーの **ツールボックス** の メッセージング セクションから**sendandreceivereply**テンプレートと**receiveandsendreply**テンプレートを使用すると、既定で <xref:System.ServiceModel.Activities.CorrelationHandle> が明示的に構成されます。 コードを使用してワークフローを作成する場合は、ペアの最初のアクティビティの <xref:System.ServiceModel.Activities.CorrelationHandle> で <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> を指定します。 次の例では、<xref:System.ServiceModel.Activities.Receive> で <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> を明示的に指定して <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> アクティビティを構成しています。
 
 ```csharp
 Variable<CorrelationHandle> RRHandle = new Variable<CorrelationHandle>();
@@ -161,9 +161,9 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- 間で永続化は許可されていません、 <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>ペアまたは<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>ペア。 両方のアクティビティが完了するまで存続する非永続化ゾーンが作成されます。 遅延アクティビティなどのアクティビティがこの非永続化ゾーンにあって、ワークフローのアイドル状態を引き起こした場合、ホストでワークフローがアイドル状態になったときにワークフローを永続化するようにホストが構成されていても、ワークフローは永続化されません。 Persist アクティビティなどのアクティビティが非永続化ゾーンで明示的に永続化を試みた場合、致命的な例外がスローされ、ワークフローが中止されて、<xref:System.ServiceModel.FaultException> が呼び出し元に返されます。 致命的な例外メッセージは"System.InvalidOperationException:永続化アクティビティは、永続化ブロックがありません。 内に含めることはできません。"です。 この例外は呼び出し元に返されませんが、追跡が有効になっている場合は確認できます。 呼び出し元に返される <xref:System.ServiceModel.FaultException> のメッセージは、"WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' が完了しているため、操作を実行できませんでした" です。
+ 永続化は、<xref:System.ServiceModel.Activities.Receive> @ no__t @ no__t のペアまたは <xref:System.ServiceModel.Activities.Send> @ no__t @ no__t のペアの間では許可されていません。 両方のアクティビティが完了するまで存続する非永続化ゾーンが作成されます。 遅延アクティビティなどのアクティビティがこの非永続化ゾーンにあって、ワークフローのアイドル状態を引き起こした場合、ホストでワークフローがアイドル状態になったときにワークフローを永続化するようにホストが構成されていても、ワークフローは永続化されません。 Persist アクティビティなどのアクティビティが非永続化ゾーンで明示的に永続化を試みた場合、致命的な例外がスローされ、ワークフローが中止されて、<xref:System.ServiceModel.FaultException> が呼び出し元に返されます。 致命的な例外メッセージは、"InvalidOperationException:永続化ブロックなしで永続化アクティビティを含めることはできません。 "。 この例外は呼び出し元に返されませんが、追跡が有効になっている場合は確認できます。 呼び出し元に返される <xref:System.ServiceModel.FaultException> のメッセージは、"WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' が完了しているため、操作を実行できませんでした" です。
 
- 要求-応答の相関関係の詳細については、次を参照してください。[要求/応答](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)します。
+ 要求/応答の相関関係の詳細については、「[要求-応答](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)」を参照してください。
 
 ## <a name="common-content-correlation-issues"></a>コンテンツ ベースの相関関係の一般的な問題
  コンテンツ ベースの相関関係は、ワークフロー サービスが複数のメッセージを受信し、交換されるメッセージ内の一部のデータによって目的のインスタンスが識別される場合に使用されます。 コンテンツ ベースの相関関係では、顧客番号や注文 ID などのメッセージ内のデータを使用して、適切なワークフロー インスタンスにメッセージをルーティングします。 ここでは、コンテンツ ベースの相関関係を使用するときに発生するいくつかの一般的な問題について説明します。
@@ -188,7 +188,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- XPath クエリが正しく構成されていない関連付けデータが取得されないように、次のメッセージでエラーが返されます。"関連付けクエリには、空の結果セットが返されます。 エンドポイントの関連付けクエリが正しく構成されていることを確認してください。" 前のセクションで説明したとおり、XPath クエリをリテラル値と置換すると、すばやくトラブルシューティングすることができます。 XPath のクエリ ビルダーを使用する場合に、この問題が発生することができます、 **関連付け初期化子**または**CorrelatesOn の定義**ダイアログ ボックスと、ワークフロー サービスは、メッセージ コントラクトを使用します。 次の例では、メッセージ コントラクト クラスを定義します。
+ 関連付けデータが取得されないように XPath クエリが正しく構成されていない場合は、次のメッセージと共にエラーが返されます。"関連付けクエリが空の結果セットを生成した。 エンドポイントの関連付けクエリが正しく構成されていることを確認してください。" 前のセクションで説明したとおり、XPath クエリをリテラル値と置換すると、すばやくトラブルシューティングすることができます。 この問題は、**関連付け初期化子の追加** または  **correlateson の定義** ダイアログボックスで XPath クエリビルダーを使用していて、ワークフローサービスでメッセージコントラクトが使用されている場合に発生する可能性があります。 次の例では、メッセージ コントラクト クラスを定義します。
 
 ```csharp
 [MessageContract]
