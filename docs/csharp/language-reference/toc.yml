@@ -315,6 +315,9 @@
     - name: '?: 演算子'
       href: operators/conditional-operator.md
       displayName: 'conditional, ternary, ref'
+    - name: '! (null 非厳格) 演算子'
+      href: operators/null-forgiving.md
+      displayName: 'nullable reference, null-forgiveness'
     - name: '?? および ??= 演算子'
       href: operators/null-coalescing-operator.md
       displayName: 'null-coalescing, assignment'
@@ -621,7 +624,7 @@
       href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
     - name: 再帰的なパターン マッチング
       href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
-    - name: 既定のインターフェイス メンバー
+    - name: 既定のインターフェイス メソッド
       href: ../../../_csharplang/proposals/csharp-8.0/default-interface-methods.md
     - name: 非同期ストリーム
       href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md

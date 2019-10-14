@@ -341,7 +341,7 @@
           href: core/tools/telemetry.md
         - name: global.json の概要
           href: core/tools/global-json.md
-        - name: 関連項目
+        - name: 参照
           items:
             - name: dotnet
               href: core/tools/dotnet.md
@@ -580,8 +580,8 @@
           href: csharp/tutorials/exploration/interpolated-strings-local.md
         - name: 文字列補間の高度なシナリオ
           href: csharp/tutorials/string-interpolation.md
-        - name: 既定のインターフェイス メンバーでインターフェイスを安全に更新する
-          href: csharp/tutorials/default-interface-members-versions.md
+        - name: 既定のインターフェイス メソッドでインターフェイスを安全に更新する
+          href: csharp/tutorials/default-interface-methods-versions.md
         - name: インデックスと範囲を調べる
           href: csharp/tutorials/ranges-indexes.md
         - name: Null 許容参照型を操作する
@@ -1425,7 +1425,7 @@
               href: visual-basic/language-reference/modifiers/overrides.md
             - name: ParamArray
               href: visual-basic/language-reference/modifiers/paramarray.md
-            - name: Partial
+            - name: 部分的
               href: visual-basic/language-reference/modifiers/partial.md
             - name: Private
               href: visual-basic/language-reference/modifiers/private.md
