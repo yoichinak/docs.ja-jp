@@ -2,22 +2,22 @@
 title: WS-AtomicTransaction 構成 MMC スナップイン
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 1fa0548e2d63562ddcb85fc6392bf5c99d67d6c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 926332ac1873db89ce9332075380effdfdc1fc37
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916818"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291505"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 構成 MMC スナップイン
 WS-AtomicTransaction 構成 MMC スナップインは、WS-AtomicTransaction 設定の一部をローカル マシンとリモート マシンの両方で構成するために使用されます。  
   
-## <a name="remarks"></a>Remarks  
- または[!INCLUDE[wxp](../../../includes/wxp-md.md)] [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]を実行している場合、MMC スナップインを見つけるには、 **[コントロールパネル]** 、管理ツール、コンポーネントサービス の順に移動し、**マイコンピューター**を右クリックし、 **[プロパティ]** を選択します。 これは MSDTC を構成する場合と同じ場所です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。  
+## <a name="remarks"></a>コメント  
+ [!INCLUDE[wxp](../../../includes/wxp-md.md)] または [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] を実行している場合は、コントロールパネル]、管理ツール]、 **[コンポーネントサービス]** の順に移動し、 **[マイコンピューター]** を右クリックして **[プロパティ]** を選択すると、MMC スナップインが表示されます。 これは MSDTC を構成する場合と同じ場所です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。  
   
- Windows Vista また[!INCLUDE[lserver](../../../includes/lserver-md.md)]はを実行している場合は、 **[スタート]** ボタンをクリックし、**検索**ボックスに「 `dcomcnfg.exe` 」と入力すると、MMC スナップインが表示されます。 MMC が開いているときに移動、**マイ Computer\Distributed トランザクション コーディネーター DTC**ノードを右クリックし、**プロパティ**です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。  
+ Windows Vista または [!INCLUDE[lserver](../../../includes/lserver-md.md)] を実行している場合は、 **[スタート]** ボタンをクリックして **[検索]** ボックスに「`dcomcnfg.exe`」と入力すると、MMC スナップインが表示されます。 MMC が開いているときに移動、**マイ Computer\Distributed トランザクション コーディネーター DTC**ノードを右クリックし、**プロパティ**です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。  
   
- 前の手順は、ローカル マシンを構成するためのスナップインを起動するために使用します。 リモートコンピューターを構成する場合は、[**コントロールパネル]、[管理ツール]、[コンポーネントサービス**]、の順に移動し、または[!INCLUDE[wxp](../../../includes/wxp-md.md)] [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]を実行している場合は同様の手順を実行します。 Windows vista または[!INCLUDE[lserver](../../../includes/lserver-md.md)]を実行している場合は、 [!INCLUDE[lserver](../../../includes/lserver-md.md)]Vista の場合は前の手順に従いますが、リモートコンピューターのノードの下の **[分散トランザクション Coordinator\Local DTC]** ノードを使用します。  
+ 前の手順は、ローカル マシンを構成するためのスナップインを起動するために使用します。 リモートコンピューターを構成する場合は、[**コントロールパネル]、[管理ツール]、[コンポーネントサービス**]、の順に移動し、[!INCLUDE[wxp](../../../includes/wxp-md.md)] または [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] を実行している場合は同様の手順を実行します。 Windows Vista または [!INCLUDE[lserver](../../../includes/lserver-md.md)] を実行している場合は、Vista および [!INCLUDE[lserver](../../../includes/lserver-md.md)] の前の手順に従いますが、リモートコンピューターのノードの下にある **[分散トランザクション COORDINATOR\LOCAL DTC]** ノードを使用します。  
   
  ツールのユーザー インターフェイスを使用するには、WsatUI.dll ファイルを登録する必要があります。このファイルのパスは次のとおりです。  
   
@@ -25,7 +25,7 @@ WS-AtomicTransaction 構成 MMC スナップインは、WS-AtomicTransaction 設
   
  登録するには、次のコマンドを実行します。  
   
-```Output  
+```console
 regasm.exe /codebase WsatUI.dll  
 ```  
   
@@ -77,7 +77,7 @@ regasm.exe /codebase WsatUI.dll
   
  **[オプション]** ボタンをクリックすると、追加の設定を指定できるページが表示されます。  
   
- [**トレースレベル**の組み合わせ] ボックスを使用すると、 <xref:System.Diagnostics.TraceLevel>列挙の任意の有効な値から選択できます。 また、チェック ボックスを使用して、アクティビティ トレースやアクティビティ伝達を実行するかどうかを指定したり、個人を特定する情報を収集するかどうかを指定することもできます。  
+ [**トレースレベル**の組み合わせ] ボックスを使用すると、<xref:System.Diagnostics.TraceLevel> 列挙型の任意の有効な値から選択できます。 また、チェック ボックスを使用して、アクティビティ トレースやアクティビティ伝達を実行するかどうかを指定したり、個人を特定する情報を収集するかどうかを指定することもできます。  
   
  **[ログセッション]** グループボックスで、ログセッションを指定することもできます。  
   
