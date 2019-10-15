@@ -271,6 +271,14 @@
           href: core/diagnostics/managed-debuggers.md
         - name: ログとトレース
           href: core/diagnostics/logging-tracing.md
+        - name: .NET Core CLI グローバル ツール
+          items:
+            - name: dotnet-カウンター
+              href: core/diagnostics/dotnet-counters.md
+            - name: dotnet-ダンプ
+              href: core/diagnostics/dotnet-dump.md
+            - name: dotnet-トレース
+              href: core/diagnostics/dotnet-trace.md
     - name: 単体テスト
       href: core/testing/index.md
       items:
@@ -341,7 +349,7 @@
           href: core/tools/telemetry.md
         - name: global.json の概要
           href: core/tools/global-json.md
-        - name: 参照
+        - name: 関連項目
           items:
             - name: dotnet
               href: core/tools/dotnet.md
@@ -582,6 +590,8 @@
           href: csharp/tutorials/string-interpolation.md
         - name: 既定のインターフェイス メソッドでインターフェイスを安全に更新する
           href: csharp/tutorials/default-interface-methods-versions.md
+        - name: 既定のインターフェイス メソッドを使用した mixin 機能を作成する
+          href: csharp/tutorials/mixins-with-default-interface-methods.md
         - name: インデックスと範囲を調べる
           href: csharp/tutorials/ranges-indexes.md
         - name: Null 許容参照型を操作する
