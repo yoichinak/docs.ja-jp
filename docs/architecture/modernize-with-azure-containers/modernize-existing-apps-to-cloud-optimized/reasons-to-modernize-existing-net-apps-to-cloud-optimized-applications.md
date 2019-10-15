@@ -2,12 +2,12 @@
 title: 既存の .NET アプリをクラウド向けに最適化されたアプリケーションに最新化する理由
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |既存の .NET アプリをクラウド向けに最適化されたアプリケーションに最新化する理由
 ms.date: 04/28/2018
-ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: c86b9ec4d4a92b8daa0fceef0531ed955b9bb2bf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373929"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318558"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>既存の .NET アプリをクラウド向けに最適化されたアプリケーションに最新化する理由
 
@@ -41,7 +41,7 @@ ms.locfileid: "70373929"
 
 図4-2 は、クラウド向けに最適化されたアプリケーションの主なオプションの柱を示しています。 実装する柱が多いほど、アプリケーションの readier は顧客の期待を満たすことができます。
 
-![クラウド向けに最適化されたアプリケーションの主な柱](./media/image2.png)
+![クラウド向けに最適化されたアプリケーションの主要な柱という名前の図。](./media/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications/main-pillars-cloud-optimized-application.png)
 
 **図 4-2** クラウド向けに最適化されたアプリケーションの主な柱
 

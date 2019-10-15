@@ -2,12 +2,12 @@
 title: クラウドの CI/CD パイプラインや DevOps ツールでアプリのライフ サイクルを最新化する
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |クラウドで CI/CD パイプラインと DevOps ツールを使用してアプリのライフサイクルを最新化する
 ms.date: 04/30/2018
-ms.openlocfilehash: 4e4436ac4a622a82cc990b977b03eeae95ca9368
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 75ac3fa06f442570a0a5043a88409b3fdebb5810
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181905"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318570"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>クラウドの CI/CD パイプラインや DevOps ツールでアプリのライフ サイクルを最新化する
 
@@ -27,7 +27,7 @@ Azure DevOps Services は、公式の Azure DevOps Services 展開タスクを�
 
 図4-12 は、Azure Container Service で Kubernetes クラスターにデプロイする継続的なデプロイパイプラインを示しています。
 
-![Kubernetes クラスターにデプロイする継続的デプロイパイプラインの Azure DevOps Services](./media/image12.png)
+![Kubernetes クラスターにデプロイする Azure DevOps Services のスクリーンショット。](./media/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud/deploy-mvc-app-container-kubernetes.png)
 
 **図 4-12.** Kubernetes クラスターにデプロイする継続的デプロイパイプラインの Azure DevOps Services
 
