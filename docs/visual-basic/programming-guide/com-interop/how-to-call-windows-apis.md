@@ -15,25 +15,25 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64624855"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>方法: Windows API (Visual Basic) を呼び出す
-この例を定義し、呼び出し、 `MessageBox` user32.dll 内の関数に文字列を渡します。  
-  
-## <a name="example"></a>例  
- [!code-vb[VbVbalrInterop#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#1)]  
-  
-## <a name="compiling-the-code"></a>コードのコンパイル  
- この例で必要な要素は次のとおりです。  
-  
-- <xref:System> 名前空間への参照  
-  
-## <a name="robust-programming"></a>信頼性の高いプログラミング  
- 次の条件を満たす場合は、例外が発生する可能性があります。  
-  
-- メソッドが静的でないするには、抽象クラスでは、または以前に定義します。 親の種類がインターフェイス、またはの長さ*名前*または*dllName*は 0 です。 (<xref:System.ArgumentException>)  
-  
-- *名前*または*dllName*は`Nothing`します。 (<xref:System.ArgumentNullException>)  
-  
-- 含んでいる型が `CreateType` を使用して以前に作成されています。 (<xref:System.InvalidOperationException>)  
-  
+この例はuser32.dll内の `MessageBox` 関数の定義と呼び出しを行い、そして文字列を渡しています。
+
+## <a name="example"></a>例
+ [!code-vb[VbVbalrInterop#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#1)]
+
+## <a name="compiling-the-code"></a>コードのコンパイル
+ この例で必要な要素は次のとおりです。
+
+- <xref:System> 名前空間への参照
+
+## <a name="robust-programming"></a>信頼性の高いプログラミング
+ 次の条件を満たす場合は、例外が発生する可能性があります。
+
+- メソッドが静的でない、または抽象メソッドである、または以前に定義されているメソッドの場合。 親の型がインターフェイスである、または*name*や*dllName*の長さが 0 の場合。 (<xref:System.ArgumentException>)
+
+- *name*または*dllName*が`Nothing`の場合。 (<xref:System.ArgumentNullException>)
+
+- 含んでいる型が `CreateType` を使用して以前に作成されている場合。 (<xref:System.InvalidOperationException>)
+
 ## <a name="see-also"></a>関連項目
 
 - [プラットフォーム呼び出しの詳細](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
