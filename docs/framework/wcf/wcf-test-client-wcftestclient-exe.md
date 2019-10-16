@@ -2,17 +2,17 @@
 title: WCF のテスト用クライアント (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: e637a2bb26bd0cc4bea653155c2a85ef5af19fd9
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ac89b234dfafe3f87f1423a04ce8e4dd6b44b991
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038349"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321191"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF のテスト用クライアント (WcfTestClient.exe)
 Windows Communication Foundation (WCF) テストクライアント (Wcftestclient.exe) は、ユーザーがテストパラメーターを入力し、その入力をサービスに送信し、サービスから返される応答を表示できるようにする GUI ツールです。 WCF サービスホストと組み合わせると、シームレスなサービステストエクスペリエンスが提供されます。
 
-通常、WCF テストクライアント (wcftestclient.exe) は次の場所にあります。 `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` -Community は、インストールされている Visual Studio のレベルに応じて、"Enterprise"、"Professional"、または "community" のいずれかになります。
+通常、WCF テストクライアント (Wcftestclient.exe) は次の場所にあります。 `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`-Community は、インストールされている Visual Studio のレベルに応じて、"Enterprise"、"Professional"、"Community" のいずれかになります。
 
 ## <a name="scenarios-for-using-test-client"></a>テスト用クライアントを使用するシナリオ
 
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF) テストクライアント (Wcftestclien
 
 また、Visual Studio の外部で WCF テストクライアント (Wcftestclient.exe) を呼び出して、インターネット上の任意のサービスをテストすることもできます。 このツールを見つけるには、次の場所に移動します。
 
-`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`(コンピューターにインストールされている Visual Studio のレベルによっては、"Enterprise"、"Professional"、"Community" のいずれかになります)。
+`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` (コンピューターにインストールされている Visual Studio のレベルによって、community は "Enterprise"、"Professional"、または "Community" のいずれかになります)
 
 ツールを使用するには、ファイル名をダブルクリックしてこの場所からツールを開くか、コマンド ラインからツールを起動します。
 
@@ -40,7 +40,7 @@ WCF テストクライアントは、コマンドライン引数として任意�
 
 `wcfTestClient.exe URI1 URI2 …`
 
-WCF テストクライアントウィンドウが開いたら、[**ファイル**->] **[サービスの追加]** の順にクリックし、開くサービスのエンドポイントアドレスを入力します。
+WCF テストクライアントウィンドウが開いたら、 **[ファイル]** @no__t、 **[サービスの追加]** の順にクリックし、開くサービスのエンドポイントアドレスを入力します。
 
 ## <a name="wcf-test-client-user-interface"></a>WCF のテスト用クライアントのユーザー インターフェイス
 
@@ -60,7 +60,7 @@ WCF テストクライアントのメインウィンドウの左ペインには�
 
 メッセージの XML を表示するには、 **[xml]** をクリックします。 サービスに送信するには、 **[呼び出し]** をクリックします。
 
-データセットパラメーターの場合は、[. **.** ] をクリックします。 [編集] の横にあるボタン. **.** データグリッドを表示する新しいウィンドウで編集します。 **[データセットのコピー]** ボタンと **[データセットの貼り付け]** ボタンの外観がわかります。 最初の編集時に DataSet オブジェクトのスキーマが不明の場合、DataGrid は空になります。 スキーマが同じ DataSet オブジェクトを DataGrid の現在のオブジェクトに貼り付ける必要があります (スキーマは、貼り付け操作の前に別の場所からコピーする必要があります)。 **[データセットのコピー]** ボタンをクリックして、将来使用するためにデータセットオブジェクトをコピーすることもできます。
+データセットパラメーターの場合は、[. **.** ] をクリックします。 [編集] の横にあるボタン. **.** データグリッドを表示する新しいウィンドウで編集します。 **[データセットのコピー]** ボタンと **[データセットの貼り付け]** ボタンの外観がわかります。 最初の編集時に DataSet オブジェクトのスキーマが不明の場合、DataGrid は空になります。 スキーマが同じ DataSet オブジェクトを DataGrid の現在のオブジェクトに貼り付ける必要があります (貼り付け操作の前に、他の場所からスキーマをコピーする必要があることに注意してください)。 **[データセットのコピー]** ボタンをクリックして、将来使用するためにデータセットオブジェクトをコピーすることもできます。
 
 サービスの応答がテスト パラメーターの下に表示されます。
 
@@ -103,7 +103,7 @@ WCF テストクライアントのメインウィンドウの左ペインには�
 
 #### <a name="persist-client-configuration"></a>クライアント構成の保持
 
-[**ツール**->オプション]->[クライアントの構成] タブには、[**サービスの起動時に常に構成を再生成**する] オプションがあります。これは既定で有効になっています。 このオプションは、WCF テストクライアントがサービスを読み込むたびに、最新のサービスコントラクトとサービスの App.config ファイルに基づいて構成ファイルを再生成することを指定します。
+[**ツール**->**オプション**->**クライアント構成**] タブには、[**サービスの起動時に常に構成を再生成**する] オプションが含まれています。これは既定で有効になっています。 このオプションは、WCF テストクライアントがサービスを読み込むたびに、最新のサービスコントラクトとサービスの App.config ファイルに基づいて構成ファイルを再生成することを指定します。
 
 WCF サービスのクライアント構成を編集していて、この更新されたファイルを常に使用してサービスをデバッグする場合は、 **[再生成]** オプションをオフにすることができます。 これにより、サービスを更新して WCF テストクライアントを再度開く場合でも、クライアントの .dll .config ファイルは、更新されたサービスに基づいて再生成されたものではなく、以前に更新したものになります。
 
@@ -112,7 +112,7 @@ WCF サービスのクライアント構成を編集していて、この更新�
 > [!CAUTION]
 > 変更したクライアント構成ファイルを後で再利用することにした場合、該当するファイルは次の場所で見つけることができます。
 >
-> \Documents と Settings\\[User Account] \My Documents\Test Client Projects.
+> \Documents と Settings @ no__t-0 [User Account] \My Documents\Test Client Projects.
 >
 > クライアント構成ファイルに格納されている更新された資格情報は、このフォルダーのアクセス制御リスト (ACL) によって保護されています。
 
@@ -120,7 +120,7 @@ WCF サービスのクライアント構成を編集していて、この更新�
 
 #### <a name="add-service"></a>サービスの追加
 
-[**ファイル**->] **[サービスの追加]** をクリックして、WCF テストクライアントにサービスを追加します。 次に、追加するサービスの URI (エンドポイント アドレス) を入力する必要があります。 サービスのアドレスには、MEX アドレスまたは WSDL アドレスを指定できます。
+**[ファイル]** @no__t をクリックし、 **[サービスの追加]** をクリックして、WCF テストクライアントにサービスを追加します。 次に、追加するサービスの URI (エンドポイント アドレス) を入力する必要があります。 サービスのアドレスには、MEX アドレスまたは WSDL アドレスを指定できます。
 
 [**最近使用**したサービス] サブメニューには、最近追加された10個のサービスのエンドポイントの一覧も表示されます。 これらのいずれかを選択すると、指定したサービスが WCF テストクライアントに追加されます。
 
@@ -144,7 +144,7 @@ WCF テストクライアントの実行中にサービスに変更が加えら�
 
 既定では、WCF テストクライアントは、生成されたクライアントコードと構成ファイルを "%Appdata%\local\temp\test client projects Client Projects" フォルダーに格納します。 このフォルダーは、WCF テストクライアントが終了した後に削除されます。 WCF テストクライアントで構成ファイルが変更され、[**サービスの起動時に常に構成を再生成**する] オプションが無効になっている場合、変更されたファイルは、マッピングを含む "My Documents\Test Client Projects" の下の "CachedConfig" フォルダーにコピーされます (メタデータ-ファイル名) XML ファイルをインデックスとして指定します。
 
-また、コマンドラインで WCF テストクライアントを起動し、 `/ProjectPath`スイッチを使用して、生成されたファイルを格納するための新しい目的のパスを指定するか、 `/RestoreProjectPath`スイッチを使用して既定の場所を復元することもできます。 構文は次のとおりです。
+また、コマンドラインで WCF テストクライアントを起動し、`/ProjectPath` スイッチを使用して生成されたファイルを格納するための新しいパスを指定するか、`/RestoreProjectPath` スイッチを使用して既定の場所を復元することもできます。 構文は次のとおりです。
 
 `wcfTestClient.exe /ProjectPath [desired location]`
 
@@ -154,7 +154,7 @@ WCF テストクライアントの実行中にサービスに変更が加えら�
 
 WCF テストクライアントでサポートされている機能の一覧を次に示します。
 
-- サービスの呼び出し:要求/応答と一方向のメッセージ。
+- サービスの呼び出し : 要求/応答メッセージおよび一方向メッセージ
 
 - バインディング : Svcutil.exe でサポートされるすべてのバインディング
 
@@ -172,9 +172,9 @@ WCF テストクライアントでサポートされていない機能の一覧�
 
 - トランザクション
 
-- セキュリティ:CardSpace、証明書、およびユーザー名/パスワード。
+- セキュリティ: CardSpace、証明書、およびユーザー名/パスワード。
 
-- 現存WSFederationbinding、任意のコンテキストバインディング、および Https バインド、WebHttpbinding (Json 応答メッセージのサポート)。
+- バインディング : WSFederationBinding、任意のコンテキスト バインディングおよび HTTPS バインディング、WebHttpBinding (JSON 応答メッセージ サポート)
 
 ## <a name="closing-wcf-test-client"></a>WCF のテスト用クライアントの終了
 
@@ -186,4 +186,4 @@ WCF テストクライアントは、次の方法で閉じることができま�
 
 ## <a name="see-also"></a>関連項目
 
-- [WCF サービス ホスト (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [WCF サービス ホスト (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)

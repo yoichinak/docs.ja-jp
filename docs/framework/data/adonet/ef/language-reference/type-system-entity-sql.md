@@ -2,15 +2,15 @@
 title: 型システム (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: 7f9b41181d9a7a7f23123f2e1b71893000b34d4a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0f7dae9e57132929737d752c67694cd369b79d9e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248936"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319233"
 ---
 # <a name="type-system-entity-sql"></a>型システム (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]では、さまざまな型がサポートされています。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、次の複数の型をサポートしています。  
   
 - `Int32` や `String.` などのプリミティブ型 (単純型)。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "70248936"
 ## <a name="collections"></a>コレクション  
  コレクション型は、他のオブジェクトの 0 個以上のインスタンスを表します。 コレクションを作成する方法の詳細については、「[型の構築](constructing-types-entity-sql.md)」を参照してください。  
   
-## <a name="references"></a>参照  
+## <a name="references"></a>関連項目  
  参照とは、特定のエンティティ セットにある特定のエンティティへの論理ポインターです。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、参照の構築、分解、およびナビゲートを行うための次の演算子がサポートされています。  
@@ -41,7 +41,7 @@ ms.locfileid: "70248936"
   
  メンバー アクセス (ドット) 演算子 (`.`) を使用して参照によるナビゲーションを行うことができます。 次のコード例では、r (参照) プロパティによるナビゲーションで Order の Id プロパティを取得します。  
   
-```  
+```sql  
 select o2.r.Id   
 from (select ref(o) as r from LOB.Orders as o) as o2   
 ```  

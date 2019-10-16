@@ -1,0 +1,198 @@
+- name: 'C# のガイド'
+  href: index.md
+- name: 開始するには
+  href: getting-started/
+- name: チュートリアル
+  items:
+    - name: 概要
+      href: tutorials/index.md
+    - name: 'C# によるプログラミングの入門'
+      items:
+        - name: 最初のレッスンを選択する
+          href: tutorials/intro-to-csharp/index.md
+        - name: Hello world
+          href: tutorials/intro-to-csharp/hello-world.yml
+        - name: 'C# の数値'
+          href: tutorials/intro-to-csharp/numbers-in-csharp.yml
+        - name: 分岐とループ
+          href: tutorials/intro-to-csharp/branches-and-loops.yml
+        - name: リスト コレクション
+          href: tutorials/intro-to-csharp/list-collection.yml
+        - name: ローカル環境で作業する
+          items:
+            - name: 環境をセットアップする
+              href: tutorials/intro-to-csharp/local-environment.md
+            - name: 'C# の数値'
+              href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
+            - name: 分岐とループ
+              href: tutorials/intro-to-csharp/branches-and-loops-local.md
+            - name: リスト コレクション
+              href: tutorials/intro-to-csharp/arrays-and-collections.md
+            - name: クラスの概要
+              href: tutorials/intro-to-csharp/introduction-to-classes.md
+    - name: 'C# 6 を詳しく学習する'
+      href: tutorials/exploration/csharp-6.yml
+    - name: 文字列補間を詳しく学習する - 対話形式
+      href: tutorials/exploration/interpolated-strings.yml
+    - name: 文字列補間を詳しく学習する - 自分の環境内で
+      href: tutorials/exploration/interpolated-strings-local.md
+    - name: 文字列補間の高度なシナリオ
+      href: tutorials/string-interpolation.md
+    - name: 既定のインターフェイス メソッドでインターフェイスを安全に更新する
+      href: tutorials/default-interface-methods-versions.md
+    - name: 既定のインターフェイス メソッドを使用した mixin 機能を作成する
+      href: tutorials/mixins-with-default-interface-methods.md
+    - name: インデックスと範囲を調べる
+      href: tutorials/ranges-indexes.md
+    - name: Null 許容参照型を操作する
+      href: tutorials/nullable-reference-types.md
+    - name: アプリを Null 許容参照型にアップグレードする
+      href: tutorials/upgrade-to-nullable-references.md
+    - name: 非同期ストリームの生成と使用
+      href: tutorials/generate-consume-asynchronous-stream.md
+    - name: パターン マッチングを使用してデータ機能を拡張する
+      href: tutorials/pattern-matching.md
+    - name: コンソール アプリケーション
+      href: tutorials/console-teleprompter.md
+    - name: REST クライアント
+      href: tutorials/console-webapiclient.md
+    - name: 'C# と .NET での継承'
+      href: tutorials/inheritance.md
+    - name: LINQ の使用
+      href: tutorials/working-with-linq.md
+    - name: 属性の使用
+      href: tutorials/attributes.md
+- name: 'C# のツアー'
+  href: tour-of-csharp/
+- name: 'C# の新機能'
+  items:
+    - name: 'C# 8.0'
+      href: whats-new/csharp-8.md
+    - name: 'C# 7.3'
+      href: whats-new/csharp-7-3.md
+    - name: 'C# 7.2'
+      href: whats-new/csharp-7-2.md
+    - name: 'C# 7.1'
+      href: whats-new/csharp-7-1.md
+    - name: 'C# 7.0'
+      href: whats-new/csharp-7.md
+    - name: 'C# 6'
+      href: whats-new/csharp-6.md
+    - name: 'C# バージョン履歴'
+      href: whats-new/csharp-version-history.md
+    - name: 言語とフレームワークの関係
+      href: whats-new/relationships-between-language-and-library.md
+    - name: バージョンと更新に関する考慮事項
+      href: whats-new/version-update-considerations.md
+- name: 'C# の概念'
+  items:
+    - name: 'C# の型システム'
+      href: programming-guide/types/index.md
+    - name: null 許容参照型
+      href: nullable-references.md
+    - name: 属性と制約を使用した null 許容 API の記述
+      href: nullable-attributes.md
+    - name: 名前空間
+      href: programming-guide/namespaces/index.md
+    - name: 基本型
+      href: basic-types.md
+    - name: クラス
+      href: programming-guide/classes-and-structs/classes.md
+    - name: 構造体
+      href: structs.md
+    - name: タプル
+      href: tuples.md
+    - name: タプルとその他の型の分解
+      href: deconstruct.md
+    - name: インターフェイス
+      href: programming-guide/interfaces/index.md
+    - name: メソッド
+      href: methods.md
+    - name: ラムダ式
+      href: programming-guide/statements-expressions-operators/lambda-expressions.md
+    - name: プロパティ
+      href: properties.md
+    - name: インデクサー
+      href: indexers.md
+    - name: 破棄
+      href: discards.md
+    - name: ジェネリック
+      href: programming-guide/generics/index.md
+    - name: Iterators
+      href: iterators.md
+    - name: デリゲートとイベント
+      items:
+        - name: デリゲートの概要
+          href: delegates-overview.md
+        - name: System.Delegate とデリゲートのキーワード
+          href: delegate-class.md
+        - name: 厳密に型指定されたデリゲート
+          href: delegates-strongly-typed.md
+        - name: デリゲートの一般的なパターン
+          href: delegates-patterns.md
+        - name: イベントの概要
+          href: events-overview.md
+        - name: 標準的な .NET イベント パターン
+          href: event-pattern.md
+        - name: 更新された .NET イベント パターン
+          href: modern-events.md
+        - name: デリゲートとイベントの識別
+          href: distinguish-delegates-events.md
+    - name: 統合言語クエリ (LINQ)
+      href: linq/
+    - name: 非同期プログラミング
+      href: async.md
+    - name: パターン マッチ
+      href: pattern-matching.md
+    - name: 安全で効率的なコードを記述する
+      href: write-safe-efficient-code.md
+    - name: 式ツリー
+      items:
+        - name: 式ツリーの概要
+          href: expression-trees.md
+        - name: 式ツリーの説明
+          href: expression-trees-explained.md
+        - name: 式ツリーをサポートするフレームワークの型
+          href: expression-classes.md
+        - name: 式の実行
+          href: expression-trees-execution.md
+        - name: 式の解釈
+          href: expression-trees-interpreting.md
+        - name: 式の構築
+          href: expression-trees-building.md
+        - name: 式の変換
+          href: expression-trees-translating.md
+        - name: まとめ
+          href: expression-trees-summary.md
+    - name: ネイティブ相互運用性
+      href: programming-guide/interop/index.md
+    - name: コードのドキュメントの作成
+      href: codedoc.md
+    - name: バージョン管理
+      href: versioning.md
+- name: 'C# に関するトピック'
+  items:
+    - name: トピックのインデックス
+      href: how-to/index.md
+    - name: '`String.Split` を使用して文字列を解析する'
+      href: how-to/parse-strings-using-split.md
+    - name: 文字列を連結する
+      href: how-to/concatenate-multiple-strings.md
+    - name: 文字列を DateTime に変換する
+      href: ../standard/base-types/parsing-datetime.md
+    - name: 検索文字列
+      href: how-to/search-strings.md
+    - name: 文字列の内容を変更する
+      href: how-to/modify-string-contents.md
+    - name: 文字列を比較する
+      href: how-to/compare-strings.md
+    - name: パターン マッチング、is 演算子、as 演算子を使用して安全にキャストする
+      href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
+- name: .NET Compiler Platform SDK (Roslyn API)
+  href: roslyn-sdk/
+- name: 'C# プログラミング ガイド'
+  href: programming-guide/
+- name: 言語リファレンス
+  href: language-reference/
+- name: チュートリアル
+  href: walkthroughs.md

@@ -5,65 +5,65 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: 7458caee29d576d8a9d38f01027c106d39a1daf2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 12408bd9f10e7ed147a6c1adc0497d3b8d797e42
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591935"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319823"
 ---
 # <a name="guide-to-the-documentation"></a>ドキュメントのガイド
-ここでは、Windows Communication Foundation (WCF) のドキュメントについてのガイダンスです。 リンク先のドキュメントは、特定の目的と専門知識のレベルに応じて分類された、推奨される出発点となります。  
+ここでは、Windows Communication Foundation (WCF) のドキュメントに関するガイダンスを提供します。 リンク先のドキュメントは、特定の目的と専門知識のレベルに応じて分類された、推奨される出発点となります。  
   
- ドキュメントとヘルプ ビューアーのスタンドアロン バージョンをインストールするには、ダウンロード、 [Microsoft Windows SDK v 7.1](https://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409)します。  
+ スタンドアロンバージョンのドキュメントとヘルプビューアーをインストールするには、 [Microsoft Windows SDK v 7.1](https://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409)をダウンロードします。  
   
 ## <a name="new-to-windows-communication-foundation-programming"></a>Windows Communication Foundation プログラミングの初心者向けドキュメント  
   
-- WCF を使用したプログラミングに慣れていて作業、記載されたトピックを参照してください。 サンプル アプリケーションを確認するだけ[Windows Communication Foundation サンプル](../../../docs/framework/wcf/samples/index.md)します。  
+- WCF を使用したプログラミングを初めて使用する場合に、動作するサンプルアプリケーションを確認するだけの場合は、 [Windows Communication Foundation のサンプル](./samples/index.md)に記載されているトピックを参照してください。  
   
-- WCF サービスとクライアントを作成する基本的な手順について説明するチュートリアルについては、次を参照してください。[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)します。  
+- WCF サービスとクライアントを作成するための基本的な手順を説明するチュートリアルについては、[はじめにチュートリアル](getting-started-tutorial.md)を参照してください。  
   
-- WCF の背後にある概念に関心がある場合は、トピックを参照して、[概念の概要](../../../docs/framework/wcf/conceptual-overview.md)セクション。  
+- WCF の背後にある概念に関心がある場合は、概念の[概要](conceptual-overview.md)に関するセクションのトピックを参照してください。  
   
-- クライアント/サーバーのセキュリティ構成の図の例については、次を参照してください。[一般的なセキュリティ シナリオ](../../../docs/framework/wcf/feature-details/common-security-scenarios.md)します。  
+- クライアント/サーバーのセキュリティ構成のグラフィックの例については、「[一般的なセキュリティシナリオ](./feature-details/common-security-scenarios.md)」を参照してください。  
   
 ## <a name="programming-in-depth"></a>プログラミングの詳細  
   
-- 参照してください、アプリケーション開発を開始する準備が整ったら場合[基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)します。  
+- アプリケーションの開発を開始する準備ができたら、「[基本的な WCF プログラミング](basic-wcf-programming.md)」を参照してください。  
   
-- 特定の機能や WCF の機能に関するガイダンスを探している場合は、下にあるトピックを参照してください[WCF 機能の詳細](../../../docs/framework/wcf/feature-details/index.md)します。  
+- WCF の特定の機能に関するガイダンスをお探しの場合は、「 [Wcf 機能の詳細](./feature-details/index.md)」のトピックを参照してください。  
   
-- 拡張または要件に合わせてを参照してくださいに WCF をカスタマイズしたい場合[WCF の拡張](../../../docs/framework/wcf/extending/index.md)します。  
+- 要件に合わせて WCF を拡張またはカスタマイズする場合は、「 [wcf の拡張](./extending/index.md)」を参照してください。  
   
-- 作成および WCF アプリケーションのデバッグに役立つツールについては、次を参照してください。 [Windows Communication Foundation ツール](../../../docs/framework/wcf/tools.md)します。  
+- WCF アプリケーションの作成とデバッグに役立つツールの詳細については、「 [Windows Communication Foundation ツール](tools.md)」を参照してください。  
   
-- 構成 XML ファイルの使用は、WCF サービスとクライアントのプログラミングの主な方法です。 構成ファイルで使用される XML 要素のリファレンス ドキュメントについては、次を参照してください。 [WCF 構成スキーマ](../../../docs/framework/configure-apps/file-schema/wcf/index.md)します。  
+- XML ファイルを使用した構成は、WCF サービスとクライアントをプログラミングするための主要な方法です。 構成ファイルで使用される XML 要素のリファレンスドキュメントについては、「 [WCF 構成スキーマ](../configure-apps/file-schema/wcf/index.md)」を参照してください。  
   
 ## <a name="troubleshooting"></a>トラブルシューティング  
- WCF の一般的な問題のトラブルシューティング方法の詳細については、次を参照してください。 [WCF トラブルシューティング クイック スタート](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)します。  
+ WCF の一般的な問題のトラブルシューティングについては、「 [Wcf トラブルシューティングクイックスタート](wcf-troubleshooting-quickstart.md)」を参照してください。  
   
 ## <a name="using-windows-communication-foundation-with-other-technologies"></a>Windows Communication Foundation の他のテクノロジの統合  
   
-- ASP.NET クライアントと通信するサービスを作成するを参照してください。[方法。ASP.NET Web サービス クライアントと相互運用する WCF サービスを構成する](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)します。  
+- ASP.NET クライアントと通信するサービスを作成するには、「[方法: ASP.NET Web サービスクライアントと相互運用できるように WCF サービスを構成](./feature-details/config-wcf-service-with-aspnet-web-service.md)する」を参照してください。  
   
-- .NET Framework リモート処理との統合については[WCF への .NET リモート処理アプリケーションの移行](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)します。  
+- .NET Framework リモート処理との統合については、「 [.Net リモート処理アプリケーションの WCF への移行](./feature-details/migrating-net-remoting-applications-to-wcf.md)」で説明されています。  
   
-- 既存の COM + アプリケーションに WCF サービスまたはクライアントに統合する、次を参照してください。 [COM + アプリケーションの概要との統合](../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)します。  
+- 既存の COM + アプリケーションを WCF サービスまたはクライアントと統合する方法については、「 [COM + アプリケーションとの統合の概要](./feature-details/integrating-with-com-plus-applications-overview.md)」を参照してください。  
   
-- 既存の COM アプリケーションに WCF サービスまたはクライアントに統合する、次を参照してください。 [COM アプリケーションとの統合](../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)します。  
+- 既存の COM アプリケーションを WCF サービスまたはクライアントと統合する方法については、「 [Com アプリケーションとの統合](./feature-details/integrating-with-com-applications.md)」を参照してください。  
   
-- 既存の MSMQ アプリケーションに WCF サービスまたはクライアントに統合する、次を参照してください。[方法。Exchange には、WCF エンドポイントでメッセージがキューに置かれた](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)と[方法。WCF エンドポイントでメッセージを交換して、メッセージ キュー アプリケーション](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)します。  
+- 既存の MSMQ アプリケーションを WCF サービスまたはクライアントと統合する方法については、「[方法: Wcf エンドポイントを使用してキューに置か](./feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)れたメッセージを交換する」および「[方法: wcf エンドポイントおよびメッセージキューアプリケーションと](./feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)メッセージを交換する」を参照してください。  
   
-- サービスをホストするインターネット インフォメーション サービス (IIS) を使用する、次を参照してください。[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)します。  
+- インターネットインフォメーションサービス (IIS) を使用してサービスをホストする方法については、「[ホスティングサービス](hosting-services.md)」を参照してください。  
   
-- WCF を使用すると、Web サービス拡張 (WSE) 3.0 サービスを使用して、次を参照してください。[方法。アクセスの WSE 3.0 サービス](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)します。  
+- WCF を使用して Web サービス拡張 (WSE) 3.0 サービスを使用する方法については、「[方法: WSE 3.0 サービスにアクセス](./feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)する」を参照してください。  
   
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Windows Communication Foundation でサポートされる WS-* プロトコル  
- システム指定のバインディングでサポートされるプロトコルの一覧を表示するには、次を参照してください。[システム標準の相互運用性バインディングでサポートされる Web サービス プロトコル](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)します。 システム指定のバインディングの一覧を表示するには、次を参照してください。 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)します。  
+ システム指定のバインディングでサポートされているプロトコルの一覧については、「[システム指定の相互運用性バインディングでサポートされる Web サービスプロトコル](./feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)」を参照してください。 システム指定のバインディングの一覧については、「[システム指定のバインディング](system-provided-bindings.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Windows Communication Foundation サンプル](../../../docs/framework/wcf/samples/index.md)
-- [概念](../../../docs/framework/wcf/conceptual-overview.md)
-- [ガイドラインとベスト プラクティス](../../../docs/framework/wcf/guidelines-and-best-practices.md)
-- [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)
+- [Windows Communication Foundation サンプル](./samples/index.md)
+- [概念](conceptual-overview.md)
+- [ガイドラインとベスト プラクティス](guidelines-and-best-practices.md)
+- [クライアントを構築する](building-clients.md)

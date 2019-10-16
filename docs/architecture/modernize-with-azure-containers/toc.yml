@@ -33,7 +33,7 @@
         - name: 監視と製品利用統計情報でアプリを最新化する
           href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-with-monitoring-and-telemetry.md
         - name: クラウドの CI/CD パイプラインや DevOps ツールでアプリのライフ サイクルを最新化する
-          href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md
+          href: ./modernize-existing-apps-to-cloud-optimized/life-cycle-ci-cd-pipelines-devops-tools.md
         - name: ハイブリッド クラウド シナリオへの移行
           href: ./modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md
     - name: チュートリアルと技術的な概要

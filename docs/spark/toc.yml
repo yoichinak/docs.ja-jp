@@ -3,6 +3,8 @@
 - name: 概要
   expanded: true
   items:
+    - name: Apache Spark とは
+      href: what-is-spark.md
     - name: .NET for Apache Spark とは
       href: what-is-apache-spark-dotnet.md
 - name: チュートリアル
