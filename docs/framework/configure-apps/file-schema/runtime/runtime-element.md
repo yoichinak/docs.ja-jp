@@ -21,7 +21,7 @@ ms.locfileid: "70252322"
 アプリケーションを構成するために共通言語ランタイムによって使用される情報を提供します。
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<ランタイム >**  
+&nbsp;&nbsp; **\<runtime>**  
 
 ## <a name="syntax"></a>構文
 
