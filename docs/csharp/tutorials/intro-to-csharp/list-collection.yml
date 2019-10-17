@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 6dfbbbb6ef64b3dbb83d15ba66860acb7c5b3585
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: fb08cef284a016dd65c99a1efb0a661624a731f1
+  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850741"
+  ms.lasthandoff: 10/09/2019
+  ms.locfileid: "72179009"
 items:
 - durationInMinutes: 1
   content: >
@@ -36,6 +36,9 @@ items:
     }
 
     ```
+
+
+    環境でこれを実行している場合は、代わりに[ローカル バージョン](arrays-and-collections.md)に関する指示に従ってください。
 
 
     文字列のリストを作成し、そのリストに 3 つの名前を追加し、それらの名前をすべて大文字で出力しました。 先のチュートリアルで学習した概念を使用して、リストをループしています。

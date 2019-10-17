@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: C# の分岐とループ
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: af06d938f86841620784909b16e72d000452fc2a
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 42d9784b9aa35fbb739e09dd79d72996b0f15950
+  ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850674"
+  ms.lasthandoff: 10/12/2019
+  ms.locfileid: "72291373"
 items:
 - durationInMinutes: 1
   content: >
@@ -38,6 +38,9 @@ items:
     Console.WriteLine(c);
 
     ```
+
+
+    環境でこれを実行している場合は、代わりに[ローカル バージョン](numbers-in-csharp-local.md)に関する指示に従ってください。
 
 
     整数を使用した基本的な算術演算の 1 つを確認しました。 `int` 型は、**整数**を表します (正の整数、または負の整数)。 加算には `+` 記号を使用します。 他の一般的な整数の算術演算には次のものがあります。
@@ -171,7 +174,7 @@ items:
 
     int c = 3;
 
-    int d = (a  + b) / c;
+    int d = (a + b) / c;
 
     Console.WriteLine(d);
 
@@ -200,7 +203,7 @@ items:
 
     int c = 3;
 
-    int d = (a  + b) / c;
+    int d = (a + b) / c;
 
     int e = (a + b) % c;
 
@@ -266,7 +269,7 @@ items:
 
     double c = 2;
 
-    double d = (a  + b) / c;
+    double d = (a + b) / c;
 
     Console.WriteLine(d);
 
@@ -284,7 +287,7 @@ items:
 
     double c = 8;
 
-    double d = (a  + b) / c;
+    double d = (a + b) / c;
 
     Console.WriteLine(d);
 

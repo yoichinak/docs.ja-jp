@@ -2,16 +2,16 @@
 title: マイクロサービスを基にしている複合 UI を作成する
 description: マイクロサービス アーキテクチャは、バックエンド専用ではありません。 フロントエンドで使用してピーク ビューを取得します。
 ms.date: 09/20/2018
-ms.openlocfilehash: 60e0e6d59738f3f1fec31226cb842ceb1af303e4
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834373"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275743"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>マイクロサービスを基にしている複合 UI を作成する
 
-マイクロサービス アーキテクチャは、多くの場合、データおよびロジックを処理するサーバー側から始まります。 ただし、より高度なアプローチとして、マイクロサービスに基づいたアプリケーション UI を設計する方法もあります。 これは、サーバー上にマイクロサービスが置かれモノリシック クライアント アプリのみでマイクロサービスが利用されるというのでなく、マイクロサービスによって複合 UI が生成されることを意味します。 このアプローチの場合、ビルドするマイクロサービスは、ロジックおよび視覚的表現の両方を備えることができます。
+マイクロサービス アーキテクチャは多くの場合、データおよびロジックを処理するサーバー側から始まりますが、通常、UI はモノリシックとして処理されます。 ただし、より高度なアプローチとして ([マイクロ フロントエンド](https://martinfowler.com/articles/micro-frontends.html)と呼ばれる)、マイクロサービスに基づいたアプリケーション UI を設計する方法もあります。 これは、サーバー上にマイクロサービスが置かれモノリシック クライアント アプリのみでマイクロサービスが利用されるというのでなく、マイクロサービスによって複合 UI が生成されることを意味します。 このアプローチの場合、ビルドするマイクロサービスは、ロジックおよび視覚的表現の両方を備えることができます。
 
 図 4-20 に、モノリシック クライアント アプリケーションからマイクロサービスを利用するだけの簡単なアプローチを示します。 当然ながら、HTML および JavaScript の生成の間に ASP.NET MVC サービスを含めることが可能です。 図は簡単なものであり、マイクロサービスを利用している単一 (モノリシック) のクライアント UI が強調表示されています。またこれらのマイクロサービスでは、UI シェイプ (HTML および JavaScript) ではなく、ロジックとデータにのみ焦点を当てています。
 
@@ -39,19 +39,25 @@ ms.locfileid: "71834373"
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-- **ASP.NET を使用した複合 UI (特定のワークショップ)**  \
+- **マイクロ フロントエンド (Martin Fowler のブログ)**  
+  <https://martinfowler.com/articles/micro-frontends.html>
+  
+- **マイクロフロントエンド (Michael Geers サイト)**  
+  <https://micro-frontends.org/>
+  
+- **ASP.NET を使用した複合 UI (特定のワークショップ)**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga。マイクロサービス アーキテクチャでのモノリシック フロントエンド** \
+- **Ruben Oostinga。マイクロサービス アーキテクチャでのモノリシック フロントエンド**  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti。優れた UI コンポジションの秘密** \
+- **Mauro Servienti。優れた UI コンポジションの秘密**  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic。フロントエンド Web コンポーネントをマイクロサービスに含める** \
+- **Viktor Farcic。フロントエンド Web コンポーネントをマイクロサービスに含める**  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
-- **マイクロサービス アーキテクチャでのフロントエンドの管理** \
+- **マイクロサービス アーキテクチャでのフロントエンドの管理**  
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]

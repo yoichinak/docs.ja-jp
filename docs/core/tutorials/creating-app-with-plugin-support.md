@@ -4,12 +4,12 @@ description: プラグインをサポートする .NET Core アプリケーシ�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: e8b02d9b2175b4663e665db1a5a40a9bf3c44d10
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 54f616a7b2b20b7682963e9f5d503878bb512c90
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216260"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250161"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>プラグインがある .NET Core アプリケーションを作成する
 
@@ -34,7 +34,7 @@ ms.locfileid: "71216260"
     dotnet new console -o AppWithPlugin
     ```
 
-2. プロジェクトのビルドをより容易にするため、Visual Studio のソリューション ファイルを作成します。 同じフォルダー内で、次のコマンドを実行します。
+2. プロジェクトのビルドをより容易にするため、同じフォルダー内に Visual Studio のソリューション ファイルを作成します。 次のコマンドを実行します。
 
     ```dotnetcli
     dotnet new sln

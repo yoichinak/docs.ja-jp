@@ -4,28 +4,28 @@ description: サーバーレスアーキテクチャでサポートされるさ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 096dce6ef23bde5ef9c6ca65769f4dcc7e08a904
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f7d3ec50608848b725d813ae2a9ee59ae9532ef3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577195"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522348"
 ---
 # <a name="serverless-design-examples"></a>サーバーレス設計の例
 
-サーバレスには多くのデザインパターンが存在します。 このセクションでは、サーバーレスの一般的なシナリオをいくつか取り上げます。 すべての例で共通しているのは、イベント トリガーとビジネス ロジックの基本的な組み合わせであることです。
+サーバーレス用に存在する設計パターンは多数あります。 このセクションでは、サーバーレスを使用する一般的なシナリオをいくつか紹介します。 すべての例で共通しているのは、イベントトリガーとビジネスロジックの基本的な組み合わせです。
 
-## <a name="scheduling"></a>スケジューリング
+## <a name="scheduling"></a>上
 
-タスクのスケジュール設定は共通の機能です。 次の図は、適切な整合性チェックを持たない従来のデータベースを示しています。 データベースは定期的にスクラブする必要があります。 サーバーレスの関数は無効なデータを見つけ出し、消去します。 トリガーは、スケジュールに従ってコードを実行するタイマーです。
+タスクのスケジュール設定は、共通の機能です。 次の図は、適切な整合性チェックが行われていないレガシデータベースを示しています。 データベースは定期的にスキャンされされている必要があります。 サーバーレス関数は、無効なデータを検索して消去します。 トリガーは、スケジュールに基づいてコードを実行するタイマーです。
 
 ![サーバーレススケジューリング](./media/serverless-scheduling.png)
 
-## <a name="command-and-query-responsibility-segregation-cqrs"></a>コマンド クエリ責務分離 (CQRS)
+## <a name="command-and-query-responsibility-segregation-cqrs"></a>コマンドクエリ責務分離 (CQRS)
 
-コマンド クエリ責務分離 (CQRS) は、データの読み取り (または照会) とデータの変更操作に異なるインターフェースを提供するパターンです。 これによりいくつかの一般的な問題に対処できます。 従来の CRUD (Create/Read/Update/Delete) ベースのシステムでは、同じデータ ストアへの大量の読み取りと書き込みから競合が発生する可能性があります。 ロックが頻繁に発生し、読み取りが大幅に遅くなる可能性があります。 多くの場合、データは複数のドメイン オブジェクトの複合として表されるので、読み取り操作では異なるエンティティのデータを結合する必要があります。
+コマンドクエリ責務分離 (CQRS) は、データの読み取り (またはクエリ) とデータを変更する操作のためのさまざまなインターフェイスを提供するパターンです。 いくつかの一般的な問題に対処します。 従来の Create Read Update Delete (CRUD) ベースのシステムでは、同じデータストアに対する読み取りと書き込みの両方の大容量から競合が発生する可能性があります。 ロックが頻繁に発生し、読み取り速度が大幅に低下することがあります。 多くの場合、データは複数のドメインオブジェクトの複合として表示され、読み取り操作では異なるエンティティのデータを結合する必要があります。
 
-CQRS を使用すると、読み取りには、データを消費する方法をモデル化する特別な「フラット化」エンティティが含まれる可能性があります。 読み取りは、データの保存する方法とは異なる方法で処理されます。 例えば、データベースではヘッダーのレコードと子に住所のレコードを持った連絡先を保存しますが、読み取り時は、ヘッダーと住所プロパティの両方を持った 1 つのエンティティである場合があります。 読み取りモデルの作成には多くのアプローチがあります。 それはビューで実現されているかもしれません。 更新の操作は、分離されたイベントとしてカプセル化され、そのトリガーが 2 つの異なるモデルに更新します。 読み取りと書き込みのそれぞれにモデルが存在します。
+CQRS を使用する場合、読み取りには、使用方法によってデータをモデル化する特別な "フラット化" エンティティが含まれる場合があります。 読み取りは、格納方法とは異なる方法で処理されます。 たとえば、データベースでは、連絡先を子アドレスレコードを含むヘッダーレコードとして格納することができますが、読み取りには、ヘッダーと住所の両方のプロパティを持つエンティティが含まれる可能性があります。 読み取りモデルを作成する方法は多数あります。 ビューから具体化されている可能性があります。 更新操作は、2つの異なるモデルに対する更新をトリガーする分離イベントとしてカプセル化できます。 読み取りと書き込みのための個別のモデルが存在します。
 
 ![CQRS の例](./media/cqrs-example.png)
 
@@ -77,16 +77,16 @@ API ゲートウェイは、クライアントに対して単一のエントリ�
 
 ## <a name="recommended-resources"></a>推奨されるリソース
 
-* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-* [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-* [分散データ管理に関する課題とソリューション](../microservices/architect-microservice-container-applications/distributed-data-management.md)
-* [マイクロサービスの設計: マイクロサービス境界の識別](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
-* [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
-* [イベントソーシングパターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
-* [直流高速度遮断器パターンの実装](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
-* [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-* [Service Bus](https://docs.microsoft.com/azure/service-bus)
-* [Azure Cosmos DB での change feed サポートの使用](https://docs.microsoft.com/azure/cosmos-db/change-feed)
+- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
+- [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [分散データ管理に関する課題とソリューション](../microservices/architect-microservice-container-applications/distributed-data-management.md)
+- [マイクロサービスの設計: マイクロサービス境界の識別](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
+- [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
+- [イベントソーシングパターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [直流高速度遮断器パターンの実装](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
+- [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [Service Bus](https://docs.microsoft.com/azure/service-bus)
+- [Azure Cosmos DB での change feed サポートの使用](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
 >[前へ](serverless-architecture-considerations.md)

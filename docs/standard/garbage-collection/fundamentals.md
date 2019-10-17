@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895274"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180192"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>ガベージ コレクションの基礎
 
@@ -176,7 +176,7 @@ CLR のメモリに関する重要な概念の概要を以下に示します。
 
 次の図は、ガベージ コレクションを発生させて他のスレッドの中断を引き起こすスレッドを示しています。
 
-![スレッドがガベージ コレクションを発生させる場合](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered") ガベージ コレクションを発生させるスレッド
+![スレッドがガベージ コレクションを発生させる場合](../../../docs/standard/garbage-collection/media/gc-triggered.png "スレッドがガベージ コレクションを発生させる場合")
 
 [ページのトップへ](#top)
 
@@ -208,7 +208,7 @@ CLR のメモリに関する重要な概念の概要を以下に示します。
 
 次の図は、サーバー上でガベージ コレクションを実行する専用のスレッドを示しています。
 
-![サーバー ガベージ コレクション スレッド](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server") サーバー ガベージ コレクション
+![サーバー ガベージ コレクション スレッド](../../../docs/standard/garbage-collection/media/gc-server.png "サーバー ガベージ コレクション スレッド")
 
 ### <a name="configuring-garbage-collection"></a>ガベージ コレクションの構成
 
@@ -262,7 +262,7 @@ CLR のメモリに関する重要な概念の概要を以下に示します。
 
 次の図は、別々の専用のスレッドで実行される同時実行ガベージ コレクションを示しています。
 
-![同時実行ガベージ コレクションのスレッド](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent") 同時実行ガベージ コレクションのスレッド
+![同時実行ガベージ コレクションのスレッド](../../../docs/standard/garbage-collection/media/gc-concurrent.png "同時実行ガベージ コレクションのスレッド")
 
 [ページのトップへ](#top)
 
@@ -283,7 +283,7 @@ CLR のメモリに関する重要な概念の概要を以下に示します。
 
 次の図は、ワークステーション上の別々の専用スレッドで実行されるバックグラウンド ガベージ コレクションを示しています。
 
-![バックグラウンド ワークステーション ガベージ コレクションを示す図。](./media/fundamentals/background-workstation-garbage-collection.png)
+![バックグラウンド ワークステーション ガベージ コレクションを示す図。](./media/fundamentals/background-workstation-garbage-collection.png "バックグラウンド ワークステーション ガベージ コレクションを示す図。")
 
 [ページのトップへ](#top)
 
@@ -295,7 +295,7 @@ CLR のメモリに関する重要な概念の概要を以下に示します。
 
 次の図は、サーバー上の別々の専用スレッドで実行されるバックグラウンド ガベージ コレクションを示しています。
 
-![バックグラウンド サーバー ガベージ コレクションを示す図。](./media/fundamentals/background-server-garbage-collection.png)
+![バックグラウンド サーバー ガベージ コレクションを示す図。](./media/fundamentals/background-server-garbage-collection.png "バックグラウンド サーバー ガベージ コレクションを示す図。")
 
 ## <a name="see-also"></a>関連項目
 

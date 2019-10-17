@@ -4,12 +4,12 @@ description: .NET Core 用の Windows フォームにおける破壊的変更の
 ms.date: 09/20/2019
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 436088836ff5441e426379bb41f96821cbc7e500
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 3ca02e41039fa5c7a6f7f6a9e303ea25be55977a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71272720"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003008"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows フォームでの破壊的変更
 
@@ -53,6 +53,14 @@ ms.locfileid: "71272720"
 ***
 
 [!INCLUDE[SerializableAttribute removed from some Windows Forms types](~/includes/core-changes/windowsforms/remove-serializationattribute.md)]
+
+## <a name="net-core-30-rc1"></a>.NET Core 3.0 RC1
+
+[!INCLUDE[Change of access for AccessibleObject.RuntimeIDFirstItem](~/includes/core-changes/windowsforms/changed-access-for-runtimeidfirstitem.md)]
+
+***
+
+[!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/remove-duplicated-apis.md)]
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

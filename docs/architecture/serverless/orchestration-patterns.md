@@ -4,12 +4,12 @@ description: Azure の持続性のある関数 pr
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 18e13c5355490ef4a019ceda459114bdb6bfd539
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2bd81c29e727254af6c8ecf39ee4bfef1f39d009
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577405"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522638"
 ---
 # <a name="orchestration-patterns"></a>オーケストレーションパターン
 
@@ -37,9 +37,9 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-前のコードサンプル`CallActivityAsync`では、関数は、データセンター内の仮想マシンで特定のアクティビティを実行します。 Await が返され、基になるタスクが完了すると、実行は履歴テーブルに記録されます。 Orchestrator 関数のコードでは、タスク並列ライブラリの使い慣れた構造と async/await キーワードを利用できます。
+前のコードサンプルでは、@no__t 0 関数は、データセンター内の仮想マシンで特定のアクティビティを実行します。 Await が返され、基になるタスクが完了すると、実行は履歴テーブルに記録されます。 Orchestrator 関数のコードでは、タスク並列ライブラリの使い慣れた構造と async/await キーワードを利用できます。
 
-次のコードは、 `ProcessPayment`メソッドがどのようなものかを示す簡単な例です。
+次のコードは、@no__t 0 のメソッドがどのようになるかを示す簡単な例です。
 
 ```csharp
 [FunctionName("ProcessPayment")]
@@ -60,7 +60,7 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 
 場合によっては、ワークフローに含まれるアクティビティが、完了するのに比較的長い時間がかかることがあります。 メディアファイルのバックアップを blob storage に開始するプロセスを考えてみましょう。 メディアファイルのサイズと数量によっては、このバックアッププロセスが完了するまでに数時間かかることがあります。
 
-このシナリオでは、 `DurableOrchestrationClient`実行中のワークフローの状態を確認する機能が役に立ちます。 を使用し`HttpTrigger`てワークフローを開始する場合`CreateCheckStatusResponse` 、メソッドを使用しての`HttpResponseMessage`インスタンスを返すことができます。 この応答は、実行中のプロセスの状態を確認するために使用できるペイロードの URI をクライアントに提供します。
+このシナリオでは、実行中のワークフローの状態を確認するための @no__t 0 の機能が有効になります。 @No__t-0 を使用してワークフローを開始する場合は、`CreateCheckStatusResponse` メソッドを使用して、`HttpResponseMessage` のインスタンスを返すことができます。 この応答は、実行中のプロセスの状態を確認するために使用できるペイロードの URI をクライアントに提供します。
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -105,7 +105,7 @@ public static async Task<HttpResponseMessage> Run(
 
 ## <a name="monitoring"></a>監視
 
-単純な定期的なタスクの場合、 `TimerTrigger` Azure Functions には CRON 式に基づいてスケジュールできるが用意されています。 タイマーは、単純で短時間のタスクに適していますが、より柔軟なスケジュール設定が必要なシナリオもあります。 このシナリオは、監視パターンと Durable Functions が役に立ちます。
+単純な定期的なタスクの場合、Azure Functions は CRON 式に基づいてスケジュールできる @no__t 0 を提供します。 タイマーは、単純で短時間のタスクに適していますが、より柔軟なスケジュール設定が必要なシナリオもあります。 このシナリオは、監視パターンと Durable Functions が役に立ちます。
 
 Durable Functions を使用すると、柔軟なスケジュール間隔、有効期間の管理、および1つのオーケストレーション機能からの複数の監視プロセスの作成が可能になります。 この機能のユースケースの1つとして、特定のしきい値が満たされた後に完了する株価の変更に対してウォッチャーを作成することが考えられます。
 
@@ -149,12 +149,12 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-`DurableOrchestrationContext`の`CreateTimer`メソッドは、株価の変化を確認するために、ループの次回の呼び出しのスケジュールを設定します。 `DurableOrchestrationContext`には、 `CurrentUtcDateTime`現在の DateTime 値を UTC で取得するためのプロパティもあります。 テスト用に簡単にモックできるため、 `DateTime.UtcNow`ではなくこのプロパティを使用することをお勧めします。
+`DurableOrchestrationContext` の @no__t メソッドは、株価の変化を確認するために、次にループを起動するスケジュールを設定します。 `DurableOrchestrationContext` には、現在の DateTime 値を UTC で取得するための `CurrentUtcDateTime` プロパティもあります。 テスト用に簡単にモックできるため、`DateTime.UtcNow` の代わりにこのプロパティを使用することをお勧めします。
 
 ## <a name="recommended-resources"></a>推奨されるリソース
 
-* [Azure Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-* [.NET Core と .NET Standard の単体テスト](../../core/testing/index.md)
+- [Azure Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [.NET Core と .NET Standard の単体テスト](../../core/testing/index.md)
 
 >[!div class="step-by-step"]
 >[前へ](durable-azure-functions.md)

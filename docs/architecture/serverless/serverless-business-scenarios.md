@@ -4,12 +4,12 @@ description: 画像処理からモバイルバックエンドおよび ETL パ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834294"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522393"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>サーバーレスのビジネス シナリオとユース ケース
 
@@ -27,7 +27,7 @@ ms.locfileid: "71834294"
 
 ![自動イメージギャラリー](./media/automated-image-gallery.png)
 
-完全なリポジトリとロジックアプリを構築するための手順については、こちらを参照してください。[イベントグリッドの接着](https://github.com/JeremyLikness/Event-Grid-Glue)。
+完全なリポジトリとロジックアプリを構築するための手順については、「[イベントグリッドの接着](https://github.com/JeremyLikness/Event-Grid-Glue)」を参照してください。
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Xamarin. Forms と functions を使用したクロスプラットフォームモバイルクライアント
 
@@ -55,7 +55,7 @@ Azure Web ポータルまたは Visual Studio で、単純なサーバーレス 
 
 プロキシは、サーバーレス関数に移動されるたびに個々の要求を再ルーティングするために更新される1つの API エンドポイントを提供します。
 
-移行全体の手順を説明したビデオを見ることができます。[サーバーレスの Azure functions でリフトアンドシフトを行うことが](https://channel9.msdn.com/Events/Connect/2017/E102)できます。 サンプルコードにアクセスします。[独自のアプリを利用](https://github.com/JeremyLikness/bring-own-app-connect-17)できます。
+移行全体の手順を説明したビデオを見ることができます。[サーバーレスの Azure functions を使用したリフトアンドシフト](https://channel9.msdn.com/Events/Connect/2017/E102)です。 サンプルコードにアクセスします。[独自のアプリを持参](https://github.com/JeremyLikness/bring-own-app-connect-17)します。
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>CSV ファイルを解析してデータベースに挿入する
 
@@ -77,7 +77,7 @@ Azure Functions は、長い URL を貼り付けて短い Url を生成できる
 
 ![Power BI の例](./media/power-bi-example.png)
 
-詳細については、「完全なリンク短縮リポジトリ」を参照してください。[サーバーレス URL 短縮](https://github.com/jeremylikness/serverless-url-shortener)。 簡略化されたバージョンについては、こちらを参照してください。[サーバーレスの .net アプリを数分で Azure Storage](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)します。
+手順が記載された完全なリンク短縮リポジトリについては、「[サーバーレス URL 短縮](https://github.com/jeremylikness/serverless-url-shortener)」を参照してください。 簡略化されたバージョンについては、「[サーバーレス .net アプリを数分で Azure Storage」](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)を参照してください。
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Ping を使用してデバイスの接続を確認する
 
@@ -87,15 +87,15 @@ Azure Functions は、長い URL を貼り付けて短い Url を生成できる
 
 ## <a name="recommended-resources"></a>推奨されるリソース
 
-* [Photo モザイクジェネレーターの Azure Functions](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-* [Ping の Azure IoT Hub](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [サーバーレスの .NET アプリを数分で Azure Storage](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
-* [独自のアプリを持ち込む](https://github.com/JeremyLikness/bring-own-app-connect-17)
-* [CSV インポートラボ](https://github.com/JeremyLikness/azure-fn-file-process-hol)
-* [イベントグリッドの接着](https://github.com/JeremyLikness/Event-Grid-Glue)
-* [Xamarin クライアントを使用した単純な Azure 関数の実装](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
-* [サーバーレス Azure functions を使用したリフトアンドシフト](https://channel9.msdn.com/Events/Connect/2017/E102)
-* [サーバーレス URL 短縮](https://github.com/jeremylikness/serverless-url-shortener)
+- [Photo モザイクジェネレーターの Azure Functions](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
+- [Ping の Azure IoT Hub](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [サーバーレスの .NET アプリを数分で Azure Storage](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
+- [独自のアプリを持ち込む](https://github.com/JeremyLikness/bring-own-app-connect-17)
+- [CSV インポートラボ](https://github.com/JeremyLikness/azure-fn-file-process-hol)
+- [イベントグリッドの接着](https://github.com/JeremyLikness/Event-Grid-Glue)
+- [Xamarin クライアントを使用した単純な Azure 関数の実装](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [サーバーレス Azure functions を使用したリフトアンドシフト](https://channel9.msdn.com/Events/Connect/2017/E102)
+- [サーバーレス URL 短縮](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
 >[前へ](orchestration-patterns.md)

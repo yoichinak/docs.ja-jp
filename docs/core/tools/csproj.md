@@ -2,12 +2,12 @@
 title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 ms.date: 04/08/2019
-ms.openlocfilehash: 89ab22f0c5e69f29ff31e13d46dce8ba278d08da
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 2ec1aaff88754848d844a56b1744beb2efa4cd89
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216204"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291236"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -270,7 +270,7 @@ UI 画面用のパッケージの長い説明。
 
 ライセンス式の正確な構文については、[ABNF](https://tools.ietf.org/html/rfc5234) をご覧ください。
 
-```cli
+```abnf
 license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
 
 license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
@@ -347,6 +347,12 @@ UI 画面のパッケージのアイコンとして使用する背景が透明�
 ### <a name="repositorytype"></a>RepositoryType
 
 リポジトリの種類を指定します。 既定値は "git" です。
+
+### <a name="repositorybranch"></a>RepositoryBranch
+リポジトリ内のソース ブランチの名前を指定します。 プロジェクトが NuGet パッケージにパッケージ化されると、パッケージ メタデータに追加されます。
+
+### <a name="repositorycommit"></a>RepositoryCommit
+任意のリポジトリ コミットまたは変更セット。パッケージがどのソースに対してビルドされたかを示します。 このプロパティを含めるには、`RepositoryUrl` も指定する必要があります。 プロジェクトが NuGet パッケージにパッケージ化されると、このコミットまたは変更セットがパッケージ メタデータに追加されます。
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
 

@@ -4,12 +4,12 @@ description: Azure Event Grid は、信頼性の高いイベント配信と、�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3c577139c12567e762aabd58c9dc29457fa37aa1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577575"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522718"
 ---
 # <a name="event-grid"></a>Event Grid
 
@@ -19,11 +19,11 @@ ms.locfileid: "69577575"
 
 Event grid の主な特徴は次のとおりです。
 
-* 完全に管理されたイベントルーティング。
-* 大規模なリアルタイムのイベント配信。
-* Azure の内部と外部の両方で幅広くカバーされています。
+- 完全に管理されたイベントルーティング。
+- 大規模なリアルタイムのイベント配信。
+- Azure の内部と外部の両方で幅広くカバーされています。
 
-## <a name="scenarios"></a>シナリオ
+## <a name="scenarios"></a>監視プロセス
 
 Event Grid は、いくつかの異なるシナリオに対処します。 このセクションでは、最も一般的な3つの方法について説明します。
 
@@ -57,13 +57,13 @@ Azure には、 [Event Hubs](https://docs.microsoft.com/azure/event-hubs)や[Ser
 
 Event Grid を使用すると、次のパフォーマンスの保証を活用できます。
 
-* 秒未満は99パーセンタイルでエンドツーエンドの待機時間を短縮します。
-* 99.99% の可用性。
-* リージョンごとに1000万イベント/秒。
-* リージョンごとの1億サブスクリプション。
-* 50-ms パブリッシャーの待機時間。
-* 1日のウィンドウで保証された配信を行うための指数バックオフによる24時間の再試行。
-* 透過的なリージョン内フェールオーバー。
+- 秒未満は99パーセンタイルでエンドツーエンドの待機時間を短縮します。
+- 99.99% の可用性。
+- リージョンごとに1000万イベント/秒。
+- リージョンごとの1億サブスクリプション。
+- 50-ms パブリッシャーの待機時間。
+- 1日のウィンドウで保証された配信を行うための指数バックオフによる24時間の再試行。
+- 透過的なリージョン内フェールオーバー。
 
 ## <a name="event-grid-schema"></a>Event Grid スキーマ
 
@@ -84,7 +84,7 @@ Event Grid は、標準スキーマを使用してカスタムイベントをラ
 }]
 ```
 
-メッセージに関するすべての情報は、 `data`プロパティを除き、標準です。 メッセージを検査し、 `eventType`および`dataVersion`を使用して、ペイロードのカスタム部分を逆シリアル化することができます。
+メッセージに関するすべてのものは、`data` プロパティを除き、標準です。 メッセージを検査し、`eventType` と `dataVersion` を使用して、ペイロードのカスタム部分を逆シリアル化することができます。
 
 ## <a name="azure-resources"></a>管理
 
@@ -120,26 +120,26 @@ Event Grid を使用する主な利点は、Azure によって生成される自
 
 ## <a name="recommended-resources"></a>推奨されるリソース
 
-* [App service プラン](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
-* [Application Insights](https://docs.microsoft.com/azure/application-insights)
-* [Application Insights Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
-* [Microsoftサーバーレスの Azure Functions を使用してアプリをクラウドに持ち込む](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-* [Azure Event Grid イベントスキーマ](https://docs.microsoft.com/azure/event-grid/event-schema)
-* [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
-* [Azure Functions のドキュメント](https://docs.microsoft.com/azure/azure-functions)
-* [Azure Functions のトリガーとバインドの概念](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
-* [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
-* [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
-* [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
-* [Functions 1.x と2.x を比較します。](https://docs.microsoft.com/azure/azure-functions/functions-versions)
-* [Azure のオンプレミスデータゲートウェイを使用したオンプレミスのデータソースへの接続](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
-* [Azure portal に最初の関数を作成する](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
-* [Azure CLI を使用して最初の関数を作成する](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
-* [Visual Studio を使用して初めての関数を作成する](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
-* [Functions でサポートされる言語](https://docs.microsoft.com/azure/azure-functions/supported-languages)
-* [Azure Functions の監視](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
-* [Azure Functions プロキシの操作](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
+- [App service プラン](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
+- [Application Insights](https://docs.microsoft.com/azure/application-insights)
+- [Application Insights Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
+- [Azure: サーバーレス Azure Functions を使用してアプリをクラウドに持ち込む](https://channel9.msdn.com/events/Connect/2017/E102)
+- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
+- [Azure Event Grid イベントスキーマ](https://docs.microsoft.com/azure/event-grid/event-schema)
+- [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
+- [Azure Functions のドキュメント](https://docs.microsoft.com/azure/azure-functions)
+- [Azure Functions のトリガーとバインドの概念](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
+- [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
+- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
+- [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
+- [Functions 1.x と2.x を比較します。](https://docs.microsoft.com/azure/azure-functions/functions-versions)
+- [Azure のオンプレミスデータゲートウェイを使用したオンプレミスのデータソースへの接続](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
+- [Azure portal に最初の関数を作成する](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
+- [Azure CLI を使用して最初の関数を作成する](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
+- [Visual Studio を使用して初めての関数を作成する](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
+- [Functions でサポートされる言語](https://docs.microsoft.com/azure/azure-functions/supported-languages)
+- [Azure Functions の監視](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
+- [Azure Functions プロキシの操作](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
 >[前へ](logic-apps.md)
