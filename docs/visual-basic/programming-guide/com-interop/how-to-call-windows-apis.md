@@ -15,7 +15,7 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64624855"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>方法: Windows API (Visual Basic) を呼び出す
-この例はuser32.dll内の `MessageBox` 関数の定義と呼び出しを行い、そして文字列を渡しています。
+この例は user32.dll 内の `MessageBox` 関数の定義と呼び出しを行い、そして文字列を渡しています。
 
 ## <a name="example"></a>例
  [!code-vb[VbVbalrInterop#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#1)]
