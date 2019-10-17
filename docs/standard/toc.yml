@@ -1,0 +1,145 @@
+- name: .NET Standard ガイド
+  href: index.md
+- name: .NET の使用を開始する
+  href: get-started.md
+- name: .NET のツアー
+  href: tour.md
+- name: .NET アーキテクチャ コンポーネント
+  href: components.md
+- name: .NET Standard
+  href: net-standard.md
+  items:
+    - name: .NET Standard の新機能
+      href: whats-new/whats-new-in-dotnet-standard.md
+- name: ターゲット フレームワーク
+  href: frameworks.md
+- name: .NET 用語集
+  href: glossary.md
+- name: オープン ソース ライブラリのガイダンス
+  href: library-guidance/
+- name: サーバー アプリ用 .NET Core と .NET Framework の選択
+  href: choosing-core-framework-server.md
+- name: '"マネージド コード" とは'
+  href: managed-code.md
+  items:
+    - name: Automatic Memory Management
+      href: automatic-memory-management.md
+- name: 共通言語ランタイム (CLR)
+  href: clr.md
+- name: 言語の独立性
+  href: language-independence.md
+  items:
+    - name: 言語への非依存性、および言語非依存コンポーネント
+      href: language-independence-and-language-independent-components.md
+- name: フレームワーク ライブラリ
+  href: framework-libraries.md
+  items:
+    - name: クラス ライブラリの概要
+      href: class-library-overview.md
+    - name: 基本型
+      href: base-types/
+- name: .NET クラス ライブラリ
+  href: class-libraries.md
+- name: アナライザー
+  href: analyzers/index.md
+  items:
+    - name: API アナライザー
+      href: analyzers/api-analyzer.md
+    - name: 移植性アナライザー
+      href: analyzers/portability-analyzer.md
+    - name: フレームワーク アナライザー
+      href: analyzers/framework-analyzer.md
+- name: 例外の処理とスロー
+  href: exceptions/
+- name: .NET のアセンブリ
+  href: assembly/
+- name: ガベージ コレクション
+  href: garbage-collection/
+- name: ジェネリック型
+  href: generics.md
+- name: デリゲートとラムダ
+  href: delegates-lambdas.md
+- name: LINQ
+  href: using-linq.md
+- name: 共通型システムと共通言語仕様
+  href: common-type-system.md
+- name: 並列処理、コンカレンシー、および非同期
+  href: parallel-processing-and-concurrency.md
+  items:
+    - name: 非同期プログラミング
+      href: async.md
+      items:
+        - name: 非同期プログラミングの詳細
+          href: async-in-depth.md
+        - name: 非同期プログラミングのパターン
+          href: asynchronous-programming-patterns/
+    - name: 並列プログラミング
+      href: parallel-programming/
+    - name: スレッド
+      href: threading/
+- name: メモリおよびスパンに関連する型
+  href: memory-and-spans/index.md
+  items:
+    - name: Memory<T> と Span<T> の使用ガイドライン
+      href: memory-and-spans/memory-t-usage-guidelines.md
+- name: ネイティブ相互運用性
+  href: native-interop/index.md
+  items:
+    - name: P/Invoke
+      href: native-interop/pinvoke.md
+    - name: 型のマーシャリング
+      href: native-interop/type-marshaling.md
+    - name: 構造体のマーシャリングのカスタマイズ
+      href: native-interop/customize-struct-marshaling.md
+    - name: パラメーターのマーシャリングのカスタマイズ
+      href: native-interop/customize-parameter-marshaling.md
+    - name: 相互運用のガイダンス
+      href: native-interop/best-practices.md
+    - name: 文字セットとマーシャリング
+      href: native-interop/charset.md
+    - name: COM 相互運用
+      href: native-interop/cominterop.md
+      items:
+        - name: COM ラッパー
+          href: native-interop/com-wrappers.md
+          items:
+            - name: ランタイム呼び出し可能ラッパー
+              href: native-interop/runtime-callable-wrapper.md
+            - name: COM 呼び出し可能ラッパー
+              href: native-interop/com-callable-wrapper.md
+        - name: COM 相互運用のための .NET 型の要件
+          href: native-interop/qualify-net-types-for-interoperation.md
+    - name: 相互運用固有の属性の適用
+      href: native-interop/apply-interop-attributes.md
+- name: コレクションとデータ構造体
+  href: collections/
+- name: .NET における数値
+  href: numerics.md
+- name: 日付、時刻、およびタイム ゾーン
+  href: datetime/
+- name: イベント
+  href: events/
+- name: マネージド実行プロセス
+  href: managed-execution-process.md
+- name: メタデータと自己言及的なコンポーネント
+  href: metadata-and-self-describing-components.md
+- name: コンソール アプリケーションの構築
+  href: building-console-apps.md
+- name: アプリケーションの基本事項
+  href: application-essentials.md
+- name: ファイルおよびストリーム入出力
+  href: io/index.md
+- name: グローバライズとローカライズ
+  href: globalization-localization/
+- name: 属性
+  href: attributes/
+- name: フレームワーク デザインのガイドライン
+  href: design-guidelines/
+- name: XML ドキュメントと XML データ
+  href: data/xml/
+- name: セキュリティ
+  href: security/
+- name: シリアル化
+  href: serialization/
+- name: 複数のプラットフォームの開発
+  href: cross-platform/

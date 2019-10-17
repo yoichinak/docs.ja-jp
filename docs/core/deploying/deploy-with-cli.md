@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 00064b774145e7267fe26b31ef3bba4d5271a5c3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: c8b4c60eb4ea09c8b10bd0b2fffc803d0a5fb6e0
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181511"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834282"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>CLI を使用して .NET Core アプリを公開する
 
@@ -137,7 +137,7 @@ FDE の公開では、アプリが実行されるシステムで使用できる�
 [アプリの例](#sample-app)を使用する場合は、`dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false` を実行します。 このコマンドでは、実行可能ファイル `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe` が作成されます
 
 > [!NOTE]
-> **グローバリゼーション インバリアント モード**を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード**の詳細と、それを有効にする方法については、「[.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)」(.NET Core のグローバリゼーション インバリアント モード) をご覧ください
+> **グローバリゼーション インバリアント モード**を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード**の詳細と、それを有効にする方法については、「[.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)」(.NET Core のグローバリゼーション インバリアント モード) を参照してください。
 
 ## <a name="self-contained-deployment"></a>自己完結型の展開
 
@@ -152,7 +152,7 @@ SCD の公開で作成されるアプリでは、使用可能な最新の .NET C
 - `--self-contained true` このスイッチでは、SCD として実行可能ファイルを作成するよう .NET Core SDK に指示されます。
 
 > [!NOTE]
-> **グローバリゼーション インバリアント モード**を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード**の詳細と、それを有効にする方法については、「[.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)」(.NET Core のグローバリゼーション インバリアント モード) をご覧ください
+> **グローバリゼーション インバリアント モード**を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード**の詳細と、それを有効にする方法については、「[.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)」(.NET Core のグローバリゼーション インバリアント モード) を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

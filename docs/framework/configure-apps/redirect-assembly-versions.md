@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e6d680097a63f3a7acc919c8503b9d18a09fcff0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971556"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319748"
 ---
 # <a name="redirecting-assembly-versions"></a>アセンブリ バージョンのリダイレクト
 
@@ -65,11 +65,11 @@ ms.locfileid: "70971556"
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-アプリの対象が .NET Framework の旧バージョンの場合は、自動バインド リダイレクトを有効にできます 任意のアセンブリの app.config ファイルにバインド リダイレクト情報を提供することで、またはバインド リダイレクト機能を無効にすることで、この既定の動作をオーバーライドできます この機能を有効または無効にする方法については[自動バインディング リダイレクトを有効/無効にする](how-to-enable-and-disable-automatic-binding-redirection.md)」をご覧ください。
+アプリが古いバージョンの .NET Framework を対象としている場合は、自動バインドリダイレクトを有効にすることができます。 この既定の動作をオーバーライドするには、任意のアセンブリの app.config ファイルにバインドリダイレクト情報を指定するか、バインドリダイレクト機能をオフにします。 この機能を有効または無効にする方法については、「[方法: 自動バインドリダイレクトを有効](how-to-enable-and-disable-automatic-binding-redirection.md)または無効にする」を参照してください。
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>発行者ポリシーの省略
- アプリの構成ファイルの発行者ポリシーを必要に応じてオーバーライドできます。 たとえば、下位互換性を維持しているとされる新しいアセンブリ バージョンでも、アプリを破壊する可能性があります。 発行者ポリシーを省略する場合は、アプリ構成ファイルの[ \<dependentAssembly >](./file-schema/runtime/dependentassembly-element.md)要素に[ \<publisherpolicy apply >](./file-schema/runtime/publisherpolicy-element.md)要素を追加し、 **apply**属性を**no**に設定します。以前の **[はい]** 設定を上書きします。
+ アプリの構成ファイルの発行者ポリシーを必要に応じてオーバーライドできます。 たとえば、下位互換性を維持しているとされる新しいアセンブリ バージョンでも、アプリを破壊する可能性があります。 発行者ポリシーを省略する場合は、アプリ構成ファイルの[@no__t 3dependentAssembly >](./file-schema/runtime/dependentassembly-element.md)要素に[@no__t 1publisherPolicy >](./file-schema/runtime/publisherpolicy-element.md)要素を追加し、 **apply**属性を**no**に設定します。これにより、以前の **[はい]** 設定。
 
  `<publisherPolicy apply="no" />`
 
@@ -81,11 +81,11 @@ ms.locfileid: "70971556"
 
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>
 ## <a name="specifying-assembly-binding-in-configuration-files"></a>構成ファイル内でのアセンブリ バインドの指定
- アプリ構成ファイル、コンピューター構成ファイル、発行者ポリシー ファイルのいずれの場合も、同じ XML 形式を使用してバインド リダイレクトを指定できます。 あるアセンブリバージョンを別のバージョンにリダイレクトするには、 [ \<bindingRedirect >](./file-schema/runtime/bindingredirect-element.md)要素を使用します。 **oldVersion** 属性では、1 つのアセンブリ バージョンまたはバージョンの範囲を指定できます。 `newVersion` 属性では、1 つのバージョンを指定する必要があります。  たとえば、 `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` は、アセンブリ バージョン 1.1.0.0 ～ 1.2.0.0 の代わりにバージョン 2.0.0.0 を使用するようにランタイムに指示します。
+ アプリ構成ファイル、コンピューター構成ファイル、発行者ポリシー ファイルのいずれの場合も、同じ XML 形式を使用してバインド リダイレクトを指定できます。 あるアセンブリバージョンを別のバージョンにリダイレクトするには、 [\<bindingRedirect >](./file-schema/runtime/bindingredirect-element.md)要素を使用します。 **oldVersion** 属性では、1 つのアセンブリ バージョンまたはバージョンの範囲を指定できます。 `newVersion` 属性では、1 つのバージョンを指定する必要があります。  たとえば、 `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` は、アセンブリ バージョン 1.1.0.0 ～ 1.2.0.0 の代わりにバージョン 2.0.0.0 を使用するようにランタイムに指示します。
 
  次のコード例は、さまざまなバインディング リダイレクトのシナリオを示しています。 この例では、 `myAssembly`のバージョンの範囲に対するリダイレクトと、 `mySecondAssembly`の単一のバインド リダイレクトを指定します。 この例では、発行者ポリシー ファイルによって `myThirdAssembly`のバインド リダイレクトがオーバーライドされないことも指定しています。
 
- アセンブリをバインドするには、 [ \<assemblybinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md)タグの**xmlns**属性を使用して、文字列 "urn: schema-microsoft-com: asm: v1" を指定する必要があります。
+ アセンブリをバインドするには、 [\<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md)タグの**xmlns**属性を使用して、文字列 "urn: schema-microsoft-com: asm: v1" を指定する必要があります。
 
 ```xml
 <configuration>
@@ -99,7 +99,7 @@ ms.locfileid: "70971556"
           publisher policy, or machine configuration files. -->
         <bindingRedirect oldVersion="1.0.0.0-2.0.0.0" newVersion="3.0.0.0" />
       </dependentAssembly>
-  <dependentAssembly>
+      <dependentAssembly>
         <assemblyIdentity name="mySecondAssembly"
           publicKeyToken="32ab4ba45e0a69a1"
           culture="en-us" />
@@ -119,7 +119,7 @@ ms.locfileid: "70971556"
 ```
 
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>特定のバージョンへのアセンブリ バインドの制限
- アプリ構成ファイルの[ \<assemblybinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md)要素の**appliesTo**属性を使用して、アセンブリバインド参照を .NET Framework の特定のバージョンにリダイレクトすることができます。 このオプションの属性では、.NET Framework バージョン番号を使用して、適用するバージョンを指定します。 **appliesTo** 属性が指定されていない場合、[\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) 要素は、.NET Framework のすべてのバージョンに適用されます。
+ アプリ構成ファイルの[\<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md)要素の**appliesTo**属性を使用して、アセンブリバインディング参照を特定のバージョンの .NET Framework にリダイレクトできます。 このオプションの属性では、.NET Framework バージョン番号を使用して、適用するバージョンを指定します。 **appliesTo** 属性が指定されていない場合、[\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) 要素は、.NET Framework のすべてのバージョンに適用されます。
 
  たとえば、.NET Framework 3.5 アセンブリのアセンブリ バインドをリダイレクトするには、アプリ構成ファイルに次の XML コードを追加します。
 

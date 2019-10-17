@@ -1,0 +1,272 @@
+- name: 'F# のガイド'
+  href: index.md
+- name: 開始するには
+  href: get-started/index.md
+  items:
+    - name: 'F# をインストールする'
+      href: get-started/install-fsharp.md
+    - name: 'Visual Studio での F# の概要'
+      href: get-started/get-started-visual-studio.md
+    - name: 'Visual Studio for Mac での F# の概要'
+      href: get-started/get-started-with-visual-studio-for-mac.md
+    - name: 'Visual Studio Code および Ionide での F# の概要'
+      href: get-started/get-started-vscode.md
+    - name: '.NET Core CLI での F# の概要'
+      href: get-started/get-started-command-line.md
+- name: 'F# とは'
+  href: what-is-fsharp.md
+- name: 'F# のツアー'
+  href: tour.md
+- name: チュートリアル
+  items:
+    - name: 関数型プログラミングの概要
+      href: introduction-to-functional-programming/index.md
+      items:
+        - name: ファーストクラス関数
+          href: introduction-to-functional-programming/first-class-functions.md
+    - name: 非同期と同時実行プログラミング
+      items:
+        - name: 非同期プログラミング
+          href: tutorials/asynchronous-and-concurrent-programming/async.md
+    - name: 型プロバイダー
+      href: tutorials/type-providers/index.md
+      items:
+        - name: 型プロバイダーを作成する
+          href: tutorials/type-providers/creating-a-type-provider.md
+        - name: 型プロバイダーのセキュリティ
+          href: tutorials/type-providers/type-provider-security.md
+        - name: 型プロバイダーのトラブルシューティング
+          href: tutorials/type-providers/troubleshooting-type-providers.md
+    - name: 'F# Interactive'
+      href: tutorials/fsharp-interactive/index.md
+- name: 'F# 言語リファレンス'
+  href: language-reference/index.md
+  items:
+    - name: キーワード リファレンス
+      href: language-reference/keyword-reference.md
+    - name: シンボルと演算子のリファレンス
+      href: language-reference/symbol-and-operator-reference/index.md
+      items:
+        - name: 算術演算子
+          href: language-reference/symbol-and-operator-reference/arithmetic-operators.md
+        - name: ブール演算子
+          href: language-reference/symbol-and-operator-reference/boolean-operators.md
+        - name: ビット処理演算子
+          href: language-reference/symbol-and-operator-reference/bitwise-operators.md
+        - name: Null 許容の演算子
+          href: language-reference/symbol-and-operator-reference/nullable-operators.md
+    - name: 関数
+      href: language-reference/functions/index.md
+      items:
+        - name: let 束縛
+          href: language-reference/functions/let-bindings.md
+        - name: do 束縛
+          href: language-reference/functions/do-bindings.md
+        - name: 'ラムダ式: fun キーワード'
+          href: language-reference/functions/lambda-expressions-the-fun-keyword.md
+        - name: '再帰関数: rec キーワード'
+          href: language-reference/functions/recursive-functions-the-rec-keyword.md
+        - name: エントリ ポイント
+          href: language-reference/functions/entry-point.md
+        - name: 外部関数
+          href: language-reference/functions/external-functions.md
+        - name: インライン関数
+          href: language-reference/functions/inline-functions.md
+    - name: 値
+      href: language-reference/values/index.md
+      items:
+        - name: null 値
+          href: language-reference/values/null-values.md
+    - name: リテラル
+      href: language-reference/literals.md
+    - name: 'F# の型'
+      href: language-reference/fsharp-types.md
+    - name: 型推論
+      href: language-reference/type-inference.md
+    - name: 基本型
+      href: language-reference/basic-types.md
+    - name: Unit 型
+      href: language-reference/unit-type.md
+    - name: 文字列
+      href: language-reference/strings.md
+    - name: タプル
+      href: language-reference/tuples.md
+    - name: 'F# コレクション型'
+      href: language-reference/fsharp-collection-types.md
+    - name: 表示内容
+      href: language-reference/lists.md
+    - name: 配列
+      href: language-reference/arrays.md
+    - name: シーケンス
+      href: language-reference/sequences.md
+    - name: スライス
+      href: language-reference/slices.md
+    - name: オプション
+      href: language-reference/options.md
+    - name: 値のオプション
+      href: language-reference/value-options.md
+    - name: 結果
+      href: language-reference/results.md
+    - name: ジェネリック
+      href: language-reference/generics/index.md
+      items:
+        - name: 自動ジェネリック化
+          href: language-reference/generics/automatic-generalization.md
+        - name: 制約
+          href: language-reference/generics/constraints.md
+        - name: 静的に解決される型パラメーター
+          href: language-reference/generics/statically-resolved-type-parameters.md
+    - name: レコード
+      href: language-reference/records.md
+    - name: 匿名のレコード
+      href: language-reference/anonymous-records.md
+    - name: レコード式のコピーと更新
+      href: language-reference/copy-and-update-record-expressions.md
+    - name: 判別共用体
+      href: language-reference/discriminated-unions.md
+    - name: 列挙
+      href: language-reference/enumerations.md
+    - name: 型略称
+      href: language-reference/type-abbreviations.md
+    - name: クラス
+      href: language-reference/classes.md
+    - name: 構造体
+      href: language-reference/structures.md
+    - name: 継承
+      href: language-reference/inheritance.md
+    - name: インターフェイス
+      href: language-reference/interfaces.md
+    - name: 抽象クラス
+      href: language-reference/abstract-classes.md
+    - name: メンバー
+      href: language-reference/members/index.md
+      items:
+        - name: クラス内の let 束縛
+          href: language-reference/members/let-bindings-in-classes.md
+        - name: クラス内の do 束縛
+          href: language-reference/members/do-bindings-in-classes.md
+        - name: プロパティ
+          href: language-reference/members/properties.md
+        - name: インデックス付きプロパティ
+          href: language-reference/members/indexed-properties.md
+        - name: メソッド
+          href: language-reference/members/methods.md
+        - name: コンストラクター
+          href: language-reference/members/constructors.md
+        - name: イベント
+          href: language-reference/members/events.md
+        - name: '明示的なフィールド: `val` キーワード'
+          href: language-reference/members/explicit-fields-the-val-keyword.md
+    - name: 型拡張
+      href: language-reference/type-extensions.md
+    - name: パラメーターと引数
+      href: language-reference/parameters-and-arguments.md
+    - name: 演算子のオーバーロード
+      href: language-reference/operator-overloading.md
+    - name: フレキシブル型
+      href: language-reference/flexible-types.md
+    - name: デリゲート
+      href: language-reference/delegates.md
+    - name: オブジェクト式
+      href: language-reference/object-expressions.md
+    - name: キャストと変換
+      href: language-reference/casting-and-conversions.md
+    - name: アクセス制御
+      href: language-reference/access-control.md
+    - name: '条件式: if...then...else'
+      href: language-reference/conditional-expressions-if-then-else.md
+    - name: match 式
+      href: language-reference/match-expressions.md
+    - name: パターン マッチ
+      href: language-reference/pattern-matching.md
+    - name: アクティブ パターン
+      href: language-reference/active-patterns.md
+    - name: 'ループ: for...to 式'
+      href: language-reference/loops-for-to-expression.md
+    - name: 'ループ: for...in 式'
+      href: language-reference/loops-for-in-expression.md
+    - name: 'ループ: while...do 式'
+      href: language-reference/loops-while-do-expression.md
+    - name: アサーション
+      href: language-reference/assertions.md
+    - name: 例外処理
+      href: language-reference/exception-handling/index.md
+      items:
+        - name: 例外の種類
+          href: language-reference/exception-handling/exception-types.md
+        - name: try...with 式
+          href: language-reference/exception-handling/the-try-with-expression.md
+        - name: try...finally 式
+          href: language-reference/exception-handling/the-try-finally-expression.md
+        - name: raise 関数
+          href: language-reference/exception-handling/the-raise-function.md
+        - name: failwith 関数
+          href: language-reference/exception-handling/the-failwith-function.md
+        - name: invalidArg 関数
+          href: language-reference/exception-handling/the-invalidArg-function.md
+    - name: 属性
+      href: language-reference/attributes.md
+    - name: 'リソースの管理: use キーワード'
+      href: language-reference/resource-management-the-use-keyword.md
+    - name: 名前空間
+      href: language-reference/namespaces.md
+    - name: モジュール
+      href: language-reference/modules.md
+    - name: 'インポート宣言: open キーワード'
+      href: language-reference/import-declarations-the-open-keyword.md
+    - name: シグネチャ ファイル
+      href: language-reference/signature-files.md
+    - name: 測定単位
+      href: language-reference/units-of-measure.md
+    - name: XML に関するドキュメント
+      href: language-reference/xml-documentation.md
+    - name: 遅延式
+      href: language-reference/lazy-expressions.md
+    - name: コンピュテーション式
+      href: language-reference/computation-expressions.md
+    - name: 非同期ワークフロー
+      href: language-reference/asynchronous-workflows.md
+    - name: クエリ式
+      href: language-reference/query-expressions.md
+    - name: コード クォート
+      href: language-reference/code-quotations.md
+    - name: fixed キーワード
+      href: language-reference/fixed.md
+    - name: Byrefs
+      href: language-reference/byrefs.md
+    - name: 参照セル
+      href: language-reference/reference-cells.md
+    - name: コンパイラ ディレクティブ
+      href: language-reference/compiler-directives.md
+    - name: コンパイラ オプション
+      href: language-reference/compiler-options.md
+    - name: 'F# Interactive オプション'
+      href: language-reference/fsharp-interactive-options.md
+    - name: ソース行、ファイル、およびパスの識別子
+      href: language-reference/source-line-file-path-identifiers.md
+    - name: 呼び出し元情報
+      href: language-reference/caller-information.md
+    - name: 冗語構文
+      href: language-reference/verbose-syntax.md
+- name: 'F# スタイル ガイド'
+  href: style-guide/index.md
+  items:
+    - name: 'F# コードのフォーマットに関するガイドライン'
+      href: style-guide/formatting.md
+    - name: 'F# のコーディング規則'
+      href: style-guide/conventions.md
+    - name: 'F# コンポーネント デザインのガイドライン'
+      href: style-guide/component-design-guidelines.md
+- name: 'Azure での F# の使用'
+  href: using-fsharp-on-azure/index.md
+  items:
+    - name: 'F# を使用した Azure Blob Storage の概要'
+      href: using-fsharp-on-azure/blob-storage.md
+    - name: 'F# を使用した Azure File Storage の概要'
+      href: using-fsharp-on-azure/file-storage.md
+    - name: 'F# を使用した Azure Queue Storage の概要'
+      href: using-fsharp-on-azure/queue-storage.md
+    - name: 'F# を使用した Azure Table Storage の概要'
+      href: using-fsharp-on-azure/table-storage.md
+    - name: 'F# の Azure の依存関係のためのパッケージ管理'
+      href: using-fsharp-on-azure/package-management.md

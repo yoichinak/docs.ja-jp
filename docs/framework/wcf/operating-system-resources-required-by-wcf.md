@@ -2,15 +2,15 @@
 title: WCF に必要なオペレーティング システム リソース
 ms.date: 03/30/2017
 ms.assetid: cdd9a331-53fe-4e0d-bdfe-782264aec5c9
-ms.openlocfilehash: 828d656370efd7638fa4cf367b84ee7b316b89bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac9bd5ed7c2092720c6521d0f78185c3fbf9f94b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955221"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318940"
 ---
 # <a name="operating-system-resources-required-by-wcf"></a>WCF に必要なオペレーティング システム リソース
-Windows Communication Foundation (WCF) は、関数へのオペレーティング システムによって提供されるいくつかのリソースに依存します。 このリソースを次の表に示します。  
+Windows Communication Foundation (WCF) は、オペレーティングシステムによって機能するために提供されるいくつかのリソースに依存します。 このリソースを次の表に示します。  
   
 |リソース|説明|  
 |--------------|-----------------|  
@@ -20,4 +20,4 @@ Windows Communication Foundation (WCF) は、関数へのオペレーティン�
   
 ## <a name="see-also"></a>関連項目
 
-- [システム要件](../../../docs/framework/wcf/wcf-system-requirements.md)
+- [システム要件](wcf-system-requirements.md)

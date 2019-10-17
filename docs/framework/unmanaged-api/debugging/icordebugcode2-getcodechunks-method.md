@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bdaf6391ca5c19f073708d6258ad5775bec9824
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d64773aa0d35f2e97232576d145dfcba624812ec
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700725"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395527"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>ICorDebugCode2::GetCodeChunks メソッド
 
@@ -41,26 +41,25 @@ HRESULT GetCodeChunks (
 
 ## <a name="parameters"></a>パラメーター
 
- `cbufSize`  
- から@No__t-0 配列のサイズ。
+`cbufSize`  
+から@No__t-0 配列のサイズ。
 
- `pcnumChunks`  
- 入出力@No__t-0 配列で返されたチャンクの数。
+`pcnumChunks`  
+入出力@No__t-0 配列で返されたチャンクの数。
 
- `chunks`  
- 入出力"CodeChunkInfo" 構造体の配列。それぞれが1つのコードチャンクを表します。 @No__t-0 の値が0の場合、このパラメーターには null を指定できます。
+`chunks`  
+入出力"CodeChunkInfo" 構造体の配列。それぞれが1つのコードチャンクを表します。 @No__t-0 の値が0の場合、このパラメーターには null を指定できます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
- コードチャンクは重複しません。コードチャンクは、「[コード:: GetCode](icordebugcode-getcode-method.md)」によって連結された順序に従います。 .NET Framework バージョン2.0 の Microsoft 中間言語 (MSIL) コードオブジェクトは、1つのコードチャンクを構成します。
+コードチャンクは重複しません。コードチャンクは、「[コード:: GetCode](icordebugcode-getcode-method.md)」によって連結された順序に従います。 .NET Framework バージョン2.0 の Microsoft 中間言語 (MSIL) コードオブジェクトは、1つのコードチャンクを構成します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>［要件］
 
- **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。
+**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 
- **ヘッダー:** CorDebug .idl、CorDebug. h
+**ヘッダー:** CorDebug.idl、CorDebug.h
 
- **ライブラリ**CorGuids .lib
+**ライブラリ:** CorGuids.lib
 
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
- 
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

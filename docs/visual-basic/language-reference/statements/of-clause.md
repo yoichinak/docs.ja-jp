@@ -25,45 +25,45 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61784151"
 ---
 # <a name="of-clause-visual-basic"></a>Of 句 (Visual Basic)
-導入されています、`Of`句は、識別、*パラメーターを入力*上、*ジェネリック*クラス、構造体、インターフェイス、デリゲート、またはプロシージャ。 ジェネリック型については、次を参照してください。 [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)します。  
-  
-## <a name="using-the-of-keyword"></a>使用して、キーワードの  
- 次のコード例では、`Of`キーワードを 2 つの型パラメーターを受け取るクラスのアウトラインを定義します。 これは、*制約*、`keyType`パラメーターで、<xref:System.IComparable>インターフェイスで、使用側コードが実装する型引数を指定する必要がありますが、 <xref:System.IComparable>。 これは、必要なように、`add`プロシージャを呼び出すことができます、<xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>メソッド。 制約の詳細については、「 [Type List](../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
-  
-```  
-Public Class Dictionary(Of entryType, keyType As IComparable)  
-    Public Sub add(ByVal e As entryType, ByVal k As keyType)  
-        Dim dk As keyType  
-        If k.CompareTo(dk) = 0 Then  
-        End If  
-    End Sub  
-    Public Function find(ByVal k As keyType) As entryType  
-    End Function  
-End Class  
-```  
-  
- 上記のクラス定義を完了するの場合は、さまざまなを構築できます`dictionary`からクラス。 指定する種類`entryType`と`keyType`決定エントリの種類、クラスを保持し、各エントリとキーの種類を関連付けます。 制約のために指定する必要があります`keyType`を実装する型<xref:System.IComparable>します。  
-  
- 次のコード例は、保持するオブジェクトを作成します。`String`エントリと、`Integer`がそれぞれのキー。 `Integer` 実装<xref:System.IComparable>し、そのために、制約を満たす`keyType`します。  
-  
-```  
-Dim d As New dictionary(Of String, Integer)  
-```  
-  
- キーワード `Of` は次のコンテキストで使用できます。  
-  
- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)  
-  
- [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)  
-  
- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)  
-  
- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)  
-  
- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
+`Of` 句を紹介します。これは *ジェネリック* クラス、構造体、インターフェイス、デリゲート、またはプロシージャ上で型パラメーターを識別します。ジェネリック型については、「[Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」を参照してください。
+
+## <a name="using-the-of-keyword">Of キーワードの使用</a>
+ 次のコード例では、2 つの型パラメーターを受け取るクラスのアウトラインを定義するために `Of` キーワードを使用しています。`keyType` パラメーターは <xref:System.IComparable> インターフェイスによって制限されているため、使用するコードは <xref:System.IComparable> を実装する型引数を与えなければなりません。これは、`add` プロシージャが <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> メソッドを呼び出すことができるようにするために必要です。制約の詳細については、「[型リスト](../../../visual-basic/language-reference/statements/type-list.md)」を参照してください。
+
+```
+Public Class Dictionary(Of entryType, keyType As IComparable)
+    Public Sub add(ByVal e As entryType, ByVal k As keyType)
+        Dim dk As keyType
+        If k.CompareTo(dk) = 0 Then
+        End If
+    End Sub
+    Public Function find(ByVal k As keyType) As entryType
+    End Function
+End Class
+```
+
+ 上記のクラス定義を完了すると、そこから様々な `dictionary` クラスを構築することができます。`entryType` と `keyType` に与える型が、そのクラスが持つエントリーの型と、互いのエントリーと関連するキーの型を決定します。制約により、`keyType` には <xref:System.IComparable> を実装する型を与えなければなりません。
+
+ 次のコード例は、`String` エントリーを持ち、`Integer` キーを互いに関連づけるオブジェクトを作成します。`Integer` は <xref:System.IComparable> を実装し、それゆえに `keyType` の制約を満たします。
+
+```
+Dim d As New dictionary(Of String, Integer)
+```
+
+ キーワード `Of` は次のコンテキストで使用できます。
+
+ [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)
+
+ [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)
+
+ [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
+
+ [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)
+
+ [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
+
+ [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IComparable>

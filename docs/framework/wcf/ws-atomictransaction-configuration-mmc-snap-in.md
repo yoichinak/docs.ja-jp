@@ -2,22 +2,22 @@
 title: WS-AtomicTransaction 構成 MMC スナップイン
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 1fa0548e2d63562ddcb85fc6392bf5c99d67d6c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 04380a2a30aba85efb98ee8f9e24d0a6223a18a3
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916818"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320323"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 構成 MMC スナップイン
 WS-AtomicTransaction 構成 MMC スナップインは、WS-AtomicTransaction 設定の一部をローカル マシンとリモート マシンの両方で構成するために使用されます。  
   
 ## <a name="remarks"></a>Remarks  
- または[!INCLUDE[wxp](../../../includes/wxp-md.md)] [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]を実行している場合、MMC スナップインを見つけるには、 **[コントロールパネル]** 、管理ツール、コンポーネントサービス の順に移動し、**マイコンピューター**を右クリックし、 **[プロパティ]** を選択します。 これは MSDTC を構成する場合と同じ場所です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。  
+ @No__t-0 または [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] を実行している場合は、コントロールパネル]、管理ツール]、 **[コンポーネントサービス]** の順に移動し、 **[マイコンピューター]** を右クリックして **[プロパティ]** を選択すると、MMC スナップインが表示されます。 これは MSDTC を構成する場合と同じ場所です。 構成に使用できるオプションは、 **[ws-at]** タブの下にグループ化されています。  
   
- Windows Vista また[!INCLUDE[lserver](../../../includes/lserver-md.md)]はを実行している場合は、 **[スタート]** ボタンをクリックし、**検索**ボックスに「 `dcomcnfg.exe` 」と入力すると、MMC スナップインが表示されます。 MMC が開いているときに移動、**マイ Computer\Distributed トランザクション コーディネーター DTC**ノードを右クリックし、**プロパティ**です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。  
+ Windows Vista または @no__t 0 を実行している場合は、 **[スタート]** ボタンをクリックして **[検索]** ボックスに「@no__t」と入力すると、MMC スナップインが表示されます。 MMC が開いたら、 **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC**ノードに移動し、右クリックして、 **[プロパティ]** を選択します。 構成に使用できるオプションは、 **[ws-at]** タブの下にグループ化されています。  
   
- 前の手順は、ローカル マシンを構成するためのスナップインを起動するために使用します。 リモートコンピューターを構成する場合は、[**コントロールパネル]、[管理ツール]、[コンポーネントサービス**]、の順に移動し、または[!INCLUDE[wxp](../../../includes/wxp-md.md)] [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]を実行している場合は同様の手順を実行します。 Windows vista または[!INCLUDE[lserver](../../../includes/lserver-md.md)]を実行している場合は、 [!INCLUDE[lserver](../../../includes/lserver-md.md)]Vista の場合は前の手順に従いますが、リモートコンピューターのノードの下の **[分散トランザクション Coordinator\Local DTC]** ノードを使用します。  
+ 前の手順は、ローカル マシンを構成するためのスナップインを起動するために使用します。 リモートコンピューターを構成する場合は、[**コントロールパネル]、[管理ツール]、[コンポーネントサービス**、の順に移動し、[!INCLUDE[wxp](../../../includes/wxp-md.md)] または [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] を実行している場合は同様の手順を実行します。 Windows Vista または @no__t 0 を実行している場合は、Vista および [!INCLUDE[lserver](../../../includes/lserver-md.md)] の前の手順に従いますが、リモートコンピューターのノードの下にある **[分散トランザクション COORDINATOR\LOCAL DTC]** ノードを使用します。  
   
  ツールのユーザー インターフェイスを使用するには、WsatUI.dll ファイルを登録する必要があります。このファイルのパスは次のとおりです。  
   
@@ -25,15 +25,15 @@ WS-AtomicTransaction 構成 MMC スナップインは、WS-AtomicTransaction 設
   
  登録するには、次のコマンドを実行します。  
   
-```Output  
+```console
 regasm.exe /codebase WsatUI.dll  
 ```  
   
  このツールを使用すると、WS-AtomicTransaction の基本設定を変更できます。 たとえば、WS-AtomicTransaction プロトコル サポートの有効/無効の切り替え、WS-AT で使用する HTTP ポートの構成、SSL 証明書の HTTP ポートへのバインド、証明書のサブジェクト名指定による証明書の構成、トレース モードの選択とタイムアウトの既定および上限の設定を行うことができます。  
   
- WS-AtomicTransaction サポートをローカル マシン上にのみ構成する必要がある場合は、このツールのコマンド ライン バージョンを使用できます。 コマンドラインツールの詳細については、「ws-atomictransaction[構成ユーティリティ (wsatConfig .exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) 」トピックを参照してください。  
+ WS-AtomicTransaction サポートをローカル マシン上にのみ構成する必要がある場合は、このツールのコマンド ライン バージョンを使用できます。 コマンドラインツールの詳細については、「ws-atomictransaction[構成ユーティリティ (wsatConfig .exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md) 」トピックを参照してください。  
   
- MMC スナップインとコマンド ライン ツールはいずれも、すべての WS-AT 設定を構成できるわけではありません。 これらの設定は、レジストリを直接変更することによってのみ編集できます。 これらのレジストリ設定の詳細については、「 [ws-atomictransaction のサポートの構成](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)」を参照してください。  
+ MMC スナップインとコマンド ライン ツールはいずれも、すべての WS-AT 設定を構成できるわけではありません。 これらの設定は、レジストリを直接変更することによってのみ編集できます。 これらのレジストリ設定の詳細については、「 [ws-atomictransaction のサポートの構成](./feature-details/configuring-ws-atomic-transaction-support.md)」を参照してください。  
   
 ### <a name="user-interface-description"></a>ユーザー インターフェイスの説明  
  **Ws-atomictransaction のトランザクションネットワークサポートを有効にする**:  
@@ -77,17 +77,17 @@ regasm.exe /codebase WsatUI.dll
   
  **[オプション]** ボタンをクリックすると、追加の設定を指定できるページが表示されます。  
   
- [**トレースレベル**の組み合わせ] ボックスを使用すると、 <xref:System.Diagnostics.TraceLevel>列挙の任意の有効な値から選択できます。 また、チェック ボックスを使用して、アクティビティ トレースやアクティビティ伝達を実行するかどうかを指定したり、個人を特定する情報を収集するかどうかを指定することもできます。  
+ [**トレースレベル**の組み合わせ] ボックスを使用すると、<xref:System.Diagnostics.TraceLevel> 列挙型の任意の有効な値から選択できます。 また、チェック ボックスを使用して、アクティビティ トレースやアクティビティ伝達を実行するかどうかを指定したり、個人を特定する情報を収集するかどうかを指定することもできます。  
   
  **[ログセッション]** グループボックスで、ログセッションを指定することもできます。  
   
 > [!NOTE]
-> 別のトレース コンシューマーが WS-AT トレース プロバイダーを使用している場合は、トレース イベントの新しいログ セッションを作成できません。 このときにログ記録を構成しようとすると、エラー メッセージ "プロバイダーを有効にできませんでした。 エラーコード:1 "。  
+> 別のトレース コンシューマーが WS-AT トレース プロバイダーを使用している場合は、トレース イベントの新しいログ セッションを作成できません。 このときにログ記録を構成しようとすると、エラー メッセージ "プロバイダーを有効にできませんでした。 エラー コード: 1" が表示されます。  
   
- トレースとログ記録の詳細については、「[管理と診断](../../../docs/framework/wcf/diagnostics/index.md)」を参照してください。  
+ トレースとログ記録の詳細については、「[管理と診断](./diagnostics/index.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [WS-AtomicTransaction サポートの構成](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
-- [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
-- [管理と診断](../../../docs/framework/wcf/diagnostics/index.md)
+- [WS-AtomicTransaction サポートの構成](./feature-details/configuring-ws-atomic-transaction-support.md)
+- [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [管理と診断](./diagnostics/index.md)

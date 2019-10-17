@@ -15,6 +15,7 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64624855"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>方法: Windows API (Visual Basic) を呼び出す
+
 この例は user32.dll 内の `MessageBox` 関数の定義と呼び出しを行い、そして文字列を渡しています。
 
 ## <a name="example"></a>例
@@ -33,6 +34,7 @@ ms.locfileid: "64624855"
 - *name*または*dllName*が`Nothing`の場合。 (<xref:System.ArgumentNullException>)
 
 - 含んでいる型が `CreateType` を使用して以前に作成されている場合。 (<xref:System.InvalidOperationException>)
+
 
 ## <a name="see-also"></a>関連項目
 

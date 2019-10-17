@@ -1,15 +1,15 @@
 ---
 title: 'チュートリアル: サポートの問題の分類 - 多クラス分類'
 description: GitHub の問題を分類し、それを特定の領域に割り当てるための多クラス分類シナリオで、ML.NET を使用する方法について説明します。
-ms.date: 07/31/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 1eb56465bb56906df25c3a094126f2496bef684e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: a6d158d51e6775feaed669c678bb9a36984f08f3
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929221"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698988"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>チュートリアル: ML .NET での多クラス分類を使用したサポートの問題の分類
 
@@ -339,7 +339,12 @@ GitHub の問題を追加して、`Predict` メソッドでトレーニングさ
 以前に行ったように、次のコードを使って `PredictionEngine` インスタンスを作成します。
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine)]
-  
+
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) は、データの 1 つのインスタンスに対して予測を実行できる便利な API です。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。 シングル スレッド環境またはプロトタイプ環境で使用できます。 運用環境でパフォーマンスとスレッド セーフを向上させるには、`PredictionEnginePool` サービスを使用します。これにより、アプリケーション全体で使用するできる [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。 ASP.NET Core Web API で `PredictionEnginePool` を使用する方法については、[こちらのガイド](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)を参照してください。
+
+> [!NOTE]
+> `PredictionEnginePool` サービスの拡張機能は、現在プレビュー段階です。
+
 `PredictionEngine` を使用して、予測のための `PredictIssue` メソッドに次のコードを追加して、GitHub の区分ラベルを予測します。
 
 [!code-csharp[PredictIssue](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#PredictIssue)]

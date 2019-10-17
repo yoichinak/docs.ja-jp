@@ -4,12 +4,12 @@ description: ローカライズされた例外メッセージを使用するユ�
 author: Youssef1313
 ms.author: ronpet
 ms.date: 09/13/2019
-ms.openlocfilehash: 1e5ef5658e4cb71d0689a1786494eaec57d4e7fb
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: b4aa567fccda9354bc5959d6b9838d678d53abef
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332963"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696716"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>方法: ローカライズされた例外メッセージを使用するユーザー定義の例外を作成する
 
@@ -77,16 +77,22 @@ ms.locfileid: "71332963"
 throw new StudentNotFoundException("The student cannot be found.", "John");
 ```
 
-前の行の問題は、"The student cannot be found." が単なる定数の文字列であることです。 ローカライズされるアプリケーションでは、ユーザーのカルチャに応じて異なるメッセージを使用する必要があります。
+前の行の問題は、`"The student cannot be found."` が定数文字列であることです。 ローカライズされるアプリケーションでは、ユーザーのカルチャに応じて異なるメッセージを使用する必要があります。
 [サテライト アセンブリ](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)はこの処理に適しています。 サテライト アセンブリは、特定の言語のリソースを含む .dll です。 実行時に特定のリソースを要求すると、ユーザーのカルチャに応じて CLR によってそのリソースが検索されます。 そのカルチャのサテライト アセンブリが見つからない場合は、既定のカルチャのリソースが使用されます。
 
 ローカライズされた例外メッセージを作成するには:
 
 1. リソース ファイルを保持するために、*Resources* という名前の新しいフォルダーを作成します。
-1. そこに新しいリソース ファイルを追加します。 Visual Studio でこれを行うには、**ソリューション エクスプローラー**でフォルダーを右クリックし、 **[追加]**  ->  **[新しい項目]**  ->  **[リソース ファイル]** を選択します。 ファイルに *ExceptionMessages.resx* という名前を付けます。 これは既定のリソース ファイルです。
-1. 次の図に示すように、例外メッセージの名前と値のペアを追加します。![既定のカルチャにリソースを追加する](media/add-resources-to-default-culture.jpg)
+1. そこに新しいリソース ファイルを追加します。 Visual Studio でこれを行うには、**ソリューション エクスプローラー**でフォルダーを右クリックし、 **[追加]**  >  **[新しい項目]**  >  **[リソース ファイル]** を選択します。 ファイルに *ExceptionMessages.resx* という名前を付けます。 これは既定のリソース ファイルです。
+1. 次の図に示すように、例外メッセージの名前と値のペアを追加します。
+
+   ![既定のカルチャにリソースを追加する](media/add-resources-to-default-culture.jpg)
+
 1. フランス語用の新しいリソース ファイルを追加します。 *ExceptionMessages.fr-FR.resx* という名前を付けます。
-1. 例外メッセージの名前と値のペアを再び追加します。今回はフランス語の値を使用します。![fr-FR カルチャにリソースを追加する](media/add-resources-to-fr-culture.jpg)
+1. 例外メッセージの名前と値のペアを再び追加します。今回はフランス語の値を使用します。
+
+   ![fr-FR カルチャにリソースを追加する](media/add-resources-to-fr-culture.jpg)
+
 1. プロジェクトをビルドすると、ビルド出力フォルダーには、サテライト アセンブリである *.dll* ファイルを含む *fr-FR* フォルダーが作成されます。
 1. 次のようなコードを使用して例外をスローします。
 

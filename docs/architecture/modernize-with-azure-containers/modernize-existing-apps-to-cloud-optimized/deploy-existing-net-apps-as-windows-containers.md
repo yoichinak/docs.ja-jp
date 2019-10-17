@@ -2,12 +2,12 @@
 title: Windows コンテナーとして既存の .NET アプリを展開する
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |既存の .NET アプリを Windows コンテナーとしてデプロイする
 ms.date: 04/29/2018
-ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926484"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318640"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows コンテナーとして既存の .NET アプリを展開する
 
@@ -51,7 +51,7 @@ Windows コンテナーでは、アプリケーションをパッケージ化す
 
 [Docker](https://www.docker.com/)は、クラウドまたはオンプレミスで実行できる移植可能な自己完結型のコンテナーとしてアプリケーションのデプロイを自動化する[オープンソースプロジェクト](https://github.com/docker/docker)です。 Docker は、このテクノロジを促進および進化させる[会社](https://www.docker.com/)でもあります。 この会社は、Microsoft などのクラウド、Linux、および Windows ベンダーとの共同作業を行っています。
 
-![Docker は、ハイブリッド クラウドのすべてのレイヤーでコンテナーを展開します。](./media/image6.png)
+![Docker がハイブリッドクラウドでコンテナーを展開する方法を示す図。](./media/deploy-existing-net-apps-as-windows-containers/docker-deploys-containers-all-layers.png)
 
 **図 4-6.** Docker は、ハイブリッド クラウドのすべてのレイヤーでコンテナーを展開します。
 
@@ -83,7 +83,7 @@ Linux の場合、複数のディストリビューションを利用できま�
 
 図4-7 に、アプリのバージョン .NET Framework に応じてターゲットにできる OS バージョンを示します。
 
-![.NET Framework のバージョンに基づいて対象とするオペレーティングシステム](./media/image7.png)
+![.NET Framework のバージョンに基づいてターゲットにする OS を示す図](./media/deploy-existing-net-apps-as-windows-containers/dotnet-framework-operating-systems.png)
 
 **図 4-7.** .NET Framework のバージョンに基づいて対象とするオペレーティングシステム
 
@@ -129,7 +129,7 @@ Hyper-v の分離を使用するかどうかに関係なく、Windows でコン�
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
-- **インフォグラフィックMicrosoft とコンテナー**
+- **インフォグラフィック:Microsoft とコンテナー @ no__t-0
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -138,15 +138,15 @@ Hyper-v の分離を使用するかどうかに関係なく、Windows でコン�
 前のセクションでは、Docker コンテナーの利点、および .NET アプリケーションの特定のコンテナーイメージの詳細について説明しました。 アプリケーションを開発したりコンテナー化したりするための一般的な情報はすべて基本的なものです。
 ただし、運用環境のデプロイ環境や、QA および開発/テスト環境について考える場合、Microsoft Azure は、クラウドの完全なコンテナーエコシステムであるオープンで広範な選択肢を提供しています (以下の図を参照)。 アプリケーションのニーズに応じて、1つまたは別の Azure 製品を選択する必要があります。
 
-![Azure のコンテナーエコシステム](./media/image7.5.png)
+![Azure のコンテナーエコシステムの図。](./media/deploy-existing-net-apps-as-windows-containers/azure-container-ecosystem.png)
 
 **図 4-7.5。** Azure のコンテナーエコシステム
 
 Azure のコンテナーエコシステムから、インフラストラクチャと見なされるコンテナーをサポートする次の製品があります。
 
 - **Azure Container Instances (ACI)**
-- **Azure Virtual Machines**(コンテナーのサポートあり)
-- **Azure Virtual Machine Scale Sets**(コンテナーのサポートあり)
+- **Azure Virtual Machines** (コンテナーのサポートあり)
+- **Azure Virtual Machine Scale Sets** (コンテナーのサポートあり)
 
 これら3つのうち、ACI には大きな利点があります。これは、基盤となる OS を維持する必要がなく、アップグレードやパッチなどを行う必要がないという事実ですが、このブックの今後のセクションで説明するように、ACI は引き続きインフラストラクチャレベルに配置されます。
 

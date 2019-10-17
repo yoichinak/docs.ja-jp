@@ -1,15 +1,15 @@
 ---
-title: '方法: 読み取りし、書き込みでエンコードされたドキュメント (Visual Basic)'
+title: '方法: エンコードされたドキュメントを読み書きする (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-ms.openlocfilehash: 7d558b8dea5f376b6ad77e2f4ac93a3f4663cbff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96a490d6915201b4e1069ae0249dea09d761aea6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008877"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321015"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>方法: 読み取りし、書き込みでエンコードされたドキュメント (Visual Basic)
+# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>方法: エンコードされたドキュメントを読み書きする (Visual Basic)
 エンコードされた XML ドキュメントを作成するには、<xref:System.Xml.Linq.XDeclaration> を XML ツリーに追加し、エンコーディングを目的のコード ページ名に設定します。  
   
  <xref:System.Text.Encoding.WebName%2A> から返される値はすべて有効な値です。  
@@ -56,7 +56,7 @@ Console.WriteLine("Encoding of loaded document is:{0}", newDoc16.Declaration.Enc
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console  
 Creating a document with utf-8 encoding  
 Encoding is:utf-8  
   

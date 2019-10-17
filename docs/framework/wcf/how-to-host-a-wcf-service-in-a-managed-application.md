@@ -1,45 +1,45 @@
 ---
-title: '方法: マネージド アプリケーションで WCF サービスをホストする'
+title: '方法 : マネージド アプリケーションで WCF サービスをホストする'
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-ms.openlocfilehash: b6d1c9c38e2cc5f1b1b7b5538af0339987563de6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e3adcad6ba70aa64b797325cd45a043301d7e680
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637578"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320979"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>方法: 管理対象アプリでの WCF サービスをホストします。
+# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>方法: マネージアプリで WCF サービスをホストする
 
 マネージド アプリケーションでサービスをホストするには、マネージド アプリケーション コード内にサービスのコードを埋め込み、サービスのエンドポイントをコードで強制的に定義するか、構成を使用して宣言により定義してから、または既定のエンドポイントを使用して、<xref:System.ServiceModel.ServiceHost> のインスタンスを作成します。
 
 メッセージの受信を開始するには、<xref:System.ServiceModel.ICommunicationObject.Open%2A> で <xref:System.ServiceModel.ServiceHost> を呼び出します。 これにより、サービスのリスナーが作成されて開きます。 この方法によるサービスのホストは、マネージド アプリケーション自体がホスト作業を行うため、"自己ホスト" と呼ばれることがあります。 サービスを閉じるには、<xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> で <xref:System.ServiceModel.ServiceHost> を呼び出します。
 
-サービスは、マネージド Windows サービス、インターネット インフォメーション サービス (IIS)、または Windows プロセス アクティブ化サービス (WAS) でホストすることもできます。 ホスティング サービスのオプションの詳細については、次を参照してください。[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)します。
+サービスは、マネージド Windows サービス、インターネット インフォメーション サービス (IIS)、または Windows プロセス アクティブ化サービス (WAS) でホストすることもできます。 サービスのホスティングオプションの詳細については、「[ホスティングサービス](hosting-services.md)」を参照してください。
 
-マネージド アプリケーションでのサービスのホスティングは、展開するインフラストラクチャが最小限で済むため、最も柔軟性があります。 マネージ アプリケーションでサービスをホストする方法の詳細については、次を参照してください。[マネージ アプリケーションでのホスティング](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)します。
+マネージド アプリケーションでのサービスのホスティングは、展開するインフラストラクチャが最小限で済むため、最も柔軟性があります。 マネージアプリケーションでのホスティングサービスの詳細については、「[マネージアプリケーションでのホスティング](./feature-details/hosting-in-a-managed-application.md)」を参照してください。
 
 次の手順では、自己ホスト型サービスをコンソール アプリケーションに実装する方法を示します。
 
-## <a name="create-a-self-hosted-service"></a>自己ホスト型サービスを作成します。
+## <a name="create-a-self-hosted-service"></a>自己ホスト型サービスを作成する
 
-1. 新しいコンソール アプリケーションを作成します。
+1. 新しいコンソールアプリケーションを作成します。
 
-   1. Visual Studio を開き、選択**新規** > **プロジェクト**から、**ファイル**メニュー。
+   1. Visual Studio を開き、 **[ファイル]** メニューの [**新規** > **プロジェクト**] を選択します。
 
-   2. **インストールされたテンプレート**一覧で、 **Visual c#** または**Visual Basic**、し、 **Windows デスクトップ**します。
+   2. **[インストールされたテンプレート]** の一覧で **[ビジュアルC# ]** または **[Visual Basic]** を選択し、 **[Windows デスクトップ]** を選択します。
 
-   3. 選択、**コンソール アプリ**テンプレート。 型`SelfHost`で、**名前**ボックス選び、 **OK**。
+   3. **[コンソールアプリケーション]** テンプレートを選択します。 **[名前]** ボックスに「`SelfHost`」と入力し、[ **OK]** をクリックします。
 
-2. 右クリック**SelfHost**で**ソリューション エクスプ ローラー**選択**参照の追加**します。 選択**System.ServiceModel**から、 **.NET**タブをクリックして**OK**します。
+2. **ソリューションエクスプローラー**で **[selfhost]** を右クリックし、 **[参照の追加]** を選択します。 **[.Net]** タブで **[system.servicemodel]** を選択し、 **[OK]** を選択します。
 
     > [!TIP]
-    > 場合、**ソリューション エクスプ ローラー**ウィンドウが表示される、選択**ソリューション エクスプ ローラー**から、**ビュー**メニュー。
+    > **ソリューションエクスプローラー**ウィンドウが表示されていない場合は、 **[表示]** メニューの **[ソリューションエクスプローラー]** を選択します。
 
-3. ダブルクリック**Program.cs**または**Module1.vb**で**ソリューション エクスプ ローラー**がまだ開いていない場合、コード ウィンドウで開きます。 ファイルの上部にある次のステートメントを追加します。
+3. **ソリューションエクスプローラー**で**Program.cs**または module1.vb をダブルクリックして、まだ開いていない**場合はコード**ウィンドウで開きます。 ファイルの先頭に次のステートメントを追加します。
 
      [!code-csharp[CFX_SelfHost4#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#1)]
      [!code-vb[CFX_SelfHost4#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#1)]
@@ -50,7 +50,7 @@ ms.locfileid: "65637578"
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > 定義して、サービス インターフェイスを実装する方法の詳細については、次を参照してください。[方法。サービス コントラクトを定義する](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)と[方法。サービス コントラクトを実装する](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)します。
+    > サービスインターフェイスを定義および実装する方法の詳細については、「[方法: サービスコントラクトを定義](how-to-define-a-wcf-service-contract.md)する」および「[方法: サービスコントラクトを実装](how-to-implement-a-wcf-contract.md)する」を参照してください。
 
 5. `Main` メソッドの上部で、サービスのベース アドレスで <xref:System.Uri> クラスのインスタンスを作成します。
 
@@ -63,29 +63,29 @@ ms.locfileid: "65637578"
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]
 
     > [!NOTE]
-    > この例では、既定のエンドポイントを使用するので、このサービスには構成ファイルは必要ありません。 エンドポイントが構成されていない場合、ランタイムは、サービスによって実装されたサービス コントラクトごとに 1 つのエンドポイントを各ベース アドレスに作成します。 既定のエンドポイントの詳細については、次を参照してください。 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md)と[Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)します。
+    > この例では、既定のエンドポイントを使用するので、このサービスには構成ファイルは必要ありません。 エンドポイントが構成されていない場合、ランタイムは、サービスによって実装されたサービス コントラクトごとに 1 つのエンドポイントを各ベース アドレスに作成します。 既定のエンドポイントの詳細については、「 [WCF サービスの](./samples/simplified-configuration-for-wcf-services.md)構成と簡略化された構成の[簡略化](simplified-configuration.md)」を参照してください。
 
-7. キーを押して**Ctrl**+**Shift**+**B**ソリューションをビルドします。
+7. **Ctrl**+**Shift**+**B**キーを押して、ソリューションをビルドします。
 
 ## <a name="test-the-service"></a>サービスをテストする
 
-1. キーを押して**Ctrl**+**F5**サービスを実行します。
+1. **Ctrl**+**F5**キーを押してサービスを実行します。
 
-2. 開いている**WCF テスト クライアント**します。
+2. **WCF テストクライアント**を開きます。
 
     > [!TIP]
-    > 開くには**WCF テスト クライアント**for Visual Studio 開発者コマンド プロンプトを開くし、実行、 **WcfTestClient.exe**します。
+    > **WCF テストクライアント**を開くには、Visual Studio の開発者コマンドプロンプトを開き、 **wcftestclient.exe**を実行します。
 
-3. 選択**サービスの追加**から、**ファイル**メニュー。
+3. **[ファイル]** メニューの **[サービスの追加]** を選択します。
 
-4. 型`http://localhost:8080/hello`アドレス ボックスに**OK**します。
+4. [アドレス] ボックスに「`http://localhost:8080/hello`」と入力し、[ **OK]** をクリックします。
 
     > [!TIP]
     > サービスが実行していることを確認してください。サービスが実行していない場合、この手順は失敗します。 コードでベース アドレスを変更した場合は、この手順で、変更したアドレスを使用します。
 
-5. ダブルクリック**SayHello**下、**マイ サービス プロジェクト**ノード。 型名を指定して、**値**内の列、**要求**ボックスの一覧し、をクリックして**Invoke**します。
+5. **[マイサービスプロジェクト]** ノードの下にある **[SayHello]** をダブルクリックします。 **要求**一覧の **[値]** 列に名前を入力し、 **[呼び出し]** をクリックします。
 
-   応答メッセージが表示されます、**応答**一覧。
+   **応答**の一覧に応答メッセージが表示されます。
 
 ## <a name="example"></a>例
 
@@ -99,11 +99,11 @@ ms.locfileid: "65637578"
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [方法: IIS で WCF サービスをホストします。](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [自己ホスト](../../../docs/framework/wcf/samples/self-host.md)
-- [ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)
-- [方法: サービス コントラクトを定義します。](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [方法: サービス コントラクトを実装します。](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
-- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [サービスとクライアントを構成するためのバインディングの使用](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [システム標準のバインディング](../../../docs/framework/wcf/system-provided-bindings.md)
+- [方法 : IIS で WCF サービスをホストする](./feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [自己ホスト](./samples/self-host.md)
+- [ホスティング サービス](hosting-services.md)
+- [方法: サービス コントラクトを定義する](how-to-define-a-wcf-service-contract.md)
+- [方法: サービス コントラクトを実装する](how-to-implement-a-wcf-contract.md)
+- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [サービスとクライアントを構成するためのバインディングの使用](using-bindings-to-configure-services-and-clients.md)
+- [システム標準のバインディング](system-provided-bindings.md)

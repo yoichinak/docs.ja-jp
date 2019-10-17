@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1ab372f69792a00160edb2542762298114d3f8b4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 7826bbfca09cce7508d7352c647bafae93504e58
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003441"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395838"
 ---
 # <a name="globalization-for-wpf"></a>WPF のグローバリゼーション
 このトピックでは、グローバル市場向けに [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションを作成するときに注意する必要がある問題について説明します。 グローバリゼーションプログラミング要素は、.NET で <xref:System.Globalization> 名前空間に定義されています。
@@ -23,7 +23,7 @@ ms.locfileid: "72003441"
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>文字参照
-文字参照は、特定の @no__t 0 文字の UTF16 コード単位を、10進数または16進数で示します。 次の例では、コプト語の大文字の水平、または ' Ϩ ' の10進文字の参照を示します。
+文字参照は、それが表す特定の Unicode 文字の UTF16 コード単位を、10進数または16進数で示します。 次の例では、コプト語の大文字の水平、または ' Ϩ ' の10進文字の参照を示します。
 
 ```
 &#1000;
@@ -36,8 +36,8 @@ ms.locfileid: "72003441"
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>[エンコード]
- @No__t-0 によってサポートされるエンコーディングは、ASCII、[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16、および UTF-8 です。 Encoding ステートメントは [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ドキュメントの先頭にあります。 エンコーディング属性が存在せず、バイト順もない場合、パーサーでは既定として UTF-8 が使用されます。 UTF-8 と UTF-16 は優先エンコードです。 UTF-7 には対応していません。 次の例は、@no__t 0 のファイルで UTF-8 エンコーディングを指定する方法を示しています。
+### <a name="encoding"></a>エンコード
+ @No__t-0 によってサポートされるエンコーディングは、ASCII、Unicode UTF-16、および UTF-8 です。 Encoding ステートメントは [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ドキュメントの先頭にあります。 エンコーディング属性が存在せず、バイト順もない場合、パーサーでは既定として UTF-8 が使用されます。 UTF-8 と UTF-16 は優先エンコードです。 UTF-7 には対応していません。 次の例は、@no__t 0 のファイルで UTF-8 エンコーディングを指定する方法を示しています。
 
 ```xaml
 ?xml encoding="UTF-8"?
@@ -47,7 +47,7 @@ ms.locfileid: "72003441"
 ### <a name="language-attribute"></a>言語属性
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] は、要素の言語属性を表すために[xml: lang](../../xaml-services/xml-lang-handling-in-xaml.md)を使用します。  @No__t 0 クラスを利用するには、言語属性値が <xref:System.Globalization.CultureInfo> で定義されているカルチャ名のいずれかである必要があります。 [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) は要素ツリーで継承可能であり (XML ルールによる継承であり、必ずしも依存関係プロパティの継承によるものではありません)、その既定値は、明示的に割り当てられていない場合、空の文字列になります。
 
- 言語属性は、方言を指定するときに非常に役立ちます。 たとえば、フランス語であれば、フランス、ケベック、ベルギー、スイスでスペル、語彙、発音が異なります。 また、中国語、日本語、韓国語は @no__t 0 のコードポイントを共有しますが、表意文字の形は異なり、まったく異なるフォントを使用します。
+ 言語属性は、方言を指定するときに非常に役立ちます。 たとえば、フランス語であれば、フランス、ケベック、ベルギー、スイスでスペル、語彙、発音が異なります。 また、中国語、日本語、韓国語は Unicode でコードポイントを共有しますが、表意文字の形は異なり、まったく異なるフォントを使用します。
 
  次の @no__t 0 の例では、`fr-CA` 言語属性を使用してカナダフランス語を指定しています。
 
@@ -57,7 +57,7 @@ ms.locfileid: "72003441"
 
 <a name="unicode"></a>
 ### <a name="unicode"></a>Unicode
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] は、サロゲートを含む [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] のすべての機能をサポートします。 文字セットを [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] にマップできる限り、サポートされます。 たとえば、GB18030 では、一部の文字が中国語、日本語、韓国語 (CFK) の拡張 A および B とサロゲート ペアにマッピングされているため、完全に対応しています。 @No__t 0 のアプリケーションでは、<xref:System.Globalization.StringInfo> を使用して、サロゲートペアまたは組み合わせ文字があるかどうかを理解せずに文字列を操作できます。
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] は、サロゲートを含むすべての Unicode 機能をサポートします。 文字セットを Unicode にマップできる限り、サポートされています。 たとえば、GB18030 では、一部の文字が中国語、日本語、韓国語 (CFK) の拡張 A および B とサロゲート ペアにマッピングされているため、完全に対応しています。 @No__t 0 のアプリケーションでは、<xref:System.Globalization.StringInfo> を使用して、サロゲートペアまたは組み合わせ文字があるかどうかを理解せずに文字列を操作できます。
 
 <a name="design_intl_ui_with_xaml"></a>
 ## <a name="designing-an-international-user-interface-with-xaml"></a>XAML で各国対応ユーザー インターフェイスを設計する
@@ -125,7 +125,7 @@ ms.locfileid: "72003441"
 
  すべての書記体系エンジンは、OpenType フォントをサポートしています。 OpenType フォントには OpenType レイアウトテーブルを含めることができます。これにより、フォントの作成者は、より高い言語とハイエンドのタイポグラフィフォントをデザインできます。 OpenType フォントレイアウトテーブルには、グリフの置換、グリフの配置、理由、およびベースラインの配置に関する情報が含まれており、テキスト処理アプリケーションによってテキストのレイアウトが向上します。
 
- OpenType フォントを使用すると、[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] エンコードを使用して大きなグリフセットを処理できます。 このようなエンコードにより、広範な国際対応が可能になり、さまざまなグリフを印刷できます。
+ OpenType フォントを使用すると、Unicode エンコーディングを使用して大きなグリフセットを処理できます。 このようなエンコードにより、広範な国際対応が可能になり、さまざまなグリフを印刷できます。
 
  @no__t 0 のテキストレンダリングは、解決の独立性をサポートする Microsoft の ClearType サブピクセルテクノロジを利用しています。 これにより読みやすさが大幅に向上し、あらゆる書体で高品質の雑誌スタイルの書面を作成できます。
 
@@ -143,7 +143,7 @@ ms.locfileid: "72003441"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>多言語ユーザー インターフェイス
- 多言語ユーザーインターフェイス (MUI) は、[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] をある言語から別の言語に切り替えるための Microsoft サポートです。 @No__t 0 アプリケーションは、アセンブリモデルを使用して、MUI をサポートします。 1 つのアプリケーションに言語に依存しないアセンブリと言語に依存するサテライト リソース アセンブリが含まれます。 エントリ ポイントはメイン アセンブリのマネージド .EXE です。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] リソースローダーは、[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] の resource manager を利用して、リソースの参照とフォールバックをサポートします。 多言語サテライト アセンブリは同じメイン アセンブリと連動します。 読み込まれるリソースアセンブリは、現在のスレッドの <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> に依存します。
+ 多言語ユーザーインターフェイス (MUI) は、Ui をある言語から別の言語に切り替えるための Microsoft サポートです。 @No__t 0 アプリケーションは、アセンブリモデルを使用して、MUI をサポートします。 1 つのアプリケーションに言語に依存しないアセンブリと言語に依存するサテライト リソース アセンブリが含まれます。 エントリ ポイントはメイン アセンブリのマネージド .EXE です。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] リソースローダーは、[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] の resource manager を利用して、リソースの参照とフォールバックをサポートします。 多言語サテライト アセンブリは同じメイン アセンブリと連動します。 読み込まれるリソースアセンブリは、現在のスレッドの <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> に依存します。
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>ローカライズ可能なユーザー インターフェイス

@@ -2,18 +2,18 @@
 title: 入れ子になった Entity SQL クエリの作成
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 0ab92c1e41c89f141c3cbd37be3e1e18e64d9666
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: cd41c36853f50597a32d511d455148d649d9eb64
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833914"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395561"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>入れ子になった Entity SQL クエリの作成
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、機能の豊富な関数言語です。 @No__t-0 のビルディングブロックは式です。 従来の SQL とは異なり、@no__t 0 は表形式の結果セットに限定されません。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、リテラル、パラメーター、または入れ子になった式を含む複雑な式の作成をサポートします。 式の値は、パラメーター化することも、他の式で構成することもできます。  
   
 ## <a name="nested-expressions"></a>入れ子になった式  
- 入れ子になった式は、その式によって返される型の値が受け入れられる場所であればどこにでも配置できます。 以下に例を示します。  
+ 入れ子になった式は、その式によって返される型の値が受け入れられる場所であればどこにでも配置できます。 (例:  
   
 ```sql  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -25,7 +25,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- 入れ子になったクエリは、projection 句に配置できます。 以下に例を示します。  
+ 入れ子になったクエリは、projection 句に配置できます。 (例:  
   
 ```sql  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -46,10 +46,10 @@ UNION ALL
 FROM … );  
 ```  
   
- 次の例は @no__t 0 で式を適切に入れ子にする方法を示しています。[方法:2つのクエリの和集合を @ no__t-0 として並べ替えます。  
+ 次の例では、式を適切に入れ子にする方法を示します。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:[方法: 2 つのクエリの和集合を並べ替え](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))ます。  
   
 ## <a name="nested-queries-in-projection"></a>投影内の入れ子になったクエリ  
- project 句内の入れ子になったクエリは、サーバーでデカルト積に変換されないことがあります。 SLQ Server などの一部のバックエンド サーバーでは、これによって TempDB テーブルのサイズが非常に大きくなり、サーバーのパフォーマンスに悪影響を及ぼす場合があります。  
+ project 句内の入れ子になったクエリは、サーバーでデカルト積に変換されないことがあります。 SQL Server を含む一部のバックエンドサーバーでは、これによって TempDB テーブルのサイズが非常に大きくなり、サーバーのパフォーマンスに悪影響を及ぼす可能性があります。  
   
  以下は、このようなクエリの例です。  
   

@@ -4,12 +4,12 @@ description: ML.NET CLI ツールを使用してコマンドラインから最�
 author: CESARDELATORRE
 ms.date: 04/17/2019
 ms.custom: how-to
-ms.openlocfilehash: e5f75dc70ea5a76951d8698ea9c0d07cb2d4ddec
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c147464ff59563d336363eed73fc6337bdb12e85
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663922"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275854"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>ML.NET CLI を使用してモデルのトレーニングを自動化する
 
@@ -42,10 +42,10 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 使用例:
 
 ```console
-> mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
 ```
 
-![イメージ](media/automate-training-with-cli/cli-model-generation.gif)
+![image](media/automate-training-with-cli/cli-model-generation.gif)
 
 *Windows PowerShell*、*macOS/Linux bash、または *Windows CMD* でも同じ方法で実行できます。 ただし、タブのオートコンプリート (パラメーター候補) は *Windows CMD* では機能しません。
 
@@ -73,7 +73,7 @@ CLI ツールを使用して "最適なモデル" を生成すると、対象の
 
 CLI によって検出される上位 5 つのモデルの二項分類 ML タスク メトリック一覧を次に示します。
 
-![イメージ](media/automate-training-with-cli/cli-binary-classification-metrics.png)
+![image](media/automate-training-with-cli/cli-binary-classification-metrics.png)
 
 正確度は分類問題の一般的なメトリックですが、以下のリファレンスで説明されているように、最適なモデルを選択する場合に正確度が常に最適なメトリックとは限りません。 必要に応じて追加のメトリックを使用してモデルの品質を評価する場合があります。
 
@@ -83,7 +83,7 @@ CLI によって出力されるメトリックを調べて理解するには、�
 
 CLI によって検出される上位 5 つのモデルの多クラス分類 ML タスク メトリック一覧を次に示します。
 
-![イメージ](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
+![image](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
 CLI によって出力されるメトリックを調べて理解するには、「[Metrics for multiclass classification (多クラス分類のメトリック)](resources/metrics.md#metrics-for-multi-class-classification)」を参照してください。
 
@@ -93,13 +93,13 @@ CLI によって出力されるメトリックを調べて理解するには、�
 
 CLI によって検出される上位 5 つの高品質モデルの同様のメトリック一覧が表示されます。 回帰 ML タスクに関連するこの特定のケースでは、次のようになります。
 
-![イメージ](media/automate-training-with-cli/cli-regression-metrics.png)
+![image](media/automate-training-with-cli/cli-regression-metrics.png)
 
 CLI によって出力されるメトリックを調べて理解するには、「[Metrics for regression (回帰のメトリック)](resources/metrics.md#metrics-for-regression)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [ML.NET CLI ツールのインストール方法](how-to-guides/install-ml-net-cli.md)
-- [チュートリアル: ML.NET CLI を使用して二項分類子を自動生成する](tutorials/mlnet-cli.md)
+- [チュートリアル:ML.NET CLI を使用して二項分類子を自動生成する](tutorials/mlnet-cli.md)
 - [ML.NET CLI コマンド リファレンス](reference/ml-net-cli-reference.md)
 - [ML.NET CLI のテレメトリ](resources/ml-net-cli-telemetry.md)

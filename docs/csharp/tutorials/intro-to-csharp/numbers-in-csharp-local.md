@@ -3,24 +3,24 @@ title: C# における数値 - C# の概要に関するチュートリアル
 description: 数値型とそのプロパティ、およびメソッドを詳しく見ていくことで C# について学習します。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 436e8db10f973b468458987150e1312a16103b91
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850697"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834100"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\# で整数と浮動小数点数を操作する
 
 このチュートリアルでは、対話形式で C# の数値型について説明します。 少量のコードを記述したら、そのコードをコンパイルして実行します。 このチュートリアルには、C# の数値と算術演算に関する一連のレッスンが含まれています。 これらのレッスンでは、C# 言語の基本を説明します。
 
-このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている、[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
+このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Windows、Linux、または macOS 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている、[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
 
 ## <a name="explore-integer-math"></a>整数の演算の確認
 
-「**numbers-quickstart**」という名前のディレクトリを作成します。 それを現在のディレクトリとし、`dotnet new console -n NumbersInCSharp -o .` を実行します。
+「*numbers-quickstart*」という名前のディレクトリを作成します。 それを現在のディレクトリとし、`dotnet new console -n NumbersInCSharp -o .` を実行します。
 
-好みのエディターで **Program.cs** を開き、`Console.WriteLine("Hello World!");` の行を次のコードで置き換えます。
+好みのエディターで *Program.cs* を開き、`Console.WriteLine("Hello World!");` の行を次のコードで置き換えます。
 
 ```csharp
 int a = 18;
@@ -31,7 +31,7 @@ Console.WriteLine(c);
 
 コマンド ウィンドウで「`dotnet run`」を入力し、このコードを実行します。
 
-整数を使用した基本的な算術演算の 1 つを確認しました。 `int` 型は、**整数**を表します (正の整数、または負の整数)。 加算には `+` 記号を使用します。 他の一般的な整数の算術演算には次のものがあります。
+整数を使用した基本的な算術演算の 1 つを確認しました。 `int` 型は、**整数**を表します (ゼロ、正の整数、または負の整数)。 加算には `+` 記号を使用します。 他の一般的な整数の算術演算には次のものがあります。
 
 - `-`: 減算
 - `*`: 乗算
@@ -114,7 +114,7 @@ Console.WriteLine(d);
 最初に実行したい演算を囲むように丸かっこを追加することで、演算の順序を変えることができます。 次の行を追加して、もう一度実行します。
 
 ```csharp
-d = (a  + b) * c;
+d = (a + b) * c;
 Console.WriteLine(d);
 ```
 
@@ -133,7 +133,7 @@ Console.WriteLine(d);
 int e = 7;
 int f = 4;
 int g = 3;
-int h = (e  + f) / g;
+int h = (e + f) / g;
 Console.WriteLine(h);
 ```
 
@@ -171,7 +171,7 @@ namespace NumbersInCSharp
             int d = a + b * c;
             Console.WriteLine(d);
 
-            d = (a  + b) * c;
+            d = (a + b) * c;
             Console.WriteLine(d);
 
             d = (a + b) - 6 * c + (12 * 4) / 3 + 12;
@@ -204,7 +204,7 @@ namespace NumbersInCSharp
 int a = 7;
 int b = 4;
 int c = 3;
-int d = (a  + b) / c;
+int d = (a + b) / c;
 int e = (a + b) % c;
 Console.WriteLine($"quotient: {d}");
 Console.WriteLine($"remainder: {e}");
@@ -242,7 +242,7 @@ Console.WriteLine($"An example of overflow: {what}");
 double a = 5;
 double b = 4;
 double c = 2;
-double d = (a  + b) / c;
+double d = (a + b) / c;
 Console.WriteLine(d);
 ```
 
@@ -252,7 +252,7 @@ Console.WriteLine(d);
 double e = 19;
 double f = 23;
 double g = 8;
-double h = (e  + f) / g;
+double h = (e + f) / g;
 Console.WriteLine(h);
 ```
 
@@ -277,7 +277,7 @@ Console.WriteLine(third);
 
 ***課題***
 
-`double` 型を使用して、大きい値や小さい値、乗算、除算などの計算してみましょう。  もっと複雑な計算を試してみてください。
+`double` 型を使用して、大きい値や小さい値、乗算、除算などの計算してみましょう。 もっと複雑な計算を試してみてください。
 
 しばらく試してみたあとは、これまでに記述したコードを新しいメソッドに移します。 新しいメソッドに `WorkWithDoubles` という名前を付けます。
 

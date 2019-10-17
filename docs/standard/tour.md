@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415924"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291594"
 ---
 # <a name="tour-of-net"></a>.NET のツアー
 
@@ -55,7 +55,7 @@ Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#�
 
 一部のオブジェクトは、*アンマネージ リソース*を参照します。 アンマネージ リソースは、.NET ランタイムで自動的に維持されないリソースです。 たとえば、ファイル ハンドルは、アンマネージ リソースです。 <xref:System.IO.FileStream> オブジェクトはマネージ オブジェクトですが、アンマネージドのファイル ハンドルを参照します。 <xref:System.IO.FileStream> の使用が終わったら、ファイル ハンドルを解放する必要があります。
 
-.NET では、アンマネージ リソースを参照するオブジェクトは <xref:System.IDisposable> インターフェイスを実装します。 オブジェクトの使用が終わったら、すべてのアンマネージ リソースを解放する、オブジェクトの <xref:System.IDisposable.Dispose> メソッドを呼び出します。 そのようなオブジェクトに対し、.NET 言語では次の例に示すように便利な `using` 構文が提供されています。
+.NET では、アンマネージ リソースを参照するオブジェクトは <xref:System.IDisposable> インターフェイスを実装します。 オブジェクトの使用が終わったら、すべてのアンマネージ リソースを解放する、オブジェクトの <xref:System.IDisposable.Dispose> メソッドを呼び出します。 そのようなオブジェクトに対し、.NET 言語では次の例に示すように便利な [`using` ステートメント](../csharp/language-reference/keywords/using.md)が提供されています。
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 

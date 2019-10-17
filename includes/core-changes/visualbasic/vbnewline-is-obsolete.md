@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5ef785f476b795a9c53e511d51b2683b99e6da05
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: e476039ff9c8d33f54a2f7e4371dc09a3be557c7
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182013"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237392"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft.VisualBasic.Constants.vbNewLine は古い
 
@@ -12,9 +12,9 @@ ms.locfileid: "71182013"
 
 #### <a name="version-introduced"></a>導入されたバージョン
 
-.NET Core 3.0 Preview 8
+3.0 Preview 8
 
-#### <a name="details"></a>説明
+#### <a name="change-description"></a>変更の説明
 
 .NET Core 3.0 Preview 8 以降では、[廃止](xref:System.ObsoleteAttribute)属性が <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> 定数に適用されています。 その定数を使用すると、コンパイラの警告が発生します。 .NET Core と .NET Framework の両方の以前のリリースでは、廃止としてマークされていませんでした。
 
@@ -40,5 +40,4 @@ Visual Basic
 
 - `F:Microsoft.VisualBasic.Constants.vbNewLine`
 
--- >
-
+-->

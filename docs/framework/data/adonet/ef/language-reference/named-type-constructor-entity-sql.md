@@ -2,19 +2,19 @@
 title: 名前付きの型コンストラクター (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: c7027614e5667acedb02d871a09df1ac9d799405
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f40adce1a9e031ed0b7cd5d03d9c63db255aa610
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250007"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319574"
 ---
 # <a name="named-type-constructor-entity-sql"></a>名前付きの型コンストラクター (Entity SQL)
 エンティティ型や複合型など、概念モデル標準型のインスタンスの作成に使用します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 [{identifier. }] identifier( [expression [{, expression }]] )  
 ```  
   
@@ -52,11 +52,11 @@ ms.locfileid: "70250007"
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、名前付きの型コンストラクターを使用して、概念モデル型のインスタンスを作成します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. [「方法:StructuralType の結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)を返すクエリを実行します。  
+1. 「 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
   
 2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
- [!code-csharp[DP EntityServices Concepts 2#NAMED_TYPE_CONSTRUCTOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#named_type_constructor)]  
+ [!code-sql[DP EntityServices Concepts#NAMED_TYPE_CONSTRUCTOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#named_type_constructor)]  
   
 ## <a name="see-also"></a>関連項目
 

@@ -2,12 +2,12 @@
 title: Async および Await を使用したタスク非同期プログラミング モデル (TAP) (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: abe1ab777a17ba8cba15a27b02d389a9ede3caf0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 3ced168bada4167418bf27861c5b8666b02aa70e
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167898"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291329"
 ---
 # <a name="task-asynchronous-programming-model"></a>非同期プログラミング モデル
 
@@ -42,22 +42,31 @@ C# の [async](../../../language-reference/keywords/async.md) キーワードと
 
 async メソッドの例を次に示します。 コードのほとんどは、見たことのあるものと思います。
 
-このトピックの最後に完全な Windows Presentation Foundation (WPF) サンプル ファイルがあります。また、「[Async Sample: Example from "Asynchronous Programming with Async and Await" (非同期のサンプル: 「Async および Await を使用した非同期プログラミング」の例)](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c)」からサンプルをダウンロードできます。
+このトピックの最後に完全な Windows Presentation Foundation (WPF) サンプル ファイルがあります。また、「[Async Sample: Example from "Asynchronous Programming with Async and Await" (非同期のサンプル: 「Async および Await を使用した非同期プログラミング」の例)](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/)」からサンプルをダウンロードできます。
 
 ```csharp
 async Task<int> AccessTheWebAsync()
-{
+{ 
     // You need to add a reference to System.Net.Http to declare client.
-    using (HttpClient client = new HttpClient())
-    {
-        Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");
+    var client = new HttpClient();
 
-        DoIndependentWork();
+    // GetStringAsync returns a Task<string>. That means that when you await the
+    // task you'll get a string (urlContents).
+    Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com/dotnet");
 
-        string urlContents = await getStringTask;
+    // You can do work here that doesn't rely on the string from GetStringAsync.
+    DoIndependentWork();
 
-        return urlContents.Length;
-    }
+    // The await operator suspends AccessTheWebAsync.
+    //  - AccessTheWebAsync can't continue until getStringTask is complete.
+    //  - Meanwhile, control returns to the caller of AccessTheWebAsync.
+    //  - Control resumes here when getStringTask is complete. 
+    //  - The await operator then retrieves the string result from getStringTask.
+    string urlContents = await getStringTask;
+
+    // The return statement specifies an integer result.
+    // Any methods that are awaiting AccessTheWebAsync retrieve the length value.
+    return urlContents.Length;
 }
 ```
 
@@ -75,23 +84,18 @@ return ステートメントによって整数の結果が指定されます。 
 `AccessTheWebAsync` に `GetStringAsync` を呼び出してその完了を待機する間で実行できる作業がない場合、次の 1 つのステートメントで呼び出しと待機をするようにコードを簡略化できます。
 
 ```csharp
-string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
+string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dotnet");
 ```
 
 次の特徴は、前の例を非同期のメソッドにするための概略です。
 
 - メソッド シグネチャは `async` 修飾子を含みます。
-
 - 非同期メソッドの名前は、慣例により「Async」というサフィックスで終わります。
-
 - 戻り値の型は次のいずれかになります:
 
   - メソッドが、オペランドに `TResult` 型を持つステートメントを戻す場合、<xref:System.Threading.Tasks.Task%601>。
-
   - メソッドがステートメントを戻さない、またはオペランドを持たないステートメントを戻す場合、<xref:System.Threading.Tasks.Task>。
-
   - 非同期のイベント ハンドラーを作成する場合、`void`。
-
   - `GetAwaiter` メソッドがあるその他の任意の型 (C# 7.0 以降)。
 
   詳細については、「[戻り値の型およびパラメーター](#BKMK_ReturnTypesandParameters)」セクションを参照してください。
@@ -104,7 +108,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a>非同期メソッドでの動作
 
-非同期プログラミングでは理解が必要な最も重要なことは、コントロール フローがどのようにメソッドからのメソッドに移動するかということです。 次の図は、このプロセスについて説明します。
+非同期プログラミングでは理解が必要な最も重要なことは、コントロール フローがどのようにメソッドからのメソッドに移動するかということです。 次の図では、このプロセスについて説明します。
 
 ![非同期プログラムのトレース](./media/task-asynchronous-programming-model/navigation-trace-async-program.png "NavigationTrace")
 
@@ -136,7 +140,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 8. `AccessTheWebAsync` に文字列の結果がある場合、メソッドは文字列の長さを計算できます。 次に `AccessTheWebAsync` の作業も完了し、待機しているイベント ハンドラーが再開できます。 トピックの最後にある完全なサンプルでは、イベント ハンドラーが長さの結果の値を取得して印刷することを確認できます。
 非同期プログラミングの経験がない場合、同期および非同期の動作の違いを、少し時間を割いて考慮してください。 同期メソッドは作業が完了すると戻されます (手順 5.) が、非同期のメソッドは、作業が中断されるとタスクの値を戻します。(手順 3. および 6.) 非同期のメソッドが最終的に作業を完了すると、タスクは完了とマークされ、結果が存在する場合はタスクに格納されます。
 
-制御フローの詳細については、「[非同期プログラムにおける制御フロー (C#)](./control-flow-in-async-programs.md)」を参照してください。
+制御フローの詳細については、「[非同期プログラムにおける制御フロー (C#)](control-flow-in-async-programs.md)」を参照してください。
 
 ## <a name="BKMK_APIAsyncMethods"></a> API の非同期メソッド
 
@@ -146,7 +150,7 @@ Windows ランタイムにも、Windows アプリの `async` と `await` で使�
 
 ## <a name="BKMK_Threads"></a>スレッド
 
-非同期のメソッドは非ブロッキング操作を意図しています。 非同期のメソッドの `await` 式は、待機中のタスクの実行中に現在のスレッドをブロックしません。 代わりに、式はメソッドの残りの部分の継続を登録し、非同期のメソッドの呼び出し元にコントロールを戻します。
+非同期のメソッドは非ブロッキング操作を意図しています。 非同期のメソッドの `await` 式では、待機中のタスクの実行時に現在のスレッドはブロックされません。 代わりに、式はメソッドの残りの部分の継続を登録し、非同期のメソッドの呼び出し元にコントロールを戻します。
 
 `async` および `await` キーワードは、追加のスレッドを作成する要因にはなりません。 非同期のメソッドは自分自身のスレッドで実行しないため、マルチスレッドは必要ありません。 メソッドは、現在の同期コンテキストで実行し、メソッドがアクティブな場合に限りスレッドの時間を使用します。 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> を使用して、CPU バインディングの作業をバックグラウンド スレッドに移動できますが、バックグラウンド スレッドは、結果を待つだけのプロセスを援助しません。
 
@@ -167,7 +171,6 @@ Windows ランタイムにも、Windows アプリの `async` と `await` で使�
 `async` と `await` は、コンテキスト キーワードです。 詳細およびサンプルについては、次のトピックを参照してください:
 
 - [async](../../../language-reference/keywords/async.md)
-
 - [await](../../../language-reference/operators/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a>戻り値の型およびパラメーター
@@ -180,7 +183,7 @@ Windows ランタイムにも、Windows アプリの `async` と `await` で使�
 
 C# 7.0 以降では、その型に `GetAwaiter` メソッドがある場合に限り、別の戻り値の型を指定できます。 このような型の例として、<xref:System.Threading.Tasks.ValueTask%601> が挙げられます。 これは、[System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet パッケージにあります。
 
-次のサンプルは、<xref:System.Threading.Tasks.Task%601> または <xref:System.Threading.Tasks.Task> を戻すメソッドを宣言し、呼び出す方法を示します。
+次のサンプルは、<xref:System.Threading.Tasks.Task%601> または <xref:System.Threading.Tasks.Task> を戻すメソッドを宣言して呼び出す方法を示します。
 
 ```csharp
 // Signature specifies Task<TResult>
@@ -216,7 +219,7 @@ await GetTaskAsync();
 
 非同期のメソッドの戻り値の型としては、`void` を指定できます。 この戻り値の型は主として、`void` の戻り値の型が必要なイベント ハンドラーの定義に使用されます。 非同期のイベント ハンドラーは通常、非同期のプログラムの開始点として機能します。
 
-`void` の戻り値の型を持つ非同期のメソッドは、待機できません。void を戻すメソッドの呼び出し元は、このメソッドがスローする例外をキャッチできません。
+`void` の戻り値の型を持つ非同期のメソッドは、待機できません。void を戻すメソッドの呼び出し元では、このメソッドがスローする例外をキャッチできません。
 
 非同期のメソッドで [in](../../../language-reference/keywords/in-parameter-modifier.md)、[ref](../../../language-reference/keywords/ref.md)、または [out](../../../language-reference/keywords/out-parameter-modifier.md) パラメーターを宣言することはできませんが、これらのパラメーターを持つメソッドを呼び出すことはできます。 同様に、非同期メソッドは ref 戻り値を使用してメソッドを呼び出すことはできますが、参照を使用して値を返すことはできません。
 
@@ -225,11 +228,8 @@ await GetTaskAsync();
 Windows ランタイム プログラミングの非同期 API には、タスクに類似した次のような戻り値の型の 1 つがあります。
 
 - <xref:Windows.Foundation.IAsyncOperation%601> は <xref:System.Threading.Tasks.Task%601> に対応します
-
 - <xref:Windows.Foundation.IAsyncAction> は <xref:System.Threading.Tasks.Task> に対応します
-
 - <xref:Windows.Foundation.IAsyncActionWithProgress%601>
-
 - <xref:Windows.Foundation.IAsyncOperationWithProgress%602>
 
 ## <a name="BKMK_NamingConvention"></a>名前付け規則
@@ -257,88 +257,9 @@ Windows ランタイム プログラミングの非同期 API には、タスク
 
 ## <a name="BKMK_CompleteExample"></a> コード例全体
 
-次のコードは、このトピックで説明する Windows Presentation Foundation (WPF) アプリケーションの MainWindow.xaml.cs ファイルです。 「[Async Sample:Example from "Asynchronous Programming with Async and Await" (非同期のサンプル: 「Async および Await を使用した非同期プログラミング」の例)](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c)」からサンプルをダウンロードできます。
+次のコードは、この記事で説明する WPF アプリケーションの *MainWindow.xaml.cs* ファイルです。 「[Async Sample:Example from "Asynchronous Programming with Async and Await" (非同期のサンプル: 「Async および Await を使用した非同期プログラミング」の例)](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/)」からサンプルをダウンロードできます。
 
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-// Add a using directive and a reference for System.Net.Http;
-using System.Net.Http;
-
-namespace AsyncFirstExample
-{
-    public partial class MainWindow : Window
-    {
-        // Mark the event handler with async so you can use await in it.
-        private async void StartButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Call and await separately.
-            //Task<int> getLengthTask = AccessTheWebAsync();
-            //// You can do independent work here.
-            //int contentLength = await getLengthTask;
-
-            int contentLength = await AccessTheWebAsync();
-
-            resultsTextBox.Text +=
-                $"\r\nLength of the downloaded string: {contentLength}.\r\n";
-        }
-
-        // Three things to note in the signature:
-        //  - The method has an async modifier.
-        //  - The return type is Task or Task<T>. (See "Return Types" section.)
-        //    Here, it is Task<int> because the return statement returns an integer.
-        //  - The method name ends in "Async."
-        async Task<int> AccessTheWebAsync()
-        {
-            // You need to add a reference to System.Net.Http to declare client.
-            using (HttpClient client = new HttpClient())
-            {
-                    // GetStringAsync returns a Task<string>. That means that when you await the
-                    // task you'll get a string (urlContents).
-                    Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");
-
-                    // You can do work here that doesn't rely on the string from GetStringAsync.
-                    DoIndependentWork();
-
-                    // The await operator suspends AccessTheWebAsync.
-                    //  - AccessTheWebAsync can't continue until getStringTask is complete.
-                    //  - Meanwhile, control returns to the caller of AccessTheWebAsync.
-                    //  - Control resumes here when getStringTask is complete.
-                    //  - The await operator then retrieves the string result from getStringTask.
-                    string urlContents = await getStringTask;
-
-                    // The return statement specifies an integer result.
-                    // Any methods that are awaiting AccessTheWebAsync retrieve the length value.
-                    return urlContents.Length;
-            }
-        }
-
-        void DoIndependentWork()
-        {
-            resultsTextBox.Text += "Working . . . . . . .\r\n";
-        }
-    }
-}
-
-// Sample Output:
-
-// Working . . . . . . .
-
-// Length of the downloaded string: 25035.
-```
+[!code-csharp[async](~/samples/async/async-and-await/cs/MainWindow.xaml.cs)] 
 
 ## <a name="see-also"></a>関連項目
 

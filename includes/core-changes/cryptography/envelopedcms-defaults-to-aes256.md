@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: b965c3a975b0f2cadd906799fef1665261d96d6e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: f9000b19997201c2d3de0643669f9029ff1ca31c
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182020"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237395"
 ---
 ### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>EnvelopedCms が AES-256 暗号化を既定で使用
 
 `EnvelopedCms` で使用される既定の対称暗号化アルゴリズムが TripleDES から AES-256 に変更されました。
 
-#### <a name="details"></a>説明
+#### <a name="change-description"></a>変更の説明
 
 .NET Core Preview 7 以前のバージョンでは、コンストラクターのオーバーロードを使って対称暗号化アルゴリズムを指定せずに <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> を使用してデータを暗号化する場合、データは TripleDES/3DES/3DEA/DES3-EDE アルゴリズムで暗号化されていました。
 

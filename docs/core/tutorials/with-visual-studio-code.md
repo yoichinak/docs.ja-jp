@@ -4,12 +4,12 @@ description: Visual Studio Code を使用した、C# で初めての .NET Core �
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 03a2edcbb3414cfd63006603424a3ca1eade528f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 4e283f631f463953185a37bf196a1a9b706eee2b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849455"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002325"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# および Visual Studio Code の使用を開始する
 
@@ -34,9 +34,10 @@ ms.locfileid: "70849455"
       ![Visual Studio Code の [フォルダーを開く]](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. C# プロジェクトを初期化する
+
     - Visual Studio Code から統合ターミナルを開きます。メイン メニューで **[表示]** 、 **[統合端末]** の順に選択してください。
     - ターミナル ウィンドウで、`dotnet new console` と入力します。
-    - このコマンドで、フォルダーに `HelloWorld.csproj` という名前の C# プロジェクト ファイルとともに、単純な "Hello World" プログラムが既に書き込まれた `Program.cs` ファイルが作成されます。
+    - このコマンドは、*HelloWorld.csproj* という名前の C# プロジェクト ファイルと共に、単純な "Hello World" プログラムが既に書き込まれた *Program.cs* ファイルをフォルダーに作成します。
 
       ![dotnet new コマンド](media/with-visual-studio-code/dotnet-new-command.png)
 
@@ -70,7 +71,7 @@ ms.locfileid: "70849455"
 
     ![Visual Studio Code で [デバッグ] タブを開く](media/with-visual-studio-code/open-debug-tab.png)
 
-4. ウィンドウの上部で緑色の矢印を探します。 その横にあるドロップダウン リストで `.NET Core Launch (console)` が選択されていることを確認します。
+4. ウィンドウの上部で緑色の矢印を探します。 その横にあるドロップダウン リストで **[.NET Core Launch (console)]** \(.NET Core の起動 (コンソール)\) が選択されていることを確認します。
 
     ![Visual Studio Code で .NET Core を選択する](media/with-visual-studio-code/select-net-core.png)
 
@@ -78,7 +79,7 @@ ms.locfileid: "70849455"
 
     ![ブレークポイントの設定](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
-6. デバッグを開始するには、<kbd>F5 キー</kbd>または緑色の矢印を選択します。 デバッガーは、前述の手順で設定したブレークポイントに達すると、プログラムの実行を停止します。
+6. デバッグを開始するには、<kbd>F5</kbd> キーを押すか、緑色の矢印を選択します。 デバッガーは、前述の手順で設定したブレークポイントに達すると、プログラムの実行を停止します。
     - デバッグ中は左上のペインにローカル変数が表示され、デバッグ コンソールを使用できます。
 
 7. 上部にある青色の矢印を選択してデバッグを継続するか、上部にある赤色の四角形を選択して停止します。
@@ -91,8 +92,8 @@ ms.locfileid: "70849455"
 ## <a name="add-a-class"></a>クラスを追加する
 
 1. 新しいクラスを追加するには、VSCode エクスプローラーを右クリックし、 **[新しいファイル]** を選択します。 これで、新しいファイルが VSCode で開いたフォルダーに追加されます。
-2. ファイルに `MyClass.cs` と名前を付けます。 csharp ファイルとして認識されるには、最後に `.cs` 拡張子を付けて保存する必要があります。
-3. 次のコードを追加して、1 つ目のクラスを作成します。 `Program.cs` ファイルから参照できるように、正しい名前空間を含めるようにします。
+2. ファイルに *MyClass.cs* という名前を指定します。 csharp ファイルとして認識されるには、最後に `.cs` 拡張子を付けて保存する必要があります。
+3. 次のコードを追加して、1 つ目のクラスを作成します。 *Program.cs* ファイルから参照できるように、正しい名前空間を含めるようにします。
 
     ``` csharp
     using System;
@@ -109,7 +110,7 @@ ms.locfileid: "70849455"
     }
     ```
 
-4. 次のコードを追加して、`Program.cs` のメイン メソッドから新しいクラスを呼び出します。
+4. 次のコードを追加して、*Program.cs* のメイン メソッドから新しいクラスを呼び出します。
 
     ```csharp
     using System;
@@ -120,7 +121,7 @@ ms.locfileid: "70849455"
         {
             static void Main(string[] args)
             {
-                MyClass c1 = new MyClass();
+                var c1 = new MyClass();
                 Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
             }
         }
@@ -138,7 +139,7 @@ ms.locfileid: "70849455"
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Visual Studio Code 内で C# をビルドおよびデバッグするのに必要な資産が欠落しています。 デバッガーには、"構成がありません" と表示されます。
 
-Visual Studio Code C# の拡張機能では、ビルドおよびデバッグする資産を自動的に作成することができます。 C# プロジェクトを初めて開くと、これらの資産を作成するように Visual Studio Code から求められます。 資産を作成しなかった場合でも、このコマンドを実行する方法はあります。コマンド パレットを開き ( **[表示] > [コマンド パレット]** )、「>.NET:Generate Assets for Build and Debug」 と入力します。 これを選択すると、必要としている .vscode、launch.json、tasks.json の各構成ファイルが作成されます。
+Visual Studio Code C# の拡張機能では、ビルドおよびデバッグする資産を自動的に作成することができます。 C# プロジェクトを初めて開くと、これらの資産を作成するように Visual Studio Code から求められます。 資産を作成しなかった場合でも、このコマンドを実行する方法はあります。コマンド パレットを開き ( **[表示] > [コマンド パレット]** )、「>.NET:Generate Assets for Build and Debug」 と入力します。 これを選択すると、必要としている *.vscode*、*launch.json* および *tasks.json* の各構成ファイルが作成されます。
 
 ## <a name="see-also"></a>関連項目
 

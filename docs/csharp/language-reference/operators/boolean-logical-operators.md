@@ -1,7 +1,7 @@
 ---
 title: ブール論理演算子 - C# リファレンス
 description: ブール オペランドを使用した論理否定演算、論理積演算 (AND)、および包含的および排他的論理和演算 (OR) を実行する C# 演算子について説明します。
-ms.date: 04/08/2019
+ms.date: 09/27/2019
 author: pkulikov
 f1_keywords:
 - '!_CSharpKeyword'
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 39f5be7a667b4e37e84246ef0bfeb03c0099d4b7
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: f711bd04aeadb584eac1ecb0b644a36e2e496d08
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353363"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72290945"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>ブール論理演算子 (C# リファレンス)
 
@@ -51,9 +51,11 @@ ms.locfileid: "71353363"
 
 ## <a name="logical-negation-operator-"></a>論理否定演算子 !
 
-`!` 演算子は、そのオペランドの論理否定を計算します。 つまり、オペランドが `false` と評価された場合は `true`、オペランドが `true` と評価された場合は `false` が生成されます。
+単項の接頭辞 `!` 演算子では、そのオペランドの論理否定が計算されます。 つまり、オペランドが `false` と評価された場合は `true`、オペランドが `true` と評価された場合は `false` が生成されます。
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
+
+C# 8.0 以降では、単項後置の `!` 演算子は [null 免除演算子](null-forgiving.md)です。
 
 ## <a name="logical-and-operator-"></a> 論理 AND 演算子 &amp;
 
@@ -115,16 +117,16 @@ ms.locfileid: "71353363"
 
 `bool?` オペランドの場合、`&` 演算子と `|` 演算子は 3 値ロジックをサポートします。 次の表に、これらの演算子のセマンティクスが定義されています。  
   
-|x|Y|x&y|x&#124;y|  
+|x|y|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
-|TRUE|False|false|true|  
+|TRUE|false|false|true|  
 |true|null|null|true|  
-|False|true|False|true|  
-|False|False|False|False|  
-|False|null|False|null|  
+|false|true|false|true|  
+|false|false|false|false|  
+|false|null|false|null|  
 |null|true|null|true|  
-|null|False|False|null|  
+|null|false|false|null|  
 |null|null|null|null|  
 
 これらの演算子の動作は、null 許容値型の一般的な演算子の動作とは異なります。 通常、値型のオペランドに定義されている演算子も、対応する null 値型のオペランドと共に使用できます。 このような演算子は、そのオペランドのいずれかが `null` の場合に `null` を生成します。 ただし、`&` および `|` 演算子は、オペランドの 1 つが `null` の場合でも、null 以外の値を生成する可能性があります。 null 許容値型の演算子の動作については、[null 許容値型の使用](../../programming-guide/nullable-types/using-nullable-types.md)に関する記事の「[演算子](../../programming-guide/nullable-types/using-nullable-types.md#operators)」セクションを参照してください。
@@ -143,7 +145,7 @@ ms.locfileid: "71353363"
 x op= y
 ```
 
-上記の式は、次の式と同じです。
+は次と同等
 
 ```csharp
 x = x op y

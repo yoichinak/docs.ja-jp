@@ -7,26 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: 88b5f365c47b98964d9f5a0d22a941d85dcfb95f
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 3ff4b189539bf119351a94dabadd596c336ac723
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592135"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250336"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>型パラメーターは修飾子として使用できません。
-プログラミング要素は、型パラメーターを含む修飾文字列で修飾されます。  
-  
- 型パラメーターは、ジェネリック型が構築されるときに指定される型の要件を表します。 定義されている特定の型を表していません。 修飾文字列には、コンパイル時に定義された要素のみを含める必要があります。  
-  
- 次のステートメントでは、このエラーが生成される可能性があります。  
-  
+
+プログラミング要素は、型パラメーターを含む修飾文字列で修飾されます。
+
+型パラメーターは、ジェネリック型が構築されるときに指定される型の要件を表します。 定義されている特定の型を表していません。 修飾文字列には、コンパイル時に定義された要素のみを含める必要があります。
+
+次のコードでは、このエラーが発生する可能性があります。
+
 ```vb  
-Public Function checkText(Of c As System.Windows.Forms.Control)(  
-    ByVal badText As String) As Boolean  
+Public Function CheckText(Of c As System.Windows.Forms.Control)(
+    badText As String) As Boolean
   
     Dim saveText As c.Text  
-    ' Insert code to look for badText within saveText.  
+    ' Insert code to look for badText within saveText.
 End Function  
 ```  
   
@@ -40,6 +41,6 @@ End Function
   
 ## <a name="see-also"></a>関連項目
 
-- [宣言された要素の参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [型リスト](../../../visual-basic/language-reference/statements/type-list.md)
+- [宣言された要素の参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Generic Types in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [型リスト](../statements/type-list.md)

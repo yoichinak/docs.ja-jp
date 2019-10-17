@@ -2,12 +2,12 @@
 title: マイクロサービスに簡略化された CQRS と DDD パターンを適用する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | CQRS と DDD のパターンの全体的な関係を理解する。
 ms.date: 10/08/2018
-ms.openlocfilehash: 36bffce37176aed6c7d9daea7f2995952b58e895
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674379"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834313"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>マイクロサービスに簡略化された CQRS と DDD のパターンを適用する
 
@@ -27,9 +27,11 @@ CQRS は、他のコンテキストでは 1 つのオブジェクトの場合で
 
 この種のサービスの例として、eShopOnContainers 参照アプリケーションの注文マイクロサービスがあります。 このサービスは、簡略化された CQRS アプローチに基づくマイクロサービスを実装しています。 また、図 7-2 に示すように、単一のデータ ソースまたはデータベースを使用しますが、トランザクション ドメインには 2 つの論理モデルと DDD パターンを使用します。
 
-![論理 Ordering マイクロサービスには、その Ordering データベースが含まれています。Docker ホストは同じ場合もそうでない場合もあります。 同じ Docker ホストにデータベースを置くことは開発の場合にお勧めしますが、運用の場合はお勧めしません。](./media/image2.png)
+![簡略化された CQRS と DDD マイクロサービスの概要を示す図](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
 
 **図 7-2**。 簡略化された CQRS および DDD ベースのマイクロサービス
+
+この論理的な "注文" マイクロサービスには、注文データベースが含まれています。これは、同じ Docker ホストの可能性もありますが、同じである必要はありません。 同じ Docker ホストにデータベースを置くことは開発の場合にお勧めしますが、運用の場合はお勧めしません。
 
 アプリケーション レイヤーは、Web API の可能性があります。 ここで重要な設計の側面は、マイクロサービスが、CQRS パターンに従って、クエリと ViewModel (特にクライアント アプリケーション用に作成されたデータ モデル) を、コマンド、ドメイン モデル、トランザクションから分離していることです。 このアプローチによって、トランザクションと更新にのみ意味のある DDD パターンに由来する制限と制約から、クエリを独立させることができます。詳細については、以降のセクションで説明します。
 

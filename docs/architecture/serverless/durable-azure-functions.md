@@ -4,12 +4,12 @@ description: 持続性のある Azure functions により、Azure Functions ラ�
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: f7ee74926d6658042120113b49dc763383881423
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577515"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522855"
 ---
 # <a name="durable-azure-functions"></a>永続的な Azure Functions
 
@@ -27,7 +27,7 @@ Durable Functions のステートフルワークフローは、次の2つの組�
 
 オーケストレーションは、Azure Functions でトリガーされた操作の他のスタイルと比較した場合に一意です。 Durable Functions では、完了までに数時間または数日かかる可能性のある関数を実行できます。 この種類の動作には、実行中のオーケストレーションの状態を確認したり、事前にを終了したり、外部イベントの通知を送信したりできる必要があります。
 
-このような場合、Durable Functions 拡張機能は`DurableOrchestrationClient` 、調整された関数と対話できるようにするクラスを提供します。 オーケストレーションクライアントにアクセスするには、 `OrchestrationClientAttribute`バインドを使用します。 通常、この属性は、 `HttpTrigger`や`ServiceBusTrigger`などの別のトリガーの種類と共に追加します。 ソース関数がトリガーされたら、オーケストレーションクライアントを使用して orchestrator 関数を開始できます。
+このような場合、Durable Functions 拡張機能は、調整された関数と対話できるようにするための @no__t 0 のクラスを提供します。 @No__t-0 バインドを使用して、オーケストレーションクライアントにアクセスできます。 通常は、この属性を別のトリガーの種類 (`HttpTrigger` や `ServiceBusTrigger` など) と共に追加します。 ソース関数がトリガーされたら、オーケストレーションクライアントを使用して orchestrator 関数を開始できます。
 
 ```csharp
 [FunctionName("KickOff")]
@@ -47,7 +47,7 @@ public static async Task<HttpResponseMessage> Run(
 
 Azure Functions マークの OrchestrationTriggerAttribute を使用して関数に注釈を付けると、orchestrator 関数として機能します。 ステートフルワークフローを構成するさまざまなアクティビティを管理する責任があります。
 
-Orchestrator 関数で、OrchestrationTriggerAttribute 以外のバインドを使用することはできません。 この属性は、パラメーターの型が DurableOrchestrationContext の場合にのみ使用できます。 関数シグネチャの入力の逆シリアル化がサポートされていないため、他の入力を使用することはできません。 Orchestration クライアントによって提供される入力を取得する\<に\>は、getinput T メソッドを使用する必要があります。
+Orchestrator 関数で、OrchestrationTriggerAttribute 以外のバインドを使用することはできません。 この属性は、パラメーターの型が DurableOrchestrationContext の場合にのみ使用できます。 関数シグネチャの入力の逆シリアル化がサポートされていないため、他の入力を使用することはできません。 Orchestration クライアントによって提供される入力を取得するには、GetInput @ no__t-0T @ no__t-1 メソッドを使用する必要があります。
 
 また、オーケストレーション関数の戻り値の型は、void、Task、または JSON のシリアル化可能な値のいずれかである必要があります。
 
@@ -69,19 +69,19 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-オーケストレーションの複数のインスタンスを同時に開始して実行できます。 でメソッド`StartNewAsync`を呼び出すと、オーケストレーションの新しいインスタンスが起動されます。`DurableOrchestrationClient` メソッドは、オーケストレーション`Task<string>`が開始されたときに完了するを返します。 オーケストレーションが30秒`TimeoutException`以内に開始しなかった場合、型の例外がスローされます。
+オーケストレーションの複数のインスタンスを同時に開始して実行できます。 @No__t で `StartNewAsync` メソッドを呼び出すと、オーケストレーションの新しいインスタンスが起動されます。 メソッドは、オーケストレーションが開始されたときに完了する @no__t 0 を返します。 オーケストレーションが30秒以内に開始されなかった場合は、`TimeoutException` 型の例外がスローされます。
 
-`Task<string>` 完了`StartNewAsync`したには、オーケストレーションインスタンスの一意の ID が含まれている必要があります。 このインスタンス ID を使用して、その特定のオーケストレーションに対する操作を呼び出すことができます。 オーケストレーションの状態を照会したり、イベント通知を送信したりすることができます。
+@No__t-1 の完了した `Task<string>` には、オーケストレーションインスタンスの一意の ID が含まれている必要があります。 このインスタンス ID を使用して、その特定のオーケストレーションに対する操作を呼び出すことができます。 オーケストレーションの状態を照会したり、イベント通知を送信したりすることができます。
 
 ### <a name="the-activity-functions"></a>アクティビティ関数
 
 アクティビティ関数は、ワークフローを作成するためにオーケストレーション関数内にまとめて構成される個別の操作です。 ここでは、実際の作業のほとんどが行われます。 これらは、ビジネスロジック、長時間実行されるプロセス、およびパズルの部分を大規模なソリューションに表します。
 
-は`ActivityTriggerAttribute` 、型`DurableActivityContext`の関数パラメーターに注釈を付けるために使用されます。 注釈を使用すると、関数がアクティビティ関数として使用されることをランタイムに通知します。 アクティビティ関数へ`DurableActivityContext`の入力値は、パラメーター `GetInput<T>`のメソッドを使用して取得されます。
+@No__t-0 は、型 `DurableActivityContext` の関数パラメーターに注釈を付けるために使用されます。 注釈を使用すると、関数がアクティビティ関数として使用されることをランタイムに通知します。 アクティビティ関数への入力値は、`DurableActivityContext` パラメーターの `GetInput<T>` メソッドを使用して取得されます。
 
 オーケストレーション関数と同様に、アクティビティ関数の戻り値の型は、void、Task、または JSON のシリアル化可能な値のいずれかである必要があります。
 
-アクティビティ関数内でスローされた未処理の例外は、呼び出し元の orchestrator 関数に送信され`TaskFailedException`、として表示されます。 この時点で、エラーが検出され、orchestrator に記録され、アクティビティを再試行できます。
+アクティビティ関数内でスローされた未処理の例外は、呼び出し元の orchestrator 関数に送信され、@no__t 0 として表示されます。 この時点で、エラーが検出され、orchestrator に記録され、アクティビティを再試行できます。
 
 ```csharp
 [FunctionName("CheckAndReserveInventory")]
@@ -96,9 +96,9 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 
 ## <a name="recommended-resources"></a>推奨されるリソース
 
-* [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-* [Durable Functions のバインド](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
-* [Durable Functions でのインスタンスの管理](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
+- [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [Durable Functions のバインド](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
+- [Durable Functions でのインスタンスの管理](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
 
 >[!div class="step-by-step"]
 >[前へ](event-grid.md)

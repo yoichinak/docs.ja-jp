@@ -12,17 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - floating-point numbers [C#]
 - ranges of floating-point types [C#]
+- size of floating-point types [C#]
 - types [C#], floating-point types
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 0d97b3ffd587e8398e5572706a47937716a6e709
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 17ae154780679dd1f42f43f1ec345cdc722815d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236055"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002196"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮動小数点数値型 (C# リファレンス)
 
@@ -32,11 +33,11 @@ ms.locfileid: "68236055"
 
 C# では、次の定義済みの浮動小数点型がサポートされています。
   
-|C# 型/キーワード|おおよその範囲|有効桁数|.NET 型|
-|----------|-----------------------|---------------|--------------|
-|`float`|±1.5 x 10<sup>−45</sup> から ±3.4 x 10<sup>38</sup>|~6 ～9 桁|<xref:System.Single?displayProperty=nameWithType>|
-|`double`|±5.0 × 10<sup>−324</sup> - ±1.7 × 10<sup>308</sup>|~15-17 桁|<xref:System.Double?displayProperty=nameWithType>|
-|`decimal`|±1.0 x 10<sup>-28</sup> から ±7.9228 x 10<sup>28</sup>|28 から 29 桁の数字|<xref:System.Decimal?displayProperty=nameWithType>|
+|C# 型/キーワード|おおよその範囲|Precision|Size|.NET 型|
+|----------|-----------------------|---------------|--------------|--------------|
+|`float`|±1.5 x 10<sup>−45</sup> から ±3.4 x 10<sup>38</sup>|~6 ～9 桁|4 バイト|<xref:System.Single?displayProperty=nameWithType>|
+|`double`|±5.0 × 10<sup>−324</sup> - ±1.7 × 10<sup>308</sup>|~15-17 桁|8 バイト|<xref:System.Double?displayProperty=nameWithType>|
+|`decimal`|±1.0 x 10<sup>-28</sup> から ±7.9228 x 10<sup>28</sup>|28 から 29 桁の数字|16 バイト|<xref:System.Decimal?displayProperty=nameWithType>|
 
 上の表の左端の列にある各 C# 型/キーワードは、対応する .NET 型の別名です。 これらは交換可能です。 たとえば、次の宣言では、同じ型の変数が宣言されています。
 

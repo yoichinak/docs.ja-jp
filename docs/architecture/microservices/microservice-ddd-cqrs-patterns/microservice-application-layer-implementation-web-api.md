@@ -2,12 +2,12 @@
 title: Web API を使用したマイクロサービス アプリケーション レイヤーの実装
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | Web API アプリケーション レイヤーの依存関係挿入、メディエーター パターン、その実装詳細について。
 ms.date: 10/08/2018
-ms.openlocfilehash: c8447cfcd3155a873d61ee9287f58774392c279d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: df304ffbe2406323e3dcf42b9eb989b02a62b28b
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676579"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249745"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API を使用してマイクロサービス アプリケーション レイヤーを実装する
 
@@ -203,7 +203,7 @@ Autofac には、[アセンブリをスキャンし、命名規則で型を登�
 
 コマンドは、データ フィールドやコレクションのほか、コマンドを実行するために必要なすべての情報を含んだクラスを使用して実装されます。 コマンドは特別な種類のデータ転送オブジェクト (DTO) であり、変更やトランザクションを要求するために使用されるものです。 コマンド自体は、コマンドを処理するために必要な情報のみをベースとし、その他の情報は含まれません。
 
-次の例は、簡略化された CreateOrderCommand クラスを示したものです。 これは、eShopOnContainers 内の注文マイクロサービスで使用される不変コマンドです。
+簡略化された `CreateOrderCommand` クラスの例を次に示します。 これは、eShopOnContainers 内の注文マイクロサービスで使用される不変コマンドです。
 
 ```csharp
 // DDD and CQRS patterns comment
@@ -215,7 +215,7 @@ Autofac には、[アセンブリをスキャンし、命名規則で型を登�
 // http://cqrs.nu/Faq
 // https://docs.spine3.org/motivation/immutability.html
 // http://blog.gauffin.org/2012/06/griffin-container-introducing-command-support/
-// https://msdn.microsoft.com/library/bb383979.aspx
+// https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties
 [DataContract]
 public class CreateOrderCommand
     :IAsyncRequest<bool>
@@ -287,7 +287,7 @@ public class CreateOrderCommand
 
 意図的に、あるいは予想としてコマンドがシリアル化/逆シリアル化プロセスを通過する場合、プロパティにはプライベート セッターと `[DataMember]` (または `[JsonProperty]`) 属性が与えられる必要があります。与えられていない場合、デシリアライザーは宛先で必須値を利用してオブジェクトを再構築することができません。
 
-たとえば、注文を作成するためのコマンド クラスは通常、データの観点から見れば、作成する注文と同様のものになりますが、通常、同じ属性は必要ありません。 具体的に言うと、CreateOrderCommand には注文 ID は含まれません。注文がまだ作成されていないからです。
+たとえば、注文を作成するためのコマンド クラスは通常、データの観点から見れば、作成する注文と同様のものになりますが、通常、同じ属性は必要ありません。 たとえば、注文はまだ作成されていないため、`CreateOrderCommand` に注文 ID はありません。
 
 多くのコマンド クラスは、変更が必要な状態に関するいくつかのフィールドだけを含めればよいので、簡素化することができます。 たとえば、注文の状態を「処理中」から「支払済み」(または「発送済み」) 変更するだけの場合は、次のようなシンプルなコマンドで記述できます。
 
@@ -335,7 +335,7 @@ public class UpdateOrderStatusCommand
 
 コマンド ハンドラーが複雑になりすぎる (ロジックが多すぎる) 場合には、コード スメルになる可能性があります。 内容を見直し、ドメイン ロジックがある場合はコードをリファクタリングして、そのドメイン ビヘイビアーをドメイン オブジェクト (集約ルートと子エンティティ) のメソッドに移動してください。
 
-次のコードは、この章の最初に示したものと同じ CreateOrderCommandHandler クラスを使用して、コマンド ハンドラー クラスの例を示したものです。 ここでは、Handle メソッドと、ドメイン モデル オブジェクト/集約を使用した操作に注目してください。
+次のコードは、この章の最初に示したものと同じ `CreateOrderCommandHandler` クラスを使用して、コマンド ハンドラー クラスの例を示したものです。 ここでは、Handle メソッドと、ドメイン モデル オブジェクト/集約を使用した操作に注目してください。
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -480,7 +480,10 @@ public class MyMicroserviceController : Controller
 {
     public MyMicroserviceController(IMediator mediator,
                                     IMyMicroserviceQueries microserviceQueries)
-    // ...
+    {
+        // ...
+    }
+}
 ```
 
 メディエーターによって、クリーンでコンパクトな Web API コントローラー コンストラクターが実現しています。 また、コントローラー メソッド内では、メディエーター オブジェクトにコマンドを送信するコードが、ほぼ 1 行で記述されています。
@@ -499,7 +502,7 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 
 ### <a name="implement-idempotent-commands"></a>べき等コマンドの実装
 
-**eShopOnContainers** では、上記の例よりもさらに高度なコードで、注文マイクロサービスから CreateOrderCommand オブジェクトが送信されています。 ただし、この注文ビジネス プロセスはやや複雑で、(このケースでは) バスケット マイクロサービスから開始されているため、CreateOrderCommand オブジェクトを送信するこのアクションは、先の例のようにクライアント アプリから呼び出されるシンプルな WebAPI コントローラーではなく、UserCheckoutAcceptedIntegrationEvent.cs (https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) ) という統合イベント ハンドラーから実行されます。
+**eShopOnContainers** では、上記の例よりもさらに高度なコードで、注文マイクロサービスから CreateOrderCommand オブジェクトが送信されています。 ただし、この注文ビジネス プロセスはやや複雑で、(このケースでは) バスケット マイクロサービスから開始されているため、CreateOrderCommand オブジェクトを送信するこのアクションは、先の例のようにクライアント アプリから呼び出されるシンプルな WebAPI コントローラーではなく、[UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) という統合イベント ハンドラーから実行されます。
 
 とは言え、MediatR にコマンドを送信するアクションは、次のコードに示すように、非常に似ています。
 

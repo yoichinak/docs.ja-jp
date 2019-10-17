@@ -1,5 +1,5 @@
 ---
-title: '方法: ProtectionLevel プロパティを設定する'
+title: '方法 : ProtectionLevel プロパティを設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 222fda180923cdc7b0d7b7ab413c151c69add259
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ff835f767852da586a3a35b7f4ce2edf99db283
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950979"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320914"
 ---
-# <a name="how-to-set-the-protectionlevel-property"></a>方法: ProtectionLevel プロパティを設定する
-適切な属性を適用してプロパティを設定することで、保護レベルを設定できます。 サービス レベルですべてのメッセージのすべての部分に影響する保護を設定したり、メソッドからメッセージ部分まで、段階的にきめ細かなレベルで保護を設定したりすることができます。 プロパティの`ProtectionLevel`詳細については、「[保護レベル](../../../docs/framework/wcf/understanding-protection-level.md)について」を参照してください。  
+# <a name="how-to-set-the-protectionlevel-property"></a>方法 : ProtectionLevel プロパティを設定する
+適切な属性を適用してプロパティを設定することで、保護レベルを設定できます。 サービス レベルですべてのメッセージのすべての部分に影響する保護を設定したり、メソッドからメッセージ部分まで、段階的にきめ細かなレベルで保護を設定したりすることができます。 @No__t-0 プロパティの詳細については、「[保護レベル](understanding-protection-level.md)について」を参照してください。  
   
 > [!NOTE]
 > 保護レベルは構成ではなく、コードでのみ設定できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "69950979"
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>エラー メッセージの保護  
- サービスでスローされた例外は、SOAP エラーとしてクライアントに送信できます。 厳密に型指定されたエラーの作成の詳細については、「[コントラクトとサービスのエラーの指定と処理](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)」および[「方法:サービスコントラクト](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)でのエラーを宣言します。  
+ サービスでスローされた例外は、SOAP エラーとしてクライアントに送信できます。 厳密に型指定されたエラーの作成の詳細については、「[コントラクトとサービスのエラーの指定と処理](specifying-and-handling-faults-in-contracts-and-services.md)」および「[方法: サービスコントラクトでエラーを宣言する](how-to-declare-faults-in-service-contracts.md)」を参照してください。  
   
 #### <a name="to-protect-a-fault-message"></a>エラー メッセージを保護するには  
   
@@ -61,7 +61,7 @@ ms.locfileid: "69950979"
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>メッセージ部分の保護  
- メッセージ部分を保護するには、メッセージ コントラクトを使用します。 メッセージコントラクトの詳細については、「 [Using Message contracts](../../../docs/framework/wcf/feature-details/using-message-contracts.md)」を参照してください。  
+ メッセージ部分を保護するには、メッセージ コントラクトを使用します。 メッセージコントラクトの詳細については、「 [Using Message contracts](./feature-details/using-message-contracts.md)」を参照してください。  
   
 #### <a name="to-protect-a-message-body"></a>メッセージ本文を保護するには  
   
@@ -71,7 +71,7 @@ ms.locfileid: "69950979"
   
 3. メッセージ ヘッダーとして表現されるフィールドに <xref:System.ServiceModel.MessageHeaderAttribute> 属性を適用し、`ProtectionLevel` プロパティを <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> に設定します。  
   
-4. 次の<xref:System.ServiceModel.MessageBodyMemberAttribute>例に示すように、メッセージ本文の一部として表現される任意`ProtectionLevel`のフィールド<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>にを適用し、プロパティをに設定します。  
+4. 次の例に示すように、メッセージ本文の一部として表現される任意のフィールドに <xref:System.ServiceModel.MessageBodyMemberAttribute> を適用し、`ProtectionLevel` プロパティを <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> に設定します。  
   
      [!code-csharp[C_ProtectionLevel#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#5)]
      [!code-vb[C_ProtectionLevel#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#5)]  
@@ -95,4 +95,4 @@ ms.locfileid: "69950979"
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.MessageContractAttribute>
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
-- [保護レベルの理解](../../../docs/framework/wcf/understanding-protection-level.md)
+- [保護レベルの理解](understanding-protection-level.md)

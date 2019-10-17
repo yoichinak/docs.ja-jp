@@ -7,18 +7,18 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: b5ad066fe9ec40d715702ed99537f45b21c558cf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d988ab36703bc20e6960d4b8ecc7a476d95ee9bc
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701051"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72396008"
 ---
 # <a name="extension-methods-visual-basic"></a>拡張メソッド (Visual Basic)
 
 拡張メソッドを使用すると、開発者は、新しい派生型を作成せずに既に定義されているデータ型にカスタム機能を追加できます。 拡張メソッドを使用すると、既存の型のインスタンスメソッドと同じように呼び出すことができるメソッドを作成できます。
-  
-## <a name="remarks"></a>コメント
+
+## <a name="remarks"></a>Remarks
 
 拡張メソッドになるのは、`Sub` プロシージャと `Function` プロシージャだけです。 拡張プロパティ、拡張フィールド、拡張イベントを定義することはできません。 すべての拡張メソッドは、<xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 名前空間の拡張属性 `<Extension>` でマークする必要があり、[モジュール](../../../language-reference/statements/module-statement.md)で定義する必要があります。 拡張メソッドがモジュール外で定義されている場合、Visual Basic コンパイラによってエラー [BC36551](../../../misc/bc36551.md)が生成されます。 "拡張メソッドはモジュール内でのみ定義できます"。
 
@@ -29,7 +29,7 @@ ms.locfileid: "71701051"
 ## <a name="example"></a>例
 
 `Print` データ型の <xref:System.String> 拡張を定義する例を次に示します。 このメソッドでは、`Console.WriteLine` を使用して文字列を表示します。 `Print` メソッドのパラメーター `aString` では、このメソッドによって <xref:System.String> クラスを拡張することを指定します。
-  
+
 [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
 
 拡張メソッド定義に拡張属性 `<Extension()>` を設定している点に注目してください。 メソッドが定義されているモジュールに拡張属性を設定するかどうかは任意ですが、それぞれの拡張メソッドにはこの設定が必要です。 拡張属性にアクセスするためには、<xref:System.Runtime.CompilerServices> をインポートする必要があります。
@@ -45,7 +45,6 @@ ms.locfileid: "71701051"
 このメソッドを呼び出すときには、`punc` の引数として `example.PrintAndPunctuate(".")` を渡します。
 
 `Print` と `PrintAndPunctuate` を定義して呼び出す例を次に示します。 拡張属性にアクセスできるようにするために、<xref:System.Runtime.CompilerServices> が定義モジュールにインポートされます。
-
 
 ```vb
 Imports System.Runtime.CompilerServices

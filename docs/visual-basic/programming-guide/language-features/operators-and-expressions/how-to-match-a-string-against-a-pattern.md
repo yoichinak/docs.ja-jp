@@ -1,5 +1,5 @@
 ---
-title: '方法: (Visual Basic) パターンとの比較の文字列と一致します。'
+title: '方法: 文字列をパターンと照合する (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
@@ -13,71 +13,73 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: e5eb6bd5b5e7b2f0c3692c0fa2431a0b8f295299
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0bac0869d9e319071abb31dd0576edf0450aa198
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649725"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054152"
 ---
-# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>方法: (Visual Basic) パターンとの比較の文字列と一致します。
-式かどうかを検索する場合、[文字列データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)を使用して、パターンを満たす、 [Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)します。  
-  
- `Like` 2 つのオペランドを受け取ります。 左のオペランドは、文字列式であり、右のオペランドが照合に使用するパターンを含む文字列。 `Like` 返します、`Boolean`文字列式が、パターンを満たすかどうかを示す値。  
-  
- 特定の文字、ワイルドカード文字、文字のリスト、または文字の範囲に対して文字列式内の各文字と一致することができます。 仕様パターン文字列内の位置は、文字列式に一致する文字の位置に対応します。  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>特定の文字の文字列式での文字と一致するには  
-  
-- 特定の文字をパターン文字列に直接配置します。 特定の特殊文字は、角かっこで囲む必要があります (`[ ]`)。 詳細については、次を参照してください。 [Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)します。  
-  
-     次の例をテストするかどうか`myString`1 文字だけで構成されます`H`します。  
-  
-     [!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>ワイルドカード文字の文字列式の文字と一致するには  
-  
-- 疑問符 () の配置 (`?`) パターン文字列にします。 この位置に任意の有効な文字は、検索が成功します。  
-  
-     次の例のテストするかどうか`myString`1 文字から成る`W`の後ろに任意の値の 2 つの文字。  
-  
-     [!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>文字の一覧に対して、文字列式での文字と一致するには  
-  
-- 角かっこを配置 (`[ ]`) で、パターン文字列とかっこ文字の一覧に格納します。 コンマまたはその他の任意の区切り記号の文字を分離されません。 任意の 1 文字の一覧では、検索が成功します。  
-  
-     次の例のテストかどうか`myString`続く文字を 1 つの有効な任意の文字から成る`A`、 `C`、または`E`します。  
-  
-     [!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]  
-  
-     この照合の小文字が区別されるに注意してください。  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>文字の範囲に対して文字列式での文字と一致するには  
-  
-- 角かっこを配置 (`[ ]`) パターン文字列、および最低と最高の文字の範囲に、かっこ内では、ハイフンで区切られた (`–`)。 範囲内の任意の 1 文字では、成功した一致。  
-  
-     次の例のテストかどうか`myString`文字から成る`num`文字 1 個続く`i`、 `j`、 `k`、 `l`、 `m`、または`n`します。  
-  
-     [!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]  
-  
-     この照合の小文字が区別されるに注意してください。  
-  
-## <a name="matching-empty-strings"></a>空の文字列に一致します。  
- `Like` シーケンス処理`[]`長さ 0 の文字列として (`""`)。 使用することができます`[]`文字列全体の式が空では、文字列式で特定の位置が空かどうかを使用することはできないかどうかをテストします。 空の位置が、オプションのいずれかである場合は、テストするには、使用できる必要があります。 `Like` 2 回以上。  
-  
-#### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>文字または文字の一覧に対して、文字列式での文字と一致するには  
-  
-1. 呼び出す、`Like`演算子を 2 回に同じ文字列式、および 2 つの呼び出しのいずれかで接続、[または演算子](../../../../visual-basic/language-reference/operators/or-operator.md)または[OrElse 演算子](../../../../visual-basic/language-reference/operators/orelse-operator.md)します。  
-  
-2. 最初のパターン文字列に`Like`句では、角かっこで囲まれた、文字の一覧が含まれます (`[ ]`)。  
-  
-3. 2 つ目のパターン文字列内`Like`句では、配置しない任意の文字位置にある問題です。  
-  
-     次の例は、7 桁の電話番号をテスト`phoneNum`の 3 桁の数字の後にスペース、ハイフン (`–`)、ピリオド (`.`)、または文字、後ろにないに 4 桁の数値。  
-  
-     [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]  
-  
+# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>方法: 文字列をパターンと照合する (Visual Basic)
+
+[文字列データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)の式がパターンを満たすかどうかを確認するには、 [Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)を使用します。
+
+`Like`2つのオペランドを受け取ります。 左オペランドは文字列式で、右オペランドは照合に使用されるパターンを含む文字列です。 `Like`文字列式がパターンを満たすかどうかを示す値を返します。`Boolean`
+
+文字列式の各文字は、特定の文字、ワイルドカード文字、文字リスト、または文字範囲に対して一致させることができます。 パターン文字列内の仕様の位置は、文字列式で一致する文字の位置に対応します。
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>文字列式の文字を特定の文字に一致させるには
+
+特定の文字をパターン文字列に直接配置します。 特定の特殊文字は、角かっこ (`[ ]`) で囲む必要があります。 詳細については、「 [Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)」を参照してください。
+
+次の例では`myString` 、が単一の文字`H`で構成されているかどうかをテストします。
+
+[!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>文字列式の文字をワイルドカード文字に一致させるには
+
+パターン文字列に疑問符 (`?`) を入力します。 この位置にある有効な文字によって、一致が成功します。
+
+次の例では`myString` 、が1つの`W`文字で構成され、その後に値が2文字続くかどうかをテストします。
+
+[!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>文字列式の文字を文字の一覧に一致させるには
+
+パターン文字列に`[ ]`角かっこ () を挿入し、角かっこ内に文字のリストを配置します。 文字をコンマまたは他の区切り記号で区切ることは避けてください。 リスト内の任意の1文字が、一致と見なされます。
+
+次の例では`myString` 、が有効な文字で構成され、 `C`、、 `A`または`E`のいずれかの文字が続くかどうかをテストします。
+
+[!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]
+
+この照合では大文字と小文字が区別されることに注意してください。
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>文字列式の文字を文字の範囲に一致させるには
+
+パターン文字列に`[ ]`角かっこ () を挿入し、角かっこ内には、ハイフン (`–`) で区切られた範囲内の最低文字と最高文字を指定します。 範囲内の任意の1文字が、一致と見なされます。
+
+次の例では`myString` 、が、、 `num` 、、 `m`、 `j` `l` `i`のいずれ`k`かの文字が続く文字で構成されているかどうかをテストします。`n`
+
+[!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]
+
+この照合では大文字と小文字が区別されることに注意してください。
+
+## <a name="matching-empty-strings"></a>一致 (空の文字列を)
+
+`Like`シーケンス`[]`を長さ0の文字列 (`""`) として扱います。 を使用`[]`すると、文字列式全体が空であるかどうかをテストできますが、文字列式内の特定の位置が空かどうかをテストすることはできません。 空の位置が、テストする必要があるオプションの1つである場合は`Like` 、を複数回使用できます。
+
+### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>文字列式の文字を文字のリストまたは文字の一覧と一致させるには
+
+1. 同じ文字列式で`Like` 演算子を2回呼び出し、[or演算子](../../../../visual-basic/language-reference/operators/or-operator.md)または[OrElse演算子](../../../../visual-basic/language-reference/operators/orelse-operator.md)のいずれかを使用して2つの呼び出しを接続します。
+
+2. 最初`Like`の句のパターン文字列には、文字リストを角かっこ (`[ ]`) で囲んで指定します。
+
+3. 2番目`Like`の句のパターン文字列では、対象の位置に文字を入れないでください。
+
+    次の例では、正確に3桁`phoneNum`の電話番号をテストし、その後にスペース、ハイフン (`–`)、ピリオド (`.`)、または文字をまったく4桁の数字で指定します。
+
+    [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]
+
 ## <a name="see-also"></a>関連項目
 
 - [比較演算子](../../../../visual-basic/language-reference/operators/comparison-operators.md)

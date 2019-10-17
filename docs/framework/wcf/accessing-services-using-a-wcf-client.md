@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: ae589e1c418b1cf13fe9f5b34648bdf7a2210eed
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 462d9a3923009f0124c2b90b6fa86dfa9869a3c5
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855665"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72316535"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF クライアントを使用したサービスへのアクセス
 
@@ -26,10 +26,10 @@ ms.locfileid: "70855665"
 
 3. WCF クライアント プロキシをインスタンス化します。
 
-WCF クライアント プロキシは、サービス モデル メタデータ ユーティリティ ツール (SvcUtil.exe) を使用することによって、手動で生成することができます。詳細は「[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)」を参照してください。 WCF クライアントプロキシは、**サービス参照の追加**機能を使用して Visual Studio 内で生成することもできます。 いずれかの方法で WCF クライアント プロキシを生成するには、サービスが実行中であることが必要です。 サービスが自己ホスト型の場合は、ホストを実行する必要があります。 サービスが IIS/WAS でホストされている場合、特に必要な操作はありません。
+WCF クライアントプロキシは、サービスモデルメタデータユーティリティツール (Svcutil.exe) を使用して手動で生成できます。詳細については、「 [ServiceModel Metadata Utility tool (svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)」を参照してください。 WCF クライアントプロキシは、**サービス参照の追加**機能を使用して Visual Studio 内で生成することもできます。 いずれかの方法で WCF クライアント プロキシを生成するには、サービスが実行中であることが必要です。 サービスが自己ホスト型の場合は、ホストを実行する必要があります。 サービスが IIS/WAS でホストされている場合、特に必要な操作はありません。
 
 ## <a name="servicemodel-metadata-utility-tool"></a>ServiceModel メタデータ ユーティリティ ツール
- [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)は、メタデータからコードを生成するためのコマンドラインツールです。 基本的な Svcutil.exe コマンドの使用例を次に示します。
+ [ServiceModel メタデータユーティリティツール (svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)は、メタデータからコードを生成するためのコマンドラインツールです。 基本的な Svcutil.exe コマンドの使用例を次に示します。
 
 ```console
 Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -49,14 +49,14 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>
 ```
 
- ファイル名を 1 つだけ指定した場合、それは出力ファイルの名前になります。 ファイル名を 2 つ指定した場合は、1 番目のファイルが入力構成ファイルになり、そのファイルの内容と生成された構成がマージされ、2 番目のファイルに書き出されます。 構成の詳細については、「[サービスのバインドの構成](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)」を参照してください。
+ ファイル名を 1 つだけ指定した場合、それは出力ファイルの名前になります。 ファイル名を 2 つ指定した場合は、1 番目のファイルが入力構成ファイルになり、そのファイルの内容と生成された構成がマージされ、2 番目のファイルに書き出されます。 構成の詳細については、「[サービスのバインドの構成](configuring-bindings-for-wcf-services.md)」を参照してください。
 
 > [!IMPORTANT]
-> セキュリティで保護されていないメタデータ要求では、セキュリティで保護されていないネットワーク要求と同じ方法で特定のリスクが生じます。通信しているエンドポイントがだれであるかがわからない場合は、取得する情報が悪意のあるサービスのメタデータである可能性があります。
+> セキュリティで保護されていないメタデータ要求には、セキュリティで保護されていないネットワーク要求と同様の一定の危険が伴います。通信先のエンドポイントが、本当に相手から通知されたとおりのエンドポイントかどうかわからない場合、取得した情報は悪質なサービスからのメタデータである可能性があります。
 
 ## <a name="add-service-reference-in-visual-studio"></a>Visual Studio の "サービス参照の追加"
 
- サービスが実行されている状態で、WCF クライアントプロキシを含むプロジェクトを右クリックし、[**サービス参照**の**追加** > ] を選択します。 [**サービス参照の追加] ダイアログボックス**で、呼び出すサービスの URL を入力**し、[実行] ボタンを**クリックします。 このダイアログ ボックスには、指定したアドレスで利用可能なサービスの一覧が表示されます。 サービスをダブルクリックして、使用可能なコントラクトと操作を確認し、生成されたコードの名前空間を指定して、 **[OK]** ボタンをクリックします。
+ サービスが実行されている状態で、WCF クライアントプロキシを含むプロジェクトを右クリックし、[@no__t の**追加**]-1**サービス参照**を選択します。 [**サービス参照の追加] ダイアログボックス**で、呼び出すサービスの URL を入力**し、[実行] ボタンを**クリックします。 このダイアログ ボックスには、指定したアドレスで利用可能なサービスの一覧が表示されます。 サービスをダブルクリックして、使用可能なコントラクトと操作を確認し、生成されたコードの名前空間を指定して、 **[OK]** ボタンをクリックします。
 
 ## <a name="example"></a>例
  サービス用に作成されたコントラクトのコード例を次に示します。
@@ -178,22 +178,22 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 WCF クライアントによってスローされる多くの例外は、サービスの例外によって発生します。 いくつかの例を次に示します。
 
-- <xref:System.Net.Sockets.SocketException>:既存の接続はリモートホストによって強制的に切断されました。
+- <xref:System.Net.Sockets.SocketException>: 既存の接続がリモート ホストによって強制終了されました。
 
-- <xref:System.ServiceModel.CommunicationException>:基になる接続が予期せずに閉じられました。
+- <xref:System.ServiceModel.CommunicationException>: 基になる接続が予期せずに閉じられました。
 
-- <xref:System.ServiceModel.CommunicationObjectAbortedException>:ソケット接続が中止されました。 これは、メッセージ処理時のエラー、リモート ホストでの受信タイムアウトの超過、または基になるネットワーク リソースの問題が原因で発生する可能性があります。
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>: ソケット接続が中止されました。 これは、メッセージ処理時のエラー、リモート ホストでの受信タイムアウトの超過、または基になるネットワーク リソースの問題が原因で発生する可能性があります。
 
-このような種類の例外が発生した場合、問題を解決するには、サービス側でトレースをオンにし、そこで発生した例外を特定することをお勧めします。 トレースの詳細に[ついては、「トレース](../../../docs/framework/wcf/diagnostics/tracing/index.md)と[トレースを使用したアプリケーションのトラブルシューティング](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)」を参照してください。
+このような種類の例外が発生した場合、問題を解決するには、サービス側でトレースをオンにし、そこで発生した例外を特定することをお勧めします。 トレースの詳細に[ついては、「トレース](./diagnostics/tracing/index.md)と[トレースを使用したアプリケーションのトラブルシューティング](./diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [方法: 双方向コントラクトを使用したサービスへのアクセス](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [方法: サービス操作を非同期に呼び出す](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [方法: 一方向コントラクトと要求/応答コントラクトを使用したサービスへのアクセス](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [方法: WSE 3.0 サービスへのアクセス](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [生成されたクライアント コードの理解](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [方法: XmlSerializer を使用して WCF クライアントアプリケーションの起動時間を短縮する](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
-- [クライアントのランタイム動作の指定](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [クライアントの動作の構成](../../../docs/framework/wcf/configuring-client-behaviors.md)
+- [方法: クライアントを作成する](how-to-create-a-wcf-client.md)
+- [方法 : 双方向コントラクトを使用してサービスにアクセスする](./feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [方法 : サービス操作を非同期に呼び出す](./feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [方法 : 一方向コントラクトと要求/応答コントラクトを使用してサービスにアクセスする](./feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [方法 : WSE 3.0 サービスにアクセスする](./feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [生成されたクライアント コードの理解](./feature-details/understanding-generated-client-code.md)
+- [方法 : XmlSerializer を使用する WCF クライアント アプリケーションの起動時間を短縮する](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [クライアントのランタイム動作の指定](specifying-client-run-time-behavior.md)
+- [クライアントの動作の構成](configuring-client-behaviors.md)

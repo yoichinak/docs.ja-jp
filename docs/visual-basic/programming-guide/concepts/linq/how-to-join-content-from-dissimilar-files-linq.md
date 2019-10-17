@@ -1,15 +1,15 @@
 ---
-title: '方法: 異種ファイル (LINQ) (Visual Basic) からコンテンツを結合します。'
+title: '方法: 異種ファイルのコンテンツを結合する (LINQ) (Visual Basic)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 0ac91ffaf914a8b799ad1124e9361595d482366b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f6fd9a1083cca941422eb89cd6bf23328fc8b5f6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593488"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320557"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>方法: 異種ファイル (LINQ) (Visual Basic) からコンテンツを結合します。
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>方法: 異種ファイルのコンテンツを結合する (LINQ) (Visual Basic)
 
 この例では、一致するキーとして共通の値を使用する 2 つのコンマ区切りファイルのデータを結合する方法を示します。 この方法は、2 つのスプレッドシートのデータ、またはスプレッドシートのデータと別の形式のファイルのデータを、新しいファイルに結合する必要がある場合に役立ちます。 この例は、変更を加えることで、あらゆる構造化テキスト ファイルに応用できます。  
   
@@ -17,7 +17,7 @@ ms.locfileid: "65593488"
   
 1. 次の行を scores.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 このファイルは、スプレッドシートのデータを表しています。 列 1 は学生の ID、列 2 ～ 5 はテストの得点です。  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -34,7 +34,7 @@ ms.locfileid: "65593488"
   
 2. 次の行を names.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 このファイルは、学生の姓、名、および学生 ID が含まれるスプレッドシートを表しています。  
   
-    ```  
+    ```csv  
     Omelchenko,Svetlana,111  
     O'Donnell,Claire,112  
     Mortensen,Sven,113  

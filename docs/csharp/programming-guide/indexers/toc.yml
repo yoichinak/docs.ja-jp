@@ -1,9 +1,0 @@
-- name: インデクサー
-  href: index.md
-  items:
-    - name: インデクサーの使用
-      href: using-indexers.md
-    - name: インターフェイスのインデクサー
-      href: indexers-in-interfaces.md
-    - name: プロパティとインデクサーの比較
-      href: comparison-between-properties-and-indexers.md

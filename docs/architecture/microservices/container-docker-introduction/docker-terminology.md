@@ -2,12 +2,12 @@
 title: Docker に関する用語
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | Docker 用語
 ms.date: 01/07/2019
-ms.openlocfilehash: 700cd9a00c30b0a5fc87f9ffcd63821bb578b0cc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a5f78ea0e848ef14f6b37e2d97d7546df20096c2
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674829"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179403"
 ---
 # <a name="docker-terminology"></a>Docker に関する用語
 

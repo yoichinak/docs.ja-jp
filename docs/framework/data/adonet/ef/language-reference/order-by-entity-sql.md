@@ -2,19 +2,19 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: f3310274766ff3619604e30bfb5f5ca437cb1acd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249751"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319446"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 SELECT ステートメントで返されるオブジェクトで使用される並べ替え順を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 [ ORDER BY   
    {  
       order_by_expression [SKIP n] [LIMIT n]  
@@ -52,16 +52,18 @@ SELECT ステートメントで返されるオブジェクトで使用される�
  ORDER BY 句内の各式は、順序付けられた不等号 (より小さい、より大きいなど) について比較できる型として評価される必要があります。 通常、これらの型は数値、文字列、日付などのスカラー プリミティブです。 比較できる型の RowType は順序も比較できます。  
   
  順序付けされたセットで、最上位の投影を除きコードが反復処理を行う場合、出力でその順序が維持されることは保証されません。  
-  
-```  
--- In the following sample, order is guaranteed to be preserved:  
+
+次の例では、順序は維持されることが保証されています。
+
+```sql  
 SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
         ORDER BY C1.LastName  
 ```  
-  
-```  
--- In the following query ordering of the nested query is ignored.  
+
+次のクエリでは、入れ子になったクエリの順序は無視されます。  
+
+```sql  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
@@ -70,7 +72,7 @@ SELECT C2.FirstName, C2.LastName
   
  UNION、UNION ALL、EXCEPT、または INTERSECT 操作を順序付けするには、次のパターンを使用してください。  
   
-```  
+```sql  
 SELECT ...  
 FROM ( UNION/EXCEPT/INTERSECT operation )  
 ORDER BY ...  
@@ -95,20 +97,22 @@ ORDER BY ...
   
 - ROW  
   
-- Value  
+- VALUE  
   
 ## <a name="ordering-nested-queries"></a>入れ子になったクエリの順序  
  Entity Framework では、入れ子になった式をクエリ内の任意の場所に配置できるため、入れ子になったクエリの順序は維持されません。  
-  
-```  
--- The following query will order the results by the last name.  
+
+次のクエリでは、結果を姓で並べ替えます。  
+
+```sql  
 SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
         ORDER BY C1.LastName  
 ```  
-  
-```  
--- In the following query, ordering of the nested query is ignored.  
+
+次のクエリでは、入れ子になったクエリの順序は無視されます。  
+
+```sql  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
@@ -118,11 +122,11 @@ SELECT C2.FirstName, C2.LastName
 ## <a name="example"></a>例  
  次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリでは、SELECT ステートメントで返されたオブジェクトの並べ替え順序の指定に ORDER BY 演算子を使用します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. [「方法:StructuralType の結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)を返すクエリを実行します。  
+1. 「 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
   
 2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
- [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
+ [!code-sql[DP EntityServices Concepts#ORDERBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#orderby)]  
   
 ## <a name="see-also"></a>関連項目
 

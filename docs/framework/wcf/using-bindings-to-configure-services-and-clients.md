@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 0f01fefc46cbc2cddaef9b025d59db8e2f734d9f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd83072d3a1c76279fcc00ea5b0a4a41e278e10a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645126"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321508"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>サービスとクライアントを構成するためのバインディングの使用
-バインディングとは、エンドポイントへの接続に必要な通信の詳細設定を指定するオブジェクトです。 具体的には、バインディングには構成情報が含まれており、この情報を使用してそれぞれのエンドポイントまたはクライアント チャネルで使用されるトランスポート仕様、ワイヤ形式 (メッセージ エンコード) 仕様、プロトコル仕様が定義され、クライアントまたはサービスのランタイムが作成されます。 機能している Windows Communication Foundation (WCF) サービスを作成するには、サービス内の各エンドポイントにバインディングが必要です。 ここでは、エンドポイントにおけるバインディングの概要と定義方法、特定のバインディングの指定方法を説明します。  
+バインディングとは、エンドポイントへの接続に必要な通信の詳細設定を指定するオブジェクトです。 具体的には、バインディングには構成情報が含まれており、この情報を使用してそれぞれのエンドポイントまたはクライアント チャネルで使用されるトランスポート仕様、ワイヤ形式 (メッセージ エンコード) 仕様、プロトコル仕様が定義され、クライアントまたはサービスのランタイムが作成されます。 機能する Windows Communication Foundation (WCF) サービスを作成するには、サービスの各エンドポイントにバインディングが必要です。 ここでは、エンドポイントにおけるバインディングの概要と定義方法、特定のバインディングの指定方法を説明します。  
   
 ## <a name="what-a-binding-defines"></a>バインディングの定義内容  
  バインディングの情報は、非常に基本的な情報にすることも複雑なものにすることもできます。 最も基本的なバインディングはトランスポート プロトコル (HTTP など) のみを指定したもので、これはエンドポイントへの接続に必ず使用します。 一般的に、バインディングに含まれるエンドポイントへの接続方法を示す情報は、次のカテゴリのいずれかに当てはまります。  
@@ -27,20 +27,20 @@ ms.locfileid: "64645126"
  メッセージ エンコード (Text/XML、バイナリ、MTOM (Message Transmission Optimization Mechanism) など) を決定します。これは、メッセージをネットワーク上のバイト ストリームとしてどのように表現するかを決定します。  
   
 ## <a name="system-provided-bindings"></a>システム標準のバインディング  
- WCF には、ほとんどのアプリケーションの要件とシナリオをカバーするように設計されたシステム指定のバインディングのセットが含まれています。 システム指定のバインディングの例のいくつかを次のクラスで示します。  
+ WCF には、ほとんどのアプリケーションの要件とシナリオに対応するように設計された、一連のシステム指定のバインディングが含まれています。 システム指定のバインディングの例のいくつかを次のクラスで示します。  
   
-- <xref:System.ServiceModel.BasicHttpBinding>:WS に準拠している HTTP プロトコル バインディング Web サービスに接続するのに適した-Basic Profile 1.1 仕様 (たとえば、ASP.NET Web サービス (ASMX)-ベースのサービス)。  
+- <xref:System.ServiceModel.BasicHttpBinding> : WS-I Basic Profile 1.1 仕様に準拠する Web サービス (ASP.NET Web サービス (ASMX) ベースのサービスなど) への接続に適した HTTP プロトコル バインディング。  
   
-- <xref:System.ServiceModel.WSHttpBinding>:HTTP プロトコル バインディングを Web に準拠するエンドポイントに接続するために適したサービス仕様のプロトコルです。  
+- <xref:System.ServiceModel.WSHttpBinding> : Web サービス仕様のプロトコルに準拠するエンドポイントへの接続に適した HTTP プロトコル バインディング。  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>:.NET binary エンコードとフレーム技術と組み合わせてを名前付きパイプ トランスポートの Windows でを使用して、同じコンピューター上の他の WCF エンドポイントに接続します。  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: .NET バイナリエンコードとフレームテクノロジを Windows の名前付きパイプトランスポートと共に使用して、同じコンピューター上の他の WCF エンドポイントに接続します。  
   
-- <xref:System.ServiceModel.NetMsmqBinding>:.NET binary エンコードとフレーム メッセージ キュー (MSMQ とも呼ばれます) と組み合わせて技術を使用して、他の WCF エンドポイントとメッセージをキューに置かれた接続を作成します。  
+- <xref:System.ServiceModel.NetMsmqBinding>: .NET バイナリエンコードとフレームテクノロジをメッセージキュー (MSMQ とも呼ばれます) と共に使用して、他の WCF エンドポイントとのキューに置かれたメッセージ接続を作成します。  
   
- 詳細についてで、システム指定のバインディングの完全な一覧を参照してください。 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)します。  
+ システム指定のバインディングの完全な一覧と説明については、「[システム指定のバインディング](system-provided-bindings.md)」を参照してください。  
   
 ## <a name="custom-bindings"></a>カスタム バインディング  
- システム指定のバインディング コレクションに、サービス アプリケーションに必要な機能の適切な組み合わせが含まれていない場合は、<xref:System.ServiceModel.Channels.CustomBinding> バインディングを作成できます。 要素の詳細については、<xref:System.ServiceModel.Channels.CustomBinding>バインドを参照してください[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)と[カスタム バインド](../../../docs/framework/wcf/extending/custom-bindings.md)します。  
+ システム指定のバインディング コレクションに、サービス アプリケーションに必要な機能の適切な組み合わせが含まれていない場合は、<xref:System.ServiceModel.Channels.CustomBinding> バインディングを作成できます。 @No__t-0 バインディングの要素の詳細については、「 [\<customBinding >](../configure-apps/file-schema/wcf/custombinding.md) 」と「[カスタムバインド](./extending/custom-bindings.md)」を参照してください。  
   
 ## <a name="using-bindings"></a>バインディングの使用  
  バインディングを使用する際には、次の 2 つの基本手順があります。  
@@ -50,16 +50,16 @@ ms.locfileid: "64645126"
 2. このバインディングを使用するエンドポイントを作成します。  
   
 ## <a name="code-and-configuration"></a>コードおよび構成  
- バインディングは、コードまたは構成を使用して定義または構成できます。 この 2 つの方法は使用するバインディングの種類に依存しません。たとえば、システム指定のバインディングまたは <xref:System.ServiceModel.Channels.CustomBinding> バインディングのどちらを使用していても関係ありません。 一般に、コードを使用すると、コンパイル時に開発者がバインディングの定義を完全に制御できます。 システム管理者または WCF サービスまたはクライアントのバインディングのパラメーターを変更するユーザーは、その一方で、構成を使用しています。 特定のマシンの要件を予測し、ネットワークの状態は、WCF アプリケーションの展開方法がないために、このような柔軟性が望ましい多くの場合。 バインディング (およびアドレス) 情報がコードから分離されているため、管理者はアプリケーションの再コンパイルや再配置を行わずにバインディングの詳細を変更できます。 バインディングをコードに定義した場合、構成ファイルに記述されている構成ベースの定義はすべて上書きされます。 この方法についての例は、以下のトピックを参照してください。  
+ バインディングは、コードまたは構成を使用して定義または構成できます。 この 2 つの方法は使用するバインディングの種類に依存しません。たとえば、システム指定のバインディングまたは <xref:System.ServiceModel.Channels.CustomBinding> バインディングのどちらを使用していても関係ありません。 一般に、コードを使用すると、コンパイル時に開発者がバインディングの定義を完全に制御できます。 一方、構成を使用すると、システム管理者または WCF サービスまたはクライアントのユーザーがバインディングのパラメーターを変更できます。 この柔軟性は、多くの場合、WCF アプリケーションのデプロイ先となる特定のコンピューター要件とネットワーク状態を予測する方法がないため、望ましいことがあります。 バインディング (およびアドレス) 情報がコードから分離されているため、管理者はアプリケーションの再コンパイルや再配置を行わずにバインディングの詳細を変更できます。 バインディングをコードに定義した場合、構成ファイルに記述されている構成ベースの定義はすべて上書きされます。 この方法についての例は、以下のトピックを参照してください。  
   
-- [方法: マネージ アプリケーションで WCF サービスをホスト](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)コードでバインディングの作成の例を示します。  
+- [方法: マネージアプリケーションで WCF サービスをホスト](how-to-host-a-wcf-service-in-a-managed-application.md)するコード内でバインディングを作成する例を示します。  
   
-- [チュートリアル: Windows Communication Foundation クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)の構成を使用してクライアントを作成する例を示します。  
+- [チュートリアル: Windows Communication Foundation クライアントを作成](how-to-create-a-wcf-client.md)する構成を使用してクライアントを作成する例を示します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [エンドポイントの作成の概要](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [方法: 構成でサービス バインディングを指定します。](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [方法: コードでのサービス バインドを指定します。](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
-- [方法: 構成でクライアント バインディングを指定します。](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
-- [方法: コードでクライアント バインディングを指定します。](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)
+- [エンドポイントの作成の概要](endpoint-creation-overview.md)
+- [方法: 構成でサービス バインディングを指定する](how-to-specify-a-service-binding-in-configuration.md)
+- [方法: コード内でサービス バインディングを指定する](how-to-specify-a-service-binding-in-code.md)
+- [方法: 構成でクライアント バインディングを指定する](how-to-specify-a-client-binding-in-configuration.md)
+- [方法: コード内でクライアント バインディングを指定する](how-to-specify-a-client-binding-in-code.md)

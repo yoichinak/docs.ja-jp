@@ -1,15 +1,15 @@
 ---
-title: '方法: 子要素 (XPATH-LINQ to XML) の一覧を検索 (Visual Basic)'
+title: '方法: 子要素の一覧の検索 (XPath LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 2868abfd-9f7b-412a-9cb5-f643f0fed146
-ms.openlocfilehash: 7ed31f17157176a6c100a8d02e065843a62b9587
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aab185cd4c157c7ee671418368668d46b4bb2a4a
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021662"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249972"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>方法: 子要素 (XPATH-LINQ to XML) の一覧を検索 (Visual Basic)
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>方法: 子要素の一覧の検索 (XPath LINQ to XML) (Visual Basic)
 このトピックでは、XPath の子要素軸と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 軸を比較します。  
   
  XPath 式は `./*` です。  
@@ -42,7 +42,7 @@ Next
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console
 Results are identical  
 <Name>Ellen Adams</Name>  
 <Street>123 Maple Street</Street>  
@@ -54,4 +54,4 @@ Results are identical
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath ユーザーの LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

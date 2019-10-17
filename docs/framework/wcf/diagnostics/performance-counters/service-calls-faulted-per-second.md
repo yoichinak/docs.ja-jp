@@ -1,26 +1,26 @@
 ---
-title: サービス:1 秒あたりの失敗した呼び出し
+title: 'サービス : 1 秒あたりの失敗した呼び出し'
 ms.date: 03/30/2017
 ms.assetid: 94247356-2b29-4b50-b639-91ca8c1cf3a9
-ms.openlocfilehash: 595b623d70bad82ea39ab3ef93fb5fd499268ff2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85c38f12c4d9bacf08597d465d831cf73e907cab
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915708"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321446"
 ---
-# <a name="service-calls-faulted-per-second"></a>サービス:1 秒あたりの失敗した呼び出し
-カウンター名:1 秒あたりの失敗した呼び出し。  
+# <a name="service-calls-faulted-per-second"></a>サービス : 1 秒あたりの失敗した呼び出し
+カウンター名 : 1 秒あたりの失敗した呼び出し。  
   
 ## <a name="description"></a>説明  
  このサービスの呼び出しのうち、エラーを返したものの 1 秒あたりの回数です。  
   
- このカウンターは、パフォーマンス カウンター型[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)、次の数式を使用して、その値が計算されます。  
+ このカウンターは、次の式を使用して計算された値を持つ、パフォーマンスカウンターの種類[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)です。  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)  
   
- Windows Communication Foundation (WCF) アプリケーションでは、サービス メソッドは、SOAP エラー メッセージを使用して、処理のエラー情報を通知します。 SOAP エラーは、サービス操作のメタデータに含まれるメッセージ型であり、堅牢かつインタラクティブに実行できるようにクライアントが使用するエラー コントラクトを作成するために使用されます。 SOAP エラーは XML 形式でクライアントに渡されるので、相互運用性の面でも優れています。  
+ Windows Communication Foundation (WCF) アプリケーションでは、サービスメソッドは SOAP エラーメッセージを使用して処理エラー情報を通信します。 SOAP エラーは、サービス操作のメタデータに含まれるメッセージ型であり、堅牢かつインタラクティブに実行できるようにクライアントが使用するエラー コントラクトを作成するために使用されます。 SOAP エラーは XML 形式でクライアントに渡されるので、相互運用性の面でも優れています。  
   
 ## <a name="see-also"></a>関連項目
 
-- [コントラクトおよびサービスのエラーの指定と処理](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [コントラクトおよびサービスのエラーの指定と処理](../../specifying-and-handling-faults-in-contracts-and-services.md)

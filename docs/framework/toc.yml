@@ -1,0 +1,66 @@
+- name: .NET Framework ガイド
+  href: index.md
+- name: 新着記事
+  href: whats-new/
+- name: 開始するには
+  href: get-started/
+- name: インストール ガイド
+  href: install/
+- name: 移行ガイド
+  href: migration-guide/
+- name: 開発ガイド
+  href: development-guide.md
+  items:
+    - name: アプリケーション ドメインとアセンブリ
+      href: app-domains/
+    - name: デスクトップ アプリケーションのリソース
+      href: resources/
+    - name: ユーザー補助
+      href: ui-automation/
+    - name: データとモデリング
+      href: data/
+    - name: クライアント アプリケーション
+      href: develop-client-apps.md
+      items:
+        - name: Windows Presentation Foundation
+          href: wpf/
+        - name: Windows フォーム
+          href: winforms/
+    - name: WCF を使用したサービス指向アプリケーション
+      href: wcf/
+    - name: Windows Workflow Foundation
+      href: windows-workflow-foundation/
+    - name: Windows サービス アプリケーション
+      href: windows-services/
+    - name: 64 ビット アプリケーション
+      href: 64-bit-apps.md
+    - name: ASP.NET を使用した Web アプリケーション
+      href: develop-web-apps-with-aspnet.md
+    - name: .NET Framework のネットワーク プログラミング
+      href: network-programming/
+    - name: アプリの構成
+      href: configure-apps/
+    - name: .NET ネイティブによるアプリのコンパイル
+      href: net-native/
+    - name: Windows Identity Foundation
+      href: security/
+    - name: デバッグ、トレース、およびプロファイリング
+      href: debug-trace-profile/
+    - name: 配置
+      href: deployment/
+    - name: パフォーマンス
+      href: performance/
+    - name: 動的プログラミング
+      href: reflection-and-codedom/
+    - name: MEF (Managed Extensibility Framework)
+      href: mef/
+    - name: アンマネージ コードとの相互運用
+      href: interop/
+    - name: アンマネージ API リファレンス
+      href: unmanaged-api/
+    - name: XAML サービス
+      href: xaml-services/
+- name: ツール
+  href: tools/
+- name: 追加のクラス ライブラリおよび API
+  href: additional-apis/

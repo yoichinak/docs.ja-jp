@@ -2,12 +2,12 @@
 title: '方法: 特定の子要素を持つ要素を検索する (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: af8667b6aa6870accb62fa22bd5243ce029b32c9
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4df2f8f55a516665c02d12c3bdf6569601db30c2
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709066"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249911"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>方法: 特定の子要素を持つ要素を検索する (Visual Basic)
 このトピックでは、特定の値を含む子要素を持つ特定の要素を検索する方法について説明します。  
@@ -30,7 +30,7 @@ Next
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 0002  
 0006  
 ```  
@@ -61,7 +61,7 @@ End Module
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 0002  
 0006  
 ```  

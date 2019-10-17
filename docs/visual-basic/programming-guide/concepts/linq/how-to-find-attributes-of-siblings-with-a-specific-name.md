@@ -1,15 +1,15 @@
 ---
-title: '方法: 特定の名前 (XPATH-LINQ to XML) を使用した兄弟の属性を検索 (Visual Basic)'
+title: '方法: 特定の名前 (XPath LINQ to XML) を持つ兄弟の属性を検索する (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 83b3ddca-830a-4b71-9756-9e4bdf907302
-ms.openlocfilehash: 07fb5647950c450d08ab3235ac8cb396eff15305
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 709c21cee37c42f7633b2b108b8846ddd8e3b4e7
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780576"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249897"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>方法: 特定の名前 (XPATH-LINQ to XML) を使用した兄弟の属性を検索 (Visual Basic)
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>方法: 特定の名前 (XPath LINQ to XML) を持つ兄弟の属性を検索する (Visual Basic)
 このトピックでは、コンテキスト ノードの兄弟が持つすべての属性を検索する方法について説明します。 コレクション内にある特定の名前の属性のみが返されます。  
   
  XPath 式を次に示します。  
@@ -48,7 +48,7 @@ Next
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console  
 Results are identical  
 id="bk101"  
 id="bk102"  
@@ -56,4 +56,4 @@ id="bk102"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath ユーザーの LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

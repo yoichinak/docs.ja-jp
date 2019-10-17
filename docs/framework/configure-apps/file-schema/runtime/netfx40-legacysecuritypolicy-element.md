@@ -14,12 +14,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252443"
 ---
-# <a name="netfx40_legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > 要素
+# <a name="netfx40_legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy> 要素
 
 ランタイムがレガシ コード アクセス セキュリティ (CAS) ポリシーを使用するかどうかを指定します。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx40_LegacySecurityPolicy >**  
 
 ## <a name="syntax"></a>構文

@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: リスト コレクション
-  ms.openlocfilehash: 0456582fb0aefa9e144b71517b9d8ed619929805
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 445017337663aea428af2f8dcd4027d716d05751
+  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850780"
+  ms.lasthandoff: 10/09/2019
+  ms.locfileid: "72179884"
 items:
 - durationInMinutes: 1
   content: >
@@ -36,6 +36,9 @@ items:
     if (a + b > 10)
         Console.WriteLine("The answer is greater than 10.");
     ```
+
+
+    環境でこれを実行している場合は、代わりに[ローカル バージョン](branches-and-loops-local.md)に関する指示に従ってください。
 
 
     合計が 10 未満になるように `b` の宣言を変更します。
@@ -216,7 +219,7 @@ items:
     > [!NOTE]
 
     > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
-- title: おめでとうございます!
+- title: お疲れさまでした。
   content: >-
     これで "分岐とループ" に関する対話式チュートリアルは終了です。 下の**リスト コレクション**のリンクをクリックして、次の対話式チュートリアルを開始することができます。また、[.NET サイト](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)にアクセスして .NET Core SDK をダウンロードし、ご利用のコンピューター上でプロジェクトを作成し、コーディングを続けることもできます。 "次の手順" セクションでは、これらのチュートリアルに戻ります。
 

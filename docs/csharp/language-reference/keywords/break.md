@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 77d18d12cd0fabb26906a5b58dc3939da6214a29
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2628da73364cf94a52e2862d349243c100d4afaf
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602248"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179935"
 ---
 # <a name="break-c-reference"></a>break (C# リファレンス)
 
@@ -27,12 +27,6 @@ ms.locfileid: "69602248"
 
 ## <a name="example"></a>例
 
-この例では、`break` ステートメントを使用して、入れ子になった内側のループから抜け出し、外側のループに制御を戻します。
-
-[!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
-
-## <a name="example"></a>例
-
 次に示すのは、[switch](./switch.md) ステートメントで `break` を使用する例です。
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
@@ -43,6 +37,18 @@ ms.locfileid: "69602248"
 Enter your selection (1, 2, or 3): 4
 Sorry, invalid selection.
 ```
+
+## <a name="example"></a>例
+
+この例では、`break` ステートメントを使用して、入れ子になった内側のループから抜け出し、外側のループに制御を戻します。 コントロールは、入れ子になったループの 1 つ上のレベルに_のみ_返されます。
+
+[!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
+
+## <a name="example"></a>例
+
+この例で、`break` ステートメントは、ループの各繰り返し時に現在の分岐を抜けるためだけに使用されています。 ループ自体は、入れ子になった [switch](./switch.md) ステートメントに属する `break` のインスタンスの影響は受けません。
+
+[!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

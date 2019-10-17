@@ -5,16 +5,16 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 0253c57f080705b648d9f416368d0fe974ac83ab
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2fe473da3eeabef3852e3003e61b3b9604332855
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834668"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291270"
 ---
 # <a name="use-automatic-layout-overview"></a>自動レイアウトの使用の概要
 
-このトピックでは、ローカライズ可能な [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] を使用して [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションを作成する方法に関する開発者向けのガイドラインを紹介します。 以前は、UI のローカライズは時間のかかるプロセスでした。 UI が調整された各言語では、ピクセル単位の調整が必要でした。 現在、適切な設計と適切なコーディング標準を使用して [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] を構築できます。これにより、ローカライザーのサイズと位置が小さくなります。 サイズ変更や位置変更が簡単になるアプリケーションを作成する方法は、自動レイアウトと呼ばれ、@no__t 0 アプリケーション設計を使用して実現できます。
+このトピックでは、ローカライズ可能なユーザーインターフェイス (Ui) を使用して @no__t 0 アプリケーションを記述する方法に関する開発者向けのガイドラインを紹介します。 以前は、UI のローカライズは時間のかかるプロセスでした。 UI が調整された各言語では、ピクセル単位の調整が必要でした。 現在、適切な設計と適切なコーディング標準を使用して、Ui を構築して、ローカライザーのサイズ変更や位置変更を減らすことができます。 サイズ変更や位置変更が簡単になるアプリケーションを作成する方法は、自動レイアウトと呼ばれ、@no__t 0 アプリケーション設計を使用して実現できます。
 
 <a name="advantages_of_autolayout"></a>
 

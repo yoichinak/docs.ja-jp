@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7142ef36d4ed1bbcb715748202eefdd5504f697e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8368930e60210b0cb470700e9c9470c57d536c13
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956641"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291413"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR プロファイラと Windows ストア アプリ
 
@@ -27,7 +27,7 @@ ms.locfileid: "69956641"
 
 ## <a name="introduction"></a>はじめに
 
-入門用の段落を過ぎた場合は、CLR プロファイル API について理解している必要があります。 管理対象のデスクトップアプリケーションに対して適切に機能する診断ツールが既に作成されています。 ここで、ツールが管理対象の Windows ストアアプリで動作するようにするための作業について説明します。 既にこの作業を行ったことがあるかもしれませんが、これは簡単な作業ではないことを発見しました。 実際には、すべてのツール開発者にとって明らかでない可能性がある考慮事項がいくつかあります。 例:
+入門用の段落を過ぎた場合は、CLR プロファイル API について理解している必要があります。 管理対象のデスクトップアプリケーションに対して適切に機能する診断ツールが既に作成されています。 ここで、ツールが管理対象の Windows ストアアプリで動作するようにするための作業について説明します。 既にこの作業を行ったことがあるかもしれませんが、これは簡単な作業ではないことを発見しました。 実際には、すべてのツール開発者にとって明らかでない可能性がある考慮事項がいくつかあります。 以下に例を示します。
 
 - Windows ストアアプリは、大幅に削減されたアクセス許可を持つコンテキストで実行されます。
 
@@ -96,7 +96,7 @@ Windows RT デバイスは非常にロックダウンされています。 サ�
 
 **プロファイラー DLL に署名しています**
 
-Windows がプロファイラー DLL を読み込もうとすると、プロファイラー DLL が正しく署名されているかどうかが検証されます。 それ以外の場合、既定では読み込みに失敗します。 これには、2 つの方法があります。
+Windows がプロファイラー DLL を読み込もうとすると、プロファイラー DLL が正しく署名されているかどうかが検証されます。 それ以外の場合、既定では読み込みに失敗します。 これには 2 つの方法があります。
 
 - プロファイラー DLL が署名されていることを確認します。
 
@@ -106,7 +106,7 @@ Windows がプロファイラー DLL を読み込もうとすると、プロフ�
 
 Windows ストアアプリには、residesBy が既定のファイルシステム上の場所からプロファイラー DLL を読み込んで実行するためのアクセス許可が必要です。また、Windows ストアアプリには、ほとんどのディレクトリに対するこのようなアクセス許可がありません。また、プロファイラー DLL の読み込みに失敗しました。では、Windows アプリケーションイベントログに次のようなエントリが生成されます。
 
-```Output
+```output
 NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateInstance.  Profiler CLSID: '{xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}'.  HRESULT: 0x80070005.  Process ID (decimal): 4688.  Message ID: [0x2504].
 ```
 
@@ -114,7 +114,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 ### <a name="startup-load"></a>スタートアップ読み込み
 
-通常、デスクトップアプリでは、プロファイラーの UI は、必要な CLR プロファイル API 環境変数 (つまり、、、および`COR_PROFILER` `COR_PROFILER_PATH`) を含む環境ブロックを初期化することによって`COR_ENABLE_PROFILING`、プロファイラー DLL のスタートアップ読み込みを要求します。その後、その環境ブロックを使用して新しいプロセスを作成します。 Windows ストアアプリでも同じことが当てはまりますが、メカニズムは異なります。
+通常、デスクトップアプリでは、必要な CLR プロファイリング API 環境変数 (つまり、@no__t 0、`COR_ENABLE_PROFILING`、および `COR_PROFILER_PATH`) を含む環境ブロックを初期化し、新しいを作成することによって、プロファイラーの DLL のスタートアップ読み込みがプロファイラーの UI に表示されます。その環境ブロックを使用して処理します。 Windows ストアアプリでも同じことが当てはまりますが、メカニズムは異なります。
 
 **管理者特権で実行しない**
 
@@ -124,9 +124,9 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 最初に、起動する Windows ストアアプリをプロファイラーユーザーに要求します。 デスクトップアプリの場合、ファイル参照ダイアログが表示され、ユーザーは .exe ファイルを見つけて選択します。 ただし、Windows ストアアプリは異なります。 [参照] ダイアログボックスを使用することは意味がありません。 代わりに、ユーザーが選択できるように、インストールされている Windows ストアアプリの一覧をユーザーに表示することをお勧めします。
 
-クラスを使用し<xref:Windows.Management.Deployment.PackageManager>て、このリストを生成できます。 `PackageManager`は、デスクトップアプリで使用できる Windows ランタイムクラスであり、実際にはデスクトップアプリで*のみ*使用できます。
+@No__t-0 クラスを使用して、このリストを生成できます。 `PackageManager` はデスクトップアプリで使用できる Windows ランタイムクラスであり、実際にはデスクトップアプリで*のみ*使用できます。
 
-次のコード例では、でC#デスクトップアプリとして記述された`PackageManager`仮想プロファイラー UI から、を使用して Windows アプリの一覧を生成しています。
+次のコード例では、でC#デスクトップアプリとして記述された仮定のプロファイラー UI から、`PackageManager` を使用して Windows アプリの一覧を生成します。
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -137,7 +137,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **カスタム環境ブロックの指定**
 
-新しい COM インターフェイス[Ipackagedebugsettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)を使用すると、Windows ストアアプリの実行動作をカスタマイズして、何らかの形式の診断を簡単に行うことができます。 [Enabledebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)のメソッドの1つは、起動時に環境ブロックを Windows ストアアプリに渡すことができるほか、自動プロセス中断を無効にするなどの便利な効果があります。 環境ブロックは、CLR がプロファイラー DLL を読み込むために使用する環境変数`COR_PROFILER`( `COR_ENABLE_PROFILING`、、 `COR_PROFILER_PATH)`および) を指定する必要があるため、重要です。
+新しい COM インターフェイス[Ipackagedebugsettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)を使用すると、Windows ストアアプリの実行動作をカスタマイズして、何らかの形式の診断を簡単に行うことができます。 [Enabledebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)のメソッドの1つは、起動時に環境ブロックを Windows ストアアプリに渡すことができるほか、自動プロセス中断を無効にするなどの便利な効果があります。 CLR がプロファイラー DLL を読み込むために使用する環境変数 (`COR_PROFILER`、`COR_ENABLE_PROFILING`、および `COR_PROFILER_PATH)`) を指定する必要があるため、環境ブロックは重要です。
 
 次のコード スニペットを考えてみます。
 
@@ -149,15 +149,15 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
 次の2つの項目を取得する必要があります。
 
-- `packageFullName`は、パッケージを反復処理してグラブ`package.Id.FullName`するときに確認できます。
+- `packageFullName` は、パッケージを繰り返し処理して `package.Id.FullName` を取得しているときに確認できます。
 
-- `debuggerCommandLine`もう少し興味深いことです。 カスタム環境ブロックを Windows ストアアプリに渡すために、独自の単純なダミーデバッガーを作成する必要があります。 Windows ストアアプリが中断された後、次の例のようなコマンドラインを使用してデバッガーを起動すると、デバッガーがアタッチされます。
+- `debuggerCommandLine` はもう少し興味深いものです。 カスタム環境ブロックを Windows ストアアプリに渡すために、独自の単純なダミーデバッガーを作成する必要があります。 Windows ストアアプリが中断された後、次の例のようなコマンドラインを使用してデバッガーを起動すると、デバッガーがアタッチされます。
 
-    ```Output
+    ```console
     MyDummyDebugger.exe -p 1336 -tid 1424
     ```
 
-     は、Windows ストアアプリにプロセス ID 1336 があること`-tid 1424`を意味します。これは、スレッド id 1424 が中断されているスレッドであることを意味します。 `-p 1336` ダミーデバッガーは、コマンドラインから ThreadID を解析し、そのスレッドを再開してから終了します。
+     `-p 1336` は、Windows ストアアプリにプロセス ID 1336 があることを意味し、`-tid 1424` はスレッド ID 1424 が中断されているスレッドであることを意味します。 ダミーデバッガーは、コマンドラインから ThreadID を解析し、そのスレッドを再開してから終了します。
 
      これを行うコードC++例を次に示します (エラーチェックを必ず追加してください)。
 
@@ -176,7 +176,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
     }
     ```
 
-     このダミーデバッガーを診断ツールのインストールの一部としてデプロイし、 `debuggerCommandLine`パラメーターでこのデバッガーへのパスを指定する必要があります。
+     このダミーデバッガーを診断ツールのインストールの一部としてデプロイし、`debuggerCommandLine` パラメーターでこのデバッガーへのパスを指定する必要があります。
 
 **Windows ストアアプリを起動しています**
 
@@ -253,7 +253,7 @@ Windows ストアアプリは最後にプロファイラー DLL を読み込み�
 
 Windows API を参照すると、すべての API がデスクトップアプリ、Windows ストアアプリ、またはその両方に適用されることがわかります。 たとえば、 [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount)関数のドキュメントの「**要件**」セクションでは、関数がデスクトップアプリにのみ適用されることを示しています。 これに対し、 [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)関数は、デスクトップアプリと Windows ストアアプリの両方で使用できます。
 
-プロファイラー DLL を開発するときは、それを Windows ストアアプリであるかのように扱い、Windows ストアアプリで使用可能なものとしてドキュメント化されている Api のみを使用します。 依存関係を分析し (たとえば、プロファイラー DLL `link /dump /imports`に対して実行して監査することができます)、ドキュメントを検索して、どの依存関係が ok であるかを確認します。 ほとんどの場合、違反を修正するには、安全として記述されている API の新しい形式を使用します (たとえば、 [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount)を[InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)に置き換えます)。
+プロファイラー DLL を開発するときは、それを Windows ストアアプリであるかのように扱い、Windows ストアアプリで使用可能なものとしてドキュメント化されている Api のみを使用します。 依存関係を分析します (たとえば、プロファイラー DLL に対して `link /dump /imports` を実行して監査します)。その後、ドキュメントを検索して、どの依存関係に問題がないかを確認します。 ほとんどの場合、違反を修正するには、安全として記述されている API の新しい形式を使用します (たとえば、 [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount)を[InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)に置き換えます)。
 
 プロファイラー DLL は、デスクトップアプリにのみ適用されるいくつかの Api を呼び出しますが、プロファイラー DLL が Windows ストアアプリ内に読み込まれていても動作しているようです。 Windows ストアアプリプロセスに読み込まれるときに、プロファイラー DLL の Windows ストアアプリで使用するためのドキュメントに記載されていない API を使用する危険性があることに注意してください。
 
@@ -287,7 +287,7 @@ Windows ストアアプリのアクセス許可とデスクトップアプリの
 
 ほとんどのデータは、Profiler DLL と Profiler UI の間でファイルを介して渡される可能性があります。 キーとして、プロファイラー DLL (Windows ストアアプリのコンテキスト内) とプロファイラー UI の両方がに対する読み取りと書き込みのアクセス権を持つファイルの場所を選択します。 たとえば、一時フォルダーのパスは、プロファイラー DLL とプロファイラー UI の両方がアクセスできますが、他の Windows ストアアプリパッケージがアクセスできない場所です (したがって、他の Windows ストアアプリパッケージからログに記録される情報はシールドされます)。
 
-プロファイラー UI とプロファイラー DLL は、どちらもこのパスを個別に判別できます。 プロファイラー UI は、現在のユーザーに対してインストールされているすべてのパッケージを反復処理する場合 (前のサンプル`PackageId`コードを参照)、クラスへのアクセス権を取得します。このとき、このスニペットと同様のコードを使用して一時フォルダーパスを取得できます。 (簡潔にするために、エラーチェックは省略されています)。
+プロファイラー UI とプロファイラー DLL は、どちらもこのパスを個別に判別できます。 プロファイラー UI は、現在のユーザーに対してインストールされているすべてのパッケージを反復処理する (前のサンプルコードを参照) と、このスニペットと同様のコードを使用して一時フォルダーパスを取得できる @no__t 0 クラスへのアクセス権を取得します。 (簡潔にするために、エラーチェックは省略されています)。
 
 ```csharp
 // C# code for the Profiler UI.
@@ -298,13 +298,13 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-一方、プロファイラー DLL は基本的に同じことを行うことができますが、 <xref:Windows.Storage.ApplicationData> [applicationdata. Current](xref:Windows.Storage.ApplicationData.Current%2A)プロパティを使用してクラスに簡単にアクセスできます。
+一方、プロファイラー DLL は基本的に同じことを行うことができますが、 [Applicationdata. Current](xref:Windows.Storage.ApplicationData.Current%2A)プロパティを使用して @no__t 0 クラスに簡単にアクセスできます。
 
 **イベントによる通信**
 
 プロファイラーの UI とプロファイラーの DLL の間に単純なシグナル化のセマンティクスが必要な場合は、デスクトップアプリだけでなく Windows ストアアプリ内でもイベントを使用できます。
 
-プロファイラー DLL から[Createeventex](/windows/desktop/api/synchapi/nf-synchapi-createeventexa)関数を呼び出して、任意の名前の名前付きイベントを作成できます。 例:
+プロファイラー DLL から[Createeventex](/windows/desktop/api/synchapi/nf-synchapi-createeventexa)関数を呼び出して、任意の名前の名前付きイベントを作成できます。 以下に例を示します。
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
@@ -319,7 +319,7 @@ CreateEventEx(
 
 `AppContainerNamedObjects\<acSid>\MyNamedEvent`
 
-`<acSid>`は、Windows ストアアプリの AppContainer SID です。 このトピックの前のセクションでは、現在のユーザーに対してインストールされているパッケージを反復処理する方法を示しました。 このサンプルコードから、packageId を取得できます。 また、packageId からは、次のよう`<acSid>`なコードを使用してを取得できます。
+`<acSid>` は、Windows ストアアプリの AppContainer SID です。 このトピックの前のセクションでは、現在のユーザーに対してインストールされているパッケージを反復処理する方法を示しました。 このサンプルコードから、packageId を取得できます。 また、packageId からは、次のようなコードを使用して @no__t 0 を取得できます。
 
 ```csharp
 IntPtr acPSID;
@@ -354,7 +354,7 @@ Windows ランタイムメタデータ (WinMD) ファイルの詳細について
 
 CLR に関する限り、すべての WinMD ファイルはモジュールです。 そのため、CLR プロファイル API は、他のマネージモジュールと同じように、WinMD ファイルが読み込まれたときと、その ModuleIDs どのようなものであるかをプロファイラー DLL に伝えます。
 
-プロファイラー DLL は、 [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md)メソッドを呼び出し、 `pdwModuleFlags` [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md)フラグの出力パラメーターを調べることによって、他のモジュールとの WinMD ファイルを区別できます。 (ModuleID が WinMD を表している場合にのみ設定されます)。
+プロファイラー DLL は、 [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md)メソッドを呼び出し、 [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md)フラグの `pdwModuleFlags` 出力パラメーターを調べることによって、他のモジュールとの WinMD ファイルを区別できます。 (ModuleID が WinMD を表している場合にのみ設定されます)。
 
 ### <a name="reading-metadata-from-winmds"></a>WinMDs からのメタデータの読み取り
 
@@ -362,11 +362,11 @@ WinMD ファイル (通常のモジュールなど) には、[メタデータ ap
 
 これにより、プロファイラーがメタデータ Api を使用したときに取得するビュー (未加工の Windows ランタイムビュー、またはマップされた .NET Framework ビュー) を確認できます。  答えは、ユーザーによって異なります。
 
-WinMD で[ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)メソッドを呼び出して、 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)などのメタデータインターフェイスを取得する場合、 `dwOpenFlags`パラメーターに[ofnotransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)を設定して、このマッピングを無効にすることができます。 それ以外の場合、既定ではマッピングが有効になります。 通常、プロファイラーはマッピングを有効なままにします。これにより、プロファイラー DLL が WinMD メタデータから取得する文字列 (たとえば、型の名前) がわかりやすく、自然にプロファイラーユーザーに表示されます。
+WinMD で[ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)メソッドを呼び出して、 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)などのメタデータインターフェイスを取得する場合は、`dwOpenFlags` パラメーターで[ofnotransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)を設定して、このマッピングを無効にすることができます。 それ以外の場合、既定ではマッピングが有効になります。 通常、プロファイラーはマッピングを有効なままにします。これにより、プロファイラー DLL が WinMD メタデータから取得する文字列 (たとえば、型の名前) がわかりやすく、自然にプロファイラーユーザーに表示されます。
 
 ### <a name="modifying-metadata-from-winmds"></a>WinMDs からのメタデータの変更
 
-WinMDs でのメタデータの変更はサポートされていません。 WinMD ファイルに対して[ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)メソッドを呼び出し、 `dwOpenFlags`パラメーターに[ofwrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)を指定した場合、または[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)などの書き込み可能なメタデータインターフェイスを要求する場合、 [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)はオーバー. これは、インストルメンテーションをサポートするためにメタデータを変更する必要がある (たとえば、AssemblyRefs や新しいメソッドを追加する) 必要がある、プロファイラーの IL 書き換えに特に重要です。 そのため、(前のセクションで説明したように) 最初に[COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md)を確認し、そのようなモジュールで書き込み可能なメタデータインターフェイスを要求しないようにする必要があります。
+WinMDs でのメタデータの変更はサポートされていません。 WinMD ファイルに対して[ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)メソッドを呼び出し、`dwOpenFlags` パラメーターで[ofwrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)を指定した場合、または[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)などの書き込み可能なメタデータインターフェイスを要求した場合、 [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)は失敗します。 これは、インストルメンテーションをサポートするためにメタデータを変更する必要がある (たとえば、AssemblyRefs や新しいメソッドを追加する) 必要がある、プロファイラーの IL 書き換えに特に重要です。 そのため、(前のセクションで説明したように) 最初に[COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md)を確認し、そのようなモジュールで書き込み可能なメタデータインターフェイスを要求しないようにする必要があります。
 
 ### <a name="resolving-assembly-references-with-winmds"></a>WinMDs を使用したアセンブリ参照の解決
 
@@ -384,13 +384,13 @@ WinMDs でのメタデータの変更はサポートされていません。 Win
 
 関連するポイントは、プロファイラーによって作成されたスレッドに対して行われた呼び出しが、プロファイラー DLL の[ICorProfilerCallback](icorprofilercallback-interface.md)メソッドのいずれかの実装の外部から行われた場合でも、常に同期と見なされることです。 少なくとも、の場合はとして使用されます。 これで、 [Forcegc メソッド](icorprofilerinfo-forcegc-method.md)の呼び出しにより、CLR がプロファイラーのスレッドをマネージスレッドに変換したので、そのスレッドはプロファイラーのスレッドと見なされなくなりました。 そのため、CLR では、そのスレッドに対して同期として機能する対象をより厳密に定義しています。つまり、呼び出しは、同期として限定するために、いずれかのプロファイラー DLL の[ICorProfilerCallback](icorprofilercallback-interface.md)メソッドの内部から生成される必要があります。
 
-これは実際に何を意味するのでしょうか。 ほとんどの[ICorProfilerInfo](icorprofilerinfo-interface.md)メソッドは、同期的に呼び出すだけで安全です。それ以外の場合は、すぐに失敗します。 そのため、プロファイラーによって作成されたスレッド (たとえば、 [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)、 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)、または[RequestRevert](icorprofilerinfo4-requestrevert-method.md)) で通常行われる他の呼び出しに対して、profiler DLL が[forcegc メソッド](icorprofilerinfo-forcegc-method.md)スレッドを再利用すると、問題が発生します. [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)などの非同期セーフ関数でも、マネージスレッドから呼び出された場合、特別なルールがあります。 (プロファイラースタックウォークの[ブログ投稿を参照してください。詳細](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/)については、「」を参照してください)。
+これは実際に何を意味するのでしょうか。 ほとんどの[ICorProfilerInfo](icorprofilerinfo-interface.md)メソッドは、同期的に呼び出すだけで安全です。それ以外の場合は、すぐに失敗します。 そのため、プロファイラーによって作成されたスレッド (たとえば、 [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)、 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)、または[RequestRevert](icorprofilerinfo4-requestrevert-method.md)) で通常行われる他の呼び出しに対して、profiler DLL が[forcegc メソッド](icorprofilerinfo-forcegc-method.md)スレッドを再利用すると、問題が発生します. [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)などの非同期セーフ関数でも、マネージスレッドから呼び出された場合、特別なルールがあります。 (詳細については、ブログの投稿 [Profiler スタックウォーク:詳細については、@ no__t-0 以降の説明を参照してください。)
 
 したがって、 [Forcegc メソッド](icorprofilerinfo-forcegc-method.md)を呼び出すためにプロファイラー DLL によって作成されるすべてのスレッドは、gc をトリガーしてから gc コールバックに応答する目的で*のみ*使用することをお勧めします。 スタックサンプリングやデタッチなどの他のタスクを実行するために、プロファイル API を呼び出すことはできません。
 
 ### <a name="conditionalweaktablereferences"></a>ConditionalWeakTableReferences
 
-.NET Framework 4.5 以降では、新しい GC コールバックである[Conditional/Tableelementreferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)が使用されます。これにより、プロファイラーは*依存ハンドル*に関するより詳細な情報を得ることができます。 これらのハンドルは、GC 有効期間管理の目的で、ソースオブジェクトからターゲットオブジェクトへの参照を効果的に追加します。 依存ハンドルはまったく新しいものではなく、マネージコードをプログラミングする開発者は、Windows 8 および .NET Framework 4.5 の<xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType>前であっても、クラスを使用して独自の依存ハンドルを作成できるようになりました。
+.NET Framework 4.5 以降では、新しい GC コールバックである[Conditional/Tableelementreferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)が使用されます。これにより、プロファイラーは*依存ハンドル*に関するより詳細な情報を得ることができます。 これらのハンドルは、GC 有効期間管理の目的で、ソースオブジェクトからターゲットオブジェクトへの参照を効果的に追加します。 依存ハンドルはまったく新しいものではなく、マネージコードをプログラミングする開発者は、Windows 8 および .NET Framework 4.5 より前でも、<xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> クラスを使用して独自の依存ハンドルを作成できます。
 
 ただし、マネージ XAML Windows ストアアプリでは、依存ハンドルが頻繁に使用されるようになりました。 特に、CLR では、マネージオブジェクトとアンマネージ Windows ランタイムオブジェクトの間の参照サイクルの管理を支援するために使用されます。 これは、メモリプロファイラーがこれらの依存ハンドルを通知して、ヒープグラフの残りの部分と共に視覚化できるようにするために、これまでよりも重要であることを意味します。 プロファイラー DLL は、[RootReferences2](icorprofilercallback2-rootreferences2-method.md)、 [ObjectReferences](icorprofilercallback-objectreferences-method.md)、および[Conditional tableelementreferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)を一緒に使用して、ヒープグラフの完全なビューを形成する必要があります。
 

@@ -3,12 +3,12 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e8bf39716482eb94e5686c1a150667be9f8ef620
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: bce61d7a1838753f6cc2397440208e0c02b8194a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391953"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002696"
 ---
 # <a name="the-history-of-c"></a>C\# の歴史
 
@@ -28,7 +28,7 @@ C# のビルド ツールでは、言語の最新のメジャー リリースが
 
 ## <a name="c-version-10"></a>C# バージョン 1.0
 
-振り返ってみると、Visual Studio.net 2002 でリリースされた C# バージョン 1.0 は Java に似ていました。 [ECMA で掲げられた設計目標の一環](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)として、C# は "シンプルかつモダンな汎用オブジェクト指向言語" を目指していました。  当時、Java に似ていることは、初期の設計目標を達成したことを意味していました。
+振り返ってみると、Visual Studio .NET 2002 でリリースされた C# バージョン 1.0 は Java に似ていました。 [ECMA で掲げられた設計目標の一環](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)として、C# は "シンプルかつモダンな汎用オブジェクト指向言語" を目指していました。  当時、Java に似ていることは、初期の設計目標を達成したことを意味していました。
 
 しかし、今 C# 1.0 を振り返ってみると、少し混乱するかもしれません。 現在では当たり前となっている組み込みの非同期機能や、ジェネリック関連の優れた機能の一部は備わっていませんでした。 実際、ジェネリック全体がなかったのです。  そして [LINQ](../linq/index.md) も、 まだ使用できませんでした。 このような追加機能が登場するまでにはまだ数年かかります。
 
@@ -38,7 +38,7 @@ C# 1.0 の主な機能:
 
 - [クラス](../programming-guide/classes-and-structs/classes.md)
 - [構造体](../programming-guide/classes-and-structs/structs.md)
-- [インターフェイス](../programming-guide/interfaces/index.md)
+- "[インターフェイス](../programming-guide/interfaces/index.md)"
 - [イベント](../events-overview.md)
 - [プロパティ](../properties.md)
 - [デリゲート](../delegates-overview.md)
@@ -48,7 +48,7 @@ C# 1.0 の主な機能:
 
 ## <a name="c-version-12"></a>C# バージョン 1.2
 
-Visual Studio 2003 に付属の C# バージョン 1.2 言語に対する細かな機能強化がいくつか含まれています。 最も重要な点は、このバージョン以降、<xref:System.Collections.IEnumerator> によって <xref:System.IDisposable> が実装された場合、`foreach` ループ内で生成されたコードでは、その <xref:System.Collections.IEnumerator> 上で <xref:System.IDisposable.Dispose%2A> が呼び出されているということです。
+Visual Studio .NET 2003 に付属の C# バージョン 1.2。 言語に対する細かな機能強化がいくつか含まれています。 最も重要な点は、このバージョン以降、<xref:System.Collections.IEnumerator> によって <xref:System.IDisposable> が実装された場合、`foreach` ループ内で生成されたコードでは、その <xref:System.Collections.IEnumerator> 上で <xref:System.IDisposable.Dispose%2A> が呼び出されているということです。
 
 ## <a name="c-version-20"></a>C# バージョン 2.0
 
@@ -132,7 +132,7 @@ Visual Studio 2012 でリリースされた C# バージョン 5.0 は、この�
 
 ## <a name="c-version-60"></a>C# バージョン 6.0
 
-C# バージョン 3.0 と 5.0 では、主要な新機能がオブジェクト指向言語に追加されました。 Visual Studio 2013 と共にリリースされたバージョン 6.0 では、主要な目玉機能を投入する代わりに、C# プログラミングをより生産的にする多くの小さな機能をリリースしました。 その一部を次に示します。
+C# バージョン 3.0 と 5.0 では、主要な新機能がオブジェクト指向言語に追加されました。 Visual Studio 2013 と共にリリースされたバージョン 6.0 では、主要な目玉機能を投入する代わりに、C# プログラミングをより生産的にする多くの小さな機能をリリースしました。 そのいくつかを次に示します。
 
 - [静的インポート](./csharp-6.md#using-static)
 - [例外フィルター](./csharp-6.md#exception-filters)

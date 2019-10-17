@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.CanSeek プロパティ (System.Data.SqlTypes)
+title: SqlStreamChars. CanSeek プロパティ (SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
@@ -13,37 +13,37 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: b85e21c6bc89d2a00ff8d302f67a3d074d5e7b8f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: eb32978f62b7d46f0abf715e2bca347592c0fda8
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634384"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395774"
 ---
-# <a name="sqlstreamcharscanseek-property"></a>SqlStreamChars.CanSeek プロパティ
+# <a name="sqlstreamcharscanseek-property"></a>SqlStreamChars. CanSeek プロパティ
 
-派生クラスでオーバーライドされると、現在のストリームがシーク操作をサポートしているかどうかを示す値を取得します。 このプロパティが含まれるアセンブリには、SQLAccess.dll で友人関係があります。 SQL Server で使用するものでは。 その他のデータベースには、そのデータベースによって提供されるホスティング メカニズムを使用します。
+派生クラスでオーバーライドされた場合、現在のストリームがシーク操作をサポートしているかどうかを示す値を取得します。 このプロパティを含むアセンブリには、SQLAccess .dll とのフレンド関係があります。 SQL Server での使用を目的としています。 他のデータベースの場合は、そのデータベースによって提供されるホスティングメカニズムを使用します。
 
 ```csharp
 public abstract bool CanSeek { get; }
 ```
 
-## <a name="property-value"></a>プロパティの値
+## <a name="property-value"></a>プロパティ値
 
 <xref:System.Boolean>\
-`true` 現在のストリームがシーク操作をサポートしている場合それ以外の場合、`false`します。
+現在のストリームがシーク操作をサポートしている場合は `true`。それ以外の場合は、`false` です。
 
 ## <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> `SqlStreamChars.CanSeek`プロパティはプライベートであり、コード内で直接使用するものではありません。
+> @No__t-0 プロパティはプライベートであり、コードで直接使用するためのものではありません。
 >
-> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのプロパティの使用はサポートしていません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **名前空間:** <xref:System.Data.SqlTypes>
 
-**アセンブリ:** System.Data (system.data.dll 内)
+**アセンブリ:** System.string (System. Data. .dll)
 
-**.NET framework のバージョン:** 2.0 以降で使用可能です。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

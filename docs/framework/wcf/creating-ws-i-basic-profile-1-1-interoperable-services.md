@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: 06a59c7457c0367d421cb46e33cb67f8fa039c7d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: eb1cd12c45a276d5c3cb14f89205fff618121abc
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879180"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320128"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>WS-I Basic Profile 1.1 の相互運用可能サービスの作成
-ASP.NET Web サービス クライアントを相互運用できるようにする WCF サービス エンドポイントを構成するには。  
+ASP.NET Web サービスクライアントと相互運用できるように WCF サービスエンドポイントを構成するには、次のようにします。  
   
 - サービス エンドポイントのバインディングの種類として <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> を使用する。  
   
@@ -29,12 +29,12 @@ ASP.NET Web サービス クライアントを相互運用できるようにす�
   
 - <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 値によって制御されるメッセージ セキュリティでは、WS-I Basic Security Profile 1.0 に準拠した WS-Security がサポートされます。 WS-Security を使用しない場合は、このプロパティを既定値 (<xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType>) のままにしておきます。  
   
- Asp.net、WCF サービスのメタデータを使用できるようにするには、Web サービス クライアント生成ツールを使用します。[Web サービス記述言語ツール (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6%28v=vs.100%29)、 [Web サービス検出ツール (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs%28v=vs.100%29)、および`Add Web Reference`機能が Visual Studio には、メタデータの公開を有効にする必要があります。 詳細については、次を参照してください。[メタデータ エンドポイントを公開](../../../docs/framework/wcf/publishing-metadata-endpoints.md)します。  
+ WCF サービスのメタデータを ASP.NET で使用できるようにするには、web サービスクライアント生成ツール[(Web サービス記述言語ツール (wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6%28v=vs.100%29)、 [Web サービス検出ツール (.disco)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs%28v=vs.100%29)、および Visual Studio の `Add Web Reference` 機能) を使用します。メタデータの公開を有効にする必要があります。 詳細については、「[メタデータエンドポイントの公開](publishing-metadata-endpoints.md)」を参照してください。  
   
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- 次のコード例では、コード内、または、構成ファイルでの ASP.NET Web サービス クライアントと互換性がある WCF エンドポイントを追加する方法を示します。  
+ 次のコード例は、ASP.NET Web サービスクライアントと互換性のある WCF エンドポイントをコードで、または構成ファイルで追加する方法を示しています。  
   
 ### <a name="code"></a>コード  
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]
@@ -43,4 +43,4 @@ ASP.NET Web サービス クライアントを相互運用できるようにす�
   
 ## <a name="see-also"></a>関連項目
 
-- [ASP.NET Web サービスとの相互運用](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)
+- [ASP.NET Web サービスとの相互運用](./feature-details/interop-with-aspnet-web-services.md)

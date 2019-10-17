@@ -27,13 +27,13 @@ ms.locfileid: "71053323"
 
 ## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>符号なしの型を受け取る Windows 関数を呼び出すには
 
-1. [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)を使用して、どのライブラリに関数が格納されているか、そのライブラリ内でその名前がどのようなものであるか、呼び出し元のシーケンスについて、および文字列を呼び出すときに文字列を変換する方法を Visual Basic 通知します。
+1. [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md) を使用して、どのライブラリに関数が格納されているか、そのライブラリ内でその名前がどのようなものであるか、呼び出し元のシーケンスについて、および文字列を呼び出すときに文字列を変換する方法を Visual Basic に通知します。
 
 2. `ULong` `UInteger` `Byte` `UShort`ステートメントでは、符号なしの型を持つ各パラメーターに適切な、、、、またはを使用します。 `Declare`
 
-3. 使用している定数の名前と値を調べるには、呼び出し元の Windows 関数のドキュメントを参照してください。 これらの多くは、WinUser .h ファイルで定義されています。
+3. 使用している定数の名前と値を調べるには、呼び出し元の Windows 関数のドキュメントを参照してください。 これらの多くは、WinUser.h ファイルで定義されています。
 
-4. コードで必要な定数を宣言します。 多くの Windows 定数は、32ビットの符号なしの値である`As UInteger`ため、これらを宣言する必要があります。
+4. コードで必要な定数を宣言します。 多くの Windows 定数は 32 ビットの符号なしの値であるため、`As UInteger`でこれらを宣言する必要があります。
 
 5. 通常の方法で関数を呼び出します。 次の例では、Windows `MessageBox`関数を呼び出します。この関数は、符号なし整数引数を受け取ります。
 
@@ -60,7 +60,7 @@ ms.locfileid: "71053323"
     End Class
     ```
 
-     関数`messageThroughWindows`をテストするには、次のコードを使用します。
+     `messageThroughWindows` 関数をテストするには、次のコードを使用します。
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -73,7 +73,7 @@ ms.locfileid: "71053323"
     > `UInteger` 、`ULong`、 、および`SByte`の各データ型は、言語への非[依存性と言語に依存](../../../standard/language-independence-and-language-independent-components.md)しないコンポーネント (cls) の一部ではないため、cls 準拠のコードでは、それらを使用するコンポーネントを使用できません。 `UShort`
 
     > [!IMPORTANT]
-    > Windows アプリケーションプログラミングインターフェイス (API) などのアンマネージコードを呼び出すと、潜在的なセキュリティリスクに対してコードが公開されます。
+    > Windows アプリケーション プログラミング インターフェイス (API) などのアンマネージ コードを呼び出すと、コードは潜在的なセキュリティリスクにさらされます。
 
     > [!IMPORTANT]
     > Windows API を呼び出すには、アンマネージコードのアクセス許可が必要です。これは、部分信頼状況での実行に影響を与える可能性があります。 詳細については<xref:System.Security.Permissions.SecurityPermission> 、「」および「[コードアクセス許可](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))」を参照してください。

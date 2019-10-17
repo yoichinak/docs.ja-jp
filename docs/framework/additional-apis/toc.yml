@@ -1,4 +1,4 @@
-- name: 追加のクラス ライブラリと API
+- name: 追加の API
   href: index.md
   items:
     - name: Microsoft.SqlServer.Server
@@ -7,6 +7,12 @@
           items:
             - name: SmiOrderProperty.Item
               href: microsoft.sqlserver.server.smiorderproperty.item.md
+    - name: システム
+      items:
+        - name: Exception クラス
+          items:
+            - name: Exception.PrepForRemoting メソッド
+              href: system.exception.prepforremoting.md
     - name: System.Data.SqlTypes
       items:
         - name: SqlChars クラス

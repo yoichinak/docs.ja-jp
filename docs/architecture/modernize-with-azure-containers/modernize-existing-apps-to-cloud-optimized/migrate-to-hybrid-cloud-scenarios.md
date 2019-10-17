@@ -2,12 +2,12 @@
 title: ハイブリッド クラウド シナリオへの移行
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |ハイブリッドクラウドシナリオへの移行
 ms.date: 04/30/2018
-ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4348a9b538042fee7ebd9c08f480491f17425937
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373941"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394546"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>ハイブリッド クラウド シナリオへの移行
 
@@ -25,7 +25,7 @@ Azure Stack は、組織のデータセンターから Azure サービスを提�
 
 図4-13 は、Microsoft が提供する真のハイブリッドクラウドプラットフォームの概要を示しています。
 
-![Azure Stack と Azure を使用した Microsoft ハイブリッドクラウドプラットフォーム](./media/image13.jpg)
+![Azure Stack と Azure を使用した Microsoft ハイブリッドクラウドプラットフォームの図。](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
 
 **図 4-13.** Azure Stack と Azure を使用した Microsoft ハイブリッドクラウドプラットフォーム
 
@@ -66,5 +66,5 @@ Microsoft Azure Stack Development Kit は、Azure Stack の単一ノードデプ
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
->[前へ](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[前へ](life-cycle-ci-cd-pipelines-devops-tools.md)
 >[次へ](../walkthroughs-technical-get-started-overview.md)

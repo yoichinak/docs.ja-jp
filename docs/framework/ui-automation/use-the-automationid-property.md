@@ -9,16 +9,16 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 1699d39f5f456fe08b043e5b6a687d4c59d28e89
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7a172db8bcb626d78a24b546147b4e32f20f5d83
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040338"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291347"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID プロパティの使用
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 @No__t-0 の最新情報については、「[ Windows Automation API:UI オートメーション @ no__t-0  
   
  このトピックには、 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> を使用して [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー内の要素を配置する方法とタイミングを示すシナリオおよびサンプル コードが記載されています。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71040338"
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>一意で探索可能な AutomationID を使用して UI オートメーション ツリーで特定の要素を検索する  
   
-- [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] などのツールを使用して関心のある <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 要素の [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] をレポートします。 この値をコピーし、その後の自動テストのテスト スクリプトなどのクライアント アプリケーションに貼り付けることができます。 この方法により、実行時に要素を特定して検索するために必要なコードを削減して簡略化します。  
+- UI Spy などのツールを使用して、目的の @no__t 1 要素の @no__t 0 を報告します。 この値をコピーし、その後の自動テストのテスト スクリプトなどのクライアント アプリケーションに貼り付けることができます。 この方法により、実行時に要素を特定して検索するために必要なコードを削減して簡略化します。  
   
 > [!CAUTION]
 > 通常、 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>の直接の子のみの取得を試行する必要があります。 子孫の検索は、数百または数千もの要素を反復処理する場合があり、スタック オーバーフローを引き起こす可能性があります。 下位レベルの特定の要素を取得しようとする場合、アプリケーション ウィンドウから、または下位レベルのコンテナーから検索を開始する必要があります。  

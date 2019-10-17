@@ -2,17 +2,17 @@
 title: C# の概要 - 開発ツールに対する理解を深める
 description: この記事では、コンピューターで C# アプリケーションと .NET アプリケーションを開発するためのツールの基礎を提供します。
 ms.date: 10/23/2018
-ms.openlocfilehash: fe39bd5e89bb168316b19c62d6e022e36c58fc2f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b18c71c54e4450902f576a1074058abcd5e8aa91
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850756"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834087"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>.NET 開発ツールに対する理解を深める
 
 コンピューターでチュートリアルを実行する最初の手順は、開発環境を設定することです。
-Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。
+Windows、Linux、または macOS 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。
 
 または、[.NET Core SDK](https://dotnet.microsoft.com/download) と [Visual Studio Code](https://code.visualstudio.com/) をインストールすることもできます。
 

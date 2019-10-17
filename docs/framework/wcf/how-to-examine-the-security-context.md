@@ -1,5 +1,5 @@
 ---
-title: '方法: セキュリティ コンテキストを調べる'
+title: '方法 : セキュリティ コンテキストを調べる'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: e67ac9c452337b6f490d99ea4430ec2a02b952a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 328d47a583a4f047fd54589a82d339de2cb1a16f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625797"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320993"
 ---
-# <a name="how-to-examine-the-security-context"></a>方法: セキュリティ コンテキストを調べる
-Windows Communication Foundation (WCF) サービスをプログラミングする場合、サービス セキュリティ コンテキストでは、クライアント資格情報と、サービスで認証するために使用するクレームの詳細を確認することができます。 これは、<xref:System.ServiceModel.ServiceSecurityContext> クラスのプロパティを使用することで可能になります。  
+# <a name="how-to-examine-the-security-context"></a>方法 : セキュリティ コンテキストを調べる
+Windows Communication Foundation (WCF) サービスのプログラミングでは、サービスセキュリティコンテキストを使用して、サービスでの認証に使用されるクライアント資格情報と要求の詳細を確認できます。 これは、<xref:System.ServiceModel.ServiceSecurityContext> クラスのプロパティを使用することで可能になります。  
   
  たとえば、<xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> プロパティまたは <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> プロパティを使用すると、現在のクライアントの ID を取得できます。 クライアントが匿名であるかどうかを確認するには、<xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> プロパティを使用します。  
   
@@ -56,5 +56,5 @@ Windows Communication Foundation (WCF) サービスをプログラミングす�
   
 ## <a name="see-also"></a>関連項目
 
-- [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)
-- [サービス ID と認証](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [サービスのセキュリティ保護](securing-services.md)
+- [サービス ID と認証](./feature-details/service-identity-and-authentication.md)
