@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 076b5d628dfe83decdbbe2f5e74c50e08262c580
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ac3fc157543f2990c7c9f9917140b35f8948108e
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700693"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395474"
 ---
 # <a name="icordebugcodeenumnext-method"></a>ICorDebugCodeEnum::Next メソッド
 
@@ -41,22 +41,21 @@ HRESULT Next (
 
 ## <a name="parameters"></a>パラメーター
 
- `celt`  
- から取得する @no__t 0 のインスタンスの数。
+`celt`  
+から取得する @no__t 0 のインスタンスの数。
 
- `values`  
- 入出力ポインターの配列。それぞれが @no__t 0 のオブジェクトを指します。
+`values`  
+入出力ポインターの配列。それぞれが @no__t 0 のオブジェクトを指します。
 
- `pceltFetched`  
- 入出力実際に返された @no__t 0 のインスタンスの数へのポインター。 @No__t-0 が1の場合、この値は null になることがあります。
+`pceltFetched`  
+入出力実際に返された @no__t 0 のインスタンスの数へのポインター。 @No__t-0 が1の場合、この値は null になることがあります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>［要件］
 
- **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。
+**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 
- **ヘッダー:** CorDebug .idl、CorDebug. h
+**ヘッダー:** CorDebug.idl、CorDebug.h
 
- **ライブラリ**CorGuids .lib
+**ライブラリ:** CorGuids.lib
 
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
- 
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - typography [WPF], special characters
 - special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
-ms.openlocfilehash: 61ee38319b2f0aa46690fb063f6ffe6612f993ad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 27f2b18593d075b54eb8c3351bbb84415700cfd4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918443"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395801"
 ---
 # <a name="how-to-use-special-characters-in-xaml"></a>方法: XAML で特殊文字を使用する
-で[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]作成されたマークアップファイルは、自動的[!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]に utf-8 ファイル形式で保存されます。つまり、アクセントマークなどのほとんどの特殊文字は正しくエンコードされます。 ただし、一般的に使用される一連の特殊文字で、別の方法で処理されるものがあります。 これらの特殊文字は[!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] 、 [!INCLUDE[TL A#tla_xml](../../../../includes/tlasharptla-xml-md.md)]エンコードの標準に従います。  
+@No__t-0 で作成されたマークアップファイルは Unicode UTF-8 ファイル形式で自動的に保存されます。つまり、アクセントマークなどのほとんどの特殊文字は正しくエンコードされます。 ただし、一般的に使用される一連の特殊文字で、別の方法で処理されるものがあります。 これらの特殊文字は、エンコードの [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] [!INCLUDE[TL A#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 標準に従います。  
   
  この一連の特殊文字をエンコードするための構文を次の表に示します。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "69918443"
 |"|`&quot;`|二重引用符記号|  
   
 > [!NOTE]
-> Windows メモ帳などのテキストエディターを使用してマークアップファイルを作成する場合は、エンコードされ[!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]た特殊文字を保持するために、ファイルを utf-8 ファイル形式で保存する必要があります。  
+> Windows メモ帳などのテキストエディターを使用してマークアップファイルを作成する場合は、エンコードされた特殊文字を保持するために、Unicode UTF-8 ファイル形式でファイルを保存する必要があります。  
   
  次の例では、マークアップを作成するときにテキストで特殊文字を使用する方法を示します。  
   

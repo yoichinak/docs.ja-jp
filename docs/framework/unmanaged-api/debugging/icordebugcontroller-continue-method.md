@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdf59ee3c7bf41a2bb0ff68db5e70dd5a519a0e9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 62e2be44165472e2fbf368f61b865d39a5e9fc28
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700778"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395465"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue メソッド
 
@@ -38,26 +38,25 @@ HRESULT Continue (
 
 ## <a name="parameters"></a>パラメーター
 
- `fIsOutOfBand`  
- から帯域外イベントから続行する場合は `true` に設定します。それ以外の場合は、を `false` に設定します。
+`fIsOutOfBand`  
+から帯域外イベントから続行する場合は `true` に設定します。それ以外の場合は、を `false` に設定します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `Continue` は、`ICorDebugController::Stop` メソッドの呼び出し後にプロセスを続行します。
 
 混合モードのデバッグを実行する場合は、アウトオブバンドイベントから続行する場合を除き、Win32 イベントスレッドで `Continue` を呼び出さないでください。
 
 *帯域内イベント*は、マネージイベント、またはデバッガーがプロセスのマネージ状態との対話をサポートする通常のアンマネージイベントのいずれかです。 この場合、デバッガーは、`fOutOfBand` パラメーターが `false` に設定された状態で[ICorDebugUnmanagedCallback::D Eのイベント](icordebugunmanagedcallback-debugevent-method.md)コールバックを受け取ります。
-  
+
 *アウトオブバンドイベント*は、イベントによってプロセスが停止されている間に、プロセスのマネージ状態との相互作用が不可能なアンマネージイベントです。 この場合、デバッガーは、`fOutOfBand` パラメーターが `true` に設定された @no__t 0 コールバックを受け取ります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>［要件］
 
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
 
- **ヘッダー:** CorDebug .idl、CorDebug. h
+**ヘッダー:** CorDebug.idl、CorDebug.h
 
- **ライブラリ**CorGuids .lib
+**ライブラリ:** CorGuids.lib
 
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
- 
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

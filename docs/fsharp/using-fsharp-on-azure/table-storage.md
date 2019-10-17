@@ -3,14 +3,14 @@ title: F# を使用した Azure Table Storage の概要
 description: Azure Table storage または Azure Cosmos DB を使用して、構造化データをクラウドに格納します。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 509435d47231040362586fa263fbecb1125f862b
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 30ffd5f099dbb8efbf57104a2ade6c26304b7cee
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182605"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395205"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F を使用して Azure Table storage と Azure Cosmos DB Table API を開始する\#
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F @ no__t を使用して Azure Table storage と Azure Cosmos DB Table API を開始する-0
 
 Azure Table storage は、構造化された NoSQL データをクラウドに格納するサービスです。 Table storage は、スキーマなしの設計によるキー/属性ストアです。 テーブルストレージはスキーマ aless であるため、アプリケーションのニーズの進化に合わせてデータを簡単に調整できます。 データへのアクセスは、あらゆる種類のアプリケーションで高速かつコスト効率の高い方法で実現できます。 通常、テーブルストレージは、類似したデータ量に対して従来の SQL よりも大幅に低コストになります。
 
@@ -32,19 +32,19 @@ Azure Table storage 用に作成されたアプリケーションは、コード
 
 このチュートリアルでは、Azure F# table storage または Azure Cosmos DB Table API を使用して、テーブルの作成と削除、テーブルデータの挿入、更新、削除、クエリなどの一般的なタスクを実行するコードを記述する方法について説明します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>必要条件
 
 このガイドを使用するには、最初に[Azure ストレージアカウント](/azure/storage/storage-create-storage-account)または[Azure Cosmos DB アカウント](https://azure.microsoft.com/try/cosmosdb/)を作成する必要があります。
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>F#スクリプトを作成してF#対話形式で起動する
 
-この記事のサンプルは、 F#アプリケーションまたはF#スクリプトで使用できます。 スクリプトを作成するには、たとえば`tables.fsx`、 F#開発`.fsx`環境で拡張機能を使用してファイルを作成します。 F#
+この記事のサンプルは、 F#アプリケーションまたはF#スクリプトで使用できます。 F#スクリプトを作成するには、 F#開発環境で `.fsx` 拡張子を持つファイルを作成します (例: `tables.fsx`)。
 
-次に、[パケット](https://fsprojects.github.io/Paket/)や`WindowsAzure.Storage` [NuGet](https://www.nuget.org/)などの[パッケージマネージャー](package-management.md)を使用して、 `#r`ディレクティブを`WindowsAzure.Storage.dll`使用してスクリプトにパッケージと参照をインストールします。 Microsoft Azure 名前空間`Microsoft.WindowsAzure.ConfigurationManager`を取得するために、に対してもう一度実行します。
+次に、[パケット](https://fsprojects.github.io/Paket/)や[NuGet](https://www.nuget.org/)などの[パッケージマネージャー](package-management.md)を使用して @no__t 3 のパッケージをインストールし、`#r` ディレクティブを使用してスクリプトに @no__t を参照します。 Microsoft Azure 名前空間を取得するために、@no__t 0 に対してもう一度実行します。
 
 ### <a name="add-namespace-declarations"></a>名前空間宣言の追加
 
-ファイルの先頭`open`に次のステートメントを追加します。 `tables.fsx`
+次の `open` ステートメントを `tables.fsx` ファイルの先頭に追加します。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L1-L5)]
 
@@ -54,7 +54,7 @@ Azure Storage Table service に接続している場合は、このチュート�
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Azure Cosmos DB 接続文字列を取得する
 
-Azure Cosmos DB に接続している場合は、このチュートリアルで使用する接続文字列が必要になります。 Azure portal から接続文字列をコピーできます。 Azure portal の Cosmos DB アカウントで、[**設定** > ] **[接続文字列]** の順にクリックし、 **[コピー]** ボタンをクリックしてプライマリ接続文字列をコピーします。 
+Azure Cosmos DB に接続している場合は、このチュートリアルで使用する接続文字列が必要になります。 Azure portal から接続文字列をコピーできます。 Azure portal の Cosmos DB アカウントで、 **[設定]**  >  **[接続文字列]** にアクセスし、 **[コピー]** ボタンをクリックしてプライマリ接続文字列をコピーします。 
 
 このチュートリアルでは、次の例のように、スクリプトに接続文字列を入力します。
 
@@ -66,7 +66,7 @@ Azure Cosmos DB に接続している場合は、このチュートリアルで�
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L13-L15)]
 
-Azure Configuration Manager の使用は省略可能です。 .NET Framework の`ConfigurationManager`型などの API を使用することもできます。
+Azure Configuration Manager の使用は省略可能です。 .NET Framework の @no__t 0 型などの API を使用することもできます。
 
 ### <a name="parse-the-connection-string"></a>接続文字列を解析する
 
@@ -74,17 +74,17 @@ Azure Configuration Manager の使用は省略可能です。 .NET Framework の
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L21-L22)]
 
-これにより`CloudStorageAccount`、が返されます。
+これは @no__t 0 を返します。
 
 ### <a name="create-the-table-service-client"></a>Table service クライアントを作成する
 
-`CloudTableClient`クラスを使用すると、テーブルストレージ内のテーブルとエンティティを取得できます。 サービスクライアントを作成する方法の1つを次に示します。
+@No__t-0 クラスを使用すると、テーブルストレージ内のテーブルとエンティティを取得できます。 サービスクライアントを作成する方法の1つを次に示します。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
 これで、からデータを読み取り、テーブルストレージにデータを書き込むコードを記述する準備ができました。
 
-### <a name="create-a-table"></a>テーブルの作成
+### <a name="create-a-table"></a>テーブルを作成する
 
 この例では、テーブルがまだ存在しない場合に作成する方法を示します。
 
@@ -92,15 +92,15 @@ Azure Configuration Manager の使用は省略可能です。 .NET Framework の
 
 ### <a name="add-an-entity-to-a-table"></a>エンティティをテーブルに追加する
 
-エンティティは、から`TableEntity`継承される型を持つ必要があります。 は任意の`TableEntity`方法で拡張できますが、型にはパラメーターのないコンストラクターが*必要*です。 `get` と`set`の両方を持つプロパティのみが Azure テーブルに格納されます。
+エンティティには `TableEntity` から継承する型が必要です。 @No__t 0 は任意の方法で拡張できますが、型にはパラメーターのないコンストラクターが*必要*です。 @No__t-0 と `set` の両方を持つプロパティのみが Azure テーブルに格納されます。
 
 エンティティのパーティションキーと行キーは、テーブル内のエンティティを一意に識別します。 同じパーティションキーを持つエンティティは、異なるパーティションキーを持つエンティティよりも迅速に照会できますが、多様なパーティションキーを使用すると、並列操作のスケーラビリティが向上します。
 
-をパーティションキー `Customer` `lastName` として使用し、を行キーとして使用するの例を次`firstName`に示します。
+次に、`lastName` をパーティションキーとして使用し、`firstName` を行キーとして使用する @no__t 0 の例を示します。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
 
-次に`Customer` 、テーブルにを追加します。 これを行うには、 `TableOperation`テーブルで実行するを作成します。 この場合は、 `Insert`操作を作成します。
+次に、`Customer` をテーブルに追加します。 これを行うには、テーブルで実行される @no__t 0 を作成します。 この場合は、@no__t 0 操作を作成します。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
 
@@ -119,7 +119,7 @@ Azure Configuration Manager の使用は省略可能です。 .NET Framework の
 
 ### <a name="retrieve-all-entities-in-a-partition"></a>パーティション内のすべてのエンティティを取得する
 
-テーブルに対してパーティション内のすべてのエンティティを照会する`TableQuery`には、オブジェクトを使用します。 ここでは、"Smith" がパーティションキーであるエンティティをフィルター処理します。
+テーブルに対してパーティション内のすべてのエンティティを照会するには、@no__t 0 のオブジェクトを使用します。 ここでは、"Smith" がパーティションキーであるエンティティをフィルター処理します。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L77-L82)]
 
@@ -139,7 +139,7 @@ Azure Configuration Manager の使用は省略可能です。 .NET Framework の
 
 ### <a name="retrieve-a-single-entity"></a>1つのエンティティを取得する
 
-1つの特定のエンティティを取得するクエリを記述できます。 ここでは、を`TableOperation`使用して、"Ben Smith" という顧客を指定します。 コレクションではなく、が`Customer`返されます。 クエリでパーティションキーと行キーの両方を指定することは、Table service から単一のエンティティを取得する最速の方法です。
+1つの特定のエンティティを取得するクエリを記述できます。 ここでは、`TableOperation` を使用して、"Ben Smith" という顧客を指定します。 コレクションではなく `Customer` が返されます。 クエリでパーティションキーと行キーの両方を指定することは、Table service から単一のエンティティを取得する最速の方法です。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
 
@@ -149,19 +149,19 @@ Azure Configuration Manager の使用は省略可能です。 .NET Framework の
 
 ### <a name="replace-an-entity"></a>エンティティの置換
 
-エンティティを更新するには、エンティティを Table service から取得し、エンティティオブジェクトを変更した後、 `Replace`操作を使用して Table service に変更を保存します。 これにより、サーバー上でエンティティが完全に置換されます。ただし、取得後にサーバー上のエンティティが変更された場合、操作は失敗します。 このエラーは、他のソースからの変更がアプリケーションによって誤って上書きされないようにするためのものです。
+エンティティを更新するには、エンティティを Table service から取得し、エンティティオブジェクトを変更してから、`Replace` 操作を使用して Table service に変更を保存し直します。 これにより、サーバー上でエンティティが完全に置換されます。ただし、取得後にサーバー上のエンティティが変更された場合、操作は失敗します。 このエラーは、他のソースからの変更がアプリケーションによって誤って上書きされないようにするためのものです。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L121-L128)]
 
 ### <a name="insert-or-replace-an-entity"></a>エンティティの挿入または置換
 
-場合によっては、テーブルにエンティティが存在するかどうかがわかりません。 その場合、現在格納されている値は不要になります。 を使用`InsertOrReplace`してエンティティを作成することも、状態に関係なく、エンティティが存在する場合は置き換えることもできます。
+場合によっては、テーブルにエンティティが存在するかどうかがわかりません。 その場合、現在格納されている値は不要になります。 @No__t-0 を使用してエンティティを作成することも、状態に関係なく、エンティティが存在する場合は置き換えることもできます。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L134-L141)]
 
 ### <a name="query-a-subset-of-entity-properties"></a>エンティティのプロパティのサブセットを照会する
 
-テーブルクエリでは、エンティティのすべてではなく、いくつかのプロパティのみを取得できます。 射影と呼ばれるこの手法は、特に大規模なエンティティの場合に、クエリのパフォーマンスを向上させることができます。 ここでは、と`DynamicTableEntity` `EntityResolver`を使用して電子メールアドレスのみを返します。 プロジェクションはローカルストレージエミュレーターではサポートされていないため、このコードは Table service でアカウントを使用している場合にのみ実行します。
+テーブルクエリでは、エンティティのすべてではなく、いくつかのプロパティのみを取得できます。 射影と呼ばれるこの手法は、特に大規模なエンティティの場合に、クエリのパフォーマンスを向上させることができます。 ここでは、`DynamicTableEntity` と `EntityResolver` を使用して電子メールアドレスのみを返します。 プロジェクションはローカルストレージエミュレーターではサポートされていないため、このコードは Table service でアカウントを使用している場合にのみ実行します。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 
@@ -187,7 +187,7 @@ Azure Configuration Manager の使用は省略可能です。 .NET Framework の
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L193-L193)]
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで、Table storage の基本を学習できました。さらに複雑なストレージタスクと Azure Cosmos DB Table API については、次のリンク先を参照してください。
 
@@ -196,4 +196,3 @@ Azure Configuration Manager の使用は省略可能です。 .NET Framework の
 - [Azure Storage 型プロバイダー](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Azure Storage チームのブログ](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [接続文字列の構成](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
-- [.NET での Azure Table Storage のはじめに](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

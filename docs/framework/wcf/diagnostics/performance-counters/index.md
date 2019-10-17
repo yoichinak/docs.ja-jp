@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: a13cc98a88ff81afd478eaa3e40286169811233a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
-ms.translationtype: HT
+ms.openlocfilehash: 73bb02379308fbfe507137e61ac8d84e6b9760b4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320303"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395888"
 ---
 # <a name="wcf-performance-counters"></a>WCF パフォーマンス カウンター
 Windows Communication Foundation (WCF) には、アプリケーションのパフォーマンスを測定するのに役立つ多数のパフォーマンスカウンターが含まれています。  
@@ -118,19 +118,16 @@ config.Save();
 > 1 つのコントラクトに重複した操作名がある場合は、その両方の操作に対してカウンター インスタンスは 1 つだけ取得されます。  
   
 ## <a name="programming-the-wcf-performance-counters"></a>WCF パフォーマンス カウンターのプログラミング  
- SDK のインストールフォルダーには、プログラムによって WCF パフォーマンスカウンターにアクセスできるように、いくつかのファイルがインストールされます。 そのファイルを次に示します。  
+
+SDK のインストールフォルダーには、プログラムによって WCF パフォーマンスカウンターにアクセスできるように、いくつかのファイルがインストールされます。 これらのファイルは次のように一覧表示されます。
   
-- _ServiceModelEndpointPerfCounters.vrg  
+- *\_ServiceModelEndpointPerfCounters*
+- *\_ServiceModelOperationPerfCounters*
+- *\_ServiceModelServicePerfCounters*  
+- *\_SMSvcHostPerfCounters*
+- *\_TransactionBridgePerfCounters*
   
-- _ServiceModelOperationPerfCounters.vrg  
-  
-- _ServiceModelServicePerfCounters.vrg  
-  
-- _SMSvcHostPerfCounters.vrg  
-  
-- _TransactionBridgePerfCounters.vrg  
-  
- プログラムによってカウンターにアクセスする方法の詳細については、「[パフォーマンスカウンターのプログラミングアーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=95179)」を参照してください。  
+プログラムによってカウンターにアクセスする方法の詳細については、「[パフォーマンスカウンターのプログラミングアーキテクチャ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90))」を参照してください。
   
 ## <a name="see-also"></a>関連項目
 
