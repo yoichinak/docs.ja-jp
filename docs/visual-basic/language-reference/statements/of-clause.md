@@ -25,10 +25,10 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61784151"
 ---
 # <a name="of-clause-visual-basic"></a>Of 句 (Visual Basic)
-`Of`句を紹介します。これは *ジェネリック*クラス、構造体、インターフェイス、デリゲート、またはプロシージャ上で型パラメーターを識別するものです。 ジェネリック型については、[Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)を参照してください。
+`Of` 句を紹介します。これは *ジェネリック* クラス、構造体、インターフェイス、デリゲート、またはプロシージャ上で型パラメーターを識別します。ジェネリック型については、「[Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」を参照してください。
 
-## <a name="using-the-of-keyword"></a>Of キーワードの使用
- 次のコード例では 2 つの型パラメーターを受け取るクラスのアウトラインを定義するために`Of`キーワードを使用しています。`keyType`パラメーターは<xref:System.IComparable>インターフェイスによって制限されていて、それはつまり、使用するコードは<xref:System.IComparable>を実装する型引数を与えなければなりません。これは`add`プロシージャが<xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>メソッドを呼びだすことができるようにするために必要です。制約の詳細については、 「[型リスト](../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。
+## <a name="using-the-of-keyword">Of キーワードの使用</a>
+ 次のコード例では、2 つの型パラメーターを受け取るクラスのアウトラインを定義するために `Of` キーワードを使用しています。`keyType` パラメーターは <xref:System.IComparable> インターフェイスによって制限されているため、使用するコードは <xref:System.IComparable> を実装する型引数を与えなければなりません。これは、`add` プロシージャが <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> メソッドを呼び出すことができるようにするために必要です。制約の詳細については、「[型リスト](../../../visual-basic/language-reference/statements/type-list.md)」を参照してください。
 
 ```
 Public Class Dictionary(Of entryType, keyType As IComparable)
@@ -42,9 +42,9 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class
 ```
 
- 上記のクラス定義を完了すると、そこから様々な`dictionary`クラスを構築することができます。`entryType`と`keyType`に与える型が、そのクラスが持つエントリーの型と、互いのエントリーと関連するキーの型を決定します。制約により、`keyType`には<xref:System.IComparable>を実装する型を与えなければなりません。
+ 上記のクラス定義を完了すると、そこから様々な `dictionary` クラスを構築することができます。`entryType` と `keyType` に与える型が、そのクラスが持つエントリーの型と、互いのエントリーと関連するキーの型を決定します。制約により、`keyType` には <xref:System.IComparable> を実装する型を与えなければなりません。
 
- 次のコード例は、`String`エントリーを持ち、`Integer`キーを互いに関連づけるオブジェクトを作成します。 `Integer`は<xref:System.IComparable>を実装し、それゆえに`keyType`の制約を満たします。
+ 次のコード例は、`String` エントリーを持ち、`Integer` キーを互いに関連づけるオブジェクトを作成します。`Integer` は <xref:System.IComparable> を実装し、それゆえに `keyType` の制約を満たします。
 
 ```
 Dim d As New dictionary(Of String, Integer)
