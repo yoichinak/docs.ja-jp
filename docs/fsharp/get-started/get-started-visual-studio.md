@@ -1,5 +1,5 @@
 ---
-title: Visual Studio での F# の概要します。
+title: Visual Studioで F# を使い始める
 description: Visual Studio で F# を使用する方法について説明します。
 ms.date: 07/03/2018
 ms.openlocfilehash: e573af67a1fc00b0a340f8c73ab1ee0ed2b97810
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/18/2019
 ms.locfileid: "71082699"
 ---
-# <a name="get-started-with-f-in-visual-studio"></a>Visual Studio での F# の概要します。
+# <a name="get-started-with-f-in-visual-studio"></a>Visual Studioで F# を使い始める
 
 F# および Visual F# ツールは、Visual Studio IDE でサポートされます。
 
@@ -17,15 +17,15 @@ F# および Visual F# ツールは、Visual Studio IDE でサポートされま
 
 ## <a name="creating-a-console-application"></a>コンソールアプリケーションの作成
 
-Visual Studio の最も基本的なプロジェクトの1つは、コンソールアプリケーションです。  これを行う方法を次に示します。  Visual Studio が開いたら、次のようにします。
+Visual Studio の最も基本的なプロジェクトの 1 つは、コンソールアプリケーションです。  これを行う方法を次に示します。  Visual Studio を開いたら、次のようにします。
 
-1. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
+1. [**ファイル**] メニューの [**新規作成**] をポイントし、[**プロジェクト**] をクリックします。
 
 2. [プロジェクト] ダイアログで、新規で**テンプレート**、はず**Visual F#** します。  テンプレートを表示するにF#は、これを選択します。
 
 3. **.Net Core コンソールアプリ**または**コンソールアプリ**のいずれかを選択します。
 
-4. 選択、**わかりました**F# プロジェクトを作成するボタン。  ソリューション エクスプ ローラーで F# プロジェクトが表示されます。
+4. **OK** ボタンを選択して、F# プロジェクトを作成します。  ソリューション エクスプ ローラーに F# プロジェクトが表示されます。
 
 ## <a name="writing-your-code"></a>コードの記述
 
@@ -33,7 +33,7 @@ Visual Studio の最も基本的なプロジェクトの1つは、コンソー�
 
 [!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-前のコードサンプルでは、と`square`いう名前`x`の入力を受け取り、それを単独で乗算する関数が定義されています。  でF#は[型の推定](../language-reference/type-inference.md)が使用さ`x`れるため、の型を指定する必要はありません。  コンパイラF#は、乗算が有効な型を認識し、が呼び出される方法`x` `square`に基づいて型をに割り当てます。  マウスポインター `square`を合わせると、次のように表示されます。
+前のコードサンプルでは、`x`という名前の入力を受け取り、それを単独で乗算する関数`square`が定義されています。  F#は[型推定](../language-reference/type-inference.md) を行うため、`x`の型を指定する必要はありません。  F# コンパイラは乗算が有効な型を認識し、`square`の呼び出しに基づいて`x` に型を割り当てます。  マウスポインターを`square`に合わせると、次のように表示されます。
 
 ```fsharp
 val square: x:int -> int
@@ -47,7 +47,7 @@ val square: x:int -> int
 
 ## <a name="running-your-code"></a>コードの実行
 
-**Ctrl**+**F5**キーを押してコードを実行し、結果を確認することができます。  これにより、デバッグなしでプログラムが実行され、結果を確認できるようになります。  または、Visual Studio で **[デバッグ]** トップレベルメニュー項目を選択し、 **[デバッグなしで開始]** をクリックします。
+**Ctrl**+**F5**キーを押してコードを実行し、結果を確認することができます。  これにより、デバッグなしでプログラムが実行され、結果を確認できるようになります。  または、Visual Studio で [**デバッグ**] トップレベルメニュー項目を選択し、[**デバッグなしで開始**] をクリックします。
 
 次のように、Visual Studio がポップアップ表示されたコンソールウィンドウに出力されます。
 
@@ -55,15 +55,15 @@ val square: x:int -> int
 12 squared is 144!
 ```
 
-おめでとうございます!  Visual Studio での初めての F# プロジェクトの作成、F# の関数は、この関数の呼び出しの結果を印刷を記述してプロジェクトを実行し、いくつかの結果を参照してください。
+おめでとうございます!  Visual Studioで最初の F# プロジェクトを作成し、その関数の呼び出し結果を出力する F# 関数を作成し、プロジェクトを実行して結果を確認しました。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-まだインストールしていない場合はチェック アウト、 [F# のツアー](../tour.md)、F# 言語のコア機能の一部が含まれています。  一部の F# の機能の概要が表示され Visual Studio にコピーして実行できる十分なコード サンプルを提供します。  使用できますが、いくつかの優れた外部リソースがあるの紹介、 [F# ガイド](../index.md)します。
+まだインストールしていない場合は、F# 言語のコア機能の一部をカバーする[F# のツアー](../tour.md) をご覧ください。  F# の機能の一部の概要を示し、Visual Studio にコピーして実行できる十分なコード サンプルを提供します。  [F# ガイド](../index.md) で紹介されている、優れた外部リソースもあります。
 
 ## <a name="see-also"></a>関連項目
 
 - [F# のツアー](../tour.md)
 - [F#言語リファレンス](../language-reference/index.md)
-- [型の推論](../language-reference/type-inference.md)
+- [型推論](../language-reference/type-inference.md)
 - [シンボルと演算子のリファレンス](../language-reference/symbol-and-operator-reference/index.md)
