@@ -1,5 +1,5 @@
 ---
-title: Visual Studio for MacでF＃を使い始める
+title: Visual Studio for Mac で F＃ を使い始める
 description: を Visual Studio for Mac と共F#に使用する方法について説明します。
 ms.date: 07/03/2018
 ms.openlocfilehash: d3604178f93cf17d21f25b09084be7e7977378b5
@@ -9,9 +9,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/18/2019
 ms.locfileid: "71082979"
 ---
-# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Visual Studio for MacでF＃を使い始める
+# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Visual Studio for Mac で F＃ を使い始める
 
-F＃およびVisual F＃ツールは、Visual Studio for Mac IDEでサポートされています。 [Visual Studio for Mac がインストール](install-fsharp.md#install-f-with-visual-studio-for-mac)されていることを確認して下さい。
+F＃ および Visual F＃ ツールは、Visual Studio for Mac IDE でサポートされています。 [Visual Studio for Mac がインストール](install-fsharp.md#install-f-with-visual-studio-for-mac) されていることを確認してください。
 
 ## <a name="creating-a-console-application"></a>コンソールアプリケーションの作成
 
