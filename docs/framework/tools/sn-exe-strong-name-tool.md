@@ -25,7 +25,7 @@ ms.locfileid: "71044161"
 > [!WARNING]
 > セキュリティに関しては、厳格な名前に依存しないでください。 厳格な名前は、一意の ID を提供するだけです。
 
- 厳密な名前付けと厳密な名前付きアセンブリについて詳しくは、「[Strong-Named Assemblies](../../standard/assembly/strong-named.md)」 (厳密な名前付きアセンブリ) と「[How to: Sign an Assembly with a Strong Name](../../standard/assembly/sign-strong-name.md)」 (方法: 厳密な名前でアセンブリに署名する) を参照してください。  
+ 厳密な名前付けと厳密な名前付きアセンブリについて詳しくは、「[厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)」 と「[方法: 厳密な名前でアセンブリに署名する](../../standard/assembly/sign-strong-name.md)」 を参照してください。  
   
  厳密名ツールは Visual Studio と共に自動的にインストールされます。 このツールを開始するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
 

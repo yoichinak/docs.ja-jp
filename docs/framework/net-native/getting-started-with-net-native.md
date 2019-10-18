@@ -58,9 +58,9 @@ Windows 10 用に新しい Windows アプリを作成する場合も、既存の
 
 シリアライザーには 2 つのカテゴリがあり、これらはいずれもランタイム ディレクティブ ファイルに追加エントリを必要とする場合があります。
 
-- 非リフレクション ベースのシリアライザー。 <xref:System.Runtime.Serialization.DataContractSerializer>、 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>、および <xref:System.Xml.Serialization.XmlSerializer> クラスなど、.NET Framework クラス ライブラリ内にあるシリアライザーは、リフレクションに依存しません。 ただし、これらのシリアライザーでは、シリアル化または逆シリアル化されるオブジェクトに基づいてコードが生成される必要があります。  詳しくは、「 [Serialization and Metadata](serialization-and-metadata.md)」の「Microsoft のシリアライザー」セクションをご覧ください。
+- 非リフレクション ベースのシリアライザー。 <xref:System.Runtime.Serialization.DataContractSerializer>、 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>、および <xref:System.Xml.Serialization.XmlSerializer> クラスなど、.NET Framework クラス ライブラリ内にあるシリアライザーは、リフレクションに依存しません。 ただし、これらのシリアライザーでは、シリアル化または逆シリアル化されるオブジェクトに基づいてコードが生成される必要があります。  詳しくは、「 [シリアル化とメタデータ](serialization-and-metadata.md)」の「Microsoft のシリアライザー」セクションをご覧ください。
 
-- サードパーティ シリアライザー。 サードパーティ製のシリアル化ライブラリ (最も一般的なものは newtonsoft JSON シリアライザー) であり、一般的にリフレクションに基づいており\*、オブジェクトのシリアル化と逆シリアル化をサポートするために、.xml ファイルのエントリが必要です。 詳しくは、「 [Serialization and Metadata](serialization-and-metadata.md)」の「サードパーティ シリアライザー」セクションをご覧ください。
+- サードパーティ シリアライザー。 サードパーティ製のシリアル化ライブラリ (最も一般的なものは newtonsoft JSON シリアライザー) であり、一般的にリフレクションに基づいており\*、オブジェクトのシリアル化と逆シリアル化をサポートするために、.xml ファイルのエントリが必要です。 詳しくは、「 [シリアル化とメタデータ](serialization-and-metadata.md)」の「サードパーティ シリアライザー」セクションをご覧ください。
 
 **リフレクションに依存するメソッド**
 
@@ -72,7 +72,7 @@ Windows 10 用に新しい Windows アプリを作成する場合も、既存の
 
 - <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> メソッド。
 
-詳細については、「 [APIs That Rely on Reflection](apis-that-rely-on-reflection.md)」を参照してください。
+詳細については、「 [リフレクションに依存する API](apis-that-rely-on-reflection.md)」を参照してください。
 
 > [!NOTE]
 > ランタイム ディレクティブ ファイルで使用される型名は完全修飾である必要があります。 たとえば、ファイルでは "String" ではなく "System.String" を指定する必要があります。

@@ -93,7 +93,7 @@ ASP.NET Web アプリケーションでデータサービスを作成する場�
 > [!NOTE]
 > 要求メッセージと応答<xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType>メッセージの両方でバイナリデータがストリーミングされ、WCF によってバッファリングされないようにするには、転送モードを使用する必要があります。
 
-詳細については、「[ストリーミングメッセージ転送](../../wcf/feature-details/streaming-message-transfer.md)と[トランスポートクォータ](../../wcf/feature-details/transport-quotas.md)」を参照してください。
+詳細については、「[メッセージ転送のストリーミング](../../wcf/feature-details/streaming-message-transfer.md)と[トランスポートクォータ](../../wcf/feature-details/transport-quotas.md)」を参照してください。
 
 また、既定では、インターネット インフォメーション サービス (IIS) でも要求のサイズが 4 MB に制限されます。 IIS での実行時にデータサービスが 4 mb を超えるストリームを受信できるようにするに`maxRequestLength`は、次に示すように、 `<system.web />`構成セクションで[httpRuntime 要素 (ASP.NET Settings スキーマ)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))の属性も設定する必要があります。よう
 

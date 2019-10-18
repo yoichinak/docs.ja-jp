@@ -16,7 +16,7 @@ ms.locfileid: "71044506"
 
 マニフェスト生成および編集ツール (*Mage.exe*) は、アプリケーション マニフェストおよび配置マニフェストの作成と編集をサポートするコマンド ライン ツールです。 *Mage.exe* はコマンド ライン ツールであるため、バッチ スクリプトから実行したり、ASP.NET アプリケーションなどの他の Windows ベースのアプリケーションから実行したりできます。
 
-*Mage.exe* の代わりに、グラフィカルなアプリケーションである *MageUI.exe* を使用することもできます。 詳細については、「 [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)」を参照してください。
+*Mage.exe* の代わりに、グラフィカルなアプリケーションである *MageUI.exe* を使用することもできます。 詳細については、「 [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)」を参照してください。
 
 このツールは、Visual Studio と共に自動的にインストールされます。 ツールを実行するには、Visual Studio の開発者コマンド プロンプトを使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
 

@@ -34,7 +34,7 @@ ms.locfileid: "70782713"
 ## <a name="code-access-security"></a>コード アクセス セキュリティ  
  .NET Framework バージョン 1.0 (<xref:System.Data.SqlClient>、 <xref:System.Data.OleDb>) の .NET Framework データプロバイダーは、FullTrust アクセス許可で実行するために必要です。 .NET Framework バージョン1.0 の .NET Framework k データプロバイダーを FullTrust アクセス許可より低いゾーンで使用しようとすると、が<xref:System.Security.SecurityException>発生します。  
   
- ただし、.NET Framework バージョン2.0 以降では、一部の .NET Framework データプロバイダーを部分信頼ゾーンで使用できます。 さらに、.NET Framework バージョン1.1 の .NET Framework データプロバイダーに新しいセキュリティ機能が追加されました。 この機能により、特定のセキュリティ ゾーンで使用できる接続文字列を制限することができます。 特定のセキュリティ ゾーンに対して空白のパスワードの使用を禁止することもできます。 詳細については、「 [Code Access Security and ADO.NET](code-access-security.md)」を参照してください。  
+ ただし、.NET Framework バージョン2.0 以降では、一部の .NET Framework データプロバイダーを部分信頼ゾーンで使用できます。 さらに、.NET Framework バージョン1.1 の .NET Framework データプロバイダーに新しいセキュリティ機能が追加されました。 この機能により、特定のセキュリティ ゾーンで使用できる接続文字列を制限することができます。 特定のセキュリティ ゾーンに対して空白のパスワードの使用を禁止することもできます。 詳細については、「 [コード アクセス セキュリティと ADO.NET](code-access-security.md)」を参照してください。  
   
  .NET Framework の各インストールには個別のセキュリティ .config ファイルがあるため、セキュリティ設定には互換性の問題はありません。 ただし、アプリケーションが .NET Framework バージョン1.1 以降に含まれる ADO.NET の追加のセキュリティ機能に依存している場合は、バージョン1.0 システムに配布することはできません。  
   

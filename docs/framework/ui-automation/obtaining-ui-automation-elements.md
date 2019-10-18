@@ -19,7 +19,7 @@ ms.locfileid: "71042882"
  このトピックでは、 <xref:System.Windows.Automation.AutomationElement> 要素の [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] オブジェクトを取得するさまざまな方法について説明します。  
   
 > [!CAUTION]
-> クライアント アプリケーションが独自のユーザー インターフェイスで要素の検索を試行する可能性がある場合は、すべての [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の呼び出しを個別のスレッドで実行する必要があります。 詳細については、「 [UI Automation Threading Issues](ui-automation-threading-issues.md)」を参照してください。  
+> クライアント アプリケーションが独自のユーザー インターフェイスで要素の検索を試行する可能性がある場合は、すべての [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の呼び出しを個別のスレッドで実行する必要があります。 詳細については、「 [UI オートメーション スレッド処理の問題点](ui-automation-threading-issues.md)」を参照してください。  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>ルート要素  
@@ -85,7 +85,7 @@ ms.locfileid: "71042882"
 ### <a name="from-an-event"></a>イベントから  
  アプリケーションが [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを受信するときに、イベント ハンドラーに渡されるソース オブジェクトは <xref:System.Windows.Automation.AutomationElement>です。 たとえば、フォーカス変更イベントをサブスクライブしている場合、 <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> に渡されるソースはフォーカスを受け取った要素になります。  
   
- 詳細については、「 [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md)」を参照してください。  
+ 詳細については、「 [UI オートメーション イベントのサブスクライブ](subscribe-to-ui-automation-events.md)」を参照してください。  
   
 ### <a name="from-a-point"></a>ポイントから  
  画面座標 (たとえば、カーソル位置) がある場合、静的 <xref:System.Windows.Automation.AutomationElement> メソッドを使用して <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> を取得できます。  

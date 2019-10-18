@@ -48,7 +48,7 @@ XML リソース (.resx) ファイルは適切に定義された XML で構成�
 > [!TIP]
 > [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) を使用して .resx ファイルを作成することもできます。 コンパイル時に、Visual Studio は [リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を使って、.resx ファイルをバイナリ リソース (.resources) ファイルに変換し、アプリケーション アセンブリかサテライト アセンブリのいずれかに埋め込みます。
 
-.resx ファイルをランタイムの実行可能ファイルに埋め込むことや、サテライト アセンブリにコンパイルすることはできません。 [リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)を使って、.resx ファイルをバイナリ リソース (.resources) ファイルに変換する必要があります。 結果として得られる .resources ファイルは、アプリケーション アセンブリやサテライト アセンブリに埋め込むことができます。 詳細については、「 [Creating Resource Files](creating-resource-files-for-desktop-apps.md)」を参照してください。
+.resx ファイルをランタイムの実行可能ファイルに埋め込むことや、サテライト アセンブリにコンパイルすることはできません。 [リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)を使って、.resx ファイルをバイナリ リソース (.resources) ファイルに変換する必要があります。 結果として得られる .resources ファイルは、アプリケーション アセンブリやサテライト アセンブリに埋め込むことができます。 詳細については、[リソース ファイルの作成](creating-resource-files-for-desktop-apps.md) に関するページを参照してください。
 
 ## <a name="enumerate-resources"></a>リソースを列挙する
  場合によっては、.resx ファイルから、特定のリソースではなく、すべてのリソースを取得したいことがあります。 これを行うには、.resx ファイル内のすべてのリソースの列挙子を提供する <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> クラスを使います。 <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> クラスは <xref:System.Collections.IDictionaryEnumerator>を実装します。これは、ループの反復処理ごとに特定のリソースを示す <xref:System.Collections.DictionaryEntry> を返します。 その <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> プロパティはリソースのキーを返し、その <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> プロパティはリソースの値を返します。

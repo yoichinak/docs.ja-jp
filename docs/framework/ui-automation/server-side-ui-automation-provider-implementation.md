@@ -121,7 +121,7 @@ HWND ベースのコントロールのプロバイダーは通常、次のプロ
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> は通常、ホスト プロバイダーによって提供されます。 たとえば、カスタム コントロールが <xref:System.Windows.Forms.Control>から派生している場合、名前はこのコントロールの `Text` プロパティから派生します。
 
-コード例については、「 [Return Properties from a UI Automation Provider](return-properties-from-a-ui-automation-provider.md)」を参照してください。
+コード例については、「 [UI オートメーション プロバイダーからのプロパティの返却](return-properties-from-a-ui-automation-provider.md)」を参照してください。
 
 <a name="Events_in_Non_WPF_Providers"></a>
 

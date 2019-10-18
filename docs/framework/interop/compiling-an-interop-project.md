@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85841491ace5b8959c3517f407c14069b34733a7
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 5bc92eb9d4b7b0ae5db56303f3fbfa991c58e06a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969085"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523829"
 ---
 # <a name="compiling-an-interop-project"></a>相互運用プロジェクトのコンパイル
 
@@ -24,15 +24,15 @@ ms.locfileid: "70969085"
 
  相互運用機能アセンブリを参照する方法には、次の 2 つがあります。
 
-- 埋め込まれた相互運用機能型:.NET Framework 4 および Visual Studio 2010 以降では、相互運用機能アセンブリから実行可能ファイルに型情報を埋め込むようにコンパイラに指示できます。 この手法を使用することをお勧めします。
+- 埋め込まれた相互運用機能型: .NET Framework 4 と Visual Studio 2010 以降では、相互運用機能アセンブリから実行可能ファイルに型情報を埋め込むようにコンパイラに指示できます。 この手法を使用することをお勧めします。
 
-- 相互運用機能アセンブリの配置:相互運用機能アセンブリへの標準の参照を作成できます。 この場合、アプリケーションで相互運用機能アセンブリを展開する必要があります。
+- 相互運用機能アセンブリの配置: 相互運用機能アセンブリへの標準の参照を作成できます。 この場合、アプリケーションで相互運用機能アセンブリを配置する必要があります。
 
  この 2 つの手法の違いの詳細については、「[Using COM Types in Managed Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))」(マネージド コードでの COM 型の使用) を参照してください。
 
- Visual Studio での相互運用機能型の埋め込みについては、「[チュートリアル:Visual Studio でマネージド アセンブリからの型を埋め込む](../../standard/assembly/embed-types-visual-studio.md)」を参照してください。
+ Visual Studio での相互運用機能型の埋め込みについては、 [「チュートリアル: Visual studio におけるマネージアセンブリからの型の埋め込み](../../standard/assembly/embed-types-visual-studio.md)」で説明されています。
 
- コマンド ライン コンパイラを使用して相互運用機能アセンブリを参照し、実行可能ファイルに型情報を埋め込むには、[/link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/link-compiler-option.md) または [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) コンパイラ スイッチを使用して、相互運用機能アセンブリの名前を指定します。
+ コマンドラインコンパイラを使用して相互運用機能アセンブリを参照し、実行可能ファイルに型情報を埋め込むには、 [-link (C#コンパイラオプション)](../../csharp/language-reference/compiler-options/link-compiler-option.md)または[-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)コンパイラスイッチを使用して、相互運用機能アセンブリの名前を指定します。
 
 > [!NOTE]
 > Visual C++ アプリケーションは型情報を埋め込むことはできませんが、型情報を埋め込むことができるアプリケーションまたはアドインと相互運用できます。
@@ -44,5 +44,5 @@ ms.locfileid: "70969085"
 - [.NET Framework への COM コンポーネントの公開](exposing-com-components.md)
 - [言語への非依存性、および言語非依存コンポーネント](../../standard/language-independence-and-language-independent-components.md)
 - [マネージド コードでの COM 型の使用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む](../../standard/assembly/embed-types-visual-studio.md)
+- [チュートリアル: マネージド アセンブリからの型の埋め込み (Visual Studio)](../../standard/assembly/embed-types-visual-studio.md)
 - [タイプ ライブラリのアセンブリとしてのインポート](importing-a-type-library-as-an-assembly.md)

@@ -79,5 +79,5 @@ ms.locfileid: "71699795"
 
 - [構成ファイル スキーマ](../index.md)
 - [暗号化設定スキーマ](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [暗号化サービス](../../../../standard/security/cryptographic-services.md)
 - [暗号化クラスの設定](../../configure-cryptography-classes.md)

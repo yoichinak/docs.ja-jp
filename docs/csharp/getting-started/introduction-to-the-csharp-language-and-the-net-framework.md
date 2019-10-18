@@ -48,7 +48,7 @@ C# は、タイプ セーフで洗練されたオブジェクト指向言語で�
   
 - C# 言語の具体的な側面の詳細については、「[C# リファレンス](../language-reference/index.md)」を参照してください。  
   
-- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] の詳細については、「[LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md)」を参照してください。  
+- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] の詳細については、[LINQ (統合言語クエリ)](../programming-guide/concepts/linq/index.md) に関するページを参照してください。  
 
 ## <a name="net-framework-platform-architecture"></a>.NET Framework のプラットフォーム アーキテクチャ
 

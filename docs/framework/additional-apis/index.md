@@ -12,7 +12,7 @@ ms.author: mairaw
 ms.topic: conceptual
 ms.openlocfilehash: b869ca2f5e17db9a204a8b757b5e24ebb209d7c5
 ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/16/2019
 ms.locfileid: "72395659"
@@ -69,8 +69,8 @@ ms.locfileid: "72395659"
 * [System .Net. ServicePoint. m @ no__t-1ConnectionGroupList フィールド](m_connectiongrouplist.md)
 * [System .Net. ServicePointManager. s @ no__t-1ServicePointTable フィールド](s_servicepointtable.md)
 * [No__t-1isDebuggerCheckDisabledForTestPurposes フィールドを入力してください。](s-isdebuggercheckdisabledfortestpurposes-field.md)
-* [System.string クラス (DataMemberFieldEditor クラス)](datamemberfieldeditor-class.md)
-* [System.string クラス (DataMemberListEditor クラス)](datamemberlisteditor-class.md)
+* [System.Windows.Forms.Design.DataMemberFieldEditor クラス](datamemberfieldeditor-class.md)
+* [System.Windows.Forms.Design.DataMemberListEditor クラス](datamemberlisteditor-class.md)
 * [adodb.recordset.接続インターフェイス](adodb.connection.md)
 * [adodb.recordset.EventReason 列挙型](adodb.eventreasonenum.md)
 * [adodb.recordset.EventStatus 列挙型](adodb.eventstatusenum.md)

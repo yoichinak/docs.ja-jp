@@ -5,12 +5,12 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 91489ee1664da22cc8897cdf8d12b61d962d1c83
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c62eab6b1fb1ba1cc7de83c12d7205cf0bbe46fa
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664183"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524718"
 ---
 # <a name="param-visual-basic"></a>\<param > (Visual Basic)
 パラメーターの名前と説明を定義します。  
@@ -29,18 +29,18 @@ ms.locfileid: "64664183"
  パラメーターの説明です。  
   
 ## <a name="remarks"></a>Remarks  
- `<param>`タグは、メソッドのパラメーターのいずれかを説明するメソッド宣言のコメントで使用する必要があります。  
+ メソッド宣言のコメントには、メソッドのパラメーターの1つを記述するために `<param>` タグを使用する必要があります。  
   
- テキスト、`<param>`タグは、次の場所に表示されます。  
+ @No__t_0 タグのテキストは次の場所に表示されます。  
   
 - IntelliSense のパラメーター情報。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。  
   
-- オブジェクト ブラウザー。 詳細については、「[コードの構造の表示](/visualstudio/ide/viewing-the-structure-of-code)」を参照してください。  
+- オブジェクトブラウザー。 詳細については、「[コードの構造の表示](/visualstudio/ide/viewing-the-structure-of-code)」を参照してください。  
   
- コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
+ コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- この例では、`<param>`を記述するタグ、`id`パラメーター。  
+ この例では、`<param>` タグを使用して、`id` パラメーターを記述します。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
