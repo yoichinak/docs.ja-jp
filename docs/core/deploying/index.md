@@ -94,11 +94,11 @@ FDE の展開には、次のいくつかの利点があります。
 
 ## <a name="step-by-step-examples"></a>手順の例
 
-CLI ツールで .NET Core アプリを展開する手順の例については、「[Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md)」(CLI ツールで .NET Core アプリを展開する) をご覧ください。 Visual Studio で .NET Core アプリを展開する手順の例については、「[Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md)」(Visual Studio で .NET Core アプリを展開する) をご覧ください。 
+CLI ツールで .NET Core アプリを展開する手順の例については、「[CLI を使用して .NET Core アプリを展開する](deploy-with-cli.md)」をご覧ください。 Visual Studio で .NET Core アプリを展開する手順の例については、「[Visual Studio を使用して .NET Core アプリを展開する](deploy-with-vs.md)」 をご覧ください。 
 
 ## <a name="see-also"></a>関連項目
 
-- [CLI ツールで .NET Core アプリを展開する](deploy-with-cli.md)
-- [Visual Studio で .NET Core アプリを展開する](deploy-with-vs.md)
+- [CLI を使用して .NET Core アプリを展開する](deploy-with-cli.md)
+- [Visual Studio を使用して .NET Core アプリを展開する](deploy-with-vs.md)
 - [パッケージ、メタパッケージ、フレームワーク](../packages.md)
 - [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)
