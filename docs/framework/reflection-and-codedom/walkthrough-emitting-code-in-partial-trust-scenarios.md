@@ -35,7 +35,7 @@ ms.locfileid: "71045751"
 - [部分的に信頼されたコードのテスト用に単純なサンドボックスを設定する](#Setting_up)
 
   > [!IMPORTANT]
-  > これは、部分信頼でコードを試す簡単な方法です。 実際には信頼されていない場所から取得したコードを実行する場合は、「[How to:Run Partially Trusted Code in a Sandbox](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)」 (方法: サンドボックスで部分信頼コードを実行する) を参照してください。
+  > これは、部分信頼でコードを試す簡単な方法です。 実際には信頼されていない場所から取得したコードを実行する場合は、「[方法:部分的に信頼されたコードをサンドボックスで実行する](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md) を参照してください。
 
 - [部分的に信頼されたアプリケーション ドメインでコードを実行する](#Running_code)
 
@@ -71,7 +71,7 @@ ms.locfileid: "71045751"
 2. アプリケーション ドメインをアプリケーション パスで初期化するため、<xref:System.AppDomainSetup> オブジェクトを作成します。
 
     > [!IMPORTANT]
-    > 単純にするため、このコード例では現在のフォルダーを使用します。 実際にインターネットから取得されたコードを実行する場合は、信頼できないコード用の別のフォルダーを使用してください。詳細については、「[How to:Run Partially Trusted Code in a Sandbox](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)」 (方法: サンドボックスで部分信頼コードを実行する) を参照してください。
+    > 単純にするため、このコード例では現在のフォルダーを使用します。 実際にインターネットから取得されたコードを実行する場合は、信頼できないコード用の別のフォルダーを使用してください。詳細については、「[方法:部分的に信頼されたコードをサンドボックスで実行する](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)」 を参照してください。
 
     [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
     [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]

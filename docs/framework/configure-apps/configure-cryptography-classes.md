@@ -27,7 +27,7 @@ Windows SDK を使用すると、コンピューター管理者は、.NET Framew
  オブジェクト識別子を暗号アルゴリズムにマップする方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Cryptographic Services](../../standard/security/cryptographic-services.md)  
+ [暗号化サービス](../../standard/security/cryptographic-services.md)  
  Windows SDK によって提供される暗号化サービスの概要について説明します。  
   
  [暗号化設定スキーマ](./file-schema/cryptography/index.md)  

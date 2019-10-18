@@ -83,7 +83,7 @@ ms.locfileid: "65879967"
 > decimal から他の型への変換は縮小変換になるため、decimal 値は最も近い整数値に切り捨てられます。 変換結果が対象の型にならなかった場合、 <xref:System.OverflowException> がスローされます。
 
 > [!NOTE]
-> 指定する必要があります、サーバーに null パラメーター値を送信するときに<xref:System.DBNull>ではなく、 `null` (`Nothing` Visual Basic で)。 システムの null 値は、値のない空オブジェクトです。 <xref:System.DBNull> は、null 値を表すために使用します。 データベースの NULL 値の詳細については、「 [Handling Null Values](./sql/handling-null-values.md)」を参照してください。
+> 指定する必要があります、サーバーに null パラメーター値を送信するときに<xref:System.DBNull>ではなく、 `null` (`Nothing` Visual Basic で)。 システムの null 値は、値のない空オブジェクトです。 <xref:System.DBNull> は、null 値を表すために使用します。 データベースの NULL 値の詳細については、「 [null 値の処理](./sql/handling-null-values.md)」を参照してください。
 
 ## <a name="deriving-parameter-information"></a>パラメーター情報の派生
 

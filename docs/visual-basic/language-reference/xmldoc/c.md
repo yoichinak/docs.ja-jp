@@ -5,14 +5,14 @@ helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: 9be9f9e96fc1b79ea97d54c54352da63b93ef264
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ea19ed5330dcbb8fcd84708d1546a81d909b04e
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938594"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523941"
 ---
-# <a name="c-visual-basic"></a>\<c> (Visual Basic)
+# <a name="c-visual-basic"></a>\<c > (Visual Basic)
 説明内のテキストがコードであることを示します。  
   
 ## <a name="syntax"></a>構文  
@@ -27,13 +27,13 @@ ms.locfileid: "61938594"
 |---|---|  
 |`text`|コードとして指定するテキストです。|  
   
-## <a name="remarks"></a>コメント  
- `<c>`タグを使用する方法を示す説明内のテキストをコードとしてマークする必要があります。 複数行をコードとして指定する場合は、[\<code>](../../../visual-basic/language-reference/xmldoc/code.md) タグを使用します。  
+## <a name="remarks"></a>Remarks  
+ @No__t_0 タグを使用すると、説明内のテキストをコードとしてマークする必要があることを示すことができます。 複数行をコードとして指定する場合は、[\<code>](../../../visual-basic/language-reference/xmldoc/code.md) タグを使用します。  
   
- コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
+ コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- この例では、`<c>`ことを示す [概要] セクションでタグ`Counter`コードに示します。  
+ この例では、summary セクションの `<c>` タグを使用して、`Counter` がコードであることを示します。  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

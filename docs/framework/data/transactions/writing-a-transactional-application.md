@@ -40,4 +40,4 @@ ms.locfileid: "70205827"
  [診断トレース](diagnostic-traces.md)は、 <xref:System.Transactions>インフラストラクチャによって生成されるトレースコードを使用して、アプリケーションのエラーをトラブルシューティングする方法について説明します。  
   
 ### <a name="working-within-aspnet"></a>ASP.NET 内での使用  
- 「 [ASP.NET でのシステムの使用](using-system-transactions-in-aspnet.md)」トピックでは、ASP.NET アプリケーション<xref:System.Transactions>内でを正常に使用する方法について説明します。
+ 「 [ASP.NET での System.Transactions の使用](using-system-transactions-in-aspnet.md)」トピックでは、ASP.NET アプリケーション<xref:System.Transactions>内でを正常に使用する方法について説明します。

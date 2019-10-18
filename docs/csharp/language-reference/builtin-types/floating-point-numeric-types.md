@@ -106,4 +106,4 @@ myMoney = 400.75M;
 - [明示的な数値変換の一覧表](../keywords/explicit-numeric-conversions-table.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
 - [数値結果テーブルの書式設定](../keywords/formatting-numeric-results-table.md)
-- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
+- [標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md)

@@ -36,7 +36,7 @@ ms.locfileid: "70894317"
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   
- Linq の一般的な情報については、「[統合言語クエリ (linq C# )](../../../csharp/programming-guide/concepts/linq/index.md) 」または「[統合言語クエリ (linq)-Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)」を参照してください。  
+ Linq の一般的な情報については、「[統合言語クエリ (linq C# )](../../../csharp/programming-guide/concepts/linq/index.md) 」または「[統合言語クエリ (LINQ) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/index.md)」を参照してください。  
   
  LINQ を使用してクエリを作成する際には、前の例のような言語固有の宣言型のクエリ構文と、標準クエリ演算子と呼ばれる一連のクエリ メソッドの両方を使用できます。 したがって、次の例のように、前の例と同等のクエリをメソッド ベースの構文のみを使用して作成することもできます。  
   

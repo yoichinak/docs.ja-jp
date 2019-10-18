@@ -17,7 +17,7 @@ ms.locfileid: "71117353"
 
 このトピックでは、.NET Core CLI ツールを利用し、自分のコンピューターでプラットフォームに依存しないアプリを開発する方法について説明します。
 
-.NET Core CLI ツールセットに慣れていない場合は、「[.NET Core SDK overview](../tools/index.md)」(.NET Core SDK の概要) を参照してください。
+.NET Core CLI ツールセットに慣れていない場合は、[.NET Core SDK の概要](../tools/index.md) に関するページを参照してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 

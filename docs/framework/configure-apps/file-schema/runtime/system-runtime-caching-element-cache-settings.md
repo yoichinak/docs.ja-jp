@@ -52,7 +52,7 @@ ms.locfileid: "70252289"
   
 ## <a name="remarks"></a>Remarks
 
-この名前空間のクラスは、ASP.NET のキャッシュ機能と同様のキャッシュ機能を使用する方法を提供しますが、 `System.Web` アセンブリに依存しません。 詳細については、「 [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md)」を参照してください。  
+この名前空間のクラスは、ASP.NET のキャッシュ機能と同様のキャッシュ機能を使用する方法を提供しますが、 `System.Web` アセンブリに依存しません。 詳細については、 [.NET Framework アプリケーションでのキャッシュ](../../../performance/caching-in-net-framework-applications.md) を参照してください。  
   
 > [!NOTE]
 > <xref:System.Runtime.Caching>名前空間の出力キャッシュ機能と型は .NET Framework 4 で新たに追加されています。  

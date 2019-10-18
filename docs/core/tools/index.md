@@ -61,7 +61,7 @@ ms.locfileid: "71117385"
 - [nuget locals](dotnet-nuget-locals.md)
 - [nuget push](dotnet-nuget-push.md)
 - [msbuild](dotnet-msbuild.md)
-- [dotnet install script](dotnet-install-script.md)
+- [dotnet install スクリプト](dotnet-install-script.md)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -93,7 +93,7 @@ ms.locfileid: "71117385"
 - [nuget locals](dotnet-nuget-locals.md)
 - [nuget push](dotnet-nuget-push.md)
 - [msbuild](dotnet-msbuild.md)
-- [dotnet install script](dotnet-install-script.md)
+- [dotnet install スクリプト](dotnet-install-script.md)
 
 ---
 

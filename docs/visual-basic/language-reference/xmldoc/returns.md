@@ -5,14 +5,14 @@ helpviewer_keywords:
 - returns XML tag
 - <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
-ms.openlocfilehash: 5a0ff0da7cf26a1cea75a5b2e4678593d9b72f54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b220c2a9aa544413c3692485f6c1eb2b64e54389
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940791"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524685"
 ---
-# <a name="returns-visual-basic"></a>\<返します > (Visual Basic)
+# <a name="returns-visual-basic"></a>\<returns > (Visual Basic)
 プロパティまたは関数の戻り値を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,12 +26,12 @@ ms.locfileid: "61940791"
  戻り値の説明。  
   
 ## <a name="remarks"></a>Remarks  
- 使用して、`<returns>`戻り値を記述するメソッド宣言のコメント内のタグ。  
+ メソッド宣言のコメントにある `<returns>` タグを使用して、戻り値を記述します。  
   
- コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
+ コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- この例では、`<returns>`何かを説明するタグ、`DoesRecordExist`関数が返される。  
+ この例では、`<returns>` タグを使用して、`DoesRecordExist` 関数が返す内容を説明します。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

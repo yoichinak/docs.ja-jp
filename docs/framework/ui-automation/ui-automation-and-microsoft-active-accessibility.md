@@ -110,7 +110,7 @@ ms.locfileid: "71042581"
 |ROLE_SYSTEM_OUTLINEITEM|ツリー項目|  
 |ROLE_SYSTEM_WINDOW|[Window]|  
   
- さまざまなコントロール型の詳細については、「 [UI Automation Control Types](ui-automation-control-types.md)」を参照してください。  
+ さまざまなコントロール型の詳細については、「 [UI オートメーション コントロール型](ui-automation-control-types.md)」を参照してください。  
   
 <a name="States_and_Properties"></a>   
 ## <a name="states-and-properties"></a>状態とプロパティ  
