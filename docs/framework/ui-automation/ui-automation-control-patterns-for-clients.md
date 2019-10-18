@@ -20,7 +20,7 @@ ms.locfileid: "71042521"
   
  コントロール パターンは、コントロール型や外観に関係なく、コントロールの機能を分類したり公開したりするための手段です。 UI オートメーション クライアントは、 <xref:System.Windows.Automation.AutomationElement> を調べてどのコントロール パターンがサポートされているかを特定し、そのコントロールの動作を確実に実行することができます。  
   
- コントロール パターンの完全なリストについては、「 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)」をご覧ください。  
+ コントロール パターンの完全なリストについては、「 [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)」をご覧ください。  
   
 <a name="uiautomation_getting_control_patterns"></a>   
 ## <a name="getting-control-patterns"></a>コントロール パターンの取得  

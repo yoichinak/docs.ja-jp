@@ -23,7 +23,7 @@ COLLECTION(type_definition)
  サポートされる型、行、または参照のコレクションを返す式。  
   
 ## <a name="remarks"></a>Remarks  
- COLLECTION キーワードについて詳しくは、「 [Type Definitions](type-definitions-entity-sql.md)」をご覧ください。  
+ COLLECTION キーワードについて詳しくは、「 [型定義](type-definitions-entity-sql.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
  次の例は、COLLECTION キーワードを使用して 10 進数のコレクションをインライン クエリ関数の引数として宣言する方法を示します。  

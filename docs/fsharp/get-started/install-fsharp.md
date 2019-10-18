@@ -33,7 +33,7 @@ F# は、選択した構成に関係なく、[Visual Studio for Mac](https://vis
 
 ### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-[Mono](https://www.mono-project.com)使用[F# Interactive](../tutorials/fsharp-interactive/index.md)をサポートします。 MacOS に Mono をインストールする最も簡単な方法は、Homebrew を使用することです。 ターミナルに次のように入力します。
+[Mono](https://www.mono-project.com)は[F# Interactive](../tutorials/fsharp-interactive/index.md)サポートに使用されます。 MacOS に Mono をインストールする最も簡単な方法は、Homebrew を使用することです。 ターミナルに次のように入力します。
 
 ```console
 brew install mono
@@ -69,4 +69,6 @@ Visual Studio Code での F# サポートが必要な唯一のプラグイン[io
 ## <a name="install-f-on-a-build-server"></a>ビルドサーバーに F＃ をインストールする
 
 .Net Core または .net SDK を .NET Framework を経由で使用している場合は、.NET SDK をビルドサーバーにインストールするだけです。 必要なものはすべて揃っています。
+
 .NET Framework を使用していて、.NET SDK を使用して **いない** 場合は、 [Visual Studio Build Tools SKU](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16) を Windows Server にインストールする必要があります。 インストーラーで、 **[.net デスクトップビルドツール]** を選択し、インストーラーメニューの右側にある **F# コンパイラ** コンポーネントを選択します。
+

@@ -38,7 +38,7 @@ ms.locfileid: "71045610"
   
 - 2 つのパラメーターを持つオーバー ロード。1 つは、リソースの名前が含まれる文字列で、もう 1 つは、リソースが取得されるカルチャを表す <xref:System.Globalization.CultureInfo> オブジェクトです。 そのカルチャ用に設定されたリソースが見つからない場合、リソース マネージャーはフォールバック規則を使用して適切なリソースを取得します。 詳細については、 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>メソッド、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>メソッド、および <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> メソッドを参照してください。  
   
- リソース マネージャーでは、アプリケーションでカルチャ固有のリソースを取得する方法を、リソース フォールバック プロセスを使用して制御します。 詳細については、「 [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)」の「リソース フォールバック プロセス」セクションを参照してください。 <xref:System.Resources.ResourceManager> オブジェクトをインスタンス化する方法については、 <xref:System.Resources.ResourceManager> クラスに関するトピックの「ResourceManager オブジェクトのインスタンス化」セクションを参照してください。  
+ リソース マネージャーでは、アプリケーションでカルチャ固有のリソースを取得する方法を、リソース フォールバック プロセスを使用して制御します。 詳細については、[リソースのパッケージ化と配置](packaging-and-deploying-resources-in-desktop-apps.md)に関するページのリソース フォールバック プロセスのセクションを参照してください。 <xref:System.Resources.ResourceManager> オブジェクトをインスタンス化する方法については、 <xref:System.Resources.ResourceManager> クラスに関するトピックの「ResourceManager オブジェクトのインスタンス化」セクションを参照してください。  
   
 ### <a name="retrieving-string-data-an-example"></a>文字列データの取得: 例  
  次の例では、 <xref:System.Resources.ResourceManager.GetString%28System.String%29> メソッドを呼び出すことで、現在の UI カルチャの文字列リソースを取得します。 ここでは、英語 (米国) カルチャ用のニュートラル文字列リソースと、フランス語 (フランス) カルチャおよびロシア語 (ロシア) カルチャ用のローカライズされたリソースが対象となります。 次の英語 (米国) リソースは、Strings.txt という名前のファイルに入っています。  

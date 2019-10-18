@@ -49,7 +49,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|Microsoft 著作権情報を表示しません。|  
 |`/out:` *filename*|作成するアセンブリの名前を指定します。|  
 |`/publickey:` *filename*|*filename* で指定されたファイルの公開キーを使用して、生成されたコントロールに厳密な名前で署名します。|  
-|`/rcw:` *filename*|新しいものを生成する代わりに、指定したランタイム呼び出し可能ラッパーを使用します。 複数のインスタンスを指定できます。 現在のディレクトリは相対パスに使用されます。 詳細については、「[Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md)」 (ランタイム呼び出し可能ラッパー) を参照してください。|  
+|`/rcw:` *filename*|新しいものを生成する代わりに、指定したランタイム呼び出し可能ラッパーを使用します。 複数のインスタンスを指定できます。 現在のディレクトリは相対パスに使用されます。 詳細については、「[ランタイム呼び出し可能ラッパー](../../standard/native-interop/runtime-callable-wrapper.md)」 を参照してください。|  
 |`/silent`|成功メッセージを表示しません。|  
 |`/source`|Windows フォーム ラッパーの C# ソース コードを生成します。|  
 |`/verbose`|詳細出力モードを指定します。進行状況に関する追加情報が表示されます。|  

@@ -75,7 +75,7 @@ ms.locfileid: "72031856"
 dotnet tool install -g dotnetsay
 ```
 
-インストールしたツールは、ツール名を指定してコマンドラインから実行できます。 詳細については、「[.NET Core Global Tools overview](../tools/global-tools.md)」(.NET Core グローバル ツールの概要) を参照してください。
+インストールしたツールは、ツール名を指定してコマンドラインから実行できます。 詳細については、[.NET core グローバル ツールの概要](../tools/global-tools.md) を参照してください。
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>`dotnet tool` コマンドによるツールの管理
 

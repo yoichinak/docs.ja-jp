@@ -36,7 +36,7 @@ ms.locfileid: "70794382"
  [Windows フォームのセキュリティ](../../winforms/windows-forms-security.md)  
  Windows フォーム アプリケーションをセキュリティで保護する方法について説明します。また、関連項目へのリンクがあります。  
   
- [Windows フォームとアンマネージ アプリケーション](../../winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows フォームとアンマネージド アプリケーション](../../winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Windows フォーム アプリケーションでアンマネージ アプリケーションと対話する方法について説明します。  
   
  [Windows フォームの ClickOnce 配置](../../winforms/clickonce-deployment-for-windows-forms.md)  

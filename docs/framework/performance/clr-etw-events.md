@@ -16,13 +16,13 @@ ms.lasthandoff: 09/17/2019
 ms.locfileid: "71046740"
 ---
 # <a name="clr-etw-events"></a>CLR ETW イベント
-このセクションのトピックでは、Windows イベント トレーシング (ETW) イベントについて説明します。 各イベントは、キーワードとレベルに関連付けられています。詳細については、「[CLR ETW のキーワードとレベル](clr-etw-keywords-and-levels.md)」トピックを参照してください。 CLR には、イベントのプロバイダーが 2 つあります。  
+このセクションのトピックでは、Windows イベント トレーシング (ETW) イベントについて説明します。 各イベントは、キーワードとレベルに関連付けられています。詳細については、「[CLR ETW キーワードおよびレベル](clr-etw-keywords-and-levels.md)」トピックを参照してください。 CLR には、イベントのプロバイダーが 2 つあります。  
   
 - ランタイム プロバイダー。有効になっているキーワードに応じてイベントを発生させます (キーワードとはイベントのカテゴリです)。 CLR ランタイム プロバイダーの GUID は e13c0d23-ccbc-4e12-931b-d9cc2eee27e4 です。  
   
 - ランダウン プロバイダー。特殊な用途があります。 CLR ランダウン プロバイダーの GUID は a669021c-c450-4609-a035-5af59af4df18 です。  
   
- プロバイダーの詳細については、「[CLR ETW Providers](clr-etw-providers.md)」(CLR ETW プロバイダー) を参照してください。  
+ プロバイダーの詳細については、「[CLR ETW プロバイダー](clr-etw-providers.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ランタイム情報イベント](runtime-information-etw-events.md)  

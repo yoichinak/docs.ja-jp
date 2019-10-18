@@ -20,6 +20,6 @@ ms.locfileid: "71045377"
 ---
 # <a name="security-changes-in-the-net-framework"></a>.NET Framework におけるセキュリティの変更点
 
-.NET Framework 4.5 でのセキュリティの最も重要な変更点は、厳密な名前付けです。 これらの変更の詳細については、「 [Enhanced Strong Naming](../../standard/assembly/enhanced-strong-naming.md) 」を参照してください。  
+.NET Framework 4.5 でのセキュリティの最も重要な変更点は、厳密な名前付けです。 これらの変更の詳細については、「 [拡張された厳密な名前付け](../../standard/assembly/enhanced-strong-naming.md) 」を参照してください。  
   
 .NET Framework は、マネージド アプリケーションに 2 階層のセキュリティ モデルを提供します。 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリはリソースへのアクセスを制限する Windows セキュリティ コンテナーで実行されます。 そのコンテナー内では、マネージド アプリケーションは完全に信頼された状態で実行します。 コード アクセス セキュリティの (CAS) の観点からは、権限を昇格するために開発者が実行できる操作はありません。 Windows で与えられる権限の詳細については、Windows デベロッパー センターの「 [App capability declarations (Windows Store apps)](https://go.microsoft.com/fwlink/?LinkId=230436) 」 (アプリの機能宣言 (Windows ストア アプリ)) を参照してください。 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリの作成については、「 [C# または Visual Basic を使った初めての Windows ストア アプリの作成](https://go.microsoft.com/fwlink/?LinkId=230461)」を参照してください。

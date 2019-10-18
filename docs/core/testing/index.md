@@ -64,5 +64,5 @@ C#、F#、Visual Basic 向けに組み込まれている .NET Core 2.0 以降の
 次の記事でさらに詳しく学習できます。
 
 - Visual Studio Enterprise は、.NET Core の優れたテスト ツールを提供します。 [Live Unit Testing](/visualstudio/test/live-unit-testing) または[コード カバレッジ](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage)をご確認ください。
-- 選択的単体テストの実行方法に関する詳細については、「[Running selective unit tests](selective-unit-tests.md)」(選択的単体テストの実行)、または [Visual Studio を使用したテストの組み込みと除外](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods)に関するトピックをご覧ください。
+- 選択的単体テストの実行方法に関する詳細については、「[選択的単体テストの実行](selective-unit-tests.md)」、または [Visual Studio を使用したテストの組み込みと除外](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods)に関するトピックをご覧ください。
 - [.NET Core と Visual Studio で xUnit を使用する方法](https://xunit.github.io/docs/getting-started-dotnet-core.html)

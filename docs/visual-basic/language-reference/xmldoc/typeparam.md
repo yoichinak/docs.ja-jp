@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typeparam XML tag
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-ms.openlocfilehash: 014623be84f9d7eb8a25ac4aadcce450f158c154
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbd99997fed33c192a2160fb45a739addbae254a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940752"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524624"
 ---
 # <a name="typeparam-visual-basic"></a>\<typeparam > (Visual Basic)
 型パラメーターの名前と説明を定義します。  
@@ -29,12 +29,12 @@ ms.locfileid: "61940752"
  型パラメーターの説明。  
   
 ## <a name="remarks"></a>Remarks  
- 使用して、`<typeparam>`型パラメーターのいずれかを記述するには、ジェネリック型またはジェネリック メンバー宣言のコメント内のタグ。  
+ ジェネリック型またはジェネリックメンバー宣言のコメントに `<typeparam>` タグを使用して、型パラメーターの1つを記述します。  
   
- コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
+ コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- この例では、`<typeparam>`を記述するタグ、`id`パラメーター。  
+ この例では、`<typeparam>` タグを使用して、`id` パラメーターを記述します。  
   
  [!code-vb[VbVbcnXmlDocComments#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#8)]  
   

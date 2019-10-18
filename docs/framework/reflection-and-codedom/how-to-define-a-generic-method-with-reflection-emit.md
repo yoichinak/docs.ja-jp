@@ -36,7 +36,7 @@ ms.locfileid: "71046056"
     [!code-csharp[GenericMethodHowTo#20](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#20)]
     [!code-vb[GenericMethodHowTo#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#20)]
 
-2. 動的アセンブリと動的モジュールを定義して、ジェネリック メソッドが属する型を格納します。 この場合、アセンブリには `DemoMethodBuilder1` という名前のモジュールが 1 つだけ含まれます。モジュール名はアセンブリ名に拡張子が付いたものです。 この例では、アセンブリをディスクに保存したうえで実行するため、<xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> を指定します。 [Ildasm.exe (IL Disassembler)](../tools/ildasm-exe-il-disassembler.md) を使用すると、DemoMethodBuilder1.dll をチェックし、手順 1. に示すメソッドの Microsoft Intermediate Language (MSIL) と比較できます。
+2. 動的アセンブリと動的モジュールを定義して、ジェネリック メソッドが属する型を格納します。 この場合、アセンブリには `DemoMethodBuilder1` という名前のモジュールが 1 つだけ含まれます。モジュール名はアセンブリ名に拡張子が付いたものです。 この例では、アセンブリをディスクに保存したうえで実行するため、<xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> を指定します。 [Ildasm.exe (IL 逆アセンブラー)](../tools/ildasm-exe-il-disassembler.md) を使用すると、DemoMethodBuilder1.dll をチェックし、手順 1. に示すメソッドの Microsoft Intermediate Language (MSIL) と比較できます。
 
     [!code-csharp[GenericMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#2)]
     [!code-vb[GenericMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#2)]
@@ -156,7 +156,7 @@ ms.locfileid: "71046056"
 
 メソッドは、`TInput` の配列である仮パラメーターを 1 つ持ちます。 メソッドは、入力配列のすべての要素を格納する `TOutput` のインスタンスを返します。 `TOutput` は <xref:System.Collections.Generic.ICollection%601> ジェネリック インターフェイスを実装するジェネリック コレクション型に指定できます。
 
-コードを実行すると、動的アセンブリが DemoGenericMethod1.dll という名前で保存され、[Ildasm.exe (IL Disassembler)](../tools/ildasm-exe-il-disassembler.md) を使用してチェックできます。
+コードを実行すると、動的アセンブリが DemoGenericMethod1.dll という名前で保存され、[Ildasm.exe (IL 逆アセンブラー)](../tools/ildasm-exe-il-disassembler.md) を使用してチェックできます。
 
 > [!NOTE]
 > コードを出力する方法を習得するためのよい方法は、出力しようとしているタスクを実行するプログラムを Visual Basic、C#、または Visual C++ で記述し、逆アセンブラーを使用して、コンパイラによって生成された MSIL をチェックすることです。

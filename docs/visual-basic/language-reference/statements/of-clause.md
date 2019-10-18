@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
 ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61784151"
@@ -42,7 +42,7 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- 上記のクラス定義を完了するの場合は、さまざまなを構築できます`dictionary`からクラス。 指定する種類`entryType`と`keyType`決定エントリの種類、クラスを保持し、各エントリとキーの種類を関連付けます。 制約のために指定する必要があります`keyType`を実装する型<xref:System.IComparable>します。  
+ 上記のクラス定義を完了すると、そこから様々な `dictionary` クラスを構築することができます。 `entryType` と `keyType` に与える型が、そのクラスが持つエントリーの型と、互いのエントリーと関連するキーの型を決定します。 制約により、`keyType` には <xref:System.IComparable> を実装する型を与えなければなりません。  
   
  次のコード例は、保持するオブジェクトを作成します。`String`エントリと、`Integer`がそれぞれのキー。 `Integer` 実装<xref:System.IComparable>し、そのために、制約を満たす`keyType`します。  
   

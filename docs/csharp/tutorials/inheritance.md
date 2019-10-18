@@ -25,7 +25,7 @@ ms.locfileid: "70850987"
 このチュートリアル内の例を作成して実行するには、コマンド ラインの [dotnet](../../core/tools/dotnet.md) ユーティリティを使用します。 それぞれの例について、次の手順に従います。
 
 1. 例を格納するディレクトリを作成します。
-1. コマンド プロンプトで [dotnet new console](../../core/tools/dotnet-new.md) コマンドを入力し、新しい .NET Core プロジェクトを作成します。
+1. コマンド プロンプトで [dotnet new コンソール](../../core/tools/dotnet-new.md) コマンドを入力し、新しい .NET Core プロジェクトを作成します。
 1. 例にあるコードをコピーして、コード エディターに貼り付けます。
 1. コマンド ラインから [dotnet restore](../../core/tools/dotnet-restore.md) コマンドを入力し、プロジェクトの依存関係を読み込みまたは復元します。
 

@@ -56,7 +56,7 @@ ms.locfileid: "70400658"
 |[\<declaredTypes>](declaredtypes.md)|<xref:System.Runtime.Serialization.DataContractSerializer> による逆シリアル化中に既知のタイプを必要とするタイプが含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- 既知の型の詳細については、「[データコントラクトの既知の型](../../../wcf/feature-details/data-contract-known-types.md)」と<xref:System.Runtime.Serialization.DataContractSerializer>「」を参照してください。  
+ 既知の型の詳細については、「[既知のデータ コントラクト型](../../../wcf/feature-details/data-contract-known-types.md)」と<xref:System.Runtime.Serialization.DataContractSerializer>「」を参照してください。  
   
  この要素の使用例については、 [ \<dataContractSerializer >](datacontractserializer-element.md)を参照してください。  
   

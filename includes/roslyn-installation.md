@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dab6b435a885d862d08f94dd31de79625f19bcc0
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 2872c5909b382e01fdd231019a12970caa3b77d2
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870504"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72526758"
 ---
 ## <a name="installation-instructions---visual-studio-installer"></a>インストール手順 - Visual Studio インストーラー
 
@@ -14,8 +14,8 @@ ms.locfileid: "67870504"
 
 .NET Compiler Platform SDK は、Visual Studio 拡張機能の開発ワークロードの一部として自動的に選択されません。 省略可能なコンポーネントとして選択する必要があります。
 
-1. **Visual Studio インストーラー**を実行します。 
-1. **[変更]** を選択します。 
+1. **Visual Studio インストーラー**を実行します。
+1. **[変更]** を選択します。
 1. **Visual Studio 拡張機能の開発**ワークロードを確認します。
 1. 概要ツリーの **[Visual Studio 拡張機能の開発]** ノードを開きます。
 1. **[.NET Compiler Platform SDK]** のチェック ボックスをオンにします。 省略可能なコンポーネントの最後に表示されます。
@@ -27,9 +27,9 @@ ms.locfileid: "67870504"
 
 ### <a name="install-using-the-visual-studio-installer---individual-components-tab"></a>Visual Studio インストーラーを使用したインストール - [個別のコンポーネント] タブ
 
-1. **Visual Studio インストーラー**を実行します。 
-1. **[変更]** を選択します。 
-1. **[個別のコンポーネント]** タブを選択します。 
+1. **Visual Studio インストーラー**を実行します。
+1. **[変更]** を選択します。
+1. **[個別のコンポーネント]** タブを選択します。
 1. **[.NET Compiler Platform SDK]** のチェック ボックスをオンにします。 **[コンパイラ、ビルド ツール、およびランタイム]** セクションの上部に表示されます。
 
 また、必要に応じて、**DGML エディター**のビジュアライザーでグラフを表示します。

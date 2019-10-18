@@ -36,7 +36,7 @@ ms.locfileid: "71048769"
   
  キャッシュ ポリシーを作成するには、<xref:System.Net.Cache.RequestCachePolicy> クラスまたは <xref:System.Net.Cache.HttpRequestCachePolicy> クラスのインスタンスを作成して、ポリシー オブジェクトを作成する必要があります。 要求でポリシーを指定するには、要求の <xref:System.Net.WebRequest.CachePolicy%2A> プロパティをポリシー オブジェクトに設定します。 アプリケーションレベルのポリシーをプログラムで設定する場合は、<xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A> プロパティをポリシー オブジェクトに設定します。  
   
- キャッシュ ポリシーを作成し、利用する方法を示すコード例については、「[Configuring Caching in Network Applications](configuring-caching-in-network-applications.md)」(ネットワーク アプリケーションでのキャッシュの構成) を参照してください。  
+ キャッシュ ポリシーを作成し、利用する方法を示すコード例については、「[ネットワーク アプリケーションでのキャッシュの構成](configuring-caching-in-network-applications.md)」(ネットワーク アプリケーションでのキャッシュの構成) を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
