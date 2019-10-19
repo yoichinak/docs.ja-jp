@@ -17,12 +17,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252251"
 ---
-# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > 要素
+# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode> 要素
 
 値を使用して<xref:System.TimeSpan?displayProperty=nameWithType> 、ランタイムが書式設定操作で従来の動作を保持するかどうかを決定します。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<TimeSpan_LegacyFormatMode >**  
 
 ## <a name="syntax"></a>構文
