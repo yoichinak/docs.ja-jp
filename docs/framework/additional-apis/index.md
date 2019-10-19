@@ -1,6 +1,6 @@
 ---
 title: 追加のクラス ライブラリと API
-ms.date: 10/09/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: b869ca2f5e17db9a204a8b757b5e24ebb209d7c5
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
-ms.translationtype: HT
+ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395659"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579110"
 ---
 # <a name="additional-class-libraries-and-apis"></a>追加のクラス ライブラリと API
 
@@ -36,7 +36,7 @@ ms.locfileid: "72395659"
   
 | [プロジェクト] | 説明 |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | @No__t-0 クラスを拡張して、ユニバーサル Windows プラットフォームを対象とするアプリでコードページエンコーディングを使用できるようにします。 |  
+| <xref:System.Text.CodePagesEncodingProvider> | @No__t_0 クラスを拡張して、ユニバーサル Windows プラットフォームを対象とするアプリでコードページエンコーディングを使用できるようにします。 |  
   
 ## <a name="private-apis"></a>プライベート API  
 
@@ -57,20 +57,21 @@ ms.locfileid: "72395659"
 * [SetLength メソッドを SqlTypes しています。](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [SqlTypes メソッドを作成してください。](system.data.sqltypes.sqlstreamchars.write.md)
 * [System .Net. Connection クラス](connection.md)
-* [System .Net. 接続. m @ no__t-1WriteList フィールド](m_writelist.md)
+* [System .Net. Connection. m \_WriteList フィールド](m_writelist.md)
 * [システム .Net. ConnectionGroup クラス](connectiongroup.md)
-* [System .Net. ConnectionGroup. m @ no__t-1ConnectionList フィールド](m_connectionlist.md)
+* [システム .Net. ConnectionGroup. m \_ConnectionList フィールド](m_connectionlist.md)
 * [CoreResponseData クラス](coreresponsedata.md)
-* [System CoreResponseData @ no__t-1ResponseHeaders フィールド](coreresponsedata_m_responseheaders.md)
-* [System CoreResponseData @ no__t-1StatusCode フィールド](coreresponsedata_m_statuscode.md)
-* [@No__t HttpWebRequest-1 の自動入力フィールド](_autoredirects.md)
-* [HttpWebRequest @no__t.-1CoreResponse フィールド](httpwebrequest__coreresponse.md)
-* [HttpWebRequest @no__t.-1HttpResponse フィールド](_httpresponse.md)
-* [System .Net. ServicePoint. m @ no__t-1ConnectionGroupList フィールド](m_connectiongrouplist.md)
-* [System .Net. ServicePointManager. s @ no__t-1ServicePointTable フィールド](s_servicepointtable.md)
-* [No__t-1isDebuggerCheckDisabledForTestPurposes フィールドを入力してください。](s-isdebuggercheckdisabledfortestpurposes-field.md)
-* [System.Windows.Forms.Design.DataMemberFieldEditor クラス](datamemberfieldeditor-class.md)
-* [System.Windows.Forms.Design.DataMemberListEditor クラス](datamemberlisteditor-class.md)
+* [CoreResponseData \_ResponseHeaders のフィールド](coreresponsedata_m_responseheaders.md)
+* [CoreResponseData \_StatusCode のフィールド](coreresponsedata_m_statuscode.md)
+* [@No__t_1AutoRedirects HttpWebRequest (システム) フィールド](_autoredirects.md)
+* [@No__t_1CoreResponse HttpWebRequest (システム) フィールド](httpwebrequest__coreresponse.md)
+* [@No__t_1HttpResponse HttpWebRequest (システム) フィールド](_httpresponse.md)
+* [System .Net. ServicePoint. m \_ConnectionGroupList フィールド](m_connectiongrouplist.md)
+* [System .Net. ServicePointManager. s \_ServicePointTable フィールド](s_servicepointtable.md)
+* [System. Diagnostics. s \_isDebuggerCheckDisabledForTestPurposes のフィールド](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [System.string クラス (DataMemberFieldEditor クラス)](datamemberfieldeditor-class.md)
+* [System.string クラス (DataMemberListEditor クラス)](datamemberlisteditor-class.md)
+* [System.xml. .Xml...。](system.xml.xmlreader.createsqlreader.md)
 * [adodb.recordset.接続インターフェイス](adodb.connection.md)
 * [adodb.recordset.EventReason 列挙型](adodb.eventreasonenum.md)
 * [adodb.recordset.EventStatus 列挙型](adodb.eventstatusenum.md)

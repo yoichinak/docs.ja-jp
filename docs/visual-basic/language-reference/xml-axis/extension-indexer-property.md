@@ -9,19 +9,19 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: a02c482db81d9d76752cfe66a292dc57c48b2acb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 660cebadc78d260350f2849f7f4926f9cef7c8d2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698903"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582186"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>拡張インデクサー プロパティ (Visual Basic)
 コレクション内の個々の要素にアクセスできます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 object(index)  
 ```  
   
@@ -29,25 +29,25 @@ object(index)
   
 |用語|定義|  
 |---|---|  
-|`object`|必須。 クエリ可能なコレクションです。 実装するコレクションは、<xref:System.Collections.Generic.IEnumerable%601>または<xref:System.Linq.IQueryable%601>します。|  
-|(|必須。 インデクサーの開始を示します。|  
-|`index`|必須。 コレクションの要素の 0 から始まる位置を指定する整数式。|  
-|)|必須。 インデクサー プロパティの終了を示します。|  
+|`object`|必須です。 クエリ可能なコレクション。 つまり、<xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Linq.IQueryable%601> を実装するコレクションです。|  
+|(|必須です。 インデクサープロパティの開始を示します。|  
+|`index`|必須です。 コレクションの要素の0から始まる位置を指定する整数式。|  
+|)|必須です。 インデクサープロパティの末尾を示します。|  
   
 ## <a name="return-value"></a>戻り値  
- コレクション内の指定された場所からオブジェクトまたは`Nothing`場合は、インデックスが範囲外です。  
+ コレクション内の指定した位置にあるオブジェクト。インデックスが範囲外の場合は `Nothing`。  
   
 ## <a name="remarks"></a>Remarks  
- 拡張インデクサー プロパティを使用して、コレクション内の個々 の要素にアクセスすることができます。 このインデクサーは通常、XML 軸プロパティの出力で使用されます。 XML 子と XML 子孫軸プロパティのコレクションを返す<xref:System.Xml.Linq.XElement>オブジェクトまたは属性の値。  
+ 拡張インデクサープロパティを使用して、コレクション内の個々の要素にアクセスできます。 このインデクサープロパティは、通常、XML 軸プロパティの出力に使用されます。 XML 子および XML 子孫軸プロパティは、<xref:System.Xml.Linq.XElement> オブジェクトまたは属性値のコレクションを返します。  
   
- Visual Basic コンパイラは、拡張機能インデクサー プロパティをへの呼び出しに変換します、`ElementAtOrDefault`メソッド。 配列インデクサーとは異なり、`ElementAtOrDefault`メソッドを返します。`Nothing`場合は、インデックスが範囲外です。 この動作は、コレクション内の要素の数を簡単に判断できない場合に便利です。  
+ Visual Basic コンパイラは、拡張インデクサープロパティを `ElementAtOrDefault` メソッドの呼び出しに変換します。 配列インデクサーとは異なり、`ElementAtOrDefault` メソッドは、インデックスが範囲外の場合に `Nothing` を返します。 この動作は、コレクション内の要素の数を簡単に判断できない場合に便利です。  
   
- このインデクサー プロパティを実装するコレクションの拡張機能プロパティのように、<xref:System.Collections.Generic.IEnumerable%601>または<xref:System.Linq.IQueryable%601>: コレクションには、インデクサーまたは既定のプロパティがあるない場合にのみ使用されます。  
+ このインデクサープロパティは、<xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Linq.IQueryable%601> を実装するコレクションの拡張プロパティに似ています。このプロパティは、コレクションにインデクサーまたは default プロパティがない場合にのみ使用されます。  
   
- コレクションの最初の要素の値にアクセスする<xref:System.Xml.Linq.XElement>または<xref:System.Xml.Linq.XAttribute>オブジェクト、XML を使用する`Value`プロパティ。 詳細については、次を参照してください。 [XML Value プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)します。  
+ @No__t_0 または <xref:System.Xml.Linq.XAttribute> オブジェクトのコレクション内の最初の要素の値にアクセスするには、XML `Value` プロパティを使用できます。 詳細については、「 [XML 値プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例は、拡張機能インデクサーを使用して、2 番目の子ノードのコレクションにアクセスする方法を示しています。<xref:System.Xml.Linq.XElement>オブジェクト。 コレクションには、という名前のすべての子要素を取得する子軸プロパティを使用してアクセス`phone`で、`contact`オブジェクト。  
+ 次の例では、拡張インデクサーを使用して、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション内の2番目の子ノードにアクセスする方法を示します。 コレクションにアクセスするには、子軸プロパティを使用します。このプロパティは、`contact` オブジェクト内の `phone` という名前のすべての子要素を取得します。  
   
  [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  
   

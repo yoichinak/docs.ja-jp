@@ -1,18 +1,18 @@
 ---
-title: 段落とそのスタイル (Visual Basic) の取得
+title: 段落とそのスタイルの取得 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
-ms.openlocfilehash: 3c6554c44c95db13aada0d9edf96cc2df595c6d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bc20556fb668db2db3e6bcfa42e96cc0d963b93
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787037"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582144"
 ---
-# <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>段落とそのスタイル (Visual Basic) の取得
+# <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>段落とそのスタイルの取得 (Visual Basic)
 この例では、WordprocessingML ドキュメントから段落ノードを取得するクエリを記述します。 それぞれの段落のスタイルも特定します。  
   
- このクエリは、前の例では、クエリに基づいて[の既定の段落スタイル (Visual Basic) の検索](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)スタイルの一覧から既定のスタイルを取得します。 スタイルが明示的に設定されていない段落のスタイルをクエリで特定するには、この情報が必要です。 段落のスタイルは、`w:pPr` 要素を通して設定されます。この要素が含まれていない段落は、既定のスタイルを使用して書式設定されます。  
+ このクエリは、前の例のクエリに基づいて作成され、[既定の段落スタイル (Visual Basic) が検索](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)されます。これは、スタイルの一覧から既定のスタイルを取得します。 スタイルが明示的に設定されていない段落のスタイルをクエリで特定するには、この情報が必要です。 段落のスタイルは、`w:pPr` 要素を通して設定されます。この要素が含まれていない段落は、既定のスタイルを使用して書式設定されます。  
   
  このトピックでは、クエリを構成するいくつかの要素の意味を説明し、完全な作業例の一部分であるクエリを紹介します。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "61787037"
 xDoc.Root.<w:body>...<w:p>  
 ```  
   
- この式は前の例では、クエリのソースのような[(Visual Basic) 既定の段落スタイルの検索](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)します。 主な違いは、<xref:System.Xml.Linq.XContainer.Descendants%2A> 軸の代わりに <xref:System.Xml.Linq.XContainer.Elements%2A> 軸を使用している点です。 クエリで <xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用しているのは、セクションが含まれているドキュメントの場合、段落が本文要素の直接の子とならず、階層内で 2 つ下のレベルに位置するためです。 コードで <xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用すると、ドキュメントでセクションが使用されているかどうかにかかわらず機能するようになります。  
+ この式は、前の例のクエリのソースに似ており、[既定の段落スタイル (Visual Basic) が検索](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)されます。 主な違いは、<xref:System.Xml.Linq.XContainer.Descendants%2A> 軸の代わりに <xref:System.Xml.Linq.XContainer.Elements%2A> 軸を使用している点です。 クエリで <xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用しているのは、セクションが含まれているドキュメントの場合、段落が本文要素の直接の子とならず、階層内で 2 つ下のレベルに位置するためです。 コードで <xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用すると、ドキュメントでセクションが使用されているかどうかにかかわらず機能するようになります。  
   
 ## <a name="example"></a>例  
  クエリで `Let` 句を使用して、スタイル ノードが含まれる要素を特定します。 要素がない場合は、`styleNode` が `Nothing` に設定されます。  
@@ -39,7 +39,7 @@ Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault()
 ## <a name="example"></a>例  
  この例では、WordprocessingML ドキュメントを処理して、WordprocessingML ドキュメントから段落ノードを取得します。 それぞれの段落のスタイルも特定します。 この例は、このチュートリアルのこれまでの例に基づいています。 新しいクエリについては、以下のコード内にあるコメントで説明が示されています。  
   
- この例のソース ドキュメントを作成するための手順を確認できます[ソース Office Open XML ドキュメント (Visual Basic) を作成する](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)します。  
+ この例のソースドキュメントを作成する手順については[、「ソースとなる Office OPEN XML ドキュメントを作成する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」を参照してください。  
   
  この例では、WindowsBase アセンブリに含まれるクラスを使用します。 また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。  
   
@@ -111,9 +111,9 @@ Module Module1
 End Module  
 ```  
   
- この例で、次で説明されているドキュメントに適用されたときに出力を生成[ソース Office Open XML ドキュメント (Visual Basic) を作成する](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)します。  
+ この例では、「ソースとなる[Office OPEN XML ドキュメントの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」で説明されているドキュメントに適用すると、次の出力が生成されます。  
   
-```  
+```console  
 StyleName:Heading1  
 StyleName:Normal  
 StyleName:Normal  
@@ -131,9 +131,9 @@ StyleName:Normal
 StyleName:Code  
 ```  
   
-## <a name="next-steps"></a>次の手順  
- 次のトピックで[(Visual Basic) の段落のテキストを取得して](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)段落のテキストを取得するクエリを作成します。  
+## <a name="next-steps"></a>次のステップ  
+ 次のトピック「[段落のテキストを取得する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)」では、段落のテキストを取得するクエリを作成します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -10,57 +10,57 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 7b926214d3be7f5f57783a8599acf1bb1042f956
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7b2adfe7f6b6ff5e89598cb318a90c51595ff6f
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944456"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583380"
 ---
 # <a name="error-statement"></a>Error ステートメント
 エラーの発生をシミュレートします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 Error errornumber  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `errornumber`  
- 必須。 任意の有効なエラー番号を指定できます。  
+ 必須です。 任意の有効なエラー番号を指定できます。  
   
 ## <a name="remarks"></a>Remarks  
- ステートメント`Error`は、旧バージョンとの互換性のためにサポートされています。 新しいコードでは、特にオブジェクトを作成する`Err`ときに`Raise` 、オブジェクトのメソッドを使用して実行時エラーを生成します。  
+ @No__t_0 ステートメントは、旧バージョンとの互換性のためにサポートされています。 新しいコードでは、特にオブジェクトを作成する場合は、`Err` オブジェクトの `Raise` メソッドを使用して、実行時エラーを生成します。  
   
- が`errornumber`定義されて`Error`いる場合、ステートメントは、 `Err`オブジェクトのプロパティに次の既定値が割り当てられた後にエラーハンドラーを呼び出します。  
+ @No__t_0 が定義されている場合、`Err` オブジェクトのプロパティに次の既定値が割り当てられると、`Error` ステートメントによってエラーハンドラーが呼び出されます。  
   
-|プロパティ|値|  
+|property|[値]|  
 |--------------|-----------|  
-|`Number`|ステートメントの`Error`引数として指定された値。 任意の有効なエラー番号を指定できます。|  
+|`Number`|@No__t_0 ステートメントの引数として指定された値。 任意の有効なエラー番号を指定できます。|  
 |`Source`|現在の Visual Basic プロジェクトの名前。|  
-|`Description`|この文字列が存在する場合は、指定`Error` `Number`したの関数の戻り値に対応する文字列式。 文字列が存在しない場合、 `Description`には長さ0の文字列 ("") が含まれます。|  
+|`Description`|この文字列が存在する場合は、指定された `Number` の `Error` 関数の戻り値に対応する文字列式。 文字列が存在しない場合、`Description` には長さ0の文字列 ("") が含まれます。|  
 |`HelpFile`|適切な Visual Basic ヘルプファイルの完全修飾ドライブ、パス、およびファイル名。|  
-|`HelpContext`|`Number`プロパティに対応するエラーのヘルプファイルコンテキスト ID (適切な Visual Basic)。|  
+|`HelpContext`|@No__t_0 プロパティに対応するエラーの Visual Basic ヘルプファイルコンテキスト ID。|  
 |`LastDLLError`|回.|  
   
- エラーハンドラーが存在しない場合、または何も有効になっていない場合は、 `Err`エラーメッセージが作成され、オブジェクトのプロパティから表示されます。  
+ エラーハンドラーが存在しない場合、または何も有効になっていない場合は、エラーメッセージが作成され、`Err` オブジェクトのプロパティから表示されます。  
   
 > [!NOTE]
 > Visual Basic ホストアプリケーションによっては、オブジェクトを作成できない場合があります。 クラスとオブジェクトを作成できるかどうかを判断するには、ホストアプリケーションのドキュメントを参照してください。  
   
 ## <a name="example"></a>例  
- この例では`Error` 、ステートメントを使用して、エラー番号11を生成します。  
+ この例では、`Error` ステートメントを使用して、エラー番号11を生成します。  
   
-```  
+```vb  
 On Error Resume Next   ' Defer error handling.  
 Error 11   ' Simulate the "Division by zero" error.  
 ```  
   
-## <a name="requirements"></a>必要条件  
- **名前空間:** [Microsoft. Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>［要件］  
+ **名前空間:** [Microsoft. visual basic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **組み立て**Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
 ## <a name="see-also"></a>関連項目
 

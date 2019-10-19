@@ -18,19 +18,19 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 77f208a0ce94925f1f968d4949f591ccab43e582
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43d3faf3a6630cd308913ce2325a5f7fe96e474c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583512"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581583"
 ---
 # <a name="option-compare-statement"></a>Option Compare ステートメント
 文字列データを比較するときに使用する既定の比較方法を宣言します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 Option Compare { Binary | Text }  
 ```  
   
@@ -48,7 +48,7 @@ Option Compare { Binary | Text }
   
  `Binary` 比較では、各文字列の各文字の Unicode 数値が比較されます。 `Text` 比較では、現在のカルチャでの語彙的意味に基づいて各 Unicode 文字が比較されます。  
   
- Microsoft Windows では、並べ替え順序はコード ページによって決まります。 詳細については、「[コード ページ](/cpp/c-runtime-library/code-pages)」をご覧ください。  
+ Microsoft Windows では、並べ替え順序はコード ページによって決まります。 詳細については、「[コード ページ](/cpp/c-runtime-library/code-pages)」を参照してください。  
   
  次の例では、英語/ヨーロッパ言語のコード ページ (ANSI 1252) の文字が、`Option Compare Binary` を使用して並べ替えられ、一般的なバイナリ並べ替え順序が生成されます。  
   
@@ -59,7 +59,7 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Option Compare ステートメントが指定されていない場合  
- ソース コードが含まれていない場合、`Option Compare`ステートメントでは、 **Option Compare**の設定、 [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)使用されます。 設定が指定されたコマンド ライン コンパイラを使用する場合、 [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)コンパイラ オプションを使用します。  
+ ソースコードに `Option Compare` ステートメントが含まれていない場合、[コンパイル] ページの [**オプションの比較]** 設定[(プロジェクトデザイナー (Visual Basic))](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)が使用されます。 コマンドラインコンパイラを使用する場合は、 [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)コンパイラオプションで指定された設定が使用されます。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -69,13 +69,13 @@ Option Compare { Binary | Text }
   
 2. **[コンパイル]** タブをクリックします。  
   
-3. 値を設定、 **Option Compare**ボックス。  
+3. **[オプションの比較]** ボックスで値を設定します。  
   
- プロジェクトを作成するときに、 **Option Compare**の設定、**コンパイル**タブに設定されている、 **Option Compare**での設定、**オプション**ダイアログ ボックス。 この設定を変更する、**ツール** メニューのをクリックして**オプション**します。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、**[VISUAL BASIC の既定値]** をクリックします。 初期の既定の設定で**VB の既定値**は**バイナリ**します。  
+ プロジェクトを作成すると、 **[コンパイル]** タブの **[option compare]** 設定が **[オプション]** ダイアログボックスの **[比較]** 設定に設定されます。 この設定を変更するには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、 **[VISUAL BASIC の既定値]** をクリックします。 既定では、 **VB**の既定の設定は**バイナリ**です。  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>コマンド ラインで Option Compare を設定するには  
   
-- 含める、 [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)コンパイラ オプションで、 **vbc**コマンド。  
+- **Vbc.exe**コマンドに[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)コンパイラオプションを含めます。  
   
 ## <a name="example"></a>例  
  次の例では、`Option Compare` ステートメントを使用して、既定の文字列比較方法としてバイナリ比較を設定します。 このコードを使用するには、`Option Compare Binary` ステートメントのコメントを解除し、ソース ファイルの先頭に配置します。  
@@ -96,7 +96,7 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Visual Basic における比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic の比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Like 演算子](../../../visual-basic/language-reference/operators/like-operator.md)
 - [文字列関数](../../../visual-basic/language-reference/functions/string-functions.md)
 - [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
