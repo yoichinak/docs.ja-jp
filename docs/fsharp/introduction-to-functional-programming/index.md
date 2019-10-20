@@ -4,7 +4,7 @@ description: '関数型プログラミングの基礎を学習F#します。'
 ms.date: 10/29/2018
 ---
 
-# <a name="introduction-to-functional-programming-in-f"></a>F での関数型プログラミングの概要\#
+# <a name="introduction-to-functional-programming-in-f"></a>F#での関数型プログラミングの概要
 
 関数型プログラミングは、機能と変更不可のデータの使用を重視するプログラミングのスタイルです。 型指定された関数型プログラミングは関数型プログラミングと組み合わせると静的な型などとF#します。 一般に、次の概念が関数型プログラミングで強調表示します。
 
