@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71182615"
 ---
-# <a name="tour-of-f"></a>F のツアー\#
+# <a name="tour-of-f"></a>F#のツアー
 
 F# について学習する最善の方法は、F# コードを読み書きすることです。 この記事は、F# 言語のいくつかの主な機能の手引きとしての役割を果たし、コンピューターで実行できるいくつかのコード スニペットを示します。 開発環境を設定する方法については、[Getting Started](./tutorials/getting-started/index.md) を参照してください。
 
