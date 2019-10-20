@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71332732"
 ---
-# <a name="what-is-f"></a>F @ no__t の概要-0
+# <a name="what-is-f"></a>F#の概要
 
 F#は、適切で保守が容易なコードを簡単に記述できるようにする関数型プログラミング言語です。
 
