@@ -45,26 +45,26 @@ ms.locfileid: "69962474"
 
  [!code-vb[VbVbcnConventions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#11)]
 
- 前述のコードを実行すると、 `d` の値は8.225 で、 `e` の値は3です。  `d` の計算では、 `+` より `/` が先という既定の優先順位が使用されます。これは `d = b + (c / a)` と同じです。 `e` の計算のかっこは、既定の優先順位をオーバーライドします。
+ 前述のコードを実行すると、 `d` の値は 8.225 で、 `e` の値は 3 です。 `d` の計算では、 `+` より `/` が先という既定の優先順位が使用されます。これは `d = b + (c / a)` と同じです。 `e` の計算のかっこは、既定の優先順位をオーバーライドします。
 
 ## <a name="separators"></a>区切り記号
- 区切り記号は、コードのセクションを分離します。 Visual Basic では、区切り文字はコロン (`:`) です。 複数のステートメントを別々の行ではなく1行に含めたい場合は、区切り記号を使用します。 これにより、領域が節約され、コードの読みやすさが向上します。 次の例では、コロンで区切られた3つのステートメントを示します。
+ 区切り記号は、コードのセクションを分離します。 Visual Basic では、区切り文字はコロン (`:`) です。 複数のステートメントを別々の行ではなく 1 行に含めたい場合は、区切り記号を使用します。 これにより、領域が節約され、コードの読みやすさが向上します。 次の例では、コロンで区切られた 3 つのステートメントを示します。
 
  [!code-vb[VbVbcnConventions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#12)]
 
- 詳細については、「[方法: コード内でのステートメントの分割と結合](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)」を参照してください。
+詳細については、「[コード内でのステートメントの分割と結合の方法](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)」を参照してください。
 
- コロン (`:`) 文字は、ステートメントラベルを識別するためにも使用されます。 詳細については、「[方法: ラベルステートメント](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)」を参照してください。
+ コロン (`:`) 文字は、ステートメントラベルを識別するためにも使用されます。 詳細については、「[ステートメントにラベルをつける方法](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)」を参照してください。
 
 ## <a name="concatenation"></a>連結
  *連結*、すなわち文字列を連結するには `&` 演算子を使用します。 数値を加算する `+` 演算子と混同しないようにしてください。 数値を操作するときに `+` 演算子を使用して連結すると、不適切な結果を得ることがあります。 次に例を示します。
 
  [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]
 
- 前述のコードの実行すると、 `resultA` の値は21.01 で、 `resultB` の値は "10.0111" です。
+ 前述のコードを実行すると、 `resultA` の値は 21.01 で、 `resultB` の値は "10.0111" です。
 
 ## <a name="member-access-operators"></a>メンバーアクセス演算子
- 型のメンバーにアクセスするには、型名とメンバー名の間にドット(`.`)または感嘆符(`!`)演算子を使用します。
+ 型のメンバーにアクセスするには、型名とメンバー名の間にドット (`.`) または感嘆符 (`!`) 演算子を使用します。
 
 ### <a name="dot--operator"></a>ドット (.)演算子
  メンバーアクセス演算子として、クラス、構造体、インターフェイス、または列挙体に対して `.` 演算子を使用します。メンバーには、フィールド、プロパティ、イベント、またはメソッドを指定できます。 次に例を示します。
@@ -72,13 +72,13 @@ ms.locfileid: "69962474"
  [!code-vb[VbVbcnConventions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#14)]
 
 ### <a name="exclamation-point--operator"></a>感嘆符 (!)演算子
- `!` 演算子は 、クラスまたはインターフェイスに対してのみ、ディクショナリアクセス演算子として使用します。 クラスまたはインターフェイスには、1つの `String` 型の引数を受け取る既定のプロパティが必要です。  `!` 演算子の直後にある識別子は、既定のプロパティに文字列として渡される引数の値になります。 次に例を示します。
+ `!` 演算子は 、クラスまたはインターフェイスに対してのみ、ディクショナリアクセス演算子として使用します。 クラスまたはインターフェイスには、1 つの `String` 型の引数を受け取る既定のプロパティが必要です。 `!` 演算子の直後にある識別子は、既定のプロパティに文字列として渡される引数の値になります。 次に例を示します。
 
  [!code-vb[VbVbcnConventions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#15)]
 
- `MsgBox` の3行の出力には全て `32856` の値が表示されます。最初の行では、プロパティ `index` への従来のアクセスを使用しています。2番目の行では、 `index` はクラス `hasDefault` の既定のプロパティであるという事実を使用しています。3番目の行ではクラスへのディクショナリアクセスを使用しています。
+ `MsgBox` の 3 行の出力には全て `32856` の値が表示されます。最初の行では、プロパティ `index` への従来のアクセスを使用しています。2 番目の行では、 `index` はクラス `hasDefault` の既定のプロパティであるという事実を使用しています。3 番目の行ではクラスへのディクショナリアクセスを使用しています。
 
- `!`演算子の2番目のオペランドは、二重引用符 (`" "`) で囲まれていない有効な Visual Basic 識別子でなければならないことに注意してください。 言い換えれば、文字列リテラルまたは文字列変数を使用することはできません。 `MsgBox` 呼び出しの最後の行に次の変更を行うと、 `"X"` は文字列リテラルで囲まれるため、エラーが生成されます。
+ `!`演算子の 2 番目のオペランドは、二重引用符 (`" "`) で囲まれていない有効な Visual Basic 識別子でなければならないことに注意してください。 言い換えれば、文字列リテラルまたは文字列変数を使用することはできません。 `MsgBox` 呼び出しの最後の行に次の変更を行うと、 `"X"` は文字列リテラルで囲まれるため、エラーが生成されます。
 
  `"Dictionary access returns " & hD!"X")`
 
