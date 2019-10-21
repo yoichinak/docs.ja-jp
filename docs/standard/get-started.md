@@ -19,7 +19,7 @@ ms.locfileid: "70799313"
 
 ## <a name="get-started-using-net-languages"></a>.NET 言語の使用を開始する
 
-* 「[C# Getting Started](../csharp/getting-started/index.md)」 (C# 入門) の記事と「[C# のチュートリアル](../csharp/tutorials/index.md)」では、主に C# を使って開発を始めるさまざまな方法が示されています。
+* 「[C# 入門](../csharp/getting-started/index.md)」の記事と「[C# のチュートリアル](../csharp/tutorials/index.md)」では、主に C# を使って開発を始めるさまざまな方法が示されています。
 
 * 「[F# Getting Started](../fsharp/tutorials/getting-started/index.md)」 (F# 入門) のチュートリアルでは、F# を使う主要な方法として、Visual Studio、Visual Studio のコード、コマンドライン ツールの 3 種類が説明されています。
 

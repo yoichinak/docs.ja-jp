@@ -12,7 +12,7 @@ ms.locfileid: "69960780"
 # <a name="version-tolerant-serialization-technology-sample"></a>バージョン間の耐性があるシリアル化に対応する技術サンプル
 [サンプルのダウンロード](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
   
- このサンプルでは、.NET でのバージョン間の耐性があるシリアル化に対応する機能を示します。 このサンプルでは、バージョンの異なる複数の <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> を使用するアプリケーションをビルドし、データをシリアル化および逆シリアル化します。 さまざまなバージョンがありますが、このアプリケーションではシームレスに処理できます。 詳細については、「[Version Tolerant Serialization](../../../docs/standard/serialization/version-tolerant-serialization.md)」(バージョン トレラントなシリアル化) を参照してください。  
+ このサンプルでは、.NET でのバージョン間の耐性があるシリアル化に対応する機能を示します。 このサンプルでは、バージョンの異なる複数の <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> を使用するアプリケーションをビルドし、データをシリアル化および逆シリアル化します。 さまざまなバージョンがありますが、このアプリケーションではシームレスに処理できます。 詳細については、「[バージョン トレラントなシリアル化](../../../docs/standard/serialization/version-tolerant-serialization.md)」(バージョン トレラントなシリアル化) を参照してください。  
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>コマンド プロンプトを使用してサンプルをビルドするには  
   

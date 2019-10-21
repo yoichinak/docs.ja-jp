@@ -20,7 +20,7 @@ ms.locfileid: "71054140"
 
 セキュリティ ログに書き込むことはできません。 システム ログに書き込むためには、LocalSystem または Administrator アカウントのメンバーであることが必要です。
 
-イベント ログを参照するには、 **サーバー エクスプローラー** または **Windows イベント ビューアー**を使用できます。 詳細については、「 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)」を参照してください。
+イベント ログを参照するには、 **サーバー エクスプローラー** または **Windows イベント ビューアー**を使用できます。 詳細については、「 [.NET Framework の ETW イベント](../../../../framework/performance/etw-events.md)」を参照してください。
 
 ## <a name="to-add-and-configure-the-event-log-listener"></a>イベント ログ リスナーを追加および構成するには
 

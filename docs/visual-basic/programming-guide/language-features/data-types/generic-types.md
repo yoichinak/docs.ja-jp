@@ -78,7 +78,7 @@ ms.locfileid: "65593386"
 ## <a name="eligible-programming-elements"></a>使用できるプログラミング要素  
  ジェネリック クラス、構造体、インターフェイス、プロシージャ、およびデリゲートを定義して使用することができます。 .NET Framework には、いくつかのジェネリック クラス、構造、および一般的に使用されるジェネリックな要素を表すインターフェイスが定義されてことに注意してください。 <xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間には、ディクショナリ、リスト、キュー、スタックが用意されています。 独自のジェネリックな要素を定義する前に、それに相当する要素が既に <xref:System.Collections.Generic?displayProperty=nameWithType>に用意されていないかをご確認ください。  
   
- プロシージャは型ではありませんが、ジェネリック プロシージャを定義し、使用できます。 「 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
+ プロシージャは型ではありませんが、ジェネリック プロシージャを定義し、使用できます。 「 [Visual Basic におけるジェネリック プロシージャ](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
   
 ## <a name="advantages-of-generic-types"></a>ジェネリック型の利点  
  ジェネリック型は、それぞれが特定のデータ型を操作する複数のプログラミング要素を宣言するための基礎となります。 ジェネリック型の代わりになるものを以下に示します。  

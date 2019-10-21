@@ -24,7 +24,7 @@ ms.locfileid: "69950869"
 <xref:System.IAsyncResult> デザイン パターンを使用する非同期操作は `BeginOperationName` と `EndOperationName` という名前の、各 *OperationName* 非同期操作を開始および終了する 2 種類のメソッドとして実装されます。 たとえば、 <xref:System.IO.FileStream> クラスは、 <xref:System.IO.FileStream.BeginRead%2A> および <xref:System.IO.FileStream.EndRead%2A> メソッドを提供して、非同期的にファイルからバイトを読み取ります。 これらのメソッドは非同期バージョンの <xref:System.IO.FileStream.Read%2A> メソッドを実装します。  
   
 > [!NOTE]
-> .NET Framework 4 以降では、タスク並列ライブラリによって非同期/並列プログラミングの新しいモデルが提供されます。 詳細については、「 [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) 」および「 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)」を参照してください。  
+> .NET Framework 4 以降では、タスク並列ライブラリによって非同期/並列プログラミングの新しいモデルが提供されます。 詳細については、「 [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) 」および「 [タスク ベースの非同期パターン (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)」を参照してください。  
   
  `BeginOperationName` を呼び出した後、アプリケーションは別のスレッドで非同期操作が行われている間も、スレッドの呼び出しに関する命令の実行を続行できます。 `BeginOperationName` の呼び出しごとに、アプリケーションでは `EndOperationName` も呼び出して、操作の結果を取得する必要があります。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "69950869"
   
 - アプリケーションのメイン スレッドから `EndOperationName` を呼び出し、操作が完了するまでアプリケーションの実行をブロックします。 この手法の例については、「[非同期操作の終了によるアプリケーション実行のブロック](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)」を参照してください。  
   
-- <xref:System.IAsyncResult.AsyncWaitHandle%2A> を使用して、1 つ以上の操作が完了するまでアプリケーションの実行をブロックします。 この手法の例については、「 [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)」を参照してください。  
+- <xref:System.IAsyncResult.AsyncWaitHandle%2A> を使用して、1 つ以上の操作が完了するまでアプリケーションの実行をブロックします。 この手法の例については、「 [AsyncWaitHandle の使用によるアプリケーション実行のブロック](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)」を参照してください。  
   
  非同期操作が完了するまでアプリケーションをブロックする必要がない場合は、次のいずれかの方法を使用します。  
   

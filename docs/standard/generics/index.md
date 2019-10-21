@@ -121,7 +121,7 @@ ms.locfileid: "69948741"
   
 - ジェネリック型は、 <xref:System.MarshalByRefObject> などのほとんどの基本クラスから派生できます (制約を使用して、ジェネリック型パラメーターが <xref:System.MarshalByRefObject>のような基本クラスから派生することを要求できます)。 ただし、.NET Framework では、コンテキスト バインドのジェネリック型はサポートしていません。 ジェネリック型は、 <xref:System.ContextBoundObject>から派生できますが、その型のインスタンスを作成しようとすると、 <xref:System.TypeLoadException>が発生します。  
   
-- 列挙型にジェネリック型パラメーターを含めることはできません。 列挙型が、単なる偶然によってジェネリックのみになる可能性はあります (たとえば、Visual Basic、C#、または C++ を使用して定義されたジェネリック型に入れ子にされているため)。 詳細については、「 [Common Type System](../../../docs/standard/base-types/common-type-system.md)」の「列挙型」を参照してください。  
+- 列挙型にジェネリック型パラメーターを含めることはできません。 列挙型が、単なる偶然によってジェネリックのみになる可能性はあります (たとえば、Visual Basic、C#、または C++ を使用して定義されたジェネリック型に入れ子にされているため)。 詳細については、「 [共通型システム](../../../docs/standard/base-types/common-type-system.md)」の「列挙型」を参照してください。  
   
 - 軽量の動的メソッドをジェネリックにすることはできません。  
   

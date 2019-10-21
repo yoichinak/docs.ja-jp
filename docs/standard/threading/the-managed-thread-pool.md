@@ -94,5 +94,5 @@ ms.locfileid: "54665267"
 - [方法: タスクから値を返す](../parallel-programming/how-to-return-a-value-from-a-task.md)
 - [スレッド処理オブジェクトと機能](threading-objects-and-features.md)
 - [スレッドおよびスレッド処理](threads-and-threading.md)
-- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
+- [非同期ファイル I/O](../io/asynchronous-file-i-o.md)
 - [タイマー](timers.md)

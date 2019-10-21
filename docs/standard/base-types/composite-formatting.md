@@ -89,9 +89,9 @@ ms.locfileid: "64634567"
   
 |型または型のカテゴリ|解決方法については、|  
 |---------------------------|---------|  
-|日付と時刻の型 (<xref:System.DateTime>、<xref:System.DateTimeOffset>)|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|列挙型 (<xref:System.Enum?displayProperty=nameWithType> から派生したすべての型)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|数値型 (<xref:System.Numerics.BigInteger>、<xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|日付と時刻の型 (<xref:System.DateTime>、<xref:System.DateTimeOffset>)|[標準の日時形式文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [カスタム日時形式文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|列挙型 (<xref:System.Enum?displayProperty=nameWithType> から派生したすべての型)|[列挙型書式指定文字列](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|数値型 (<xref:System.Numerics.BigInteger>、<xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>)|[標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [カスタム数値形式文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[標準の時間間隔書式指定文字列](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [カスタム時間間隔書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -168,8 +168,8 @@ ms.locfileid: "64634567"
 - [型の書式設定](../../../docs/standard/base-types/formatting-types.md)
 - [標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [カスタム数値書式指定文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [標準の日時書式指定文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [標準の日時形式文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [カスタム日時形式文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [標準の時間間隔書式指定文字列](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [カスタム時間間隔書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [列挙型書式指定文字列](../../../docs/standard/base-types/enumeration-format-strings.md)

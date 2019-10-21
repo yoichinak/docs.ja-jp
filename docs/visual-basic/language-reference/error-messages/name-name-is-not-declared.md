@@ -25,9 +25,9 @@ ms.locfileid: "70254201"
   
 2. オブジェクトとそのメンバーの間にメンバーアクセス`.`演算子 () があることを確認します。 たとえば、 <xref:System.Windows.Forms.TextBox> という名前の `TextBox1`コントロールがある場合、このコントロールの <xref:System.Windows.Forms.TextBoxBase.Text%2A> プロパティにアクセスするには、「 `TextBox1.Text`」と入力する必要があります。 代わりに「 `TextBox1Text`」と入力した場合、別の名前と見なされます。  
   
-3. スペルが正しく、オブジェクトメンバーアクセスの構文が正しい場合は、要素が宣言されていることを確認します。 詳細については、「宣言された[要素](../../programming-guide/language-features/declared-elements/index.md)」を参照してください。  
+3. スペルが正しく、オブジェクトメンバーアクセスの構文が正しい場合は、要素が宣言されていることを確認します。 詳細については、[宣言された要素](../../programming-guide/language-features/declared-elements/index.md)に関するページを参照してください。  
   
-4. プログラミング要素が宣言されている場合は、スコープ内にあることを確認します。 参照元のステートメントがプログラミング要素を宣言している領域の外部にある場合は、要素名を修飾する必要があります。 詳細については、「 [Scope in Visual Basic](../../programming-guide/language-features/declared-elements/scope.md)」を参照してください。  
+4. プログラミング要素が宣言されている場合は、スコープ内にあることを確認します。 参照元のステートメントがプログラミング要素を宣言している領域の外部にある場合は、要素名を修飾する必要があります。 詳細については、「 [Visual Basic におけるスコープ](../../programming-guide/language-features/declared-elements/scope.md)」を参照してください。  
 
 5. 完全修飾型または型とメンバー名を使用していない場合 (たとえば、コードがの`MethodInfo.Name` `System.Reflection.MethodInfo.Name`代わりにプロパティを参照している場合) は、 [Imports ステートメント](../statements/imports-statement-net-namespace-and-type.md)を追加します。
 
@@ -45,5 +45,5 @@ ms.locfileid: "70254201"
 
 - [宣言と定数の概要](../../../visual-basic/language-reference/keywords/declarations-and-constants-summary.md)
 - [Visual Basic 名前付け規則](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-- [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [宣言された要素の名前 (Visual Basic)](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [宣言された要素の参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

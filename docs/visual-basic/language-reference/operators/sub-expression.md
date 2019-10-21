@@ -30,7 +30,7 @@ End Sub
   
 |項目|定義|  
 |---|---|  
-|`parameterlist`|任意。 プロシージャのパラメーターを表すローカル変数名の一覧です。 リストが空の場合でも、かっこは存在する必要があります。 詳細については、「 [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)」を参照してください。|  
+|`parameterlist`|任意。 プロシージャのパラメーターを表すローカル変数名の一覧です。 リストが空の場合でも、かっこは存在する必要があります。 詳細については、[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)に関するページを参照してください。|  
 |`statement`|必須。 1つのステートメント。|  
 |`statements`|必須。 ステートメントの一覧。|  
   

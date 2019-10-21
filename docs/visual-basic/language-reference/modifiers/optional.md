@@ -39,7 +39,7 @@ ms.locfileid: "68630921"
 > 省略可能なパラメーターを指定して、または使用せずにプロシージャを呼び出すと、位置または名前によって引数を渡すことができます。 詳細については、「[位置と名前による引数の引き渡し](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)」を参照してください。
 
 > [!NOTE]
-> オーバーロードを使用して、省略可能なパラメーターを持つプロシージャを定義することもできます。 省略可能なパラメーターが1つある場合は、2つのオーバーロードされたバージョンのプロシージャを定義できます。1つはパラメーターを受け取り、もう1つはパラメーターを受け入れません。 詳細については、「 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。
+> オーバーロードを使用して、省略可能なパラメーターを持つプロシージャを定義することもできます。 省略可能なパラメーターが1つある場合は、2つのオーバーロードされたバージョンのプロシージャを定義できます。1つはパラメーターを受け取り、もう1つはパラメーターを受け入れません。 詳細については、「 [プロシージャのオーバーロード (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。
 
 ## <a name="example"></a>例
 
