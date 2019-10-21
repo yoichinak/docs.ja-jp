@@ -58,7 +58,7 @@ Windows Communication Foundation (WCF) インフラストラクチャの桁数�
 
 WCF でのクォータは、事前割り当てを伴いません。 たとえば、さまざまなクラスにある <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> クォータを 128 KB に設定した場合、各メッセージに 128 KB が自動的に割り当てられるわけではありません。 実際の割当量は、実際の受信メッセージのサイズによって異なります。
 
-トランスポート層には、利用できるクォータが多数あります。 使用しているトランスポート チャネル (HTTP、TCP など) によって指定されるクォータもあります。 ここでは、これらのクォータの一部について説明しますが、詳細については、「 [Transport Quotas](../../../../docs/framework/wcf/feature-details/transport-quotas.md)」を参照してください。
+トランスポート層には、利用できるクォータが多数あります。 使用しているトランスポート チャネル (HTTP、TCP など) によって指定されるクォータもあります。 ここでは、これらのクォータの一部について説明しますが、詳細については、「 [トランスポート クォータ](../../../../docs/framework/wcf/feature-details/transport-quotas.md)」を参照してください。
 
 ### <a name="hashtable-vulnerability"></a>ハッシュ テーブルの脆弱性
 
@@ -123,7 +123,7 @@ MTOM メッセージ エンコーダーには、 `MaxBufferSize` 設定もあり
 ## <a name="using-xml-safely"></a>XML の安全な使用
 
 > [!NOTE]
-> このセクションは XML に関するものですが、ここに記載された情報は、JSON (JavaScript Object Notation) ドキュメントにも該当します。 [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)を使用することで、クォータは同様に機能します。
+> このセクションは XML に関するものですが、ここに記載された情報は、JSON (JavaScript Object Notation) ドキュメントにも該当します。 [JSON と XML 間のマッピング](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)を使用することで、クォータは同様に機能します。
 
 ### <a name="secure-xml-readers"></a>セキュリティで保護された XML リーダー
 
@@ -354,7 +354,7 @@ XML リーダーを直接使用する場合 (など、独自のカスタム エ�
 
 ## <a name="schema-import"></a>スキーマのインポート
 
-通常、型を生成するためにスキーマをインポートするプロセスは、設計時にのみ発生します。たとえば、クライアント クラスを生成するために Web サービス上で [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) を使用しているときなどです。 ただし、さらに高度なシナリオでは、スキーマを実行時に処理することがあります。 この場合、サービス拒否攻撃の危険にさらされる可能性があることを覚えておく必要があります。 スキーマによっては、インポートに時間がかかる場合があります。 スキーマが信頼できないソースからのものである可能性がある場合は、このようなシナリオで <xref:System.Xml.Serialization.XmlSerializer> のスキーマ インポート コンポーネントを使用しないでください。
+通常、型を生成するためにスキーマをインポートするプロセスは、設計時にのみ発生します。たとえば、クライアント クラスを生成するために Web サービス上で [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) を使用しているときなどです。 ただし、さらに高度なシナリオでは、スキーマを実行時に処理することがあります。 この場合、サービス拒否攻撃の危険にさらされる可能性があることを覚えておく必要があります。 スキーマによっては、インポートに時間がかかる場合があります。 スキーマが信頼できないソースからのものである可能性がある場合は、このようなシナリオで <xref:System.Xml.Serialization.XmlSerializer> のスキーマ インポート コンポーネントを使用しないでください。
 
 ## <a name="threats-specific-to-aspnet-ajax-integration"></a>ASP.NET AJAX 統合に固有の脅威
 

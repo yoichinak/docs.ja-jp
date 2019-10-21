@@ -56,8 +56,8 @@ API には次の関数が含まれています。
 | [Next 関数](next.md) | 列挙型内の次のプロパティが取得されます。 |
 | [NextMethod 関数](nextmethod.md) | 列挙型内の次のメソッドが取得されます。 |
 | [Put 関数](put.md) | 名前付きプロパティが新しい値に設定されます。 |
-| [PutClassWmi function](putclasswmi.md) | 新しいクラスが作成されるか、既存のクラスが更新されます。 |
-| [PutInstanceWmi function](putinstancewmi.md) | 既存のクラスのインスタンスが作成または更新されます。 インスタンスは、WMI リポジトリに書き込まれます。 |
+| [PutClassWmi 関数](putclasswmi.md) | 新しいクラスが作成されるか、既存のクラスが更新されます。 |
+| [PutInstanceWmi 関数](putinstancewmi.md) | 既存のクラスのインスタンスが作成または更新されます。 インスタンスは、WMI リポジトリに書き込まれます。 |
 | [PutMethod 関数](putmethod.md) | メソッドが作成されます。 |
 | [QualifierSet_BeginEnumeration 関数](qualifierset-beginenumeration.md) | オブジェクトの修飾子の列挙子が列挙型の先頭にリセットされます。 |
 | [QualifierSet_Delete 関数](qualifierset-delete.md) | 名前によって指定した修飾子が削除されます。  |

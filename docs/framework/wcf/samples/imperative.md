@@ -11,7 +11,7 @@ ms.locfileid: "65637644"
 ---
 # <a name="imperative"></a>強制
 
-このサンプルでは、コードを使用するサービスについて、構成で <xref:System.ServiceModel.WSHttpBinding> バインディングを定義する代わりに `wsHttpBinding` を定義する方法を示します。 このサンプルがに基づいて、 [Getting Started](getting-started-sample.md)電卓サービスを実装します。
+このサンプルでは、コードを使用するサービスについて、構成で <xref:System.ServiceModel.WSHttpBinding> バインディングを定義する代わりに `wsHttpBinding` を定義する方法を示します。 このサンプルは、計算ツール サービスを実装する[入門サンプル](getting-started-sample.md)をベースにしています。
 
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。

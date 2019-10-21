@@ -16,7 +16,7 @@ ms.locfileid: "61933732"
 # <a name="transports-in-windows-communication-foundation"></a>Windows Communication Foundation のトランスポート
 トランスポート層は、チャネル スタックの最も低いレベルにあります。 Windows Communication Foundation (WCF) を使用する主なトランスポートは、HTTP、HTTPS、TCP、および名前付きパイプです。 このセクションのトピックでは、このようなトランスポートの選択、トランスポートの構成、およびチューニング プロパティの設定について説明します。  
   
- WCF には、追加のトランスポートが含まれています。 メッセージ キュー (MSMQ とも呼ばれます) トランスポートの詳細については、次を参照してください。 [Queues and Reliable Sessions](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)します。 ピア ツー ピア トランスポートについては、次を参照してください。[ピア ツー ピア ネットワー キング](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)します。  
+ WCF には、追加のトランスポートが含まれています。 メッセージ キュー (MSMQ とも呼ばれます) トランスポートの詳細については、[キューと信頼できるセッション](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md) を参照してください。 ピア ツー ピア トランスポートについては、次を参照してください。[ピア ツー ピア ネットワー キング](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [トランスポートの選択](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  

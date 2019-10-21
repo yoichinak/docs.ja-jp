@@ -65,7 +65,7 @@ ms.locfileid: "69939684"
 |<xref:System.Windows.Markup.StaticExtension>|`{x:Static ...}`|  
 |<xref:System.Windows.Markup.TypeExtension>|`{x:Type ...}`|  
   
- System.Xaml には特定のサポート クラスはありませんが、XAML 言語の言語機能を処理するための一般的なロジックは System.Xaml にあり、それを実装した XAML リーダーと XAML ライターにも含まれています。 たとえば、 `x:TypeArguments` は System.Xaml 実装の XAML リーダーと XAML ライターによって処理される属性です。これは XAML ノード ストリームで示すことができ、既定の (CLR ベースの) XAML スキーマ コンテキストに処理があり、XAML 型システム表現があります。 その結果、XAML 言語レベルのすべての機能に関するリファレンス ドキュメントは、WPF ドキュメント セットに属する「 [詳細設定 (Windows Presentation Foundation)](index.md) 」のサブトピックとしてではなく (3.5 のドキュメント セットは今でもここにあります)、 [XAML Services](../wpf/advanced/index.md) と .NET Framework ドキュメント セットの一般分野のサブトピックとして掲載されています。  
+ System.Xaml には特定のサポート クラスはありませんが、XAML 言語の言語機能を処理するための一般的なロジックは System.Xaml にあり、それを実装した XAML リーダーと XAML ライターにも含まれています。 たとえば、 `x:TypeArguments` は System.Xaml 実装の XAML リーダーと XAML ライターによって処理される属性です。これは XAML ノード ストリームで示すことができ、既定の (CLR ベースの) XAML スキーマ コンテキストに処理があり、XAML 型システム表現があります。 その結果、XAML 言語レベルのすべての機能に関するリファレンス ドキュメントは、WPF ドキュメント セットに属する[詳細設定 (Windows Presentation Foundation)](../wpf/advanced/index.md) ではなく (3.5 のドキュメント セットは今でもこちらにあります)、 [XAML Service](index.md)に関するページという扱いで .NET Framework ドキュメント セットの一般分野のサブトピックとして掲載されています。  
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## <a name="valueserializer-and-supporting-classes"></a>ValueSerializer とサポートするクラス  

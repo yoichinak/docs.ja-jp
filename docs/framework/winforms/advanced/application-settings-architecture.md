@@ -152,6 +152,6 @@ ms.locfileid: "69916693"
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [アプリケーション設定の概要](application-settings-overview.md)
-- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
+- [カスタム コントロールのアプリケーション設定](application-settings-for-custom-controls.md)
 - [ClickOnce とアプリケーション設定](/visualstudio/deployment/clickonce-and-application-settings)
 - [アプリケーション設定のスキーマ](../../configure-apps/file-schema/application-settings-schema.md)

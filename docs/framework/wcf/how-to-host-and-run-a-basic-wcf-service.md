@@ -199,7 +199,7 @@ WCF アプリケーションを作成するための次のタスクは、コン�
 2. Web ブラウザーを開き、で`http://localhost:8000/GettingStarted/CalculatorService`サービスのページを参照します。
    
    > [!NOTE]
-   > このようなサービスでは、リッスンするコンピューターに HTTP アドレスを登録するための適切なアクセス許可が必要です。 管理者アカウントにはこのアクセス許可がありますが、管理者以外のアカウントの場合は、HTTP 名前空間へのアクセス許可を付与する必要があります。 名前空間の予約を構成する方法については、「[Configuring HTTP and HTTPS](feature-details/configuring-http-and-https.md)」 (HTTP と HTTPS を構成する) を参照してください。 
+   > このようなサービスでは、リッスンするコンピューターに HTTP アドレスを登録するための適切なアクセス許可が必要です。 管理者アカウントにはこのアクセス許可がありますが、管理者以外のアカウントの場合は、HTTP 名前空間へのアクセス許可を付与する必要があります。 名前空間の予約を構成する方法については、「[HTTP および HTTPS の構成](feature-details/configuring-http-and-https.md)」を参照してください。 
 
 ## <a name="service-hosting-program-steps"></a>サービスホスティングプログラムの手順
 
