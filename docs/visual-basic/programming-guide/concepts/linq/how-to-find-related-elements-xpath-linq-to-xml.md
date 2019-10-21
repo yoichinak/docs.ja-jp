@@ -1,15 +1,15 @@
 ---
-title: '方法: 関連する (XPATH-LINQ to XML) の要素を検索する (Visual Basic)'
+title: '方法: 関連要素の検索 (XPath LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: 58137a1bca93c0281424ba457569631a4b513a55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a430291925037f16883a27ca9deea5a4ec7a8175
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780433"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250078"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>方法: 関連する (XPATH-LINQ to XML) の要素を検索する (Visual Basic)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>方法: 関連要素の検索 (XPath LINQ to XML) (Visual Basic)
 このトピックでは、別の要素の値によって参照される属性に基づいて要素を取得する方法について説明します。  
   
  XPath 式を次に示します。  
@@ -55,7 +55,7 @@ Console.WriteLine(customer1)
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console
 Results are identical  
 <Customer CustomerID="HUNGC">  
   <CompanyName>Hungry Coyote Import Store</CompanyName>  
@@ -75,4 +75,4 @@ Results are identical
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath ユーザーの LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

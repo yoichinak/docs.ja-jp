@@ -1,19 +1,19 @@
 ---
-title: '方法: 拡張メソッドを記述する (Visual Basic)'
+title: '方法: 拡張メソッドを作成する (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d01596d50db8ba1078e8ac82caa951418645c977
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 4671728330614f0f3da23fd90f5e635ddcf46578
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004615"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581158"
 ---
-# <a name="how-to-write-an-extension-method-visual-basic"></a>方法: 拡張メソッドを記述する (Visual Basic)
+# <a name="how-to-write-an-extension-method-visual-basic"></a>方法: 拡張メソッドを作成する (Visual Basic)
 
 拡張メソッドを使用すると、既存のクラスにメソッドを追加できます。 拡張メソッドは、そのクラスのインスタンスであるかのように呼び出すことができます。
 
@@ -32,8 +32,8 @@ ms.locfileid: "72004615"
     ```vb
     <Extension()>
     ```
- 
-   @No__t-0 属性は、Visual Basic[モジュール](../../../language-reference/statements/module-statement.md)内のメソッド (`Sub` または `Function` プロシージャ) にのみ適用できます。 @No__t 0 または `Structure` のメソッドに適用した場合、Visual Basic コンパイラによってエラー [BC36551](../../../misc/bc36551.md)が生成されます。 "拡張メソッドはモジュール内でのみ定義できます。"
+
+    @No__t_0 属性は、Visual Basic[モジュール](../../../language-reference/statements/module-statement.md)内のメソッド (`Sub` または `Function` プロシージャ) にのみ適用できます。 @No__t_0 または `Structure` のメソッドに適用すると、Visual Basic コンパイラによってエラー [BC36551](../../../misc/bc36551.md)が生成されます。 "拡張メソッドはモジュール内でのみ定義できます。"
 
 4. 通常の方法でメソッドを宣言します。ただし、最初のパラメーターの型は、拡張するデータ型である必要があります。
 
@@ -46,8 +46,8 @@ ms.locfileid: "72004615"
 
 ## <a name="example"></a>例
 
- 次の例では、モジュール `StringExtensions` の拡張メソッドを宣言しています。 2番目のモジュール (@no__t 0) は `StringExtensions` をインポートし、メソッドを呼び出します。 拡張メソッドが呼び出されたときは、その拡張メソッドがスコープ内にある必要があります。 拡張メソッド `PrintAndPunctuate` は、文字列インスタンスを表示するメソッドを使用して <xref:System.String> クラスを拡張し、パラメーターとしてに送信される区切り記号の文字列を続けます。
-  
+次の例では、モジュール `StringExtensions` で拡張メソッドを宣言しています。 2番目のモジュールである `Module1` は、`StringExtensions` をインポートし、メソッドを呼び出します。 拡張メソッドが呼び出されたときは、その拡張メソッドがスコープ内にある必要があります。 拡張メソッド `PrintAndPunctuate` は、文字列インスタンスを表示するメソッドと、でパラメーターとしてに送信される区切り記号の文字列の後に、<xref:System.String> クラスを拡張します。
+
 ```vb
 ' Declarations will typically be in a separate module.
 Imports System.Runtime.CompilerServices
@@ -68,23 +68,23 @@ End Module
 Imports ConsoleApplication2.StringExtensions
 
 Module Module1
-  
+
     Sub Main()
         Dim example = "Hello"
         example.PrintAndPunctuate("?")
         example.PrintAndPunctuate("!!!!")
     End Sub
-    
+
 End Module
 ```
-  
- メソッドは2つのパラメーターで定義され、1つだけを使用して呼び出されることに注意してください。 メソッド定義内の最初のパラメーターである @no__t 0 は、メソッドを呼び出す `String` のインスタンス @no__t にバインドされます。 この例の出力は次のとおりです。
-  
- ```console
- Hello?
- Hello!!!!
- ```
-  
+
+メソッドは2つのパラメーターで定義され、1つだけを使用して呼び出されることに注意してください。 メソッド定義内の最初のパラメーターである `aString` は、メソッドを呼び出す `String` のインスタンス `example` にバインドされます。 この例の出力は次のとおりです。
+
+```console
+Hello?
+Hello!!!!
+```
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>

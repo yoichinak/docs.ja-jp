@@ -91,7 +91,7 @@ C# 6.0 以降で使用できる ["*補間文字列*"](../../language-reference/t
 .NET 型の書式設定について詳しくは、「[.NET での型の書式設定](../../../standard/base-types/formatting-types.md)」をご覧ください。
   
 ## <a name="substrings"></a>部分文字列  
- 部分文字列は、1 つの文字列に含まれる一連の文字です。 元の文字列の一部から新しい文字列を作成するには、<xref:System.String.Substring%2A> メソッドを使用します。 <xref:System.String.IndexOf%2A> メソッドを使用して、1 つまたは複数の部分文字列を検索できます。 指定されたすべての部分文字列を新しい文字列に置換するには、<xref:System.String.Replace%2A> メソッドを使用します。 <xref:System.String.Substring%2A> メソッドと同様に、<xref:System.String.Replace%2A> は実際に新しい文字列を返し、元の文字列は変更しません。 詳細については、「[How to: search strings](../../how-to/search-strings.md)」(方法: 文字列を検索する) および「[方法: 文字列の内容を変更する](../../how-to/modify-string-contents.md)」を参照してください。  
+ 部分文字列は、1 つの文字列に含まれる一連の文字です。 元の文字列の一部から新しい文字列を作成するには、<xref:System.String.Substring%2A> メソッドを使用します。 <xref:System.String.IndexOf%2A> メソッドを使用して、1 つまたは複数の部分文字列を検索できます。 指定されたすべての部分文字列を新しい文字列に置換するには、<xref:System.String.Replace%2A> メソッドを使用します。 <xref:System.String.Substring%2A> メソッドと同様に、<xref:System.String.Replace%2A> は実際に新しい文字列を返し、元の文字列は変更しません。 詳細については、「[方法: 文字列を検索する](../../how-to/search-strings.md)」(方法: 文字列を検索する) および「[方法: 文字列の内容を変更する](../../how-to/modify-string-contents.md)」を参照してください。  
   
  [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
@@ -135,7 +135,7 @@ string s = String.Empty;
 |[方法: 文字列を比較する](../../how-to/compare-strings.md)|文字列の序数とカルチャ固有の比較を実行する方法を示します。|  
 |[方法: 複数の文字列を連結する](../../how-to/concatenate-multiple-strings.md)|複数の文字列を 1 つに結合するさまざまな方法を示します。|
 |[方法: String.Split を使用して文字列を解析する](../../how-to/parse-strings-using-split.md)|`String.Split` メソッドを使用して文字列を解析するコード例を紹介します。|  
-|[方法: 検索文字列](../../how-to/search-strings.md)|特定のテキストまたは文字列のパターンの検索を使用する方法について説明します。|  
+|[方法: 文字列を検索する](../../how-to/search-strings.md)|特定のテキストまたは文字列のパターンの検索を使用する方法について説明します。|  
 |[方法: 文字列が数値を表しているかどうかを確認する](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|文字列を安全に解析して、有効な数値があるかどうかを確認する方法を示します。|  
 |[文字列補間](../../language-reference/tokens/interpolated.md)|書式指定文字列に便利な構文を提供する文字列補間機能について説明します。|
 |[基本的な文字列操作](../../../standard/base-types/basic-string-operations.md)|<xref:System.String?displayProperty=nameWithType> メソッドおよび <xref:System.Text.StringBuilder?displayProperty=nameWithType> メソッドを使用し文字列の基本操作を実行する、トピックへのリンクがあります。|  

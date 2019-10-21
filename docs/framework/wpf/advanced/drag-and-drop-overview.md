@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: bb5766a3efc38750458ef0d354e8a2e3ab204000
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 72dc443e5653b9871c3f67b003bd1af0536d5993
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046405"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291475"
 ---
 # <a name="drag-and-drop-overview"></a>ドラッグ アンド ドロップの概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションでのドラッグ アンド ドロップのサポートの概要について説明します。 一般的に、ドラッグ アンド ドロップとは、マウス (または何らかのポインティング デバイス) を使用して 1 つ以上のオブジェクトを選択し、これらのオブジェクトを [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] の目的のドロップ先までドラッグしてからドロップするデータ転送方式をいいます。  
@@ -28,9 +28,9 @@ ms.locfileid: "70046405"
   
  ドラッグ アンド ドロップで操作できるオブジェクトの種類と数は、まったく任意です。 たとえば、ファイル、フォルダー、およびコンテンツの選択項目は、ドラッグ アンド ドロップ操作を介して操作する、より一般的なオブジェクトの一部です。  
   
- ドラッグ アンド ドロップ操作中に実行される特定の操作はアプリケーション固有で、多くの場合コンテキストによって決定されます。  たとえば、同じストレージ デバイスで選択したファイルをあるフォルダーから別のフォルダーにドラッグすると、既定ではファイルが移動します。一方、[!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] 共有からローカル フォルダーにファイルをドラッグすると、既定ではファイルがコピーされます。  
+ ドラッグ アンド ドロップ操作中に実行される特定の操作はアプリケーション固有で、多くの場合コンテキストによって決定されます。  たとえば、選択したファイルを同じストレージデバイス上のフォルダーから別のフォルダーにドラッグすると、既定でファイルが移動されます。一方、汎用名前付け規則 (UNC) 共有からローカルフォルダーにファイルをドラッグすると、既定でファイルがコピーされます。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] が提供するドラッグ アンド ドロップ機能は、さまざまなドラッグ アンド ドロップのシナリオをサポートするよう、非常に柔軟かつカスタマイズできるように設計されています。  ドラッグ アンド ドロップでは、1 つのアプリケーション内で、または異なるアプリケーションの間でのオブジェクトの操作をサポートします。 アプリケーションとその他の Windows [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションの間でのドラッグアンドドロップも完全にサポートされています。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] が提供するドラッグ アンド ドロップ機能は、さまざまなドラッグ アンド ドロップのシナリオをサポートするよう、非常に柔軟かつカスタマイズできるように設計されています。  ドラッグ アンド ドロップでは、1 つのアプリケーション内で、または異なるアプリケーションの間でのオブジェクトの操作をサポートします。 @No__t 0 のアプリケーションとその他の Windows アプリケーションの間でのドラッグアンドドロップも完全にサポートされています。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、任意の <xref:System.Windows.UIElement> または <xref:System.Windows.ContentElement> がドラッグ アンド ドロップに参加できます。 ドラッグ アンド ドロップ操作に必要なイベントとメソッドは、<xref:System.Windows.DragDrop> クラスで定義されています。 <xref:System.Windows.UIElement> と <xref:System.Windows.ContentElement> クラスには、<xref:System.Windows.DragDrop> のアタッチ済みのイベントのエイリアスが含まれています。これにより、<xref:System.Windows.UIElement> や <xref:System.Windows.ContentElement> が基本要素として継承されるときに、イベントがクラスのメンバーとして表示されます。 これらのイベントにアタッチされたイベント ハンドラーは、基になる <xref:System.Windows.DragDrop> のアタッチ済みのイベントにアタッチされ、同じイベント データのインスタンスを受信します。 詳細については、<xref:System.Windows.UIElement.Drop?displayProperty=nameWithType> イベントを参照してください。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "70046405"
   
 ### <a name="drag-source-events"></a>ドラッグ元のイベント  
   
-|イベント|Summary|  
+|イベント|まとめ|  
 |-----------|-------------|  
 |<xref:System.Windows.DragDrop.GiveFeedback>|このイベントは、ドラッグ アンド ドロップ操作中に継続的に発生し、ドロップ ソースがユーザーに情報をフィードバックできるようにします。 このフィードバックは、通常、マウス ポインターの外観を変えて、ドロップ先が許可する効果を示すことで実行されます。  これは、バブリング イベントです。|  
 |<xref:System.Windows.DragDrop.QueryContinueDrag>|このイベントは、ドラッグ アンド ドロップ操作時にキーボードやマウス ボタンの状態が変化し、ドロップ ソースがキーやボタンの状態によってドラッグ アンド ドロップ操作の取り消しができるようになったときに発生します。 これは、バブリング イベントです。|  
@@ -75,7 +75,7 @@ ms.locfileid: "70046405"
   
 ### <a name="drop-target-events"></a>ドロップ先のイベント  
   
-|イベント|Summary|  
+|イベント|まとめ|  
 |-----------|-------------|  
 |<xref:System.Windows.DragDrop.DragEnter>|このイベントは、オブジェクトがドロップ先の境界の中にドラッグされるときに発生します。 これは、バブリング イベントです。|  
 |<xref:System.Windows.DragDrop.DragLeave>|このイベントは、オブジェクトがドロップ先の境界の外にドラッグされるときに発生します。  これは、バブリング イベントです。|  
@@ -122,7 +122,7 @@ ms.locfileid: "70046405"
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>ドラッグ アンド ドロップの例  
- このセクションでは、<xref:System.Windows.Shapes.Ellipse> 要素のドラッグ アンド ドロップを実装する方法について説明します。 <xref:System.Windows.Shapes.Ellipse> はドラッグ元とドロップ先の両方です。 転送されるデータは、楕円の <xref:System.Windows.Shapes.Shape.Fill%2A> プロパティの文字列表現です。 次の XAML は、<xref:System.Windows.Shapes.Ellipse> 要素と、XAML が処理するドラッグ アンド ドロップ関連のイベントを示しています。 ドラッグアンドドロップを実装する方法の詳細な手順について[は、「チュートリアル:ユーザーコントロール](walkthrough-enabling-drag-and-drop-on-a-user-control.md)でドラッグアンドドロップを有効にする。  
+ このセクションでは、<xref:System.Windows.Shapes.Ellipse> 要素のドラッグ アンド ドロップを実装する方法について説明します。 <xref:System.Windows.Shapes.Ellipse> はドラッグ元とドロップ先の両方です。 転送されるデータは、楕円の <xref:System.Windows.Shapes.Shape.Fill%2A> プロパティの文字列表現です。 次の XAML は、<xref:System.Windows.Shapes.Ellipse> 要素と、XAML が処理するドラッグ アンド ドロップ関連のイベントを示しています。 ドラッグアンドドロップを実装する手順の詳細については、「[Walkthrough:ユーザーコントロールでドラッグアンドドロップを有効にする @ no__t-0  
   
  [!code-xaml[DragDropSnippets#EllipseXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
@@ -218,6 +218,6 @@ ms.locfileid: "70046405"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Clipboard>
-- [チュートリアル: ユーザーコントロールでのドラッグアンドドロップの有効化](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [チュートリアル: ユーザーコントロールでのドラッグアンドドロップの有効化 @ no__t-0
 - [方法トピック](drag-and-drop-how-to-topics.md)
 - [ドラッグ アンド ドロップ](drag-and-drop.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bb163d5a6eb3d926a44a83ea79572c3a497bbe8d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: dae4afa92b8833f326b4eacd00b36bb3e1199cc1
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181745"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237393"
 ---
 ### <a name="types-in-microsoftvisualbasicdevices-namespace-not-available"></a>Microsoft.VisualBasic.Devices 名前空間の型は使用できません
 
@@ -14,7 +14,7 @@ ms.locfileid: "71181745"
 
 .NET Core 3.0 Preview 8
 
-#### <a name="details"></a>説明
+#### <a name="change-description"></a>変更の説明
 
 <xref:Microsoft.VisualBasic.Devices?displayProperty=fullName> 名前空間の型は、一部の .NET Core 3.0 プレビュー リリースで使用できました。 .NET Core 3.0 Preview 9 以降では使用できなくなりました。
 

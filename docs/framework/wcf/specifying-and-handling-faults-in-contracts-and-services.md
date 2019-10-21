@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: de12097f018e17b11a2beac663e0b0c51c7a2a17
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bbc1ca97c8887ebdfbe30f7dd76549572367efbe
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038399"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321112"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>コントラクトおよびサービスのエラーの指定と処理
 
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) アプリケーションは、マネー�
 
 WCF アプリケーションは両方の種類のエラーシステムで実行されるため、クライアントに送信されるマネージ例外情報は、例外からサービスの SOAP エラーに変換され、送信され、SOAP エラーから WCF クライアントのエラー例外に変換される必要があります。 双方向クライアントの場合は、クライアント コントラクトによって SOAP エラーがサービスに返送されることもあります。 いずれの場合も、開発者は、既定のサービス例外の動作を使用することも、例外をエラー メッセージにマップするかどうかを制御することも (その場合はどのようにマップするかを指定することも) できます。
 
-2種類の SOAP エラーを送信できます。宣言され、*宣言*されていません。 宣言された SOAP エラーは、カスタム SOAP エラーの種類を指定する <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 属性を含む操作で発生します。 *宣言*しないSOAP エラーは、操作のコントラクトで指定されていません。
+2種類の SOAP エラーを送信できます。*宣言*され、宣言さ*れてい*ません。 宣言された SOAP エラーは、カスタム SOAP エラーの種類を指定する <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 属性を含む操作で発生します。 *宣言*しないSOAP エラーは、操作のコントラクトで指定されていません。
 
 <xref:System.ServiceModel.FaultContractAttribute> 属性を使用して、通常の操作中に受信することをクライアントが予期できるすべての SOAP エラーを正式に指定することによって、サービス操作でそのエラーを宣言することを強くお勧めします。 また、SOAP エラーでは、情報の漏えいを最小限に抑えるために、クライアントが知る必要がある情報だけを返すことをお勧めします。
 
@@ -37,22 +37,22 @@ WCF アプリケーションは両方の種類のエラーシステムで実行�
 
 エラー状態の処理操作を作成するための最初の手順は、クライアント アプリケーションにエラーを通知する状態を決定することです。 一部の操作には、その機能に固有のエラー状態があります。 たとえば、`PurchaseOrder` 操作では、発注書の作成が禁止になっている顧客に特定の情報を返すことができます。 また、`Calculator` サービスなどでは、より一般的な `MathFault` SOAP エラーを使用してサービス全体のすべてのエラー状態を記述できます。 サービスのクライアントのエラー状態を特定したら、カスタム SOAP エラーを作成し、エラー状態が発生したときに SOAP エラーを返す操作として、対応する操作をマークします。
 
-サービスまたはクライアントの開発手順の詳細については、「[エラーの定義と指定](../../../docs/framework/wcf/defining-and-specifying-faults.md)」を参照してください。
+サービスまたはクライアントの開発手順の詳細については、「[エラーの定義と指定](defining-and-specifying-faults.md)」を参照してください。
 
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>クライアントとサービスによる例外としての SOAP エラーの処理
 
 WCF アプリケーションでエラー処理を成功させるには、操作エラー条件を特定し、カスタム SOAP エラーを定義し、これらの操作をこれらのエラーを返すようにマークします。 次の手順では、このエラーの送受信を適切に実装します。 通常は、サービスがエラーを送信してクライアント アプリケーションにエラー状態を通知しますが、双方向クライアントが SOAP エラーをサービスに送信することもできます。
 
-詳細については、「[エラーの送受信](../../../docs/framework/wcf/sending-and-receiving-faults.md)」を参照してください。
+詳細については、「[エラーの送受信](sending-and-receiving-faults.md)」を参照してください。
 
 ## <a name="undeclared-soap-faults-and-debugging"></a>非宣言 SOAP エラーとデバッグ
 
-宣言 SOAP エラーは、堅牢で相互運用可能な分散アプリケーションを構築するうえで便利です。 ただし、サービス (または双方向クライアント) が非宣言 SOAP エラーを送信することが役立つ場合があります。非宣言 SOAP エラーとは、その操作について Web サービス記述言語 (WSDL) で宣言されていないエラーです。 たとえば、サービスの開発時に予期しない状況が発生する可能性があります。この場合、デバッグのために情報をクライアントに送信することが役立ちます。 また、 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>プロパティ<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>またはプロパティをに`true`設定して、WCF クライアントが内部サービス操作の例外に関する情報を取得できるようにすることもできます。 個々のエラーの送信とデバッグ動作プロパティの設定については、「[エラーの送信と受信](../../../docs/framework/wcf/sending-and-receiving-faults.md)」を参照してください。
+宣言 SOAP エラーは、堅牢で相互運用可能な分散アプリケーションを構築するうえで便利です。 ただし、サービス (または双方向クライアント) が非宣言 SOAP エラーを送信することが役立つ場合があります。非宣言 SOAP エラーとは、その操作について Web サービス記述言語 (WSDL) で宣言されていないエラーです。 たとえば、サービスの開発時に予期しない状況が発生する可能性があります。この場合、デバッグのために情報をクライアントに送信することが役立ちます。 さらに、<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> プロパティまたは <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> プロパティを `true` に設定して、WCF クライアントが内部サービス操作例外に関する情報を取得できるようにすることもできます。 個々のエラーの送信とデバッグ動作プロパティの設定については、「[エラーの送信と受信](sending-and-receiving-faults.md)」を参照してください。
 
 > [!IMPORTANT]
-> マネージ例外によって内部アプリケーション情報が公開<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>される`true`可能性があるため、またはをに設定すると<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 、WCF クライアントは、個人を含む内部サービス操作例外に関する情報を取得することができます。特定可能な情報またはその他の機密情報。
+> マネージ例外によって内部アプリケーション情報が公開される可能性があるため、<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> または <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> を @no__t に設定すると、WCF クライアントは、個人を特定できるまたはその他の機密情報を含む内部サービス操作例外に関する情報を取得できるようになります。参照.
 >
-> したがって、<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> または <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> を `true` に設定することは、サービス アプリケーションを一時的にデバッグする方法としてのみお勧めできます。 さらに、このようにして未処理のマネージド例外を返すメソッドの WSDL には、<xref:System.ServiceModel.FaultException%601> 型の <xref:System.ServiceModel.ExceptionDetail> のコントラクトが含まれません。 クライアントは、デバッグ情報を適切に取得するために、不明な SOAP <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>エラー (WCF クライアントにオブジェクトとして返される) の可能性を期待する必要があります。
+> したがって、<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> または <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> を `true` に設定することは、サービス アプリケーションを一時的にデバッグする方法としてのみお勧めできます。 さらに、このようにして未処理のマネージド例外を返すメソッドの WSDL には、<xref:System.ServiceModel.FaultException%601> 型の <xref:System.ServiceModel.ExceptionDetail> のコントラクトが含まれません。 クライアントは、デバッグ情報を適切に取得するために、不明な SOAP エラー (WCF クライアントに @no__t 0 オブジェクトとして返される) の可能性を期待する必要があります。
 
 ## <a name="customizing-error-handling-with-ierrorhandler"></a>IErrorHandler によるエラー処理のカスタマイズ
 
@@ -76,4 +76,4 @@ WCF では、エラー コントラクトを逆シリアル化する場合、最
 - <xref:System.ServiceModel.FaultException.Reason%2A>
 - <xref:System.ServiceModel.FaultCode.SubCode%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
-- [エラーの定義と指定](../../../docs/framework/wcf/defining-and-specifying-faults.md)
+- [エラーの定義と指定](defining-and-specifying-faults.md)

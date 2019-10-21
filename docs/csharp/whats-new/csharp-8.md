@@ -2,19 +2,19 @@
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。
 ms.date: 09/20/2019
-ms.openlocfilehash: d948db0523684c998425bc22ab6fd245d65a8045
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736700"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275771"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
 C# 8.0 では、C# 言語に次の機能と機能強化が追加されています。
 
 - [読み取り専用メンバー](#readonly-members)
-- [既定のインターフェイス メンバー](#default-interface-members)
+- [既定のインターフェイス メソッド](#default-interface-methods)
 - [パターン マッチングの拡張機能](#more-patterns-in-more-places):
   - [switch 式](#switch-expressions)
   - [プロパティのパターン](#property-patterns)
@@ -85,11 +85,11 @@ public readonly void Translate(int xOffset, int yOffset)
 
 この機能により、設計の意図を指定し、コンパイラによってそれが適用され、その意図に基づいて最適化が行われるようにすることができます。
 
-## <a name="default-interface-members"></a>既定のインターフェイス メンバー
+## <a name="default-interface-methods"></a>既定のインターフェイス メソッド
 
-ここでインターフェイスにメンバーを追加し、それらのメンバーの実装を提供できます。 この言語機能を使用することで、API 作成者は、インターフェイスの既存の実装とのソースやバイナリの互換性を損なうことなく、新しいバージョンのそのインターフェイスにメソッドを追加できます。 既存の実装では既定の実装が*継承*されます。 さらに、この機能により、同様の機能をサポートする Android や Swift を対象とする API を、C# と連携させることができます。 既定のインターフェイス メンバーでは、"traits" 言語機能のようなシナリオも可能になります。
+ここでインターフェイスにメンバーを追加し、それらのメンバーの実装を提供できます。 この言語機能を使用することで、API 作成者は、インターフェイスの既存の実装とのソースやバイナリの互換性を損なうことなく、新しいバージョンのそのインターフェイスにメソッドを追加できます。 既存の実装では既定の実装が*継承*されます。 さらに、この機能により、同様の機能をサポートする Android や Swift を対象とする API を、C# と連携させることができます。 既定のインターフェイス メソッドでは、"traits" 言語機能のようなシナリオも可能になります。
 
-多くのシナリオと言語要素が、既定のインターフェイス メンバーによって影響されます。 最初のチュートリアルでは、[既定の実装でのインターフェイスの更新](../tutorials/default-interface-members-versions.md)について取り上げています。 その他のチュートリアルとリファレンスの更新は、一般公開に間に合うように提供されます。
+既定のインターフェイス メソッドにより、多くのシナリオと言語要素が影響を受けます。 最初のチュートリアルでは、[既定の実装でのインターフェイスの更新](../tutorials/default-interface-methods-versions.md)について取り上げています。 その他のチュートリアルとリファレンスの更新は、一般公開に間に合うように提供されます。
 
 ## <a name="more-patterns-in-more-places"></a>より多くの場所でより多くのパターン
 

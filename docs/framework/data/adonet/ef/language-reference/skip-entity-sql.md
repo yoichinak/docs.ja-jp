@@ -2,12 +2,12 @@
 title: SKIP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-ms.openlocfilehash: 19d3001fb8f226b02f16167dfb51ce1caa80ba3b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 75140384823588b8f6785de00b0ab3cd17314a3f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249220"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319341"
 ---
 # <a name="skip-entity-sql"></a>SKIP (Entity SQL)
 
@@ -15,7 +15,7 @@ ms.locfileid: "70249220"
 
 ## <a name="syntax"></a>構文
 
-```
+```sql
 [ SKIP n ]
 ```
 
@@ -34,13 +34,15 @@ SKIP 式のサブ句が ORDER BY 句に存在する場合、結果は並べ替�
 > [!NOTE]
 > SQL Server 2000 では、キー以外の列で ORDER BY と共に SKIP を使用すると、正しくない結果が返される可能性があります。 キー以外の列に重複するデータが存在する場合、指定された数を超える行はスキップされます。 これは、SQL Server 2000 に対する SKIP の変換方法によるものです。 たとえば、次のコードでは、 `E.NonKeyColumn` に重複値が存在する場合、5 行を超える行はスキップされます。
 >
-> `SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L`
+> ```sql
+> SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L
+> ```
 
-次[!INCLUDE[esql](../../../../../../includes/esql-md.md)] の[ようにクエリを実行します。クエリ結果](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))のページでは、ORDER BY 演算子と SKIP を使用して、SELECT ステートメントで返されるオブジェクトで使用される並べ替え順序を指定します。
+「[方法: クエリ結果](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))を表示する」の @no__t 0 クエリでは、ORDER BY 演算子を SKIP で使用して、SELECT ステートメントで返されるオブジェクトで使用される並べ替え順序を指定します。
 
 ## <a name="see-also"></a>関連項目
 
 - [ORDER BY](order-by-entity-sql.md)
-- [方法: クエリ結果のページ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
+- [方法: クエリ結果をページに表示する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [ページング](paging-entity-sql.md)
 - [TOP](top-entity-sql.md)

@@ -14,15 +14,15 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252477"
 ---
-# <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 要素
+# <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources> 要素
 リモートソースから読み込まれたアセンブリに .NET Framework 4 以降で完全信頼を付与するかどうかを指定します。
   
 > [!NOTE]
 > Visual Studio プロジェクトの [エラー一覧] またはビルドエラーのエラーメッセージが原因でこの記事にリダイレクトされた[場合は、「方法:Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))で Web からのアセンブリを使用します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<loadFromRemoteSources >**  
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<loadFromRemoteSources>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -74,7 +74,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 アセンブリを読み込んでコードを実行するには、次のいずれかを行う必要があります。
 
-- アセンブリのサンドボックスを明示的に作成します ([「方法: サンドボックスで部分信頼コードを実行する」](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md) を参照してください)。
+- アセンブリのサンドボックスを明示的に作成[します (「方法:サンドボックス](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)で部分信頼コードを実行します)。
 
 - アセンブリのコードを完全信頼で実行します。 これを行うには、 `<loadFromRemoteSources>`要素を構成します。 以前のバージョンの .NET Framework で部分信頼で実行されるアセンブリが、.NET Framework 4 以降のバージョンで完全信頼で実行されるように指定できます。
 

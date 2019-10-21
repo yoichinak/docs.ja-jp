@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: f325d8ba09e3c3d1c1b3436f758e8fc1696c7f49
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 2bdaa2f4cdb19d01948effd599177f68859cb82c
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167851"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291058"
 ---
 # <a name="c-keywords"></a>C# のキーワード
 
@@ -59,8 +59,9 @@ ms.locfileid: "70167851"
 |[let](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
 |[orderby](orderby-clause.md)|[partial (型)](partial-type.md)|[partial (メソッド)](partial-method.md)|
 |[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
-|[value](value.md)|[var](var.md)|[when (フィルター条件)](when.md)|
-|[where (ジェネリック型制約)](where-generic-type-constraint.md)|[where (クエリ句)](where-clause.md)|[yield](yield.md)|
+|[unmanaged (ジェネリック型制約)](where-generic-type-constraint.md)|[value](value.md)|[var](var.md)|
+|[when (フィルター条件)](when.md)|[where (ジェネリック型制約)](where-generic-type-constraint.md)|[where (クエリ句)](where-clause.md)|
+|[yield](yield.md)| | |
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,15 +1,15 @@
 ---
-title: '方法: 子孫の要素 (XPATH-LINQ to XML) を検索 (Visual Basic)'
+title: '方法: 子孫要素の検索 (XPath LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
-ms.openlocfilehash: 09f12dca7b6278327394126ffb0950682d285f88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ee496c1a3e797a8edaf5878d9832583396a851f
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780563"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250128"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>方法: 子孫の要素 (XPATH-LINQ to XML) を検索 (Visual Basic)
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>方法: 子孫要素の検索 (XPath LINQ to XML) (Visual Basic)
 このトピックでは、特定の名前を指定して子孫要素を取得する方法について説明します。  
   
  XPath 式は `//Name` です。  
@@ -41,7 +41,7 @@ Next
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console
 Results are identical  
 <Name>Ellen Adams</Name>  
 <Name>Tai Yee</Name>  
@@ -53,4 +53,4 @@ Results are identical
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath ユーザーの LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

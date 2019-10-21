@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 7f9a02bc650f54338dfcb1d3f41397e745483430
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 988e868b1a1698d00a6d77fd715b2a76b1790132
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959537"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321265"
 ---
 # <a name="securing-clients"></a>クライアントのセキュリティ保護
-Windows Communication Foundation (WCF) では、サービスはクライアントのセキュリティ要件を決定します。 つまり、使用するセキュリティ モード、およびクライアントが資格情報を提供するかどうかは、サービスによって指定されます。 そのため、クライアントをセキュリティで保護するプロセスは、サービスから取得したメタデータ (公開されている場合) を使用してクライアントを構築するという簡単なものになります。 クライアントを構成する方法は、メタデータによって指定されます。 クライアントが資格情報を提供することをサービスが要求する場合、要件に適した資格情報を取得する必要があります。 ここでは、このプロセスについて詳しく説明します。 セキュリティで保護されたサービスの作成の詳細については、「[サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)」を参照してください。  
+Windows Communication Foundation (WCF) では、サービスはクライアントのセキュリティ要件を決定します。 つまり、使用するセキュリティ モード、およびクライアントが資格情報を提供するかどうかは、サービスによって指定されます。 そのため、クライアントをセキュリティで保護するプロセスは、サービスから取得したメタデータ (公開されている場合) を使用してクライアントを構築するという簡単なものになります。 クライアントを構成する方法は、メタデータによって指定されます。 クライアントが資格情報を提供することをサービスが要求する場合、要件に適した資格情報を取得する必要があります。 ここでは、このプロセスについて詳しく説明します。 セキュリティで保護されたサービスの作成の詳細については、「[サービスのセキュリティ保護](securing-services.md)」を参照してください。  
   
 ## <a name="the-service-specifies-security"></a>サービスによるセキュリティの指定  
- 既定では、WCF バインドではセキュリティ機能が有効になっています。 (<xref:System.ServiceModel.BasicHttpBinding> を除く)。このため、WCF を使用してサービスを作成した場合、認証、機密性、および整合性を確保するためにセキュリティを実装する可能性が高くなります。 この場合、サービスが提供するメタデータによって、セキュリティで保護された通信チャネルの確立に必要なものが示されます。 サービス メタデータにセキュリティ要件がまったく含まれていない場合には、サービスでセキュリティ スキーム (SSL (Secure Sockets Layer) over HTTP など) を強制する方法はありません。 ただし、サービスがクライアントに資格情報の提供を求める場合は、クライアントの開発者、展開担当者、または管理者は、クライアントがサービスに対して認証を受けるときに実際に使用する資格情報を提供する必要があります。  
+ 既定では、WCF バインドではセキュリティ機能が有効になっています。 (例外は <xref:System.ServiceModel.BasicHttpBinding> です)。このため、WCF を使用してサービスを作成した場合、認証、機密性、および整合性を確保するためにセキュリティを実装する可能性が高くなります。 この場合、サービスが提供するメタデータによって、セキュリティで保護された通信チャネルの確立に必要なものが示されます。 サービス メタデータにセキュリティ要件がまったく含まれていない場合には、サービスでセキュリティ スキーム (SSL (Secure Sockets Layer) over HTTP など) を強制する方法はありません。 ただし、サービスがクライアントに資格情報の提供を求める場合は、クライアントの開発者、展開担当者、または管理者は、クライアントがサービスに対して認証を受けるときに実際に使用する資格情報を提供する必要があります。  
   
 ## <a name="obtaining-metadata"></a>メタデータの取得  
- クライアントを作成する場合、最初の手順はクライアントが通信を行うサービスからメタデータを取得することです。 これは、次の 2 つの方法で行うことができます。 最初に、サービスが metadata exchange (MEX) エンドポイントを公開するか、または HTTP または HTTPS 経由でメタデータを使用できるようにする場合、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を使用してメタデータをダウンロードできます。これにより、クライアントの両方のコードファイルが生成されます。構成ファイルも同様です。 (このツールの使用方法の詳細については、「 [WCF クライアントを使用したサービスへのアクセス](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)」を参照してください)。サービスにより MEX エンドポイントが公開されておらず、かつ HTTP または HTTPS 上でメタデータが使用可能になっていない場合は、サービス作成者に連絡して、セキュリティ要件とメタデータについて記述したドキュメントを入手する必要があります。  
+ クライアントを作成する場合、最初の手順はクライアントが通信を行うサービスからメタデータを取得することです。 これは、次の 2 つの方法で行うことができます。 最初に、サービスが metadata exchange (MEX) エンドポイントを公開するか、または HTTP または HTTPS 経由でメタデータを使用できるようにする場合、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)を使用してメタデータをダウンロードできます。これにより、クライアントの両方のコードファイルが生成されます。構成ファイルも同様です。 (このツールの使用方法の詳細については、「 [WCF クライアントを使用したサービスへのアクセス](accessing-services-using-a-wcf-client.md)」を参照してください)。サービスが MEX エンドポイントを公開しておらず、そのメタデータを HTTP または HTTPS で使用できない場合は、サービスの作成者に、セキュリティ要件とメタデータについてのドキュメントを問い合わせる必要があります。  
   
 > [!IMPORTANT]
 > メタデータが信頼されたソースのものであり、改ざんされていないことを確認することをお勧めします。 HTTP プロトコルを使用して取得したメタデータはクリア テキストで送信されるため、改ざんされるおそれがあります。 サービスで <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> プロパティおよび <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> プロパティを使用している場合は、サービス作成者から提供された URL で、HTTPS プロトコルを使用してデータをダウンロードします。  
@@ -38,9 +38,9 @@ Windows Communication Foundation (WCF) では、サービスはクライアン�
 2. 実際のクライアント資格情報を指定します。 実際のクライアント資格情報は、型と区別するために*クライアント資格*情報の値と呼ばれます。 たとえば、クライアント資格情報の種類として証明書が指定されている場合、サービスが信頼する証明機関によって発行された X.509 証明書を指定する必要があります。  
   
 ### <a name="determining-the-client-credential-type"></a>クライアント資格情報の種類の特定  
- Svcutil.exe ツールによって生成された構成ファイルがある場合は、 [ \<バインド >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)セクションを調べて、必要なクライアント資格情報の種類を決定します。 このセクション内には、セキュリティ要件を指定するバインド要素があります。 具体的には、 \<各バインドのセキュリティ > 要素を調べます。 この要素には `mode` 属性が含まれており、3 つの値のいずれか (`Message`、`Transport`、または `TransportWithMessageCredential`) に設定できます。 この属性の値によってモードが決定され、このモードによってどの子要素が有効なのかが決定されます。  
+ Svcutil.exe ツールによって生成された構成ファイルがある場合は、 [\<bindings >](../configure-apps/file-schema/wcf/bindings.md)セクションを調べて、必要なクライアント資格情報の種類を決定します。 このセクション内には、セキュリティ要件を指定するバインド要素があります。 具体的には、各バインドの @no__t 0security > 要素を調べます。 この要素には `mode` 属性が含まれており、3 つの値のいずれか (`Message`、`Transport`、または `TransportWithMessageCredential`) に設定できます。 この属性の値によってモードが決定され、このモードによってどの子要素が有効なのかが決定されます。  
   
- 要素に`<transport>`は、要素また`<message>`は要素のいずれか、またはその両方を含めることができます。 `<security>` セキュリティ モードと一致する要素が有効な要素です。 たとえば、次のコードでは、セキュリティ モードを `"Message"`、`<message>` 要素のクライアント資格情報の種類を `"Certificate"` に指定しています。 この場合、`<transport>` 要素は無視できます。 ただし、`<message>` 要素で X.509 証明書を提示する必要があることが指定されています。  
+ @No__t-0 要素には、@no__t 1 または `<message>` の要素、またはその両方を含めることができます。 セキュリティ モードと一致する要素が有効な要素です。 たとえば、次のコードでは、セキュリティ モードを `"Message"`、`<message>` 要素のクライアント資格情報の種類を `"Certificate"` に指定しています。 この場合、`<transport>` 要素は無視できます。 ただし、`<message>` 要素で X.509 証明書を提示する必要があることが指定されています。  
 
 ```xml  
 <wsHttpBinding>  
@@ -73,12 +73,12 @@ Windows Communication Foundation (WCF) では、サービスはクライアン�
   
 - クライアント コードで (`SetCertificate` メソッドを使用して) プログラミングする方法。  
   
- 次に示すように、 `clientCredentials`クライアントの構成ファイルの[ \<動作 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)セクションを追加し、要素を使用します。  
+ クライアントの構成ファイルの[\<behaviors >](../configure-apps/file-schema/wcf/behaviors.md)セクションを追加し、`clientCredentials` 要素を使用します (下図参照)。  
   
-#### <a name="setting-a-clientcredentials-value-in-code"></a>コードで\<の clientCredentials > 値の設定  
- コードに[ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)値を設定するには、 <xref:System.ServiceModel.ClientBase%601>クラスの<xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>プロパティにアクセスする必要があります。 このプロパティは、次の表に示すように、各種の資格情報の種類にアクセスできる <xref:System.ServiceModel.Description.ClientCredentials> オブジェクトを返します。  
+#### <a name="setting-a-clientcredentials-value-in-code"></a>コードで @no__t 0clientCredentials > 値を設定する  
+ コードで[\<clientCredentials >](../configure-apps/file-schema/wcf/clientcredentials.md)値を設定するには、<xref:System.ServiceModel.ClientBase%601> クラスの <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> プロパティにアクセスする必要があります。 このプロパティは、次の表に示すように、各種の資格情報の種類にアクセスできる <xref:System.ServiceModel.Description.ClientCredentials> オブジェクトを返します。  
   
-|ClientCredential プロパティ|説明|メモ|  
+|ClientCredential プロパティ|説明|ノート|  
 |-------------------------------|-----------------|-----------|  
 |<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> を返します|クライアントがサービスに対して自身を認証するために提供する X.509 証明書を表します。|  
 |<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|<xref:System.ServiceModel.Security.HttpDigestClientCredential> を返します|HTTP ダイジェスト資格情報を表します。 この資格情報は、ユーザー名とパスワードのハッシュです。|  
@@ -88,8 +88,8 @@ Windows Communication Foundation (WCF) では、サービスはクライアン�
 |<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|<xref:System.ServiceModel.Security.UserNamePasswordClientCredential> を返します|ユーザー名とパスワードのペアを表します。|  
 |<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|<xref:System.ServiceModel.Security.WindowsClientCredential> を返します|Windows クライアントの資格情報 (Kerberos 資格情報) を表します。 このクラスのプロパティは読み取り専用です。|  
   
-#### <a name="setting-a-clientcredentials-value-in-configuration"></a>構成で\<の clientCredentials > 値の設定  
- 資格情報の値を指定するには、 [ \<](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)エンドポイントの動作を clientCredentials > 要素の子要素として使用します。 使用される要素は、クライアントの資格情報の種類によって異なります。 たとえば、次の例は、<[\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)を使用して x.509 証明書を設定する構成を示しています。  
+#### <a name="setting-a-clientcredentials-value-in-configuration"></a>構成で @no__t 0clientCredentials > 値を設定する  
+ 資格情報の値は、エンドポイントの動作を[\< clientcredentials >](../configure-apps/file-schema/wcf/clientcredentials.md)要素の子要素として使用して指定します。 使用される要素は、クライアントの資格情報の種類によって異なります。 たとえば、次の例は、<[\<clientCertificate >](../configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)を使用して x.509 証明書を設定する構成を示しています。  
   
 ```xml  
 <configuration>  
@@ -107,7 +107,7 @@ Windows Communication Foundation (WCF) では、サービスはクライアン�
 </configuration>  
 ```  
   
- 構成でクライアント資格情報を設定するには、 [ \<endpointbehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)要素を構成ファイルに追加します。 さらに、次の例に示すように、追加された behavior `behaviorConfiguration`要素は、 [ \<クライアント > 要素\<のエンドポイント >](../configure-apps/file-schema/wcf/endpoint-of-client.md)の属性を使用して、サービスのエンドポイントにリンクされている必要があります。 `behaviorConfiguration` 属性の値は、動作の `name` 属性の値と一致する必要があります。  
+ 構成でクライアント資格情報を設定するには、構成ファイルに[\<endpointBehaviors >](../configure-apps/file-schema/wcf/endpointbehaviors.md)要素を追加します。 さらに、次の例に示すように、追加された behavior 要素は、 [\<client > 要素の \<endpoint >](../configure-apps/file-schema/wcf/endpoint-of-client.md)の @no__t 0 属性を使用して、サービスのエンドポイントにリンクする必要があります。 `behaviorConfiguration` 属性の値は、動作の `name` 属性の値と一致する必要があります。  
 
 ```xml
 <configuration>
@@ -126,7 +126,7 @@ Windows Communication Foundation (WCF) では、サービスはクライアン�
 > [!NOTE]
 > クライアント資格情報の値の中には、アプリケーション構成ファイルを使用して設定できないものがあります (ユーザー名とパスワードや、Windows ユーザーとパスワードの値など)。 このような資格情報の値は、コードでのみ指定できます。  
   
- クライアント資格情報の設定の詳細について[は、「」を参照してください。クライアント資格情報の](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)値を指定します。  
+ クライアント資格情報の設定の詳細については、「[方法: クライアント資格情報の値を指定する](how-to-specify-client-credential-values.md)」を参照してください。  
   
 > [!NOTE]
 > 次の構成例に示すように、`ClientCredentialType` が `SecurityMode` に設定されている場合、`"TransportWithMessageCredential",` は無視されます。  
@@ -151,10 +151,10 @@ Windows Communication Foundation (WCF) では、サービスはクライアン�
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
-- [構成エディター ツール (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
-- [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)
-- [WCF クライアントを使用したサービスへのアクセス](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [方法: クライアント資格情報の値の指定](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
-- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [方法: クライアント資格情報の種類を指定します](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [\< バインド >](../configure-apps/file-schema/wcf/bindings.md)
+- [構成エディター ツール (SvcConfigEditor.exe)](configuration-editor-tool-svcconfigeditor-exe.md)
+- [サービスのセキュリティ保護](securing-services.md)
+- [WCF クライアントを使用したサービスへのアクセス](accessing-services-using-a-wcf-client.md)
+- [方法: クライアントの資格情報の値を指定する](how-to-specify-client-credential-values.md)
+- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [方法: クライアントの資格情報の種類を指定する](how-to-specify-the-client-credential-type.md)

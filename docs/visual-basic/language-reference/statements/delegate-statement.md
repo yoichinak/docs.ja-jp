@@ -7,19 +7,19 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 880b4cf75d518506d2bcf788ad8460274dcccefc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a8260da4d2224551de71fd54f734007c7fa214f
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638219"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583456"
 ---
 # <a name="delegate-statement"></a>Delegate ステートメント
-デリゲートを宣言するために使用します。 デリゲートを参照する参照型、`Shared`メソッド、型またはオブジェクトのインスタンス メソッドにします。 このデリゲート クラスのインスタンスを作成するパラメーターと戻り値の型が一致するプロシージャを使用できます。 プロシージャし、後で呼び出せるデリゲート インスタンスの作成。  
+デリゲートを宣言するために使用されます。 デリゲートは、型の `Shared` メソッドまたはオブジェクトのインスタンスメソッドを参照する参照型です。 パラメーターと戻り値の型が一致するプロシージャを使用すると、このデリゲートクラスのインスタンスを作成できます。 このプロシージャは、後でデリゲートインスタンスを使用して呼び出すことができます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 [ <attrlist> ] [ accessmodifier ] _  
 [ Shadows ] Delegate [ Sub | Function ] name [( Of typeparamlist )] [([ parameterlist ])] [ As type ]  
 ```  
@@ -28,20 +28,20 @@ ms.locfileid: "61638219"
   
 |用語|定義|  
 |---|---|  
-|`attrlist`|省略可能です。 このデリゲートに適用される属性の一覧です。 複数の属性を指定するときは、コンマで区切ります。 囲む必要があります、[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)山かっこ ("`<`「と」`>`")。|  
-|`accessmodifier`|省略可能です。 どのようなコードがアクセスできるは、デリゲートを指定します。 次のいずれかの値を指定します。<br /><br /> - [パブリック](../../../visual-basic/language-reference/modifiers/public.md)します。 デリゲートを宣言した要素にアクセスできる任意のコードにアクセスできます。<br />-   [保護されている](../../../visual-basic/language-reference/modifiers/protected.md)します。 デリゲートのクラスまたは派生クラス内でのコードだけがアクセスできます。<br />-   [フレンド](../../../visual-basic/language-reference/modifiers/friend.md)します。 デリゲートが同じアセンブリ内のコードだけにアクセスできます。<br />- [プライベート](../../../visual-basic/language-reference/modifiers/private.md)します。 デリゲートを宣言した要素内のコードだけがアクセスできます。<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md)デリゲートのクラス、派生クラスでは、または同じアセンブリ内のコードにアクセスできるは、デリゲートのみです。 <br />- [Private Protected](../../language-reference/modifiers/private-protected.md)デリゲートのクラス内または同じアセンブリ内の派生クラスでのコードにアクセスできるは、デリゲートのみです。 |  
-|`Shadows`|省略可能です。 このデリゲートを宣言し、同じ名前を持つプログラミング要素、または基底クラスのオーバー ロードされた要素のセットを非表示にすることを示します。 宣言された要素は、他の任意の種類の要素でシャドウできます。<br /><br /> シャドウされた要素は、その要素をシャドウする派生クラスからは使用できません。ただし、シャドウする要素がアクセスできない要素の場合は例外です。 たとえば場合、`Private`要素をシャドウする基本クラスの要素では、コードへのアクセス許可がない、`Private`要素が代わりに基本クラスの要素にアクセスします。|  
-|`Sub`|省略可能、ただしか`Sub`または`Function`表示する必要があります。 代理人としてこのプロシージャを宣言`Sub`値を返さないプロシージャ。|  
-|`Function`|省略可能、ただしか`Sub`または`Function`表示する必要があります。 代理人としてこのプロシージャを宣言`Function`値を返すプロシージャです。|  
-|`name`|必須。 デリゲートの型の名前標準の変数の名前付け規則に従います。|  
-|`typeparamlist`|省略可能です。 このデリゲートの型パラメーターの一覧です。 複数の型パラメーターは、コンマで区切られます。 必要に応じて、型パラメーターごとに宣言できますバリアントを使用して`In`と`Out`ジェネリック修飾子。 囲む必要があります、[型リスト](../../../visual-basic/language-reference/statements/type-list.md)かっこで囲まれたを導入し、`Of`キーワード。|  
-|`parameterlist`|任意。 呼び出されると、プロシージャに渡されるパラメーターの一覧。 囲む必要があります、[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)かっこ内に示します。|  
-|`type`|指定するかどうかは必須、`Function`プロシージャ。 戻り値のデータ型。|  
+|`attrlist`|省略可能です。 このデリゲートに適用される属性のリスト。 複数の属性を指定するときは、コンマで区切ります。 [属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)は山かっこ ("`<`" と "`>`") で囲む必要があります。|  
+|`accessmodifier`|省略可能です。 デリゲートにアクセスできるコードを指定します。 次のいずれかの値を指定します。<br /><br /> - [パブリック](../../../visual-basic/language-reference/modifiers/public.md)です。 デリゲートを宣言する要素にアクセスできるすべてのコードは、それにアクセスできます。<br />-   [保護さ](../../../visual-basic/language-reference/modifiers/protected.md)れています。 デリゲートのクラスまたは派生クラス内のコードだけがアクセスできます。<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)。 同じアセンブリ内のコードだけが、デリゲートにアクセスできます。<br />- [プライベート](../../../visual-basic/language-reference/modifiers/private.md)です。 デリゲートを宣言する要素内のコードだけがアクセスできます。<br /><br /> デリゲートのクラス、派生クラス、または同じアセンブリ内の[Protected Friend](../../language-reference/modifiers/protected-friend.md)のみのコード - 、デリゲートにアクセスできます。 <br />デリゲートのクラス内または同じアセンブリ内の派生クラス内の[プライベートに保護された](../../language-reference/modifiers/private-protected.md)コードのみを - 、デリゲートにアクセスできます。 |  
+|`Shadows`|省略可能です。 このデリゲートが、基底クラスで同じ名前を持つプログラミング要素、またはオーバーロードされた要素のセットを直しして非表示にすることを示します。 宣言された要素は、他の任意の種類の要素でシャドウできます。<br /><br /> シャドウされた要素は、その要素をシャドウする派生クラスからは使用できません。ただし、シャドウする要素がアクセスできない要素の場合は例外です。 たとえば、`Private` 要素が基本クラス要素をシャドウする場合、`Private` 要素にアクセスするためのアクセス許可を持たないコードは、代わりに基本クラス要素にアクセスします。|  
+|`Sub`|省略可能ですが、`Sub` または `Function` のいずれかが表示されている必要があります。 このプロシージャを、値を返さないデリゲート `Sub` プロシージャとして宣言します。|  
+|`Function`|省略可能ですが、`Sub` または `Function` のいずれかが表示されている必要があります。 このプロシージャを、値を返すデリゲート `Function` プロシージャとして宣言します。|  
+|`name`|必須です。 デリゲート型の名前。標準の変数の名前付け規則に従います。|  
+|`typeparamlist`|省略可能です。 このデリゲートの型パラメーターのリスト。 複数の型パラメーターは、コンマで区切ります。 必要に応じて、`In` および `Out` ジェネリック修飾子を使用して、各型パラメーターをバリアントとして宣言できます。 [型リスト](../../../visual-basic/language-reference/statements/type-list.md)をかっこで囲み、`Of` キーワードと共に導入する必要があります。|  
+|`parameterlist`|省略可能です。 呼び出されたときにプロシージャに渡されるパラメーターのリスト。 [パラメーターリスト](../../../visual-basic/language-reference/statements/parameter-list.md)はかっこで囲む必要があります。|  
+|`type`|@No__t_0 プロシージャを指定する場合は必須です。 戻り値のデータ型。|  
   
 ## <a name="remarks"></a>Remarks  
- `Delegate`ステートメントは、デリゲート クラスのパラメーターと戻り値の型を定義します。 このデリゲート クラスのインスタンスを作成するパラメーターと戻り値の型が一致するプロシージャを使用できます。 手順後で呼び出すことができます、デリゲート インスタンスを使用して、デリゲートの呼び出しによって`Invoke`メソッド。  
+ @No__t_0 ステートメントは、デリゲートクラスのパラメーターと戻り値の型を定義します。 パラメーターと戻り値の型が一致するプロシージャを使用すると、このデリゲートクラスのインスタンスを作成できます。 デリゲートの `Invoke` メソッドを呼び出すことによって、後でデリゲートインスタンスを使用してプロシージャを呼び出すことができます。  
   
- 名前空間、モジュール、クラスまたは構造のレベルでは、プロシージャ内ではなく、デリゲートを宣言できます。  
+ デリゲートは、名前空間、モジュール、クラス、または構造体レベルで宣言できますが、プロシージャ内では宣言できません。  
   
  各デリゲート クラスでは、オブジェクト メソッドの仕様を渡すコンストラクターを定義します。 デリゲート コンス トラクターに渡す引数は、メソッドへの参照、またはラムダ式である必要があります。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "61638219"
  デリゲートの詳細については、「[デリゲート](../../../visual-basic/programming-guide/language-features/delegates/index.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`Delegate`を 2 つの数値で動作し、数値を返すデリゲートを宣言するステートメント。 `DelegateTest`メソッドは、この型のデリゲートのインスタンスを受け取り、番号のペアの動作を使用しています。  
+ 次の例では、`Delegate` ステートメントを使用して、2つの数値を操作するデリゲートを宣言し、数値を返します。 @No__t_0 メソッドは、この型のデリゲートのインスタンスを受け取り、それを使用して数値のペアを操作します。  
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
@@ -69,8 +69,8 @@ ms.locfileid: "61638219"
 - [AddressOf 演算子](../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)
 - [デリゲート](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [方法: ジェネリック クラスを使用する](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [方法 : ジェネリック クラスを使用する](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [共変性と反変性](../../programming-guide/concepts/covariance-contravariance/index.md)
 - [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
 - [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

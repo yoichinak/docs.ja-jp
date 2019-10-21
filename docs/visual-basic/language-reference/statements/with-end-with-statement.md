@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 3c6766d9084962d006fe5e5d7d5cc723c2aad441
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3da04b85865389a2b4466b78091ff28529346269
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046642"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582251"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With ステートメント (Visual Basic)
 
@@ -28,7 +28,7 @@ ms.locfileid: "70046642"
 
 ## <a name="syntax"></a>構文
 
-```
+```vb
 With objectExpression
     [ statements ]
 End With
@@ -38,9 +38,9 @@ End With
 
 |用語|定義|
 |---|---|
-|`objectExpression`|必須。 オブジェクトとして評価される式。 この式は、任意で複雑にできます。評価されるのは 1 回のみです。 基本データ型だけでなく、どのデータ型として評価される式でも指定できます。|
+|`objectExpression`|必須です。 オブジェクトとして評価される式。 この式は、任意で複雑にできます。評価されるのは 1 回のみです。 基本データ型だけでなく、どのデータ型として評価される式でも指定できます。|
 |`statements`|省略可能です。 `With` の評価によって生成されるオブジェクトのメンバーを参照できる、`End With` と `objectExpression` 間の 1 つ以上のステートメント。|
-|`End With`|必須。 `With` ブロックの定義を終了します。|
+|`End With`|必須です。 `With` ブロックの定義を終了します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -64,10 +64,10 @@ End With
 
 ブロック外から `With` ステートメント ブロックに分岐することはできません。
 
-ブロックの内部にループがなければ、ステートメントは一度だけ実行されます。 さまざまな種類の制御構造を入れ子にできます。 詳細については、「[入れ子になったコントロール構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
+ブロックの内部にループがなければ、ステートメントは一度だけ実行されます。 さまざまな種類の制御構造を入れ子にできます。 詳細については、[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md) を参照してください。
 
 > [!NOTE]
-> また、オブジェクト初期化子で `With` キーワードを使用することもできます。 詳細と例については[、「オブジェクト初期化子:名前付きおよび匿名](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)型と[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。
+> また、オブジェクト初期化子で `With` キーワードを使用することもできます。 詳細と例については、「[オブジェクト初期化子: 名前付きおよび匿名](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)型」と「[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。
 >
 > 直前にインスタンス化したオブジェクトのプロパティまたはフィールドのみを `With` ブロックを使用して初期化する場合は、代わりにオブジェクト初期化子を使用することを考慮します。
 
@@ -87,5 +87,5 @@ End With
 
 - <xref:System.Collections.Generic.List%601>
 - [入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [オブジェクト初期化子:名前付きの型と匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [オブジェクト初期化子 : 名前付きの型と匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

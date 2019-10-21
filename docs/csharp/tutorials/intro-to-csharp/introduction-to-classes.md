@@ -3,20 +3,20 @@ title: クラスおよびオブジェクト - C# チュートリアルの概要
 description: 初めての C# プログラムを作成し、オブジェクト指向の概念を確認します
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 092639e86b3e8e683a7d5f6ecf5b732991581b71
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f4199f709ee0011af9f00f6909193f08345bc49e
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850724"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834105"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>クラスおよびオブジェクトを使用したオブジェクト指向プログラミングについて確認します
 
-このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている、[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
+このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Windows、Linux、または macOS 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている、[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
 
 ## <a name="create-your-application"></a>アプリケーションを作成する
 
-ターミナル ウィンドウで、「**classes**」という名前のディレクトリを作成します。 ここにアプリケーションを構築します。 このディレクトリに移動し、コンソール ウィンドウで「`dotnet new console`」と入力します。 このコマンドにより、アプリケーションが作成されます。 **Program.cs** を開きます。 内容は次のようになります。
+ターミナル ウィンドウで、「*classes*」という名前のディレクトリを作成します。 ここにアプリケーションを構築します。 このディレクトリに移動し、コンソール ウィンドウで「`dotnet new console`」と入力します。 このコマンドにより、アプリケーションが作成されます。 *Program.cs* を開きます。 内容は次のようになります。
 
 ```csharp
 using System;
@@ -33,7 +33,7 @@ namespace classes
 }
 ```
 
-このチュートリアルでは、銀行口座を表す新しい型を作成します。 通常、開発者は各クラスを別々のテキスト ファイルで定義します。 この方法なら、プログラムのサイズが大きくなっても管理が容易です。  **classes** ディレクトリに「**BankAccount.cs**」という名前の新しいファイルを作成します。 
+このチュートリアルでは、銀行口座を表す新しい型を作成します。 通常、開発者は各クラスを別々のテキスト ファイルで定義します。 この方法なら、プログラムのサイズが大きくなっても管理が容易です。 *classes* ディレクトリに「*BankAccount.cs*」という名前の新しいファイルを作成します。 
 
 このファイルには、***銀行口座***の定義が含まれます。 オブジェクト指向プログラミングでは、***クラス***の形式で型を作成することによりコードを整理します。 これらのクラスには、特定のエンティティを表すコードが含まれています。 `BankAccount` クラスは銀行口座を表します。 コードでは、メソッドとプロパティを使用した特定の操作を実装します。 このチュートリアルでは、銀行口座は次の動作をサポートします。
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-[`new`](../../language-reference/operators/new-operator.md) を使用してオブジェクトを作成すると、コンストラクターが呼び出されます。 ***program.cs*** の `Console.WriteLine("Hello World!");` の行を次の行で置き換えます (`<name>` を自分の名前に置き換えます)。
+[`new`](../../language-reference/operators/new-operator.md) を使用してオブジェクトを作成すると、コンストラクターが呼び出されます。 *Program.cs* の `Console.WriteLine("Hello World!");` の行を次の行で置き換えます (`<name>` を自分の名前に置き換えます)。
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -119,15 +119,15 @@ accountNumberSeed++;
 
 銀行口座クラスは、預金と引き出しを許可して正しく動作するようにする必要があります。 口座のすべてのトランザクションを記録する履歴を作成して、預金と引き出しを実装しましょう。 これには、単純にトランザクションごとに残高を更新する方法に比べていくつかのメリットがあります。 履歴は、すべてのトランザクションを監査して毎日の残高を管理するために使用できます。 必要に応じてすべてのトランザクションの履歴から残高を計算することにより、1 つのトランザクションの中で修正されたすべてのエラーが正しく残高に反映されて次の計算に使用されます。
 
-トランザクションを表す新しい型を作成するところから始めましょう。 これは一切の責任を持たない単純型です。 いくつかのプロパティが必要になります。 「***Transaction.cs***」という名前の新しいファイルを作成します。 これに次のコードを追加します。
+トランザクションを表す新しい型を作成するところから始めましょう。 これは一切の責任を持たない単純型です。 いくつかのプロパティが必要になります。 「*Transaction.cs*」という名前の新しいファイルを作成します。 これに次のコードを追加します。
 
-[!code-csharp[Transaction](../../../../samples/csharp/classes-quickstart/Transaction.cs "Transaction declaration")]
+[!code-csharp[Transaction](~/samples/csharp/classes-quickstart/Transaction.cs)]
 
 `BankAccount` クラスに `Transaction` オブジェクトの <xref:System.Collections.Generic.List%601> を追加しましょう。 次の宣言を追加します。
 
-[!code-csharp[TransactionDecl](../../../../samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration "Transaction declaration")]
+[!code-csharp[TransactionDecl](~/samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
-<xref:System.Collections.Generic.List%601> クラスでは、別の名前空間をインポートする必要があります。 **BankAccount.cs** の最初に次を追加します。
+<xref:System.Collections.Generic.List%601> クラスでは、別の名前空間をインポートする必要があります。 *BankAccount.cs* の最初に次を追加します。
 
 ```csharp
 using System.Collections.Generic;
@@ -135,7 +135,7 @@ using System.Collections.Generic;
 
 `Balance` の報告方法を変更しましょう。  これは、すべてのトランザクションの値を合計することで確認できます。 `BankAccount` クラスの `Balance` の宣言を次のように変更します。
 
-[!code-csharp[BalanceComputation](../../../../samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation "Computing the balance")]
+[!code-csharp[BalanceComputation](~/samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
 この例は、***プロパティ***の重要な一面を示しています。 これで、別のプログラマーが値を要求したときに残高が計算されるようになりました。 この計算処理は、すべてのトランザクションを列挙して、その合計値を現在の残高として提供します。
 
@@ -143,13 +143,13 @@ using System.Collections.Generic;
 
 これにより、***例外***の概念が導入されます。 メソッドが作業を正常に完了できないことを示す標準的な方法は、例外をスローすることです。 例外の型とそれに関連付けられたメッセージがエラーを説明します。 `MakeDeposit` メソッドは、預金額が負の値になる場合に例外をスローします。 `MakeWithdrawal` メソッドは、引き出し額が負の値になる場合、または引き出しを適用した結果、残高が負の値になる場合に例外をスローします。
 
-[!code-csharp[DepositAndWithdrawal](../../../../samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal "Make deposits and withdrawals")]
+[!code-csharp[DepositAndWithdrawal](~/samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
 [`throw`](../../language-reference/keywords/throw.md) ステートメントが例外を**スロー**します。 現在のブロックの実行が終了し、コントロールによってコール スタックで最初に一致した `catch` ブロックに転送されます。 あとで `catch` ブロックを追加してこのコードをテストします。
 
 残高を直接更新するのではなく、最初のトランザクションを追加するようにするため、コンストラクターを 1 か所変更する必要があります。 既に `MakeDeposit` メソッドは記述したので、このメソッドをコンストラクターから呼び出します。 完成したコンストラクターは次のようになります。
 
-[!code-csharp[Constructor](../../../../samples/csharp/classes-quickstart/BankAccount.cs#Constructor "The final version of the constructor")]
+[!code-csharp[Constructor](~/samples/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
 <xref:System.DateTime.Now?displayProperty=nameWithType> は、現在の日付と時刻を返すプロパティです。 `Main` メソッドにいくつかの預金と引き出しを追加することで、これをテストします。
 
@@ -196,11 +196,11 @@ catch (InvalidOperationException e)
 
 このチュートリアルを完了すると、トランザクション履歴の `string` を作成する `GetAccountHistory` メソッドを記述できるようになります。 このメソッドを `BankAccount` 型に追加します。
 
-[!code-csharp[History](../../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
+[!code-csharp[History](~/samples/csharp/classes-quickstart/BankAccount.cs#History)]
 
 これは、<xref:System.Text.StringBuilder> クラスを使用して、各トランザクションを 1 行で表す文を含んだ文字列をフォーマットします。 文字列をフォーマットするコードについては、このチュートリアルで先述しました。 新しい文字の 1 つは `\t` です。 これはタブを挿入して出力をフォーマットします。
 
-次の行を追加して、**Program.cs** でテストします。
+次の行を追加して、*Program.cs* でテストします。
 
 ```csharp
 Console.WriteLine(account.GetAccountHistory());

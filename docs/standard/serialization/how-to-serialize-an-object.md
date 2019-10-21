@@ -19,7 +19,7 @@ ms.locfileid: "69928990"
 オブジェクトをシリアル化するには、まず、シリアル化の対象となるオブジェクトを作成し、パブリック プロパティとパブリック フィールドを設定します。 この処理を行うには、転送形式、つまり XML ストリームをストリームとファイルのいずれとして格納するかを決定する必要があります。 たとえば、XML ストリームを永続的な形式で保存する必要がある場合は、<xref:System.IO.FileStream> オブジェクトを作成します。  
   
 > [!NOTE]
-> XML シリアル化の例については、「[Examples of XML Serialization](../../../docs/standard/serialization/examples-of-xml-serialization.md)」を参照してください。  
+> XML シリアル化の例については、「[XML シリアル化の例](../../../docs/standard/serialization/examples-of-xml-serialization.md)」を参照してください。  
   
 ### <a name="to-serialize-an-object"></a>オブジェクトをシリアル化するには  
   

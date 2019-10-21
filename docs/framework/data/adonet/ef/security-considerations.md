@@ -75,7 +75,7 @@ ms.locfileid: "70854248"
   
 - データベース接続を開いて、データベースに対して<xref:System.Data.SqlClient.SqlClientPermission>コマンドを実行する権限 (たとえば、SQL Server データベースの場合)。  
   
- 詳細については、「 [Code Access Security and ADO.NET](../code-access-security.md)」を参照してください。  
+ 詳細については、「 [コード アクセス セキュリティと ADO.NET](../code-access-security.md)」を参照してください。  
   
 #### <a name="do-not-install-untrusted-applications"></a>信頼できないアプリケーションをインストールしない  
  Entity Framework では、セキュリティアクセス許可は適用されません。ユーザーが指定したデータオブジェクトコードは、信頼されているかどうかに関係なく、処理中に呼び出されます。 データ ストアとアプリケーションでクライアントの認証および承認が行われるようにしてください。  

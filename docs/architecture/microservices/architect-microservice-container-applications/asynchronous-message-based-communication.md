@@ -2,12 +2,12 @@
 title: メッセージベースの非同期通信
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | メッセージベースの非同期通信はマイクロサービスにとって極めて重要な概念です。マイクロサービス間の独立性を維持し、同時に、最終的には同期させる最良の方法であるためです。'
 ms.date: 09/20/2018
-ms.openlocfilehash: 65bd0cd2b316fe7011ad8e878852547ee5949f09
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673319"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522757"
 ---
 # <a name="asynchronous-message-based-communication"></a>メッセージベースの非同期通信
 
@@ -31,7 +31,7 @@ ms.locfileid: "68673319"
 
 いったんメッセージベース通信 (コマンドまたはイベントを含む) の送信を開始したら、メッセージベース通信と同期 HTTP 通信を混在させないようにしてください。
 
-![非同期メッセージを受信する 1 つのマイクロサービス](./media/image18.png)
+![非同期メッセージを受信する 1 つのマイクロサービス](./media/asynchronous-message-based-communication/single-receiver-message-based-communication.png)
 
 **図 4-18**. 非同期メッセージを受信する 1 つのマイクロサービス
 
@@ -53,11 +53,11 @@ ms.locfileid: "68673319"
 
 重要な点は、同じイベントをサブクライブしている複数のマイクロサービスに通信を行う必要があるということです。 このためには、イベントドリブン通信に基づいたパブリッシュ/サブスクライブ メッセージングを使用できます (図 4-19 を参照)。 このパブリッシュ/サブスクライブ メカニズムは、マイクロサービス アーキテクチャ専用ではありません。 これは、DDD において[境界付けられたコンテキスト](https://martinfowler.com/bliki/BoundedContext.html)が通信する方法、または[コマンド クエリ責務分離 (CQRS)](https://martinfowler.com/bliki/CQRS.html) アーキテクチャ パターンで書き込みデータベースを読み取りデータベースに反映する方法に似ています。 目的は、分散システム全体の複数のデータ ソース間で最終的な整合性を得ることです。
 
-![非同期イベント駆動型の通信では、1 つのマイクロサービスがイベントをイベント バスに発行し、たくさんのマイクロサービスがそれをサブスクライブし、通知を受け、対処できます。](./media/image19.png)
+![非同期イベントドリブン通信を示す図。](./media/asynchronous-message-based-communication/asynchronous-event-driven-communication.png)
 
 **図 4-19** 非同期イベントドリブン メッセージ通信
 
-ご使用の実装によって、イベントドリブンのメッセージベース通信で使用されるプロトコルが決まります。 [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) は、キューにある通信の信頼性を向上できます。
+非同期イベント駆動型の通信では、1 つのマイクロサービスがイベントをイベント バスに発行し、たくさんのマイクロサービスがそれをサブスクライブし、通知を受け、対処できます。 ご使用の実装によって、イベントドリブンのメッセージベース通信で使用されるプロトコルが決まります。 [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) は、キューにある通信の信頼性を向上できます。
 
 イベント バスを使用する場合は、関連する実装に基づき、クラスにおいて抽象化レベル (イベント バス インターフェイスなど) を使用することができます。[RabbitMQ](https://www.rabbitmq.com/) のようなメッセージ ブローカーまたは「[Azure Service Bus with Topics](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)」(Azure Service Bus トピック) で説明したサービス バスの API をコードで使用します。 または、NServiceBus、MassTransit、Brighter のような高レベルのサービス バスを使用して、イベント バスとパブリッシュ/サブスクライブ システムを統合することもできます。
 
@@ -77,14 +77,14 @@ ms.locfileid: "68673319"
 
 - 完全な[イベント ソーシング パターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)を使用します。
 
-- [送信トレイ パターン](http://gistlabs.com/2014/05/the-outbox/)を使用します。これは、イベントを作成してパブリッシュするイベントクリエーター コンポーネントの基盤となる、メッセージ キューとしてのトランザクション データベース テーブルです。
+- [送信トレイ パターン](http://www.kamilgrzybek.com/design/the-outbox-pattern/)を使用します。これは、イベントを作成してパブリッシュするイベントクリエーター コンポーネントの基盤となる、メッセージ キューとしてのトランザクション データベース テーブルです。
 
 非同期通信を使用する際に考慮する必要がある他のトピックは、メッセージのべき等性とメッセージの重複除去です。 これらのトピックについては、このガイドで後から説明する「[Implementing event-based communication between microservices (integration events)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md)」(マイクロサービス (統合イベント) 間でのイベントベース通信の実装) をご覧ください。
 
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **イベント駆動型メッセージング** \
-  <http://soapatterns.org/design_patterns/event_driven_messaging>
+  <https://soapatterns.org/design_patterns/event_driven_messaging>
 
 - **発行/サブスクライブ チャネル** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>

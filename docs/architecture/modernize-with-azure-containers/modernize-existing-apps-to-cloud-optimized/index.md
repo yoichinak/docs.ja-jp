@@ -2,12 +2,12 @@
 title: 既存の .NET アプリをクラウド最適化アプリケーションに最新化する
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する
 ms.date: 04/28/2018
-ms.openlocfilehash: 92dc0cde11bb35797fe3c4e8442a2a6514a27e08
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cd7e2886b135eb89c381965a327b6e62baa39736
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374062"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318609"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>既存の .NET アプリをクラウド最適化アプリケーションに最新化する
 
@@ -17,7 +17,7 @@ ms.locfileid: "70374062"
 
 アプリを部分的に最新化しても、完全な移行と再構築とは限りません。 最初は、重要でありながら最新化が簡単な既存のアプリケーションから最新化できます。 Windows および IIS の依存関係がある既存の .NET Framework のバージョンで作成された現在のコード ベースを保守することができます。 図 4-1 は、Azure アプリケーション最新化成熟度モデル内でのクラウド最適化アプリの位置付けを示しています。
 
-![クラウド最適化アプリケーションの配置](./media/image1.png)
+![クラウド向けに最適化されたアプリケーションを配置する方法の図。](./media/index/position-cloud-optimized-application.png)
 
 **図 4-1** クラウド最適化アプリケーションの配置
 

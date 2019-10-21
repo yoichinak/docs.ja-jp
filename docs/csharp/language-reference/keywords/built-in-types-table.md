@@ -7,17 +7,17 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 1f7248a23d53fb90202595defbf70e231bd1d5d3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 687990cc86b3303bdef96af26be63af47410f8c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605975"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698793"
 ---
 # <a name="built-in-types-table-c-reference"></a>組み込み型の一覧表 (C# リファレンス)
 
-次の表は、C# の組み込み型のキーワードを示しています。これは、<xref:System> 名前空間の定義済み型の別名です。  
-  
+次の表は、C# の組み込み型のキーワードを示しています。これは、<xref:System> 名前空間の定義済み型の別名です。
+
 |C# 型|.NET 型|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
@@ -38,9 +38,9 @@ ms.locfileid: "69605975"
   
 ## <a name="remarks"></a>解説
 
-表内の、`object` と `string` を除くすべての型が、単純型と呼ばれます。  
-  
-.NET 型とその C# 型キーワードの別名は、相互に交換可能です。 たとえば、整数の変数を宣言するには、次のいずれかの宣言を使用します。  
+表内の、`object` と `string` を除くすべての型が、単純型と呼ばれます。
+
+.NET 型とその C# 型キーワードの別名は、相互に交換可能です。 たとえば、整数の変数を宣言するには、次のいずれかの宣言を使用します。
 
 ```csharp
 int x = 123;

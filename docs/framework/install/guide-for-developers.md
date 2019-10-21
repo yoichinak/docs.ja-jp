@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0c1a14f0ee36341c9579683f711ae78fc4df3f97
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051940"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833653"
 ---
 # <a name="install-the-net-framework-for-developers"></a>開発者向けの .NET Framework のインストール
 
@@ -155,7 +155,7 @@ Web インストーラーとオフライン インストーラーはどちらも
 
 - .NET Framework 4.5、そのポイント リリース、.NET Framework 4.6 とそのポイント リリース、.NET Framework 4.7 とそのポイント リリース、.NET Framework 4.8 では、.NET Framework 4 を置き換えます。 .NET Framework 4 がインストールされたシステムにこれらのバージョンをインストールすると、アセンブリが置き換えられます。
 
-- .NET Framework 4.5、そのポイント リリース、.NET Framework 4.6 とそのポイント リリース、.NET Framework 4.7 とそのポイント リリース、.NET Framework 4.8 をアンインストールすると、既存の .NET Framework 4 のファイルも削除されます。 .NET Framework 4 に戻る場合は、そのバージョンとすべての更新プログラムを再インストールする必要があります。 (「 [.NET Framework 4 のインストール](https://go.microsoft.com/fwlink/p/?LinkId=230665)」をご覧ください)。
+- .NET Framework 4.5、そのポイント リリース、.NET Framework 4.6 とそのポイント リリース、.NET Framework 4.7 とそのポイント リリース、.NET Framework 4.8 をアンインストールすると、既存の .NET Framework 4 のファイルも削除されます。 .NET Framework 4 に戻る場合は、そのバージョンとすべての更新プログラムを再インストールする必要があります。 「[.NET Framework 4 のインストール](https://go.microsoft.com/fwlink/p/?LinkId=230665)」を参照してください。
 
 - .NET Framework 4.5、そのポイント リリース、.NET Framework 4.6 とそのポイント リリース、.NET Framework 4.7 とそのポイント リリース、.NET Framework 4.8 をインストールするには、管理者資格情報が必要です。
 

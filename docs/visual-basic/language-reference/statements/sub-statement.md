@@ -29,20 +29,20 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 00e2f313e283259ea44dd6da71530bed4bff31c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7dc0ea1f1b30f5ffb0db8917538adf440c5ef891
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751176"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583201"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub ステートメント (Visual Basic)
 
-宣言名、パラメーター、および定義するコードを`Sub`プロシージャ。
+@No__t_0 プロシージャを定義する名前、パラメーター、およびコードを宣言します。
 
 ## <a name="syntax"></a>構文
 
-```
+```vb
 [ <attributelist> ] [ Partial ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async ]
 Sub name [ (Of typeparamlist) ] [ (parameterlist) ] [ Implements implementslist | Handles eventlist ]
     [ statements ]
@@ -55,11 +55,11 @@ End Sub
 
 - `attributelist`
 
-  省略可能です。 参照してください[属性リスト](attribute-list.md)します。
+  省略可能です。 「[属性リスト](attribute-list.md)」を参照してください。
 
 - `Partial`
 
-  省略可能です。 部分メソッドの定義を示します。 参照してください[部分メソッド](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)します。
+  省略可能です。 部分メソッドの定義を示します。 「[部分メソッド](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)」を参照してください。
 
 - `accessmodifier`
 
@@ -77,13 +77,13 @@ End Sub
 
   - [Private Protected](../../language-reference/modifiers/private-protected.md)
 
-  「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+  「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 - `proceduremodifiers`
 
   省略可能です。 次のいずれかの値を指定します。
 
-  - [Overloads](../modifiers/overloads.md)
+  - [オーバーロード](../modifiers/overloads.md)
 
   - [Overrides](../modifiers/overrides.md)
 
@@ -91,7 +91,7 @@ End Sub
 
   - [NotOverridable](../modifiers/notoverridable.md)
 
-  - [MustOverride](../modifiers/mustoverride.md)
+  - [New](../modifiers/mustoverride.md)
 
   - `MustOverride Overrides`
 
@@ -99,31 +99,31 @@ End Sub
 
 - `Shared`
 
-  省略可能です。 参照してください[共有](../modifiers/shared.md)します。
+  省略可能です。 「[共有](../modifiers/shared.md)」を参照してください。
 
 - `Shadows`
 
-  省略可能です。 参照してください[Shadows](../modifiers/shadows.md)します。
+  省略可能です。 「[シャドウ](../modifiers/shadows.md)」を参照してください。
 
 - `Async`
 
-  省略可能です。 参照してください[Async](../modifiers/async.md)します。
+  省略可能です。 「 [Async](../modifiers/async.md)」を参照してください。
 
 - `name`
 
-  必須。 プロシージャの名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。 クラスのコンス トラクターのプロシージャを作成するには、設定の名前、`Sub`する手順、`New`キーワード。 詳細については、次を参照してください。[オブジェクトの有効期間。オブジェクトの作成し、破棄方法](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)します。
+  必須です。 プロシージャの名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。 クラスのコンストラクタープロシージャを作成するには、`Sub` プロシージャの名前を `New` キーワードに設定します。 詳細については、「[オブジェクトの有効期間: オブジェクトの作成方法と破棄方法](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)」を参照してください。
 
 - `typeparamlist`
 
-  省略可能です。 ジェネリック プロシージャの型パラメーターの一覧。 参照してください[一覧を入力する](type-list.md)します。
+  省略可能です。 ジェネリックプロシージャの型パラメーターのリスト。 [型リスト](type-list.md)を参照してください。
 
 - `parameterlist`
 
-  省略可能です。 このプロシージャのパラメーターを表すローカル変数名の一覧。 参照してください[パラメーター リスト](parameter-list.md)します。
+  省略可能です。 このプロシージャのパラメーターを表すローカル変数名の一覧。 「[パラメーターリスト](parameter-list.md)」を参照してください。
 
 - `Implements`
 
-  省略可能です。 この手順が 1 つまたは複数を実装することを示します`Sub`手順、この手順の包含クラスまたは構造体によって実装されるインターフェイスで定義されている 1 つずつです。 参照してください[ステートメントを実装](implements-statement.md)します。
+  省略可能です。 このプロシージャが1つ以上の `Sub` プロシージャを実装することを示します。各プロシージャは、このプロシージャのクラスまたは構造体を含むインターフェイスで定義されています。 「 [Implements ステートメント](implements-statement.md)」を参照してください。
 
 - `implementslist`
 
@@ -137,16 +137,16 @@ End Sub
 
   |パーツ|説明|
   |---|---|
-  |`interface`|必須。 このプロシージャによって実装されるインターフェイスの名前を含むクラスまたは構造体。|
-  |`definedname`|必須。 `interface` の中でプロシージャを定義するために使用する名前。|
+  |`interface`|必須です。 このプロシージャのクラスまたは構造体によって実装されるインターフェイスの名前。|
+  |`definedname`|必須です。 `interface` の中でプロシージャを定義するために使用する名前。|
 
 - `Handles`
 
-  省略可能です。 この手順が 1 つまたは複数の特定のイベントを処理できることを示します。 参照してください[処理](handles-clause.md)します。
+  省略可能です。 このプロシージャが1つ以上の特定のイベントを処理できることを示します。 「[ハンドル](handles-clause.md)」を参照してください。
 
 - `eventlist`
 
-  `Handles` を指定する場合は、必ず指定します。 このプロシージャを処理するイベントの一覧です。
+  `Handles` を指定する場合は、必ず指定します。 このプロシージャが処理するイベントの一覧です。
 
   `eventspecifier [ , eventspecifier ... ]`
 
@@ -156,8 +156,8 @@ End Sub
 
   |パーツ|説明|
   |---|---|
-  |`eventvariable`|必須。 オブジェクト変数がクラスまたはイベントを発生させる構造体のデータ型で宣言されています。|
-  |`event`|必須。 このプロシージャを処理するイベントの名前。|
+  |`eventvariable`|必須です。 イベントを発生させるクラスまたは構造体のデータ型で宣言されたオブジェクト変数。|
+  |`event`|必須です。 このプロシージャが処理するイベントの名前。|
 
 - `statements`
 
@@ -169,21 +169,21 @@ End Sub
 
 ## <a name="remarks"></a>Remarks
 
-プロシージャ内にあるすべての実行可能コードがある必要があります。 使用して、`Sub`呼び出し元のコードに値を返すしたくない場合、プロシージャ。 使用して、`Function`値を取得する場合のプロシージャです。
+すべての実行可能コードは、プロシージャ内になければなりません。 呼び出し元のコードに値を返さないようにする場合は、`Sub` プロシージャを使用します。 値を返す場合は、`Function` プロシージャを使用します。
 
 ## <a name="defining-a-sub-procedure"></a>Sub プロシージャの定義
 
-定義することができます、`Sub`モジュール レベルでのみプロシージャ。 Sub プロシージャの宣言のコンテキストでは、クラス、構造体、モジュールの場合、またはインターフェイスにする必要があります、そのため、およびソース ファイル、名前空間、プロシージャ、またはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
+@No__t_0 プロシージャは、モジュールレベルでのみ定義できます。 したがって、サブプロシージャの宣言コンテキストは、クラス、構造体、モジュール、またはインターフェイスにする必要があり、ソースファイル、名前空間、プロシージャ、またはブロックにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
 
-`Sub` パブリック アクセスに既定のプロシージャ。 アクセス修飾子を使用して、そのアクセス レベルを調整できます。
+`Sub` プロシージャは、既定でパブリックアクセスになります。 アクセス修飾子を使用して、アクセスレベルを調整できます。
 
-プロシージャで使用する場合、`Implements`キーワードを含むクラスまたは構造体があります、`Implements`直後に続くステートメント、`Class`または`Structure`ステートメント。 `Implements`ステートメントで指定されている各インターフェイスを含める必要があります`implementslist`します。 ただし、インターフェイスを定義する名前、 `Sub` (で`definedname`) この手順の名前と一致する必要はありません (で`name`)。
+プロシージャが `Implements` キーワードを使用している場合、含んでいるクラスまたは構造体には、その `Class` または `Structure` ステートメントの直後にある `Implements` ステートメントが含まれている必要があります。 @No__t_0 ステートメントには、`implementslist` で指定されている各インターフェイスを含める必要があります。 ただし、インターフェイスが `Sub` (`definedname`) を定義する際には、このプロシージャの名前 (`name`) と一致する必要はありません。
 
-## <a name="returning-from-a-sub-procedure"></a>Sub プロシージャから戻る
+## <a name="returning-from-a-sub-procedure"></a>Sub プロシージャからの戻り
 
-ときに、`Sub`ステートメントを呼び出した後のステートメントと、プロシージャは、呼び出し元のコードに返す、実行が継続します。
+@No__t_0 プロシージャが呼び出し元のコードに戻ると、ステートメントを呼び出したステートメントの後のステートメントで実行が続行されます。
 
-次の例からの戻り値を示しています、`Sub`プロシージャ。
+次の例は、`Sub` プロシージャからの戻り値を示しています。
 
 ```vb
 Sub mySub(ByVal q As String)
@@ -191,46 +191,46 @@ Sub mySub(ByVal q As String)
 End Sub
 ```
 
-`Exit Sub`と`Return`ステートメントからすぐに終了が発生する、`Sub`プロシージャ。 任意の数の`Exit Sub`と`Return`ステートメントは、手順では、どこでも表示でき、組み合わせることができます`Exit Sub`と`Return`ステートメント。
+@No__t_0 ステートメントおよび `Return` ステートメントを行うと、`Sub` プロシージャからすぐに終了します。 プロシージャ内の任意の場所で任意の数の `Exit Sub` および `Return` ステートメントを使用できます。また、`Exit Sub` と `Return` のステートメントを混在させることができます。
 
 ## <a name="calling-a-sub-procedure"></a>Sub プロシージャの呼び出し
 
-呼び出す、`Sub`ステートメントでは、プロシージャ名を使用し、その引数リストをかっこで使用してその名前でプロシージャ。 引数を指定しない場合にのみかっこを省略することができます。 ただし、コードが常にかっこが含まれる場合より読みやすいです。
+@No__t_0 プロシージャを呼び出すには、ステートメントでプロシージャ名を使用し、その名前の後にかっこで囲んだ引数リストを指定します。 かっこを省略できるのは、引数を指定しない場合のみです。 ただし、常にかっこを含めると、コードが読みやすくなります。
 
-A`Sub`プロシージャと`Function`プロシージャがパラメーターを指定して、一連のステートメントを実行します。 ただし、`Function`値、およびプロシージャを返します。`Sub`プロシージャがありません。 そのため、使用することはできません、`Sub`式の中でプロシージャ。
+@No__t_0 プロシージャと `Function` プロシージャは、パラメーターを持つことができ、一連のステートメントを実行できます。 ただし、`Function` プロシージャは値を返し、`Sub` プロシージャは返しません。 したがって、式の中で `Sub` プロシージャを使用することはできません。
 
-使用することができます、`Call`を呼び出すときに、キーワード、`Sub`プロシージャが、そのキーワードが、ほとんどの用途についてはお勧めしません。 詳細については、次を参照してください。 [Call ステートメント](call-statement.md)します。
+@No__t_1 プロシージャを呼び出すときに `Call` キーワードを使用することはできますが、ほとんどの場合、そのキーワードは推奨されません。 詳細については、「 [Call ステートメント](call-statement.md)」を参照してください。
 
-Visual Basic では、算術式内部の効率を向上させることがあります再配置します。 そのため、引数リストには、他のプロシージャを呼び出す式が含まれている場合とは考えないでくださいの式が特定の順序で呼び出されることです。
+Visual Basic は、内部効率を向上させるために算術式を再配置することがあります。 そのため、引数リストに他のプロシージャを呼び出す式が含まれている場合は、それらの式が特定の順序で呼び出されると想定しないでください。
 
-## <a name="async-sub-procedures"></a>Async Sub プロシージャ
+## <a name="async-sub-procedures"></a>非同期サブプロシージャ
 
-非同期機能を使用すると、明示的なコールバックの使用や複数の関数またはラムダ式、コードを手動で分割することがなく非同期関数を呼び出すことができます。
+非同期機能を使用すると、明示的なコールバックを使用したり、複数の関数やラムダ式にコードを手動で分割したりせずに、非同期関数を呼び出すことができます。
 
-プロシージャを設定する場合、 [Async](../modifiers/async.md)修飾子を使用できます、 [Await](../../../visual-basic/language-reference/operators/await-operator.md)プロシージャ内の演算子。 コントロールに達すると、`Await`内の式、`Async`プロシージャは、呼び出し元に制御が戻ります、待機中のタスクが完了するまでの手順で進行状況が中断されます。 タスクが完了したら、プロシージャの実行を再開できます。
+プロシージャに[Async](../modifiers/async.md)修飾子を指定した場合は、プロシージャで[Await](../../../visual-basic/language-reference/operators/await-operator.md)演算子を使用できます。 コントロールが `Async` プロシージャ内の `Await` 式に到達すると、コントロールは呼び出し元に戻り、待機中のタスクが完了するまで、プロシージャの進行状況は中断されます。 タスクが完了すると、プロシージャで実行を再開できます。
 
 > [!NOTE]
-> `Async`プロシージャ行末またはか最初待機中のオブジェクトはまだ完了が発生した場合、呼び出し元に返す、`Async`プロシージャに達すると、どちらが最初に発生します。
+> @No__t_0 プロシージャは、まだ完了していない最初の待機中のオブジェクトが検出された場合、または `Async` プロシージャの最後に到達した場合に、呼び出し元に戻ります。
 
-マークすることも、[関数ステートメント](function-statement.md)で、`Async`修飾子。 `Async`関数の戻り値の型を持つことができます<xref:System.Threading.Tasks.Task%601>または<xref:System.Threading.Tasks.Task>します。 たとえば後でこのトピックでは、`Async`関数の戻り値の型を持つ<xref:System.Threading.Tasks.Task%601>します。
+[関数ステートメント](function-statement.md)を `Async` 修飾子でマークすることもできます。 @No__t_0 関数は、<xref:System.Threading.Tasks.Task%601> または <xref:System.Threading.Tasks.Task> の戻り値の型を持つことができます。 このトピックの後半の例では、<xref:System.Threading.Tasks.Task%601> の戻り値の型を持つ `Async` 関数を示します。
 
-`Async` `Sub` プロシージャは、主に、値を返すことができない、イベント ハンドラーを使用します。 `Async` `Sub`プロシージャを待機できません、呼び出し元の`Async``Sub`プロシージャは、例外をキャッチできませんが、`Sub`プロシージャがスローされます。
+`Async` の `Sub` プロシージャは、主に、値を返すことができないイベントハンドラーに使用されます。 @No__t_0 `Sub` プロシージャは待機できません。また、`Async` の `Sub` プロシージャの呼び出し元は、`Sub` プロシージャがスローする例外をキャッチできません。
 
-`Async`プロシージャは、いずれかを宣言できません[ByRef](../modifiers/byref.md)パラメーター。
+@No__t_0 プロシージャで[ByRef](../modifiers/byref.md)パラメーターを宣言することはできません。
 
-詳細については`Async`手順についてを参照してください[Async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)、[非同期プログラムにおける制御フロー](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)、および[Async 戻り値の型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
+@No__t_0 の手順の詳細については、「 [async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)」、「非同期[プログラムでの制御フロー](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)」、および「非同期の[戻り値の型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例では、`Sub`名、パラメーター、およびの本体を形成するコードを定義するステートメントを`Sub`プロシージャ。
+次の例では、`Sub` ステートメントを使用して、`Sub` プロシージャの本体を形成する名前、パラメーター、およびコードを定義します。
 
 [!code-vb[VbVbalrStatements#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#58)]
 
 ## <a name="example"></a>例
 
-次の例では、`DelayAsync`は、 `Async` `Function`の戻り値の型を持つ<xref:System.Threading.Tasks.Task%601>します。 `DelayAsync` には、整数を返す `Return` ステートメントがあります。 したがって、関数宣言の`DelayAsync`の戻り値の型があります。`Task(Of Integer)`します。 戻り値の型である`Task(Of Integer)`の評価、`Await`式`DoSomethingAsync`として次のステートメントに示す、整数が生成されます:`Dim result As Integer = Await delayTask`します。
+次の例では、`DelayAsync` は、戻り値の型が <xref:System.Threading.Tasks.Task%601> の `Async` `Function` です。 `DelayAsync` には、整数を返す `Return` ステートメントがあります。 したがって、`DelayAsync` の関数宣言には、`Task(Of Integer)` の戻り値の型を指定する必要があります。 戻り値の型が `Task(Of Integer)` ので、次のステートメントに `Dim result As Integer = Await delayTask` 示すように、`DoSomethingAsync` で `Await` 式を評価すると整数が生成されます。
 
-`startButton_Click`プロシージャの例に示します、`Async Sub`プロシージャ。 `DoSomethingAsync`は、`Async`関数では、タスクへの呼び出しを`DoSomethingAsync`として次のステートメントの表示を待機する必要があります:`Await DoSomethingAsync()`します。 `startButton_Click` `Sub`でプロシージャを定義する必要があります、`Async`修飾子があるため、`Await`式。
+@No__t_0 プロシージャは、`Async Sub` プロシージャの一例です。 @No__t_0 は `Async` 関数であるため、次のステートメントに示すように、`DoSomethingAsync` を呼び出すためのタスクを待機する必要があります。 `Await DoSomethingAsync()`。 @No__t_0 `Sub` プロシージャには `Await` 式があるため、`Async` 修飾子を使用して定義する必要があります。
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 
@@ -243,6 +243,6 @@ Visual Basic では、算術式内部の効率を向上させることがあり�
 - [Call ステートメント](call-statement.md)
 - [Of](of-clause.md)
 - [パラメーター配列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
-- [方法: ジェネリック クラスを使用する](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [方法 : ジェネリック クラスを使用する](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [プロシージャのトラブルシューティング](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
 - [部分メソッド](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

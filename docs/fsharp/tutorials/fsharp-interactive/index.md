@@ -27,7 +27,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\<sku>\Common7\IDE\CommonExte
 
 `sku` は `Community`、`Professional`、または `Enterprise` のいずれかです。
 
-使用できるコマンド ライン オプションについては、「[F# Interactive Options](../../language-reference/fsharp-interactive-options.md)」 (F# Interactive オプション) を参照してください。
+使用できるコマンド ライン オプションについては、「[F# インタラクティブ オプション](../../language-reference/fsharp-interactive-options.md)」 (F# Interactive オプション) を参照してください。
 
 Visual Studio で F# Interactive を実行するには、ツール バーの **[F# Interactive]** というボタンをクリックするか、**Ctrl + Alt + F** キーを使用します。 この操作により、対話形式のウィンドウが開きます。このウィンドウは、F# Interactive セッションを実行するツール ウィンドウです 対話形式のウィンドウで実行するコードを選択し、**Alt + Enter** キーの組み合わせを押す方法もあります。 F# インタラクティブが **[F# Interactive]** というツール ウィンドウで開始されます。 このショートカット キーを使用するときは、エディター ウィンドウにフォーカスがあることを確認します。
 
@@ -97,5 +97,5 @@ test
 
 |Title|説明|
 |-----|-----------|
-|[F# Interactive オプション](../../language-reference/fsharp-interactive-options.md)|F#対話型の fsi.exe のコマンドライン構文とオプションについて説明します。|
+|[F# インタラクティブ オプション](../../language-reference/fsharp-interactive-options.md)|F#対話型の fsi.exe のコマンドライン構文とオプションについて説明します。|
 |[F# Interactive ライブラリ リファレンス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|F# Interactive でコードを実行するときに使用できるライブラリ機能について説明します。|

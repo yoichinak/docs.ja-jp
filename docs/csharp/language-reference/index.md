@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: fd5c39bfcb05296a36d94ea64946f8c29ed7e4d6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: df56287d161f7760e136eb80aa1a9171966df794
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925339"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275802"
 ---
 # <a name="c-reference"></a>C# リファレンス
 このセクションでは、C# のキーワード、演算子、特殊文字、プリプロセッサ ディレクティブ、コンパイラ オプション、およびコンパイラのエラーと警告に関する参考資料を紹介します。  
@@ -55,7 +55,7 @@ C# 6.0 より後のバージョンで実装された機能は、言語仕様の�
  C#7.3 は、いくつかの小規模な更新プログラムを含む別個のポイント リリースです。 ジェネリック型パラメーターに対して新しい制約を使用できます。 その他の変更により、`fixed` フィールドの操作が簡単になります。これには、[`stackalloc`](./operators/stackalloc.md) 割り当ての使用も含まれます。 `ref` キーワードを使用して参照されるローカル変数は、新しいストレージを参照するように再割り当てされる場合があります。 コンパイラによって生成されたバッキング フィールドを対象とする自動実装プロパティに属性を配置することができます。 初期化子内で式の変数を使用できます。 タプルは、等値 (または非等値) を確認するために比較することができます。 オーバーロードの解決法に対してもいくつかの改良が行われました。
   
  [C# 8.0 仕様の提案](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
- C# 8.0 は .NET Core 3.0 で使用できます。 null 許容参照型、再帰的なパターン マッチング、既定のインターフェイス メンバー、非同期ストリーム、範囲とインデックス、using および using 宣言に基づくパターン、null 合体演算子割り当て、読み取り専用インスタンス メンバーなどの機能が含まれています。
+ C# 8.0 は .NET Core 3.0 で使用できます。 null 許容参照型、再帰的なパターン マッチング、既定のインターフェイス メソッド、非同期ストリーム、範囲とインデックス、using および using 宣言に基づくパターン、null 合体演算子割り当て、読み取り専用インスタンス メンバーなどの機能が含まれています。
   
 ## <a name="related-sections"></a>関連項目  
 

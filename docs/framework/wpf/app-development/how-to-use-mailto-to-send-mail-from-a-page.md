@@ -6,18 +6,18 @@ helpviewer_keywords:
 - mailto:, sending mail from pages
 - mail [WPF], sending from pages
 ms.assetid: b64b9518-df17-4232-94f2-455a4f77ee48
-ms.openlocfilehash: 68055c17b2bec4cd5c3efe05c48eda0ff973bc88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee7c6a74c89b83e8960e29ad9ff7a8dad483c4f0
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949826"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72578871"
 ---
 # <a name="how-to-use-mailto-to-send-mail-from-a-page"></a>方法: mailto: を使用してページからメールを送信する
-この例は、使用する方法を示します<xref:System.Windows.Documents.Hyperlink>と組み合わせて、 **mailto:**[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]します。  
+この例では、<xref:System.Windows.Documents.Hyperlink> を**mailto:** uniform resource IDENTIFIER (URI) と共に使用する方法を示します。  
   
 ## <a name="example"></a>例  
- 次のコードを使用する方法を示しています、 **mailto:** [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]電子メール アドレスを格納している新しいメール ウィンドウを開くと、電子メール アドレスと件名、および電子メール アドレス、件名、および本文です。  
+ 次のコードは、 **mailto:** uniform resource IDENTIFIER (URI) を使用して、電子メールアドレス、電子メールアドレスと件名、電子メールアドレス、件名、および本文を含む新しいメールウィンドウを開く方法を示しています。  
   
  [!code-xaml[HOWTONavigationMailToSnippet#MailToMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationMailToSnippet/CS/HomePage.xaml#mailtomarkup)]  
   

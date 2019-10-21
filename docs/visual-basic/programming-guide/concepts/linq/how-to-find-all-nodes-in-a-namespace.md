@@ -1,15 +1,15 @@
 ---
-title: '方法: Namespace (Visual Basic) ですべてのノードを検索します。'
+title: '方法: 名前空間内のすべてのノードを検索する (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ccc996aa986c97fdffb3deeea36346da726a588
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855674"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249932"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>方法: Namespace (Visual Basic) ですべてのノードを検索します。
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>方法: 名前空間内のすべてのノードを検索する (Visual Basic)
 各要素または各属性の名前空間をフィルター処理することで、特定の名前空間内にあるすべてのノードを検索できます。  
   
 ## <a name="example"></a>例  
@@ -45,7 +45,7 @@ End Module
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  

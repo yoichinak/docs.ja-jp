@@ -2,12 +2,12 @@
 title: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 description: Kubernetes アプリケーション ライフサイクルを開発しながら、高いスケーラビリティおよび可用性と Azure Dev Spaces の可能性のためにマイクロサービスと複数のコンテナー アプリケーションを調整するオプションについて説明します。
 ms.date: 09/20/2018
-ms.openlocfilehash: aef9dc2206c24d685610616a2a4d7850837b832d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f0efad0134ec95028ecd49ad8d294ae4813940e9
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040085"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834322"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -15,11 +15,11 @@ ms.locfileid: "71040085"
 
 図 4-23 は、複数のマイクロサービス (コンテナー) で構成されるアプリケーションのクラスターへの展開を示しています。
 
-![クラスター内での Docker アプリケーションの構成:サービス インスタンスごとに 1 つのコンテナーを使用します。 Docker コンテナーは "配置の単位" であり、コンテナーは Docker のインスタンスです。 ホストでは多くのコンテナーが処理されます](./media/image23.png)
+![クラスターで構成された Docker アプリケーションを示す図](./media/scalable-available-multi-container-microservice-applications/composed-docker-applications-cluster.png)
 
 **図 4-23**. コンテナーのクラスター
 
-これは論理的な方法のように見えます。 しかし、これらの構成されたアプリケーションの負荷分散、ルーティング、オーケストレーションはどのように処理するのでしょうか。
+サービス インスタンスごとに 1 つのコンテナーを使用します。 Docker コンテナーは "配置の単位" であり、コンテナーは Docker のインスタンスです。 ホストでは多くのコンテナーが処理されます。 これは論理的な方法のように見えます。 しかし、これらの構成されたアプリケーションの負荷分散、ルーティング、オーケストレーションはどのように処理するのでしょうか。
 
 単一の Docker ホストのプレーン Docker エンジンは 1 つのホストでの単一のイメージ インスタンスの管理に関するニーズを満たしますが、より複雑な分散アプリケーションの複数のホストに展開されている複数のコンテナーの管理に関しては対応できません。 ほとんどの場合、管理プラットフォームが必要になります。このプラットフォームは自動的にコンテナーを開始し、イメージごとに複数のインスタンスでコンテナーをスケールアウトし、必要に応じて一時停止またはシャットダウンします。また、ネットワークおよびデータ ストレージなどのリソースへのアクセス方法を制御するのが理想的です。
 
@@ -37,8 +37,8 @@ ms.locfileid: "71040085"
 
 |     |   |
 |-----|---|
-| **Kubernetes** <br> ![Kubernetes ロゴ](./media/image24.png) | [*Kubernetes*](https://kubernetes.io/) はオープンソースの製品であり、クラスターのインフラストラクチャとコンテナーのスケジューリングからオーケストレーションまでのさまざまな機能を提供します。 ホストのクラスター全体のアプリケーション コンテナーの展開、スケーリング、操作を自動化できます。 <br><br> *Kubernetes* ではコンテナー中心のインフラストラクチャが提供され、アプリケーション コンテナーを論理ユニットにグループ化し、管理と検出を容易にします。 <br><br> *Kubernetes* は Linux では完成されていますが、Windows では未完成です。 |
-| **Azure Kubernetes Service (AKS)** <br> ![Azure Kubernetes Service ロゴ](./media/image41.png) | [AKS](https://azure.microsoft.com/services/kubernetes-service/) は、Azure でのマネージド Kubernetes コンテナー オーケストレーション サービスです。これによって、Kubernetes クラスターの管理、デプロイ、操作が簡略化されます。 |
+| **Kubernetes** <br> ![Kubernetes ロゴの画像。](./media/scalable-available-multi-container-microservice-applications/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) はオープンソースの製品であり、クラスターのインフラストラクチャとコンテナーのスケジューリングからオーケストレーションまでのさまざまな機能を提供します。 ホストのクラスター全体のアプリケーション コンテナーの展開、スケーリング、操作を自動化できます。 <br><br> *Kubernetes* ではコンテナー中心のインフラストラクチャが提供され、アプリケーション コンテナーを論理ユニットにグループ化し、管理と検出を容易にします。 <br><br> *Kubernetes* は Linux では完成されていますが、Windows では未完成です。 |
+| **Azure Kubernetes Service (AKS)** <br> ![Azure Kubernetes Service のロゴの画像。](./media/scalable-available-multi-container-microservice-applications/azure-kubernetes-service-logo.png) | [AKS](https://azure.microsoft.com/services/kubernetes-service/) は、Azure でのマネージド Kubernetes コンテナー オーケストレーション サービスです。これによって、Kubernetes クラスターの管理、デプロイ、操作が簡略化されます。 |
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure でのコンテナー ベースのオーケストレーターの使用
 
@@ -52,7 +52,7 @@ ACS には、コンテナー化されたアプリケーションを実行する�
 
 Azure Kubernetes Service によって、一般的な Docker クラスタリング オープンソース ツールとテクノロジの構成が Azure 専用に最適化されます。 コンテナーとアプリケーションの構成の両方に移植性を提供するオープン ソリューションが得られます。 サイズ、ホストの数、オーケストレーター ツールを選択すると、他のことはすべて AKS によって処理されます。
 
-![Kubernetes クラスター構造:DNS、スケジューラ、プロキシなどを処理するマスター ノードが 1 つと、コンテナーをホストするワーカー ノードが複数あります。](media/image36.png)
+![Kubernetes クラスター構造を示す図。](./media/scalable-available-multi-container-microservice-applications/kubernetes-cluster-simplified-structure.png)
 
 **図 4-24** Kubernetes クラスターの簡略化された構造とトポロジ
 
@@ -62,7 +62,7 @@ Azure Kubernetes Service によって、一般的な Docker クラスタリン�
 
 開発環境において、単に [Docker Desktop](https://docs.docker.com/install/) をインストールすることにより 1 台の開発マシン (Windows 10 または macOS) でも Kubernetes を実行できることが [2018 年 7 月に Docker から発表](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)されました。 図 4-25 に示すように、さらなる統合テストを行うために、後でクラウド (AKS) にデプロイすることができます。
 
-![Docker は、Docker Desktop を使用した、Kubernetes クラスターに対する開発マシンのサポートを 2018 年 7 月に発表しました。](media/image37.png) 
+![開発マシン上にあり、AKS にデプロイされる Kubernetes を示す図](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png) 
 
 **図 4-25** 開発マシンとクラウドでの Kubernetes の実行
 
@@ -96,7 +96,7 @@ Azure Dev Spaces では、Visual Studio 2017 または Visual Studio Code を使
 
 図 4-26 に示すように、Azure Dev Spaces の他と最も異なる機能は、クラスター内の残りのグローバル デプロイに統合された運用可能な "スペース" を作成できるということです。
 
-![Azure Dev Spaces では、運用環境のマイクロ サービスと開発コンテナー インスタンスをさまざまな形で透過的に組み合わせることができます。](media/image38.png)
+![Azure Dev Spaces での複数のスペースの使用を示す図](./media/scalable-available-multi-container-microservice-applications/use-multiple-spaces-azure-dev.png)
 
 **図 4-26** Azure Dev Spaces での複数のスペースの使用
 

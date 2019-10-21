@@ -23,7 +23,7 @@ WCF には、次の標準の名前付き権限セットのいずれかで実行�
 
 制限の厳しいアクセス許可が部分的に信頼されたアプリケーションで WCF を使用しようと、実行時にセキュリティ例外が発生する可能性があります。
 
-このようなアクセス許可セットでサポートされる機能の詳細については、「 [Partial Trust Feature Compatibility](partial-trust-feature-compatibility.md)」を参照してください。
+このようなアクセス許可セットでサポートされる機能の詳細については、「 [部分信頼機能の互換性](partial-trust-feature-compatibility.md)」を参照してください。
 
 ## <a name="partial-trust-on-the-server"></a>サーバーでの部分信頼
 
@@ -41,7 +41,7 @@ WCF がサポートしている SOAP メッセージングを使用して、サ�
 
 信頼されていないインターネット サイトからコードをダウンロードして実行する場合、ある程度のセキュリティ対策が必要です。 両方[ClickOnce 配置](/visualstudio/deployment/clickonce-security-and-deployment)部分信頼の WPF の XAML ブラウザー アプリケーション (XBAP) テクノロジの作成を使用して、信頼できないコードに制限されたアクセス許可 (インターネット ゾーン) を付与するとします。
 
-WCF は、いずれかで展開された部分的に信頼されたアプリケーション内からリモート サーバーとの通信に使用できます[ClickOnce 配置](/visualstudio/deployment/clickonce-security-and-deployment)または XBAP します。 インターネット ゾーン アクセス許可のセットが含まれる<xref:System.Net.WebPermission>で説明されている、サポートされている WCF バインドのいずれかを使用して、配信元サーバーとの通信にこれらのアプリケーションの元のホスト用できる[Partial Trust Feature Compatibility](partial-trust-feature-compatibility.md).
+WCF は、いずれかで展開された部分的に信頼されたアプリケーション内からリモート サーバーとの通信に使用できます[ClickOnce 配置](/visualstudio/deployment/clickonce-security-and-deployment)または XBAP します。 インターネット ゾーン アクセス許可のセットが含まれる<xref:System.Net.WebPermission>で説明されている、サポートされている WCF バインドのいずれかを使用して、配信元サーバーとの通信にこれらのアプリケーションの元のホスト用できる[部分信頼機能の互換性](partial-trust-feature-compatibility.md).
 
 ## <a name="see-also"></a>関連項目
 

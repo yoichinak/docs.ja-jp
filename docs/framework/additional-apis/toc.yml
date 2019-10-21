@@ -1,4 +1,4 @@
-- name: 追加のクラス ライブラリと API
+- name: 追加の API
   href: index.md
   items:
     - name: Microsoft.SqlServer.Server
@@ -7,6 +7,12 @@
           items:
             - name: SmiOrderProperty.Item
               href: microsoft.sqlserver.server.smiorderproperty.item.md
+    - name: システム
+      items:
+        - name: Exception クラス
+          items:
+            - name: Exception.PrepForRemoting メソッド
+              href: system.exception.prepforremoting.md
     - name: System.Data.SqlTypes
       items:
         - name: SqlChars クラス
@@ -82,6 +88,30 @@
           href: datamemberfieldeditor-class.md
         - name: DataMemberListEditor クラス
           href: datamemberlisteditor-class.md
+    - name: System.Windows.Xps
+      items:
+        - name: XpsDocumentWriter
+          items:
+            - name: raise__WritingCancelled メソッド
+              href: xpsdocumentwriter-raise-writingcancelled-method-system-windows-xps.md
+            - name: raise__WritingCompleted メソッド
+              href: xpsdocumentwriter-raise-writingcompleted-method-system-windows-xps.md
+            - name: raise__WritingPrintTicketRequired メソッド
+              href: xpsdocumentwriter-raise-writingprintticketrequired-method-system-windows-xps.md
+            - name: raise__WritingProgressChanged
+              href: xpsdocumentwriter-raise-writingprogresschanged-method-system-windows-xps.md
+            - name: _WritingCancelled
+              href: xpsdocumentwriter-writingcancelled-event-system-windows-xps.md
+            - name: _WritingCompleted
+              href: xpsdocumentwriter-writingcompleted-event-system-windows-xps.md
+            - name: _WritingProgressChanged
+              href: xpsdocumentwriter-writingprogresschanged-event-system-windows-xps.md
+    - name: System.Xml
+      items:
+        - name: XmlReader クラス
+          items:
+            - name: XmlReader.CreateSqlReader  メソッド
+              href: system.xml.xmlreader.createsqlreader.md
     - name: adodb 名前空間
       items:
         - name: 接続のインターフェイス

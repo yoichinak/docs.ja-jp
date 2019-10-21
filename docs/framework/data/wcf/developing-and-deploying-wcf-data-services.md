@@ -16,7 +16,7 @@ ms.locfileid: "70854072"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF Data Services の開発とデプロイ
 
-このトピックでは、WCF Data Services の開発と配置について説明します。 WCF Data Services の基本情報については、「[はじめに](getting-started-with-wcf-data-services.md)と[概要](wcf-data-services-overview.md)」を参照してください。
+このトピックでは、WCF Data Services の開発と配置について説明します。 WCF Data Services の基本情報については、[作業の開始](getting-started-with-wcf-data-services.md) と [概要](wcf-data-services-overview.md) に関するページを参照してください。
 
 ## <a name="develop-wcf-data-services"></a>WCF Data Services の開発
 
@@ -28,7 +28,7 @@ WCF Data Services を使用してをサポート[!INCLUDE[ssODataFull](../../../
 
 2. **データ サービスを作成する**
 
-     最も基本的なデータ サービスでは、 <xref:System.Data.Services.DataService%601> クラスを継承するクラスを `T` 型 (エンティティ コンテナーの名前空間修飾名) と一緒に公開します。 詳細については、「 [Defining WCF Data Services](defining-wcf-data-services.md)の開発と配置について説明します。
+     最も基本的なデータ サービスでは、 <xref:System.Data.Services.DataService%601> クラスを継承するクラスを `T` 型 (エンティティ コンテナーの名前空間修飾名) と一緒に公開します。 詳細については、「[WCF Data Services の定義](defining-wcf-data-services.md)」を参照してください。
 
 3. **データ サービスを構成する**
 
@@ -76,11 +76,11 @@ Visual Studio 2015 を使用して WCF Data Service を ASP.NET アプリケー�
 
 データ サービスを開発する際は、次の点を考慮してください。
 
-- ユーザーを認証する場合や、特定のユーザーのアクセスを制限する場合は、データ サービスのセキュリティ要件を決定します。 詳細については、「 [Securing WCF Data Services](securing-wcf-data-services.md)」を参照してください。
+- ユーザーを認証する場合や、特定のユーザーのアクセスを制限する場合は、データ サービスのセキュリティ要件を決定します。 詳細については、「 [WCF Data Services のセキュリティ保護](securing-wcf-data-services.md)」を参照してください。
 
 - データ サービスをデバッグするときは、HTTP 検査プログラムを使用すると、要求メッセージおよび応答メッセージの内容を検査できるので非常に便利です。 生のパケットを表示できるネットワーク パケット アナライザーを使用すると、データ サービスの HTTP 要求および HTTP 応答を検査できます。
 
-- データサービスをデバッグするときに、通常の操作ではなく、データサービスからエラーに関する詳細情報を取得する必要がある場合があります。 データ サービスから詳細なエラー情報を取得するには、 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> の <xref:System.Data.Services.DataServiceConfiguration> プロパティを `true` に設定し、データ サービス クラスの <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 属性の <xref:System.ServiceModel.Description.ServiceDebugBehavior> プロパティを `true`に設定します。 詳細については、デバッグ後の[WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868)を参照してください。 また、WCF でトレースを有効にして、HTTP メッセージングレイヤーで発生した例外を表示することもできます。 詳細については、「 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)」を参照してください。
+- データサービスをデバッグするときに、通常の操作ではなく、データサービスからエラーに関する詳細情報を取得する必要がある場合があります。 データ サービスから詳細なエラー情報を取得するには、 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> の <xref:System.Data.Services.DataServiceConfiguration> プロパティを `true` に設定し、データ サービス クラスの <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 属性の <xref:System.ServiceModel.Description.ServiceDebugBehavior> プロパティを `true`に設定します。 詳細については、デバッグ後の[WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868)を参照してください。 また、WCF でトレースを有効にして、HTTP メッセージングレイヤーで発生した例外を表示することもできます。 詳細については、「 [トレースの構成](../../wcf/diagnostics/tracing/configuring-tracing.md)」を参照してください。
 
 - 通常、データサービスは ASP.NET アプリケーションプロジェクトとして開発されますが、データサービスは、Visual Studio で ASP.NET Web サイトプロジェクトとして作成することもできます。 2種類のプロジェクトの違いについては、「 [Visual Studio での Web アプリケーションプロジェクトと Web サイトプロジェクト](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))」を参照してください。
 

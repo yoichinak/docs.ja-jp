@@ -42,7 +42,7 @@ AllowOptimize=0
 
 各オプションの値として、0 または 1 を設定できます。記述しなかったオプションの値は、既定値の 0 に設定されます。 `GenerateTrackingInfo` を 1 に設定し、`AllowOptimize` を 0 に設定すると、デバッグが最も簡単になります。
 
-.NET Framework バージョン2.0 以降では、JIT コンパイラはの`GenerateTrackingInfo` `AllowOptimize`値に関係なく常に追跡情報を生成しますが、値は引き続き効果を持ちます。 [Ngen.exe (Native Image Generator)](../tools/ngen-exe-native-image-generator.md) を使用して最適化を行わずにネイティブ イメージをプリコンパイルする場合は、`AllowOptimize=0` が記述された .ini ファイルが、Ngen.exe 実行時にターゲット フォルダー内に存在している必要があります。 最適化せずにアセンブリをプリコンパイルした場合は、ngen.exe を再実行してから、最適化されたコードをプリコンパイルする前に、Ngen.exe **/uninstall**オプションを使用してプリコンパイル済みコードを削除する必要があります。 .Ini ファイルがフォルダー内に存在しない場合、既定では、Ngen.exe はコードを最適化されたものとしてプリコンパイルします。
+.NET Framework バージョン2.0 以降では、JIT コンパイラはの`GenerateTrackingInfo` `AllowOptimize`値に関係なく常に追跡情報を生成しますが、値は引き続き効果を持ちます。 [Ngen.exe (ネイティブ イメージ ジェネレーター)](../tools/ngen-exe-native-image-generator.md) を使用して最適化を行わずにネイティブ イメージをプリコンパイルする場合は、`AllowOptimize=0` が記述された .ini ファイルが、Ngen.exe 実行時にターゲット フォルダー内に存在している必要があります。 最適化せずにアセンブリをプリコンパイルした場合は、ngen.exe を再実行してから、最適化されたコードをプリコンパイルする前に、Ngen.exe **/uninstall**オプションを使用してプリコンパイル済みコードを削除する必要があります。 .Ini ファイルがフォルダー内に存在しない場合、既定では、Ngen.exe はコードを最適化されたものとしてプリコンパイルします。
 
 アセンブリの設定は、<xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> によって制御されます。 **DebuggableAttribute**には、JIT コンパイラが追跡情報を最適化するか、生成するかを制御する2つのフィールドが含まれています。 .NET Framework バージョン2.0 以降では、JIT コンパイラは常に追跡情報を生成します。
 

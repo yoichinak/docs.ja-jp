@@ -20,7 +20,7 @@ ms.locfileid: "69963731"
  詳細については、「[アプリケーションの情報をログに記録](../../../visual-basic/developing-apps/programming/log-info/index.md)する」を参照してください。  
   
 > [!NOTE]
-> また、.NET Framework 内のクラスを使用すると、ご使用のアプリケーションの情報をログに記録できます。 詳細については、「 [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md)」を参照してください。  
+> また、.NET Framework 内のクラスを使用すると、ご使用のアプリケーションの情報をログに記録できます。 詳細については、「 [アプリケーションのトレースとインストルメント化](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md)」を参照してください。  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:** <xref:Microsoft.VisualBasic.Logging>  

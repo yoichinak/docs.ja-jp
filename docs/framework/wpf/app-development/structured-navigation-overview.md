@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 8760c847d9e73fdff9f10f0dfa55a6c674021667
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 76330c1228b1f55a5dbaf58a1acd231a391d550c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364178"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72580513"
 ---
 # <a name="structured-navigation-overview"></a>構造化ナビゲーションの概要
 
-、、また[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] は<xref:System.Windows.Navigation.NavigationWindow>でホストできるコンテンツは、パックによって識別され、ハイパーリンクによって移動できるページで構成されます。 <xref:System.Windows.Controls.Frame> [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] ページの構造、およびハイパーリンクで定義される移動方法を、ナビゲーション トポロジと呼びます。 このトポロジはさまざまな種類のアプリケーションに対応しますが、特にドキュメント間を移動するアプリケーションに適しています。 このようなアプリケーションでは、互いのページの情報を必要とせずに、ユーザーはページ間を移動できます。
+@No__t_0、<xref:System.Windows.Controls.Frame>、または <xref:System.Windows.Navigation.NavigationWindow> によってホストされるコンテンツは、パック uri (uniform resource identifier) によって識別され、ハイパーリンクによって移動できるページで構成されます。 ページの構造、およびハイパーリンクで定義される移動方法を、ナビゲーション トポロジと呼びます。 このトポロジはさまざまな種類のアプリケーションに対応しますが、特にドキュメント間を移動するアプリケーションに適しています。 このようなアプリケーションでは、互いのページの情報を必要とせずに、ユーザーはページ間を移動できます。
 
 ただし、アプリケーションによっては、移動のタイミングを理解している必要があるページを使用します。 たとえば、組織内のすべての従業員を一覧するページ ([従業員の一覧] ページ) を使用する人事アプリケーションがあるものとします。 このページでは、ハイパーリンクをクリックすることによって、新しい従業員を追加することもできます。 クリックすると、[従業員の追加] ページに移動して新しい従業員の詳細情報を収集します。次に、それを [従業員の一覧] ページに返して、新しい従業員を作成し、一覧を更新します。 このスタイルのナビゲーションは、構造化プログラミングと呼ばれる、処理を実行して値を返すメソッドの呼び出しに似ています。 そのため、このスタイルのナビゲーションを、*構造化ナビゲーション*と呼びます。
 
-クラス<xref:System.Windows.Controls.Page>は、構造化ナビゲーションのサポートを実装していません。 代わりに、クラス<xref:System.Windows.Navigation.PageFunction%601>はから<xref:System.Windows.Controls.Page>派生し、構造化ナビゲーションに必要な基本構成体を使用して拡張します。 このトピックでは、を使用して<xref:System.Windows.Navigation.PageFunction%601>構造化ナビゲーションを確立する方法について説明します。
+@No__t_0 クラスは、構造化ナビゲーションのサポートを実装していません。 代わりに、<xref:System.Windows.Navigation.PageFunction%601> クラスは <xref:System.Windows.Controls.Page> から派生し、構造化ナビゲーションに必要な基本構成体を使用して拡張します。 このトピックでは、<xref:System.Windows.Navigation.PageFunction%601> を使用して構造化ナビゲーションを確立する方法について説明します。
 
 <a name="Structured_Navigation"></a>
 
@@ -42,17 +42,17 @@ ms.locfileid: "68364178"
 
 ![スクリーンショットは、呼び出し元ページと呼び出し先ページの間のフローを示しています。](./media/structured-navigation-overview/flow-between-calling-page-called-page.png)
 
-これらの動作を実装するには<xref:System.Windows.Navigation.PageFunction%601> 、を呼び出されたページとしてを使用します。
+これらの動作を実装するには、呼び出されたページとして <xref:System.Windows.Navigation.PageFunction%601> を使用します。
 
 <a name="Structured_Navigation_with_PageFunction"></a>
 
 ## <a name="structured-navigation-with-pagefunction"></a>PageFunction を使用した構造化ナビゲーション
 
-このトピックでは、単一<xref:System.Windows.Navigation.PageFunction%601>のを含む構造化ナビゲーションの基本的なメカニズムを実装する方法について説明します。 このサンプルでは、 <xref:System.Windows.Controls.Page>はを<xref:System.Windows.Navigation.PageFunction%601>呼び出してユーザー <xref:System.String>から値を取得し、それを返します。
+このトピックでは、1つの <xref:System.Windows.Navigation.PageFunction%601> を含む構造化ナビゲーションの基本的なメカニズムを実装する方法について説明します。 このサンプルでは、<xref:System.Windows.Controls.Page> は <xref:System.Windows.Navigation.PageFunction%601> を呼び出してユーザーから <xref:System.String> 値を取得し、それを返します。
 
 ### <a name="creating-a-calling-page"></a>呼び出し元ページを作成する
 
-を<xref:System.Windows.Navigation.PageFunction%601>呼び出すページに<xref:System.Windows.Controls.Page>は、また<xref:System.Windows.Navigation.PageFunction%601>はのいずれかを指定できます。 この例では、次の<xref:System.Windows.Controls.Page>コードに示すように、です。
+@No__t_0 を呼び出すページは、<xref:System.Windows.Controls.Page> または <xref:System.Windows.Navigation.PageFunction%601> のいずれかになります。 この例では、次のコードに示すように、これは <xref:System.Windows.Controls.Page> です。
 
 [!code-xaml[StructuredNavigationSample#CallingPageDefaultMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#callingpagedefaultmarkup1)]
 [!code-xaml[StructuredNavigationSample#CallingPageDefaultMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#callingpagedefaultmarkup2)]
@@ -66,7 +66,7 @@ ms.locfileid: "68364178"
 
 ### <a name="creating-a-page-function-to-call"></a>呼び出すページ関数を作成する
 
-呼び出し元ページは、呼び出されたページを使用してユーザーからデータを収集<xref:System.Windows.Navigation.PageFunction%601>して返すことができるため、は、呼び出されたページが返す値の型を指定する型引数を持つジェネリッククラスとして実装されます。 次のコードは、を使用して、呼び出されたページ<xref:System.Windows.Navigation.PageFunction%601>の初期実装を<xref:System.String>示しています。これはを返します。
+呼び出し元ページは、呼び出されたページを使用してユーザーからデータを収集して返すことができるため、<xref:System.Windows.Navigation.PageFunction%601> は、呼び出されたページが返す値の型を指定する型引数を持つジェネリッククラスとして実装されます。 次のコードは、<xref:System.String> を返す <xref:System.Windows.Navigation.PageFunction%601> を使用した、呼び出されたページの初期実装を示しています。
 
 [!code-xaml[StructuredNavigationSample#CalledPageFunctionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml#calledpagefunctionmarkup)]
 
@@ -75,9 +75,9 @@ ms.locfileid: "68364178"
 [!code-csharp[StructuredNavigationSample#CalledPageFunctionCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#calledpagefunctioncodebehind2)]
 [!code-vb[StructuredNavigationSample#CalledPageFunctionCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#calledpagefunctioncodebehind2)]
 
-の<xref:System.Windows.Navigation.PageFunction%601>宣言は、 <xref:System.Windows.Controls.Page>型引数を追加したの宣言に似ています。 コード例に示されているように、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] マークアップ (`x:TypeArguments` 属性を使用) と分離コード (標準のジェネリック型引数構文を使用) の両方で型引数が指定されています。
+@No__t_0 の宣言は、型引数を追加した <xref:System.Windows.Controls.Page> の宣言に似ています。 コード例に示されているように、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] マークアップ (`x:TypeArguments` 属性を使用) と分離コード (標準のジェネリック型引数構文を使用) の両方で型引数が指定されています。
 
-.NET Framework クラスのみを型引数として使用する必要はありません。 を<xref:System.Windows.Navigation.PageFunction%601>呼び出すことにより、カスタム型として抽象化されたドメイン固有のデータを収集できます。 次のコードは、 <xref:System.Windows.Navigation.PageFunction%601>の型引数としてカスタム型を使用する方法を示しています。
+.NET Framework クラスのみを型引数として使用する必要はありません。 @No__t_0 を呼び出すと、カスタム型として抽象化されたドメイン固有のデータを収集できます。 次のコードは、<xref:System.Windows.Navigation.PageFunction%601> の型引数としてカスタム型を使用する方法を示しています。
 
 [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
 [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]
@@ -92,13 +92,13 @@ ms.locfileid: "68364178"
 [!code-csharp[CustomTypePageFunctionSnippets#CustomTypePageFunctionCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomTypePageFunction.xaml.cs#customtypepagefunctioncodebehind2)]
 [!code-vb[CustomTypePageFunctionSnippets#CustomTypePageFunctionCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomTypePageFunction.xaml.vb#customtypepagefunctioncodebehind2)]
 
-の型引数<xref:System.Windows.Navigation.PageFunction%601>は、次のセクションで説明されている呼び出し元ページと呼び出し先ページの間の通信の基礎を提供します。
+@No__t_0 の型引数は、次のセクションで説明されている呼び出し元ページと呼び出し先ページの間の通信の基礎を提供します。
 
-ご覧のように、の<xref:System.Windows.Navigation.PageFunction%601>宣言で識別される型は、 <xref:System.Windows.Navigation.PageFunction%601>から呼び出し元のページにデータを返す際に重要な役割を果たします。
+ご覧のように、<xref:System.Windows.Navigation.PageFunction%601> の宣言で識別される型は、<xref:System.Windows.Navigation.PageFunction%601> から呼び出し元のページにデータを返す際に重要な役割を果たします。
 
 ### <a name="calling-a-pagefunction-and-passing-parameters"></a>PageFunction を呼び出してパラメーターを渡す
 
-ページを呼び出すには、呼び出し元ページが呼び出されたページをインスタンス化し、 <xref:System.Windows.Navigation.NavigationService.Navigate%2A>メソッドを使用してそのページに移動する必要があります。 これにより、呼び出し元ページは、呼び出されるページで収集されるデータの既定値など、呼び出されるページに初期データを渡すことができます。
+ページを呼び出すには、呼び出し元ページが呼び出されたページをインスタンス化し、<xref:System.Windows.Navigation.NavigationService.Navigate%2A> メソッドを使用してそのページに移動する必要があります。 これにより、呼び出し元ページは、呼び出されるページで収集されるデータの既定値など、呼び出されるページに初期データを渡すことができます。
 
 次のコードは、呼び出し元ページからパラメーターを受け取る、パラメーターなしのコンストラクターを持つ呼び出されたページを示しています。
 
@@ -111,7 +111,7 @@ ms.locfileid: "68364178"
 [!code-csharp[StructuredNavigationSample#AcceptsInitialDataCODEBEHIND4](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#acceptsinitialdatacodebehind4)]
 [!code-vb[StructuredNavigationSample#AcceptsInitialDataCODEBEHIND4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#acceptsinitialdatacodebehind4)]
 
-次のコードは、の<xref:System.Windows.Documents.Hyperlink.Click>イベントを処理する呼び出し元ページを示しています。このページでは、 <xref:System.Windows.Documents.Hyperlink>呼び出されたページをインスタンス化し、それに最初の文字列値を渡します。
+次のコードは、<xref:System.Windows.Documents.Hyperlink> の <xref:System.Windows.Documents.Hyperlink.Click> イベントを処理する呼び出し元ページを示しています。これは、呼び出されたページをインスタンス化し、それに初期文字列値を渡すためのものです。
 
 [!code-xaml[StructuredNavigationSample#PassingDataMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#passingdatamarkup2)]
 [!code-csharp[StructuredNavigationSample#PassingDataCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#passingdatacodebehind1)]
@@ -125,17 +125,17 @@ ms.locfileid: "68364178"
 
 - 呼び出し元ページの場合:
 
-  1. パラメーターなしの<xref:System.Windows.Navigation.PageFunction%601>コンストラクターを使用して、呼び出されたをインスタンス化します。
+  1. パラメーターなしのコンストラクターを使用して、呼び出された <xref:System.Windows.Navigation.PageFunction%601> をインスタンス化します。
 
-  2. に<xref:System.Windows.Application.Properties%2A>パラメーターを格納します。
+  2. パラメーターを <xref:System.Windows.Application.Properties%2A> に格納します。
 
-  3. 呼び出さ<xref:System.Windows.Navigation.PageFunction%601>れたに移動します。
+  3. 呼び出された <xref:System.Windows.Navigation.PageFunction%601> に移動します。
 
-- 呼び出され<xref:System.Windows.Navigation.PageFunction%601>たから:
+- 呼び出された <xref:System.Windows.Navigation.PageFunction%601> から:
 
-  - に<xref:System.Windows.Application.Properties%2A>格納されているパラメーターを取得して使用します。
+  - @No__t_0 に格納されているパラメーターを取得して使用します。
 
-しかし、この後の説明にもあるように、コードを使用して呼び出されたページをインスタンス化して、そのページに移動して、呼び出されたページから返されるデータを収集する必要が依然としてあります。 この<xref:System.Windows.Navigation.PageFunction%601>ため、を有効にする必要があります。それ以外の場合は、次<xref:System.Windows.Navigation.PageFunction%601>にに[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]移動する<xref:System.Windows.Navigation.PageFunction%601>ときに、パラメーターなしのコンストラクターを使用してをインスタンス化します。
+しかし、この後の説明にもあるように、コードを使用して呼び出されたページをインスタンス化して、そのページに移動して、呼び出されたページから返されるデータを収集する必要が依然としてあります。 このため、<xref:System.Windows.Navigation.PageFunction%601> を維持する必要があります。そうしないと、次に <xref:System.Windows.Navigation.PageFunction%601> に移動したときに、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] パラメーターなしのコンストラクターを使用して <xref:System.Windows.Navigation.PageFunction%601> がインスタンス化されます。
 
 ただし、呼び出されたページが戻る前に、呼び出し元ページが取得できるデータを返す必要があります。
 
@@ -147,16 +147,16 @@ ms.locfileid: "68364178"
 
 2. ユーザーが提供したデータ。
 
-情報を返すに<xref:System.Windows.Navigation.PageFunction%601>は、 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>メソッドを実装します。 その呼び出し方法を次のコードに示します。
+情報を返すには、<xref:System.Windows.Navigation.PageFunction%601> によって <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> メソッドが実装されます。 その呼び出し方法を次のコードに示します。
 
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind1)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind1)]
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind2)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind2)]
 
-この例では、ユーザーが [キャンセル] をクリックすると、呼び出し元ページに値 `null` が返されます。 ユーザーが [OK] をクリックすると、ユーザーによって指定された文字列値が返されます。 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>は、呼び出し元のページにデータを返すために呼び出すメソッドです。`protected virtual` データは、が<xref:System.Windows.Navigation.ReturnEventArgs%601> <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A>返す値の型を指定する型引数を持つジェネリック型のインスタンスにパッケージ化する必要があります。 このようにして、特定の<xref:System.Windows.Navigation.PageFunction%601>型引数を持つを宣言するときに、型<xref:System.Windows.Navigation.PageFunction%601>引数によって指定された型のインスタンスがによって返されることを示します。 この例では、型引数と、戻り値の型<xref:System.String>はです。
+この例では、ユーザーが [キャンセル] をクリックすると、呼び出し元ページに値 `null` が返されます。 ユーザーが [OK] をクリックすると、ユーザーによって指定された文字列値が返されます。 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> は、呼び出し元のページにデータを返すために呼び出す `protected virtual` メソッドです。 データは、ジェネリック <xref:System.Windows.Navigation.ReturnEventArgs%601> 型のインスタンスにパッケージ化する必要があります。型引数には、<xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> が返す値の型を指定します。 このようにして、特定の型引数を持つ <xref:System.Windows.Navigation.PageFunction%601> を宣言すると、型引数によって指定された型のインスタンスが <xref:System.Windows.Navigation.PageFunction%601> によって返されることが示されます。 この例では、型引数と、戻り値の型は <xref:System.String> です。
 
-が<xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>呼び出された場合、呼び出し元ページは、 <xref:System.Windows.Navigation.PageFunction%601>の戻り値を受け取るための何らかの方法を必要とします。 このため、は<xref:System.Windows.Navigation.PageFunction%601> 、処理<xref:System.Windows.Navigation.PageFunction%601.Return>するページを呼び出すためのイベントを実装します。 が<xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>呼び出されると<xref:System.Windows.Navigation.PageFunction%601.Return> 、が発生します。そのため、呼び出し<xref:System.Windows.Navigation.PageFunction%601.Return>元ページは、通知を受信するためにに登録できます。
+@No__t_0 が呼び出されると、呼び出し元ページは、<xref:System.Windows.Navigation.PageFunction%601> の戻り値を受け取るための何らかの方法を必要とします。 このため、<xref:System.Windows.Navigation.PageFunction%601> は、を処理するために呼び出しページの <xref:System.Windows.Navigation.PageFunction%601.Return> イベントを実装します。 @No__t_0 が呼び出されると、<xref:System.Windows.Navigation.PageFunction%601.Return> が発生するので、呼び出し元ページは <xref:System.Windows.Navigation.PageFunction%601.Return> に登録して通知を受け取ることができます。
 
 [!code-csharp[StructuredNavigationSample#ProcessResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#processresultcodebehind1)]
 [!code-vb[StructuredNavigationSample#ProcessResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#processresultcodebehind1)]
@@ -167,13 +167,13 @@ ms.locfileid: "68364178"
 
 呼び出されたページが戻り、呼び出されたページをユーザーが取り消さなかった場合、呼び出し元ページでは、ユーザーから提供されたデータだけでなく、呼び出されたページから返されたデータも処理します。 このような方法で行われるデータ取得は、通常は分離されたアクティビティです。呼び出されたページが戻ると、呼び出し元ページでは、さらにデータをキャプチャするために、新しい呼び出し元ページを作成し、そこに移動する必要があります。
 
-ただし、呼び出されたページが履歴から削除されない限り、ユーザーは呼び出し元ページの前のインスタンスに戻ることができます。 が履歴に保持されるかどうかは、 <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A>プロパティによって決まります。 <xref:System.Windows.Navigation.PageFunction%601> 既定では、がに<xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> `true`設定されているため<xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A>にが呼び出されると、ページ関数が自動的に削除されます。 が呼び出された後<xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>にナビゲーション履歴にページ関数を保持するには、をに`false`設定<xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A>します。
+ただし、呼び出されたページが履歴から削除されない限り、ユーザーは呼び出し元ページの前のインスタンスに戻ることができます。 @No__t_0 が履歴に保持されるかどうかは、<xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> プロパティによって決定されます。 既定では、<xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> が `true` に設定されているため <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> が呼び出されると、ページ関数が自動的に削除されます。 @No__t_0 が呼び出された後にナビゲーション履歴にページ関数を保持するには、<xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> を `false` に設定します。
 
 <a name="Other_Types_of_Structured_Navigation"></a>
 
 ## <a name="other-types-of-structured-navigation"></a>他の種類の構造化ナビゲーション
 
-このトピックでは、を使用して<xref:System.Windows.Navigation.PageFunction%601> 、構造化ナビゲーションの呼び出し/戻りをサポートする最も基本的な使用方法について説明します。 これに基づいて、より複雑な構造化ナビゲーションを作成できます。
+このトピックでは、構造化ナビゲーションの呼び出し/戻りをサポートするための <xref:System.Windows.Navigation.PageFunction%601> の最も基本的な使用方法について説明します。 これに基づいて、より複雑な構造化ナビゲーションを作成できます。
 
 たとえば、呼び出し元ページがユーザーから十分なデータを収集したり、タスクを実行するには、複数のページが必要な場合があります。 複数のページを使用する場合、これを "ウィザード" と呼びます。
 

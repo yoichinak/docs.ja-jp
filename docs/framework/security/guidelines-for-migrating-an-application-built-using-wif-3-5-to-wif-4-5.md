@@ -32,7 +32,7 @@ WIF 3.5 では、WIF クラスはすべて `Microsoft.IdentityModel` アセン�
 
 WIF 3.5 クラスはすべて `Microsoft.IdentityModel` 名前空間 (`Microsoft.IdentityModel`、`Microsoft.IdentityModel.Tokens`、`Microsoft.IdentityModel.Web` など) の 1 つに含まれていました。 WIF 4.5 では、WIF クラスは [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) 名前空間、<xref:System.Security.Claims?displayProperty=nameWithType> 名前空間、および <xref:System.ServiceModel.Security?displayProperty=nameWithType> 名前空間に分散されています。 この再編成に加えて、一部の WIF 3.5 クラスは WIF 4.5 では削除されました。
 
-次の表に、より重要な WIF 4.5 の名前空間とそれに含まれるクラスの種類を示します。 WIF 3.5 および WIF 4.5 間で名前空間を対応付ける方法および WIF 4.5 で削除された名前空間とクラスの詳細については、「[Namespace Mapping between WIF 3.5 and WIF 4.5](namespace-mapping-between-wif-3-5-and-wif-4-5.md)」(WIF 3.5 と WIF 4.5 間での名前空間マッピング) を参照してください。
+次の表に、より重要な WIF 4.5 の名前空間とそれに含まれるクラスの種類を示します。 WIF 3.5 および WIF 4.5 間で名前空間を対応付ける方法および WIF 4.5 で削除された名前空間とクラスの詳細については、「[WIF 3.5 と WIF 4.5 間での名前空間マッピング](namespace-mapping-between-wif-3-5-and-wif-4-5.md)」を参照してください。
 
 |WIF 4.5 名前空間|説明|
 |-----------------------|-----------------|
@@ -96,7 +96,7 @@ WIF は現在、.NET Framework に統合されています。 ほとんどの .N
 
 - WIF 3.5 では `<service>` 要素の直下のサービスレベルで指定できた複数の要素が、[\<securityTokenHandlerConfiguration>](../configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) 要素での指定に制限されました (WIF 4.5 では、下位互換性を維持するため、これらは [\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 要素で指定できます)。
 
-WIF 4.5 の構成要素の詳細な一覧については、「[WIF Configuration Schema](../configure-apps/file-schema/windows-identity-foundation/index.md)」(WIF 構成スキーマ) を参照してください。
+WIF 4.5 の構成要素の詳細な一覧については、[WIF 構成スキーマ](../configure-apps/file-schema/windows-identity-foundation/index.md)に関するページを参照してください。
 
 ### <a name="visual-studio-tooling-changes"></a>Visual Studio ツールの変更
 

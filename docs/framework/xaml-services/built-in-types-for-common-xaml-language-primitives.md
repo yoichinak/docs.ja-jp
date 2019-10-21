@@ -125,7 +125,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xarray"></a>x:Array  
  CLR バッキングの場合は、 `x:Array` プリミティブは <xref:System.Array>に対応しています。  
   
- マークアップ拡張構文を使用して配列を XAML 2006 で定義することもできますが、XAML 2009 構文は言語によって定義されたプリミティブであり、マークアップ拡張機能にアクセスする必要がありません。 XAML 2006 のサポートの詳細については、「 [x:Array Markup Extension](x-array-markup-extension.md)」を参照してください。  
+ マークアップ拡張構文を使用して配列を XAML 2006 で定義することもできますが、XAML 2009 構文は言語によって定義されたプリミティブであり、マークアップ拡張機能にアクセスする必要がありません。 XAML 2006 のサポートの詳細については、「 [x:Array のマークアップ拡張機能](x-array-markup-extension.md)」を参照してください。  
   
  Xaml 言語仕様の定義については、「 [ \[5.2.18\] ](https://go.microsoft.com/fwlink/?LinkId=114525)」を参照してください。  
   

@@ -16,39 +16,39 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 7f8a19e2e4395e43aa99b6ff63536fbbbc26cb2a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19a75f056436b858a22588d7ac5f37df5dd326f2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646961"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583111"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong データ型 (Visual Basic)
 
-0 から 18,446,744,073,709,551,615 まで 64 ビット (8 バイト) の符号なし整数 (1.84 倍以上の 10 ^19)。  
-  
+0 ~ 18446744073709551615 (1.84 倍以上 10 ^ 19) の値の範囲内で、符号なし64ビット (8 バイト) の整数を保持します。
+
 ## <a name="remarks"></a>Remarks
 
-使用して、`ULong`データ型に対して大きすぎますバイナリ データを格納する`UInteger`、または使用可能な最大符号なし整数値。  
-  
+@No__t_0 データ型を使用して、`UInteger` に対して大きすぎるバイナリデータや、可能性のある最大の符号なし整数値を格納します。
+
 `ULong` の既定値は 0 です。
 
-## <a name="literal-assignments"></a>リテラルの割り当て
+## <a name="literal-assignments"></a>リテラルの代入
 
-宣言し、初期化を`ULong`10 進リテラル、16 進リテラル、8 進数のリテラルを割り当てることや (Visual Basic 2017 以降) バイナリ リテラルでは、変数。 整数リテラルが `ULong` の範囲外にある場合 (つまり、<xref:System.UInt64.MinValue?displayProperty=nameWithType> より小さいか、<xref:System.UInt64.MaxValue?displayProperty=nameWithType> より大きい場合)、コンパイル エラーが発生します。
+@No__t_0 変数は、10進リテラル、16進リテラル、8進数リテラル、または (Visual Basic 2017 で始まる) バイナリリテラルを割り当てることによって、宣言および初期化できます。 整数リテラルが `ULong` の範囲外にある場合 (つまり、<xref:System.UInt64.MinValue?displayProperty=nameWithType> より小さいか、<xref:System.UInt64.MaxValue?displayProperty=nameWithType> より大きい場合)、コンパイル エラーが発生します。
 
 次の例では、整数 7,934,076,125 を 10 進リテラル、16 進リテラル、バイナリ リテラルで表したものが、`ULong` 値に割り当てられています。
-  
+
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ULong)]
 
-> [!NOTE] 
-> プレフィックスを使用する`&h`または`&H`を 16 進リテラル、プレフィックスを示すために`&b`または`&B`、バイナリ リテラル、およびプレフィックスを示すために`&o`または`&O`を 8 進数のリテラルを示すためにします。 10 進リテラルには、プレフィックスはありません。
+> [!NOTE]
+> プレフィックス `&h` または `&H` を使用して、16進リテラル、プレフィックス `&b` または `&B` がバイナリリテラルを示すようにし、プレフィックス `&o` または `&O` を使用して8進数リテラルを表します。 10 進リテラルには、プレフィックスはありません。
 
-Visual Basic 2017 から始めて、使用することできますも、アンダー スコア文字`_`、読みやすさを強化するために、桁区切り記号として次の例として示します。
+Visual Basic 2017 以降では、次の例に示すように、アンダースコア文字 (`_`) を桁区切り記号として使用して、読みやすくすることもできます。
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例:
+Visual Basic 15.5 以降では、アンダースコア文字 (`_`) をプレフィックスと16進数、バイナリ、または8進数の間の先頭の区切り記号として使用することもできます。 (例:
 
 ```vb
 Dim number As ULong = &H_F9AC_0326_1489_D68C
@@ -56,33 +56,33 @@ Dim number As ULong = &H_F9AC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-数値リテラルを含めることも、`UL`または`ul`[文字入力](../../programming-guide/language-features/data-types/type-characters.md)を示すために、`ULong`データ型は、次の例を示します。
+数値リテラルには、次の例に示すように、`ULong` データ型を示す `UL` または `ul`[型の文字](../../programming-guide/language-features/data-types/type-characters.md)を含めることもできます。
 
 ```vb
 Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 ```
 
 ## <a name="programming-tips"></a>プログラミングのヒント
-  
-- **負の数。** `ULong`符号なしの型は、負の数を表すことはできません。 単項マイナスを使用する場合 (`-`) 型に評価される式で演算子`ULong`、Visual Basic の式を変換する`Decimal`最初。  
-  
-- **CLS 準拠です。** `ULong`データ型がの一部、[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。  
-  
-- **相互運用の考慮事項。** .NET Framework、例のオートメーションまたは COM オブジェクト用に作成されていないコンポーネントとやり取りする場合などの型を注意してください`ulong`他の環境で別のデータ幅 (32 ビット) を持つことができます。 このようなコンポーネントに 32 ビットの引数を渡す場合の宣言として`UInteger`の代わりに`ULong`管理対象の Visual Basic コードです。  
-  
-     さらに、オートメーションは Windows 95、Windows 98、Windows ME、および Windows 2000 で 64 ビット整数をサポートしません。 Visual Basic を渡すことはできません`ULong`これらのプラットフォームで、オートメーション コンポーネントへの引数。  
-  
-- **拡大します。** `ULong`拡大変換後のデータ型`Decimal`、 `Single`、および`Double`します。 つまり、変換できる`ULong`遭遇することがなくこれらの型のいずれにも、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
-  
-- **型宣言文字。** リテラルの型文字を付加`UL`リテラルに強制的に、`ULong`データ型。 `ULong` 識別子の型文字がありません。
-  
-- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.UInt64?displayProperty=nameWithType> 構造体です。  
-  
+
+- **負の数値。** @No__t_0 は符号なしの型であるため、負の数を表すことはできません。 @No__t_1 型に評価される式に対して単項マイナス記号 (`-`) 演算子を使用すると、Visual Basic 式が最初に `Decimal` に変換されます。
+
+- **CLS 準拠。** @No__t_0 のデータ型は[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(cls) の一部ではないため、cls 準拠のコードはそれを使用するコンポーネントを使用できません。
+
+- **相互運用に関する考慮事項。** .NET Framework 用に作成されていないコンポーネント (オートメーションや COM オブジェクトなど) とやり取りしている場合は、`ulong` などの型が他の環境で異なるデータ幅 (32 ビット) を持つ可能性があることに注意してください。 このようなコンポーネントに32ビットの引数を渡す場合は、マネージ Visual Basic コードで `ULong` の代わりに `UInteger` として宣言します。
+
+  さらに、オートメーションでは、Windows 95、Windows 98、Windows ME、または Windows 2000 で64ビットの整数はサポートされません。 これらのプラットフォームのオートメーションコンポーネントに Visual Basic `ULong` 引数を渡すことはできません。
+
+- **広げ.** @No__t_0 のデータ型は、`Decimal`、`Single`、および `Double` に拡大変換されます。 つまり、<xref:System.OverflowException?displayProperty=nameWithType> エラーが発生することなく、`ULong` をこれらの型のいずれかに変換できます。
+
+- **文字を入力します。** リテラルに `UL` リテラル型文字を追加すると、`ULong` データ型に強制されます。 `ULong` に識別子の型文字がありません。
+
+- **フレームワークの種類。** .NET Framework において対応する型は、<xref:System.UInt64?displayProperty=nameWithType> 構造体です。
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.UInt64>
 - [データの種類](../../../visual-basic/language-reference/data-types/index.md)
 - [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [方法 : 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
 - [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

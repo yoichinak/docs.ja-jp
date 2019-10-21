@@ -120,7 +120,7 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 ## <a name="sql-server-decimal-type"></a>SQL Server の 10 進数型  
  既定では、 `DataSet`は .NET Framework データ型を使用してデータを格納します。 ほとんどのアプリケーションで、これらのデータ型を使用してデータ ソース情報を簡単に表示できます。 しかし、データ ソースのデータ型が SQL Server の 10 進数データ型または数値データ型の場合は、この表現によって問題が生じる場合があります。 .NET Framework `decimal`データ型では最大28桁の有効桁数が許容され`decimal`ますが、SQL Server データ型では38の有効桁数が許容されます。 `SqlDataAdapter` が動作している間に、 `Fill` が、SQL Server の `decimal` フィールドの有効桁数が 28 文字を超えていると判断した場合、現在の行は `DataTable`に追加されません。 その場合は `FillError` イベントが発生するため、開発者は有効桁数の消失が発生していないかどうかを確認し、適切に対応できます。 イベントの`FillError`詳細については、「 [DataAdapter イベントの処理](handling-dataadapter-events.md)」を参照してください。 SQL Server の `decimal` 値を取得するために、 <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを使用し、 <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> メソッドを呼び出すこともできます。  
   
- ADO.NET 2.0 では、の<xref:System.Data.SqlTypes>の拡張`DataSet`サポートが導入されました。 詳細については、「 [SqlTypes and the DataSet](./sql/sqltypes-and-the-dataset.md)」を参照してください。  
+ ADO.NET 2.0 では、の<xref:System.Data.SqlTypes>の拡張`DataSet`サポートが導入されました。 詳細については、「 [SqlTypes と DataSet](./sql/sqltypes-and-the-dataset.md)」を参照してください。  
   
 ## <a name="ole-db-chapters"></a>OLE DB のチャプター  
  階層構造の行セット、つまりチャプター (OLE DB では `DBTYPE_HCHAPTER` 型、ADO では `adChapter` 型) を使用して `DataSet` の内容を格納できます。 <xref:System.Data.OleDb.OleDbDataAdapter> が `Fill` が動作している間にチャプター列を検出すると、そのチャプター列のための `DataTable` を作成し、チャプターから取得した列と行をこのテーブルに格納します。 チャプター列用に作成されたテーブルには、親テーブルの名前とチャプター列の名前の両方を使用した "*ParentTableNameChapteredColumnName*" 形式の名前が割り当てられます。 `DataSet` にチャプター列の名前と一致するテーブルが既に存在する場合は、現在のテーブルにチャプター データが格納されます。 既存のテーブルにチャプター内の列と一致する列が存在しない場合は、新しい列が追加されます。  

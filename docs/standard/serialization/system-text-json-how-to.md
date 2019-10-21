@@ -1,5 +1,5 @@
 ---
-title: JSON のシリアル化方法-.NET
+title: .Net を使用してC# JSON をシリアル化および逆シリアル化する方法
 author: tdykstra
 ms.author: tdykstra
 ms.date: 09/16/2019
@@ -8,34 +8,34 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 8ccd7afe4abb928e7723aa740507774012fc85d1
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 22c2fd5fc5eaf7a5dc9b71a7335b0b844fa92b51
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083104"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291607"
 ---
-# <a name="how-to-serialize-json-in-net"></a>.NET で JSON をシリアル化する方法
+# <a name="how-to-serialize-and-deserialize-json-in-net"></a>.NET で JSON をシリアル化および逆シリアル化する方法
 
 > [!IMPORTANT]
 > JSON シリアル化のドキュメントは構築中です。 この記事では、すべてのシナリオについては説明しません。 詳細については、GitHub の dotnet/corefx リポジトリにある system.string に[関する問題](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)を調べてください。特に、「 [json 機能-doc](https://github.com/dotnet/corefx/labels/json-functionality-doc)」というラベルが付いています。
 
-この記事では、 <xref:System.Text.Json>名前空間を使用して JavaScript Object Notation (JSON) との間でシリアル化および逆シリアル化を行う方法について説明します。 指示とサンプルコードは、ライブラリを直接使用します。 [ASP.NET Core](/aspnet/core/)などのフレームワークでは使用されません。
+この記事では、<xref:System.Text.Json> 名前空間を使用して、JavaScript Object Notation (JSON) との間でシリアル化および逆シリアル化を行う方法について説明します。 指示とサンプルコードは、ライブラリを直接使用します。 [ASP.NET Core](/aspnet/core/)などのフレームワークでは使用されません。
 
 ## <a name="namespaces"></a>名前空間
 
-名前<xref:System.Text.Json>空間には、すべてのエントリポイントと主要な型が含まれています。 名前<xref:System.Text.Json.Serialization>空間には、シリアル化と逆シリアル化に固有の高度なシナリオとカスタマイズのための属性と api が含まれています。 このため、この記事に示されているコード例では、次`using`のいずれかまたは両方のディレクティブが必要です。
+@No__t-0 名前空間には、すべてのエントリポイントと主な型が含まれています。 @No__t-0 名前空間には、シリアル化と逆シリアル化に固有の高度なシナリオとカスタマイズのための属性と Api が含まれています。 したがって、この記事に示されているコード例では、次のいずれかまたは両方の `using` ディレクティブが必要です。
 
 ```csharp
 using System.Text.Json;
 using System.Text.Json.Serialization;
 ```
 
-名前空間の<xref:System.Runtime.Serialization>属性は、現在で`System.Text.Json`はサポートされていません。
+@No__t-0 名前空間の属性は、`System.Text.Json` では現在サポートされていません。
 
 ## <a name="how-to-write-net-objects-to-json-serialize"></a>.NET オブジェクトを JSON に書き込む方法 (シリアル化)
 
-JSON を文字列に書き込むには、 <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType>メソッドを呼び出します。 次の例では、ジェネリック型パラメーターと共にオーバーロードを使用しています。
+JSON を文字列に書き込むには、<xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> メソッドを呼び出します。 次の例では、ジェネリック型パラメーターと共にオーバーロードを使用しています。
 
 ```csharp
 WeatherForecast weatherForecast;
@@ -119,19 +119,19 @@ public class Temperature
 }
 ```
 
-の<xref:System.Text.Json.JsonSerializer.Serialize%2A>オーバーロードを使用すると、 <xref:System.IO.Stream>にシリアル化できます。 `Stream`オーバーロードの非同期バージョンを使用できます。
+@No__t-0 のオーバーロードを使用すると、<xref:System.IO.Stream> にシリアル化できます。 @No__t-0 のオーバーロードの非同期バージョンを使用できます。
 
 ### <a name="serialize-to-utf-8"></a>UTF-8 にシリアル化する
 
-Utf-8 にシリアル化するには、 <xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType>メソッドを呼び出します。
+UTF-8 にシリアル化するには、<xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType> メソッドを呼び出します。
 
 ```csharp
 byte[] utf8Json = JsonSerializer.SerializeToUtf8Bytes<WeatherForecast>(weatherForecast);
 ```
 
-別の方法<xref:System.Text.Json.JsonSerializer.Serialize%2A>として、を<xref:System.Text.Json.Utf8JsonWriter>受け取るオーバーロードを使用することもできます。
+別の方法として、<xref:System.Text.Json.Utf8JsonWriter> を受け取る @no__t 0 のオーバーロードを使用することもできます。
 
-UTF-8 へのシリアル化は、文字列ベースのメソッドを使用するよりも約 5-10% 高速です。 違いは、バイト (UTF-8) を文字列 (UTF-16) に変換する必要がないためです。
+UTF-8 へのシリアル化は、文字列ベースのメソッドを使用するよりも約5-10% 高速です。 違いは、バイト (UTF-8) を文字列 (UTF-16) に変換する必要がないためです。
 
 ## <a name="serialization-behavior"></a>シリアル化の動作
 
@@ -147,7 +147,7 @@ UTF-8 へのシリアル化は、文字列ベースのメソッドを使用す�
 * 数値型、文字列、ブール値など、JavaScript プリミティブにマップされる .NET プリミティブ。
 * ユーザー定義の[Plain OLD CLR オブジェクト (POCOs)](https://stackoverflow.com/questions/250001/poco-definition)。
 * 1次元配列とジャグ配列 (`ArrayName[][]`)。
-* `Dictionary<string,TValue>`ここ`TValue`で`object`、 `JsonElement`は、、または POCO です。
+* `Dictionary<string,TValue>` `TValue` は `object`、`JsonElement`、または POCO です。
 * 次の名前空間のコレクション。 詳細については、GitHub の dotnet/corefx リポジトリの[コレクションサポートに関する問題](https://github.com/dotnet/corefx/issues/36643)を参照してください。
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
@@ -155,7 +155,7 @@ UTF-8 へのシリアル化は、文字列ベースのメソッドを使用す�
 
 ## <a name="how-to-read-json-into-net-objects-deserialize"></a>JSON を .NET オブジェクトに読み込む方法 (逆シリアル化)
 
-文字列から逆シリアル化するには<xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> 、次の例に示すように、メソッドを呼び出します。
+文字列から逆シリアル化するには、次の例に示すように、<xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> メソッドを呼び出します。
 
 ```csharp
 string json = ... ;
@@ -165,11 +165,11 @@ var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json);
 
 例については、「 [serialize](#how-to-write-net-objects-to-json-serialize) 」セクションを参照してください。 JSON オブジェクトと .NET オブジェクトは同じですが、方向が逆になっています。
 
-の<xref:System.Text.Json.JsonSerializer.Deserialize*>オーバーロードを使用すると、 `Stream`から逆シリアル化できます。  `Stream`オーバーロードの非同期バージョンを使用できます。
+@No__t-0 のオーバーロードを使用すると、`Stream` から逆シリアル化できます。  @No__t-0 のオーバーロードの非同期バージョンを使用できます。
 
 ### <a name="deserialize-from-utf-8"></a>UTF-8 からの逆シリアル化
 
-Utf-8 から逆シリアル化するに<xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> `Utf8JsonReader`は、次の例に示すよう`ReadOnlySpan<byte>`に、またはを受け取るオーバーロードを呼び出します。
+UTF-8 から逆シリアル化するには、次の例に示すように、`Utf8JsonReader` または `ReadOnlySpan<byte>` を受け取る @no__t 0 のオーバーロードを呼び出します。
 
 ```csharp
 byte[] utf8Json;
@@ -198,7 +198,7 @@ weatherForecast = JsonSerializer.Deserialize<WeatherForecastMin>(ref utf8Reader)
 
 ## <a name="serialize-to-formatted-json"></a>書式設定された JSON にシリアル化する
 
-JSON 出力を整形するには、を<xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType>に`true`設定します。
+JSON 出力を整形するには、<xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> を `true` に設定します。
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -229,7 +229,7 @@ class WeatherForecast
 
 ## <a name="allow-comments-and-trailing-commas"></a>コメントと末尾のコンマを許可する
 
-JSON では、既定でコメントと末尾のコンマは使用できません。 JSON でコメントを許可するには、 <xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType>プロパティを`JsonCommentHandling.Skip`に設定します。 また、末尾のコンマを許可する<xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType>には`true`、プロパティをに設定します。 次の例では、両方を許可する方法を示します。
+JSON では、既定でコメントと末尾のコンマは使用できません。 JSON でコメントを許可するには、<xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType> プロパティを `JsonCommentHandling.Skip` に設定します。 また、末尾のコンマを許可するには、<xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType> プロパティを `true` に設定します。 次の例では、両方を許可する方法を示します。
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -237,7 +237,7 @@ var options = new JsonSerializerOptions
     ReadCommentHandling = JsonCommentHandling.Skip,
     AllowTrailingCommas = true
 };
-var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json);
+var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json, options);
 ```
 
 次に、コメントと末尾のコンマを含む JSON の例を示します。
@@ -294,7 +294,7 @@ class WeatherForecast
 
 ### <a name="use-camel-case-for-all-json-property-names"></a>すべての JSON プロパティ名にキャメルケースを使用する
 
-すべての JSON プロパティ名にキャメルケースを使用する<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType>に`JsonNamingPolicy.CamelCase`は、次の例に示すようにをに設定します。
+すべての JSON プロパティ名にキャメルケースを使用するには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> を `JsonNamingPolicy.CamelCase` に設定します。
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -329,11 +329,11 @@ class WeatherForecast
 Camel 形式のプロパティの名前付けポリシー:
 
 * シリアル化および逆シリアル化に適用されます。
-* は、属性`[JsonPropertyName]`によってオーバーライドされます。
+* は `[JsonPropertyName]` 属性によってオーバーライドされます。
 
 ### <a name="use-a-custom-json-property-naming-policy"></a>カスタム JSON プロパティの名前付けポリシーを使用する
 
-カスタム JSON プロパティの名前付けポリシーを使用するには、次の<xref:System.Text.Json.JsonNamingPolicy>例に示す<xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A>ように、から派生するクラスを作成し、メソッドをオーバーライドします。
+カスタム JSON プロパティの名前付けポリシーを使用するには、次の例に示すように、<xref:System.Text.Json.JsonNamingPolicy> から派生し、<xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A> メソッドをオーバーライドするクラスを作成します。
 
 ```csharp
 class UpperCaseNamingPolicy : JsonNamingPolicy
@@ -345,7 +345,7 @@ class UpperCaseNamingPolicy : JsonNamingPolicy
 }
 ```
 
-次に、 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType>プロパティを名前付けポリシークラスのインスタンスに設定します。
+次に、<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> プロパティを名前付けポリシークラスのインスタンスに設定します。
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -380,11 +380,11 @@ class WeatherForecast
 JSON プロパティの名前付けポリシー:
 
 * シリアル化および逆シリアル化に適用されます。
-* は、属性`[JsonPropertyName]`によってオーバーライドされます。
+* は `[JsonPropertyName]` 属性によってオーバーライドされます。
 
 ### <a name="camel-case-dictionary-keys"></a>Camel ケースディクショナリキー
 
-シリアル化するオブジェクトのプロパティが型`Dictionary<string,TValue>` `string`である場合、キーを camel 形式に変換できます。 これを行うには<xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> 、 `JsonNamingPolicy.CamelCase`次の例に示すように、をに設定します。
+シリアル化するオブジェクトのプロパティの型が `Dictionary<string,TValue>` の場合、`string` キーを camel 形式に変換できます。 これを行うには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> を `JsonNamingPolicy.CamelCase` に設定します。
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -400,7 +400,7 @@ json = JsonSerializer.Serialize(weatherForecast, options);
 |---------|---------|
 | date    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureC| 25 |
-| Summary| 熱い|
+| まとめ| 熱い|
 | TemperatureRanges | コールド、20<br>ホット、40|
 
 ```json
@@ -452,7 +452,7 @@ class WeatherForecast
 
 ### <a name="exclude-all-read-only-properties"></a>すべての読み取り専用プロパティを除外する
 
-すべての読み取り専用プロパティを除外するには<xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> 、 `true`次の例に示すように、をに設定します。
+すべての読み取り専用プロパティを除外するには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> を `true` に設定します。
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -486,7 +486,7 @@ class WeatherForecast
 
 ### <a name="exclude-all-null-value-properties"></a>すべての null 値プロパティを除外する
 
-すべての null 値プロパティを除外するに<xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues>は、 `true`次の例に示すように、プロパティをに設定します。
+すべての null 値プロパティを除外するには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> プロパティを `true` に設定します。
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -502,7 +502,7 @@ json = JsonSerializer.Serialize(weatherForecast, options);
 |---------|---------|
 | date    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureC| 25 |
-| Summary| null|
+| まとめ| null|
 
 ```json
 {
@@ -515,7 +515,7 @@ json = JsonSerializer.Serialize(weatherForecast, options);
 
 ## <a name="case-insensitive-property-matching"></a>大文字と小文字を区別しないプロパティ照合
 
-既定では、逆シリアル化では、JSON とターゲットオブジェクトのプロパティの間で大文字と小文字が区別されるプロパティ名の一致が検索されます。 この動作を変更するには<xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> 、 `true`をに設定します。
+既定では、逆シリアル化では、JSON とターゲットオブジェクトのプロパティの間で大文字と小文字が区別されるプロパティ名の一致が検索されます。 この動作を変更するには、<xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> を `true` に設定します。
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -546,7 +546,7 @@ class WeatherForecast
 
 ## <a name="include-properties-of-derived-classes"></a>派生クラスのプロパティを含める
 
-コンパイル時にシリアル化する型を指定する場合、ポリモーフィックシリアル化はサポートされません。 たとえば、 `WeatherForecast`クラスと派生クラス`WeatherForecastWithWind`があるとします。
+コンパイル時にシリアル化する型を指定する場合、ポリモーフィックシリアル化はサポートされません。 たとえば、@no__t 0 クラスと派生クラス `WeatherForecastWithWind` があるとします。
 
 ```csharp
 class WeatherForecast
@@ -561,7 +561,7 @@ class WeatherForecastWithWind : WeatherForecast
 }
 ```
 
-また、コンパイル時に`Serialize`メソッドに渡される型または推論される型が次のようになる`WeatherForecast`とします。
+また、コンパイル時にに渡される型またはによって推論される型が、`WeatherForecast` であるとします。 @no__t は、
 
 ```csharp
 string json = JsonSerializer.Serialize<WeatherForecast>(weatherForecast);
@@ -573,7 +573,7 @@ WeatherForecast weatherForecast;
 json = JsonSerializer.Serialize(weatherForecast);
 ```
 
-このシナリオ`WindSpeed`では、 `weatherForecast`オブジェクトが実際`WeatherForecastWithWind`にオブジェクトであっても、プロパティはシリアル化されません。 基本クラスのプロパティのみがシリアル化されます。
+このシナリオでは、@no__t 1 のオブジェクトが実際に @no__t 2 のオブジェクトであっても、`WindSpeed` プロパティはシリアル化されません。 基本クラスのプロパティのみがシリアル化されます。
 
 ```json
 {
@@ -587,19 +587,19 @@ json = JsonSerializer.Serialize(weatherForecast);
 
 派生型のプロパティをシリアル化するには、次のいずれかの方法を使用します。
 
-* 実行時に型<xref:System.Text.Json.JsonSerializer.Serialize%2A>を指定できる、のオーバーロードを呼び出します。
+* 実行時に型を指定できるように、<xref:System.Text.Json.JsonSerializer.Serialize%2A> のオーバーロードを呼び出します。
 
   ```csharp
   json = JsonSerializer.Serialize(weatherForecast, weatherForecast.GetType());
   ```
 
-* として`object`シリアル化するオブジェクトを宣言します。
+* @No__t-0 としてシリアル化するオブジェクトを宣言します。
 
   ```csharp
   json = JsonSerializer.Serialize<object>(weatherForecast);
   ```
 
-前の例のシナリオでは、両方の`WindSpeed`方法でプロパティが JSON 出力に含まれるようになっています。
+前の例のシナリオでは、両方の方法で `WindSpeed` プロパティが JSON 出力に含まれるようになっています。
 
 ```json
 {
@@ -642,7 +642,7 @@ class WeatherForecast
 }
 ```
 
-示されている型に表示されている JSON `DatesAvailable`を`SummaryWords`逆シリアル化すると、プロパティとプロパティは実行できなくなり、失われます。 これらのプロパティなどの追加データをキャプチャするには、 [jsonextensiondata](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute)属性を型また`Dictionary<string,object>`は`Dictionary<string,JsonElement>`型のプロパティに適用します。
+示されている型に示されている JSON を逆シリアル化すると、`DatesAvailable` および `SummaryWords` の各プロパティには何も表示されなくなり、失われます。 これらのプロパティなどの追加データをキャプチャするには、 [Jsonextensiondata](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute)属性を型 `Dictionary<string,object>` または `Dictionary<string,JsonElement>` のプロパティに適用します。
 
 ```csharp
 class WeatherForecast
@@ -655,13 +655,13 @@ class WeatherForecast
 }
 ```
 
-前に示した JSON をこのサンプル型に逆シリアル化すると、追加データは`ExtensionData`プロパティのキーと値のペアになります。
+前に示した JSON をこのサンプル型に逆シリアル化すると、余分なデータが `ExtensionData` プロパティのキーと値のペアになります。
 
 |プロパティ |値  |メモ  |
 |---------|---------|---------|
 | date    | 8/1/2019 12:00:00 AM-07:00||
-| TemperatureC| 0 | 大文字と小文字`temperatureC`が区別されます (JSON の場合)。したがって、プロパティは設定されません。 |
-| Summary | 熱い ||
+| TemperatureC| 0 | 大文字と小文字が区別されない (JSON の `temperatureC`) ため、プロパティが設定されていません。 |
+| まとめ | 熱い ||
 | ExtensionData | temperatureC:25 |大文字と小文字が一致しなかったため、この JSON プロパティは余分で、ディクショナリ内のキーと値のペアになります。|
 || 使用可能な日:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |JSON からの追加のプロパティはキーと値のペアになり、値オブジェクトとして配列が使用されます。|
 | |概要語:<br>Cool<br>強風<br>Humid |JSON からの追加のプロパティはキーと値のペアになり、値オブジェクトとして配列が使用されます。|
@@ -686,11 +686,11 @@ class WeatherForecast
 }
 ```
 
-JSON にプロパティ`ExtensionData`名が表示されないことに注意してください。 この動作により、JSON は、逆シリアル化されない余分なデータを失うことなく、ラウンドトリップを行うことができます。
+@No__t-0 のプロパティ名が JSON に表示されないことに注意してください。 この動作により、JSON は、逆シリアル化されない余分なデータを失うことなく、ラウンドトリップを行うことができます。
 
 ## <a name="use-utf8jsonwriter-directly"></a>Utf8JsonWriter を直接使用する
 
-<xref:System.Text.Json.Utf8JsonWriter>クラスを直接使用する方法を次の例に示します。
+次の例は、<xref:System.Text.Json.Utf8JsonWriter> クラスを直接使用する方法を示しています。
 
 ```csharp
 var options = new JsonWriterOptions
@@ -715,7 +715,7 @@ using (var stream = new MemoryStream())
 
 ## <a name="use-utf8jsonreader-directly"></a>Utf8JsonReader を直接使用する
 
-<xref:System.Text.Json.Utf8JsonReader>クラスを直接使用する方法を次の例に示します。 このコードは、 `jsonUtf8`変数が、utf-8 としてエンコードされた有効な JSON を含むバイト配列であることを前提としています。
+次の例は、<xref:System.Text.Json.Utf8JsonReader> クラスを直接使用する方法を示しています。 このコードでは、@no__t 0 の変数が、UTF-8 としてエンコードされた有効な JSON を含むバイト配列であることを前提としています。
 
 ```csharp
 var options = new JsonReaderOptions

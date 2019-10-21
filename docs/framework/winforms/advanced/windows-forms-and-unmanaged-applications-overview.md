@@ -23,7 +23,7 @@ Windows フォーム アプリケーションとコントロールは、いく�
   
  これらの制約は、コンポーネント オブジェクト モデルの COM 相互運用機能を通じて、Windows フォーム コントロールの使用にも適用されます。 COM 呼び出し可能ラッパー (CCW) を通じた Windows フォーム コントロールの使用は、Internet Explorer でのみサポートされます。 COM 相互運用の詳細については、  
   
- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)。  
+ [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)。  
   
  Windows フォーム コントロールのサポートをホストしている、使用できる ActiveX を次の表に示します。  
   
@@ -63,7 +63,7 @@ Windows フォーム アプリケーションとコントロールは、いく�
 - [COM 相互運用性サンプル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
 - [Aximp.exe (Windows フォーム ActiveX コントロール インポーター)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [COM への .NET Framework コンポーネントの公開](../../interop/exposing-dotnet-components-to-com.md)
-- [COM 用のアセンブリのパッケージ化](../../interop/packaging-an-assembly-for-com.md)
+- [COM 向けアセンブリのパッケージ化](../../interop/packaging-an-assembly-for-com.md)
 - [COM へのアセンブリの登録](../../interop/registering-assemblies-with-com.md)
 - [方法: ShowDialog メソッドを使用して Windows フォームを表示して COM 相互運用機能をサポートします。](com-interop-by-displaying-a-windows-form-shadow.md)
 - [方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートします。](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

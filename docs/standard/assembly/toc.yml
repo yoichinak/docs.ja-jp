@@ -17,6 +17,8 @@
       href: file-format.md
     - name: '方法: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする'
       href: unloadability.md
+    - name: 参照アセンブリ
+      href: reference-assemblies.md
     - name: アセンブリ読み込みを解決する
       href: resolve-loads.md
     - name: アセンブリを使用したプログラム

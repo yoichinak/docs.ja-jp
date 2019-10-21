@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 519c55dbe8b55191b682067da558167f86199b7e
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 18c8d566c3b79c131a3d031e5bdf3b37996d9115
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116229"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031856"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 の新機能
 
@@ -75,7 +75,7 @@ ms.locfileid: "71116229"
 dotnet tool install -g dotnetsay
 ```
 
-インストールしたツールは、ツール名を指定してコマンドラインから実行できます。 詳細については、「[.NET Core Global Tools overview](../tools/global-tools.md)」(.NET Core グローバル ツールの概要) を参照してください。
+インストールしたツールは、ツール名を指定してコマンドラインから実行できます。 詳細については、[.NET core グローバル ツールの概要](../tools/global-tools.md) を参照してください。
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>`dotnet tool` コマンドによるツールの管理
 
@@ -213,7 +213,7 @@ JIT コンパイラで実行される重要なタスクの 1 つはコード実�
 
 - 静的メソッドである <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> は <xref:System.Span%601> にランダムな値を入力します。
 
-- <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> が Linux と maxOS でサポートされるようになりました。
+- <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> が Linux と macOS でサポートされるようになりました。
 
 - Elliptic-Curve Diffie-Hellman (ECDH) を <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType> クラス ファミリーで使用できるようになりました。 セキュリティ、外部からのアクセスは .NET Framework の場合と同じです。
 

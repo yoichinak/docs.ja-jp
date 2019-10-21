@@ -4,12 +4,12 @@ description: Azure functions では、複数の言語 (C#、JavaScript、Java) �
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4febcc01eebf3efce3fc1eb42e19c2ec6c0baa52
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577605"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522870"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
@@ -23,11 +23,11 @@ Azure Functions framework には2つのバージョンがあります。 レガ�
 
 ## <a name="functions-v1-vs-v2"></a>Functions v1 と v2
 
-Azure Functions ランタイムには、次の2つのバージョンがあります。1.x および2.x。 バージョン1.x は一般公開 (GA) されています。 ポータルまたは Windows マシンからの .NET 開発をサポートし、.NET Framework を使用します。 1.x は、Python C#、PHP、TypeScript F#、Batch、Bash、および PowerShell の実験的なサポートを使用して、、JavaScript、およびをサポートしています。
+Azure Functions ランタイムには、1 .x と2.x の2つのバージョンがあります。 バージョン1.x は一般公開 (GA) されています。 ポータルまたは Windows マシンからの .NET 開発をサポートし、.NET Framework を使用します。 1.x は、Python C#、PHP、TypeScript F#、Batch、Bash、および PowerShell の実験的なサポートを使用して、、JavaScript、およびをサポートしています。
 
 [バージョン2.x も一般公開さ](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/)れています。 .NET Core を活用し、Windows、macOS、Linux コンピューターでのクロスプラットフォーム開発をサポートします。 2.x では Java のファーストクラスのサポートが追加されますが、実験的な言語はまだ直接サポートされていません。 バージョン2.x では、新しいバインド拡張モデルを使用して、プラットフォームに対するサードパーティ製の拡張機能、バインドの独立したバージョン管理、より合理化された実行環境を実現しています。
 
-> **1. x に[バインドリダイレクトをサポート](https://github.com/Azure/azure-functions-host/issues/992)する既知の問題があります。** この問題は、.NET 開発に固有のものです。 ランタイムに含まれているライブラリとは異なるバージョンのライブラリに依存しているプロジェクトが影響を受けます。 Functions チームは、問題の具体的な進行状況に取り組んでいます。 チームは、一般公開される前に、2. x のバインドリダイレクトに対応します。 修正案と回避策が記載された公式のチームステートメントについては、こちらを参照してください。[Azure Functions でのアセンブリの解決](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions)。
+> **1. x に[バインドリダイレクトをサポート](https://github.com/Azure/azure-functions-host/issues/992)する既知の問題があります。** この問題は、.NET 開発に固有のものです。 ランタイムに含まれているライブラリとは異なるバージョンのライブラリに依存しているプロジェクトが影響を受けます。 Functions チームは、問題の具体的な進行状況に取り組んでいます。 チームは、一般公開される前に、2. x のバインドリダイレクトに対応します。 推奨される修正プログラムと回避策が記載された公式のチームステートメントについては、「 [Azure Functions でのアセンブリの解決」](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions)を参照してください。
 
 詳細については、「 [1. x と](https://docs.microsoft.com/azure/azure-functions/functions-versions)2.X を比較する」を参照してください。
 
@@ -60,9 +60,9 @@ Azure Functions ランタイムには、次の2つのバージョンがありま
 
 関数アプリを作成するには、次の3つの一般的な方法があります。
 
-* ポータルで関数をスクリプト化します。
-* Azure コマンドラインインターフェイス (CLI) を使用して必要なリソースを作成します。
-* お気に入りの IDE を使用してローカルで関数をビルドし、Azure に発行します。
+- ポータルで関数をスクリプト化します。
+- Azure コマンドラインインターフェイス (CLI) を使用して必要なリソースを作成します。
+- お気に入りの IDE を使用してローカルで関数をビルドし、Azure に発行します。
 
 ポータルでスクリプト化された関数を作成する方法の詳細については、「 [Azure portal で最初の関数を作成](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)する」を参照してください。
 
@@ -76,16 +76,16 @@ Visual Studio から関数を作成する方法については、「 [Visual stu
 
 次のような一般的なトリガーがあります。
 
-* Blob Storage: ファイルまたはフォルダーがストレージでアップロードまたは変更されたときに、関数を呼び出します。
-* HTTP: REST API のように関数を呼び出します。
-* Queue: キューに項目が存在する場合に関数を呼び出します。
-* Timer: 関数を定期的に呼び出します。
+- Blob Storage: ファイルまたはフォルダーがストレージでアップロードまたは変更されたときに、関数を呼び出します。
+- HTTP: REST API のように関数を呼び出します。
+- Queue: キューに項目が存在する場合に関数を呼び出します。
+- Timer: 関数を定期的に呼び出します。
 
 バインディングの例を次に示します。
 
-* CosmosDB: データベースに簡単に接続して、ファイルを読み込んだり保存したりできます。
-* Table Storage: 関数アプリからキー/値のストレージを操作します。
-* Queue Storage: キューから項目を簡単に取得したり、新しい項目をキューに配置したりできます。
+- CosmosDB: データベースに簡単に接続して、ファイルを読み込んだり保存したりできます。
+- Table Storage: 関数アプリからキー/値のストレージを操作します。
+- Queue Storage: キューから項目を簡単に取得したり、新しい項目をキューに配置したりできます。
 
 次の関数の例では、トリガーとバインディングを定義して*います。*
 
@@ -111,7 +111,7 @@ Visual Studio から関数を作成する方法については、「 [Visual stu
 }
 ```
 
-この例では、 `images`コンテナー内の blob ストレージに対する変更によって関数がトリガーされます。 ファイルの情報が渡されるため、トリガーはバインドとしても機能します。 という名前`images`のキューに情報を格納するための別のバインディングが存在します。
+この例では、関数は @no__t 0 のコンテナー内の blob ストレージに対する変更によってトリガーされます。 ファイルの情報が渡されるため、トリガーはバインドとしても機能します。 @No__t-0 という名前のキューに情報を格納するための別のバインドが存在します。
 
 関数のC#スクリプトを次に示します。
 
@@ -131,17 +131,17 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 
 プロキシは、アプリケーションのリダイレクト機能を提供します。 プロキシはエンドポイントを公開し、そのエンドポイントを別のリソースにマップします。 プロキシを使用すると、次のことができます。
 
-* 受信要求を別のエンドポイントに再ルーティングします。
-* 渡される前に受信要求を変更します。
-* 応答を変更または提供します。
+- 受信要求を別のエンドポイントに再ルーティングします。
+- 渡される前に受信要求を変更します。
+- 応答を変更または提供します。
 
 プロキシは、次のようなシナリオで使用されます。
 
-* URL の簡略化、短縮、または変更。
-* 一貫した API プレフィックスを複数のバックエンドサービスに提供します。
-* 開発中のエンドポイントへの応答をモックします。
-* 既知のエンドポイントへの静的な応答を提供します。
-* バックエンドの移動または移行中に、API エンドポイントの整合性を維持します。
+- URL の簡略化、短縮、または変更。
+- 一貫した API プレフィックスを複数のバックエンドサービスに提供します。
+- 開発中のエンドポイントへの応答をモックします。
+- 既知のエンドポイントへの静的な応答を提供します。
+- バックエンドの移動または移行中に、API エンドポイントの整合性を維持します。
 
 プロキシは JSON 定義として格納されます。 次に例を示します。
 
@@ -169,13 +169,13 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 }
 ```
 
-プロキシ`Domain Redirect`は、短いルートを取得し、それより長い関数リソースにマップします。 変換は次のようになります。
+@No__t-0 プロキシは、短いルートを取得し、それを長い関数リソースにマップします。 変換は次のようになります。
 
 `https://--shorturl--/123` -> `https://--longurl--.azurewebsites.net/api/UrlRedirect/123`
 
-プロキシ`Root`は、ルート URL (`https://--shorturl--/`) に送信されたすべてのものを取得し、ドキュメントサイトにリダイレクトします。
+@No__t-0 プロキシは、ルート URL (`https://--shorturl--/`) に送信されたすべてのものを取得し、ドキュメントサイトにリダイレクトします。
 
-プロキシの使用例については、Azure [のビデオを参照してください。サーバーレス Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)を使用して、アプリをクラウドに持ち込むことができます。 ローカル SQL Server で実行されている ASP.NET Core アプリケーションは、リアルタイムで Azure クラウドに移行されます。 プロキシは、従来の Web API プロジェクトをリファクターして関数を使用するために使用されます。
+プロキシの使用例については、 [「Azure: サーバーレス Azure Functions によるクラウドへのアプリ](https://channel9.msdn.com/events/Connect/2017/E102)の導入」を参照してください。 ローカル SQL Server で実行されている ASP.NET Core アプリケーションは、リアルタイムで Azure クラウドに移行されます。 プロキシは、従来の Web API プロジェクトをリファクターして関数を使用するために使用されます。
 
 プロキシの詳細については、「 [Azure Functions プロキシの操作](https://docs.microsoft.com/azure/azure-functions/functions-proxies)」を参照してください。
 

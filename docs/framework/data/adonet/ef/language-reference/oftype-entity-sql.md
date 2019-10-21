@@ -2,19 +2,19 @@
 title: OFTYPE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
-ms.openlocfilehash: 36701a5e75e804ea541d242aaff243de0b24cec3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f1dd5ba92c7b1eaf7117c9732a78e04e5d5a317a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249794"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319457"
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE (Entity SQL)
 クエリ式を使用して、指定された型のオブジェクトのコレクションを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 OFTYPE ( expression, [ONLY] test_type )  
 ```  
   
@@ -33,19 +33,19 @@ OFTYPE ( expression, [ONLY] test_type )
   
  `OFTYPE` 式は、次のクエリ式の省略形です。  
   
-```  
+```sql  
 select value treat(t as T) from ts as t where t is of (T)  
 ```  
   
  Manager が Employee のサブタイプである場合、次の式からは、従業員 (employee) のコレクションのうち、マネージャー (manager) のコレクションだけが返されます。  
   
-```  
+```sql  
 OfType(employees, NamespaceName.Manager)  
 ```  
   
  型フィルターを使用してコレクションをアップ キャストすることもできます。  
   
-```  
+```sql
 OfType(executives, NamespaceName.Manager)  
 ```  
   
@@ -62,7 +62,7 @@ OfType(executives, NamespaceName.Manager)
 ## <a name="example"></a>例  
  次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリでは、OFTYPE 演算子を使用して、Course オブジェクトのコレクションから OnsiteCourse オブジェクトのコレクションを取得して返します。 このクエリは、 [School モデル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))に基づいています。  
   
- [!code-csharp[DP EntityServices Concepts 2#OFTYPE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#oftype)]  
+ [!code-sql[DP EntityServices Concepts#OFTYPE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#oftype)]  
   
 ## <a name="see-also"></a>関連項目
 

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a81f4a53954c559ab12e27bcf039b7b1a1804cc
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1b7cbadbd1494d5e4d1488dd12296f4f90890127
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700795"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395495"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL メソッド
 
@@ -37,16 +37,16 @@ HRESULT IsIL (
 ```
 
 ## <a name="parameters"></a>パラメーター
- `pbIL`  
- [out] `true` @no__t が MSIL でコンパイルされたコードを表している場合は0。それ以外の場合は、`false` です。
 
-## <a name="requirements"></a>要件
+`pbIL`  
+[out] `true` @no__t が MSIL でコンパイルされたコードを表している場合は0。それ以外の場合は、`false` です。
 
- **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］
 
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 
- **ライブラリ**CorGuids .lib  
+**ヘッダー:** CorDebug.idl、CorDebug.h
 
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
- 
+**ライブラリ:** CorGuids.lib
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

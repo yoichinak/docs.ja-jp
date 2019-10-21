@@ -2,15 +2,15 @@
 title: コード内での WCF サービスの構成
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: d2ef7b2095bf7f238a25f2db0e5d3cf47e885550
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c6bcf08511470d28e1087108d95e477683b0338b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855647"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320644"
 ---
 # <a name="configuring-wcf-services-in-code"></a>コード内での WCF サービスの構成
-Windows Communication Foundation (WCF) を使用すると、開発者は構成ファイルまたはコードを使用してサービスを構成できます。  構成ファイルは、サービスを配置した後に構成する必要がある場合に便利です。 構成ファイルを使用する場合、IT 専門家は構成ファイルを更新するだけで、再コンパイルの必要はありません。 ただし、構成ファイルの管理は複雑で難しくなる場合があります。 構成ファイルのデバッグはサポートされていません。また、構成要素は名前で参照されるため、構成ファイルの作成時にエラーが発生しやすく、構成ファイルの作成が困難になります。 WCF では、コードでサービスを構成することもできます。 以前のバージョンの WCF (4.0 およびそれ以前) では、自己ホスト型のシナリオでは、コード<xref:System.ServiceModel.ServiceHost>内のサービスの構成は簡単でした。クラスは、ServiceHost を呼び出す前にエンドポイントと動作を構成することを許可していました。 ただし、Web ホストのシナリオでは、<xref:System.ServiceModel.ServiceHost> クラスに直接アクセスできません。 Web ホスト サービスを構成するには、`System.ServiceModel.ServiceHostFactory` を作成して必要な構成を実行する <xref:System.ServiceModel.Activation.ServiceHostFactory> を作成する必要がありました。 .NET 4.5 以降、WCF では、自己ホスト型サービスと web ホステッドサービスの両方をコード内で簡単に構成できます。  
+Windows Communication Foundation (WCF) を使用すると、開発者は構成ファイルまたはコードを使用してサービスを構成できます。  構成ファイルは、サービスを配置した後に構成する必要がある場合に便利です。 構成ファイルを使用する場合、IT 専門家は構成ファイルを更新するだけで、再コンパイルの必要はありません。 ただし、構成ファイルの管理は複雑で難しくなる場合があります。 構成ファイルのデバッグはサポートされていません。また、構成要素は名前で参照されるため、構成ファイルの作成時にエラーが発生しやすく、構成ファイルの作成が困難になります。 WCF では、コードでサービスを構成することもできます。 以前のバージョンの WCF (4.0 以前) では、自己ホスト型のシナリオでサービスを構成するのは簡単でしたが、<xref:System.ServiceModel.ServiceHost> クラスを使用すると、ServiceHost. Open を呼び出す前にエンドポイントと動作を構成できました。 ただし、Web ホストのシナリオでは、<xref:System.ServiceModel.ServiceHost> クラスに直接アクセスできません。 Web ホスト サービスを構成するには、`System.ServiceModel.ServiceHostFactory` を作成して必要な構成を実行する <xref:System.ServiceModel.Activation.ServiceHostFactory> を作成する必要がありました。 .NET 4.5 以降、WCF では、自己ホスト型サービスと web ホステッドサービスの両方をコード内で簡単に構成できます。  
   
 ## <a name="the-configure-method"></a>Configure メソッド  
  サービス実装クラスで、次のシグネチャを持つ `Configure` という名前のパブリックな静的メソッドを定義します。  
@@ -77,7 +77,7 @@ public class Service1 : IService1
 }   
 ```  
   
- <`protocolMappings`> セクションの設定は、アプリケーションエンドポイントがプログラムによって<xref:System.ServiceModel.ServiceConfiguration>に追加されていない場合にのみ使用されます。必要に応じて、を呼び出し<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>て既定のアプリケーション構成ファイルからサービス構成を読み込んでから、設定を変更することもできます。 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> クラスを使って、集中化された構成から構成を読み込むこともできます。 これを実装する方法を次のコードに示します。  
+ < @No__t-0 > セクションの設定は、アプリケーションエンドポイントがプログラムによって <xref:System.ServiceModel.ServiceConfiguration> に追加されていない場合にのみ使用されます。必要に応じて、<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> を呼び出して設定を変更することにより、既定のアプリケーション構成ファイルからサービス構成を読み込むことができます。 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> クラスを使って、集中化された構成から構成を読み込むこともできます。 これを実装する方法を次のコードに示します。  
   
 ```csharp
 public class Service1 : IService1   
@@ -91,18 +91,18 @@ public class Service1 : IService1
 ```  
   
 > [!IMPORTANT]
-> では<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> 、<`service``host`>の<>タグ内の<>設定が無視されることに注意してください。`system.serviceModel` 概念的には`host`、< > は、サービス構成ではなくホスト構成に関するものであり、構成メソッドを実行する前に読み込まれます。  
+> @No__t-0 は < `system.serviceModel` > の < `service` > タグ内の < `host` > 設定を無視することに注意してください。 概念的には、< `host` > は、サービス構成ではなくホスト構成に関するものであり、構成メソッドを実行する前に読み込まれます。  
   
 ## <a name="see-also"></a>関連項目
 
-- [構成ファイルを使用してサービスを構成する方法](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
-- [クライアントの動作の構成](../../../docs/framework/wcf/configuring-client-behaviors.md)
-- [簡略化された構成](../../../docs/framework/wcf/simplified-configuration.md)
-- [構成](../../../docs/framework/wcf/samples/configuration-sample.md)
-- [IIS と WAS における構成ベースのアクティブ化](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)
-- [構成とメタデータのサポート](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
-- [構成](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
-- [方法: 構成でサービスバインディングを指定する](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [方法: 構成にサービスエンドポイントを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [方法: 構成ファイルを使用してサービスのメタデータを公開する](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [方法: 構成でクライアントバインディングを指定する](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [構成ファイルを使用してサービスを構成する方法](configuring-services-using-configuration-files.md)
+- [クライアントの動作の構成](configuring-client-behaviors.md)
+- [簡略化された構成](simplified-configuration.md)
+- [構成](./samples/configuration-sample.md)
+- [IIS と WAS における構成ベースのアクティブ化](./feature-details/configuration-based-activation-in-iis-and-was.md)
+- [構成とメタデータのサポート](./extending/configuration-and-metadata-support.md)
+- [構成](./diagnostics/exceptions-reference/configuration.md)
+- [方法: 構成でサービス バインディングを指定する](how-to-specify-a-service-binding-in-configuration.md)
+- [方法 : 構成にサービス エンドポイントを作成する](./feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [方法 : 構成ファイルを使用してサービスのメタデータを公開する](./feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [方法: 構成でクライアント バインディングを指定する](how-to-specify-a-client-binding-in-configuration.md)

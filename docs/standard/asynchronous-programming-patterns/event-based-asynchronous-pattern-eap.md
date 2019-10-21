@@ -21,7 +21,7 @@ ms.locfileid: "54513491"
 非同期機能をクライアント コードに公開する方法は数多くあります。 イベント ベースの非同期パターンは、クラスが非同期動作を示す 1 つの方法を規定します。  
   
 > [!NOTE]
-> .NET Framework 4 以降では、タスク並列ライブラリによって非同期/並列プログラミングの新しいモデルが提供されます。 詳細については、「[Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md)」および「[Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md)」を参照してください。
+> .NET Framework 4 以降では、タスク並列ライブラリによって非同期/並列プログラミングの新しいモデルが提供されます。 詳細については、「[タスク並列ライブラリ (TPL)](../parallel-programming/task-parallel-library-tpl.md)」および「[タスク ベースの非同期パターン (TAP)](task-based-asynchronous-pattern-tap.md)」を参照してください。
   
 ## <a name="in-this-section"></a>このセクションの内容
 

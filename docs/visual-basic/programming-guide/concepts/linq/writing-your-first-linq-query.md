@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- それぞれの種類のデータ ソースを作成する方法の詳細については、対応する [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーのドキュメントを参照してください。 (これらのプロバイダーの一覧については、「 [LINQ (統合言語クエリ)](../../../../visual-basic/programming-guide/concepts/linq/index.md)」を参照してください)。基本的な規則は単純です。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]データソースは、ジェネリック<xref:System.Collections.Generic.IEnumerable%601>インターフェイスをサポートする任意のオブジェクト、またはそれを継承するインターフェイスです。  
+ それぞれの種類のデータ ソースを作成する方法の詳細については、対応する [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーのドキュメントを参照してください。 (これらのプロバイダーの一覧については、[LINQ (統合言語クエリ)](../../../../visual-basic/programming-guide/concepts/linq/index.md)に関するページを参照してください)基本的な規則は単純です。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]データソースは、ジェネリック<xref:System.Collections.Generic.IEnumerable%601>インターフェイスをサポートする任意のオブジェクト、またはそれを継承するインターフェイスです。  
   
 > [!NOTE]
 > [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]非ジェネリック<xref:System.Collections.IEnumerable>インターフェイスをサポートするなどの型は、データソースとしても<xref:System.Collections.ArrayList>使用できます。 を使用<xref:System.Collections.ArrayList>する例については[、「方法:LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md)を使用して ArrayList に対してクエリを実行します。  

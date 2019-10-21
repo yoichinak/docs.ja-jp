@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Length プロパティ (System.Data.SqlTypes)
+title: SqlStreamChars. Length プロパティ (SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
@@ -13,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 8f318f593237dc555d546858152bb03546c8306b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2171b10d1c0eb7bcad894cc44c5103bdab18b0a5
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634454"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395606"
 ---
-# <a name="sqlstreamcharslength-property"></a>SqlStreamChars.Length プロパティ
+# <a name="sqlstreamcharslength-property"></a>SqlStreamChars. Length プロパティ
 
-派生クラスでオーバーライドされると、現在のストリームの長さを取得します。 このプロパティが含まれるアセンブリには、SQLAccess.dll で友人関係があります。 SQL Server で使用するものでは。 その他のデータベースには、そのデータベースによって提供されるホスティング メカニズムを使用します。
+派生クラスでオーバーライドされた場合、現在のストリームの長さを取得します。 このプロパティを含むアセンブリには、SQLAccess .dll とのフレンド関係があります。 SQL Server での使用を目的としています。 他のデータベースの場合は、そのデータベースによって提供されるホスティングメカニズムを使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,7 +30,7 @@ ms.locfileid: "65634454"
 public abstract long Length { get; }
 ```
 
-## <a name="property-value"></a>プロパティの値
+## <a name="property-value"></a>プロパティ値
 
 <xref:System.Int64>\
 ストリーム長。
@@ -38,14 +38,14 @@ public abstract long Length { get; }
 ## <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> `SqlStreamChars.Length`プロパティはプライベートであり、コード内で直接使用するものではありません。
+> @No__t-0 プロパティはプライベートであり、コードで直接使用するためのものではありません。
 >
-> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのプロパティの使用はサポートしていません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **名前空間:** <xref:System.Data.SqlTypes>
 
-**アセンブリ:** System.Data (system.data.dll 内)
+**アセンブリ:** System.string (System. Data. .dll)
 
-**.NET framework のバージョン:** 2.0 以降で使用可能です。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

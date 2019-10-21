@@ -9,40 +9,40 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: af49ea95d7f9d01072190ac3ccf6ba2f1041347e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: edaaf09f5a984344f7e89c9da988c529774934e9
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957672"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583260"
 ---
 # <a name="return-statement-visual-basic"></a>Return ステートメント (Visual Basic)
-`Function` 、`Sub`、、、または`Operator`プロシージャを呼び出したコードに制御を返します。 `Set` `Get`  
+@No__t_0、`Sub`、`Get`、`Set`、または `Operator` プロシージャを呼び出したコードに制御を戻します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 Return  
--or-  
+' -or-  
 Return expression  
 ```  
   
 ## <a name="part"></a>パーツ  
  `expression`  
- `Function` 、`Get`、または`Operator`プロシージャで必要です。 呼び出し元のコードに返される値を表す式。  
+ @No__t_0、`Get`、または `Operator` プロシージャで必要です。 呼び出し元のコードに返される値を表す式。  
   
 ## <a name="remarks"></a>Remarks  
- `Exit Sub` `Exit Property`または`Set`プロシージャ`expression`では、ステートメントはまたはステートメントと同じであり、指定することはできません。`Return` `Sub`  
+ @No__t_0 または `Set` プロシージャでは、`Return` ステートメントは `Exit Sub` または `Exit Property` ステートメントと同じであり、`expression` を指定することはできません。  
   
- `Function` `expression`、 、また`Operator`はプロシージャでは、ステートメントにを含め、プロシージャの戻り値の型に変換可能なデータ型に評価する必要があります。`expression` `Return` `Get` または`Get`プロシージャでは、プロシージャ名に式を代入して戻り値として使用し、ステートメント`Exit Function`または`Exit Property`ステートメントを実行する方法もあります。 `Function` プロシージャでは、を使用`Return expression`する必要があります。 `Operator`  
+ @No__t_0、`Get`、または `Operator` プロシージャでは、`Return` ステートメントに `expression` を含める必要があります。また、`expression` は、プロシージャの戻り値の型に変換可能なデータ型に評価される必要があります。 @No__t_0 または `Get` の手順では、プロシージャ名に式を代入して戻り値として使用し、`Exit Function` または `Exit Property` ステートメントを実行する方法もあります。 @No__t_0 の手順では、`Return expression` を使用する必要があります。  
   
- 同じ手順で、必要`Return`な数だけステートメントを含めることができます。  
+ 同じ手順で、必要に応じて `Return` ステートメントをいくつでも含めることができます。  
   
 > [!NOTE]
-> `Finally`ブロック内のコードは、 `Try`または`Return` `Catch`ブロック内のステートメントが検出された後、 `Return`そのステートメントが実行される前に実行されます。 ステートメント`Return`を`Finally`ブロックに含めることはできません。  
+> @No__t_0 ブロック内のコードは、`Try` または `Catch` ブロック内の `Return` ステートメントが検出された後、その `Return` ステートメントが実行される前に実行されます。 @No__t_0 ステートメントを `Finally` ブロックに含めることはできません。  
   
 ## <a name="example"></a>例  
- 次の例では`Return` 、ステートメントを複数回使用して、プロシージャが他の操作を行う必要がない場合に、呼び出し元のコードに戻ります。  
+ 次の例では、`Return` ステートメントを複数回使用して、プロシージャが他の操作を行う必要がない場合に、呼び出し元のコードに戻ります。  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   

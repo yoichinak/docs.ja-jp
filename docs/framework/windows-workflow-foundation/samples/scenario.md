@@ -21,4 +21,4 @@ ms.locfileid: "61785932"
   
 [WPF と WF の統合を XAML で](wpf-and-wf-integration-in-xaml.md)-単一の XAML ドキュメントで Windows Presentation Foundation (WPF) および Windows Workflow Foundation (WF) の機能を使用するアプリケーションを作成する方法を示します。 これを行うには、サンプルは、Windows Workflow Foundation (WF) と XAML 機能拡張を使用します。  
   
-[External Ruleset Toolkit](external-ruleset-toolkit.md) - 管理およびデータベースで Ruleset を編集する方法について説明し、それらの Ruleset を実行時にワークフローからアクセスします。
+[外部ルールセット ツールキット](external-ruleset-toolkit.md) - 管理およびデータベースで Ruleset を編集する方法について説明し、それらの Ruleset を実行時にワークフローからアクセスします。

@@ -54,7 +54,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |------------|-----------------|
 |**/e @ no__t-1lement:** _要素_|コードを生成する対象とする、スキーマ内の要素を指定します。 既定では、すべての要素が指定されます。 この引数は、複数回指定できます。|
 |**/enableDataBinding**|データ バインディングを有効にするために、生成されたすべての型に <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装します。 短縮形は `/edb` です。|
-|**/enableLinqDataSet**|(短縮形 :`/eld`)。LINQ to DataSet を使用して、生成された DataSet を照会できるように指定します。 このオプションは /dataset オプションも指定した場合に使用されます。 詳細については、「[LINQ to DataSet の概要](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)」(LINQ to DataSet Overview) と「[Querying Typed DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md)」(型指定された DataSet のクエリ) を参照してください。 LINQ の使用に関する概要については、[統合言語クエリ (LINQ) - C# ](../../csharp/programming-guide/concepts/linq/index.md)または[LINQ (Language-Integrated Query) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)を参照してください。|
+|**/enableLinqDataSet**|(短縮形 :`/eld`)。LINQ to DataSet を使用して、生成された DataSet を照会できるように指定します。 このオプションは /dataset オプションも指定した場合に使用されます。 詳細については、「[LINQ to DataSet の概要](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)」(LINQ to DataSet Overview) と「[型指定されたデータセットのクエリ](../../../docs/framework/data/adonet/querying-typed-datasets.md)」 を参照してください。 LINQ の使用に関する概要については、[統合言語クエリ (LINQ) - C# ](../../csharp/programming-guide/concepts/linq/index.md)または[LINQ (Language-Integrated Query) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)を参照してください。|
 |**/f @ no__t-1ields @ no__t**|プロパティの代わりにフィールドを生成します。 既定では、プロパティが生成されます。|
 |**/l @ no__t-1anguage @ no__t:** _language_|使用するプログラミング言語を指定します。 `CS` (C#、既定値)、`VB` (Visual Basic)、`JS` (JScript)、または `VJS` (Visual J#) から選択します。 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> を実装するクラスの完全修飾名を指定することもできます。|
 |**/n @ no__t-1amespace @ no__t:** _名前空間_|生成する型のランタイム名前空間を指定します。 既定の名前空間は `Schemas` です。|
@@ -228,5 +228,5 @@ xsd myAssembly.dll
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [LINQ to DataSet の概要](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
 - [型指定された DataSet のクエリ](../../../docs/framework/data/adonet/querying-typed-datasets.md)
-- [LINQ (統合言語クエリ) (C#)](../../csharp/programming-guide/concepts/linq/index.md)
-- [LINQ (統合言語クエリ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)
+- [統合言語クエリ (LINQ) (C#)](../../csharp/programming-guide/concepts/linq/index.md)
+- [統合言語クエリ (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)

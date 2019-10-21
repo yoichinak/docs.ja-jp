@@ -1,5 +1,5 @@
 ---
-title: '方法: 構造体 (Visual Basic) を宣言します。'
+title: '方法: 構造体を宣言する (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], structures
@@ -7,38 +7,38 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3090b5b8e53e5a5a990ae11c91464797bde9803
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906712"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582300"
 ---
-# <a name="how-to-declare-a-structure-visual-basic"></a>方法: 構造体 (Visual Basic) を宣言します。
-構造体の宣言を開始する、 [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)、それを終了して、`End Structure`ステートメント。 これら 2 つのステートメントの間で、少なくとも 1 つを宣言する必要があります*要素*します。 任意のデータ型の要素ができますが、非共有変数または非共有の非カスタム イベントのいずれかに少なくとも 1 つである必要があります。  
+# <a name="how-to-declare-a-structure-visual-basic"></a>方法: 構造体を宣言する (Visual Basic)
+Structure[ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)を使用して構造体の宣言を開始し、`End Structure` ステートメントで終了します。 これら2つのステートメントの間には、少なくとも1つの*要素*を宣言する必要があります。 要素は任意のデータ型にすることができますが、少なくとも1つは非共有変数または非共有のカスタムイベントのいずれかである必要があります。  
   
- 構造体の宣言で構造体の要素を初期化することはできません。 構造型の変数を宣言するときに、要素に、変数を通じてアクセスすることにより値を割り当てます。  
+ 構造体の宣言で構造体の要素を初期化することはできません。 変数を構造体型として宣言する場合は、変数を使用して値にアクセスすることによって、要素に値を代入します。  
   
- 構造体とクラス間の違いの詳細については、次を参照してください。[構造体とクラス](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)します。  
+ 構造体とクラスの違いについては、「[構造体とクラス](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)」を参照してください。  
   
- デモンストレーションを目的として、従業員の名前、電話の拡張機能と給与を追跡する必要がある状況を検討してください。 構造体を使用すると、1 つの変数でこれを行うことができます。  
+ デモンストレーションを目的として、従業員の名前、電話の内線番号、給与を追跡する状況について考えてみましょう。 構造体を使用すると、1つの変数でこれを行うことができます。  
   
 ### <a name="to-declare-a-structure"></a>構造体を宣言するには  
   
-1. 最初と最後のステートメントの構造を作成します。  
+1. 構造体の開始および終了ステートメントを作成します。  
   
-     使用して、構造体のアクセス レベルを指定することができます、[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、[フレンド](../../../../visual-basic/language-reference/modifiers/friend.md)、または[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)キーワード、またはことことができます既定で`Public`します。  
+     [Public](../../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)、または[Private](../../../../visual-basic/language-reference/modifiers/private.md)キーワードを使用して構造体のアクセスレベルを指定できます。また、既定の `Public` に設定することもできます。  
   
-    ```  
+    ```vb  
     Private Structure employee  
     End Structure  
     ```  
   
-2. 構造体の本文には、要素を追加します。  
+2. 構造体の本体に要素を追加します。  
   
-     構造体には、少なくとも 1 つの要素が必要です。 すべての要素を宣言し、アクセス レベルを指定する必要があります。 使用する場合、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)、キーワードを指定せずに既定でアクセシビリティ`Public`します。  
+     構造体には、少なくとも1つの要素が必要です。 すべての要素を宣言し、そのアクセスレベルを指定する必要があります。 キーワードを指定せずに[Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)を使用すると、ユーザー補助の既定値は `Public` になります。  
   
-    ```  
+    ```vb  
     Private Structure employee  
         Public givenName As String  
         Public familyName As String  
@@ -51,9 +51,9 @@ ms.locfileid: "61906712"
     End Structure  
     ```  
   
-     `salary`フィールドが前の例で`Private`、つまりは外側のクラスからでも、構造体の外部アクセスできません。 ただし、`giveRaise`プロシージャが`Public`ので、構造体の外側から呼び出すことができます。 同様に、増やすことができます、`salaryReviewTime`構造の外からのイベント。  
+     前の例の `salary` フィールドは `Private` です。これは、コンテナークラスからであっても、構造体の外部ではアクセスできないことを意味します。 ただし、`giveRaise` プロシージャは `Public` ため、構造の外部から呼び出すことができます。 同様に、構造の外部から `salaryReviewTime` イベントを発生させることもできます。  
   
-     変数に加えて`Sub`プロシージャ、およびイベント、定数を定義することもできます。`Function`プロシージャ、および構造のプロパティ。 として最大で 1 つのプロパティを指定することができます、*プロパティの既定*、少なくとも 1 つの引数を受け取る。 イベントを処理することができます、 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub`プロシージャ。 詳細については、「[方法 :宣言し、Visual Basic では、既定のプロパティを呼び出す](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)します。  
+     変数、`Sub` プロシージャ、およびイベントに加えて、構造体の定数、`Function` プロシージャ、およびプロパティを定義することもできます。 少なくとも1つの引数を指定する場合は、*既定のプロパティ*として最大で1つのプロパティを指定できます。 [共有](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` プロシージャを使用して、イベントを処理できます。 詳細については、「[方法: Visual Basic で既定のプロパティを宣言して呼び出す](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

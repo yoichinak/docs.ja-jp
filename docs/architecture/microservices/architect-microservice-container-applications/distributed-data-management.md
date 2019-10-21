@@ -2,12 +2,12 @@
 title: 分散データ管理に関する課題と解決策
 description: マイクロサービスの世界における分散データ管理に関する課題と解決策について説明します。
 ms.date: 09/20/2018
-ms.openlocfilehash: 7733a4523e147591151cd0dda26c43992dbe9a41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673139"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834456"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分散データ管理に関する課題と解決策
 
@@ -47,7 +47,7 @@ ms.locfileid: "68673139"
 
 一方、マイクロサービス ベースのアプリケーションでは、Product テーブルと Basket テーブルは対応するマイクロサービスによって所有されています。 どのマイクロサービスのトランザクションにも (直接のクエリでも)、別のマイクロサービスによって所有されるテーブル/ストレージが含まれることはありません (図 4-9 を参照)。
 
-![マイクロサービスは別のマイクロサービスのテーブルに直接アクセスできません。データの同期には最終的な整合性を使用する必要があります。](./media/image9.png)
+![マイクロサービス データベース データを共有できないことを示す図。](./media/distributed-data-management/indepentent-microservice-databases.png)
 
 **図 4-9** マイクロサービスは、別のマイクロサービスのテーブルに直接アクセスすることはできません。
 

@@ -1,5 +1,5 @@
 ---
-title: .NET での JSON のシリアル化
+title: .Net を使用してC# JSON をシリアル化および逆シリアル化する
 author: tdykstra
 ms.author: tdykstra
 ms.date: 09/16/2019
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 6cb45fded220b6123dbf4461f5f1cf1c3556ff69
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 5ce98a7908470a402779436db43333d46f5101fc
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083094"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180152"
 ---
-# <a name="json-serialization-in-net"></a>.NET での JSON のシリアル化
+# <a name="json-serialization-in-net---overview"></a>.NET での JSON のシリアル化-概要
 
-名前`System.Text.Json`空間は、JavaScript Object Notation (JSON) との間でシリアル化およびシリアル化を行うための機能を提供します。
+@No__t-0 名前空間は、JavaScript Object Notation (JSON) との間でシリアル化および逆シリアル化を行うための機能を提供します。
 
 ライブラリの設計では、高度な機能セットに対する高パフォーマンスと低メモリ割り当てが強調されています。 組み込みの UTF-8 サポートは、UTF-8 としてエンコードされた JSON テキストの読み取りと書き込みのプロセスを最適化します。これは、web 上のデータおよびディスク上のファイルのための最も一般的なエンコードです。
 
@@ -29,8 +29,8 @@ ms.locfileid: "71083094"
 * このライブラリは、 [.Net Core 3.0](https://aka.ms/netcore3download)共有フレームワークの一部として組み込まれています。
 * その他のターゲットフレームワークの場合[は、System.string NuGet パッケージ](https://www.nuget.org/packages/System.Text.Json)をインストールします。 パッケージは次をサポートします。
   * .NET Standard 2.0 以降のバージョン
-  * .NET Framework 4.61 以降のバージョン
-  * .NET Core 2.0 以降のバージョン
+  * 4\.6.1 以降のバージョンの .NET Framework
+  * .NET Core 2.0、2.1、および2.2
 
 ## <a name="additional-resources"></a>その他の技術情報
 

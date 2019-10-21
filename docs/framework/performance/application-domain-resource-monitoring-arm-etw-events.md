@@ -33,7 +33,7 @@ ms.locfileid: "71046769"
 ## <a name="threadcreated-event"></a>ThreadCreated イベント  
  このイベントは、ランダウン プロバイダーで `ThreadDC` としても発生します  ( `AppDomainResourceManagementRundownKeyword` キーワードで発生)。 これは、このカテゴリでランダウン プロバイダーで発生する唯一のイベントです。  
   
- 次の表に、キーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)」を参照してください)。  
+ 次の表に、キーワードとレベルを示します。 (詳細については、「 [CLR ETW キーワードおよびレベル](clr-etw-keywords-and-levels.md)」を参照してください)。  
   
 |イベントを発生させるキーワード|レベル|  
 |-----------------------------------|-----------|  

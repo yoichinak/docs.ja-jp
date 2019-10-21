@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows 資格情報でサービスをセキュリティで保護する'
+title: '方法 : Windows 資格情報でサービスをセキュリティで保護する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: 19ac9da94ce6e405632293a7d569698c9d866bef
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d02e697b23b6c745a59f3c9c37dd9c565f2f710e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856065"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320922"
 ---
-# <a name="how-to-secure-a-service-with-windows-credentials"></a>方法: Windows 資格情報でサービスをセキュリティで保護する
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>方法 : Windows 資格情報でサービスをセキュリティで保護する
 
-このトピックでは、Windows ドメインに存在し、同じドメイン内のクライアントによって呼び出される Windows Communication Foundation (WCF) サービスでトランスポートセキュリティを有効にする方法について説明します。 このシナリオの詳細については、「 [Windows 認証を使用したトランスポートセキュリティ](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)」を参照してください。 サンプルアプリケーションについては、 [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)サンプルを参照してください。
+このトピックでは、Windows ドメインに存在し、同じドメイン内のクライアントによって呼び出される Windows Communication Foundation (WCF) サービスでトランスポートセキュリティを有効にする方法について説明します。 このシナリオの詳細については、「 [Windows 認証を使用したトランスポートセキュリティ](./feature-details/transport-security-with-windows-authentication.md)」を参照してください。 サンプルアプリケーションについては、 [WSHttpBinding](./samples/wshttpbinding.md)サンプルを参照してください。
 
 このトピックでは、定義済みのコントラクト インターフェイスと実装が既に存在するものとして、それに機能を追加していきます。 既存のサービスとクライアントを変更することもできます。
 
@@ -47,17 +47,17 @@ Windows 資格情報によるサービスのセキュリティ保護は、完全
 
 ### <a name="using-the-binding-in-a-service"></a>サービスでのバインディングの使用
 
-この 2 番目の手順では、自己ホスト型サービスでバインディングを使用する方法を示します。 ホスティングサービスの詳細については、「[ホスティングサービス](../../../docs/framework/wcf/hosting-services.md)」を参照してください。
+この 2 番目の手順では、自己ホスト型サービスでバインディングを使用する方法を示します。 ホスティングサービスの詳細については、「[ホスティングサービス](hosting-services.md)」を参照してください。
 
 ##### <a name="to-use-a-binding-in-a-service"></a>サービスでバインディングを使用するには
 
 1. 前の手順のコードの後に、この手順のコードを挿入します。
 
-2. <xref:System.Type> という名前の `contractType` 変数を作成し、その変数にインターフェイスの型 (`ICalculator`) を割り当てます。 Visual Basic を使用する場合は`GetType` 、演算子を使用C#します。 `typeof`を使用する場合は、キーワードを使用します。
+2. <xref:System.Type> という名前の `contractType` 変数を作成し、その変数にインターフェイスの型 (`ICalculator`) を割り当てます。 Visual Basic を使用する場合は、`GetType` 演算子を使用します。を使用C#する場合は、`typeof` キーワードを使用します。
 
 3. <xref:System.Type> という名前の 2 つ目の `serviceType` 変数を作成し、その変数に実装されたコントラクトの型 (`Calculator`) を割り当てます。
 
-4. <xref:System.Uri> という名前で、サービスのベース アドレスが指定された `baseAddress` クラスのインスタンスを作成します。 ベース アドレスには、トランスポートに一致するスキームを指定する必要があります。 この場合、トランスポートスキームは HTTP であり、アドレスには、特別な Uniform Resource Identifier (URI) "localhost" とポート番号 (8036)、およびベースエンドポイントアドレス ("serviceModelSamples/") `http://localhost:8036/serviceModelSamples/`が含まれます。
+4. <xref:System.Uri> という名前で、サービスのベース アドレスが指定された `baseAddress` クラスのインスタンスを作成します。 ベース アドレスには、トランスポートに一致するスキームを指定する必要があります。 この場合、トランスポートスキームは HTTP であり、アドレスには、特別な Uniform Resource Identifier (URI) "localhost" とポート番号 (8036)、およびベースエンドポイントアドレス ("serviceModelSamples/): `http://localhost:8036/serviceModelSamples/` が含まれます。
 
 5. <xref:System.ServiceModel.ServiceHost> 変数と `serviceType` 変数を指定して、`baseAddress` クラスのインスタンスを作成します。
 
@@ -70,15 +70,15 @@ Windows 資格情報によるサービスのセキュリティ保護は、完全
 
 ### <a name="using-the-binding-in-a-client"></a>クライアントでのバインディングの使用
 
-この手順では、サービスと通信するプロキシの生成方法を示します。 プロキシは、サービスメタデータを使用してプロキシを作成する[ServiceModel Metadata Utility Tool (svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して生成されます。
+この手順では、サービスと通信するプロキシの生成方法を示します。 プロキシは、サービスメタデータを使用してプロキシを作成する[ServiceModel Metadata Utility Tool (svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して生成されます。
 
 この手順では、サービスと通信するための <xref:System.ServiceModel.WSHttpBinding> クラスのインスタンスも作成され、サービスが呼び出されます。
 
 この例では、コードだけを使用してクライアントを作成します。 この手順の後のセクションに示す構成ファイルを使用することもできます。
 
-##### <a name="to-use-a-binding-in-a-client-with-code"></a>コードによってクライアントでバインディングを使用するには
+#### <a name="to-use-a-binding-in-a-client-with-code"></a>コードによってクライアントでバインディングを使用するには
 
-1. SvcUtil.exe ツールを使用して、サービスのメタデータからプロキシ コードを生成します。 詳細については、「[方法 :クライアント](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)を作成します。 生成されたプロキシコードは<xref:System.ServiceModel.ClientBase%601>クラスを継承します。これにより、すべてのクライアントに、WCF サービスと通信するために必要なコンストラクター、メソッド、およびプロパティが確実に与えられます。 この例では、生成されたコードに、`CalculatorClient` インターフェイスを実装した `ICalculator` クラスが追加されるので、サービス コードとの互換が可能になります。
+1. SvcUtil.exe ツールを使用して、サービスのメタデータからプロキシ コードを生成します。 詳細については、「[方法: クライアントを作成](how-to-create-a-wcf-client.md)する」を参照してください。 生成されたプロキシコードは @no__t 0 クラスから継承されます。これにより、すべてのクライアントに、WCF サービスと通信するために必要なコンストラクター、メソッド、およびプロパティが確実に与えられます。 この例では、生成されたコードに、`CalculatorClient` インターフェイスを実装した `ICalculator` クラスが追加されるので、サービス コードとの互換が可能になります。
 
 2. この手順のコードは、クライアント プログラムの `Main` メソッドの先頭に挿入します。
 
@@ -99,22 +99,22 @@ Windows 資格情報によるサービスのセキュリティ保護は、完全
 
 手順コードを使用してバインディングを作成する代わりに、構成ファイルのバインディング セクションに次のコードを記述することもできます。
 
-サービスがまだ定義されていない場合は、「[サービスの設計と実装](../../../docs/framework/wcf/designing-and-implementing-services.md)」および「[サービスの構成](../../../docs/framework/wcf/configuring-services.md)」を参照してください。
+サービスがまだ定義されていない場合は、「[サービスの設計と実装](designing-and-implementing-services.md)」および「[サービスの構成](configuring-services.md)」を参照してください。
 
 > [!NOTE]
 > この構成コードは、サービスとクライアントの両方の構成ファイルで使用されます。
 
 #### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>構成を使用して Windows ドメインのサービスで転送セキュリティを有効にするには
 
-1. 構成ファイル[の\<バインド >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)要素セクションに[ wsHttpBinding>要素を追加します。\<](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+1. 構成ファイルの[\<bindings >](../configure-apps/file-schema/wcf/bindings.md) element セクションに[\<wshttpbinding >](../configure-apps/file-schema/wcf/wshttpbinding.md)要素を追加します。
 
-2. <`binding``WSHttpBinding` >要素に<>要素を追加し、属性をアプリケーションに適した値に`configurationName`設定します。
+2. < @No__t-0 > 要素を < `WSHttpBinding` > 要素に追加し、`configurationName` 属性をアプリケーションに適した値に設定します。
 
-3. <`security`> 要素を追加し、 `mode`属性を Message に設定します。
+3. < @No__t 0 > 要素を追加し、`mode` 属性を Message に設定します。
 
-4. <`message`> 要素を追加し、 `clientCredentialType`属性を Windows に設定します。
+4. < @No__t 0 > 要素を追加し、`clientCredentialType` 属性を Windows に設定します。
 
-5. サービスの構成ファイルで、`<bindings>` セクションを次のコードに置き換えます。 サービス構成ファイルがまだない場合は、「Using binding [To Configure service and](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)client」を参照してください。
+5. サービスの構成ファイルで、`<bindings>` セクションを次のコードに置き換えます。 サービス構成ファイルがまだない場合は、「Using binding [To Configure service and](using-bindings-to-configure-services-and-clients.md)client」を参照してください。
 
     ```xml
     <bindings>
@@ -132,11 +132,11 @@ Windows 資格情報によるサービスのセキュリティ保護は、完全
 
 この手順では、サービスと通信するプロキシと構成ファイルの 2 つのファイルの生成方法を示します。 また、クライアント上で使用される 3 つ目のファイルであるクライアント プログラムへの変更点についても説明します。
 
-##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>構成によってクライアントでバインディングを使用するには
+#### <a name="to-use-a-binding-in-a-client-with-configuration"></a>構成によってクライアントでバインディングを使用するには
 
-1. SvcUtil.exe ツールを使用して、サービスのメタデータからプロキシ コードと構成ファイルを生成します。 詳細については、「[方法 :クライアント](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)を作成します。
+1. SvcUtil.exe ツールを使用して、サービスのメタデータからプロキシ コードと構成ファイルを生成します。 詳細については、「[方法: クライアントを作成](how-to-create-a-wcf-client.md)する」を参照してください。
 
-2. 生成された構成ファイルの[バインド>セクションを、前のセクションの構成コードに置き換えます。\<](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+2. 生成された構成ファイルの[\< バインド >](../configure-apps/file-schema/wcf/bindings.md)セクションを、前のセクションの構成コードに置き換えます。
 
 3. 手順コードは、クライアント プログラムの `Main` メソッドの先頭に挿入します。
 
@@ -158,7 +158,7 @@ Windows 資格情報によるサービスのセキュリティ保護は、完全
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.WSHttpBinding>
-- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [方法: クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)
-- [セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [方法: クライアントを作成する](how-to-create-a-wcf-client.md)
+- [サービスのセキュリティ保護](securing-services.md)
+- [セキュリティの概要](./feature-details/security-overview.md)

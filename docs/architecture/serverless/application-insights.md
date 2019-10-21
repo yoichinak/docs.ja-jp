@@ -4,12 +4,12 @@ description: Application Insights は、開発者が web アプリ、モバイ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 1f5b99fba448c2c1c12139524ffdcd3708b3c956
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7c1013ac029645a2da44aaf1c3b6ba74ca3f3dde
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577725"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522737"
 ---
 # <a name="telemetry-with-application-insights"></a>Application Insights を使用したテレメトリ
 
@@ -19,12 +19,12 @@ ms.locfileid: "69577725"
 
 既存のアプリに Application Insights を追加することは、アプリケーションの設定にインストルメンテーションキーを追加するのと同じほど簡単です。 Application Insights では、次のことができます。
 
-* 関数呼び出しの数、関数の実行にかかる時間、例外などのメトリックに基づいて、カスタムのグラフと警告を作成します。
-* エラーとサーバーの例外を分析する
-* 操作によってパフォーマンスを掘り下げ、サードパーティの依存関係の呼び出しにかかる時間を測定する
-* 関数アプリをホストするすべてのサーバーの CPU 使用率、メモリ、および率を監視します
-* 関数アプリの要求数や待機時間など、メトリックのライブストリームを表示します
-* [分析](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)を使用して関数データの検索、クエリ、およびカスタムグラフの作成を行う
+- 関数呼び出しの数、関数の実行にかかる時間、例外などのメトリックに基づいて、カスタムのグラフと警告を作成します。
+- エラーとサーバーの例外を分析する
+- 操作によってパフォーマンスを掘り下げ、サードパーティの依存関係の呼び出しにかかる時間を測定する
+- 関数アプリをホストするすべてのサーバーの CPU 使用率、メモリ、および率を監視します
+- 関数アプリの要求数や待機時間など、メトリックのライブストリームを表示します
+- [分析](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)を使用して関数データの検索、クエリ、およびカスタムグラフの作成を行う
 
 ![メトリックスエクスプローラー](./media/metrics-explorer.png)
 

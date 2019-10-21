@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 0a761c39b51a8d71919a84cbbbf6739fc1f5bcea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: be1780b00b4d58964e1de5ec199cb80dc0f9dba5
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754621"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583400"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum ステートメント (Visual Basic)
 
@@ -24,7 +24,7 @@ ms.locfileid: "64754621"
 
 ## <a name="syntax"></a>構文
 
-```
+```vb
 [ <attributelist> ] [ accessmodifier ]  [ Shadows ]
 Enum enumerationname [ As datatype ]
    memberlist
@@ -35,9 +35,9 @@ End Enum
 
 - `attributelist`
 
-  省略可能です。 この列挙体に適用される属性の一覧です。 囲む必要があります、[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)山かっこ ("`<`「と」`>`")。
+  省略可能です。 この列挙に適用される属性のリスト。 [属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)は山かっこ ("`<`" と "`>`") で囲む必要があります。
 
-  <xref:System.FlagsAttribute>属性は、列挙体のインスタンスの値が、複数の列挙型メンバーを含めることができ、各メンバーが列挙値のビット フィールドを表すことを示します。
+  @No__t_0 属性は、列挙体のインスタンスの値に複数の列挙体メンバーを含めることができ、各メンバーが列挙値のビットフィールドを表すことができることを示します。
 
 - `accessmodifier`
 
@@ -57,26 +57,26 @@ End Enum
 
 - `Shadows`
 
-  省略可能です。 この列挙体を宣言し、同じ名前を持つプログラミング要素、または基底クラスのオーバー ロードされた要素のセットを非表示にすることを指定します。 指定できる[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)列挙型自体でのみ、そのメンバーのいずれかではなく。
+  省略可能です。 この列挙体が、基底クラスで同じ名前を持つプログラミング要素、またはオーバーロードされた要素のセットを直しして非表示にすることを指定します。 [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)は、そのメンバーではなく、列挙自体にのみ指定できます。
 
 - `enumerationname`
 
-  必須。 列挙体の名前。 有効な名前については、次を参照してください。 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。
+  必須です。 列挙体の名前。 有効な名前の詳細については、「宣言された[要素名](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
 - `datatype`
 
-  省略可能です。 列挙体とそのすべてのメンバーのデータ型。
+  省略可能です。 列挙型とそのすべてのメンバーのデータ型。
 
 - `memberlist`
 
-  必須。 このステートメントで宣言されているメンバー定数のリスト。 複数のメンバーは、個々 のソース コード行に表示されます。
+  必須です。 このステートメントで宣言されているメンバー定数の一覧。 個々のソースコード行に複数のメンバーが表示されます。
 
-  各`member`が次の構文と部分。 `[<attribute list>] member name [ = initializer ]`
+  各 `member` には、次の構文と部分があります。 `[<attribute list>] member name [ = initializer ]`
 
   |パーツ|説明|
   |---|---|
-  |`membername`|必須。 このメンバーの名前。|
-  |`initializer`|省略可能です。 式がコンパイル時に評価され、このメンバーに割り当てられているです。|
+  |`membername`|必須です。 このメンバーの名前。|
+  |`initializer`|省略可能です。 コンパイル時に評価され、このメンバーに割り当てられる式。|
 
 - `End` `Enum`
 
@@ -84,103 +84,103 @@ End Enum
 
 ## <a name="remarks"></a>Remarks
 
-互いに論理的に関連する不変の値のセットがあれば、列挙体で一緒に定義できます。 これは、列挙型とそのメンバーでは、その値よりも覚えやすく、わかりやすい名前を提供します。 コードでさまざまな場所で列挙型メンバーを使用することができます。
+論理的に相互に関連付けられている変化しない値のセットがある場合は、それらを列挙体でまとめて定義できます。 これにより、列挙体とそのメンバーにわかりやすい名前が提供され、その値よりも覚えやすくなります。 その後、コード内のさまざまな場所で列挙メンバーを使用できます。
 
-列挙体を使用する利点を以下に示します。
+列挙を使用する利点は、次のとおりです。
 
-- 置き換えや数値の入力ミスによって発生したエラーを軽減します。
+- 数値の転置またはミスによって発生するエラーを減らします。
 
-- 簡単に、将来の値を変更します。
+- では、将来の値の変更が簡単になります。
 
-- により、コードを読みやすくするので、エラーが導入される可能性が低くなります。
+- コードを読みやすくするため、エラーが発生する可能性は低くなります。
 
-- 前方の互換性を確保します。 列挙体を使用する場合、コードはメンバー名に対応する値が、今後だれかが変更された場合に失敗する可能性を低減します。
+- 上位互換性を確保します。 列挙型を使用する場合、後でメンバー名に対応する値を変更すると、コードが失敗する可能性は低くなります。
 
-名前、基のデータ型およびメンバーのセットを列挙しています 各メンバーは、定数を表します。
+列挙体には、名前、基になるデータ型、およびメンバーのセットが含まれます。 各メンバーは定数を表します。
 
-クラス、構造体、モジュール、またはインターフェイス レベルでは、プロシージャの外で宣言された列挙型は、*メンバー列挙*します。 クラス、構造体、モジュール、または列挙体を宣言するインターフェイスのメンバーになります。
+プロシージャ以外のクラス、構造体、モジュール、またはインターフェイスレベルで宣言された列挙型は、*メンバー列挙*型です。 これは、それを宣言するクラス、構造体、モジュール、またはインターフェイスのメンバーです。
 
-列挙体のメンバーは、クラス、構造体、モジュール、またはインターフェイス内の任意の場所からアクセスできます。 コード、クラスの外部で構造体、またはモジュール修飾する必要があります、クラス、構造体、モジュールの名前を持つメンバーの列挙型の名前。 追加することによって完全修飾名を使用する必要を避けることができます、 [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)ステートメントをソース ファイルにします。
+メンバー列挙体には、クラス、構造体、モジュール、またはインターフェイス内のどこからでもアクセスできます。 クラス、構造体、またはモジュールの外部のコードでは、メンバーの列挙体の名前を、そのクラス、構造体、またはモジュールの名前で修飾する必要があります。 [インポート](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)ステートメントをソースファイルに追加することで、完全修飾名を使用する必要がないようにすることができます。
 
-任意のクラス、構造体、モジュール、またはインターフェイスの外部の名前空間レベルで宣言された列挙体が表示される名前空間のメンバーであります。
+名前空間レベルで、任意のクラス、構造体、モジュール、またはインターフェイスの外側で宣言された列挙型は、それが出現する名前空間のメンバーになります。
 
-*宣言コンテキスト*列挙型のソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があります、プロシージャにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。
+列挙体の*宣言コンテキスト*は、ソースファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があり、プロシージャにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。
 
-属性を適用できますのメンバーではなく、全体としての列挙体に個別にします。 属性は、アセンブリのメタデータに情報を提供します。
+列挙体全体に属性を適用することはできますが、メンバーには個別には適用できません。 属性は、アセンブリのメタデータに情報を提供します。
 
 ## <a name="data-type"></a>データの種類
 
-`Enum`ステートメントが列挙体のデータ型を宣言できます。 各メンバーは、列挙型のデータ型を受け取る。 指定できる`Byte`、 `Integer`、 `Long`、 `SByte`、 `Short`、 `UInteger`、 `ULong`、または`UShort`します。
+@No__t_0 ステートメントでは、列挙体のデータ型を宣言できます。 各メンバーは、列挙体のデータ型を受け取ります。 @No__t_0、`Integer`、`Long`、`SByte`、`Short`、`UInteger`、`ULong`、`UShort` を指定できます。
 
-指定しない場合`datatype`、列挙体の各メンバーがのデータ型を受け取るその`initializer`します。 両方を指定する場合`datatype`と`initializer`のデータ型`initializer`に変換できる必要があります`datatype`します。 どちらの場合`datatype`も`initializer`が存在するデータ型の既定値は`Integer`します。
+列挙に `datatype` を指定しない場合、各メンバーはその `initializer` のデータ型を受け取ります。 @No__t_0 と `initializer` の両方を指定する場合、`initializer` のデータ型は `datatype` に変換可能である必要があります。 @No__t_0 も `initializer` も存在しない場合、データ型は既定で `Integer` に設定されます。
 
 ## <a name="initializing-members"></a>メンバーの初期化
 
-`Enum`ステートメントで選択したメンバーの内容を初期化できる`memberlist`します。 使用する`initializer`メンバーに割り当てられる式を指定します。
+@No__t_0 ステートメントで `memberlist` で選択したメンバーの内容を初期化できます。 @No__t_0 を使用して、メンバーに割り当てられる式を指定します。
 
-指定しない場合`initializer`のメンバーは、Visual Basic を初期化しますが 0 のいずれか (場合、最初は`member`で`memberlist`)、またはよりも、すぐに上記のいずれかで大きな値に`member`。
+メンバーに `initializer` を指定しなかった場合は、Visual Basic 0 (`memberlist` の最初の `member`)、または直前の `member` の値より大きい値に初期化されます。
 
-それぞれに提供する式`initializer`リテラル、既に定義されている他の定数と既に定義されている、この列挙体の前のメンバーを含む列挙型メンバーの組み合わせにすることができます。 算術演算および論理演算子を使用すると、このような要素を結合します。
+各 `initializer` に用意されている式には、リテラル、既に定義されている他の定数、およびこの列挙の前のメンバーを含む定義済みの列挙型メンバーの任意の組み合わせを指定できます。 算術演算子と論理演算子を使用すると、このような要素を組み合わせることができます。
 
-変数または関数で使用することはできません`initializer`します。 変換キーワードなどを使用するただし、`CByte`と`CShort`します。 使用することも`AscW`定数で呼び出す場合`String`または`Char`引数、コンパイル時に評価できるためです。
+@No__t_0 では、変数または関数を使用できません。 ただし、`CByte` や `CShort` などの変換キーワードを使用することもできます。 定数 `String` または `Char` 引数を使用して呼び出す場合は、コンパイル時に評価できるため、`AscW` を使用することもできます。
 
-列挙体は、浮動小数点値を持つことはできません。 メンバーには、浮動小数点値が割り当てられている場合と`Option Strict`に設定されている、コンパイラ エラーが発生します。 場合`Option Strict`に値が自動的に変換がオフ、`Enum`型。
+列挙体に浮動小数点値を指定することはできません。 メンバーに浮動小数点値が割り当てられていて `Option Strict` が on に設定されている場合、コンパイラエラーが発生します。 @No__t_0 がオフの場合、値は自動的に `Enum` の種類に変換されます。
 
-メンバーの値が基になるデータ型の許容範囲を超えた場合、または基になるデータ型で許容される最大値に任意のメンバーを初期化する場合は、コンパイラはエラーを報告します。
+メンバーの値が、基になるデータ型で許容される範囲を超えている場合、またはメンバーが基になるデータ型で許容される最大値に初期化されている場合、コンパイラはエラーを報告します。
 
 ## <a name="modifiers"></a>修飾子
 
-クラス、構造体、モジュール、およびパブリック アクセスにインターフェイス メンバーの列挙体の既定です。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 Namespace フレンド アクセスを既定値の列挙体をメンバーです。 Private または protected にありませんが、パブリックにアクセス レベルを調整することができます。 詳細については、[ Visual Basic のアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。
+クラス、構造体、モジュール、およびインターフェイスメンバーの列挙型は、既定でパブリックアクセスに設定されています。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 名前空間メンバーの列挙は、既定で friend アクセスに設定されています。 アクセスレベルはパブリックに調整できますが、プライベートまたは保護することはできません。 詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
-すべての列挙体メンバーは、パブリック アクセスを持ち、それらでアクセス修飾子を使用することはできません。 ただし、列挙型自体にさらに制限されたアクセス レベルがある場合は、指定した列挙体のアクセス レベルが優先されます。
+すべての列挙メンバーにはパブリックアクセスがあり、それらのメンバーに対してアクセス修飾子を使用することはできません。 ただし、列挙自体のアクセスレベルがより制限されている場合は、指定された列挙アクセスレベルが優先されます。
 
-既定では、すべての列挙体は型とそのフィールドは定数です。 そのため、 `Shared`、 `Static`、および`ReadOnly`列挙型またはそのメンバーを宣言するときに、キーワードを使用できません。
+既定では、すべての列挙型とそのフィールドは定数です。 したがって、列挙型またはそのメンバーを宣言するときに、`Shared`、`Static`、および `ReadOnly` キーワードを使用することはできません。
 
-## <a name="assigning-multiple-values"></a>複数の値を割り当てる
+## <a name="assigning-multiple-values"></a>複数の値の割り当て
 
-列挙体は、通常、相互に排他的な値を表します。 含めることによって、<xref:System.FlagsAttribute>属性、`Enum`宣言では、代わりに値を代入できます複数列挙体のインスタンスにします。 <xref:System.FlagsAttribute>属性は、列挙体をビット フィールド、つまりフラグのセットとして扱われることを指定します。 これらと呼びます*ビット*列挙体。
+列挙型は、通常、相互に排他的な値を表します。 @No__t_1 宣言に <xref:System.FlagsAttribute> 属性を含めることにより、複数の値を列挙型のインスタンスに割り当てることができます。 @No__t_0 属性は、列挙型をビットフィールド、つまりフラグのセットとして扱うことを指定します。 これらは*ビットごと*の列挙体と呼ばれます。
 
-使用して列挙体を宣言する場合、<xref:System.FlagsAttribute>属性、お勧めの値は、2、1、2、4、8、16、およびの累乗を使用することです。 また、値が 0 のメンバーの名前を"None"ことをお勧めします。 追加のガイドラインについては、次を参照してください。<xref:System.FlagsAttribute>と<xref:System.Enum>します。
+@No__t_0 属性を使用して列挙体を宣言する場合は、値に対して2の累乗 (1、2、4、8、16など) を使用することをお勧めします。 また、"None" は、値が0のメンバーの名前にすることをお勧めします。 その他のガイドラインについては、「<xref:System.FlagsAttribute>」および「<xref:System.Enum>」を参照してください。
 
 ## <a name="example"></a>例
 
-`Enum` ステートメントを使用する方法の例を次に示します。 メンバーと呼びます注`EggSizeEnum.Medium`ではなく`Medium`します。
+`Enum` ステートメントを使用する方法の例を次に示します。 メンバーは、`Medium` ではなく `EggSizeEnum.Medium` と呼ばれることに注意してください。
 
 [!code-vb[VbEnumsTask#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#41)]
 
 ## <a name="example"></a>例
 
-次の例では、メソッドが範囲外です、`Egg`クラス。 そのため、`EggSizeEnum`として完全に修飾されます`Egg.EggSizeEnum`します。
+次の例のメソッドは、`Egg` クラスの外側にあります。 したがって、`EggSizeEnum` は完全に `Egg.EggSizeEnum` として修飾されます。
 
 [!code-vb[VbEnumsTask#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#42)]
 
 ## <a name="example"></a>例
 
-次の例では、`Enum`という名前の定数値を関連のセットを定義するステートメント。 ここでは、値は、色のデータベースのデータ入力フォームをデザインすることもできます。
+次の例では、`Enum` ステートメントを使用して、関連する一連の名前付き定数値を定義します。 この場合、値は、データベースのデータ入力フォームをデザインするために選択できる色です。
 
 [!code-vb[VbEnumsTask#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#30)]
 
 ## <a name="example"></a>例
 
-次の例では、正と負の両方の数値を含む値を示します。
+次の例は、正と負の両方の値を含む値を示しています。
 
 [!code-vb[VbEnumsTask#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#31)]
 
 ## <a name="example"></a>例
 
-次の例では、`As`句を使用して、指定、`datatype`列挙体の。
+次の例では、`As` 句を使用して、列挙型の `datatype` を指定しています。
 
 [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]
 
 ## <a name="example"></a>例
 
-次の例では、ビットごとの列挙型を使用する方法を示します。 複数の値は、ビットごとの列挙体のインスタンスに割り当てることができます。 `Enum`宣言が含まれる、<xref:System.FlagsAttribute>属性には、列挙型をフラグのセットとして処理できることを示します。
+ビットごとの列挙体を使用する方法を次の例に示します。 ビットごとの列挙体のインスタンスに複数の値を割り当てることができます。 @No__t_0 宣言には <xref:System.FlagsAttribute> 属性が含まれています。これは、列挙体をフラグのセットとして処理できることを示します。
 
 [!code-vb[VbEnumsTask#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#61)]
 
 ## <a name="example"></a>例
 
-次の例は、列挙型を反復処理します。 使用して、 <xref:System.Enum.GetNames%2A> 、列挙体のメンバー名の配列を取得するメソッドをおよび<xref:System.Enum.GetValues%2A>メンバーの値の配列を取得します。
+次の例では、列挙体を反復処理します。 @No__t_0 メソッドを使用して、列挙からメンバー名の配列を取得し、<xref:System.Enum.GetValues%2A> してメンバー値の配列を取得します。
 
 [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]
 

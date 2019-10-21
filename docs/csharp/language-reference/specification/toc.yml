@@ -1,0 +1,40 @@
+- name: 'C# 6.0 のドラフト仕様'
+  items:
+    - name: はじめに
+      href: ../../../../_csharplang/spec/introduction.md
+    - name: 字句構造
+      href: ../../../../_csharplang/spec/lexical-structure.md
+    - name: 基本的な概念
+      href: ../../../../_csharplang/spec/basic-concepts.md
+    - name: 型
+      href: ../../../../_csharplang/spec/types.md
+    - name: 変数
+      href: ../../../../_csharplang/spec/variables.md
+    - name: 変換
+      href: ../../../../_csharplang/spec/conversions.md
+    - name: 式
+      href: ../../../../_csharplang/spec/expressions.md
+    - name: ステートメント
+      href: ../../../../_csharplang/spec/statements.md
+    - name: 名前空間
+      href: ../../../../_csharplang/spec/namespaces.md
+    - name: クラス
+      href: ../../../../_csharplang/spec/classes.md
+    - name: 構造体
+      href: ../../../../_csharplang/spec/structs.md
+    - name: 配列
+      href: ../../../../_csharplang/spec/arrays.md
+    - name: インターフェイス
+      href: ../../../../_csharplang/spec/interfaces.md
+    - name: 列挙体
+      href: ../../../../_csharplang/spec/enums.md
+    - name: デリゲート
+      href: ../../../../_csharplang/spec/delegates.md
+    - name: 例外
+      href: ../../../../_csharplang/spec/exceptions.md
+    - name: 属性
+      href: ../../../../_csharplang/spec/attributes.md
+    - name: アンセーフ コード
+      href: ../../../../_csharplang/spec/unsafe-code.md
+    - name: ドキュメント コメント
+      href: ../../../../_csharplang/spec/documentation-comments.md

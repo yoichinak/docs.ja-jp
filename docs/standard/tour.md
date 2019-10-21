@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415924"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291594"
 ---
 # <a name="tour-of-net"></a>.NET のツアー
 
@@ -21,7 +21,7 @@ ms.locfileid: "54415924"
 
 ## <a name="how-to-run-the-code-samples"></a>コード サンプルの実行方法
 
-コード サンプルを実行できるように開発環境を設定する方法については、「[Getting Started](get-started.md)」 (はじめに) をご覧ください。 このページのコード サンプルをコピーして環境に貼り付けて実行します。 
+コード サンプルを実行できるように開発環境を設定する方法については、[はじめに](get-started.md)をご覧ください。 このページのコード サンプルをコピーして環境に貼り付けて実行します。 
 
 ## <a name="programming-languages"></a>プログラミング言語
 
@@ -29,9 +29,9 @@ ms.locfileid: "54415924"
 
 Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#、F#、Visual Basic (VB) の 3 つです。 
 
-* C# はシンプル、強力、タイプセーフ、そしてオブジェクト指向でありながらも、C スタイル言語の表現力と簡潔さが維持されています。 C や類似の言語を使い慣れている人であれば、ほとんど問題なく C# に適応できます。 C# について詳しくは、「[C# Guide](../csharp/index.md)」 (C# ガイド) をご覧ください。
+* C# はシンプル、強力、タイプセーフ、そしてオブジェクト指向でありながらも、C スタイル言語の表現力と簡潔さが維持されています。 C や類似の言語を使い慣れている人であれば、ほとんど問題なく C# に適応できます。 C# について詳しくは、「[C# ガイド](../csharp/index.md)」 (C# ガイド) をご覧ください。
 
-* F# はクロスプラットフォームの関数型プログラミング言語ですが、従来のオブジェクト指向および命令型プログラミングもサポートしています。 F# について詳しくは、「[F# Guide](../fsharp/index.md)」 (F# ガイド) をご覧ください。
+* F# はクロスプラットフォームの関数型プログラミング言語ですが、従来のオブジェクト指向および命令型プログラミングもサポートしています。 F# について詳しくは、「[F# ガイド](../fsharp/index.md)」 (F# ガイド) をご覧ください。
 
 * Visual Basic は、学習しやすい言語で、.NET 上で実行されるさまざまなアプリの構築に使用します。 .NET 言語の中で VB の構文は通常の人間の言語に最も近いため、ソフトウェア開発の経験のないユーザーでも使いやすい言語です。
 
@@ -55,7 +55,7 @@ Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#�
 
 一部のオブジェクトは、*アンマネージ リソース*を参照します。 アンマネージ リソースは、.NET ランタイムで自動的に維持されないリソースです。 たとえば、ファイル ハンドルは、アンマネージ リソースです。 <xref:System.IO.FileStream> オブジェクトはマネージ オブジェクトですが、アンマネージドのファイル ハンドルを参照します。 <xref:System.IO.FileStream> の使用が終わったら、ファイル ハンドルを解放する必要があります。
 
-.NET では、アンマネージ リソースを参照するオブジェクトは <xref:System.IDisposable> インターフェイスを実装します。 オブジェクトの使用が終わったら、すべてのアンマネージ リソースを解放する、オブジェクトの <xref:System.IDisposable.Dispose> メソッドを呼び出します。 そのようなオブジェクトに対し、.NET 言語では次の例に示すように便利な `using` 構文が提供されています。
+.NET では、アンマネージ リソースを参照するオブジェクトは <xref:System.IDisposable> インターフェイスを実装します。 オブジェクトの使用が終わったら、すべてのアンマネージ リソースを解放する、オブジェクトの <xref:System.IDisposable.Dispose> メソッドを呼び出します。 そのようなオブジェクトに対し、.NET 言語では次の例に示すように便利な [`using` ステートメント](../csharp/language-reference/keywords/using.md)が提供されています。
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
@@ -65,7 +65,7 @@ Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#�
 
 * C# の場合は、「[using ステートメント (C# リファレンス)](../csharp/language-reference/keywords/using-statement.md)」を参照してください。
 * F# の場合は、「[リソースの管理:use キーワード](../fsharp/language-reference/resource-management-the-use-keyword.md)」を参照してください。
-* VB の場合は、「[Using Statement (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md)」 (using ステートメント (Visual Basic)) を参照してください。
+* VB の場合は、「[Using ステートメント (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md)」を参照してください。
 
 ## <a name="type-safety"></a>タイプ セーフ
 
@@ -83,7 +83,7 @@ C#、VB、F# では、ローカルな "*型推論*" をサポートします。 
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-F# は、C# や VB のメソッド ローカル型推論よりさらに進んだ型推論機能を備えています。 詳しくは、「[Type Inference](../fsharp/language-reference/type-inference.md)」 (型推論) をご覧ください。
+F# は、C# や VB のメソッド ローカル型推論よりさらに進んだ型推論機能を備えています。 詳しくは、「[型の推定](../fsharp/language-reference/type-inference.md)」 (型推論) をご覧ください。
 
 ## <a name="delegates-and-lambdas"></a>デリゲートとラムダ
 

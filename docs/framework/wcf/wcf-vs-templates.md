@@ -2,12 +2,12 @@
 title: WCF Visual Studio テンプレート
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 8f7eb9ef5175c41a3378201f2f25f1fd914aef55
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 507599549bd75fb454483378e044b6b7581cf4a6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916791"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320487"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio テンプレート
 Windows Communication Foundation (WCF) Visual Studio テンプレートは、Visual Studio で使用できる事前定義されたプロジェクトおよび項目テンプレートで、WCF サービスと周囲のアプリケーションをすばやく構築できます。  
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) Visual Studio テンプレートは、Vis
 - アプリケーション構成ファイル (App.config)。 構成ファイルは、セキュリティで保護された HTTP バインディングを使用して、WCF サービスモデルの基本的な要素を提供します。 サービスのエンドポイントも含まれており、メタデータの交換も可能です。  
   
 > [!NOTE]
-> Visual Studio は、既定の構成である[WCF サービスホスト (wcfsvchost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)を使用して実行されるときに、プロジェクトの構成ファイルとして app.config ファイルを認識するように構成されています。 サービス ライブラリを実行可能ファイルでホストする場合は、DLL の構成ファイルは無効になるため、その実行可能ファイルの構成ファイルに構成コードを移動する必要があります。  
+> Visual Studio は、既定の構成である[WCF サービスホスト (wcfsvchost.exe)](wcf-service-host-wcfsvchost-exe.md)を使用して実行されるときに、プロジェクトの構成ファイルとして app.config ファイルを認識するように構成されています。 サービス ライブラリを実行可能ファイルでホストする場合は、DLL の構成ファイルは無効になるため、その実行可能ファイルの構成ファイルに構成コードを移動する必要があります。  
   
 ### <a name="wcf-service-application-template"></a>WCF サービス アプリケーション テンプレート  
  WCF サービスアプリケーションテンプレートは、新しいプロジェクト ダイアログボックスの  **visual C#** 、Wcf、 **visual basic**、wcf で使用できます。  
@@ -59,17 +59,17 @@ Windows Communication Foundation (WCF) Visual Studio テンプレートは、Vis
  既存のプロジェクトが Web プロジェクトの場合は、サービス ホスト ファイル (service1.svc) も作成されます。  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF サービス プロジェクト/項目テンプレート  
- これらのテンプレートは、ワークフローサービスをホストする WCF サービスを作成します。これは、web サービスのようにアクセスできるワークフローです。 この他に、XAML プログラミング モデルや命令型プログラミング モデルのテンプレートも用意されています。 これらのテンプレートを使用すると、シーケンシャル ワークフローやステート マシン ワークフローを作成できます。 これらの種類のワークフローの詳細について[は、「」を参照してください。ワークフロー](../windows-workflow-foundation/how-to-create-a-workflow.md)を作成します。 ワークフロープロジェクトの作成の詳細については、「[従来のワークフロープロジェクトの作成](/visualstudio/workflow-designer/creating-legacy-workflow-projects)」を参照してください。  
+ これらのテンプレートは、ワークフローサービスをホストする WCF サービスを作成します。これは、web サービスのようにアクセスできるワークフローです。 この他に、XAML プログラミング モデルや命令型プログラミング モデルのテンプレートも用意されています。 これらのテンプレートを使用すると、シーケンシャル ワークフローやステート マシン ワークフローを作成できます。 これらの種類のワークフローの詳細については、「[方法: ワークフローを作成](../windows-workflow-foundation/how-to-create-a-workflow.md)する」を参照してください。 ワークフロープロジェクトの作成の詳細については、「[従来のワークフロープロジェクトの作成](/visualstudio/workflow-designer/creating-legacy-workflow-projects)」を参照してください。  
   
  コードベースのワークフローではなく、XOML 型のワークフローを使用すると、Visual Studio デザイナーの応答性が向上します。 XOML ワークフローは、既定で作成されるワークフロー型です。  
   
 ### <a name="wcf-syndication-service-library-template"></a>WCF 配信サービス ライブラリ テンプレート  
- このテンプレートを使用すると、RSS または ATOM 形式のフィードを WCF サービスとして公開できます。 詳細については、「 [WCF 配信](../../../docs/framework/wcf/feature-details/wcf-syndication.md)」を参照してください。  
+ このテンプレートを使用すると、RSS または ATOM 形式のフィードを WCF サービスとして公開できます。 詳細については、「 [WCF 配信](./feature-details/wcf-syndication.md)」を参照してください。  
   
 #### <a name="changing-the-address-of-the-feed"></a>フィードのアドレスの変更  
  配信テンプレートは、実行中に Internet Explorer を使用します。 Visual Studio の**ソリューションエクスプローラー**でプロジェクトを右クリックし、 **[プロパティ]** を選択し、 **[デバッグ]** タブを選択すると、テンプレートの既定のアドレスが表示されます。 Internet Explorer は、このアドレスにあるフィードを開きます。  
   
- フィードのアドレスを変更する場合は、 **[デバッグ]** タブのアドレスも変更する必要があります。これを変更しないと、Internet Explorer が既定のアドレスにあるフィードを開こうとして、エラーになります。  
+ フィードのアドレスを変更する場合は、 **[デバッグ]** タブのアドレスも変更する必要があります。この操作を行わないと、Internet Explorer は既定のアドレスでフィードを開こうとして失敗します。  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>AJAX 対応 WCF サービス項目テンプレート  
  このテンプレートは、AJAX コントロールを WCF サービスとして公開します。 AJAX コントロールの詳細については、 [ajax コントロールのドキュメント](https://go.microsoft.com/fwlink/?LinkId=96717)を参照してください。  
@@ -84,5 +84,5 @@ Windows Communication Foundation (WCF) Visual Studio テンプレートは、Vis
   
 ## <a name="see-also"></a>関連項目
 
-- [WCF サービス ホスト (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [WCF のテスト用クライアント (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [WCF サービス ホスト (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
+- [WCF のテスト用クライアント (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

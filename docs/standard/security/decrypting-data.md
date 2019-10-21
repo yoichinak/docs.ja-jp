@@ -179,7 +179,7 @@ class Class1
 
 格納する方法については後で、非対称キーを取得する方法とセキュリティで保護された暗号化キー コンテナー内の非対称キーを参照してください[方法。キー コンテナーに非対称キーを格納](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)します。
 
-次の例は、対称キーと IV を表す 2 つのバイト配列の復号化を示しています。 第三者に簡単に送信できる形式で <xref:System.Security.Cryptography.RSACryptoServiceProvider> オブジェクトから非対称の公開キーを抽出する方法については、「 [Encrypting Data](../../../docs/standard/security/encrypting-data.md)というマネージ ストリームの値に初期化します。
+次の例は、対称キーと IV を表す 2 つのバイト配列の復号化を示しています。 第三者に簡単に送信できる形式で <xref:System.Security.Cryptography.RSACryptoServiceProvider> オブジェクトから非対称の公開キーを抽出する方法については、「 [データの暗号化](../../../docs/standard/security/encrypting-data.md)というマネージ ストリームの値に初期化します。
 
 ```vb
 'Create a new instance of the RSACryptoServiceProvider class.

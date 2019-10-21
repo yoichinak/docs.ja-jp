@@ -46,7 +46,7 @@ ms.locfileid: "70799257"
 
 使用できるインフラストラクチャ プラットフォームは多数あります。 [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) は、大規模で複雑なマイクロサービス システム向けに設計されています。 [Azure App Service](https://azure.microsoft.com/services/app-service/) は、ステートレス マイクロサービスに推奨されます。 「[コンテナー](#containers)」セクションで説明するように、Docker ベースのマイクロサービスの代替手段は、どのような種類のマイクロサービスのアプローチにも適しています。 これらすべてのプラットフォームでは .NET Core がサポートされるため、マイクロサービスをホストするには最適です。
 
-マイクロサービス アーキテクチャの詳細については、「[.NET Microservices:Architecture for Containerized .NET Applications](../architecture/microservices/index.md)」(.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ) を参照してください。
+マイクロサービス アーキテクチャの詳細については、「[.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ](../architecture/microservices/index.md)」を参照してください。
 
 ### <a name="containers"></a>コンテナー
 

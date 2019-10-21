@@ -2,12 +2,12 @@
 title: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 description: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との相違点およびそれぞれの用途について説明します。
 ms.date: 01/07/2019
-ms.openlocfilehash: c54287ea3e99ff7fe9faf02898b8c322b756e26f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914671"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522955"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 
@@ -17,7 +17,7 @@ ms.locfileid: "69914671"
 
 クライアントからマイクロサービスへの直接通信アーキテクチャを使用する方法が考えられます。 この方法では、図 4-12 に示すように、クライアント アプリは一部のマイクロサービスに直接要求することができます。
 
-![クライアントからマイクロサービスへの直接通信アーキテクチャを示す図。各アプリは個々のマイクロサービスと直接通信しています。](./media/image12.png)
+![クライアントからマイクロサービスへの通信アーキテクチャを示す図。](./media/direct-client-to-microservice-communication.png)
 
 **図 4-12**. クライアントからマイクロサービスへの直接通信アーキテクチャの使用
 
@@ -69,11 +69,11 @@ ms.locfileid: "69914671"
 
 図 4-13 は、いくつかのマイクロサービスのみを含む簡略化されたマイクロサービス ベースのアーキテクチャに、カスタム API ゲートウェイを組み込む方法を示しています。
 
-![カスタム サービスとして実装された API ゲートウェイの図。この場合、アプリは、要求を個々のマイクロサービスに転送するように構成された 1 つのエンドポイント (API ゲートウェイ) に接続されます。](./media/image13.png)
+![カスタム サービスとして実装された API ゲートウェイを示す図。](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/custom-service-api-gateway.png)
 
 **図 4-13**. カスタム サービスとして実装された API ゲートウェイの使用
 
-この例では、API ゲートウェイは、コンテナーとして実行されるカスタム ASP.NET Core WebHost サービスとして実装されます。
+アプリは、個々のマイクロサービスに要求を転送するように構成された 1 つのエンドポイント (API ゲートウェイ) に接続します。 この例では、API ゲートウェイは、コンテナーとして実行されるカスタム ASP.NET Core WebHost サービスとして実装されます。
 
 この図では、複数の異なるクライアント アプリに接続されている単一のカスタム API ゲートウェイ サービスを使用していることに注意してください。 クライアント アプリからの多くのさまざまな要件に基づいて API ゲートウェイ サービスが拡大し、進化するため、このことが重要なリスクになる可能性があります。 最終的に、これらのさまざまなニーズにより肥大化し、実際はモノシリック アプリケーションまたはモノシリック サービスにとてもよく似たものになる可能性があります。 そのため、API ゲートウェイを複数のサービスまたは複数のより小さい API ゲートウェイ (たとえば、クライアント アプリのフォーム ファクターの種類ごとに 1 つ) に分割することを強くお勧めします。
 
@@ -83,11 +83,11 @@ API ゲートウェイ パターンを実装するときには注意が必要で
 
 API ゲートウェイ層を複数の API ゲートウェイに分割するとき、ご利用のアプリケーションが複数のクライアント アプリを備えている場合は、それを複数の API ゲートウェイの種類を区別する際の第一の軸とすることで、各クライアント アプリのニーズに合わせた異なるファサードを用意できます。 このケースは "Backend for Frontend" ([BFF](https://samnewman.io/patterns/architectural/bff/)) と呼ばれるパターンです。次の図に示すように、このパターンでは、複数の内部マイクロサービスを裏で呼び出す特定のアダプター コードを実装することにより、各 API ゲートウェイが (クライアント フォーム ファクター ベースであっても) クライアント アプリの種類ごとに調整された異なる API を提供できます。
 
-![複数のカスタム API ゲートウェイを示す図。ここで、API ゲートウェイはクライアントの種類によって分離されています。モバイル クライアント用に 1 つと、Web クライアント用に 1 つです。 従来の Web アプリは、Web API ゲートウェイを使用する MVC マイクロサービスに接続されます。](./media/image13.1.png)
+![複数のカスタム API ゲートウェイを示す図。](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/multiple-custom-api-gateways.png)
 
 **図 4-13.1**. 複数のカスタム API ゲートウェイの使用
 
-前の図は、複数の細かい API ゲートウェイを使用する単純化されたアーキテクチャを示しています。 このケースでは、各 API ゲートウェイに対して指定された境界は純粋に "Backend for Frontend" ([BFF](https://samnewman.io/patterns/architectural/bff/)) パターンに基づくものであり、したがって、各クライアント アプリで必要とされる API にのみ基づいています。 しかし、より大規模なアプリケーションではさらに、設計の第二の軸としてビジネス境界に基づく追加の API ゲートウェイを作成する必要があります。
+図 4-13.1 は、クライアントの種類別に分離された API ゲートウェイを示します。1 つはモバイル クライアント用で、もう 1 つは Web クライアント用です。 従来の Web アプリは、Web API ゲートウェイを使用する MVC マイクロサービスに接続されます。 この例は、複数の粒度の API ゲートウェイを使用した簡素化されたアーキテクチャを示しています。 このケースでは、各 API ゲートウェイに対して指定された境界は純粋に "Backend for Frontend" ([BFF](https://samnewman.io/patterns/architectural/bff/)) パターンに基づくものであり、したがって、各クライアント アプリで必要とされる API にのみ基づいています。 しかし、より大規模なアプリケーションではさらに、設計の第二の軸としてビジネス境界に基づく追加の API ゲートウェイを作成する必要があります。
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>API ゲートウェイ パターンの主な機能
 
@@ -128,11 +128,11 @@ API ゲートウェイ製品の実装によっては、さらに幅広い横断�
 
 [Azure API Management](https://azure.microsoft.com/services/api-management/) (図 4-14 を参照) では、API ゲートウェイのニーズを解決するだけでなく、API からの分析情報の収集などの機能も提供されます。 API 管理ソリューションを使用している場合、API ゲートウェイはその完全な API 管理ソリューション内の単なるコンポーネントです。
 
-![Azure API Management では、ログ記録、セキュリティ、使用状況測定など、API ゲートウェイおよび管理の両方のニーズが解決されます。](./media/api-gateway-azure-api-management.png)
+![Azure API Management を API ゲートウェイとして使用する方法を示す図](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/api-gateway-azure-api-management.png)
 
 **図 4-14**. API ゲートウェイでの Azure API Management の使用
 
-この場合、Azure API Management などの製品を使用する際に単一の API ゲートウェイを使用することはそれほど危険ではありません。この種の API ゲートウェイは "細かい" ためです。つまり、モノシリック コンポーネントに進化する可能性のあるカスタム C# コードを実装することはありません。 
+Azure API Management では、ログ記録、セキュリティ、使用状況測定など、API ゲートウェイおよび管理の両方のニーズが解決されます。この場合、Azure API Management などの製品を使用する際に単一の API ゲートウェイを使用することはそれほど危険ではありません。この種の API ゲートウェイは "細かい" ためです。つまり、モノシリック コンポーネントに進化する可能性のあるカスタム C# コードを実装することはありません。 
 
 API ゲートウェイ製品は通常、イングレス通信のリバース プロキシに近い動作をします。ここでは内部マイクロサービスから API をフィルター処理し、さらにこの単一層で公開された API に承認を適用することもできます。
 

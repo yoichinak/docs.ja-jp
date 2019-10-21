@@ -41,7 +41,7 @@ ms.locfileid: "64642797"
   
 - 式が上記の要件リストを満たしていない場合は、制約リストから削除します。  
   
-- 式でインターフェイスまたはクラスを参照する場合、コンパイラにそのインターフェイスまたはクラスへのアクセス権があることを確認します。 その名前を修飾し、プロジェクトに参照を追加することが必要な場合があります。 詳細についてを参照してください「の参照をプロジェクト」 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)します。  
+- 式でインターフェイスまたはクラスを参照する場合、コンパイラにそのインターフェイスまたはクラスへのアクセス権があることを確認します。 その名前を修飾し、プロジェクトに参照を追加することが必要な場合があります。 詳細については、[宣言された要素への参照 (Visual Basic)](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)の中の 'プロジェクトへの参照' をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 

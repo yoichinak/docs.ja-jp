@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 98893470b64de4abf7f04817871e3053bf25b86d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 8a92a426ac2c5eee6fba40bfc46281420466d648
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119102"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237401"
 ---
 ### <a name="jsonelement-api-changes"></a>JsonElement API の変更
 
@@ -33,14 +33,13 @@ ms.locfileid: "71119102"
 
 1. `WriteValue` は <xref:System.Text.Json.JsonElement.WriteTo%2A> に名前変更されました。 これは、次などのコードに影響します。
 
-```csharp
-using (JsonDocument doc = JsonDocument.Parse(jsonString))
-{
-    JsonElement root = doc.RootElement;
-    root.WriteValue(writer);
-}
-
-```
+   ```csharp
+    using (JsonDocument doc = JsonDocument.Parse(jsonString))
+    {
+        JsonElement root = doc.RootElement;
+        root.WriteValue(writer);
+    }
+    ```
 
 1. <xref:System.Text.Json.JsonElement.WriteTo%2A> で、それのメソッド パラメーターが `null` の場合に、<xref:System.ArgumentNullException> がスローされるようになりました。
 

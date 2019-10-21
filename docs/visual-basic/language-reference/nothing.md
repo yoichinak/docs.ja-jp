@@ -24,7 +24,7 @@ ms.locfileid: "69963757"
 ## <a name="remarks"></a>Remarks  
  `Nothing`データ型の既定値を表します。 既定値は、変数が値型であるか、参照型であるかによって異なります。  
   
- *値型*の変数には、その値が直接含まれています。 値型には、すべての数値`Boolean`データ`Char`型`Date`、、、、すべての構造体、およびすべての列挙が含まれます。 *参照型*の変数は、メモリ内のオブジェクトのインスタンスへの参照を格納します。 参照型には、クラス、配列、デリゲート、および文字列が含まれます。 詳細については、「 [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。  
+ *値型*の変数には、その値が直接含まれています。 値型には、すべての数値`Boolean`データ`Char`型`Date`、、、、すべての構造体、およびすべての列挙が含まれます。 *参照型*の変数は、メモリ内のオブジェクトのインスタンスへの参照を格納します。 参照型には、クラス、配列、デリゲート、および文字列が含まれます。 詳細については、「 [値型と参照型](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。  
   
  変数が値型の場合、の`Nothing`動作は、変数が null 許容型かどうかによって異なります。 Null 許容値型を表すには、 `?`型名に修飾子を追加します。 Null `Nothing`許容変数に割り当てると、値が`null`に設定されます。 詳細と例については、「 [Null 許容値型](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)」を参照してください。  
   

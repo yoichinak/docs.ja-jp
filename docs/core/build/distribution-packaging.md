@@ -2,14 +2,14 @@
 title: .NET Core の配布パッケージ
 description: .NET Core を配布用にパッケージ化、名前付け、およびバージョン管理する方法について説明します。
 author: tmds
-ms.date: 03/02/2018
+ms.date: 10/09/2019
 ms.custom: seodec18
-ms.openlocfilehash: d72677cba1e7685f8e05cf479ec508683dd77b55
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394160"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393584"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core の配布パッケージ
 
@@ -23,37 +23,37 @@ ms.locfileid: "70394160"
 インストールした .NET Core は複数のコンポーネントで構成されています。コンポーネントは、ファイルシステムで次のようにレイアウトされています。
 
 ```
-.
+{dotnet_root}                                     (*)
 ├── dotnet                       (1)
 ├── LICENSE.txt                  (8)
 ├── ThirdPartyNotices.txt        (8)
-├── host
-│   └── fxr
+├── host                                          (*)
+│   └── fxr                                       (*)
 │       └── <fxr version>        (2)
-├── sdk
+├── sdk                                           (*)
 │   ├── <sdk version>            (3)
-│   └── NuGetFallbackFolder      (4)
-├── packs
-│   ├── Microsoft.AspNetCore.App.Ref
+│   └── NuGetFallbackFolder      (4)              (*)
+├── packs                                         (*)
+│   ├── Microsoft.AspNetCore.App.Ref              (*)
 │   │   └── <aspnetcore ref version>     (11)
-│   ├── Microsoft.NETCore.App.Ref
+│   ├── Microsoft.NETCore.App.Ref                 (*)
 │   │   └── <netcore ref version>        (12)
-│   ├── Microsoft.NETCore.App.Host.<rid>
+│   ├── Microsoft.NETCore.App.Host.<rid>          (*)
 │   │   └── <apphost version>            (13)
-│   ├── Microsoft.WindowsDesktop.App.Ref
+│   ├── Microsoft.WindowsDesktop.App.Ref          (*)
 │   │   └── <desktop ref version>        (14)
-│   └── NETStandard.Library.Ref
+│   └── NETStandard.Library.Ref                   (*)
 │       └── <netstandard version>        (15)
-├── shared
-│   ├── Microsoft.NETCore.App
+├── shared                                        (*)
+│   ├── Microsoft.NETCore.App                     (*)
 │   │   └── <runtime version>     (5)
-│   ├── Microsoft.AspNetCore.App
+│   ├── Microsoft.AspNetCore.App                  (*)
 │   │   └── <aspnetcore version>  (6)
-│   ├── Microsoft.AspNetCore.All
+│   ├── Microsoft.AspNetCore.All                  (*)
 │   │   └── <aspnetcore version>  (6)
-│   └── Microsoft.WindowsDesktop.App
+│   └── Microsoft.WindowsDesktop.App              (*)
 │       └── <desktop app version> (7)
-└── templates
+└── templates                                     (*)
 │   └── <templates version>      (17)
 /
 ├── etc/dotnet
@@ -72,7 +72,7 @@ ms.locfileid: "70394160"
 
 - (3) **sdk/\<sdk バージョン>** SDK (別名 "ツール") は、.NET Core のライブラリやアプリケーションを記述し、ビルドするために使用されるマネージド ツールのセットです。 SDK には、.NET Core コマンドライン インターフェイス (CLI)、マネージ言語コンパイラ、MSBuild、関連するビルド タスクとターゲット、NuGet、新しいプロジェクト テンプレートなどが含まれています。
 
-- (4) **sdk/NuGetFallbackFolder** には、`dotnet restore` や `dotnet build /t:Restore` の実行時など、復元操作中に SDK によって使用される NuGet パッケージのキャッシュが含まれています。 このフォルダーは、.NET Core 3.0 より前でのみ使用されます。 `nuget.org` からの構築済みのバイナリ アセットを含むため、ソースから作成することはできません。
+- (4) **sdk/NuGetFallbackFolder** には、`dotnet restore` や `dotnet build` の実行時など、復元操作中に SDK によって使用される NuGet パッケージのキャッシュが含まれています。 このフォルダーは、.NET Core 3.0 より前でのみ使用されます。 `nuget.org` からの構築済みのバイナリ アセットを含むため、ソースから作成することはできません。
 
 **共有**フォルダーには、フレームワークが含まれています。 共有フレームワークは、さまざまなアプリケーションで利用できるように、中央の場所で一連のライブラリを提供します。
 
@@ -94,9 +94,11 @@ ms.locfileid: "70394160"
 
 - (15) **NETStandard.Library.Ref** には、netstandard `x.y` の API が記述されています。 これらのファイルは、そのターゲットに対してコンパイルする場合に使用されます。
 
-- (16) **/etc/dotnet/install_location** は、`dotnet` ホスト バイナリを含むフォルダーへの完全なパスを含むファイルです。 このパスは、改行で終了できる場合があります。 ルートが `/usr/share/dotnet` の場合は、このファイルを追加する必要はありません。
+- (16) **/etc/dotnet/install_location** は、`{dotnet_root}` の完全なパスを含むファイルです。 パスの末尾は改行文字である場合があります。 ルートが `/usr/share/dotnet` の場合は、このファイルを追加する必要はありません。
 
 - (17) **templates** には、SDK で使用されるテンプレートが含まれます。 たとえば、`dotnet new` はここからプロジェクト テンプレートを検索します。
+
+`(*)` でマークされたフォルダーは、複数のパッケージによって使用されます。 一部のパッケージ形式 (たとえば、`rpm`) では、このようなフォルダーを特別に処理する必要があります。 パッケージのメンテナンス担当者は、このことに対処する必要があります。
 
 ## <a name="recommended-packages"></a>推奨パッケージ
 
@@ -113,7 +115,7 @@ SDK バージョンは同じ `[major].[minor]` を利用し、SDK の機能と�
   - **バージョン:** \<ランタイム バージョン>
   - **例:** dotnet-sdk-2.1
   - **内容:** (3),(4)
-  - **依存関係:** `aspnetcore-runtime-[major].[minor]`、`dotnet-targeting-pack-[major].[minor]`、`aspnetcore-targeting-pack-[major].[minor]`、`netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`、`dotnet-apphost-pack-[major].[minor]`、`dotnet-templates-[major].[minor]`
+  - **依存関係:** `dotnet-runtime-[major].[minor]`、`aspnetcore-runtime-[major].[minor]`、`dotnet-targeting-pack-[major].[minor]`、`aspnetcore-targeting-pack-[major].[minor]`、`netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`、`dotnet-apphost-pack-[major].[minor]`、`dotnet-templates-[major].[minor]`
 
 - `aspnetcore-runtime-[major].[minor]`: 特定の ASP.NET Core ランタイムをインストールします
   - **バージョン:** \<aspnetcore ランタイム バージョン>
@@ -130,13 +132,13 @@ SDK バージョンは同じ `[major].[minor]` を利用し、SDK の機能と�
   - **バージョン:** \<ランタイム バージョン>
   - **例:** dotnet-runtime-2.1
   - **内容:** (5)
-  - **依存関係:** `dotnet-hostfxr:<runtime version>+`、`dotnet-runtime-deps-[major].[minor]`
+  - **依存関係:** `dotnet-hostfxr-[major].[minor]`、`dotnet-runtime-deps-[major].[minor]`
 
-- `dotnet-hostfxr`: 依存関係
+- `dotnet-hostfxr-[major].[minor]`: 依存関係
   - **バージョン:** \<ランタイム バージョン>
-  - **例:** dotnet-hostfxr
+  - **例:**  dotnet-hostfxr-3.0
   - **内容:** (2)
-  - **依存関係:** `host:<runtime version>+`
+  - **依存関係:** `dotnet-host`
 
 - `dotnet-host`: 依存関係
   - **バージョン:** \<ランタイム バージョン>
@@ -155,7 +157,7 @@ SDK バージョンは同じ `[major].[minor]` を利用し、SDK の機能と�
   - **バージョン:** \<aspnetcore ランタイム バージョン>
   - **内容:** (11)
 
-- `netstandard-targeting-pack-[major].[minor]`: netstandard バージョンを対象にできます
+- `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`: netstandard バージョンを対象にできます
   - **バージョン:** \<sdk バージョン>
   - **内容:** (15)
 
@@ -165,9 +167,9 @@ SDK バージョンは同じ `[major].[minor]` を利用し、SDK の機能と�
 
 `dotnet-runtime-deps-[major].[minor]` では、_ディストリビューション固有の依存関係_を理解している必要があります。 ディストリビューションのビルド システムは、これを自動的に得ることができる可能性があるため、このパッケージは省略可能です。これらの場合、これらの依存関係は `dotnet-runtime-[major].[minor]` パッケージに直接追加されます。
 
-パッケージの内容がバージョン付きフォルダーにある場合、`[major].[minor]` のパッケージ名はバージョン付きのフォルダー名と同じになります。 `netstandard-targeting-pack-[major].[minor]` を除くすべてのパッケージでは、これは .NET Core バージョンとも同じになります。
+パッケージの内容がバージョン付きフォルダーにある場合、`[major].[minor]` のパッケージ名はバージョン付きのフォルダー名と同じになります。 `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]` を除くすべてのパッケージでは、これは .NET Core バージョンとも同じになります。
 
-パッケージ間の依存関係では、_以上_ のバージョン要件を使用する必要があります。 たとえば、`dotnet-sdk-2.2:2.2.401` には `aspnetcore-runtime-2.2 >= 2.2.6` が必要です。 これにより、ユーザーは (`dnf update dotnet-sdk-2.2` などの) ルート パッケージを使用してインストールをアップグレードできます。
+パッケージ間の依存関係では、バージョン要件_以上_を使用する必要があります。 たとえば、`dotnet-sdk-2.2:2.2.401` には `aspnetcore-runtime-2.2 >= 2.2.6` が必要です。 これにより、ユーザーはルート パッケージ (たとえば、`dnf update dotnet-sdk-2.2`) を使用してインストールをアップグレードできます。
 
 ほとんどのディストリビューションで、ソースからビルドするすべての成果物を必要とします。 これはパッケージにいくつかの影響を与えます。
 

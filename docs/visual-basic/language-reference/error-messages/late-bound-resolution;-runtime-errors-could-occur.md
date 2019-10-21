@@ -15,7 +15,7 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64661948"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>遅延バインドの解決です。ランタイム エラーが発生する可能性があります。
-オブジェクトが宣言する変数に割り当てられている、 [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)します。  
+オブジェクトが宣言する変数に割り当てられている、 [Object データ型](../../../visual-basic/language-reference/data-types/object-data-type.md)します。  
   
  として変数を宣言するときに`Object`、コンパイラを実行する必要があります*遅延バインディング*、実行時に余分な処理を停止します。 また、アプリケーションで実行時エラーが発生する可能性があります。 割り当てる場合など、<xref:System.Windows.Forms.Form>を`Object`変数にアクセスしようと、<xref:System.Xml.XmlDocument.NameTable%2A?displayProperty=nameWithType>プロパティ、ランタイムは、スロー、<xref:System.MemberAccessException>ため、<xref:System.Windows.Forms.Form>クラスを公開しません、`NameTable`プロパティ。  
   

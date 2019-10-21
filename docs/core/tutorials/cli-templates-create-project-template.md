@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 3455720d729f813d9b6f32e433adffa4dc40dce4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926134"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318279"
 ---
 # <a name="tutorial-create-a-project-template"></a>チュートリアル: プロジェクト テンプレートを作成する
 
@@ -159,7 +159,7 @@ Worker Service                                    worker                [C#]    
 
 ### <a name="test-the-project-template"></a>プロジェクト テンプレートをテストする
 
-項目テンプレートをインストールしたので、テストします。 _test_ フォルダーに移動し、`dotnet new console` を使用して新しいコンソール アプリケーションを作成します。 これにより、`dotnet run` コマンドを使用して簡単にテストできる作業プロジェクトが生成されます。
+項目テンプレートをインストールしたので、テストします。 _test_ フォルダーに移動し、`dotnet new consoleasync` を使用して新しいコンソール アプリケーションを作成します。 これにより、`dotnet run` コマンドを使用して簡単にテストできる作業プロジェクトが生成されます。
 
 ```console
 C:\test> dotnet new consoleasync

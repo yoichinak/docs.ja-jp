@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895259"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835248"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic の新機能
 
@@ -26,15 +26,15 @@ Visual Basic 16.0/Visual Studio 2019 バージョン 16.0
 
 ## <a name="previous-versions"></a>以前のバージョン
 
-Visual Basic 15.8 / Visual Studio 2017 バージョン 15.8 新機能については、「[Visual Basic 15.8](#visual-basic-158)」をご覧ください
+Visual Basic 15.8 / Visual Studio 2017 バージョン 15.8 新機能については、「[Visual Basic 15.8](#visual-basic-158)」を参照してください。
 
-Visual Basic 15.5 / Visual Studio 2017 バージョン 15.5 新機能については、「[Visual Basic 15.5](#visual-basic-155)」をご覧ください
+Visual Basic 15.5 / Visual Studio 2017 バージョン 15.5 新機能については、「[Visual Basic 15.5](#visual-basic-155)」を参照してください。
 
-Visual Basic 15.3 / Visual Studio 2017 バージョン 15.3 新機能については、「[Visual Basic 15.3](#visual-basic-153)」をご覧ください
+Visual Basic 15.3 / Visual Studio 2017 バージョン 15.3 新機能については、「[Visual Basic 15.3](#visual-basic-153)」を参照してください。
 
-Visual Basic 2017 / Visual Studio 2017 新機能については、「[Visual Basic 2017](#visual-basic-2017)」をご覧ください
+Visual Basic 2017 / Visual Studio 2017 新機能については、「[Visual Basic 2017](#visual-basic-2017)」を参照してください。
 
-Visual Basic / Visual Studio 2015 新機能については、「[Visual Basic 14](#visual-basic-14)」をご覧ください
+Visual Basic / Visual Studio 2015 新機能については、「[Visual Basic 14](#visual-basic-14)」を参照してください。
 
 Visual Basic / Visual Studio 2013 .NET Compiler Platform ("Roslyn") のテクノロジのプレビュー
 

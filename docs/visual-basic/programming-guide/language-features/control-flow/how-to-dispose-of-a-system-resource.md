@@ -1,5 +1,5 @@
 ---
-title: '方法: システム リソース (Visual Basic) を破棄します。'
+title: '方法: システム リソースを破棄する (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c780ee1a174ad044593960bc30a3ee2e1f929390
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906738"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583143"
 ---
-# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>方法: システム リソース (Visual Basic) を破棄します。
-使用することができます、`Using`システムは、コード ブロックの終了時に、リソースの破棄を保証するためにブロックします。 これは、大量のメモリを使用すること、またはその他のコンポーネントが使用する必要も、システム リソースを使用している場合に便利です。  
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>方法: システム リソースを破棄する (Visual Basic)
+@No__t_0 ブロックを使用すると、コードがブロックを終了したときに、システムがリソースを破棄することを保証できます。 これは、大量のメモリを消費するシステムリソースを使用している場合や、他のコンポーネントでも使用する必要がある場合に便利です。  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>コードの後に、データベース接続を破棄するには  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>コードが終了したときにデータベース接続を破棄するには  
   
-1. 適切なを含めるかどうかを確認[Imports ステートメント (.NET Namespace よぶ型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)ソース ファイルの先頭にあるデータベース接続のため (この場合、 <xref:System.Data.SqlClient>)。  
+1. ソースファイルの先頭に、データベース接続に適した[Imports ステートメント (.Net 名前空間と型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)が含まれていることを確認してください (この場合は <xref:System.Data.SqlClient>)。  
   
-2. 作成、`Using`ブロックと一緒に、`Using`と`End Using`ステートメント。 ブロックの内部には、データベース接続を処理するコードを配置します。  
+2. @No__t_1 ステートメントと `End Using` ステートメントを使用して、`Using` ブロックを作成します。 ブロック内で、データベース接続を扱うコードを配置します。  
   
-3. 接続を宣言しの一部として、インスタンスを作成、`Using`ステートメント。  
+3. 接続を宣言し、そのインスタンスを `Using` ステートメントの一部として作成します。  
   
-    ```  
+    ```vb  
     ' Insert the following line at the beginning of your source file.  
     Imports System.Data.SqlClient  
     Public Sub AccessSql(ByVal s As String)  
@@ -38,11 +38,11 @@ ms.locfileid: "61906738"
     End Sub  
     ```  
   
-     システムは、未処理の例外の大文字と小文字を含む、ブロックを終了する方法に関係なく、リソースを破棄します。  
+     ハンドルされない例外の場合を含め、ブロックを終了する方法に関係なく、システムはリソースを破棄します。  
   
-     アクセスすることはできません注`sqc`から外、`Using`ブロック、そのスコープは、ブロックに制限されます。  
+     スコープがブロックに限定されているため、`Using` ブロックの外部から `sqc` にアクセスできないことに注意してください。  
   
-     ファイル ハンドルまたは COM ラッパーなどのシステム リソースでは、この同じ手法を使用できます。 使用する、`Using`終了した後、その他のコンポーネントの使用可能なリソースのままにすることを確認するときにブロック、`Using`ブロックします。  
+     この同じ手法を、ファイルハンドルや COM ラッパーなどのシステムリソースでも使用できます。 @No__t_1 ブロックを終了した後で、リソースを他のコンポーネントで使用できるようにする場合は、`Using` ブロックを使用します。  
   
 ## <a name="see-also"></a>関連項目
 
