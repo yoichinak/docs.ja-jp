@@ -122,7 +122,7 @@ Visual Basic でのステートメントは、完全な命令です。 これは
 
 変換先の要素に適切なデータ型の変数、プロパティ、または配列要素に割り当てる値がある必要があります。 一般に、目的の要素のと同じデータ型の値を生成しようとする必要があります。 ただし、一部の種類は、割り当ての際に他の型に変換できます。
 
-データ型の間で変換する方法については、次を参照してください。 [Visual Basic における型変換](./data-types/type-conversions.md)します。 簡単に言うと Visual Basic は、他の型、拡大変換に指定された型の値を自動的に変換します。 A*拡大変換*は 1 つを常に実行時に成功すると、すべてのデータが失われない。 Visual Basic の変換など、`Integer`値を`Double`適切な場合、ため`Integer`に拡大変換されます`Double`します。 詳細については、「 [Widening and Narrowing Conversions](./data-types/widening-and-narrowing-conversions.md)」を参照してください。
+データ型の間で変換する方法については、次を参照してください。 [Visual Basic における型変換](./data-types/type-conversions.md)します。 簡単に言うと Visual Basic は、他の型、拡大変換に指定された型の値を自動的に変換します。 A*拡大変換*は 1 つを常に実行時に成功すると、すべてのデータが失われない。 Visual Basic の変換など、`Integer`値を`Double`適切な場合、ため`Integer`に拡大変換されます`Double`します。 詳細については、[拡大変換と縮小変換](./data-types/widening-and-narrowing-conversions.md)に関するページを参照してください。
 
 *縮小変換*(拡大変換がないもの) の実行時に、エラーまたはデータ損失のリスクを実行します。 縮小変換を明示的に実行するには、型変換関数を使用して、または暗黙的に設定してすべての変換を実行するコンパイラに指示できます`Option Strict Off`します。 詳細については、次を参照してください。[暗黙的および明示的な変換](./data-types/implicit-and-explicit-conversions.md)します。
 

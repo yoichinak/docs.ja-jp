@@ -100,7 +100,7 @@ End Module
  シャドウは、オーバーライドと混同しないようにしてください。 どちらも、派生クラスが基底クラスから継承し、宣言された1つの要素を別の要素で再定義するときに使用されます。 ただし、2つの間には大きな違いがあります。 比較については、「[シャドウとオーバーライドの違い](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)」を参照してください。  
   
 ## <a name="shadowing-and-overloading"></a>シャドウとオーバーロード  
- 派生クラス内の複数の要素を持つ同じ基底クラス要素をシャドウする場合、シャドウされる要素は、その要素のオーバーロードされたバージョンになります。 詳細については、「 [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。  
+ 派生クラス内の複数の要素を持つ同じ基底クラス要素をシャドウする場合、シャドウされる要素は、その要素のオーバーロードされたバージョンになります。 詳細については、[プロシージャのオーバーロード (Visual Basic)](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)に関するページを参照してください。  
   
 ## <a name="accessing-a-shadowed-element"></a>シャドウ要素へのアクセス  
  派生クラスから要素にアクセスする場合、通常は、その派生クラスの現在のインスタンスを使用します。そのためには、要素名を `Me` キーワードで修飾します。 派生クラスが基底クラスの要素をシャドウする場合、基本クラス要素にアクセスするには、@no__t 0 キーワードを使用して修飾します。  

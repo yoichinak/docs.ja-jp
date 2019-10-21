@@ -26,7 +26,7 @@ ms.locfileid: "64648732"
   
 - **行の長さ。** 最大 65535 文字でソース コードの物理的な行があります。 論理ソース コード行は行継続文字を使用する場合は、長くすることはできます。 「[方法:分割および連結コード内でステートメント](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)します。  
   
-- **配列の次元。** これは、配列に対して宣言できるディメンションの最大数です。 これにより、インデックスの配列要素を指定する際の数が制限されます。 参照してください[Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)します。  
+- **配列の次元。** これは、配列に対して宣言できるディメンションの最大数です。 これにより、インデックスの配列要素を指定する際の数が制限されます。 参照してください[Visual Basic における配列のディメンション](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)します。  
   
 - **文字列の長さ。** これは、1 つの文字列に格納できる Unicode 文字の最大数です。 参照してください[文字列データ型](../../../visual-basic/language-reference/data-types/string-data-type.md)します。  
   

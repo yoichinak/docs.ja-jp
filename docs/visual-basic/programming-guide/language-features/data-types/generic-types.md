@@ -126,7 +126,7 @@ ms.locfileid: "65593386"
   
  複数の要件を指定する場合は、コンマで区切られた *制約リスト* を中かっこ (`{ }`) で囲みます。 含めるをアクセス可能のコンス トラクターを必要とする、 [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)キーワードをリストにします。 参照型であることを必須とするには、 `Class` キーワードを追加し、値型であることを必須とするには、 `Structure` キーワードを追加します。  
   
- 制約の詳細については、「 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
+ 制約の詳細については、[型リスト](../../../../visual-basic/language-reference/statements/type-list.md)に関するページをご覧ください。  
   
 ### <a name="example-of-multiple-constraints"></a>複数の制約の例  
  次の例は、型パラメーターに制約リストがあるジェネリック クラスのスケルトン定義を示しています。 このクラスのインスタンスを作成するコードでは、型引数が <xref:System.IComparable> インターフェイスと <xref:System.IDisposable> インターフェイスの両方を実装し、参照型であり、アクセス可能なパラメーターなしのコンストラクターを公開する必要があります。  

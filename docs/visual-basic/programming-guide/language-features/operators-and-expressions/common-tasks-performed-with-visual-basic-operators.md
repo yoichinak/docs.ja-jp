@@ -44,12 +44,12 @@ ms.locfileid: "61864859"
   
 |目的|参照トピック|  
 |---|---|  
-|2 つの値が等しいかどうかを確認します。|`=` 演算子 ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|2 つの値が等しくないかどうかを判断します。|`<>` 演算子 ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|1 つの値が他よりも小さいかどうかを確認します。|`<` 演算子 ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|1 つの値がもう一方を超えるかどうかを確認します。|`>` 演算子 ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|1 つの値が別に小さいかどうかを確認します。|`<=` 演算子 ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|1 つの値がより大きいまたは相互に等しいかどうかを確認します。|`>=` 演算子 ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|2 つの値が等しいかどうかを確認します。|`=` 演算子 ([Visual Basic における比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|2 つの値が等しくないかどうかを判断します。|`<>` 演算子 ([Visual Basic における比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|1 つの値が他よりも小さいかどうかを確認します。|`<` 演算子 ([Visual Basic における比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|1 つの値がもう一方を超えるかどうかを確認します。|`>` 演算子 ([Visual Basic における比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|1 つの値が別に小さいかどうかを確認します。|`<=` 演算子 ([Visual Basic における比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|1 つの値がより大きいまたは相互に等しいかどうかを確認します。|`>=` 演算子 ([Visual Basic における比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
 |2 つのオブジェクト変数が同じオブジェクト インスタンスを参照しているかどうか判断します。|[Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)|  
 |2 つのオブジェクト変数が別のオブジェクトのインスタンスを参照しているかどうかを判断します。|[IsNot 演算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
 |オブジェクトが特定の型かどうかを確認します。|[TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  

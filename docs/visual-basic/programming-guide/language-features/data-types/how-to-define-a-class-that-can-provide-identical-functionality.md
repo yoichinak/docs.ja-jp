@@ -56,7 +56,7 @@ ms.locfileid: "67757399"
   
     - パラメーターなしのコンストラクターを公開する  
   
-     制約を指定しない場合、コードで使用できる演算とメンバーは、 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)でサポートされるものだけになります。 詳細については、「 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)」を参照してください。  
+     制約を指定しない場合、コードで使用できる演算とメンバーは、 [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)でサポートされるものだけになります。 詳細については、「[Type List](../../../../visual-basic/language-reference/statements/type-list.md)」を参照してください。  
   
 5. 渡された型を使って宣言する必要のある各クラス メンバーを識別し、それを `As` `typeparameter`として宣言します。 これは、内部ストレージ、プロシージャのパラメーター、戻り値に適用されます。  
   
