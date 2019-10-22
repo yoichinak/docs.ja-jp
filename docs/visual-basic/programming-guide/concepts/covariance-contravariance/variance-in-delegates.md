@@ -1,5 +1,5 @@
 ---
-title: デリゲートの分散 (Visual Basic)
+title: デリゲートの変性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
 ms.openlocfilehash: 0c52fd3fb36162de16a91a85088018f4f579611c
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/21/2019
 ms.locfileid: "69664351"
 ---
-# <a name="variance-in-delegates-visual-basic"></a>デリゲートの分散 (Visual Basic)
+# <a name="variance-in-delegates-visual-basic"></a>デリゲートの変性 (Visual Basic)
 
 .NET Framework 3.5 では、および Visual Basic のC#すべてのデリゲートのデリゲート型を使用して、メソッドシグネチャの照合がサポートされるようになりました。 つまり、シグネチャが一致するメソッドだけでなく、デリゲート型で指定された型よりも強い派生型を返す (共変性) メソッドや、弱い派生型のパラメーターを受け取る (反変性) メソッドを、デリゲートに割り当てることができます。 これには、汎用デリゲートと非汎用デリゲートの両方が含まれます。
 

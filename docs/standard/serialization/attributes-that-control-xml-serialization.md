@@ -41,7 +41,7 @@ ms.locfileid: "61794967"
   
  <xref:System.Xml.Serialization> 名前空間にあるこれらの属性の他に、<xref:System.ComponentModel.DefaultValueAttribute> 属性もフィールドに適用できます。 **DefaultValueAttribute** は、メンバーの値が指定されていない場合に、メンバーに自動的に割り当てられる値を設定します。  
   
- エンコード済みの SOAP XML シリアル化を制御する場合は、「[Attributes That Control Encoded SOAP Serialization](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)」(エンコード済み SOAP シリアル化を制御する属性) を参照してください。  
+ エンコード済みの SOAP XML シリアル化を制御する場合は、「[エンコード済み SOAP シリアル化を制御する属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

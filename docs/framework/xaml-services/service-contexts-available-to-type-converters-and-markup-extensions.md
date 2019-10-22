@@ -129,7 +129,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **サービス API:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
- 遅延コンテンツを統合するには、同じスキーマ コンテキストを遅延領域に対しても適用する必要があるので、遅延読み込み操作には XAML スキーマ コンテキストが必要です。 XAML スキーマ コンテキストの役割の詳細については、「 [XAML Services](index.md)」を参照してください。  
+ 遅延コンテンツを統合するには、同じスキーマ コンテキストを遅延領域に対しても適用する必要があるので、遅延読み込み操作には XAML スキーマ コンテキストが必要です。 XAML スキーマ コンテキストの役割の詳細については、「 [XAML サービス](index.md)」を参照してください。  
   
 ### <a name="irootobjectprovider"></a>IRootObjectProvider  
  **リファレンス ドキュメント**: <xref:System.Xaml.IRootObjectProvider>  
@@ -169,7 +169,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **定義元:**  <xref:System.Xaml> 名前空間、System.Xaml アセンブリ  
   
- **関連:** `x:Name` 、`x:Reference`、またはフレームワーク固有の手法によって識別されるオブジェクトを解決する、読み込みパスのオブジェクトグラフ定義。  
+ **関連:**`x:Name` 、`x:Reference`、またはフレームワーク固有の手法によって識別されるオブジェクトを解決する、読み込みパスのオブジェクトグラフ定義。  
   
  **サービス API:**  <xref:System.Xaml.IXamlNameResolver.Resolve%2A>、前方参照を処理する場合などの高度なシナリオで使用されるその他の API。  
   

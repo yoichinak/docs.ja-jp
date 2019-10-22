@@ -1,28 +1,28 @@
 ---
-title: 'チュートリアル: ONNX と ML.NET でディープ ラーニングを使用してオブジェクトを検出する'
+title: チュートリアル:ONNX と ML.NET でディープ ラーニングを使用してオブジェクトを検出する
 description: このチュートリアルでは、ML.NET の事前トレーニング済みの ONNX ディープ ラーニング モデルを使用して画像内のオブジェクトを検出する方法について説明します。
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4856608e2c944c3a0fee65a328076bf1581f3d2a
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: f31c5155dd3ca59b1a370599b3ffabb2648791b1
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332635"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318529"
 ---
-# <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>チュートリアル: ML.NET で ONNX を使用してオブジェクトを検出する
+# <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>チュートリアル:ML.NET で ONNX を使用してオブジェクトを検出する
 
 ML.NET の事前トレーニング済みの ONNX モデルを使用して画像内のオブジェクトを検出する方法について説明します。
 
 オブジェクト検出モデルを最初からトレーニングするには、数百万のパラメーター、大量のラベル付きトレーニング データ、膨大な量の計算リソース (数百時間の GPU) を設定する必要があります。 事前トレーニング済みモデルを使用すると、トレーニング プロセスをショートカットできます。
 
-このチュートリアルでは、次の作業を行う方法について説明します。
+このチュートリアルでは、以下の内容を学習します。
 > [!div class="checklist"]
 >
-> - 問題を把握する
+> - 問題を理解する
 > - ONNX の概要と ML.NET でどのように動作するかについて説明します。
 > - モデルの概要
 > - 事前トレーニング済みモデルを再利用する
@@ -34,7 +34,7 @@ ML.NET の事前トレーニング済みの ONNX モデルを使用して画像�
 - [Microsoft.ML NuGet パッケージ](https://www.nuget.org/packages/Microsoft.ML/)
 - [Microsoft.ML.ImageAnalytics NuGet パッケージ](https://www.nuget.org/packages/Microsoft.ML.ImageAnalytics/)
 - [Microsoft.ML.OnnxTransformer NuGet パッケージ](https://www.nuget.org/packages/Microsoft.ML.OnnxTransformer/)
-- [Tiny YOLOv2 事前トレーニング済みモデル](https://github.com/onnx/models/tree/master/tiny_yolov2)
+- [Tiny YOLOv2 事前トレーニング済みモデル](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny_yolov2)
 - [Netron](https://github.com/lutzroeder/netron) (省略可能)
 
 ## <a name="onnx-object-detection-sample-overview"></a>ONNX オブジェクト検出サンプルの概要
@@ -84,16 +84,16 @@ Open Neural Network Exchange (ONNX) は、AI モデルのオープン ソース�
 
 ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得られたので、次はアプリケーションをビルドします。
 
-### <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
+### <a name="create-a-console-application"></a>コンソール アプリケーションの作成
 
 1. "ObjectDetection" という名前の **.NET Core コンソール アプリケーション**を作成します。
 
 1. **Microsoft.ML NuGet パッケージ**をインストールします。
 
-    - ソリューション エクスプローラーで、プロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。
+    - ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。
     - [パッケージ ソース] として "nuget.org" を選択し、[参照] タブを選択し、"**Microsoft.ML**" を検索します。
     - **[インストール]** ボタンを選択します。
-    - **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、**[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
+    - **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
     - **Microsoft.ML.ImageAnalytics** と **Microsoft.ML.OnnxTransformer** に対してこれらの手順を繰り返します。
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>データと事前トレーニング済みモデルを準備する
@@ -112,7 +112,7 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 1. 解凍したディレクトリから抽出した `model.onnx` ファイルを "*ObjectDetection*" プロジェクトの `assets\Model` ディレクトリにコピーし、名前を `TinyYolo2_model.onnx` に変更します。 このディレクトリには、このチュートリアルに必要なモデルが含まれています。
 
-1. ソリューション エクスプローラーで、資産ディレクトリとサブディレクトリ内の各ファイルを右クリックし、**[プロパティ]** を選択します。 **[詳細設定]** で、**[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
+1. ソリューション エクスプローラーで、資産ディレクトリとサブディレクトリ内の各ファイルを右クリックし、 **[プロパティ]** を選択します。 **[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
 
 ### <a name="create-classes-and-define-paths"></a>クラスを作成してパスを定義する
 
@@ -132,12 +132,12 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 入力データと予測クラスを格納する新しいディレクトリをプロジェクトに追加します。
 
-**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しいフォルダー]** を選択します。 ソリューション エクスプローラーに新しいフォルダーが表示されたら、"DataStructures" と名前を付けます。
+**ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しいフォルダー]** を選択します。 ソリューション エクスプローラーに新しいフォルダーが表示されたら、"DataStructures" と名前を付けます。
 
 新しく作成した "*DataStructures*" ディレクトリに入力データ クラスを作成します。
 
-1. **ソリューション エクスプローラー**で "*DataStructures*" ディレクトリを右クリックし、**[追加]** > **[新しい項目]** の順に選択します。
-1. **[新しい項目の追加]** ダイアログ ボックスで、**[クラス]** を選択し、**[名前]** フィールドを "*ImageNetData.cs*" に変更します。 次に **[追加]** を選択します。
+1. **ソリューション エクスプローラー**で "*DataStructures*" ディレクトリを右クリックし、 **[追加]**  >  **[新しい項目]** の順に選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを "*ImageNetData.cs*" に変更します。 次に **[追加]** を選択します。
 
     コード エディターで "*ImageNetData.cs*" ファイルが開きます。 次の `using` ステートメントを "*ImageNetData.cs*" の先頭に追加します。
 
@@ -156,8 +156,8 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 "*DataStructures*" ディレクトリに予測クラスを作成します。
 
-1. **ソリューション エクスプローラー**で "*DataStructures*" ディレクトリを右クリックし、**[追加]** > **[新しい項目]** の順に選択します。
-1. **[新しい項目の追加]** ダイアログ ボックスで、**[クラス]** を選択し、**[名前]** フィールドを "*ImageNetPrediction.cs* "に変更します。 次に **[追加]** を選択します。
+1. **ソリューション エクスプローラー**で "*DataStructures*" ディレクトリを右クリックし、 **[追加]**  >  **[新しい項目]** の順に選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを "*ImageNetPrediction.cs* "に変更します。 次に **[追加]** を選択します。
 
     コード エディターで "*ImageNetPrediction.cs*" ファイルが開きます。 "*ImageNetPrediction.cs*" の先頭に次の `using` ステートメントを追加します。
 
@@ -198,14 +198,14 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 新しいディレクトリをプロジェクトに追加し、一連のパーサー クラスを編成します。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しいフォルダー]** を選択します。 ソリューション エクスプローラーに新しいフォルダーが表示されたら、"YoloParser" と名前を付けます。
+1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しいフォルダー]** を選択します。 ソリューション エクスプローラーに新しいフォルダーが表示されたら、"YoloParser" と名前を付けます。
 
 ### <a name="create-bounding-boxes-and-dimensions"></a>境界ボックスと寸法を作成する
 
 モデルから出力されるデータには、画像内のオブジェクトの境界ボックスの座標と寸法が含まれています。 寸法の基底クラスを作成します。
 
-1. **ソリューション エクスプローラー**で、"*YoloParser*" ディレクトリを右クリックし、**[追加]** > **[新しい項目]** の順に選択します。
-1. **[新しい項目の追加]** ダイアログボックスで **[クラス]** を選択し、**[名前]** フィールドを "*DimensionsBase.cs*" に変更します。 次に **[追加]** を選択します。
+1. **ソリューション エクスプローラー**で、"*YoloParser*" ディレクトリを右クリックし、 **[追加]**  >  **[新しい項目]** の順に選択します。
+1. **[新しい項目の追加]** ダイアログボックスで **[クラス]** を選択し、 **[名前]** フィールドを "*DimensionsBase.cs*" に変更します。 次に **[追加]** を選択します。
 
     コード エディターで "*DimensionsBase.cs*" ファイルが開きます。 すべての `using` ステートメントと既存のクラス定義を削除します。
 
@@ -222,8 +222,8 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 次に、境界ボックスのクラスを作成します。
 
-1. **ソリューション エクスプローラー**で、"*YoloParser*" ディレクトリを右クリックし、**[追加]** > **[新しい項目]** の順に選択します。
-1. **[新しい項目の追加]** ダイアログボックスで **[クラス]** を選択し、**[名前]** フィールドを "*YoloBoundingBox.cs*" に変更します。 次に **[追加]** を選択します。
+1. **ソリューション エクスプローラー**で、"*YoloParser*" ディレクトリを右クリックし、 **[追加]**  >  **[新しい項目]** の順に選択します。
+1. **[新しい項目の追加]** ダイアログボックスで **[クラス]** を選択し、 **[名前]** フィールドを "*YoloBoundingBox.cs*" に変更します。 次に **[追加]** を選択します。
 
     コード エディターで "*YoloBoundingBox.cs*" ファイルが開きます。 "*YoloBoundingBox.cs*" の先頭に次の `using` ステートメントを追加します。
 
@@ -249,8 +249,8 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 寸法と境界ボックスのクラスが作成されたので、次はパーサーを作成します。
 
-1. **ソリューション エクスプローラー**で、"*YoloParser*" ディレクトリを右クリックし、**[追加]** > **[新しい項目]** の順に選択します。
-1. **[新しい項目の追加]** ダイアログボックスで **[クラス]** を選択し、**[名前]** フィールドを "*YoloOutputParser.cs*" に変更します。 次に **[追加]** を選択します。
+1. **ソリューション エクスプローラー**で、"*YoloParser*" ディレクトリを右クリックし、 **[追加]**  >  **[新しい項目]** の順に選択します。
+1. **[新しい項目の追加]** ダイアログボックスで **[クラス]** を選択し、 **[名前]** フィールドを "*YoloOutputParser.cs*" に変更します。 次に **[追加]** を選択します。
 
     コード エディターで "*YoloOutputParser.cs*" ファイルが開きます。 "*YoloOutputParser.cs*" の先頭に次の `using` ステートメントを追加します。
 
@@ -454,8 +454,8 @@ for (var j = i + 1; j < boxes.Count; j++)
 
 後処理の場合と同様に、スコアリングの手順にはいくつかの手順があります。 このために、スコアリング ロジックを格納するクラスをプロジェクトに追加します。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しい項目]** を選択します。
-1. **[新しい項目の追加]** ダイアログボックスで **[クラス]** を選択し、**[名前]** フィールドを "*OnnxModelScorer.cs*" に変更します。 次に **[追加]** を選択します。
+1. **ソリューション エクスプローラー**で、プロジェクトを右クリックして、 **[追加]**  >  **[新しいアイテム]** の順に選択します。
+1. **[新しい項目の追加]** ダイアログボックスで **[クラス]** を選択し、 **[名前]** フィールドを "*OnnxModelScorer.cs*" に変更します。 次に **[追加]** を選択します。
 
     コード エディターで "*OnnxModelScorer.cs*" ファイルが開きます。 "*OnnxModelScorer.cs*" の先頭に次の `using` ステートメントを追加します。
 
@@ -705,14 +705,14 @@ person and its Confidence score: 0.5551759
 
 ![ダイニング ルームの処理済み画像のサンプル](./media/object-detection-onnx/image3.jpg)
 
-おめでとうございます!  これで、ML.NET でトレーニング済みの `ONNX` モデルを再利用してオブジェクト検出用の機械学習モデルを構築できました。
+お疲れさまでした。 これで、ML.NET でトレーニング済みの `ONNX` モデルを再利用してオブジェクト検出用の機械学習モデルを構築できました。
 
-このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx) リポジトリで確認できます。
+このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx) リポジトリにあります。
 
-このチュートリアルでは、次の作業を行う方法を学びました。
+このチュートリアルでは、以下の内容を学習しました。
 > [!div class="checklist"]
 >
-> - 問題を把握する
+> - 問題を理解する
 > - ONNX の概要と ML.NET でどのように動作するかについて説明します。
 > - モデルの概要
 > - 事前トレーニング済みモデルを再利用する
@@ -720,4 +720,4 @@ person and its Confidence score: 0.5551759
 
 Machine Learning サンプルの GitHub リポジトリを確認し、拡張されたオブジェクト検出サンプルを探索してください。
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples GitHub リポジトリ](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/DeepLearning_ObjectDetection_Onnx)
+> [dotnet/machinelearning-samples GitHub リポジトリ](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)

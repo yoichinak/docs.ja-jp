@@ -86,7 +86,7 @@ ms.locfileid: "68363814"
 
 ### <a name="collection-data-contract-naming"></a>コレクション データ コントラクトの名前付け
 
-コレクション型の名前付け規則は、「 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)」で説明する通常のデータ コントラクト型の名前付けの規則に似ていますが、重要な違いがいくつかあります。
+コレクション型の名前付け規則は、「 [データ コントラクト名](../../../../docs/framework/wcf/feature-details/data-contract-names.md)」で説明する通常のデータ コントラクト型の名前付けの規則に似ていますが、重要な違いがいくつかあります。
 
 - 名前をカスタマイズする際に、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性ではなく、 <xref:System.Runtime.Serialization.DataContractAttribute> 属性を使用します。 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性にも、 `Name` プロパティと `Namespace` プロパティがあります。
 
@@ -232,7 +232,7 @@ ms.locfileid: "68363814"
 
 すべての等価のコレクションは、XML スキーマ定義言語 (XSD: XML Schema Definition Language) スキーマで同様に表現されます。 このため、生成されたクライアント コードでもサーバーと同じコレクション型になることは通常ありません。 たとえば、サーバーで Integer データ メンバーのジェネリック <xref:System.Collections.Generic.List%601> を含むデータ コントラクトを使用していても、生成されたクライアント コードでは、この同じデータ メンバーが整数の配列になることがあります。
 
-ディクショナリコレクションは、ディクショナリであることを示す WCF 固有のスキーマ注釈でマークされます。それ以外の場合、キーと値を持つエントリを含む単純なリストと区別できません。 データ コントラクト スキーマでのコレクションの表現方法の正確な記述については、「 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)」を参照してください。
+ディクショナリコレクションは、ディクショナリであることを示す WCF 固有のスキーマ注釈でマークされます。それ以外の場合、キーと値を持つエントリを含む単純なリストと区別できません。 データ コントラクト スキーマでのコレクションの表現方法の正確な記述については、「 [データ コントラクト スキーマのリファレンス](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)」を参照してください。
 
 既定では、コードをインポートする際に、カスタマイズされていないコレクションの型は生成されません。 リスト コレクション型のデータ メンバーは配列としてインポートされ、ディクショナリ コレクション型のデータ メンバーはジェネリック ディクショナリとしてインポートされます。
 
@@ -364,7 +364,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 
 各ディクショナリ コレクション データ コントラクトには、ディクショナリの 1 エントリを表すコンパニオン データ コントラクトが存在します。 コンパニオン データ コントラクトの名前は、"ArrayOf" プレフィックスを除いたディクショナリ データ コントラクトの名前と同じです。また、名前空間は、ディクショナリ データ コントラクトの名前空間と同じです。 たとえば、"ArrayOfKeyValueOfstringint" ディクショナリ データ コントラクトの場合、"KeyValueofstringint" データ コントラクトがディクショナリの 1 エントリを表します。 次のセクションで説明するように、このデータ コントラクトの名前は、 `ItemName` プロパティを使用してカスタマイズできます。
 
-「 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)」に記載されたジェネリック型の名前付け規則は、コレクション型にすべて適用されます。つまり、Name 内の中かっこを使用してジェネリック型パラメーターを示すことができます。 ただし、かっこ内の数値は、コレクションに含まれる型ではなく、ジェネリック パラメーターを指すことに注意してください。
+「 [データ コントラクト名](../../../../docs/framework/wcf/feature-details/data-contract-names.md)」に記載されたジェネリック型の名前付け規則は、コレクション型にすべて適用されます。つまり、Name 内の中かっこを使用してジェネリック型パラメーターを示すことができます。 ただし、かっこ内の数値は、コレクションに含まれる型ではなく、ジェネリック パラメーターを指すことに注意してください。
 
 ## <a name="collection-customization"></a>コレクションのカスタマイズ
 

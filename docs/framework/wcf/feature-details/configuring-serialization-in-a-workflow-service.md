@@ -27,7 +27,7 @@ Receive approveExpense = new Receive
             };  
 ```  
   
-  ワークフロー サービスにも既知の型を指定できます。 既知の型の詳細については、次を参照してください。 [Data Contract Known Types](data-contract-known-types.md)します。 既知の型は、デザイナーまたはコードで指定できます。 デザイナーで既知の型を指定するで KnownTypes プロパティの横にある省略記号ボタンをクリックして、**プロパティ ウィンドウ**の<xref:System.ServiceModel.Activities.Receive>アクティビティの次の図に示すようにします。   
+  ワークフロー サービスにも既知の型を指定できます。 既知の型の詳細については、「[データコントラクトの既知の型](data-contract-known-types.md)」を参照してください。 既知の型は、デザイナーまたはコードで指定できます。 デザイナーで既知の型を指定するで KnownTypes プロパティの横にある省略記号ボタンをクリックして、**プロパティ ウィンドウ**の<xref:System.ServiceModel.Activities.Receive>アクティビティの次の図に示すようにします。   
   
  ![KnownTypes プロパティのダイアログ ボックスのスクリーン ショット。](./media/configuring-serialization-in-a-workflow-service/known-types-properties.png)  
   

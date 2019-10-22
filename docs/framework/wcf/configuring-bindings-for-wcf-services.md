@@ -34,7 +34,7 @@ ms.locfileid: "72320667"
 ```  
   
 ### <a name="servicemodel-elements"></a>ServiceModel 要素  
- @No__t-0 要素によって制限されたセクションを使用して、1つまたは複数のエンドポイントでサービスの種類を構成したり、サービスの設定を構成したりできます。 各エンドポイントでは、アドレス、コントラクト、およびバインディングをそれぞれ 1 つずつ構成できます。 エンドポイントの詳細については、「[エンドポイントの作成の概要](endpoint-creation-overview.md)」を参照してください。 エンドポイントを指定しない場合、ランタイムは、既定のエンドポイントを追加します。 既定のエンドポイントについては、「[Simplified Configuration](simplified-configuration.md)」 (簡易構成) と「[Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md)」 (WCF サービスの簡易構成) を参照してください。  
+ @No__t-0 要素によって制限されたセクションを使用して、1つまたは複数のエンドポイントでサービスの種類を構成したり、サービスの設定を構成したりできます。 各エンドポイントでは、アドレス、コントラクト、およびバインディングをそれぞれ 1 つずつ構成できます。 エンドポイントの詳細については、「[エンドポイントの作成の概要](endpoint-creation-overview.md)」を参照してください。 エンドポイントを指定しない場合、ランタイムは、既定のエンドポイントを追加します。 既定のエンドポイントについては、「[簡略化された構成](simplified-configuration.md)」と「[WCF サービスの簡略化された構成](./samples/simplified-configuration-for-wcf-services.md)」 を参照してください。  
   
  バインディングはトランスポート (HTTP、TCP、パイプ、およびメッセージ キュー) とプロトコル (セキュリティ、信頼性、およびトランザクション フロー) を指定し、バインディング要素で構成されます。各バインディング要素は、エンドポイントの通信方法のさまざまな側面を指定します。  
   

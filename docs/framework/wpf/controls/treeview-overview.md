@@ -30,7 +30,7 @@ ms.locfileid: "61761404"
   
  指定することも、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>データとしてソースを指定し、<xref:System.Windows.Controls.HeaderedItemsControl.HeaderTemplate%2A>と<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>を定義する、<xref:System.Windows.Controls.TreeViewItem>コンテンツ。  
   
- レイアウトを定義する、<xref:System.Windows.Controls.TreeViewItem>コントロールを使用することも<xref:System.Windows.HierarchicalDataTemplate>オブジェクト。 詳細と例については、「[Use SelectedValue, SelectedValuePath, and SelectedItem](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)」を参照してください。  
+ レイアウトを定義する、<xref:System.Windows.Controls.TreeViewItem>コントロールを使用することも<xref:System.Windows.HierarchicalDataTemplate>オブジェクト。 詳細と例については、[SelectedValue、SelectedValuePath、および SelectedItem の使用](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)に関するページを参照してください。  
   
  項目がない場合、<xref:System.Windows.Controls.TreeViewItem>コントロールを自動的に囲まれているが、<xref:System.Windows.Controls.TreeViewItem>タイミングを制御、<xref:System.Windows.Controls.TreeView>コントロールが表示されます。  
   

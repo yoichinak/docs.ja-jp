@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) を使用してセキュリティで保�
 >
 > 既定では、[新しい-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)コマンドレットは、自己署名の証明書を作成しますが、これらの証明書は安全ではありません。 自己署名証明書を信頼されたルート証明機関ストアに配置すると、展開環境をより厳密にシミュレートする開発環境を作成できます。
 
- 証明書の作成と使用の詳細については、「[証明書の](working-with-certificates.md)使用」を参照してください。 証明書を資格情報として使用する方法の詳細については、「[サービスとクライアントのセキュリティ保護](securing-services-and-clients.md)」を参照してください。 Microsoft Authenticode テクノロジの使用方法については、「 [Authenticode Overviews and Tutorials (Authenticode の概要とチュートリアル)](https://go.microsoft.com/fwlink/?LinkId=88919)」を参照してください。
+ 証明書の作成と使用の詳細については、「[証明書の使用](working-with-certificates.md)使用」を参照してください。 証明書を資格情報として使用する方法の詳細については、「[サービスおよびクライアントのセキュリティ保護](securing-services-and-clients.md)」を参照してください。 Microsoft Authenticode テクノロジの使用方法については、「 [Authenticode Overviews and Tutorials (Authenticode の概要とチュートリアル)](https://go.microsoft.com/fwlink/?LinkId=88919)」を参照してください。
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>自己署名ルート証明書を作成して秘密キーをエクスポートするには
 
@@ -106,7 +106,7 @@ Export-Certificate -Cert $testCertPath -FilePath testcert.crt
     </behaviors>
     ```
 
-WCF での証明書の使用に関する詳細については、「 [Working with Certificates](working-with-certificates.md)」を参照してください。
+WCF での証明書の使用に関する詳細については、「 [証明書の使用](working-with-certificates.md)」を参照してください。
 
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ
 

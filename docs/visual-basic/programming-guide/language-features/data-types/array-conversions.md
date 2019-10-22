@@ -28,7 +28,7 @@ ms.locfileid: "72581858"
   
 - **Convertibility.** 2つの配列の要素型の間で、拡大または縮小のいずれかの変換を実行できる必要があります。 この要件を満たさない例として、`String` 配列と <xref:System.Attribute?displayProperty=nameWithType> から派生したクラスの配列との間での変換が試行されます。 これらの2つの型は共通していません。これらの型の間にはどのような種類の変換もありません。  
   
- ある配列型から別の配列型への変換は、それぞれの要素の変換が拡大または縮小のどちらであるかによって、拡大または縮小されます。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
+ ある配列型から別の配列型への変換は、それぞれの要素の変換が拡大または縮小のどちらであるかによって、拡大または縮小されます。 詳細については、「 [拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」に関するページを参照してください。  
   
 ## <a name="conversion-to-an-object-array"></a>オブジェクト配列への変換  
  初期化せずに `Object` 配列を宣言すると、初期化されていない限り、その要素の型は `Object` ます。 特定のクラスの配列に設定すると、そのクラスの型が使用されます。 ただし、基になる型はまだ `Object` であり、その後、関連のないクラスの別の配列に設定できます。 すべてのクラスは `Object` から派生するため、任意のクラスから他のクラスに配列の要素型を変更できます。  

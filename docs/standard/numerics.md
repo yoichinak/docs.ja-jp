@@ -44,7 +44,7 @@ ms.locfileid: "50191156"
 <xref:System.BitConverter?displayProperty=nameWithType> クラスを使用して、整数値の個々 のビットを操作することもできます。  
 
 > [!NOTE]  
-> 符号なし整数型は CLS に準拠していません。 詳細については、「 [Language Independence and Language-Independent Components](language-independence-and-language-independent-components.md)」を参照してください。
+> 符号なし整数型は CLS に準拠していません。 詳細については、「 [言語への非依存性、および言語非依存コンポーネント](language-independence-and-language-independent-components.md)」を参照してください。
 
 ## <a name="biginteger"></a>BigInteger
 
@@ -98,4 +98,4 @@ SIMD 対応の型は、それが SIMD 非対応のハードウェアや JIT コ�
 ## <a name="see-also"></a>関連項目
 
 - [アプリケーションの基本事項](application-essentials.md)
-- [Standard Numeric Format Strings](base-types/standard-numeric-format-strings.md)
+- [標準の数値書式指定文字列](base-types/standard-numeric-format-strings.md)

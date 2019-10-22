@@ -397,7 +397,7 @@ sampleObject.Field = "Sample string"
 詳細については次を参照してください:
 
 - [ジェネリック](../../../standard/generics/index.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 
 ## <a name="delegates"></a>デリゲート
 

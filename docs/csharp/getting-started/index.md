@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71182439"
 ---
-# <a name="get-started-with-c"></a>C\# の使用を開始する
+# <a name="get-started-with-c"></a>C\# 入門
 
 このセクションでは、C# と .NET Core を使用して短時間でアプリケーションを構築できる、短いシンプルなチュートリアルについて説明します。 Visual Studio 2017 と Visual Studio Code については、その概要を説明しているトピックがあります。 これらの記事は、ある程度のプログラミング経験を仮定しています。 初めてプログラミングを行う場合は、[C# の概要](../tutorials/intro-to-csharp/index.md)に関する対話型チュートリアルをお試しください。
 

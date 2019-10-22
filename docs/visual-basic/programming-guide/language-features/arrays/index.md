@@ -109,7 +109,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[create-with-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#4)]
 
-型の推定を使用する場合、配列の型はによって決まります、*優先型*リテラル値の一覧にします。 主要な型は、配列内の他のすべての型が拡大変換できる型です。 この一意の型を特定できない場合、最も優先度の高い型は、配列内の他のすべての型から縮小変換できる一意の型になります。 これらの一意の型をどちらも特定できない場合は、 `Object`が最も優先度の高い型になります。 たとえば、配列リテラルに指定された値の一覧に `Integer`型、 `Long`型、および `Double`型の値が含まれている場合、結果の配列の型は `Double`です。 `Integer`と`Long`にのみ拡大変換`Double`、`Double`は、主要な型です。 詳細については、「 [Widening and Narrowing Conversions](../../language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
+型の推定を使用する場合、配列の型はによって決まります、*優先型*リテラル値の一覧にします。 主要な型は、配列内の他のすべての型が拡大変換できる型です。 この一意の型を特定できない場合、最も優先度の高い型は、配列内の他のすべての型から縮小変換できる一意の型になります。 これらの一意の型をどちらも特定できない場合は、 `Object`が最も優先度の高い型になります。 たとえば、配列リテラルに指定された値の一覧に `Integer`型、 `Long`型、および `Double`型の値が含まれている場合、結果の配列の型は `Double`です。 `Integer`と`Long`にのみ拡大変換`Double`、`Double`は、主要な型です。 詳細については、[拡大変換と縮小変換](../../language-features/data-types/widening-and-narrowing-conversions.md)に関するページを参照してください。
 
 > [!NOTE]
 > 型の推定は、型のメンバーのローカル変数として定義されている配列に対してのみ使用できます。 クラス レベルの配列リテラルで定義されている配列がの型は、明示的な型定義がない場合は、`Object[]`します。 詳細については、次を参照してください。[ローカル型推論](../variables/local-type-inference.md)します。
@@ -298,7 +298,7 @@ Dim arrZ(-1) As String
 
 |用語|定義|
 |----------|----------------|
-|[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|配列のランクと次元について説明します。|
+|[Visual Basic における配列のディメンション](../../language-features/arrays/array-dimensions.md)|配列のランクと次元について説明します。|
 |[方法: Visual Basic で配列変数を初期化します。](../../language-features/arrays/how-to-initialize-an-array-variable.md)|配列に初期値を設定する方法について説明します。|
 |[方法: Visual Basic で配列を並べ替える](../../language-features/arrays/how-to-sort-an-array.md)|配列の要素をアルファベット順に並べ替える方法について説明します。|
 |[方法: 1 つの配列を別の配列に代入します。](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|配列を別の配列変数に代入するときの手順と規則を説明します。|

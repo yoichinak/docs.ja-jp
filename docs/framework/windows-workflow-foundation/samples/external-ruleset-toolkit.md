@@ -1,5 +1,5 @@
 ---
-title: External RuleSet Toolkit
+title: 外部ルールセット ツールキット
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
 ms.openlocfilehash: c453c6137beeae8eee0e356734a1f9cdf8d8568b
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62005456"
 ---
-# <a name="external-ruleset-toolkit"></a>External RuleSet Toolkit
+# <a name="external-ruleset-toolkit"></a>外部ルールセット ツールキット
 
 通常、ワークフロー アプリケーション内でルールが使用される場合は、そのルールはアセンブリの一部です。 場合によっては、ワークフロー アセンブリのリビルドや配置を行わずに RuleSet を更新できるように、RuleSet をアセンブリとは別に管理することもあります。 このサンプルでは、RuleSet をデータベース内で管理および編集し、実行時にそれらの RuleSet にワークフローからアクセスできるようにしています。 その結果、実行中のワークフロー インスタンスに、RuleSet への変更を自動的に組み込むことができます。
 

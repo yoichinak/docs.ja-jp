@@ -39,13 +39,13 @@ Microsoft が積極的に開発し保守している主要な .NET 実装とし�
 
 .NET Core は .NET のクラスプラットフォーム実装であり、サーバーとクラウドのワークロードをその規模に応じて処理するように設計されています。 Windows、macOS および Linux で実行されます。 .NET Standard を実装しているので、.NET Standard をターゲットとするすべてのコードを .NET Core 上で実行できます。 [ASP.NET](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows フォーム](../framework/winforms/windows-forms-overview.md)、[Windows Presentation Foundation (WPF)](../framework/wpf/index.md) はすべて、.NET Core で実行されます。
 
-.NET Core の詳細については、「[.NET Core](../core/index.md)」および「[サーバー アプリ用 .NET Core と .NET Framework の選択](choosing-core-framework-server.md)」を参照してください。
+.NET Core の詳細については、[.NET Core に関するページ](../core/index.md)、および「[サーバー アプリ用 .NET Core と .NET Framework の選択](choosing-core-framework-server.md)」を参照してください。
 
 ### <a name="net-framework"></a>.NET Framework
 
 .Net Framework は、2002 年からリリースされている元の .NET 実装です。 既存の .NET 開発者が常に使用してきたものと同じ .NET Framework です。 バージョン 4.5 以降では .NET Standard を実装しているので、.NET Standard をターゲットとするすべてのコードが .NET Framework 4.5 以降で実行できます。 Windows フォームと WPF での Windows デスクトップ開発用 API など、追加の Windows 固有 API が含まれます。 .NET Framework は、Windows デスクトップ アプリケーション開発用に最適化されています。
 
-.NET Framework について詳しくは、「[.NET Framework](../framework/index.md)」をご覧ください。
+.NET Framework について詳しくは、[.NET Framework に関するページ](../framework/index.md)をご覧ください。
 
 ### <a name="mono"></a>Mono
 

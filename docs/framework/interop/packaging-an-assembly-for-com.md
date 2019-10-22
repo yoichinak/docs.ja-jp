@@ -1,5 +1,5 @@
 ---
-title: COM 用の .NET Framework アセンブリのパッケージ化
+title: COM 向け .NET Framework アセンブリのパッケージ化
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -20,12 +20,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
 ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/13/2019
 ms.locfileid: "70969061"
 ---
-# <a name="packaging-a-net-framework-assembly-for-com"></a>COM 用の .NET Framework アセンブリのパッケージ化
+# <a name="packaging-a-net-framework-assembly-for-com"></a>COM 向け .NET Framework アセンブリのパッケージ化
 
 COM 開発者がアプリケーションに組み込むときに役立つ、マネージド型に関する情報を次に示します。
 

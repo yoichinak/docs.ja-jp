@@ -12,7 +12,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72582325"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>方法: Visual Basic でオブジェクトを別の型に変換する
-@No__t_0 変数を別のデータ型に変換するには、 [CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)などの変換キーワードを使用します。  
+`Object` 変数を別のデータ型に変換するには、 [CType 関数 (Visual Basic)](../../../../visual-basic/language-reference/functions/ctype-function.md)などの変換キーワードを使用します。  
   
 ## <a name="example"></a>例  
  次の例では、`Object` 変数を `Integer` と `String` に変換します。  

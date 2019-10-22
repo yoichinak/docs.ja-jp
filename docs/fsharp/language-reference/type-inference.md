@@ -1,5 +1,5 @@
 ---
-title: 型推論
+title: 型の推定
 description: コンパイラが値F# 、変数、パラメーター、および戻り値の型を推論する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 4b18c1a67a8b7ddadb4fb334ea4736e9fd29feb0
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68630188"
 ---
-# <a name="type-inference"></a>型推論
+# <a name="type-inference"></a>型の推定
 
 このトピックでは、F# コンパイラが値、変数、パラメーターおよび戻り値の型を推論する方法について説明します。
 

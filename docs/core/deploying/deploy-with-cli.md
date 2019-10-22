@@ -1,5 +1,5 @@
 ---
-title: CLI を使用して .NET Core アプリを公開する
+title: CLI を使用して .NET Core アプリを展開する
 description: .NET Core SDK のコマンド ライン インターフェイス (CLI) ツールを使用して .NET Core アプリを公開する方法を説明します。
 author: thraka
 ms.author: adegeo
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834282"
 ---
-# <a name="publish-net-core-apps-with-the-cli"></a>CLI を使用して .NET Core アプリを公開する
+# <a name="publish-net-core-apps-with-the-cli"></a>CLI を使用して .NET Core アプリを展開する
 
 この記事では、コマンド ラインから .NET Core アプリケーションを公開する方法を示します。 .NET Core では、アプリケーションを公開する方法が 3 つ用意されています。 フレームワークに依存する展開では、ローカル環境にインストールされている .NET Core ランタイムを使用するクロス プラットフォームの .dll ファイルが生成されます。 フレームワークに依存する実行可能ファイルでは、ローカル環境にインストールされている .NET Core ランタイムを使用するプラットフォーム固有の実行可能ファイルが生成されます。 自己完結型の実行可能ファイルでは、プラットフォーム固有の実行可能ファイルが生成されて、.NET Core ランタイムのローカル コピーが組み込まれます。
 

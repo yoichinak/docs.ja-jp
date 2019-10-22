@@ -57,4 +57,4 @@ ms.locfileid: "54609630"
 
 - [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)
 - [ストリームの構成](../../../docs/standard/io/composing-streams.md)
-- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [非同期ファイル I/O](../../../docs/standard/io/asynchronous-file-i-o.md)

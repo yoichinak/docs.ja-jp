@@ -42,7 +42,7 @@ ms.locfileid: "70969028"
 ## <a name="choosing-a-compiler"></a>コンパイラを選択します  
  共通言語ランタイム (CLR: Common Language Runtime) によって提供される機能を活用するには、Visual Basic、C#、Visual C++、F# などのランタイムに対応した言語コンパイラか、Eiffel、Perl、COBOL などのサードパーティのコンパイラを使用する必要があります。  
   
- 共通言語ランタイムは多言語実行環境であるため、さまざまなデータ型と言語機能をサポートしています。 使用する言語コンパイラによって、利用できる共通言語ランタイムの機能が決まり、その機能を使用してコードをデザインすることになります。 記述するコードの構文を決定するのは、共通言語ランタイムではなく、使用するコンパイラです。 作成したコンポーネントを他の言語で記述されたコンポーネントでも完全に使用できるようにするためには、そのコンポーネントからエクスポートされた型が、 [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md) (CLS) に規定されている言語機能だけを公開するようにする必要があります。 <xref:System.CLSCompliantAttribute> 属性を使用することにより、コードを確実に CLS に準拠させることができます。 詳細については、「 [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md)」を参照してください。  
+ 共通言語ランタイムは多言語実行環境であるため、さまざまなデータ型と言語機能をサポートしています。 使用する言語コンパイラによって、利用できる共通言語ランタイムの機能が決まり、その機能を使用してコードをデザインすることになります。 記述するコードの構文を決定するのは、共通言語ランタイムではなく、使用するコンパイラです。 作成したコンポーネントを他の言語で記述されたコンポーネントでも完全に使用できるようにするためには、そのコンポーネントからエクスポートされた型が、 [言語への非依存性、および言語非依存コンポーネント](../../docs/standard/language-independence-and-language-independent-components.md) (CLS) に規定されている言語機能だけを公開するようにする必要があります。 <xref:System.CLSCompliantAttribute> 属性を使用することにより、コードを確実に CLS に準拠させることができます。 詳細については、「 [言語への非依存性、および言語非依存コンポーネント](../../docs/standard/language-independence-and-language-independent-components.md)」を参照してください。  
   
  [ページのトップへ](#introduction)  
   

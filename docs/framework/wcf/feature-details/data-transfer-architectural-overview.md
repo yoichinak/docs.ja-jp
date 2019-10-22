@@ -15,13 +15,13 @@ ms.lasthandoff: 08/22/2019
 ms.locfileid: "69963250"
 ---
 # <a name="data-transfer-architectural-overview"></a>データ転送のアーキテクチャの概要
-Windows Communication Foundation (WCF) は、メッセージングインフラストラクチャと考えることができます。 WCF は、メッセージを受信し、それらのメッセージを処理し、さらにアクションを実行するためにユーザー コードにディスパッチすることができます。また、ユーザー コードで指定されたデータからメッセージを作成し、送信先に配布することもできます。 ここでは、メッセージを処理するためのアーキテクチャと格納されるデータについて説明します。このトピックは、上級開発者を対象としています。 データを送受信する方法のより簡単なタスク指向の概要については、「 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)」を参照してください。  
+Windows Communication Foundation (WCF) は、メッセージングインフラストラクチャと考えることができます。 WCF は、メッセージを受信し、それらのメッセージを処理し、さらにアクションを実行するためにユーザー コードにディスパッチすることができます。また、ユーザー コードで指定されたデータからメッセージを作成し、送信先に配布することもできます。 ここでは、メッセージを処理するためのアーキテクチャと格納されるデータについて説明します。このトピックは、上級開発者を対象としています。 データを送受信する方法のより簡単なタスク指向の概要については、「 [サービス コントラクトでのデータ転送の指定](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)」を参照してください。  
   
 > [!NOTE]
 > このトピックでは、WCF のオブジェクトモデルを調べても表示されない WCF 実装の詳細について説明します。 文書化された実装の詳細について、2 つの注意事項があります。 1 つは、説明が簡略化されているという点です。実際の実装は、最適化やその他の理由から、より複雑であることが考えられます。 もう 1 つの注意事項として、特定の実装の詳細が文書化されていても、その詳細に依存しないようにしてください。これらの詳細は、バージョン間で予告なしに変更されることがあるからです。これは、サービス リリースにおいても同様です。  
   
 ## <a name="basic-architecture"></a>基本アーキテクチャ  
- WCF メッセージ処理機能の中核となるのは<xref:System.ServiceModel.Channels.Message> 、クラスです。これについては、「 [message クラスの使用](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)」で詳しく説明されています. WCF のランタイムコンポーネントは、チャネルスタックとサービスフレームワークという2つの主要部分に分けることができます。 <xref:System.ServiceModel.Channels.Message>クラスは接続ポイントです。  
+ WCF メッセージ処理機能の中核となるのは<xref:System.ServiceModel.Channels.Message> 、クラスです。これについては、「 [Message クラスの使用](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)」で詳しく説明されています. WCF のランタイムコンポーネントは、チャネルスタックとサービスフレームワークという2つの主要部分に分けることができます。 <xref:System.ServiceModel.Channels.Message>クラスは接続ポイントです。  
   
  チャネル スタックは、有効な <xref:System.ServiceModel.Channels.Message> インスタンスと、メッセージ データの送信または受信に対応するアクションとの間の変換を行います。 送信側のチャネル スタックは、有効な <xref:System.ServiceModel.Channels.Message> インスタンスを取得し、何らかの処理を行った後、メッセージの送信に論理的に対応するアクションを実行します。 このアクションには、TCP パケットまたは HTTP パケットの送信、メッセージ キューへのメッセージの配置、データベースへのメッセージの書き込み、ファイル共有へのメッセージの保存、実装によって異なるその他のアクションなどがあります。 最も一般的なアクションは、ネットワーク プロトコル上でのメッセージの送信です。 受信側では、この逆のことが行われます。つまり、アクション (TCP パケットまたは HTTP パケットの到着の場合もあれば、その他のアクションの場合もあります) が検出され、チャネル スタックが処理を行った後に、このアクションを有効な <xref:System.ServiceModel.Channels.Message> インスタンスに変換します。  
   
@@ -155,7 +155,7 @@ Windows Communication Foundation (WCF) は、メッセージングインフラ�
   
  エンコーダーでは、他の機能も実行できます。 たとえば、エンコーダーは XML リーダーとライターをプールできます。 新しい XML リーダーまたはライターが必要になるたびに作成すると負荷がかかります。 したがって、通常、エンコーダーは構成可能なサイズのリーダーのプールとライターのプールを保持しています。 前述のエンコーダー操作の説明では、"XML リーダー/ライターの作成" という語句が使用されている場合は、通常、"プールから取得する" または "使用できない場合に1つを作成" という意味になります。 エンコーダー (およびデコード時にエンコーダーが作成する `Message` サブクラス) には、リーダーとライターが必要でなくなったら ( `Message` を閉じたときなどに) プールに戻すためのロジックが含まれています。  
   
- WCF には3つのメッセージエンコーダーが用意されていますが、追加のカスタム型を作成することもできます。 用意されているエンコーダーは、Text、Binary、および MTOM (Message Transmission Optimization Mechanism) の 3 種類です。 これらの詳細については、「 [Choosing a Message Encoder](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)」を参照してください。  
+ WCF には3つのメッセージエンコーダーが用意されていますが、追加のカスタム型を作成することもできます。 用意されているエンコーダーは、Text、Binary、および MTOM (Message Transmission Optimization Mechanism) の 3 種類です。 これらの詳細については、「 [メッセージ エンコーダーの選択](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)」を参照してください。  
   
 ### <a name="the-istreamprovider-interface"></a>IStreamProvider インターフェイス  
  ストリーミングされた本文を含む送信メッセージを XML ライターに書き込むときに、 <xref:System.ServiceModel.Channels.Message> は <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 実装で次のような一連の呼び出しを使用します。  
@@ -179,7 +179,7 @@ Windows Communication Foundation (WCF) は、メッセージングインフラ�
  この方法を使用すると、XML ライターは <xref:System.Xml.IStreamProvider.GetStream> を呼び出し、ストリーミングされたデータを書き込む時期を選択できます。 たとえば、テキスト XML ライターやバイナリ XML ライターは、このメソッドをすぐに呼び出し、開始タグと終了タグの間にストリーミングされたコンテンツを書き込むことができます。 MTOM ライターは、メッセージの適切な部分を書き込む準備ができたときに、後で <xref:System.Xml.IStreamProvider.GetStream> を呼び出すことができます。  
   
 ## <a name="representing-data-in-the-service-framework"></a>サービス フレームワークでのデータの表現  
- このトピックの「基本アーキテクチャ」セクションで説明したように、サービスフレームワークは WCF の一部であり、特に、メッセージデータと実際`Message`のインスタンスのユーザーフレンドリなプログラミングモデル間の変換を行います。 通常、メッセージ交換は、 <xref:System.ServiceModel.OperationContractAttribute>属性でマークされた .NET Framework メソッドとしてサービスフレームワークで表されます。 このメソッドは複数のパラメーターを取得でき、戻り値または出力パラメーター (または両方) を返すことができます。 サービス側では、入力パラメーターは受信メッセージを表し、戻り値と出力パラメーターは送信メッセージを表します。 クライアント側では、この逆になります。 パラメーターと戻り値を使用してメッセージを記述するためのプログラミング モデルの詳細については、「 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)」を参照してください。 ここでは、概要を簡単に説明します。  
+ このトピックの「基本アーキテクチャ」セクションで説明したように、サービスフレームワークは WCF の一部であり、特に、メッセージデータと実際`Message`のインスタンスのユーザーフレンドリなプログラミングモデル間の変換を行います。 通常、メッセージ交換は、 <xref:System.ServiceModel.OperationContractAttribute>属性でマークされた .NET Framework メソッドとしてサービスフレームワークで表されます。 このメソッドは複数のパラメーターを取得でき、戻り値または出力パラメーター (または両方) を返すことができます。 サービス側では、入力パラメーターは受信メッセージを表し、戻り値と出力パラメーターは送信メッセージを表します。 クライアント側では、この逆になります。 パラメーターと戻り値を使用してメッセージを記述するためのプログラミング モデルの詳細については、「 [サービス コントラクトでのデータ転送の指定](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)」を参照してください。 ここでは、概要を簡単に説明します。  
   
 ## <a name="programming-models"></a>プログラミング モデル  
  WCF サービスフレームワークでは、メッセージを記述するための5つの異なるプログラミングモデルがサポートされています。  
@@ -247,7 +247,7 @@ Windows Communication Foundation (WCF) は、メッセージングインフラ�
  `Stream` またはそのサブクラスのいずれかをこのように使用した場合、シリアライザーは呼び出されません。 送信メッセージの場合、 `Message` インターフェイスのセクションで説明したように、特殊なストリーミング <xref:System.Xml.IStreamProvider> サブクラスが作成され、ストリームが書き込まれます。 受信メッセージの場合は、サービス フレームワークが受信メッセージに `Stream` サブクラスを作成し、操作に提供します。  
   
 ## <a name="programming-model-restrictions"></a>プログラミング モデルの制限  
- 前述のプログラミング モデルを任意に組み合わせることはできません。 たとえば、ある操作でメッセージ コントラクトを受け入れる場合、そのメッセージ コントラクトは入力パラメーターのみであることが必要です。 さらに、操作では、空のメッセージ (戻り値の型が void) または別のメッセージ コントラクトを返す必要があります。 これらのプログラミングモデルの制限については、各プログラミングモデルのトピックで説明されています。メッセージ[コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)、[メッセージクラスの使用](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)、および[大規模なデータとストリーミング](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)の使用。  
+ 前述のプログラミング モデルを任意に組み合わせることはできません。 たとえば、ある操作でメッセージ コントラクトを受け入れる場合、そのメッセージ コントラクトは入力パラメーターのみであることが必要です。 さらに、操作では、空のメッセージ (戻り値の型が void) または別のメッセージ コントラクトを返す必要があります。 これらのプログラミングモデルの制限については、各プログラミングモデルのトピックで説明されています。メッセージ[コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)、[Message クラスの使用](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)、および[大規模なデータとストリーミング](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)の使用。  
   
 ## <a name="message-formatters"></a>メッセージ フォーマッタ  
  前述の各プログラミング モデルは、 *"メッセージ フォーマッタ"* と呼ばれるコンポーネントをサービス フレームワークにプラグインすることによってサポートされます。 メッセージフォーマッタは、 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>インターフェイスまた<xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>はインターフェイスを実装する型、またはクライアントとサービスの WCF クライアントで使用するための、両方を実装する型です。  

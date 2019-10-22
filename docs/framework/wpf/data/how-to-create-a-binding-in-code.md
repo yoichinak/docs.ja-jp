@@ -1,5 +1,5 @@
 ---
-title: '方法: コードでバインディングを作成する'
+title: '方法: コードでバインドを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61931626"
 ---
-# <a name="how-to-create-a-binding-in-code"></a>方法: コードでバインディングを作成する
+# <a name="how-to-create-a-binding-in-code"></a>方法: コードでバインドを作成する
 この例は、コード中で<xref:System.Windows.Data.Binding>を作成し設定する方法を示します。  
   
 ## <a name="example"></a>例  

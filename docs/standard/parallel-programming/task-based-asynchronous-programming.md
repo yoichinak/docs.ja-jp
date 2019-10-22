@@ -250,7 +250,7 @@ Visual Studio を使用している場合、プロジェクトを **[新しい�
 
 - 複数の継続元から継続タスクを作成する場合は、<xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> メソッドまたは <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> メソッドを使用するか、<xref:System.Threading.Tasks.Task%601> クラスの同等のメソッドを使用します。 詳細については、「[継続タスクを使用したタスクの連結](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)」を参照してください。
 
-- `BeginX` インスタンスまたは `EndX` インスタンスで非同期プログラミング モデルの <xref:System.Threading.Tasks.Task> メソッドおよび <xref:System.Threading.Tasks.Task%601> メソッドをカプセル化するには、<xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> メソッドを使用します。 詳細については、「[TPL and Traditional .NET Framework Asynchronous Programming](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)」(TPL と従来の .NET Framework 非同期プログラミング) を参照してください。
+- `BeginX` インスタンスまたは `EndX` インスタンスで非同期プログラミング モデルの <xref:System.Threading.Tasks.Task> メソッドおよび <xref:System.Threading.Tasks.Task%601> メソッドをカプセル化するには、<xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> メソッドを使用します。 詳細については、「[TPL と従来の .NET Framework 非同期プログラミング](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)」を参照してください。
 
 既定の <xref:System.Threading.Tasks.TaskFactory> へは、<xref:System.Threading.Tasks.Task> クラスまたは <xref:System.Threading.Tasks.Task%601> クラス上の静的なプロパティとしてアクセスできます。 <xref:System.Threading.Tasks.TaskFactory> を直接インスタンス化し、さまざまなオプションを指定することもできます。たとえば、<xref:System.Threading.CancellationToken>、<xref:System.Threading.Tasks.TaskCreationOptions> オプション、<xref:System.Threading.Tasks.TaskContinuationOptions> オプション、<xref:System.Threading.Tasks.TaskScheduler> などです。 タスク ファクトリを作成するときに指定されるオプションは、タスク ファクトリで作成したすべてのタスクに適用されます。ただし、<xref:System.Threading.Tasks.Task> が <xref:System.Threading.Tasks.TaskCreationOptions> 列挙型を使用して作成された場合は例外で、タスクのオプションによってタスク ファクトリのオプションがオーバーライドされます。
 
@@ -264,7 +264,7 @@ Visual Studio を使用している場合、プロジェクトを **[新しい�
 
 ## <a name="related-data-structures"></a>関連のデータ構造
 
-TPL には、並列のシナリオおよび順次的なシナリオの両方に役立つ複数の新しいパブリック型があります。 これらの型には、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間における、スレッド セーフで、高速、スケーラブルなコレクション クラス、および新しい同期の型が含まれます。たとえば、<xref:System.Threading.Semaphore?displayProperty=nameWithType> および <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> は、特定の種類の作業負荷に関しては、先行タスクより効率的です。 その他の .NET Framework 4 の新しい型には、<xref:System.Threading.Barrier?displayProperty=nameWithType> と <xref:System.Threading.SpinLock?displayProperty=nameWithType> があり、以前のリリースでは利用できなかった機能が用意されています。 詳細については、「[Data Structures for Parallel Programming](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)」を参照してください。
+TPL には、並列のシナリオおよび順次的なシナリオの両方に役立つ複数の新しいパブリック型があります。 これらの型には、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間における、スレッド セーフで、高速、スケーラブルなコレクション クラス、および新しい同期の型が含まれます。たとえば、<xref:System.Threading.Semaphore?displayProperty=nameWithType> および <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> は、特定の種類の作業負荷に関しては、先行タスクより効率的です。 その他の .NET Framework 4 の新しい型には、<xref:System.Threading.Barrier?displayProperty=nameWithType> と <xref:System.Threading.SpinLock?displayProperty=nameWithType> があり、以前のリリースでは利用できなかった機能が用意されています。 詳細については、「[並列プログラミング向けのデータ構造](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)」を参照してください。
 
 ## <a name="custom-task-types"></a>カスタムのタスクの型
 

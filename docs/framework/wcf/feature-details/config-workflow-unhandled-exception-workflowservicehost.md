@@ -27,7 +27,7 @@ ms.locfileid: "69957256"
     ```  
   
     > [!NOTE]
-    > 前の構成サンプルでは、簡略化された構成を使用しています。 詳細については、「簡略化された[構成](../../../../docs/framework/wcf/simplified-configuration.md)」を参照してください。  
+    > 前の構成サンプルでは、簡略化された構成を使用しています。 詳細については、「[簡略化された構成](../../../../docs/framework/wcf/simplified-configuration.md)」を参照してください。  
   
      この動作は、次の例に示すように、コードで構成できます。  
   

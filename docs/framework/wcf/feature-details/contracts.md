@@ -54,9 +54,9 @@ ms.locfileid: "64651100"
   
  マネージ型で定義されたコントラクトを変換することができます (とも呼ばれます*エクスポート*) メタデータとして、WSDL と XSD — クライアントや他のプラットフォームでは特にその他のサービス実装側で必要な場合。 これにより、どのクライアント アプリケーションに対してもパブリック メタデータを使用して記述できる、簡単なプログラミング モデルが実現します。 輸送と、セキュリティ関連の情報など、基になる SOAP メッセージの詳細については、XML 型システムに必要な変換と、サービス コントラクトの型システムの間に自動的に実行するには、WCF をおくことができます。  
   
- コントラクトの設計に関する詳細については、次を参照してください。 [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)します。 コントラクトの実装の詳細については、次を参照してください。 [Implementing Service Contracts](../../../../docs/framework/wcf/implementing-service-contracts.md)します。  
+ コントラクトの設計に関する詳細については、「[サービス コントラクトの設計](../../../../docs/framework/wcf/designing-service-contracts.md)」を参照してください。 コントラクトの実装の詳細については、「[サービス コントラクトの実装](../../../../docs/framework/wcf/implementing-service-contracts.md)」を参照してください。  
   
- さらに、WCF サービス コントラクト、メッセージ レベルで完全に開発する機能も提供します。 サービス コントラクト、メッセージ レベルでの開発の詳細については、次を参照してください。 [Using Message Contracts](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)します。 SOAP XML 以外のサービスの開発に関する詳細については、次を参照してください。 [POX アプリケーションとの相互運用](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)します。  
+ さらに、WCF サービス コントラクト、メッセージ レベルで完全に開発する機能も提供します。 メッセージ レベルでのサービス コントラクト開発の詳細については、「[メッセージ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)」を参照してください。 SOAP XML 以外のサービスの開発に関する詳細については、次を参照してください。 [POX アプリケーションとの相互運用](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)します。  
   
 ### <a name="understanding-the-hierarchy-of-requirements"></a>要件の階層の理解  
  サービス コントラクトは、操作をグループ化し、MEP、メッセージの種類、およびメッセージに格納されているデータ型を指定します。さらに、実装でコントラクトをサポートするために必要な実行時の動作のカテゴリ (メッセージの暗号化と署名を要求するなど) を示します。 ただし、サービス コントラクト自体は、これらの要件を満たす方法を正確に指定するわけではなく、これらの要件が必要であることを示すだけです。 暗号化の種類やメッセージに署名する方法は、準拠サービスの実装と構成によって決まります。  

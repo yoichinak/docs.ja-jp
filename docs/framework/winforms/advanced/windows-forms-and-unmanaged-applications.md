@@ -1,5 +1,5 @@
 ---
-title: Windows フォームとアンマネージ アプリケーション
+title: Windows フォームとアンマネージド アプリケーション
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ActiveX controls [Windows Forms]
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61746728"
 ---
-# <a name="windows-forms-and-unmanaged-applications"></a>Windows フォームとアンマネージ アプリケーション
+# <a name="windows-forms-and-unmanaged-applications"></a>Windows フォームとアンマネージド アプリケーション
 Windows フォーム アプリケーションとコントロールは、いくつかの注意事項がありますが、アンマネージ アプリケーションと相互運用できます。 次のセクションでは、Windows フォーム アプリケーションとコントロールがサポートするシナリオと構成、および、サポートしないシナリオと構成について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

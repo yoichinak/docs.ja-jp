@@ -21,7 +21,7 @@ ms.locfileid: "72291594"
 
 ## <a name="how-to-run-the-code-samples"></a>コード サンプルの実行方法
 
-コード サンプルを実行できるように開発環境を設定する方法については、「[Getting Started](get-started.md)」 (はじめに) をご覧ください。 このページのコード サンプルをコピーして環境に貼り付けて実行します。 
+コード サンプルを実行できるように開発環境を設定する方法については、[はじめに](get-started.md)をご覧ください。 このページのコード サンプルをコピーして環境に貼り付けて実行します。 
 
 ## <a name="programming-languages"></a>プログラミング言語
 
@@ -29,9 +29,9 @@ ms.locfileid: "72291594"
 
 Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#、F#、Visual Basic (VB) の 3 つです。 
 
-* C# はシンプル、強力、タイプセーフ、そしてオブジェクト指向でありながらも、C スタイル言語の表現力と簡潔さが維持されています。 C や類似の言語を使い慣れている人であれば、ほとんど問題なく C# に適応できます。 C# について詳しくは、「[C# Guide](../csharp/index.md)」 (C# ガイド) をご覧ください。
+* C# はシンプル、強力、タイプセーフ、そしてオブジェクト指向でありながらも、C スタイル言語の表現力と簡潔さが維持されています。 C や類似の言語を使い慣れている人であれば、ほとんど問題なく C# に適応できます。 C# について詳しくは、「[C# ガイド](../csharp/index.md)」 (C# ガイド) をご覧ください。
 
-* F# はクロスプラットフォームの関数型プログラミング言語ですが、従来のオブジェクト指向および命令型プログラミングもサポートしています。 F# について詳しくは、「[F# Guide](../fsharp/index.md)」 (F# ガイド) をご覧ください。
+* F# はクロスプラットフォームの関数型プログラミング言語ですが、従来のオブジェクト指向および命令型プログラミングもサポートしています。 F# について詳しくは、「[F# ガイド](../fsharp/index.md)」 (F# ガイド) をご覧ください。
 
 * Visual Basic は、学習しやすい言語で、.NET 上で実行されるさまざまなアプリの構築に使用します。 .NET 言語の中で VB の構文は通常の人間の言語に最も近いため、ソフトウェア開発の経験のないユーザーでも使いやすい言語です。
 
@@ -65,7 +65,7 @@ Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#�
 
 * C# の場合は、「[using ステートメント (C# リファレンス)](../csharp/language-reference/keywords/using-statement.md)」を参照してください。
 * F# の場合は、「[リソースの管理:use キーワード](../fsharp/language-reference/resource-management-the-use-keyword.md)」を参照してください。
-* VB の場合は、「[Using Statement (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md)」 (using ステートメント (Visual Basic)) を参照してください。
+* VB の場合は、「[Using ステートメント (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md)」を参照してください。
 
 ## <a name="type-safety"></a>タイプ セーフ
 
@@ -83,7 +83,7 @@ C#、VB、F# では、ローカルな "*型推論*" をサポートします。 
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-F# は、C# や VB のメソッド ローカル型推論よりさらに進んだ型推論機能を備えています。 詳しくは、「[Type Inference](../fsharp/language-reference/type-inference.md)」 (型推論) をご覧ください。
+F# は、C# や VB のメソッド ローカル型推論よりさらに進んだ型推論機能を備えています。 詳しくは、「[型の推定](../fsharp/language-reference/type-inference.md)」 (型推論) をご覧ください。
 
 ## <a name="delegates-and-lambdas"></a>デリゲートとラムダ
 

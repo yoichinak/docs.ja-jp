@@ -184,7 +184,7 @@ ms.locfileid: "64665153"
   
 - <xref:System.Windows.Controls.WrapPanel>  
   
- 詳細については、「[Panels Overview](panels-overview.md)」を参照してください。  
+ 詳細については、「[パネルの概要](panels-overview.md)」を参照してください。  
   
 <a name="classes_that_affects_the_appearance_of_a_uielement"></a>   
 ## <a name="classes-that-affect-the-appearance-of-a-uielement"></a>UIElement の外観に影響を与えるクラス  
@@ -215,7 +215,7 @@ ms.locfileid: "64665153"
   
 <a name="classes_that_provides_visual_feedback_about_a_uielement"></a>   
 ## <a name="classes-that-provide-visual-feedback-about-a-uielement"></a>UIElement についての視覚的なフィードバックを提供するクラス  
- <xref:System.Windows.Documents.Adorner>クラスは、ユーザーに視覚的な手掛かりを提供します。 たとえば、使用して、<xref:System.Windows.Documents.Adorner>要素に機能ハンドルを追加またはコントロールに関する状態情報を提供します。 <xref:System.Windows.Documents.Adorner>クラスは、独自の装飾を作成できるようにするフレームワークを提供します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は実装された装飾は提供しません。 詳しくは、[Adorners Overview](adorners-overview.md)をご覧ください。  
+ <xref:System.Windows.Documents.Adorner>クラスは、ユーザーに視覚的な手掛かりを提供します。 たとえば、使用して、<xref:System.Windows.Documents.Adorner>要素に機能ハンドルを追加またはコントロールに関する状態情報を提供します。 <xref:System.Windows.Documents.Adorner>クラスは、独自の装飾を作成できるようにするフレームワークを提供します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は実装された装飾は提供しません。 詳しくは、[ガイドの概要](adorners-overview.md)をご覧ください。  
   
 <a name="classes_that_enable_users_to_enter_text"></a>   
 ## <a name="classes-that-enable-users-to-enter-text"></a>ユーザーがテキストを入力できるようにするクラス  
@@ -245,7 +245,7 @@ ms.locfileid: "64665153"
   
 <a name="classes_that_format_text"></a>   
 ## <a name="classes-that-format-your-text"></a>テキストを書式設定するクラス  
- <xref:System.Windows.Documents.TextElement> およびその関連クラスは、テキストの書式設定できます。 <xref:System.Windows.Documents.TextElement> オブジェクトが含まれてし、に書式を<xref:System.Windows.Controls.TextBlock>と<xref:System.Windows.Documents.FlowDocument>オブジェクト。 2 つの主な種類の<xref:System.Windows.Documents.TextElement>オブジェクトが<xref:System.Windows.Documents.Block>要素と<xref:System.Windows.Documents.Inline>要素。 A<xref:System.Windows.Documents.Block>要素は、段落やリストなどのテキストのブロックを表します。 <xref:System.Windows.Documents.Inline>要素ブロック内のテキストの一部を表します。 多く<xref:System.Windows.Documents.Inline>クラスは、適用先のテキストの書式を指定します。 各<xref:System.Windows.Documents.TextElement>独自のコンテンツ モデルがあります。 詳細については、「[TextElement Content Model Overview](../advanced/textelement-content-model-overview.md)」を参照してください。  
+ <xref:System.Windows.Documents.TextElement> およびその関連クラスは、テキストの書式設定できます。 <xref:System.Windows.Documents.TextElement> オブジェクトが含まれてし、に書式を<xref:System.Windows.Controls.TextBlock>と<xref:System.Windows.Documents.FlowDocument>オブジェクト。 2 つの主な種類の<xref:System.Windows.Documents.TextElement>オブジェクトが<xref:System.Windows.Documents.Block>要素と<xref:System.Windows.Documents.Inline>要素。 A<xref:System.Windows.Documents.Block>要素は、段落やリストなどのテキストのブロックを表します。 <xref:System.Windows.Documents.Inline>要素ブロック内のテキストの一部を表します。 多く<xref:System.Windows.Documents.Inline>クラスは、適用先のテキストの書式を指定します。 各<xref:System.Windows.Documents.TextElement>独自のコンテンツ モデルがあります。 詳細については、「[TextElement コンテンツ モデルの概要](../advanced/textelement-content-model-overview.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: Windows フォームがサポートするデータ ソース
+title: Windows フォームでサポートされるデータソース
 ms.date: 03/30/2017
 helpviewer_keywords:
 - collections [Windows Forms], binding to
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/19/2019
 ms.locfileid: "65882396"
 ---
-# <a name="data-sources-supported-by-windows-forms"></a>Windows フォームがサポートするデータ ソース
+# <a name="data-sources-supported-by-windows-forms"></a>Windows フォームでサポートされるデータソース
 これまでは、データ バインディングは、データベースに格納されたデータを活用するためにアプリケーション内で使用されています。 Windows フォーム データ バインドでは、特定の最小要件を満たしている限り、配列やコレクションなど、他の構造のデータだけでなく、データベースからデータにアクセスすることができます。  
   
 ## <a name="structures-to-bind-to"></a>連結するには構造体  
@@ -60,5 +60,5 @@ ms.locfileid: "65882396"
 ## <a name="see-also"></a>関連項目
 
 - [Windows フォーム データ バインドの変更通知](change-notification-in-windows-forms-data-binding.md)
-- [データ連結と Windows フォーム](data-binding-and-windows-forms.md)
+- [データ バインディングと Windows フォーム](data-binding-and-windows-forms.md)
 - [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)

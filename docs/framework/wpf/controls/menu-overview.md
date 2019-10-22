@@ -44,7 +44,7 @@ ms.locfileid: "61942156"
   
  [!code-xaml[MenuEvent#8](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#8)]  
   
- <xref:System.Windows.Controls.MenuItem>クラスがあります、<xref:System.Windows.Controls.MenuItem.CommandTarget%2A>プロパティで、コマンドが発生する要素を指定します。 場合<xref:System.Windows.Controls.MenuItem.CommandTarget%2A>がキーボード フォーカスを持つ要素がコマンドを受け取り、設定されていません。 コマンドの詳細については、[Commanding Overview](../advanced/commanding-overview.md)を参照してください。  
+ <xref:System.Windows.Controls.MenuItem>クラスがあります、<xref:System.Windows.Controls.MenuItem.CommandTarget%2A>プロパティで、コマンドが発生する要素を指定します。 場合<xref:System.Windows.Controls.MenuItem.CommandTarget%2A>がキーボード フォーカスを持つ要素がコマンドを受け取り、設定されていません。 コマンドの詳細については、[コマンド実行の概要](../advanced/commanding-overview.md)を参照してください。  
   
 <a name="menu_styling"></a>   
 ## <a name="menu-styling"></a>メニューのスタイル指定  

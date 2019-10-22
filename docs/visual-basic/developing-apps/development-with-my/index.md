@@ -1,5 +1,5 @@
 ---
-title: My による開発 (Visual Basic)
+title: My を使用した開発 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.MyWpfExtension.Windows
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62014181"
 ---
-# <a name="development-with-my-visual-basic"></a>My による開発 (Visual Basic)
+# <a name="development-with-my-visual-basic"></a>My を使用した開発 (Visual Basic)
 Visual Basic には、多彩な機能を提供する一方で生産性や使いやすさを向上させる、迅速なアプリケーション開発用の新しい機能が用意されています。 こうした機能の 1 つである `My` という機能は、情報へのアクセス、およびアプリケーションやそのランタイム環境に関連する既定のオブジェクト インスタンスを提供します。 この情報は、IntelliSense によって検出可能な形式で編成され、用途に応じて論理的に区別されます。  
   
  `My` の最上位メンバーは、オブジェクトとして公開されます。 各オブジェクトは、名前空間でも `Shared` メンバーがあるクラスでも同じように動作し、関連するメンバーのセットを公開します。  

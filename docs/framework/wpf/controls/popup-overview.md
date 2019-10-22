@@ -72,7 +72,7 @@ ms.locfileid: "69951429"
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>ポップアップ位置の定義  
- ポップアップを配置するには<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>、 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>、、、 <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>、および<xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty>の各プロパティを設定します。 詳細については、「[Popup Placement Behavior](popup-placement-behavior.md)」を参照してください。 <xref:System.Windows.Controls.Primitives.Popup>が画面に表示されている場合、親の位置が変更されても、その位置は再配置されません。  
+ ポップアップを配置するには<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>、 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>、、、 <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>、および<xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty>の各プロパティを設定します。 詳細については、「[ポップアップの配置動作](popup-placement-behavior.md)」を参照してください。 <xref:System.Windows.Controls.Primitives.Popup>が画面に表示されている場合、親の位置が変更されても、その位置は再配置されません。  
   
 <a name="CustomizingPopupPlacement"></a>   
 ### <a name="customizing-popup-placement"></a>ポップアップの配置のカスタマイズ  

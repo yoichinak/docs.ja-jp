@@ -28,6 +28,6 @@ ms.locfileid: "70929420"
 
 自動 ML を使用する方法は 3 つあります。
 
-1. [ML.NET Model Builder](automate-training-with-model-builder.md) でグラフィカル ユーザー インターフェイスを使用する
+1. [ML.NET モデル ビルダー](automate-training-with-model-builder.md) でグラフィカル ユーザー インターフェイスを使用する
 1. コマンド ライン上で [ML.NET CLI](automate-training-with-cli.md) を使用する
 1. アプリケーションを介して[自動 ML API](how-to-guides/how-to-use-the-automl-api.md) を使用する

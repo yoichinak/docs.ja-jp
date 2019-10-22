@@ -49,7 +49,7 @@ ms.locfileid: "64611891"
 ### <a name="use-the-most-efficient-panel-where-possible"></a>可能な場合は最も効率的なパネルを使用する  
  レイアウト動作に直接基づくレイアウト プロセスの複雑さ、 <xref:System.Windows.Controls.Panel>-派生を使用する要素。 たとえば、<xref:System.Windows.Controls.Grid>または<xref:System.Windows.Controls.StackPanel>コントロールよりも多くの機能を提供する、<xref:System.Windows.Controls.Canvas>コントロール。 はるかに多くの機能が用意されていますが、その代償として、パフォーマンスへの負荷も高くなります。 ただし、機能が必要としない場合、<xref:System.Windows.Controls.Grid>コントロールが提供するなどの低コストの代替手段を使用する必要があります、<xref:System.Windows.Controls.Canvas>やカスタム パネル。  
   
- 詳細については、「[Panels Overview](../controls/panels-overview.md)」を参照してください。  
+ 詳細については、「[パネルの概要](../controls/panels-overview.md)」を参照してください。  
   
 ### <a name="update-rather-than-replace-a-rendertransform"></a>RenderTransform は置き換えずに更新する  
  更新することができます、<xref:System.Windows.Media.Transform>の値に置換することではなく、<xref:System.Windows.UIElement.RenderTransform%2A>プロパティ。 アニメーションを含むシナリオでは特にこれが当てはまります。 既存の更新によって<xref:System.Windows.Media.Transform>、不要なレイアウト計算を開始することを回避します。  

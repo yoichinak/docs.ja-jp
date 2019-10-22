@@ -21,7 +21,7 @@ ms.locfileid: "64622897"
   
  ほとんどのシナリオにおいて最もシンプルなオーバーロードは、 <xref:System.Xaml.XamlServices.Load%28System.String%29>です。 このオーバーロードには、読み込まれる XAML を含むテキスト ファイル名を表す `fileName` パラメーターがあります。 これは、以前にローカル コンピューターに対してシリアル化された状態またはデータを持つ、完全信頼アプリケーションなどのアプリケーション シナリオに適しています。 また、アプリケーション モデル (フレームワーク) を定義している場合に、アプリケーションの動作、開始 UI、またはフレームワークによって定義された XAML を使用するその他の機能を定義した標準ファイルの 1 つを読み込む場合にも便利です。  
   
- <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> にも、類似したシナリオがあります。 <xref:System.IO.Stream> はファイル システムにアクセスできるその他の <xref:System.IO> API の出力として頻繁に使用されるため、読み込むファイルをユーザーが選択できるようにする場合は、このオーバーロードが便利です。 または、非同期ダウンロードや、ストリームを生成するその他のネットワーク技術を使用して XAML ソースにアクセスすることもできます。 (ストリームまたはユーザーが選択したソースからの読み込みは、セキュリティに影響が出ることがあります。 詳しくは、「 [XAML Security Considerations](xaml-security-considerations.md)」をご覧ください。)  
+ <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> にも、類似したシナリオがあります。 <xref:System.IO.Stream> はファイル システムにアクセスできるその他の <xref:System.IO> API の出力として頻繁に使用されるため、読み込むファイルをユーザーが選択できるようにする場合は、このオーバーロードが便利です。 または、非同期ダウンロードや、ストリームを生成するその他のネットワーク技術を使用して XAML ソースにアクセスすることもできます。 (ストリームまたはユーザーが選択したソースからの読み込みは、セキュリティに影響が出ることがあります。 詳しくは、「 [XAML セキュリティの考慮事項](xaml-security-considerations.md)」をご覧ください。)  
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> と <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> は、.NET Framework の前のバージョンの形式のリーダーに依存するオーバーロードです。 これらのオーバーロードを使用するには、あらかじめリーダー インスタンスを作成し、その `Create` API を使用して XAML を関連形式 (テキストまたは XML) に読み込む必要があります。 レコード ポインターを他のリーダーに既に移動したり、またはレコード ポインターを使用して他の操作を実行したりした場合でも、そのことは問題になりません。 <xref:System.Xaml.XamlServices.Load%2A> からの読み込みパス ロジックは、常にルート以下の XAML 入力全体を処理します。 これらのオーバーロードのシナリオには、次のものがあります。  
   

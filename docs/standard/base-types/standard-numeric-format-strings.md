@@ -1,5 +1,5 @@
 ---
-title: 標準の数値書式指定文字列
+title: 標準の数値形式文字列
 ms.date: 06/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,11 +25,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/24/2019
 ms.locfileid: "71216707"
 ---
-# <a name="standard-numeric-format-strings"></a>標準の数値書式指定文字列
+# <a name="standard-numeric-format-strings"></a>標準の数値形式文字列
 
 一般的な数値型を書式設定するには、標準の数値書式指定文字列を使用します。 標準の数値書式指定文字列の形式は `Axx` です。
 
-- `A` は *書式指定子* です。これは 1 文字の英文字です。 空白を含む複数の英文字で構成される数値書式指定文字列は、カスタム数値書式指定文字列として解釈されます。 詳細については、「[カスタム数値書式指定文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)」をご覧ください。
+- `A` は *書式指定子* です。これは 1 文字の英文字です。 空白を含む複数の英文字で構成される数値書式指定文字列は、カスタム数値書式指定文字列として解釈されます。 詳細については、「[カスタム数値形式文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)」をご覧ください。
 
 - `xx` は *精度指定子* です。これは省略可能な整数値です。 精度指定子は 0 ～ 99 の範囲で指定され、結果の桁数に影響します。 精度指定子は、文字列形式の数値の桁数を制御することに注意してください。 精度指定子では、数値を丸めません。 丸め操作を実行するには、<xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType>、または <xref:System.Math.Round%2A?displayProperty=nameWithType> の各メソッドを使用します。
 
