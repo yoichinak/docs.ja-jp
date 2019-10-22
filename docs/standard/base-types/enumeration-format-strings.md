@@ -1,5 +1,5 @@
 ---
-title: 列挙型書式指定文字列 - .NET
+title: 列挙型形式文字列 - .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,7 +19,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/23/2019
 ms.locfileid: "66052849"
 ---
-# <a name="enumeration-format-strings"></a>列挙型書式指定文字列
+# <a name="enumeration-format-strings"></a>列挙型形式文字列
 
 <xref:System.Enum.ToString%2A?displayProperty=nameWithType> メソッドを使用すると、列挙型メンバーの数値、16 進数、または文字列値を表す新しい文字列オブジェクトを作成できます。 このメソッドは、列挙型書式指定文字列のいずれかを使って、返される値を指定します。
 

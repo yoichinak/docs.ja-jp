@@ -1,5 +1,5 @@
 ---
-title: 正規表現でのグループ化構成体
+title: 正規表現でのコンストラクトのグループ化
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/04/2019
 ms.locfileid: "71957175"
 ---
-# <a name="grouping-constructs-in-regular-expressions"></a>正規表現でのグループ化構成体
+# <a name="grouping-constructs-in-regular-expressions"></a>正規表現でのコンストラクトのグループ化
 グループ化構成体は、正規表現の部分式を表し、入力文字列の部分文字列をキャプチャします。 グループ化構成体を使用して、以下を実行できます。  
   
 - 入力文字列で繰り返し使用されている部分式を照合する。  

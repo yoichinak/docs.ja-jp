@@ -1,5 +1,5 @@
 ---
-title: ALink API (アンマネージ API リファレンス)
+title: ALink API (アンマネージド API リファレンス)
 ms.date: 03/30/2017
 f1_keywords:
 - ALink
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/07/2019
 ms.locfileid: "70776927"
 ---
-# <a name="alink-api-unmanaged-api-reference"></a>ALink API (アンマネージ API リファレンス)
+# <a name="alink-api-unmanaged-api-reference"></a>ALink API (アンマネージド API リファレンス)
 .NET Framework アセンブリと非バインド モジュールの作成をサポートします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

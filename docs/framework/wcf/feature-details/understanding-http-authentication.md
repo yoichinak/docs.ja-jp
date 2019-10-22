@@ -1,5 +1,5 @@
 ---
-title: HTTP 認証の理解
+title: HTTP 認証について
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
 ms.openlocfilehash: ebfb5920fcd5c1a8faac8780dc1c32c92f9f6255
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64614812"
 ---
-# <a name="understanding-http-authentication"></a>HTTP 認証の理解
+# <a name="understanding-http-authentication"></a>HTTP 認証について
 認証は、リソースにアクセスする権限をクライアントが持つかどうかを確認するプロセスです。 HTTP プロトコルは、セキュリティで保護されたリソースへのアクセスをネゴシエートする手段として、認証をサポートしています。  
   
  クライアントからの最初の要求は、通常、認証情報を含まない匿名要求です。 HTTP サーバー アプリケーションは、認証が必要であることを示して匿名要求を拒否できます。 その場合は、サポートされる認証方式を示す WWW 認証ヘッダーを送信します。 このドキュメントでは、HTTP のいくつかの認証スキームをについて説明し、Windows Communication Foundation (WCF) のサポートについて説明します。  

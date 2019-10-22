@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/17/2019
 ms.locfileid: "72522770"
 ---
-# <a name="dotnet-add-reference"></a>dotnet-add 参照
+# <a name="dotnet-add-reference"></a>dotnet-add reference
 
 **この記事の対象: ✓** .NET Core 1.x SDK 以降のバージョン
 

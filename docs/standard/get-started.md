@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/07/2019
 ms.locfileid: "70799313"
 ---
-# <a name="get-started"></a>開始するには
+# <a name="get-started"></a>はじめに
 
 .NET を使い始めるにはさまざまな方法があります。 .NET は巨大なプラットフォームであるため、このドキュメントには異なる観点から .NET の使用開始方法を示す複数の記事があります。
 

@@ -1,5 +1,5 @@
 ---
-title: データ連結と Windows フォーム
+title: データ バインディングと Windows フォーム
 ms.date: 03/30/2017
 helpviewer_keywords:
 - master-details lists
@@ -19,7 +19,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/14/2019
 ms.locfileid: "65592311"
 ---
-# <a name="data-binding-and-windows-forms"></a>データ連結と Windows フォーム
+# <a name="data-binding-and-windows-forms"></a>データ バインディングと Windows フォーム
 Windows フォームでは、従来のデータ ソースだけでなく、データを含むほぼすべての構造にバインドできます。 実行時に計算する値、ファイルから読み取る値、または他のコントロールの値から派生する値の配列にバインドできます。  
   
  さらに、任意のコントロールのプロパティをデータ ソースにバインドできます。 従来のデータ バインディングでは、通常は <xref:System.Windows.Forms.Control.Text%2A> コントロールの <xref:System.Windows.Forms.TextBox> プロパティなどの表示プロパティをデータ ソースにバインドします。 .NET Framework にもバインディングによってその他のプロパティを設定するオプションがあります。 バインディングを使用して、次のタスクを実行できます。  

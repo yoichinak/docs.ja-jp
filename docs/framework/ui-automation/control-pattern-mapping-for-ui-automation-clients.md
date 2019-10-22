@@ -1,5 +1,5 @@
 ---
-title: UI オートメーション クライアントのコントロール パターン マッピング
+title: UI オートメーション クライアント向けコントロール パターンのマッピング
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, for UI Automation clients
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71043857"
 ---
-# <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI オートメーション クライアントのコントロール パターン マッピング
+# <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI オートメーション クライアント向けコントロール パターンのマッピング
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   

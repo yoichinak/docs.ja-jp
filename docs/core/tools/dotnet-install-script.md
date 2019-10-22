@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/10/2019
 ms.locfileid: "70849577"
 ---
-# <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト参照
+# <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト リファレンス
 
 ## <a name="name"></a>name
 

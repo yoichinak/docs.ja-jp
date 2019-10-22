@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Code での F# の概要します。
+title: Visual Studio Code で F# をはじめる
 description: Visual Studio Code および ionide の概要のプラグインのスイートで F# を使用する方法について説明します。
 ms.date: 12/23/2018
 ms.openlocfilehash: 2fa0518488d37b2130aaba96028ac92dac77eb97
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/18/2019
 ms.locfileid: "71082984"
 ---
-# <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code での F# の概要します。
+# <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code で F# をはじめる
 
 [Ionide プラグイン](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)をF#使用して[Visual Studio Code](https://code.visualstudio.com)に記述すると、IntelliSense と基本的なコードリファクタリングを使用して、優れたクロスプラットフォームで軽量の統合開発環境 (IDE) エクスペリエンスを実現できます。 プラグインの詳細については、 [Ionide.io](http://ionide.io)を参照してください。
 
