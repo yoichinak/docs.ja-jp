@@ -1,5 +1,5 @@
 ---
-title: 宣言された要素の参照 (Visual Basic)
+title: 宣言された要素への参照 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic]
@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/17/2019
 ms.locfileid: "72524556"
 ---
-# <a name="references-to-declared-elements-visual-basic"></a>宣言された要素の参照 (Visual Basic)
+# <a name="references-to-declared-elements-visual-basic"></a>宣言された要素への参照 (Visual Basic)
 宣言された要素をコードが参照する場合、Visual Basic コンパイラは参照内の名前を、その名前の適切な宣言に一致させる必要があります。 複数の要素が同じ名前で宣言されている場合は、その名前を*修飾*することによって、これらの要素のうちどれを参照するかを制御できます。  
   
  コンパイラは、名前の参照を最も*狭いスコープ*の名前宣言と照合しようとします。 これは、参照を行うコードから開始し、それを含んでいる要素のレベルを通じて外部で動作することを意味します。  

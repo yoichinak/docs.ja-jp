@@ -18,7 +18,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/18/2019
 ms.locfileid: "72582566"
 ---
-# <a name="option-strict-statement"></a>Option Strict Statement
+# <a name="option-strict-statement"></a>Option Strict ステートメント
 暗黙的なデータ型変換を拡大変換のみに制限し、遅延バインディングを許可しません。また、`Object` 型になる暗黙の型指定を許可しません。  
   
 ## <a name="syntax"></a>構文  
