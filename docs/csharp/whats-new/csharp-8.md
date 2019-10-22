@@ -2,12 +2,12 @@
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。
 ms.date: 09/20/2019
-ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275771"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579133"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
@@ -261,25 +261,36 @@ static Quadrant GetQuadrant(Point point) => point switch
 **using 宣言**は、`using` キーワードが前に付いている変数宣言です。 宣言されている変数を外側のスコープの最後に破棄する必要があることを、コンパイラに伝えます。 たとえば、テキスト ファイルを書き込む次のようなコードについて考えます。
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
+    // Notice how we declare skippedLines after the using statement.
+    int skippedLines = 0;
     foreach (string line in lines)
     {
         if (!line.Contains("Second"))
         {
             file.WriteLine(line);
         }
+        else
+        {
+            skippedLines++;
+        }
     }
-// file is disposed here
+    // Notice how skippedLines is in scope here.
+    return skippedLines;
+    // file is disposed here
 }
 ```
 
 上の例では、メソッドの右中かっこに達した時点で、ファイルは破棄されます。 そこは、`file` が宣言されているスコープの末端です。 上記のコードは、従来の [using ステートメント](../language-reference/keywords/using-statement.md)を使用する次のコードと同等です。
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
+    // We must declare the variable outside of the using block
+    // so that it is in scope to be returned.
+    int skippedLines = 0;
     using (var file = new System.IO.StreamWriter("WriteLines2.txt"))
     {
         foreach (string line in lines)
@@ -288,8 +299,13 @@ static void WriteLinesToFile(IEnumerable<string> lines)
             {
                 file.WriteLine(line);
             }
+            else
+            {
+                skippedLines++;
+            }
         }
     } // file is disposed here
+    return skippedLines;
 }
 ```
 

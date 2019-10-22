@@ -1,5 +1,7 @@
 ---
+
 title: Visual Studio Code での F# の概要
+
 description: Visual Studio Code および ionide の概要のプラグインのスイートで F# を使用する方法について説明します。
 ms.date: 12/23/2018
 ms.openlocfilehash: 2fa0518488d37b2130aaba96028ac92dac77eb97
@@ -9,7 +11,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/18/2019
 ms.locfileid: "71082984"
 ---
+
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code で F# を使い始める
+
 
 [Ionide プラグイン](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp) を使用して [Visual Studio Code](https://code.visualstudio.com)で F# を記述すると、IntelliSense と基本的なコードリファクタリングを使用して、優れたクロスプラットフォームで軽量の統合開発環境 (IDE) エクスペリエンスを実現できます。 プラグインの詳細については、 [Ionide.io](http://ionide.io) を参照してください。
 
@@ -46,7 +50,9 @@ ms.locfileid: "71082984"
 1. `ClassLibraryDemo`フォルダーの下にある F# プロジェクト自体。
 2. [`Paket`](https://fsprojects.github.io/Paket/) を介してパッケージを追加するための適切なディレクトリ構造。
 3. [`FAKE`](https://fsharp.github.io/FAKE/) を使用したクロスプラットフォーム ビルド スクリプト。
+
 4. パッケージを取得して依存関係を解決できる`paket.exe`実行可能ファイル。
+
 5. このプロジェクトを Git ベースのソース管理に追加する場合は、 `.gitignore`ファイル。
 
 ## <a name="writing-some-code"></a>コードの記述
@@ -98,7 +104,9 @@ toPigLatin "apple";;
 val it : string = "appleyay"
 ```
 
+
 関数が想定どおりに動作しているようです。これで、先ほど Visual Studio Code で初めて F# 関数を記述し、FSI でそれを評価しました。
+
 
 > [!NOTE]
 > ご存知かもしれませんが、FSI.EXE の行は`;;`で終了します。 これは、FSI.EXE で複数の行を入力できるためです。 最後`;;`のは、コードが終了したことを fsi.exe に通知します。
@@ -117,7 +125,9 @@ FSI.EXE では、次のことに気づいたかもしれません。
 val toPigLatin : word:string -> string
 ```
 
+
 これは、 `toPigLatin` `string`を入力として受け取り (`word`と呼びます)、別の`string`を返す関数であることを示します。これは[関数の型シグネチャ](https://fsharpforfunandprofit.com/posts/function-signatures/) と呼ばれ、F# コードの基本的な部分を理解するために重要です。 Visual Studio Code でカーソルを関数に合わせると、この点にも気づくでしょう。
+
 
 関数の本体には、次の2つの異なる部分があります。
 
@@ -139,9 +149,11 @@ val toPigLatin : word:string -> string
 
 この記事の前のセクションには、F# コードの記述の一般的な最初の手順を示しました。 最初に関数を記述して、FSI を使用して対話的に実行します。 これは REPL ドリブン開発と呼ばれます。 [repl](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) は "Read Evaluate-Print Loop" を表します。 何かが機能するまで機能を試すのに最適な方法です。
 
+
 REPL 駆動型開発の次の手順では、作業コードを F# 実装ファイルに移動します。その後、F# コンパイラによって実行可能なアセンブリにコンパイルできます。
 
 まず、`ClassLibraryDemo.fs`を開きます。 いくつかのコードが既に存在していることがわかります。先に進み、クラス定義を削除しますが、必ず[`namespace`](../language-reference/namespaces.md) 宣言は先頭に残しておいてください。
+
 
 次に、`PigLatin`という新しい[`module`](../language-reference/modules.md) を作成し、`toPigLatin`関数を次のようにコピーします。
 
@@ -182,10 +194,12 @@ val it : string = "appleyay"
 
 発生する可能性のある特定の問題をトラブルシューティングする方法を次にします。
 
+
 1. Ionide のコード編集機能を取得するには、F# ファイルをディスクに保存し、Visual Studio Code ワークスペースで開いているフォルダ内に保存する必要があります。
 2. システムに変更を加えた場合、または Visual Studio Code を開いた状態で Ionide の前提条件をインストールした場合は、Visual Studio Code を再起動します。
 3. 完全修飾パスなしでコマンドラインから F# コンパイラと F# 対話式を使用できることを確認します。これを行うには、F# コンパイラのコマンドラインに`fsc`を入力し、Windows の Visual F# ツールの`fsi`または`fsharpi`をそれぞれ入力し、Mac/Linux 上のモノラルを入力します。
 4. プロジェクトディレクトリに無効な文字が含まれていると、Ionide が機能しない可能性があります。この場合は、プロジェクトディレクトリの名前を変更します。
+
 5. Ionide コマンドがいずれも動作していない場合は、 [Visual Studio Code キーバインド](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts)を調べて、誤って上書きされていないかどうかを確認します。
 6. Ionide がマシン上で壊れていて、上記のいずれも問題を解決しない場合は、コンピューターの`ionide-fsharp`ディレクトリを削除して、プラグインスイートを再インストールしてみてください。
 

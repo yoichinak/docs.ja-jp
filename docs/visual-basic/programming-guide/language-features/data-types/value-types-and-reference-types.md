@@ -10,52 +10,52 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: f25caec43b7118b7b64db1b14516b0c5ea80f4f6
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 466bb5386235917705344d35c5141c8bf779218d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504882"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582642"
 ---
 # <a name="value-types-and-reference-types"></a>値型と参照型
-Visual Basic における型の 2 種類があります。 参照型と値の型。 参照型の変数はデータ (オブジェクト) への参照を格納するのに対して、値型の変数はデータを直接格納します。 参照型の場合、2 つの変数が同じオブジェクトを参照できるため、ある変数に対する演算によって、他の変数が参照しているオブジェクトが影響を受ける可能性があります。 各変数が独自のデータのコピーを値型の場合とに影響を与えるもう 1 つの変数に対する操作のことはできません (の場合を除く、 [ByRef パラメーター修飾子](../../../language-reference/modifiers/byref.md))。
+Visual Basic には、参照型と値型という2種類の型があります。 参照型の変数はデータ (オブジェクト) への参照を格納するのに対して、値型の変数はデータを直接格納します。 参照型の場合、2 つの変数が同じオブジェクトを参照できるため、ある変数に対する演算によって、他の変数が参照しているオブジェクトが影響を受ける可能性があります。 値型の場合、各変数にはデータの独自のコピーがあり、一方の変数に対する操作がもう一方の変数に影響を与えることはできません ([パラメーターの ByRef 修飾子](../../../language-reference/modifiers/byref.md)の場合を除く)。
   
 ## <a name="value-types"></a>値型  
- データ型は、*値の型*独自のメモリ割り当て内のデータを保持している場合。 値の型を以下に示します。  
+ データ型は、独自のメモリ割り当て内にデータを保持する場合は*値型*です。 値の種類は次のとおりです。  
   
 - すべての数値データ型  
   
-- `Boolean`、 `Char`、および `Date`  
+- `Boolean`、`Char`、および `Date`  
   
-- そのメンバーが参照型の場合でも、すべての構造  
+- メンバーが参照型の場合でも、すべての構造体  
   
-- 列挙型では、その基になる型は常にため`SByte`、 `Short`、 `Integer`、 `Long`、 `Byte`、 `UShort`、 `UInteger`、または `ULong`  
+- 列挙型。基になる型は常に `SByte`、`Short`、`Integer`、`Long`、`Byte`、`UShort`、`UInteger`、または `ULong`  
   
- すべての構造体は参照型のメンバーが含まれている場合でも、値型です。 このため、値などの型`Char`と`Integer`.NET Framework の構造体によって実装されます。  
+ すべての構造体は、参照型のメンバーが含まれている場合でも、値型です。 このため、`Char` や `Integer` などの値型は .NET Framework 構造体によって実装されます。  
   
- たとえば、予約済みキーワードを使用して値の型を宣言する`Decimal`します。 使用することも、`New`値型を初期化するキーワード。 これは、型パラメーターを受け取るコンス トラクターがある場合に特に便利です。 この例は、<xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29>コンス トラクターは、新しいビルド`Decimal`指定した部分からの値。  
+ 予約済みのキーワードを使用して値型を宣言できます (`Decimal` など)。 @No__t_0 キーワードを使用して値型を初期化することもできます。 これは、型にパラメーターを受け取るコンストラクターがある場合に特に便利です。 この例として、<xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> コンストラクターがあります。このコンストラクターは、指定されたパーツから新しい `Decimal` 値を構築します。  
   
 ## <a name="reference-types"></a>参照型  
- A*参照型*データへの参照を格納します。 参照型を以下に示します。  
+ *参照型*は、そのデータへの参照を格納します。 参照型には、次のものがあります。  
   
 - `String`  
   
-- その要素が値型の場合でも、すべての配列  
+- すべての配列 (要素が値型の場合でも)  
   
-- などのクラス型します。 <xref:System.Windows.Forms.Form>  
+- クラスの型 (<xref:System.Windows.Forms.Form> など)  
   
 - デリゲート  
   
- クラスは、*参照型*します。 場合でも、そのメンバーが値型は、すべての配列が参照型であるに注意してください。  
+ クラスは*参照型*です。 すべての配列が参照型であることに注意してください。これは、そのメンバーが値型の場合でも同様です。  
   
- 使用する必要がありますすべての参照型は、基になる .NET Framework クラスを表すため、 [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)初期化するときに、キーワード。 次のステートメントでは、配列を初期化します。  
+ 参照型はすべて、基になる .NET Framework クラスを表しているため、初期化時に[New Operator](../../../../visual-basic/language-reference/operators/new-operator.md)キーワードを使用する必要があります。 次のステートメントは、配列を初期化します。  
   
-```  
+```vb  
 Dim totals() As Single = New Single(8) {}  
 ```  
   
 ## <a name="elements-that-are-not-types"></a>型ではない要素  
- これらのいずれかとして宣言された要素のデータ型を指定できないため、次のプログラミング要素は、型とは見なされません。  
+ 次のプログラミング要素は、宣言された要素のデータ型として指定できないため、型としては使用できません。  
   
 - 名前空間  
   
@@ -63,19 +63,19 @@ Dim totals() As Single = New Single(8) {}
   
 - イベント  
   
-- プロパティやプロシージャ  
+- プロパティとプロシージャ  
   
 - 変数、定数、およびフィールド  
   
 ## <a name="working-with-the-object-data-type"></a>オブジェクトのデータ型の操作  
- 変数に参照型または値型のいずれかを割り当てることができます、`Object`データ型。 `Object`変数は常に、データ自体ではない、データへの参照を保持します。 ただし、値の型を割り当てた場合、`Object`変数、その場合と同様、独自のデータを保持します。 詳細については、次を参照してください。 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)します。  
+ @No__t_0 データ型の変数には、参照型または値型のいずれかを割り当てることができます。 @No__t_0 変数は、データ自体ではなく、常にデータへの参照を保持します。 ただし、`Object` 変数に値型を割り当てた場合は、それが独自のデータを保持しているかのように動作します。 詳細については、「 [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)」を参照してください。  
   
- かどうかを見つけることができます、`Object`に渡すことによって変数が参照型または値型として機能する、<xref:Microsoft.VisualBasic.Information.IsReference%2A>メソッドで、<xref:Microsoft.VisualBasic.Information>のクラス、<xref:Microsoft.VisualBasic?displayProperty=nameWithType>名前空間。 <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> 返します`True`場合のコンテンツ、`Object`変数は参照型を表します。  
+ @No__t_0 変数が参照型または値型として機能しているかどうかを確認するには、<xref:Microsoft.VisualBasic?displayProperty=nameWithType> 名前空間の <xref:Microsoft.VisualBasic.Information> クラスの <xref:Microsoft.VisualBasic.Information.IsReference%2A> メソッドに渡します。 `Object` 変数の内容が参照型を表している場合、<xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> は `True` を返します。  
   
 ## <a name="see-also"></a>関連項目
 
 - [null 許容値型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [データ型の有効な使用方法](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
 - [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)

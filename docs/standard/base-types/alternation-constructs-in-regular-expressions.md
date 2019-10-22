@@ -1,5 +1,5 @@
 ---
-title: .NET 正規表現での代替構成体
+title: .NET 正規表現での代替コンストラクト
 description: 正規表現での条件一致に代替構成体を使用する方法について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
@@ -25,7 +25,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/02/2019
 ms.locfileid: "71736613"
 ---
-# <a name="alternation-constructs-in-regular-expressions"></a>正規表現での代替構成体
+# <a name="alternation-constructs-in-regular-expressions"></a>正規表現での代替コンストラクト
 
 代替構成体は、択一条件または条件一致を有効にするように正規表現を変更します。 .NET では、次の 3 つの代替構成体がサポートされています。
 

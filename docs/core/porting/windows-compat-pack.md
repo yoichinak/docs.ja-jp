@@ -4,12 +4,12 @@ description: Windows 互換機能パックとそれを使用して既存の .NET
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202564"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521280"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Windows 互換機能パックを使用してコードを .NET Core に移植する
 
@@ -25,23 +25,23 @@ ms.locfileid: "70202564"
 
 Windows 専用 API やプラットフォーム非依存 API など、約 20,000 の API を提供します。テクノロジ領域には次のものがあります。
 
-* コード ページ
-* CodeDom
-* 構成
-* ディレクトリ サービス
-* 描画
-* ODBC
-* アクセス許可
-* ポート
-* Windows アクセス制御リスト (ACL)
-* Windows Communication Foundation (WCF)
-* Windows 暗号化
-* Windows EventLog
-* WMI (Windows Management Instrumentation)
-* Windows パフォーマンス カウンター
-* Windows レジストリ
-* Windows ランタイム キャッシュ
-* Windows サービス
+- コード ページ
+- CodeDom
+- 構成
+- ディレクトリ サービス
+- 描画
+- ODBC
+- アクセス許可
+- ポート
+- Windows アクセス制御リスト (ACL)
+- Windows Communication Foundation (WCF)
+- Windows 暗号化
+- Windows EventLog
+- WMI (Windows Management Instrumentation)
+- Windows パフォーマンス カウンター
+- Windows レジストリ
+- Windows ランタイム キャッシュ
+- Windows サービス
 
 詳細については、[互換機能パックの仕様](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)に関するページを参照してください。
 

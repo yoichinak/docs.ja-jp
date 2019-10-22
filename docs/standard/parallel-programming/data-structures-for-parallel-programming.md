@@ -1,5 +1,5 @@
 ---
-title: 並列プログラミングのデータ構造
+title: 並列プログラミング向けのデータ構造
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64625586"
 ---
-# <a name="data-structures-for-parallel-programming"></a>並列プログラミングのデータ構造
+# <a name="data-structures-for-parallel-programming"></a>並列プログラミング向けのデータ構造
 .NET Framework バージョン 4 では、同時実行コレクション クラスのセット、軽量な同期プリミティブ、遅延初期化用の型など、並列プログラミングに役立つ複数の新しい型が導入されています。 これらの型は、タスク並列ライブラリや PLINQ などの任意のマルチスレッド アプリケーション コードで使うことができます。  
   
 ## <a name="concurrent-collection-classes"></a>同時実行コレクション クラス  

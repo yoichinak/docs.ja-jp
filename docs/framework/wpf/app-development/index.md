@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 519ff6f40ea303b64864683db222b55c6e5a23aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 405a8d3c8b922d0f74e522e85ea3096d989c478e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964814"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582503"
 ---
 # <a name="application-development"></a>アプリケーション開発
 <a name="introduction"></a>Windows Presentation Foundation (WPF) は、次の種類のアプリケーションを開発するために使用できるプレゼンテーションフレームワークです。  
   
 - スタンドアロンアプリケーション (クライアントコンピューターにインストールされて実行される実行可能アセンブリとして構築された従来のスタイルの Windows アプリケーション)。  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](実行可能アセンブリとして構築され、Microsoft Internet Explorer や Mozilla Firefox などの Web ブラウザーによってホストされるナビゲーションページで構成されるアプリケーション)。  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (実行可能アセンブリとして構築され、Microsoft Internet Explorer や Mozilla Firefox などの Web ブラウザーによってホストされるナビゲーションページで構成されるアプリケーション)。  
   
 - カスタム コントロール ライブラリ (再利用可能なコントロールを含む被実行可能アセンブリ)。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "69964814"
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は、リソース、コンテンツ、データという3種類の非実行可能データファイルをサポートする、埋め込みリソース用の Microsoft .NET Framework のコアサポートを拡張します。 詳細については、「[WPF アプリケーションのリソース、コンテンツ ファイル、およびデータ ファイル](wpf-application-resource-content-and-data-files.md)」を参照してください。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] は、リソース、コンテンツ、データという3種類の非実行可能データファイルをサポートする、埋め込みリソース用の Microsoft .NET Framework のコアサポートを拡張します。 詳細については、「[WPF アプリケーションのリソース、コンテンツ ファイル、およびデータ ファイル](wpf-application-resource-content-and-data-files.md)」を参照してください。  
   
- WPF 非実行可能データ ファイル サポートの重要なコンポーネントは、一意の [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] を使用して、これらのファイルを識別し、読み込む機能です。 詳細については、「[WPF におけるパック URI](pack-uris-in-wpf.md)」を参照してください。  
+ WPF 非実行可能データファイルのサポートの重要な要素は、一意の URI を使用してそれらを識別し、読み込む機能です。 詳細については、「[WPF におけるパック URI](pack-uris-in-wpf.md)」を参照してください。  
   
 <a name="Windows_and_Dialog_Boxes"></a>   
 ## <a name="windows-and-dialog-boxes"></a>ウィンドウとダイアログ ボックス  
@@ -74,7 +74,7 @@ ms.locfileid: "69964814"
   
  <xref:System.Windows.Window> では、ダイアログ ボックスと呼ばれる特別な種類のウィンドウを作成できます。 モーダル ダイアログ ボックスとモードレス ダイアログ ボックスの両方の種類のダイアログ ボックスを作成できます。  
   
- 便宜上、 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]およびアプリケーション間での再利用性と一貫したユーザーエクスペリエンスの利点を実現するために、では、、、および<xref:System.Windows.Controls.PrintDialog>の3つの一般的な Windows ダイアログ<xref:Microsoft.Win32.OpenFileDialog>ボックス<xref:Microsoft.Win32.SaveFileDialog>が公開されています。  
+ 便宜上、アプリケーション間での再利用性と一貫したユーザーエクスペリエンスの利点については、<xref:Microsoft.Win32.OpenFileDialog>、<xref:Microsoft.Win32.SaveFileDialog>、および <xref:System.Windows.Controls.PrintDialog> の3つの一般的な Windows ダイアログボックスを [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 公開しています。  
   
  メッセージ ボックスは、重要な情報をテキストでユーザーに表示し、単純な [はい]、[いいえ]、[OK]、[キャンセル] の応答を求めるために使用する特別なダイアログ ボックスです。 メッセージ ボックスを作成および表示するには <xref:System.Windows.MessageBox> クラスを使用します。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "69964814"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>ホスト  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]Microsoft Internet Explorer または Firefox でホストできます。 ホストのモデルによって考慮事項や制約が異なります。詳細については、「[ホスティング](hosting-wpf-applications.md)」を参照してください。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] は、Microsoft Internet Explorer または Firefox でホストできます。 ホストのモデルによって考慮事項や制約が異なります。詳細については、「[ホスティング](hosting-wpf-applications.md)」を参照してください。  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>ビルドと配置  
@@ -119,7 +119,7 @@ ms.locfileid: "69964814"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>関連トピック  
   
-|タイトル|説明|  
+|Title|説明|  
 |-----------|-----------------|  
 |[アプリケーション管理の概要](application-management-overview.md)|アプリケーションの有効期間、ウィンドウ、アプリケーション リソース、ナビゲーションの管理など、<xref:System.Windows.Application> クラスの概要について説明します。|  
 |[WPF のウィンドウ](windows-in-wpf-applications.md)|<xref:System.Windows.Window> クラスおよびダイアログ ボックスの使い方など、アプリケーション内のウィンドウ管理の詳細について説明します。|  

@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/10/2019
 ms.locfileid: "70855804"
 ---
-# <a name="install-f"></a>F のインストール\#
+# <a name="install-f"></a>F\# のインストール
 
 環境に応じて、複数の方法で F# をインストールできます。
 

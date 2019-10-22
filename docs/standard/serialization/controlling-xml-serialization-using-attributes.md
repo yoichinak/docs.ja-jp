@@ -66,7 +66,7 @@ public class TaxRates {
 }
 ```
 
-属性の詳細については、「[属性](../../../docs/standard/attributes/index.md)」を参照してください。 XML シリアル化を制御する属性の一覧については、「[Attributes That Control XML Serialization](attributes-that-control-xml-serialization.md)」(XML シリアル化を制御する属性) を参照してください。
+属性の詳細については、「[属性](../../../docs/standard/attributes/index.md)」を参照してください。 XML シリアル化を制御する属性の一覧については、「[XML シリアル化を制御する属性](attributes-that-control-xml-serialization.md)」(XML シリアル化を制御する属性) を参照してください。
 
 ## <a name="controlling-array-serialization"></a>配列のシリアル化の制御
 
@@ -241,7 +241,7 @@ public class Group {
 </Group>
 ```
 
-2 つの XML ストリームを区別するもう 1 つの方法は、XML スキーマ定義ツールを使用して、コンパイル済みのコードから XML スキーマ (XSD) ドキュメント ファイルを生成することです  (ツールの使用の詳細については、「[The XML Schema Definition Tool and XML Serialization](the-xml-schema-definition-tool-and-xml-serialization.md)」(XML スキーマ定義ツールと XML シリアル化) を参照してください)。フィールドに属性を適用しないと、スキーマには次のように要素が記述されます。
+2 つの XML ストリームを区別するもう 1 つの方法は、XML スキーマ定義ツールを使用して、コンパイル済みのコードから XML スキーマ (XSD) ドキュメント ファイルを生成することです (ツールの使用の詳細については、「[XML スキーマ定義ツールと XML シリアル化](the-xml-schema-definition-tool-and-xml-serialization.md)」を参照してください)。フィールドに属性を適用しないと、スキーマには次のように要素が記述されます。
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />

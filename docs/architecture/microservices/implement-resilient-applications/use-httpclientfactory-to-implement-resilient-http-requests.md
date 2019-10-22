@@ -2,12 +2,12 @@
 title: HttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 description: .NET Core 2.1 以降で使用できる HttpClientFactory を使用して、`HttpClient` インスタンスを作成し、それをアプリケーションで簡単に使用できるようにする方法について説明します。
 ms.date: 08/08/2019
-ms.openlocfilehash: 6c862171ee6b5eda6f95694878bfa43518a9bdfa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3f9b3b18cede07e4c5c56600634ae230c0e251bb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039973"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72578907"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>HttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 
@@ -76,7 +76,7 @@ services.AddHttpClient<IOrderingService, OrderingService>();
 ```csharp
 services.AddHttpClient<ICatalogService, CatalogService>(client =>
 {
-    client.BaseAddress = new Uri(Configuration["BaseUrl"])
+    client.BaseAddress = new Uri(Configuration["BaseUrl"]);
 })
     .AddPolicyHandler(GetRetryPolicy())
     .AddPolicyHandler(GetCircuitBreakerPolicy());

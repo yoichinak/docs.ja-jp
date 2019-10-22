@@ -1,5 +1,5 @@
 ---
-title: カスタム日時書式指定文字列 - .NET
+title: カスタム日時形式文字列 - .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -23,7 +23,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/29/2019
 ms.locfileid: "70133732"
 ---
-# <a name="custom-date-and-time-format-strings"></a>カスタム日時書式指定文字列
+# <a name="custom-date-and-time-format-strings"></a>カスタム日時形式文字列
 
 日時書式指定文字列は、<xref:System.DateTime> 値または <xref:System.DateTimeOffset> 値の書式設定操作によって生成されるテキスト表現を定義します。 また、文字列を日時に正常に変換するために解析操作で必要となる日時値の表現も定義します。 カスタム書式指定文字列は、1 つ以上のカスタム日時書式指定子で構成されます。 [標準の日時書式指定文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)以外の文字列は、すべてカスタム日時書式指定文字列として解釈されます。
 

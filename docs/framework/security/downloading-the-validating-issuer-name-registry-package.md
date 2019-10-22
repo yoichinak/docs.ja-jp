@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65631846"
 ---
-# <a name="download-the-validating-issuer-name-registry-package"></a>発行者名レジストリの検証パッケージをダウンロードします。
+# <a name="download-the-validating-issuer-name-registry-package"></a>発行者名レジストリの検証パッケージのダウンロード
 
 このトピックでは、Validating Issuer Name Registry (VINR) をダウンロードしてプロジェクトで使用する方法について説明します。
 
@@ -17,13 +17,13 @@ VINR は、プロジェクトに必要なアセンブリと参照を追加する
 
 ## <a name="use-the-package-manager-gui"></a>パッケージ マネージャー GUI を使用します。
 
-1. Visual Studio の**ソリューション エクスプローラー**でプロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。
+1. Visual Studio の**ソリューション エクスプローラー**でプロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。
 
 2. **[NuGet パッケージの管理]** ウィンドウで、検索ボックスをクリックし、「`ValidatingIssuerNameRegistry`」と入力して **Enter** キーを押します。
 
 3. 結果ペインから、最初の結果の **[インストール]** をクリックします。
 
-4. パッケージのダウンロードが開始されます。 プロジェクトに追加される前に、[License Acceptance] ダイアログ ボックスが表示されます。 ライセンス条項に同意する場合は、**[I Accept]** をクリックします。
+4. パッケージのダウンロードが開始されます。 プロジェクトに追加される前に、[License Acceptance] ダイアログ ボックスが表示されます。 ライセンス条項に同意する場合は、 **[I Accept]** をクリックします。
 
 5. 最新の VINR アセンブリがダウンロードされ、プロジェクトに追加されます。
 

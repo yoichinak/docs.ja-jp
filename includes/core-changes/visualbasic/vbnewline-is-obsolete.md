@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e476039ff9c8d33f54a2f7e4371dc09a3be557c7
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 86cdb845c436f424bbcc70e0736568031143b204
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72237392"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522700"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft.VisualBasic.Constants.vbNewLine は古い
 
@@ -19,7 +19,7 @@ ms.locfileid: "72237392"
 .NET Core 3.0 Preview 8 以降では、[廃止](xref:System.ObsoleteAttribute)属性が <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> 定数に適用されています。 その定数を使用すると、コンパイラの警告が発生します。 .NET Core と .NET Framework の両方の以前のリリースでは、廃止としてマークされていませんでした。
 
 この変更は、Visual Basic をマルチプラットフォーム開発用の言語としてサポートするために行われました。 `vbNewLine` 定数は、Windows での改行文字シーケンスである `\r\n` と同等です。 Unix ベースのシステムでは、改行文字は `\n` です。
- 
+
 #### <a name="recommended-action"></a>推奨される操作
 
 `vbNewLine` に対する[廃止](xref:System.ObsoleteAttribute)属性メッセージには、次の推奨事項が含まれています。

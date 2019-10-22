@@ -36,7 +36,7 @@ let f x = x + 1
 
 この例では、関数の名前は `f`、引数は `x`、引数の型は `int`、関数本体は `x + 1`、戻り値の型は `int` です。
 
-関数は、`inline` としてマークできます。 `inline` の詳細については、「[Inline Functions](../functions/inline-functions.md)」(インライン関数) を参照してください。
+関数は、`inline` としてマークできます。 `inline` の詳細については、「[インライン関数](../functions/inline-functions.md)」(インライン関数) を参照してください。
 
 ## <a name="scope"></a>スコープ
 
@@ -76,7 +76,7 @@ let f x = (x, x)
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
-詳細については、「[コードのフォーマットに関するガイドライン](../code-formatting-guidelines.md)」および「[Verbose Syntax](../verbose-syntax.md)」 (冗語構文) を参照してください。
+詳細については、「[コードのフォーマットに関するガイドライン](../code-formatting-guidelines.md)」および「[詳細構文](../verbose-syntax.md)」 (冗語構文) を参照してください。
 
 ## <a name="return-values"></a>戻り値
 

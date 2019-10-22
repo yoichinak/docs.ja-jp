@@ -67,7 +67,7 @@ ms.locfileid: "64630771"
   
  使用、<xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>と<xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>プロパティ遅延を指定する通常の簡単な前に、<xref:System.Windows.Controls.ToolTip>が表示されますとどのくらいの期間を指定することも、<xref:System.Windows.Controls.ToolTip>引き続き表示されます。 詳細については、「[方法 :ツールヒントの表示が遅延](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms747264(v=vs.90))します。  
   
- <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>プロパティは、それらのマウス ポインターをすばやく移動するときを初期遅延なしのさまざまなコントロールのツールヒントが表示されるかどうかを決定します。 詳細については、<xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>プロパティを参照してください[Use the BetweenShowDelay Property](how-to-use-the-betweenshowdelay-property.md)します。  
+ <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>プロパティは、それらのマウス ポインターをすばやく移動するときを初期遅延なしのさまざまなコントロールのツールヒントが表示されるかどうかを決定します。 <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> プロパティの詳細については、[BetweenShowDelay プロパティの使用](how-to-use-the-betweenshowdelay-property.md)に関するページを参照してください。  
   
  次の例では、ツールヒントのこれらのプロパティを設定する方法を示します。  
   

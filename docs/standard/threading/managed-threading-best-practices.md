@@ -1,5 +1,5 @@
 ---
-title: マネージド スレッド処理の実施
+title: マネージド スレッド処理のベスト プラクティス
 ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,7 +19,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71392696"
 ---
-# <a name="managed-threading-best-practices"></a>マネージド スレッド処理の実施
+# <a name="managed-threading-best-practices"></a>マネージド スレッド処理のベスト プラクティス
 マルチスレッドには慎重なプログラミングが必要です。 ほとんどのタスクでは、スレッド プールのスレッドを使って実行の要求をキューに置くことによって、処理の複雑さを軽減できます。 このトピックでは、マルチ スレッド動作の調整や、ブロックするスレッドの処理など、より難しい状況について説明します。  
   
 > [!NOTE]

@@ -1,5 +1,5 @@
 ---
-title: '方法: 変数 (Visual Basic) のスコープを制御します。'
+title: '方法: 変数のスコープを制御する (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], scope
@@ -12,55 +12,55 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 7f1d671f6657c7810ec605533493a340baac39c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 23a10bd2d6c0c9f3a13bff864559460c48927e01
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610340"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582601"
 ---
-# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>方法: 変数 (Visual Basic) のスコープを制御します。
-変数が、通常、*スコープ*、または宣言をリージョン全体での参照を表示します。 場合によっては、変数の*アクセス レベル*そのスコープに影響を与えることができます。  
+# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>方法: 変数のスコープを制御する (Visual Basic)
+通常、変数は、宣言する領域全体で*スコープ*内にあるか、参照用に表示されます。 場合によっては、変数の*アクセスレベル*がそのスコープに影響を与えることがあります。  
   
  詳細については、「 [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)」を参照してください。  
   
-## <a name="scope-at-block-or-procedure-level"></a>ブロックまたはプロシージャ レベルのスコープ  
+## <a name="scope-at-block-or-procedure-level"></a>ブロックレベルまたはプロシージャレベルのスコープ  
   
-#### <a name="to-make-a-variable-visible-only-within-a-block"></a>変数をブロック内でのみ表示されるようにするには  
+#### <a name="to-make-a-variable-visible-only-within-a-block"></a>変数がブロック内でのみ表示されるようにするには  
   
-- 場所、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)の開始との間など、そのブロックの宣言ステートメントの終了の間、変数、`For`と`Next`のステートメントを`For`ループします。  
+- @No__t_3 ループの `For` ステートメントと `Next` ステートメントの間で、そのブロックの開始宣言ステートメントと終了宣言ステートメントの間に変数の[Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)を配置します。  
   
-     ブロック内からのみ、変数を参照することができます。  
+     変数は、ブロック内からのみ参照できます。  
   
-#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>変数をプロシージャ内でのみ表示されるようにするには  
+#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>プロシージャ内でのみ変数を表示するには  
   
-- 場所、`Dim`変数、プロシージャ内では、ブロックの外側のステートメント (など、 `With`.`End With`ブロック)。  
+- プロシージャ内に変数の `Dim` ステートメントを配置しますが、ブロックの外側 (`With`... `End With` ブロックなど) の内側に配置します。  
   
-     プロシージャに含まれる各ブロックの内部を含むプロシージャ内からのみ、変数を参照することができます。  
+     プロシージャ内の変数を参照できるのは、プロシージャに含まれている任意のブロック内からです。  
   
-## <a name="scope-at-module-or-namespace-level"></a>モジュールまたは Namespace レベルのスコープ  
- 便宜上、1 つの用語*モジュール レベル*モジュール、クラス、および構造に当てはまります。 モジュール レベル変数のアクセス レベルは、そのスコープを決定します。 モジュール、クラスまたは構造体を含む名前空間スコープにも影響します。  
+## <a name="scope-at-module-or-namespace-level"></a>モジュールまたは名前空間レベルのスコープ  
+ 便宜上、単項*モジュールレベル*はモジュール、クラス、および構造体にも同様に適用されます。 モジュールレベル変数のアクセスレベルによってそのスコープが決まります。 モジュール、クラス、または構造体を含む名前空間もスコープに影響します。  
   
-#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>変数をモジュール、クラスまたは構造体全体にわたって表示されるようにするには  
+#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>モジュール、クラス、または構造体全体で変数を表示するには  
   
-1. 場所、`Dim`変数ではなく、プロシージャの外部モジュール、クラス、または構造体には、内部のステートメント。  
+1. 変数の `Dim` ステートメントをモジュール、クラス、または構造体の内部に配置しますが、プロシージャの外側に配置します。  
   
-2. 含める、[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)キーワード、`Dim`ステートメント。  
+2. @No__t_1 ステートメントに[Private](../../../../visual-basic/language-reference/modifiers/private.md)キーワードを含めます。  
   
-3. なく、モジュール、クラス、または構造内で任意の場所から変数を参照できる外です。  
+3. 変数は、モジュール、クラス、または構造体内のどこからでも参照できますが、外部からは参照できません。  
   
-#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>変数を名前空間全体で表示されるようにするには  
+#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>名前空間全体で変数を表示するには  
   
-1. 場所、`Dim`変数ではなく、プロシージャの外部モジュール、クラス、または構造体には、内部のステートメント。  
+1. 変数の `Dim` ステートメントをモジュール、クラス、または構造体の内部に配置しますが、プロシージャの外側に配置します。  
   
-2. 含める、[フレンド](../../../../visual-basic/language-reference/modifiers/friend.md)または[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)キーワード、`Dim`ステートメント。  
+2. @No__t_2 ステートメントに[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)キーワードまたは[Public](../../../../visual-basic/language-reference/modifiers/public.md)キーワードを含めます。  
   
-3. 任意の場所から変数を参照できるモジュール、クラスまたは構造体を含む名前空間内で。  
+3. 変数は、モジュール、クラス、または構造体を含む名前空間内の任意の場所から参照できます。  
   
 ## <a name="example"></a>例  
- 次の例では、モジュール レベル変数を宣言し、モジュール内のコードをその可視性を制限します。  
+ 次の例では、モジュールレベルで変数を宣言し、その可視性をモジュール内のコードに制限しています。  
   
-```  
+```vb  
 Module demonstrateScope  
     Private strMsg As String  
     Sub initializePrivateVariable()  
@@ -72,25 +72,25 @@ Module demonstrateScope
 End Module  
 ```  
   
- 前の例では、すべてのプロシージャはモジュールで定義されている`demonstrateScope`できますを参照してください、`String`変数`strMsg`します。 ときに、`usePrivateVariable`プロシージャが呼び出されると、文字列変数の内容を表示`strMsg` ダイアログ ボックス。  
+ 前の例では、モジュール `demonstrateScope` で定義されているすべてのプロシージャが、`String` 変数 `strMsg` を参照できます。 @No__t_0 プロシージャが呼び出されると、ダイアログボックスに `strMsg` 文字列変数の内容が表示されます。  
   
- 上記の例では、文字列変数に次の変更と`strMsg`宣言の名前空間内のすべてのコードで参照できます。  
+ 前の例を次のように変更すると、`strMsg` 文字列変数は、宣言の名前空間内の任意の場所でコードによって参照できます。  
   
-```  
+```vb  
 Public strMsg As String  
 ```  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
- 同じ名前の別の変数の代わりに誤って参照することがある可能性は少なく、変数より狭いスコープ 参照の対応付けの問題を最小限に抑えることができますも。  
+ 変数の範囲が狭いほど、同じ名前を持つ別の変数の代わりに、誤って変数を参照してしまう可能性が低くなります。 参照の一致に関する問題を最小限に抑えることもできます。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
- 変数のスコープが狭い悪意のあるコードが不正に、小さい方の可能性は、その使用します。  
+ 変数の範囲が狭いほど、悪意のあるコードによって不適切に使用される可能性が小さくなります。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Visual Basic での有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Visual Basic でのアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic 内のスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic の有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic のアクセスレベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [変数](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)

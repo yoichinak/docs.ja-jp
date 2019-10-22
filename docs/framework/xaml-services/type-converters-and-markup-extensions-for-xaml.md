@@ -45,7 +45,7 @@ ms.locfileid: "69939689"
  XAML でのマークアップ拡張機能の実装パターンの詳細については、「[XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md)」を参照してください。  
   
 > [!NOTE]
-> <xref:System.Windows.Markup.MarkupExtension> 型と <xref:System.Windows.Markup.ValueSerializer> 型はどちらも、 <xref:System.Windows.Markup> 名前空間ではなく、 <xref:System.Xaml> 名前空間にあります。 これは、これらの型が、文字列`Windows`を含む CLR 名前空間に特に設定されていない WPF または Windows フォームテクノロジに固有であるという意味ではありません。 <xref:System.Windows.Markup.MarkupExtension> と <xref:System.Windows.Markup.ValueSerializer> は System.Xaml アセンブリにあり、特定のフレームワークとの依存関係はありません。 これらの型は .NET Framework 3.0 の CLR 名前空間に存在し、.NET Framework 4 の CLR 名前空間に残っているので、既存の WPF プロジェクトでの参照の中断を回避できます。 詳細については、「 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)」を参照してください。  
+> <xref:System.Windows.Markup.MarkupExtension> 型と <xref:System.Windows.Markup.ValueSerializer> 型はどちらも、 <xref:System.Windows.Markup> 名前空間ではなく、 <xref:System.Xaml> 名前空間にあります。 これは、これらの型が、文字列`Windows`を含む CLR 名前空間に特に設定されていない WPF または Windows フォームテクノロジに固有であるという意味ではありません。 <xref:System.Windows.Markup.MarkupExtension> と <xref:System.Windows.Markup.ValueSerializer> は System.Xaml アセンブリにあり、特定のフレームワークとの依存関係はありません。 これらの型は .NET Framework 3.0 の CLR 名前空間に存在し、.NET Framework 4 の CLR 名前空間に残っているので、既存の WPF プロジェクトでの参照の中断を回避できます。 詳細については、「 [WPF から System.Xaml に移行した型](types-migrated-from-wpf-to-system-xaml.md)」を参照してください。  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>値シリアライザー  
@@ -71,4 +71,4 @@ ms.locfileid: "69939689"
 - <xref:System.Xaml.XamlObjectWriter>
 - [XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md)
 - [XAML の型コンバーターの概要](type-converters-for-xaml-overview.md)
-- [Service Contexts Available to Type Converters and Markup Extensions](service-contexts-available-to-type-converters-and-markup-extensions.md)
+- [型コンバーターおよびマークアップ拡張機能で使用できるサービス コンテキスト](service-contexts-available-to-type-converters-and-markup-extensions.md)

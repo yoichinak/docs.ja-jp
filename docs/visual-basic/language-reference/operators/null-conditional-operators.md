@@ -6,31 +6,31 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: 4815fe7ad337634cfb56127fbd24a47a37fdd74b
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 40cb63705eda563b4c3cfd30fa9836a8f632dccf
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062946"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581632"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. そして。() null 条件演算子 (Visual Basic)
 
-Null の左側のオペランドの値をテスト (`Nothing`) メンバー アクセスを実行する前に (`?.`) またはインデックス (`?()`); の操作を返します。`Nothing`に左側のオペランドが評価された場合`Nothing`します。 通常の値の型を返す式、null 条件演算子が返されます、<xref:System.Nullable%601>します。
+メンバーアクセス (`?.`) 操作またはインデックス (`?()`) 操作を実行する前に、左側のオペランドの値を null (`Nothing`) に対してテストします。左側のオペランドが `Nothing` に評価された場合に `Nothing` を返します。 通常、値型を返す式では、null 条件演算子は <xref:System.Nullable%601> を返します。
 
-これらの演算子を使用して、データ構造を下って場合は特に、null のチェックを処理するには、少ないコードを記述するのに役立ちます。 例えば:
+これらの演算子を使用すると、特にデータ構造への降順で、null チェックを処理するコードを記述しやすくなります。 (例:
 
 ```vb
-' Nothing if customers is Nothing  
-Dim length As Integer? = customers?.Length  
+' Nothing if customers is Nothing
+Dim length As Integer? = customers?.Length
 
 ' Nothing if customers is Nothing
 Dim first As Customer = customers?(0)
 
 ' Nothing if customers, the first customer, or Orders is Nothing
-Dim count As Integer? = customers?(0)?.Orders?.Count()   
+Dim count As Integer? = customers?(0)?.Orders?.Count()
 ```
 
-比較については、null 条件演算子を使用せず、これらの式の最初の代替のコードは次のとおりです。
+比較のために、null 条件演算子を使用しない最初の式の代替コードは次のとおりです。
 
 ```vb
 Dim length As Integer
@@ -39,35 +39,35 @@ If customers IsNot Nothing Then
 End If
 ```
 
-可能性のある null の場合、そのオブジェクトのブール型のメンバーの値に基づいてオブジェクトの操作の実行に必要がある場合があります (などのブール型プロパティ`IsAllowedFreeShipping`次の例)。
+場合によっては、オブジェクトのブール型の値に基づいて、null である可能性のあるオブジェクトに対してアクションを実行する必要があります (次の例で `IsAllowedFreeShipping` ブール型プロパティと同様)。
 
 ```vb
-  Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
-  
-  If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
-   ApplyFreeShippingToOrders(customer)
-  End If
+Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+
+If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
+  ApplyFreeShippingToOrders(customer)
+End If
 ```
 
-コードを短くし、次のように、null 条件演算子を使用して、手動での null チェックを回避できます。
+次のように、null 条件演算子を使用すると、コードを短くして、null を手動でチェックすることを回避できます。
 
 ```vb
- Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
- 
- If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
+Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+
+If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
-Null 条件演算子はショートサーキットです。  条件付きメンバー アクセスおよびインデックス操作のチェーン内の 1 つの操作を返す場合`Nothing`残りのチェーンの実行が停止します。  次の例では、`C(E)`場合は評価されません`A`、 `B`、または`C`に評価される`Nothing`します。
+Null 条件演算子はショートサーキットです。  条件付きメンバーアクセスとインデックス操作のチェーンの1つの操作が `Nothing` を返す場合、チェーンの残りの実行は停止します。  次の例では、`A`、`B`、または `C` が `Nothing` に評価される場合、`C(E)` は評価されません。
 
 ```vb
 A?.B?.C?(E);
 ```
 
-Null 条件メンバー アクセスの別の用途では、はるかに少ないコードでスレッド セーフな方法でデリゲートを呼び出します。  次の例は、2 つの型を定義、`NewsBroadcaster`と`NewsReceiver`します。 ニュース項目によって、受信側に送信されます、`NewsBroadcaster.SendNews`を委任します。
+Null 条件メンバーアクセスのもう1つの用途は、はるかに少ないコードでスレッドセーフな方法でデリゲートを呼び出すことです。  次の例では、`NewsBroadcaster` と `NewsReceiver` の2つの型を定義しています。 ニュース項目は `NewsBroadcaster.SendNews` デリゲートによって受信者に送信されます。
 
 ```vb
 Public Module NewsBroadcaster
-   Dim SendNews As Action(Of String) 
+   Dim SendNews As Action(Of String)
 
    Public Sub Main()
       Dim rec As New NewsReceiver()
@@ -91,26 +91,26 @@ Public Class NewsReceiver
 End Class
 ```
 
-内の要素がない場合、`SendNews`呼び出しリスト、`SendNews`デリゲートがスローされます、<xref:System.NullReferenceException>します。 Null 条件演算子では、前にコードのデリゲートの呼び出しリストがありませんが、次のことを確認するよう`Nothing`:
+@No__t_0 の呼び出しリストに要素がない場合、`SendNews` デリゲートは <xref:System.NullReferenceException> をスローします。 Null 条件演算子の前に、次のようなコードは、デリゲート呼び出しリストが `Nothing` されていないことを保証しています。
 
-```vb  
-SendNews = SendNews.Combine({SendNews, client})  
-If SendNews IsNot Nothing Then 
+```vb
+SendNews = SendNews.Combine({SendNews, client})
+If SendNews IsNot Nothing Then
    SendNews("Just in...")
 End If
 ```
 
-新しい方法は格段に単純です。  
+新しい方法は格段に単純です。
 
 ```vb
-SendNews = SendNews.Combine({SendNews, client})  
+SendNews = SendNews.Combine({SendNews, client})
 SendNews?.Invoke("Just in...")
 ```
 
-コンパイラが `SendNews` を評価するためのコードを一度しか生成せず、一時変数に結果が保持されるため、新しい方法はスレッド セーフです。 null 条件デリゲート呼び出し構文 `SendNews?(String)` がないため、`Invoke` メソッドを明示的に呼び出す必要があります。  
+コンパイラが `SendNews` を評価するためのコードを一度しか生成せず、一時変数に結果が保持されるため、新しい方法はスレッド セーフです。 null 条件デリゲート呼び出し構文 `SendNews?(String)` がないため、`Invoke` メソッドを明示的に呼び出す必要があります。
 
 ## <a name="see-also"></a>関連項目
 
 - [演算子 (Visual Basic)](index.md)
-- [Visual Basic プログラミング ガイド](../../../visual-basic/programming-guide/index.md)
+- [Visual Basic のプログラミング ガイド](../../../visual-basic/programming-guide/index.md)
 - [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)

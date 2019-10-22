@@ -1,5 +1,5 @@
 ---
-title: 装飾の概要
+title: ガイドの概要
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/22/2019
 ms.locfileid: "69956105"
 ---
-# <a name="adorners-overview"></a>装飾の概要
+# <a name="adorners-overview"></a>ガイドの概要
 装飾は特殊な型<xref:System.Windows.FrameworkElement>であり、ユーザーに視覚的な手掛かりを提供するために使用されます。 装飾は、要素への機能ハンドル追加やコントロールに関する状態情報の提供など、さまざまな用途に使用できます。  
 
 <a name="about_Adorners"></a>   

@@ -2,12 +2,12 @@
 title: 静的にコンパイルされたクエリ (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
-ms.openlocfilehash: ed701f57821c18f4cfa75a3bb7cd5a652ab384d8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f295e8aa8b747b90933d6a35e5352f66740ef071
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373732"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582908"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>静的にコンパイルされたクエリ (LINQ to XML) (Visual Basic)
 
@@ -19,7 +19,7 @@ ms.locfileid: "70373732"
 
 次に示すのは、これに相当する XPath 式です。
 
-```
+```vb
 //Address[@Type='Shipping']
 ```
 

@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 4d67da34cf692133df95480a7f0215943337a34e
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3d0a90a57c2b1c2759b8420e74c284668d54e9cb
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002994"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72526757"
 ---
 ### <a name="duplicated-apis-removed-from-windows-forms"></a>Windows フォームからの重複する API の削除
 
-.NET Core 3.0 Preview 4 以降、<xref:System.Windows.Forms?displayProperty=fullName> 名前空間で誤って重複していた多数の API が .NET Core 3.0 RC1 で削除されました。 
+.NET Core 3.0 Preview 4 以降、<xref:System.Windows.Forms?displayProperty=fullName> 名前空間で誤って重複していた多数の API が .NET Core 3.0 RC1 で削除されました。
 
 #### <a name="change-description"></a>変更の説明
 
@@ -38,7 +38,7 @@ Windows フォーム
 
 - API 分析では検出できません。
 
-<!-- 
+<!--
 
 ### Affected APIs
 

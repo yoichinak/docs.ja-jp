@@ -29,7 +29,7 @@ ms.locfileid: "64754445"
 
 このトピックを読む前に、マークアップ拡張機能の概念と使用方法について理解している必要があります。 マークアップ拡張機能の詳細については、 「[マークアップ拡張機能と WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md)」を参照してください。
 
-このトピックでは、データ バインディングの概念については説明しません。 データ バインディングの概念の詳細については、「[Data Binding Overview](data-binding-overview.md)」を参照してください。
+このトピックでは、データ バインディングの概念については説明しません。 データ バインディングの概念の詳細については、「[データ バインディングの概要](data-binding-overview.md)」を参照してください。
 
 <a name="BindinginXAML"></a>
 
@@ -78,7 +78,7 @@ ms.locfileid: "64754445"
 [!code-csharp[BindConversion#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
 [!code-vb[BindConversion#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]
 
-バインドするオブジェクトがある場合、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>呼び出すことができます、`SetBinding`メソッドをオブジェクトを使用してではなく、直接<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>します。 例については、「[Create a Binding in Code](how-to-create-a-binding-in-code.md)」を参照してください。
+バインドするオブジェクトがある場合、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>呼び出すことができます、`SetBinding`メソッドをオブジェクトを使用してではなく、直接<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>します。 例については、[コードでのバインドの作成](how-to-create-a-binding-in-code.md)に関するページを参照してください。
 
 <a name="Path_Syntax"></a>
 

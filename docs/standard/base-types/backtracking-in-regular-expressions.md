@@ -126,7 +126,7 @@ ms.locfileid: "69968561"
   
 <a name="controlling_backtracking"></a>   
 ## <a name="controlling-backtracking"></a>バックトラッキングの制御  
- バックトラッキングを使用すると、強力かつ柔軟な正規表現を作成できますが、 前のセクションで見たように、受け入れられないほどのパフォーマンスの低下が伴うことがあります。 過度なバックトラッキングを回避するには、 <xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化したり静的な正規表現の一致メソッドを呼び出したりするときに、タイムアウト間隔を定義する必要があります。 これについては、次のセクションで説明します。 また、.NET では、バックトラッキングを制限または抑制する 3 つの正規表現言語要素がサポートされています。これらを使用すると、パフォーマンスをほとんど低下させずに複雑な正規表現を使用できます。それらの言語要素とは、[非バックトラッキング部分式](#Nonbacktracking)、[後読みアサーション](#Lookbehind)、および[先読みアサーション](#Lookahead)です。 各言語要素の詳細については、「 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」を参照してください。  
+ バックトラッキングを使用すると、強力かつ柔軟な正規表現を作成できますが、 前のセクションで見たように、受け入れられないほどのパフォーマンスの低下が伴うことがあります。 過度なバックトラッキングを回避するには、 <xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化したり静的な正規表現の一致メソッドを呼び出したりするときに、タイムアウト間隔を定義する必要があります。 これについては、次のセクションで説明します。 また、.NET では、バックトラッキングを制限または抑制する 3 つの正規表現言語要素がサポートされています。これらを使用すると、パフォーマンスをほとんど低下させずに複雑な正規表現を使用できます。それらの言語要素とは、[非バックトラッキング部分式](#Nonbacktracking)、[後読みアサーション](#Lookbehind)、および[先読みアサーション](#Lookahead)です。 各言語要素の詳細については、[コンストラクトのグループ化](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)に関するページを参照してください。  
   
 <a name="Timeout"></a>   
 ### <a name="defining-a-time-out-interval"></a>タイムアウト間隔の定義  

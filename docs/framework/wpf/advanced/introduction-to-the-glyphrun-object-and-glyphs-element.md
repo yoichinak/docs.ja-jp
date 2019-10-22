@@ -9,19 +9,19 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: 5b1fd9c6e12a3dbea6de939ee90c48df716bd265
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 2f7bb3fb4f28b063c78dde9f9f354b38a5e707f3
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395819"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581900"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>GlyphRun オブジェクトと Glyphs 要素の概要
-このトピックでは、@no__t 0 オブジェクトと <xref:System.Windows.Documents.Glyphs> 要素について説明します。  
+このトピックでは、<xref:System.Windows.Media.GlyphRun> オブジェクトと <xref:System.Windows.Documents.Glyphs> 要素について説明します。  
 
 <a name="text_glyphrunovw_intro"></a>   
 ## <a name="introduction-to-glyphrun"></a>GlyphRun の概要  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、書式設定後にテキストを傍受して保持する必要がある顧客に対して、<xref:System.Windows.Documents.Glyphs> に直接アクセスするグリフレベルのマークアップなどの高度なテキストサポートを提供します。 これらの機能は、下記のようなシナリオでのさまざまなテキスト レンダリング要件をサポートする不可欠なものです。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、書式設定後にテキストを傍受して保持する必要がある顧客のために、グリフレベルのマークアップ、<xref:System.Windows.Documents.Glyphs> への直接アクセスを含む高度なテキストサポートを提供します。 これらの機能は、下記のようなシナリオでのさまざまなテキスト レンダリング要件をサポートする不可欠なものです。  
   
 1. 固定形式のドキュメントの画面表示。  
   
@@ -38,19 +38,19 @@ ms.locfileid: "72395819"
 3. 以前のバージョンの Windows およびその他のコンピューティングデバイス用のクライアントを含む、固定形式のドキュメント表現。  
   
 > [!NOTE]
-> <xref:System.Windows.Documents.Glyphs> および <xref:System.Windows.Media.GlyphRun> は、固定形式のドキュメントのプレゼンテーションと印刷のシナリオ向けに設計されています。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、一般的なレイアウトと、<xref:System.Windows.Controls.Label> や <xref:System.Windows.Controls.TextBlock> などの @no__t のシナリオに複数の要素を提供します。 レイアウトと [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] シナリオの詳細については、[WPF のタイポグラフィ](typography-in-wpf.md)を参照してください。  
+> <xref:System.Windows.Documents.Glyphs> および <xref:System.Windows.Media.GlyphRun> は、固定形式のドキュメントのプレゼンテーションと印刷のシナリオ向けに設計されています。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] には、一般的なレイアウトのためのいくつかの要素と、<xref:System.Windows.Controls.Label> や <xref:System.Windows.Controls.TextBlock> などの [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] シナリオが用意されています。 レイアウトと [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] シナリオの詳細については、[WPF のタイポグラフィ](typography-in-wpf.md)を参照してください。  
   
 <a name="text_glyphrunovw_glyphrunobject"></a>   
 ## <a name="the-glyphrun-object"></a>GlyphRun オブジェクト  
- @No__t 0 オブジェクトは、1つのフォントの1つの書体から1つのサイズで1つの描画スタイルを持つ一連のグリフを表します。  
+ @No__t_0 オブジェクトは、単一のフォントの1つの書体から1つのサイズで1つの描画スタイルを持つ一連のグリフを表します。  
   
- <xref:System.Windows.Media.GlyphRun> には、グリフ <xref:System.Windows.Documents.Glyphs.Indices%2A>、個々のグリフ位置などのフォントの詳細が含まれます。 また、実行が生成された元の Unicode コードポイント、文字とグリフのバッファーオフセットのマッピング情報、および文字数とグリフごとのフラグも含まれます。  
+ <xref:System.Windows.Media.GlyphRun> には、グリフ <xref:System.Windows.Documents.Glyphs.Indices%2A> や個々のグリフ位置などのフォントの詳細が含まれます。 また、実行が生成された元の Unicode コードポイント、文字とグリフのバッファーオフセットのマッピング情報、および文字数とグリフごとのフラグも含まれます。  
   
- <xref:System.Windows.Media.GlyphRun> には、対応する高レベル <xref:System.Windows.FrameworkElement>、<xref:System.Windows.Documents.Glyphs> があります。 <xref:System.Windows.Documents.Glyphs> を要素ツリーで使用し、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] マークアップで <xref:System.Windows.Media.GlyphRun> 出力を表すことができます。  
+ <xref:System.Windows.Media.GlyphRun> には、対応する高レベル <xref:System.Windows.FrameworkElement>、<xref:System.Windows.Documents.Glyphs> があります。 <xref:System.Windows.Documents.Glyphs> は、要素ツリーおよび [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] マークアップで使用して <xref:System.Windows.Media.GlyphRun> 出力を表すことができます。  
   
 <a name="text_glyphrunovw_glyphselement"></a>   
 ## <a name="the-glyphs-element"></a>Glyphs 要素  
- @No__t-0 要素は [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] の <xref:System.Windows.Media.GlyphRun> の出力を表します。 次のマークアップ構文は、<xref:System.Windows.Documents.Glyphs> 要素を記述するために使用されます。  
+ @No__t_0 要素は [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 内の <xref:System.Windows.Media.GlyphRun> の出力を表します。 次のマークアップ構文は、<xref:System.Windows.Documents.Glyphs> 要素を記述するために使用されます。  
   
  [!code-xaml[GlyphsOvwSample1#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
   
@@ -58,14 +58,14 @@ ms.locfileid: "72395819"
   
 |property|説明|  
 |--------------|-----------------|  
-|<xref:System.Windows.Documents.Glyphs.FontUri%2A>|アプリケーションの .exe またはコンテナー内のリソース識別子 (ファイル名、Web [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]、リソース参照) を指定します。|  
+|<xref:System.Windows.Documents.Glyphs.FontUri%2A>|リソース識別子として、ファイル名、Web uniform resource identifier (URI)、またはアプリケーションの .exe またはコンテナー内のリソース参照を指定します。|  
 |<xref:System.Windows.Documents.Glyphs.FontRenderingEmSize%2A>|フォント サイズを描画サーフェイスの単位で指定します (既定値は .96 インチ)。|  
 |<xref:System.Windows.Documents.Glyphs.StyleSimulations%2A>|太字や斜体のスタイルのフラグを指定します。|  
 |<xref:System.Windows.Documents.Glyphs.BidiLevel%2A>|双方向のレイアウト レベルを指定します。 偶数とゼロの値は左から右のレイアウトを意味し、奇数の値は右から左のレイアウトを意味します。|  
   
 <a name="text_glyphrunovw_indicesproperty"></a>   
 ### <a name="indices-property"></a>Indices プロパティ  
- @No__t-0 プロパティは、グリフの指定文字列です。 グリフのシーケンスが 1 つのクラスターを形成している場合、クラスター内の最初のグリフの仕様は、クラスターを形成するために組み合わせるグリフの数とコード ポイントの数の仕様によって先行されます。 @No__t-0 プロパティは、次のプロパティを1つの文字列で収集します。  
+ @No__t_0 プロパティは、グリフの指定文字列です。 グリフのシーケンスが 1 つのクラスターを形成している場合、クラスター内の最初のグリフの仕様は、クラスターを形成するために組み合わせるグリフの数とコード ポイントの数の仕様によって先行されます。 @No__t_0 プロパティは、次のプロパティを1つの文字列で収集します。  
   
 - グリフ インデックス  
   

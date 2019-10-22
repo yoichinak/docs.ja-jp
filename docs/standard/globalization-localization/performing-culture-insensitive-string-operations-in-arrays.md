@@ -1,5 +1,5 @@
 ---
-title: カルチャを認識しない配列の操作の実行
+title: カルチャの影響を受けない配列の操作の実行
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/10/2019
 ms.locfileid: "70855995"
 ---
-# <a name="performing-culture-insensitive-string-operations-in-arrays"></a>カルチャを認識しない配列の操作の実行
+# <a name="performing-culture-insensitive-string-operations-in-arrays"></a>カルチャの影響を受けない配列の操作の実行
 
 <xref:System.Array.Sort%2A?displayProperty=nameWithType> メソッドと <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> メソッドのオーバーロードは、<xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> プロパティを使用して、カルチャを認識する並べ替えを既定で実行します。 これらのメソッドで返されたカルチャを認識した結果は、並べ替え順序の違いに起因し、カルチャによって異なる場合があります。 カルチャを認識した動作を回避するには、`comparer` パラメーターを受け入れる、このメソッドのいずれかのオーバーロードを使用します。 `comparer` パラメーターによって、配列の要素を比較するときに使用する <xref:System.Collections.IComparer> 実装が指定されます。 このパラメーターには、<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> を使用するカスタム invariant comparer クラスを指定してください。 カスタム invariant comparer クラスの例は、「[カルチャを認識しないコレクションの操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)」トピックのサブトピック「SortedList クラスの使用」にあります。
 

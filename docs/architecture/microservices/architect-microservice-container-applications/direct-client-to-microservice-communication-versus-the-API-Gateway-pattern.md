@@ -2,12 +2,12 @@
 title: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 description: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との相違点およびそれぞれの用途について説明します。
 ms.date: 01/07/2019
-ms.openlocfilehash: d895ae50e50ade2f8285117491733d5c9814b732
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834440"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522955"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 
@@ -17,7 +17,7 @@ ms.locfileid: "71834440"
 
 クライアントからマイクロサービスへの直接通信アーキテクチャを使用する方法が考えられます。 この方法では、図 4-12 に示すように、クライアント アプリは一部のマイクロサービスに直接要求することができます。
 
-![クライアントからマイクロサービスへの通信アーキテクチャを示す図。](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/direct-client-to-microservice-communication.png)
+![クライアントからマイクロサービスへの通信アーキテクチャを示す図。](./media/direct-client-to-microservice-communication.png)
 
 **図 4-12**. クライアントからマイクロサービスへの直接通信アーキテクチャの使用
 

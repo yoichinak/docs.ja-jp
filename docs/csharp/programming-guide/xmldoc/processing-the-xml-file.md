@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 4592fa9350ff9b03620a0739388f59652062235f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bb713fbc5ddd3737cb629c5c09c25ff2980c73dc
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587853"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523379"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>XML ファイルの処理 (C# プログラミング ガイド)
 
@@ -25,7 +25,7 @@ ms.locfileid: "69587853"
 
 - ID 文字列の最初の部分は、単一の文字とそれに続くコロンで識別されるメンバー種類を示します。 使用されるメンバー型は次のとおりです。
 
-    |Character|説明|
+    |文字|説明|
     |---------------|-----------------|
     |N|名前空間<br /><br /> ドキュメント コメントを名前空間に追加することはできませんが、名前空間への cref 参照を行うことはできます (サポートされている場合)。|
     |T|型: クラス、インターフェイス、構造体、列挙、デリゲート|
@@ -71,13 +71,13 @@ ms.locfileid: "69587853"
 
 - 変換演算子 (op_Implicit および op_Explicit) だけは、上記のエンコードと同様に、メソッドの戻り値が ”~” としてエンコードされ、それに続けて戻り値の型が表されます。
 
-- ジェネリック型では、型の名前の後に、バックチック、ジェネリック型パラメーターの数を示す数値が順に続きます。 例:
+- ジェネリック型では、型の名前の後に、バックチック、ジェネリック型パラメーターの数を示す数値が順に続きます。 次に例を示します。
 
      ``<member name="T:SampleClass`2">`` は、`public class SampleClass<T, U>` として定義されている型のタグです。
 
      パラメーターとしてジェネリック型を受け取るメソッドでは、ジェネリック型パラメーターは、バックチック付きの数値 (\`0、\`1 など) として指定されます。 各数値は、型のジェネリック パラメーターに対する、0 から始まる配列表記を表しています。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 次の例は、クラスおよびそのメンバーの ID 文字列を生成する方法を示します。
 
@@ -86,5 +86,5 @@ ms.locfileid: "69587853"
 ## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
-- [/doc (C# コンパイラ オプション)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-doc (C# コンパイラ オプション)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [XML ドキュメント コメント](./index.md)

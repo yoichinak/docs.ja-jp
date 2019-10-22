@@ -40,7 +40,7 @@ ms.locfileid: "64637443"
  名前付きパイプの詳細については、次を参照してください。[トランスポートの選択](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)します。  
   
 ### <a name="http-transport"></a>HTTP トランスポート  
- HTTP トランスポートを使用するバインディング (<xref:System.ServiceModel.WSHttpBinding>と<xref:System.ServiceModel.BasicHttpBinding>) で説明したように、いくつかの認証方式をサポート[Understanding HTTP Authentication](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)します。 サポートされる偽装レベルは、認証方式によって異なります。 次の項目が HTTP トランスポートと共に使用されます。  
+ HTTP トランスポートを使用するバインディング (<xref:System.ServiceModel.WSHttpBinding>と<xref:System.ServiceModel.BasicHttpBinding>) では、[HTTP 認証について](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)で説明したように、いくつかの認証方式がサポートされています。 サポートされる偽装レベルは、認証方式によって異なります。 次の項目が HTTP トランスポートと共に使用されます。  
   
 - `Anonymous` 認証方式は偽装を無視します。  
   

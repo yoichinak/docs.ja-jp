@@ -1,5 +1,5 @@
 ---
-title: x:Type マークアップ拡張機能
+title: x:Type のマークアップ拡張機能
 ms.date: 03/30/2017
 f1_keywords:
 - x:TypeExtension
@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64622961"
 ---
-# <a name="xtype-markup-extension"></a>x:Type マークアップ拡張機能
+# <a name="xtype-markup-extension"></a>x:Type のマークアップ拡張機能
 CLR の提供<xref:System.Type>指定の XAML 型の基になる型であるオブジェクト。  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法  

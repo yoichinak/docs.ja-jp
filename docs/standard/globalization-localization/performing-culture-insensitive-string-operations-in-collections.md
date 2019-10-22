@@ -1,5 +1,5 @@
 ---
-title: カルチャを認識しないコレクションの操作の実行
+title: カルチャの影響を受けないコレクションの操作の実行
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/10/2019
 ms.locfileid: "70855988"
 ---
-# <a name="performing-culture-insensitive-string-operations-in-collections"></a>カルチャを認識しないコレクションの操作の実行
+# <a name="performing-culture-insensitive-string-operations-in-collections"></a>カルチャの影響を受けないコレクションの操作の実行
 
 既定ではカルチャを認識する動作を提供するクラスとメンバーは <xref:System.Collections> 名前空間にあります。 <xref:System.Collections.CaseInsensitiveComparer> クラスおよび <xref:System.Collections.CaseInsensitiveHashCodeProvider> クラスのパラメーターなしのコンストラクターは、<xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> プロパティを使用して新しいインスタンスを初期化します。 <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> メソッドのすべてのオーバーロードは、既定で `Thread.CurrentCulture` プロパティを使用して、<xref:System.Collections.Hashtable> クラスの新しいインスタンスを作成します。 <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> メソッドのオーバーロードは、`Thread.CurrentCulture` を使用して既定でカルチャを認識した並べ替えを実行します。 <xref:System.Collections.SortedList> での並べ替えと検索は、文字列がキーとして使用されるときに、`Thread.CurrentCulture` によって影響を受けることがあります。 このセクションで説明する推奨使用方法に従うと、`Collections` 名前空間のこれらのクラスとメソッドでカルチャを認識しない結果が得られます。
 

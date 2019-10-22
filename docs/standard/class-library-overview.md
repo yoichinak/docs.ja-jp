@@ -78,7 +78,7 @@ ms.locfileid: "65593500"
   
  名前付けパターンを使用して関連する型を名前空間にグループ化する方法は、クラス ライブラリを構築および文書化するのに便利です。 ただし、この名前付け方法は、参照可能範囲、メンバー アクセス、継承、セキュリティ、バインディングには影響しません。 名前空間は複数のアセンブリにまたがって分割でき、また 1 つのアセンブリに複数の名前空間からの型を含めることができます。 アセンブリは、共通言語ランタイムにおけるバージョン管理、配置、セキュリティ、読み込み、および参照可能範囲のための構造を提供します。  
   
- 名前空間と型の名前の詳細については、「[Common Type System](../../docs/standard/base-types/common-type-system.md)」(共通型システム) を参照してください。  
+ 名前空間と型の名前の詳細については、「[共通型システム](../../docs/standard/base-types/common-type-system.md)」(共通型システム) を参照してください。  
   
 ## <a name="system-namespace"></a>System 名前空間
 
@@ -89,12 +89,12 @@ ms.locfileid: "65593500"
 |カテゴリ|クラス名|説明|Visual Basic のデータ型|C# のデータ型|C++/CLI のデータ型|F# のデータ型|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |整数型|<xref:System.Byte>|8 ビット符号なし整数。|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|8 ビット符号付き整数。<br /><br /> 非 CLS 準拠|**SByte**|**sbyte**|**char**<br /> - または -<br /> **signed** **char**|**sbyte**|  
+||<xref:System.SByte>|8 ビット符号付き整数。<br /><br /> 非 CLS 準拠|**SByte**|**sbyte**|**char**<br /> \- または -<br /> **signed** **char**|**sbyte**|  
 ||<xref:System.Int16>|16 ビット符号付き整数。|**Short**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|32 ビット符号付き整数。|**Integer**|**int**|**int**<br /><br /> - または -<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32 ビット符号付き整数。|**Integer**|**int**|**int**<br /><br /> \- または -<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64 ビット符号付き整数。|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|16 ビット符号なし整数。<br /><br /> 非 CLS 準拠|**UShort**|**ushort**|**unsigned short**|**uint16**|  
-||<xref:System.UInt32>|32 ビット符号なし整数<br /><br /> 非 CLS 準拠|**UInteger**|**uint**|**unsigned int**<br /> - または -<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt32>|32 ビット符号なし整数<br /><br /> 非 CLS 準拠|**UInteger**|**uint**|**unsigned int**<br /> \- または -<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64 ビット符号なし整数。<br /><br /> 非 CLS 準拠|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
 |浮動小数点数|<xref:System.Single>|単精度 (32 ビット) 浮動小数点数|**Single**|**float**|**float**|**float32**<br> または<br>**single**|  
 ||<xref:System.Double>|倍精度 (64 ビット) 浮動小数点数|**Double**|**double**|**double**|**float**<br> または <br> **double**|  

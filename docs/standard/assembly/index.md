@@ -14,12 +14,12 @@ helpviewer_keywords:
 - type boundaries
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 903a553b5383620f15cce274c61a440b7bbb1d7d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5fb809b564df17d6320b7ffce3d757fa0fee7639
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970012"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583007"
 ---
 # <a name="assemblies-in-net"></a>.NET のアセンブリ
 
@@ -107,7 +107,7 @@ C# では、1 つのアプリケーションで同じアセンブリの 2 つの
 |[動的メソッドおよびアセンブリの出力](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|動的アセンブリの作成方法。|  
 |[ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|実行時に .NET Framework でアセンブリ参照がどのように解決されるか。|  
 
-## <a name="reference"></a>関連項目  
+## <a name="reference"></a>参照  
  <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
 ## <a name="see-also"></a>関連項目
@@ -115,6 +115,7 @@ C# では、1 つのアプリケーションで同じアセンブリの 2 つの
 - [.NET アセンブリ ファイルの形式](file-format.md)
 - [.NET のアセンブリ](index.md)
 - [フレンド アセンブリ](friend.md)
+- [参照アセンブリ](reference-assemblies.md)
 - [方法: アセンブリを読み込み、アンロードする](load-unload.md)
 - [方法: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする](unloadability.md)
 - [方法: ファイルがアセンブリであるかどうかを確認する](identify.md)

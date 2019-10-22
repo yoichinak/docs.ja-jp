@@ -2,12 +2,12 @@
 title: dotnet build コマンド
 description: dotnet build コマンドは、プロジェクトとそのすべての依存関係をビルドします。
 ms.date: 10/07/2019
-ms.openlocfilehash: db353feebab920dc8f63b9854d14f050adeb0b79
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 0a3e2c0e441cfdd1cb8266bc77dc1aba08af84d6
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250190"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522782"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -66,85 +66,85 @@ dotnet build [-h|--help]
 
 ## <a name="options"></a>オプション
 
-* **`-c|--configuration {CONFIGURATION}`**
+- **`-c|--configuration {Debug|Release}`**
 
   ビルド構成を定義します。 ほとんどのプロジェクトの既定値は `Debug` ですが、プロジェクトでビルド構成設定をオーバーライドできます。
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   特定の[フレームワーク](../../standard/frameworks.md)用にコンパイルします。 フレームワークは、[プロジェクト ファイル](csproj.md)で定義する必要があります。
 
-* **`--force`**
+- **`--force`**
 
   最後の復元が成功した場合でも、すべての依存関係が強制的に解決されます。 このフラグを指定することは、*project.assets.json* ファイルを削除することと同じです。 .NET Core 2.0 SDK 以降で使用できます。
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   コマンドの短いヘルプを印刷します。
 
-* **`--interactive`**
+- **`--interactive`**
 
   コマンドを停止して、ユーザーの入力または操作のために待機させることができます。 たとえば、認証を完了する場合があります。 .NET Core 3.0 SDK 以降で使用できます。
 
-* **`--no-dependencies`**
+- **`--no-dependencies`**
 
   プロジェクト間 (P2P) 参照を無視し、指定されたルート プロジェクトのみをビルドします。
 
-* **`--no-incremental`**
+- **`--no-incremental`**
 
   インクリメンタル ビルドとして安全でないビルドをマークします。 このフラグにより、インクリメンタル コンパイルは無効になり、プロジェクトの依存関係グラフのクリーン再ビルドが強制的に行われます。
 
-* **`--no-restore`**
+- **`--no-restore`**
 
   ビルド時に暗黙的な復元は実行されません。 .NET Core 2.0 SDK 以降で使用できます。
 
-* **`--nologo`**
+- **`--nologo`**
 
   著作権情報を表示しません。 .NET Core 3.0 SDK 以降で使用できます。
 
-* **`-o|--output <OUTPUT_DIRECTORY>`**
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
   ビルド済みバイナリを配置するディレクトリ。 このオプションを指定する場合は、`--framework` を定義する必要もあります。 指定しない場合、既定のパスは `./bin/<configuration>/<framework>/` になります。
 
-* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
   ターゲットのランタイムを指定します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。
 
-* **`-v|--verbosity <LEVEL>`**
+- **`-v|--verbosity <LEVEL>`**
 
   MSBuild の詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。 既定値は、`minimal` です。
 
-* **`--version-suffix <VERSION_SUFFIX>`**
+- **`--version-suffix <VERSION_SUFFIX>`**
 
   プロジェクトをビルドするときに使用する `$(VersionSuffix)` プロパティの値を設定します。 これは、`$(Version)` プロパティが設定されていない場合にのみ機能します。 次に、`$(Version)` には、ダッシュで区切り `$(VersionSuffix)` と組み合わせた `$(VersionPrefix)` が設定されます。
 
 ## <a name="examples"></a>使用例
 
-* プロジェクトとその依存関係をビルドします。
+- プロジェクトとその依存関係をビルドします。
 
   ```dotnetcli
   dotnet build
   ```
 
-* リリース構成を使用して、プロジェクトとその依存関係をビルドします。
+- リリース構成を使用して、プロジェクトとその依存関係をビルドします。
 
   ```dotnetcli
   dotnet build --configuration Release
   ```
 
-* 特定のランタイム (この例では、Ubuntu 18.04) 用にプロジェクトとその依存関係をビルドします。
+- 特定のランタイム (この例では、Ubuntu 18.04) 用にプロジェクトとその依存関係をビルドします。
 
   ```dotnetcli
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
-* プロジェクトをビルドし、復元操作中に指定された NuGet パッケージ ソースを使用します (.NET Core 2.0 SDK 以降のバージョン)。
+- プロジェクトをビルドし、復元操作中に指定された NuGet パッケージ ソースを使用します (.NET Core 2.0 SDK 以降のバージョン)。
 
   ```dotnetcli
   dotnet build --source c:\packages\mypackages
   ```
 
-* `-p` [MSBuild オプション](#msbuild)を使用してプロジェクトをビルドし、バージョン 1.2.3.4 をビルド パラメーターとして設定します。
+- `-p` [MSBuild オプション](#msbuild)を使用してプロジェクトをビルドし、バージョン 1.2.3.4 をビルド パラメーターとして設定します。
 
   ```dotnetcli
   dotnet build -p:Version=1.2.3.4

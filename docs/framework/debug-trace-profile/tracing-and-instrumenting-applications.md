@@ -1,5 +1,5 @@
 ---
-title: アプリケーションのトレースとインストルメント
+title: アプリケーションのトレースとインストルメント化
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71052240"
 ---
-# <a name="tracing-and-instrumenting-applications"></a>アプリケーションのトレースとインストルメント
+# <a name="tracing-and-instrumenting-applications"></a>アプリケーションのトレースとインストルメント化
 トレースとは、実行中のアプリケーションの実行状態を監視する方法です。 .NET Framework アプリケーションの開発時に、トレースとデバッグのインストルメンテーションをアプリケーションに追加できます。このインストルメンテーションは、アプリケーションの開発中でも開発したアプリケーションの配置後でも使用できます。 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>、および <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> の各クラスを使用すると、エラーおよびアプリケーションの実行についての情報を後で分析するために、ログ、テキスト ファイル、またはその他のデバイスに記録できます。  
   
  ここでの*インストルメンテーション*という用語は、製品のパフォーマンスのレベルを監視または測定し、エラーを診断する具体的な機能を意味しています。 プログラミングでは、組み込むアプリケーションの機能を指します。  

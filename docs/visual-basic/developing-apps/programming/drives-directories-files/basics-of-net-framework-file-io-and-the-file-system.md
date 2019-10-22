@@ -41,7 +41,7 @@ ms.locfileid: "65591520"
 
 - **シーク**。 ストリーム内の現在の位置をクエリおよび変更できます。
 
-詳細については、「 [Composing Streams](../../../../standard/io/composing-streams.md)」を参照してください。
+詳細については、「 [ストリームの作成](../../../../standard/io/composing-streams.md)」を参照してください。
 
 ## <a name="types-of-streams"></a>ストリームの種類
 
@@ -110,5 +110,5 @@ ms.locfileid: "65591520"
 
 - [ストリームの構成](../../../../standard/io/composing-streams.md)
 - [ファイルおよびストリーム入出力](../../../../standard/io/index.md)
-- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [非同期ファイル I/O](../../../../standard/io/asynchronous-file-i-o.md)
 - [.NET Framework のファイル I/O とファイル システムで使用するクラス (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

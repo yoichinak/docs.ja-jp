@@ -1,5 +1,5 @@
 ---
-title: UI オートメーションを使用した、埋め込みオブジェクトへのアクセス
+title: UI オートメーションを使って埋め込みオブジェクトにアクセスする
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71043964"
 ---
-# <a name="access-embedded-objects-using-ui-automation"></a>UI オートメーションを使用した、埋め込みオブジェクトへのアクセス
+# <a name="access-embedded-objects-using-ui-automation"></a>UI オートメーションを使って埋め込みオブジェクトにアクセスする
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   

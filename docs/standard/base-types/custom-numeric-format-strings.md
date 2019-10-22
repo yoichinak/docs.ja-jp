@@ -1,5 +1,5 @@
 ---
-title: カスタム数値書式指定文字列
+title: カスタム数値形式文字列
 ms.date: 06/25/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,9 +25,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/29/2019
 ms.locfileid: "70133626"
 ---
-# <a name="custom-numeric-format-strings"></a>カスタム数値書式指定文字列
+# <a name="custom-numeric-format-strings"></a>カスタム数値形式文字列
 
-1 つ以上のカスタム数値指定子で構成されるカスタム数値書式指定文字列を作成して、数値データの書式設定方法を定義できます。 カスタム数値書式指定文字列は、 [標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)ではない任意の書式指定文字列です。
+1 つ以上のカスタム数値指定子で構成されるカスタム数値書式指定文字列を作成して、数値データの書式設定方法を定義できます。 カスタム数値書式指定文字列は、 [標準の数値形式文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)ではない任意の書式指定文字列です。
 
 カスタム数値書式指定文字列は、すべての数値型の `ToString` メソッドの一部のオーバーロードでサポートされています。 たとえば、 <xref:System.Int32.ToString%28System.String%29> 型の <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> メソッドおよび <xref:System.Int32> メソッドに数値書式指定文字列を指定できます。 カスタム数値書式指定文字列は、.NET の[複合書式指定機能](../../../docs/standard/base-types/composite-formatting.md)でもサポートされています。この機能を使用するメソッドには、<xref:System.Console> クラスおよび <xref:System.IO.StreamWriter> クラスの一部の `Write` メソッドと `WriteLine` メソッド、<xref:System.String.Format%2A?displayProperty=nameWithType> メソッド、<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> メソッドがあります。 [文字列補間](../../csharp/language-reference/tokens/interpolated.md)機能は、カスタム数値書式指定文字列もサポートしています。
 

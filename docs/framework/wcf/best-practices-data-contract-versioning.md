@@ -15,7 +15,7 @@ ms.lasthandoff: 10/15/2019
 ms.locfileid: "72320781"
 ---
 # <a name="best-practices-data-contract-versioning"></a>ベスト プラクティス : データ コントラクトのバージョン管理
-このトピックでは、長期的に容易に拡張させることのできるデータ コントラクトを作成するためのベスト プラクティスをいくつか紹介します。 データコントラクトの詳細については、「[データコントラクトの使用](./feature-details/using-data-contracts.md)」のトピックを参照してください。  
+このトピックでは、長期的に容易に拡張させることのできるデータ コントラクトを作成するためのベスト プラクティスをいくつか紹介します。 データ コントラクトの詳細については、「[データ コントラクトの使用](./feature-details/using-data-contracts.md)」のトピックを参照してください。  
   
 ## <a name="note-on-schema-validation"></a>スキーマ検証に関する注意事項  
  データコントラクトのバージョン管理については、Windows Communication Foundation (WCF) によってエクスポートされるデータコントラクトスキーマにはバージョン管理サポートがないことに注意してください。既定では、要素は省略可能としてマークされています。  
@@ -56,7 +56,7 @@ ms.locfileid: "72320781"
   
 3. ラウンド トリップが有効になるように、データ コントラクトの最初のバージョンから、必ず <xref:System.Runtime.Serialization.IExtensibleDataObject> を実装します。 詳細については、「[上位互換性のあるデータ コントラクト](./feature-details/forward-compatible-data-contracts.md)」を参照してください。 このインターフェイスが実装されていない型の 1 つ以上のバージョンがリリース済みである場合は、この型の次のバージョンで実装します。  
   
-4. 新しいバージョンで、データ コントラクト名や名前空間を変更しないでください。 データ コントラクトの基になる型の名前や名前空間を変更する場合、<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> の <xref:System.Runtime.Serialization.DataContractAttribute> プロパティを使うなど、適切なメカニズムを使用して、データ コントラクト名と名前空間を残しておく必要があります。 名前付けの詳細については、「[データコントラクト名](./feature-details/data-contract-names.md)」を参照してください。  
+4. 新しいバージョンで、データ コントラクト名や名前空間を変更しないでください。 データ コントラクトの基になる型の名前や名前空間を変更する場合、<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> の <xref:System.Runtime.Serialization.DataContractAttribute> プロパティを使うなど、適切なメカニズムを使用して、データ コントラクト名と名前空間を残しておく必要があります。 名前付けの詳細については、「[データ コントラクト名](./feature-details/data-contract-names.md)」を参照してください。  
   
 5. 新しいバージョンで、データ メンバーの名前を変更しないでください。 データ メンバーの基になるフィールド、プロパティ、イベントの名前を変更する場合は、`Name` の <xref:System.Runtime.Serialization.DataMemberAttribute> プロパティを使用して、既存のデータ メンバー名を残しておく必要があります。  
   

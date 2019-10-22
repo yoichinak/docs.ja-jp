@@ -7,19 +7,19 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 42d0f86dd6561806701d17846bae6d88252ce46a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 68590702835e47e5f0f2e0380bc0fe4017d5eb15
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625488"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582669"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface ステートメント (Visual Basic)
-インターフェイスの名前を宣言し、インターフェイスに含まれるメンバーの定義を紹介します。  
+インターフェイスの名前を宣言し、インターフェイスが構成されているメンバーの定義を紹介します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] _  
 Interface name [ ( Of typelist ) ]  
     [ Inherits interfacenames ]  
@@ -37,80 +37,80 @@ End Interface
   
 |用語|定義|  
 |---|---|  
-|`attributelist`|任意。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。|  
-|`accessmodifier`|任意。 次のいずれかの値を指定します。<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> 「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
-|`Shadows`|任意。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。|  
-|`name`|必須。 このインターフェイスの名前です。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
-|`Of`|省略可能です。 これはジェネリック インターフェイスであることを指定します。|  
-|`typelist`|使用するかどうかは必ず、[の](../../../visual-basic/language-reference/statements/of-clause.md)キーワード。 このインターフェイスの型パラメーターの一覧。 必要に応じて、型パラメーターごとに宣言できますバリアントを使用して`In`と`Out`ジェネリック修飾子。 参照してください[一覧を入力する](../../../visual-basic/language-reference/statements/type-list.md)します。|  
-|`Inherits`|省略可能です。 このインターフェイスが別のインターフェイスまたはインターフェイスのメンバーと属性を継承することを示します。 参照してください[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)します。|  
+|`attributelist`|省略可能です。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。|  
+|`accessmodifier`|省略可能です。 次のいずれかの値を指定します。<br /><br /> -   [パブリック](../../../visual-basic/language-reference/modifiers/public.md)<br />[保護されている](../../../visual-basic/language-reference/modifiers/protected.md)-   <br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [プライベート](../../../visual-basic/language-reference/modifiers/private.md)<br />[保護されたフレンド](../../language-reference/modifiers/protected-friend.md)の -  <br/>- [プライベート保護](../../language-reference/modifiers/private-protected.md)<br /><br /> 「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
+|`Shadows`|省略可能です。 「[シャドウ](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。|  
+|`name`|必須です。 このインターフェイスの名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
+|`Of`|省略可能です。 これがジェネリックインターフェイスであることを指定します。|  
+|`typelist`|[Of](../../../visual-basic/language-reference/statements/of-clause.md)キーワードを使用する場合は必須です。 このインターフェイスの型パラメーターのリスト。 必要に応じて、`In` および `Out` ジェネリック修飾子を使用して、各型パラメーターをバリアントとして宣言できます。 [型リスト](../../../visual-basic/language-reference/statements/type-list.md)を参照してください。|  
+|`Inherits`|省略可能です。 このインターフェイスが、別のインターフェイスまたはインターフェイスの属性とメンバーを継承することを示します。 「 [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)」を参照してください。|  
 |`interfacenames`|`Inherits` ステートメントを使用する場合は必ず指定します。 このインターフェイスの派生元のインターフェイスの名前。|  
-|`modifiers`|省略可能です。 定義するインターフェイス メンバーの適切な修飾子。|  
+|`modifiers`|省略可能です。 定義されているインターフェイスメンバーの適切な修飾子。|  
 |`Property`|省略可能です。 インターフェイスのメンバーであるプロパティを定義します。|  
-|`Function`|省略可能です。 定義、`Function`インターフェイスのメンバーであるプロシージャ。|  
-|`Sub`|省略可能です。 定義、`Sub`インターフェイスのメンバーであるプロシージャ。|  
+|`Function`|省略可能です。 インターフェイスのメンバーである `Function` プロシージャを定義します。|  
+|`Sub`|省略可能です。 インターフェイスのメンバーである `Sub` プロシージャを定義します。|  
 |`Event`|省略可能です。 インターフェイスのメンバーであるイベントを定義します。|  
-|`Interface`|省略可能です。 このインターフェイス内で入れ子になったインターフェイスを定義します。 入れ子になったインターフェイスの定義が終了する必要があります、`End Interface`ステートメント。|  
-|`Class`|省略可能です。 インターフェイスのメンバーであるクラスを定義します。 クラスの定義が終了する必要があります、`End Class`ステートメント。|  
-|`Structure`|省略可能です。 インターフェイスのメンバーである構造を定義します。 構造体のメンバーの定義で終了する必要があります、`End Structure`ステートメント。|  
-|`membername`|必要な各プロパティ、プロシージャ、イベント、インターフェイス、クラスまたは構造体、インターフェイスのメンバーとして定義します。 メンバーの名前。|  
+|`Interface`|省略可能です。 このインターフェイス内で入れ子になっているインターフェイスを定義します。 入れ子になったインターフェイスの定義は、`End Interface` ステートメントで終了する必要があります。|  
+|`Class`|省略可能です。 インターフェイスのメンバーであるクラスを定義します。 メンバークラスの定義は、`End Class` ステートメントで終了する必要があります。|  
+|`Structure`|省略可能です。 インターフェイスのメンバーである構造体を定義します。 メンバー構造の定義は、`End Structure` ステートメントで終了する必要があります。|  
+|`membername`|インターフェイスのメンバーとして定義されているプロパティ、プロシージャ、イベント、インターフェイス、クラス、または構造体ごとに必須です。 メンバーの名前。|  
 |`End Interface`|`Interface` の定義を終了します。|  
   
 ## <a name="remarks"></a>Remarks  
- *インターフェイス*プロパティとクラスし、構造体にするには、プロシージャが実装できるように、メンバーのセットを定義します。 インターフェイスのメンバーとその内部処理ではない署名だけを定義します。  
+ *インターフェイス*は、クラスおよび構造体が実装できるメンバーのセット (プロパティやプロシージャなど) を定義します。 インターフェイスは、内部動作ではなく、メンバーのシグネチャのみを定義します。  
   
- クラスまたは構造体、インターフェイスで定義されたすべてのメンバーのコードを指定することで、インターフェイスを実装します。 最後に、アプリケーションは、そのクラスまたは構造体のインスタンスを作成するときに、オブジェクトが存在し、メモリ内で実行します。 詳細については、次を参照してください。[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)と[インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)します。  
+ クラスまたは構造体は、インターフェイスで定義されているすべてのメンバーに対してコードを提供することによって、インターフェイスを実装します。 最後に、アプリケーションがそのクラスまたは構造体からインスタンスを作成すると、オブジェクトが存在し、メモリ内に実行されます。 詳細については、「[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)および[インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)」を参照してください。  
   
- `Interface` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、*宣言コンテキスト*インターフェイスは、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があります、プロシージャまたはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
+ `Interface` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、インターフェイスの*宣言コンテキスト*は、ソースファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があり、プロシージャまたはブロックにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
- インターフェイスの既定値は[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスします。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、[ Visual Basic のアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
+ インターフェイスは、既定で[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスに設定されます。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
 ## <a name="rules"></a>ルール  
   
-- **インターフェイスの入れ子。** 別の 1 つのインターフェイスを定義できます。 外側のインターフェイス、*インターフェイスを含む*、内部インターフェイスを呼び出すと、*入れ子になったインターフェイス*します。  
+- **インターフェイスを入れ子にします。** 1つのインターフェイスを別の内に定義できます。 外側のインターフェイスは、*包含インターフェイス*と呼ばれ、内側のインターフェイスは*入れ子になったインターフェイス*と呼ばれます。  
   
-- **メンバーの宣言。** のみを定義するインターフェイスのメンバーとして、プロパティまたはプロシージャを宣言するときに、*署名*プロパティまたはプロシージャのです。 これには、要素の型 (プロパティまたはプロシージャ)、そのパラメーターとパラメーターの型、および戻り値の型が含まれます。 このため、メンバーの定義はコード、および終端ステートメントなどの 1 行のみを使用して`End Function`または`End Property`インターフェイスが無効です。  
+- **メンバー宣言。** インターフェイスのメンバーとしてプロパティまたはプロシージャを宣言する場合は、そのプロパティまたはプロシージャの*シグネチャ*のみを定義します。 これには、要素の型 (プロパティまたはプロシージャ)、パラメーターとパラメーターの型、および戻り値の型が含まれます。 このため、メンバー定義は1行のコードだけを使用し、`End Function` や `End Property` などの終了ステートメントは、インターフェイスでは有効ではありません。  
   
-     これに対し、列挙体または構造体、または入れ子になったクラスまたはインターフェイスを定義するときに、そのデータ メンバーを含める必要があります。  
+     これに対し、列挙体、構造体、または入れ子になったクラスまたはインターフェイスを定義する場合は、そのデータメンバーを含める必要があります。  
   
-- **メンバー修飾子。** モジュールのメンバーを定義するときに、アクセス修飾子を使用することはできませんを指定することも[Shared](../../../visual-basic/language-reference/modifiers/shared.md)またはプロシージャ修飾子を除く[オーバー ロード](../../../visual-basic/language-reference/modifiers/overloads.md)します。 持つメンバーを宣言することができます[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)を使用できます[既定](../../../visual-basic/language-reference/modifiers/default.md)プロパティを定義するときにだけでなく[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)または[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)します。  
+- **メンバー修飾子。** モジュールメンバーを定義するときにアクセス修飾子を使用することはできません。また、[オーバーロード](../../../visual-basic/language-reference/modifiers/overloads.md)を除く[共有](../../../visual-basic/language-reference/modifiers/shared.md)またはプロシージャ修飾子を指定することもできません。 [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)を使用して任意のメンバーを宣言できます。また、プロパティを定義するときには、 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)または[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)として[既定値](../../../visual-basic/language-reference/modifiers/default.md)を使用できます。  
   
-- **継承。** インターフェイスで使用する場合、 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)、1 つまたは複数の基底インターフェイスを指定することができます。 同じ名前のメンバーが定義されている場合でも、2 つのインターフェイスから継承できます。 これを行う場合、実装コードは、実装しています。 どのメンバーを指定する名前の修飾を使用する必要があります。  
+- **継承。** インターフェイスで[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)が使用されている場合は、1つまたは複数の基本インターフェイスを指定できます。 それぞれが同じ名前のメンバーを定義している場合でも、2つのインターフェイスから継承できます。 その場合、実装するコードでは、実装するメンバーを指定するために名前の修飾を使用する必要があります。  
   
-     インターフェイスより制限の厳しいアクセス レベルを持つ別のインターフェイスから継承できません。 たとえば、`Public`インターフェイスから継承することはできません、`Friend`インターフェイス。  
+     インターフェイスは、より制限の厳しいアクセスレベルを持つ別のインターフェイスから継承することはできません。 たとえば、`Public` インターフェイスは、`Friend` インターフェイスから継承することはできません。  
   
-     インターフェイスは、内部に入れ子になったインターフェイスから継承できません。  
+     インターフェイスは、その中に入れ子にされたインターフェイスから継承することはできません。  
   
-- **実装です。** クラスを使用する場合、[実装](../../../visual-basic/language-reference/statements/implements-clause.md)ステートメントは、このインターフェイスを実装するために、インターフェイス内で定義されたすべてのメンバーを実装する必要があります。 さらに、各署名実装コードでは、このインターフェイスで定義された対応するシグネチャを正確に一致する必要があります。 ただし、実装コードに含まれるメンバーの名前は、インターフェイスで定義されているメンバー名と一致する必要はありません。  
+- **ション.** クラスが[Implements](../../../visual-basic/language-reference/statements/implements-clause.md)ステートメントを使用してこのインターフェイスを実装する場合は、インターフェイス内で定義されているすべてのメンバーを実装する必要があります。 さらに、実装コード内の各シグネチャは、このインターフェイスで定義されている対応するシグネチャと正確に一致する必要があります。 ただし、実装するコード内のメンバーの名前が、インターフェイスで定義されているメンバー名と一致する必要はありません。  
   
-     としてプロシージャを指定できませんクラスは、プロシージャを実装するときに`Shared`します。  
+     クラスがプロシージャを実装している場合、プロシージャを `Shared` として指定することはできません。  
   
-- **既定のプロパティ。** インターフェイスとして最大で 1 つのプロパティを指定できます、*プロパティの既定*プロパティ名を使用しない参照されていることができます。 宣言することでこのようなプロパティを指定する、[既定](../../../visual-basic/language-reference/modifiers/default.md)修飾子。  
+- **既定のプロパティ。** インターフェイスでは、プロパティ名を使用せずに参照できる、最大で1つのプロパティを*既定のプロパティ*として指定できます。 このようなプロパティを指定するには、[既定](../../../visual-basic/language-reference/modifiers/default.md)の修飾子を使用して宣言します。  
   
-     つまり、何も継承している場合にのみ、インターフェイスが既定のプロパティを定義できることに注意してください。  
+     これは、インターフェイスが none を継承する場合にのみ、既定のプロパティを定義できることに注意してください。  
   
 ## <a name="behavior"></a>動作  
   
-- **アクセス レベルです。** すべてのインターフェイス メンバーが暗黙的が[パブリック](../../../visual-basic/language-reference/modifiers/public.md)アクセスします。 メンバーを定義するときに、アクセス修飾子を使用することはできません。 ただし、インターフェイスを実装するクラスは実装されている各メンバーのアクセス レベルを宣言できます。  
+- **アクセスレベル。** すべてのインターフェイスメンバーは、暗黙的に[パブリック](../../../visual-basic/language-reference/modifiers/public.md)アクセスを持ちます。 メンバーを定義するときに、アクセス修飾子を使用することはできません。 ただし、インターフェイスを実装するクラスは、実装されている各メンバーのアクセスレベルを宣言できます。  
   
-     クラスのインスタンスを変数に代入する場合、そのメンバーのアクセス レベルは、変数のデータ型は、基になるインターフェイスまたはクラスを実装するかどうかに依存できます。 次に例を示します。  
+     クラスインスタンスを変数に割り当てる場合、そのメンバーのアクセスレベルは、変数のデータ型が基になるインターフェイスまたは実装しているクラスであるかどうかによって異なります。 次に例を示します。  
   
      [!code-vb[VbVbalrStatements#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#39)]  
   
-     を介して、クラス メンバーにアクセスする場合`varAsInterface`、パブリック アクセスを持つすべて。 ただし、を通じてメンバーにアクセスする場合`varAsClass`、`Sub`プロシージャ`doSomething`プライベート アクセスできます。  
+     @No__t_0 を通じてクラスメンバーにアクセスすると、すべてのメンバーにパブリックアクセス権が与えられます。 ただし、`varAsClass` を通じてメンバーにアクセスする場合は、`doSomething` `Sub` プロシージャにプライベートアクセスがあります。  
   
-- **スコープ。** インターフェイスは、その名前空間、クラス、構造体、またはモジュール全体にわたってスコープ内で。  
+- **検索.** インターフェイスは、名前空間、クラス、構造体、またはモジュール全体でスコープ内にあります。  
   
-     すべてのインターフェイス メンバーのスコープは、全体のインターフェイスです。  
+     すべてのインターフェイスメンバーのスコープは、インターフェイス全体です。  
   
-- **有効期間。** インターフェイス自体が、有効期間やそのメンバー。 ときに、クラス インターフェイスを実装し、オブジェクトが作成されますのインスタンスとして、クラス、オブジェクトにことが実行されているアプリケーション内で有効期間。 詳細については、「有効期間」を参照してください[クラス ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)します。  
+- **最短.** インターフェイスには、それ自体が有効期間やメンバーを持つことはありません。 クラスがインターフェイスを実装し、そのクラスのインスタンスとしてオブジェクトが作成される場合、オブジェクトは、そのオブジェクトが実行されているアプリケーション内の有効期間を持ちます。 詳細については、「 [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)」の「有効期間」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`Interface`という名前のインターフェイスを定義するステートメント`thisInterface`で実装されている必要があります、`Property`ステートメントと`Function`ステートメント。  
+ 次の例では、`Interface` ステートメントを使用して `thisInterface` という名前のインターフェイスを定義します。これは、`Property` ステートメントと `Function` ステートメントで実装する必要があります。  
   
  [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
   
- なお、`Property`と`Function`ステートメントで終わるブロックを持ち込んでいない`End Property`と`End Function`インターフェイス内で。 このインターフェイスは、そのメンバーのシグネチャのみを定義します。 完全な`Property`と`Function`を実装するクラスで表示されるブロック`thisInterface`します。  
+ @No__t_0 ステートメントと `Function` ステートメントでは、`End Property` で終わるブロックと、インターフェイス内の `End Function` が導入されていないことに注意してください。 インターフェイスは、メンバーのシグネチャのみを定義します。 完全な `Property` と `Function` ブロックは `thisInterface` を実装するクラスに表示されます。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -121,7 +121,7 @@ End Interface
 - [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [ジェネリック インターフェイスの変性](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
 - [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

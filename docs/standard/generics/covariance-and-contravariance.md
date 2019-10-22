@@ -149,7 +149,7 @@ ms.locfileid: "69948799"
  .NET Framework 4 以降では、Visual Basic と C# の両方で、インターフェイスやデリゲートのジェネリック型パラメーターを共変または反変としてマークするためのキーワードが提供されています。  
   
 > [!NOTE]
-> ジェネリック型パラメーターの変性注釈は .NET Framework Version 2.0 以降の共通言語ランタイムでサポートされていますが、 .NET Framework 4 より前で、これらの注釈を含むジェネリック クラスを定義するには、クラスを [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) を使ってコンパイル、またはそれを動的アセンブリに出力することで、Microsoft Intermediate Language (MSIL) を使用する方法しかありませんでした。  
+> ジェネリック型パラメーターの変性注釈は .NET Framework Version 2.0 以降の共通言語ランタイムでサポートされていますが、 .NET Framework 4 より前で、これらの注釈を含むジェネリック クラスを定義するには、クラスを [Ilasm.exe (IL アセンブラー)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) を使ってコンパイル、またはそれを動的アセンブリに出力することで、Microsoft Intermediate Language (MSIL) を使用する方法しかありませんでした。  
   
  共変の型パラメーターをマークするには、 `out` キーワード (Visual Basic では`Out` キーワード、 `+` MSIL アセンブラー [では](../../../docs/framework/tools/ilasm-exe-il-assembler.md)) を使用します。 共変の型パラメーターは、インターフェイスに属するメソッドの戻り値として使用したり、デリゲートの戻り値の型として使用したりできます。 インターフェイス メソッドのジェネリック型制約として使用することはできません。  
   

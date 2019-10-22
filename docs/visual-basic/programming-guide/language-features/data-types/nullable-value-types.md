@@ -29,7 +29,7 @@ ms.locfileid: "71351767"
 
 Null 許容型を使用して変数とプロパティを宣言できます。また、null 許容型の要素を使用して配列を宣言できます。 Null 許容型を持つプロシージャをパラメーターとして宣言し、@no__t 0 のプロシージャから null 許容型を返すことができます。
 
-配列、@no__t 0、クラスなどの参照型に対して null 許容型を構築することはできません。 基になる型は、値型である必要があります。 詳細については、「 [Value Types and Reference Types](value-types-and-reference-types.md)」を参照してください。
+配列、@no__t 0、クラスなどの参照型に対して null 許容型を構築することはできません。 基になる型は、値型である必要があります。 詳細については、「 [値型と参照型](value-types-and-reference-types.md)」を参照してください。
 
 ## <a name="using-a-nullable-type-variable"></a>Null 許容型変数の使用
 
@@ -110,7 +110,7 @@ Null 許容型の変数の値を取得するには、最初に <xref:System.Null
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [データの種類](index.md)
-- [Value Types and Reference Types](value-types-and-reference-types.md)
+- [値型と参照型](value-types-and-reference-types.md)
 - [トラブルシューティング (データ型)](troubleshooting-data-types.md)
 - [TableAdapters を使用してデータセットを入力する](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
 - [If 演算子](../../../language-reference/operators/if-operator.md)

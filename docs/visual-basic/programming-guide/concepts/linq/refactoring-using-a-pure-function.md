@@ -1,21 +1,21 @@
 ---
-title: 純粋関数 (Visual Basic) を使用したリファクタリング
+title: 純粋関数を使用したリファクタリング (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: 96e8534280d560502b04b1880273cf7254f36e20
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 361aef2baa2102f4f942b5ddd37ed8a9704fbf19
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666097"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582687"
 ---
-# <a name="refactoring-using-a-pure-function-visual-basic"></a>純粋関数 (Visual Basic) を使用したリファクタリング
-次の例では、リファクタリング前の例では、[拡張メソッド (Visual Basic) を使用したリファクタリング](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)、この例では、検索、段落のテキストが純粋静的メソッドに移動するコードでは、純粋関数を使用する`ParagraphText`.  
+# <a name="refactoring-using-a-pure-function-visual-basic"></a>純粋関数を使用したリファクタリング (Visual Basic)
+次の例では、前の例でリファクタ[拡張メソッド (Visual Basic) を使用してリファクタリング](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)し、この例で純粋関数を使用するために、段落のテキストを検索するコードが `ParagraphText` 純粋な静的メソッドに移動されています。  
   
 ## <a name="example"></a>例  
  この例では、WordprocessingML ドキュメントを処理して、WordprocessingML ドキュメントから段落ノードを取得します。 それぞれの段落のスタイルも特定します。 この例は、このチュートリアルのこれまでの例に基づいています。 リファクタリングされたコードについては、以下のコード内にあるコメントで説明が示されています。  
   
- この例のソース ドキュメントの作成手順については、次を参照してください。[ソース Office Open XML ドキュメント (Visual Basic) を作成する](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)します。  
+ この例のソースドキュメントを作成する手順については、「[ソースとなる Office OPEN XML ドキュメントを作成する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」を参照してください。  
   
  この例では、WindowsBase アセンブリのクラスを使用します。 また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。  
   
@@ -149,7 +149,7 @@ End Module
   
  この例では、リファクタリング前と同じ出力が生成されます。  
   
-```  
+```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -167,13 +167,13 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-### <a name="next-steps"></a>次の手順  
+### <a name="next-steps"></a>次のステップ  
  次の例では、XML を別の形式に射影する方法を示します。  
   
-- [さまざまな図形 (Visual Basic) での XML の射影](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [異なる構造の XML の射影 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [拡張メソッド (Visual Basic) を使用したリファクタリング](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [純粋関数 (Visual Basic) へのリファクタリング](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [拡張メソッドを使用したリファクタリング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
+- [純粋関数へのリファクタリング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

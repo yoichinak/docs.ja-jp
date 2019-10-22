@@ -43,7 +43,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61906751"
 ---
-# <a name="type-characters-visual-basic"></a>(Visual Basic) の文字を入力します。
+# <a name="type-characters-visual-basic"></a>型文字 (Visual Basic)
 
 だけでなく、宣言ステートメントでデータ型を指定すると、一部のプログラミング要素のデータ型を強制することができます、*文字入力*します。 型文字は、任意の種類の間にある文字がない、要素を直後にする必要があります。
 
