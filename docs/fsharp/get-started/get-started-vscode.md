@@ -11,16 +11,16 @@ ms.locfileid: "71082984"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code で F# をはじめる
 
-[Ionide プラグイン](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)をF#使用して[Visual Studio Code](https://code.visualstudio.com)に記述すると、IntelliSense と基本的なコードリファクタリングを使用して、優れたクロスプラットフォームで軽量の統合開発環境 (IDE) エクスペリエンスを実現できます。 プラグインの詳細については、 [Ionide.io](http://ionide.io)を参照してください。
+[Ionide プラグイン](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp) を使用して [Visual Studio Code](https://code.visualstudio.com)で F# を記述すると、IntelliSense と基本的なコードリファクタリングを使用して、優れたクロスプラットフォームで軽量の統合開発環境 (IDE) エクスペリエンスを実現できます。 プラグインの詳細については、 [Ionide.io](http://ionide.io) を参照してください。
 
 作業を開始できることを確認します。 [F# および ionide の概要プラグインが正しくインストールされている](install-fsharp.md#install-f-with-visual-studio-code)します。
 
 > [!NOTE]
-> Ionide は、クロスF#プラットフォームの互換性の問題が発生する可能性がある dotnet core ではなく .NET Framework プロジェクトを生成します。 **Linux**または**OSX**でを実行している場合は、[コマンドラインツール](get-started-command-line.md)を使用することをお勧めします。
+> Ionide は、クロスプラットフォームの互換性の問題が発生する可能性がある dotnet core ではなく .NET Framework F# プロジェクトを生成します。 **Linux** または **OSX**で実行している場合は、[コマンドラインツール](get-started-command-line.md) を使用することをお勧めします。
 
 ## <a name="creating-your-first-project-with-ionide"></a>Ionide を使用した最初のプロジェクトの作成
 
-新しい F# プロジェクトを作成するには、新しいフォルダー (することができます、どのような名前) に Visual Studio Code を開きます。
+新しい F# プロジェクトを作成するには、新しいフォルダで Visual Studio Code を開きます (任意の名前を付けることができます)。
 
 次に、コマンドパレット (**View > コマンドパレット**) を開き、次のように入力します。
 
@@ -28,10 +28,10 @@ ms.locfileid: "71082984"
 > F# new project
 ```
 
-これは、[偽造](https://github.com/fsharp-editing/Forge)されたプロジェクトを利用しています。
+これは、[FORGE](https://github.com/fsharp-editing/Forge) プロジェクトから提供されています。
 
 > [!NOTE]
-> テンプレートオプションが表示されない場合は、コマンドパレットで次のコマンドを実行して`>F#: Refresh Project Templates`テンプレートを更新してみてください:。
+> テンプレートオプションが表示されない場合は、コマンドパレットで次のコマンドを実行して`>F#: Refresh Project Templates`テンプレートを更新してみてください。
 
 F#:**Enter キー**を押して、新しいプロジェクトを作成します。 これにより、次の手順に進みます。これは、プロジェクトテンプレートを選択するためのものです。
 
@@ -43,35 +43,35 @@ F#:**Enter キー**を押して、新しいプロジェクトを作成します�
 
 前の手順に従った場合は、左側に Visual Studio Code ワークスペースが表示され、次のように表示されます。
 
-1. フォルダー F#の`ClassLibraryDemo`下にあるプロジェクト自体。
-2. を介し[`Paket`](https://fsprojects.github.io/Paket/)てパッケージを追加するための適切なディレクトリ構造。
-3. を使用した[`FAKE`](https://fsharp.github.io/FAKE/)クロスプラットフォームのビルドスクリプト。
+1. `ClassLibraryDemo`フォルダーの下にある F# プロジェクト自体。
+2. [`Paket`](https://fsprojects.github.io/Paket/) を介してパッケージを追加するための適切なディレクトリ構造。
+3. [`FAKE`](https://fsharp.github.io/FAKE/) を使用したクロスプラットフォーム ビルド スクリプト。
 4. パッケージをフェッチし、依存関係を解決できる実行可能ファイル。`paket.exe`
-5. この`.gitignore`プロジェクトを Git ベースのソース管理に追加する場合は、ファイル。
+5. このプロジェクトを Git ベースのソース管理に追加する場合は、 `.gitignore`ファイル。
 
 ## <a name="writing-some-code"></a>コードの記述
 
 *Classlibrarydemo*フォルダーを開きます。  次のファイルが表示されます。
 
-1. `ClassLibraryDemo.fs`で定義されているクラスを使用して F# 実装ファイルです。
-2. `ClassLibraryDemo.fsproj`、F# プロジェクト ファイルをこのプロジェクトをビルドするために使用します。
+1. クラスが定義されている F# 実装ファイルである`ClassLibraryDemo.fs`。
+2. このプロジェクトのビルドに使用される F# プロジェクト ファイルである`ClassLibraryDemo.fsproj`。
 3. `Script.fsx`、ソース ファイルを読み込む F# スクリプト ファイル。
 4. `paket.references`は、プロジェクトの依存関係を指定するパケットファイルです。
 
-を`Script.fsx`開き、の末尾に次のコードを追加します。
+`Script.fsx`を開き、末尾に次のコードを追加します。
 
 [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx)]
 
-この関数は、単語を[Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin)の形式に変換します。 次の手順では、F# Interactive (FSI) を使用して評価です。
+この関数は、単語を [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin) の形式に変換します。 次の手順では、F# Interactive (FSI) を使用して評価します。
 
-関数全体を強調表示します (11 行の長さである必要があります)。 強調表示されたら、 **Alt**キーを押しながら**Enter**キーを押します。 ウィンドウのポップアップが表示され、次のように表示されます。
+関数全体をハイライト表示します (長さは 11 行である必要があります)。 ハイライト表示されたら、 **Alt** キーを押しながら **Enter** キーを押します。 ウィンドウのポップアップが表示され、次のように表示されます。
 
-![Ionide の概要で F# Interactive の出力の例](./media/getting-started-vscode/vscode-fsi.png)
+![Ionide の概要での F# Interactive の出力例](./media/getting-started-vscode/vscode-fsi.png)
 
-これは次の3つの処理を行いました。
+これは次の 3 つのことを行いました。
 
 1. FSI.EXE プロセスを開始しました。
-2. FSI.EXE プロセスで強調表示したコードが送信されました。
+2. FSI.EXE プロセスでハイライト表示したコードが送信されました。
 3. FSI.EXE プロセスは、送信したコードを評価しました。
 
 送信したのは[関数](../language-reference/functions/index.md)だったので、fsi.exe! を使用してその関数を呼び出すことができるようになりました。 対話型ウィンドウで、次のように入力します。
@@ -98,7 +98,7 @@ toPigLatin "apple";;
 val it : string = "appleyay"
 ```
 
-関数が想定どおりに動作しているようです。 これで、先ほど Visual Studio Code で初めての F# 関数を記述し、FSI を使用して評価すること。
+関数が想定どおりに動作しているようです。 これで、先ほど Visual Studio Code で初めて F# 関数を記述し、FSI でそれを評価しました。
 
 > [!NOTE]
 > ご存知かもしれませんが、FSI.EXE の行は`;;`で終了します。 これは、FSI.EXE で複数の行を入力できるためです。 最後`;;`のは、コードが終了したことを fsi.exe に通知します。
@@ -111,13 +111,13 @@ val it : string = "appleyay"
 
 単語の最初の文字が母音で始まる場合は、単語の末尾に "yay" を追加します。 母音で始まらない場合は、その最初の文字を単語の末尾に移動し、それに "ay" を追加します。
 
-FSI.EXE では、次のことにご気になるかもしれません。
+FSI.EXE では、次のことに気づいたかもしれません。
 
 ```fsharp
 val toPigLatin : word:string -> string
 ```
 
-これは、 `toPigLatin` `string`を入力として受け取り (と呼び`word`ます)、別`string`のを返す関数であることを示します。 呼ばれます、[関数の型シグネチャ](https://fsharpforfunandprofit.com/posts/function-signatures/)、基本的な F# コードを理解する鍵は、F# です。 Visual Studio Code で関数をポイントすると、この点にも注意してください。
+これは、 `toPigLatin` `string`を入力として受け取り (`word`と呼びます)、別の`string`を返す関数であることを示します。 これは[関数の型シグネチャ](https://fsharpforfunandprofit.com/posts/function-signatures/) と呼ばれ、F# コードの基本的な部分を理解するために重要です。 Visual Studio Code でカーソルを関数に合わせると、この点にも気づくでしょう。
 
 関数の本体には、次の2つの異なる部分があります。
 
@@ -133,17 +133,17 @@ val toPigLatin : word:string -> string
 
 入力単語の最初の文字が母音であるかどうかを確認します。 の場合は、単語の末尾に "yay" を付加します。 それ以外の場合は、最初の文字を単語の末尾に移動し、それに "ay" を追加します。
 
-この点については最後に説明します。他の多くの言語とは異なり、関数から戻る明示的な命令はありません。 これは、 F#が式ベースであり、関数本体の最後の式が戻り値であるためです。 は`if..then..else`それ自体が式であるため、入力`then`値に応じてブロックの`else`本体またはブロックの本体が返されます。
+この点については最後に説明します。他の多くの言語とは異なり、関数から戻る明示的な命令はありません。 これは、 F# が式ベースであり、関数本体の最後の式が戻り値であるためです。 `if..then..else`はそれ自体が式であるため、`then`ブロックの本体または`else`ブロックの本体の値が返されます。
 
 ## <a name="moving-your-script-code-into-the-implementation-file"></a>実装ファイルへのスクリプトコードの移動
 
 この記事では、前のセクションには、F# コードの記述の一般的な最初の手順が示されています。 最初の関数の記述と、FSI 使用して対話的に実行します。 これは REPL ドリブン開発と呼ばれます。 [repl](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)は "Read Evaluate-Print Loop" を表します。 機能を使用するには、機能を試してみることをお勧めします。
 
-REPL 駆動型開発の次の手順では、作業コード F# 実装ファイルに移動します。 これは、実行可能なアセンブリの F# コンパイラによってコンパイルできます。
+REPL 駆動型開発の次の手順では、作業コードを F# 実装ファイルに移動します。 その後、F# コンパイラによって実行可能なアセンブリにコンパイルできます。
 
-開始するには`ClassLibraryDemo.fs`、を開きます。  いくつかのコードが既に存在していることがわかります。 クラス定義を削除しますが、宣言は[`namespace`](../language-reference/namespaces.md)先頭に残しておいてください。
+まず、`ClassLibraryDemo.fs`を開きます。  いくつかのコードが既に存在していることがわかります。 先に進み、クラス定義を削除しますが、必ず[`namespace`](../language-reference/namespaces.md) 宣言は先頭に残しておいてください。
 
-次に、という[`module`](../language-reference/modules.md) `PigLatin`新しいを作成し`toPigLatin` 、関数を次のようにコピーします。
+次に、`PigLatin`という新しい[`module`](../language-reference/modules.md) を作成し、`toPigLatin`関数を次のようにコピーします。
 
 [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
 
@@ -172,28 +172,28 @@ val it : string = "appleyay"
 この記事では、次のことを学習しました。
 
 1. Ionide を使用して Visual Studio Code を設定する方法について説明します。
-2. Ionide の概要で初めての F# プロジェクトを作成する方法。
-3. F# スクリプトを使用して、ionide の概要で初めての F# 関数を記述し、FSI で実行する方法。
-4. スクリプトを移行する方法を使用して、F# ソース コード、FSI からそのコードを呼び出します。
+2. Ionide を使用して初めての F# プロジェクトを作成する方法。
+3. F# スクリプトを使用して、ionide で初めての F# 関数を記述し、FSI で実行する方法。
+4. スクリプト コードを F# ソースに移行し、そのコードを FSI から呼び出す方法。
 
-コードより F# Visual Studio Code および ionide の概要を使用して書き込むが組み込まれました。
+これで、Visual Studio Codeと Ionide を使用して、より多くの F# コードを記述できるようになりました。
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
-発生する可能性がある特定の問題をトラブルシューティングするには、次のいくつかの方法があります。
+発生する可能性のある特定の問題をトラブルシューティングする方法を次にします。
 
 1. Ionide の概要の編集機能をコードを取得するには、F# ファイルはディスク、および Visual Studio Code ワークスペースで開いているフォルダー内に保存する必要があります。
-2. システムに変更を加えた場合、または Visual Studio Code を開いた状態でインストールされた Ionide の前提条件を確認した場合は、Visual Studio Code を再起動します。
-3. 完全修飾パスを使用せF#ずにF# 、コマンドラインからコンパイラおよび interactive を使用できることを確認します。 」と入力して行うことができます`fsc`、F# コンパイラのコマンドラインで、`fsi`または`fsharpi`の Visual F# ツールの Windows、Mac または Linux での Mono でそれぞれします。
+2. システムに変更を加えた場合、または Visual Studio Code を開いた状態で Ionide の前提条件をインストールした場合は、Visual Studio Code を再起動します。
+3. 完全修飾パスなしでコマンドラインから F# コンパイラと F# 対話式を使用できることを確認します。 これを行うには、F# コンパイラのコマンドラインに`fsc`を入力し、Windows の Visual F# ツールの`fsi`または`fsharpi`をそれぞれ入力し、Mac/Linux 上のモノラルを入力します。
 4. プロジェクトディレクトリに無効な文字が含まれていると、Ionide が機能しない可能性があります。  この場合は、プロジェクトディレクトリの名前を変更します。
 5. Ionide コマンドがいずれも動作していない場合は、 [Visual Studio Code キーバインド](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts)を調べて、誤って上書きされていないかどうかを確認します。
-6. Ionide がコンピューター上で破損していて、上記のいずれも問題を解決して`ionide-fsharp`いない場合は、コンピューター上のディレクトリを削除し、プラグインスイートを再インストールしてみてください。
+6. Ionide がマシン上で壊れていて、上記のいずれも問題を解決しない場合は、コンピューターの`ionide-fsharp`ディレクトリを削除して、プラグインスイートを再インストールしてみてください。
 
 Ionide の概要とは、構築および F# コミュニティのメンバーによって管理されるオープン ソース プロジェクトです。 問題を報告して、 [Ionide-vscode に投稿してください。Fsharp.core GitHub リポジトリ](https://github.com/ionide/ionide-vscode-fsharp)。
 
-報告する問題が発生した場合は、「ログを取得する」[の手順](https://github.com/ionide/ionide-vscode-fsharp#how-to-get-logs-for-debugging--issue-reporting)に従って、問題を報告してください。
+報告する問題がある場合は、「[ログを取得する](https://github.com/ionide/ionide-vscode-fsharp#how-to-get-logs-for-debugging--issue-reporting)」の手順に従って、問題を報告してください。
 
-Ionide の概要開発者および F# コミュニティからさらにヘルプを求めることも、 [Ionide Gitter チャネル](https://gitter.im/ionide/ionide-project)します。
+[Ionide Gitter チャネル](https://gitter.im/ionide/ionide-project) の Ionide 開発者と F# コミュニティからさらなる支援を求めることもできます。
 
 ## <a name="next-steps"></a>次の手順
 
