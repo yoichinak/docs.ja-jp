@@ -2,7 +2,7 @@
   "need_generate_intellisense": false,
   "need_preview_pull_request": true,
   "need_pr_comments": false,
-  "need_generate_pdf_url_template": false,
+  "need_generate_pdf_url_template": true,
   "git_repository_branch_open_to_public_contributors": "live",
   "need_generate_pdf": true,
   "continue_with_document_error": true,
