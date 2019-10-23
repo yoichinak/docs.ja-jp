@@ -4,7 +4,7 @@
   "need_pr_comments": false,
   "need_generate_pdf_url_template": false,
   "git_repository_branch_open_to_public_contributors": "live",
-  "need_generate_pdf": false,
+  "need_generate_pdf": true,
   "continue_with_document_error": true,
   "contribution_branch_mappings": {
     "live-sxs": "live"
@@ -15,7 +15,8 @@
       "Pdf"
     ],
     "live-sxs": [
-      "Publish"
+      "Publish",
+      "Pdf"
     ],
     "master": [
       "Publish",
