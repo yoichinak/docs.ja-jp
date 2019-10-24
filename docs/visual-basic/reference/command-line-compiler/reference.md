@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 552fbcf920be609de83708a995a87761f6080220
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 8f144dbd9376f15ac92e283472dac786a6972045
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005271"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775604"
 ---
 # <a name="-reference-visual-basic"></a>-reference (Visual Basic)
 コンパイラは、指定したアセンブリ内の型情報を、現在コンパイルしているプロジェクトで使用できるようにします。  
@@ -25,7 +25,7 @@ ms.locfileid: "72005271"
 -reference:fileList  
 ```
 
-または
+、または
 
 ```console
 -r:fileList  
@@ -33,12 +33,12 @@ ms.locfileid: "72005271"
   
 ## <a name="arguments"></a>引数  
   
-|項目|定義|  
+|用語|定義|  
 |---|---|  
-|`fileList`|必須。 アセンブリ ファイル名のコンマ区切りリスト。 ファイル名に空白が含まれている場合は、名前を二重引用符で囲みます。|  
+|`fileList`|必須です。 アセンブリ ファイル名のコンマ区切りリスト。 ファイル名に空白が含まれている場合は、名前を二重引用符で囲みます。|  
   
-## <a name="remarks"></a>コメント  
- インポートするファイルには、アセンブリメタデータが含まれている必要があります。 アセンブリの外部で参照できるのはパブリック型だけです。 [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)オプションは、モジュールからメタデータをインポートします。  
+## <a name="remarks"></a>Remarks  
+ インポートするファイルには、アセンブリメタデータが含まれている必要があります。 アセンブリの外部で参照できるのはパブリック型だけです。 [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)オプションは、モジュールからメタデータをインポートします。  
   
  別のアセンブリ (アセンブリ B) を参照するアセンブリ (アセンブリ A) を参照する場合は、次の場合にアセンブリ B を参照する必要があります。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "72005271"
  `-reference` の省略形は `/r` です。  
   
 ## <a name="example"></a>例  
- 次のコマンドは、ソースファイル `Input.vb` および参照アセンブリを `Metad1.dll` と `Metad2.dll` からコンパイルして、`Out.exe` を生成します。  
+ 次のコマンドは、`Metad1.dll` と `Metad2.dll` からソースファイル `Input.vb` と参照アセンブリをコンパイルして `Out.exe` を生成します。  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
