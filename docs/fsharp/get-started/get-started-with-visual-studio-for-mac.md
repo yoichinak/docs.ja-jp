@@ -1,5 +1,5 @@
 ---
-title: Visual Studio for Mac で F＃ を使い始める
+title: Visual Studio for Mac で F＃ をはじめよう
 description: を Visual Studio for Mac と共F#に使用する方法について説明します。
 ms.date: 07/03/2018
 ms.openlocfilehash: d3604178f93cf17d21f25b09084be7e7977378b5
@@ -9,13 +9,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/18/2019
 ms.locfileid: "71082979"
 ---
-# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Visual Studio for Mac で F＃ を使い始める
+# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Visual Studio for Mac で F＃ をはじめよう
 
 F＃ および Visual F＃ ツールは、Visual Studio for Mac IDE でサポートされています。 [Visual Studio for Mac がインストール](install-fsharp.md#install-f-with-visual-studio-for-mac) されていることを確認してください。
 
 ## <a name="creating-a-console-application"></a>コンソールアプリケーションの作成
 
-Visual Studio for Mac の最も基本的なプロジェクトの1つは、コンソールアプリケーションです。  これを行う方法を次に示します。  Visual Studio for Mac が開いたら、次のようになります。
+コンソールアプリケーションは、Visual Studio for Mac の最も基本的なプロジェクトの 1 つです。  これを行う方法を次に示します。  Visual Studio for Mac を開いて、次を実行します。
 
 1. **[ファイル]** メニューの **[新しいソリューション]** をポイントします。
 
@@ -23,7 +23,7 @@ Visual Studio for Mac の最も基本的なプロジェクトの1つは、コン
 
 3. コンソール アプリを変更 (C#) F# に必要な場合。  **[次へ]** ボタンをクリックして先に進みます。  
 
-4. プロジェクトに名前を付け、アプリに必要なオプションを選択します。  プレビューウィンドウには、選択したオプションに基づいて作成されるディレクトリ構造が表示されます。  
+4. プロジェクトに名前を付け、アプリに必要なオプションを選択します。  プレビュー ウィンドウには、選択したオプションに基づいて作成されるディレクトリ構造が表示されます。  
 
 5. **[作成]** をクリックします。  ソリューション エクスプ ローラーで F# プロジェクトが表示されます。
 

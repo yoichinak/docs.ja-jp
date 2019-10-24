@@ -1,6 +1,6 @@
-- name: 'C# のガイド'
+- name: 'C# ガイド'
   href: index.md
-- name: 開始するには
+- name: はじめに
   items:
     - name: このガイドの使用方法
       href: getting-started/index.md
@@ -1298,14 +1298,16 @@
               items:
                 - name: 値型の機能
                   href: language-reference/keywords/value-types.md
-                - name: bool
-                  href: language-reference/keywords/bool.md
                 - name: 整数数値型
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
                 - name: 浮動小数点数値型
-                  displayName: 'float, decimal, double, rational, real'
+                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                - name: 組み込みの数値変換
+                  href: language-reference/builtin-types/numeric-conversions.md
+                - name: bool
+                  href: language-reference/keywords/bool.md
                 - name: char
                   href: language-reference/keywords/char.md
                 - name: enum
@@ -1316,11 +1318,11 @@
               items:
                 - name: 参照型の機能
                   href: language-reference/keywords/reference-types.md
-                - name: class
-                  href: language-reference/keywords/class.md
                 - name: 組み込みの参照型
                   displayName: 'object, delegate, dynamic, string'
                   href: language-reference/builtin-types/reference-types.md
+                - name: class
+                  href: language-reference/keywords/class.md
                 - name: interface
                   href: language-reference/keywords/interface.md
             - name: void
@@ -1337,10 +1339,6 @@
                   href: language-reference/keywords/value-types-table.md
                 - name: 既定値の一覧表
                   href: language-reference/keywords/default-values-table.md
-                - name: 暗黙的な数値変換の一覧表
-                  href: language-reference/keywords/implicit-numeric-conversions-table.md
-                - name: 明示的な数値変換の一覧表
-                  href: language-reference/keywords/explicit-numeric-conversions-table.md
                 - name: 数値結果テーブルの書式設定
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: 修飾子
