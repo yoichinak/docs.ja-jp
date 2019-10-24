@@ -4,12 +4,12 @@ description: .NET マイクロサービスおよび Web アプリケーション
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 5e9b616e0443e85c016401a51efc3b04d2329e3b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771999"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798858"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
 
@@ -293,9 +293,6 @@ JWT ベアラー認証ミドルウェアは、証明機関が利用できない�
 
 - **AspNet.Security.OAuth.Providers** (ASP.NET OAuth プロバイダーの GitHub リポジトリ) \
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
-
-- **Danny Strockis の ASP.NET Core Web アプリへの Azure AD の統合** \
-  <https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/>
 
 - **IdentityServer4 の公式ドキュメント** \
   <https://identityserver4.readthedocs.io/en/latest/>
