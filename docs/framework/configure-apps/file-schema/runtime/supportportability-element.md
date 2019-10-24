@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 011793006f2aff32486fbe4537b46517e0a2b888
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7a76c378038a19d3edb9fe0c5e61012cc854c1b7
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252303"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773930"
 ---
-# <a name="supportportability-element"></a>\<supportPortability> 要素
+# <a name="supportportability-element"></a>> 要素の \<supportPortability
 .NET Framework の 2 つの異なる実装にある同じアセンブリを 1 つのアプリケーションから参照できるように、既定の動作を無効にすることができます。既定の動作では、アプリケーションの移植性を高めるために、このようなアセンブリは同等のものとして扱われます。  
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<supportPortability>**  
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\<supportPortability >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,9 +41,9 @@ ms.locfileid: "70252303"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|true|指定した .NET Framework アセンブリの複数の実装間での移植性に対するサポートを有効にします。 既定値です。|  
+|TRUE|指定した .NET Framework アセンブリの複数の実装間での移植性に対するサポートを有効にします。 既定値です。|  
 |False|指定した .NET Framework アセンブリの複数の実装間での移植性に対するサポートを無効にします。 この場合、指定したアセンブリの複数の実装をアプリケーションで参照できます。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -84,5 +84,5 @@ ms.locfileid: "70252303"
   
 ## <a name="see-also"></a>関連項目
 
-- [/appconfig (C#コンパイラオプション)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [-appconfig (C# コンパイラ オプション)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [.NET Framework アセンブリの統一の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
