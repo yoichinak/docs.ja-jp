@@ -1,17 +1,17 @@
 ---
 title: アサーション
 description: F#プログラミング言語で式をテストするためのデバッグ機能として ' assert ' 式を使用する方法について説明します。
-ms.date: 05/16/2016
-ms.openlocfilehash: b8b7e9662143b432d650f87515d4af31cced4149
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 10/22/2019
+ms.openlocfilehash: 430db20e5ca307ba43a72e678a0424e03b0ac381
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630027"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72799059"
 ---
 # <a name="assertions"></a>アサーション
 
-`assert`式は、式をテストするために使用できるデバッグ機能です。 デバッグ モードでエラーが発生すると、アサーションによってシステム エラーのダイアログ ボックスが生成されます。
+`assert` 式は、式をテストするために使用できるデバッグ機能です。 デバッグ モードでエラーが発生すると、アサーションによってシステム エラーのダイアログ ボックスが生成されます。
 
 ## <a name="syntax"></a>構文
 
@@ -21,20 +21,17 @@ assert condition
 
 ## <a name="remarks"></a>Remarks
 
-式`assert`の型`bool -> unit`がです。
+`assert` 式に `bool -> unit`型があります。
 
-前の構文では、 *condition*はテスト対象のブール式を表します。 式がに`true`評価された場合、実行は影響を受けません。 と評価`false`されると、システムエラーダイアログボックスが生成されます。 エラーダイアログボックスには、文字列の**アサーションに失敗**したキャプションが含まれています。 ダイアログボックスには、アサーションエラーが発生した場所を示すスタックトレースが含まれています。
+`assert` 関数は、<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>に解決されます。 つまり、その動作は、<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> を直接呼び出した場合と同じです。
 
-アサーションチェックは、デバッグモードでコンパイルした場合にのみ有効になります。つまり、定数`DEBUG`が定義されている場合はです。 既定では、プロジェクトシステムでは、 `DEBUG`定数はデバッグ構成で定義されていますが、リリース構成では定義されていません。
+アサーションチェックは、デバッグモードでコンパイルした場合にのみ有効になります。つまり、定数 `DEBUG` が定義されている場合はです。 既定では、プロジェクトシステムでは、`DEBUG` 定数はデバッグ構成で定義されていますが、リリース構成では定義されていません。
 
 例外処理を使用しF#てアサーションエラーをキャッチすることはできません。
 
-> [!NOTE]
-> 関数`assert`は、に<xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>解決されます。
-
 ## <a name="example"></a>例
 
-次のコード例は、 `assert`式の使用方法を示しています。
+次のコード例は、`assert` 式の使用方法を示しています。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5401.fs)]
 

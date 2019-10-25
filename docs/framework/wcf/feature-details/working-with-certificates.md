@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: bbe9341b1fb50985c235bd7f34961f1718f46bc0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045223"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774300"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 
@@ -26,7 +26,7 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
 
 ## <a name="viewing-certificates"></a>証明書の表示
 
-証明書を使用するには、多くの場合、証明書を表示し、プロパティを確認する必要があります。 Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップイン ツールを使用すると、これを簡単に行うことができます。 詳細については、「[方法 :MMC スナップ](how-to-view-certificates-with-the-mmc-snap-in.md)インを使用して証明書を表示します。
+証明書を使用するには、多くの場合、証明書を表示し、プロパティを確認する必要があります。 Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップイン ツールを使用すると、これを簡単に行うことができます。 詳細については、「[方法: MMC スナップインを使用して証明書を参照する](how-to-view-certificates-with-the-mmc-snap-in.md)」を参照してください。
 
 ## <a name="certificate-stores"></a>証明書ストア
 
@@ -57,13 +57,13 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
 
 ### <a name="accessing-stores"></a>ストアへのアクセス
 
-ストアは、コンピューター上の一種のフォルダーであり、アクセス制御リスト (ACL: Access Control List) によって保護されています。 インターネットインフォメーションサービス (IIS) でホストされるサービスを作成する場合、ASP.NET プロセスは ASP.NET アカウントで実行されます。 このアカウントは、サービスが使用する証明書を格納するストアにアクセス可能である必要があります。 各主要ストアは既定のアクセス リストで保護されていますが、これらのリストは変更できます。 ストアにアクセスする別のロールを作成した場合、そのロールにアクセス許可を付与する必要があります。 Winhttpcertconfig.exe ツールを使用してアクセスリストを変更する方法については[、「」を参照してください。開発](how-to-create-temporary-certificates-for-use-during-development.md)時に使用する一時的な証明書を作成します。 IIS でクライアント証明書を使用する方法の詳細については、「[ASP.NET Web アプリケーションで認証用のクライアント証明書を使用して Web サービスを呼び出す方法 ](https://support.microsoft.com/en-us/help/901183/how-to-call-a-web-service-by-using-a-client-certificate-for-authentica)」を参照してください。
+ストアは、コンピューター上の一種のフォルダーであり、アクセス制御リスト (ACL: Access Control List) によって保護されています。 インターネットインフォメーションサービス (IIS) でホストされるサービスを作成する場合、ASP.NET プロセスは ASP.NET アカウントで実行されます。 このアカウントは、サービスが使用する証明書を格納するストアにアクセス可能である必要があります。 各主要ストアは既定のアクセス リストで保護されていますが、これらのリストは変更できます。 ストアにアクセスする別のロールを作成した場合、そのロールにアクセス許可を付与する必要があります。 WinHttpCertConfig.exe ツールを使用してアクセス リストを変更する方法については、「[方法: 開発中に使用する一時的な証明書を作成する](how-to-create-temporary-certificates-for-use-during-development.md)」を参照してください。
 
 ## <a name="chain-trust-and-certificate-authorities"></a>信頼チェーンと証明機関
 
 証明書は、各証明書がその発行元の CA にリンクされる階層構造で作成されます。 このリンクは CA の証明書へのリンクになります。 CA の証明書は、元の CA の証明書を発行した CA にリンクされます。 ルート CA の証明書に到達するまでこのプロセスが繰り返されます。 ルート CA の証明書は本質的に信頼されています。
 
-デジタル証明書を使用する場合、この階層 ("*信頼チェーン*" とも呼ばれます) に依存してエンティティを認証します。 証明書のチェーンを表示するには、MMC スナップインを使用して、証明書をダブルクリックし、 **[証明書パス]** タブをクリックします。証明機関の証明書チェーンをインポートする方法の詳細に[ついては、「」を参照してください。署名](specify-the-certificate-authority-chain-verify-signatures-wcf.md)の検証に使用する証明機関の証明書チェーンを指定します。
+デジタル証明書を使用する場合、この階層 ("*信頼チェーン*" とも呼ばれます) に依存してエンティティを認証します。 MMC スナップインを使用して証明書のチェーンを表示するには、任意の証明書をダブルクリックし、 **[証明書のパス]** タブをクリックします。証明機関の証明書チェーンをインポートする方法の詳細については、「[方法: 署名の検証に使用する証明機関の証明書チェーンを指定](specify-the-certificate-authority-chain-verify-signatures-wcf.md)する」を参照してください。
 
 > [!NOTE]
 > 証明書を "信頼されたルート証明機関" 証明書ストアに配置することにより、その証明書の発行者を信頼されたルート証明機関として指定できます。
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
 
 新しいサービスの作成時には、信頼されたルート証明書によって発行されていない証明書を使用できます。また、発行する証明書が、信頼されたルート証明機関ストアになくてもかまいません。 開発だけを目的としている場合は、証明書の信頼チェーンをチェックする機構を一時的に無効にできます。 これを行うには、`CertificateValidationMode` プロパティを `PeerTrust` または `PeerOrChainTrust` に設定します。 これらのモードにより、証明書を自己発行するか (ピア信頼)、信頼チェーンに含めるかを指定できます。 このプロパティは、次のどのクラスでも設定できます。
 
-|クラス|プロパティ|
+|インスタンス|property|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -105,7 +105,7 @@ PowerShell の新しい SelfSignedCertificate コマンドレットは、x.509 �
 
 3. 信頼されたルート証明機関ストアに、ルート証明機関証明書をインポートします。
 
-4. 詳細な手順については、「 [方法:開発](how-to-create-temporary-certificates-for-use-during-development.md)時に使用する一時的な証明書を作成します。
+4. 詳しい手順については、「[方法: 開発中に使用する一時的な証明書を作成する](how-to-create-temporary-certificates-for-use-during-development.md)」を参照してください。
 
 ## <a name="which-certificate-to-use"></a>使用する証明書の選択
 
@@ -113,9 +113,9 @@ PowerShell の新しい SelfSignedCertificate コマンドレットは、x.509 �
 
 ### <a name="service-certificates"></a>サービス証明書
 
-サービス証明書の第一の目的は、クライアントに対してサーバーを認証することです。 クライアントがサーバーを認証するときの最初のチェックの 1 つとして、"**サブジェクト**" フィールドの値とサービスへのアクセスに使用する URI (Uniform Resource Identifier) が比較されます。この場合、双方の DNS が一致する必要があります。 たとえば、サービスの URI が`http://www.contoso.com/endpoint/`の場合、**サブジェクト**フィールドにも値`www.contoso.com`が含まれている必要があります。
+サービス証明書の第一の目的は、クライアントに対してサーバーを認証することです。 クライアントがサーバーを認証するときの最初のチェックの 1 つとして、"**サブジェクト**" フィールドの値とサービスへのアクセスに使用する URI (Uniform Resource Identifier) が比較されます。この場合、双方の DNS が一致する必要があります。 たとえば、サービスの URI が `http://www.contoso.com/endpoint/` 場合、 **Subject**フィールドにも `www.contoso.com` 値が含まれている必要があります。
 
-このフィールドには複数の値を含めることができますが、各値の先頭にはその値を示す初期化コードが付加されます。 一般的に、初期化は一般的な名前`CN = www.contoso.com`の "CN" です。たとえば、のようになります。 "**サブジェクト**" フィールドを空白にすることもできます。この場合、"**サブジェクト代替名**" フィールドに値として **DNS 名**を含めることができます。
+このフィールドには複数の値を含めることができますが、各値の先頭にはその値を示す初期化コードが付加されます。 一般的に、初期化は一般的な名前の "CN" です。たとえば、`CN = www.contoso.com` のようになります。 "**サブジェクト**" フィールドを空白にすることもできます。この場合、"**サブジェクト代替名**" フィールドに値として **DNS 名**を含めることができます。
 
 また、証明書の "**目的**" フィールドの値に、適切な値 ("サーバー認証" や "クライアント認証" など) を含める必要があります。
 
@@ -141,7 +141,7 @@ PowerShell の新しい SelfSignedCertificate コマンドレットは、x.509 �
 
 WCF では、認証、暗号化、またはメッセージのデジタル署名を行うために、多くの場合、サービスまたはクライアントが使用する証明書または証明書のセットを指定する必要があります。 これは、X.509 証明書を表すさまざまなクラスの `SetCertificate` メソッドを使用することで、プログラムによって実行できます。 `SetCertificate` メソッドを使用して証明書を指定するクラスは次のとおりです。
 
-|クラス|メソッド|
+|インスタンス|メソッド|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 23501575fb34f0291b3a6b795c197f45a86fd512
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 624814e40c361c30e251a9388f1444734a276c0a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71955969"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315873"
 ---
 # <a name="contributing"></a>コントリビューション
 

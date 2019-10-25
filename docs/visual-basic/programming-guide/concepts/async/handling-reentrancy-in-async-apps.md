@@ -2,12 +2,12 @@
 title: 非同期アプリでの再入の処理 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 199b7ce2cb8b3f3b8e220f9e2bab7e9c39a8d033
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 466ff3ba4cdb627143b3ffc988ae4a16348e6ca6
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351988"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775537"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>非同期アプリでの再入の処理 (Visual Basic)
 
@@ -15,6 +15,9 @@ ms.locfileid: "71351988"
 
 > [!NOTE]
 > この例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。
+
+> [!NOTE]
+> TLS (Transport Layer Security) バージョン1.2 は、アプリ開発で使用する最小バージョンになりました。 アプリが4.7 より前の .NET framework バージョンを対象としている場合は、[トランスポート層セキュリティ (TLS) のベストプラクティス](../../../../framework/network-programming/tls.md)について、次の記事を参照してください .NET Framework 
 
 ## <a name="BKMK_RecognizingReentrancy"></a>再入を認識する
 
@@ -94,7 +97,7 @@ TOTAL bytes returned:  890591
 
 処理の実行中に **[Start]** ボタンを利用できないようにするには、`StartButton_Click` イベント ハンドラーの上部にあるボタンを無効にします。 処理が完了しユーザーが再度アプリを実行できるようになったら、`Finally` ブロック内からこのボタンを再度有効にできます。
 
-次のコードはこの変更を示しています。変更の部分にはアスタリスクが付いています。 このトピックの最後にあるコードに変更を追加することも、完成したアプリを @no__t 0Async のサンプルからダウンロードすることもできます。Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」 (非同期の例: .NET デスクトップ アプリでの再入) からダウンロードします。 プロジェクト名は DisableStartButton です。
+次のコードはこの変更を示しています。変更の部分にはアスタリスクが付いています。 この変更をこのトピックの最後にあるコードに追加できます。また、完成したアプリを「[Async Samples: Reentrancy in .NET Desktop Apps (非同期の例: .NET デスクトップ アプリでの再入)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」からダウンロードすることもできます。 プロジェクト名は DisableStartButton です。
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -125,7 +128,7 @@ End Sub
 
 キャンセルの詳細については、「[非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)」を参照してください。
 
-このシナリオを設定するには、「[例のアプリをレビューして実行する](#BKMD_SettingUpTheExample)」に用意されている基本コードを次のように変更します。 また、完成したアプリを「[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」 (非同期の例: .NET デスクトップ アプリでの再入) からダウンロードします。 このプロジェクトの名前は CancelAndRestart です。
+このシナリオを設定するには、「[例のアプリをレビューして実行する](#BKMD_SettingUpTheExample)」に用意されている基本コードを次のように変更します。 また、完成したアプリを「[Async Samples: Reentrancy in .NET Desktop Apps (非同期の例: .NET デスクトップ アプリでの再入)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」からダウンロードすることもできます。 このプロジェクトの名前は CancelAndRestart です。
 
 1. すべてのメソッドのスコープである <xref:System.Threading.CancellationTokenSource> 変数、`cts` を宣言します。
 
@@ -136,7 +139,7 @@ End Sub
         Dim cts As CancellationTokenSource
     ```
 
-2. `StartButton_Click` で、処理が既に実行されているかどうかを確認します。 @No__t-0 の値が-1 @no__t 場合、操作は既にアクティブになっていません。 値が @no__t 0 以外の場合、既に実行されている操作は取り消されます。
+2. `StartButton_Click` で、処理が既に実行されているかどうかを確認します。 @No__t_0 の値が `Nothing` 場合、操作は既にアクティブになっていません。 値が `Nothing` ない場合、既に実行されている操作は取り消されます。
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -153,7 +156,7 @@ End Sub
     cts = newCTS
     ```
 
-4. @No__t-0 の最後には、現在のプロセスが完了しているため、`cts` の値を `Nothing` に戻します。
+4. @No__t_0 の最後に、現在のプロセスが完了したので、`cts` の値を `Nothing` に戻します。
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -513,7 +516,7 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- @No__t 0 のタスクは、最初に開始されたグループ A に対してのみ `FinishOneGroupAsync` の開始時に `Nothing` になります。 `FinishOneGroupAsync` に達したとき、グループ A はまだ await 式を完了していません。 したがって、コントロールは `AccessTheWebAsync` に戻っておらず、`pendingWork` への最初の割り当ては発生していません。
+- @No__t_0 タスクは、最初に開始されたグループ A に対してのみ、`FinishOneGroupAsync` の開始時に `Nothing` ます。 `FinishOneGroupAsync` に達したとき、グループ A はまだ await 式を完了していません。 したがって、コントロールは `AccessTheWebAsync` に戻っておらず、`pendingWork` への最初の割り当ては発生していません。
 
 - 次の 2 行は、出力に必ず同時に表示されます。 `StartButton_Click` のグループ操作が開始してから、グループのタスクが `pendingWork` に割り当てられるまでの間、コードが中断されることは決してありません。
 
@@ -533,7 +536,7 @@ End Function
 
 ### <a name="BKMK_DownloadingTheApp"></a>アプリをダウンロードする
 
-1. 圧縮ファイルを「[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」 (非同期の例: .NET デスクトップ アプリでの再入) からダウンロードします。
+1. 圧縮ファイルを「[Async Samples: Reentrancy in .NET Desktop Apps (非同期の例: .NET デスクトップ アプリでの再入)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」からダウンロードします。
 
 2. ダウンロードしたファイルを圧縮解除し、Visual Studio を起動します。
 
@@ -553,7 +556,7 @@ End Function
 
 1. Visual Studio を起動します。
 
-2. メニュー バーで、 **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順にクリックします。
+2. メニュー バーで **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順にクリックします。
 
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
@@ -561,7 +564,7 @@ End Function
 
 4. プロジェクトの種類の一覧の **[WPF アプリケーション]** をクリックします。
 
-5. プロジェクトに `WebsiteDownloadWPF` という名前を付けて **[OK]** をクリックします。
+5. プロジェクトに `WebsiteDownloadWPF` という名前を指定し、4.6 以降の .NET Framework バージョンを選択して、 **[OK]** ボタンをクリックします。
 
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。
 
@@ -589,7 +592,9 @@ End Function
 
      テキスト ボックスとボタンを含む簡単なウィンドウが、MainWindow.xaml の**デザイン** ビューに表示されます。
 
-8. <xref:System.Net.Http> への参照を追加します。
+8. **ソリューションエクスプローラー**で、 **[参照]** を右クリックし、 **[参照の追加]** を選択します。
+
+     まだ選択されていない場合は、<xref:System.Net.Http> の参照を追加します。
 
 9. **ソリューションエクスプローラー**で、mainwindow.xaml のショートカットメニューを開き、 **[コードの表示]** を選択します。
 
@@ -603,6 +608,8 @@ End Function
     Class MainWindow
 
         Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.ServicePointManager.SecurityProtocol Or System.Net.SecurityProtocolType.Tls12
+
             ' This line is commented out to make the results clearer in the output.
             'ResultsTextBox.Text = ""
 
@@ -677,5 +684,5 @@ End Function
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: Async および Await を使用した Web へのアクセス (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

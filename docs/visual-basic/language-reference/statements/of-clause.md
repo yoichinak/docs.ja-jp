@@ -44,7 +44,7 @@ End Class
   
  前のクラス定義を完了すると、そこからさまざまな `dictionary` クラスを構築できます。 @No__t_0 するために指定する型は、クラスに保持されているエントリの種類と、各エントリに関連付けられているキーの種類を決定 `keyType` ます。 制約があるため、<xref:System.IComparable> を実装する型を `keyType` するには、を指定する必要があります。  
   
- 次のコード例では、`String` エントリを保持し、`Integer` キーをそれぞれに関連付けるオブジェクトを作成します。 `Integer` は <xref:System.IComparable> を実装するため、`keyType` の制約を満たすことになります。  
+ 次のコード例は、`String` エントリーを持ち、`Integer` キーを互いに関連づけるオブジェクトを作成します。 `Integer` は <xref:System.IComparable> を実装し、それゆえに `keyType` の制約を満たします。  
   
 ```vb  
 Dim d As New dictionary(Of String, Integer)  

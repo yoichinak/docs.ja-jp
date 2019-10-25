@@ -2,16 +2,16 @@
 title: Slice (F#)
 description: 既存F#のデータ型にスライスを使用する方法、およびその他のデータ型用に独自のスライスを定義する方法について説明します。
 ms.date: 01/22/2019
-ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cbff1b055ea99ef708f9db191be49275e630ee90
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627139"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798909"
 ---
 # <a name="slices"></a>スライス
 
-でF#は、スライスはデータ型のサブセットです。 データ型からスライスを取得できるようにするには、データ型でメソッドを`GetSlice`定義するか、スコープ内にある[型拡張機能](type-extensions.md)を使用する必要があります。 この記事では、既存F#の型からスライスを取得する方法と、独自の型を定義する方法について説明します。
+でF#は、スライスはデータ型のサブセットです。 データ型からスライスを取得できるようにするには、データ型で `GetSlice` メソッドを定義するか、スコープ内にある[型拡張機能](type-extensions.md)を定義する必要があります。 この記事では、既存F#の型からスライスを取得する方法と、独自の型を定義する方法について説明します。
 
 スライスは[インデクサー](./members/indexed-properties.md)に似ていますが、基になるデータ構造から1つの値を生成するのではなく、複数の値を生成します。
 
@@ -89,19 +89,19 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-コアF#ライブラリでは、の`GetSlice`3d 配列は定義されていません。 その他の次元の配列をスライスする場合は、 `GetSlice`メンバーを自分で定義する必要があります。
+コアF#ライブラリでは、3d 配列の`GetSlice`が定義されていません。 その他の次元の配列をスライスする場合は、`GetSlice` メンバーを自分で定義する必要があります。
 
 ## <a name="defining-slices-for-other-data-structures"></a>他のデータ構造のスライスの定義
 
 コアF#ライブラリでは、型の限られたセットのスライスが定義されています。 より多くのデータ型に対してスライスを定義する場合は、型定義自体または型拡張機能のいずれかを使用できます。
 
-たとえば、 <xref:System.ArraySegment%601>クラスのスライスを定義して、便利なデータ操作を可能にする方法を次に示します。
+たとえば、<xref:System.ArraySegment%601> クラスのスライスを定義して、便利なデータ操作を可能にする方法を次に示します。
 
 ```fsharp
 open System
 
 type ArraySegment<'TItem> with
-    member segment.GetSlice(?start, ?finish) =
+    member segment.GetSlice(start, finish) =
         let start = defaultArg start 0
         let finish = defaultArg finish segment.Count
         ArraySegment(segment.Array, segment.Offset + start, finish - start)
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>インライン展開を使用して、必要に応じてボックス化を回避する
 
-実際に構造体である型のスライスを定義する場合は、 `inline` `GetSlice`メンバーを使用することをお勧めします。 コンパイラF#はオプションの引数を最適化し、スライスの結果としてヒープの割り当てを回避します。 これは、ヒープに割り当てることができ<xref:System.Span%601>ないなどのスライス構造では非常に重要です。
+実際に構造体である型のスライスを定義する場合は、`GetSlice` メンバーを `inline` することをお勧めします。 コンパイラF#はオプションの引数を最適化し、スライスの結果としてヒープの割り当てを回避します。 これは、ヒープに割り当てることができない <xref:System.Span%601> などのスライス構成の場合に非常に重要です。
 
 ```fsharp
 open System

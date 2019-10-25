@@ -3,12 +3,12 @@ title: project.json からの .NET Core の移行
 description: project.json を使って以前の .NET Core プロジェクトを移行する方法について説明します
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: 167f0707bbaf34ce12a1c56ee2320e7cc4f48bd3
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 2912262d1191114d2314fed89e31c91c114f1935
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698915"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773909"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>project.json からの .NET Core プロジェクトの移行
 
@@ -40,26 +40,26 @@ Visual Studio 2017 または Visual Studio 2019 バージョン 16.2 以前で *
 移行されたファイル (*project.json*、*global.json*、 *.xproj*、およびソリューション ファイル) は *Backup* フォルダーに移動されます。 移行されるソリューション ファイルは Visual Studio 2017 または Visual Studio 2019 にアップグレードされ、Visual Studio 2015 以前のバージョンではそのソリューション ファイルを開くことができなくなります。 移行レポートを含む *UpgradeLog.htm* というファイルも保存され、自動的に開かれます。
 
 > [!IMPORTANT]
-> Visual Studio 2015 を使用してプロジェクトを移行することはできません。
+> Visual Studio 2019 バージョン 16.3 以降では、 *.xproj* ファイルの読み込みまたは移行はできません。 また、Visual Studio 2015 では、 *.xproj* ファイルを移行する機能は提供されていません。 これらの Visual Studio バージョンのいずれかを使用している場合は、適切なバージョンの Visual Studio をインストールするか、次に説明するコマンド ライン移行ツールを使用します。
 
-### <a name="dotnet-migrate"></a>dotnet の移行
+### <a name="dotnet-migrate"></a>dotnet migrate
 
 コマンドラインのシナリオでは、[`dotnet migrate`](../tools/dotnet-migrate.md) コマンドを使用できます。 検出されたものに応じて、プロジェクト、ソリューション、または一連のフォルダーの順に移行されます。 プロジェクトを移行すると、プロジェクトとそのすべての依存ファイルが移行されます。
 
 移行されたファイル (*project.json*、*global.json*、および *.xproj*) は *Backup* フォルダーに移動されます。
 
 > [!NOTE]
-> Visual Studio Code を使用している場合、`dotnet migrate` コマンドを実行しても、`tasks.json` などの Visual Studio コード固有のファイルは変更されません。 これらのファイルは手動で変更する必要があります。
-> これは、Project Ryder などのエディターや、Visual Studio ではない統合開発環境 (IDE) を使用している場合にも該当します。
+> Visual Studio Code を使用している場合、`dotnet migrate` コマンドを実行しても、*tasks.json* などの Visual Studio Code 固有のファイルは変更されません。 これらのファイルは手動で変更する必要があります。
+> これは、Visual Studio ではないエディターまたは統合開発環境 (IDE) を使用している場合にも該当します。
 
-project.json および csproj 形式の比較については、「[project.json プロパティと csproj プロパティの間のマッピング](../tools/project-json-to-csproj.md)」を参照してください。
+*project.json* および *.csproj* 形式の比較については、「[project.json プロパティと csproj プロパティの間のマッピング](../tools/project-json-to-csproj.md)」を参照してください。
 
-### <a name="common-issues"></a>一般的な問題
+次のエラーが発生する場合:
 
-- 次のエラーが発生する場合:"No executable found matching command dotnet-migrate" (コマンド dotnet-migrate と一致する実行ファイルが見つかりません):
+> No executable found matching command dotnet-migrate (コマンド dotnet-migrate と一致する実行可能ファイルが見つかりません)
 
-`dotnet --version` を実行して使用しているバージョンを確認します。 [`dotnet migrate`](../tools/dotnet-migrate.md) には、.NET Core CLI RC3 以降が必要です。
-カレント ディレクトリまたは親ディレクトリに *global.json* ファイルがあり、`sdk` バージョンが古いバージョンに設定されている場合にこのエラーが発生します。
+`dotnet --version` を実行して使用しているバージョンを確認します。 [`dotnet migrate`](../tools/dotnet-migrate.md) は、.NET Core SDK 1.0.0 で導入され、バージョン 3.0.100 で削除されました。
+現在のディレクトリまたは親ディレクトリに *global.json* ファイルがあり、それに指定されている `sdk` バージョンがこの範囲外である場合に、このエラーが発生します。
 
 ## <a name="migration-from-dnx-to-csproj"></a>DNX から csproj への移行
 

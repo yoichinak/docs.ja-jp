@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d1a8cc80db9e17000880c006ac1d7c1bd12fec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 5c0b3c9d13267abe50ee187bce0c56485be29613
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631496"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775282"
 ---
 # <a name="applying-interop-attributes"></a>相互運用固有の属性の適用
 <xref:System.Runtime.InteropServices> 名前空間では、デザイン時にユーザーが適用する属性、変換処理中に COM 相互運用ツールおよび API によって適用される属性、ユーザーまたは COM 相互運用機能によって適用される属性という 3 つのカテゴリの相互運用固有の属性が提供されます。  
@@ -40,7 +40,8 @@ ms.locfileid: "68631496"
 |<xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>|クラスのイベントの発生元になるインターフェイスを識別します。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|  
 |<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>|アセンブリが COM から登録解除されるときにメソッドが呼び出されるようにします。これで、処理中にユーザー作成コードを実行できます。|  
 |<xref:System.Runtime.InteropServices.ComVisibleAttribute>|属性値が **false** の場合、型は COM から参照できなくなります。 この属性は、COM の参照可能範囲を制御するために、個別の型またはアセンブリ全体に適用できます。 既定では、すべてのパブリックなマネージド型は参照可能なので、この属性でこれらの型を参照可能にする必要はありません。|  
-|<xref:System.Runtime.InteropServices.DispIdAttribute>|メソッドまたはフィールドの COM ディスパッチ識別子 (DISPID) を指定します。 この属性には、対象のメソッド、フィールド、またはプロパティの DISPID が含まれています。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|  
+|<xref:System.Runtime.InteropServices.DispIdAttribute>|メソッドまたはフィールドの COM ディスパッチ識別子 (DISPID) を指定します。 この属性には、対象のメソッド、フィールド、またはプロパティの DISPID が含まれています。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。| 
+|<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|.NET で実装されている COM クラスの既定のインターフェイスを示します。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|
 |<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|**StructLayoutAttribute** と共に使用される場合は、クラス内の各フィールドの物理的位置を示します。**LayoutKind** は Explicit に設定されます。|  
 |<xref:System.Runtime.InteropServices.GuidAttribute>|クラス、インターフェイス、またはタイプ ライブラリ全体のグローバル一意識別子 (GUID) を指定します。 属性に渡される文字列は、**System.Guid** 型の受け入れ可能なコンストラクター引数の形式である必要があります。<br /><br /> COM 相互運用ツールでは、この属性を適用できます。|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|COM にデュアル インターフェイスやディスパッチ インターフェイスを公開するときに、共通言語ランタイムで使用する **IDispatch** インターフェイスの実装の種類を示します。|  

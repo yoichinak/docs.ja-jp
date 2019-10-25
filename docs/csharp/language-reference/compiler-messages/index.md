@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: 3714223209a3298706960625ea383e42dc2b2154
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: af1ec49e6c7eb94c4e324b947e8ead8149d0a997
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69607174"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771874"
 ---
 # <a name="c-compiler-errors"></a>C# コンパイラ エラー
 
@@ -35,4 +35,4 @@ ms.locfileid: "69607174"
 - [申し訳ありませんが、この C# エラーに関する詳細情報はありません。](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
 - [[ビルド] ページ (プロジェクト デザイナー) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
 - [-warn (C# コンパイラ オプション)](../compiler-options/warn-compiler-option.md)
-- [/nowarn (C# コンパイラ オプション)](../compiler-options/nowarn-compiler-option.md)
+- [-nowarn (C# コンパイラ オプション)](../compiler-options/nowarn-compiler-option.md)

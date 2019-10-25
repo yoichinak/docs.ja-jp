@@ -4,12 +4,12 @@ description: .NET マイクロサービスおよび Web アプリケーション
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 0894465858e3503e2eddb5299b404f7ba95fdd6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295205"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798858"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
 
@@ -27,7 +27,7 @@ ms.locfileid: "70295205"
 
 サービスに直接アクセスできる場合は、Azure Active Directory などの認証サービスやセキュリティ トークン サービス (STS) として機能する専用の認証マイクロサービスは、ユーザーを認証するために使用できます。 信頼の決定は、サービスとセキュリティ トークンまたは cookie 間で共有されます (必要に応じて、これらのトークンは、[Cookie の共有](/aspnet/core/security/cookie-sharing)を実装して、ASP.NET Core アプリケーション間で共有できます)。このパターンを示したものが図 9-2 です。
 
-![マイクロ サービスに直接アクセスすると、認証と認可を含む信頼が、マイクロサービス間で共有される専用のマイクロサービスによって発行されたセキュリティ トークンによって処理されます。](./media/image2.png)
+![マイクロサービスに直接アクセスすると、認証と認可を含む信頼が、マイクロサービス間で共有される専用のマイクロサービスによって発行されたセキュリティ トークンによって処理されます。](./media/image2.png)
 
 **図 9-2** ID マイクロサービスによる認証、信頼は認証トークンを使用して共有
 
@@ -293,9 +293,6 @@ JWT ベアラー認証ミドルウェアは、証明機関が利用できない�
 
 - **AspNet.Security.OAuth.Providers** (ASP.NET OAuth プロバイダーの GitHub リポジトリ) \
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
-
-- **Danny Strockis の ASP.NET Core Web アプリへの Azure AD の統合** \
-  <https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/>
 
 - **IdentityServer4 の公式ドキュメント** \
   <https://identityserver4.readthedocs.io/en/latest/>

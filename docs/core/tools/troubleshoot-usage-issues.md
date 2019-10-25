@@ -3,12 +3,12 @@ title: .NET Core ツールの使用に関する問題のトラブルシューテ
 description: .NET Core ツールを実行するときの一般的な問題と考えられる解決策について説明します。
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: eb769550493e5a25d4380cd543a3bbec880b38e9
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: fc6c520ab57235c78148a6b77717cbd80a989451
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332951"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318295"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>.NET Core ツールの使用に関する問題のトラブルシューティング
 
@@ -19,7 +19,7 @@ ms.locfileid: "71332951"
 .NET Core ツールの実行が失敗する場合、最も可能性が高いのは、次のいずれかの問題が発生していることです。
 
 * ツールの実行可能ファイルが見つかりませんでした。
-* 正しいバージョンの .NET Core ランタイムが見つかりませんでした。 
+* 正しいバージョンの .NET Core ランタイムが見つかりませんでした。
 
 ### <a name="executable-file-not-found"></a>実行可能ファイルが見つからない
 
@@ -58,18 +58,18 @@ Possible reasons for this include:
   * macOS 10.14 "Mojave" 以前のバージョンを使用していて、 *.pkg* ではなく *.tar.gz* ファイルを使用して .NET Core SDK をインストールしている場合。
   * .NET Core 3.0 SDK をインストールしてあり、`DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` 環境変数を `false` に設定している場合。
   * .NET Core 2.2 SDK 以前のバージョンをインストールしてあり、`DOTNET_SKIP_FIRST_TIME_EXPERIENCE` 環境変数を `true` に設定している場合。
-  
+
   グローバル ツールの詳細については、「[.NET Core グローバル ツールの概要](global-tools.md)」を参照してください。
 
 * ローカル ツール
 
   ローカル ツールを実行しようとしている場合は、*dotnet-tools.json* という名前のマニフェストファイルが、現在のディレクトリまたはそのいずれかの親ディレクトリにあることを確認します。 このファイルは、ルート フォルダーではなく、プロジェクト フォルダー階層のどこかにある *.config* という名前のフォルダーに存在することもあります。 *dotnet-tools.json* が存在する場合は、それを開き、実行しようとしているツールを確認します。 ファイルに `"isRoot": true` のエントリが含まれていない場合は、さらに上のファイル階層で他のツール マニフェスト ファイルを確認します。
 
-    指定されたパスにインストールされている .NET Core ツールを実行しようとしている場合は、ツールを使用するときにそのパスを含める必要があります。 ツールパスにインストールされたツールを使用する例を次に示します。
+  指定されたパスにインストールされている .NET Core ツールを実行しようとしている場合は、ツールを使用するときにそのパスを含める必要があります。 ツールパスにインストールされたツールを使用する例を次に示します。
 
-   ```console
-   ..\<toolDirectory>\dotnet-<toolName>
-    ```
+  ```console
+  ..\<toolDirectory>\dotnet-<toolName>
+  ```
 
 ### <a name="runtime-not-found"></a>ランタイムが見つからない
 
@@ -146,7 +146,7 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 .NET Core ツールではなく、通常の NuGet パッケージである NuGet パッケージをインストールしようとすると、次のようなエラーが表示されます。
 
-`NU1212: Invalid project-package combination for `<ToolName>`. DotnetToolReference project style can only contain references of the DotnetTool type.`
+> NU1212:`<ToolName>` のプロジェクトとパッケージの組み合わせが無効です。 DotnetToolReference プロジェクト形式には、DotnetTool タイプの参照のみ含めることができます。
 
 ### <a name="nuget-feed-cant-be-accessed"></a>NuGet フィードにアクセスできない
 
@@ -161,4 +161,5 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 失敗でよくある理由は、ツール名が正しくないことです。 これは、入力ミスや、ツールが移動されたか非推奨になったために、発生する可能性があります。 NuGet.org のツールで、確実に正しい名前を使用する方法の 1 つは、NuGet.org でツールを検索し、インストール コマンドをコピーすることです。
 
 ## <a name="see-also"></a>関連項目
+
 * [.NET Core グローバル ツールの概要](global-tools.md)

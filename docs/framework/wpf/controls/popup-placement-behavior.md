@@ -8,33 +8,33 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: ca984aa724cf3f076d6073aa8b8179abfb91d26c
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/22/2019
 ms.locfileid: "69951732"
 ---
 # <a name="popup-placement-behavior"></a>ポップアップの配置動作
-コントロール<xref:System.Windows.Controls.Primitives.Popup>は、アプリケーションにフローティングする別のウィンドウにコンテンツを表示します。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>、 <xref:System.Windows.Controls.Primitives.Popup> 、、、およびの各プロパティを使用して、コントロール、マウス、または画面に対して相対的なの位置を指定できます。<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>  これらのプロパティは、 <xref:System.Windows.Controls.Primitives.Popup>の位置を柔軟に指定できるように連携して機能します。  
+@No__t_0 コントロールは、アプリケーションにフローティングする別のウィンドウにコンテンツを表示します。 @No__t_1、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>、<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>、<xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>、および <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> の各プロパティを使用して、コントロール、マウス、または画面を基準とした <xref:System.Windows.Controls.Primitives.Popup> の位置を指定できます。  これらのプロパティは、<xref:System.Windows.Controls.Primitives.Popup> の位置を柔軟に指定できるように連携します。  
   
 > [!NOTE]
-> また<xref:System.Windows.Controls.ToolTip> 、 <xref:System.Windows.Controls.ContextMenu>クラスとクラスは、これらの5つのプロパティを定義し、同様に動作します。  
+> また、<xref:System.Windows.Controls.ToolTip> クラスと <xref:System.Windows.Controls.ContextMenu> クラスもこれらの5つのプロパティを定義し、同様に動作します。  
 
 <a name="Positioning"></a>   
 ## <a name="positioning-the-popup"></a>ポップアップの配置  
- の<xref:System.Windows.Controls.Primitives.Popup>配置は、 <xref:System.Windows.UIElement>または画面全体に対して相対的に行うことができます。  次の例では<xref:System.Windows.Controls.Primitives.Popup> 、 <xref:System.Windows.UIElement>(この場合はイメージ) に対して相対的な4つのコントロールを作成します。 すべての<xref:System.Windows.Controls.Primitives.Popup>コントロールには、 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>プロパティがに`image1`設定され<xref:System.Windows.Controls.Primitives.Popup>ていますが、それぞれの配置プロパティの値が異なります。  
+ @No__t_0 の配置は、<xref:System.Windows.UIElement> または画面全体に対して相対的に行うことができます。  次の例では、<xref:System.Windows.UIElement> (この場合はイメージ) に対して相対的な4つの <xref:System.Windows.Controls.Primitives.Popup> コントロールを作成します。 すべての <xref:System.Windows.Controls.Primitives.Popup> コントロールには、<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> プロパティが `image1` に設定されていますが、各 <xref:System.Windows.Controls.Primitives.Popup> の配置プロパティの値が異なります。  
   
  [!code-xaml[PopupPositionSnippet#3](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#3)]  
   
- 次の図は、イメージと<xref:System.Windows.Controls.Primitives.Popup>コントロールを示しています。  
+ 次の図は、イメージと <xref:System.Windows.Controls.Primitives.Popup> コントロールを示しています。  
   
- ![4 つのポップアップコントロールを含むイメージ](./media/popup-placement-behavior/popup-placement-intro.png "4 つのポップアップを含むイメージ")    
+ ![4 つのポップアップ コントロールを含む画像](./media/popup-placement-behavior/popup-placement-intro.png "4つのポップアップを含むイメージ")    
   
- この簡単な例では、プロパティ<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>と<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>プロパティを設定する方法を<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>示してい<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>ますが、 <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>、、 <xref:System.Windows.Controls.Primitives.Popup>およびの各プロパティを使用すると、が配置されている場所をより細かく制御できます。  
+ この簡単な例では、<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> と <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> のプロパティを設定する方法を示していますが、<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>、<xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>、および <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> の各プロパティを使用して、<xref:System.Windows.Controls.Primitives.Popup> の配置場所をさらに細かく制御することができます。  
   
 <a name="Definitions"></a>   
-## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>用語の定義:ポップアップの構造  
- <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>、 、<xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>、および<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>の各<xref:System.Windows.Controls.Primitives.Popup>プロパティが相互にどのように関連しているかを理解するには、次の用語が役立ちます。 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>  
+## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>用語の定義: ポップアップの構造  
+ @No__t_0、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>、<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>、<xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>、および <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> の各プロパティが相互にどのように関連しているかを理解するには、次の用語が役立ちます。  
   
 - ターゲット オブジェクト  
   
@@ -44,98 +44,98 @@ ms.locfileid: "69951732"
   
 - ポップアップ配置ポイント  
   
- これらの用語は、 <xref:System.Windows.Controls.Primitives.Popup>とそれに関連付けられているコントロールのさまざまな側面を参照するための便利な方法を提供します。  
+ これらの用語は、<xref:System.Windows.Controls.Primitives.Popup> とそれに関連付けられているコントロールのさまざまな側面を参照する便利な方法を提供します。  
   
 ### <a name="target-object"></a>ターゲット オブジェクト  
- *ターゲットオブジェクト*は、 <xref:System.Windows.Controls.Primitives.Popup>が関連付けられている要素です。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>プロパティが設定されている場合は、対象のオブジェクトを指定します。  が<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 設定<xref:System.Windows.Controls.Primitives.Popup>されておらず、に親がある場合、親はターゲットオブジェクトです。  値がなく<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 、親も存在しない場合、対象オブジェクト<xref:System.Windows.Controls.Primitives.Popup>はなく、は画面に対して相対的に配置されます。  
+ *ターゲットオブジェクト*は、<xref:System.Windows.Controls.Primitives.Popup> が関連付けられている要素です。 @No__t_0 プロパティが設定されている場合は、対象のオブジェクトを指定します。  @No__t_0 が設定されておらず、<xref:System.Windows.Controls.Primitives.Popup> に親がある場合、親はターゲットオブジェクトです。  @No__t_0 値がなく、親も存在しない場合、ターゲットオブジェクトはなく、<xref:System.Windows.Controls.Primitives.Popup> は画面の相対位置に配置されます。  
   
- <xref:System.Windows.Controls.Primitives.Popup> 次<xref:System.Windows.Controls.Canvas>の例では、の子であるを作成します。  この例では、 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> <xref:System.Windows.Controls.Primitives.Popup>でプロパティを設定しません。 の<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>既定値は<xref:System.Windows.Controls.Primitives.PlacementMode.Bottom?displayProperty=nameWithType>であるため<xref:System.Windows.Controls.Primitives.Popup> 、はの<xref:System.Windows.Controls.Canvas>下に表示されます。  
+ 次の例では、<xref:System.Windows.Controls.Canvas> の子である <xref:System.Windows.Controls.Primitives.Popup> を作成します。  この例では、<xref:System.Windows.Controls.Primitives.Popup> の <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> プロパティは設定しません。 @No__t_0 の既定値は <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom?displayProperty=nameWithType> であるため、<xref:System.Windows.Controls.Canvas> の下に <xref:System.Windows.Controls.Primitives.Popup> が表示されます。  
   
  [!code-xaml[PopupPositionSnippet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#1)]  
   
- 次の図は、 <xref:System.Windows.Controls.Primitives.Popup>が<xref:System.Windows.Controls.Canvas>に対して相対的に配置されていることを示しています。  
+ 次の図は、<xref:System.Windows.Controls.Primitives.Popup> が <xref:System.Windows.Controls.Canvas> に対して相対的に配置されていることを示しています。  
   
- ![移動操作がないポップアップコントロール](./media/popup-placement-behavior/popup-placement-no-placement-target.png "ショートカットがありません。")  
+ ![PlacementTarget がないポップアップ コントロール](./media/popup-placement-behavior/popup-placement-no-placement-target.png "ショートカットがありません。")  
 
- 次の例では<xref:System.Windows.Controls.Primitives.Popup> 、 <xref:System.Windows.Controls.Canvas>の子であるを作成しますが、 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>今回はに`ellipse1`設定されるため、ポップアップは<xref:System.Windows.Shapes.Ellipse>の下に表示されます。  
+ 次の例では、<xref:System.Windows.Controls.Canvas> の子である <xref:System.Windows.Controls.Primitives.Popup> を作成しますが、今度は <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> を `ellipse1` に設定します。そのため、ポップアップは <xref:System.Windows.Shapes.Ellipse> の下に表示されます。  
   
  [!code-xaml[PopupPositionSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#2)]  
   
- 次の図は、 <xref:System.Windows.Controls.Primitives.Popup>が<xref:System.Windows.Shapes.Ellipse>に対して相対的に配置されていることを示しています。  
+ 次の図は、<xref:System.Windows.Controls.Primitives.Popup> が <xref:System.Windows.Shapes.Ellipse> に対して相対的に配置されていることを示しています。  
   
- ![楕円の相対位置に配置されたポップアップ](./media/popup-placement-behavior/popup-placement-with-placement-target.png "ショートカットターゲットを含むポップアップ")    
+ ![楕円を基準にして配置されるポップアップ](./media/popup-placement-behavior/popup-placement-with-placement-target.png "PlacementTarget があるポップアップ")    
   
 > [!NOTE]
-> の既定<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>値は<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>です。 <xref:System.Windows.Controls.ToolTip>  の既定<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>値は<xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>です。 <xref:System.Windows.Controls.ContextMenu> これらの値については、後ほど「プロパティの連携のしくみ」で説明します。  
+> @No__t_0 の場合、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> の既定値は <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse> です。  @No__t_0 の場合、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> の既定値は <xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint> です。 これらの値については、後ほど「プロパティの連携のしくみ」で説明します。  
   
 ### <a name="target-area"></a>ターゲット領域  
- *ターゲット領域*は、 <xref:System.Windows.Controls.Primitives.Popup>が基準とする画面上の領域です。 前の例<xref:System.Windows.Controls.Primitives.Popup>では、はターゲットオブジェクトの境界に合わせてアラインされていますが<xref:System.Windows.Controls.Primitives.Popup> 、にはターゲットオブジェクトがある場合<xref:System.Windows.Controls.Primitives.Popup>でも、が他の境界にアラインされている場合があります。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>プロパティが設定されている場合、ターゲット領域はターゲットオブジェクトの境界とは異なります。  
+ *ターゲット領域*は、画面上の <xref:System.Windows.Controls.Primitives.Popup> の基準となる領域です。 前の例では、<xref:System.Windows.Controls.Primitives.Popup> はターゲットオブジェクトの境界に合わせて調整されますが、場合によっては、<xref:System.Windows.Controls.Primitives.Popup> に対象オブジェクトがある場合でも、<xref:System.Windows.Controls.Primitives.Popup> が他の境界に合わせてアラインされます。  @No__t_0 プロパティが設定されている場合、ターゲット領域はターゲットオブジェクトの境界とは異なります。  
   
- 次の例では<xref:System.Windows.Controls.Canvas> 、 <xref:System.Windows.Shapes.Rectangle>と<xref:System.Windows.Controls.Primitives.Popup>を含む2つのオブジェクトを作成します。  どちらの場合も、のターゲットオブジェクト<xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.Controls.Canvas>はです。 最初<xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> <xref:System.Windows.Rect.Width%2A> <xref:System.Windows.Rect.Height%2A> <xref:System.Windows.Rect.Y%2A>ののは、セットを持ち、、 <xref:System.Windows.Rect.X%2A>、、およびの各プロパティはそれぞれ50、50、50、100に設定されています。 <xref:System.Windows.Controls.Canvas> 2番目<xref:System.Windows.Controls.Canvas>の<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>には、セットがありません。 <xref:System.Windows.Controls.Primitives.Popup>  <xref:System.Windows.Controls.Primitives.Popup>その結果、最初のはの<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>下に配置され、 <xref:System.Windows.Controls.Primitives.Popup> 2 番目の<xref:System.Windows.Controls.Canvas>はの下に配置されます。 また<xref:System.Windows.Controls.Canvas> 、それぞれ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>に<xref:System.Windows.Shapes.Rectangle>は、最初<xref:System.Windows.Controls.Primitives.Popup>のと同じ境界を持つが含まれています。  は、アプリケーション<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>に表示される要素を作成しないことに注意して<xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>ください。この例では、を表すを作成します。  
+ 次の例では、<xref:System.Windows.Shapes.Rectangle> と <xref:System.Windows.Controls.Primitives.Popup> を含む2つの <xref:System.Windows.Controls.Canvas> オブジェクトを作成します。  どちらの場合も、<xref:System.Windows.Controls.Primitives.Popup> のターゲットオブジェクトは <xref:System.Windows.Controls.Canvas> です。 最初の <xref:System.Windows.Controls.Canvas> の <xref:System.Windows.Controls.Primitives.Popup> には <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> が設定されており、それぞれ <xref:System.Windows.Rect.X%2A>、<xref:System.Windows.Rect.Y%2A>、<xref:System.Windows.Rect.Width%2A>、および <xref:System.Windows.Rect.Height%2A> の各プロパティが50、50、50、100に設定されています。 2番目の <xref:System.Windows.Controls.Canvas> の <xref:System.Windows.Controls.Primitives.Popup> には <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> が設定されていません。  その結果、最初の <xref:System.Windows.Controls.Primitives.Popup> は <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> の下に配置され、2番目の <xref:System.Windows.Controls.Primitives.Popup> は <xref:System.Windows.Controls.Canvas> の下に配置されます。 各 <xref:System.Windows.Controls.Canvas> には、最初の <xref:System.Windows.Controls.Primitives.Popup> の <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> と同じ境界を持つ <xref:System.Windows.Shapes.Rectangle> も含まれます。  @No__t_0 では、アプリケーションに表示される要素は作成されないことに注意してください。この例では、<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> を表す <xref:System.Windows.Shapes.Rectangle> を作成します。  
   
  [!code-xaml[PopupPositionSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#4)]  
   
  次の図は、前の例の結果を示しています。  
   
- ![ショートカットの有無を含むポップアップ](./media/popup-placement-behavior/popup-placement-placement-rectangle.png "ショートカットの有無を含むポップアップ。")  
+ ![PlacementRectangle がある (またはない) ポップアップ](./media/popup-placement-behavior/popup-placement-placement-rectangle.png "ショートカットの有無を含むポップアップ。")  
 
 ### <a name="target-origin-and-popup-alignment-point"></a>ターゲットの始点とポップアップ配置ポイント  
- *ターゲットの始点*と*ポップアップ配置ポイント*は、それぞれターゲット領域とポップアップ上の基準点であり、配置に使用します。 プロパティ<xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> と<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>プロパティを使用して、ターゲット領域からポップアップをオフセットできます。  <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> と<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>は、ターゲットの起点とポップアップの配置ポイントを基準としています。 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>プロパティの値によって、ターゲットの元とポップアップの配置ポイントが配置されている場所が決まります。  
+ *ターゲットの始点*と*ポップアップ配置ポイント*は、それぞれターゲット領域とポップアップ上の基準点であり、配置に使用します。 @No__t_0 と <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> のプロパティを使用して、ターゲット領域からポップアップをオフセットできます。  @No__t_0 と <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> は、ターゲットの始点とポップアップの配置ポイントを基準としています。 @No__t_0 プロパティの値によって、ターゲットの元とポップアップの配置ポイントが配置されている場所が決まります。  
   
- 次の例では<xref:System.Windows.Controls.Primitives.Popup> 、を作成<xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>し<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 、プロパティとプロパティを20に設定します。  プロパティが (既定値<xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> ) に設定されているため、ターゲットの起点はターゲット領域の左下隅、ポップアップ配置ポイントはの左上隅<xref:System.Windows.Controls.Primitives.Popup>になります。 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>  
+ 次の例では、<xref:System.Windows.Controls.Primitives.Popup> を作成し、<xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> と <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> のプロパティを20に設定します。  @No__t_0 プロパティが <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> (既定値) に設定されているため、ターゲットの起点はターゲット領域の左下隅、ポップアップ配置ポイントは <xref:System.Windows.Controls.Primitives.Popup> の左上隅になります。  
   
  [!code-xaml[PopupPositionSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#5)]  
   
  次の図は、前の例の結果を示しています。  
   
- ![ターゲットの配信元の配置ポイントを含むポップアップ配置](./media/popup-placement-behavior/popup-placement-target-origin-alignment-point.png "System.windows.controls.primitives.iscrollinfo.horizontaloffset と system.windows.controls.primitives.popup.verticaloffset を使用したポップアップ。")    
+ ![ターゲットの始点の配置ポイントを含むポップアップ配置](./media/popup-placement-behavior/popup-placement-target-origin-alignment-point.png "System.windows.controls.primitives.iscrollinfo.horizontaloffset と System.windows.controls.primitives.popup.verticaloffset を使用したポップアップ。")    
   
 <a name="How"></a>   
 ## <a name="how-the-properties-work-together"></a>プロパティの連携のしくみ  
- 、 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 、<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>およびの値は、正しいターゲット領域、ターゲットの始点、およびポップアップ配置ポイントを確認するために、まとめて考慮する必要<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>があります。  たとえば、の<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>値が<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>である場合、対象オブジェクトが存在<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>せず、が無視され、ターゲット領域がマウスポインターの境界になります。 一方<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 、が<xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>の場合、または親はターゲットオブジェクトを決定し、ターゲット領域を決定します。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>  
+ @No__t_0、<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>、および <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> の値は、正しいターゲット領域、ターゲットの始点、およびポップアップ配置ポイントを確認するために、まとめて考慮する必要があります。  たとえば、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> の値が <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse> である場合、対象オブジェクトが存在せず、<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> が無視され、ターゲット領域がマウスポインターの境界になります。 一方、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> が <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> 場合、<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> または親によって対象オブジェクトが決定され、<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> ターゲット領域が決まります。  
   
- 次の表では、ターゲットオブジェクト、ターゲット領域、ターゲットの始点、およびポップアップの配置ポイント<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>に<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>ついて説明し<xref:System.Windows.Controls.Primitives.PlacementMode> 、各列挙値にとが使用されるかどうかを示します。  
+ 次の表では、ターゲットオブジェクト、ターゲット領域、ターゲットの始点、およびポップアップの配置ポイントについて説明し、<xref:System.Windows.Controls.Primitives.PlacementMode> 列挙値ごとに <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> と <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> を使用するかどうかを示します。  
   
 |PlacementMode|ターゲット オブジェクト|ターゲット領域|ターゲットの始点|ポップアップ配置ポイント|  
 |-------------------|-------------------|-----------------|-------------------|---------------------------|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>|該当なし。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>は無視されます。|画面。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、画面に対して相対的です。|ターゲット領域の左上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>|該当なし。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>は無視されます。|画面。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、画面に対して相対的です。|ターゲット領域の左上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Bottom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|ターゲット領域の左下隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Center>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|ターゲット領域の中央。|の<xref:System.Windows.Controls.Primitives.Popup>中央。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|によっ<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>て定義されます。|によっ<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>て定義されます。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Left>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|ターゲット領域の左上隅。|の右上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>|該当なし。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>は無視されます。|マウス ポインターの境界。 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>は無視されます。|ターゲット領域の左下隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>|該当なし。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>は無視されます。|マウス ポインターの境界。 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>は無視されます。|ターゲット領域の左上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Relative>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|ターゲット領域の左上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|ターゲット領域の左上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Right>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|ターゲット領域の右上隅。|の左上隅<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Top>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>または親。|ターゲットオブジェクト。設定さ<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>れている場合は。  は<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 、対象オブジェクトに対する相対パスです。|ターゲット領域の左上隅。|の左下隅<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>|該当しない。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> は無視されます。|画面。設定されている場合は <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>。  @No__t_0 は画面に対して相対的です。|ターゲット領域の左上隅。|@No__t_0 の左上隅。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>|該当しない。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> は無視されます。|画面。設定されている場合は <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>。  @No__t_0 は画面に対して相対的です。|ターゲット領域の左上隅。|@No__t_0 の左上隅。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Bottom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> または親。|ターゲットオブジェクト。設定されている場合は <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>。  @No__t_0 は、対象オブジェクトに対する相対パスです。|ターゲット領域の左下隅。|@No__t_0 の左上隅。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Center>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> または親。|ターゲットオブジェクト。設定されている場合は <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>。  @No__t_0 は、対象オブジェクトに対する相対パスです。|ターゲット領域の中央。|@No__t_0 の中心。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> または親。|ターゲットオブジェクト。設定されている場合は <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>。  @No__t_0 は、対象オブジェクトに対する相対パスです。|@No__t_0 によって定義されます。|@No__t_0 によって定義されます。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Left>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> または親。|ターゲットオブジェクト。設定されている場合は <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>。  @No__t_0 は、対象オブジェクトに対する相対パスです。|ターゲット領域の左上隅。|@No__t_0 の右上隅。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>|該当しない。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> は無視されます。|マウス ポインターの境界。 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> は無視されます。|ターゲット領域の左下隅。|@No__t_0 の左上隅。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>|該当しない。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> は無視されます。|マウス ポインターの境界。 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> は無視されます。|ターゲット領域の左上隅。|@No__t_0 の左上隅。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Relative>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> または親。|ターゲットオブジェクト。設定されている場合は <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>。  @No__t_0 は、対象オブジェクトに対する相対パスです。|ターゲット領域の左上隅。|@No__t_0 の左上隅。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> または親。|ターゲットオブジェクト。設定されている場合は <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>。  @No__t_0 は、対象オブジェクトに対する相対パスです。|ターゲット領域の左上隅。|@No__t_0 の左上隅。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Right>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> または親。|ターゲットオブジェクト。設定されている場合は <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>。  @No__t_0 は、対象オブジェクトに対する相対パスです。|ターゲット領域の右上隅。|@No__t_0 の左上隅。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Top>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> または親。|ターゲットオブジェクト。設定されている場合は <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>。  @No__t_0 は、対象オブジェクトに対する相対パスです。|ターゲット領域の左上隅。|@No__t_0 の左下隅。|  
   
- 次の図は、 <xref:System.Windows.Controls.Primitives.Popup>各<xref:System.Windows.Controls.Primitives.PlacementMode>値の、ターゲット領域、ターゲットの始点、およびポップアップの配置ポイントを示しています。 各図形では、ターゲット領域は黄色、 <xref:System.Windows.Controls.Primitives.Popup>は青になります。  
+ 次の図は、各 <xref:System.Windows.Controls.Primitives.PlacementMode> 値の <xref:System.Windows.Controls.Primitives.Popup>、ターゲット領域、ターゲットの始点、およびポップアップの配置ポイントを示しています。 各図では、ターゲット領域は黄色、<xref:System.Windows.Controls.Primitives.Popup> は青です。  
   
- ![Absolute または AbsolutePoint placement を使用したポップアップ](./media/popup-placement-behavior/popup-placement-absolute.png "Placement は Absolute または AbsolutePoint です。")    
+ ![Absolute または AbsolutePoint 配置を含むポップアップ](./media/popup-placement-behavior/popup-placement-absolute.png "Placement は Absolute または AbsolutePoint です。")    
   
- ![下に配置]されるポップアップ(./media/popup-placement-behavior/popup-placement-bottom.png "Placement は Bottom です。")   
+ ![Bottom 配置を含むポップアップ](./media/popup-placement-behavior/popup-placement-bottom.png "Placement は Bottom です。")   
   
- ![中央配置を含むポップアップ](./media/popup-placement-behavior/popup-placement-center.png "Placement は Center です。")    
+ ![Center 配置を含むポップアップ](./media/popup-placement-behavior/popup-placement-center.png "Placement は Center です。")    
   
- ![左側の配置を含むポップアップ](./media/popup-placement-behavior/popup-placement-left.png "配置は残されています。")   
+ ![Left 配置を含むポップアップ](./media/popup-placement-behavior/popup-placement-left.png "配置は残されています。")   
   
- ![マウスの配置を含むポップアップ](./media/popup-placement-behavior/popup-placement-mouse.png "Placement は Mouse です。")  
+ ![Mouse 配置を含むポップアップ](./media/popup-placement-behavior/popup-placement-mouse.png "Placement は Mouse です。")  
   
  ![MousePoint 配置を含むポップアップ](./media/popup-placement-behavior/popup-placement-mousepoint.png "配置は MousePoint です。")  
   
- ![相対または RelativePoint 配置を含むポップアップ](./media/popup-placement-behavior/popup-placement-relative.png "Placement は相対または RelativePoint です。")    
+ ![Relative または RelativePoint 配置を含むポップアップ](./media/popup-placement-behavior/popup-placement-relative.png "Placement は相対または RelativePoint です。")    
   
- ![右側の配置を含むポップアップ](./media/popup-placement-behavior/popup-placement-right.png "Placement は Right です。")    
+ ![Right 配置を含むポップアップ](./media/popup-placement-behavior/popup-placement-right.png "Placement は Right です。")    
   
  ![Top 配置を含むポップアップ](./media/popup-placement-behavior/popup-placement-top.png "Placement は Top です。")    
   
 <a name="When"></a>   
 ## <a name="when-the-popup-encounters-the-edge-of-the-screen"></a>ポップアップが画面の端と重なった場合  
- セキュリティ上の理由から<xref:System.Windows.Controls.Primitives.Popup> 、を画面の端で非表示にすることはできません。 次の3つのうちの1つ<xref:System.Windows.Controls.Primitives.Popup>は、が画面の端に遭遇したときに発生します。  
+ セキュリティ上の理由により、<xref:System.Windows.Controls.Primitives.Popup> を画面の端で非表示にすることはできません。 @No__t_0 が画面の端に達すると、次の3つのいずれかが発生します。  
   
-- ポップアップは、が<xref:System.Windows.Controls.Primitives.Popup>見えなくなる画面の端に沿って再配置されます。  
+- ポップアップは、<xref:System.Windows.Controls.Primitives.Popup> が見えなくなる画面の端に沿って再配置されます。  
   
 - ポップアップは別のポップアップ配置ポイントを使用します。  
   
@@ -143,65 +143,65 @@ ms.locfileid: "69951732"
   
  これらのオプションについては、このセクションの後半で詳しく説明します。  
   
- 画面の端が<xref:System.Windows.Controls.Primitives.Popup>検出されたときの動作は、 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>プロパティの値とポップアップが検出する画面の端によって異なります。 次の表は、が各<xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.Controls.Primitives.PlacementMode>値に対して画面の端を検出した場合の動作をまとめたものです。  
+ 画面の端が検出されたときの <xref:System.Windows.Controls.Primitives.Popup> の動作は、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> プロパティの値とポップアップが検出する画面の端によって異なります。 次の表は、<xref:System.Windows.Controls.Primitives.Popup> が各 <xref:System.Windows.Controls.Primitives.PlacementMode> 値に対して画面の端を検出した場合の動作をまとめたものです。  
   
 |PlacementMode|上端|下端|左端|右端|  
 |-------------------|--------------|-----------------|---------------|----------------|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>|上端に揃えます。|下端に揃えます。|左端に揃えます。|右端に揃えます。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>|上端に揃えます。|ポップアップ配置ポイントがの<xref:System.Windows.Controls.Primitives.Popup>左下隅に変わります。|左端に揃えます。|ポップアップ配置ポイントがの右上隅<xref:System.Windows.Controls.Primitives.Popup>に変わります。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Bottom>|上端に揃えます。|ターゲットの原点が、ターゲット領域の左上隅に変わり、ポップアップ配置ポイントがの左下隅<xref:System.Windows.Controls.Primitives.Popup>に変わります。|左端に揃えます。|右端に揃えます。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>|上端に揃えます。|ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の左下隅に変わります。|左端に揃えます。|ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の右上隅に変わります。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Bottom>|上端に揃えます。|ターゲットのオリジンがターゲット領域の左上隅に変わり、ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の左下隅に変わります。|左端に揃えます。|右端に揃えます。|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Center>|上端に揃えます。|下端に揃えます。|左端に揃えます。|右端に揃えます。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Left>|上端に揃えます。|下端に揃えます。|ターゲットの原点が、ターゲット領域の右上隅に変わり、ポップアップ配置ポイントがの<xref:System.Windows.Controls.Primitives.Popup>左上隅に変わります。|右端に揃えます。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>|上端に揃えます。|ターゲットの原点が、 <xref:System.Windows.Controls.Primitives.Popup>ターゲット領域の左上隅 (マウスポインターの境界) に変わり、ポップアップの配置ポイントがの左下隅に変わりますが、|左端に揃えます。|右端に揃えます。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>|上端に揃えます。|ポップアップ配置ポイントがの<xref:System.Windows.Controls.Primitives.Popup>左下隅に変わります。|左端に揃えます。|ポップアップ配置ポイントが、ポップアップの右上隅に変更されます。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Left>|上端に揃えます。|下端に揃えます。|ターゲットの原点がターゲット領域の右上隅に変わり、ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の左上隅に変わります。|右端に揃えます。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>|上端に揃えます。|ターゲットの原点が、ターゲット領域の左上隅 (マウスポインターの境界) に変わり、ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の左下隅に変わりますが、|左端に揃えます。|右端に揃えます。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>|上端に揃えます。|ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の左下隅に変わります。|左端に揃えます。|ポップアップ配置ポイントが、ポップアップの右上隅に変更されます。|  
 |<xref:System.Windows.Controls.Primitives.PlacementMode.Relative>|上端に揃えます。|下端に揃えます。|左端に揃えます。|右端に揃えます。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>|上端に揃えます。|ポップアップ配置ポイントがの<xref:System.Windows.Controls.Primitives.Popup>左下隅に変わります。|左端に揃えます。|ポップアップ配置ポイントが、ポップアップの右上隅に変更されます。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Right>|上端に揃えます。|下端に揃えます。|左端に揃えます。|ターゲットの原点が、ターゲット領域の左上隅に変わり、ポップアップ配置ポイントがの右上隅<xref:System.Windows.Controls.Primitives.Popup>に変わります。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Top>|ターゲットの原点が、ターゲット領域の左下隅に変わり、ポップアップ配置ポイントがの左上隅<xref:System.Windows.Controls.Primitives.Popup>に変わります。 実際には、は、が<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom>の場合と同じです。|下端に揃えます。|左端に揃えます。|右端に揃えます。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>|上端に揃えます。|ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の左下隅に変わります。|左端に揃えます。|ポップアップ配置ポイントが、ポップアップの右上隅に変更されます。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Right>|上端に揃えます。|下端に揃えます。|左端に揃えます。|ターゲットのオリジンがターゲット領域の左上隅に変わり、ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の右上隅に変わります。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Top>|ターゲットのオリジンがターゲット領域の左下隅に変わり、ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の左上隅に変わります。 実際には、これは <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> が <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> 場合と同じです。|下端に揃えます。|左端に揃えます。|右端に揃えます。|  
   
 ### <a name="aligning-to-the-screen-edge"></a>画面の端への配置  
- は<xref:System.Windows.Controls.Primitives.Popup> 、画面上に全体<xref:System.Windows.Controls.Primitives.Popup>が表示されるように再配置することで、画面の端に合わせることができます。  この場合、ターゲットの始点とポップアップの配置ポイント間の距離は、およびの<xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>値と<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>異なる場合があります。 が<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 、 <xref:System.Windows.Controls.Primitives.PlacementMode.Absolute> 、また<xref:System.Windows.Controls.Primitives.PlacementMode.Relative>はの場合<xref:System.Windows.Controls.Primitives.Popup> 、はすべての画面の端に合わせて配置されます。 <xref:System.Windows.Controls.Primitives.PlacementMode.Center>  たとえば、 <xref:System.Windows.Controls.Primitives.Popup>がに<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> <xref:System.Windows.Controls.Primitives.PlacementMode.Relative>設定され、が100に設定されているとします。<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>  画面の下端がのすべてまたは一部<xref:System.Windows.Controls.Primitives.Popup>を非表示にすると、は<xref:System.Windows.Controls.Primitives.Popup>画面の下端に沿って再配置され、ターゲットの始点とポップアップの配置ポイントの間の垂直方向の距離は100未満になります。 これを次の図で示します。  
+ @No__t_1 全体が画面上に表示されるように、<xref:System.Windows.Controls.Primitives.Popup> を画面の端に合わせることができます。  この場合、ターゲットの始点とポップアップの配置ポイント間の距離は、<xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> と <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> の値とは異なる場合があります。 @No__t_0 が <xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>、<xref:System.Windows.Controls.Primitives.PlacementMode.Center>、または <xref:System.Windows.Controls.Primitives.PlacementMode.Relative> の場合、<xref:System.Windows.Controls.Primitives.Popup> はすべての画面の端に配置されます。  たとえば、<xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> が <xref:System.Windows.Controls.Primitives.PlacementMode.Relative> に設定され、<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> が100に設定されているとします。  画面の下端が <xref:System.Windows.Controls.Primitives.Popup> の一部または一部を非表示にした場合、<xref:System.Windows.Controls.Primitives.Popup> は画面の下端に沿って再配置され、ターゲットの始点とポップアップの配置ポイントの間の垂直方向の距離は100未満になります。 これを次の図で示します。  
   
- ![画面の端に揃えて配置されるポップアップ](./media/popup-placement-behavior/popup-placement-relative-screen-edge.png "ポップアップが画面の端に揃えて配置されます。")    
+ ![画面の端に揃えて配置されたポップアップ](./media/popup-placement-behavior/popup-placement-relative-screen-edge.png "ポップアップが画面の端に揃えて配置されます。")    
   
 ### <a name="changing-the-popup-alignment-point"></a>ポップアップ配置ポイントの変更  
- が<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 、 <xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint> <xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>、またはの場合、ポップアップが下または右の画面の端に達すると、ポップアップ配置ポイントが変更されます。 <xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>  
+ @No__t_0 が <xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>、<xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>、または <xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint> の場合、ポップアップが画面の下端または右端で検出されるとポップアップの配置ポイントが変わります。  
   
- 次の図は、下部画面の端がのすべてまたは一部<xref:System.Windows.Controls.Primitives.Popup>を非表示にしたときに、ポップアップ配置ポイントがの左下隅<xref:System.Windows.Controls.Primitives.Popup>にあることを示しています。  
+ 次の図は、下部画面の端が <xref:System.Windows.Controls.Primitives.Popup> の一部または一部を非表示にしたときに、ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の左下隅にあることを示しています。  
   
  ![画面の下端による新しい配置ポイント](./media/popup-placement-behavior/popup-placement-relative-point-screen-edge.png "ポップアップが画面の下端に表示され、ポップアップ配置ポイントが変更されます。")  
 
- 次の図は、が右側<xref:System.Windows.Controls.Primitives.Popup>の画面の端で非表示になっている場合に、ポップアップ配置ポイントが<xref:System.Windows.Controls.Primitives.Popup>の右上隅であることを示しています。  
+ 次の図は、<xref:System.Windows.Controls.Primitives.Popup> が右側の画面の端で非表示になっている場合、ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の右上隅にあることを示しています。  
   
  ![画面の端による新しいポップアップ配置ポイント](./media/popup-placement-behavior/popup-placement-relative-point-right-screen-edge.png "ポップアップが画面の右端に表示され、ポップアップの配置ポイントが変更されます。")    
   
- が<xref:System.Windows.Controls.Primitives.Popup>下と右の画面の端を検出した場合、ポップアップの配置ポイントは<xref:System.Windows.Controls.Primitives.Popup>の右下隅になります。  
+ @No__t_0 が一番下と右の画面の端に達すると、ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の右下隅になります。  
   
 ### <a name="changing-the-target-origin-and-popup-alignment-point"></a>ターゲットの始点とポップアップ配置ポイントの変更  
- が<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 、 、、、また<xref:System.Windows.Controls.Primitives.PlacementMode.Left> <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom>はの場合、特定の画面の端が検出されると、ターゲットの原点とポップアップの配置ポイントが変更されます。<xref:System.Windows.Controls.Primitives.PlacementMode.Top> <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse> <xref:System.Windows.Controls.Primitives.PlacementMode.Right>  位置を変更する画面の端は、 <xref:System.Windows.Controls.Primitives.PlacementMode>値によって異なります。  
+ @No__t_0 が <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom>、<xref:System.Windows.Controls.Primitives.PlacementMode.Left>、<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>、<xref:System.Windows.Controls.Primitives.PlacementMode.Right>、または <xref:System.Windows.Controls.Primitives.PlacementMode.Top> の場合、特定の画面の端が検出されると、ターゲットの元とポップアップの配置ポイントが変更されます。  位置を変更する画面の端は、<xref:System.Windows.Controls.Primitives.PlacementMode> の値によって異なります。  
   
- 次の図は、が<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> <xref:System.Windows.Controls.Primitives.Popup>で下部画面の端を検出したときに、ターゲットの始点がターゲット領域の左上隅にあり、ポップアップ配置ポイントがの左下隅にあることを示しています<xref:System.Windows.Controls.Primitives.Popup>。  
+ 次の図は、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> が <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom>、<xref:System.Windows.Controls.Primitives.Popup> が下部画面の端に到達した場合に、ターゲットの原点がターゲット領域の左上隅にあり、ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の左下隅にあることを示しています。  
   
- ![画面の下端による新しい配置ポイント](./media/popup-placement-behavior/popup-placement-bottom-screen-edge.png "位置が bottom で、ポップアップが画面の下端に表示されます。")    
+ ![画面の下端による新しい配置ポイント](./media/popup-placement-behavior/popup-placement-bottom-screen-edge.png "位置が Bottom で、ポップアップが画面の下端に表示されます。")    
   
- 次の図に示す時に<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>は<xref:System.Windows.Controls.Primitives.PlacementMode.Left>と<xref:System.Windows.Controls.Primitives.Popup>画面の左端を検出したターゲットの基準は対象となる領域の右上隅にある、ポップアップ配置ポイント、の左上隅にあります<xref:System.Windows.Controls.Primitives.Popup>。  
+ 次の図は、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> が <xref:System.Windows.Controls.Primitives.PlacementMode.Left>、<xref:System.Windows.Controls.Primitives.Popup> が左端の画面の端に達すると、ターゲットの原点がターゲット領域の右上隅にあり、ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の左上隅にあることを示しています。  
   
  ![画面の左端による新しい配置ポイント](./media/popup-placement-behavior/popup-placement-left-screen-edge.png "配置が左になり、ポップアップが画面の左端に表示されます。")  
   
- 次の図は、が<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>で<xref:System.Windows.Controls.Primitives.PlacementMode.Right> 、 <xref:System.Windows.Controls.Primitives.Popup>が正しい画面の端を検出した場合に、ターゲットの始点がターゲット領域の左上隅にあり、ポップアップ配置ポイントがの右上隅であることを示しています<xref:System.Windows.Controls.Primitives.Popup>。  
+ 次の図は、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> が <xref:System.Windows.Controls.Primitives.PlacementMode.Right>、<xref:System.Windows.Controls.Primitives.Popup> が正しい画面の端を検出した場合に、ターゲットの原点がターゲット領域の左上隅にあり、ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の右上隅であることを示しています。  
   
- ![画面の右端による新しい配置ポイント](./media/popup-placement-behavior/popup-placement-right-screen-edge.png "Placement が right で、ポップアップが画面の右端に表示されます。")  
+ ![画面の右端による新しい配置ポイント](./media/popup-placement-behavior/popup-placement-right-screen-edge.png "Placement が Right で、ポップアップが画面の右端に表示されます。")  
 
- 次の図は、が<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> <xref:System.Windows.Controls.Primitives.PlacementMode.Top> <xref:System.Windows.Controls.Primitives.Popup>で一番上の画面の端を検出したときに、ターゲットの原点がターゲット領域の左下隅にあり、ポップアップ配置ポイントがの左上隅にあることを示しています<xref:System.Windows.Controls.Primitives.Popup>。  
+ 次の図は、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> が <xref:System.Windows.Controls.Primitives.PlacementMode.Top>、<xref:System.Windows.Controls.Primitives.Popup> が一番上の画面の端に達すると、ターゲットの原点がターゲット領域の左下隅にあり、ポップアップの配置ポイントが <xref:System.Windows.Controls.Primitives.Popup> の左上隅にあることを示しています。  
   
- ![画面の上端による新しい配置ポイント](./media/popup-placement-behavior/popup-placement-top-screen-edge.png "Placement が top で、ポップアップが画面の上端に表示されます。")  
+ ![画面の上端による新しい配置ポイント](./media/popup-placement-behavior/popup-placement-top-screen-edge.png "Placement が Top で、ポップアップが画面の上端に表示されます。")  
   
- 次の図は、が<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse> <xref:System.Windows.Controls.Primitives.Popup>で下部画面の端を検出した場合に、ターゲット領域 (マウスポインターの境界) とポップアップの配置の左上隅にあることを示しています。point はの<xref:System.Windows.Controls.Primitives.Popup>左下隅です。  
+ 次の図は、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A> が <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>、<xref:System.Windows.Controls.Primitives.Popup> が下部画面の端に達すると、ターゲット領域の左上隅 (マウスポインターの境界) であり、ポップアップ配置ポイントが左下になっていることを示しています。<xref:System.Windows.Controls.Primitives.Popup> のコーナー。  
   
  ![画面の端に近いマウスによる新しい配置ポイント](./media/popup-placement-behavior/popup-placement-mouse-screen-edge.png "位置がマウスで、ポップアップが画面の下端に表示されます。")    
   
 ### <a name="customizing-popup-placement"></a>ポップアップの配置のカスタマイズ  
- <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>プロパティをに設定する<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>ことによって、ターゲットの始点とポップアップ配置ポイントをカスタマイズできます。 次に、 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> <xref:System.Windows.Controls.Primitives.Popup>の一連の可能な配置ポイントと主軸 (優先順) を返すデリゲートを定義します。 の最大部分を示すポイント<xref:System.Windows.Controls.Primitives.Popup>が選択されています。  が画面の端<xref:System.Windows.Controls.Primitives.Popup>で非表示になっ<xref:System.Windows.Controls.Primitives.Popup>ている場合、の位置は自動的に調整されます。 例については、「[方法 : ポップアップのカスタム位置を指定する](how-to-specify-a-custom-popup-position.md)」をご覧ください。  
+ [@No__t_0] プロパティを [<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>] に設定すると、ターゲットの始点とポップアップの配置ポイントをカスタマイズできます。 次に、<xref:System.Windows.Controls.Primitives.Popup> に対して可能な配置ポイントと主軸 (優先順) のセットを返す <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> デリゲートを定義します。 @No__t_0 の最大部分を示すポイントが選択されています。  @No__t_1 が画面の端で非表示になっている場合、<xref:System.Windows.Controls.Primitives.Popup> の位置は自動的に調整されます。 例については、「[カスタム ポップアップの位置を指定する](how-to-specify-a-custom-popup-position.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
