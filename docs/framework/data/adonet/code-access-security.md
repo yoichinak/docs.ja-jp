@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 41a0885f828e45e1216805533a977fc3d5eaf5cb
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971820"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798890"
 ---
 # <a name="code-access-security-and-adonet"></a>コード アクセス セキュリティと ADO.NET
 .NET Framework はコード アクセス セキュリティ (CAS) に加えてロール ベースのセキュリティを備えています。どちらも、共通言語ランタイム (CLR) が提供する共通のインフラストラクチャを使って実装されています。 アンマネージ コードの場合、ほとんどのアプリケーションはユーザーまたはプリンシパルの権限で実行されます。 そのため、悪意のあるソフトウェアやエラーを含むソフトウェアが、システム特権を持つユーザーによって実行された場合、コンピューター システムが被害を受けたり、機密データが改ざんされる可能性があります。  
@@ -71,8 +71,8 @@ ms.locfileid: "70971820"
 |-----------------------------------|-----------------|  
 |`Action`|セキュリティ アクションを取得または設定します。 このプロパティは、<xref:System.Security.Permissions.SecurityAttribute> から継承されています。|  
 |`AllowBlankPassword`|接続文字列内で空白のパスワードの使用を許可または禁止します。 有効な値は、空白のパスワードの使用を許可する `true` および空白のパスワードの使用を禁止する `false` です。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
-|`ConnectionString`|使用できる接続文字列を指定します。 複数の接続文字列を指定できます。 **注:** 接続文字列には、ユーザー ID やパスワードを含めないでください。 このリリースでは、.NET Framework 構成ツールを使用して接続文字列制限を変更することはできません。 <br /><br /> このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
-|`KeyRestrictions`|許可または禁止する接続文字列パラメーターを指定します。 接続文字列パラメーターが、フォームで識別される *\<パラメーター名>=* します。 セミコロン (;) で区切って、複数のパラメーターを指定できます。 **注:** `KeyRestrictions` が指定されておらず、`KeyRestrictionBehavior` プロパティが `AllowOnly` または `PreventUsage` に設定されている場合は、接続文字列パラメーターを追加できません。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
+|`ConnectionString`|使用できる接続文字列を指定します。 複数の接続文字列を指定できます。 **注:** 接続文字列にユーザー ID またはパスワードを含めないでください。 このリリースでは、.NET Framework 構成ツールを使用して接続文字列制限を変更することはできません。 <br /><br /> このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
+|`KeyRestrictions`|許可または禁止する接続文字列パラメーターを指定します。 接続文字列パラメーターは *\<パラメーター名 > =* の形式で識別されます。 セミコロン (;) で区切って、複数のパラメーターを指定できます。 **注:** `KeyRestrictions`を指定せず、`KeyRestrictionBehavior` プロパティを `AllowOnly` または `PreventUsage`に設定した場合、追加の接続文字列パラメーターは許可されません。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
 |`KeyRestrictionBehavior`|接続文字列パラメーターが、追加を許可された唯一の接続文字列パラメーター (`AllowOnly`) か、または追加を禁止された接続文字列パラメーター (`PreventUsage`) かを指定します。 `AllowOnly` が既定値です。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
 |`TypeID`|派生クラスで実装すると、この属性の一意の識別子を取得します。 このプロパティは、<xref:System.Attribute> から継承されています。|  
 |`Unrestricted`|このリソースに対する無制限のアクセス許可が宣言されているかどうかを示します。 このプロパティは、<xref:System.Security.Permissions.SecurityAttribute> から継承されています。|  
@@ -89,7 +89,7 @@ ms.locfileid: "70971820"
 ```  
   
 #### <a name="keyrestrictions-syntax"></a>KeyRestrictions の構文  
- 次の例では、同じ接続文字列を有効にし、 `Encrypt`と`Packet Size`の接続文字列オプションを使用できるようにしますが、その他の接続文字列オプションの使用は制限します。  
+ 次の例では、同じ接続文字列を有効にし、`Encrypt` と `Packet Size` の接続文字列オプションを使用できるようにしますが、その他の接続文字列オプションの使用は制限します。  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +136,7 @@ ms.locfileid: "70971820"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>カスタム アクセス許可セットを使用した Partial Trust の有効化  
- 特定のゾーンに対して <xref:System.Data.SqlClient> アクセス許可を有効にするには、システム管理者がカスタム アクセス許可セットを作成して、目的のゾーンに指定する必要があります。 `LocalIntranet` などの既定のアクセス許可セットは変更できません。 たとえば、がである<xref:System.Data.SqlClient>コード<xref:System.Security.Policy.Zone> `LocalIntranet`に対するアクセス許可を含めるには、システム管理者がの`LocalIntranet`アクセス許可セットをコピー <xref:System.Data.SqlClient>し、その名前を "customlocalintranet" に変更し、アクセス許可を追加し、インポートします。[caspol.exe (コードアクセスセキュリティポリシーツール)](../../tools/caspol-exe-code-access-security-policy-tool.md)を使用して customlocalintranet アクセス許可セットを設定し、の`LocalIntranet_Zone`アクセス許可セットを customlocalintranet に設定します。  
+ 特定のゾーンに対して <xref:System.Data.SqlClient> アクセス許可を有効にするには、システム管理者がカスタム アクセス許可セットを作成して、目的のゾーンに指定する必要があります。 `LocalIntranet` などの既定のアクセス許可セットは変更できません。 たとえば、`LocalIntranet`の <xref:System.Security.Policy.Zone> を持つコードに対する <xref:System.Data.SqlClient> アクセス許可を追加するには、システム管理者が `LocalIntranet`のアクセス許可セットをコピーし、名前を "CustomLocalIntranet" に変更し、<xref:System.Data.SqlClient> アクセス許可を追加して、CustomLocalIntranet をインポートします。[caspol.exe (コードアクセスセキュリティポリシーツール)](../../tools/caspol-exe-code-access-security-policy-tool.md)を使用してアクセス許可を設定し、`LocalIntranet_Zone` のアクセス許可セットを customlocalintranet に設定します。  
   
 ### <a name="sample-permission-set"></a>サンプル アクセス許可セット  
  部分信頼のシナリオでの、.NET Framework Data Provider for SQL Server 用アクセス許可セットの例を次に示します。 カスタムアクセス許可セットの作成の詳細については、「 [Caspol.exe を使用したアクセス許可セットの構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100))」を参照してください。  
@@ -192,7 +192,7 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>アンマネージ コードとの相互運用性  
  CLR の外部で実行されるコードはアンマネージ コードと呼ばれます。 したがって、CAS などのセキュリティ メカニズムをアンマネージ コードに適用することはできません。 アンマネージ コードの例としては、COM コンポーネント、ActiveX インターフェイス、Windows API 関数があります。 アンマネージ コードを実行する場合は、アプリケーションの全体的なセキュリティが損なわれないよう特別な考慮をする必要があります。 詳細については、「[アンマネージ コードとの相互運用](../../interop/index.md)」を参照してください。  
   
- .NET Framework は、COM 相互運用機能を介したアクセスを提供することによって、既存の COM コンポーネントとの下位互換性をサポートしています。 COM 相互運用ツールを使って適切な COM 型をインポートすることにより、.NET Framework アプリケーションに COM コンポーネントを組み込むことができます。 インポートが完了すると、COM 型を使用できるようになります。 アセンブリのメタデータをタイプ ライブラリにエクスポートし、マネージド コンポーネントを COM コンポーネントとして登録することで、COM クライアントからマネージド コードにアクセスすることもできます。 詳細については、「[高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)」を参照してください。  
+ .NET Framework は、COM 相互運用機能を介したアクセスを提供することによって、既存の COM コンポーネントとの下位互換性をサポートしています。 COM 相互運用ツールを使って適切な COM 型をインポートすることにより、.NET Framework アプリケーションに COM コンポーネントを組み込むことができます。 インポートが完了すると、COM 型を使用できるようになります。 アセンブリのメタデータをタイプ ライブラリにエクスポートし、マネージド コンポーネントを COM コンポーネントとして登録することで、COM クライアントからマネージド コードにアクセスすることもできます。 詳細については、「[高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
