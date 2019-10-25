@@ -4,12 +4,12 @@ description: .NET Core グローバル ツールとそれらに使用できる .
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332017"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318305"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET core グローバル ツールの概要
 
@@ -31,13 +31,12 @@ ms.locfileid: "71332017"
 
 ## <a name="find-a-net-core-global-tool"></a>.NET Core グローバル ツールの検索
 
-現時点では、.NET Core コマンド ライン インターフェイス (CLI) には、グローバル ツールの検索機能はありません。
+現時点では、.NET Core コマンド ライン インターフェイス (CLI) には、グローバル ツールの検索機能はありません。 次に、ツールの検索方法に関する推奨事項をいくつか示します。
 
-.NET Core グローバル ツールは、[NuGet](https://www.nuget.org) で見つけることができます。 ただし、NuGet では、具体的に .NET Core グローバル ツールを検索することはまだできません。
-
-ブログの投稿や [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub リポジトリでも、ツールの推奨事項を検索することができます。
-
-また、[aspnet/DotNetTools](https://github.com/aspnet/DotNetTools/) GitHub リポジトリでは、ASP.NET チームによって作成されたグローバル ツールのソース コードを確認することもできます。
+* .NET Core グローバル ツールは、[NuGet](https://www.nuget.org) で見つけることができます。 ただし、NuGet では、具体的に .NET Core グローバル ツールを検索することはまだできません。
+* ブログの投稿や [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub リポジトリで、ツールの推奨事項を検索することができます。
+* [aspnet/DotNetTools](https://github.com/aspnet/DotNetTools/) GitHub リポジトリでは、ASP.NET チームによって作成されたグローバル ツールのソース コードを確認することができます。
+* 診断ツールの詳細については、「[.NET Core dotnet 診断グローバル ツール](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)」を参照してください。
 
 ## <a name="check-the-author-and-statistics"></a>作成者と統計情報の確認
 

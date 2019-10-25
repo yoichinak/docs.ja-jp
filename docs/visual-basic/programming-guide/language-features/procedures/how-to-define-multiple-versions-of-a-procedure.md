@@ -18,7 +18,7 @@ ms.locfileid: "61863832"
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>方法: 複数のバージョン (Visual Basic)、プロシージャの定義します。
 プロシージャを定義するには、複数のバージョンで*オーバー ロード*バージョンごとに同じ名前が別のパラメーター リストを使用しています。 オーバー ロードの目的では、名前で区別せずに密接に関連するいくつかのバージョンのプロシージャを定義します。  
   
- 詳細については、「 [Procedure Overloading](./procedure-overloading.md)」を参照してください。  
+ 詳細については、プロシージャのオーバーロード (Visual Basic)[に関するページを参照してください。  
   
 ### <a name="to-define-multiple-versions-of-a-procedure"></a>プロシージャの複数のバージョンを定義するには  
   

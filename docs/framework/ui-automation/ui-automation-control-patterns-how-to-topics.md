@@ -25,4 +25,4 @@ ms.locfileid: "71042364"
  [サポートされている UI オートメーション コントロール パターンの取得](get-supported-ui-automation-control-patterns.md)  
  [UI オートメーションを使用した、チェック ボックスのトグル状態の取得](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
  [UI オートメーションを使用したコントロールの呼び出し](invoke-a-control-using-ui-automation.md)  
- [Move a UI Automation Element](move-a-ui-automation-element.md)
+ [UI オートメーション要素の移動](move-a-ui-automation-element.md)

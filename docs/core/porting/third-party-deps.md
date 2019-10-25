@@ -4,12 +4,12 @@ description: .NET Framework から .NET Core にプロジェクトを移植す�
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904333"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521475"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>コードを .NET Core に移植するために依存関係を分析する
 
@@ -20,8 +20,8 @@ ms.locfileid: "55904333"
 プロジェクトで NuGet パッケージを参照する場合は、.NET Core と互換性があるかどうかを確認する必要があります。
 これを行う場合、次の 2 つの方法があります。
 
-* [NuGet パッケージ エクスプローラーアプリを使用する](#analyze-nuget-packages-using-nuget-package-explorer)
-* [nuget.org サイトを使用する](#analyze-nuget-packages-using-nugetorg)
+- [NuGet パッケージ エクスプローラーアプリを使用する](#analyze-nuget-packages-using-nuget-package-explorer)
+- [nuget.org サイトを使用する](#analyze-nuget-packages-using-nugetorg)
 
 パッケージの分析後、NET Core と互換性がなく、.NET Framework のみをターゲットとする場合は、[.NET Framework 互換モード](#net-framework-compatibility-mode)が移植プロセスに役立つかどうかを確認できます。
 
@@ -34,7 +34,7 @@ NuGet パッケージ フォルダーを調べる最も簡単な方法は、[NuG
 1. NuGet パッケージ エクスプローラーを開きます。
 2. **[Open package from online feed]\(オンライン フィードからパッケージを開く\)** をクリックします。
 3. パッケージの名前を検索します。
-4. 検索結果からパッケージ名を選択し、**[開く]** をクリックします。
+4. 検索結果からパッケージ名を選択し、 **[開く]** をクリックします。
 5. 右側にある *lib* フォルダーを展開し、フォルダー名を確認します。
 
 次のいずれかの名前のフォルダーを探します。

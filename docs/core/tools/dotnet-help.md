@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/19/2019
 ms.locfileid: "71117711"
 ---
-# <a name="dotnet-help-reference"></a>dotnet help reference
+# <a name="dotnet-help-reference"></a>dotnet help リファレンス
 
 **この記事の対象: ✓** .NET Core 2.0 SDK 以降のバージョン
 

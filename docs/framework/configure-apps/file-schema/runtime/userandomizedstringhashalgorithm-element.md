@@ -17,11 +17,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252198"
 ---
-# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > 要素
+# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm> 要素
 共通言語ランタイムがアプリケーション ドメインごとに文字列のハッシュ コードを計算するかどうかを判定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<UseRandomizedStringHashAlgorithm >**  
   
 ## <a name="syntax"></a>構文  

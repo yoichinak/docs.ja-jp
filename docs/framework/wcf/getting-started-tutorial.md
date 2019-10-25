@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: Windows Communication Foundation アプリケーションを概要します。'
+title: '方法: Windows Communication Foundation アプリケーション入門'
 description: これらのチュートリアルでは、WCF アプリケーションを作成するための概要を提供します。
 ms.date: 01/25/2019
 helpviewer_keywords:
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61929545"
 ---
-# <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>チュートリアル: Windows Communication Foundation アプリケーションを概要します。
+# <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>方法: Windows Communication Foundation アプリケーション入門
 次の一連のチュートリアルに、Windows Communication Foundation (WCF) プログラミングの経験を紹介します。 順序でこれらのチュートリアルに従って作業では、WCF アプリケーションの作成に必要な手順の概要を理解するを指定します。 完了したら、実行中の WCF サービスと WCF クライアント サービスを呼び出す必要があります。 
 
 このチュートリアルでは、開発環境として Visual Studio を使用している前提としています。 他の開発環境を使用している場合は、Visual Studio 固有の手順を無視します。 

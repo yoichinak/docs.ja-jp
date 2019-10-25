@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: afe2181e031a651767e6a6eec0397300b03fce50
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 8b7dfcfa394ed2c45adec9661ee1ea5823435223
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582566"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775441"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 暗黙的なデータ型変換を拡大変換のみに制限し、遅延バインディングを許可しません。また、`Object` 型になる暗黙の型指定を許可しません。  
@@ -104,7 +104,7 @@ Option Strict { On | Off }
 ## <a name="when-an-option-strict-statement-is-not-present"></a>Option Strict ステートメントが存在しない場合  
  ソースコードに `Option Strict` ステートメントが含まれていない場合、[[コンパイル] ページの [プロジェクトデザイナー] (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)の**Option strict**設定が使用されます。 [**コンパイル] ページ**には、エラーを生成する条件をさらに制御するための設定があります。  
   
- コマンドラインコンパイラを使用している場合は、 [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)コンパイラオプションを使用して `Option Strict` の設定を指定できます。  
+ コマンドラインコンパイラを使用している場合は、 [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)コンパイラオプションを使用して `Option Strict` の設定を指定できます。  
   
 ### <a name="to-set-option-strict-in-the-ide"></a>IDE で Option Strict を設定するには  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -132,7 +132,7 @@ Option Strict { On | Off }
  このダイアログボックスの `Option Strict` を設定するには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、 **[VISUAL BASIC の既定値]** をクリックします。 [VB の既定**値**] の初期の既定の設定は、`Off` です。  
   
 ### <a name="to-set-option-strict-on-the-command-line"></a>コマンドラインで Option Strict を設定するには  
- **Vbc.exe**コマンドに[/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)コンパイラオプションを含めます。  
+ **Vbc.exe**コマンドに[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)コンパイラオプションを含めます。  
   
 ## <a name="example"></a>例  
  次の例は、縮小変換である暗黙の型変換によって発生するコンパイル時のエラーを示しています。 このカテゴリのエラーは、[**コンパイル] ページ**の**暗黙の変換**条件に対応しています。  
@@ -162,5 +162,5 @@ Option Strict { On | Off }
 - [XML での埋め込み式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Office ソリューションの遅延バインディング](/visualstudio/vsto/late-binding-in-office-solutions)
-- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [[Visual Basic の既定値] ([オプション] ダイアログ ボックス - [プロジェクト])](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

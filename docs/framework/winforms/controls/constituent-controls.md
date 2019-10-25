@@ -41,7 +41,7 @@ System.Windows.Forms.PaintEventArgs e)
 > [!NOTE]
 > などの一部の Windows フォームコントロール<xref:System.Windows.Forms.TextBox>は、Windows によって直接描画されます。 これらのインスタンス<xref:System.Windows.Forms.Control.OnPaint%2A>では、メソッドは呼び出されません。したがって、上記の例は呼び出されません。  
   
- この例は、`MyButton.Paint` イベントが実行されるたびに実行するメソッドを作成し、それによって追加のグラフィカル表示をコントロールに追加します。 これにより `MyButton.OnPaint` の実行は妨げられないので、カスタム描画に加えて、ボタンによって通常実行されるすべての描画が実行されることに注意してください。 GDI+ テクノロジとカスタム レンダリングについて詳しくは、「[Creating Graphical Images with GDI+](../advanced/how-to-create-graphics-objects-for-drawing.md)」 (GDI+ でのグラフィカル イメージの作成) をご覧ください。 コントロールの表示を独自のものにしたい場合の最善の方法は、継承コントロールを作成し、カスタム レンダリング コードをそこに記述するというものです。 詳しくは、「[ユーザー描画コントロール](user-drawn-controls.md)」をご覧ください。  
+ この例は、`MyButton.Paint` イベントが実行されるたびに実行するメソッドを作成し、それによって追加のグラフィカル表示をコントロールに追加します。 これにより `MyButton.OnPaint` の実行は妨げられないので、カスタム描画に加えて、ボタンによって通常実行されるすべての描画が実行されることに注意してください。 GDI+ テクノロジとカスタム レンダリングについて詳しくは、　[GDI+ を使ったグラフィカル イメージの作成](../advanced/how-to-create-graphics-objects-for-drawing.md) に関するページをご覧ください。 コントロールの表示を独自のものにしたい場合の最善の方法は、継承コントロールを作成し、カスタム レンダリング コードをそこに記述するというものです。 詳しくは、「[ユーザー描画コントロール](user-drawn-controls.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 

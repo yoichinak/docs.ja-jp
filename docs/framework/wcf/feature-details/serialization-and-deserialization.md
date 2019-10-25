@@ -15,7 +15,7 @@ ms.locfileid: "70045851"
 # <a name="serialization-and-deserialization"></a>シリアル化と逆シリアル化
 Windows Communication Foundation (WCF) には、新しいシリアル化エンジン<xref:System.Runtime.Serialization.DataContractSerializer>、が含まれています。 は<xref:System.Runtime.Serialization.DataContractSerializer> 、.NET Framework のオブジェクトと XML を双方向に変換します。 ここでは、シリアライザーのしくみについて説明します。  
   
- .NET Framework オブジェクトをシリアル化する場合、シリアライザーは、新しい*データコントラクト*モデルを含むさまざまなシリアル化プログラミングモデルを認識します。 サポートされるすべての型の一覧については、「 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)」を参照してください。 データ コントラクトの概要については、「 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)」を参照してください。  
+ .NET Framework オブジェクトをシリアル化する場合、シリアライザーは、新しい*データコントラクト*モデルを含むさまざまなシリアル化プログラミングモデルを認識します。 サポートされるすべての型の一覧については、「 [データ コントラクト シリアライザーでサポートされる型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)」を参照してください。 データ コントラクトの概要については、「 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)」を参照してください。  
   
  XML を逆シリアル化するときに、シリアライザーは <xref:System.Xml.XmlReader> クラスと <xref:System.Xml.XmlWriter> クラスを使用します。 また、WCF バイナリ<xref:System.Xml.XmlDictionaryReader> XML <xref:System.Xml.XmlDictionaryWriter>形式を使用する場合など、場合によっては、最適化された xml を生成できるように、クラスおよびクラスもサポートします。  
   

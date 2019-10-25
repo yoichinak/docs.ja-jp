@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 4a9c24455136fe4ccd13379d05c16d6b7cbf85de
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 403651978667c8cf531c3f87f1156f67206fb490
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117017"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522820"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core で Microsoft XML Serializer Generator を使用する
 
@@ -18,11 +18,11 @@ ms.locfileid: "71117017"
 
 > [!div class="checklist"]
 >
-> * .NET Core アプリの作成方法
-> * Microsoft.XmlSerializer.Generator パッケージへの参照を追加する方法
-> * MyApp.csproj を編集して依存関係を追加する方法
-> * クラスと XmlSerializer を追加する方法
-> * アプリケーションをビルドして実行する方法
+> - .NET Core アプリの作成方法
+> - Microsoft.XmlSerializer.Generator パッケージへの参照を追加する方法
+> - MyApp.csproj を編集して依存関係を追加する方法
+> - クラスと XmlSerializer を追加する方法
+> - アプリケーションをビルドして実行する方法
 
 .NET Framework の [Xml シリアライザー ジェネレーター (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) と同様に、[Microsoft.XmlSerializer.Generator NuGet パッケージ](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator)は .NET Core および .NET Standard プロジェクト用の同等のものです。 アセンブリに含まれる型の XML シリアル化アセンブリを作成することで、<xref:System.Xml.Serialization.XmlSerializer> を使用してその型のオブジェクトをシリアル化または逆シリアル化するときの XML シリアル化の起動パフォーマンスを改善します。
 
@@ -30,8 +30,8 @@ ms.locfileid: "71117017"
 
 このチュートリアルを完了するには、次のものが必要です。
 
-* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 以降
-* 任意のコード エディター。
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 以降。
+- 任意のコード エディター。
 
 > [!TIP]
 > コード エディターをインストールする必要がありますか。 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) をお試しください。
@@ -122,14 +122,14 @@ dotnet run
 おめでとうございます! 今回の成果:
 > [!div class="checklist"]
 >
-> * .NET Core アプリを作成しました。
-> * Microsoft.XmlSerializer.Generator パッケージへの参照を追加しました。
-> * MyApp.csproj を編集して依存関係を追加しました。
-> * クラスと XmlSerializer を追加しました。
-> * アプリケーションをビルドして実行しました。
+> - .NET Core アプリを作成しました。
+> - Microsoft.XmlSerializer.Generator パッケージへの参照を追加しました。
+> - MyApp.csproj を編集して依存関係を追加しました。
+> - クラスと XmlSerializer を追加しました。
+> - アプリケーションをビルドして実行しました。
 
 ## <a name="related-resources"></a>関連資料
 
-* [XML シリアル化の概要](../../standard/serialization/introducing-xml-serialization.md)
-* [方法: XmlSerializer を使用してシリアル化する (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
-* [方法: XmlSerializer を使用してシリアル化する (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [XML シリアル化の概要](../../standard/serialization/introducing-xml-serialization.md)
+- [方法: XmlSerializer を使用してシリアル化する (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [方法: XmlSerializer を使用してシリアル化する (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

@@ -1,5 +1,5 @@
 ---
-title: イベントベースの非同期パターンをいつ実装するかの決定
+title: イベントベースの非同期パターンの実装時期を決定する
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -19,7 +19,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/09/2019
 ms.locfileid: "67663725"
 ---
-# <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンをいつ実装するかの決定
+# <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンの実装時期を決定する
 
 イベント ベースの非同期パターンは、クラスの非同期動作を公開します。 このパターンを導入すると、.NET Framework では、非同期動作を公開する 2 つのパターンが定義されます。<xref:System.IAsyncResult?displayProperty=nameWithType> インターフェイスに基づく非同期パターンとイベント ベースのパターンです。 このトピックでは、両方のパターンをどのような状況で実装するべきか説明します。
 

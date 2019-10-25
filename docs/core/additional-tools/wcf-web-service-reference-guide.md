@@ -4,12 +4,12 @@ description: .NET Framework プロジェクトのサービス参照の追加と�
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 11a18161db0fde522442e2412c4522811c5dd40a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5c5759dcc0f428c763eddb84f3d3652fbc548cb2
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926458"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522232"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web Service Reference Provider ツールを使用する
 
@@ -20,16 +20,16 @@ ms.locfileid: "70926458"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 以降のバージョン
+- [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 以降のバージョン
 
 ## <a name="how-to-use-the-extension"></a>拡張機能の使用方法
 
 > [!NOTE]
 > **[WCF Web Service Reference]** オプションは、次のプロジェクト テンプレートを使用して作成されたプロジェクトに適用されます。
 >
-> * **Visual C#**  >  **.NET Core**
-> * **Visual C#**  >  **.NET Standard**
-> * **Visual C#**  > **Web** > **ASP.NET Core Web Application**
+> - **Visual C#**  >  **.NET Core**
+> - **Visual C#**  >  **.NET Standard**
+> - **Visual C#**  > **Web** > **ASP.NET Core Web Application**
 
 この記事では、**ASP.NET Core Web Application** プロジェクト テンプレートを例として、WCF サービス参照をプロジェクトに追加する手順について説明します。
 
@@ -68,9 +68,9 @@ ms.locfileid: "70926458"
 
 進行状況を表示している間、ツールでは以下の処理が実行されます。
 
-* WCF サービスからメタデータをダウンロードします。
-* *reference.cs* というファイルにサービス参照コードを生成し、プロジェクトの **[接続済みサービス]** ノードの下に追加します。
-* ターゲット プラットフォームでのコンパイルと実行に必要な NuGet パッケージ参照でプロジェクト ファイル (.csproj) を更新します。
+- WCF サービスからメタデータをダウンロードします。
+- *reference.cs* というファイルにサービス参照コードを生成し、プロジェクトの **[接続済みサービス]** ノードの下に追加します。
+- ターゲット プラットフォームでのコンパイルと実行に必要な NuGet パッケージ参照でプロジェクト ファイル (.csproj) を更新します。
 
 ![Visual Studio の進行状況ウィンドウ](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
@@ -84,4 +84,4 @@ ms.locfileid: "70926458"
 
 ### <a name="release-notes"></a>リリース ノート
 
-* 既知の問題を含む最新のリリース情報については、[リリース ノート](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md)のページを参照してください。
+- 既知の問題を含む最新のリリース情報については、[リリース ノート](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md)のページを参照してください。

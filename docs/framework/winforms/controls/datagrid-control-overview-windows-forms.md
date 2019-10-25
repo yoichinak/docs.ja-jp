@@ -32,7 +32,7 @@ ms.locfileid: "70046210"
 > [!NOTE]
 > <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。
 
-Windows フォーム <xref:System.Windows.Forms.DataGrid> コントロールは、一連の行と列のデータを表示します。 最も簡単なケースは、リレーションシップを含まない 1 つのテーブルを持つデータ ソースにグリッドがバインドされている場合です。 その場合は、スプレッドシートのように、単純な行と列でデータが表示されます。 その他のコントロールへのデータ バインディングの詳細については、「[データ連結と Windows フォーム](../data-binding-and-windows-forms.md)」を参照してください。
+Windows フォーム <xref:System.Windows.Forms.DataGrid> コントロールは、一連の行と列のデータを表示します。 最も簡単なケースは、リレーションシップを含まない 1 つのテーブルを持つデータ ソースにグリッドがバインドされている場合です。 その場合は、スプレッドシートのように、単純な行と列でデータが表示されます。 その他のコントロールへのデータ バインディングの詳細については、「[データ バインディングと Windows フォーム](../data-binding-and-windows-forms.md)」を参照してください。
 
 <xref:System.Windows.Forms.DataGrid> が複数の関連するテーブルを持つデータにバインドされ、グリッドでナビゲーションが有効な場合は、グリッドの行ごとに展開コントロールが表示されます。 展開コントロールでは、ユーザーは、親テーブルから子テーブルに移動できます。 ノードをクリックすると子テーブルが表示され、[戻る] ボタンをクリックすると、元の親テーブルが表示されます。 この方法では、グリッドはテーブル間の階層リレーションシップを表示します。
 
@@ -47,7 +47,7 @@ Windows フォーム <xref:System.Windows.Forms.DataGrid> コントロールは�
 > [!NOTE]
 > Visual Basic 6.0 の DataGrid コントロールに慣れている場合、Windows フォームの <xref:System.Windows.Forms.DataGrid> コントロールには大きな違いがあります。
 
-グリッドが <xref:System.Data.DataSet> にバインドされると、列と行が自動的に作成、書式設定、および入力されます。 詳細については、「 [Data Binding and Windows Forms](../data-binding-and-windows-forms.md)」を参照してください。 <xref:System.Windows.Forms.DataGrid> コントロールの生成に従い、ニーズに応じて列と行を追加、削除、再配置、および書式設定できます。
+グリッドが <xref:System.Data.DataSet> にバインドされると、列と行が自動的に作成、書式設定、および入力されます。 詳細については、「 [データ バインディングと Windows フォーム](../data-binding-and-windows-forms.md)」を参照してください。 <xref:System.Windows.Forms.DataGrid> コントロールの生成に従い、ニーズに応じて列と行を追加、削除、再配置、および書式設定できます。
 
 ## <a name="binding-data-to-the-control"></a>コントロールへのデータのバインド
 

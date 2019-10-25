@@ -50,7 +50,7 @@ CType(expression, typename)
 
 ## <a name="overloading"></a>オーバーロード
 
-`CType` 演算子も、コードの外部で定義されたクラスまたは構造体でオーバーロードできます。 このようなクラスまたは構造体からの変換、またはこのクラスまたは構造体への変換を行う場合は、その `CType` 演算子の動作を確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
+`CType` 演算子も、コードの外部で定義されたクラスまたは構造体でオーバーロードできます。 このようなクラスまたは構造体からの変換、またはこのクラスまたは構造体への変換を行う場合は、その `CType` 演算子の動作を確認してください。 詳細については、[演算子プロシージャ (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)に関するページを参照してください。
 
 ## <a name="converting-dynamic-objects"></a>動的オブジェクトの変換
 

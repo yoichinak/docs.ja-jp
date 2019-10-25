@@ -60,7 +60,7 @@ ms.locfileid: "67663701"
 
 どの操作も非同期を実装するための候補になりますが、長い待機時間が予想される操作を考慮してください。 特に適切なのは、クライアントがメソッドを呼び出し、完了時に通知を受け取ること以外の介入を必要としない操作です。 継続的に実行され、進捗状況、増分結果、または状態の変更をクライアントに定期的に通知する操作も適しています。
 
-イベント ベースの非同期パターンをいつサポートするかを決定することの詳細については、「[Deciding When to Implement the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)」 (イベントベースの非同期パターンをいつ実装するかの決定) を参照してください。
+イベント ベースの非同期パターンをいつサポートするかを決定することの詳細については、「[イベントベースの非同期パターンの実装時期を決定する](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)」 (イベントベースの非同期パターンをいつ実装するかの決定) を参照してください。
 
 ## <a name="naming-asynchronous-methods"></a>非同期メソッドの名前付け
 

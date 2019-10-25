@@ -4,12 +4,12 @@ description: このチュートリアルでは、Docker を使って .NET Core �
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5e05fd2a38770ce348fbbfcfaa88267217b806bf
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b344731c7d356f3705d9909b6901234f91ec7d6d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116556"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521890"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>チュートリアル: NET Core アプリのコンテナー化
 
@@ -19,10 +19,10 @@ ms.locfileid: "71116556"
 
 > [!div class="checklist"]
 >
-> * 簡単な .NET Core アプリを作成して発行する
-> * .NET Core 用の Dockerfile を作成して構成する
-> * Docker イメージの構築
-> * Docker コンテナーを作成して実行する
+> - 簡単な .NET Core アプリを作成して発行する
+> - .NET Core 用の Dockerfile を作成して構成する
+> - Docker イメージの構築
+> - Docker コンテナーを作成して実行する
 
 .NET Core アプリケーション用に Docker コンテナーを構築してデプロイするタスクを理解できます。 "*Docker プラットフォーム*" では、"*Docker エンジン*" を使用して、すばやくアプリがビルドされ、"*Docker イメージ*" としてパッケージ化されます。 これらのイメージは、階層型コンテナーに展開されて実行される *Dockerfile* 形式で記述されています。
 
@@ -30,16 +30,16 @@ ms.locfileid: "71116556"
 
 次の前提条件をインストールします。
 
-* [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
+- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
 .NET Core をインストールしてある場合、どの SDK を使っているか確認するには、`dotnet --info` コマンドを使います。
 
-* [Docker Community Edition](https://www.docker.com/products/docker-desktop)
+- [Docker Community Edition](https://www.docker.com/products/docker-desktop)
 
-* *Dockerfile* と .NET Core サンプル アプリ用の一時作業フォルダー。 このチュートリアルでは、作業フォルダーに `docker-working` の名前が使用されます。
+- *Dockerfile* と .NET Core サンプル アプリ用の一時作業フォルダー。 このチュートリアルでは、作業フォルダーに `docker-working` の名前が使用されます。
 
 ### <a name="use-sdk-version-22"></a>SDK バージョン 2.2 を使用する
 
-3\.0 のようなさらに新しい SDK を使用している場合は、アプリが 2.2 SDK を使用するよう強制されることを確認します。 作業フォルダーに `global.json` という名前のファイルを作成し、次の json コードを貼り付けます。
+3\.0 のようなさらに新しい SDK を使用している場合は、アプリが 2.2 SDK を使用するよう強制されることを確認します。 作業フォルダーに *global.json* という名前のファイルを作成し、次の JSON コードを貼り付けます。
 
 ```json
 {
@@ -53,7 +53,7 @@ ms.locfileid: "71116556"
 
 ## <a name="create-net-core-app"></a>.NET Core アプリを作成する
 
-Docker コンテナーで実行される .NET Core アプリが必要です。 ターミナルを開き、作業フォルダーがまだない場合は作成して、移動します。 作業フォルダーで次のコマンドを実行し、app という名前のサブディレクトリに新しいプロジェクトを作成します。
+Docker コンテナーで実行される .NET Core アプリが必要です。 ターミナルを開き、作業フォルダーがまだない場合は作成して、移動します。 作業フォルダーで次のコマンドを実行し、*app* という名前のサブディレクトリに新しいプロジェクトを作成します。
 
 ```dotnetcli
 dotnet new console -o app -n myapp
@@ -83,7 +83,7 @@ docker-working
 Hello World!
 ```
 
-既定のテンプレートでは、端末に出力して終了するアプリが作成されます。 このチュートリアルでは、無限にループするアプリを使います。 テキスト エディターで **Program.cs** ファイルを開きます。 現在は次のようなコードになっているはずです。
+既定のテンプレートでは、端末に出力して終了するアプリが作成されます。 このチュートリアルでは、無限にループするアプリを使います。 テキスト エディターで *Program.cs* ファイルを開きます。 現在は次のようなコードになっているはずです。
 
 ```csharp
 using System;
@@ -113,7 +113,7 @@ namespace myapp
         {
             var counter = 0;
             var max = args.Length != 0 ? Convert.ToInt32(args[0]) : -1;
-            while(max == -1 || counter < max)
+            while (max == -1 || counter < max)
             {
                 counter++;
                 Console.WriteLine($"Counter: {counter}");
@@ -124,7 +124,7 @@ namespace myapp
 }
 ```
 
-ファイルを保存し、`dotnet run` で再びプログラムをテストします。 このアプリは無限に実行されることに注意してください。 停止するにはキャンセル コマンド <kbd>Ctrl + C</kbd> を使用します。 次のような出力が表示されます。
+ファイルを保存し、`dotnet run` で再びプログラムをテストします。 このアプリは無限に実行されることに注意してください。 停止するにはキャンセル コマンド <kbd>Ctrl</kbd>+<kbd>C</kbd> を使用します。 次のような出力が表示されます。
 
 ```console
 > dotnet run
@@ -144,15 +144,15 @@ Counter: 4
 
 .NET Core アプリを Docker イメージに追加する前に、アプリを発行します。 コンテナーの開始時に、発行されたバージョンのアプリが実行されることを確認する必要があります。
 
-作業フォルダーから、サンプルのソース コードがある **app** フォルダーに移動し、次のコマンドを実行します。
+作業フォルダーから、サンプルのソース コードがある *app* フォルダーに移動し、次のコマンドを実行します。
 
 ```dotnetcli
 dotnet publish -c Release
 ```
 
-このコマンドでは、**publish** フォルダーにアプリがコンパイルされます。 作業フォルダーから **publish** フォルダーへのパスは `.\app\bin\Release\netcoreapp2.2\publish\` です
+このコマンドでは、*publish* フォルダーにアプリがコンパイルされます。 作業フォルダーから *publish* フォルダーへのパスは `.\app\bin\Release\netcoreapp2.2\publish\` です
 
-publish フォルダーのディレクトリ一覧を表示し、**myapp.dll** が作成されたことを確認します。 **app** フォルダーから、次のいずれかのコマンドを実行します。
+publish フォルダーのディレクトリ一覧を表示し、*myapp.dll* が作成されたことを確認します。 *app* フォルダーから、次のいずれかのコマンドを実行します。
 
 ```console
 > dir bin\Release\netcoreapp2.2\publish
@@ -229,7 +229,7 @@ COPY app/bin/Release/netcoreapp2.2/publish/ app/
 ENTRYPOINT ["dotnet", "app/myapp.dll"]
 ```
 
-`COPY` コマンドは、自分のコンピューターの指定したフォルダーをコンテナー内のフォルダーにコピーするよう Docker に指示します。 この例では、**publish** フォルダーが、コンテナーの **app** という名前のフォルダーにコピーされます。
+`COPY` コマンドは、自分のコンピューターの指定したフォルダーをコンテナー内のフォルダーにコピーするよう Docker に指示します。 この例では、*publish* フォルダーが、コンテナーの *app* という名前のフォルダーにコピーされます。
 
 次のコマンド `ENTRYPOINT` は、実行可能ファイルとして実行するためにコンテナーを構成するよう Docker に指示します。 コンテナーの起動時に、`ENTRYPOINT` コマンドが実行されます。 このコマンドが終了すると、コンテナーは自動的に停止します。
 
@@ -370,7 +370,8 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 `docker run` コマンドでは、*Dockerfile* から `ENTRYPOINT` コマンドを変更し、そのコンテナーに対してのみ何か他のことを実行することもできます。 たとえば、次のコマンドを使うと `bash` または `cmd.exe` を実行できます。 必要に応じて、コマンドを編集します。
 
 #### <a name="windows"></a>Windows
-この例では、`ENTRYPOINT` が `cmd.exe` に変更されています。 プロセスを終了してコンテナーを停止するには、<kbd>Ctrl + C</kbd> キーを押します。
+
+この例では、`ENTRYPOINT` が `cmd.exe` に変更されています。 プロセスを終了してコンテナーを停止するには、<kbd>Ctrl</kbd>+<kbd>C</kbd> を押します。
 
 ```console
 > docker run -it --rm --entrypoint "cmd.exe" myimage
@@ -411,13 +412,13 @@ exit
 
 Docker には多種多様なコマンドがあり、コンテナーとイメージに対する操作がカバーされています。 コンテナーの管理に不可欠な Docker コマンドは次のとおりです。
 
-* [docker build](https://docs.docker.com/engine/reference/commandline/build/)
-* [docker run](https://docs.docker.com/engine/reference/commandline/run/)
-* [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)
-* [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)
-* [docker rm](https://docs.docker.com/engine/reference/commandline/rm/)
-* [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)
-* [docker image](https://docs.docker.com/engine/reference/commandline/image/)
+- [docker build](https://docs.docker.com/engine/reference/commandline/build/)
+- [docker run](https://docs.docker.com/engine/reference/commandline/run/)
+- [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)
+- [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)
+- [docker rm](https://docs.docker.com/engine/reference/commandline/rm/)
+- [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)
+- [docker image](https://docs.docker.com/engine/reference/commandline/image/)
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 
@@ -455,7 +456,7 @@ docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
 
 ## <a name="next-steps"></a>次の手順
 
-* [ASP.NET Core マイクロサービスのチュートリアルを試します。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [コンテナーをサポートする Azure サービスを確認します。](https://azure.microsoft.com/overview/containers/)
-* [Dockerfile のコマンドについて読みます。](https://docs.docker.com/engine/reference/builder/)
-* [Visual Studio 向けのコンテナー ツールを調べます](/visualstudio/containers/overview)
+- [ASP.NET Core マイクロサービスのチュートリアルを試します。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+- [コンテナーをサポートする Azure サービスを確認します。](https://azure.microsoft.com/overview/containers/)
+- [Dockerfile のコマンドについて読みます。](https://docs.docker.com/engine/reference/builder/)
+- [Visual Studio 向けのコンテナー ツールを調べます](/visualstudio/containers/overview)

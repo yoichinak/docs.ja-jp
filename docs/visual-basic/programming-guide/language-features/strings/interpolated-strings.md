@@ -8,7 +8,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/21/2019
 ms.locfileid: "69666951"
 ---
-# <a name="interpolated-strings-visual-basic-reference"></a>挿入文字列 (Visual Basic リファレンス)
+# <a name="interpolated-strings-visual-basic-reference"></a>補間された文字列 (Visual Basic リファレンス)
 
 文字列の作成に使用されます。  挿入文字列は、*挿入式*が含まれているテンプレート文字列のように見えます。  挿入文字列は、含まれる挿入式をその文字列表現に置き換えた文字列を返します。 この機能は Visual Basic 14 以降のバージョンで使用できます。
 

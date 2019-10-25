@@ -4,12 +4,12 @@ description: .NET Framework プロジェクトの WCF svcutil ツールと同様
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: c6eb17ca6cd4ce920cd358a87d2a4a6759dc3439
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 49b0579c284af74d270cac04d302ce231dcb9357
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117210"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522834"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core 用 WCF dotnet-svcutil ツール
 
@@ -28,19 +28,19 @@ Windows Communication Foundation (WCF) **dotnet-svcutil** ツールは、ネッ�
 
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 以降のバージョン
-* 任意のコード エディター
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 以降のバージョン
+- 任意のコード エディター
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
-* [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) 以降のバージョン
-* 任意のコード エディター
+- [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) 以降のバージョン
+- 任意のコード エディター
 
 ---
 
 ## <a name="getting-started"></a>作業の開始
 
-次の例では、Web サービス参照を .NET Core Web プロジェクトに追加してサービスを呼び出すために必要な手順について説明します。 _HelloSvcutil_ という名前の .NET Core Web アプリケーションを作成し、次のコントラクトを実装する Web サービスへの参照を追加します。
+次の例では、Web サービス参照を .NET Core Web プロジェクトに追加してサービスを呼び出すために必要な手順について説明します。 *HelloSvcutil* という名前の .NET Core Web アプリケーションを作成し、次のコントラクトを実装する Web サービスへの参照を追加します。
 
 ```csharp
 [ServiceContract]
@@ -177,8 +177,8 @@ dotnet svcutil --help
 
 ## <a name="release-notes"></a>リリース ノート
 
-* 既知の問題を含む最新のリリース情報については、[リリース ノート](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md)のページを参照してください。
+- 既知の問題を含む最新のリリース情報については、[リリース ノート](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md)のページを参照してください。
 
 ## <a name="information"></a>情報
 
-* [dotnet-svcutil NuGet パッケージ](https://nuget.org/packages/dotnet-svcutil)
+- [dotnet-svcutil NuGet パッケージ](https://nuget.org/packages/dotnet-svcutil)

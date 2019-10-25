@@ -3,12 +3,12 @@ title: Docker の概要
 description: この記事では、.NET Core アプリケーションのコンテキストでの Docker の基本と概要について説明します。
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5da71215e3b539f10993677d23d89e2b8a49cb39
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3f40d2723feb5a31066115ae11cafba11981f1b4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799357"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523005"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET および Docker の概要
 
@@ -52,27 +52,27 @@ Microsoft は、特定のシナリオに対応したイメージを用意して�
 
 さまざまな Azure サービスがコンテナーに対応しています。 アプリケーションの Docker イメージを作成して、次のサービスのいずれかにデプロイできます。
 
-* [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
+- [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
 Kubernetes を使用して Linux コンテナーのスケールと調整を行います。
 
-* [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
+- [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
 PaaS 環境で Linux コンテナーを使用して Web アプリまたは API をデプロイします。
 
-* [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
+- [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
 クラウドでコンテナーをホストしますが、高度な管理サービスは何もありません。
 
-* [Azure Batch](https://azure.microsoft.com/services/batch/)\
+ [Azure Batch](https://azure.microsoft.com/services/batch/)\
 コンテナーを使用して反復的なコンピューティング ジョブを実行します。
 
-* [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
-Windows Server コンテナーを使用して、.NET アプリケーションをマイクロサービスにリフト、シフト、および最新化します
+- [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
+Windows Server コンテナーを使用して、.NET アプリケーションをマイクロサービスにリフト、シフト、および最新化します。
 
-* [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
+- [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
 すべての種類の Azure デプロイでコンテナー イメージを格納し、管理します。
 
 ## <a name="next-steps"></a>次の手順
 
-* [.NET Core アプリケーションをコンテナー化する方法について説明します。](build-docker-netcore-container.md)
-* [ASP.NET Core アプリケーションをコンテナー化する方法を学習します。](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
-* [Learn の ASP.NET Core マイクロサービスのチュートリアルをお試しください。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [Visual Studio でのコンテナー ツールについて学習します](/visualstudio/containers/overview)
+- [.NET Core アプリケーションをコンテナー化する方法について説明します。](build-docker-netcore-container.md)
+- [ASP.NET Core アプリケーションをコンテナー化する方法を学習します。](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
+- [Learn の ASP.NET Core マイクロサービスのチュートリアルをお試しください。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+- [Visual Studio でのコンテナー ツールについて学習します](/visualstudio/containers/overview)

@@ -1,6 +1,6 @@
 ---
 title: IMetaDataTables::GetColumnInfo メソッド
-ms.date: 03/30/2017
+ms.date: 10/10/2019
 api_name:
 - IMetaDataTables.GetColumnInfo
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0755cb2a91d61725338562cb1fe249a9cfacc38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd67d9faafedf4fb92c69618d4464ebb2ce47dcc
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781516"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774260"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo メソッド
-指定されたテーブルで指定された列に関するデータを取得します。  
+指定されたテーブル内の指定された列に関するデータを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,31 +40,59 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-## <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター
+=======
+
  `ixTbl`  
- [in]目的のテーブルのインデックス。  
+ から目的のテーブルのインデックス。  
   
  `ixCol`  
- [in]必要な列のインデックス。  
+ から目的の列のインデックス。  
   
  `poCol`  
- [out]行内の列のオフセットへのポインター。  
+ 入出力行内の列のオフセットへのポインター。  
   
  `pcbCol`  
- [out]列のバイト単位のサイズへのポインター。  
+ 入出力列のサイズ (バイト単位) へのポインター。  
   
  `pType`  
- [out]列の値の型へのポインター。  
+ 入出力列内の値の型へのポインター。  
   
  `ppName`  
- [out]列の名前へのポインターへのポインター。  
+ 入出力列名へのポインターへのポインター。  
+ 
+## <a name="remarks"></a>Remarks
+
+返される列の型は、値の範囲内にあります。
+
+| pType                    | 説明   | ヘルパー関数                   |
+|--------------------------|---------------|-----------------------------------|
+| `0`..`iRidMax`<br>(0.. 63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | コード化されたトークン | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `iSHORT` (96)            | Int16         | **IsFixedType**                   |
+| `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
+| `iLONG` (98)             | Int32         | **IsFixedType**                   |
+| `iULONG` (99)            | UInt32        | **IsFixedType**                   |
+| `iBYTE` (100)            | Byte          | **IsFixedType**                   |
+| `iSTRING` (101)          | 文字列型        | **IsHeapType**                    |
+| `iGUID` (102)            | GUID          | **IsHeapType**                    |
+| `iBLOB` (103)            | Blob          | **IsHeapType**                    |
+
+*ヒープ*に格納されている値 (つまり `IsHeapType == true`) は、次の方法で読み取ることができます。
+
+- `iSTRING`: **Imetadatatables**
+- `iGUID`: **Imetadatatables 実行できます。 GetGUID**
+- `iBLOB`: **Imetadatatables 実行できます。 GetBlob**
+
+> [!IMPORTANT]
+> 上の表で定義されている定数を使用するには、 *cor*ヘッダーファイルによって提供されるディレクティブ `#define _DEFINE_META_DATA_META_CONSTANTS` を含めます。
+
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **ヘッダー:** Cor  
   
- **ヘッダー:** Cor.h  
-  
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

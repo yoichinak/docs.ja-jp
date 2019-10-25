@@ -81,4 +81,4 @@ ms.locfileid: "69944424"
 - <xref:System.Security.Cryptography.DES>
 - <xref:System.Security.Cryptography.TripleDES>
 - <xref:System.Security.Cryptography.Rijndael>
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [暗号化サービス](../../../../standard/security/cryptographic-services.md)

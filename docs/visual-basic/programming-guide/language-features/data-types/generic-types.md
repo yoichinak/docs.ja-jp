@@ -78,7 +78,7 @@ ms.locfileid: "65593386"
 ## <a name="eligible-programming-elements"></a>使用できるプログラミング要素  
  ジェネリック クラス、構造体、インターフェイス、プロシージャ、およびデリゲートを定義して使用することができます。 .NET Framework には、いくつかのジェネリック クラス、構造、および一般的に使用されるジェネリックな要素を表すインターフェイスが定義されてことに注意してください。 <xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間には、ディクショナリ、リスト、キュー、スタックが用意されています。 独自のジェネリックな要素を定義する前に、それに相当する要素が既に <xref:System.Collections.Generic?displayProperty=nameWithType>に用意されていないかをご確認ください。  
   
- プロシージャは型ではありませんが、ジェネリック プロシージャを定義し、使用できます。 「 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
+ プロシージャは型ではありませんが、ジェネリック プロシージャを定義し、使用できます。 「 [Visual Basic におけるジェネリック プロシージャ](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
   
 ## <a name="advantages-of-generic-types"></a>ジェネリック型の利点  
  ジェネリック型は、それぞれが特定のデータ型を操作する複数のプログラミング要素を宣言するための基礎となります。 ジェネリック型の代わりになるものを以下に示します。  
@@ -126,7 +126,7 @@ ms.locfileid: "65593386"
   
  複数の要件を指定する場合は、コンマで区切られた *制約リスト* を中かっこ (`{ }`) で囲みます。 含めるをアクセス可能のコンス トラクターを必要とする、 [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)キーワードをリストにします。 参照型であることを必須とするには、 `Class` キーワードを追加し、値型であることを必須とするには、 `Structure` キーワードを追加します。  
   
- 制約の詳細については、「 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
+ 制約の詳細については、[型リスト](../../../../visual-basic/language-reference/statements/type-list.md)に関するページをご覧ください。  
   
 ### <a name="example-of-multiple-constraints"></a>複数の制約の例  
  次の例は、型パラメーターに制約リストがあるジェネリック クラスのスケルトン定義を示しています。 このクラスのインスタンスを作成するコードでは、型引数が <xref:System.IComparable> インターフェイスと <xref:System.IDisposable> インターフェイスの両方を実装し、参照型であり、アクセス可能なパラメーターなしのコンストラクターを公開する必要があります。  

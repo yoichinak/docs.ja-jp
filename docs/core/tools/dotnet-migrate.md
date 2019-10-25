@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/19/2019
 ms.locfileid: "71117689"
 ---
-# <a name="dotnet-migrate"></a>dotnet の移行
+# <a name="dotnet-migrate"></a>dotnet migrate
 
 **この記事の対象: ✓** .NET Core 1.x SDK **✓** .NET Core 2.x SDK
 

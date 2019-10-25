@@ -26,7 +26,7 @@ ms.locfileid: "72005684"
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
- この例に示すように、同じバインディング宣言を属性構文で作成するには、特殊文字を適切にエスケープする必要があります。 詳しくは、「[XML Character Entities and XAML](../../xaml-services/xml-character-entities-and-xaml.md)」(XML 文字エンティティと XAML) をご覧ください。  
+ この例に示すように、同じバインディング宣言を属性構文で作成するには、特殊文字を適切にエスケープする必要があります。 詳しくは、[XML 文字エンティティと XAML](../../xaml-services/xml-character-entities-and-xaml.md) をご覧ください。  
   
  この例を実行すると、<xref:System.Windows.Controls.ListBox> によって次の項目が表示されます。 これらは、*Books* の下のすべての要素のうち、*Stock* の値が "*out*" か、*Number* の値が 3 に等しいか 8 以上のものの *Title* です。 @No__t に設定された <xref:System.Windows.Data.XmlDataProvider.XPath%2A> の値によって、*書籍*の要素のみが公開される (基本的にフィルターを設定する) ことが示されるため、 *CD*項目は返されません。  
   

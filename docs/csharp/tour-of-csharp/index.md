@@ -3,12 +3,12 @@ title: C# のツアー - C# ガイド
 description: C# を始めてお使いの方のために、 この言語の基本を説明します。
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: eaaa5a259f0776a2749ed899d0406aee041a8442
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: b497ff05b29ce349fe2be3f8b9bc1a8697d6b30b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105650"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774075"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 言語のツアー
 
@@ -26,15 +26,15 @@ C# のプログラムとライブラリが互換性を保ちながら時間と�
 
 "Hello, World" は、プログラミング言語を紹介するために伝統的に使用されているプログラムです。 これを C# で記述すると次のようになります。
 
-[!code-csharp[Hello World](../../../samples/snippets/csharp/tour/hello/Program.cs#L1-L8)]
+[!code-csharp[Hello World](~/samples/snippets/csharp/tour/hello/Program.cs)]
 
-通常、C# のソース ファイルのファイル拡張子は `.cs` です。 "Hello, World" プログラムを `hello.cs` ファイルに格納したと想定すると、このプログラムは次のようにコマンド ラインを使用してコンパイルできます。
+通常、C# のソース ファイルのファイル拡張子は `.cs` です。 "Hello, World" プログラムを *hello.cs* ファイルに格納したと想定すると、このプログラムは次のようにコマンド ラインを使用してコンパイルできます。
 
 ```console
 csc hello.cs
 ```
 
-これにより、hello.exe という名前の実行可能アセンブリが生成されます。 このアプリケーションを実行すると、次のような出力が生成されます。
+これにより、*hello.exe* という名前の実行可能アセンブリが生成されます。 このアプリケーションを実行すると、次のような出力が生成されます。
 
 ```console
 Hello, World
@@ -49,7 +49,7 @@ Hello, World
 
 プログラムの出力は、`System` 名前空間にある `Console` クラスの `WriteLine` メソッドによって生成されます。 このクラスは、コンパイラによって自動的に参照される、標準のクラス ライブラリで提供されています。
 
-C# について学ぶべきことはまだたくさんあります。  以下のトピックで、C# 言語の各要素の概要について説明しています。 これらの概要では C# 言語のすべての要素に関する基本情報が提供されており、各要素をさらに深く知るために必要な情報を得ることができます。
+C# について学ぶべきことはまだたくさんあります。 以下のトピックで、C# 言語の各要素の概要について説明しています。 これらの概要では C# 言語のすべての要素に関する基本情報が提供されており、各要素をさらに深く知るために必要な情報を得ることができます。
 
 - [プログラムの構造](program-structure.md)
   - C# 言語を構成する主要な概念である "***プログラム***"、"***名前空間***"、"***型***"、"***メンバー***"、"***アセンブリ***" について説明します。

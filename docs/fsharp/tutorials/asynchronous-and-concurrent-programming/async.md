@@ -1,6 +1,8 @@
 ---
-title: F#での非同期プログラミング
+
+title: F# での非同期プログラミング
 description: F#がコア関数型プログラミングの概念から派生した言語レベルのプログラミングモデルに基づいて、非同期性のクリーンなサポートを提供する方法について説明します。
+
 ms.date: 12/17/2018
 ms.openlocfilehash: 1ede4a5c1e26df271ac94f9b2c216ac84fb38f59
 ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9

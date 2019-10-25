@@ -27,5 +27,5 @@ ms.locfileid: "64662031"
   
 ## <a name="see-also"></a>関連項目
 
-- [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [宣言された要素の名前 (Visual Basic)](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)

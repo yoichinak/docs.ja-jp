@@ -26,7 +26,7 @@ ms.locfileid: "56965268"
  [!code-csharp[TPL_Parallel#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_file.cs#08)]
  [!code-vb[TPL_Parallel#08](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/fileiteration08.vb#08)]  
   
- この例では、ファイル I/O を同期的に実行します。 大きなファイルを処理する場合やネットワーク接続が低速の場合は、ファイルに非同期にアクセスするよりも望ましいと考えられます。 非同期 I/O の手法を並列反復処理と組み合わせることができます。 詳細については、「[TPL and Traditional .NET Framework Asynchronous Programming](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)」(TPL と従来の .NET Framework 非同期プログラミング) を参照してください。  
+ この例では、ファイル I/O を同期的に実行します。 大きなファイルを処理する場合やネットワーク接続が低速の場合は、ファイルに非同期にアクセスするよりも望ましいと考えられます。 非同期 I/O の手法を並列反復処理と組み合わせることができます。 詳細については、「[TPL と従来の .NET Framework 非同期プログラミング](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)」を参照してください。  
   
  この例では、ローカル変数 `fileCount` を使用して、処理済みファイルの合計数を示すカウントを管理します。 この変数は複数のタスクから同時にアクセスされる可能性があるため、この変数へのアクセスは <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> メソッドの呼び出しによって同期されています。  
   

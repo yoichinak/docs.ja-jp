@@ -1,5 +1,5 @@
 ---
-title: .NET Framework クラス ライブラリの互換性のために残されている機能
+title: クラス ライブラリ内にある旧版のもの
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/05/2019
 ms.locfileid: "66690478"
 ---
-# <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework クラス ライブラリの互換性のために残されている機能
+# <a name="whats-obsolete-in-the-net-framework-class-library"></a>クラス ライブラリ内にある旧版のもの
 
 .NET Framework は進化しています。 バージョンが新しくなるたびに、新しい機能を提供する新しい型と新しいメンバーが追加されています。 既存の型とそのメンバーも変更されています。 たとえば、一部の型は、その型がサポートするテクノロジが新しいテクノロジに置き換えられることで重要度が下がり、一部のメソッドは、より便利な新しいメソッドまたはより多くの機能を備えた新しいメソッドに置き換えられています。
 

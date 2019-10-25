@@ -1,5 +1,5 @@
 ---
-title: メッセージ クラスの使用
+title: Message クラスの使用
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/22/2019
 ms.locfileid: "69967847"
 ---
-# <a name="using-the-message-class"></a>メッセージ クラスの使用
+# <a name="using-the-message-class"></a>Message クラスの使用
 クラス<xref:System.ServiceModel.Channels.Message>は、Windows Communication Foundation (WCF) の基本となります。 クライアントとサービスの間のすべての通信は、最終的には <xref:System.ServiceModel.Channels.Message> インスタンスの送受信となります。  
   
  通常は、<xref:System.ServiceModel.Channels.Message> クラスと直接対話することはありません。 代わりに、データコントラクト、メッセージコントラクト、操作コントラクトなどの WCF サービスモデル構造を使用して、受信メッセージと送信メッセージを記述します。 ただし、一部の高度なシナリオでは、<xref:System.ServiceModel.Channels.Message> を直接使用してプログラムを作成することができます。 たとえば、次のような場合に <xref:System.ServiceModel.Channels.Message> クラスを使用できます。  

@@ -8,34 +8,34 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: 19c6fcb04a373d782db3deafc732f69bf20e7f0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1c76e3ade0b383727c3241fdaf5ae44b677559c8
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962774"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775693"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic の Main プロシージャ
-すべての Visual Basic アプリケーションには、と`Main`いうプロシージャが含まれている必要があります。 この手順は、アプリケーションの開始点と全体的な制御として機能します。 .NET Framework は、アプリケーション`Main`を読み込んだときにプロシージャを呼び出し、そのプロシージャに制御を渡す準備ができています。 Windows フォームアプリケーションを作成する場合を除き、独自に実行`Main`するアプリケーション用の手順を記述する必要があります。
+すべての Visual Basic アプリケーションには、`Main` と呼ばれるプロシージャを含める必要があります。 この手順は、アプリケーションの開始点と全体的な制御として機能します。 .NET Framework は、アプリケーションが読み込まれ、それに制御を渡す準備ができたときに、`Main` プロシージャを呼び出します。 Windows フォームアプリケーションを作成する場合を除き、独自に実行するアプリケーションの場合は、`Main` の手順を記述する必要があります。
 
- `Main`最初に実行されるコードが含まれています。 で`Main`は、プログラムの開始時に最初に読み込まれるフォームを決定し、アプリケーションのコピーが既にシステムで実行されているかどうかを確認したり、アプリケーションに対して一連の変数を設定したり、アプリケーションで必要なデータベースを開いたりすることができます。
+ `Main` には、最初に実行されるコードが含まれています。 @No__t_0 では、プログラムの開始時に最初に読み込まれるフォームを特定し、アプリケーションのコピーが既にシステムで実行されているかどうかを確認したり、アプリケーションの一連の変数を設定したり、アプリケーションが必要とするデータベースを開いたりすることができます。
 
 ## <a name="requirements-for-the-main-procedure"></a>Main プロシージャの要件
- 独自の (通常は拡張子 .exe) で実行されるファイルには、 `Main`プロシージャが含まれている必要があります。 ライブラリ (たとえば、拡張子 .dll) は独自には実行されず、プロシージャは`Main`必要ありません。 作成できるさまざまな種類のプロジェクトの要件は次のとおりです。
+ 独自の (通常は拡張子 .exe) で実行されるファイルには、`Main` プロシージャが含まれている必要があります。 ライブラリ (拡張子 .dll など) は独自には実行されず、`Main` の手順は必要ありません。 作成できるさまざまな種類のプロジェクトの要件は次のとおりです。
 
-- コンソールアプリケーションは自身で実行されるため、少なくとも 1 `Main`つのプロシージャを指定する必要があります。
+- コンソールアプリケーションは自身で実行されるため、少なくとも1つの `Main` プロシージャを指定する必要があります。
 
-- Windows フォームアプリケーションは独自に実行されます。 ただし、このようなアプリケーションでは`Main` 、Visual Basic コンパイラによってプロシージャが自動的に生成されるため、作成する必要はありません。
+- Windows フォームアプリケーションは独自に実行されます。 ただし、このようなアプリケーションでは、Visual Basic コンパイラによって `Main` プロシージャが自動的に生成されるため、作成する必要はありません。
 
-- クラスライブラリには、プロシージャ`Main`は必要ありません。 これには、Windows コントロールライブラリと Web コントロールライブラリが含まれます。 Web アプリケーションはクラスライブラリとして配置されます。
+- クラスライブラリには `Main` プロシージャは必要ありません。 これには、Windows コントロールライブラリと Web コントロールライブラリが含まれます。 Web アプリケーションはクラスライブラリとして配置されます。
 
 ## <a name="declaring-the-main-procedure"></a>Main プロシージャの宣言
- プロシージャを宣言するには、 `Main`次の4つの方法があります。 引数を受け取ることも、それ以外の値を返すこともできます。
+ @No__t_0 プロシージャを宣言するには、次の4つの方法があります。 引数を受け取ることも、それ以外の値を返すこともできます。
 
 > [!NOTE]
-> クラスでを`Main`宣言する場合は、 `Shared`キーワードを使用する必要があります。 モジュールでは、 `Main`はである必要`Shared`はありません。
+> クラスで `Main` を宣言する場合は、`Shared` キーワードを使用する必要があります。 モジュールでは、`Main` を `Shared` する必要はありません。
 
-- 最も簡単な方法は、引数`Sub`を取らず、値を返さないプロシージャを宣言することです。
+- 最も簡単な方法は、引数を取らず、値を返さない `Sub` プロシージャを宣言することです。
 
     ```vb
     Module mainModule
@@ -47,7 +47,7 @@ ms.locfileid: "69962774"
     End Module
     ```
 
-- `Main`は、オペレーティングシステム`Integer`がプログラムの終了コードとして使用する値を返すこともできます。 他のプログラムでは、Windows の ERRORLEVEL 値を調べることによって、このコードをテストできます。 終了コードを返すには、 `Main` `Sub`プロシージャではなく`Function` 、プロシージャとして宣言する必要があります。
+- `Main` は、オペレーティングシステムがプログラムの終了コードとして使用する `Integer` 値を返すこともできます。 他のプログラムでは、Windows の ERRORLEVEL 値を調べることによって、このコードをテストできます。 終了コードを返すには、`Main` を `Sub` プロシージャの代わりに `Function` プロシージャとして宣言する必要があります。
 
     ```vb
     Module mainModule
@@ -64,7 +64,7 @@ ms.locfileid: "69962774"
     End Module
     ```
 
-- `Main`は、引数と`String`して配列を受け取ることもできます。 配列内の各文字列には、プログラムを呼び出すために使用されるコマンドライン引数の1つが含まれています。 値に応じて、さまざまなアクションを実行できます。
+- `Main` は、引数として `String` 配列を受け取ることもできます。 配列内の各文字列には、プログラムを呼び出すために使用されるコマンドライン引数の1つが含まれています。 値に応じて、さまざまなアクションを実行できます。
 
     ```vb
     Module mainModule
@@ -88,7 +88,7 @@ ms.locfileid: "69962774"
     End Module
     ```
 
-- を宣言`Main`すると、次のように、コマンドライン引数を調べることができますが、終了コードは返されません。
+- 次のように、`Main` を宣言して、コマンドライン引数を確認し、終了コードを返すことはできません。
 
     ```vb
     Module mainModule
@@ -114,7 +114,7 @@ ms.locfileid: "69962774"
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
 - [Visual Basic プログラムの構造](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
-- [/main](../../../visual-basic/reference/command-line-compiler/main.md)
+- [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)

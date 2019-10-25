@@ -50,7 +50,7 @@ ms.locfileid: "67135669"
   
  明示的な比較を指定するために、一部のメソッドではパラメーターとして **IComparer** 実装を受け取ります。 たとえば、 <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> メソッドは <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 実装を受け取ります。  
   
- システムの現在のカルチャ設定は、コレクション内の比較と並べ替えに影響を与える可能性があります。 既定では、 **Collections** クラスの比較と並べ替えはカルチャに依存します。 カルチャ設定を無視して一貫した比較と並べ替えの結果を得るには、 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> を受け取るメンバー オーバーロードと共に <xref:System.Globalization.CultureInfo>を使用します。 詳細については、次のトピックを参照してください。 [Performing Culture-Insensitive String Operations in Collections](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) および [Performing Culture-Insensitive String Operations in Arrays](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).  
+ システムの現在のカルチャ設定は、コレクション内の比較と並べ替えに影響を与える可能性があります。 既定では、 **Collections** クラスの比較と並べ替えはカルチャに依存します。 カルチャ設定を無視して一貫した比較と並べ替えの結果を得るには、 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> を受け取るメンバー オーバーロードと共に <xref:System.Globalization.CultureInfo>を使用します。 詳細については、[カルチャの影響を受けないコレクションの操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)および[カルチャの影響を受けない配列の操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)を参照してください。  
   
 <a name="BKMK_Equalityandsortexample"></a>   
 ## <a name="equality-and-sort-example"></a>等価性と並べ替えの例  

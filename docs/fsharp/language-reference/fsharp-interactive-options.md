@@ -1,5 +1,5 @@
 ---
-title: F# Interactive オプション
+title: F# インタラクティブ オプション
 description: Interactive、fsi.exe でF#サポートされているコマンドラインオプションについて説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: c9cd5c2e73a6e2f6ce0a9b2f2a631b6a2658423c
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/18/2019
 ms.locfileid: "71083119"
 ---
-# <a name="f-interactive-options"></a>F# Interactive オプション
+# <a name="f-interactive-options"></a>F# インタラクティブ オプション
 
 > [!NOTE]
 > この記事では、現時点の Windows のエクスペリエンスについてのみ説明します。  書き換えられる予定です。

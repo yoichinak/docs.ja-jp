@@ -8,17 +8,19 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: df56287d161f7760e136eb80aa1a9171966df794
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 4fed33272dbed50100a37aa9fcd30befc46435f9
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275802"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771836"
 ---
 # <a name="c-reference"></a>C# リファレンス
+
 このセクションでは、C# のキーワード、演算子、特殊文字、プリプロセッサ ディレクティブ、コンパイラ オプション、およびコンパイラのエラーと警告に関する参考資料を紹介します。  
   
-## <a name="in-this-section"></a>このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容
+
  [C# のキーワード](./keywords/index.md)  
  C# のキーワードと構文に関する情報へのリンクを示します。  
   

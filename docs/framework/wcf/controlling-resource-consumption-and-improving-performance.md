@@ -24,7 +24,7 @@ ms.locfileid: "72320619"
 > [!NOTE]
 > 特定の問題が発生した場合は、まず、 [WCF トラブルシューティングクイックスタート](wcf-troubleshooting-quickstart.md)を読んで、問題 (および解決策) がそこに表示されているかどうかを確認する必要があります。
 
- シリアル化プロセスを制限するプロパティは、「[データのセキュリティに関する考慮事項](./feature-details/security-considerations-for-data.md)」に記載されています。 トランスポートに関連するリソースの消費を制限するプロパティについては、「[トランスポートクォータ](./feature-details/transport-quotas.md)」を参照してください。 アプリケーション層でリソースの消費を制限するプロパティは、<xref:System.ServiceModel.Dispatcher.ServiceThrottle> クラスのメンバーです。
+ シリアル化プロセスを制限するプロパティは、「[データに関するセキュリティの考慮事項](./feature-details/security-considerations-for-data.md)」に一覧で表示されています。 トランスポートに関連するリソースの消費を制限するプロパティについては、「[トランスポートクォータ](./feature-details/transport-quotas.md)」を参照してください。 アプリケーション層でリソースの消費を制限するプロパティは、<xref:System.ServiceModel.Dispatcher.ServiceThrottle> クラスのメンバーです。
 
 ## <a name="detecting-application-and-performance-issues-related-to-quota-settings"></a>クォータ設定に関連するアプリケーションとパフォーマンスの問題の検出
  上記の値の既定値は、一般的なセキュリティの問題に対する基本的な保護を提供しながら、さまざまなアプリケーションで基本的なアプリケーション機能を使用できるように選択されたものです。 ただし、アプリケーション デザインによっては、1 つ以上のスロットル設定を超えてしまったためにアプリケーションがセキュリティで保護されなかったり、設計どおりに動作しなかったりする場合があります。 その場合は、超過したスロットル値とそのレベルを特定し、アプリケーションのスループットを向上するための適切な手順を決定する必要があります。

@@ -42,7 +42,7 @@ ms.locfileid: "72320758"
 
 - <xref:System.ServiceModel.NetTcpBinding>: このバインディングは HTTP バインディングよりも高いパフォーマンスを提供し、ローカルネットワークでの使用に最適です。
   
- WCF に用意されているすべてのバインディングの完全な一覧と説明については、「[システム指定のバインディング](system-provided-bindings.md)」を参照してください。  
+ WCF 指定の全バインディングの説明付き一覧については、「[システム指定のバインディング](system-provided-bindings.md)」を参照してください。  
   
 ## <a name="using-your-own-bindings"></a>独自のバインディングの使用  
  システム指定のバインディングに、サービス アプリケーションに必要な正しい組み合わせの機能がない場合、独自のバインディングを作成できます。 これには、2 つの方法があります。 <xref:System.ServiceModel.Channels.CustomBinding> オブジェクトを使用して既存のバインド要素から新しいバインディングを作成するか、<xref:System.ServiceModel.Channels.Binding> バインディングから派生することによって完全にユーザー定義のバインディングを作成することができます。 これらの2つの方法を使用して独自のバインディングを作成する方法の詳細については、「[カスタムバインド](./extending/custom-bindings.md)」および「[ユーザー定義バインディングの作成](./extending/creating-user-defined-bindings.md)」を参照してください。  

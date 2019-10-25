@@ -100,7 +100,7 @@ public class MyServiceHost : ServiceHost
   
 - 場合によっては、クライアントのエンドポイント アドレスを "localhost" ではなくホスト名に変更する必要があります。  
   
-- 場合によっては、アプリケーションに対してポートを開く必要があります。 詳細については、SDK サンプルから「 [Firewall Instructions](./samples/firewall-instructions.md) 」を参照してください。  
+- 場合によっては、アプリケーションに対してポートを開く必要があります。 詳細については、SDK サンプルから「 [ファイアウォール手順](./samples/firewall-instructions.md) 」を参照してください。  
   
 - その他の問題については、 [Windows Communication Foundation サンプルを実行](./samples/running-the-samples.md)するサンプルトピックを参照してください。  
   
@@ -132,7 +132,7 @@ public class MyServiceHost : ServiceHost
   
     4. SetSPN を使用してドメインに新しい SPN を登録します。 この操作を行えるのは、ドメイン管理者のみです。  
   
- Kerberos プロトコルの詳細については、「 [WCF およびで使用されるセキュリティの概念](./feature-details/security-concepts-used-in-wcf.md)」を参照してください。  
+ Kerberos プロトコルの詳細については、「 [WCF で使用されるセキュリティの概要](./feature-details/security-concepts-used-in-wcf.md)」および次を参照してください。  
   
 - [Windows 認証エラーのデバッグ](./feature-details/debugging-windows-authentication-errors.md)  
   

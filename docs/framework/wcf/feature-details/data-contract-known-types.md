@@ -17,7 +17,7 @@ ms.lasthandoff: 08/27/2019
 ms.locfileid: "70040196"
 ---
 # <a name="data-contract-known-types"></a>既知のデータ コントラクト型
-<xref:System.Runtime.Serialization.KnownTypeAttribute> クラスを使用すると、逆シリアル化において考慮する必要のある型を事前に指定できます。 実施例については、「 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 」の例を参照してください。  
+<xref:System.Runtime.Serialization.KnownTypeAttribute> クラスを使用すると、逆シリアル化において考慮する必要のある型を事前に指定できます。 実施例については、「[既知の型](../../../../docs/framework/wcf/samples/known-types.md)」の例を参照してください。  
   
  通常は、クライアントとサービス間でパラメーターを渡したり、値を返したりするときに、転送するデータのデータ コントラクトのすべてが両方のエンドポイントで共有されます。 ただし、次の場合はこれが該当しません。  
   

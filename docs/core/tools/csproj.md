@@ -2,12 +2,12 @@
 title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 ms.date: 04/08/2019
-ms.openlocfilehash: 2ec1aaff88754848d844a56b1744beb2efa4cd89
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d7fca40caaeb83152b8ae5260bf918981362d2c3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291236"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522788"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -33,11 +33,11 @@ ms.locfileid: "72291236"
 
 `Microsoft.NETCore.App` または `NETStandard.Library` メタパッケージは暗黙的に参照されるので、ベスト プラクティスとして以下が推奨されます。
 
-* .NET Core または .NET Standard を対象とするとき、プロジェクト ファイルの `<PackageReference>` アイテム経由で `Microsoft.NETCore.App` または `NETStandard.Library` メタパッケージを明示的に参照しないようにします。
-* .NET Core を対象にするとき、特定バージョンのランタイムが必要な場合、メタパッケージを参照するのではなく、プロジェクト内で `<RuntimeFrameworkVersion>` プロパティを使用します (`1.0.4` など)。
-  * [自己完結型の展開](../deploying/index.md#self-contained-deployments-scd)を使用し、特定のパッチ バージョンの 1.0.0 LTS ランタイムが必要な場合などにこの問題が発生する可能性があります。
-* .NET Standard を対象にするとき、特定バージョンの `NETStandard.Library` メタパッケージが必要な場合、`<NetStandardImplicitPackageVersion>` プロパティを使用し、必要なバージョンを設定できます。
-* .NET Framework プロジェクトでは、`Microsoft.NETCore.App` または `NETStandard.Library` メタパッケージに参照を明示的に追加したり、更新したりしないでください。 .NET Standard ベースの NuGet パッケージを使用するとき、何らかのバージョンの `NETStandard.Library` が必要であれば、NuGet はそのバージョンを自動的にインストールします。
+- .NET Core または .NET Standard を対象とするとき、プロジェクト ファイルの `<PackageReference>` アイテム経由で `Microsoft.NETCore.App` または `NETStandard.Library` メタパッケージを明示的に参照しないようにします。
+- .NET Core を対象にするとき、特定バージョンのランタイムが必要な場合、メタパッケージを参照するのではなく、プロジェクト内で `<RuntimeFrameworkVersion>` プロパティを使用します (`1.0.4` など)。
+  - [自己完結型の展開](../deploying/index.md#self-contained-deployments-scd)を使用し、特定のパッチ バージョンの 1.0.0 LTS ランタイムが必要な場合などにこの問題が発生する可能性があります。
+- .NET Standard を対象にするとき、特定バージョンの `NETStandard.Library` メタパッケージが必要な場合、`<NetStandardImplicitPackageVersion>` プロパティを使用し、必要なバージョンを設定できます。
+- .NET Framework プロジェクトでは、`Microsoft.NETCore.App` または `NETStandard.Library` メタパッケージに参照を明示的に追加したり、更新したりしないでください。 .NET Standard ベースの NuGet パッケージを使用するとき、何らかのバージョンの `NETStandard.Library` が必要であれば、NuGet はそのバージョンを自動的にインストールします。
 
 ## <a name="implicit-version-for-some-package-references"></a>一部のパッケージ参照に対する暗黙的なバージョン
 
@@ -59,8 +59,8 @@ ASP.NET Core メタパッケージに対するこれらの参照では、ほと�
 
 バージョンを "*指定する*" と、フレームワーク依存の展開では ASP.NET Core の共有フレームワークの "*最小*" バージョンとして扱われ、自己完結型の展開では "*厳密な*" バージョンとして扱われます。 これには、次のような影響があります。
 
-* サーバーにインストールされている ASP.NET Core のバージョンが、PackageReference で指定されているバージョンより小さい場合、.NET Core プロセスの起動は失敗します。 Azure などのホスティング環境でメタパッケージの更新プログラムが使用できるようになる前に、NuGet.org で更新プログラムが利用可能になることがよくあります。 PackageReference でのバージョンを ASP.NET Core に更新すると、展開されているアプリケーションが失敗する可能性があります。
-* アプリケーションが[自己完結型の展開](../deploying/index.md#self-contained-deployments-scd)として展開されている場合、アプリケーションに .NET Core の最新のセキュリティ更新プログラムが含まれていない可能性があります。 バージョンを指定しないと、SDK は自己完結型の展開に ASP.NET Core の最新バージョンを自動的に含めることができます。
+- サーバーにインストールされている ASP.NET Core のバージョンが、PackageReference で指定されているバージョンより小さい場合、.NET Core プロセスの起動は失敗します。 Azure などのホスティング環境でメタパッケージの更新プログラムが使用できるようになる前に、NuGet.org で更新プログラムが利用可能になることがよくあります。 PackageReference でのバージョンを ASP.NET Core に更新すると、展開されているアプリケーションが失敗する可能性があります。
+- アプリケーションが[自己完結型の展開](../deploying/index.md#self-contained-deployments-scd)として展開されている場合、アプリケーションに .NET Core の最新のセキュリティ更新プログラムが含まれていない可能性があります。 バージョンを指定しないと、SDK は自己完結型の展開に ASP.NET Core の最新バージョンを自動的に含めることができます。
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core プロジェクトの既定のコンパイルの include
 
@@ -160,19 +160,20 @@ ASP.NET Core メタパッケージに対するこれらの参照では、ほと�
 
 これらの属性には以下の項目を 1 つ以上含めることができ、複数ある場合はセミコロン `;` 文字で区切ります。
 
-* `Compile` - コンパイルで使用できる lib フォルダーの内容です。
-* `Runtime` - 配布する runtime フォルダーの内容です。
-* `ContentFiles` - 使用する *contentfiles* フォルダーの内容です。
-* `Build` - 使用する build フォルダーのプロパティ/ターゲットです。
-* `Native` - ランタイムの output フォルダーにコピーするネイティブ アセットの内容です。
-* `Analyzers` - アナライザーが使用されます。
+- `Compile` - コンパイルで使用できる *lib* フォルダーの内容です。
+- `Runtime` - 配布する *runtime* フォルダーの内容です。
+- `ContentFiles` - 使用する *contentfiles* フォルダーの内容です。
+- `Build` - 使用する *build* フォルダーのプロパティ/ターゲットです。
+- `Native` - ランタイムの *output* フォルダーにコピーするネイティブ アセットの内容です。
+- `Analyzers` - アナライザーが使用されます。
 
 代わりに、次の値を属性に含めることもできます。
 
-* `None` - いずれのアセットも使用されません。
-* `All` - すべてのアセットが使用されます。
+- `None` - いずれのアセットも使用されません。
+- `All` - すべてのアセットが使用されます。
 
 ### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
+
 `<DotNetCliToolReference>` 項目要素は、プロジェクトのコンテキストでユーザーが復元を望む CLI ツールを指定します。 *project.json* の `tools` ノードに代わるものです。
 
 ```xml
@@ -416,11 +417,11 @@ nuget.exe および Visual Studio パッケージ マネージャーで強制す
 
 メモ:
 
-* `AssemblyVersion` と `FileVersion` の既定値は、サフィックスなしで `$(Version)` の値を受け取ることです。 たとえば、`$(Version)` が `1.2.3-beta.4` の場合、値は `1.2.3` です。
-* `InformationalVersion` の既定値は、`$(Version)` の値です。
-* プロパティが存在する場合、`InformationalVersion` の末尾には `$(SourceRevisionId)` が付加されます。 `IncludeSourceRevisionInInformationalVersion` を使用して無効にすることができます。
-* NuGet メタデータには、`Copyright` および `Description` プロパティも使用されます。
-* `Configuration` はすべてのビルド プロセスで共有され、設定には `dotnet` コマンドの`--configuration` パラメーターを使用します。
+- `AssemblyVersion` と `FileVersion` の既定値は、サフィックスなしで `$(Version)` の値を受け取ることです。 たとえば、`$(Version)` が `1.2.3-beta.4` の場合、値は `1.2.3` です。
+- `InformationalVersion` の既定値は、`$(Version)` の値です。
+- プロパティが存在する場合、`InformationalVersion` の末尾には `$(SourceRevisionId)` が付加されます。 `IncludeSourceRevisionInInformationalVersion` を使用して無効にすることができます。
+- NuGet メタデータには、`Copyright` および `Description` プロパティも使用されます。
+- `Configuration` はすべてのビルド プロセスで共有され、設定には `dotnet` コマンドの`--configuration` パラメーターを使用します。
 
 ### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo
 

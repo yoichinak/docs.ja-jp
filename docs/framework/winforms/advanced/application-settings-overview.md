@@ -31,7 +31,7 @@ ms.locfileid: "69040424"
 
  設定は、構成ファイルの XML フラグメントとして格納されます。 アプリケーション スコープ設定は `<application.Settings>` 要素によって表され、通常は *app*.exe.config に配置されます。ここで、 *app* はメインの実行可能ファイルの名前です。 ユーザー スコープ設定は、 `<userSettings>` 要素によって表され、 *user*.config に配置されます。ここで、 *user* は、現在アプリケーションを実行しているユーザーのユーザー名です。 *app*.exe.config ファイルはアプリケーションと共に展開する必要があります。 *user*.config ファイルは、アプリケーションがそのユーザーの設定を初めて保存するときに、必要に応じて設定アーキテクチャが作成します。 また、 `<userSettings>` app *.exe.config 内で*ブロックを定義して、ユーザー スコープ設定の既定値を指定することもできます。
 
- カスタム コントロールでは、 <xref:System.Configuration.IPersistComponentSettings> メソッドを公開する <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> インターフェイスを実装することで、独自の設定を保存できます。 Windows フォーム <xref:System.Windows.Forms.ToolStrip> コントロールは、このインターフェイスを実装して、アプリケーション セッション間でのツールバーとツールバー項目の位置を保存します。 カスタム コントロールとアプリケーション設定の詳細については、「 [Application Settings for Custom Controls](application-settings-for-custom-controls.md)」を参照してください。
+ カスタム コントロールでは、 <xref:System.Configuration.IPersistComponentSettings> メソッドを公開する <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> インターフェイスを実装することで、独自の設定を保存できます。 Windows フォーム <xref:System.Windows.Forms.ToolStrip> コントロールは、このインターフェイスを実装して、アプリケーション セッション間でのツールバーとツールバー項目の位置を保存します。 カスタム コントロールとアプリケーション設定の詳細については、「 [カスタム コントロールのアプリケーション設定](application-settings-for-custom-controls.md)」を参照してください。
 
 ## <a name="limitations-of-application-settings"></a>アプリケーションの設定の制限事項
  .NET Framework をホストするアンマネージアプリケーションでは、アプリケーション設定を使用できません。 Visual Studio アドイン、C++ for Microsoft Office、Internet Explorer のコントロール ホスト、Microsoft Outlook のアドインやプロジェクトなどの環境では、設定は機能しません。
@@ -43,7 +43,7 @@ ms.locfileid: "69040424"
 ## <a name="getting-started-with-application-settings"></a>アプリケーション設定の概要
  Visual Studio を使用している場合に、Windows フォーム デザイナーの **[プロパティ]** ウィンドウの **(ApplicationSettings)** プロパティを使用して設定を定義することができます。 この方法で設定を定義する場合、Visual Studio は各設定をクラス プロパティに関連付けるカスタムのマネージド ラッパー クラスを自動的に作成します。 また、Visual Studio は、フォームが表示されるとコントロールの設定が自動的に復元され、フォームが閉じられると自動的に保存されるように、フォームまたはコントロールのプロパティへの設定のバインドも処理します。
 
- 設定のより詳細なコントロールが必要な場合は、独自のカスタムのアプリケーション設定のラッパー クラスを定義することができます。 これは、 <xref:System.Configuration.ApplicationSettingsBase>からクラスを派生させ、各設定に対応するプロパティを追加して、これらのプロパティに特別な属性を適用することで実現します。 ラッパー クラスを作成する方法については、「 [Application Settings Architecture](application-settings-architecture.md)」を参照してください。
+ 設定のより詳細なコントロールが必要な場合は、独自のカスタムのアプリケーション設定のラッパー クラスを定義することができます。 これは、 <xref:System.Configuration.ApplicationSettingsBase>からクラスを派生させ、各設定に対応するプロパティを追加して、これらのプロパティに特別な属性を適用することで実現します。 ラッパー クラスを作成する方法については、「 [アプリケーション設定アーキテクチャ](application-settings-architecture.md)」を参照してください。
 
  また、 <xref:System.Windows.Forms.Binding> クラスを使用して、フォームとコントロールのプロパティに設定をプログラムでバインドすることもできます。
 
@@ -58,4 +58,4 @@ ms.locfileid: "69040424"
 - [方法: 実行時に設定を読み取る方法C#](how-to-read-settings-at-run-time-with-csharp.md)
 - [アプリケーション設定とユーザー設定の使用](using-application-settings-and-user-settings.md)
 - [アプリケーション設定アーキテクチャ](application-settings-architecture.md)
-- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
+- [カスタム コントロールのアプリケーション設定](application-settings-for-custom-controls.md)

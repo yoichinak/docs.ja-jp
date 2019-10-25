@@ -226,7 +226,7 @@ Unicode を使用することで、同じコード単位を必ず同じ文字に
 3/31/2013 3:00:00 AM Local
 ```
 
-詳細については、「[Converting Times Between Time Zones](../../../docs/standard/datetime/converting-between-time-zones.md)」(タイム ゾーン間での時刻の変換) を参照してください。
+詳細については、「[タイム ゾーン間での時刻の変換](../../../docs/standard/datetime/converting-between-time-zones.md)」を参照してください。
 
 ### <a name="perform-date-and-time-arithmetic"></a>日付と時刻の演算を実行する
 

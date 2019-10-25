@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 06b0c3b7877337d8a5703403af98dbacdf3ea93c
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3e59783a7f306d3d2a510fe3337a4c6490dcb3e8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834177"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523451"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>方法: XML ドキュメント機能を使用する
 
@@ -135,7 +135,7 @@ XML ドキュメントは、/// で始まります。 新しいプロジェク�
 ## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
-- [/doc (C# コンパイラ オプション)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-doc (C# コンパイラ オプション)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [XML ドキュメント コメント](./index.md)
 - [DocFX ドキュメント プロセッサ](https://dotnet.github.io/docfx/)
 - [Sandcastle ドキュメント プロセッサ](https://github.com/EWSoftware/SHFB)

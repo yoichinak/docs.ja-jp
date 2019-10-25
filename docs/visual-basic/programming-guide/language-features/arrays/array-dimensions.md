@@ -1,5 +1,5 @@
 ---
-title: Visual Basic における配列の次元
+title: Visual Basic における配列のディメンション
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dimensions, arrays
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/26/2019
 ms.locfileid: "68512892"
 ---
-# <a name="array-dimensions-in-visual-basic"></a>Visual Basic における配列の次元
+# <a name="array-dimensions-in-visual-basic"></a>Visual Basic における配列のディメンション
 
 *ディメンション*は、配列の要素の指定を変更できる方向です。 月の各日の売上合計を保持する配列には、1つのディメンション (その月の日付) があります。 月の各日の売上合計を部門別に保持する配列には、2つのディメンション (部署番号とその月の日) があります。 配列が持つ次元の数を*ランク*と呼びます。
 

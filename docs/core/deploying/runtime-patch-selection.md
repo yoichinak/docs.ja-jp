@@ -4,12 +4,12 @@ description: 自己完結型展開における dotnet publish の変更につい
 author: KathleenDollard
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9af1454ede03b277f9b1a10e1d99a997e38809ea
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 6a0cdfb34973822c2f40cdb37d4038d3b7ad8e2a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656298"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522091"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>自己完結型展開ランタイムのロール フォワード
 
@@ -28,8 +28,8 @@ ms.locfileid: "53656298"
 
 `publish` 操作の一部として `restore` を実行することは、お客様のシナリオにとって望ましくない場合があります。 自己完結型のアプリケーションを作成しているときの `publish` 時に `restore` を回避するには、次の操作を行います。
 
-* `RuntimeIdentifiers` プロパティに、発行されるすべての [RID](../rid-catalog.md) をセミコロンで区切って設定します。
-* `TargetLatestRuntimePatch` プロパティを `true`に設定します。
+- `RuntimeIdentifiers` プロパティに、発行されるすべての [RID](../rid-catalog.md) をセミコロンで区切って設定します。
+- `TargetLatestRuntimePatch` プロパティを `true`に設定します。
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>dotnet publish オプションでの no-restore 引数
 

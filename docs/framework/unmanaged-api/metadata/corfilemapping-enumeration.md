@@ -1,5 +1,5 @@
 ---
-title: CorFileMapping 列挙体
+title: CorFileMapping 列挙型
 ms.date: 03/30/2017
 api_name:
 - CorFileMapping
@@ -23,7 +23,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/10/2019
 ms.locfileid: "67781836"
 ---
-# <a name="corfilemapping-enumeration"></a>CorFileMapping 列挙体
+# <a name="corfilemapping-enumeration"></a>CorFileMapping 列挙型
 呼び出しから返されるファイル マッピングの種類を記述する値が含まれています、 [imetadatainfo::getfilemapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)メソッド。  
   
 ## <a name="syntax"></a>構文  

@@ -76,7 +76,7 @@ ms.locfileid: "69666167"
 
 1. フォーム上のコントロールを選択します。 <xref:System.Windows.Forms.DataGrid>
 
-2. **[プロパティ]** ウィンドウ<xref:System.Windows.Forms.DataGrid.TableStyles%2A>で、プロパティを選択し、**省略記号**(![[Visual Studio](./media/visual-studio-ellipsis-button.png)のプロパティウィンドウ] の省略記号ボタン ([...]) をクリックします。
+2. **[プロパティ]** ウィンドウ<xref:System.Windows.Forms.DataGrid.TableStyles%2A>で、プロパティを選択し、**省略記号**(![Visual Studio](./media/visual-studio-ellipsis-button.png)のプロパティウィンドウ] の省略記号ボタン ([...]) をクリックします。
 
 3. **[DataGridTableStyle コレクションエディター]** ダイアログボックスで、 **[追加]** をクリックして、テーブルスタイルをコレクションに追加します。
 
@@ -86,7 +86,7 @@ ms.locfileid: "69666167"
 
      マッピング名は、どのテーブルスタイルをどのテーブルに使用するかを指定するために使用されます。
 
-5. **DataGridTableStyle Collection エディター**で、 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>プロパティを選択し、省略記号ボタン![(Visual Studio](./media/visual-studio-ellipsis-button.png)のプロパティウィンドウの省略記号ボタン ([...]) をクリックします。
+5. **DataGridTableStyle Collection エディター**で、 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>プロパティを選択し、省略記号ボタン(![Visual Studio](./media/visual-studio-ellipsis-button.png)のプロパティウィンドウの省略記号ボタン ([...]) をクリックします。
 
 6. **[System.windows.forms.datagridcolumnstyle> コレクションエディター]** ダイアログボックスで、作成したテーブルのスタイルに列のスタイルを追加します。
 

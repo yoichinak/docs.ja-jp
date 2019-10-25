@@ -1,5 +1,5 @@
 ---
-title: デリゲート (Visual Basic) の変性の使用
+title: デリゲートの変性の使用 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
 ms.openlocfilehash: ebba7e862e1b4677d9438aa301ef2b713fba3712
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70169065"
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a>デリゲート (Visual Basic) の変性の使用
+# <a name="using-variance-in-delegates-visual-basic"></a>デリゲートの変性の使用 (Visual Basic)
 
 メソッドをデリゲートに割り当てると、"*共変性*" と "*反変性*" により、デリゲート型をメソッドのシグネチャに柔軟に一致させることができます。 共変性により、メソッドの戻り値の型の派生を、デリゲートに定義されている型よりも強くできます。 また、反変性により、メソッドのパラメーター型の派生をデリゲート型よりも弱くできます。
 

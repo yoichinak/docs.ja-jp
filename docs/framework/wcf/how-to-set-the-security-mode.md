@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) セキュリティには、トランス�
 
 ただし、これらのモードがすべての定義済みバインディングでサポートされるわけではありません。 ここでは、<xref:System.ServiceModel.WSHttpBinding> クラスと <xref:System.ServiceModel.NetTcpBinding> クラスでモードを設定し、プログラムと構成の両方を使用してモードを設定する方法を示します。
 
-詳細については、「WCF セキュリティ」、「[セキュリティの概要](./feature-details/security-overview.md)」、「[サービス](securing-services.md)のセキュリティ保護」、および「[サービスとクライアント](./feature-details/securing-services-and-clients.md)のセキュリティ保護」を参照してください。 トランスポートモードとメッセージの詳細については、「[トランスポートセキュリティ](./feature-details/transport-security.md)と[メッセージセキュリティ](./feature-details/message-security-in-wcf.md)」を参照してください。
+詳細については、「WCF セキュリティ」、「[セキュリティの概要](./feature-details/security-overview.md)」、「[サービス](securing-services.md)のセキュリティ保護」、および「[サービスおよびクライアントのセキュリティ保護](./feature-details/securing-services-and-clients.md)」を参照してください。 トランスポートモードとメッセージの詳細については、「[トランスポートセキュリティ](./feature-details/transport-security.md)と[メッセージセキュリティ](./feature-details/message-security-in-wcf.md)」を参照してください。
 
 ## <a name="to-set-the-security-mode-in-code"></a>コードでセキュリティ モードを設定するには
 

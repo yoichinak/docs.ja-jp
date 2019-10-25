@@ -74,7 +74,7 @@ End Class
   
  操作に複数の <xref:System.ServiceModel.FaultContractAttribute> 属性をマークすることによって、その操作で複数のカスタム エラーを返すことを指定できます。  
   
- 操作の実装にエラーコントラクトを実装する次の手順については、「[エラーの送信と受信](sending-and-receiving-faults.md)」を参照してください。  
+ 操作の実装にエラーコントラクトを実装する次の手順については、「[エラーの送受信](sending-and-receiving-faults.md)」を参照してください。  
   
 #### <a name="soap-wsdl-and-interoperability-considerations"></a>SOAP、WSDL、相互運用性に関する考慮事項  
  特に他のプラットフォームと相互運用するときなど、状況によっては、SOAP メッセージでエラーを表す方法または WSDL メタデータでエラーを記述する方法を制御することが重要な場合があります。  
