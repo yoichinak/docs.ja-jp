@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 925250a2284a47d0f9caf93158e2e23d9283aef3
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fdeb40f1e092f8c7e96e9d59e1b07673201fbe9d
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774746"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920376"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF のセキュリティ方針 - プラットフォーム セキュリティ
 Windows Presentation Foundation (WPF) にはさまざまなセキュリティサービスが用意されていますが、オペレーティングシステム、CLR、Internet Explorer など、基になるプラットフォームのセキュリティ機能も活用されています。 これらの層を組み合わせることで、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] に強力な多重防御のセキュリティ モデルが提供されます。このセキュリティ モデルでは、次の図に示すように、単一障害点の回避を試みます。  
@@ -133,7 +133,7 @@ Windows Vista の WPF ユーザーは、"最小限の特権を持つユーザー
   
  ![CAS アクセス許可セットを示す図。](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- インターネットゾーンのセキュリティサンドボックスの制限は、XBAP がシステムライブラリからインポートするコード ([!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] を含む) にも同様に適用されます。 これにより、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] であっても、コードはビットごとにロック ダウンされます。 残念ながら、実行できるようにするために、XBAP は、インターネットゾーンのセキュリティサンドボックスで有効になっているものよりも多くのアクセス許可を必要とする機能を実行する必要があります。  
+ インターネットゾーンのセキュリティサンドボックスの制限は、XBAP がシステムライブラリからインポートするコード ([!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]を含む) にも同様に適用されます。 これにより、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] であっても、コードはビットごとにロック ダウンされます。 残念ながら、実行できるようにするために、XBAP は、インターネットゾーンのセキュリティサンドボックスで有効になっているものよりも多くのアクセス許可を必要とする機能を実行する必要があります。  
   
  次のページを含む XBAP アプリケーションを考えてみましょう。  
   
@@ -165,7 +165,7 @@ Windows Vista の WPF ユーザーは、"最小限の特権を持つユーザー
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce の配置  
- ClickOnce は .NET Framework に含まれる包括的な配置テクノロジで、[!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] と統合されます (詳細については、「 [clickonce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください)。 スタンドアロン [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは ClickOnce を使用して配置できますが、ブラウザーでホストされるアプリケーションは ClickOnce で配置する必要があります。  
+ ClickOnce は .NET Framework に含まれる包括的な配置テクノロジで、Visual Studio と統合されています (詳細については、「 [clickonce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください)。 スタンドアロン [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは ClickOnce を使用して配置できますが、ブラウザーでホストされるアプリケーションは ClickOnce で配置する必要があります。  
   
  ClickOnce を使用してデプロイされたアプリケーションには、コードアクセスセキュリティ (CAS) に対する追加のセキュリティレイヤーが与えられます。基本的に、ClickOnce によって配置されたアプリケーションは、必要なアクセス許可を要求します。 これらのアプリケーションが、アプリケーションの配置元ゾーンのアクセス許可セット数を超えていない場合、これらのアプリケーションには必要なアクセス許可のみが付与されます。 起動ゾーンのアクセス許可セットによって提供されるアクセス許可よりも小さい場合でも、必要なアクセス許可だけを減らすことで、アプリケーションがアクセスできるリソースの数が最小限に抑えられます。 その結果、アプリケーションが乗っ取られた場合、クライアント コンピューターの損傷の可能性が低減します。  
   
@@ -179,7 +179,7 @@ Windows Vista の WPF ユーザーは、"最小限の特権を持つユーザー
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer のセキュリティ  
- Microsoft Internet Explorer 6 (SP2) には、セキュリティの問題を減らし、セキュリティの構成を簡素化する以外に、[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] のユーザーのセキュリティを強化するためのセキュリティ強化機能がいくつか含まれています。 これらの機能の推進により、ユーザーが閲覧の制御を拡大できるようにしています。  
+ Microsoft Internet Explorer 6 (SP2) には、セキュリティの問題を減らし、セキュリティの構成を簡素化する以外に、[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]のユーザーのセキュリティを強化するためのセキュリティ強化機能がいくつか含まれています。 これらの機能の推進により、ユーザーが閲覧の制御を拡大できるようにしています。  
   
  IE6 SP2 より前では、ユーザーは次のいずれかの影響を受ける可能性がありました。  
   
@@ -195,7 +195,7 @@ Windows Vista の WPF ユーザーは、"最小限の特権を持つユーザー
   
  また、同じユーザー開始ロジックも適用され、セキュリティプロンプトを**保存 / 保存** **します**。 ActiveX インストールのダイアログボックスは、以前にインストールされたコントロールからのアップグレードを表す場合を除き、常に情報バーの下にトラップされます。 これらの対策を組み合わせると、より安全かつ制御されたユーザー エクスペリエンスがユーザーに提供されます。ユーザーを攻撃して不要または悪意のあるソフトウェアをインストールさせるサイトからユーザーが保護されるためです。  
   
- また、これらの機能により、IE6 SP2 を使用しているお客様は、web サイトを参照して [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションをダウンロードしてインストールできるようになります。 これは特に、IE6 SP2 ではユーザーエクスペリエンスが向上しているため、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] の構築に使用されたテクノロジに関係なく、悪意のあるアプリケーションや不正なアプリケーションをユーザーがインストールする機会が減ります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] は、ClickOnce を使用してこれらの保護を強化し、インターネット経由でのアプリケーションのダウンロードを容易にします。 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] はインターネット ゾーンのセキュリティ サンドボックス内で実行するので、シームレスに起動することができます。 一方、スタンドアロンの [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションでは、実行するには完全な信頼が必要になります。 これらのアプリケーションの場合、ClickOnce は起動プロセス中にセキュリティダイアログボックスを表示して、アプリケーションの追加のセキュリティ要件の使用を通知します。 ただし、これはユーザーが開始する必要があり、ユーザーが開始したロジックによって制御されるとともに、キャンセルが可能です。  
+ また、これらの機能により、IE6 SP2 を使用しているお客様は、web サイトを参照して [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションをダウンロードしてインストールできるようになります。 これは特に、IE6 SP2 ではユーザーエクスペリエンスが向上しているため、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]の構築に使用されたテクノロジに関係なく、悪意のあるアプリケーションや不正なアプリケーションをユーザーがインストールする機会が減ります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] は、ClickOnce を使用してこれらの保護を強化し、インターネット経由でのアプリケーションのダウンロードを容易にします。 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] はインターネット ゾーンのセキュリティ サンドボックス内で実行するので、シームレスに起動することができます。 一方、スタンドアロンの [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションでは、実行するには完全な信頼が必要になります。 これらのアプリケーションの場合、ClickOnce は起動プロセス中にセキュリティダイアログボックスを表示して、アプリケーションの追加のセキュリティ要件の使用を通知します。 ただし、これはユーザーが開始する必要があり、ユーザーが開始したロジックによって制御されるとともに、キャンセルが可能です。  
   
  Internet Explorer 7 には、セキュリティに対する継続的なコミットメントの一環として、IE6 SP2 のセキュリティ機能が組み込まれ、拡張されています。  
   
