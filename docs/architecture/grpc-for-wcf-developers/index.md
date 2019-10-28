@@ -3,16 +3,14 @@ title: WCF 開発者向け ASP.NET Core gRPC - WCF 開発者向け gRPC
 description: 記述予定
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: dc39fc96e7154fb50acd0b65a58586b3fa12ab50
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 6a5b4f6d0b47a272f7a753e22bfd61b06202944a
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696917"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919374"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>WCF 開発者向け ASP.NET Core gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![カバーの画像](./media/cover.png)
 
@@ -62,7 +60,7 @@ TODO
 
 **これを更新する**
 
-本ガイドの対象読者は、gRPC サービスを利用して .NET 4 以前の WCF ソリューションを ASP.NET Core 3.0 に移行することに関心がある WCF 開発者、開発リーダー、アーキテクトです。
+本ガイドの対象読者は、gRPC サービスを利用して .NET Framework 4 以前の WCF ソリューションを ASP.NET Core 3.0 に移行することに関心がある WCF 開発者、開発リーダー、アーキテクトです。
 
 ## <a name="how-you-can-use-this-guide"></a>このガイドを使用する方法
 

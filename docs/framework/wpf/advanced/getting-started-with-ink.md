@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で WPF アプリに InkCanvas を作成します。
+title: Visual Studio で WPF アプリの System.windows.controls.inkcanvas> を作成する
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -9,50 +9,50 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753010"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920251"
 ---
-# <a name="get-started-with-ink-in-wpf"></a>WPF のインクを概要します。
+# <a name="get-started-with-ink-in-wpf"></a>WPF でインクを使ってみる
 
-Windows Presentation Foundation (WPF) が、インク機能を使用するデジタル インクをアプリに組み込むことで簡単です。
+Windows Presentation Foundation (WPF) には、デジタルインクをアプリに簡単に組み込むことができるインク機能があります。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>必要条件
 
-次の例を使用するには、最初インストール[Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)します。 基本的な WPF アプリを記述する方法を理解することもできます。 WPF の概要については、次を参照してください。[チュートリアル。初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。
+次の例を使用するには、最初に[Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)をインストールします。 また、基本的な WPF アプリの記述方法を理解するのにも役立ちます。 WPF の概要については、「[チュートリアル: 初めての wpf デスクトップアプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)」を参照してください。
 
 ## <a name="quick-start"></a>クイック スタート
 
-このセクションでは、インクを収集する簡単な WPF アプリケーションを作成できます。
+このセクションでは、インクを収集する単純な WPF アプリケーションを作成する方法について説明します。
 
-### <a name="got-ink"></a>インクを入手されましたか。
+### <a name="got-ink"></a>インクを持っていますか?
 
-WPF アプリを作成するには、インクをサポートしています。
+インクをサポートする WPF アプリを作成するには:
 
 1. Visual Studio を開きます。
 
-2. 新規作成**WPF アプリ**します。
+2. 新しい**WPF アプリ**を作成します。
 
-   **新しいプロジェクト**ダイアログ ボックスで、展開、**インストール済み** > **Visual c#** または**Visual Basic**  >  **Windows デスクトップ**カテゴリ。 次に、選択、 **WPF アプリ (.NET Framework)** アプリ テンプレート。 名前を入力し、 **OK**します。
+   **[新しいプロジェクト]** ダイアログで、[**インストールされている** > **ビジュアルC#**  ] または [ **Visual Basic** > **Windows デスクトップ**] カテゴリを展開します。 次に、 **[WPF アプリ (.NET Framework)]** アプリテンプレートを選択します。 名前を入力し、[ **OK]** を選択します。
 
-   Visual Studio は、プロジェクトを作成し、 *MainWindow.xaml*デザイナーが開きます。
+   Visual Studio によってプロジェクトが作成され、 *mainwindow.xaml*がデザイナーに表示されます。
 
-3. 型`<InkCanvas/>`間、`<Grid>`タグ。
+3. `<Grid>` タグ間の `<InkCanvas/>` を入力します。
 
-   ![InkCanvas タグを持つ XAML デザイナー](./media/getting-started-with-ink/inkcanvas-xaml.png)
+   ![System.windows.controls.inkcanvas> タグを持つ XAML デザイナー](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
-4. キーを押して**F5**デバッガーでアプリケーションを起動します。
+4. **F5**キーを押して、デバッガーでアプリケーションを起動します。
 
-5. スタイラス ペンやマウスを使用して、記述**hello world**ウィンドウ。
+5. スタイラスまたはマウスを使用して、ウィンドウに**hello world**と記述します。
 
-インクと同等の 12 のキー操作で"hello world"アプリケーションを記述しました。
+"Hello world" アプリケーションに相当するインクを12個のキーストロークだけで記述しました。
 
-### <a name="spice-up-your-app"></a>アプリを改良します。
+### <a name="spice-up-your-app"></a>アプリをスパイスする
 
-WPF の機能がいくつかの利点を見てみましょう。 開始タグと終了の間ですべてのものを置き換える\<ウィンドウ > 次のマークアップ タグ。
+WPF の一部の機能を活用してみましょう。 \<ウィンドウの開始と終了の間にあるすべての要素 > タグを次のマークアップに置き換えます。
 
 ```xaml
 <Page>
@@ -68,45 +68,45 @@ WPF の機能がいくつかの利点を見てみましょう。 開始タグと
 </Page>
 ```
 
-この XAML は、手描き入力サーフェイス グラデーション ブラシのバック グラウンドを作成します。
+この XAML は、インク描画サーフェイスにグラデーションブラシの背景を作成します。
 
-![WPF アプリで画面を手描き入力のグラデーションの色](./media/getting-started-with-ink/gradient-colors.png)
+![WPF アプリでのインク描画画面のグラデーションの色](./media/getting-started-with-ink/gradient-colors.png)
 
-### <a name="add-some-code-behind-the-xaml"></a>一部の XAML コードを追加します。
+### <a name="add-some-code-behind-the-xaml"></a>XAML の背後にコードを追加する
 
-XAML を使用する非常に簡単にユーザー インターフェイスをデザイン、現実世界の任意のアプリケーションはイベントを処理するコードを追加する必要があります。 マウスから応答を右クリックして、インクにズーム インする簡単な例を次に示します。
+XAML を使用すると、ユーザーインターフェイスを簡単にデザインできますが、実際のアプリケーションでは、イベントを処理するコードを追加する必要があります。 マウスからの右クリックに応じてインクを拡大する簡単な例を次に示します。
 
-1. 設定、 `MouseRightButtonUp` XAML 内のハンドラー。
+1. XAML で `MouseRightButtonUp` ハンドラーを設定します。
 
    [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
-1. **ソリューション エクスプ ローラー**MainWindow.xaml を展開し、分離コード ファイル (MainWindow.xaml.cs または MainWindow.xaml.vb) を開きます。 次のイベント ハンドラーのコードを追加します。
+1. **ソリューションエクスプローラー**で、mainwindow.xaml を展開し、分離コードファイル (MainWindow.xaml.cs または mainwindow.xaml) を開きます。 次のイベントハンドラーコードを追加します。
 
    [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
    [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
-1. アプリケーションを実行します。 、手描き入力を追加し、マウスで右クリックまたはプレス アンド ホールドに相当するスタイラスを使用して実行します。
+1. アプリケーションを実行します。 インクをいくつか追加し、マウスで右クリックするか、またはスタイラスを使用してプレスアンドホールドと同等の操作を実行します。
 
-   マウスの右ボタンをクリックするたびに拡大表示されます。
+   マウスの右ボタンをクリックするたびに、画面がズームされます。
 
-### <a name="use-procedural-code-instead-of-xaml"></a>手続き型コードを使用して、XAML ではなく
+### <a name="use-procedural-code-instead-of-xaml"></a>XAML ではなく手続き型コードを使用する
 
-手続き型コードからすべての WPF 機能にアクセスできます。 Wpf の XAML をまったく使用しない"こんにちはインク World"アプリケーションを作成する次の手順に従います。
+すべての WPF 機能には、手続き型コードからアクセスできます。 次の手順に従って、XAML をまったく使用しない "Hello Ink World" アプリケーションを WPF に作成します。
 
-1. Visual Studio で新しいコンソール アプリケーション プロジェクトを作成します。
+1. Visual Studio で新しいコンソールアプリケーションプロジェクトを作成します。
 
-   **新しいプロジェクト**ダイアログ ボックスで、展開、**インストール済み** > **Visual c#** または**Visual Basic**  >  **Windows デスクトップ**カテゴリ。 次に、選択、**コンソール アプリ (.NET Framework)** アプリ テンプレート。 名前を入力し、 **OK**します。
+   **[新しいプロジェクト]** ダイアログで、[**インストールされている** > **ビジュアルC#**  ] または [ **Visual Basic** > **Windows デスクトップ**] カテゴリを展開します。 次に、 **[コンソールアプリ (.NET Framework)]** アプリテンプレートを選択します。 名前を入力し、[ **OK]** を選択します。
 
-1. 次のコードを Program.cs または Program.vb ファイルに貼り付けます。
+1. Program.cs ファイルまたは .vb ファイルに次のコードを貼り付けます。
 
    [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
    [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
-1. 右クリックし、PresentationCore、PresentationFramework、WindowsBase アセンブリへの参照を追加**参照**で**ソリューション エクスプ ローラー**を選択して**参照の追加**.
+1. **ソリューションエクスプローラー**の**参照**を右クリックし、 **[参照の追加]** を選択して、プレゼンテーションコア、プレゼンテーションフレームワーク、および windowsbase アセンブリへの参照を追加します。
 
-   ![PresentationCore と PresentationFramework を示す参照マネージャー](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
+   ![プレゼンテーションコアとプレゼンテーションフレームワークを示すリファレンスマネージャー](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
-1. キーを押してアプリケーションをビルド**F5**します。
+1. **F5**キーを押してアプリケーションをビルドします。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で .NET Core アプリをデプロイする
+title: Visual Studio を使用して .NET Core アプリを展開する
 description: Visual Studio で .NET Core アプリをデプロイする方法を説明します。
 author: rpetrusha
 ms.author: ronpet
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/17/2019
 ms.locfileid: "72522809"
 ---
-# <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio で .NET Core アプリをデプロイする
+# <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio を使用して .NET Core アプリを展開する
 
 .NET Core アプリケーションは、アプリケーション バイナリは含むが、対象のシステムに .NET Core があるかどうかに依存する*フレームワークに依存する展開*、またはアプリケーションと .NET Core バイナリの両方を含む*自己完結型の展開*のいずれかで展開できます。 .NET Core アプリケーションの展開の概要については、「[.NET Core アプリケーションの展開](index.md)」を参照してください。
 

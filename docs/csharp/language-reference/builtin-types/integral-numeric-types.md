@@ -1,7 +1,7 @@
 ---
 title: 整数数値型 - C# リファレンス
 description: 各整数数値型の範囲、ストレージ サイズ、および使用方法について説明します。
-ms.date: 06/25/2019
+ms.date: 10/18/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: dfb1298abaff0cfe8eae7536f94511a30012a4a9
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236077"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579193"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整数数値型 (C# リファレンス)
 
-**整数数値型**は**単純型**のサブセットであり、[*リテラル*](#integral-literals)を使用して初期化できます。 すべての整数型は、値型でもあります。 すべての整数数値型では [arithmetic](../operators/arithmetic-operators.md)、[ビット論理](../operators/bitwise-and-shift-operators.md)、[comparison、equality](../operators/equality-operators.md) 演算子がサポートされています。
+**整数数値型**は**単純型**のサブセットであり、[*リテラル*](#integer-literals)を使用して初期化できます。 すべての整数型は、値型でもあります。 すべての整数数値型では、[算術](../operators/arithmetic-operators.md)、[ビット論理](../operators/bitwise-and-shift-operators.md)、[比較](../operators/comparison-operators.md)、[等値](../operators/equality-operators.md)演算子がサポートされています。
 
 ## <a name="characteristics-of-the-integral-types"></a>整数型の特性
 
@@ -69,9 +69,15 @@ System.Int32 b = 123;
 
 <xref:System.Numerics.BigInteger?displayProperty=nameWithType> 構造体を使用して、上限や下限のない符号付き整数を表します。
 
-## <a name="integral-literals"></a>整数リテラル
+## <a name="integer-literals"></a>整数リテラル
 
-整数リテラルは、*10 進リテラル*、*16 進数リテラル*、または *バイナリ リテラル* として指定できます。 それぞれの例を次に示します。
+次の整数リテラルがあります。
+
+- "*10 進*": プレフィックスなし
+- "*16 進*": `0x` または `0X` プレフィックスを使用します
+- "*バイナリ*": `0b` または `0B` プレフィックスを使用します (C# 7.0 以降で使用できます)
+
+次のコードは、それぞれの例を示しています。
 
 ```csharp
 var decimalLiteral = 42;
@@ -79,38 +85,35 @@ var hexLiteral = 0x2A;
 var binaryLiteral = 0b_0010_1010;
 ```
 
-10 進リテラルには、プレフィックスは必要ありません。 `x` または `X` プレフィックスは *16 進数リテラル*を意味します。 `b` または `B` プレフィックスは*バイナリ リテラル*を意味します。 `binaryLiteral` の宣言は、`_` を*桁区切り記号*として使用することを示します。 桁区切り記号は、すべての数値リテラルで使用できます。 バイナリ リテラルと桁区切り記号 `_` は、C# 7.0 以降でサポートされています。
+前述の例は、C# 7.0 以降でサポートされている "*桁区切り記号*" としての `_` の使用法も示しています。 数字区切り記号は、あらゆる種類の数値リテラルで使用できます。
 
-### <a name="literal-suffixes"></a>リテラル サフィックス
+整数リテラルの型は、そのサフィックスによって次のように決まります。
 
-`l` または `L` サフィックスは、整数リテラルが `long` 型である必要があることを示します。 `ul` または `UL` サフィックスは、`ulong` 型を示します。 `L` サフィックスが 9,223,372,036,854,775,807 (`long` の最大値) より大きいリテラルで使用されている場合、値は `ulong` 型に変換されます。 整数リテラルで表される値が <xref:System.UInt64.MaxValue?displayProperty=nameWithType> を超えると、コンパイル エラー [CS1021](../../misc/cs1021.md) が発生します。 
+- サフィックスがないリテラルの型は、`int`、`uint`、`long`、`ulong` の型のうちその値を表すことができる最初のものになります。
+- リテラルのサフィックスが `U` または `u` の場合、その型は、`uint`、`ulong` の型のうちその値を表すことができる最初のものになります。
+- リテラルのサフィックスが `L` または `l` の場合、その型は、`long`、`ulong` の型のうちその値を表すことができる最初のものになります。
 
-> [!NOTE]
-> 小文字の "l" はサフィックスとして使用できます。 ただし、文字の "l" は数字の "1" と混同しやすいため、コンパイラから警告が出されます。 明確にするには、"L" を使用します。
+  > [!NOTE]
+  > 小文字の `l` はサフィックスとして使用できます。 ただし、文字の `l` は数字の `1` と混同しやすいため、コンパイラから警告が出されます。 わかりやすくするために `L` を使用してください。
 
-### <a name="type-of-an-integral-literal"></a>整数リテラルの型
+- リテラルのサフィックスが `UL`、`Ul`、`uL`、`ul`、`LU`、`Lu`、`lU`、または `lu` の場合、その型は `ulong` です。
 
-サフィックスがない整数リテラルの型は、次の型のうち、その値を表すことができる最初のものになります。
+整数リテラルで表される値が <xref:System.UInt64.MaxValue?displayProperty=nameWithType> を超えると、コンパイル エラー [CS1021](../../misc/cs1021.md) が発生します。
 
-1. `int`
-1. `uint`
-1. `long`
-1. `ulong`
-
-整数リテラルは、割り当てまたはキャストのどちらかを使用して、既定よりも小さな範囲の型に変換することができます。
+整数リテラルによって表される値は、リテラルの特定の型よりも範囲が狭い型に暗黙的に変換することができます。 これは、値が変換先の型の範囲内にある場合に実行できます。
 
 ```csharp
-byte byteVariable = 42; // type is byte
-var signedByte = (sbyte)42; // type is sbyte.
+byte a = 17;
+byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
 ```
 
-整数リテラルは、割り当て、キャスト、またはリテラル上のサフィックスのいずれかを使用して、既定よりも大きな範囲の型に変換することができます。
+前の例で示したように、リテラルの値が変換先の型の範囲内にない場合、コンパイラ エラー [CS0031](../../misc/cs0031.md) が発生します。
+
+また、キャストを使用して、整数リテラルによって表される値を、指定された型のリテラル以外の型に変換することもできます。
 
 ```csharp
-var unsignedLong = 42UL;
-var longVariable = 42L;
-ulong anotherUnsignedLong = 42;
-var anotherLong = (long)42;
+var signedByte = (sbyte)42;
+var longVariable = (long)42;
 ```
 
 ## <a name="conversions"></a>変換
@@ -119,9 +122,15 @@ var anotherLong = (long)42;
 
 変換元の型から変換先の型への暗黙的な変換が定義されていない場合、明示的なキャストを使用して、1 つの整数型を別の整数型に変換する必要があります。 これは*縮小変換*と呼ばれています。 変換によりデータが失われる場合があるため、明示的なケースが必要となります。
 
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の次のセクションを参照してください。
+
+- [整数型](~/_csharplang/spec/types.md#integral-types)
+- [整数リテラル](~/_csharplang/spec/lexical-structure.md#integer-literals)
+
 ## <a name="see-also"></a>関連項目
 
-- [C# 言語仕様 - 整数型](~/_csharplang/spec/types.md#integral-types)
 - [C# リファレンス](../index.md)
 - [浮動小数点型](floating-point-numeric-types.md)
 - [既定値の一覧表](../keywords/default-values-table.md)

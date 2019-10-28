@@ -5,12 +5,12 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 19c301c6b96e1070447401af9105fba2e0f0837f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3bf71adc694f3c6e072990717198b4f2003cd503
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972811"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523884"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>方法: 署名されたフレンド アセンブリを作成する
 この例では、厳密な名前を持つアセンブリと共にフレンド アセンブリを使用する方法を示します。 両方のアセンブリに厳密な名前が付けられている必要があります。 この例のアセンブリは両方とも同じキーを使用していますが、2 つのアセンブリそれぞれが別々のキーを使用することもできます。  
@@ -132,7 +132,7 @@ ms.locfileid: "70972811"
 - [.NET のアセンブリ](index.md)
 - [フレンド アセンブリ](friend.md)
 - [方法: 署名のないフレンド アセンブリを作成する](create-unsigned-friend.md)
-- [/keyfile (C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [-keyfile (C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [-keyfile (Visual Basic)](../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe (厳密名ツール)](../../framework/tools/sn-exe-strong-name-tool.md)
 - [厳密な名前付きアセンブリの作成と使用](create-use-strong-named.md)

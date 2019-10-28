@@ -2,12 +2,12 @@
 title: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 description: 実際の運用アプリケーションは、すべてのコンテナーの正常性、ワークロードおよびライフ サイクルを管理するオーケストレーターと共に展開して管理する必要があります。
 ms.date: 02/15/2019
-ms.openlocfilehash: 8f2cef774acde47e9a1bb4680342b5e2c66ac154
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: dcc1c8686210e34df33aef024429898a098fa33d
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990496"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395232"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -15,7 +15,7 @@ ms.locfileid: "70990496"
 
 図 4-6 は、複数のマイクロサービス (コンテナー) で構成されるアプリケーションのクラスターへの展開を示しています。
 
-![クラスター内での Docker アプリケーションの構成:サービス インスタンスごとに 1 つのコンテナーを使用します。 Docker コンテナーは "配置の単位" であり、コンテナーは Docker のインスタンスです。 ホストでは多くのコンテナーが処理されます](./media/image6.png)
+![クラスターで構成された Docker アプリケーションを示す図](./media/orchestrate-high-scalability-availability/composed-docker-applications-cluster.png)
 
 **図 4-6** コンテナーのクラスター
 
@@ -37,10 +37,10 @@ Docker のコマンドライン インターフェイス (CLI) は、1 つのホ
 
 | プラットフォーム | コメント |
 |:---:|:---|
-| **Kubernetes** <br/> ![Kubernetes ロゴ](./media/kubernetes-logo.png) | [*Kubernetes*](https://kubernetes.io/) はオープンソースの製品であり、クラスターのインフラストラクチャとコンテナーのスケジューリングからオーケストレーションまでのさまざまな機能を提供します。 ホストのクラスター全体のアプリケーション コンテナーの展開、スケーリング、操作を自動化できます。 <br/> <br/> *Kubernetes* ではコンテナー中心のインフラストラクチャが提供され、アプリケーション コンテナーを論理ユニットにグループ化し、管理と検出を容易にします。 <br/> <br/> *Kubernetes* は Linux では完成されていますが、Windows では未完成です。 |
-| **Azure Kubernetes Service (AKS)** <br/> ![Azure Kubernetes Service ロゴ](./media/aks-logo.png) | [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) は Azure でのマネージド Kubernetes コンテナー オーケストレーション サービスで。これによって Kubernetes クラスターの管理、デプロイ、および操作が簡略化されます。 |
-| **Azure Service Fabric** <br/> ![Azure Service Fabric ロゴ](./media/service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) は、アプリケーションを構築するための Microsoft マイクロサービス プラットフォームです。 これはサービスの[オーケストレーター](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)であり、これによってマシンのクラスターが作成されます。 Service Fabric は、サービスをコンテナーまたはプレーン プロセスとして展開できます。 同じアプリケーションとクラスター内にコンテナーのサービスとプロセスのサービスを混在させることもできます。 <br/> <br/> *Service Fabric* クラスターは、Azure、オンプレミス、または任意のクラウドに配置できます。 ただし、Azure でのデプロイはマネージド アプローチで簡略化されます。 <br/> <br/> *Service Fabric* では、[ステートフル サービス](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/)や [Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/) などの追加の省略可能な規範的な [Service Fabric プログラミング モデル](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/)が提供されます。 <br/> <br/> *Service Fabric* は Windows (年々進化している Windows) では完成されていますが、Linux では未完成です。 <br/> <br/> Linux と Windows の両方のコンテナーは、2017 年以降の Service Fabric でサポートされています。 |
-| **Azure Service Fabric Mesh** <br/> ![Azure Service Fabric Mesh ロゴ](./media/azure-service-fabric-mesh-logo.png) | [*Azure Service Fabric Mesh*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) では、Service Fabric と同じ信頼性、ミッション クリティカルなパフォーマンス、およびスケールを提供しますが、プラットフォームはフル マネージドのサーバーレス プラットフォームとなります。 クラスター、VM、ストレージ、またはネットワーク構成を管理する必要はありません。 ご自分のアプリケーションの開発に集中できます。 <br/> <br/> *Service Fabric Mesh* では Windows と Linux の両方のコンテナーがサポートされているため、自分で選択した任意のプログラミング言語またはフレームワークを使用して開発を行うことができます。
+| **Kubernetes** <br/> ![Kubernetes ロゴの画像。](./media/orchestrate-high-scalability-availability/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) はオープンソースの製品であり、クラスターのインフラストラクチャとコンテナーのスケジューリングからオーケストレーションまでのさまざまな機能を提供します。 ホストのクラスター全体のアプリケーション コンテナーの展開、スケーリング、操作を自動化できます。 <br/> <br/> *Kubernetes* ではコンテナー中心のインフラストラクチャが提供され、アプリケーション コンテナーを論理ユニットにグループ化し、管理と検出を容易にします。 <br/> <br/> *Kubernetes* は Linux では完成されていますが、Windows では未完成です。 |
+| **Azure Kubernetes Service (AKS)** <br/> ![Azure Kubernetes Service のロゴの画像。](./media/orchestrate-high-scalability-availability/azure-kubernetes-service-logo.png) | [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) は Azure でのマネージド Kubernetes コンテナー オーケストレーション サービスで。これによって Kubernetes クラスターの管理、デプロイ、および操作が簡略化されます。 |
+| **Azure Service Fabric** <br/> ![Azure Service Fabric ロゴの画像。](./media/orchestrate-high-scalability-availability/azure-service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) は、アプリケーションを構築するための Microsoft マイクロサービス プラットフォームです。 これはサービスの[オーケストレーター](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)であり、これによってマシンのクラスターが作成されます。 Service Fabric は、サービスをコンテナーまたはプレーン プロセスとして展開できます。 同じアプリケーションとクラスター内にコンテナーのサービスとプロセスのサービスを混在させることもできます。 <br/> <br/> *Service Fabric* クラスターは、Azure、オンプレミス、または任意のクラウドに配置できます。 ただし、Azure でのデプロイはマネージド アプローチで簡略化されます。 <br/> <br/> *Service Fabric* では、[ステートフル サービス](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/)や [Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/) などの追加の省略可能な規範的な [Service Fabric プログラミング モデル](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/)が提供されます。 <br/> <br/> *Service Fabric* は Windows (年々進化している Windows) では完成されていますが、Linux では未完成です。 <br/> <br/> Linux と Windows の両方のコンテナーは、2017 年以降の Service Fabric でサポートされています。 |
+| **Azure Service Fabric Mesh** <br/> ![Azure Service Fabric Mesh ロゴの画像。](./media/orchestrate-high-scalability-availability/azure-service-fabric-mesh-logo.png) | [*Azure Service Fabric Mesh*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) では、Service Fabric と同じ信頼性、ミッション クリティカルなパフォーマンス、およびスケールを提供しますが、プラットフォームはフル マネージドのサーバーレス プラットフォームとなります。 クラスター、VM、ストレージ、またはネットワーク構成を管理する必要はありません。 ご自分のアプリケーションの開発に集中できます。 <br/> <br/> *Service Fabric Mesh* では Windows と Linux の両方のコンテナーがサポートされているため、自分で選択した任意のプログラミング言語またはフレームワークを使用して開発を行うことができます。
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>Azure でのコンテナー ベースのオーケストレーターの使用
 
@@ -54,7 +54,7 @@ ACS には、コンテナー化されたアプリケーションを実行する�
 
 Azure Kubernetes Service によって、一般的な Docker クラスタリング オープンソース ツールとテクノロジの構成が Azure 専用に最適化されます。 コンテナーとアプリケーションの構成の両方に移植性を提供するオープン ソリューションが得られます。 サイズ、ホストの数、オーケストレーター ツールを選択すると、他のことはすべて AKS によって処理されます。
 
-![Kubernetes クラスター構造:DNS、スケジューラ、プロキシなどを処理するマスター ノードが 1 つと、コンテナーをホストするワーカー ノードが複数あります。](media/image36.png)
+![Kubernetes クラスター構造を示す図。](./media/orchestrate-high-scalability-availability/kubernetes-cluster-simplified-structure.png)
 
 **図 4-7**. Kubernetes クラスターの簡略化された構造とトポロジ
 
@@ -64,7 +64,7 @@ Azure Kubernetes Service によって、一般的な Docker クラスタリン�
 
 開発環境に単純に [Docker Desktop](https://www.docker.com/community-edition) をインストールすることで、1 台の開発マシン (Windows 10 または macOS) でも Kubernetes を実行できることが [2018 年 7 月に Docker から発表](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)されました。 図 4-8 に示すように、さらなる統合テストを行うために、後でクラウド (AKS) にデプロイすることができます。
 
-![Docker は、Docker Desktop を使用した、Kubernetes クラスターに対する開発マシンのサポートを 2018 年 7 月に発表しました。](media/kubernetes-development-environment.png)
+![開発マシン上にあり、AKS にデプロイされる Kubernetes を示す図。](./media/orchestrate-high-scalability-availability/kubernetes-development-environment.png)
 
 **図 4-8** 開発マシンとクラウドでの Kubernetes の実行
 
@@ -98,11 +98,11 @@ Azure Dev Spaces で、Visual Studio 2017 または Visual Studio Code を使用
 
 図 4-9 に示すように、Azure Dev Spaces の他と最も異なる機能は、クラスター内の残りのグローバル デプロイに運用可能な "スペース" を作成して統合できるということです。
 
-![Azure Dev Spaces では、運用環境のマイクロ サービスと開発コンテナー インスタンスをさまざまな形で透過的に組み合わせることができます。](media/image38.png)
+![Azure Dev Spaces での複数のスペースの使用を示す図](./media/orchestrate-high-scalability-availability/use-multiple-spaces-azure-dev.png)
 
 **図 4-9** Azure Dev Spaces での複数のスペースの使用
 
-基本的には Azure 内に共有の開発スペースを設定することができます。 各開発者はアプリケーションの自分の担当部分にのみに集中でき、自分のシナリオで使用する他のすべてのサービスとクラウド リソースが既に含まれている開発スペースで、事前にコミットされているコードを繰り返し開発できます。 依存関係は常に最新の状態になります。開発者は運用環境を反映した方法で作業します。
+Azure Dev Spaces では、運用環境のマイクロ サービスと開発コンテナー インスタンスをさまざまな形で透過的に組み合わせることができます。 基本的には Azure 内に共有の開発スペースを設定することができます。 各開発者はアプリケーションの自分の担当部分にのみに集中でき、自分のシナリオで使用する他のすべてのサービスとクラウド リソースが既に含まれている開発スペースで、事前にコミットされているコードを繰り返し開発できます。 依存関係は常に最新の状態になります。開発者は運用環境を反映した方法で作業します。
 
 Azure Dev Spaces には、スペースという概念があります。このスペースにより、チーム メンバーの邪魔をすることを心配せずに、隔離された状態で作業を行うことができます。 この機能は URL のプレフィックスに基づいているため、コンテナーの要求に対して URL 内の開発スペースのプレフィックスを使用する場合、Azure Dev Spaces ではそのスペースにデプロイされたコンテナーの特別なバージョンを実行します (存在する場合)。 それ以外の場合は、グローバル/統合されたバージョンが実行されます。
 
@@ -137,11 +137,11 @@ Service Fabric は、サービスの構築方法に依存しないので、任�
 
 図 4-10 に示すように、Service Fabric 内でマイクロサービスは、単純なプロセスまたは Docker コンテナーとして作成して実行することができます。 同じ Service Fabric クラスターには、コンテナーベースのマイクロサービスとプロセッサーベースのマイクロサービスを混在させることもできます。
 
-![Azure Service Fabric クラスター (各ノードがマイクロサービスごとに 1 つのプロセスを実行するプロセスとしてのマイクロサービス、各ノードがマイクロサービスごとに 1 つのコンテナーを使用して、複数のコンテナーで Docker を実行するコンテナーとしてのマイクロサービス) の比較。](./media/azure-service-fabric-cluster-types.png)
+![Azure Service Fabric クラスターの比較を示す図。](./media/orchestrate-high-scalability-availability/azure-service-fabric-cluster-types.png)
 
 **図 4-10** Azure Service Fabric 内のプロセッサーまたはコンテナーとしてマイクロサービスを展開する
 
-Linux と Windows のホストに基づく Service Fabric クラスターは、Docker Linux コンテナーと Windows コンテナーをそれぞれ実行することができます。
+最初の画像では、プロセスとしてのマイクロサービスが示されています。各ノードでは、マイクロサービスごとに 1 つのプロセスが実行されます。 2 つ目の画像では、コンテナーとしてのマイクロサービスが示されています。各ノードでは、複数のコンテナー (マイクロサービスごとに 1 つのコンテナー) を含む Docker が実行されます。 Linux と Windows のホストに基づく Service Fabric クラスターは、Docker Linux コンテナーと Windows コンテナーをそれぞれ実行することができます。
 
 Azure Service Fabric でのコンテナーのサポートの最新情報については、「[Service Fabric とコンテナー](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview)」を参照してください。
 
@@ -149,11 +149,11 @@ Service Fabric は、物理的な実装とは異なる論理アーキテクチ�
 
 図 4-10 に示すように、論理的/ビジネス マイクロサービスの観点から考えた場合、Service Fabric ステートフル Reliable Service を実装するには、通常 2 層のサービスを実装する必要があります。 1 つ目は、バックエンド ステートフル Reliable Service で、複数のパーティションを処理します (各パーティションはステートフル サービスです)。 2 つ目は、フロントエンド サービスまたはゲートウェイ サービスで、複数のパーティションまたはステートフル サービス インスタンス間のルーティングとデータの集計を担当します。 そのゲートウェイ サービスは、バックエンド サービスにアクセスする再試行のループが使用されたクライアント側の通信も処理します。 これは、カスタム サービスを実装している場合は、ゲートウェイ サービスと呼ばれます。または、そのままで使用できる Service Fabric の[リバース プロキシ サービス](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)を使用することもできます。
 
-![Service Fabric には、コンテナーでいくつかのステートフル Reliable Service をサポートする方法があります。](./media/service-fabric-stateful-business-microservice.png)
+![コンテナー内のいくつかのステートフル サービスを示す図。](./media/orchestrate-high-scalability-availability/service-fabric-stateful-business-microservice.png)
 
 **図 4-11** いくつかのステートフルなサービス インスタンスとカスタム ゲートウェイ フロントエンドがあるビジネスのマイクロサービス
 
-いずれの場合でも、Service Fabric ステートフル Reliable Service を使用する場合、通常は複数の物理サービスで構成される論理的/ビジネス マイクロサービス (境界指定されたコンテキスト) もあります。 図 4-11 に示すように、ゲートウェイ サービスおよびパーティションのそれぞれのサービスは ASP.NET Web API サービスとして実装できます。
+いずれの場合でも、Service Fabric ステートフル Reliable Service を使用する場合、通常は複数の物理サービスで構成される論理的/ビジネス マイクロサービス (境界指定されたコンテキスト) もあります。 図 4-11 に示すように、ゲートウェイ サービスおよびパーティションのそれぞれのサービスは ASP.NET Web API サービスとして実装できます。 Service Fabric には、コンテナーでいくつかのステートフル Reliable Service をサポートする方法があります。
 
 Service Fabric では、サービスをグループ化して、サービスのグループを [Service Fabric アプリケーション](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-model)として展開することができます。これは、オーケストレーターおよびクラスター用のパッケージ化および展開の単位です。 そのため、Service Fabric アプリケーションをこの自律的なビジネスおよび論理マイクロサービス境界または境界指定されたコンテキストにマッピングすることができ、さらにこれらのサービスを自律的に展開することもできます。
 
@@ -161,15 +161,15 @@ Service Fabric では、サービスをグループ化して、サービスの�
 
 Service Fabric 内のコンテナーに関して、Service Fabric クラスター内のコンテナー イメージにサービスを展開することもできます。 図 4-12 に示すように、コンテナーは、多くの場合サービスごとに 1 つのみがあります。
 
-![Service Fabric アプリケーションは、外部データベースにアクセスする複数のコンテナーを実行でき、セット全体は、ビジネス マイクロサービスの論理的な境界になります。](./media/azure-service-fabric-business-microservice.png)
+![データベースにフィードするサービスごとに 1 つのコンテナーを示す図。](./media/orchestrate-high-scalability-availability/azure-service-fabric-business-microservice.png)
 
 **図 4-12**. Service Fabric 内に複数のサービス (コンテナー) を持つビジネス マイクロサービス
 
-ただし、いわゆる "サイドカー" コンテナー (論理サービスの一部としてまとめて展開する必要がある 2 つのコンテナー) は Service Fabric でも可能です。 重要な点は、ビジネス マイクロサービスが、いくつかのまとまりのある要素を囲む論理的な境界であることです。 これは、多くの場合、1 つのデータ モデルの 1 つのサービスかもしれませんが、場合によっては複数の物理的なサービスがある場合もあります。
+Service Fabric アプリケーションは、外部データベースにアクセスする複数のコンテナーを実行でき、セット全体は、ビジネス マイクロサービスの論理的な境界になります。 ただし、いわゆる "サイドカー" コンテナー (論理サービスの一部としてまとめて展開する必要がある 2 つのコンテナー) は Service Fabric でも可能です。 重要な点は、ビジネス マイクロサービスが、いくつかのまとまりのある要素を囲む論理的な境界であることです。 これは、多くの場合、1 つのデータ モデルの 1 つのサービスかもしれませんが、場合によっては複数の物理的なサービスがある場合もあります。
 
 図 4-13 に示すように、同じ Service Fabric アプリケーションにプロセスのサービスとコンテナーのサービスを混在させることができることに注意してください。
 
-![同じノードでサービスとコンテナーの両方を実行する Service Fabric アプリケーション。](./media/business-microservice-mapped-to-service-fabric-application.png)
+![同じアプリのプロセス内およびコンテナー内のサービスを示す図。](./media/orchestrate-high-scalability-availability/business-microservice-mapped-to-service-fabric-application.png)
 
 **図 4-13**. コンテナーとステートフル サービスを含む Service Fabric アプリケーションにマップされているビジネス マイクロサービス
 
@@ -181,11 +181,11 @@ Azure Service Fabric でのコンテナーのサポートの詳細について�
 
 Service Fabric でサービス自体もステートフルにして、データをマイクロサービス内に常駐させることもできます。 このデータは、同じサーバー上に存在できるだけでなく、マイクロサービスのプロセス内であれば、メモリ内に存在することも、ハード ドライブに保存することも、他のノードにレプリケートすることもできます。 図 4-14 では、別の方法を示します。
 
-![ステートレス サービスでは、状態 (永続化、データベース) はマイクロサービス外で保持されます。 ステートフル サービスでは、状態はマイクロサービス内で保持されます。](./media/stateless-vs-stateful-microservices.png)
+![ステートレス サービスとステートフル サービスの比較を示す図。](./media/orchestrate-high-scalability-availability/stateless-vs-stateful-microservices.png)
 
 **図 4-14**. ステートレス マイクロサービスとステートフル マイクロサービスの比較
 
-ステートレス アプローチは、完全に有効で、従来の既知のパターンに似ているので、ステートフルなマイクロサービスよりも容易に実装できます。 ステートレス マイクロサービスは、プロセスおよびデータ ソース間の遅延を強制します。 キャッシュとキューを追加してパフォーマンスを改善しようとしている場合は、移動する部分も増えます。 結果として、階層の数が多すぎる複雑なアーキテクチャになる可能性があります。
+ステートレス サービスでは、状態 (永続化、データベース) はマイクロサービス外で保持されます。 ステートフル サービスでは、状態はマイクロサービス内で保持されます。 ステートレス アプローチは、完全に有効で、従来の既知のパターンに似ているので、ステートフルなマイクロサービスよりも容易に実装できます。 ステートレス マイクロサービスは、プロセスおよびデータ ソース間の遅延を強制します。 キャッシュとキューを追加してパフォーマンスを改善しようとしている場合は、移動する部分も増えます。 結果として、階層の数が多すぎる複雑なアーキテクチャになる可能性があります。
 
 一方、[ステートフルなマイクロサービス](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis)は、ドメイン ロジックとデータの間に遅延が生じないため、高度なシナリオに優れています。 負荷の高いデータ処理、ゲームのバックエンド、サービスとしてのデータベースなど、あまり遅延が許されないシナリオでは、ローカルな状態で高速にアクセスできるステートフル サービスのメリットを生かすことができます。
 
@@ -203,7 +203,7 @@ Azure Service Fabric Mesh は、開発者がインフラストラクチャをま
 
 図 4-15 のとおり、Service Fabric Mesh にホストされているアプリケーションは、その基礎になっているインフラストラクチャを考慮する必要なく、実行および拡大縮小できます。
 
-![Docker のデスクトップで実行する複数のコンテナー アプリを、インフラストラクチャを心配することなく Azure Service Fabric Mesh にデプロイできます。](media/image39.png)
+![ローカル リポジトリから Service Fabric Mesh へのデプロイを示す図。](media/orchestrate-high-scalability-availability/deploy-microservice-containers-apps-service-fabric-mesh.png)
 
 **図 4-15**. Service Fabric Mesh にマイクロサービス/コンテナー アプリケーションをデプロイする
 
@@ -215,7 +215,7 @@ Service Fabric Mesh の背後には、何千ものマシンで構成されるク
 
 次の表では、ワークロードおよび OS が焦点を当てていることに応じて、どのオーケストレーターを使用するかを示します。
 
-![Azure Kubernetes Services は、Windows でよりも Linux でより成熟しており、コンテナーに基づいてマイクロサービスをデプロイするのに多く使用されています。 Azure Service Fabric (クラスターとメッシュの両方) は Linux でよりも Windows でより成熟しており、コンテナーに基づくマイクロサービス、プレーンなプロセスおよびステートフル サービスに基づくマイクロサービスで一般に使用されます。](media/image40.png)
+![Kubernetes と Service Fabric を比較する表の画像。](media/orchestrate-high-scalability-availability/orchestrator-selection-azure-guidance.png)
 
 **図 4-16**. Azure でのオーケストレーターの選択のガイダンス
 

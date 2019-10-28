@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 0f14cc6486e53cad8c3cbadc404d22d7e5458e84
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 11e48c54ba82b51268b34d6db01d2f9d4ae61ad7
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991269"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523575"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>チュートリアル: Office のプログラミング (C# および Visual Basic)
 
@@ -106,7 +106,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
          独自のインデックス付きプロパティを作成することはできません。 この機能では、既存のインデックス付きプロパティの使用のみがサポートされます。
 
-         詳細については、「[方法 :COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する](./how-to-use-indexed-properties-in-com-interop-rogramming.md)」を参照してください。
+         詳細については、[COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する](./how-to-use-indexed-properties-in-com-interop-rogramming.md)」を参照してください。
 
 2. 次のコードを `DisplayInExcel` の末尾に追加して、コンテンツに合わせて列の幅を調整します。
 
@@ -114,7 +114,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     これらの追加機能では、C# の別の機能である、[dynamic](../../language-reference/keywords/dynamic.md) 型がある場合と同様に Office などの COM ホストから返される `Object` 値の処理を示します。 これは、 **[相互運用機能型の埋め込み]** が既定値の `True` に設定されている場合、または同様に、アセンブリが [/link](../../language-reference/compiler-options/link-compiler-option.md) コンパイラ オプションによって参照されている場合に発生します。 `dynamic` 型では既に Visual Basic で使用できる遅延バインディングが可能であり、C# 3.0 以前のバージョンの言語で必要だった明示的なキャストが回避されます。
+     これらの追加機能では、C# の別の機能である、[dynamic](../../language-reference/keywords/dynamic.md) 型がある場合と同様に Office などの COM ホストから返される `Object` 値の処理を示します。 これは、 **[相互運用機能型の埋め込み]** が既定値の `True` に設定されている場合、または同様に、アセンブリが [-link](../../language-reference/compiler-options/link-compiler-option.md) コンパイラ オプションによって参照されている場合に発生します。 `dynamic` 型では既に Visual Basic で使用できる遅延バインディングが可能であり、C# 3.0 以前のバージョンの言語で必要だった明示的なキャストが回避されます。
 
      たとえば、`excelApp.Columns[1]` は `Object` を返し、`AutoFit` は Excel の [Range](<xref:Microsoft.Office.Interop.Excel.Range>) メソッドであるとします。 `dynamic` がない場合、`excelApp.Columns[1]` のインスタンスとして、`Range` によって返されたオブジェクトをキャストしてから、`AutoFit` メソッドを呼び出す必要があります。
 
@@ -160,7 +160,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
 4. [IL DASM] ウィンドウの **[ファイル]** メニューで **[ファイル]**  >  **[開く]** をクリックします。 **[Visual Studio \<バージョン>]** をダブルクリックし、 **[プロジェクト]** をダブルクリックします。 プロジェクトのフォルダーを開き、bin/Debug フォルダーで*プロジェクト名*.dll を見つけます。 *プロジェクト名*.dll をダブルクリックします。 新しいウィンドウに、他のモジュールおよびアセンブリへの参照に加えて、プロジェクトの属性が表示されます。 名前空間 `Microsoft.Office.Interop.Excel` と `Microsoft.Office.Interop.Word` はアセンブリに含まれています。 Visual Studio の既定では、コンパイラは、参照 PIA からアセンブリに必要な型をインポートします。
 
-     詳細については、「[方法 :アセンブリの内容を表示する](../../../standard/assembly/view-contents.md)」を参照してください。
+     詳細については、[アセンブリの内容を表示する](../../../standard/assembly/view-contents.md)」を参照してください。
 
 5. **MANIFEST** アイコンをダブルクリックします。 プロジェクトによって参照される項目を含んでいるアセンブリの一覧を含むウィンドウが表示されます。 `Microsoft.Office.Interop.Excel` および `Microsoft.Office.Interop.Word` は一覧に含まれていません。 プロジェクトに必要な型がアセンブリにインポートされているため、PIA への参照は必要ありません。 これにより、配置が容易になります。 PIA がユーザーのコンピューター上に存在している必要がなく、アプリケーションに特定のバージョンの PIA を配置する必要がないので、すべてのバージョンに必要な API が存在している場合は、複数のバージョンの Office を使用するようにアプリケーションを設計できます。
 

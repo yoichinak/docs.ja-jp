@@ -7,12 +7,12 @@ ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 026224ca2941e7694fc1b80939e6d283d75db32e
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 4fa0153cfa9dd52f4d80301d228dde3f16225bfd
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214439"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582034"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -164,3 +164,5 @@ Visual Studio で .NET Standard ライブラリを作成するには、Windows �
 ## <a name="see-also"></a>関連項目
 
 - [.NET Standard のバージョン](https://github.com/dotnet/standard/blob/master/docs/versions.md)
+- [.NET Standard ライブラリを構築する](../core/tutorials/library-with-visual-studio.md)
+- [クロス プラットフォーム ターゲット](./library-guidance/cross-platform-targeting.md)

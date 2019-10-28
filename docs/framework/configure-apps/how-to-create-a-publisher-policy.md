@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 5484dfeb8cf5292fb43393bb39b9878114119d29
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991192"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846832"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>方法: 発行者ポリシーを作成する
 
@@ -26,7 +26,7 @@ ms.locfileid: "70991192"
 
 3. 発行者ポリシーアセンブリをグローバルアセンブリキャッシュに追加します。
 
-発行元ポリシーのスキーマについては、「[アセンブリバージョンのリダイレクト](redirect-assembly-versions.md)」を参照してください。 次の例は、の1つの`myAssembly`バージョンを別のバージョンにリダイレクトする発行者ポリシーファイルを示しています。
+発行元ポリシーのスキーマについては、「[アセンブリバージョンのリダイレクト](redirect-assembly-versions.md)」を参照してください。 次の例は、あるバージョンの `myAssembly` を別のバージョンにリダイレクトする発行者ポリシーファイルを示しています。
 
 ```xml
 <configuration>
@@ -55,7 +55,7 @@ ms.locfileid: "70991192"
 
 コマンドプロンプトで、次のコマンドを入力します。
 
-**al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*
+**al/link:** *publisherPolicyFile* **/Out:** *publisherPolicyAssemblyFile* **/keyfile:** *放送ファイル* **/platform:** *processorArchitecture*
 
 このコマンドでは、次のようになります。
 
@@ -63,7 +63,7 @@ ms.locfileid: "70991192"
 
 - *PublisherPolicyAssemblyFile*引数は、このコマンドの結果として生成される発行者ポリシーアセンブリの名前です。 アセンブリファイル名は、次の形式に従う必要があります。
 
-  **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**
+  **ポリシー.** *majorNumber* **。** *Minornumber* **。** *Mainassemblyname* **.dll**
 
 - キーペアを格納*している*ファイルの名前を指定します。 アセンブリと発行者ポリシーアセンブリには、同じキーペアで署名する必要があります。
 
@@ -72,13 +72,13 @@ ms.locfileid: "70991192"
   > [!NOTE]
   > 特定のプロセッサアーキテクチャを対象とする機能は、.NET Framework 2.0 以降で使用できます。
 
-特定のプロセッサアーキテクチャを対象とする機能は .NET Framework 2.0 以降で使用できます。次のコマンドでは、 `policy.1.0.myAssembly`という`pub.config`発行者ポリシーファイルからという発行者ポリシーアセンブリを作成し、に厳密な名前を割り当てます。アセンブリが`sgKey.snk`ファイル内のキーペアを使用し、アセンブリが x86 プロセッサアーキテクチャを対象とすることを指定します。
+特定のプロセッサアーキテクチャを対象とする機能は、.NET Framework 2.0 以降で使用できます。 次のコマンドは、`pub.config`という発行者ポリシーファイルから `policy.1.0.myAssembly` という発行者ポリシーアセンブリを作成し、`sgKey.snk` ファイルのキーペアを使用してアセンブリに厳密な名前を割り当て、アセンブリが x86 プロセッサを対象とすることを指定します。構造.
 
 ```
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
-発行者ポリシーアセンブリは、適用されるアセンブリのプロセッサアーキテクチャと一致している必要があります。 したがって、アセンブリの<xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A>値がの<xref:System.Reflection.ProcessorArchitecture.MSIL>場合は、そのアセンブリの発行者ポリシーアセンブリをで`/platform:anycpu`作成する必要があります。 プロセッサ固有のアセンブリごとに個別の発行者ポリシーアセンブリを指定する必要があります。
+発行者ポリシーアセンブリは、適用されるアセンブリのプロセッサアーキテクチャと一致している必要があります。 したがって、アセンブリの <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> 値が <xref:System.Reflection.ProcessorArchitecture.MSIL>の場合は、そのアセンブリの発行者ポリシーアセンブリを `/platform:anycpu`で作成する必要があります。 プロセッサ固有のアセンブリごとに個別の発行者ポリシーアセンブリを指定する必要があります。
 
 このルールの結果として、アセンブリのプロセッサアーキテクチャを変更するには、バージョン番号のメジャーまたはマイナーコンポーネントを変更して、正しいプロセッサアーキテクチャを持つ新しい発行者ポリシーアセンブリを指定できるようにする必要があります。 アセンブリに異なるプロセッサアーキテクチャがある場合、古い発行者ポリシーアセンブリはアセンブリを処理できません。
 
@@ -92,9 +92,9 @@ al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:
 
 コマンドプロンプトで、次のコマンドを入力します。
 
-**gacutil/i**  *publisherPolicyAssemblyFile*
+**gacutil/I**  *publisherPolicyAssemblyFile*
 
-次のコマンドは`policy.1.0.myAssembly.dll` 、をグローバルアセンブリキャッシュに追加します。
+次のコマンドは、`policy.1.0.myAssembly.dll` をグローバルアセンブリキャッシュに追加します。
 
 ```
 gacutil /i policy.1.0.myAssembly.dll

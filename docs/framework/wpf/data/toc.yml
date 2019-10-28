@@ -1,87 +1,119 @@
-- name: データ
+- name: データ バインディングのドキュメント
   href: index.md
+- name: 概要
+  href: ../../../desktop-wpf/data/data-binding-overview.md?toc=/dotnet/framework/wpf/data/toc.json&bc=/dotnet/framework/wpf/data/breadcrumb/toc.json
+- name: バインディング ソース
+  href: binding-sources-overview.md
+- name: データ テンプレート
+  href: data-templating-overview.md
+- name: バインディング宣言
+  href: binding-declarations-overview.md
+- name: 方法
   items:
-    - name: データ バインディング
-      href: data-binding-wpf.md
+    - name: データ バインディングの操作方法に関するトピック
+      href: data-binding-how-to-topics.md
+    - name: 単純なバインドを作成する
+      href: how-to-create-a-simple-binding.md
+    - name: バインディング ソースを指定する
+      href: how-to-specify-the-binding-source.md
+    - name: XAML でデータをバインディング可能にする
+      href: how-to-make-data-available-for-binding-in-xaml.md
+    - name: TextBox テキストでソースを更新するタイミングを制御する
+      href: how-to-control-when-the-textbox-text-updates-the-source.md
+    - name: バインディングの方向を指定する
+      href: how-to-specify-the-direction-of-the-binding.md
+    - name: コレクションにバインドして選択に基づく情報を表示する
+      href: how-to-bind-to-a-collection-and-display-information-based-on-selection.md
+    - name: 列挙値にバインドする
+      href: how-to-bind-to-an-enumeration.md
+    - name: 2 つのコントロールのプロパティをバインドする
+      href: how-to-bind-the-properties-of-two-controls.md
+    - name: バインディングの検証の実装
+      href: how-to-implement-binding-validation.md
+    - name: カスタム オブジェクトに検証ロジックを実装する
+      href: how-to-implement-validation-logic-on-custom-objects.md
+    - name: バインドされているターゲット プロパティからのバインディング オブジェクトの取得
+      href: how-to-get-the-binding-object-from-a-bound-target-property.md
+    - name: CompositeCollection を実装する
+      href: how-to-implement-a-compositecollection.md
+    - name: バインドされたデータを変換する
+      href: how-to-convert-bound-data.md
+    - name: コードでバインディングを作成する
+      href: how-to-create-a-binding-in-code.md
+    - name: データ コレクションの既定のビューを取得する
+      href: how-to-get-the-default-view-of-a-data-collection.md
+    - name: データ CollectionView のオブジェクト間を移動する
+      href: how-to-navigate-through-the-objects-in-a-data-collectionview.md
+    - name: ビュー内のデータをフィルター処理する
+      href: how-to-filter-data-in-a-view.md
+    - name: ビュー内のデータを並べ替える
+      href: how-to-sort-data-in-a-view.md
+    - name: XAML でビューを使用してデータの並べ替えおよびグループ化を行う
+      href: how-to-sort-and-group-data-using-a-view-in-xaml.md
+    - name: 階層データでマスター詳細パターンを使用する
+      href: how-to-use-the-master-detail-pattern-with-hierarchical-data.md
+    - name: 階層 XML データでマスター詳細パターンを使用する
+      href: how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md
+    - name: バインドされた項目の一覧に基づいて値を生成する
+      href: how-to-produce-a-value-based-on-a-list-of-bound-items.md
+    - name: プロパティの変更通知を実装する
+      href: how-to-implement-property-change-notification.md
+    - name: ObservableCollection を作成およびバインドする
+      href: how-to-create-and-bind-to-an-observablecollection.md
+    - name: PriorityBinding を実装する
+      href: how-to-implement-prioritybinding.md
+    - name: XMLDataProvider と XPath クエリを使用して XML データにバインドする
+      href: how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md
+    - name: クエリ結果にバインドする
+      href: how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md
+    - name: LINQ クエリの結果にバインドする
+      href: how-to-bind-to-the-results-of-a-linq-query.md
+    - name: データ バインドで XML 名前空間を使用する
+      href: how-to-use-xml-namespaces-in-data-binding.md
+    - name: ADO.NET データ ソースにバインドする
+      href: how-to-bind-to-an-ado-net-data-source.md
+    - name: メソッドにバインドする
+      href: how-to-bind-to-a-method.md
+    - name: バインディングの更新の通知を設定する
+      href: how-to-set-up-notification-of-binding-updates.md
+    - name: バインディングをクリアする
+      href: how-to-clear-bindings.md
+    - name: DataTemplate によって生成された要素を検索する
+      href: how-to-find-datatemplate-generated-elements.md
+    - name: Web サービスにバインドする
+      href: how-to-bind-to-a-web-service.md
+- name: LINQ to XML による WPF のデータ バインディング
+  items:
+    - name: 概要
+      href: wpf-data-binding-with-linq-to-xml-overview.md
+    - name: LINQ to XML の動的プロパティ
       items:
-        - name: データ バインディングの概要
-          href: data-binding-overview.md
-        - name: バインディング ソースの概要
-          href: binding-sources-overview.md
-        - name: データ テンプレートの概要
-          href: data-templating-overview.md
-        - name: バインディング宣言の概要
-          href: binding-declarations-overview.md
-        - name: 方法のトピック
-          href: data-binding-how-to-topics.md
+        - name: 概要
+          displayName: LINQ to XML dynamic properties
+          href: linq-to-xml-dynamic-properties.md
+        - name: XAttribute 動的プロパティ
           items:
-            - name: 簡単なバインディングを作成する
-              href: how-to-create-a-simple-binding.md
-            - name: バインディング ソースを指定する
-              href: how-to-specify-the-binding-source.md
-            - name: XAML でデータをバインディング可能にする
-              href: how-to-make-data-available-for-binding-in-xaml.md
-            - name: TextBox テキストでソースを更新するタイミングを制御する
-              href: how-to-control-when-the-textbox-text-updates-the-source.md
-            - name: バインディングの方向を指定する
-              href: how-to-specify-the-direction-of-the-binding.md
-            - name: コレクションにバインドして選択に基づく情報を表示する
-              href: how-to-bind-to-a-collection-and-display-information-based-on-selection.md
-            - name: 列挙値にバインドする
-              href: how-to-bind-to-an-enumeration.md
-            - name: 2 つのコントロールのプロパティをバインドする
-              href: how-to-bind-the-properties-of-two-controls.md
-            - name: バインディングの検証の実装
-              href: how-to-implement-binding-validation.md
-            - name: カスタム オブジェクトに検証ロジックを実装する
-              href: how-to-implement-validation-logic-on-custom-objects.md
-            - name: バインドされているターゲット プロパティからのバインディング オブジェクトの取得
-              href: how-to-get-the-binding-object-from-a-bound-target-property.md
-            - name: CompositeCollection を実装する
-              href: how-to-implement-a-compositecollection.md
-            - name: バインドされたデータを変換する
-              href: how-to-convert-bound-data.md
-            - name: コードでバインディングを作成する
-              href: how-to-create-a-binding-in-code.md
-            - name: データ コレクションの既定のビューを取得する
-              href: how-to-get-the-default-view-of-a-data-collection.md
-            - name: データ CollectionView のオブジェクト間を移動する
-              href: how-to-navigate-through-the-objects-in-a-data-collectionview.md
-            - name: ビュー内のデータをフィルター処理する
-              href: how-to-filter-data-in-a-view.md
-            - name: ビュー内のデータの並べ替え
-              href: how-to-sort-data-in-a-view.md
-            - name: XAML でビューを使用してデータの並べ替えおよびグループ化を行う
-              href: how-to-sort-and-group-data-using-a-view-in-xaml.md
-            - name: 階層データでマスター詳細パターンを使用する
-              href: how-to-use-the-master-detail-pattern-with-hierarchical-data.md
-            - name: 階層 XML データでマスター詳細パターンを使用する
-              href: how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md
-            - name: バインドされた項目の一覧に基づいて値を生成する
-              href: how-to-produce-a-value-based-on-a-list-of-bound-items.md
-            - name: プロパティの変更通知を実装する
-              href: how-to-implement-property-change-notification.md
-            - name: ObservableCollection を作成およびバインドする
-              href: how-to-create-and-bind-to-an-observablecollection.md
-            - name: PriorityBinding を実装する
-              href: how-to-implement-prioritybinding.md
-            - name: XMLDataProvider と XPath クエリを使用して XML データにバインドする
-              href: how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md
-            - name: XDocument、XElement、または LINQ for XML クエリの結果にバインドする
-              href: how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md
-            - name: データ バインドで XML 名前空間を使用する
-              href: how-to-use-xml-namespaces-in-data-binding.md
-            - name: ADO.NET データ ソースにバインドする
-              href: how-to-bind-to-an-ado-net-data-source.md
-            - name: メソッドにバインドする
-              href: how-to-bind-to-a-method.md
-            - name: バインディングの更新の通知を設定する
-              href: how-to-set-up-notification-of-binding-updates.md
-            - name: バインディングをクリアする
-              href: how-to-clear-bindings.md
-            - name: DataTemplate によって生成された要素を検索する
-              href: how-to-find-datatemplate-generated-elements.md
-            - name: Web サービスにバインドする
-              href: how-to-bind-to-a-web-service.md
-            - name: LINQ クエリの結果にバインドする
-              href: how-to-bind-to-the-results-of-a-linq-query.md
+            - name: '[値]'
+              href: value-xattribute-dynamic-property.md
+        - name: XElement 動的プロパティ
+          items:
+            - name: 属性
+              href: attribute-xelement-dynamic-property.md
+            - name: 要素
+              href: element-xelement-dynamic-property.md
+            - name: Elements
+              href: elements-xelement-dynamic-property.md
+            - name: Descendants
+              href: descendants-xelement-dynamic-property.md
+            - name: '[値]'
+              href: value-xelement-dynamic-property.md
+            - name: Xml
+              href: xml-xelement-dynamic-property.md
+        - name: サンプル
+          items:
+            - name: LINQ to XML データ バインディングのサンプル
+              href: linq-to-xml-data-binding-sample.md
+            - name: L2DBForm.xaml ソース コード
+              href: l2dbform-xaml-source-code.md
+            - name: L2DBForm.xaml.cs sauce コード
+              href: l2dbform-xaml-cs-source-code.md

@@ -8,14 +8,14 @@
     - name: コントロール ライブラリ
       href: control-library.md
       items:
-        - name: 境界線
+        - name: Border
           href: border.md
           items:
             - name: BorderThickness 値をアニメーション化する
               href: how-to-animate-a-borderthickness-value.md
         - name: BulletDecorator
           href: bulletdecorator.md
-        - name: ボタン
+        - name: Button
           href: button.md
           items:
             - name: イメージを持つ Button を作成する
@@ -133,7 +133,7 @@
           items:
             - name: GroupBox テンプレートを定義する
               href: how-to-define-a-groupbox-template.md
-        - name: イメージ
+        - name: Image
           href: image.md
           items:
             - name: 方法のトピック
@@ -285,7 +285,7 @@
                   href: how-to-use-the-content-scrolling-methods-of-scrollviewer.md
         - name: 区切り記号
           href: separator.md
-        - name: スライダー
+        - name: Slider
           href: slider.md
           items:
             - name: スライダーの目盛りをカスタマイズする
@@ -497,7 +497,7 @@
         - name: 'チュートリアル:カスタム アニメーション ボタンの作成'
           href: walkthroughs-create-a-custom-animated-button.md
           items:
-            - name: Microsoft Expression Blend を使用してボタンを作成する
+            - name: Blend を使用したボタンの作成
               href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
             - name: XAML を使用したボタンの作成
               href: walkthrough-create-a-button-by-using-xaml.md
