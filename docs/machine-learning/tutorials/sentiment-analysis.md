@@ -1,25 +1,25 @@
 ---
-title: 'チュートリアル: Web サイトのコメントを分析する - 二項分類'
+title: チュートリアル:Web サイトのコメントを分析する - 二項分類
 description: このチュートリアルでは、Web サイトのコメントからセンチメントを分類して適切なアクションを実行する .NET Core コンソール アプリケーションの作成方法について説明します。 この二項センチメント分類子には、Visual Studio で C# を使用します。
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: c6b9d51a8ab91b4365c909993211f11ab3436808
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e241ae8c0d39e6573b40c69611985f7095114629
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700857"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320145"
 ---
-# <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>チュートリアル: ML.NET の二項分類を使用して Web サイトのコメントのセンチメントを分析する
+# <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>チュートリアル:ML.NET の二項分類を使用して Web サイトのコメントのセンチメントを分析する
 
 このチュートリアルでは、Web サイトのコメントからセンチメントを分類して適切なアクションを実行する .NET Core コンソール アプリケーションの作成方法について説明します。 この二項センチメント分類子には、Visual Studio 2017 で C# を使用します。
 
-このチュートリアルでは、次の作業を行う方法について説明します。
+このチュートリアルでは、以下の内容を学習します。
 > [!div class="checklist"]
 >
-> - コンソール アプリケーションを作成する
-> - データの準備
+> - コンソール アプリケーションの作成
+> - データを準備する
 > - データを読み込む
 > - モデルを構築してトレーニングする
 > - モデルを評価する
@@ -34,7 +34,7 @@ ms.locfileid: "71700857"
 
 - [UCI Sentiment Labeled Sentences データセット](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (ZIP ファイル)
 
-## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
+## <a name="create-a-console-application"></a>コンソール アプリケーションの作成
 
 1. "SentimentAnalysis" という名前の **.NET Core コンソール アプリケーション**を作成します。
 
@@ -47,7 +47,7 @@ ms.locfileid: "71700857"
 ## <a name="prepare-your-data"></a>データを準備する
 
 > [!NOTE]
-> このチュートリアルのデータセットは、「From Group to Individual Labels using Deep Features」 (Kotzias 他 著、 KDD 2015) のものであり、UCI 機械学習リポジトリ (Dua, D. and Karra Taniskidou, E.(2017)) でホストされています。 UCI 機械学習リポジトリ [http://archive.ics.uci.edu/ml ]。 カリフォルニア州アーバイン: カリフォルニア大学情報コンピュータサイエンス学部。
+> このチュートリアルのデータセットは、「From Group to Individual Labels using Deep Features」 (Kotzias 他 著、 KDD 2015) のものであり、UCI 機械学習リポジトリ (Dua, D. and Karra Taniskidou, E.(2017)) でホストされています。 UCI 機械学習リポジトリ [http://archive.ics.uci.edu/ml ]。 カリフォルニア州アーバイン: カリフォルニア大学、情報・コンピューター サイエンス学部。
 
 1. [UCI Sentiment Labeled Sentences データセットの ZIP ファイル](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)をダウンロードし、展開します。
 
@@ -61,26 +61,21 @@ ms.locfileid: "71700857"
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddUsings "Add necessary usings")]
 
-2. 最近ダウンロードしたデータセット ファイルのパスと保存したモデル ファイルのパスを保持するために、2 つのグローバル フィールドを作成します。
-
-    - `_dataPath` には、モデルのトレーニングに使用するデータ セットのパスが含まれます。
-    - `_modelPath` には、トレーニング済みのモデルを保存するパスが含まれます。
-
-3. `Main` メソッドのすぐ上にある行に次のコードを追加して、それらのパスを指定します。
+1. `Main` メソッドの直前の行に次のコードを追加して、最近ダウンロードしたデータセット ファイルのパスを保持するフィールドを作成します。
 
     [!code-csharp[Declare global variables](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
-4. 次に、入力データと予測のためにクラスを作成します。 プロジェクトに新しいクラスを追加します。
+1. 次に、入力データと予測のためにクラスを作成します。 プロジェクトに新しいクラスを追加します。
 
     - **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
 
     - **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを *SentimentData.cs* に変更します。 次に **[追加]** を選択します。
 
-5. コード エディターで *SentimentData.cs* ファイルが開きます。 *SentimentData.cs* の先頭に次の `using` ステートメントを 追加します。
+1. コード エディターで *SentimentData.cs* ファイルが開きます。 *SentimentData.cs* の先頭に次の `using` ステートメントを 追加します。
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#AddUsings "Add necessary usings")]
 
-6. 既存のクラス定義を削除し、`SentimentData` と `SentimentPrediction` の 2 つのクラスを含む次のコードを *SentimentData.cs* ファイルに追加します。
+1. 既存のクラス定義を削除し、`SentimentData` と `SentimentPrediction` の 2 つのクラスを含む次のコードを *SentimentData.cs* ファイルに追加します。
 
     [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
@@ -180,7 +175,7 @@ ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)�
 
     前のコードの `FeaturizeText()` メソッドでは、テキスト列 (`SentimentText`) を機械学習アルゴリズムから使用される数値キー型の `Features` 列に変換し、それを新しいデータセット列として追加します。
 
-    |SentimentText                         |Sentiment |フィーチャー              |
+    |SentimentText                         |Sentiment |機能              |
     |--------------------------------------|----------|----------------------|
     |Waitress was a little slow in service.|    0     |[0.76, 0.65, 0.44, …] |
     |Crust is not good.                    |    0     |[0.98, 0.43, 0.54, …] |
@@ -377,7 +372,7 @@ Press any key to continue . . .
 
 ```
 
-おめでとうございます! これで、メッセージのセンチメントを分類および予測するための機械学習モデルをビルドできました。
+お疲れさまでした。 これで、メッセージのセンチメントを分類および予測するための機械学習モデルをビルドできました。
 
 優れたモデルの構築は、反復的なプロセスです。 このチュートリアルでは、モデルのトレーニングを短時間で実行するために小さなデータセットを使用しているため、このモデルの品質は最初は低くなっています。 このモデルの品質に満足できなければ、大規模なトレーニング データセットを使用するか、別のトレーニング アルゴリズムとアルゴリズムごとに異なる[ハイパーパラメーター](../resources/glossary.md##hyperparameter)を選択してモデルの改良を試すことができます。
 
@@ -385,11 +380,11 @@ Press any key to continue . . .
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、次の作業を行う方法を学びました。
+このチュートリアルでは、以下の内容を学習しました。
 > [!div class="checklist"]
 >
-> - コンソール アプリケーションを作成する
-> - データの準備
+> - コンソール アプリケーションの作成
+> - データを準備する
 > - データを読み込む
 > - モデルを構築してトレーニングする
 > - モデルを評価する

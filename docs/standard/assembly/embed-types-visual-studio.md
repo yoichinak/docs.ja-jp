@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1f32bd840efa97b62097a2d051c25d519785b381
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1a37a3bcc3b1bc352d6a2f59691819e0b2403d3d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972733"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523900"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む
 
@@ -323,8 +323,8 @@ ms.locfileid: "70972733"
 
 ## <a name="see-also"></a>関連項目
 
-- [/link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
+- [-link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
 - [C# プログラミング ガイド](../../csharp/programming-guide/index.md)
 - [プログラミングの概念 (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
 - [アセンブリを使用したプログラム](program.md)

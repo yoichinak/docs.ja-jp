@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: cf941e5e3fa3fc6313ef8b2ff5c176aec68c1e6b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 865e55a28e2f3db85d50a81f6ab29c354ee3c62a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291681"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319089"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null 免除) 演算子 (C# リファレンス)
 
@@ -21,7 +21,7 @@ null 免除演算子は実行時には影響を与えません。 式の null �
 
 null 許容参照型の機能の詳細については、「[null 許容参照型](../../nullable-references.md)」を参照してください。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 null 免除演算子のユース ケースの 1 つは、引数検証ロジックをテストすることです。 たとえば、次のクラスを考えてみます。
 
@@ -37,7 +37,7 @@ null 免除演算子を使用しない場合は、コンパイラによって上
 
 [!code-csharp[Use null-forgiving operator](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseNullForgiving)]
 
-null 免除演算子を使用しない場合は、コンパイラによって `p.Name` コードに対して次の警告が生成されます: `Warning CS8602: Dereference of a possibly null reference.`。
+null 免除演算子を使用しない場合は、コンパイラによって `p.Name` コードに対して次の警告が生成されます: `Warning CS8602: Dereference of a possibly null reference`。
 
 `IsValid` メソッドを変更できる場合は、[NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) 属性を使用して、メソッドによって `true` が返されたときに `IsValid` メソッドの引数を `null` にできないことをコンパイラに通知することができます。
 
@@ -45,8 +45,12 @@ null 免除演算子を使用しない場合は、コンパイラによって `p
 
 前の例では、null 免除演算子を使用する必要はありません。これは、`if` ステートメント内で `p` を `null` にできないことを把握するのに十分な情報がコンパイラに含まれているためです。 変数の null 状態に関する追加情報を指定するための属性の詳細については、[null 予測を定義する属性を使用した API のアップグレード](../../nullable-attributes.md)に関するページを参照してください。
 
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳細については、[null 許容参照型仕様の下書き](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)の「[null 免除演算子](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)」セクションを参照してください。
+
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [C# 演算子](index.md)
-- [チュートリアル:null 許容参照型を使用して設計する](../../tutorials/nullable-reference-types.md)
+- [チュートリアル: null 許容参照型を使用して設計する](../../tutorials/nullable-reference-types.md)

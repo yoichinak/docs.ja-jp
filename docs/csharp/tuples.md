@@ -3,12 +3,12 @@ title: タプル型 - C# ガイド
 description: C# の名前のないタプルと名前付きタプルについて
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 00330af38044b07128551b7dc74c7d831c7a5626
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7e5df8c20dbbddbe84a56883a6d2a027f32d8ff7
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105899"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319756"
 ---
 # <a name="c-tuple-types"></a>C# のタプル型
 
@@ -282,6 +282,20 @@ if (("Althea", "Goodwin") == p)
 ```
 
 `Deconstruct` メソッドは `Person` オブジェクト `p` を 2 つの文字列を含むタプルに変換できますが、これを等値テストのコンテキストで適用することはできません。
+
+## <a name="tuples-as-out-parameters"></a>out パラメーターとしてのタプル
+
+タプルは、"*それ自体*" を out パラメーターとして使用できます。 前述の「[分解](#deconstruction)」セクションで説明したあいまいさと混同しないようにしてください。 メソッド呼び出しでは、タプルのシェイプについてのみ記述する必要があります。
+
+[!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
+
+または、[_unnamed_](#named-and-unnamed-tuples) タプルを使用し、そのフィールドを `Item1` および `Item2` として参照することもできます。
+
+```csharp
+dict.TryGetValue(2, out (int, string) pair);
+// ...
+Console.WriteLine($"{pair.Item1}: {pair.Item2}");
+```
 
 ## <a name="conclusion"></a>まとめ 
 

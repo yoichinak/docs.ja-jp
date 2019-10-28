@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a3e5f8dd9cfac809aafc2533463390cd5a64e0d6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58759873"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395456"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C\# で文字列を比較する方法
 
@@ -29,19 +29,19 @@ ms.locfileid: "58759873"
 
 ## <a name="default-ordinal-comparisons"></a>既定の序数の比較
 
-最も一般的な演算である
+既定では、最も一般的な操作は次のとおりです。
 
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
-- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> と <xref:System.String.op_Inequality%2A?displayProperty=nameWithType>。つまり、それぞれ[等価演算子 `==` と `!=`](../language-reference/operators/equality-operators.md#string-equality)。
 
-では、序数の比較、大文字小文字の比較、現在のカルチャが使用されます。 これらの結果を次の例に示します。
+大文字と小文字を区別する序数の比較を実行し、必要に応じて現在のカルチャを使用します。 次に例を示します。
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-既定の序数の比較では、文字列を比較するときに言語の規則を考慮しません。 2 つの文字列のそれぞれの <xref:System.Char> オブジェクトのバイナリ値を比較します。 その結果、既定の序数の比較でも大文字と小文字が区別されます。 
+既定の序数の比較では、文字列を比較するときに言語の規則を考慮しません。 2 つの文字列のそれぞれの <xref:System.Char> オブジェクトのバイナリ値を比較します。 その結果、既定の序数の比較でも大文字と小文字が区別されます。
 
-<xref:System.String.Equals%2A?displayProperty=nameWithType> と <xref:System.String.op_Equality%2A?displayProperty=nameWithType> を使用した等価性のテストは、<xref:System.String.CompareTo%2A?displayProperty=nameWithType> と <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> のメソッドを使用した文字列の比較とは異なります。 等価性のテストでは大文字と小文字を区別する序数の比較が行われますが、比較メソッドでは大文字と小文字だけでなく、現在のカルチャを使用してカルチャを区別する比較が行われます。 既定の比較メソッドでは多くの場合、さまざまな種類の比較が実行されるため、実行する比較の種類を明示的に指定するオーバーロードを呼び出して、コードの意図を常に明確にすることをお勧めします。
+<xref:System.String.Equals%2A?displayProperty=nameWithType> と `==` および `!=` 演算子を使用した等価性のテストは、<xref:System.String.CompareTo%2A?displayProperty=nameWithType> と <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> のメソッドを使用した文字列の比較とは異なります。 等価性のテストでは大文字と小文字を区別する序数の比較が行われますが、比較メソッドでは大文字と小文字だけでなく、現在のカルチャを使用してカルチャを区別する比較が行われます。 既定の比較メソッドでは多くの場合、さまざまな種類の比較が実行されるため、実行する比較の種類を明示的に指定するオーバーロードを呼び出して、コードの意図を常に明確にすることをお勧めします。
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>大文字と小文字を区別しない、序数に基づく比較
 

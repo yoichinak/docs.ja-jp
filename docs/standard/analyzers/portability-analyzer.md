@@ -4,12 +4,12 @@ description: .NET Portability Analyzer ツールを使って、さまざまな .
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 246c1d25a99e61d7e2f69f1b65ae3534d22571ba
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a3979d792b4cfd1f7949a3c8e14c6f856e9e3e21
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053999"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320103"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -27,16 +27,16 @@ ms.locfileid: "71053999"
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>.NET Portability Analyzer の使用方法
 
-Visual Studio で .NET Portability Analyzer を使用するには、[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) から拡張機能をダウンロードし、インストールする必要があります。 Visual Studio 2017 以降のバージョンで機能します。 Visual Studio で構成するには、**[Analyze]\(分析\)** > **[Portability Analyzer Settings]\(Portability Analyzer の設定\)** でターゲット プラットフォームを選択します。ターゲット プラットフォームは、現在のアセンブリがビルドされているプラットフォーム/バージョンと比較して移植性のギャップを評価する .NET プラットフォーム/バージョンです。
+Visual Studio で .NET Portability Analyzer を使用するには、[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) から拡張機能をダウンロードし、インストールする必要があります。 Visual Studio 2017 以降のバージョンで機能します。 Visual Studio で構成するには、 **[Analyze]\(分析\)**  >  **[Portability Analyzer Settings]\(Portability Analyzer の設定\)** でターゲット プラットフォームを選択します。ターゲット プラットフォームは、現在のアセンブリがビルドされているプラットフォーム/バージョンと比較して移植性のギャップを評価する .NET プラットフォーム/バージョンです。
 
-![Portability のスクリーンショット](./media/portability-analyzer/portability-screenshot.png)
+![移植性アナライザーのスクリーンショット。](./media/portability-analyzer/portability-screenshot.png)
 
 ApiPort コンソール アプリケーションを使用して、[ApiPort リポジトリ](https://aka.ms/apiportdownload)からダウンロードすることもできます。 `listTargets` コマンド オプションを使って使用可能なターゲットの一覧を表示した後、`-t` または `--target` コマンド オプションを指定することによってターゲット プラットフォームを選択できます。 
 
 ### <a name="analyze-portability"></a>移植性を分析する
-Visual Studio でプロジェクト全体を分析するには、**ソリューション エクスプローラー**でプロジェクトを右クリックし、**[Analyze Assembly Portability]\(アセンブリの移植性を分析する\)** を選択します。 または、**[分析]** メニューで **[Analyze Assembly Portability]** (アセンブリの移植性を分析) を選択します。 そこから、プロジェクトの実行可能ファイルまたは DLL を選択します。
+Visual Studio でプロジェクト全体を分析するには、**ソリューション エクスプローラー**でプロジェクトを右クリックし、 **[Analyze Assembly Portability]\(アセンブリの移植性を分析する\)** を選択します。 または、 **[分析]** メニューで **[Analyze Assembly Portability]** (アセンブリの移植性を分析) を選択します。 そこから、プロジェクトの実行可能ファイルまたは DLL を選択します。
 
-![ソリューション エクスプローラーからの Portability Analyzer](./media/portability-analyzer/portability-solution-explorer.png)
+![ソリューション エクスプローラーからの移植性アナライザーのスクリーンショット。](./media/portability-analyzer/portability-solution-explorer.png)
 
 [ApiPort コンソール アプリ](https://aka.ms/apiportdownload)を使うこともできます。 
 
@@ -48,17 +48,17 @@ Visual Studio でプロジェクト全体を分析するには、**ソリュー�
 
 ### <a name="view-and-interpret-portability-result"></a>移植性の結果を表示して解釈する
 
-レポートには、ターゲット プラットフォームによってサポートされていない API のみが表示されます。 Visual Studio で分析を実行すると、.NET 移植性レポート ファイルのリンクがポップアップ表示されます。 [ApiPort コンソール アプリ](https://aka.ms/apiportdownload)を使った場合は、.NET 移植性レポートは指定した形式のファイルとして保存されます。 既定では、現在のディレクトリの Excel ファイル (*.xlsx*) です。
+レポートには、ターゲット プラットフォームによってサポートされていない API のみが表示されます。 Visual Studio で分析を実行すると、.NET 移植性レポート ファイルのリンクがポップアップ表示されます。 [ApiPort コンソール アプリ](https://aka.ms/apiportdownload)を使った場合は、.NET 移植性レポートは指定した形式のファイルとして保存されます。 既定では、現在のディレクトリの Excel ファイル ( *.xlsx*) です。
 
 #### <a name="portability-summary"></a>移植性の概要 
 
-![移植性の概要](./media/portability-analyzer/portabilitysummary.png)
+![移植性の概要のスクリーンショット。](./media/portability-analyzer/api-catalog-portablility-summary.png)
 
 レポートの [Portability Summary]\(移植性の概要\) セクションでは、実行に含まれる各アセンブリの移植性の割合が示されます。 前の例では、`svcutil` アプリで使われている .NET Framework API の 71.24% が、.NET Core とプラットフォーム拡張機能で使用できます。 複数のアセンブリに対して .NET Portability Analyzer ツールを実行した場合、移植性の概要レポートでは各アセンブリが 1 行に表示されます。
 
 #### <a name="details"></a>説明
 
-![移植性の詳細](./media/portability-analyzer/portabilitydetails.png)
+![移植性の詳細のスクリーンショット。](./media/portability-analyzer/api-catalog-portablility-details.png)
 
 レポートの **[説明]** セクションには、選択した**ターゲット プラットフォーム**のいずれからも欠落している API が一覧表示されます。 
 
@@ -70,7 +70,7 @@ Visual Studio でプロジェクト全体を分析するには、**ソリュー�
 
 #### <a name="missing-assemblies"></a>足りないアセンブリ
 
-![移植性の詳細](./media/portability-analyzer/missingassemblies.png)
+![足りないアセンブリのスクリーンショット。](./media/portability-analyzer/api-catalog-missing-assemblies.png)
 
 レポートには [Missing Assemblies]\(足りないアセンブリ\) セクションが含まれる場合があります。 そこに示されているアセンブリの一覧は、分析されたアセンブリによって参照されていますが、分析されませんでした。 自分が所有しているアセンブリの場合は、API Portability Analyzer の実行にそれを含めて、そのアセンブリに関する API レベルの詳細な移植性レポートを取得できます。 サード パーティのライブラリである場合は、ターゲット プラットフォームをサポートしている新しいバージョンがあるかどうかを調べます。 ある場合は、新しいバージョンへの移行を検討します。 最終的に、この一覧には、アプリが依存していて、ターゲット プラットフォームをサポートするバージョンがあることが確認された、すべてのサード パーティ アセンブリが含まれることが期待されます。  
 

@@ -1,7 +1,7 @@
 ---
 title: 浮動小数点数値型 - C# リファレンス
 description: Overview of the built-in C# floating-point types (組み込みの C# 浮動小数点型の概要)
-ms.date: 06/30/2019
+ms.date: 10/18/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 17ae154780679dd1f42f43f1ec345cdc722815d3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002196"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579368"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮動小数点数値型 (C# リファレンス)
 
-**浮動小数点型**は**単純型**のサブセットであり、[*リテラル*](#floating-point-literals)を使用して初期化できます。 すべての浮動小数点型は値の型でもあります。 すべての浮動小数点数値型では、[算術](../operators/arithmetic-operators.md)、[比較、および等値](../operators/equality-operators.md)演算子がサポートされています。
+**浮動小数点型**は**単純型**のサブセットであり、[*リテラル*](#real-literals)を使用して初期化できます。 すべての浮動小数点型は値の型でもあります。 すべての浮動小数点数値型は、[算術](../operators/arithmetic-operators.md)、[比較](../operators/comparison-operators.md)、および[等値](../operators/equality-operators.md)演算子をサポートしています。
 
 ## <a name="characteristics-of-the-floating-point-types"></a>浮動小数点型の特性
 
 C# では、次の定義済みの浮動小数点型がサポートされています。
   
-|C# 型/キーワード|おおよその範囲|Precision|Size|.NET 型|
+|C# 型/キーワード|おおよその範囲|有効桁数|サイズ|.NET 型|
 |----------|-----------------------|---------------|--------------|--------------|
 |`float`|±1.5 x 10<sup>−45</sup> から ±3.4 x 10<sup>38</sup>|~6 ～9 桁|4 バイト|<xref:System.Single?displayProperty=nameWithType>|
 |`double`|±5.0 × 10<sup>−324</sup> - ±1.7 × 10<sup>308</sup>|~15-17 桁|8 バイト|<xref:System.Double?displayProperty=nameWithType>|
@@ -52,8 +52,8 @@ System.Double b = 12.3;
 
 [整数](integral-numeric-types.md)型と浮動小数点型を 1 つの式の中で混在させることができます。 この場合、整数型が浮動小数点型に変換されます。 式の評価は、次の規則に従って実行されます。
 
-- 浮動小数点型の 1 つが `double` の場合、式は `double` または [bool](../keywords/bool.md) (リレーショナル比較または等価比較の場合) と評価されます。
-- 式に `double` 型が含まれない場合は、式は `float` または [bool](../keywords/bool.md) (リレーショナル比較または等価比較の場合) と評価されます。
+- 浮動小数点型のいずれかが `double` の場合、リレーショナル比較と等価比較で、式は `double`、または[ブール](../keywords/bool.md)に評価されます。
+- 式に `double` 型がない場合、リレーショナル比較と等価比較で、式は `float`、または[ブール](../keywords/bool.md)に評価されます。
 
 浮動小数点式は、次の値のセットを含むことができます。
 
@@ -66,23 +66,41 @@ System.Double b = 12.3;
 
 浮動小数点値の書式指定には、[標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md)または[カスタムの数値書式指定文字列](../../../standard/base-types/custom-numeric-format-strings.md)のいずれかを使用できます。
 
-## <a name="floating-point-literals"></a>浮動小数点リテラル
+## <a name="real-literals"></a>実数リテラル
 
-既定では、代入演算子の右側にある浮動小数点数リテラルは `double` として扱われます。 サフィックスを使用して、浮動小数点リテラルまたは整数リテラルを特定の型に変換できます。
+実数リテラルの型は、サフィックスによって次のように決まります。
 
-- `d` または `D` サフィックスによって、リテラルは `double` に変換されます。
-- `f` または `F` サフィックスによって、リテラルは `float` に変換されます。
-- `m` または `M` サフィックスによって、リテラルは `decimal` に変換されます。
+- サフィックスがない、または `d` または `D` のリテラルは `double` 型です
+- サフィックスが `f` または `F` のリテラルは `float` 型です
+- サフィックスが `m` または `M` のリテラルは `decimal` 型です
 
-次の例は、各サフィックスを示しています。
+次のコードは、それぞれの例を示しています。
 
 ```csharp
 double d = 3D;
 d = 4d;
-float f = 3.5F;
+d = 3.934_001;
+
+float f = 3_000.5F;
 f = 5.4f;
-decimal myMoney = 300.5m;
+
+decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
+```
+
+前述の例は、C# 7.0 以降でサポートされている "*桁区切り記号*" としての `_` の使用法も示しています。 数字区切り記号は、あらゆる種類の数値リテラルで使用できます。
+
+次の例に示すように、指数表記を使用して、実数リテラルの指数部を指定することもできます。
+
+```csharp-interactive
+double d = 0.42e2;
+Console.WriteLine(d);  // output 42;
+
+float f = 134.45E-2f;
+Console.WriteLine(f);  // output: 1.3445
+
+decimal m = 1.5E6m;
+Console.WriteLine(m);  // output: 1500000
 ```
 
 ## <a name="conversions"></a>変換
@@ -95,6 +113,14 @@ myMoney = 400.75M;
 
 明示的な数値変換の詳細については、「[明示的な数値変換の一覧表](../keywords/explicit-numeric-conversions-table.md)」を参照してください。
 
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の次のセクションを参照してください。
+
+- [浮動小数点型](~/_csharplang/spec/types.md#floating-point-types)
+- [decimal 型](~/_csharplang/spec/types.md#the-decimal-type)
+- [実数リテラル](~/_csharplang/spec/lexical-structure.md#real-literals)
+
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
@@ -102,8 +128,6 @@ myMoney = 400.75M;
 - [組み込み型の一覧表](../keywords/built-in-types-table.md)
 - [.NET における数値](../../../standard/numerics.md)
 - [キャストと型変換](../../programming-guide/types/casting-and-type-conversions.md)
-- [暗黙的な数値変換の一覧表](../keywords/implicit-numeric-conversions-table.md)
-- [明示的な数値変換の一覧表](../keywords/explicit-numeric-conversions-table.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
 - [数値結果テーブルの書式設定](../keywords/formatting-numeric-results-table.md)
 - [標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md)
