@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: c18a06971887049a443f0bd1af7c77610a787a27
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609951"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771719"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>ビットごとの演算子とシフト演算子 (C# リファレンス)
 
@@ -158,7 +158,7 @@ x = x op y
 
 ## <a name="shift-count-of-the-shift-operators"></a>シフト演算子のシフト数
 
-シフト演算子 `<<` および `>>` の場合、右側のオペランドの型は、[int](../builtin-types/integral-numeric-types.md) であるか、または `int` への[事前に定義された暗黙的な数値変換](../keywords/implicit-numeric-conversions-table.md)を持つ型にする必要があります。
+シフト演算子 `<<` および `>>` の場合、右側のオペランドの型は、[int](../builtin-types/integral-numeric-types.md) であるか、または `int` への[事前に定義された暗黙的な数値変換](../builtin-types/numeric-conversions.md#implicit-numeric-conversions)を持つ型にする必要があります。
 
 `x << count` および `x >> count` の式では、実際のシフト数は次のように `x` の型によって異なります。
 
