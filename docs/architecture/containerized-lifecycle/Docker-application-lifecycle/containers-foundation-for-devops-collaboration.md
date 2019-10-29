@@ -2,18 +2,18 @@
 title: DevOps コラボレーションの基盤としてのコンテナー
 description: DevOps を効率化するコンテナーの重要な役割を理解します。
 ms.date: 02/15/2019
-ms.openlocfilehash: 37faf00f270414df363f36894317f31f81a2937e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 16cccef0545f0da14128e31dc8f7ad78369cf23a
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672769"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394801"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>DevOps コラボレーションの基盤としてのコンテナー
 
 コンテナーと Docker テクノロジの性質上、開発者は自分のソフトウェアや依存関係を IT 運用や運用環境と容易に共有できると同時に、"自分のコンピューターでは動作する" というよくある言い訳を排除できます。 コンテナーを使用すれば、異なる環境間のアプリケーションの競合を解決できます。 間接的には、コンテナーと Docker により開発者と IT 運用担当はより密接に結びつけられ、両者は効果的なコラボレーションをより簡単に実現できます。 コンテナー ワークフローを採用することで、多くの顧客に DevOps の継続性を提供できます。多くの顧客がこれを求めていましたが、以前はリリース パイプラインおよびビルド パイプライン用のより複雑な構成を介して実装する必要がありました。 DevOps でのビルド/テスト/配置パイプラインはコンテナーにより簡素化されます。
 
-![Docker は、開発/設計ワークロード上の開発者およびアーキテクトと、実行/監視/管理ワークロード内の IT 運用担当との間を橋渡しするのに役に立ちます](./media/image1.png)
+![Docker アプリのライフ サイクルの所有権を示す図。](./media/containers-foundation-for-devops-collaboration/persona-workloads-docker-container-lifecycle.png)
 
 **図 2-1** コンテナー化された Docker アプリケーションのライフサイクルでの "ペルソナ" あたりの主なワークロード
 
@@ -57,7 +57,7 @@ Docker のコンテナー化とマイクロサービスを使用することで�
 
 図 2-2 に、Docker アプリケーション ライフサイクルの詳細なワークフローを示します。このインスタンスでは、特定の DevOps アクティビティと資産に重点を置いています。
 
-![この図では、DevOps の "外側のループ" を示しています。 コードがリポジトリにプッシュされると、CI パイプラインが開始されてから CD パイプラインが開始され、そこでアプリケーションが配置されます。 配置されたアプリケーションから収集されたメトリックは開発ワークロードにフィードバックされ、そこで "内部ループ" が発生します。したがって、開発チームは実際のデータを得てユーザーおよびビジネスのニーズに応えることができます。](./media/image2.png)
+![Docker アプリの汎用的なエンドツーエンド ライフ サイクルを示す図。](./media/containers-foundation-for-devops-collaboration/generic-end-to-enddpcker-app-life-cycle.png)
 
 **図 2-2** Docker でコンテナー化されたアプリケーション ライフ サイクルのワークフローの概要
 

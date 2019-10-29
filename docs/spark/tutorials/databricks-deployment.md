@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Databricks にデ
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 035a3c36337413153ee0370aec154d48b84a4711
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 55fa9b42e04a540deb245887d601e6cce0e6e623
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957245"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583519"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>.NET for Apache Spark アプリケーションを Databricks にデプロイする
 
@@ -19,17 +19,17 @@ ms.locfileid: "71957245"
 
 > [!div class="checklist"]
 >
-> - Microsoft.Spark.Worker を準備する
-> - Spark .NET アプリを発行する
-> - Databricks にアプリをデプロイする
-> - アプリの実行
+> * Microsoft.Spark.Worker を準備する
+> * Spark .NET アプリを発行する
+> * Databricks にアプリをデプロイする
+> * アプリの実行
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 開始する前に、以下を行います。
 
-- [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) をダウンロードします。
-- [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) をお使いのローカル コンピューターにダウンロードします。 これは、後で .NET for Apache Spark の依存ファイルを Spark クラスターのワーカー ノードにコピーするために使用するヘルパー スクリプトです。
+* [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) をダウンロードします。
+* [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) をお使いのローカル コンピューターにダウンロードします。 これは、後で .NET for Apache Spark の依存ファイルを Spark クラスターのワーカー ノードにコピーするために使用するヘルパー スクリプトです。
 
 ## <a name="prepare-worker-dependencies"></a>ワーカーの依存関係を準備する
 
@@ -63,15 +63,15 @@ ms.locfileid: "71957245"
 
 4. クラスターからアクセスできる分散ファイル システム (DBFS など) に、次をアップロードします。
 
-   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`:この jar は、[Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet パッケージの一部として含まれており、アプリのビルド出力ディレクトリに併置されています。
-   - `<your app>.zip`
-   - 各 Executor の作業ディレクトリ内に配置されるファイル (依存関係ファイルや、すべてのワーカーからアクセスできる共通データなど) またはアセンブリ (アプリが依存しているユーザー定義関数またはライブラリを含む DLL など)。
+   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`:この jar は、[Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet パッケージの一部として含まれており、アプリのビルド出力ディレクトリに併置されています。
+   * `<your app>.zip`
+   * 各 Executor の作業ディレクトリ内に配置されるファイル (依存関係ファイルや、すべてのワーカーからアクセスできる共通データなど) またはアセンブリ (アプリが依存しているユーザー定義関数またはライブラリを含む DLL など)。
 
 ## <a name="deploy-to-databricks"></a>Databricks のデプロイする
 
 [Databricks](https://databricks.com) は、Apache Spark を使用してクラウドベースのビッグ データ処理を提供するプラットフォームです。
 
-> [!Note] 
+> [!NOTE]
 > [Azure Databricks](https://azure.microsoft.com/services/databricks/) と [AWS Databricks](https://databricks.com/aws) は Linux ベースです。 そのため、Databricks へのアプリのデプロイに関心がある場合は、アプリが .NET Standard と互換性があることと、アプリのコンパイルに [.NET Core コンパイラ](https://dotnet.microsoft.com/download)を使用していることを確認してください。
 
 Databricks を使用すると、.NET for Apache Spark アプリを既存のアクティブなクラスターに送信したり、ジョブを起動するたびに新しいクラスターを作成したりすることができます。 これには、.NET for Apache Spark アプリを送信する前に、**Microsoft.Spark.Worker** をインストールする必要があります。
@@ -103,7 +103,7 @@ Databricks を使用すると、.NET for Apache Spark アプリを既存のア�
 
    ![スクリプト アクションの画像](./media/databricks-deployment/deployment-databricks-init-script.png)
 
-## <a name="run-your-app"></a>アプリの実行 
+## <a name="run-your-app"></a>アプリの実行
 
 `set JAR` または `spark-submit` を使用して、ジョブを Databricks に送信できます。
 
@@ -122,7 +122,7 @@ Databricks を使用すると、.NET for Apache Spark アプリを既存のア�
    | パラメーター   | [値]                                                |
    |-------------|------------------------------------------------------|
    | Main クラス  | org.apache.spark.deploy.dotnet.DotnetRunner          |
-   | 引数   | /dbfs/apps/<your-app-name>.zip <your-app-main-class> |
+   | 引数   | /dbfs/apps/\<your-app-name>.zip \<your-app-main-class> |
 
 4. 前のセクションで、**Init スクリプト**を作成した既存のクラスターを指すように**クラスター**を構成します。
 
@@ -130,28 +130,28 @@ Databricks を使用すると、.NET for Apache Spark アプリを既存のア�
 
 1. [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) を使用して、Databricks クラスターにアプリケーションをアップロードします。
 
-      ```bash
-      cd <path-to-your-app-publish-directory>
-      databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
-      ```
+    ```bash
+    cd <path-to-your-app-publish-directory>
+    databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
+    ```
 
 2. この手順は、アプリ アセンブリ (たとえば、ユーザー定義関数とその依存関係を含む DLL) を各 **Microsoft Spark.Worker** の作業ディレクトリに配置する必要がある場合にのみ必要です。
 
-   - アプリケーション アセンブリを Databricks クラスターにアップロードする
-      
+   * アプリケーション アセンブリを Databricks クラスターにアップロードする
+
       ```bash
       cd <path-to-your-app-publish-directory>
       databricks fs cp <assembly>.dll dbfs:/apps/dependencies
       ```
 
-   - [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) 内のアプリの依存関係セクションをコメント解除して、ご自分のアプリの依存関係パスをポイントするように変更し、Databricks クラスターにアップロードします。
-   
+   * [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) 内のアプリの依存関係セクションをコメント解除して、ご自分のアプリの依存関係パスをポイントするように変更し、Databricks クラスターにアップロードします。
+
       ```bash
       cd <path-to-db-init-and-install-worker>
       databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
       ```
-   
-   - クラスターを再起動します。
+
+   * クラスターを再起動します。
 
 3. Databricks ワークスペース内の Databricks クラスターに移動します。 **[ジョブ]** の下でジョブを選択し、 **[今すぐ実行]** を選択してジョブを実行します。
 
@@ -163,9 +163,9 @@ Databricks を使用すると、.NET for Apache Spark アプリを既存のア�
 
 2. 次のパラメーターを指定して `spark-submit` を構成します。
 
-      ```bash
-      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
-      ```
+    ```bash
+    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+    ```
 
 3. Databricks ワークスペース内の Databricks クラスターに移動します。 **[ジョブ]** の下でジョブを選択し、 **[今すぐ実行]** を選択してジョブを実行します。
 

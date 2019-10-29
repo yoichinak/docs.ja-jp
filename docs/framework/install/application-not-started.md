@@ -4,12 +4,12 @@ description: "\"このアプリケーションを開始できませんでした\
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/05/2019
-ms.openlocfilehash: 2534979e8dea886c2d7298c57e12b66d7a962c69
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8fa8381f1b05445f259b4e4af5cc17fa487b2ce0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71401282"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319164"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>"このアプリケーションを開始できませんでした" のエラー メッセージのトラブルシューティング
 
@@ -27,7 +27,7 @@ ms.locfileid: "71401282"
 
 1. [.NET Framework 修復ツール (NetFxRepairTool.exe)](https://www.microsoft.com/download/details.aspx?id=30135) をダウンロードします。 ダウンロードが完了すると、ツールが自動的に実行されます。
 
-1. .NET Framework 修復ツールで、次の図に示すような追加のアクションが推奨される場合は、**[次へ]** を選択します。
+1. .NET Framework 修復ツールで、次の図に示すような追加のアクションが推奨される場合は、 **[次へ]** を選択します。
 
    ![推奨される変更](media/application-not-started/repair-tool-recommended-changes.png)
 
@@ -35,7 +35,7 @@ ms.locfileid: "71401282"
 
    ![推奨される変更](media/application-not-started/repair-tool-changes-complete.png)
 
-1. アプリケーションが正常に実行された場合は、**[完了]** ボタンを選択します。 それ以外の場合は、**[次へ]** ボタンを選択します。
+1. アプリケーションが正常に実行された場合は、 **[完了]** ボタンを選択します。 それ以外の場合は、 **[次へ]** ボタンを選択します。
 
 1. **[次へ]** ボタンを選択した場合、.NET Framework 修復ツールでは次のようなダイアログ ボックスが表示されます。 **[完了]** ボタンを選択して、診断情報を Microsoft に送信します。
 
@@ -53,7 +53,7 @@ ms.locfileid: "71401282"
    |Windows Vista SP2|[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130)|
 
    > [!NOTE]
-   >  .NET Framework 4.8 は、Windows 10 May 2019 Update にプレインストールされています。
+   > .NET Framework 4.8 は、Windows 10 May 2019 Update にプレインストールされています。
 
 1. アプリケーションを起動してみます。
 

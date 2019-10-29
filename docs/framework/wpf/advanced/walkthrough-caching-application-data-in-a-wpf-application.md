@@ -9,22 +9,22 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 2609a54ce8ba2076c35567fe5bc1d9961f6fef3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f0082bd99b154f87ab90bee7a89afdb8405f6623
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942060"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920314"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ
 キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。
 
- .NET Framework には、.NET Framework アプリケーションでキャッシュを使用できるようにするクラスが用意されています。 これらのクラスは、 <xref:System.Runtime.Caching>名前空間にあります。
+ .NET Framework には、.NET Framework アプリケーションでキャッシュを使用できるようにするクラスが用意されています。 これらのクラスは <xref:System.Runtime.Caching> 名前空間にあります。
 
 > [!NOTE]
-> 名前<xref:System.Runtime.Caching>空間は .NET Framework 4 で新しく追加されたものです。 この名前空間により、すべての .NET Framework アプリケーションでキャッシュを使用できるようになります。 以前のバージョンの .NET Framework では、キャッシュは<xref:System.Web>名前空間でのみ使用できるため、ASP.NET クラスに依存する必要がありました。
+> <xref:System.Runtime.Caching> 名前空間は、.NET Framework 4 で新たに追加されています。 この名前空間により、すべての .NET Framework アプリケーションでキャッシュを使用できるようになります。 以前のバージョンの .NET Framework では、キャッシュは <xref:System.Web> 名前空間でのみ使用できるため、ASP.NET クラスに依存する必要がありました。
 
- このチュートリアルでは、 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーションの一部として .NET Framework で使用できるキャッシュ機能を使用する方法について説明します。 このチュートリアルでは、テキストファイルの内容をキャッシュします。
+ このチュートリアルでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションの一部として .NET Framework で使用できるキャッシュ機能を使用する方法について説明します。 このチュートリアルでは、テキストファイルの内容をキャッシュします。
 
  このチュートリアルでは、以下のタスクを行います。
 
@@ -40,10 +40,10 @@ ms.locfileid: "69942060"
 
 - キャッシュされたファイルのパスを監視し、監視対象の項目に対する変更についてキャッシュインスタンスに通知します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>必要条件
  このチュートリアルを完了するための要件は次のとおりです。
 
-- Microsoft Visual Studio 2010。
+- Visual Studio 2010。
 
 - 少量のテキストを含むテキストファイル。 (テキストファイルの内容はメッセージボックスに表示されます)。このチュートリアルで示すコードは、次のファイルを操作していることを前提としています。
 
@@ -78,9 +78,9 @@ ms.locfileid: "69942060"
      WPF デザイナーが**デザイン**ビューで開き、mainwindow.xaml ファイルが表示されます。 Visual Studio によって、 **My プロジェクト**フォルダー、app.xaml ファイル、および mainwindow.xaml ファイルが作成されます。
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>.NET Framework をターゲットにして、キャッシュアセンブリへの参照を追加する
- 既定では、WPF アプリケーションは[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]を対象とします。 WPF アプリケーションで<xref:System.Runtime.Caching>名前空間を使用するには、アプリケーションが .NET Framework 4 (では[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]なく) を対象とし、名前空間への参照を含める必要があります。
+ 既定では、WPF アプリケーションは [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]を対象とします。 WPF アプリケーションで <xref:System.Runtime.Caching> 名前空間を使用するには、アプリケーションが .NET Framework 4 ([!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]ではありません) を対象とし、名前空間への参照を含める必要があります。
 
- したがって、次の手順では、.NET Framework ターゲットを変更し、 <xref:System.Runtime.Caching>名前空間への参照を追加します。
+ したがって、次の手順では、.NET Framework ターゲットを変更し、<xref:System.Runtime.Caching> 名前空間への参照を追加します。
 
 > [!NOTE]
 > .NET Framework ターゲットを変更する手順は、Visual Basic プロジェクトとビジュアルC#プロジェクトで異なります。
@@ -93,11 +93,11 @@ ms.locfileid: "69942060"
 
 2. **[コンパイル]** タブをクリックします。
 
-3. ウィンドウの下部には、をクリックして**詳細コンパイル オプション**.
+3. ウィンドウの下部にある **[詳細コンパイルオプション]** をクリックします。
 
      **[コンパイラの詳細設定**] ダイアログボックスが表示されます。
 
-4. **[ターゲットフレームワーク (すべての構成)]** ボックスの一覧の [.NET Framework 4] を選択します。 (は選択[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]しないでください)。
+4. **[ターゲットフレームワーク (すべての構成)]** ボックスの一覧の [.NET Framework 4] を選択します。 ([!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]を選択しないでください)。
 
 5. **[OK]** をクリックします。
 
@@ -111,7 +111,7 @@ ms.locfileid: "69942060"
 
     1. **ソリューションエクスプローラー**で、プロジェクトの名前を右クリックし、[参照の**追加**] をクリックします。
 
-    2. **.Net** タブを選択`System.Runtime.Caching`し、 を選択して、 **OK** をクリックします。
+    2. **[.Net]** タブを選択し、[`System.Runtime.Caching`] を選択して、 **[OK]** をクリックします。
 
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>ビジュアルC#プロジェクトのターゲット .NET Framework を変更するには
 
@@ -127,25 +127,25 @@ ms.locfileid: "69942060"
 
     1. **[参照]** フォルダーを右クリックし、 **[参照の追加]** をクリックします。
 
-    2. **.Net** タブを選択`System.Runtime.Caching`し、 を選択して、 **OK** をクリックします。
+    2. **[.Net]** タブを選択し、[`System.Runtime.Caching`] を選択して、 **[OK]** をクリックします。
 
 ## <a name="adding-a-button-to-the-wpf-window"></a>WPF ウィンドウへのボタンの追加
- 次に、ボタンコントロールを追加し、ボタンの`Click`イベントのイベントハンドラーを作成します。 その後、ボタンをクリックすると、テキストファイルの内容がキャッシュされて表示されるように、後でコードを追加します。
+ 次に、ボタンコントロールを追加し、ボタンの `Click` イベントのイベントハンドラーを作成します。 その後、ボタンをクリックすると、テキストファイルの内容がキャッシュされて表示されるように、後でコードを追加します。
 
 #### <a name="to-add-a-button-control"></a>ボタンコントロールを追加するには
 
 1. **ソリューションエクスプローラー**で、mainwindow.xaml ファイルをダブルクリックして開きます。
 
-2. **ツールボックス** **コモン WPF コントロール** 、ドラッグ、 `Button` への制御、 `MainWindow` ウィンドウ。
+2. **[ツールボックス]** の **[共通の WPF コントロール]** で、`Button` コントロールを `MainWindow` ウィンドウにドラッグします。
 
-3. **[プロパティ]** ウィンドウで、キャッシュ`Content`を**取得**する`Button`コントロールのプロパティを設定します。
+3. **[プロパティ]** ウィンドウで、`Button` コントロールの `Content` プロパティを **[キャッシュを取得]** する に設定します。
 
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>キャッシュを初期化してエントリをキャッシュする
  次に、次のタスクを実行するためのコードを追加します。
 
-- キャッシュクラスのインスタンスを作成します。つまり、新しい<xref:System.Runtime.Caching.MemoryCache>オブジェクトをインスタンス化します。
+- キャッシュクラスのインスタンスを作成します。つまり、新しい <xref:System.Runtime.Caching.MemoryCache> オブジェクトをインスタンス化します。
 
-- キャッシュがオブジェクトを<xref:System.Runtime.Caching.HostFileChangeMonitor>使用してテキストファイルの変更を監視するように指定します。
+- キャッシュが <xref:System.Runtime.Caching.HostFileChangeMonitor> オブジェクトを使用してテキストファイルの変更を監視するように指定します。
 
 - テキストファイルを読み取り、キャッシュエントリとしてその内容をキャッシュします。
 
@@ -155,7 +155,7 @@ ms.locfileid: "69942060"
 
 1. MainWindow.xaml.cs または Mainwindow.xaml ファイルでイベントハンドラーを作成するために、追加したボタンをダブルクリックします。
 
-2. (クラス宣言の前に) ファイルの先頭に、次`Imports`の (Visual Basic) ステートメントまたは`using` (C#) ステートメントを追加します。
+2. (クラス宣言の前に) ファイルの先頭に、次の `Imports` (Visual Basic) または `using` (C#) ステートメントを追加します。
 
     ```csharp
     using System.Runtime.Caching;
@@ -177,9 +177,9 @@ ms.locfileid: "69942060"
     Dim cache As ObjectCache = MemoryCache.Default
     ```
 
-     <xref:System.Runtime.Caching.ObjectCache>クラスは、メモリ内オブジェクトキャッシュを提供する組み込みのクラスです。
+     <xref:System.Runtime.Caching.ObjectCache> クラスは、メモリ内オブジェクトキャッシュを提供する組み込みのクラスです。
 
-4. 次のコードを追加して、という名前`filecontents`のキャッシュエントリの内容を読み取ります。
+4. 次のコードを追加して、`filecontents`という名前のキャッシュエントリの内容を読み取ります。
 
     ```vb
     Dim fileContents As String = TryCast(cache("filecontents"), String)
@@ -189,7 +189,7 @@ ms.locfileid: "69942060"
     string fileContents = cache["filecontents"] as string;
     ```
 
-5. 次のコードを追加して、という名前`filecontents`のキャッシュエントリが存在するかどうかを確認します。
+5. 次のコードを追加して、`filecontents` という名前のキャッシュエントリが存在するかどうかを確認します。
 
     ```vb
     If fileContents Is Nothing Then
@@ -206,7 +206,7 @@ ms.locfileid: "69942060"
 
      指定したキャッシュエントリが存在しない場合は、テキストファイルを読み取り、キャッシュエントリとしてキャッシュに追加する必要があります。
 
-6. ブロックで、次のコードを追加して、10 <xref:System.Runtime.Caching.CacheItemPolicy>秒後にキャッシュエントリの有効期限が切れることを指定する新しいオブジェクトを作成します。 `if/then`
+6. `if/then` ブロックに次のコードを追加して、10秒後にキャッシュエントリの有効期限が切れることを指定する新しい <xref:System.Runtime.Caching.CacheItemPolicy> オブジェクトを作成します。
 
     ```vb
     Dim policy As New CacheItemPolicy()
@@ -218,9 +218,9 @@ ms.locfileid: "69942060"
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     削除または有効期限の情報が指定されて<xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>いない場合、既定値はになります。これは、キャッシュエントリが絶対時間だけで期限切れにならないことを意味します。 代わりに、メモリが不足している場合にのみ、キャッシュエントリの有効期限が切れます。 ベストプラクティスとして、絶対有効期限またはスライド式有効期限を常に明示的に指定することをお勧めします。
+     削除または有効期限の情報が指定されていない場合、既定値は <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>です。これは、キャッシュエントリの有効期限が絶対時刻に限定されないことを意味します。 代わりに、メモリが不足している場合にのみ、キャッシュエントリの有効期限が切れます。 ベストプラクティスとして、絶対有効期限またはスライド式有効期限を常に明示的に指定することをお勧めします。
 
-7. `if/then`ブロック内で、前の手順で追加したコードの後に次のコードを追加して、監視するファイルパスのコレクションを作成し、テキストファイルのパスをコレクションに追加します。
+7. `if/then` ブロック内で、前の手順で追加したコードの後に次のコードを追加して、監視するファイルパスのコレクションを作成し、テキストファイルのパスをコレクションに追加します。
 
     ```vb
     Dim filePaths As New List(Of String)()
@@ -233,9 +233,9 @@ ms.locfileid: "69942060"
     ```
 
     > [!NOTE]
-    > 使用するテキストファイルがでない`c:\cache\cacheText.txt`場合は、使用するテキストファイルのパスを指定します。
+    > 使用するテキストファイルが `c:\cache\cacheText.txt`ない場合は、使用するテキストファイルのパスを指定します。
 
-8. 前の手順で追加したコードの後に、次のコードを追加して<xref:System.Runtime.Caching.HostFileChangeMonitor> 、キャッシュエントリの変更モニターのコレクションに新しいオブジェクトを追加します。
+8. 前の手順で追加したコードの後に、次のコードを追加して、キャッシュエントリの変更モニターのコレクションに新しい <xref:System.Runtime.Caching.HostFileChangeMonitor> オブジェクトを追加します。
 
     ```vb
     policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))
@@ -245,7 +245,7 @@ ms.locfileid: "69942060"
     policy.ChangeMonitors.Add(new HostFileChangeMonitor(filePaths));
     ```
 
-     オブジェクト<xref:System.Runtime.Caching.HostFileChangeMonitor>は、テキストファイルのパスを監視し、変更が発生した場合はキャッシュに通知します。 この例では、ファイルの内容が変更されると、キャッシュエントリの有効期限が切れます。
+     <xref:System.Runtime.Caching.HostFileChangeMonitor> オブジェクトは、テキストファイルのパスを監視し、変更が発生した場合はキャッシュに通知します。 この例では、ファイルの内容が変更されると、キャッシュエントリの有効期限が切れます。
 
 9. 前の手順で追加したコードの後に、テキストファイルの内容を読み取る次のコードを追加します。
 
@@ -259,7 +259,7 @@ ms.locfileid: "69942060"
 
      日付と時刻のタイムスタンプが追加されるので、キャッシュエントリの有効期限が切れるタイミングを確認することができます。
 
-10. 前の手順で追加したコードの後に、次のコードを追加して、ファイルの内容を<xref:System.Runtime.Caching.CacheItem>インスタンスとしてキャッシュオブジェクトに挿入します。
+10. 前の手順で追加したコードの後に、次のコードを追加して、ファイルの内容を <xref:System.Runtime.Caching.CacheItem> インスタンスとしてキャッシュオブジェクトに挿入します。
 
     ```vb
     cache.Set("filecontents", fileContents, policy)
@@ -269,9 +269,9 @@ ms.locfileid: "69942060"
     cache.Set("filecontents", fileContents, policy);
     ```
 
-     前の手順で作成した<xref:System.Runtime.Caching.CacheItemPolicy>オブジェクトをパラメーターとして渡すことによって、キャッシュエントリを削除する方法に関する情報を指定します。
+     前の手順で作成した <xref:System.Runtime.Caching.CacheItemPolicy> オブジェクトをパラメーターとして渡すことによって、キャッシュエントリを削除する方法に関する情報を指定します。
 
-11. ブロックの`if/then`後に、キャッシュされたファイルの内容をメッセージボックスに表示する次のコードを追加します。
+11. `if/then` ブロックの後に、キャッシュされたファイルの内容をメッセージボックスに表示する次のコードを追加します。
 
     ```vb
     MessageBox.Show(fileContents)
@@ -290,7 +290,7 @@ ms.locfileid: "69942060"
 
 1. Ctrl キーを押しながら F5 キーを押してアプリケーションを実行します。
 
-     `MainWindow`ウィンドウが表示されます。
+     [`MainWindow`] ウィンドウが表示されます。
 
 2. **[キャッシュの取得]** をクリックします。
 

@@ -12,17 +12,17 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: be8dcfce44347e8099e8cfa693bcee341514de2b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 150b742c2195c07abf2b2823871627b0ba827580
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291442"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919988"
 ---
 # <a name="graphics-and-multimedia"></a>グラフィックスとマルチメディア
 
 <a name="introduction"></a>
- @ no__t を使用すると、マルチメディア、ベクターグラフィックス、アニメーション、およびコンテンツコンポジションがサポートされるため、開発者は興味深いユーザーインターフェイスやコンテンツを簡単に作成できます。 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] を使用して、ベクター グラフィックスや複雑なアニメーションを作成し、メディアをアプリケーションに統合できます。
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] では、マルチメディア、ベクターグラフィックス、アニメーション、およびコンテンツ構成がサポートされているため、開発者は興味深いユーザーインターフェイスやコンテンツを簡単に構築できます。 Visual Studio を使用すると、ベクターグラフィックスや複雑なアニメーションを作成したり、メディアをアプリケーションに統合したりできます。
 
 このトピックでは、アプリケーションにグラフィックス、画面切り替え効果、サウンド、ビデオを追加できるようにする [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のグラフィックス、アニメーション、メディア機能を紹介します。
 
@@ -37,7 +37,7 @@ ms.locfileid: "72291442"
 
 - レイアウトの丸め
 
-  オブジェクトの端が 1 ピクセル デバイスの中間に位置する場合、DPI に依存しないグラフィックス システムでは、端がぼやけたり半透明になったりするなどのレンダリング アーティファクトが発生することがあります。 以前のバージョンの WPF には、このような場合の処理に役立つピクセル スナップが含まれていました。 Silverlight 2 では、端がピクセル境界全体に位置するように要素を移動する別の方法としてレイアウトの丸めが導入されました。 WPF では、<xref:System.Windows.FrameworkElement> の <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> 添付プロパティを使用したレイアウト丸めがサポートされるようになりました。
+  オブジェクトの端が 1 ピクセル デバイスの中間に位置する場合、DPI に依存しないグラフィックス システムでは、端がぼやけたり半透明になったりするなどのレンダリング アーティファクトが発生することがあります。 以前のバージョンの WPF には、このような場合の処理に役立つピクセル スナップが含まれていました。 Silverlight 2 では、端がピクセル境界全体に位置するように要素を移動する別の方法としてレイアウトの丸めが導入されました。 WPF で <xref:System.Windows.FrameworkElement>の <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> 添付プロパティを使用したレイアウトの丸めがサポートされるようになりました。
 
 - キャッシュ済みコンポジション
 
@@ -45,25 +45,25 @@ ms.locfileid: "72291442"
 
 - Pixel Shader 3 のサポート
 
-  Wpf 4 は、WPF 3.5 SP1 で導入された @no__t 0 サポートの上に構築されます。これは、アプリケーションがピクセルシェーダー (PS) バージョン3.0 を使用して効果を書き込むことができるようにするためです。 PS 3.0 のシェーダー モデルは PS 2.0 より洗練されており、サポートされているハードウェア上でより多くのエフェクトを使用できます。
+  WPF 4 は、WPF 3.5 SP1 で導入された <xref:System.Windows.Media.Effects.ShaderEffect> サポートの上に構築されます。これは、アプリケーションがピクセルシェーダー (PS) バージョン3.0 を使用して効果を書き込むことができるようにするためです。 PS 3.0 のシェーダー モデルは PS 2.0 より洗練されており、サポートされているハードウェア上でより多くのエフェクトを使用できます。
 
 - イージング関数
 
-  イージング関数を使用してアニメーションを強化し、アニメーションの動作をより細かく制御できます。 たとえば、アニメーションに @no__t 0 を適用して、アニメーションに springy の動作を与えることができます。 詳細については、「<xref:System.Windows.Media.Animation> 名前空間のイージング型」を参照してください。
+  イージング関数を使用してアニメーションを強化し、アニメーションの動作をより細かく制御できます。 たとえば、アニメーションに <xref:System.Windows.Media.Animation.ElasticEase> を適用して、アニメーションに springy 動作を与えることができます。 詳細については、「<xref:System.Windows.Media.Animation> 名前空間のイージング型」を参照してください。
 
 <a name="graphics_and_rendering"></a>
 
 ## <a name="graphics-and-rendering"></a>グラフィックスとレンダリング
 
-WPF では、高品質な 2-D グラフィックがサポートされます。 ブラシ、ジオメトリ、イメージ、図形、変換などの機能が用意されています。 詳しくは、「[グラフィックス](graphics.md)」をご覧ください。 グラフィカル要素のレンダリングは、@no__t 0 のクラスに基づいています。 画面のビジュアル オブジェクトの構造は、ビジュアル ツリーで表されます。 詳しくは、「[WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)」をご覧ください。
+WPF では、高品質な 2-D グラフィックがサポートされます。 ブラシ、ジオメトリ、イメージ、図形、変換などの機能が用意されています。 詳しくは、「[グラフィックス](graphics.md)」をご覧ください。 グラフィカル要素のレンダリングは、<xref:System.Windows.Media.Visual> クラスに基づいています。 画面のビジュアル オブジェクトの構造は、ビジュアル ツリーで表されます。 詳しくは、「[WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)」をご覧ください。
 
 ### <a name="2-d-shapes"></a>2-D 図形
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] は、次の図に示すように、一般的に使用されるベクター描画の2-d 図形 (四角形や楕円など) のライブラリを提供します。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] には、次の図に示すように、一般的に使用されるベクター描画の2-d 図形 (四角形や楕円など) のライブラリが用意されています。
 
 ![楕円と四角形を示す図。](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
-これらの固有の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 図形は単なる図形ではなく、一般的なコントロールに期待されるキーボード入力やマウス入力などの機能の多くを実装するプログラミング可能な要素です。 次の例は、<xref:System.Windows.Shapes.Ellipse> 要素をクリックすることによって発生する @no__t 0 イベントを処理する方法を示しています。
+これらの固有の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 図形は単なる図形ではなく、一般的なコントロールに期待されるキーボード入力やマウス入力などの機能の多くを実装するプログラミング可能な要素です。 次の例は、<xref:System.Windows.Shapes.Ellipse> 要素をクリックすることによって発生する <xref:System.Windows.UIElement.MouseUp> イベントを処理する方法を示しています。
 
 ```xaml
 <Window
@@ -101,7 +101,7 @@ End Class
 
 ### <a name="2-d-geometries"></a>2-D ジオメトリ
 
-によって提供される2-d 図形では不十分な場合は、ジオメトリとパスに対して [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] のサポートを使用して、独自の @no__t を作成できます。 ジオメトリを使用して図形を描画ブラシとして作成し、他の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 要素をクリップする方法を次の図に示します。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] によって提供される2-d 図形では不十分な場合は、ジオメトリとパスに対して [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] サポートを使用して独自のものを作成できます。 ジオメトリを使用して図形を描画ブラシとして作成し、他の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 要素をクリップする方法を次の図に示します。
 
 ![図形を作成するためにジオメトリを使用する方法を示すスクリーンショット。](./media/index/use-geometries-create-shapes.png)
 
@@ -109,7 +109,7 @@ End Class
 
 ### <a name="2-d-effects"></a>2-D 効果
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] には、さまざまな効果を作成するために使用できる2-d クラスのライブラリが用意されています。 @No__t-0 の2-d レンダリング機能を使用すると、グラデーション、ビットマップ、描画、およびビデオを含む [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 要素を描画できます。回転、拡大縮小、傾斜を使用してそれらを操作します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ブラシを使用して実現できる多くの効果の例を次の図に示します。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] には、さまざまな効果を作成するために使用できる2-d クラスのライブラリが用意されています。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] の2-d レンダリング機能は、グラデーション、ビットマップ、描画、およびビデオを持つ要素 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 描画する機能を提供します。回転、拡大縮小、傾斜を使用してそれらを操作します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ブラシを使用して実現できる多くの効果の例を次の図に示します。
 
 ![さまざまな WPF ブラシと描画要素を示す図。](./media/index/brushes-paint-elements.png)
 
@@ -119,7 +119,7 @@ End Class
 
 ## <a name="3-d-rendering"></a>3-D レンダリング
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] は、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] の2-d グラフィックスサポートと統合する3-d レンダリング機能のセットを提供します。これにより、より魅力的なレイアウト、@no__t 2、データビジュアライゼーションを作成できます。 次の図に示すように、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] を使用すると、3-d 図形の表面に2-d イメージをレンダリングできます。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] には、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] の2-d グラフィックスサポートと統合する3-d レンダリング機能のセットが用意されており、より魅力的なレイアウト、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、およびデータの視覚化を作成できます。 次の図に示すように、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] を使用すると、3-d 図形の表面に2-d イメージをレンダリングできます。
 
 ![異なるテクスチャを持つ3-d 図形を示すサンプルのスクリーンショット。](./media/index/visual-three-dimensional-shape.png)
 
@@ -141,11 +141,11 @@ End Class
 
 イメージ、ビデオ、オーディオは、情報とユーザー エクスペリエンスを伝えるメディア リッチな手段です。
 
-### <a name="images"></a>画像
+### <a name="images"></a>イメージ
 
 アイコン、背景、アニメーションのパーツを含むイメージは、ほとんどのアプリケーションの中核です。 イメージは頻繁に使用する必要があるため、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ではさまざまな方法でイメージを処理する機能を公開しています。 その方法の 1 つを次の図に示します。
 
-![スタイルのサンプルスクリーンショット](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
+![スタイルのサンプルのスクリーンショット](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
 詳しくは、「 [イメージングの概要](imaging-overview.md)」をご覧ください。
 

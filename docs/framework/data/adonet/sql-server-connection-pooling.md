@@ -70,7 +70,9 @@ using (SqlConnection connection = new SqlConnection(
 > 接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了することを強くお勧めします。 これを行うには、 `Connection` オブジェクトの`Dispose`メソッドまたは`Close`メソッドを使用するか、C# や Visual Basic の `using` ステートメント内ですべての接続を開きます。 明示的に終了されていない接続は、プールに追加したり返したりすることができないことがあります。 詳細については、 [using ステートメント](../../../csharp/language-reference/keywords/using-statement.md) または[システムリソースを破棄する方法 (Visual Basic)](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) を参照してください。
   
 > [!NOTE]
+
 > クラスの `Finalize` メソッド内で `Connection`や`DataReader`またはその他のマネージド オブジェクトの `Dispose` や `Close` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳細については、「[ガベージコレクション](../../../standard/garbage-collection/index.md)」を参照してください。
+
   
 接続の開始と終了に関連するイベントの詳細については、SQL Server のドキュメントの「 [Audit Login イベントクラス](/sql/relational-databases/event-classes/audit-login-event-class)」および「 [Audit Logout イベントクラス](/sql/relational-databases/event-classes/audit-logout-event-class)」を参照してください。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835248"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774918"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic の新機能
 
@@ -21,39 +21,54 @@ ms.locfileid: "71835248"
 
 ## <a name="current-version"></a>現在のバージョン
 
-Visual Basic 16.0/Visual Studio 2019 バージョン 16.0  
+Visual Basic 16.0 / Visual Studio 2019 バージョン 16.0\
 新機能については、「[Visual Basic 16.0](#visual-basic-160)」を参照してください。
 
 ## <a name="previous-versions"></a>以前のバージョン
 
-Visual Basic 15.8 / Visual Studio 2017 バージョン 15.8 新機能については、「[Visual Basic 15.8](#visual-basic-158)」を参照してください。
+Visual Basic 15.8 / Visual Studio 2017 バージョン 15.8\
+新機能については、「[Visual Basic 15.8](#visual-basic-158)」を参照してください。
 
-Visual Basic 15.5 / Visual Studio 2017 バージョン 15.5 新機能については、「[Visual Basic 15.5](#visual-basic-155)」を参照してください。
+Visual Basic 15.5 / Visual Studio 2017 バージョン 15.5\
+新機能については、「[Visual Basic 15.5](#visual-basic-155)」を参照してください。
 
-Visual Basic 15.3 / Visual Studio 2017 バージョン 15.3 新機能については、「[Visual Basic 15.3](#visual-basic-153)」を参照してください。
+Visual Basic 15.3 / Visual Studio 2017 バージョン 15.3\
+新機能については、「[Visual Basic 15.3](#visual-basic-153)」を参照してください。
 
-Visual Basic 2017 / Visual Studio 2017 新機能については、「[Visual Basic 2017](#visual-basic-2017)」を参照してください。
+Visual Basic 2017 / Visual Studio 2017\
+新機能については、「[Visual Basic 2017](#visual-basic-2017)」を参照してください。
 
-Visual Basic / Visual Studio 2015 新機能については、「[Visual Basic 14](#visual-basic-14)」を参照してください。
+Visual Basic / Visual Studio 2015\
+新機能については、「[Visual Basic 14](#visual-basic-14)」を参照してください。
 
-Visual Basic / Visual Studio 2013 .NET Compiler Platform ("Roslyn") のテクノロジのプレビュー
+Visual Basic / Visual Studio 2013\
+.NET コンパイラ プラットフォーム ("Roslyn") のテクノロジのプレビュー
 
-Visual Basic / Visual Studio 2012 `Async` と `await` のキーワード、反復子、呼び出し元情報属性
+Visual Basic / Visual Studio 2012\
+`Async` と `await` のキーワード、反復子、呼び出し元情報属性
 
-Visual Basic, Visual Studio 2010 自動実装プロパティ、コレクション初期化子、暗黙的な行の連結、動的、ジェネリック co/負の分散、グローバル名前空間のアクセス
+Visual Basic、Visual Studio 2010\
+自動実装プロパティ、コレクション初期化子、暗黙的な行の連結、動的、ジェネリック co/負の分散、グローバル名前空間のアクセス
 
-Visual Basic / Visual Studio 2008 統合言語クエリ (LINQ)、XML リテラル、ローカル型推論、オブジェクト初期化子、匿名型、拡張メソッド、ローカル `var` 型推論、ラムダ式、`if` 演算子、部分メソッド、null 許容値型
+Visual Basic / Visual Studio 2008\
+統合言語クエリ (LINQ)、XML リテラル、ローカル型の推定、オブジェクト初期化子、匿名型、拡張メソッド、ローカル `var` 型推論、ラムダ式、 `if` 演算子、部分メソッド、null 許容値型
 
-Visual Basic / Visual Studio 2005 `My` 型とヘルパーの種類 (アプリ、コンピューター、ファイル システム、ネットワークへのアクセス)
+Visual Basic / Visual Studio 2005\
+`My` 型とヘルパーの種類 (アプリ、コンピューター、ファイル システム、ネットワークへのアクセス)
 
-Visual Basic / Visual Studio .NET 2003 ビット シフト演算子、ループ変数宣言
+Visual Basic / Visual Studio .NET 2003\
+ビット シフト演算子、ループ変数宣言
 
-Visual Basic / Visual Studio .NET 2002 Visual Basic .NET の最初のリリース
+Visual Basic / Visual Studio .NET 2002\
+Visual Basic .NET の最初のリリース
 
 ## <a name="visual-basic-160"></a>Visual Basic 16.0
-Visual Basic 16.0 は、Visual Basic ランタイム (microsoft.visualbasic.dll) より多くの機能を .NET Core に多く提供することに重点を置いており、.NET Core に重点を置いた Visual Basic の最初のバージョンです。 Visual Basic ランタイムの多くの部分は WinForms に依存しており、これらは Visual Basic の今後のバージョンで追加される予定です。 
 
-Visual Basic 15.8 以前のバージョンと比べて、**コメントはステートメント内のより多くの場所で使用できます**。コメントは、空白行、ステートメントの最後、または暗黙の行継続が許可されているステートメント内の特定の場所でのみ使用できます。 Visual Basic 16.0 以降では、コメントは、明示的な行継続の後と、スペースとその後にアンダースコアで始まる行のステートメント内でも使用できます。
+Visual Basic 16.0 は、Visual Basic ランタイム (microsoft.visualbasic.dll) より多くの機能を .NET Core に多く提供することに重点を置いており、.NET Core に重点を置いた Visual Basic の最初のバージョンです。 Visual Basic ランタイムの多くの部分は WinForms に依存しており、これらは Visual Basic の今後のバージョンで追加される予定です。
+
+**ステートメント内のより多くの場所で許可されているコメント**
+
+Visual Basic 15.8 以前のバージョンでは、空白行、ステートメントの最後、または暗黙的な行の継続が許可されるステートメント内の特定の場所でのみ、コメントが許可されます。 Visual Basic 16.0 以降では、コメントは、明示的な行継続の後と、スペースとその後にアンダースコアで始まる行のステートメント内でも使用できます。
 
 ```vb
 Public Sub Main()
@@ -93,7 +108,6 @@ Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
 Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
 Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
 Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
-
 ```
 
 これは、浮動小数点の値を四捨五入するのではなく、切り詰められることに注意してください。
@@ -222,7 +236,7 @@ C# 7.0 以降の C# は参照戻り値に対応しています。 つまり、�
 
 **ReadOnly インターフェイスのプロパティ**
 
-readwrite プロパティを使用して readonly インターフェイスのプロパティを実装できます。  このインターフェイスでは、最小限の機能が保証されています。これによって、実装するクラスでプロパティーが設定できなくなるということはありません。
+readwrite プロパティを使用して readonly インターフェイスのプロパティを実装できます。 このインターフェイスでは、最小限の機能が保証されています。これによって、実装するクラスでプロパティーが設定できなくなるということはありません。
 
 [TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)
 

@@ -1,6 +1,8 @@
 ---
+
 title: F# での非同期プログラミング
-description: がコアF#関数型プログラミングの概念から派生した言語レベルのプログラミングモデルに基づいて、非同期性のクリーンなサポートを提供する方法について説明します。
+description: F#がコア関数型プログラミングの概念から派生した言語レベルのプログラミングモデルに基づいて、非同期性のクリーンなサポートを提供する方法について説明します。
+
 ms.date: 12/17/2018
 ms.openlocfilehash: 1ede4a5c1e26df271ac94f9b2c216ac84fb38f59
 ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
@@ -9,7 +11,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/16/2019
 ms.locfileid: "72395790"
 ---
-# <a name="async-programming-in-f"></a>F @ no__t での非同期プログラミング-0
+# <a name="async-programming-in-f"></a>F#での非同期プログラミング
 
 非同期プログラミングは、さまざまな理由で、最新のアプリケーションに不可欠なメカニズムです。 ほとんどの開発者が直面する主なユースケースには、次の2つがあります。
 

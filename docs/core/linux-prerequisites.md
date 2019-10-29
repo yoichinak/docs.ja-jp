@@ -3,20 +3,20 @@ title: Linux における .NET Core の前提条件
 description: Linux マシンで .NET Core アプリケーションを開発、展開、および実行するために必要なサポートされている Linux のバージョンと .NET Core の依存関係。
 author: leecow
 ms.author: leecow
-ms.date: 09/25/2019
-ms.openlocfilehash: 4c5d79459c9d69111ca6452d9305f0deb37212b8
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.date: 10/11/2019
+ms.openlocfilehash: 0e798e86fcf88a1b7a67f50c2301e10ad725fad8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591697"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521491"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux における .NET Core の前提条件
 
 この記事では、Linux で .NET Core アプリケーションを開発するために必要な依存関係を示します。 後述のサポートされている Linux ディストリビューション/バージョンと依存関係は、Linux で .NET Core アプリを開発する次の 2 つの方法に適用されます。
 
-* [好みのエディターでのコマンドライン](tutorials/using-with-xplat-cli.md)
-* [Visual Studio Code](https://code.visualstudio.com/)
+- [好みのエディターでのコマンドライン](tutorials/using-with-xplat-cli.md)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 > [!NOTE]
 > .NET Core SDK パッケージは、運用サーバー/環境には必要はありません。 運用環境に展開されるアプリに必要なものは、.NET Core ランタイム パッケージだけです。 .NET Core ランタイムは自己完結型の展開の一部としてアプリと供に展開されますが、フレームワークに依存して展開されるアプリでは個別に展開する必要があります。 フレームワークに依存する展開と自己完結型の展開について詳しくは、「[.NET Core アプリケーションの展開](./deploying/index.md)」をご覧ください。 具体的なガイドラインについては、「[Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)」(自己完結型 Linux アプリケーション) もご覧ください。
@@ -112,41 +112,55 @@ ARM64 で .NET Core 3.0 をインストールする方法の詳細について�
 
 Ubuntu ディストリビューションには、次のライブラリがインストールされている必要があります。
 
-* liblttng-ust0
-* libcurl3 (14.x および 16.x 用)
-* libcurl4 (18.x 用)
-* libssl1.0.0
-* libkrb5-3
-* zlib1g
-* libicu52 (14.x 用)
-* libicu55 (16.x 用)
-* libicu57 (17.x 用)
-* libicu60 (18.x 用)
+- liblttng-ust0
+- libcurl3 (14.x および 16.x 用)
+- libcurl4 (18.x 用)
+- libssl1.0.0
+- libkrb5-3
+- zlib1g
+- libicu52 (14.x 用)
+- libicu55 (16.x 用)
+- libicu57 (17.x 用)
+- libicu60 (18.x 用)
 
 .NET Core 2.1 より前のバージョンには、次の依存関係も必要です。
 
-* libunwind8
-* libuuid1
+- libunwind8
+- libuuid1
+
+*System.Drawing.Common* アセンブリを使用する .NET Core アプリケーションの場合は、次の依存関係も必要です。
+
+* libgdiplus (バージョン 6.0.1 以降)
+
+> [!NOTE]
+> Ubuntu のほとんどのバージョンには、以前のバージョンの libgdiplus が含まれています。 新しいバージョンの libgdiplus をインストールするには、システムに Mono リポジトリを追加します。 詳細については、<https://www.mono-project.com/download/stable/> を参照してください。
 
 ### <a name="centos-and-fedora"></a>CentOS と Fedora
 
 CentOS ディストリビューションには、次のライブラリがインストールされている必要があります。
 
-* lttng-ust
-* libcurl
-* openssl-libs
-* krb5-libs
-* libicu
-* zlib
+- lttng-ust
+- libcurl
+- openssl-libs
+- krb5-libs
+- libicu
+- zlib
 
 Fedora ユーザー:ご使用の openssl のバージョンが 1.1 以降の場合は、compat-openssl10 をインストールする必要があります。
 
 .NET Core 2.1 より前のバージョンには、次の依存関係も必要です。
 
-* libunwind
-* libuuid
+- libunwind
+- libuuid
 
 依存関係の詳細については、「[Self-contained Linux applications (自己完結型 Linux アプリケーション)](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)」をご覧ください。
+
+*System.Drawing.Common* アセンブリを使用する .NET Core アプリケーションの場合は、次の依存関係も必要です。
+
+* libgdiplus (バージョン 6.0.1 以降)
+
+> [!NOTE]
+> CentOS と Fedora のほとんどのバージョンには、以前のバージョンの libgdiplus が含まれています。 新しいバージョンの libgdiplus をインストールするには、システムに Mono リポジトリを追加します。 詳細については、<https://www.mono-project.com/download/stable/> を参照してください。
 
 ## <a name="installing-net-core-dependencies-with-the-native-installers"></a>ネイティブ インストーラーを使用した .NET Core の依存関係のインストール
 
@@ -154,8 +168,8 @@ Fedora ユーザー:ご使用の openssl のバージョンが 1.1 以降の場�
 
 Linux では、2 つのインストーラー パッケージから選択できます。
 
-* フィードベースのパッケージ マネージャー (Ubuntu では apt-get、CentOS/RHEL では yum など) を使用する
-* パッケージ自体 (DEB または RPM) を使用する
+- フィードベースのパッケージ マネージャー (Ubuntu では apt-get、CentOS/RHEL では yum など) を使用する
+- パッケージ自体 (DEB または RPM) を使用する
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>.NET Core インストーラー スクリプトを使用したスクリプトのインストール
 
@@ -173,8 +187,8 @@ Linux では、2 つのインストーラー パッケージから選択でき�
 
 サポートされている Linux ディストリビューション/バージョンへの .NET Core のインストールに問題がある場合は、インストールしているディストリビューション/バージョンに関する以下のトピックをご覧ください。
 
-* [.NET Core 3.0 の既知の問題](https://github.com/dotnet/core/tree/master/release-notes/3.0)
-* [.NET Core 2.2 の既知の問題](https://github.com/dotnet/core/tree/master/release-notes/2.2)
-* [.NET Core 2.1 の既知の問題](https://github.com/dotnet/core/tree/master/release-notes/2.1)
-* [.NET Core 1.1 の既知の問題](https://github.com/dotnet/core/blob/master/release-notes/1.1)
-* [.NET Core 1.0 の既知の問題](https://github.com/dotnet/core/blob/master/release-notes/1.0)
+- [.NET Core 3.0 の既知の問題](https://github.com/dotnet/core/tree/master/release-notes/3.0)
+- [.NET Core 2.2 の既知の問題](https://github.com/dotnet/core/tree/master/release-notes/2.2)
+- [.NET Core 2.1 の既知の問題](https://github.com/dotnet/core/tree/master/release-notes/2.1)
+- [.NET Core 1.1 の既知の問題](https://github.com/dotnet/core/blob/master/release-notes/1.1)
+- [.NET Core 1.0 の既知の問題](https://github.com/dotnet/core/blob/master/release-notes/1.0)

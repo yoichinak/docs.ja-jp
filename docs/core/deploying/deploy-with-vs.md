@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で .NET Core アプリをデプロイする
+title: Visual Studio を使用して .NET Core アプリを展開する
 description: Visual Studio で .NET Core アプリをデプロイする方法を説明します。
 author: rpetrusha
 ms.author: ronpet
@@ -8,14 +8,14 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 4e8fbfa14c241c79f8708dfc2b288eeff2899891
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: e905d48da31bb5a2e16a645620f2c4f57dda4413
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216240"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522809"
 ---
-# <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio で .NET Core アプリをデプロイする
+# <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio を使用して .NET Core アプリを展開する
 
 .NET Core アプリケーションは、アプリケーション バイナリは含むが、対象のシステムに .NET Core があるかどうかに依存する*フレームワークに依存する展開*、またはアプリケーションと .NET Core バイナリの両方を含む*自己完結型の展開*のいずれかで展開できます。 .NET Core アプリケーションの展開の概要については、「[.NET Core アプリケーションの展開](index.md)」を参照してください。
 
@@ -194,7 +194,7 @@ Visual Studio でアプリを発行するには、次の操作を行います。
   
 1. Visual Studio によってアプリケーションが発行される場所を選択します。
 
-   発行先のプラットフォームが 1 つだけの場合、 **[フォルダーを選択してください]** テキスト ボックスで既定値をそのまま選択しても問題ありません。これでアプリケーションのフレームワーク依存展開が *\<project-directory>\bin\Release\netcoreapp2.1\publish\* ディクショナリに発行されます。
+   発行先のプラットフォームが 1 つだけの場合、 **[フォルダーを選択してください]** テキスト ボックスで既定値をそのまま選択しても問題ありません。これでアプリケーションのフレームワーク依存展開が *\<project-directory>\bin\Release\netcoreapp2.1\publish* ディレクトリに発行されます。
 
    発行先のプラットフォームが複数になる場合、ターゲット プラットフォームを識別する文字列を追加します。 たとえば、文字列 "linux" をファイル パスに追加する場合、Visual Studio によって、アプリケーションのフレームワーク依存展開が *\<project-directory>\bin\Release\netcoreapp2.1\publish\linux* ディクショナリに発行されます。
 

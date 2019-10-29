@@ -76,9 +76,9 @@ ms.locfileid: "69988797"
 |<xref:System.Globalization.NumberStyles.HexNumber?displayProperty=nameWithType>|<xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType>、<xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType>、<xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType> スタイルが含まれます。|  
   
 ## <a name="parsing-and-unicode-digits"></a>解析と Unicode 数字  
- Unicode 標準では、さまざまな書記体系で数字のコード ポイントを定義します。 たとえば、U+0030 ～ U+0039 のコード ポイントは、0 ～ 9 の基本ラテンの数字を示し、U+09E6 ～ U+09EF のコード ポイントは、0 ～ 9 の数字のバングラ語の数字を示し、U+FF10 ～ U+FF19 のコード ポイントは、0 ～ 9 の全角の数字を示します。 ただし、解析メソッドで認識される数字は、U+0030 ～ U+0039 のコード ポイントの基本ラテンの数字 0 ～ 9 のみです。 数値解析メソッドがその他の数字を含む文字列を渡す場合、メソッドは <xref:System.FormatException> をスローします。  
+ Unicode 標準では、さまざまな書記体系で数字のコード ポイントを定義します。 たとえば、U+0030 ～ U+0039 のコード ポイントは、0 ～ 9 の基本ラテンの数字を示し、U+09E6 ～ U+09EF のコード ポイントは、0 ～ 9 の数字のベンガル語の数字を示し、U+FF10 ～ U+FF19 のコード ポイントは、0 ～ 9 の全角の数字を示します。 ただし、解析メソッドで認識される数字は、U+0030 ～ U+0039 のコード ポイントの基本ラテンの数字 0 ～ 9 のみです。 数値解析メソッドがその他の数字を含む文字列を渡す場合、メソッドは <xref:System.FormatException> をスローします。  
   
- 次の例では、<xref:System.Int32.Parse%2A?displayProperty=nameWithType> メソッドを使用して、異なる書記体系の数字で構成される文字列を解析します。 例の出力に示されているように、基本ラテンの数字を解析する試行は成功しますが、全角、アラビア インド、バングラ語の数字を解析する試行は失敗します。  
+ 次の例では、<xref:System.Int32.Parse%2A?displayProperty=nameWithType> メソッドを使用して、異なる書記体系の数字で構成される文字列を解析します。 例の出力に示されているように、基本ラテンの数字を解析する試行は成功しますが、全角、アラビア インド、ベンガル語の数字を解析する試行は失敗します。  
   
  [!code-csharp[Parsing.Numbers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/unicode1.cs#3)]
  [!code-vb[Parsing.Numbers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/unicode1.vb#3)]  

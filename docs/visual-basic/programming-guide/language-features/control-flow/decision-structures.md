@@ -21,7 +21,7 @@ Visual Basic を使用すると、テストの結果に応じて、条件をテ�
   
  次の図は、条件が true であるかどうかをテストし、true であるか false であるかに応じて異なるアクションを実行するデシジョン構造を示しています。  
   
- ![If... のそうしたら。。。Else 構築。](./media/decision-structures/if-then-else-construction.gif)  
+ ![If...Then...Else 構築。](./media/decision-structures/if-then-else-construction.gif)  
   
 ## <a name="ifthenelse-construction"></a>If...Then...Else 構造  
  `If...Then...Else`構造を使用すると、1つ以上の条件をテストし、各条件に応じて1つ以上のステートメントを実行できます。 条件をテストし、次の方法でアクションを実行することができます。  
@@ -34,7 +34,7 @@ Visual Basic を使用すると、テストの結果に応じて、条件をテ�
   
 - 前の条件がの場合に追加条件をテストする`False`  
   
- これらすべての可能性を提供する制御構造が、[If ... Then ... Else ステートメント](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)です。 1つのテストと1つのステートメントを実行するだけの場合は、単一行バージョンを使用できます。 より複雑な条件とアクションのセットがある場合は、複数行のバージョンを使用できます。  
+ これらすべての可能性を提供する制御構造が、[If...Then...Else ステートメント](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)です。 1つのテストと1つのステートメントを実行するだけの場合は、単一行バージョンを使用できます。 より複雑な条件とアクションのセットがある場合は、複数行のバージョンを使用できます。  
   
 ## <a name="selectcase-construction"></a>Select...Case 構造  
  この`Select...Case`構築により、式を1回評価し、さまざまな値に基づいてさまざまなステートメントのセットを実行できます。 詳細については、[Select...Case ステートメント](../../../../visual-basic/language-reference/statements/select-case-statement.md)を参照してください。  

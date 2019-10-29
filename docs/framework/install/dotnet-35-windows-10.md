@@ -4,12 +4,12 @@ description: Windows 10、Windows 8.1、および Windows 8 に .NET Framework 3
 author: rlander
 ms.author: mairaw
 ms.date: 07/16/2018
-ms.openlocfilehash: 7b3b7ca5709008260ea284602a3ed8d2b288c410
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 949f73febe2eb2ad7155bddd2b7b7514eddfe6c9
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515196"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319124"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Windows 8、Windows 8.1、および Windows 10 への .NET Framework 3.5 のインストール
 
@@ -17,9 +17,9 @@ Windows 10、Windows 8.1、および Windows 8 上でアプリケーションを
 
 ## <a name="install-the-net-framework-35-on-demand"></a>必要に応じて .NET Framework 3.5 をインストールする
 
-.NET Framework 3.5 が必要なアプリケーションを実行しようとすると、次の構成ダイアログが表示されることがあります。 .NET Framework 3.5 を有効にするには、**[この機能をインストールする]** を選択します。 このオプションを使用するには、インターネット接続が必要です。
+.NET Framework 3.5 が必要なアプリケーションを実行しようとすると、次の構成ダイアログが表示されることがあります。 .NET Framework 3.5 を有効にするには、 **[この機能をインストールする]** を選択します。 このオプションを使用するには、インターネット接続が必要です。
 
-![.NET Framework のインストール ダイアログ](./media/dotnet-framework-installation-dialog.jpg)
+![.NET Framework インストール ダイアログのスクリーンショット。](./media/dotnet-35-windows-10/dotnet-framework-installation-dialog.png)
 
 ### <a name="why-am-i-getting-this-pop-up"></a>このポップアップが表示される理由
 
@@ -29,17 +29,17 @@ Windows 10、Windows 8.1、および Windows 8 上でアプリケーションを
 
 Windows のコントロール パネルを使用して .NET Framework 3.5 を有効にできます。 このオプションを使用するには、インターネット接続が必要です。
 
-1. キーボードの Windows キー ![Windows ロゴ](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg) を押し、「Windows の機能」と入力して、Enter キーを押します。 **[Windows 機能の有効化または無効化]** ダイアログ ボックスが表示されます。
+1. Windows キー ![Windows キー ロゴのスクリーンショット](./media/dotnet-35-windows-10/windows-keyboard-logo.png) を押します。 キーボードで「Windows の機能」と入力し、Enter キーを押します。 **[Windows 機能の有効化または無効化]** ダイアログ ボックスが表示されます。
 
 2. **[.NET Framework 3.5 (.NET 2.0 および 3.0 を含む)]** チェック ボックスをオンにして **[OK]** を選択し、メッセージが表示された場合はコンピューターを再起動します。
 
-   ![コントロール パネルを使用した .NET のインストール](./media/dotnet-control-panel.png)
+   ![[コントロール パネル] を使用した .NET のインストールを示すスクリーンショット。](./media/dotnet-35-windows-10/dotnet-control-panel.png)
 
-   Windows Communication Foundation (WCF) 機能が必要な開発者またはサーバー管理者でない限り、**[Windows Communication Foundation HTTP アクティブ化]** および **[Windows Communication Foundation 非 HTTP アクティブ化]** の子項目を選択する必要はありません。
+   Windows Communication Foundation (WCF) 機能が必要な開発者またはサーバー管理者でない限り、 **[Windows Communication Foundation HTTP アクティブ化]** および **[Windows Communication Foundation 非 HTTP アクティブ化]** の子項目を選択する必要はありません。
 
 ## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>.NET Framework 3.5 のインストールのトラブルシューティング
 
-インストール中にエラー 0x800f0906、0x800f0907、0x800f081f、0x800F0922 が発生することがあります。その場合は、「[.NET Framework 3.5 インストール エラー: 0x800f0906、0x800f0907、または 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09)」を参照し、問題の解決方法をご確認ください。
+インストール時に、0x800f0906、0x800f0907、0x800f081f、または 0x800F0922 というエラーが発生することがあります。その場合は、「[.NET Framework 3.5 インストール時のエラー:0x800F0906、0x800F081F、0x800F0907](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09)」でこれらの問題の解決方法を参照してください。
 
 インストールの問題をまだ解決できない場合、またはインターネット接続がない場合は、Windows のインストール メディアを使ってインストールしてみることができます。 詳細については、「[Deploy .NET Framework 3.5 by using Deployment Image Servicing and Management (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism)」 (展開イメージのサービスと管理 (DISM) を利用して .NET Framework 3.5 を展開する) を参照してください。 インストール メディアがない場合は、「[Windows 用のインストール メディアを作成する](https://support.microsoft.com/help/15088/windows-create-installation-media)」を参照してください。
 
