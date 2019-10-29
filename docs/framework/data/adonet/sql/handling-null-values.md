@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 26b7e3a287c00f103129632ae8b0db882d468ef3
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a634667ec8d963ef52abbdbe517a57d10e4a60fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352974"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040218"
 ---
 # <a name="handling-null-values"></a>null 値の処理
 列の値が不明または欠落している場合は、リレーショナル データベースの NULL 値が使用されます。 NULL は空文字列 (文字または日付時刻データ型) でもゼロ値 (数値データ型) でもありません。 ANSI SQL-92 の規格では、すべてのデータ型について NULL は同一でなければならないと規定されているため、すべての NULL が一貫して処理されます。 <xref:System.Data.SqlTypes> 名前空間では、<xref:System.Data.SqlTypes.INullable> インターフェイスを実装することで NULL セマンティクスが提供されます。 <xref:System.Data.SqlTypes> 内の各データ型には、それぞれ独自に `IsNull` プロパティと `Null` 値があり、データ型のインスタンスに割り当てることができます。  
@@ -25,7 +25,7 @@ ms.locfileid: "71352974"
   
 - False  
   
-- Unknown  
+- 不明  
   
  NULL は不明であるとされるため、2 つの NULL 値を相互に比較した場合、同等であるとは見なされません。 算術演算子を使用する式では、オペランドのいずれかが NULL である場合は結果も NULL になります。  
   
@@ -35,23 +35,23 @@ ms.locfileid: "71352974"
  ![真理テーブル](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>ANSI_NULLS オプションについて  
- <xref:System.Data.SqlTypes> では、ANSI_NULLS オプションが SQL Server で設定された場合と同じセマンティクスになります。 すべての算術演算子 (+、-、\*、/、%)、ビットごとの演算子 (~、&、\|)、およびほとんどの関数は、プロパティ `IsNull` を除き、オペランドまたは引数のいずれかが null の場合は null を返します。  
+ <xref:System.Data.SqlTypes> では、ANSI_NULLS オプションが SQL Server で設定された場合と同じセマンティクスになります。 すべての算術演算子 (+、-、\*、/、%)、ビットごとの演算子 (~、&、\|)、およびほとんどの関数は、プロパティ `IsNull`を除き、オペランドまたは引数のいずれかが null の場合は null を返します。  
   
  ANSI SQL-92 標準では、WHERE 句で*columnName* = NULL はサポートされていません。 SQL Server では、ANSI_NULLS オプションによって、データベース内の既定の NULL 値と、NULL 値に対する比較の評価の両方が制御されます。 ANSI_NULLS がオン (既定) である場合、IS NULL 演算子を NULL 値のテストを行う式で使用する必要があります。 たとえば次の比較では、ANSI_NULLS がオンである場合、常に不明となります。  
   
-```  
+```sql
 colname > NULL  
 ```  
   
  NULL 値を含む変数との比較でも不明となります。  
   
-```  
+```sql
 colname > @MyVariable  
 ```  
   
  NULL 値をテストするには、IS NULL または IS NOT NULL 述語を使用します。 これにより WHERE 句が複雑になる場合があります。 たとえば、AdventureWorks Customer テーブル内の TerritoryID 列では、NULL 値が許可されています。 SELECT ステートメントによってその他の値と合わせて NULL 値もテストされる場合は、IS NULL 述語を含める必要があります。  
   
-```  
+```sql
 SELECT CustomerID, AccountNumber, TerritoryID  
 FROM AdventureWorks.Sales.Customer  
 WHERE TerritoryID IN (1, 2, 3)  
@@ -87,7 +87,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  さらに、`DataRow.["columnName"]` の NULL 値割り当てのインスタンスには、次の規則が適用されます。  
   
-1. *既定の既定値は*、厳密に型指定された null 列を除く、厳密に型指定された適切な null 値である、すべての `DbNull.Value` です。  
+1. *既定の既定値は*、厳密に型指定された null 列を除く、厳密に型指定された適切な null 値であるすべてのに対して `DbNull.Value` です。  
   
 2. XML ファイルへのシリアル化中に NULL 値が書き出されることはありません ("xsi:nil" と同じ)。  
   
@@ -112,7 +112,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  この例を実行すると、次の結果が表示されます。  
   
-```  
+```output
 isColumnNull=False, ID=123, Description=Side Mirror  
 isColumnNull=True, ID=Null, Description=Null  
 ```  
@@ -127,7 +127,7 @@ isColumnNull=True, ID=Null, Description=Null
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output
 SqlString.Equals shared/static method:  
   Two nulls=Null  
   

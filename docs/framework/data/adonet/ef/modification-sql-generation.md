@@ -2,12 +2,12 @@
 title: 変更 SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b6c1b71effba17d33c035d0f1df386bf56d405b5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854294"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039895"
 ---
 # <a name="modification-sql-generation"></a>変更 SQL 生成
 
@@ -29,7 +29,7 @@ DbModificationCommandTree は、DbCommandTree から継承される変更 DML �
 
 Entity Framework によって生成される DbModificationCommandTree とその実装は、常に単一行演算を表します。 ここでは、これら 3 つの種類の実装と、.NET Framework Version 3.5 における制約について説明します。
 
-![ダイアグラム](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
+![図](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
 DbModificationCommandTree には、変更操作のターゲット セットを表す Target プロパティがあります。 入力セットを定義する Target の Expression プロパティは、常に DbScanExpression です。  DbScanExpression は、テーブルまたはビューを表すことができます。また、対象のメタデータプロパティの "定義クエリ" が null 以外の場合は、クエリで定義されたデータのセットを表すことができます。
 
@@ -62,9 +62,7 @@ Returning 値は、挿入または更新された行に基づいて返される�
 
 SetClauses は、挿入または更新操作を定義する insert set 句または update set 句のリストを指定します。
 
-```
-The elements of the list are specified as type DbModificationClause, which specifies a single clause in an insert or update modification operation. DbSetClause inherits from DbModificationClause and specifies the clause in a modification operation that sets the value of a property. Beginning in version 3.5 of the .NET Framework, all elements in SetClauses are of type SetClause.
-```
+リストの要素は、insert または update の変更操作で1つの句を指定する DbModificationClause 型として指定されます。 DbSetClause は DbModificationClause から継承し、プロパティの値を設定する変更操作で句を指定します。 .NET Framework のバージョン3.5 以降では、Setclauses のすべての要素の型は Setclauses です。
 
 Property は、更新する必要があるプロパティを指定します。 これは常に、対応する DbModificationCommandTree の Target への参照を表す、DbVariableReferenceExpression に対する DbPropertyExpression です。
 
@@ -94,7 +92,7 @@ Predicate は、ターゲット コレクションのどのメンバーを更新
 
 SQL Generation\DmlSqlGenerator.cs ファイル内にあるサンプル プロバイダーの変更 SQL 生成モジュールは、DbModificationCommandTree を入力として受け取り、単一の変更 SQL ステートメントを生成します。この後に、DbModificationCommandTree によって指定された場合にリーダーを返す SELECT ステートメントが続く場合もあります。 生成されたコマンドの構造は、対象の SQL Server データベースの影響を受けます。
 
-### <a name="helper-classes-expressiontranslator"></a>ヘルパークラス:ExpressionTranslator
+### <a name="helper-classes-expressiontranslator"></a>ヘルパー クラス: ExpressionTranslator
 
 ExpressionTranslator は、DbExpression 型のすべての変更コマンド ツリー プロパティのための一般的な軽量のトランスレーターです。 このトランスレーターは、変更コマンド ツリーのプロパティを制限する式の型の変換のみをサポートし、特定の制約を考慮して構築されています。
 
@@ -116,7 +114,7 @@ DbPropertyExpression のインスタンスが常に入力テーブルを表す�
 
 サンプル プロバイダーで指定されている DbInsertCommandTree に対して生成される挿入コマンドは、以下に示す 2 つの挿入テンプレートのどちらかに基づいています。
 
-1 つ目のテンプレートには、SetClauses のリストの値を受け取って挿入を実行するコマンドと、挿入された行の Returning プロパティが null 以外の場合にその Returning プロパティで指定されたプロパティを返す SELECT ステートメントが含まれています。 述語要素 "\@ @ROWCOUNT > 0" は、行が挿入された場合に true になります。 述語要素 "keyMemberI = keyValueI &#124; scope_identity ()" は、keymemberi がストアによって生成されたキーである場合にのみ、図形 "keymemberi = scope_identity ()" を受け取ります。これは、scope_identity () が id に挿入された最後の id 値を返すためです (ストアによって生成された列)。
+1 つ目のテンプレートには、SetClauses のリストの値を受け取って挿入を実行するコマンドと、挿入された行の Returning プロパティが null 以外の場合にその Returning プロパティで指定されたプロパティを返す SELECT ステートメントが含まれています。 行が挿入された場合、述語要素 "\@@ROWCOUNT > 0" は true になります。 述語要素 "keyMemberI = keyValueI &#124; scope_identity ()" は、keymemberi がストアによって生成されたキーである場合にのみ、図形 "keymemberi = scope_identity ()" を受け取ります。これは、scope_identity () が id に挿入された最後の id 値を返すためです (ストアによって生成された列)。
 
 ```sql
 -- first insert Template
@@ -160,7 +158,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 このコードでは、プロバイダーに渡される次のコマンド ツリーを生成します。
 
-```
+```output
 DbInsertCommandTree
 |_Parameters
 |_Target : 'target'
@@ -212,7 +210,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-Set 句には、set 句が指定さ@iれていない場合にのみ、偽の set 句 ("= 0") が設定されます。 これは、ストア計算列が再計算されるようにするためです。
+Set 句には、set 句が指定されていない場合にのみ、偽の set 句 ("@i = 0") が含まれます。 これは、ストア計算列が再計算されるようにするためです。
 
 Returning プロパティが null でない場合にのみ、SELECT ステートメントが生成され、Returning プロパティに指定されたプロパティが返されます。
 
@@ -230,7 +228,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 このユーザー コードは、プロバイダーに渡される次のコマンド ツリーを生成します。
 
-```
+```output
 DbUpdateCommandTree
 |_Parameters
 |_Target : 'target'
@@ -281,7 +279,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 このユーザー コードは、プロバイダーに渡される次のコマンド ツリーを生成します。
 
-```
+```output
 DbDeleteCommandTree
 |_Parameters
 |_Target : 'target'

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: afafe5d1eaddaef3b9f0069908b365e40ea4ed29
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e1f8d636e793b2d8b984fe1aa0b823fa58a4981d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785687"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040175"
 ---
 # <a name="connection-string-builders"></a>接続文字列ビルダー
-以前のバージョンの ADO.NET では、文字列値が連結された接続文字列のコンパイル時チェックは行われませんでした<xref:System.ArgumentException>。そのため、実行時に、正しくないキーワードがを生成しました。 各 .NET Framework データプロバイダーでは、接続文字列キーワードに対して異なる構文がサポートされていたため、手動で有効な接続文字列を構築することは困難です。 この問題に対処するために、ADO.NET 2.0 では、.NET Framework データプロバイダーごとに新しい接続文字列ビルダーが導入されました。 各データ プロバイダーは、<xref:System.Data.Common.DbConnectionStringBuilder> から継承した、厳密に型指定された接続文字列ビルダー クラスを提供しています。 次の表に、.NET Framework データプロバイダーとそれに関連付けられている接続文字列ビルダークラスを示します。  
+以前のバージョンの ADO.NET では、文字列値が連結された接続文字列のコンパイル時チェックは行われませんでした。そのため、実行時には、正しくないキーワードによって <xref:System.ArgumentException>が生成されます。 各 .NET Framework データプロバイダーでは、接続文字列キーワードに対して異なる構文がサポートされていたため、手動で有効な接続文字列を構築することは困難です。 この問題に対処するために、ADO.NET 2.0 では、.NET Framework データプロバイダーごとに新しい接続文字列ビルダーが導入されました。 各データ プロバイダーは、<xref:System.Data.Common.DbConnectionStringBuilder> を継承した、厳密に型指定された接続文字列ビルダー クラスを提供しています。 次の表に、.NET Framework データプロバイダーとそれに関連付けられている接続文字列ビルダークラスを示します。  
   
 |プロバイダー|ConnectionStringBuilder クラス|  
 |--------------|-----------------------------------|  
@@ -48,7 +48,7 @@ Console.WriteLine(builder.ConnectionString);
   
  出力結果を見ると、挿入された値が <xref:System.Data.SqlClient.SqlConnectionStringBuilder> によって適切に処理されていることがわかります。二重引用符内の余分な値は、新しいキーと値のペアとして接続文字列に追加されるのではなくエスケープされています。  
   
-```  
+```output  
 data source=(local);Integrated Security=True;  
 initial catalog="AdventureWorks;NewValue=Bad"  
 ```  

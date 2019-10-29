@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 72638101b73e6b43fa225885b2e1f27d87b22826
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d752f4815de16daa466302881116e80aceec6edf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920146"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040902"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>方法 : Web サービスにバインドする
 この例では、Web サービスメソッド呼び出しによって返されるオブジェクトにバインドする方法を示します。  
@@ -32,18 +32,18 @@ ms.locfileid: "72920146"
   
 4. [実行 **] をクリックし、[** 参照の**追加**] をクリックします。  
   
- 次に、Web サービスメソッドを呼び出し、適切なコントロールまたはウィンドウの <xref:System.Windows.FrameworkElement.DataContext%2A> を、返されたオブジェクトに設定します。 MTPS サービスの**GetContent**メソッドは、 **getcontentrequest**オブジェクトへの参照を受け取ります。 したがって、次の例では、最初に要求オブジェクトを設定します。  
+ 次に、Web サービスメソッドを呼び出し、適切なコントロールまたはウィンドウの <xref:System.Windows.FrameworkElement.DataContext%2A> を、返されたオブジェクトに設定します。 MTPS サービスの `GetContent` メソッドは、`getContentRequest` オブジェクトへの参照を受け取ります。 したがって、次の例では、最初に要求オブジェクトを設定します。  
   
  [!code-csharp[BindToWebService#Namespace](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
  [!code-vb[BindToWebService#Namespace](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
 [!code-csharp[BindToWebService#WebServiceCall](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
 [!code-vb[BindToWebService#WebServiceCall](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
- <xref:System.Windows.FrameworkElement.DataContext%2A> が設定されたら、<xref:System.Windows.FrameworkElement.DataContext%2A> が設定されているオブジェクトのプロパティへのバインドを作成できます。 この例では、<xref:System.Windows.FrameworkElement.DataContext%2A> は、 **GetContent**メソッドによって返される**getcontentresponse**オブジェクトに設定されます。 次の例では、<xref:System.Windows.Controls.ItemsControl> にバインドされ、 **Getcontentresponse**の**availableVersionsAndLocales**の**ロケール**値が表示されます。  
+ <xref:System.Windows.FrameworkElement.DataContext%2A> が設定されたら、<xref:System.Windows.FrameworkElement.DataContext%2A> が設定されているオブジェクトのプロパティへのバインドを作成できます。 この例では、<xref:System.Windows.FrameworkElement.DataContext%2A> は `GetContent` メソッドによって返される `getContentResponse` オブジェクトに設定されます。 次の例では、<xref:System.Windows.Controls.ItemsControl> をにバインドし、`getContentResponse`の `availableVersionsAndLocales` の `locale` 値を表示します。  
   
  [!code-xaml[BindToWebService#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
- **Getcontentresponse**の構造の詳細については、[コンテンツサービスのドキュメント](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)を参照してください。  
+ `getContentResponse`の構造の詳細については、[コンテンツサービスのドキュメント](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

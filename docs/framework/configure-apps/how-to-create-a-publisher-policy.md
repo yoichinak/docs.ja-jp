@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846832"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040185"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>方法: 発行者ポリシーを作成する
 
@@ -55,26 +55,28 @@ ms.locfileid: "72846832"
 
 コマンドプロンプトで、次のコマンドを入力します。
 
-**al/link:** *publisherPolicyFile* **/Out:** *publisherPolicyAssemblyFile* **/keyfile:** *放送ファイル* **/platform:** *processorArchitecture*
+```console
+al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFile /platform:processorArchitecture
+```
 
 このコマンドでは、次のようになります。
 
-- *PublisherPolicyFile*引数は発行者ポリシーファイルの名前です。
+- `publisherPolicyFile` 引数は発行者ポリシーファイルの名前です。
 
-- *PublisherPolicyAssemblyFile*引数は、このコマンドの結果として生成される発行者ポリシーアセンブリの名前です。 アセンブリファイル名は、次の形式に従う必要があります。
+- `publisherPolicyAssemblyFile` 引数は、このコマンドの結果として生成される発行者ポリシーアセンブリの名前です。 アセンブリファイル名は、次の形式に従う必要があります。
 
-  **ポリシー.** *majorNumber* **。** *Minornumber* **。** *Mainassemblyname* **.dll**
+  ' majorNumber ' (' ポリシー.......................)
 
-- キーペアを格納*している*ファイルの名前を指定します。 アセンブリと発行者ポリシーアセンブリには、同じキーペアで署名する必要があります。
+- `keyPairFile` 引数は、キーペアを含むファイルの名前です。 アセンブリと発行者ポリシーアセンブリには、同じキーペアで署名する必要があります。
 
-- *ProcessorArchitecture*引数は、プロセッサ固有のアセンブリの対象となるプラットフォームを識別します。
+- `processorArchitecture` 引数は、プロセッサ固有のアセンブリの対象となるプラットフォームを識別します。
 
   > [!NOTE]
   > 特定のプロセッサアーキテクチャを対象とする機能は、.NET Framework 2.0 以降で使用できます。
 
 特定のプロセッサアーキテクチャを対象とする機能は、.NET Framework 2.0 以降で使用できます。 次のコマンドは、`pub.config`という発行者ポリシーファイルから `policy.1.0.myAssembly` という発行者ポリシーアセンブリを作成し、`sgKey.snk` ファイルのキーペアを使用してアセンブリに厳密な名前を割り当て、アセンブリが x86 プロセッサを対象とすることを指定します。構造.
 
-```
+```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
@@ -92,11 +94,13 @@ al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:
 
 コマンドプロンプトで、次のコマンドを入力します。
 
-**gacutil/I**  *publisherPolicyAssemblyFile*
+```console
+gacutil /i publisherPolicyAssemblyFile
+```
 
 次のコマンドは、`policy.1.0.myAssembly.dll` をグローバルアセンブリキャッシュに追加します。
 
-```
+```console
 gacutil /i policy.1.0.myAssembly.dll
 ```
 

@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: ccfe40f218e3f09de53d6cb596a31b2520d9ff9b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a49634f712e32f873df8e47fbcb0c91dbe33fa94
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783474"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039824"
 ---
 # <a name="oracle-and-adonet"></a>Oracle および ADO.NET
 > [!NOTE]
-> <xref:System.Data.OracleClient> の型は非推奨とされました。 これらの型は、.NET Framework の現在のバージョンでは引き続きサポートされていますが、今後のリリースでは削除される予定です。 サードパーティの Oracle プロバイダーを使用することをお勧めします。  
+> <xref:System.Data.OracleClient> の型は非推奨とされます。 これらの型は、.NET Framework の現在のバージョンでは引き続きサポートされていますが、今後のリリースでは削除される予定です。 サードパーティの Oracle プロバイダーを使用することをお勧めします。  
   
  このセクションでは、Oracle の .NET Framework Data Provider に固有の機能と動作について説明します。  
   
  Oracle 用の .NET Framework Data Provider では、oracle クライアントソフトウェアによって提供される oracle Call Interface (OCI) を使用して Oracle データベースにアクセスできます。 データプロバイダーの機能は、SQL Server、OLE DB、および ODBC の .NET Framework データプロバイダーに似たものになるように設計されています。  
   
- Oracle で .NET Framework Data Provider を使用するには、アプリケーションで次<xref:System.Data.OracleClient>のように名前空間を参照する必要があります。  
+ Oracle で .NET Framework Data Provider を使用するには、アプリケーションで次のように <xref:System.Data.OracleClient> 名前空間を参照する必要があります。  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -32,7 +32,7 @@ using System.Data.OracleClient;
   
  コードをコンパイルするには、DLL への参照も必要です。 たとえば、C# プログラムをコンパイルする場合、コマンド ラインに以下のコードを含める必要があります。  
   
-```  
+```console
 csc /r:System.Data.OracleClient.dll  
 ```  
   

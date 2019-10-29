@@ -2,12 +2,12 @@
 title: 'コマンド ツリーからの SQL の生成: ベスト プラクティス'
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 869722b91550855a184a74e706271c3e2d417b84
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855003"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039997"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>コマンド ツリーからの SQL の生成: ベスト プラクティス
 
@@ -31,7 +31,7 @@ ORDER BY …
 
 例として、次のクエリ コマンド ツリーについて考えます。
 
-```
+```csharp
 Project (
 a.x,
    a = Filter(
@@ -68,7 +68,7 @@ WHERE b.y = 5
 
 左辺スパイン結合 (別の結合の左辺の子として表示される結合) は、1 つの SQL SELECT ステートメントに簡単にフラット化できます。 たとえば、次のクエリ コマンド ツリーについて考えます。
 
-```
+```csharp
 InnerJoin(
    a = LeftOuterJoin(
    b = Extent("TableA")
@@ -90,7 +90,7 @@ INNER JOIN TableC as d ON b.y = d.z
 
 ただし、左辺スパイン結合以外の結合のフラット化は容易ではないので、実行しないでください。 たとえば、次のクエリ コマンド ツリーの結合について考えます。
 
-```
+```csharp
 InnerJoin(
    a = Extent("TableA")
    b = LeftOuterJoin(
@@ -145,7 +145,7 @@ ON b.y = d.z
 
 ## <a name="mapping-primitive-types"></a>プリミティブ型のマッピング
 
-概念 (EDM) 型をプロバイダー型にマップする場合は、さまざまな値に対応できるように、最も幅の広い型 (Int32) にマップする必要があります。 また、BLOB の種類など、多くの操作では使用できない型 ( `ntext` SQL Server など) にマッピングすることは避けてください。
+概念 (EDM) 型をプロバイダー型にマップする場合は、さまざまな値に対応できるように、最も幅の広い型 (Int32) にマップする必要があります。 また、BLOB の種類など、多くの操作では使用できない型 (SQL Server の `ntext` など) にマッピングすることは避けてください。
 
 ## <a name="see-also"></a>関連項目
 

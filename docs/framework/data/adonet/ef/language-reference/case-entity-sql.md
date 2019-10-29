@@ -2,19 +2,19 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 79544f4180313a008669c56c4f2740c889043c6d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7c1e02d44c674bf262f92df1c43bec6e9f2143c5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251247"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039927"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 一連の `Boolean` 式を評価して結果を決定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp  
 CASE  
      WHEN Boolean_expression THEN result_expression   
     [ ...n ]   
@@ -41,7 +41,7 @@ END
  `result_expression` およびオプションの `else_result_expression`の一連の型の中から、最も優先順位の高い型を返します。  
   
 ## <a name="remarks"></a>Remarks  
- Case [!INCLUDE[esql](../../../../../../includes/esql-md.md)]式は、transact-sql の case 式に似ています。 case 式を使用すると、適切な結果が得られる式を、一連の条件判定によって決めることができます。 この形式の case 式では、1 つまたは複数の `Boolean` 式によって、最終的に使用される式が決定されます。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] case 式は、Transact-sql の case 式に似ています。 case 式を使用すると、適切な結果が得られる式を、一連の条件判定によって決めることができます。 この形式の case 式では、1 つまたは複数の `Boolean` 式によって、最終的に使用される式が決定されます。  
   
  CASE 関数は、各 WHEN 句の `Boolean_expression` を指定された順序で評価し、 `result_expression` として評価された最初の `Boolean_expression` の `true`を返します。 残りの式は評価されません。 `Boolean_expression` の評価がいずれも `true`でなかった場合、データベース エンジンは、ELSE 句が指定されていれば `else_result_expression` を、ELSE 句が指定されていない場合は NULL 値を返します。  
   
@@ -50,7 +50,7 @@ END
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、CASE 式を使用して、一連の `Boolean` 式を評価し、結果を取得しています。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. [「方法:PrimitiveType の結果](../how-to-execute-a-query-that-returns-primitivetype-results.md)を返すクエリを実行します。  
+1. [「方法: PrimitiveType の結果を返すクエリを実行](../how-to-execute-a-query-that-returns-primitivetype-results.md)する」の手順に従います。  
   
 2. 次のクエリを引数として `ExecutePrimitiveTypeQuery` メソッドに渡します。  
   

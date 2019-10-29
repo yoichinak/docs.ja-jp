@@ -2,19 +2,19 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 385f9a8057ea6aa3637f7fae6fec79154ac625ba
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c16270babe4daa8e703b24b27211c6fd6f53677d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251233"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039915"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 あるデータ型の式を別のデータ型に変換します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp
 CAST ( expression AS data_type )  
 ```  
   
@@ -31,7 +31,7 @@ CAST ( expression AS data_type )
 ## <a name="remarks"></a>Remarks  
  キャスト式のセマンティクスは、Transact-sql の CONVERT 式と似ています。 キャスト式は、ある型の値を別の型の値に変換する場合に使用します。  
   
-```  
+```csharp
 CAST( e as T )  
 ```  
   
@@ -53,7 +53,7 @@ CAST( e as T )
 ## <a name="example"></a>例  
  次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリは CAST 演算子を使用して、あるデータ型の式を別のデータ型にキャストします。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. [「方法:PrimitiveType の結果](../how-to-execute-a-query-that-returns-primitivetype-results.md)を返すクエリを実行します。  
+1. [「方法: PrimitiveType の結果を返すクエリを実行](../how-to-execute-a-query-that-returns-primitivetype-results.md)する」の手順に従います。  
   
 2. 次のクエリを引数として `ExecutePrimitiveTypeQuery` メソッドに渡します。  
   

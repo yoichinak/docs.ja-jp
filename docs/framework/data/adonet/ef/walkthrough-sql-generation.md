@@ -2,12 +2,12 @@
 title: 'チュートリアル: SQL 生成'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 09b5a3c2dea5cd0483d617ee8064b41dc19c3374
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2684acd39ae9651407023e8b5c73f02eadb97547
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248286"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040499"
 ---
 # <a name="walkthrough-sql-generation"></a>チュートリアル: SQL 生成
 
@@ -24,7 +24,7 @@ INNER JOIN (SELECT OD.ProductId, OD.Order.ShipCountry as ShipCountry
 
 このクエリでは、プロバイダーに渡される次の出力コマンド ツリーが生成されます。
 
-```
+```output
 DbQueryCommandTree
 |_Parameters
 |_Query : Collection{Record['C1'=Edm.Int32, 'ProductID'=Edm.Int32, 'ProductName'=Edm.String, 'CategoryName'=Edm.String, 'ShipCountry'=Edm.String, 'ProductID1'=Edm.Int32]}
@@ -106,15 +106,15 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
    ) AS [Join3] ON [Extent1].[ProductID] = [Join3].[ProductID]
 ```
 
-## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>SQL 生成の最初のフェーズ:式ツリーへのアクセス
+## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>SQL 生成の最初のフェーズ: 式ツリーへのアクセス
 
 次の図は、ビジターの最初の空の状態を示しています。  このトピック全体では、このチュートリアルの説明に関連するプロパティのみを示しています。
 
-![ダイアグラム](./media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f54-fb947 bc3-8589d566512d9703")
+![図](./media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")
 
 Project ノードにアクセスすると、VisitInputExpression がその入力 (Join4) に対して呼び出され、VisitJoinExpression メソッドによって Join4 のアクセスがトリガーされます。 これは最上位の結合であるため、IsParentAJoin は false を返し、新しい SqlSelectStatement (SelectStatement0) が作成され、SELECT ステートメント スタックにプッシュされます。 また、新しいスコープ (scope0) がシンボル テーブルに追加されます。 結合の最初の入力 (左辺) にアクセスする前に、'true' が IsParentAJoin スタックにプッシュされます。 Join4 の左辺の入力である Join1 にアクセスする直前に、ビジターの状態は次の図に示すようになります。
 
-![ダイアグラム](./media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")
+![図](./media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")
 
 結合のビジット メソッドが Join4 に対して呼び出されると、IsParentAJoin は true になるため、現在の SELECT ステートメントである SelectStatement0 が再利用されます。 新しいスコープ (scope1) が追加されます。 左辺の子である Extent1 にアクセスする前に、もう 1 度 true が IsParentAJoin スタックにプッシュされます。
 
@@ -122,27 +122,27 @@ Extent1 にアクセスすると、IsParentAJoin が true を返すため、"[db
 
 Join1 の右辺の入力にアクセスする前に、"LEFT OUTER JOIN" が SelectStatement0 の FROM 句に追加されます。 右辺の入力はスキャン式であるため、再度 true が IsParentAJoin スタックにプッシュされます。 右辺の入力にアクセスする前の状態は次の図に示すとおりです。
 
-![ダイアグラム](./media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")
+![図](./media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")
 
 右辺の入力は、左辺の入力と同じように処理されます。 右辺の入力にアクセスした後の状態を、次の図に示します。
 
-![ダイアグラム](./media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
+![図](./media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
 
-次に、"false" が IsParentAJoin スタックにプッシュされ、結合条件である Var(Extent1).CategoryID == Var(Extent2).CategoryID が処理されます。 Var (Extent1) は、シンボル\<テーブルを参照した後に、symbol_Extent1 > に解決されます。 これは、Var (Extent1) を処理した結果として、インスタンスが単純なシンボルに解決されるためです。CategoryID、sqlbuilder と\<symbol1 >。 "CategoryID "が返されます。 同様に比較の右辺が処理され、結合条件へのアクセス結果が SelectStatement1 の FROM 句に追加され、値 "false" が IsParentAJoin スタックからポップされます。
+次に、"false" が IsParentAJoin スタックにプッシュされ、結合条件である Var(Extent1).CategoryID == Var(Extent2).CategoryID が処理されます。 Var (Extent1) は、シンボルテーブルを参照した後、\<symbol_Extent1 > に解決されます。 これは、Var (Extent1) を処理した結果として、インスタンスが単純なシンボルに解決されるためです。CategoryID、\<symbol1 > を含む SqlBuilder。 "CategoryID "が返されます。 同様に比較の右辺が処理され、結合条件へのアクセス結果が SelectStatement1 の FROM 句に追加され、値 "false" が IsParentAJoin スタックからポップされます。
 
 これで Join1 の処理が完了し、スコープがシンボル テーブルからポップされます。
 
-制御が、Join1 の親である Join4 の処理に戻されます。 子は Select ステートメントを再利用したため、Join1 エクステントは1つの結合\<シンボル joinSymbol_Join1 > に置き換えられます。 また、シンボルテーブルに新しいエントリが追加され、Join1 と\<joinSymbol_Join1 > が関連付けられます。
+制御が、Join1 の親である Join4 の処理に戻されます。 子は Select ステートメントを再利用したため、Join1 エクステントは joinSymbol_Join1 > \<1 つの結合シンボルに置き換えられます。 また、シンボルテーブルに新しいエントリが追加され、Join1 が \<joinSymbol_Join1 > に関連付けられます。
 
 次に処理するノードは、Join4 の 2 つ目の子である Join3 です。 これは右辺の子であるため、"false" が IsParentAJoin スタックにプッシュされます。 この時点のビジターの状態を次の図に示します。
 
-![ダイアグラム](./media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd47 6490824385be7e423")
+![図](./media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")
 
-Join3 の場合、IsParentAJoin は false を返します。また、新しい SqlSelectStatement (SelectStatement1) を開始し、それをスタックにプッシュする必要があります。 処理は前の結合と同じように実行されます。新しいスコープがスタックにプッシュされ、子が処理されます。 左側の子はエクステント (Extent3) であり、右側の子は結合 (Join2) で、新しい SqlSelectStatement を開始する必要もあります。SelectStatement2. Join2 の子もエクステントであり、SelectStatement2 に集約されます。
+Join3 の場合、IsParentAJoin は false を返します。また、新しい SqlSelectStatement (SelectStatement1) を開始し、それをスタックにプッシュする必要があります。 処理は前の結合と同じように実行されます。新しいスコープがスタックにプッシュされ、子が処理されます。 左辺の子がエクステント (Extent3) で、右辺の子が結合 (Join2) です。Join2 では、新しい SqlSelectStatement (SelectStatement2) を開始する必要があります。 Join2 の子もエクステントであり、SelectStatement2 に集約されます。
 
 Join2 にアクセスした直後で、その後処理 (ProcessJoinInputResult) を実行する前のビジターの状態を次の図に示します。
 
-![ダイアグラム](./media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")
+![図](./media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")
 
 SelectStatement2 は、前の図では型指定されていない状態で示されています。これは、スタックからポップされたが、まだ親によって後処理が実行されていないためです。 親の FROM の部分に追加する必要がありますが、SELECT 句がないため、完全な SQL ステートメントではありません。 そのため、この時点では、既定の列 (入力によって生成されるすべての列) が AddDefaultColumns メソッドによって選択リストに追加されます。 AddDefaultColumns では、FromExtents 内のシンボルを反復処理し、スコープ内に取り込まれたすべての列をシンボルごとに追加します。 単純なシンボルの場合は、シンボルの型を参照して、追加するすべてのプロパティを取得します。 また、AllColumnNames ディクショナリに列名を追加します。 完成した SelectStatement2 が SelectStatement1 の FROM 句に追加されます。
 
@@ -150,17 +150,17 @@ SelectStatement2 は、前の図では型指定されていない状態で示さ
 
 次の図には、DbPropertyExpression である "Var(Join2).Extent4.OrderID" を処理する直前のビジターの状態を示しています。
 
-"Var(Join2).Extent4.OrderID" にアクセスする方法について説明します。 最初に、インスタンス プロパティ "Var(Join2).Extent4" にアクセスします。これ自体が 1 つの DbPropertyExpression であり、まず、そのインスタンス "Var(Join2)" にアクセスします。 シンボルテーブルの最上位のスコープでは、"Join2" は joinSymbol_join2 \<> に解決されます。 "Var(Join2).Extent4" を処理する DbPropertyExpression のビジット メソッドでは、そのインスタンスへのアクセス時に結合シンボルが返されたこと、および結合のフラット化が必要なことが検出されます。
+"Var(Join2).Extent4.OrderID" にアクセスする方法について説明します。 最初に、インスタンス プロパティ "Var(Join2).Extent4" にアクセスします。これ自体が 1 つの DbPropertyExpression であり、まず、そのインスタンス "Var(Join2)" にアクセスします。 シンボルテーブルの最上位のスコープでは、"Join2" は \<joinSymbol_join2 > に解決されます。 "Var(Join2).Extent4" を処理する DbPropertyExpression のビジット メソッドでは、そのインスタンスへのアクセス時に結合シンボルが返されたこと、および結合のフラット化が必要なことが検出されます。
 
-入れ子になった結合であるため、結合シンボルの nametoextent ディクショナリでプロパティ "Extent4" を検索し、それを symbol_Extent4 > \<に解決して、新しいシンボルペア (\<joinSymbol_join2 >、 \<symbol_Extent4 を返します。>)。 "Var (Join2)" のインスタンスの処理からシンボルのペアが返されるためです。Extent4 "のプロパティ" OrderID "は、その記号のペア (\<symbol_Extent4 >) の columnpart から解決されます。この列には、そのシンボルが表す範囲の列の一覧が含まれています。 "Var (Join2)" のようになります。Extent4 "は { \<joinSymbol_Join2 >,". ", \<symbol_OrderID >} に解決されます。
+入れ子になった結合であるため、結合シンボルの NameToExtent ディクショナリでプロパティ "Extent4" を検索し、それを \<symbol_Extent4 > に解決して、新しいシンボルペア (\<joinSymbol_join2 >、\<symbol_Extent4 >) を返します。 "Var (Join2)" のインスタンスの処理からシンボルのペアが返されるためです。Extent4 "のプロパティ" OrderID "は、そのシンボルのペア (\<symbol_Extent4 >) の ColumnPart で解決されます。この列には、そのシンボルが表す範囲の列の一覧が含まれています。 "Var (Join2)" のようになります。Extent4 "は {\<joinSymbol_Join2 >,". ", \<symbol_OrderID >} に解決されます。
 
 Join4 の結合条件は同じように処理されます。 制御は最上位の Project を処理した VisitInputExpression メソッドに戻されます。 返された SelectStatement0 の FromExtents を確認すると、入力は結合として識別されており、元のエクステントは削除され、結合シンボルのみを含む新しいエクステントに置き換えられています。 また、シンボル テーブルも更新されています。次に、Project の Projection 部分を処理します。 プロパティの解決および結合エクステントのフラット化は前に説明したとおりです。
 
-![ダイアグラム](./media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")
+![図](./media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")
 
 最終的に、次の SqlSelectStatement が生成されます。
 
-```
+```sql
 SELECT:
   "1", " AS ", "[C1]",
   <symbol_Extent1>, ".", "[ProductID]", " AS ", "[ProductID]",
@@ -194,11 +194,11 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>
 ```
 
-### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成の2番目のフェーズ:String コマンドを生成する
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成の 2 番目のフェーズ: 文字列コマンドの生成
 
 2 番目のフェーズでは、シンボルの実際の名前を生成します。ここでは、競合を解決する必要がある "OrderID" という名前の列を表すシンボルについてのみ説明します。 これらは SqlSelectStatement で強調表示されます。 図に使用されているサフィックスは、これらが別々のインスタンスであることを強調しているだけで、新しい名前を表しているわけではありません。その理由は、この段階では、シンボルの最終的な名前 (場合によっては元の名前とは異なる) がまだ割り当てられていないためです。
 
-名前を変更する必要がある最初のシンボル\<は、symbol_OrderID > です。 その新しい名前として "OrderID1" が割り当てられます。1 は、"OrderID" に対して最後に使用されたサフィックスとしてマークされ、シンボルは名前を変更する必要がないものとしてマークされます。 次に、symbol_OrderID_2 > の\<最初の使用方法が見つかります。 これは、有効な次のサフィックスを使用するように名前が変更され ("OrderID2")、このシンボルも名前を変更する必要がないものとしてマークされます。そのため、次に使用するときに、名前の変更は行われません。 これは、symbol_OrderID_3 \<> に対しても行われます。
+名前を変更する必要がある最初のシンボルは、symbol_OrderID > \<ます。 その新しい名前として "OrderID1" が割り当てられます。1 は、"OrderID" に対して最後に使用されたサフィックスとしてマークされ、シンボルは名前を変更する必要がないものとしてマークされます。 次に、\<symbol_OrderID_2 > の最初の使用方法が見つかります。 これは、有効な次のサフィックスを使用するように名前が変更され ("OrderID2")、このシンボルも名前を変更する必要がないものとしてマークされます。そのため、次に使用するときに、名前の変更は行われません。 これは \<symbol_OrderID_3 > に対しても行われます。
 
 2 番目のフェーズの最後に、最終的な SQL ステートメントが生成されます。
 
