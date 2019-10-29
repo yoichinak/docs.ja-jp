@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2150351c97f6deae18177be642e6c3009422960
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8c9bdb3149834cd3dd04c7627bca440925f5273f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393720"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040768"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework の新機能
 
@@ -104,7 +104,7 @@ ms.locfileid: "72393720"
 
 正常性エンドポイントを公開し、WCF サービスの正常性情報を公開するには、2 つの方法があります。
 
-- コードの使用。 次に例を示します。
+- コードの使用。 例:
 
   ```csharp
   ServiceHost host = new ServiceHost(typeof(Service1),
@@ -126,7 +126,7 @@ ms.locfileid: "72393720"
   host.Description.Behaviors.Add(healthBehavior)
   ```
 
-- 構成ファイルの使用。 次に例を示します。
+- 構成ファイルの使用。 例:
 
   ```xml
   <behaviors>
@@ -138,7 +138,7 @@ ms.locfileid: "72393720"
   </behaviors>
   ```
 
-`OnServiceFailure`、`OnDispatcherFailure`、`OnListenerFailure`、`OnThrottlePercentExceeded` などのクエリ パラメーターを使用して、サービスの正常性状態のクエリを実行することができ、各クエリ パラメーターに対して HTTP 応答コードを指定できます。 クエリ パラメーターで HTTP 応答コードを省略すると、503 HTTP 応答コードが既定で使われます。 次に例を示します。
+`OnServiceFailure`、`OnDispatcherFailure`、`OnListenerFailure`、`OnThrottlePercentExceeded` などのクエリ パラメーターを使用して、サービスの正常性状態のクエリを実行することができ、各クエリ パラメーターに対して HTTP 応答コードを指定できます。 クエリ パラメーターで HTTP 応答コードを省略すると、503 HTTP 応答コードが既定で使われます。 例:
 
 - OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
 
@@ -155,7 +155,7 @@ ms.locfileid: "72393720"
 
 - OnThrottlePercentExceeded: `https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
 
-  応答をトリガーする割合 {1 – 100} とその HTTP 応答コード {200 – 599} を指定します。 この例では、次のように記述されています。
+  応答をトリガーする割合 {1 – 100} とその HTTP 応答コード {200 – 599} を指定します。 次の点に注意してください。
 
   - 割合が 95 より大きい場合、500 HTTP 応答コードが返されます。
 
@@ -254,7 +254,7 @@ Using rsa = RSA.Create(rsaParameters)
 End Using
 ```
 
-<xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> および <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> メソッドでは、特定のキー サイズを指定して、新しい <xref:System.Security.Cryptography.DSA> または <xref:System.Security.Cryptography.RSA> キーを生成することができます。 次に例を示します。
+<xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> および <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> メソッドでは、特定のキー サイズを指定して、新しい <xref:System.Security.Cryptography.DSA> または <xref:System.Security.Cryptography.RSA> キーを生成することができます。 例:
 
 ```csharp
 using (DSA dsa = DSA.Create(2048))
@@ -352,7 +352,7 @@ Windows API を使用した圧縮解除のサポートは .NET Framework 4.7.2 �
 
 **追加のコレクション API**
 
-.NET Framework 4.7.2 でいくつかの新しい API が <xref:System.Collections.Generic.SortedSet%601> および <xref:System.Collections.Generic.HashSet%601> 型に追加されました。 次の設定があります。
+.NET Framework 4.7.2 でいくつかの新しい API が <xref:System.Collections.Generic.SortedSet%601> および <xref:System.Collections.Generic.HashSet%601> 型に追加されました。 チェックの内容は次のとおりです
 
 - `TryGetValue` メソッドは、他のコレクション型で使用する try パターンを次の 2 つの型に拡張します。 これらのメソッドを以下に示します。
 
@@ -430,17 +430,17 @@ web config ファイルを変更することによって、<xref:System.Web.Secu
          <!-- ...   -->
       </forms>
    <authentication />
-   <sessionSate cookieSameSite="Lax"></sessionState>
+   <sessionState cookieSameSite="Lax"></sessionState>
 </system.web>
 ```
 
 <a name="net472" />
 
-#### <a name="networking"></a>ネットワーキング
+#### <a name="networking"></a>ネットワーク
 
 **HttpClientHandler プロパティの実装**
 
-.NET Framework 4.7.1 で 8 個のプロパティが、<xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> クラスに追加されました。 ただし、2 つは <xref:System.PlatformNotSupportedException> をスローしていました。 .NET Framework 4.7.2 では、それらのプロパティの実装が提供されるようになりました。 次のプロパティです。
+.NET Framework 4.7.1 で 8 個のプロパティが、<xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> クラスに追加されました。 ただし、2 つは <xref:System.PlatformNotSupportedException> をスローしていました。 .NET Framework 4.7.2 では、それらのプロパティの実装が提供されるようになりました。 プロパティは次のとおりです。
 
 - <xref:System.Net.Http.HttpClientHandler.CheckCertificateRevocationList>
 - <xref:System.Net.Http.HttpClientHandler.SslProtocols>
@@ -469,7 +469,7 @@ NET Framework 4.7.2 では、エンクレーブ ベースの Always Encrypted �
 
 - <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>。SQL Server によって、特定の構成証明プロトコルを実行するために必要な情報を取得するために使用される構成証明パラメーター。
 
-アプリケーション構成ファイルで、エンクレーブ プロバイダーの機能を提供する抽象 <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> クラスの完全な実装を指定します。 次に例を示します。
+アプリケーション構成ファイルで、エンクレーブ プロバイダーの機能を提供する抽象 <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> クラスの完全な実装を指定します。 例:
 
 ```xml
 <configuration>
@@ -632,7 +632,7 @@ Windows フォーム アプリケーションの場合、DPI 認識をアプリ�
 
 <a name="net471"/>
 
-#### <a name="networking"></a>ネットワーキング
+#### <a name="networking"></a>ネットワーク
 
 **Message.HashAlgorithm 用の SHA-2 のサポート**
 
@@ -652,7 +652,7 @@ ASP.NET は、23 のイベントを含む定義済みのパイプラインで要
 
 **ASP.NET フォーム認証資格情報の SHA-2 ハッシュ オプション**
 
-.NET Framework 4.7 およびそれ以前のバージョンの ASP.NET では、開発者は、MD5 または SHA1 を使用して、ユーザーの資格情報とハッシュされたパスワードを構成ファイルに格納できました。 .NET Framework 4.7.1 以降の ASP.NET では、SHA256、SHA384、SHA512 などの新しい安全な SHA-2 ハッシュ オプションもサポートされるようになっています。 SHA1 は既定のまま残り、Web 構成ファイルで既定以外のハッシュ アルゴリズムを定義することができます。 次に例を示します。
+.NET Framework 4.7 およびそれ以前のバージョンの ASP.NET では、開発者は、MD5 または SHA1 を使用して、ユーザーの資格情報とハッシュされたパスワードを構成ファイルに格納できました。 .NET Framework 4.7.1 以降の ASP.NET では、SHA256、SHA384、SHA512 などの新しい安全な SHA-2 ハッシュ オプションもサポートされるようになっています。 SHA1 は既定のまま残り、Web 構成ファイルで既定以外のハッシュ アルゴリズムを定義することができます。 例:
 
 ```xml
 <system.web>
@@ -701,7 +701,7 @@ GitHub で [.NET Framework 4.7 の暗号化の向上の例](https://gist.github.
 
 <a name="net47" />
 
-#### <a name="networking"></a>ネットワーキング
+#### <a name="networking"></a>ネットワーク
 
 .NET Framework 4.7 では、次のネットワーク関連機能が追加されています。
 
@@ -786,7 +786,7 @@ Windows Ink Services Platform (WISP) の代わりに [WM_POINTER メッセージ
 
 - [文字カテゴリ](#Strings)
 
-- [暗号](#Crypto462)
+- [暗号化](#Crypto462)
 
 - [SQLClient](#SQLClient)
 
@@ -843,7 +843,7 @@ End Class
 
 キーがエラー メッセージ文字列であり、その値がローカライズされたエラー メッセージであるようにリソース ファイル DataAnnotation.Localization.fr.resx を作成します。 ファイルは `App.LocalResources` フォルダーになければいけません。 たとえば下記は、キーとその値で、値はローカライズされたフランス語 (fr) のエラー メッセージです。
 
-| name                                 | [値]                                     |
+| 名前                                 | 値                                     |
 | ------------------------------------ | ----------------------------------------- |
 | 評価は、1 から 10 の範囲である必要があります。 | La note doit être comprise entre 1 et 10. |
 
@@ -903,7 +903,7 @@ Unicode 6.0 から Unicode 7.0 への文字カテゴリの変更については�
 
 <a name="Crypto462" />
 
-### <a name="cryptography"></a>暗号
+### <a name="cryptography"></a>暗号化
 
 **FIPS 186-3 DSA を含む X509 証明書のサポート**
 
@@ -967,7 +967,7 @@ End Function
 
 Windows の暗号化ライブラリ (CNG) では、永続化された対称キーの格納とハードウェアに格納された対称キーの使用のサポートが追加され、.NET Framework 4.6.2 で開発者はこの機能を利用できるようになりました。  キー名とキー プロバイダーの概念が実装に固有であるため、この機能を使用するには、推奨されるファクトリ手法 (`Aes.Create` の呼び出しなど) ではなく、具象実装型のコンストラクターを利用する必要があります。
 
-永続化されたキーによる対称暗号化は、AES (<xref:System.Security.Cryptography.AesCng>) と 3DES (<xref:System.Security.Cryptography.TripleDESCng>) アルゴリズムでサポートされます。 次に例を示します。
+永続化されたキーによる対称暗号化は、AES (<xref:System.Security.Cryptography.AesCng>) と 3DES (<xref:System.Security.Cryptography.TripleDESCng>) アルゴリズムでサポートされます。 例:
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -1012,7 +1012,7 @@ End Function
 
 以下のように、URI 定数はすべて <xref:System.Security.Cryptography.Xml.SignedXml> で示されます。
 
-|SignedXml フィールド|定数|
+|SignedXml フィールド|常時|
 |---------------------|--------------|
 |<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA256Url>|"http://www.w3.org/2001/04/xmlenc#sha256"|
 |<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA256Url>|"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"|
@@ -1250,7 +1250,7 @@ Windows では、WPF および Windows フォーム アプリを含む、既存�
 
 .NET Framework 4.6.1 には、次の領域における新機能が含まれています。
 
-- [暗号](#Crypto)
+- [暗号化](#Crypto)
 
 - [ADO.NET](#ADO.NET461)
 
@@ -1258,7 +1258,7 @@ Windows では、WPF および Windows フォーム アプリを含む、既存�
 
 - [Windows Workflow Foundation](#WWF461)
 
-- [プロファイル](#Profile461)
+- [プロファイリング](#Profile461)
 
 - [NGen](#NGEN461)
 
@@ -1373,7 +1373,7 @@ MSDTC 以外のトランザクション プロモーターが登録されると�
 
 <a name="Profile461" />
 
-### <a name="profiling"></a>プロファイル
+### <a name="profiling"></a>プロファイリング
 
 アンマネージド プロファイリング API が、次のように拡張されました。
 
@@ -1862,7 +1862,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
 .NET Framework 4.5.1 の基底クラスの新機能と機能強化には次が含まれます。
 
-- アセンブリの自動バインディング リダイレクト。 Visual Studio 2013 以降では、アプリまたはそのコンポーネントが同じアセンブリの複数バージョンを参照している場合、.NET Framework 4.5.1 を対象とするアプリのコンパイル時に、バインディング リダイレクトをアプリ構成ファイルに追加できます。 また、.NET Framework の以前のバージョンを対象とするプロジェクトで、この機能を有効にすることもできます。 詳細については、「[方法 :自動バインディング リダイレクトを有効/無効にする](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)」をご覧ください。
+- アセンブリの自動バインディング リダイレクト。 Visual Studio 2013 以降では、アプリまたはそのコンポーネントが同じアセンブリの複数バージョンを参照している場合、.NET Framework 4.5.1 を対象とするアプリのコンパイル時に、バインディング リダイレクトをアプリ構成ファイルに追加できます。 また、.NET Framework の以前のバージョンを対象とするプロジェクトで、この機能を有効にすることもできます。 詳細については、[方法:自動バインディング リダイレクトを有効/無効にする](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)」をご覧ください。
 
 - 開発者がサーバーおよびクラウド アプリケーションのパフォーマンスを向上するために役立つ診断情報を収集する機能。 詳細については、<xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> クラスの <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> メソッドと <xref:System.Diagnostics.Tracing.EventSource> メソッドを参照してください。
 
