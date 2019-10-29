@@ -1,7 +1,7 @@
 ---
 title: 整数数値型 - C# リファレンス
 description: 各整数数値型の範囲、ストレージ サイズ、および使用方法について説明します。
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c255711e4b165fdca27d50c6bd0f2debfe15ae25
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579193"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773867"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整数数値型 (C# リファレンス)
 
@@ -100,7 +100,7 @@ var binaryLiteral = 0b_0010_1010;
 
 整数リテラルで表される値が <xref:System.UInt64.MaxValue?displayProperty=nameWithType> を超えると、コンパイル エラー [CS1021](../../misc/cs1021.md) が発生します。
 
-整数リテラルによって表される値は、リテラルの特定の型よりも範囲が狭い型に暗黙的に変換することができます。 これは、値が変換先の型の範囲内にある場合に実行できます。
+整数リテラルの決定された型が `int` で、その値が変換先の型の範囲内にある場合、リテラルで表される値は暗黙的に `sbyte`、`byte`、`short`、`ushort`、`uint`、または `ulong` に変換されます。
 
 ```csharp
 byte a = 17;
@@ -118,9 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>変換
 
-変換先の型に変換元の型のすべての値を格納可能な、任意の 2 つの整数型間の暗黙的な変換 (*拡大変換*と呼ばれます) があります。 たとえば、`int` 値の範囲が `long` の適切なサブセットであるため、`int` から `long` への暗黙的な変換があります。 小さな符号なし整数型から、大きな符号付き整数型への暗黙的な変換があります。 任意の整数型から、任意の浮動小数点型への暗黙的な変換もあります。  任意の符号付き整数型から、任意の符号なし整数型への暗黙的な変換はありません。
-
-変換元の型から変換先の型への暗黙的な変換が定義されていない場合、明示的なキャストを使用して、1 つの整数型を別の整数型に変換する必要があります。 これは*縮小変換*と呼ばれています。 変換によりデータが失われる場合があるため、明示的なケースが必要となります。
+任意の整数数値型を他の整数数値型に変換することができます。 変換先の型に変換元の型のすべての値を格納できる場合、変換は暗黙的に実行されます。 それ以外の場合、明示的な変換を呼び出すには、[キャスト演算子 `()`](../operators/type-testing-and-cast.md#cast-operator-) を使用する必要があります。 詳細については、「[Built-in numeric conversions](numeric-conversions.md)」(組み込みの数値変換) を参照してください。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
@@ -132,8 +130,7 @@ var longVariable = (long)42;
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [浮動小数点型](floating-point-numeric-types.md)
-- [既定値の一覧表](../keywords/default-values-table.md)
-- [数値結果テーブルの書式設定](../keywords/formatting-numeric-results-table.md)
 - [組み込み型の一覧表](../keywords/built-in-types-table.md)
+- [浮動小数点型](floating-point-numeric-types.md)
+- [数値結果テーブルの書式設定](../keywords/formatting-numeric-results-table.md)
 - [.NET における数値](../../../standard/numerics.md)

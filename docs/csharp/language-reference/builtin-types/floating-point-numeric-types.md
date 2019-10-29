@@ -1,7 +1,7 @@
 ---
 title: 浮動小数点数値型 - C# リファレンス
 description: Overview of the built-in C# floating-point types (組み込みの C# 浮動小数点型の概要)
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579368"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771904"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮動小数点数値型 (C# リファレンス)
 
@@ -105,13 +105,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>変換
 
-`float` から `double` への暗黙の変換があります (*拡大変換*と呼ばれます)。`float` 値の範囲は `double` の真部分集合であり、`float` から `double` に有効桁数の損失はないためです。
-
-ソース型からターゲット型への暗黙の型変換が定義されていない場合、ある浮動小数点型を別の浮動小数点型に変換するには、明示的なキャストを使用する必要があります。 これは*縮小変換*と呼ばれています。 変換によりデータが失われる場合があるため、明示的なケースが必要となります。 `decimal` 型は `float` または `double` よりも有効桁数が多いため、他の浮動小数点型と `decimal` 型の間の暗黙の変換はありません。
-
-暗黙的な数値変換の詳細については、「[暗黙的な数値変換の一覧表](../keywords/implicit-numeric-conversions-table.md)」を参照してください。
-
-明示的な数値変換の詳細については、「[明示的な数値変換の一覧表](../keywords/explicit-numeric-conversions-table.md)」を参照してください。
+浮動小数点数値型の間には、`float` から `double` に対する暗黙的な変換が 1 つだけあります。 ただし、[明示的なキャスト](../operators/type-testing-and-cast.md#cast-operator-)を使用して、任意の浮動小数点型を他の浮動小数点型に変換することはできます。 詳細については、「[Built-in numeric conversions](numeric-conversions.md)」(組み込みの数値変換) を参照してください。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
@@ -124,10 +118,9 @@ Console.WriteLine(m);  // output: 1500000
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [整数型](integral-numeric-types.md)
 - [組み込み型の一覧表](../keywords/built-in-types-table.md)
-- [.NET における数値](../../../standard/numerics.md)
-- [キャストと型変換](../../programming-guide/types/casting-and-type-conversions.md)
-- <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- [整数型](integral-numeric-types.md)
 - [数値結果テーブルの書式設定](../keywords/formatting-numeric-results-table.md)
 - [標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md)
+- [.NET における数値](../../../standard/numerics.md)
+- <xref:System.Numerics.Complex?displayProperty=nameWithType>

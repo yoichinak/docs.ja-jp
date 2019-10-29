@@ -2,12 +2,12 @@
 title: Polly で指数バックオフを含む HTTP 呼び出しの再試行を実装する
 description: HTTP エラーを Polly と HttpClientFactory で処理する方法について説明します
 ms.date: 01/07/2019
-ms.openlocfilehash: 82b3b0d37815e2f16ed3be1b1e7de37019b08ee8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 9988f70513959c099c771fcc0221bba7e2e70200
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318407"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798823"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ポリシーと Polly ポリシーで指数バックオフを含む HTTP 呼び出しの再試行を実装する
 
@@ -53,17 +53,20 @@ Polly では、再試行回数を指定した再試行ポリシー、指数バ�
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>再試行ポリシーにジッタ方式を追加する
 
-通常の再試行ポリシーは、コンカレンシーやスケーラビリティが高い場合や、高競合状態下でシステムに影響を及ぼすことがあります。 部分的な停止の場合に多くのクライアントから来る同様の再試行のピークを乗り越えるための賢い回避策は、ジッタ方式を再試行アルゴリズムまたはポリシーに追加することです。 これにより、急増するバックオフにランダム性を加えることで、エンドツーエンド システム全体のパフォーマンスを向上できます。 こうすれば、問題が発生した際のスパイクを分散できます。 平易な Polly ポリシーを使用する場合、ジッタを実装するコードは次の例のようになります。
+通常の再試行ポリシーは、コンカレンシーやスケーラビリティが高い場合や、高競合状態下でシステムに影響を及ぼすことがあります。 部分的な停止の場合に多くのクライアントから来る同様の再試行のピークを乗り越えるための賢い回避策は、ジッタ方式を再試行アルゴリズムまたはポリシーに追加することです。 これにより、急増するバックオフにランダム性を加えることで、エンドツーエンド システム全体のパフォーマンスを向上できます。 こうすれば、問題が発生した際のスパイクを分散できます。 この原則を次の例で示します。
 
 ```csharp
 Random jitterer = new Random(); 
-Policy
-  .Handle<HttpResponseException>() // etc
-  .WaitAndRetry(5,    // exponential back-off plus some jitter
-      retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
-                    + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
-  );
+var retryWithJitterPolicy = HttpPolicyExtensions
+    .HandleTransientHttpError()
+    .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+    .WaitAndRetryAsync(6,    // exponential back-off plus some jitter
+        retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
+                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
+    );
 ```
+
+Polly はプロジェクトの Web サイトを通じて、実稼働可能なジッタ アルゴリズムを提供します。
 
 ## <a name="additional-resources"></a>その他の技術情報
 
@@ -75,6 +78,9 @@ Policy
 
 - **Polly (.NET の復元および一時的な障害処理ライブラリ)**  
   <https://github.com/App-vNext/Polly>
+
+- **Polly: ジッタで再試行**  
+  <https://github.com/App-vNext/Polly/wiki/Retry-with-jitter>
 
 - **Marc Brooker.ジッタ:ランダム性を使って状況を改善する**  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>

@@ -2,12 +2,12 @@
 title: null 許容参照型
 description: この記事では、C# 8.0 で追加された null 許容参照型の概要を説明します。 新規および既存のプロジェクトにおいて、その機能によって null 参照例外に対する安全性がどのように提供されるかを学習します。
 ms.date: 02/19/2019
-ms.openlocfilehash: a108c73064b40171a58df0796d4a0b75eddebbff
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 2c2148b3ae50ce6c00e523390ea02686d9106b8b
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319062"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846759"
 ---
 # <a name="nullable-reference-types"></a>null 許容参照型
 
@@ -63,7 +63,7 @@ null 許容コンテキストでは、コンパイラによる参照型変数の
 - `warnings`:null 許容注釈コンテキストは**無効**です。 null 許容警告コンテキストは**有効**です。
   - 参照型の変数は、無関係です。 null 値の許容のすべての警告は有効です。
 - `annotations`:null 許容注釈コンテキストは**有効**です。 null 許容警告コンテキストは**無効**です。
-  - 参照型の変数は、無関係です。 null 値の許容のすべての警告は無効です。
+  - 参照型の変数 (文字列など) は、null 非許容です。 null 値の許容のすべての警告は無効です。
 - `disable`:null 許容注釈コンテキストは**無効**です。 null 許容警告コンテキストは**無効**です。
   - 参照型の変数は無関係であり、以前のバージョンの C# と同じです。 null 値の許容のすべての警告は無効です。
 

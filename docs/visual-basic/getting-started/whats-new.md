@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581973"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774918"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic の新機能
 
@@ -21,45 +21,45 @@ ms.locfileid: "72581973"
 
 ## <a name="current-version"></a>現在のバージョン
 
-Visual Basic 16.0/Visual Studio 2019 バージョン 16.0  
+Visual Basic 16.0 / Visual Studio 2019 バージョン 16.0\
 新機能については、「[Visual Basic 16.0](#visual-basic-160)」を参照してください。
 
 ## <a name="previous-versions"></a>以前のバージョン
 
-Visual Basic 15.8 / Visual Studio 2017 バージョン 15.8  
+Visual Basic 15.8 / Visual Studio 2017 バージョン 15.8\
 新機能については、「[Visual Basic 15.8](#visual-basic-158)」を参照してください。
 
-Visual Basic 15.5 / Visual Studio 2017 バージョン 15.5  
+Visual Basic 15.5 / Visual Studio 2017 バージョン 15.5\
 新機能については、「[Visual Basic 15.5](#visual-basic-155)」を参照してください。
 
-Visual Basic 15.3 / Visual Studio 2017 バージョン 15.3  
+Visual Basic 15.3 / Visual Studio 2017 バージョン 15.3\
 新機能については、「[Visual Basic 15.3](#visual-basic-153)」を参照してください。
 
-Visual Basic 2017 / Visual Studio 2017  
+Visual Basic 2017 / Visual Studio 2017\
 新機能については、「[Visual Basic 2017](#visual-basic-2017)」を参照してください。
 
-Visual Basic / Visual Studio 2015  
+Visual Basic / Visual Studio 2015\
 新機能については、「[Visual Basic 14](#visual-basic-14)」を参照してください。
 
-Visual Basic / Visual Studio 2013  
+Visual Basic / Visual Studio 2013\
 .NET コンパイラ プラットフォーム ("Roslyn") のテクノロジのプレビュー
 
-Visual Basic / Visual Studio 2012  
+Visual Basic / Visual Studio 2012\
 `Async` と `await` のキーワード、反復子、呼び出し元情報属性
 
-Visual Basic、Visual Studio 2010  
+Visual Basic、Visual Studio 2010\
 自動実装プロパティ、コレクション初期化子、暗黙的な行の連結、動的、ジェネリック co/負の分散、グローバル名前空間のアクセス
 
-Visual Basic / Visual Studio 2008  
+Visual Basic / Visual Studio 2008\
 統合言語クエリ (LINQ)、XML リテラル、ローカル型の推定、オブジェクト初期化子、匿名型、拡張メソッド、ローカル `var` 型推論、ラムダ式、 `if` 演算子、部分メソッド、null 許容値型
 
-Visual Basic / Visual Studio 2005  
+Visual Basic / Visual Studio 2005\
 `My` 型とヘルパーの種類 (アプリ、コンピューター、ファイル システム、ネットワークへのアクセス)
 
-Visual Basic / Visual Studio .NET 2003  
+Visual Basic / Visual Studio .NET 2003\
 ビット シフト演算子、ループ変数宣言
 
-Visual Basic / Visual Studio .NET 2002  
+Visual Basic / Visual Studio .NET 2002\
 Visual Basic .NET の最初のリリース
 
 ## <a name="visual-basic-160"></a>Visual Basic 16.0
@@ -108,7 +108,6 @@ Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
 Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
 Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
 Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
-
 ```
 
 これは、浮動小数点の値を四捨五入するのではなく、切り詰められることに注意してください。
@@ -237,7 +236,7 @@ C# 7.0 以降の C# は参照戻り値に対応しています。 つまり、�
 
 **ReadOnly インターフェイスのプロパティ**
 
-readwrite プロパティを使用して readonly インターフェイスのプロパティを実装できます。  このインターフェイスでは、最小限の機能が保証されています。これによって、実装するクラスでプロパティーが設定できなくなるということはありません。
+readwrite プロパティを使用して readonly インターフェイスのプロパティを実装できます。 このインターフェイスでは、最小限の機能が保証されています。これによって、実装するクラスでプロパティーが設定できなくなるということはありません。
 
 [TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)
 

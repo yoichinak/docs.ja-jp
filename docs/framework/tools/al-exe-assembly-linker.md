@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e46934d9156bf3adebc010fb99ade10a1a35e09
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 746abee0861b32900e757f030ab6165f297b83ed
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523804"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774211"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (アセンブリ リンカー)
 
 アセンブリ リンカーは、モジュールまたはリソース ファイルのいずれかである 1 つ以上のファイルから、アセンブリのマニフェストを含むファイルを生成します。 モジュールとは、アセンブリ マニフェストを含まない中間言語 (IL: Intermediate Language) ファイルのことです。
 
 > [!NOTE]
-> Visual Studio 2008 以降では、C# と Visual Basic のどちらのコンパイラを使用しても、Win32 マニフェストはアセンブリに自動的に埋め込まれます。 詳細については、「[/win32manifest (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)」を参照してください。
+> Visual Studio 2008 以降では、C# と Visual Basic のどちらのコンパイラを使用しても、Win32 マニフェストはアセンブリに自動的に埋め込まれます。 詳細については、「[-win32manifest (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)」を参照してください。
 
 このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
 
@@ -33,11 +33,11 @@ ms.locfileid: "72523804"
 al sources options
 ```
 
-## <a name="parameters"></a>parameters
+## <a name="parameters"></a>パラメーター
 
 次の `sources` を 1 つ以上組み合わせて指定できます。
 
-| source | 説明 |
+| ソース | 説明 |
 | ------ | ----------- |
 |`file`[,`target`]|`file` (モジュール) の内容を `target` で名前が指定されたファイルにコピーします。 コピーが完了すると、*Al.exe* は `target` をコンパイルしてアセンブリを生成します。|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|`file` で指定したリソースをアセンブリ マニフェストを含むイメージに埋め込みます。*Al.exe* は、`file` の内容をポータブル実行可能 (PE) イメージにコピーします。<br /><br /> `name` パラメーターは、リソースの内部識別子です。 既定では、リソースはアセンブリでパブリックに指定されており、他のアセンブリから参照できます。 `private` を指定すると、そのリソースを他のアセンブリから参照できなくなります。<br /><br /> `file` が[リソース ファイル ジェネレーター (*Resgen.exe*)](resgen-exe-resource-file-generator.md) や開発環境などで作成された .NET Framework リソース ファイルである場合は、<xref:System.Resources> のメンバーを使用してそのファイルにアクセスできます。 詳細については、<xref:System.Resources.ResourceManager> を参照してください。 それ以外のすべてのリソースに対しては、`GetManifestResource` の <xref:System.Reflection.Assembly>* メソッドを使用して、実行時にリソースにアクセスします。<br /><br /> リソース ファイルだけが *Al.exe* に渡された場合は、出力ファイルはサテライト リソース アセンブリになります。|
@@ -54,7 +54,7 @@ al sources options
 |**/config[uration]:** `text`|アセンブリの Configuration フィールドに文字列を指定します。 `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> テキストが空の文字列の場合、Win32 Configuration リソースは単一の空白として表示されます。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyConfigurationAttribute>) として指定することもできます。|
 |**/copy[right]:** `text`|アセンブリの Copyright フィールドに文字列を指定します。 `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> **/win32res** を指定しないと、 **/copyright** が Win32 Copyright リソースとしてエクスプローラーに表示されます。<br /><br /> テキストが空の文字列の場合、Win32 Copyright リソースは単一の空白として表示されます。<br /><br /> **/win32res** を指定した場合は、Win32 リソース情報に対して **/copyright** は無効になります。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyCopyrightAttribute>) として指定することもできます。|
 |**/c[ulture]:** `text`|アセンブリに関連付けるカルチャ文字列を指定します。 カルチャとして有効な値は、RFC (Internet Requests for Comments) ドキュメント 1766 『Tags for the Identification of Languages』で定義されている値です。<br /><br /> `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 既定のカルチャ文字列はありません。 この文字列は、リフレクションを使用して表示するために使用できます。<br /><br /> 有効な `text` 文字列の詳細については、「<xref:System.Globalization.CultureInfo>」を参照してください。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyCultureAttribute>) として指定することもできます。|
-|**/delay[sign][+&#124;-]**|アセンブリに完全に署名するか、部分的に署名するかを指定します。 完全署名されたアセンブリを作成する場合は、 **/delaysign-** を使用します。 アセンブリに公開キーだけを含める場合は、 **/delaysign+** を使用します。<br /><br /> アセンブリに完全に署名するように指定すると、*Al.exe* はマニフェスト (アセンブリ メタデータ) を含むファイルをハッシュし、秘密キーでそのハッシュに署名します。 結果として得られるデジタル署名は、マニフェストを含むファイルに格納されます。 アセンブリが遅延署名される場合、*Al.exe* は署名を算出および格納するのでなく、後で署名を追加できるようにファイル内の空間を予約するだけとなります。<br /><br /> 既定値は **/delaysign-** です。<br /><br /> **/delaysign** オプションは、 **/keyfile** または **/keyname** と共に使用しない場合、無効になります。<br /><br /> たとえば、 **/delaysign+** を指定すると、テスト時にはアセンブリをグローバル キャッシュに格納できます。 テスト後に、アセンブリに秘密キーを含めることにより、そのアセンブリに完全署名できます。<br /><br /> 注:[*Gacutil.exe* (グローバル アセンブリ キャッシュ ツール)](gacutil-exe-gac-tool.md) を使用して遅延署名アセンブリをグローバル キャッシュに格納する前に、[*Sn.exe* (厳密名ツール)](sn-exe-strong-name-tool.md) を使用してアセンブリを登録して検証をスキップします。 たとえば、「 `Sn.exe –Vr delaySignedAssembly` 」のように入力します。 これは、開発にのみ使用してください。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyDelaySignAttribute>) として指定することもできます。|
+|**/delay[sign][+&#124;-]**|アセンブリに完全に署名するか、部分的に署名するかを指定します。 完全署名されたアセンブリを作成する場合は、 **/delaysign-** を使用します。 アセンブリに公開キーだけを含める場合は、 **/delaysign+** を使用します。<br /><br /> アセンブリに完全に署名するように指定すると、*Al.exe* はマニフェスト (アセンブリ メタデータ) を含むファイルをハッシュし、秘密キーでそのハッシュに署名します。 結果として得られるデジタル署名は、マニフェストを含むファイルに格納されます。 アセンブリが遅延署名される場合、*Al.exe* は署名を算出および格納するのでなく、後で署名を追加できるようにファイル内の空間を予約するだけとなります。<br /><br /> 既定値は **/delaysign-** です。<br /><br /> **/delaysign** オプションは、 **/keyfile** または **/keyname** と共に使用しない場合、無効になります。<br /><br /> たとえば、 **/delaysign+** を指定すると、テスト時にはアセンブリをグローバル キャッシュに格納できます。 テスト後に、アセンブリに秘密キーを含めることにより、そのアセンブリに完全署名できます。<br /><br /> メモ:[*Gacutil.exe* (グローバル アセンブリ キャッシュ ツール)](gacutil-exe-gac-tool.md) を使用して遅延署名アセンブリをグローバル キャッシュに格納する前に、[*Sn.exe* (厳密名ツール)](sn-exe-strong-name-tool.md) を使用してアセンブリを登録して検証をスキップします。 たとえば、`Sn.exe –Vr delaySignedAssembly` のようにします。 これは、開発にのみ使用してください。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyDelaySignAttribute>) として指定することもできます。|
 |**/descr[iption]:** `text`|アセンブリの <xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A> フィールドに文字列を指定します。 `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> **/win32res** を指定しないと、 **/description** が Win32 **Comments** リソースとしてエクスプローラーに表示されます。<br /><br /> テキストが空の文字列の場合、Win32 **Comments** リソースは単一の空白として表示されます。<br /><br /> **/win32res** を指定した場合は、Win32 リソース情報に対して **/description** は無効になります。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>) として指定することもできます。|
 |**/e[vidence]:** `file`|Security.Evidence のリソース名を持つアセンブリに `file` を埋め込みます。<br /><br /> 通常のリソースに対して Security.Evidence を使用することはできません。|
 |**/fileversion:** `version`|アセンブリの **File Version** フィールドに文字列を指定します。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> **/win32res** を指定しないと、 **/fileversion** が Win32 **File Version** リソースとして使用されます。 **/fileversion** を指定しないと、Win32 **Assembly Version** リソースによって Win32 **File Version** リソースが設定されます。<br /><br /> **/win32res** を指定した場合は、Win32 リソースに対して **/fileversion** は無効になります。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (AssemblyFileVersionAttribute) として指定することもできます。|
@@ -69,7 +69,7 @@ al sources options
 |**/platform:** `text`|コードを実行できるプラットフォームを制限します。x86、Itanium、x64、anycpu (既定値)、anycpu32bitpreferred のいずれかである必要があります。|
 |**/prod[uct]:** `text`|アセンブリの **Product** フィールドに文字列を指定します。 `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> **/win32res** を指定しないと、 **/product** が Win32 **Product Name** リソースとしてエクスプローラーに表示されます。<br /><br /> テキストが空の文字列の場合、Win32 **Product Name** リソースは単一の空白として表示されます。<br /><br /> **/win32res** を指定した場合は、Win32 リソース情報に対して **/product** は無効になります。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyProductAttribute>) として指定することもできます。|
 |**/productv[ersion]:** `text`|アセンブリの **Product Version** フィールドに文字列を指定します。 `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> **/win32res** を指定しないと、 **/productversion** が Win32 **Product Version** リソースとして使用されます。 **/productversion** を指定しないと、Win32 **File Version** リソースによって Win32 **Product Version** リソースが設定されます。<br /><br /> **/win32res** を指定した場合は、Win32 リソース情報に対して **/productversion** は無効になります。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyInformationalVersionAttribute>) として指定することもできます。|
-|**/t[arget]:** `lib[rary]` &#124; `exe` &#124; `win[exe]`|出力ファイルのファイル形式として、`lib[rary]` (コード ライブラリ)、`exe` (コンソール アプリケーション)、または `win[exe]` (Windows ベースのアプリケーション) を指定します。 既定では、 `lib[rary]`です。|
+|**/t[arget]:** `lib[rary]` &#124; `exe` &#124; `win[exe]`|出力ファイルのファイル形式として、`lib[rary]` (コード ライブラリ)、`exe` (コンソール アプリケーション)、または `win[exe]` (Windows ベースのアプリケーション) を指定します。 既定値は、`lib[rary]` です。|
 |**/template:** `filename`|カルチャ フィールドを除く、すべてのアセンブリ メタデータの継承元であるアセンブリ (`filename`) を指定します。<br /><br /> **/template** を指定して作成したアセンブリは、サテライト アセンブリになります。|
 |**/title:** `text`|アセンブリの **Title** フィールドに文字列を指定します。 `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> **/win32res** を指定しないと、 **/title** が Win32 **Description** リソースとしてエクスプローラーに表示され、アプリケーションのフレンドリ名としてシェルによって使用されます。 この文字列は、複数のアプリケーションでサポートされる種類のファイルに対するショートカット メニューの **[ファイルを開くアプリケーションの選択]** サブメニューにも表示されます。<br /><br /> テキストが空の文字列の場合、Win32 **Description** リソースは単一の空白として表示されます。<br /><br /> **/win32res** を指定した場合は、Win32 リソース情報に対して **/title** は無効になります。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyTitleAttribute>) として指定することもできます。|
 |**/trade[mark]:** `text`|アセンブリの **Trademark** フィールドに文字列を指定します。 `text` に空白が含まれている場合は、文字列を二重引用符 (" ") で囲みます。 この文字列はアセンブリのカスタム属性であり、リフレクションを使用して表示するために使用できます。<br /><br /> **/win32res** を指定しないと、 **/trademark** が Win32 **Trademark** リソースとしてエクスプローラーに表示されます。<br /><br /> テキストが空の文字列の場合、Win32 **Trademark** リソースは単一の空白として表示されます。<br /><br /> **/win32res** を指定した場合は、Win32 リソース情報に対して **/trademark** は無効になります。<br /><br /> このオプションは、任意の MSIL モジュールのソース コードでカスタム属性 (<xref:System.Reflection.AssemblyTrademarkAttribute>) として指定することもできます。|

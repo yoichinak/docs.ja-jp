@@ -5,12 +5,12 @@ ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 31169116abdda7308ed216902b335a6b77fbcfc4
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 4f805c638df9e60160c27fa08995ce393e59d007
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321276"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774528"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Azure Functions にモデルをデプロイする
 
@@ -21,7 +21,7 @@ Azure Functions のサーバーレス環境を介して、HTTP 経由での予�
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" ワークロードおよび "Azure 開発" とともにインストールされていること。
+- [Visual Studio 2017 バージョン 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" ワークロードおよび "Azure 開発" とともにインストールされていること。
 - Microsoft.NET.Sdk.Functions NuGet パッケージ バージョン 1.0.28 以降。
 - [Azure Functions ツール](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
@@ -60,7 +60,7 @@ Azure Functions のサーバーレス環境を介して、HTTP 経由での予�
 
 センチメントを予測するクラスを作成します。 プロジェクトに新しいクラスを追加します。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックして、 **[追加]**  >  **[新しいアイテム]** の順に選択します。
+1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
 
 1. **[新しい項目の追加]** ダイアログ ボックスで、 **[Azure 関数]** を選択し、 **[名前]** フィールドを *SentimentData.cs* に変更します。 次に **[追加]** を選択します。
 
@@ -112,7 +112,7 @@ Azure Functions のサーバーレス環境を介して、HTTP 経由での予�
 
 依存関係の注入の詳細については、[こちらのリンク](https://en.wikipedia.org/wiki/Dependency_injection)を参照してください。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックして、 **[追加]**  >  **[新しいアイテム]** の順に選択します。
+1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
 1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*Startup.cs*」に変更します。 次に **[追加]** を選択します。
 
     コード エディターに *Startup.cs* ファイルが開きます。 *Startup.cs* の先頭に次の using ステートメントを追加します。
@@ -151,12 +151,12 @@ Azure Functions のサーバーレス環境を介して、HTTP 経由での予�
 
 > [!TIP]
 > また、リモートに格納されているモデルを操作するときは `FromUri` メソッドを使用できます。 `FromUri` では、ファイルの変更イベントを監視するのではなく、リモートの場所の変更をポーリングします。 ポーリング間隔は既定で 5 分に設定されています。 アプリケーションの要件に基づいてポーリング間隔を増減することができます。 次のコード サンプルでは、`PredictionEnginePool` は、指定された URI に格納されているモデルを 1 分ごとにポーリングします。
->    
+>
 >```csharp
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
->       modelName: "SentimentAnalysisModel", 
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       modelName: "SentimentAnalysisModel",
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 
@@ -214,8 +214,8 @@ ILogger log)
     Negative
     ```
 
-お疲れさまでした。 Azure 関数を使用したインターネット経由での予測の実行に対して、モデルを正常に提供できました。
+おめでとうございます! Azure 関数を使用したインターネット経由での予測の実行に対して、モデルを正常に提供できました。
 
 ## <a name="next-steps"></a>次の手順
 
-- [Azure へのデプロイ](/azure/azure-functions/functions-develop-vs#publish-to-azure)
+- [Azure に配置する](/azure/azure-functions/functions-develop-vs#publish-to-azure)

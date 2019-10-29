@@ -2,12 +2,12 @@
 title: IHostedService と BackgroundService クラスを使ってマイクロサービスのバックグラウンド タスクを実装する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスの .NET Core でバックグラウンド タスクを実装する IHostedService と BackgroundService を使用する新しいオプションについて理解します。
 ms.date: 01/07/2019
-ms.openlocfilehash: ad91268925ad36d5b60d5d0601eee7544b79ab2e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 2d0b41bc7853dc616284c46462efe96ca1a9d296
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318681"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770119"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>IHostedService と BackgroundService クラスを使ってマイクロサービスのバックグラウンド タスクを実装する
 
@@ -15,7 +15,7 @@ ms.locfileid: "72318681"
 
 これらの種類のタスクは、ホスト、アプリケーション、マイクロサービス内でホストするサービス、ロジックであるため、全体的な観点から、.NET Core では*ホステッド サービス*と呼びます。 このケースでは、ホステッド サービスは、単にバックグラウンド タスク ロジックを持つクラスを意味していることに注意してください。
 
-.NET Core 2.0 以降では、ホステッド サービスを簡単に実装できるようにする <xref:Microsoft.Extensions.Hosting.IHostedService> という名前の新しいインターフェイスが、フレームワークによって提供されています。 基本的な考え方は、図 6-26 に示すように、ご利用の Web ホストまたはホストが実装されているときに、バックグラウンドで実行される複数のバックグラウンド タスク (ホステッド サービス) を登録できることです。
+.NET Core 2.0 以降では、ホステッド サービスを簡単に実装できるようにする <xref:Microsoft.Extensions.Hosting.IHostedService> という名前の新しいインターフェイスが、フレームワークによって提供されています。 基本的な考え方は、図 6-26 に示すように、ご利用の Web ホストまたはホストが実行されているときに、バックグラウンドで実行される複数のバックグラウンド タスク (ホステッド サービス) を登録できることです。
 
 ![ASP.NET Core 1.x と 2.x は、Web アプリのバックグラウンド プロセスで IWebHost をサポートしており、.NET Core 2 と 1 は、プレーンなコンソール アプリでのバックグラウンド処理に IHost をサポートしています。](./media/image26.png)
 
@@ -45,7 +45,7 @@ SignalR はホステッド サービスを使用している成果物の一例�
 
 基本的に、IHostedService に基づいて、これらのアクションのいずれかをバックグラウンド タスクにオフロードできます。
 
-1 つまたは複数の `IHostedServices` を `WebHost` または `Host` に追加するには、ASP.NET Core `WebHost` で標準的な DI (依存関係の挿入) を経由して (または .NET Core 2.1 以降の `Host` で) それらを登録します。 基本的に、次のコードのように、一般的な ASP.NET WebHost から、`Startup` クラスの使い慣れた `ConfigureServices()` メソッド内でホステッド サービスを登録する必要があります。
+1 つまたは複数の `IHostedServices` を `WebHost` または `Host` に追加するには、<xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> ASP.NET Core `WebHost` (または .NET Core 2.1 以降の `Host`) の拡張メソッドでそれらを登録します。 基本的に、次のコードのように、一般的な ASP.NET WebHost から、`Startup` クラスの使い慣れた `ConfigureServices()` メソッド内でホステッド サービスを登録する必要があります。
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -53,9 +53,9 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
     //Other DI registrations;
 
     // Register Hosted Services
-    services.AddSingleton<IHostedService, GracePeriodManagerService>();
-    services.AddSingleton<IHostedService, MyHostedServiceB>();
-    services.AddSingleton<IHostedService, MyHostedServiceC>();
+    services.AddHostedService<GracePeriodManagerService>();
+    services.AddHostedService<MyHostedServiceB>();
+    services.AddHostedService<MyHostedServiceC>();
     //...
 }
 ```
@@ -238,13 +238,13 @@ ASP.NET Core `WebHost` または .NET Core `Host` を展開する方法が最終
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-- **ASP.NET Core/Standard 2.0 でスケジュールされたタスクをビルドする**  
+- **ASP.NET Core/Standard 2.0 でスケジュールされたタスクをビルドする**
   <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **ASP.NET Core 2.0 で IHostedService を実装する**  
+- **ASP.NET Core 2.0 で IHostedService を実装する**
   <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **ASP.NET Core 2.1 を使用した GenericHost サンプル**  
+- **ASP.NET Core 2.1 を使用した GenericHost サンプル**
   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]

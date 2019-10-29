@@ -1,25 +1,25 @@
 ---
-title: チュートリアル:Web サイトのコメントを分析する - 二項分類
+title: 'チュートリアル: Web サイトのコメントを分析する - 二項分類'
 description: このチュートリアルでは、Web サイトのコメントからセンチメントを分類して適切なアクションを実行する .NET Core コンソール アプリケーションの作成方法について説明します。 この二項センチメント分類子には、Visual Studio で C# を使用します。
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e241ae8c0d39e6573b40c69611985f7095114629
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 454b9c94d717d7af098ee982d9eaffe18f1c347c
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320145"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774414"
 ---
-# <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>チュートリアル:ML.NET の二項分類を使用して Web サイトのコメントのセンチメントを分析する
+# <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>チュートリアル: ML.NET の二項分類を使用して Web サイトのコメントのセンチメントを分析する
 
 このチュートリアルでは、Web サイトのコメントからセンチメントを分類して適切なアクションを実行する .NET Core コンソール アプリケーションの作成方法について説明します。 この二項センチメント分類子には、Visual Studio 2017 で C# を使用します。
 
-このチュートリアルでは、以下の内容を学習します。
+このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
 >
-> - コンソール アプリケーションの作成
-> - データを準備する
+> - コンソール アプリケーションを作成する
+> - データの準備
 > - データを読み込む
 > - モデルを構築してトレーニングする
 > - モデルを評価する
@@ -30,11 +30,11 @@ ms.locfileid: "72320145"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)が ".NET Core クロスプラット フォーム開発" ワークロードと共にインストールされている
+- [Visual Studio 2017 バージョン 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)が ".NET Core クロスプラット フォーム開発" ワークロードと共にインストールされている
 
 - [UCI Sentiment Labeled Sentences データセット](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (ZIP ファイル)
 
-## <a name="create-a-console-application"></a>コンソール アプリケーションの作成
+## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
 
 1. "SentimentAnalysis" という名前の **.NET Core コンソール アプリケーション**を作成します。
 
@@ -47,7 +47,7 @@ ms.locfileid: "72320145"
 ## <a name="prepare-your-data"></a>データを準備する
 
 > [!NOTE]
-> このチュートリアルのデータセットは、「From Group to Individual Labels using Deep Features」 (Kotzias 他 著、 KDD 2015) のものであり、UCI 機械学習リポジトリ (Dua, D. and Karra Taniskidou, E.(2017)) でホストされています。 UCI 機械学習リポジトリ [http://archive.ics.uci.edu/ml ]。 カリフォルニア州アーバイン: カリフォルニア大学、情報・コンピューター サイエンス学部。
+> このチュートリアルのデータセットは、「From Group to Individual Labels using Deep Features」 (Kotzias 他 著、 KDD 2015) のものであり、UCI 機械学習リポジトリ (Dua, D. and Karra Taniskidou, E.(2017)) でホストされています。 UCI 機械学習リポジトリ [http://archive.ics.uci.edu/ml ]。 カリフォルニア州アーバイン: カリフォルニア大学情報コンピュータサイエンス学部。
 
 1. [UCI Sentiment Labeled Sentences データセットの ZIP ファイル](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)をダウンロードし、展開します。
 
@@ -175,7 +175,7 @@ ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)�
 
     前のコードの `FeaturizeText()` メソッドでは、テキスト列 (`SentimentText`) を機械学習アルゴリズムから使用される数値キー型の `Features` 列に変換し、それを新しいデータセット列として追加します。
 
-    |SentimentText                         |Sentiment |機能              |
+    |SentimentText                         |Sentiment |フィーチャー              |
     |--------------------------------------|----------|----------------------|
     |Waitress was a little slow in service.|    0     |[0.76, 0.65, 0.44, …] |
     |Crust is not good.                    |    0     |[0.98, 0.43, 0.54, …] |
@@ -280,11 +280,11 @@ ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)�
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
 
-    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) は、データの 1 つのインスタンスに対して予測を実行できる便利な API です。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。 シングル スレッド環境またはプロトタイプ環境で使用できます。 運用環境でパフォーマンスとスレッド セーフを向上させるには、`PredictionEnginePool` サービスを使用します。これにより、アプリケーション全体で使用するできる [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。 ASP.NET Core Web API で `PredictionEnginePool` を使用する方法については、[こちらのガイド](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)を参照してください。
+    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) は、データの 1 つのインスタンスに対して予測を実行できる便利な API です。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。 シングル スレッド環境またはプロトタイプ環境で使用できます。 運用環境でパフォーマンスとスレッド セーフを向上させるには、`PredictionEnginePool` サービスを使用します。これにより、アプリケーション全体で使用するできる [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。 [ASP.NET Core Web API で `PredictionEnginePool` を使用する方法](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)については、こちらのガイドを参照してください。
 
     > [!NOTE]
     > `PredictionEnginePool` サービスの拡張機能は、現在プレビュー段階です。
-    
+
 4. コメントを追加して、`UseModelWithSingleItem()` メソッドでトレーニングされたモデルの予測をテストします。これには `SentimentData` のインスタンスを作成します。
 
     [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
@@ -372,7 +372,7 @@ Press any key to continue . . .
 
 ```
 
-お疲れさまでした。 これで、メッセージのセンチメントを分類および予測するための機械学習モデルをビルドできました。
+おめでとうございます! これで、メッセージのセンチメントを分類および予測するための機械学習モデルをビルドできました。
 
 優れたモデルの構築は、反復的なプロセスです。 このチュートリアルでは、モデルのトレーニングを短時間で実行するために小さなデータセットを使用しているため、このモデルの品質は最初は低くなっています。 このモデルの品質に満足できなければ、大規模なトレーニング データセットを使用するか、別のトレーニング アルゴリズムとアルゴリズムごとに異なる[ハイパーパラメーター](../resources/glossary.md##hyperparameter)を選択してモデルの改良を試すことができます。
 
@@ -380,11 +380,11 @@ Press any key to continue . . .
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、以下の内容を学習しました。
+このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
 >
-> - コンソール アプリケーションの作成
-> - データを準備する
+> - コンソール アプリケーションを作成する
+> - データの準備
 > - データを読み込む
 > - モデルを構築してトレーニングする
 > - モデルを評価する
