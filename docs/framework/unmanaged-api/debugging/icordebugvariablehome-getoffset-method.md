@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetOffset メソッド
+title: 'いい変数 Home:: GetOffset メソッド'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetOffset
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fdab81d499fe1508493cb0bf05a1787974a9d01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3af8c925b80b9fd4ed0a46d2bd50fe37a6f3154a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774527"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125096"
 ---
-# <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome::GetOffset メソッド
-変数のベース レジスタからのオフセットを取得します。  
+# <a name="icordebugvariablehomegetoffset-method"></a>いい変数 Home:: GetOffset メソッド
+変数の基本レジスタからのオフセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,18 +35,18 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>パラメーター  
  `pOffset`  
- [out]ベース レジスタからのオフセット。  
+ 入出力基本レジスタからのオフセット。  
   
 ## <a name="return-value"></a>戻り値  
  メソッドは、次の値を返します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|`S_OK`|変数は、レジスタの相対メモリの場所には。|  
-|`E_FAIL`|変数は、レジスタの相対メモリの場所ではありません。|  
+|`S_OK`|変数は、レジスタ相対メモリの場所にあります。|  
+|`E_FAIL`|変数がレジスタ相対メモリ位置にありません。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

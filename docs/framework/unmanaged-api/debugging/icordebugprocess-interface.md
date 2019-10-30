@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: be86f4b5-418a-4c5c-a67c-97148c65ed8c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b99630ba60cd84254024b91dba9ef9922fd7e041
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 393ac8c119f111b645e7ccdb6ea94efee7207fa4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943310"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128791"
 ---
 # <a name="icordebugprocess-interface"></a>ICorDebugProcess インターフェイス
 マネージド コードを実行しているプロセスを表します。 このインターフェイスは、というコントロールのサブクラスです。  
@@ -45,7 +43,7 @@ ms.locfileid: "69943310"
 |[ModifyLogSwitch メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-modifylogswitch-method.md)|指定されたログスイッチの重大度レベルを設定します。|  
 |[ReadMemory メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-readmemory-method.md)|プロセスからメモリを読み取ります。|  
 |[SetThreadContext メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md)|指定されたスレッドのコンテキストを設定します。|  
-|[ThreadForFiberCookie メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-threadforfibercookie-method.md)|使用しないでください。|  
+|[ThreadForFiberCookie メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-threadforfibercookie-method.md)|非推奨。|  
 |[WriteMemory メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-writememory-method.md)|プロセスのメモリ領域にデータを書き込みます。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -53,12 +51,12 @@ ms.locfileid: "69943310"
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

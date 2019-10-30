@@ -10,14 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: edec95ea729fdf26e384b6658c241ca307e60851
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cdd8d2781331956289d2b74162e653ba1ee8fad6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643115"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114237"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>アンマネージ コードとの相互運用
 

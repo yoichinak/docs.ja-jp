@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce252f5a4b5fbcdbbc7b70c8b1c829490f8f63e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1ff36e8ef6b7c02eea5b02bc22587bc3889df093
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739528"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133690"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState 列挙型
 デバッグのスレッドの状態を指定します。  
@@ -39,16 +37,16 @@ typedef enum CorDebugThreadState {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`THREAD_RUN`|デバッグ イベントが発生しない限り、スレッドは、自由に実行されます。|  
-|`THREAD_SUSPEND`|スレッドは実行できません。|  
+|`THREAD_RUN`|デバッグイベントが発生しない限り、スレッドは自由に実行できます。|  
+|`THREAD_SUSPEND`|スレッドを実行できません。|  
   
 ## <a name="remarks"></a>Remarks  
- デバッガーを使用して、`CorDebugThreadState`スレッドの実行を制御する列挙。 使用してスレッドの状態を設定することができます、 [icordebugthread::setdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md)または[icordebugcontroller::setallthreadsdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)メソッド。  
+ デバッガーは、`CorDebugThreadState` 列挙体を使用して、スレッドの実行を制御します。 スレッドの状態を設定するには、次のように指定する必要があります: [: SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md)または、モジュール[:: SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)メソッド。  
   
- 提供されるコールバック、 [API をホストしている](../../../../docs/framework/unmanaged-api/hosting/index.md)メッセージ ポンプを使用するため、中断状態は必要ありません。  
+ [ホスティング API](../../../../docs/framework/unmanaged-api/hosting/index.md)に提供されるコールバックによってメッセージポンプが可能になるため、中断された状態は必要ありません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

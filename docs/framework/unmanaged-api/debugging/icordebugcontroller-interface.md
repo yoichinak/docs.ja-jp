@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e2a083f46f24d6f3f24c63dd2415b85f975cfa29
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 27f991c12ea7786d6146b5731848ca5ad3a37e21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912849"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125368"
 ---
 # <a name="icordebugcontroller-interface"></a>ICorDebugController インターフェイス
 
@@ -43,17 +41,17 @@ ms.locfileid: "69912849"
 |[Terminate メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-terminate-method.md)|指定された終了コードを使用してプロセスを終了します。|  
   
 ## <a name="remarks"></a>Remarks  
- が`ICorDebugController`プロセスを制御している場合、スコープにはプロセスのすべてのスレッドが含まれます。 が`ICorDebugController`アプリケーションドメインを制御している場合、スコープにはその特定のアプリケーションドメインのスレッドだけが含まれます。  
+ `ICorDebugController` がプロセスを制御している場合、スコープにはプロセスのすべてのスレッドが含まれます。 `ICorDebugController` がアプリケーションドメインを制御している場合は、その特定のアプリケーションドメインのスレッドのみがスコープに含まれます。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

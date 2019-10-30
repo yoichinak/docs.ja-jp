@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 885bf5e8-00b7-4cd7-9d8d-e720d47918c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca5d96e51c3809c6652d1a1fd75b80efb0b34222
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1b19ce5e9f795fd9ff4dd15e10256a150063a314
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761916"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128039"
 ---
 # <a name="icordebugmdagetname-method"></a>ICorDebugMDA::GetName メソッド
-によって表されるマネージ デバッグ アシスタント (MDA) の名前を含む文字列を取得[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)します。  
+によって表されるマネージデバッグアシスタント (MDA) の名前を含む文字列を[取得します](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,16 +41,16 @@ HRESULT GetName (
  [in] `szName` 配列のサイズ。  
   
  `pcchName`  
- [out]名前の長さへのポインター。  
+ 入出力名前の長さへのポインター。  
   
  `szName`  
- [out]名前を格納する配列。  
+ 入出力名前を格納する配列。  
   
 ## <a name="remarks"></a>Remarks  
- MDA 名は、一意の値です。 `GetName`メソッドは、便利なパフォーマンスの代替 XML ストリームを取得し、スキーマに基づいて、ストリームから名前を抽出します。  
+ MDA 名は一意の値です。 `GetName` メソッドは、XML ストリームを取得し、スキーマに基づいてストリームから名前を抽出する場合に、便利なパフォーマンスの代替手段です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

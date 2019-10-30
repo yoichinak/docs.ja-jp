@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: edd70dd4cfc2e26b30ee0deec79b7d126d1f76a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cceafc8358ce2b0eafa62a3855c4eb1e96adae11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738589"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113311"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext メソッド
-ターゲット プロセスでは、指定したスレッドの現在のコンテキストを設定します。 このメソッドは、共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。  
+ターゲットプロセス内の指定されたスレッドの現在のコンテキストを設定します。 このメソッドは、共通言語ランタイム (CLR) データアクセスサービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,23 +38,23 @@ HRESULT SetThreadContext (
   
 ## <a name="parameters"></a>パラメーター  
  `threadID`  
- [in]ターゲット プロセス内のスレッドのオペレーティング システムの識別子です。  
+ からターゲットプロセス内のスレッドのオペレーティングシステム識別子。  
   
  `contextSize`  
- [in]コンテキストのサイズ。  
+ からコンテキストのサイズ。  
   
  `context`  
- [in]コンテキストを格納するバッファーへのポインター。  
+ からコンテキストを格納しているバッファーへのポインター。  
   
- 内のデータ、`context`バッファーは、Win32 の形式になります`CONTEXT`構造体。 コンテキストはプロセッサ固有の登録データを指定するので、Win32 の定義`CONTEXT`構造は、プロセッサのアーキテクチャによって異なります。 Win32 の定義については、WinNT.h ヘッダー ファイルを参照してください`CONTEXT`構造体。  
+ `context` バッファー内のデータは、Win32 `CONTEXT` 構造の形式になります。 コンテキストはプロセッサ固有のレジスタデータを指定するため、Win32 `CONTEXT` 構造体の定義は、プロセッサのアーキテクチャによって異なります。 Win32 `CONTEXT` 構造の定義については、Winnt.h ヘッダーファイルを参照してください。  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   

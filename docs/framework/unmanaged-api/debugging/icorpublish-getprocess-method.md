@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5143805-2eb7-45b8-85ed-c8fb34df1084
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b2dcdaed34044122dd2a61c9e0b5bb02f8cc0d9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9d28243e9907fcc6320b2e09a49312bf35a70b4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774275"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121785"
 ---
 # <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess メソッド
-取得、 [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)指定の識別子を持つプロセスを表すインスタンス。  
+指定した識別子を持つプロセスを表す[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)インスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,18 +36,18 @@ HRESULT GetProcess(
   
 ## <a name="parameters"></a>パラメーター  
  `pid`  
- [in]プロセスの識別子です。  
+ からプロセスの識別子。  
   
  `ppProcess`  
- [out]アドレスへのポインター、`ICorPublishProcess`プロセスを表すインスタンス。  
+ 入出力プロセスを表す `ICorPublishProcess` インスタンスのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- `GetProcess` プロセスが存在しないか、現在のユーザーがデバッグ可能なマネージ プロセスがない場合は失敗します。  
+ プロセスが存在しない場合、または現在のユーザーがデバッグできるマネージプロセスでない場合、`GetProcess` は失敗します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorPub.idl, CorPub.h  
+ **ヘッダー:** CorPub .idl、CorPub .h  
   
  **ライブラリ:** CorGuids.lib  
   
