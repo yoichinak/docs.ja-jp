@@ -203,3 +203,4 @@ value = value + 1 // Produces a 'bool' value!
 
 [Thinking Functionally](https://fsharpforfunandprofit.com/posts/thinking-functionally-intro/)シリーズは、F#をしようした関数型プログラミングについて学ぶためのもう一つの優れたリソースです。F#の機能をしようして概念を説明し、実用的でよう見やすい方法で関数型プログラミングの基礎を説明します。
 
+
