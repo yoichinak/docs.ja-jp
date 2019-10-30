@@ -10,13 +10,13 @@
       items:
         - name: インターネット要求の作成
           href: creating-internet-requests.md
-        - name: '方法: Web ページを要求し、ストリームとして結果を取得する'
+        - name: '方法:Web ページを要求し、ストリームとして結果を取得する'
           href: how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md
-        - name: '方法: WebRequest クラスを使用してデータを要求する'
+        - name: '方法:WebRequest クラスを使用してデータを要求する'
           href: how-to-request-data-using-the-webrequest-class.md
-        - name: '方法: WebRequest クラスを使用してデータを送信する'
+        - name: '方法:WebRequest クラスを使用してデータを送信する'
           href: how-to-send-data-using-the-webrequest-class.md
-        - name: '方法: WebRequest に一致するプロトコル固有の WebResponse を取得する'
+        - name: '方法:WebRequest に一致するプロトコル固有の WebResponse を取得する'
           href: how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md
         - name: ネットワーク上でストリームを使用する
           href: using-streams-on-the-network.md
@@ -27,9 +27,9 @@
     - name: プラグ可能なプロトコルのプログラミング
       href: programming-pluggable-protocols.md
       items:
-        - name: '方法: WebRequest を使用してカスタム プロトコルを登録する'
+        - name: '方法:WebRequest を使用してカスタム プロトコルを登録する'
           href: how-to-register-a-custom-protocol-using-webrequest.md
-        - name: '方法: WebRequest を型キャストしてプロトコル固有のプロパティにアクセスする'
+        - name: '方法:WebRequest を型キャストしてプロトコル固有のプロパティにアクセスする'
           href: how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md
         - name: WebRequest からの派生
           href: deriving-from-webrequest.md
@@ -43,14 +43,14 @@
           items:
             - name: HttpListener
               href: httplistener.md
-        - name: '方法: HTTP 固有のプロパティにアクセスする'
+        - name: '方法:HTTP 固有のプロパティにアクセスする'
           href: how-to-access-http-specific-properties.md
         - name: 接続の管理
           href: managing-connections.md
           items:
             - name: 接続のグループ化
               href: connection-grouping.md
-            - name: '方法: グループの接続にユーザー情報を割り当てる'
+            - name: '方法:グループの接続にユーザー情報を割り当てる'
               href: how-to-assign-user-information-to-group-connections.md
         - name: TCP-UDP
           href: tcp-udp.md
@@ -62,7 +62,7 @@
         - name: ソケット
           href: sockets.md
           items:
-            - name: '方法: ソケットを作成する'
+            - name: '方法:ソケットを作成する'
               href: how-to-create-a-socket.md
             - name: クライアント ソケットの使用
               href: using-client-sockets.md
@@ -92,11 +92,11 @@
         - name: FTP
           href: ftp.md
           items:
-            - name: '方法: FTP を使用してファイルをダウンロードする'
+            - name: '方法:FTP を使用してファイルをダウンロードする'
               href: how-to-download-files-with-ftp.md
-            - name: '方法: FTP を使用してファイルをアップロードする'
+            - name: '方法:FTP を使用してファイルをアップロードする'
               href: how-to-upload-files-with-ftp.md
-            - name: '方法: FTP でディレクトリの内容を一覧表示する'
+            - name: '方法:FTP でディレクトリの内容を一覧表示する'
               href: how-to-list-directory-contents-with-ftp.md
         - name: WebRequest の問題と例外について
           href: understanding-webrequest-problems-and-exceptions.md
@@ -111,7 +111,7 @@
           href: ipv6-auto-configuration.md
         - name: IPv6 の有効化と無効化
           href: enabling-and-disabling-ipv6.md
-        - name: '方法: IPv6 のサポートを有効にするようにコンピューター構成ファイルを変更する'
+        - name: '方法:IPv6 のサポートを有効にするようにコンピューター構成ファイルを変更する'
           href: how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md
     - name: 構成 (インターネット アプリケーションを)
       href: configuring-internet-applications.md
@@ -122,7 +122,7 @@
           href: interpreting-network-tracing.md
         - name: ネットワークのトレースの有効化
           href: enabling-network-tracing.md
-        - name: '方法: ネットワークのトレースを構成する'
+        - name: '方法:ネットワークのトレースを構成する'
           href: how-to-configure-network-tracing.md
     - name: ネットワーク アプリケーションのキャッシュ管理
       href: cache-management-for-network-applications.md
@@ -141,13 +141,13 @@
         - name: ネットワーク アプリケーションでのキャッシュの構成
           href: configuring-caching-in-network-applications.md
           items:
-            - name: '方法: アプリケーションの場所ベースのキャッシュ ポリシーを設定する'
+            - name: '方法:アプリケーションの場所ベースのキャッシュ ポリシーを設定する'
               href: how-to-set-a-location-based-cache-policy-for-an-application.md
-            - name: '方法: アプリケーションの既定の時間ベースのキャッシュ ポリシーを設定する'
+            - name: '方法:アプリケーションの既定の時間ベースのキャッシュ ポリシーを設定する'
               href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
             - name: '方法: 時間ベースのキャッシュ ポリシーをカスタマイズする'
               href: how-to-customize-a-time-based-cache-policy.md
-            - name: '方法: 要求のキャッシュ ポリシーを設定する'
+            - name: '方法:要求のキャッシュ ポリシーを設定する'
               href: how-to-set-cache-policy-for-a-request.md
     - name: ネットワーク プログラミングにおけるセキュリティ
       href: security-in-network-programming.md
@@ -177,18 +177,18 @@
           href: proxy-configuration.md
         - name: 自動プロキシ検出
           href: automatic-proxy-detection.md
-        - name: '方法: WebRequest でインターネットとの通信にプロキシを使用できるようにする'
+        - name: '方法:WebRequest でインターネットとの通信にプロキシを使用できるようにする'
           href: how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md
-        - name: '方法: グローバル プロキシの選択をオーバーライドする'
+        - name: '方法:グローバル プロキシの選択をオーバーライドする'
           href: how-to-override-a-global-proxy-selection.md
     - name: NetworkInformation
       href: networkinformation.md
       items:
-        - name: '方法: ネットワークの可用性とアドレスの変更を検出する'
+        - name: '方法:ネットワークの可用性とアドレスの変更を検出する'
           href: how-to-detect-network-availability-and-address-changes.md
-        - name: '方法: インターフェイス情報とプロトコル情報を取得する'
+        - name: '方法:インターフェイス情報とプロトコル情報を取得する'
           href: how-to-get-interface-and-protocol-information.md
-        - name: '方法: ホストに対して ping を実行'
+        - name: '方法:ホストに対して ping を実行'
           href: how-to-ping-a-host.md
     - name: バージョン 2.0 での System.Uri 名前空間の変更
       href: changes-to-the-system-uri-namespace-in-version-2-0.md
