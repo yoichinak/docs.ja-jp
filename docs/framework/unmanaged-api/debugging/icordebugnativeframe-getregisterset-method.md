@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f309b5f-5556-4f1e-b1dd-4fe97fc81d01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c6029ac8c9ab988efa78bbfaf0843154ac656671
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ac7601f89c125cecbfbd212118420a800f495742
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765802"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096807"
 ---
 # <a name="icordebugnativeframegetregisterset-method"></a>ICorDebugNativeFrame::GetRegisterSet メソッド
-このスタック フレームのレジスタ セットを取得します。  
+このスタックフレームのレジスタセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,10 +35,10 @@ HRESULT GetRegisterSet (
   
 ## <a name="parameters"></a>パラメーター  
  `ppRegisters`  
- [out]アドレスへのポインター、 [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)このスタック フレームの登録を表すオブジェクトを設定します。  
+ 入出力このスタックフレームの[レジスタセットを表す、オブジェクトの](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)アドレスへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

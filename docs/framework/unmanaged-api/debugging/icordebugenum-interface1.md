@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b25c47e101ad0fb8e8cbdbb2718a41c9be6c0c22
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 59dcb7ae6f27f8d049cd4dc2d313f7f1130fc503
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931984"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085259"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum インターフェイス
 
@@ -31,13 +29,13 @@ ms.locfileid: "69931984"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Clone メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|この`ICorDebugEnum`オブジェクトのコピーを作成します。|  
+|[Clone メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|この `ICorDebugEnum` オブジェクトのコピーを作成します。|  
 |[GetCount メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|列挙に含まれる項目の数を取得します。|  
 |[Reset メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|カーソルを列挙体の先頭に移動します。|  
 |[Skip メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|指定した数の項目だけ、列挙内でカーソルを前方に移動します。|  
   
 ## <a name="remarks"></a>Remarks  
- 次の列挙子は`ICorDebugEnum`、から派生します。  
+ 次の列挙子は `ICorDebugEnum`から派生します。  
   
 - ICorDebugAppDomainEnum  
   
@@ -84,12 +82,12 @@ ms.locfileid: "69931984"
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

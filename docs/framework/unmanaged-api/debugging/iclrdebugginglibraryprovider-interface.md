@@ -14,26 +14,24 @@ helpviewer_keywords:
 ms.assetid: 67739617-6add-41a9-9de5-a3200c3109ce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c62079a87c09bcbe09167a137fd39530652ae3e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81b9ffe5979ad553a5bdfbc27111469b2ff4db6f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697863"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111374"
 ---
 # <a name="iclrdebugginglibraryprovider-interface"></a>ICLRDebuggingLibraryProvider インターフェイス
-含まれています、 [ProvideLibrary メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md)メソッドで、ライブラリ プロバイダーの共通言語ランタイム バージョン固有デバッグ ライブラリを検索しに読み込む要求を許可するコールバック インターフェイスを取得します。  
+には、提供[ライブラリのメソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md)メソッドが含まれています。このメソッドは、共通言語ランタイムのバージョン固有のデバッグライブラリをオンデマンドで検索して読み込むことができるようにする、ライブラリプロバイダーのコールバックインターフェイスを取得します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ProvideLibrary メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md)|デバッグ ライブラリの読み込みに使用できるモジュールを識別するハンドルを提供するデバッガーを使用します。|  
+|[ProvideLibrary メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md)|デバッガーが、デバッグライブラリの読み込みに使用できるモジュールへのハンドルを提供できるようにします。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 48d410d7-6749-4125-a8fd-f9562c7088e9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3958e62f23615d4c9038713bb973a6d16424f348
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fa829d0a08846287835d2ac66a461b4b9b27a09a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759728"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090240"
 ---
 # <a name="icordebugmanagedcallbackcreateappdomain-method"></a>ICorDebugManagedCallback::CreateAppDomain メソッド
-アプリケーション ドメインが作成されたことをデバッガーに通知します。  
+アプリケーションドメインが作成されたことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,13 +36,13 @@ HRESULT CreateAppDomain (
   
 ## <a name="parameters"></a>パラメーター  
  `pProcess`  
- [in]アプリケーション ドメインが作成されたプロセスを表す ICorDebugProcess オブジェクトへのポインター。  
+ からアプリケーションドメインが作成されたプロセスを表す、のオブジェクトへのポインター。  
   
  `pAppDomain`  
- [in]作成されたアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ から作成されたアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

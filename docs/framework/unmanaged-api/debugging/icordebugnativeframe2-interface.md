@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52a80838-af36-4399-bc97-d8a4c6d76df2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 638ce7933ededf2ff7b03b1c5aed7f6bdbfebc6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bff6dea0e870cf62734fa583eefa481c594481b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912788"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096519"
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2 インターフェイス
 子と親のフレームの関係をテストするメソッドを提供します。  
@@ -40,12 +38,12 @@ ms.locfileid: "69912788"
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -2,14 +2,12 @@
 title: ICorDebugDebugEvent::GetThread メソッド
 ms.date: 03/30/2017
 ms.assetid: 4f2e9a2c-8369-4a07-a881-ad5422626353
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f85dccd5b59610c52adcf685828984c9344fd49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 66b4abc4bebfbbde2e6a6b25d2bc0e88839a363f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911281"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136647"
 ---
 # <a name="icordebugdebugeventgetthread-method"></a>ICorDebugDebugEvent::GetThread メソッド
 イベントが発生したスレッドを取得します。  
@@ -31,12 +29,12 @@ HRESULT GetThread(
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

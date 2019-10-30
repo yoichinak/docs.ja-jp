@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 783dce92-8a98-43db-8f78-888d943dd5b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef3f1d5e78efe37070bb2bdd6d2834178947af7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5004cd293b64436c41caef1c7393d2229d1a6ccf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740081"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098479"
 ---
 # <a name="cordebugexceptionunwindcallbacktype-enumeration"></a>CorDebugExceptionUnwindCallbackType 列挙型
 アンワインド フェーズ中にコールバックによって通知されるイベントを示します。  
@@ -39,11 +37,11 @@ typedef enum CorDebugExceptionUnwindCallbackType {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_UNWIND_BEGIN`|アンワインド プロセスの開始。|  
-|`DEBUG_EXCEPTION_INTERCEPTED`|例外を受け取りました。|  
+|`DEBUG_EXCEPTION_UNWIND_BEGIN`|アンワインドプロセスの開始。|  
+|`DEBUG_EXCEPTION_INTERCEPTED`|例外がインターセプトされました。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

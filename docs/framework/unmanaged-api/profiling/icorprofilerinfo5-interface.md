@@ -10,19 +10,17 @@ api_type:
 ms.assetid: 7bd48c34-37ed-4230-9eec-39a17280f05d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b249605833e8fbd219495ab92bebc2eff6177eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e6df5dcb26d61d30407d1efeeed7d207744276fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049441"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124185"
 ---
 # <a name="icorprofilerinfo5-interface"></a>ICorProfilerInfo5 インターフェイス
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
   
- サブクラス[ICorProfilerInfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)共通言語ランタイム (CLR) イベントの監視の制御との通信にコード プロファイラーで使用するためのメソッドを提供します。  
+ イベント監視を制御するために、コードプロファイラーが共通言語ランタイム (CLR) と通信するために使用するメソッドを提供する[ICorProfilerInfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)のサブクラス。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -32,12 +30,12 @@ ms.locfileid: "62049441"
 |[SetEventMask2 メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)|プロファイラーが CLR からのイベント通知を受信するためのイベントの種類を指定する値を設定します。|  
   
 ## <a name="remarks"></a>Remarks  
- このインターフェイスで使用できる方法は、置換、 [icorprofilerinfo::geteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)と[icorprofilerinfo::seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)メソッド。  
+ このインターフェイスで使用できるメソッドは、 [ICorProfilerInfo:: geteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)メソッドと[ICorProfilerInfo:: seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)メソッドを置き換えることを目的としています。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   

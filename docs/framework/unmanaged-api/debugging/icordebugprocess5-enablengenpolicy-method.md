@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b8e15ca-3c72-4685-a937-da4c739cb9e9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38ff08fa7e7db986006c4e0e09b1ac9cf1be801e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 583819e8e7ab16a8ac1ce72892f4353e3043ce3d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767150"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129695"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>ICorDebugProcess5::EnableNGENPolicy メソッド
-アプリケーションがマネージ デバッガーで実行中にネイティブ イメージを読み込む方法を決定する値を設定します。  
+マネージデバッガーで実行中にアプリケーションがネイティブイメージを読み込む方法を決定する値を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,15 +35,15 @@ HRESULT EnableNGENPolicy(
   
 ## <a name="parameters"></a>パラメーター  
  `ePolicy`  
- [in]A [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)アプリケーションがマネージ デバッガーで実行中にネイティブ イメージを読み込む方法を決定する定数。  
+ からマネージデバッガーで実行中にアプリケーションがネイティブイメージを読み込む方法を決定する[Cordebugngenpolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)定数。  
   
 ## <a name="remarks"></a>Remarks  
- メソッドを返しますのかどうか、ポリシーが正常に設定されて、`S_OK`します。 場合`ePolicy`によって定義された列挙値の範囲外です[CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)、メソッドを返します`E_INVALIDARG`なり、メソッドの呼び出しに効力はありません。 ネイティブ イメージ ジェネレーター (Ngen.exe) のポリシーを更新できないかどうか、メソッドを返します`E_FAIL`します。  
+ ポリシーが正常に設定されている場合、メソッドは `S_OK`を返します。 `ePolicy` が[Cordebugngenpolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)によって定義された列挙値の範囲外にある場合、メソッドは `E_INVALIDARG` を返し、メソッドの呼び出しは無効になります。 ネイティブイメージジェネレーター (Ngen.exe) のポリシーを更新できない場合、メソッドは `E_FAIL`を返します。  
   
- `ICorDebugProcess5::EnableNGenPolicy`メソッドは、プロセスの有効期間中にいつでも呼び出すことができます。 ポリシーは、有効なポリシーを設定した後に読み込まれたモジュールの。  
+ `ICorDebugProcess5::EnableNGenPolicy` メソッドは、プロセスの有効期間中はいつでも呼び出すことができます。 ポリシーは、ポリシーが設定された後に読み込まれるすべてのモジュールに対して有効です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
