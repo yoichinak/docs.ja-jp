@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 875ef5be-c1e7-4d95-97e9-d3a667aeaba0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c3676cb32ceaf6f241672751f0feafbd3cb83e05
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b238a953fa5cd57c8b7af9a0643bfc36ee1032e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968869"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088859"
 ---
 # <a name="icordebugappdomain3-interface"></a>ICorDebugAppDomain3 インターフェイス
 アプリケーションドメインに現在読み込まれている Windows ランタイム型のマネージ表現に関する情報を取得するメソッドを提供します。 このインターフェイスは、"ICorDebugAppDomain2" というインターフェイスを拡張したものです。  
@@ -34,19 +32,19 @@ ms.locfileid: "69968869"
 |[ICorDebugAppDomain3:: GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|インターフェイス識別子に基づいて、アプリケーションドメイン内のキャッシュされた Windows ランタイム型の列挙子を取得します。|  
   
 ## <a name="remarks"></a>Remarks  
- このインターフェイスは、デバッガーがの関数評価呼び出し`M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`と共に使用することを意図しています。 メソッドが Windows ランタイムサーバーオブジェクトでサポートされているインターフェイス識別子を取得すると、デバッガーはこのインターフェイスで定義されているメソッドを使用して、これらのインターフェイスに対応するマネージ型にマップすることができます。  
+ このインターフェイスは、デバッガーが `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`に対する関数評価呼び出しと共に使用することを意図しています。 メソッドが Windows ランタイムサーバーオブジェクトでサポートされているインターフェイス識別子を取得すると、デバッガーはこのインターフェイスで定義されているメソッドを使用して、これらのインターフェイスに対応するマネージ型にマップすることができます。  
   
- このインターフェイスのインスタンスを取得するには`QueryInterface` 、のインスタンス上でを実行します。または、ICorDebugAppDomain2 インターフェイスです。  
+ このインターフェイスのインスタンスを取得するには、のインスタンスに対して `QueryInterface` を実行します。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **・** Windows ランタイム  
+## <a name="requirements"></a>［要件］  
+ **プラットフォーム:** Windows ランタイム  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
