@@ -10,14 +10,12 @@ helpviewer_keywords:
 - source code in multiple languages
 - languages, multiple language support by CodeDOM
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5fb95ab7ff4fcac7169238d90637d7b83078d6dd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a7e341bb5bfb5b4648a222409951275169a29b79
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046111"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130252"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>動的なソース コードの生成とコンパイル
 .NET Framework には、CodeDOM (Code Document Object Model) と呼ばれるメカニズムが備わっています。CodeDOM を使用すると、ソース コードを出力するプログラム開発者は、レンダリング対象となるコードを表す単一のモデルに基づいて、実行時に複数のプログラミング言語でソース コードを生成することができます。  
@@ -40,10 +38,10 @@ ms.locfileid: "71046111"
  [方法: CodeDOM を使用して XML ドキュメント ファイルを作成する](how-to-create-an-xml-documentation-file-using-codedom.md)  
  CodeDOM を使用して XML ドキュメントのコメント付きのコードを生成する方法、および生成されたコードをコンパイルして XML ドキュメントとして出力する方法について説明します。  
   
- [方法: CodeDOM を使用してクラスを作成する](how-to-create-a-class-using-codedom.md)  
+ [方法 : CodeDOM を使用してクラスを作成する](how-to-create-a-class-using-codedom.md)  
  CodeDOM を使用してフィールド、プロパティ、メソッド、コンストラクター、およびエントリ ポイントを持つクラスを生成する方法を説明します。  
   
-## <a name="reference"></a>関連項目  
+## <a name="reference"></a>辞書／辞典／その他  
  <xref:System.CodeDom>  
  共通言語ランタイムを対象とするプログラミング言語のコード要素を表す要素を定義します。  
   

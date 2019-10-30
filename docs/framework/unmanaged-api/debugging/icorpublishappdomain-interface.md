@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e7885a6-d17a-4bfc-a4c6-23cbb7337ad5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d9dbaac5b08cf3f700b5f2581c60d0cb7bf3f545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8d651f19b7d4cb0cbe163c2fa59e1ef07ceb480
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986675"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140337"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain インターフェイス
 アプリケーション ドメインの情報を表し、提供します。  
@@ -30,13 +28,13 @@ ms.locfileid: "61986675"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetID メソッド](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|この一意識別子を取得します。`ICorPublishAppDomain`します。|  
-|[GetName メソッド](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|これによって参照されるアプリケーション ドメインの名前を取得`ICorPublishAppDomain`します。|  
+|[GetID メソッド](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|この `ICorPublishAppDomain`の一意の識別子を取得します。|  
+|[GetName メソッド](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|この `ICorPublishAppDomain`によって参照されるアプリケーションドメインの名前を取得します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorPub.idl, CorPub.h  
+ **ヘッダー:** CorPub .idl、CorPub .h  
   
  **ライブラリ:** CorGuids.lib  
   

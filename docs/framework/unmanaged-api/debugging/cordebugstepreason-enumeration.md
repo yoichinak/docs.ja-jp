@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d9dc94689083d79858319387747eb9dafe8b2f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c73afb00cbd104cff3d310d1369097b459c131e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739567"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133686"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason 列挙型
 個々のステップの結果を示します。  
@@ -44,16 +42,16 @@ typedef enum CorDebugStepReason {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`STEP_NORMAL`|ステップ実行は、同じ関数内で通常は、完了。|  
-|`STEP_RETURN`|ステップ実行を続行通常、関数が返された後。|  
-|`STEP_CALL`|新しく呼び出された関数の先頭には通常、続きステップ実行します。|  
-|`STEP_EXCEPTION_FILTER`|例外が発生しました、例外フィルターに制御が渡されます。|  
-|`STEP_EXCEPTION_HANDLER`|例外が発生しました、例外ハンドラーに制御が渡されます。|  
-|`STEP_INTERCEPT`|コントロールは、インターセプターに渡されました。|  
-|`STEP_EXIT`|ステップが完了する前に、スレッドが終了しました。|  
+|`STEP_NORMAL`|同じ関数内で通常どおりにステップ実行が完了しました。|  
+|`STEP_RETURN`|関数が返された後、通常どおりにステップ実行を続行します。|  
+|`STEP_CALL`|新しく呼び出された関数の先頭で、ステップ実行は通常どおり続行されます。|  
+|`STEP_EXCEPTION_FILTER`|例外が生成され、制御が例外フィルターに渡されました。|  
+|`STEP_EXCEPTION_HANDLER`|例外が生成され、制御が例外ハンドラーに渡されました。|  
+|`STEP_INTERCEPT`|コントロールがインターセプターに渡されました。|  
+|`STEP_EXIT`|ステップが完了する前にスレッドが終了しました。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

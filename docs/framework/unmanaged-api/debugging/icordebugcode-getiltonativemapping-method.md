@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8ecd8c8-9627-4356-9c6f-bd05e24637c0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7c9e2bb9ef97326c3d11553b6cabd0de0fd6e495
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 011da6aacbf4c40420329952f47b1fabdfc2c1a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747503"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125629"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping メソッド
-Microsoft intermediate language (MSIL) オフセットからネイティブ オフセットへのマッピングを表す"COR_DEBUG_IL_TO_NATIVE_MAP"インスタンスの配列を取得します。  
+Microsoft 中間言語 (MSIL) オフセットからネイティブオフセットへのマッピングを表す "COR_DEBUG_IL_TO_NATIVE_MAP" インスタンスの配列を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,18 +41,18 @@ HRESULT GetILToNativeMapping (
  [in] `map` 配列のサイズ。  
   
  `pcMap`  
- [out]実際に返される要素数へのポインター、`map`配列。  
+ 入出力`map` 配列に返された実際の要素数へのポインター。  
   
  `map`  
- [out]配列の`COR_DEBUG_IL_TO_NATIVE_MAP`構造体、MSIL のオフセットからネイティブ オフセットへのマッピングを表します。  
+ 入出力`COR_DEBUG_IL_TO_NATIVE_MAP` 構造体の配列。それぞれが MSIL オフセットからネイティブオフセットへのマッピングを表します。  
   
- 返される要素の配列に順序がありません。  
+ 返される要素の配列への順序はありません。  
   
 ## <a name="remarks"></a>Remarks  
- `GetILToNativeMapping`メソッドは、この"ICorDebugCode"インスタンスは、just-in-time (JIT) MSIL コードをコンパイルしたネイティブ コードを表す場合にのみ、意味のある結果を返します。  
+ `GetILToNativeMapping` メソッドは、この "" コード "インスタンスが MSIL コードからコンパイルされたジャストインタイム (JIT) コードを表している場合にのみ、意味のある結果を返します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -64,4 +62,4 @@ HRESULT GetILToNativeMapping (
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugCode インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)
+- [のコードインターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)

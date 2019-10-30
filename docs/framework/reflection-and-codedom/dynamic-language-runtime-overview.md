@@ -7,14 +7,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6b6de8f0a178914c46ba5a65dfb56795cf23c71
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f0bd28823c5b8efc0b773ad588f2f232f8a41502
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046123"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130275"
 ---
 # <a name="dynamic-language-runtime-overview"></a>動的言語ランタイムの概要
 
@@ -76,7 +74,7 @@ CLR と同様に、DLR は .NET Framework の一部であり、.NET Framework �
 ## <a name="dlr-architecture"></a>DLR のアーキテクチャ
  動的言語ランタイムのアーキテクチャを次の図に示します。
 
- ![動的言語ランタイム アーキテクチャの概要](./media/dlr-archoverview.png "DLR_ArchOverview") DLR アーキテクチャ
+ ![動的言語ランタイムアーキテクチャの概要](./media/dlr-archoverview.png "DLR_ArchOverview")DLR のアーキテクチャ
 
  DLR は、動的言語のサポートを強化するために一連のサービスを CLR に追加します。 これらのサービスには、次のようなものが含まれます。
 

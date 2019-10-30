@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0eed5a8-fa6d-4818-bd00-7babcea30325
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f37fab4d877ae804996f46290e3576cecc5a25ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39f5c1813b08f4d72c610820b1434e29eb4aec8e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767618"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121269"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID メソッド
-ICorDebugType 値を型識別子に変換します。  
+型識別子をの型の値に変換します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,16 +36,16 @@ HRESULT GetTypeForTypeID(
   
 ## <a name="parameters"></a>パラメーター  
  `id`  
- [in]型識別子。  
+ から型識別子。  
   
  `ppType`  
- [out]ICorDebugType オブジェクトのアドレスへのポインター。  
+ 入出力テキストオブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- 場合によっては、型識別子を返すメソッドは null を返す可能性があります`COR_TYPEID`値。 としてこの値が渡された場合、`id`引数、`GetTypeForTypeID`メソッドは失敗し、返す`E_FAIL`します。  
+ 場合によっては、型識別子を返すメソッドが null `COR_TYPEID` 値を返すことがあります。 この値が `id` 引数として渡された場合、`GetTypeForTypeID` メソッドは失敗し、`E_FAIL`が返されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

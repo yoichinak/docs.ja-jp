@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider::GetObjectSize メソッド
+title: 'いいね Provider:: GetObjectSize メソッド'
 ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59054d7b939ab29cb08c30961601a323529ce06b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5c0fe6d73302abbfabe2272cc878d6fd8f5fdec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955627"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138817"
 ---
-# <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider::GetObjectSize メソッド
+# <a name="icordebugsymbolprovidergetobjectsize-method"></a>いいね Provider:: GetObjectSize メソッド
 typespec シグネチャに基づいてオブジェクトのオブジェクト サイズを返します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,12 +37,12 @@ HRESULT GetObjectSize(
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

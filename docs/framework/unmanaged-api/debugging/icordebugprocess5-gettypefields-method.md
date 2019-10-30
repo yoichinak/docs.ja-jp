@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d413b17da0b6f241f9078bfeb3bd035d4d07a81
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0045285a3da22f468c2426bb3b9c4ae7e3e1d7c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767635"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132667"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields メソッド
-型に属するフィールドについてを説明します。  
+型に属しているフィールドに関する情報を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,22 +38,22 @@ HRESULT GetTypeFields(
   
 ## <a name="parameters"></a>パラメーター  
  `id`  
- [in]フィールド情報を取得する型の識別子です。  
+ からフィールド情報を取得する型の識別子。  
   
  `celt`  
- [in]数[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)フィールド情報を取得するオブジェクト。  
+ からフィールド情報を取得する[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)オブジェクトの数。  
   
  `fields`  
- [out]配列の[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)型に属するフィールドに関する情報を提供するオブジェクト。  
+ 入出力型に属するフィールドに関する情報を提供する[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)オブジェクトの配列。  
   
  `pceltNeeded`  
- [out]数へのポインター [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)に含まれるオブジェクト`fields`します。  
+ 入出力`fields`に含まれている[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)オブジェクトの数へのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- `celt`フィールドがフィールドの情報を設定するメソッドを使用して数を指定するパラメーター`fields`の値に対応する必要があります、`COR_TYPE_LAYOUT::numFields`フィールド。  
+ `celt` パラメーターは、メソッドが `fields`を設定するために使用するフィールド情報を持つフィールドの数を指定します。 `COR_TYPE_LAYOUT::numFields` フィールドの値に対応する必要があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

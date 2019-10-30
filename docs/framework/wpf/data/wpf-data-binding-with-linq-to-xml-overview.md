@@ -2,12 +2,12 @@
 title: LINQ to XML による WPF のデータ バインディング
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: c423ad9c8069b78b2e69a88d25d8e12bd3a3a1b7
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 53bc5e09d3c837b69c8f215b1b5c61d1b745f683
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72921024"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139806"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>LINQ to XML による WPF のデータバインディングの概要
 
@@ -91,4 +91,4 @@ WPF の動的バインドを実装するには、動的プロパティを <xref:
 - [LINQ to XML の動的プロパティ](linq-to-xml-dynamic-properties.md)
 - [WPF の XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)
 - [データ バインド (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
-- [ワークフロー マークアップの使用](http://go.microsoft.com/fwlink/?LinkId=98685)
+- [ワークフロー マークアップの使用](https://go.microsoft.com/fwlink/?LinkId=98685)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5396c4c3-4ec3-4e3a-a38d-d65b21f0a2fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9920627ed193e9741d65fddfc54f325cb1d3758c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e048d03e54d4f97cd45935906ea4e4744468db9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761050"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131529"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>ICorDebugManagedCallback2::FunctionRemapComplete メソッド
-編集された関数の新しいバージョンにコードが実行を切り替えたことをデバッガーに通知します。  
+コードの実行が編集された関数の新しいバージョンに切り替わったことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,19 +37,19 @@ HRESULT FunctionRemapComplete (
   
 ## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]編集された関数を格納しているアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ から編集された関数を含むアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `pThread`  
- [in]リマップ ブレークポイントが発生しました、スレッドを表す ICorDebugThread オブジェクトへのポインター。  
+ からリマップブレークポイントが検出されたスレッドを表す、スレッドオブジェクトへのポインター。  
   
  `pFunction`  
- [in]現在のスレッドで実行されている関数のバージョンを表す ICorDebugFunction オブジェクトへのポインター。  
+ からスレッドで現在実行されている関数のバージョンを表す、のオブジェクトへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- このコールバックでは、デバッガーは既に存在していたステッパを再作成できます。  
+ このコールバックは、以前に存在していたすべての steppers を再作成する機会をデバッガーに与えます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

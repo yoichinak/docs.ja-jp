@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7de415b998ef97e7500c289a1bca4402d203b152
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 205ad3af81fb6fabda5cbe291536f8858999f831
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738693"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113699"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue メソッド
-ターゲット プロセス内の指定したスレッドのスレッド ローカル ストレージ (TLS) から値を取得します。 このメソッドは、共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。  
+ターゲットプロセス内の指定したスレッドのスレッドローカルストレージ (TLS) から値を取得します。 このメソッドは、共通言語ランタイム (CLR) データアクセスサービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,21 +37,21 @@ HRESULT GetTLSValue (
   
 ## <a name="parameters"></a>パラメーター  
  `threadID`  
- [in]ターゲット プロセス内のスレッドのオペレーティング システムの識別子です。  
+ からターゲットプロセス内のスレッドのオペレーティングシステム識別子。  
   
  `index`  
- [in]位置のインデックス。 この値は、指定したスレッドのローカル ストアに有効なインデックスを指定する必要があります。  
+ から位置のインデックス。 この値は、指定されたスレッドのローカルストア内の有効なインデックスである必要があります。  
   
  `value`  
- [out]ポインターを`CLRDATA_ADDRESS`TLS の指定した場所から値を指定する値が返されます。  
+ 入出力指定された TLS の場所から返される値を指定する `CLRDATA_ADDRESS` 値へのポインター。  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   

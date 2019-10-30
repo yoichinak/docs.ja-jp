@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66ec04e9-87cb-42ce-9720-81522abb5d5a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dde8971f9f08cc9e0930f6ea133d9a06b22e4c96
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d13c5be314dc39f3e7b42a8d6b13f6a25751067d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761410"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130720"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>ICorDebugManagedCallback::LoadModule メソッド
 共通言語ランタイム (CLR) モジュールが正常に読み込まれたことをデバッガーに通知します。  
@@ -38,16 +36,16 @@ HRESULT LoadModule (
   
 ## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]モジュールのロード先のアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ からモジュールが読み込まれたアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `pModule`  
- [in]CLR モジュールを表す ICorDebugModule オブジェクトへのポインター。  
+ からCLR モジュールを表す、のモジュールオブジェクトへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- `LoadModule`コールバックは、モジュールのメタデータを調べて、ジャストイン タイム (JIT) コンパイラ フラグを設定または有効化またはクラス、モジュールのコールバックの読み込みを無効にする適切な時間を提供します。  
+ `LoadModule` のコールバックは、モジュールのメタデータを確認したり、just-in-time (JIT) コンパイラフラグを設定したり、モジュールのクラス読み込みコールバックを有効または無効にしたりするための適切な時間を提供します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
