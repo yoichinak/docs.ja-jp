@@ -1,17 +1,15 @@
 ---
-title: ICorDebugExceptionDebugEvent::GetFlags メソッド
+title: 'いい Exceptiondebugevent:: GetFlags メソッド'
 ms.date: 03/30/2017
 ms.assetid: 73225303-8852-487e-9a0e-9f0cb95e99d9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cb92deee21c63c935454ff7c7c4e70be6f770436
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6c330ce5b375daacdf257eda16fd5e34012f5d69
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895003"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084753"
 ---
-# <a name="icordebugexceptiondebugeventgetflags-method"></a>ICorDebugExceptionDebugEvent::GetFlags メソッド
+# <a name="icordebugexceptiondebugeventgetflags-method"></a>いい Exceptiondebugevent:: GetFlags メソッド
 例外をインターセプトできるかどうかを示すフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -31,12 +29,12 @@ HRESULT GetFlags(
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

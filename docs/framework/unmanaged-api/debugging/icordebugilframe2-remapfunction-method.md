@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd639ba0-f77b-426d-9ff6-f92706840348
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75004f646c01897ef3e3016b073220ad33a0d925
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 152cdb13a9f517a7a9c29c04a056661bb2edb45e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967577"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090449"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>ICorDebugILFrame2::RemapFunction メソッド
 新しい Microsoft 中間言語 (MSIL) オフセットを指定して、編集された関数を再マップします。  
@@ -42,22 +40,22 @@ HRESULT RemapFunction (
  この値の有効性を保証するのは、呼び出し元の責任です。 たとえば、関数の境界の外側にある場合、MSIL オフセットは無効です。  
   
 ## <a name="remarks"></a>Remarks  
- フレームの関数が編集されると、デバッガーはメソッドを`RemapFunction`呼び出して、最後のバージョンのフレームの関数をスワップして実行できるようになります。 コードの実行は、指定された MSIL オフセットから開始されます。  
+ フレームの関数が編集されている場合、デバッガーは `RemapFunction` メソッドを呼び出して、フレームの関数の最新バージョンをスワップし、実行できるようにします。 コードの実行は、指定された MSIL オフセットから開始されます。  
   
 > [!NOTE]
-> を`RemapFunction`呼び出すと (例: を[呼び出すと](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)、スレッドのスタックトレースの生成に関連するすべてのデバッグインターフェイスが無効になります)。 これらのインターフェイス[には](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md)、次のようなインターフェイスがあります。  
+> `RemapFunction`を呼び出すと、[テキストボックス:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)の呼び出しと同様に、スレッドのスタックトレースの生成に関連するすべてのデバッグインターフェイスがすぐに無効になります。 これらのインターフェイス[には](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md)、次のようなインターフェイスがあります。  
   
- メソッド`RemapFunction`は、現在のフレームのコンテキストでのみ呼び出すことができ、次のいずれかの場合にのみ呼び出すことができます。  
+ `RemapFunction` メソッドは、現在のフレームのコンテキストでのみ呼び出すことができ、次のいずれかの場合にのみ呼び出すことができます。  
   
 - まだ継続していない[ICorDebugManagedCallback2:: FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md)コールバックを受信した後。  
   
 - このフレームに対して、コードの実行が停止している間に、このフレームに対しては、[というエラーが発生し](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)ます。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
