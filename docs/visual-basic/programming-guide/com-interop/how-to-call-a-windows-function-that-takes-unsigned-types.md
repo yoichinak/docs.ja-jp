@@ -76,7 +76,7 @@ ms.locfileid: "71053323"
     > Windows アプリケーション プログラミング インターフェイス (API) などのアンマネージ コードを呼び出すと、コードは潜在的なセキュリティリスクにさらされます。
 
     > [!IMPORTANT]
-    > Windows API を呼び出すには、アンマネージ コードのアクセス許可が必要です。これは、部分信頼状況での実行に影響を与える可能性があります。 詳細については「<xref:System.Security.Permissions.SecurityPermission>」 、および「[コードアクセス許可](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))」を参照してください。
+    > Windows API を呼び出すには、アンマネージコードのアクセス許可が必要です。これは、部分信頼状況での実行に影響を与える可能性があります。 詳細については<xref:System.Security.Permissions.SecurityPermission> 、「」および「[コードアクセス許可](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
