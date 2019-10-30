@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0121753f-ebea-48d0-aeb2-ed7fda76dc60
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1e94e4da0eea06ce9cc0110002b1def9e4dd4989
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3a1c4a931a61186c4737aada47ceb861e7848e7b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939151"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122831"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next メソッド
 現在の位置から開始して、指定した数の[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)オブジェクトを列挙から取得します。  
@@ -57,17 +55,17 @@ HRESULT Next([in] ULONG  celt,
 ## <a name="remarks"></a>Remarks  
  このメソッドは、一般的な COM 列挙子と同様に機能します。  
   
- 入力配列の値は、少なくともサイズ`celt`にする必要があります。 配列には、列挙体の次`celt`の値、または残りのすべての値`celt`を格納します。 このメソッドから制御が`pceltFetched`戻るときに、取得された値の数がに格納されます。 に`values`無効なポインターが含まれている場合、または`celt`より小さいバッファー `pceltFetched`を指している場合、またはが無効なポインターの場合、結果は未定義になります。  
+ 入力配列の値は `celt`以上である必要があります。 配列には、列挙体の次の `celt` 値、または `celt` 未満の値が残っている場合は、残りのすべての値が格納されます。 このメソッドから制御が戻るときに、取得された値の数が `pceltFetched` に格納されます。 `values` に無効なポインターが含まれている場合、または `celt`より小さいバッファーを指している場合、または `pceltFetched` が無効なポインターである場合、結果は未定義になります。  
   
 > [!NOTE]
 > [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)構造体を解放する必要はありませんが、その中の "ICorDebugValue" インターフェイスは解放する必要があります。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

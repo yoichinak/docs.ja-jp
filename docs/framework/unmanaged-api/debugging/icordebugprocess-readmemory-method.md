@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d74da502492065dbffb5e5499581263760636c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef9e339c74b2d2785d758ed9c4adfc1901073253
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737069"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139362"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory メソッド
-このプロセスのメモリの指定された領域を読み取ります。  
+このプロセスの指定したメモリ領域を読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,26 +37,26 @@ HRESULT ReadMemory(
   
 ## <a name="parameters"></a>パラメーター  
  `address`  
- [in]A`CORDB_ADDRESS`読み取られるメモリのベース アドレスを指定する値。  
+ から読み取るメモリのベースアドレスを指定する `CORDB_ADDRESS` 値。  
   
  `size`  
- [in]メモリから読み取られるバイト数。  
+ からメモリから読み取るバイト数。  
   
  `buffer`  
- [out]メモリの内容を受け取るバッファー。  
+ 入出力メモリの内容を受け取るバッファー。  
   
  `read`  
- [out]バイト数へのポインターは、指定されたバッファーに転送されます。  
+ 入出力指定したバッファーに転送されたバイト数へのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- `ReadMemory`メソッドは主にデバッグ対象のアンマネージ部分で使用されているメモリ領域を検査する相互運用機能デバッグで使用されるものです。 このメソッドは、Microsoft intermediate language (MSIL) コードとネイティブ JIT コンパイル コードの読み取りにも使用できます。  
+ `ReadMemory` メソッドは、主に、デバッグ対象のアンマネージ部分で使用されているメモリ領域を検査するために相互運用機能デバッグによって使用されることを意図しています。 このメソッドを使用して、Microsoft 中間言語 (MSIL) コードとネイティブの JIT コンパイルコードを読み取ることもできます。  
   
- 返されるデータから管理対象のブレークポイントは削除されます、`buffer`パラメーター。 によってネイティブのブレークポイントの設定の調整は行われません[icordebugprocess 2::setunmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)します。  
+ マネージブレークポイントは、`buffer` パラメーターで返されたデータから削除されます。 [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)によって設定されたネイティブブレークポイントに対して調整は行われません。  
   
- プロセス メモリのキャッシュは実行されません。  
+ プロセスメモリのキャッシュは実行されません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

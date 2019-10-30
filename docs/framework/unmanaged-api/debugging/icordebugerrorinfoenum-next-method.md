@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41c09512-e8fe-4a82-90c5-6b39c18682da
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29fb23dce20883e2a2a894972cc7c397c04517a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 268baee6c94f7ec0914d5fb01b256a4d8f354330
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995983"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120167"
 ---
 # <a name="icordebugerrorinfoenumnext-method"></a>ICorDebugErrorInfoEnum::Next メソッド
 `ICorDebugErrorInfoEnum::Next` は互換性のために残されています。 このメソッドを呼び出さないでください。  
