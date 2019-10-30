@@ -2,14 +2,12 @@
 title: ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: adfc0ae6d9bdae333daacee525c7775acd5a8029
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f4c51dc269775d14d395cb464b3787cc987e086d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049137"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128130"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス
 
@@ -41,27 +39,27 @@ ms.locfileid: "71049137"
 
 参照情報については、次の構造から要素を選択するか、「[ランタイム ディレクティブ要素](runtime-directive-elements.md)」を参照してください。 次の階層で、省略記号は再帰構造を示します。 角かっこ内の情報は、その要素が省略可能または必須のいずれであるか、および使用される場合に許可されるインスタンスの数 (1 つまたは複数) を示します。
 
-[ディレクティブ](directives-element-net-native.md)[1:1][アプリケーション](application-element-net-native.md)[0:1][アセンブリ](assembly-element-net-native.md)[0: m][名前空間](namespace-element-net-native.md)[0: m]。 . .
-[型](type-element-net-native.md)[0: M]。 . .
-[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型)[0: M]。 . .
-[名前空間](namespace-element-net-native.md)[0: M][名前空間](namespace-element-net-native.md)[0: M]。 . .
-[型](type-element-net-native.md)[0: M]。 . .
-[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型)[0: M]。 . .
-[型](type-element-net-native.md)[0: M][サブタイプ](subtypes-element-net-native.md)(含んでいる型のサブクラス)O:1[型](type-element-net-native.md)[0: M]。 . .
-[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型)[0: M]。 . .
-[Attributeimplies](attributeimplies-element-net-native.md)(包含する型は属性です)O:1[Genericparameter](genericparameter-element-net-native.md)[0: M][メソッド](method-element-net-native.md)[0: M][パラメーター](parameter-element-net-native.md)[0: M][Typeparameter](typeparameter-element-net-native.md)[0: M][Genericparameter](genericparameter-element-net-native.md)[0: M][Methodinstantiation 化](methodinstantiation-element-net-native.md)(構築されたジェネリックメソッド)[0: M][プロパティ](property-element-net-native.md)[0: M][フィールド](field-element-net-native.md)[0: M][イベント](event-element-net-native.md)[0: M][Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型)[0: M][型](type-element-net-native.md)[0: M]。 . .
-[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型)[0: M]。 . .
-[メソッド](method-element-net-native.md)[0: M][パラメーター](parameter-element-net-native.md)[0: M][Typeparameter](typeparameter-element-net-native.md)[0: M][Genericparameter](genericparameter-element-net-native.md)[0: M][Methodinstantiation 化](methodinstantiation-element-net-native.md)(構築されたジェネリックメソッド)[0: M][プロパティ](property-element-net-native.md)[0: M][フィールド](field-element-net-native.md)[0: M][イベント](event-element-net-native.md)[0: M][ライブラリ](library-element-net-native.md)[0: M][アセンブリ](assembly-element-net-native.md)[0: M][名前空間](namespace-element-net-native.md)[0: M]。 . .
-[型](type-element-net-native.md)[0: M]。 . .
-[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型)[0: M]。 . .
-[名前空間](namespace-element-net-native.md)[0: M][名前空間](namespace-element-net-native.md)[0: M]。 . .
-[型](type-element-net-native.md)[0: M]。 . .
-[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型)[0: M]。 . .
-[型](type-element-net-native.md)[0: M][サブタイプ](subtypes-element-net-native.md)(含んでいる型のサブクラス)O:1[型](type-element-net-native.md)[0: M]。 . .
-[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型)[0: M]。 . .
-[Attributeimplies](attributeimplies-element-net-native.md)(包含する型は属性です)O:1[Genericparameter](genericparameter-element-net-native.md)[0: M][メソッド](method-element-net-native.md)[0: M][Methodinstantiation 化](methodinstantiation-element-net-native.md)(構築されたジェネリックメソッド)[0: M][プロパティ](property-element-net-native.md)[0: M][フィールド](field-element-net-native.md)[0: M][イベント](event-element-net-native.md)[0: M][Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型)[0: M][型](type-element-net-native.md)[0: M]。 . .
-[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型)[0: M]。 . .
-[メソッド](method-element-net-native.md)[0: M][Methodinstantiation 化](methodinstantiation-element-net-native.md)(構築されたジェネリックメソッド)[0: M][プロパティ](property-element-net-native.md)[0: M][フィールド](field-element-net-native.md)[0: M][イベント](event-element-net-native.md)[0: M]
+[ディレクティブ](directives-element-net-native.md)[1:1][アプリケーション](application-element-net-native.md)[0:1] [Assembly](assembly-element-net-native.md) [0: m][名前空間](namespace-element-net-native.md)[0: m]。 である必要があります。 である必要があります。
+[「](type-element-net-native.md) [0: M]」と入力します。 である必要があります。 である必要があります。
+[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 である必要があります。 である必要があります。
+[名前空間](namespace-element-net-native.md)[0: m][名前空間](namespace-element-net-native.md)[0: m]。 である必要があります。 である必要があります。
+[「](type-element-net-native.md) [0: M]」と入力します。 である必要があります。 である必要があります。
+[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 である必要があります。 である必要があります。
+[型](type-element-net-native.md)[0: M][サブタイプ](subtypes-element-net-native.md)(含んでいる型のサブクラス) [O:1 m][型](type-element-net-native.md)[0: m]。 である必要があります。 である必要があります。
+[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 である必要があります。 である必要があります。
+[Attributeimplies](attributeimplies-element-net-native.md) (型が属性の場合) [O:1] [genericparameter](genericparameter-element-net-native.md) [0: m][メソッド](method-element-net-native.md)[0: M][パラメーター](parameter-element-net-native.md) [0: m] [typeparameter](typeparameter-element-net-native.md) [0: m] [genericparameter](genericparameter-element-net-native.md) [0: m] [methodinstantiation 化](methodinstantiation-element-net-native.md)(構築されたジェネリックメソッド) [0: M][プロパティ](property-element-net-native.md)[0: m] [Field](field-element-net-native.md) [0: m][イベント](event-element-net-native.md)[0: m] [typeinstantiation 化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: m][型](type-element-net-native.md)[0: m]。 である必要があります。 である必要があります。
+[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 である必要があります。 である必要があります。
+[メソッド](method-element-net-native.md)[0: m][パラメーター](parameter-element-net-native.md) [0: m] [typeparameter](typeparameter-element-net-native.md) [0: m] [Genericparameter](genericparameter-element-net-native.md) [0: m] [methodinstantiation 化](methodinstantiation-element-net-native.md)(構築されたジェネリックメソッド) [0: m][プロパティ](property-element-net-native.md)[0: M] [Field](field-element-net-native.md) [0: m][イベント](event-element-net-native.md)[0: m] [Library](library-element-net-native.md) [0: m][アセンブリ](assembly-element-net-native.md)[0: m][名前空間](namespace-element-net-native.md)[0: m]。 である必要があります。 である必要があります。
+[「](type-element-net-native.md) [0: M]」と入力します。 である必要があります。 である必要があります。
+[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 である必要があります。 である必要があります。
+[名前空間](namespace-element-net-native.md)[0: m][名前空間](namespace-element-net-native.md)[0: m]。 である必要があります。 である必要があります。
+[「](type-element-net-native.md) [0: M]」と入力します。 である必要があります。 である必要があります。
+[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 である必要があります。 である必要があります。
+[型](type-element-net-native.md)[0: M][サブタイプ](subtypes-element-net-native.md)(含んでいる型のサブクラス) [O:1 m][型](type-element-net-native.md)[0: m]。 である必要があります。 である必要があります。
+[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 である必要があります。 である必要があります。
+[Attributeimplies](attributeimplies-element-net-native.md) (型が属性の場合) [O:1] [genericparameter](genericparameter-element-net-native.md) [0: m][メソッド](method-element-net-native.md)[0: m] [methodinstantiation 化](methodinstantiation-element-net-native.md)(構築されたジェネリックメソッド) [0: m][プロパティ](property-element-net-native.md)[0: m] [Field](field-element-net-native.md) [0: m][イベント](event-element-net-native.md)[0: M] [typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: m][型](type-element-net-native.md)[0: m]。 である必要があります。 である必要があります。
+[Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 である必要があります。 である必要があります。
+[メソッド](method-element-net-native.md)[0: m] [methodinstantiation 化](methodinstantiation-element-net-native.md)(構築されたジェネリックメソッド) [0: m][プロパティ](property-element-net-native.md)[0: M] [Field](field-element-net-native.md) [0: m][イベント](event-element-net-native.md)[0: m]
 
 [Application](application-element-net-native.md) 要素は属性を持たないか、「[ランタイム ディレクティブとポリシー](#Directives)」セクションで説明しているポリシー属性を持つことができます。
 
@@ -92,43 +90,43 @@ ms.locfileid: "71049137"
 
 [Application](application-element-net-native.md)、[Assembly](assembly-element-net-native.md)、[AttributeImplies](attributeimplies-element-net-native.md)、[Namespace](namespace-element-net-native.md)、[Subtypes](subtypes-element-net-native.md)、および [Type](type-element-net-native.md) 要素は、次のポリシーの種類をサポートしています。
 
-- `Activate`。 コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。
+- `Activate`. コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。
 
-- `Browse`。 プログラム要素に関する情報の照会を制御しますが、実行時アクセスは有効にしません。
+- `Browse`. プログラム要素に関する情報の照会を制御しますが、実行時アクセスは有効にしません。
 
-- `Dynamic`。 コンストラクター、メソッド、フィールド、プロパティ、およびイベントを含むすべての型のメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。
+- `Dynamic`. コンストラクター、メソッド、フィールド、プロパティ、およびイベントを含むすべての型のメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。
 
-- `Serialize`。 コンストラクター、フィールド、およびプロパティへの実行時アクセスを制御し、Newtonsoft の JSON シリアライザーなどのサードパーティ ライブラリによって型インスタンスをシリアル化および逆シリアル化できるようにします。
+- `Serialize`. コンストラクター、フィールド、およびプロパティへの実行時アクセスを制御し、Newtonsoft の JSON シリアライザーなどのサードパーティ ライブラリによって型インスタンスをシリアル化および逆シリアル化できるようにします。
 
-- `DataContractSerializer`。 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用するシリアル化のポリシーを制御します。
+- `DataContractSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用するシリアル化のポリシーを制御します。
 
-- `DataContractJsonSerializer`。 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用する JSON シリアル化のポリシーを制御します。
+- `DataContractJsonSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用する JSON シリアル化のポリシーを制御します。
 
-- `XmlSerializer`。 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> クラスを使用する XML シリアル化のポリシーを制御します。
+- `XmlSerializer`. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> クラスを使用する XML シリアル化のポリシーを制御します。
 
-- `MarshalObject`。 WinRT と COM に参照型をマーシャリングするためのポリシーを制御します。
+- `MarshalObject`. WinRT と COM に参照型をマーシャリングするためのポリシーを制御します。
 
-- `MarshalDelegate`。 ネイティブ コードへの関数ポインターとしてデリゲート型をマーシャリングするためのポリシーを制御します。
+- `MarshalDelegate`. ネイティブ コードへの関数ポインターとしてデリゲート型をマーシャリングするためのポリシーを制御します。
 
 - `MarshalStructure` . ネイティブ コードに構造体をマーシャリングするためのポリシーを制御します。
 
 これらのポリシーの種類に関連付けられている設定を次に示します。
 
-- `All`。 ツール チェーンが削除しないすべての型とメンバーに対するポリシーを有効にします。
+- `All`. ツール チェーンが削除しないすべての型とメンバーに対するポリシーを有効にします。
 
-- `Auto`。 既定の動作を使用します。 (親要素などによってポリシーがオーバーライドされない限り、ポリシーを指定しないことは、そのポリシーを `Auto` に設定することと同じです。)
+- `Auto`. 既定の動作を使用します。 (親要素などによってポリシーがオーバーライドされない限り、ポリシーを指定しないことは、そのポリシーを `Auto` に設定することと同じです。)
 
-- `Excluded`。 プログラム要素のポリシーを無効にします。
+- `Excluded`. プログラム要素のポリシーを無効にします。
 
-- `Public`。 ツール チェーンがメンバーが不要なために削除すると判断した場合を除き、パブリック型またはメンバーのポリシーを有効にします。 (後者の場合は、`Required Public` を使用して、メンバーが保持されており、リフレクション機能があることを確認する必要があります。)
+- `Public`. ツール チェーンがメンバーが不要なために削除すると判断した場合を除き、パブリック型またはメンバーのポリシーを有効にします。 (後者の場合は、`Required Public` を使用して、メンバーが保持されており、リフレクション機能があることを確認する必要があります。)
 
-- `PublicAndInternal`。 パブリックおよび内部型またはメンバーがツール チェーンによって削除されていない場合、それらのポリシーを有効にします。
+- `PublicAndInternal`. パブリックおよび内部型またはメンバーがツール チェーンによって削除されていない場合、それらのポリシーを有効にします。
 
-- `Required Public`。 使用されているかどうかに関係なく、パブリック型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。
+- `Required Public`. 使用されているかどうかに関係なく、パブリック型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。
 
-- `Required PublicAndInternal`。 使用されているかどうかに関係なく、パブリックおよび内部両方の型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。
+- `Required PublicAndInternal`. 使用されているかどうかに関係なく、パブリックおよび内部両方の型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。
 
-- `Required All`。 使用されているかどうかに関係なく、すべての型とメンバーを保持し、それらのポリシーを有効にするために、ツール チェーンを要求します。
+- `Required All`. 使用されているかどうかに関係なく、すべての型とメンバーを保持し、それらのポリシーを有効にするために、ツール チェーンを要求します。
 
 たとえば、次のランタイム ディレクティブ ファイルは、DataClasses.dll アセンブリ内のすべての型とメンバーのポリシーを定義します。 これは、すべてのパブリック プロパティのシリアル化のリフレクションを有効にし、すべての型と型のメンバーの参照を有効にし、すべての型のアクティブ化を (`Dynamic` 属性により) 有効にして、すべてのパブリック型とメンバーのリフレクションを有効にします。
 
@@ -405,7 +403,7 @@ ms.locfileid: "71049137"
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer、DataContractSerializer、DataContractJsonSerializer の各ポリシーの影響
 
-リフレクションベースのシリアライザーを対象とする<xref:System.Xml.Serialization.XmlSerializer> <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>ポリシーとは異なり、、、およびの各ポリシーを使用して、.NET ネイティブツールチェーンで認識されているシリアライザーのセットを有効にします。 `Serialize` これらのシリアライザーはリフレクションを使用して実装されるのではなく、実行時にシリアル化可能な型のセットが、リフレクション可能な型と同様の方法で決定されます。
+リフレクションベースのシリアライザーを対象とする `Serialize` ポリシーとは異なり、<xref:System.Xml.Serialization.XmlSerializer>、<xref:System.Runtime.Serialization.DataContractSerializer>、および <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> のポリシーを使用して、.NET ネイティブツールチェーンで認識されているシリアライザーのセットを有効にします。 これらのシリアライザーはリフレクションを使用して実装されるのではなく、実行時にシリアル化可能な型のセットが、リフレクション可能な型と同様の方法で決定されます。
 
 これらのポリシーのいずれかを型に適用すると、対応するシリアライザーで型をシリアル化できるようになります。 また、シリアル化が必要であることをシリアル化エンジンが静的に決定できる、すべての型もシリアル化されます。
 

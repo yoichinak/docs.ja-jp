@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c35e2919-42c3-4ba0-ae28-443c35f66f93
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c7d9f5373f2b4ea216ca517813b1334b9f5c38a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 949d04fe8d9ce492fb320fb4732677ffb35302ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739972"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132825"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>CorDebugIlToNativeMappingTypes 列挙型
-COR_DEBUG_IL_TO_NATIVE_MAP 構造体のインスタンスによって表されるネイティブの命令の特定の範囲が特別なコード領域に対応するかどうかを示します。  
+COR_DEBUG_IL_TO_NATIVE_MAP 構造体のインスタンスによって表されるネイティブ命令の特定の範囲が、特別なコード領域に対応するかどうかを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,12 +38,12 @@ typedef enum CorDebugIlToNativeMappingTypes {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`NO_MAPPING`|ネイティブ命令の範囲は、特別なコードの任意のリージョンに対応していません。|  
-|`PROLOG`|ネイティブ命令の範囲は、プロローグに対応します。|  
-|`EPILOG`|ネイティブ命令の範囲は、エピローグに対応します。|  
+|`NO_MAPPING`|ネイティブ命令の範囲は、特別なコード領域には対応していません。|  
+|`PROLOG`|ネイティブ命令の範囲は、プロローグに対応しています。|  
+|`EPILOG`|ネイティブ命令の範囲は、エピローグに相当します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
