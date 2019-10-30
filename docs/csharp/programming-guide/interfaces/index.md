@@ -6,16 +6,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 950a74dd663249b2a59bf746d02b5992733d0ce9
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053275"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039337"
 ---
 # <a name="interfaces-c-programming-guide"></a>インターフェイス (C# プログラミング ガイド)
 
-インターフェイスには、[クラス](../../language-reference/keywords/class.md)または[構造体](../../language-reference/keywords/struct.md)で実装できる関連機能のグループの定義が含まれます。
+インターフェイスには、非抽象[クラス](../../language-reference/keywords/class.md)または[構造体](../../language-reference/keywords/struct.md)で実装する必要がある、関連する機能のグループに対する定義が含まれます。
   
 インターフェイスを使用すると、たとえば、クラス内の複数のソースからの動作を含めることができます。 C# ではクラスの複数の継承がサポートされないため、この機能は重要です。 また、構造体の継承をシミュレートする場合はインターフェイスを使用する必要があります。これは、実際に別の構造体またはクラスから継承することができないためです。  
   

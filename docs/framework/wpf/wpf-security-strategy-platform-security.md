@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 925250a2284a47d0f9caf93158e2e23d9283aef3
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 7559c7ec9aef8f95336d53e62ca9bf5861a9b22f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774746"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040719"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF のセキュリティ方針 - プラットフォーム セキュリティ
 Windows Presentation Foundation (WPF) にはさまざまなセキュリティサービスが用意されていますが、オペレーティングシステム、CLR、Internet Explorer など、基になるプラットフォームのセキュリティ機能も活用されています。 これらの層を組み合わせることで、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] に強力な多重防御のセキュリティ モデルが提供されます。このセキュリティ モデルでは、次の図に示すように、単一障害点の回避を試みます。  
@@ -31,17 +31,15 @@ Windows Presentation Foundation (WPF) にはさまざまなセキュリティサ
   
  このトピックの残りの部分では、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] に関連するこれらの各層の機能について具体的に説明します。  
 
-<a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>オペレーティング システムのセキュリティ  
 Windows のコアには、WPF を使用して構築されたものを含め、すべての Windows アプリケーションのセキュリティ基盤を形成するセキュリティ機能がいくつか用意されています。 このトピックでは、WPF にとって重要なセキュリティ機能の広範について説明します。また、WPF を統合してさらに多層防御を実現する方法についても説明します。  
   
-<a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
  Windows の一般的なレビューと強化に加えて、このトピックで説明する [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] には、次の3つの重要な機能があります。  
   
 - /GS のコンパイル  
   
-- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+- Microsoft Windows Update。  
   
 #### <a name="gs-compilation"></a>/GS のコンパイル  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] は、CLR などの [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] のすべての依存関係を含む多数のコアシステムライブラリを再コンパイルすることにより、バッファーオーバーランを軽減します。 これは、C や C++ のコマンド ライン コンパイラの /GS パラメーターを使用して実現されます。 バッファー オーバーランを明示的に避ける必要はありますが、/GS コンパイルは、故意であるかないかにかかわらずバッファー オーバーランによって生み出される潜在的な脆弱性に対する多重防御の一例となります。  
@@ -52,10 +50,6 @@ Windows のコアには、WPF を使用して構築されたものを含め、�
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] は、/GS フラグでコンパイルされて、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションに別の防御層を追加します。  
   
-#### <a name="microsoft-windows-update-enhancements"></a>Microsoft Windows 更新プログラムの拡張機能  
- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)] では、[!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] も改善され、更新プログラムのダウンロードとインストールのプロセスが簡略化されました。 これらの変更により、特にセキュリティ更新プログラムに関して、システムを確実に最新の状態にすることで、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] のお客様のセキュリティ保護が大きく拡大しました。  
-  
-<a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
 Windows Vista の WPF ユーザーは、"最小限の特権を持つユーザーアクセス"、コードの整合性チェック、および特権の分離など、オペレーティングシステムの追加のセキュリティ強化の恩恵を受けられます。  
   
@@ -72,8 +66,7 @@ Windows Vista の WPF ユーザーは、"最小限の特権を持つユーザー
   
 #### <a name="code-integrity-checks"></a>コードの整合性チェック  
  Windows Vista には、読み込み時または実行時に悪意のあるコードがシステムファイルやカーネルに挿入されないようにするための、より詳細なコード整合性チェックが組み込まれています。 これは、システム ファイルの保護を超えて動作します。  
-  
-<a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
+   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>ブラウザーでホストされるアプリケーションの制限付き権限のプロセス  
  ブラウザーでホストされる [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは、インターネット ゾーンのサンド ボックス内で実行します。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Microsoft Internet Explorer との統合により、この保護が追加のサポートで拡張されます。  
   
@@ -81,11 +74,9 @@ Windows Vista の WPF ユーザーは、"最小限の特権を持つユーザー
   
  「[最小特権のユーザーアカウントを使用](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29)する」を参照してください。  
   
-<a name="Common_Language_Runtime_Security"></a>   
 ## <a name="common-language-runtime-security"></a>共通言語ランタイムのセキュリティ  
  共通言語ランタイム (CLR) は、検証と検証、コードアクセスセキュリティ (CAS)、およびセキュリティクリティカルな方法論など、多くの重要なセキュリティ上の利点を提供します。  
-  
-<a name="Validation_and_Verification"></a>   
+    
 ### <a name="validation-and-verification"></a>確認と検証  
  アセンブリの分離と整合性を提供するために、CLR は検証プロセスを使用します。 CLR 検証では、アセンブリの外部をポイントするアドレスのポータブル実行可能 (PE) ファイル形式を検証することによって、アセンブリが分離されていることを確認します。 CLR 検証では、アセンブリ内に埋め込まれているメタデータの整合性も検証されます。  
   
@@ -103,7 +94,6 @@ Windows Vista の WPF ユーザーは、"最小限の特権を持つユーザー
   
  検証可能なコードの利点は、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] が .NET Framework 上に構築される主な理由です。 検証可能なコードを使用する範囲で、起こりうる脆弱性の悪用の可能性が大幅に減少します。  
   
-<a name="Code_Access_Security"></a>   
 ### <a name="code-access-security"></a>コード アクセス セキュリティ  
  クライアント コンピューターは、ファイル システム、レジストリ、印刷サービス、ユーザー インターフェイス、リフレクション、および環境変数など、マネージド アプリケーションがアクセスできる多種多様なリソースを公開します。 マネージアプリケーションがクライアントコンピューター上のリソースにアクセスできるようにするには、そのアプリケーションに対して .NET Framework アクセス許可を持っている必要があります。 CA のアクセス許可は、<xref:System.Security.CodeAccessPermission> のサブクラスです。CAS は、マネージアプリケーションがアクセスできるリソースごとに1つのサブクラスを実装します。  
   
@@ -133,7 +123,7 @@ Windows Vista の WPF ユーザーは、"最小限の特権を持つユーザー
   
  ![CAS アクセス許可セットを示す図。](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- インターネットゾーンのセキュリティサンドボックスの制限は、XBAP がシステムライブラリからインポートするコード ([!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] を含む) にも同様に適用されます。 これにより、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] であっても、コードはビットごとにロック ダウンされます。 残念ながら、実行できるようにするために、XBAP は、インターネットゾーンのセキュリティサンドボックスで有効になっているものよりも多くのアクセス許可を必要とする機能を実行する必要があります。  
+ インターネットゾーンのセキュリティサンドボックスの制限は、XBAP がシステムライブラリからインポートするコード ([!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]を含む) にも同様に適用されます。 これにより、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] であっても、コードはビットごとにロック ダウンされます。 残念ながら、実行できるようにするために、XBAP は、インターネットゾーンのセキュリティサンドボックスで有効になっているものよりも多くのアクセス許可を必要とする機能を実行する必要があります。  
   
  次のページを含む XBAP アプリケーションを考えてみましょう。  
   
@@ -163,13 +153,11 @@ Windows Vista の WPF ユーザーは、"最小限の特権を持つユーザー
   
  プラットフォームの観点からは、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] は**Assert**を正しく使用する役割を担います。**Assert**の不適切な使用により、悪意のあるコードが特権を昇格させる可能性があります。 そのため、必要な場合にのみ**Assert**を呼び出し、サンドボックスの制限をそのまま維持することが重要です。 たとえば、セキュリティで保護されたコードでは、ランダムなファイルを開くことはできませんが、フォントは使用できます。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] を使用すると、サンドボックスアプリケーションは、 **Assert**を呼び出すことによってフォント機能を使用できます。また、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] は、サンドボックス化されたアプリケーションの代わりにそれらのフォントが含まれていることがわかっている  
   
-<a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce の配置  
- ClickOnce は .NET Framework に含まれる包括的な配置テクノロジで、[!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] と統合されます (詳細については、「 [clickonce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください)。 スタンドアロン [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは ClickOnce を使用して配置できますが、ブラウザーでホストされるアプリケーションは ClickOnce で配置する必要があります。  
+ ClickOnce は .NET Framework に含まれる包括的な配置テクノロジで、Visual Studio と統合されています (詳細については、「 [clickonce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください)。 スタンドアロン [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは ClickOnce を使用して配置できますが、ブラウザーでホストされるアプリケーションは ClickOnce で配置する必要があります。  
   
  ClickOnce を使用してデプロイされたアプリケーションには、コードアクセスセキュリティ (CAS) に対する追加のセキュリティレイヤーが与えられます。基本的に、ClickOnce によって配置されたアプリケーションは、必要なアクセス許可を要求します。 これらのアプリケーションが、アプリケーションの配置元ゾーンのアクセス許可セット数を超えていない場合、これらのアプリケーションには必要なアクセス許可のみが付与されます。 起動ゾーンのアクセス許可セットによって提供されるアクセス許可よりも小さい場合でも、必要なアクセス許可だけを減らすことで、アプリケーションがアクセスできるリソースの数が最小限に抑えられます。 その結果、アプリケーションが乗っ取られた場合、クライアント コンピューターの損傷の可能性が低減します。  
   
-<a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>セキュリティ クリティカルな方法  
  XBAP アプリケーションのインターネットゾーンサンドボックスを有効にするためのアクセス許可を使用する [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] コードは、可能な限り高いレベルのセキュリティ監査と制御に保持する必要があります。 この要件を容易にするために、.NET Framework では、特権を昇格するコードを管理するための新しいサポートを提供しています。 具体的には、CLR を使用すると、特権を昇格するコードを識別し、<xref:System.Security.SecurityCriticalAttribute> でマークすることができます。<xref:System.Security.SecurityCriticalAttribute> でマークされていないコードは、この方法論を使用して*透過的*になります。 逆に、<xref:System.Security.SecurityCriticalAttribute> でマークされていないマネージド コードは特権の昇格ができなくなります。  
   
@@ -177,9 +165,8 @@ Windows Vista の WPF ユーザーは、"最小限の特権を持つユーザー
   
  .NET Framework では、開発者が <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) でマークされ、ユーザーのグローバルアセンブリキャッシュ (GAC) に展開されたマネージアセンブリを記述できるようにすることで、信頼できるコードが XBAP インターネットゾーンサンドボックスを拡張できることに注意してください。 アセンブリを APTCA でマークすることは、機密性の高いセキュリティ操作です。インターネットからの悪意のあるコードなど、いずれのコードもそのアセンブリを呼び出すことができるためです。 これを実施する際は十分注意し、ベスト プラクティスを使用する必要があります。ソフトウェアをインストールするためには、ユーザーがそのソフトウェアを信頼することを選択する必要があります。  
   
-<a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer のセキュリティ  
- Microsoft Internet Explorer 6 (SP2) には、セキュリティの問題を減らし、セキュリティの構成を簡素化する以外に、[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] のユーザーのセキュリティを強化するためのセキュリティ強化機能がいくつか含まれています。 これらの機能の推進により、ユーザーが閲覧の制御を拡大できるようにしています。  
+ Microsoft Internet Explorer 6 (SP2) には、セキュリティの問題を減らし、セキュリティの構成を簡素化する以外に、[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]のユーザーのセキュリティを強化するためのセキュリティ強化機能がいくつか含まれています。 これらの機能の推進により、ユーザーが閲覧の制御を拡大できるようにしています。  
   
  IE6 SP2 より前では、ユーザーは次のいずれかの影響を受ける可能性がありました。  
   
@@ -195,7 +182,7 @@ Windows Vista の WPF ユーザーは、"最小限の特権を持つユーザー
   
  また、同じユーザー開始ロジックも適用され、セキュリティプロンプトを**保存 / 保存** **します**。 ActiveX インストールのダイアログボックスは、以前にインストールされたコントロールからのアップグレードを表す場合を除き、常に情報バーの下にトラップされます。 これらの対策を組み合わせると、より安全かつ制御されたユーザー エクスペリエンスがユーザーに提供されます。ユーザーを攻撃して不要または悪意のあるソフトウェアをインストールさせるサイトからユーザーが保護されるためです。  
   
- また、これらの機能により、IE6 SP2 を使用しているお客様は、web サイトを参照して [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションをダウンロードしてインストールできるようになります。 これは特に、IE6 SP2 ではユーザーエクスペリエンスが向上しているため、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] の構築に使用されたテクノロジに関係なく、悪意のあるアプリケーションや不正なアプリケーションをユーザーがインストールする機会が減ります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] は、ClickOnce を使用してこれらの保護を強化し、インターネット経由でのアプリケーションのダウンロードを容易にします。 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] はインターネット ゾーンのセキュリティ サンドボックス内で実行するので、シームレスに起動することができます。 一方、スタンドアロンの [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションでは、実行するには完全な信頼が必要になります。 これらのアプリケーションの場合、ClickOnce は起動プロセス中にセキュリティダイアログボックスを表示して、アプリケーションの追加のセキュリティ要件の使用を通知します。 ただし、これはユーザーが開始する必要があり、ユーザーが開始したロジックによって制御されるとともに、キャンセルが可能です。  
+ また、これらの機能により、IE6 SP2 を使用しているお客様は、web サイトを参照して [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションをダウンロードしてインストールできるようになります。 これは特に、IE6 SP2 ではユーザーエクスペリエンスが向上しているため、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]の構築に使用されたテクノロジに関係なく、悪意のあるアプリケーションや不正なアプリケーションをユーザーがインストールする機会が減ります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] は、ClickOnce を使用してこれらの保護を強化し、インターネット経由でのアプリケーションのダウンロードを容易にします。 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] はインターネット ゾーンのセキュリティ サンドボックス内で実行するので、シームレスに起動することができます。 一方、スタンドアロンの [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションでは、実行するには完全な信頼が必要になります。 これらのアプリケーションの場合、ClickOnce は起動プロセス中にセキュリティダイアログボックスを表示して、アプリケーションの追加のセキュリティ要件の使用を通知します。 ただし、これはユーザーが開始する必要があり、ユーザーが開始したロジックによって制御されるとともに、キャンセルが可能です。  
   
  Internet Explorer 7 には、セキュリティに対する継続的なコミットメントの一環として、IE6 SP2 のセキュリティ機能が組み込まれ、拡張されています。  
   

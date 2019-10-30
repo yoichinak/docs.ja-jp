@@ -2,12 +2,12 @@
 title: '方法: EdmGen.exe を使用してオブジェクトレイヤー コードを生成する'
 ms.date: 03/30/2017
 ms.assetid: c44d2ebe-f66f-42cb-9741-4a3f0c2dcffb
-ms.openlocfilehash: b85bacff093c268cd35dca2ede36e6ceb74ca4d1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9182f815a502488f955f64f6c19aad7865d0c7c6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251406"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039980"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>方法: EdmGen.exe を使用してオブジェクトレイヤー コードを生成する
 このトピックでは、 [EDM ジェネレーター (edmgen.exe)](edm-generator-edmgen-exe.md)ツールを使用して、.csdl ファイルに基づいてオブジェクトレイヤーコードを生成する方法について説明します。  
@@ -16,11 +16,11 @@ ms.locfileid: "70251406"
   
 1. School データベースを作成します。 詳細については、「 [School サンプルデータベースの作成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))」を参照してください。  
   
-2. School モデルを生成するか、School.csdl ファイルを取得します。 詳細については、「[方法 :Edmgen.exe を使用して、モデルファイルとマッピングファイル](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)を生成します。  
+2. School モデルを生成するか、School.csdl ファイルを取得します。 詳細については、「[方法: edmgen.exe を使用してモデルファイルとマッピングファイルを生成する](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)」を参照してください。  
   
 3. コマンド プロンプトで、次のコマンド (改行なし) を実行します。  
   
-    ```  
+    ```console  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:EntityClassGeneration   
     /incsdl:.\School.csdl /outobjectlayer:.\School.Objects.vb /language:VB  
     ```  
@@ -29,11 +29,11 @@ ms.locfileid: "70251406"
   
 1. School データベースを作成します。 詳細については、「 [School サンプルデータベースの作成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))」を参照してください。  
   
-2. School モデルを生成するか、School.csdl ファイルを取得します。 詳細については、「[方法 :Edmgen.exe を使用して、モデルファイルとマッピングファイル](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)を生成します。  
+2. School モデルを生成するか、School.csdl ファイルを取得します。 詳細については、「[方法: edmgen.exe を使用してモデルファイルとマッピングファイルを生成する](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)」を参照してください。  
   
 3. コマンド プロンプトで、次のコマンド (改行なし) を実行します。  
   
-    ```  
+    ```console  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:EntityClassGeneration   
     /incsdl:.\School.csdl /outobjectlayer:.\School.Objects.cs /language:CSharp  
     ```  
@@ -43,5 +43,5 @@ ms.locfileid: "70251406"
 - [モデリングとマッピング](modeling-and-mapping.md)
 - [方法: Entity Framework プロジェクトを手動で構成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
 - [ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [方法: クエリのパフォーマンスを向上させるためのビューを事前に生成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
-- [方法: Edmgen.exe を使用して、モデルファイルとマッピングファイルを生成します。](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)
+- [方法: ビューを事前に生成してクエリのパフォーマンスを向上させる](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
+- [方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを生成する](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)

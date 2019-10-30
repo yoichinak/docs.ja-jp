@@ -2,12 +2,12 @@
 title: 入れ子になっている要素に指定したリレーションシップの割り当て
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: e8cdf73b6277abdaab1256ca87e615a5e25e7336
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 138fbbc3ccaa90096a15fa87544e5c29f66beb08
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786085"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040058"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>入れ子になっている要素に指定したリレーションシップの割り当て
 スキーマには、スキーマ内の2つの要素間のマッピングを明示的に指定する**msdata: Relationship**注釈を含めることができます。 **Msdata: Relationship**で指定する2つの要素は、スキーマで入れ子にすることができますが、である必要はありません。 マッピングプロセスでは、スキーマ内で**msdata: Relationship**を使用して、2つの列の間に主キー/外部キーのリレーションシップを生成します。  
@@ -56,14 +56,14 @@ ms.locfileid: "70786085"
   
 - **Order**および**orderdetail**テーブル。  
   
-    ```  
+    ```text  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
 - **Order**テーブルと**orderdetail**テーブル間のリレーションシップ。 **Order**および**orderdetail**要素がスキーマで入れ子になっているため、このリレーションシップの**nested**プロパティは**True**に設定されています。  
   
-    ```  
+    ```text  
     ParentTable: Order  
     ParentColumns: OrderNumber   
     ChildTable: OrderDetail  

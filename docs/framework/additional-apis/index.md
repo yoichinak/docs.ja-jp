@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4b47847e9d6e9424d4442d655c40a637383c7229
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579110"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72847083"
 ---
 # <a name="additional-class-libraries-and-apis"></a>追加のクラス ライブラリと API
 
@@ -36,7 +36,7 @@ ms.locfileid: "72579110"
   
 | [プロジェクト] | 説明 |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | @No__t_0 クラスを拡張して、ユニバーサル Windows プラットフォームを対象とするアプリでコードページエンコーディングを使用できるようにします。 |  
+| <xref:System.Text.CodePagesEncodingProvider> | <xref:System.Text.EncodingProvider> クラスを拡張して、ユニバーサル Windows プラットフォームを対象とするアプリでコードページエンコーディングを使用できるようにします。 |  
   
 ## <a name="private-apis"></a>プライベート API  
 
@@ -57,18 +57,22 @@ ms.locfileid: "72579110"
 * [SetLength メソッドを SqlTypes しています。](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [SqlTypes メソッドを作成してください。](system.data.sqltypes.sqlstreamchars.write.md)
 * [System .Net. Connection クラス](connection.md)
-* [System .Net. Connection. m \_WriteList フィールド](m_writelist.md)
+* [System .Net. Connection. m\_WriteList フィールド](m_writelist.md)
 * [システム .Net. ConnectionGroup クラス](connectiongroup.md)
-* [システム .Net. ConnectionGroup. m \_ConnectionList フィールド](m_connectionlist.md)
+* [システム .Net. ConnectionGroup. m\_Connectiongroup フィールド](m_connectionlist.md)
+* [System .Net. ConnectStream. 接続プロパティ](system.net.connectstream.connection.md)
 * [CoreResponseData クラス](coreresponsedata.md)
-* [CoreResponseData \_ResponseHeaders のフィールド](coreresponsedata_m_responseheaders.md)
-* [CoreResponseData \_StatusCode のフィールド](coreresponsedata_m_statuscode.md)
-* [@No__t_1AutoRedirects HttpWebRequest (システム) フィールド](_autoredirects.md)
-* [@No__t_1CoreResponse HttpWebRequest (システム) フィールド](httpwebrequest__coreresponse.md)
-* [@No__t_1HttpResponse HttpWebRequest (システム) フィールド](_httpresponse.md)
-* [System .Net. ServicePoint. m \_ConnectionGroupList フィールド](m_connectiongrouplist.md)
-* [System .Net. ServicePointManager. s \_ServicePointTable フィールド](s_servicepointtable.md)
-* [System. Diagnostics. s \_isDebuggerCheckDisabledForTestPurposes のフィールド](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [CoreResponseData. m\_ResponseHeaders フィールド](coreresponsedata_m_responseheaders.md)
+* [CoreResponseData\_の StatusCode フィールド](coreresponsedata_m_statuscode.md)
+* [HttpWebRequest AutoRedirects フィールドを\_します。](_autoredirects.md)
+* [HttpWebRequest.\_CoreResponse フィールド](httpwebrequest__coreresponse.md)
+* [HttpWebRequest.\_Httpresponse.cache フィールド](_httpresponse.md)
+* [System .Net. PooledStream. NetworkStream プロパティ](system.net.pooledstream.networkstream.md)
+* [System .Net. ServicePoint. m\_ConnectionGroupList フィールド](m_connectiongrouplist.md)
+* [System .Net. ServicePointManager. s\_Servicepointmanager フィールド](s_servicepointtable.md)
+* [TlsStream. m_Worker フィールド](system.net.tlsstream.m_worker.md)
+* [System .Net. Security. Sslstate プロパティ](system.net.security.sslstate.sslprotocol.md)
+* [IsDebuggerCheckDisabledForTestPurposes フィールドの\_システム ()](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [System.string クラス (DataMemberFieldEditor クラス)](datamemberfieldeditor-class.md)
 * [System.string クラス (DataMemberListEditor クラス)](datamemberlisteditor-class.md)
 * [System.xml. .Xml...。](system.xml.xmlreader.createsqlreader.md)

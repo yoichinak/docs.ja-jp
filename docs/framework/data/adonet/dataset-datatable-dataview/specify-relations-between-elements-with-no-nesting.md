@@ -2,12 +2,12 @@
 title: 入れ子になっていない要素間のリレーションの指定
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: d6cd6f04a9fdeafe7c419b40023af6c71d553ac7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3aa9976ccde426eeda1d869164409c5235a629fe
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784287"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040044"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>入れ子になっていない要素間のリレーションの指定
 要素が入れ子になっていない場合、暗黙的なリレーションは作成されません。 ただし、 **msdata: Relationship**注釈を使用して入れ子になっていない要素間のリレーションを明示的に指定することもできます。  
@@ -53,9 +53,9 @@ ms.locfileid: "70784287"
 </xs:schema>  
 ```  
   
- XML スキーマ定義言語 (XSD) スキーマのマッピングプロセスでは<xref:System.Data.DataSet> 、次に示すように、 **Order**テーブルと**orderdetail**テーブルを使用して、これら2つのテーブル間にリレーションシップを指定します。  
+ XML スキーマ定義言語 (XSD) スキーマのマッピングプロセスでは、次に示すように、 **Order**テーブルと**orderdetail**テーブル、およびこれら2つのテーブル間のリレーションシップを指定して、<xref:System.Data.DataSet> を作成します。  
   
-```  
+```text  
 RelationName: OrdOrderDetailRelation  
 ParentTable: Order  
 ParentColumns: OrderNumber   

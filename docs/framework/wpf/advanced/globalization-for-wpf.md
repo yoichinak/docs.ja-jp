@@ -7,19 +7,19 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 7826bbfca09cce7508d7352c647bafae93504e58
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: df9c66d47d1f5e345858ae08b3d926d0e938a255
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395838"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038316"
 ---
 # <a name="globalization-for-wpf"></a>WPF のグローバリゼーション
 このトピックでは、グローバル市場向けに [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションを作成するときに注意する必要がある問題について説明します。 グローバリゼーションプログラミング要素は、.NET で <xref:System.Globalization> 名前空間に定義されています。
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>XAML グローバリゼーション
- Extensible Application Markup Language (XAML) は @no__t 0 に基づいており、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 仕様で定義されているグローバリゼーションサポートを利用します。 以下のセクションでは、注意する必要がある @no__t 0 の機能について説明します。
+ Extensible Application Markup Language (XAML) は [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] に基づいており、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 仕様で定義されているグローバリゼーションサポートを利用します。 以下のセクションでは、注意すべきいくつかの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 機能について説明します。
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>文字参照
@@ -37,7 +37,7 @@ ms.locfileid: "72395838"
 
 <a name="encoding"></a>
 ### <a name="encoding"></a>エンコード
- @No__t-0 によってサポートされるエンコーディングは、ASCII、Unicode UTF-16、および UTF-8 です。 Encoding ステートメントは [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ドキュメントの先頭にあります。 エンコーディング属性が存在せず、バイト順もない場合、パーサーでは既定として UTF-8 が使用されます。 UTF-8 と UTF-16 は優先エンコードです。 UTF-7 には対応していません。 次の例は、@no__t 0 のファイルで UTF-8 エンコーディングを指定する方法を示しています。
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] によってサポートされるエンコーディングは、ASCII、Unicode UTF-16、および UTF-8 です。 Encoding ステートメントは [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ドキュメントの先頭にあります。 エンコーディング属性が存在せず、バイト順もない場合、パーサーでは既定として UTF-8 が使用されます。 UTF-8 と UTF-16 は優先エンコードです。 UTF-7 には対応していません。 次の例は、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルで UTF-8 エンコーディングを指定する方法を示しています。
 
 ```xaml
 ?xml encoding="UTF-8"?
@@ -45,11 +45,11 @@ ms.locfileid: "72395838"
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>言語属性
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] は、要素の言語属性を表すために[xml: lang](../../xaml-services/xml-lang-handling-in-xaml.md)を使用します。  @No__t 0 クラスを利用するには、言語属性値が <xref:System.Globalization.CultureInfo> で定義されているカルチャ名のいずれかである必要があります。 [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) は要素ツリーで継承可能であり (XML ルールによる継承であり、必ずしも依存関係プロパティの継承によるものではありません)、その既定値は、明示的に割り当てられていない場合、空の文字列になります。
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] は、要素の言語属性を表すために[xml: lang](../../xaml-services/xml-lang-handling-in-xaml.md)を使用します。  <xref:System.Globalization.CultureInfo> クラスを利用するには、言語属性の値が <xref:System.Globalization.CultureInfo>で定義されているカルチャ名のいずれかである必要があります。 [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) は要素ツリーで継承可能であり (XML ルールによる継承であり、必ずしも依存関係プロパティの継承によるものではありません)、その既定値は、明示的に割り当てられていない場合、空の文字列になります。
 
  言語属性は、方言を指定するときに非常に役立ちます。 たとえば、フランス語であれば、フランス、ケベック、ベルギー、スイスでスペル、語彙、発音が異なります。 また、中国語、日本語、韓国語は Unicode でコードポイントを共有しますが、表意文字の形は異なり、まったく異なるフォントを使用します。
 
- 次の @no__t 0 の例では、`fr-CA` 言語属性を使用してカナダフランス語を指定しています。
+ 次の [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 例では、`fr-CA` language 属性を使用してカナダフランス語を指定しています。
 
 ```xaml
 <TextBlock xml:lang="fr-CA">Découvrir la France</TextBlock>
@@ -57,15 +57,15 @@ ms.locfileid: "72395838"
 
 <a name="unicode"></a>
 ### <a name="unicode"></a>Unicode
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] は、サロゲートを含むすべての Unicode 機能をサポートします。 文字セットを Unicode にマップできる限り、サポートされています。 たとえば、GB18030 では、一部の文字が中国語、日本語、韓国語 (CFK) の拡張 A および B とサロゲート ペアにマッピングされているため、完全に対応しています。 @No__t 0 のアプリケーションでは、<xref:System.Globalization.StringInfo> を使用して、サロゲートペアまたは組み合わせ文字があるかどうかを理解せずに文字列を操作できます。
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] は、サロゲートを含むすべての Unicode 機能をサポートしています。 文字セットを Unicode にマップできる限り、サポートされています。 たとえば、GB18030 では、一部の文字が中国語、日本語、韓国語 (CFK) の拡張 A および B とサロゲート ペアにマッピングされているため、完全に対応しています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでは、<xref:System.Globalization.StringInfo> を使用して、サロゲートペアまたは組み合わせ文字があるかどうかを理解せずに文字列を操作できます。
 
 <a name="design_intl_ui_with_xaml"></a>
 ## <a name="designing-an-international-user-interface-with-xaml"></a>XAML で各国対応ユーザー インターフェイスを設計する
- このセクションでは、アプリケーションの作成時に考慮する必要がある @no__t 0 の機能について説明します。
+ このセクションでは、アプリケーションの作成時に考慮する必要がある [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] の機能について説明します。
 
 <a name="intl_text"></a>
 ### <a name="international-text"></a>国際対応テキスト
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、すべての Microsoft .NET フレームワークでサポートされている書記体系の組み込み処理が含まれます。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、Microsoft .NET Framework でサポートされているすべての書記体系の組み込み処理が含まれています。
 
  現在、次の書体がサポートされています。
 
@@ -127,7 +127,7 @@ ms.locfileid: "72395838"
 
  OpenType フォントを使用すると、Unicode エンコーディングを使用して大きなグリフセットを処理できます。 このようなエンコードにより、広範な国際対応が可能になり、さまざまなグリフを印刷できます。
 
- @no__t 0 のテキストレンダリングは、解決の独立性をサポートする Microsoft の ClearType サブピクセルテクノロジを利用しています。 これにより読みやすさが大幅に向上し、あらゆる書体で高品質の雑誌スタイルの書面を作成できます。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] テキストレンダリングは、解決の独立性をサポートする Microsoft の ClearType サブピクセルテクノロジを利用しています。 これにより読みやすさが大幅に向上し、あらゆる書体で高品質の雑誌スタイルの書面を作成できます。
 
 <a name="intl_layout"></a>
 ### <a name="international-layout"></a>国際対応レイアウト
@@ -143,35 +143,35 @@ ms.locfileid: "72395838"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>多言語ユーザー インターフェイス
- 多言語ユーザーインターフェイス (MUI) は、Ui をある言語から別の言語に切り替えるための Microsoft サポートです。 @No__t 0 アプリケーションは、アセンブリモデルを使用して、MUI をサポートします。 1 つのアプリケーションに言語に依存しないアセンブリと言語に依存するサテライト リソース アセンブリが含まれます。 エントリ ポイントはメイン アセンブリのマネージド .EXE です。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] リソースローダーは、[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] の resource manager を利用して、リソースの参照とフォールバックをサポートします。 多言語サテライト アセンブリは同じメイン アセンブリと連動します。 読み込まれるリソースアセンブリは、現在のスレッドの <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> に依存します。
+ 多言語ユーザーインターフェイス (MUI) は、Ui をある言語から別の言語に切り替えるための Microsoft サポートです。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションは、アセンブリモデルを使用して、MUI をサポートします。 1 つのアプリケーションに言語に依存しないアセンブリと言語に依存するサテライト リソース アセンブリが含まれます。 エントリ ポイントはメイン アセンブリのマネージド .EXE です。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] リソースローダーは、リソースの参照とフォールバックをサポートするために、[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]のリソースマネージャーを利用します。 多言語サテライト アセンブリは同じメイン アセンブリと連動します。 読み込まれるリソースアセンブリは、現在のスレッドの <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> によって異なります。
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>ローカライズ可能なユーザー インターフェイス
- @no__t 0 のアプリケーションでは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使用して [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を定義します。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] で開発すると、オブジェクトの階層に一連のプロパティとロジックを指定できます。 @No__t-0 の主な用途は、@no__t 1 のアプリケーションを開発することですが、これを使用して共通言語ランタイム (CLR) オブジェクトの階層を指定することができます。 ほとんどの開発者は [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使用してアプリケーションの [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を指定し、 C#などのプログラミング言語を使用してユーザーの操作に応答します。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使用して [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]を定義します。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] で開発すると、オブジェクトの階層に一連のプロパティとロジックを指定できます。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] の主な用途は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションを開発することですが、それを使用して共通言語ランタイム (CLR) オブジェクトの階層を指定することもできます。 ほとんどの開発者は、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使用してアプリケーションの [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を指定しC# 、などのプログラミング言語を使用してユーザーの操作に応答します。
 
- リソースの観点から見ると、言語に依存する [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を記述するように設計された @no__t 0 ファイルはリソース要素であるため、その最終的な配布形式はローカライズ可能である必要があります。 @No__t-0 はイベントを処理できないため、多くの @no__t アプリケーションには、これを行うためのコードブロックが含まれています。 詳細については、「 [XAML の概要 (WPF)](xaml-overview-wpf.md)」を参照してください。 @No__t 0 のファイルが XAML の BAML 形式にトークン化されている場合、コードは削除され、別のバイナリにコンパイルされます。 XAML ファイル、画像、その他の種類の管理対象リソース オブジェクトの BAML 形式はサテライト リソース アセンブリに組み込まれます。サテライト リソース アセンブリに組み込むことで、他の言語にローカライズできます。ローカライズが必要なければ、メイン アセンブリに組み込まれます。
+ リソースの観点からは、言語に依存する [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を記述するように設計された [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルはリソース要素であるため、その最終的な配布形式はローカライズ可能である必要があります。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] はイベントを処理できないため、多くの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] アプリケーションには、これを行うためのコードブロックが含まれています。 詳細については、「 [XAML の概要 (WPF)](xaml-overview-wpf.md)」を参照してください。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルが XAML の BAML 形式にトークン化されると、コードが削除され、異なるバイナリにコンパイルされます。 XAML ファイル、画像、その他の種類の管理対象リソース オブジェクトの BAML 形式はサテライト リソース アセンブリに組み込まれます。サテライト リソース アセンブリに組み込むことで、他の言語にローカライズできます。ローカライズが必要なければ、メイン アセンブリに組み込まれます。
 
 > [!NOTE]
-> @no__t 0 のアプリケーションでは、文字列テーブルや画像など、すべての [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] CLR リソースがサポートされます。
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでは、文字列テーブルや画像などのすべての [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]CLR リソースがサポートされます。
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>ローカライズ可能なアプリケーションの構築
- ローカリゼーションとは、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を異なるカルチャに適合させることを意味します。 @No__t 0 のアプリケーションをローカライズ可能にするには、開発者はローカライズ可能なすべてのリソースをリソースアセンブリに構築する必要があります。 リソースアセンブリは異なる言語にローカライズされ、コードビハインドはリソース管理 API を使用して読み込みます。 @No__t 0 アプリケーションに必要なファイルの1つは、プロジェクトファイル (proj) です。 アプリケーションで使用するすべてのリソースをプロジェクト ファイルに含める必要があります。 その方法を .csproj ファイルからの次の例で示します。
+ ローカリゼーションとは、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を異なるカルチャに適合させることを意味します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションをローカライズ可能にするには、開発者はローカライズ可能なすべてのリソースをリソースアセンブリに構築する必要があります。 リソースアセンブリは異なる言語にローカライズされ、コードビハインドはリソース管理 API を使用して読み込みます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションに必要なファイルの1つは、プロジェクトファイル (proj) です。 アプリケーションで使用するすべてのリソースをプロジェクト ファイルに含める必要があります。 その方法を .csproj ファイルからの次の例で示します。
 
 ```xml
 <Resource Include="data\picture1.jpg"/>
 <EmbeddedResource Include="data\stringtable.en-US.restext"/>
 ```
 
- アプリケーションでリソースを使用するには、@no__t 0 をインスタンス化し、使用するリソースを読み込みます。 この方法を次の例に示します。
+ アプリケーションでリソースを使用するには、<xref:System.Resources.ResourceManager> をインスタンス化し、使用するリソースを読み込みます。 この方法を次の例に示します。
 
  [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
 
 <a name="using_clickonce"></a>
 ## <a name="using-clickonce-with-localized-applications"></a>ローカライズされたアプリケーションで ClickOnce を使用する
- ClickOnce は、Visual Studio 2005 に付属する新しい Windows フォームデプロイテクノロジです。 アプリケーションをインストールしたり、Web アプリケーションをアップグレードしたりできます。 ClickOnce で展開されたアプリケーションがローカライズされると、ローカライズされたカルチャでのみ表示できます。 たとえば、展開したアプリケーションが日本語にローカライズされている場合は、日本語 @no__t でのみ表示できます。 これは、日本語ユーザーが英語版の Windows を実行する一般的なシナリオであるため、問題が発生します。
+ ClickOnce は、Visual Studio 2005 に付属する新しい Windows フォームデプロイテクノロジです。 アプリケーションをインストールしたり、Web アプリケーションをアップグレードしたりできます。 ClickOnce で展開されたアプリケーションがローカライズされると、ローカライズされたカルチャでのみ表示できます。 たとえば、展開したアプリケーションが日本語にローカライズされている場合、英語版の Windows ではない日本語の Microsoft Windows でのみ表示できます。 これは、日本語ユーザーが英語版の Windows を実行する一般的なシナリオであるため、問題が発生します。
 
- この問題の解決策は、非依存言語フォールバック属性を設定することです。 アプリケーション開発者はメイン アセンブリからリソースを任意で削除し、特定のカルチャに対応するサテライト アセンブリでそのリソースを見つけられるように指定できます。 このプロセスを制御するには、<xref:System.Resources.NeutralResourcesLanguageAttribute> を使用します。 @No__t-0 クラスのコンストラクターには2つのシグネチャがあります。1つは、@no__t 1 つのパラメーターを受け取り、@no__t 2 がフォールバックリソースを抽出する場所を指定します。メインアセンブリまたはサテライトアセンブリです。 この属性を使用する方法の例を次に示します。 最終的なフォールバックの場所では、コードによって <xref:System.Resources.ResourceManager> が、現在実行中のアセンブリのディレクトリの "de" サブディレクトリにあるリソースを検索します。
+ この問題の解決策は、非依存言語フォールバック属性を設定することです。 アプリケーション開発者はメイン アセンブリからリソースを任意で削除し、特定のカルチャに対応するサテライト アセンブリでそのリソースを見つけられるように指定できます。 このプロセスを制御するには、<xref:System.Resources.NeutralResourcesLanguageAttribute> を使用します。 <xref:System.Resources.NeutralResourcesLanguageAttribute> クラスのコンストラクターには、2つのシグネチャがあります。1つは、<xref:System.Resources.UltimateResourceFallbackLocation> パラメーターを受け取り、<xref:System.Resources.ResourceManager> がフォールバックリソースを抽出する場所を指定します。メインアセンブリまたはサテライトアセンブリです。 この属性を使用する方法の例を次に示します。 最終的なフォールバックの場所では、コードによって <xref:System.Resources.ResourceManager> が、現在実行中のアセンブリのディレクトリの "de" サブディレクトリにあるリソースを検索します。
 
 ```csharp
 [assembly: NeutralResourcesLanguageAttribute(

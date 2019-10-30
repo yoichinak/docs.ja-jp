@@ -3,12 +3,12 @@ title: XML コメントによるコードの文書化
 description: XML ドキュメント コメントを含むコードを文書化し、コンパイル時に XML ドキュメント ファイルを生成する方法を説明します。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 048546407dbf94f274dd8c9c39e83c103efd75e1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104773"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521161"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML コメントによるコードの文書化
 
@@ -34,7 +34,7 @@ XML 文書化コメントは、その他すべてのコメントと同じよう�
 
 - Visual Studio を使用してアプリケーションを開発する場合は、プロジェクトを右クリックして、 **[プロパティ]** を選択します。 プロパティ ダイアログ ボックスで、 **[ビルド]** タブをクリックし、 **[XML ドキュメント ファイル]** をオンにします。 コンパイラがファイルを書き込む場所を変更することもできます。
 
-- コマンド ラインから .NET Framework アプリケーションをコンパイルする場合は、コンパイル時に [/doc コンパイラ オプション](language-reference/compiler-options/doc-compiler-option.md)を追加してください。  
+- コマンド ラインから .NET Framework アプリケーションをコンパイルする場合は、コンパイル時に [-doc コンパイラ オプション](language-reference/compiler-options/doc-compiler-option.md)を追加してください。  
 
 XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形式のコメント本文を使用します。 例:
 

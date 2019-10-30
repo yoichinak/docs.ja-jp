@@ -5,19 +5,19 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: db40213bd6e20468706afda8a11d76e5a5a3c4e0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9ca812948926f80d9f8ec5b8cead4538d09fa7a1
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254268"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035629"
 ---
 # <a name="printing-how-to-topics"></a>印刷に関する「方法」トピック
-このセクションのトピックでは、に[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]含まれる印刷と印刷のシステム管理機能、および新しい XML Paper Specification (XPS) の印刷パスを使用する方法について説明します。  
+このセクションのトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] に含まれる印刷と印刷のシステム管理機能、および新しい XML Paper Specification (XPS) の印刷パスを使用する方法を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [印刷ダイアログ ボックスを呼び出す](how-to-invoke-a-print-dialog.md)  
- [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]印刷ダイアログオブジェクトを宣言し、コードを使用して Windows Presentation Foundation (WPF) アプリケーション内からダイアログを呼び出すための XAML マークアップについて説明します。  
+ Microsoft Windows の印刷ダイアログオブジェクトを宣言し、コードを使用して Windows Presentation Foundation (WPF) アプリケーション内からダイアログを呼び出すための XAML マークアップについて説明します。  
   
  [プリンターを複製する](how-to-clone-a-printer.md)  
  既存の印刷キューとまったく同じプロパティを持つ2つ目の印刷キューをインストールする方法について説明します。  
@@ -35,7 +35,7 @@ ms.locfileid: "70254268"
  実行時に印刷システムオブジェクトのプロパティとその型を検出する方法について説明します。  
   
  [XPS ファイルをプログラムにより印刷する](how-to-programmatically-print-xps-files.md)  
- を必要とせずに、 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]XML PAPER Specification (XPS) ファイルを迅速に印刷する方法について説明します。  
+ [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]を必要とせずに、XML Paper Specification (XPS) ファイルを迅速に印刷する方法について説明します。  
   
  [プリンターのステータスをリモート操作で調査する](how-to-remotely-survey-the-status-of-printers.md)  
  プリンターを調査して、紙詰まりやその他の問題が発生していることを検出するユーティリティを作成する手順。  
