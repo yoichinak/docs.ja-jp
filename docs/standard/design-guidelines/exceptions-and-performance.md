@@ -70,7 +70,7 @@ public struct DateTime
 
  **✓ DO** このパターンを実装するメソッドにプレフィックス"Try"とブール型の戻り値の型を使用します。
 
- **✓ DO** Try 解析パターンを使用する各メンバーに対して例外スローのメンバーを提供します。
+ **✓ DO** Try-Parse パターンを使用する各メンバーに対して例外をスローするメンバーを提供します。
 
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*
 
