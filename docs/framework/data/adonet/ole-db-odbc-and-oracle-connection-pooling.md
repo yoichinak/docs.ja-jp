@@ -2,12 +2,12 @@
 title: OLE DB、ODBC、および Oracle 接続プール
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: b83b53550964b3149f3bc711eaf119e749d1834b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4b801032e67d1c4c51fed8556ff1fea05c214aff
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794694"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039845"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC、および Oracle 接続プール
 接続をプールすると、アプリケーションのパフォーマンスとスケーラビリティを大幅に改善できます。 このセクションでは、OLE DB、ODBC、および Oracle 用の .NET Framework データ プロバイダーの接続プールについて説明します。  
@@ -15,7 +15,7 @@ ms.locfileid: "70794694"
 ## <a name="connection-pooling-for-oledb"></a>OleDb の接続プール  
  .NET Framework Data Provider for OLE DB は、OLE DB セッションのプール機能を使用して接続を自動的にプールします。 接続文字列引数を使用して、プール機能を含む OLE DB サービスの有効や無効を切り替えることができます。 たとえば、次の接続文字列は OLE DB セッション プール機能と自動的なトランザクションへの参加を無効にします。  
   
-```  
+```csharp
 Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=SSPI;  
 ```  
   
@@ -60,7 +60,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  接続プールの動作を調整するための <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> 値についての説明を次の表に示します。  
   
-|名前|既定値|説明|  
+|名|既定|説明|  
 |----------|-------------|-----------------|  
 |`Connection Lifetime`|0|接続がプールに返された時点で、その接続の作成時刻と現在の時刻を比較し、その時間の長さ (秒) が `Connection Lifetime` で指定した値を超えている場合は、その接続が破棄されます。 これは、クラスター構成を採用している状況で、実行中のサーバーと、オンラインになったばかりのサーバーの間での、負荷を強制的に分散するのに便利です。<br /><br /> 値ゼロ (0) を指定した場合は、プールされている接続に、最大のタイムアウトが割り当てられます。|  
 |`Enlist`|'true'|`true` に設定すると、トランザクション コンテキストが存在する場合、プーラーは自動的に、作成スレッドの現在のトランザクション コンテキストの中に、その接続を参加させます。|  
@@ -71,5 +71,5 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ## <a name="see-also"></a>関連項目
 
 - [接続プール](connection-pooling.md)
-- [パフォーマンス カウンター](performance-counters.md)
+- [Performance Counters](performance-counters.md)
 - [ADO.NET の概要](ado-net-overview.md)

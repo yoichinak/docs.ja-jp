@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b12bfcd9-1e29-48bf-9a3d-44bfae5df5e8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8826644ae3bdfbef76e9143de5f8f449c1555095
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 70aaf32b9da751b49571ab98a95e432b7f84caa9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761202"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130634"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a>ICorDebugManagedCallback::UnloadModule メソッド
-共通言語ランタイム モジュール (DLL) がアンロードされたことをデバッガーに通知します。  
+共通言語ランタイムモジュール (DLL) がアンロードされたことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,16 +36,16 @@ HRESULT UnloadModule (
   
 ## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]モジュールに含まれるアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ からモジュールを含んでいるアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `pModule`  
- [in]モジュールを表す ICorDebugModule オブジェクトへのポインター。  
+ からモジュールを表す、のモジュールオブジェクトへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- この呼び出しの後、モジュールを使用しない必要があります。  
+ この呼び出しの後にモジュールを使用することはできません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

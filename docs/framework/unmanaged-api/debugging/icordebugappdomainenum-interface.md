@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: e9226e6e-ca2c-428e-bb38-0c099210f507
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c48c222a34e2e78f29c33e49da331d97d409bae1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6cc3ec1c802c28b74248380aa7f686e675a92f1d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949761"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088837"
 ---
 # <a name="icordebugappdomainenum-interface"></a>ICorDebugAppDomainEnum インターフェイス
 
-列挙体の次の位置から始まる指定さ`ICorDebugAppDomainEnum`れた数の値を返すメソッドを提供します。`Next` このインターフェイスは、"ICorDebugEnum" のサブクラスです。  
+`Next` メソッドを提供します。このメソッドは、列挙体の次の位置から始まる指定された数の `ICorDebugAppDomainEnum` 値を返します。 このインターフェイスは、"ICorDebugEnum" のサブクラスです。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -38,12 +36,12 @@ ms.locfileid: "69949761"
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

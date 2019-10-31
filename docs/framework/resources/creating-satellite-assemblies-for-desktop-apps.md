@@ -23,14 +23,12 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2ab4fc990e0c524e0c77fa0bdedd7c263edb21b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045699"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129961"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>デスクトップ アプリケーションに対するサテライト アセンブリの作成
 
@@ -52,7 +50,7 @@ ms.locfileid: "71045699"
 
 - サテライト アセンブリはアプリケーションと同じ名前を持つ必要があり、ファイル名拡張子として ".resources.dll" を使用する必要があります。 たとえば、アプリケーションが Example.exe という名前である場合、各サテライト アセンブリの名前は Example.resources.dll でなければなりません。 サテライト アセンブリ名は、リソース ファイルのカルチャを示していないことに注意してください。 ただし、サテライト アセンブリは、カルチャを指定するディレクトリに表示されます。
 
-- サテライト アセンブリのカルチャに関する情報は、アセンブリのメタデータに含まれている必要があります。 サテライト アセンブリのメタデータにカルチャ名を格納するには、サテライト アセンブリにリソースを埋め込むために [アセンブリ リンカー](../tools/al-exe-assembly-linker.md) を使用する際に `/culture` オプションを指定します。
+- サテライト アセンブリのカルチャに関する情報は、アセンブリのメタデータに含まれている必要があります。 サテライト アセンブリのメタデータにカルチャ名を格納するには、サテライト アセンブリにリソースを埋め込むために [Assembly Linker](../tools/al-exe-assembly-linker.md) を使用する際に `/culture` オプションを指定します。
 
 [グローバル アセンブリ キャッシュ](../app-domains/gac.md)内にインストールしないアプリケーションについて、サンプルのディレクトリ構造と位置に関する要件を次の図に示します。 拡張子が .txt および .resources の項目は、最終的なアプリケーションには付属していません。 それらは、最終的なサテライト リソース アセンブリを作成するために使用する中間リソース ファイルです。 この例では、.txt ファイルを .resx ファイルに置き換えることができます。 詳細については、「[リソースのパッケージ化と配置](packaging-and-deploying-resources-in-desktop-apps.md)」を参照してください。
 
@@ -88,7 +86,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  Al.exe で使用できるオプションの一覧については、「[アセンブリ リンカー (Al.exe)](../tools/al-exe-assembly-linker.md)」を参照してください。
   
-## <a name="satellite-assemblies-an-example"></a>サテライト アセンブリ:例  
+## <a name="satellite-assemblies-an-example"></a>サテライト アセンブリ: 例  
  ローカライズされたあいさつ文を含むメッセージ ボックスを表示する "Hello world" の簡単な例を以下に示します。 この例には、英語 (米国)、フランス語 (フランス)、ロシア語 (ロシア) のカルチャ用のリソースが含まれており、そのフォールバック カルチャは英語です。 例を作成するには、次の手順を実行します。  
   
 1. 既定のカルチャのリソースを含める Greeting.resx または Greeting.txt という名前のリソース ファイルを作成します。 値が "Hello world!" の `HelloString` という名前の 1 つの文字列を このファイルに格納します。
@@ -198,7 +196,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>グローバル アセンブリ キャッシュへのサテライト アセンブリのインストール
 
-ランタイムはリソース フォールバック プロセスでリソースを検索するときに、まず、[グローバル アセンブリ キャッシュ](../app-domains/gac.md)内を調べます (詳細については、「[リソースのパッケージ化と配置](packaging-and-deploying-resources-in-desktop-apps.md)」トピックの「リソース フォールバック プロセス」セクションを参照してください)。サテライト アセンブリが厳密な名前で署名されたらすぐに[グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) を使用して、グローバル アセンブリ キャッシュにインストールできます。
+ランタイムはリソース フォールバック プロセスでリソースを検索するときに、まず、[グローバル アセンブリ キャッシュ](../app-domains/gac.md)内を調べます (詳細については、「[リソースのパッケージ化と配置](packaging-and-deploying-resources-in-desktop-apps.md)」トピックの「リソースフォールバックプロセス」セクションを参照してください)。サテライトアセンブリは、厳密な名前で署名されるとすぐに、[グローバルアセンブリキャッシュツール (gacutil.exe)](../tools/gacutil-exe-gac-tool.md)を使用してグローバルアセンブリキャッシュにインストールできます。
 
 次の Gacutil.exe コマンドでは、グローバル アセンブリ キャッシュに StringLibrary.resources.dll をインストールします。
 
@@ -208,7 +206,7 @@ gacutil -i:StringLibrary.resources.dll
 
 **/i** オプションは、Gacutil.exe でグローバル アセンブリ キャッシュに指定されたアセンブリをインストールする必要があることを指定します。 サテライト アセンブリがキャッシュにインストールされた後、中に含まれるリソースは、サテライト アセンブリを使用するようにデザインされたすべてのアプリケーションで使用できるようになります。
 
-### <a name="resources-in-the-global-assembly-cache-an-example"></a>グローバル アセンブリ キャッシュのリソース:例
+### <a name="resources-in-the-global-assembly-cache-an-example"></a>グローバル アセンブリ キャッシュのリソース: 例
 
 次の例では、.NET Framework クラス ライブラリのメソッドを使用して、リソース ファイルからローカライズされたあいさつ文を抽出して返します。 ライブラリとそのリソースはグローバル アセンブリ キャッシュに登録されます。 例には、英語 (米国)、フランス語 (フランス)、ロシア語 (ロシア)、および英語カルチャ用のリソースが含まれています。 英語は既定のカルチャです。そのリソースはメイン アセンブリに格納されます。 この例では、最初に公開キーでライブラリとそのサテライト アセンブリに遅延署名してから、公開/秘密キーのペアで再署名します。 例を作成するには、次の手順を実行します。
 

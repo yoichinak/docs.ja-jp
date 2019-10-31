@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01d1b481-ca67-4712-8744-d342ec0df639
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da57ecf0c153d902322798e1927c995a34cb93d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bfe77982b88b2fc96dc2846b9db04df28bfc0c38
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761989"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131448"
 ---
 # <a name="icordebugmdagetdescription-method"></a>ICorDebugMDA::GetDescription メソッド
-によって表されるマネージ デバッグ アシスタント (MDA) の説明を表す文字列を取得します[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)します。  
+によって表されるマネージデバッグアシスタント (MDA) の説明を含む文字列を[取得します](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,19 +38,19 @@ HRESULT GetDescription (
   
 ## <a name="parameters"></a>パラメーター  
  `cchName`  
- [in]説明を格納する文字列バッファーのサイズ。  
+ から説明を格納する文字列バッファーのサイズ。  
   
  `pcchName`  
- [out]文字列バッファーに返されるバイト数へのポインター。  
+ 入出力文字列バッファーで返されたバイト数へのポインター。  
   
  `szName`  
- [out]MDA の説明を表す文字列のバッファー。  
+ 入出力MDA の説明を格納している文字列バッファー。  
   
 ## <a name="remarks"></a>Remarks  
- 文字列が長さ 0 を指定できます。  
+ 文字列の長さは0にすることができます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

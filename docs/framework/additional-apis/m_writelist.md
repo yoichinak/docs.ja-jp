@@ -1,5 +1,5 @@
 ---
-title: Connection.m_WriteList フィールド
+title: M_WriteList フィールド
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d138e0490e849ff26f540077ec7d23ae42737606
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 9760e301e25bc6e69ab22b563894cb079a8d58bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300908"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120027"
 ---
-# <a name="connectionmwritelist-field"></a>Connection.m\_WriteList フィールド
+# <a name="connectionm_writelist-field"></a>接続. m\_WriteList フィールド
 
-`Connection.m_WriteList` <xref:System.Collections.ArrayList>の<xref:System.Net.HttpWebRequest>HTTP 経由での送信をキューに置かれたオブジェクト。
+`Connection.m_WriteList` は、HTTP 経由で送信されるようにキューに登録されている <xref:System.Net.HttpWebRequest> オブジェクトの <xref:System.Collections.ArrayList> です。
 
 ## <a name="syntax"></a>構文
   
@@ -30,14 +30,14 @@ private ArrayList m_WriteList
 ```
 
 > [!WARNING]
-> `Connection.m_WriteList`フィールドはプライベートであり、コード内で直接使用するものではありません。
+> `Connection.m_WriteList` フィールドはプライベートであり、コードで直接使用するためのものではありません。
 > 
-> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのフィールドの使用はサポートしていません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **名前空間:** <xref:System.Net>
 
-**アセンブリ:** (System.dll) のシステム
+**アセンブリ:** システム (.dll 内)
 
-**.NET framework のバージョン:** 2.0 以降で使用可能です。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

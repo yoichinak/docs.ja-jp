@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9e26fb36b77e38c81273ccda370a203dd3388e5c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291693"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395936"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET の System.IO.Pipelines
 
@@ -23,6 +23,7 @@ ms.locfileid: "72291693"
 <a name="solve"></a>
 
 ## <a name="what-problem-does-systemiopipelines-solve"></a>System.IO.Pipelines によって解決される問題
+
 <!-- corner case doesn't MT (machine translate)   -->
 ストリーミング データを解析するアプリは、多くの特殊な通常とは異なるコード フローを持つ定型コードで構成されます。 定型および特殊なケースのコードは複雑で、保守が困難です。
 
@@ -38,7 +39,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 {
     var buffer = new byte[1024];
     await stream.ReadAsync(buffer, 0, buffer.Length);
-    
+
     // Process a single line from the buffer
     ProcessLine(buffer);
 }
@@ -55,7 +56,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 
 * 改行が検出されるまで、受信データをバッファーに格納します。
 * バッファーで返されたすべての行を解析します。
-* 行が 1 KB (1024 バイト) より大きい可能性があります。 コードでは、完全な行が検出された入力バッファーのサイズを変更する必要があります。
+* 行が 1 KB (1024 バイト) より大きい可能性があります。 コードでは、バッファー内の完全な行に収まるように、区切り記号が見つかるまで入力バッファーのサイズを変更する必要があります。
 
   * バッファーのサイズが変更された場合、入力により長い行が表示されると、より多くのバッファー コピーが作成されます。
   * 無駄な領域を減らすには、行の読み取りに使用されるバッファーを小さくします。
@@ -97,7 +98,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 * 次の 2 つの重要な情報を含む、<xref:System.IO.Pipelines.ReadResult> を返します。
 
   * `ReadOnlySequence<byte>` の形式で読み取られたデータ。
-  * データの終わり (EOF) に到達したかどうかを示すブール値 `IsCompleted`。 
+  * データの終わり (EOF) に到達したかどうかを示すブール値 `IsCompleted`。
 
 行の終わり (EOL) の区切り記号が検出され、行が解析された後は、次のようになります。
 
@@ -304,7 +305,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 ## <a name="pipewriter"></a>PipeWriter
 
-<xref:System.IO.Pipelines.PipeWriter> では、呼び出し元の代わりに書き込むバッファーを管理します。 `PipeWriter` では、[`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter`1) を実装します。 `IBufferWriter<byte>` は、バッファーのコピーを追加せずに、書き込みを実行するためにバッファーにアクセスできるようにします。
+<xref:System.IO.Pipelines.PipeWriter> では、呼び出し元の代わりに書き込むバッファーを管理します。 `PipeWriter` では、[`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601) を実装します。 `IBufferWriter<byte>` は、バッファーのコピーを追加せずに、書き込みを実行するためにバッファーにアクセスできるようにします。
 
 [!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
 

@@ -30,6 +30,8 @@
         - name: 映画をお勧めする (マトリックス因子分解)
           href: tutorials/movie-recommendation.md
         - name: 画像の分類 (転移学習)
+          href: tutorials/image-classification-api-transfer-learning.md
+        - name: 画像の分類 (モデルの構成)
           href: tutorials/image-classification.md
         - name: 製品売上分析 (異常検出)
           href: tutorials/sales-anomaly-detection.md
@@ -59,15 +61,15 @@
       href: resources/transforms.md
     - name: メトリック
       href: resources/metrics.md
-    - name: モデルの正確度を改善する
+    - name: モデルの精度の向上
       href: resources/improve-machine-learning-model-ml-net.md
-- name: 使い方ガイド
+- name: ハウツー ガイド
   items:
     - name: API
       items:
-        - name: データの読み込み
+        - name: データを読み込む
           href: how-to-guides/load-data-ml-net.md
-        - name: データの準備
+        - name: データを準備する
           href: how-to-guides/prepare-data-ml-net.md
         - name: トレーニング、評価、およびモデルの説明
           items:
@@ -93,13 +95,15 @@
               href: how-to-guides/serve-model-web-api-ml-net.md
     - name: ツール
       items:
+        - name: モデル ビルダーにデータを読み込む
+          href: how-to-guides/load-data-model-builder.md
         - name: モデル ビルダーのインストール
           href: how-to-guides/install-model-builder.md
         - name: CLI をインストールする
           href: how-to-guides/install-ml-net-cli.md
         - name: 自動化された ML API を使用する
           href: how-to-guides/how-to-use-the-automl-api.md
-- name: 参照
+- name: 関連項目
   items:
     - name: API
       items:

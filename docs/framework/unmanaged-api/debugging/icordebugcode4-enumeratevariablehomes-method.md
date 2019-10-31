@@ -1,5 +1,5 @@
 ---
-title: ICorDebugCode4::EnumerateVariableHomes メソッド
+title: 'ICorDebugCode4:: EnumerateVariableHomes メソッド'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCode4.EnumerateVariableHomes
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 802c01ff-8b80-4733-b6dd-03ab6ff7fa11
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e0e6acdf6996f437c85b629b0af886287b1aef03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 850cbd2367dddd9f46375817e271cb8e7183cf64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748559"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121097"
 ---
-# <a name="icordebugcode4enumeratevariablehomes-method"></a>ICorDebugCode4::EnumerateVariableHomes メソッド
-ローカル変数と引数を関数内の列挙子を取得します。  
+# <a name="icordebugcode4enumeratevariablehomes-method"></a>ICorDebugCode4:: EnumerateVariableHomes メソッド
+関数のローカル変数および引数に対する列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,13 +35,13 @@ HRESULT EnumerateVariableHomes(
   
 ## <a name="parameters"></a>パラメーター  
  `ppEnum`  
- アドレスへのポインター、 [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)インターフェイス オブジェクトは、ローカル変数と関数の引数の列挙子です。  
+ 関数内のローカル変数および引数の列挙子である、の[型](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)のオブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)インターフェイス オブジェクトを列挙できるようにする"ICorDebugEnum"インターフェイスから派生した標準の列挙子は、 [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)オブジェクト。 コレクションが複数あります[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)関数は、さまざまなポイントで異なるホームがある場合は、同じスロットまたは引数のインデックスのオブジェクトします。  
+ "ICorDebugEnum" インターフェイスから派生した標準列挙子で[ある、表示変数](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)[ホーム](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)オブジェクトを列挙できます。 コレクションには、同じスロットまたは引数インデックスに対して、関数内の異なるポイントに異なる[ホーム](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)オブジェクトが含まれている場合があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

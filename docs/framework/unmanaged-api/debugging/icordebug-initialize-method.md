@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fae3b23-5c9f-47c0-85d8-6bb75e050786
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 80465c8d1f1f9e09c0675de1667b999b332b9f6b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a5cda98cac0bc3fc6fb101fd0404b062224cb578
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738150"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134083"
 ---
 # <a name="icordebuginitialize-method"></a>ICorDebug::Initialize メソッド
 `ICorDebug` オブジェクトを初期化します。  
@@ -34,10 +32,10 @@ HRESULT Initialize ();
 ```  
   
 ## <a name="remarks"></a>Remarks  
- デバッガーを呼び出す必要があります`Initialize`デバッグを初期化するために時間がサービスの作成時。 他のメソッドの前にこのメソッドを呼び出す必要があります`ICorDebug`が呼び出されます。  
+ デバッガーは、作成時に `Initialize` を呼び出して、デバッグサービスを初期化する必要があります。 `ICorDebug` の他のメソッドが呼び出される前に、このメソッドを呼び出す必要があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

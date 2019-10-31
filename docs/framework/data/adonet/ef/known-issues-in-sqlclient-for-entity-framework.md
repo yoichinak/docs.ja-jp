@@ -2,12 +2,12 @@
 title: Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) の既知の問題
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 0938c57f48a062082fe973a670eb6a9b9fc4ed3c
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: f42ef8dfa1c3041faf7179665cced3c2b9fcf3a6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395514"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039969"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) の既知の問題
 ここでは、.NET Framework Data Provider for SQL Server (SqlClient) に関連する既知の問題について説明します。  
@@ -38,21 +38,21 @@ ms.locfileid: "72395514"
 ## <a name="skip-operator"></a>SKIP 演算子  
  SQL Server 2000 を使用している場合は、非キー列で ORDER BY を使用して SKIP を使用すると、正しくない結果が返される可能性があります。 キー以外の列に重複するデータが存在する場合、指定された数を超える行はスキップされます。 これは、SQL Server 2000 に対する SKIP の変換方法によるものです。 たとえば、次のクエリでは、`E.NonKeyColumn` の値が重複していると、5行を超える行がスキップされる可能性があります。  
   
-```  
+```sql  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>適切なバージョンの SQL Server を対象としたクエリの実行  
- Entity Framework は、ストレージモデル (.ssdl) ファイルの Schema 要素の `ProviderManifestToken` 属性に指定されている SQL Server バージョンに基づく Transact-sql クエリを対象としています。 このバージョンは、実際に接続する SQL Server のバージョンとは異なる場合があります。 たとえば、SQL Server 2005 を使用していても、@no__t 0 属性が2008に設定されている場合、生成された Transact-sql クエリはサーバーで実行されない可能性があります。 たとえば、SQL Server 2008 で導入された新しい日付と時刻の型を使用するクエリは、以前のバージョンの SQL Server では実行されません。 SQL Server 2005 を使用していても、@no__t 0 属性が2000に設定されている場合は、生成された Transact-sql クエリの最適化が低下するか、クエリがサポートされていないという例外が発生する可能性があります。 詳細については、このトピックの「CROSS APPLY 演算子および OUTER APPLY 演算子」を参照してください。  
+ Entity Framework は、ストレージモデル (.ssdl) ファイルの Schema 要素の `ProviderManifestToken` 属性に指定されている SQL Server バージョンに基づく Transact-sql クエリを対象としています。 このバージョンは、実際に接続する SQL Server のバージョンとは異なる場合があります。 たとえば、SQL Server 2005 を使用していて、`ProviderManifestToken` 属性が2008に設定されている場合、生成された Transact-sql クエリはサーバーで実行されない可能性があります。 たとえば、SQL Server 2008 で導入された新しい日付と時刻の型を使用するクエリは、以前のバージョンの SQL Server では実行されません。 SQL Server 2005 を使用していても、`ProviderManifestToken` 属性が2000に設定されている場合、生成された Transact-sql クエリの最適化が低下するか、クエリがサポートされていないという例外が発生する可能性があります。 詳細については、このトピックの「CROSS APPLY 演算子および OUTER APPLY 演算子」を参照してください。  
   
- データベースの一部の動作は、データベースの互換性レベルの設定に依存します。 @No__t-0 属性が2005に設定されていて、SQL Server バージョンが2005であるにもかかわらず、データベースの互換性レベルが "80" (SQL Server 2000) に設定されている場合、生成された Transact-sql は SQL Server 2005 を対象としますが、想定どおりに実行されない可能性があります。互換性レベルの設定。 たとえば、ORDER BY リストの列名とセレクターの列名が一致する場合、順序付けが失われることがあります。  
+ データベースの一部の動作は、データベースの互換性レベルの設定に依存します。 `ProviderManifestToken` 属性が2005に設定されており、SQL Server バージョンが2005であるにもかかわらず、データベースの互換性レベルが "80" (SQL Server 2000) に設定されている場合、生成された Transact-sql は SQL Server 2005 を対象としますが、想定どおりに実行されない可能性があります。互換性レベルの設定。 たとえば、ORDER BY リストの列名とセレクターの列名が一致する場合、順序付けが失われることがあります。  
   
 ## <a name="nested-queries-in-projection"></a>投影内の入れ子になったクエリ  
  projection 句内の入れ子になったクエリは、サーバーでデカルト積に変換されないことがあります。 SQL Server を含む一部のバックエンドサーバーでは、TempDB テーブルのサイズが非常に大きくなる可能性があります。 サーバーのパフォーマンスが低下する可能性があります。  
   
  projection 句内の入れ子になったクエリの例を次に示します。  
   
-```  
+```sql  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   

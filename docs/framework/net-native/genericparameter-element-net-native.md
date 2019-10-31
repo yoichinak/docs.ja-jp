@@ -1,15 +1,13 @@
 ---
-title: <GenericParameter>要素 (.NET ネイティブ)
+title: <GenericParameter> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2898d804f7a351045b2fbce42042f9fd322ebb0a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d0b18211206a8f9d4365ab3affe6d1c376003348
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049755"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128434"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > 要素 (.NET ネイティブ)
 ジェネリック型またはメソッドのパラメーターの型にポリシーを適用します。  
@@ -27,7 +25,7 @@ ms.locfileid: "71049755"
                   XmlSerializer="policy_type"  
                   MarshalObject="policy_type"  
                   MarshalDelegate="policy_type"  
-                  MarshalStructure="policy_type"  
+                  MarshalStructure="policy_type" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -51,13 +49,13 @@ ms.locfileid: "71049755"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*generic_parameter_name*|必須の属性です。 ジェネリック型パラメーターの名前。 たとえば、ジェネリック デリゲート <xref:System.Func%603> の場合、*generic_parameter_name* の値 "TResult" によって、デリゲートの戻り値に実行時ポリシーが適用されます。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
@@ -89,7 +87,7 @@ ms.locfileid: "71049755"
 ## <a name="see-also"></a>関連項目
 
 - [\<Method> 要素](method-element-net-native.md)
-- [\<> 要素を入力します](type-element-net-native.md)
+- [\<Type > 要素](type-element-net-native.md)
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ ポリシーの設定](runtime-directive-policy-settings.md)
 - [ランタイム ディレクティブ要素](runtime-directive-elements.md)

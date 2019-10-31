@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c0c92fe-8bd2-477f-b307-aca0143732ca
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bf9f7f3d3419efc9e1dc7d75fc7272432c0cf5d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7af194351290ad937e40a2fc8b960c2c242629c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739696"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132796"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags 列挙型
 マネージド デバッグ アシスタント (MDA) が生成されるスレッドのステータスを指定します。  
@@ -38,13 +36,13 @@ typedef enum CorDebugMDAFlags {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`MDA_FLAG_SLIP`|MDA が起動されたので、MDA が起動されたスレッドが変更されました。|  
+|`MDA_FLAG_SLIP`|Mda が起動されてから、MDA が起動されたスレッドが遅れています。|  
   
 ## <a name="remarks"></a>Remarks  
- 呼び出し履歴では、この MDA が最初に発生した場所記述されていない、ときに、スレッドが持つと見なされます*スリップ*します。 これは、異常終了時に無効な操作のスレッドの実行によってもたらさです。  
+ 呼び出し履歴で、MDA が最初に発生した場所が記述されなくなった場合、スレッドは*遅れ*ていると見なされます。 これは、スレッドが終了時に無効な操作を実行したことによって発生する異常な状況です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

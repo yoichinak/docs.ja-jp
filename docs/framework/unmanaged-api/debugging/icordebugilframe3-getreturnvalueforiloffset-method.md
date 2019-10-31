@@ -13,14 +13,12 @@ api_type:
 ms.assetid: 06522727-5f64-4391-9331-11386883c352
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5832ec095ea0e96327f6a9636193da9c0c8a5dd2
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: c7419e5c3677b5679a0ca5c234463ae6e205b7d1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988261"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090373"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset メソッド
 関数の戻り値をカプセル化する "ICorDebugValue" オブジェクトを取得します。  
@@ -55,20 +53,20 @@ HRESULT GetReturnValueForILOffset(
  [ICorDebugCode3:: Getreturnvalu veoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)メソッドに関数呼び出しサイトへの IL オフセットを渡すと、1つ以上のネイティブオフセットが返されます。 これによってデバッガーは、関数内のこうしたネイティブ オフセット上でブレークポイントを設定できます。 デバッガーがいずれかのブレークポイントに到達すると、戻り値を取得するためにこのメソッドに同じ IL オフセットを渡すことができます。 この場合、デバッガーは設定したブレークポイントすべてをクリアする必要があります。  
   
 > [!WARNING]
-> [ICorDebugCode3:: getreturnvalu veoffset メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)とメソッド`ICorDebugILFrame3::GetReturnValueForILOffset`を使用すると、参照型の戻り値の情報のみを取得できます。 値型 (つまり、<xref:System.ValueType> から派生するすべての型) からの戻り値情報の取得はサポートされません。  
+> [ICorDebugCode3:: Getreturnvalu Veoffset メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)と `ICorDebugILFrame3::GetReturnValueForILOffset` メソッドを使用すると、参照型の戻り値の情報のみを取得できます。 値型 (つまり、<xref:System.ValueType> から派生するすべての型) からの戻り値情報の取得はサポートされません。  
   
- `ILOffset`パラメーターで指定された il オフセットは関数呼び出しサイトに存在する必要があります。また、同じ il オフセットの[ICorDebugCode3:: getreturnvalu veoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)メソッドによって返されるネイティブオフセットに設定されているブレークポイントで、デバッグ対象を停止する必要があります。 デバッグ対象が指定の IL オフセットに対して正確な場所で停止しない場合、API は失敗します。  
+ `ILOffset` パラメーターによって指定された IL オフセットは関数呼び出しサイトに存在する必要があります。また、同じ IL オフセットに対して[ICorDebugCode3:: Getreturnvalu veoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)メソッドによって返されるネイティブオフセットに設定されているブレークポイントで、デバッグ対象を停止する必要があります。 デバッグ対象が指定の IL オフセットに対して正確な場所で停止しない場合、API は失敗します。  
   
  関数呼び出しで値が返されない場合、API は失敗します。  
   
  `ICorDebugILFrame3::GetReturnValueForILOffset` メソッドは、x86 ベースおよび AMD64 システムでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   

@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 71aee5f3-5e10-44fa-be69-6d8a475f2c14
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f0d73da04242bfe5a4958a62d2a48b609b474309
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 732e07e15b3ddd535bf781e6c297383150e40e94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987676"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123409"
 ---
 # <a name="icordebugprocess7-interface"></a>ICorDebugProcess7 インターフェイス
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -32,8 +30,8 @@ ms.locfileid: "61987676"
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

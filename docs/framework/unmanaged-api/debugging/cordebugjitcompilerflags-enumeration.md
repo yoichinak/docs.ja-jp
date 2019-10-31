@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0774f70-5bed-45e8-9922-fdad778c4c33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 39bc1316bb7d8e2aba3390499437aadf263dac07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 739b491d343c0eba76160c15719069ffae385f46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739850"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097976"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>CorDebugJITCompilerFlags 列挙型
 マネージド Just-In-Time (JIT) コンパイラの動作に影響を与える値が含まれます。  
@@ -42,12 +40,12 @@ typedef enum CorDebugJITCompilerFlags {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_DEFAULT`|コンパイラがコンパイルのデータを追跡し、により、最適化を指定します。|  
-|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|コンパイラが最適化を無効にしますが、コンパイルのデータを追跡する必要がありますを指定します。|  
-|`CORDEBUG_JIT_ENABLE_ENC`|コンパイラを追跡するコンパイルのデータの最適化を無効にしてエディット コンティニュのテクノロジを有効に指定します。|  
+|`CORDEBUG_JIT_DEFAULT`|コンパイラがコンパイルデータを追跡し、最適化を許可することを指定します。|  
+|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|コンパイラがコンパイルデータを追跡する必要があるが、最適化を無効にすることを指定します。|  
+|`CORDEBUG_JIT_ENABLE_ENC`|コンパイラがコンパイルデータを追跡し、最適化を無効にして、エディットコンティニュテクノロジを有効にする必要があることを指定します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

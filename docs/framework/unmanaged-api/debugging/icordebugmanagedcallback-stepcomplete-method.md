@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e1f2c47-81df-4530-826d-96489cd68719
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7c3ced50457519d62be44712386bdabce176c44e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e044b1a2ad777868e33cd64bc8d09a9b76d547aa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761314"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130669"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>ICorDebugManagedCallback::StepComplete メソッド
 ステップが完了したことをデバッガーに通知します。  
@@ -40,22 +38,22 @@ HRESULT StepComplete (
   
 ## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]ステップが完了するスレッドを格納しているアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ からステップが完了したスレッドを含むアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `pThread`  
- [in]ステップが完了するスレッドを表す ICorDebugThread オブジェクトへのポインター。  
+ からステップが完了したスレッドを表す、のスレッドオブジェクトへのポインター。  
   
  `pStepper`  
- [in]コードの実行の手順を表す ICorDebugStepper オブジェクトへのポインター。  
+ からコード実行のステップを表す ICorDebugStepper オブジェクトへのポインター。  
   
  `reason`  
- [in]個々 のステップの結果を示す CorDebugStepReason 列挙型の値。  
+ から個々のステップの結果を示す CorDebugStepReason 列挙値。  
   
 ## <a name="remarks"></a>Remarks  
- ステッパをステップ実行を続ける場合、必要に応じて、デバッグを終了しない限り、使用可能性があります。  
+ デバッグが終了しない限り、必要に応じてステップを続行するためにステッパを使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

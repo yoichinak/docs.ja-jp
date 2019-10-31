@@ -2,12 +2,12 @@
 title: セキュリティに関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 1865afb384cfff41ede953c00f01cc96aea9a080
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854248"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039864"
 ---
 # <a name="security-considerations-entity-framework"></a>セキュリティに関する注意事項 (Entity Framework)
 このトピックでは、Entity Framework アプリケーションの開発、配置、および実行に固有のセキュリティの考慮事項について説明します。 また、セキュリティで保護された .NET Framework アプリケーションを作成するための推奨事項に従ってください。 詳細については、「[セキュリティの概要](../security-overview.md)」を参照してください。  
@@ -46,7 +46,7 @@ ms.locfileid: "70854248"
   
 - 接続を動的に作成する場合は接続文字列ビルダーを使用する。  
   
-     接続文字列を実行時に作成する必要がある場合は <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用します。 この文字列ビルダー クラスは、入力情報を検証して無効な入力情報をエスケープする処理により、接続文字列インジェクション攻撃の防止に役立ちます。 詳細については、「[方法 :EntityConnection 接続文字列](how-to-build-an-entityconnection-connection-string.md)を作成します。 また、適切な文字列ビルダークラスを使用して、Entity Framework 接続文字列の一部であるデータソース接続文字列を作成します。 ADO.NET プロバイダーの接続文字列ビルダーの詳細については、「[接続文字列ビルダー](../connection-string-builders.md)」を参照してください。  
+     接続文字列を実行時に作成する必要がある場合は <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用します。 この文字列ビルダー クラスは、入力情報を検証して無効な入力情報をエスケープする処理により、接続文字列インジェクション攻撃の防止に役立ちます。 詳細については、「[方法: EntityConnection 接続文字列を作成](how-to-build-an-entityconnection-connection-string.md)する」を参照してください。 また、適切な文字列ビルダークラスを使用して、Entity Framework 接続文字列の一部であるデータソース接続文字列を作成します。 ADO.NET プロバイダーの接続文字列ビルダーの詳細については、「[接続文字列ビルダー](../connection-string-builders.md)」を参照してください。  
   
  詳細については、「[接続情報の保護](../protecting-connection-information.md)」を参照してください。  
   
@@ -73,17 +73,17 @@ ms.locfileid: "70854248"
   
 - <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> (<xref:System.Runtime.Serialization.ISerializable> インターフェイスを使用して例外をシリアル化するため)。  
   
-- データベース接続を開いて、データベースに対して<xref:System.Data.SqlClient.SqlClientPermission>コマンドを実行する権限 (たとえば、SQL Server データベースの場合)。  
+- データベース接続を開いて、データベースに対してコマンドを実行する権限 (SQL Server データベースの <xref:System.Data.SqlClient.SqlClientPermission> など)。  
   
- 詳細については、「 [コード アクセス セキュリティと ADO.NET](../code-access-security.md)」を参照してください。  
+ 詳細については、「 [Code Access Security and ADO.NET](../code-access-security.md)」を参照してください。  
   
 #### <a name="do-not-install-untrusted-applications"></a>信頼できないアプリケーションをインストールしない  
  Entity Framework では、セキュリティアクセス許可は適用されません。ユーザーが指定したデータオブジェクトコードは、信頼されているかどうかに関係なく、処理中に呼び出されます。 データ ストアとアプリケーションでクライアントの認証および承認が行われるようにしてください。  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>すべての構成ファイルへのアクセスを制限する  
- 管理者は、アプリケーションの構成を指定するすべてのファイルへの書き込みアクセスを制限する必要があります。これには、enterprisesec、config、machine.config、 \<アプリケーション構成ファイルの*アプリケーション*> が含まれます.exe. .config.  
+ 管理者は、アプリケーションの構成を指定するすべてのファイルへの書き込みアクセスを制限する必要があります。これには、enterprisesec、config、machine.config、アプリケーション構成ファイル \<*アプリケーション*> が含まれます.exe. .config.  
   
- app.config ではプロバイダーの不変名を変更できます。クライアント アプリケーションは、強力な名前を使用して標準のプロバイダー ファクトリ モデルを通じて基になるプロバイダーにアクセスする責任を負う必要があります。  
+ プロバイダーの不変名は、app.config で変更できます。クライアントアプリケーションは、厳密な名前を使用して、標準プロバイダーファクトリモデルを通じて基になるプロバイダーにアクセスする必要があります。  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>モデル ファイルとマッピング ファイルへのアクセス許可を制限する  
  管理者は、モデル ファイルとマッピング ファイル (.edmx、.csdl、.ssdl、および .msl) への書き込みアクセスを、モデルやマッピングを変更するユーザーのみに制限する必要があります。 Entity Framework には、実行時にのみこれらのファイルに対する読み取りアクセス権が必要です。 また、管理者は、Entity Data Model ツールによって生成されるオブジェクトレイヤーおよびプリコンパイル済みビューソースコードファイルへのアクセスを制限する必要があります。  
@@ -102,7 +102,7 @@ ms.locfileid: "70854248"
   
 - LINQ to Entities インジェクション攻撃:  
   
-     LINQ to Entities ではクエリの構成が可能ですが、オブジェクトモデルの API を使用して実行されます。 クエリ[!INCLUDE[esql](../../../../../includes/esql-md.md)]とは異なり、LINQ to Entities のクエリは文字列操作や連結を使用して構成されず、従来の SQL インジェクション攻撃の影響を受けにくくなります。  
+     LINQ to Entities ではクエリの構成が可能ですが、オブジェクトモデルの API を使用して実行されます。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリとは異なり、LINQ to Entities クエリは文字列操作や連結を使用して構成されず、従来の SQL インジェクション攻撃の影響を受けにくくなります。  
   
 #### <a name="prevent-very-large-result-sets"></a>非常に大きな結果セットを使用しないようにする  
  非常に大きな結果セットを使用すると、消費されるリソースが結果セットのサイズに比例して増加する操作を実行する場合にクライアント システムがシャットダウンする可能性があります。 次のような状況では、予想外に大きな結果セットが生成されることがあります。  
@@ -113,18 +113,18 @@ ms.locfileid: "70854248"
   
 - 入れ子になった [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリ。  
   
- ユーザー入力を受け取るときには、その入力によって結果セットがシステムで処理しきれないほど大きくならないことを確認する必要があります。 また、LINQ to Entities または<xref:System.Linq.Queryable.Take%2A>の[!INCLUDE[esql](../../../../../includes/esql-md.md)] [LIMIT](./language-reference/limit-entity-sql.md)演算子でメソッドを使用して、結果セットのサイズを制限することもできます。  
+ ユーザー入力を受け取るときには、その入力によって結果セットがシステムで処理しきれないほど大きくならないことを確認する必要があります。 また、[!INCLUDE[esql](../../../../../includes/esql-md.md)] の LINQ to Entities または[limit](./language-reference/limit-entity-sql.md)演算子で <xref:System.Linq.Queryable.Take%2A> メソッドを使用して、結果セットのサイズを制限することもできます。  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>信頼できない可能性のある呼び出し元にメソッドを公開するときに IQueryable 結果を返さないようにする  
  次の理由で、信頼できない可能性のある呼び出し元に公開されたメソッドから <xref:System.Linq.IQueryable%601> 型を返さないようにします。  
   
 - <xref:System.Linq.IQueryable%601> 型を公開するクエリのコンシューマーが、セキュリティ保護されたデータを公開したり結果セットのサイズを増やしたりする結果に関するメソッドを呼び出す可能性があるため。 たとえば、次のようなメソッド シグネチャについて考えてみます。  
   
-    ```  
+    ```csharp  
     public IQueryable<Customer> GetCustomer(int customerId)  
     ```  
   
-     このクエリのコンシューマーは返された `.Include("Orders")` の `IQueryable<Customer>` を呼び出し、クエリが公開を意図していないデータを取得する可能性があります。 これを回避するには、メソッドの戻り値の型を <xref:System.Collections.Generic.IEnumerable%601> に変更し、結果を具体化するメソッド (`.ToList()` など) を呼び出します。  
+    このクエリのコンシューマーは返された `.Include("Orders")` の `IQueryable<Customer>` を呼び出し、クエリが公開を意図していないデータを取得する可能性があります。 これを回避するには、メソッドの戻り値の型を <xref:System.Collections.Generic.IEnumerable%601> に変更し、結果を具体化するメソッド (`.ToList()` など) を呼び出します。  
   
 - 結果が反復されると <xref:System.Linq.IQueryable%601> クエリが実行されるため、<xref:System.Linq.IQueryable%601> 型を公開するクエリのコンシューマーがスローされた例外をキャッチする可能性があります。 例外にコンシューマーを対象としていない情報が含まれている場合があります。  
   
@@ -145,13 +145,13 @@ ms.locfileid: "70854248"
 ASP.NET アプリケーションでパスを操作するときは、次の点を考慮する必要があります。  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>ホストでパスがチェックされるかどうかを確認する  
- `|DataDirectory|` (パイプ記号で囲まれた) 置換文字列を使用すると、ADO.NET は解決されたパスがサポートされているかどうかを確認します。 たとえば、`DataDirectory` の後に "." を使用することはできません。 ASP.NET をホストするプロセスによって、Web アプリケーション`~`のルート演算子 () を解決する場合と同じチェックが実行されます。 IIS ではこのチェックが行われますが、IIS 以外のホストでは、解決されたパスがサポートされているかどうかが確認されない可能性があります。 Entity Framework アプリケーションを展開するホストの動作を把握しておく必要があります。  
+ `|DataDirectory|` (パイプ記号で囲まれた) の置換文字列が使用される場合、ADO.NET は解決されたパスがサポートされていることを確認します。 たとえば、`DataDirectory` の後に "." を使用することはできません。 ASP.NET をホストするプロセスによって、Web アプリケーションのルート操作 (`~`) を解決するための同じチェックが実行されます。 IIS ではこのチェックが行われますが、IIS 以外のホストでは、解決されたパスがサポートされているかどうかが確認されない可能性があります。 Entity Framework アプリケーションを展開するホストの動作を把握しておく必要があります。  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>解決されるパス名を想定しない  
- ルート演算子 (`~`) `DataDirectory`と置換文字列を解決する値は、アプリケーションの実行時に一定のままである必要がありますが、Entity Framework では、ホストがこれらの値を変更できないように制限されていません。  
+ ルート演算子 (`~`) と `DataDirectory` 置換文字列を解決する値は、アプリケーションの実行時には一定のままである必要がありますが、Entity Framework では、ホストがこれらの値を変更できないように制限していません。  
   
 #### <a name="verify-the-path-length-before-deployment"></a>配置の前にパスの長さを確認する  
- Entity Framework アプリケーションを展開する前に、ルート演算子 (~) と`DataDirectory`置換文字列の値がオペレーティングシステムのパスの長さの制限を超えていないことを確認する必要があります。 ADO.NET データプロバイダーでは、パスの長さが有効な制限内であることは保証されません。  
+ Entity Framework アプリケーションを展開する前に、ルート演算子 (~) と `DataDirectory` の置換文字列の値が、オペレーティングシステムのパスの長さの制限を超えていないことを確認する必要があります。 ADO.NET データプロバイダーでは、パスの長さが有効な制限内であることは保証されません。  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>ADO.NET メタデータのセキュリティに関する注意点  
  モデル ファイルとマッピング ファイルの生成と操作を行う際は、セキュリティに関して次の点に注意する必要があります。  

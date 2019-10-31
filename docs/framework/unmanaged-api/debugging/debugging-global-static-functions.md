@@ -6,14 +6,12 @@ helpviewer_keywords:
 - debugging global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], debugging
 ms.assetid: efc64414-77c3-48d0-881a-8594ed416aad
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e2403d736d031aab52525fc12b5071e764a8bde1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 965724c1e937fa62f05c33b0dcf8a5c8b9e1b029
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698526"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124313"
 ---
 # <a name="debugging-global-static-functions"></a>デバッグ グローバル静的関数
 このセクションでは、デバッグ API が使用するアンマネージ グローバル静的関数について説明します。  

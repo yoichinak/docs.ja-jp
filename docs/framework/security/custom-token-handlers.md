@@ -3,12 +3,12 @@ title: カスタムのトークン ハンドラー
 ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
-ms.openlocfilehash: f7d611bf396f028ff23a39cd529825f99fec300a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ccf794b4c229bbc9b40ae7ec2fd649825122cecf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650439"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040560"
 ---
 # <a name="custom-token-handlers"></a>カスタムのトークン ハンドラー
 このトピックでは、WIF のトークン ハンドラーと、それらを使用してトークンをどのように処理するかを説明します。 また、WIF で既定ではサポートされていないトークンの種類用にカスタム トークン ハンドラーを作成するために必要なことについても説明します。  
@@ -70,13 +70,13 @@ ms.locfileid: "64650439"
     </system.identityModel>  
     ```  
   
-     既に組み込みトークン ハンドラーがあるトークン型を処理する独自のトークン ハンドラーを指定する場合は、**\<remove>** 要素を追加して、既定のハンドラーを削除し、代わりにカスタム ハンドラーを使用する必要があります。 たとえば、次の構成では、既定の <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> をカスタム トークン ハンドラーに置き換えます。  
+     既に組み込みトークン ハンドラーがあるトークン型を処理する独自のトークン ハンドラーを指定する場合は、 **\<remove>** 要素を追加して、既定のハンドラーを削除し、代わりにカスタム ハンドラーを使用する必要があります。 たとえば、次の構成では、既定の <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> をカスタム トークン ハンドラーに置き換えます。  
   
     ```xml  
     <system.identityModel>  
         <identityConfiguration saveBootstrapContext="true">  
             <securityTokenHandlers>  
-                <remove type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789">  
+                <remove type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789" />  
                 <add type="CustomToken.MyCustomTokenHandler, CustomToken" />  
             </securityTokenHandlers>  
         </identityConfiguration>  

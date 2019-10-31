@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6036345-18a3-45c1-a302-b1c6f2dced9b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbf12612bb432f8935d08bdeac0bbcb471c38c54
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 70ae72968c3411a6732b09c0afe3d82931410cb5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759629"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130815"
 ---
 # <a name="icordebugmanagedcallbackevalexception-method"></a>ICorDebugManagedCallback::EvalException メソッド
-ハンドルされない例外で、評価が終了したことをデバッガーに通知します。  
+ハンドルされない例外で評価が終了したことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,16 +37,16 @@ HRESULT EvalException (
   
 ## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]評価が終了したアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ から評価が終了したアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `pThread`  
- [in]評価が終了したスレッドを表す ICorDebugThread オブジェクトへのポインター。  
+ から評価が終了したスレッドを表す、のスレッドオブジェクトへのポインター。  
   
  `pEval`  
- [in]評価を実行するコードを表す ICorDebugEval オブジェクトへのポインター。  
+ から評価を実行したコードを表す、のオブジェクトへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: ce7e5ad53f7aa5dad457ca1aa6ab76716086c0c3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 25419f8a810b52103e6b862cfe2fe6ab5a1fd981
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833987"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040086"
 ---
 # <a name="generating-strongly-typed-datasets"></a>厳密に型指定された DataSet の生成
-Xml スキーマ定義言語 (XSD) 標準に準拠した XML スキーマを使用すると、Windows ソフトウェア開発キット (SDK) に用意されている XSD.EXE ツールを使用して、厳密に型指定された @no__t 0 を生成できます。  
+Xml スキーマ定義言語 (XSD) 標準に準拠した XML スキーマを使用すると、Windows ソフトウェア開発キット (SDK) に付属している XSD.EXE ツールを使用して、厳密に型指定された <xref:System.Data.DataSet> を生成できます。  
   
  (データベーステーブルから xsd を作成するには、「<xref:System.Data.DataSet.WriteXmlSchema%2A>」または「 [Visual Studio でのデータセットの操作](/visualstudio/data-tools/dataset-tools-in-visual-studio)」を参照してください)。  
   
  次のコードは、このツールを使用して**データセット**を生成するための構文を示しています。  
   
-```  
+```console  
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- この構文では、`/d` ディレクティブは**データセット**を生成するようにツールに指示し、@no__t は、使用する言語 (たとえば、 C#または Visual Basic .net) をツールに指示します。 省略可能な `/eld` ディレクティブは、LINQ to DataSet を使用して、生成されたデータセットに対してクエリを実行できることを指定し**ます。** このオプションは、`/d` オプションと組み合わせて指定します。 詳細については、「[型指定](../querying-typed-datasets.md)された Dataset のクエリ」を参照してください。 オプションの `/n:` ディレクティブは、 **Xsdschema. namespace**という名前の**データセット**の名前空間も生成するようにツールに指示します。 コマンドの出力は XSDSchemaFileName.cs で、ADO.NET アプリケーションでコンパイルおよび使用できます。 生成されたコードをライブラリまたはモジュールとしてコンパイルできます。  
+ この構文では、`/d` ディレクティブは**データセット**を生成するようにツールに指示し、`/l:` は使用する言語 (たとえば、 C#または Visual Basic .net) をツールに伝えます。 省略可能な `/eld` ディレクティブは、LINQ to DataSet を使用して、生成されたデータセットに対してクエリを実行できることを指定し**ます。** このオプションは、`/d` オプションと組み合わせて指定します。 詳細については、「[型指定](../querying-typed-datasets.md)された Dataset のクエリ」を参照してください。 省略可能な `/n:` ディレクティブは、 **Xsdschema. namespace**という名前の**データセット**の名前空間も生成するようにツールに指示します。 コマンドの出力は XSDSchemaFileName.cs で、ADO.NET アプリケーションでコンパイルおよび使用できます。 生成されたコードをライブラリまたはモジュールとしてコンパイルできます。  
   
  C# コンパイラ (csc.exe) を使用して、生成されたコードをライブラリとしてコンパイルする構文を次のコードで示します。  
   
-```  
+```console  
 csc.exe /t:library XSDSchemaFileName.cs /r:System.dll /r:System.Data.dll  
 ```  
   

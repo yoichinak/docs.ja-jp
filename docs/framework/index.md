@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Framework, documentation
 - documentation, .NET Framework
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e5a86b3abf821a37944a0e478d0bc8f1bea31ccb
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e00fb73bf884446ec220a114c49863386da456ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699052"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114246"
 ---
 # <a name="net-framework-guide"></a>.NET Framework ガイド
 
@@ -63,4 +61,4 @@ Microsoft のツールで使用されるプライベート .NET Framework API �
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework クラス ライブラリ](/dotnet/api/?view=netframework-4.8)
+* [.NET Framework クラス ライブラリ](/dotnet/api/?view=netframework-4.8)

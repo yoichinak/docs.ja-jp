@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e959ce7a77ad6ceb7f2fc848193cbd9fff028279
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 251c96042e8e56112015fb869176c708322267f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739621"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097266"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag 列挙体
 スタック上のアクティブ (またはリーフ) フレーム上からのコンテキストなのか、別のフレームからのアンワインドにより計算されたコンテキストなのかを示します。  
@@ -41,13 +39,13 @@ typedef enum CorDebugSetContextFlag
 |メンバー|説明|  
 |------------|-----------------|  
 |SET_CONTEXT_FLAG_ACTIVE_FRAME|コンテキストは、スレッドのアクティブなコンテキストです。|  
-|SET_CONTEXT_FLAG_UNWIND_FRAME|コンテキストが別のフレームからのアンワインドにより計算されます。|  
+|SET_CONTEXT_FLAG_UNWIND_FRAME|コンテキストは、別のフレームからのアンワインドによって計算されています。|  
   
 ## <a name="remarks"></a>Remarks  
- `CorDebugSetContextFlag` 使用される値を提供します、 [icordebugstackwalk::setcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)メソッド。  
+ `CorDebugSetContextFlag` は、「 [SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)メソッド」で使用されている値を提供します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

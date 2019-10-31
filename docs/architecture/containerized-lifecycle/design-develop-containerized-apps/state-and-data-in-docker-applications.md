@@ -2,12 +2,12 @@
 title: Docker アプリケーションの状態とデータ
 description: コンテナー化されたアプリケーションで状態を保存するために利用できる選択肢について説明します。
 ms.date: 02/15/2019
-ms.openlocfilehash: bc171a419632f2ac61c7c9bf6b201b84e0691c3a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673559"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394637"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker アプリケーションの状態とデータ
 
@@ -47,7 +47,7 @@ Docker コンテナーから:
 
 図 4-5 に示すように、通常の Docker ボリュームは、コンテナー自体の外部 (ただし、ホスト サーバーまたは VM の物理的境界内) に格納できます。 ただし、Docker コンテナーは、あるホスト サーバーまたは VM から別のホスト サーバーまたは VM のボリュームにアクセスすることはできません。 つまり、このようなボリュームを使用した場合、さまざまな Docker ホスト上で実行されるコンテナーの間で共有されたデータを管理することはできません。しかし、リモート ホストをサポートするボリューム ドライバーを使用すれば、それを達成することが可能です。
 
-![リモート ホストをサポートするリモート ドライバーを使用していない場合、コンテナー間でのボリュームの共有は同一ホスト内でのみ可能です。 ](./media/image5.png)
+![コンテナーの外部に格納されている Docker ボリュームを示す図。](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
 
 **図 4-5** コンテナーベースのアプリケーション向けのボリュームと外部データ ソース
 

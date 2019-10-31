@@ -1,17 +1,15 @@
 ---
-title: ICorDebugStaticFieldSymbol::GetName メソッド
+title: ': GetName Staticfieldsymbol:: GetName メソッド'
 ms.date: 03/30/2017
 ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2187a205b41388d191ad4f06db6d6caa86971e13
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e961ae064bd5bb2c97175b4506ddd8c0f17d3b32
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913414"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131781"
 ---
-# <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol::GetName メソッド
+# <a name="icordebugstaticfieldsymbolgetname-method"></a>: GetName Staticfieldsymbol:: GetName メソッド
 静的フィールドの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,12 +37,12 @@ HRESULT GetName(
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

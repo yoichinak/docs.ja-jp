@@ -11,14 +11,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 501e23656b3a31dc14e0b2213252ef52c598140f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622643"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120882"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET アプリケーションのグローバライズとローカライズ
 
@@ -68,7 +66,7 @@ ms.locfileid: "64622643"
 
 国際対応 ASP.NET アプリケーションのグローバリゼーション、ローカリゼーション、および開発の推奨手順について説明します。
 
-## <a name="reference"></a>関連項目
+## <a name="reference"></a>辞書／辞典／その他
 
 - <xref:System.Globalization?displayProperty=nameWithType> 名前空間
 

@@ -1,5 +1,5 @@
 ---
-title: <appSettings>の<remove>要素
+title: <appSettings> の <remove> 要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/remove
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 121b1c4b124ba07ff3bd312fd3832d3da592f486
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0695d5638589d1afe48553fe32b8d070e3938353
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921290"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119202"
 ---
-# <a name="remove-element-for-appsettings"></a>\<appSettings>の\<remove>要素
+# <a name="remove-element-for-appsettings"></a>\<appSettings > の > 要素を削除 \<には
 
 カスタムアプリケーション設定を削除します。
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> の削除**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<削除**>
 
 ## <a name="syntax"></a>構文
 
@@ -46,11 +46,11 @@ ms.locfileid: "69921290"
 
 ## <a name="child-elements"></a>子要素
 
-なし
+None
 
 ## <a name="example"></a>例
 
-次の例は、の`ApplicationName`カスタム構成設定を削除する方法を示しています。
+次の例は、`ApplicationName`のカスタム構成設定を削除する方法を示しています。
 
 ```xml
 <appSettings>

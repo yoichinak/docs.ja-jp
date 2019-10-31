@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f6926d66a438cfc4fd97d7120e359b737212dde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5d7a6b9826a734363d6beeb2e3fab8422964558
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738624"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113350"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request メソッド
-実装によって定義されているように、操作を要求する共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。  
+実装で定義されているように、操作を要求するために、共通言語ランタイム (CLR) データアクセスサービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,29 +41,29 @@ HRESULT Request (
   
 ## <a name="parameters"></a>パラメーター  
  `reqCode`  
- [in]ユーザー定義です。  
+ からユーザー定義。  
   
  `inBufferSize`  
- [in]受信要求に使用される入力バッファーのサイズ。  
+ から受信要求に使用される入力バッファーのサイズ。  
   
  `inBuffer`  
- [in]要求を含むバッファー。  
+ から要求を格納しているバッファー。  
   
  `outBufferSize`  
- [in]応答に使用される出力バッファーのサイズ。  
+ から応答に使用される出力バッファーのサイズ。  
   
  `outBuffer`  
- [out]応答を格納するバッファー。  
+ 入出力応答を格納しているバッファー。  
   
 ## <a name="remarks"></a>Remarks  
- `Request`メソッドが指定されていないカスタム操作の追加を容易になります。 つまり、このメソッドは、インターフェイス定義のリビジョンを必要とせずに機能拡張を提供します。  
+ `Request` メソッドは、指定されていないカスタム操作の追加を容易にします。 つまり、このメソッドは、インターフェイス定義のリビジョンを必要とせずに、拡張機能を提供します。  
   
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   

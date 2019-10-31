@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1dcbd8bb566331a6a2d4217eeec0441fbd3e6ff6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e76800316885c27c697421d454341d5f0789c611
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739860"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097947"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType 列挙型
-スタック フレームの型を示します。 この列挙体を使って、 [icordebuginternalframe::getframetype](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)メソッド。  
+スタック フレームの型を示します。 この列挙体は、 [GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)メソッドによって使用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,20 +47,20 @@ typedef enum CorDebugInternalFrameType {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|null 値。 `ICorDebugInternalFrame::GetFrameType`メソッドがこの値を返すことはありません。|  
-|`STUBFRAME_M2U`|マネージとアンマネージのスタブ フレーム。|  
-|`STUBFRAME_U2M`|スタブのアンマネージからマネージ フレームでは。|  
-|`STUBFRAME_APPDOMAIN_TRANSITION`|アプリケーション ドメイン間で遷移します。|  
-|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|軽量なメソッド呼び出し。|  
+|`STUBFRAME_NONE`|null 値。 `ICorDebugInternalFrame::GetFrameType` メソッドは、この値を返しません。|  
+|`STUBFRAME_M2U`|アンマネージスタブフレーム。|  
+|`STUBFRAME_U2M`|アンマネージスタブフレーム。|  
+|`STUBFRAME_APPDOMAIN_TRANSITION`|アプリケーションドメイン間の移行。|  
+|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|ライトウェイトメソッド呼び出し。|  
 |`STUBFRAME_FUNC_EVAL`|関数の評価の開始。|  
-|`STUBFRAME_INTERNALCALL`|共通言語ランタイムの内部呼び出し。|  
+|`STUBFRAME_INTERNALCALL`|共通言語ランタイムへの内部呼び出し。|  
 |`STUBFRAME_CLASS_INIT`|クラスの初期化の開始。|  
 |`STUBFRAME_EXCEPTION`|スローされる例外。|  
-|`STUBFRAME_SECURITY`|コード アクセス セキュリティのために使用するフレーム。|  
-|`STUBFRAME_JIT_COMPILATION`|ランタイムは、メソッドを JIT コンパイルです。|  
+|`STUBFRAME_SECURITY`|コードアクセスセキュリティに使用されるフレーム。|  
+|`STUBFRAME_JIT_COMPILATION`|ランタイムは、メソッドを JIT コンパイルしています。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

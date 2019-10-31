@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1aa7a4b1-636a-4f5e-b834-b406d72f7120
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aa756c98dc082774f7a8a6e050209525420b359f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a3af57859c5284ff45681ffc2b5aa3ea3cf8fad6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913722"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133057"
 ---
 # <a name="ihosttaskmanagerenterruntime-method"></a>IHostTaskManager::EnterRuntime メソッド
 プラットフォーム呼び出しメソッドなどのアンマネージメソッドへの呼び出しが実行制御を共通言語ランタイム (CLR) に返すことをホストに通知します。  
@@ -37,7 +35,7 @@ HRESULT EnterRuntime ();
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`EnterRuntime`正常に返されました。|  
+|S_OK|`EnterRuntime` が正常に返されました。|  
 |HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
@@ -46,17 +44,17 @@ HRESULT EnterRuntime ();
 |E_OUTOFMEMORY|要求された割り当てを完了するのに十分なメモリがありませんでした。|  
   
 ## <a name="remarks"></a>Remarks  
- `EnterRuntime`が呼び出され、ホストに対して、以前のバージョンの[最小 Veruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)メソッドへの呼び出しが行われたこと、実行が終了したこと、およびランタイムに実行制御が返されたことをホストに通知します。  
+ `EnterRuntime` が呼び出され、アンマネージ関数が実行を[終了し、](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)実行が完了し、実行制御がランタイムに返されるアンマネージ関数がホストに通知されます。  
   
 > [!NOTE]
-> [ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)は、以前の呼び出し`LeaveRuntime`が行われたアンマネージ関数がマネージコードを呼び出していることをホストに通知するために呼び出されます。  
+> [ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)を呼び出すと、以前に `LeaveRuntime` を呼び出したアンマネージ関数がマネージコードを呼び出していることがホストに通知されます。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ**Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

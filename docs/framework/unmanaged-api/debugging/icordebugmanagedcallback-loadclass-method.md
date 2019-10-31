@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e58dac7b-85c3-41ca-b9aa-3a7fc9ae6680
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5619dea17b9a7140238fd559d2f6b1a5d190ac33
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d23b695550c8444264934f7aca4fa185064e89c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761894"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130728"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a>ICorDebugManagedCallback::LoadClass メソッド
 クラスが読み込まれたことをデバッガーに通知します。  
@@ -38,18 +36,18 @@ HRESULT LoadClass (
   
 ## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]クラスのロード先のアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ からクラスが読み込まれたアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `c`  
- [in]クラスを表す ICorDebugClass オブジェクトへのポインター。  
+ からクラスを表す、のオブジェクトへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- このコールバックは、クラスを含むモジュールのクラスの読み込みが有効になっている場合にのみ発生します。 クラスの読み込みは常に動的モジュールを有効にします。  
+ このコールバックは、クラスを含むモジュールに対してクラスの読み込みが有効になっている場合にのみ発生します。 動的モジュールでは、クラスの読み込みが常に有効になっています。  
   
- `LoadClass`コールバックは動的モジュールの新しく生成されたクラスにブレークポイントをバインドする適切な時間を提供します。  
+ `LoadClass` のコールバックは、動的モジュールで新しく生成されたクラスにブレークポイントをバインドするための適切な時間を提供します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

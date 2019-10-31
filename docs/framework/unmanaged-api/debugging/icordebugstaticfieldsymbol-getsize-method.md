@@ -1,17 +1,15 @@
 ---
-title: ICorDebugStaticFieldSymbol::GetSize メソッド
+title: は、GetSize メソッド
 ms.date: 03/30/2017
 ms.assetid: 72389860-7e37-4656-ba46-b6aeee1860f8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d99e06c1093dbc67e9c1999e4b9ccabd6579340e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0fa9c519a40624dd8c5471231263d2430738af87
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962660"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131765"
 ---
-# <a name="icordebugstaticfieldsymbolgetsize-method"></a>ICorDebugStaticFieldSymbol::GetSize メソッド
+# <a name="icordebugstaticfieldsymbolgetsize-method"></a>は、GetSize メソッド
 静的フィールドのサイズ (バイト単位) を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -31,12 +29,12 @@ HRESULT GetSize(
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

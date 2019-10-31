@@ -2,12 +2,12 @@
 title: SQL Server での借用を使用した権限のカスタマイズ
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: b5dcef80afffa7bb3722a09020c5445dbc47f16a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0d5e62019ae8806a7a182919fa06819a08d01301
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782475"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040445"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>SQL Server での借用を使用した権限のカスタマイズ
 多くのアプリケーションでは、ベース テーブルへのアクセスを制限する組み合わせ所有権を利用して、ストアド プロシージャを使ってデータにアクセスします。 ストアド プロシージャに対して EXECUTE 権限を付与するとき、ベース テーブルに対する権限を取り消したり拒否したりできます。 ストアド プロシージャとテーブルの所有者が同じ場合、SQL Server では呼び出し元の権限をチェックしません。 ただし、オブジェクトの所有者が異なる場合や、動的 SQL の場合には、組み合わせ所有権が無効になります。  
@@ -17,7 +17,7 @@ ms.locfileid: "70782475"
 ## <a name="context-switching-with-the-execute-as-statement"></a>EXECUTE AS ステートメントを使用したコンテキスト切り替え  
  Transact-SQL の EXECUTE AS ステートメントを使用して、別のログインまたはデータベース ユーザーの権限を借用することで、ステートメントの実行コンテキストを切り替えることができます。 これは、クエリとプロシージャを別のユーザーとしてテストできる便利な手法です。  
   
-```  
+```sql  
 EXECUTE AS LOGIN = 'loginName';  
 EXECUTE AS USER = 'userName';  
 ```  
@@ -36,7 +36,7 @@ EXECUTE AS USER = 'userName';
   
 1. ログインに割り当てられていないプロキシ ユーザーをデータベースに作成します。 この操作は必須ではありませんが、権限を管理するときに役立ちます。  
   
-```  
+```sql
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
@@ -44,7 +44,7 @@ CREATE USER proxyUser WITHOUT LOGIN
   
 2. ストアド プロシージャまたはユーザー定義関数に EXECUTE AS 句を追加します。  
   
-```  
+```sql
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  
 ```  
   
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>REVERT での EXECUTE AS の使用  
  Transact-SQL REVERT ステートメントを使用して、元の実行コンテキストに戻ることができます。  
   
- 省略可能な句 (NO REVERT COOKIE = @variableName) を使用すると、変数に@variableName正しい値が含まれている場合に、実行コンテキストを呼び出し元に切り替えることができます。 これにより、接続プールが使用されている環境では実行コンテキストを呼び出し元に切り替えることができます。 の@variableName値は EXECUTE AS ステートメントの呼び出し元にのみ認識されるため、呼び出し元は、アプリケーションを呼び出すエンドユーザーが実行コンテキストを変更できないことを保証できます。 接続は、閉じられるとプールに返されます。 ADO.NET での接続プールの詳細については、「 [SQL Server 接続プール」 (ADO.NET)](../sql-server-connection-pooling.md)を参照してください。  
+ 省略可能な句 (NO REVERT COOKIE = @variableName) を使用すると、@variableName 変数に正しい値が含まれている場合に、実行コンテキストを呼び出し元に切り替えることができます。 これにより、接続プールが使用されている環境では実行コンテキストを呼び出し元に切り替えることができます。 @variableName の値は EXECUTE AS ステートメントの呼び出し元にのみ認識されるので、呼び出し元は、アプリケーションを呼び出すエンドユーザーが実行コンテキストを変更できないことを保証できます。 接続は、閉じられるとプールに返されます。 ADO.NET での接続プールの詳細については、「 [SQL Server 接続プール」 (ADO.NET)](../sql-server-connection-pooling.md)を参照してください。  
   
 ### <a name="specifying-the-execution-context"></a>実行コンテキストの指定  
  EXECUTE AS は、ユーザーを指定するだけでなく、次のキーワードを指定して使用することもできます。  

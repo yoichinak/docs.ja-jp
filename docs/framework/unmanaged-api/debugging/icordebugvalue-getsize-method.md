@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 445a9ee3-e050-4f3a-931a-96b0efb00110
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94d8fbf4d93bbfbaaeb7c1268004aada22b9b7df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3d6caa02333229bcd49f4c6ccf8b93265181a0b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768915"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137093"
 ---
 # <a name="icordebugvaluegetsize-method"></a>ICorDebugValue::GetSize メソッド
-この"ICorDebugValue"オブジェクトのバイト単位のサイズを取得します。  
+この "ICorDebugValue" オブジェクトのサイズ (バイト単位) を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,15 +35,15 @@ HRESULT GetSize (
   
 ## <a name="parameters"></a>パラメーター  
  `pSize`  
- [out]この値のオブジェクトのバイト単位のサイズ。  
+ 入出力この値オブジェクトのサイズ (バイト単位)。  
   
 ## <a name="remarks"></a>Remarks  
- 値の型が参照型の場合は、このメソッドは、オブジェクトのサイズではなく、ポインターのサイズを返します。  
+ 値の型が参照型の場合、このメソッドはオブジェクトのサイズではなく、ポインターのサイズを返します。  
   
- `ICorDebugValue::GetSize`メソッドを返します。`COR_E_OVERFLOW`オブジェクトには、64 ビット プラットフォーム上で 4 GB より大きい。 使用して、 [icordebugvalue 3::getsize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)メソッド代わりにオブジェクトは 4 GB より大きい。  
+ `ICorDebugValue::GetSize` メソッドは、64ビットプラットフォームで 4 GB を超えるオブジェクトの `COR_E_OVERFLOW` を返します。 4 GB を超えるオブジェクトには、代わりに[ICorDebugValue3:: GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)メソッドを使用してください。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -1,5 +1,5 @@
 ---
-title: '方法: インストールされている NET Framework セキュリティ更新プログラムおよび修正プログラムを確認する'
+title: 方法:インストールされている NET Framework セキュリティ更新プログラムおよび修正プログラムを確認する
 description: コンピューターにインストールされている NET Framework セキュリティ更新プログラムおよび修正プログラムを確認する方法について説明します。
 ms.date: 11/27/2017
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4c505c679c46494f7dc2534c2bbe9f50243a7dd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790066"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318973"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>方法: インストールされている NET Framework セキュリティ更新プログラムおよび修正プログラムを確認する
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>方法:インストールされている NET Framework セキュリティ更新プログラムおよび修正プログラムを確認する
 
 この記事では、コンピューターにインストールされている NET Framework セキュリティ更新プログラムおよび修正プログラムを確認する方法について説明します。
 
@@ -29,7 +29,7 @@ ms.locfileid: "70790066"
 
 コンピューターにインストールされている .NET Framework のバージョンごとのインストール済みのセキュリティ更新プログラムおよび修正プログラムは、Windows レジストリに一覧表示されます。 レジストリ エディター (*regedit.exe*) プログラムを使用して、この情報を表示することができます。
 
-1. プログラム **regedit.exe** を開きます。 Windows 8 以降のバージョンでは、 **[スタート]** ![Windows ロゴ](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")を右クリックし、 **[ファイル名を指定して実行]** を選択します。 **[開く]** ボックスに「**regedit**」と入力し、 **[OK]** を選択します。
+1. プログラム **regedit.exe** を開きます。 Windows 8 以降のバージョンでは、 **[スタート]** ![Windows キー ロゴのスクリーンショット](./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo") を右クリックし、 **[実行]** を選択します。 **[開く]** ボックスに「**regedit**」と入力し、 **[OK]** を選択します。
 
 2. レジストリ エディターで、次のサブキーを開きます。
 

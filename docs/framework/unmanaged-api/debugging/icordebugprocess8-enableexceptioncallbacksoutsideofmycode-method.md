@@ -4,19 +4,17 @@ ms.date: 03/30/2017
 dev_langs:
 - cpp
 ms.assetid: b3af44ec-7d41-425b-aed9-0c4379e5cbe9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 52a58f75ca7abd1bd1f871bcf4637bfd7eb7bdcd
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: b6bfd258f35f19719be5e5169a1edc22a358371c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300536"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123385"
 ---
 # <a name="icordebugprocess8enableexceptioncallbacksoutsideofmycode-method"></a>ICorDebugProcess8::EnableExceptionCallbacksOutsideOfMyCode メソッド
-[.NET Framework 4.6 以降のバージョンでサポートされます]  
+[.NET Framework 4.6 以降のバージョンでサポートされています]  
   
- 有効またはの特定の種類を無効に[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)例外コールバック。  
+ 特定の種類の[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)例外コールバックを有効または無効にします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,14 +31,14 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
 ## <a name="remarks"></a>Remarks  
  `enableExceptionsOutsideOfJMC` の値が `false` の場合:  
   
-- DEBUG_EXCEPTION_FIRST_CHANCE 例外のコールバックでは、デバッガーにされません。  
+- DEBUG_EXCEPTION_FIRST_CHANCE 例外が発生しても、デバッガーへのコールバックは行われません。  
   
-- DEBUG_EXCEPTION_CATCH_HANDLER_FOUND 例外は、例外がユーザー コードにエスケープしない場合に、デバッガーにコールバックでは発生しません (つまり、例外の発生から例外ハンドラーへのパスを持たない JustMyCode または JMC とマークされたメソッド)。  
+- 例外がユーザーコードをエスケープしない場合 (つまり、例外の発生元から例外ハンドラーへのパスには、ジャスト Mycode または JMC としてマークされたメソッドがない場合)、DEBUG_EXCEPTION_CATCH_HANDLER_FOUND 例外によってデバッガーへのコールバックが発生することはありません。  
   
- `enableExceptionsOutsideOfJMC` の既定値は `true` です。  
+ `enableExceptionsOutsideOfJMC` の既定値は `true`です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

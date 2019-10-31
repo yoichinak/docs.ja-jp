@@ -2,16 +2,16 @@
 title: 既存の .NET アプリを Azure IaaS にリフトアンドシフトする (クラウドインフラストラクチャの準備完了)
 description: Azure クラウドおよび Windows コンテナーを使用して、既存の .NET アプリケーションを最新化します。
 ms.date: 04/28/2018
-ms.openlocfilehash: ae181784e7de5f66b34d2dc38c6e9ec2e004a0c3
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: c7638a034dbb27baea1b097bdb66175bfb5a71f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373982"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089630"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>既存の .NET アプリを Azure IaaS にリフトアンドシフトする (クラウドインフラストラクチャの準備完了)
 
-> 展望:最初の手順として、オンプレミスの投資とハードウェアとネットワークのメンテナンスの総コストを削減するために、単にクラウド内の既存のアプリケーションを再ホストします。
+> ビジョン: 最初の手順として、オンプレミスの投資とハードウェアとネットワークのメンテナンスの総コストを削減するために、単にクラウド内の既存のアプリケーションを再ホストします。
 
 既存のアプリケーションを Azure infrastructure as a service (IaaS) プラットフォームに*移行する前*に、Azure の iaas に直接移行*する理由を分析することが*重要です。 この近代化成熟度レベルのシナリオでは、基本的に、現在のオンプレミスインフラストラクチャを引き続き使用するのではなく、クラウドで Vm の使用を開始します。
 
@@ -35,11 +35,11 @@ ms.locfileid: "70373982"
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>PaaS ではなく IaaS に移行する場合
 
-次のセクションでは、ほとんどが PaaS プラットフォームとサービスに基づいているクラウド向けに最適化されたアプリケーションについて説明します。 これらのアプリでは、クラウドへの移行によって最も大きなメリットが得られます。 
+次のセクションでは、ほとんどが PaaS プラットフォームとサービスに基づいているクラウド向けに最適化されたアプリケーションについて説明します。 これらのアプリでは、クラウドへの移行によって最も大きなメリットが得られます。
 
-既存のアプリケーションをクラウドに移行するだけの場合は、まず、Azure App Service で実行するために大幅な変更を必要としない既存のアプリケーションを特定します。 これらのアプリは、クラウドに最適化された最初の候補です。 
+既存のアプリケーションをクラウドに移行するだけの場合は、まず、Azure App Service で実行するために大幅な変更を必要としない既存のアプリケーションを特定します。 これらのアプリは、クラウドに最適化された最初の候補です。
 
-その後も、Azure Kubernetes Service などの Windows コンテナーや App Service PaaS に移行できないアプリの場合は、それらを単純な plain Vm (IaaS) に移行します。 
+その後も、Azure Kubernetes Service などの Windows コンテナーや App Service PaaS に移行できないアプリの場合は、それらを単純な plain Vm (IaaS) に移行します。
 
 ただし、Azure で PaaS サービスを使用する場合と比べて、Vm の構成、セキュリティ保護、およびメンテナンスには、より多くの時間と IT の専門知識が必要であることに注意してください。 Azure Virtual Machines を検討している場合は、VM 環境を修正、更新、管理するために必要な継続的なメンテナンス作業を必ず考慮してください。 Azure Virtual Machines は IaaS です。
 

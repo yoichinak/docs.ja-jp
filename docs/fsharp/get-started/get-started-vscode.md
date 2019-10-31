@@ -147,7 +147,7 @@ REPL 駆動型開発の次に、作業コードを F# 実装ファイルに移�
 
 [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
 
-次に、 `Script.fsx`ファイルをもう一度開き、関数全体`toPigLatin`を削除します。ただし、ファイルには次の2行を必ず残してください。
+そして、`Script.fsx`ファイルをもう一度開き、`toPigLatin`関数全体を削除します。ただし、ファイルには次の 2 行を必ず残してください。
 
 ```fsharp
 #load "ClassLibraryDemo.fs"

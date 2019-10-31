@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fae3673fe72d036802cb1a8366aaa2430c38884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac2d01121e81b545556fb082fa7b82c31cccf9da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927502"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118836"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler のカスタム要素
 
-\<セクション > 要素によって定義され、 <xref:System.Configuration.SingleTagSectionHandler>クラスを使用するカスタム構成セクションの設定を定義します。
+\<セクション > 要素で定義され、<xref:System.Configuration.SingleTagSectionHandler> クラスを使用するカスタム構成セクションの設定を定義します。
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName>*
+&nbsp;&nbsp; *\<sectionName >*
 
 ## <a name="syntax"></a>構文
 
@@ -40,15 +40,15 @@ ms.locfileid: "69927502"
 
 ## <a name="child-elements"></a>子要素
 
-なし
+None
 
 ## <a name="remarks"></a>Remarks
 
-Sectionname > 要素は、 [ **\<configsections >** ](configsections-element-for-configuration.md)要素の[ **\<セクション >** ](section-element.md)タグによって定義されたカスタム要素です。  **\<** を呼び出す<xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>と、 <xref:System.Collections.IDictionary>構成システムからオブジェクトが返されます。
+**\<sectionName >** 要素は、 [ **\<configsections >** ](configsections-element-for-configuration.md)要素の[ **\<セクション >** ](section-element.md)タグで定義されたカスタム要素です。 <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>を呼び出すと、構成システムによって <xref:System.Collections.IDictionary> オブジェクトが返されます。
 
 ## <a name="example"></a>例
 
-次の例では、 <xref:System.Configuration.SingleTagSectionHandler>クラスによって読み取られた設定を含む **\<sampleSection >** という名前のカスタム要素を宣言しています。
+次の例では、<xref:System.Configuration.SingleTagSectionHandler> クラスによって読み取られる設定を含む **\<sampleSection >** という名前のカスタム要素を宣言します。
 
 ```xml
 <configuration>
@@ -64,7 +64,7 @@ Sectionname > 要素は、 [ **\<configsections >** ](configsections-element-for
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーション構成ファイル、コンピューター構成ファイル (machine.config)、およびアプリケーションディレクトリレベルではない web.config ファイルで使用できます。
+この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。
 
 ## <a name="see-also"></a>関連項目
 

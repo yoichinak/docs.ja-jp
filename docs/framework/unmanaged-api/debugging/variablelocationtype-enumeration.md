@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2093466c78b039a06a01e2d850b88ff4543d0ab3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 861d5daa481132d3d6527e8d5fbccfab6436c5fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752463"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139115"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType 列挙型
-変数のネイティブの場所の種類を示します。  
+変数のネイティブな場所の種類を示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,15 +39,15 @@ typedef enum VariableLocationType
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`VLT_REGISTER`|変数はレジスタでは。|  
-|`VLT_REGISTER_RELATIVE`|変数は、レジスタの相対メモリの場所には。|  
-|`VLT_INVALID`|変数はレジスタやレジスタの相対メモリの場所は保存されません。|  
+|`VLT_REGISTER`|変数はレジスタにあります。|  
+|`VLT_REGISTER_RELATIVE`|変数は、レジスタ相対メモリの場所にあります。|  
+|`VLT_INVALID`|変数はレジスタまたはレジスタの相対メモリ位置に格納されません。|  
   
 ## <a name="remarks"></a>Remarks  
- メンバー、`VariableLocationType`列挙体は、によって返される、 [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)メソッド。  
+ `VariableLocationType` 列挙体のメンバーは、 [GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)メソッドによって返されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

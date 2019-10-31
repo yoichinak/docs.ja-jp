@@ -1,17 +1,15 @@
 ---
-title: ICorDebugMergedAssemblyRecord::GetSimpleName メソッド
+title: 'ICorDebugMergedAssemblyRecord:: GetSimpleName メソッド'
 ms.date: 03/30/2017
 ms.assetid: bc3410f6-ebca-4bca-9b45-fc38c74fa9cb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f3256a1a50b66be74561bfc992380669a4495dde
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 565e27b47f2454dec1e4c2b89ee46ac5279b08b7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939995"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130545"
 ---
-# <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>ICorDebugMergedAssemblyRecord::GetSimpleName メソッド
+# <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>ICorDebugMergedAssemblyRecord:: GetSimpleName メソッド
 アセンブリの簡易名を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,12 +38,12 @@ HRESULT GetSimpleName(
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

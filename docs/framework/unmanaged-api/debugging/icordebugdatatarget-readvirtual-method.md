@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9d42c85502c12d4d77694626a533c69af97da67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87316b20c5835d9b887355a1f9374fa5f2156e5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750264"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122168"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual メソッド
-指定したアドレスから始まる連続したメモリのブロックを取得し、指定されたバッファーで返します。  
+指定したアドレスを開始位置として連続したメモリのブロックを取得し、指定したバッファー内でそれを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,22 +38,22 @@ HRESULT ReadVirtual(
   
 ## <a name="parameters"></a>パラメーター  
  `address`  
- [in]要求されたメモリの開始アドレス。  
+ から要求されたメモリの開始アドレス。  
   
  `pbuffer`  
- [out]メモリを格納するバッファー。  
+ 入出力メモリが格納されるバッファー。  
   
  `bytesRequested`  
- [in]ターゲット アドレスから取得するバイト数。  
+ からターゲットアドレスから取得するバイト数。  
   
  `pBytesRead`  
- [out]ターゲット アドレスから実際に読み取られたバイト数。 これより少ない`bytesRequested`します。  
+ 入出力ターゲットアドレスから実際に読み取られたバイト数。 これは `bytesRequested`未満である可能性があります。  
   
 ## <a name="remarks"></a>Remarks  
- (指定した開始アドレス) にある最初のバイトを読み取るには、呼び出しは成功した場合 (長さ、null で終わる文字列のような自己記述型のデータ構造体の効率的な読み取りをサポート) を返す必要があります。  
+ 最初のバイト (指定した開始アドレス) を読み取ることができる場合、呼び出しは成功を返します (null で終わる文字列など、自己記述型の長さを持つデータ構造の効率的な読み取りをサポートするため)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

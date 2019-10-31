@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84296b55-c2c5-424c-ac9c-8e28e2895945
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f6f5cd47abd4c17021bc324898a096ff70a3db2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a957a042875b546a18a17422f355b712756e91c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739999"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098171"
 ---
 # <a name="cordebughandletype-enumeration"></a>CorDebugHandleType 列挙型
 ハンドル型を示します。  
@@ -39,11 +37,11 @@ typedef enum CorDebugHandleType {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`HANDLE_STRONG`|ハンドルは、ガベージ コレクションで回収されてからオブジェクトを防ぐことが、強力なです。|  
-|`HANDLE_WEAK_TRACK_RESURRECTION`|ハンドルは、ガベージ コレクションで回収されてからオブジェクトを回避することできませんが、脆弱です。<br /><br /> オブジェクトを収集するときに、ハンドルは無効になります。|  
+|`HANDLE_STRONG`|ハンドルは strong であり、ガベージコレクションによってオブジェクトが解放されるのを防ぎます。|  
+|`HANDLE_WEAK_TRACK_RESURRECTION`|ハンドルは脆弱であり、ガベージコレクションによってオブジェクトが解放されるのを防ぐことはできません。<br /><br /> オブジェクトが収集されると、ハンドルは無効になります。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
