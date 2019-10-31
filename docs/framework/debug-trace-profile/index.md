@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43927be83b8b2a9163656f8d6d54c2cf83a23e28
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 43e9438ed2c1cd82bb4d89ff082545021b2d543e
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052652"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195344"
 ---
 # <a name="debugging-tracing-and-profiling"></a>デバッグ、トレース、およびプロファイリング
 .NET Framework アプリケーションをデバッグするには、アプリケーションにデバッガーをアタッチできるようにコンパイラとランタイム環境を構成する必要があり、可能であれば、アプリケーションとそれに対応する Microsoft Intermediate Language (MSIL) について記号マップと行マップの両方を生成する必要があります。 マネージド アプリケーションのデバッグが完了した後は、パフォーマンスを向上するようにプロファイルできます。 プロファイルでは、最も頻繁に実行されるコードを生成するソース コード行と、そのコードの実行に要する時間を評価して記述します。  
@@ -43,11 +43,11 @@ ms.locfileid: "71052652"
  [デバッガー表示属性によるデバッグ機能の拡張](enhancing-debugging-with-the-debugger-display-attributes.md)  
  型の開発者が、その型をデバッガーで表示した場合にどのように見えるかを指定する方法について説明します。  
   
- [パフォーマンス カウンター](performance-counters.md)  
+ [Performance Counters](performance-counters.md)  
  アプリケーションのパフォーマンスを追跡するために使用できるカウンターについて説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Visual Studio での ASP.NET または ASP.NET Core アプリのデバッグ](/visualstudio/debugger/debugging-aspnet-and-ajax-applications)  
+ [Visual Studio での ASP.NET または ASP.NET Core アプリのデバッグ](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
  開発時と配置後に ASP.NET アプリケーションをデバッグするための要件と手順について説明します。  
   
  [開発ガイド](../development-guide.md)  
