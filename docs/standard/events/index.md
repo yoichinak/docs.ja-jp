@@ -14,14 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b5e49e9d575ae2ec9b48b18f839d469632ffa769
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67cba143957b50e8e8d7fa68e62b52775ca2f144
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770410"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131629"
 ---
 # <a name="handling-and-raising-events"></a>イベントの処理と発生
 
@@ -86,7 +84,7 @@ ms.locfileid: "61770410"
 ## <a name="raising-multiple-events"></a>複数のイベントの発生  
  クラスで複数のイベントを発生させる場合、コンパイラでは、イベント デリゲートのインスタンスごとに 1 つのフィールドが生成されます。 イベントの数が多い場合は、デリゲート 1 つあたり 1 フィールドというストレージ コストが許容されない可能性があります。 そのような状況に備えて、.NET には、イベント デリゲートを格納するために任意に選択した別のデータ構造と一緒に使用できる、イベント プロパティが用意されています。  
   
- イベント プロパティは、イベント アクセサーを伴うイベント宣言によって構成されます。 イベント アクセサーは、ストレージ データ構造におけるイベント デリゲート インスタンスの追加または削除を定義するメソッドです。 イベント プロパティを使用すると、イベント プロパティは各イベント デリゲートを呼び出す前に取得する必要があるので、イベント フィールドよりも低速です。 つまり、メモリを取るか、速度を取るかの比較検討になります。 クラスで、発生頻度の低いイベントを数多く定義する場合は、イベント プロパティを実装することをお勧めします。 詳細については、「[方法 :イベント プロパティを使用して複数のイベントを処理する](how-to-handle-multiple-events-using-event-properties.md)」をご覧ください。  
+ イベント プロパティは、イベント アクセサーを伴うイベント宣言によって構成されます。 イベント アクセサーは、ストレージ データ構造におけるイベント デリゲート インスタンスの追加または削除を定義するメソッドです。 イベント プロパティを使用すると、イベント プロパティは各イベント デリゲートを呼び出す前に取得する必要があるので、イベント フィールドよりも低速です。 つまり、メモリを取るか、速度を取るかの比較検討になります。 クラスで、発生頻度の低いイベントを数多く定義する場合は、イベント プロパティを実装することをお勧めします。 詳細については、[イベント プロパティを使用して複数のイベントを処理する](how-to-handle-multiple-events-using-event-properties.md)」をご覧ください。  
   
 ## <a name="related-topics"></a>関連トピック  
   

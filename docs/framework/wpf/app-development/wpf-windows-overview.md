@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: b9aa3f4e386ca5de79fe028b10d0d68343aba06b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920033"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040872"
 ---
 # <a name="wpf-windows-overview"></a>WPF ウィンドウの概要
 ユーザーは、Windows を通じて Windows Presentation Foundation (WPF) スタンドアロンアプリケーションと対話します。 ウィンドウの主な目的は、データを視覚化してユーザーがデータと対話できるコンテンツをホストすることです。 スタンドアロンの [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは、<xref:System.Windows.Window> クラスを使用して独自のウィンドウを提供します。 このトピックでは、スタンドアロンアプリケーションでのウィンドウの作成と管理の基礎について説明する前に、<xref:System.Windows.Window> について説明します。  
@@ -231,19 +231,19 @@ ms.locfileid: "72920033"
   
 - Alt キーを押しながら F4 キーを押す。  
   
-- **[閉じる]** ボタンを押します。  
+- [**閉じる**] ボタンを押します。  
   
  クライアント領域にさらに機構を追加してウィンドウを閉じることもできます。その一般的な例を、次に示します。  
   
-- 通常はメインアプリケーションウィンドウの **[ファイル]** メニューの **[終了]** 項目。  
+- 通常はメインアプリケーションウィンドウの [**ファイル**] メニューの [**終了**] 項目。  
   
-- 通常はセカンダリアプリケーションウィンドウで、 **[ファイル]** メニューの **[閉じる]** 項目。  
+- 通常はセカンダリアプリケーションウィンドウで、[**ファイル**] メニューの [**閉じる**] 項目。  
   
 - **[キャンセル**] ボタン (通常はモーダルダイアログボックス)。  
   
-- **[閉じる]** ボタン。通常は、モードレスダイアログボックスを選択します。  
+- [**閉じる**] ボタン。通常は、モードレスダイアログボックスを選択します。  
   
- これらのカスタム機構のいずれかに応答してウィンドウを閉じるには、<xref:System.Windows.Window.Close%2A> メソッドを呼び出す必要があります。 次の例では、 **[ファイル]** メニューの **[終了]** をクリックして、ウィンドウを閉じる機能を実装しています。  
+ これらのカスタム機構のいずれかに応答してウィンドウを閉じるには、<xref:System.Windows.Window.Close%2A> メソッドを呼び出す必要があります。 次の例では、[**ファイル**] メニューの [**終了**] をクリックして、ウィンドウを閉じる機能を実装しています。  
   
  [!code-xaml[WindowsOverviewSnippets#WindowWithFileExitMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml#windowwithfileexitmarkup)]  
   
@@ -325,13 +325,13 @@ ms.locfileid: "72920033"
   
  ウィンドウの幅と高さに、ウィンドウのコンテンツのサイズに合わせてサイズを設定する場合は、次の値を持つ <xref:System.Windows.Window.SizeToContent%2A> プロパティを使用できます。  
   
-- <xref:System.Windows.SizeToContent.Manual>. 効果 (既定値)。  
+- <xref:System.Windows.SizeToContent.Manual>。 効果 (既定値)。  
   
-- <xref:System.Windows.SizeToContent.Width>. コンテンツの幅に合わせる。 <xref:System.Windows.FrameworkElement.MinWidth%2A> と <xref:System.Windows.FrameworkElement.MaxWidth%2A> の両方をコンテンツの幅に設定するのと同じ効果があります。  
+- <xref:System.Windows.SizeToContent.Width>。 コンテンツの幅に合わせる。 <xref:System.Windows.FrameworkElement.MinWidth%2A> と <xref:System.Windows.FrameworkElement.MaxWidth%2A> の両方をコンテンツの幅に設定するのと同じ効果があります。  
   
-- <xref:System.Windows.SizeToContent.Height>. コンテンツの高さに合わせる。 <xref:System.Windows.FrameworkElement.MinHeight%2A> と <xref:System.Windows.FrameworkElement.MaxHeight%2A> の両方をコンテンツの高さに設定するのと同じ効果があります。  
+- <xref:System.Windows.SizeToContent.Height>。 コンテンツの高さに合わせる。 <xref:System.Windows.FrameworkElement.MinHeight%2A> と <xref:System.Windows.FrameworkElement.MaxHeight%2A> の両方をコンテンツの高さに設定するのと同じ効果があります。  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight>. コンテンツの幅と高さに合わせる。 <xref:System.Windows.FrameworkElement.MinHeight%2A> と <xref:System.Windows.FrameworkElement.MaxHeight%2A> の両方をコンテンツの高さに設定し、<xref:System.Windows.FrameworkElement.MinWidth%2A> と <xref:System.Windows.FrameworkElement.MaxWidth%2A> の両方をコンテンツの幅に設定した場合と同じ効果を持ちます。  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>。 コンテンツの幅と高さに合わせる。 <xref:System.Windows.FrameworkElement.MinHeight%2A> と <xref:System.Windows.FrameworkElement.MaxHeight%2A> の両方をコンテンツの高さに設定し、<xref:System.Windows.FrameworkElement.MinWidth%2A> と <xref:System.Windows.FrameworkElement.MaxWidth%2A> の両方をコンテンツの幅に設定した場合と同じ効果を持ちます。  
   
  次の例では、ウィンドウを最初に表示するときに、そのコンテンツに合わせて垂直方向と水平方向の両方のサイズを自動的に変更するウィンドウを示しています。  
   
@@ -401,7 +401,7 @@ ms.locfileid: "72920033"
 
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>サイズ変更モード  
- <xref:System.Windows.Window.WindowStyle%2A> プロパティに応じて、ユーザーがウィンドウのサイズを変更する方法 (および場合) を制御できます。 ウィンドウスタイルの選択は、ユーザーがマウスで境界線をドラッグしてウィンドウのサイズを変更できるかどうか、 **[最小化]** 、 **[最大化]** 、 **[サイズ変更]** の各ボタンが非クライアント領域に表示されるかどうか、表示されているかどうかに影響します。enabled.  
+ <xref:System.Windows.Window.WindowStyle%2A> プロパティに応じて、ユーザーがウィンドウのサイズを変更する方法 (および場合) を制御できます。 ウィンドウスタイルの選択は、ユーザーがマウスで境界線をドラッグしてウィンドウのサイズを変更できるかどうか、[**最小化**]、[**最大化**]、[**サイズ変更**] の各ボタンが非クライアント領域に表示されるかどうか、表示されているかどうかに影響します。enabled.  
   
  <xref:System.Windows.Window.ResizeMode%2A> プロパティを設定して、ウィンドウのサイズを変更する方法を構成できます。これは、次の <xref:System.Windows.ResizeMode> 列挙値のいずれかになります。  
   
@@ -442,7 +442,7 @@ ms.locfileid: "72920033"
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
 #### <a name="non-rectangular-window-style"></a>四角形以外のウィンドウ スタイル  
- <xref:System.Windows.Window.WindowStyle%2A> に許可されている罫線のスタイルでは不十分な場合もあります。 たとえば、[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] で使用するような、四角形以外の境界線を持つアプリケーションを作成することができます。  
+ <xref:System.Windows.Window.WindowStyle%2A> に許可されている罫線のスタイルでは不十分な場合もあります。 たとえば、Microsoft Windows Media Player で使用するような、四角形以外の境界線を持つアプリケーションを作成することができます。  
   
  たとえば、次の図に示すように、音声バブルウィンドウについて考えてみます。  
   
@@ -477,7 +477,7 @@ ms.locfileid: "72920033"
 ## <a name="other-types-of-windows"></a>その他の種類のウィンドウ  
  <xref:System.Windows.Navigation.NavigationWindow> は、誘導可能なコンテンツをホストするように設計されたウィンドウです。 詳細については、「[ナビゲーションの概要](navigation-overview.md)」を参照してください。  
   
- ダイアログ ボックスは、ユーザーから情報を収集して機能を完了するためによく使用されるウィンドウです。 たとえば、ユーザーがファイルを開こうとした場合、通常、 **[ファイルを開く]** ダイアログボックスは、ユーザーからファイル名を取得するためにアプリケーションによって表示されます。 詳細については、「[ダイアログ ボックスの概要](dialog-boxes-overview.md)」を参照してください。  
+ ダイアログ ボックスは、ユーザーから情報を収集して機能を完了するためによく使用されるウィンドウです。 たとえば、ユーザーがファイルを開こうとした場合、通常、[**ファイルを開く**] ダイアログボックスは、ユーザーからファイル名を取得するためにアプリケーションによって表示されます。 詳細については、「[ダイアログ ボックスの概要](dialog-boxes-overview.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

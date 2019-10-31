@@ -11,14 +11,12 @@ helpviewer_keywords:
 - '@ character (C#)'
 - $ character (C#)
 ms.assetid: 4c5c0539-2e37-40b7-91ce-75af5aabd3f9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5093969744b5c1d240cb3c18141917906babef57
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4b9adc24e80587015a80b577a2908a8191c57b6b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608719"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101575"
 ---
 # <a name="c-special-characters"></a>C# の特殊文字
 

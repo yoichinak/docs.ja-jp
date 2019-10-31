@@ -2,12 +2,12 @@
 title: コンテナー化アプリ用の Microsoft プラットフォームとツールの概要
 description: Docker アプリケーションのライフサイクルをサポートする Microsoft のサービスについて説明します。
 ms.date: 02/15/2019
-ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1829ce1051f091065f543a6cadcf5d179a284834
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295085"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094462"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>コンテナー化アプリ用の Microsoft プラットフォームとツールの概要
 
@@ -43,7 +43,7 @@ Microsoft プラットフォームとコンテナー化された Docker アプ�
 
   - **Azure portal** オープンソースのオーケストレーターを使用している場合、Azure Kubernetes Service (AKS), Service Fabric やその他のオーケストレーターが Docker 環境の設定と保守管理に役立ちます。 Azure Service Fabric を使用している場合、Service Fabric Explorer ツールを利用すると、クラスターを視覚化して構成できます。
 
-  - **Docker ツール** 使い慣れたツールを使用して、コンテナー アプリケーションを管理することができます。 コンテナーのワークロードをクラウドに移動するために、既存の Docker 管理方法を変更する必要はありません。 既に精通している任意のアプリケーション管理ツールを使用し、選択したオーケストレーター用の標準 API エンドポイント経由で接続します。 Docker Datacenter や CLI Docker ツールなどの他のサードパーティ製ツールを使用して、Docker アプリケーションを管理することもできます。 
+  - **Docker ツール** 使い慣れたツールを使用して、コンテナー アプリケーションを管理することができます。 コンテナーのワークロードをクラウドに移動するために、既存の Docker 管理方法を変更する必要はありません。 既に精通している任意のアプリケーション管理ツールを使用し、選択したオーケストレーター用の標準 API エンドポイント経由で接続します。 Docker Datacenter や CLI Docker ツールなどの他のサードパーティ製ツールを使用して、Docker アプリケーションを管理することもできます。
 
     Linux コマンドに使い慣れている場合でも、Linux Subsystem コマンド ラインとこの Linux Subsystem 機能で実行されている製品 (Docker、Kubernetes…) クライアントと共に Microsoft Windows と PowerShell を使用し、コンテナー アプリケーションを管理できます。 普段ご利用の Microsoft Windows OS を使用し、Linux Subsystem の下でこれらのツールを使用する方法については、本書の後半で説明します。
 

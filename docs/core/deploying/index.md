@@ -1,16 +1,14 @@
 ---
 title: .NET Core アプリケーション展開
 description: .NET Core アプリケーションを展開する方法について説明します。
-author: rpetrusha
-ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6f88659fcef49eba9344d3c4b2f0245b4072d7ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613379"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089192"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core アプリケーションの展開
 

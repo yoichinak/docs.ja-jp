@@ -12,14 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5fb809b564df17d6320b7ffce3d757fa0fee7639
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 7ac9ea194095832f6c3825ce414350bca89c26fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583007"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107242"
 ---
 # <a name="assemblies-in-net"></a>.NET のアセンブリ
 
@@ -107,7 +105,7 @@ C# では、1 つのアプリケーションで同じアセンブリの 2 つの
 |[動的メソッドおよびアセンブリの出力](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|動的アセンブリの作成方法。|  
 |[ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|実行時に .NET Framework でアセンブリ参照がどのように解決されるか。|  
 
-## <a name="reference"></a>参照  
+## <a name="reference"></a>辞書／辞典／その他  
  <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
 ## <a name="see-also"></a>関連項目

@@ -11,14 +11,12 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 64f3f2bb54bd454ef037da2f7e10dd9067bf2217
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ede34231bd7fb3ffbd735a06fd4eec4a56657a9f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045596"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129950"
 ---
 # <a name="resources-in-net-apps"></a>.NET Apps でのリソース
 ほとんどの製品レベルのアプリでは、リソースを使用する必要があります。 リソースは実行不可能なデータであり、アプリと共に論理的に配置されます。 このリソースは、アプリ内ではエラー メッセージまたはユーザー インターフェイスの一部として表示できます。 リソースには、文字列、イメージ、永続化されたオブジェクトなど、多数の形式のデータを含めることができます。 (永続化されたオブジェクトをリソース ファイルに書き込むには、そのオブジェクトをシリアル化できることが必要です)。データをリソース ファイルに格納しておけば、アプリ全体を再コンパイルすることなくデータを変更できます。 また、データの格納場所が 1 つになり、複数の場所に格納されているハードコーディングされたデータを利用する必要がなくなります。  

@@ -4,16 +4,14 @@ description: 短期間で C# の概念について学習でき、.NET Core ア�
 helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
-author: rpetrusha
-ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: b921db9abb65a1d470ada86784ecba1b649c9f09
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 7ea84f9bb815b7080625508bd28364bc75255afe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182439"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099955"
 ---
 # <a name="get-started-with-c"></a>C\# 入門
 
