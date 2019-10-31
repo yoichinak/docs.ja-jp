@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: 設計時に Windows フォームで新しい WPF コンテンツを作成'
+title: 'チュートリアル: デザイン時の Windows フォームでの新しい WPF コンテンツの作成'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -11,24 +11,24 @@ ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 5e5112aa0b025648ce68a93f0f3da026ec99fe89
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: fc6f988d6ffd270eba4abe277ca34fa2eeec56fd
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987144"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197424"
 ---
-# <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時に Windows フォームに新しい WPF コンテンツを作成する
+# <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時の Windows フォームでの新しい WPF コンテンツの作成
 
 この記事では、Windows フォームベースのアプリケーションで使用するための Windows Presentation Foundation (WPF) コントロールを作成する方法について説明します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>必要条件
 
 このチュートリアルを完了するには Visual Studio が必要です。
 
 ## <a name="create-the-project"></a>プロジェクトの作成
 
-Visual Studio を開き、`HostingWpf` という新しい **Windows フォーム アプリ (.NET Framework)** プロジェクトを Visual Basic または Visual C# で作成します。
+Visual Studio を開き、新しい**Windows フォーム App (.NET Framework)** プロジェクトを Visual Basic または visual C# `HostingWpf`名前付きで作成します。
 
 > [!NOTE]
 > WPF コンテンツをホストする場合は、C# プロジェクトと Visual Basic プロジェクトのみがサポートされます。
@@ -56,11 +56,11 @@ Visual Studio を開き、`HostingWpf` という新しい **Windows フォーム
 
 2. デザイン ビューで `UserControl1` が選択されていることを確認します。
 
-3. **[プロパティ]** ウィンドウで、プロパティ<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>プロパティの値を**200**に設定します。
+3. **[プロパティ]** ウィンドウで、<xref:System.Windows.FrameworkElement.Width%2A> と <xref:System.Windows.FrameworkElement.Height%2A> のプロパティの値を**200**に設定します。
 
-4. **[ツールボックス]** からコントロール<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>をデザイン画面にドラッグします。
+4. **[ツールボックス]** から <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> コントロールをデザイン画面にドラッグします。
 
-5. **[プロパティ]** ウィンドウで、 <xref:System.Windows.Controls.TextBox.Text%2A>プロパティの値を ホストされた **[コンテンツ]** に設定します。
+5. **[プロパティ]** ウィンドウで、[<xref:System.Windows.Controls.TextBox.Text%2A>] プロパティの値を **[ホステッドコンテンツ]** に設定します。
 
    > [!NOTE]
    > 一般的には、もう少し高度な WPF コンテンツをホストしてください。 ここでは、説明する目的でのみ <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> コントロールを使用しています。
@@ -69,7 +69,7 @@ Visual Studio を開き、`HostingWpf` という新しい **Windows フォーム
 
 ## <a name="add-a-wpf-control-to-a-windows-form"></a>WPF コントロールを Windows フォームに追加する
 
-新しい WPF コントロールは、フォームで使用可能な状態です。 Windows フォームは、 <xref:System.Windows.Forms.Integration.ElementHost>コントロールを使用して WPF コンテンツをホストします。
+新しい WPF コントロールは、フォームで使用可能な状態です。 Windows フォームは、<xref:System.Windows.Forms.Integration.ElementHost> コントロールを使用して WPF コンテンツをホストします。
 
 WPF コントロールを Windows フォームに追加するには、次のようにします。
 
@@ -81,7 +81,7 @@ WPF コントロールを Windows フォームに追加するには、次のよ�
 
     - WPF コントロールをホストするためのフォームの上に、<xref:System.Windows.Forms.Integration.ElementHost> コントロールが自動的に作成されます。
 
-    - <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> `elementHost1`このコントロールにはという名前が付けられ、[プロパティ] ウィンドウで、プロパティが UserControl1 に設定されていることを確認できます。 <xref:System.Windows.Forms.Integration.ElementHost>
+    - <xref:System.Windows.Forms.Integration.ElementHost> コントロールの名前は `elementHost1` であり、 **[プロパティ]** ウィンドウで、<xref:System.Windows.Forms.Integration.ElementHost.Child%2A> プロパティが**UserControl1**に設定されていることを確認できます。
 
     - WPF アセンブリへの参照がプロジェクトに追加されます。
 
@@ -91,15 +91,15 @@ WPF コントロールを Windows フォームに追加するには、次のよ�
 
 5. **F5** キーを押してアプリケーションをビルドし、実行します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Windows フォームと WPF は異なるテクノロジですが、密接に相互運用するよう設計されています。 アプリケーションの外観と動作を充実させるには、次の操作を実行します。
 
-- WPF ページで Windows フォーム コントロールをホストします。 詳細については、「[チュートリアル:WPF での Windows フォーム コントロールのホスト](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)を参照してください。
+- WPF ページで Windows フォーム コントロールをホストします。 詳細については、「[チュートリアル: WPF での Windows フォームコントロールのホスト](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)」を参照してください。
 
-- WPF コンテンツに Windows フォームの視覚スタイルを適用します。 詳細については、「[方法 :ハイブリッドアプリケーション](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)で視覚スタイルを有効にします。
+- WPF コンテンツに Windows フォームの視覚スタイルを適用します。 詳細については、「[方法: ハイブリッドアプリケーションで Visual スタイルを有効](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)にする」を参照してください。
 
-- WPF コンテンツのスタイルを変更します。 詳細については、「[チュートリアル:WPF コンテンツ](walkthrough-styling-wpf-content.md)のスタイルを設定します。
+- WPF コンテンツのスタイルを変更します。 詳細については、「[チュートリアル: WPF コンテンツのスタイル](walkthrough-styling-wpf-content.md)を設定する」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -107,4 +107,4 @@ Windows フォームと WPF は異なるテクノロジですが、密接に相�
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [移行と相互運用性](../../wpf/advanced/migration-and-interoperability.md)
 - [WPF コントロールの使用](using-wpf-controls.md)
-- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Visual Studio で XAML をデザインする](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
