@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 3674508c25e9a4b166f994e7ca16df04e484956b
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: 4f50d4d446896e12b5beb86fc649ea4fa7c82718
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306358"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775540"
 ---
 # <a name="metadata-and-markdown-template"></a>メタデータとマークダウン テンプレート
 
@@ -76,7 +76,7 @@ ms.locfileid: "71306358"
 
 トピックのレベル 1 の見出し (H1) は 1 つだけにする**必要があります**。これがページ上のタイトルとして表示されます。
 
-見出しが `#` 文字で終わる場合は、タイトルを正しく表示するために末尾に余分の `#` 文字を追加する必要があります。 たとえば、`# Async Programming in F# #` のようにします。
+見出しが `#` 文字で終わっている場合は、タイトルが正しく表示されるようにエスケープする必要があります。 たとえば、`# Async programming in F\#` のようにします。
 
 レベル 2 の見出しは、ページ上タイトルの下にある "この記事内" セクションに表示されるページ上の目次を生成します。
 
