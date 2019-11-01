@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: ad3f7949e01a387c3c7de2a0702d11b106ea0040
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 83e465651762fce33a62009fb3add40373a33c51
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922210"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772122"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>名前付き引数と省略可能な引数 (C# プログラミング ガイド)
 C# 4 では、名前付き引数と省略可能な引数が導入されています。 *名前付き引数*を使用すると、パラメーター リストのパラメーターの位置ではなく、パラメーター名に引数を関連付けることによって、特定のパラメーターの引数を指定できます。 *省略可能な引数*を使用すると、一部のパラメーターの引数を省略できます。 両方の手法をメソッド、インデクサー、コンストラクター、デリゲートで使用できます。  
@@ -51,7 +51,7 @@ C# 4 では、名前付き引数と省略可能な引数が導入されていま
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- 後ろに位置引数が続く場合、順序が正しくない名前付き引数は無効になります。
+ 後に位置引数が続く場合、順序が正しくない名前付き引数は無効になります。
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.

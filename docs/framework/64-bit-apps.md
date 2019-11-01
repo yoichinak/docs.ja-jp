@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1d7e6e098b6ce497dfe74f0afe2322b33a787c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8aaa74eee5372dd7ba1ed145632f718d9ecce8ed
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053253"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773986"
 ---
 # <a name="64-bit-applications"></a>64 ビット アプリケーション
 アプリケーションをコンパイルするときに、Windows 64 ビット オペレーティング システム上で、ネイティブ アプリケーションとして実行するか、WOW64 (Windows 64 ビット上の Windows 32 ビット) の制御下で実行するかを指定できます。 WOW64 は互換環境であり、32 ビット アプリケーションを 64 ビット オペレーティング システム上で実行できるようにします。 WOW64 は、Windows オペレーティング システムのすべての 64 ビット バージョンに含まれています。  
@@ -56,7 +56,7 @@ ms.locfileid: "71053253"
   
 |コンパイラ|コンパイラ オプション|  
 |--------------|---------------------|  
-|Visual Basic|[/platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual Basic|[-platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[-platform (C# コンパイラ オプション)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
 |Visual C++|**/clr:safe** を使用すると、プラットフォームに依存しない、Microsoft Intermediate Language (MSIL) アプリケーションを作成できます。 詳細については、「[/clr (共通言語ランタイムのコンパイル)](/cpp/build/reference/clr-common-language-runtime-compilation)」を参照してください。<br /><br /> Visual C++ には、それぞれの 64 ビット オペレーティング システムを対象とする個別のコンパイラが含まれます。 Visual C++ を使用して 64 ビット Windows オペレーティング システム上で実行するネイティブ アプリケーションを作成する方法の詳細については、「[Visual C++ による 64 ビット プログラミング](/cpp/build/configuring-programs-for-64-bit-visual-cpp)」を参照してください。|  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a0e94f40a9dc861b32e6a1c12935faadda9921b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921807"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774182"
 ---
 # <a name="expressions-c-programming-guide"></a>式 (C# プログラミング ガイド)
 
@@ -33,7 +33,7 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>オーバーフロー
 
- 値の型の最大値よりも値が大きくなると、数式でオーバーフローが発生することがあります。 詳細については、「[Checked と Unchecked](../../language-reference/keywords/checked-and-unchecked.md)」および「[明示的な数値変換の一覧表](../../language-reference/keywords/explicit-numeric-conversions-table.md)」を参照してください。  
+ 値の型の最大値よりも値が大きくなると、数式でオーバーフローが発生することがあります。 詳細については、[Checked と Unchecked](../../language-reference/keywords/checked-and-unchecked.md) に関する記事と[組み込みの数値変換](../../language-reference/builtin-types/numeric-conversions.md)に関する記事の「[明示的な数値変換](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions)」セクションを参照してください。
   
 ## <a name="operator-precedence-and-associativity"></a>演算子の優先順位と結合規則
 

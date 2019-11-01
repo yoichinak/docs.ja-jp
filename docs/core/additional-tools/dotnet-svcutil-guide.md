@@ -4,12 +4,12 @@ description: .NET Framework プロジェクトの WCF svcutil ツールと同様
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 49b0579c284af74d270cac04d302ce231dcb9357
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 89fe72c8116498ff60d439ce17ef2e857edf621e
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522834"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771982"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core 用 WCF dotnet-svcutil ツール
 
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) **dotnet-svcutil** ツールは、ネッ�
 
 .NET Framework プロジェクトの [**ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)** ](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) と同様に、**dotnet-svcutil** は、.NET Core プロジェクトおよび .NET Standard プロジェクトと互換性のある Web サービス参照を生成するためのコマンドライン ツールです。
 
-**dotnet-svcutil** ツールは、Visual Studio 2017 v15.5 で最初に用意された Visual Studio 接続済みサービス プロバイダーである、[**WCF Web Service Reference**](wcf-web-service-reference-guide.md) に対する代わりのオプションです。 .NET Core CLI ツールとしての **dotnet-svcutil** ツールは、Linux、macOS、および Windows 上で利用可能なクロスプラットフォームです。
+**dotnet-svcutil** ツールは、Visual Studio 2017 バージョン 15.5 で最初に用意された Visual Studio 接続済みサービス プロバイダーである、[**WCF Web Service Reference**](wcf-web-service-reference-guide.md) に対する代わりのオプションです。 .NET Core CLI ツールとしての **dotnet-svcutil** ツールは、Linux、macOS、および Windows 上で利用可能なクロスプラットフォームです。
 
 > [!IMPORTANT]
 > 信頼できるソースのサービスのみを参照してください。 信頼できないソースの参照を追加すると、セキュリティが損なわれる可能性があります。

@@ -39,14 +39,16 @@
           href: tutorials/object-detection-onnx.md
         - name: TensorFlow を使用したセンチメントの分類 (テキスト分類)
           href: tutorials/text-classification-tf.md
-    - name: ツール
+    - name: モデル ビルダー & CLI
       items:
-        - name: モデル ビルダーを使った価格の予測
+        - name: 価格を予測する (モデル ビルダー & 回帰)
           href: tutorials/predict-prices-with-model-builder.md
         - name: ML.NET CLI を使用してセンチメントを分析する
           href: tutorials/mlnet-cli.md
-        - name: Model Builder と Razor Pages を使用したセンチメントの分析
+        - name: Razor Pages でのセンチメントの分析 (モデル ビルダー & 二項分類)
           href: tutorials/sentiment-analysis-model-builder.md
+        - name: 正常性違反の分類 (モデル ビルダー & 多クラス分類)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Infer.NET を使用した確率的プログラミング
@@ -61,15 +63,15 @@
       href: resources/transforms.md
     - name: メトリック
       href: resources/metrics.md
-    - name: モデルの精度の向上
+    - name: モデルの正確度を改善する
       href: resources/improve-machine-learning-model-ml-net.md
-- name: ハウツー ガイド
+- name: 使い方ガイド
   items:
     - name: API
       items:
-        - name: データを読み込む
+        - name: データの読み込み
           href: how-to-guides/load-data-ml-net.md
-        - name: データを準備する
+        - name: データの準備
           href: how-to-guides/prepare-data-ml-net.md
         - name: トレーニング、評価、およびモデルの説明
           items:
@@ -103,7 +105,7 @@
           href: how-to-guides/install-ml-net-cli.md
         - name: 自動化された ML API を使用する
           href: how-to-guides/how-to-use-the-automl-api.md
-- name: 関連項目
+- name: 辞書／辞典／その他
   items:
     - name: API
       items:

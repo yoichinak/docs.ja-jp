@@ -2,12 +2,12 @@
 title: Docker について
 description: Docker について、もう少し理解を深めます。ここに示す簡単な例えが役立つ場合があります。
 ms.date: 02/15/2019
-ms.openlocfilehash: 7747c4985af27be0a073fad2f22622f697f4ce27
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7fd3c599afda2d59e0d56756bd61495f2d0370a0
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673429"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770715"
 ---
 # <a name="what-is-docker"></a>Docker について
 

@@ -5,12 +5,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 06/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: b0d45ab7807bf84b98c58e85580d5aa04d0c5f7d
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: a1034d294012b8df5ec778fc40602fe52223961d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306324"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774561"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>ML.NET モデル ビルダーのインストール方法
 
@@ -21,7 +21,7 @@ ML.NET モデル ビルダーをインストールして .NET アプリケーシ
 
 ## <a name="pre-requisites"></a>前提条件
 
-- Visual Studio 2017 15.9.12 以降 / Visual Studio 2019
+- Visual Studio 2017 バージョン 15.9.12 以降 / Visual Studio 2019
 - .NET Core 2.1 以降の SDK
 
 ## <a name="limitations"></a>制限事項
@@ -33,7 +33,7 @@ ML.NET モデル ビルダーをインストールして .NET アプリケーシ
 
 ## <a name="install"></a>インストール
 
-ML.NET モデル ビルダーは、Visual Studio Marketplace または Visual Studio からインストールできます。 
+ML.NET モデル ビルダーは、Visual Studio Marketplace または Visual Studio からインストールできます。
 
 ### <a name="visual-studio-marketplace"></a>Visual Studio Marketplace
 

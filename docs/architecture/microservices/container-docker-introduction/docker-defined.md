@@ -2,12 +2,12 @@
 title: Docker について
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | Docker について
 ms.date: 08/31/2018
-ms.openlocfilehash: 7f7844f51e96914c1432332d9b641ea65bf48f07
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6fb08157a78bfaee48e0bf919fc5942eadf0f287
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674859"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771343"
 ---
 # <a name="what-is-docker"></a>Docker について
 

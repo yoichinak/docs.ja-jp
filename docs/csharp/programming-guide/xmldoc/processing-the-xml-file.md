@@ -6,20 +6,20 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: bb713fbc5ddd3737cb629c5c09c25ff2980c73dc
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b2b19a2b2c46df5b78b6ebba48955cae55d32121
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523379"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846935"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>XML ファイルの処理 (C# プログラミング ガイド)
 
 コンパイラは、ドキュメントを生成するためにタグ付けされたコードのコンストラクトごとに、ID 文字列を生成します。 (コードをタグ付けする方法については、[ドキュメント コメント用の推奨タグ](./recommended-tags-for-documentation-comments.md)に関するページを参照してください。)ID 文字列によって、コンストラクトは一意に識別されます。 XML ファイルを処理するプログラムは、ID 文字列を使用して、対応する .NET Framework のメタデータまたはドキュメントを適用するリフレクション項目を識別できます。
 
- XML ファイルは、コードの階層表現ではなく、要素ごとに生成された ID のフラット リストです。
+XML ファイルは、コードの階層表現ではなく、要素ごとに生成された ID のフラット リストです。
 
- コンパイラは、次の規則に基づいて ID 文字列を生成します。
+コンパイラは、次の規則に基づいて ID 文字列を生成します。
 
 - 文字列に空白文字は含まれません。
 
@@ -41,7 +41,7 @@ ms.locfileid: "72523379"
 
   - 基本データ型。 通常の型 (ELEMENT_TYPE_CLASS または ELEMENT_TYPE_VALUETYPE) は、型の完全修飾名で表されます。
 
-  - 組み込みの型 (たとえば、ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF や、 ELEMENT_TYPE_VOID) は、対応する完全な型の完全修飾名として表されます。 たとえば、System.Int32 や System.TypedReference です。
+  - (ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF、および ELEMENT_TYPE_VOID などの) 組み込み型は、対応する完全な型の完全修飾名で表されます。 たとえば、System.Int32 や System.TypedReference です。
 
   - ELEMENT_TYPE_PTR は、修飾される型に続けて '\*' と表されます。
 

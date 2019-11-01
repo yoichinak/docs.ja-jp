@@ -2,12 +2,12 @@
 title: モノリシック アプリケーションのコンテナー化
 description: モノリシック アプリケーションのコンテナー化は、マイクロサービス アーキテクチャからすべての利点を得ることはありませんが、すぐに提供できる重要な展開の利点があります。
 ms.date: 09/20/2018
-ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5b38ba1c2954f4fd4064723b1316afbf09d25bf2
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673219"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771476"
 ---
 # <a name="containerizing-monolithic-applications"></a>モノリシック アプリケーションのコンテナー化
 

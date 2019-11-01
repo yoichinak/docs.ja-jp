@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 476b6047fe9872f13f2f0298fb331eb7d888a73d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f69dfe77e5d485c4c7ffcbf2b98657eab87d452d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117857"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775217"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard の新機能
 
@@ -61,7 +61,7 @@ ms.locfileid: "71117857"
 
 ### <a name="support-for-visual-basic"></a>Visual Basic のサポート
 
-Visual Basic で .NET Standard ライブラリを開発できるようになりました。 .NET Core ワークロードがインストールされた Visual Studio 2017 Version 15.3 以降を使用している Visual Basic 開発者向けに、Visual Studio には .NET Standard Class Library テンプレートが追加されました。 他の開発ツールと環境を使用している Visual Basic 開発者の場合、[dotnet new](../../core/tools/dotnet-new.md) コマンドを使用して .NET Standard ライブラリ プロジェクトを作成できます。 詳細については、「[.NET Standard ライブラリのツールのサポート](#tooling-support-for-net-standard-libraries)」を参照してください。
+Visual Basic で .NET Standard ライブラリを開発できるようになりました。 .NET Core ワークロードがインストールされた Visual Studio 2017 Version 15.3 以降を使用している Visual Basic 開発者向けに、Visual Studio には .NET Standard Class Library テンプレートが含まれるようになりました。 他の開発ツールと環境を使用している Visual Basic 開発者の場合、[dotnet new](../../core/tools/dotnet-new.md) コマンドを使用して .NET Standard ライブラリ プロジェクトを作成できます。 詳細については、「[.NET Standard ライブラリのツールのサポート](#tooling-support-for-net-standard-libraries)」を参照してください。
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>.NET Standard ライブラリのツールのサポート
 

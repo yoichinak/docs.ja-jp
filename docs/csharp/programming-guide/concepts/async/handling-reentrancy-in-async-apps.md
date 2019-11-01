@@ -2,12 +2,12 @@
 title: 非同期アプリにおける再入の処理 (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 3b6c5e29559a5350bdce7ad8bcf971281bb79994
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 9a6189624eff988ec6b0ac8a93330d591ed46a8c
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204301"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772035"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>非同期アプリにおける再入の処理 (C#)
 
@@ -29,6 +29,9 @@ ms.locfileid: "70204301"
 
 > [!NOTE]
 > この例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。
+
+> [!NOTE]
+> 現在、アプリ開発で使用する最小バージョンは、トランスポート層セキュリティ (TLS) バージョン 1.2 です。 ご利用のアプリがバージョン 4.7 より前の .NET Framework を対象としている場合は、「[.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス](../../../../framework/network-programming/tls.md)」の記事を参照してください。 
 
 ## <a name="BKMK_RecognizingReentrancy"></a>再入を認識する
 
@@ -581,7 +584,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 4. プロジェクトの種類の一覧の **[WPF アプリケーション]** をクリックします。
 
-5. プロジェクトに `WebsiteDownloadWPF` という名前を付けて **[OK]** をクリックします。
+5. プロジェクトに `WebsiteDownloadWPF` という名前を指定し、4.6 以降の .NET Framework のバージョンを選択して、 **[OK]** ボタンをクリックします。
 
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。
 
@@ -609,7 +612,9 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
      テキスト ボックスとボタンを含む簡単なウィンドウが、MainWindow.xaml の**デザイン** ビューに表示されます。
 
-8. <xref:System.Net.Http> への参照を追加します。
+8. **ソリューション エクスプローラー**で **[参照]** を右クリックし、 **[参照の追加]** を選択します。
+
+     まだ選択されていない場合は、<xref:System.Net.Http> の参照を追加します。
 
 9. **ソリューション エクスプローラー**で MainWindow.xaml.cs のショートカット メニューを開き、 **[コードの表示]** を選択します。
 
@@ -641,6 +646,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
         {
             public MainWindow()
             {
+                System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
                 InitializeComponent();
             }
 

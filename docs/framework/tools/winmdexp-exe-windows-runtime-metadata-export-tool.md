@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b3cf60d670e7fdfa624599bc0eeddc99219c202
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0ce98912e579e0dd570822c1f7c2133bb05ed491
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044017"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773968"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)
 Windows ランタイム メタデータ エクスポート ツール (Winmdexp.exe) は、.NET Framework モジュールを、Windows メタデータを含むファイルに変換します。 .NET Framework アセンブリと Windows ランタイム メタデータ ファイルでは同じ物理形式が使用されますが、メタデータ テーブルの内容に違いがあります。つまり、NET Framework アセンブリは自動的に Windows ランタイム コンポーネントとして使用できるわけではありません。 .NET Framework モジュールを Windows ランタイム コンポーネントに変換するプロセスは、"*エクスポート*" と呼ばれます。 .NET Framework 4.5 と .NET Framework 4.5.1 では、結果として生成される Windows メタデータ (.winmd) ファイルにメタデータと実装の両方が含まれます。  
@@ -33,7 +33,7 @@ winmdexp [options] winmdmodule
   
 |引数またはオプション|説明|  
 |------------------------|-----------------|  
-|`winmdmodule`|エクスポートするモジュール (.winmdobj) を指定します。 指定できるのは 1 つのモジュールのみです。 このモジュールを作成するには、`/target` ターゲットと共に `winmdobj` コンパイラ オプションを使用します。 「[/target:winmdobj (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)」または「[/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)」を参照してください。|  
+|`winmdmodule`|エクスポートするモジュール (.winmdobj) を指定します。 指定できるのは 1 つのモジュールのみです。 このモジュールを作成するには、`/target` ターゲットと共に `winmdobj` コンパイラ オプションを使用します。 「[-target:winmdobj (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)」または「[-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)」を参照してください。|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Winmdexp.exe が生成する出力 XML ドキュメント ファイルを指定します。 .NET Framework 4.5 では、出力ファイルは基本的に入力 XML ドキュメント ファイルと同じです。|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|コンパイラが `winmdmodule` と共に生成した XML ドキュメント ファイルの名前を指定します。|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|`winmdmodule` のシンボルを含むプログラム データベース (PDB) ファイルの名前を指定します。|  

@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 42f8d51f2547cd6f3240a05420b2da10b7cf52e3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b85d77900c5d9227ecc6fe81b8a8d68171dd9ef5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179394"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774521"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>ASP.NET Core Web API でのモデルのデプロイ
 
@@ -21,7 +21,7 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" とともにインストールされていること。
+- [Visual Studio 2017 バージョン 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラットフォーム開発" ワークロードと共にインストールされている。
 - PowerShell
 - 事前トレーニング済みのモデル。 [ML.NET Sentiment Analysis のチュートリアル](../tutorials/sentiment-analysis.md)を使用して独自のモデルを構築するか、こちらの[事前トレーニング済みの感情分析の機械学習モデル](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)をダウンロードすること。
 
@@ -62,9 +62,9 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     既存のクラス定義を削除し、次のコードを **SentimentData.cs** ファイルに追加します。
-    
+
     ```csharp
     public class SentimentData
     {
@@ -83,9 +83,9 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     既存のクラス定義を削除し、次のコードを *SentimentPrediction.cs* ファイルに追加します。
-    
+
     ```csharp
     public class SentimentPrediction : SentimentData
     {
@@ -99,7 +99,7 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
     }
     ```
 
-    `SentimentPrediction` は `SentimentData`を継承します。 これにより、モデルによって生成された出力データと一緒に `SentimentText` プロパティの元のデータを容易に確認できます。 
+    `SentimentPrediction` は `SentimentData`を継承します。 これにより、モデルによって生成された出力データと一緒に `SentimentText` プロパティの元のデータを容易に確認できます。
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>アプリケーションで使用する PredictionEnginePool を登録する
 
@@ -130,22 +130,22 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
     }
     ```
 
-大まかに言えば、オブジェクトとサービスがアプリケーションによって要求されたときに、このコードでは、後で使用できるように手動ではなく自動的に初期化が実行されます。 
+大まかに言えば、オブジェクトとサービスがアプリケーションによって要求されたときに、このコードでは、後で使用できるように手動ではなく自動的に初期化が実行されます。
 
-機械学習モデルは静的ではありません。 新しいトレーニング データが使用可能になると、モデルの再トレーニングと再展開が行われます。 アプリケーションに最新バージョンのモデルを取り込む方法の 1 つは、アプリケーション全体を再展開することです。 ただし、これによってアプリケーションのダウンタイムが発生します。 `PredictionEnginePool` サービスには、アプリケーションを停止することなく、更新されたモデルを再度読み込むメカニズムが用意されています。 
+機械学習モデルは静的ではありません。 新しいトレーニング データが使用可能になると、モデルの再トレーニングと再展開が行われます。 アプリケーションに最新バージョンのモデルを取り込む方法の 1 つは、アプリケーション全体を再展開することです。 ただし、これによってアプリケーションのダウンタイムが発生します。 `PredictionEnginePool` サービスには、アプリケーションを停止することなく、更新されたモデルを再度読み込むメカニズムが用意されています。
 
 `watchForChanges` パラメーターを `true` に設定すると、`PredictionEnginePool` では、ファイル システムの変更通知をリッスンし、ファイルに変更があったときにイベントを発生させる [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) が開始されます。 これにより、モデルを自動的に再度読み込む `PredictionEnginePool` のプロンプトが表示されます。
 
-モデルは `modelName` パラメーターによって識別されるため、変更時にアプリケーションごとに複数のモデルを再度読み込むことができます。 
+モデルは `modelName` パラメーターによって識別されるため、変更時にアプリケーションごとに複数のモデルを再度読み込むことができます。
 
 > [!TIP]
 > また、リモートに格納されているモデルを操作するときは `FromUri` メソッドを使用できます。 `FromUri` では、ファイルの変更イベントを監視するのではなく、リモートの場所の変更をポーリングします。 ポーリング間隔は既定で 5 分に設定されています。 アプリケーションの要件に基づいてポーリング間隔を増減することができます。 次のコード サンプルでは、`PredictionEnginePool` は、指定された URI に格納されているモデルを 1 分ごとにポーリングします。
->    
+>
 >```csharp
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
->       modelName: "SentimentAnalysisModel", 
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       modelName: "SentimentAnalysisModel",
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 
@@ -165,7 +165,7 @@ HTTP 要求の受信の処理をするために、コントローラーを作成
     ```
 
     既存のクラス定義を削除し、次のコードを *PredictController.cs* ファイルに追加します。
-    
+
     ```csharp
     public class PredictController : ControllerBase
     {
@@ -207,13 +207,13 @@ HTTP 要求の受信の処理をするために、コントローラーを作成
     ```
 
     成功した場合、出力は次のテキストのようになります。
-    
+
     ```powershell
     Negative
     ```
 
-お疲れさまでした。 ASP.NET Core Web API を使用して、インターネット経由で予測を実行するモデルを正常に提供できました。
+おめでとうございます! ASP.NET Core Web API を使用して、インターネット経由で予測を実行するモデルを正常に提供できました。
 
 ## <a name="next-steps"></a>次の手順
 
-- [Azure へのデプロイ](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)
+- [Azure に配置する](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)

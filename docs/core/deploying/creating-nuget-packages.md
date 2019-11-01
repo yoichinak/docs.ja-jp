@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: d36a6ee7d524933577928daa9993fba8ce62f6c7
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 2d876f921d079972e2a638788195aa69a2423c49
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116703"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771937"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>.NET Core コマンド ライン インターフェイス (CLI) ツールを使用して NuGet パッケージを作成する方法
 
@@ -37,11 +37,10 @@ cd src/SuperAwesomeLibrary
 dotnet pack
 ```
 
-これで `/bin/Debug` フォルダーは次のようになります。
+これで */bin/Debug* フォルダーは次のようになります。
 
 ```console
 $ ls bin/Debug
-
 netstandard1.0/
 SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
@@ -53,11 +52,10 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 dotnet pack --configuration release
 ```
 
-これで、`/bin` フォルダーに、NuGet パッケージとリリース バイナリを含む `release` フォルダーが生成されます。
+これで、 */bin* フォルダーに、NuGet パッケージとリリース バイナリを含む *release* フォルダーが生成されます。
 
 ```console
 $ ls bin/release
-
 netstandard1.0/
 SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg

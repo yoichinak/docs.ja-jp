@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9760be0fcfe29d2c11cbb1f4d4d81c5a79261a0d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608372"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771732"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術演算子 (C# リファレンス)
 
@@ -101,7 +101,7 @@ ms.locfileid: "69608372"
 
 ### <a name="integer-division"></a>整数の除算
 
-整数型のオペランドに対する `/` 演算子の結果は、整数型で、2 つのオペランドの商の小数部分を切り捨てたものと等しくなります
+整数型のオペランドに対する `/` 演算子の結果は、整数型で、2 つのオペランドの商を 0 方向に丸めたものと等しくなります。
 
 [!code-csharp-interactive[integer division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerDivision)]
 
@@ -115,7 +115,7 @@ ms.locfileid: "69608372"
 
 [!code-csharp-interactive[floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointDivision)]
 
-オペランドの 1 つが `decimal` であった場合、もう 1 つのオペランドを `float` や `double` にすることはできません。`float` と `double` は暗黙的に `decimal` に変換できないためです。 `float` または `double` オペランドは明示的に `decimal` 型に変換する必要があります。 数値型間の暗黙的な変換について詳しくは、「[暗黙的な数値変換の一覧表](../keywords/implicit-numeric-conversions-table.md)」をご覧ください。
+オペランドの 1 つが `decimal` であった場合、もう 1 つのオペランドを `float` や `double` にすることはできません。`float` と `double` は暗黙的に `decimal` に変換できないためです。 `float` または `double` オペランドは明示的に `decimal` 型に変換する必要があります。 数値型間の変換について詳しくは、[組み込みの数値変換](../builtin-types/numeric-conversions.md)に関するページをご覧ください。
 
 ## <a name="remainder-operator-"></a>剰余演算子 %
 
@@ -163,15 +163,15 @@ ms.locfileid: "69608372"
 
 デリゲートの削除には、`-` 演算子を使用することもできます。 詳細については、「[`-` 演算子](subtraction-operator.md)」の記事を参照してください。
 
-## <a name="compound-assignment"></a>複合代入
+## <a name="compound-assignment"></a>複合代入。
 
-2 項演算子 `op` の場合、このフォームの複合代入式
+2 項演算子 `op` の場合、フォームの複合代入式
 
 ```csharp
 x op= y
 ```
 
-は、次の式と同じです。
+上記の式は、次の式と同じです。
 
 ```csharp
 x = x op y
@@ -194,9 +194,9 @@ x = x op y
 次の算術演算子の一覧は、優先度が高い順に並べられています。
 
 - 後置インクリメント演算子 `x++` と後置デクリメント演算子 `x--`
-- 前置インクリメント演算子 `++x` と前置デクリメント演算子 `--x`および単項演算子 `+` と `-`
+- 前置インクリメント演算子 `++x` とデクリメント演算子 `--x`および単項演算子 `+` と `-`
 - 乗算演算子 `*`、`/`、`%`
-- 加法演算子 `+` と `-`
+- 加法 `+` および `-` 演算子
 
 2 項算術演算子は左結合です。 つまり、優先度が同じ演算子は、左から右に評価されます。
 
