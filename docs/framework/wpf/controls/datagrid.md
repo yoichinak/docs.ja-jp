@@ -18,9 +18,9 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61912237"
 ---
 # <a name="datagrid"></a>DataGrid
-<xref:System.Windows.Controls.DataGrid>コントロールでは、 SQL database、LINQ クエリ、またはその他のバインド可能なデータ ソースからなど、さまざまなソースからデータを表示および編集することができます。 詳しくは、「[バインディング ソースの概要](../data/binding-sources-overview.md)」をご覧ください。  
+<xref:System.Windows.Controls.DataGrid>コントロールでは、 SQL データベース、LINQ クエリ、またはその他のバインド可能なデータ ソースからなど、さまざまなソースからデータを表示および編集することができます。 詳しくは、「[バインディング ソースの概要](../data/binding-sources-overview.md)」をご覧ください。  
   
-  列はテキストやコントロールを表示できます。 具体的には、 <xref:System.Windows.Controls.ComboBox>、またはその他の WPF コンテンツとして、画像、ボタン、またはテンプレートに含まれるすべてのコンテンツがあります。 <xref:System.Windows.Controls.DataGridTemplateColumn>を使用して、テンプレートで定義されているデータを表示することができます。 次の表では、既定で用意されている列の型を示します。  
+  列はテキストやコントロールを表示できます。 具体的には、 <xref:System.Windows.Controls.ComboBox>、またはその他の WPF コンテンツとして、画像、ボタン、またはテンプレートに含まれるすべてのコンテンツがあります。 <xref:System.Windows.Controls.DataGridTemplateColumn> を使用して、テンプレートで定義されているデータを表示することができます。 次の表では、既定で用意されている列の型を示します。  
   
 |生成された列の型|データの種類|  
 |---------------------------|---------------|  
@@ -31,19 +31,19 @@ ms.locfileid: "61912237"
   
  <xref:System.Windows.Controls.DataGrid> セルのフォント、色、サイズなどの外観をカスタマイズできます。 <xref:System.Windows.Controls.DataGrid> その他の WPF コントロールのすべてのスタイルとテンプレートの機能をサポートしています。 <xref:System.Windows.Controls.DataGrid> 既定とカスタマイズ可能な動作の編集、並べ替え、および検証も含まれています。  
   
-  次の表に、<xref:System.Windows.Controls.DataGrid>を使用して実現できる、いくつかの一般的なタスクの一覧を示します。 関連する API を表示することで、詳細情報とサンプル コードを取得できます。  
+  次の表に、<xref:System.Windows.Controls.DataGrid> を使用して実現できる、いくつかの一般的なタスクの一覧を示します。 関連する API を表示することで、詳細情報とサンプル コードを取得できます。  
   
 |シナリオ|方法|  
 |--------------|--------------|  
 |背景色を交互にします。|<xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A> プロパティを 2 以上に設定します。<xref:System.Windows.Media.Brush>を<xref:System.Windows.Controls.DataGrid.RowBackground%2A> と <xref:System.Windows.Controls.DataGrid.AlternatingRowBackground%2A> プロパティに割り当てます。|  
 |セルと行の選択の動作を定義します。|<xref:System.Windows.Controls.DataGrid.SelectionMode%2A> プロパティと <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> プロパティを設定します。|  
-|ヘッダーとセル、および行の外観をカスタマイズします。|新規の<xref:System.Windows.Style>を<xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>、 <xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>、 <xref:System.Windows.Controls.DataGrid.CellStyle%2A>、<xref:System.Windows.Controls.DataGrid.RowStyle%2A>プロパティに適用します。|  
-|サイズ変更オプションを設定します。|<xref:System.Windows.FrameworkElement.Height%2A>、 <xref:System.Windows.FrameworkElement.MaxHeight%2A>、 <xref:System.Windows.FrameworkElement.MinHeight%2A>、 <xref:System.Windows.FrameworkElement.Width%2A>、 <xref:System.Windows.FrameworkElement.MaxWidth%2A>、<xref:System.Windows.FrameworkElement.MinWidth%2A>プロパティを設定します。 詳細については、次を参照してください。 [DataGrid コントロールのサイズ変更オプション](sizing-options-in-the-datagrid-control.md)します。|  
-|選択された項目にアクセスします。|<xref:System.Windows.Controls.DataGrid.SelectedCells%2A>プロパティをチェックして、選択したセルを取得します。<xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A>プロパティをチェックして選択した行を取得します。 詳細については、「 <xref:System.Windows.Controls.DataGrid.SelectedCells%2A> 」を参照してください。|  
-|エンドユーザーの相互作用をカスタマイズします。|<xref:System.Windows.Controls.DataGrid.CanUserAddRows%2A>、 <xref:System.Windows.Controls.DataGrid.CanUserDeleteRows%2A>、 <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A>、 <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A>、 <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A>、<xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A>プロパティを設定します。|  
-|自動で生成された列を変更またはキャンセルします。|<xref:System.Windows.Controls.DataGrid.AutoGeneratingColumn>イベントをハンドルします。|  
-|列を固定します。|<xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A>プロパティを 1 に設定し、<xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A>プロパティを 0 に設定して、列を左端に移動します。|  
-|XML データをデータ ソースとして使用します。|<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>上の<xref:System.Windows.Controls.DataGrid>を項目のコレクションを表す XPath クエリにバインドします。  <xref:System.Windows.Controls.DataGrid>に各列を作成します。 項目のソースのプロパティを取得するクエリへのバインドで、XPath を設定して、各列をバインドします。 例については、「<xref:System.Windows.Controls.DataGridTextColumn>」を参照してください。|  
+|ヘッダーとセル、および行の外観をカスタマイズします。|新規の <xref:System.Windows.Style> を <xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>、<xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>、<xref:System.Windows.Controls.DataGrid.CellStyle%2A>、<xref:System.Windows.Controls.DataGrid.RowStyle%2A> プロパティに適用します。|  
+|サイズ変更オプションを設定します。|<xref:System.Windows.FrameworkElement.Height%2A>、<xref:System.Windows.FrameworkElement.MaxHeight%2A>、<xref:System.Windows.FrameworkElement.MinHeight%2A>、<xref:System.Windows.FrameworkElement.Width%2A>、<xref:System.Windows.FrameworkElement.MaxWidth%2A>、<xref:System.Windows.FrameworkElement.MinWidth%2A> プロパティを設定します。 詳細については、[DataGrid コントロールのサイズ変更オプション](sizing-options-in-the-datagrid-control.md) を参照してください。|ズ変更オプション](sizing-options-in-the-datagrid-control.md)します。|  
+|選択された項目にアクセスします。|<xref:System.Windows.Controls.DataGrid.SelectedCells%2A> プロパティをチェックして、選択したセルを取得します。<xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A> プロパティをチェックして、選択した行を取得します。 詳細については、「 <xref:System.Windows.Controls.DataGrid.SelectedCells%2A> 」を参照してください。|  
+|エンドユーザーの相互作用をカスタマイズします。|<xref:System.Windows.Controls.DataGrid.CanUserAddRows%2A>、<xref:System.Windows.Controls.DataGrid.CanUserDeleteRows%2A>、<xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A>、<xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A>、<xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A>、<xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A> プロパティを設定します。|  
+|自動生成された列をキャンセルまたは変更します。|<xref:System.Windows.Controls.DataGrid.AutoGeneratingColumn> イベントをハンドルします。|  
+|列を固定します。|<xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A> プロパティを 1 に設定し、<xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> プロパティを 0 に設定して、列を左端に移動します。|  
+|XML データをデータ ソースとして使用します|<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 上の <xref:System.Windows.Controls.DataGrid> を項目のコレクションを表す XPath クエリにバインドします。 <xref:System.Windows.Controls.DataGrid> に各列を作成します。 項目のソースのプロパティを取得するクエリへのバインドで、XPath を設定して、各列をバインドします。 例については、「<xref:System.Windows.Controls.DataGridTextColumn>」を参照してください。|  
   
 ## <a name="related-topics"></a>関連トピック  
   
