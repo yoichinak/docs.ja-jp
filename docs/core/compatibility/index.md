@@ -1,15 +1,13 @@
 ---
 title: 破壊的変更を評価する - .NET Core
 description: .NET Core が開発者のために .NET バージョンをまたいで互換性を維持するために試行している方法について説明します。
-author: rpetrusha
-ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4c3f051bf37ea4753d916ee22fedf97a9bad5892
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "67736562"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089346"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core の破壊的変更を評価する
 
@@ -176,7 +174,7 @@ ms.locfileid: "67736562"
 
 - **❌ パラメーターなしのコンストラクターを追加せずに、以前にコンストラクターがなかったクラスにコンストラクターを追加する**
 
-- **❌️ フィールドに[読み取り専用](../../csharp/language-reference/keywords/readonly.md)を追加する**
+- **❌ フィールドに[読み取り専用](../../csharp/language-reference/keywords/readonly.md)を追加する**
 
 - **❌ メンバーの可視性を下げる**
 
@@ -266,7 +264,7 @@ ms.locfileid: "67736562"
 
 - **✔️ 観測可能 "*ではない*" 属性の値を変更する**
 
-- **❌ 観測可能 "*である*" 属性の値を変更する**
+- **❌ *観測可能*である属性の値を変更する**
 
 - **❓ 属性を削除する**
 
