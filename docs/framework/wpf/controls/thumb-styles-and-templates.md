@@ -9,40 +9,40 @@ helpviewer_keywords:
 - ControlTemplate [WPF], Thumb
 - parts [WPF], Thumb
 ms.assetid: 86a49235-62d9-414e-923e-53126e3f930a
-ms.openlocfilehash: b7fc595f0c592d42f118c6b5542edf93716c2fca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2114a02016db96d898a394b6892b6d3042d81ff
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790781"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458240"
 ---
 # <a name="thumb-styles-and-templates"></a>つまみのスタイルとテンプレート
 
-このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.Primitives.Thumb>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。
+このトピックでは、<xref:System.Windows.Controls.Primitives.Thumb> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md)」を参照してください。
 
 ## <a name="thumb-parts"></a>Thumb パーツ
 
-<xref:System.Windows.Controls.Primitives.Thumb>コントロールには、名前付きパーツはありません。
+<xref:System.Windows.Controls.Primitives.Thumb> コントロールには、名前付きの部分がありません。
 
-## <a name="thumb-states"></a>つまみの状態
+## <a name="thumb-states"></a>Thumb の状態
 
-次の表のビジュアルの状態、<xref:System.Windows.Controls.Primitives.Thumb>コントロール。
+次の表は、<xref:System.Windows.Controls.Primitives.Thumb> コントロールの表示状態を示しています。
 
 |VisualState 名|VisualStateGroup 名|説明|
 |-|-|-|
 |標準|CommonStates|既定の状態です。|
-|MouseOver|CommonStates|マウス ポインターがコントロール上に配置されています。|
+|MouseOver|CommonStates|マウス ポインターがコントロール上に配置されます。|
 |押されている|CommonStates|コントロールが押されています。|
-|無効|CommonStates|コントロールが無効になっています。|
+|Disabled|CommonStates|コントロールが無効になっています。|
 |フォーカスされている|FocusStates|コントロールにフォーカスがあります。|
 |フォーカスされていない|FocusStates|コントロールにフォーカスがありません。|
-|有効|ValidationStates|コントロールを使用して、<xref:System.Windows.Controls.Validation>クラスおよび<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`false`します。|
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスします。|
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスがないです。|
+|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|
 
 ## <a name="thumb-controltemplate-example"></a>Thumb ControlTemplate の例
 
-次の例は、定義する方法を示します、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.Primitives.Thumb>コントロール。
+次の例は、<xref:System.Windows.Controls.Primitives.Thumb> コントロールの <xref:System.Windows.Controls.ControlTemplate> を定義する方法を示しています。
 
 [!code-xaml[ControlTemplateExamples#Thumb](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#thumb)]
 
@@ -58,5 +58,5 @@ ms.locfileid: "61790781"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
-- [スタイルとテンプレート](styling-and-templating.md)
+- [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)

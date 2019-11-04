@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: 5568d79c4a13b7b0db5a46bb4ebb2168ea66a2c9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7dfbc103b3fd0ebf8c349bd36dc54915782eb807
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606096"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422937"
 ---
 # <a name="access-modifiers-c-reference"></a>アクセス修飾子 (C# リファレンス)
 アクセス修飾子は、メンバーまたは型の宣言されたアクセシビリティを指定するときに使用されるキーワードです。 ここでは、4 つのアクセス修飾子について説明します。  
@@ -48,5 +48,5 @@ ms.locfileid: "69606096"
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](./index.md)
 - [アクセス修飾子](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [アクセス キーワード](./access-keywords.md)
-- [修飾子](./modifiers.md)
+- [アクセス キーワード](base.md)
+- [修飾子](index.md)

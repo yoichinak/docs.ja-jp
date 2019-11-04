@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 05/01/2017
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: 5c162258d6d365da8c6048590eb4c5eec6162973
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ac9ad7e3730f8c430d42c4c8c8b63ab3d9cd091f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799313"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423827"
 ---
 # <a name="get-started"></a>はじめに
 
@@ -21,7 +21,7 @@ ms.locfileid: "70799313"
 
 * 「[C# 入門](../csharp/getting-started/index.md)」の記事と「[C# のチュートリアル](../csharp/tutorials/index.md)」では、主に C# を使って開発を始めるさまざまな方法が示されています。
 
-* 「[F# Getting Started](../fsharp/tutorials/getting-started/index.md)」 (F# 入門) のチュートリアルでは、F# を使う主要な方法として、Visual Studio、Visual Studio のコード、コマンドライン ツールの 3 種類が説明されています。
+* 「[F# Getting Started](../fsharp/get-started/index.md)」 (F# 入門) のチュートリアルでは、F# を使う主要な方法として、Visual Studio、Visual Studio のコード、コマンドライン ツールの 3 種類が説明されています。
 
 * 「[Visual Basic の概要](../visual-basic/getting-started/index.md)」の記事では、Visual Studio での Visual Basic の使用に関するガイドが提供されています。
 

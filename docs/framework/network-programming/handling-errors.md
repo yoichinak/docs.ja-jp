@@ -31,19 +31,20 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: bb478f0742e85cadd9509de823abb0d486170d37
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7084c4579dd5fca0075c7516754195f7cea9e27c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048495"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458041"
 ---
 # <a name="handling-errors"></a>エラー処理
+
 <xref:System.Net.WebRequest> および <xref:System.Net.WebResponse> クラスでは、システム例外 (<xref:System.ArgumentException> など) と Web 固有の例外 (<xref:System.Net.WebRequest.GetResponse%2A> メソッドでスローされる <xref:System.Net.WebException>) の両方がスローされます。  
   
- 各 **WebException** には、<xref:System.Net.WebExceptionStatus> 列挙体からの値を含む <xref:System.Net.WebException.Status%2A> プロパティがあります。 **Status** プロパティを調べることで、発生したエラーを特定し、エラーを解決するための適切な手順を実行することができます。  
+各 **WebException** には、<xref:System.Net.WebExceptionStatus> 列挙体からの値を含む <xref:System.Net.WebException.Status%2A> プロパティがあります。 **Status** プロパティを調べることで、発生したエラーを特定し、エラーを解決するための適切な手順を実行することができます。  
   
- **Status** プロパティの有効な値を次の表に示します。  
+**Status** プロパティの有効な値を次の表に示します。  
   
 |Status|説明|  
 |------------|-----------------|  
@@ -66,9 +67,9 @@ ms.locfileid: "71048495"
 |ProxyNameResolutionFailure|ネーム リゾルバー サービスがプロキシ ホスト名を解決できませんでした。|  
 |UnknownError|不明な種類の例外が発生しました。|  
   
- **Status** プロパティが **WebExceptionStatus.ProtocolError** である場合は、サーバーからの応答を含む **WebResponse** を使用できます。 この応答を調べることで、プロトコル エラーの実際の原因を判別できます。  
+**Status** プロパティが **WebExceptionStatus.ProtocolError** である場合は、サーバーからの応答を含む **WebResponse** を使用できます。 この応答を調べることで、プロトコル エラーの実際の原因を判別できます。  
   
- 次の例は、**WebException** をキャッチする方法を示しています。  
+次の例は、**WebException** をキャッチする方法を示しています。  
   
 ```csharp  
 try   
@@ -163,11 +164,11 @@ Catch e As Exception
 End Try  
 ```  
   
- Windows ソケットでエラーが発生した場合、<xref:System.Net.Sockets.Socket> クラスを使用するアプリケーションは <xref:System.Net.Sockets.SocketException> をスローします。 <xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener>、および <xref:System.Net.Sockets.UdpClient> は **Socket** クラスに基づくものであり、同様に **SocketExceptions** をスローします。  
+Windows ソケットでエラーが発生した場合、<xref:System.Net.Sockets.Socket> クラスを使用するアプリケーションは <xref:System.Net.Sockets.SocketException> をスローします。 <xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener>、および <xref:System.Net.Sockets.UdpClient> は **Socket** クラスに基づくものであり、同様に **SocketExceptions** をスローします。  
   
- **SocketException** がスローされると、**SocketException** クラスは <xref:System.Net.Sockets.SocketException.ErrorCode%2A> プロパティを、最後に発生したオペレーティング システムのソケット エラーに設定します。 ソケット エラー コードの詳細については、MSDN の Winsock 2.0 API エラー コードに関するドキュメントを参照してください。  
+**SocketException** がスローされると、**SocketException** クラスは <xref:System.Net.Sockets.SocketException.ErrorCode%2A> プロパティを、最後に発生したオペレーティング システムのソケット エラーに設定します。 ソケット エラー コードの詳細については、MSDN の Winsock 2.0 API エラー コードに関するドキュメントを参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [例外処理の基本事項](../../standard/exceptions/exception-handling-fundamentals.md)
+- [.NET での例外の処理とスロー](../../standard/exceptions/index.md)
 - [データの要求](requesting-data.md)

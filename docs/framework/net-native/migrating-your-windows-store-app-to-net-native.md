@@ -2,14 +2,14 @@
 title: Windows ストア アプリの .NET ネイティブへの移行
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 7eea089ef9b492e156758d170394b17d74a60a64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1942574e832ca7593d91c71370cc0af0c3051617
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128309"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455609"
 ---
-# <a name="migrating-your-windows-store-app-to-net-native"></a>Windows ストア アプリの .NET ネイティブへの移行
+# <a name="migrate-your-windows-store-app-to-net-native"></a>Windows ストアアプリを .NET ネイティブに移行する
 
 .NET ネイティブは、Windows ストアまたは開発者のコンピューターでアプリの静的なコンパイルを行います。 これは、デバイス上で Just-In-Time (JIT) コンパイラまたは [ネイティブ イメージ ジェネレーター (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) によって Windows ストア アプリに対して実行される動的なコンパイルとは異なります。 違いにかかわらず、.NET ネイティブは[Windows ストアアプリ用 .net](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)との互換性を維持しようとします。 ほとんどの場合、Windows ストアアプリ用 .NET で動作するものは、.NET ネイティブでも動作します。  ただし、動作に違いがある場合もあります。 このドキュメントでは、Windows ストアアプリ用の標準 .NET と、次の領域の .NET ネイティブにおけるこれらの違いについて説明します。
 
@@ -53,7 +53,7 @@ ms.locfileid: "73128309"
 
 たとえば、データ バインディングは、プロパティ名を関数にマップするためにアプリを必要とします。 Windows ストア アプリ用 .NET では、共通言語ランタイムが自動的にリフレクションを使用して、マネージド型および公開されているネイティブ型にこの機能を提供します。 .NET ネイティブでは、データのバインド先となる型のメタデータがコンパイラによって自動的に含まれます。
 
-.NET ネイティブコンパイラは、<xref:System.Collections.Generic.List%601> や <xref:System.Collections.Generic.Dictionary%602>などの一般的に使用されるジェネリック型を処理することもできます。これは、ヒントやディレクティブを必要とせずに機能します。 [dynamic](../../csharp/language-reference/keywords/dynamic.md) キーワードも、一定の制限の下でサポートされます。
+.NET ネイティブコンパイラは、<xref:System.Collections.Generic.List%601> や <xref:System.Collections.Generic.Dictionary%602>などの一般的に使用されるジェネリック型を処理することもできます。これは、ヒントやディレクティブを必要とせずに機能します。 [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) キーワードも、一定の制限の下でサポートされます。
 
 > [!NOTE]
 > アプリを .NET ネイティブに移植するときは、すべての動的コードパスを十分にテストする必要があります。

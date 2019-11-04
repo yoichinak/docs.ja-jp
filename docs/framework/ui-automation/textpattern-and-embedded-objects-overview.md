@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: ba4df55c3359e2a81eef0b4947a744d80ed49497
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a718a85ed42c4f8081348de20a195899f3c18c0a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040597"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458121"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern および埋め込みオブジェクトの概要
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "73040597"
   
  この概要では、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] がテキスト ドキュメントまたはコンテナー内で埋め込みオブジェクトや子要素を公開する方法について説明します。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] では、埋め込みオブジェクトは、テキスト以外の境界を持つ任意の要素です。たとえば、画像、ハイパーリンク、テーブル、ドキュメントの種類 ([!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] スプレッドシートや Microsoft Windows Media ファイルなど) があります。 これは、あるアプリケーションで要素が作成され、別のアプリケーション内に埋め込まれる (リンクされる) 標準的な定義とは異なります。 オブジェクトを元のアプリケーション内で編集できるかどうかは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の状況とは無関係です。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] では、埋め込みオブジェクトは、テキスト以外の境界を持つ任意の要素です。たとえば、画像、ハイパーリンク、テーブル、ドキュメントの種類 (Microsoft Excel スプレッドシートや Microsoft Windows Media ファイルなど) を使用できます。 これは、あるアプリケーションで要素が作成され、別のアプリケーション内に埋め込まれる (リンクされる) 標準的な定義とは異なります。 オブジェクトを元のアプリケーション内で編集できるかどうかは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の状況とは無関係です。  
   
 <a name="Embedded_Objects_and_the_UI_Automation_Tree"></a>   
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>埋め込みオブジェクトと UI オートメーション ツリー  

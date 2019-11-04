@@ -2,19 +2,19 @@
 title: WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 5333c9c5caad502ce925fe4a45a039c553812ba6
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 161ac59e64e1a933049ed36ebb7140901686929c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320200"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425264"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)
 WS-AtomicTransaction 構成ユーティリティは、基本的な WS-AtomicTransaction サポート設定を構成するために使用されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 wsatConfig [Options]  
 ```  
   
@@ -38,13 +38,13 @@ wsatConfig [Options]
 |-accountsCerts: \<thumb >&#124;"Issuer\SubjectName", >|WS-AtomicTransaction に追加できる証明書をコンマで区切って指定します。 証明書は、サムプリントまたは Issuer\SubjectName ペアで示されます。 空の場合は、サブジェクト名に {EMPTY} を使用します。|  
 |-endpointCert: < マシン&#124;\< thumb >&#124;"Issuer\SubjectName" >|コンピューターの証明書を使用するか、サムプリントまたは Issuer\SubjectName ペアで指定される別のローカル エンドポイントの証明書を使用します。 空の場合は、サブジェクト名に {EMPTY} を使用します。|  
 |-maxTimeout: \<sec >|最大タイムアウトを秒単位で指定します。 有効な値は 0 ~ 3600 です。|  
-|-network: @no__t 0enable&#124;disable >|WS-AtomicTransaction ネットワーク サポートを有効または無効にします。|  
-|-port: @no__t 0portNum >|WS-AtomicTransaction の HTTPS ポートを設定します。<br /><br /> このツールを実行する前にファイアウォールが既に有効な場合、ポートは例外の一覧に自動的に登録されます。 このツールを実行する前にファイアウォールが無効な場合は、ファイアウォールに関する追加の構成はありません。<br /><br /> WS-AT の構成後にファイアウォールを有効にする場合は、このツールを再度実行し、このパラメーターを使用してポート番号を指定する必要があります。 WS-AT の構成後にファイアウォールを無効にする場合は、入力を追加しないで WS-AT の動作を続行します。|  
+|-network:\<disable&#124;> を有効にします|WS-AtomicTransaction ネットワーク サポートを有効または無効にします。|  
+|-port:\<portNum >|WS-AtomicTransaction の HTTPS ポートを設定します。<br /><br /> このツールを実行する前にファイアウォールが既に有効な場合、ポートは例外の一覧に自動的に登録されます。 このツールを実行する前にファイアウォールが無効な場合は、ファイアウォールに関する追加の構成はありません。<br /><br /> WS-AT の構成後にファイアウォールを有効にする場合は、このツールを再度実行し、このパラメーターを使用してポート番号を指定する必要があります。 WS-AT の構成後にファイアウォールを無効にする場合は、入力を追加しないで WS-AT の動作を続行します。|  
 |-timeout: \< 秒 >|既定のタイムアウトを秒単位で指定します。 有効な値は 1 ～ 3600 の範囲です。|  
-|-traceActivity: @no__t 0enable&#124;disable >|アクティビティ イベントのトレースを有効または無効にします。|  
+|-traceActivity:\<無効&#124;> を有効にします|アクティビティ イベントのトレースを有効または無効にします。|  
 |-traceLevel: \<Off&#124;エラー&#124;重大&#124;警告&#124;情報&#124; &#124;すべて >}|トレース レベルを指定します。|  
 |-tracePII: \<enable&#124;disable >|個人を特定できる情報のトレースを有効または無効にします。|  
-|-traceProp: @no__t 0enable&#124;disable >|伝達イベントのトレースを有効または無効にします。|  
+|-traceProp:\<disable&#124;> を有効にします|伝達イベントのトレースを有効または無効にします。|  
 |-restart|MSDTC を再起動して変更を直ちに反映します。 これが指定されていない場合、変更は、MSDTC が再起動されたときに有効になります。|  
 |-show|現在の WS-AtomicTransaction プロトコル設定を表示します。|  
 |-virtualServer: \<virtualServer >|DTC リソース クラスター名を指定します。|  

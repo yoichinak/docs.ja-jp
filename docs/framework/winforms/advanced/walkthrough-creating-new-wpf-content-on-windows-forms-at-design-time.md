@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fc6f988d6ffd270eba4abe277ca34fa2eeec56fd
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 395543a3141af66038cabef9a3c9fed40a36b47e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197424"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460657"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時の Windows フォームでの新しい WPF コンテンツの作成
 

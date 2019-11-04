@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: df9c66d47d1f5e345858ae08b3d926d0e938a255
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 04001f88e0f59fd4eb3ca84d846456be7740737e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038316"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460486"
 ---
 # <a name="globalization-for-wpf"></a>WPF のグローバリゼーション
 このトピックでは、グローバル市場向けに [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションを作成するときに注意する必要がある問題について説明します。 グローバリゼーションプログラミング要素は、.NET で <xref:System.Globalization> 名前空間に定義されています。
@@ -149,7 +149,7 @@ ms.locfileid: "73038316"
 ### <a name="localizable-user-interface"></a>ローカライズ可能なユーザー インターフェイス
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使用して [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]を定義します。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] で開発すると、オブジェクトの階層に一連のプロパティとロジックを指定できます。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] の主な用途は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションを開発することですが、それを使用して共通言語ランタイム (CLR) オブジェクトの階層を指定することもできます。 ほとんどの開発者は、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使用してアプリケーションの [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を指定しC# 、などのプログラミング言語を使用してユーザーの操作に応答します。
 
- リソースの観点からは、言語に依存する [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を記述するように設計された [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルはリソース要素であるため、その最終的な配布形式はローカライズ可能である必要があります。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] はイベントを処理できないため、多くの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] アプリケーションには、これを行うためのコードブロックが含まれています。 詳細については、「 [XAML の概要 (WPF)](xaml-overview-wpf.md)」を参照してください。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルが XAML の BAML 形式にトークン化されると、コードが削除され、異なるバイナリにコンパイルされます。 XAML ファイル、画像、その他の種類の管理対象リソース オブジェクトの BAML 形式はサテライト リソース アセンブリに組み込まれます。サテライト リソース アセンブリに組み込むことで、他の言語にローカライズできます。ローカライズが必要なければ、メイン アセンブリに組み込まれます。
+ リソースの観点からは、言語に依存する [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を記述するように設計された [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルはリソース要素であるため、その最終的な配布形式はローカライズ可能である必要があります。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] はイベントを処理できないため、多くの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] アプリケーションには、これを行うためのコードブロックが含まれています。 詳細については、「 [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)」を参照してください。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルが XAML の BAML 形式にトークン化されると、コードが削除され、異なるバイナリにコンパイルされます。 XAML ファイル、画像、その他の種類の管理対象リソース オブジェクトの BAML 形式はサテライト リソース アセンブリに組み込まれます。サテライト リソース アセンブリに組み込むことで、他の言語にローカライズできます。ローカライズが必要なければ、メイン アセンブリに組み込まれます。
 
 > [!NOTE]
 > [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでは、文字列テーブルや画像などのすべての [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]CLR リソースがサポートされます。

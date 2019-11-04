@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: eab8faa54aaf9031ac0809912bd659c43e39a11b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 61dfa257676d6c274d846300c7ccae75a219cf4c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321395"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424897"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同期操作と非同期操作
 ここでは、非同期サービス操作の実装と呼び出しについて説明します。  
@@ -110,7 +110,7 @@ public class AsyncExample
  イベント ベースの非同期パターンの詳細については、「[イベント ベースの非同期パターンの概要](https://go.microsoft.com/fwlink/?LinkId=232515)」を参照してください。  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 非同期パターン  
- サービス操作は、.NET Framework 非同期プログラミングパターンを使用して非同期方式で実装できます。また、<xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> プロパティを `true` に設定して `<Begin>` メソッドをマークすることもできます。 この場合の非同期操作は、同期操作と同じ形式でメタデータに公開されます。つまり、要求メッセージとそれに関連する応答メッセージを伴う単独操作として公開されます。 このとき、クライアント プログラミング モデルは選択が可能です。 サービスが呼び出されたときに要求/応答メッセージ交換が行われていれば、クライアント プログラミング モデルは、このパターンを同期操作または非同期操作として表すことができます。  
+ サービス操作は、.NET Framework 非同期プログラミングパターンを使用して非同期方式で実装し、`<Begin>` メソッドに <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> プロパティを `true`に設定してマークすることができます。 この場合の非同期操作は、同期操作と同じ形式でメタデータに公開されます。つまり、要求メッセージとそれに関連する応答メッセージを伴う単独操作として公開されます。 このとき、クライアント プログラミング モデルは選択が可能です。 サービスが呼び出されたときに要求/応答メッセージ交換が行われていれば、クライアント プログラミング モデルは、このパターンを同期操作または非同期操作として表すことができます。  
   
  一般に、システムの非同期の性質を考えると、スレッドへの依存は避ける必要があります。  操作のディスパッチ処理のさまざまな段階にデータを渡す最も信頼性の高い方法は、拡張機能を使用する方法です。  
   
@@ -162,13 +162,13 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
   
  タスク ベースのモデルを使用する場合は、次のコードに示すように、await キーワードを使用して操作を呼び出すだけです。  
   
-```  
+```csharp  
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  
 ```  
   
  イベント ベースの非同期パターンを使用する場合は、応答の通知を受信するイベント ハンドラーを追加するだけで済み、結果イベントはユーザー インターフェイス スレッドで自動的に発生します。 この手法を使用するには、次の例に示すように、[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) で **/async** と **/tcv:Version35** の両方のコマンド オプションを指定します。  
   
-```  
+```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
@@ -176,7 +176,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
   
  イベント ベースの非同期モデルは、[!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] でのみ使用できます。 また、<xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> を使用して WCF クライアント チャネルを作成した場合は、[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] でもサポートされません。 WCF クライアント チャネル オブジェクトを使用する場合、<xref:System.IAsyncResult?displayProperty=nameWithType> オブジェクトを使用して操作を非同期に呼び出す必要があります。 この手法を使用するには、次の例に示すように、[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) で **/async** コマンド オプションを指定します。  
   
-```  
+```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
 ```  
   

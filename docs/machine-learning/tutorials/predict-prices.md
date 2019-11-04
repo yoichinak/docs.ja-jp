@@ -4,12 +4,12 @@ description: このチュートリアルでは、ML.NET を使用して、料金
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 298dd4aa97518bcfdb0c5c4f00e0135a328b3b9a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a7a7a246f3153889343589a7b32c183ca30df5a3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774423"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459165"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>チュートリアル: ML.NET で回帰を使用して価格を予測する
 
@@ -41,7 +41,7 @@ ms.locfileid: "72774423"
 
 ## <a name="prepare-and-understand-the-data"></a>データを準備して理解する
 
-1. [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) データ セットと [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) データ セットをダウンロードして、前の手順で作成済みの *Data* フォルダーに保存します。 これらのデータ セットを使用して、機械学習モデルをトレーニングし、モデルの正確度を評価します。 これらのデータ セットは、[NYC TLC Taxi Trip データ セット](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)から取得したものです。
+1. [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) データ セットと [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) データ セットをダウンロードして、前の手順で作成済みの *Data* フォルダーに保存します。 これらのデータ セットを使用して、機械学習モデルをトレーニングし、モデルの正確度を評価します。 これらのデータ セットは、[NYC TLC Taxi Trip データ セット](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)から取得したものです。
 
 1. **ソリューション エクスプローラー**で、各 \*.csv ファイルを右クリックし、 **[プロパティ]** を選択します。 **[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
 

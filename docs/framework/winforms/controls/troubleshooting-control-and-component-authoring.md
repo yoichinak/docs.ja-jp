@@ -11,15 +11,15 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5d3aa715590a10391bafa08a85265842ee8cedfb
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 9ee9df41e6f0a4e37164760a2e40740e31530121
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197115"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459064"
 ---
 # <a name="troubleshoot-control-and-component-authoring"></a>コントロールとコンポーネントの作成に関するトラブルシューティング
 

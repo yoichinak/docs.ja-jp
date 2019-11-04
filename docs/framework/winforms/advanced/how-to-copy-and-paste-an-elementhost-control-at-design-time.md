@@ -7,15 +7,15 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3d1887eb1161f714962c2c26d6fe618749b26c0f
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e89510558274558e560bf810afe746e250ff26a4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197476"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459231"
 ---
 # <a name="how-to-copy-and-paste-an-elementhost-control"></a>方法: エンティティコントロールをコピーして貼り付ける
 

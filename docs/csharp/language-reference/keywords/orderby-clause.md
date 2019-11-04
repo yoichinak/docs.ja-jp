@@ -9,12 +9,12 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: b62634c0f61e17c046cd474670fddf437287ab7a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 09a745fe3da3a5acb71972b9cf56391774c7016a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634104"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422651"
 ---
 # <a name="orderby-clause-c-reference"></a>orderby 句 (C# リファレンス)
 
@@ -42,4 +42,4 @@ ms.locfileid: "65634104"
 - [クエリ キーワード (LINQ)](query-keywords.md)
 - [統合言語クエリ (LINQ)](../../linq/index.md)
 - [group 句](group-clause.md)
-- [C# の LINQ の概要](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C# の LINQ の概要](/dotnet/csharp/programming-guide/concepts/linq/)

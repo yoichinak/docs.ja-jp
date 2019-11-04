@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-ms.openlocfilehash: cdd8d2781331956289d2b74162e653ba1ee8fad6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114237"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457968"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>アンマネージ コードとの相互運用
 
@@ -40,9 +40,6 @@ COM 相互運用機能とプラットフォーム呼び出しのマーシャリ�
 [方法: HRESULT に例外を割り当てる](how-to-map-hresults-and-exceptions.md)  
 例外と HRESULT の間のマッピングについて説明します。
 
-[COM ラッパー](com-wrappers.md)  
-COM 相互運用機能が提供するラッパーをについて説明します。
-
 [型の等価性と埋め込まれた相互運用機能型](type-equivalence-and-embedded-interop-types.md)  
 COM 型の型情報をアセンブリに埋め込む方法と、共通言語ランタイムが埋め込みの COM 型の等価性を決定する方法について説明します。
 
@@ -57,3 +54,8 @@ COM 相互運用機能によって Windows レジストリを使用せずにコ�
 
 [方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する](configure-net-framework-based-com-components-for-reg.md)  
 アプリケーション マニフェストを作成する方法と、コンポーネント マニフェストを作成して埋め込む方法について説明します。
+
+## <a name="related-sections"></a>関連項目
+
+[COM ラッパー](../../standard/native-interop/com-wrappers.md)  
+COM 相互運用機能が提供するラッパーをについて説明します。

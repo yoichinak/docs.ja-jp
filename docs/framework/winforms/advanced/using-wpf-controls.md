@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5e05ec7fc503565333a4d05662a4e40d8d1193af
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e9883e9d31fc9e3e2ec3ca06b4fc830bcdc338ae
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197468"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460697"
 ---
 # <a name="use-wpf-controls-in-windows-forms-apps"></a>Windows フォームアプリで WPF コントロールを使用する
 

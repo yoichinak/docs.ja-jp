@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 7e29b724259604a6ee09dff9cf9133b1739eb9ad
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: 908c3fb0baacc7fd75dae875e9a9d49a08fe5401
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424780"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459716"
 ---
 # <a name="security-wpf"></a>セキュリティ (WPF)
 <a name="introduction"></a>Windows Presentation Foundation (WPF) のスタンドアロンアプリケーションとブラウザーでホストされるアプリケーションを開発する場合は、セキュリティモデルを考慮する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] スタンドアロンアプリケーションは、Windows インストーラー (.msi)、XCopy、または ClickOnce を使用してデプロイされているかどうかにかかわらず、無制限のアクセス許可 (CAS**FullTrust**アクセス許可セット) で実行されます。 部分的に信頼されたスタンドアロンの WPF アプリケーションを ClickOnce で展開することはサポートされていません。 ただし、完全に信頼されたホストアプリケーションでは、.NET Framework アドインモデルを使用して部分信頼 <xref:System.AppDomain> を作成できます。 詳細については、「 [WPF アドインの概要](./app-development/wpf-add-ins-overview.md)」を参照してください。  
@@ -279,4 +279,4 @@ ms.locfileid: "73424780"
 - [patterns & practices アプリケーション セキュリティ ガイダンス インデックス](https://go.microsoft.com/fwlink/?LinkId=117426)
 - [コード アクセス セキュリティ](../misc/code-access-security.md)
 - [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)
-- [XAML の概要 (WPF)](./advanced/xaml-overview-wpf.md)
+- [XAML の概要 (WPF)](../../desktop-wpf/fundamentals/xaml.md)

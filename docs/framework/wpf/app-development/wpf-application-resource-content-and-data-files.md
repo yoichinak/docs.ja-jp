@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 6b1a78ec56032d84d9699c2ecda89308779ee2da
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421136"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460915"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル
 Microsoft Windows アプリケーションは、多くの場合、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、イメージ、ビデオ、オーディオなど、実行可能ではないデータを含むファイルに依存しています。 Windows Presentation Foundation (WPF) では、これらの種類のデータファイル (アプリケーションデータファイルと呼ばれます) を構成、識別、および使用するための特別なサポートを提供しています。 このサポートの中心となるのは、次のような特定のアプリケーション データ ファイルの種類のセットです。  
@@ -52,7 +52,7 @@ Microsoft Windows アプリケーションは、多くの場合、[!INCLUDE[TLA#
 - アプリケーションデータファイルはローカライズ可能である必要があります (「 [WPF のグローバリゼーションとローカライズの概要](../advanced/wpf-globalization-and-localization-overview.md)」を参照してください)。  
   
 > [!NOTE]
-> このセクションで説明するリソースファイルは、「 [XAML リソース](../advanced/xaml-resources.md)」で説明されているリソースファイルとは異なり、「[アプリケーションリソースの管理 (.net)](/visualstudio/ide/managing-application-resources-dotnet)」で説明されている埋め込みリソースまたはリンクされたリソースとは異なります。  
+> このセクションで説明するリソースファイルは、「 [XAML リソース](../../../desktop-wpf/fundamentals/xaml-resources-define.md)」で説明されているリソースファイルとは異なり、「[アプリケーションリソースの管理 (.net)](/visualstudio/ide/managing-application-resources-dotnet)」で説明されている埋め込みリソースまたはリンクされたリソースとは異なります。  
   
 ### <a name="configuring-resource-files"></a>リソース ファイルの構成  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]では、リソースファイルは、`Resource` 項目として Microsoft build engine (MSBuild) プロジェクトに含まれるファイルです。  

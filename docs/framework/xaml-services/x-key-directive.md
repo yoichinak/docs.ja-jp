@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: eb9f9cc1dfdb802e340123d0d39e9c9ebaa457f0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b00218623add052e135bc5815d615fe7cdf002ee
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053757"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459959"
 ---
 # <a name="xkey-directive"></a>x:Key ディレクティブ
 XAML で定義されたディクショナリで作成および参照される要素を一意に識別します。 `x:Key` 値を XAML オブジェクトに追加するのは、リソース ディクショナリ (<xref:System.Windows.ResourceDictionary> など) のリソースを識別するための最も一般的な方法です。  
@@ -45,14 +45,14 @@ XAML で定義されたディクショナリで作成および参照される要
 |||  
 |-|-|  
 |`stringKeyValue`|キーとして使用するテキスト文字列。 テキスト文字列は、 [XamlName 文法](xamlname-grammar.md)に準拠している必要があります。|  
-|`markupExtensionUsage`|マークアップ拡張機能の{}区切り記号内で、キーとして使用するオブジェクトを提供するマークアップ拡張機能の使用。 「解説」を参照してください。|  
+|`markupExtensionUsage`|マークアップ拡張機能の区切り記号 {}には、キーとして使用するオブジェクトを提供するマークアップ拡張機能の使用法が含まれます。 「解説」を参照してください。|  
   
 ## <a name="remarks"></a>Remarks  
- `x:Key` は XAML のリソース ディクショナリの概念をサポートしています。 言語としての XAML ではリソース ディクショナリの実装は定義されていません。特定の UI フレーム ワークによって定義されています。 WPF での XAML リソースディクショナリの実装方法の詳細については、「 [Xaml リソース](../wpf/advanced/xaml-resources.md)」を参照してください。  
+ `x:Key` は XAML のリソース ディクショナリの概念をサポートしています。 言語としての XAML ではリソース ディクショナリの実装は定義されていません。特定の UI フレーム ワークによって定義されています。 WPF での XAML リソースディクショナリの実装方法の詳細については、「 [Xaml リソース](../../desktop-wpf/fundamentals/xaml-resources-define.md)」を参照してください。  
   
- XAML 2006 および WPF では`x:Key` 、を属性として指定する必要があります。 文字列ではないキーも使用できますが、文字列ではない値を属性形式で提供するためには、マークアップ拡張機能を使用する必要があります。 XAML 2009 を使用している`x:Key`場合は、を要素として指定することにより、マークアップ拡張機能の中間を必要とせずに、文字列以外のオブジェクト型によってキー指定されたディクショナリを明示的にサポートできます。 このトピックの「XAML 2009」セクションを参照してください。 「解説」の残りの部分は、XAML 2006 の実装に特に適用されます。  
+ XAML 2006 および WPF では、`x:Key` を属性として指定する必要があります。 文字列ではないキーも使用できますが、文字列ではない値を属性形式で提供するためには、マークアップ拡張機能を使用する必要があります。 XAML 2009 を使用している場合は、`x:Key` を要素として指定して、マークアップ拡張機能の中間を必要とせずに、文字列以外のオブジェクト型によってキー指定されたディクショナリを明示的にサポートすることができます。 このトピックの「XAML 2009」セクションを参照してください。 「解説」の残りの部分は、XAML 2006 の実装に特に適用されます。  
   
- の属性値に`x:Key`は、 [XamlName 文法](xamlname-grammar.md)で定義されている任意の文字列を指定できます。また、マークアップ拡張機能を通じて評価されるオブジェクトを指定することもできます。 WPF の例については、「WPF の使用上の注意」を参照してください。  
+ `x:Key` の属性値には、 [XamlName 文法](xamlname-grammar.md)で定義されている任意の文字列を指定できます。また、マークアップ拡張機能を通じて評価されるオブジェクトを指定することもできます。 WPF の例については、「WPF の使用上の注意」を参照してください。  
   
  通常、<xref:System.Collections.IDictionary> の実装である親要素の子要素には、そのディクショナリ内の一意のキー値を指定する `x:Key` 属性を含める必要があります。 フレームワークでは、特定の型の `x:Key` を代用するために、エイリアス化されたキー プロパティを実装する場合があります。このようなプロパティを定義する型には、<xref:System.Windows.Markup.DictionaryKeyPropertyAttribute> 属性を設定する必要があります。  
   
@@ -73,16 +73,16 @@ XAML で定義されたディクショナリで作成および参照される要
   
  基本的な XAML 定義では、キーと名前で異なるディレクティブと言語要素 (`x:Key` と `x:Name`) が使用されます。 また、キーと名前は、それらの概念の WPF 定義およびアプリケーションにより異なる状況において使用されます。 詳細については、「 [WPF XAML 名前スコープ](../wpf/advanced/wpf-xaml-namescopes.md)」を参照してください。  
   
- 既に説明したように、キー値はマークアップ拡張機能によって指定され、文字列値以外になる場合があります。 WPF シナリオの例として、の`x:Key`値が[ComponentResourceKey](../wpf/advanced/componentresourcekey-markup-extension.md)であることが挙げられます。 特定のコントロールでは、スタイルを完全に置き換えることなく、そのコントロールの外観と動作の一部に影響を与えるカスタム スタイル リソースの型に対応するスタイル キーが公開されます。 このようなキーの例として、<xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A> が挙げられます。  
+ 既に説明したように、キー値はマークアップ拡張機能によって指定され、文字列値以外になる場合があります。 WPF シナリオの例として、`x:Key` の値が[ComponentResourceKey](../wpf/advanced/componentresourcekey-markup-extension.md)であることが挙げられます。 特定のコントロールでは、スタイルを完全に置き換えることなく、そのコントロールの外観と動作の一部に影響を与えるカスタム スタイル リソースの型に対応するスタイル キーが公開されます。 このようなキーの例として、<xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A> が挙げられます。  
   
  WPF のマージされたディクショナリ機能では、キーの一意性およびキーの検索動作について考慮を要する点があります。 詳細については、「[マージされたリソース ディクショナリ](../wpf/advanced/merged-resource-dictionaries.md)」を参照してください。  
   
 ## <a name="xaml-2009"></a>XAML 2009  
- XAML 2009 緩和されは、常`x:Key`に属性形式で提供される制限を示しています。  
+ XAML 2009 緩和されは、常に属性形式で提供される `x:Key` 制限をします。  
   
  WPF では、XAML 2009 機能を使用できますが、マークアップコンパイルされていない XAML にのみ使用できます。 WPF 向けにマークアップ コンパイルされた XAML、および XAML の BAML 形式は、現在、XAML 2009 のキーワードと機能をサポートしていません。  
   
- XAML 2009 では、次の`x:Key`使用方法を使用して要素を指定できます。  
+ XAML 2009 では、次の使用方法を使用して `x:Key` 要素を指定できます。  
   
 ### <a name="xaml-element-usage-xaml-2009-only"></a>XAML 要素の使用 (XAML 2009 のみ)  
   
@@ -108,10 +108,10 @@ keyObject
 - *Keyobject*は、直接のオブジェクトインスタンスではなく、オブジェクト要素形式のマークアップ拡張機能を使用することもできます。  
   
 ## <a name="silverlight-usage-notes"></a>Silverlight の使用上の注意  
- Silverlight 用の `x:Key` に関しては、別途ドキュメントが用意されています。 詳細については[、「XAML 名前空間 (x:)」を参照してください。言語機能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)。  
+ Silverlight 用の `x:Key` に関しては、別途ドキュメントが用意されています。 詳細については、「 [XAML 名前空間 (x:)」を参照してください。言語機能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)。  
   
 ## <a name="see-also"></a>関連項目
 
-- [XAML リソース](../wpf/advanced/xaml-resources.md)
+- [XAML リソース](../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [リソースとコード](../wpf/advanced/resources-and-code.md)
 - [StaticResource のマークアップ拡張機能](../wpf/advanced/staticresource-markup-extension.md)

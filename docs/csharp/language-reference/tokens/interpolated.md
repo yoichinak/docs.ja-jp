@@ -11,13 +11,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.author: ronpet
-ms.openlocfilehash: 53a8938a373136df65e23c162b94c4d8dc1f30b4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cda8582da9ca8262ec2ce6bcfbb76e2e2f5f6006
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253861"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421850"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 文字列補間 (C# リファレンス)
 
@@ -59,7 +58,7 @@ ms.locfileid: "70253861"
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-verbatim 補間文字列は、`$` 文字で始まり、`@` 文字が続きます。 逐語的文字列の詳細については、[string](../keywords/string.md) と [逐語的識別子](verbatim.md)に関するトピックを参照してください。
+verbatim 補間文字列は、`$` 文字で始まり、`@` 文字が続きます。 逐語的文字列の詳細については、[string](../builtin-types/reference-types.md) と [逐語的識別子](verbatim.md)に関するトピックを参照してください。
 
 > [!NOTE]
 > C# 8.0 以降では、`$` と `@` のトークンを任意の順序で使用できます。`$@"..."` と `@$"..."` はどちらも有効な verbatim 補間文字列です。 以前のバージョンの C# では、`$` トークンは `@` トークンの前に記述する必要があります。

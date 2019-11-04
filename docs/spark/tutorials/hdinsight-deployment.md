@@ -4,16 +4,16 @@ description: .NET for Apache Spark アプリケーションを Azure HDInsight �
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2cb91032e0ce1d320b266772e8f9f1431df4a298
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 3604aff5d1f138071c941ea85546af03185d722d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960990"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460721"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>チュートリアル: .NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする
 
-このチュートリアルでは、.NET for Apache Spark アプリケーションを Azure HDInsight クラスターを介してクラウドにデプロイする方法について説明します。 HDInsight の Spark クラスターは Azure Storage および Azure Data Lake Storage と互換性があるため、HDInsight では、Spark クラスターの作成と構成をより簡単に行うことができます。 
+このチュートリアルでは、.NET for Apache Spark アプリケーションを Azure HDInsight クラスターを介してクラウドにデプロイする方法について説明します。 HDInsight の Spark クラスターは Azure Storage および Azure Data Lake Storage と互換性があるため、HDInsight では、Spark クラスターの作成と構成をより簡単に行うことができます。
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 
@@ -46,7 +46,7 @@ ms.locfileid: "72960990"
 
 ## <a name="create-an-hdinsight-cluster"></a>HDInsight クラスターの作成
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > HDInsight クラスターの料金は、そのクラスターを使用していない場合でも、分単位で課金されます。 使用後は、クラスターを必ず削除してください。 詳細については、この記事の「[リソースのクリーンアップ](#clean-up-resources)」セクションを参照してください。
 
 1. [Azure Portal](https://portal.azure.com) にアクセスします。
@@ -82,7 +82,7 @@ ms.locfileid: "72960990"
 
 ## <a name="publish-your-app"></a>アプリケーションの発行
 
-次に、チュートリアル「[.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)」 (.NET for Apache Spark - 10 分で開始する) で作成した *mySparkApp* を公開します。これにより、Spark クラスターは、アプリケーションを実行するために必要なすべてのファイルにアクセスできます。 
+次に、チュートリアル「[.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)」 (.NET for Apache Spark - 10 分で開始する) で作成した *mySparkApp* を公開します。これにより、Spark クラスターは、アプリケーションを実行するために必要なすべてのファイルにアクセスできます。
 
 1. *mySparkApp*を公開するには、次のコマンドを実行します。
 
@@ -90,7 +90,7 @@ ms.locfileid: "72960990"
 
    ```console
    cd mySparkApp
-   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
    **Linux の場合:**
@@ -114,7 +114,7 @@ ms.locfileid: "72960990"
 
 ## <a name="upload-files-to-azure"></a>Azure にファイルをアップロードする
 
-次に、Azure Storage Explorer を使用して、クラスターのストレージ用に選択した BLOB コンテナーに次の 5 つのファイルをアップロードします。 
+次に、Azure Storage Explorer を使用して、クラスターのストレージ用に選択した BLOB コンテナーに次の 5 つのファイルをアップロードします。
 
 * Microsoft.Spark.Worker
 * install-worker.sh
@@ -128,7 +128,7 @@ ms.locfileid: "72960990"
 
    ![Azure Storage Explorer にファイルをアップロードする](./media/hdinsight-deployment/upload-files-to-storage.png)
 
-3. *install-worker.sh* は、.NET for Apache Spark 依存ファイルをクラスターのノードにコピーできるスクリプトです。 
+3. *install-worker.sh* は、.NET for Apache Spark 依存ファイルをクラスターのノードにコピーできるスクリプトです。
 
    ご使用のローカル コンピューターで、**install-worker.sh** という名前の新しいファイルを作成し、GitHub 上にある [install-worker.sh のコンテンツ](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)を貼り付けます。 次に、*install-worker.sh* を BLOB コンテナーにアップロードします。
 
@@ -142,7 +142,7 @@ ms.locfileid: "72960990"
 
 ## <a name="run-the-hdinsight-script-action"></a>HDInsight スクリプト アクションを実行する
 
-クラスターの実行中、ファイルを Azure にアップロードしたら、クラスターで **install-worker.sh** スクリプトを実行します。 
+クラスターの実行中、ファイルを Azure にアップロードしたら、クラスターで **install-worker.sh** スクリプトを実行します。
 
 1. Azure portal の HDInsight Spark クラスターに移動し、 **[スクリプト アクション]** を選択します。
 
@@ -154,7 +154,7 @@ ms.locfileid: "72960990"
    | name | Install Worker|
    | Bash スクリプト URI |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> この URI を確認するには、Azure Storage Explorer で install-worker.sh を右クリックして、[プロパティ] を選択します。 |
    | ノードの種類| ワーカー|
-   | パラメーター | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin 
+   | パラメーター | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
 
 3. **[作成]** を選択して、スクリプトを送信します。
 

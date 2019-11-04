@@ -1,26 +1,26 @@
 ---
 title: 値のオプション
-description: オプションの種類の構造体のバージョンでは、F# の値のオプションの種類について説明します。
+description: F# Value オプションの型について説明します。これは、オプションの型の構造体のバージョンです。
 ms.date: 02/06/2019
-ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4dc3f7217943345b7aaf1165fd648ab2e01bd727
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982580"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424013"
 ---
 # <a name="value-options"></a>値のオプション
 
-値のオプションの種類でF#、次の 2 つの状況を保持しているときに使用します。
+次の2つのF#状況では、の値オプションの種類が使用されます。
 
-1. シナリオに適した、 [F# オプション](options.md)します。
-2. 構造体を使用して自分のシナリオでパフォーマンス上の利点を提供します。
+1. シナリオは、 [ F#オプション](options.md)に適しています。
+2. 構造体を使用すると、シナリオにおけるパフォーマンス上の利点が得られます。
 
-すべてのパフォーマンスが重視されるシナリオは、構造体を使用して、「解決」されます。 参照型の代わりに使用するときに、コピーの追加のコストを考慮する必要があります。 ただし、大規模なF#プログラムが通常ホット パスを通過する多くの省略可能な型をインスタンス化し、このような場合は、構造体は多くの場合、プログラムの有効期間の全体的なパフォーマンスの向上を生成します。
+すべてのパフォーマンスを重視するシナリオは、構造体を使用して "解決" されるわけではありません。 参照型の代わりに使用する場合は、コピーにかかる追加コストを考慮する必要があります。 ただし、大F#規模なプログラムでは、多くの場合、ホットパスを通過する多くの省略可能な型がインスタンス化されるため、多くの場合、構造体はプログラムの有効期間全体のパフォーマンスを向上させることができます。
 
 ## <a name="definition"></a>定義
 
-として値オプションが定義されている、[構造体の判別共用体](discriminated-unions.md#struct-discriminated-unions)参照オプションの種類に似ています。 その定義は、この方法の見なすことができます。
+Value オプションは、参照オプションの型に似た[構造体の判別共用体](discriminated-unions.md#struct-discriminated-unions)として定義されます。 その定義は、次のように考えることができます。
 
 ```fsharp
 [<StructuralEquality; StructuralComparison>]
@@ -30,11 +30,11 @@ type ValueOption<'T> =
     | ValueSome of 'T
 ```
 
-構造の等値と比較する値のオプションが準拠しています。 主な違いは、あるコンパイル済みの名前、型名、および大文字と小文字の名前を示す値型であります。
+値オプションは構造的等価性と比較に準拠しています。 主な違いは、コンパイルされた名前、型名、およびケース名はすべて、値型であることを示しています。
 
-## <a name="using-value-options"></a>値のオプションを使用します。
+## <a name="using-value-options"></a>Value オプションの使用
 
-値のオプションを使用して同様[オプション](options.md)します。 `ValueSome` 値が存在することを示すために使用し、`ValueNone`値が存在しない場合に使用されます。
+値のオプションは、[オプション](options.md)と同じように使用されます。 値が存在することを示すために `ValueSome` を使用し、値が存在しない場合は `ValueNone` を使用します。
 
 ```fsharp
 let tryParseDateTime (s: string) =
@@ -55,24 +55,24 @@ match (result1, result2) with
 | ValueNone, ValueNone -> printfn "None of them are dates!"
 ```
 
-同様[オプション](options.md)を返す関数の名前付け規則`ValueOption`の前にプレフィックスが、`try`します。
+[オプション](options.md)と同様に、`ValueOption` を返す関数の名前付け規則は、`try`にプレフィックスを付けることです。
 
-## <a name="value-option-properties-and-methods"></a>オプションの値のプロパティとメソッド
+## <a name="value-option-properties-and-methods"></a>Value オプションのプロパティとメソッド
 
-この時点で値のオプションの 1 つのプロパティがある:`Value`します。 <xref:System.InvalidOperationException>値には、このプロパティの呼び出し時に存在するがない場合に発生します。
+現時点では、Value オプションには、`Value`の1つのプロパティがあります。 このプロパティが呼び出されたときに値が存在しない場合は、<xref:System.InvalidOperationException> が発生します。
 
-## <a name="value-option-functions"></a>オプションの値関数
+## <a name="value-option-functions"></a>Value オプションの関数
 
-値のオプションの 1 つのモジュール連結関数が現在`defaultValueArg`:
+現時点では、値のオプションにはモジュールバインド関数が1つ `defaultValueArg`。
 
 ```fsharp
-val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T 
+val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T
 ```
 
-同様、`defaultArg`関数、`defaultValueArg`特定値オプションの基になる値を返しますが存在する。 それ以外の場合、指定した既定値を返します。
+`defaultArg` 関数と同様に、`defaultValueArg` は、指定された Value オプションが存在する場合は、基になる値を返します。それ以外の場合は、指定された既定値を返します。
 
-この時点では、値のオプションの場合は、他のモジュール連結関数はありません。
+現時点では、値オプション用のモジュールバインド関数は他にありません。
 
 ## <a name="see-also"></a>関連項目
 
-- [オプション](options.md)
+- [Options](options.md)

@@ -2,13 +2,14 @@
 title: System.Delegate と `delegate` キーワード
 description: デリゲートをサポートする .NET Framework のクラスと、それが ’delegate’ キーワードにどのように対応付けられるかについて取り上げます。
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465777"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420367"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate と `delegate` キーワード
 
@@ -31,7 +32,7 @@ ms.locfileid: "58465777"
 public delegate int Comparison<in T>(T left, T right);
 ```
 
-コンパイラは、使用されたシグネチャ (ここでは、整数を返し、2 つの引数を持つメソッド) と一致する `System.Delegate` から派生するクラスを生成します。 そのデリゲートの型は `Comparison` です。 `Comparison` デリゲート型はジェネリック型です。 ジェネリックの詳細については、[こちら](generics.md)を参照してください。
+コンパイラは、使用されたシグネチャ (ここでは、整数を返し、2 つの引数を持つメソッド) と一致する `System.Delegate` から派生するクラスを生成します。 そのデリゲートの型は `Comparison` です。 `Comparison` デリゲート型はジェネリック型です。 ジェネリックの詳細については、[こちら](programming-guide/generics/index.md)を参照してください。
 
 構文は変数を宣言しているように見えるかもしれませんが、実際には "*型*" を宣言していることに注意してください。 デリゲート型は、クラス内で定義したり、名前空間内で直接定義したりできるだけでなく、さらにグローバル名前空間でも定義できます。
 

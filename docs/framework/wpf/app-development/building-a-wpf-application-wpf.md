@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: cac7a7552d1a24480d614b7b90fdd8cf0ef8a3e8
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 04183b2404d26c783e14dc6f4cb4141bab0d7621
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197797"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424435"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF アプリケーション (WPF) のビルド
 
@@ -136,13 +136,13 @@ End Sub
 
 ビルドプロセスの最後に、すべてのアプリケーションアセンブリとコンテンツファイルの準備が整ったら、アプリケーションの ClickOnce マニフェストが生成されます。
 
-配置マニフェスト ファイルは、配置モデル (現在のバージョン、更新動作、およびパブリッシャーの ID とデジタル署名) を記述します。 このマニフェストは、配置を処理する管理者が作成します。 ファイル拡張子は、.xbap ([!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 用) と、インストール型アプリケーションを表す .application です。 前者は `HostInBrowser` プロジェクト プロパティによって指定されるため、マニフェストはアプリケーションがブラウザーによってホストされることを識別します。
+配置マニフェスト ファイルは、配置モデル (現在のバージョン、更新動作、およびパブリッシャーの ID とデジタル署名) を記述します。 このマニフェストは、配置を処理する管理者が作成します。 ファイル拡張子は、xbap (XAML ブラウザーアプリケーション (Xbap) 用) と、インストールされているアプリケーションのアプリケーションです。 前者は `HostInBrowser` プロジェクト プロパティによって指定されるため、マニフェストはアプリケーションがブラウザーによってホストされることを識別します。
 
 アプリケーション マニフェスト (.exe.manifest ファイル) は、アプリケーション アセンブリと依存ライブラリを記述し、アプリケーションに必要なアクセス許可をリストします。 このファイルは、アプリケーション開発者が作成します。 ClickOnce アプリケーションを起動するために、ユーザーはアプリケーションの配置マニフェストファイルを開きます。
 
-これらのマニフェスト ファイルは、常に [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 用に作成されます。 インストール型アプリケーションの場合、プロジェクト ファイル内で `GenerateManifests` プロパティの値が `true` に指定されない限り、作成されません。
+これらのマニフェストファイルは、常に Xbap 用に作成されます。 インストール型アプリケーションの場合、プロジェクト ファイル内で `GenerateManifests` プロパティの値が `true` に指定されない限り、作成されません。
 
-一般的なインターネットゾーンのアプリケーションに割り当てられているアクセス許可に対して、<xref:System.Security.Permissions.WebBrowserPermission> と <xref:System.Security.Permissions.MediaPermission>の2つの追加のアクセス許可を取得 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] ます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ビルド システムは、これらのアクセス許可をアプリケーション マニフェストで宣言します。
+Xbap は、一般的なインターネットゾーンのアプリケーションに割り当てられているアクセス許可に対して、<xref:System.Security.Permissions.WebBrowserPermission> と <xref:System.Security.Permissions.MediaPermission>の2つの追加のアクセス許可を取得します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ビルド システムは、これらのアクセス許可をアプリケーション マニフェストで宣言します。
 
 <a name="Incremental_Build_Support"></a>
 

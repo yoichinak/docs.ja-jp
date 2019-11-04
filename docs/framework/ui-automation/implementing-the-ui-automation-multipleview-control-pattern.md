@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: edef213c0f4d43a15b7c6842ef6c62e95544da66
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 62f0ba1dc8b7836a3b4699699b91b567eb8051f3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039499"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458180"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>UI オートメーション MultipleView コントロール パターンの実装
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "73039499"
   
  <xref:System.Windows.Automation.MultipleViewPattern> コントロール パターンは、同じ情報セットまたは子コントロールの複数の表現を提供し、それらの表現を切り替えることができるコントロールをサポートするために使用します。  
   
- 複数のビューを表示するコントロールの例としては、リストビュー (コンテンツをサムネイル、タイル、アイコン、詳細として表示できる)、[!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] グラフ (円、線、横棒、セルの値など)、[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] ドキュメント (標準、Web レイアウト、印刷レイアウト) などがあります。閲覧レイアウト、アウトライン)、Microsoft Outlook カレンダー (年、月、週、日)、および Microsoft Windows Media Player スキン。 サポートされるビューはコントロールの開発者によって決定され、各コントロールに固有です。  
+ 複数のビューを表示するコントロールの例としては、リストビュー (コンテンツをサムネイル、タイル、アイコン、詳細として表示できる)、Microsoft Excel のグラフ (円、線、横棒、セルの値など)、Microsoft Word 文書 (標準、Web レイアウト、印刷など) があります。レイアウト、閲覧レイアウト、アウトライン)、Microsoft Outlook カレンダー (年、月、週、日)、および Microsoft Windows Media Player スキン。 サポートされるビューはコントロールの開発者によって決定され、各コントロールに固有です。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  

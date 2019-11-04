@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: aceda6cfd33a53388a5afb046359c4dcfddfd1f8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 15df6339cec9eabadf5aa4c184d7504c4e065032
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602029"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421925"
 ---
 # <a name="where-clause-c-reference"></a>where 句 (C# リファレンス)
 
@@ -51,5 +51,5 @@ ms.locfileid: "69602029"
 - [from 句](from-clause.md)
 - [select 句](select-clause.md)
 - [データのフィルター処理](../../programming-guide/concepts/linq/filtering-data.md)
-- [LINQ クエリ式](../../programming-guide/linq-query-expressions/index.md)
-- [C# の LINQ の概要](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C# での LINQ](../../linq/index.md)
+- [C# の LINQ の概要](/dotnet/csharp/programming-guide/concepts/linq/)

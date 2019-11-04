@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 7d97b7b05645b02a31af848c97758c7a1f6423b9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f72866cafbf291310d88fc6f18a5a15dc77c621d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602074"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422720"
 ---
 # <a name="internal-c-reference"></a>internal (C# リファレンス)
 `internal` キーワードは、型と型のメンバーを示す[アクセス修飾子](./access-modifiers.md)です。 
@@ -89,7 +89,7 @@ public class TestAccess
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、「[C# 言語仕様](../language-specification/index.md)」の[宣言されたアクセシビリティ](~/_csharplang/spec/basic-concepts.md#declared-accessibility)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の[宣言されたアクセシビリティ](~/_csharplang/spec/basic-concepts.md#declared-accessibility)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>関連項目
 
@@ -98,7 +98,7 @@ public class TestAccess
 - [C# のキーワード](./index.md)
 - [アクセス修飾子](./access-modifiers.md)
 - [アクセシビリティ レベル](./accessibility-levels.md)
-- [修飾子](./modifiers.md)
+- [修飾子](index.md)
 - [public](./public.md)
 - [private](./private.md)
 - [protected](./protected.md)

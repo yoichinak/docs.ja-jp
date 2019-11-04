@@ -6,15 +6,15 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 80878ec1a592a368db246fc294ebc42556874832
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a0c5592f2f4cca8173f9b777f2c3f14fe468feac
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921937"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423315"
 ---
 # <a name="delegates-c-programming-guide"></a>デリゲート (C# プログラミング ガイド)
-[デリゲート](../../language-reference/keywords/delegate.md)は、特定のパラメーター リストおよび戻り値の型を使用して、メソッドへの参照を表す型です。 デリゲートをインスタンス化するときは、互換性のあるシグネチャと戻り値の型を持つ任意のメソッドにそのインスタンスを関連付けることができます。 メソッドは、デリゲート インスタンスを使用して起動する (呼び出す) ことができます。  
+[デリゲート](../../language-reference/builtin-types/reference-types.md)は、特定のパラメーター リストおよび戻り値の型を使用して、メソッドへの参照を表す型です。 デリゲートをインスタンス化するときは、互換性のあるシグネチャと戻り値の型を持つ任意のメソッドにそのインスタンスを関連付けることができます。 メソッドは、デリゲート インスタンスを使用して起動する (呼び出す) ことができます。  
   
  デリゲートは、他のメソッドへの引数としてメソッドを渡すために使用されます。 イベント ハンドラーは、デリゲートを介して呼び出されるメソッドにすぎません。 カスタム メソッドを作成して、特定のイベントの発生時に、作成したメソッドが Windows コントロールなどのクラスから呼び出されるようにできます。 次の例にデリゲート宣言を示します。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "69921937"
   
 - [名前付きメソッドを使用したデリゲートと匿名メソッドを使用したデリゲート](./delegates-with-named-vs-anonymous-methods.md)  
   
-- [デリゲートの分散の使用](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
+- [デリゲートの変性の使用](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
 - [方法: デリゲートを結合する (マルチキャスト デリゲート)](./how-to-combine-delegates-multicast-delegates.md)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "69921937"
 
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、「[C# 言語の仕様](../../language-reference/language-specification/index.md)」の「[デリゲート](~/_csharplang/spec/delegates.md)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語の仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の「[デリゲート](~/_csharplang/spec/delegates.md)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="featured-book-chapters"></a>参考書籍の該当する章  
  「[Delegates, Events, and Lambda Expressions (デリゲート、イベント、およびラムダ式)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29)」(『[C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers (C# 3.0 クックブック (第 3 版): C# 3.0 プログラマ向けの 250 以上のソリューション)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)』)  
