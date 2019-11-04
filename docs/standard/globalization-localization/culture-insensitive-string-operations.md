@@ -12,14 +12,12 @@ helpviewer_keywords:
 - culture-sensitive string operations
 - culture-insensitive string operations
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e7ca35f73590f8a7c58a0044136c05f341796dfc
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 06c46033936e16355b8d2eb6650e8731a04af6e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441659"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141281"
 ---
 # <a name="culture-insensitive-string-operations"></a>カルチャを認識しない文字列操作
 

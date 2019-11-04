@@ -10,14 +10,12 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f3dcee9c45cdbf029ccba90a963c9cea0a9c7ad4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3020694b93479d5f1d64d31c203f8fe033a10320
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963574"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129002"
 ---
 # <a name="pausing-and-interrupting-threads"></a>スレッドの一時中断および中断
 

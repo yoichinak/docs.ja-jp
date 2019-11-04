@@ -44,7 +44,7 @@ ms.locfileid: "73115108"
   
 ### <a name="child-elements"></a>子要素
 
-None
+なし
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -53,7 +53,7 @@ None
 | `configuration` | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |  
 | `runtime`       | ランタイム初期化オプションに関する情報を含んでいます。                                                        |  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
 
 .NET Framework 4.6 以降、共通言語ランタイムは、Just-in-time (JIT) コンパイルに新しい64ビットコンパイラを既定で使用します。 場合によっては、以前のバージョンの64ビット JIT コンパイラによって JIT コンパイルされたアプリケーションコードとの動作が異なる場合があります。 `<useLegacyJit>` 要素の `enabled` 属性を `1`に設定することにより、新しい64ビット JIT コンパイラを無効にし、代わりに従来の64ビット JIT コンパイラを使用してアプリをコンパイルできます。  
   
@@ -95,4 +95,4 @@ None
 
 - [\<ランタイム > 要素](runtime-element.md)
 - [\<configuration> 要素](../configuration-element.md)
-- [軽減策: 新しい 64 ビット JIT コンパイラ](../../../migration-guide/mitigation-new-64-bit-jit-compiler.md)
+- [軽減策:新しい64ビット JIT コンパイラ](../../../migration-guide/mitigation-new-64-bit-jit-compiler.md)

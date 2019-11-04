@@ -8,14 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c1a14f0ee36341c9579683f711ae78fc4df3f97
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8c4b328cdecb468af57fe699283584e901772175
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833653"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091995"
 ---
 # <a name="install-the-net-framework-for-developers"></a>開発者向けの .NET Framework のインストール
 
@@ -37,7 +35,7 @@ ms.locfileid: "71833653"
 
 |.NET Framework のバージョン|Developer のインストール|再頒布可能なインストール|プラットフォームのサポート|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.8**|[.NET Framework 4.8 Developer Pack](https://go.microsoft.com/fwlink/?linkid=2088517)|[ダウンロード センター 4.8 Web インストーラー](http://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[ダウンロード センター 4.8 オフライン インストーラー](https://go.microsoft.com/fwlink/?linkid=2088631)|**このバージョンを含む製品:**<br/><br/>Windows 10 May 2019 Update<br /><br /> **インストール可能なバージョン:**<br/><br/>Windows 10 October 2018 Update<br/>Windows 10 April 2018 Update<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 以前<br /> Windows Server 2019<br/>Windows Server、バージョン 1809<br/>Windows Server、バージョン 1803<br /><br/> (完全な一覧については、「[システム要件](../get-started/system-requirements.md)」を参照してください)||
+|**4.8**|[.NET Framework 4.8 Developer Pack](https://go.microsoft.com/fwlink/?linkid=2088517)|[ダウンロード センター 4.8 Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[ダウンロード センター 4.8 オフライン インストーラー](https://go.microsoft.com/fwlink/?linkid=2088631)|**このバージョンを含む製品:**<br/><br/>Windows 10 May 2019 Update<br /><br /> **インストール可能なバージョン:**<br/><br/>Windows 10 October 2018 Update<br/>Windows 10 April 2018 Update<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 以前<br /> Windows Server 2019<br/>Windows Server、バージョン 1809<br/>Windows Server、バージョン 1803<br /><br/> (完全な一覧については、「[システム要件](../get-started/system-requirements.md)」を参照してください)||
 |**4.7.2**|[.NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[ダウンロード センター 4.7.2 Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[ダウンロード センター 4.7.2 オフライン インストーラー](https://go.microsoft.com/fwlink/?LinkId=863265)|**このバージョンを含む製品:** <br/><br/>Windows 10 October 2018 Update<br/>Windows 10 April 2018 Update<br/>Windows Server 2019<br/>Windows Server、バージョン 1809<br/>Windows Server、バージョン 1803<br /><br /> **インストール可能なバージョン:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 以前<br /> Windows Server バージョン 1709 以前<br /><br/> (完全な一覧については、「[システム要件](../get-started/system-requirements.md)」を参照してください)||
 |**4.7.1**|[.NET Framework 4.7.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 Web インストーラーのダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 オフライン インストーラーのダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=852107)|**このバージョンを含む製品:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server、バージョン 1709<br /><br /> **インストール可能なバージョン:**<br/><br/> Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 以前<br /> Windows Server 2016 以前<br /> (完全な一覧については、「[システム要件](../get-started/system-requirements.md)」を参照してください)||
 |**4.7**|[NET Framework 4.7 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 Web インストーラーのダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 オフライン インストーラーのダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=825303)|**このバージョンを含む製品:** <br/><br/>Windows 10 Creators Update<br /><br /> **インストール可能なバージョン:**<br /><br/> Windows 10 Anniversary Update<br /> Windows 8.1 以前<br /> Windows Server 2016 以前<br /> (完全な一覧については、「[システム要件](../get-started/system-requirements.md)」を参照してください)||
@@ -170,7 +168,7 @@ Web インストーラーとオフライン インストーラーはどちらも
 
 1. インストールした .NET Framework のバージョンに対応する言語パックのダウンロード ページを開きます。
 
-    - [.NET Framework 4.8 言語パック](http://go.microsoft.com/fwlink/?LinkId=2053984)
+    - [.NET Framework 4.8 言語パック](https://go.microsoft.com/fwlink/?LinkId=2053984)
 
     - [.NET Framework 4.7.2 の言語パック](https://go.microsoft.com/fwlink/?LinkID=863258)
 

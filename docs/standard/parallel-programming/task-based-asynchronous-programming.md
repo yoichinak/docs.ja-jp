@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab754da005dcc16fc71c3a59728e4ff6848fbbb1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 36ff76db984a864a201313ddb7478cc1e93888fd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666305"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139986"
 ---
 # <a name="task-based-asynchronous-programming"></a>タスク ベースの非同期プログラミング
 
@@ -44,7 +42,7 @@ ms.locfileid: "69666305"
 > [!NOTE]
 > <xref:System.Threading.Tasks.Task> によって背後で作成される <xref:System.Threading.Tasks.Parallel.Invoke%2A> インスタンスの数は、指定するデリゲートの数と等しくなくてもかまいません。 TPL では、特に多数のデリゲートによるさまざまな最適化方法を採用しています。
 
-詳細については、「[方法 :Parallel.Invoke を使用して並列操作を実行する](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)」を参照してください。
+詳細については、[Parallel.Invoke を使用して並列操作を実行する](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)」を参照してください。
 
 タスクの実行をさらに制御する場合、またはタスクから値を返す場合、<xref:System.Threading.Tasks.Task> オブジェクトをより明示的に操作する必要があります。
 
@@ -72,7 +70,7 @@ ms.locfileid: "69666305"
 [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
 [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]
 
-詳細については、「[方法 :タスクから値を返す](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)」を参照してください。
+詳細については、[タスクから値を返す](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)」を参照してください。
 
 ラムダ式を使用してデリゲートを作成すると、ソース コード内の該当ポイントで参照できるすべての変数にアクセスできます。 ただし、特にループ内では、ラムダによって変数が予想どおりにキャプチャされない場合があります。 ラムダでは、反復処理が実行されるたびに変更された値をキャプチャするのではなく、最終値だけがキャプチャされます。 この問題を説明する例を次に示します。 これは `CustomData` オブジェクトをインスタンス化するラムダ式にループ カウンターを渡し、オブジェクトの識別子としてループ カウンターを使用します。 この例の出力結果が示すように、`CustomData` の各オブジェクトは同じ識別子を持ちます。
 

@@ -13,14 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ecb2c2e6a80f36ea1426b6145fd89b869a77f1b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 689ca9f7278dcf91b12bc62b5255a968388bb9f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663021"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120757"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 

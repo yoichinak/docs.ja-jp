@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - threads, cancellation
 ms.assetid: d2d6d5fd-e263-4fa0-847b-2fc3e0d82337
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd32deb9c8719a12b76aaea8ec91a17471cf18f9
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 1d1433ecf39974bf9e68fe07b9d0818ac16fb544
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259861"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138122"
 ---
 # <a name="canceling-threads-cooperatively"></a>スレッドの協調的な取り消し
 

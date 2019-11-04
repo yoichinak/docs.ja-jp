@@ -2,14 +2,12 @@
 title: .NET Core の破壊的変更
 description: .NET Core の各バージョンの破壊的変更について説明します。
 ms.date: 08/12/2019
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94dd59865afbde73c82f6e1b61a2f054cc188c72
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c40f3605571b0abde9083a93a0ef49689a5cbff7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393634"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093307"
 ---
 # <a name="net-core-breaking-changes"></a>.NET Core の破壊的変更
 

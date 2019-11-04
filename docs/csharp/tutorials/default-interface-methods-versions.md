@@ -2,19 +2,20 @@
 title: C# で既定のインターフェイス メソッドを使用してインターフェイスを安全に更新する
 description: この高度なチュートリアルでは、既存のインターフェイスを実装するすべてのクラスと構造体を損なうことなく、そのインターフェイスの定義に新しい機能を安全に追加する方法について説明します。
 ms.date: 05/06/2019
+ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 71fce2594dbf5ef3175a6b9bdf4e6edba754bb84
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: b9194b769a3ba6d2906d6177c2363d6093b85188
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275987"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039247"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>チュートリアル:C# 8.0 で既定のインターフェイス メソッドを使用してインターフェイスを更新する
+# <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>チュートリアル: C# 8.0 で既定のインターフェイス メソッドを使用してインターフェイスを更新する
 
 .NET Core 3.0 上の C# 8.0 以降では、インターフェイスのメンバーを宣言するときに実装を定義できます。 最も一般的なシナリオは、数え切れないほどのクライアントから既にリリースされ、使用されているインターフェイスにメンバーを安全に追加することです。
 
-このチュートリアルで学習する内容は次のとおりです。
+このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
 >

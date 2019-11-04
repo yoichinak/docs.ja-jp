@@ -2,18 +2,20 @@
 title: C# のチュートリアル
 description: 以下の C# のチュートリアルでは、C# プログラムをビルドする方法と C# 言語機能について説明します。
 ms.date: 10/25/2018
-ms.openlocfilehash: c2dd00505afbf4d8bc3f213a2f87751fe452f253
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 3f3ca31c0fdeb5d7c60b25c4b45399569cc919b4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557178"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417112"
 ---
 # <a name="c-tutorials"></a>C# のチュートリアル
 
 C# のチュートリアルへようこそ。 まずは、お使いのブラウザーで実行できる、対話形式のレッスンを開始します。 後のチュートリアルやより高度なチュートリアルでは、.NET の開発ツールを操作してコンピューター上で C# プログラムを作成する方法について説明します。
 
 ## <a name="introduction-to-c-interactive-tutorials"></a>C# の概要に関する対話型チュートリアル
+
+ビデオ形式で探索を開始する場合は、[C# 101 のビデオ シリーズ](https://aka.ms/dotnet3-csharp)で C# について説明します。 これらのチュートリアルで学習できる概念について説明します。
 
 最初のレッスンでは、小規模なコード スニペットを使用して C# の概念を説明します。 C# 構文の基礎や、文字列、数値、ブール値などのデータ型の使用方法を学習します。 すべて対話形式で、数分のうちにコードを記述して実行することになります。 この最初のレッスンでは、プログラミングや C# 言語について事前の知識をお持ちでないことを前提としています。
 

@@ -13,14 +13,12 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50750b23af9e9cfca79b0f7db9d272e8e24971ab
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591415"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103827"
 ---
 # <a name="creating-new-strings-in-net"></a>.NET で新しい文字列を作成する
 .NET Framework では、単純な割り当てを使用した文字列の作成をサポートしています。また、多数の異なるパラメーターを使用した文字列の作成をサポートするために、クラス コンストラクターをオーバーロードします。 また、.NET Framework では、複数の文字列、文字列の配列、またはオブジェクトを組み合わせて新しい文字列オブジェクトを作成する、<xref:System.String?displayProperty=nameWithType> クラスのいくつかのメソッドも提供しています。  

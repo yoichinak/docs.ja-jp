@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73115420"
 ---
-# <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 要素
+# <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions> 要素
 タスクがハンドルされない例外によって実行中のプロセスを終了するかどうかを指定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\

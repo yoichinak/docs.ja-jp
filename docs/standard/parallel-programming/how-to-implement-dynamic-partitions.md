@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to create a dynamic partitioner
 ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5719c6afc1c5efc6138f0a4931d1725a6f20909a
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 3970566b4e3f51ce538c328d4e69b20ec22ec09b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66424041"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091414"
 ---
 # <a name="how-to-implement-dynamic-partitions"></a>方法: 動的パーティションを実装する
 

@@ -16,14 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b2f997cf398e59f8e30ac87c1e0360e43a448e85
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: c654ff2856891331f5680c673ac52f64ee2be141
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216707"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121752"
 ---
 # <a name="standard-numeric-format-strings"></a>標準の数値形式文字列
 
@@ -386,7 +384,7 @@ ms.locfileid: "71216707"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Globalization.NumberFormatInfo>
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [カスタム数値形式文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)
 - [型の書式設定](../../../docs/standard/base-types/formatting-types.md)
 - [方法: 数値に先行するゼロを埋め込む](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
 - [複合書式指定](../../../docs/standard/base-types/composite-formatting.md)

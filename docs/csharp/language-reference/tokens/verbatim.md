@@ -9,14 +9,12 @@ helpviewer_keywords:
 - '@ special character [C#]'
 - '@ language element [C#]'
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b2290c87f7d4d2ba8da122d4f5ddb9ea423852ec
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6f9f16b2639cd9ea57ee7a3030deabf4c1decfbb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608725"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101556"
 ---
 # <a name="-c-reference"></a>@ (C# リファレンス)
 

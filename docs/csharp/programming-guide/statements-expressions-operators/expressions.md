@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e08220362c0acec6060ade75131e34a6b3fb7390
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774182"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417694"
 ---
 # <a name="expressions-c-programming-guide"></a>式 (C# プログラミング ガイド)
 
@@ -47,7 +47,7 @@ System.Convert.ToInt32("35");
   
  [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
- リテラルの詳細については、「[型](../../language-reference/keywords/types.md)」を参照してください。  
+ リテラルの詳細については、「[型](/dotnet/csharp/language-reference/keywords)」を参照してください。  
   
  前の例の `i` と `s` は、どちらもローカル変数を識別する簡易名です。 これらの変数を式で使用すると、変数名は、変数のメモリ位置に現在格納されている値に評価されます。 以下の例を参照してください。  
   

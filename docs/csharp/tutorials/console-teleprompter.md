@@ -2,13 +2,14 @@
 title: コンソール アプリケーション
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 03/06/2017
+ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 4324b25daa253b3d2446955ad9ca57c2f0294f0c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2b9948ce22eb221d9d757fcec4c556d365469fdf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851010"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039260"
 ---
 # <a name="console-application"></a>コンソール アプリケーション
 

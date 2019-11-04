@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ff604b94ecef1ffec5fe9845df7c5ba35f5857d7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ad254cb6208bff868e5fc689c502b7ddcc175ad5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000269"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137963"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>方法: 下位レベルの同期に SpinLock を使用する
 
