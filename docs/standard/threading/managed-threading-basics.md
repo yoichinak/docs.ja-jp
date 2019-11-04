@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f55057e40a251be49898b9b1b7862bd243b2a70c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bec769043ab630b37609bed12302ceff5b90474a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913179"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139229"
 ---
 # <a name="managed-threading-basics"></a>マネージド スレッド処理の基本
 
@@ -46,7 +44,7 @@ ms.locfileid: "69913179"
  [スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  スレッド相対ストレージ メカニズムについて説明します。  
   
-## <a name="reference"></a>関連項目
+## <a name="reference"></a>辞書／辞典／その他
 
  <xref:System.Threading.Thread>  
  **Thread** クラスのリファレンス ドキュメントです。このクラスは、アンマネージド コードから作成されたか、マネージド アプリケーションで作成されたかにかかわらず、マネージド スレッドを表します。  

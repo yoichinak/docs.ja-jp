@@ -8,18 +8,20 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 77db5201ab21dff1f04f76da5dd10d07aa377813
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a7ddaac56177d13248caf6559221fff26d2d2c00
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191813"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416735"
 ---
 # <a name="c-guide"></a>C# ガイド
 
 C# ガイドでは、C# 言語に関する多数のリソースを提供します。 このガイドは、さまざまなレベルのユーザーにご利用いただけます。 プログラミングの経験、または C# 言語や .NET の使用経験に応じて必要なセクションをお読みください。
 
 - 開発初心者:
+  - [C# 101 のビデオ シリーズ](https://aka.ms/dotnet3-csharp)をご覧ください。 これらのチュートリアルでは、ここで紹介する重要な概念の概要を説明します。
+
   - [C# の概要に関するチュートリアル](tutorials/intro-to-csharp/index.md)から始めます。 これらのチュートリアルでは、ブラウザーで対話的に C# 言語を調べることができます。 ここから、その他の[チュートリアル](tutorials/index.md)に進むことができます。 チュートリアルでは、C# プログラムを 1 から作成する方法が説明されており、 段階を追ってプログラムを作成できるようになっています。 言語の概念と、自分で C# プログラムを作成する方法を説明します。 最初に概要を読みたい場合は、「[C# 言語のツアー](tour-of-csharp/index.md)」から始めてください。 ここでは C# 言語の概念を学べます。 ツアーを読み終えたら、C# 言語の基本的な知識を基に、チュートリアルを試したり、自分でプログラムを作成したりできるようになります。
 
 - C# を初めて使用する開発者:
@@ -61,7 +63,7 @@ C# ガイドにはいくつかのセクションがあります。 順番に読�
 - [言語リファレンス](language-reference/index.md)
   - C# 言語に関するリファレンス資料が含まれています。 この資料は、C# の構文とセマンティクスを理解するのに役立ちます。 型、演算子、属性、プリプロセッサ ディレクティブ、コンパイラ スイッチ、およびコンパイラのエラーと警告に関するリファレンス情報も含まれています。
 
-- [C# 言語仕様](./language-reference/language-specification/index.md)
+- [C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)
   - C# 言語仕様の最新バージョンへのリンク。
 
 ## <a name="see-also"></a>関連項目

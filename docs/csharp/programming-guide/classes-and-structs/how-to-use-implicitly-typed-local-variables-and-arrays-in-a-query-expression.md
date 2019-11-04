@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: 5003e03b488a16d53e4e3d20a0b0b0e09630b46f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3cb47f9e80e1fc067a8bac860aa06f3e1860d33d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596708"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419320"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>方法: クエリ式で暗黙的に型指定されるローカル変数および配列を使用する (C# プログラミング ガイド)
 コンパイラによってローカル変数の型が決定されるようにする場合は、暗黙的に型指定されたローカル変数を使用できます。 クエリ式でよく使用する匿名型を格納するには、暗黙的に型指定されたローカル変数を使用する必要があります。 以下の例では、クエリで暗黙的に型指定されたローカル変数を省略できる場合と、使用しなければならない場合の両方を示します。  
@@ -33,4 +33,4 @@ ms.locfileid: "69596708"
 - [拡張メソッド](./extension-methods.md)
 - [統合言語クエリ (LINQ)](../../linq/index.md)
 - [var](../../language-reference/keywords/var.md)
-- [LINQ クエリ式](../linq-query-expressions/index.md)
+- [C# での LINQ](../../linq/index.md)

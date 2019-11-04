@@ -2,12 +2,12 @@
 title: WCF 開発ツールの使用
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: 27cefb1ca1f4748f0d074ffdcd47cd6faa29da00
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: afa62a63aa955dc868791da635418331f93e9e87
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320271"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420678"
 ---
 # <a name="using-the-wcf-development-tools"></a>WCF 開発ツールの使用
 このセクションでは、WCFservice の開発に役立つ Visual Studio 開発ツールについて説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "72320271"
   
  システム特権のある管理者アカウントで [!INCLUDE[wv](../../../includes/wv-md.md)] の Netsh.exe ツールを使用すると、アクセスを変更できます。 Netsh.exe の使用例を次に示します。  
   
-```  
+```console  
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   

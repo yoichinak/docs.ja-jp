@@ -9,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 160b25bd93f7d7c69ec104a31a0608e930e2dee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 806bc3de138ebae682d2e248593230c753eb7ba2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534892"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422757"
 ---
 # <a name="group-clause-c-reference"></a>group 句 (C# リファレンス)
 
@@ -54,7 +54,7 @@ ms.locfileid: "54534892"
 
 ### <a name="grouping-by-numeric-range"></a>数値の範囲でグループ化する
 
-次の例では、パーセンタイルの範囲を示す数値のグループ キーを作成する式を使用しています。 `group` 句でメソッドを 2 度呼び出さなくて済むように、メソッド呼び出しの結果を格納する便利な場所として [let](let-clause.md) を使用できます。 クエリ式でメソッドを安全に使用する方法について詳しくは、「[方法: クエリ式の例外を処理する](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md)」をご覧ください。
+次の例では、パーセンタイルの範囲を示す数値のグループ キーを作成する式を使用しています。 `group` 句でメソッドを 2 度呼び出さなくて済むように、メソッド呼び出しの結果を格納する便利な場所として [let](let-clause.md) を使用できます。 クエリ式でメソッドを安全に使用する方法について詳しくは、「[方法: クエリ式の例外を処理する](../../linq/handle-exceptions-in-query-expressions.md)」をご覧ください。
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -82,7 +82,7 @@ group person by new {name = person.surname, city = person.city};
 
 [!code-csharp[cscsrefQueryKeywords#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#17)]
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 コンパイル時に `group` 句が <xref:System.Linq.Enumerable.GroupBy%2A> メソッドの呼び出しに変換されます。
 

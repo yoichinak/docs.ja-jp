@@ -7,18 +7,16 @@ helpviewer_keywords:
 - assemblies [.NET Framework], signing
 - assemblies [.NET Framework], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 527fd68ef40e152b57a1fc98113094d3b41fbaae
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: c9ddbcf8f7b6307ab2d89b819aee4809f753a0fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972553"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138605"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>方法: 厳密な名前でアセンブリに署名する
 

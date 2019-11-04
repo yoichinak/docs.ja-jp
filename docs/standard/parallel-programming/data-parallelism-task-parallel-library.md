@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 19e518db75fe3e45f57cbb6fab8c5281cceb4d34
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 72696a41cd3b71f47fdcf43e4ece70ebeb7d34d1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939326"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123161"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>データの並列化 (タスク並列ライブラリ)
 "*データの並列化*" とは、ソース コレクションまたは配列の要素に対して、同じ操作を同時に (つまり、並列で) 実行するシナリオを意味します。 データの並列化操作では、複数のスレッドが異なるセグメント上で同時に操作できるようにソース コレクションがパーティション分割されます。  

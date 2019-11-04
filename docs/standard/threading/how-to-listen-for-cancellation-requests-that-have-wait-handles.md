@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, waiting with wait handles
 ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67cf434737257a942e094fcb38ed18d597645d46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 43ca52359a48d3ac5a27933fcc8ce56c07159cac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913330"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137990"
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>方法: 待機ハンドルがあるキャンセル要求を待機する
 イベントがシグナル状態になるのを待機している間にメソッドがブロックされた場合、取り消しトークンの値を確認して、適切なタイミングで応答することはできません。 最初の例は、統合取り消しフレームワークをネイティブにサポートしない <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> などのイベントの処理時にこの問題を解決する方法を示しています。 2 番目の例は、統合取り消しをサポートする、<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> を使用するより効率的な方法を示しています。  

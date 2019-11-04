@@ -6,14 +6,12 @@ helpviewer_keywords:
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8af0f32c676f4438334f7c64b771e237db90dd3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 748045c6e9d84ec71faa69ccfb9861472eb306e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663855"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124106"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>旧版の .NET Framework の型
 
@@ -810,5 +808,5 @@ Visual Basic 6 から移行する方法については、「[Visual Basic 6.0 �
 
 ## <a name="see-also"></a>関連項目
 
-- [クラス ライブラリの互換性のために残されている機能](whats-obsolete.md)
+- [クラス ライブラリ内にある旧版のもの](whats-obsolete.md)
 - [互換性のために残されているメンバー](obsolete-members.md)

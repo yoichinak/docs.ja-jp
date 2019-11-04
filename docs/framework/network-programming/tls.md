@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: ad15c0d4bd69417fffd8bcad0805a3b78321e05b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894944"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196370"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス
 
@@ -56,7 +56,7 @@ WCF は、.NET Framework 4.7 での既定値として TLS 1.0、1.1、1.2 をサ
 
 ASP.NET アプリケーションの場合、意図したバージョンの .NET Framework を使っていることを確認するには、_web.config_ の `<system.web><httpRuntime targetFramework>` 要素を調べます。
 
-Windows フォームやその他のアプリケーションの場合は、「[方法:.NET Framework のターゲット バージョンを指定する](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)」を参照してください。
+Windows フォームやその他のアプリケーションの場合は、「[方法:.NET Framework のターゲット バージョンを指定する](/visualstudio/ide/visual-studio-multi-targeting-overview)」を参照してください。
 
 以下のセクションで説明するようにして、特定のバージョンの TLS や SSL を使っていないことを確認します。
 

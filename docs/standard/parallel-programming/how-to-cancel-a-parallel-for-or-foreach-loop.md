@@ -9,14 +9,12 @@ helpviewer_keywords:
 - parallel foreach loop, how to cancel
 - parallel for loops, how to cancel
 ms.assetid: 9d19b591-ea95-4418-8ea7-b6266af9905b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7cdb6e059fb1c7001bbe4da60e2936b1ad40cc1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67f1f91f235cc88deaa97d412f368819ae0a8cda
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618072"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134242"
 ---
 # <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>方法: Parallel.For または ForEach ループを取り消す
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> メソッドでは、キャンセル トークンを使用した取り消し処理がサポートされます。 一般的な取り消し処理の詳細については、「[キャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)」を参照してください。 並列ループでは、<xref:System.Threading.Tasks.ParallelOptions> パラメーターのメソッドに <xref:System.Threading.CancellationToken> を指定してから、try-catch ブロックで並列呼び出しを囲みます。  

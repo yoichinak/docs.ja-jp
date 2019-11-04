@@ -2,12 +2,12 @@
 title: オブジェクト指向プログラミング (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 50b38833582ebe46836ccfab4e1ebeb98b53a96e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 121d2e43f6896179756067e661be6d7960a1ee64
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659877"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418043"
 ---
 # <a name="object-oriented-programming-c"></a>オブジェクト指向プログラミング (C#)
 
@@ -49,7 +49,7 @@ C# は、カプセル化、継承、ポリモーフィズムなど、オブジ�
 
   - [メンバーのオーバーライド](#Overriding)
 
-- "[インターフェイス](#Interfaces)"
+- [インターフェイス](#Interfaces)
 
 - [ジェネリック](#Generics)
 
@@ -77,7 +77,7 @@ struct SampleStruct
 }
 ```
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [class](../../language-reference/keywords/class.md)
 
@@ -131,7 +131,7 @@ class SampleClass
 
 ほとんどのプロパティには、プロパティ値の設定と取得を行うための両方のメソッドまたはプロシージャがあります。 ただし、読み取り専用または書き込み専用のプロパティを作成して、プロパティの変更や読み取りを制限することもできます。 C# では、`get` プロパティ メソッドまたは `set` プロパティ メソッドを省略します。 ただし、自動実装プロパティを読み取り専用または書き込み専用にすることはできません。
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [get](../../language-reference/keywords/get.md)
 
@@ -164,7 +164,7 @@ public int sampleMethod(int sampleParam) {}
 
 ほとんどの場合、メソッドはクラス定義内で宣言します。 ただし、C# では、既存のクラスの実際の定義の外部にメソッドを追加できる "*拡張メソッド*" がサポートされています。
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [メソッド](../classes-and-structs/methods.md)
 
@@ -186,7 +186,7 @@ public class SampleClass
 }
 ```
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 「[コンストラクター](../classes-and-structs/constructors.md)」。
 
@@ -268,7 +268,7 @@ SampleClass sampleObject = new SampleClass
     { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [new 演算子](../../language-reference/operators/new-operator.md)
 
@@ -309,7 +309,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-詳細については、次を参照してください。[匿名型](../classes-and-structs/anonymous-types.md)。
+詳細については次を参照してください:[匿名型](../classes-and-structs/anonymous-types.md)。
 
 ## <a name="Inheritance"></a> 継承
 
@@ -338,7 +338,7 @@ public sealed class A { }
 public abstract class B { }
 ```
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [sealed](../../language-reference/keywords/sealed.md)
 
@@ -382,9 +382,9 @@ class SampleClass : ISampleInterface
 }
 ```
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
-"[インターフェイス](../interfaces/index.md)"
+[インターフェイス](../interfaces/index.md)
 
 [interface](../../language-reference/keywords/interface.md)
 
@@ -408,7 +408,7 @@ SampleGeneric<string> sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [ジェネリック](../../../standard/generics/index.md)
 
@@ -446,11 +446,11 @@ class SampleClass
 }
 ```
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [デリゲート](../delegates/index.md)
 
-- [delegate](../../language-reference/keywords/delegate.md)
+- [delegate](../../language-reference/builtin-types/reference-types.md)
 
 ## <a name="see-also"></a>関連項目
 

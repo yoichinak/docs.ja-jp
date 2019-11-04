@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Databricks にデ
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9e338886c68845d5f95e7beb0cd7ac3a729d3281
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: c1c1a57fb2b79826218f8ed94d568b37d4689560
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961072"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454278"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>チュートリアル: .NET for Apache Spark アプリケーションを Databricks にデプロイする
 
@@ -18,10 +18,11 @@ ms.locfileid: "72961072"
 このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
-> Azure Databricks ワークスペースを作成する。
-> .NET for Apache Spark アプリを発行する。
-> Spark ジョブと Spark クラスターを作成する。
-> Spark クラスターでアプリを実行する。
+>
+> - Azure Databricks ワークスペースを作成する。
+> - .NET for Apache Spark アプリを発行する。
+> - Spark ジョブと Spark クラスターを作成する。
+> - Spark クラスターでアプリを実行する。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -44,7 +45,7 @@ ms.locfileid: "72961072"
    ![Azure portal で Azure Databricks リソースを作成する](./media/databricks-deployment/create-databricks-resource.png)
 
 2. **[Azure Databricks サービス]** で値を指定して、Databricks ワークスペースを作成します。
-    
+
     |プロパティ  |説明  |
     |---------|---------|
     |**ワークスペース名**     | Databricks ワークスペースの名前を指定します。        |
@@ -58,10 +59,10 @@ ms.locfileid: "72961072"
 
 ## <a name="install-azure-databricks-tools"></a>Azure Databricks ツールのインストール
 
-**Databricks CLI** を使用して Azure Databricks クラスターに接続し、ローカル コンピューターからそれらのクラスターにファイルをアップロードすることができます。 Databricks クラスターからファイルへのアクセスは、DBFS (Databricks ファイル システム) を介して行われます。 
+**Databricks CLI** を使用して Azure Databricks クラスターに接続し、ローカル コンピューターからそれらのクラスターにファイルをアップロードすることができます。 Databricks クラスターからファイルへのアクセスは、DBFS (Databricks ファイル システム) を介して行われます。
 
 1. Databricks CLI には、Python 3.6 以降が必要です。 Python を既にインストール済みである場合は、この手順をスキップできます。
- 
+
    **Windows の場合:**
 
    [Windows 用 Python のダウンロード](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)
@@ -106,14 +107,14 @@ Databricks CLI がインストールされたので、認証の詳細を設定�
 
 1. Microsoft.Spark.Worker は、自分で作成したユーザー定義関数 (UDF) などのアプリを Apache Spark で実行するのに役立ちます。 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz) をダウンロードします。
 
-2. *install-worker.sh* は、.NET for Apache Spark 依存ファイルをクラスターのノードにコピーできるスクリプトです。 
+2. *install-worker.sh* は、.NET for Apache Spark 依存ファイルをクラスターのノードにコピーできるスクリプトです。
 
-   ご使用のローカル コンピューターで、**install-worker.sh** という名前の新しいファイルを作成し、GitHub 上にある [install-worker.sh のコンテンツ](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)を貼り付けます。 
+   ご使用のローカル コンピューターで、**install-worker.sh** という名前の新しいファイルを作成し、GitHub 上にある [install-worker.sh のコンテンツ](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)を貼り付けます。
 
 3. *db-init.sh* は、依存関係を Databricks Spark クラスターにインストールするスクリプトです。
 
-   ご使用のローカル コンピューターで、**db-init.sh** という名前の新しいファイルを作成し、GitHub 上にある [db-init.sh のコンテンツ](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)を貼り付けます。 
-   
+   ご使用のローカル コンピューターで、**db-init.sh** という名前の新しいファイルを作成し、GitHub 上にある [db-init.sh のコンテンツ](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)を貼り付けます。
+
    先ほど作成したファイルで、`DOTNET_SPARK_RELEASE` 変数を `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz` に設定します。 *db-init.sh* ファイルの残りの部分はそのままにしておきます。
 
 > [!Note]
@@ -121,7 +122,7 @@ Databricks CLI がインストールされたので、認証の詳細を設定�
 
 ## <a name="publish-your-app"></a>アプリケーションの発行
 
-次に、「[.NET for Apache Spark - 10 分で開始する](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)」のチュートリアルで作成した *mySparkApp* を発行し、自分の Spark クラスターから、アプリを実行するために必要なすべてのファイルにアクセスできることを確認します。 
+次に、「[.NET for Apache Spark - 10 分で開始する](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)」のチュートリアルで作成した *mySparkApp* を発行し、自分の Spark クラスターから、アプリを実行するために必要なすべてのファイルにアクセスできることを確認します。
 
 1. 次のコマンドを実行して、*mySparkApp* を発行します。
 
@@ -163,13 +164,13 @@ Databricks CLI がインストールされたので、認証の詳細を設定�
    databricks fs cp Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-2. 次のコマンドを実行して、アプリを実行するためにクラスターに必要な残りのファイル (zip 形式の発行フォルダー、*input.txt*、*microsoft-spark-2.4.x-0.3.0.jar*) をアップロードします。 
+2. 次のコマンドを実行して、アプリを実行するためにクラスターに必要な残りのファイル (zip 形式の発行フォルダー、*input.txt*、*microsoft-spark-2.4.x-0.3.0.jar*) をアップロードします。
 
    ```console
-   cd mySparkApp 
+   cd mySparkApp
    databricks fs cp input.txt dbfs:/input.txt
-   
-   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory 
+
+   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory
    databricks fs cp mySparkApp.zip dbfs:/spark-dotnet/publish.zip
    databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
    ```
@@ -178,7 +179,7 @@ Databricks CLI がインストールされたので、認証の詳細を設定�
 
 アプリは、**spark-submit** を実行するジョブを介して Azure Databricks で実行されます。spark-submit は、.NET for Apache Spark ジョブを実行するために使用するコマンドです。
 
-1. Azure Databricks ワークスペースで、 **[ジョブ]** アイコンを選択し、次に **[+ ジョブの作成]** を選択します。 
+1. Azure Databricks ワークスペースで、 **[ジョブ]** アイコンを選択し、次に **[+ ジョブの作成]** を選択します。
 
    ![Azure Databricks ジョブを作成する](./media/databricks-deployment/create-job.png)
 
@@ -196,7 +197,7 @@ Databricks CLI がインストールされたので、認証の詳細を設定�
 
 1. ジョブに移動し、 **[編集]** を選択して、ジョブのクラスターを構成します。
 
-2. クラスターを **Spark 2.4.1** に設定します。 次に、 **[詳細オプション]**  >  **[Init Scripts]\(Init スクリプト\)** を選択します。 Init スクリプトのパスを `dbfs:/spark-dotnet/db-init.sh` として設定します。 
+2. クラスターを **Spark 2.4.1** に設定します。 次に、 **[詳細オプション]**  >  **[Init Scripts]\(Init スクリプト\)** を選択します。 Init スクリプトのパスを `dbfs:/spark-dotnet/db-init.sh` として設定します。
 
    ![Azure Databricks で Spark クラスターを構成する](./media/databricks-deployment/cluster-config.png)
 
@@ -208,7 +209,7 @@ Databricks CLI がインストールされたので、認証の詳細を設定�
 
 2. ジョブのクラスターが作成されるまで数分かかります。 作成されると、ジョブが送信され、出力を表示できるようになります。
 
-3. 左側のメニューから **[クラスター]** を選択し、ジョブの名前と実行を選択します。 
+3. 左側のメニューから **[クラスター]** を選択し、ジョブの名前と実行を選択します。
 
 4. **[Driver Logs]\(ドライバー ログ\)** を選択して、ジョブの出力を表示します。 アプリの実行が完了すると、標準出力コンソールに書き込まれた、「開始する」のローカル実行と同じ単語件数のテーブルが表示されます。
 

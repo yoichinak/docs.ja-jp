@@ -2,12 +2,12 @@
 title: Docker アプリの開発ワークフロー
 description: Docker ベースのアプリケーションを開発するためのワークフローの詳細を理解します。 まず、段階的に見ていき、Dockerfile の最適化について詳しく確認し、最終的には Visual Studio を使用する際に利用できる簡略化されたワークフローを理解します。
 ms.date: 01/07/2019
-ms.openlocfilehash: cd599753a5e89504f11226e89837df7665bca641
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8a4d87d84ca59304266a52b0a977f878189108f0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771500"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417253"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -117,7 +117,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **.NET Core アプリケーションの Docker イメージのビルド** \
-  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 - **Build your own image (独自のイメージのビルド)** 。 Docker の公式なドキュメント内にあります。\
   <https://docs.docker.com/engine/tutorials/dockerimages/>

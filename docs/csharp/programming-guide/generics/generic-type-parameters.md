@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], type parameters
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
-ms.openlocfilehash: 27cd89c8e82036bf6353030b4f235c2ebe738e6d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 992b71fa2afa6b511d09c69ade26e3b5bc13acd2
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589693"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195479"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>ジェネリック型の型パラメーター (C# プログラミング ガイド)
 
@@ -37,7 +37,7 @@ ms.locfileid: "69589693"
   
 - 型パラメーターに与えられた制約をパラメーターの名前で示唆することを**検討してください**。 たとえば、`ISession` に制約されているパラメーターの名前を `TSession` にします。
 
-コード分析規則 [CA1715](/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix) を使用して、型パラメーターの名前が適切に付けられていることを確認できます。
+コード分析規則 [CA1715](/visualstudio/code-quality/ca1715) を使用して、型パラメーターの名前が適切に付けられていることを確認できます。
   
 ## <a name="see-also"></a>関連項目
 

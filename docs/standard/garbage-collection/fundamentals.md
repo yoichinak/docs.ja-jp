@@ -11,14 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation garbage collection
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2c1b73108227160aaff28525beeca7f3bd4cb5f8
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 840fe972192c6beb5d84017c288455f1cdf52177
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775322"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121233"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>ガベージ コレクションの基礎
 

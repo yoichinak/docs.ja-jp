@@ -2,12 +2,12 @@
 title: 破壊的変更を評価する - .NET Core
 description: .NET Core が開発者のために .NET バージョンをまたいで互換性を維持するために試行している方法について説明します。
 ms.date: 06/10/2019
-ms.openlocfilehash: 4c3f051bf37ea4753d916ee22fedf97a9bad5892
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089346"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416676"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core の破壊的変更を評価する
 
@@ -139,7 +139,7 @@ ms.locfileid: "73089346"
 
   これは 2 つの理由で破壊的と見なされます。
   
-  - これは、Visual Basic の遅延バインディング機能や C# の[動的](../../csharp/language-reference/keywords/dynamic.md)など、遅延バインディングのシナリオの互換性がなくなります。
+  - これは、Visual Basic の遅延バインディング機能や C# の[動的](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type)など、遅延バインディングのシナリオの互換性がなくなります。
   
   - 開発者が[名前付き引数](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)を使用すると、[ソースの互換性](categories.md#source-compatibility)がなくなります。
 

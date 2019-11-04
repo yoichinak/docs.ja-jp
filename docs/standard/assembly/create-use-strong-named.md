@@ -12,14 +12,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55869c107d245738df3af5ca9bb1b22195e90024
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 700eca16e7755823456c3e3ace17eb5e6b3526ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972775"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122508"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>厳密な名前付きアセンブリの作成と使用
 

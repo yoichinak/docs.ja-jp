@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: f042042f36e373ec05e8f0f15c14027463653578
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8dd57a43f814d7e41ec74af3eeb6d797fef41c9c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924313"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418631"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ によるデータ変換 (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] で行うことができるのは、データの取得だけではありません。 データ変換のための強力なツールとしても使用できます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを使用することにより、ソース シーケンスを入力として使用し、さまざまな方法で加工して新しい出力シーケンスを作成できます。 要素自体を変更せずに、並べ替えやグループ化してシーケンス自体を変更できます。 しかし、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] のクエリの最も強力な機能は、新しい型を作成する機能です。 この操作は [select](../../../language-reference/keywords/select-clause.md) 句内で行います。 たとえば、次のタスクを実行できます。  
@@ -103,5 +103,5 @@ ms.locfileid: "69924313"
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 - [LINQ to XML (C#)](./linq-to-xml-overview.md)
-- [LINQ クエリ式](../../linq-query-expressions/index.md)
+- [LINQ クエリ式](../../../linq/index.md)
 - [select 句](../../../language-reference/keywords/select-clause.md)

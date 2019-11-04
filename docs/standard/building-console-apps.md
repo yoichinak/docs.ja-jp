@@ -7,14 +7,12 @@ helpviewer_keywords:
 - application development [.NET Framework], console
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c1658f27b66d9447d191d23801eba2d659ce9c2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ec65795a7f3d706b2878dd8a8397ae42b61ce7e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933901"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132866"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>.NET Framework におけるコンソール アプリケーションの構築
 .NET Framework のアプリケーションは、<xref:System.Console?displayProperty=nameWithType> クラスを使用して、コンソールから文字を読み取り、コンソールに文字を書き込みます。 コンソールからのデータは標準入力ストリームから読み取られ、コンソールへのデータは標準出力ストリームに書き込まれ、コンソールへのエラー データは標準エラー出力ストリームに書き込まれます。 これらのストリームは、アプリケーションの起動時に自動的にコンソールに関連付けられ、それぞれ <xref:System.Console.In%2A> プロパティ、<xref:System.Console.Out%2A> プロパティ、および <xref:System.Console.Error%2A> プロパティとして示されます。  

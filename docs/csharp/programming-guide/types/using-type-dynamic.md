@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: aef64f538aecb0fc5dadec850020d7c01d02ccbd
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 248f0410aa8fc7c4aa92b844bda19f51fcf09c6d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523553"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417594"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>dynamic 型の使用 (C# プログラミング ガイド)
 
@@ -76,7 +76,7 @@ C# 4 には、Office オートメーション API などの COM API との相互
 
 |Title|説明|
 |-----------|-----------------|
-|[dynamic](../../language-reference/keywords/dynamic.md)|`dynamic` キーワードの使用法について説明します。|
+|[dynamic](../../language-reference/builtin-types/reference-types.md)|`dynamic` キーワードの使用法について説明します。|
 |[動的言語ランタイムの概要](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|DLR の概要について説明します。DLR は動的言語の一連のサービスを共通言語ランタイム (CLR) に追加するランタイム環境です。|
 |[チュートリアル: 動的オブジェクトの作成と使用](walkthrough-creating-and-using-dynamic-objects.md)|動的なカスタム オブジェクト、および `IronPython` ライブラリにアクセスするプロジェクトを作成するための詳細な手順について説明します。|
 |[方法: Visual C# の機能を使用して Office 相互運用オブジェクトにアクセスする](../interop/how-to-access-office-onterop-objects.md)|名前付き引数と省略可能な引数、`dynamic` 型、および Office API オブジェクトへのアクセスを簡単にするその他の強化機能を使用するプロジェクトを作成する方法について説明します。|

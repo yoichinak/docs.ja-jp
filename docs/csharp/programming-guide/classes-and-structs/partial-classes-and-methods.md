@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 53c3ac6e4fa6313488c47d851e0897bd512521b7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2df3492274c2abceebf1d37b87be9cc9bb455b5f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596274"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419181"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分クラスと部分メソッド (C# プログラミング ガイド)
 
@@ -164,11 +164,11 @@ partial void onNameChanged()
 
 - 部分メソッドはジェネリックにできます。 制約は部分メソッドの定義宣言に置き、必要に応じて実装宣言で繰り返すことができます。 パラメーター名と型パラメーター名は、定義宣言と実装宣言で同じである必要はありません。
 
-- [delegate](../../language-reference/keywords/delegate.md) は、定義および実装されている部分メソッドには使用できますが、定義されているのみの部分メソッドには使用できません。
+- [delegate](../../language-reference/builtin-types/reference-types.md) は、定義および実装されている部分メソッドには使用できますが、定義されているのみの部分メソッドには使用できません。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、「[C# 言語仕様](../../language-reference/language-specification/index.md)」の[部分型](~/_csharplang/spec/classes.md#partial-types)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の[部分型](~/_csharplang/spec/classes.md#partial-types)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>関連項目
 

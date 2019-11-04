@@ -10,15 +10,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 89585ff97183912feb9b9af0bd326041b7381bfb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 56014469f14280deae5f220da6d786f4363ea98f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774304"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105720"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET の正規表現に関するベスト プラクティス
 

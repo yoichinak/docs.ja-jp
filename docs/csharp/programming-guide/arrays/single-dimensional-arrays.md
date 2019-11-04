@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 17c384ec327d4a80ed614dce6254baa5bfb2e960
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5559acd162b26a94b009ec21691d1501c90db290
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597304"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419524"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>1 次元配列 (C# プログラミング ガイド)
 
@@ -55,7 +55,7 @@ ms.locfileid: "69597304"
   
  このステートメントの結果は、`SomeType` が値型か参照型かによって決まります。 値型の場合、ステートメントはそれそれが型 `SomeType` である 10 個の要素の配列を作成します。 `SomeType` が参照型の場合、ステートメントは、それぞれが null 参照に初期化される 10 個の要素の配列を作成します。  
   
- 値型と参照型の詳細については、「[型](../../language-reference/keywords/types.md)」を参照してください。  
+ 値型と参照型の詳細については、「[型](/dotnet/csharp/language-reference/keywords)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

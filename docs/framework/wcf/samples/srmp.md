@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: e3015e7185fd52a1161b91c74dee57f694fbeebd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 51b0e0513ba20bf7aeae461dee6ac864f1d55897
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044716"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417093"
 ---
 # <a name="srmp"></a>SRMP
 このサンプルでは、HTTP 経由でメッセージ キュー (MSMQ) を使用して、トランザクション キューによる通信を実行する方法を示します。  
@@ -34,7 +34,7 @@ ms.locfileid: "70044716"
   
 8. クライアントを実行します。 エンドポイント アドレスは、localhost ではなくコンピュータ名または IP アドレスを指定するように変更してください。 クライアントはメッセージを送信して終了します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>［要件］  
  このサンプルを実行するには、MSMQ に加え、IIS をサービス コンピュータとクライアント コンピュータの両方にインストールする必要があります。  
   
 ## <a name="demonstrates"></a>使用例  
@@ -77,7 +77,7 @@ ms.locfileid: "70044716"
   
  このサンプルを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 Processing Purchase Order: 556b70be-31ee-4a3b-8df4-ed5e538015a4   
 Customer: somecustomer.com   
 OrderDetails   
@@ -92,6 +92,6 @@ OrderDetails
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  

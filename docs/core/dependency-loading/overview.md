@@ -5,12 +5,12 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: 0388bd1fa29ce1caad93c917503dac9eed8974e1
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f6b5fc1f92171b61dcab162b782ca7212c602d76
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "72303666"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416679"
 ---
 # <a name="dependency-loading-in-net-core"></a>.NET Core での依存関係の読み込み
 
@@ -39,4 +39,4 @@ ms.locfileid: "72303666"
 
 ## <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>.NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法
 
-「[.NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法](../../standard/assembly/unloadability-howto.md)」の記事は、ステップ バイ ステップのチュートリアルです。 ここでは、.NET Core アプリケーションを読み込んで実行し、アンロードする方法を示します。 この記事ではデバッグのヒントも示します。
+「[.NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法](../../standard/assembly/unloadability.md)」の記事は、ステップ バイ ステップのチュートリアルです。 ここでは、.NET Core アプリケーションを読み込んで実行し、アンロードする方法を示します。 この記事ではデバッグのヒントも示します。

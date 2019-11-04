@@ -6,14 +6,12 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework], best practices
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c37480f18c100d66e78e851439bd15e2ecfdd381
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2da29e0baf429142707d0ddd39b1a11c13a17a90
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615193"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141536"
 ---
 # <a name="observer-design-pattern-best-practices"></a>オブサーバー デザイン パターンのベスト プラクティス
 .NET Framework では、オブザーバー デザイン パターンは、一連のインターフェイスとして実装されます。 <xref:System.IObservable%601?displayProperty=nameWithType> インターフェイスはデータ プロバイダーを表し、データ プロバイダーはオブザーバーで通知のサブスクリプションを解除できるようにする <xref:System.IDisposable> 実装も提供します。 <xref:System.IObserver%601?displayProperty=nameWithType> インターフェイスはオブザーバーを表します。 このトピックでは、これらのインターフェイスを使用してオブザーバー デザイン パターンを実装するときに、開発者が適用することが望ましいベスト プラクティスについて説明します。  

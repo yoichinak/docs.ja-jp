@@ -7,14 +7,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework]
 - strings [.NET Framework], regular expressions
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc62fffe3ca51acf0f2098d2975665b91b052992
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 788fa2a6793e14189def4c30a0baf0d4a5cf6b0a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930890"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128091"
 ---
 # <a name="regular-expression-examples"></a>正規表現の例
 このセクションでは、一般的なアプリケーションで正規表現を使用するときのコード例を示します。  
@@ -38,7 +36,7 @@ ms.locfileid: "69930890"
  [方法: 文字列が有効な電子メール形式であるかどうかを検証する](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
  文字列が有効な電子メール形式であることを確認する例を次に示します。  
   
-## <a name="reference"></a>関連項目  
+## <a name="reference"></a>辞書／辞典／その他  
  <xref:System.Text.RegularExpressions>  
  .NET **System.Text.RegularExpressions** 名前空間のクラス ライブラリのリファレンス情報を示します。  
   

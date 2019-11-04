@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 22ef5d0f91a4f61ca75203f677bcc14e91d77dc1
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cd66317bc93343e03a73dec74dff534776ca42e4
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394210"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198484"
 ---
 ### <a name="http-response-body-infrastructure-changes"></a>HTTP:応答本文のインフラストラクチャの変更
 
@@ -43,7 +43,7 @@ ASP.NET Core
 - <xref:Microsoft.AspNetCore.Http.Features.IHttpBufferingFeature?displayProperty=nameWithType>
 - <xref:Microsoft.AspNetCore.Http.Features.IHttpResponseFeature.Body?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Http.Features.IHttpSendFileFeature?displayProperty=nameWithType>
- 
+
 <!-- 
 
 #### Affected APIs

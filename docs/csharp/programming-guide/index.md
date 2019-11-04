@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 25b686e654c5d6bb44a56b96cbf4045d14e95b62
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392432"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423244"
 ---
 # <a name="c-programming-guide"></a>C# プログラミング ガイド
 このセクションでは、C# 言語の重要な機能に関する詳細と、.NET Framework 経由でアクセスできる C# の機能について説明します。  
   
  このセクションの大部分は、C# と一般的なプログラミングの概念について、ある程度の知識を持っていることを前提として説明されています。 プログラミングや C# のまったくの初心者の方は、[C# チュートリアルの概要](../tutorials/intro-to-csharp/index.md) に関するページや [.NET In-Browser Tutorial](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)(ブラウザーでの .NET のチュートリアル) を参照してください。プログラミングの予備知識は必要ありません。  
   
- 特定のキーワード、演算子、およびプリプロセッサ ディレクティブについては、「[C# リファレンス](../language-reference/index.md)」を参照してください。 C# 言語の仕様については、「[C# 言語仕様](../language-reference/language-specification/index.md)」を参照してください。  
+ 特定のキーワード、演算子、およびプリプロセッサ ディレクティブについては、「[C# リファレンス](../language-reference/index.md)」を参照してください。 C# 言語の仕様については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」を参照してください。  
   
 ## <a name="program-sections"></a>プログラムのセクション
 
@@ -56,7 +56,7 @@ ms.locfileid: "71392432"
   
  [反復子](./concepts/iterators.md)
   
- [LINQ クエリ式](./linq-query-expressions/index.md)  
+ [LINQ クエリ式](../linq/index.md)  
   
  [ラムダ式](./statements-expressions-operators/lambda-expressions.md)  
   

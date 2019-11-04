@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: f62255be9c74a221836b23058bd48a835f38f629
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 082cd37eca6b5de1251d73a5483665f8a98b0132
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608631"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422670"
 ---
 # <a name="new-modifier-c-reference"></a>new 修飾子 (C# リファレンス)
 
@@ -63,6 +63,6 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 - [C# リファレンス](../../language-reference/index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [修飾子](modifiers.md)
+- [修飾子](index.md)
 - [Override キーワードと New キーワードによるバージョン管理](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
 - [Override キーワードと New キーワードを使用する場合について](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)

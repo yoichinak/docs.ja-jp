@@ -2,12 +2,12 @@
 title: dotnet build コマンド
 description: dotnet build コマンドは、プロジェクトとそのすべての依存関係をビルドします。
 ms.date: 10/14/2019
-ms.openlocfilehash: fe2135c150be46997699f756f7f0c9bc18bbb529
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: b85ef06aa445e4708487deed9ec6bfeffeab3657
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846822"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454219"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -24,8 +24,9 @@ ms.locfileid: "72846822"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
-    [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force]
+    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo] 
+    [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```

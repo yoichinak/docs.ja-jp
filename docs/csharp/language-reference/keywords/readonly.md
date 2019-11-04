@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 6c48806e54f11bce930d03a53b010c337e6658f8
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960853"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454962"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# リファレンス)
 
@@ -27,13 +27,13 @@ ms.locfileid: "72960853"
   - 参照型にはそのデータへの参照が含まれるため、`readonly` 参照型のフィールドは、常に同じオブジェクトを参照する必要があります。 そのオブジェクトは不変ではありません。 `readonly` 修飾子があると、フィールドを参照型の別のインスタンスで置き換えることはできません。 ただし、フィールドのインスタンス データを読み取り専用フィールドで変更することは禁止されません。
 
   > [!WARNING]
-  > 変更可能な参照型である外部から参照できる読み取り専用フィールドを含む外部から参照できる型はセキュリティの脆弱性があり、警告 [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) がトリガーされる可能性があります: "読み取り専用の変更可能な参照型を宣言しません"。
+  > 変更可能な参照型である外部から参照できる読み取り専用フィールドを含む外部から参照できる型はセキュリティの脆弱性があり、警告 [CA2104](/visualstudio/code-quality/ca2104) がトリガーされる可能性があります: "読み取り専用の変更可能な参照型を宣言しません"。
 
 - [`readonly struct` の定義](#readonly-struct-example)では、`readonly` は `struct` が変更不可であることを示します。
 - [`readonly` メンバー定義](#readonly-member-examples)では、`readonly`は、`struct` のメンバーが構造体の内部状態を変更しないことを示します。
 - [`ref readonly` メソッドの戻り値](#ref-readonly-return-example)では、`readonly` 修飾子は、メソッドが参照を返し、その参照への書き込みが許可されないことを示します。
 
-`readonly sturct` と `ref readonly` のコンテキストは、C# 7.2 で追加されました。 `readonly` 構造体メンバーは、C# 8.0 で追加されました。
+`readonly struct` と `ref readonly` のコンテキストは、C# 7.2 で追加されました。 `readonly` 構造体メンバーは、C# 8.0 で追加されました。
 
 ## <a name="readonly-field-example"></a>読み取り専用フィールドの例
 
@@ -161,6 +161,6 @@ public string Message { readonly get; set; }
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [修飾子](modifiers.md)
+- [修飾子](index.md)
 - [const](const.md)
 - [フィールド](../../programming-guide/classes-and-structs/fields.md)
