@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 12ced911c6fded5dd9016ea377a3a4518c9c2ee1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920341"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458298"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic と WPF のイベント処理
 特に Microsoft Visual Basic .NET 言語では、言語固有の `Handles` キーワードを使用してイベントハンドラーをインスタンスに関連付けることができます。これには、イベントハンドラーを属性または <xref:System.Windows.UIElement.AddHandler%2A> メソッドを使用してアタッチする必要があります。 ただし、インスタンスにハンドラーをアタッチする `Handles` 技法にはいくつかの制限があります。これは、`Handles` 構文が [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] イベントシステムの特定のルーティングイベント機能の一部をサポートできないためです。  
@@ -47,4 +47,4 @@ ms.locfileid: "72920341"
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [ルーティング イベントの処理済みとしてのマーキング、およびクラス処理](marking-routed-events-as-handled-and-class-handling.md)
 - [ルーティング イベントの概要](routed-events-overview.md)
-- [XAML の概要 (WPF)](xaml-overview-wpf.md)
+- [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

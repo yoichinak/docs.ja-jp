@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: ff6e76838ef2e3826c5b3dbeb44c748682902591
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: a1441f0cc3a7ac715a173be12e68c055ce36ff00
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421073"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460137"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>WPF アプリケーションの配置 (WPF)
 Windows Presentation Foundation (WPF) アプリケーションを構築した後は、アプリケーションを配置する必要があります。 Windows と .NET Framework には、いくつかの展開テクノロジが含まれています。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの配置に使用される配置テクノロジは、アプリケーションの種類によって決まります。 このトピックでは、それぞれの配置テクノロジの概要と使用法を、それぞれの [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの種類の配置要件に関連して説明します。  
@@ -83,7 +83,7 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
   
  マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、XCopy または Windows インストーラーのいずれかを使用してローカルファイルシステムにインストールできます。 これらのページは、Internet Explorer またはエクスプローラーを使用して表示できます。  
   
- XAML の詳細については、「[XAML の概要 (WPF)](../advanced/xaml-overview-wpf.md)」を参照してください。  
+ XAML の詳細については、「[XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)」を参照してください。  
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>XAML ブラウザー アプリケーションの配置  

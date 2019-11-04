@@ -9,32 +9,32 @@ helpviewer_keywords:
 - ControlTemplate [WPF], ToolTip
 - templates [WPF], ToolTip
 ms.assetid: 405fe385-4de9-49ee-a448-d8f4d1f740dd
-ms.openlocfilehash: 24def466509c12eb69307de139e83dd5a1ed5ce4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 626d0b4d49d653f820d1506f0aa09f06d26352c2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790677"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458636"
 ---
 # <a name="tooltip-styles-and-templates"></a>ToolTip のスタイルとテンプレート
-このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.ToolTip>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、<xref:System.Windows.Controls.ToolTip> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
   
-## <a name="tooltip-parts"></a>ツールヒントの部品  
- <xref:System.Windows.Controls.ToolTip>コントロールには、名前付きパーツはありません。  
+## <a name="tooltip-parts"></a>ツールヒントパーツ  
+ <xref:System.Windows.Controls.ToolTip> コントロールには、名前付きの部分がありません。  
   
 ## <a name="tooltip-states"></a>ツールヒントの状態  
- 次の表のビジュアルの状態、<xref:System.Windows.Controls.ToolTip>コントロール。  
+ 次の表は、<xref:System.Windows.Controls.ToolTip> コントロールの表示状態を示しています。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
 |Closed|OpenStates|既定の状態です。|  
-|開く|OpenStates|<xref:System.Windows.Controls.ToolTip>を表示します。|  
-|有効|ValidationStates|コントロールを使用して、<xref:System.Windows.Controls.Validation>クラスおよび<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`false`します。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスします。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスがないです。|  
+|開く|OpenStates|<xref:System.Windows.Controls.ToolTip> が表示されます。|  
+|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
 ## <a name="tooltip-controltemplate-example"></a>ツールヒント ControlTemplate の例  
- 次の例は、定義する方法を示します、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.ToolTip>コントロール。  
+ 次の例は、<xref:System.Windows.Controls.ToolTip> コントロールの <xref:System.Windows.Controls.ControlTemplate> を定義する方法を示しています。  
   
  [!code-xaml[ControlTemplateExamples#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/tooltip.xaml#tooltip)]  
   
@@ -50,5 +50,5 @@ ms.locfileid: "61790677"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
-- [スタイルとテンプレート](styling-and-templating.md)
+- [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)

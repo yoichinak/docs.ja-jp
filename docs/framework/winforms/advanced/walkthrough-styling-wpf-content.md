@@ -6,15 +6,15 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8b9e2c5c05f1a4b263890c2d8ca8474abe07d836
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 581fcbfdfd7806b8f0f70347ac96f1bf09fa9098
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197416"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460936"
 ---
 # <a name="walkthrough-style-wpf-content"></a>チュートリアル: WPF コンテンツのスタイルを適用する
 

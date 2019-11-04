@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: Visual C# による Windows フォーム コントロールからの継承'
+title: 'チュートリアル : Visual C# による Windows フォーム コントロールからの継承'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4a9a4b9bc15d2579837c3f4969a8d85293f10967
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015669"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460597"
 ---
-# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>チュートリアル: C を使用して Windows フォームコントロールから継承する\#
+# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>チュートリアル: Windows フォームコントロールから C\# を継承する
 
-ビジュアルC#を使用すると、*継承*によって強力なカスタムコントロールを作成できます。 継承を使用すると、標準の Windows フォーム コントロールの固有の機能をすべて保持しながら、カスタム機能も組み込んだコントロールを作成できます。 このチュートリアルでは、`ValueButton` という単純な継承されたコントロールを作成します。 このボタンは、標準の Windows フォーム<xref:System.Windows.Forms.Button>コントロールから機能を継承し、と呼ば`ButtonValue`れるカスタムプロパティを公開します。
+ビジュアルC#を使用すると、*継承*によって強力なカスタムコントロールを作成できます。 継承を使用すると、標準の Windows フォーム コントロールの固有の機能をすべて保持しながら、カスタム機能も組み込んだコントロールを作成できます。 このチュートリアルでは、`ValueButton` という単純な継承されたコントロールを作成します。 このボタンは、標準の Windows フォーム <xref:System.Windows.Forms.Button> コントロールから機能を継承し、`ButtonValue`というカスタムプロパティを公開します。
 
 ## <a name="create-the-project"></a>プロジェクトの作成
 
@@ -36,16 +36,16 @@ ms.locfileid: "70015669"
 
 3. **ソリューション エクスプローラー**で、 **[ValueButton.cs]** を右クリックし、 **[コードの表示]** をクリックします。
 
-4. ステートメントの行を`public partial class ValueButton`探し、このコントロールが継承<xref:System.Windows.Forms.UserControl>する型をに<xref:System.Windows.Forms.Button>変更します。 `class` これにより、継承されたコントロールが<xref:System.Windows.Forms.Button>コントロールのすべての機能を継承できるようになります。
+4. `class` ステートメント行、`public partial class ValueButton`を見つけて、このコントロールが継承する <xref:System.Windows.Forms.UserControl> の型を <xref:System.Windows.Forms.Button>に変更します。 これにより、継承されたコントロールが <xref:System.Windows.Forms.Button> コントロールのすべての機能を継承できるようになります。
 
 5. **ソリューション エクスプローラー**で、 **[ValueButton.cs]** ノードを開いて、デザイナーによって生成されたコード ファイル (**ValueButton.Designer.cs**) を表示します。 このファイルを**コード エディター**で開きます。
 
-6. メソッドを見つけて、プロパティを<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>割り当てる行を削除します。 `InitializeComponent` このプロパティは<xref:System.Windows.Forms.Button>コントロールに存在しません。
+6. `InitializeComponent` メソッドを見つけて、<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> プロパティを割り当てる行を削除します。 このプロパティは、<xref:System.Windows.Forms.Button> コントロールに存在しません。
 
 7. **[ファイル]** メニューの **[すべて保存]** をクリックして、プロジェクトを保存します。
 
     > [!NOTE]
-    > ビジュアル デザイナーは使用できなくなっています。 コントロールは<xref:System.Windows.Forms.Button>独自の描画を行うため、デザイナーで外観を変更することはできません。 ビジュアル表現は、コード内で変更されない限り、から継承したクラス (つまり<xref:System.Windows.Forms.Button>、) とまったく同じになります。 UI 要素のないコンポーネントをデザイン サーフェイスに追加することは可能です。
+    > ビジュアル デザイナーは使用できなくなっています。 <xref:System.Windows.Forms.Button> コントロールは独自の描画を行うため、デザイナーでその外観を変更することはできません。 そのビジュアル表現は、コードで変更されない限り、から継承したクラス (つまり、<xref:System.Windows.Forms.Button>) とまったく同じになります。 UI 要素のないコンポーネントをデザイン サーフェイスに追加することは可能です。
 
 ## <a name="add-a-property-to-your-inherited-control"></a>継承されたコントロールにプロパティを追加する
 
@@ -117,7 +117,7 @@ ms.locfileid: "70015669"
 
 5. **Buttonvalue**プロパティを**5**に設定します。
 
-6. **ツールボックス**の **[すべての Windows フォーム]** タブで、[ <xref:System.Windows.Forms.Label>ラベル] をダブルクリックしてフォームにコントロールを追加します。
+6. **ツールボックス**の **[すべての Windows フォーム]** タブで、 **[ラベル]** をダブルクリックして <xref:System.Windows.Forms.Label> コントロールをフォームに追加します。
 
 7. ラベルをフォームの中央に配置し直します。
 
@@ -143,5 +143,5 @@ ms.locfileid: "70015669"
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: [ツールボックスアイテムの選択] ダイアログボックスにコントロールを表示する](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [チュートリアル: ビジュアルを使用した複合コントロールの作成C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [チュートリアル : Visual C# による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

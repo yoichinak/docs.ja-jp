@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 54991ce16aa905f4138013944fb8b5a317675d9b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 75cf628b6faad1f8c52a70c77baa4ede21160510
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043157"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458137"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>UI オートメーション Value コントロール パターンの実装
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](https://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。  
   
  このトピックでは、イベントおよびプロパティに関する情報など、 <xref:System.Windows.Automation.Provider.IValueProvider>の実装のためのガイドラインと規則について説明します。 その他のリファレンスへのリンクは、トピックの最後に記載します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "71043157"
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> は、書式設定情報や部分文字列の値の取得をサポートしていません。 このようなシナリオでは <xref:System.Windows.Automation.Provider.ITextProvider> を実装します。  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>**色の**値 ("黄" など) と同等の内部[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] RGB 構造との間の文字列マッピングをサポートするコントロール (下図を参照) などのコントロールによって実装する必要があります。  
+- <xref:System.Windows.Automation.Provider.IValueProvider> は、カラー値 ("黄" など) と同等の内部 RGB 構造との間の文字列マッピングをサポートする、Microsoft Word の**カラーピッカー**選択コントロールなどのコントロールによって実装する必要があります。  
   
  ![黄色が強調表示されたカラーピッカー。](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色見本の文字列のマッピング例  
@@ -47,17 +47,17 @@ ms.locfileid: "71043157"
 ## <a name="required-members-for-ivalueprovider"></a>IValueProvider の必須メンバー  
  <xref:System.Windows.Automation.Provider.IValueProvider>の実装には、次のプロパティとメソッドが必要です。  
   
-|必須メンバー|メンバーの型|メモ|  
+|必須メンバー|メンバーの型|ノート|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|プロパティ|なし|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|プロパティ|なし|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|メソッド|なし|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|property|None|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|property|None|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|メソッド|None|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>例外  
  プロバイダーは、次の例外をスローする必要があります。  
   
-|例外の型|条件|  
+|例外の種類|条件|  
 |--------------------|---------------|  
 |<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -ロケール固有の情報が誤った形式でコントロールに渡された場合 (書式設定されていない日付など)。|  
 |<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -新しい値を文字列からコントロールが認識する形式に変換できない場合。|  

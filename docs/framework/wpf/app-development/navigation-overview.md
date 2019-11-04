@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 5a5c4c62799e1d2c190c2f7eaab12fff31e457ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425283"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459771"
 ---
 # <a name="navigation-overview"></a>ナビゲーションの概要
 
@@ -742,7 +742,7 @@ HTML に移動するには、特殊なアクセス許可が必要です。 た�
 
 ### <a name="navigating-to-custom-objects"></a>カスタム オブジェクトへのナビゲート
 
-カスタムオブジェクトとして格納されているデータがある場合、そのデータを表示する方法の1つとして、それらのオブジェクトにバインドされたコンテンツを含む <xref:System.Windows.Controls.Page> を作成します (「[データバインディングの概要](../data/data-binding-overview.md)」を参照してください)。 オブジェクトを表示するためだけにページ全体を作成するオーバーヘッドが必要ない場合には、代わりに、オブジェクトに直接ナビゲートすることもできます。
+カスタムオブジェクトとして格納されているデータがある場合、そのデータを表示する方法の1つとして、それらのオブジェクトにバインドされたコンテンツを含む <xref:System.Windows.Controls.Page> を作成します (「[データバインディングの概要](../../../desktop-wpf/data/data-binding-overview.md)」を参照してください)。 オブジェクトを表示するためだけにページ全体を作成するオーバーヘッドが必要ない場合には、代わりに、オブジェクトに直接ナビゲートすることもできます。
 
 次のコードに実装されている `Person` クラスを考えてみましょう。
 

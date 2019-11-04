@@ -8,15 +8,15 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0d7fb0d5a98400b3b3eb78e3b93b274e23119497
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 0dd112f89071f6981b438a79f350dfab02af73d5
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197395"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460112"
 ---
 # <a name="windows-forms-designer-error-page"></a>Windows フォームデザイナーのエラーページ
 

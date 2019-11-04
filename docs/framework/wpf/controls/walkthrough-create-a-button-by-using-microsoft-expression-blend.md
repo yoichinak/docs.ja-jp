@@ -6,12 +6,12 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: 10342d97abc2e3c158f93171f5fe5cd560f9b7e4
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: e1fdc3ef51e8658e07bc555238229bed9116e165
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920267"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460096"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>チュートリアル : Microsoft Expression Blend を使用してボタンを作成する
 
@@ -255,7 +255,7 @@ F5 キーを押してアプリケーションを実行します。 ボタンを�
 ## <a name="see-also"></a>関連項目
 
 - [XAML を使用したボタンの作成](walkthrough-create-a-button-by-using-xaml.md)
-- [スタイルとテンプレート](styling-and-templating.md)
+- [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [アニメーションの概要](../graphics-multimedia/animation-overview.md)
 - [純色およびグラデーションによる塗りつぶしの概要](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
 - [ビットマップ効果の概要](../graphics-multimedia/bitmap-effects-overview.md)
