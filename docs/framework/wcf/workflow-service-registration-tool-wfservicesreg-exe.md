@@ -2,19 +2,19 @@
 title: ワークフロー サービス登録ツール (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 0a9cd5039c085f82f5507c93ebe0855cc620825d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb0989fb8747a5065ce3d7332311cdefba95b80d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916823"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425285"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>ワークフロー サービス登録ツール (WFServicesReg.exe)
 ワークフロー サービス登録ツール (WFServicesReg.exe) は、Windows Workflow Foundation (WF) サービスの構成要素の追加、削除、または修復に使用できるスタンドアロン ツールです。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 WFServicesReg.exe [-c | -r | -v | -m | -i]  
 ```  
   
@@ -56,11 +56,11 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  このツールでは、IIS メタベース内の .xoml および .rules のスクリプトマップおよびハンドラーの登録も行われます。  
   
- [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] と[!INCLUDE[wxp](../../../includes/wxp-md.md)]マシン (iis 5.1 および iis 6.0) では、1組の xoml および規則のスクリプトマップが登録されます。  
+ [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] および [!INCLUDE[wxp](../../../includes/wxp-md.md)] マシン (IIS 5.1 および IIS 6.0) では、1セットの xoml および rules スクリプトマップが登録されます。  
   
  64 ビット コンピューターでは、`Enable32BitAppOnWin64` スイッチが有効な場合は WOW モードのスクリプトマップが登録され、`Enable32BitAppOnWin64` スイッチが無効な場合はネイティブの 64 ビット スクリプトマップが登録されます。  
   
- と[!INCLUDE[wv](../../../includes/wv-md.md)] Windows Server 2008 (IIS 7.0 以降) のコンピューターでは、2セットの xoml および規則ハンドラーが登録されています。1つは統合モード用で、もう1つはクラシックモード用です。  
+ [!INCLUDE[wv](../../../includes/wv-md.md)] と Windows Server 2008 (IIS 7.0 以降) のコンピューターでは、2セットの xoml および. rules ハンドラーが登録されています。1つは統合モード用で、もう1つはクラシックモード用です。  
   
  64 ビット コンピューターでは、`Enable32BitAppOnWin64` スイッチの状態にかかわらず、統合モード用、WOW クラシック モード用、およびネイティブ 64 ビット クラシック モード用の 3 セットのハンドラーが登録されます。  
   

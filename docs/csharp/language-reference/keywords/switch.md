@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 76c778d1e2d45990793b5d9c7d4a8ee5a99fed46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424126"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422294"
 ---
 # <a name="switch-c-reference"></a>switch (C# リファレンス)
 
@@ -44,7 +44,7 @@ match 式は、`case` ラベルのパターンと照合する値を指定しま�
 C# 6 以前では、match 式は、次の型の値を返す必要があります。
 
 - [char](char.md)。
-- [string](string.md)。
+- [string](../builtin-types/reference-types.md)。
 - [bool](bool.md)。
 - 整数値。[int](../builtin-types/integral-numeric-types.md)、[long](../builtin-types/integral-numeric-types.md) など。
 - [enum](enum.md)値。
@@ -125,7 +125,7 @@ C# 6 でサポートされるのは定数パターンのみで、定数値の繰
 - 宣言された `const` 変数の名前。
 - 列挙定数。
 - [char](char.md) リテラル。
-- [string](string.md) リテラル。
+- [string](../builtin-types/reference-types.md) リテラル。
 
 定数式は以下のように評価されます。
 
@@ -195,7 +195,7 @@ C# 7.0 以降では、case ステートメントは相互に排他的である�
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](../language-specification/index.md)に関するページの「[switch ステートメント](~/_csharplang/spec/statements.md#the-switch-statement)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)に関するページの「[switch ステートメント](~/_csharplang/spec/statements.md#the-switch-statement)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>関連項目
 

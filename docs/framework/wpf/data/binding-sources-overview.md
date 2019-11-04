@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: cf5873cdf137573826d5361d077e0534e8cba1f0
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920286"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459018"
 ---
 # <a name="binding-sources-overview"></a>バインディング ソースの概要
 データ バインディングでは、バインディング ソース オブジェクトは、データの取得元のオブジェクトを表します。 このトピックでは、バインディング ソースとして使用できるオブジェクトの型について説明します。
@@ -54,7 +54,7 @@ ms.locfileid: "72920286"
 ## <a name="using-entire-objects-as-a-binding-source"></a>バインディング ソースとしてオブジェクト全体を使用する
  バインディング ソースとしてオブジェクト全体を使用できます。 <xref:System.Windows.Data.Binding.Source%2A> または <xref:System.Windows.FrameworkElement.DataContext%2A> プロパティを使用してバインディングソースを指定し、空白のバインド宣言を指定できます。 `{Binding}`。 これが便利なシナリオには、文字列型のオブジェクトへのバインディング、対象とするプロパティが複数あるオブジェクトへのバインディング、またはコレクション オブジェクトへのバインディングなどがあります。 コレクション オブジェクト全体へのバインディングの例は、「[階層データでマスター詳細パターンを使用する](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)」を参照してください。
 
- データがバインドされているターゲット プロパティにとって意味のあるものになるように、カスタム ロジックの適用が必要になる場合があることに注意してください。 カスタムのロジックは、カスタムコンバーター (既定の型変換が存在しない場合) または <xref:System.Windows.DataTemplate>の形式である場合があります。 コンバーターの詳細については、「[データ バインディングの概要](data-binding-overview.md)」の「データ変換」セクションを参照してください。 データ テンプレートの詳細については「 [データ テンプレートの概要](data-templating-overview.md)」を参照してください。
+ データがバインドされているターゲット プロパティにとって意味のあるものになるように、カスタム ロジックの適用が必要になる場合があることに注意してください。 カスタムのロジックは、カスタムコンバーター (既定の型変換が存在しない場合) または <xref:System.Windows.DataTemplate>の形式である場合があります。 コンバーターの詳細については、「[データ バインディングの概要](../../../desktop-wpf/data/data-binding-overview.md)」の「データ変換」セクションを参照してください。 データ テンプレートの詳細については「 [データ テンプレートの概要](data-templating-overview.md)」を参照してください。
 
 <a name="collections"></a>
 ## <a name="using-collection-objects-as-a-binding-source"></a>バインディング ソースとしてコレクション オブジェクトを使用する
@@ -64,7 +64,7 @@ ms.locfileid: "72920286"
 
  <xref:System.Collections.ObjectModel.ObservableCollection%601> クラスは、<xref:System.Collections.Specialized.INotifyCollectionChanged> インターフェイスを公開するデータコレクションの組み込みの実装です。 コレクション内の個々のデータ オブジェクトは、前の各セクションで説明されている要件を満たす必要があります。 例については、「[ObservableCollection を作成およびバインドする](how-to-create-and-bind-to-an-observablecollection.md)」を参照してください。 独自のコレクションを実装する前に、<xref:System.Collections.ObjectModel.ObservableCollection%601> または既存のコレクションクラス (<xref:System.Collections.Generic.List%601>、<xref:System.Collections.ObjectModel.Collection%601>、<xref:System.ComponentModel.BindingList%601>など) のいずれかを使用することを検討してください。
 
- WPF はコレクションに直接バインドすることはありません。 バインディング ソースとしてコレクションを指定すると、WPF は実際にはコレクションの既定のビューにバインドします。 既定のビューの詳細については、「[データ バインディングの概要](data-binding-overview.md)」を参照してください。
+ WPF はコレクションに直接バインドすることはありません。 バインディング ソースとしてコレクションを指定すると、WPF は実際にはコレクションの既定のビューにバインドします。 既定のビューの詳細については、「[データ バインディングの概要](../../../desktop-wpf/data/data-binding-overview.md)」を参照してください。
 
  高度なシナリオがあり、独自のコレクションを実装する場合は、<xref:System.Collections.IList> インターフェイスの使用を検討してください。 <xref:System.Collections.IList> には、インデックスによって個別にアクセスできるオブジェクトの非ジェネリックコレクションが用意されています。これにより、パフォーマンスが向上します。
 
@@ -97,6 +97,6 @@ ms.locfileid: "72920286"
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
 - [バインディング ソースを指定する](how-to-specify-the-binding-source.md)
-- [データ バインディングの概要](data-binding-overview.md)
+- [データ バインディングの概要](../../../desktop-wpf/data/data-binding-overview.md)
 - [LINQ to XML による WPF のデータ バインディングの概要](wpf-data-binding-with-linq-to-xml-overview.md)
 - [データバインディングのパフォーマンスを最適化する](../advanced/optimizing-performance-data-binding.md)

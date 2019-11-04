@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 4d0801cd81e00c84be278b44730058798b0acfa9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588197"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423127"
 ---
 # <a name="pointer-types-c-programming-guide"></a>ポインター型 (C# プログラミング ガイド)
 
@@ -23,9 +23,9 @@ void* identifier; //allowed but not recommended
 
 ポインター型の `*` の前に指定された型は、**参照型**と呼ばれます。 参照型にできるのは[アンマネージド型](../../language-reference/builtin-types/unmanaged-types.md)だけです。
 
-ポインター型は [object](../../language-reference/keywords/object.md) を継承せず、ポインター型と `object` の間で変換を行う方法はありません。 また、ボックス化とボックス化解除もポインターをサポートしません。 ただし、異なるポインター型の間で変換したり、ポインター型と整数型の間で変換したりすることはできます。
+ポインター型は [object](../../language-reference/builtin-types/reference-types.md) を継承せず、ポインター型と `object` の間で変換を行う方法はありません。 また、ボックス化とボックス化解除もポインターをサポートしません。 ただし、異なるポインター型の間で変換したり、ポインター型と整数型の間で変換したりすることはできます。
 
-同じ 1 つの宣言で複数のポインターを宣言する場合、アスタリスク (*) は基底の型だけに記述します。各ポインター名のプレフィックスとしては使用しません。 例:
+同じ 1 つの宣言で複数のポインターを宣言する場合、アスタリスク (*) は基底の型だけに記述します。各ポインター名のプレフィックスとしては使用しません。 次に例を示します。
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -64,14 +64,14 @@ int* myVariable;
 
 次の表は、unsafe コンテキストでポインターに使用できる演算子とステートメントの一覧を示しています。
 
-|演算子/ステートメント|用途|
+|演算子/ステートメント|使用|
 |-------------------------|---------|
 |`*`|ポインターの間接参照を実行します。|
 |`->`|ポインター経由で構造体のメンバーにアクセスします。|
 |`[]`|ポインターにインデックスを付けます。|
 |`&`|変数のアドレスを取得します。|
-|`++` と `--`|ポインターをインクリメントおよびデクリメントします。|
-|`+` と `-`|ポインター演算を実行します。|
+|`++` および `--`|ポインターをインクリメントおよびデクリメントします。|
+|`+` および `-`|ポインター演算を実行します。|
 |`==`、`!=`、`<`、`>`、`<=`、`>=`|ポインターを比較します。|
 |[`stackalloc` 演算子](../../language-reference/operators/stackalloc.md)|スタックにメモリを割り当てます。|
 |[`fixed` ステートメント](../../language-reference/keywords/fixed-statement.md)|変数を一時的に固定して、そのアドレスを取得できるようにします。|
@@ -87,5 +87,5 @@ int* myVariable;
 - [C# プログラミング ガイド](../index.md)
 - [アンセーフ コードとポインター](index.md)
 - [ポインター変換](pointer-conversions.md)
-- [型](../../language-reference/keywords/types.md)
+- [型](/dotnet/csharp/language-reference/keywords)
 - [unsafe](../../language-reference/keywords/unsafe.md)

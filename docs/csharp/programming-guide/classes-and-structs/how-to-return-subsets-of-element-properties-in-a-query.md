@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 2c9fea2189819058187020c2e67b8826659fbed4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 196383731507137bf4309d38d27b36f29b23a06c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205445"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419300"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>方法: クエリで要素のプロパティのサブセットを返す (C# プログラミング ガイド)
 次の両方の条件に当てはまる場合は、クエリ式に匿名型を使用します。  
@@ -50,4 +50,4 @@ Console.WriteLine(student.First + " " + student.Last);
 
 - [C# プログラミング ガイド](../index.md)
 - [匿名型](./anonymous-types.md)
-- [LINQ クエリ式](../linq-query-expressions/index.md)
+- [C# での LINQ](../../linq/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data binding [WPF], how-to topics
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
-ms.openlocfilehash: 59fe870e623ca998f24161123dc020144b7cd055
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 4e5f0f3bfe27a02930bdb004cd78e254a6a38ad6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920274"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459983"
 ---
 # <a name="data-binding-how-to-topics"></a>データバインディングに関する「方法」トピック
 
@@ -56,7 +56,7 @@ ms.locfileid: "72920274"
 - [DataTemplate によって生成された要素を検索する](how-to-find-datatemplate-generated-elements.md)
 - [Web サービスにバインドする](how-to-bind-to-a-web-service.md)
 
-## <a name="reference"></a>参照
+## <a name="reference"></a>辞書／辞典／その他
 
 - <xref:System.Windows.Data>
 - <xref:System.Windows.Data.Binding>
@@ -65,5 +65,5 @@ ms.locfileid: "72920274"
 
 ## <a name="related-sections"></a>関連項目
 
-- [WPF でのデータバインディング](data-binding-wpf.md)
+- [WPF でのデータバインディング](../../../desktop-wpf/data/data-binding-overview.md)
 - [データバインディングのパフォーマンス](../advanced/optimizing-performance-data-binding.md)

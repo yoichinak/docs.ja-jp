@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 641233df165a1c2208a2185f2b6e99077f9a59d3
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 3f702febc78488b9413ec9303ded211493650f02
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394389"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198490"
 ---
 ### <a name="mvc-precompilation-tool-deprecated"></a>MVC:プリコンパイル ツールは非推奨です
 
 ASP.NET Core 1.1 では、`Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` (MVC プリコンパイル ツール) パッケージが導入され、Razor ファイル ( *.cshtml* ファイル) の発行時のコンパイルのサポートが追加されました。 ASP.NET Core 2.1 では、プリコンパイル ツールの機能を拡張するために [Razor SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-2.1) が導入されました。 Razor SDK では、Razor ファイルのビルドおよび発行時のコンパイルのサポートが追加されました。 SDK では、アプリの起動時間を改善しながら、ビルド時に *の* ファイルの正確性を確認します。 Razor SDK は既定でオンになっており、その使用を開始するためにジェスチャは必要ありません。
 
-ASP.NET Core 3.0 では、ASP.NET Core 1.1 世代の MVC のプリコンパイル ツールが削除されました。 以前のバージョンのパッケージでは、修正プログラムのリリースで重要なバグおよびセキュリティ修正プログラムを引き続き受け取ります。 
+ASP.NET Core 3.0 では、ASP.NET Core 1.1 世代の MVC のプリコンパイル ツールが削除されました。 以前のバージョンのパッケージでは、修正プログラムのリリースで重要なバグおよびセキュリティ修正プログラムを引き続き受け取ります。
 
 #### <a name="version-introduced"></a>導入されたバージョン
 

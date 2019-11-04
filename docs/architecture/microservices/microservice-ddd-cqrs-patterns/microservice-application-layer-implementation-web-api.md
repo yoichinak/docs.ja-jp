@@ -2,12 +2,12 @@
 title: Web API を使用したマイクロサービス アプリケーション レイヤーの実装
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | Web API アプリケーション レイヤーの依存関係挿入、メディエーター パターン、その実装詳細について。
 ms.date: 10/08/2018
-ms.openlocfilehash: 38c0bdb32666ab727c573d466d3e30d739bdd3b3
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771116"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454851"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API を使用してマイクロサービス アプリケーション レイヤーを実装する
 
@@ -398,10 +398,10 @@ public class CreateOrderCommandHandler
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **コマンドとイベント** \
-  <http://cqrs.nu/Faq/commands-and-events>
+  <https://cqrs.nu/Faq/commands-and-events>
 
 - **コマンド ハンドラーの機能** \
-  <http://cqrs.nu/Faq/command-handlers>
+  <https://cqrs.nu/Faq/command-handlers>
 
 - **Jimmy Bogard。ドメイン コマンド パターン – ハンドラー** \
   <https://jimmybogard.com/domain-command-patterns-handlers/>

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 85218bd4b6e900bd4508a5c90132419a07846f2c
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: ce37eecf7edf2adcc4f56af27a5c658400f7abba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920216"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420649"
 ---
 # <a name="application-development"></a>アプリケーション開発
 <a name="introduction"></a>Windows Presentation Foundation (WPF) は、次の種類のアプリケーションを開発するために使用できるプレゼンテーションフレームワークです。  
   
 - スタンドアロンアプリケーション (クライアントコンピューターにインストールされて実行される実行可能アセンブリとして構築された従来のスタイルの Windows アプリケーション)。  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (実行可能アセンブリとして構築され、Microsoft Internet Explorer や Mozilla Firefox などの Web ブラウザーによってホストされるナビゲーションページで構成されるアプリケーション)。  
+- XAML ブラウザーアプリケーション (Xbap) (実行可能アセンブリとして構築され、Microsoft Internet Explorer や Mozilla Firefox などの Web ブラウザーによってホストされるナビゲーションページで構成されるアプリケーション)。  
   
 - カスタム コントロール ライブラリ (再利用可能なコントロールを含む被実行可能アセンブリ)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72920216"
   
 - スタンドアロン アプリケーションのウィンドウを管理する。  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] や、ナビゲーション ウィンドウとフレームを持つスタンドアロン アプリケーションで、ナビゲーションを追跡する。  
+- XAML ブラウザーアプリケーション (Xbap) のナビゲーションの追跡と、ナビゲーションウィンドウとフレームを使用したスタンドアロンアプリケーション。  
   
  これらの機能は <xref:System.Windows.Application> クラスで実装します。このクラスをアプリケーションに追加するには、*アプリケーション定義*を使用します。  
   
@@ -86,15 +86,15 @@ ms.locfileid: "72920216"
   
 - Web ブラウザーでホストされるスタンドアロンのページ。  
   
-- Web ブラウザーでホストされる [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] にコンパイルされるページ。  
+- Web ブラウザーでホストされている XBAP にコンパイルされたページ。  
   
 - スタンドアロン アプリケーションにコンパイルされ、ナビゲーション ウィンドウ (<xref:System.Windows.Navigation.NavigationWindow>) によってホストされるページ。  
   
-- フレーム (<xref:System.Windows.Controls.Frame>) によってホストされるページ。フレームは、スタンドアロン ページか、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] またはスタンドアロン アプリケーションにコンパイルされたページでホストできます。  
+- フレーム (<xref:System.Windows.Controls.Frame>) によってホストされるページ。スタンドアロンページでホストされる場合もあれば、XBAP またはスタンドアロンアプリケーションにコンパイルされたページの場合もあります。  
   
  ナビゲーションに役立つように、次の機能が [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] に実装されます。  
   
-- ナビゲーション要求を処理する共有ナビゲーション エンジンである <xref:System.Windows.Navigation.NavigationService>。このエンジンは <xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow>、[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] で使用され、アプリケーション内ナビゲーションをサポートします。  
+- <xref:System.Windows.Navigation.NavigationService>、<xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow>、Xbap によってアプリケーション内でのナビゲーションをサポートするために使用されるナビゲーション要求を処理するための共有ナビゲーションエンジンです。  
   
 - ナビゲーションを開始するためのナビゲーション メソッド。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "72920216"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>ホスト  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] は、Microsoft Internet Explorer または Firefox でホストできます。 ホストのモデルによって考慮事項や制約が異なります。詳細については、「[ホスティング](hosting-wpf-applications.md)」を参照してください。  
+ Xbap は、Microsoft Internet Explorer または Firefox でホストできます。 ホストのモデルによって考慮事項や制約が異なります。詳細については、「[ホスティング](hosting-wpf-applications.md)」を参照してください。  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>ビルドと配置  
@@ -124,7 +124,7 @@ ms.locfileid: "72920216"
 |[アプリケーション管理の概要](application-management-overview.md)|アプリケーションの有効期間、ウィンドウ、アプリケーション リソース、ナビゲーションの管理など、<xref:System.Windows.Application> クラスの概要について説明します。|  
 |[WPF のウィンドウ](windows-in-wpf-applications.md)|<xref:System.Windows.Window> クラスおよびダイアログ ボックスの使い方など、アプリケーション内のウィンドウ管理の詳細について説明します。|  
 |[ナビゲーションの概要](navigation-overview.md)|アプリケーション内のページ間でのナビゲーション管理の概要について説明します。|  
-|[ホスティング](hosting-wpf-applications.md)|[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] の概要を提供します。|  
+|[ホスティング](hosting-wpf-applications.md)|XAML ブラウザーアプリケーション (Xbap) の概要について説明します。|  
 |[ビルドと配置](building-and-deploying-wpf-applications.md)|WPF アプリケーションをビルドして配置する方法について説明します。|  
 |[Visual Studio での WPF の概要](../getting-started/introduction-to-wpf-in-vs.md)|WPF の主な機能について説明します。|  
 |[チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|ページ ナビゲーション、レイアウト、コントロール、イメージ、スタイル、バインディングを使用する WPF アプリケーションの作成方法を示すチュートリアルです。|

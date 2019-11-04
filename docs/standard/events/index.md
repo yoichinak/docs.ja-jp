@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 67cba143957b50e8e8d7fa68e62b52775ca2f144
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131629"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423535"
 ---
 # <a name="handling-and-raising-events"></a>イベントの処理と発生
 
@@ -50,7 +50,7 @@ ms.locfileid: "73131629"
   
 デリゲートは[マルチキャスト](xref:System.MulticastDelegate)です。つまり、複数のイベント処理メソッドへの参照を保持できます。 詳細については、<xref:System.Delegate> のリファレンス ページを参照してください。 デリゲートでは、イベント処理を柔軟に、そして詳細に制御できます。 デリゲートは、イベントに対して登録されているイベント ハンドラーのリストを管理することで、そのイベントを発生させるクラスのイベント ディスパッチャーとして動作します。  
   
-<xref:System.EventHandler> デリゲートおよび <xref:System.EventHandler%601> デリゲートが動作しないシナリオについては、デリゲートを定義できます。 デリゲートの定義が必要なシナリオは非常にまれで、たとえば、ジェネリックを認識しないコードを使用する必要がある場合などです。 デリゲートは、宣言内で C# の [`delegate`](../../csharp/language-reference/keywords/delegate.md) および Visual Basic の [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) キーワードを使ってマークします。 次の例は、`ThresholdReachedEventHandler` という名前のデリゲートを宣言する方法を示しています。  
+<xref:System.EventHandler> デリゲートおよび <xref:System.EventHandler%601> デリゲートが動作しないシナリオについては、デリゲートを定義できます。 デリゲートの定義が必要なシナリオは非常にまれで、たとえば、ジェネリックを認識しないコードを使用する必要がある場合などです。 デリゲートは、宣言内で C# の [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) および Visual Basic の [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) キーワードを使ってマークします。 次の例は、`ThresholdReachedEventHandler` という名前のデリゲートを宣言する方法を示しています。  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  

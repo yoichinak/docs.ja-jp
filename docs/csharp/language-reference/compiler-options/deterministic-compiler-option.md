@@ -7,14 +7,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e77c14a1c3a4ba11b8ae6556be4f1c3c0cd42788
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ed5d1db4618649391f88affad67e62dd9fc95925
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202920"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455188"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -48,7 +46,7 @@ ms.locfileid: "70202920"
   - アナライザーによって使用される可能性がある追加のファイル
 - 現在のカルチャ (診断と例外メッセージが生成される言語)。
 - エンコードが指定されていない場合の既定のエンコード (または現在のコード ページ)。
-- コンパイラの検索パス上のファイルの有無、および内容 (たとえば、`/lib` や `/recurse` で指定)。
+- コンパイラの検索パス上のファイルの有無、および内容 (たとえば、`-lib` や `-recurse` で指定)。
 - コンパイラが実行される CLR プラットフォーム。
 - `%LIBPATH%` の値。アナライザーの依存関係の読み込みに影響する場合があります。
 

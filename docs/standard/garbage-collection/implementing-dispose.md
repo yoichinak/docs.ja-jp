@@ -9,20 +9,18 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 964c788c5fc1ac791ed3ddd20c9c5c972d07b2c1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 95726d4bfae6da43cd845d461caf8f1848d774f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106888"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424328"
 ---
 # <a name="implementing-a-dispose-method"></a>Dispose メソッドの実装
 
 アプリケーションによって使用されるアンマネージ リソースを解放するための <xref:System.IDisposable.Dispose%2A> メソッドを実装します。 .NET のガベージ コレクターは、アンマネージ メモリの割り当てや解放を行いません。  
   
-[Dispose パターン](../../../docs/standard/design-guidelines/dispose-pattern.md)と呼ばれる、オブジェクトを破棄するパターンによって、オブジェクトの有効期間に順番が付けられます。 Dispose パターンは、ファイルおよびパイプ ハンドル、レジストリ ハンドル、待機ハンドル、アンマネージ メモリ ブロックのポインターなど、アンマネージ リソースにアクセスするオブジェクトでのみ使用されます。 これは、使用されていないマネージド オブジェクトの解放にはガベージ コレクターが非常に有効ですが、アンマネージド オブジェクトは解放できないためです。  
+[Dispose パターン](implementing-dispose.md)と呼ばれる、オブジェクトを破棄するパターンによって、オブジェクトの有効期間に順番が付けられます。 Dispose パターンは、ファイルおよびパイプ ハンドル、レジストリ ハンドル、待機ハンドル、アンマネージ メモリ ブロックのポインターなど、アンマネージ リソースにアクセスするオブジェクトでのみ使用されます。 これは、使用されていないマネージド オブジェクトの解放にはガベージ コレクターが非常に有効ですが、アンマネージド オブジェクトは解放できないためです。  
   
 Dispose パターンには 2 種類あります。  
   
@@ -169,4 +167,4 @@ Dispose パターンには 2 種類あります。
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
 - [方法: クラスと構造体を定義および使用する (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
-- [Dispose パターン](../../../docs/standard/design-guidelines/dispose-pattern.md)
+- [Dispose パターン](implementing-dispose.md)

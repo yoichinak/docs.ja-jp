@@ -3,12 +3,12 @@ title: デリゲートの一般的なパターン
 description: コンポーネント間の密接な結合を避けるための、コードでのデリゲートの一般的な使用パターンについて説明します。
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095699"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454084"
 ---
 # <a name="common-patterns-for-delegates"></a>デリゲートの一般的なパターン
 
@@ -58,7 +58,7 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 上の静的クラスは、ごく簡単なコードですが、きちんと機能します。 メッセージをコンソールに出力するメソッドの機能を 1 つ実装する必要があります。 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 最後にそのメソッドを、Logger に宣言されている WriteMessage デリゲートにアタッチして接続する必要があります。
 
@@ -107,13 +107,13 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 ```csharp
 var fileOutput = new FileLogger("log.txt");
-Logger.WriteMessage += LogToConsole;
+Logger.WriteMessage += LoggingMethods.LogToConsole; // LoggingMethods is the static class we utilized earlier
 ```
 
 後で同じアプリケーションで、片方のデリゲートを削除しても、システムに問題が生じることはありません。
 
 ```csharp
-Logger.WriteMessage -= LogToConsole;
+Logger.WriteMessage -= LoggingMethods.LogToConsole;
 ```
 
 ## <a name="practices"></a>実践

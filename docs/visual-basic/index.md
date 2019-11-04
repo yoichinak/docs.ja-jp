@@ -4,12 +4,12 @@ ms.date: 03/28/2018
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.openlocfilehash: cb186e1c893e1c97c96f641edbdf1537a135bfcb
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 0e31502f617012c4f3596497f5b9c911c2dde167
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191972"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421296"
 ---
 # <a name="visual-basic-guide"></a>Visual Basic のガイド
 
@@ -42,7 +42,7 @@ Visual Basic をまだお持ちでない場合は、Visual Basic が含まれて
 - [COM 相互運用](../visual-basic/programming-guide/com-interop/index.md)  
   Visual Basic でのコンポーネント オブジェクト モデル (COM) オブジェクトの作成と使用に関連する相互運用性の問題について説明します。
 
-- [サンプル](../visual-basic/sample-applications.md)  
+- [サンプル](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)  
   サンプルに関する情報を提供します。
 
 - [チュートリアル](../visual-basic/walkthroughs.md)  

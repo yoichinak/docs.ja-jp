@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353751"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422209"
 ---
 # <a name="value-types-c-reference"></a>値型 (C# リファレンス)
 
@@ -54,7 +54,7 @@ ms.locfileid: "71353751"
 
 - オペランドがすべて単純型の定数式は、コンパイル時に評価されます。
 
-詳細については、「[C# 言語仕様](../language-specification/index.md)」の[単純型](~/_csharplang/spec/types.md#simple-types)に関するセクションを参照してください。
+詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の[単純型](~/_csharplang/spec/types.md#simple-types)に関するセクションを参照してください。
 
 ## <a name="initializing-value-types"></a>値型の初期化
 
@@ -107,6 +107,6 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [型](types.md)
+- [型](/dotnet/csharp/language-reference/keywords)
 - [参照型](reference-types.md)
 - [null 許容値型](../../programming-guide/nullable-types/index.md)
