@@ -43,8 +43,8 @@ ms.locfileid: "72395790"
 
 でF#は、非同期プログラミングは次の3つの主要な概念を中心にしています。
 
-- @No__t-0 型。これは、コンポーザブルな非同期計算を表します。
-- @No__t-0 モジュール関数を使用すると、非同期処理のスケジュール、非同期計算の作成、および非同期結果の変換を実行できます。
+- `Async<'T>` 型。これは、コンポーザブルな非同期計算を表します。
+- `Async` モジュール関数を使用すると、非同期処理のスケジュール、非同期計算の作成、および非同期結果の変換を実行できます。
 - @No__t-0[コンピュテーション式](../../language-reference/computation-expressions.md)。非同期計算を構築および制御するための便利な構文を提供します。
 
 次の例では、これら3つの概念を確認できます。
@@ -73,7 +73,7 @@ let main argv =
 
 もう1つの重要な行は `Async.RunSynchronously` の呼び出しです。 これは、 F#非同期計算を実際に実行する場合に呼び出す必要がある非同期モジュール開始関数の1つです。
 
-これは、@no__t 1 プログラミングのC#/VB スタイルとの基本的な違いです。 でF#は、非同期計算は**コールドタスク**と考えることができます。 実際に実行するには、明示的に開始する必要があります。 これにはいくつかの利点があります。これにより、またはC#/vbよりもはるかに簡単に非同期作業を組み合わせることができます。
+これはC#/VB スタイルの `async` プログラミングとの根本的に異なる点です。 F#では、非同期計算は**コールド(冷たい)タスク**として考えることができます。 これらを実際に実行するには、明示的に開始する必要があります。 これには、C#/VBよりもはるかに簡単に非同期作業を組み合わせることができるという利点があります。
 
 ## <a name="combining-asynchronous-computations"></a>非同期計算の組み合わせ
 
@@ -101,12 +101,12 @@ let main argv =
     0
 ```
 
-ご覧のように、@no__t 0 関数には、さらに多くの呼び出しが行われています。 概念的には、次のことが行われます。
+ご覧のように、`main` 関数には、さらに多くの呼び出しが行われています。 概念的には、次のことが行われます。
 
-1. コマンドライン引数を、`Array.map` を指定して @no__t 0 の計算に変換します。
-2. 実行時に並列で `printTotalFileBytes` の計算をスケジュールして実行する @no__t 0 を作成します。
-3. 並列計算を実行し、その結果を無視する @no__t 0 を作成します。
-4. @No__t-0 で最後の計算を明示的に実行し、完了するまでブロックします。
+1. コマンドライン引数を、`Array.map` を指定して `Async<unit>` の計算に変換します。
+2. 実行時に並列で `printTotalFileBytes` の計算をスケジュールして実行する `Async<'T[]>` を作成します。
+3. `Async<unit>` を生成しますが、これは並列計算を実行してその結果を無視します。
+4. `Async.RunSynchronously` で最後の計算を明示的に実行し、完了するまでブロックします。
 
 このプログラムを実行すると、コマンドライン引数ごとに `printTotalFileBytes` が並列実行されます。 非同期計算はプログラムフローとは無関係に実行されるため、情報を出力して実行を終了する順序はありません。 計算は並列でスケジュールされますが、実行の順序は保証されません。
 
@@ -189,7 +189,7 @@ computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellatio
 
 使用する場合:
 
-- 非同期計算の結果を表すために @no__t 0 を想定している .NET API を呼び出す必要がある場合。
+- 非同期計算の結果を表すために <xref:System.Threading.Tasks.Task%601> を想定している .NET API を呼び出す必要がある場合。
 
 注意事項:
 
@@ -246,11 +246,11 @@ task: Task<'T>  -> Async<'T>
 
 使用する場合:
 
-- F#非同期計算内で @no__t 0 を返す .net API を使用する場合。
+- F#の非同期計算内で <xref:System.Threading.Tasks.Task%601> を返す .NET API を使用する場合。
 
 注意事項:
 
-- 例外は、タスク並列ライブラリの規則に従って @no__t 0 でラップされます。これは、 F#非同期による例外の処理方法とは異なります。
+- 例外は、タスク並列ライブラリ(Task Parallel Library)の規則に従って <xref:System.AggregateException> でラップされます。これは、 F#の非同期における例外の処理方法と異なります。
 
 ### <a name="asynccatch"></a>Async. Catch
 
@@ -282,7 +282,7 @@ computation: Async<'T> -> Async<unit>
 
 使用する場合:
 
-- 結果が不要な非同期計算がある場合。 これは、非非同期コードの @no__t 0 コードに似ています。
+- 結果が不要な非同期計算がある場合。 これは、非非同期コードの `ignore` コードに似ています。
 
 注意事項:
 
@@ -305,7 +305,7 @@ computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -
 
 注意事項:
 
-- @No__t-0 を呼び出すと、実行が完了するまで呼び出し元のスレッドがブロックされます。
+- `Async.RunSynchronously` を呼び出すと、実行が完了するまで呼び出し元のスレッドがブロックされます。
 
 ### <a name="asyncstart"></a>Async。開始
 
@@ -327,17 +327,17 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 注意事項:
 
 - @No__t 0 で開始された計算によって発生した例外は、呼び出し元に反映されません。 呼び出し履歴はまったく傷つきません。
-- @No__t-1 で開始された effectful 作業 (`printfn` の呼び出しなど) では、プログラムの実行のメインスレッドで効果が発生しません。
+- `Async.Start` で開始された effectful 作業 (`printfn` の呼び出しなど) では、プログラムの実行のメインスレッドで効果が発生しません。
 
 ## <a name="interoperating-with-net"></a>.NET との相互運用
 
 C#の[async/await](../../../standard/async.md)スタイルの非同期プログラミングを使用する .NET ライブラリまたはコードベースを使用する場合があるでしょう。 とC#ほとんどの .net ライブラリでは、<xref:System.Threading.Tasks.Task%601> と @no__t の型が `Async<'T>` ではなくコアの抽象化として使用されるため、これら2つの方法の間の境界を非同期性に越える必要があります。
 
-### <a name="how-to-work-with-net-async-and-taskt"></a>.NET async と @no__t を使用する方法-0
+### <a name="how-to-work-with-net-async-and-taskt"></a>.NET async と `Task<T>` を使用する方法-
 
-@No__t-0 (つまり、戻り値を持つ非同期計算) を使用する .NET 非同期ライブラリおよびコードベースを操作するのは簡単であり、のF#サポートが組み込まれています。
+<xref:System.Threading.Tasks.Task%601> (つまり、戻り値を持つ非同期計算) を使用する .NET 非同期ライブラリおよびコードベースを操作するのは簡単であり、F#には組み込みのサポート機能があります。
 
-@No__t-0 関数を使用すると、.NET の非同期計算を待機できます。
+`Async.AwaitTask` 関数を使用すると、.NET の非同期計算を待機できます。
 
 ```fsharp
 let getValueFromLibrary param =
@@ -347,7 +347,7 @@ let getValueFromLibrary param =
     }
 ```
 
-@No__t-0 関数を使用して、非同期計算を .NET 呼び出し元に渡すことができます。
+`Async.StartAsTask` 関数を使用して、非同期計算を .NET 呼び出し元に渡すことができます。
 
 ```fsharp
 let computationForCaller param =
@@ -357,9 +357,9 @@ let computationForCaller param =
     } |> Async.StartAsTask
 ```
 
-### <a name="how-to-work-with-net-async-and-task"></a>.NET async と @no__t を使用する方法-0
+### <a name="how-to-work-with-net-async-and-task"></a>.NET async と `Task` を使用する方法-
 
-@No__t-0 (つまり、値を返さない .NET 非同期計算) を使用する Api を操作するには、`Async<'T>` を <xref:System.Threading.Tasks.Task> に変換する関数を追加することが必要になる場合があります。
+<xref:System.Threading.Tasks.Task> (つまり、値を返さない .NET 非同期計算) を使用する Api を操作するには、`Async<'T>` を <xref:System.Threading.Tasks.Task> に変換する関数を追加することが必要になる場合があります。
 
 ```fsharp
 module Async =
@@ -368,7 +368,7 @@ module Async =
         Async.StartAsTask comp :> Task
 ```
 
-@No__t-1 を入力として受け取る @no__t 0 が既に存在します。 これと以前に定義した @no__t 0 関数を使用すると、 F#非同期計算から <xref:System.Threading.Tasks.Task> 型を開始および待機できます。
+`Async.AwaitTask` を入力として受け取る <xref:System.Threading.Tasks.Task> が既に存在します。 これと以前に定義した `startTaskFromAsyncUnit` 関数を使用すると、 F#非同期計算から <xref:System.Threading.Tasks.Task> 型を開始および待機できます。
 
 ## <a name="relationship-to-multithreading"></a>マルチスレッドとの関係
 
