@@ -42,7 +42,7 @@ ms.locfileid: "73424712"
 let addOne x = x + 1
 ```
 
-その型シグネチャは次のとおりです。
+その型シグネチャは次の通りです。
 
 ```fsharp
 val addOne: x:int -> int
@@ -77,7 +77,7 @@ val addOne: x:'a -> string
 
 のF#型には `ToString()` を呼び出すことができるため、`x` の型はジェネリック ([自動汎](../language-reference/generics/automatic-generalization.md)化と呼ばれます) になり、結果の型は `string`になります。
 
-式は関数の本体だけではありません。 他の場所で使用する値を生成する式を作成できます。 一般的なものは `if`次のとおりです。
+式は関数本体だけにあるものではありません。 他の場所で使用する値を生成する式を作成できます。 一般的なものは `if`次のとおりです。
 
 ```fsharp
 // Checks if 'x' is odd by using the mod operator
