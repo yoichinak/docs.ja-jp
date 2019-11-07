@@ -20,7 +20,7 @@ ms.locfileid: "73460386"
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid> コントロールを使用すると、SQL データベース、LINQ クエリ、またはその他のバインド可能なデータソースなど、さまざまなソースのデータを表示および編集できます。 詳しくは、「[Binding Sources Overview](../data/binding-sources-overview.md)」(バインディング ソースの概要) をご覧ください。  
   
- 列には、テキスト、コントロール、<xref:System.Windows.Controls.ComboBox>などの WPF コンテンツや、テンプレートに含まれているコンテンツ (画像、ボタン、任意のコンテンツなど) を表示できます。 <xref:System.Windows.Controls.DataGridTemplateColumn> を使用すると、テンプレートに定義されているデータを表示できます。 次の表に、既定で提供される列の型を示します。  
+ 列はテキストやコントロールを表示できます。 具体的には、 <xref:System.Windows.Controls.ComboBox>、またはその他の WPF コンテンツとして、画像、ボタン、またはテンプレートに含まれるすべてのコンテンツがあります。 <xref:System.Windows.Controls.DataGridTemplateColumn> を使用して、テンプレートで定義されているデータを表示することができます。 次の表に、既定で提供される列の型を示します。  
   
 |生成された列の型|データの種類|  
 |---------------------------|---------------|  
