@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c9d879d1760f543d5a4722977d4dee8bca856016
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423244"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739194"
 ---
 # <a name="c-programming-guide"></a>C# プログラミング ガイド
+
 このセクションでは、C# 言語の重要な機能に関する詳細と、.NET Framework 経由でアクセスできる C# の機能について説明します。  
   
  このセクションの大部分は、C# と一般的なプログラミングの概念について、ある程度の知識を持っていることを前提として説明されています。 プログラミングや C# のまったくの初心者の方は、[C# チュートリアルの概要](../tutorials/intro-to-csharp/index.md) に関するページや [.NET In-Browser Tutorial](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)(ブラウザーでの .NET のチュートリアル) を参照してください。プログラミングの予備知識は必要ありません。  
@@ -28,8 +29,9 @@ ms.locfileid: "73423244"
 [インサイド C# プログラム](./inside-a-program/index.md)  
   
 [Main() とコマンドライン引数](./main-and-command-args/index.md)  
- 
-## <a name="language-sections"></a>言語セクション  
+
+## <a name="language-sections"></a>言語セクション
+
 [ステートメント、式、および演算子](./statements-expressions-operators/index.md)  
 
  [型](./types/index.md)  
@@ -41,7 +43,7 @@ ms.locfileid: "73423244"
  [列挙型](./enumeration-types.md)  
   
  [デリゲート](./delegates/index.md)  
- 
+
  [配列](./arrays/index.md)  
   
  [文字列](./strings/index.md)  
@@ -62,13 +64,12 @@ ms.locfileid: "73423244"
   
  [名前空間](./namespaces/index.md)  
   
- [null 許容値型](./nullable-types/index.md)  
-  
  [アンセーフ コードとポインター](./unsafe-code-pointers/index.md)  
   
  [XML ドキュメント コメント](./xmldoc/index.md)  
   
-## <a name="platform-sections"></a>プラットフォーム セクション  
+## <a name="platform-sections"></a>プラットフォーム セクション
+
  [アプリケーション ドメイン](../../framework/app-domains/application-domains.md)  
   
  [.NET のアセンブリ](../../standard/assembly/index.md)  

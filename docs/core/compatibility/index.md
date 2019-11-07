@@ -2,12 +2,12 @@
 title: 破壊的変更を評価する - .NET Core
 description: .NET Core が開発者のために .NET バージョンをまたいで互換性を維持するために試行している方法について説明します。
 ms.date: 06/10/2019
-ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416676"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739346"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core の破壊的変更を評価する
 
@@ -52,7 +52,7 @@ ms.locfileid: "73416676"
 - **✔️ [構造体](../../csharp/language-reference/keywords/struct.md)型を `readonly struct` 型に変更する**
 
   `readonly struct` 型を `struct` 型に変更することはできないことに注意してください。
-  
+
 - **✔️ "*アクセス可能な*" (パブリックまたは保護された) コンストラクターがない場合に[シールド](../../csharp/language-reference/keywords/sealed.md)または[抽象](../../csharp/language-reference/keywords/abstract.md)キーワードを型に追加する**
 
 - **✔️ 型の可視性を拡張する**
@@ -138,9 +138,9 @@ ms.locfileid: "73416676"
 - **❌ パラメーター名を変更する (大文字と小文字の変更も含む)**
 
   これは 2 つの理由で破壊的と見なされます。
-  
+
   - これは、Visual Basic の遅延バインディング機能や C# の[動的](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type)など、遅延バインディングのシナリオの互換性がなくなります。
-  
+
   - 開発者が[名前付き引数](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)を使用すると、[ソースの互換性](categories.md#source-compatibility)がなくなります。
 
 - **❌ `ref` の戻り値から `ref readonly` の戻り値に変更する**
@@ -153,9 +153,9 @@ ms.locfileid: "73416676"
 
   C# コンパイラでは [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) 中間言語 (IL) 命令を発行して非仮想メソッドを呼び出す傾向があるので (`callvirt` は null チェックを行いますが、通常の呼び出しでは行われません)、多くの場合、これは破壊的変更ではありませんが、この動作はいくつかの理由で一定ではありません。
   - .NET がターゲットにしている言語は C# だけではありません。
-  
+
   - ターゲット メソッドが非仮想で、おそらく null ではない場合 ([?. null 反映演算子](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)を介してアクセスされるメソッドなど) は常に、C# コンパイラでは `callvirt` を通常の呼び出しに最適化しようとします。
-  
+
   メソッドを仮想化することは、多くの場合、コンシューマー コードから最終的に非仮想的に呼び出されることを示します。
 
 - **❌ メンバーに[仮想](../../csharp/language-reference/keywords/virtual.md)キーワードを追加する**

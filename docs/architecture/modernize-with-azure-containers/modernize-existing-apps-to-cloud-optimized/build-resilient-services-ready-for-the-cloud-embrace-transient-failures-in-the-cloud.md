@@ -2,14 +2,14 @@
 title: クラウドのための回復力のあるサービスを構築できます。 クラウド内の一時的な障害を受け入れる
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |クラウドのための回復力のあるサービスを構築できます。 クラウド内の一時的な障害を受け入れる
 ms.date: 04/30/2018
-ms.openlocfilehash: 5f44029a214cf1f366fc787e27a9ac34599c4dca
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: e6fae8140b55cb0308dca9f4b77e961501b41f8f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373970"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739393"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>クラウドの準備が整っている回復力のあるサービスの構築:クラウド内の一時的な障害を受け入れる
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>クラウドのための回復力のあるサービスの構築: クラウドでの一時的な障害の受け入れ
 
 回復性は、障害から回復し、引き続き機能する能力です。 回復性は、障害を回避することではなく、障害が発生したという事実を受け入れ、ダウンタイムやデータ損失を回避する方法でそれらに応答します。 回復性の目的は、障害発生後にアプリケーションを完全に機能する状態に戻すことです。
 
@@ -27,7 +27,7 @@ ms.locfileid: "70373970"
 
 図4-9 に示されているような弾力性のあるアプリケーションでは、リソースの一時的な障害をアプリケーションが処理できるようにするための "指数バックオフによる再試行" などの手法を実装する必要があります。 また、アプリケーションで "サーキットブレーカー" を使用する必要があります。 サーキットブレーカーは、アプリケーションが実際に長期間の障害である場合に、リソースにアクセスしようとするのを停止します。 サーキットブレーカーを使用することにより、アプリケーションはサービス拒否攻撃を provoking ことを回避します。
 
-![指数バックオフによる再試行によって処理される部分的なエラー](./media/image9.png)
+![指数バックオフによる再試行によって処理される部分的なエラーの図。](./media/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud/retry-partial-failures.png)
 
 **図 4-9.** 指数バックオフによる再試行によって処理される部分的なエラー
 

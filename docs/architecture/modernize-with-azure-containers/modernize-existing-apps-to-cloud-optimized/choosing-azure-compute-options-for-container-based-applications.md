@@ -2,12 +2,12 @@
 title: コンテナー ベース アプリケーション用の Azure コンピューティング プラットフォームの選択
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |コンテナーベースのアプリケーションのための Azure コンピューティングプラットフォームの選択
 ms.date: 05/04/2018
-ms.openlocfilehash: 2262d2cf4e69e19e8b78c07c239602dd5dccc3cd
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 079c9c5ca02b6dc75214d63cb59afdead03d3190
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318673"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737001"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>コンテナー ベース アプリケーション用の Azure コンピューティング プラットフォームの選択
 
@@ -17,7 +17,7 @@ ms.locfileid: "72318673"
 
 - **単一モノリシックアプリ:** Azure App Service の選択
 - **N 層アプリ:** Azure Kubernetes Service (AKS) などのオーケストレーター選択するか、バックエンドサービスが1つまたは少数の場合は App Service を選択します。
-- **マイクロサービス**コンテナーに対して AKS または Azure Web Apps を選択する
+- **マイクロサービス:** コンテナーに対して AKS または Azure Web Apps を選択する
 - **サーバーレス関数 & イベントハンドラー:** Azure Functions の選択
 - **大規模なバッチ:** Azure Batch の選択
 
@@ -27,7 +27,7 @@ ms.locfileid: "72318673"
 
 図1では、さまざまな種類のアプリの内訳と、Azure ホスティングの理想的なシナリオを確認できます。
 
-![図 1](./media/image8.5.png)
+![さまざまなアプリに最適な Azure ホスティングシナリオの表。](./media/choosing-azure-compute-options-for-container-based-applications/azure-hosting-scenarios-for-apps.png)
 
 > [!div class="step-by-step"]
 > [前へ](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
