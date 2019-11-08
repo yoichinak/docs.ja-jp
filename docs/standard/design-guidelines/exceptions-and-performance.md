@@ -24,7 +24,7 @@ ms.locfileid: "69611519"
 
  パフォーマンスを向上させるために、次の 2 つのセクションで説明するように、Tester-Doer パターンまたは Try-Parse パターンを使用することができます。
 
-## <a name="tester-doer-pattern">Tester-Doer パターン</a>
+## <a name="tester-doer-pattern"></a>Tester-Doer パターン
  メンバーを2つに分割すると、例外スローメンバーのパフォーマンスを向上させることができます。 では、 <xref:System.Collections.Generic.ICollection%601>インターフェイスの<xref:System.Collections.Generic.ICollection%601.Add%2A>メソッドを見てみましょう。
 
 ```csharp
@@ -32,9 +32,7 @@ ICollection<int> numbers = ...
 numbers.Add(1);
 ```
 
-
- コレクションが読み取り専用の場合、`Add` メソッドは例外をスローします。これは、メソッドの呼び出しが頻繁に失敗することが予想されるシナリオでパフォーマンスの問題になる可能性があります。問題を軽減する方法の 1 つは、値を追加する前に、コレクションが書き込み可能かどうかをテストすることです。
- 
+ コレクションが読み取り専用の場合、`Add` メソッドは例外をスローします。 これは、メソッドの呼び出しが頻繁に失敗することが予想されるシナリオでパフォーマンスの問題になる可能性があります。 問題を軽減する方法の 1 つは、値を追加する前に、コレクションが書き込み可能かどうかをテストすることです。
 
 ```csharp
 ICollection<int> numbers = ...
@@ -45,14 +43,12 @@ if (!numbers.IsReadOnly)
 }
 ```
 
-
- 条件をテストするために使用されるメンバー (この例では `IsReadOnly` プロパティ) は、tester と呼ばれています。例外がスローされる可能性のある操作を実行するために使用するメンバー (この例では `Add` メソッド) は、doer と呼ばれています。
+ 条件をテストするために使用されるメンバー (この例では `IsReadOnly` プロパティ) は、tester と呼ばれています。 例外がスローされる可能性のある操作を実行するために使用するメンバー (この例では `Add` メソッド) は、doer と呼ばれています。
 
  **✓ CONSIDER** Tester 渡ってパターンが例外をスローするメンバーの共通のパフォーマンスの問題を回避するシナリオに関連する例外。
 
-## <a name="try-parse-pattern">Try-Parse パターン</a>
- パフォーマンスが非常に重要な API では、前のセクションで説明した Tester-Doer パターンよりも高速なパターンを使用する必要があります。このパターンでは、メンバー名を調整して、適切に定義されたテスト ケースをメンバー セマンティクスの一部にするための呼び出しを行います。たとえば、<xref:System.DateTime> は、文字列の解析が失敗した場合に例外をスローする <xref:System.DateTime.Parse%2A> メソッドを定義します。また、解析を試行する対応する <xref:System.DateTime.TryParse%2A> メソッドも定義しますが、解析が失敗した場合は false を返し、`out` パラメーターを使用して解析の成功の結果を返します。
-
+## <a name="try-parse-pattern"></a>Try-Parse パターン
+ パフォーマンスが非常に重要な API では、前のセクションで説明した Tester-Doer パターンよりも高速なパターンを使用する必要があります。 このパターンでは、メンバー名を調整して、適切に定義されたテスト ケースをメンバー セマンティクスの一部にするための呼び出しを行います。 たとえば、<xref:System.DateTime> は、文字列の解析が失敗した場合に例外をスローする <xref:System.DateTime.Parse%2A> メソッドを定義します。 また、解析を試行する対応する <xref:System.DateTime.TryParse%2A> メソッドも定義しますが、解析が失敗した場合は false を返し、`out` パラメーターを使用して解析の成功の結果を返します。
 
 ```csharp
 public struct DateTime
