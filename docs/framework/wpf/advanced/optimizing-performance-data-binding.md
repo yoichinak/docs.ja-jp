@@ -5,15 +5,15 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 31fdc3c31c8792fea5f3e71dedb7370ebd63c98e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9b302be3ed9f01ccd27470063f49966dc7d74708
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458553"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740796"
 ---
 # <a name="optimizing-performance-data-binding"></a>パフォーマンスの最適化 : データ バインド
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、アプリケーションがデータを提示し、データと対話するための簡単で一貫性のある方法を提供します。 要素は、CLR オブジェクトと [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]の形式で、さまざまなデータソースのデータにバインドできます。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、アプリケーションがデータを提示し、データと対話するための簡単で一貫性のある方法を提供します。 要素は、CLR オブジェクトおよび XML の形式で、さまざまなデータソースのデータにバインドできます。  
   
  このトピックでは、データ バインディングのパフォーマンスに関する推奨事項について説明します。  
 
@@ -69,7 +69,7 @@ ms.locfileid: "73458553"
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>データ バインディングのためだけに CLR オブジェクトを XML に変換しない  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を使用すると [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] コンテンツにデータをバインドできます。ただし、[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] コンテンツへのデータバインディングは、CLR オブジェクトへのデータバインドよりも低速です。 唯一の目的がデータバインディング用である場合は、CLR オブジェクトデータを XML に変換しないでください。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を使用すると、XML コンテンツにデータをバインドできます。ただし、XML コンテンツへのデータバインディングは、CLR オブジェクトへのデータバインドよりも低速です。 唯一の目的がデータバインディング用である場合は、CLR オブジェクトデータを XML に変換しないでください。  
   
 ## <a name="see-also"></a>関連項目
 

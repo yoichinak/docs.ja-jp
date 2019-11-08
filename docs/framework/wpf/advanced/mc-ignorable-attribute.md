@@ -9,15 +9,15 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: d8fdeec8784c9a44c9b272a0a5a8b9c56ace5230
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e14ab0ebc7d44e2792307b16c7c0581ff7a71bc6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458819"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740830"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 属性
-マークアップファイルで検出された [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 名前空間プレフィックスが [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサによって無視される可能性があるかどうかを指定します。 `mc:Ignorable` 属性は、カスタム名前空間マッピングと [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] バージョン管理の両方で、マークアップ互換性をサポートしています。  
+マークアップファイルで検出された XML 名前空間プレフィックスを [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサで無視できることを指定します。 `mc:Ignorable` 属性は、カスタム名前空間マッピングと [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] バージョン管理の両方で、マークアップ互換性をサポートしています。  
   
 ## <a name="xaml-attribute-usage-single-prefix"></a>XAML 属性の使用法 (単一のプレフィックス)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73458819"
 |*ThisElementCanBeIgnored*|基になる型を解決できない場合に [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] のプロセッサ実装によって無視される要素。|  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 互換性名前空間 `http://schemas.openxmlformats.org/markup-compatibility/2006`をマップするときに使用するプレフィックスとして、`mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 名前空間プレフィックスを使用することをお勧めします。  
+ `mc` の XML 名前空間プレフィックスは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 互換性名前空間 `http://schemas.openxmlformats.org/markup-compatibility/2006`をマッピングするときに使用する推奨プレフィックス表記です。  
   
  要素名のプレフィックス部分が `mc:Ignorable` として識別される要素または属性は、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサによって処理されるときにエラーを発生させません。 その属性を基になる型またはプログラミング構成体に解決できなかった場合、その要素は無視されます。 ただし、無視された要素では、その要素が処理されないという副作用を伴う追加の要素の要件に対して、追加の解析エラーが発生する可能性があります。 たとえば、特定の要素のコンテンツモデルでは、1つの子要素だけが必要になる場合がありますが、指定された子要素が `mc:Ignorable` プレフィックスに含まれていて、指定された子要素が型に解決できなかった場合、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] のプロセッサによってエラーが発生する可能性があります。  
   

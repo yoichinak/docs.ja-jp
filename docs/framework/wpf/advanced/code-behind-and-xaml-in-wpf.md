@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 2e975745c2124ab2834eb82ed9b94563b44642b1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c18cce1898b8834c20d5e4af70c1b010e4b96e11
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453676"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740900"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF における分離コードと XAML
 <a name="introduction"></a>分離コードは、マークアップで定義されたオブジェクトと結合されるコードを記述するために使用される用語です。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページがマークアップコンパイルされている場合です。 このトピックでは、分離コードの要件と、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]のコードの代替インラインコード機構について説明します。  
@@ -50,7 +50,7 @@ ms.locfileid: "73453676"
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  
- [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md)は [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]で定義されたディレクティブ要素です。 `x:Code` ディレクティブ要素には、インラインプログラミングコードを含めることができます。 インラインで定義されているコードは、同じページの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] と対話できます。 次の例は、 C#インラインコードを示しています。 コードが `x:Code` 要素の内側にあり、`<CDATA[`...`]]>` でコードを囲む必要があることに注意してください。これにより、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサ ([!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] スキーマまたは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] スキーマを解釈する) は、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]の内容をエスケープすることができなくなります。コンテンツを [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]として文字どおりに解釈してみてください。  
+ [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md)は [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]で定義されたディレクティブ要素です。 `x:Code` ディレクティブ要素には、インラインプログラミングコードを含めることができます。 インラインで定義されているコードは、同じページの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] と対話できます。 次の例は、 C#インラインコードを示しています。 コードが `x:Code` 要素内にあり、`<CDATA[`...`]]>` でコードを囲む必要があることに注意してください。 XML の内容をエスケープして、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサ ([!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] スキーマまたは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] スキーマを解釈する) が試行されないようにします。コンテンツは文字どおり XML として解釈されます。  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   

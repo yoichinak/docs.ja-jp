@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: b2530793bfe1a158a0df1c34b2768e0c7ca351f3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459354"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740785"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath の XAML 構文
 
@@ -32,7 +32,7 @@ ms.locfileid: "73459354"
 
 データ バインディングは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の機能であり、依存関係プロパティのターゲット値にバインドできます。 ただし、このようなデータ バインディングのソースが依存関係プロパティである必要はなく、適切なデータ プロバイダーで認識される任意のプロパティ型でかまいません。 プロパティパスは、共通言語ランタイム (CLR) オブジェクトとそのプロパティからバインディングソースを取得するために使用される <xref:System.Windows.Data.ObjectDataProvider>に特に使用されます。
 
-[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] へのデータバインドでは、<xref:System.Windows.Data.Binding>で <xref:System.Windows.Data.Binding.Path%2A> を使用しないため、<xref:System.Windows.PropertyPath>は使用されません。 代わりに、<xref:System.Windows.Data.Binding.XPath%2A> を使用し、データの [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] に有効な XPath 構文を指定します。 <xref:System.Windows.Data.Binding.XPath%2A> も文字列として指定されていますが、ここには記載されていません。「 [XMLDataProvider と XPath クエリを使用して XML データにバインドする](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)」を参照してください。
+XML へのデータバインドでは、<xref:System.Windows.Data.Binding>で <xref:System.Windows.Data.Binding.Path%2A> が使用されないため、<xref:System.Windows.PropertyPath>は使用されません。 代わりに、<xref:System.Windows.Data.Binding.XPath%2A> を使用し、データの XML ドキュメントオブジェクトモデル (DOM) に有効な XPath 構文を指定します。 <xref:System.Windows.Data.Binding.XPath%2A> も文字列として指定されていますが、ここには記載されていません。「 [XMLDataProvider と XPath クエリを使用して XML データにバインドする](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)」を参照してください。
 
 データ バインディングにおけるプロパティ パスを理解するうえで鍵となるのは、個々のプロパティ値をバインドの対象にすることも、リストまたはコレクションを使用するターゲット プロパティにバインドすることもできるということです。 コレクション内のデータ項目の数に応じて拡張される <xref:System.Windows.Controls.ListBox> をバインドする場合は、コレクション内のデータ項目の数に応じてプロパティのパスでコレクションオブジェクトを参照する必要があります。 データバインディングエンジンは、データソースとして使用されるコレクションをバインディングターゲットの型に自動的に一致させます。これにより、項目配列に <xref:System.Windows.Controls.ListBox> を設定するなどの動作が行われます。
 
@@ -76,7 +76,7 @@ ms.locfileid: "73459354"
 <object property="(ownerType.propertyName)" .../>
 ```
 
-かっこは、<xref:System.Windows.PropertyPath> 内のこのプロパティを、部分修飾を使用して構築する必要があることを示します。 XML 名前空間を使用して、適切なマッピングを含む型を検出できます。 `ownerType` は、各アセンブリの <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 宣言を通じて、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサがアクセスできる型を検索します。 ほとんどのアプリケーションは、[!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 名前空間にマップされた既定の XML 名前空間を持ちます。そのため、プレフィックスは通常、カスタム型や、名前空間の外部の型に限って必要です。  `propertyName` は、`ownerType` に存在するプロパティの名前に解決される必要があります。 この構文は、通常、次のいずれかの場合に使用されます。
+かっこは、<xref:System.Windows.PropertyPath> 内のこのプロパティを、部分修飾を使用して構築する必要があることを示します。 XML 名前空間を使用して、適切なマッピングを含む型を検出できます。 `ownerType` は、各アセンブリの <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 宣言を通じて、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサがアクセスできる型を検索します。 ほとんどのアプリケーションは、`http://schemas.microsoft.com/winfx/2006/xaml/presentation` 名前空間にマップされた既定の XML 名前空間を持ちます。そのため、プレフィックスは通常、カスタム型や、名前空間の外部の型に限って必要です。  `propertyName` は、`ownerType` に存在するプロパティの名前に解決される必要があります。 この構文は、通常、次のいずれかの場合に使用されます。
 
 - 指定されたターゲット型を持たないスタイルまたはテンプレート内の [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] でパスが指定されている場合。 通常、これ以外のケースでの修飾子の使用は無効です。スタイルやテンプレート以外のケースでは、プロパティは型ではなくインスタンス上に存在します。
 
@@ -97,7 +97,7 @@ ms.locfileid: "73459354"
 この構文で、/ は階層的なデータ ソース オブジェクト内を移動するために使用されます。また、/ 文字を連続で使用することによる階層内での複数ステップの移動がサポートされています。 ソースの走査は現在のレコード ポインター位置に対応しており、これはデータをビューの UI と同期することによって決定されます。 階層的なデータ ソース オブジェクトのバインドおよびデータ バインディングにおける現在のレコード ポインターの概念の詳細については、「[階層データでマスター詳細パターンを使用する](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)」または「[データ バインディングの概要](../../../desktop-wpf/data/data-binding-overview.md)」を参照してください。
 
 > [!NOTE]
-> この構文は、一見すると [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] に似ています。 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] データソースにバインドするための真の [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] 式は、<xref:System.Windows.Data.Binding.Path%2A> 値として使用されず、同時に排他的な <xref:System.Windows.Data.Binding.XPath%2A> プロパティに使用する必要があります。
+> 、一見、では、この構文は XPath に似ています。 XML データソースにバインドするための true XPath 式は、<xref:System.Windows.Data.Binding.Path%2A> 値として使用されません。代わりに、相互排他的な <xref:System.Windows.Data.Binding.XPath%2A> プロパティに使用する必要があります。
 
 ### <a name="collection-views"></a>コレクション ビュー
 
@@ -204,7 +204,7 @@ ms.locfileid: "73459354"
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>
 ```
 
-かっこは、<xref:System.Windows.PropertyPath> 内のこのプロパティを、部分修飾を使用して構築する必要があることを示します。 XML 名前空間を使用して型を検出できます。 `ownerType` は、各アセンブリの <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 宣言を通じて、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサがアクセスできる型を検索します。 ほとんどのアプリケーションは、[!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 名前空間にマップされた既定の XML 名前空間を持ちます。そのため、プレフィックスは通常、カスタム型や、名前空間の外部の型に限って必要です。 `propertyName` は、`ownerType` に存在するプロパティの名前に解決される必要があります。 `propertyName` として指定されたプロパティは、<xref:System.Windows.DependencyProperty>である必要があります。 (アタッチされた [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] すべてのプロパティは依存関係プロパティとして実装されるため、この問題はカスタム添付プロパティに関してのみ問題になります)。
+かっこは、<xref:System.Windows.PropertyPath> 内のこのプロパティを、部分修飾を使用して構築する必要があることを示します。 XML 名前空間を使用して型を検出できます。 `ownerType` は、各アセンブリの <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 宣言を通じて、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサがアクセスできる型を検索します。 ほとんどのアプリケーションは、`http://schemas.microsoft.com/winfx/2006/xaml/presentation` 名前空間にマップされた既定の XML 名前空間を持ちます。そのため、プレフィックスは通常、カスタム型や、名前空間の外部の型に限って必要です。 `propertyName` は、`ownerType` に存在するプロパティの名前に解決される必要があります。 `propertyName` として指定されたプロパティは、<xref:System.Windows.DependencyProperty>である必要があります。 (アタッチされた [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] すべてのプロパティは依存関係プロパティとして実装されるため、この問題はカスタム添付プロパティに関してのみ問題になります)。
 
 <a name="indexanim"></a>
 

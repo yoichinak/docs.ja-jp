@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 0758a537ee457a8fe5a778e2a2c24a8ba13c263b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d578b9834ca39a33e284d3066eef85890c224a2f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460860"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740813"
 ---
 # <a name="printing-overview"></a>印刷の概要
 Microsoft .NET Framework を使用すると、Windows Presentation Foundation (WPF) を使用するアプリケーション開発者は、豊富な新しい印刷および印刷システム管理 Api を利用できます。 また、[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] によって、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] アプリケーションを作成する開発者と、アンマネージ コードを使用する開発者も、これらの印刷システム拡張機能の一部を使用できます。 この新しい機能の中核となるのは、新しい XML Paper Specification (XPS) ファイル形式と XPS 印刷パスです。  
@@ -29,7 +29,7 @@ Microsoft .NET Framework を使用すると、Windows Presentation Foundation (W
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>XPS について  
- XPS は、電子ドキュメント形式、スプールファイル形式、およびページ記述言語です。 これは、[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]、Open パッケージング規則 (OPC)、およびその他の業界標準を使用してクロスプラットフォームドキュメントを作成するオープンドキュメント形式です。 XPS は、デジタルドキュメントの作成、共有、印刷、表示、アーカイブを行うプロセスを簡略化します。 XPS の詳細については、「 [Xps ドキュメント](/windows/desktop/printdocs/documents)」を参照してください。  
+ XPS は、電子ドキュメント形式、スプールファイル形式、およびページ記述言語です。 これは、XML、Open パッケージング規則 (OPC)、およびその他の業界標準を使用してクロスプラットフォームドキュメントを作成するオープンドキュメント形式です。 XPS は、デジタルドキュメントの作成、共有、印刷、表示、アーカイブを行うプロセスを簡略化します。 XPS の詳細については、「 [Xps ドキュメント](/windows/desktop/printdocs/documents)」を参照してください。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] を使用して XPS ベースのコンテンツを印刷するためのいくつかの手法については、「[プログラムによる Xps ファイルの印刷](how-to-programmatically-print-xps-files.md)」をご利用ください このトピックに含まれるコンテンツの確認中にこれらのサンプルを参照すると、役に立つ場合があります。 (アンマネージコードの開発者は、 [MXDC_ESCAPE 関数](/windows/desktop/printdocs/mxdc-escape)のドキュメントを参照する必要があります。 Windows フォーム開発者は、完全な XPS 印刷パスをサポートしていない <xref:System.Drawing.Printing> 名前空間の API を使用する必要がありますが、ハイブリッド GDI から XPS への印刷パスはサポートされています。 以下の**印刷パスのアーキテクチャ**をご覧ください。)  
   
@@ -78,7 +78,7 @@ Microsoft .NET Framework を使用すると、Windows Presentation Foundation (W
  XPS 機能の完全なセットにアクセスするには、高度な印刷 API を使用する必要があります。 いくつかの関連する API については、以下で詳しく説明します。 XPS 印刷パス Api の完全な一覧については、<xref:System.Windows.Xps> と <xref:System.Printing> 名前空間の参照に関するページを参照してください。  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket と PrintCapabilities  
- <xref:System.Printing.PrintTicket> クラスと <xref:System.Printing.PrintCapabilities> クラスは、XPS の高度な機能の基盤です。 どちらの種類のオブジェクトも、照合順序、両面印刷、ホチキス止めなど、印刷指向の特徴の書式設定された構造 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] ます。これらの構造は、印刷スキーマによって定義されます。 <xref:System.Printing.PrintTicket> は、プリンターに印刷ジョブの処理方法を指示します。 <xref:System.Printing.PrintCapabilities> クラスは、プリンターの機能を定義します。 プリンターの機能のクエリを実行すると、プリンターのサポート機能を最大限に活用する <xref:System.Printing.PrintTicket> を作成できます。 同様に、サポートされていない機能を回避できます。  
+ <xref:System.Printing.PrintTicket> クラスと <xref:System.Printing.PrintCapabilities> クラスは、XPS の高度な機能の基盤です。 どちらの種類のオブジェクトも、照合順序、両面印刷、ホチキス止めなどの印刷指向機能の XML 形式の構造です。これらの構造は、印刷スキーマによって定義されます。 <xref:System.Printing.PrintTicket> は、プリンターに印刷ジョブの処理方法を指示します。 <xref:System.Printing.PrintCapabilities> クラスは、プリンターの機能を定義します。 プリンターの機能のクエリを実行すると、プリンターのサポート機能を最大限に活用する <xref:System.Printing.PrintTicket> を作成できます。 同様に、サポートされていない機能を回避できます。  
   
  次の例は、プリンターの <xref:System.Printing.PrintCapabilities> でクエリを実行する方法と、コードを使用した <xref:System.Printing.PrintTicket> の作成方法を示しています。  
   

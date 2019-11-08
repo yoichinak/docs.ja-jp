@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 6c06e18f7869f1b1041c4d5fb1608a87f2902d7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8f381a06aa916be378052d00f0d65f37ef910433
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460577"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740649"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>XAML 名前空間および WPF XAML の名前空間の割り当て
 このトピックでは、WPF XAML ファイルのルートタグでよく見られる2つの XAML 名前空間マッピングの存在と目的について詳しく説明します。 また、独自のコードで定義されている要素、または別のアセンブリ内に定義されている要素を使用するために、同様のマッピングを生成する方法についても説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "73460577"
   
  これらの宣言の間の関係は、`x:` プレフィックスマッピングが XAML 言語定義の一部である組み込みをサポートし、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は xaml を言語として使用し、XAML 用のオブジェクトのボキャブラリを定義する1つの実装であることです。 WPF のボキャブラリの使用は XAML 組み込みの使用法よりはるかに一般的であるため、WPF のボキャブラリは既定値としてマップされます。  
   
- XAML 言語の組み込みサポートをマップするための `x:` プレフィックス規則には、プロジェクトテンプレート、サンプルコード、およびこの [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]内の言語機能のドキュメントが続きます。 XAML 名前空間は、基本的な WPF アプリケーションでも必要な一般的に使用される多くの機能を定義します。 たとえば、部分クラスを使用して XAML ファイルに分離コードを結合するには、そのクラスに関連する XAML ファイルのルート要素の `x:Class` 属性として名前を付ける必要があります。 または、キー付きリソースとしてアクセスする XAML ページで定義されているすべての要素に、対象の要素に対して `x:Key` 属性が設定されている必要があります。 これらの XAML の詳細については、「 [xaml の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md) 」または「 [Xaml 構文の詳細](xaml-syntax-in-detail.md)」を参照してください。  
+ XAML 言語の組み込みサポートをマップするための `x:` プレフィックス規則には、プロジェクトテンプレート、サンプルコード、およびこの SDK 内の言語機能のドキュメントが続きます。 XAML 名前空間は、基本的な WPF アプリケーションでも必要な一般的に使用される多くの機能を定義します。 たとえば、部分クラスを使用して XAML ファイルに分離コードを結合するには、そのクラスに関連する XAML ファイルのルート要素の `x:Class` 属性として名前を付ける必要があります。 または、キー付きリソースとしてアクセスする XAML ページで定義されているすべての要素に、対象の要素に対して `x:Key` 属性が設定されている必要があります。 これらの XAML の詳細については、「 [xaml の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md) 」または「 [Xaml 構文の詳細](xaml-syntax-in-detail.md)」を参照してください。  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>カスタムクラスとアセンブリへのマッピング  
@@ -105,7 +105,7 @@ End Namespace
   
 <a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>   
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>アセンブリ内の XML 名前空間への CLR 名前空間のマッピング  
- WPF では、複数の CLR 名前空間を1つの XAML 名前空間にマップするために XAML プロセッサによって使用される CLR 属性を定義します。 この属性 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>は、アセンブリを生成するソースコードのアセンブリレベルに配置されます。 WPF アセンブリソースコードでは、この属性を使用して、<xref:System.Windows> や <xref:System.Windows.Controls>などのさまざまな共通名前空間を [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 名前空間にマップします。  
+ WPF では、複数の CLR 名前空間を1つの XAML 名前空間にマップするために XAML プロセッサによって使用される CLR 属性を定義します。 この属性 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>は、アセンブリを生成するソースコードのアセンブリレベルに配置されます。 WPF アセンブリソースコードでは、この属性を使用して、<xref:System.Windows> や <xref:System.Windows.Controls>などのさまざまな共通名前空間を `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 名前空間にマップします。  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> は、XML/XAML 名前空間名と CLR 名前空間名の2つのパラメーターを受け取ります。 複数の CLR 名前空間を同じ XML 名前空間にマップするために、複数の <xref:System.Windows.Markup.XmlnsDefinitionAttribute> を存在させることができます。 これらの名前空間のメンバーは、マップされた後、部分クラスの分離コードページで適切な `using` ステートメントを指定することにより、必要に応じて完全修飾なしで参照することもできます。 詳細については、「<xref:System.Windows.Markup.XmlnsDefinitionAttribute>」を参照してください。  
   

@@ -6,23 +6,23 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 0f39c9d42abfaba1327f2c189ac6ce3d40db6e89
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f075d646539de5d68e1c9c75d9664451125e9919
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459209"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733553"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>方法 : XMLDataProvider と XPath クエリを使用して XML データにバインドする
-この例では、<xref:System.Windows.Data.XmlDataProvider>を使用して [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] データにバインドする方法を示します。  
+この例では、<xref:System.Windows.Data.XmlDataProvider>を使用して XML データにバインドする方法を示します。  
   
- <xref:System.Windows.Data.XmlDataProvider>では、アプリケーションのデータバインディングを介してアクセスできる基になるデータは、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ノードの任意のツリーにすることができます。 つまり、<xref:System.Windows.Data.XmlDataProvider> は、[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] ノードの任意のツリーをバインディングソースとして使用する便利な方法を提供します。  
+ <xref:System.Windows.Data.XmlDataProvider>を使用すると、アプリケーションのデータバインディングを介してアクセスできる基になるデータを、XML ノードの任意のツリーにすることができます。 つまり、<xref:System.Windows.Data.XmlDataProvider> は、XML ノードの任意のツリーをバインディングソースとして使用する便利な方法を提供します。  
   
 ## <a name="example"></a>例  
- 次の例では、データは <xref:System.Windows.FrameworkElement.Resources%2A> セクション内の [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]*データアイランド*として直接埋め込まれています。 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] データ アイランドは、`<x:XData>` タグ内にラップされていることと、常にルート ノードを 1 つだけ (この例では *Inventory*) 持つことが必要です。  
+ 次の例では、データは <xref:System.Windows.FrameworkElement.Resources%2A> セクション内に XML*データアイランド*として直接埋め込まれています。 XML データアイランドは `<x:XData>` タグでラップする必要があり、常に1つのルートノードを持ちます。この例では、*インベントリ*です。  
   
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] データのルート ノードには、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 名前空間を空の文字列に設定する **xmlns** 属性があります。 これは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページ内にインラインで配置されるデータ アイランドに XPath クエリを適用する場合に必須です。 このインラインの場合、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、つまりデータアイランドは、<xref:System.Windows> 名前空間を継承します。 このため、<xref:System.Windows> 名前空間で XPath クエリを修飾しないように、名前空間を空に設定する必要があります。これにより、クエリが誤って送信されます。  
+> XML データのルートノードには、XML 名前空間を空の文字列に設定する**xmlns**属性があります。 これは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページ内にインラインで配置されるデータ アイランドに XPath クエリを適用する場合に必須です。 このインラインの場合、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、つまりデータアイランドは、<xref:System.Windows> 名前空間を継承します。 このため、<xref:System.Windows> 名前空間で XPath クエリを修飾しないように、名前空間を空に設定する必要があります。これにより、クエリが誤って送信されます。  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
@@ -48,11 +48,11 @@ ms.locfileid: "73459209"
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページのソースに [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] をデータ アイランドとして埋め込む方法では、コンパイル時に正確なデータ コンテンツが必要となるので、アプリケーションによっては不都合が生じます。 したがって、次の例のように、外部 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ファイルからのデータの取得もサポートされています。  
+ アプリケーションによっては、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページのソース内にデータアイランドとして XML を埋め込むことは、コンパイル時にデータの正確な内容を認識する必要があるため、不便な場合があります。 したがって、次の例に示すように、外部 XML ファイルからデータを取得することもできます。  
   
  [!code-xaml[XMLDataSource2#XmlFileExample](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
- [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] データがリモート [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ファイルに存在する場合は、次のように <xref:System.Windows.Data.XmlDataProvider.Source%2A> 属性に適切な URL を割り当てることによって、データへのアクセスを定義します。  
+ XML データがリモート XML ファイルに存在する場合は、次のように <xref:System.Windows.Data.XmlDataProvider.Source%2A> 属性に適切な URL を割り当てることによって、データへのアクセスを定義します。  
   
 ```xml  
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  

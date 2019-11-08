@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: feb84fb3d8836168035ef8eed31728c6a0d00cba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 881b9fedfaa42ffb402e226a6b271f47feb20617
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118296"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736808"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 要素
 <xref:System.AppContext> クラスで使用される、新機能に対するオプトアウト メカニズムを指定するスイッチを 1 つまたは複数定義します。  
@@ -92,7 +92,7 @@ ms.locfileid: "73118296"
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |[DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer)が ECMAScript V6 と V8 標準に基づいて一部の制御文字をシリアル化するかどうかを制御します。 詳細については、「[軽減策: DataContractJsonSerializer での制御文字のシリアル化](../../../migration-guide/mitigation-serialization-control-characters.md)」を参照してください。| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> が複数の調整をサポートするか、タイムゾーンに対して1つの調整のみをサポートするかを制御します。 `true`した場合、<xref:System.TimeZoneInfo> 型を使用して日付と時刻のデータをシリアル化および逆シリアル化します。それ以外の場合は、複数の調整規則をサポートしていない <xref:System.TimeZone> の型を使用します。|.NET Framework 4.6.2|
 |`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|<xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType> オブジェクトのシリアル化と逆シリアル化の間に、より大きな配列サイズを使用するかどうかを制御します。 このスイッチを `true` に設定すると、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>などの型によってラージオブジェクトグラフのシリアル化と逆シリアル化のパフォーマンスが向上します。 |.NET Framework 4.7.2|
-|`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> コンストラクターが、既存のオブジェクト参照を使用して新しいオブジェクトの <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> プロパティを設定するかどうかを制御します。 詳細については、「[軽減策: ClaimsIdentity コンストラクター](../../../migration-guide/mitigation-claimsidentity-constructor.md)」を参照してください。|.NET Framework 4.6.2|  
+|`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> コンストラクターが、既存のオブジェクト参照を使用して新しいオブジェクトの <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> プロパティを設定するかどうかを制御します。 詳細については、「[軽減策: ClaimsIdentity コンストラクター](../../../migration-guide/retargeting/4.6.1-4.6.2.md)」を参照してください。|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|<xref:System.Security.Cryptography.AesCryptoServiceProvider> 復号化を再利用しようとした場合に、<xref:System.Security.Cryptography.CryptographicException>をスローするかどうかを制御します。 詳細については、「 [AesCryptoServiceProvider の復号化による再利用可能な変換の提供](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)」を参照してください。|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|[Cspparameters.parentwindowhandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)プロパティの値が、ウィンドウハンドルのメモリ位置を表す[IntPtr](xref:System.IntPtr)であるか、またはウィンドウハンドル (HWND) であるかを制御します。 詳細については、「[Mitigation: CspParameters.ParentWindowHandle Expects an HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)」 (軽減策: CspParameters.ParentWindowHandle で HWND を受け取る) を参照してください。 |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|FIPS モードでマネージ暗号化クラスを使用するか、<xref:System.Security.Cryptography.CryptographicException> (`true`) をスローするか、またはシステムライブラリの実装に依存するか (`false`) を制御します。|.NET Framework 4.8|

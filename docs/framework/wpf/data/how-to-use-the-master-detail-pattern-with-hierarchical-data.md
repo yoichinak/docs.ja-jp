@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 2e7d9ceed3ab8385f07d87ecdb92c0a99d410b40
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e4183ddc3868a1568662853b46e05348df129092
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459083"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733479"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>方法 : 階層データでマスター詳細パターンを使用する
 この例では、マスター/詳細シナリオを実装する方法を示します。  
@@ -31,7 +31,7 @@ ms.locfileid: "73459083"
   
 2. <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> プロパティは、追跡する選択範囲の <xref:System.Windows.Controls.ListBox> コントロールで `true` するように設定する必要があります。 このプロパティを設定すると、選択した項目が常に <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>として設定されます。 また、<xref:System.Windows.Controls.ListBox> が <xref:System.Windows.Data.CollectionViewSource>からデータを取得する場合は、選択と通貨が自動的に同期されます。  
   
- [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] データを使用している場合、この手法は少し異なります。 例については、「[階層 XML データでマスター詳細パターンを使用する](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)」を参照してください。  
+ XML データを使用する場合、この手法は少し異なります。 例については、「[階層 XML データでマスター詳細パターンを使用する](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

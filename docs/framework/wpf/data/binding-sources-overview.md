@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e7546021fbfde3fceea7fd4f1eba10cdc90dff8b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459018"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740620"
 ---
 # <a name="binding-sources-overview"></a>バインディング ソースの概要
 データ バインディングでは、バインディング ソース オブジェクトは、データの取得元のオブジェクトを表します。 このトピックでは、バインディング ソースとして使用できるオブジェクトの型について説明します。
@@ -25,7 +25,7 @@ ms.locfileid: "73459018"
 |共通言語ランタイム (CLR) オブジェクト|任意の共通言語ランタイム (CLR) オブジェクトのパブリックプロパティ、サブプロパティ、およびインデクサーにバインドできます。 バインディングエンジンは、CLR リフレクションを使用してプロパティの値を取得します。 また、<xref:System.ComponentModel.ICustomTypeDescriptor> を実装するオブジェクトまたは登録された <xref:System.ComponentModel.TypeDescriptionProvider> を持つオブジェクトは、バインディングエンジンでも動作します。<br /><br /> バインディング ソースとして使用できるクラスを実装する方法の詳細については、このトピックで後述する「[バインディング ソースのクラスの実装](#classes)」を参照してください。|
 |動的オブジェクト|<xref:System.Dynamic.IDynamicMetaObjectProvider> インターフェイスを実装するオブジェクトの使用可能なプロパティおよびインデクサーにバインドできます。 コード内のメンバーにアクセスできる場合、これにバインドできます。 たとえば、動的オブジェクトを使用して `someObjet.AProperty` を介してコード内のメンバーにアクセスできる場合、バインディング パスを `AProperty` に設定してこのメンバーにバインドできます。|
 |ADO.NET オブジェクト|<xref:System.Data.DataTable>などの ADO.NET オブジェクトにバインドできます。 ADO.NET <xref:System.Data.DataView> は <xref:System.ComponentModel.IBindingList> インターフェイスを実装します。これは、バインディングエンジンがリッスンする変更通知を提供します。|
-|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] オブジェクト|<xref:System.Xml.XmlNode>、<xref:System.Xml.XmlDocument>、または <xref:System.Xml.XmlElement>に対して `XPath` クエリをバインドして実行できます。 マークアップのバインディングソースである [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] データにアクセスする便利な方法は、<xref:System.Windows.Data.XmlDataProvider> オブジェクトを使用することです。 詳細については、「[XMLDataProvider と XPath クエリを使用して XML データにバインドする](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)」を参照してください。<br /><br /> また、<xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XDocument>にバインドしたり、LINQ to XML を使用して、これらの型のオブジェクトに対して実行されるクエリの結果にバインドしたりすることもできます。 LINQ to XML を使用して、マークアップのバインディングソースである XML データにアクセスする便利な方法は、<xref:System.Windows.Data.ObjectDataProvider> オブジェクトを使用することです。 詳細については、「[XDocument、XElement、または LINQ for XML クエリの結果にバインドする](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)」を参照してください。|
+|XML オブジェクト|<xref:System.Xml.XmlNode>、<xref:System.Xml.XmlDocument>、または <xref:System.Xml.XmlElement>に対して `XPath` クエリをバインドして実行できます。 マークアップのバインディングソースである XML データにアクセスする便利な方法は、<xref:System.Windows.Data.XmlDataProvider> オブジェクトを使用することです。 詳細については、「[XMLDataProvider と XPath クエリを使用して XML データにバインドする](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)」を参照してください。<br /><br /> また、<xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XDocument>にバインドしたり、LINQ to XML を使用して、これらの型のオブジェクトに対して実行されるクエリの結果にバインドしたりすることもできます。 LINQ to XML を使用して、マークアップのバインディングソースである XML データにアクセスする便利な方法は、<xref:System.Windows.Data.ObjectDataProvider> オブジェクトを使用することです。 詳細については、「[XDocument、XElement、または LINQ for XML クエリの結果にバインドする](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)」を参照してください。|
 |<xref:System.Windows.DependencyObject> オブジェクト|任意の <xref:System.Windows.DependencyObject>の依存関係プロパティにバインドできます。 例については、「[2 つのコントロールのプロパティをバインドする](how-to-bind-the-properties-of-two-controls.md)」を参照してください。|
 
 <a name="classes"></a>
@@ -86,7 +86,7 @@ ms.locfileid: "73459018"
 
 - 依存関係プロパティには常にバインドできます。
 
- [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] バインディングのアクセス許可要件は同様です。 部分信頼サンドボックスでは、指定されたデータにアクセスするためのアクセス許可がない場合、<xref:System.Windows.Data.XmlDataProvider> は失敗します。
+ XML バインディングのアクセス許可要件は似ています。 部分信頼サンドボックスでは、指定されたデータにアクセスするためのアクセス許可がない場合、<xref:System.Windows.Data.XmlDataProvider> は失敗します。
 
  匿名型のオブジェクトは内部です。 完全信頼で実行されている場合にのみ、匿名型のプロパティにバインドできます。 匿名型の詳細については、「[Anonymous Types (C# Programming Guide)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)」または「[Anonymous Types (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。
 

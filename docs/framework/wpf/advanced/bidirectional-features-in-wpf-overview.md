@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 7d648741676ba947d901d26e3ee7c1289d3d4bc3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 385ce8d263991361512371dcacff52fcf0bbe738
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453879"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740938"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF の双方向機能の概要
 
@@ -98,7 +98,7 @@ HTML、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]�
 
 このアプリケーションのユーザーには出力が表示されますが、<xref:System.Windows.FlowDirection> が正しい場合でも、数字はアラビア数字として整形されます。
 
-XAML 要素には、各要素の言語を定義する [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 属性 (`xml:lang`) を含めることができます。 XAML では、ツリー内の親要素に適用される値 `xml:lang` 子要素によって使用される [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 言語の原則もサポートされています。 前の例では、<xref:System.Windows.Documents.Run> 要素または最上位レベルの要素に対して言語が定義されていなかったため、既定の `xml:lang` が使用されていました。これは、XAML に `en-US` ます。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の内部数値整形アルゴリズムでは、対応する言語 (この場合は英語) の数値が選択されます。 アラビア数字が正しく表示されるようにするには `xml:lang` を設定する必要があります。
+XAML 要素には、各要素の言語を定義する XML 属性 (`xml:lang`) を含めることができます。 XAML では、ツリー内の親要素に適用される値 `xml:lang` 子要素によって使用される XML 言語の原則もサポートされています。 前の例では、<xref:System.Windows.Documents.Run> 要素または最上位レベルの要素に対して言語が定義されていなかったため、既定の `xml:lang` が使用されていました。これは、XAML に `en-US` ます。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の内部数値整形アルゴリズムでは、対応する言語 (この場合は英語) の数値が選択されます。 アラビア数字が正しく表示されるようにするには `xml:lang` を設定する必要があります。
 
 次の図は `xml:lang` が追加された例を示しています。
 

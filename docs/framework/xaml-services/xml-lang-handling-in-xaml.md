@@ -7,15 +7,15 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 3af85f298f7581146b5ecc8a559b185f1a01e54c
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 98bfabba96e5805b96c63eb02233b15eae233cc0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919997"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740568"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML における xml:lang の処理
-`xml:lang` 属性は [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]の定義済み属性の 1 つであり、XML の要素の言語およびカルチャ情報を宣言します。 属性の意味は XAML でも同じですが、いくつかの追加の考慮事項が適用されます。  
+`xml:lang` 属性は、xml 内の要素の言語およびカルチャ情報を宣言する XML 定義の属性です。 属性の意味は XAML でも同じですが、いくつかの追加の考慮事項が適用されます。  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法  
   
@@ -30,7 +30,7 @@ ms.locfileid: "72919997"
 |*rfc3066lang*|[RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) 標準で定義されている文字列。1 つの言語、または言語と地域を表します。 後者の場合は、言語と地域が 1 つのハイフンで区切られます。 値と形式の詳細については、「 <xref:System.Windows.Markup.XmlLanguage> 」を参照してください。|  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] の `xml:lang` 属性の定義は、[!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]の World Wide Web コンソーシアム (W3C) によって "特別な属性" として定義されている `xml:lang` から派生します。 言語およびカルチャ情報が要素によって処理される方法は、実装に応じて異なる可能性がありますが、 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] における `xml:lang` 属性の既定の処理というものは存在しません。  
+ [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] の `xml:lang` 属性の定義は、XML の World Wide Web コンソーシアム (W3C) によって "特別な属性" として定義されている `xml:lang` から派生します。 言語およびカルチャ情報が要素によって処理される方法は、実装に応じて異なる可能性がありますが、 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] における `xml:lang` 属性の既定の処理というものは存在しません。  
   
  `xml:lang` 属性の既定値は、属性レベルで空の文字列です。  
   

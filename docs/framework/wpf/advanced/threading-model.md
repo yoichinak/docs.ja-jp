@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ef25123ed53ecf3e03e4f4c969bed2ef570591ad
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 22544b3bf2acf6e397f2ad5ae3de576bf491bd2b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459029"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740728"
 ---
 # <a name="threading-model"></a>スレッド モデル
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、スレッド処理の難しさから開発者を節約するように設計されています。 その結果、多くの [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 開発者は、複数のスレッドを使用するインターフェイスを作成する必要がなくなります。 マルチスレッドプログラムは複雑でデバッグが困難なため、シングルスレッドソリューションが存在する場合は回避する必要があります。  
@@ -49,7 +49,7 @@ ms.locfileid: "73459029"
   
  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]を変更できるのが1つのスレッドだけの場合、バックグラウンドスレッドがユーザーとどのように対話しますか。 バックグラウンドスレッドは、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] スレッドに代わって操作を実行するように要求できます。 これを行うには、作業項目を [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] スレッドの <xref:System.Windows.Threading.Dispatcher> に登録します。 <xref:System.Windows.Threading.Dispatcher> クラスには、作業項目を登録するための2つの方法 (<xref:System.Windows.Threading.Dispatcher.Invoke%2A> と <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>) が用意されています。 どちらのメソッドも、デリゲートの実行をスケジュールします。 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> は同期呼び出しです。つまり、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] スレッドがデリゲートの実行を実際に終了するまでは返されません。 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> は非同期であり、すぐに制御を戻します。  
   
- <xref:System.Windows.Threading.Dispatcher> は、優先順位によってキュー内の要素を並べ替えます。 <xref:System.Windows.Threading.Dispatcher> キューに要素を追加するときに指定できるレベルは10個あります。 これらの優先順位は、<xref:System.Windows.Threading.DispatcherPriority> 列挙体に保持されます。 <xref:System.Windows.Threading.DispatcherPriority> レベルの詳細については、[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] のドキュメントを参照してください。  
+ <xref:System.Windows.Threading.Dispatcher> は、優先順位によってキュー内の要素を並べ替えます。 <xref:System.Windows.Threading.Dispatcher> キューに要素を追加するときに指定できるレベルは10個あります。 これらの優先順位は、<xref:System.Windows.Threading.DispatcherPriority> 列挙体に保持されます。 <xref:System.Windows.Threading.DispatcherPriority> レベルの詳細については、Windows SDK のドキュメントを参照してください。  
   
 <a name="samples"></a>   
 ## <a name="threads-in-action-the-samples"></a>動作中のスレッド: サンプル  

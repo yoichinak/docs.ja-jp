@@ -7,19 +7,19 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 930e8a0013dd601aaafcd81340b3b9b8b69f8fdd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3661563dc7f5fa7346a12abab15013b56c376325
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458499"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740590"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML での空白の処理
 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] のプロセッサ実装によって有意な空白が処理される必要がある XAML 状態の言語規則。 ここでは、それらの XAML 言語規則について説明します。 また、XAML プロセッサの [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 実装と、シリアル化用の XAML ライターによって定義される追加の空白文字の処理についても説明します。  
   
 <a name="whitespace_definition"></a>   
 ## <a name="white-space-definition"></a>空白の定義  
- [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]との整合性、[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 内の空白文字は、スペース、改行、およびタブです。これらは、それぞれ Unicode 値0020、000A、および0009に対応します。  
+ XML との一貫性のある [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] の空白文字は、スペース、改行、およびタブです。これらは、それぞれ Unicode 値0020、000A、および0009に対応します。  
   
 <a name="whitespace_normalization"></a>   
 ## <a name="white-space-normalization"></a>空白の正規化  

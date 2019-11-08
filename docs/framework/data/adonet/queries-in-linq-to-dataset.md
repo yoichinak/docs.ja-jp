@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 5aaf33e5e2379ace4d32c59bd842889d0f9e32da
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15a27c743f54a8ba6ea52edfde08731d8b439645
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794538"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735410"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet でのクエリ
 クエリは、データ ソースからデータを取得する式です。 一般に、クエリは専用のクエリ言語で表現されます。たとえば、リレーショナル データベースであれば SQL、XML であれば XQuery が使用されます。 そのため、開発者はクエリの対象となるデータ ソースやデータ形式ごとに新しいクエリ言語を習得する必要があります。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] は、データ ソースや形式の違いを意識せずにデータを扱うことのできる、より簡素化された一貫したモデルを提供します。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] クエリでは、常にプログラミング オブジェクトを操作することになります。  
   
  [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] のクエリ操作は、データ ソースを取得し、クエリを作成して、クエリを実行するという 3 つのアクションから成ります。  
   
- <xref:System.Collections.Generic.IEnumerable%601> を介したクエリは、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ジェネリック インターフェイスを実装するデータ ソースに対して行うことができます。 でを呼び出す<xref:System.Data.DataTableExtensions.AsEnumerable%2A>と、ジェネリック<xref:System.Collections.Generic.IEnumerable%601>インターフェイスを実装するオブジェクトが返されます。このオブジェクトは、LINQtoDataSetクエリのデータソースとして機能します。<xref:System.Data.DataTable>  
+ <xref:System.Collections.Generic.IEnumerable%601> を介したクエリは、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ジェネリック インターフェイスを実装するデータ ソースに対して行うことができます。 <xref:System.Data.DataTable> で <xref:System.Data.DataTableExtensions.AsEnumerable%2A> を呼び出すと、LINQ to DataSet クエリのデータソースとして機能する汎用 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装するオブジェクトが返されます。  
   
  クエリでは、データ ソースから取得する情報を正確に指定できます。 また、並べ替え、グループ化、整形方法を指定して情報を取得することもできます。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] では、クエリが変数に格納されます。 一連の値を返すようにクエリを設計する場合、クエリ変数そのものが列挙可能な型であることが必要です。 このクエリ変数は、クエリの情報を保存するだけで、なんらかのアクションを実行したり、データを返したりすることはありません。 クエリを作成した後、データを取得するには、そのクエリを実行する必要があります。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "70794538"
  [!code-csharp[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#composing)]
  [!code-vb[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#composing)]  
   
- クエリを拡張した後は、追加のクエリを作成することはできません。それ以降のすべてのクエリでは、インメモリの [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 演算子が使用されます。 クエリの実行は、ステートメント`foreach`または`For Each`ステートメントでクエリ変数を反復処理するとき、または即時実行を引き起こす[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]変換演算子の1つを呼び出すことによって行われます。 即時実行を促す演算子としては、<xref:System.Linq.Enumerable.ToList%2A>、<xref:System.Linq.Enumerable.ToArray%2A>、<xref:System.Linq.Enumerable.ToLookup%2A>、<xref:System.Linq.Enumerable.ToDictionary%2A> などがあります。  
+ クエリを拡張した後は、追加のクエリを作成することはできません。それ以降のすべてのクエリでは、インメモリの [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 演算子が使用されます。 クエリの実行は、`foreach` または `For Each` ステートメントでクエリ変数を反復処理するとき、または即時実行を引き起こす [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 変換演算子の1つを呼び出すことによって行われます。 即時実行を促す演算子としては、<xref:System.Linq.Enumerable.ToList%2A>、<xref:System.Linq.Enumerable.ToArray%2A>、<xref:System.Linq.Enumerable.ToLookup%2A>、<xref:System.Linq.Enumerable.ToDictionary%2A> などがあります。  
   
  次の例の最初のクエリは、すべての製品を表示価格で並べ替えて返します。 <xref:System.Linq.Enumerable.ToArray%2A> メソッドを使用して、クエリの即時実行を強制しています。  
   
@@ -63,5 +63,5 @@ ms.locfileid: "70794538"
 
 - [プログラミング ガイド](programming-guide-linq-to-dataset.md)
 - [DataSet のクエリ](querying-datasets-linq-to-dataset.md)
-- [C# の LINQ の概要](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C# の LINQ の概要](../../../csharp/programming-guide/concepts/linq/index.md)
 - [Visual Basic の LINQ の概要](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

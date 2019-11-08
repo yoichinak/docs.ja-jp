@@ -2,18 +2,18 @@
 title: Entity SQL 言語リファレンス
 ms.date: 03/30/2017
 ms.assetid: bb07282c-161d-47e8-856d-b2374ba18181
-ms.openlocfilehash: 4c5fd8772c8885588fa6942fb410dcc24036a688
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 534d0aa09ffd01c49cbef7499125b78b454f21a6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854897"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732397"
 ---
 # <a name="entity-sql-language-reference"></a>Entity SQL 言語リファレンス
-このセクションでは、、、 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]および Entity Framework によって使用されるモデリング言語とマッピング言語 LINQ to Entities 詳細なドキュメントを提供します。
+このセクションでは、LINQ to Entities、[!INCLUDE[esql](../../../../../../includes/esql-md.md)]、および Entity Framework によって使用されるモデリング言語とマッピング言語について詳しく説明します。
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [CSDL、SSDL、および MSL 仕様](csdl-ssdl-and-msl-specifications.md)  
+ [CSDL、SSDL、および MSL 仕様](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)  
   
  [LINQ to Entities](linq-to-entities.md)  
   

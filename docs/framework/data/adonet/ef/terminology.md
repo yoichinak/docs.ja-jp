@@ -2,12 +2,12 @@
 title: Entity Framework の用語
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: c48361fd51ecb320416e76e599e36da12faf76fb
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: dfefa30671c82439fea4c872d10b26798aad90ec
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854278"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737858"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework の用語
 このトピックでは Entity Framework ドキュメントで頻繁に参照される用語を定義します。 追加情報を確認できる関連トピックへのリンクも示しています。  
@@ -30,7 +30,7 @@ ms.locfileid: "70854278"
 |.edmx ファイル|概念モデル (CSDL)、ストレージ モデル (SSDL)、および概念モデルとストレージ モデルの間のマッピング (MSL) を含む XML ファイル。 .Edmx ファイルは、Entity Data Model ツールによって作成されます。 詳細については、「 [.Edmx ファイルの概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))」を参照してください。|  
 |end|アソシエーションに参加しているエンティティ。<br /><br /> 詳細については、「 [End 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) 」および「[アソシエーション end](../association-end.md)」を参照してください。|  
 |entity|データ型を定義する際に基づくアプリケーションのドメインにおける概念。<br /><br /> 詳細については、「 [EntityType 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl) 」および「[エンティティ型](../entity-type.md)」を参照してください。|  
-|EntityClient|`EntityConnection` 、`EntityCommand` 、`EntityDataReader`などのクラスを含むストレージに依存しない ADO.NET データプロバイダー。 `SqlClient`と連携[!INCLUDE[esql](../../../../../includes/esql-md.md)]し、などのストレージ固有の ADO.NET データプロバイダーに接続します。<br /><br /> 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](entityclient-provider-for-the-entity-framework.md)」を参照してください。|  
+|EntityClient|`EntityConnection`、`EntityCommand`、`EntityDataReader`などのクラスを含むストレージに依存しない ADO.NET データプロバイダー。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] と連携し、`SqlClient`などのストレージ固有の ADO.NET データプロバイダーに接続します。<br /><br /> 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](entityclient-provider-for-the-entity-framework.md)」を参照してください。|  
 |エンティティ コンテナー|指定された名前空間に実装されるエンティティ セットとアソシエーション セットを指定します。<br /><br /> 詳細については、「 [EntityContainer 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitycontainer-element-csdl) 」および「[エンティティコンテナー](../entity-container.md)」を参照してください。|  
 |Entity Data Model (EDM)|格納される形式に関係なく、エンティティおよびリレーションシップとしてデータ構造を記述する一連の概念。<br /><br /> 詳細については、「 [Entity Data Model](../entity-data-model.md)」を参照してください。|  
 |Entity Framework|開発者がデータ ソースの論理スキーマにマップされた概念モデルを使用できるようにすることで、データ指向のソフトウェア アプリケーションの開発をサポートするテクノロジ セット。<br /><br /> 詳細については、「 [Entity Framework の概要](overview.md)」を参照してください。|  
@@ -50,28 +50,28 @@ ms.locfileid: "70854278"
 |マッピング仕様言語 (MSL)|概念モデルで定義された項目をストレージ モデルの項目に対応付ける XML ベースの言語。<br /><br /> 詳細については、「 [MSL 仕様](./language-reference/msl-specification.md)」を参照してください。|  
 |変更関数|データ ソースでデータを挿入、更新、および削除するために使用されるストアド プロシージャ。 これらの関数は Entity Framework 生成されたコマンドの代わりに使用されます。 変更関数は、ストレージ モデルの `Function` 要素で定義されます。 [ModificationFunctionMapping](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716778(v=vs.100))要素は、概念モデルで定義されているエンティティに対する挿入、更新、および削除の各操作に、これらの変更関数をマップします。|  
 |多重度|アソシエーションによって定義されているリレーションシップの両側に存在できるエンティティの数。 カーディナリティとも呼ばれます。<br /><br /> 詳細については、「 [End 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) 」および「[アソシエーション end](../association-end.md)」を参照してください。|  
-|Multiple-Entity-Sets-per-Type|1 つのエンティティ型を複数のエンティティ セットで定義できる機能。<br /><br /> 詳細については、「 [EntitySet 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entityset-element-csdl) 」および[「方法:型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738537(v=vs.100))ごとに複数のエンティティセットを含むモデルを定義します。|  
+|Multiple-Entity-Sets-per-Type|1 つのエンティティ型を複数のエンティティ セットで定義できる機能。<br /><br /> 詳細については、「 [EntitySet 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entityset-element-csdl) 」および「[方法: 型ごとに複数のエンティティセットを持つモデルを定義する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738537(v=vs.100))」を参照してください。|  
 |ナビゲーション プロパティ|アソシエーションによって定義されている別のエンティティ型とのリレーションシップを表すエンティティ型のプロパティ。 ナビゲーション プロパティは、アソシエーションのもう一方の End での複数要素の接続性に応じて、関連オブジェクトを <xref:System.Data.Objects.DataClasses.EntityCollection%601> または <xref:System.Data.Objects.DataClasses.EntityReference%601> として返すために使用されます。<br /><br /> 詳細については、「 [NavigationProperty 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#navigationproperty-element-csdl) 」および「[ナビゲーションプロパティ](../navigation-property.md)」を参照してください。|  
 |クエリ パス|オブジェクト クエリの実行時に返す関連オブジェクトを指定するパスの文字列表記。 クエリ パスは、<xref:System.Data.Objects.ObjectQuery%601.Include%2A> に対して <xref:System.Data.Objects.ObjectQuery%601> メソッドを呼び出すことによって定義されます。<br /><br /> 詳細については、「[関連オブジェクトの読み込み](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100))」を参照してください。|  
-|オブジェクト コンテキスト|概念モデルで定義したエンティティ コンテナーを表します。 基になるデータ ソースへの接続を含み、変更の追跡や ID 解決などのサービスを提供します。 オブジェクト コンテキストは、<xref:System.Data.Objects.ObjectContext> クラスまたは `DbContext` クラスのインスタンスで表されます。<br /><br /> `DbContext`は[Entity Framework 5.0](https://go.microsoft.com/fwlink/?LinkId=234900)の一部です。 Entity Framework 5.0 は .NET Framework の一部ではありませんが、.NET Framework 4.5 で構成されます。 Entity Framework 5.0 は、 [' Entity Framework '](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488)パッケージとして使用できます。 詳細については、「 [Entity Framework のリリースとバージョン管理](https://go.microsoft.com/fwlink/?LinkId=234899)」を参照してください。|  
+|オブジェクト コンテキスト|概念モデルで定義したエンティティ コンテナーを表します。 基になるデータ ソースへの接続を含み、変更の追跡や ID 解決などのサービスを提供します。 オブジェクト コンテキストは、<xref:System.Data.Objects.ObjectContext> クラスまたは `DbContext` クラスのインスタンスで表されます。<br /><br /> `DbContext` は[Entity Framework 5.0](https://go.microsoft.com/fwlink/?LinkId=234900)の一部です。 Entity Framework 5.0 は .NET Framework の一部ではありませんが、.NET Framework 4.5 で構成されます。 Entity Framework 5.0 は、 [' Entity Framework '](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488)パッケージとして使用できます。 詳細については、「 [Entity Framework のリリースとバージョン管理](https://go.microsoft.com/fwlink/?LinkId=234899)」を参照してください。|  
 |オブジェクト レイヤー|Entity Framework によって使用されるエンティティ型およびオブジェクト コンテキストの定義。|  
 |オブジェクト クエリ|データをオブジェクトとして返す概念モデルに対してオブジェクト コンテキスト内で実行されるクエリ。<br /><br /> 詳細については、「[オブジェクトクエリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))」を参照してください。|  
 |オブジェクト リレーショナル マッピング|リレーショナル データベースのデータをオブジェクト指向のソフトウェア アプリケーションで使用できるデータ型に変換する手法。<br /><br /> Entity Framework は、ストレージモデルで定義されているリレーショナルデータを、概念モデルで定義されているデータ型にマップすることによって、オブジェクトリレーショナルマッピングサービスを提供します。<br /><br /> 詳細については、「[モデリングとマッピング](modeling-and-mapping.md)」を参照してください。|  
 |オブジェクト サービス|アプリケーションコードが .NET Framework オブジェクトなどのエンティティを操作できるようにする、Entity Framework によって提供されるサービス。|  
 |永続化非依存オブジェクト|データ ストレージに関連するロジックが含まれていないオブジェクト。 POCO エンティティとも呼ばれます。|  
 |POCO|Plain Old CLR Object の略。 別のクラスから継承しないオブジェクト、またはインターフェイスを実装しないオブジェクト。|  
-|POCO エンティティ|または<xref:System.Data.Objects.DataClasses.EntityObject> <xref:System.Data.Objects.DataClasses.ComplexObject>から継承せず、Entity Framework インターフェイスを実装していない Entity Framework 内のエンティティ。 多くの場合、POCO エンティティは Entity Framework アプリケーションで使用する既存のドメインオブジェクトです。 このようなエンティティは、永続化非依存性をサポートしています。 詳細については、「 [POCO エンティティの操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))」を参照してください。|  
+|POCO エンティティ|<xref:System.Data.Objects.DataClasses.EntityObject> または <xref:System.Data.Objects.DataClasses.ComplexObject> から継承せず、Entity Framework インターフェイスを実装していない Entity Framework 内のエンティティ。 多くの場合、POCO エンティティは Entity Framework アプリケーションで使用する既存のドメインオブジェクトです。 このようなエンティティは、永続化非依存性をサポートしています。 詳細については、「 [POCO エンティティの操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))」を参照してください。|  
 |プロキシ オブジェクト|POCO クラスから派生し、変更の追跡と遅延読み込みをサポートするために Entity Framework によって生成されるオブジェクト。 詳細については、「 [POCO プロキシを作成するための要件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd468057(v=vs.100))」を参照してください。|  
 |参照制約|エンティティが他のエンティティと依存関係にあることを示す、概念モデルで定義された制約。 この制約は、依存エンティティのインスタンスが対応する主要エンティティのインスタンスなしでは存在できないことを意味します。<br /><br /> 詳細については[、「参照](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#referentialconstraint-element-csdl)[整合性制約](../referential-integrity-constraint.md)」を参照してください。|  
 |リレーションシップ|エンティティ間の論理的な関係。|  
 |ロール|リレーションシップのセマンティクスを明確にするためにアソシエーションの両方の `End` に付けられた名前。<br /><br /> 詳細については、「 [End 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) 」および「[アソシエーション end](../association-end.md)」を参照してください。|  
 |スカラー プロパティ|ストレージ モデルの単一のフィールドにマップされるエンティティのプロパティ。|  
 |自己追跡エンティティ|スカラー プロパティ、複合プロパティ、およびナビゲーション プロパティの変更を報告できる、テキスト テンプレート変換ツールキット (T4) から構築されるエンティティ。|  
-|単純型|概念モデルでプロパティを定義するために使用されるプリミティブ型。<br /><br /> 詳細については、「[概念モデルの型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl) 」および[「Entity Data Model」を参照してください。プリミティブデータ型](../entity-data-model-primitive-data-types.md)。|  
-|分割されたエンティティ|ストレージ モデルの 2 つの別個の型にマップされる 1 つのエンティティ型。<br /><br /> 詳細については、「[方法 :2つのテーブル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896233(v=vs.100))にマップされた単一のエンティティを含むモデルを定義します。|  
-|ストレージ モデル|リレーショナル データベースなど、サポートされているデータ ソースのデータの論理モデルの定義。 ストレージ モデルは、SSDL で .ssdl ファイルに定義されます。<br /><br /> 詳細については、「[モデリングとマッピング](modeling-and-mapping.md)」と「 [SSDL Specification](./language-reference/ssdl-specification.md)」を参照してください。|  
+|単純型|概念モデルでプロパティを定義するために使用されるプリミティブ型。<br /><br /> 詳細については、「[概念モデルの型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl) 」および「 [Entity Data Model: プリミティブデータ型](../entity-data-model-primitive-data-types.md)」を参照してください。|  
+|分割されたエンティティ|ストレージ モデルの 2 つの別個の型にマップされる 1 つのエンティティ型。<br /><br /> 詳細については、「[方法: 2 つのテーブルにマップされた単一のエンティティを持つモデルを定義](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896233(v=vs.100))する」を参照してください。|  
+|ストレージ モデル|リレーショナル データベースなど、サポートされているデータ ソースのデータの論理モデルの定義。 ストレージ モデルは、SSDL で .ssdl ファイルに定義されます。<br /><br /> 詳細については、「[モデリングとマッピング](modeling-and-mapping.md)」と「 [SSDL Specification](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec)」を参照してください。|  
 |.ssdl ファイル|SSDL で表現されたストレージ モデルを含む XML ファイル。|  
-|ストア スキーマ定義言語 (SSDL)|一般的にデータベース スキーマに対応するストレージ モデルのエンティティ型、アソシエーション、エンティティ コンテナー、エンティティ セット、およびアソシエーション セットの定義に使用される XML ベースの言語。<br /><br /> 詳細については、「 [SSDL Specification](./language-reference/ssdl-specification.md)」を参照してください。|  
+|ストア スキーマ定義言語 (SSDL)|一般的にデータベース スキーマに対応するストレージ モデルのエンティティ型、アソシエーション、エンティティ コンテナー、エンティティ セット、およびアソシエーション セットの定義に使用される XML ベースの言語。<br /><br /> 詳細については、「 [SSDL Specification](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec)」を参照してください。|  
 |table-per-hierarchy|あらゆる型の属性を 1 つのテーブル内の階層構造に含める、データベースにおける型階層のモデリング手法。|  
 |table-per-type|一対一リレーションシップを持った複数のテーブルを使用して各種の型をモデリングする、データベースにおける型階層のモデリング手法。|  
   

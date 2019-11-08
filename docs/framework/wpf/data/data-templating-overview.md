@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: d088342a08076c69b34f6c3d39dce076cb3890d4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 377ee76e7e3537e9cae010189306611a503acbed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460041"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740626"
 ---
 # <a name="data-templating-overview"></a>データ テンプレートの概要
 WPF のデータ テンプレート モデルは、データのプレゼンテーションを定義する優れた柔軟性を提供します。 WPF のコントロールには、データ プレゼンテーションのカスタマイズをサポートする組み込み機能があります。 このトピックでは、まず、<xref:System.Windows.DataTemplate> を定義する方法を示します。その後、カスタムロジックに基づいてテンプレートを選択したり、階層データの表示をサポートしたりするなど、その他のデータテンプレート機能を紹介します。  
@@ -54,7 +54,7 @@ WPF のデータ テンプレート モデルは、データのプレゼンテ�
   
  ![データテンプレートのサンプルのスクリーンショット](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
- ただし、これは制限があり、柔軟性ではありません。 また、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] データにバインドしている場合、`ToString` をオーバーライドすることはできません。  
+ ただし、これは制限があり、柔軟性ではありません。 また、XML データにバインドしている場合は、`ToString`をオーバーライドすることはできません。  
   
 <a name="defining_simple_datatemplate"></a>   
 ### <a name="defining-a-simple-datatemplate"></a>簡単な DataTemplate の定義  
@@ -62,7 +62,7 @@ WPF のデータ テンプレート モデルは、データのプレゼンテ�
   
  [!code-xaml[DataTemplatingIntro_snip#Inline](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#inline)]  
   
- このトピックの例の基になるデータは、CLR オブジェクトのコレクションです。 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] のデータにバインドしている場合は、基本的な概念は同じですが、構文がわずかに違います。 たとえば、`Path=TaskName`ではなく、<xref:System.Windows.Data.Binding.XPath%2A> を `@TaskName` に設定します (`TaskName` が [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ノードの属性である場合)。  
+ このトピックの例の基になるデータは、CLR オブジェクトのコレクションです。 XML データにバインドする場合、基本的な概念は同じですが、構文の違いはわずかです。 たとえば、`Path=TaskName`ではなく、<xref:System.Windows.Data.Binding.XPath%2A> を `@TaskName` に設定します (`TaskName` が XML ノードの属性である場合)。  
   
  <xref:System.Windows.Controls.ListBox> は次のようになります。  
   

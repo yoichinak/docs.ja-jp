@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 02a70e65cd53a8998395987770cd32efc82293d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ec979240b8fead10522817b77eef23e29409411
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459599"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740695"
 ---
 # <a name="wpf-architecture"></a>WPF アーキテクチャ
 このトピックでは、Windows Presentation Foundation (WPF) クラス階層のガイドツアーについて説明します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の主なサブシステムの大部分について説明し、それらの相互作用について説明します。 また、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のアーキテクトによって行われたいくつかの選択肢についても詳しく説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "73459599"
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] での同時実行については、ディスパッチャーとスレッドアフィニティの2つの主要概念を理解しておく必要があります。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の設計フェーズでは、目標は実行の1つのスレッドに移動しましたが、非スレッド "関連付け済み" モデルに移行することでした。 スレッドアフィニティは、コンポーネントが実行中のスレッドの id を使用して何らかの種類の状態を格納するときに発生します。 最も一般的な形式は、スレッドローカルストア (TLS) を使用して状態を格納することです。 スレッドアフィニティでは、実行の各論理スレッドが、オペレーティングシステムの1つの物理スレッドによって所有されている必要があります。これは、メモリを集中的に使用する可能性があります。 最終的には、WPF のスレッドモデルは、スレッドアフィニティを使用したシングルスレッド実行の既存の User32.dll スレッドモデルと同期した状態に保たれます。 これの主な理由は相互運用性でした。 [!INCLUDE[TLA2#tla_ole2.0](../../../../includes/tla2sharptla-ole2-0-md.md)]、クリップボード、Internet Explorer では、すべてシングルスレッドアフィニティ (STA) の実行が必要です。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の設計フェーズでは、目標は実行の1つのスレッドに移動しましたが、非スレッド "関連付け済み" モデルに移行することでした。 スレッドアフィニティは、コンポーネントが実行中のスレッドの id を使用して何らかの種類の状態を格納するときに発生します。 最も一般的な形式は、スレッドローカルストア (TLS) を使用して状態を格納することです。 スレッドアフィニティでは、実行の各論理スレッドが、オペレーティングシステムの1つの物理スレッドによって所有されている必要があります。これは、メモリを集中的に使用する可能性があります。 最終的には、WPF のスレッドモデルは、スレッドアフィニティを使用したシングルスレッド実行の既存の User32.dll スレッドモデルと同期した状態に保たれます。 これの主な理由は相互運用性でした。 OLE 2.0、クリップボード、Internet Explorer はすべて、シングルスレッドアフィニティ (STA) の実行を必要とします。  
   
  STA スレッドを持つオブジェクトがある場合は、スレッド間で通信を行い、正しいスレッドであることを検証する方法が必要です。 ここでは、ディスパッチャーの役割があります。 ディスパッチャーは、優先順位の高い複数のキューを持つ基本的なメッセージディスパッチシステムです。 メッセージの例としては、未加工の入力通知 (マウス移動)、フレームワーク関数 (レイアウト)、ユーザーコマンド (このメソッドの実行) などがあります。 <xref:System.Windows.Threading.DispatcherObject>から派生することによって、STA の動作を持つ CLR オブジェクトを作成し、作成時にディスパッチャーへのポインターを与えます。  
   

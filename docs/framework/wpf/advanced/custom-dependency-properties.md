@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 00596911cf603ae9615eb64d0aedefe90c2520bc
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e3ac7207a5ef05b94e97f005ecd17d5078669a4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458993"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740885"
 ---
 # <a name="custom-dependency-properties"></a>カスタム依存関係プロパティ
 
@@ -35,7 +35,7 @@ ms.locfileid: "73458993"
 
 ## <a name="what-is-a-dependency-property"></a>依存関係プロパティとは
 
-それ以外の場合は、共通言語ランタイム (CLR) プロパティを有効にして、スタイル設定、データバインディング、継承、アニメーション、および既定値をサポートすることができます。これは、依存関係プロパティとして実装することによって行います。 依存関係プロパティは、<xref:System.Windows.DependencyProperty.Register%2A> メソッド (または <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>) を呼び出すことによって [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロパティシステムに登録され、<xref:System.Windows.DependencyProperty> 識別子フィールドによってサポートされるプロパティです。 依存関係プロパティは <xref:System.Windows.DependencyObject> 型によってのみ使用できますが、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] クラス階層では非常に高い <xref:System.Windows.DependencyObject> であるため、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] で使用できるクラスの大部分は依存関係プロパティをサポートできます。 依存関係プロパティと、これらをこの [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] で説明するために使用されている用語と規則の詳細については、「[依存関係プロパティの概要](dependency-properties-overview.md)」を参照してください。
+それ以外の場合は、共通言語ランタイム (CLR) プロパティを有効にして、スタイル設定、データバインディング、継承、アニメーション、および既定値をサポートすることができます。これは、依存関係プロパティとして実装することによって行います。 依存関係プロパティは、<xref:System.Windows.DependencyProperty.Register%2A> メソッド (または <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>) を呼び出すことによって [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロパティシステムに登録され、<xref:System.Windows.DependencyProperty> 識別子フィールドによってサポートされるプロパティです。 依存関係プロパティは <xref:System.Windows.DependencyObject> 型によってのみ使用できますが、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] クラス階層では非常に高い <xref:System.Windows.DependencyObject> であるため、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] で使用できるクラスの大部分は依存関係プロパティをサポートできます。 依存関係プロパティの詳細、およびこの SDK での記述に使用される用語と規則の詳細については、「[依存関係プロパティの概要](dependency-properties-overview.md)」を参照してください。
 
 <a name="example_dp"></a>
 

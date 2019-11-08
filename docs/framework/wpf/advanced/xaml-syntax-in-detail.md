@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: aa535c36b578e000ae6ddd7534838b07b0a5d756
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10bd924664a469be26174fadf3892ee56aa33856
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459990"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740645"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 構文の詳細
 このトピックでは、XAML 構文の要素について説明するために使用される用語を定義します。 これらの用語は、このドキュメントの残りの部分で頻繁に使用されます。 WPF ドキュメントについては、特に、xaml を使用する他のフレームワークの場合と、xaml 言語サポートによってシステム .Xaml レベルで有効になっている基本的な XAML 概念の両方で使用されます。 このトピックでは、「 [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)」で紹介した基本的な用語について説明します。  
@@ -52,7 +52,7 @@ ms.locfileid: "73459990"
 #### <a name="members-of-types-and-class-inheritance"></a>型のメンバーとクラスの継承  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 型の XAML メンバーとして表示されるプロパティとイベントは、多くの場合、基本型から継承されます。 たとえば、次の例を考えてみます。 `<Button Background="Blue" .../>`。 クラス定義、リフレクション結果、またはドキュメントを参照する場合、<xref:System.Windows.Controls.Control.Background%2A> プロパティは、<xref:System.Windows.Controls.Button> クラスですぐに宣言されたプロパティではありません。 代わりに、<xref:System.Windows.Controls.Control.Background%2A> は基本 <xref:System.Windows.Controls.Control> クラスから継承されます。  
   
- XAML 要素 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のクラス継承動作は、スキーマが適用される XML マークアップの解釈から大幅に逸脱します。 クラスの継承は複雑になる可能性があります。特に、中間の基底クラスが抽象型の場合、またはインターフェイスが関係している場合に発生します。 これは、XAML 要素とその使用可能な属性のセットが、DTD や XSD 形式などの [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] プログラミングに通常使用されるスキーマ型を正確かつ完全に表現することが困難であることの1つの理由です。 もう1つの理由は、XAML 言語自体の機能拡張および型マッピング機能によって、許容される型とメンバーのすべての固定表現が完全に排除されることです。  
+ XAML 要素 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のクラス継承動作は、スキーマが適用される XML マークアップの解釈から大幅に逸脱します。 クラスの継承は複雑になる可能性があります。特に、中間の基底クラスが抽象型の場合、またはインターフェイスが関係している場合に発生します。 これは、XAML 要素とその使用可能な属性のセットが、DTD や XSD 形式などの XML プログラミングで通常使用されるスキーマ型を正確かつ完全に表現することが困難な理由の1つです。 もう1つの理由は、XAML 言語自体の機能拡張および型マッピング機能によって、許容される型とメンバーのすべての固定表現が完全に排除されることです。  
   
 <a name="object_element_syntax"></a>   
 ## <a name="object-element-syntax"></a>オブジェクト要素構文  
