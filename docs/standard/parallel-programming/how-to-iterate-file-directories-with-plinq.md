@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5da70cdca16c83b33e525aea588c02c696702ac7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 90afc767e422515c6122b8a6ef0e63ffc07caf3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929153"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091369"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>方法: PLINQ を使用してファイル ディレクトリを反復処理する
 この例では、ファイル ディレクトリに対する操作を簡単に並列化する 2 とおりの方法を示します。 最初のクエリでは、<xref:System.IO.Directory.GetFiles%2A> メソッドを使用して、ディレクトリとすべてのサブディレクトリ内のファイル名の配列を作成します。 配列全体の値が設定されるまでこのメソッドから制御が戻らないため、操作の開始時に待機時間が発生する可能性があります。 ただし、配列が作成されたら、PLINQ は配列を迅速に並列処理できます。  

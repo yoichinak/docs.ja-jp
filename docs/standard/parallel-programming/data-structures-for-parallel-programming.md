@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87ea2cbb46aca87af15b2c12321322c1b048df56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a2271feae78100940b4ecac3c42c9bfefa7e1769
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625586"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123147"
 ---
 # <a name="data-structures-for-parallel-programming"></a>並列プログラミング向けのデータ構造
 .NET Framework バージョン 4 では、同時実行コレクション クラスのセット、軽量な同期プリミティブ、遅延初期化用の型など、並列プログラミングに役立つ複数の新しい型が導入されています。 これらの型は、タスク並列ライブラリや PLINQ などの任意のマルチスレッド アプリケーション コードで使うことができます。  

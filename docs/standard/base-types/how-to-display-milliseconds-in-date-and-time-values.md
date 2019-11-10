@@ -12,14 +12,12 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 135459f84cee0a3c356882b193ff561befb43145
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 01a34289b4845048438a3d3fd9263d1dcd1028c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963360"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138861"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>方法: 日付および時刻の値のミリ秒部分を表示する
 <xref:System.DateTime.ToString?displayProperty=nameWithType> などの既定の日付および時刻書式指定メソッドは時刻値の時間、分、秒を含めますが、ミリ秒の部分は含めません。 ここでは、書式設定された日付および時刻文字列の中にミリ秒部分を含める方法について説明します。  
@@ -54,4 +52,4 @@ ms.locfileid: "69963360"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [カスタム日時形式文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

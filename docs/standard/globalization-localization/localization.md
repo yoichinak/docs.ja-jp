@@ -14,14 +14,12 @@ helpviewer_keywords:
 - localization [.NET Framework], about localization
 - localizing resources
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79ec24d16b43bd8e1312b3425e618adf163edd24
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 89851c42570f301bee8a3eca744eb5d069347d4e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834024"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120869"
 ---
 # <a name="localization"></a>ローカリゼーション
 

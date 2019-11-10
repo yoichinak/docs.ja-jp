@@ -3,12 +3,12 @@ title: C# における数値 - C# の概要に関するチュートリアル
 description: 数値型とそのプロパティ、およびメソッドを詳しく見ていくことで C# について学習します。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: b392682a245101e37a182cb92d36ccb1dd34b13e
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834100"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039703"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\# で整数と浮動小数点数を操作する
 
@@ -40,10 +40,16 @@ Console.WriteLine(c);
 まずは、上記の各種演算を実行してみます。 `c` の値を記述した行の後に、次の数行を追加します。
 
 ```csharp
+
+// subtraction
 c = a - b;
 Console.WriteLine(c);
+
+// multiplication
 c = a * b;
 Console.WriteLine(c);
+
+// division
 c = a / b;
 Console.WriteLine(c);
 ```
@@ -69,12 +75,20 @@ namespace NumbersInCSharp
         {
             int a = 18;
             int b = 6;
+            
+            // addition
             int c = a + b;
             Console.WriteLine(c);
+            
+            // subtraction
             c = a - b;
             Console.WriteLine(c);
+            
+            // multiplication
             c = a * b;
             Console.WriteLine(c);
+            
+            // division
             c = a / b;
             Console.WriteLine(c);
         }
@@ -153,12 +167,20 @@ namespace NumbersInCSharp
         {
             int a = 18;
             int b = 6;
+            
+            // addition
             int c = a + b;
             Console.WriteLine(c);
+            
+            // subtraction
             c = a - b;
             Console.WriteLine(c);
+            
+            // multiplication
             c = a * b;
             Console.WriteLine(c);
+            
+            // division
             c = a / b;
             Console.WriteLine(c);
         }
@@ -320,8 +342,6 @@ decimal 型を使用した演算では、小数点の右側の桁数がより多
 
 C# の数値の詳細については、次のトピックで学習できます。
 
-- [整数型](../../language-reference/builtin-types/integral-numeric-types.md)
-- [浮動小数点型の一覧表](../../language-reference/builtin-types/floating-point-numeric-types.md)
-- [組み込み型の一覧表](../../language-reference/keywords/built-in-types-table.md)
-- [暗黙的な数値変換の一覧表](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-- [明示的な数値変換の一覧表](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [整数数値型](../../language-reference/builtin-types/integral-numeric-types.md)
+- [浮動小数点数値型](../../language-reference/builtin-types/floating-point-numeric-types.md)
+- [組み込みの数値変換](../../language-reference/builtin-types/numeric-conversions.md)

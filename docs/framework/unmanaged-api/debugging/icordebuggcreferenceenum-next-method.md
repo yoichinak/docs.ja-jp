@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 91b1345c-a94f-4ef8-9696-3823d06c6d05
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ef4ced1abd5b37af204ab3511a7cf8259303e8c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 43408486fec9cd50222eed08ec2d3397bc11bc18
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755555"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134616"
 ---
 # <a name="icordebuggcreferenceenumnext-method"></a>ICorDebugGCReferenceEnum::Next メソッド
-指定した数を取得[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)ガベージ コレクトされるオブジェクトに関する情報が含まれているインスタンス。  
+ガベージコレクトされるオブジェクトに関する情報を格納している、指定した数の[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)インスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,18 +36,18 @@ HRESULT Next(
   
 ## <a name="parameters"></a>パラメーター  
  celt  
- [in]取得するルートの数。  
+ から取得するルートの数。  
   
- ルート  
- [out]それぞれが指すポインターの配列を[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)ガベージ コレクトされるオブジェクトのルートを表すオブジェクト。  
+ ca  
+ 入出力ポインターの配列。各ポインターは、ガベージコレクトされるオブジェクトのルートを表す[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)オブジェクトを指します。  
   
  pceltFetched  
- [out]数へのポインター [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)で実際に返されるオブジェクト`roots`します。 `celt` が 1 の場合、この値は`null` になることがあります。  
+ 入出力`roots`に実際に返された[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)オブジェクトの数へのポインター。 `celt` が 1 の場合、この値は`null` になることがあります。  
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

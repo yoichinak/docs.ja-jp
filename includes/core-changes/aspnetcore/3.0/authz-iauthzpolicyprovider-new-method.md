@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: a16d443a37fb0bb5f6bdc4a39e7dcb4f91c54ead
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 74b989a2413d2192f7cf5208e400eaed879ea096
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394244"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198482"
 ---
 ### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>Authorization:IAuthorizationPolicyProvider の実装には新しいメソッドが必要です
 
 ASP.NET Core 3.0 では、`IAuthorizationPolicyProvider` に新しい `GetFallbackPolicyAsync` メソッドが追加されました。 このフォールバック ポリシーは、ポリシーが指定されていない場合に、承認ミドルウェアによって使用されます。
 
-詳細については、[aspnet/AspNetCore#9759](https://github.com/aspnet/AspNetCore/pull/9759) を参照してください。 
+詳細については、[aspnet/AspNetCore#9759](https://github.com/aspnet/AspNetCore/pull/9759) を参照してください。
 
 #### <a name="version-introduced"></a>導入されたバージョン
 

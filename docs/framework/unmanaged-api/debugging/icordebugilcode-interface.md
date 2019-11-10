@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 51c4de0c-3813-4142-be25-a85bb84efb90
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 279a87039c4cbc12c7ec5f734928c851185280f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8ca47f071288ce50cf6008aa28f66d0b7dbcbcf8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175722"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138644"
 ---
 # <a name="icordebugilcode-interface"></a>ICorDebugILCode インターフェイス
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -30,8 +28,8 @@ ms.locfileid: "59175722"
 |------------|-----------------|  
 |[GetEHClauses メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)|この IL のために定義された例外処理 (EH) 句のリストへのポインターを返します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

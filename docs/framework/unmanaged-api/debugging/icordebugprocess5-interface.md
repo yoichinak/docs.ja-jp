@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30a39d79-1f10-4328-9c5d-094ed824e2ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31ecea4857dabc55e8acd3c22a025895a686efcd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 64fb60abf4f5730dbc15204dbc034b08cacefab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931087"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121247"
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5 インターフェイス
 は、アプリケーションインターフェイスを拡張して、マネージヒープへのアクセスをサポートし、マネージオブジェクトのガベージコレクションに関する情報を提供し、デバッガーがアプリケーションのローカルネイティブイメージキャッシュからイメージを読み込むかどうかを判断します。  
@@ -43,13 +41,13 @@ ms.locfileid: "69931087"
 |[GetTypeID メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypeid-method.md)|指定したアドレスにあるオブジェクトの型識別子を取得します。|  
 |[GetTypeLayout メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypelayout-method.md)|型識別子に基づいて、メモリ内のオブジェクトのレイアウトに関する情報を取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このインターフェイスは、ICorDebugProcess、ICorDebugProcess2、および [ICorDebugProcess3](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md) の各インターフェイスを論理的に拡張します。  
   
 > [!NOTE]
 > このインターフェイスは、別のコンピューターまたは別のプロセスからのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug .idl、CorDebug. h  

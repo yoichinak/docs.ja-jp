@@ -8,18 +8,16 @@ helpviewer_keywords:
 - strong-named assemblies, delaying assembly signing
 - partial assembly signing
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: e7679520e246ab3eda03e6f0e0d092c7d09f1845
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 75c86c49f4d471452a7e8f56856d5437e84df307
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991317"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084338"
 ---
 # <a name="delay-sign-an-assembly"></a>アセンブリへの遅延署名
 

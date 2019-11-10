@@ -2,19 +2,17 @@
 title: COR_PRF_HIGH_MONITOR 列挙型
 ms.date: 04/10/2018
 ms.assetid: 3ba543d8-15e5-4322-b6e7-1ebfc92ed7dd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8cbc66ef1eb5048d2c708a615a99ea363d29540f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 03fa33e0e2b4175d9f82bc6021731d58805da258
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752176"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123996"
 ---
-# <a name="corprfhighmonitor-enumeration"></a>COR_PRF_HIGH_MONITOR 列挙型
+# <a name="cor_prf_high_monitor-enumeration"></a>COR_PRF_HIGH_MONITOR 列挙型
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
   
- :Seteventmask2 フラグを提供、 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列挙型を指定できる、プロファイラー、 [icorprofilerinfo 5::seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)メソッドが読み込まれます。  
+ プロファイラーが読み込み時に[ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)メソッドに対して指定できる[COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列挙に含まれるフラグだけでなく、フラグも提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,28 +41,28 @@ typedef enum {
 |メンバー|説明|  
 |------------|-----------------|  
 |`COR_PRF_HIGH_MONITOR_NONE`|フラグが設定されていません。|  
-|`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|コントロール、 [icorprofilercallback 6::getassemblyreference](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) CLR アセンブリ参照クロージャのウォーク中にアセンブリ参照を追加するためのコールバック。|  
-|`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`|コントロール、 [ICorProfilerCallback7::ModuleInMemorySymbolsUpdated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md)メモリ内のモジュールに関連付けられているシンボルのストリームを更新するためのコールバック。|  
-|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|コントロール、 [ICorProfilerCallback9::DynamicMethodUnloaded](icorprofilercallback9-dynamicmethodunloaded-method.md)動的メソッドのガベージがされた時点を示すためのコールバックが収集され、アンロードします。 <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|
-|`COR_PRF_HIGH_DISABLE_TIERED_COMPILATION`|.NET core 3.0 と以降のバージョンのみ。無効にします[コンパイルを階層化](../../../core/whats-new/dotnet-core-3-0.md)プロファイラーの。|
-|`COR_PRF_HIGH_BASIC_GC`|.NET core 3.0 と以降のバージョンのみ。GC のプロファイリング オプションと比較して軽量の提供[ `COR_PRF_MONITOR_GC`](cor-prf-monitor-enumeration.md)します。 のみを制御、 [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)、 [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)、および[GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md)コールバック。 異なり、`COR_PRF_MONITOR_GC`フラグ、`COR_PRF_HIGH_BASIC_GC`は同時実行ガベージ コレクションを無効になりません。|
-|`COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS`|.NET core 3.0 と以降のバージョンのみ。により、 [MovedReferences](icorprofilercallback-movedreferences-method.md)と[MovedReferences2](icorprofilercallback4-movedreferences2-method.md)圧縮のみを Gc のコールバック。|
-|`COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED`|.NET core 3.0 と以降のバージョンのみ。ような[ `COR_PRF_MONITOR_OBJECT_ALLOCATED` ](cor-prf-monitor-enumeration.md)、オブジェクト割り当てのため、大きなオブジェクト ヒープ (LOH) のみで情報を提供します。|
-|`COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE`|プロファイルが強化されたイメージを必要とするすべての `COR_PRF_HIGH_MONITOR` フラグを表しています。 対応する、`COR_PRF_REQUIRE_PROFILE_IMAGE`フラグ、 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列挙体。|  
+|`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|CLR アセンブリ参照クロージャウォーク中にアセンブリ参照を追加するための[ICorProfilerCallback6:: GetAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)コールバックを制御します。|  
+|`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`|メモリ内モジュールに関連付けられているシンボルストリームに更新するための[ICorProfilerCallback7:: Moduleinmemorysymbol supcallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md)を制御します。|  
+|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|動的メソッドがガベージコレクションおよびアンロードされたことを示す[ICorProfilerCallback9::D ynamicmethodunloaded](icorprofilercallback9-dynamicmethodunloaded-method.md)コールバックを制御します。 <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|
+|`COR_PRF_HIGH_DISABLE_TIERED_COMPILATION`|.NET Core 3.0 以降のバージョンのみ: プロファイラーの階層化された[コンパイル](../../../core/whats-new/dotnet-core-3-0.md)を無効にします。|
+|`COR_PRF_HIGH_BASIC_GC`|.NET Core 3.0 以降のバージョンのみ: [`COR_PRF_MONITOR_GC`](cor-prf-monitor-enumeration.md)と比較して、軽量の GC プロファイルオプションを提供します。 [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)、 [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)、および[GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md)の各コールバックのみを制御します。 `COR_PRF_MONITOR_GC` フラグとは異なり、`COR_PRF_HIGH_BASIC_GC` は同時実行ガベージコレクションを無効にしません。|
+|`COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS`|.NET Core 3.0 以降のバージョンのみ: Gc を圧縮するために、 [Movedreferences](icorprofilercallback-movedreferences-method.md)と[MovedReferences2](icorprofilercallback4-movedreferences2-method.md)コールバックを有効にします。|
+|`COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED`|.NET Core 3.0 以降のバージョンのみ: [`COR_PRF_MONITOR_OBJECT_ALLOCATED`](cor-prf-monitor-enumeration.md)に似ていますが、ラージオブジェクトヒープ (LOH) に対してのみオブジェクト割り当てに関する情報を提供します。|
+|`COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE`|プロファイルが強化されたイメージを必要とするすべての `COR_PRF_HIGH_MONITOR` フラグを表しています。 これは、 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列挙体の `COR_PRF_REQUIRE_PROFILE_IMAGE` フラグに対応します。|  
 |`COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH`|プロファイラーが実行中のアプリケーションに割り当てられた後に設定することが可能な、`COR_PRF_HIGH_MONITOR` のすべてのフラグを表します。|  
 |`COR_PRF_HIGH_MONITOR_IMMUTABLE`|初期化中にのみ設定可能な、`COR_PRF_HIGH_MONITOR` のすべてのフラグを表します。 他の場所でこれらのフラグを変更しようとすると、エラーを表す `HRESULT` 値が生じます。|  
   
 ## <a name="remarks"></a>Remarks  
- `COR_PRF_HIGH_MONITOR`でフラグを使用して、`pdwEventsHigh`のパラメーター、 [icorprofilerinfo 5::geteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)と[icorprofilerinfo 5::seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)メソッド。  
+ `COR_PRF_HIGH_MONITOR` フラグは、 [ICorProfilerInfo5:: GetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)メソッドと[ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)メソッドの `pdwEventsHigh` パラメーターと共に使用されます。  
   
-.NET Framework 4.6.1 の値以降では、`COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH`を 0 から変更`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`(0x00000002)。 以降、.NET Framework 4.7.2 では、その値がから変更された`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`に`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`します。   
+.NET Framework 4.6.1 以降では、`COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH` の値が0から `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` (0x00000002) に変更されました。 .NET Framework 4.7.2 以降では、その値が `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` から `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`に変更されました。   
 
-`COR_PRF_HIGH_MONITOR_IMMUTABLE` 初期化中にのみ設定可能なすべてのフラグを表すビットマスクを指定するためのものです。 結果、失敗した、他の場所でこれらのフラグのいずれかを変更しようとしています。`HRESULT`します。
+`COR_PRF_HIGH_MONITOR_IMMUTABLE` は、初期化中にのみ設定できるすべてのフラグを表すビットマスクとして使用することを目的としています。 これらのフラグを他の場所で変更しようとすると、失敗した `HRESULT`になります。
 
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

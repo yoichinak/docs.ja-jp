@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: a5ccd0e9e0e3e5bedad06a619be115c362b38e0d
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 7d101e72a94ec1fecf44d4c883efb4f74e6d1d88
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392158"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739203"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 
@@ -74,7 +74,7 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
 
 .NET で型システムを使用する場合は、次の 2 つの基本事項を理解しておく必要があります。
 
-- 継承の原則がサポートされています。 他の型から型を派生させることができます。派生元の型は "*基本型*" と呼ばれます。 派生した型は、基本型のメソッド、プロパティ、およびその他のメンバーを (若干の制限付きで) 継承します。 基本型もなんらかの他の型から派生できます。この場合、派生した型はその継承階層内の両方の基本型のメンバーを継承します。 <xref:System.Int32?displayProperty=nameWithType> (C# のキーワードは [int](../../language-reference/builtin-types/integral-numeric-types.md)) などの組み込み数値型を含むすべての型は、最終的に <xref:System.Object?displayProperty=nameWithType> (C# のキーワードは [object](../../language-reference/keywords/object.md)) という単一の基本型から派生します。 この一元化された型階層は、[共通型システム](../../../standard/base-types/common-type-system.md) (CTS) と呼ばれます。 C# での継承の詳細については、「[継承](../classes-and-structs/inheritance.md)」を参照してください。
+- 継承の原則がサポートされています。 他の型から型を派生させることができます。派生元の型は "*基本型*" と呼ばれます。 派生した型は、基本型のメソッド、プロパティ、およびその他のメンバーを (若干の制限付きで) 継承します。 基本型もなんらかの他の型から派生できます。この場合、派生した型はその継承階層内の両方の基本型のメンバーを継承します。 <xref:System.Int32?displayProperty=nameWithType> (C# のキーワードは [int](../../language-reference/builtin-types/integral-numeric-types.md)) などの組み込み数値型を含むすべての型は、最終的に <xref:System.Object?displayProperty=nameWithType> (C# のキーワードは [object](../../language-reference/builtin-types/reference-types.md)) という単一の基本型から派生します。 この一元化された型階層は、[共通型システム](../../../standard/base-types/common-type-system.md) (CTS) と呼ばれます。 C# での継承の詳細については、「[継承](../classes-and-structs/inheritance.md)」を参照してください。
 
 - CTS の各型は、"*値型*" または "*参照型*" として定義されます。 これは、.NET クラス ライブラリのすべてのカスタムの型や、ユーザーが独自に定義した型にも当てはまります。 [struct](../../language-reference/keywords/struct.md) キーワードを使用して定義した型は値型であり、すべての組み込み数値型は `structs` です。 [class](../../language-reference/keywords/class.md) キーワードを使用して定義した型は、参照型です。 参照型と値型では、コンパイル時の規則や実行時の動作が異なります。
 
@@ -126,7 +126,7 @@ char c = 'Z';
 
 ### <a name="reference-types"></a>参照型
 
-[class](../../language-reference/keywords/class.md)、[delegate](../../language-reference/keywords/delegate.md)、配列、または [interface](../../language-reference/keywords/interface.md) として定義された型は、"*参照型*" です。 参照型の変数を宣言した場合、実行時には、[new](../../language-reference/operators/new-operator.md) 演算子によってオブジェクトが明示的に作成されるまで、この変数には [null](../../language-reference/keywords/null.md) が格納されます。または、次の例に示すように `new` を使用して、別の場所で作成されたオブジェクトを割り当てることもできます。
+[class](../../language-reference/keywords/class.md)、[delegate](../../language-reference/builtin-types/reference-types.md)、配列、または [interface](../../language-reference/keywords/interface.md) として定義された型は、"*参照型*" です。 参照型の変数を宣言した場合、実行時には、[new](../../language-reference/operators/new-operator.md) 演算子によってオブジェクトが明示的に作成されるまで、この変数には [null](../../language-reference/keywords/null.md) が格納されます。または、次の例に示すように `new` を使用して、別の場所で作成されたオブジェクトを割り当てることもできます。
 
 ```csharp
 MyClass mc = new MyClass();
@@ -166,7 +166,7 @@ stringList.Add("String example");
 stringList.Add(4);
 ```
 
-型パラメーターを使用することで、同じクラスを再利用して任意の型の要素を格納できます。このとき、各要素を[オブジェクト](../../language-reference/keywords/object.md)に変換する必要はありません。 ジェネリック コレクション クラスが "*厳密に型指定されたコレクション*" と呼ばれるのは、コレクションの要素の固有の型をコンパイラが認識しているためで、たとえば、前の例の `stringList` オブジェクトに整数を追加しようとすると、コンパイル時にエラーが発生します。 詳細については、「[ジェネリック](../generics/index.md)」を参照してください。
+型パラメーターを使用することで、同じクラスを再利用して任意の型の要素を格納できます。このとき、各要素を[オブジェクト](../../language-reference/builtin-types/reference-types.md)に変換する必要はありません。 ジェネリック コレクション クラスが "*厳密に型指定されたコレクション*" と呼ばれるのは、コレクションの要素の固有の型をコンパイラが認識しているためで、たとえば、前の例の `stringList` オブジェクトに整数を追加しようとすると、コンパイル時にエラーが発生します。 詳細については、「[ジェネリック](../generics/index.md)」を参照してください。
 
 ## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>暗黙の型、匿名型、および Null 許容値型
 
@@ -174,7 +174,7 @@ stringList.Add(4);
 
 場合によっては、メソッドの境界を越えて格納したり受け渡したりする予定のない単純な一連の関連値に名前付きの型を作成するのは便利ではないこともあります。 このような場合は、"*匿名型*" を作成できます。 詳細については、「[匿名型](../classes-and-structs/anonymous-types.md)」を参照してください。
 
-値型には、通常、[null](../../language-reference/keywords/null.md) 値を割り当てることができません。 しかし、型の後ろに `?` を付けることによって、null 値を設定できる値型を作成できます。 たとえば、`int?` は、[null](../../language-reference/keywords/null.md) 値も設定できる `int` 型です。 Null 許容値型は一般的な構造体型 <xref:System.Nullable%601?displayProperty=nameWithType> のインスタンスです。 Null 許容値型は、数値が null になる可能性のあるデータベースとの間でデータを受け渡しする場合に、特に便利です。 詳細については、「[Null 許容値型](../nullable-types/index.md)」を参照してください。
+値型には、通常、[null](../../language-reference/keywords/null.md) 値を割り当てることができません。 しかし、型の後ろに `?` を付けることによって、null 値を設定できる値型を作成できます。 たとえば、`int?` は、[null](../../language-reference/keywords/null.md) 値も設定できる `int` 型です。 Null 許容値型は一般的な構造体型 <xref:System.Nullable%601?displayProperty=nameWithType> のインスタンスです。 Null 許容値型は、数値が null になる可能性のあるデータベースとの間でデータを受け渡しする場合に、特に便利です。 詳細については、「[Null 許容値型](../../language-reference/builtin-types/nullable-value-types.md)」を参照してください。
 
 ## <a name="related-sections"></a>関連項目
 

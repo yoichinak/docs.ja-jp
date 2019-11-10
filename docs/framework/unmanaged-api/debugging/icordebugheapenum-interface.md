@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99cbc1eb-d539-4f76-a0d8-b93348112f14
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79ef77e52e14fede9949121e7ec4575d10b820c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8d1948a7d0ff23410ba8670628424a4067fb47d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775584"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138485"
 ---
 # <a name="icordebugheapenum-interface"></a>ICorDebugHeapEnum インターフェイス
 マネージド ヒープのオブジェクトの列挙子を提供します。 このインターフェイスは、ICorDebugEnum インターフェイスのサブクラスです。  
@@ -30,19 +28,19 @@ ms.locfileid: "61775584"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)|指定した数を取得[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)マネージ ヒープ上のオブジェクトに関する情報が含まれているインスタンス。|  
+|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)|マネージヒープ上のオブジェクトに関する情報を格納している、指定した数の[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)インスタンスを取得します。|  
   
-## <a name="remarks"></a>Remarks  
- `ICorDebugHeapEnum` ICorDebugEnum インターフェイスを実装するインターフェイス。  
+## <a name="remarks"></a>コメント  
+ `ICorDebugHeapEnum` インターフェイスは、ICorDebugEnum インターフェイスを実装します。  
   
- `ICorDebugHeapEnum`インスタンスには、 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)インスタンスを呼び出すことによって、 [icordebugprocess 5::enumerateheap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md)メソッド。 各[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)コレクション内のインスタンスが、ヒープ上のライブ オブジェクトまたはオブジェクトでルートがありませんが、ガベージ コレクターによって収集されていないオブジェクトのいずれかを表します。 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)呼び出すことによって、コレクション内のオブジェクトを列挙することができます、 [icordebugheapenum::next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)メソッド。  
+ [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) インスタンスには、 [ICorDebugProcess5:: EnumerateHeap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md)メソッドを呼び出すことによって、 インスタンスが設定されます。 `ICorDebugHeapEnum` コレクション内の各[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)インスタンスは、ヒープ上のライブオブジェクト、またはいずれかのオブジェクトによってルート化されていないが、ガベージコレクターによってまだ収集されていないオブジェクトを表します。 コレクション内の [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) オブジェクトは、 [Heapenum:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)メソッドを呼び出すことによって列挙できます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

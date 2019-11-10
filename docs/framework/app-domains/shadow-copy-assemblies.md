@@ -6,14 +6,12 @@ helpviewer_keywords:
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: df1c86f2d75b0046af851585e943e13d668d8c55
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 40a1b5062d45b7b540af7058b82b77c664070d2e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053081"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119779"
 ---
 # <a name="shadow-copying-assemblies"></a>アセンブリのシャドウ コピー
 

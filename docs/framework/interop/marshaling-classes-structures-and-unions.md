@@ -18,21 +18,19 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a53c8b7b88bd25a6611c33218c7a386de55889e9
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 669e147f9c7b4ba901ade38f1ab8b41163c4f125
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151758"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114028"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>クラス、構造体、および共用体のマーシャリング
 クラスと構造体は、.NET Framework では類似しています。 どちらもフィールド、プロパティ、およびイベントを持つことができます。 静的メソッドと非静的メソッドを持つこともできます。 1 つの重要な違いは、構造体は値型でクラスは参照型であることです。  
   
  次の表は、クラス、構造体、および共用体のマーシャリング オプションをリストし、それぞれの使用方法を説明し、対応するプラットフォーム呼び出しサンプルへのリンクを示しています。  
   
-|型|説明|サンプル|  
+|[種類]|説明|サンプル|  
 |----------|-----------------|------------|  
 |値によるクラス。|整数のメンバーを含むクラスは、管理対象クラスと同じように、In/Out パラメーターとして渡します。|SysTime サンプル|  
 |値による構造体。|In パラメーターとして構造体を渡します。|構造体のサンプル|  
@@ -68,7 +66,7 @@ ms.locfileid: "71151758"
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) はカスタム アンマネージ ライブラリであり、上記の関数および 4 つの構造体(**MYPERSON**、**MYPERSON2**、**MYPERSON3**、**MYARRAYSTRUCT**) に関する実装を含んでいます。 これらの構造体には次の要素が含まれます。  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) はカスタム アンマネージ ライブラリであり、上記の関数および 4 つの構造体 **MYPERSON**、**MYPERSON2**、**MYPERSON3**、および **MYARRAYSTRUCT** に関する実装を含んでいます。 これらの構造体には次の要素が含まれます。  
   
 ```cpp  
 typedef struct _MYPERSON  

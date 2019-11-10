@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 66eb6984bb6bb93dc7015a9da8c3099637bc2722
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 08444d757ed4186494100e54415e504c1ef117ce
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039397"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197523"
 ---
 # <a name="keywords-visual-basic"></a>キーワード (Visual Basic)
 
@@ -53,37 +53,39 @@ ms.locfileid: "73039397"
 |[IsNot](../operators/isnot-operator.md)|[Let](../queries/let-clause.md)|[Lib](../statements/declare-statement.md)|[Like](../operators/like-operator.md)|  
 |[Long](../data-types/long-data-type.md)|[Loop](../statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../operators/mod-operator.md)|  
 |[Module](../modifiers/module-keyword.md)|[Module ステートメント](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[New](../modifiers/mustoverride.md)|  
-|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Namespace](../statements/namespace-statement.md)|[Narrowing](../modifiers/narrowing.md)|  
-|[New 制約](../statements/type-list.md)|[New 演算子](../operators/new-operator.md)|[次へ](../statements/for-next-statement.md)|[Next (Resume 内)](../statements/resume-statement.md)|  
-|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|[NotOverridable](../modifiers/notoverridable.md)|  
-|[オブジェクト](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operator](../statements/operator-statement.md)|  
-|[オプション](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|[OrElse](../operators/orelse-operator.md)|  
-|[Out (ジェネリック修飾子)](../modifiers/out-generic-modifier.md)|[オーバーロード](../modifiers/overloads.md)|[Overridable](../modifiers/overridable.md)|[Overrides](../modifiers/overrides.md)|  
-|[ParamArray](../modifiers/paramarray.md)|[Partial](../modifiers/partial.md)|[Private](../modifiers/private.md)|[Property](../statements/property-statement.md)|  
-|[Protected](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|[ReadOnly](../modifiers/readonly.md)|  
-|[ReDim](../statements/redim-statement.md)|[REM](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|[Resume](../statements/resume-statement.md)|  
-|[Return](../statements/return-statement.md)|[SByte](../data-types/sbyte-data-type.md)|[選択](../statements/select-case-statement.md)|[Set](../statements/set-statement.md)|  
-|[Shadows](../modifiers/shadows.md)|[Shared](../modifiers/shared.md)|[Short](../data-types/short-data-type.md)|[Single](../data-types/single-data-type.md)|  
-|[Static](../modifiers/static.md)|[Step](../statements/for-next-statement.md)|[Stop](../statements/stop-statement.md)|[String](../data-types/string-data-type.md)|  
-|[Structure 制約](../statements/type-list.md)|[Structure ステートメント](../statements/structure-statement.md)|[Sub](../statements/sub-statement.md)|[SyncLock](../statements/synclock-statement.md)|  
-|[Then](../statements/then-statement.md)|[Throw](../statements/throw-statement.md)|[目的](../statements/for-next-statement.md)|[True](../data-types/boolean-data-type.md)|  
-|[Try](../statements/try-catch-finally-statement.md)|[TryCast](../operators/trycast-operator.md)|[TypeOf…Is](../operators/typeof-operator.md)|[UInteger](../data-types/uinteger-data-type.md)|  
-|[ULong](../data-types/ulong-data-type.md)|[UShort](../data-types/ushort-data-type.md)|[Using](../statements/using-statement.md)|`Variant`|  
-|`Wend`|[When](../statements/try-catch-finally-statement.md)|[While](../statements/while-end-while-statement.md)|[Widening](../modifiers/widening.md)|  
-|[With](../statements/with-end-with-statement.md)|[ReadOnly](../modifiers/withevents.md)|[WriteOnly](../modifiers/writeonly.md)|[Xor](../operators/xor-operator.md)|  
-|[#Const](../directives/const-directive.md)|[#Else](../directives/if-then-else-directives.md)|[#ElseIf](../directives/if-then-else-directives.md)|[#End](../directives/if-then-else-directives.md)|  
-|[#If](../directives/if-then-else-directives.md)|[=](../operators/assignment-operator.md)|[&](../operators/concatenation-operator.md)|[&=](../operators/and-assignment-operator.md)|  
-|[*](../operators/multiplication-operator.md)|[*=](../operators/multiplication-assignment-operator.md)|[/](../operators/floating-point-division-operator.md)|[/=](../operators/floating-point-division-assignment-operator.md)|  
-|[\\](../operators/integer-division-operator.md)|[\\=](../operators/integer-division-assignment-operator.md)|[^](../operators/exponentiation-operator.md)|[^=](../operators/exponentiation-assignment-operator.md)|  
-|[+](../operators/addition-operator.md)|[+=](../operators/addition-assignment-operator.md)|[-](../operators/subtraction-operator.md)|[-=](../operators/subtraction-assignment-operator.md)|  
-|[>> 演算子](../operators/right-shift-operator.md)|[>>= 演算子](../operators/right-shift-assignment-operator.md)|[<<](../operators/left-shift-operator.md)|[<\<=](../operators/left-shift-assignment-operator.md)|  
-  
+|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Namespace](../statements/namespace-statement.md)|
+|[Narrowing](../modifiers/narrowing.md)|[New 制約](../statements/type-list.md)|[New 演算子](../operators/new-operator.md)|[次へ](../statements/for-next-statement.md)|
+|[Next (Resume 内)](../statements/resume-statement.md)|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|
+|[NotOverridable](../modifiers/notoverridable.md)|[オブジェクト](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|
+|[Operator](../statements/operator-statement.md)|[オプション](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
+|[OrElse](../operators/orelse-operator.md)|[Out (ジェネリック修飾子)](../modifiers/out-generic-modifier.md)|[オーバーロード](../modifiers/overloads.md)|[Overridable](../modifiers/overridable.md)|
+|[Overrides](../modifiers/overrides.md)|[ParamArray](../modifiers/paramarray.md)|[Partial](../modifiers/partial.md)|[Private](../modifiers/private.md)|
+|[Property](../statements/property-statement.md)|[Protected](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
+|[ReadOnly](../modifiers/readonly.md)|[ReDim](../statements/redim-statement.md)|[REM](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|
+|[Resume](../statements/resume-statement.md)|[Return](../statements/return-statement.md)|[SByte](../data-types/sbyte-data-type.md)|[選択](../statements/select-case-statement.md)|
+[Set](../statements/set-statement.md)|[Shadows](../modifiers/shadows.md)|[Shared](../modifiers/shared.md)|[Short](../data-types/short-data-type.md)|
+|[Single](../data-types/single-data-type.md)|[Static](../modifiers/static.md)|[Step](../statements/for-next-statement.md)|[Stop](../statements/stop-statement.md)|
+|[String](../data-types/string-data-type.md)|[Structure 制約](../statements/type-list.md)|[Structure ステートメント](../statements/structure-statement.md)|[Sub](../statements/sub-statement.md)|
+|[SyncLock](../statements/synclock-statement.md)|[Then](../statements/then-statement.md)|[Throw](../statements/throw-statement.md)|[目的](../statements/for-next-statement.md)|
+|[True](../data-types/boolean-data-type.md)|[Try](../statements/try-catch-finally-statement.md)|[TryCast](../operators/trycast-operator.md)|[TypeOf…Is](../operators/typeof-operator.md)|
+|[UInteger](../data-types/uinteger-data-type.md)|[ULong](../data-types/ulong-data-type.md)|[UShort](../data-types/ushort-data-type.md)|[Using](../statements/using-statement.md)|
+|`Variant`|`Wend`|[When](../statements/try-catch-finally-statement.md)|[While](../statements/while-end-while-statement.md)|
+[Widening](../modifiers/widening.md)|[With](../statements/with-end-with-statement.md)|[ReadOnly](../modifiers/withevents.md)|[WriteOnly](../modifiers/writeonly.md)|
+[Xor](../operators/xor-operator.md)|[#Const](../directives/const-directive.md)|[#Else](../directives/if-then-else-directives.md)|[#ElseIf](../directives/if-then-else-directives.md)|
+|[#End](../directives/if-then-else-directives.md)|[#If](../directives/if-then-else-directives.md)|[=](../operators/assignment-operator.md)|[&](../operators/concatenation-operator.md)|
+|[&=](../operators/and-assignment-operator.md)|[*](../operators/multiplication-operator.md)|[*=](../operators/multiplication-assignment-operator.md)|[/](../operators/floating-point-division-operator.md)|
+[/=](../operators/floating-point-division-assignment-operator.md)|[\\](../operators/integer-division-operator.md)|[\\=](../operators/integer-division-assignment-operator.md)|[^](../operators/exponentiation-operator.md)|
+|[^=](../operators/exponentiation-assignment-operator.md)|[+](../operators/addition-operator.md)|[+=](../operators/addition-assignment-operator.md)|[-](../operators/subtraction-operator.md)|
+|[-=](../operators/subtraction-assignment-operator.md)|[>> 演算子](../operators/right-shift-operator.md)|[>>= 演算子](../operators/right-shift-assignment-operator.md)|[<<](../operators/left-shift-operator.md)|
+|[<\<=](../operators/left-shift-assignment-operator.md)|
+
 > [!NOTE]
-> `EndIf`、`GoSub`、`Variant`、および `Wend` は予約済みキーワードとして保持されますが、Visual Basic では使用されなくなりました。 `Let` キーワードは、意味が変更されました。 `Let` は、LINQ クエリで使用するようになっています。 詳細については、「[Let 句](../queries/let-clause.md)」を参照してください。  
-  
-## <a name="unreserved-keywords"></a>予約されていないキーワード  
- 次のキーワードは予約されていません。したがって、プログラミングの要素の名前として使用できます。 ただし、コードの可読性が低下し、検出しにくい微妙なエラーの原因となる可能性があるため、これらのキーワードを要素の名前として使用することは避けてください。  
-  
+> `EndIf`、`GoSub`、`Variant`、および `Wend` は予約済みキーワードとして保持されますが、Visual Basic では使用されなくなりました。 `Let` キーワードは、意味が変更されました。 `Let` は、LINQ クエリで使用するようになっています。 詳細については、「[Let 句](../queries/let-clause.md)」を参照してください。
+
+## <a name="unreserved-keywords"></a>予約されていないキーワード
+
+次のキーワードは予約されていません。したがって、プログラミングの要素の名前として使用できます。 ただし、コードの可読性が低下し、検出しにくい微妙なエラーの原因となる可能性があるため、これらのキーワードを要素の名前として使用することは避けてください。
+
 |||||  
 |---|---|---|---|  
 |[Aggregate](../queries/aggregate-clause.md)|[Ansi](../modifiers/ansi.md)|[Assembly](../modifiers/assembly.md)|[Async](../modifiers/async.md)|  
@@ -118,7 +120,7 @@ ms.locfileid: "73039397"
 |[演算子の概要](operators-summary.md)|代入式、比較式、およびその他の演算子の一覧を示します。|  
 |[レジストリの概要](registry-summary.md)|プログラム設定の読み込み、保存、および削除に使用される関数の一覧を示します。|  
 |[文字列操作の概要](string-manipulation-summary.md)|文字列操作に使用される関数の一覧を示します。|  
-  
+
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic ランタイム ライブラリのメンバー](../runtime-library-members.md)

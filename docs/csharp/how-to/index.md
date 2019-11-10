@@ -2,12 +2,12 @@
 title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
-ms.openlocfilehash: f764bd0183e3881bfb81ebda7d3c7dd49a4cbdde
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591609"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736881"
 ---
 # <a name="how-to-c"></a>方法 (C#)
 
@@ -65,8 +65,8 @@ C# の開発者には常識といえるヒントやコツがいくつかあり�
 - [文字列を数値に変換する](../programming-guide/types/how-to-convert-a-string-to-a-number.md)。
 - [パターン マッチングで `as` と `is` の演算子を使用して異なる型に安全にキャストする](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。
 - [カスタムの型変換を定義する](../language-reference/operators/user-defined-conversion-operators.md)。
-- [型が null 許容値型であるかを判断する](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md)。
-- [null 許容値型と null 非許容値型の間で変換する](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type)。
+- [型が null 許容値型であるかを判断する](../language-reference/builtin-types/nullable-value-types.md#how-to-identify-a-nullable-value-type)。
+- [null 許容値型と null 非許容値型の間で変換する](../language-reference/builtin-types/nullable-value-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type)。
 
 ## <a name="equality-and-ordering-comparisons"></a>等価比較と順序付け比較
 

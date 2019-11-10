@@ -1,16 +1,15 @@
 ---
 title: メソッド - C# ガイド
 description: メソッド、メソッド パラメーター、メソッド戻り値の概要
-author: rpetrusha
-ms.author: ronpet
+ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: b95818e06d37b0e98bf55428ff97dd476f92fac7
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: f44c83408e884d76eef5e2b5abbca511fbae2a1f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168511"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101485"
 ---
 # <a name="methods"></a>メソッド
 
@@ -18,22 +17,6 @@ ms.locfileid: "70168511"
 
 > [!NOTE]
 > このトピックでは、名前付きメソッドについて説明します。 匿名関数については、「[匿名関数](programming-guide/statements-expressions-operators/anonymous-functions.md)」を参照してください。
-
-このトピックは、次のセクションで構成されています。
-
-- [メソッド シグネチャ](#signatures)
-- [メソッドの呼び出し](#invocation)
-- [継承されたメソッドとオーバーライドされたメソッド](#inherited)
-- [パラメーターを渡す](#passing)
-  - [パラメーターを値で渡す](#byval)
-  - [パラメーターを参照で渡す](#byref)
-  - [パラメーター配列](#paramarray)
-- [省略可能なパラメーターと引数](#optional)
-- [戻り値](#return)
-- [拡張メソッド](#extension)
-- [非同期メソッド](#async)
-- [式形式のメンバー](#expr)
-- [反復子](#iterators)
 
 <a name="signatures"></a>
 
@@ -157,7 +140,7 @@ C# の型は、*値型*と*参照型*のどちらかに区別されます。 組
 パラメーターの既定値は、次の種類の式のいずれかで割り当てる必要があります。
 
 - リテラル文字列や数値など、定数。
-- `ValType` が値型となる、`new ValType` 形式の式。 値型の暗黙のパラメーターなしのコンストラクターが呼び出されることに注意してください。それは型の実際のメンバーではありません。
+- `ValType` が値型となる、`new ValType()` 形式の式。 値型の暗黙のパラメーターなしのコンストラクターが呼び出されることに注意してください。それは型の実際のメンバーではありません。
 - `ValType` が値型となる、`default(ValType)` 形式の式。
 
 メソッドに必須のパラメーターと省略可能なパラメーターの両方が含まれる場合、省略可能なパラメーターはパラメーター リストの終わりに定義されます (すべての必須パラメーターの後に)。

@@ -2,12 +2,12 @@
 title: 統合言語クエリ (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: d75c34cd63eb439203ef6757e62e18936eb3606a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 07a9d68c042d524ee9faba8122b406a81e816378
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773914"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418242"
 ---
 # <a name="language-integrated-query-linq"></a>統合言語クエリ (LINQ)
 
@@ -40,7 +40,7 @@ C# を使って LINQ クエリを記述できます。対象は、<xref:System.C
 
 LINQ の詳細については、最初に「[クエリ式の基本](../../../linq/query-expression-basics.md)」で基本的な概念を理解してから、関心のある LINQ テクノロジのドキュメントを参照してください。
 
-- XML ドキュメント:[LINQ to XML](linq-to-xml.md)  
+- XML ドキュメント:[LINQ to XML](linq-to-xml-overview.md)  
 - ADO.NET Entity Framework:[LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - .NET のコレクション、ファイル、文字列など:[LINQ to Objects](linq-to-objects.md)
 

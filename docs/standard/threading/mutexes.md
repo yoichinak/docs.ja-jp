@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8b2edf1f06873796bd63fceaca9a4bb99e509589
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 874f879697db0b47c73626350eeb05a01b38e1bc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910343"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127563"
 ---
 # <a name="mutexes"></a>ミューテックス
 <xref:System.Threading.Mutex> オブジェクトを使用して、リソースへの排他的アクセスを提供できます。 <xref:System.Threading.Mutex> クラスは <xref:System.Threading.Monitor> クラスよりも多くのシステム リソースを使用しますが、アプリケーション ドメイン境界を越えてマーシャリングしたり、複数の待機操作とともに使用したり、異なるプロセスのスレッドを同期するために使用できます。 マネージド同期メカニズムの比較については、「[同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)」を参照してください。  

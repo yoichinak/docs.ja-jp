@@ -4,16 +4,16 @@ description: .NET Core CLI ツールを使用して .NET Core ライブラリを
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 536319bc02b45e7948c89ae67988e821a55a842d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: dcd454f0bd1739597fc27dccf2849fc259767292
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117418"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420458"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>クロス プラットフォーム ツールによるライブラリの開発
 
-この記事では、クロスプラットフォーム CLI ツールを使用して .NET 用ライブラリを作成する方法について説明します。 CLI は、サポートされる任意の OS で動作する効率的で低レベルのエクスペリエンスを提供します。 Visual Studio でライブラリを構築することもできます。Visual Studio で構築する場合は、[Visual Studio ガイドを参照](libraries-with-vs.md)してください。
+この記事では、クロスプラットフォーム CLI ツールを使用して .NET 用ライブラリを作成する方法について説明します。 CLI は、サポートされる任意の OS で動作する効率的で低レベルのエクスペリエンスを提供します。 Visual Studio でライブラリを構築することもできます。Visual Studio で構築する場合は、[Visual Studio ガイドを参照](library-with-visual-studio.md)してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 

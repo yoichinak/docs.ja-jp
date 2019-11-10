@@ -2,19 +2,19 @@
 title: スタンドアロン診断フィードのサンプル
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 6b83bda154a76fe10487da00359e0ceace8ce8cb
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c8a64c209711734b4915f332e9242346e295ddea
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044680"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417044"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>スタンドアロン診断フィードのサンプル
 このサンプルでは、Windows Communication Foundation (WCF) を使用して配信するために RSS/Atom フィードを作成する方法を示します。 これは基本的な "Hello World" プログラムであり、オブジェクトモデルの基本と、Windows Communication Foundation (WCF) サービスでの設定方法を示しています。  
   
- WCF は、特別なデータ型を<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>返すサービス操作として配信フィードをモデル化します。 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> のインスタンスは、フィードを RSS 2.0 形式および Atom 1.0 形式の両方にシリアル化できます。 使用するコントラクトを次のサンプル コードに示します。  
+ WCF は、特別なデータ型の <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>を返すサービス操作として配信フィードをモデル化します。 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> のインスタンスは、フィードを RSS 2.0 形式および Atom 1.0 形式の両方にシリアル化できます。 使用するコントラクトを次のサンプル コードに示します。  
   
-```  
+```csharp  
 [ServiceContract(Namespace = "")]  
     interface IDiagnosticsService  
     {  
@@ -32,11 +32,11 @@ ms.locfileid: "70044680"
     }  
 ```  
   
- この操作には、 <xref:System.ServiceModel.Web.WebGetAttribute> WCF が HTTP GET 要求をサービス操作にディスパッチする方法を制御し、送信されるメッセージの形式を指定できるようにする属性で注釈が付けられています。 `GetProcesses`  
+ `GetProcesses` 操作には、WCF が HTTP GET 要求をサービス操作にディスパッチする方法を制御し、送信されるメッセージの形式を指定できるようにする、<xref:System.ServiceModel.Web.WebGetAttribute> 属性で注釈が付けられています。  
   
  任意の WCF サービスと同様に、配信フィードは任意のマネージアプリケーションで自己ホストすることができます。 配信サービスが適切に機能するには、特定のバインディング (<xref:System.ServiceModel.WebHttpBinding>) と、特定のエンドポイント動作 (<xref:System.ServiceModel.Description.WebHttpBehavior>) が必要です。 新しい <xref:System.ServiceModel.Web.WebServiceHost> クラスには、特定の構成を使用せずにこのようなエンドポイントを作成する際に便利な API が用意されています。  
   
-```  
+```csharp  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
   
             //The WebServiceHost will automatically provide a default endpoint at the base address  
@@ -49,11 +49,11 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- このサービスは標準の HTTP GET を使用して要求を受け取るので、サービスへのアクセスには、RSS または ATOM に対応している任意のクライアントを使用できます。 たとえば、RSS 対応のブラウザーで`http://localhost:8000/diagnostics/feed/?format=atom`または`http://localhost:8000/diagnostics/feed/?format=rss`に移動して、このサービスの出力を表示できます。
+ このサービスは標準の HTTP GET を使用して要求を受け取るので、サービスへのアクセスには、RSS または ATOM に対応している任意のクライアントを使用できます。 たとえば、RSS 対応のブラウザーで `http://localhost:8000/diagnostics/feed/?format=atom` または `http://localhost:8000/diagnostics/feed/?format=rss` に移動することによって、このサービスの出力を表示できます。
   
  また、 [WCF 配信オブジェクトモデルが Atom および RSS にマップ](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)され、命令型コードを使用してシンジケートデータを読み取り、処理する方法を使用することもできます。  
   
-```  
+```csharp  
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",  
 new XmlReaderSettings()  
 {  
@@ -82,14 +82,14 @@ foreach (SyndicationItem i in feed.Items)
   
 3. コンソール アプリケーションを実行します。  
   
-4. コンソールアプリケーションの実行中に、RSS 対応`http://localhost:8000/diagnostics/feed/?format=atom`の`http://localhost:8000/diagnostics/feed/?format=rss`ブラウザーに移動するか、を使用します。  
+4. コンソールアプリケーションの実行中に、RSS 対応のブラウザーを使用して `http://localhost:8000/diagnostics/feed/?format=atom` または `http://localhost:8000/diagnostics/feed/?format=rss` に移動します。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   

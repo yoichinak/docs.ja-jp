@@ -10,17 +10,15 @@ api_type:
 ms.assetid: d2711bdf-64b3-404c-a0c3-01ba4907f703
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: df113a2839b0f2651e15f4029d86cc5efc171c63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6591f7d7b632bcdbdabb1633f7431d79da7ff6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697882"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111814"
 ---
 # <a name="iclrdatatarget3-interface"></a>ICLRDataTarget3 インターフェイス
-サブクラス[ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)例外情報へのアクセスを提供します。  
+例外情報へのアクセスを提供する[ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)のサブクラスです。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -33,10 +31,10 @@ ms.locfileid: "61697882"
 ## <a name="remarks"></a>Remarks  
  API クライアント (つまりデバッガー) は、特定のターゲット プロセスに応じてこのインターフェイスを実装する必要があります。 たとえば、ライブ プロセスの実装は、メモリ ダンプの実装とは異なります。 ターゲットは、メモリ領域の変更をサポートしない可能性があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   

@@ -11,14 +11,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8903d0443594885b3b0e8cca716eda8177c60cca
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: ac44282a06b2b3710d3a9e5390c7a514c1632c3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988797"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127598"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>.NET での数値文字列の解析
 すべての数値型には、2 つの静的解析メソッド (`Parse` と `TryParse`) があり、数字の文字列形式を数値型に変換するために使用できます。 これらのメソッドでは、[標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)と[カスタム数値書式指定文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)で記述されている書式指定文字列を使用して、生成された文字列を解析できます。 既定では、`Parse` と `TryParse` メソッドは、10 進数の整数を含む文字列を整数値のみに正常に変換することができます。 これらのメソッドは、整数部と小数部、グループ区切り、および小数点記号を含む文字列を浮動小数点値に正常に変換できます。 `TryParse` メソッドが `false` を返すのに対して、`Parse` メソッドは操作が失敗した場合に例外をスローします。  

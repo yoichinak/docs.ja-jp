@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: e1daf9efd59b89d5d5be5f51cf9ac5e00750dda3
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919726"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421100"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF アドインの概要
 
@@ -171,21 +171,21 @@ UI であるアドインの実装方法を示す例については、「UI で�
 
 ## <a name="add-ins-and-xaml-browser-applications"></a>アドインと XAML ブラウザー アプリケーション
 
-ここまでの例では、ホスト アプリケーションはスタンドアロン アプリケーションとしてインストールされています。 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] はアドインをホストすることもできますが、そのためには次に示すビルドと実装の要件を満たす必要があります。
+ここまでの例では、ホスト アプリケーションはスタンドアロン アプリケーションとしてインストールされています。 ただし、XAML ブラウザーアプリケーション (Xbap) は、アドインをホストすることもできます。ただし、次のような追加のビルドと実装の要件があります。
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] アプリケーションマニフェストは、パイプライン (フォルダーとアセンブリ) とアドインアセンブリをクライアントコンピューターの ClickOnce アプリケーションキャッシュに ([!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]と同じフォルダーに) ダウンロードするように特別に構成する必要があります。
+- Xbap アプリケーションマニフェストは、クライアントコンピューターの ClickOnce アプリケーションキャッシュ (XBAP と同じフォルダー) に、パイプライン (フォルダーとアセンブリ) とアドインアセンブリをダウンロードするように特別に構成する必要があります。
 
-- アドインを検出して読み込む [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] コードは、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] の ClickOnce アプリケーションキャッシュをパイプラインとアドインの場所として使用する必要があります。
+- アドインの検出と読み込みを行う XBAP コードでは、この XBAP の ClickOnce アプリケーションキャッシュをパイプラインとアドインの場所として使用する必要があります。
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] は、アドインが起点サイトにある圧縮しないファイルを参照する場合、アドインを特別なセキュリティ コンテキストの下で読み込む必要があります。[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] によってホストされる場合、アドインが参照できるのは、ホスト アプリケーションの起点サイトにある圧縮しないファイルのみです。
+- アドインが元のサイトに配置されている緩いファイルを参照する場合、XBAP は特別なセキュリティコンテキストにアドインを読み込む必要があります。Xbap でホストされている場合、アドインは、ホストアプリケーションの起点サイトにある圧縮されていないファイルのみを参照できます。
 
 これらのタスクについて、次のサブセクションで詳しく説明します。
 
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>ClickOnce 配置のためのパイプラインとアドインの構成
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] は、ClickOnce 配置キャッシュ内の安全なフォルダーにダウンロードされて実行されます。 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] でアドインをホストするには、パイプラインとアドインのアセンブリも同じ安全なフォルダーにダウンロードする必要があります。 このためには、パイプラインとアドインのどちらのアセンブリもダウンロード対象に含まれるよう、アプリケーション マニフェストを構成する必要があります。 これは Visual Studio で最も簡単に行うことができますが、Visual Studio でパイプラインアセンブリを検出するには、パイプラインとアドインのアセンブリをホスト [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] プロジェクトのルートフォルダーに配置する必要があります。
+Xbap は、ClickOnce 配置キャッシュ内の安全なフォルダーにダウンロードして実行します。 XBAP がアドインをホストするためには、パイプラインとアドインのアセンブリも安全なフォルダーにダウンロードする必要があります。 このためには、パイプラインとアドインのどちらのアセンブリもダウンロード対象に含まれるよう、アプリケーション マニフェストを構成する必要があります。 これは Visual Studio で最も簡単に行うことができますが、Visual Studio がパイプラインアセンブリを検出するためには、パイプラインとアドインのアセンブリをホスト XBAP プロジェクトのルートフォルダーに配置する必要があります。
 
-したがって、まず、パイプライン アセンブリとアドイン アセンブリの各プロジェクトのビルド出力を設定し、パイプラインとアドインのアセンブリを [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] プロジェクトのルートにビルドします。 次の表は、ホストの [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] プロジェクトと同じソリューションとルートのフォルダーに格納される、パイプライン アセンブリ プロジェクトとアドイン アセンブリ プロジェクトのビルド出力パスを示します。
+そのため、最初の手順として、各パイプラインアセンブリプロジェクトとアドインアセンブリプロジェクトのビルド出力を設定して、パイプラインとアドインアセンブリを XBAP プロジェクトのルートにビルドします。 次の表は、ホスト XBAP プロジェクトと同じソリューションとルートフォルダーにあるパイプラインアセンブリプロジェクトとアドインアセンブリプロジェクトのビルド出力パスを示しています。
 
 表 1: XBAP でホストされるパイプライン アセンブリのビルド出力パス
 
@@ -197,21 +197,21 @@ UI であるアドインの実装方法を示す例については、「UI で�
 |ホスト側のアダプター|`..\HostXBAP\HostSideAdapters\`|
 |アドイン|`..\HostXBAP\AddIns\WPFAddIn1`|
 
-次の手順では、次の手順に従って、パイプラインアセンブリとアドインアセンブリを Visual Studio の [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] コンテンツファイルとして指定します。
+次の手順では、次の手順に従って、パイプラインアセンブリとアドインアセンブリを Visual Studio で Xbap コンテンツファイルとして指定します。
 
 1. ソリューション エクスプローラーで各パイプライン フォルダーを右クリックし、 **[プロジェクトに含める]** を選択して、パイプラインとアドインのアセンブリをプロジェクトに含めます。
 
 2. **[プロパティ]** ウィンドウで、パイプライン アセンブリとアドイン アセンブリそれぞれについて、 **[ビルド アクション]** を **[コンテンツ]** に設定します。
 
-最後に、パイプラインとアドインのどちらのアセンブリ ファイルもダウンロード対象に含まれるよう、アプリケーション マニフェストを構成します。 これらのファイルは、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] アプリケーションが占有する ClickOnce キャッシュ内のフォルダーのルートにあるフォルダーに配置する必要があります。 この構成は、Visual Studio で次の手順を実行することで実現できます。
+最後に、パイプラインとアドインのどちらのアセンブリ ファイルもダウンロード対象に含まれるよう、アプリケーション マニフェストを構成します。 ファイルは、XBAP アプリケーションが占有する ClickOnce キャッシュ内のフォルダーのルートにあるフォルダーに配置する必要があります。 この構成は、Visual Studio で次の手順を実行することで実現できます。
 
-1. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] プロジェクトを右クリックして、 **[プロパティ]** 、 **[発行]** の順にクリックし、 **[アプリケーション ファイル]** をクリックします。
+1. XBAP プロジェクトを右クリックし、 **[プロパティ]** をクリックします。次に、 **[発行]** をクリックし、 **[アプリケーションファイル]** ボタンをクリックします。
 
 2. **[アプリケーション ファイル]** ダイアログ ボックスで、各パイプラインとアドインの DLL の **[発行の状況]** を **[含める (自動)]** に設定し、各パイプラインとアドインの DLL の **[ダウンロード グループ]** を **[(必須)]** に設定します。
 
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>アプリケーション ベースからのパイプラインとアドインの使用
 
-パイプラインとアドインが ClickOnce 配置用に構成されている場合は、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]と同じ ClickOnce キャッシュフォルダーにダウンロードされます。 このパイプラインとアドインを [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] から使用するには、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] コードがそれらをアプリケーション ベースから取得する必要があります。 パイプラインとアドインを使用するための .NET Framework アドインモデルのさまざまな型およびメンバーは、このシナリオに対して特別なサポートを提供します。 まず、パスは <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> 列挙値によって識別されます。 この値を適切なアドイン メンバーのオーバーロードと併用することで、次のようなパイプラインを使用できます。
+パイプラインとアドインが ClickOnce 配置用に構成されている場合は、XBAP と同じ ClickOnce キャッシュフォルダーにダウンロードされます。 このパイプラインとアドインを XBAP から使用するには、XBAP コードでアプリケーションベースから取得する必要があります。 パイプラインとアドインを使用するための .NET Framework アドインモデルのさまざまな型およびメンバーは、このシナリオに対して特別なサポートを提供します。 まず、パスは <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> 列挙値によって識別されます。 この値を適切なアドイン メンバーのオーバーロードと併用することで、次のようなパイプラインを使用できます。
 
 - <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 

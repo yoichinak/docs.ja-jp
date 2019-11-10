@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 7c0168d5ca8b1d3bda709f934e454b2603d37b71
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039881"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733569"
 ---
 # <a name="imaging-overview"></a>イメージングの概要
 このトピックでは、Microsoft Windows Presentation Foundation Imaging コンポーネントの概要について説明します。 WPF イメージングを使用すると、開発者はイメージの表示、変換、および書式設定を行うことができます。  
@@ -165,7 +165,7 @@ ms.locfileid: "73039881"
 ## <a name="image-metadata"></a>イメージのメタデータ  
  一部のイメージ ファイルには、ファイルの内容または特性を記述するメタデータが含まれています。 たとえば、ほとんどのデジタル カメラは、イメージをキャプチャするために使用されるカメラの型番に関するメタデータを含むイメージを作成します。 各イメージ形式では、メタデータの処理方法が異なりますが、WPF イメージングは、サポートされているイメージ形式ごとにメタデータを格納および取得するための統一された方法を提供  
   
- メタデータへのアクセスは、<xref:System.Windows.Media.Imaging.BitmapSource> オブジェクトの <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> プロパティを通じて提供されます。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> は、イメージに含まれるすべてのメタデータを含む <xref:System.Windows.Media.Imaging.BitmapMetadata> オブジェクトを返します。 このデータは、1 つのメタデータ スキーマでも、異なるスキーマの組み合わせでもかまいません。 WPF イメージングでは、次のイメージメタデータスキーマがサポートされています。 Exchangeable 可能イメージファイル (Exif)、テキスト (PNG テキストデータ)、イメージファイルディレクトリ (IFD)、国際通話通信委員会 (IPTC)、および [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
+ メタデータへのアクセスは、<xref:System.Windows.Media.Imaging.BitmapSource> オブジェクトの <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> プロパティを通じて提供されます。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> は、イメージに含まれるすべてのメタデータを含む <xref:System.Windows.Media.Imaging.BitmapMetadata> オブジェクトを返します。 このデータは、1 つのメタデータ スキーマでも、異なるスキーマの組み合わせでもかまいません。 WPF イメージングでは、次のイメージメタデータスキーマがサポートされています。 Exchangeable 可能イメージファイル (Exif)、テキスト (PNG テキストデータ)、イメージファイルディレクトリ (IFD)、国際通話通信委員会 (IPTC)、および拡張可能メタデータプラットフォーム (XMP)。  
   
  メタデータの読み取りプロセスを簡略化するために、<xref:System.Windows.Media.Imaging.BitmapMetadata> には、<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>、<xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>、<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>などの簡単にアクセスできる名前付きプロパティがいくつか用意されています。 これらの名前付きプロパティの多くは、メタデータを書き込むためにも使用できます。 メタデータを読み取るための追加サポートは、メタデータ クエリ リーダーによって提供されます。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> メソッドは、 *"/app1/exif/"* などの文字列クエリを指定することによって、メタデータクエリリーダーを取得するために使用されます。 次の例では、 *"/Text/Description"* の場所に格納されているテキストを取得するために <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> が使用されています。  
   

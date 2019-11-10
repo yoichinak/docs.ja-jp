@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e02ee1a-e495-4578-bfb5-b946274bede7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ad7dd3ae0e547933fdf7d579116dccc62ae579c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37a7d8fa4439d52db3cddfff22ac6580b19af58a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766151"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128910"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a>ICorDebugProcess::ClearCurrentException メソッド
-特定のスレッドで現在管理されていない例外をクリアします。  
+指定されたスレッドで現在のアンマネージ例外をクリアします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +33,15 @@ HRESULT ClearCurrentException([in] DWORD threadID);
   
 ## <a name="parameters"></a>パラメーター  
  `threadID`  
- [in]現在管理されていない例外をクリアするスレッドの ID。  
+ から現在のアンマネージ例外がクリアされるスレッドの ID。  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドを呼び出す前に[icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)スレッドがデバッガーによって無視されるアンマネージ例外を報告する場合。 これは、未処理の帯域内 (IB) と特定のスレッドでの帯域外の (OOB) のイベントの両方にクリアされます。 すべての OOB ブレークポイントとシングル ステップの例外は自動的にクリアします。  
+ スレッドがアンマネージ例外を報告し[たときに](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)、デバッグ対象では無視する必要がある場合は、このメソッドを呼び出します。 これにより、所定のスレッドで未処理の帯域内 (IB) イベントと帯域外 (OOB) イベントの両方がクリアされます。 すべての OOB ブレークポイントと単一ステップの例外は、自動的にクリアされます。  
   
- 使用[icordebugthread 2::interceptcurrentexception](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md)現在をインターセプトするスレッドの例外を管理します。  
+ スレッドで現在のマネージ例外をインターセプトするには、 [ICorDebugThread2:: InterceptCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md)を使用します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

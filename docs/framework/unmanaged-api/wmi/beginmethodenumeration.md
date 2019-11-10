@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BeginMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a7b93bacabdfdd0551418644a7d9a4b1643c3d9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a27787052757098d4edb2d8516e22d8a03b7009a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798765"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138786"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 関数
 オブジェクトで使用できるメソッドの列挙を開始します。  
@@ -49,7 +47,7 @@ HRESULT BeginMethodEnumeration (
 `lEnumFlags`  
 からすべてのメソッドにゼロ (0)、または列挙体のスコープを指定するフラグ。 次のフラグは、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-定数  |Value  |説明  |
+定数  |[値]  |説明  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 列挙体は、クラス自体で定義されているメソッドに限定します。 |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 列挙型を基底クラスから継承されたプロパティに限定します。 |
@@ -58,9 +56,9 @@ HRESULT BeginMethodEnumeration (
 
 この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |Value  |説明  |
+|定数  |[値]  |説明  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags`が0以外で、が指定されたフラグの1つではありません。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` が0以外で、が指定されたフラグの1つではありません。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
   
 ## <a name="remarks"></a>Remarks
@@ -69,8 +67,8 @@ HRESULT BeginMethodEnumeration (
 
 このメソッド呼び出しは、現在のオブジェクトがクラス定義の場合にのみサポートされます。 インスタンスを指す[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)ポインターからは、メソッド操作を使用できません。 メソッドを列挙する順序は、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)の特定のインスタンスに対して不変であることが保証されます。
 
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** WMINet_Utils  
   

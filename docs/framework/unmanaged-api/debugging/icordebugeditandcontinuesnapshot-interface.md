@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 91b558b3-cea9-4106-be8c-3d628d904bfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7fd463a8cc8ad6a88818669de6fb495e12e497b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21683a038b84cae4b2bf51fabd451a4a7514eb89
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989106"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137473"
 ---
 # <a name="icordebugeditandcontinuesnapshot-interface"></a>ICorDebugEditAndContinueSnapshot インターフェイス
 

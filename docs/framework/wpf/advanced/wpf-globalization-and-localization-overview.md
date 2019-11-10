@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: a912e0437bf986aff65fc722065e912571427189
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035793"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740708"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF のグローバリゼーションおよびローカリゼーションの概要
 
@@ -70,7 +70,7 @@ ms.locfileid: "73035793"
 
 ## <a name="localize-a-wpf-application"></a>WPF アプリケーションのローカライズ
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションをローカライズする場合、いくつかのオプションがあります。 たとえば、アプリケーションのローカライズ可能なリソースを [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ファイルにバインドしたり、ローカライズ可能なテキストを resx テーブルに格納したり、ローカライザーで [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ファイルを使用したりすることができます。 このセクションでは、XAML の BAML 形式を使用するローカライズワークフローについて説明します。これには、いくつかの利点があります。
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションをローカライズする場合、いくつかのオプションがあります。 たとえば、アプリケーション内のローカライズ可能なリソースを XML ファイルにバインドしたり、ローカライズ可能なテキストを resx テーブルに格納したり、ローカライザーに [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ファイルを使用させることができます。 このセクションでは、XAML の BAML 形式を使用するローカライズワークフローについて説明します。これには、いくつかの利点があります。
 
 - をビルドした後でローカライズできます。
 

@@ -210,7 +210,7 @@ ms.locfileid: "69595722"
     }
     ```
 
-4. `AccessTheWebAsync` は長さを表示するため、メソッドは何も返す必要はありません。 return ステートメントを削除し、メソッドの戻り値の型を <xref:System.Threading.Tasks.Task> ではなく <xref:System.Threading.Tasks.Task%601> に変更します。
+4. `AccessTheWebAsync` は長さを表示するため、メソッドは何も返す必要はありません。 return ステートメントを削除し、メソッドの戻り値の型を <xref:System.Threading.Tasks.Task%601> ではなく <xref:System.Threading.Tasks.Task> に変更します。
 
     ```csharp
     async Task AccessTheWebAsync(CancellationToken ct)

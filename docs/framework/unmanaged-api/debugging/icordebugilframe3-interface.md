@@ -10,17 +10,15 @@ api_type:
 ms.assetid: 15212cb5-93d4-4025-bec9-d4b9919eb1fe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8d35e0f27968b2649a63b035759a6e72d53b2b94
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b3094eb6e3006be49cf17c1ca2a220b8ec58b673
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928194"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139060"
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 インターフェイス
-関数の戻り値をカプセル化するメソッドを提供します。 `ICorDebugILFrame3`は、ICorDebugILFrame2 インターフェイスとインターフェイスを論理的に拡張したものです。  
+関数の戻り値をカプセル化するメソッドを提供します。 `ICorDebugILFrame3` は、ICorDebugILFrame2 インターフェイスとインターフェイスを論理的に拡張したものです。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -33,12 +31,12 @@ ms.locfileid: "69928194"
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   

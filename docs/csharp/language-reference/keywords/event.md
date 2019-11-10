@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 4149663422908069b5b65ed3c32ccc6dbdfd7729
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a6a62881f7205891bafe039a42da44eb8f8d03c0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605805"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422828"
 ---
 # <a name="event-c-reference"></a>event (C# リファレンス)
 `event` キーワードを使用し、パブリッシャー クラス内にイベントを宣言します。  
@@ -32,7 +32,7 @@ ms.locfileid: "69605805"
 ## <a name="keywords-and-events"></a>キーワードとイベント  
  イベントには次のキーワードが適用されます。  
   
-|Keyword|説明|詳細情報|  
+|キーワード|説明|詳細情報|  
 |-------------|-----------------|--------------------------|  
 |[static](./static.md)|クラスのインスタンスが存在しない場合でも、呼び出し元がいつでもイベントを使用できるようになります。|[静的クラスと静的クラス メンバー](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
 |[virtual](./virtual.md)|[override](./override.md) キーワードを使用してイベントの動作をオーバーライドすることを派生クラスに許可します。|[継承](../../programming-guide/classes-and-structs/inheritance.md)|  
@@ -53,5 +53,5 @@ ms.locfileid: "69605805"
 - [C# のキーワード](./index.md)
 - [add](./add.md)
 - [remove](./remove.md)
-- [修飾子](./modifiers.md)
+- [修飾子](index.md)
 - [方法: デリゲートを結合する (マルチキャスト デリゲート)](../../programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

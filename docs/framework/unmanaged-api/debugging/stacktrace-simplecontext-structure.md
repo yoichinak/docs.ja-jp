@@ -15,16 +15,14 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc0fc18e31b89b22ffd30d99a8b079ed7b87fa1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1cd3c34fc292e4a050fa8a75078283e34425fc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752504"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139131"
 ---
-# <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext 構造体
+# <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext 構造体
 完全な `CONTEXT` 構造の代わりに使用できる単純なコンテキストを提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -42,17 +40,17 @@ struct StackTrace_SimpleContext
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`StackOffset`|スタック ポインター、または x86 enter スタック ポインター (ESP) プラットフォーム。|  
-|`FrameOffset`|フレームのオフセット、または x86 EBP レジスタのプラットフォームです。|  
-|`InstructionOffset`|命令ポインター、または x86 enter 命令ポインター (EIP) プラットフォーム。|  
+|`StackOffset`|スタックポインター、または x86 プラットフォームの enter スタックポインター (ESP)。|  
+|`FrameOffset`|フレームオフセット、または x86 プラットフォームでの EBP レジスタ。|  
+|`InstructionOffset`|命令ポインター、または x86 プラットフォームの enter 命令ポインター (EIP)。|  
   
 ## <a name="remarks"></a>Remarks  
- 使用できます必要に応じてスタック トレース関数は、通常、アドレス、フレームのオフセット、およびスタック アドレスのみを返す必要があります、ため、`SimpleContext`構造ではなく、大規模な`CONTEXT`構造体。  
+ 通常、スタックトレース関数はアドレス、フレームオフセット、およびスタックアドレスだけを返す必要があるため、必要に応じて、大きな `CONTEXT` 構造の代わりに `SimpleContext` 構造を使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** SOS_Stacktrace.h  
+ **ヘッダー:** SOS_Stacktrace  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

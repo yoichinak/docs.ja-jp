@@ -5,14 +5,12 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 146aef8c1e085ee3146585c3b5b1cda8004b9f7e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7c9fad9b420044cce2c9d75cca66ecdb5b0558cd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044212"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104678"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET セキュリティ アノテーター ツール)
 .NET セキュリティ アノテーター ツール (SecAnnotate.exe) は、1 つ以上のアセンブリの `SecurityCritical` 部分と `SecuritySafeCritical` 部分を識別するコマンド ライン アプリケーションです。  

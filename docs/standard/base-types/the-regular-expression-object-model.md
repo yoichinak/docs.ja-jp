@@ -35,14 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea31dc154d5df2b0058af4c04035d096d5e850c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e637b2527ce0f7e1b48b713549cb87b2c13881db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664662"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124810"
 ---
 # <a name="the-regular-expression-object-model"></a>正規表現のオブジェクト モデル
 <a name="introduction"></a> ここでは、.NET の正規表現を扱うときに使用するオブジェクト モデルについて説明します。 このチュートリアルは、次のセクションで構成されています。  

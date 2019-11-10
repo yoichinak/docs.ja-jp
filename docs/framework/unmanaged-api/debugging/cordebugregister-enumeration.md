@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bed3c461935c5a2bc912ed9ed16d147fddaf8a1a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d182476130e611e57df232c9652cda4bec002c31
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739652"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132768"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister 列挙型
 指定されたプロセッサ アーキテクチャに関連付けられたレジスタを指定します。  
@@ -200,8 +198,8 @@ typedef enum CorDebugRegister {
   
  たとえば、IA-64 プロセッサ上で #83 データ レジスタを指定する必要がある場合、`REGISTER_IA64_R0` + 83 を使用します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e9aae1b-d1b7-4b6e-b577-6faf36dcec85
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c28ff84b08802246d587bfa130ae5915177932ac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 441d225dadbbca09ab27c8ccd70debe32f4c12da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764304"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140258"
 ---
 # <a name="icordebugvalue2getexacttype-method"></a>ICorDebugValue2::GetExactType メソッド
-"ICorDebugType"オブジェクトを表すインターフェイス ポインターを取得、<xref:System.Type>のこの値。  
+この値の <xref:System.Type> を表す "の型のオブジェクトへのインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,13 +35,13 @@ HRESULT GetExactType (
   
 ## <a name="parameters"></a>パラメーター  
  `ppType`  
- [out]アドレスへのポインター、`ICorDebugType`を表すオブジェクトを<xref:System.Type>のこの"ICorDebugValue2"オブジェクトで表される値。  
+ 入出力この "ICorDebugValue2" オブジェクトによって表される値の <xref:System.Type> を表す `ICorDebugType` オブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- 汎用対応`GetExactType`メソッドはどちらも、 [icordebugobjectvalue::getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)と[icordebugvalue::gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)メソッド、戻り値の型に関する情報の各.  
+ ジェネリック対応の `GetExactType` メソッドは、、の各メソッドと、値の型に関する情報を返す、それぞれのメソッドと[ICorDebugValue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) [メソッドの両方](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)を置き換えます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

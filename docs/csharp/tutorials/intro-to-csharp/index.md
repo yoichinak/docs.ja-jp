@@ -3,16 +3,18 @@ title: C# の概要 - 対話型チュートリアル
 description: お使いのブラウザーで C# を学習し、独自の開発環境で使用を開始します
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 564af21fb0f9b6cf8b5c3591ff5622278a8cbb22
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850770"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423103"
 ---
 # <a name="introduction-to-c"></a>C\# の概要
 
-C# の概要に関するチュートリアルへようこそ。 まずは、お使いのブラウザーで実行できる、対話形式のレッスンを開始します。
+C# の概要に関するチュートリアルへようこそ。 まずは、お使いのブラウザーで実行できる、対話形式のレッスンを開始します。 これらの対話型レッスンを開始する前に、[C# 101 ビデオ シリーズ](https://aka.ms/dotnet3-csharp)で C# の基本を学習できます。
+
+> [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 最初のレッスンでは、小規模なコード スニペットを使用して C# の概念を説明します。 C# 構文の基礎や、文字列、数値、ブール値などのデータ型の使用方法を学習します。 すべて対話形式で、数分のうちにコードを記述して実行することになります。 この最初のレッスンでは、プログラミングや C# 言語について事前の知識をお持ちでないことを前提としています。
 

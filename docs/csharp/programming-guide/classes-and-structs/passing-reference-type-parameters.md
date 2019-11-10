@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: f4329c525995b8246427072d1f537d91d875ef95
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6489d31ac1e466fdbf2b47ce1aae7e1139af0960
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596268"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419041"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>参照型パラメーターの引き渡し (C# プログラミング ガイド)
 [型参照](../../language-reference/keywords/reference-types.md)の変数には、そのデータは直接含まれず、そのデータへの参照が含まれます。 値で参照型パラメーターを渡す場合、クラス メンバーの値など、参照先オブジェクトに属するデータを変更することができます。 ただし、参照自体の値を変更することはできません。たとえば、同じ参照を使用して、新しいオブジェクトのメモリを割り当て、ブロックの外側で永続化させることはできません。 これを行うには、[ref](../../language-reference/keywords/ref.md) または [out](../../language-reference/keywords/out-parameter-modifier.md) キーワードを使用してパラメーターを渡します。 わかりやすくするために、次の例では `ref` を使用しています。  
@@ -37,7 +37,7 @@ ms.locfileid: "69596268"
   
  この例では、呼び出し元のプログラム内の変数に影響を与えるため、参照渡しでパラメーターを渡す必要があります。 メソッド ヘッダーと、メソッドの呼び出しの両方から `ref` キーワードを削除すると、呼び出し元プログラムで変更は行われません。  
   
- 文字列の詳細については、「[文字列](../../language-reference/keywords/string.md)」を参照してください。  
+ 文字列の詳細については、「[文字列](../../language-reference/builtin-types/reference-types.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac18be4732d223561d3a0afcef0e650587385822
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938806"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459885"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 言語機能
-XAML 2009 とは、既存の XAML 言語仕様を拡張した、XAML の新しい言語機能の短縮名です。 XAML 2009 には、いくつかの新しいディレクティブとコンストラクトが導入されています。 含まれます、 [X:arguments ディレクティブ](x-arguments-directive.md)、 [X:factorymethod ディレクティブ](x-factorymethod-directive.md)、 [X:reference マークアップ拡張機能](x-reference-markup-extension.md)、 [X:typearguments ディレクティブ](x-typearguments-directive.md); 共通言語プリミティブの組み込み型 (たとえば`x:Char`)。  
+XAML 2009 とは、既存の XAML 言語仕様を拡張した、XAML の新しい言語機能の短縮名です。 XAML 2009 には、いくつかの新しいディレクティブとコンストラクトが導入されています。 これには、 [X:Arguments ディレクティブ](x-arguments-directive.md)が含まれます。[X:FactoryMethod ディレクティブ](x-factorymethod-directive.md)です。[x:Reference のマークアップ拡張機能](x-reference-markup-extension.md)。[X:TypeArguments ディレクティブ](x-typearguments-directive.md)です。および共通言語プリミティブの組み込み型 (`x:Char`など)。  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>XAML 2009 は、WPF および Visual Studio でサポートされています。  
@@ -24,7 +24,7 @@ XAML 2009 とは、既存の XAML 言語仕様を拡張した、XAML の新し�
  また、XAML 2009 では、以前の XAML 2006 構造を変更するか、または基本的なマークアップ形式を変更する、追加機能も導入されました。  
   
 ### <a name="xkey-as-an-object-element"></a>オブジェクトの要素としての x:Key  
- XAML 2009 では `x:Key` をオブジェクト (オブジェクト要素値を持つプロパティ要素) としてサポートできます。XAML 2006 では、 `x:Key` は属性としてのみサポートされていました。 「 [x:Key ディレクティブ](x-key-directive.md)」の「XAML 2009」のセクションを参照してください。  
+ XAML 2009 では `x:Key` をオブジェクト (オブジェクト要素値を持つプロパティ要素) としてサポートできます。XAML 2006 では、 `x:Key` は属性としてのみサポートされていました。 「 [x:Key Directive](x-key-directive.md)」の「XAML 2009」のセクションを参照してください。  
   
 ### <a name="xmlns-on-property-elements"></a>プロパティ要素の xmlns  
  XAML 2009 は、プロパティ要素に対する XAML 名前空間 (xmlns) の定義をサポートできます。XAML 2006 では、オブジェクト要素に対してのみ xmlns 定義をサポートしていました。  
@@ -34,4 +34,4 @@ XAML 2009 とは、既存の XAML 言語仕様を拡張した、XAML の新し�
   
 ## <a name="see-also"></a>関連項目
 
-- [XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [XAML の概要 (WPF)](../../desktop-wpf/fundamentals/xaml.md)

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 052f6a61fb1b03b060e22bbff2d8124ac3a1c0c0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f61ad49753da9d96e733ea667095722ddc238fe1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377652"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121109"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>タスク ベースの非同期パターン (TAP)
 タスク ベースの非同期パターン (TAP) は、任意の非同期操作を表すために使用される <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 名前空間の <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 型および <xref:System.Threading.Tasks?displayProperty=nameWithType> 型に基づいています。 TAP は、新規開発に推奨の非同期デザイン パターンです。  

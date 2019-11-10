@@ -2,14 +2,12 @@
 title: 破壊的変更、.NET Framework から .NET Core 3.0 - .NET Core
 description: .NET Framework から .NET Core 3.0 への Windows フォームと Windows Presentation Foundation の破壊的変更の一覧を示します。
 ms.date: 09/10/2019
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 28da6a99e86d6c6f5cfc3b05c0a3a6419c310127
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: a374e35192c7aad07e986e0e0b75039642744edc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182113"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089573"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a>.NET Framework から .NET Core 3.0 への移行の破壊的変更
 

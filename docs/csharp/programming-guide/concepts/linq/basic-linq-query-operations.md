@@ -17,21 +17,21 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 013e1960e6c5721e0bd7ce6998848ddce15a4e4d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924393"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418723"
 ---
 # <a name="basic-linq-query-operations-c"></a>LINQ クエリの基本操作 (C#)
 このトピックでは、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式とクエリで実行する一般的な操作について、簡単に説明します。 詳細については、以下のトピックを参照してください。  
   
- [LINQ クエリ式](../../linq-query-expressions/index.md)  
+ [LINQ クエリ式](../../../linq/index.md)  
   
  [標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)  
   
- [チュートリアル:C# でのクエリの作成](./walkthrough-writing-queries-linq.md)  
+ [チュートリアル: C# でのクエリの作成](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
 > 既に SQL や XQuery などのクエリ言語に精通している場合は、このトピックの大部分を省略できます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式における句の順序について理解するには、次のセクションの "`from` 句" を参照してください。  
@@ -44,9 +44,9 @@ ms.locfileid: "69924393"
  範囲変数は、`foreach`ループの反復変数と似ていますが、クエリ式では実際の反復は発生しません。 クエリが実行されると、範囲変数は `customers` の連続する各要素への参照として機能します。 `cust` の型はコンパイラで推論できるため、明示的に指定する必要はありません。 追加の範囲変数は、`let` 句で導入できます。 詳しくは、「[let 句](../../../language-reference/keywords/let-clause.md)」をご覧ください。  
   
 > [!NOTE]
-> <xref:System.Collections.ArrayList> などの非ジェネリック データ ソースの場合は、範囲変数を明示的に型指定する必要があります。 詳細については、[方法:LINQ を使用して ArrayList を照会する (C#)](./how-to-query-an-arraylist-with-linq.md)」と「[from 句](../../../language-reference/keywords/from-clause.md)」をご覧ください。  
+> <xref:System.Collections.ArrayList> などの非ジェネリック データ ソースの場合は、範囲変数を明示的に型指定する必要があります。 詳細については、[LINQ を使用して ArrayList を照会する (C#)](./how-to-query-an-arraylist-with-linq.md)」と「[from 句](../../../language-reference/keywords/from-clause.md)」をご覧ください。  
   
-## <a name="filtering"></a>Filtering  
+## <a name="filtering"></a>フィルター処理  
  最も一般的なクエリ操作は、ブール式の形式でフィルターを適用することです。 クエリにフィルターを使用すると、式の条件に該当する要素だけがクエリから返されます。 結果は、`where` 句を使って生成されます。 フィルターは、実質的にはソース シーケンスから除外する要素を指定します。 次の例では、住所がロンドンにある `customers` だけが返されます。  
   
  [!code-csharp[csLINQGettingStarted#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#24)]  
@@ -101,7 +101,7 @@ from order in Customer.Orders...
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ クエリ式](../../linq-query-expressions/index.md)
-- [チュートリアル:C# でのクエリの作成](./walkthrough-writing-queries-linq.md)
+- [LINQ クエリ式](../../../linq/index.md)
+- [チュートリアル: C# でのクエリの作成](./walkthrough-writing-queries-linq.md)
 - [クエリ キーワード (LINQ)](../../../language-reference/keywords/query-keywords.md)
 - [匿名型](../../classes-and-structs/anonymous-types.md)

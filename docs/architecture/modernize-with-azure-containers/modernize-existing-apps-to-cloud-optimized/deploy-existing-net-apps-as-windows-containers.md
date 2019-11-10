@@ -2,12 +2,12 @@
 title: Windows コンテナーとして既存の .NET アプリを展開する
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |既存の .NET アプリを Windows コンテナーとしてデプロイする
 ms.date: 04/29/2018
-ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318640"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089559"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows コンテナーとして既存の .NET アプリを展開する
 
@@ -93,15 +93,15 @@ Linux の場合、複数のディストリビューションを利用できま�
 
 > | **番号** | **システムとバージョン** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | Windows Server Core での .NET Framework 4.x |
-> | **microsoft/aspnet:4.x-windowsservercore** | Windows Server Core で ASP.NET カスタマイズが追加された .NET Framework 4.x |
+> | **microsoft/dotnet: 4.x-windowsservercore** | Windows Server Core での .NET Framework 4.x |
+> | **microsoft/aspnet: 4.x-windowsservercore** | Windows Server Core で ASP.NET カスタマイズが追加された .NET Framework 4.x |
 
 .NET Core (Linux と Windows のクロスプラットフォーム) の場合、タグは次のようになります。
 
 > | **番号** | **システムとバージョン**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0 ランタイム-Linux 上のみ |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET Core 2.0 ランタイム-Windows Nano Server のみ |
+> | **microsoft/dotnet: 2.0.0** | .NET Core 2.0 ランタイム-Linux 上のみ |
+> | **microsoft/dotnet: 2.0.0-nanoserver** | .NET Core 2.0 ランタイム-Windows Nano Server のみ |
 
 ### <a name="multi-arch-images"></a>マルチアーキテクチャイメージ
 
@@ -113,9 +113,9 @@ Linux の場合、複数のディストリビューションを利用できま�
 
 Linux コンテナーと同様に、Windows Server コンテナーは Docker エンジンを使用して管理されます。 Linux コンテナーとは異なり、Windows コンテナーには、2つの異なるコンテナーの種類、または実行時-Windows Server のコンテナーと Hyper-v の分離が含まれています。
 
-**Windows Server のコンテナー**:プロセスと名前空間の分離テクノロジを使用して、アプリケーションを分離します。 Windows Server コンテナーは、コンテナーホストとホストで実行されているすべてのコンテナーとカーネルを共有します。 これらのコンテナーは、悪意のあるセキュリティ境界を提供しないため、信頼されていないコードを分離するために使用しないでください。 これらのコンテナーには、共有されたカーネル空間があるため、同じカーネルバージョンと構成が必要です。
+**Windows Server のコンテナー**: プロセスと名前空間の分離テクノロジを使用して、アプリケーションを分離します。 Windows Server コンテナーは、コンテナーホストとホストで実行されているすべてのコンテナーとカーネルを共有します。 これらのコンテナーは、悪意のあるセキュリティ境界を提供しないため、信頼されていないコードを分離するために使用しないでください。 これらのコンテナーには、共有されたカーネル空間があるため、同じカーネルバージョンと構成が必要です。
 
-**Hyper-v の分離**:高度に最適化された VM で各コンテナーを実行することで、Windows Server コンテナーによって提供される分離を拡大します。 この構成では、コンテナーホストのカーネルは、同じホスト上の他のコンテナーとは共有されません。 これらのコンテナーは、VM と同じセキュリティ保証で、悪意のあるマルチテナントホスティング向けに設計されています。 これらのコンテナーは、ホスト上のホストまたはその他のコンテナーとカーネルを共有しないため、異なるバージョンと構成 (サポートされているバージョン) でカーネルを実行できます。 たとえば、windows 10 のすべての Windows コンテナーは、Windows Server カーネルのバージョンと構成を利用するために、Hyper-v の分離を使用します。
+**Hyper-v の分離**: 高度に最適化された VM で各コンテナーを実行することで、Windows Server コンテナーによって提供される分離性が向上します。 この構成では、コンテナーホストのカーネルは、同じホスト上の他のコンテナーとは共有されません。 これらのコンテナーは、VM と同じセキュリティ保証で、悪意のあるマルチテナントホスティング向けに設計されています。 これらのコンテナーは、ホスト上のホストまたはその他のコンテナーとカーネルを共有しないため、異なるバージョンと構成 (サポートされているバージョン) でカーネルを実行できます。 たとえば、windows 10 のすべての Windows コンテナーは、Windows Server カーネルのバージョンと構成を利用するために、Hyper-v の分離を使用します。
 
 Hyper-v の分離を使用するかどうかに関係なく、Windows でコンテナーを実行することは、実行時の決定です。 最初に Hyper-v の分離を使用してコンテナーを作成し、実行時に Windows Server のコンテナーとして実行するように選択することもできます。
 
@@ -129,7 +129,7 @@ Hyper-v の分離を使用するかどうかに関係なく、Windows でコン�
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
-- **インフォグラフィック:Microsoft とコンテナー @ no__t-0
+- **インフォグラフィック: Microsoft とコンテナー**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -154,11 +154,11 @@ Azure サポートコンテナーの製品は、PaaS (サービスとしての�
 
 - **Azure App Service**
 - **Azure Kubernetes サービス (AKS と ACS)**
-- **Azure Batch** 
+- **Azure Batch**
 
 次に、Azure でホストされている拡張性の高いコンテナーレジストリを Azure Container Registry します。これは、カスタムコンテナーイメージを登録してデプロイするときに、以前のすべての製品から使用できます。
 
-さらに、コンテナーから、Azure SQL Database、Azure Redis cache、Azure Cosmos DB など、Azure の他の管理されたサービスを利用することもできます。 また、Azure Marketplace には、Cloud Foundry や OpenShift などのサードパーティ製ソリューション/プラットフォームも用意されており、Azure 内でコンテナーを使用することもできます。 
+さらに、コンテナーから、Azure SQL Database、Azure Redis cache、Azure Cosmos DB など、Azure の他の管理されたサービスを利用することもできます。 また、Azure Marketplace には、Cloud Foundry や OpenShift などのサードパーティ製ソリューション/プラットフォームも用意されており、Azure 内でコンテナーを使用することもできます。
 
 次のセクションでは、Windows コンテナーを対象とする場合に、これらの各 Azure 製品とソリューションを使用するタイミングに関する Microsoft の推奨事項について説明します。
 

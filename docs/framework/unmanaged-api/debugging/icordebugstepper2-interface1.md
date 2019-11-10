@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7a191c2a-95ea-4d47-83b0-44de2b632d63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d86f4bbec8971d164966298734388f0744a2d41c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 28ec18864158641a337ebdea189080ba4247a7c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953033"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120520"
 ---
 # <a name="icordebugstepper2-interface"></a>ICorDebugStepper2 インターフェイス
 マイコードのみ (JMC) デバッグのサポートを提供します。  
@@ -37,12 +35,12 @@ ms.locfileid: "69953033"
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

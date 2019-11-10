@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 565ae2a6c42de57570f564edc9d0bde5cab8efa8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bd3d80023f6cb382f057e976dba01daf5e28db50
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590619"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423323"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>方法: デリゲートを宣言し、インスタンス化して使用する (C# プログラミング ガイド)
 C# 1.0 以降では、次の例に示すようにデリゲートを宣言できます。  
@@ -23,7 +23,7 @@ C# 1.0 以降では、次の例に示すようにデリゲートを宣言でき�
   
  [!code-csharp[csProgGuideDelegates#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#32)]  
   
- C# 2.0 以降では、次の例に示すように、匿名メソッドを使用して[デリゲート](../../language-reference/keywords/delegate.md)の宣言と初期化を行うこともできます。  
+ C# 2.0 以降では、次の例に示すように、匿名メソッドを使用して[デリゲート](../../language-reference/builtin-types/reference-types.md)の宣言と初期化を行うこともできます。  
   
  [!code-csharp[csProgGuideDelegates#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#15)]  
   

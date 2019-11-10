@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38e4bd55a52cdbb3c242b8c3e5ff21f970b93ac0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0553d8b07e3a16dc31474b5470ba2dd8ba365cb2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765030"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140504"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next メソッド
-現在の位置から、プロセス内には、現在存在しているアプリケーション ドメインの指定した数を取得します。  
+現在プロセスに存在する、指定した数のアプリケーションドメインを、現在の位置から取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>パラメーター  
  `celt`  
- [in]取得する要素の数。  
+ から取得する要素の数。  
   
  `objects`  
- [out]配列へのポインターの取得[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)アプリケーション ドメインを表すオブジェクト。  
+ 入出力取得された[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)オブジェクトの配列へのポインター。各オブジェクトは、アプリケーションドメインを表します。  
   
  `pceltFetched`  
- [out]アプリケーション ドメインの数へのポインターが実際に返されます。 この値は null になる場合`celt`は 1 つです。  
+ 入出力実際に返されたアプリケーションドメインの数へのポインター。 `celt` が1の場合、この値は null になります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorPub.idl, CorPub.h  
+ **ヘッダー:** CorPub .idl、CorPub .h  
   
  **ライブラリ:** CorGuids.lib  
   

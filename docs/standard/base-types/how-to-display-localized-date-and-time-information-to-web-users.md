@@ -13,14 +13,12 @@ ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 51142a168aba4408e6ce550a032960c4df6c3ae7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882489"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138743"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>方法: ローカライズされた日付/時刻情報を Web ユーザーに表示する
 Web ページは世界中で表示されるため、ユーザーとの通信時の日時値の解析処理は、(通常は Web サーバーのローカル カルチャの形式である) 既定の形式には依存しないようにする必要があります。 代わりに、ユーザーが入力する日時文字列を処理する Web フォームで、ユーザーの優先カルチャで文字列が解析されるようにする必要があります。 同様に、日時データは、ユーザーのカルチャに準拠する形式でユーザーに表示されるようにする必要があります。 このトピックでは、その方法について説明します。  
@@ -114,6 +112,6 @@ Web ページは世界中で表示されるため、ユーザーとの通信時�
 ## <a name="see-also"></a>関連項目
 
 - [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [標準の日時形式文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [カスタム日時形式文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [日付と時刻文字列の解析](../../../docs/standard/base-types/parsing-datetime.md)

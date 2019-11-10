@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 891ceb43-5161-421e-a0bf-299962fd7efd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6c557df3c69b9d18b95ebf33815b92dcb9097f4e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aa0bc34c3cb3ac330582cee0843022e913376fc2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69987536"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192159"
 ---
 # <a name="icordebugassemblyenum-interface"></a>ICorDebugAssemblyEnum インターフェイス
 
@@ -31,19 +29,19 @@ ICorDebugEnum メソッドを実装し、アセンブリ配列を列挙します
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|現在の`ICorDebugAssembly`位置から開始して、列挙内の指定した数のインスタンスを取得します。|  
+|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|現在の位置から開始して、列挙内の指定した数の `ICorDebugAssembly` インスタンスを取得します。|  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

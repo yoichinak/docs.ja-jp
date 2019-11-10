@@ -7,14 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 22d70d0ee976d9c1a6aabd57e5d13dc70cd2d081
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053723"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454260"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework のアクセシビリティの新機能
 
@@ -628,7 +626,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ### <a name="aspnet-web-controls"></a>ASP.NET Web コントロール
 
-.NET Framework 4.7.1 および Visual Studio 2017 15.3 以降では、ASP.NET Web コントロールによる Visual Studio のアクセシビリティ テクノロジの処理方法が向上しています。 主な変更点は以下のとおりです。
+.NET Framework 4.7.1 および Visual Studio 2017 バージョン 15.3 以降では、ASP.NET によって、ASP.NET Web コントロールによる Visual Studio のアクセシビリティ テクノロジの処理方法が向上しています。 主な変更点は以下のとおりです。
 
 - **[詳細の表示]** ウィザードの **[フィールドの追加]** ダイアログや **ListView** ウィザードの **[ListView の構成]** ダイアログなど、コントロールで不足していた UI アクセシビリティ パターンを実装するための変更。
 
@@ -711,4 +709,4 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework の新機能](whats-new.md)
+- [.NET Framework の新機能](index.md)

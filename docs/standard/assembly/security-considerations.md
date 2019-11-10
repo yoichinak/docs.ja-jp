@@ -15,14 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8cf99e766e3ea66440a30b4b616a1d90ec937e3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 2cd12ea49723bdac734c6847d337d945a5cfcb5e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972571"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138615"
 ---
 # <a name="assembly-security-considerations"></a>アセンブリのセキュリティに関する考慮事項
 <a name="top"></a> アセンブリを作成する場合は、アセンブリの実行に必要となるアクセス許可セットを指定できます。 アセンブリに対して特定のアクセス許可を付与するかどうかは、証拠に基づいて決定されます。  

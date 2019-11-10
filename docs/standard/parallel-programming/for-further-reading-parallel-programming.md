@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - tasks, further reading
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bbdbc7586396a13cacac216774e8937416be947e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d424c04f52e08b0fdb72e187bd8999ef16427080
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929285"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134209"
 ---
 # <a name="for-further-reading-parallel-programming"></a>関連項目 (並列プログラミング)
 

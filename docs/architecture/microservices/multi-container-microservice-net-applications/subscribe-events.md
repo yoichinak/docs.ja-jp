@@ -2,12 +2,12 @@
 title: イベントへのサブスクライブ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 統合イベントの発行とサブスクライブについて。
 ms.date: 10/02/2018
-ms.openlocfilehash: ac9715c7c282be845e1e47516d06945c31f70209
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039775"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035637"
 ---
 # <a name="subscribing-to-events"></a>イベントへのサブスクライブ
 
@@ -105,7 +105,7 @@ CQRS アプローチを使用する場合など、より高度なマイクロサ
 
 - [トランザクション ログ マイニング](https://www.scoop.it/t/sql-server-transaction-log-mining)を使用する。
 
-- [送信トレイ パターン](http://gistlabs.com/2014/05/the-outbox/)を使用する。 これは、(ローカル トランザクションを拡張して) 統合イベントを格納するトランザクション テーブルです。
+- [送信トレイ パターン](https://www.kamilgrzybek.com/design/the-outbox-pattern/)を使用する。 これは、(ローカル トランザクションを拡張して) 統合イベントを格納するトランザクション テーブルです。
 
 このシナリオでは、完全なイベント ソーシング (ES) パターンを使用することが、*最良*とは言わないまでも適切なアプローチの 1 つです。 ただし、多くのアプリケーション シナリオでは、完全な ES システムを実装できない場合があります。 ES とは、現在の状態データを格納するのではなく、ドメイン イベントのみをトランザクション データベースに格納することを意味します。 ドメイン イベントのみを格納する方法には、システムの履歴を保持できる、過去の任意の時点におけるシステムの状態を確認できるなどの大きなメリットがあります。 しかし、完全な ES システムを実装するにはシステムの大部分を再構築する必要があり、それ以外にも多くの複雑さと要件が生じます。 たとえば、イベント ソーシング用に特別に作成されたデータベース ([イベント ストア](https://eventstore.org/)など) や、Azure Cosmos DB、MongoDB、Cassandra、CouchDB、RavenDB といったドキュメント指向のデータベースの使用が必要になる場合があります。 ES はこの問題に対する優れたアプローチですが、イベント ソーシングに精通している人以外には最も簡単なソリューションではありません。
 
@@ -326,7 +326,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://go.particular.net/eShopOnContainers>
 
 - **イベント駆動型メッセージング** \
-    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+    <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
 - **Jimmy Bogard。復元性を目指したリファクタリング: 結合の評価** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>

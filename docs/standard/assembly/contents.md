@@ -8,14 +8,12 @@ helpviewer_keywords:
 - single-file assemblies
 - multifile assemblies [.NET Framework]
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d9268b0ec1ea919730a2ebcd209507692284cc6
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9ca12ee4bd993db3dd200a3b340c220ce5188796
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972823"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122533"
 ---
 # <a name="assembly-contents"></a>アセンブリの内容
 一般に、静的アセンブリは次の 4 つの要素から構成されます。

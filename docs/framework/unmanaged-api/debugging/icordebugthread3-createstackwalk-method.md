@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c55e35d9-f9aa-4268-94b5-dce44c61acf2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b21bf047acf306fb41a7e6a8f8e73c698ea5b619
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ca5db8c8570cedd9b0412b71058d453112a1831c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765201"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140134"
 ---
 # <a name="icordebugthread3createstackwalk-method"></a>ICorDebugThread3::CreateStackWalk メソッド
-作成、 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)がスタックをアンワインドするスレッドのオブジェクト。  
+スタックをアンワインドするスレッドに対し[て、このオブジェクトを](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,23 +33,23 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
   
 ## <a name="parameters"></a>パラメーター  
  `ppStackWalk`  
- [out]アドレスへのポインター、 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)がスタックをアンワインドするスレッドのオブジェクト。  
+ 入出力スタックをアンワインドするスレッド[の、説明オブジェクトの](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)アドレスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`ICorDebugStackWalk`オブジェクトが正常に作成します。|  
-|E_FAIL|`ICorDebugStackWalk`オブジェクトは作成されませんでした。|  
+|S_OK|`ICorDebugStackWalk` オブジェクトが正常に作成されました。|  
+|E_FAIL|`ICorDebugStackWalk` オブジェクトは作成されませんでした。|  
   
 ## <a name="exceptions"></a>例外  
   
 ## <a name="remarks"></a>Remarks  
- 場合、`CreateStackWalk`メソッドが成功すると、返された`ICorDebugStackWalk`オブジェクトのコンテキストが、スレッドの現在のコンテキストに設定します。  
+ `CreateStackWalk` メソッドが成功すると、返された `ICorDebugStackWalk` オブジェクトのコンテキストが、スレッドの現在のコンテキストに設定されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -3,12 +3,12 @@ title: ML.NET のメトリック
 description: ML.NET モデルのパフォーマンスを評価するために使用されるメトリックを理解する
 ms.date: 04/29/2019
 author: natke
-ms.openlocfilehash: 45176902a195906e7b5cffd24fc9da839406ad9d
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 362f2f382d050ff9ae246af2dffe3e15d22452eb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410536"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460737"
 ---
 # <a name="model-evaluation-metrics-in-mlnet"></a>ML.NET のモデル評価メトリック
 
@@ -47,7 +47,7 @@ ms.locfileid: "67410536"
 
 多クラス分類メトリックの詳細については、以下の記事を参照してください。
 
-- [精度、再現率、および F スコアのマイクロ平均とマクロ平均](http://rushdishams.blogspot.com/2011/08/micro-and-macro-average-of-precision.html)
+- [精度、再現率、および F スコアのマイクロ平均とマクロ平均](https://rushdishams.blogspot.com/2011/08/micro-and-macro-average-of-precision.html)
 - [不均衡なデータセットによる多クラス分類](https://towardsdatascience.com/machine-learning-multiclass-classification-with-imbalanced-data-set-29f6a177c1a)
 
 ## <a name="metrics-for-regression"></a>回帰のメトリック

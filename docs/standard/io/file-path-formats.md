@@ -9,14 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75261bc44b938432c9c22b90dc4db30ca00d630b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 808c92e906a0bf6f8fdc368396d6d240573de501
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170739"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120785"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows システムのファイル パス形式
 

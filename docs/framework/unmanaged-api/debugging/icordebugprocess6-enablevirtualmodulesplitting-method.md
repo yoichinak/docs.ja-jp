@@ -2,14 +2,12 @@
 title: ICorDebugProcess6::EnableVirtualModuleSplitting メソッド
 ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8bd06dd3f58a1f74fbdb5ec61c4896f5c1696856
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 32648f40046959ffd8676fe67a1e0a123b0e801f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931058"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123510"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting メソッド
 仮想モジュール分割を有効または無効にします。  
@@ -26,7 +24,7 @@ HRESULT EnableVirtualModuleSplitting(
  `enableSplitting`  
  仮想モジュール分割を有効にするには、`true`。無効にするには、`false`。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  仮想モジュール分割により、 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)は、ビルド処理中にマージされたモジュールを認識し、1つの大きなモジュールではなく個別のモジュールのグループとして表示します。 これにより、以下で説明するさまざまな[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)メソッドの動作が変更されます。  
   
 > [!NOTE]
@@ -46,10 +44,10 @@ HRESULT EnableVirtualModuleSplitting(
  標準モジュール  
  ビルド時にマージされなかったモジュール。 コンテナー モジュールでもサブモジュールでもありません。  
   
- コンテナーモジュールとサブモジュールは両方とも、モジュールインターフェイスオブジェクトによって表されます。 ただし、インターフェイスの動作は、各ケースでは、セクション > セクションで\<説明するように、それぞれ少し異なります。  
+ コンテナー モジュールとサブモジュールは、どちらも ICorDebugModuleインターフェイス オブジェクトによって表されます。 ただし、各ケースでは、インターフェイスの動作が少し異なります。これは、> セクションの「\<x 参照」セクションで説明します。  
   
 ## <a name="modules-and-assemblies"></a>モジュールとアセンブリ  
- アセンブリ マージ シナリオではマルチモジュール アセンブリはサポートされないため、モジュールとアセンブリの間には一対一リレーションシップがあります。 各モジュールオブジェクトは、コンテナーモジュールを表しているか、サブモジュールであるかに関係なく、それぞれに対応する "オブジェクト" を持ちます。 のモジュール[:: GetAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)メソッドは、モジュールからアセンブリに変換します。 他の方向にマップするために、"コードの[アセンブリ:: 列挙体](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md)" メソッドは1つのモジュールのみを列挙します。 この場合、アセンブリとモジュールは緊密に結合されたペアとなるため、アセンブリとモジュールはほぼ同義の用語となります。  
+ アセンブリ マージ シナリオではマルチモジュール アセンブリはサポートされないため、モジュールとアセンブリの間には一対一リレーションシップがあります。 各 ICorDebugModule オブジェクトには、コンテナー モジュールを表すかサブモジュールを表すかに関係なく、対応する ICorDebugAssembly オブジェクトがあります。 のモジュール[:: GetAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)メソッドは、モジュールからアセンブリに変換します。 他の方向にマップするために、"コードの[アセンブリ:: 列挙体](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md)" メソッドは1つのモジュールのみを列挙します。 この場合、アセンブリとモジュールは緊密に結合されたペアとなるため、アセンブリとモジュールはほぼ同義の用語となります。  
   
 ## <a name="behavioral-differences"></a>動作の違い  
  コンテナー モジュールには、次の動作と特性があります。  
@@ -97,13 +95,13 @@ HRESULT EnableVirtualModuleSplitting(
   
 |メソッド|`enableSplitting` = `true`|`enableSplitting` = `false`|  
 |------------|---------------------------------|----------------------------------|  
-|[ICorDebugFunction::GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|この関数が最初に定義されたサブモジュールを返します|この関数がマージされたコンテナー モジュールを返します|  
-|[ICorDebugClass::GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|このクラスが最初に定義されたサブモジュールを返します。|このクラスがマージされたコンテナー モジュールを返します。|  
+|[の関数:: GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|この関数が最初に定義されたサブモジュールを返します|この関数がマージされたコンテナー モジュールを返します|  
+|[のクラス:: GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|このクラスが最初に定義されたサブモジュールを返します。|このクラスがマージされたコンテナー モジュールを返します。|  
 |ICorDebugModuleDebugEvent::GetModule|読み込まれたコンテナー モジュールを返します。 サブモジュールは、この設定に関係なく、読み込みイベントを提供されません。|読み込まれたコンテナー モジュールを返します。|  
 |[EnumerateAssemblies Appdomain::](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|サブアセンブリと標準アセンブリのリストを返します。コンテナー アセンブリは含まれません。 **注:** いずれかのコンテナー アセンブリにシンボルがない場合、そのサブアセンブリは列挙されません。 いずれかの標準アセンブリにシンボルがない場合、列挙される場合と列挙されない場合があります。|コンテナー アセンブリと標準アセンブリのリストを返します。サブアセンブリは含まれません。 **注:** いずれかの標準アセンブリにシンボルがない場合、列挙される場合と列挙されない場合があります。|  
-|[コード例:: GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md)(IL コードのみを参照している場合)|マージ前のアセンブリ イメージ内で有効な IL を返します。 具体的には、参照先の型が IL を含む仮想モジュールで定義されていない場合、インライン メタデータ トークンは正確に TypeRef または MemberRef トークンになります。 これらの TypeRef または MemberRef トークンは、対応する仮想 ICorDebugModule モジュールオブジェクトの [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) オブジェクトで検索できます。|マージ後のアセンブリ イメージ内の IL を返します。|  
+|[GetCode code::](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md) (IL コードのみを参照している場合)|マージ前のアセンブリ イメージ内で有効な IL を返します。 具体的には、参照先の型が IL を含む仮想モジュールで定義されていない場合、インライン メタデータ トークンは正確に TypeRef または MemberRef トークンになります。 これらの TypeRef または MemberRef トークンは、対応する仮想 ICorDebugModule モジュールオブジェクトの [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) オブジェクトで検索できます。|マージ後のアセンブリ イメージ内の IL を返します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug .idl、CorDebug. h  

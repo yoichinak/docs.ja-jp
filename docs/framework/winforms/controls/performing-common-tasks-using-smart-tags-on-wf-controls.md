@@ -1,30 +1,30 @@
 ---
-title: 'チュートリアル: Windows フォーム コントロールのスマート タグを使用した共通タスクの実行'
+title: 'チュートリアル : Windows フォーム コントロールのスマート タグを使用した共通タスクの実行'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DesignerAction object model
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 34c14c0afd9632b06947fd72e46ddbda070cfb0f
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 07fb43a711ae8b1e2e375b17b136c07f35b1cf39
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015758"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459572"
 ---
 # <a name="walkthrough-perform-common-tasks-using-smart-tags"></a>チュートリアル: スマートタグを使用した一般的なタスクの実行
 
 Windows フォームアプリケーションのフォームとコントロールを構築する際には、繰り返し実行する多くのタスクがあります。 次に、一般的に実行されるタスクをいくつか示します。
 
-- でのタブの追加または<xref:System.Windows.Forms.TabControl>削除。
+- <xref:System.Windows.Forms.TabControl>のタブを追加または削除する。
 
 - コントロールをその親にドッキングします。
 
-- <xref:System.Windows.Forms.SplitContainer>コントロールの向きを変更する。
+- <xref:System.Windows.Forms.SplitContainer> コントロールの向きを変更する。
 
 開発を高速化するために、多くのコントロールにスマートタグが用意されています。これは、デザイン時に1つのジェスチャでこのような一般的なタスクを実行できるようにする、状況依存のメニューです。 これらのタスクは*スマートタグ動詞*と呼ばれます。
 
@@ -42,17 +42,17 @@ Windows フォームアプリケーションのフォームとコントロール
 
 スマートタグは、デザイン時に、それらを提供するコントロールで常に使用できます。
 
-1. <xref:System.Windows.Forms.TabControl> **ツールボックス**からフォームにをドラッグします。 の横![に表示](./media/vs-winformsmttagglyph.gif)されるスマートタググリフ (スマートタググリフ) に注意してください。<xref:System.Windows.Forms.TabControl>
+1. **[ツールボックス]** から <xref:System.Windows.Forms.TabControl> をフォームにドラッグします。 <xref:System.Windows.Forms.TabControl>の横に表示されるスマートタググリフ (![スマートタググリフ](./media/vs-winformsmttagglyph.gif)) に注意してください。
 
-2. スマートタググリフをクリックします。 グリフの横に表示されるショートカットメニューで、 **[タブの追加]** 項目を選択します。 新しいタブページがに<xref:System.Windows.Forms.TabControl>追加されていることを確認します。
+2. スマートタググリフをクリックします。 グリフの横に表示されるショートカットメニューで、 **[タブの追加]** 項目を選択します。 新しいタブページが <xref:System.Windows.Forms.TabControl>に追加されていることを確認します。
 
 3. <xref:System.Windows.Forms.TableLayoutPanel> ツールボックス **から** コントロールをフォームにドラッグします。
 
-4. スマートタググリフをクリックします。 グリフの横に表示されるショートカットメニューで、 **[列の追加]** 項目を選択します。 <xref:System.Windows.Forms.TableLayoutPanel>コントロールに新しい列が追加されていることを確認します。
+4. スマートタググリフをクリックします。 グリフの横に表示されるショートカットメニューで、 **[列の追加]** 項目を選択します。 新しい列が <xref:System.Windows.Forms.TableLayoutPanel> コントロールに追加されていることを確認します。
 
 5. <xref:System.Windows.Forms.SplitContainer> ツールボックス **から** コントロールをフォームにドラッグします。
 
-6. スマートタググリフをクリックします。 グリフの横に表示されるショートカットメニューで、 **[横スプリッターの方向]** 項目を選択します。 <xref:System.Windows.Forms.SplitContainer>コントロールのスプリッターバーが水平方向に配置されていることを確認します。
+6. スマートタググリフをクリックします。 グリフの横に表示されるショートカットメニューで、 **[横スプリッターの方向]** 項目を選択します。 <xref:System.Windows.Forms.SplitContainer> コントロールのスプリッターバーが水平方向に配置されていることを確認します。
 
 ## <a name="see-also"></a>関連項目
 

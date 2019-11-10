@@ -1,6 +1,6 @@
 ---
 title: 型プロバイダー
-description: F#型プロバイダーが、プログラムで使用する型、プロパティ、およびメソッドを提供するコンポーネントである方法を学ぶ
+description: F# 型プロバイダーが、プログラムで使用する型、プロパティ、およびメソッドを提供するコンポーネントである方法を学ぶ
 ms.date: 04/02/2018
 ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
 ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
@@ -11,7 +11,7 @@ ms.locfileid: "65645166"
 ---
 # <a name="type-providers"></a>型プロバイダー
 
-F#型プロバイダーは、プログラムで使用する型、プロパティ、およびメソッドを指定するコンポーネントです。 型プロバイダーは、F#コンパイラによって外部データソースに基づく**型を生成** します。
+型プロバイダーは、プログラムで使用する型、プロパティ、およびメソッドを指定するコンポーネントです。 型プロバイダーは、F#コンパイラによって外部データソースに基づく**型を生成** します。
 
 たとえば、SQL の F# 型プロバイダーは、リレーショナル データベースのテーブルと列を表す型を生成できます。 これは実際、[SQLProvider](https://fsprojects.github.io/SQLProvider/)型プロバイダーはが行う事です。
 
@@ -33,7 +33,7 @@ F#型プロバイダーは、プログラムで使用する型、プロパティ
 - [SQLProvider](https://fsprojects.github.io/SQLProvider/)オブジェクトマッピングとこれらのデータソースに対する F# LINQ クエリを通じて、リレーションデータベースへの強く型付けされたアクセスを提供します。
 - [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)は、F#でのT-SQLのコンパイル事にチェックされた埋め込みのための型プロバイダーのセットがあります。
 - [Azure Storage Type provider](https://fsprojects.github.io/AzureStorageTypeProvider/)は、Azure Blob、Tables、および Queues の型を生成するため、プログラム全体でリソース名を文字列として指定することなく、これらのリソースにアクセスする事ができます。
-- [FSharp.Data.GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html)はURLによって指定されたGraphQLサーバに基づく型を生成する **GraphQLProvider** を含みます。
+- [FSharp.Data.GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html)は URL によって指定された GraphQL サーバに基づく型を生成する **GraphQLProvider** を含みます。
 
 必要に応じて、[独自のカスタム型プロバイダーを作成](creating-a-type-provider.md)したり他者のつくった型プロバイダーを参照する事ができます。例えば、組織に多数の名前付きデータセットを提供するデータサービスがあり、それぞれに独自の安定したデータスキーマがあるとします。強く型付けされた方法で、スキーマを読み取り最新のデータセットをプログラマに提供する型プロバイダーを作成する事ができます。
 

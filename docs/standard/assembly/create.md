@@ -7,14 +7,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2dda45cca182d75bc77916cdf862ada9faead9ec
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8a00784e6aa2d663c738339367b4076e79ed9c95
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972763"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122496"
 ---
 # <a name="create-assemblies"></a>アセンブリを作成する
 

@@ -10,18 +10,16 @@ helpviewer_keywords:
 - MSIL
 - viewing MSIL information
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 40ed31bb2231775bb2b6eb24586e07c8b07a85bb
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0b5e306d55bf38c28e2a68172c2a035b56e8d0af
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140164"
 ---
 # <a name="how-to-view-assembly-contents"></a>方法: アセンブリの内容を表示する
 

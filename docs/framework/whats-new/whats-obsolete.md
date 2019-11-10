@@ -7,14 +7,12 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 810f49581d4cb28987ea41237645f75c50388084
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 4de441ff55c3728f43742d6e467deeb47f400507
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690478"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140602"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>クラス ライブラリ内にある旧版のもの
 
@@ -39,7 +37,7 @@ ms.locfileid: "66690478"
 
 - 可能であれば、コードを変更して旧式の型またはメンバーの使用を止めます。
 
-     \- または -
+     または
 
 - このテクノロジ分野に関するドキュメントを確認して、非推奨の機能の使用に対する対応方法を決定します。
 
@@ -73,7 +71,7 @@ ms.locfileid: "66690478"
 
 ## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>.NET Framework 4.5 以降のバージョンの互換性のために残されている古い機能の一覧
 
-- [互換性のために残されている型](obsolete-types.md)
+- [旧版の .NET Framework の型](obsolete-types.md)
 - [互換性のために残されているメンバー](obsolete-members.md)
 
 ## <a name="obsolete-lists-for-previous-versions"></a>以前のバージョンの互換性のために残されている機能の一覧

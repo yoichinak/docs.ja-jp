@@ -14,14 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b5e49e9d575ae2ec9b48b18f839d469632ffa769
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770410"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423535"
 ---
 # <a name="handling-and-raising-events"></a>イベントの処理と発生
 
@@ -52,7 +50,7 @@ ms.locfileid: "61770410"
   
 デリゲートは[マルチキャスト](xref:System.MulticastDelegate)です。つまり、複数のイベント処理メソッドへの参照を保持できます。 詳細については、<xref:System.Delegate> のリファレンス ページを参照してください。 デリゲートでは、イベント処理を柔軟に、そして詳細に制御できます。 デリゲートは、イベントに対して登録されているイベント ハンドラーのリストを管理することで、そのイベントを発生させるクラスのイベント ディスパッチャーとして動作します。  
   
-<xref:System.EventHandler> デリゲートおよび <xref:System.EventHandler%601> デリゲートが動作しないシナリオについては、デリゲートを定義できます。 デリゲートの定義が必要なシナリオは非常にまれで、たとえば、ジェネリックを認識しないコードを使用する必要がある場合などです。 デリゲートは、宣言内で C# の [`delegate`](../../csharp/language-reference/keywords/delegate.md) および Visual Basic の [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) キーワードを使ってマークします。 次の例は、`ThresholdReachedEventHandler` という名前のデリゲートを宣言する方法を示しています。  
+<xref:System.EventHandler> デリゲートおよび <xref:System.EventHandler%601> デリゲートが動作しないシナリオについては、デリゲートを定義できます。 デリゲートの定義が必要なシナリオは非常にまれで、たとえば、ジェネリックを認識しないコードを使用する必要がある場合などです。 デリゲートは、宣言内で C# の [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) および Visual Basic の [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) キーワードを使ってマークします。 次の例は、`ThresholdReachedEventHandler` という名前のデリゲートを宣言する方法を示しています。  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
@@ -86,7 +84,7 @@ ms.locfileid: "61770410"
 ## <a name="raising-multiple-events"></a>複数のイベントの発生  
  クラスで複数のイベントを発生させる場合、コンパイラでは、イベント デリゲートのインスタンスごとに 1 つのフィールドが生成されます。 イベントの数が多い場合は、デリゲート 1 つあたり 1 フィールドというストレージ コストが許容されない可能性があります。 そのような状況に備えて、.NET には、イベント デリゲートを格納するために任意に選択した別のデータ構造と一緒に使用できる、イベント プロパティが用意されています。  
   
- イベント プロパティは、イベント アクセサーを伴うイベント宣言によって構成されます。 イベント アクセサーは、ストレージ データ構造におけるイベント デリゲート インスタンスの追加または削除を定義するメソッドです。 イベント プロパティを使用すると、イベント プロパティは各イベント デリゲートを呼び出す前に取得する必要があるので、イベント フィールドよりも低速です。 つまり、メモリを取るか、速度を取るかの比較検討になります。 クラスで、発生頻度の低いイベントを数多く定義する場合は、イベント プロパティを実装することをお勧めします。 詳細については、「[方法 :イベント プロパティを使用して複数のイベントを処理する](how-to-handle-multiple-events-using-event-properties.md)」をご覧ください。  
+ イベント プロパティは、イベント アクセサーを伴うイベント宣言によって構成されます。 イベント アクセサーは、ストレージ データ構造におけるイベント デリゲート インスタンスの追加または削除を定義するメソッドです。 イベント プロパティを使用すると、イベント プロパティは各イベント デリゲートを呼び出す前に取得する必要があるので、イベント フィールドよりも低速です。 つまり、メモリを取るか、速度を取るかの比較検討になります。 クラスで、発生頻度の低いイベントを数多く定義する場合は、イベント プロパティを実装することをお勧めします。 詳細については、[イベント プロパティを使用して複数のイベントを処理する](how-to-handle-multiple-events-using-event-properties.md)」をご覧ください。  
   
 ## <a name="related-topics"></a>関連トピック  
   

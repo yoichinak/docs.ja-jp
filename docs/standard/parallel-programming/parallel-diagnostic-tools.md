@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming, debugging and profiling tools
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2f34170c5a79c302158707fa96c60aef15e4cb1e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 795fb9b37b95a2e7bc1fb8f8f9547522efa46d82
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622448"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140049"
 ---
 # <a name="parallel-diagnostic-tools"></a>並列診断ツール
 Visual Studio は、マルチ スレッド アプリケーションのデバッグおよびプロファイリングを広範にサポートします。  

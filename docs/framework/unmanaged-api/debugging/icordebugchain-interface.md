@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: f671f519-1cb3-4ae5-b9f1-abc5e783459f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 93ada40bd88e53cd06f5e8d8136b2d527d7741e6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8baf3567e4ae188f88ad3a2df157cffab3f597ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969307"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125792"
 ---
 # <a name="icordebugchain-interface"></a>ICorDebugChain インターフェイス
 
@@ -45,17 +43,17 @@ ms.locfileid: "69969307"
 |[IsManaged メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-ismanaged-method.md)|このチェーンでマネージコードが実行されているかどうかを示す値を取得します。|  
   
 ## <a name="remarks"></a>Remarks  
- チェーン内のスタックフレームは、連続したスタック領域を占有し、同じスレッドとコンテキストを共有します。 チェーンは、マネージコードチェーンまたはアンマネージコードチェーンを表すことができます。 空`ICorDebugChain`のインスタンスは、アンマネージコードチェーンを表します。  
+ チェーン内のスタックフレームは、連続したスタック領域を占有し、同じスレッドとコンテキストを共有します。 チェーンは、マネージコードチェーンまたはアンマネージコードチェーンを表すことができます。 空の `ICorDebugChain` インスタンスは、アンマネージコードチェーンを表します。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

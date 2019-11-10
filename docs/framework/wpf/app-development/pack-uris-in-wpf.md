@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 59c72d9ae12a014a8c47cb3b2852b337b173446c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: efaf55220a41526b8952f01b8225f8336a4e8657
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580616"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459673"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF におけるパッケージの URI
 
@@ -139,7 +139,7 @@ pack://*authority* /*パス*
 
 `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`
 
-参照されるアセンブリリソースファイルのパック URI 構文は、application:///authority でのみ使用できます。 たとえば、次のは [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ではサポートされていません。
+参照されるアセンブリリソースファイルのパック URI 構文は、application:///authority でのみ使用できます。 たとえば、次のは [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ではサポートされていません。
 
 `pack://siteoforigin:,,,/SomeAssembly;component/ResourceFile.xaml`
 
@@ -188,7 +188,7 @@ pack://*authority* /*パス*
 
 MSBuild `Page` 項目として構成された XAML ファイルは、リソースファイルと同じ方法でアセンブリにコンパイルされます。 そのため、リソースファイルのパック Uri を使用して、MSBuild `Page` 項目を識別できます。
 
-通常、MSBuild `Page` 項目として構成される [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルの種類は、次のいずれかのルート要素となります。
+通常、MSBuild`Page` 項目として構成される [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルの種類は、次のいずれかのルート要素となります。
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 
@@ -255,9 +255,9 @@ Page1 に、*ルート*の url が含まれている場合、この参照では�
 
 1. パッケージの URI に一致する <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 属性のアセンブリメタデータをプローブします。
 
-2. @No__t_0 属性が見つかった場合、パック URI のパスはコンテンツファイルを参照します。
+2. <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 属性が見つかった場合、パック URI のパスはコンテンツファイルを参照します。
 
-3. @No__t_0 属性が見つからない場合は、ローカルアセンブリにコンパイルされる set リソースファイルを調べます。
+3. <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 属性が見つからない場合は、ローカルアセンブリにコンパイルされる set リソースファイルを調べます。
 
 4. パック URI のパスに一致するリソースファイルが見つかった場合、パック URI のパスはリソースファイルを参照します。
 
@@ -265,7 +265,7 @@ Page1 に、*ルート*の url が含まれている場合、この参照では�
 
 URI 解決は、次を参照する Uri には適用されません。
 
-- 参照アセンブリ内のコンテンツファイル: これらのファイルの種類は、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ではサポートされていません。
+- 参照アセンブリ内のコンテンツファイル: これらのファイルの種類は、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ではサポートされていません。
 
 - 参照アセンブリ内の埋め込みファイル: 参照されるアセンブリの名前と `;component` サフィックスの両方が含まれているため、それらを識別する Uri は一意です。
 
@@ -397,7 +397,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 ### <a name="common-pack-uri-scenarios"></a>一般的なパック URI のシナリオ
 
-前のセクションでは、リソース、コンテンツ、および起点サイトファイルを識別するために、パック Uri を作成する方法について説明しました。 @No__t_0 では、これらの構造はさまざまな方法で使用されます。次のセクションでは、いくつかの一般的な使用方法について説明します。
+前のセクションでは、リソース、コンテンツ、および起点サイトファイルを識別するために、パック Uri を作成する方法について説明しました。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]では、これらの構造はさまざまな方法で使用されます。次のセクションでは、いくつかの一般的な使用方法について説明します。
 
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>
 
@@ -407,11 +407,11 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
-スタンドアロンアプリケーションと [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] では、次の例に示すように、最初の UI としてページを指定することもできます。
+次の例に示すように、スタンドアロンアプリケーションと XAML ブラウザーアプリケーション (Xbap) では、初期 UI としてページを指定することもできます。
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-アプリケーションがスタンドアロンアプリケーションであり、<xref:System.Windows.Application.StartupUri%2A> でページが指定されている場合、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] はページをホストするための <xref:System.Windows.Navigation.NavigationWindow> を開きます。 @No__t_0 の場合、ページはホストブラウザーに表示されます。
+アプリケーションがスタンドアロンアプリケーションであり、<xref:System.Windows.Application.StartupUri%2A>でページが指定されている場合、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] はページをホストするための <xref:System.Windows.Navigation.NavigationWindow> を開きます。 Xbap の場合、ページはホストブラウザーに表示されます。
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -423,7 +423,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]
 
-@No__t_0 内で移動するさまざまな方法の詳細については、「[ナビゲーションの概要](navigation-overview.md)」を参照してください。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]内で移動するさまざまな方法の詳細については、「[ナビゲーションの概要](navigation-overview.md)」を参照してください。
 
 <a name="Specifying_a_Window_Icon"></a>
 
@@ -457,7 +457,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
-@No__t_0 のテーマの概要については、「[スタイルとテンプレート](../controls/styling-and-templating.md)」を参照してください。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のテーマの概要については、「[スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

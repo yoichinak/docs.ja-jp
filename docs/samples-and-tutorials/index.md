@@ -4,12 +4,12 @@ description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e4906feb7cda026848c990c7dd6f1dc8146dc7aa
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855780"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423568"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
@@ -49,7 +49,7 @@ ms.locfileid: "70855780"
 
 このサンプルは、C# インデクサーの構文および機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/indexers)は、GitHub の dotnet/samples リポジトリにあります。
 
-**[デリゲートとイベント](../csharp/delegates-events.md)**
+**[デリゲートとイベント](../csharp/delegates-overview.md)**
 
 このサンプルは、C# デリゲートとイベントの構文および機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events)は、GitHub の dotnet/samples リポジトリにあります。 イベントに重点を置いた [2 つ目のサンプル](https://github.com/dotnet/samples/tree/master/csharp/events)も、同じリポジトリにあります。
 
@@ -95,15 +95,11 @@ ms.locfileid: "70855780"
 
 このチュートリアルでは、プラグイン アーキテクチャをサポートする単純なアプリケーションを .NET Core で構築する方法を示します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)は、GitHub の dotnet/samples リポジトリにあります。
 
-## <a name="deploying-to-containers"></a>コンテナーへの展開
+## <a name="deploy-to-containers"></a>コンテナーをデプロイする
 
-**[Windows Docker コンテナーでの ASP.NET MVC アプリケーションの実行](../framework/docker/aspnetmvc.md)**
+**[Windows Docker コンテナーでの ASP.NET MVC アプリケーションの実行](/aspnet/mvc/overview/deployment/docker-aspnetmvc)**
 
 このチュートリアルでは、Windows Docker コンテナーで既存の ASP.NET MVC アプリを展開する方法について説明します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator)は、GitHub の dotnet/samples リポジトリにあります。
-
-**[Windows コンテナーでの .NET Framework コンソール アプリケーションの実行](../framework/docker/console.md)**
-
-このチュートリアルでは、Windows コンテナーで既存のコンソール アプリを展開する方法について説明します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)は、GitHub の dotnet/samples リポジトリにあります。
 
 ## <a name="viewing-and-downloading-samples"></a>サンプルの表示とダウンロード
 

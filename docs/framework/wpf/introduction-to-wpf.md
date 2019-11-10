@@ -6,12 +6,12 @@ ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 35290796b89262cafd8bce63bb97da203853f569
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d8ea49bbe400c5ec478a94ad7c1adb759af28abb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72921030"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454192"
 ---
 # <a name="wpf-overview"></a>WPF の概要
 
@@ -612,7 +612,7 @@ WPF コントロールの既定のユーザー インターフェイスは、通
 
 リソースおよびリソース ディクショナリは、テーマとスキンに対する WPF サポートの基礎です。
 
-詳細については、[リソース](advanced/xaml-resources.md)に関連するページを参照してください。
+詳細については、[リソース](../../desktop-wpf/fundamentals/xaml-resources-define.md)に関連するページを参照してください。
 
 ### <a name="custom-controls"></a>カスタム コントロール
 

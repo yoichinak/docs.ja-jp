@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10a40ba0-1b65-4721-bd11-cf12d57b280d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e77046745381d3ecc35c24d5af3f9181b9132e9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64ed875059730e91e28ff0903ab93fb25c68910b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738165"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134111"
 ---
 # <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess メソッド
-指定されたプロセスの"ICorDebugProcess"のインスタンスへのポインターを取得します。  
+指定されたプロセスの "いいプロセス" インスタンスへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,13 +36,13 @@ HRESULT GetProcess (
   
 ## <a name="parameters"></a>パラメーター  
  `dwProcessId`  
- [in]プロセスの ID。  
+ からプロセスの ID。  
   
  `ppProcess`  
- [out]アドレスへのポインター、`ICorDebugProcess`指定されたプロセスのインスタンス。  
+ 入出力指定されたプロセスの `ICorDebugProcess` インスタンスのアドレスへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

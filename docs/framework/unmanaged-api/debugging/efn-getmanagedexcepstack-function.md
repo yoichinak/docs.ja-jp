@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 61f4e057a487462feb385ca0e3ca977fdd165f56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739096"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134142"
 ---
-# <a name="efngetmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack 関数
+# <a name="_efn_getmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack 関数
 指定したマネージド例外オブジェクトのアドレスに応じて、中に含まれているスタック トレースの文字列バージョンを返します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,26 +37,26 @@ HRESULT _EFN_GetManagedExcepStack(
   
 ## <a name="parameters"></a>パラメーター  
  `Client`  
- [in]デバッグ中のクライアント。  
+ からデバッグ中のクライアント。  
   
  `StackObjAddr`  
- [in]派生したマネージ オブジェクトのポインター<xref:System.Exception>します。  
+ から<xref:System.Exception>から派生したマネージオブジェクトポインター。  
   
  szStackString  
- [out]返される文字列。  
+ 入出力返された文字列。  
   
  `cbString`  
- [out]文字列のバッファーで使用できる文字数。  
+ 入出力文字列バッファーで使用できる文字数。  
   
 ## <a name="remarks"></a>Remarks  
- ないマネージ コードのスレッドで現在のコンテキストの場合、関数は、0xa0 の施設の値と 0x1000 のエラー コードをマネージを返します。  
+ 現在コンテキスト内にあるスレッドにマネージコードがない場合、関数は、ファシリティ値が0xa0 で、エラーコードが0x1000 の HRESULT SOS_E_NOMANAGEDCODE を返します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** SOS_Stacktrace.h  
+ **ヘッダー:** SOS_Stacktrace  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

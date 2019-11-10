@@ -6,14 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], scheduling
 - scheduling threads
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 502e118a67e157ce7756efdece866564fddc6ab7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abcdf56b90513b937adefc38583e0312fec69785
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611490"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106223"
 ---
 # <a name="scheduling-threads"></a>スレッドのスケジューリング
 

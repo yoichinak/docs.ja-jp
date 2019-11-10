@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: b9aa3f4e386ca5de79fe028b10d0d68343aba06b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920033"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740680"
 ---
 # <a name="wpf-windows-overview"></a>WPF ウィンドウの概要
 ユーザーは、Windows を通じて Windows Presentation Foundation (WPF) スタンドアロンアプリケーションと対話します。 ウィンドウの主な目的は、データを視覚化してユーザーがデータと対話できるコンテンツをホストすることです。 スタンドアロンの [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは、<xref:System.Windows.Window> クラスを使用して独自のウィンドウを提供します。 このトピックでは、スタンドアロンアプリケーションでのウィンドウの作成と管理の基礎について説明する前に、<xref:System.Windows.Window> について説明します。  
   
 > [!NOTE]
-> ブラウザーでホストされる [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーション ([!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] やルース [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ページを含む) では、独自のウィンドウは提供されません。 代わりに、Windows Internet Explorer によって提供される windows でホストされます。 「 [WPF XAML ブラウザーアプリケーションの概要](wpf-xaml-browser-applications-overview.md)」を参照してください。  
+> XAML ブラウザーアプリケーション (Xbap) やルース [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ページなど、ブラウザーでホストされる [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは、独自のウィンドウを提供しません。 代わりに、Windows Internet Explorer によって提供される windows でホストされます。 「 [WPF XAML ブラウザーアプリケーションの概要](wpf-xaml-browser-applications-overview.md)」を参照してください。  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>ウィンドウ クラス  
@@ -88,7 +88,7 @@ ms.locfileid: "72920033"
   
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] マークアップファイルと分離コードファイルを連携させるには、次のものが必要です。  
   
-- マークアップでは、`Window` 要素に `x:Class` 属性が含まれている必要があります。 アプリケーションがビルドされると、マークアップファイルに `x:Class` が存在することにより、Microsoft build engine (MSBuild) によって <xref:System.Windows.Window> から派生した `partial` クラスが作成され、`x:Class` 属性によって指定された名前になります。 そのためには、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] スキーマ (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`) に [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 名前空間宣言を追加する必要があります。 生成された `partial` クラスは、`InitializeComponent` メソッドを実装します。このメソッドは、イベントを登録し、マークアップで実装されるプロパティを設定するために呼び出されます。  
+- マークアップでは、`Window` 要素に `x:Class` 属性が含まれている必要があります。 アプリケーションがビルドされると、マークアップファイルに `x:Class` が存在することにより、Microsoft build engine (MSBuild) によって <xref:System.Windows.Window> から派生した `partial` クラスが作成され、`x:Class` 属性によって指定された名前になります。 そのためには、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] スキーマ (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`) の XML 名前空間宣言を追加する必要があります。 生成された `partial` クラスは、`InitializeComponent` メソッドを実装します。このメソッドは、イベントを登録し、マークアップで実装されるプロパティを設定するために呼び出されます。  
   
 - 分離コードでは、クラスは、マークアップで `x:Class` 属性によって指定された名前と同じ名前を持つ `partial` クラスである必要があり、<xref:System.Windows.Window>から派生する必要があります。 これにより、分離コードファイルは、アプリケーションのビルド時にマークアップファイル用に生成される `partial` クラスに関連付けられます (「 [WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)」を参照してください)。  
   
@@ -442,7 +442,7 @@ ms.locfileid: "72920033"
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
 #### <a name="non-rectangular-window-style"></a>四角形以外のウィンドウ スタイル  
- <xref:System.Windows.Window.WindowStyle%2A> に許可されている罫線のスタイルでは不十分な場合もあります。 たとえば、[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] で使用するような、四角形以外の境界線を持つアプリケーションを作成することができます。  
+ <xref:System.Windows.Window.WindowStyle%2A> に許可されている罫線のスタイルでは不十分な場合もあります。 たとえば、Microsoft Windows Media Player で使用するような、四角形以外の境界線を持つアプリケーションを作成することができます。  
   
  たとえば、次の図に示すように、音声バブルウィンドウについて考えてみます。  
   
@@ -471,7 +471,7 @@ ms.locfileid: "72920033"
   
  ただし、これは、ClickOnce を使用してインターネットまたはローカルイントラネットゾーンから起動されるアプリケーションに付与されるアクセス許可のセットの範囲外です。 その結果、ユーザーには ClickOnce のセキュリティ警告が表示され、アプリケーションのアクセス許可セットを完全信頼に昇格させる必要があります。  
   
- また、既定では、windows またはダイアログボックスを表示 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] ことはできません。 スタンドアロンアプリケーションのセキュリティに関する考慮事項については、「 [WPF のセキュリティ方針-プラットフォームのセキュリティ](../wpf-security-strategy-platform-security.md)」を参照してください。  
+ また、Xbap では既定でウィンドウまたはダイアログボックスを表示できません。 スタンドアロンアプリケーションのセキュリティに関する考慮事項については、「 [WPF のセキュリティ方針-プラットフォームのセキュリティ](../wpf-security-strategy-platform-security.md)」を参照してください。  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>その他の種類のウィンドウ  

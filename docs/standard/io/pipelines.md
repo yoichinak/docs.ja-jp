@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 54b5f97aca131f52b9b5d9f54d7fa5ec00ba3d5b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395936"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423672"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET の System.IO.Pipelines
 
@@ -191,7 +191,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!code-csharp[ReadSingleMsg](~/samples/snippets/csharp/pipelines/ReadSingleMsg.cs?name=snippet)]
 
-上のコードでは以下の操作が行われます。
+上記のコードでは次の操作が行われます。
 
 * 1 つのメッセージを解析します。
 * 消費された `SequencePosition` と検査された `SequencePosition` を更新し、トリミングされた入力バッファーの先頭を指すようにします。
@@ -311,8 +311,8 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 上記のコードでは、次のようになります。
 
-* <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A> を使用して、`PipeWriter` から少なくとも 5 バイトのバッファーを要求します。
-* ASCII 文字列である `"Hello"` のバイトを、返された `Span<byte>` に書き込みます。
+* <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> を使用して、`PipeWriter` から少なくとも 5 バイトのバッファーを要求します。
+* ASCII 文字列である `"Hello"` のバイトを、返された `Memory<byte>` に書き込みます。
 * <xref:System.IO.Pipelines.PipeWriter.Advance%2A> を呼び出して、バッファーに書き込まれたバイト数を示します。
 * 基になるデバイスにバイトを送信する、`PipeWriter` をフラッシュします。
 

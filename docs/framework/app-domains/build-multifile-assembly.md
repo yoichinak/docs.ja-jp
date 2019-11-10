@@ -1,5 +1,5 @@
 ---
-title: '方法: マルチファイル アセンブリをビルドする'
+title: '方法: マルチファイルアセンブリをビルドする'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,16 +17,14 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b95d686529da83a5a52edb80219874530212dcc
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
-ms.translationtype: HT
+ms.openlocfilehash: 150c0f63d52590ea9cf80a3e991375f10ce1a124
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991252"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119932"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>方法: マルチファイル アセンブリをビルドする
+# <a name="how-to-build-a-multifile-assembly"></a>方法: マルチファイルアセンブリをビルドする
 
 この記事では、マルチファイル アセンブリを作成する方法を説明し、プロシージャの各手順を示すコードを提供します。
 

@@ -2,16 +2,16 @@
 title: リレーショナルデータベースを azure に移行する
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |リレーショナルデータベースを azure に移行する
 ms.date: 04/28/2018
-ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374096"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093615"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>リレーショナルデータベースを azure に移行する
 
-展望:Azure には、最も包括的なデータベース移行が用意されています。
+ビジョン: Azure では、最も包括的なデータベース移行が提供されています。
 
 Azure では、データベースサーバーを IaaS Vm (純粋なリフトアンドシフト) に直接移行することも、Azure SQL Database に移行して追加のメリットを提供することもできます。 Azure SQL Database には、マネージインスタンスと完全なサービスとしてのデータベース (DBaaS) オプションが用意されています。 図3-1 は、Azure で使用できる複数のリレーショナルデータベース移行パスを示しています。
 
@@ -21,7 +21,7 @@ Azure では、データベースサーバーを IaaS Vm (純粋なリフトア�
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance に移行する場合
 
-ほとんどの場合、データを Azure に移行する際には、Azure SQL Database Managed Instance をお勧めします。 SQL Server データベースを移行するときに、アプリケーションを再設計したり、データやデータアクセスコードを変更したりする必要がないという約 100% の保証が必要な場合は、Azure SQL Database の Managed Instance 機能を選択します。
+ほとんどの場合、データを Azure に移行する際には、Azure SQL Database Managed Instance をお勧めします。 SQL Server データベースを移行するときに、アプリケーションを再設計したり、データやデータアクセスコードを変更したりする必要がないという約100% の保証が必要な場合は、Azure SQL Database の Managed Instance 機能を選択します。
 
 Azure SQL Database Managed Instance は、SQL Server インスタンスレベルの機能に対する追加の要件や、標準 Azure SQL Database (単一データベースモデル) で提供される機能を超える分離要件がある場合に最適なオプションです。 最後の1つは、最も PaaS 指向の選択肢ですが、従来の SQL server と同じ機能を提供するわけではありません。 移行が frictions になる可能性があります。
 
@@ -47,7 +47,7 @@ Azure SQL Database の Managed Instance には、次の特性があります。
 
   - ネイティブのバックアップと復元、およびログ配布
 
-これらの機能を使用すると、既存のアプリケーションデータベースを Azure SQL Database に移行するときに、Managed Instance モデルは SQL Server の PaaS の利点の約 100% を提供します。 Managed Instance は SQL Server 環境であり、アプリケーションの設計を変更することなく、インスタンスレベルの機能を引き続き使用できます。
+これらの機能を使用すると、既存のアプリケーションデータベースを Azure SQL Database に移行するときに、Managed Instance モデルは SQL Server の PaaS の利点の約100% を提供します。 Managed Instance は SQL Server 環境であり、アプリケーションの設計を変更することなく、インスタンスレベルの機能を引き続き使用できます。
 
 Managed Instance は、現在 SQL Server を使用しており、クラウドでのネットワークセキュリティに柔軟性を必要とする企業に最適です。 これは、SQL データベースのプライベート仮想ネットワークのようなものです。
 
@@ -90,7 +90,7 @@ Azure SQL Database には、次のような利点があります。
 
 通常の VM として SQL Server に移行する必要がある場合もあります。 例として、SQL Server Reporting Services を使用する必要がある場合が挙げられます。 ただし、ほとんどの場合、Azure SQL Database Managed Instance は、オンプレミスの SQL server から移行するために必要なすべてを提供できます。そのため、SQL Server VM への移行は、最後の手段として行う必要があります。
 
-## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Azure Database Migration Service を使用してリレーショナルデータベースを Azure に移行する 
+## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Azure Database Migration Service を使用してリレーショナルデータベースを Azure に移行する
 
 Azure Database Migration Service を使用して、SQL Server、Oracle、MySQL などのリレーショナルデータベースを Azure に移行することができます。これは、ターゲットデータベースが Azure VM 上で Azure SQL Database、Azure SQL Database Managed Instance、SQL Server のいずれであるかに関係ありません。
 
@@ -104,7 +104,7 @@ Azure Database Migration Service を使用してデータベースを移行す�
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-- **クラウド SQL Server オプションを選択してください:Azure VM (IaaS) での Azure SQL Database (PaaS) または SQL Server**
+- **クラウド SQL Server オプションの選択: Azure SQL Database (PaaS) または Azure VM での SQL Server (IaaS)**
 
     <https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas>
 

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - reflection, dynamic assembly
 - assemblies, collectible
 - collectible assemblies, retrieving
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b26da264b2da40e19db4bc5e3b3575505f5c979c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 85eacff22cf2e1c0b8c3d74a4971de035dfafbe4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637743"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130292"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>動的な型生成のための収集可能なアセンブリ
 

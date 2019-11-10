@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: 8cc1d1461a33ab94f8ae399d6ff40f26eaf7f74a
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d1e30162cbce65193783d2fb0607900f209cc648
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039453"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422684"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# リファレンス)
 
@@ -36,7 +36,7 @@ ms.locfileid: "69039453"
 
 - [enum](enum.md)
 
-- [delegate](delegate.md)
+- [delegate](../builtin-types/reference-types.md)
 
 C# ソース ファイル内に名前空間を明示的に宣言しているかどうかに関係なく、コンパイラは既定の名前空間を追加します。 この無名の名前空間はグローバル名前空間とも呼ばれますが、すべてのファイルに存在します。 グローバル名前空間内にある識別子は、名前付き名前空間で利用できます。
 

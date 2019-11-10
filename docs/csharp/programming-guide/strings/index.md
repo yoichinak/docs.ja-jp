@@ -6,18 +6,18 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 8dacd4bf0102ccc2e769d10ce51e481b36004c3a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ad8d7075e609a1b03ec403b91126bbce7084923f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252972"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423157"
 ---
 # <a name="strings-c-programming-guide"></a>文字列 (C# プログラミング ガイド)
 文字列は、値がテキストの <xref:System.String> 型のオブジェクトです。 内部では、テキストは <xref:System.Char> オブジェクトの順次読み取り専用コレクションとして格納されます。 C# の文字列の末尾には null 終端文字はありません。したがって、C# の文字列には任意の数の null 文字 ('\0') を埋め込むことができます。 文字列の <xref:System.String.Length%2A> プロパティは、Unicode 文字の数ではなく、文字列に含まれている `Char` オブジェクトの数を表します。 文字列内の個別の Unicode コード ポイントにアクセスするには、<xref:System.Globalization.StringInfo> オブジェクトを使用します。  
   
 ## <a name="string-vs-systemstring"></a>文字列と System.String  
- C# では、`string` キーワードは <xref:System.String> のエイリアスです。 したがって、`String` と `string` は等価であり、どちらの名前付け規則を使用してもかまいません。 `String` クラスは、文字列を安全に作成、操作、比較するためのさまざまなメソッドを提供します。 また、C# 言語は、一般的な文字列操作を簡略化するためにいくつかの演算子をオーバーロードします。 キーワードの詳細については、「[string](../../language-reference/keywords/string.md)」を参照してください。 型およびメソッドの詳細については、「<xref:System.String>」を参照してください。  
+ C# では、`string` キーワードは <xref:System.String> のエイリアスです。 したがって、`String` と `string` は等価であり、どちらの名前付け規則を使用してもかまいません。 `String` クラスは、文字列を安全に作成、操作、比較するためのさまざまなメソッドを提供します。 また、C# 言語は、一般的な文字列操作を簡略化するためにいくつかの演算子をオーバーロードします。 キーワードの詳細については、「[string](../../language-reference/builtin-types/reference-types.md)」を参照してください。 型およびメソッドの詳細については、「<xref:System.String>」を参照してください。  
   
 ## <a name="declaring-and-initializing-strings"></a>文字列の宣言と初期化  
  次の例に示すように、文字列はさまざまな方法で宣言および初期化できます。  

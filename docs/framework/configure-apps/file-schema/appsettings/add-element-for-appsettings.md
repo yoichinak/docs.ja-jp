@@ -1,5 +1,5 @@
 ---
-title: <add>appSettings&gt;の<appSettings>add&gt;要素
+title: <appSettings> の <add> 要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 594ba4f289012e775e93acba98056b60bdd94cbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09864ea8f174d0c23f26db49f8cc0d43608522a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927748"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119334"
 ---
-# <a name="add-element-for-appsettings"></a>\<appSettings>の\<add>要素
+# <a name="add-element-for-appsettings"></a>\<appSettings > の > 要素を追加 \<には
 
 カスタムアプリケーション設定を追加します。
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> の追加**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<追加 >**
 
 ## <a name="syntax"></a>構文
 
@@ -47,7 +47,7 @@ ms.locfileid: "69927748"
 
 ## <a name="child-elements"></a>子要素
 
-なし
+None
 
 ## <a name="example"></a>例
 
@@ -59,7 +59,7 @@ ms.locfileid: "69927748"
 </appSettings>
 ```
 
-次の例では`<add>` 、要素を使用して、ASP.NET アプリケーションで2つの互換性設定を定義します。
+次の例では、`<add>` 要素を使用して、ASP.NET アプリケーションで2つの互換性設定を定義します。
 
 ```xml
 <appSettings>

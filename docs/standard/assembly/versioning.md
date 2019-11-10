@@ -8,14 +8,12 @@ helpviewer_keywords:
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1363ce758929414f054e3d28dc6cd02bd618a8ac
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bbb3dae2ce66c93d05a2a1c0f7e426901fa7b2e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053960"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140181"
 ---
 # <a name="assembly-versioning"></a>アセンブリのバージョン管理
 

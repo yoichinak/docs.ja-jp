@@ -10,14 +10,12 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], how-to topics
 - strings [.NET Framework], formatting
 ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5073042d578573e904c185bbc18486a82e6be678
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63ba008ab7c6f1b7f7466ef60f7597a8df9bd8fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633352"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084331"
 ---
 # <a name="performing-formatting-operations"></a>書式設定操作の実行
 次のトピックで、特定の書式設定操作を行うための手順を説明します。  

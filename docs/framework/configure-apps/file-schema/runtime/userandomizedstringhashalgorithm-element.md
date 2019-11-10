@@ -8,16 +8,14 @@ helpviewer_keywords:
 - UseRandomizedStringHashAlgorithm element
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 49b53dcd4db7e0ac1e9079e763b8ed76c1088e0e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cc9708b8cca6520932fbf0e1975a05cad5fad485
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252198"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115043"
 ---
-# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm> 要素
+# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > 要素
 共通言語ランタイムがアプリケーション ドメインごとに文字列のハッシュ コードを計算するかどうかを判定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
@@ -42,7 +40,7 @@ ms.locfileid: "70252198"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`0`|共通言語ランタイムは、アプリケーション ドメインごとに文字列のハッシュ コードを計算しません。1 つのアルゴリズムを使用して文字列のハッシュ コードを計算します。 既定値です。|  
 |`1`|共通言語ランタイムは、アプリケーション ドメインごとに文字列のハッシュ コードを計算します。 異なるアプリケーション ドメインや異なるプロセスで同一の文字列のハッシュ コードは異なります。|  
@@ -57,7 +55,7 @@ ms.locfileid: "70252198"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  既定では、<xref:System.StringComparer> のクラスと <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> のメソッドは、アプリケーション ドメイン間で一貫したハッシュ コードを生成する単一のハッシュ アルゴリズムを使用します。 これは、`enabled` 要素の `<UseRandomizedStringHashAlgorithm>` 属性を `0` に設定することと同じです。 これは、.NET Framework 4 で使用されるハッシュアルゴリズムです。  
   
  <xref:System.StringComparer> クラスと <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> メソッドは、別のハッシュ アルゴリズムを使用してアプリケーション ドメインごとのハッシュ コードを計算することもできます。 その結果、同じ文字列のハッシュ コードが、アプリケーション ドメイン間で異なります。 これはオプトイン機能であり、この機能を利用するには、`enabled` 要素の `<UseRandomizedStringHashAlgorithm>` 属性を `1` に設定する必要があります。  

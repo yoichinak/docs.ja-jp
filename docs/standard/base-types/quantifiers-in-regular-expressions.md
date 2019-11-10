@@ -14,14 +14,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eddf605ab085aa39494bef0818ef51403cb032ef
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: a7a870ac32385bf5015f1a95c0246fed6a5c9c05
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988784"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084244"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>量指定子 (正規表現)
 量指定子は、一致と見なされるために入力中に存在する必要がある文字、グループ、または文字クラスの出現数を指定します。  次の表に、.NET でサポートされている量指定子の一覧を示します。  

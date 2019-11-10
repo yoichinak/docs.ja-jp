@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 9936d56582afd160bf3464d18efd3acf47c7af60
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7cb9bd05d08a33be53abad58b78b39e36c6dffe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924494"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419357"
 ---
 # <a name="finalizers-c-programming-guide"></a>ファイナライザー (C# プログラミング ガイド)
 ガベージ コレクターによってクラス インスタンスが収集されている場合は、ファイナライザー (**デストラクター**とも呼ばれます) を使用して、最終的に必要なすべてのクリーンアップが実行されます。  
@@ -85,7 +85,7 @@ protected override void Finalize()
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、「[C# 言語仕様](../../language-reference/language-specification/index.md)」の [デストラクタ―](~/_csharplang/spec/classes.md#destructors)に関するセクションを参照してください。
+詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の [デストラクタ―](~/_csharplang/spec/classes.md#destructors)に関するセクションを参照してください。
   
 ## <a name="see-also"></a>関連項目
 

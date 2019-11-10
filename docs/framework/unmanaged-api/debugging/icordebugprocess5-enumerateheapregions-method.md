@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b1edba68-9c36-4f69-be9f-678ce0b33480
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cf9340977c55c54b9a4683115000293d1c98dfcf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3ab4da3fcf43731587dae6f3a8e82ea48c5ee1ec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767461"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129638"
 ---
 # <a name="icordebugprocess5enumerateheapregions-method"></a>ICorDebugProcess5::EnumerateHeapRegions メソッド
-マネージ ヒープのメモリの範囲の列挙子を取得します。  
+マネージヒープのメモリ範囲の列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,21 +35,21 @@ HRESULT EnumerateHeapRegions(
   
 ## <a name="parameters"></a>パラメーター  
  `ppRegions`  
- [out]アドレスへのポインター、 [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)オブジェクトがマネージ ヒープ内に存在するメモリの範囲の列挙子は、インターフェイス オブジェクト。  
+ 入出力マネージヒープ内にオブジェクトが格納されているメモリ範囲の列挙子である[ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) interface オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- 呼び出しの前に、`ICorDebugProcess5::EnumerateHeapRegions`メソッドを呼び出す必要があります、 [icordebugprocess 5::getgcheapinformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)メソッドの値を確認し、 `areGCStructuresValid` 、返されたフィールド[COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)現在の状態でガベージ コレクション ヒープが列挙可能なことを確認するオブジェクト。 さらに、`ICorDebugProcess5::EnumerateHeapRegions`メソッドを返します。 `E_FAIL` 、プロセスの有効期間が早すぎるでアタッチする場合は、作成する前にメモリ領域は。  
+## <a name="remarks"></a>コメント  
+ `ICorDebugProcess5::EnumerateHeapRegions` メソッドを呼び出す前に、 [ICorDebugProcess5::::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)メソッドを呼び出し、返された[GetgCOR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)オブジェクトの次のフィールド `areGCStructuresValid` の値を調べて、ガベージコレクションヒープが現在の状態は列挙可能です。 また、`ICorDebugProcess5::EnumerateHeapRegions` メソッドは、メモリ領域が作成される前に、プロセスの有効期間が早すぎた場合に `E_FAIL` を返します。  
   
- このメソッドは、管理対象のオブジェクトを含む可能性のあるすべてのメモリ領域を列挙することが保証がマネージ オブジェクトが実際にそれらのリージョン内にあることは保証されません。 [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)コレクション オブジェクトが空または予約済みのメモリ領域を含めることができます。  
+ このメソッドは、マネージオブジェクトを含む可能性があるすべてのメモリ領域を列挙することが保証されていますが、それらの領域にマネージオブジェクトが実際に存在することは保証されません。 [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) collection オブジェクトには、空または予約済みのメモリ領域を含めることができます。  
   
- [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)インターフェイス オブジェクトを列挙できる ICorDebugEnum インターフェイスから派生した標準の列挙子は、 [COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md)オブジェクト。 各[COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md)オブジェクトは、そのセグメント内のオブジェクトの生成と、特定のセグメントのメモリの範囲に関する情報を提供します。  
+ [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)インターフェイスオブジェクトは、ICorDebugEnum インターフェイスから派生した標準列挙子であり、 [COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md)オブジェクトを列挙できます。 各[COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md)オブジェクトは、特定のセグメントのメモリ範囲に関する情報と、そのセグメント内のオブジェクトの生成を提供します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: d16d8fee58f4480bc83da884caf0ff15981b09af
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 9197ebb1fa48011c60a6d224497e57a604870fc3
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168612"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422869"
 ---
 # <a name="contextual-keywords-c-reference"></a>コンテキスト キーワード (C# リファレンス)
 
@@ -21,7 +21,7 @@ ms.locfileid: "70168612"
 |[add](./add.md)|クライアント コードがイベントをサブスクライブするときに呼び出されるカスタム イベント アクセサーを定義します。|  
 |[async](./async.md)|修飾されたメソッド、ラムダ式、または匿名メソッドが非同期であることを示します。|  
 |[await](../operators/await.md)|待機中のタスクが完了するまで async のメソッドを中断します。|  
-|[dynamic](./dynamic.md)|コンパイル時の型チェックをバイパスする処理を可能にする参照型を定義します。|  
+|[dynamic](../builtin-types/reference-types.md)|コンパイル時の型チェックをバイパスする処理を可能にする参照型を定義します。|  
 |[get](./get.md)|プロパティまたはインデクサーのアクセサー メソッドを定義します。|  
 |[global](../operators/namespace-alias-qualifier.md)|グローバル名前空間のエイリアス (それ以外の場合は無名です)。|  
 |[partial](./partial-type.md)|同一コンパイル ユニットに部分クラス、部分構造体、または部分インターフェイスを定義します。|  

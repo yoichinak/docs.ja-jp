@@ -2,12 +2,12 @@
 title: Polly で指数バックオフを含む HTTP 呼び出しの再試行を実装する
 description: HTTP エラーを Polly と HttpClientFactory で処理する方法について説明します
 ms.date: 01/07/2019
-ms.openlocfilehash: 9988f70513959c099c771fcc0221bba7e2e70200
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 551cd1230c565b30c81090c984747e726680b9ed
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798823"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089954"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ポリシーと Polly ポリシーで指数バックオフを含む HTTP 呼び出しの再試行を実装する
 
@@ -15,7 +15,7 @@ ms.locfileid: "72798823"
 
 Polly とは、回復機能と一時的な障害処理の機能を提供する .NET ライブラリです。 このような機能は、再試行、遮断器、バルクヘッド分離、タイムアウト、フォールバックなどの Polly ポリシーを適用することで実装できます。 Polly は .NET Framework 4.x と .NET Standard 1.0、1.1、および 2.0 (.NET Core をサポート) を対象としています。
 
-ただし、HttpClient で Polly のライブラリを使用する独自のカスタム コードを作成することは非常に複雑になる可能性があります。 eShopOnContainers の最初のバージョンでは、[ResilientHttpClient ビルディングブロック](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10)が Polly を基盤としていました。 ただし、[HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md) がリリースされ、Polly との回復性の高い HTTP 通信がはるかに簡単に実装できるようになったため、eShopOnContainers ではビルディング ブロックが非推奨になりました。 
+ただし、HttpClient で Polly のライブラリを使用する独自のカスタム コードを作成することは非常に複雑になる可能性があります。 eShopOnContainers の最初のバージョンでは、[ResilientHttpClient ビルディングブロック](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10)が Polly を基盤としていました。 ただし、[HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md) がリリースされ、Polly との回復性の高い HTTP 通信がはるかに簡単に実装できるようになったため、eShopOnContainers ではビルディング ブロックが非推奨になりました。
 
 次の手順では、前のセクションで説明した、HttpClientFactory に統合された Polly で HTTP 再試行を使用する方法を示します。
 
@@ -49,20 +49,20 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 }
 ```
 
-Polly では、再試行回数を指定した再試行ポリシー、指数バックオフの構成、HTTP 例外が発生した場合に実行するアクション (エラーの記録など) を定義できます。 上記のコードでは、指数関数的再試行で (最初は 2 秒) 6 回試すようにポリシーが構成されています。 
+Polly では、再試行回数を指定した再試行ポリシー、指数バックオフの構成、HTTP 例外が発生した場合に実行するアクション (エラーの記録など) を定義できます。 上記のコードでは、指数関数的再試行で (最初は 2 秒) 6 回試すようにポリシーが構成されています。
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>再試行ポリシーにジッタ方式を追加する
 
 通常の再試行ポリシーは、コンカレンシーやスケーラビリティが高い場合や、高競合状態下でシステムに影響を及ぼすことがあります。 部分的な停止の場合に多くのクライアントから来る同様の再試行のピークを乗り越えるための賢い回避策は、ジッタ方式を再試行アルゴリズムまたはポリシーに追加することです。 これにより、急増するバックオフにランダム性を加えることで、エンドツーエンド システム全体のパフォーマンスを向上できます。 こうすれば、問題が発生した際のスパイクを分散できます。 この原則を次の例で示します。
 
 ```csharp
-Random jitterer = new Random(); 
+Random jitterer = new Random();
 var retryWithJitterPolicy = HttpPolicyExtensions
     .HandleTransientHttpError()
     .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
     .WaitAndRetryAsync(6,    // exponential back-off plus some jitter
         retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
-                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
+                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100))
     );
 ```
 

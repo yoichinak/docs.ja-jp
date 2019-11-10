@@ -5,22 +5,20 @@ helpviewer_keywords:
 - GCCpuGroup element
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ff646f13c5619b0bfca1b61c86013a981c274e3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 352890519c1a227d664d877c3123866e5e4e1657
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252559"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116829"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup> 要素
+# <a name="gccpugroup-element"></a>\<GCCpuGroup > 要素
 
 ガベージ コレクションが複数の CPU グループをサポートするかどうかを指定します。
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**  
 
 ## <a name="syntax"></a>構文
 
@@ -41,7 +39,7 @@ ms.locfileid: "70252559"
 
 ## <a name="enabled-attribute"></a>enabled 属性
 
-|値|説明|
+|[値]|説明|
 |-----------|-----------------|
 |`false`|ガベージ コレクションは複数の CPU グループをサポートしていません。 既定値です。|
 |`true`|ガベージ コレクションは、サーバーのガベージ コレクションが有効な場合に複数の CPU グループをサポートします。|
@@ -59,10 +57,10 @@ ms.locfileid: "70252559"
 
 ## <a name="remarks"></a>Remarks
 
-コンピューターに複数の cpu グループがあり、サーバーのガベージコレクションが有効になっている場合 ( [ \<gcServer >](gcserver-element.md)要素を参照)、この要素を有効にすると、すべての cpu グループのガベージコレクションが拡張され、を作成するときにすべてのコアを考慮に入れることができるようになります。ヒープを分散しています。
+コンピューターに複数の CPU グループがあり、サーバーのガベージコレクションが有効になっている場合 ( [\<gcServer >](gcserver-element.md)要素を参照)、この要素を有効にすると、すべての cpu グループにわたってガベージコレクションが拡張され、との作成時にすべてのコアが考慮されます。ヒープを分散しています。
 
 > [!NOTE]
-> この要素は、ガベージ コレクション スレッドにのみ適用されます。 ランタイムがすべての CPU グループにユーザースレッドを分散できるようにするには、 [ \<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)要素も有効にする必要があります。
+> この要素は、ガベージ コレクション スレッドにのみ適用されます。 ランタイムがすべての CPU グループにユーザースレッドを分散できるようにするには、 [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)要素も有効にする必要があります。
 
 ## <a name="example"></a>例
 

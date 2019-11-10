@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: edb4e4d2-3166-44d4-8b17-bf302f7ea093
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca922d8b582c0608073d4fd0ba986167ae470e34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 826dfceb28512e4fd3157c432b7a4d94fba704fd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599501"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097867"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy 列挙型
 デバッガーがネイティブ イメージ キャッシュからネイティブ (NGen) イメージを読み込むかどうかを指定する値を提供します。  
@@ -40,13 +38,13 @@ enum CorDebugNGENPolicy {
   
 |メンバー名|説明|  
 |-----------------|-----------------|  
-|`DISABLE_LOCAL_NIC`|[!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)]アプリ、ローカルのネイティブ イメージ キャッシュからのイメージの使用が無効になっています。 デスクトップ アプリケーションでは、この設定には効果はありません。|  
+|`DISABLE_LOCAL_NIC`|[!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] アプリでは、ローカルのネイティブイメージキャッシュからのイメージの使用は無効になっています。 デスクトップアプリでは、この設定による影響はありません。|  
   
 ## <a name="remarks"></a>Remarks  
- `CorDebugNGENPolicy`列挙型を使用して、 [icordebugprocess 5::enablengenpolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)メソッド。 ローカルのネイティブ イメージ キャッシュからのイメージの使用を無効にすると、デバッガーに最適化されたネイティブ イメージではなく、デバッグ可能の JIT コンパイルされたイメージが読み込まれることを確認してデバッグ エクスペリエンスを一貫した提供します。  
+ `CorDebugNGENPolicy` 列挙体は、 [ICorDebugProcess5:: EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)メソッドによって使用されます。 ローカルのネイティブイメージキャッシュからのイメージの使用を無効にすると、最適化されたネイティブイメージの代わりにデバッグ可能な JIT コンパイルイメージをデバッガーが読み込むことができるため、一貫したデバッグエクスペリエンスを実現できます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

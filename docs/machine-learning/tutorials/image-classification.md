@@ -1,17 +1,17 @@
 ---
 title: 'チュートリアル: 事前トレーニング済みの TensorFlow モデルから ML.NET 画像分類モデルを生成する'
 description: 既存の TensorFlow モデルから新しい ML.NET 画像分類モデルに知識を転移する方法について説明します。 TensorFlow モデルは、画像を 1,000 個のカテゴリに分類するためにトレーニングされました。 ML.NET モデルでは、転移学習を利用して、さらに少ない数のカテゴリに画像を分類します。
-ms.date: 09/30/2019
+ms.date: 10/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: 8ae966330ca85722c72c92e26363d99c7d9de3e7
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bd25a24e467148c46958b6e7ce7b18e181dab5fd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698643"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129598"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>チュートリアル: 事前トレーニング済みの TensorFlow モデルから ML.NET 画像分類モデルを生成する
 
@@ -39,13 +39,13 @@ TensorFlow モデルは、画像を 1,000 個のカテゴリに分類するた�
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" とともにインストールされていること。
+* [Visual Studio 2017 バージョン 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" ワークロードと共にインストールされている
 
 * Microsoft.ML 1.3.1 Nuget パッケージ
 * Microsoft.ML.ImageAnalytics 1.3.1 Nuget パッケージ
 * Microsoft.ML.TensorFlow 1.3.1 Nuget パッケージ
 
-* [チュートリアル資産ディレクトリの .ZIP ファイル](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
+* [チュートリアル資産ディレクトリの .ZIP ファイル](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 
 * [InceptionV1 機械学習モデル](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
@@ -137,13 +137,13 @@ toaster2.png    appliance
 
 ### <a name="download-assets"></a>資産をダウンロードする
 
-1. [プロジェクト資産ディレクトリの zip ファイル](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)をダウンロードし、展開します。
+1. [プロジェクト資産ディレクトリの zip ファイル](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)をダウンロードし、展開します。
 
 1. `assets` ディレクトリを *TransferLearningTF* プロジェクト ディレクトリにコピーします。 このディレクトリとそのサブディレクトリには、このチュートリアルに必要なデータ ファイルとサポート ファイル (次の手順でダウンロードして追加する Inception モデルを除く) が含まれています。
 
 1. [Inception モデル](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)をダウンロードして展開します。
 
-1. `inception5h` ディレクトリの内容をコピーし、*TransferLearningTF* プロジェクトの `assets/inputs-train/inception` ディレクトリに展開します。 次の画像に示すように、このディレクトリには、このチュートリアルに必要なモデルと追加のサポート ファイルが含まれています。
+1. `inception5h` ディレクトリの内容をコピーし、*TransferLearningTF* プロジェクトの `assets/inception` ディレクトリに展開します。 次の画像に示すように、このディレクトリには、このチュートリアルに必要なモデルと追加のサポート ファイルが含まれています。
 
    ![Inception ディレクトリの内容](./media/image-classification/inception-files.png)
 
@@ -246,7 +246,7 @@ toaster2.png    appliance
 
     [!code-csharp[PredictSingle](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#PredictSingle)]
 
-    予測を取得するには、[Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) メソッドを使用します。 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) は、データの 1 つのインスタンスに対して予測を実行できる便利な API です。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。 シングル スレッド環境またはプロトタイプ環境で使用できます。 運用環境でパフォーマンスとスレッド セーフを向上させるには、`PredictionEnginePool` サービスを使用します。これにより、アプリケーション全体で使用するできる [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。 ASP.NET Core Web API で `PredictionEnginePool` を使用する方法については、[こちらのガイド](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)を参照してください。
+    予測を取得するには、[Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) メソッドを使用します。 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) は、データの 1 つのインスタンスに対して予測を実行できる便利な API です。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。 シングル スレッド環境またはプロトタイプ環境で使用できます。 運用環境でパフォーマンスとスレッド セーフを向上させるには、`PredictionEnginePool` サービスを使用します。これにより、アプリケーション全体で使用するできる [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。 [ASP.NET Core Web API で `PredictionEnginePool` を使用する](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)方法については、こちらのガイドを参照してください。
 
     > [!NOTE]
     > `PredictionEnginePool` サービスの拡張機能は、現在プレビュー段階です。
@@ -282,7 +282,7 @@ ML.NET モデルのパイプラインは推定器のチェーンです。 パイ
 
     [!code-csharp[ScoreTensorFlowModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ScoreTensorFlowModel)]
 
-    パイプラインのこのステージでは、TensorFlow モデルをメモリに読み込み、次に TensorFlow モデル ネットワークを介してピクセル値のベクターを処理します。 ディープ ラーニング モデルに入力を適用し、モデルを使用して出力を生成することは、**スコアリング**と呼ばれます。 モデル全体を使用する場合、スコアリングによって推論または予測が行われます。 
+    パイプラインのこのステージでは、TensorFlow モデルをメモリに読み込み、次に TensorFlow モデル ネットワークを介してピクセル値のベクターを処理します。 ディープ ラーニング モデルに入力を適用し、モデルを使用して出力を生成することは、**スコアリング**と呼ばれます。 モデル全体を使用する場合、スコアリングによって推論または予測が行われます。
 
     この場合、最後のレイヤー (推論を行うレイヤー) を除き、すべての TensorFlow モデルを使用します。 最後から 2 番目のレイヤーの出力には、`softmax_2_preactivation` というラベルが付けられます。 このレイヤーの出力は、実質的に、元の入力画像を特徴付ける特徴のベクターです。
 
@@ -323,7 +323,7 @@ ML.NET モデルのパイプラインは推定器のチェーンです。 パイ
     [!code-csharp[LoadAndTransformTestData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadAndTransformTestData "Load and transform test data")]
 
     モデルの評価に使用できるサンプル画像がいくつかあります。 トレーニング データと同様に、モデルで変換できるように、これらを `IDataView` に読み込む必要があります。
-   
+
 1. `GenerateModel()` メソッドに次のコードを追加して、モデルを評価します。
 
     [!code-csharp[Evaluate](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#Evaluate)]
@@ -362,22 +362,14 @@ ML.NET モデルのパイプラインは推定器のチェーンです。 パイ
 
     ```console
     =============== Training classification model ===============
-    Image: broccoli.jpg predicted as: food with score: 0.976743
-    Image: pizza.jpg predicted as: food with score: 0.9751652
-    Image: pizza2.jpg predicted as: food with score: 0.9660203
-    Image: teddy2.jpg predicted as: toy with score: 0.9748783
-    Image: teddy3.jpg predicted as: toy with score: 0.9829691
-    Image: teddy4.jpg predicted as: toy with score: 0.9868168
-    Image: toaster.jpg predicted as: appliance with score: 0.9769174
-    Image: toaster2.png predicted as: appliance with score: 0.9800823
+    Image: broccoli2.jpg predicted as: food with score: 0.8955513
+    Image: pizza3.jpg predicted as: food with score: 0.9667718
+    Image: teddy6.jpg predicted as: toy with score: 0.9797683
     =============== Classification metrics ===============
-    LogLoss is: 0.0228266745633507
-    PerClassLogLoss is: 0.0277501705149937 , 0.0186303530571291 , 0.0217359128952187
+    LogLoss is: 0.0653774699265059
+    PerClassLogLoss is: 0.110315812569315 , 0.0204391272836966 , 0
     =============== Making single image classification ===============
-    Image: toaster3.jpg predicted as: appliance with score: 0.9625379
-
-    C:\Program Files\dotnet\dotnet.exe (process 4304) exited with code 0.
-    Press any key to close this window . . .
+    Image: toaster3.jpg predicted as: appliance with score: 0.9646884
     ```
 
 おめでとうございます! これで、ML.NET で `TensorFlow` モデルに転移学習を適用して、画像分類の機械学習モデルを構築できました。

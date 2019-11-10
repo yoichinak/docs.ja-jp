@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b68624b962ed610dbeecd3e4cead769ab1400f4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1571ff796a10c5ddcd85cc2ce130e62eab2ed8f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739216"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132082"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule 関数
 対象プロセス内の共通言語ランタイム (CLR: Common Language Runtime) パスからバージョン文字列を作成します。  
@@ -74,15 +72,15 @@ HRESULT CreateVersionStringFromModule (
  `pidDebuggee` が有効なプロセスを参照していません。または、その他のエラーが発生しました。  
   
 ## <a name="remarks"></a>Remarks  
- この関数は、`pidDebuggee` が識別した CLR プロセスと、`szModuleName` で指定された文字列パスを受け取ります。 バージョン文字列は、`pBuffer` が指すバッファーに返されます。 この文字列は関数のユーザーには不透明です。つまり、バージョン文字列自体に特別な意味はありません。 この関数のコンテキストでのみ使用される、 [CreateDebuggingInterfaceFromVersion 関数](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)します。  
+ この関数は、`pidDebuggee` が識別した CLR プロセスと、`szModuleName` で指定された文字列パスを受け取ります。 バージョン文字列は、`pBuffer` が指すバッファーに返されます。 この文字列は関数のユーザーには不透明です。つまり、バージョン文字列自体に特別な意味はありません。 この関数と[CreateDebuggingInterfaceFromVersion 関数](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)のコンテキストでのみ使用されます。  
   
  この関数は、2 回呼び出す必要があります。 1 回目の呼び出しでは、`pBuffer` と `cchBuffer` の両方に null を渡します。 これにより、`pBuffer` に必要なバッファーのサイズが `pdwLength` に返されます。 その後、2 回目の関数呼び出しを実行し、`pBuffer` にはバッファーを、`cchBuffer` にはバッファーのサイズを渡すことができます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** dbgshim.h  
+ **ヘッダー:** dbgshim. h  
   
- **ライブラリ:** dbgshim.dll  
+ **ライブラリ:** dbgshim .dll  
   
- **.NET framework のバージョン:** 3.5 SP1
+ **.NET Framework のバージョン:** 3.5 SP1

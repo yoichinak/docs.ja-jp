@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 0c79ba3dd42f2e65eb241409946e921577ced5f1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6d7401f9614e663351968dc6a2f85548735a176d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920048"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460426"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate の作成による既存のコントロールの外観のカスタマイズ
 <a name="introduction"></a>コントロールの視覚的な構造と視覚的な動作を指定 <xref:System.Windows.Controls.ControlTemplate>。 コントロールの外観をカスタマイズするには、新しい <xref:System.Windows.Controls.ControlTemplate>を指定します。 <xref:System.Windows.Controls.ControlTemplate>を作成すると、その機能を変更せずに既存のコントロールの外観を置き換えることができます。 たとえば、既定の四角形の形ではなく、アプリケーションのボタンを丸めることができますが、ボタンをクリックすると <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントが発生します。
@@ -262,4 +262,4 @@ ms.locfileid: "72920048"
 
 ## <a name="see-also"></a>関連項目
 
-- [スタイルとテンプレート](styling-and-templating.md)
+- [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

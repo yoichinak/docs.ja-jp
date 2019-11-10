@@ -11,14 +11,12 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54c3eb734184adf5168607cfc8bcbf6c17ea493a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678894"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131975"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>方法: 数値に先行するゼロを埋め込む
 
@@ -85,7 +83,7 @@ ms.locfileid: "57678894"
 
     1. 小数点記号を含める場合は、整数部分の文字数を決定します。
 
-         - または -
+         または
 
          小数点記号を含めない場合は、文字列の長さを決定します。
 
@@ -104,6 +102,6 @@ ms.locfileid: "57678894"
 
 ## <a name="see-also"></a>関連項目
 
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [カスタム数値形式文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [複合書式指定](../../../docs/standard/base-types/composite-formatting.md)

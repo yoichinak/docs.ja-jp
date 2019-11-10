@@ -5,12 +5,12 @@ ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6387e93bcd4efeec57ada9228dcaf015d053dbf7
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: bf1cb28a6e3096a42aae1c777f6d2d6f9cc16c49
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972703"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774327"
 ---
 # <a name="friend-assemblies"></a>フレンド アセンブリ
 
@@ -25,7 +25,7 @@ ms.locfileid: "70972703"
 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を利用し、特定のアセンブリの 1 つまたは複数のフレンド アセンブリを特定できます。 次の例では、*Assembly A* において <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性が使用され、フレンド アセンブリとしてアセンブリ *AssemblyB* が指定されています。 これにより、アセンブリ *AssemblyB* では、*Assembly A* の中で `internal` (C#) または `Friend` (Visual Basic) としてマークされているすべての型とメンバーにアクセスすることができます。
 
 > [!NOTE]
-> *Assembly A* のような別のアセンブリの internal 型または internal メンバーにアクセスする *AssemblyB* のようなアセンブリをコンパイルするときは、 **/out** コンパイラ オプションを使用して、出力ファイル ( *.exe* または *.dll*) の名前を明示的に指定する必要があります。 この指定は必ず行ってください。コンパイラが外部参照にバインドする時点ではまだ、ビルド中のアセンブリの名前が生成されていないためです。 詳細については、「[-out (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/out-compiler-option.md)」または「[-除外 (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)」を参照してください。
+> *Assembly A* のような別のアセンブリの internal 型または internal メンバーにアクセスする *AssemblyB* のようなアセンブリをコンパイルするときは、 **-out** コンパイラ オプションを使用して、出力ファイル ( *.exe* または *.dll*) の名前を明示的に指定する必要があります。 この指定は必ず行ってください。コンパイラが外部参照にバインドする時点ではまだ、ビルド中のアセンブリの名前が生成されていないためです。 詳細については、「[-out (C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md)」または「[-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)」を参照してください。
 
 ```csharp
 using System.Runtime.CompilerServices;
@@ -81,9 +81,9 @@ End Class
 
      *AssemblyB* の厳密な名前を、フレンド アセンブリ名として <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡すことはできません。 アセンブリのバージョン、カルチャ、アーキテクチャ、公開キー トークンは含めないでください。
 
-- *Assembly A* が厳密な名前でない場合、フレンド アセンブリの名前は、アセンブリ名のみで構成されている必要があります。 詳細については、「[方法 :署名のないフレンド アセンブリを作成する](create-unsigned-friend.md)」を参照してください。
+- *Assembly A* が厳密な名前でない場合、フレンド アセンブリの名前は、アセンブリ名のみで構成されている必要があります。 詳細については、[署名のないフレンド アセンブリを作成する](create-unsigned-friend.md)」を参照してください。
 
-- *AssemblyB* に厳密な名前が付けられている場合、プロジェクトの設定またはコマンド ラインの `/keyfile` コンパイラ オプションを使用して、*AssemblyB* に対して厳密な名前のキーを指定する必要があります。 詳細については、「[方法 :署名されたフレンド アセンブリを作成する](create-signed-friend.md)」を参照してください。
+- *AssemblyB* に厳密な名前が付けられている場合、プロジェクトの設定またはコマンド ラインの `/keyfile` コンパイラ オプションを使用して、*AssemblyB* に対して厳密な名前のキーを指定する必要があります。 詳細については、[署名されたフレンド アセンブリを作成する](create-signed-friend.md)」を参照してください。
 
  <xref:System.Security.Permissions.StrongNameIdentityPermission> クラスも型を共有する機能を提供しますが、次のような違いがあります。
 
@@ -93,7 +93,7 @@ End Class
 
 - <xref:System.Security.Permissions.StrongNameIdentityPermission> を使用する場合、共有する型をパブリックとして宣言する必要があります。 フレンド アセンブリを使用する場合、共有する型は `internal` (C#) または `Friend` (Visual Basic) として宣言します。
 
-アセンブリの `internal` (C#) または `Friend` (Visual Basic) 型およびメソッドに、モジュール ファイル ( *.netmodule* 拡張子の付いたファイル) からアクセスする方法については、[/moduleassemblyname (C#)](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) または [/moduleassemblyname (Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md) に関する記事を参照してください。
+アセンブリの `internal` (C#) または `Friend` (Visual Basic) 型およびメソッドに、モジュール ファイル ( *.netmodule* 拡張子の付いたファイル) からアクセスする方法については、[-moduleassemblyname (C#)](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) または [-moduleassemblyname (Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md) に関する記事を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

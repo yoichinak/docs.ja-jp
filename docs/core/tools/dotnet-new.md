@@ -2,12 +2,12 @@
 title: dotnet new コマンド
 description: dotnet new コマンドは、指定されたテンプレートに基づいて新しい .NET Core プロジェクトを作成します。
 ms.date: 05/06/2019
-ms.openlocfilehash: b61b5fd53f470c30b636026fa19ebfad834d6354
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c9529e135f48c80f445c91038294a3e7266486f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117666"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420474"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -776,6 +776,6 @@ SDK バージョン 2.0.0 (.NET Core SDK 2.0 以降のバージョンでのみ�
 ## <a name="see-also"></a>関連項目
 
 - [dotnet new のカスタム テンプレート](custom-templates.md)
-- [dotnet new のカスタム テンプレートを作成する](../tutorials/create-custom-template.md)
+- [dotnet new のカスタム テンプレートを作成する](../tutorials/cli-templates-create-item-template.md)
 - [dotnet/dotnet-template-samples GitHub リポジトリ](https://github.com/dotnet/dotnet-template-samples)
 - [dotnet new で使用できるテンプレート](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

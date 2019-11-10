@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 81b2110e6a571e174693fd272d1c6b4bf44dbae3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b0a517eacc505376c9502e9d095c7aac0cd54555
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588222"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417526"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>ポインター変換 (C# プログラミング ガイド)
 定義済みの暗黙的なポインター変換を次の表に示します。 暗黙的な変換は、メソッドの呼び出しや代入ステートメントなど、多くの状況で発生することがあります。  
   
 ## <a name="implicit-pointer-conversions"></a>暗黙的なポインター変換  
   
-|ソース|ターゲット|  
+|From|終了|  
 |----------|--------|  
 |任意のポインター型|void*|  
 |null|任意のポインター型|  
@@ -26,7 +26,7 @@ ms.locfileid: "69588222"
   
 ## <a name="explicit-pointer-conversions"></a>明示的なポインター変換  
   
-|ソース|ターゲット|  
+|From|終了|  
 |----------|--------|  
 |任意のポインター型|その他のポインター型|  
 |sbyte、byte、short、ushort、int、uint、long または ulong|任意のポインター型|  
@@ -43,7 +43,7 @@ ms.locfileid: "69588222"
 
 - [C# プログラミング ガイド](../index.md)
 - [ポインター型](./pointer-types.md)
-- [型](../../language-reference/keywords/types.md)
+- [型](/dotnet/csharp/language-reference/keywords)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [fixed ステートメント](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

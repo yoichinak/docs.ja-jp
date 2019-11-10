@@ -4,12 +4,12 @@ description: .NET ライブラリ対応の NuGet によるパッケージ化の�
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9cf30fa41af2d31e416bae1d75d8880ece7dde3e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9288bf440692302c3a0b1954236540af6363f367
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895210"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775312"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -99,7 +99,7 @@ NuGet.org は独自の[シンボル サーバー リポジトリ](/nuget/create-
 > [!IMPORTANT]
 > NuGet.org シンボル サーバーでは、SDK スタイルのプロジェクトで作成された新しい[ポータブル シンボル ファイル](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) のみがサポートされます。
 >
-> .NET ライブラリのデバッグ時に NuGet.org シンボル サーバーを使用するには、開発者が Visual Studio 2017 15.9 以降を持っている必要があります。
+> .NET ライブラリのデバッグ時に NuGet.org シンボル サーバーを使用するには、開発者が Visual Studio 2017 バージョン 15.9 以降を持っている必要があります。
 
 シンボル パッケージを作成する代わりに、主要 NuGet パッケージにシンボル ファイルを埋め込むという方法もあります。 主要 NuGet パッケージは大容量になりますが、シンボル ファイルを埋め込む場合、開発者は NuGet.org シンボル サーバーを設定する必要がないことを意味します。 SDK 形式のプロジェクトを使用して NuGet パッケージを構築している場合、`AllowedOutputExtensionsInPackageBuildOutputFolder` プロパティを設定してシンボル ファイルを埋め込むことができます。
 

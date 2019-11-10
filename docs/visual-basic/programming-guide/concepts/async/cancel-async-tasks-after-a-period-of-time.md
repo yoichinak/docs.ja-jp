@@ -2,12 +2,12 @@
 title: 指定した時間の経過後の非同期タスクのキャンセル (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: b87743cb32970c171079b1060879f9e448745eb5
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 37cc1936dc9c55e0dadb4ccb57d549f3653a11b0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583165"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419824"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>指定した時間の経過後の非同期タスクのキャンセル (Visual Basic)
 
@@ -160,7 +160,7 @@ Class MainWindow
             Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()
 
             resultsTextBox.Text &=
-                String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, urlContents.Length)
+                vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
         Next
     End Function
 

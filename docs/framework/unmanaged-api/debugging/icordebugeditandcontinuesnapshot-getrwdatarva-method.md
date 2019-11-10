@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e07b233-dd41-45ba-a4f9-662e4b006f1f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31ad3032b50298e08f349049adab8aa18a09f12e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b8b685e520d19ef1ba6b8caea2f26625eeba323
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996079"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137487"
 ---
 # <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a>ICorDebugEditAndContinueSnapshot::GetRwDataRVA メソッド
 `GetRwDataRVA` は互換性のために残されています。 このメソッドを呼び出さないでください。  

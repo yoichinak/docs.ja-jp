@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51d9f4a4-81a7-4527-8537-5212bdb05c70
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54abcd357c6f26f54432b39bfcb4a0d63afabfe4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1b4741b71521ab91152ce71d5b1b4a4c3fbd3629
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738713"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113756"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>ICLRDataTarget::GetPointerSize メソッド
-ターゲット プロセスを使用するポインター型のバイト単位のサイズを取得します。 このメソッドは、共通言語ランタイム データ アクセス サービスによって呼び出されます。  
+ターゲットプロセスが使用するポインター型のサイズ (バイト単位) を取得します。 このメソッドは、共通言語ランタイムのデータアクセスサービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,15 +35,15 @@ HRESULT GetPointerSize (
   
 ## <a name="parameters"></a>パラメーター  
  `pointerSize`  
- [out]ターゲット プロセスのポインターのバイト単位のサイズを指定する整数値へのポインター。  
+ 入出力ターゲットプロセスのポインターのサイズ (バイト単位) を指定する整数値へのポインター。  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: 896f89304289fd90c10da9aaa7ea15ada35ef8f7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 560218361f470266654734971a12de7862722a46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589095"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423178"
 ---
 # <a name="interoperability-c-programming-guide"></a>相互運用性 (C# プログラミング ガイド)
 相互運用性は、アンマネージ コードへの既存の投資を保持して活用できるようにします。 共通言語ランタイム (CLR) の制御下で実行されるコードは*マネージド コード*と呼ばれ、CLR の外部で実行されるコードは*アンマネージド コード*と呼ばれます。 アンマネージ コードの例は、COM、COM +、C++ コンポーネント、ActiveX コンポーネント、および Microsoft Windows API です。  
@@ -41,7 +41,7 @@ ms.locfileid: "69589095"
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、「[C# 言語の仕様](../../language-reference/language-specification/index.md)」の「[基本概念](~/_csharplang/spec/unsafe-code.md)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語の仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の「[基本概念](~/_csharplang/spec/unsafe-code.md)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>関連項目
 

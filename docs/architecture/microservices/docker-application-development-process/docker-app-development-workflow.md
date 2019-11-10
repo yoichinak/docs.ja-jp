@@ -2,12 +2,12 @@
 title: Docker アプリの開発ワークフロー
 description: Docker ベースのアプリケーションを開発するためのワークフローの詳細を理解します。 まず、段階的に見ていき、Dockerfile の最適化について詳しく確認し、最終的には Visual Studio を使用する際に利用できる簡略化されたワークフローを理解します。
 ms.date: 01/07/2019
-ms.openlocfilehash: f7c7252edc82400e2af4b96a75ed040e11df392f
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: 8a4d87d84ca59304266a52b0a977f878189108f0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031885"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417253"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -23,7 +23,7 @@ ms.locfileid: "72031885"
 
 ## <a name="workflow-for-developing-docker-container-based-applications"></a>Docker のコンテナー ベースのアプリケーションを開発するためのワークフロー
 
-このセクションでは、Docker のコンテナー ベースのアプリケーションの*内側のループ*の開発ワークフローについて説明します。 内側のループのワークフローは、運用への展開まで含めることができる DevOps のより広範なワークフローを意味するのではなく、開発者のコンピューター上で実行される開発作業のみに重点が置かれています。 環境を設定する初期手順は、一度のみ実行されるものなので含まれていません。
+このセクションでは、Docker のコンテナー ベースのアプリケーションの*内側のループ*の開発ワークフローについて説明します。 内側のループのワークフローは、運用への展開まで含めることができる DevOps のより広範なワークフローを考慮していないということではなく、開発者のコンピューター上で実行される開発作業のみに重点が置かれています。 環境を設定する初期手順は、一度のみ実行されるものなので含まれていません。
 
 アプリケーションは、自分のサービスと追加のライブラリ (依存関係) で構成されます。 Docker アプリケーションを構築するときの基本手順を次の図 5-1 に示します。
 
@@ -117,7 +117,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **.NET Core アプリケーションの Docker イメージのビルド** \
-  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 - **Build your own image (独自のイメージのビルド)** 。 Docker の公式なドキュメント内にあります。\
   <https://docs.docker.com/engine/tutorials/dockerimages/>

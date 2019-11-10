@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: b174a817e82f9a9f123c79581656cc8e7179b435
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: HT
+ms.openlocfilehash: f4b8402413f4d2f558d8e61ad4f10490dece9835
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929035"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423990"
 ---
 # <a name="customizing-structure-marshaling"></a>構造体のマーシャリングのカスタマイズ
 
@@ -26,7 +26,7 @@ ms.locfileid: "70929035"
 
 **✔️ 実行**: ネイティブ構造体に共用体などの明示的なレイアウトもある場合は、マーシャリング時に `LayoutKind.Explicit` のみを使用します。
 
-**❌ 回避**: Windows 以外のプラットフォームで構造体をマーシャリングするときに、`LayoutKind.Explicit` を使用しないようにします。 .NET Core ランタイムは、Intel または AMD 64 ビットの Windows 以外のシステム上でネイティブ関数への値による明示的な構造体の受け渡しをサポートしていません。 ただし、ランタイムはすべてのプラットフォーム上で明示的な構造体の参照渡しをサポートしています。
+.NET Core 3.0 より前のランタイムを対象にする必要がある場合は、Windows 以外のプラットフォームで構造体をマーシャリングするときに `LayoutKind.Explicit` を使用し**ないように❌** します。 3\.0 より前の .NET Core ランタイムでは、Intel または AMD 64 ビットの Windows 以外のシステムでは、明示的な構造を値でネイティブ関数に渡すことがサポートされていません。 ただし、ランタイムはすべてのプラットフォーム上で明示的な構造体の参照渡しをサポートしています。
 
 ## <a name="customizing-boolean-field-marshaling"></a>ブール値フィールドのマーシャリングのカスタマイズ
 

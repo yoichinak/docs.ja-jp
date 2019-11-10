@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: e1d87920f64242379d1931a424aa38b676dc5ef5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c7d9eeceaba2ed8b624d3001dae86868ef626c08
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039449"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458106"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>クライアントの UI オートメーション コントロール パターン
 > [!NOTE]
@@ -40,7 +40,7 @@ ms.locfileid: "73039449"
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>変数パターンを持つコントロール  
- 一部のコントロール型は、状態やコントロールの使用方法に応じた複数のパターンをサポートしています。 変数パターンを持つコントロールの例としては、リストビュー (サムネイル、タイル、アイコン、リスト、詳細)、[!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] グラフ (円、線、横棒、数式を使用したセル値)、[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]のドキュメント領域 (標準、Web レイアウト、アウトライン、印刷レイアウト、印刷プレビュー) があります。Microsoft Windows Media Player スキン。  
+ 一部のコントロール型は、状態やコントロールの使用方法に応じた複数のパターンをサポートしています。 変数パターンを持つコントロールの例としては、リストビュー (サムネイル、タイル、アイコン、リスト、詳細)、Microsoft Excel グラフ (円、線、横棒、数式を使用したセル値)、Microsoft Word のドキュメント領域 (標準、Web レイアウト、アウトライン、印刷レイアウト、印刷など) があります。プレビュー)、および Microsoft Windows Media Player スキン。  
   
  カスタム コントロール型を実装するコントロールは、機能を表すために必要なコントロール パターンの任意のセットを持つことができます。  
   

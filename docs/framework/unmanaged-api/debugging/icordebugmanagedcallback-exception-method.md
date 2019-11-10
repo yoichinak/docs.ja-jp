@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e944a6debf790907b75760c8856ae3a365a84650
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: af2dab65629093401219f1016538b912bee4d067
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759625"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130826"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception メソッド
-マネージ コードから例外がスローされたことをデバッガーに通知します。  
+マネージコードから例外がスローされたことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,19 +37,19 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]例外がスローされたアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ から例外がスローされたアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `pThread`  
- [in]例外がスローされたスレッドを表す ICorDebugThread オブジェクトへのポインター。  
+ から例外がスローされたスレッドを表す、スレッドオブジェクトへのポインター。  
   
  `unhandled`  
- [in]この値が場合`false`例外が、まだそれ以外のアプリケーションによって処理されると、例外が処理されないとプロセスが終了します。  
+ からこの値が `false`場合は、アプリケーションによって例外がまだ処理されていません。それ以外の場合、例外はハンドルされないため、プロセスを終了します。  
   
 ## <a name="remarks"></a>Remarks  
- 特定の例外は、スレッド オブジェクトから取得できます。  
+ スレッドオブジェクトから特定の例外を取得できます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

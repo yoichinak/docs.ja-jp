@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57f274d55ba5723ce8e0b51a7a39e98e95855e28
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 27766c10d0624b5eda8256a3211662036a1b16b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64653923"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139951"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL と従来の .NET Framework 非同期プログラミング
 .NET Framework の I/O バインドの非同期操作および計算主体の非同期操作には、次の 2 つの標準パターンがあります。  

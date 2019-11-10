@@ -2,16 +2,15 @@
 title: .NET のガイド
 description: .NET について説明します。
 author: cartermp
-ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: ffc63146cde0be5359ee03ea53683220f4996b81
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 93dbc711e38c17c2f502c4d04239d037ff015059
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855490"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425185"
 ---
 # <a name="net-guide"></a>.NET のガイド
 
@@ -50,7 +49,7 @@ ms.locfileid: "70855490"
 * [.NET アーキテクチャ コンポーネント](components.md)
 * [.NET Standard](net-standard.md)
 * [ネイティブ相互運用性](native-interop/index.md)
-* [ガベージ コレクション](garbagecollection/index.md)
+* [ガベージ コレクション](garbage-collection/index.md)
 * [.NET の基本型](base-types/index.md)
 * [コレクション](collections/index.md)
 * [日付、時刻、およびタイム ゾーン](datetime/index.md)

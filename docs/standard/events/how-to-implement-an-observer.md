@@ -9,14 +9,12 @@ helpviewer_keywords:
 - observers [.NET Framework], observer design pattern
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b410b9381246cef2e61086e333c4c5b07646a575
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e6aba4d85e502563291478640927bd0f234736a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301062"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139305"
 ---
 # <a name="how-to-implement-an-observer"></a>方法: オブザーバーを実装する
 オブザーバー デザイン パターンでは、通知を登録するオブザーバーと、データを監視して 1 人以上のオブザーバーに通知を送信するプロバイダーを分ける必要があります。 このトピックでは、オブザーバーを作成する方法について説明します。 プロバイダーの作成方法については、関連トピックの「[方法:プロバイダーを実装する](../../../docs/standard/events/how-to-implement-a-provider.md)」を参照してください。  

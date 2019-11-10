@@ -5,14 +5,12 @@ helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7d0cbe66870fc75da02ad56da73de86d4837c0c8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 42d0e2d85517d4a8fb443db9b63e6b893267caca
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052135"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121580"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>side-by-side 実行用のコンポーネントを作成するためのガイドライン
 side-by-side 実行用にデザインしたマネージド アプリケーションまたはマネージド コンポーネントを作成するときのガイドラインを次に示します。  

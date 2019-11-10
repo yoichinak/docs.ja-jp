@@ -2,13 +2,14 @@
 title: 基本型 - C# ガイド
 description: すべての C# プログラムの中核となる型 (数値、文字列、オブジェクト) について説明します
 ms.date: 10/10/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: b65e6ba61bd8886223403f869aa301703f89e8ba
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 7a75ad5080cd2646070447cbc3dcc46b8c73dd65
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834246"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420706"
 ---
 # <a name="types-variables-and-values"></a>型、変数、および値
 
@@ -65,7 +66,7 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
-型パラメーターを使用することで、同じクラスを再利用して任意の型の要素を格納できます。このとき、各要素を[オブジェクト](language-reference/keywords/object.md)に変換する必要はありません。 ジェネリック コレクション クラスが "*厳密に型指定されたコレクション*" と呼ばれるのは、コレクションの要素の固有の型をコンパイラが認識しているためで、たとえば、前の例の `strings` オブジェクトに整数を追加しようとすると、コンパイル時にエラーが発生します。 詳細については、「[ジェネリック](programming-guide/generics/index.md)」を参照してください。
+型パラメーターを使用することで、同じクラスを再利用して任意の型の要素を格納できます。このとき、各要素を[オブジェクト](language-reference/builtin-types/reference-types.md#the-object-type)に変換する必要はありません。 ジェネリック コレクション クラスが "*厳密に型指定されたコレクション*" と呼ばれるのは、コレクションの要素の固有の型をコンパイラが認識しているためで、たとえば、前の例の `strings` オブジェクトに整数を追加しようとすると、コンパイル時にエラーが発生します。 詳細については、「[ジェネリック](programming-guide/generics/index.md)」を参照してください。
 
 ## <a name="implicit-types-anonymous-types-and-tuple-types"></a>暗黙の型、匿名型、および Null 許容型
 
@@ -81,9 +82,9 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
   
 - 継承の原則がサポートされています。 他の型から型を派生させることができます。派生元の型は "*基本型*" と呼ばれます。 派生した型は、基本型のメソッド、プロパティ、およびその他のメンバーを (若干の制限付きで) 継承します。 基本型もなんらかの他の型から派生できます。この場合、派生した型はその継承階層内の両方の基本型のメンバーを継承します。 <xref:System.Int32> (C# のキーワード: `int`) などの組み込み数値型を含むすべての型は、最終的に <xref:System.Object> (C# のキーワード: `object`) という単一の基本型から派生します。 この一元化された型階層は、[共通型システム](../standard/common-type-system.md) (CTS) と呼ばれます。 C# での継承の詳細については、「[継承](programming-guide/classes-and-structs/inheritance.md)」を参照してください。  
   
-- CTS の各型は、"*値型*" または "*参照型*" として定義されます。 これは、.NET Framework クラス ライブラリのすべてのカスタムの型や、ユーザーが独自に定義した型にも当てはまります。 [struct](language-reference/keywords/struct.md) キーワードを使用して定義した型は値型であり、すべての組み込み数値型が **structs** です。 値型の詳細については、「[Structs](structs.md)」を参照してください。 [class](language-reference/keywords/class.md) キーワードを使用して定義した型は参照型です。 参照型の詳細については、「[Classes](classes.md)」を参照してください。 参照型と値型では、コンパイル時の規則や実行時の動作が異なります。
+- CTS の各型は、"*値型*" または "*参照型*" として定義されます。 これは、.NET Framework クラス ライブラリのすべてのカスタムの型や、ユーザーが独自に定義した型にも当てはまります。 [struct](language-reference/keywords/struct.md) キーワードを使用して定義した型は値型であり、すべての組み込み数値型が **structs** です。 値型の詳細については、「[Structs](structs.md)」を参照してください。 [class](language-reference/keywords/class.md) キーワードを使用して定義した型は参照型です。 参照型の詳細については、「[Classes](programming-guide/classes-and-structs/classes.md)」を参照してください。 参照型と値型では、コンパイル時の規則や実行時の動作が異なります。
 
 ## <a name="see-also"></a>関連項目
 
 - [構造体](structs.md)
-- [クラス](classes.md)
+- [クラス](programming-guide/classes-and-structs/classes.md)

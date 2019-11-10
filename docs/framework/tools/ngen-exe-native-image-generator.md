@@ -18,14 +18,12 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5079f0243faefaab6ada23cc98f5214a616c1d22
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e6c4baae854e5997b153e1363ca8ed4204e10e2b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044362"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085208"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (ネイティブ イメージ ジェネレーター)
 

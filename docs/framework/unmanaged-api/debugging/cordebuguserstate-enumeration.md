@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 76fbbb3f924f610b604586dca78cab344217b544
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0394d511197c8d0aaa366ce7b791216a3d226bc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739454"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120200"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState 列挙型
 スレッドのユーザーの状態を示します。  
@@ -44,25 +42,25 @@ typedef enum CorDebugUserState {
   
 ## <a name="members"></a>メンバー  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|`USER_STOP_REQUESTED`|スレッドの終了が要求されています。|  
-|`USER_SUSPEND_REQUESTED`|スレッドの中断が要求されています。|  
-|`USER_BACKGROUND`|スレッドのバック グラウンドで実行します。|  
+|`USER_STOP_REQUESTED`|スレッドの終了が要求されました。|  
+|`USER_SUSPEND_REQUESTED`|スレッドの中断が要求されました。|  
+|`USER_BACKGROUND`|スレッドがバックグラウンドで実行されています。|  
 |`USER_UNSTARTED`|スレッドが実行を開始していません。|  
-|`USER_STOPPED`|スレッドが終了しました。|  
-|`USER_WAIT_SLEEP_JOIN`|スレッドがタスクを完了する別のスレッドを待機しています。|  
+|`USER_STOPPED`|スレッドは終了されました。|  
+|`USER_WAIT_SLEEP_JOIN`|スレッドは、別のスレッドがタスクを完了するのを待機しています。|  
 |`USER_SUSPENDED`|スレッドが中断されました。|  
-|`USER_UNSAFE_POINT`|スレッドは、安全でない点になります。 これは、スレッドがある実行の時点でガベージ コレクションを妨げること可能性があります。<br /><br /> デバッグ、安全でないポイントからイベントをディスパッチすることがありますが、安全でない時点でスレッドを中断する、多くの場合、デッドロックが発生、スレッドが再開されるまでです。 安全性と安全でないポイントは、- イン タイム (JIT) およびガベージ コレクションの実装によって決まります。|  
-|`USER_THREADPOOL`|スレッドはスレッド プールです。|  
+|`USER_UNSAFE_POINT`|スレッドが安全でないポイントにあります。 つまり、スレッドは、ガベージコレクションをブロックする可能性がある実行中のポイントにあります。<br /><br /> デバッグイベントは安全でないポイントからディスパッチできますが、アンセーフポイントでスレッドを中断すると、スレッドが再開されるまでデッドロックが発生する可能性が高くなります。 セーフポイントと unsafe ポイントは、just-in-time (JIT) とガベージコレクションの実装によって決定されます。|  
+|`USER_THREADPOOL`|スレッドはスレッドプールからのものです。|  
   
 ## <a name="remarks"></a>Remarks  
- スレッドのユーザー状態とは、状態、スレッドがデバッガーを調べることでです。 スレッドは、ユーザー状態の組み合わせがあります。  
+ スレッドのユーザー状態は、デバッガーがそのスレッドを調べたときのスレッドの状態です。 スレッドには、ユーザー状態を組み合わせて含めることができます。  
   
- 使用して、 [icordebugthread::getuserstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md)スレッドのユーザーの状態を取得します。  
+ スレッドのユーザー状態を取得するには、 [「いい thread:: GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md)メソッド」を使用します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

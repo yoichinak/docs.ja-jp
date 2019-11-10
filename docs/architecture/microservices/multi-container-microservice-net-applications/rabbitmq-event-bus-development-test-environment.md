@@ -2,12 +2,12 @@
 title: 開発環境またはテスト環境の RabbitMQ でイベント バスを実装する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 開発環境またはテスト環境の統合イベント向けに RabbitMQ でイベント バスのメッセージングを実装します。
 ms.date: 10/02/2018
-ms.openlocfilehash: af02208bb9e680403a04377ccb740a8b15be29bc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7d51054d444ce1e35fabab94cc803e74dbd96f19
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675889"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089744"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>開発環境またはテスト環境の RabbitMQ でイベント バスを実装する
 
@@ -35,7 +35,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>RabbitMQ で単純な発行方法を実装する
 
-次のコードは、全体のシナリオを紹介する RabbitMQ のイベント バス実装の***簡略化された***バージョンです。 実際にこの方法で接続を処理することはありません。 完全な実装を確認するには、[dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) リポジトリで実際のコードを参照してください。 
+次のコードは、全体のシナリオを紹介する RabbitMQ のイベント バス実装の***簡略化された***バージョンです。 実際にこの方法で接続を処理することはありません。 完全な実装を確認するには、[dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) リポジトリで実際のコードを参照してください。
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -82,7 +82,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
         where TH : IIntegrationEventHandler<T>
     {
         var eventName = _subsManager.GetEventKey<T>();
-        
+
         var containsKey = _subsManager.HasSubscriptionsForEvent(eventName);
         if (!containsKey)
         {

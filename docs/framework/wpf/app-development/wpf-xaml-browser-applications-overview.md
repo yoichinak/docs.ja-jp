@@ -10,16 +10,15 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: ccc6a4c4640b5f473d21f4ab0c82df2034a8fd9d
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: fb7ad54f61d9dcfe94379aef14930a0395da5291
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920020"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424587"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML ブラウザー アプリケーションの概要
-<a name="introduction"></a>
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] は、Web アプリケーションとリッチクライアントアプリケーションの両方の機能を組み合わせたものです。 たとえば、Web アプリケーションと同様、Web サーバーに配置して、Internet Explorer または Firefox から開始できます。 リッチクライアントアプリケーションと同様に、Xbap は WPF の機能を利用できます。 XBAP の開発方法もリッチ クライアントの開発に似ています。 このトピックでは、XBAP 開発の概要を示し、XBAP 開発が標準的なリッチ クライアント開発と異なる点について説明します。
+<a name="introduction"></a>XAML ブラウザーアプリケーション (Xbap) は、Web アプリケーションとリッチクライアントアプリケーションの両方の機能を組み合わせたものです。 たとえば、Web アプリケーションと同様、Web サーバーに配置して、Internet Explorer または Firefox から開始できます。 リッチクライアントアプリケーションと同様に、Xbap は WPF の機能を利用できます。 XBAP の開発方法もリッチ クライアントの開発に似ています。 このトピックでは、XBAP 開発の概要を示し、XBAP 開発が標準的なリッチ クライアント開発と異なる点について説明します。
 
  このトピックは、次のセクションで構成されています。
 

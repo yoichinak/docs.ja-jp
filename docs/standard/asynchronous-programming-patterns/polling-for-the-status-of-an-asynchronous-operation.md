@@ -10,14 +10,12 @@ helpviewer_keywords:
 - polling asynchronous operation status
 - status information [.NET Framework], asynchronous operations
 ms.assetid: b541af31-dacb-4e20-8847-1b1ff7c35363
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79e8488a21295f52e0c53cf24f4cb7e15f72f34c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ff9cefc73adfe1ece1bf7545c75ccb6cc618e89f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623678"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123962"
 ---
 # <a name="polling-for-the-status-of-an-asynchronous-operation"></a>非同期操作のステータスのポーリング
 非同期操作の結果の待機中に、他の作業を実行できるアプリケーションは、操作が完了するまで待機をブロックする必要はありません。 次のオプションのいずれかを使用して、非同期操作が完了するまでの待機中に、手順の実行を継続します。  

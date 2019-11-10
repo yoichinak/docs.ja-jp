@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f453e950a79b0f929ec8f813cc13eb2e01ab8c87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 700e0af05828b9fe0a50c1aac114e840adc276b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760926"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131851"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext メソッド
-現在のフレームのコンテキストを返します、 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)オブジェクト。  
+[は、テキストオブジェクト内](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)の現在のフレームのコンテキストを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,16 +36,16 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 ## <a name="parameters"></a>パラメーター  
  `contextFlags`  
- [in]要求された (WinNT.h で定義されている) コンテキスト バッファーの内容を示すフラグです。  
+ からコンテキストバッファーの要求されたコンテンツを示すフラグ (Winnt.h で定義されています)。  
   
  `contextBufSize`  
- [in]コンテキスト バッファーの割り当てサイズ。  
+ からコンテキストバッファーに割り当てられたサイズ。  
   
  `contextSize`  
- [out]コンテキストの実際のサイズ。 この値は、コンテキスト バッファーのサイズ以下である必要があります。  
+ 入出力コンテキストの実際のサイズ。 この値は、コンテキストバッファーのサイズ以下である必要があります。  
   
  `contextBuf`  
- [out]コンテキストのバッファー。  
+ 入出力コンテキストバッファー。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -55,17 +53,17 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|現在のフレームのコンテキストが正常に返されました。|  
-|E_FAIL|コンテキストは返されませんでした。|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|コンテキスト バッファーが小さすぎます。|  
-|CORDBG_E_PAST_END_OF_STACK|フレーム ポインターがスタックの末尾に達してそのため、追加のフレームにはアクセスできません。|  
+|E_FAIL|コンテキストを返すことができませんでした。|  
+|HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT BUFFER)|コンテキストバッファーが小さすぎます。|  
+|CORDBG_E_PAST_END_OF_STACK|フレームポインターは既にスタックの末尾にあります。そのため、追加のフレームにアクセスすることはできません。|  
   
 ## <a name="exceptions"></a>例外  
   
 ## <a name="remarks"></a>Remarks  
- アンワインド非 volatile レジスタなどのレジスタのサブセットのみが復元されるため、コンテキストの呼び出しの時点でレジスタの状態が一致も一致しないです。  
+ アンワインドでは、非揮発性レジスタなどのレジスタのサブセットのみが復元されるため、呼び出し時にコンテキストがレジスタの状態と完全に一致するとは限りません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

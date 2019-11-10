@@ -1,15 +1,15 @@
 ---
-title: 方法:軸メソッドの呼び出しを連結する (LINQ to XML) (C#)
+title: '方法: 軸メソッドの呼び出しを連結する (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: 573efb50dd889d1e10fc3a74bb5c7d9a8ac30eab
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3dfb2849bc2e2af9290738ed06938f80f3416f72
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594084"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418408"
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>方法:軸メソッドの呼び出しを連結する (LINQ to XML) (C#)
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>方法: 軸メソッドの呼び出しを連結する (LINQ to XML) (C#)
 コードで使用する一般的なパターンでは、軸メソッドを呼び出してから、拡張メソッド軸のいずれかを呼び出します。  
   
  要素のコレクションを返す `Elements` という名前の軸には、<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> メソッドと <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> メソッドの 2 つがあります。 この 2 つの軸を組み合わせて、ツリー内の指定した深さで指定した名前を持つ要素をすべて検索できます。  
@@ -118,4 +118,4 @@ foreach (XElement e in names)
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML 軸 (C#)](./linq-to-xml-axes.md)
+- [LINQ to XML 軸 (C#)](linq-to-xml-axes-overview.md)

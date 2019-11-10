@@ -3,12 +3,12 @@ title: ML.NET の自動 ML API を使用する方法
 description: ML.NET の自動 ML API によって、モデル構築プロセスが自動化され、展開できる状態のモデルが生成されます。 自動機械学習タスクの構成に使用できるオプションについて説明します。
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332716"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774553"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET の自動機械学習 API を使用する方法
 
@@ -89,7 +89,7 @@ using Microsoft.ML.AutoML;
     ```
 
 1. `CacheDirectory` 設定は、AutoML タスク中にトレーニングされたすべてのモデルが保存されるディレクトリへのポインターです。 `CacheDirectory` が null に設定されている場合、モデルはディスクに書き込まれるのではなくメモリに保持されます。
- 
+
     ```csharp
     experimentSettings.CacheDirectory = null;
     ```
@@ -128,7 +128,7 @@ ML タスクごとにサポートされるトレーナーの一覧は、以下�
 ## <a name="data-pre-processing-and-featurization"></a>データの前処理と特徴付け
 
 > [!NOTE]
-> 特徴列では、[`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)、[`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single)、および [`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string) の種類のみがサポートされています。
+> 特徴列では、<xref:System.Boolean>、<xref:System.Single>、<xref:System.String> の種類のみがサポートされています。
 
 データの前処理は既定で行われ、次の手順が自動的に実行されます。
 
@@ -141,9 +141,9 @@ ML タスクごとにサポートされるトレーナーの一覧は、以下�
     欠落値のセルにそのデータ型の既定値を入力します。 入力列と同じ数のスロットを持つインジケーター特徴を追加します。 追加されるインジケーター特徴の値は、入力列の値が欠落している場合は `1`、それ以外の場合は `0` です。
 
 1. 追加の特徴を生成する
-    
+
     テキスト特徴の場合:ユニグラムとトライキャラクターグラムを使用する bag-of-word 特徴。
-    
+
     カテゴリ別特徴の場合:カーディナリティの低い特徴向きのワンホット エンコードと、カーディナリティの高いカテゴリ別特徴向きのワンホットハッシュ エンコード。
 
 1. 変換とエンコード
@@ -191,7 +191,7 @@ ExperimentResult<RegressionMetrics> experimentResult = experiment
 AutoML には、オーバーロードされた実験の実行でトレーニング データを指定できる方法が用意されています。 内部的には、自動 ML によってトレーニング分割と検証分割にデータが分けられます。
 
 ```csharp
-experiment.Execute(trainDataView);   
+experiment.Execute(trainDataView);
 ```
 
 ### <a name="custom-validation-dataset"></a>カスタム検証データセット
@@ -199,7 +199,7 @@ experiment.Execute(trainDataView);
 時系列データでは通常のことですが、ランダムな分割を許容できない場合は、カスタム検証データセットを使用します。 独自の検証データセットを指定できます。 モデルは、1 つ以上のランダムなデータセットではなく、指定した検証データセットに対して評価されます。
 
 ```csharp
-experiment.Execute(trainDataView, validationDataView);   
+experiment.Execute(trainDataView, validationDataView);
 ```
 
 ## <a name="explore-model-metrics"></a>モデルのメトリックを調べる

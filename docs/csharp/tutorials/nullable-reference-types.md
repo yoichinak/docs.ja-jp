@@ -2,15 +2,16 @@
 title: null 許容参照型を使用して設計する
 description: この高度なチュートリアルでは、null 許容参照型の概要について説明します。 参照値で null がいつ許容されるかに関する設計意図を表すことで、コンパイラで null が許容されるようにします。
 ms.date: 02/19/2019
+ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: e58f2bac23fabf734df93aa2a643106f1c1bd5f3
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 3ee5e50cf889dd0e02bf58f1e3471fc709b729cd
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291382"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039715"
 ---
-# <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>チュートリアル:null 許容参照型と null 非許容参照型を使用して設計意図をもっと明確に示す
+# <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>チュートリアル: null 許容参照型と null 非許容参照型を使用して設計意図をもっと明確に示す
 
 C# 8.0 には [null 許容参照型](../nullable-references.md)が導入されています。これは、null 許容値型が値型を補完するのと同じように、参照型を補完するものです。 型に `?` を追加することで、変数が **null 許容参照型**であることを宣言します。 たとえば、`string?` は、null が許容される `string` を表します。 これらの新しい型を使用して、一部の変数では*常に値を持つ必要があり*、他の変数では*値が欠落することも可能である*という設計意図をさらに明確に示すことができます。
 
@@ -209,7 +210,7 @@ namespace NullableIntroduction
 
 基になるインターフェースを非許容参照型を返すように設計しているため、このコードでは `null` のチェックは必要ありません。
 
-## <a name="get-the-code"></a>コードの入手
+## <a name="get-the-code"></a>コードを取得する
 
 [csharp/NullableIntroduction](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) フォルダーの [samples](https://github.com/dotnet/samples) リポジトリから、完成したチュートリアルのコードを取得できます。
 

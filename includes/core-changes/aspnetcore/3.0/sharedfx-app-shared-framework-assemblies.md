@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: a4bf8cff59ffe01b7465e227c0b1d1e7d93f16e7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8344fdedcff34f102b73f977b688abc15563bd4c
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394409"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198492"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>共有フレームワーク: Microsoft.AspNetCore.App から削除されたアセンブリ
 
-ASP.NET Core 3.0 以降、ASP.NET Core 共有フレームワーク (`Microsoft.AspNetCore.App`) には、Microsoft が完全に開発、サポートし、処理可能なファースト パーティのアセンブリだけが含まれています。 
+ASP.NET Core 3.0 以降、ASP.NET Core 共有フレームワーク (`Microsoft.AspNetCore.App`) には、Microsoft が完全に開発、サポートし、処理可能なファースト パーティのアセンブリだけが含まれています。
 
 #### <a name="change-description"></a>変更の説明
 

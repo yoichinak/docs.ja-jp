@@ -12,14 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d9cfdcbe1e533f70cdd37b5d0512c781c6c05d22
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 4cc62696cb6589151e3abc59bbea64b693e8b3a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957354"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121731"
 ---
 # <a name="regular-expression-options"></a>正規表現のオプション
 

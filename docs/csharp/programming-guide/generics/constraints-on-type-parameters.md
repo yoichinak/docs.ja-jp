@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 5c36639d76a6fbd4e36f39486369a55a56a6e3ea
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 62d0aacc3464969366cbdc8107adbc9a5c364b0c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396278"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417796"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型パラメーターの制約 (C# プログラミング ガイド)
 
@@ -33,7 +33,7 @@ ms.locfileid: "71396278"
 
 ## <a name="why-use-constraints"></a>制約を使用する理由
 
-型パラメーターを制約すると、使用できる操作とメソッド呼び出しの数は、制約する型、およびその継承階層内のすべての型でサポートされている数まで増えます。 ジェネリック クラスまたはメソッドを設計するときに、単純な割り当てや、<xref:System.Object?displayProperty=nameWithType> でサポートされていない任意のメソッド呼び出しでジェネリック メンバーに対して任意の操作を実行する場合、型パラメーターに制約を適用する必要があります。 たとえば、この基底クラスの制約は、この型のオブジェクト、またはこの型から派生したオブジェクトのみを型引数として使用することをコンパイラに指示しています。 コンパイラがこの保証を獲得したら、その型のメソッドをジェネリック クラスで呼び出すことができるようになります。 基底クラスの制約を適用して `GenericList<T>` クラス (「[ジェネリックの概要](introduction-to-generics.md)」を参照) に追加できる機能を説明するコード例を次に示します。
+型パラメーターを制約すると、使用できる操作とメソッド呼び出しの数は、制約する型、およびその継承階層内のすべての型でサポートされている数まで増えます。 ジェネリック クラスまたはメソッドを設計するときに、単純な割り当てや、<xref:System.Object?displayProperty=nameWithType> でサポートされていない任意のメソッド呼び出しでジェネリック メンバーに対して任意の操作を実行する場合、型パラメーターに制約を適用する必要があります。 たとえば、この基底クラスの制約は、この型のオブジェクト、またはこの型から派生したオブジェクトのみを型引数として使用することをコンパイラに指示しています。 コンパイラがこの保証を獲得したら、その型のメソッドをジェネリック クラスで呼び出すことができるようになります。 基底クラスの制約を適用して `GenericList<T>` クラス (「[ジェネリックの概要](../../../standard/generics/index.md)」を参照) に追加できる機能を説明するコード例を次に示します。
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
 

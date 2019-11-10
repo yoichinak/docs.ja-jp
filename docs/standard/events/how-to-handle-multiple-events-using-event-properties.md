@@ -12,14 +12,12 @@ helpviewer_keywords:
 - event handling [.NET Framework], with multiple events
 - events [.NET Framework], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 758ddc603766462fc48885406c4e4ca1162bbbaf
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f74d75a09da350b34dfb067c3d0db8fc669116ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666486"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124769"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>方法: イベント プロパティを使用して複数のイベントを処理する
 イベント プロパティを使用するには、イベントを発生させるクラスにイベント プロパティを定義し、そのイベントを処理するクラスにイベント プロパティのデリゲートを設定します。 1 つのクラスにイベント プロパティを複数実装するには、そのクラス内部に、各イベント用に定義されたデリゲートを格納および保持する必要があります。 通常は、イベント キーをインデックスとするデリゲート コレクションを実装することによってこれを実現します。  

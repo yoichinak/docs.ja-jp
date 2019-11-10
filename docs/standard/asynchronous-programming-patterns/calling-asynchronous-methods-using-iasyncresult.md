@@ -11,14 +11,12 @@ helpviewer_keywords:
 - IAsyncResult interface, calling asynchronous methods
 - stopping asynchronous operations
 ms.assetid: 07fba116-045b-473c-a0b7-acdbeb49861f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f943633f554433d30598f11e8611d3e837d94280
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a9ce8bc2d2edd09ef79c060b9bb173d4d054d02
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628824"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121313"
 ---
 # <a name="calling-asynchronous-methods-using-iasyncresult"></a>IAsyncResult を使用した非同期メソッドの呼び出し
 .NET Framework とサードパーティのさまざま種類のクラス ライブラリが提供するメソッドを利用することで、アプリケーションはメインのアプリケーション スレッド以外のスレッドで非同期操作を実行しながら実行を継続できます。 次のセクションでは、コード例を取り上げ、<xref:System.IAsyncResult> 設計パターンを使用する非同期メソッドをさまざまな方法で呼び出します。  

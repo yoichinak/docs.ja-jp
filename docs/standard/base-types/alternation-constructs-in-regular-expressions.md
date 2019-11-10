@@ -15,15 +15,13 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: c6f33023d747ce20964c7cb83a66d6764b6030cd
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 352cfd65cd4620d8274ff0a14ea507cd49522470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736613"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140552"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>正規表現での代替コンストラクト
 

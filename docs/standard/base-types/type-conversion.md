@@ -24,14 +24,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8fc6f59b7a295cb73489a644da80976345cb172
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b125b3c6527da405deb600ba7334ef18220f1601
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922690"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132880"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework における型変換
 <a name="top"></a> すべての値には関連付けられた型があり、その値に割り振られる容量、可能な値の範囲、使用できるメンバーなどの属性を定義しています。 多くの値は複数の型として表現できます。 たとえば、値 4 は整数または浮動小数点数として表現できます。 型変換を実行すると、変換元の型の値と等価な値が新しい型で作成されますが、それが元のオブジェクトと同一である (値が正確に一致する) とは限りません。  

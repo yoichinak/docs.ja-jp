@@ -4,15 +4,13 @@ description: .NET Core 2.1 の新機能について。
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 18c8d566c3b79c131a3d031e5bdf3b37996d9115
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: 603e7ae4ffb9e6a4bb477af9597d6948bd63f55e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031856"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100745"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 の新機能
 

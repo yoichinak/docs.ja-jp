@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 81cf336f94815dd3f2c88995eb34ae03b8220097
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 9588ec73250e8745426f6f6020c8d555a174d627
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179920"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422956"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C# コンパイラ オプション)
 
@@ -28,9 +28,9 @@ ms.locfileid: "72179920"
 ## <a name="arguments"></a>引数
 
  `option`  
- 有効な値は、
+ 有効な値は、次のとおりです。
 
-|オプション|意味|
+|オプション|説明|
 |------------|-------------|
 |preview|コンパイラは、サポート可能な最新のプレビュー バージョンの有効な言語構文をすべて受け入れます。|
 |latest|コンパイラは、サポート可能な最新バージョン (マイナー リリースを含む) の有効な言語構文をすべて受け入れます。|
@@ -68,7 +68,7 @@ C# 言語バージョンを指定するその他の方法については、[C# �
 |Version|Link|説明|
 |-------|----|-----------|
 |C# 7.0 以降||現在使用できません|
-|C# 6.0|[リンク](../language-specification/index.md)|C# 言語仕様バージョン 6 - 非公式ドラフト: .NET Foundation|
+|C# 6.0|[リンク](/dotnet/csharp/language-reference/language-specification/introduction)|C# 言語仕様バージョン 6 - 非公式ドラフト: .NET Foundation|
 |C# 5.0|[PDF のダウンロード](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|Standard ECMA-334 5th Edition|
 |C# 3.0|[DOC のダウンロード](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C# 言語仕様バージョン 3.0:Microsoft Corporation|
 |C# 2.0|[PDF のダウンロード](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|Standard ECMA-334 4th Edition|

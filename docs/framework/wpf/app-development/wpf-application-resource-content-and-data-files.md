@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 77f3c519308f39f83dac399aef395d5d36a7195e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040923"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460915"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル
 Microsoft Windows アプリケーションは、多くの場合、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、イメージ、ビデオ、オーディオなど、実行可能ではないデータを含むファイルに依存しています。 Windows Presentation Foundation (WPF) では、これらの種類のデータファイル (アプリケーションデータファイルと呼ばれます) を構成、識別、および使用するための特別なサポートを提供しています。 このサポートの中心となるのは、次のような特定のアプリケーション データ ファイルの種類のセットです。  
@@ -52,7 +52,7 @@ Microsoft Windows アプリケーションは、多くの場合、[!INCLUDE[TLA#
 - アプリケーションデータファイルはローカライズ可能である必要があります (「 [WPF のグローバリゼーションとローカライズの概要](../advanced/wpf-globalization-and-localization-overview.md)」を参照してください)。  
   
 > [!NOTE]
-> このセクションで説明するリソースファイルは、「 [XAML リソース](../advanced/xaml-resources.md)」で説明されているリソースファイルとは異なり、「[アプリケーションリソースの管理 (.net)](/visualstudio/ide/managing-application-resources-dotnet)」で説明されている埋め込みリソースまたはリンクされたリソースとは異なります。  
+> このセクションで説明するリソースファイルは、「 [XAML リソース](../../../desktop-wpf/fundamentals/xaml-resources-define.md)」で説明されているリソースファイルとは異なり、「[アプリケーションリソースの管理 (.net)](/visualstudio/ide/managing-application-resources-dotnet)」で説明されている埋め込みリソースまたはリンクされたリソースとは異なります。  
   
 ### <a name="configuring-resource-files"></a>リソース ファイルの構成  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]では、リソースファイルは、`Resource` 項目として Microsoft build engine (MSBuild) プロジェクトに含まれるファイルです。  
@@ -187,15 +187,15 @@ Microsoft Windows アプリケーションは、多くの場合、[!INCLUDE[TLA#
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- ただし、file:/// スキームや http:// スキームを使用する場合は、アプリケーションに完全信頼が必要です。 アプリケーションがインターネットまたはイントラネットから起動した [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] であり、その場所から起動されたアプリケーションに対して許可されているアクセス許可のセットだけを要求する場合、ルースファイルはアプリケーションの起点サイトからのみ読み込むことができます (起動場所)。 このようなファイルは、*起点サイト*ファイルと呼ばれます。  
+ ただし、file:/// スキームや http:// スキームを使用する場合は、アプリケーションに完全信頼が必要です。 アプリケーションがインターネットまたはイントラネットから起動された XAML ブラウザーアプリケーション (XBAP) であり、これらの場所から起動されるアプリケーションに許可されているアクセス許可のセットだけを要求する場合、圧縮されていないファイルは、アプリケーションの起点サイト (起動場所)。 このようなファイルは、*起点サイト*ファイルと呼ばれます。  
   
  起点サイト ファイルは部分信頼アプリケーションの唯一のオプションですが、部分信頼アプリケーション以外でも使用できます。 完全信頼アプリケーションでも、読み込むアプリケーション データ ファイルがビルド時点では不明な場合があります。完全信頼アプリケーションでは file:/// を使用できますが、アプリケーション データ ファイルがアプリケーション アセンブリと同じフォルダーにインストールされることも、サブフォルダーにインストールされることも考えられます。 この場合は、起点サイト参照を使用する方が、file:/// を使用するよりも簡単です。file:/// を使用するには、ファイルの完全パスを指定する必要があるためです。  
   
 > [!NOTE]
-> 起点サイトファイルは、クライアントコンピューターに [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] と共にキャッシュされることはありませんが、コンテンツファイルはです。 したがって、起点サイト ファイルは明確に要求されたときにのみダウンロードされます。 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] アプリケーションに大きなメディアファイルが含まれている場合は、それらを起点サイトファイルとして構成すると、最初のアプリケーションの起動にかかる時間が大幅に短縮され、ファイルは要求時にのみダウンロードされます。  
+> 起点サイトファイルは、クライアントコンピューター上の XAML ブラウザーアプリケーション (XBAP) ではキャッシュされませんが、コンテンツファイルはです。 したがって、起点サイト ファイルは明確に要求されたときにのみダウンロードされます。 XAML ブラウザーアプリケーション (XBAP) アプリケーションに大きなメディアファイルがある場合、それらを起点サイトファイルとして構成すると、最初のアプリケーションの起動にかかる時間が大幅に短縮され、ファイルは要求時にのみダウンロードされます。  
   
 ### <a name="configuring-site-of-origin-files"></a>起点サイト ファイルの構成  
- コンパイル時に起点サイトファイルが存在しないか不明な場合は、`XCopy` コマンドラインプログラムまたは [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)]を使用するなど、必要なファイルを実行時に確実に使用できるようにするために、従来の配置メカニズムを使用する必要があります。  
+ コンパイル時に起点サイトファイルが存在しないか不明な場合は、`XCopy` コマンドラインプログラムまたは Microsoft Windows を使用するなど、必要なファイルを実行時に確実に使用できるようにするために、従来の展開メカニズムを使用する必要があります。インストーラー.  
   
  発行元のサイトに配置する必要があるファイルがコンパイル時にわかっていても、明示的な依存関係を回避したい場合は、それらのファイルを `None` 項目として MSBuild プロジェクトに追加できます。 コンテンツファイルと同様に、MSBuild `CopyToOutputDirectory` 属性を設定して、`Always` 値または `PreserveNewest` 値を指定することによって、ビルドされたアセンブリに対して相対的な場所に起点サイトファイルをコピーするように指定する必要があります。  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 995362667ed0a203112744f03a036eabbcb784c8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 57fd4ab59a1162145087b375cbbb71816a10e78c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608299"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420336"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 言語と .NET Framework の概要
 
@@ -44,7 +44,7 @@ C# は、タイプ セーフで洗練されたオブジェクト指向言語で�
   
  その他に、C# の参照ドキュメントを紹介します。  
   
-- C# 言語の概略については、「[C# 言語仕様](../language-reference/language-specification/index.md)」の第 1 章を参照してください。  
+- C# 言語の概略については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の第 1 章を参照してください。  
   
 - C# 言語の具体的な側面の詳細については、「[C# リファレンス](../language-reference/index.md)」を参照してください。  
   
@@ -69,4 +69,4 @@ C# は、タイプ セーフで洗練されたオブジェクト指向言語で�
 ## <a name="see-also"></a>関連項目
 
 - [C#](../index.md)
-- [Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Visual C# 入門](/visualstudio/ide/quickstart-csharp-console)

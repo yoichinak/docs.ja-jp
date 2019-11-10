@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
-ms.openlocfilehash: f736540a37d3226bccfc07749dcf06ca018663e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0806169b9b1c3521dcf89f5ea0fa5aec188030c2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694572"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422774"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (ジェネリック修飾子) (C# リファレンス)
 
@@ -18,7 +18,7 @@ ms.locfileid: "54694572"
 
 反変性は、ジェネリック パラメーターによって指定された型よりも弱い派生型を使用できるようにする機能です。 これにより、反変性のインターフェイスを実装するクラスの暗黙の型変換とデリゲート型の暗黙の型変換が可能となります。 ジェネリック型パラメーターの共変性および反変性は参照型ではサポートされますが、値型ではサポートされません。
 
-型をジェネリック インターフェイスまたはデリゲートで反変として宣言できるのは、メソッドの戻り値の型ではなく、メソッドのパラメーターの型を定義する場合のみです。 `in`、`ref`、`out` パラメーターはインバリアントである必要があります。これは、これらのパラメーターが共変でも反変でもないことを意味します。
+型をジェネリック インターフェイスまたはデリゲートで反変として宣言できるのは、メソッドの戻り値の型ではなく、メソッドのパラメーターの型を定義する場合のみです。 `In`、`ref`、`out` パラメーターはインバリアントである必要があります。これは、これらのパラメーターが共変でも反変でもないことを意味します。
 
 反変の型パラメーターを持つインターフェイスを使用すると、そのインターフェイスのメソッドは、インターフェイス型パラメーターによって指定された型よりも弱い派生型の引数を受け取ることができます。 たとえば、<xref:System.Collections.Generic.IComparer%601> インターフェイスでは、T 型が反変なので、`Employee` が `Person` を継承する場合、特別な変換メソッドを使用しなくても `IComparer<Person>` 型のオブジェクトを `IComparer<Employee>` 型のオブジェクトに割り当てることができます。
 
@@ -46,4 +46,4 @@ ms.locfileid: "54694572"
 
 - [out](out-generic-modifier.md)
 - [共変性と反変性](../../programming-guide/concepts/covariance-contravariance/index.md)
-- [修飾子](modifiers.md)
+- [修飾子](index.md)

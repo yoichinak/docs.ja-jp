@@ -1,17 +1,15 @@
 ---
-title: ICorDebugExceptionDebugEvent::GetStackPointer メソッド
+title: 'いい Exceptiondebugevent:: GetStackPointer メソッド'
 ms.date: 03/30/2017
 ms.assetid: d8f66a1c-16be-4264-afc5-bc2dfbb4a682
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 47f60b151166804d612292fb32b7ff154e417342
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 688f5aec457298a43d95a35fdbc6e04e29a306a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928198"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084683"
 ---
-# <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>ICorDebugExceptionDebugEvent::GetStackPointer メソッド
+# <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>いい Exceptiondebugevent:: GetStackPointer メソッド
 この例外デバッグ イベントのスタック ポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -41,12 +39,12 @@ HRESULT GetStackPointer(
   
  イベントの種類は、テキスト形式の[イベント:: GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md)メソッドから取得できます。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

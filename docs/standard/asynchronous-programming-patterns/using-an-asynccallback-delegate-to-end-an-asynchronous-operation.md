@@ -11,14 +11,12 @@ helpviewer_keywords:
 - AsyncCallback delegate
 - stopping asynchronous operations
 ms.assetid: 9d97206c-8917-406c-8961-7d0909d84eeb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9e53634cea4ab3d260247ce645956c68ea7e2e80
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c3cac2db57a24bf6a0f5640e4ad8101686e6c3e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623539"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130920"
 ---
 # <a name="using-an-asynccallback-delegate-to-end-an-asynchronous-operation"></a>AsyncCallback デリゲートの使用による非同期操作の終了
 非同期操作の結果の待機中に、他の作業を実行できるアプリケーションは、操作が完了するまで待機をブロックする必要はありません。 次のオプションのいずれかを使用して、非同期操作が完了するまでの待機中に、手順の実行を継続します。  

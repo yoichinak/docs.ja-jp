@@ -5,17 +5,15 @@ helpviewer_keywords:
 - assemblies [.NET Framework], type forwarding
 - type forwarding
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 1b00eea3c28a160a5afc41d910144033d2339070
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 7b9fd4e89d1d3290dfc17f52de392c4ee9092d02
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524466"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138594"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>共通言語ランタイムでの型の転送
 型の転送を使用すると、別のアセンブリに型を移動する際に、元のアセンブリを使用するアプリケーションを再コンパイルする必要がありません。  

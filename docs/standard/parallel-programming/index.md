@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07b5426f5af9cd6ca919d8da0de0acfed76a2e63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae129ef0cb2b331c1eb0220282f21fec6f6fb77d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954077"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134145"
 ---
 # <a name="parallel-programming-in-net"></a>.NET での並列プログラミング
 

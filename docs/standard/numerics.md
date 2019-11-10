@@ -11,14 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7f180e459764d6e8e4484072218f01c8bab8a3b5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50191156"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091589"
 ---
 # <a name="numerics-in-net"></a>.NET における数値
 

@@ -1,17 +1,15 @@
 ---
-title: ICorDebugStaticFieldSymbol::GetAddress メソッド
+title: の場合は、":" GetAddress メソッド
 ms.date: 03/30/2017
 ms.assetid: 5a6c9a5a-ec72-4c40-a9c3-cee7baa63687
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d41b99d7410333cb6a22443271c1fcbc41c3594
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 65761e48491b2a4c81ccd05b17d8723f71f52e5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962700"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131792"
 ---
-# <a name="icordebugstaticfieldsymbolgetaddress-method"></a>ICorDebugStaticFieldSymbol::GetAddress メソッド
+# <a name="icordebugstaticfieldsymbolgetaddress-method"></a>の場合は、":" GetAddress メソッド
 静的フィールドのアドレスを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -31,12 +29,12 @@ HRESULT GetAddress(
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

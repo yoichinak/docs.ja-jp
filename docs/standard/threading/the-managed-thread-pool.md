@@ -9,14 +9,12 @@ helpviewer_keywords:
 - threading [.NET], thread pool
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f921f40bbc5a7b72341c3fb778dd69fcc7b918c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665267"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127533"
 ---
 # <a name="the-managed-thread-pool"></a>マネージド スレッド プール
 

@@ -1,15 +1,13 @@
 ---
 title: 文字列補間 - C# チュートリアル
 description: このチュートリアルでは、C# で文字列補間機能を使用して、大きい文字列で書式設定された計算式の結果を含める方法を示します。
-author: rpetrusha
-ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 813623f4036813d7c1af440a60387f5d8e889354
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 53b9afa4c5ccdcb1f18d2947981aee6571b73134
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774046"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120120"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>文字列補間を使用し、書式設定された文字列を作成する
 

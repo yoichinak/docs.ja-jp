@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d1e6cd9-2a15-41c6-9b68-008705a4ed90
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad31df899fe98e66e39a1af785618b3679e644bd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cfdcfc69400fccf824d019f3904aeca76b6b37a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739877"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098126"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 列挙型
 インターフェイス、つまり .NET Framework のバージョン、またはインターフェイスが導入された .NET Framework のバージョンを指定します。  
@@ -202,10 +200,10 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugModule2`|[ICorDebugModule2](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-interface.md)|2.0|  
 |`ver_ICorDebugFunction2`|[ICorDebugFunction2](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-interface.md)|2.0|  
 |`ver_ICorDebugCode2`|[ICorDebugCode2](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-interface.md)|2.0|  
-|`ver_ICorDebugClass2`|"ICorDebugClass2"|2.0|  
-|`ver_ICorDebugValue2`|"ICorDebugValue2"|2.0|  
+|`ver_ICorDebugClass2`|ICorDebugClass2|2.0|  
+|`ver_ICorDebugValue2`|ICorDebugValue2|2.0|  
 |`ver_ICorDebugEval2`|"ICorDebugEval2"。|2.0|  
-|`ver_ICorDebugObjectValue2`|"ICorDebugObjectValue2"|2.0|  
+|`ver_ICorDebugObjectValue2`|ICorDebugObjectValue2|2.0|  
 |`ver_ICorDebugThread3`|[ICorDebugThread3](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-interface.md)|4|  
 |`ver_ICorDebugThread4`|[ICorDebugThread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)|4|  
 |`ver_ICorDebugStackWalk`|[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)|4|  
@@ -222,7 +220,7 @@ typedef enum CorDebugInterfaceVersion {
 |`CorDebugLatestVersion`|(すべてのサービス パックを含めて) .NET Framework のバージョンは最新バージョン。|-|  
   
 ## <a name="remarks"></a>Remarks  
- デバッガーを使用、`CorDebugInterfaceVersion`で列挙、 [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)デバッガーがサポートする .NET Framework の最新バージョンを指定する関数。  
+ デバッガーでは、 [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)関数の `CorDebugInterfaceVersion` 列挙体を使用して、デバッガーがサポートする .NET Framework の最大バージョンを指定できます。  
   
 ## <a name="interface-names"></a>インターフェイス名  
  デバッグ API でインターフェイス名の最後に示される数字 (`ICorDebugThread3` の "3" など) は、.NET Framework のバージョンではなく、インターフェイスのバージョンを表します。 デバッグ API のすべてのインターフェイス名にはバージョン番号が含まれます (ただし .NET Framework バージョン 1 で導入されたインターフェイスは除きます)。 インターフェイスのバージョン番号と .NET Framework のバージョン番号が同じでもそれは偶然の一致です。  
@@ -235,10 +233,10 @@ typedef enum CorDebugInterfaceVersion {
   
 - .NET Framework バージョン 3.0 および 3.5 は既存の .NET Framework 2.0 インターフェイスを使用しており、新しいインターフェイスは導入していません。  
   
-- .NET Framework 4 では、さまざまなインターフェイスのバージョンについて説明します。 たとえば、`ICorDebugThread3` および `ICorDebugThread4` は、`ICorDebugThread` インターフェイスの 3 番目および 4 番目のバージョンとして示されます。 .NET Framework 4 は、の最初のバージョンも導入されています。、`ICorDebugStackWalk`インターフェイスとの 2 番目のバージョン、`ICorDebugNativeFrame`インターフェイス (`ICorDebugNativeFrame2`)。  
+- .NET Framework 4 では、インターフェイスのバージョンが混在しています。 たとえば、`ICorDebugThread3` および `ICorDebugThread4` は、`ICorDebugThread` インターフェイスの 3 番目および 4 番目のバージョンとして示されます。 .NET Framework 4 では、`ICorDebugStackWalk` インターフェイスの最初のバージョンと `ICorDebugNativeFrame` インターフェイスの2番目のバージョン (`ICorDebugNativeFrame2`) も導入されています。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

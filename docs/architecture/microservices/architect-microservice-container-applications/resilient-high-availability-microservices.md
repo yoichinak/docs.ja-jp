@@ -2,12 +2,12 @@
 title: マイクロサービスの回復性と高可用性
 description: マイクロサービスの高可用性を実現するには、一時的なネットワークや依存関係のエラーに耐えるような設計が必要であり、回復性も求められます。
 ms.date: 09/20/2018
-ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1c0f75a8c68d1f84ba24c550e854edc5372cf7f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834349"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094211"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>マイクロサービスの回復性と高可用性
 
@@ -31,8 +31,8 @@ ms.locfileid: "71834349"
 
 Beat Pulse と呼ばれる優れたオープン ソース ライブラリを使用することもできます。これは、[GitHub](https://github.com/Xabaril/BeatPulse) で、および [NuGet パッケージ](https://www.nuget.org/packages/BeatPulse/)として入手できます。 このライブラリでも正常性チェックが行われますが、チェックが 2 種類あります。
 
-- **稼動**:マイクロサービスが稼動しているかどうか。つまり要求を受け入れ、応答できるかどうかがチェックされます。 
-- **準備**:マイクロサービスの依存関係 (データベース、キュー サービスなど) 自体が準備できていて、マイクロサービスが求められた操作を実行できるかどうかがチェックされます。 
+- **稼動**:マイクロサービスが稼動しているかどうか。つまり要求を受け入れ、応答できるかどうかがチェックされます。
+- **準備**:マイクロサービスの依存関係 (データベース、キュー サービスなど) 自体が準備できていて、マイクロサービスが求められた操作を実行できるかどうかがチェックされます。
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>診断とログのイベント ストリームを使用する
 

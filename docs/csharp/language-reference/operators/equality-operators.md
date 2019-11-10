@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 4a30068293bef3adb9f58cc7f61e7e24e144f31b
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 11d2161004af5199d9e501f8ab1e3c0382e6bfe7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395134"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039031"
 ---
 # <a name="equality-operators-c-reference"></a>等値演算子 (C# リファレンス)
 
@@ -41,7 +41,7 @@ ms.locfileid: "72395134"
 
 同じ[列挙](../keywords/enum.md)型の 2 つのオペランドは、基になる整数型の対応する値が等しい場合は等しくなります。
 
-既定ではユーザー定義 [struct](../keywords/struct.md) 型は `==` 演算子をサポートしていません。 `==` 演算子をサポートするには、ユーザー定義 struct でそれを[オーバーロード](#operator-overloadability)する必要があります。
+既定ではユーザー定義 [struct](../keywords/struct.md) 型は `==` 演算子をサポートしていません。 `==` 演算子をサポートするには、ユーザー定義 struct でそれを[オーバーロード](operator-overloading.md)する必要があります。
 
 C# 7.3 より、`==` および `!=` 演算子は C# の[タプル](../../tuples.md)によってサポートされています。 詳細については、「[C# のタプル型](../../tuples.md)」の記事の「[等値とタプル](../../tuples.md#equality-and-tuples)」のセクションを参照してください。
 
@@ -55,7 +55,7 @@ C# 7.3 より、`==` および `!=` 演算子は C# の[タプル](../../tuples.
 
 ### <a name="string-equality"></a>文字列の等価性
 
-2 つの [string](../keywords/string.md) オペランドは、その両方が `null` であるか、両方の文字列インスタンスの長さが同じで、それぞれの文字列の位置に同じ文字が含まれている場合に等しくなります。
+2 つの [string](../builtin-types/reference-types.md#the-string-type) オペランドは、その両方が `null` であるか、両方の文字列インスタンスの長さが同じで、それぞれの文字列の位置に同じ文字が含まれている場合に等しくなります。
 
 [!code-csharp-interactive[string equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#StringEquality)]
 

@@ -5,16 +5,14 @@ helpviewer_keywords:
 - <PreferComInsteadOfManagedRemoting> element
 - PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d793c8d84a15f554ada78f3c0dd1f0e936893fd4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 47c568a8d6e89a195414552b3db5953ee61d1e55
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252408"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116016"
 ---
-# <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting> 要素
+# <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > 要素
 アプリケーションドメインの境界を越えたすべての呼び出しに対して、ランタイムがリモート処理の代わりに COM 相互運用を使用するかどうかを指定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
@@ -38,7 +36,7 @@ ms.locfileid: "70252408"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`false`|ランタイムは、アプリケーションドメインの境界を越えてリモート処理を使用します。 既定値です。|  
 |`true`|ランタイムは、アプリケーションドメインの境界を越えて COM 相互運用を使用します。|  
@@ -54,11 +52,11 @@ ms.locfileid: "70252408"
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- `enabled`属性をに設定すると`true`、ランタイムは次のように動作します。  
+ `enabled` 属性を `true`に設定すると、ランタイムは次のように動作します。  
   
 - [Iunknown](https://go.microsoft.com/fwlink/?LinkId=148003)インターフェイスが COM インターフェイス経由でドメインに入るとき、ランタイムは[Imanagedobject](../../../unmanaged-api/hosting/imanagedobject-interface.md)インターフェイスに対して[iunknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867)を呼び出しません。 代わりに、オブジェクトをラップする[ランタイム呼び出し可能ラッパー](../../../../standard/native-interop/runtime-callable-wrapper.md) (RCW) を構築します。  
   
-- ランタイムは、このドメインで作成さ`QueryInterface`れたすべての[COM 呼び出し可能ラッパー](../../../../standard/native-interop/com-callable-wrapper.md) (CCW) に対して[imanagedobject](../../../unmanaged-api/hosting/imanagedobject-interface.md)インターフェイスの呼び出しを受信すると、E_NOINTERFACE を返します。  
+- ランタイムは、このドメインで作成されたすべての[COM 呼び出し可能ラッパー](../../../../standard/native-interop/com-callable-wrapper.md) (CCW) に対して[Imanagedobject](../../../unmanaged-api/hosting/imanagedobject-interface.md)インターフェイスの `QueryInterface` 呼び出しを受け取ったときに、E_NOINTERFACE を返します。  
   
  これらの2つの動作により、アプリケーションドメインの境界を越えたマネージオブジェクト間の COM インターフェイス経由のすべての呼び出しで、リモート処理ではなく COM と COM の相互運用が使用されるようになります。  
   

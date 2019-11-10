@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b996b09ed3973125d4d848d5e00c18ab02a6967
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 85098a0d10b4c05de52cd33d30ec5c4f4bbc594d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673744"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140002"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ の非利便性
 
@@ -42,11 +40,11 @@ PLINQ を使用すると、多くの場合、連続した LINQ to Objects クエ
 
 - 内部データ ソース (cust.Orders) が非常に長い。
 
-- 各順序で高負荷の計算を実行している  (この例に示す操作の負荷は大きくありません)。
+- 各順序で高負荷の計算を実行している (この例に示す操作の負荷は大きくありません)。
 
 - 対象システムに、`cust.Orders` でクエリを並列化することで生成されるスレッドの数を十分に処理できるプロセッサが存在している。
 
-どの場合も、最適なクエリの形式を決定する最善の方法は、テストおよび測定することです。 詳細については、「[方法 :PLINQ クエリのパフォーマンスを測定する](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)」をご覧ください。
+どの場合も、最適なクエリの形式を決定する最善の方法は、テストおよび測定することです。 詳細については、[PLINQ クエリのパフォーマンスを測定する](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)」をご覧ください。
 
 ## <a name="avoid-calls-to-non-thread-safe-methods"></a>スレッド セーフでないメソッドの呼び出しを回避する
 
@@ -83,7 +81,7 @@ PLINQ では複数のスレッドで 1 つのクエリを実行しますが、`f
 
 ## <a name="be-aware-of-thread-affinity-issues"></a>スレッド アフィニティの問題に注意する
 
-シングル スレッド アパートメント (STA) コンポーネント向けの COM 相互運用性、Windows フォーム、Windows Presentation Foundation (WPF) などの一部のテクノロジでは、特定のスレッド上で実行するコードを必要とするスレッド アフィニティが制限される場合があります。 たとえば、Windows フォームと WPF では、コントロールへのアクセスは、そのコントロールが作成されたスレッド上でしか行うことができません。 PLINQ クエリで Windows フォーム コントロールの共有状態にアクセスしようとすると、デバッガーを実行中である場合は例外が発生します  (この設定はオフにできます)。ただし、クエリが UI スレッドで処理される場合、コードは 1 つのスレッドでのみ実行されるので、クエリ結果を列挙する `foreach` ループからコントロールにアクセスできます。
+シングル スレッド アパートメント (STA) コンポーネント向けの COM 相互運用性、Windows フォーム、Windows Presentation Foundation (WPF) などの一部のテクノロジでは、特定のスレッド上で実行するコードを必要とするスレッド アフィニティが制限される場合があります。 たとえば、Windows フォームと WPF では、コントロールへのアクセスは、そのコントロールが作成されたスレッド上でしか行うことができません。 PLINQ クエリで Windows フォーム コントロールの共有状態にアクセスしようとすると、デバッガーを実行中である場合は例外が発生します (この設定はオフにできます)。ただし、クエリが UI スレッドで処理される場合、コードは 1 つのスレッドでのみ実行されるので、クエリ結果を列挙する `foreach` ループからコントロールにアクセスできます。
 
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>ForEach、For および ForAll のイテレーションが必ず並列実行されているとは限らない
 

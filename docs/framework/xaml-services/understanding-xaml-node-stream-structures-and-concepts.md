@@ -6,16 +6,16 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: d6b2975b8e0338b121d00f5ec7f4ffb69d32ab6a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 2c8093c3ef497bd836427f71098e62626f228e24
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400732"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733386"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML ノード ストリームの構造と概念について
 
-.NET Framework XAML サービスに実装されている XAML リーダーと XAML ライターは、XAML ノード ストリームの設計概念に基づいています。 XAML ノード ストリームは、一連の XAML ノードを概念化したものです。 この概念化では、XAML プロセッサは、XAML 内のノードのリレーションシップの構造を 1 つずつ処理します。 常に、開いている XAML ノード ストリームに存在する現在のレコードまたは現在の位置は 1 つのみで、API の多くの側面がレポートするのは、その位置から入手できる情報のみです。 XAML ノード ストリームの現在のノードは、オブジェクト、メンバー、または値として記述できます。 XAML を XAML ノード ストリームとして扱うことで、XAML リーダーは XAML ライターと通信するとともに、XAML に関するパスの読み込みまたはパスの保存操作中に、XAML ノード ストリームのコンテンツをプログラムが表示、操作、または変更できるようにします。 XAML リーダーおよびライターの API の設計と XAML ノード ストリームの概念は、 [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] および <xref:System.Xml.XmlReader> クラスと <xref:System.Xml.XmlWriter> クラスなど、以前の関連するリーダーとライターの設計と概念に似ています。 このトピックでは、XAML ノード ストリームの概念について説明するとともに、XAML ノード レベルで XAML 表現と対話するルーチンを記述する方法について説明します。
+.NET Framework XAML サービスに実装されている XAML リーダーと XAML ライターは、XAML ノード ストリームの設計概念に基づいています。 XAML ノード ストリームは、一連の XAML ノードを概念化したものです。 この概念化では、XAML プロセッサは、XAML 内のノードのリレーションシップの構造を 1 つずつ処理します。 常に、開いている XAML ノード ストリームに存在する現在のレコードまたは現在の位置は 1 つのみで、API の多くの側面がレポートするのは、その位置から入手できる情報のみです。 XAML ノード ストリームの現在のノードは、オブジェクト、メンバー、または値として記述できます。 XAML を XAML ノード ストリームとして扱うことで、XAML リーダーは XAML ライターと通信するとともに、XAML に関するパスの読み込みまたはパスの保存操作中に、XAML ノード ストリームのコンテンツをプログラムが表示、操作、または変更できるようにします。 XAML リーダーおよびライター API の設計と XAML ノードストリームの概念は、前に関連するリーダーとライターの設計と概念に似ています。たとえば、XML ドキュメントオブジェクトモデル (DOM)、<xref:System.Xml.XmlReader> クラス、<xref:System.Xml.XmlWriter> クラスなどです。 このトピックでは、XAML ノード ストリームの概念について説明するとともに、XAML ノード レベルで XAML 表現と対話するルーチンを記述する方法について説明します。
 
 <a name="loading_into_a_xaml_reader"></a>
 
@@ -209,17 +209,17 @@ public class GameBoard {
 
 次のリストは、XAML リーダーでディレクティブの XAML メンバー ノードの導入が期待されるすべてのケースと、.NET Framework XAML サービスの実装でそのメンバーのノードが識別される方法を記載しています。
 
-- **オブジェクトノードの初期化テキスト:** このメンバーノードの名前は`_Initialization`であり、xaml ディレクティブを表し、xaml 言語の xaml 名前空間で定義されています。 その静的なエンティティは <xref:System.Xaml.XamlLanguage.Initialization%2A>から取得できます。
+- **オブジェクト ノードの初期化テキスト:** このメンバー ノードの名前は `_Initialization`です。この名前は XAML ディレクティブを表し、XAML 言語の XAML 名前空間で定義されます。 その静的なエンティティは <xref:System.Xaml.XamlLanguage.Initialization%2A>から取得できます。
 
-- **マークアップ拡張機能の位置指定パラメーター:** このメンバーノードの名前は`_PositionalParameters`であり、xaml 言語の xaml 名前空間で定義されています。 それには常にオブジェクトのジェネリック リストが含まれ、それぞれが入力 XAML で指定される `,` 区切り文字で分割して事前に分離された位置指定パラメーターになっています。 <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>から、位置指定パラメーター ディレクティブの静的なエンティティを取得できます。
+- **マークアップ拡張機能の位置指定パラメーター:** このメンバー ノードの名前は `_PositionalParameters`です。この名前は、XAML 言語の XAML 名前空間で定義されます。 それには常にオブジェクトのジェネリック リストが含まれ、それぞれが入力 XAML で指定される `,` 区切り文字で分割して事前に分離された位置指定パラメーターになっています。 <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>から、位置指定パラメーター ディレクティブの静的なエンティティを取得できます。
 
-- **不明なコンテンツ:** このメンバーノードの名前は`_UnknownContent`です。 厳密に言うと、これは <xref:System.Xaml.XamlDirective>で、XAML 言語の XAML 名前空間で定義されます。 このディレクティブは、XAML オブジェクト要素にソース XAML のコンテンツが含まれている場合は sentinel として使用されますが、現在使用できる XAML スキーマ コンテキストで決定できるコンテンツのプロパティはありません。 `_UnknownContent`という名前のメンバーを確認すると、XAML ノード ストリームでこのケースを検出できます。 読み込みパスの XAML ノード ストリームでその他の処理が行われない場合、いずれかのオブジェクトで <xref:System.Xaml.XamlObjectWriter> のメンバーが検出されると、試行した `WriteEndObject` で既定の `_UnknownContent` がスローされます。 既定の <xref:System.Xaml.XamlXmlWriter> はスローされず、メンバーを暗黙の型として処理します。 `_UnknownContent` の静的なエンティティは <xref:System.Xaml.XamlLanguage.UnknownContent%2A>から取得できます。
+- **不明なコンテンツ:** このメンバー ノードの名前は `_UnknownContent`です。 厳密に言うと、これは <xref:System.Xaml.XamlDirective>で、XAML 言語の XAML 名前空間で定義されます。 このディレクティブは、XAML オブジェクト要素にソース XAML のコンテンツが含まれている場合は sentinel として使用されますが、現在使用できる XAML スキーマ コンテキストで決定できるコンテンツのプロパティはありません。 `_UnknownContent`という名前のメンバーを確認すると、XAML ノード ストリームでこのケースを検出できます。 読み込みパスの XAML ノード ストリームでその他の処理が行われない場合、いずれかのオブジェクトで <xref:System.Xaml.XamlObjectWriter> のメンバーが検出されると、試行した `WriteEndObject` で既定の `_UnknownContent` がスローされます。 既定の <xref:System.Xaml.XamlXmlWriter> はスローされず、メンバーを暗黙の型として処理します。 `_UnknownContent` の静的なエンティティは <xref:System.Xaml.XamlLanguage.UnknownContent%2A>から取得できます。
 
 - **コレクションのコレクションプロパティ:** XAML に使用されるコレクションクラスのバッキング CLR 型には、コレクション項目を保持する専用の名前付きプロパティがありますが、このプロパティは、バッキング型の解決の前に XAML 型システムで認識されません。 代わりに、XAML ノード ストリームでは、コレクションの XAML 型のメンバーとして `Items` プレース ホルダーを導入します。 .NET Framework XAML サービスの実装では、ノード ストリームのディレクティブまたはメンバーの名前は `_Items`です。 このディレクティブの定数は <xref:System.Xaml.XamlLanguage.Items%2A>から取得できます。
 
-    XAML ノードストリームには、バッキング型の解決と XAML スキーマコンテキストに基づいて解析できない項目を含む Items プロパティが含まれている場合があります。 例えば以下のようにします。
+    XAML ノードストリームには、バッキング型の解決と XAML スキーマコンテキストに基づいて解析できない項目を含む Items プロパティが含まれている場合があります。 たとえば、オブジェクトに適用された
 
-- **XML で定義されたメンバー:** XML `xml:base`定義`space`の`xml:lang` 、、および`xml:space`の`base`各`lang`メンバーは、.NET Framework xaml サービスの実装では、、およびという名前の xaml ディレクティブとして報告されます。 これらの名前空間は、XML 名前空間 `http://www.w3.org/XML/1998/namespace`です。 これらのそれぞれの定数は <xref:System.Xaml.XamlLanguage>から取得できます。
+- **XMLで定義されたメンバー:** XML で定義された `xml:base`、 `xml:lang` 、 `xml:space` の各メンバーは、.NET Framework XAML サービスの実装で `base`、 `lang`、 `space` という名前の XAML ディレクティブとして報告されます。 これらの名前空間は、XML 名前空間 `http://www.w3.org/XML/1998/namespace`です。 これらのそれぞれの定数は <xref:System.Xaml.XamlLanguage>から取得できます。
 
 ## <a name="node-order"></a>ノードの順序
 

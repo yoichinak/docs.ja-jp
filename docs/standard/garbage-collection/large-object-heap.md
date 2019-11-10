@@ -6,14 +6,12 @@ helpviewer_keywords:
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4663c42b784334f66318c61d531ab4cee2f8b02e
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 618db9faff137e6ff0f878c928e3a889cff37838
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71354056"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120937"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows システムの大きなオブジェクト ヒープ
 

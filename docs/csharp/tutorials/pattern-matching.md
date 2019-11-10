@@ -2,13 +2,14 @@
 title: パターン マッチング機能を使用してデータ型を拡張する
 description: この高度なチュートリアルでは、パターン マッチング手法を使用して、別々に作成されたデータとアルゴリズムを使用して機能を作成する方法を示します。
 ms.date: 03/13/2019
+ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332352"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039192"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>チュートリアル: パターン マッチング機能を使用してデータ型を拡張する
 

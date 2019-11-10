@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 8c09ddc5a9db71a4e0bef0434d2fc14a4c088352
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635548"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419387"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>暗黙的に型指定されるローカル変数 (C# プログラミング ガイド)
 
@@ -45,7 +45,7 @@ ms.locfileid: "65635548"
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-詳細については、「[方法 :クエリ式で暗黙的に型指定されるローカル変数および配列を使用する](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)」をご覧ください。
+詳細については、[クエリ式で暗黙的に型指定されるローカル変数および配列を使用する](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)」をご覧ください。
 
 ## <a name="var-and-anonymous-types"></a>var と匿名型
 
@@ -99,7 +99,7 @@ private var bookTitles = new List<string>();
 - [匿名型](anonymous-types.md)
 - [オブジェクト初期化子とコレクション初期化子](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)
-- [LINQ クエリ式](../linq-query-expressions/index.md)
+- [C# での LINQ](../../linq/index.md)
 - [統合言語クエリ (LINQ)](../../linq/index.md)
 - [for](../../language-reference/keywords/for.md)
 - [foreach、in](../../language-reference/keywords/foreach-in.md)

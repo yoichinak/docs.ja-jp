@@ -8,21 +8,19 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 575d44ad9ecf445ba5d4b7fbe47032127ccb33ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f13265e2056c8eca62cd510154dd7c096eeabb00
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252733"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117677"
 ---
-# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion> 要素
+# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 要素
 文字列比較の実行時に、ランタイムがレガシ並べ替え順序を使用するように指定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion>**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +40,7 @@ ms.locfileid: "70252733"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |4096|代替の並べ替え順序を表すロケール ID。 この場合、4096は .NET Framework 3.5 以前のバージョンの並べ替え順序を表します。|  
   
@@ -57,7 +55,7 @@ ms.locfileid: "70252733"
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
 ## <a name="remarks"></a>Remarks  
- .NET Framework 4 の<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>クラスによって実行される文字列比較、並べ替え、および大文字と小文字の区別の操作は Unicode 5.1 標準に準拠して<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>いるため、やなど<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>の文字列比較メソッドの結果は、以前のバージョンの .NET Framework。 アプリケーションが従来の動作に依存している場合は、アプリケーションの構成ファイルに要素を`<CompatSortNLSVersion>`含めることによって、.NET Framework 3.5 以前のバージョンで使用されている文字列比較規則および並べ替え規則を復元できます。  
+ .NET Framework 4 の <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> クラスによって実行される文字列比較、並べ替え、および大文字と小文字の区別の操作は、Unicode 5.1 標準に準拠しているため、<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> や <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> などの文字列比較メソッドの結果は、以前のバージョンのとは異なる場合があります.NET Framework。 アプリケーションが従来の動作に依存している場合は、アプリケーションの構成ファイルに `<CompatSortNLSVersion>` 要素を含めることによって、.NET Framework 3.5 以前のバージョンで使用されている文字列比較規則および並べ替え規則を復元できます。  
   
 > [!IMPORTANT]
 > 文字列の比較および並べ替えのレガシ規則を復元する場合は、ローカル システムで sort00001000.dll ダイナミック リンク ライブラリも使用できるようにする必要があります。  

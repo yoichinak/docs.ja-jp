@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 955522630af7eab458545e3b4e9631e6fbea31eb
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9f215bb5f6d2ec480022af477d93d9411fe190cd
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038461"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424480"
 ---
 # <a name="ws-transaction-flow"></a>WS トランザクション フロー
-このサンプルでは、クライアントによって調整されるトランザクションの使用方法と、WS-AtomicTransaction プロトコルまたは OleTransactions プロトコルを使用するトランザクション フローに関するクライアントとサーバーのオプションの使用方法を示します。 このサンプルは、電卓サービスを実装する[はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)に基づいていますが、操作には、 **TransactionFlowOption**列挙`TransactionFlowAttribute`体を使用してを使用する方法を示しています。トランザクションフローが有効になっています。 フローされたトランザクションのスコープ内では、要求された操作のログがデータベースに書き込まれ、クライアント調整トランザクションが完了するまで保持されます。クライアント トランザクションが完了しない場合は、データベースに対する該当する更新はコミットされません。  
+このサンプルでは、クライアントによって調整されるトランザクションの使用方法と、WS-AtomicTransaction プロトコルまたは OleTransactions プロトコルを使用するトランザクション フローに関するクライアントとサーバーのオプションの使用方法を示します。 このサンプルは、電卓サービスを実装する[はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)に基づいていますが、操作には、トランザクションフローの次数を決定するために、 **TransactionFlowOption**列挙型で `TransactionFlowAttribute` を使用する方法を示しています。が有効になっています。 フローされたトランザクションのスコープ内では、要求された操作のログがデータベースに書き込まれ、クライアント調整トランザクションが完了するまで保持されます。クライアント トランザクションが完了しない場合は、データベースに対する該当する更新はコミットされません。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -47,7 +47,7 @@ public interface ICalculator
   
 - `Divide` (除算) 操作要求には、フローされたトランザクションが含まれてはならないことが、`TransactionFlow` 属性の省略によって指定されています。  
   
- トランザクションフローを有効にするには、 [ \<transactionflow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)プロパティが有効になっているバインドを、適切な操作属性に加えて使用する必要があります。 このサンプルでは、サービスの構成は Metadata Exchange エンドポイントのほかに TCP エンドポイントと HTTP エンドポイントを公開します。 TCP エンドポイントと HTTP エンドポイントは、 [ \<transactionflow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)プロパティが有効になっている次のバインドを使用します。  
+ トランザクションフローを有効にするには、適切な操作属性に加えて、 [\<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)プロパティが有効になっているバインドを使用する必要があります。 このサンプルでは、サービスの構成は Metadata Exchange エンドポイントのほかに TCP エンドポイントと HTTP エンドポイントを公開します。 TCP エンドポイントと HTTP エンドポイントは、次のバインディングを使用します。どちらの場合も、 [\<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)プロパティが有効になっています。  
   
 ```xml  
 <bindings>  
@@ -194,7 +194,7 @@ Console.WriteLine("Transaction committed");
   
  このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
-```  
+```console  
 Starting transaction  
   Add(100,15.99) = 115.99  
   Subtract(145,76.54) = 68.46  
@@ -208,7 +208,7 @@ Press <ENTER> to terminate client.
   
  サービス操作要求のログ記録は、サービスのコンソール ウィンドウに表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
-```  
+```console  
 Press <ENTER> to terminate the service.  
   Writing row to database: Adding 100 to 15.99  
   Writing row to database: Subtracting 76.54 from 145  
@@ -250,7 +250,7 @@ Press <ENTER> to terminate the service.
   
     6. **[OK]** をクリックし、 **[はい]** をクリックして MSDTC サービスを再起動します。  
   
-    7. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
+    7. [OK ] をクリックしてダイアログ ボックスを閉じます。  
   
 2. Windows Server 2008 または Windows Vista が動作するサービス コンピューターで、次の説明に従い、受信ネットワーク トランザクションを許可するよう MSDTC を構成します。  
   
@@ -264,11 +264,11 @@ Press <ENTER> to terminate the service.
   
     5. **[OK]** をクリックし、 **[はい]** をクリックして MSDTC サービスを再起動します。  
   
-    6. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
+    6. [OK ] をクリックしてダイアログ ボックスを閉じます。  
   
 3. クライアント コンピューターで、送信ネットワーク トランザクションを許可するよう MSDTC を構成します。  
   
-    1. **[スタート]** メニューから、[ `Control Panel`**管理ツール**]、 **[コンポーネントサービス]** の順に移動します。  
+    1. **[スタート]** メニューから、[`Control Panel`]、 **[管理ツール]** 、 **[コンポーネントサービス]** の順に移動します。  
   
     2. **マイコンピューター**を右クリックし、 **[プロパティ]** を選択します。  
   
@@ -278,13 +278,13 @@ Press <ENTER> to terminate the service.
   
     5. **[OK]** をクリックし、 **[はい]** をクリックして MSDTC サービスを再起動します。  
   
-    6. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
+    6. [OK ] をクリックしてダイアログ ボックスを閉じます。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

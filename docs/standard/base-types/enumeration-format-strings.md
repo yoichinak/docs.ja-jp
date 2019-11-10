@@ -10,14 +10,12 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: be2e5dbe0d02bcec8974a1e52c0dce107d3bf46b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 316c042b05e505b3e3e857ea41ae808a2a0282f5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052849"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126421"
 ---
 # <a name="enumeration-format-strings"></a>列挙型形式文字列
 

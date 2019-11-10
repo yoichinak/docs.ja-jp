@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291594"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421583"
 ---
 # <a name="tour-of-net"></a>.NET のツアー
 
@@ -37,7 +37,7 @@ Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#�
 
 ## <a name="automatic-memory-management"></a>自動メモリ管理
 
-.NET は、[ガベージ コレクション (GC) ](garbagecollection/index.md)を使ってプログラムの自動メモリ管理を行います。 GC はメモリ管理に対する遅延アプローチで動作します。この場合、メモリの即時収集よりもアプリのスループットが優先されます。 .NET GC について詳しくは、「[ガベージ コレクションの基礎](garbagecollection/fundamentals.md)」をご覧ください。
+.NET は、[ガベージ コレクション (GC) ](garbage-collection/index.md)を使ってプログラムの自動メモリ管理を行います。 GC はメモリ管理に対する遅延アプローチで動作します。この場合、メモリの即時収集よりもアプリのスループットが優先されます。 .NET GC について詳しくは、「[ガベージ コレクションの基礎](garbage-collection/fundamentals.md)」をご覧ください。
 
 以下の 2 つの行はどちらもメモリを割り当てています。
 

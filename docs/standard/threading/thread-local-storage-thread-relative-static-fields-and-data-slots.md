@@ -8,14 +8,12 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7beb22c68450d7ae4aeb6d0bcae45fafdfe78191
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: b5a7c4b78f8599f64aa11f1c98c033866e582933
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490915"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127522"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット
 1 つのスレッドとアプリケーション ドメインに固有のデータを格納するには、マネージド スレッド ローカル ストレージ (TLS: Thread Local Storage) を使用します。 .NET Framework は、マネージド TLS の使用に関して、スレッド相対静的フィールドとデータ スロットという 2 つの機構を備えています。  

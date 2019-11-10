@@ -4,12 +4,12 @@ description: Windows で .NET Core を使用して .NET for Apache Spark アプ�
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 19efc8412d834d73069c61e1cc1ccd9e5eb8593b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250321"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774377"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>チュートリアル: .NET for Apache Spark の概要
 
@@ -44,9 +44,9 @@ ms.locfileid: "72250321"
     * PowerShell コマンド `java -version` を使用して、インストールを確認します。
 
 4. [Apache Maven 3.6.0 以降](https://maven.apache.org/download.cgi)をインストールします。
-    * [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip) をダウンロードします。
-    * ローカル ディレクトリに抽出します。 たとえば、`c:\bin\apache-maven-3.6.0\` のようにします。
-    * Apache Maven をご自分の [PATH 環境変数](https://www.java.com/en/download/help/path.xml)に追加します。 `c:\bin\apache-maven-3.6.0\` に抽出した場合は、`c:\bin\apache-maven-3.6.0\bin` を PATH に追加します。
+    * [Apache Maven 3.6.2](http://mirror.metrocast.net/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.zip) をダウンロードします。
+    * ローカル ディレクトリに抽出します。 たとえば、`c:\bin\apache-maven-3.6.2\` のようにします。
+    * Apache Maven をご自分の [PATH 環境変数](https://www.java.com/en/download/help/path.xml)に追加します。 `c:\bin\apache-maven-3.6.2\` に抽出した場合は、`c:\bin\apache-maven-3.6.2\bin` を PATH に追加します。
     * PowerShell コマンド `mvn -version` を使用して、インストールを確認します。
 
 5. [Apache Spark 2.3 以降](https://spark.apache.org/downloads.html)をインストールします。 Apache Spark 2.4 以降はサポートされていません。

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 11e48c54ba82b51268b34d6db01d2f9d4ae61ad7
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: d4a2562324259bda0bab523849449d584736b2ae
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523575"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423194"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>チュートリアル: Office のプログラミング (C# および Visual Basic)
 
@@ -114,13 +114,13 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     これらの追加機能では、C# の別の機能である、[dynamic](../../language-reference/keywords/dynamic.md) 型がある場合と同様に Office などの COM ホストから返される `Object` 値の処理を示します。 これは、 **[相互運用機能型の埋め込み]** が既定値の `True` に設定されている場合、または同様に、アセンブリが [-link](../../language-reference/compiler-options/link-compiler-option.md) コンパイラ オプションによって参照されている場合に発生します。 `dynamic` 型では既に Visual Basic で使用できる遅延バインディングが可能であり、C# 3.0 以前のバージョンの言語で必要だった明示的なキャストが回避されます。
+     これらの追加機能では、C# の別の機能である、[dynamic](../../language-reference/builtin-types/reference-types.md) 型がある場合と同様に Office などの COM ホストから返される `Object` 値の処理を示します。 これは、 **[相互運用機能型の埋め込み]** が既定値の `True` に設定されている場合、または同様に、アセンブリが [-link](../../language-reference/compiler-options/link-compiler-option.md) コンパイラ オプションによって参照されている場合に発生します。 `dynamic` 型では既に Visual Basic で使用できる遅延バインディングが可能であり、C# 3.0 以前のバージョンの言語で必要だった明示的なキャストが回避されます。
 
      たとえば、`excelApp.Columns[1]` は `Object` を返し、`AutoFit` は Excel の [Range](<xref:Microsoft.Office.Interop.Excel.Range>) メソッドであるとします。 `dynamic` がない場合、`excelApp.Columns[1]` のインスタンスとして、`Range` によって返されたオブジェクトをキャストしてから、`AutoFit` メソッドを呼び出す必要があります。
 
      [!code-csharp[csOfficeWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#8)]
 
-     相互運用機能型の埋め込みの詳細については、このトピックの後半の「PIA 参照を検索するには」および「PIA の依存関係を復元するには」の手順を参照してください。 `dynamic` の詳細については、「[dynamic (C# リファレンス)](../../language-reference/keywords/dynamic.md)」または「[dynamic 型の使用 (C# プログラミング ガイド)](../types/using-type-dynamic.md)」を参照してください。
+     相互運用機能型の埋め込みの詳細については、このトピックの後半の「PIA 参照を検索するには」および「PIA の依存関係を復元するには」の手順を参照してください。 `dynamic` の詳細については、「[dynamic (C# リファレンス)](../../language-reference/builtin-types/reference-types.md)」または「[dynamic 型の使用 (C# プログラミング ガイド)](../types/using-type-dynamic.md)」を参照してください。
 
 ### <a name="to-invoke-displayinexcel"></a>DisplayInExcel を起動するには
 
@@ -199,7 +199,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 - [位置と名前による引数渡し](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
 - [名前付き引数と省略可能な引数](../classes-and-structs/named-and-optional-arguments.md)
 - [事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [dynamic 型の使用](../types/using-type-dynamic.md)
 - [ラムダ式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [ラムダ式 (C#)](../statements-expressions-operators/lambda-expressions.md)

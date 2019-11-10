@@ -2,14 +2,12 @@
 title: .NET ネイティブによる起動時間の改善の測定
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 74011a4c70cc8f7da3973698a43b1e97cffb9f9b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 771bf8deba8e851eadf356c647169a21428ddcff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927067"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128348"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET ネイティブによる起動時間の改善の測定
 .NET ネイティブすると、アプリの起動時間が大幅に短縮されます。 この改善は、ポータブルの低電力デバイスや複雑なアプリで特に顕著です。 このトピックでは、この起動時間の改善を測定するために必要となる基本的なインストルメンテーションの概要を示します。  
@@ -47,7 +45,7 @@ ms.locfileid: "70927067"
   
 - アプリが新しいストーリーの同期を終了した場合。  
   
- アプリのインストルメント化は簡単です。派生クラスで適切なメソッドを呼び出すだけです。 前の例の `AppEventSource` を使用して、次のようにアプリをインストルメント化できます。  
+ アプリのインストルメント化は簡単です。派生クラスで適切なメソッドを呼び出すのみです。 前の例の `AppEventSource` を使用して、次のようにアプリをインストルメント化できます。  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   
@@ -65,7 +63,7 @@ ms.locfileid: "70927067"
 perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile   
 ```  
   
- それぞれの文字について以下に説明します。  
+ ここで、  
   
  `-KernelEvents:Process`  
  プロセスが開始および停止したときに通知するよう指定します。 他のイベント時間から減算できるよう、アプリに Process/Start イベントが必要です。  

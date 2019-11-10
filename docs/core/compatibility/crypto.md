@@ -2,14 +2,12 @@
 title: 暗号の破壊的変更、バージョン 2.2 から 3.0 - .NET Core
 description: .NET Core、ASP.NET Core、EF Core のバージョン 2.2 からバージョン 3.0 への破壊的変更の一覧を示します。
 ms.date: 09/10/2019
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 44caf042404d44ec4c5cb7b7e25883d8460efeb5
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: ba330bdef4be8cfe0e74f5645adaf66b2e0051ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216943"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089580"
 ---
 # <a name="breaking-changes-for-migration-from-version-22-to-30"></a>バージョン 2.2 から 3.0 への移行の破壊的変更
 

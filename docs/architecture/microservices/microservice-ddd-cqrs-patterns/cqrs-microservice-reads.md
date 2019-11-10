@@ -2,12 +2,12 @@
 title: CQRS マイクロサービスに読み取り/クエリを実装する
 description: コンテナー化された .NET アプリケーション用の .NET マイクロサービス アーキテクチャ | Dapper を使用した eShopOnContainers でのオーダリング マイクロサービスの CQRS のクエリ側の実装を理解する。
 ms.date: 10/08/2018
-ms.openlocfilehash: c39a42b7f5200208a0f812665a2d1c87b4433ba9
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275792"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094059"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS マイクロサービスに読み取り/クエリを実装する
 
@@ -35,7 +35,7 @@ ms.locfileid: "72275792"
 
 ViewModel として、クラスで定義されている静的な型を指定することができます。 または、実行 (オーダリング マイクロサービスで実装) されたクエリに基づいて動的に作成することもできます。これは、開発者にとって非常にアジャイルな方法です。
 
-## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>クエリを実行するためのマイクロ ORM としての Dapper の使用 
+## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>クエリを実行するためのマイクロ ORM としての Dapper の使用
 
 クエリでは、任意のマイクロ ORM、Entity Framework Core、またはプレーン ADO.NET を使用することができます。 サンプル アプリケーションでは、一般的なマイクロ ORM の良い例として、eShopOnContainers でのオーダリング マイクロサービスに対して Dapper が選択されました。 これは非常に軽量なフレームワークであるため、パフォーマンスの優れたプレーン SQL クエリを実行できます。 Dapper を使用することで、複数のテーブルのアクセスと結合が可能な SQL クエリを記述できます。
 
@@ -119,16 +119,16 @@ public class OrderQueries : IOrderQueries
         {
             connection.Open();
             return await connection.QueryAsync<OrderSummary>(
-                  @"SELECT o.[Id] as ordernumber, 
-                  o.[OrderDate] as [date],os.[Name] as [status], 
+                  @"SELECT o.[Id] as ordernumber,
+                  o.[OrderDate] as [date],os.[Name] as [status],
                   SUM(oi.units*oi.unitprice) as total
                   FROM [ordering].[Orders] o
-                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid 
+                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid
                   LEFT JOIN[ordering].[orderstatus] os on o.OrderStatusId = os.Id
                   GROUP BY o.[Id], o.[OrderDate], os.[Name]
                   ORDER BY o.[Id]");
         }
-    } 
+    }
 }
 ```
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: cf7b7cfa-1c4b-4d8c-be70-4f9ed15a788b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca33436d98edf5844a5ca27c9ac89648f10ec0c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 97f103844c38ebd3dbff058bfe96ab953cdba960
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909984"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131467"
 ---
 # <a name="icordebugmanagedcallback2-interface"></a>ICorDebugManagedCallback2 インターフェイス
-デバッガーの例外処理およびマネージド デバッグ アシスタント (MDA: Managed Debugging Assistants) をサポートするメソッドを提供します。 `ICorDebugManagedCallback2`は[、のように、の](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)論理上の拡張機能です。  
+デバッガーの例外処理およびマネージド デバッグ アシスタント (MDA: Managed Debugging Assistants) をサポートするメソッドを提供します。 `ICorDebugManagedCallback2` は、"の" の論理拡張機能であり、この[コールバック](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)インターフェイスです。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -40,19 +38,19 @@ ms.locfileid: "69909984"
 |[MDANotification メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-mdanotification-method.md)|コード実行でマネージデバッグアシスタント (MDA) メッセージが検出されたことを通知します。|  
   
 ## <a name="remarks"></a>Remarks  
- インターフェイス`ICorDebugManagedCallback2`は、 `ICorDebugManagedCallback`インターフェイスを拡張して、.NET Framework バージョン2.0 で導入された新しいデバッグイベントを処理します。  
+ `ICorDebugManagedCallback2` インターフェイスは、.NET Framework バージョン2.0 で導入された新しいデバッグイベントを処理するために `ICorDebugManagedCallback` インターフェイスを拡張します。  
   
- デバッガーが .NET Framework 2.0 `ICorDebugManagedCallback2`アプリケーションをデバッグしている場合は、を実装する必要があります。 または`ICorDebugManagedCallback` `ICorDebugManagedCallback2`のインスタンスは、コールバックオブジェクトとして[ICorDebug:: setmanagedhandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)に渡されます。  
+ デバッガーが .NET Framework 2.0 アプリケーションをデバッグしている場合は、`ICorDebugManagedCallback2` を実装する必要があります。 `ICorDebugManagedCallback` または `ICorDebugManagedCallback2` のインスタンスは、 [ICorDebug:: SetManagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)にコールバックオブジェクトとして渡されます。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **・**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

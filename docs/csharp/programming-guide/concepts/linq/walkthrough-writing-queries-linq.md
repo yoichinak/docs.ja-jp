@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:C# でのクエリの作成 (LINQ)
+title: 'チュートリアル: C# でのクエリの作成 (LINQ)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924103"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418051"
 ---
-# <a name="walkthrough-writing-queries-in-c-linq"></a>チュートリアル:C# でのクエリの作成 (LINQ)
+# <a name="walkthrough-writing-queries-in-c-linq"></a>チュートリアル: C# でのクエリの作成 (LINQ)
 このチュートリアルでは、LINQ クエリ式の記述に使用される C# 言語機能について説明します。  
   
 ## <a name="create-a-c-project"></a>C# プロジェクトの作成  
@@ -185,4 +185,4 @@ ms.locfileid: "69924103"
 ## <a name="see-also"></a>関連項目
 
 - [統合言語クエリ (LINQ) (C#)](./index.md)
-- [LINQ クエリ式](../../linq-query-expressions/index.md)
+- [LINQ クエリ式](../../../linq/index.md)

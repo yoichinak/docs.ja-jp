@@ -3,12 +3,12 @@ title: 安全で効率的な C# コードを記述する
 description: C# 言語に対する最新の機能強化により、以前はアンセーフ コードに関連付けられていたようなパフォーマンスの検証可能なセーフ コードを記述することができます。
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 73ad7a84d2ad47f0e0242825d250247ffb39928e
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 89a0bcf28c3c398865082e120ca9c16fe2c00651
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832944"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960842"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>安全で効率的な C# コードを記述する
 
@@ -21,9 +21,10 @@ C# の新しい機能により、よりよいパフォーマンスの検証可�
 この記事では、以下のリソース管理手法に焦点を当てます。
 
 - [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) を宣言して型が**変更不可**であること表し、コンパイラが [`in`](language-reference/keywords/in-parameter-modifier.md) パラメーターを使用するときにコピーを保存できるようにします。
+- 型を変更できない場合は、メンバーが状態を変更しないことを示すために、`struct` メンバーに `readonly` を宣言します。
 - 戻り値が <xref:System.IntPtr.Size?displayProperty=nameWithType> より大きい `struct` であり、ストレージの有効期間が値を返すメソッドより長い場合に、[`ref readonly`](language-reference/keywords/ref.md#reference-return-values) を使用して戻します。
 - `readonly struct` のサイズが <xref:System.IntPtr.Size?displayProperty=nameWithType> より大きいときは、パフォーマンスのため、`in` として渡す必要があります。
-- `readonly` 修飾子で宣言されていない `struct` を `in` パラメーターとして渡すと、パフォーマンスに悪い影響があり、動作がわかりにくくなるため、渡さないでください。
+- `readonly` 修飾子で宣言されている場合、またはメソッドが構造体の `readonly` メンバーのみを呼び出す場合を除き、`in` パラメーターとして `struct` は渡さないでください。 このガイダンスに違反すると、パフォーマンスが低下し、動作が不明瞭になる場合があります。
 - バイトのシーケンスとしてメモリを操作するには、[`ref struct`](language-reference/keywords/ref.md#ref-struct-types) または <xref:System.Span%601> や <xref:System.ReadOnlySpan%601> などの `readonly ref struct` を使用します。
 
 これらの手法では、**参照**と**値**に関する 2 つの相反する目標のバランスを取ることが強要されます。 [参照型](programming-guide/types/index.md#reference-types)の変数では、メモリ内の場所への参照が保持されます。 [値の型](programming-guide/types/index.md#value-types)の変数には、値が直接格納されます。 これらの違いにより、メモリ リソースを管理するために重要となる主な違いが強調されます。 **値の型**は、通常、メソッドに渡されるとき、またはメソッドから戻されるときに、コピーされます。 この動作には、値の型のメンバーを呼び出すときの、`this` の値のコピーが含まれます。 コピーのコストは、型のサイズに関係します。 **参照型**は、マネージド ヒープ上に割り当てられます。 新しいオブジェクトごとに新しく割り当てる必要があり、後でそれを回収する必要があります。 どちらの操作にも時間がかかります。 参照型が引数としてメソッドに渡されるとき、またはメソッドから戻されるときは、参照がコピーされます。
@@ -67,6 +68,51 @@ readonly public struct ReadonlyPoint3D
 ```
 
 変更不可の値の型を作成することが設計の意図である場合は常に、この推奨事項に従ってください。 パフォーマンスの向上はすべて付加的なメリットです。 `readonly struct` の機能は、設計の意図を明確に表現することです。
+
+## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>構造体を変更不可にできない場合、読み取り専用メンバーを宣言する
+
+C# 8.0 以降で構造体の型が変更可能な場合、変更を起こさないメンバーを `readonly` に宣言する必要があります。 たとえば、3D ポイントの構造体の変更可能なバリエーションは次のとおりです。
+
+```csharp
+public struct Point3D
+{
+    public Point3D(double x, double y, double z)
+    {
+        this.X = x;
+        this.Y = y;
+        this.Z = z;
+    }
+
+    private double _x;
+    public double X 
+    { 
+        readonly get { return _x;}; 
+        set { _x = value; }
+    }
+    
+    private double _y;
+    public double Y 
+    { 
+        readonly get { return _y;}; 
+        set { _y = value; }
+    }
+
+    private double _z;
+    public double Z 
+    { 
+        readonly get { return _z;}; 
+        set { _z = value; }
+    }
+
+    public readonly double Distance => Math.Sqrt(X * X + Y * Y + Z * Z);
+
+    public readonly override string ToString() => $"{X, Y, Z }";
+}
+```
+
+上の例では、`readonly` 修飾子を適用できる多数の場所を多く示しています (メソッド、プロパティ、およびプロパティ アクセサー)。 自動実装プロパティを使用する場合、コンパイラは読み取り/書き込みプロパティに対し、`get` アクセサーに `readonly` 修飾子を追加します。 コンパイラは、`get` アクセサーのみを持つプロパティに対し、`readonly` 修飾子を、自動実装プロパティの宣言に追加します。
+
+状態が変更不可なメンバーに `readonly` 修飾子を追加すると、2 つの関連する利点があります。 まず、コンパイラによって意図が適用されます。 そのメンバーは構造体の状態を変更することも、`readonly` とマークされていないメンバーにもアクセスできません。 2 つ目には、`readonly` メンバーにアクセスするときに、コンパイラは `in` パラメーターの防御的なコピーを作成しません。 コンパイラは、`readonly` メンバーによって `struct` が変更されないことを保証するため、この最適化を安全に行うことができます。
 
 ## <a name="use-ref-readonly-return-statements-for-large-structures-when-possible"></a>可能であれば大きい構造体には `ref readonly return` ステートメントを使用する
 
@@ -181,7 +227,7 @@ public struct Point3D
 
 コンパイラでは、`readonly struct` のメンバーの呼び出しに対してもっと効率的なコードが生成されます。`this` 参照は、レシーバーのコピーではなく、常に、メンバー メソッドに参照で渡される `in` パラメーターです。 この最適化によって、`in` 引数として `readonly struct` を使用するときのコピーが減ります。
 
-null 許容値の型を `in` 引数として渡してはいけません。 <xref:System.Nullable%601> 型は、読み取り専用の構造体として宣言されていません。 つまり、コンパイラは、パラメータ―宣言上で `in` 修飾子を使用してメソッドに渡される null 許容値型の任意の引数に対して、防御用のコピーを生成する必要があります。
+null 許容値の型を `in` 引数として渡すことはできません。 <xref:System.Nullable%601> 型は、読み取り専用の構造体として宣言されていません。 つまり、コンパイラは、パラメータ―宣言上で `in` 修飾子を使用してメソッドに渡される null 許容値型の任意の引数に対して、防御用のコピーを生成する必要があります。
 
 GitHub の[サンプル リポジトリ](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark)の [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) を使用して、パフォーマンスの違いを示すサンプル プログラムを確認できます。 変更可能な構造体の値渡しと参照渡し、および変更不可の構造体の値渡しと参照渡しが比較されています。 変更不可の構造体で参照渡しを使用したときが、最も高速です。
 

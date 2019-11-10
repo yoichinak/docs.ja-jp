@@ -5,14 +5,12 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cae4ce2e1d5cdef097f4095a7748f09b80d1acdb
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d3966ff15e06baf293ea02dad031bd5849b4a20f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699079"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126039"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 への移行に関する問題
 

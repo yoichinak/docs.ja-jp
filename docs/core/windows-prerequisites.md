@@ -5,12 +5,12 @@ f1_keywords:
 - NETSDK1045
 ms.custom: updateeachvsrelease
 ms.date: 09/20/2019
-ms.openlocfilehash: b1557e6910cb6d0b6d7e2b3ce2aec97d3715fec7
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 6885f6c853efb0dcb2cb64b83f07e12b1dc2e3cf
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591669"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771954"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows における .NET Core の前提条件
 
@@ -51,7 +51,7 @@ ms.locfileid: "71591669"
 > KB2999226 に加え、[KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) もインストールされていることを確認します。 この更新プログラムがインストールされていない場合は、.NET Core アプリケーションを起動するときに、次のようなエラーが表示されます。`The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`
 
 ## <a name="prerequisites-to-develop-net-core-apps-with-visual-studio"></a>Visual Studio で .NET Core アプリを開発するための前提条件
-    
+
 .NET Core SDK を使用して .NET Core アプリケーションを開発するには任意のエディターを使用できますが、Visual Studio 2017 以降のバージョンでは、Windows での .NET Core アプリ用の統合開発環境が提供されています。
 
 <a name="vs-mapping"></a>
@@ -86,7 +86,7 @@ Visual Studio 2019 で .NET Core 3.0 SDK を使用して .NET Core アプリを�
 
 ![".NET Core クロスプラットフォームの開発" ワークロードが選択された状態の Visual Studio 2019 インストールのスクリーンショット](./media/windows-prerequisites/vs-2019-workloads.jpg)
 
-これらのいずれかのワークロードをインストールした後は、Visual Studio 2019 16.3 では .NET Core 3.0 SDK が既定で使用されます。
+これらのいずれかのワークロードをインストールした後は、Visual Studio 2019 バージョン 16.3 では .NET Core 3.0 SDK が既定で使用されます。
 
 既存のプロジェクトで最新の .NET Core ランタイムを使用する場合は、次の手順を使用して、既存の各 .NET Core プロジェクトのターゲットを .NET Core 3.0 に再設定します。
 
@@ -111,7 +111,7 @@ Visual Studio 2017 で .NET Core 2.2 SDK を使用して .NET Core アプリを�
 ![".NET Core クロスプラットフォームの開発" ワークロードが選択された状態の Visual Studio 2017 インストールのスクリーン ショット](./media/windows-prerequisites/vs-2017-workloads.jpg)
 
 **.NET Core クロスプラットフォーム開発**ツールセットをインストールすると、通常、Visual Studio には以前のバージョンの .NET Core SDK がインストールされます。
-たとえば、ワークロードをインストールすると、Visual Studio 2017 15.9 には既定で .NET Core 2.1 SDK が使用されます。
+たとえば、ワークロードをインストールした後、Visual Studio 2017 バージョン 15.9 には既定で .NET Core 2.1 SDK が使用されます。
 
 .NET Core 2.2 SDK を使用するように Visual Studio を更新するには:
 

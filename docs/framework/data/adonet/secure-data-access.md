@@ -2,12 +2,12 @@
 title: 安全なデータ アクセス
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c08f41be67f5d87635021e86ba5a5b33af9304cd
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782775"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735269"
 ---
 # <a name="secure-data-access"></a>安全なデータ アクセス
 セキュリティで保護された ADO.NET コードを作成するには、基になるデータ ストア、つまりデータベースで利用可能なセキュリティ機構を理解しておく必要があります。 さらに、アプリケーションに含まれる他の機能またはコンポーネントのセキュリティへの影響も考慮する必要があります。  
@@ -55,7 +55,7 @@ ms.locfileid: "70782775"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[例外処理の基本事項](../../../standard/exceptions/exception-handling-fundamentals.md)|try/catch/finally 構造化例外処理の基本的な形式について説明します。|  
+|[.NET での例外の処理とスロー](../../../standard/exceptions/index.md)|try/catch/finally 構造化例外処理の基本的な形式について説明します。|  
 |[例外の推奨事項](../../../standard/exceptions/best-practices-for-exceptions.md)|例外処理のベスト プラクティスについて説明します。|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Microsoft Access および Excel データ ソースの保護  

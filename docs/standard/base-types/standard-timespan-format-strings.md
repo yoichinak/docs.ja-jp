@@ -17,14 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc2ca7a94ffb19f62f354bdfc3040490b57e2689
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5284eb52d7b50307e51945fc0b4a9deb8818f2e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968550"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121691"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 書式指定文字列
 <a name="Top"></a> 標準の <xref:System.TimeSpan> 書式指定文字列は、単一の書式指定子を使用して、書式設定操作によって生成される <xref:System.TimeSpan> 値のテキスト表現を定義します。 空白を含む複数の文字で構成される書式指定文字列は、カスタムの <xref:System.TimeSpan> 書式指定文字列として解釈されます。 詳細については、「[カスタム TimeSpan 書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)」をご覧ください。  

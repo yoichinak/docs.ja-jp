@@ -7,18 +7,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 09/22/2019
-ms.openlocfilehash: c10023cf8cee358db41a3b90a9a0a1020c5462eb
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 758c8fd30fbd2e5ce8ace997005b91d6872a06d1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395433"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773893"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 の新機能
 
 この記事では、.NET Core 3.0 の新機能について説明します。 最も大きな強化点の 1 つは、Windows デスクトップ アプリケーションのサポートです (Windows のみ)。 .NET Core 3.0 SDK コンポーネントの Windows デスクトップを使用して、Windows フォームおよび Windows Presentation Foundation (WPF) アプリケーションを移植することができます。 誤解のないように言うと、Windows Desktop コンポーネントは Windows でのみサポートされており、Windows にのみ含まれています。 詳細については、この記事で後述する「[Windows デスクトップ](#windows-desktop)」を参照してください。
 
-.NET Core 3.0 では C# 8.0 のサポートが追加されています。 **C# の拡張機能**では、[Visual Studio 2019 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)、[Visual Studio for Mac 8.3](/visualstudio/mac/install-preview)、または [Visual Studio Code](https://code.visualstudio.com/) を使用することを強くお勧めします。
+.NET Core 3.0 では C# 8.0 のサポートが追加されています。 **C# の拡張機能**では、[Visual Studio 2019 バージョン 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 以降、[Visual Studio for Mac 8.3](/visualstudio/mac/install-preview) 以降、または [Visual Studio Code](https://code.visualstudio.com/) を使用することを強くお勧めします。
 
 [.NET Core 3.0 を今すぐダウンロード](https://aka.ms/netcore3download)して Windows、macOS、または Linux 上で使い始めましょう。
 

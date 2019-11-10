@@ -9,14 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: a0be019e-aaa1-4036-990f-565f114d4b5c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81477010b22edee71098edfc1b8557db08b6038f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8c2fb544cf9fd6642bd0581211e0e4e49633221
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049701"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139762"
 ---
 # <a name="icorprofilercallback7-interface"></a>ICorProfilerCallback7 インターフェイス
 [.NET Framework 4.6.1 以降のバージョンでのみでサポート]  
@@ -29,10 +27,10 @@ ms.locfileid: "62049701"
 |------------|-----------------|  
 |[ModuleInMemorySymbolsUpdated メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md)|メモリ内のモジュールに関連付けられているシンボルのストリームが更新されていることをプロファイラーに通知します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

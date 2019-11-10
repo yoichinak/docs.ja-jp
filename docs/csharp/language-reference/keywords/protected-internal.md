@@ -3,12 +3,12 @@ title: protected internal - C# リファレンス
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: ddfefa2a0bb145aa49a60f06a40725d2706cecb5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6e5a4c6e63c2c05df54df6bed542eab3f43f9272
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661655"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422581"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (C# リファレンス)
 
@@ -73,7 +73,7 @@ class DerivedClass : BaseClass
 - [C# のキーワード](index.md)
 - [アクセス修飾子](access-modifiers.md)
 - [アクセシビリティ レベル](accessibility-levels.md)
-- [修飾子](modifiers.md)
+- [修飾子](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)

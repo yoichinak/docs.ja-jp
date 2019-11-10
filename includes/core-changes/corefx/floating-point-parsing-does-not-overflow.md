@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 192873aa5069aa4f96a18716afb066c80b223e29
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 30580b3fde5b8a99862896bb7d31c6c4024f97e8
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002447"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198480"
 ---
 ### <a name="floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception"></a>浮動小数点の解析操作が失敗したり OverflowException がスローされたりすることがなくなった
 
@@ -16,7 +16,7 @@ ms.locfileid: "72002447"
 
 .NET Core 3.0 以降、範囲外の数値文字列を解析するときに、<xref:System.Double.Parse%2A?displayProperty=nameWithType>、<xref:System.Double.TryParse%2A?displayProperty=nameWithType>、<xref:System.Single.Parse%2A?displayProperty=nameWithType>、および <xref:System.Single.TryParse%2A?displayProperty=nameWithType> の各メソッドが失敗しなくなりました。 代わりに、<xref:System.Double> の解析メソッドが、<xref:System.Double.MaxValue?displayProperty=nameWithType> を超過する値に対して <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> を返し、また <xref:System.Double.MinValue?displayProperty=nameWithType> 未満の値に対して <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> を返すようになりました。 同様に、<xref:System.Single> の解析メソッドが、<xref:System.Single.MaxValue?displayProperty=nameWithType> を超過する値に対して <xref:System.Single.PositiveInfinity?displayProperty=nameWithType> を返し、また <xref:System.Single.MinValue?displayProperty=nameWithType> 未満の値に対して <xref:System.Single.NegativeInfinity?displayProperty=nameWithType> を返すようになりました。
 
-この変更は、IEEE 754:2008 に対する準拠の改善のために行われました。 
+この変更は、IEEE 754:2008 に対する準拠の改善のために行われました。
 
 #### <a name="version-introduced"></a>導入されたバージョン
 

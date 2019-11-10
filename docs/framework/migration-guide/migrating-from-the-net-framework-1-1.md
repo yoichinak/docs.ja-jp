@@ -5,14 +5,12 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b15318ef38c407110c8d48d3e81977aa1b20df4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f74b75827770524299f9a25a5854503186139cb4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779477"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126291"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1 からの移行
 

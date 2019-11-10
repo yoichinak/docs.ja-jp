@@ -2,13 +2,14 @@
 title: インデックスと範囲を使用してデータの範囲を調べる
 description: この高度なチュートリアルでは、インデックスと範囲を使用してデータを調べ、シーケンシャル データ セットのスライスを調べる方法について説明します。
 ms.date: 09/20/2019
+ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699936"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039667"
 ---
 # <a name="indices-and-ranges"></a>インデックスと範囲
 

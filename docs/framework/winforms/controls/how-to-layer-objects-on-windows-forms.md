@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム上のオブジェクトをレイヤー化する'
+title: '方法 : Windows フォーム上のオブジェクトをレイヤー化する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2e4c6a3236b3a2a2afaad73fee21c3cf59b992b8
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 5b8f6c00e70df94ae3a82c2c195fa781f0840a53
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987561"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458354"
 ---
-# <a name="how-to-layer-objects-on-windows-forms"></a>方法: Windows フォーム上のレイヤーオブジェクト
+# <a name="how-to-layer-objects-on-windows-forms"></a>方法: Windows フォーム上のオブジェクトをレイヤー化する
 
 複雑なユーザーインターフェイスを作成する場合や、マルチドキュメントインターフェイス (MDI) フォームを使用する場合は、多くの場合、コントロールと子フォームの両方をレイヤー化することで、より複雑なユーザーインターフェイス (UI) を作成できます。 グループのコンテキスト内でコントロールとウィンドウを移動して追跡するには、 *z オーダー*を操作します。 Z オーダーは、フォームの z 軸 (深度) に沿ってフォーム上のコントロールを視覚的に重ねたものです。 Z オーダーの最上部にあるウィンドウは、他のすべてのウィンドウと重なっています。 他のすべてのウィンドウは、z オーダーの下部にあるウィンドウと重なっています。
 
@@ -34,9 +34,9 @@ ms.locfileid: "69987561"
 
 ## <a name="to-layer-controls-programmatically"></a>プログラムによってコントロールをレイヤー化するには
 
-コントロールの z <xref:System.Windows.Forms.Control.SendToBack%2A>オーダーを操作するには、メソッドとメソッドを使用します。<xref:System.Windows.Forms.Control.BringToFront%2A>
+<xref:System.Windows.Forms.Control.BringToFront%2A> および <xref:System.Windows.Forms.Control.SendToBack%2A> メソッドを使用して、コントロールの z オーダーを操作します。
 
-たとえば、 <xref:System.Windows.Forms.TextBox> `txtFirstName`コントロールが別のコントロールの下にあり、そのコントロールを上に表示する場合は、次のコードを使用します。
+たとえば、<xref:System.Windows.Forms.TextBox> コントロール、`txtFirstName`が別のコントロールの下にあり、そのコントロールを上に表示する場合は、次のコードを使用します。
 
 ```vb
 txtFirstName.BringToFront()
@@ -51,7 +51,7 @@ txtFirstName->BringToFront();
 ```
 
 > [!NOTE]
-> Windows フォームは*コントロールの含有*をサポートします。 コントロールのコンテインメントでは、 <xref:System.Windows.Forms.RadioButton> <xref:System.Windows.Forms.GroupBox>コントロール内のコントロールの数など、コントロールを含むコントロール内に多数のコントロールを配置する必要があります。 次に、それを含んでいるコントロール内のコントロールをレイヤー化できます。 グループボックスを移動すると、コントロールがその中に含まれているため、コントロールも移動します。
+> Windows フォームは*コントロールの含有*をサポートします。 コントロールの含有では、<xref:System.Windows.Forms.GroupBox> コントロール内の <xref:System.Windows.Forms.RadioButton> コントロールの数など、多数のコントロールを含んでいるコントロール内に配置する必要があります。 次に、それを含んでいるコントロール内のコントロールをレイヤー化できます。 グループボックスを移動すると、コントロールがその中に含まれているため、コントロールも移動します。
 
 ## <a name="see-also"></a>関連項目
 

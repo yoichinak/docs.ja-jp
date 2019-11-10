@@ -1,15 +1,14 @@
 ---
 title: 破棄 - C# ガイド
 description: C# の破棄のサポートについて説明します。破棄は、未割り当てで破棄可能な変数です。また、破棄の使用例についても説明します。
-author: rpetrusha
-ms.author: ronpet
+ms.technology: csharp-fundamentals
 ms.date: 07/21/2017
-ms.openlocfilehash: 761fb69d3bc774975caf63b8aa665f8c19c0430a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143606"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100639"
 ---
 # <a name="discards---c-guide"></a>破棄 - C# ガイド
 

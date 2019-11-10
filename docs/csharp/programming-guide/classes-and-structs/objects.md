@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 3319cfa6b98e3f4b9b8afa070c4784c03d2750ef
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1b3ceb2671a4c21f1df89599c9b8c0bc107a7435
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596389"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419264"
 ---
 # <a name="objects-c-programming-guide"></a>オブジェクト (C# プログラミング ガイド)
 クラスまたは構造体の定義は、型の動作を指定する設計図に似ています。 オブジェクトは基本的に、設計図に従って割り当てられて構成されたメモリのブロックです。 プログラムでは、同じクラスのオブジェクトを多数作成できます。 オブジェクトはインスタンスとも呼ばれ、名前付きの変数または配列やコレクションに格納できます。 クライアント コードとは、これらの変数を使ってメソッドを呼び出し、オブジェクトのパブリック プロパティにアクセスするコードです。 C# などのオブジェクト指向言語では、一般的なプログラムは動的に対話する複数のオブジェクトで構成されています。  
@@ -64,7 +64,7 @@ ms.locfileid: "69596389"
 ## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
-- [object](../../language-reference/keywords/object.md)
+- [object](../../language-reference/builtin-types/reference-types.md)
 - [継承](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
 - [struct](../../language-reference/keywords/struct.md)

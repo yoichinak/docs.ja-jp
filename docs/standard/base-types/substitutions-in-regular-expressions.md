@@ -13,14 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4b079809fa76097cd575d96c70d17d1c6c85e3a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5934a342f653f294c07e00d38d51dae6b159dab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968539"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122477"
 ---
 # <a name="substitutions-in-regular-expressions"></a>正規表現での置換
 <a name="Top"></a> 置換は、置換パターン内でのみ認識される言語要素です。 置換では、正規表現パターンを使用して、入力文字列内の一致するテキストを置換するテキストの全体または一部を定義します。 置換パターンは、1 個以上の置換と、リテラル文字で構成されます。 置換パターンは、 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> パラメーターを持つ `replacement` メソッドのオーバーロードおよび <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドに対して用意されています。 メソッドは、一致するパターンを、 `replacement` パラメーターで定義されているパターンで置換します。  

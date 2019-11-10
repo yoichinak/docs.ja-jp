@@ -2,12 +2,12 @@
 title: MSMQ 4.0 での有害メッセージ処理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: f20f7cec29574746edc84d45171cfa63a5682337
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6f3ec0f097f1b18ca45333b7dc66431277816c60
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039087"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424321"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 での有害メッセージ処理
 このサンプルでは、サービスで有害メッセージの処理を実行する方法を示します。 このサンプルは、トランザクション処理された[MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)のサンプルに基づいています。 このサンプルでは、`netMsmqBinding` を使用しています。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。
@@ -27,13 +27,13 @@ ms.locfileid: "70039087"
 
  メッセージが有害としてマークされると、メッセージは <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 列挙体の設定に従って処理されます。 次にもう一度、使用可能な値を示します。
 
-- Fault (既定値):リスナーとサービスホストに障害が発生した場合。
+- Fault (既定値): リスナーとサービス ホストをエラーにします。
 
-- 」メッセージを削除します。
+- Drop: メッセージを破棄します。
 
-- 合わせメッセージを有害メッセージサブキューに移動する場合は。 この値は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
+- Move: メッセージを有害メッセージ サブキューに移動します。 この値は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
 
-- 拒否メッセージを拒否するには、メッセージを送信側の配信不能キューに返信します。 この値は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
+- Reject: メッセージを送信者の配信不能キューに戻すことにより、メッセージを拒否します。 この値は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
 
  このサンプルは有害なメッセージに対する `Move` 処置の使用法を示します。 `Move` を指定すると、メッセージが有害メッセージ サブキューに移動されます。
 
@@ -233,7 +233,7 @@ public class OrderProcessorService : IOrderProcessor
 
  サービスが実行を開始し、注文を処理し、処理の終了をランダムに開始します。 メッセージに注文処理の完了が示されていた場合、クライアントをもう一度実行して、サービスが実際にメッセージを終了したことを確認するまで別のメッセージを送信できます。 構成されている有害設定に基づき、メッセージは 1 度処理を試行されてから、最後の有害キューに移されます。
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -258,7 +258,7 @@ Aborting transaction, cannot process purchase order: 23e0b991-fbf9-4438-a0e2-20a
 
  有害メッセージ サービスを起動して、有害メッセージを有害キューから読み込みます。 この例では、有害メッセージ サービスはメッセージを読み込んで処理します。 終了され有害指定された発注書が有害メッセージ サービスによって読み込まれるのを確認できます。
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -285,13 +285,13 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
     4. **[トランザクション]** ボックスをオンにします。
 
-    5. 新しい`ServiceModelSamplesTransacted`キューの名前として「」と入力します。
+    5. 新しいキューの名前として `ServiceModelSamplesTransacted` を入力します。
 
 3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
 
 4. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、キュー名を変更し、localhost ではなく実際のホスト名を反映させ、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。
 
- `netMsmqBinding` バインディング トランスポートを使用する場合の既定では、セキュリティが有効です。 トランスポート セキュリティの種類は、`MsmqAuthenticationMode` と `MsmqProtectionLevel` の 2 つのプロパティで決まります。 既定では、認証モードは `Windows` に、保護レベルは `Sign` に、それぞれ設定されます。 MSMQ の認証および署名の機能を利用するには、ドメインに属している必要があります。 ドメインの一部ではないコンピューターでこのサンプルを実行すると、次のエラーが表示されます。"ユーザーの内部メッセージキュー証明書が存在しません"。
+ `netMsmqBinding` バインディング トランスポートを使用する場合の既定では、セキュリティが有効です。 トランスポート セキュリティの種類は、`MsmqAuthenticationMode` と `MsmqProtectionLevel` の 2 つのプロパティで決まります。 既定では、認証モードは `Windows` に、保護レベルは `Sign` に、それぞれ設定されます。 MSMQ の認証および署名の機能を利用するには、ドメインに属している必要があります。 ドメインに属していないコンピューターでこのサンプルを実行すると、"User's internal message queuing certificate does not exist" というエラーが表示されます。
 
 #### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>ワークグループに参加しているコンピューターでこのサンプルを実行するには
 
@@ -314,13 +314,13 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     > `security mode` を `None` に設定することは、`MsmqAuthenticationMode`、`MsmqProtectionLevel`、および `Message` のセキュリティを `None` に設定することに相当します。  
   
-3. Metadata Exchange を機能させるため、URL を HTTP バインディングに登録します。 これを行うには、サービスが権限の高いコマンド ウィンドウで実行されている必要があります。 それ以外の場合は、などの例外`Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`が発生します。  
+3. Metadata Exchange を機能させるため、URL を HTTP バインディングに登録します。 これを行うには、サービスが権限の高いコマンド ウィンドウで実行されている必要があります。 それ以外の場合は、`Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`のような例外が発生します。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`

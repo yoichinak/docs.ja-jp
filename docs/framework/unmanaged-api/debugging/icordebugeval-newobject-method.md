@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ce3025e8-defa-4c5e-8298-f49d71fa5736
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 362c01e0b08145919793cec011a856f0090e5c47
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68a7e911c2bd1798ea8f34f6a6e24299fe68775d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752994"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137618"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject メソッド
-オブジェクトの新しいインスタンスの割り当てし、指定したコンス トラクター メソッドを呼び出します。  
+新しいオブジェクトインスタンスを割り当て、指定したコンストラクターメソッドを呼び出します。  
   
- このメソッドは、.NET Framework version 2.0 で廃止されています。 使用[icordebugeval 2::newparameterizedobject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)代わりにします。  
+ このメソッドは .NET Framework バージョン2.0 では廃止されています。 代わりに[ICorDebugEval2:: NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)を使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,22 +39,22 @@ HRESULT NewObject (
   
 ## <a name="parameters"></a>パラメーター  
  `pConstructor`  
- [in]呼び出されるコンス トラクターです。  
+ から呼び出されるコンストラクター。  
   
  `nArgs`  
  [in] `ppArgs` 配列のサイズ。  
   
  `ppArgs`  
- [in]ICorDebugValue のオブジェクトのコンス トラクターに渡される引数を表す配列。  
+ からICorDebugValue オブジェクトの配列。各オブジェクトは、コンストラクターに渡される引数を表します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** 1.1, 1.0  
+ **.NET Framework のバージョン:** 1.1、1.0  
   
 ## <a name="see-also"></a>関連項目
 

@@ -2,12 +2,12 @@
 title: 'ドメイン イベント: 設計と実装'
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 集約間の通信を確立するための重要な概念であるドメイン イベントの詳細を表示する。
 ms.date: 10/08/2018
-ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031842"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093954"
 ---
 # <a name="domain-events-design-and-implementation"></a>ドメイン イベント: 設計と実装
 
@@ -145,9 +145,9 @@ eShopOnContainers では遅延アプローチを使っています。 最初に�
 ```csharp
 public abstract class Entity
 {
-     //... 
+     //...
      private List<INotification> _domainEvents;
-     public List<INotification> DomainEvents => _domainEvents; 
+     public List<INotification> DomainEvents => _domainEvents;
 
      public void AddDomainEvent(INotification eventItem)
      {
@@ -194,7 +194,7 @@ public class OrderingContext : DbContext, IUnitOfWork
         // handlers that are using the same DbContext with Scope lifetime
         // B) Right AFTER committing data (EF SaveChanges) into the DB. This makes
         // multiple transactions. You will need to handle eventual consistency and
-        // compensatory actions in case of failures.        
+        // compensatory actions in case of failures.
         await _mediator.DispatchDomainEventsAsync(this);
 
         // After this line runs, all the changes (from the Command Handler and Domain
@@ -208,7 +208,7 @@ public class OrderingContext : DbContext, IUnitOfWork
 
 全体な結果として、ドメイン イベントの生成 (単にメモリ内のリストへの追加) がイベント ハンドラーへのディスパッチから切り離されます。 さらに、使っているディスパッチャーの種類によっては、同期または非同期にイベントをディスパッチできます。
 
-ここでは、トランザクション境界が重要な意味を持つことに注意してください。 作業単位とトランザクションが複数の集約にまたがることができる場合 (EF Core とリレーショナル データベースを使っている場合など)、これはうまくいきます。 しかしながら、トランザクションが複数の集約にまたがることができない場合は (Azure CosmosDB のような NoSQL を使っている場合)、整合性を実現するための追加手順を実装する必要があります。 これは、永続性の無視がユニバーサルではないもう 1 つの理由であり、使っているストレージ システムに依存します。 
+ここでは、トランザクション境界が重要な意味を持つことに注意してください。 作業単位とトランザクションが複数の集約にまたがることができる場合 (EF Core とリレーショナル データベースを使っている場合など)、これはうまくいきます。 しかしながら、トランザクションが複数の集約にまたがることができない場合は (Azure CosmosDB のような NoSQL を使っている場合)、整合性を実現するための追加手順を実装する必要があります。 これは、永続性の無視がユニバーサルではないもう 1 つの理由であり、使っているストレージ システムに依存します。
 
 ### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>複数の集約にまたがる 1 つのトランザクションと集約の間の最終的な整合性
 
@@ -303,7 +303,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
     public async Task Handle(OrderStartedDomainEvent orderStartedEvent)
     {
-        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;        
+        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;
         var userGuid = _identityService.GetUserIdentity();
         var buyer = await _buyerRepository.FindAsync(userGuid);
         bool buyerOriginallyExisted = (buyer == null) ? false : true;
@@ -321,7 +321,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
                                        orderStartedEvent.CardExpiration,
                                        orderStartedEvent.Order.Id);
 
-        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer) 
+        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer)
                                                                       : _buyerRepository.Add(buyer);
 
         await _buyerRepository.UnitOfWork

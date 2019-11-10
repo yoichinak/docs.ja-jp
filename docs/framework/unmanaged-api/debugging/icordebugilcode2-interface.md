@@ -10,19 +10,17 @@ api_type:
 ms.assetid: f9dc2afd-df8a-464d-bdbf-5af0a1d4bf85
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a27dbd8b5013937bb97f37113687405c988c1fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c1a5cde5a39a334d655d865c5e44a5eb0c1766a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645221"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131044"
 ---
 # <a name="icordebugilcode2-interface"></a>ICorDebugILCode2 インターフェイス
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
   
- 論理的に拡張し、 [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)に元のメソッド IL オフセットを関数のローカル変数シグネチャのトークンを返すし、プロファイラーのインストルメント化された中間言語 (IL) をマップする方法を提供するインターフェイスオフセットします。  
+ では、この[コード](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)インターフェイスを論理的に拡張して、関数のローカル変数シグネチャのトークンを返すメソッドを提供し、プロファイラーのインストルメント化された中間言語 (il) オフセットを元のメソッドの il オフセットにマップします。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -31,8 +29,8 @@ ms.locfileid: "61645221"
 |[GetInstrumentedILMap メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)|プロファイラーのインストルメント化された IL オフセットから、このインスタンスに対する元のメソッドの IL オフセットへのマップを返します。|  
 |[GetLocalVarSigToken メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getlocalvarsigtoken-method.md)|このインスタンスで示される関数について、ローカル変数のシグネチャのメタデータ トークンを取得します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

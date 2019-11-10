@@ -9,36 +9,36 @@ helpviewer_keywords:
 - templates [WPF], Button
 - ControlTemplate [WPF], Button
 ms.assetid: e223c759-f8c4-4717-acfb-b1e40bdf5f3b
-ms.openlocfilehash: ec64c7c2051b12cba01135054a90e54864b7386a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64764d43191d30c191c5d6519982b16cfc86d26e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912484"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460957"
 ---
 # <a name="button-styles-and-templates"></a>ボタンのスタイルとテンプレート
-このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.Button>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、<xref:System.Windows.Controls.Button> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
   
-## <a name="button-parts"></a>ボタンのパーツ  
- <xref:System.Windows.Controls.Button>コントロールには、名前付きパーツはありません。  
+## <a name="button-parts"></a>ボタン部分  
+ <xref:System.Windows.Controls.Button> コントロールには、名前付きの部分がありません。  
   
 ## <a name="button-states"></a>ボタンの状態  
- 次の表のビジュアルの状態、<xref:System.Windows.Controls.Button>コントロール。  
+ 次の表は、<xref:System.Windows.Controls.Button> コントロールの表示状態を示しています。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
-|MouseOver|CommonStates|マウス ポインターがコントロール上に配置されています。|  
+|MouseOver|CommonStates|マウス ポインターがコントロール上に配置されます。|  
 |押されている|CommonStates|コントロールが押されています。|  
-|無効|CommonStates|コントロールが無効になっています。|  
+|Disabled|CommonStates|コントロールが無効になっています。|  
 |フォーカスされている|FocusStates|コントロールにフォーカスがあります。|  
 |フォーカスされていない|FocusStates|コントロールにフォーカスがありません。|  
-|有効|ValidationStates|コントロールを使用して、<xref:System.Windows.Controls.Validation>クラスおよび<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`false`します。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`コントロールにフォーカスがあるとします。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`コントロールにフォーカスがないとします。|  
+|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティが `true`、コントロールにフォーカスがあります。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティが `true`、コントロールにフォーカスがありません。|  
   
-## <a name="button-controltemplate-example"></a>ボタン ControlTemplate の例  
- 次の例は、定義する方法を示します、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.Button>コントロール。  
+## <a name="button-controltemplate-example"></a>Button ControlTemplate の例  
+ 次の例は、<xref:System.Windows.Controls.Button> コントロールの <xref:System.Windows.Controls.ControlTemplate> を定義する方法を示しています。  
   
  [!code-xaml[ControlTemplateExamples#Button](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/button.xaml#button)]  
   
@@ -54,5 +54,5 @@ ms.locfileid: "61912484"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
-- [スタイルとテンプレート](styling-and-templating.md)
+- [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)

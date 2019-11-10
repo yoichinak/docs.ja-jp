@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Managed Extensibility Framework, overview
 - MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6fc66837dc31dc1697bcb4ad6dddfb57bfb99bd4
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: da73200513d451ee391fb6dd9c214a5b8ca771c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434097"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126350"
 ---
 # <a name="managed-extensibility-framework-mef"></a>MEF (Managed Extensibility Framework)
 

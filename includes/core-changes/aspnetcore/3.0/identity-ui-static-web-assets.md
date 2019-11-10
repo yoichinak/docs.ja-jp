@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8d7942ef6c36c01a9ae7ae2a9739f26dfcda5813
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394195"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041660"
 ---
 ### <a name="identity-ui-uses-static-web-assets-feature"></a>ID: UI で静的な Web 資産機能を使用
 
@@ -23,11 +23,11 @@ ID UI で静的な Web 資産機能が導入された結果として、次のよ
 
 #### <a name="old-behavior"></a>以前の動作
 
-ID UI の既定の UI フレームワークは **Bootstrap 3** でした。 UI フレームワークは、`Startup.ConfigureServices` で `AddIdentityUI` メソッド呼び出しのパラメーターを使用して構成できました。
+ID UI の既定の UI フレームワークは **Bootstrap 3** でした。 UI フレームワークは、`Startup.ConfigureServices` で `AddDefaultUI` メソッド呼び出しのパラメーターを使用して構成できました。
 
 #### <a name="new-behavior"></a>新しい動作
 
-ID UI の既定の UI フレームワークは **Bootstrap 4** です。 UI フレームワークは、`AddIdentityUI` メソッド呼び出し内ではなく、プロジェクト ファイル内で構成する必要があります。
+ID UI の既定の UI フレームワークは **Bootstrap 4** です。 UI フレームワークは、`AddDefaultUI` メソッド呼び出し内ではなく、プロジェクト ファイル内で構成する必要があります。
 
 #### <a name="reason-for-change"></a>変更理由
 
@@ -47,12 +47,12 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>影響を受ける API
 
-<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType>
+<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)?displayProperty=nameWithType>
 
 <!-- 
 
 #### Affected APIs
 
-`M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)`
+`M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)`
 
 -->

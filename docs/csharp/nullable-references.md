@@ -1,13 +1,14 @@
 ---
 title: null 許容参照型
 description: この記事では、C# 8.0 で追加された null 許容参照型の概要を説明します。 新規および既存のプロジェクトにおいて、その機能によって null 参照例外に対する安全性がどのように提供されるかを学習します。
+ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: 2c2148b3ae50ce6c00e523390ea02686d9106b8b
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e20ea6efa389ba1aa0d8432a408c0b2a06a61c30
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846759"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039781"
 ---
 # <a name="nullable-reference-types"></a>null 許容参照型
 
@@ -66,6 +67,12 @@ null 許容コンテキストでは、コンパイラによる参照型変数の
   - 参照型の変数 (文字列など) は、null 非許容です。 null 値の許容のすべての警告は無効です。
 - `disable`:null 許容注釈コンテキストは**無効**です。 null 許容警告コンテキストは**無効**です。
   - 参照型の変数は無関係であり、以前のバージョンの C# と同じです。 null 値の許容のすべての警告は無効です。
+
+**例**:
+
+```xml
+<Nullable>enable</Nullable>
+```
 
 ディレクティブを使用して、プロジェクト内の任意の場所にこれらと同じコンテキストを設定することもできます。
 

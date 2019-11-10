@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ee8d058-ffc8-4967-9133-a5adfef4e518
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3062e636921ea959716a500dae689fbe07915006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40e64bdb35cff4e6ad6132c0806cfddd2767443c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760002"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122675"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress メソッド
-内部フレームのスタック アドレスを返します。  
+内部フレームのスタックアドレスを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,7 +33,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
   
 ## <a name="parameters"></a>パラメーター  
  `pAddress`  
- [out]ポインター、`CORDB_ADDRESS`内部フレーム。  
+ 入出力内部フレームの `CORDB_ADDRESS` へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -43,14 +41,14 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|内部フレームのアドレスが正常に返されました。|  
-|E_FAIL|内部フレームのアドレスは返されませんでした。|  
-|E_INVALIDARG|`pAddress` は `null` です。|  
+|E_FAIL|内部フレームのアドレスを返すことができませんでした。|  
+|E_INVALIDARG|`pAddress` が `null` です。|  
   
 ## <a name="remarks"></a>Remarks  
- 戻り値`pAddress`スタック上の他のフレームの基準とした内部フレームの場所を特定するために使用できます。 IA 64 ベースのコンピューター上でも内部フレームはのみ、スタック上に存在して、バッキング ストアへの対応するポインターはありません。  
+ `pAddress` で返される値を使用して、スタック上の他のフレームに対して相対的な内部フレームの位置を判断できます。 IA-64 ベースのコンピューターでも、内部フレームはスタックのみに存在し、バッキングストアへの対応するポインターは存在しません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

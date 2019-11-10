@@ -12,14 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6be45a3d03d8cff580653260081a20d518448237
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662729"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423037"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>アンマネージ リソースのクリーンアップ
 
@@ -27,7 +25,7 @@ ms.locfileid: "67662729"
 
 型でアンマネージ リソースを使用している場合は、次のようにする必要があります。
 
-- [dispose パターン](../../../docs/standard/design-guidelines/dispose-pattern.md)を実装します。 これは、アンマネージ リソースの確定的解放を有効にするために <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> の実装を提供する必要があります。 型のコンシューマーはオブジェクト (および使用するリソース) が不要になると <xref:System.IDisposable.Dispose%2A> を呼び出します。 <xref:System.IDisposable.Dispose%2A> メソッドはアンマネージ リソースを直ちに解放します。
+- [dispose パターン](implementing-dispose.md)を実装します。 これは、アンマネージ リソースの確定的解放を有効にするために <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> の実装を提供する必要があります。 型のコンシューマーはオブジェクト (および使用するリソース) が不要になると <xref:System.IDisposable.Dispose%2A> を呼び出します。 <xref:System.IDisposable.Dispose%2A> メソッドはアンマネージ リソースを直ちに解放します。
 
 - 型のコンシューマーが <xref:System.IDisposable.Dispose%2A> の呼び出しを忘れた場合にアンマネージ リソースを解放します。 これには、2 つの方法があります。
 
@@ -41,11 +39,11 @@ ms.locfileid: "67662729"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[Dispose メソッドの実装](../../../docs/standard/garbage-collection/implementing-dispose.md) アンマネージ リソースを解放する [Dispose パターン](../../../docs/standard/design-guidelines/dispose-pattern.md)を実装する方法について説明します。
+[Dispose メソッドの実装](../../../docs/standard/garbage-collection/implementing-dispose.md) アンマネージ リソースを解放する [Dispose パターン](implementing-dispose.md)を実装する方法について説明します。
 
 [IDisposable を実装するオブジェクトの使用](../../../docs/standard/garbage-collection/using-objects.md) 型のコンシューマーが <xref:System.IDisposable.Dispose%2A> の実装を確実に呼び出す方法について説明します。 このためには、C# の `using` ステートメントまたは Visual Basic の `Using` ステートメントを使用することをお勧めします。
 
-## <a name="reference"></a>関連項目
+## <a name="reference"></a>辞書／辞典／その他
 
 <xref:System.IDisposable?displayProperty=nameWithType>\
 アンマネージ リソースの解放のための <xref:System.IDisposable.Dispose%2A> メソッドを定義します。

@@ -9,22 +9,20 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b2774c32b4ee3e67772f84d599ecc5dbeb6598b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4897462e20b193496c44d26923d0d0e2a13f7dd6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252593"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116810"
 ---
-# <a name="gcconcurrent-element"></a>\<gcConcurrent> 要素
+# <a name="gcconcurrent-element"></a>\<gcConcurrent > 要素
 
 共通言語ランタイムがガベージ コレクションを別のスレッドで実行するかどうかを指定します。
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent>**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent >**  
 
 ## <a name="syntax"></a>構文
 
@@ -45,7 +43,7 @@ ms.locfileid: "70252593"
 
 ## <a name="enabled-attribute"></a>enabled 属性
 
-|値|説明|
+|[値]|説明|
 |-----------|-----------------|
 |`false`|ガベージコレクションを同時に実行しません。|
 |`true`|ガベージ コレクションを並列に実行します。 既定値です。|
@@ -63,7 +61,7 @@ ms.locfileid: "70252593"
 
 ## <a name="remarks"></a>Remarks
 
-.NET Framework 4 より前の場合、ワークステーション ガベージ コレクションは、同時実行ガベージ コレクションをサポートしており、別個のスレッドでバックグラウンドでガベージ コレクションを実行していました。 .NET Framework 4 では同時実行ガベージ コレクションはバックグラウンド GC に置き換えられており、これも別個のスレッドでバックグラウンドでガベージ コレクションを実行していました。 .NET Framework 4.5 以降では、バックグラウンド コレクションをサーバー ガベージ コレクションで使用できるようになりました。 要素`<gcConcurrent>`は、ランタイムが同時実行ガベージコレクションとバックグラウンドガベージコレクションのどちらを実行するか、またはフォアグラウンドでガベージコレクションを実行するかどうかを制御します。
+.NET Framework 4 より前の場合、ワークステーション ガベージ コレクションは、同時実行ガベージ コレクションをサポートしており、別個のスレッドでバックグラウンドでガベージ コレクションを実行していました。 .NET Framework 4 では同時実行ガベージ コレクションはバックグラウンド GC に置き換えられており、これも別個のスレッドでバックグラウンドでガベージ コレクションを実行していました。 .NET Framework 4.5 以降では、バックグラウンド コレクションをサーバー ガベージ コレクションで使用できるようになりました。 `<gcConcurrent>` 要素は、ランタイムが同時実行ガベージコレクションとバックグラウンドガベージコレクションのどちらを実行するか、またはフォアグラウンドでガベージコレクションを実行するかどうかを制御します。
 
 ### <a name="to-disable-background-garbage-collection"></a>バックグラウンドガベージコレクションを無効にするには
 
@@ -80,7 +78,7 @@ ms.locfileid: "70252593"
 </configuration>
 ```
 
- コンピューターの構成ファイルに設定がある場合は、すべての.NETFrameworkアプリケーションの既定値が定義されます。`<gcConcurrentSetting>` マシン構成ファイルの設定は、アプリケーション構成ファイルの設定をオーバーライドします。
+ マシン構成ファイルに `<gcConcurrentSetting>` 設定がある場合は、すべての .NET Framework アプリケーションの既定値が定義されます。 マシン構成ファイルの設定は、アプリケーション構成ファイルの設定をオーバーライドします。
 
  同時実行ガベージコレクションとバックグラウンドガベージコレクションの詳細については、「[ガベージコレクションの基礎](../../../../standard/garbage-collection/fundamentals.md)」記事の「[同時実行ガベージコレクション](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection)」セクションを参照してください。
 

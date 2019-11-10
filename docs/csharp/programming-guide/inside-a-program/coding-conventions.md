@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 27001d1697def083580ecdc742b4b8db924545aa
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 42e1814af38fa442255f6da79fb4862ce3d0f361
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589419"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423202"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# のコーディング規則 (C# プログラミング ガイド)
  コーディング規則には、次の目的があります。  
@@ -27,7 +27,7 @@ ms.locfileid: "69589419"
 
  このトピックのガイドラインは、サンプルおよびドキュメントを開発するために Microsoft によって使用されます。  
   
-## <a name="naming-conventions"></a>名前付け規則  
+## <a name="naming-conventions"></a>命名規則  
   
 - [using ディレクティブ](../../language-reference/keywords/using-directive.md)が含まれていない簡単な例では、名前空間の修飾を使用します。 プロジェクトに名前空間が既定でインポートされていることがわかっている場合は、その名前空間の各名前を完全修飾する必要はありません。 次の例に示すように、修飾名が長すぎて 1 行に収まらない場合は、ドット (.) の後で改行できます。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69589419"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- [dynamic](../../language-reference/keywords/dynamic.md) の代わりに `var` を使用しないようにしてください。  
+- [dynamic](../../language-reference/builtin-types/reference-types.md) の代わりに `var` を使用しないようにしてください。  
   
 - [for](../../language-reference/keywords/for.md) ループおよび [foreach](../../language-reference/keywords/foreach-in.md) ループでループ変数の型を決定するときは、暗黙の型指定を使用します。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "69589419"
   
      [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
-### <a name="new-operator"></a>[New Operator]  
+### <a name="new-operator"></a>new 演算子  
   
 - 次の宣言に示すように、暗黙の型指定を使用してオブジェクトのインスタンス化を簡潔な形式にします。  
   

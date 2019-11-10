@@ -2,14 +2,12 @@
 title: ICorDebugLoadedModule::GetSize メソッド
 ms.date: 03/30/2017
 ms.assetid: aaa0e5c0-be9d-4fe1-8418-5295b9b184d6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3067cdee1d3a5df0ad5594bce581139431fd1846
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f2f8a1721847b8f7b845c42aa3c91e032c2d474
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936872"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122645"
 ---
 # <a name="icordebugloadedmodulegetsize-method"></a>ICorDebugLoadedModule::GetSize メソッド
 読み込まれたモジュールのサイズ (バイト単位) を取得します。  
@@ -31,12 +29,12 @@ HRESULT GetSize(
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

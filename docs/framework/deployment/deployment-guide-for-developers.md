@@ -6,21 +6,19 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbb196b5beb2fc04ff85f2924356699fd83f3ea6
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3e87ba8c9442c4bba24e4e569cd20bdbdc76f6ec
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833670"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457996"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 配置ガイド (開発者向け)
 このトピックでは、.NET Framework 4.5 から [!INCLUDE[net_current](../../../includes/net-current-version.md)] までの任意のバージョンの .NET Framework を、それぞれのアプリと共にインストールする開発者向けの情報を提供します。
 
 ダウンロード リンクについては、「[頒布可能パッケージ](#redistributable-packages)」を参照してください。 再頒布可能パッケージと言語パックは、Microsoft ダウンロード センターの次のページからダウンロードすることもできます。
 
-- すべてのオペレーティング システムの .NET Framework 4.8 ([Web インストーラー](http://go.microsoft.com/fwlink/?LinkId=2085155)または[オフライン インストーラー](https://go.microsoft.com/fwlink/?linkid=2088631))
+- すべてのオペレーティング システムの .NET Framework 4.8 ([Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=2085155)または[オフライン インストーラー](https://go.microsoft.com/fwlink/?linkid=2088631))
 
 - すべてのオペレーティング システムの .NET Framework 4.7.2 ([Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=863262) または [オフライン インストーラー](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
@@ -170,7 +168,7 @@ Visual Studio で InstallShield 配置を選択し、.NET Framework の依存関
 
 ### <a name="windows-installer-xml-wix-deployment"></a>Windows インストーラー XML (WiX) 配置
 
-Windows インストーラー XML (WiX) ツールセットは、XML ソース コードから Windows インストール パッケージをビルドします。 WiX は、MSI と MSM セットアップ パッケージのビルド処理に統合できるコマンド ライン環境をサポートします。 WiX を使用すると、 [.NET Framework を必須コンポーネントとして指定](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)するか、 [チェーン元を作成](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) して、.NET Framework の配置操作を完全制御できます。 WiX について詳しくは、「 [Windows インストーラー XML (WiX) ツールセット](http://wixtoolset.org/) 」の Web サイトをご覧ください。
+Windows インストーラー XML (WiX) ツールセットは、XML ソース コードから Windows インストール パッケージをビルドします。 WiX は、MSI と MSM セットアップ パッケージのビルド処理に統合できるコマンド ライン環境をサポートします。 WiX を使用すると、 [.NET Framework を必須コンポーネントとして指定](https://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)するか、 [チェーン元を作成](https://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) して、.NET Framework の配置操作を完全制御できます。 WiX について詳しくは、「 [Windows インストーラー XML (WiX) ツールセット](https://wixtoolset.org/) 」の Web サイトをご覧ください。
 
 <a name="installing_manually"></a>
 

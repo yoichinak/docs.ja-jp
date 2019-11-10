@@ -8,14 +8,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bed67019fdd3bb81585d08349715a895dfe5a681
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
-ms.translationtype: HT
+ms.openlocfilehash: 63fb3d627364810fac5ddb0bfd3adc3c0421c9cc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363958"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126385"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>属性付きプログラミング モデルの概要 (MEF)
 
@@ -201,7 +199,7 @@ public class MyClass
 }
 ```
 
-`dynamic` キーワードから推論されるコントラクト型は、任意のコントラクト型と一致します。 この場合、インポートで **常に** コントラクト名を指定する必要があります (コントラクト名が指定されていないと、そのインポートはどのエクスポートとも一致しないと見なされます)。次のエクスポートは、どちらも前のインポートと一致します。
+`dynamic` キーワードから推論されるコントラクト型は、任意のコントラクト型と一致します。 この場合、インポートで **常に** コントラクト名を指定する必要があります (コントラクト名が指定されていない場合、インポートはエクスポートと一致しないと見なされます)。次のエクスポートはどちらも、前のインポートと一致します。
 
 ```vb
 <Export("TheString", GetType(IMyAddin))>
@@ -343,7 +341,7 @@ public MyClass([Import(typeof(IMySubAddin))]IMyAddin MyAddin)
 
 `Import` 属性は、パートが機能するための要件を指定します。 インポートが満たされないと、パートの合成が失敗し、そのパートを使用できません。
 
-*プロパティを使用すると、インポートを* 省略可能 `AllowDefault` として指定できます。 この場合、インポートに一致するエクスポートがなくても合成が成功し、インポート側のプロパティがそのプロパティ型の既定値に設定されます (オブジェクト プロパティの場合は `null`、ブール型プロパティの場合は `false`、数値プロパティの場合は 0)。次のクラスは省略可能インポートを使用しています。
+*プロパティを使用すると、インポートを* 省略可能 `AllowDefault` として指定できます。 この場合、インポートが使用可能などのエクスポートとも一致しない場合でも、合成は成功します。また、プロパティの型 (オブジェクトプロパティの場合は`null`、ブール値の場合は `false`、数値プロパティの場合は 0) に対して、インポートプロパティが既定値に設定されます。次のクラスは、オプションのインポートを使用します。
 
 ```vb
 Public Class MyClass1
@@ -687,7 +685,7 @@ public class NumFour : NumThree
 }
 ```
 
-`InheritedExport` 属性にメタデータが関連付けられている場合は、そのメタデータも継承されます (詳細については、前の「メタデータとメタデータ ビュー」を参照してください)。継承されたメタデータをサブクラスで変更することはできません。 ただし、同じコントラクト名およびコントラクト型と新しいメタデータを使用して `InheritedExport` 属性を再宣言すると、継承されたメタデータをサブクラスで新しいメタデータに置き換えることができます。 次のクラスはこの基本原則を示しています。 ここでは、 `MegaLogger` を継承する `Logger` パートに `InheritedExport` 属性が含まれています。 `MegaLogger` で Status という新しいメタデータが再宣言されているため、 `Logger`のメタデータの Name と Version は継承されません。
+`InheritedExport` 属性にメタデータが関連付けられている場合は、そのメタデータも継承されます (詳細については、前の「メタデータとメタデータビュー」セクションを参照してください)。継承されたメタデータは、サブクラスでは変更できません。 ただし、同じコントラクト名およびコントラクト型と新しいメタデータを使用して `InheritedExport` 属性を再宣言すると、継承されたメタデータをサブクラスで新しいメタデータに置き換えることができます。 次のクラスはこの基本原則を示しています。 ここでは、 `MegaLogger` を継承する `Logger` パートに `InheritedExport` 属性が含まれています。 `MegaLogger` で Status という新しいメタデータが再宣言されているため、 `Logger`のメタデータの Name と Version は継承されません。
 
 ```vb
 <InheritedExport(GetType(IPlugin))>
@@ -747,7 +745,7 @@ public class MegaLogger : Logger        {
 }
 ```
 
-`InheritedExport` 属性を再宣言してメタデータをオーバーライドする際は、コントラクト型が同じであることを確認してください (上の例では、`IPlugin` がコントラクト型です)。コントラクト型が違っていると、メタデータがオーバーライドされる代わりに、2 つ目の属性によって別の 2 つ目のエクスポートが作成されます。 したがって、 `InheritedExport` 属性をオーバーライドする際は、一般に、上の例のようにコントラクト型を明示的に指定する必要があります。
+`InheritedExport` 属性を再宣言してメタデータをオーバーライドする際は、コントラクト型が同じであることを確認してください (前の例では、`IPlugin` はコントラクト型です)。異なる場合は、をオーバーライドするのではなく、2番目の属性がパートから独立した2番目のエクスポートを作成します。 したがって、 `InheritedExport` 属性をオーバーライドする際は、一般に、上の例のようにコントラクト型を明示的に指定する必要があります。
 
 インターフェイスは直接インスタンス化できないため、通常は `Export` 属性や `Import` 属性で装飾できませんが、 インターフェイス レベルで `InheritedExport` 属性を使用すると、インターフェイスを装飾できます。この場合、そのエクスポートは、関連付けられているメタデータと共に、そのインターフェイスを実装するすべてのクラスに継承されます。 ただし、そのインターフェイス自体をパートとして使用できるようにはなりません。
 
@@ -984,5 +982,5 @@ public class PartSeven
 
 ## <a name="see-also"></a>関連項目
 
-- [Channel 9 ビデオ:Managed Extensibility Framework を使用してアプリケーションを開く](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
-- [Channel 9 ビデオ:Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+- [Channel 9 ビデオ: Managed Extensibility Framework を使用してアプリケーションを開く](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
+- [Channel 9 ビデオ: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

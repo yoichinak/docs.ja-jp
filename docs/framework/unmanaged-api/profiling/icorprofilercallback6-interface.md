@@ -11,19 +11,17 @@ api_type:
 ms.assetid: edc420b7-96d1-4dec-ace0-36d907f644bc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8fda98c20b42355b9f52595929bbf5b980b5b857
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0009d935e2e3b2abf590aca270113717ceb7e2d8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041547"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127480"
 ---
 # <a name="icorprofilercallback6-interface"></a>ICorProfilerCallback6 インターフェイス
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
   
- サブクラス[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)共通言語ランタイムを使用してアセンブリを読み込むことをプロファイラーに通知するコールバック メソッドを提供します。  
+ アセンブリが読み込まれていることをプロファイラーに通知するために共通言語ランタイムが使用するコールバックメソッドを提供する[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)のサブクラス。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -33,10 +31,10 @@ ms.locfileid: "62041547"
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9659dd835bb60adf8471f73ed45b6588cf15126f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01e1eafd9955a0876f77e34eb73c2a3fc6d815c2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752588"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139203"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum 列挙型
 マネージド スレッドがイベントを記録する際にイベント ログに書き込まれる説明メッセージの重大度レベルを示します。  
@@ -50,25 +48,25 @@ typedef enum LoggingLevelEnum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`LTraceLevel0`|メッセージは、トレース レベル 0 です。|  
-|`LTraceLevel1`|メッセージは、トレース レベル 1 です。|  
-|`LTraceLevel2`|メッセージは、トレース レベル 2 です。|  
-|`LTraceLevel3`|メッセージは、トレース レベル 3 です。|  
-|`LTraceLevel4`|メッセージは、トレース レベル 4 です。|  
-|`LStatusLevel0`|メッセージは、状態レベル 0 です。|  
-|`LStatusLevel1`|メッセージは、レベル 1 の状態です。|  
-|`LStatusLevel2`|メッセージは、状態のレベル 2 です。|  
-|`LStatusLevel3`|メッセージは、状態レベル 3 です。|  
-|`LStatusLevel4`|メッセージは、状態のレベル 4 です。|  
-|`LWarningLevel`|メッセージは、警告レベルです。|  
-|`LErrorLevel`|メッセージは、エラー レベルです。|  
-|`LPanicLevel`|メッセージは、重大レベルです。|  
+|`LTraceLevel0`|メッセージはトレースレベル0です。|  
+|`LTraceLevel1`|メッセージはトレースレベル1です。|  
+|`LTraceLevel2`|メッセージはトレースレベル2です。|  
+|`LTraceLevel3`|メッセージはトレースレベル3です。|  
+|`LTraceLevel4`|メッセージはトレースレベル4です。|  
+|`LStatusLevel0`|メッセージはステータスレベル0です。|  
+|`LStatusLevel1`|メッセージはステータスレベル1です。|  
+|`LStatusLevel2`|メッセージはステータスレベル2です。|  
+|`LStatusLevel3`|メッセージはステータスレベル3です。|  
+|`LStatusLevel4`|メッセージはステータスレベル4です。|  
+|`LWarningLevel`|メッセージは警告レベルです。|  
+|`LErrorLevel`|メッセージはエラーレベルです。|  
+|`LPanicLevel`|メッセージはパニックレベルです。|  
   
 ## <a name="remarks"></a>Remarks  
- 共通言語ランタイム (CLR) の呼び出し、 [icordebugmanagedcallback::logmessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)マネージ スレッドがイベントを記録するデバッガーに通知するメソッド。 CLR の値を渡す、`LoggingLevelEnum`マネージ スレッドは、イベント ログに書き込まれたメッセージの重大度レベルを示す列挙体。  
+ 共通言語ランタイム (CLR: common language runtime) は、コンポーネントのマネージ[コールバック:: LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)メソッドを呼び出して、マネージスレッドがイベントを記録したことをデバッガーに通知します。 CLR は `LoggingLevelEnum` 列挙値を渡して、マネージスレッドがイベントログに書き込んだメッセージの重大度レベルを示します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

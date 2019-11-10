@@ -10,14 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d11567b3a5abca6e81ff0358295aa8516ef6443f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5ead3d1ac37b3c7ee50f18a81530720205678de2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969028"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122006"
 ---
 # <a name="managed-execution-process"></a>マネージド実行プロセス
 <a name="introduction"></a> マネージド実行プロセスで実行される主な手順を次に示します。詳細については、後で説明します。  

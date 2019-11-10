@@ -9,35 +9,35 @@ helpviewer_keywords:
 - parts [WPF], DocumentViewer
 - styles [WPF], DocumentViewer
 ms.assetid: 6bd4ff8f-ea6a-4084-ac58-e7a67446ce1c
-ms.openlocfilehash: 4e91a640b36e4793567c9e728fd71ec8ce596743
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a812ff913703e3aa8408da8a11d28ee5adfa7fd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911769"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460338"
 ---
 # <a name="documentviewer-styles-and-templates"></a>DocumentViewer のスタイルとテンプレート
-このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.DocumentViewer>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、<xref:System.Windows.Controls.DocumentViewer> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
   
-## <a name="documentviewer-parts"></a>DocumentViewer のパーツ  
- 次の表に、名前付きパーツ、<xref:System.Windows.Controls.DocumentViewer>コントロール。  
+## <a name="documentviewer-parts"></a>DocumentViewer パーツ  
+ 次の表に、<xref:System.Windows.Controls.DocumentViewer> コントロールの名前付きの部分を示します。  
   
-|パーツ|型|説明|  
+|パーツ|[種類]|説明|  
 |-|-|-|  
-|PART_ContentHost|<xref:System.Windows.Controls.ScrollViewer>|コンテンツと領域をスクロールします。|  
-|PART_FindToolBarHost|<xref:System.Windows.Controls.ContentControl>|既定では下部にある検索ボックス。|  
+|PART_ContentHost|<xref:System.Windows.Controls.ScrollViewer>|コンテンツとスクロール領域。|  
+|PART_FindToolBarHost|<xref:System.Windows.Controls.ContentControl>|既定で一番下にある検索ボックス。|  
   
 ## <a name="documentviewer-states"></a>DocumentViewer の状態  
- 次の表のビジュアルの状態、<xref:System.Windows.Controls.DocumentViewer>コントロール。  
+ 次の表は、<xref:System.Windows.Controls.DocumentViewer> コントロールの表示状態を示しています。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
-|有効|ValidationStates|コントロールを使用して、<xref:System.Windows.Controls.Validation>クラスおよび<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`false`します。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスします。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスがないです。|  
+|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
 ## <a name="documentviewer-controltemplate-example"></a>DocumentViewer ControlTemplate の例  
- 次の例は、定義する方法を示します、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.DocumentViewer>コントロール。  
+ 次の例は、<xref:System.Windows.Controls.DocumentViewer> コントロールの <xref:System.Windows.Controls.ControlTemplate> を定義する方法を示しています。  
   
  [!code-xaml[ControlTemplateExamples#DocumentViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/documentviewer.xaml#documentviewer)]  
   
@@ -53,5 +53,5 @@ ms.locfileid: "61911769"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
-- [スタイルとテンプレート](styling-and-templating.md)
+- [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)

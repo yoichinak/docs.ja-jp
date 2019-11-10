@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 1029d34ae8823fe91c7e4bc92e168fcc1061c707
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: af7bf487ff4ed250025b946f0948c269fcc5bf09
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594406"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418562"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ をサポートする C# の機能
 
@@ -26,7 +26,7 @@ var query = from str in stringArray
             select stringGroup;
 ```
 
-詳細については、「[LINQ クエリ式](../../linq-query-expressions/index.md)」を参照してください。
+詳細については、「[LINQ クエリ式](../../../linq/index.md)」を参照してください。
 
 ## <a name="implicitly-typed-variables-var"></a>暗黙的に型指定された変数 (var)
 
@@ -66,7 +66,7 @@ var newLargeOrderCustomers = from o in IncomingOrders
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
 ```
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [オブジェクト初期化子とコレクション初期化子](../../classes-and-structs/object-and-collection-initializers.md)
 
@@ -92,7 +92,7 @@ select new {name = cust.Name, phone = cust.Phone};
 
 ラムダ式は、=> 演算子を使用して関数本体からパラメーター入力を分離するインライン関数で、コンパイル時にデリゲートまたは式ツリーに変換されます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プログラミングでは、標準クエリ演算子に対する直接メソッド呼び出しを行う場合にラムダ式を使用します。
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [匿名関数](../../statements-expressions-operators/anonymous-functions.md)
 

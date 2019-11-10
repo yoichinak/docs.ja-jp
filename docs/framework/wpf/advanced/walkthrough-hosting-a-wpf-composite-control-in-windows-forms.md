@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 0054ac49589991d754da655e9f8f52d63e9a6274
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920220"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458921"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>チュートリアル: Windows フォームでの WPF 複合コントロールのホスト
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コードに多大な投資をしている場合は、最初から書き換えるのではなく、既存の [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] アプリケーションを [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] で拡張する方が効果的です。 一般的なシナリオは、Windows フォームアプリケーション内の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] で実装された1つ以上のコントロールを埋め込む場合です。 WPF コントロールのカスタマイズの詳細については、「[コントロールのカスタマイズ](../controls/control-customization.md)」を参照してください。  
@@ -87,7 +87,7 @@ ms.locfileid: "72920220"
 #### <a name="styling-the-ui-elements"></a>UI 要素のスタイル設定  
  データ入力フォームの多くの要素は外観が似ていますが、それは、そのいくつかのプロパティの設定が同一であることを意味しています。 各要素の属性を個別に設定するのではなく、前の XAML では <xref:System.Windows.Style> 要素を使用して要素のクラスの標準プロパティ設定を定義します。 この方法だと、コントロールの複雑さが軽減され、1 つのスタイル属性を使用して複数要素の外観を変更することができます。  
   
- <xref:System.Windows.Style> 要素は、<xref:System.Windows.Controls.Grid> 要素の <xref:System.Windows.FrameworkElement.Resources%2A> プロパティに含まれているので、コントロール内のすべての要素で使用できます。 スタイルにという名前が付けられている場合は、スタイル名に <xref:System.Windows.Style> 要素セットを追加することによって、要素に適用します。 名前が付いていないスタイルは、その要素の既定のスタイルになります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] スタイルの詳細については、「スタイル[とテンプレート](../controls/styling-and-templating.md)」を参照してください。  
+ <xref:System.Windows.Style> 要素は、<xref:System.Windows.Controls.Grid> 要素の <xref:System.Windows.FrameworkElement.Resources%2A> プロパティに含まれているので、コントロール内のすべての要素で使用できます。 スタイルにという名前が付けられている場合は、スタイル名に <xref:System.Windows.Style> 要素セットを追加することによって、要素に適用します。 名前が付いていないスタイルは、その要素の既定のスタイルになります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] スタイルの詳細については、「スタイル[とテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)」を参照してください。  
   
  次の XAML は、複合コントロールの <xref:System.Windows.Style> 要素を示しています。 スタイルがどのように要素に適用されるかについては、前の XAML を参照してください。 たとえば、最後の <xref:System.Windows.Controls.TextBlock> 要素は `inlineText` スタイルを持ち、最後の <xref:System.Windows.Controls.TextBox> 要素は既定のスタイルを使用します。  
   
@@ -326,6 +326,6 @@ namespace MyControls
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Visual Studio で XAML をデザインする](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [チュートリアル: WPF での Windows フォーム複合コントロールのホスト](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [チュートリアル: Windows フォームでの 3D WPF 複合コントロールのホスト](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

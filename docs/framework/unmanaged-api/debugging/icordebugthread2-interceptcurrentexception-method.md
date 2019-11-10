@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 536d2357-1b97-49e0-a10c-c860aed74e6e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a59476728280e42f45c416b614e6a721efaf26c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f3cf3db5df610e57a957147f0ab79121679e00b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765245"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138700"
 ---
 # <a name="icordebugthread2interceptcurrentexception-method"></a>ICorDebugThread2::InterceptCurrentException メソッド
-このスレッドで現在の例外をインターセプトするデバッガーを使用します。  
+デバッガーがこのスレッドの現在の例外をインターセプトできるようにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,13 +35,13 @@ HRESULT InterceptCurrentException (
   
 ## <a name="parameters"></a>パラメーター  
  `pFrame`  
- [in]アクティブなスタック フレームを表す、ICorDebugFrame へのポインター。  
+ からアクティブなスタックフレームを表すテキストフレームへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- `InterceptCurrentException`例外コールバックを間メソッドを呼び出すことができます ([icordebugmanagedcallback::exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md)または[icordebugmanagedcallback 2::exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)) と関連付けられている呼び出し[Icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)します。  
+ `InterceptCurrentException` メソッドは、例外コール[バック (](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md) [ICorDebugManagedCallback2:: exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)) と、それに関連付けられている:: [Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)の間で呼び出すことができます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

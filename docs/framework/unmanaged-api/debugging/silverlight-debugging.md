@@ -5,14 +5,12 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1d20bc002e52c3c6a42b45c0d1c5d559e65dc52c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7af03197a43976c47b7ddc30346d622e6b97207
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763664"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139146"
 ---
 # <a name="silverlight-debugging"></a>Silverlight デバッグ
 このセクションのトピックでは、Windows オペレーティング システム上または Macintosh プラットフォーム上で動作している Silverlight ベースのアプリケーションのデバッグをサポートするために共通言語ランタイム (CLR: Common Language Runtime) で提供される環境とインターフェイスについて説明します。  
@@ -22,7 +20,7 @@ ms.locfileid: "61763664"
  プロセスで CLR を列挙するメカニズムを提供します。  
   
  [CloseCLREnumeration 関数](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)  
- によって返されるハンドルの配列内にある有効な CLR 継続スタートアップ イベントを閉じ、 [EnumerateCLRs 関数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)、ハンドルおよび文字列パス配列のメモリを解放します。  
+ [列挙型 Ateclrs 関数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)によって返されたハンドルの配列にある有効な CLR 継続スタートアップイベントを閉じ、ハンドルおよび文字列パス配列のメモリを解放します。  
   
  [CreateCoreClrDebugTarget 関数](../../../../docs/framework/unmanaged-api/debugging/createcoreclrdebugtarget-function.md)  
  プロセスおよびランタイムの列挙のためのリモート ターゲットへの接続を作成します。  
@@ -34,7 +32,7 @@ ms.locfileid: "61763664"
  対象プロセス内の CLR パスからバージョン文字列を作成します。  
   
  [CreateDebuggingInterfaceFromVersion 関数](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)  
- 返された CLR バージョン文字列を受け入れる[CreateVersionStringFromModule 関数](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)関数、および対応するデバッガー インターフェイスを返します。  
+ [Createversionstringfrommodule 関数](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)関数から返された CLR バージョン文字列を受け取り、対応するデバッガーインターフェイスを返します。  
   
  [CoreClrDebugProcInfo 構造体](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)  
  リモート コンピューターで実行されているプロセスを表します。  

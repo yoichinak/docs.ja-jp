@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 1442daf646a29c3822d06d0b649f462b37523fe2
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3506406a441cb2028c00d5b8ed87b57cc6dff38b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002116"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423254"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外と例外処理 (C# プログラミング ガイド)
 
@@ -20,7 +20,7 @@ C# 言語の例外処理機能は、プログラムの実行時に発生する�
 
 コードが直接呼び出したメソッドではなく、呼び出し履歴の下の方にある別のメソッドによって例外がスローされることも多くあります。 その場合、CLR は履歴をアンワインドし、`catch` ブロックを持つメソッドを探して特定の例外の種類がないかを調べ、もしあれば最初に見つかった `catch` ブロックを実行します。 適切な `catch` ブロックが呼び出し履歴にない場合は、プロセスが終了し、ユーザーにメッセージが表示されます。
 
-この例では、メソッドが 0 による除算をテストしてエラーをキャッチします。 例外処理せずにプログラムは終了し、"**DivideByZeroException はハンドルされませんでした。**" というエラーが表示されます。
+この例では、メソッドが 0 による除算をテストしてエラーをキャッチします。 例外処理せずにプログラムは終了し、"**DivideByZeroException はハンドルされませんでした。** " というエラーが表示されます。
 
 [!code-csharp[csProgGuideExceptions#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#18)]
 
@@ -53,7 +53,7 @@ C# 言語の例外処理機能は、プログラムの実行時に発生する�
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、「[C# 言語の仕様](../../language-reference/language-specification/index.md)」の「[例外](~/_csharplang/spec/exceptions.md)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語の仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の「[例外](~/_csharplang/spec/exceptions.md)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>関連項目
 

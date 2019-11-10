@@ -7,14 +7,12 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: efbca8177c74fdee635b52294944df23e5aca24f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ad36789579b95e0129e402765194b9f5e45a4cc1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638789"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127512"
 ---
 # <a name="threads-and-threading"></a>スレッドおよびスレッド処理
 

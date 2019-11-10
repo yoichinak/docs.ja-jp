@@ -8,14 +8,12 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 053726b200b73956099ff9274cc8f63f21d8fc64
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: f1913f8c41ba4a7b54f7abcdfb97400503da8ac5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972649"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107149"
 ---
 # <a name="assembly-manifest"></a>アセンブリ マニフェスト
 静的であるか動的であるかにかかわらず、すべてのアセンブリは、アセンブリ内の要素の相互関係を記述したデータのコレクションを含んでいます。 このアセンブリ メタデータは、アセンブリ マニフェストに格納されています。 アセンブリ マニフェストには、アセンブリのバージョン要件およびセキュリティ ID を指定するために必要なすべてのメタデータと、アセンブリのスコープを定義したり、リソースやクラスへの参照を解決したりするために必要なすべてのメタデータが格納されています。 アセンブリ マニフェストは、MSIL (Microsoft Intermediate Language) コードが記述されている PE ファイル ( *.exe* または *.dll*)、またはアセンブリ マニフェスト情報だけを格納したスタンドアロンの PE ファイルに保存できます。  

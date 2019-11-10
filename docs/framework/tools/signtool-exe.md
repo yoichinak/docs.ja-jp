@@ -5,14 +5,12 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f99b2fd4716b069d4ec7a21e369c5178990ce16d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cb0aca3b527c16a7abf984952795a673948775dd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044204"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104638"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (署名ツール)
 署名ツールはコマンド ライン ツールで、ファイルにデジタル署名を添付し、ファイルの署名を検証し、ファイルにタイム スタンプを付けます。  

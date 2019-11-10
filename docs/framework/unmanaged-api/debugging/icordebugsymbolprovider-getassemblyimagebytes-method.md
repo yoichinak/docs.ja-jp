@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider::GetAssemblyImageBytes メソッド
+title: 'GetAssemblyImageBytes Method Provider:: メソッド'
 ms.date: 03/30/2017
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bf6e707b6176ccd205785aafa6c5a1adf0a3fc78
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3184ba116704df8945b53766e62435a4252eaa11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964671"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138934"
 ---
-# <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider::GetAssemblyImageBytes メソッド
+# <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>GetAssemblyImageBytes Method Provider:: メソッド
 マージされたアセンブリ内の指定の相対仮想アドレス (RVA: relative virtual address) で、マージされたアセンブリのデータを読み取ります。  
   
 ## <a name="syntax"></a>構文  
@@ -39,12 +37,12 @@ HRESULT GetAssemblyImageBytes(
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

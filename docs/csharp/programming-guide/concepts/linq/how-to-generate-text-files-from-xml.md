@@ -2,12 +2,12 @@
 title: '方法: XML からテキスト ファイルを生成する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 76fcca69236ef97374855ebbb19259aa5e119ea0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8e36bbda60bea207707dcf869afc059e645ec8ad
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253594"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418305"
 ---
 # <a name="how-to-generate-text-files-from-xml-c"></a>方法: XML からテキスト ファイルを生成する (C#)
 この例では、XML ファイルからコンマ区切り (CSV) ファイルを生成する方法について説明します。  
@@ -55,4 +55,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>関連項目
 
-- [プロジェクションと変換 (LINQ to XML) (C#)](./projections-and-transformations-linq-to-xml.md)
+- [プロジェクションと変換 (LINQ to XML) (C#)](how-to-work-with-dictionaries-using-linq-to-xml.md)

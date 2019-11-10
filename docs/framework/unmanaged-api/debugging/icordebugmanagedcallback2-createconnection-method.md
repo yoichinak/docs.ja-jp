@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 10d0fc0c65d6c479ee4bf7bf527ee33615d53084
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d83ad530c8a61c2bfc38fb46ad2a33ef8d5077d3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761169"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130586"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection メソッド
 新しい接続が作成されたことをデバッガーに通知します。  
@@ -39,23 +37,23 @@ HRESULT CreateConnection (
   
 ## <a name="parameters"></a>パラメーター  
  `pProcess`  
- [in]接続が作成されたプロセスを表す"ICorDebugProcess"オブジェクトへのポインター  
+ から接続が作成されたプロセスを表す "いいプロセス" オブジェクトへのポインター  
   
  `dwConnectionId`  
- [in]新しい接続の ID。  
+ から新しい接続の ID。  
   
  `pConnName`  
- [in]新しい接続の名前へのポインター。  
+ から新しい接続の名前へのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- A`CreateConnection`コールバックは、次の場合のいずれかで発生します。  
+ `CreateConnection` コールバックは、次のいずれかの場合に発生します。  
   
-- ときに、デバッガーは、接続を含むプロセスにアタッチされます。 ランタイムの生成し、ディスパッチここを`CreateConnection`イベントと[icordebugmanagedcallback 2::changeconnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md)プロセス内の各接続のイベント。  
+- デバッガーが接続を含むプロセスにアタッチする場合。 この場合、ランタイムは、プロセス内の各接続に対して、`CreateConnection` イベントと[ICorDebugManagedCallback2:: ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md)イベントを生成してディスパッチします。  
   
-- ホストが呼び出したときに[iclrdebugmanager::beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)で、[ホスト API](../../../../docs/framework/unmanaged-api/hosting/index.md)します。  
+- ホストが[ホスティング API](../../../../docs/framework/unmanaged-api/hosting/index.md)で[ICLRDebugManager:: beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)を呼び出すとき。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

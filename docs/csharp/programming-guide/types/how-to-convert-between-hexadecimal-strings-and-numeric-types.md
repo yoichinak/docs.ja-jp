@@ -8,17 +8,17 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: a7109945192fe1577cd1b96c8b4d6c05270d54e8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e5013891db827e27b3cda55135fff4ee287cfcb4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588373"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423142"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>方法: 16 進文字列と数値型の間で変換する (C# プログラミング ガイド)
 以下の例では、次のタスクを実行する方法について説明します。  
   
-- [string](../../language-reference/keywords/string.md) の各文字の 16 進値を取得する。  
+- [string](../../language-reference/builtin-types/reference-types.md) の各文字の 16 進値を取得する。  
   
 - 16 進文字列の各値に対応する [char](../../language-reference/keywords/char.md) を取得する。  
   
@@ -55,6 +55,6 @@ ms.locfileid: "69588373"
   
 ## <a name="see-also"></a>関連項目
 
-- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
+- [標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md)
 - [型](./index.md)
 - [方法: 文字列が数値を表しているかどうかを確認する](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

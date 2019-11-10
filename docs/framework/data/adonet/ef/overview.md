@@ -2,12 +2,12 @@
 title: Entity Framework の概要
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 92aa7b9c1f163c0496a821cca375c8b7e1b21a5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b68db4f139330ccc1da5057498a37a08d00ba266
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854345"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738498"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework の概要
 
@@ -34,7 +34,7 @@ Entity Framework を使用すると、開発者は、顧客や顧客の住所な
 
 ストレージ モデルとマッピングは、概念モデル、データ クラス、またはアプリケーション コードを変更することなく、必要に応じて変更できます。 ストレージ モデルはプロバイダー固有なので、データ ソースの違いを意識することなく一貫した概念モデルを扱うことができます。
 
-Entity Framework は、これらのモデルファイルとマッピングファイルを使用して、概念モデルのエンティティおよびリレーションシップに対する作成、読み取り、更新、および削除操作を、データソース内の同等の操作に対して行います。 Entity Framework では、概念モデルのエンティティをデータソースのストアドプロシージャにマップすることもできます。 詳細については、「 [CSDL、SSDL、および MSL の仕様](./language-reference/csdl-ssdl-and-msl-specifications.md)」を参照してください。
+Entity Framework は、これらのモデルファイルとマッピングファイルを使用して、概念モデルのエンティティおよびリレーションシップに対する作成、読み取り、更新、および削除操作を、データソース内の同等の操作に対して行います。 Entity Framework では、概念モデルのエンティティをデータソースのストアドプロシージャにマップすることもできます。 詳細については、「 [CSDL、SSDL、および MSL の仕様](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)」を参照してください。
 
 ## <a name="map-objects-to-data"></a>オブジェクトをデータにマップする
  オブジェクト指向プログラミングには、データ ストレージ システムと対話するという難題があります。 クラスの編成はリレーショナル データベース テーブルの編成に似ている場合がありますが、完全に一致するわけではありません。 正規化された複数のテーブルと単一のクラスが対応する場合も多く、クラス間のリレーションシップとテーブル間のリレーションシップとで表現方法が異なる場合もあります。 たとえば、販売注文の顧客を表すために、`Order` クラスは `Customer` クラスのインスタンスへの参照が含まれているプロパティを使用する一方で、データベースの `Order` テーブル行には `Customer` テーブルの主キー値に対応する値がある外部キー列 (または列セット) が含まれている場合があります。 `Customer` クラスには `Orders` クラスのインスタンスのコレクションが含まれている `Order` という名前のプロパティがありますが、データベースの `Customer` テーブルに同等の列がない場合などです。 Entity Framework を使用すると、開発者はこの方法でリレーションシップを表すことができます。また、データベースで表現されているリレーションシップをより密接にモデル化することもできます。
@@ -47,7 +47,7 @@ Entity Framework は単なるオブジェクト リレーショナル マッピ�
 
 - LINQ to Entities。 概念モデルで定義されているエンティティ型に対してクエリを実行するための統合言語クエリ (LINQ) のサポートを提供します。 詳細については、「 [LINQ to Entities](./language-reference/linq-to-entities.md)」を参照してください。
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 概念モデルのエンティティを直接操作し、Entity Data Model の概念をサポートする、ストレージに依存しない SQL の言語。 [!INCLUDE[esql](../../../../../includes/esql-md.md)]は、EntityClient プロバイダーを使用して実行されるオブジェクトクエリとクエリの両方で使用されます。 詳細については、「 [Entity SQL の概要](./language-reference/entity-sql-overview.md)」を参照してください。
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 概念モデルのエンティティを直接操作し、Entity Data Model の概念をサポートする、ストレージに依存しない SQL の言語。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] は、EntityClient プロバイダーを使用して実行されるオブジェクトクエリとクエリの両方で使用されます。 詳細については、「 [Entity SQL の概要](./language-reference/entity-sql-overview.md)」を参照してください。
 
 Entity Framework には、EntityClient データプロバイダーが含まれています。 このプロバイダーは接続を管理し、エンティティクエリをデータソース固有のクエリに変換し、エンティティデータをオブジェクトに具体化するために Entity Framework が使用するデータリーダーを返します。 オブジェクトの具体化が不要であれば、アプリケーションで [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリを実行して返された読み取り専用のデータ リーダーを使用できるようにすることで、EntityClient プロバイダーを標準の ADO.NET データ プロバイダーと同様に使用することもできます。 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](entityclient-provider-for-the-entity-framework.md)」を参照してください。
 
@@ -55,11 +55,11 @@ Entity Framework には、EntityClient データプロバイダーが含まれ�
 
 ![Entity Framework アーキテクチャダイアグラム](./media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
-Entity Data Model ツールは、概念モデルのエンティティコンテナー `System.Data.Objects.ObjectContext`を`System.Data.Entity.DbContext`表すまたはから派生したクラスを生成できます。 このオブジェクト コンテキストは、変更の追跡や ID、同時実行、およびリレーションシップの管理などの機能を提供します。 また、このクラスは、データ ソースに挿入、更新、および削除を書き込む `SaveChanges` メソッドも公開します。 このような変更は、クエリと同様に、システムによって自動的に生成されるコマンドで行うことも、特定のストアド プロシージャを使用するように指定することもできます。
+Entity Data Model ツールは、概念モデルのエンティティコンテナーを表す `System.Data.Objects.ObjectContext` または `System.Data.Entity.DbContext` から派生したクラスを生成できます。 このオブジェクト コンテキストは、変更の追跡や ID、コンカレンシー、およびリレーションシップの管理などの機能を提供します。 また、このクラスは、データ ソースに挿入、更新、および削除を書き込む `SaveChanges` メソッドも公開します。 このような変更は、クエリと同様に、システムによって自動的に生成されるコマンドで行うことも、特定のストアド プロシージャを使用するように指定することもできます。
 
 ## <a name="data-providers"></a>データ プロバイダー
 
-プロバイダー `EntityClient`は、概念エンティティおよびリレーションシップの観点からデータにアクセスすることによって、ADO.NET プロバイダーモデルを拡張します。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] を使用するクエリを実行します。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] は、`EntityClient` がデータベースと通信する基盤となるクエリ言語を提供します。 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](entityclient-provider-for-the-entity-framework.md)」を参照してください。
+`EntityClient` プロバイダーは、概念エンティティおよびリレーションシップの観点からデータにアクセスすることによって、ADO.NET プロバイダーモデルを拡張します。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] を使用するクエリを実行します。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] は、`EntityClient` がデータベースと通信する基盤となるクエリ言語を提供します。 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](entityclient-provider-for-the-entity-framework.md)」を参照してください。
 
 Entity Framework には、正規のコマンドツリーをサポートする更新された SqlClient Data Provider が含まれています。 詳細については、「 [Entity Framework の SqlClient](sqlclient-for-the-entity-framework.md)」を参照してください。
 
@@ -67,7 +67,7 @@ Entity Framework には、正規のコマンドツリーをサポートする更
 
 Entity Framework ランタイムと共に、Visual Studio にはマッピングツールとモデリングツールが含まれています。 詳細については、「[モデリングとマッピング](modeling-and-mapping.md)」を参照してください。
 
-## <a name="learn-more"></a>詳細情報
+## <a name="learn-more"></a>詳細を表示
 
 Entity Framework の詳細については、以下を参照してください。
 

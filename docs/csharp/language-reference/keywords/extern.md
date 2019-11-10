@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: 387ef707166705c4df501bd6740d438683aa2d69
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5f4a4b143578603a3285b1a3bc0b1efa11840e77
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203017"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422809"
 ---
 # <a name="extern-c-reference"></a>extern (C# リファレンス)
 
@@ -94,4 +94,4 @@ extern キーワードの C# での用法は、C++ の場合よりも制限さ�
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [修飾子](modifiers.md)
+- [修飾子](index.md)
