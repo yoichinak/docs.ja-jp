@@ -2,17 +2,14 @@
 title: 暗号に関する破壊的変更 - .NET Core
 description: .NET Core での暗号に関連する破壊的変更の一覧を示します。
 ms.date: 09/20/2019
-ms.openlocfilehash: ce6739c57df801ef6ae3ab35e31bba6ad4055caa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 628162eb391c27b810e9db0a869896eb8443a06f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093090"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739734"
 ---
 # <a name="cryptography-breaking-changes"></a>暗号での破壊的変更
-
-> [!IMPORTANT]
-> この記事は作成中です。 これは、.NET Core の破壊的変更の完全なリストではありません。 .NET Core の破壊的変更の詳細については、GitHub の dotnet/docs リポジトリで個別の[破壊的変更の問題](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)について調べてください。 
 
 .NET Core のバージョンごとに暗号に関する破壊的変更の一覧を次に示します。
 

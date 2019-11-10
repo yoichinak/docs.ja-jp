@@ -2,17 +2,14 @@
 title: 暗号の破壊的変更、バージョン 2.2 から 3.0 - .NET Core
 description: .NET Core、ASP.NET Core、EF Core のバージョン 2.2 からバージョン 3.0 への破壊的変更の一覧を示します。
 ms.date: 09/10/2019
-ms.openlocfilehash: ba330bdef4be8cfe0e74f5645adaf66b2e0051ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8b2894e6988c0b475e45c6d5602a7f54943f3ed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089580"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739424"
 ---
 # <a name="breaking-changes-for-migration-from-version-22-to-30"></a>バージョン 2.2 から 3.0 への移行の破壊的変更
-
-> [!IMPORTANT]
-> この記事は作成中です。 これは、.NET Core の破壊的変更の完全なリストではありません。 .NET Core の破壊的変更の詳細については、GitHub の dotnet/docs リポジトリで個別の[破壊的変更の問題](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)について調べてください。 
 
 .NET Core、ASP.NET Core、または EF Core のバージョン 2.2 からバージョン 3.0 に移行する場合は、次のトピックで、ご使用のアプリに影響する可能性がある破壊的変更について確認してください。
 
