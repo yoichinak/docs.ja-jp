@@ -4,12 +4,12 @@ description: 構造体型と、構造体を作成する方法について説明�
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 10971dc1a0b2c9d64ac8766734b3f6f630aa3ccf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 39bf44dc187fbbc7aac71a1d5c5f3a4d7f446eb8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423119"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739180"
 ---
 # <a name="structs"></a>構造体
 
@@ -53,21 +53,9 @@ ms.locfileid: "73423119"
   
 - 構造体は、インターフェイスを実装できます。
 
-## <a name="literal-values"></a>リテラル値
-
-C# では、リテラル値の型がコンパイラによって決定されます。 数値リテラルの型指定の方法を指定するには、その数値の末尾に文字を付加します。 たとえば、値 4.56 を float 型として扱うには、数値の後に "f" または "F" を付加して、`4.56f` のように指定します。 文字を付加しない場合、リテラルの `double` 型はコンパイラによって推論されます。 文字サフィックスによって指定できる型の詳細については、「[値型](./language-reference/keywords/value-types.md)」の各型のリファレンス ページを参照してください。  
-  
-リテラルは型指定され、すべての型は最終的に <xref:System.Object> から派生するため、次のようなコードを記述してコンパイルできます。  
-  
-[!code-csharp[Literal Values](../../samples/snippets/csharp/concepts/structs/literals.cs)]
-
-最後の 2 つの例では、C# 7.0 で導入された言語機能を紹介します。 最初の機能を使用すると、アンダースコア文字を、数値リテラルの "*桁区切り記号*" として使用できます。 このアンダースコア文字を数字の任意の場所に配置して、読みやすくすることができます。 値には影響はありません。
-
-もう 1 つの機能は "*バイナリ リテラル*" で、これにより 16 進数表記ではなく、ビット パターンを直接指定できます。
-
 ## <a name="nullable-value-types"></a>null 許容値型
 
-値型には、通常、[null](language-reference/keywords/null.md) 値を割り当てることができません。 しかし、型の後ろに `?` を付けることによって、null 値を設定できる値型を作成できます。 たとえば、`int?` は、[null](./language-reference/keywords/null.md) 値も設定できる `int` 型です。 null 許容値型は一般的な構造体型 <xref:System.Nullable%601> のインスタンスです。 null 許容値型は、数値が null または未定義の可能性があるデータベースとの間でデータを受け渡しする場合に、特に便利です。 詳細については、「[null 許容値型](programming-guide/nullable-types/index.md)」を参照してください。
+値型には、通常、[null](language-reference/keywords/null.md) 値を割り当てることができません。 しかし、型の後ろに `?` を付けることによって、null 値を設定できる値型を作成できます。 たとえば、`int?` は、[null](./language-reference/keywords/null.md) 値も設定できる `int` 型です。 null 許容値型は一般的な構造体型 <xref:System.Nullable%601> のインスタンスです。 null 許容値型は、数値が null または未定義の可能性があるデータベースとの間でデータを受け渡しする場合に、特に便利です。 詳細については、「[null 許容値型](language-reference/builtin-types/nullable-value-types.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

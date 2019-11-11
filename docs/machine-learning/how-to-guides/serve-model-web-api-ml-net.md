@@ -1,23 +1,20 @@
 ---
 title: ASP.NET Core Web API でのモデルのデプロイ
 description: ASP.NET Core Web API を使用して、インターネット経由で予測用の ML.NET 感情分析機械学習モデルを提供します
-ms.date: 09/11/2019
+ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: b85d77900c5d9227ecc6fe81b8a8d68171dd9ef5
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b6801b7de5a17257be706f77a7a67aa87df96524
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774521"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733313"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>ASP.NET Core Web API でのモデルのデプロイ
 
 ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 機械学習モデルを Web 上に提供する方法について説明します。 Web API 経由でモデルを提供すると、標準の HTTP メソッドによる予測が可能になります。
-
-> [!NOTE]
-> `PredictionEnginePool` サービスの拡張機能は、現在プレビュー段階です。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -122,12 +119,8 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
 2. *ConfigureServices* メソッドに次のコードを追加します。
 
     ```csharp
-    public void ConfigureServices(IServiceCollection services)
-    {
-        services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-        services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-            .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
-    }
+    services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+        .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
     ```
 
 大まかに言えば、オブジェクトとサービスがアプリケーションによって要求されたときに、このコードでは、後で使用できるように手動ではなく自動的に初期化が実行されます。
@@ -142,7 +135,7 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
 > また、リモートに格納されているモデルを操作するときは `FromUri` メソッドを使用できます。 `FromUri` では、ファイルの変更イベントを監視するのではなく、リモートの場所の変更をポーリングします。 ポーリング間隔は既定で 5 分に設定されています。 アプリケーションの要件に基づいてポーリング間隔を増減することができます。 次のコード サンプルでは、`PredictionEnginePool` は、指定された URI に格納されているモデルを 1 分ごとにポーリングします。
 >
 >```csharp
->builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+>services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
 >       modelName: "SentimentAnalysisModel",
 >       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",

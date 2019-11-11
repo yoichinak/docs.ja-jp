@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 74d13de78369b13fbf970dce9a3ef5ae7cbaac7f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 932649bf063beb8cb334966c0bec0a8df86c7625
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698878"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736898"
 ---
 # <a name="null-c-reference"></a>null (C# リファレンス)
 
-`null` キーワードは、いかなるオブジェクトも参照していない null 参照を表すリテラルです。 `null` は参照型変数の既定値です。 [null 許容値型](../../programming-guide/nullable-types/index.md)を除き、通常の値の型を null にすることはできません。
+`null` キーワードは、いかなるオブジェクトも参照していない null 参照を表すリテラルです。 `null` は参照型変数の既定値です。 [null 許容値型](../builtin-types/nullable-value-types.md)を除き、通常の値の型を null にすることはできません。
 
 次の例では、null キーワードの一部の動作を示します。
 

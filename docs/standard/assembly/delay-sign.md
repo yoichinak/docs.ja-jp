@@ -12,12 +12,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 75c86c49f4d471452a7e8f56856d5437e84df307
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 113df1ad3fc3ac1e27ebfef572494c1f15a3dbb5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084338"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733161"
 ---
 # <a name="delay-sign-an-assembly"></a>アセンブリへの遅延署名
 
@@ -89,4 +89,3 @@ ms.locfileid: "73084338"
 - [アセンブリを作成する](create.md)
 - [方法: 公開キーと秘密キーのキー ペアを作成する](create-public-private-key-pair.md)
 - [Sn.exe (厳密名ツール)](../../framework/tools/sn-exe-strong-name-tool.md)
-- [アセンブリを使用したプログラム](program.md)

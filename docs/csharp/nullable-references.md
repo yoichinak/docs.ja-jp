@@ -3,12 +3,12 @@ title: null 許容参照型
 description: この記事では、C# 8.0 で追加された null 許容参照型の概要を説明します。 新規および既存のプロジェクトにおいて、その機能によって null 参照例外に対する安全性がどのように提供されるかを学習します。
 ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: e20ea6efa389ba1aa0d8432a408c0b2a06a61c30
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: ded7234ecb746ba03ba59505b7189272886f1cbf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039781"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737835"
 ---
 # <a name="nullable-reference-types"></a>null 許容参照型
 
@@ -28,7 +28,7 @@ C# 8.0 で導入された **null 許容参照型**および **null 非許容参�
 
 null 許容参照型の追加により、いっそう明確に意図を宣言できます。 `null` 値は、変数で値が参照されていないことを表すための正しい方法です。 コードからすべての `null` 値を削除するために、この機能を使用しないでください。 そうではなく、コンパイラと、コードを読む他の開発者に対し、自分の意図を宣言する必要があります。 意図を宣言することにより、その意図と矛盾するコードを記述すると、コンパイラによって通知されます。
 
-**null 許容参照型**は、[null 許容値型](programming-guide/nullable-types/index.md)と同じ構文を使用して記述し、変数の型の後に `?` を追加します。 たとえば、次の変数宣言は、null 許容型の文字列変数 `name` を表します。
+**null 許容参照型**は、[null 許容値型](language-reference/builtin-types/nullable-value-types.md)と同じ構文を使用して記述し、変数の型の後に `?` を追加します。 たとえば、次の変数宣言は、null 許容型の文字列変数 `name` を表します。
 
 ```csharp
 string? name;

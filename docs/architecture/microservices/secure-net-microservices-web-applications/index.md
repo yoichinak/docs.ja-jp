@@ -4,12 +4,12 @@ description: .NET マイクロサービスおよび Web アプリケーション
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798858"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736955"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
 
@@ -21,15 +21,17 @@ ms.locfileid: "72798858"
 
 マイクロサービスのシナリオでは、通常、認証は一元的に処理されます。 API ゲートウェイを使用している場合、図 9-1 に示すように、このゲートウェイから認証することができます。 このアプローチを使用する場合は、メッセージがゲートウェイから来たかどうかに関わらず、メッセージの認証に追加のセキュリティ保護がない限り、(API ゲートウェイなしで) 個々のマイクロサービスに直接到達できないようにする必要があります。
 
-![API ゲートウェイで認証が一元化されている場合に要求がマイクロサービスに転送されると、ユーザー情報が追加されます。](./media/image1.png)
+![クライアントのモバイル アプリがバックエンドとやりとりする方法を示した図。](./media/index/api-gateway-centralized-authentication.png)
 
 **図 9-1** API ゲートウェイによる認証の一元管理
 
-サービスに直接アクセスできる場合は、Azure Active Directory などの認証サービスやセキュリティ トークン サービス (STS) として機能する専用の認証マイクロサービスは、ユーザーを認証するために使用できます。 信頼の決定は、サービスとセキュリティ トークンまたは cookie 間で共有されます (必要に応じて、これらのトークンは、[Cookie の共有](/aspnet/core/security/cookie-sharing)を実装して、ASP.NET Core アプリケーション間で共有できます)。このパターンを示したものが図 9-2 です。
+API ゲートウェイで認証が一元化されている場合に要求がマイクロサービスに転送されると、ユーザー情報が追加されます。 サービスに直接アクセスできる場合は、Azure Active Directory などの認証サービスやセキュリティ トークン サービス (STS) として機能する専用の認証マイクロサービスは、ユーザーを認証するために使用できます。 信頼の決定は、サービスとセキュリティ トークンまたは cookie 間で共有されます (必要に応じて、これらのトークンは、[Cookie の共有](/aspnet/core/security/cookie-sharing)を実装して、ASP.NET Core アプリケーション間で共有できます)。このパターンを示したものが図 9-2 です。
 
-![マイクロサービスに直接アクセスすると、認証と認可を含む信頼が、マイクロサービス間で共有される専用のマイクロサービスによって発行されたセキュリティ トークンによって処理されます。](./media/image2.png)
+![バックエンドのマイクロサービスを介した認証を示す図。](./media/index/identity-microservice-authentication.png)
 
 **図 9-2** ID マイクロサービスによる認証、信頼は認証トークンを使用して共有
+
+マイクロ サービスに直接アクセスすると、認証と認可を含む信頼が、マイクロサービス間で共有される専用のマイクロサービスによって発行されたセキュリティ トークンによって処理されます。
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>ASP.NET Core Identity を使用して認証する
 
@@ -121,7 +123,7 @@ else
 
 Visual Studio で ASP.NET コードの Web アプリケーション プロジェクトを作成するときに、 **[個人のユーザー アカウント]** 認証オプションを選択すると、図 9-3 に示すように、外部プロバイダーでサインインするために必要なすべてのコードがすでにプロジェクト内にあります。
 
-![認証を変更するボタンが強調表示された、新しい ASP.NET Core Web アプリケーションのダイアログ。](./media/image3.png)
+![[新しい ASP.NET Core Web アプリケーション] ダイアログのスクリーンショット。](./media/index/select-external-authentication-option.png)
 
 **図 9-3** Web アプリケーション プロジェクトを作成するときに、外部の認証を使用するためのオプションを選択する
 

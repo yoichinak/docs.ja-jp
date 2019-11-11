@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8703532ff8551e8bd42128eb9e8cdcf2afd9dad8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422209"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739678"
 ---
 # <a name="value-types-c-reference"></a>値型 (C# リファレンス)
 
@@ -32,7 +32,7 @@ ms.locfileid: "73422209"
 
 参照型とは異なり、値型から新しい型を派生することはできません。 ただし、参照型の場合と同様に、構造体はインターフェイスを実装できます。
 
-値型の変数は既定で `null` にすることはできません。 ただし、対応する [null 許容値型](../../programming-guide/nullable-types/index.md)の変数を `null` にすることはできます。
+値型の変数は既定で `null` にすることはできません。 ただし、対応する [null 許容値型](../builtin-types/nullable-value-types.md)の変数を `null` にすることはできます。
 
 各値型には、その型の既定値を初期化する暗黙のパラメーターなしのコンストラクターがあります。 値型の既定値の詳細については、「[既定値の一覧表](default-values-table.md)」を参照してください。
 
@@ -105,8 +105,6 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
-- [C# のキーワード](index.md)
-- [型](/dotnet/csharp/language-reference/keywords)
+- [C# キーワード](index.md)
 - [参照型](reference-types.md)
-- [null 許容値型](../../programming-guide/nullable-types/index.md)
+- [null 許容値型](../builtin-types/nullable-value-types.md)

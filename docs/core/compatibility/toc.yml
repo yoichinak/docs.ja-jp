@@ -8,17 +8,17 @@
       href: breaking-changes.md
     - name: バージョン別
       items:
-        - name: .NET Framework - .NET Core
+        - name: .NET Framework から .NET Core へ
           href: framework-core.md
-        - name: 2.2 - 3.0
+        - name: 2.2 から 3.0
           href: 2.2-3.0.md
-        - name: 3.0 Preview 6 - 3.0 Preview 7
+        - name: 3.0 Preview 6 から 3.0 Preview 7 へ
           href: 3.0.6-3.0.7.md
-        - name: 3.0 Preview 7 - 3.0 Preview 8
+        - name: 3.0 Preview 7 から 3.0 Preview 8 へ
           href: 3.0.7-3.0.8.md
-        - name: 3.0 Preview 8 - 3.0 Preview 9
+        - name: 3.0 Preview 8 から 3.0 Preview 9 へ
           href: 3.0.8-3.0.9.md
-        - name: 3.0 Preview 9 - 3.0 RC1
+        - name: 3.0 Preview 9 から 3.0 RC1 へ
           href: 3.0.9-3.0rc1.md
     - name: カテゴリ別
       items:

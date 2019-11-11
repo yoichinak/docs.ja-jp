@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: d82c60374db637bb8ac879a23e2d74c39194ca18
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8d090df1338c535b11a7fd3ec32f6d1cb00b338f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353727"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739689"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>方法: パターン マッチング、is 演算子、as 演算子を使用して安全にキャストする
 
@@ -23,7 +23,7 @@ ms.locfileid: "71353727"
 
 上記のサンプルでは、パターン マッチング構文のいくつかの機能が示されています。 `if (a is Mammal m)` ステートメントと `if (o is Mammal m)` ステートメントにより、初期化が割り当てられたテストが結合されます。 この割り当ては、テストに成功した場合にのみ行われます。 変数 `m` は、それが割り当てられている埋め込み `if` ステートメントでのみ範囲に入ります。 後で同じメソッドで `m` にアクセスすることはできません。 対話型ウィンドウで試してください。
 
-次のサンプル コードに示されているように、[null 許容値型](../programming-guide/nullable-types/index.md)に値があるかどうかをテストする目的で同じ構文を使用することもできます。
+次のサンプル コードに示されているように、[null 許容値型](../language-reference/builtin-types/nullable-value-types.md)に値があるかどうかをテストする目的で同じ構文を使用することもできます。
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 
