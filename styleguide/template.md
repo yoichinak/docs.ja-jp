@@ -14,16 +14,16 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 4f50d4d446896e12b5beb86fc649ea4fa7c82718
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e9a57cd569004edbe54645daa64e8c93b4afd67a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775540"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740075"
 ---
 # <a name="metadata-and-markdown-template"></a>メタデータとマークダウン テンプレート
 
-この dotnet/ドキュメント テンプレートには、メタデータの設定に関するガイドラインだけでなく、マークダウン構文の例が含まれています。 これを最大限に活用するには、[生のマークダウン](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md)と[表示ビュー](https://github.com/dotnet/docs/blob/master/styleguide/template.md)の両方を表示する必要があります (たとえば、生のマークダウンにはメタデータ ブロックが表示されますが、表示ビューには表示されません)。
+この dotnet/ドキュメント テンプレートには、メタデータの設定に関するガイドラインだけでなく、マークダウン構文の例が含まれています。 これを最大限に活用するには、[生のマークダウン](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md)と[表示ビュー](https://github.com/dotnet/docs/blob/master/styleguide/template.md)の両方を表示する必要があります。
 
 マークダウン ファイルを作成する場合、このテンプレートを新しいファイルにコピーして、下記のようにメタデータを記入し、上の H1 見出しを記事のタイトルに設定して、コンテンツを削除します。
 
@@ -38,7 +38,7 @@ ms.locfileid: "72775540"
 - **説明**:記事の内容を要約します。 これは通常、検索結果ページに表示されますが、検索ランキングには使用されません。 長さは、スペースを含め 115 から 145 文字にする必要があります。
 - **author** および **ms.author**:"author" フィールドには、作成者のエイリアスではなく、**GitHub ユーザー名**を含める必要があります。  一方で、**ms.author** フィールドには、Microsoft エイリアスが記載され、記事の管理者が示されている必要があります。
 - **ms.topic**:トピックの種類です。 最も一般的な値は `conceptual` であり、グローバル レベルに設定されています。 使用されるその他の一般的な値は、`tutorial`、`overview`、`reference` です。
-- **ms.devlang** では、トピックに表示される言語フィルターが定義されます。 「[サポートされる言語](#supported-languages)」セクションに、サポートされる値のリストが表示されます。 トピックの中に複数のプログラミング言語がある場合にのみ設定が必要です。 通常、コンテンツ内にあるこの値については、`csharp`、`vb`、`fsharp`、`cpp` のみを使用します。
+- **dev_langs** では、トピックに表示される言語フィルターが定義されます。 「[サポートされる言語](#supported-languages)」セクションに、サポートされる値のリストが表示されます。 トピックの中に複数のプログラミング言語がある場合にのみ設定が必要です。 通常、コンテンツ内にあるこの値については、`csharp`、`vb`、`fsharp`、`cpp` のみを使用します。
 - **ms.prod**:BI の目的に使用される製品 ID です。 これらは通常グローバル レベルに設定されているため、各記事のメタデータ ブロックには、通常は表示されません。
 - **ms.technology**:追加の BI 分類です。 サポートされる値の一部として、C# トピックの場合は `devlang-csharp`、F# トピックの場合は `devlang-fsharp`、VB トピックの場合は `devlang-visual-basic` があります。 その他のガイドについては、値が異なるため、チームのメンバーに助言を求めてください。
 - **ms.date**:MM/DD/YYYY 形式の日付です。 公開済みページに表示される日付です。前回、記事が大幅に編集されたか、"最新" であることが保証された (すなわち、記事がレビュー済みで、最新であるとみなされた) 日付を示します。
@@ -70,7 +70,9 @@ ms.locfileid: "72775540"
 
 ## <a name="headings"></a>見出し
 
-文スタイルで大文字化します。 見出しの最初の単語は常に大文字にします。ただし、タイトルまたは見出しのコロン後の単語は大文字にしないでください (例: "方法: sort")。
+文スタイルで大文字化します。 見出しの最初の単語の最初の文字、固有名詞、コロンの後の最初の文字は大文字にします (たとえば、"Tutorial: Predict prices using regression with ML.NET")。
+
+"How to" の後にはコロンを追加しないでください (たとえば、"How to sort an array" とし、"How to: Sort an array" のようにはしません)。
 
 見出しは atx スタイルを使用して作成する必要があります。つまり、見出しを示すために行の先頭に 1 から 6 文字のハッシュ文字 (#) を使用します。これは、HTML 見出しレベルの H1 〜 H6 に対応します。 レベル 1 とレベル 2 のヘッダーの例が上で使用されています。
 
@@ -305,6 +307,7 @@ UID に特殊文字 \`、\# または \* が含まれる場合、UID 値はそ�
 |Objective-C|objc|
 |OData|odata|
 |PHP|php|
+|protobuf|protobuf|
 |PowerApps (ドット小数点区切り記号)|powerapps-dot|
 |PowerApps (コンマ小数点区切り記号)|powerapps-comma|
 |PowerShell|powershell|
@@ -324,7 +327,7 @@ UID に特殊文字 \`、\# または \* が含まれる場合、UID 値はそ�
 
 C# (\`\`\`csharp)、Python (\`\`\`python)、PowerShell (\`\`\`powershell) の言語 ID を使用したコード ブロックの例を次に示します。
 
-##### <a name="c9839"></a>C&#9839;
+##### <a name="c"></a>C\#
 
 ```csharp
 using System;
