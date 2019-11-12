@@ -4,12 +4,12 @@ description: プラグインをサポートする .NET Core アプリケーシ�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 5267a56d0742d8e1cae4a81c058bc4ee05e83b4e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 16fc9d3c721ddd0618c980c7dc406b7ad7864ff5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579504"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739698"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>プラグインがある .NET Core アプリケーションを作成する
 
@@ -285,3 +285,7 @@ static Assembly LoadPlugin(string relativePath)
 ## <a name="plugin-target-framework-recommendations"></a>プラグインのターゲット フレームワークの推奨事項
 
 プラグインの依存関係の読み込みでは *.deps.json* ファイルが使用されるため、プラグインのターゲット フレームワークに関連する課題があります。 具体的には、プラグインでは .NET Standard のバージョンではなく、.NET Core 3.0 などのランタイムをターゲットとする必要があります。 プロジェクトがターゲットとするフレームワークに基づいて *.deps.json* ファイルが生成されます。また、多くの .NET Standard と互換性のあるパッケージでは .NET Standard に対してビルドするための参照アセンブリと、特定のランタイムのための実装アセンブリが同梱されているため、 *.deps.json* が実装アセンブリを正しく認識できない場合や、想定していた .NET Core バージョンではなく、アセンブリの .NET Standard バージョンが取得される場合があります。
+
+## <a name="plugin-framework-references"></a>プラグイン フレームワークの参照
+
+現時点では、プラグインで新しいフレームワークをプロセスに導入することはできません。 たとえば、ルート `Microsoft.NETCore.App` フレームワークのみを使用するアプリケーションに、`Microsoft.AspNetCore.App` フレームワークを使用するプラグインを読み込むことはできません。 ホスト アプリケーションは、プラグインで必要なすべてのフレームワークへの参照を宣言する必要があります。
