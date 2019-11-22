@@ -13,12 +13,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73115515"
 ---
-# <a name="systemruntimecaching-element-cache-settings"></a>\<の > 要素 (キャッシュ設定)
+# <a name="systemruntimecaching-element-cache-settings"></a>\<system.runtime.caching> 要素 (キャッシュ設定)
 
 構成ファイル内の <xref:System.Runtime.Caching.ObjectCache> エントリを使用して既定のメモリ内の `memoryCache` の実装の構成を提供します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<の >**  
+&nbsp;&nbsp;**\<system.runtime.caching>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -78,4 +78,4 @@ ms.locfileid: "73115515"
   
 ## <a name="see-also"></a>関連項目
 
-- [memoryCache > 要素の \<(キャッシュ設定)](memorycache-element-cache-settings.md)
+- [\<memoryCache> 要素 (キャッシュ設定)](memorycache-element-cache-settings.md)
