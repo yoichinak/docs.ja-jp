@@ -1,5 +1,5 @@
 ---
-title: Declare ステートメント (Visual Basic)
+title: Declare Statement
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Declare
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: e839fe14c360229fbe0350fd7878c7a844056e8b
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 48a36e3ecdef40810ea7a3194e85b5b646154331
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005098"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354083"
 ---
-# <a name="declare-statement"></a>Declare ステートメント
+# <a name="declare-statement"></a>Declare Statement
 
-外部ファイルに実装されているプロシージャへの参照を宣言します。
+Declares a reference to a procedure implemented in an external file.
 
 ## <a name="syntax"></a>構文
 
@@ -52,94 +52,94 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 ## <a name="parts"></a>指定項目
 
-|項目|定義|
+|用語|定義|
 |---|---|
-|`attributelist`|任意。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。|
-|`accessmodifier`|任意。 次のいずれかになります。<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-    の[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [プライベート保護](../../language-reference/modifiers/private-protected.md)<br /><br /> 「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|
-|`Shadows`|任意。 「[シャドウ](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。|
-|`charsetmodifier`|任意。 文字セットとファイル検索情報を指定します。 次のいずれかになります。<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) (既定値)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|
-|`Sub`|省略可能ですが、`Sub` または `Function` のいずれかが表示されている必要があります。 外部プロシージャが値を返さないことを示します。|
-|`Function`|省略可能ですが、`Sub` または `Function` のいずれかが表示されている必要があります。 外部プロシージャが値を返すことを示します。|
-|`name`|必須。 この外部参照の名前です。 詳細については、次を参照してください。 [宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)|
-|`Lib`|必須。 では、外部プロシージャを含む外部ファイル (DLL またはコードリソース) を識別する `Lib` 句が導入されています。|
-|`libname`|必須。 宣言されたプロシージャを含むファイルの名前。|
-|`Alias`|任意。 宣言されているプロシージャが、`name` で指定された名前によってファイル内で識別されないことを示します。 @No__t-0 で id を指定します。|
-|`aliasname`|@No__t-0 キーワードを使用する場合は必須です。 次の2つの方法のいずれかでプロシージャを識別する文字列。<br /><br /> 引用符で囲まれた、ファイル内のプロシージャのエントリポイント名 (`""`)<br /><br /> \- または -<br /><br /> ファイル内のプロシージャのエントリポイントの序数を指定する整数の後にシャープ記号 (@no__t 0)|
-|`parameterlist`|プロシージャがパラメーターを受け取る場合は必須です。 「[パラメーターリスト](../../../visual-basic/language-reference/statements/parameter-list.md)」を参照してください。|
-|`returntype`|@No__t-0 が指定され、`Option Strict` が `On` である場合は必須です。 プロシージャによって返される値のデータ型。|
+|`attributelist`|省略可能です。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|
+|`accessmodifier`|省略可能です。 次のいずれかの値を指定します。<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> 「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|
+|`Shadows`|省略可能です。 See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|
+|`charsetmodifier`|省略可能です。 Specifies character set and file search information. 次のいずれかの値を指定します。<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) (default)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|
+|`Sub`|Optional, but either `Sub` or `Function` must appear. Indicates that the external procedure does not return a value.|
+|`Function`|Optional, but either `Sub` or `Function` must appear. Indicates that the external procedure returns a value.|
+|`name`|必須です。 Name of this external reference. For more information, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`Lib`|必須です。 Introduces a `Lib` clause, which identifies the external file (DLL or code resource) that contains an external procedure.|
+|`libname`|必須です。 Name of the file that contains the declared procedure.|
+|`Alias`|省略可能です。 Indicates that the procedure being declared cannot be identified within its file by the name specified in `name`. You specify its identification in `aliasname`.|
+|`aliasname`|Required if you use the `Alias` keyword. String that identifies the procedure in one of two ways:<br /><br /> The entry point name of the procedure within its file, within quotes (`""`)<br /><br /> -または-<br /><br /> A number sign (`#`) followed by an integer specifying the ordinal number of the procedure's entry point within its file|
+|`parameterlist`|Required if the procedure takes parameters. See [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|
+|`returntype`|Required if `Function` is specified and `Option Strict` is `On`. Data type of the value returned by the procedure.|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-場合によっては、プロジェクト外のファイル (DLL やコードリソースなど) で定義されたプロシージャを呼び出す必要があります。 この場合、プロシージャが配置されている場所、その識別方法、呼び出し元のシーケンスと戻り値の型、および使用する文字列文字セットなど、プロシージャを正しく呼び出すために必要な情報には、Visual Basic コンパイラがアクセスできません。 @No__t-0 ステートメントは、外部プロシージャへの参照を作成し、この必要な情報を提供します。
+Sometimes you need to call a procedure defined in a file (such as a DLL or code resource) outside your project. When you do this, the Visual Basic compiler does not have access to the information it needs to call the procedure correctly, such as where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The `Declare` statement creates a reference to an external procedure and supplies this necessary information.
 
-`Declare` は、モジュール レベルでのみ使用できます。 つまり、外部参照の*宣言コンテキスト*は、クラス、構造体、またはモジュールである必要があり、ソースファイル、名前空間、インターフェイス、プロシージャ、またはブロックにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。
+`Declare` は、モジュール レベルでのみ使用できます。 This means the *declaration context* for an external reference must be a class, structure, or module, and cannot be a source file, namespace, interface, procedure, or block. 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。
 
-外部参照の既定値は[Public](../../../visual-basic/language-reference/modifiers/public.md)アクセスします。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。
+External references default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access. アクセス修飾子を使用してこれらのアクセス レベルを調整できます。
 
 ## <a name="rules"></a>ルール
 
-- **アトリビュート.** 外部参照に属性を適用できます。 適用した属性は、プロジェクト内でのみ有効になり、外部ファイルには反映されません。
+- **Attributes.** You can apply attributes to an external reference. Any attribute you apply has effect only in your project, not in the external file.
 
-- **ド.** 外部プロシージャは暗黙的に[共有](../../../visual-basic/language-reference/modifiers/shared.md)されます。 外部参照を宣言するときに `Shared` キーワードを使用することはできません。また、共有状態を変更することもできません。
+- **Modifiers.** External procedures are implicitly [Shared](../../../visual-basic/language-reference/modifiers/shared.md). You cannot use the `Shared` keyword when declaring an external reference, and you cannot alter its shared status.
 
-  外部プロシージャは、オーバーライド、インターフェイスメンバーの実装、またはイベントの処理に関与することはできません。 したがって、`Declare` ステートメントで `Overrides`、`Overridable`、`NotOverridable`、`MustOverride`、`Implements`、または `Handles` キーワードを使用することはできません。
+  An external procedure cannot participate in overriding, implement interface members, or handle events. Accordingly, you cannot use the `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements`, or `Handles` keyword in a `Declare` statement.
 
-- **外部プロシージャ名。** 外部ファイル (`aliasname`) 内のプロシージャのエントリポイント名と同じ名前 (@no__t 0) をこの外部参照に与える必要はありません。 @No__t-0 句を使用して、エントリポイント名を指定できます。 これは、外部プロシージャの名前が Visual Basic 予約済みの修飾子、変数、プロシージャ、または同じスコープ内のその他のプログラミング要素と同じである場合に便利です。
-
-  > [!NOTE]
-  > ほとんどの Dll のエントリポイント名は大文字と小文字が区別されます。
-
-- **外部プロシージャ番号。** または、`Alias` 句を使用して、外部ファイルのエクスポートテーブル内のエントリポイントの序数を指定することもできます。 これを行うには、番号記号 (`#`) を使用して `aliasname` を開始します。 これは、Visual Basic で外部プロシージャ名に使用できない文字がある場合や、外部ファイルによってプロシージャが名前なしでエクスポートされた場合に便利です。
-
-## <a name="data-type-rules"></a>データ型ルール
-
-- **パラメーターのデータ型。** @No__t-0 が `On` の場合、`parameterlist` で各パラメーターのデータ型を指定する必要があります。 任意のデータ型、または列挙体、構造体、クラス、またはインターフェイスの名前を指定できます。 @No__t-0 では、`As` 句を使用して、各パラメーターに渡される引数のデータ型を指定します。
+- **External Procedure Name.** You do not have to give this external reference the same name (in `name`) as the procedure's entry-point name within its external file (`aliasname`). You can use an `Alias` clause to specify the entry-point name. This can be useful if the external procedure has the same name as a Visual Basic reserved modifier or a variable, procedure, or any other programming element in the same scope.
 
   > [!NOTE]
-  > .NET Framework に対して外部プロシージャが記述されていない場合は、データ型が対応していることに注意する必要があります。 たとえば、`Integer` パラメーター (Visual Basic 6.0 で16ビット) を使用して Visual Basic 6.0 プロシージャへの外部参照を宣言する場合は、`Declare` ステートメントで、対応する引数を `Short` として指定する必要があります。これは、の16ビット整数型であるためです。Visual Basic。 同様に、@no__t 0 Visual Basic 6.0 では異なるデータ幅があり、`Date` の実装方法が異なります。
+  > Entry-point names in most DLLs are case-sensitive.
 
-- **戻り値のデータ型。** 外部プロシージャが @no__t 0 で `Option Strict` が `On` の場合は、呼び出し元のコードに返される値のデータ型を指定する必要があります。 任意のデータ型、または列挙体、構造体、クラス、またはインターフェイスの名前を指定できます。
+- **External Procedure Number.** Alternatively, you can use an `Alias` clause to specify the ordinal number of the entry point within the export table of the external file. To do this, you begin `aliasname` with a number sign (`#`). This can be useful if any character in the external procedure name is not allowed in Visual Basic, or if the external file exports the procedure without a name.
+
+## <a name="data-type-rules"></a>Data Type Rules
+
+- **Parameter Data Types.** If `Option Strict` is `On`, you must specify the data type of each parameter in `parameterlist`. This can be any data type or the name of an enumeration, structure, class, or interface. Within `parameterlist`, you use an `As` clause to specify the data type of the argument to be passed to each parameter.
 
   > [!NOTE]
-  > Visual Basic コンパイラでは、データ型が外部プロシージャのデータ型と互換性があるかどうかは検証されません。 不一致がある場合、共通言語ランタイムは、実行時に @no__t 0 例外を生成します。
+  > If the external procedure was not written for the .NET Framework, you must take care that the data types correspond. For example, if you declare an external reference to a Visual Basic 6.0 procedure with an `Integer` parameter (16 bits in Visual Basic 6.0), you must identify the corresponding argument as `Short` in the `Declare` statement, because that is the 16-bit integer type in Visual Basic. Similarly, `Long` has a different data width in Visual Basic 6.0, and `Date` is implemented differently.
 
-- **既定のデータ型。** @No__t-0 が `Off` で、`parameterlist` のパラメーターのデータ型を指定していない場合、Visual Basic コンパイラは対応する引数を[Object データ型](../../../visual-basic/language-reference/data-types/object-data-type.md)に変換します。 同様に、`returntype` を指定しない場合、コンパイラは戻り値のデータ型を `Object` にします。
+- **Return Data Type.** If the external procedure is a `Function` and `Option Strict` is `On`, you must specify the data type of the value returned to the calling code. This can be any data type or the name of an enumeration, structure, class, or interface.
 
   > [!NOTE]
-  > 別のプラットフォームに記述されている可能性がある外部プロシージャを扱うため、データ型についての想定を作成したり、既定値を許可したりすることは危険です。 すべてのパラメーターのデータ型と戻り値 (存在する場合) を指定する方が、はるかに安全です。 これにより、コードの読みやすさも向上します。
+  > The Visual Basic compiler does not verify that your data types are compatible with those of the external procedure. If there is a mismatch, the common language runtime generates a <xref:System.Runtime.InteropServices.MarshalDirectiveException> exception at run time.
+
+- **Default Data Types.** If `Option Strict` is `Off` and you do not specify the data type of a parameter in `parameterlist`, the Visual Basic compiler converts the corresponding argument to the [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md). Similarly, if you do not specify `returntype`, the compiler takes the return data type to be `Object`.
+
+  > [!NOTE]
+  > Because you are dealing with an external procedure that might have been written on a different platform, it is dangerous to make any assumptions about data types or to allow them to default. It is much safer to specify the data type of every parameter and of the return value, if any. This also improves the readability of your code.
 
 ## <a name="behavior"></a>動作
 
-- **検索.** 外部参照は、そのクラス、構造体、またはモジュール全体でスコープ内にあります。
+- **Scope.** An external reference is in scope throughout its class, structure, or module.
 
-- **最短.** 外部参照の有効期間は、宣言されているクラス、構造体、またはモジュールと同じです。
+- **Lifetime.** An external reference has the same lifetime as the class, structure, or module in which it is declared.
 
-- **外部プロシージャを呼び出しています。** 外部プロシージャは、`Function` または `Sub` プロシージャを呼び出すのと同じ方法で呼び出すことができます。この場合、値を返す場合は式で使用し、値を返さない場合は[Call ステートメント](../../../visual-basic/language-reference/statements/call-statement.md)で指定します。
+- **Calling an External Procedure.** You call an external procedure the same way you call a `Function` or `Sub` procedure—by using it in an expression if it returns a value, or by specifying it in a [Call Statement](../../../visual-basic/language-reference/statements/call-statement.md) if it does not return a value.
 
-  引数は、`Declare` ステートメントの `parameterlist` によって指定されたとおりに、外部プロシージャに渡すことができます。 パラメーターが外部ファイル内で最初に宣言された方法を考慮しないでください。 同様に、戻り値がある場合は、`Declare` ステートメントの `returntype` で指定されたとおりに使用します。
+  You pass arguments to the external procedure exactly as specified by `parameterlist` in the `Declare` statement. Do not take into account how the parameters were originally declared in the external file. Similarly, if there is a return value, use it exactly as specified by `returntype` in the `Declare` statement.
 
-- **文字セット。** @No__t-0 でを指定すると、外部プロシージャを呼び出すときに Visual Basic が文字列をマーシャリングする方法を指定できます。 @No__t-0 修飾子は、すべての文字列を ANSI 値にマーシャリングするように Visual Basic に指示し、`Unicode` 修飾子は、すべての文字列を Unicode 値にマーシャリングするように指示します。 @No__t-0 修飾子は、外部参照に基づく .NET Framework 規則に従って文字列をマーシャリングするように Visual Basic に指示します。 `name`、または指定されている場合は `aliasname` です。 既定値は `Ansi` です。
+- **Character Sets.** You can specify in `charsetmodifier` how Visual Basic should marshal strings when it calls the external procedure. The `Ansi` modifier directs Visual Basic to marshal all strings to ANSI values, and the `Unicode` modifier directs it to marshal all strings to Unicode values. The `Auto` modifier directs Visual Basic to marshal strings according to .NET Framework rules based on the external reference `name`, or `aliasname` if specified. 既定値は `Ansi`です。
 
-  `charsetmodifier` は、Visual Basic が外部ファイル内で外部プロシージャを検索する方法も指定します。 `Ansi` および `Unicode` は、検索中に名前を変更せずに、直接 Visual Basic を参照します。 `Auto` は、次のように、ランタイムプラットフォームの基本文字セットを決定し、場合によっては外部プロシージャ名を変更するように Visual Basic に指示します。
+  `charsetmodifier` also specifies how Visual Basic should look up the external procedure within its external file. `Ansi` and `Unicode` both direct Visual Basic to look it up without modifying its name during the search. `Auto` directs Visual Basic to determine the base character set of the run-time platform and possibly modify the external procedure name, as follows:
 
-  - Windows 95、Windows 98、または Windows Millennium Edition などの ANSI プラットフォームでは、最初に名前を変更せずに外部プロシージャを検索します。 失敗した場合は、外部プロシージャ名の末尾に "A" を追加して、もう一度確認します。
+  - On an ANSI platform, such as Windows 95, Windows 98, or Windows Millennium Edition, first look up the external procedure with no name modification. If that fails, append "A" to the end of the external procedure name and look it up again.
 
-  - Windows NT、Windows 2000、Windows XP などの Unicode プラットフォームでは、最初に名前を変更せずに外部プロシージャを検索します。 失敗した場合は、外部プロシージャ名の末尾に "W" を追加して、もう一度確認します。
+  - On a Unicode platform, such as Windows NT, Windows 2000, or Windows XP, first look up the external procedure with no name modification. If that fails, append "W" to the end of the external procedure name and look it up again.
 
-- **メカニズムです。** Visual Basic、.NET Framework を使用して*プラットフォーム呼び出し*(PInvoke) メカニズムを解決し、外部プロシージャにアクセスします。 `Declare`ステートメントと<xref:System.Runtime.InteropServices.DllImportAttribute>両方のクラスが自動的に、このメカニズムを使用して、PInvoke を認識する必要はありません。 詳細については、「[チュートリアル:Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)します。
+- **Mechanism.** Visual Basic uses the .NET Framework *platform invoke* (PInvoke) mechanism to resolve and access external procedures. The `Declare` statement and the <xref:System.Runtime.InteropServices.DllImportAttribute> class both use this mechanism automatically, and you do not need any knowledge of PInvoke. For more information, see [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
 
 > [!IMPORTANT]
-> 外部プロシージャが共通言語ランタイム (CLR) の外部で実行されている場合は、*アンマネージコード*です。 このようなプロシージャ (Windows API 関数や COM メソッドなど) を呼び出すと、アプリケーションがセキュリティ上のリスクにさらされる可能性があります。 詳細については、「[アンマネージコードの安全なコーディングのガイドライン](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)」を参照してください。
+> If the external procedure runs outside the common language runtime (CLR), it is *unmanaged code*. When you call such a procedure, for example a Windows API function or a COM method, you might expose your application to security risks. For more information, see [Secure Coding Guidelines for Unmanaged Code](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).
 
 ## <a name="example"></a>例
 
-次の例では、現在のユーザー名を返す `Function` プロシージャへの外部参照を宣言しています。 次に、`getUser` プロシージャの一部として、外部プロシージャ `GetUserNameA` を呼び出します。
+The following example declares an external reference to a `Function` procedure that returns the current user name. It then calls the external procedure `GetUserNameA` as part of the `getUser` procedure.
 
 [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]
 
 ## <a name="example"></a>例
 
-@No__t-0 は、アンマネージコードで関数を使用する別の方法を提供します。 次の例では、`Declare` ステートメントを使用せずにインポートされた関数を宣言します。
+The <xref:System.Runtime.InteropServices.DllImportAttribute> provides an alternative way of using functions in unmanaged code. The following example declares an imported function without using a `Declare` statement.
 
 [!code-vb[VbVbalrStatements#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#16)]
 
@@ -154,4 +154,4 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)
 - [Call ステートメント](../../../visual-basic/language-reference/statements/call-statement.md)
-- [チュートリアル: Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [チュートリアル : Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

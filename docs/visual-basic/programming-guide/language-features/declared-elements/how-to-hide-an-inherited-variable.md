@@ -1,5 +1,5 @@
 ---
-title: '方法: 継承された変数の非表示 (Visual Basic)'
+title: '方法 : 継承された変数を隠す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: f575830df44076f694c1dfb2f68379594240fb80
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: c20c36b26c90c82da4e8836799f499498ccc40e4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004844"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345350"
 ---
-# <a name="how-to-hide-an-inherited-variable-visual-basic"></a>方法: 継承された変数の非表示 (Visual Basic)
+# <a name="how-to-hide-an-inherited-variable-visual-basic"></a>方法: 継承された変数を隠す (Visual Basic)
 
-派生クラスは、その基本クラスのすべての定義を継承します。 基底クラスの要素と同じ名前を使用して変数を定義する場合は、派生クラスで変数を定義するときに、その基底クラスの要素を非表示にしたり、*シャドウ*したりすることができます。 これを行うと、シャドウ機構を明示的にバイパスしない限り、派生クラスのコードは変数にアクセスします。
+A derived class inherits all the definitions of its base class. If you want to define a variable using the same name as an element of the base class, you can hide, or *shadow*, that base class element when you define your variable in the derived class. If you do this, code in the derived class accesses your variable unless it explicitly bypasses the shadowing mechanism.
 
-継承された変数を非表示にするもう1つの理由は、基本クラスのリビジョンに対して保護することです。 基底クラスには、継承している要素を変更する変更が加えられる場合があります。 この場合、`Shadows` 修飾子は、派生クラスからの参照を、基底クラス要素ではなく、変数に対して強制的に解決します。
+Another reason you might want to hide an inherited variable is to protect against base class revision. The base class might undergo a change that alters the element you are inheriting. If this happens, the `Shadows` modifier forces references from the derived class to be resolved to your variable, instead of to the base class element.
 
-## <a name="to-hide-an-inherited-variable"></a>継承された変数を非表示にするには
+## <a name="to-hide-an-inherited-variable"></a>To hide an inherited variable
 
-1. 非表示にする変数がクラスレベル (プロシージャ以外) で宣言されていることを確認してください。 それ以外の場合は、非表示にする必要はありません。
+1. Be sure the variable you want to hide is declared at class level (outside any procedure). Otherwise, you do not need to hide it.
   
-2. 派生クラス内で、変数を宣言する[Dim ステートメント](../../../language-reference/statements/dim-statement.md)を記述します。 継承された変数と同じ名前を使用します。
+2. Inside your derived class, write a [Dim Statement](../../../language-reference/statements/dim-statement.md) declaring your variable. Use the same name as that of the inherited variable.
 
-3. [Shadows](../../../language-reference/modifiers/shadows.md)キーワードを宣言に含めます。
+3. Include the [Shadows](../../../language-reference/modifiers/shadows.md) keyword in the declaration.
 
-     派生クラスのコードが変数名を参照すると、コンパイラは変数への参照を解決します。
+     When code in the derived class refers to the variable name, the compiler resolves the reference to your variable.
 
-     次の例は、継承された変数のシャドウを示しています。
+     The following example illustrates shadowing of an inherited variable:
   
     ```vb  
     Public Class ShadowBaseClass  
@@ -50,19 +50,19 @@ ms.locfileid: "72004844"
     End Class  
     ```  
   
-     前の例では、基底クラスの変数 `shadowString` を宣言し、派生クラスでそれをシャドウしています。 派生クラスのプロシージャ `ShowStrings` は、名前 `shadowString` が修飾されていない場合に、文字列のシャドウバージョンを表示します。 @No__t-0 が `MyBase` キーワードで修飾されている場合は、シャドウされたバージョンが表示されます。  
+     The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `ShowStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase` keyword.  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング
 
-シャドウでは、同じ名前の変数の複数のバージョンが導入されます。 コードステートメントが変数名を参照する場合、コンパイラが参照を解決するバージョンは、コードステートメントの場所や修飾文字列の存在などの要因によって異なります。 これにより、シャドウされた変数の意図しないバージョンを参照するリスクが増加する可能性があります。 シャドウされた変数へのすべての参照を完全に修飾することで、そのリスクを軽減することができます。
+Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to an unintended version of a shadowed variable. You can lower that risk by fully qualifying all references to a shadowed variable.
 
 ## <a name="see-also"></a>関連項目
 
 - [宣言された要素の参照](references-to-declared-elements.md)
-- [Visual Basic でのシャドウ処理](shadowing.md)
+- [Shadowing in Visual Basic](shadowing.md)
 - [シャドウとオーバーライドの違い](differences-between-shadowing-and-overriding.md)
-- [2 つのオブジェクトが等しいかどうかをテストする方法変数 @ no__t と同じ名前の変数を非表示にします。
-- [2 つのオブジェクトが等しいかどうかをテストする方法派生クラスによって非表示になっている変数にアクセスする @ no__t-0
+- [方法: 自分で宣言した変数と同じ名前の変数を隠す](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [方法: 派生クラスによって非表示になっている変数にアクセスする](how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me、My、MyBase、および MyClass](../../program-structure/me-my-mybase-and-myclass.md)
 - [継承の基本](../objects-and-classes/inheritance-basics.md)

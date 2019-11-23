@@ -1,5 +1,5 @@
 ---
-title: '\=演算子 (Visual Basic)'
+title: '\= 演算子'
 ms.date: 07/20/2015
 f1_keywords:
 - '\='
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-ms.openlocfilehash: d7b4a6946cc38984272a6b63e14e8c1db2825a5e
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 600acf9b41b63358da245fe602595fee4093b15b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700682"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330952"
 ---
-# <a name="-operator"></a>\\ = 演算子
-式の値によって変数またはプロパティの値を除算し、その結果を変数またはプロパティに代入します。  
+# <a name="-operator"></a>\\= Operator
+Divides the value of a variable or property by the value of an expression and assigns the integer result to the variable or property.  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,30 +29,30 @@ variableorproperty \= expression
   
 ## <a name="parts"></a>指定項目  
  `variableorproperty`  
- 必須。 任意の数値変数またはプロパティ。  
+ 必須です。 Any numeric variable or property.  
   
  `expression`  
- 必須。 任意の数式。  
+ 必須です。 任意の数式。  
   
-## <a name="remarks"></a>コメント  
- @No__t-0 演算子の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)にすることはできません。  
+## <a name="remarks"></a>Remarks  
+ The element on the left side of the `\=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- @No__t-0 演算子は、変数またはプロパティの値を右側の値で除算し、整数の結果をその左側の変数またはプロパティに代入します。  
+ The `\=` operator divides the value of a variable or property on its left by the value on its right, and assigns the integer result to the variable or property on its left  
   
- 整数除算の詳細については、「 [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)」を参照してください。  
+ For further information on integer division, see [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).  
   
 ## <a name="overloading"></a>オーバーロード  
- @No__t-0 演算子は*オーバーロード*できます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 @No__t-0 演算子のオーバーロードは、`\=` 演算子の動作に影響します。 コードで `\` をオーバーロードするクラスまたは構造体に @no__t 0 を使用している場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ The `\` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `\` operator affects the behavior of the `\=` operator. If your code uses `\=` on a class or structure that overloads `\`, be sure you understand its redefined behavior. 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`\=` 演算子を使用して1つの @no__t 1 つの変数を2番目の変数に除算し、整数の結果を最初の変数に代入します。  
+ The following example uses the `\=` operator to divide one `Integer` variable by a second and assign the integer result to the first variable.  
   
  [!code-vb[VbVbalrOperators#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#19)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
-- [/= 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
 - [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)

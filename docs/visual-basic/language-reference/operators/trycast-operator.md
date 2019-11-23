@@ -1,5 +1,5 @@
 ---
-title: TryCast 演算子 (Visual Basic)
+title: TryCast 演算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.trycast
@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - TryCast keyword [Visual Basic]
 ms.assetid: d1ef5d47-fef4-491e-b014-1d910628f65c
-ms.openlocfilehash: c0eea4565d5040bb00743fc7864ac15b0fccdea9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53306575cfc385039be3939fd87cf993b4509af4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013466"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348208"
 ---
 # <a name="trycast-operator-visual-basic"></a>TryCast 演算子 (Visual Basic)
-例外をスローしない型変換操作について説明します。  
+Introduces a type conversion operation that does not throw an exception.  
   
 ## <a name="remarks"></a>Remarks  
- 変換が失敗した場合、`CType`と`DirectCast`スロー両方、<xref:System.InvalidCastException>エラー。 これは、アプリケーションのパフォーマンスに悪影響を与える。 `TryCast` 返します[Nothing](../../../visual-basic/language-reference/nothing.md)、可能性のある例外を処理するのではなく、に対して返された結果をテストする必要がありますのみように`Nothing`します。  
+ If an attempted conversion fails, `CType` and `DirectCast` both throw an <xref:System.InvalidCastException> error. This can adversely affect the performance of your application. `TryCast` returns [Nothing](../../../visual-basic/language-reference/nothing.md), so that instead of having to handle a possible exception, you need only test the returned result against `Nothing`.  
   
- 使用する、`TryCast`キーワードを使用する場合と同様、 [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)と[DirectCast 演算子](../../../visual-basic/language-reference/operators/directcast-operator.md)キーワード。 最初の引数と 2 番目の引数は変換する型として式を指定します。 `TryCast` クラスやインターフェイスなど、参照型に対してのみ動作します。 2 つの型の間の継承または実装のリレーションシップが必要です。 つまり 1 つの型が継承または他の実装する必要があります。  
+ You use the `TryCast` keyword the same way you use the [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) and the [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) keyword. You supply an expression as the first argument and a type to convert it to as the second argument. `TryCast` operates only on reference types, such as classes and interfaces. It requires an inheritance or implementation relationship between the two types. This means that one type must inherit from or implement the other.  
   
-## <a name="errors-and-failures"></a>エラーと障害  
- `TryCast` 継承または実装のリレーションシップが存在しないことが検出された場合は、コンパイラ エラーを生成します。 コンパイラ エラーがないことに成功した変換が保証されません。 必要な変換を縮小すると、実行時に失敗する可能性が。 この場合、`TryCast`返します[Nothing](../../../visual-basic/language-reference/nothing.md)します。  
+## <a name="errors-and-failures"></a>Errors and Failures  
+ `TryCast` generates a compiler error if it detects that no inheritance or implementation relationship exists. But the lack of a compiler error does not guarantee a successful conversion. If the desired conversion is narrowing, it could fail at run time. If this happens, `TryCast` returns [Nothing](../../../visual-basic/language-reference/nothing.md).  
   
 ## <a name="conversion-keywords"></a>変換キーワード  
- 型変換のキーワードの比較は次のとおりです。  
+ A comparison of the type conversion keywords is as follows.  
   
-|キーワード|データの種類|引数の関係|実行時エラー|  
+|キーワード|データの種類|Argument relationship|Run-time failure|  
 |---|---|---|---|  
-|[CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)|すべてのデータ型|2 つのデータ型の間で拡大または縮小変換を定義する必要があります。|スローされます。 <xref:System.InvalidCastException>|  
-|[DirectCast 演算子](../../../visual-basic/language-reference/operators/directcast-operator.md)|すべてのデータ型|1 つの型を継承またはその他の型を実装する必要があります。|スローされます。 <xref:System.InvalidCastException>|  
-|`TryCast`|参照型のみ|1 つの型を継承またはその他の型を実装する必要があります。|返します[Nothing](../../../visual-basic/language-reference/nothing.md)|  
+|[CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)|Any data types|Widening or narrowing conversion must be defined between the two data types|Throws <xref:System.InvalidCastException>|  
+|[DirectCast 演算子](../../../visual-basic/language-reference/operators/directcast-operator.md)|Any data types|One type must inherit from or implement the other type|Throws <xref:System.InvalidCastException>|  
+|`TryCast`|Reference types only|One type must inherit from or implement the other type|Returns [Nothing](../../../visual-basic/language-reference/nothing.md)|  
   
 ## <a name="example"></a>例  
  次の例は、`TryCast` を使用する方法を示しています。  

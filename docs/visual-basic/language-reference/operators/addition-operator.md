@@ -1,5 +1,5 @@
 ---
-title: + 演算子 (Visual Basic)
+title: + 演算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.+
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: 3187551afb7d25470f48dad894188766a811bb0a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 12c14b3be0562a31470ddbd2d5489ccdbdf3b62b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700996"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350289"
 ---
 # <a name="-operator-visual-basic"></a>+ 演算子 (Visual Basic)
-2つの数値を加算するか、数値式の正の値を返します。 は、2つの文字列式を連結するためにも使用できます。  
+Adds two numbers or returns the positive value of a numeric expression. Can also be used to concatenate two string expressions.  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,7 +26,7 @@ ms.locfileid: "71700996"
 expression1 + expression2
 ```
   
-または
+、または
 
 ```vb  
 +expression1  
@@ -34,83 +34,83 @@ expression1 + expression2
   
 ## <a name="parts"></a>指定項目  
   
-|項目|定義|  
+|用語|定義|  
 |---|---|  
-|`expression1`|必須。 任意の数値または文字列式。|  
-|`expression2`|@No__t-0 演算子が負の値を計算する場合を除き、必須です。 任意の数値または文字列式。|  
+|`expression1`|必須です。 Any numeric or string expression.|  
+|`expression2`|Required unless the `+` operator is calculating a negative value. Any numeric or string expression.|  
   
 ## <a name="result"></a>結果  
- @No__t-0 および `expression2` が両方とも数値の場合、結果は算術和になります。  
+ If `expression1` and `expression2` are both numeric, the result is their arithmetic sum.  
   
- @No__t-0 が指定されていない場合、`+` 演算子は、式の変更されていない値の*単項*id 演算子です。 この意味では、操作は `expression1` の符号を保持することで構成されます。そのため、`expression1` が負の場合、結果は負になります。  
+ If `expression2` is absent, the `+` operator is the *unary* identity operator for the unchanged value of an expression. In this sense, the operation consists of retaining the sign of `expression1`, so the result is negative if `expression1` is negative.  
   
- @No__t-0 および `expression2` が両方の文字列の場合、結果はそれらの値を連結したものになります。  
+ If `expression1` and `expression2` are both strings, the result is the concatenation of their values.  
   
- @No__t-0 および `expression2` の型が混在している場合、実行される操作は、その型、内容、 [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)の設定によって異なります。 詳細については、「解説」の表を参照してください。  
+ If `expression1` and `expression2` are of mixed types, the action taken depends on their types, their contents, and the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md). For more information, see the tables in "Remarks."  
   
 ## <a name="supported-types"></a>サポートされている型  
- 符号なしおよび浮動小数点型と `Decimal`、`String` を含むすべての数値型。  
+ All numeric types, including the unsigned and floating-point types and `Decimal`, and `String`.  
   
-## <a name="remarks"></a>コメント  
- 一般に、`+` は可能な場合は算術加算を実行し、両方の式が文字列である場合にのみ連結します。  
+## <a name="remarks"></a>Remarks  
+ In general, `+` performs arithmetic addition when possible, and concatenates only when both expressions are strings.  
   
- どちらの式も @no__t 0 でない場合、Visual Basic は次の操作を実行します。  
+ If neither expression is an `Object`, Visual Basic takes the following actions.  
   
-|式のデータ型|コンパイラによるアクション|  
+|Data types of expressions|Action by compiler|  
 |---|---|  
-|両方の式は、数値データ型 (`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`、`Decimal`、`Single`、または 0) です。|アドイン. 結果のデータ型は、および`expression1` `expression2`のデータ型に適した数値型です。 「[演算子の結果のデータ型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)」の「整数演算」の表を参照してください。|  
-|両方の式の型は `String` です。|つなげ.|  
-|一方の式は数値データ型で、もう一方は文字列です。|@No__t-0 が `On` の場合は、コンパイラエラーが生成されます。<br /><br /> @No__t-0 が `Off` の場合、`String` を `Double` に暗黙的に変換し、を追加します。<br /><br /> @No__t-0 を `Double` に変換できない場合は、<xref:System.InvalidCastException> 例外をスローします。|  
-|1つの式は数値データ型であり、もう一方は[Nothing](../../../visual-basic/language-reference/nothing.md)です。|0を0として @no__t 0 を追加します。|  
-|1つの式が文字列で、もう一方が `Nothing`|を連結します。0の値を "" として @no__t ます。|  
+|Both expressions are numeric data types (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, or `Double`)|Add. The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
+|Both expressions are of type `String`|Concatenate.|  
+|One expression is a numeric data type and the other is a string|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.<br /><br /> If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
+|One expression is a numeric data type, and the other is [Nothing](../../../visual-basic/language-reference/nothing.md)|Add, with `Nothing` valued as zero.|  
+|One expression is a string, and the other is `Nothing`|Concatenate, with `Nothing` valued as "".|  
   
- 1つの式が @no__t 0 の式の場合、Visual Basic は次のアクションを実行します。  
+ If one expression is an `Object` expression, Visual Basic takes the following actions.  
   
-|式のデータ型|コンパイラによるアクション|  
+|Data types of expressions|Action by compiler|  
 |---|---|  
-|`Object` 式は数値を保持し、もう一方は数値データ型です。|@No__t-0 が `On` の場合は、コンパイラエラーが生成されます。<br /><br /> @No__t-0 が `Off` の場合は、を追加します。|  
-|`Object` 式は数値を保持し、もう一方の型は `String` です。|@No__t-0 が `On` の場合は、コンパイラエラーが生成されます。<br /><br /> @No__t-0 が `Off` の場合、`String` を `Double` に暗黙的に変換し、を追加します。<br /><br /> @No__t-0 を `Double` に変換できない場合は、<xref:System.InvalidCastException> 例外をスローします。|  
-|`Object` 式は文字列を保持し、もう1つは数値データ型です。|@No__t-0 が `On` の場合は、コンパイラエラーが生成されます。<br /><br /> @No__t-0 が `Off` の場合は、文字列 `Object` から `Double` に暗黙的に変換し、を追加します。<br /><br /> 文字列 `Object` を `Double` に変換できない場合は、<xref:System.InvalidCastException> 例外をスローします。|  
-|`Object` 式は文字列を保持し、もう一方は型 `String` です。|@No__t-0 が `On` の場合は、コンパイラエラーが生成されます。<br /><br /> @No__t-0 が `Off` の場合は、`Object` を `String` に暗黙的に変換し、連結します。|  
+|`Object` expression holds a numeric value and the other is a numeric data type|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then add.|  
+|`Object` expression holds a numeric value and the other is of type `String`|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.<br /><br /> If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
+|`Object` expression holds a string and the other is a numeric data type|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the string `Object` to `Double` and add.<br /><br /> If the string `Object` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
+|`Object` expression holds a string and the other is of type `String`|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert `Object` to `String` and concatenate.|  
   
- 両方の式が 0 @no__t 式の場合、Visual Basic は次の操作を実行します (`Option Strict Off` のみ)。  
+ If both expressions are `Object` expressions, Visual Basic takes the following actions (`Option Strict Off` only).  
   
-|式のデータ型|コンパイラによるアクション|  
+|Data types of expressions|Action by compiler|  
 |---|---|  
-|@No__t 0 の式は両方とも数値を保持します|アドイン.|  
-|@No__t-0 の式はどちらも `String` の型です|つなげ.|  
-|1つの `Object` 式は数値を保持し、もう一方は文字列を保持します。|文字列 `Object` から `Double` に暗黙的に変換し、を追加します。<br /><br /> 文字列 `Object` を数値に変換できない場合は、<xref:System.InvalidCastException> の例外をスローします。|  
+|Both `Object` expressions hold numeric values|Add.|  
+|Both `Object` expressions are of type `String`|Concatenate.|  
+|One `Object` expression holds a numeric value and the other holds a string|Implicitly convert the string `Object` to `Double` and add.<br /><br /> If the string `Object` cannot be converted to a numeric value, then throw an <xref:System.InvalidCastException> exception.|  
   
- @No__t-0 式の評価結果が[Nothing](../../../visual-basic/language-reference/nothing.md)または <xref:System.DBNull> の場合、`+` 演算子では、値が "" である `String` として扱われます。  
+ If either `Object` expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md) or <xref:System.DBNull>, the `+` operator treats it as a `String` with a value of "".  
   
 > [!NOTE]
-> @No__t-0 演算子を使用すると、加算または文字列の連結が行われるかどうかを判断できない場合があります。 @No__t-0 演算子を連結に使用して、あいまいさをなくし、自己記述型のコードを提供します。  
+> When you use the `+` operator, you might not be able to determine whether addition or string concatenation will occur. Use the `&` operator for concatenation to eliminate ambiguity and to provide self-documenting code.  
   
 ## <a name="overloading"></a>オーバーロード  
- @No__t-0 演算子は*オーバーロード*できます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 コードでこのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ The `+` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`+` 演算子を使用して数値を加算します。 オペランドが両方とも数値の場合、Visual Basic 演算結果が計算されます。 算術結果は、2つのオペランドの合計を表します。  
+ The following example uses the `+` operator to add numbers. If the operands are both numeric, Visual Basic computes the arithmetic result. The arithmetic result represents the sum of the two operands.  
   
  [!code-vb[VbVbalrOperators#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#6)]  
   
- @No__t-0 演算子を使用して文字列を連結することもできます。 オペランドが両方とも文字列の場合は、Visual Basic 連結します。 連結の結果は、2つのオペランドの内容で構成される1つの文字列を表します。  
+ You can also use the `+` operator to concatenate strings. If the operands are both strings, Visual Basic concatenates them. The concatenation result represents a single string consisting of the contents of the two operands one after the other.  
   
- オペランドが混合型の場合、結果は[Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)の設定によって異なります。 次の例は、`Option Strict` が `On` の場合の結果を示しています。  
+ If the operands are of mixed types, the result depends on the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md). The following example illustrates the result when `Option Strict` is `On`.  
   
  [!code-vb[VbVbalrOperators#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class3.vb#53)]  
   
  [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
 [!code-vb[VbVbalrOperators#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#51)]  
   
- 次の例は、`Option Strict` が `Off` の場合の結果を示しています。  
+ The following example illustrates the result when `Option Strict` is `Off`.  
   
  [!code-vb[VbVbalrOperators#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#54)]  
   
  [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
 [!code-vb[VbVbalrOperators#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#52)]  
   
- あいまいさをなくすには、連結に `+` ではなく `&` 演算子を使用する必要があります。  
+ To eliminate ambiguity, you should use the `&` operator instead of `+` for concatenation.  
   
 ## <a name="see-also"></a>関連項目
 
@@ -119,5 +119,5 @@ expression1 + expression2
 - [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Visual Basic の算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
 - [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)

@@ -1,5 +1,5 @@
 ---
-title: Group Join 句 (Visual Basic)
+title: Group Join 句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryGroupJoinIn
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: 184077f2689eb64e4373d407913eefcc03b795c2
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 0546c86322663ce6c56a89e63311d0f02f88cfe4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005723"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346852"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join 句 (Visual Basic)
-2 つのコレクションを、単一の階層コレクションに結合します。 結合操作は、一致するキーに基づいています。  
+2 つのコレクションを、単一の階層コレクションに結合します。 The join operation is based on matching keys.  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,27 +31,27 @@ Group Join element [As type] In collection _
   
 ## <a name="parts"></a>指定項目  
   
-|項目|定義|  
+|用語|定義|  
 |---|---|  
-|`element`|必須。 結合されているコレクションのコントロール変数。|  
-|`type`|任意。 `element` の型。 @No__t-0 が指定されていない場合、`element` の型は `collection` から推論されます。|  
-|`collection`|必須。 @No__t-0 演算子の左辺にあるコレクションと結合するコレクションです。 @No__t-0 句は、`Join` 句、または別の `Group Join` 句で入れ子にすることができます。|  
-|`key1` `Equals` `key2`|必須。 結合されているコレクションのキーを識別します。 @No__t-0 演算子を使用して、結合されているコレクションのキーを比較する必要があります。 複数のキーを識別するには、`And` 演算子を使用して結合条件を結合します。 @No__t-0 パラメーターは、`Join` 演算子の左側のコレクションのものである必要があります。 @No__t-0 パラメーターは、`Join` 演算子の右側にあるコレクションのものである必要があります。<br /><br /> 結合条件で使用されるキーは、コレクションの複数の項目を含む式にすることができます。 ただし、各キー式には、それぞれのコレクションの項目だけを含めることができます。|  
-|`expressionList`|必須。 コレクションの要素のグループを集計する方法を識別する1つ以上の式。 グループ化された結果のメンバー名を特定するには、`Group` キーワード (`<alias> = Group`) を使用します。 グループに適用する集計関数を含めることもできます。|  
+|`element`|必須です。 The control variable for the collection being joined.|  
+|`type`|省略可能です。 `element` の型。 If no `type` is specified, the type of `element` is inferred from `collection`.|  
+|`collection`|必須です。 The collection to combine with the collection that is on the left side of the `Group Join` operator. A `Group Join` clause can be nested in a `Join` clause or in another `Group Join` clause.|  
+|`key1` `Equals` `key2`|必須です。 Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. The `key1` parameter must be from the collection on the left side of the `Join` operator. The `key2` parameter must be from the collection on the right side of the `Join` operator.<br /><br /> The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.|  
+|`expressionList`|必須です。 One or more expressions that identify how the groups of elements from the collection are aggregated. To identify a member name for the grouped results, use the `Group` keyword (`<alias> = Group`). グループに適用する集計関数を含めることもできます。|  
   
-## <a name="remarks"></a>コメント  
- @No__t-0 句は、結合されているコレクションのキー値の一致に基づいて2つのコレクションを結合します。 結果のコレクションには、最初のコレクションのキー値に一致する2番目のコレクションの要素のコレクションを参照するメンバーを含めることができます。 2番目のコレクションのグループ化された要素に適用する集計関数を指定することもできます。 集計関数の詳細については、「 [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)」を参照してください。  
+## <a name="remarks"></a>Remarks  
+ The `Group Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain a member that references a collection of elements from the second collection that match the key value from the first collection. You can also specify aggregate functions to apply to the grouped elements from the second collection. For information about aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- たとえば、マネージャーのコレクションや従業員のコレクションなどを検討します。 両方のコレクションの要素には、特定のマネージャーに報告する従業員を識別する ManagerID プロパティがあります。 結合操作の結果には、各マネージャーと、一致する ManagerID 値を持つ従業員の結果が含まれます。 @No__t 0 操作の結果には、マネージャーの完全な一覧が含まれます。 各マネージャーの結果には、特定のマネージャーに一致した従業員の一覧を参照するメンバーが含まれます。  
+ Consider, for example, a collection of managers and a collection of employees. Elements from both collections have a ManagerID property that identifies the employees that report to a particular manager. The results from a join operation would contain a result for each manager and employee with a matching ManagerID value. The results from a `Group Join` operation would contain the complete list of managers. Each manager result would have a member that referenced the list of employees that were a match for the specific manager.  
   
- @No__t 0 操作によって生成されるコレクションには、`From` 句で識別されたコレクションの値と、`Group Join` 句の `Into` 句で識別された式の任意の組み合わせを含めることができます。 @No__t-0 句の有効な式の詳細については、「 [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)」を参照してください。  
+ The collection resulting from a `Group Join` operation can contain any combination of values from the collection identified in the `From` clause and the expressions identified in the `Into` clause of the `Group Join` clause. For more information about valid expressions for the `Into` clause, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- @No__t 0 の操作は、`Group Join` 演算子の左側で特定されたコレクションからすべての結果を返します。 これは、結合されているコレクションに一致するものがない場合でも同様です。 これは、SQL の @no__t 0 に似ています。  
+ A `Group Join` operation will return all results from the collection identified on the left side of the `Group Join` operator. This is true even if there are no matches in the collection being joined. This is like a `LEFT OUTER JOIN` in SQL.  
   
- @No__t-0 句を使用して、コレクションを1つのコレクションにまとめることができます。 これは、SQL の @no__t 0 に相当します。  
+ You can use the `Join` clause to combine collections into a single collection. This is equivalent to an `INNER JOIN` in SQL.  
   
 ## <a name="example"></a>例  
- 次のコード例では、`Group Join` 句を使用して2つのコレクションを結合します。  
+ The following code example joins two collections by using the `Group Join` clause.  
   
  [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  
   
@@ -62,5 +62,5 @@ Group Join element [As type] In collection _
 - [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
 - [Join 句](../../../visual-basic/language-reference/queries/join-clause.md)
-- [Where 句](../../../visual-basic/language-reference/queries/where-clause.md)
+- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)
 - [Group By 句](../../../visual-basic/language-reference/queries/group-by-clause.md)

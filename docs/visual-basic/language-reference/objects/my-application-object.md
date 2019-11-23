@@ -1,34 +1,34 @@
 ---
-title: My.Application オブジェクト (Visual Basic)
+title: My.Application オブジェクト
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application object
 ms.assetid: a0ecfccf-acf7-49ec-a08b-72e6458c5c8d
-ms.openlocfilehash: 1de3696226185d483b7c6bb1d9460949b2df2f5a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8a0eef4aa685a255a5e1d852e440f8de2f70370
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633297"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350737"
 ---
 # <a name="myapplication-object"></a>My.Application オブジェクト
-プロパティ、メソッド、および現在のアプリケーションに関連するイベントを提供します。  
+Provides properties, methods, and events related to the current application.  
   
 ## <a name="remarks"></a>Remarks  
- メソッドとプロパティについては、`My.Application`オブジェクトを次のリソースを参照してください。  
+ For information about the methods and properties of the `My.Application` object, see the following resources:  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> すべてのプロジェクトで使用可能なメンバーにします。  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> for members that are available in all projects.  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Windows フォーム アプリケーションで使用可能なメンバーにします。  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> for members that are available in Windows Forms applications.  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> コンソール アプリケーションで使用可能なメンバーにします。  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> for members that are available in console applications.  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>［要件］  
  **名前空間:** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **クラス:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (基本クラス<xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>コンソール アプリケーション、およびその基本クラスで使用できるメンバーを提供します<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>はすべてのプロジェクトで使用できるメンバーを提供します)。  
+ **Class:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (the base class <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications, and its base class <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides the members that are available in all projects)  
   
- **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>関連項目
 

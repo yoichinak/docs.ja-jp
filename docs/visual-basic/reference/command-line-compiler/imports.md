@@ -1,20 +1,20 @@
 ---
-title: -imports (Visual Basic)
+title: -imports
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /imports compiler option [Visual Basic]
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 929e24a1ffd02d4e21ab1b925ddd59050b5d3cc4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 380e71e462f736d4564a37b83567007fa9461b05
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005564"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332967"
 ---
 # <a name="-imports-visual-basic"></a>-imports (Visual Basic)
-指定したアセンブリから名前空間をインポートします。  
+Imports namespaces from a specified assembly.  
   
 ## <a name="syntax"></a>構文  
   
@@ -24,21 +24,21 @@ ms.locfileid: "72005564"
   
 ## <a name="arguments"></a>引数  
   
-|項目|定義|  
+|用語|定義|  
 |---|---|  
-|`namespaceList`|必須。 インポートする名前空間のコンマ区切りの一覧。|  
+|`namespaceList`|必須です。 Comma-delimited list of namespaces to be imported.|  
   
-## <a name="remarks"></a>コメント  
- @No__t-0 オプションは、ソースファイルの現在のセットまたは参照されているアセンブリの中で定義されているすべての名前空間をインポートします。  
+## <a name="remarks"></a>Remarks  
+ The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.  
   
- @No__t-0 で指定された名前空間のメンバーは、コンパイル時にすべてのソースコードファイルで使用できます。 [Imports ステートメント (.Net 名前空間と型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)を使用して、1つのソースコードファイルで名前空間を使用します。  
+ The members in a namespace specified with `-imports` are available to all source-code files in the compilation. Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.  
   
-|Visual Studio 統合開発環境で/imports を設定するには|  
+|To set /imports in the Visual Studio integrated development environment|  
 |---|  
-|1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[参照]** タブをクリックします。<br />3. **[ユーザーインポートの追加]** ボタンの横にあるボックスに、名前空間の名前を入力します。<br />4。 **[ユーザーインポートの追加]** ボタンをクリックします。|  
+|1.  Have a project selected in **Solution Explorer**. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.  Click the **References** tab.<br />3.  Enter the namespace name in the box beside the **Add User Import** button.<br />4.  Click the **Add User Import** button.|  
   
 ## <a name="example"></a>例  
- @No__t-0 を指定すると、次のコードがコンパイルされます。 それがない場合、コンパイルが成功するには、ソースコードファイルの先頭に @no__t 0 ステートメントが含まれているか、プロパティが `System.Globalization.CultureInfo.CurrentCulture.Name` として完全に修飾されている必要があります。
+ The following code compiles when `/imports:system.globalization` is specified. Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.
 
 ```vb
 Module Example

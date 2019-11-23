@@ -1,5 +1,5 @@
 ---
-title: Property ステートメント (Visual Basic)
+title: Property Statement
 ms.date: 05/12/2018
 f1_keywords:
 - vb.PropertySet
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 2c3e417aad404171a43342dc92773615ec350ef5
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 80bce2442d96ecb9c548a88c8e5ee44c6258473b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332745"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346758"
 ---
 # <a name="property-statement"></a>Property Statement
 
-プロパティの名前、およびプロパティの値を格納および取得するために使用されるプロパティプロシージャを宣言します。
+Declares the name of a property, and the property procedures used to store and retrieve the value of the property.
 
 ## <a name="syntax"></a>構文
 
@@ -45,15 +45,15 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `attributelist`
 
-  任意。 このプロパティに適用される属性の一覧、または `Get` または `Set` プロシージャ。 参照してください[属性リスト](attribute-list.md)します。
+  省略可能です。 List of attributes that apply to this property or `Get` or `Set` procedure. See [Attribute List](attribute-list.md).
 
 - `Default`
 
-  任意。 このプロパティが、定義されているクラスまたは構造体の既定のプロパティであることを指定します。 既定のプロパティはパラメーターを受け取る必要があり、プロパティ名を指定せずに設定および取得できます。 プロパティを `Default` として宣言する場合は、プロパティまたはプロパティプロシージャのいずれかで `Private` を使用することはできません。
+  省略可能です。 Specifies that this property is the default property for the class or structure on which it is defined. Default properties must accept parameters and can be set and retrieved without specifying the property name. If you declare the property as `Default`, you cannot use `Private` on the property or on either of its property procedures.
 
 - `accessmodifier`
 
-  @No__t-0 ステートメントでは省略可能で、`Get` ステートメントと `Set` ステートメントのうち最大1つです。 次のいずれかになります。
+  Optional on the `Property` statement and on at most one of the `Get` and `Set` statements. 次のいずれかの値を指定します。
 
   - [Public](../modifiers/public.md)
 
@@ -67,13 +67,13 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
   - [Private Protected](../modifiers/private-protected.md)
 
-  「 [Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+  「 [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 - `propertymodifiers`
 
-  任意。 次のいずれかになります。
+  省略可能です。 次のいずれかの値を指定します。
 
-  - [Overloads](../modifiers/overloads.md)
+  - [オーバーロード](../modifiers/overloads.md)
 
   - [Overrides](../modifiers/overrides.md)
 
@@ -81,7 +81,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
   - [NotOverridable](../modifiers/notoverridable.md)
 
-  - [MustOverride](../modifiers/mustoverride.md)
+  - [New](../modifiers/mustoverride.md)
 
   - `MustOverride Overrides`
 
@@ -89,43 +89,43 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Shared`
 
-  任意。 「[共有](../modifiers/shared.md)」を参照してください。
+  省略可能です。 See [Shared](../modifiers/shared.md).
 
 - `Shadows`
 
-  任意。 「[シャドウ](../modifiers/shadows.md)」を参照してください。
+  省略可能です。 See [Shadows](../modifiers/shadows.md).
 
 - `ReadOnly`
 
-  任意。 「 [ReadOnly](../modifiers/readonly.md)」を参照してください。
+  省略可能です。 See [ReadOnly](../modifiers/readonly.md).
 
 - `WriteOnly`
 
-  任意。 「 [WriteOnly](../modifiers/writeonly.md)」を参照してください。
+  省略可能です。 See [WriteOnly](../modifiers/writeonly.md).
 
 - `Iterator`
 
-  任意。 「[反復子](../modifiers/iterator.md)」を参照してください。
+  省略可能です。 See [Iterator](../modifiers/iterator.md).
 
 - `name`
 
-  必須。 プロパティ名。 「 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+  必須です。 プロパティ名。 「 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
 - `parameterlist`
 
-  任意。 このプロパティのパラメーターを表すローカル変数名の一覧と、`Set` プロシージャの追加パラメーター。 「[パラメーターリスト](parameter-list.md)」を参照してください。
+  省略可能です。 List of local variable names representing the parameters of this property, and possible additional parameters of the `Set` procedure. See [Parameter List](parameter-list.md).
 
 - `returntype`
 
-  @No__t-0 が `On` の場合は必須です。 このプロパティによって返される値のデータ型。
+  Required if `Option Strict` is `On`. Data type of the value returned by this property.
 
 - `Implements`
 
-  任意。 このプロパティが1つ以上のプロパティを実装することを示します。各プロパティは、このプロパティのクラスまたは構造体を含むインターフェイスで定義されています。 「 [Implements ステートメント](implements-statement.md)」を参照してください。
+  省略可能です。 Indicates that this property implements one or more properties, each one defined in an interface implemented by this property's containing class or structure. See [Implements Statement](implements-statement.md).
 
 - `implementslist`
 
-  `Implements` を指定する場合は、必ず指定します。 実装されているプロパティの一覧。
+  `Implements` を指定する場合は、必ず指定します。 List of properties being implemented.
 
   `implementedproperty [ , implementedproperty ... ]`
 
@@ -133,72 +133,72 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
   `interface.definedname`
 
-  |要素|説明|
+  |パーツ|説明|
   |---|---|
-  |`interface`|必須。 このプロパティのクラスまたは構造体によって実装されるインターフェイスの名前。|
-  |`definedname`|必須。 プロパティが定義されている名前 (`interface`)。|
+  |`interface`|必須です。 Name of an interface implemented by this property's containing class or structure.|
+  |`definedname`|必須です。 Name by which the property is defined in `interface`.|
 
 - `Get`
 
-  任意。 プロパティが `ReadOnly` としてマークされている場合は必須です。 プロパティの値を返すために使用される `Get` プロパティプロシージャを開始します。  @No__t-0 ステートメントは、[自動実装プロパティ](../../programming-guide/language-features/procedures/auto-implemented-properties.md)では使用されません。
+  省略可能です。 Required if the property is marked `ReadOnly`. Starts a `Get` property procedure that is used to return the value of the property.  The `Get` statement is not used with [auto-implemented properties](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
 
 - `statements`
 
-  任意。 @No__t-0 または `Set` プロシージャ内で実行するステートメントのブロック。
+  省略可能です。 Block of statements to run within the `Get` or `Set` procedure.
 
 - `End Get`
 
-  @No__t-0 プロパティプロシージャを終了します。
+  Terminates the `Get` property procedure.
 
 - `Set`
 
-  任意。 プロパティが `WriteOnly` としてマークされている場合は必須です。 プロパティの値を格納するために使用される @no__t 0 プロパティプロシージャを開始します。  @No__t-0 ステートメントは、[自動実装プロパティ](../../programming-guide/language-features/procedures/auto-implemented-properties.md)では使用されません。
+  省略可能です。 Required if the property is marked `WriteOnly`. Starts a `Set` property procedure that is used to store the value of the property.  The `Set` statement is not used with [auto-implemented properties](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
 
 - `End Set`
 
-  @No__t-0 プロパティプロシージャを終了します。
+  Terminates the `Set` property procedure.
 
 - `End Property`
 
-  このプロパティの定義を終了します。
+  Terminates the definition of this property.
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-@No__t-0 ステートメントでは、プロパティの宣言が導入されています。 プロパティは、@no__t 0 プロシージャ (読み取り専用)、@no__t 1 プロシージャ (書き込み専用)、またはその両方 (読み取り/書き込み) を持つことができます。 自動実装プロパティを使用する場合は、`Get` および `Set` プロシージャを省略できます。 詳細については、「[自動実装プロパティ](../../programming-guide/language-features/procedures/auto-implemented-properties.md)」を参照してください。
+The `Property` statement introduces the declaration of a property. A property can have a `Get` procedure (read only), a `Set` procedure (write only), or both (read-write). You can omit the `Get` and `Set` procedure when using an auto-implemented property. 詳細については、「[自動実装プロパティ](../../programming-guide/language-features/procedures/auto-implemented-properties.md)」を参照してください。
 
-@No__t-0 はクラスレベルでのみ使用できます。 つまり、プロパティの*宣言コンテキスト*はクラス、構造体、モジュール、またはインターフェイスである必要があり、ソースファイル、名前空間、プロシージャ、またはブロックにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
+You can use `Property` only at class level. This means the *declaration context* for a property must be a class, structure, module, or interface, and cannot be a source file, namespace, procedure, or block. 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
 
-既定では、プロパティはパブリックアクセスを使用します。 @No__t-0 ステートメントでアクセス修飾子を使用してプロパティのアクセスレベルを調整できます。また、必要に応じて、プロパティプロシージャの1つをより制限の厳しいアクセスレベルに調整することもできます。
+By default, properties use public access. You can adjust a property's access level with an access modifier on the `Property` statement, and you can optionally adjust one of its property procedures to a more restrictive access level.
 
-Visual Basic は、プロパティの割り当て時に `Set` プロシージャにパラメーターを渡します。 @No__t-0 のパラメーターを指定しない場合、統合開発環境 (IDE) では、`value` という名前の暗黙的なパラメーターが使用されます。 このパラメーターは、プロパティに割り当てられる値を保持します。 通常、この値はプライベートローカル変数に格納し、`Get` プロシージャが呼び出されるたびに返されます。
+Visual Basic passes a parameter to the `Set` procedure during property assignments. If you do not supply a parameter for `Set`, the integrated development environment (IDE) uses an implicit parameter named `value`. This parameter holds the value to be assigned to the property. You typically store this value in a private local variable and return it whenever the `Get` procedure is called.
 
 ## <a name="rules"></a>ルール
 
-- **混合アクセスレベル。** 読み取り/書き込みプロパティを定義する場合は、必要に応じて、`Get` または `Set` のいずれかの手順に対して異なるアクセスレベルを指定できますが、両方は指定できません。 この場合、プロシージャのアクセスレベルは、プロパティのアクセスレベルよりも制限されている必要があります。 たとえば、プロパティが `Friend` として宣言されている場合は、`Set` プロシージャ `Private` を宣言できますが、`Public` は宣言できません。
+- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Set` procedure `Private`, but not `Public`.
 
-  @No__t-0 または `WriteOnly` のプロパティを定義する場合、1つのプロパティプロシージャ (`Get` または `Set`) がすべてのプロパティを表します。 このようなプロシージャに対して異なるアクセスレベルを宣言することはできません。これは、プロパティに2つのアクセスレベルが設定されるためです。
+  If you are defining a `ReadOnly` or `WriteOnly` property, the single property procedure (`Get` or `Set`, respectively) represents all of the property. You cannot declare a different access level for such a procedure, because that would set two access levels for the property.
 
-- **戻り値の型。** @No__t-0 ステートメントでは、返される値のデータ型を宣言できます。 任意のデータ型を指定することも、列挙型、構造体、クラス、またはインターフェイスの名前を指定することもできます。
+- **Return Type.** The `Property` statement can declare the data type of the value it returns. You can specify any data type or the name of an enumeration, structure, class, or interface.
 
-  @No__t-0 を指定しない場合、プロパティは `Object` を返します。
+  If you do not specify `returntype`, the property returns `Object`.
 
-- **ション.** このプロパティで `Implements` キーワードが使用されている場合、その親クラスまたは構造体には、`Class` ステートメントまたは `Structure` ステートメントの直後に1つの @no__t ステートメントが必要です。 @No__t-0 ステートメントには、`implementslist` で指定された各インターフェイスを含める必要があります。 ただし、インターフェイスが @no__t を定義するときに使用する名前 (`definedname`) は、このプロパティの名前 (`name`) と同じである必要はありません。
+- **Implementation.** If this property uses the `Implements` keyword, the containing class or structure must have an `Implements` statement immediately following its `Class` or `Structure` statement. The `Implements` statement must include each interface specified in `implementslist`. However, the name by which an interface defines the `Property` (in `definedname`) does not have to be the same as the name of this property (in `name`).
 
 ## <a name="behavior"></a>動作
 
-- **プロパティプロシージャからを返します。** @No__t-0 または `Set` プロシージャが呼び出し元のコードに戻ったとき、実行は、そのプロシージャを呼び出したステートメントの後に続くステートメントから続行されます。
+- **Returning from a Property Procedure.** When the `Get` or `Set` procedure returns to the calling code, execution continues with the statement following the statement that invoked it.
 
-  @No__t-0 および `Return` ステートメントを行うと、プロパティプロシージャがすぐに終了します。 任意の数の `Exit Property` および `Return` ステートメントをプロシージャ内の任意の場所に記述できます。また、`Exit Property` ステートメントと `Return` ステートメントを混在させることもできます。
+  The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.
 
-- **戻り値。** @No__t 0 のプロシージャから値を返すには、プロパティ名に値を割り当てるか、または `Return` ステートメントに含めることができます。 次の例では、戻り値をプロパティ名 `quoteForTheDay` に割り当て、`Exit Property` ステートメントを使用してを返します。
+- **Return Value.** To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a `Return` statement. The following example assigns the return value to the property name `quoteForTheDay` and then uses the `Exit Property` statement to return.
 
   [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
 
   [!code-vb[VbVbalrStatements#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#28)]
 
-  @No__t-1 に値を割り当てずに `Exit Property` を使用した場合、`Get` プロシージャは、プロパティのデータ型の既定値を返します。
+  If you use `Exit Property` without assigning a value to `name`, the `Get` procedure returns the default value for the property's data type.
 
-  @No__t-0 ステートメントを同時に実行すると、`Get` プロシージャの戻り値が割り当てられ、プロシージャが終了します。 この例を次に示します。
+  The `Return` statement at the same time assigns the `Get` procedure return value and exits the procedure. The following example shows this.
 
   [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
 
@@ -206,7 +206,7 @@ Visual Basic は、プロパティの割り当て時に `Set` プロシージャ
 
 ## <a name="example"></a>例
 
-次の例では、クラスのプロパティを宣言しています。
+The following example declares a property in a class.
 
 [!code-vb[VbVbalrStatements#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#51)]
 
@@ -217,4 +217,4 @@ Visual Basic は、プロパティの割り当て時に `Set` プロシージャ
 - [Get ステートメント](get-statement.md)
 - [Set ステートメント](set-statement.md)
 - [パラメーター リスト](parameter-list.md)
-- [[Default]](../modifiers/default.md)
+- [default](../modifiers/default.md)

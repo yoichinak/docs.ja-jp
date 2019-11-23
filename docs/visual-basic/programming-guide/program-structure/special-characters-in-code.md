@@ -1,5 +1,5 @@
 ---
-title: コード内の特殊文字 (Visual Basic)
+title: コード内の特殊文字
 ms.date: 07/20/2015
 f1_keywords:
 - vb.)
@@ -30,62 +30,62 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 95bef937912e35cd828bf0090b4cf48ccb3290cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f4ab35b56d48ae86bdb024ffea27735b39decdc2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962474"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347268"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>コード内の特殊文字 (Visual Basic)
-場合によっては、コードで特殊文字を使用する必要があります。つまり、アルファベットまたは数字以外の文字を使用する必要があります。 Visual Basic 文字セットの句読点と特殊文字には、プログラムテキストの整理から、コンパイラまたはコンパイル済みプログラムによって実行されるタスクの定義まで、さまざまな用途があります。 実行するオペレーションを指定するのには使用されません。  
+Sometimes you have to use special characters in your code, that is, characters that are not alphabetical or numeric. The punctuation and special characters in the Visual Basic character set have various uses, from organizing program text to defining the tasks that the compiler or the compiled program performs. 実行するオペレーションを指定するのには使用されません。  
   
-## <a name="parentheses"></a>かっこ  
- やなどの`Sub`プロシージャを定義するときは`Function`、かっこを使用します。 すべてのプロシージャ引数リストをかっこで囲む必要があります。 また、変数または引数を論理グループに含めるためにかっこを使用します。特に、複合式での演算子の優先順位の既定の順序をオーバーライドします。 次に例を示します。  
+## <a name="parentheses"></a>Parentheses  
+ Use parentheses when you define a procedure, such as a `Sub` or `Function`. You must enclose all procedure argument lists in parentheses. You also use parentheses for putting variables or arguments into logical groups, especially to override the default order of operator precedence in a complex expression. 次に例を示します。  
   
  [!code-vb[VbVbcnConventions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#11)]  
   
- 前述のコードを実行すると、の`d`値は8.225 で、の`e`値は3です。 の`d`計算では、 `+`の既定の`/`優先順位が使用さ`d = b + (c / a)`れます。これはと同じです。 の`e`計算のかっこは、既定の優先順位よりも優先されます。  
+ Following execution of the previous code, the value of `d` is 8.225 and the value of `e` is 3. The calculation for `d` uses the default precedence of `/` over `+` and is equivalent to `d = b + (c / a)`. The parentheses in the calculation for `e` override the default precedence.  
   
-## <a name="separators"></a>区切り記号  
- 区切り記号は、コードのセクションを分離します。 Visual Basic では、区切り文字はコロン (`:`) です。 複数のステートメントを別々の行ではなく 1 行に含めたい場合は、区切り記号を使用します。 これにより、領域が節約され、コードの読みやすさが向上します。 次の例では、コロンで区切られた 3 つのステートメントを示します。  
+## <a name="separators"></a>[区切り記号]  
+ Separators do what their name suggests: they separate sections of code. In Visual Basic, the separator character is the colon (`:`). Use separators when you want to include multiple statements on a single line instead of separate lines. This saves space and improves the readability of your code. The following example shows three statements separated by colons.  
   
  [!code-vb[VbVbcnConventions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#12)]  
   
- 詳細については、「[方法 :コード](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)内のステートメントを分割し、結合します。  
+ For more information, see [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
- コロン (`:`) 文字は、ステートメントラベルを識別するためにも使用されます。 詳細については、「[方法 :ラベルステートメント](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
+ The colon (`:`) character is also used to identify a statement label. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 ## <a name="concatenation"></a>連結  
- *連結*、すなわち文字列を連結するには `&` 演算子を使用します。 数値を加算する `+` 演算子と混同しないようにしてください。 数値を操作するときに `+` 演算子を使用して連結すると、不適切な結果を得ることがあります。 次に例を示します。  
+ Use the `&` operator for *concatenation*, or linking strings together. Do not confuse it with the `+` operator, which adds together numeric values. If you use the `+` operator to concatenate when you operate on numeric values, you can obtain incorrect results. 次に例を示します。  
   
  [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]  
   
- 前述のコードを実行すると、`resultA`の値は 21.01 で、`resultB`の値は "10.0111" です。  
+ Following execution of the previous code, the value of `resultA` is 21.01 and the value of `resultB` is "10.0111".  
   
-## <a name="member-access-operators"></a>メンバーアクセス演算子  
- 型のメンバーにアクセスするには、型名とメンバー名の間にドット (`.`) または感嘆符 (`!`) 演算子を使用します。  
+## <a name="member-access-operators"></a>Member Access Operators  
+ To access a member of a type, you use the dot (`.`) or exclamation point (`!`) operator between the type name and the member name.  
   
-### <a name="dot--operator"></a>ドット (.)演算子  
- メンバーアクセス演算子として、クラス、構造体、インターフェイス、または列挙体に対して `.` 演算子を使用します。 メンバーには、フィールド、プロパティ、イベント、またはメソッドを指定できます。 次に例を示します。  
+### <a name="dot--operator"></a>Dot (.) Operator  
+ Use the `.` operator on a class, structure, interface, or enumeration as a member access operator. The member can be a field, property, event, or method. 次に例を示します。  
   
  [!code-vb[VbVbcnConventions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#14)]  
   
-### <a name="exclamation-point--operator"></a>感嘆符 (!)演算子  
- `!` 演算子は 、クラスまたはインターフェイスに対してのみ、ディクショナリアクセス演算子として使用します。 クラスまたはインターフェイスには、1 つの `String` 型の引数を受け取る既定のプロパティが必要です。 `!` 演算子の直後にある識別子は、既定のプロパティに文字列として渡される引数の値になります。 次に例を示します。  
+### <a name="exclamation-point--operator"></a>Exclamation Point (!) Operator  
+ Use the `!` operator only on a class or interface as a dictionary access operator. The class or interface must have a default property that accepts a single `String` argument. The identifier immediately following the `!` operator becomes the argument value passed to the default property as a string. 次に例を示します。  
   
  [!code-vb[VbVbcnConventions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#15)]  
   
- `MsgBox` の 3 行の出力には全て `32856` の値が表示されます。 最初の行では、プロパティ `index` への従来のアクセスを使用しています。2 番目の行では、 `index` はクラス `hasDefault` の既定のプロパティであるという事実を使用しています。  
+ The three output lines of `MsgBox` all display the value `32856`. The first line uses the traditional access to property `index`, the second makes use of the fact that `index` is the default property of class `hasDefault`, and the third uses dictionary access to the class.  
   
- `!`演算子の 2 番目のオペランドは、二重引用符 (`" "`) で囲まれていない有効な Visual Basic 識別子でなければならないことに注意してください。 言い換えれば、文字列リテラルまたは文字列変数を使用することはできません。 `MsgBox` 呼び出しの最後の行に次の変更を行うと、`"X"` は文字列リテラルで囲まれるため、エラーが生成されます。  
+ Note that the second operand of the `!` operator must be a valid Visual Basic identifier not enclosed in double quotation marks (`" "`). In other words, you cannot use a string literal or string variable. The following change to the last line of the `MsgBox` call generates an error because `"X"` is an enclosed string literal.  
   
  `"Dictionary access returns " & hD!"X")`  
   
 > [!NOTE]
-> 既定のコレクションへの参照は明示的に指定する必要があります。 特に、遅延バインディング変数に対して `!` 演算子を使用することはできません。  
+> References to default collections must be explicit. In particular, you cannot use the `!` operator on a late-bound variable.  
   
- `!` 文字は、 `Single` 型文字としても使用されます。  
+ The `!` character is also used as the `Single` type character.  
   
 ## <a name="see-also"></a>関連項目
 

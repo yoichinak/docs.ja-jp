@@ -53,7 +53,7 @@ ms.locfileid: "73130231"
 [動的な型生成のための収集可能なアセンブリ](collectible-assemblies.md)   
 そのアセンブリが作成されたアプリケーション ドメインをアンロードせずにアンロードできる動的アセンブリである、収集可能なアセンブリについて説明します。
   
-## <a name="reference"></a>辞書／辞典／その他  
+## <a name="reference"></a>参照  
 
 <xref:System.Reflection.Emit.OpCodes>  
 メソッド本体の構築に使用できる MSIL 命令コードのカタログを作成します。  

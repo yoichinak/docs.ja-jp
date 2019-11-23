@@ -1,5 +1,5 @@
 ---
-title: '&amp; = 演算子 (Visual Basic)'
+title: '&amp;= Operator'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&=
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-ms.openlocfilehash: 82d791e5d66c301442c99d2cc73e3172c3e30f17
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 8668bfcbf32bb34b422efe8116bbd12a2d80b1d4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591636"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350260"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp; = 演算子 (Visual Basic)
-@No__t 0 の式を @no__t 1 つまたは複数の変数またはプロパティに連結し、その結果を変数またはプロパティに代入します。  
+# <a name="amp-operator-visual-basic"></a>&amp;= Operator (Visual Basic)
+Concatenates a `String` expression to a `String` variable or property and assigns the result to the variable or property.  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,19 +28,19 @@ variableorproperty &= expression
   
 ## <a name="parts"></a>指定項目  
  `variableorproperty`  
- 必須。 @No__t 0 の変数またはプロパティ。  
+ 必須です。 Any `String` variable or property.  
   
  `expression`  
- 必須。 任意のブール型 ( `String` ) の式を指定します。  
+ 必須です。 任意のブール型 ( `String` ) の式を指定します。  
   
-## <a name="remarks"></a>コメント  
- @No__t-0 演算子の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)にすることはできません。 @No__t-0 演算子は、右側の `String` 式を左側の `String` 変数またはプロパティに連結し、その結果を左側の変数またはプロパティに代入します。  
+## <a name="remarks"></a>Remarks  
+ The element on the left side of the `&=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). The `&=` operator concatenates the `String` expression on its right to the `String` variable or property on its left, and assigns the result to the variable or property on its left.  
   
 ## <a name="overloading"></a>オーバーロード  
- [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 @No__t-0 演算子のオーバーロードは、`&=` 演算子の動作に影響します。 コードで `&` をオーバーロードするクラスまたは構造体に @no__t 0 を使用している場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ The [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `&` operator affects the behavior of the `&=` operator. If your code uses `&=` on a class or structure that overloads `&`, be sure you understand its redefined behavior. 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`&=` 演算子を使用して2つの @no__t 変数を連結し、その結果を最初の変数に代入します。  
+ The following example uses the `&=` operator to concatenate two `String` variables and assign the result to the first variable.  
   
  [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   
