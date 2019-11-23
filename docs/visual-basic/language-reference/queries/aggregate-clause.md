@@ -1,5 +1,5 @@
 ---
-title: Aggregate 句 (Visual Basic)
+title: Aggregate Clause
 ms.date: 08/28/2018
 f1_keywords:
 - vb.QueryAggregateIn
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: 50a53cd45cc428541c90fbf82089518be2212fae
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: HT
+ms.openlocfilehash: 5aa4b9afea4b6b26b853d4f4f6d4c8db08554e19
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004809"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350882"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate 句 (Visual Basic)
-1つまたは複数の集計関数をコレクションに適用します。  
+Applies one or more aggregate functions to a collection.  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,94 +31,94 @@ Aggregate element [As type] In collection _
   
 ## <a name="parts"></a>指定項目  
   
-|用語|Definition|  
+|用語|定義|  
 |---|---|  
-|`element`|必須。 コレクションの要素を反復処理するために使用される変数。|  
-|`type`|省略可。 `element` の型。 型が指定されていない場合、`element` の型は `collection`から推論されます。|  
-|`collection`|必須。 操作対象のコレクションを参照します。|  
-|`clause`|省略可。 `Where` 句などの1つ以上のクエリ句では、集計句または句をに適用するクエリ結果を絞り込むことができます。|  
-|`expressionList`|必須。 コレクションに適用する集計関数を識別する1つ以上のコンマ区切りの式。 集計関数に別名を適用して、クエリ結果のメンバー名を指定できます。 別名が指定されていない場合は、集計関数の名前が使用されます。 例については、このトピックで後述する「集計関数について」を参照してください。|  
+|`element`|必須です。 Variable used to iterate through the elements of the collection.|  
+|`type`|省略可能です。 `element` の型。 If no type is specified, the type of `element` is inferred from `collection`.|  
+|`collection`|必須です。 Refers to the collection to operate on.|  
+|`clause`|省略可能です。 One or more query clauses, such as a `Where` clause, to refine the query result to apply the aggregate clause or clauses to.|  
+|`expressionList`|必須です。 One or more comma-delimited expressions that identify an aggregate function to apply to the collection. You can apply an alias to an aggregate function to specify a member name for the query result. If no alias is supplied, the name of the aggregate function is used. For examples, see the section about aggregate functions later in this topic.|  
   
-## <a name="remarks"></a>コメント  
- `Aggregate` 句を使用すると、クエリに集計関数を含めることができます。 集計関数は、一連の値に対してチェックと計算を実行し、1つの値を返します。 クエリ結果の型のメンバーを使用すると、計算された値にアクセスできます。 使用できる標準の集計関数には、`All`、`Any`、`Average`、`Count`、`LongCount`、`Max`、`Min`、`Sum` の各関数があります。 これらの関数は、SQL の集計に精通している開発者にとってはよく知られています。 これらの詳細については、このトピックの次のセクションで説明します。  
+## <a name="remarks"></a>Remarks  
+ The `Aggregate` clause can be used to include aggregate functions in your queries. Aggregate functions perform checks and computations over a set of values and return a single value. You can access the computed value by using a member of the query result type. The standard aggregate functions that you can use are the `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, and `Sum` functions. These functions are familiar to developers who are familiar with aggregates in SQL. They are described in the following section of this topic.  
   
- 集計関数の結果は、クエリ結果の型のフィールドとしてクエリ結果に含まれます。 集計関数の結果に別名を指定して、集計値を保持するクエリ結果の型のメンバーの名前を指定できます。 別名が指定されていない場合は、集計関数の名前が使用されます。  
+ The result of an aggregate function is included in the query result as a field of the query result type. You can supply an alias for the aggregate function result to specify the name of the member of the query result type that will hold the aggregate value. If no alias is supplied, the name of the aggregate function is used.  
   
- `Aggregate` 句は、クエリを開始するか、クエリに追加の句として含めることができます。 `Aggregate` 句によってクエリが開始された場合、結果は、`Into` 句に指定された集計関数の結果である単一の値になります。 `Into` 句に複数の集計関数が指定されている場合、クエリでは、`Into` 句で各集計関数の結果を参照するための個別のプロパティを持つ単一の型が返されます。 `Aggregate` 句がクエリに追加の句として含まれている場合、クエリコレクションで返される型には、`Into` 句の各集計関数の結果を参照する個別のプロパティがあります。  
+ The `Aggregate` clause can begin a query, or it can be included as an additional clause in a query. If the `Aggregate` clause begins a query, the result is a single value that is the result of the aggregate function specified in the `Into` clause. If more than one aggregate function is specified in the `Into` clause, the query returns a single type with a separate property to reference the result of each aggregate function in the `Into` clause. If the `Aggregate` clause is included as an additional clause in a query, the type returned in the query collection will have a separate property to reference the result of each aggregate function in the `Into` clause.  
   
 ## <a name="aggregate-functions"></a>集計関数
 
-次に、`Aggregate` 句で使用できる標準の集計関数を示します。  
+The following are the standard aggregate functions that can be used with the `Aggregate` clause.  
   
-### <a name="all"></a>[すべて]
+### <a name="all"></a>すべて
 
-コレクション内のすべての要素が指定された条件を満たす場合に `true` を返します。それ以外の場合は `false`を返します。 次に例を示します。
+Returns `true` if all elements in the collection satisfy a specified condition; otherwise returns `false`. 次に例を示します。
 
  [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
-### <a name="any"></a>任意
+### <a name="any"></a>どれでも可
 
-コレクション内のいずれかの要素が指定された条件を満たす場合に `true` を返します。それ以外の場合は `false`を返します。 次に例を示します。
+Returns `true` if any element in the collection satisfies a specified condition; otherwise returns `false`. 次に例を示します。
 
  [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
 ### <a name="average"></a>平均
 
-コレクション内のすべての要素の平均値を計算するか、コレクション内のすべての要素に対して指定された式を計算します。 次に例を示します。
+Computes the average of all elements in the collection, or computes a supplied expression for all elements in the collection. 次に例を示します。
 
  [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>カウント
 
-コレクション内の要素の数をカウントします。 条件を満たすコレクション内の要素の数のみをカウントするオプションの `Boolean` 式を指定できます。 次に例を示します。
+Counts the number of elements in the collection. You can supply an optional `Boolean` expression to count only the number of elements in the collection that satisfy a condition. 次に例を示します。
 
  [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
-### <a name="group"></a>グループ
+### <a name="group"></a>グループ化
 
-`Group By` または `Group Join` 句の結果としてグループ化されたクエリ結果を参照します。 `Group` 関数は、`Group By` または `Group Join` 句の `Into` 句でのみ有効です。 詳細と例については、「 [Group By 句](../../../visual-basic/language-reference/queries/group-by-clause.md)と[group Join 句](../../../visual-basic/language-reference/queries/group-join-clause.md)」を参照してください。
+Refers to query results that are grouped as a result of a `Group By` or `Group Join` clause. The `Group` function is valid only in the `Into` clause of a `Group By` or `Group Join` clause. For more information and examples, see [Group By Clause](../../../visual-basic/language-reference/queries/group-by-clause.md) and [Group Join Clause](../../../visual-basic/language-reference/queries/group-join-clause.md).
 
 ### <a name="longcount"></a>LongCount
 
-コレクション内の要素の数をカウントします。 条件を満たすコレクション内の要素の数のみをカウントするオプションの `Boolean` 式を指定できます。 結果を `Long`として返します。 例については、「`Count` 集計関数」を参照してください。
+Counts the number of elements in the collection. You can supply an optional `Boolean` expression to count only the number of elements in the collection that satisfy a condition. Returns the result as a `Long`. For an example, see the `Count` aggregate function.
 
-### <a name="max"></a>Max
+### <a name="max"></a>最大
 
-コレクションから最大値を計算するか、コレクション内のすべての要素に対して指定された式を計算します。 次に例を示します。
+Computes the maximum value from the collection, or computes a supplied expression for all elements in the collection. 次に例を示します。
 
  [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
-### <a name="min"></a>Min
+### <a name="min"></a>最小
 
-コレクションから最小値を計算するか、コレクション内のすべての要素に対して指定された式を計算します。 次に例を示します。
+Computes the minimum value from the collection, or computes a supplied expression for all elements in the collection. 次に例を示します。
 
  [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
 ### <a name="sum"></a>Sum
 
-コレクション内のすべての要素の合計を計算するか、コレクション内のすべての要素に対して指定された式を計算します。 次に例を示します。
+Computes the sum of all elements in the collection, or computes a supplied expression for all elements in the collection. 次に例を示します。
 
  [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
 ## <a name="example"></a>例  
 
-次の例では、`Aggregate` 句を使用して、クエリ結果に集計関数を適用する方法を示します。  
+The following example shows how to use the `Aggregate` clause to apply aggregate functions to a query result.  
   
  [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
-## <a name="creating-user-defined-aggregate-functions"></a>ユーザー定義集計関数の作成
+## <a name="creating-user-defined-aggregate-functions"></a>Creating User-Defined Aggregate Functions
 
- <xref:System.Collections.Generic.IEnumerable%601> 型に拡張メソッドを追加することで、独自のカスタム集計関数をクエリ式に含めることができます。 カスタムメソッドは、集計関数を参照した列挙可能なコレクションに対して計算または操作を実行できます。 拡張メソッドについて詳しくは、「[拡張メソッド](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)」をご覧ください。  
+ You can include your own custom aggregate functions in a query expression by adding extension methods to the <xref:System.Collections.Generic.IEnumerable%601> type. Your custom method can then perform a calculation or operation on the enumerable collection that has referenced your aggregate function. 拡張メソッドについて詳しくは、「[拡張メソッド](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)」をご覧ください。  
   
- たとえば、次の例は、数値のコレクションの中央値を計算するカスタム集計関数を示しています。 `Median` 拡張メソッドには、2つのオーバーロードがあります。 最初のオーバーロードは、`IEnumerable(Of Double)`型のコレクションを入力として受け入れます。 `Double`型のクエリフィールドに対して `Median` 集計関数が呼び出されると、このメソッドが呼び出されます。 `Median` メソッドの2番目のオーバーロードには、任意のジェネリック型を渡すことができます。 `Median` メソッドのジェネリックオーバーロードは、`Func(Of T, Double)` ラムダ式を参照する2番目のパラメーターを受け取ります。このパラメーターは、コレクションの型の値を `Double`型の対応する値として射影します。 次に、中央値の計算を `Median` メソッドの他のオーバーロードにデリゲートします。 ラムダ式について詳しくは、「[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)」をご覧ください。  
+ For example, the following example shows a custom aggregate function that calculates the median value of a collection of numbers. There are two overloads of the `Median` extension method. The first overload accepts, as input, a collection of type `IEnumerable(Of Double)`. If the `Median` aggregate function is called for a query field of type `Double`, this method will be called. The second overload of the `Median` method can be passed any generic type. The generic overload of the `Median` method takes a second parameter that references the `Func(Of T, Double)` lambda expression to project a value for a type (from a collection) as the corresponding value of type `Double`. It then delegates the calculation of the median value to the other overload of the `Median` method. ラムダ式について詳しくは、「[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)」をご覧ください。  
   
  [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
- 次の例は、`Integer`型のコレクションと `Double`型のコレクションに対して `Median` 集計関数を呼び出すサンプルクエリを示しています。 `Double` 型のコレクションに対して `Median` 集計関数を呼び出すクエリは、`Double`型のコレクションを入力として受け入れる `Median` メソッドのオーバーロードを呼び出します。 `Integer` 型のコレクションに対して `Median` 集計関数を呼び出すクエリは、`Median` メソッドのジェネリックオーバーロードを呼び出します。  
+ The following example shows sample queries that call the `Median` aggregate function on a collection of type `Integer`, and a collection of type `Double`. The query that calls the `Median` aggregate function on the collection of type `Double` calls the overload of the `Median` method that accepts, as input, a collection of type `Double`. The query that calls the `Median` aggregate function on the collection of type `Integer` calls the generic overload of the `Median` method.  
   
  [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)

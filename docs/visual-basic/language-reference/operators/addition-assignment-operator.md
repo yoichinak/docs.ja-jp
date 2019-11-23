@@ -1,5 +1,5 @@
 ---
-title: += 演算子 (Visual Basic)
+title: += 演算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.+=
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-ms.openlocfilehash: 249a19abfb08677c01ac4cc484d049a7ed1a983c
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
-ms.translationtype: HT
+ms.openlocfilehash: 31a6da163061b905b8ffddcfc4b44978f5cdd55e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591645"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350310"
 ---
 # <a name="-operator-visual-basic"></a>+= 演算子 (Visual Basic)
-数値式の値を数値変数またはプロパティの値に加算し、その結果を変数またはプロパティに代入します。 また、を使用して、`String` 式を `String` 変数またはプロパティに連結し、その結果を変数またはプロパティに代入することもできます。  
+Adds the value of a numeric expression to the value of a numeric variable or property and assigns the result to the variable or property. Can also be used to concatenate a `String` expression to a `String` variable or property and assign the result to the variable or property.  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,36 +28,36 @@ variableorproperty += expression
   
 ## <a name="parts"></a>指定項目  
  `variableorproperty`  
- 必須。 任意の数値または `String` 変数またはプロパティ。  
+ 必須です。 Any numeric or `String` variable or property.  
   
  `expression`  
- 必須。 任意の数値または `String` 式。  
+ 必須です。 Any numeric or `String` expression.  
   
-## <a name="remarks"></a>コメント  
- `+=` 演算子の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)にすることはできません。  
+## <a name="remarks"></a>Remarks  
+ The element on the left side of the `+=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- `+=` 演算子は、右辺の値を左側の変数またはプロパティに追加し、その結果を左側の変数またはプロパティに代入します。 `+=` 演算子を使用すると、右側にある `String` 式を左側の `String` 変数またはプロパティに連結し、その結果を左側の変数またはプロパティに代入することもできます。  
+ The `+=` operator adds the value on its right to the variable or property on its left, and assigns the result to the variable or property on its left. The `+=` operator can also be used to concatenate the `String` expression on its right to the `String` variable or property on its left, and assign the result to the variable or property on its left.  
   
 > [!NOTE]
-> `+=` 演算子を使用する場合、加算または文字列の連結が発生するかどうかを判断できないことがあります。 `&=` 演算子を連結に使用して、あいまいさをなくし、自己記述型のコードを提供します。  
+> When you use the `+=` operator, you might not be able to determine whether addition or string concatenation will occur. Use the `&=` operator for concatenation to eliminate ambiguity and to provide self-documenting code.  
   
- コンパイル環境で厳密なセマンティクスが適用されている場合、この代入演算子は、暗黙的に拡張を実行しますが、縮小変換は実行しません。 これらの変換の詳細については、[拡大変換と縮小変換 (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)に関するページを参照してください。 厳密なセマンティクスと寛容なセマンティクスの詳細については、「 [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)」を参照してください。  
+ This assignment operator implicitly performs widening but not narrowing conversions if the compilation environment enforces strict semantics. For more information on these conversions, see [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md). For more information on strict and permissive semantics, see [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
- 寛容なセマンティクスが許可されている場合、`+=` 演算子は、`+` 演算子によって実行されるものと同一のさまざまな文字列と数値変換を暗黙的に実行します。 これらの変換の詳細については、「 [+ 演算子](../../../visual-basic/language-reference/operators/addition-operator.md)」を参照してください。  
+ If permissive semantics are allowed, the `+=` operator implicitly performs a variety of string and numeric conversions identical to those performed by the `+` operator. For details on these conversions, see [+ Operator](../../../visual-basic/language-reference/operators/addition-operator.md).  
   
 ## <a name="overloading"></a>オーバーロード  
- `+` 演算子は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `+` 演算子のオーバーロードは、`+=` 演算子の動作に影響します。 コードで `+`をオーバーロードするクラスまたは構造体の `+=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ The `+` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `+` operator affects the behavior of the `+=` operator. If your code uses `+=` on a class or structure that overloads `+`, be sure you understand its redefined behavior. 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`+=` 演算子を使用して、ある変数の値を別の変数と結合します。 最初の部分では `+=` を数値変数と共に使用して、ある値を別の値に追加します。 2番目の部分では、`+=` を `String` 変数と共に使用して、ある値を別の値と連結します。 どちらの場合も、結果は最初の変数に割り当てられます。  
+ The following example uses the `+=` operator to combine the value of one variable with another. The first part uses `+=` with numeric variables to add one value to another. The second part uses `+=` with `String` variables to concatenate one value with another. In both cases, the result is assigned to the first variable.  
   
  [!code-vb[VbVbalrOperators#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#7)]  
   
  [!code-vb[VbVbalrOperators#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#8)]  
   
- `num1` の値は13になり、`str1` の値は "103" になりました。  
+ The value of `num1` is now 13, and the value of `str1` is now "103".  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [+ 演算子](../../../visual-basic/language-reference/operators/addition-operator.md)
 - [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)

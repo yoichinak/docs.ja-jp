@@ -1,5 +1,5 @@
 ---
-title: For Each...Next ステートメント (Visual Basic)
+title: For Each...Next ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ForEach
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: f56e5defa2328011d222bfca05334b610e805055
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
-ms.translationtype: HT
+ms.openlocfilehash: 572f1efc0148bd8df4f13fa5651e74249caa45a7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332789"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351205"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next ステートメント (Visual Basic)
 
-コレクション内の各要素に対してステートメントのグループを繰り返します。
+Repeats a group of statements for each element in a collection.
 
 ## <a name="syntax"></a>構文
 
@@ -47,112 +47,112 @@ Next [ element ]
 
 ## <a name="parts"></a>指定項目
 
-|用語|Definition|
+|用語|定義|
 |---|---|
-|`element`|`For Each` ステートメントで必要です。 `Next` ステートメントでは省略可能です。 変動. コレクションの要素を反復処理するために使用されます。|
-|`datatype`|[`Option Infer`](option-infer-statement.md)が on (既定値) または `element` が既に宣言されている場合は省略可能です。`Option Infer` がオフで `element` がまだ宣言されていない場合は必須です。 `element`のデータ型。|
-|`group`|必須。 コレクション型またはオブジェクトである型を持つ変数。 `statements` を繰り返すコレクションを参照します。|
-|`statements`|省略可。 `group`内の各項目に対して実行される `For Each` と `Next` 間の1つ以上のステートメント。|
-|`Continue For`|省略可。 `For Each` ループの開始位置に制御を転送します。|
-|`Exit For`|省略可。 `For Each` ループから制御を転送します。|
-|`Next`|必須。 `For Each` ループの定義を終了します。|
+|`element`|Required in the `For Each` statement. Optional in the `Next` statement. Variable. Used to iterate through the elements of the collection.|
+|`datatype`|Optional if [`Option Infer`](option-infer-statement.md) is on (the default) or `element` is already declared; required if `Option Infer` is off and `element` isn't already declared. `element`のデータ型。|
+|`group`|必須です。 A variable with a type that's a collection type or Object. Refers to the collection over which the `statements` are to be repeated.|
+|`statements`|省略可能です。 One or more statements between `For Each` and `Next` that run on each item in `group`.|
+|`Continue For`|省略可能です。 Transfers control to the start of the `For Each` loop.|
+|`Exit For`|省略可能です。 Transfers control out of the `For Each` loop.|
+|`Next`|必須です。 Terminates the definition of the `For Each` loop.|
 
-## <a name="simple-example"></a>簡単な例
+## <a name="simple-example"></a>Simple Example
 
-コレクションまたは配列の各要素に対して一連のステートメントを繰り返す場合は、`For Each`...`Next` ループを使用します。
+Use a `For Each`...`Next` loop when you want to repeat a set of statements for each element of a collection or array.
 
 > [!TIP]
-> [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)うまくときに、ループの各繰り返しを制御変数に関連付けるし、その変数の最初と最後の値を決定します。 ただし、コレクションを処理する場合、初期値と最終値の概念は意味がなく、コレクションに含まれる要素の数がわかるとは限りません。 このような場合は、`For Each`...`Next` ループの方が適していることがよくあります。
+> A [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) works well when you can associate each iteration of a loop with a control variable and determine that variable's initial and final values. However, when you are dealing with a collection, the concept of initial and final values isn't meaningful, and you don't necessarily know how many elements the collection has. In this kind of case, a `For Each`...`Next` loop is often a better choice.
 
-次の例では、`For Each`...`Next` ステートメントは、リストコレクションのすべての要素を反復処理します。
+In the following example, the `For Each`…`Next` statement iterates through all the elements of a List collection.
 
 [!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]
 
-その他の例については、「[コレクション](../../../standard/collections/index.md)と[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)」を参照してください。
+For more examples, see [Collections](../../../standard/collections/index.md) and [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
 ## <a name="nested-loops"></a>Nested Loops
 
-ループを入れ子にするには、別のループ内にループを挿入し `For Each` ます。
+You can nest `For Each` loops by putting one loop within another.
 
-次の例では、入れ子になった `For Each`...`Next` を示します。 構成.
+The following example demonstrates nested `For Each`…`Next` structures.
 
 [!code-vb[VbVbalrStatements#122](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#122)]
 
-ループを入れ子にする場合、各ループには一意の `element` 変数が必要です。
+When you nest loops, each loop must have a unique `element` variable.
 
-また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md) を参照してください。
+You can also nest different kinds of control structures within each other. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
 
-## <a name="exit-for-and-continue-for"></a>Exit For と Continue For
+## <a name="exit-for-and-continue-for"></a>Exit For and Continue For
 
-[Exit For](../../../visual-basic/language-reference/statements/exit-statement.md)ステートメントを実行すると、`For`...`Next` が終了します ループし、`Next` ステートメントの後のステートメントに制御を転送します。
+The [Exit For](../../../visual-basic/language-reference/statements/exit-statement.md) statement causes execution to exit the `For`…`Next` loop and transfers control to the statement that follows the `Next` statement.
 
-`Continue For` ステートメントは、ループの次の反復処理に制御を直ちに転送します。 詳細については、「 [Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)」を参照してください。
+The `Continue For` statement transfers control immediately to the next iteration of the loop. For more information, see [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).
 
-次の例では、`Continue For` ステートメントと `Exit For` ステートメントを使用する方法を示します。
+The following example shows how to use the `Continue For` and `Exit For` statements.
 
 [!code-vb[VbVbalrStatements#123](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#123)]
 
-`For Each` ループには、任意の数の `Exit For` ステートメントを含めることができます。 入れ子になった `For Each` ループ内で使用すると、`Exit For` によって最も内側のループが終了し、次の上位レベルの入れ子に制御が移ります。
+You can put any number of `Exit For` statements in a `For Each` loop. When used within nested `For Each` loops, `Exit For` causes execution to exit the innermost loop and transfers control to the next higher level of nesting.
 
-`Exit For` は、たとえば、`If`...`Then`...`Else` 構造など、何らかの条件を評価した後に使用されることがよくあります。 次の条件の場合、`Exit For`を使用できます。
+`Exit For` is often used after an evaluation of some condition, for example, in an `If`...`Then`...`Else` structure. You might want to use `Exit For` for the following conditions:
 
-- 反復処理を続行することは不要または不可能です。 これは、エラー値または終了要求が原因である可能性があります。
+- Continuing to iterate is unnecessary or impossible. This might be caused by an erroneous value or a termination request.
 
-- 例外は、`Try`...`Catch`...`Finally`でキャッチされます。`Finally` ブロックの末尾に `Exit For` を使用することもできます。
+- An exception is caught in a `Try`...`Catch`...`Finally`. You might use `Exit For` at the end of the `Finally` block.
 
-- 無限ループがあります。これは、大規模または無限の回数実行されるループです。 このような条件を検出した場合は`Exit For`を使用してループをエスケープすることができます。 詳細については、[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)を参照してください。
+- There an endless loop, which is a loop that could run a large or even infinite number of times. If you detect such a condition, you can use `Exit For` to escape the loop. For more information, see [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md).
 
-## <a name="iterators"></a>反復子
+## <a name="iterators"></a>Iterators
 
-*反復子*を使用して、コレクションに対してカスタムの反復処理を実行します。 反復子は、関数または `Get` アクセサーにすることができます。 `Yield` ステートメントを使用して、コレクションの各要素を一度に1つ返します。
+You use an *iterator* to perform a custom iteration over a collection. An iterator can be a function or a `Get` accessor. It uses a `Yield` statement to return each element of the collection one at a time.
 
-`For Each...Next` ステートメントを使用して、反復子を呼び出します。 `For Each` ループの各イテレーションは、反復子を呼び出します。 反復子で `Yield` ステートメントに到達すると、`Yield` ステートメント内の式が返され、コード内の現在の位置が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。
+You call an iterator by using a `For Each...Next` statement. `For Each` ループの各イテレーションは、反復子を呼び出します。 When a `Yield` statement is reached in the iterator, the expression in the `Yield` statement is returned, and the current location in code is retained. 次回、反復子が呼び出されると、この位置から実行が再開されます。
 
-次の例では、iterator 関数を使用します。 Iterator 関数が、`Yield`内にあるステートメント、[For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md)ループします。 `ListEvenNumbers` メソッドでは、`For Each` ステートメント本体の各反復処理によって、次の `Yield` ステートメントに進む反復子関数の呼び出しが作成されます。
+The following example uses an iterator function. The iterator function has a `Yield` statement that's inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. In the `ListEvenNumbers` method, each iteration of the `For Each` statement body creates a call to the iterator function, which proceeds to the next `Yield` statement.
 
 [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]
 
-詳細については、「[反復子](../../programming-guide/concepts/iterators.md)、 [Yield ステートメント](../../../visual-basic/language-reference/statements/yield-statement.md)、および[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)」を参照してください。
+For more information, see [Iterators](../../programming-guide/concepts/iterators.md), [Yield Statement](../../../visual-basic/language-reference/statements/yield-statement.md), and [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).
 
 ## <a name="technical-implementation"></a>技術的な実装
 
-`For Each`...`Next` ステートメントを実行すると、ループが開始される前に、Visual Basic によってコレクションが1回だけ評価されます。 ステートメントブロックで `element` または `group`が変更された場合、これらの変更はループの繰り返しに影響しません。
+When a `For Each`…`Next` statement runs, Visual Basic evaluates the collection only one time, before the loop starts. If your statement block changes `element` or `group`, these changes don't affect the iteration of the loop.
 
-コレクション内のすべての要素が `element`に連続して割り当てられると、`For Each` ループが停止し、`Next` ステートメントに続くステートメントに制御が移ります。
+When all the elements in the collection have been successively assigned to `element`, the `For Each` loop stops and control passes to the statement following the `Next` statement.
 
-[オプションの推論](option-infer-statement.md)が on (既定の設定) の場合、Visual Basic コンパイラは `element`のデータ型を推測できます。 Off で、`element` がループの外側で宣言されていない場合は、`For Each` ステートメントで宣言する必要があります。 `element` のデータ型を明示的に宣言するには、`As` 句を使用します。 要素のデータ型が `For Each`...`Next` コンストラクトの外側で定義されている場合を除き、そのスコープはループの本体です。 ループ内で `element` 宣言することはできません。
+If [Option Infer](option-infer-statement.md) is on (its default setting), the Visual Basic compiler can infer the data type of `element`. If it is off and `element` hasn't been declared outside the loop, you must declare it in the `For Each` statement. To declare the data type of `element` explicitly, use an `As` clause. Unless the data type of element is defined outside the `For Each`...`Next` construct, its scope is the body of the loop. Note that you cannot declare `element` both outside and inside the loop.
 
-必要に応じて、`Next` ステートメントで `element` を指定することもできます。 これにより、特に `For Each` ループが入れ子になっている場合に、プログラムの読みやすさが向上します。 対応する `For Each` ステートメントに表示されるものと同じ変数を指定する必要があります。
+You can optionally specify `element` in the `Next` statement. This improves the readability of your program, especially if you have nested `For Each` loops. You must specify the same variable as the one that appears in the corresponding `For Each` statement.
 
-ループ内の `element` の値を変更しないようにすることもできます。 これにより、コードの読み取りとデバッグが困難になる可能性があります。 `group` の値を変更しても、ループが最初に入力されたときに決定されたコレクションまたはその要素には影響しません。
+You might want to avoid changing the value of `element` inside a loop. Doing this can make it more difficult to read and debug your code. Changing the value of `group` doesn't affect the collection or its elements, which were determined when the loop was first entered.
 
-ループを入れ子にしているときに、外側の入れ子レベルの `Next` ステートメントが内部レベルの `Next` より前に検出された場合、コンパイラはエラーを通知します。 ただし、コンパイラは、すべての `Next` ステートメントで `element` を指定した場合にのみ、この重複エラーを検出できます。
+When you're nesting loops, if a `Next` statement of an outer nesting level is encountered before the `Next` of an inner level, the compiler signals an error. However, the compiler can detect this overlapping error only if you specify `element` in every `Next` statement.
 
-コードが特定の順序でコレクションを走査することに依存している場合、コレクションが公開する列挙子オブジェクトの特性がわかっていない限り、`For Each`...`Next` ループは最適な選択ではありません。 走査の順序は Visual Basic によって決定されるのではなく、列挙子オブジェクトの <xref:System.Collections.IEnumerator.MoveNext%2A> メソッドによって決定されます。 したがって、コレクションのどの要素が `element`に最初に返されるか、または指定された要素の後に返される次の要素であるかを予測できない場合があります。 `For`...`Next` や `Do`...`Loop`などの別のループ構造を使用して、より信頼性の高い結果を得ることができます。
+If your code depends on traversing a collection in a particular order, a `For Each`...`Next` loop isn't the best choice, unless you know the characteristics of the enumerator object the collection exposes. The order of traversal isn't determined by Visual Basic, but by the <xref:System.Collections.IEnumerator.MoveNext%2A> method of the enumerator object. Therefore, you might not be able to predict which element of the collection is the first to be returned in `element`, or which is the next to be returned after a given element. You might achieve more reliable results using a different loop structure, such as `For`...`Next` or `Do`...`Loop`.
 
-ランタイムは、`group` 内の要素を `element`に変換できる必要があります。 [`Option Strict`] ステートメントでは、拡大変換と縮小変換の両方を許可するかどうかを制御します (`Option Strict` はオフ、既定値)。または、拡大変換のみが許可されるかどうかを制御します (`Option Strict` がオンの場合)。 詳細については、「[縮小変換](#narrowing-conversions)」を参照してください。
+The runtime must be able to convert the elements in `group` to `element`. The [`Option Strict`] statement controls whether both widening and narrowing conversions are allowed (`Option Strict` is off, its default value), or whether only widening conversions are allowed (`Option Strict` is on). For more information, see [Narrowing conversions](#narrowing-conversions).
 
-`group` のデータ型は、コレクションまたは列挙可能な配列を参照する参照型である必要があります。 ほとんどの場合、`group` は、`System.Collections` 名前空間の <xref:System.Collections.IEnumerable> インターフェイスまたは `System.Collections.Generic` 名前空間の <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装するオブジェクトを参照します。 `System.Collections.IEnumerable` は、コレクションの列挙子オブジェクトを返す <xref:System.Collections.IEnumerable.GetEnumerator%2A> メソッドを定義します。 列挙子オブジェクトは、`System.Collections` 名前空間の `System.Collections.IEnumerator` インターフェイスを実装し、<xref:System.Collections.IEnumerator.Current%2A> プロパティと <xref:System.Collections.IEnumerator.Reset%2A> および <xref:System.Collections.IEnumerator.MoveNext%2A> メソッドを公開します。 Visual Basic は、これらを使用してコレクションを走査します。
+The data type of `group` must be a reference type that refers to a collection or an array that's enumerable. Most commonly this means that `group` refers to an object that implements the <xref:System.Collections.IEnumerable> interface of the `System.Collections` namespace or the <xref:System.Collections.Generic.IEnumerable%601> interface of the `System.Collections.Generic` namespace. `System.Collections.IEnumerable` defines the <xref:System.Collections.IEnumerable.GetEnumerator%2A> method, which returns an enumerator object for the collection. The enumerator object implements the `System.Collections.IEnumerator` interface of the `System.Collections` namespace and exposes the <xref:System.Collections.IEnumerator.Current%2A> property and the <xref:System.Collections.IEnumerator.Reset%2A> and <xref:System.Collections.IEnumerator.MoveNext%2A> methods. Visual Basic uses these to traverse the collection.
 
 ### <a name="narrowing-conversions"></a>縮小変換
 
-`Option Strict` が `On`に設定されている場合、通常、縮小変換ではコンパイラエラーが発生します。 ただし、`For Each` ステートメントでは、`group` 内の要素から `element` への変換は実行時に評価されて実行され、縮小変換によって発生するコンパイラエラーは抑制されます。
+When `Option Strict` is set to `On`, narrowing conversions ordinarily cause compiler errors. In a `For Each` statement, however, conversions from the elements in `group` to `element` are evaluated and performed at run time, and compiler errors caused by narrowing conversions are suppressed.
 
-次の例では、`n` の初期値としての `m` の割り当ては `Option Strict` がオンのときにはコンパイルされません。これは、`Long` から `Integer` への変換は縮小変換であるためです。 ただし、`For Each` ステートメントでは、`number` への代入によって `Long` から `Integer`への変換が必要な場合でも、コンパイラエラーは報告されません。 多数の数値が含まれている `For Each` ステートメントでは、<xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> が大きい数値に適用されると、実行時エラーが発生します。
+In the following example, the assignment of `m` as the initial value for `n` doesn't compile when `Option Strict` is on because the conversion of a `Long` to an `Integer` is a narrowing conversion. In the `For Each` statement, however, no compiler error is reported, even though the assignment to `number` requires the same conversion from `Long` to `Integer`. In the `For Each` statement that contains a large number, a run-time error occurs when <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> is applied to the large number.
 
 [!code-vb[VbVbalrStatements#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class3.vb#89)]
 
-### <a name="ienumerator-calls"></a>IEnumerator 呼び出し
+### <a name="ienumerator-calls"></a>IEnumerator Calls
 
-`For Each`...`Next` ループの実行が開始されると、`group` が有効なコレクションオブジェクトを参照していることが Visual Basic 検証されます。 そうでない場合は、例外がスローされます。 それ以外の場合は、<xref:System.Collections.IEnumerator.MoveNext%2A> メソッドと列挙子オブジェクトの <xref:System.Collections.IEnumerator.Current%2A> プロパティを呼び出して、最初の要素を返します。 `MoveNext` が次の要素がないことを示している場合 (つまり、コレクションが空の場合)、`For Each` ループは停止し、`Next` ステートメントに続くステートメントに制御が移ります。 それ以外の場合、Visual Basic は最初の要素に `element` を設定し、ステートメントブロックを実行します。
+When execution of a `For Each`...`Next` loop starts, Visual Basic verifies that `group` refers to a valid collection object. If not, it throws an exception. Otherwise, it calls the <xref:System.Collections.IEnumerator.MoveNext%2A> method and the <xref:System.Collections.IEnumerator.Current%2A> property of the enumerator object to return the first element. If `MoveNext` indicates that there is no next element, that is, if the collection is empty, the `For Each` loop stops and control passes to the statement following the `Next` statement. Otherwise, Visual Basic sets `element` to the first element and runs the statement block.
 
-Visual Basic が `Next` ステートメントを検出するたびに、`For Each` ステートメントに戻ります。 この場合も、`MoveNext` と `Current` を呼び出して次の要素を返します。もう一度、ブロックを実行するか、結果に応じてループを停止します。 このプロセスは、次の要素が存在しないこと、または `Exit For` ステートメントが発生したことが `MoveNext` によって示されるまで続行されます。
+Each time Visual Basic encounters the `Next` statement, it returns to the `For Each` statement. Again it calls `MoveNext` and `Current` to return the next element, and again it either runs the block or stops the loop depending on the result. This process continues until `MoveNext` indicates that there is no next element or an `Exit For` statement is encountered.
 
-**コレクションを変更しています。** <xref:System.Collections.IEnumerable.GetEnumerator%2A> によって返される列挙子オブジェクトは、要素の追加、削除、置換、または並べ替えを行うことによって、コレクションを変更することはできません。 `For Each`...`Next` ループを開始した後にコレクションを変更した場合、列挙子オブジェクトは無効になり、次に要素にアクセスしようとすると <xref:System.InvalidOperationException> 例外が発生します。
+**Modifying the Collection.** The enumerator object returned by <xref:System.Collections.IEnumerable.GetEnumerator%2A> normally doesn't let you change the collection by adding, deleting, replacing, or reordering any elements. If you change the collection after you have initiated a `For Each`...`Next` loop, the enumerator object becomes invalid, and the next attempt to access an element causes an <xref:System.InvalidOperationException> exception.
 
-ただし、この変更のブロックは Visual Basic によって決定されるのではなく、<xref:System.Collections.IEnumerable> インターフェイスの実装によって決まります。 反復処理中に変更を許可する方法で `IEnumerable` を実装することができます。 このような動的な変更を検討している場合は、使用しているコレクションの `IEnumerable` 実装の特性を理解していることを確認してください。
+However, this blocking of modification isn't determined by Visual Basic, but rather by the implementation of the <xref:System.Collections.IEnumerable> interface. It is possible to implement `IEnumerable` in a way that allows for modification during iteration. If you are considering doing such dynamic modification, make sure that you understand the characteristics of the `IEnumerable` implementation on the collection you are using.
 
-**コレクション要素を変更しています。** 列挙子オブジェクトのプロパティは <xref:System.Collections.IEnumerator.Current%2A>ReadOnly[ であり、各コレクション要素のローカルコピーを返し](../../../visual-basic/language-reference/modifiers/readonly.md)ます。 つまり、`For Each`...`Next` ループで要素自体を変更することはできません。 行った変更は、`Current` からのローカルコピーにのみ適用され、基になるコレクションには反映されません。 ただし、要素が参照型の場合は、その要素が指すインスタンスのメンバーを変更できます。 次の例では、各 `thisControl` 要素の `BackColor` メンバーを変更します。 ただし、`thisControl` 自体を変更することはできません。
+**Modifying Collection Elements.** The <xref:System.Collections.IEnumerator.Current%2A> property of the enumerator object is [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), and it returns a local copy of each collection element. This means that you cannot modify the elements themselves in a `For Each`...`Next` loop. Any modification you make affects only the local copy from `Current` and isn't reflected back into the underlying collection. However, if an element is a reference type, you can modify the members of the instance to which it points. The following example modifies the `BackColor` member of each `thisControl` element. You cannot, however, modify `thisControl` itself.
 
 ```vb
 Sub LightBlueBackground(thisForm As System.Windows.Forms.Form)
@@ -162,27 +162,27 @@ Sub LightBlueBackground(thisForm As System.Windows.Forms.Form)
 End Sub
 ```
 
-前の例では、各 `thisControl` 要素の `BackColor` メンバーを変更できますが、`thisControl` 自体を変更することはできません。
+The previous example can modify the `BackColor` member of each `thisControl` element, although it cannot modify `thisControl` itself.
 
-**配列を走査しています。** <xref:System.Array> クラスは <xref:System.Collections.IEnumerable> インターフェイスを実装するため、すべての配列は <xref:System.Array.GetEnumerator%2A> メソッドを公開します。 これは、`For Each`...`Next` ループで配列を反復処理できることを意味します。 ただし、読み取ることができるのは配列要素だけです。 変更することはできません。
+**Traversing Arrays.** Because the <xref:System.Array> class implements the <xref:System.Collections.IEnumerable> interface, all arrays expose the <xref:System.Array.GetEnumerator%2A> method. This means that you can iterate through an array with a `For Each`...`Next` loop. However, you can only read the array elements. You cannot change them.
 
 ## <a name="example"></a>例
 
-次の例では、C:\ 内のすべてのフォルダーを一覧表示します。<xref:System.IO.DirectoryInfo> クラスを使用したディレクトリ。
+The following example lists all the folders in the C:\ directory by using the <xref:System.IO.DirectoryInfo> class.
 
 [!code-vb[VbVbalrStatements#124](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#124)]
 
 ## <a name="example"></a>例
 
-次の例では、コレクションを並べ替えるための手順を示しています。 この例では、<xref:System.Collections.Generic.List%601>に格納されている `Car` クラスのインスタンスを並べ替えます。 `Car` クラスは、<xref:System.IComparable%601> のメソッドの実装を必要とする <xref:System.IComparable%601.CompareTo%2A> インターフェイスを実装します。
+次の例では、コレクションを並べ替えるための手順を示しています。 The example sorts instances of a `Car` class that are stored in a <xref:System.Collections.Generic.List%601>. `Car` クラスは、<xref:System.IComparable%601> のメソッドの実装を必要とする <xref:System.IComparable%601.CompareTo%2A> インターフェイスを実装します。
 
-<xref:System.IComparable%601.CompareTo%2A> メソッドを呼び出すたびに、並べ替えに使用される1つの比較が行われます。 `CompareTo` メソッドのユーザーが作成したコードは、現在のオブジェクトと別のオブジェクトとの各比較の値を戻します。 現在のオブジェクトが別のオブジェクトよりも小さい場合はゼロ未満の値を、大きい場合はゼロ以上の値を、等しい場合はゼロを戻します。 これによって、より大きい、より小さい、等しい、の条件をコードに定義することができます。
+Each call to the <xref:System.IComparable%601.CompareTo%2A> method makes a single comparison that's used for sorting. `CompareTo` メソッドのユーザーが作成したコードは、現在のオブジェクトと別のオブジェクトとの各比較の値を戻します。 現在のオブジェクトが別のオブジェクトよりも小さい場合はゼロ未満の値を、大きい場合はゼロ以上の値を、等しい場合はゼロを戻します。 これによって、より大きい、より小さい、等しい、の条件をコードに定義することができます。
 
 `ListCars` のメソッドでは、`cars.Sort()` ステートメントがリストを並べ替えます。 <xref:System.Collections.Generic.List%601.Sort%2A> の <xref:System.Collections.Generic.List%601> メソッドへの呼び出しによって、`CompareTo` メソッドは `Car` 内の `List` オブジェクトに自動的に呼び出されます。
 
 [!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [コレクション](../../../standard/collections/index.md)
 - [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)

@@ -1,5 +1,5 @@
 ---
-title: AndAlso 演算子 (Visual Basic)
+title: AndAlso 演算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AndAlso
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: a52f598c8a7c7a79b0f2436f1add7b3eb5d5261b
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
-ms.translationtype: HT
+ms.openlocfilehash: b3801c7e05142e1bc793e3c9d49a6f6991756f9d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835226"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350236"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 演算子 (Visual Basic)
-2つの式の短絡論理積を実行します。  
+Performs short-circuiting logical conjunction on two expressions.  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,47 +29,47 @@ result = expression1 AndAlso expression2
   
 ## <a name="parts"></a>指定項目  
   
-|用語|Definition|  
+|用語|定義|  
 |---|---|  
-|`result`|必須。 任意のブール型 ( `Boolean` ) の式を指定します。 結果は、2つの式を比較した結果 `Boolean` になります。|  
-|`expression1`|必須。 任意のブール型 ( `Boolean` ) の式を指定します。|  
-|`expression2`|必須。 任意のブール型 ( `Boolean` ) の式を指定します。|  
+|`result`|必須です。 任意のブール型 ( `Boolean` ) の式を指定します。 The result is the `Boolean` result of comparison of the two expressions.|  
+|`expression1`|必須です。 任意のブール型 ( `Boolean` ) の式を指定します。|  
+|`expression2`|必須です。 任意のブール型 ( `Boolean` ) の式を指定します。|  
   
-## <a name="remarks"></a>コメント  
- コンパイルされたコードが別の式の結果に応じて1つの式の評価をバイパスできる場合、論理操作は*ショートサーキット*と呼ばれます。 最初に評価された式の結果が演算の最終結果を決定した場合、最終的な結果を変更できないため、2番目の式を評価する必要はありません。 ショートサーキットは、バイパスされた式が複雑な場合や、プロシージャ呼び出しが関係している場合に、パフォーマンスを向上させることができます。  
+## <a name="remarks"></a>Remarks  
+ A logical operation is said to be *short-circuiting* if the compiled code can bypass the evaluation of one expression depending on the result of another expression. If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result. Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure calls.  
   
- 両方の式が `True`に評価される場合、`result` は `True`ます。 次の表は、`result` がどのように決定されるかを示しています。  
+ If both expressions evaluate to `True`, `result` is `True`. The following table illustrates how `result` is determined.  
   
-|`expression1` の場合|`expression2`|`result` の値はです。|  
+|If `expression1` is|And `expression2` is|The value of `result` is|  
 |---|---|---|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`False`|  
-|`False`|(評価なし)|`False`|  
+|`False`|(not evaluated)|`False`|  
   
 ## <a name="data-types"></a>データの種類  
- `AndAlso` 演算子は、[ブールデータ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)に対してのみ定義されます。 Visual Basic は、式を評価する前に、必要に応じて各オペランドを `Boolean` に変換します。 結果を数値型に代入すると、Visual Basic によって `Boolean` からその型に変換され、`False` が `0` になり、`True` が `-1`になります。
-詳細については、「[ブール型変換](../data-types/boolean-data-type.md#type-conversions)」を参照してください。
+ The `AndAlso` operator is defined only for the [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic converts each operand as necessary to `Boolean` before evaluating the expression. If you assign the result to a numeric type, Visual Basic converts it from `Boolean` to that type such that `False` becomes `0` and `True` becomes `-1`.
+For more information, see [Boolean Type Conversions](../data-types/boolean-data-type.md#type-conversions).
   
 ## <a name="overloading"></a>オーバーロード  
- [And 演算子](../../../visual-basic/language-reference/operators/and-operator.md)と[IsFalse 演算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)は*オーバーロード*することができます。つまり、クラスまたは構造体が、そのクラスまたは構造体の型を持つ場合に、その動作を再定義できます。 `And` 演算子と `IsFalse` 演算子のオーバーロードは、`AndAlso` 演算子の動作に影響します。 コードで `And` と `IsFalse`をオーバーロードするクラスまたは構造体の `AndAlso` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ The [And Operator](../../../visual-basic/language-reference/operators/and-operator.md) and the [IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md) can be *overloaded*, which means that a class or structure can redefine their behavior when an operand has the type of that class or structure. Overloading the `And` and `IsFalse` operators affects the behavior of the `AndAlso` operator. If your code uses `AndAlso` on a class or structure that overloads `And` and `IsFalse`, be sure you understand their redefined behavior. 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`AndAlso` 演算子を使用して、2つの式の論理積を実行します。 結果は、conjoined 式全体が true であるかどうかを示す `Boolean` 値です。 最初の式が `False`場合、2番目の式は評価されません。  
+ The following example uses the `AndAlso` operator to perform a logical conjunction on two expressions. The result is a `Boolean` value that represents whether the entire conjoined expression is true. If the first expression is `False`, the second is not evaluated.  
   
  [!code-vb[VbVbalrOperators#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#24)]  
   
- 前の例では、`True`、`False`、および `False`の結果がそれぞれ生成されます。 `secondCheck`の計算では、最初の式が既に `False`ているため、2番目の式は評価されません。 ただし、2番目の式は `thirdCheck`の計算で評価されます。  
+ The preceding example produces results of `True`, `False`, and `False`, respectively. In the calculation of `secondCheck`, the second expression is not evaluated because the first is already `False`. However, the second expression is evaluated in the calculation of `thirdCheck`.  
   
 ## <a name="example"></a>例  
- 次の例は、配列の要素の中から特定の値を検索する `Function` プロシージャを示しています。 配列が空の場合、または配列の長さを超えた場合、`While` のステートメントでは、検索値に対して配列要素がテストされません。  
+ The following example shows a `Function` procedure that searches for a given value among the elements of an array. If the array is empty, or if the array length has been exceeded, the `While` statement does not test the array element against the search value.  
   
  [!code-vb[VbVbalrOperators#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#25)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [論理/ビット演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [And 演算子](../../../visual-basic/language-reference/operators/and-operator.md)
 - [IsFalse 演算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)
-- [Visual Basic の論理演算子とビット処理演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

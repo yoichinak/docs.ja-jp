@@ -1,5 +1,5 @@
 ---
-title: Visual Basic におけるシャドウ
+title: シャドウ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [Visual Basic], shadowing
@@ -18,46 +18,46 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 30c02cf367c461c3896a01538d03380627de294f
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: HT
+ms.openlocfilehash: 034b5c0ecf3be6e77048fb7318e931801575f07a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004858"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345324"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic におけるシャドウ
-2つのプログラミング要素が同じ名前を共有している場合、そのうちの1つは、もう一方を非表示にしたり*影*を付けることができます。 このような状況では、シャドウされた要素を参照することはできません。代わりに、コードで要素名を使用すると、Visual Basic コンパイラによってシャドウ要素に解決されます。  
+When two programming elements share the same name, one of them can hide, or *shadow*, the other one. In such a situation, the shadowed element is not available for reference; instead, when your code uses the element name, the Visual Basic compiler resolves it to the shadowing element.  
   
 ## <a name="purpose"></a>目的  
- シャドウの主な目的は、クラスメンバーの定義を保護することです。 基本クラスには、既に定義されているものと同じ名前の要素を作成する変更が含まれる場合があります。 この場合、`Shadows` 修飾子は、新しい基底クラス要素ではなく、定義したメンバーに解決されるように、クラスを通じて参照を強制します。  
+ The main purpose of shadowing is to protect the definition of your class members. The base class might undergo a change that creates an element with the same name as one you have already defined. If this happens, the `Shadows` modifier forces references through your class to be resolved to the member you defined, instead of to the new base class element.  
   
-## <a name="types-of-shadowing"></a>シャドウの種類  
- 要素は、2つの異なる方法で別の要素をシャドウできます。 シャドウ要素は、シャドウされた要素を含む領域のサブ領域内で宣言できます。この場合、シャドウは*スコープによって*行われます。 または、派生クラスで基底クラスのメンバーを再定義できます。この場合、シャドウは*継承によって*行われます。  
+## <a name="types-of-shadowing"></a>Types of Shadowing  
+ An element can shadow another element in two different ways. The shadowing element can be declared inside a subregion of the region containing the shadowed element, in which case the shadowing is accomplished *through scope*. Or a deriving class can redefine a member of a base class, in which case the shadowing is done *through inheritance*.  
   
-### <a name="shadowing-through-scope"></a>スコープによるシャドウ処理  
- 同じモジュール、クラス、または構造体のプログラミング要素が同じ名前でスコープが異なる場合があります。 2つの要素がこのように宣言されていて、コードが共有する名前を参照している場合、狭いスコープの要素は他の要素をシャドウします (ブロックスコープは最も狭いものです)。  
+### <a name="shadowing-through-scope"></a>Shadowing Through Scope  
+ It is possible for programming elements in the same module, class, or structure to have the same name but different scope. When two elements are declared in this manner and the code refers to the name they share, the element with the narrower scope shadows the other element (block scope is the narrowest).  
   
- たとえば、モジュールは `temp`という名前の `Public` 変数を定義できます。モジュール内のプロシージャは、`temp`という名前のローカル変数も宣言できます。 プロシージャ内から `temp` への参照はローカル変数にアクセスしますが、プロシージャの外部から `temp` への参照は `Public` 変数にアクセスします。 この場合、プロシージャ変数 `temp`、モジュール変数 `temp`をシャドウします。  
+ For example, a module can define a `Public` variable named `temp`, and a procedure within the module can declare a local variable also named `temp`. References to `temp` from within the procedure access the local variable, while references to `temp` from outside the procedure access the `Public` variable. In this case, the procedure variable `temp` shadows the module variable `temp`.  
   
- 次の図は、両方とも `temp`という名前の2つの変数を示しています。 ローカル変数は、独自のプロシージャ `p`内からアクセスされるときに、メンバー変数 `temp` `temp` シャドウします。 ただし、`MyClass` キーワードはシャドウをバイパスし、メンバー変数にアクセスします。  
+ The following illustration shows two variables, both named `temp`. The local variable `temp` shadows the member variable `temp` when accessed from within its own procedure `p`. However, the `MyClass` keyword bypasses the shadowing and accesses the member variable.  
   
- ![スコープによるシャドウ処理を示すグラフィック。](./media/shadowing/shadow-scope-diagram.gif)
+ ![Graphic that shows shadowing through scope.](./media/shadowing/shadow-scope-diagram.gif)
   
- スコープを使用したシャドウの例については、「[方法: 変数と同じ名前の変数を非表示に](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)する」を参照してください。  
+ For an example of shadowing through scope, see [How to: Hide a Variable with the Same Name as Your Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
-### <a name="shadowing-through-inheritance"></a>継承によるシャドウ処理  
- 派生クラスが基底クラスから継承されたプログラミング要素を再定義する場合、再定義要素は元の要素をシャドウします。 宣言された要素の型、またはオーバーロードされた要素のセットは、他の型を使用してシャドウできます。 たとえば、`Integer` 変数を使用すると、`Function` プロシージャをシャドウできます。 別のプロシージャでプロシージャをシャドウする場合は、別のパラメーターリストと別の戻り値の型を使用できます。  
+### <a name="shadowing-through-inheritance"></a>Shadowing Through Inheritance  
+ If a derived class redefines a programming element inherited from a base class, the redefining element shadows the original element. You can shadow any type of declared element, or set of overloaded elements, with any other type. For example, an `Integer` variable can shadow a `Function` procedure. If you shadow a procedure with another procedure, you can use a different parameter list and a different return type.  
   
- 次の図は、基本クラス `b` と、`b`から継承する派生クラス `d` を示しています。 基底クラスは `proc`という名前のプロシージャを定義し、派生クラスは同じ名前の別のプロシージャでそれをシャドウします。 最初の `Call` ステートメントは、派生クラスのシャドウ `proc` にアクセスします。 ただし、`MyBase` キーワードはシャドウをバイパスし、基本クラスのシャドウされたプロシージャにアクセスします。  
+ The following illustration shows a base class `b` and a derived class `d` that inherits from `b`. The base class defines a procedure named `proc`, and the derived class shadows it with another procedure of the same name. The first `Call` statement accesses the shadowing `proc` in the derived class. However, the `MyBase` keyword bypasses the shadowing and accesses the shadowed procedure in the base class.  
   
  ![継承によるシャドウのグラフィック ダイアグラム](./media/shadowing/shadowing-inherit-diagram.gif)  
   
- 継承によるシャドウ処理の例については、「[方法: 変数と同じ名前の変数を非表示](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)にする」および「[方法: 継承された変数を非表示にする](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)」を参照してください。  
+ For an example of shadowing through inheritance, see [How to: Hide a Variable with the Same Name as Your Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) and [How to: Hide an Inherited Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
   
-#### <a name="shadowing-and-access-level"></a>シャドウとアクセスレベル  
- シャドウ要素は、派生クラスを使用してコードから常にアクセスできるとは限りません。 たとえば、`Private`として宣言されている可能性があります。 このような場合は、シャドウが解消され、シャドウが存在しない場合と同じ要素への参照がコンパイラによって解決されます。 この要素は、アクセス可能な要素であり、シャドウクラスから逆方向に derivational ステップが最も少ない。 シャドウされた要素がプロシージャの場合、解決策は、同じ名前、パラメーターリスト、および戻り値の型を持つアクセス可能な最も近いバージョンになります。  
+#### <a name="shadowing-and-access-level"></a>Shadowing and Access Level  
+ The shadowing element is not always accessible from the code using the derived class. For example, it might be declared `Private`. In such a case, shadowing is defeated and the compiler resolves any reference to the same element it would have if there had been no shadowing. This element is the accessible element the fewest derivational steps backward from the shadowing class. If the shadowed element is a procedure, the resolution is to the closest accessible version with the same name, parameter list, and return type.  
   
- 次の例は、3つのクラスの継承階層を示しています。 各クラスは `Sub` プロシージャ `display`を定義します。各派生クラスは、基本クラスの `display` プロシージャをシャドウします。  
+ The following example shows an inheritance hierarchy of three classes. Each class defines a `Sub` procedure `display`, and each derived class shadows the `display` procedure in its base class.  
   
 ```vb  
 Public Class firstClass  
@@ -92,23 +92,23 @@ Module callDisplay
 End Module  
 ```  
   
- 前の例では、派生クラス `secondClass`、`Private` プロシージャと共に `display` シャドウしています。 モジュール `callDisplay` が `secondClass`で `display` を呼び出すと、呼び出し元のコードが `secondClass` 外部にあるため、プライベート `display` プロシージャにアクセスできません。 シャドウが解消され、コンパイラが基底クラス `display` プロシージャへの参照を解決します。  
+ In the preceding example, the derived class `secondClass` shadows `display` with a `Private` procedure. When module `callDisplay` calls `display` in `secondClass`, the calling code is outside `secondClass` and therefore cannot access the private `display` procedure. Shadowing is defeated, and the compiler resolves the reference to the base class `display` procedure.  
   
- ただし、さらに派生したクラス `thirdClass` は `display` を `Public`として宣言するので、`callDisplay` のコードからアクセスできます。  
+ However, the further derived class `thirdClass` declares `display` as `Public`, so the code in `callDisplay` can access it.  
   
-## <a name="shadowing-and-overriding"></a>シャドウとオーバーライド  
- シャドウは、オーバーライドと混同しないようにしてください。 どちらも、派生クラスが基底クラスから継承し、宣言された1つの要素を別の要素で再定義するときに使用されます。 ただし、2つの間には大きな違いがあります。 比較については、「[シャドウとオーバーライドの違い](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)」を参照してください。  
+## <a name="shadowing-and-overriding"></a>Shadowing and Overriding  
+ Do not confuse shadowing with overriding. Both are used when a derived class inherits from a base class, and both redefine one declared element with another. But there are significant differences between the two. For a comparison, see [Differences Between Shadowing and Overriding](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md).  
   
-## <a name="shadowing-and-overloading"></a>シャドウとオーバーロード  
- 派生クラス内の複数の要素を持つ同じ基底クラス要素をシャドウする場合、シャドウされる要素は、その要素のオーバーロードされたバージョンになります。 詳細については、「 [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。  
+## <a name="shadowing-and-overloading"></a>Shadowing and Overloading  
+ If you shadow the same base class element with more than one element in your derived class, the shadowing elements become overloaded versions of that element. 詳細については、「 [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。  
   
-## <a name="accessing-a-shadowed-element"></a>シャドウ要素へのアクセス  
- 派生クラスから要素にアクセスする場合、通常は、その派生クラスの現在のインスタンスを使用します。そのためには、要素名を `Me` キーワードで修飾します。 派生クラスが基底クラスの要素をシャドウする場合は、`MyBase` キーワードを使用して修飾することで、基底クラスの要素にアクセスできます。  
+## <a name="accessing-a-shadowed-element"></a>Accessing a Shadowed Element  
+ When you access an element from a derived class, you normally do so through the current instance of that derived class, by qualifying the element name with the `Me` keyword. If your derived class shadows the element in the base class, you can access the base class element by qualifying it with the `MyBase` keyword.  
   
- シャドウされた要素にアクセスする例については、「[方法: 派生クラスによって非表示になっている変数にアクセスする](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)」を参照してください。  
+ For an example of accessing a shadowed element, see [How to: Access a Variable Hidden by a Derived Class](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
   
-### <a name="declaration-of-the-object-variable"></a>オブジェクト変数の宣言  
- オブジェクト変数を作成する方法は、派生クラスがシャドウ要素またはシャドウされた要素にアクセスするかどうかにも影響します。 次の例では、派生クラスから2つのオブジェクトを作成しますが、一方のオブジェクトは基底クラスとして、もう1つは派生クラスとして宣言されています。  
+### <a name="declaration-of-the-object-variable"></a>Declaration of the Object Variable  
+ How you create the object variable can also affect whether the derived class accesses a shadowing element or the shadowed element. The following example creates two objects from a derived class, but one object is declared as the base class and the other as the derived class.  
   
 ```vb  
 Public Class baseCls  
@@ -135,12 +135,12 @@ Public Class useClasses
 End Class  
 ```  
   
- 前の例では、変数 `basObj` が基本クラスとして宣言されています。 `dervCls` オブジェクトをこのオブジェクトに割り当てると、拡大変換が構成されるため、有効になります。 ただし、基底クラスは派生クラスの変数 `z` のシャドウバージョンにアクセスできないため、コンパイラは `basObj.z` を元の基底クラスの値に解決します。  
+ In the preceding example, the variable `basObj` is declared as the base class. Assigning a `dervCls` object to it constitutes a widening conversion and is therefore valid. However, the base class cannot access the shadowing version of the variable `z` in the derived class, so the compiler resolves `basObj.z` to the original base class value.  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic 内のスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)

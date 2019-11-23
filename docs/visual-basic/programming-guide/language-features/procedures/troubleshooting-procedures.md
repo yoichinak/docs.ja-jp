@@ -1,5 +1,5 @@
 ---
-title: トラブルシューティング手順 (Visual Basic)
+title: Troubleshooting procedures
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: c74947e21de8ba26ffde01f6f28aea67346c2071
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: HT
+ms.openlocfilehash: 8d4c4929e299efb12d283492a101c18ae794110b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002077"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352515"
 ---
-# <a name="troubleshooting-procedures-visual-basic"></a>トラブルシューティング手順 (Visual Basic)
+# <a name="troubleshooting-procedures-visual-basic"></a>Troubleshooting procedures (Visual Basic)
 
-このページでは、プロシージャの使用時に発生する可能性がある一般的な問題をいくつか紹介します。  
+This page lists some common problems that can occur when working with procedures.  
   
-## <a name="returning-an-array-type-from-a-function-procedure"></a>関数プロシージャから配列型を返す
+## <a name="returning-an-array-type-from-a-function-procedure"></a>Returning an array type from a function procedure
 
-`Function` プロシージャが配列データ型を返す場合、`Function` 名を使用して配列の要素に値を格納することはできません。 これを実行しようとすると、コンパイラはそれを `Function`の呼び出しとして解釈します。 次の例では、コンパイラエラーが生成されます。
+If a `Function` procedure returns an array data type, you cannot use the `Function` name to store values in the elements of the array. If you attempt to do this, the compiler interprets it as a call to the `Function`. The following example generates compiler errors:
   
 ```vb
 Function AllOnes(n As Integer) As Integer()
@@ -35,94 +35,94 @@ Function AllOnes(n As Integer) As Integer()
 End Function
 ```
 
-ステートメント `AllOnes(i) = 1` は、正しくないデータ型 (`Integer` 配列ではなくスカラー `Integer`) の引数を使用して `AllOnes` を呼び出すと表示されるため、コンパイラエラーが生成されます。 ステートメント `Return AllOnes()` では、引数を指定せずに `AllOnes` を呼び出すように見えるため、コンパイラエラーが生成されます。  
+The statement `AllOnes(i) = 1` generates a compiler error because it appears to call `AllOnes` with an argument of the wrong data type (a scalar `Integer` instead of an `Integer` array). The statement `Return AllOnes()` generates a compiler error because it appears to call `AllOnes` with no argument.  
   
- **正しい方法:** 返される配列の要素を変更できるようにするには、内部配列をローカル変数として定義します。 次の例では、エラーなしでコンパイルされます。
+ **Correct approach:** To be able to modify the elements of an array that is to be returned, define an internal array as a local variable. The following example compiles without error:
 
  [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]
 
-## <a name="argument-not-modified-by-procedure-call"></a>引数がプロシージャ呼び出しによって変更されていません
+## <a name="argument-not-modified-by-procedure-call"></a>Argument not modified by procedure call
 
-プロシージャが、呼び出し元のコードの引数の基になるプログラミング要素を変更できるようにする場合は、参照渡しで渡す必要があります。 ただし、プロシージャは、値によって渡された場合でも、参照型引数の要素にアクセスできます。
+If you intend to allow a procedure to change a programming element underlying an argument in the calling code, you must pass it by reference. But a procedure can access the elements of a reference type argument even if you pass it by value.
 
-- **基になる変数**。 プロシージャが基になる変数の要素自体の値を置き換えることができるようにするには、プロシージャで[ByRef](../../../language-reference/modifiers/byref.md)パラメーターを宣言する必要があります。 また、呼び出し元のコードでは、引数をかっこで囲む必要はありません。これは、`ByRef` 渡す機構がオーバーライドされるためです。
+- **Underlying variable**. To allow the procedure to replace the value of the underlying variable element itself, the procedure must declare the parameter [ByRef](../../../language-reference/modifiers/byref.md). Also, the calling code must not enclose the argument in parentheses, because that would override the `ByRef` passing mechanism.
 
-- **参照型の要素**。 パラメーター [ByVal](../../../language-reference/modifiers/byval.md)を宣言する場合、プロシージャは、基になる変数要素自体を変更することはできません。 ただし、引数が参照型の場合、プロシージャは、変数の値を置き換えることができなくても、その参照先のオブジェクトのメンバーを変更できます。 たとえば、引数が配列変数の場合、プロシージャは新しい配列を割り当てることはできませんが、1つ以上の要素を変更することができます。 変更された要素は、呼び出し元のコード内の基になる配列変数に反映されます。
+- **Reference type elements**. If you declare a parameter [ByVal](../../../language-reference/modifiers/byval.md), the procedure cannot modify the underlying variable element itself. However, if the argument is a reference type, the procedure can modify the members of the object to which it points, even though it cannot replace the variable's value. For example, if the argument is an array variable, the procedure cannot assign a new array to it, but it can change one or more of its elements. The changed elements are reflected in the underlying array variable in the calling code.
 
-次の例では、値によって配列変数を受け取り、その要素を操作する2つのプロシージャを定義します。 プロシージャ `increase` は、各要素に1つずつ追加します。 プロシージャ `replace` は、新しい配列をパラメーター `a()` に割り当ててから、各要素に1つを追加します。 ただし、再割り当ては、`a()` が `ByVal`として宣言されているため、呼び出し元のコード内の基になる配列変数には影響しません。
+The following example defines two procedures that take an array variable by value and operate on its elements. Procedure `increase` simply adds one to each element. Procedure `replace` assigns a new array to the parameter `a()` and then adds one to each element. However, the reassignment does not affect the underlying array variable in the calling code because `a()` is declared `ByVal`.
 
 [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]
 
 [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]
 
-次の例では、`increase` を呼び出し、`replace`を呼び出します。
+The following example makes calls to `increase` and `replace`:
 
 [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]
   
-最初の `MsgBox` の呼び出しでは、"後に増加する (n):11, 21, 31, 41" と表示されます。 `n` は参照型であるため、`ByVal`渡されている場合でも、`increase` はそのメンバーを変更できます。
+The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41". Because `n` is a reference type, `increase` can change its members, even though it is passed `ByVal`.
 
-2番目の `MsgBox` 呼び出しでは、"After replace (n):11, 21, 31, 41" と表示されます。 `n` は `ByVal`渡されるので、`replace` 新しい配列を割り当てることによって、変数 `n` を変更することはできません。 `replace` によって新しい配列インスタンス `k` 作成され、それがローカル変数 `a`に代入されると、呼び出し元のコードによって渡された `n` への参照が失われます。 `a`のメンバーをインクリメントすると、ローカル配列 `k` のみが影響を受けます。
+The second `MsgBox` call displays "After replace(n): 11, 21, 31, 41". Because `n` is passed `ByVal`, `replace` cannot modify the variable `n` by assigning a new array to it. When `replace` creates the new array instance `k` and assigns it to the local variable `a`, it loses the reference to `n` passed in by the calling code. When it increments the members of `a`, only the local array `k` is affected.
 
-**正しい方法:** 基になる変数要素自体を変更できるようにするには、参照渡しで渡します。 次の例は、呼び出し元のコードで配列を別の配列に置き換えることができるようにする `replace` の宣言の変更を示しています。
+**Correct approach:** To be able to modify an underlying variable element itself, pass it by reference. The following example shows the change in the declaration of `replace` that allows it to replace one array with another in the calling code:
 
 [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]
 
-## <a name="unable-to-define-an-overload"></a>オーバーロードを定義できません
+## <a name="unable-to-define-an-overload"></a>Unable to define an overload
 
-オーバーロードされたバージョンのプロシージャを定義する場合は、同じ名前で、別のシグネチャを使用する必要があります。 コンパイラが同じシグネチャを持つオーバーロードから宣言を区別できない場合は、エラーが生成されます。
+If you want to define an overloaded version of a procedure, you must use the same name but a different signature. If the compiler cannot differentiate your declaration from an overload with the same signature, it generates an error.
 
-プロシージャの*シグネチャ*は、プロシージャ名とパラメーターリストによって決まります。 各オーバーロードは、他のすべてのオーバーロードと同じ名前を持つ必要がありますが、シグネチャの他のコンポーネントの少なくとも1つでは、それらのすべてが異なる必要があります。 詳細については、「 [Procedure Overloading](./procedure-overloading.md)」を参照してください。
+The *signature* of a procedure is determined by the procedure name and the parameter list. Each overload must have the same name as all the other overloads but must differ from all of them in at least one of the other components of the signature. 詳細については、「 [Procedure Overloading](./procedure-overloading.md)」を参照してください。
 
-次の項目は、パラメーターリストに関連する場合でも、プロシージャのシグネチャのコンポーネントではありません。
+The following items, even though they pertain to the parameter list, are not components of a procedure's signature:
 
-- プロシージャ修飾子キーワード (`Public`、`Shared`、`Static`など)。
-- パラメーター名。
-- `ByRef` や `Optional`などのパラメーター修飾子キーワード。
-- 戻り値のデータ型 (変換演算子を除く)。
+- Procedure modifier keywords, such as `Public`, `Shared`, and `Static`.
+- Parameter names.
+- Parameter modifier keywords, such as `ByRef` and `Optional`.
+- The data type of the return value (except for a conversion operator).
 
-前の項目のうち1つ以上を変更してプロシージャをオーバーロードすることはできません。
+You cannot overload a procedure by varying only one or more of the preceding items.
 
-**正しい方法:** プロシージャオーバーロードを定義できるようにするには、シグネチャを変更する必要があります。 同じ名前を使用する必要があるため、パラメーターの数、順序、またはデータ型を変更する必要があります。 ジェネリックプロシージャでは、型パラメーターの数を変更できます。 変換演算子 ([CType 関数](../../../language-reference/functions/ctype-function.md)) では、戻り値の型を変更できます。
+**Correct approach:** To be able to define a procedure overload, you must vary the signature. Because you must use the same name, you must vary the number, order, or data types of the parameters. In a generic procedure, you can vary the number of type parameters. In a conversion operator ([CType Function](../../../language-reference/functions/ctype-function.md)), you can vary the return type.
 
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>省略可能な引数と ParamArray 引数を使用したオーバーロードの解決
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Overload resolution with Optional and ParamArray arguments
 
-1つ以上の[省略可能](../../../language-reference/modifiers/optional.md)なパラメーターまたは[ParamArray](../../../language-reference/modifiers/paramarray.md)パラメーターを使用してプロシージャをオーバーロードする場合は、*暗黙的なオーバーロード*の複製を避ける必要があります。 詳細については、「[プロシージャのオーバーロードに関する考慮事項](./considerations-in-overloading-procedures.md)」を参照してください。
+If you are overloading a procedure with one or more [Optional](../../../language-reference/modifiers/optional.md) parameters or a [ParamArray](../../../language-reference/modifiers/paramarray.md) parameter, you must avoid duplicating any of the *implicit overloads*. For information, see [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).
 
-## <a name="calling-the-wrong-version-of-an-overloaded-procedure"></a>オーバーロードされたプロシージャの間違ったバージョンの呼び出し
+## <a name="calling-the-wrong-version-of-an-overloaded-procedure"></a>Calling the wrong version of an overloaded procedure
 
-プロシージャに複数のオーバーロードされたバージョンがある場合は、すべてのパラメーターリストを理解し、Visual Basic がオーバーロード間の呼び出しを解決する方法を理解しておく必要があります。 それ以外の場合は、意図したもの以外のオーバーロードを呼び出すことができます。
+If a procedure has several overloaded versions, you should be familiar with all their parameter lists and understand how Visual Basic resolves calls among the overloads. Otherwise you could call an overload other than the intended one.
 
-呼び出すオーバーロードを決定したら、次の規則に注意してください。
+When you have determined which overload you want to call, be careful to observe the following rules:
 
-- 正しい数の引数を正しい順序で指定してください。  
-- 理想的には、引数は、対応するパラメーターとまったく同じデータ型を持つ必要があります。 いずれの場合も、各引数のデータ型は、対応するパラメーターのデータ型に拡大変換する必要があります。 これは、 [Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)が `Off`に設定されている場合でも同様です。 オーバーロードに引数リストからの縮小変換が必要な場合、そのオーバーロードは呼び出される対象ではありません。
-- 拡張を必要とする引数を指定する場合は、対応するパラメーターのデータ型にできるだけ近いデータ型を指定してください。 引数のデータ型を受け入れるオーバーロードが2つ以上ある場合、コンパイラは、より少ない拡大率でを呼び出すオーバーロードの呼び出しを解決します。
+- Supply the correct number of arguments, and in the correct order.  
+- Ideally, your arguments should have the exact same data types as the corresponding parameters. In any case, the data type of each argument must widen to that of its corresponding parameter. This is true even with the [Option Strict Statement](../../../language-reference/statements/option-strict-statement.md) set to `Off`. If an overload requires any narrowing conversion from your argument list, that overload is not eligible to be called.
+- If you supply arguments that require widening, make their data types as close as possible to the corresponding parameter data types. If two or more overloads accept your argument data types, the compiler resolves your call to the overload that calls for the least amount of widening.
 
-引数を準備するときに[CType 関数](../../../language-reference/functions/ctype-function.md)変換キーワードを使用すると、データ型の不一致の可能性を減らすことができます。
+You can reduce the chance of data type mismatches by using the [CType Function](../../../language-reference/functions/ctype-function.md) conversion keyword when preparing your arguments.
 
-### <a name="overload-resolution-failure"></a>オーバーロードの解決エラー
+### <a name="overload-resolution-failure"></a>Overload resolution failure
 
-オーバーロードされたプロシージャを呼び出すと、コンパイラはオーバーロードの1つを除くすべてを削除しようとします。 成功した場合は、そのオーバーロードの呼び出しを解決します。 すべてのオーバーロードを除外する場合、または対象となるオーバーロードを1つの候補に減らすことができない場合は、エラーが生成されます。
+When you call an overloaded procedure, the compiler attempts to eliminate all but one of the overloads. If it succeeds, it resolves the call to that overload. If it eliminates all the overloads, or if it cannot reduce the eligible overloads to a single candidate, it generates an error.
 
-次の例は、オーバーロードの解決プロセスを示しています。
+The following example illustrates the overload resolution process:
 
 [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]
 
 [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]
   
-最初の呼び出しでは、最初の引数の型 (`Short`) が対応するパラメーター (`Byte`) の型に限定されるため、コンパイラは最初のオーバーロードを削除します。 次に、2番目のオーバーロード (`Short` および `Single`) の各引数の型が、3番目のオーバーロード (`Integer` および `Single`) の対応する型に拡大変換されるため、3番目のオーバーロードが削除されます。 2番目のオーバーロードでは、より少ない拡大が必要になるため、コンパイラはこれを呼び出しに使用します。
+In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`). It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`). The second overload requires less widening, so the compiler uses it for the call.
 
-2番目の呼び出しでは、コンパイラは、縮小に基づいてオーバーロードのいずれかを削除することはできません。 最初の呼び出しの場合と同じ理由で3番目のオーバーロードを削除します。これは、引数の型をより拡大して、2番目のオーバーロードを呼び出すことができるためです。 ただし、コンパイラは1番目と2番目のオーバーロード間で解決できません。 各には、もう一方の型に拡大変換する定義済みのパラメーター型が1つあります (`Short`に`Byte` ますが、`Double`には `Single` ます)。 そのため、コンパイラはオーバーロードの解決エラーを生成します。
+In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing. It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types. However, the compiler cannot resolve between the first and second overloads. Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`). The compiler therefore generates an overload resolution error.
 
-**正しい方法:** オーバーロードされたプロシージャをあいまいで呼び出すことができるようにするには、 [CType 関数](../../../language-reference/functions/ctype-function.md)を使用して、引数のデータ型をパラメーターの型と照合します。 次の例は、2番目のオーバーロードを強制的に解決する `z` の呼び出しを示しています。
+**Correct approach:** To be able to call an overloaded procedure without ambiguity, use [CType Function](../../../language-reference/functions/ctype-function.md) to match the argument data types to the parameter types. The following example shows a call to `z` that forces resolution to the second overload.
 
 [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]
 
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>省略可能な引数と ParamArray 引数を使用したオーバーロードの解決
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Overload resolution with Optional and ParamArray arguments
 
-1つのプロシージャの2つのオーバーロードが同じシグネチャを持つ場合、最後のパラメーターは[省略可能](../../../language-reference/modifiers/optional.md)として宣言され、もう一方では[ParamArray](../../../language-reference/modifiers/paramarray.md)が適用されます。ただし、コンパイラは、最も近い一致に従って、そのプロシージャの呼び出しを解決します。 詳細については、「 [Overload Resolution](./overload-resolution.md)」を参照してください。
+If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../language-reference/modifiers/optional.md) in one and [ParamArray](../../../language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure according to the closest match. 詳細については、「 [Overload Resolution](./overload-resolution.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [手順](index.md)
 - [Sub プロシージャ](sub-procedures.md)
