@@ -25,13 +25,13 @@ Web 設定は、.NET Framework のバージョンのインストール フォル
   
 Web 設定は、machine.config ファイル、ルート、Web.config ファイル、アプリケーション レベルの Web.config ファイルなどの他の構成ファイルでは使用されません。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t[ **@no__t 47 >** ](system-web-element-web-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t-3[ **\<applicationPool >** ](applicationpool-element-web-settings.md)  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.web>**](system-web-element-web-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<applicationPool>**](applicationpool-element-web-settings.md)  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<system.web >](system-web-element-web-settings.md)|ASP.NET ホスト層が使用する情報が含まれています。|  
+|[\<system.web>](system-web-element-web-settings.md)|ASP.NET ホスト層が使用する情報が含まれています。|  
 |[\<applicationPool>](applicationpool-element-web-settings.md)|CPU と、ASP.NET ホスト層によって管理されているプロセス全体の動作に適用される CPU および ASP.NET 設定の実行レベルを指定します。|  
   
 ## <a name="see-also"></a>関連項目
