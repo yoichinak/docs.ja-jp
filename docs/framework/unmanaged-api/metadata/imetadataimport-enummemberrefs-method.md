@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 444c892026f9b6de12255ebdcda829db82c9bfdb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 743b6bed1a5d62f5214b8366b1a3c6e4ebecb98b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780453"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441717"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs メソッド
 指定した型のメンバーを表す MemberRef トークンを列挙します。  
@@ -41,33 +39,33 @@ HRESULT EnumMemberRefs (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。  
+ [in, out] A pointer to the enumerator.  
   
  `tkParent`  
- [in]そのメンバーが列挙型の TypeDef、TypeRef、MethodDef、または ModuleRef トークンです。  
+ [in] A TypeDef, TypeRef, MethodDef, or ModuleRef token for the type whose members are to be enumerated.  
   
  `rMemberRefs`  
- [out]MemberRef トークンを格納するために使用する配列。  
+ [out] The array used to store MemberRef tokens.  
   
  `cMax`  
  [in] `rMemberRefs` 配列の最大サイズ。  
   
  `pcTokens`  
- [out]実際に返される MemberRef トークン数`rMemberRefs`します。  
+ [out] The actual number of MemberRef tokens returned in `rMemberRefs`.  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs` 正常に返されます。|  
-|`S_FALSE`|MemberRef トークンを列挙することはありません。 その場合は、`pcTokens`は 0 にします。|  
+|`S_OK`|`EnumMemberRefs` returned successfully.|  
+|`S_FALSE`|There are no MemberRef tokens to enumerate. In that case, `pcTokens` is to zero.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4185ec41fc9f7d1d919a79b57c02625210ad72a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7547d7557169b1279125141afb5b05e22341942a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777179"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432747"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec メソッド
-メソッドのジェネリック インスタンスを作成し、定義するためのトークンを取得します。  
+Creates a generic instance of a method, and gets a token to the definition.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,23 +38,23 @@ HRESULT DefineMethodSpec (
   
 ## <a name="parameters"></a>パラメーター  
  `tkParent`  
- [in]ジェネリックのインスタンスを作成する対象のメソッドのトークンです。 トークン型でなければなりません`mdMethodDef`または`mdMemberRef`します。  
+ [in] A token for the method of which to create the generic instance. The token must be of type `mdMethodDef` or `mdMemberRef`.  
   
  `pvSigBlob`  
- [in]メソッドのバイナリの COM + シグネチャへのポインター。  
+ [in] A pointer to the binary COM+ signature of the method.  
   
  `cbSibBlob`  
- [in]サイズ (バイト単位) の`pvSigBlob`します。  
+ [in] The size, in bytes, of `pvSigBlob`.  
   
  `pmi`  
- [out]メソッドのメタデータ署名定義のトークン。  
+ [out] A token to the metadata signature definition of the method.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

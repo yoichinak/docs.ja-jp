@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 90eab7b3-1fae-4af4-8bce-f7bc0e188a99
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 208dd5ff2ba9eb450cac5a9807f0cd09852d5cf3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9da4e34fa948db2fc73cbde813bac9b3430605ca
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777822"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436249"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>IMetaDataConverter::GetTypeLibFromMetaData メソッド
-ポインターを取得、`ITypeLib`を指定したライブラリとモジュールの名前を持つタイプ ライブラリを表すインスタンス。  
+Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified library and module names.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,20 +37,20 @@ HRESULT GetTypeLibFromMetaData (
   
 ## <a name="parameters"></a>パラメーター  
  `strModule`  
- [in]タイプ ライブラリのモジュールの名前。  
+ [in] The name of the type library's module.  
   
  `strTlbName`  
- [in]タイプ ライブラリの名前。  
+ [in] The name of the type library.  
   
  `ppITL`  
- [out]アドレスを受け取る場所へのポインター、`ITypeLib`タイプ ライブラリを表すインスタンス。  
+ [out] A pointer to a location that receives the address of the `ITypeLib` instance that represents the type library.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

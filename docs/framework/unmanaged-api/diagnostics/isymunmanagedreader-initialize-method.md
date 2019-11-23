@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f2dceeb2f0b3aa9f3147157e77087dffbf2d5f85
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca34d1d84d6f9960d021c35566f8412df321464d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939032"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429740"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize メソッド
-このリーダーが関連付けられるメタデータインポーターインターフェイスと、モジュールのファイル名を使用して、シンボルリーダーを初期化します。  
+Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.  
   
 > [!NOTE]
-> このメソッドを呼び出すことができるのは1回だけです。他のリーダーメソッドの前に呼び出す必要があります。  
+> This method can be called only once, and must be called before any other reader methods.  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,25 +40,25 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>パラメーター  
  `importer`  
- からこのリーダーが関連付けられるメタデータインポーターインターフェイス。  
+ [in] The metadata importer interface with which this reader will be associated.  
   
  `filename`  
- からモジュールのファイル名。 代わりに、 `pIStream`パラメーターを使用できます。  
+ [in] The file name of the module. You can use the `pIStream` parameter instead.  
   
  `searchPath`  
- から検索するパス。 このパラメーターは省略できます。  
+ [in] The path to search. このパラメーターは省略できます。  
   
  `pIStream`  
- からファイルストリーム。 filename パラメーターの代わりに使用されます。  
+ [in] The file stream, used as an alternative to the filename parameter.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK を返します。それ以外の場合は E_FAIL またはその他のエラーコードを返します。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="remarks"></a>Remarks  
- または`filename`パラメーターのいずれか1つだけを指定する必要があります。両方を指定することはできません。 `pIStream` `searchPath` パラメーターは省略可能です。  
+ You need to specify only one of the `filename` or the `pIStream` parameters, not both. `searchPath` パラメーターは省略可能です。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym .idl、CorSym .h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 
