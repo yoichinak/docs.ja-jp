@@ -18,7 +18,7 @@ ms.locfileid: "70252484"
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<memoryCache >**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<memoryCache>**  
   
 ## <a name="syntax"></a>構文  
   
