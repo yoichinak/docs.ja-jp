@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 624672b5-1189-488a-85d2-3e12b49617c1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d00c28862036c21c44f46c23fb09e947628dcf3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f98c35f77fdb200be2e96364c9ac06c386faa62
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783047"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436024"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout メソッド
-指定した値型の配置がボックス化されるときに場所に関する情報を取得します。  
+Gets information about where the specified value type is located when it is boxed.  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,18 +35,18 @@ HRESULT GetBoxClassLayout(
   
 ## <a name="parameters"></a>パラメーター  
  `classId`  
- [in]値の型にボックス化を記述するクラスの ID。  
+ [in] The ID of the class that describes the value type that is boxed.  
   
  `pBufferOffset`  
- [out]ボックス化されたオブジェクト ID のポインター値の型の基準とした、オフセットを示す整数。  
+ [out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.  
   
 ## <a name="remarks"></a>Remarks  
- `pBufferOffset`値は、値の型のボックス内の場所です。 後`pBufferOffset`が適用されるオブジェクトの値を解釈するボックス化されたオブジェクトに値型のクラス レイアウトを使用できます。  
+ The `pBufferOffset` value is the location of the value type within a box. After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

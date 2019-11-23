@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: acc239ce-3eef-418c-b1df-c5a6dd8e8a4c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d39dbf44b21400c8eb5a7abf361dc868b8d39a22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 65765795c13948175a7eb5bd78843968d55953d8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756100"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445384"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a>ICorProfilerCallback::ExceptionSearchFilterEnter メソッド
-例外処理の検索フェーズで、ユーザー定義の例外フィルターの実行が開始されたことをプロファイラーに通知します。  
+Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,12 +34,12 @@ HRESULT ExceptionSearchFilterEnter(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in]フィルターを含む関数の ID。  
+ [in] The ID of the function that contains the filter.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

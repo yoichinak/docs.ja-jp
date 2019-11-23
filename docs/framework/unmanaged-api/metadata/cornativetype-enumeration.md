@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 846c754aeb0a710fa70e906e666f694eaa77c576
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef4788891e91608a394482319a89b8b0d258449f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781707"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436516"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType 列挙型
 ネイティブのアンマネージ型を記述する値が格納されます。  
@@ -93,56 +91,56 @@ typedef enum CorNativeType {
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|互換性のために残されています。|  
 |`NATIVE_TYPE_VOID`|互換性のために残されています。|  
-|`NATIVE_TYPE_BOOLEAN`|ここでは TRUE、0 以外と FALSE、4 バイト ブール値には 0 です。|  
-|`NATIVE_TYPE_I1`|符号付き 8 ビット整数値。|  
-|`NATIVE_TYPE_U1`|符号なし 8 ビット整数値。|  
-|`NATIVE_TYPE_I2`|16 ビット符号付き整数値。|  
-|`NATIVE_TYPE_U2`|符号なし 16 ビット整数値。|  
+|`NATIVE_TYPE_BOOLEAN`|A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.|  
+|`NATIVE_TYPE_I1`|A signed 8-bit integer value.|  
+|`NATIVE_TYPE_U1`|An unsigned 8-bit integer value.|  
+|`NATIVE_TYPE_I2`|A signed 16-bit integer value.|  
+|`NATIVE_TYPE_U2`|An unsigned 16-bit integer value.|  
 |`NATIVE_TYPE_I4`|符号付き 32 ビット整数値。|  
 |`NATIVE_TYPE_U4`|32 ビットの符号なし整数値。|  
-|`NATIVE_TYPE_I8`|64 ビットの符号付き整数値。|  
-|`NATIVE_TYPE_U8`|64 ビットの符号なし整数値。|  
-|`NATIVE_TYPE_R4`|4 バイト浮動小数点数値。|  
-|`NATIVE_TYPE_R8`|8 バイト浮動小数点数値です。|  
+|`NATIVE_TYPE_I8`|A signed 64-bit integer value.|  
+|`NATIVE_TYPE_U8`|An unsigned 64-bit integer value.|  
+|`NATIVE_TYPE_R4`|A 4-byte floating-point numeric value.|  
+|`NATIVE_TYPE_R8`|An 8-byte floating-point numeric value.|  
 |`NATIVE_TYPE_SYSCHAR`|互換性のために残されています。|  
 |`NATIVE_TYPE_VARIANT`|互換性のために残されています。|  
-|`NATIVE_TYPE_CURRENCY`|マネージに対応する数値の COM 型<xref:System.Decimal>型。|  
+|`NATIVE_TYPE_CURRENCY`|A numeric COM type that corresponds to the managed <xref:System.Decimal> type.|  
 |`NATIVE_TYPE_PTR`|互換性のために残されています。|  
 |`NATIVE_TYPE_DECIMAL`|互換性のために残されています。|  
 |`NATIVE_TYPE_DATE`|互換性のために残されています。|  
-|`NATIVE_TYPE_BSTR`|COM 相互運用。|  
-|`NATIVE_TYPE_LPSTR`|LPSTR、文字列値です。|  
-|`NATIVE_TYPE_LPWSTR`|LPWSTR、文字列値です。|  
-|`NATIVE_TYPE_LPTSTR`|LPTSTR、文字列値です。|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|固定のシステム定義の文字列値です。|  
+|`NATIVE_TYPE_BSTR`|COM Interop.|  
+|`NATIVE_TYPE_LPSTR`|An LPSTR string value.|  
+|`NATIVE_TYPE_LPWSTR`|An LPWSTR string value.|  
+|`NATIVE_TYPE_LPTSTR`|An LPTSTR string value.|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|A fixed, system-defined string value.|  
 |`NATIVE_TYPE_OBJECTREF`|互換性のために残されています。|  
-|`NATIVE_TYPE_IUNKNOWN`|COM 相互運用。|  
-|`NATIVE_TYPE_IDISPATCH`|COM 相互運用。|  
-|`NATIVE_TYPE_STRUCT`|ネイティブ構造体の値。|  
-|`NATIVE_TYPE_INTF`|COM 相互運用。|  
-|`NATIVE_TYPE_SAFEARRAY`|COM 相互運用。|  
-|`NATIVE_TYPE_FIXEDARRAY`|固定長配列値です。|  
-|`NATIVE_TYPE_INT`|ネイティブの 16 ビット符号付き整数値。|  
-|`NATIVE_TYPE_UINT`|ネイティブの 16 ビット符号なし整数値。|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|互換性のために残されています。<br /><br /> NATIVE_TYPE_STRUCT を使用します。|  
-|`NATIVE_TYPE_BYVALSTR`|COM 相互運用。|  
-|`NATIVE_TYPE_ANSIBSTR`|COM 相互運用。|  
-|`NATIVE_TYPE_TBSTR`|COM 相互運用。<br /><br /> プラットフォームに応じて、BSTR、ANSIBSTR またはを選択します。|  
-|`NATIVE_TYPE_VARIANTBOOL`|2 バイト ブール値 TRUE は-1、FALSE は 0 です。|  
+|`NATIVE_TYPE_IUNKNOWN`|COM Interop.|  
+|`NATIVE_TYPE_IDISPATCH`|COM Interop.|  
+|`NATIVE_TYPE_STRUCT`|A native structure value.|  
+|`NATIVE_TYPE_INTF`|COM Interop.|  
+|`NATIVE_TYPE_SAFEARRAY`|COM Interop.|  
+|`NATIVE_TYPE_FIXEDARRAY`|A fixed-length array value.|  
+|`NATIVE_TYPE_INT`|A native 16-bit signed integer value.|  
+|`NATIVE_TYPE_UINT`|A native 16-bit unsigned integer value.|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|互換性のために残されています。<br /><br /> Use NATIVE_TYPE_STRUCT.|  
+|`NATIVE_TYPE_BYVALSTR`|COM Interop.|  
+|`NATIVE_TYPE_ANSIBSTR`|COM Interop.|  
+|`NATIVE_TYPE_TBSTR`|COM Interop.<br /><br /> Select BSTR or ANSIBSTR depending on the platform.|  
+|`NATIVE_TYPE_VARIANTBOOL`|A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.|  
 |`NATIVE_TYPE_FUNC`|関数ポインター。|  
-|`NATIVE_TYPE_ASANY`|ネイティブ型への参照。|  
-|`NATIVE_TYPE_ARRAY`|未指定の型のメンバーを含む配列への参照。|  
-|`NATIVE_TYPE_LPSTRUCT`|構造体への 32 ビット整数ポインター。|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|カスタム マーシャラーのネイティブ型です。<br /><br /> これは、次の形式の文字列で後にする必要があります。「ネイティブな型の名前/0Custom マーシャラー型の名前/0Optional cookie/0」または"{ネイティブ GUID を入力}/0Custom マーシャラー 0/名前/0Optional cookie の種類"|  
-|`NATIVE_TYPE_ERROR`|COM 相互運用。<br /><br /> ELEMENT_TYPE_I4 では、この型は VT_HRESULT にマップされます。|  
-|`NATIVE_TYPE_IINSPECTABLE`|ネイティブ`IInspectable`型。|  
-|`NATIVE_TYPE_HSTRING`|ネイティブ`HString`します。|  
-|`NATIVE_TYPE_MAX`|値は無効です。|  
+|`NATIVE_TYPE_ASANY`|A reference to any native type.|  
+|`NATIVE_TYPE_ARRAY`|A reference to an array with members of an unspecified type.|  
+|`NATIVE_TYPE_LPSTRUCT`|A 32-bit integer pointer to a structure.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|A custom marshaler native type.<br /><br /> This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"|  
+|`NATIVE_TYPE_ERROR`|COM Interop.<br /><br /> With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.|  
+|`NATIVE_TYPE_IINSPECTABLE`|A native `IInspectable` type.|  
+|`NATIVE_TYPE_HSTRING`|A native `HString`.|  
+|`NATIVE_TYPE_MAX`|An invalid value.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
