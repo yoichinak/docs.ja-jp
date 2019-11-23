@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 3ef6d02023570f5ec4013b070317c272a94b8212
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 390132fe20d593eb0bb075df17658732c3793a49
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120107"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969312"
 ---
 # <a name="64-bit-applications"></a>64 ビット アプリケーション
 アプリケーションをコンパイルするときに、Windows 64 ビット オペレーティング システム上で、ネイティブ アプリケーションとして実行するか、WOW64 (Windows 64 ビット上の Windows 32 ビット) の制御下で実行するかを指定できます。 WOW64 は互換環境であり、32 ビット アプリケーションを 64 ビット オペレーティング システム上で実行できるようにします。 WOW64 は、Windows オペレーティング システムのすべての 64 ビット バージョンに含まれています。  
@@ -41,11 +41,7 @@ ms.locfileid: "73120107"
 ## <a name="general-64-bit-programming-information"></a>一般的な 64 ビット プログラミングについて  
  64 ビット プログラミングの一般的な問題については、次のドキュメントを参照してください。  
   
-- 64 ビット Windows コンピューター上の 64 ビット版 CLR の詳細については、MSDN Web サイトの「[.NET Framework Developer Center (.NET Framework デベロッパー センター)](https://go.microsoft.com/fwlink/?LinkId=37079)」を参照してください。  
-  
-- Windows SDK ドキュメントの「[Programming Guide for 64-bit Windows](https://go.microsoft.com/fwlink/p/?LinkId=253512)」 (64 ビット Windows のプログラミング ガイド) を参照してください。  
-  
-- 64 ビット版 CLR をダウンロードする方法については、MSDN Web サイトの「[.NET Framework ダウンロード](https://go.microsoft.com/fwlink/?LinkId=50953)」を参照してください。  
+- Windows SDK ドキュメントの「[Programming Guide for 64-bit Windows](https://docs.microsoft.com/windows/win32/winprog64/programming-guide-for-64-bit-windows)」 (64 ビット Windows のプログラミング ガイド) を参照してください。  
   
 - 64 ビット アプリケーションを作成するための Visual Studio のサポート機能については、「[Visual Studio 開発環境の 64 ビット サポート](/visualstudio/ide/visual-studio-ide-64-bit-support)」を参照してください。  
   

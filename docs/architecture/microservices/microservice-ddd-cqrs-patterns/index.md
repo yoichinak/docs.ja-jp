@@ -3,10 +3,10 @@ title: マイクロサービスで DDD と CQRS パターンを使ってビジ�
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | DDD と CQRS パターンを適用して複雑なビジネス シナリオに取り組む方法を理解する
 ms.date: 10/08/2018
 ms.openlocfilehash: 88b105b68307c8587f877bb9ddf370e143d8539b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 11/21/2019
 ms.locfileid: "73739841"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>マイクロサービスで DDD と CQRS パターンを使ってビジネスの複雑さに取り組む

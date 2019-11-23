@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: e602e0f0603637659b7d18d75e66547dcd946c54
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d0f3d857a90aca763121595151a2193125b47c6c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123760"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975626"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング
 
@@ -41,14 +41,14 @@ Windows 8 以降では、.NET Framework はオペレーティング システム
 |前のインストールを完了するためにコンピューターの再起動が必要であるため、セットアップを続行できません。 コンピューターを再起動し、セットアップを再度実行してください。|インストールを完了するために、再起動が必要な場合があります。 手順に従って、コンピューターを再起動し、セットアップを再実行します。<br /><br /> まれに、Windows で不足している更新プログラムが多数検出され、次の順番の更新プログラムをインストールするための再起動を行っている場合、システムを複数回再起動するように求められることがあります。|  
 |.NET Framework Setup cannot be run in Program Compatibility Mode. (プログラム互換性モードで .NET Framework セットアップを実行できません。)|この記事で後述する「[プログラムの互換性問題](#compat)」セクションを参照してください。|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8 は、コンポーネント ストアが破損しているためにインストールされませんでした。|詳細については、「[DISM またはシステム更新準備ツールを使用して Windows Update のエラーを解決する](https://support.microsoft.com/kb/947821)」を参照してください。|  
-|Setup cannot run because the Windows Installer Service is not available on this computer. (このコンピューターには利用できる Windows インストーラー サービスがないため、セットアップは実行できません。)|Microsoft サポート オンラインの[プログラムをインストールまたは更新するときの Windows インストーラー サービス エラー](https://go.microsoft.com/fwlink/p/?LinkId=248684)に関するページを参照してください。|  
-|Setup may not run properly because the Windows Update Service is not available on this computer. (このコンピューターには利用できる Windows Update サービスがありません。セットアップは正しく実行されない可能性があります。)|管理者によって、コンピューターが Microsoft Windows Update ではなく Windows Server Update Services (WSUS) を使用するように設定されています。 詳細については、[Windows 8 または Windows Server 2012 での NET Framework 3.5 をインストール時に表示されるエラー コード](https://support.microsoft.com/kb/2734782)に関するページのエラー コード 0x800F0906 のセクションを参照してください。<br /><br /> Microsoft サポート オンラインの[最新版の Windows Update エージェントを入手してコンピューターの更新プログラムを管理する方法](https://go.microsoft.com/fwlink/p/?LinkId=248437)に関するページも参照してください。|  
-|Setup may not run properly because the Background Intelligent Transfer Service (BITS) is not available on this computer. (このコンピューターには利用できる Background Intelligent Transfer Service (BITS) がありません。セットアップは正しく実行されない可能性があります。)|Microsoft サポート オンラインの「[An update to prevent a Background Intelligent Transfer Service (BITS) crash on a Windows Vista-based computer](https://go.microsoft.com/fwlink/p/?LinkId=248680)」(Windows Vista ベースのコンピューターでのバックグラウンド インテリジェント転送サービス (BITS) のクラッシュを防止する更新プログラム) を参照してください。|  
+|Setup cannot run because the Windows Installer Service is not available on this computer. (このコンピューターには利用できる Windows インストーラー サービスがないため、セットアップは実行できません。)|Microsoft サポート Web サイトの「[Windows 7 または Windows Vista でプログラムをインストールしようとすると、"Windows インストーラー サービスにアクセスできませんでした" エラーが発生する](https://support.microsoft.com/help/2642495/the-windows-installer-service-could-not-be-accessed-error-when-you-try)」を参照してください。|  
+|Setup may not run properly because the Windows Update Service is not available on this computer. (このコンピューターには利用できる Windows Update サービスがありません。セットアップは正しく実行されない可能性があります。)|管理者によって、コンピューターが Microsoft Windows Update ではなく Windows Server Update Services (WSUS) を使用するように設定されています。 詳細については、「[.NET Framework 3.5 インストール時のエラー: 0x800F0906、0x800F081F、0x800F0907](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906-0x800f081f-0x800f0907)」のエラー コード 0x800F0906 のセクションを参照してください。<br /><br /> Microsoft サポート Web サイトの「[Windows Update エージェントを最新バージョンに更新する方法](https://support.microsoft.com/help/949104/how-to-update-the-windows-update-agent-to-the-latest-version)」も参照してください。|  
+|Setup may not run properly because the Background Intelligent Transfer Service (BITS) is not available on this computer. (このコンピューターには利用できる Background Intelligent Transfer Service (BITS) がありません。セットアップは正しく実行されない可能性があります。)|Microsoft サポート Web サイトの「[Windows Vista ベースのコンピューターでバックグラウンド インテリジェント転送サービス (BITS) がクラッシュする問題を修正する更新プログラムについて](https://support.microsoft.com/help/940520/an-update-is-available-to-fix-a-background-intelligent-transfer-servic)」を参照してください。|  
 |Windows Update にエラーが発生しエラー コード 0x80070643 または 0x643 が表示されたため、セットアップは正しく実行されない可能性があります。|Microsoft サポート オンラインの [.NET Framework 更新プログラムのインストール エラー"0x80070643" または "0x643"](https://support.microsoft.com/kb/976982) に関するページを参照してください。|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8 は、既にこのオペレーティング システムにインストールされています。 .NET Framework 4.5.x/4.6.x/4.7.x/4.8 再頒布可能パッケージをインストールする必要はありません。|アクションなし。<br /><br /> システムにインストールされている .NET Framework のバージョンを確認する方法については、「[方法:インストールされている .NET Framework バージョンを確認する](../migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。 サポートされるオペレーティング システムについては、[システム要件](../get-started/system-requirements.md)に関するページをご覧ください。|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8 は、このオペレーティング システムではサポートされていません。|サポートされるオペレーティング システムについては、[システム要件](../get-started/system-requirements.md)に関するページをご覧ください。<br /><br /> Windows 7 での .NET Framework のインストールに失敗した場合、通常このメッセージは Windows 7 SP1 がインストールされていないことを示します。 Windows 7 システムでは、.NET Framework には Windows 7 SP1 が必要です。 Windows 7 を使用していて Service Pack 1 をインストールしていない場合、.NET Framework をインストールする前に、Service Pack 1 をインストールする必要があります。 Windows 7 SP1 のインストールの詳細については、[Windows 7 Service Pack 1 (SP1) のインストール方法の詳細](https://windows.microsoft.com/windows7/install-windows-7-service-pack-1)に関するページを参照してください。|  
 |Your computer is currently running a Server Core installation of Windows Server 2008 operating system. (現在、コンピューターでは Windows Server 2008 オペレーティング システムの Server Core インストールが実行されています。) .NET Framework 4.5.x には、オペレーティング システムまたは Server Core 2008 R2 SP1 の完全なリリースが必要です。 Windows Server 2008 SP2、Windows Server 2008 R2 SP1、Server Core 2008 R2 SP1 のいずれかの完全バージョンをインストールして、.NET Framework 4.5.x セットアップを再度実行してください。|.NET Framework は、Windows Server 2008 R2 SP1 以降の Server Core ロールでサポートされています。 [システム要件](../get-started/system-requirements.md)に関するページを参照してください。|  
-|.NET Framework 4.5.x は既にこのオペレーティング システムの一部として組み込まれていますが、現在は無効になっています ([!INCLUDE[winserver8](../../../includes/winserver8-md.md)] のみ)。|Windows Web サイトの [Windows の機能の有効化または無効化](https://go.microsoft.com/fwlink/p/?LinkId=248438)に関するページを参照してください。|  
+|.NET Framework 4.5.x は既にこのオペレーティング システムの一部として組み込まれていますが、現在は無効になっています ([!INCLUDE[winserver8](../../../includes/winserver8-md.md)] のみ)。| **コントロール パネル**の **[Windows の機能の有効化または無効化]** を使用して、.NET Framework 4.5.x を有効にします。 |  
 |このセットアップ プログラムは x86 コンピューターのみを対象としています。 x64 コンピューターまたは IA64 コンピューターにはインストールできません。|[システム要件](../get-started/system-requirements.md)に関するページを参照してください。|  
 |このセットアップ プログラムは x64 コンピューターまたは x86 コンピューターのみを対象としています。 IA64 コンピューターにはインストールできません。|[システム要件](../get-started/system-requirements.md)に関するページを参照してください。|  
 

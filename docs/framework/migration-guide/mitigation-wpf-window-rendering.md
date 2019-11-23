@@ -2,14 +2,12 @@
 title: '軽減策: WPF ウィンドウのレンダリング'
 ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13091c06561da24d2fc03f810fd8b8687b21d9a4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 42d6abf1ba6ed7c17a5a5604e98b5ee46d0c3ac2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789796"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457770"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>軽減策: WPF ウィンドウのレンダリング
 
@@ -43,4 +41,4 @@ Windows 8 以上で複数のモニターに WPF ウィンドウをレンダリ�
 
 ## <a name="see-also"></a>関連項目
 
-- [ランタイムの変更点](runtime-changes-in-the-net-framework-4-6.md)
+- [アプリケーションの互換性](application-compatibility.md)

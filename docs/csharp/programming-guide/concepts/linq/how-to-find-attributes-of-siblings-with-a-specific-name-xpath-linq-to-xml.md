@@ -1,15 +1,15 @@
 ---
-title: '方法: 特定の名前を持つ兄弟の属性を検索する (XPath-LINQ to XML) (C#)'
+title: 特定の名前を持つ兄弟の属性を検索する方法 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 0d7842f190f7ce7869668929b69c2336d33c6183
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 788945232874ed5c1ba9a8a43c10eaf012320cbb
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253734"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141131"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>方法: 特定の名前を持つ兄弟の属性を検索する (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>特定の名前を持つ兄弟の属性を検索する方法 (XPath-LINQ to XML) (C#)
 このトピックでは、コンテキスト ノードの兄弟が持つすべての属性を検索する方法について説明します。 コレクション内にある特定の名前の属性のみが返されます。  
   
  XPath 式を次に示します。  

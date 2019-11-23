@@ -1,25 +1,25 @@
 ---
-title: Azure サーバーレスプラットフォーム-サーバーレスアプリ
-description: Azure サーバーレスプラットフォームには、イベントによってトリガーされるインスタントスケールコード、クラウドベースの pub/sub、ワークフローオーケストレーションなどの機能が用意されています。
+title: Azure サーバーレス プラットフォーム - サーバーレス アプリ
+description: Azure サーバーレス プラットフォームには、イベント トリガー方式のインスタント スケール コード、クラウドベースの pub/sub、ワークフロー オーケストレーションなどの機能があります。
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 43646db564ae31d26fe59e1ad7392e51d2d4e953
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: MT
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "69577595"
 ---
-# <a name="azure-serverless-platform"></a>Azure サーバーレスプラットフォーム
+# <a name="azure-serverless-platform"></a>Azure のサーバーレス プラットフォーム
 
-Azure サーバーレスプラットフォームには、Azure Functions、Logic Apps、Event Grid が含まれています。 これらのサービスは連携して、無数の他のリソースと繋がります。 サーバーレスプラットフォームは、データベースやストレージから分析や機械学習 /人工知能まであらゆるものが動作します。
+Azure サーバーレス プラットフォームには、Azure Functions、Logic Apps、Event Grid などがあります。 これらのサービスは連動し、他のさまざまなリソースとつながります。 サーバーレス プラットフォームは、データベースやストレージから分析、機械学習、人工知能まで、あらゆるものが扱われます。
 
-診断トレースとテレメトリをキャプチャーするためのサーバレスプラットフォームである Application Insights を使用することもできます。 Application Insight は、サーバーレスの実装だけでなく、すべてのタイプ（デスクトップ、モバイル、またはWeb）のアプリケーションで使用できます。 プラットフォームを可視化すると、次の図になります:
+診断トレースとテレメトリをキャプチャするためのサーバーレス プラットフォームである Application Insights を使用することもできます。 Application Insights は、すべての種類 (デスクトップ、モバイル、または Web) のアプリケーションの他に、サーバーレス実装で利用できます。 このプラットフォームを図にすると次のようになります。
 
-![Azure サーバーレスプラットフォーム](./media/azure-serverless-platform.png)
+![Azure のサーバーレス プラットフォーム](./media/azure-serverless-platform.png)
 
-この章では、各コンポーネントの基礎を説明します。
+この章では、各コンポーネントの基本を 1 つずつ説明します。
 
 >[!div class="step-by-step"]
 >[前へ](serverless-design-examples.md)
