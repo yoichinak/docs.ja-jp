@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 886ea6c5-6b26-4b88-8bf6-448d6d191950
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eb8112d6d2b5c2cbb257db2f20ff4be5a84e827b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cc81ccd1c754e3d34c54737f4560b4f81d5cc916
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787469"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438417"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder メソッド
-入れ子になった型の型フォワーダーを、指定されたアセンブリの型テーブルに追加します。  
+Adds a type forwarder for a nested type to the type table of the given assembly.  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,31 +40,31 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- エクスポート元のアセンブリの ID。  
+ ID of the assembly to export from.  
   
  `FileToken`  
- 型を定義するファイルのファイルトークンまたはアセンブリ ID。  
+ File token or assembly ID of file that defines the type.  
   
  `TypeToken`  
- 型のトークン。  
+ Token for the type.  
   
  `ParentType`  
- 親の種類のトークン。  
+ Token of parent type.  
   
  `pszTypename`  
- エクスポートする完全修飾型名。  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType``tdPublic` や`tdNested`などのフラグ。  
+ `ComType` flags such as `tdPublic` or `tdNested`.  
   
  `pType`  
- エクスポートの種類のトークンを受け取ります。 これは、入れ子にされた型を出力する場合にのみ必要です。  
+ Receives token of export type. This is necessary only for emitting nested types.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合、S_OK を返します。  
+ Returns S_OK if the method succeeds.  
   
-## <a name="requirements"></a>必要条件  
- Alink. h が必要です。  
+## <a name="requirements"></a>［要件］  
+ Requires alink.h  
   
 ## <a name="see-also"></a>関連項目
 

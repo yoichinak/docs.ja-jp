@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c44b0440-04bd-460a-84fb-41afecf44503
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d2c64d7ead2f7ce3d76b40f4fdc604506ee85561
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b765294826a5da4010cdd2db79b50667a6f1cdb4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777881"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446306"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a>ISymUnmanagedScope::GetNamespaces メソッド
-このスコープ内で使用されている名前空間を取得します。  
+Gets the namespaces that are being used within this scope.  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,16 +41,16 @@ HRESULT GetNamespaces(
  [in] `namespaces` 配列のサイズ。  
   
  `pcNameSpaces`  
- [out]ポインターを`ULONG32`名前空間の格納に必要なバッファーのサイズを受け取る。  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.  
   
  `namespaces`  
- [out]名前空間を受け取る配列。  
+ [out] The array that receives the namespaces.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 37794d40b4b379c5d3a05935cf1f2b7b3da11baa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7eea63cae27c08260177dfc7746046b975434611
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777370"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428037"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField メソッド
-メソッド内ではない 1 つの変数を定義します。 このメソッドは、使用のクラス内の特定のフィールド、ビット フィールド、および具合です。  
+Defines a single variable that is not within a method. This method is used for certain fields in classes, bit fields, and so on.  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,37 +42,37 @@ HRESULT DefineField(
   
 ## <a name="parameters"></a>パラメーター  
  `parent`  
- [in]メタデータ型またはメソッド トークン。  
+ [in] The metadata type or method token.  
   
  `name`  
- [in]フィールド名です。  
+ [in] The field name.  
   
  `attributes`  
- [in]フィールドの属性。  
+ [in] The field attributes.  
   
  `cSig`  
- [in]A`ULONG32`文字のフィールドのシグネチャを格納するために必要なバッファーのサイズはします。  
+ [in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.  
   
  `signature`  
- [in]フィールドの署名の配列。  
+ [in] The array of field signatures.  
   
  `addrKind`  
- [in]アドレスの種類。  
+ [in] The address type.  
   
  `addr1`  
- [in]フィールド指定の最初のアドレス。  
+ [in] The first address for the field specification.  
   
  `addr2`  
- [in]フィールド指定の 2 番目のアドレス。  
+ [in] The second address for the field specification.  
   
  `addr3`  
- [in]フィールド指定の 3 番目のアドレス。  
+ [in] The third address for the field specification.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

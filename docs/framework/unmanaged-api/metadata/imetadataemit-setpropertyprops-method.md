@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9e78c4d7319a931ca7090d6f99651bc9660e4af8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fdec87324d6efa0f911e37573093c19b93c0349
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782050"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440540"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps メソッド
-前回の呼び出しによって定義されるプロパティのメタデータに格納されている機能の設定[DefineProperty メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)します。  
+Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,35 +42,35 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>パラメーター  
  `pr`  
- [in]変更するプロパティのトークン  
+ [in] The token for the property to be changed  
   
  `dwPropFlags`  
- [in]プロパティのフラグ。  
+ [in] Property flags.  
   
  `dwCPlusTypeFlag`  
- [in]プロパティの既定値の型。  
+ [in] The type of the property's default value.  
   
  `pValue`  
- [in]プロパティの既定値。  
+ [in] The default value for the property.  
   
  `cchValue`  
- [in] \(Unicode) の数の文字について`pValue`です。  
+ [in] The count of (Unicode) characters in `pValue`.  
   
  `mdSetter`  
- [in]このメソッドは、プロパティ値を設定します。  
+ [in] The method that sets the property value.  
   
  `mdGetter`  
- [in]このメソッドは、プロパティ値を取得します。  
+ [in] The method that gets the property value.  
   
  `rmdOtherMethods[]`  
- [in]プロパティに関連付けられているその他のメソッドの配列。 この配列を`mdTokenNil`トークンです。  
+ [in] An array of other methods associated with the property. Terminate this array with an `mdTokenNil` token.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

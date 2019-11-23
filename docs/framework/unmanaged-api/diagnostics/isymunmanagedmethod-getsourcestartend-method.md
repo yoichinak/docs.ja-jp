@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a75fed4c46ea7e31177ac0446c8fae7805535323
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01ab69b73a7bc4929e2ebd49b3847f8d7c4646a2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759429"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448867"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd メソッド
-このメソッドのソースの先頭と末尾のドキュメントの位置を取得します。 配列の最初の位置が、開始であり 2 番目の配列の位置は終わりです。  
+Gets the start and end document positions for the source of this method. The first array position is the start, and the second array position is the end.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,22 +37,22 @@ HRESULT GetSourceStartEnd(
   
 ## <a name="parameters"></a>パラメーター  
  `docs`  
- [in]最初と最後のソース ドキュメント。  
+ [in] The starting and ending source documents.  
   
  `lines`  
- [in]ソース ドキュメントの開始と、対応する行を終了します。  
+ [in] The starting and ending lines in the corresponding source documents.  
   
  `columns`  
- [in]ソース ドキュメントの開始と、対応する列を終了します。  
+ [in] The starting and ending columns in the corresponding source documents.  
   
  `pRetVal`  
- [out]`true`位置が定義されている。 それ以外の場合`false`します。  
+ [out] `true` if positions were defined; otherwise, `false`.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

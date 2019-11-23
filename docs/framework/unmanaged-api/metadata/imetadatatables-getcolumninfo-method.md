@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd67d9faafedf4fb92c69618d4464ebb2ce47dcc
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 854d3ad28cc00c03e903b9e1d2ce3863e3ceef17
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774260"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436097"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo メソッド
-指定されたテーブル内の指定された列に関するデータを取得します。  
+Gets data about the specified column in the specified table.  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,31 +42,31 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- から目的のテーブルのインデックス。  
+ [in] The index of the desired table.  
   
  `ixCol`  
- から目的の列のインデックス。  
+ [in] The index of the desired column.  
   
  `poCol`  
- 入出力行内の列のオフセットへのポインター。  
+ [out] A pointer to the offset of the column in the row.  
   
  `pcbCol`  
- 入出力列のサイズ (バイト単位) へのポインター。  
+ [out] A pointer to the size, in bytes, of the column.  
   
  `pType`  
- 入出力列内の値の型へのポインター。  
+ [out] A pointer to the type of the values in the column.  
   
  `ppName`  
- 入出力列名へのポインターへのポインター。  
+ [out] A pointer to a pointer to the column name.  
  
 ## <a name="remarks"></a>Remarks
 
-返される列の型は、値の範囲内にあります。
+The returned column type falls within a range of values:
 
-| pType                    | 説明   | ヘルパー関数                   |
+| pType                    | 説明   | Helper function                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0.. 63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | コード化されたトークン | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `0`..`iRidMax`<br>(0..63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Coded token | **IsCodedTokenType** <br>**IsRidOrToken** |
 | `iSHORT` (96)            | Int16         | **IsFixedType**                   |
 | `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
 | `iLONG` (98)             | Int32         | **IsFixedType**                   |
@@ -78,21 +76,21 @@ HRESULT GetColumnInfo (
 | `iGUID` (102)            | GUID          | **IsHeapType**                    |
 | `iBLOB` (103)            | Blob          | **IsHeapType**                    |
 
-*ヒープ*に格納されている値 (つまり `IsHeapType == true`) は、次の方法で読み取ることができます。
+Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:
 
-- `iSTRING`: **Imetadatatables**
-- `iGUID`: **Imetadatatables 実行できます。 GetGUID**
-- `iBLOB`: **Imetadatatables 実行できます。 GetBlob**
+- `iSTRING`: **IMetadataTables.GetString**
+- `iGUID`: **IMetadataTables.GetGUID**
+- `iBLOB`: **IMetadataTables.GetBlob**
 
 > [!IMPORTANT]
-> 上の表で定義されている定数を使用するには、 *cor*ヘッダーファイルによって提供されるディレクティブ `#define _DEFINE_META_DATA_META_CONSTANTS` を含めます。
+> To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.
 
 ## <a name="requirements"></a>［要件］  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **Header:** Cor.h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

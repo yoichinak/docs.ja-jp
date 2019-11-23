@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b374116-0972-416a-8cf5-79213129be9a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2c5c8165d44cc3a305820f8e97c07da37f2a0693
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5d7da343148d5f1c2aa9b2b639b094f8269199b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775810"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433206"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>ICorProfilerInfo2::GetContextStaticAddress メソッド
-指定したコンテキストのスコープ内の指定したコンテキストの静的フィールドのアドレスを取得します。  
+Gets the address for the specified context-static field that is in the scope of the specified context.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,30 +37,30 @@ HRESULT GetContextStaticAddress(
   
 ## <a name="parameters"></a>パラメーター  
  `classId`  
- [in]要求されたコンテキストの静的フィールドが含まれるクラスの ID。  
+ [in] The ID of the class that contains the requested context-static field.  
   
  `fieldToken`  
- [in]要求されたコンテキストの静的フィールドのメタデータ トークン。  
+ [in] The metadata token for the requested context-static field.  
   
  `contextId`  
- [in]要求されたコンテキストの静的フィールドのスコープのコンテキストの ID。  
+ [in] The ID of the context that is the scope for the requested context-static field.  
   
  `ppAddress`  
- [out]指定したコンテキスト内にある静的フィールドのアドレスへのポインター。  
+ [out] A pointer to the address of the static field that is within the specified context.  
   
 ## <a name="remarks"></a>Remarks  
- `GetContextStaticAddress`メソッドは、次のいずれかを返す可能性があります。  
+ The `GetContextStaticAddress` method may return one of the following:  
   
-- 指定された静的フィールドに指定したコンテキスト内のアドレスが割り当てられていない場合の CORPROF_E_DATAINCOMPLETE HRESULT。  
+- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
   
-- ガベージ コレクション ヒープで可能性のあるオブジェクトのアドレス。 これらのアドレスは、ガベージ コレクション後にプロファイラーを想定しないでくださいが有効であるために、ガベージ コレクションの後無効になる可能性があります。  
+- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
   
- クラスのクラスのコンス トラクターが完了したら、前に`GetContextStaticAddress`はいくつかの静的フィールドは既に初期化可能性がありますが、すべての静的フィールドの CORPROF_E_DATAINCOMPLETE を返し、ガベージ コレクション オブジェクトのルートします。  
+ Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

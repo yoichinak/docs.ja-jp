@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ff298f73f02f148fc389f389ba86fd9a550998c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74088d1cd018bb07406fc7d00ff83d783a98b663
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781775"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450231"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 列挙型
-メソッドの機能を記述する値が含まれています。  
+Contains values that describe the features of a method.  
   
 ## <a name="syntax"></a>構文  
   
@@ -68,35 +66,35 @@ typedef enum CorMethodAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`mdMemberAccessMask`|メンバーへのアクセスを指定します。|  
-|`mdPrivateScope`|メンバーを参照できないことを指定します。|  
-|`mdPrivate`|メンバーが親の型からのみアクセスできることを指定します。|  
-|`mdFamANDAssem`|メンバーがこのアセンブリでのみサブタイプ アクセスできることを指定します。|  
-|`mdAssem`|メンバーがアクセスできます。 アセンブリ内のすべてのユーザーがあることを指定します。|  
-|`mdFamily`|メンバーが型とサブタイプによってのみアクセスできることを指定します。|  
-|`mdFamORAssem`|メンバーがアクセスできるは、そのアセンブリ内の他の型と派生クラスであることを指定します。|  
-|`mdPublic`|メンバーがスコープにアクセスできるアクセス権を持つすべての種類であることを指定します。|  
-|`mdStatic`|インスタンスのメンバーではなく、型の一部として、メンバーが定義されていることを指定します。|  
-|`mdFinal`|メソッドをオーバーライドできないことを指定します。|  
-|`mdVirtual`|メソッドをオーバーライドできることを指定します。|  
-|`mdHideBySig`|メソッドには、名前だけではなく、名前とシグネチャで非表示にするを指定します。|  
-|`mdVtableLayoutMask`|仮想テーブルのレイアウトを指定します。|  
-|`mdReuseSlot`|仮想テーブルでは、このメソッドの使用、スロットが再利用することを指定します。 既定値です。|  
-|`mdNewSlot`|メソッドは、仮想テーブルの新しいスロットを常に取得を指定します。|  
-|`mdCheckAccessOnOverride`|表示は同じ型でメソッドをオーバーライドできることを指定します。|  
-|`mdAbstract`|メソッドが実装されていないことを指定します。|  
-|`mdSpecialName`|メソッドが、特別なと、その名前を記述しているを指定する方法。|  
-|`mdPinvokeImpl`|メソッドの実装が PInvoke を使用して転送されることを指定します。|  
-|`mdUnmanagedExport`|メソッドがアンマネージ コードにエクスポートする管理対象のメソッドを指定します。|  
-|`mdReservedMask`|共通言語ランタイムでは、内部使用のため予約されています。|  
-|`mdRTSpecialName`|共通言語ランタイムがメソッド名のエンコードを確認する必要がありますように指定します。|  
-|`mdHasSecurity`|メソッドに関連付けられているセキュリティを指定します。|  
-|`mdRequireSecObject`|メソッドがセキュリティ コードを含む他のメソッドを呼び出すことを指定します。|  
+|`mdMemberAccessMask`|Specifies member access.|  
+|`mdPrivateScope`|Specifies that the member cannot be referenced.|  
+|`mdPrivate`|Specifies that the member is accessible only by the parent type.|  
+|`mdFamANDAssem`|Specifies that the member is accessible by subtypes only in this assembly.|  
+|`mdAssem`|Specifies that the member is accessibly by anyone in the assembly.|  
+|`mdFamily`|Specifies that the member is accessible only by type and subtypes.|  
+|`mdFamORAssem`|Specifies that the member is accessible by derived classes and by other types in its assembly.|  
+|`mdPublic`|Specifies that the member is accessible by all types with access to the scope.|  
+|`mdStatic`|Specifies that the member is defined as part of the type rather than as a member of an instance.|  
+|`mdFinal`|Specifies that the method cannot be overridden.|  
+|`mdVirtual`|Specifies that the method can be overridden.|  
+|`mdHideBySig`|Specifies that the method hides by name and signature, rather than just by name.|  
+|`mdVtableLayoutMask`|Specifies virtual table layout.|  
+|`mdReuseSlot`|Specifies that the slot used for this method in the virtual table be reused. 既定値です。|  
+|`mdNewSlot`|Specifies that the method always gets a new slot in the virtual table.|  
+|`mdCheckAccessOnOverride`|Specifies that the method can be overridden by the same types to which it is visible.|  
+|`mdAbstract`|Specifies that the method is not implemented.|  
+|`mdSpecialName`|Specifies that the method is special, and that its name describes how.|  
+|`mdPinvokeImpl`|Specifies that the method implementation is forwarded using PInvoke.|  
+|`mdUnmanagedExport`|Specifies that the method is a managed method exported to unmanaged code.|  
+|`mdReservedMask`|Reserved for internal use by the common language runtime.|  
+|`mdRTSpecialName`|Specifies that the common language runtime should check the encoding of the method name.|  
+|`mdHasSecurity`|Specifies that the method has security associated with it.|  
+|`mdRequireSecObject`|Specifies that the method calls another method containing security code.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0451d752-1e5c-4c9a-8bad-6cd35b7ba3df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 994f6668de3040cc9f2381356d6db06c18c9e984
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87a70587027f283ef5976089b3f2daf1204e68ec
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745885"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426137"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection メソッド
-指定された長さでは、指定したコードのセクションを切り捨てます。  
+Truncates the specified code section by the specified length.  
   
- このメソッドは廃止され、使用する必要があります。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,20 +38,20 @@ HRESULT TruncateSection (
   
 ## <a name="parameters"></a>パラメーター  
  `section`  
- [in]切り捨てるセクション。  
+ [in] The section to truncate.  
   
  `len`  
- [in]セクションの切り捨てに使用する、バイト単位の長さ。  
+ [in] The length, in bytes, by which to truncate the section.  
   
 ## <a name="remarks"></a>Remarks  
- 呼び出す`TruncateSection`別の方法で処理されない特別なセクションの要件がある場合にのみです。  
+ Call `TruncateSection` only if you have special section requirements that are not handled by other methods.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9a48dbd38d357b668c2794ae6305ceb9cad3dcf4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dfbc10bdbe633450dee2e27524c29ead21fb739e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787190"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445539"
 ---
 # <a name="setpekind-method"></a>SetPEKind メソッド
-ポータブル実行可能ファイルの種類 (マシン固有またはコンピューターに依存しない) を決定します。  
+Determines the portable executable type, either machine-specific or machine-agnostic.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,22 +37,22 @@ HRESULT SetPEKind(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- アセンブリの ID。  
+ ID of the assembly.  
   
  `FileToken`  
- PE の種類を設定するファイルのトークン。 がバインドされ`AssemblyID`ていない .netmodule を示していない場合は、NULL にすることができます。  
+ Token of file for which the PE type is to be set. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
   
  `dwPEKind`  
- [Corpekind 列挙体](../metadata/corpekind-enumeration.md)によって示される PE の種類。  
+ The type of PE, as indicated by the [CorPEKind Enumeration](../metadata/corpekind-enumeration.md).  
   
  `dwMachine`  
- NT ヘッダーに示されている、対象コンピューターのアーキテクチャ。  
+ The target machine architecture, as indicated in the NT header.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合、S_OK を返します。  
+ Returns S_OK if the method succeeds.  
   
-## <a name="requirements"></a>必要条件  
- Alink. h が必要です。  
+## <a name="requirements"></a>［要件］  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>関連項目
 

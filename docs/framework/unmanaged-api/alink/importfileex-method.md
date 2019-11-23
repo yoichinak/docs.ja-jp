@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad276f3f-b303-46ac-97e0-66a377adaa4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bee7db61beb9ed8c00cf584924be690a67d92eac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777121"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446953"
 ---
 # <a name="importfileex-method"></a>ImportFileEx メソッド
-指定したアセンブリまたはバインドされていないモジュールをインポートします。  
+Imports indicated assembly or unbound module.  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,31 +40,31 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>パラメーター  
  `pszFilename`  
- インポート元のファイルの完全修飾名。  
+ Fully qualified name of file from which to import.  
   
  `pszTargetName`  
- ターゲットファイルの名前 (省略可能)。  
+ Optional name of target file.  
   
  `fSmartImport`  
- TRUE の場合、ImportTypes が使用されます。それ以外の場合は、インポートを手動で実行する必要があります。  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `dwOpenFlags`  
- [Openscope メソッド](../metadata/imetadatadispenser-openscope-method.md)に渡されるフラグ。  
+ Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- インポートされるファイルの ID を受け取ります。  
+ Receives ID of the file being imported.  
   
  `ppAssemblyScope`  
- アセンブリインポートスコープ[IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md)インターフェイスを受け取ります。 ファイルがアセンブリでない場合、は NULL に設定されます。  
+ Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
   
  `pdwCountOfScopes`  
- インポートされたファイルまたはスコープの数を受信します。  
+ Receives count of imported files and/or scopes.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合、S_OK を返します。  
+ Returns S_OK if the method succeeds.  
   
-## <a name="requirements"></a>必要条件  
- Alink. h が必要です。  
+## <a name="requirements"></a>［要件］  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>関連項目
 

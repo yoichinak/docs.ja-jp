@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 667bd954-6dc6-4020-a3cb-0e8224179993
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5f6140e5f85a7ee21773c96a5abdccadaddab92e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 24279870e7406de649df56e8aad31252513e95c7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777461"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446537"
 ---
 # <a name="embedresource-method"></a>EmbedResource メソッド
-埋め込みリソースを宣言します。 このメソッドは、実際にはリソースを埋め込みません。  
+Declares an embedded resource. This method does not actually embed the resource.  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,25 +39,25 @@ HRESULT EmbedResource(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- アセンブリの ID。  
+ ID of the assembly.  
   
  `FileToken`  
- リソースが含まれているファイルのファイルトークンまたはアセンブリ ID。  
+ File token or assembly ID of file that contains the resource.  
   
  `pszResourceName`  
  リソースの名前。  
   
  `dwOffset`  
- RVA からのリソースのオフセット。  
+ Offset of resource from RVA.  
   
  `dwFlags`  
- `mrPublic` や`mrPrivate`などのアクセシビリティフラグ。 これらのフラグは、を使用して、この[メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
+ Accessibility flags such as `mrPublic` and `mrPrivate`. These flags may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合、S_OK を返します。  
+ Returns S_OK if the method succeeds.  
   
-## <a name="requirements"></a>必要条件  
- Alink. h が必要です。  
+## <a name="requirements"></a>［要件］  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>関連項目
 

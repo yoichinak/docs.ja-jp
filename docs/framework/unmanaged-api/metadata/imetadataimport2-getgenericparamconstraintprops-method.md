@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5fee4a0-b132-4e5e-8730-e586ce314b9a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e3868b07ff01f2d1fec79537dd478a2d005f490f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6d7884e896d6a0463639e7ef08b47dced10a27f4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778766"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431374"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>IMetaDataImport2::GetGenericParamConstraintProps メソッド
-指定した制約トークンによって表されるジェネリック パラメーターの制約に関連付けられているメタデータを取得します。  
+Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,20 +37,20 @@ HRESULT GetGenericParamConstraintProps (
   
 ## <a name="parameters"></a>パラメーター  
  `gpc`  
- [in]メタデータを返すジェネリック パラメーターの制約にトークンです。  
+ [in] The token to the generic parameter constraint for which to return the metadata.  
   
  `ptGenericParam`  
- [out]制約されているジェネリック パラメーターを表すトークンへのポインター。  
+ [out] A pointer to the token that represents the generic parameter that is constrained.  
   
  `ptkConstraintType`  
- [out]上の制約を表す TypeDef、TypeRef、または TypeSpec トークンへのポインター`ptGenericParam`します。  
+ [out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

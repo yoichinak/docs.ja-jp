@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 727819d5-1dab-4ebb-ac25-950b4111dc72
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7f27955467436d562c6a9acc9d7f666427e4c85b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4347a4da3e58a20c98e217de3a71c448e244eb29
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770716"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440122"
 ---
 # <a name="imetadataimportcloseenum-method"></a>IMetaDataImport::CloseEnum メソッド
-指定したハンドルによって識別される列挙子を閉じます。  
+Closes the enumerator that is identified by the specified handle.  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,17 +35,17 @@ void CloseEnum (
   
 ## <a name="parameters"></a>パラメーター  
  `hEnum`  
- [in]閉じる、列挙子のハンドル。  
+ [in] The handle for the enumerator to close.  
   
 ## <a name="remarks"></a>Remarks  
- 指定されたハンドル`hEnum`以前から取得されます`Enum`*名前*呼び出し (たとえば、 [imetadataimport::enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md))。  
+ The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
