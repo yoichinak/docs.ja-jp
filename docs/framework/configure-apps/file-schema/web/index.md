@@ -31,7 +31,7 @@ Web 設定は、machine.config ファイル、ルート、Web.config ファイ�
 
 |要素|説明|  
 |-------------|-----------------|  
-|[\<system.web >](system-web-element-web-settings.md)|ASP.NET ホスト層が使用する情報が含まれています。|  
+|[\<system.web>](system-web-element-web-settings.md)|ASP.NET ホスト層が使用する情報が含まれています。|  
 |[\<applicationPool>](applicationpool-element-web-settings.md)|CPU と、ASP.NET ホスト層によって管理されているプロセス全体の動作に適用される CPU および ASP.NET 設定の実行レベルを指定します。|  
   
 ## <a name="see-also"></a>関連項目
