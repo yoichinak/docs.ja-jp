@@ -1,5 +1,5 @@
 ---
-title: XML コメント リテラル (Visual Basic)
+title: XML コメント リテラル
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlLiteralComment
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 91369392f33f2a86a7a4cb5ffb3faa668c113348
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d9db66aabe344bd5c8f9a92ac8618b7bc1abb43
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965409"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349396"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML コメント リテラル (Visual Basic)
-<xref:System.Xml.Linq.XComment>オブジェクトを表すリテラル。  
+A literal representing an <xref:System.Xml.Linq.XComment> object.  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,29 +29,29 @@ ms.locfileid: "69965409"
   
 |用語|定義|  
 |---|---|  
-|`<!--`|必須。 XML コメントの先頭を示します。|  
-|`content`|必須。 XML コメントに表示されるテキスト。 連続する2つのハイフン (--) を含めることはできません。また、終了タグに隣接するハイフンで終わることもできません。|  
-|`-->`|必須。 XML コメントの末尾を示します。|  
+|`<!--`|必須です。 Denotes the start of the XML comment.|  
+|`content`|必須です。 Text to appear in the XML comment. Cannot contain a series of two hyphens (--) or end with a hyphen adjacent to the closing tag.|  
+|`-->`|必須です。 Denotes the end of the XML comment.|  
   
 ## <a name="return-value"></a>戻り値  
  <xref:System.Xml.Linq.XComment> オブジェクト。  
   
 ## <a name="remarks"></a>Remarks  
- XML コメントリテラルにドキュメントコンテンツが含まれていません。ドキュメントに関する情報が含まれています。 XML コメントセクションは、シーケンス "-->" で終了します。 これは、次の点を意味します。  
+ XML comment literals do not contain document content; they contain information about the document. The XML comment section ends with the sequence "-->". This implies the following points:  
   
-- 埋め込み式の区切り記号が有効な XML コメントの内容であるため、XML コメントリテラルで埋め込み式を使用することはできません。  
+- You cannot use an embedded expression in an XML comment literal because the embedded expression delimiters are valid XML comment content.  
   
-- XML コメントセクションを入れ子に`content`することはできません。には値 "-->" を含めることができません。  
+- XML comment sections cannot be nested, because `content` cannot contain the value "-->".  
   
- XML コメントリテラルを変数に割り当てるか、XML 要素リテラルに含めることができます。  
+ You can assign an XML comment literal to a variable, or you can include it in an XML element literal.  
   
 > [!NOTE]
-> XML リテラルは、行連結文字を使用せずに、複数の行にまたがることができます。 この機能を使用すると、XML ドキュメントからコンテンツをコピーして、Visual Basic プログラムに直接貼り付けることができます。  
+> An XML literal can span multiple lines without using line continuation characters. This feature enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
   
- Visual Basic コンパイラは、XML コメントリテラルをコンストラクターの<xref:System.Xml.Linq.XComment.%23ctor%2A>呼び出しに変換します。  
+ The Visual Basic compiler converts the XML comment literal to a call to the <xref:System.Xml.Linq.XComment.%23ctor%2A> constructor.  
   
 ## <a name="example"></a>例  
- 次の例では、"This is a comment" というテキストを含む XML コメントを作成します。  
+ The following example creates an XML comment that contains the text "This is a comment".  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   

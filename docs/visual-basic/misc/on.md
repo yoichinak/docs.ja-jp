@@ -1,5 +1,5 @@
 ---
-title: On (Visual Basic)
+title: オン
 ms.date: 07/20/2015
 f1_keywords:
 - vb.on
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - On keyword [Visual Basic]
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
-ms.openlocfilehash: 7e466775c2634c89e1357b90e028d3d83e248322
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fdbb3d2b8266c87175eb813ef16f260907faa68
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944821"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331850"
 ---
 # <a name="on-visual-basic"></a>On (Visual Basic)
-実行時エラーへの応答が導入されていますか、コンパイラ オプションをオンにします。  
+Introduces a response to a run-time error or turns a compiler option on.  
   
- クエリでは、結合されているコレクションのキーを識別します。  
+ In queries, identifies keys for the collections being joined.  
   
 ## <a name="remarks"></a>Remarks  
- `On`キーワードはこれらのコンテキストで使用します。  
+ The `On` keyword is used in these contexts:  
   
  [Group Join 句](../../visual-basic/language-reference/queries/group-join-clause.md)  
   

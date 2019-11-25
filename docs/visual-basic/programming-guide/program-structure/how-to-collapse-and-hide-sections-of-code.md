@@ -1,34 +1,34 @@
 ---
-title: '方法: コードのセクションを折りたたんで非表示にする (Visual Basic)'
+title: '方法 : コードのセクションを折りたたんで非表示にする'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, code collapsing
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: 4f11982cc0aa7654c1e456fb15d918a68bc4791b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e7aacdc3f41199127b00d276b382ec4a5f258da0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054119"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347409"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>方法: コードのセクションを折りたたんで非表示にする (Visual Basic)
 
-`#Region`ディレクティブを使用すると、Visual Basic ファイル内のコードのセクションを折りたたんで非表示にすることができます。 `#Region`ディレクティブを使用すると、Visual Studio コードエディターを使用して展開または折りたたむことができるコードブロックを指定できます。 コードを選択的に非表示にする機能により、ファイルの管理が容易になり、読みやすくなります。 詳細については、「[アウトライン](/visualstudio/ide/outlining)」を参照してください。
+The `#Region` directive enables you to collapse and hide sections of code in Visual Basic files. The `#Region` directive lets you specify a block of code that you can expand or collapse when using the Visual Studio code editor. The ability to hide code selectively makes your files more manageable and easier to read. 詳細については、「[アウトライン](/visualstudio/ide/outlining)」を参照してください。
 
-`#Region`ディレクティブは、などのコードブロック`#If...#End If`のセマンティクスをサポートします。 つまり、1つのブロックで開始し、別のブロックで終了することはできません。start と end は同じブロック内になければなりません。 `#Region`ディレクティブは、関数内ではサポートされていません。
+`#Region` directives support code block semantics such as `#If...#End If`. This means they cannot begin in one block and end in another; the start and end must be in the same block. `#Region` directives are not supported within functions.
 
-## <a name="to-collapse-and-hide-a-section-of-code"></a>コードのセクションを折りたたんで非表示にするには
+## <a name="to-collapse-and-hide-a-section-of-code"></a>To collapse and hide a section of code
 
-次の例に示すように`#Region` 、 `#End Region`コードのセクションをステートメントとステートメントの間に配置します。
+Place the section of code between the `#Region` and `#End Region` statements, as in the following example:
 
 [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]
 
-ブロック`#Region`は、コードファイル内で複数回使用できます。したがって、ユーザーは、プロシージャやクラスを折りたたむことができる独自のブロックを定義できます。 `#Region`ブロックは、他の`#Region`ブロック内で入れ子にすることもできます。
+The `#Region` block can be used multiple times in a code file; thus, users can define their own blocks of procedures and classes that can, in turn, be collapsed. `#Region` blocks can also be nested within other `#Region` blocks.
 
 > [!NOTE]
-> コードを非表示にしても、コンパイルが妨げら`#If...#End If`れることはなく、ステートメントにも影響しません。
+> Hiding code does not prevent it from being compiled and does not affect `#If...#End If` statements.
 
 ## <a name="see-also"></a>関連項目
 

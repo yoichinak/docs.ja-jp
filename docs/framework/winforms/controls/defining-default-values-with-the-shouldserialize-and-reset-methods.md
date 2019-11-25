@@ -8,26 +8,26 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 609fe4896a2b01b8a69ff8a3d0854c85ddbd6a26
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 11181bacdb919693ffc82c48c061357463a6343b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969092"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336760"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>ShouldSerialize メソッドと Reset メソッドによる既定値の定義
-`ShouldSerialize`と`Reset`は、プロパティに単純な既定値がない場合に、プロパティに対して指定できる省略可能なメソッドです。 プロパティに単純な既定値がある場合は、 <xref:System.ComponentModel.DefaultValueAttribute>を適用し、代わりに属性クラスコンストラクターに既定値を指定する必要があります。 これらのメカニズムのいずれかにより、デザイナーで次の機能が有効になります。
+`ShouldSerialize` and `Reset` are optional methods that you can provide for a property, if the property does not a have simple default value. If the property has a simple default value, you should apply the <xref:System.ComponentModel.DefaultValueAttribute> and supply the default value to the attribute class constructor instead. Either of these mechanisms enables the following features in the designer:
 
-- プロパティは、既定値から変更されている場合、プロパティブラウザーで視覚的に表示されます。
+- The property provides visual indication in the property browser if it has been modified from its default value.
 
-- ユーザーはプロパティを右クリックし、 **[リセット]** をクリックして、プロパティを既定値に戻すことができます。
+- The user can right-click on the property and choose **Reset** to restore the property to its default value.
 
-- デザイナーでは、より効率的なコードが生成されます。
+- The designer generates more efficient code.
 
     > [!NOTE]
-    > を適用する<xref:System.ComponentModel.DefaultValueAttribute>か、 `Reset` *propertyname*メソッド`ShouldSerialize`と*propertyname*メソッドを指定します。 両方を使用しないでください。
+    > Either apply the <xref:System.ComponentModel.DefaultValueAttribute> or provide `Reset`*PropertyName* and `ShouldSerialize`*PropertyName* methods. Do not use both.
 
- `Reset` *PropertyName*メソッドは、次のコードに示すように、プロパティを既定値に設定します。
+ The `Reset`*PropertyName* method sets a property to its default value, as shown in the following code fragment.
 
 ```vb
 Public Sub ResetMyFont()
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```
 
 > [!NOTE]
-> プロパティに`Reset`メソッドがなく、が<xref:System.ComponentModel.DefaultValueAttribute>でマークされておらず、宣言`Reset`に既定値が指定されていない場合、そのプロパティのオプションは、の **[プロパティ]** ウィンドウのショートカットメニューで無効になります。Visual Studio の Windows フォームデザイナー。
+> If a property does not have a `Reset` method, is not marked with a <xref:System.ComponentModel.DefaultValueAttribute>, and does not have a default value supplied in its declaration, the `Reset` option for that property is disabled in the shortcut menu of the **Properties** window of the Windows Forms Designer in Visual Studio.
 
- Visual Studio などのデザイナーでは`ShouldSerialize`、 *PropertyName*メソッドを使用して、プロパティが既定値から変更されたかどうかを確認し、プロパティが変更された場合にのみコードをフォームに記述します。これにより、コード生成をより効率的に行うことができます。 例えば:
+ Designers such as Visual Studio use the `ShouldSerialize`*PropertyName* method to check whether a property has changed from its default value and write code into the form only if a property is changed, thus allowing for more efficient code generation. (例:
 
 ```vb
 'Returns true if the font has changed; otherwise, returns false.
@@ -62,15 +62,14 @@ public bool ShouldSerializeMyFont() {
 }
 ```
 
- 完全なコード例を次に示します。
+ A complete code example follows.
 
 ```vb
 Option Explicit
 Option Strict
 
-Imports System
-Imports System.Windows.Forms
 Imports System.Drawing
+Imports System.Windows.Forms
 
 Public Class MyControl
    Inherits Control
@@ -109,8 +108,8 @@ End Class
 
 ```csharp
 using System;
-using System.Windows.Forms;
 using System.Drawing;
+using System.Windows.Forms;
 
 public class MyControl : Control {
    // Declare an instance of the Font class
@@ -141,7 +140,7 @@ public class MyControl : Control {
 }
 ```
 
- `MyFont`この場合、プロパティによってアクセスされるプライベート変数の値がであっ`null`ても、プロパティブラウザーには`null`表示されず、親<xref:System.Windows.Forms.Control.Font%2A> `null`のプロパティが表示されます。またはで<xref:System.Windows.Forms.Control.Font%2A> <xref:System.Windows.Forms.Control>定義されている既定値。 したがって、の`MyFont`既定値を単に設定することはできません。また、を<xref:System.ComponentModel.DefaultValueAttribute>このプロパティに適用することはできません。 代わりに、 `MyFont`プロパティに`Reset`対してメソッドとメソッドを実装する必要があります。`ShouldSerialize`
+ In this case, even when the value of the private variable accessed by the `MyFont` property is `null`, the property browser does not display `null`; instead, it displays the <xref:System.Windows.Forms.Control.Font%2A> property of the parent, if it is not `null`, or the default <xref:System.Windows.Forms.Control.Font%2A> value defined in <xref:System.Windows.Forms.Control>. Thus the default value for `MyFont` cannot be simply set, and a <xref:System.ComponentModel.DefaultValueAttribute> cannot be applied to this property. Instead, the `ShouldSerialize` and `Reset` methods must be implemented for the `MyFont` property.
 
 ## <a name="see-also"></a>関連項目
 

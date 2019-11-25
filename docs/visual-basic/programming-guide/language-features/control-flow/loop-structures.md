@@ -1,5 +1,5 @@
 ---
-title: ループ構造 (Visual Basic)
+title: ループ構造
 ms.date: 07/20/2015
 helpviewer_keywords:
 - control flow [Visual Basic], loops
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a75205a7d52c332094d624d082e5db3e89447f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906863"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353915"
 ---
 # <a name="loop-structures-visual-basic"></a>ループ構造 (Visual Basic)
-Visual Basic のループ構造を使用して、1 つまたは複数の行のコードを繰り返し実行できます。 条件になるまで、ループ構造でステートメントを繰り返すことができます`True`条件になるまで、`False`コレクションの回数、または 1 回の各要素の数を指定します。  
+Visual Basic loop structures allow you to run one or more lines of code repetitively. You can repeat the statements in a loop structure until a condition is `True`, until a condition is `False`, a specified number of times, or once for each element in a collection.  
   
- 次の図は、条件が true になるまでは、一連のステートメントを実行するループ構造を示しています。  
+ The following illustration shows a loop structure that runs a set of statements until a condition becomes true:  
   
- ![フローを示すグラフが、操作を行います.Until ループします。](./media/loop-structures/do-until-loop-true-condition.gif)  
+ ![Flow chart that shows a Do...Until loop.](./media/loop-structures/do-until-loop-true-condition.gif)  
   
-## <a name="while-loops"></a>While ループ  
- `While`.`End While`構築で指定された条件と一連のステートメントが実行される、`While`ステートメントが`True`します。 詳細については、[While ... End While ステートメント](../../../../visual-basic/language-reference/statements/while-end-while-statement.md)を参照してください。  
+## <a name="while-loops"></a>While Loops  
+ The `While`...`End While` construction runs a set of statements as long as the condition specified in the `While` statement is `True`. For more information, see [While...End While Statement](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
   
-## <a name="do-loops"></a>Do ループ  
- `Do`.`Loop`構築では、先頭またはループ構造の末尾のいずれかの条件をテストできます。 条件がループ処理を実行するかどうかを指定することもできます`True`になるまで`True`します。 詳細については、[Do ... Loopステートメント](../../../../visual-basic/language-reference/statements/do-loop-statement.md)を参照してください。  
+## <a name="do-loops"></a>Do Loops  
+ The `Do`...`Loop` construction allows you to test a condition at either the beginning or the end of a loop structure. You can also specify whether to repeat the loop while the condition remains `True` or until it becomes `True`. For more information, see [Do...Loop Statement](../../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
-## <a name="for-loops"></a>For ループ  
- `For`しています.`Next`構築は、指定された回数だけループを実行します。 呼ばれる、ループ コントロール変数を使用して、*カウンター*繰り返しを追跡します。 開始日と終了このカウンターの値を指定して、必要に応じて量で増加している 1 つの繰り返しから、次を指定することができます。 詳細については、[For Each ... Nextステートメント](../../../../visual-basic/language-reference/statements/for-next-statement.md)を参照してください。  
+## <a name="for-loops"></a>For Loops  
+ The `For`...`Next` construction performs the loop a set number of times. It uses a loop control variable, also called a *counter*, to keep track of the repetitions. You specify the starting and ending values for this counter, and you can optionally specify the amount by which it increases from one repetition to the next. For more information, see [For...Next Statement](../../../../visual-basic/language-reference/statements/for-next-statement.md).  
   
-## <a name="for-each-loops"></a>For Each ループ  
- `For Each`...`Next`構造は、コレクション内の各要素に対して、一連のステートメントを 1 回ずつ実行します。 ループ コントロール変数を指定しますが、その開始または終了値を決定する必要はありません。 詳細については、[For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)を参照してください。  
+## <a name="for-each-loops"></a>For Each Loops  
+ The `For Each`...`Next` construction runs a set of statements once for each element in a collection. You specify the loop control variable, but you do not have to determine starting or ending values for it. 詳細については、[For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
