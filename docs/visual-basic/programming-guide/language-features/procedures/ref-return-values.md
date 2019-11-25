@@ -1,51 +1,51 @@
 ---
-title: Ref 戻り値 (Visual Basic)
+title: Ref Return Values
 ms.date: 04/28/2017
 helpviewer_keywords:
 - variables [Visual Basic]
 - ref return values [Visual Basic]
 - ref returns [Visual Basic]
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
-ms.openlocfilehash: 7401fdd0fa876d21a87dbe9faf9d979e6b3bdc5c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 2d2a302a899fbde549161469f281d3e580bcb71f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581131"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352537"
 ---
-# <a name="support-for-reference-return-values-visual-basic"></a>参照戻り値のサポート (Visual Basic)
+# <a name="support-for-reference-return-values-visual-basic"></a>Support for reference return values (Visual Basic)
 
-C# 7.0 以降の言語でC#は、*参照戻り値*がサポートされています。 参照戻り値を理解する方法の1つは、メソッドへの参照によって渡される引数の逆であることです。 参照によって渡された引数が変更されると、変更は呼び出し元の変数の値に反映されます。 メソッドが呼び出し元に参照戻り値を提供すると、呼び出し元によって参照戻り値に加えられた変更が、呼び出されたメソッドのデータに反映されます。
+Starting with C# 7.0, the C# language supports *reference return values*. One way to understand reference return values is that they are the opposite of arguments that are passed by reference to a method. When an argument passed by reference is modified, the changes are reflected in value of the variable on the caller. When an method provides a reference return value to a caller, modifications made to the reference return value by the caller are reflected in the called method's data.
 
-Visual Basic では、参照戻り値を使用してメソッドを作成することはできませんが、参照戻り値を使用することはできます。 言い換えると、参照戻り値を指定してメソッドを呼び出し、その戻り値を変更することができます。また、参照戻り値への変更が呼び出されたメソッドのデータに反映されます。
+Visual Basic does not allow you to author methods with reference return values, but it does allow you to consume reference return values. In other words, you can call a method with a reference return value and modify that return value, and changes to the reference return value are reflected in the called method's data.
 
-## <a name="modifying-the-ref-return-value-directly"></a>Ref 戻り値の直接変更
+## <a name="modifying-the-ref-return-value-directly"></a>Modifying the ref return value directly
 
-常に成功し `ByRef` パラメーターを持たないメソッドの場合は、参照戻り値を直接変更できます。 これを行うには、参照戻り値を返す式に新しい値を代入します。
+For methods that always succeed and have no `ByRef` parameters, you can modify the reference return value directly. You do this by assigning the new value to the expressions that returns the reference return value.
 
-次C#の例では、内部値をインクリメントし、それを参照戻り値として返す `NumericValue.IncrementValue` メソッドを定義します。
+The following C# example defines a `NumericValue.IncrementValue` method that increments an internal value and returns it as a reference return value.
 
 [!code-csharp[Ref-Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/procedures/ref-returns1.cs)]
 
-次の Visual Basic 例では、呼び出し元によって参照戻り値が変更されます。 @No__t_0 メソッドの呼び出しを含む行では、メソッドに値が割り当てられないことに注意してください。 代わりに、メソッドによって返される参照戻り値に値を割り当てます。
+The reference return value is then modified by the caller in the following Visual Basic example. Note that the line with the `NumericValue.IncrementValue` method call does not assign a value to the method. Instead, it assigns a value to the reference return value returned by the method.
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/procedures/use-ref-returns1.vb)]
 
-## <a name="using-a-helper-method"></a>ヘルパーメソッドの使用
+## <a name="using-a-helper-method"></a>Using a helper method
 
-それ以外の場合は、メソッド呼び出しの参照戻り値を直接変更することは必ずしも望ましいとは限りません。 たとえば、文字列を返す検索メソッドは、常に一致するとは限りません。 その場合は、検索が成功した場合にのみ、参照の戻り値を変更します。
+In other cases, modifying the reference return value of a method call directly may not always be desirable. For example, a search method that returns a string may not always find a match. In that case, you want to modify the reference return value only if the search is successful.
 
-次C#の例は、このシナリオを示しています。 ここでは、でC#記述された `Sentence` クラスに、指定した部分文字列で始まる文の次の単語を検索する `FindNext` メソッドが含まれています。 文字列は参照戻り値として返され、参照によりメソッドに渡される `Boolean` 変数は検索が成功したかどうかを示します。 参照戻り値は、呼び出し元が戻り値を読み取ることができないことを示します。また、変更することもできます。この変更は、`Sentence` クラスに内部的に含まれるデータに反映されます。
+The following C# example illustrates this scenario. It defines a `Sentence` class written in C# includes a `FindNext` method that finds the next word in a sentence that begins with a specified substring. 文字列は参照戻り値として返され、参照によりメソッドに渡される `Boolean` 変数は検索が成功したかどうかを示します。 The reference return value indicates that the caller can not only read the returned value; he or she can also modify it, and that modification is reflected in the data contained internally in the `Sentence` class.
 
 [!code-csharp[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
-この場合、参照戻り値を直接変更しても信頼できません。これは、メソッドの呼び出しで一致が検出されず、文の最初の単語が返される可能性があるためです。 その場合、呼び出し元は誤って文の最初の単語を変更します。 これは、呼び出し元が `null` (または Visual Basic で `Nothing`) を返すことによって阻止される可能性があります。 ただし、その場合は、値が `Nothing` 文字列を変更しようとすると、<xref:System.NullReferenceException> がスローされます。 呼び出し元が <xref:System.String.Empty?displayProperty=nameWithType> を返すことによってもを回避できる場合がありますが、そのためには、値が <xref:System.String.Empty?displayProperty=nameWithType> である文字列変数を呼び出し元で定義する必要があります。 呼び出し元はこの文字列を変更することができますが、変更した文字列には、`Sentence` クラスによって格納されている文の単語との関係がないため、変更自体は目的がありません。
+Directly modifying the reference return value in this case is not reliable, since the method call may fail to find a match and return the first word in the sentence. In that case, the caller will inadvertently modify the first word of the sentence. This could be prevented by the caller returning a `null` (or `Nothing` in Visual Basic). But in that case, attempting to modify a string whose value is `Nothing` throws a <xref:System.NullReferenceException>. If could also be prevented by the caller returning <xref:System.String.Empty?displayProperty=nameWithType>, but this requires that the caller define a string variable whose value is <xref:System.String.Empty?displayProperty=nameWithType>. While the caller can modify that string, the modification itself serves no purpose, since the modified string has no relationship to the words in the sentence stored by the `Sentence` class.
 
-このシナリオを処理する最善の方法は、参照によって参照の戻り値をヘルパーメソッドに渡すことです。 ヘルパーメソッドには、メソッド呼び出しが成功したかどうかを判断するロジックが含まれています。成功した場合は、参照戻り値を変更します。 次の例では、可能な実装を示します。
+The best way to handle this scenario is to pass the reference return value by reference to a helper method. The helper method then contains the logic to determine whether the method call succeeded and, if it did, to modify the reference return value. The following example provides a possible implementation.
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 
 ## <a name="see-also"></a>関連項目
 
-- [引数の値渡しと参照渡し](passing-arguments-by-value-and-by-reference.md)
+- [Passing arguments by value and by reference](passing-arguments-by-value-and-by-reference.md)
 - [Visual Basic におけるプロシージャ](index.md)

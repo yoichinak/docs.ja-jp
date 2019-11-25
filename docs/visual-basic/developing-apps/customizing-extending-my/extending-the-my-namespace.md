@@ -1,5 +1,5 @@
 ---
-title: Visual Basic における My 名前空間の拡張
+title: My 名前空間の拡張
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AddingMyExtensions
@@ -8,83 +8,83 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 6da0914c9d2d4dc1220ede5d6fa9f1aa6b43426a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2a7b0b84061fccd9a333a68e4a19477bd19ca4ff
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775296"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330310"
 ---
-# <a name="extending-the-my-namespace-in-visual-basic"></a>Visual Basic での `My` 名前空間の拡張
+# <a name="extending-the-my-namespace-in-visual-basic"></a>Extending the `My` Namespace in Visual Basic
 
-Visual Basic の `My` 名前空間は、.NET Framework の機能を簡単に活用できるようにするプロパティとメソッドを公開します。 @No__t_0 名前空間により、一般的なプログラミングの問題が簡略化されるため、多くの場合、単一のコード行に対して困難なタスクを減らすことができます。 さらに、`My` 名前空間は完全に拡張可能であるため、`My` の動作をカスタマイズし、その階層に新しいサービスを追加して、特定のアプリケーションのニーズに適合させることができます。 このトピックでは、`My` 名前空間の既存のメンバーをカスタマイズする方法と、独自のカスタムクラスを `My` 名前空間に追加する方法について説明します。
+The `My` namespace in Visual Basic exposes properties and methods that enable you to easily take advantage of the power of the .NET Framework. The `My` namespace simplifies common programming problems, often reducing a difficult task to a single line of code. Additionally, the `My` namespace is fully extensible so that you can customize the behavior of `My` and add new services to its hierarchy to adapt to specific application needs. This topic discusses both how to customize existing members of the `My` namespace and how to add your own custom classes to the `My` namespace.
 
-## <a name="customizing-existing-my-namespace-members"></a>既存の `My` 名前空間のメンバーのカスタマイズ
+## <a name="customizing-existing-my-namespace-members"></a>Customizing existing `My` namespace members
 
-Visual Basic の `My` 名前空間は、アプリケーションやコンピューターなどに関してよく使用される情報を公開します。 @No__t_0 名前空間内のオブジェクトの完全な一覧については、「[マイリファレンス](../../language-reference/keywords/my-reference.md)」を参照してください。 アプリケーションのニーズに合うように、`My` 名前空間の既存のメンバーをカスタマイズすることが必要になる場合があります。 読み取り専用ではない、`My` 名前空間内のオブジェクトのすべてのプロパティは、カスタム値に設定できます。
+The `My` namespace in Visual Basic exposes frequently used information about your application, your computer, and more. For a complete list of the objects in the `My` namespace, see [My Reference](../../language-reference/keywords/my-reference.md). You may have to customize existing members of the `My` namespace so that they better match the needs of your application. Any property of an object in the `My` namespace that is not read-only can be set to a custom value.
 
-たとえば、`My.User` オブジェクトを頻繁に使用して、アプリケーションを実行しているユーザーの現在のセキュリティコンテキストにアクセスするとします。 ただし、会社はカスタムユーザーオブジェクトを使用して、会社内のユーザーに追加の情報と機能を公開しています。 このシナリオでは、次の例に示すように、`My.User.CurrentPrincipal` プロパティの既定値を独自のカスタムプリンシパルオブジェクトのインスタンスに置き換えることができます。
+For example, assume that you frequently use the `My.User` object to access the current security context for the user running your application. However, your company uses a custom user object to expose additional information and capabilities for users within the company. In this scenario, you can replace the default value of the `My.User.CurrentPrincipal` property with an instance of your own custom principal object, as shown in the following example:
 
 [!code-vb[VbVbcnExtendingMy#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#1)]
 
-@No__t_1 オブジェクトの `CurrentPrincipal` プロパティを設定すると、アプリケーションの実行に使用する id が変更されます。 @No__t_0 オブジェクトは、新たに指定されたユーザーに関する情報を返します。
+Setting the `CurrentPrincipal` property on the `My.User` object changes the identity under which the application runs. The `My.User` object, in turn, returns information about the newly specified user.
   
-## <a name="adding-members-to-my-objects"></a>@No__t_0 オブジェクトへのメンバーの追加
+## <a name="adding-members-to-my-objects"></a>Adding members to `My` objects
 
-@No__t_0 および `My.Computer` から返される型は `Partial` クラスとして定義されます。 したがって、`MyApplication` または `MyComputer` という名前の `Partial` クラスを作成することによって、`My.Application` および `My.Computer` オブジェクトを拡張できます。 クラスを `Private` クラスにすることはできません。 @No__t_0 名前空間の一部としてクラスを指定した場合は、`My.Application` オブジェクトまたは `My.Computer` オブジェクトに含まれるプロパティおよびメソッドを追加できます。
+The types returned from `My.Application` and `My.Computer` are defined as `Partial` classes. Therefore, you can extend the `My.Application` and `My.Computer` objects by creating a `Partial` class named `MyApplication` or `MyComputer`. The class cannot be a `Private` class. If you specify the class as part of the `My` namespace, you can add properties and methods that will be included with the `My.Application` or `My.Computer` objects.
 
-次の例では、`DnsServerIPAddresses` という名前のプロパティを `My.Computer` オブジェクトに追加します。
+The following example adds a property named `DnsServerIPAddresses` to the `My.Computer` object:
 
 [!code-vb[VbVbcnExtendingMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class2.vb#2)]
 
-## <a name="adding-custom-objects-to-the-my-namespace"></a>@No__t_0 名前空間へのカスタムオブジェクトの追加
+## <a name="adding-custom-objects-to-the-my-namespace"></a>Adding custom objects to the `My` namespace
 
-@No__t_0 名前空間には、多くの一般的なプログラミングタスクのためのソリューションが用意されていますが、`My` 名前空間が対応していないタスクが発生する場合があります。 たとえば、アプリケーションがユーザーデータのカスタムディレクトリサービスにアクセスする場合や、アプリケーションが既定で Visual Basic にインストールされていないアセンブリを使用する場合があります。 @No__t_0 名前空間を拡張して、環境に固有の一般的なタスクにカスタムソリューションを含めることができます。 @No__t_0 名前空間は、増大するアプリケーションのニーズに合わせて新しいメンバーを追加するために簡単に拡張できます。 また、Visual Basic テンプレートとして、`My` 名前空間拡張を他の開発者にデプロイすることもできます。
+Although the `My` namespace provides solutions for many common programming tasks, you may encounter tasks that the `My` namespace does not address. For example, your application might access custom directory services for user data, or your application might use assemblies that are not installed by default with Visual Basic. You can extend the `My` namespace to include custom solutions to common tasks that are specific to your environment. The `My` namespace can easily be extended to add new members to meet growing application needs. Additionally, you can deploy your `My` namespace extensions to other developers as a Visual Basic template.
   
-### <a name="adding-members-to-the-my-namespace"></a>@No__t_0 名前空間へのメンバーの追加
+### <a name="adding-members-to-the-my-namespace"></a>Adding members to the `My` namespace
 
-@No__t_0 は他の名前空間と同じ名前空間であるため、モジュールを追加して `My` の `Namespace` を指定するだけで、最上位レベルのプロパティを追加できます。 次の例に示すように、`HideModuleName` 属性を使用してモジュールに注釈を設定します。 @No__t_0 属性を指定すると、`My` 名前空間のメンバーを表示するときに、IntelliSense によってモジュール名が表示されなくなります。
+Because `My` is a namespace like any other namespace, you can add top-level properties to it by just adding a module and specifying a `Namespace` of `My`. Annotate the module with the `HideModuleName` attribute as shown in the following example. The `HideModuleName` attribute ensures that IntelliSense will not display the module name when it displays the members of the `My` namespace.
 
 [!code-vb[VbVbcnExtendingMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#3)]
 
-@No__t_0 名前空間にメンバーを追加するには、必要に応じて、モジュールにプロパティを追加します。 @No__t_0 名前空間に追加された各プロパティについて、`ThreadSafeObjectProvider(Of T)` 型のプライベートフィールドを追加します。ここで、型はカスタムプロパティによって返される型です。 このフィールドは、`GetInstance` メソッドを呼び出すことによってプロパティによって返されるスレッドセーフなオブジェクトインスタンスを作成するために使用されます。 その結果、拡張プロパティにアクセスする各スレッドは、返された型の独自のインスタンスを受け取ります。 次の例では、`SampleExtension` 型の `SampleExtension` という名前のプロパティを `My` 名前空間に追加します。
+To add members to the `My` namespace, add properties as needed to the module. For each property added to the `My` namespace, add a private field of type `ThreadSafeObjectProvider(Of T)`, where the type is the type returned by your custom property. This field is used to create thread-safe object instances to be returned by the property by calling the `GetInstance` method. As a result, each thread that is accessing the extended property receives its own instance of the returned type. The following example adds a property named `SampleExtension` that is of type `SampleExtension` to the `My` namespace:
 
 [!code-vb[VbVbcnExtendingMy#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#4)]
 
-## <a name="adding-events-to-custom-my-objects"></a>カスタム `My` オブジェクトへのイベントの追加
+## <a name="adding-events-to-custom-my-objects"></a>Adding events to custom `My` objects
 
-@No__t_0 オブジェクトを使用して、`My` 名前空間の `MyApplication` 部分クラスを拡張することによって、カスタム `My` オブジェクトのイベントを公開できます。 Windows ベースのプロジェクトの場合は、**ソリューションエクスプローラー**でプロジェクトのの **[マイプロジェクト**] ノードをダブルクリックします。 Visual Basic**プロジェクトデザイナー**で、 **[アプリケーション]** タブをクリックし、 **[アプリケーションイベントの表示]** ボタンをクリックします。 *Applicationevents*という名前の新しいファイルが作成されます。 @No__t_0 クラスを拡張するための次のコードが含まれています。
+You can use the `My.Application` object to expose events for your custom `My` objects by extending the `MyApplication` partial class in the `My` namespace. For Windows-based projects, you can double-click the **My Project** node in for your project in **Solution Explorer**. In the Visual Basic **Project Designer**, click the **Application** tab and then click the **View Application Events** button. A new file that is named *ApplicationEvents.vb* will be created. It contains the following code for extending the `MyApplication` class:
 
 [!code-vb[VbVbcnExtendingMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#5)]
 
-カスタム `My` オブジェクトのイベントハンドラーを追加するには、`MyApplication` クラスにカスタムイベントハンドラーを追加します。 カスタムイベントを使用すると、イベントハンドラーの追加、削除、またはイベントの発生時に実行されるコードを追加できます。 カスタムイベントの `AddHandler` コードは、ユーザーがイベントを処理するためにコードを追加した場合にのみ実行されることに注意してください。 たとえば、前のセクションの `SampleExtension` オブジェクトに、のカスタムイベントハンドラーを追加する `Load` イベントがあるとします。 次のコード例では、`My.SampleExtension.Load` イベントが発生したときに呼び出される `SampleExtensionLoad` という名前のカスタムイベントハンドラーを示します。 新しい `My.SampleExtensionLoad` イベントを処理するコードを追加すると、このカスタムイベントコードの `AddHandler` の部分が実行されます。 @No__t_0 メソッドは、`My.SampleExtensionLoad` イベントを処理するイベントハンドラーの例を示すために、コード例に含まれています。 *Applicationevents .vb*ファイルを編集するときに、コードエディターの上にある左側のドロップダウンリストで **[アプリケーションイベント**] オプションを選択すると、`SampleExtensionLoad` イベントが使用できることに注意してください。
+You can add event handlers for your custom `My` objects by adding custom event handlers to the `MyApplication` class. Custom events enable you to add code that will execute when an event handler is added, removed, or the event is raised. Note that the `AddHandler` code for a custom event runs only if code is added by a user to handle the event. For example, consider that the `SampleExtension` object from the previous section has a `Load` event that you want to add a custom event handler for. The following code example shows a custom event handler named `SampleExtensionLoad` that will be invoked when the `My.SampleExtension.Load` event occurs. When code is added to handle the new `My.SampleExtensionLoad` event, the `AddHandler` part of this custom event code is executed. The `MyApplication_SampleExtensionLoad` method is included in the code example to show an example of an event handler that handles the `My.SampleExtensionLoad` event. Note that the `SampleExtensionLoad` event will be available when you select the **My Application Events** option in the left drop-down list above the Code Editor when you are editing the *ApplicationEvents.vb* file.
 
 [!code-vb[VbVbcnExtendingMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#6)]
 
-## <a name="design-guidelines"></a>設計ガイドライン
+## <a name="design-guidelines"></a>Design guidelines
 
-@No__t_0 名前空間の拡張機能を開発するときは、次のガイドラインに従って、拡張コンポーネントのメンテナンスコストを最小限に抑えることができます。
+When you develop extensions to the `My` namespace, use the following guidelines to help minimize the maintenance costs of your extension components:
 
-- **拡張ロジックのみを含めます。** @No__t_0 名前空間拡張に含まれるロジックには、`My` 名前空間で必要な機能を公開するために必要なコードのみを含める必要があります。 拡張機能は、ソースコードとしてユーザープロジェクトに存在するため、拡張機能コンポーネントを更新するとメンテナンスコストが高くなり、可能な場合は回避する必要があります。
-- **プロジェクトの前提を最小化します。** @No__t_0 名前空間の拡張機能を作成する場合は、一連の参照、プロジェクトレベルのインポート、または特定のコンパイラ設定 (たとえば、`Option Strict` オフ) を想定しないでください。 代わりに、`Global` キーワードを使用して、依存関係を最小限にし、すべての型参照を完全修飾します。 また、拡張機能のエラーを最小限に抑えるために、拡張機能が `Option Strict` でコンパイルされることを確認します。
-- **拡張コードを分離します。** コードを1つのファイルに配置すると、拡張機能が Visual Studio 項目テンプレートとして簡単に展開できるようになります。 詳細については、このトピックで後述する「拡張機能のパッケージ化と展開」を参照してください。 すべての `My` 名前空間拡張コードを1つのファイルまたはプロジェクト内の別のフォルダーに配置すると、ユーザーは `My` 名前空間の拡張機能を見つけることができます。
+- **Include only the extension logic.** The logic included in the `My` namespace extension should include only the code that is needed to expose the required functionality in the `My` namespace. Because your extension will reside in user projects as source code, updating the extension component incurs a high maintenance cost and should be avoided if possible.
+- **Minimize project assumptions.** When you create your extensions of the `My` namespace, do not assume a set of references, project-level imports, or specific compiler settings (for example, `Option Strict` off). Instead, minimize dependencies and fully qualify all type references by using the `Global` keyword. Also, ensure that the extension compiles with `Option Strict` on to minimize errors in the extension.
+- **Isolate the extension code.** Placing the code in a single file makes your extension easily deployable as a Visual Studio item template. For more information, see "Packaging and Deploying Extensions" later in this topic. Placing all the `My` namespace extension code in a single file or a separate folder in a project will also help users locate the `My` namespace extension.
 
-## <a name="designing-class-libraries-for-my"></a>@No__t_0 のクラスライブラリの設計
+## <a name="designing-class-libraries-for-my"></a>Designing class libraries for `My`
 
-ほとんどのオブジェクトモデルの場合と同様に、設計パターンの中には `My` 名前空間で適切に機能するものもあれば、そうでないものもあります。 @No__t_0 名前空間の拡張機能を設計するときは、次の原則を考慮してください。
+As is the case with most object models, some design patterns work well in the `My` namespace and others do not. When designing an extension to the `My` namespace, consider the following principles:
 
-- **ステートレスメソッド。** @No__t_0 名前空間のメソッドは、特定のタスクに完全なソリューションを提供する必要があります。 メソッドに渡されたパラメーター値が、特定のタスクを完了するために必要なすべての入力を提供していることを確認します。 リソースへのオープン接続など、以前の状態に依存するメソッドを作成しないようにします。
-- **グローバルインスタンス。** @No__t_0 名前空間で保持される状態は、プロジェクトに対してグローバルです。 たとえば、`My.Application.Info` は、アプリケーション全体で共有される状態をカプセル化します。
-- **単純なパラメーターの型。** 複雑なパラメーターの型を避けることで、シンプルなものを維持します。 代わりに、パラメーター入力を受け取らないか、文字列、プリミティブ型などの単純な入力型を受け取るメソッドを作成します。
-- **ファクトリメソッド。** 一部の型は、インスタンス化が困難な場合があります。 ファクトリメソッドを `My` 名前空間の拡張機能として指定すると、このカテゴリに分類される型をより簡単に検出して使用できます。 適切に機能するファクトリメソッドの例としては、`My.Computer.FileSystem.OpenTextFileReader` があります。 .NET Framework で使用できるストリームの種類はいくつかあります。 具体的には、テキストファイルを指定することによって、使用するストリームをユーザーが理解できるように `OpenTextFileReader` します。
+- **Stateless methods.** Methods in the `My` namespace should provide a complete solution to a specific task. Ensure that the parameter values that are passed to the method provide all the input required to complete the particular task. Avoid creating methods that rely on prior state, such as open connections to resources.
+- **Global instances.** The only state that is maintained in the `My` namespace is global to the project. For example, `My.Application.Info` encapsulates state that is shared throughout the application.
+- **Simple parameter types.** Keep things simple by avoiding complex parameter types. Instead, create methods that either take no parameter input or that take simple input types such as strings, primitive types, and so on.
+- **Factory methods.** Some types are necessarily difficult to instantiate. Providing factory methods as extensions to the `My` namespace enables you to more easily discover and consume types that fall into this category. An example of a factory method that works well is `My.Computer.FileSystem.OpenTextFileReader`. There are several stream types available in the .NET Framework. By specifying text files specifically, the `OpenTextFileReader` helps the user understand which stream to use.
 
-これらのガイドラインでは、クラスライブラリの一般的な設計原則は使用できません。 これらは、Visual Basic と `My` 名前空間を使用している開発者向けに最適化された推奨事項です。 クラスライブラリを作成するための一般的な設計原則については、「[フレームワークのデザインガイドライン](../../../standard/design-guidelines/index.md)」を参照してください。
+These guidelines do not preclude general design principles for class libraries. Rather, they are recommendations that are optimized for developers who are using Visual Basic and the `My` namespace. For general design principles for creating class libraries, see [Framework Design Guidelines](../../../standard/design-guidelines/index.md).
 
-## <a name="packaging-and-deploying-extensions"></a>拡張機能のパッケージ化と配置
+## <a name="packaging-and-deploying-extensions"></a>Packaging and deploying extensions
 
-Visual Studio プロジェクトテンプレートには `My` 名前空間拡張を含めることができます。また、拡張機能をパッケージ化して Visual Studio 項目テンプレートとして配置することもできます。 @No__t_0 名前空間拡張を Visual Studio 項目テンプレートとしてパッケージ化すると、Visual Basic によって提供される追加機能を利用できます。 これらの機能を使用すると、プロジェクトが特定のアセンブリを参照するときに拡張機能を含めることができます。また、Visual Basic プロジェクトデザイナーの **[マイ拡張**] ページを使用して、ユーザーが `My` 名前空間拡張機能を明示的に追加できるようになります。
+You can include `My` namespace extensions in a Visual Studio project template, or you can package your extensions and deploy them as a Visual Studio item template. When you package your `My` namespace extensions as a Visual Studio item template, you can take advantage of additional capabilities provided by Visual Basic. These capabilities enable you to include an extension when a project references a particular assembly, or enable users to explicitly add your `My` namespace extension by using the **My Extensions** page of the Visual Basic Project Designer.
 
-@No__t_0 名前空間拡張をデプロイする方法の詳細については、「[カスタムマイ拡張機能のパッケージ化と配置](packaging-and-deploying-custom-my-extensions.md)」を参照してください。
+For details about how to deploy `My` namespace extensions, see [Packaging and Deploying Custom My Extensions](packaging-and-deploying-custom-my-extensions.md).
 
 ## <a name="see-also"></a>関連項目
 

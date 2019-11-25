@@ -1,5 +1,5 @@
 ---
-title: バイト型 (Byte) (Visual Basic)
+title: バイト型 (Byte)
 ms.date: 01/31/2018
 f1_keywords:
 - vb.Byte
@@ -7,38 +7,39 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: e1725b709c03b0d77cf7e28761396236b5ef1a00
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 347d7e7d0f09e089886bc81bd0be659deaca9b46
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622428"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344078"
 ---
-# <a name="byte-data-type-visual-basic"></a>Byte データ型 (Visual Basic)
-0 から 255 までの範囲の符号なし 8 ビット (1 バイト) 整数を保持します。
+# <a name="byte-data-type-visual-basic"></a>Byte data type (Visual Basic)
+
+Holds unsigned 8-bit (1-byte) integers that range in value from 0 through 255.
 
 ## <a name="remarks"></a>Remarks
 
-使用して、`Byte`バイナリ データを格納するデータ型。  
+Use the `Byte` data type to contain binary data.  
   
 `Byte` の既定値は 0 です。
 
-## <a name="literal-assignments"></a>リテラルの割り当て
+## <a name="literal-assignments"></a>Literal assignments
 
-宣言し、初期化を`Byte`10 進リテラル、16 進リテラル、8 進数のリテラルを割り当てることや (Visual Basic 2017 以降) バイナリ リテラルでは、変数。 整数リテラルの範囲外の場合、 `Byte` (である場合より小さい<xref:System.Byte.MinValue?displayProperty=nameWithType>以上<xref:System.Byte.MaxValue?displayProperty=nameWithType>)、コンパイル エラーが発生します。
+You can declare and initialize a `Byte` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. If the integral literal is outside the range of a `Byte` (that is, if it is less than <xref:System.Byte.MinValue?displayProperty=nameWithType> or greater than <xref:System.Byte.MaxValue?displayProperty=nameWithType>), a compilation error occurs.
 
-次の例では、整数が 16 進数、10 進数として表される 201 に等しくなりからのバイナリ リテラルを暗黙的に変換されます[整数](integer-data-type.md)に`byte`値。
+In the following example, integers equal to 201 that are represented as decimal, hexadecimal, and binary literals are implicitly converted from [Integer](integer-data-type.md) to `byte` values.
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Byte)]
 
 > [!NOTE]
-> プレフィックスを使用する`&h`または`&H`を 16 進リテラル、プレフィックスを示すために`&b`または`&B`、バイナリ リテラル、およびプレフィックスを示すために`&o`または`&O`を 8 進数のリテラルを示すためにします。 10 進リテラルには、プレフィックスはありません。
+> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. 10 進リテラルには、プレフィックスはありません。
 
-Visual Basic 2017 から始めて、使用することできますも、アンダー スコア文字`_`、読みやすさを強化するために、桁区切り記号として次の例として示します。
+Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
 
-Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例:
+Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. (例:
 
 ```vb
 Dim number As Byte = &H_6A
@@ -48,19 +49,19 @@ Dim number As Byte = &H_6A
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **負の数。** `Byte`符号なしの型は、負の数を表すことはできません。 単項マイナスを使用する場合 (`-`) 型に評価される式で演算子`Byte`、Visual Basic の式を変換する`Short`最初。
+- **Negative Numbers.** Because `Byte` is an unsigned type, it cannot represent a negative number. If you use the unary minus (`-`) operator on an expression that evaluates to type `Byte`, Visual Basic converts the expression to `Short` first.
   
-- **形式の変換。** Visual Basic の読み取りまたはファイルの書き込み時に、または Dll、メソッド、およびプロパティを呼び出すときは、データ形式間で自動的に変換できます。 格納されているバイナリ データ`Byte`変数および配列はこのような形式の変換中に保持されます。 使用しないようにする、 `String` ANSI および Unicode 形式の間で変換中にその内容が破損することがあるため、バイナリ データ変数。
+- **Format Conversions.** When Visual Basic reads or writes files, or when it calls DLLs, methods, and properties, it can automatically convert between data formats. Binary data stored in `Byte` variables and arrays is preserved during such format conversions. You should not use a `String` variable for binary data, because its contents can be corrupted during conversion between ANSI and Unicode formats.
 
-- **拡大します。** `Byte`拡大変換後のデータ型`Short`、 `UShort`、 `Integer`、 `UInteger`、 `Long`、 `ULong`、 `Decimal`、 `Single`、または`Double`します。 つまり、変換できる`Byte`遭遇することがなくこれらの型のいずれにも、<xref:System.OverflowException?displayProperty=nameWithType>エラー。
+- **Widening.** The `Byte` data type widens to `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, or `Double`. This means you can convert `Byte` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
   
-- **型宣言文字。** `Byte` リテラルの型文字または識別子の型文字がありません。
+- **Type Characters.** `Byte` has no literal type character or identifier type character.
 
-- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Byte?displayProperty=nameWithType> 構造体です。
+- **Framework Type.** .NET Framework において対応する型は、<xref:System.Byte?displayProperty=nameWithType> 構造体です。
 
 ## <a name="example"></a>例
 
- 次の例では、`b`は、`Byte`変数。 ステートメントは、変数の範囲とビット シフト演算子のアプリケーションを示します。
+ In the following example, `b` is a `Byte` variable. The statements demonstrate the range of the variable and the application of bit-shift operators to it.
 
  [!code-vb[VbVbalrDataTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#16)]  
 

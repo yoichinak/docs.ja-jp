@@ -1,59 +1,59 @@
 ---
-title: Visual Basic の MaskedTextBox コントロールによる正規表現を使用する
+title: MaskedTextBox コントロールによる正規表現を使用する
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: e0165fb8d573878ae19378b2656d89627680b804
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12d500fa0ff4945dcf2d5009bdba6d337834707e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024509"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346263"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic の MaskedTextBox コントロールによる正規表現を使用する
-この例を使用する正規表現を単純に変換する方法、<xref:System.Windows.Forms.MaskedTextBox>コントロール。  
+This example demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.  
   
-## <a name="description-of-the-masking-language"></a>マスクの言語の説明  
- 標準<xref:System.Windows.Forms.MaskedTextBox>で使用される 1 つに基づいてマスク言語、 `Masked Edit` Visual Basic 6.0 を制御し、そのプラットフォームから移行するユーザーにとって馴染み深いにする必要があります。  
+## <a name="description-of-the-masking-language"></a>Description of the Masking Language  
+ The standard <xref:System.Windows.Forms.MaskedTextBox> masking language is based on the one used by the `Masked Edit` control in Visual Basic 6.0 and should be familiar to users migrating from that platform.  
   
- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>のプロパティ、<xref:System.Windows.Forms.MaskedTextBox>コントロールを使用するどのような入力マスクを指定します。 マスクは、1 つ以上の次の表からマスク要素から成る文字列である必要があります。  
+ The <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of the <xref:System.Windows.Forms.MaskedTextBox> control specifies what input mask to use. The mask must be a string composed of one or more of the masking elements from the following table.  
   
-|要素のマスク|説明|正規表現の要素|  
+|Masking element|説明|Regular expression element|  
 |---------------------|-----------------|--------------------------------|  
-|0|0 から 9 までの 1 桁。 入力は必須です。|\d|  
-|9|数字またはスペース。 省略可能。|[\d] でしょうか。|  
-|#|数字またはスペース。 省略可能。 この位置は、マスク内の空白のまま、これは、領域としてレンダリングされます。 プラス (+) マイナス記号 (-) 記号が許可されているとします。|[\d+-] でしょうか。|  
-|L|ASCII 文字。 入力は必須です。|[- A-za-z]|  
-|?|ASCII 文字。 省略可能。|[- A-za-z] でしょうか。|  
-|&|文字です。 入力は必須です。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|C|文字です。 省略可能。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
-|A|英数字。 省略可能。|\W|  
-|.|カルチャに応じた小数点のプレース ホルダーです。|使用できません。|  
-|,|何千ものカルチャに適したプレース ホルダーです。|使用できません。|  
-|:|カルチャに適切な時刻の区切り記号。|使用できません。|  
-|/|カルチャに応じた日付の区切り記号。|使用できません。|  
-|$|カルチャに適した通貨記号。|使用できません。|  
-|\<|すべての文字を小文字に変換します。|使用できません。|  
-|>|大文字に続くすべての文字に変換します。|使用できません。|  
-|&#124;|前の shift キーを元に戻しますか下方向にシフトします。|使用できません。|  
-|&#92;|リテラルにすることでマスク文字をエスケープします。 "\\\\"円記号のエスケープ シーケンスです。|&#92;|  
-|その他のすべての文字。|リテラル。 内のユーザーとしてマスク以外のすべての要素が表示されます<xref:System.Windows.Forms.MaskedTextBox>します。|その他のすべての文字。|  
+|0|Any single digit between 0 and 9. Entry required.|\d|  
+|9|Digit or space. Entry optional.|[ \d]?|  
+|#|Digit or space. Entry optional. If this position is left blank in the mask, it will be rendered as a space. Plus (+) and minus (-) signs are allowed.|[ \d+-]?|  
+|L|ASCII letter. Entry required.|[a-zA-Z]|  
+|?|ASCII letter. Entry optional.|[a-zA-Z]?|  
+|&|文字です。 Entry required.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
+|C|文字です。 Entry optional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
+|A|Alphanumeric. Entry optional.|\W|  
+|である必要があります。|Culture-appropriate decimal placeholder.|使用できません。|  
+|の場合、|Culture-appropriate thousands placeholder.|使用できません。|  
+|:|Culture-appropriate time separator.|使用できません。|  
+|/|Culture-appropriate date separator.|使用できません。|  
+|$|Culture-appropriate currency symbol.|使用できません。|  
+|\<|Converts all characters that follow to lowercase.|使用できません。|  
+|>|Converts all characters that follow to uppercase.|使用できません。|  
+|&#124;|Undoes a previous shift up or shift down.|使用できません。|  
+|&#92;|Escapes a mask character, turning it into a literal. "\\\\" is the escape sequence for a backslash.|&#92;|  
+|All other characters.|Literals. All non-mask elements will appear as themselves within <xref:System.Windows.Forms.MaskedTextBox>.|All other characters.|  
   
- 小数点 (.)、桁区切り (,)、時間 (:)、日付 (/)、および ($) の通貨記号は、アプリケーションのカルチャによって定義されているこれらのシンボルを表示するときに、既定。 使用して別のカルチャのシンボルを表示することを強制することができます、<xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A>プロパティ。  
+ The decimal (.), thousandths (,), time (:), date (/), and currency ($) symbols default to displaying those symbols as defined by the application's culture. You can force them to display symbols for another culture by using the <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> property.  
   
-## <a name="regular-expressions-and-masks"></a>正規表現とマスク  
- 正規表現とマスクを使用するには、ユーザー入力を検証する、完全に同等ではありません。 正規表現は、マスクより複雑なパターンを表すことができますより簡潔かつカルチャに応じた形式で、マスクは、同じ情報を表すことができます。  
+## <a name="regular-expressions-and-masks"></a>Regular Expressions and Masks  
+ Although you can use regular expressions and masks to validate user input, they are not completely equivalent. Regular expressions can express more complex patterns than masks, but masks can express the same information more succinctly and in a culturally relevant format.  
   
- 次の表は、それぞれの 4 つの正規表現と同等のマスクを比較します。  
+ The following table compares four regular expressions and the equivalent mask for each.  
   
-|正規表現|マスク|メモ|  
+|正規表現|マスク|ノート|  
 |------------------------|----------|-----------|  
-|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|`/`マスク内の文字は論理日付の区切り記号、およびアプリケーションの現在のカルチャに適切な日付の区切り記号として、ユーザーに表示されます。|  
-|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|2 つの小文字初期大文字で 3 桁の月の省略形が表示される米国形式の日付 (日、月の省略形、および年)。|  
-|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|米国の電話番号、市外局番の省略可能です。 場合は、ユーザーは、省略可能な文字を入力するつもりはなく、彼女のスペースを入力するかマウス ポインターを最初の 0 で表される、マスク内の位置に直接配置します。|  
-|`$\d{6}.00`|`$999,999.00`|0 ~ 999999 の範囲内の通貨値。 通貨、1/10,000 のおよび 10 進数の文字は、対応するカルチャに固有の実行時に置き換えられます。|  
+|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|The `/` character in the mask is a logical date separator, and it will appear to the user as the date separator appropriate to the application's current culture.|  
+|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|A date (day, month abbreviation, and year) in United States format in which the three-letter month abbreviation is displayed with an initial uppercase letter followed by two lowercase letters.|  
+|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|United States phone number, area code optional. If the user does not wish to enter the optional characters, she can either enter spaces or place the mouse pointer directly at the position in the mask represented by the first 0.|  
+|`$\d{6}.00`|`$999,999.00`|A currency value in the range of 0 to 999999. The currency, thousandth, and decimal characters will be replaced at run-time with their culture-specific equivalents.|  
   
 ## <a name="see-also"></a>関連項目
 

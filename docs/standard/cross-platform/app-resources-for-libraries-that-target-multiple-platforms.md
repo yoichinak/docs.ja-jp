@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e846f45b55ac09d6ce6af4f3223c3bdba1dc83ba
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: b32c2e354ea48e25ddb0aa561eb576cbfd89e3fb
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506014"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204740"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>複数のプラットフォームを対象とするライブラリのアプリケーション リソース
-.NET Framework を使用して[ポータブル クラス ライブラリ](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)プロジェクトの種類が、クラス ライブラリのリソースを複数のプラットフォームからアクセスできることを確認します。 このプロジェクトの種類では、Visual Studio 2012 で使用できる、.NET Framework クラス ライブラリの移植可能なサブセットを対象とします。 ポータブル クラス ライブラリを使用して、デスクトップ アプリ、Silverlight アプリ、Windows Phone のアプリから、ライブラリにアクセスできることにより、および[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]アプリ。
+You can use the .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) project type to ensure that resources in your class libraries can be accessed from multiple platforms. This project type is available in Visual Studio 2012 and targets the portable subset of the .NET Framework class library. Using  a Portable Class Library ensures that your library can be accessed from desktop apps, Silverlight apps, Windows Phone apps, and Windows 8.x Store apps.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
- ポータブル クラス ライブラリ プロジェクト内の型の非常に限定されたサブセットのみを使用する、<xref:System.Resources>には、アプリケーションで使用できる名前空間には、使用することは、<xref:System.Resources.ResourceManager>クラス リソースを取得します。 ただし、Visual Studio を使用してアプリケーションを作成する場合は、<xref:System.Resources.ResourceManager> クラス ライブラリを使用するのではなく、Visual Studio によって作成された厳密に型指定されたラッパーを使用する必要があります。
+ The Portable Class Library project makes only a very limited subset of the types in the <xref:System.Resources> namespace available to your application, but it does allow you to use the <xref:System.Resources.ResourceManager> class to retrieve resources. ただし、Visual Studio を使用してアプリケーションを作成する場合は、<xref:System.Resources.ResourceManager> クラス ライブラリを使用するのではなく、Visual Studio によって作成された厳密に型指定されたラッパーを使用する必要があります。
 
- Visual Studio では、厳密に型指定されたラッパーを作成、設定、メイン リソース ファイルの**アクセス修飾子**を Visual Studio リソース デザイナーで**パブリック**します。 これにより、厳密に型指定された ResourceManager ラッパーを含む [resourceFileName].designer.cs または [resourceFileName].designer.vb ファイルが作成されます。 厳密に型指定されたリソース ラッパーの使用方法の詳細については、"厳密に型指定されたリソース クラスの生成」セクションを参照してください、 [Resgen.exe (リソース ファイル ジェネレーター)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)トピック。
+ To create a strongly typed wrapper in Visual Studio, set the main resource file's **Access Modifier** in the Visual Studio Resource Designer to **Public**. これにより、厳密に型指定された ResourceManager ラッパーを含む [resourceFileName].designer.cs または [resourceFileName].designer.vb ファイルが作成されます。 For more information about using a strongly typed resource wrapper, see the "Generating a Strongly Typed Resource Class" section in the [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) topic.
 
-## <a name="resource-manager-in-the-portable-class-library"></a>ポータブル クラス ライブラリにリソース マネージャー
- ポータブル クラス ライブラリ プロジェクトでリソースへのすべてのアクセスは、によって処理されます、<xref:System.Resources.ResourceManager>クラス。 ため、型、<xref:System.Resources>名前空間など<xref:System.Resources.ResourceReader>と<xref:System.Resources.ResourceSet>はポータブル クラス ライブラリ プロジェクトからはアクセスできない、使用できませんのリソースにアクセスします。
+## <a name="resource-manager-in-the-portable-class-library"></a>Resource Manager in the Portable Class Library
+ In a Portable Class Library project, all access to resources is handled by the <xref:System.Resources.ResourceManager> class. Because types in the <xref:System.Resources> namespace, such as <xref:System.Resources.ResourceReader> and <xref:System.Resources.ResourceSet>, are not accessible from a Portable Class Library project, they cannot be used to access resources.
 
- ポータブル クラス ライブラリ プロジェクトには、4 つが含まれています。<xref:System.Resources.ResourceManager>メンバーは、次の表に一覧表示します。 これらのコンストラクターおよびメソッドを使用すると、<xref:System.Resources.ResourceManager> オブジェクトをインスタンス化して文字列リソースを取得できます。
+ The Portable Class Library project includes the four <xref:System.Resources.ResourceManager> members listed in the following table. これらのコンストラクターおよびメソッドを使用すると、<xref:System.Resources.ResourceManager> オブジェクトをインスタンス化して文字列リソースを取得できます。
 
 |`ResourceManager` のメンバー|説明|
 |------------------------------|-----------------|
@@ -42,18 +42,18 @@ ms.locfileid: "67506014"
 |<xref:System.Resources.ResourceManager.GetString%28System.String%29>|現在のカルチャに対する、名前の指定されたリソースを取得します。|
 |<xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>|指定されたカルチャに属する、名前の指定されたリソースを取得します。|
 
- その他の除外<xref:System.Resources.ResourceManager>オブジェクト、文字列以外のデータ、およびイメージをシリアル化するポータブル クラス ライブラリの手段のメンバーは、リソース ファイルから取得できません。 ポータブル クラス ライブラリからリソースを使用するには、文字列の形式でオブジェクトのすべてのデータを格納する必要があります。 たとえば、数値を文字列に変換してリソース ファイルに格納し、これらを取得して、数値データ型の `Parse` メソッドまたは `TryParse` メソッドを使用して数値に戻すことができます。 イメージや他のバイナリ データを文字列形式に変換するには <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> メソッドを呼び出し、バイト配列に戻すには <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> メソッドを呼び出します。
+ The exclusion of other <xref:System.Resources.ResourceManager> members from the Portable Class Library means that serialized objects, non-string data, and images cannot be retrieved from a resource file. To use resources from a Portable Class Library, you should store all  object data in string form. たとえば、数値を文字列に変換してリソース ファイルに格納し、これらを取得して、数値データ型の `Parse` メソッドまたは `TryParse` メソッドを使用して数値に戻すことができます。 イメージや他のバイナリ データを文字列形式に変換するには <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> メソッドを呼び出し、バイト配列に戻すには <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> メソッドを呼び出します。
 
-## <a name="the-portable-class-library-and-windows-store-apps"></a>ポータブル クラス ライブラリと Windows ストア アプリ
- ポータブル クラス ライブラリ プロジェクトでは、.resx ファイルには、.resources ファイルにコンパイルされ、メイン アセンブリまたはサテライト アセンブリをコンパイル時に埋め込まれたリソースを格納します。 一方、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションではリソースを .resw ファイルに格納する必要があります。このファイルはその後、単一のパッケージ リソース インデックス (PRI) ファイルにコンパイルされます。 ただし、互換性のないファイルの形式に関係なく、ポータブル クラス ライブラリは動作、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]アプリ。
+## <a name="the-portable-class-library-and-windows-store-apps"></a>The Portable Class Library and Windows Store Apps
+ Portable Class Library projects store resources in .resx files, which are then compiled into .resources files and embedded in the main assembly or in satellite assemblies at compile time. Windows 8.x Store apps, on the other hand, require resources to be stored in .resw files, which are then compiled into a single package resource index (PRI) file. However, despite the incompatible file formats, your Portable Class Library will work in a Windows 8.x Store app.
 
- クラス ライブラリを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションで使用するには、Windows ストア アプリケーション プロジェクトでその参照を追加します。 Visual Studio は透過的に .resw ファイルに、アセンブリからリソースを抽出し、Windows ランタイムがリソースを抽出 PRI ファイルの生成に使用します。 実行時に、Windows ランタイムで、ポータブル クラス ライブラリのコードを実行しますが、ポータブル クラス ライブラリのリソースは PRI ファイルから取得します。
+ To consume your class library from a Windows 8.x Store app, add a reference to it in your Windows Store app project. Visual Studio will transparently extract the resources from your assembly into a .resw file and use it to generate a PRI file from which the Windows Runtime can extract resources. At run time, the Windows Runtime executes the code in your Portable Class Library, but it retrieves your Portable Class Library's resources from the PRI file.
 
- ポータブル クラス ライブラリ プロジェクトには、ローカライズされたリソースが含まれている場合は、デスクトップ アプリでのライブラリと同様に展開するため、ハブ アンド スポーク モデルを使用します。 メイン リソース ファイルおよびローカライズされたリソース ファイルを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションで使用するには、参照をメイン アセンブリに追加します。 コンパイル時に、Visual Studio はメイン リソース ファイルとローカライズされているリソース ファイルからリソースを個別の .resw ファイルに抽出します。 実行時に、Windows ランタイムにアクセスする単一の PRI ファイルに .resw ファイルをコンパイルします。
+ If your Portable Class Library project includes localized resources, you use the hub-and-spoke model to deploy them just as you would for a library in a desktop app. To consume your main resource file and any localized resource files in your Windows 8.x Store app, you add a reference to the main assembly. コンパイル時に、Visual Studio はメイン リソース ファイルとローカライズされているリソース ファイルからリソースを個別の .resw ファイルに抽出します。 It then compiles the .resw files into a single PRI file that the Windows Runtime accesses at run time.
 
 <a name="NonLoc"></a>
-## <a name="example-non-localized-portable-class-library"></a>例:ローカライズのポータブル クラス ライブラリ
- 次のシンプルでローカライズされていないポータブル クラス ライブラリの例は、列の名前を格納し、表形式のデータ用に予約する文字数を決定する、リソースを使用します。 この例では LibResources.resx という名前のファイルを使用して、次の表に示す文字列リソースを格納します。
+## <a name="example-non-localized-portable-class-library"></a>Example: Non-Localized Portable Class Library
+ The following simple, non-localized Portable Class Library example uses resources to store the names of columns and to determine the number of characters to reserve for tabular data. この例では LibResources.resx という名前のファイルを使用して、次の表に示す文字列リソースを格納します。
 
 |リソース名|リソースの値|
 |-------------------|--------------------|
@@ -63,26 +63,26 @@ ms.locfileid: "67506014"
 |HiredLength|12|
 |ID|ID|
 |ID.Length|12|
-|Name|Name|
+|名|名|
 |NameLength|25|
 |Title|従業員データベース|
 
- 次のコード定義を`UILibrary`という名前のリソース マネージャーのラッパーを使用するクラス`resources`Visual Studio によって生成されたときに、**アクセス修飾子**にファイルが変更**パブリック**. UILibrary クラスは必要に応じて文字列データを解析します。 . このクラスは `MyCompany.Employees` 名前空間にあることに注意してください。
+ The following code defines a `UILibrary` class that uses the Resource Manager wrapper named `resources` generated by Visual Studio when the **Access Modifier** for the file is changed to **Public**. UILibrary クラスは必要に応じて文字列データを解析します。 である必要があります。 このクラスは `MyCompany.Employees` 名前空間にあることに注意してください。
 
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
 
- 次のコードは、`UILibrary` クラスとそのリソースをコンソールモード アプリケーションからアクセスする方法を示します。 コンソール アプリのプロジェクトに追加するのには UILibrary.dll への参照が必要です。
+ 次のコードは、`UILibrary` クラスとそのリソースをコンソールモード アプリケーションからアクセスする方法を示します。 It requires a reference to UILibrary.dll to be added to the console app project.
 
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]
 
- 次のコードは、`UILibrary` クラスとそのリソースを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションからアクセスする方法を示します。 Windows ストア アプリのプロジェクトに追加するのには UILibrary.dll への参照が必要です。
+ The following code illustrates how the `UILibrary` class and its resources can be accessed from a Windows 8.x Store app. It requires a reference to UILibrary.dll to be added to the Windows Store app project.
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
-## <a name="example-localized-portable-class-library"></a>例:ローカライズされたポータブル クラス ライブラリ
- 次のローカライズされたポータブル クラス ライブラリの例には、フランス語 (フランス) と英語 (米国) カルチャのリソースが含まれます。 英語 (米国) カルチャは、アプリの既定のカルチャです。テーブルにそのリソースが示すように、[前のセクション](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)します。 フランス語 (フランス) のカルチャのリソース ファイルは LibResources.fr-FR.resx という名前で、以下の表に示す文字列リソースで構成されています。 `UILibrary` クラスのソース コードは前のセクションに示すものと同じです。
+## <a name="example-localized-portable-class-library"></a>Example: Localized Portable Class Library
+ The following localized Portable Class Library example includes resources for the French (France) and English (United States) cultures. The English (United States) culture is the app's default culture; its resources are shown in the table in the [previous section](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). フランス語 (フランス) のカルチャのリソース ファイルは LibResources.fr-FR.resx という名前で、以下の表に示す文字列リソースで構成されています。 `UILibrary` クラスのソース コードは前のセクションに示すものと同じです。
 
 |リソース名|リソースの値|
 |-------------------|--------------------|
@@ -91,15 +91,15 @@ ms.locfileid: "67506014"
 |Hired|Date embauché|
 |HiredLength|16|
 |ID|ID|
-|Name|Nom|
+|名|Nom|
 |Title|Base de données des employés|
 
- 次のコードは、`UILibrary` クラスとそのリソースをコンソールモード アプリケーションからアクセスする方法を示します。 コンソール アプリのプロジェクトに追加するのには UILibrary.dll への参照が必要です。
+ 次のコードは、`UILibrary` クラスとそのリソースをコンソールモード アプリケーションからアクセスする方法を示します。 It requires a reference to UILibrary.dll to be added to the console app project.
 
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]
 
- 次のコードは、`UILibrary` クラスとそのリソースを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションからアクセスする方法を示します。 Windows ストア アプリのプロジェクトに追加するのには UILibrary.dll への参照が必要です。 静的な `ApplicationLanguages.PrimaryLanguageOverride` プロパティを使用してアプリケーションの優先言語をフランス語に設定します。
+ The following code illustrates how the `UILibrary` class and its resources can be accessed from a Windows 8.x Store app. It requires a reference to UILibrary.dll to be added to the Windows Store app project. 静的な `ApplicationLanguages.PrimaryLanguageOverride` プロパティを使用してアプリケーションの優先言語をフランス語に設定します。
 
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  

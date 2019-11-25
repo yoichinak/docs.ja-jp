@@ -1,5 +1,5 @@
 ---
-title: Inherits ステートメント (Visual Basic)
+title: Inherits Statement
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Inherits
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: e92e12908c89bb7a0bf385a2122b0c8f1eb8a6f7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6e6e9cc9210232059210862f2bda691c57b372d6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581749"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353226"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
-現在のクラスまたはインターフェイスが、別のクラスまたはインターフェイスのセットから属性、変数、プロパティ、プロシージャ、およびイベントを継承するようにします。  
+Causes the current class or interface to inherit the attributes, variables, properties, procedures, and events from another class or set of interfaces.  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,40 +28,40 @@ Inherits basetypenames
   
 |用語|定義|  
 |---|---|  
-|`basetypenames`|必須です。 このクラスの派生元であるクラスの名前。<br /><br /> -または-<br /><br /> このインターフェイスの派生元のインターフェイスの名前。 複数の名前を区切るには、コンマを使用します。|  
+|`basetypenames`|必須です。 The name of the class from which this class derives.<br /><br /> -または-<br /><br /> The names of the interfaces from which this interface derives. Use commas to separate multiple names.|  
   
 ## <a name="remarks"></a>Remarks  
- 使用する場合、`Inherits` ステートメントは、クラスまたはインターフェイス定義の最初の空白でない、コメント以外の行である必要があります。 @No__t_0 または `Interface` ステートメントの直後に記述する必要があります。  
+ If used, the `Inherits` statement must be the first non-blank, non-comment line in a class or interface definition. It should immediately follow the `Class` or `Interface` statement.  
   
- @No__t_0 は、クラスまたはインターフェイスでのみ使用できます。 つまり、継承の宣言コンテキストをソースファイル、名前空間、構造体、モジュール、プロシージャ、またはブロックにすることはできません。  
+ You can use `Inherits` only in a class or interface. This means the declaration context for an inheritance cannot be a source file, namespace, structure, module, procedure, or block.  
   
 ## <a name="rules"></a>ルール  
   
-- **クラスの継承。** クラスで `Inherits` ステートメントを使用する場合、指定できる基底クラスは1つだけです。  
+- **Class Inheritance.** If a class uses the `Inherits` statement, you can specify only one base class.  
   
-     クラスは、入れ子にされたクラスから継承することはできません。  
+     A class cannot inherit from a class nested within it.  
   
-- **インターフェイスの継承。** インターフェイスで `Inherits` ステートメントが使用されている場合は、1つまたは複数の基本インターフェイスを指定できます。 それぞれが同じ名前のメンバーを定義している場合でも、2つのインターフェイスから継承できます。 その場合、実装するコードでは、実装するメンバーを指定するために名前の修飾を使用する必要があります。  
+- **Interface Inheritance.** If an interface uses the `Inherits` statement, you can specify one or more base interfaces. You can inherit from two interfaces even if they each define a member with the same name. If you do so, the implementing code must use name qualification to specify which member it is implementing.  
   
-     インターフェイスは、より制限の厳しいアクセスレベルを持つ別のインターフェイスから継承することはできません。 たとえば、`Public` インターフェイスは、`Friend` インターフェイスから継承することはできません。  
+     An interface cannot inherit from another interface with a more restrictive access level. For example, a `Public` interface cannot inherit from a `Friend` interface.  
   
-     インターフェイスは、その中に入れ子にされたインターフェイスから継承することはできません。  
+     An interface cannot inherit from an interface nested within it.  
   
- .NET Framework でのクラス継承の例として、<xref:System.SystemException> クラスを継承する <xref:System.ArgumentException> クラスがあります。 これにより、<xref:System.Exception.Message%2A> プロパティや <xref:System.Exception.ToString%2A> メソッドなど、システム例外に必要なすべての定義済みプロパティとプロシージャを <xref:System.ArgumentException> できます。  
+ An example of class inheritance in the .NET Framework is the <xref:System.ArgumentException> class, which inherits from the <xref:System.SystemException> class. This provides to <xref:System.ArgumentException> all the predefined properties and procedures required by system exceptions, such as the <xref:System.Exception.Message%2A> property and the <xref:System.Exception.ToString%2A> method.  
   
- .NET Framework でのインターフェイスの継承の例として、<xref:System.Collections.IEnumerable> インターフェイスから継承する <xref:System.Collections.ICollection> インターフェイスがあります。 これにより、<xref:System.Collections.ICollection> は、コレクションを走査するために必要な列挙子の定義を継承します。  
+ An example of interface inheritance in the .NET Framework is the <xref:System.Collections.ICollection> interface, which inherits from the <xref:System.Collections.IEnumerable> interface. This causes <xref:System.Collections.ICollection> to inherit the definition of the enumerator required to traverse a collection.  
   
 ## <a name="example"></a>例  
- 次の例では、`Inherits` ステートメントを使用して、`thisClass` という名前のクラスが `anotherClass` という名前の基本クラスのすべてのメンバーを継承する方法を示します。  
+ The following example uses the `Inherits` statement to show how a class named `thisClass` can inherit all the members of a base class named `anotherClass`.  
   
  [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>例  
- 次の例は、複数のインターフェイスの継承を示しています。  
+ The following example shows inheritance of multiple interfaces.  
   
  [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
- @No__t_0 という名前のインターフェイスには、<xref:System.IComparable>、<xref:System.IDisposable>、および <xref:System.IFormattable> インターフェイス内のすべての定義が含まれるようになりました。継承されたメンバーは、2つのオブジェクトの型固有の比較、割り当てられたリソースの解放、およびの値の表現をそれぞれ提供します。`String` としてのオブジェクト。 @No__t_0 を実装するクラスは、すべての基本インターフェイスのすべてのメンバーを実装する必要があります。  
+ The interface named `thisInterface` now includes all the definitions in the <xref:System.IComparable>, <xref:System.IDisposable>, and <xref:System.IFormattable> interfaces The inherited members provide respectively for type-specific comparison of two objects, releasing allocated resources, and expressing the value of an object as a `String`. A class that implements `thisInterface` must implement every member of every base interface.  
   
 ## <a name="see-also"></a>関連項目
 

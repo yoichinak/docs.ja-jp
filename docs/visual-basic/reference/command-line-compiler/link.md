@@ -1,5 +1,5 @@
 ---
-title: -link (Visual Basic)
+title: -link
 ms.date: 03/10/2018
 helpviewer_keywords:
 - l compiler option [Visual Basic]
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 0a6a6b6436210e699d8fd176dc1ba6e4aded7c8d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: ecb7b0448b8ee9c1c1fc1eb9542b693d60a38ffd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523986"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335844"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 指定したアセンブリ内の COM 型情報を、現在のコンパイル対象のプロジェクトで使用できるようにします。  
@@ -57,9 +57,9 @@ ms.locfileid: "72523986"
   
 - アセンブリ B の戻り値の型またはパラメーターの型を使用するフィールド、プロパティ、イベント、またはメソッドが呼び出される。  
   
- アセンブリ参照が1つ以上存在するディレクトリを指定するには、 [-libpath](libpath.md)を使用します。  
+ Use [-libpath](libpath.md) to specify the directory in which one or more of your assembly references is located.  
   
- [-Reference](reference.md)コンパイラオプションと同様に、`-link` コンパイラオプションは、頻繁に使用される .NET Framework アセンブリを参照する vbc.exe 応答ファイルを使用します。 コンパイラで Vbc.exe ファイルを使用しない場合は、 [-noconfig](noconfig.md)コンパイラオプションを使用します。  
+ Like the [-reference](reference.md) compiler option, the `-link` compiler option uses the Vbc.rsp response file, which references frequently used .NET Framework assemblies. Use the [-noconfig](noconfig.md) compiler option if you do not want the compiler to use the Vbc.rsp file.  
   
  `-link` の省略形は `-l` です。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72523986"
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>例  
- 次のコマンドラインは、`COMData1.dll` と `COMData2.dll` からソースファイル `OfficeApp.vb` と参照アセンブリをコンパイルして `OfficeApp.exe` を生成します。  
+ The following command line compiles source file `OfficeApp.vb` and reference assemblies from `COMData1.dll` and `COMData2.dll` to produce `OfficeApp.exe`.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  

@@ -1,5 +1,5 @@
 ---
-title: ByVal (Visual Basic)
+title: ByVal
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ByVal
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], contexts
 - ByVal keyword [Visual Basic]
 ms.assetid: 1eaf4e58-b305-4785-9e3d-e416b9c75598
-ms.openlocfilehash: 1fa4c1fa0a2def02dd56fa3728a8df4b5ff16b7f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a96f871c6ce119f65ebbec54fdb1471ae105d504
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666859"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351595"
 ---
 # <a name="byval-visual-basic"></a>ByVal (Visual Basic)
-引数が[値によって](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)渡されることを指定します。これにより、呼び出されたプロシージャまたはプロパティが、呼び出し元のコードの引数の基になる変数の値を変更できなくなります。 修飾子が指定されていない場合、ByVal が既定値になります。
+Specifies that an argument is passed [by value](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md), so that the called procedure or property cannot change the value of a variable underlying the argument in the calling code. If no modifier is specified, ByVal is the default.
 
 > [!NOTE]
-> これは既定であるため、メソッドシグネチャで`ByVal`キーワードを明示的に指定する必要はありません。 ノイズの多いコードが生成される傾向があり、多くの`ByRef`場合、既定以外のキーワードが見落とされてしまいます。
+> Because it is the default, you do not have to explicitly specify the `ByVal` keyword in method signatures. It tends to produce noisy code and often leads to the non-default `ByRef` keyword being overlooked.
 
 ## <a name="remarks"></a>Remarks
  `ByVal` 修飾子は、次のコンテキストで使用できます。
@@ -35,7 +35,7 @@ ms.locfileid: "69666859"
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
 
 ## <a name="example"></a>例
- 次の例では、参照型`ByVal`の引数を指定してパラメーター渡し機構を使用する方法を示します。 この例では、引数は`c1`クラス`Class1`のインスタンスです。 `ByVal`プロシージャ内のコードが参照引数`c1`の基になる値を変更できないようにします。ただし、のアクセス可能な`c1`フィールドとプロパティは保護されません。
+ The following example demonstrates the use of the `ByVal` parameter passing mechanism with a reference type argument. In the example, the argument is `c1`, an instance of class `Class1`. `ByVal` prevents the code in the procedures from changing the underlying value of the reference argument, `c1`, but does not protect the accessible fields and properties of `c1`.
 
  [!code-vb[VbVbalrKeywords#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class5.vb#10)]
 

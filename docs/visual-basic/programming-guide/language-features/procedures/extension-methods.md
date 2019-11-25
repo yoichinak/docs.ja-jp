@@ -1,5 +1,5 @@
 ---
-title: 拡張メソッド (Visual Basic)
+title: 拡張メソッド
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ExtensionMethods
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: d988ab36703bc20e6960d4b8ecc7a476d95ee9bc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: a88756fce9137f89db1b6b8b007d528e98381830
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72396008"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341172"
 ---
 # <a name="extension-methods-visual-basic"></a>拡張メソッド (Visual Basic)
 
-拡張メソッドを使用すると、開発者は、新しい派生型を作成せずに既に定義されているデータ型にカスタム機能を追加できます。 拡張メソッドを使用すると、既存の型のインスタンスメソッドと同じように呼び出すことができるメソッドを作成できます。
+Extension methods enable developers to add custom functionality to data types that are already defined without creating a new derived type. Extension methods make it possible to write a method that can be called as if it were an instance method of the existing type.
 
 ## <a name="remarks"></a>Remarks
 
-拡張メソッドになるのは、`Sub` プロシージャと `Function` プロシージャだけです。 拡張プロパティ、拡張フィールド、拡張イベントを定義することはできません。 すべての拡張メソッドは、<xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 名前空間の拡張属性 `<Extension>` でマークする必要があり、[モジュール](../../../language-reference/statements/module-statement.md)で定義する必要があります。 拡張メソッドがモジュール外で定義されている場合、Visual Basic コンパイラによってエラー [BC36551](../../../misc/bc36551.md)が生成されます。 "拡張メソッドはモジュール内でのみ定義できます"。
+拡張メソッドになるのは、`Sub` プロシージャと `Function` プロシージャだけです。 拡張プロパティ、拡張フィールド、拡張イベントを定義することはできません。 All extension methods must be marked with the extension attribute `<Extension>` from the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace and must be defined in a [Module](../../../language-reference/statements/module-statement.md). If an extension method is defined outside a module, the Visual Basic compiler generates error [BC36551](../../../misc/bc36551.md), "Extension methods can be defined only in modules".
 
 拡張メソッド定義の最初のパラメーターでは、そのメソッドが拡張するデータ型を指定します。 メソッドが実行されると、最初のパラメーターは、そのメソッドを呼び出すデータ型のインスタンスにバインディングされます。
 
-@No__t-0 属性は、Visual Basic [`Module`](../../../language-reference/statements/module-statement.md)、 [`Sub`](../../../language-reference/statements/sub-statement.md)、または[`Function`](../../../language-reference/statements/function-statement.md)にのみ適用できます。 @No__t-0 または `Structure` に適用した場合、Visual Basic コンパイラによってエラー [BC36550](../../../language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md)が生成されます。 "' Extension ' 属性は ' Module '、' Sub '、または ' Function ' 宣言にのみ適用できます。
+The `Extension` attribute can only be applied to a Visual Basic [`Module`](../../../language-reference/statements/module-statement.md), [`Sub`](../../../language-reference/statements/sub-statement.md), or [`Function`](../../../language-reference/statements/function-statement.md). If you apply it to a `Class` or a `Structure`, the Visual Basic compiler generates error [BC36550](../../../language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md), "'Extension' attribute can be applied only to 'Module', 'Sub', or 'Function' declarations".
 
 ## <a name="example"></a>例
 
@@ -63,7 +63,7 @@ Module StringExtensions
 End Module
 ```
 
-次に、拡張メソッドがスコープ内に取り込まれ、次のように呼び出されます。
+Next, the extension methods are brought into scope and called:
 
 ```vb
 Imports ConsoleApplication2.StringExtensions
@@ -87,7 +87,7 @@ End Module
 
 `Nothing` に設定されたオブジェクトに対して拡張メソッドが呼び出された場合、その拡張メソッドが実行されます。 これは、通常のインスタンス メソッドには適用されません。 拡張メソッドの `Nothing` は明示的にチェックできます。
 
-## <a name="types-that-can-be-extended"></a>拡張できる型
+## <a name="types-that-can-be-extended"></a>Types that can be extended
 
 拡張メソッドは、Visual Basic のパラメーター リストで記述できるほとんどの型で定義できます。以下に例を示します。
 
@@ -121,7 +121,7 @@ End Module
 
 - できるだけ具体性の高い型を拡張するようにします。 型の階層の中で他の多くの型の派生元になっている型で拡張メソッドを選択すると、その拡張メソッドの動作に影響を及ぼしかねないインスタンス メソッドや他の拡張メソッドが組み込まれる可能性が高くなります。
 
-## <a name="extension-methods-instance-methods-and-properties"></a>拡張メソッド、インスタンスメソッド、およびプロパティ
+## <a name="extension-methods-instance-methods-and-properties"></a>Extension methods, instance methods, and properties
 
 スコープ内のインスタンス メソッドが、呼び出し元ステートメントの引数と互換性があるシグネチャを持っている場合、拡張メソッドよりもそのインスタンス メソッドの方が優先的に使用されます。 この場合、より適合する拡張メソッドがあっても、インスタンス メソッドの方が優先されます。 次の例では、`ExampleClass` に、`ExampleMethod` 型のパラメーターを 1 つ持つ `Integer` という名前のインスタンス メソッドが含まれています。 拡張メソッド `ExampleMethod` は `ExampleClass` を拡張し、`Long` 型のパラメーターを 1 つ持ちます。
 
@@ -152,7 +152,7 @@ Instance method
 
 プロパティの場合、状況はより単純です。拡張メソッドの名前がそのクラスのプロパティと同じである場合、その拡張メソッドは非表示になり、アクセスできません。
 
-## <a name="extension-method-precedence"></a>拡張メソッドの優先順位
+## <a name="extension-method-precedence"></a>Extension method precedence
 
 2 つの拡張メソッドのシグネチャが同じで、そのいずれもスコープに入っていてアクセスが可能な場合は、優先順位の高い方が呼び出されます。 拡張メソッドの優先順位は、メソッドをスコープに組み入れる方法に基づいています。 優先順位の高い方から低い方へと並べると、次のようになります。
 
@@ -180,4 +180,4 @@ Instance method
 - [省略可能なパラメーター](optional-parameters.md)
 - [パラメーター配列](parameter-arrays.md)
 - [属性の概要](../../concepts/attributes/index.md)
-- [Visual Basic 内のスコープ](../declared-elements/scope.md)
+- [Scope in Visual Basic](../declared-elements/scope.md)

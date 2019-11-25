@@ -1,106 +1,106 @@
 ---
-title: '方法: ラムダ式 (Visual Basic) を作成します。'
+title: '方法 : ラムダ式を作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb0bdb3c10a7df2ca954fbdb9382a25bf805068d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665937"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349739"
 ---
-# <a name="how-to-create-a-lambda-expression-visual-basic"></a>方法: ラムダ式 (Visual Basic) を作成します。
-A*ラムダ式*は関数またはサブルーチンに名前がないです。 ラムダ式はデリゲート型が有効な場所で使用できます。  
+# <a name="how-to-create-a-lambda-expression-visual-basic"></a>方法: ラムダ式を作成する (Visual Basic)
+A *lambda expression* is a function or subroutine that does not have a name. A lambda expression can be used wherever a delegate type is valid.  
   
-### <a name="to-create-a-single-line-lambda-expression-function"></a>単一行のラムダ式の関数を作成するには  
+### <a name="to-create-a-single-line-lambda-expression-function"></a>To create a single-line lambda expression function  
   
-1. キーワードの入力の場合は、デリゲート型を使用できる場所、 `Function`、次の例。  
+1. In any situation where a delegate type could be used, type the keyword `Function`, as in the following example:  
   
      `Dim add1 =`   `Function`  
   
-2. かっこで囲んで直後後`Function`関数のパラメーターを入力します。 後の名前が指定されていないことに注意してください。`Function`します。  
+2. In parentheses, directly after `Function`, type the parameters of the function. Notice that you do not specify a name after `Function`.  
   
      `Dim add1 = Function`   `(num As Integer)`  
   
-3. 次のパラメーターのリストには、関数の本体として 1 つの式を入力します。 式が評価される値は、関数によって返される値です。 使用しない、`As`句を戻り値の型を指定します。  
+3. Following the parameter list, type a single expression as the body of the function. The value that the expression evaluates to is the value returned by the function. You do not use an `As` clause to specify the return type.  
   
      [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
-     ラムダ式は、整数の引数を渡すことによって呼び出します。  
+     You call the lambda expression by passing in an integer argument.  
   
      [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
-4. また、同じ結果は、次の例で実施されます。  
+4. Alternatively, the same result is accomplished by the following example:  
   
      [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
-### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>単一行のラムダ式のサブルーチンを作成するには  
+### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>To create a single-line lambda expression subroutine  
   
-1. キーワードの入力の場合は、デリゲート型を使用できる場所、`Sub`次の例のようにします。  
+1. In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example.  
   
      `Dim add1 =`   `Sub`  
   
-2. かっこで囲んで直後後`Sub`サブルーチンのパラメーターを入力します。 後の名前が指定されていないことに注意してください。`Sub`します。  
+2. In parentheses, directly after `Sub`, type the parameters of the subroutine. Notice that you do not specify a name after `Sub`.  
   
      `Dim add1 = Sub`   `(msg As String)`  
   
-3. 次のパラメーターのリストには、サブルーチンの本文として 1 つのステートメントを入力します。  
+3. Following the parameter list, type a single statement as the body of the subroutine.  
   
      [!code-vb[VbVbalrLambdas#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#17)]  
   
-     ラムダ式は、文字列引数を渡すことによって呼び出します。  
+     You call the lambda expression by passing in a string argument.  
   
      [!code-vb[VbVbalrLambdas#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#18)]  
   
-### <a name="to-create-a-multiline-lambda-expression-function"></a>複数行のラムダ式の関数を作成するには  
+### <a name="to-create-a-multiline-lambda-expression-function"></a>To create a multiline lambda expression function  
   
-1. キーワードの入力の場合は、デリゲート型を使用できる場所、`Function`次の例のようにします。  
+1. In any situation where a delegate type could be used, type the keyword `Function`, as shown in the following example.  
   
      `Dim add1 =`   `Function`  
   
-2. かっこで囲んで直後後`Function`関数のパラメーターを入力します。 後の名前が指定されていないことに注意してください。`Function`します。  
+2. In parentheses, directly after `Function`, type the parameters of the function. Notice that you do not specify a name after `Function`.  
   
      `Dim add1 = Function`   `(index As Integer)`  
   
-3. ENTER キーを押します。 `End Function`ステートメントが自動的に追加します。  
+3. ENTER キーを押します。 The `End Function` statement is automatically added.  
   
-4. 関数の本体には、式を作成し、値を返すには、次のコードを追加します。 使用しない、`As`句を戻り値の型を指定します。  
+4. Within the body of the function, add the following code to create an expression and return the value. You do not use an `As` clause to specify the return type.  
   
      [!code-vb[VbVbalrLambdas#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#19)]  
   
-     ラムダ式は、整数の引数を渡すことによって呼び出します。  
+     You call the lambda expression by passing in an integer argument.  
   
      [!code-vb[VbVbalrLambdas#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#20)]  
   
-### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>複数行のラムダ式のサブルーチンを作成するには  
+### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>To create a multiline lambda expression subroutine  
   
-1. キーワードの入力の場合は、デリゲート型を使用できる場所、`Sub`次の例のように。  
+1. In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example:  
   
      `Dim add1 =`   `Sub`  
   
-2. かっこで囲んで直後後`Sub`サブルーチンのパラメーターを入力します。 後の名前が指定されていないことに注意してください。`Sub`します。  
+2. In parentheses, directly after `Sub`, type the parameters of the subroutine. Notice that you do not specify a name after `Sub`.  
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3. ENTER キーを押します。 `End Sub`ステートメントが自動的に追加します。  
+3. ENTER キーを押します。 The `End Sub` statement is automatically added.  
   
-4. 関数の本体には、次のサブルーチンが呼び出されたときに実行するコードを追加します。  
+4. Within the body of the function, add the following code to execute when the subroutine is invoked.  
   
      [!code-vb[VbVbalrLambdas#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#21)]  
   
-     ラムダ式は、文字列引数を渡すことによって呼び出します。  
+     You call the lambda expression by passing in a string argument.  
   
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
 ## <a name="example"></a>例  
- 型を持つパラメーターの引数として渡すことができる関数を定義するラムダ式の一般的な用途は、`Delegate`します。 次の例では、<xref:System.Diagnostics.Process.GetProcesses%2A>メソッドは、ローカル コンピューターで実行されているプロセスの配列を返します。 <xref:System.Linq.Enumerable.Where%2A>からメソッド、<xref:System.Linq.Enumerable>クラスが必要です、`Boolean`デリゲートの引数として。 ラムダ式の例では、目的のために使用されます。 返します`True`プロセスごとに 1 つのスレッドし、でそれらが選択されて`filteredList`します。  
+ A common use of lambda expressions is to define a function that can be passed in as the argument for a parameter whose type is `Delegate`. In the following example, the <xref:System.Diagnostics.Process.GetProcesses%2A> method returns an array of the processes running on the local computer. The <xref:System.Linq.Enumerable.Where%2A> method from the <xref:System.Linq.Enumerable> class requires a `Boolean` delegate as its argument. The lambda expression in the example is used for that purpose. It returns `True` for each process that has only one thread, and those are selected in `filteredList`.  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
- 前の例は次のコードで記述されている[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]構文。  
+ The previous example is equivalent to the following code, which is written in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] syntax:  
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
@@ -111,6 +111,6 @@ A*ラムダ式*は関数またはサブルーチンに名前がないです。 �
 - [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [方法: Visual Basic での別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- 方法 : [Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
 - [Delegate ステートメント](../../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

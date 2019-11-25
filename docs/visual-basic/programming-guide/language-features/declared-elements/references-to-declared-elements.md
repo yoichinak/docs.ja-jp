@@ -1,24 +1,24 @@
 ---
-title: 宣言された要素への参照 (Visual Basic)
+title: 宣言された要素の参照
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic]
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: de4d42803be48a87f4dfd37a92b1b22fa2d5c554
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a6477a9f0abaf8eb9176f4f6ab2a920af6c8f500
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524556"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345304"
 ---
-# <a name="references-to-declared-elements-visual-basic"></a>宣言された要素への参照 (Visual Basic)
-宣言された要素をコードが参照する場合、Visual Basic コンパイラは参照内の名前を、その名前の適切な宣言に一致させる必要があります。 複数の要素が同じ名前で宣言されている場合は、その名前を*修飾*することによって、これらの要素のうちどれを参照するかを制御できます。  
+# <a name="references-to-declared-elements-visual-basic"></a>宣言された要素の参照 (Visual Basic)
+When your code refers to a declared element, the Visual Basic compiler matches the name in your reference to the appropriate declaration of that name. If more than one element is declared with the same name, you can control which of those elements is to be referenced by *qualifying* its name.  
   
- コンパイラは、名前の参照を最も*狭いスコープ*の名前宣言と照合しようとします。 これは、参照を行うコードから開始し、それを含んでいる要素のレベルを通じて外部で動作することを意味します。  
+ The compiler attempts to match a name reference to a name declaration with the *narrowest scope*. This means it starts with the code making the reference and works outward through successive levels of containing elements.  
   
- 次の例では、同じ名前を持つ2つの変数への参照を示します。 この例では、`totalCount` という名前の2つの変数を、モジュール `container` のさまざまなレベルのスコープで宣言しています。 プロシージャ `showCount` が修飾なしで `totalCount` 表示される場合、Visual Basic コンパイラは、最も狭いスコープ (つまり、`showCount` 内のローカル宣言) への参照を解決します。 親モジュール `container` で `totalCount` を修飾すると、コンパイラは、より広いスコープの宣言への参照を解決します。  
+ The following example shows references to two variables with the same name. The example declares two variables, each named `totalCount`, at different levels of scope in module `container`. When the procedure `showCount` displays `totalCount` without qualification, the Visual Basic compiler resolves the reference to the declaration with the narrowest scope, namely the local declaration inside `showCount`. When it qualifies `totalCount` with the containing module `container`, the compiler resolves the reference to the declaration with the broader scope.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -41,16 +41,16 @@ Module callingModule
 End Module  
 ```  
   
-## <a name="qualifying-an-element-name"></a>要素名を修飾する  
- この検索プロセスをオーバーライドして、より広範なスコープで宣言された名前を指定する場合は、より広いスコープのコンテナー要素を使用して名前を*修飾*する必要があります。 場合によっては、コンテナー要素を修飾する必要がある場合もあります。  
+## <a name="qualifying-an-element-name"></a>Qualifying an Element Name  
+ If you want to override this search process and specify a name declared in a broader scope, you must *qualify* the name with the containing element of the broader scope. In some cases, you might also have to qualify the containing element.  
   
- 名前を修飾すると、source ステートメントの前に、ターゲット要素が定義されている場所を識別する情報が含まれることを意味します。 この情報は、*修飾文字列*と呼ばれます。 1つ以上の名前空間、およびモジュール、クラス、または構造体を含めることができます。  
+ Qualifying a name means preceding it in your source statement with information that identifies where the target element is defined. This information is called a *qualification string*. It can include one or more namespaces and a module, class, or structure.  
   
- 修飾文字列では、ターゲット要素を含むモジュール、クラス、または構造体を明確に指定する必要があります。 コンテナーは、別の親要素 (通常は名前空間) に配置される場合があります。 修飾文字列に複数の要素を含めることが必要になる場合があります。  
+ The qualification string should unambiguously specify the module, class, or structure containing the target element. The container might in turn be located in another containing element, usually a namespace. You might need to include several containing elements in the qualification string.  
   
-#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>宣言された要素に名前を修飾してアクセスするには  
+#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>To access a declared element by qualifying its name  
   
-1. 要素が定義されている場所を確認します。 これには、名前空間、または名前空間の階層が含まれます。 最下位レベルの名前空間内では、要素はモジュール、クラス、または構造体に含まれている必要があります。  
+1. Determine the location in which the element has been defined. This might include a namespace, or even a hierarchy of namespaces. Within the lowest-level namespace, the element must be contained in a module, class, or structure.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2. ターゲット要素の場所に基づいて、修飾パスを決定します。 最上位レベルの名前空間から開始し、最下位レベルの名前空間に進み、target 要素を含むモジュール、クラス、または構造体で終了します。 パス内の各要素には、その後に続く要素が含まれている必要があります。  
+2. Determine a qualification path based on the target element's location. Start with the highest-level namespace, proceed to the lowest-level namespace, and end with the module, class, or structure containing the target element. Each element in the path must contain the element that follows it.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3. ターゲット要素の修飾文字列を準備します。 パス内のすべての要素の後にピリオド (`.`) を配置します。 アプリケーションは、修飾文字列内のすべての要素にアクセスできる必要があります。  
+3. Prepare the qualification string for the target element. Place a period (`.`) after every element in the path. Your application must have access to every element in your qualification string.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4. 通常の方法で、ターゲット要素を参照する式または代入ステートメントを記述します。  
+4. Write the expression or assignment statement referring to the target element in the normal way.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5. ターゲット要素名の前に修飾文字列を指定します。 名前は、要素が含まれているモジュール、クラス、または構造体の後のピリオド (`.`) の直後に記述する必要があります。  
+5. Precede the target element name with the qualification string. The name should immediately follow the period (`.`) that follows the module, class, or structure that contains the element.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,9 +93,9 @@ End Module
     End Module  
     ```  
   
-6. コンパイラは、修飾文字列を使用して、ターゲット要素参照と一致させる明確で明確な宣言を検索します。  
+6. The compiler uses the qualification string to find a clear, unambiguous declaration to which it can match the target element reference.  
   
- また、アプリケーションが同じ名前を持つ複数のプログラミング要素にアクセスできる場合は、名前参照を修飾する必要があります。 たとえば、<xref:System.Windows.Forms> と <xref:System.Web.UI.WebControls> の名前空間にはどちらも `Label` クラス (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> および <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>) が含まれています。 アプリケーションで両方を使用する場合、または独自の `Label` クラスを定義する場合は、異なる `Label` オブジェクトを区別する必要があります。 変数宣言に、名前空間またはインポートエイリアスを含めます。 次の例では、インポートエイリアスを使用します。  
+ You might also have to qualify a name reference if your application has access to more than one programming element that has the same name. For example, the <xref:System.Windows.Forms> and <xref:System.Web.UI.WebControls> namespaces both contain a `Label` class (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> and <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). If your application uses both, or if it defines its own `Label` class, you must distinguish the different `Label` objects. Include the namespace or import alias in the variable declaration. The following example uses the import alias.  
   
 ```vb  
 ' The following statement must precede all your declarations.  
@@ -104,21 +104,21 @@ Imports win = System.Windows.Forms, web = System.Web.UI.WebControls
 Dim winLabel As New win.Label()  
 ```  
   
-## <a name="members-of-other-containing-elements"></a>他のコンテナー要素のメンバー  
- 別のクラスまたは構造体の非共有メンバーを使用する場合は、まず、クラスまたは構造体のインスタンスを指す変数または式を使用して、メンバー名を修飾する必要があります。 次の例では、`demoClass` は `class1` という名前のクラスのインスタンスです。  
+## <a name="members-of-other-containing-elements"></a>Members of Other Containing Elements  
+ When you use a nonshared member of another class or structure, you must first qualify the member name with a variable or expression that points to an instance of the class or structure. In the following example, `demoClass` is an instance of a class named `class1`.  
   
 ```vb  
 Dim demoClass As class1 = New class1()  
 demoClass.someSub[(argumentlist)]  
 ```  
   
- クラス名自体を使用して、[共有](../../../../visual-basic/language-reference/modifiers/shared.md)されていないメンバーを修飾することはできません。 まず、オブジェクト変数にインスタンスを作成し (この場合は `demoClass`)、変数名でインスタンスを参照する必要があります。  
+ You cannot use the class name itself to qualify a member that is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md). You must first create an instance in an object variable (in this case `demoClass`) and then reference it by the variable name.  
   
- クラスまたは構造体に `Shared` メンバーが含まれている場合は、クラスまたは構造体の名前を使用するか、インスタンスを指す変数または式を使用して、そのメンバーを修飾できます。  
+ If a class or structure has a `Shared` member, you can qualify that member either with the class or structure name or with a variable or expression that points to an instance.  
   
- モジュールには個別のインスタンスがなく、すべてのメンバーが既定で `Shared` されます。 そのため、モジュール名を持つモジュールメンバーを修飾します。  
+ A module does not have any separate instances, and all its members are `Shared` by default. Therefore, you qualify a module member with the module name.  
   
- 次の例では、モジュールメンバープロシージャへの修飾参照を示します。 この例では、2つの `Sub` プロシージャを、プロジェクト内の異なるモジュールに2つの名前付き `perform` として宣言しています。 それぞれのモジュール内で修飾子を指定せずにそれぞれを指定できますが、他の場所から参照されている場合は修飾する必要があります。 @No__t_0 の最後の参照は `perform` を修飾しないため、コンパイラはその参照を解決できません。  
+ The following example shows qualified references to module member procedures. The example declares two `Sub` procedures, both named `perform`, in different modules in a project. Each one can be specified without qualification within its own module but must be qualified if referenced from anywhere else. Because the final reference in `module3` does not qualify `perform`, the compiler cannot resolve that reference.  
   
 ```vb  
 ' Assume these three modules are all in the same assembly.  
@@ -149,10 +149,10 @@ Module module3
 End Module  
 ```  
   
-## <a name="references-to-projects"></a>プロジェクトへの参照  
- 別のプロジェクトで定義されている[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)要素を使用するには、最初にそのプロジェクトのアセンブリまたはタイプライブラリへの*参照*を設定する必要があります。 参照を設定するには、 **[プロジェクト]** メニューの **[参照の追加]** をクリックするか、 [-reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)コマンドラインコンパイラオプションを使用します。  
+## <a name="references-to-projects"></a>References to Projects  
+ To use [Public](../../../../visual-basic/language-reference/modifiers/public.md) elements defined in another project, you must first set a *reference* to that project's assembly or type library. To set a reference, click **Add Reference** on the **Project** menu, or use the [-reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) command-line compiler option.  
   
- たとえば、.NET Framework の XML オブジェクトモデルを使用できます。 @No__t_0 名前空間への参照を設定した場合は、<xref:System.Xml.XmlDocument> などの任意のクラスを宣言して使用できます。 次の例では、<xref:System.Xml.XmlDocument> を使用します。  
+ For example, you can use the XML object model of the .NET Framework. If you set a reference to the <xref:System.Xml> namespace, you can declare and use any of its classes, such as <xref:System.Xml.XmlDocument>. The following example uses <xref:System.Xml.XmlDocument>.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -160,8 +160,8 @@ End Module
 Dim xDoc As System.Xml.XmlDocument  
 ```  
   
-## <a name="importing-containing-elements"></a>インポート (含まれる要素を)  
- [Imports ステートメント (.Net 名前空間と型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)を使用して、使用するモジュールまたはクラスを含む名前空間を*インポート*できます。 これにより、インポートされた名前空間で定義されている要素の名前を完全修飾せずに参照できます。 次の例では、前の例を書き直して <xref:System.Xml> 名前空間をインポートします。  
+## <a name="importing-containing-elements"></a>Importing Containing Elements  
+ You can use the [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to *import* the namespaces that contain the modules or classes that you want to use. This enables you to refer to the elements defined in an imported namespace without fully qualifying their names. The following example rewrites the previous example to import the <xref:System.Xml> namespace.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -171,7 +171,7 @@ Imports System.Xml
 Dim xDoc As XmlDocument  
 ```  
   
- さらに、`Imports` ステートメントでは、インポートされた各名前空間の*インポートエイリアス*を定義できます。 これにより、ソースコードを短く、読みやすくすることができます。 次の例では、前の例を書き直して、<xref:System.Xml> 名前空間のエイリアスとして `xD` を使用します。  
+ In addition, the `Imports` statement can define an *import alias* for each imported namespace. This can make the source code shorter and easier to read. The following example rewrites the previous example to use `xD` as an alias for the <xref:System.Xml> namespace.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -181,17 +181,17 @@ Imports xD = System.Xml
 Dim xDoc As xD.XmlDocument  
 ```  
   
- @No__t_0 ステートメントでは、他のプロジェクトの要素をアプリケーションで使用することはできません。 つまり、参照の設定は行われません。 名前空間をインポートすると、その名前空間で定義されている名前を修飾する必要がなくなります。  
+ The `Imports` statement does not make elements from other projects available to your application. That is, it does not take the place of setting a reference. Importing a namespace just removes the requirement to qualify the names defined in that namespace.  
   
- また、`Imports` ステートメントを使用して、モジュール、クラス、構造体、および列挙型をインポートすることもできます。 その後、このようなインポートされた要素のメンバーを修飾なしで使用できます。 ただし、クラスや構造体の非共有メンバーは、クラスまたは構造体のインスタンスに評価される変数または式を使用して、常に修飾する必要があります。  
+ You can also use the `Imports` statement to import modules, classes, structures, and enumerations. You can then use the members of such imported elements without qualification. However, you must always qualify nonshared members of classes and structures with a variable or expression that evaluates to an instance of the class or structure.  
   
 ## <a name="naming-guidelines"></a>名前付けのガイドライン  
- 同じ名前を持つ2つ以上のプログラミング要素を定義すると、コンパイラがその名前への参照を解決しようとしたときに、*名前のあいまい*さが発生する可能性があります。 スコープ内に複数の定義が含まれている場合、またはスコープ内に定義が存在しない場合、参照は解決不可能なになります。 例については、このヘルプページの「修飾参照の例」を参照してください。  
+ When you define two or more programming elements that have the same name, a *name ambiguity* can result when the compiler attempts to resolve a reference to that name. If more than one definition is in scope, or if no definition is in scope, the reference is irresolvable. For an example, see "Qualified Reference Example" on this Help page.  
   
- すべての要素に一意の名前を付けることで、名前のあいまいさを回避できます。 その後、名前を名前空間、モジュール、またはクラスで修飾することなく、任意の要素を参照できます。 間違った要素が誤って参照される可能性を低くすることもできます。  
+ You can avoid name ambiguity by giving all your elements unique names. Then you can make reference to any element without having to qualify its name with a namespace, module, or class. You also reduce the chances of accidentally referring to the wrong element.  
   
 ## <a name="shadowing"></a>シャドウ  
- 2つのプログラミング要素が同じ名前を共有している場合、そのうちの1つは、もう一方を非表示にしたり*影*を付けることができます。 シャドウされた要素を参照することはできません。代わりに、シャドウされた要素名を使用するコードでは、Visual Basic コンパイラによってシャドウ要素に解決されます。 例の詳細については、「 [Visual Basic でのシャドウ](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。  
+ When two programming elements share the same name, one of them can hide, or *shadow*, the other one. A shadowed element is not available for reference; instead, when your code uses the shadowed element name, the Visual Basic compiler resolves it to the shadowing element. For a more detailed explanation with examples, see [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>関連項目
 

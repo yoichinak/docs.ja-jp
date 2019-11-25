@@ -1,5 +1,5 @@
 ---
-title: プロシージャのオーバーロードに関する注意事項 (Visual Basic)
+title: プロシージャのオーバーロードに関する注意事項
 ms.date: 07/20/2015
 helpviewer_keywords:
 - signatures [Visual Basic], ParamArray arguments
@@ -25,65 +25,65 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: bd5b0032ca63ccb2f2cc30d72a5b3f3c7eb3c346
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4a0cfe176a59b3f90f5850ae8b4e34784c400c6b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775730"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351010"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>プロシージャのオーバーロードに関する注意事項 (Visual Basic)
-プロシージャをオーバーロードする場合は、オーバーロードされたバージョンごとに異なる*シグネチャ*を使用する必要があります。 これは通常、各バージョンで別のパラメーターリストを指定する必要があることを意味します。 詳細については、「[プロシージャのオーバーロード](./procedure-overloading.md)」の「別の署名」を参照してください。  
+When you overload a procedure, you must use a different *signature* for each overloaded version. This usually means each version must specify a different parameter list. For more information, see "Different Signature" in [Procedure Overloading](./procedure-overloading.md).  
   
- @No__t_1 プロシージャを使用して `Function` プロシージャをオーバーロードすることができます。また、シグネチャが異なる場合は、その逆も可能です。 2つのオーバーロードは、一方が戻り値を持ち、もう一方が戻り値を持たない場合にのみ、異なることはできません。  
+ You can overload a `Function` procedure with a `Sub` procedure, and vice versa, provided they have different signatures. Two overloads cannot differ only in that one has a return value and the other does not.  
   
- 同じ制限を使用して、プロシージャをオーバーロードするのと同じ方法でプロパティをオーバーロードすることができます。 ただし、プロパティを使用してプロシージャをオーバーロードすることはできません。また、その逆もできません。  
+ You can overload a property the same way you overload a procedure, and with the same restrictions. However, you cannot overload a procedure with a property, or vice versa.  
   
-## <a name="alternatives-to-overloaded-versions"></a>オーバーロードされたバージョンの代替手段  
- オーバーロードされたバージョンに代わる選択肢がある場合があります。特に、引数の存在が省略可能な場合や、その数値が可変である場合です。  
+## <a name="alternatives-to-overloaded-versions"></a>Alternatives to Overloaded Versions  
+ You sometimes have alternatives to overloaded versions, particularly when the presence of arguments is optional or their number is variable.  
   
- 省略可能な引数は、必ずしもすべての言語でサポートされているとは限らず、パラメーター配列は Visual Basic に制限されていることに注意してください。 複数の異なる言語で記述されたコードから呼び出される可能性のあるプロシージャを作成する場合は、オーバーロードされたバージョンによって最大限の柔軟性が得られます。  
+ Keep in mind that optional arguments are not necessarily supported by all languages, and parameter arrays are limited to Visual Basic. If you are writing a procedure that is likely to be called from code written in any of several different languages, overloaded versions offer the greatest flexibility.  
   
-### <a name="overloads-and-optional-arguments"></a>オーバーロードと省略可能な引数  
- 呼び出し元のコードが必要に応じて1つ以上の引数を指定または省略できる場合は、オーバーロードされた複数のバージョンを定義したり、省略可能なパラメーターを使用したりできます。  
+### <a name="overloads-and-optional-arguments"></a>Overloads and Optional Arguments  
+ When the calling code can optionally supply or omit one or more arguments, you can define multiple overloaded versions or use optional parameters.  
   
-#### <a name="when-to-use-overloaded-versions"></a>オーバーロードされたバージョンを使用する場合  
- 次の場合は、一連のオーバーロードされたバージョンを定義することを検討してください。  
+#### <a name="when-to-use-overloaded-versions"></a>When to Use Overloaded Versions  
+ You can consider defining a series of overloaded versions in the following cases:  
   
-- プロシージャコードのロジックは、呼び出し元のコードがオプションの引数を提供するかどうかによって大きく異なります。  
+- The logic in the procedure code is significantly different depending on whether the calling code supplies an optional argument or not.  
   
-- プロシージャコードは、呼び出し元のコードが省略可能な引数を指定しているかどうかを確実にテストすることはできません。 これは、たとえば、呼び出し元のコードが提供する必要のない既定値の候補がない場合などです。  
+- The procedure code cannot reliably test whether the calling code has supplied an optional argument. This is the case, for example, if there is no possible candidate for a default value that the calling code could not be expected to supply.  
   
-#### <a name="when-to-use-optional-parameters"></a>省略可能なパラメーターを使用する場合  
- 次の場合には、省略可能なパラメーターを1つ以上使用することができます。  
+#### <a name="when-to-use-optional-parameters"></a>When to Use Optional Parameters  
+ You might prefer one or more optional parameters in the following cases:  
   
-- 呼び出し元のコードがオプションの引数を指定しない場合に必要な操作は、パラメーターを既定値に設定することだけです。 このような場合、1つ以上の `Optional` パラメーターを使用して1つのバージョンを定義すると、プロシージャコードが複雑になる可能性があります。  
+- The only required action when the calling code does not supply an optional argument is to set the parameter to a default value. In such a case, the procedure code can be less complicated if you define a single version with one or more `Optional` parameters.  
   
- 詳細については、「[省略可能なパラメーター](./optional-parameters.md)」を参照してください。  
+ For more information, see [Optional Parameters](./optional-parameters.md).  
   
-### <a name="overloads-and-paramarrays"></a>オーバーロードと ParamArrays  
- 呼び出し元のコードが可変個の引数を渡すことができる場合は、オーバーロードされた複数のバージョンを定義することも、パラメーター配列を使用することもできます。  
+### <a name="overloads-and-paramarrays"></a>Overloads and ParamArrays  
+ When the calling code can pass a variable number of arguments, you can define multiple overloaded versions or use a parameter array.  
   
-#### <a name="when-to-use-overloaded-versions"></a>オーバーロードされたバージョンを使用する場合  
- 次の場合は、一連のオーバーロードされたバージョンを定義することを検討してください。  
+#### <a name="when-to-use-overloaded-versions"></a>When to Use Overloaded Versions  
+ You can consider defining a series of overloaded versions in the following cases:  
   
-- 呼び出し元のコードは、少数の値をパラメーター配列に渡すことはないことがわかっています。  
+- You know that the calling code never passes more than a small number of values to the parameter array.  
   
-- プロシージャコードのロジックは、呼び出し元のコードが渡す値の数によって大きく異なります。  
+- The logic in the procedure code is significantly different depending on how many values the calling code passes.  
   
-- 呼び出し元のコードは、さまざまなデータ型の値を渡すことができます。  
+- The calling code can pass values of different data types.  
   
-#### <a name="when-to-use-a-parameter-array"></a>パラメーター配列を使用する場合  
- 次の場合には、`ParamArray` パラメーターによって適切に処理されます。  
+#### <a name="when-to-use-a-parameter-array"></a>When to Use a Parameter Array  
+ You are better served by a `ParamArray` parameter in the following cases:  
   
-- 呼び出し元のコードがパラメーター配列に渡すことができる値の数を予測することはできません。また、数値が大きい可能性もあります。  
+- You are not able to predict how many values the calling code can pass to the parameter array, and it could be a large number.  
   
-- プロシージャロジックは、呼び出し元のコードが渡すすべての値を反復処理するために使用され、実質的にすべての値に対して同じ操作を実行します。  
+- The procedure logic lends itself to iterating through all the values the calling code passes, performing essentially the same operations on every value.  
   
- 詳細については、「[パラメーター配列](./parameter-arrays.md)」を参照してください。  
+ For more information, see [Parameter Arrays](./parameter-arrays.md).  
   
-## <a name="implicit-overloads-for-optional-parameters"></a>省略可能なパラメーターの暗黙のオーバーロード  
- [省略可能](../../../../visual-basic/language-reference/modifiers/optional.md)なパラメーターを持つプロシージャは、2つのオーバーロードされたプロシージャに相当します。1つは省略可能なパラメーターで、もう1つは使用しません。 このようなプロシージャは、これらのいずれかに対応するパラメーターリストを使用してオーバーロードすることはできません。 次の宣言はこれを示しています。  
+## <a name="implicit-overloads-for-optional-parameters"></a>Implicit Overloads for Optional Parameters  
+ A procedure with an [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) parameter is equivalent to two overloaded procedures, one with the optional parameter and one without it. You cannot overload such a procedure with a parameter list corresponding to either of these. The following declarations illustrate this.  
   
  [!code-vb[VbVbcnProcedures#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#58)]  
   
@@ -91,35 +91,35 @@ ms.locfileid: "72775730"
   
  [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
- 省略可能なパラメーターを複数持つプロシージャの場合は、前の例のようにロジックによって受信された一連の暗黙的なオーバーロードがあります。  
+ For a procedure with more than one optional parameter, there is a set of implicit overloads, arrived at by logic similar to that in the preceding example.  
   
-## <a name="implicit-overloads-for-a-paramarray-parameter"></a>ParamArray パラメーターの暗黙のオーバーロード  
- コンパイラは、 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)パラメーターを持つプロシージャが、次のように、呼び出し元のコードがパラメーター配列に渡すものとは異なる無限のオーバーロードを持つと見なします。  
+## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Implicit Overloads for a ParamArray Parameter  
+ The compiler considers a procedure with a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter to have an infinite number of overloads, differing from each other in what the calling code passes to the parameter array, as follows:  
   
-- 呼び出し元のコードが `ParamArray` に引数を指定しない場合の1つのオーバーロード  
+- One overload for when the calling code does not supply an argument to the `ParamArray`  
   
-- 呼び出し元のコードが `ParamArray` 要素型の1次元配列を提供する場合の1つのオーバーロード  
+- One overload for when the calling code supplies a one-dimensional array of the `ParamArray` element type  
   
-- すべての正の整数に対して、呼び出し元のコードが引数の数を指定する場合の1つのオーバーロード (`ParamArray` 要素型)  
+- For every positive integer, one overload for when the calling code supplies that number of arguments, each of the `ParamArray` element type  
   
- 次の宣言は、これらの暗黙的なオーバーロードを示しています。  
+ The following declarations illustrate these implicit overloads.  
   
  [!code-vb[VbVbcnProcedures#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#68)]  
   
  [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
- パラメーター配列の1次元配列を受け取るパラメーターリストを使用して、このようなプロシージャをオーバーロードすることはできません。 ただし、他の暗黙的なオーバーロードのシグネチャを使用することもできます。 次の宣言はこれを示しています。  
+ You cannot overload such a procedure with a parameter list that takes a one-dimensional array for the parameter array. However, you can use the signatures of the other implicit overloads. The following declarations illustrate this.  
   
  [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
-## <a name="typeless-programming-as-an-alternative-to-overloading"></a>オーバーロードの代替手段としてのタイプレスプログラミング  
- 呼び出し元のコードが異なるデータ型をパラメーターに渡すことを許可する場合は、別の方法として、型指定のないプログラミングがあります。 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)または[-optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md)コンパイラオプションのいずれかを使用して、型チェックスイッチを `Off` に設定できます。 その後、パラメーターのデータ型を宣言する必要はありません。 ただし、この方法には、オーバーロードと比較して次の欠点があります。  
+## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Typeless Programming as an Alternative to Overloading  
+ If you want to allow the calling code to pass different data types to a parameter, an alternative approach is typeless programming. You can set the type checking switch to `Off` with either the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) or the [-optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option. Then you do not have to declare the parameter's data type. However, this approach has the following disadvantages compared to overloading:  
   
-- タイプレスプログラミングでは、実行コードの効率が低下します。  
+- Typeless programming produces less efficient execution code.  
   
-- このプロシージャでは、渡されると予想されるすべてのデータ型をテストする必要があります。  
+- The procedure must test for every data type it anticipates being passed.  
   
-- 呼び出し元のコードが、プロシージャがサポートしていないデータ型を渡した場合、コンパイラはエラーを通知できません。  
+- The compiler cannot signal an error if the calling code passes a data type that the procedure does not support.  
   
 ## <a name="see-also"></a>関連項目
 

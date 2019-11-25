@@ -1,5 +1,5 @@
 ---
-title: Protected (Visual Basic)
+title: Protected
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Protected
@@ -10,38 +10,38 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 8370d15e99a6f7ed0868441a4e44360fb258be13
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 740c998b8a6ccc6798bce37e9b08e408dac7c17d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583062"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351299"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 
-1つ以上の宣言されたプログラミング要素が、独自のクラス内または派生クラスからのみアクセス可能であることを指定するメンバーアクセス修飾子。
+A member access modifier that specifies that one or more declared programming elements are accessible only from within their own class or from a derived class.
 
 ## <a name="remarks"></a>Remarks
 
-場合によっては、クラスで宣言されたプログラミング要素が機微なデータまたは制限付きコードを含んでいて、要素へのアクセスを制限する必要があります。 ただし、クラスが継承可能であり、派生クラスの階層を想定している場合は、これらの派生クラスがデータまたはコードにアクセスするために必要な場合があります。 このような場合は、基本クラスとすべての派生クラスから要素にアクセスできるようにする必要があります。 このようにして、要素へのアクセスを制限するには、`Protected` で宣言します。
+Sometimes a programming element declared in a class contains sensitive data or restricted code, and you want to limit access to the element. However, if the class is inheritable and you expect a hierarchy of derived classes, it might be necessary for these derived classes to access the data or code. In such a case, you want the element to be accessible both from the base class and from all derived classes. To limit access to an element in this manner, you can declare it with `Protected`.
 
 > [!NOTE]
-> @No__t_0 アクセス修飾子は、次の2つの修飾子と組み合わせることができます。
+> The `Protected` access modifier can be combined with two other modifiers:
 >
-> - [Protected Friend](protected-friend.md)修飾子は、クラス内、派生クラス、およびクラスが定義されている同じアセンブリから、クラスメンバーにアクセスできるようにします。
-> - [Private Protected](private-protected.md)修飾子は、派生型でクラスメンバーにアクセスできるようにしますが、それを含むアセンブリ内でのみ使用できます。
+> - The [Protected Friend](protected-friend.md) modifier makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined.
+> - The [Private Protected](private-protected.md) modifier makes a class member accessible by derived types, but only within its containing assembly.
 
 ## <a name="rules"></a>ルール
 
-**宣言コンテキスト。** @No__t_0 はクラスレベルでのみ使用できます。 つまり、`Protected` 要素の宣言コンテキストはクラスである必要があり、ソースファイル、名前空間、インターフェイス、モジュール、構造体、またはプロシージャにすることはできません。
+**Declaration Context.** You can use `Protected` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
 
 ## <a name="behavior"></a>動作
 
-- **アクセスレベル。** クラス内のすべてのコードは、その要素にアクセスできます。 基底クラスから派生したクラスのコードは、基底クラスのすべての `Protected` 要素にアクセスできます。 これは、派生のすべての世代に当てはまります。 これは、クラスが基底クラスの基底クラスの要素 `Protected` にアクセスできることを意味します。
+- **Access Level.** All code in a class can access its elements. Code in any class that derives from a base class can access all the `Protected` elements of the base class. This is true for all generations of derivation. This means that a class can access `Protected` elements of the base class of the base class, and so on.
 
-     保護されたアクセスは、スーパーセットまたはフレンドアクセスのサブセットではありません。
+     Protected access is not a superset or subset of friend access.
 
-- **アクセス修飾子。** アクセスレベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
 `Protected` 修飾子は、次のコンテキストで使用できます。
 
@@ -76,7 +76,7 @@ ms.locfileid: "72583062"
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

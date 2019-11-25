@@ -1,5 +1,5 @@
 ---
-title: 入れ子になった制御構造 (Visual Basic)
+title: 入れ子になった制御構造
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, control flow
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: f559bf603605873f1b9155e9a96cb367e5420343
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5818b13661fb4415c6f531b741b8a963a80bd2b8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941686"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348151"
 ---
 # <a name="nested-control-structures-visual-basic"></a>入れ子になった制御構造 (Visual Basic)
-制御ステートメントは、 `If...Then...Else` `For...Next`ループ内のブロックなど、他のコントロールステートメント内に配置できます。 別の control ステートメント内に配置された control ステートメントは、*入れ子になっ*ていると言います。  
+You can place control statements inside other control statements, for example an `If...Then...Else` block within a `For...Next` loop. A control statement placed inside another control statement is said to be *nested*.  
   
-## <a name="nesting-levels"></a>入れ子のレベル  
- Visual Basic の制御構造は、必要な数のレベルに入れ子にすることができます。 入れ子構造体を読みやすくするには、それぞれの本文をインデントするのが一般的です。 これは、統合開発環境 (IDE) エディターによって自動的に行われます。  
+## <a name="nesting-levels"></a>Nesting Levels  
+ Control structures in Visual Basic can be nested to as many levels as you want. It is common practice to make nested structures more readable by indenting the body of each one. The integrated development environment (IDE) editor automatically does this.  
   
- 次の例では、プロシージャ`sumRows`によって、マトリックスの各行の正の要素が追加されます。  
+ In the following example, the procedure `sumRows` adds together the positive elements of each row of the matrix.  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- 前の例では、最初`Next`のステートメントは内側`For`のループを閉じ`Next` 、最後のステートメント`For`は外側のループを閉じます。  
+ In the preceding example, the first `Next` statement closes the inner `For` loop and the last `Next` statement closes the outer `For` loop.  
   
- 同様に、入れ子`If`になった`End If`ステートメントでは、ステートメントは最も`If`近い先行するステートメントに自動的に適用されます。 入れ子`Do`になったループは同様の方法で動作`Loop`し、最も内側`Do`のステートメントが最も内側のステートメントに一致します。  
+ Likewise, in nested `If` statements, the `End If` statements automatically apply to the nearest prior `If` statement. Nested `Do` loops work in a similar fashion, with the innermost `Loop` statement matching the innermost `Do` statement.  
   
 > [!NOTE]
-> 多くの制御構造では、キーワードをクリックすると、構造内のすべてのキーワードが強調表示されます。 たとえば、 `If...Then...Else`構築をクリック`If`すると、、 `Then` `ElseIf`、、 `Else`、および`If` `End If`のすべてのインスタンスが構築されます。 次または前の強調表示されたキーワードに移動するには、CTRL + SHIFT + ↓キーを押すか、CTRL + SHIFT + 上方向キーを押します。  
+> For many control structures, when you click a keyword, all of the keywords in the structure are highlighted. For instance, when you click `If` in an `If...Then...Else` construction, all instances of `If`, `Then`, `ElseIf`, `Else`, and `End If` in the construction are highlighted. To move to the next or previous highlighted keyword, press CTRL+SHIFT+DOWN ARROW or CTRL+SHIFT+UP ARROW.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>さまざまな種類の制御構造の入れ子  
- 1つの種類のコントロール構造を別の種類に入れ子にすることができます。 次の例では`With` 、ブロック内`For Each`のブロックを`If`使用して`With` 、ループと入れ子になったブロックをブロック内に配置します。  
+## <a name="nesting-different-kinds-of-control-structures"></a>Nesting Different Kinds of Control Structures  
+ You can nest one kind of control structure within another kind. The following example uses a `With` block inside a `For Each` loop and nested `If` blocks inside the `With` block.  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -64,12 +64,12 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## <a name="overlapping-control-structures"></a>重複する制御構造  
- 制御構造を重ねることはできません。 つまり、入れ子構造は、次の最も内側の構造体内に完全に含まれている必要があります。 たとえば、次の配置は無効です。これ`For`は、内部`With`ブロックが終了する前にループが終了するためです。  
+## <a name="overlapping-control-structures"></a>Overlapping Control Structures  
+ You cannot overlap control structures. This means that any nested structure must be completely contained within the next innermost structure. For example, the following arrangement is invalid because the `For` loop terminates before the inner `With` block terminates.  
   
- ![無効な入れ子の例を示す図。](./media/nested-control-structures/example-invalid-nesting.gif) 
+ ![Diagram that shows an example of invalid nesting.](./media/nested-control-structures/example-invalid-nesting.gif) 
   
- Visual Basic コンパイラは、このような重複する制御構造を検出し、コンパイル時エラーを通知します。  
+ The Visual Basic compiler detects such overlapping control structures and signals a compile-time error.  
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: Sub プロシージャ (Visual Basic)
+title: Sub プロシージャ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: b70594e002bbf08f0890586e78df901ccb26c7ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7848dc07d6462622685cdbea92202585f4d5d2c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791822"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352532"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub プロシージャ (Visual Basic)
-A`Sub`手順は、一連の Visual Basic のステートメントで囲まれた、`Sub`と`End Sub`ステートメント。 `Sub`呼び出しコードに値を返すことはできませんが、プロシージャは、タスクを実行し、呼び出し元のコードにコントロールを返します。  
+A `Sub` procedure is a series of Visual Basic statements enclosed by the `Sub` and `End Sub` statements. The `Sub` procedure performs a task and then returns control to the calling code, but it does not return a value to the calling code.  
   
- そのステートメントが実行されます、プロシージャが呼び出されるたびに後の最初の実行可能ステートメントで始まる、`Sub`ステートメントと最初の終了`End Sub`、 `Exit Sub`、または`Return`ステートメントが発生しました。  
+ Each time the procedure is called, its statements are executed, starting with the first executable statement after the `Sub` statement and ending with the first `End Sub`, `Exit Sub`, or `Return` statement encountered.  
   
- 定義することができます、`Sub`プロシージャでは、モジュール、クラス、および構造体。 既定では`Public`、することができるから呼び出せる任意の場所でモジュール、クラス、またはで定義された構造体にアクセスできるアプリケーション。 用語、*メソッド*、について説明します、`Sub`または`Function`プロシージャの定義の外部からアクセスされるモジュール、クラスまたは構造体。 詳細については、「[プロシージャ](./index.md)」を参照してください。  
+ You can define a `Sub` procedure in modules, classes, and structures. By default, it is `Public`, which means you can call it from anywhere in your application that has access to the module, class, or structure in which you defined it. The term, *method*, describes a `Sub` or `Function` procedure that is accessed from outside its defining module, class, or structure. 詳細については、「[プロシージャ](./index.md)」を参照してください。  
   
- A`Sub`プロシージャは、定数、変数、または、呼び出し元のコードに渡される式などの引数をとることができます。  
+ A `Sub` procedure can take arguments, such as constants, variables, or expressions, which are passed to it by the calling code.  
   
 ## <a name="declaration-syntax"></a>宣言の構文  
- 宣言の構文、`Sub`手順のとおりです。  
+ The syntax for declaring a `Sub` procedure is as follows:  
   
  `[` *modifiers* `] Sub`  *subname* `[(` *parameterlist* `)]`  
   
@@ -36,49 +36,49 @@ A`Sub`手順は、一連の Visual Basic のステートメントで囲まれた
   
  `End Sub`  
   
- `modifiers`アクセス レベルとオーバー ロード、オーバーライド、共有、およびシャドウ処理に関する情報を指定できます。 詳細については、次を参照してください。 [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)します。  
+ The `modifiers` can specify access level and information about overloading, overriding, sharing, and shadowing. For more information, see [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
   
-## <a name="parameter-declaration"></a>パラメーターの宣言  
- 各プロシージャのパラメーターと同様にどのように変数を宣言する、パラメーター名とデータ型を指定することを宣言するとします。 引数渡しの方法を指定することもでき、パラメーターは省略可能かどうか、またはパラメーター配列。  
+## <a name="parameter-declaration"></a>Parameter Declaration  
+ You declare each procedure parameter similarly to how you declare a variable, specifying the parameter name and data type. You can also specify the passing mechanism, and whether the parameter is optional or a parameter array.  
   
- パラメーター リスト内の各パラメーターの構文は次のとおりです。  
+ The syntax for each parameter in the parameter list is as follows:  
   
  `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*  `As`  *datatype*  
   
- パラメーターが省略可能な場合は、その宣言の一部として既定値も指定する必要があります。 既定値を指定する構文は次のとおりです。  
+ If the parameter is optional, you must also supply a default value as part of its declaration. The syntax for specifying a default value is as follows:  
   
  `Optional [ByVal | ByRef]`  *parametername*  `As`  *datatype*  `=`  *defaultvalue*  
   
-### <a name="parameters-as-local-variables"></a>ローカル変数とパラメーター  
- プロシージャに制御が渡される、各パラメーターは、ローカル変数として扱われます。 これは、その有効期間は、プロシージャのと同じことと、そのスコープは、プロシージャ全体を意味します。  
+### <a name="parameters-as-local-variables"></a>Parameters as Local Variables  
+ When control passes to the procedure, each parameter is treated as a local variable. This means that its lifetime is the same as that of the procedure, and its scope is the whole procedure.  
   
-## <a name="calling-syntax"></a>呼び出し構文  
- 呼び出す、`Sub`スタンドアロンのステートメントの呼び出しで明示的にプロシージャ。 式の中でその名前を使用して呼び出すことはできません。 省略可能でないすべての引数の値を指定する必要があり、引数リストをかっこで囲む必要があります。 引数が指定されていない場合、かっこを省略することができます。 使用、`Call`キーワードは省略可能ですが、推奨されません。  
+## <a name="calling-syntax"></a>Calling Syntax  
+ You invoke a `Sub` procedure explicitly with a stand-alone calling statement. You cannot call it by using its name in an expression. You must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses. The use of the `Call` keyword is optional but not recommended.  
   
- 呼び出しの構文を`Sub`手順のとおりです。  
+ The syntax for a call to a `Sub` procedure is as follows:  
   
  `[Call]`  *subname* `[(` *argumentlist* `)]`  
   
- 呼び出すことができます、`Sub`からそれを定義するクラスの外側のメソッド。 最初に、使用する必要がある、`New`キーワード、クラスのインスタンスを作成またはメソッドを呼び出すには、クラスのインスタンスを返します。 詳細については、次を参照してください。 [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)します。 次を呼び出す、次の構文を使用することができます、`Sub`インスタンス オブジェクトのメソッド。  
+ You can call a `Sub` method from outside the class that defines it. First, you have to use the `New` keyword to create an instance of the class, or call a method that returns an instance of the class. For more information, see [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md). Then, you can use the following syntax to call the `Sub` method on the instance object:  
   
- *オブジェクト*.*methodname*`[(`*argumentlist*`)]`  
+ *Object*.*methodname*`[(`*argumentlist*`)]`  
   
-### <a name="illustration-of-declaration-and-call"></a>宣言と呼び出しの図  
- 次`Sub`の手順では、コンピューターの演算子、アプリケーションを実行する作業はどれもタイムスタンプを表示します。 アプリケーションのすべてのタスクの開始時に、このコードではなく、呼び出しだけ`tellOperator`さまざまな場所からします。 各呼び出しには文字列で、`task`開始されているタスクを識別する引数。  
+### <a name="illustration-of-declaration-and-call"></a>Illustration of Declaration and Call  
+ The following `Sub` procedure tells the computer operator which task the application is about to perform, and also displays a time stamp. Instead of duplicating this code at the start of every task, the application just calls `tellOperator` from various locations. Each call passes a string in the `task` argument that identifies the task being started.  
   
  [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
- 次の例では、一般的な呼び出しを`tellOperator`します。  
+ The following example shows a typical call to `tellOperator`.  
   
  [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [プロシージャ](./index.md)
+- [手順](./index.md)
 - [Function プロシージャ](./function-procedures.md)
 - [Property プロシージャ](./property-procedures.md)
 - [演算子プロシージャ](./operator-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [方法: 値を返さないプロシージャを呼び出す](./how-to-call-a-procedure-that-does-not-return-a-value.md)
-- [方法: Visual Basic でイベント ハンドラーを呼び出す](./how-to-call-an-event-handler.md)
+- [方法 : 値を返さないプロシージャを呼び出す](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+- [How to: Call an Event Handler in Visual Basic](./how-to-call-an-event-handler.md)

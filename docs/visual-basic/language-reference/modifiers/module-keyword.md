@@ -1,5 +1,5 @@
 ---
-title: Module <keyword> (Visual Basic)
+title: Module <keyword>
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ModuleAttribute
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-ms.openlocfilehash: f6ded1184aedf1702f4b6e5eebb85709cf8e39f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd2f762181b5a702f0b0defd5b71bb7bdf129c7b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920706"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351553"
 ---
-# <a name="module-keyword-visual-basic"></a>モジュール\<キーワード > (Visual Basic)
-ソース ファイルの先頭にある属性は、現在のアセンブリ モジュールに適用されることを指定します。  
+# <a name="module-keyword-visual-basic"></a>Module \<keyword> (Visual Basic)
+Specifies that an attribute at the beginning of a source file applies to the current assembly module.  
   
-## <a name="remarks"></a>コメント  
- 多くの属性は、クラスやプロパティなどの個別のプログラミング要素に適用されます。 山かっこ内で、属性ブロックを接続することによってこのような属性を適用する (`< >`)、宣言ステートメントに直接します。  
+## <a name="remarks"></a>Remarks  
+ Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
   
- 属性ブロックをソース ファイルの先頭に配置しを持つ属性を特定するだけでなく、次の要素を現在のアセンブリ モジュールに属性が関係している場合、`Module`キーワード。 アセンブリ全体に適用される場合に使用する、[アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)キーワード。  
+ If an attribute pertains not only to the following element but to the current assembly module, you place the attribute block at the beginning of the source file and identify the attribute with the `Module` keyword. If it applies to the entire assembly, you use the [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) keyword.  
   
- `Module`修飾子と同じではない、[Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)です。  
+ The `Module` modifier is not the same as the [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).  
   
 ## <a name="see-also"></a>関連項目
 

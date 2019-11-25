@@ -9,20 +9,20 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: d1ef962132f4c057229c8150a8d49809ce8c7430
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 066e8c9ce1112399be8128d0821498f0d56a3dc3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460390"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283804"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid のスタイルとテンプレート
-このトピックでは、<xref:System.Windows.Controls.DataGrid> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、<xref:System.Windows.Controls.DataGrid> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」を参照してください。  
   
 ## <a name="datagrid-parts"></a>DataGrid のパーツ  
  次の表に、<xref:System.Windows.Controls.DataGrid> コントロールの名前付きの部分を示します。  
   
-|パーツ|[種類]|説明|  
+|パーツ|[種類]|[説明]|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|列ヘッダーを格納している行。|  
   
@@ -33,7 +33,7 @@ ms.locfileid: "73460390"
 ## <a name="datagrid-states"></a>DataGrid の状態  
  次の表は、<xref:System.Windows.Controls.DataGrid> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|説明|  
+|VisualState 名|VisualStateGroup 名|[説明]|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
 |Disabled|CommonStates|コントロールが無効になっています。|  
@@ -47,7 +47,7 @@ ms.locfileid: "73460390"
 ## <a name="datagridcell-states"></a>DataGridCell の状態  
  次の表は、<xref:System.Windows.Controls.DataGridCell> 要素の表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|説明|  
+|VisualState 名|VisualStateGroup 名|[説明]|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
 |MouseOver|CommonStates|マウスポインターがセルの上に置かれています。|  
@@ -69,7 +69,7 @@ ms.locfileid: "73460390"
 ## <a name="datagridrow-states"></a>DataGridRow の状態  
  次の表は、<xref:System.Windows.Controls.DataGridRow> 要素の表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|説明|  
+|VisualState 名|VisualStateGroup 名|[説明]|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
 |MouseOver|CommonStates|マウスポインターが行の上に配置されます。|  
@@ -89,7 +89,7 @@ ms.locfileid: "73460390"
 ## <a name="datagridrowheader-parts"></a>DataGridRowHeader パーツ  
  次の表に、<xref:System.Windows.Controls.Primitives.DataGridRowHeader> 要素の名前付きの部分を示します。  
   
-|パーツ|[種類]|説明|  
+|パーツ|[種類]|[説明]|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|先頭から行ヘッダーのサイズを変更するために使用される要素。|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|行ヘッダーのサイズを下端から変更するために使用される要素。|  
@@ -97,7 +97,7 @@ ms.locfileid: "73460390"
 ## <a name="datagridrowheader-states"></a>DataGridRowHeader の状態  
  次の表は、<xref:System.Windows.Controls.Primitives.DataGridRowHeader> 要素の表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|説明|  
+|VisualState 名|VisualStateGroup 名|[説明]|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
 |MouseOver|CommonStates|マウスポインターが行の上に配置されます。|  
@@ -122,14 +122,14 @@ ms.locfileid: "73460390"
 ## <a name="datagridcolumnheaderspresenter-parts"></a>DataGridColumnHeadersPresenter パーツ  
  次の表に、<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 要素の名前付きの部分を示します。  
   
-|パーツ|[種類]|説明|  
+|パーツ|[種類]|[説明]|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|列ヘッダーのプレースホルダーです。|  
   
 ## <a name="datagridcolumnheaderspresenter-states"></a>DataGridColumnHeadersPresenter の状態  
  次の表は、<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 要素の表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|説明|  
+|VisualState 名|VisualStateGroup 名|[説明]|  
 |-|-|-|  
 |InvalidFocused|ValidationStates|セルが無効で、フォーカスがあります。|  
 |InvalidUnfocused|ValidationStates|セルが無効であり、フォーカスがありません。|  
@@ -138,7 +138,7 @@ ms.locfileid: "73460390"
 ## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader パーツ  
  次の表に、<xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 要素の名前付きの部分を示します。  
   
-|パーツ|[種類]|説明|  
+|パーツ|[種類]|[説明]|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|列ヘッダーのサイズを左から変更するために使用される要素。|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|列ヘッダーのサイズを右側から変更するために使用される要素。|  
@@ -146,7 +146,7 @@ ms.locfileid: "73460390"
 ## <a name="datagridcolumnheader-states"></a>DataGridColumnHeader の状態  
  次の表は、<xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 要素の表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|説明|  
+|VisualState 名|VisualStateGroup 名|[説明]|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
 |MouseOver|CommonStates|マウス ポインターがコントロール上に配置されます。|  
@@ -176,4 +176,4 @@ ms.locfileid: "73460390"
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
 - [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)
+- [コントロールのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)
