@@ -17,7 +17,7 @@ ms.locfileid: "73114918"
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<UseSmallInternalThreadStacks>**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<UseSmallInternalThreadStacks >**  
   
 ## <a name="syntax"></a>構文  
   

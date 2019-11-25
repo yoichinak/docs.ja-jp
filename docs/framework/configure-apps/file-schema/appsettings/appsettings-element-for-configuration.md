@@ -1,5 +1,5 @@
 ---
-title: <appSettings> の <configuration> 要素
+title: <configuration> の <appSettings> 要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
