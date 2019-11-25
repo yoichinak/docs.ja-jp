@@ -36,7 +36,7 @@ ms.locfileid: "74088007"
 |[ **\<cryptoClass**>](cryptoclass-element.md)|**\<nameEntry>** 要素内の表示名へのマッピングを持つ暗号化クラスを含みます。|  
 |[ **\<cryptographySettings**>](cryptographysettings-element.md)|暗号設定を含みます。|  
 |[ **\<cryptoNameMapping**>](cryptonamemapping-element.md)|表示名へのクラスのマッピングを含みます。|  
-|[ **\<mscorlib>** 要素、暗号化設定用](mscorlib-element-for-cryptography-settings.md)|**\<cryptographySettings >** 要素を含みます。|  
+|[ **\<mscorlib>** 要素 の 暗号化設定](mscorlib-element-for-cryptography-settings.md)|**\<cryptographySettings>** 要素を含みます。|  
 |[ **\<nameEntry>** ](nameentry-element.md)|アルゴリズムの表示名にクラス名をマップして、1 つのクラスが多くの表示名を持つことを許可します。|  
 |[ **\<oidEntry>** ](oidentry-element.md)|ASN.1 オブジェクト識別子 (OID) を表示名にマップします。|  
 |[ **\<oidMap>** ](oidmap-element.md)|クラスへの ASN.1 OID マッピングを含みます。|  
