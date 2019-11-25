@@ -9,27 +9,27 @@ helpviewer_keywords:
 - styles [WPF], NavigationWindow
 - templates [WPF], NavigationWindow
 ms.assetid: 3656055e-3222-43c8-b868-fd0c90cc31a3
-ms.openlocfilehash: 4aae14299b3959e7d2122991954cc62505d2a19e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5cc504956ce036505ac9261ea1438c7881fa2790
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460206"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283491"
 ---
 # <a name="navigationwindow-styles-and-templates"></a>NavigationWindow のスタイルとテンプレート
-このトピックでは、<xref:System.Windows.Navigation.NavigationWindow> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、<xref:System.Windows.Navigation.NavigationWindow> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」を参照してください。  
   
 ## <a name="navigationwindow-parts"></a>NavigationWindow パーツ  
  次の表に、<xref:System.Windows.Navigation.NavigationWindow> コントロールの名前付きの部分を示します。  
   
-|パーツ|[種類]|説明|  
+|パーツ|[種類]|[説明]|  
 |-|-|-|  
 |PART_NavWinCP|<xref:System.Windows.Controls.ContentPresenter>|コンテンツの領域。|  
   
 ## <a name="navigationwindow-states"></a>NavigationWindow の状態  
  次の表は、<xref:System.Windows.Navigation.NavigationWindow> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|説明|  
+|VisualState 名|VisualStateGroup 名|[説明]|  
 |-|-|-|  
 |有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
@@ -54,4 +54,4 @@ ms.locfileid: "73460206"
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
 - [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)
+- [コントロールのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)

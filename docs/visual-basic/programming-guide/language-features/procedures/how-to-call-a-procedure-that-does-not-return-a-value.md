@@ -1,30 +1,30 @@
 ---
-title: '方法: (Visual Basic) の値を返さないプロシージャを呼び出す'
+title: '方法 : 値を返さないプロシージャを呼び出す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a5de98c6edf795a11bd9f0465aa6919f09eebfa
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864235"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340957"
 ---
-# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>方法: (Visual Basic) の値を返さないプロシージャを呼び出す
-A`Sub`プロシージャが呼び出し元のコードに値を返しません。 明示的に呼び出す、スタンドアロンの呼び出し元ステートメントを使用します。 単に式の中で名前を使用して呼び出すことはできません。  
+# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>方法: 値を返さないプロシージャを呼び出す (Visual Basic)
+A `Sub` procedure does not return a value to the calling code. You call it explicitly with a stand-alone calling statement. You cannot call it by simply using its name within an expression.  
   
-### <a name="to-call-a-sub-procedure"></a>Sub プロシージャを呼び出す  
+### <a name="to-call-a-sub-procedure"></a>To call a Sub procedure  
   
-1. 名前を指定、`Sub`プロシージャ。  
+1. Specify the name of the `Sub` procedure.  
   
-2. 引数リストを囲む中かっこでプロシージャ名に従ってください。 引数がない場合、かっこを省略することができます。 ただし、かっこを使用して、コードを読みやすくします。  
+2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
   
-3. コンマで区切り、かっこ内の引数リストで、引数を配置します。 同じ順序で引数を指定するかどうかを必ずを`Sub`プロシージャが、対応するパラメーターを定義します。  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Sub` procedure defines the corresponding parameters.  
   
-     次の例では、Visual Basic<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>アプリケーション ウィンドウをアクティブ化する関数。 <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> ウィンドウのタイトルを単一の引数として受け取る。 呼び出し元のコードに値を返すことはできません。 例がスローされます、メモ帳プロセスが実行されていない場合、<xref:System.ArgumentException>します。 `Shell`プロシージャでは、アプリケーションは、指定されたパスに前提としています。  
+     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> function to activate an application window. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> takes the window title as its sole argument. It does not return a value to the calling code. If a Notepad process is not running, the example throws an <xref:System.ArgumentException>. The `Shell` procedure assumes the applications are in the paths specified.  
   
      [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
@@ -32,10 +32,10 @@ A`Sub`プロシージャが呼び出し元のコードに値を返しません�
 
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
 - <xref:System.ArgumentException>
-- [プロシージャ](./index.md)
+- [手順](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [方法: プロシージャを作成します。](./how-to-create-a-procedure.md)
+- [方法 : プロシージャを作成する](./how-to-create-a-procedure.md)
 - [方法: 値を返すプロシージャを呼び出す](./how-to-call-a-procedure-that-returns-a-value.md)
-- [方法: Visual Basic でイベント ハンドラーを呼び出す](./how-to-call-an-event-handler.md)
+- [How to: Call an Event Handler in Visual Basic](./how-to-call-an-event-handler.md)

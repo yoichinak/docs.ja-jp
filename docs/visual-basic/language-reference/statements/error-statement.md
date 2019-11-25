@@ -1,5 +1,5 @@
 ---
-title: Error ステートメント (Visual Basic)
+title: Error ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.error
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: c7b2adfe7f6b6ff5e89598cb318a90c51595ff6f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 668ffbc7b8db73a706c5771bb0734a77f8fc0206
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583380"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351245"
 ---
 # <a name="error-statement"></a>Error ステートメント
-エラーの発生をシミュレートします。  
+Simulates the occurrence of an error.  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,29 +28,29 @@ Error errornumber
   
 ## <a name="parts"></a>指定項目  
  `errornumber`  
- 必須です。 任意の有効なエラー番号を指定できます。  
+ 必須です。 Can be any valid error number.  
   
 ## <a name="remarks"></a>Remarks  
- @No__t_0 ステートメントは、旧バージョンとの互換性のためにサポートされています。 新しいコードでは、特にオブジェクトを作成する場合は、`Err` オブジェクトの `Raise` メソッドを使用して、実行時エラーを生成します。  
+ The `Error` statement is supported for backward compatibility. In new code, especially when creating objects, use the `Err` object's `Raise` method to generate run-time errors.  
   
- @No__t_0 が定義されている場合、`Err` オブジェクトのプロパティに次の既定値が割り当てられると、`Error` ステートメントによってエラーハンドラーが呼び出されます。  
+ If `errornumber` is defined, the `Error` statement calls the error handler after the properties of the `Err` object are assigned the following default values:  
   
 |property|[値]|  
 |--------------|-----------|  
-|`Number`|@No__t_0 ステートメントの引数として指定された値。 任意の有効なエラー番号を指定できます。|  
-|`Source`|現在の Visual Basic プロジェクトの名前。|  
-|`Description`|この文字列が存在する場合は、指定された `Number` の `Error` 関数の戻り値に対応する文字列式。 文字列が存在しない場合、`Description` には長さ0の文字列 ("") が含まれます。|  
-|`HelpFile`|適切な Visual Basic ヘルプファイルの完全修飾ドライブ、パス、およびファイル名。|  
-|`HelpContext`|@No__t_0 プロパティに対応するエラーの Visual Basic ヘルプファイルコンテキスト ID。|  
-|`LastDLLError`|回.|  
+|`Number`|Value specified as argument to `Error` statement. Can be any valid error number.|  
+|`Source`|Name of the current Visual Basic project.|  
+|`Description`|String expression corresponding to the return value of the `Error` function for the specified `Number`, if this string exists. If the string does not exist, `Description` contains a zero-length string ("").|  
+|`HelpFile`|The fully qualified drive, path, and file name of the appropriate Visual Basic Help file.|  
+|`HelpContext`|The appropriate Visual Basic Help file context ID for the error corresponding to the `Number` property.|  
+|`LastDLLError`|Zero.|  
   
- エラーハンドラーが存在しない場合、または何も有効になっていない場合は、エラーメッセージが作成され、`Err` オブジェクトのプロパティから表示されます。  
+ If no error handler exists, or if none is enabled, an error message is created and displayed from the `Err` object properties.  
   
 > [!NOTE]
-> Visual Basic ホストアプリケーションによっては、オブジェクトを作成できない場合があります。 クラスとオブジェクトを作成できるかどうかを判断するには、ホストアプリケーションのドキュメントを参照してください。  
+> Some Visual Basic host applications cannot create objects. See your host application's documentation to determine whether it can create classes and objects.  
   
 ## <a name="example"></a>例  
- この例では、`Error` ステートメントを使用して、エラー番号11を生成します。  
+ This example uses the `Error` statement to generate error number 11.  
   
 ```vb  
 On Error Resume Next   ' Defer error handling.  
@@ -58,9 +58,9 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>［要件］  
- **名前空間:** [Microsoft. visual basic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>関連項目
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3a912787-f139-43ca-a841-8bbda3107ecf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 76d341aca7c96e5932a1fc155ccaee17ce6585da
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1db4c4ab7e47e223a492e08297ac3cedcb3a27eb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777004"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445607"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile メソッド
-ビルドされるアセンブリの名前を割り当てます。 非バインドモジュールの生成時には使用しません。  
+Assigns the name of the assembly to be built. Not for use when producing unbound modules.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,22 +37,22 @@ HRESULT SetAssemblyFile(
   
 ## <a name="parameters"></a>パラメーター  
  `pszFilename`  
- マニフェストファイルの完全修飾名。  
+ Fully qualified name of the manifest file.  
   
  `pEmitter`  
- [IMetaDataEmit インターフェイス](../metadata/imetadataemit-interface.md)インターフェイスへのポインター。  
+ Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.  
   
  `afFlags`  
- [Assemblyflags 列挙型](../metadata/assemblyflags-enumeration.md)で定義されているフラグ。  
+ Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
- 結果として得られるアセンブリの ID へのポインター。  
+ Pointer to ID of resulting assembly.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合、S_OK を返します。  
+ Returns S_OK if the method succeeds.  
   
-## <a name="requirements"></a>必要条件  
- Alink. h が必要です。  
+## <a name="requirements"></a>［要件］  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>関連項目
 

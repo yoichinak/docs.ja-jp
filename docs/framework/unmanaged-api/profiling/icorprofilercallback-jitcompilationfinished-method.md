@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 64971319f592ee097e45cff10ef46b76e8b3b0a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1bbdfa93913b9fdf8aa164c8ca6c35cd33a228df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782834"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449923"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>ICorProfilerCallback::JITCompilationFinished メソッド
-ジャストイン タイム (JIT) コンパイラが関数のコンパイルを完了したことをプロファイラーに通知します。  
+Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,20 +36,20 @@ HRESULT JITCompilationFinished(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in]コンパイルされた関数の ID。  
+ [in] The ID of the function that was compiled.  
   
  `hrStatus`  
- [in]コンパイルが成功したかどうかを示す値。  
+ [in] A value indicating whether compilation was successful.  
   
  `fIsSafeToBlock`  
- [in]プロファイラーをブロックしているかどうかを示す値は、ランタイムの操作に影響されます。 値が`true`ブロックにより、ランタイムでこのコールバックから返される呼び出し元のスレッドを待機する場合は、それ以外の場合、`false`します。  
+ [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
   
- 値が`true`ランタイムは害を及ぼしません、プロファイリングの結果の傾斜を実行できます。  
+ Although a value of `true` will not harm the runtime, it can skew the profiling results.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

@@ -1,5 +1,5 @@
 ---
-title: 条件判断構造 (Visual Basic)
+title: 条件判断構造
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [Visual Basic], control flow
@@ -9,41 +9,41 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: f0df649c4be50e9cadd51258c89137b68b4ffe22
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d0d4039ff2edc61ee8b4b732c6adcb6e420d73ea
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963199"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353973"
 ---
 # <a name="decision-structures-visual-basic"></a>条件判断構造 (Visual Basic)
-Visual Basic を使用すると、テストの結果に応じて、条件をテストしたり、さまざまな操作を実行したりできます。 true または false の場合、さまざまな値の式、または一連のステートメントを実行するときに生成された例外のさまざまな条件をテストできます。  
+Visual Basic lets you test conditions and perform different operations depending on the results of that test. You can test for a condition being true or false, for various values of an expression, or for various exceptions generated when you execute a series of statements.  
   
- 次の図は、条件が true であるかどうかをテストし、true であるか false であるかに応じて異なるアクションを実行するデシジョン構造を示しています。  
+ The following illustration shows a decision structure that tests for a condition being true and takes different actions depending on whether it is true or false.  
   
- ![If...Then...Else 構築。](./media/decision-structures/if-then-else-construction.gif)  
+ ![A flow chart of an If...Then...Else construction.](./media/decision-structures/if-then-else-construction.gif)  
   
-## <a name="ifthenelse-construction"></a>If...Then...Else 構造  
- `If...Then...Else`構造を使用すると、1つ以上の条件をテストし、各条件に応じて1つ以上のステートメントを実行できます。 条件をテストし、次の方法でアクションを実行することができます。  
+## <a name="ifthenelse-construction"></a>If...Then...Else Construction  
+ `If...Then...Else` constructions let you test for one or more conditions and run one or more statements depending on each condition. You can test conditions and take actions in the following ways:  
   
-- 条件がの場合に1つ以上のステートメントを実行する`True`  
+- Run one or more statements if a condition is `True`  
   
-- 条件がの場合に1つ以上のステートメントを実行する`False`  
+- Run one or more statements if a condition is `False`  
   
-- 条件が`True`の場合はステートメントを実行し、それ以外の場合は`False`  
+- Run some statements if a condition is `True` and others if it is `False`  
   
-- 前の条件がの場合に追加条件をテストする`False`  
+- Test an additional condition if a prior condition is `False`  
   
- これらすべての可能性を提供する制御構造が、[If...Then...Else ステートメント](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)です。 1つのテストと1つのステートメントを実行するだけの場合は、単一行バージョンを使用できます。 より複雑な条件とアクションのセットがある場合は、複数行のバージョンを使用できます。  
+ The control structure that offers all these possibilities is the [If...Then...Else Statement](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). You can use a single-line version if you have just one test and one statement to run. If you have a more complex set of conditions and actions, you can use the multiple-line version.  
   
-## <a name="selectcase-construction"></a>Select...Case 構造  
- この`Select...Case`構築により、式を1回評価し、さまざまな値に基づいてさまざまなステートメントのセットを実行できます。 詳細については、[Select...Case ステートメント](../../../../visual-basic/language-reference/statements/select-case-statement.md)を参照してください。  
+## <a name="selectcase-construction"></a>Select...Case Construction  
+ The `Select...Case` construction lets you evaluate an expression one time and run different sets of statements based on different possible values. For more information, see [Select...Case Statement](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
-## <a name="trycatchfinally-construction"></a>Try...Catch...Finally 構造  
- `Try...Catch...Finally`構造を使用すると、ステートメントのいずれかによって例外が発生した場合にコントロールを保持する環境で、一連のステートメントを実行できます。 例外ごとに異なるアクションを実行できます。 必要に応じて、実行するコードのブロックを指定して、 `Try...Catch...Finally`何が発生したかにかかわらず、構築全体を終了する必要があります。 詳細については、[Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)を参照してください。  
+## <a name="trycatchfinally-construction"></a>Try...Catch...Finally Construction  
+ `Try...Catch...Finally` constructions let you run a set of statements under an environment that retains control if any one of your statements causes an exception. You can take different actions for different exceptions. You can optionally specify a block of code that runs before you exit the whole `Try...Catch...Finally` construction, regardless of what occurs. 詳しくは、「[Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」をご覧ください。  
   
 > [!NOTE]
-> 多くの制御構造では、キーワードをクリックすると、構造内のすべてのキーワードが強調表示されます。 たとえば、 `If...Then...Else`構築をクリック`If`すると、、 `Then` `ElseIf`、、 `Else`、および`If` `End If`のすべてのインスタンスが構築されます。 次または前の強調表示されたキーワードに移動するには、CTRL + SHIFT + ↓キーを押すか、CTRL + SHIFT + 上方向キーを押します。  
+> For many control structures, when you click a keyword, all of the keywords in the structure are highlighted. For instance, when you click `If` in an `If...Then...Else` construction, all instances of `If`, `Then`, `ElseIf`, `Else`, and `End If` in the construction are highlighted. To move to the next or previous highlighted keyword, press CTRL+SHIFT+DOWN ARROW or CTRL+SHIFT+UP ARROW.  
   
 ## <a name="see-also"></a>関連項目
 

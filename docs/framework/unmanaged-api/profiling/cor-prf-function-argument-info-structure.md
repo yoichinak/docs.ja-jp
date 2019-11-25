@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 07cf3bab-e193-4991-8205-3f41cf2d67b3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 658b88349bedcbcefd0b97226c7bd1fa34f656c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2b01acbd617b13a64ef3dca6c8661f1e6bb067ac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781923"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447385"
 ---
-# <a name="corprffunctionargumentinfo-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO 構造体
+# <a name="cor_prf_function_argument_info-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO 構造体
 関数の引数を左から右方向で表します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,21 +38,21 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`numRanges`|引数のブロックの数。 これは、この値が、数ある[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)内の構造体、`ranges`配列。|  
-|`totalArgumentSize`|すべての引数の合計サイズ。 つまり、この値は、引数の長さの合計です。|  
-|`ranges`|配列の`COR_PRF_FUNCTION_ARGUMENT_RANGE`構造体、関数の引数の 1 つのブロックのそれぞれ表します。|  
+|`numRanges`|The number of blocks of arguments. That is, this value is the number of [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures in the `ranges` array.|  
+|`totalArgumentSize`|The total size of all arguments. In other words, this value is the sum of the argument lengths.|  
+|`ranges`|An array of `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which represents one block of function arguments.|  
   
 ## <a name="remarks"></a>Remarks  
- 関数は、多くの引数があります。 これらの引数は可能性がありますメモリ内で連続して格納されません。 3 つの引数を 1 か所でのブロック、別の場所に 2 つの引数のブロック、および別の場所に 1 つの引数の最後のブロックするがあります。 これらの引数はすべて、同じ関数のさまざまな場所にだけ格納されます。  
+ A function may have many arguments. Those arguments might not be stored contiguously in memory. You might have a block of three arguments in one place, a block of two arguments in another place, and a final block of one argument in a different place. These arguments are all for the same function; they're just stored in different places.  
   
- `COR_PRF_FUNCTION_ARGUMENT_INFO`構造体が 1 つの関数のすべての引数を表します。 関数の引数のすべてのブロックを参照するのに配列を使用します。 そのために、1 つのある 1 つの関数`COR_PRF_FUNCTION_ARGUMENT_INFO`構造体は、複数の参照`COR_PRF_FUNCTION_ARGUMENT_RANGE`構造体、1 つまたは複数の関数の引数を参照します。  
+ The `COR_PRF_FUNCTION_ARGUMENT_INFO` structure represents all the arguments of a single function. It uses an array to reference all the blocks of function arguments. So, for a single function, you have a single `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, which references multiple `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which points to one or more function arguments.  
   
- レジスタに格納されている引数は、構造を構築するメモリに書き込まれました。  
+ Arguments that are stored in registers are spilled into memory to build the structures.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **ライブラリ:** CorGuids.lib  
   

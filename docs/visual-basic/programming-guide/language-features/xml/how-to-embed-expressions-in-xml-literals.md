@@ -1,29 +1,29 @@
 ---
-title: '方法: XML リテラル (Visual Basic) に式を埋め込む'
+title: '方法 : XML リテラルに式を埋め込む'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 9d0fd1e3713dc5b81cfca0ce54b571b38e648f87
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2e8dd10b334b0271e3c9de11ed155c9d5d7aae48
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879112"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332938"
 ---
-# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>方法: XML リテラル (Visual Basic) に式を埋め込む
-埋め込み式 XML ドキュメント、フラグメント、または実行時に作成されたコンテンツを含む要素を作成するには、XML リテラルを組み合わせることができます。 次の例では、組み込み式を使用して、実行時にコンテンツの要素、属性、および要素名を設定する方法を示します。  
+# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>方法: XML リテラルに式を埋め込む (Visual Basic)
+You can combine XML literals with embedded expressions to create an XML document, fragment, or element that contains content created at run time. The following examples demonstrate how to use embedded expressions to populate element content, attributes, and element names at run time.  
   
- 埋め込み式の構文は、 `<%=` `exp` `%>`ASP.NET で使用される構文と同じですが。 詳細については、次を参照してください。 [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)します。  
+ The syntax for an embedded expression is `<%=` `exp` `%>`, which is the same syntax that ASP.NET uses. For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- 使用することも、 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Api を作成する[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト。 詳細については、「 <xref:System.Xml.Linq.XElement> 」を参照してください。  
+ You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. 詳細については、「<xref:System.Xml.Linq.XElement>」を参照してください。  
   
 ## <a name="procedures"></a>手順  
   
-#### <a name="to-insert-text-as-element-content"></a>要素の内容としてテキストを挿入するには  
+#### <a name="to-insert-text-as-element-content"></a>To insert text as element content  
   
-- 次の例に含まれているテキストを挿入する方法を示しています、`contactName`かっこと右の名前の要素間変数。  
+- The following example shows how to insert the text that is contained in the `contactName` variable between the opening and closing name elements.  
   
      [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
@@ -35,9 +35,9 @@ ms.locfileid: "65879112"
     </contact>  
     ```  
   
-#### <a name="to-insert-text-as-an-attribute-value"></a>属性値としてテキストを挿入するには  
+#### <a name="to-insert-text-as-an-attribute-value"></a>To insert text as an attribute value  
   
-- 次の例に含まれているテキストを挿入する方法を示しています、`phoneType`変数の値として、`type`属性。  
+- The following example shows how to insert the text that is contained in the `phoneType` variable as the value of the `type` attribute.  
   
      [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
@@ -49,11 +49,11 @@ ms.locfileid: "65879112"
     </contact>  
     ```  
   
-#### <a name="to-insert-text-for-an-element-name"></a>要素名のテキストを挿入するには  
+#### <a name="to-insert-text-for-an-element-name"></a>To insert text for an element name  
   
-- 次の例に含まれているテキストを挿入する方法を示しています、`elementName`変数としての要素の名前。  
+- The following example shows how to insert the text that is contained in the `elementName` variable as the name of an element.  
   
-     この手法を使用して要素を作成するときに、それらを閉じる必要があります、 \</> タグです。  
+     When creating elements by using this technique, you must close them with the \</> tag.  
   
      [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   
@@ -67,7 +67,7 @@ ms.locfileid: "65879112"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: XML リテラルを作成します。](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
+- [方法: XML リテラルを作成する](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
 - [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

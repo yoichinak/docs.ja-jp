@@ -1,15 +1,15 @@
 ---
-title: '方法: 特定の属性を持つ要素を検索する (XPath LINQ to XML) (Visual Basic)'
+title: '方法 : 特定の属性を持つ要素を検索する (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: 39d635eb3d80a4a72647397313c77dac09777206
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: ef8dd26d40f15d3d5a27f0ca5d62f7337f2054ca
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250093"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343684"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>方法: 特定の属性を持つ要素を検索する (XPath LINQ to XML) (Visual Basic)
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (Visual Basic)
 特定の属性を持つすべての要素を検索しなければならない場合があります。 属性の内容は問わず、 属性の存在に基づいて選択を行うような場合です。  
   
  XPath 式を次に示します。  
@@ -61,4 +61,4 @@ Results are identical
   
 ## <a name="see-also"></a>関連項目
 
-- [XPath ユーザーの LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

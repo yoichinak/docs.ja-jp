@@ -1,17 +1,17 @@
 ---
-title: -warnaserror (Visual Basic)
+title: -warnaserror
 ms.date: 03/13/2018
 helpviewer_keywords:
 - warnaserror compiler option [Visual Basic]
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: 8af6d3ef4efecd53dcf38c33d0aa2cf182f07d30
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: f9ca5575e2a042d68fc490494f2e86991d58b80c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004654"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351708"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 コンパイラで、最初に発生した警告がエラーとして扱われます。  
@@ -24,12 +24,12 @@ ms.locfileid: "72004654"
   
 ## <a name="arguments"></a>引数  
   
-|項目|定義|  
+|用語|定義|  
 |---|---|  
-|+ &#124; -|任意。 既定では `-warnaserror-` は有効です。警告が発生しても、コンパイラは出力ファイルを生成します。 `-warnaserror` オプションは `-warnaserror+` と同じで、警告がエラーとして扱われます。|  
-|`numberList`|任意。 `-warnaserror` オプションを適用する、警告 ID 番号のコンマ区切りのリスト。 警告 ID が指定されていない場合、`-warnaserror`オプションはすべての警告に適用されます。|  
+|+ &#124; -|省略可能です。 既定では `-warnaserror-` は有効です。警告が発生しても、コンパイラは出力ファイルを生成します。 `-warnaserror` オプションは `-warnaserror+` と同じで、警告がエラーとして扱われます。|  
+|`numberList`|省略可能です。 `-warnaserror` オプションを適用する、警告 ID 番号のコンマ区切りのリスト。 警告 ID が指定されていない場合、`-warnaserror`オプションはすべての警告に適用されます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `-warnaserror` オプションで、すべての警告がエラーとして扱われます。 通常は警告として報告されるすべてのメッセージが、代わりにエラーとして報告されます。 コンパイラは、後続の同じ警告の発生を警告として報告します。  
   
  既定では `-warnaserror-` が有効であり、警告は情報提供のみになります。 `-warnaserror` オプションは `-warnaserror+` と同じで、警告がエラーとして扱われます。  
@@ -41,11 +41,11 @@ ms.locfileid: "72004654"
   
 |-warnaserror を設定し、Visual Studio IDE ですべての警告をエラーとして扱う|  
 |---|  
-|1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[すべての警告を表示しない]** チェック ボックスがオフになっていることを確認します。<br />4。 **[すべての警告をエラーとして扱う]** チェック ボックスをオンにします。|  
+|1.  Have a project selected in **Solution Explorer**. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Check the **Treat all warnings as errors** check box.|  
   
 |-warnaserror を設定し、Visual Studio IDE で特定の警告をエラーとして扱う|  
 |---|  
-|1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。<br />2. **[コンパイル]** タブをクリックします。<br />3. **[すべての警告を表示しない]** チェック ボックスがオフになっていることを確認します。<br />4。 **[すべての警告をエラーとして扱う]** チェック ボックスがオフになっていることを確認します。<br />5。エラーとして扱う警告の隣にある **[通知]** 列から、 **[エラー]** を選択します。|  
+|1.  Have a project selected in **Solution Explorer**. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。<br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Make sure the **Treat all warnings as errors** check box is unchecked.<br />5.  Select **Error** from the **Notification** column adjacent to the warning that should be treated as an error.|  
   
 ## <a name="example"></a>例  
  次のコードは `In.vb` をコンパイルし、最初に見つけたすべての警告をエラーとして表示するようにコンパイラに指示します。  

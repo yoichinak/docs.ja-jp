@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc994fef-65c9-432a-84cb-66c8141147e7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 405d5ff49ba7bc2e5204f00cf50c30822354e56d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5edc4e0e2fc25ddae6ccabc1aa9c9a031292b63a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775587"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449895"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo メソッド
-指定したスレッドの現在の Win32 スレッド id を取得します。  
+Gets the current Win32 thread identity for the specified thread.  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,15 +35,15 @@ HRESULT GetThreadInfo(
   
 ## <a name="parameters"></a>パラメーター  
  `threadId`  
- [in]現在、Win32 ID を取得する対象のスレッドの ID  
+ [in] The ID of the thread for which to get the current Win32 ID.  
   
  `pdwWin32ThreadId`  
- [out]指定したスレッドの現在の Win32 スレッドへのポインターの id。  
+ [out] A pointer to the specified thread's current Win32 thread ID.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

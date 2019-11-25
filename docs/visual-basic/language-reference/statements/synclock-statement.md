@@ -1,5 +1,5 @@
 ---
-title: SyncLock ステートメント (Visual Basic)
+title: SyncLock ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.SyncLock
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: e981ee727b66ecda392014fd3ee8ca6f1526cd2e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 0f430edce99513b0de9ef437d70648a128b336b8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578899"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352818"
 ---
 # <a name="synclock-statement"></a>SyncLock ステートメント
-ブロックを実行する前に、ステートメントブロックの排他ロックを取得します。  
+Acquires an exclusive lock for a statement block before executing the block.  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,62 +29,62 @@ End SyncLock
   
 ## <a name="parts"></a>指定項目  
  `lockobject`  
- 必須です。 オブジェクト参照に評価される式。  
+ 必須です。 Expression that evaluates to an object reference.  
   
  `block`  
- 省略可能です。 ロックが取得されたときに実行されるステートメントのブロック。  
+ 省略可能です。 Block of statements that are to execute when the lock is acquired.  
   
  `End SyncLock`  
- @No__t_0 ブロックを終了します。  
+ Terminates a `SyncLock` block.  
   
 ## <a name="remarks"></a>Remarks  
- @No__t_0 ステートメントを実行すると、複数のスレッドが同時にステートメントブロックを実行しなくなります。 `SyncLock` は、他のスレッドが実行しないように、各スレッドがブロックに入るのを防ぎます。  
+ The `SyncLock` statement ensures that multiple threads do not execute the statement block at the same time. `SyncLock` prevents each thread from entering the block until no other thread is executing it.  
   
- @No__t_0 を使用する最も一般的な方法は、複数のスレッドによってデータが同時に更新されないように保護することです。 データを操作するステートメントが中断せずに完了する必要がある場合は、`SyncLock` ブロック内に配置します。  
+ The most common use of `SyncLock` is to protect data from being updated by more than one thread simultaneously. If the statements that manipulate the data must go to completion without interruption, put them inside a `SyncLock` block.  
   
- 排他ロックによって保護されているステートメントブロックは、*クリティカルセクション*と呼ばれることがあります。  
+ A statement block protected by an exclusive lock is sometimes called a *critical section*.  
   
 ## <a name="rules"></a>ルール  
   
-- 分岐. ブロックの外側から `SyncLock` ブロックに分岐することはできません。  
+- Branching. You cannot branch into a `SyncLock` block from outside the block.  
   
-- オブジェクト値をロックします。 @No__t_0 の値を `Nothing` することはできません。 @No__t_0 ステートメントで使用する前に、lock オブジェクトを作成する必要があります。  
+- Lock Object Value. The value of `lockobject` cannot be `Nothing`. You must create the lock object before you use it in a `SyncLock` statement.  
   
-     @No__t_1 ブロックの実行中に `lockobject` の値を変更することはできません。 このメカニズムでは、ロックオブジェクトが変更されないようにする必要があります。  
+     You cannot change the value of `lockobject` while executing a `SyncLock` block. The mechanism requires that the lock object remain unchanged.  
   
-- @No__t_1 ブロックで[Await](../../../visual-basic/language-reference/operators/await-operator.md)演算子を使用することはできません。  
+- You can't use the [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator in a `SyncLock` block.  
   
 ## <a name="behavior"></a>動作  
   
-- しくみ. スレッドが `SyncLock` ステートメントに達すると、`lockobject` 式が評価され、式によって返されたオブジェクトの排他ロックを取得するまで実行が中断されます。 別のスレッドが `SyncLock` ステートメントに到達すると、最初のスレッドが `End SyncLock` ステートメントを実行するまでロックは取得されません。  
+- Mechanism. When a thread reaches the `SyncLock` statement, it evaluates the `lockobject` expression and suspends execution until it acquires an exclusive lock on the object returned by the expression. When another thread reaches the `SyncLock` statement, it does not acquire a lock until the first thread executes the `End SyncLock` statement.  
   
-- 保護されたデータ。 @No__t_0 が `Shared` 変数の場合、排他ロックによって、クラスのインスタンス内のスレッドは、他のスレッドが実行している間に `SyncLock` ブロックを実行できなくなります。 これにより、すべてのインスタンス間で共有されているデータが保護されます。  
+- Protected Data. If `lockobject` is a `Shared` variable, the exclusive lock prevents a thread in any instance of the class from executing the `SyncLock` block while any other thread is executing it. This protects data that is shared among all the instances.  
   
-     @No__t_0 がインスタンス変数 (`Shared` ではありません) の場合、ロックは、現在のインスタンスで実行されているスレッドが、同じインスタンス内の別のスレッドと同時に `SyncLock` ブロックを実行できないようにします。 これにより、個々のインスタンスによって保持されるデータが保護されます。  
+     If `lockobject` is an instance variable (not `Shared`), the lock prevents a thread running in the current instance from executing the `SyncLock` block at the same time as another thread in the same instance. This protects data maintained by the individual instance.  
   
-- 取得と解放。 @No__t_0 ブロックは、`Try` ブロックが `lockobject` に対して排他ロックを取得する `Try...Finally` の構築と同様に動作し、`Finally` ブロックによって解放されます。 このため、`SyncLock` ブロックは、ブロックを終了する方法に関係なく、ロックの解放を保証します。 これは、ハンドルされない例外が発生した場合でも当てはまります。  
+- Acquisition and Release. A `SyncLock` block behaves like a `Try...Finally` construction in which the `Try` block acquires an exclusive lock on `lockobject` and the `Finally` block releases it. Because of this, the `SyncLock` block guarantees release of the lock, no matter how you exit the block. This is true even in the case of an unhandled exception.  
   
-- フレームワークの呼び出し。 @No__t_0 ブロックは、<xref:System.Threading> 名前空間の `Monitor` クラスの `Enter` および `Exit` メソッドを呼び出すことによって、排他ロックを取得し、解放します。  
+- Framework Calls. The `SyncLock` block acquires and releases the exclusive lock by calling the `Enter` and `Exit` methods of the `Monitor` class in the <xref:System.Threading> namespace.  
   
-## <a name="programming-practices"></a>プログラミングプラクティス  
- @No__t_0 式は、常に、クラスにのみ属しているオブジェクトに評価される必要があります。 現在のインスタンスに属するデータを保護するには `Private` オブジェクト変数を宣言し、すべてのインスタンスに共通のデータを保護するには `Private Shared` オブジェクト変数を宣言する必要があります。  
+## <a name="programming-practices"></a>Programming Practices  
+ The `lockobject` expression should always evaluate to an object that belongs exclusively to your class. You should declare a `Private` object variable to protect data belonging to the current instance, or a `Private Shared` object variable to protect data common to all instances.  
   
- @No__t_0 キーワードを使用して、インスタンスデータ用のロックオブジェクトを指定しないでください。 クラスの外部のコードにクラスのインスタンスへの参照が含まれている場合、その参照を `SyncLock` ブロックのロックオブジェクトとして使用して、さまざまなデータを保護することができます。 このようにして、クラスとその他のクラスは、互いに関連付けられていない `SyncLock` ブロックの実行をブロックできます。 同様に、同じ文字列を使用するプロセス内の他のコードは同じロックを共有するため、文字列のロックが問題になることがあります。  
+ You should not use the `Me` keyword to provide a lock object for instance data. If code external to your class has a reference to an instance of your class, it could use that reference as a lock object for a `SyncLock` block completely different from yours, protecting different data. In this way, your class and the other class could block each other from executing their unrelated `SyncLock` blocks. Similarly locking on a string can be problematic since any other code in the process using the same string will share the same lock.  
   
- また、`Me.GetType` メソッドを使用して、共有データのロックオブジェクトを指定することもできません。 これは、`GetType` は常に、指定されたクラス名に対して同じ `Type` オブジェクトを返すためです。 外部コードは、クラスで `GetType` を呼び出し、使用しているのと同じロックオブジェクトを取得することができます。 これにより、2つのクラスが `SyncLock` ブロックから相互にブロックされることになります。  
+ You should also not use the `Me.GetType` method to provide a lock object for shared data. This is because `GetType` always returns the same `Type` object for a given class name. External code could call `GetType` on your class and obtain the same lock object you are using. This would result in the two classes blocking each other from their `SyncLock` blocks.  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="description"></a>説明  
- 次の例は、メッセージの単純なリストを保持するクラスを示しています。 このメソッドは、配列内のメッセージと、その配列の最後に使用された要素を変数に保持します。 @No__t_0 プロシージャは、最後の要素をインクリメントし、新しいメッセージを格納します。 これら2つの操作は、`SyncLock` および `End SyncLock` ステートメントによって保護されます。最後の要素がインクリメントされると、他のすべてのスレッドが最後の要素を再度インクリメントできるようになる前に、新しいメッセージが格納される必要があります。  
+ The following example shows a class that maintains a simple list of messages. It holds the messages in an array and the last used element of that array in a variable. The `addAnotherMessage` procedure increments the last element and stores the new message. Those two operations are protected by the `SyncLock` and `End SyncLock` statements, because once the last element has been incremented, the new message must be stored before any other thread can increment the last element again.  
   
- @No__t_0 クラスがすべてのインスタンス間で1つのメッセージリストを共有している場合、`messagesList` と `messagesLast` の変数は `Shared` として宣言されます。 この場合、すべてのインスタンスで1つのロックオブジェクトが使用されるように、変数 `messagesLock` も `Shared` する必要があります。  
+ If the `simpleMessageList` class shared one list of messages among all its instances, the variables `messagesList` and `messagesLast` would be declared as `Shared`. In this case, the variable `messagesLock` should also be `Shared`, so that there would be a single lock object used by every instance.  
   
 ### <a name="code"></a>コード  
  [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
 ### <a name="description"></a>説明  
- 次の例では、スレッドと `SyncLock` を使用します。 @No__t_0 ステートメントが存在する限り、ステートメントブロックはクリティカルセクションであり `balance` 負の値になることはありません。 @No__t_0 と `End SyncLock` ステートメントをコメントアウトして、`SyncLock` キーワードを残すことによる影響を確認できます。  
+ The following example uses threads and `SyncLock`. As long as the `SyncLock` statement is present, the statement block is a critical section and `balance` never becomes a negative number. You can comment out the `SyncLock` and `End SyncLock` statements to see the effect of leaving out the `SyncLock` keyword.  
   
 ### <a name="code"></a>コード  
  [!code-vb[VbVbalrThreading#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/class2.vb#21)]  

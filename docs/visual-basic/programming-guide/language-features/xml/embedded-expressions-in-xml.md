@@ -1,5 +1,5 @@
 ---
-title: XML での埋め込み式 (Visual Basic)
+title: XML での埋め込み式
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlEmbeddedExpression
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: 525fa04db86a299d88e1612aac76d014f35124eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0cdb960160457108ddf18c554dae5f5993269833
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922628"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332354"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML での埋め込み式 (Visual Basic)
-埋め込み式を使用すると、実行時に評価される式を含む XML リテラルを作成できます。 埋め込み式の構文はです`<%=` `expression` `%>`。これは、ASP.NET で使用される構文と同じです。  
+Embedded expressions enable you to create XML literals that contain expressions that are evaluated at run time. The syntax for an embedded expression is `<%=` `expression` `%>`, which is the same as the syntax used in ASP.NET.  
   
- たとえば、XML 要素リテラルを作成し、リテラルテキストコンテンツと共に埋め込み式を組み合わせることができます。  
+ For example, you can create an XML element literal, combining embedded expressions with literal text content.  
   
  [!code-vb[VbXMLSamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#27)]  
   
- に`isbnNumber`整数12345が`book`含まれていて、日付3/5/2006 が含まれている場合、このコードを実行すると、の値はになります。`modifiedDate`  
+ If `isbnNumber` contains the integer 12345 and `modifiedDate` contains the date 3/5/2006, when this code executes, the value of `book` is:  
   
 ```xml  
 <book category="fiction" isbn="12345">  
@@ -30,55 +30,55 @@ ms.locfileid: "69922628"
 </book>  
 ```  
   
-## <a name="embedded-expression-location-and-validation"></a>埋め込み式の位置と検証  
- 埋め込み式は、XML リテラル式内の特定の場所でのみ使用できます。 式の場所は、式が返すことができる型`Nothing`と処理方法を制御します。 次の表では、埋め込み式の許可される場所と型について説明します。  
+## <a name="embedded-expression-location-and-validation"></a>Embedded Expression Location and Validation  
+ Embedded expressions can appear only at certain locations within XML literal expressions. The expression location controls which types the expression can return and how `Nothing` is handled. The following table describes the allowed locations and types of embedded expressions.  
   
-|リテラル内の場所|式の種類|処理`Nothing`|  
+|Location in literal|Type of expression|Handling of `Nothing`|  
 |---|---|---|  
-|XML 要素名|<xref:System.Xml.Linq.XName>|Error|  
-|XML 要素のコンテンツ|`Object`またはの配列`Object`|無視|  
-|XML 要素の属性名|<xref:System.Xml.Linq.XName>|属性値もでない限り、エラーが発生します。`Nothing`|  
-|XML 要素の属性値|`Object`|属性宣言が無視されました|  
-|XML 要素属性|<xref:System.Xml.Linq.XAttribute>またはのコレクション<xref:System.Xml.Linq.XAttribute>|無視|  
-|XML ドキュメントのルート要素|<xref:System.Xml.Linq.XElement>または、1つ<xref:System.Xml.Linq.XElement>のオブジェクトと任意の数<xref:System.Xml.Linq.XProcessingInstruction>の<xref:System.Xml.Linq.XComment>オブジェクトおよびオブジェクトのコレクション|無視|  
+|XML element name|<xref:System.Xml.Linq.XName>|Error|  
+|XML element content|`Object` or array of `Object`|無視|  
+|XML element attribute name|<xref:System.Xml.Linq.XName>|Error, unless the attribute value is also `Nothing`|  
+|XML element attribute value|`Object`|Attribute declaration ignored|  
+|XML element attribute|<xref:System.Xml.Linq.XAttribute> or a collection of <xref:System.Xml.Linq.XAttribute>|無視|  
+|XML document root element|<xref:System.Xml.Linq.XElement> or a collection of one <xref:System.Xml.Linq.XElement> object and an arbitrary number of <xref:System.Xml.Linq.XProcessingInstruction> and <xref:System.Xml.Linq.XComment> objects|無視|  
   
-- XML 要素名の埋め込み式の例を次に示します。  
+- Example of an embedded expression in an XML element name:  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
-- XML 要素のコンテンツ内の埋め込み式の例を次に示します。  
+- Example of an embedded expression in the content of an XML element:  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
-- XML 要素の属性名に含まれる埋め込み式の例を次に示します。  
+- Example of an embedded expression in an XML element attribute name:  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
-- XML 要素の属性値に含まれる埋め込み式の例を次に示します。  
+- Example of an embedded expression in an XML element attribute value:  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
-- XML 要素属性の埋め込み式の例を次に示します。  
+- Example of an embedded expression in an XML element attribute:  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
-- XML ドキュメントのルート要素内の埋め込み式の例を次に示します。  
+- Example of an embedded expression in an XML document root element:  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   
- を有効`Option Strict`にした場合、コンパイラは、埋め込み式の型が必要な型に拡大変換されるかどうかをチェックします。 唯一の例外は、コードの実行時に検証される XML ドキュメントのルート要素です。 を指定せず`Option Strict`にコンパイルする場合は、型`Object`の式を埋め込むことができ、その型は実行時に検証されます。  
+ If you enable `Option Strict`, the compiler checks that the type of each embedded expression widens to the required type. The only exception is for the root element of an XML document, which is verified when the code runs. If you compile without `Option Strict`, you can embed expressions of type `Object` and their type is verified at run time.  
   
- コンテンツが省略可能な場所では、を含む`Nothing`埋め込み式は無視されます。 これは、XML リテラルを使用する`Nothing`前に、要素の内容、属性値、および配列要素を確認する必要がないことを意味します。 要素名や属性名など、必須の値をに`Nothing`することはできません。  
+ In locations where content is optional, embedded expressions that contain `Nothing` are ignored. This means you do not have to check that element content, attribute values, and array elements are not `Nothing` before you use an XML literal. Required values, such as element and attribute names, cannot be `Nothing`.  
   
- 特定の型のリテラルで埋め込み式を使用する方法の詳細については、「 [Xml ドキュメントリテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)、 [xml 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)」を参照してください。  
+ For more information about using an embedded expression in a particular type of literal, see [XML Document Literal](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="scoping-rules"></a>スコープの規則  
- コンパイラは、各 XML リテラルを適切なリテラル型のコンストラクター呼び出しに変換します。 XML リテラル内のリテラルコンテンツと埋め込み式は、引数としてコンストラクターに渡されます。 これは、XML リテラルで使用できるすべての Visual Basic プログラミング要素も、その埋め込み式で使用できることを意味します。  
+ The compiler converts each XML literal into a constructor call for the appropriate literal type. The literal content and embedded expressions in an XML literal are passed as arguments to the constructor. This means that all Visual Basic programming elements available to an XML literal are also available to its embedded expressions.  
   
- Xml リテラル内では、 `Imports`ステートメントで宣言された xml 名前空間プレフィックスにアクセスできます。 `xmlns`属性を使用して、新しい xml 名前空間プレフィックスを宣言したり、既存の xml 名前空間プレフィックスを要素内にシャドウしたりすることができます。 新しい名前空間は、その要素の子ノードでは使用できますが、埋め込み式の XML リテラルには使用できません。  
+ Within an XML literal, you can access the XML namespace prefixes declared with the `Imports` statement. You can declare a new XML namespace prefix, or shadow an existing XML namespace prefix, in an element by using the `xmlns` attribute. The new namespace is available to the child nodes of that element, but not to XML literals in embedded expressions.  
   
 > [!NOTE]
-> `xmlns`名前空間属性を使用して XML 名前空間プレフィックスを宣言する場合、属性値は定数文字列である必要があります。 この`xmlns`点で、属性は、 `Imports`ステートメントを使用して XML 名前空間を宣言するのと似ています。 埋め込み式を使用して XML 名前空間の値を指定することはできません。  
+> When you declare an XML namespace prefix by using the `xmlns` namespace attribute, the attribute value must be a constant string. In this regard, using the `xmlns` attribute is like using the `Imports` statement to declare an XML namespace. You cannot use an embedded expression to specify the XML namespace value.  
   
 ## <a name="see-also"></a>関連項目
 

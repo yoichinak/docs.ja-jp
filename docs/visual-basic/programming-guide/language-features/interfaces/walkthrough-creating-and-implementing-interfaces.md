@@ -1,5 +1,5 @@
 ---
-title: インターフェイスの作成と実装 (Visual Basic)
+title: インターフェイスの作成と実装
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [Visual Basic], walkthroughs
@@ -7,105 +7,105 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], walkthrough
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
-ms.openlocfilehash: 62e301e9eb366d14b58088d3e2cda3b567d17f5b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 47176d2e7a512d8e8c27a90ac04d2a2a2af274b5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923319"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345040"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>チュートリアル: インターフェイスの作成と実装 (Visual Basic)
 
-インターフェイスには、プロパティ、メソッド、およびイベントの特性が記述されていますが、実装の詳細は構造体またはクラスにはありません。  
+Interfaces describe the characteristics of properties, methods, and events, but leave the implementation details up to structures or classes.  
   
- このチュートリアルでは、インターフェイスを宣言して実装する方法について説明します。  
+ This walkthrough demonstrates how to declare and implement an interface.  
   
 > [!NOTE]
-> このチュートリアルでは、ユーザーインターフェイスの作成方法については説明しません。  
+> This walkthrough doesn't provide information about how to create a user interface.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="to-define-an-interface"></a>インターフェイスを定義するには
+## <a name="to-define-an-interface"></a>To define an interface
   
 1. 新しい Visual Basic Windows アプリケーション プロジェクトを開きます。  
   
-2. **[プロジェクト]** メニューの **[モジュールの追加]** をクリックして、新しいモジュールをプロジェクトに追加します。  
+2. Add a new module to the project by clicking **Add Module** on the **Project** menu.  
   
-3. 新しいモジュール`Module1.vb`の名前を指定し、 **[追加]** をクリックします。 新しいモジュールのコードが表示されます。  
+3. Name the new module `Module1.vb` and click **Add**. The code for the new module is displayed.  
   
-4. ステートメントとステートメントの`TestInterface` `Module1` `Interface TestInterface` `End Module`間に「」と入力し、enter キーを押して、内にという名前のインターフェイスを定義します。 `Module` **コードエディター**によって`Interface`キーワードがインデントさ`End Interface`れ、コードブロックを形成するステートメントが追加されます。  
+4. Define an interface named `TestInterface` within `Module1` by typing `Interface TestInterface` between the `Module` and `End Module` statements, and then pressing ENTER. The **Code Editor** indents the `Interface` keyword and adds an `End Interface` statement to form a code block.  
   
-5. `End Interface`ステートメントとステートメントの`Interface`間に次のコードを配置して、インターフェイスのプロパティ、メソッド、およびイベントを定義します。  
+5. Define a property, method, and event for the interface by placing the following code between the `Interface` and `End Interface` statements:  
   
      [!code-vb[VbVbalrOOP#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#98)]
   
 ## <a name="implementation"></a>実装
 
- インターフェイスメンバーの宣言に使用される構文は、クラスメンバーの宣言に使用される構文とは異なることがあります。 この違いは、インターフェイスに実装コードを含めることができないという事実を反映しています。  
+ You may notice that the syntax used to declare interface members is different from the syntax used to declare class members. This difference reflects the fact that interfaces cannot contain implementation code.  
   
-### <a name="to-implement-the-interface"></a>インターフェイスを実装するには
+### <a name="to-implement-the-interface"></a>To implement the interface
   
-1. という`ImplementationClass`名前のクラスを追加します。 `Module1`そのために`End Interface`は、ステートメントの`End Module`後、ステートメントの前に、enter キーを押します。  
+1. Add a class named `ImplementationClass` by adding the following statement to `Module1`, after the `End Interface` statement but before the `End Module` statement, and then pressing ENTER:  
   
      [!code-vb[VbVbalrOOP#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#99)]
   
-     統合開発環境内で作業している場合、enter キーを押すと`End Class` 、**コードエディター**によって一致するステートメントが提供されます。  
+     If you are working within the integrated development environment, the **Code Editor** supplies a matching `End Class` statement when you press ENTER.  
   
-2. 次`Implements`のステートメントをに`ImplementationClass`追加します。このステートメントは、クラスが実装するインターフェイスに名前を指定します。  
+2. Add the following `Implements` statement to `ImplementationClass`, which names the interface the class implements:  
   
      [!code-vb[VbVbalrOOP#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#100)]
   
-     クラスまたは構造体の先頭にある他の項目とは別に`Implements`リストされている場合、ステートメントは、クラスまたは構造体がインターフェイスを実装していることを示します。  
+     When listed separately from other items at the top of a class or structure, the `Implements` statement indicates that the class or structure implements an interface.  
   
-     統合開発環境内で作業している場合、enter キーを押すと、で`TestInterface`必要なクラスメンバーが**コードエディター**に実装されます。次の手順は省略できます。  
+     If you are working within the integrated development environment, the **Code Editor** implements the class members required by `TestInterface` when you press ENTER, and you can skip the next step.  
   
-3. 統合開発環境で作業していない場合は、インターフェイス`MyInterface`のすべてのメンバーを実装する必要があります。 `ImplementationClass` `Event1`、 、および`Prop1`を実装するには、に次のコードを追加します。 `Method1`  
+3. If you are not working within the integrated development environment, you must implement all the members of the interface `MyInterface`. Add the following code to `ImplementationClass` to implement `Event1`, `Method1`, and `Prop1`:  
   
      [!code-vb[VbVbalrOOP#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#101)]
   
-     ステートメント`Implements`は、実装されているインターフェイスとインターフェイスメンバーの名前を記述します。  
+     The `Implements` statement names the interface and interface member being implemented.  
   
-4. プロパティ値を格納`Prop1`したクラスにプライベートフィールドを追加して、の定義を完了します。  
+4. Complete the definition of `Prop1` by adding a private field to the class that stored the property value:  
   
      [!code-vb[VbVbalrOOP#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#102)]
   
-     プロパティ get アクセサー `pval`からの値を返します。  
+     Return the value of the `pval` from the property get accessor.  
   
      [!code-vb[VbVbalrOOP#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#103)]
   
-     プロパティセットアクセサーで`pval`の値を設定します。  
+     Set the value of `pval` in the property set accessor.  
   
      [!code-vb[VbVbalrOOP#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#104)]
   
-5. 次のコードを`Method1`追加して、の定義を完了します。  
+5. Complete the definition of `Method1` by adding the following code.  
   
      [!code-vb[VbVbalrOOP#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#105)]
   
-### <a name="to-test-the-implementation-of-the-interface"></a>インターフェイスの実装をテストするには
+### <a name="to-test-the-implementation-of-the-interface"></a>To test the implementation of the interface
   
-1. **ソリューションエクスプローラー**でプロジェクトのスタートアップフォームを右クリックし、 **[コードの表示]** をクリックします。 エディターに、スタートアップフォームのクラスが表示されます。 既定では、スタートアップフォームが呼び出さ`Form1`れます。  
+1. Right-click the startup form for your project in the **Solution Explorer**, and click **View Code**. The editor displays the class for your startup form. By default, the startup form is called `Form1`.  
   
-2. クラスに次`testInstance`のフィールドを追加します。 `Form1`  
+2. Add the following `testInstance` field to the `Form1` class:  
   
      [!code-vb[VbVbalrOOP#120](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#120)]
   
-     とし`testInstance` `WithEvents`て宣言する`Form1`ことで、クラスはそのイベントを処理できます。  
+     By declaring `testInstance` as `WithEvents`, the `Form1` class can handle its events.  
   
-3. 次のイベントハンドラーを`Form1`クラスに追加して、によって`testInstance`発生したイベントを処理します。  
+3. Add the following event handler to the `Form1` class to handle events raised by `testInstance`:  
   
      [!code-vb[VbVbalrOOP#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#106)]
   
-4. クラスにという`Test`名前のサブルーチンを追加して、実装クラスをテストします。 `Form1`  
+4. Add a subroutine named `Test` to the `Form1` class to test the implementation class:  
   
      [!code-vb[VbVbalrOOP#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#107)]
   
-     この`Test`プロシージャは、を実装`MyInterface`するクラスのインスタンスを作成し、そのインスタンス`testInstance`をフィールドに割り当て、プロパティを設定し、インターフェイスを介してメソッドを実行します。  
+     The `Test` procedure creates an instance of the class that implements `MyInterface`, assigns that instance to the `testInstance` field, sets a property, and runs a method through the interface.  
   
-5. スタートアップフォームの`Form1 Load`プロシージャから`Test`プロシージャを呼び出すコードを追加します。  
+5. Add code to call the `Test` procedure from the `Form1 Load` procedure of your startup form:  
   
      [!code-vb[VbVbalrOOP#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#108)]
   
-6. F5 キー `Test`を押してプロシージャを実行します。 "Prop1 が9に設定されました" というメッセージが表示されます。 [OK] をクリックすると、"Method1 の X パラメーターは 5" というメッセージが表示されます。 [OK] をクリックすると、"イベントをキャッチしたイベントハンドラー" というメッセージが表示されます。  
+6. Run the `Test` procedure by pressing F5. The message "Prop1 was set to 9" is displayed. After you click OK, the message "The X parameter for Method1 is 5" is displayed. Click OK, and the message "The event handler caught the event" is displayed.  
   
 ## <a name="see-also"></a>関連項目
 

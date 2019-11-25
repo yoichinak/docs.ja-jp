@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1fb65e1-7e19-4513-85b1-44f87c294d3e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0f6b38cefa1c9b36a660559c1d97fc88f7dbddc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e73c95d8c720ed3263d6a66c48bdb5b5582eb686
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777754"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442183"
 ---
 # <a name="imetadatadispenserexfindassemblymodule-method"></a>IMetaDataDispenserEx::FindAssemblyModule メソッド
-このメソッドは実装されていません。 呼び出された場合、E_NOTIMPL を返します。  
+このメソッドは実装されていません。 If called, it returns E_NOTIMPL.  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,35 +42,35 @@ HRESULT FindAssemblyModule(
   
 ## <a name="parameters"></a>パラメーター  
  `szAppBase`  
- [in]使用されません。  
+ [in] Not used.  
   
  `szPrivateBin`  
- [in]使用されません。  
+ [in] Not used.  
   
  `szGlobalBin`  
- [in]使用されません。  
+ [in] Not used.  
   
  `szAssemblyName`  
- [in]モジュールの名前。  
+ [in] The name of the module.  
   
  `szModuleName`  
- [in]検索するアセンブリ。  
+ [in] The assembly to be found.  
   
  `szName`  
- [out]アセンブリの簡易名。  
+ [out] The simple name of the assembly.  
   
  `cchName`  
- [in]サイズ (バイト単位) の`szName`します。  
+ [in] The size, in bytes, of `szName`.  
   
  `pcName`  
- [out]実際に返される文字数`szName`します。  
+ [out] The number of characters actually returned in `szName`.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

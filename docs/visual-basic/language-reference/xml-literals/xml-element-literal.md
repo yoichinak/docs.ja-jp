@@ -1,5 +1,5 @@
 ---
-title: XML 要素リテラル (Visual Basic)
+title: XML 要素リテラル
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlLiteralElement
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 3431ad32809e1f15eb8473d5af7660367cca04de
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6d900ca6868cfffe6b0e5b349321a79c5716c46
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751953"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347027"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML 要素リテラル (Visual Basic)
 
-表すリテラル、<xref:System.Xml.Linq.XElement>オブジェクト。
+A literal that represents an <xref:System.Xml.Linq.XElement> object.
 
 ## <a name="syntax"></a>構文
 
@@ -31,70 +31,70 @@ ms.locfileid: "64751953"
 
 - `<`
 
-  必須。 開始要素タグが表示されます。
+  必須です。 Opens the starting element tag.
 
 - `name`
 
-  必須。 要素名 形式は、次のいずれかです。
+  必須です。 要素名 The format is one of the following:
 
-  - 要素名の形式のリテラル テキスト`[ePrefix:]eName`、場所。
+  - Literal text for the element name, of the form `[ePrefix:]eName`, where:
 
     |パーツ|説明|
     |---|---|
-    |`ePrefix`|省略可能です。 要素の XML 名前空間プレフィックス。 グローバル XML 名前空間で定義されている必要があります、`Imports`ファイルまたはプロジェクト レベル、またはこの要素または親要素で定義されているローカル XML 名前空間のステートメント。|
-    |`eName`|必須。 要素名 形式は、次のいずれかです。<br /><br /> リテラル テキスト。 参照してください[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。<br />形式の式を埋め込み`<%= eNameExp %>`します。 型`eNameExp`必要があります`String`または暗黙的に変換できる型<xref:System.Xml.Linq.XName>します。|
+    |`ePrefix`|省略可能です。 XML namespace prefix for the element. Must be a global XML namespace that is defined with an `Imports` statement in the file or at the project level, or a local XML namespace that is defined in this element or a parent element.|
+    |`eName`|必須です。 要素名 The format is one of the following:<br /><br /> - Literal text. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />- Embedded expression of the form `<%= eNameExp %>`. The type of `eNameExp` must be `String` or a type that is implicitly convertible to <xref:System.Xml.Linq.XName>.|
 
-  - 形式の式を埋め込む`<%= nameExp %>`します。 型`nameExp`あります`String`または型に暗黙的に変換<xref:System.Xml.Linq.XName>します。 埋め込み式は、要素の終了タグでは許可されません。
+  - Embedded expression of the form `<%= nameExp %>`. The type of `nameExp` must be `String` or a type implicitly convertible to <xref:System.Xml.Linq.XName>. An embedded expression is not allowed in a closing tag of an element.
 
 - `attributeList`
 
-  省略可能です。 属性の一覧は、リテラルで宣言します。
+  省略可能です。 List of attributes declared in the literal.
 
   `attribute [ attribute ... ]`
 
-  各`attribute`が次の構文のいずれか。
+  Each `attribute` has one of the following syntaxes:
 
-  - 属性を割り当てる、フォームの`[aPrefix:]aName=aValue`、場所。
+  - Attribute assignment, of the form `[aPrefix:]aName=aValue`, where:
 
     |パーツ|説明|
     |---|---|
-    |`aPrefix`|省略可能です。 属性の XML 名前空間プレフィックス。 グローバル XML 名前空間で定義されている必要があります、`Imports`ステートメント、またはこの要素または親要素で定義されているローカル XML 名前空間。|
-    |`aName`|必須。 属性の名前。 形式は、次のいずれかです。<br /><br /> リテラル テキスト。 参照してください[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。<br />形式の式を埋め込み`<%= aNameExp %>`します。 型`aNameExp`必要があります`String`または暗黙的に変換できる型<xref:System.Xml.Linq.XName>します。|
-    |`aValue`|省略可能です。 属性の値。 形式は、次のいずれかです。<br /><br /> 、引用符で囲まれているリテラル テキスト。<br />形式の式を埋め込み`<%= aValueExp %>`します。 任意の型を許可します。|
+    |`aPrefix`|省略可能です。 XML namespace prefix for the attribute. Must be a global XML namespace that is defined with an `Imports` statement, or a local XML namespace that is defined in this element or a parent element.|
+    |`aName`|必須です。 属性の名前。 The format is one of the following:<br /><br /> - Literal text. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />- Embedded expression of the form `<%= aNameExp %>`. The type of `aNameExp` must be `String` or a type that is implicitly convertible to <xref:System.Xml.Linq.XName>.|
+    |`aValue`|省略可能です。 Value of the attribute. The format is one of the following:<br /><br /> - Literal text, enclosed in quotation marks.<br />- Embedded expression of the form `<%= aValueExp %>`. Any type is allowed.|
 
-  - 形式の式を埋め込む`<%= aExp %>`します。
+  - Embedded expression of the form `<%= aExp %>`.
 
 - `/>`
 
-  省略可能です。 要素がコンテンツのない、空の要素であることを示します。
+  省略可能です。 Indicates that the element is an empty element, without content.
 
 - `>`
 
-  必須。 以降、または空要素タグを終了します。
+  必須です。 Ends the beginning or empty element tag.
 
 - `elementContents`
 
-  省略可能です。 要素のコンテンツ。
+  省略可能です。 Content of the element.
 
   `content [ content ... ]`
 
-  各`content`次のいずれかを指定できます。
+  Each `content` can be one of the following:
 
-  - リテラル テキスト。 内のすべての空白`elementContents`任意のリテラル テキストがある場合に重要になります。
+  - Literal text. All the white space in `elementContents` becomes significant if there is any literal text.
 
-  - 形式の式を埋め込む`<%= contentExp %>`します。
+  - Embedded expression of the form `<%= contentExp %>`.
 
-  - XML 要素リテラル。
+  - XML element literal.
 
-  - XML コメント リテラルです。 参照してください[XML コメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)します。
+  - XML comment literal. See [XML Comment Literal](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).
 
-  - XML 処理命令リテラル。 参照してください[XML 処理命令リテラル](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)します。
+  - XML processing instruction literal. See [XML Processing Instruction Literal](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).
 
-  - XML CDATA リテラル。 参照してください[XML CDATA リテラル](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)します。
+  - XML CDATA literal. See [XML CDATA Literal](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md).
 
 - `</[name]>`
 
-  省略可能です。 要素の終了タグを表します。 省略可能な`name`埋め込み式の結果がある場合に、パラメーターは使用できません。
+  省略可能です。 Represents the closing tag for the element. The optional `name` parameter is not allowed when it is the result of an embedded expression.
 
 ## <a name="return-value"></a>戻り値
 
@@ -102,30 +102,30 @@ ms.locfileid: "64751953"
 
 ## <a name="remarks"></a>Remarks
 
-作成する XML 要素リテラルの構文を使用する<xref:System.Xml.Linq.XElement>コード内のオブジェクト。
+You can use the XML element literal syntax to create <xref:System.Xml.Linq.XElement> objects in your code.
 
 > [!NOTE]
-> XML リテラルは、行継続文字を使用せず複数の行にまたがることができます。 この機能を使用すると、XML ドキュメントから内容をコピーして、Visual Basic プログラムに直接貼り付けることができます。
+> An XML literal can span multiple lines without using line continuation characters. This feature enables you to copy content from an XML document and paste it directly into a Visual Basic program.
 
-埋め込み式形式の`<%= exp %>`XML 要素リテラルに動的な情報を追加することを有効にします。 詳細については、次を参照してください。 [XML での埋め込み式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)します。
+Embedded expressions of the form `<%= exp %>` enable you to add dynamic information to an XML element literal. For more information, see [Embedded Expressions in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).
 
-Visual Basic コンパイラへの呼び出しにリテラル XML 要素に変換して、<xref:System.Xml.Linq.XElement.%23ctor%2A>コンス トラクターおよび、必要な場合、<xref:System.Xml.Linq.XAttribute.%23ctor%2A>コンス トラクター。
+The Visual Basic compiler converts the XML element literal into calls to the <xref:System.Xml.Linq.XElement.%23ctor%2A> constructor and, if it is required, the <xref:System.Xml.Linq.XAttribute.%23ctor%2A> constructor.
 
 ## <a name="xml-namespaces"></a>XML 名前空間
 
-XML 名前空間プレフィックスは、コードで何度も同じ名前空間の要素で XML リテラルを作成する必要がある場合に便利です。 使用して定義するグローバルの XML 名前空間プレフィックスを使用することができます、`Imports`ステートメント、またはローカルのプレフィックスは、使用して定義する、`xmlns:xmlPrefix="xmlNamespace"`属性構文。 詳細については、次を参照してください。 [Imports ステートメント (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)します。
+XML namespace prefixes are useful when you have to create XML literals with elements from the same namespace many times in code. You can use global XML namespace prefixes, which you define by using the `Imports` statement, or local prefixes, which you define by using the `xmlns:xmlPrefix="xmlNamespace"` attribute syntax. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
 
-XML 名前空間のスコープの規則に従ってローカル プレフィックスはグローバル プレフィックスに優先します。 ただし、XML リテラルには、XML 名前空間が定義されている場合はその名前空間は埋め込み式の中で表示される式を使用できません。 埋め込み式は、グローバルの XML 名前空間のみにアクセスできます。
+In accordance with the scoping rules for XML namespaces, local prefixes take precedence over global prefixes. However, if an XML literal defines an XML namespace, that namespace is not available to expressions that appear in an embedded expression. The embedded expression can access only the global XML namespace.
 
-Visual Basic コンパイラでは、各グローバル生成されたコード内の 1 つのローカルの名前空間定義への XML リテラルで使用される XML 名前空間に変換します。 使用されていないグローバルの XML 名前空間は、生成されたコードでは表示されません。
+The Visual Basic compiler converts each global XML namespace that is used by an XML literal into a one local namespace definition in the generated code. Global XML namespaces that are not used do not appear in the generated code.
 
 ## <a name="example"></a>例
 
-次の例では、2 つの入れ子になった空の要素を含む単純な XML 要素を作成する方法を示します。
+The following example shows how to create a simple XML element that has two nested empty elements.
 
 [!code-vb[VbXMLSamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#20)]
 
-例では、次のテキストが表示されます。 リテラルが空の要素の構造を維持することに注意してください。
+The example displays the following text. Notice that the literal preserves the structure of the empty elements.
 
 ```xml
 <outer>
@@ -136,7 +136,7 @@ Visual Basic コンパイラでは、各グローバル生成されたコード�
 
 ## <a name="example"></a>例
 
-次の例は、組み込み式を使用して、要素の名前を指定し、属性を作成する方法を示しています。
+The following example shows how to use embedded expressions to name an element and create attributes.
 
 [!code-vb[VbXMLSamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#21)]
 
@@ -148,7 +148,7 @@ Visual Basic コンパイラでは、各グローバル生成されたコード�
 
 ## <a name="example"></a>例
 
-次の例では、`ns` を名前空間プレフィックスとして宣言します。 XML リテラルを作成する名前空間のプレフィックスを使用し、要素の最終的なフォームを表示します。
+次の例では、`ns` を名前空間プレフィックスとして宣言します。 It then uses the prefix of the namespace to create an XML literal and displays the element's final form.
 
 [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]
 
@@ -163,7 +163,7 @@ Visual Basic コンパイラでは、各グローバル生成されたコード�
 </ns:outer>
 ```
 
-コンパイラが XML 名前空間のプレフィックス定義にグローバル XML 名前空間のプレフィックスを変換することに注意してください。 \<Ns:middle > 要素の XML 名前空間プレフィックスを再定義、 \<ns:inner1 > 要素。 ただし、 \<ns:inner2 > 要素で定義された名前空間を使用して、`Imports`ステートメント。
+Notice that the compiler converted the prefix of the global XML namespace into a prefix definition for the XML namespace. The \<ns:middle> element redefines the XML namespace prefix for the \<ns:inner1> element. However, the \<ns:inner2> element uses the namespace defined by the `Imports` statement.
 
 ## <a name="see-also"></a>関連項目
 

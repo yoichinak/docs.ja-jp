@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60600178-c2b5-4cab-b3a5-f0f61acebaf1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5d8bc90cc07c2390cc83860b8009a3705f927e80
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 134a89d62a0fc455a9579de1e577103f1fe6abcf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776663"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449126"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL メソッド
-このドキュメントの uniform resource locator (URL) を返します。  
+Returns the uniform resource locator (URL) for this document.  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +39,13 @@ HRESULT GetURL(
  [入力] `szURL` バッファーのサイズ (文字単位)。  
   
  `pcchUrl`  
- [out]終端の null を含む URL のサイズを受け取る変数へのポインター。  
+ [out] A pointer to a variable that receives the size of the URL, including the null termination.  
   
  `szUrl`  
- [out]URL を保持するバッファー。  
+ [out] The buffer containing the URL.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、エラー コード。  
+ S_OK if the method succeeds; otherwise, an error code.  
   
 ## <a name="see-also"></a>関連項目
 

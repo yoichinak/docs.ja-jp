@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01837955-ce1e-4068-b338-fd473bd77d1d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4d8829c9cb2818eafe98809c9a0d5fd8109d076
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea7605e062eb77e0488b3a9561c4d83be16fa7d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778826"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436714"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps メソッド
-関連付けられているメタデータを取得、<xref:System.Type>指定した TypeRef トークンによって参照されています。  
+Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,26 +39,26 @@ HRESULT GetTypeRefProps (
   
 ## <a name="parameters"></a>パラメーター  
  `tr`  
- [in]メタデータを返す型を表す TypeRef トークンです。  
+ [in] The TypeRef token that represents the type to return metadata for.  
   
  `ptkResolutionScope`  
- [out]これで、参照が行われるスコープへのポインター。 この値は、AssemblyRef または ModuleRef トークンです。  
+ [out] A pointer to the scope in which the reference is made. This value is an AssemblyRef or ModuleRef token.  
   
  `szName`  
- [out]型名を含むバッファー。  
+ [out] A buffer containing the type name.  
   
  `cchName`  
- [in]要求されたサイズのワイド文字単位`szName`します。  
+ [in] The requested size in wide characters of `szName`.  
   
  `pchName`  
- [out]ワイド文字で返されるサイズ`szName`します。  
+ [out] The returned size in wide characters of `szName`.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

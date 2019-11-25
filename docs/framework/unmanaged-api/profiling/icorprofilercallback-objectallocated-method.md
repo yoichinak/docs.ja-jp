@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb412622-77cc-4abd-a2cd-c910fe8edd54
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 10a000fd98ad12dc39f8f8338485d6bb4093ee07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66643bbb8dbc914b2e0e48a7f0c87630fe95e5d3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782980"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445849"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated メソッド
-オブジェクトの割り当てられたヒープ内のメモリ プロファイラーに通知します。  
+Notifies the profiler that memory within the heap has been allocated for an object.  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,18 +35,18 @@ HRESULT ObjectAllocated(
   
 ## <a name="parameters"></a>パラメーター  
  `objectId`  
- [in]メモリが割り当てられたオブジェクトの ID。  
+ [in] The ID of the object for which memory was allocated.  
   
  `classId`  
- [in]オブジェクトがインスタンス クラスの ID。  
+ [in] The ID of the class of which the object is an instance.  
   
 ## <a name="remarks"></a>Remarks  
- `ObjectedAllocated`メソッドは、スタックまたはアンマネージ メモリからの割り当てに対しては呼び出されません。 `classId`パラメーターがまだ読み込まれていないマネージ コード内のクラスを参照できます。 プロファイラーはそのクラスのクラスのロード コールバックの直後に、`ObjectAllocated`コールバック。  
+ The `ObjectedAllocated` method is not called for allocations from either the stack or unmanaged memory. The `classId` parameter can refer to a class in managed code that has not been loaded yet. The profiler will receive a class load callback for that class immediately after the `ObjectAllocated` callback.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

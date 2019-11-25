@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8cc3b0c3-d97d-4f71-9e7d-ef2a92b4959a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 187a5e673457d2d1eebb60cc1795e9885426c6d3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8e9e08ac903423b2e121f22cc9e43a660ccfac7b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781953"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450088"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods メソッド
 指定した型のメソッドを表す MethodDef トークンを列挙します。  
@@ -41,33 +39,33 @@ HRESULT EnumMethods (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `cl`  
- [in]列挙するメソッドと型を表す TypeDef トークンです。  
+ [in] A TypeDef token representing the type with the methods to enumerate.  
   
  `rMethods`  
- [out]MethodDef トークンを格納する配列。  
+ [out] The array to store the MethodDef tokens.  
   
  `cMax`  
- [in]MethodDef の最大サイズ`rMethods`配列。  
+ [in] The maximum size of the MethodDef `rMethods` array.  
   
  `pcTokens`  
- [out]返される MethodDef トークン数`rMethods`します。  
+ [out] The number of MethodDef tokens returned in `rMethods`.  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` 正常に返されます。|  
-|`S_FALSE`|MethodDef トークンを列挙することはありません。 その場合は、`pcTokens`は 0 です。|  
+|`S_OK`|`EnumMethods` returned successfully.|  
+|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcTokens` is zero.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

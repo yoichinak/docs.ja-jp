@@ -1,17 +1,17 @@
 ---
-title: 非同期の戻り値の型 (Visual Basic)
+title: 非同期の戻り値の型
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: a5553070dd68a0bc3eaad1c5e8c000f7a31f8783
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 96d3a945a49a12f7c2d5d60e8ee59ce047a0bae6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423970"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347977"
 ---
-# <a name="async-return-types-visual-basic"></a>非同期の戻り値の型 (Visual Basic)
+# <a name="async-return-types-visual-basic"></a>Async Return Types (Visual Basic)
 
-非同期メソッドには、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>、および void の 3 とおりの戻り値の型があります。 Visual Basic では、void の戻り値の型は [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) プロシージャとして作成されます。 非同期メソッドの詳細については、「 [async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)」を参照してください。
+非同期メソッドには、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>、および void の 3 とおりの戻り値の型があります。 Visual Basic では、void の戻り値の型は [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) プロシージャとして作成されます。 For more information about async methods, see [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).
 
 それぞれの戻り値の型は、次のセクションの 1 つで確認でき、トピックの最後で 3 種類のすべてを使用する例を参照できます。
 
@@ -20,7 +20,7 @@ ms.locfileid: "73423970"
 
 ## <a name="BKMK_TaskTReturnType"></a>Task(T) 型
 
-<xref:System.Threading.Tasks.Task%601> 戻り値の型は、オペランドの型が `TResult`である[return](../../../../visual-basic/language-reference/statements/return-statement.md)ステートメントを含む非同期メソッドに使用されます。
+The <xref:System.Threading.Tasks.Task%601> return type is used for an async method that contains a [Return](../../../../visual-basic/language-reference/statements/return-statement.md) statement in which the operand has type `TResult`.
 
 次の例では、`TaskOfT_MethodAsync` 非同期メソッドには整数を返す return ステートメントが含まれます。 そのため、メソッド宣言では、戻り値の型を `Task(Of Integer)` と指定する必要があります。
 
@@ -47,7 +47,7 @@ Async Function TaskOfT_MethodAsync() As Task(Of Integer)
 End Function
 ```
 
-`TaskOfT_MethodAsync` が await 式の中から呼び出されると、await 式は `leisureHours` から返されるタスクに格納されている整数値 (`TaskOfT_MethodAsync` の値) を取得します。 Await 式の詳細については、「 [Await 演算子](../../../../visual-basic/language-reference/operators/await-operator.md)」を参照してください。
+`TaskOfT_MethodAsync` が await 式の中から呼び出されると、await 式は `leisureHours` から返されるタスクに格納されている整数値 (`TaskOfT_MethodAsync` の値) を取得します。 For more information about await expressions, see [Await Operator](../../../../visual-basic/language-reference/operators/await-operator.md).
 
 次のコードは、`TaskOfT_MethodAsync` メソッドを呼び出して待機します。 結果は `result1` 変数に割り当てられます。
 
@@ -83,7 +83,7 @@ textBox1.Text &= $"Value of resultTask.Result:  {integerTask.Result}" & vbCrLf
 
 ## <a name="BKMK_TaskReturnType"></a>Task 型
 
-return ステートメントを含まない非同期メソッド、またはオペランドを返さない return ステートメントを含む非同期メソッドは、通常は <xref:System.Threading.Tasks.Task> 戻り値の型を指定します。 このようなメソッドは、同期的に実行するように記述されている場合、[サブ](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)プロシージャになります。 非同期メソッドに戻り値の型 `Task` を使用した場合、呼び出し元のメソッドは `Await` 演算子を使って、呼び出された async のメソッドが終了するまで、呼び出し元の完了を中断します。
+return ステートメントを含まない非同期メソッド、またはオペランドを返さない return ステートメントを含む非同期メソッドは、通常は <xref:System.Threading.Tasks.Task> 戻り値の型を指定します。 Such methods would be [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedures if they were written to run synchronously. 非同期メソッドに戻り値の型 `Task` を使用した場合、呼び出し元のメソッドは `Await` 演算子を使って、呼び出された async のメソッドが終了するまで、呼び出し元の完了を中断します。
 
 次の例では、非同期メソッド `Task_MethodAsync` には、return ステートメントが含まれていません。 したがって、`Task` を待機させるメソッドに、戻り値の型 `Task_MethodAsync` を指定します。 `Task` 型の定義は、戻り値を格納する `Result` プロパティを含みません。
 
@@ -101,7 +101,7 @@ Async Function Task_MethodAsync() As Task
 End Function
 ```
 
-`Task_MethodAsync` は、同期 `Sub` または void を返すメソッドを呼び出す場合と同様に、await 式でなく、await ステートメントを使って呼び出され、待機されます。 この場合、`Await` 演算子を適用しても値は生成されません。
+`Task_MethodAsync` は、同期 `Sub` または void を返すメソッドを呼び出す場合と同様に、await 式でなく、await ステートメントを使って呼び出され、待機されます。 The application of an `Await` operator in this case doesn't produce a value.
 
 次のコードは、`Task_MethodAsync` メソッドを呼び出して待機します。
 
@@ -110,7 +110,7 @@ End Function
 Await Task_MethodAsync()
 ```
 
-前の <xref:System.Threading.Tasks.Task%601> 例と同様に、次のコードに示すように、`Task_MethodAsync` への呼び出しを `Await` 演算子のアプリケーションから分離することができます。 ただし `Task` は `Result` プロパティを持たないこと、また await 演算子が `Task` に適用されるときに値は生成されないことに注意します。
+As in the previous <xref:System.Threading.Tasks.Task%601> example, you can separate the call to `Task_MethodAsync` from the application of an `Await` operator, as the following code shows. ただし `Task` は `Result` プロパティを持たないこと、また await 演算子が `Task` に適用されるときに値は生成されないことに注意します。
 
 次のコードは `Task_MethodAsync` の呼び出しを `Task_MethodAsync` が返すタスクの待機から分離します。
 
@@ -126,7 +126,7 @@ Await simpleTask
 
 ## <a name="BKMK_VoidReturnType"></a> Void 型
 
-`Sub` プロシージャの主な用途は、(他の言語では void の戻り値の型と呼ばれる) 戻り値の型がないイベントハンドラーです。 void である戻り値は、void を返すメソッドをオーバーライドするためにも使われます。または「ファイア アンド フォーゲット (撃ち放し)」と分類されるアクティビティを実行するメソッドに対して使われます。 ただし、void を返す非同期メソッドを待機することはできないため、できる限り `Task` を返す必要があります。 このようなメソッドの呼び出し元は、呼び出した非同期メソッドが完了するのを待たずに、完了まで継続できる必要があります。また呼び出し元は、非同期メソッドが生成する値または例外とは無関係である必要があります。
+The primary use of `Sub` procedures is in event handlers, where there is no return type (referred to as a void return type in other languages). void である戻り値は、void を返すメソッドをオーバーライドするためにも使われます。または「ファイア アンド フォーゲット (撃ち放し)」と分類されるアクティビティを実行するメソッドに対して使われます。 ただし、void を返す非同期メソッドを待機することはできないため、できる限り `Task` を返す必要があります。 このようなメソッドの呼び出し元は、呼び出した非同期メソッドが完了するのを待たずに、完了まで継続できる必要があります。また呼び出し元は、非同期メソッドが生成する値または例外とは無関係である必要があります。
 
 void を返す非同期メソッドの呼び出し元は、メソッドがスローする例外をキャッチすることはできません。そのようなハンドルされない例外によって、アプリケーションが失敗する可能性が高くなります。 <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> を返す非同期メソッドで例外が発生すると、例外は返されたタスクに格納され、タスクが待機するときに再スローされます。 したがって、例外を生成する場合がある非同期メソッドは <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> の戻り値の型を持つこと、またメソッドの呼び出しが待機することを確認します。
 
@@ -161,7 +161,7 @@ End Sub
 
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
-3. **[インストール済み]** の **[テンプレート]** カテゴリで、 **[Visual Basic]** を選択し、 **[Windows]** を選択します。 プロジェクトの種類の一覧から **[WPF アプリケーション]** をクリックします。
+3. In the **Installed**, **Templates** category, choose **Visual Basic**, and then choose **Windows**. プロジェクトの種類の一覧から **[WPF アプリケーション]** をクリックします。
 
 4. プロジェクトの名前として「`AsyncReturnTypes`」と入力し、 **[OK]** をクリックします。
 
@@ -188,7 +188,7 @@ End Sub
 
      テキスト ボックスとボタンを含むシンプルなウィンドウが、MainWindow.xaml の **[デザイン]** ウィンドウに表示されます。
 
-7. **ソリューションエクスプローラー**で、mainwindow.xaml のショートカットメニューを開き、 **[コードの表示]** を選択します。
+7. In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.
 
 8. MainWindow.xaml.vb のコードを次のコードに置き換えます。
 
@@ -279,7 +279,7 @@ End Sub
 
 9. F5 キーを押してプログラムを実行し、 **[Start]** を複数回クリックします。
 
-     次の出力が表示されます。
+     The following output should appear:
 
     ```console
     Application can continue working while the Task<T> runs. . . .

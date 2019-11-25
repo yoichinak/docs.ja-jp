@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0d65060-6f90-42a2-95cf-6ffb04352996
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 58fa2a6d34f1f3627378c1355a1a292b665899ee
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9dbbdcc9d0fb9f0a8d2a64edfa4a0ad92570933c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756412"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450010"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>IMetaDataImport::EnumSignatures メソッド
 現在のスコープ内のスタンドアロン シグネチャを表す Signature トークンを列挙します。  
@@ -40,33 +38,33 @@ HRESULT EnumSignatures (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rSignatures`  
- [out]署名トークンを格納するために使用する配列。  
+ [out] The array used to store the Signature tokens.  
   
  `cMax`  
  [in] `rSignatures` 配列の最大サイズ。  
   
  `pcSignatures`  
- [out]署名のトークンで返される数`rSignatures`します。  
+ [out] The number of Signature tokens returned in `rSignatures`.  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures` 正常に返されます。|  
-|`S_FALSE`|トークンを列挙することはありません。 その場合は、`pcSignatures`は 0 です。|  
+|`S_OK`|`EnumSignatures` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcSignatures` is zero.|  
   
 ## <a name="remarks"></a>Remarks  
- 署名トークンがによって作成された、 [imetadataemit::gettokenfromsig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md)メソッド。  
+ The Signature tokens are created by the [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) method.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: '方法: 複数のバージョン (Visual Basic)、プロシージャの定義します。'
+title: '方法 : プロシージャの複数のバージョンを定義する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -8,46 +8,46 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: fc7a8e18394b904f0c22a80f71dee091d4f786ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83e96e271f6613aa325d59a0ca2fce9fc69fe059
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863832"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350488"
 ---
-# <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>方法: 複数のバージョン (Visual Basic)、プロシージャの定義します。
-プロシージャを定義するには、複数のバージョンで*オーバー ロード*バージョンごとに同じ名前が別のパラメーター リストを使用しています。 オーバー ロードの目的では、名前で区別せずに密接に関連するいくつかのバージョンのプロシージャを定義します。  
+# <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>方法: プロシージャの複数のバージョンを定義する (Visual Basic)
+You can define a procedure in multiple versions by *overloading* it, using the same name but a different parameter list for each version. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name.  
   
- 詳細については、プロシージャのオーバーロード (Visual Basic)[に関するページを参照してください。  
+ 詳細については、「 [Procedure Overloading](./procedure-overloading.md)」を参照してください。  
   
-### <a name="to-define-multiple-versions-of-a-procedure"></a>プロシージャの複数のバージョンを定義するには  
+### <a name="to-define-multiple-versions-of-a-procedure"></a>To define multiple versions of a procedure  
   
-1. 書き込みを`Sub`または`Function`を定義する手順の各バージョンの宣言ステートメントです。 すべての宣言で同じプロシージャ名を使用します。  
+1. Write a `Sub` or `Function` declaration statement for each version of the procedure you want to define. Use the same procedure name in every declaration.  
   
-2. 前に、`Sub`または`Function`各宣言キーワード、[オーバー ロード](../../../../visual-basic/language-reference/modifiers/overloads.md)キーワード。 必要に応じて省略できます`Overloads`宣言のいずれかに含める場合は、宣言する必要がありますに追加するすべての宣言。  
+2. Precede the `Sub` or `Function` keyword in each declaration with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword. You can optionally omit `Overloads` in the declarations, but if you include it in any of the declarations, you must include it in every declaration.  
   
-3. 次の各宣言ステートメントには、呼び出し元のコードがそのバージョンのパラメーター リストに一致する引数を提供する特定のケースを処理するプロシージャのコードを記述します。 必要はありませんをテストするパラメーターの呼び出し元のコードが提供されています。 Visual Basic では、プロシージャの対応するバージョンに制御を渡します。  
+3. Following each declaration statement, write procedure code to handle the specific case where the calling code supplies arguments matching that version's parameter list. You do not have to test for which parameters the calling code has supplied. Visual Basic passes control to the matching version of your procedure.  
   
-4. プロシージャの各バージョンの終了、`End Sub`または`End Function`に応じてステートメント。  
+4. Terminate each version of the procedure with the `End Sub` or `End Function` statement as appropriate.  
   
 ## <a name="example"></a>例  
- 次の例では、定義、`Sub`顧客の残高に対してトランザクションをポストするプロシージャ。 使用して、`Overloads`キーワードを名前と、その他のアカウント番号での顧客を受け取ると、プロシージャの 2 つのバージョンを定義します。  
+ The following example defines a `Sub` procedure to post a transaction against a customer's balance. It uses the `Overloads` keyword to define two versions of the procedure, one that accepts the customer by name and the other by account number.  
   
  [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
- 呼び出し元のコードは、いずれか、顧客 id を取得できます、`String`または`Integer`、いずれの場合も同じステートメントの呼び出しを使用します。  
+ The calling code can obtain the customer identification as either a `String` or an `Integer`, and then use the same calling statement in either case.  
   
- これらのバージョンを呼び出す方法については、`post`の手順を参照してください[方法。オーバー ロードされたプロシージャを呼び出す](./how-to-call-an-overloaded-procedure.md)します。  
+ For information on how to call these versions of the `post` procedure, see [How to: Call an Overloaded Procedure](./how-to-call-an-overloaded-procedure.md).  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- プロシージャ名が同じで別のパラメーター リストを持つ、オーバー ロードされたバージョンを確認します。  
+ Make sure each of your overloaded versions has the same procedure name but a different parameter list.  
   
 ## <a name="see-also"></a>関連項目
 
-- [プロシージャ](./index.md)
+- [手順](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [プロシージャのトラブルシューティング](./troubleshooting-procedures.md)
-- [方法: 省略可能なパラメーターを受け取るプロシージャをオーバー ロードします。](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [方法: 不特定数のパラメーターを受け取るプロシージャをオーバー ロードします。](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [方法 : 省略可能なパラメーターを受け取るプロシージャをオーバーロードする](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [方法 : 不特定数のパラメーターを受け取るプロシージャをオーバーロードする](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [プロシージャのオーバーロードに関する注意事項](./considerations-in-overloading-procedures.md)
 - [オーバーロードの解決](./overload-resolution.md)

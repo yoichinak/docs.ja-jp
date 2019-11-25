@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b34f985f199542612bcdb9b30ebae28649438e1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 52e1fc20fbe1d8709c21cacde926cf8bebb49425
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776768"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449203"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum メソッド
 チェックサムを取得します。  
@@ -38,16 +36,16 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>パラメーター  
  `cData`  
- [in]によって提供されるバッファーの長さ、`data`パラメーター  
+ [in] The length of the buffer provided by the `data` parameter  
   
  `pcData`  
- [out]サイズとチェックサムをバイト単位の長さ。  
+ [out] The size and length of the checksum, in bytes.  
   
  `data`  
- [out]チェックサムを受け取るバッファー。  
+ [out] The buffer that receives the checksum.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、エラー コード。  
+ S_OK if the method succeeds; otherwise, an error code.  
   
 ## <a name="see-also"></a>関連項目
 

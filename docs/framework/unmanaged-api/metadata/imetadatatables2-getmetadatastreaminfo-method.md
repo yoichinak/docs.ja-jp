@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b280627-cc74-4789-95da-1fefc966de05
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f559a269b48ceabfbe9c3a0cf3665458a2cf012
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 279e34689169d31ad89772e90155e7f50bdbac08
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769284"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426220"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo メソッド
-名前、サイズ、および指定したインデックス位置にあるメタデータのストリームの内容を取得します。  
+Gets the name, size, and contents of the metadata stream at the specified index.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,23 +38,23 @@ HRESULT GetMetaDataStreamInfo (
   
 ## <a name="parameters"></a>パラメーター  
  `ix`  
- [in]要求されたメタデータのストリームのインデックス。  
+ [in] The index of the requested metadata stream.  
   
  `ppchName`  
- [out]ストリームの名前へのポインター。  
+ [out] A pointer to the name of the stream.  
   
  `ppv`  
- [out]メタデータ ストリームへのポインター。  
+ [out] A pointer to the metadata stream.  
   
  `pcb`  
- [out]サイズ (バイト単位) の`ppv`します。  
+ [out] The size, in bytes, of `ppv`.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

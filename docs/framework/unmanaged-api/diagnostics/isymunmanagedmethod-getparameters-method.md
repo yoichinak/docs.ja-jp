@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a8074f1-facc-4a3f-bb9b-d6574fc2fc74
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 39ad47ae7659734191d380d8b3c29fb1a6de6afc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e8139a822c877e70731e18ae5a75b83e6b7578e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769427"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448954"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters メソッド
-このメソッドのパラメーターを取得します。 パラメーターは、メソッドのシグネチャで定義されている順序で返されます。  
+Gets the parameters for this method. The parameters are returned in the order in which they are defined within the method's signature.  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,16 +40,16 @@ HRESULT GetParameters(
  [in] `params` 配列のサイズ。  
   
  `pcParams`  
- [in]ポインターを`ULONG32`パラメーターを格納するために必要なバッファーのサイズを受け取る。  
+ [in] A pointer to a `ULONG32` that receives the size of the buffer that is required to contain the parameters.  
   
  `params`  
- [out]パラメーターを受け取るバッファーへのポインター。  
+ [out] A pointer to the buffer that receives the parameters.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

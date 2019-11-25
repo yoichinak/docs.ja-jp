@@ -1,5 +1,5 @@
 ---
-title: '#Const ディレクティブ (Visual Basic)'
+title: '#Const ディレクティブ'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,15 +15,16 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 031f35df24fd52aeeafcb7b4c0208806d7fc5fc4
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 278219edb1bb5d1c0bb015611d69cbe4ae70014b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774755"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343845"
 ---
 # <a name="const-directive"></a>#Const ディレクティブ
-Visual Basic の条件付きコンパイラ定数を定義します。  
+
+Defines conditional compiler constants for Visual Basic.  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,18 +33,21 @@ Visual Basic の条件付きコンパイラ定数を定義します。
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `constname`  
- 必須です。 定義されている定数の名前。  
+ 必須です。 Name of the constant being defined.  
   
  `expression`  
- 必須です。 リテラル、その他の条件付きコンパイラ定数、または `Is` を除く任意またはすべての算術演算子または論理演算子を含む任意の組み合わせ。  
+ 必須です。 Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.  
   
 ## <a name="remarks"></a>Remarks  
- 条件付きコンパイラ定数は、それらが表示されるファイルに対して常にプライベートです。 @No__t_0 ディレクティブを使用して、パブリックコンパイラ定数を作成することはできません。これらは、ユーザーインターフェイスまたは `/define` コンパイラオプションでのみ作成できます。  
+
+ Conditional compiler constants are always private to the file in which they appear. You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.  
   
- @No__t_0 では、条件付きコンパイラ定数とリテラルのみを使用できます。 @No__t_0 で定義された標準定数を使用すると、エラーが発生します。 逆に、`#Const` キーワードで定義された定数は、条件付きコンパイルに対してのみ使用できます。 定数を未定義にすることもできます。その場合、値は `Nothing` になります。  
+ You can use only conditional compiler constants and literals in `expression`. Using a standard constant defined with `Const` causes an error. Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation. Constants can also be undefined, in which case they have a value of `Nothing`.  
   
 ## <a name="example"></a>例  
+
  `#Const` ディレクティブの使用例を次に示します。  
   
  [!code-vb[VbVbalrConditionalComp#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#3)]  

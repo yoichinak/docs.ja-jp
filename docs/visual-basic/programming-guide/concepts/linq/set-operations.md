@@ -1,15 +1,15 @@
 ---
-title: 操作の設定 (Visual Basic)
+title: セット操作
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: fe8dbff00ecd6da9b3b0e9792e67422583a00180
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: fe9d910415f30fe672dc702f719fdefdb9c0b3d1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582921"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350614"
 ---
-# <a name="set-operations-visual-basic"></a>操作の設定 (Visual Basic)
+# <a name="set-operations-visual-basic"></a>Set Operations (Visual Basic)
 
 LINQ のセット操作は、同一または別個のコレクション (またはセット) に等しい要素があるかどうかに基づいて、結果を生成するクエリ操作です。
 
@@ -17,7 +17,7 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 
 ## <a name="methods"></a>メソッド
 
-|メソッド名|説明|Visual Basic クエリ式の構文|説明|
+|メソッド名|説明|Visual Basic Query Expression Syntax|説明|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |Distinct|コレクションから重複する値を削除します。|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|
 |除く|差集合 (一方のコレクションにだけ存在し、もう一方のコレクションには出現しない要素) を返します。|該当しない。|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|
@@ -36,7 +36,7 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 
 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> の動作を次の図に示します。 返されたシーケンスには、1 つ目の入力シーケンスのうち、2 つ目の入力シーケンスには存在しない要素が格納されています。
 
-![Except&#40;&#41;のアクションを示すグラフィック。](./media/set-operations/except-behavior-graphic.png "Except の動作を示します。")
+![Graphic showing the action of Except&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Shows the behavior of Except.")
 
 ### <a name="intersect"></a>交差
 
@@ -52,7 +52,7 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 
 ## <a name="query-expression-syntax-example"></a>クエリ式の構文例
 
-次の例では、LINQ クエリで `Distinct` 句を使用して、整数のリストから一意の数値を返します。
+The following example uses the `Distinct` clause in a LINQ query to return the unique numbers from a list of integers.
 
 [!code-vb[CsLINQSetOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQSetOps/VB/setops.vb#1)]
 
@@ -61,5 +61,5 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Distinct 句](../../../../visual-basic/language-reference/queries/distinct-clause.md)
-- [方法: 文字列コレクションを結合および比較する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
-- [方法: 2 つのリストの差集合を検索する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

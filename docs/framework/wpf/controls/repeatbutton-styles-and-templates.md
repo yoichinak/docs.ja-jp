@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ControlTemplate [WPF], RepeatButton
 - states [WPF], RepeatButton
 ms.assetid: fd340743-f44f-4990-9077-085301469670
-ms.openlocfilehash: 9c6a8ad0a954d244fb693e25965ab52dda114068
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8585e98536fd908daa11f21da395cab44924d612
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459852"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283426"
 ---
 # <a name="repeatbutton-styles-and-templates"></a>RepeatButton のスタイルとテンプレート
 
-このトピックでは、<xref:System.Windows.Controls.Primitives.RepeatButton> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md)」を参照してください。
+このトピックでは、<xref:System.Windows.Controls.Primitives.RepeatButton> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」を参照してください。
 
 ## <a name="repeatbutton-parts"></a>RepeatButton パーツ
 
@@ -28,7 +28,7 @@ ms.locfileid: "73459852"
 
 次の表は、<xref:System.Windows.Controls.Primitives.RepeatButton> コントロールの表示状態を示しています。
 
-|VisualState 名|VisualStateGroup 名|説明|
+|VisualState 名|VisualStateGroup 名|[説明]|
 |-|-|-|
 |標準|CommonStates|既定の状態です。|
 |MouseOver|CommonStates|マウス ポインターがコントロール上に配置されます。|
@@ -59,4 +59,4 @@ ms.locfileid: "73459852"
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
 - [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)
+- [コントロールのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)

@@ -1,5 +1,5 @@
 ---
-title: Auto (Visual Basic)
+title: 自動
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Auto
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: e4beb320b3aa0cadb790dd3ab92255496bc32f05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ea46e5f8b882bb986f23e792b240bad0c5be7a5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802705"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351617"
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
-Visual Basic で宣言されている外部プロシージャの外部名に基づいて、.NET Framework の規則に従って文字列をマーシャ リングする必要がありますを指定します。  
+Specifies that Visual Basic should marshal strings according to .NET Framework rules based on the external name of the external procedure being declared.  
   
- プロジェクトの外部で定義されたプロシージャを呼び出すときに、Visual Basic コンパイラには、プロシージャを正しく呼び出す必要があります情報へのアクセスはありません。 この情報には、プロシージャがある場所は、識別方法、その呼び出し元のシーケンスおよび戻り値の型が含まれます。 して、使用する文字列の文字セットします。 [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)外部プロシージャへの参照を作成し、このために必要な情報を提供します。  
+ When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it must have to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
   
- `charsetmodifier`パーツ、`Declare`ステートメントが外部プロシージャの呼び出し中に文字列をマーシャ リングするための文字セットの情報を提供します。 また、Visual Basic が外部プロシージャ名の外部のファイルを検索する方法も影響します。 `Auto`修飾子は、Visual Basic が .NET Framework の規則に従って文字列をマーシャ リングして、場合によって、実行時プラットフォームの設定の基本文字を決定する必要があります最初を検索する場合、外部プロシージャ名を変更する必要がありますを指定します。失敗します。 詳細についてを参照してください「の文字セット」 [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)します。  
+ The `charsetmodifier` part in the `Declare` statement supplies the character set information for marshaling strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Auto` modifier specifies that Visual Basic should marshal strings according to .NET Framework rules, and that it should determine the base character set of the run-time platform and possibly modify the external procedure name if the initial search fails. For more information, see "Character Sets" in [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md).  
   
- 文字セットに修飾子が指定されていない場合`Ansi`既定値です。  
+ If no character set modifier is specified, `Ansi` is the default.  
   
 ## <a name="remarks"></a>Remarks  
- `Auto`修飾子は、このコンテキストで使用できます。  
+ The `Auto` modifier can be used in this context:  
   
  [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>スマート デバイスの開発者向け注意事項  
- このキーワードはサポートされていません。  
+## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
+ This keyword is not supported.  
   
 ## <a name="see-also"></a>関連項目
 

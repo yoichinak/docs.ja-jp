@@ -1,5 +1,5 @@
 ---
-title: '方法: 長い修飾パスを使用してオブジェクトへのアクセスを高速化する (Visual Basic)'
+title: '方法 : 長い修飾パスをもつオブジェクトへのアクセス時間を短縮する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], accessing
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: a8e50a2ed04037b48091321dc0c9ac2ea1db35f4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 83670ae6af0904156b08398024658cf504b7663f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631101"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346814"
 ---
-# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>方法: 長い修飾パスを使用してオブジェクトへのアクセスを高速化する (Visual Basic)
+# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>方法: 長い修飾パスを持つオブジェクトに対するアクセス時間を短縮する (Visual Basic)
 
-複数のメソッドおよびプロパティの修飾パスを必要とするオブジェクトに頻繁にアクセスする場合は、修飾パスを繰り返さないことでコードを高速化できます。
+If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.
 
-修飾パスの繰り返しを回避するには、2つの方法があります。 オブジェクトは変数に割り当てることができます。または、 `With`...`End With`ブロック。
+There are two ways you can avoid repeating the qualification path. You can assign the object to a variable, or you can use it in a `With`...`End With` block.
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>変数に割り当てて、高い修飾オブジェクトへのアクセスを高速化するには
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>To speed up access to a heavily qualified object by assigning it to a variable
 
-1. 頻繁にアクセスするオブジェクトの型の変数を宣言します。 宣言の初期化部分に修飾パスを指定します。
+1. Declare a variable of the type of the object that you are accessing frequently. Specify the qualification path in the initialization part of the declaration.
 
     ```vb
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl
     ```
 
-2. オブジェクトのメンバーにアクセスするには、変数を使用します。
+2. Use the variable to access the object's members.
 
     ```vb
     ctrlActv.Text = "Test"
@@ -37,15 +37,15 @@ ms.locfileid: "68631101"
     ctrlActv.Show()
     ```
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>With... を使用して、高い修飾オブジェクトへのアクセスを高速化するには末尾をブロックにする
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>To speed up access to a heavily qualified object by using a With...End With block
 
-1. `With`ステートメントに修飾パスを配置します。
+1. Put the qualification path in a `With` statement.
 
     ```vb
     With someForm.ActiveForm.ActiveControl
     ```
 
-2. ステートメントの`With` `End With`前に、ブロック内のオブジェクトのメンバーにアクセスします。
+2. Access the object's members inside the `With` block, before the `End With` statement.
 
     ```vb
         .Text = "Test"

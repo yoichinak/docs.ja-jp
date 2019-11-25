@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d64a1ef21cd4fa4224609c7cd415c1611313769
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5c81bc82e19bce658336e4860a61f2721e17423d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777551"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431692"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam メソッド
-指定したトークンによって参照されるメソッドの指定したシグネチャを持つパラメーターの定義を作成し、そのパラメーターの定義のトークンを取得します。  
+Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,38 +42,38 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>パラメーター  
  `md`  
- [in]パラメーターが定義されているメソッドのトークン。  
+ [in] The token for the method whose parameter is being defined.  
   
  `ulParamSeq`  
- [in]パラメーターのシーケンス番号。  
+ [in] The parameter sequence number.  
   
  `szName`  
- [in]Unicode でパラメーターの名前。  
+ [in] The name of the parameter in Unicode.  
   
  `dwParamFlags`  
- [in]パラメーターのフラグ。 これは、ビットマスクの`CorParamAttr`値。  
+ [in] Flags for the parameter. This is a bitmask of `CorParamAttr` values.  
   
  `dwCPlusTypeFlag`  
- [in]`ELEMENT_TYPE_` *\** 定数の値。  
+ [in] `ELEMENT_TYPE_` *\** for the constant value.  
   
  `pValue`  
- [in]パラメーターの定数値。  
+ [in] The constant value for the parameter.  
   
  `cchValue`  
- [in]Unicode 文字で、サイズの`pValue`します。  
+ [in] The size, in Unicode characters, of `pValue`.  
   
  `ppd`  
- [out]`mdParamDef`に割り当てられたトークン。  
+ [out] The `mdParamDef` token assigned.  
   
 ## <a name="remarks"></a>Remarks  
- シーケンスの値で`ulParamSeq`パラメーターの 1 から始まります。 戻り値は、シーケンス番号は 0 です。  
+ The sequence values in `ulParamSeq` begin with 1 for parameters. A return value has a sequence number of 0.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

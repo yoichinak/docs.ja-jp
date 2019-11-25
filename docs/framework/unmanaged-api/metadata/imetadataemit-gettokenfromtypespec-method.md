@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7de6447a-a751-49d8-87e2-951cee77b536
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85b0edc81a9a861a3eed6a7bc3ffc1ed1db37403
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e73160fb1927560ad381dbb85d03796296ba9a4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770736"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434291"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>IMetaDataEmit::GetTokenFromTypeSpec メソッド
-指定したメタデータ シグネチャを持つ型のメタデータ トークンを取得します。  
+Gets a metadata token for the type with the specified metadata signature.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,20 +37,20 @@ HRESULT GetTokenFromTypeSpec (
   
 ## <a name="parameters"></a>パラメーター  
  `pvSig`  
- [in]定義されている署名します。  
+ [in] The signature being defined.  
   
  `cbSig`  
- [in]内のバイト数`pvSig`します。  
+ [in] The count of bytes in `pvSig`.  
   
  `ptypespec`  
- [out]`mdTypeSpec`に割り当てられたトークン。  
+ [out] The `mdTypeSpec` token assigned.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

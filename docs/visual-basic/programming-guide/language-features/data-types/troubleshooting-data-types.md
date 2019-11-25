@@ -1,5 +1,5 @@
 ---
-title: データ型のトラブルシューティング (Visual Basic)
+title: データ型のトラブルシューティング
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Char data type [Visual Basic], converting
@@ -19,116 +19,116 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 2bef3069c2788f435831dceab227f4ab9f422e73
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 63b2513e420320742bf7e25314743f08404f46a7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583092"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350513"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>データ型のトラブルシューティング (Visual Basic)
 
-このページでは、組み込みデータ型に対して操作を実行するときに発生する可能性がある一般的な問題をいくつか示します。
+This page lists some common problems that can occur when you perform operations on intrinsic data types.
 
-## <a name="floating-point-expressions-do-not-compare-as-equal"></a>浮動小数点式は等しいと比較されません
+## <a name="floating-point-expressions-do-not-compare-as-equal"></a>Floating-Point Expressions Do Not Compare as Equal
 
-浮動小数点数 ([1 つのデータ型](../../../../visual-basic/language-reference/data-types/single-data-type.md)と[Double データ型](../../../../visual-basic/language-reference/data-types/double-data-type.md)) を使用する場合は、それらがバイナリの分数として格納されていることに注意してください。 これは、バイナリの分数ではない数量 (k と n は整数) の正確な表現を保持できないことを意味します。 たとえば、0.5 (= 1/2) と 0.3125 (= 5/16) は正確な値として保持できます。一方、0.2 (= 1/5) と 0.3 (= 3/10) は概算のみ可能です。
+When you work with floating-point numbers ([Single Data Type](../../../../visual-basic/language-reference/data-types/single-data-type.md) and [Double Data Type](../../../../visual-basic/language-reference/data-types/double-data-type.md)), remember that they are stored as binary fractions. This means they cannot hold an exact representation of any quantity that is not a binary fraction (of the form k / (2 ^ n) where k and n are integers). For example, 0.5 (= 1/2) and 0.3125 (= 5/16) can be held as precise values, whereas 0.2 (= 1/5) and 0.3 (= 3/10) can be only approximations.
 
-このおける誤差により、浮動小数点値を操作するときに正確な結果を利用することはできません。 特に、理論的に等しい2つの値の表現は多少異なる場合があります。
+Because of this imprecision, you cannot rely on exact results when you operate on floating-point values. In particular, two values that are theoretically equal might have slightly different representations.
 
-| 浮動小数点の数量を比較するには |
+| To compare floating-point quantities |
 |---|
-|1. <xref:System> 名前空間の <xref:System.Math> クラスの <xref:System.Math.Abs%2A> メソッドを使用して、それらの差の絶対値を計算します。<br />2. 許容される最大の差を確認します。これにより、2つの数量を実際の目的のために均等にすることができます (差が大きくない場合)。<br />3. 差の絶対値と許容される差を比較します。|
+|1.  Calculate the absolute value of their difference by using the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class in the <xref:System> namespace.<br />2.  Determine an acceptable maximum difference, such that you can consider the two quantities to be equal for practical purposes if their difference is no larger.<br />3.  Compare the absolute value of the difference to the acceptable difference.|
 
-次の例は、2つの `Double` 値の誤った比較と正しい比較を示しています。
+The following example demonstrates both incorrect and correct comparison of two `Double` values.
 
 [!code-vb[VbVbalrDataTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#10)]
 
-前の例では、<xref:System.Double> 構造の <xref:System.Double.ToString%2A> メソッドを使用して、`CStr` キーワードが使用するよりも高い精度を指定できるようにしています。 既定値は15桁ですが、"G17" の形式は17桁に拡張されます。
+The previous example uses the <xref:System.Double.ToString%2A> method of the <xref:System.Double> structure so that it can specify better  precision than the `CStr` keyword uses. The default is 15 digits, but the "G17" format extends it to 17 digits.
 
-## <a name="mod-operator-does-not-return-accurate-result"></a>Mod 演算子が正確な結果を返しません
+## <a name="mod-operator-does-not-return-accurate-result"></a>Mod Operator Does Not Return Accurate Result
 
-浮動小数点型ストレージのおける誤差のため、少なくとも1つのオペランドが浮動小数点である場合、 [Mod 演算子](../../../../visual-basic/language-reference/operators/mod-operator.md)は予期しない結果を返すことがあります。
+Because of the imprecision of floating-point storage, the [Mod Operator](../../../../visual-basic/language-reference/operators/mod-operator.md) can return an unexpected result when at least one of the operands is floating-point.
 
-[Decimal データ型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)では、浮動小数点表現は使用されません。 @No__t_0 と `Double` では正確ではない多くの数値は `Decimal` では正確です (たとえば、0.2 と 0.3)。 浮動小数点型より `Decimal` では算術が遅くなりますが、精度を高めるためにパフォーマンスが低下する可能性があります。
+The [Decimal Data Type](../../../../visual-basic/language-reference/data-types/decimal-data-type.md) does not use floating-point representation. Many numbers that are inexact in `Single` and `Double` are exact in `Decimal` (for example 0.2 and 0.3). Although arithmetic is slower in `Decimal` than in floating-point, it might be worth the performance decrease to achieve better precision.
 
-|浮動小数点数値の剰余を求めるには|
+|To find the integer remainder of floating-point quantities|
 |---|
-|1. `Decimal` として変数を宣言します。<br />2. リテラルの型文字 `D` を使用して、`Long` データ型に対して値が大きすぎる場合に、リテラルを強制的に `Decimal` にします。|
+|1.  Declare variables as `Decimal`.<br />2.  Use the literal type character `D` to force literals to `Decimal`, in case their values are too large for the `Long` data type.|
 
-次の例は、浮動小数点オペランドのおける誤差の可能性を示しています。
+The following example demonstrates the potential imprecision of floating-point operands.
 
 [!code-vb[VbVbalrDataTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#11)]
 
-前の例では、<xref:System.Double> 構造の <xref:System.Double.ToString%2A> メソッドを使用して、`CStr` キーワードが使用するよりも高い精度を指定できるようにしています。 既定値は15桁ですが、"G17" の形式は17桁に拡張されます。
+The previous example uses the <xref:System.Double.ToString%2A> method of the <xref:System.Double> structure so that it can specify better precision than the `CStr` keyword uses. The default is 15 digits, but the "G17" format extends it to 17 digits.
 
-@No__t_0 が `Double` ので、0.2 の値は、0.20000000000000001 の値が格納されている無限の連続するバイナリ部分です。 2\.0 をこの数量で割ると、9.9999999999999995 が0.19999999999999991 になります。
+Because `zeroPointTwo` is `Double`, its value for 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001. Dividing 2.0 by this quantity yields 9.9999999999999995 with a remainder of 0.19999999999999991.
 
-@No__t_0 の式では、リテラルの型文字 `D` によって両方のオペランドの `Decimal` が強制され、0.2 の正確な表現が使用されます。 したがって、`Mod` 演算子により、0.0 の予想される剰余が得られます。
+In the expression for `decimalRemainder`, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation. Therefore the `Mod` operator yields the expected remainder of 0.0.
 
-@No__t_0 を `Decimal` として宣言するのは十分ではないことに注意してください。 また、リテラルを強制的に `Decimal` するか、`Double` を既定で使用し、`decimalRemainder` は `doubleRemainder` と同じ不正確な値を受け取る必要があります。
+Note that it is not sufficient to declare `decimalRemainder` as `Decimal`. You must also force the literals to `Decimal`, or they use `Double` by default and `decimalRemainder` receives the same inaccurate value as `doubleRemainder`.
 
-## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>ブール型は数値型に正確に変換されません
+## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boolean Type Does Not Convert to Numeric Type Accurately
 
-[ブールデータ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)の値は数値として格納されず、格納されている値は数値と等価であるとは見なされません。 以前のバージョンとの互換性のために、Visual Basic では、`Boolean` と数値型の間で変換を行うための変換キーワード ([CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)、`CBool`、`CInt` など) が用意されています。 ただし、その他の言語では、.NET Framework メソッドと同様に、これらの変換が異なる方法で実行されることがあります。
+[Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) values are not stored as numbers, and the stored values are not intended to be equivalent to numbers. For compatibility with earlier versions, Visual Basic provides conversion keywords ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, and so on) to convert between `Boolean` and numeric types. However, other languages sometimes perform these conversions differently, as do the .NET Framework methods.
 
-@No__t_0 と `False` の等価の数値に依存するコードを記述することは避けてください。 可能な限り、`Boolean` 変数の使用は、設計対象の論理値に制限する必要があります。 @No__t_0 値と数値を混在させる必要がある場合は、選択した変換方法を理解していることを確認してください。
+You should never write code that relies on equivalent numeric values for `True` and `False`. Whenever possible, you should restrict usage of `Boolean` variables to the logical values for which they are designed. If you must mix `Boolean` and numeric values, make sure that you understand the conversion method that you select.
 
-### <a name="conversion-in-visual-basic"></a>Visual Basic での変換
+### <a name="conversion-in-visual-basic"></a>Conversion in Visual Basic
 
-@No__t_0 または `CBool` の変換キーワードを使用して数値データ型を `Boolean` に変換すると、0が `False` になり、その他のすべての値が `True` になります。 変換キーワードを使用して `Boolean` 値を数値型に変換すると、`False` は0になり `True` は-1 になります。
+When you use the `CType` or `CBool` conversion keywords to convert numeric data types to `Boolean`, 0 becomes `False` and all other values become `True`. When you convert `Boolean` values to numeric types by using the conversion keywords, `False` becomes 0 and `True` becomes -1.
 
-### <a name="conversion-in-the-framework"></a>フレームワークでの変換
+### <a name="conversion-in-the-framework"></a>Conversion in the Framework
 
-@No__t_2 名前空間の <xref:System.Convert> クラスの <xref:System.Convert.ToInt32%2A> メソッドは、`True` を + 1 に変換します。
+The <xref:System.Convert.ToInt32%2A> method of the <xref:System.Convert> class in the <xref:System> namespace converts `True` to +1.
 
-@No__t_0 値を数値データ型に変換する必要がある場合は、使用する変換方法に注意してください。
+If you must convert a `Boolean` value to a numeric data type, be careful about which conversion method you use.
 
-## <a name="character-literal-generates-compiler-error"></a>文字リテラルによってコンパイラエラーが生成される
+## <a name="character-literal-generates-compiler-error"></a>Character Literal Generates Compiler Error
 
-型文字が存在しない場合、Visual Basic はリテラルの既定のデータ型を想定します。 引用符 (`" "`) で囲まれた文字リテラルの既定の型は `String` です。
+In the absence of any type characters, Visual Basic assumes default data types for literals. The default type for a character literal — enclosed in quotation marks (`" "`) — is `String`.
 
-@No__t_0 データ型が[Char データ型](../../../../visual-basic/language-reference/data-types/char-data-type.md)に拡大変換されません。 つまり、`Char` 変数にリテラルを割り当てる場合は、縮小変換を行うか、リテラルを `Char` 型に強制する必要があります。
+The `String` data type does not widen to the [Char Data Type](../../../../visual-basic/language-reference/data-types/char-data-type.md). This means that if you want to assign a literal to a `Char` variable, you must either make a narrowing conversion or force the literal to the `Char` type.
 
-|変数または定数に代入する Char リテラルを作成するには|
+|To create a Char literal to assign to a variable or constant|
 |---|
-|1. 変数または定数を `Char` として宣言します。<br />2. 文字の値を引用符で囲みます (`" "`)。<br />3. リテラルを強制的に `Char` するには、リテラルの型文字 `C` で終わりの二重引用符に従います。 これは、型チェックスイッチ ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) が `On` であり、どのような場合でも望ましい場合に必要です。|
+|1.  Declare the variable or constant as `Char`.<br />2.  Enclose the character value in quotation marks (`" "`).<br />3.  Follow the closing double quotation mark with the literal type character `C` to force the literal to `Char`. This is necessary if the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On`, and it is desirable in any case.|
 
-次の例では、`Char` 変数へのリテラルの正常な割り当てと成功した代入の両方を示します。
+The following example demonstrates both unsuccessful and successful assignments of a literal to a `Char` variable.
 
 [!code-vb[VbVbalrDataTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#12)]
 
-実行時に失敗する可能性があるため、縮小変換の使用には常にリスクがあります。 たとえば、`String` 値に複数の文字が含まれている場合、`String` から `Char` への変換は失敗する可能性があります。 そのため、`C` 型文字を使用する方が適切なプログラミングです。
+There is always a risk in using narrowing conversions, because they can fail at run time. For example, a conversion from `String` to `Char` can fail if the `String` value contains more than one character. Therefore, it is better programming to use the `C` type character.
 
-## <a name="string-conversion-fails-at-run-time"></a>実行時に文字列変換が失敗する
+## <a name="string-conversion-fails-at-run-time"></a>String Conversion Fails at Run Time
 
-[文字列データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)は、非常に多くの拡大変換に関与します。 `String` 自体と `Object` にのみ拡大変換され、`Char` と `Char()` (`Char` 配列) のみが `String` に拡大変換されます。 これは、`String` の変数と定数に、他のデータ型に含めることができない値が含まれている可能性があるためです。
+The [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) participates in very few widening conversions. `String` widens only to itself and `Object`, and only `Char` and `Char()` (a `Char` array) widen to `String`. This is because `String` variables and constants can contain values that other data types cannot contain.
 
-型チェックスイッチ ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) が `On` 場合、コンパイラは暗黙的な縮小変換をすべて許可しません。 これには、`String` に関係するものも含まれます。 コードでは、`CStr` や[CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)などの変換キーワードを使用して、変換を試行するように .NET Framework に指示することもできます。
+When the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On`, the compiler disallows all implicit narrowing conversions. This includes those involving `String`. Your code can still use conversion keywords such as `CStr` and [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md), which direct the .NET Framework to attempt the conversion.
 
 > [!NOTE]
-> @No__t_0 コレクション内の要素から loop コントロール変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、「」の「縮小変換」セクションを参照してください。 [次のステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)。
+> The narrowing-conversion error is suppressed for conversions from the elements in a `For Each…Next` collection to the loop control variable. For more information and examples, see the "Narrowing Conversions" section in [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).
 
-### <a name="narrowing-conversion-protection"></a>縮小変換保護
+### <a name="narrowing-conversion-protection"></a>Narrowing Conversion Protection
 
-縮小変換の欠点は、実行時にエラーが発生する可能性があることです。 たとえば、`String` 変数に "True" または "False" 以外のものが含まれている場合、その変数を `Boolean` に変換することはできません。 区切り文字が含まれている場合、任意の数値型への変換は失敗します。 @No__t_0 変数が、変換先の型で受け入れ可能な値を常に保持していることがわかっている場合を除き、変換を試行しないでください。
+The disadvantage of narrowing conversions is that they can fail at run time. For example, if a `String` variable contains anything other than "True" or "False," it cannot be converted to `Boolean`. If it contains punctuation characters, conversion to any numeric type fails. Unless you know that your `String` variable always holds values that the destination type can accept, you should not try a conversion.
 
-@No__t_0 から別のデータ型に変換する必要がある場合、最も安全な手順は、試行された変換を[try...キャッチ...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。 これにより、実行時エラーに対処できます。
+If you must convert from `String` to another data type, the safest procedure is to enclose the attempted conversion in the [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). This lets you deal with a run-time failure.
 
-### <a name="character-arrays"></a>文字配列
+### <a name="character-arrays"></a>Character Arrays
 
-1つの `Char` と `Char` 要素の配列の両方が `String` に拡大されます。 ただし、`String` は `Char()` に拡大されません。 @No__t_0 値を `Char` 配列に変換するには、<xref:System.String?displayProperty=nameWithType> クラスの <xref:System.String.ToCharArray%2A> メソッドを使用します。
+A single `Char` and an array of `Char` elements both widen to `String`. However, `String` does not widen to `Char()`. To convert a `String` value to a `Char` array, you can use the <xref:System.String.ToCharArray%2A> method of the <xref:System.String?displayProperty=nameWithType> class.
 
-### <a name="meaningless-values"></a>意味のない値
+### <a name="meaningless-values"></a>Meaningless Values
 
-一般に、`String` の値は他のデータ型では意味がなく、変換は非常に人為的で危険です。 可能な限り、`String` 変数の使用を、デザインされた文字シーケンスに制限する必要があります。 他の型の同等の値に依存するコードを記述することは避けてください。
+In general, `String` values are not meaningful in other data types, and conversion is highly artificial and dangerous. Whenever possible, you should restrict usage of `String` variables to the character sequences for which they are designed. You should never write code that relies on equivalent values in other types.
 
 ## <a name="see-also"></a>関連項目
 
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
 - [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [データ型の有効な使用方法](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

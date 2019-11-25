@@ -1,20 +1,20 @@
 ---
-title: 算術演算子 (Visual Basic)
+title: 算術演算子
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic], arithmetic
 - arithmetic operators [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 330178e0-a375-4742-b662-b3080c89fa54
-ms.openlocfilehash: da76f528ea6087fd973bd267c67952ce8687dc86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 747d5d8882b55f323f82202eac0eba449992be3d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608412"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350219"
 ---
 # <a name="arithmetic-operators-visual-basic"></a>算術演算子 (Visual Basic)
-Visual Basic で定義されている算術演算子を次に示します。  
+The following are the arithmetic operators defined in Visual Basic.  
   
  [^ 演算子](../../../visual-basic/language-reference/operators/exponentiation-operator.md)  
   
@@ -26,11 +26,11 @@ Visual Basic で定義されている算術演算子を次に示します。
   
  [Mod 演算子](../../../visual-basic/language-reference/operators/mod-operator.md)  
   
- [+ 演算子](../../../visual-basic/language-reference/operators/addition-operator.md)(単項および二項)  
+ [+ Operator](../../../visual-basic/language-reference/operators/addition-operator.md) (unary and binary)  
   
- [-演算子](../../../visual-basic/language-reference/operators/subtraction-operator.md)(単項および二項)  
+ [- Operator](../../../visual-basic/language-reference/operators/subtraction-operator.md) (unary and binary)  
   
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

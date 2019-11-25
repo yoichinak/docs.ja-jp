@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b5cff02-2005-44eb-a2bc-50214c4b0e1d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 80bff6f06851206ff01b861001c6ed7c90db7d1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a42198b1c89dbc47c6659564cf32738b683697b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758197"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439311"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished メソッド
-ジャストイン タイム (JIT) コンパイラが関数を再コンパイルを完了したことをプロファイラーに通知します。  
+Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,23 +36,23 @@ HRESULT ReJITCompilationFinished(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in]再コンパイルされた関数の ID。  
+ [in] The ID of the function that was recompiled.  
   
  `rejitId`  
  [in] JIT 再コンパイルされた関数のID。  
   
  `hrStatus`  
- [in]JIT 再コンパイルが成功したかどうかを示す値。  
+ [in] A value that indicates whether the JIT recompilation was successful.  
   
  `fIsSafeToBlock`  
- [in]`true`をブロックしていることにより、ランタイムでこのコールバックから返される呼び出し元のスレッドを待機するかを示す`false`をブロックしてに影響しないこと、実行時の操作を示します。  
+ [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.  
   
- 値`true`ランタイムは害を及ぼしませんが、プロファイリングの結果に影響を与えることができます。  
+ A value of `true` does not harm the runtime, but can affect the profiling results.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

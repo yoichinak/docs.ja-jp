@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9495624f7eca57a79518036937a5fb63d01d9c4b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: db3c3d38e0200f9849c84d7605a436816d56b813
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851209"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427428"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 関数
-現在実行中の関数が別の関数の末尾呼び出しを実行しようとしていることをプロファイラーに通知し、スタックフレームに関する情報を提供します。  
+Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,39 +36,39 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="parameters"></a>パラメーター  
  `funcId`  
- から末尾呼び出しを実行しようとしている現在実行中の関数の識別子。  
+ [in] The identifier of the currently executing function that is about to make a tail call.  
   
  `clientData`  
- から末尾呼び出しを実行しようとしている現在実行中の関数の、プロファイラーが以前に[Functionidmapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)を使用して指定した、再マップされた関数識別子。  
+ [in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.  
   
  `func`  
- からスタックフレームに関する情報を示す値。`COR_PRF_FRAME_INFO`  
+ [in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.  
   
- プロファイラーは、これを[ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)メソッドの実行エンジンに渡すことができる不透明なハンドルとして処理する必要があります。  
+ The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.  
   
 ## <a name="remarks"></a>Remarks  
- Tail 呼び出しの対象となる関数は、現在のスタックフレームを使用し、末尾呼び出しを行った関数の呼び出し元に直接戻ります。 つまり、 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)コールバックは、末尾呼び出しのターゲットである関数に対しては発行されません。  
+ The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call. This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.  
   
- 値が変更また`func`は破棄される可能性が`FunctionTailcall2`あるため、関数がを返すと、パラメーターの値が無効になります。  
+ The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.  
   
- `FunctionTailcall2`関数はコールバックであるため、実装する必要があります。 実装では、 `__declspec`(`naked`) ストレージクラス属性を使用する必要があります。  
+ The `FunctionTailcall2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- この関数を呼び出す前に、実行エンジンはレジスタを保存しません。  
+ The execution engine does not save any registers before calling this function.  
   
-- 入力時には、浮動小数点単位 (FPU) に含まれるすべてのレジスタを含め、使用するすべてのレジスタを保存する必要があります。  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 終了時に、呼び出し元によってプッシュされたすべてのパラメーターをポップして、スタックを復元する必要があります。  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- の`FunctionTailcall2`実装は、ガベージコレクションを遅延させるため、ブロックしないでください。 スタックがガベージコレクションに対応していない可能性があるため、この実装ではガベージコレクションを実行しないようにしてください。 ガベージコレクションが試行された場合、ランタイムはが`FunctionTailcall2`返されるまでブロックします。  
+ The implementation of `FunctionTailcall2` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.  
   
- また、関数`FunctionTailcall2`はマネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
+ Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Corprof.idl  
+ **Header:** CorProf.idl  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

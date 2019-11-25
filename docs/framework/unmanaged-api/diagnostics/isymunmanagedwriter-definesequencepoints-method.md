@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f07685351425a4685ac4a0c8e1b8e3c198b14187
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ba108bc234e566450bb019afc63acb4e75ad1f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777302"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427986"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints メソッド
-現在のメソッド内のシーケンス ポイントのグループを定義します。 各開始行と開始列は、メソッド内のステートメントの先頭を定義します。 それぞれの終了行と列の終了は、メソッド内のステートメントの末尾を定義します。 配列は、オフセットの昇順に並べ替える必要があります。 オフセットは常に (バイト単位)、メソッドの先頭から測定されます。  
+現在のメソッド内のシーケンス ポイントのグループを定義します。 Each starting line and starting column define the start of a statement within a method. Each ending line and ending column define the end of a statement within a method. The arrays should be sorted in increasing order of offsets. The offset is always measured from the start of the method, in bytes.  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,31 +40,31 @@ HRESULT DefineSequencePoints(
   
 ## <a name="parameters"></a>パラメーター  
  `document`  
- [in]シーケンス ポイントが定義されているドキュメント オブジェクト。  
+ [in] The document object for which the sequence points are being defined.  
   
  `spCount`  
- [in]A`ULONG32`のそれぞれのサイズを示す、 `offsets`、 `lines`、 `columns`、 `endLines`、および`endColumns`バッファー。  
+ [in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.  
   
  `offsets`  
- [in]シーケンス ポイントのオフセットは、メソッドの先頭から計測されます。  
+ [in] The offset of the sequence points measured from the beginning of the method.  
   
  `lines`  
- [in]シーケンス ポイントの開始行番号。  
+ [in] The starting line numbers of the sequence points.  
   
  `columns`  
- [in]シーケンス ポイントの開始列番号。  
+ [in] The starting column numbers of the sequence points.  
   
  `endLines`  
- [in]シーケンス ポイントの終了行番号。 このパラメーターは省略できます。  
+ [in] The ending line numbers of the sequence points. このパラメーターは省略できます。  
   
  `endColumns`  
- [in]シーケンス ポイントの終了列番号。 このパラメーターは省略できます。  
+ [in] The ending column numbers of the sequence points. このパラメーターは省略できます。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

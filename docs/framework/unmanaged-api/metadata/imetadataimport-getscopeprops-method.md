@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8ba42d2-d9fa-43cb-bbc0-f33e1e592cb6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 061c482a7e674fd425fe627c741a11b39864ba5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: af1c3d599c5280e584ffb842c96c70a7c3d4ed08
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778859"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436877"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>IMetaDataImport::GetScopeProps メソッド
 現在のメタデータ スコープにあるアセンブリまたはモジュールの名前、およびオプションでバージョン ID を取得します。  
@@ -40,26 +38,26 @@ HRESULT GetScopeProps (
   
 ## <a name="parameters"></a>パラメーター  
  `szName`  
- [out]アセンブリまたはモジュール名のバッファー。  
+ [out] A buffer for the assembly or module name.  
   
  `cchName`  
- [in]ワイド文字単位サイズ`szName`します。  
+ [in] The size in wide characters of `szName`.  
   
  `pchName`  
- [out]返されるワイド文字数`szName`します。  
+ [out] The number of wide characters returned in `szName`.  
   
  `pmvid`  
- [out] 省略可能アセンブリまたはモジュールのバージョンを一意に識別する GUID へのポインター。  
+ [out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.  
   
 ## <a name="remarks"></a>Remarks  
- [Imetadataemit::setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)メソッドを使用して、これらのプロパティを設定します。  
+ The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

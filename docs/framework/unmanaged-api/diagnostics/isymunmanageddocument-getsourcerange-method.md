@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20fefee7-1040-41ba-93dc-bd42f68b90c2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 981048c10be27900f011afeab55d1c5eb523f734
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64ecbb56ab32ac8381a4864acd5fd40741786d30
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776679"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449141"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange メソッド
-指定されたバッファーに埋め込みのソースの指定した範囲を返します。 バッファーは、ソースを保持するために十分な大きさである必要があります。  
+Returns the specified range of the embedded source into the given buffer. The buffer must be large enough to hold the source.  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,28 +41,28 @@ HRESULT GetSourceRange(
   
 ## <a name="parameters"></a>パラメーター  
  `startLine`  
- [in]現在のドキュメント内の開始行。  
+ [in] The starting line in the current document.  
   
  `startColumn`  
- [in]現在のドキュメント内の開始列。  
+ [in] The starting column in the current document.  
   
  `endLine`  
- [in]現在のドキュメントの最後の行。  
+ [in] The final line in the current document.  
   
  `endColumn`  
- [in]現在のドキュメントの最後の列。  
+ [in] The final column in the current document.  
   
  `cSourceBytes`  
- [in] \(バイト単位)、ソースのサイズ。  
+ [in] The size of the source, in bytes.  
   
  `pcSourceBytes`  
- [out]ソースのサイズを受け取る変数へのポインター。  
+ [out] A pointer to a variable that receives the source size.  
   
  `source`  
- [out]サイズと指定されたバイト数で、ソース ドキュメントの範囲の長さ。  
+ [out] The size and length of the specified range of the source document, in bytes.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。  
+ S_OK if the method succeeds.  
   
 ## <a name="see-also"></a>関連項目
 

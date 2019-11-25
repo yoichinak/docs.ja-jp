@@ -1,15 +1,15 @@
 ---
-title: 非同期アプリでの再入の処理 (Visual Basic)
+title: 非同期アプリにおける再入の処理
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 466ff3ba4cdb627143b3ffc988ae4a16348e6ca6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: cd8b43aa9b2373b5ce038e5007678778201f0746
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775537"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354266"
 ---
-# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>非同期アプリでの再入の処理 (Visual Basic)
+# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Handling Reentrancy in Async Apps (Visual Basic)
 
 非同期コードをアプリに含める場合は、再入を考慮し、場合によっては回避することをお勧めします。これは、完了前に非同期操作の再入力を参照します。 再入の可能性を特定して処理しないと、予期しない結果が発生する可能性があります。
 
@@ -17,7 +17,7 @@ ms.locfileid: "72775537"
 > この例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。
 
 > [!NOTE]
-> TLS (Transport Layer Security) バージョン1.2 は、アプリ開発で使用する最小バージョンになりました。 アプリが4.7 より前の .NET framework バージョンを対象としている場合は、[トランスポート層セキュリティ (TLS) のベストプラクティス](../../../../framework/network-programming/tls.md)について、次の記事を参照してください .NET Framework 
+> 現在、アプリ開発で使用する最小バージョンは、トランスポート層セキュリティ (TLS) バージョン 1.2 です。 ご利用のアプリがバージョン 4.7 より前の .NET Framework を対象としている場合は、「[.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス](../../../../framework/network-programming/tls.md)」の記事を参照してください。 
 
 ## <a name="BKMK_RecognizingReentrancy"></a>再入を認識する
 
@@ -126,7 +126,7 @@ End Sub
 
 **[Start]** ボタンを無効にせず、有効の状態を保持できますが、ユーザーがボタンを再度クリックしたときに、実行中の処理を取り消し、最後に開始された処理を続行できます。
 
-キャンセルの詳細については、「[非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)」を参照してください。
+For more information about cancellation, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
 このシナリオを設定するには、「[例のアプリをレビューして実行する](#BKMD_SettingUpTheExample)」に用意されている基本コードを次のように変更します。 また、完成したアプリを「[Async Samples: Reentrancy in .NET Desktop Apps (非同期の例: .NET デスクトップ アプリでの再入)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」からダウンロードすることもできます。 このプロジェクトの名前は CancelAndRestart です。
 
@@ -139,7 +139,7 @@ End Sub
         Dim cts As CancellationTokenSource
     ```
 
-2. `StartButton_Click` で、処理が既に実行されているかどうかを確認します。 @No__t_0 の値が `Nothing` 場合、操作は既にアクティブになっていません。 値が `Nothing` ない場合、既に実行されている操作は取り消されます。
+2. `StartButton_Click` で、処理が既に実行されているかどうかを確認します。 If the value of `cts` is `Nothing`, no operation is already active. If the value isn't `Nothing`, the operation that is already running is canceled.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -156,7 +156,7 @@ End Sub
     cts = newCTS
     ```
 
-4. @No__t_0 の最後に、現在のプロセスが完了したので、`cts` の値を `Nothing` に戻します。
+4. At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to `Nothing`.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -248,7 +248,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-このアプリの実行中に何度も **[開始]** ボタンをクリックすると、次の出力のような結果が生成されます。
+If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output:
 
 ```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -516,7 +516,7 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- @No__t_0 タスクは、最初に開始されたグループ A に対してのみ、`FinishOneGroupAsync` の開始時に `Nothing` ます。 `FinishOneGroupAsync` に達したとき、グループ A はまだ await 式を完了していません。 したがって、コントロールは `AccessTheWebAsync` に戻っておらず、`pendingWork` への最初の割り当ては発生していません。
+- The `pendingWork` task is `Nothing` at the start of `FinishOneGroupAsync` only for group A, which started first. `FinishOneGroupAsync` に達したとき、グループ A はまだ await 式を完了していません。 したがって、コントロールは `AccessTheWebAsync` に戻っておらず、`pendingWork` への最初の割り当ては発生していません。
 
 - 次の 2 行は、出力に必ず同時に表示されます。 `StartButton_Click` のグループ操作が開始してから、グループのタスクが `pendingWork` に割り当てられるまでの間、コードが中断されることは決してありません。
 
@@ -560,11 +560,11 @@ End Function
 
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
-3. **[インストールされたテンプレート]** ペインで、 **[Visual Basic]** を展開し、 **[Windows]** を展開します。
+3. In the **Installed Templates** pane, expand **Visual Basic**, and then expand **Windows**.
 
 4. プロジェクトの種類の一覧の **[WPF アプリケーション]** をクリックします。
 
-5. プロジェクトに `WebsiteDownloadWPF` という名前を指定し、4.6 以降の .NET Framework バージョンを選択して、 **[OK]** ボタンをクリックします。
+5. プロジェクトに `WebsiteDownloadWPF` という名前を指定し、4.6 以降の .NET Framework のバージョンを選択して、 **[OK]** ボタンをクリックします。
 
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。
 
@@ -592,13 +592,13 @@ End Function
 
      テキスト ボックスとボタンを含む簡単なウィンドウが、MainWindow.xaml の**デザイン** ビューに表示されます。
 
-8. **ソリューションエクスプローラー**で、 **[参照]** を右クリックし、 **[参照の追加]** を選択します。
+8. **ソリューション エクスプローラー**で **[参照]** を右クリックし、 **[参照の追加]** を選択します。
 
      まだ選択されていない場合は、<xref:System.Net.Http> の参照を追加します。
 
-9. **ソリューションエクスプローラー**で、mainwindow.xaml のショートカットメニューを開き、 **[コードの表示]** を選択します。
+9. In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.
 
-10. Mainwindow.xaml で、コードを次のコードに置き換えます。
+10. In MainWindow.xaml.vb , replace the code with the following code.
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.

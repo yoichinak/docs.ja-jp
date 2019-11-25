@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8bbd76d-a9ff-44f2-87a6-be052819da36
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6ffe25cae7122e65bed6aece7b0f6b2abe82c1eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1149298b4c5e521b37aae6ec48d463f395f18ae3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779296"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439557"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>ICorProfilerCallback2::ThreadNameChanged メソッド
-スレッドの名前が変更されたことをコード プロファイラーに通知します。  
+Notifies the code profiler that the name of a thread has changed.  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,18 +36,18 @@ HRESULT ThreadNameChanged(
   
 ## <a name="parameters"></a>パラメーター  
  `threadId`  
- [in]スレッドの ID。  
+ [in] The ID of the thread.  
   
  `cchName`  
- [in]スレッドの新しい名前の長さ。  
+ [in] The length of the new name of the thread.  
   
  `name`  
- [in]スレッドの新しい名前。 名前が null で終了していません。  
+ [in] The new name of the thread. The name is not null-terminated.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

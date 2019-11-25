@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e707abb-f905-4568-9356-12aa21d1b11c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b1406c68f1f6abff4d140b131f5f630d0fd767e1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4dd104805d547613315335bc9c95b5c60a9cab14
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787687"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446687"
 ---
 # <a name="addfile-method"></a>AddFile メソッド
-アセンブリにファイルを追加します。 は、バインドされていないモジュールを作成するためにも使用できます。  
+Adds files to the assembly. Can also be used to create unbound modules.  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,25 +39,25 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- 補強するアセンブリの一意の ID。  
+ Unique ID of the assembly to be augmented.  
   
  `pszFilename`  
- 追加するファイルの完全修飾名。  
+ Fully qualified name of file to be added.  
   
  `dwFlags`  
- `ffContainsNoMetaData` や`ffWriteable`などの com + filedef フラグ。 `dwFlags`は、[メソッド](../metadata/imetadataassemblyemit-definefile-method.md)に渡されます。  
+ COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- 必要に応じて、メタデータを出力するために使用される[IMetaDataEmit インターフェイス](../metadata/imetadataemit-interface.md)インターフェイス。  
+ [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.  
   
  `pFileToken`  
- 追加されたファイルの一意の ID が格納される場所へのポインター。  
+ Pointer to where the unique ID of the added file will be stored.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合、S_OK を返します。  
+ Returns S_OK if the method succeeds.  
   
-## <a name="requirements"></a>必要条件  
- Alink. h が必要です。  
+## <a name="requirements"></a>［要件］  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>関連項目
 

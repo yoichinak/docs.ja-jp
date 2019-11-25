@@ -1,5 +1,5 @@
 ---
-title: New 演算子 (Visual Basic)
+title: new 演算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.new
@@ -11,35 +11,35 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: c0870f4b056658a22928769c369024cdda24f354
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 27b5b4516ef729045036c36fedc24b6c576a4f61
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799039"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348314"
 ---
 # <a name="new-operator-visual-basic"></a>New 演算子 (Visual Basic)
 
-では、新しいオブジェクトインスタンスを作成したり、型パラメーターにコンストラクター制約を指定したり、クラスコンストラクターとして `Sub` プロシージャを識別したりするための `New` 句が導入されています。
+Introduces a `New` clause to create a new object instance, specifies a constructor constraint on a type parameter, or identifies a `Sub` procedure as a class constructor.
 
 ## <a name="remarks"></a>Remarks
 
-宣言または代入ステートメントでは、`New` 句で、インスタンスを作成できる定義済みのクラスを指定する必要があります。 これは、クラスが、呼び出し元のコードがアクセスできる1つ以上のコンストラクターを公開する必要があることを意味します。
+In a declaration or assignment statement, a `New` clause must specify a defined class from which the instance can be created. This means that the class must expose one or more constructors that the calling code can access.
 
-`New` 句は、宣言ステートメントまたは代入ステートメントで使用できます。 ステートメントを実行すると、指定したクラスの適切なコンストラクターが呼び出され、指定した引数が渡されます。 次の例は、2つのコンストラクターを持つ `Customer` クラスのインスタンスを作成することによってこれを示しています。1つはパラメーターを取らず、もう1つは文字列パラメーターを受け取ります。
+You can use a `New` clause in a declaration statement or an assignment statement. When the statement runs, it calls the appropriate constructor of the specified class, passing any arguments you have supplied. The following example demonstrates this by creating instances of a `Customer` class that has two constructors, one that takes no parameters and one that takes a string parameter:
 
 [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]
 
-配列はクラスであるため、次の例に示すように、`New` 新しい配列インスタンスを作成できます。
+Since arrays are classes, `New` can create a new array instance, as shown in the following example:
 
 [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]
 
-新しいインスタンスを作成するためのメモリが不足している場合、共通言語ランタイム (CLR) は <xref:System.OutOfMemoryException> エラーをスローします。
+The common language runtime (CLR) throws an <xref:System.OutOfMemoryException> error if there is insufficient memory to create the new instance.
 
 > [!NOTE]
-> `New` キーワードは、指定された型がアクセス可能なパラメーターなしのコンストラクターを公開する必要があることを指定するために、型パラメーターリストでも使用されます。 型パラメーターと制約の詳細については、「 [Type List](../statements/type-list.md)」を参照してください。
+> The `New` keyword is also used in type parameter lists to specify that the supplied type must expose an accessible parameterless constructor. For more information about type parameters and constraints, see [Type List](../statements/type-list.md).
 
-クラスのコンストラクタープロシージャを作成するには、`Sub` プロシージャの名前を `New` キーワードに設定します。 詳細については、「[オブジェクトの有効期間: オブジェクトの作成方法と破棄方法](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)」を参照してください。
+To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword. For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 キーワード `New` は次のコンテキストで使用できます。
 
