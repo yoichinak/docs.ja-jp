@@ -1,5 +1,5 @@
 ---
-title: Visual Basic の連結演算子
+title: 連結演算子
 ms.date: 07/20/2015
 helpviewer_keywords:
 - '& operator [Visual Basic], concatenation'
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: 789478cafc4ed7506d34fb4198531d437683075d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f86245c649647be4e040a61083d8b93eee4d7422
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583293"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353689"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Visual Basic の連結演算子
 
@@ -32,9 +32,9 @@ Dim y As String = "Mic" + "ro" + "soft"
 
 ## <a name="differences-between-the-two-concatenation-operators"></a>2 つの連結演算子の相違点
 
-[+ 演算子](../../../../visual-basic/language-reference/operators/addition-operator.md)には、2つの数値を加算する主な目的があります。 ただし、数値オペランドを文字列オペランドに連結することもできます。 `+` 演算子は、一連の複雑な規則に従って、加算、連結、コンパイル エラーのシグナルの送信、ランタイム <xref:System.InvalidCastException> 例外のスローのどれを行うかを決定します。
+The [+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md) has the primary purpose of adding two numbers. ただし、数値オペランドを文字列オペランドに連結することもできます。 `+` 演算子は、一連の複雑な規則に従って、加算、連結、コンパイル エラーのシグナルの送信、ランタイム <xref:System.InvalidCastException> 例外のスローのどれを行うかを決定します。
 
-[& 演算子](../../../../visual-basic/language-reference/operators/concatenation-operator.md)は `String` オペランドに対してのみ定義され、`Option Strict` の設定に関係なく、常にオペランドを `String` に拡大変換します。 文字列の連結には `&` 演算子を使用することをお勧めします。この演算子は文字列専用として定義されているため、意図しない変換が発生する可能性を減らすことができます。
+The [& Operator](../../../../visual-basic/language-reference/operators/concatenation-operator.md) is defined only for `String` operands, and it always widens its operands to `String`, regardless of the setting of `Option Strict`. 文字列の連結には `&` 演算子を使用することをお勧めします。この演算子は文字列専用として定義されているため、意図しない変換が発生する可能性を減らすことができます。
 
 ## <a name="performance-string-and-stringbuilder"></a>パフォーマンス: 文字列と StringBuilder
 
@@ -43,7 +43,7 @@ Dim y As String = "Mic" + "ro" + "soft"
 ## <a name="see-also"></a>関連項目
 
 - [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Visual Basic の文字列操作メソッドの型](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
-- [Visual Basic の算術演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Visual Basic の比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Visual Basic の論理演算子とビット処理演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
+- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

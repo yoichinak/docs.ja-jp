@@ -1,5 +1,5 @@
 ---
-title: Option Strict ステートメント (Visual Basic)
+title: Option Strict Statement
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Strict
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: 8b7dfcfa394ed2c45adec9661ee1ea5823435223
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a002526a107fdc6e8e02890d11db94a3d224c94b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775441"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353758"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
-暗黙的なデータ型変換を拡大変換のみに制限し、遅延バインディングを許可しません。また、`Object` 型になる暗黙の型指定を許可しません。  
+Restricts implicit data type conversions to only widening conversions, disallows late binding, and disallows implicit typing that results in an `Object` type.  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,11 +31,11 @@ Option Strict { On | Off }
   
 |用語|定義|  
 |---|---|  
-|`On`|省略可能です。 @No__t_0 チェックを有効にします。|  
-|`Off`|省略可能です。 @No__t_0 チェックを無効にします。|  
+|`On`|省略可能です。 Enables `Option Strict` checking.|  
+|`Off`|省略可能です。 Disables `Option Strict` checking.|  
   
 ## <a name="remarks"></a>Remarks  
- @No__t_0 または `Option Strict` がファイルに含まれている場合、次のような状況によってコンパイル時エラーが発生します。  
+ When `Option Strict On` or `Option Strict` appears in a file, the following conditions cause a compile-time error:  
   
 - 暗黙的な縮小変換  
   
@@ -44,77 +44,77 @@ Option Strict { On | Off }
 - 結果が `Object` 型となる暗黙の型指定  
   
 > [!NOTE]
-> [[コンパイル] ページ (プロジェクトデザイナー)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)で設定できる警告構成 (Visual Basic) には、コンパイル時エラーの原因となる3つの条件に対応する3つの設定があります。 これらの設定の使用方法の詳細については、このトピックの「 [IDE で警告構成を設定するに](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions)は」を参照してください。  
+> In the warning configurations that you can set on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), there are three settings that correspond to the three conditions that cause a compile-time error. For information about how to use these settings, see [To set warning configurations in the IDE](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) later in this topic.  
   
- 関連付けられている IDE 設定でこれらのエラーまたは警告をオンにしている場合でも、`Option Strict Off` ステートメントは、3つの条件すべてについてエラーおよび警告チェックをオフにします。 @No__t_0 ステートメントは、関連する IDE 設定でこれらのエラーまたは警告をオフにするように指定している場合でも、3つの条件すべてについてエラーおよび警告チェックをオンにします。  
+ The `Option Strict Off` statement turns off error and warning checking for all three conditions, even if the associated IDE settings specify to turn on these errors or warnings. The `Option Strict On` statement turns on error and warning checking for all three conditions, even if the associated IDE settings specify to turn off these errors or warnings.  
   
- 使用する場合、`Option Strict` ステートメントは、ファイル内の他のコードステートメントの前に記述する必要があります。  
+ If used, the `Option Strict` statement must appear before any other code statements in a file.  
   
- @No__t_0 を `On` に設定すると、Visual Basic では、すべてのプログラミング要素にデータ型が指定されているかどうかがチェックされます。 データ型は、明示的に指定することも、ローカル型推論を使用して指定することもできます。 次の理由から、すべてのプログラミング要素にデータ型を指定することをお勧めします。  
+ When you set `Option Strict` to `On`, Visual Basic checks that data types are specified for all programming elements. Data types can be specified explicitly, or specified by using local type inference. Specifying data types for all your programming elements is recommended, for the following reasons:  
   
-- これにより、変数とパラメーターの IntelliSense サポートが有効になります。 これにより、コードを入力するときに、プロパティとその他のメンバーを表示できます。  
+- It enables IntelliSense support for your variables and parameters. This enables you to see their properties and other members as you type code.  
   
-- これにより、コンパイラが型チェックを実行できるようになります。 型チェックを使用すると、型変換エラーのために実行時に失敗する可能性があるステートメントを見つけることができます。 また、これらのメソッドをサポートしていないオブジェクトに対するメソッドの呼び出しも識別します。  
+- It enables the compiler to perform type checking. Type checking helps you find statements that can fail at run time because of type conversion errors. It also identifies calls to methods on objects that do not support those methods.  
   
-- これにより、コードの実行速度が向上します。 その理由の1つは、プログラミング要素のデータ型を指定しない場合、Visual Basic コンパイラによって `Object` 型に割り当てられることです。 コンパイルされたコードは、`Object` とその他のデータ型との間で変換を行う必要があります。これにより、パフォーマンスが低下します。  
+- It speeds up the execution of code. One reason for this is that if you do not specify a data type for a programming element, the Visual Basic compiler assigns it the `Object` type. Compiled code might have to convert back and forth between `Object` and other data types, which reduces performance.  
   
-## <a name="implicit-narrowing-conversion-errors"></a>暗黙的な縮小変換エラー  
+## <a name="implicit-narrowing-conversion-errors"></a>Implicit Narrowing Conversion Errors  
  縮小変換する暗黙的なデータ型変換がある場合は、暗黙的な縮小変換エラーが発生します。  
   
- Visual Basic は、さまざまなデータ型を他のデータ型に変換できます。 データが失われる可能性があるのは、あるデータ型の値が、精度が低いか、容量が小さいデータ型に変換されたときです。 このような縮小変換が失敗した場合、実行時エラーが発生します。 `Option Strict` によって、これらの縮小変換のコンパイル時通知が確実に行われるため、回避できます。 詳細については、「[暗黙的な変換と明示的な変換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)」および「拡大変換[と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
+ Visual Basic can convert many data types to other data types. Data loss can occur when the value of one data type is converted to a data type that has less precision or a smaller capacity. A run-time error occurs if such a narrowing conversion fails. `Option Strict` ensures compile-time notification of these narrowing conversions so that you can avoid them. For more information, see [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) and [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
- エラーを発生させる可能性のある変換には、式で発生する暗黙的な変換が含まれます。 詳細については、以下のトピックを参照してください。  
+ Conversions that can cause errors include implicit conversions that occur in expressions. 詳細については、以下のトピックを参照してください。  
   
 - [+ 演算子](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
 - [+= 演算子](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
-- [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
-- [/= 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
 - [Char データ型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
- [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)を使用して文字列を連結する場合、文字列へのすべての変換は拡大されていると見なされます。 したがって、`Option Strict` がオンの場合でも、これらの変換では、暗黙的な縮小変換エラーは生成されません。  
+ When you concatenate strings by using the [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md), all conversions to the strings are considered to be widening. So these conversions do not generate an implicit narrowing conversion error, even if `Option Strict` is on.  
   
- 対応するパラメーターとは異なるデータ型の引数を持つメソッドを呼び出すと、`Option Strict` がオンになっていると、縮小変換によってコンパイル時エラーが発生します。 拡大変換または明示的な変換を使用すると、コンパイル時のエラーを回避できます。  
+ When you call a method that has an argument that has a data type different from the corresponding parameter, a narrowing conversion causes a compile-time error if `Option Strict` is on. You can avoid the compile-time error by using a widening conversion or an explicit conversion.  
   
- @No__t_0 コレクション内の要素から loop コントロール変数への変換では、コンパイル時に暗黙的な縮小変換エラーが抑制されます。 これは、`Option Strict` がオンになっている場合でも発生します。 詳細については、「」の「縮小変換」セクションを参照してください。 [次のステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
+ Implicit narrowing conversion errors are suppressed at compile-time for conversions from the elements in a `For Each…Next` collection to the loop control variable. This occurs even if `Option Strict` is on. For more information, see the "Narrowing Conversions" section in [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
-## <a name="late-binding-errors"></a>遅延バインディングエラー  
- `Object` 型として宣言された変数のプロパティまたはメソッドにオブジェクトを代入する場合は、そのオブジェクトは遅延バインディングされます。 詳細については、「[事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)」を参照してください。  
+## <a name="late-binding-errors"></a>Late Binding Errors  
+ `Object` 型として宣言された変数のプロパティまたはメソッドにオブジェクトを代入する場合は、そのオブジェクトは遅延バインディングされます。 For more information, see [Early and Late Binding](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
-## <a name="implicit-object-type-errors"></a>暗黙的なオブジェクト型のエラー  
- 適切な型が宣言された変数を推論できない場合は暗黙的なオブジェクトの型エラーが発生するため、`Object` の型が推論されます。 これは主に、`As` 句を使用せず、`Option Infer` をオフにして、`Dim` ステートメントを使用して変数を宣言した場合に発生します。 詳細については、「[オプションの推定ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)」および「 [Visual Basic 言語の仕様](../../../visual-basic/reference/language-specification/index.md)」を参照してください。  
+## <a name="implicit-object-type-errors"></a>Implicit Object Type Errors  
+ 適切な型が宣言された変数を推論できない場合は暗黙的なオブジェクトの型エラーが発生するため、`Object` の型が推論されます。 これは主に、`As` 句を使用せず、`Option Infer` をオフにして、`Dim` ステートメントを使用して変数を宣言した場合に発生します。 For more information, see [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) and the [Visual Basic Language Specification](../../../visual-basic/reference/language-specification/index.md).  
   
- メソッドパラメーターの場合、`Option Strict` がオフの場合、`As` 句は省略可能です。 ただし、いずれかのパラメーターが `As` 句を使用する場合は、すべてのパラメーターで使用する必要があります。 @No__t_0 が on の場合は、すべてのパラメーター定義に対して `As` 句が必要です。  
+ For method parameters, the `As` clause is optional if `Option Strict` is off. However, if any one parameter uses an `As` clause, they all must use it. If `Option Strict` is on, the `As` clause is required for every parameter definition.  
   
- @No__t_0 句を使用せずに変数を宣言し、それを `Nothing` に設定すると、変数の型は `Object` になります。 この場合、`Option Strict` がオンで `Option Infer` がオンになっていると、コンパイル時エラーは発生しません。 この例としては、`Dim something = Nothing` があります。  
+ If you declare a variable without using an `As` clause and set it to `Nothing`, the variable has a type of `Object`. No compile-time error occurs in this case when `Option Strict` is on and `Option Infer` is on. An example of this is `Dim something = Nothing`.  
   
 ### <a name="default-data-types-and-values"></a>既定のデータ型と値  
- 次の表では、 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)でデータ型と初期化子を指定するさまざまな組み合わせの結果について説明します。  
+ The following table describes the results of various combinations of specifying the data type and initializer in a [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
 |データ型が指定されているか|初期化子が指定されているか|例|結果|  
 |---|---|---|---|  
 |Ｘ|Ｘ|`Dim qty`|`Option Strict` がオフ (既定値) の場合、変数は `Nothing` に設定されます。<br /><br /> `Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
-|Ｘ|[はい]|`Dim qty = 5`|`Option Infer` がオン (既定値) の場合、変数は初期化子のデータ型になります。 「[ローカル型の推定](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)」を参照してください。<br /><br /> `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
-|[はい]|Ｘ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 詳細については、「 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)」を参照してください。|  
+|Ｘ|[はい]|`Dim qty = 5`|`Option Infer` がオン (既定値) の場合、変数は初期化子のデータ型になります。 See [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
+|[はい]|Ｘ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 For more information, see [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).|  
 |[はい]|[はい]|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|  
   
-## <a name="when-an-option-strict-statement-is-not-present"></a>Option Strict ステートメントが存在しない場合  
- ソースコードに `Option Strict` ステートメントが含まれていない場合、[[コンパイル] ページの [プロジェクトデザイナー] (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)の**Option strict**設定が使用されます。 [**コンパイル] ページ**には、エラーを生成する条件をさらに制御するための設定があります。  
+## <a name="when-an-option-strict-statement-is-not-present"></a>When an Option Strict Statement Is Not Present  
+ If the source code does not contain an `Option Strict` statement, the **Option strict** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. The **Compile Page** has settings that provide additional control over the conditions that generate an error.  
   
- コマンドラインコンパイラを使用している場合は、 [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)コンパイラオプションを使用して `Option Strict` の設定を指定できます。  
+ If you are using the command-line compiler, you can use the [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option to specify a setting for `Option Strict`.  
   
-### <a name="to-set-option-strict-in-the-ide"></a>IDE で Option Strict を設定するには  
+### <a name="to-set-option-strict-in-the-ide"></a>To set Option Strict in the IDE  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-2. **[コンパイル]** タブで、 **[Option Strict]** ボックスの値を設定します。  
+2. On the **Compile** tab, set the value in the **Option Strict** box.  
   
-### <a name="conditions"></a>IDE で警告の構成を設定するには  
- @No__t_1 ステートメントの代わりに [[コンパイル] ページ、プロジェクトデザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)を使用すると、エラーを生成する条件をさらに制御できます。 [**コンパイル] ページ**の **[警告の構成]** セクションには、`Option Strict` がオンのときにコンパイル時にエラーが発生する3つの条件に対応する設定があります。 これらの設定を次に示します。  
+### <a name="conditions"></a> To set warning configurations in the IDE  
+ When you use the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) instead of an `Option Strict` statement, you have additional control over the conditions that generate errors. The **Warning configurations** section of the **Compile Page** has settings that correspond to the three conditions that cause a compile-time error when `Option Strict` is on. これらの設定を次に示します。  
   
 - **暗黙的な変換**  
   
@@ -126,26 +126,26 @@ Option Strict { On | Off }
   
  各警告の構成設定を個別に **[なし]** 、 **[警告]** 、または **[エラー]** に変更することができます。 3 つの警告の構成設定がすべて **[エラー]** に設定されている場合、`Option strict` ボックスに `On` が表示されます。 3 つすべてが **[なし]** に設定されている場合、このボックスには `Off` が表示されます。 これらの設定のその他の組み合わせに対しては、 **(カスタム)** が表示されます。  
   
-### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>新しいプロジェクトの Option Strict default 設定を設定するには  
- プロジェクトを作成すると、 **[コンパイル]** タブの**option strict**設定が、 **[オプション]** ダイアログボックスの **[strict]** 設定に設定されます。  
+### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>To set the Option Strict default setting for new projects  
+ When you create a project, the **Option Strict** setting on the **Compile** tab is set to the **Option Strict** setting in the **Options** dialog box.  
   
- このダイアログボックスの `Option Strict` を設定するには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、 **[VISUAL BASIC の既定値]** をクリックします。 [VB の既定**値**] の初期の既定の設定は、`Off` です。  
+ To set `Option Strict` in this dialog box, on the **Tools** menu, click **Options**. **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、 **[VISUAL BASIC の既定値]** をクリックします。 The initial default setting in **VB Defaults** is `Off`.  
   
-### <a name="to-set-option-strict-on-the-command-line"></a>コマンドラインで Option Strict を設定するには  
- **Vbc.exe**コマンドに[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)コンパイラオプションを含めます。  
+### <a name="to-set-option-strict-on-the-command-line"></a>To set Option Strict on the command line  
+ Include the [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option in the **vbc** command.  
   
 ## <a name="example"></a>例  
- 次の例は、縮小変換である暗黙の型変換によって発生するコンパイル時のエラーを示しています。 このカテゴリのエラーは、[**コンパイル] ページ**の**暗黙の変換**条件に対応しています。  
+ The following examples demonstrate compile-time errors caused by implicit type conversions that are narrowing conversions. This category of errors corresponds to the **Implicit conversion** condition on the **Compile Page**.  
   
  [!code-vb[VbVbalrStatements#161](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#161)]  
   
 ## <a name="example"></a>例  
- 次の例は、遅延バインディングによって発生するコンパイル時のエラーを示しています。 このカテゴリのエラーは、遅延バインディングに対応しています。 **コンパイル ページ**の **実行時に呼び出しが失敗する可能性**があります。  
+ The following example demonstrates a compile-time error caused by late binding. This category of errors corresponds to the **Late binding; call could fail at run time** condition on the **Compile Page**.  
   
  [!code-vb[VbVbalrStatements#162](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#162)]  
   
 ## <a name="example"></a>例  
- 次の例は、暗黙的な型の `Object` で宣言された変数によって発生するエラーを示しています。 このカテゴリのエラーは、暗黙的な型に対応しています **。オブジェクト**は、**コンパイルページ**で条件を想定しています。  
+ The following examples demonstrate errors caused by variables that are declared with an implicit type of `Object`. This category of errors corresponds to the **Implicit type; object assumed** condition on the **Compile Page**.  
   
  [!code-vb[VbVbalrStatements#163](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#163)]  
   

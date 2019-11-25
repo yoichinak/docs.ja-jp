@@ -1,5 +1,5 @@
 ---
-title: '方法: LINQ (Visual Basic) を使用してクエリ結果の並べ替え'
+title: 'How to: Sort Query Results by Using LINQ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - sorting query results, multiple columns
@@ -11,67 +11,67 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: d2114e908077ec947164a28f48841282abefda2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 020e4a3800515329b29e2941baf50d3d8add4605
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053744"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354165"
 ---
-# <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>方法: LINQ (Visual Basic) を使用してクエリ結果の並べ替え
-統合言語クエリ (LINQ) により、簡単にデータベース情報にアクセスしてクエリを実行できます。  
+# <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>方法: LINQ を使用してクエリ結果を並べ替える (Visual Basic)
+Language-Integrated Query (LINQ) makes it easy to access database information and execute queries.  
   
- 次の例は、SQL Server データベースに対してクエリを実行しを使用して複数のフィールドで結果を並べ替えるための新しいアプリケーションを作成する方法を示します、`Order By`句。 各フィールドの並べ替え順序の昇順または降順ことができます。 詳細については、次を参照してください。 [Order By 句](../../../../visual-basic/language-reference/queries/order-by-clause.md)します。  
+ The following example shows how to create a new application that performs queries against a SQL Server database and sorts the results by multiple fields by using the `Order By` clause. The sort order for each field can be ascending order or descending order. For more information, see [Order By Clause](../../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- このトピックの例では、Northwind サンプル データベースを使用します。 開発用コンピューターにこのデータベースがいない場合は、Microsoft ダウンロード センターからダウンロードできます。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
+ The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-connection-to-a-database"></a>データベースへの接続を作成するには  
+### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database  
   
-1. Visual Studio で開く**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**をクリックして**サーバー エクスプ ローラー**/**データベースエクスプ ローラー**上、**ビュー**メニュー。  
+1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking **Server Explorer**/**Database Explorer** on the **View** menu.  
   
-2. 右クリック**データ接続**で**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**  をクリックし、**接続の追加**します。  
+2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer** and then click **Add Connection**.  
   
-3. Northwind サンプル データベースへの接続を有効なを指定します。  
+3. Specify a valid connection to the Northwind sample database.  
   
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>LINQ to SQL ファイルを格納しているプロジェクトを追加するには  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>To add a project that contains a LINQ to SQL file  
   
-1. Visual Studio で、**[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。 Visual Basic を選択**Windows フォーム アプリケーション**プロジェクトの種類として。  
+1. Visual Studio で、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 Select Visual Basic **Windows Forms Application** as the project type.  
   
-2. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 選択、 **LINQ to SQL クラス**項目テンプレート。  
+2. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 Select the **LINQ to SQL Classes** item template.  
   
-3. そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 Northwind.dbml ファイル用には、オブジェクト リレーショナル デザイナー (O/R デザイナー) を開きます。  
+3. そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 The Object Relational Designer (O/R Designer) is opened for the northwind.dbml file.  
   
-### <a name="to-add-tables-to-query-to-the-or-designer"></a>O/R デザイナーをクエリにテーブルを追加するには  
+### <a name="to-add-tables-to-query-to-the-or-designer"></a>To add tables to query to the O/R Designer  
   
-1. **サーバー エクスプ ローラー**/**データベース エクスプ ローラー**、Northwind データベースへの接続を展開します。 展開、**テーブル**フォルダー。  
+1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Tables** folder.  
   
-     O/R デザイナーを閉じた場合は、先ほど追加した northwind.dbml ファイルをダブルクリックして開くことができます。  
+     If you have closed the O/R Designer, you can reopen it by double-clicking the northwind.dbml file that you added earlier.  
   
-2. Customers テーブルをクリックし、デザイナーの左側のペインにドラッグします。 Orders テーブルをクリックし、デザイナーの左側のペインにドラッグします。  
+2. Click the Customers table and drag it to the left pane of the designer. Click the Orders table and drag it to the left pane of the designer.  
   
-     デザイナーを新規作成`Customer`と`Order`プロジェクトのオブジェクト。 デザイナーが自動的にテーブル間のリレーションシップを検出し、関連オブジェクトのプロパティの子を作成することに注意してください。 たとえば、IntelliSense が表示されますが、`Customer`オブジェクトには、`Orders`その顧客に関連するすべての注文のプロパティ。  
+     The designer creates new `Customer` and `Order` objects for your project. Notice that the designer automatically detects relationships between the tables and creates child properties for related objects. For example, IntelliSense will show that the `Customer` object has an `Orders` property for all orders related to that customer.  
   
-3. 変更を保存し、デザイナーを閉じます。  
+3. Save your changes and close the designer.  
   
 4. プロジェクトを保存します。  
   
-### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>データベース クエリを実行し、結果を表示するコードを追加するには  
+### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>To add code to query the database and display the results  
   
-1. **ツールボックス**、ドラッグ、<xref:System.Windows.Forms.DataGridView>に、プロジェクトの Form1 の既定の Windows フォーム コントロール。  
+1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.  
   
-2. コードを追加する Form1 をダブルクリックして、`Load`フォームのイベント。  
+2. Double-click Form1 to add code to the `Load` event of the form.  
   
-3. O/R デザイナーにテーブルを追加したときに、デザイナーが追加、<xref:System.Data.Linq.DataContext>オブジェクトをプロジェクトにします。 このオブジェクトには、これらのテーブルにアクセスして、個々 のオブジェクトと各テーブルのコレクションへのアクセスに必要なコードが含まれています。 <xref:System.Data.Linq.DataContext>オブジェクトの名前は、プロジェクトに基づく .dbml ファイルの名前。 このプロジェクトで、<xref:System.Data.Linq.DataContext>オブジェクトの名前は`northwindDataContext`します。  
+3. When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object to your project. This object contains the code that you must have to access those tables, and to access individual objects and collections for each table. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.  
   
-     インスタンスを作成することができます、 <xref:System.Data.Linq.DataContext> O/R デザイナーによって、コードとクエリにテーブルが指定されています。  
+     You can create an instance of the <xref:System.Data.Linq.DataContext> in your code and query the tables specified by the O/R Designer.  
   
-     次のコードを追加、`Load`イベントには、データ コンテキストのプロパティとして公開され、結果の並べ替えテーブルを照会します。 クエリでは、降順で、顧客の注文の数によって、結果を並べ替えます。 同じ注文の数を持つ顧客は、会社名で昇順に並べ替えます (既定値) で並べ替えられます。  
+     Add the following code to the `Load` event to query the tables that are exposed as properties of your data context and sort the results. The query sorts the results by the number of customer orders, in descending order. Customers that have the same number of orders are ordered by company name in ascending order (the default).  
   
      [!code-vb[VbLINQToSQLHowTos#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form4.vb#10)]  
   
-4. F5 キーを押してプロジェクトを実行し、結果を表示します。  
+4. Press F5 to run your project and view the results.  
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: 比較演算子 (Visual Basic)
+title: 比較演算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.<>
@@ -30,27 +30,27 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basic
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: ddb07bdf5f67e281847082ba4487568e9ba3c9f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ea7604626ede66da818e4bc22fe4922bc752dc2c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962231"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336079"
 ---
 # <a name="comparison-operators-visual-basic"></a>比較演算子 (Visual Basic)
-Visual Basic で定義されている比較演算子を次に示します。
+The following are the comparison operators defined in Visual Basic.
 
- `<`operator
+ `<` operator
 
- `<=`operator
+ `<=` operator
 
- `>`operator
+ `>` operator
 
- `>=`operator
+ `>=` operator
 
- `=`operator
+ `=` operator
 
- `<>`operator
+ `<>` operator
 
  [Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)
 
@@ -58,7 +58,7 @@ Visual Basic で定義されている比較演算子を次に示します。
 
  [Like 演算子](../../../visual-basic/language-reference/operators/like-operator.md)
 
- これらの演算子は、2つの式を比較して、両者が等しいかどうかを判断します。存在しない場合は、両者がどのように異なるかを判断します。 `Is`、 `IsNot`、および`Like`の詳細については、個別のヘルプページを参照してください。 このページでは、関係比較演算子について詳しく説明します。
+ These operators compare two expressions to determine whether or not they are equal, and if not, how they differ. `Is`, `IsNot`, and `Like` are discussed in detail on separate Help pages. The relational comparison operators are discussed in detail on this page.
 
 ## <a name="syntax"></a>構文
   
@@ -70,85 +70,85 @@ result = string Like pattern
   
 ## <a name="parts"></a>指定項目
  `result`  
- 必須。 比較の結果を表す値。`Boolean`
+ 必須です。 A `Boolean` value representing the result of the comparison.
 
- `expression1`, `expression2`  
- 必須。 任意の式。
+ `expression1`、 `expression2`  
+ 必須です。 任意の式。
 
  `comparisonoperator`  
- 必須。 任意の関係比較演算子。
+ 必須です。 Any relational comparison operator.
 
- `object1`, `object2`  
- 必須。 参照オブジェクトの名前。
+ `object1`、 `object2`  
+ 必須です。 Any reference object names.
 
  `string`  
- 必須。 任意のブール型 ( `String` ) の式を指定します。
+ 必須です。 任意のブール型 ( `String` ) の式を指定します。
 
  `pattern`  
- 必須。 任意`String`の式または文字の範囲。
+ 必須です。 Any `String` expression or range of characters.
 
 ## <a name="remarks"></a>Remarks
- 次の表に、がまたは`result` `False`で`True`あるかどうかを決定する条件を示します。
+ The following table contains a list of the relational comparison operators and the conditions that determine whether `result` is `True` or `False`.
 
 |演算子|`True`:|`False`:|
 |--------------|---------------|----------------|
-|`<`(より小さい)|`expression1` < `expression2`|`expression1` >= `expression2`|
-|`<=`(以下)|`expression1` <= `expression2`|`expression1` > `expression2`|
-|`>`(より大きい)|`expression1` > `expression2`|`expression1` <= `expression2`|
-|`>=`(以上)|`expression1` >= `expression2`|`expression1` < `expression2`|
-|`=`(等しい)|`expression1` = `expression2`|`expression1` <> `expression2`|
-|`<>`(等しくない)|`expression1` <> `expression2`|`expression1` = `expression2`|
+|`<` (Less than)|`expression1` < `expression2`|`expression1` >= `expression2`|
+|`<=` (Less than or equal to)|`expression1` <= `expression2`|`expression1` > `expression2`|
+|`>` (Greater than)|`expression1` > `expression2`|`expression1` <= `expression2`|
+|`>=` (Greater than or equal to)|`expression1` >= `expression2`|`expression1` < `expression2`|
+|`=` (Equal to)|`expression1` = `expression2`|`expression1` <> `expression2`|
+|`<>` (Not equal to)|`expression1` <> `expression2`|`expression1` = `expression2`|
 
 > [!NOTE]
-> [= 演算子](../../../visual-basic/language-reference/operators/assignment-operator.md)は、代入演算子としても使用されます。
+> The [= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md) is also used as an assignment operator.
 
- 演算子、演算子、および`Like`演算子には、前の表の演算子とは異なる特定の比較機能があります。 `Is` `IsNot`
+ The `Is` operator, the `IsNot` operator, and the `Like` operator have specific comparison functionalities that differ from the operators in the preceding table.
 
-## <a name="comparing-numbers"></a>数値の比較
- 型`Single`の式を型`Double`の1つと比較すると、 `Single`式はに`Double`変換されます。 この動作は Visual Basic 6 とは逆の動作です。
+## <a name="comparing-numbers"></a>Comparing Numbers
+ When you compare an expression of type `Single` to one of type `Double`, the `Single` expression is converted to `Double`. This behavior is opposite to the behavior found in Visual Basic 6.
 
- `Decimal`同様に、型の式をまたは`Double` `Decimal`型`Single`の式と比較すると、式はまたは`Single` `Double`に変換されます。 式`Decimal`の場合、1e-28 未満の小数値は失われる可能性があります。 このような小数値の損失によって、2つの値が等しくない場合に等しいと見なされることがあります。 このため、等値 (`=`) を使用して2つの浮動小数点変数を比較する場合は注意が必要です。 2つの数値の差の絶対値が許容範囲の最小値より小さいかどうかをテストする方が安全です。
+ Similarly, when you compare an expression of type `Decimal` to an expression of type `Single` or `Double`, the `Decimal` expression is converted to `Single` or `Double`. For `Decimal` expressions, any fractional value less than 1E-28 might be lost. Such fractional value loss may cause two values to compare as equal when they are not. For this reason, you should take care when using equality (`=`) to compare two floating-point variables. It is safer to test whether the absolute value of the difference between the two numbers is less than a small acceptable tolerance.
 
-### <a name="floating-point-imprecision"></a>浮動小数点おける誤差
- 浮動小数点数を使用する場合は、メモリ内に常に正確な表現がないという点に注意してください。 これにより、値の比較や[Mod 演算子](../../../visual-basic/language-reference/operators/mod-operator.md)など、特定の操作によって予期しない結果が生じる可能性があります。 詳細については、「[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)」を参照してください。
+### <a name="floating-point-imprecision"></a>Floating-point Imprecision
+ When you work with floating-point numbers, keep in mind that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the [Mod Operator](../../../visual-basic/language-reference/operators/mod-operator.md). For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
 ## <a name="comparing-strings"></a>文字列の比較
- 文字列を比較すると、文字列式は、その`Option Compare`設定に応じてアルファベット順の並べ替え順に基づいて評価されます。
+ When you compare strings, the string expressions are evaluated based on their alphabetical sort order, which depends on the `Option Compare` setting.
 
- `Option Compare Binary`文字の内部バイナリ表現から派生した並べ替え順序に基づいて文字列を比較します。 並べ替え順序は、コードページによって決まります。 次の例は、一般的なバイナリ並べ替え順序を示しています。
+ `Option Compare Binary` bases string comparisons on a sort order derived from the internal binary representations of the characters. The sort order is determined by the code page. The following example shows a typical binary sort order.
 
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`
 
- `Option Compare Text`アプリケーションのロケールによって決定される、大文字と小文字を区別しない、テキストの並べ替え順序に基づいて文字列を比較します。 前の例`Option Compare Text`の文字を設定して並べ替えると、次のテキストの並べ替え順序が適用されます。
+ `Option Compare Text` bases string comparisons on a case-insensitive, textual sort order determined by your application's locale. When you set `Option Compare Text` and sort the characters in the preceding example, the following text sort order applies:
 
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`
 
-### <a name="locale-dependence"></a>ロケールの依存関係
- を設定`Option Compare Text`すると、文字列比較の結果は、アプリケーションが実行されているロケールによって異なる場合があります。 2文字は、1つのロケールでは等しいものの、別のロケールでは比較されない場合があります。 ログオン試行を受け入れるかどうかなど、重要な決定を行うために文字列比較を使用している場合は、ロケールの区別に関する警告が表示されます。 ロケールを考慮`Option Compare Binary`して、 <xref:Microsoft.VisualBasic.Strings.StrComp%2A>を設定するか、を呼び出します。
+### <a name="locale-dependence"></a>Locale Dependence
+ When you set `Option Compare Text`, the result of a string comparison can depend on the locale in which the application is running. Two characters might compare as equal in one locale but not in another. If you are using a string comparison to make important decisions, such as whether to accept an attempt to log on, you should be alert to locale sensitivity. Consider either setting `Option Compare Binary` or calling the <xref:Microsoft.VisualBasic.Strings.StrComp%2A>, which takes the locale into account.
 
-## <a name="typeless-programming-with-relational-comparison-operators"></a>関係比較演算子を使用したタイプレスプログラミング
- 式で`Object`の関係比較演算子の使用は、で`Option Strict On`は許可されていません。 が`Option Strict` で`Off`、または`expression1` `Object`のいずれかが式である場合、ランタイム型によって比較方法が決まります。 `expression2` 次の表に、オペランドのランタイム型に応じて、式と比較した結果を示します。
+## <a name="typeless-programming-with-relational-comparison-operators"></a>Typeless Programming with Relational Comparison Operators
+ The use of relational comparison operators with `Object` expressions is not allowed under `Option Strict On`. When `Option Strict` is `Off`, and either `expression1` or `expression2` is an `Object` expression, the run-time types determine how they are compared. The following table shows how the expressions are compared and the result from the comparison, depending on the runtime type of the operands.
 
-|オペランドがの場合|比較|
+|If operands are|Comparison is|
 |---------------------|-------------------|
-|両方とも`String`|文字列の並べ替え特性に基づいて並べ替えの比較を行います。|
-|両方の数値|に`Double`変換されたオブジェクト、数値比較。|
-|1つの数値と1つの数値`String`|は`String` に変換され、数値比較が`Double`実行されます。 をに`Double` `String` 変換できない場合は、がスロー<xref:System.InvalidCastException>されます。|
-|またはのいずれかまたは両方が、以外の参照型です。`String`|<xref:System.InvalidCastException> がスローされます。|
+|Both `String`|Sort comparison based on string sorting characteristics.|
+|Both numeric|Objects converted to `Double`, numeric comparison.|
+|One numeric and one `String`|The `String` is converted to a `Double` and numeric comparison is performed. If the `String` cannot be converted to `Double`, an <xref:System.InvalidCastException> is thrown.|
+|Either or both are reference types other than `String`|<xref:System.InvalidCastException> がスローされます。|
 
- 数値比較は`Nothing` 0 として扱われます。 文字列比較で`Nothing`は`""` 、(空の文字列) として扱われます。
+ Numeric comparisons treat `Nothing` as 0. String comparisons treat `Nothing` as `""` (an empty string).
 
 ## <a name="overloading"></a>オーバーロード
- 関係比較演算子 (`<`. `<=``>` 、、`=`、、 )`<>`はオーバーロードすることができます。つまり、クラスまたは構造体が、そのクラスまたは構造体の型を持つ場合に、その動作を再定義できます。 `>=` このようなクラスまたは構造体でこれらの演算子のいずれかを使用するコードの場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
+ The relational comparison operators (`<`. `<=`, `>`, `>=`, `=`, `<>`) can be *overloaded*, which means that a class or structure can redefine their behavior when an operand has the type of that class or structure. If your code uses any of these operators on such a class or structure, be sure you understand the redefined behavior. 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
 
- [= 演算子](../../../visual-basic/language-reference/operators/assignment-operator.md)は、代入演算子としてではなく、関係比較演算子としてのみオーバーロードできることに注意してください。
+ Notice that the [= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md) can be overloaded only as a relational comparison operator, not as an assignment operator.
 
 ## <a name="example"></a>例
- 次の例では、式を比較するために使用する関係比較演算子のさまざまな用途を示します。 関係比較演算子は、 `Boolean`記述された式がに`True`評価されるかどうかを表す結果を返します。 文字列に演算子`>`および`<`演算子を適用すると、文字列の通常のアルファベット順の並べ替え順序を使用して比較が行われます。 この順序は、ロケールの設定によって異なります。 並べ替えで大文字と小文字を区別するかどうかは、[オプションの比較](../../../visual-basic/language-reference/statements/option-compare-statement.md)の設定によって異なります。
+ The following example shows various uses of relational comparison operators, which you use to compare expressions. Relational comparison operators return a `Boolean` result that represents whether or not the stated expression evaluates to `True`. When you apply the `>` and `<` operators to strings, the comparison is made using the normal alphabetical sorting order of the strings. This order can be dependent on your locale setting. Whether the sort is case-sensitive or not depends on the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) setting.
 
  [!code-vb[VbVbalrOperators#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#1)]
 
- 前の例では、最初の比較`False`はを返し、残り`True`の比較はを返します。
+ In the preceding example, the first comparison returns `False` and the remaining comparisons return `True`.
 
 ## <a name="see-also"></a>関連項目
 
@@ -157,4 +157,4 @@ result = string Like pattern
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [トラブルシューティング (データ型)](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Visual Basic の比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

@@ -1,15 +1,15 @@
 ---
-title: '方法: XML ファイル (Visual Basic) からオブジェクト データを読み込む'
+title: '方法: XML ファイルからオブジェクト データを読み込む'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: b1e9033d7aba8b4f423f29cd4fb4f7efbbe17a29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c997af4729a24a6b5bd5b22d0153860cff3282d7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624367"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346436"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>方法: XML ファイル (Visual Basic) からオブジェクト データを読み込む
+# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>How to: Read Object Data from an XML File (Visual Basic)
 次の例では、<xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、XML ファイルに以前に書き込まれたオブジェクト データを読み込みます。  
   
 ## <a name="example"></a>例  
@@ -30,7 +30,7 @@ End Sub
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- ファイル名 "c:\temp\SerializationOverview.xml" を、シリアル化されたデータを含むファイルの名前に置き換えます。 データのシリアル化の詳細については、「[方法:XML ファイル (Visual Basic) にオブジェクト データを書き込む](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)します。  
+ ファイル名 "c:\temp\SerializationOverview.xml" を、シリアル化されたデータを含むファイルの名前に置き換えます。 For more information about serializing data, see [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
   
  クラスには、パラメーターのないパブリック コンストラクターが必要です。  
   
@@ -51,6 +51,6 @@ End Sub
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.StreamWriter>
-- [方法: オブジェクトのデータを書き込む XML ファイル (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [方法: XML ファイルにオブジェクト データを書き込む (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
 - [シリアル化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic のプログラミング ガイド](../../../../visual-basic/programming-guide/index.md)

@@ -1,5 +1,5 @@
 ---
-title: /debug (Visual Basic)
+title: /debug
 ms.date: 03/10/2018
 helpviewer_keywords:
 - debug compiler switches
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: 27485cda9bb2af980b300180134fd7e99ffceeba
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 3beb9ad3829c2f55120a9136e6e54185551bd20b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775686"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344776"
 ---
 # <a name="-debug-visual-basic"></a>-debug (Visual Basic)
 
-コンパイラによってデバッグ情報が生成され、出力ファイルに配置されます。
+Causes the compiler to generate debugging information and place it in the output file(s).
 
 ## <a name="syntax"></a>構文
 
@@ -34,24 +34,24 @@ ms.locfileid: "72775686"
 
 |用語|定義|
 |---|---|
-|`+` &#124; `-`|省略可能です。 @No__t_0 または `/debug` を指定すると、コンパイラによってデバッグ情報が生成され、.pdb ファイルに配置されます。 @No__t_0 を指定すると、`/debug` を指定しない場合と同じ効果があります。|
-|`full` &#124; `pdbonly`|省略可能です。 コンパイラによって生成されるデバッグ情報の種類を指定します。 @No__t_0 を指定しない場合、既定値は `full` になります。これにより、実行中のプログラムにデバッガーをアタッチできます。 @No__t_0 引数を使用すると、プログラムがデバッガーで開始されたときにソースコードのデバッグが可能になりますが、実行中のプログラムがデバッガーにアタッチされている場合にのみ、アセンブリ言語コードが表示されます。|
+|`+` &#124; `-`|省略可能です。 Specifying `+` or `/debug` causes the compiler to generate debugging information and place it in a .pdb file. Specifying `-` has the same effect as not specifying `/debug`.|
+|`full` &#124; `pdbonly`|省略可能です。 コンパイラによって生成されるデバッグ情報の種類を指定します。 If you do not specify `/debug:pdbonly`, the default is `full`, which enables you to attach a debugger to the running program. The `pdbonly` argument allows source-code debugging when the program is started in the debugger, but it displays assembly-language code only when the running program is attached to the debugger.|
 
 ## <a name="remarks"></a>Remarks
 
-このオプションを使用してデバッグ ビルドを作成します。 @No__t_0、`/debug+`、または `/debug:full` を指定しない場合は、プログラムの出力ファイルをデバッグできません。
+このオプションを使用してデバッグ ビルドを作成します。 If you do not specify `/debug`, `/debug+`, or `/debug:full`, you will be unable to debug the output file of your program.
 
-既定では、デバッグ情報は出力されません (`/debug-`)。 デバッグ情報を生成するには、`/debug` または `/debug+` を指定します。
+By default, debugging information is not emitted (`/debug-`). To emit debugging information, specify `/debug` or `/debug+`.
 
 アプリケーションのデバッグ パフォーマンスを構成する方法については、「[イメージのデバッグの簡略化](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)」を参照してください。
 
-|Visual Studio 統合開発環境で-debug を設定するには|
+|To set -debug in the Visual Studio integrated development environment|
 |---|
-|1.**ソリューションエクスプローラー**でプロジェクトを選択した状態で、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[詳細コンパイルオプション]** をクリックします。<br />4. **[デバッグ情報の生成]** ボックスの値を変更します。|
+|1.  With a project selected in **Solution Explorer**, on the **Project** menu, click **Properties**. <br />2.  Click the **Compile** tab.<br />3.  Click **Advanced Compile Options**.<br />4.  Modify the value in the **Generate Debug Info** box.|
 
 ## <a name="example"></a>例
 
-次の例では、デバッグ情報を出力ファイル `App.exe` に格納します。
+The following example puts debugging information in output file `App.exe`.
 
 ```console
 vbc -debug -out:app.exe test.vb

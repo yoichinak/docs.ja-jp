@@ -1,5 +1,5 @@
 ---
-title: Boolean データ型 (Visual Basic)
+title: Boolean データ型
 ms.date: 07/20/2015
 f1_keywords:
 - vb.FALSE
@@ -12,38 +12,42 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: b1e4add39cee6c733a6f4b95aa1668975f2f2d6d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 5d05514207c5d07e81aab897f40f728570f6bd87
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268254"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347842"
 ---
-# <a name="boolean-data-type-visual-basic"></a>Boolean データ型 (Visual Basic)
-値を保持できるのみ`True`または`False`します。 キーワード`True`と`False`の 2 つの状態に対応して`Boolean`変数。  
+# <a name="boolean-data-type-visual-basic"></a>ブール型 (Boolean) (Visual Basic)
+
+Holds values that can be only `True` or `False`. The keywords `True` and `False` correspond to the two states of `Boolean` variables.  
   
 ## <a name="remarks"></a>Remarks  
- 使用して、[Boolean データ型 (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) true または false などの 2 つの状態値が含まれてはい/いいえ、またはオン/オフにします。  
+
+ Use the [Boolean Data Type (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) to contain two-state values such as true/false, yes/no, or on/off.  
   
- `Boolean` の既定値は `False` です。  
+ `Boolean` の既定値は `False`です。  
   
- `Boolean` 値は、数値として格納しないと、番号に相当する、保存された値が意図されていません。 数値と等価の値に依存するコードを記述する必要がありますしない`True`と`False`します。 使用を制限する必要があります、可能な限り`Boolean`変数を論理値に設計されています。  
+ `Boolean` values are not stored as numbers, and the stored values are not intended to be equivalent to numbers. You should never write code that relies on equivalent numeric values for `True` and `False`. Whenever possible, you should restrict usage of `Boolean` variables to the logical values for which they are designed.  
   
 ## <a name="type-conversions"></a>型変換  
- Visual Basic でに数値データ型の値を変換するときに`Boolean`、0 になります`False`他のすべての値になると`True`します。 Visual Basic の変換と`Boolean`値、数値型を`False`が 0 になると`True`-1 になります。  
+
+ When Visual Basic converts numeric data type values to `Boolean`, 0 becomes `False` and all other values become `True`. When Visual Basic converts `Boolean` values to numeric types, `False` becomes 0 and `True` becomes -1.  
   
- 間で変換する際に`Boolean`値と、数値データ型を保持する .NET Framework の変換メソッドは常に生成しない Visual Basic の変換キーワードと同じ結果に注意してください。 Visual Basic の変換には、以前のバージョンと互換性のある動作が保持されるためです。 詳細についてを参照してください「ブール型は変換する数値型不適切」[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
+ When you convert between `Boolean` values and numeric data types, keep in mind that the .NET Framework conversion methods do not always produce the same results as the Visual Basic conversion keywords. This is because the Visual Basic conversion retains behavior compatible with previous versions. For more information, see "Boolean Type Does Not Convert to Numeric Type Accurately" in [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
-- **負の数。** `Boolean` 数値型ではないと、負の値を表すことはできません。 いずれの場合も、行わないで`Boolean`数値の値を保持します。  
+- **Negative Numbers.** `Boolean` is not a numeric type and cannot represent a negative value. In any case, you should not use `Boolean` to hold numeric values.  
   
-- **型宣言文字。** `Boolean` リテラルの型文字または識別子の型文字がありません。  
+- **Type Characters.** `Boolean` has no literal type character or identifier type character.  
   
-- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Boolean?displayProperty=nameWithType> 構造体です。  
+- **Framework Type.** .NET Framework において対応する型は、<xref:System.Boolean?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="example"></a>例  
- 次の例では、`runningVB`は、`Boolean`変数で、単純なはい/いいえの設定を格納します。  
+
+ In the following example, `runningVB` is a `Boolean` variable, which stores a simple yes/no setting.  
   
 ```vb  
 Dim runningVB As Boolean  

@@ -1,50 +1,50 @@
 ---
-title: '方法: 2 つのオブジェクトが同じです (Visual Basic) であるかどうかを確認します。'
+title: '方法 : 2 つのオブジェクトが同一であるかどうか判別する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - testing [Visual Basic], objects
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5deebd4ffc5b277c94f5ae36c00fd6e5010a1551
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769084"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348595"
 ---
-# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>方法: 2 つのオブジェクトが同じです (Visual Basic) であるかどうかを確認します。
-Visual basic で 2 つの変数参照は同一と見なされます、ポインターが同じ場合、つまり、両方の変数がメモリ内と同じクラスのインスタンスを指している場合。 たとえば、Windows フォーム アプリケーションでたい判断する比較を行うことかどうか、現在のインスタンス (`Me`) など、特定のインスタンスと同じ`Form2`します。  
+# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>方法: 2 つのオブジェクトが同一であるかどうか判別する (Visual Basic)
+In Visual Basic, two variable references are considered identical if their pointers are the same, that is, if both variables point to the same class instance in memory. For example, in a Windows Forms application, you might want to make a comparison to determine whether the current instance (`Me`) is the same as a particular instance, such as `Form2`.  
   
- Visual Basic では、ポインターを比較する 2 つの演算子を提供します。 [Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)返します`True`オブジェクトが同じですが場合、 [IsNot 演算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)返します`True`それ以外の場合。  
+ Visual Basic provides two operators to compare pointers. The [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) returns `True` if the objects are identical, and the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) returns `True` if they are not.  
   
-## <a name="determining-if-two-objects-are-identical"></a>2 つのオブジェクトが同じかどうかを決定します。  
+## <a name="determining-if-two-objects-are-identical"></a>Determining if Two Objects Are Identical  
   
-#### <a name="to-determine-if-two-objects-are-identical"></a>2 つのオブジェクトが同じかどうかを判断するには  
+#### <a name="to-determine-if-two-objects-are-identical"></a>To determine if two objects are identical  
   
-1. セットアップ、 `Boolean` 2 つのオブジェクトをテストする式。  
+1. Set up a `Boolean` expression to test the two objects.  
   
-2. テスト式で使用して、`Is`演算子のオペランドとして 2 つのオブジェクト。  
+2. In your testing expression, use the `Is` operator with the two objects as operands.  
   
-     `Is` 返します`True`場合は、オブジェクトが、同じクラスのインスタンスをポイントします。  
+     `Is` returns `True` if the objects point to the same class instance.  
   
-## <a name="determining-if-two-objects-are-not-identical"></a>2 つのオブジェクトが同一でないかどうかを決定します。  
- 2 つのオブジェクトが異なると、結合にくいことができる場合、操作を実行する場合があります`Not`と`Is`、たとえば`If Not obj1 Is obj2`します。 このような場合に使用することができます、`IsNot`演算子。  
+## <a name="determining-if-two-objects-are-not-identical"></a>Determining if Two Objects Are Not Identical  
+ Sometimes you want to perform an action if the two objects are not identical, and it can be awkward to combine `Not` and `Is`, for example `If Not obj1 Is obj2`. In such a case you can use the `IsNot` operator.  
   
-#### <a name="to-determine-if-two-objects-are-not-identical"></a>2 つのオブジェクトが同一でないかどうかを判断するには  
+#### <a name="to-determine-if-two-objects-are-not-identical"></a>To determine if two objects are not identical  
   
-1. セットアップ、 `Boolean` 2 つのオブジェクトをテストする式。  
+1. Set up a `Boolean` expression to test the two objects.  
   
-2. テスト式で使用して、`IsNot`演算子のオペランドとして 2 つのオブジェクト。  
+2. In your testing expression, use the `IsNot` operator with the two objects as operands.  
   
-     `IsNot` 返します`True`場合は、オブジェクトが同じクラスのインスタンスを指していません。  
+     `IsNot` returns `True` if the objects do not point to the same class instance.  
   
 ## <a name="example"></a>例  
- 次の例では、テストのペア`Object`変数を同じクラスのインスタンスを指しているかを参照してください。  
+ The following example tests pairs of `Object` variables to see if they point to the same class instance.  
   
  [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  
   
- 前の例では、次の出力が表示されます。  
+ The preceding example displays the following output.  
   
  `objA different from objB? True`  
   
@@ -57,5 +57,5 @@ Visual basic で 2 つの変数参照は同一と見なされます、ポイン�
 - [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot 演算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [方法: 2 つのオブジェクトが関連するかどうかを判断します。](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [方法: 2 つのオブジェクトが関連しているかどうかを決める](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
 - [Me、My、MyBase、および MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

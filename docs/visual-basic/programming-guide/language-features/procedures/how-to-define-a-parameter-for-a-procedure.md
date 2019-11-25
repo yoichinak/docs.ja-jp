@@ -1,5 +1,5 @@
 ---
-title: '方法: プロシージャにパラメーターを定義する (Visual Basic)'
+title: '方法 : プロシージャにパラメーターを定義する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure parameters [Visual Basic], defining data types for
@@ -8,53 +8,53 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: bf57d4dbd7e8596396fb2e9099d5984759d6e90d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 411959a7be92ea49a59558b508e992bfba8eff95
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665380"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344882"
 ---
-# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>方法: プロシージャにパラメーターを定義する (Visual Basic)
-A*パラメーター*それを呼び出すときに、プロシージャに値を渡すコードの呼び出しを許可します。 プロシージャの各パラメーターは、変数を宣言すると、その名前とデータ型を指定することと同じ方法で宣言します。 渡す方法を指定するかどうか、パラメーターは省略可能です。  
+# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>方法: プロシージャに対してパラメーターを定義する (Visual Basic)
+A *parameter* allows the calling code to pass a value to the procedure when it calls it. You declare each parameter for a procedure the same way you declare a variable, specifying its name and data type. You also specify the passing mechanism, and whether the parameter is optional.  
   
- 詳細については、次を参照してください。[プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)します。  
+ For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
   
-### <a name="to-define-a-procedure-parameter"></a>プロシージャのパラメーターを定義するには  
+### <a name="to-define-a-procedure-parameter"></a>To define a procedure parameter  
   
-1. プロシージャの宣言では、その他のパラメーターをコンマで区切って、プロシージャのパラメーター リストに、パラメーター名を追加します。  
+1. In the procedure declaration, add the parameter name to the procedure's parameter list, separating it from other parameters by commas.  
   
-2. パラメーターのデータ型を決定します。  
+2. Decide the data type of the parameter.  
   
-3. パラメーター名に続けて、`As`データ型を指定する句。  
+3. Follow the parameter name with an `As` clause to specify the data type.  
   
-4. パラメーターの引き渡し方法を決定します。 通常、プロシージャ呼び出し元のコードでは、その値を変更できるようにする場合を除きに、値でパラメーターを渡します。  
+4. Decide the passing mechanism you want for the parameter. Normally you pass a parameter by value, unless you want the procedure to be able to change its value in the calling code.  
   
-5. パラメーター名の前に[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)または[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)引き渡し方法を指定します。 詳細については、次を参照してください。[の相違点の間の値と参照渡しによって引数を渡す](./differences-between-passing-an-argument-by-value-and-by-reference.md)します。  
+5. Precede the parameter name with [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) to specify the passing mechanism. For more information, see [Differences Between Passing an Argument By Value and By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6. 渡しのパラメーターが省略可能な場合は、前に[(省略可能)](../../../../visual-basic/language-reference/modifiers/optional.md)は等号でパラメーターのデータ型に従います (`=`) と、既定値。  
+6. If the parameter is optional, precede the passing mechanism with [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) and follow the parameter data type with an equal sign (`=`) and a default value.  
   
-     次の例のアウトラインを定義する、 `Sub` 3 つのパラメーターを持つプロシージャ。 最初の 2 つが必要ですし、3 つ目は省略可能です。 パラメーターの宣言は、パラメーター リストにコンマで区切られます。  
+     The following example defines the outline of a `Sub` procedure with three parameters. The first two are required and the third is optional. The parameter declarations are separated in the parameter list by commas.  
   
      [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
-     最初のパラメーターを受け入れる、`customer`オブジェクト、および`updateCustomer`に渡される変数を直接更新できます`c`引数が渡されるため[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)します。 渡されるために、プロシージャが最後の 2 つの引数の値を変更できません[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)します。  
+     The first parameter accepts a `customer` object, and `updateCustomer` can directly update the variable passed to `c` because the argument is passed [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). The procedure cannot change the values of the last two arguments because they are passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   
-     呼び出し元のコードがの値を指定しないかどうか、`level`パラメーターでは、Visual Basic 設定を既定値の 0。  
+     If the calling code does not supply a value for the `level` parameter, Visual Basic sets it to the default value of 0.  
   
-     型チェック スイッチの場合 ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) は`Off`、`As`パラメーターを定義するときに、句は省略可能です。 ただし、任意の 1 つのパラメーターを使用している場合、`As`句では、いずれも使用する必要あります。 型チェック スイッチがある場合`On`、`As`句がすべてのパラメーター定義が必要です。  
+     If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off`, the `As` clause is optional when you define a parameter. However, if any one parameter uses an `As` clause, all of them must use it. If the type checking switch is `On`, the `As` clause is required for every parameter definition.  
   
-     すべてのプログラミング要素のデータ型の指定と呼びます*厳密な型指定*します。 設定すると`Option Strict On`、Visual Basic は、厳密な型指定を適用します。 これは強くお勧めします、次の理由。  
+     Specifying data types for all your programming elements is known as *strong typing*. When you set `Option Strict On`, Visual Basic enforces strong typing. This is strongly recommended, for the following reasons:  
   
-    - 変数とパラメーターの IntelliSense のサポートが有効にするとします。 これにより、コードに入力すると、プロパティやその他のメンバーを表示することができます。  
+    - It enables IntelliSense support for your variables and parameters. This allows you to see their properties and other members as you type in your code.  
   
-    - これにより、コンパイラが型チェックを実行できます。 これは、オーバーフローなどのエラーにより実行時に失敗するステートメントを検出するのに役立ちます。 サポートしていないオブジェクトに対するメソッドの呼び出しをキャッチします。  
+    - It allows the compiler to perform type checking. This helps catch statements that can fail at run time due to errors such as overflow. It also catches calls to methods on objects that do not support them.  
   
-    - コードの実行速度が速くなります。 この理由の 1 つは、プログラミング要素のデータ型を指定しない場合、Visual Basic コンパイラが割り当てる、`Object`型。 コンパイル済みのコードは、間を気軽に変換する必要があります`Object`とその他のデータ型は、パフォーマンスが低下します。  
+    - It results in faster execution of your code. One reason for this is that if you do not specify a data type for a programming element, the Visual Basic compiler assigns it the `Object` type. Your compiled code might have to convert back and forth between `Object` and other data types, which reduces performance.  
   
 ## <a name="see-also"></a>関連項目
 
-- [プロシージャ](./index.md)
+- [手順](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [Function プロシージャ](./function-procedures.md)
 - [方法: プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)

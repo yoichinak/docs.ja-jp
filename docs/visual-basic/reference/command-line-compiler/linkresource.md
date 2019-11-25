@@ -1,5 +1,5 @@
 ---
-title: -linkresource (Visual Basic)
+title: -linkresource
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /linkresource compiler option [Visual Basic]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: dee5384696d543442f3280b9fdb535a7d9b6f863
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 0315645eccdc899ac9cf4d0be105297e1fa2a4c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005489"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335482"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 マネージド リソースへのリンクを作成します。  
@@ -25,7 +25,7 @@ ms.locfileid: "72005489"
 -linkresource:filename[,identifier[,public|private]]  
 ```
 
-または  
+、または  
 
 ```console
 -linkres:filename[,identifier[,public|private]]  
@@ -33,27 +33,27 @@ ms.locfileid: "72005489"
   
 ## <a name="arguments"></a>引数  
  `filename`  
- 必須。 アセンブリにリンクするリソースファイル。 ファイル名にスペースが含まれている場合は、名前を引用符 ("") で囲みます。  
+ 必須です。 The resource file to link to the assembly. If the file name contains a space, enclose the name in quotation marks (" ").  
   
  `identifier`  
- 任意。 リソースの論理名。 リソースの読み込みに使用される名前。 既定値は、ファイルの名前です。 必要に応じて、ファイルがアセンブリマニフェスト内でパブリックであるかプライベートであるかを指定できます。たとえば、`-linkres:filename.res,myname.res,public` です。 既定では、`filename` はアセンブリ内で公開されています。  
+ 省略可能です。 The logical name for the resource. The name that is used to load the resource. 既定値は、ファイルの名前です。 Optionally, you can specify whether the file is public or private in the assembly manifest, for example: `-linkres:filename.res,myname.res,public`. By default, `filename` is public in the assembly.  
   
-## <a name="remarks"></a>コメント  
- @No__t-0 オプションでは、リソースファイルは出力ファイルに埋め込まれません。これを行うには、`-resource` オプションを使用します。  
+## <a name="remarks"></a>Remarks  
+ The `-linkresource` option does not embed the resource file in the output file; use the `-resource` option to do this.  
   
- @No__t-0 オプションには、`-target:module` 以外の `-target` オプションのいずれかが必要です。  
+ The `-linkresource` option requires one of the `-target` options other than `-target:module`.  
   
- @No__t-0 は、 [resgen.exe (リソースファイルジェネレーター)](../../../framework/tools/resgen-exe-resource-file-generator.md)や開発環境などで作成された .NET Framework のリソースファイルである場合、<xref:System.Resources> 名前空間のメンバーを使用してアクセスできます。 (詳細については、「<xref:System.Resources.ResourceManager>」を参照してください)。実行時に他のすべてのリソースにアクセスするには、<xref:System.Reflection.Assembly> クラスの `GetManifestResource` で始まるメソッドを使用します。  
+ If `filename` is a .NET Framework resource file created, for example, by the [Resgen.exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) or in the development environment, it can be accessed with members in the <xref:System.Resources> namespace. (For more information, see <xref:System.Resources.ResourceManager>.) To access all other resources at run time, use the methods that begin with `GetManifestResource` in the <xref:System.Reflection.Assembly> class.  
   
- ファイル名には任意のファイル形式を使用できます。 たとえば、ネイティブ DLL をアセンブリの一部にすることで、グローバル アセンブリ キャッシュにインストールして、アセンブリ内のマネージド コードからアクセスできるようにすることができます。  
+ The file name can be any file format. たとえば、ネイティブ DLL をアセンブリの一部にすることで、グローバル アセンブリ キャッシュにインストールして、アセンブリ内のマネージド コードからアクセスできるようにすることができます。  
   
  `-linkresource` の省略形は `-linkres` です。  
   
 > [!NOTE]
-> @No__t-0 オプションは、Visual Studio 開発環境では使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
+> The `-linkresource` option is not available from the Visual Studio development environment; it is available only when you compile from the command line.  
   
 ## <a name="example"></a>例  
- 次のコードは `in.vb` をコンパイルし、リソースファイル `rf.resource` にリンクします。  
+ The following code compiles `in.vb` and links to resource file `rf.resource`.  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
@@ -63,5 +63,5 @@ vbc -linkresource:rf.resource in.vb
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-リソース (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
+- [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

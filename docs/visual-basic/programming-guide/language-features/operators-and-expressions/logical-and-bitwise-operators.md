@@ -1,5 +1,5 @@
 ---
-title: Visual Basic の論理演算子とビット処理演算子
+title: 論理演算子とビット処理演算子
 ms.date: 07/20/2015
 helpviewer_keywords:
 - short-circuiting
@@ -21,41 +21,41 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 40076b2ad6606b4c565bcd39dbeea9e55da47211
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 55a246c0d56501a409ebbc7d0d0aa39ae9fa1770
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963319"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343595"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic の論理演算子とビット処理演算子
-論理演算子は`Boolean` 、式を比較`Boolean`し、結果を返します。 `And` 、`Or`、 `Not` 、 、およびの各演算子は2つのオペランドを受け取りますが、演算子は単項演算であるため、二項演算子`AndAlso`です。 `OrElse` `Xor` これらの演算子の一部では、整数値に対してビットごとの論理演算を実行することもできます。  
+Logical operators compare `Boolean` expressions and return a `Boolean` result. The `And`, `Or`, `AndAlso`, `OrElse`, and `Xor` operators are *binary* because they take two operands, while the `Not` operator is *unary* because it takes a single operand. Some of these operators can also perform bitwise logical operations on integral values.  
   
-## <a name="unary-logical-operator"></a>単項論理演算子  
- [Not 演算子](../../../../visual-basic/language-reference/operators/not-operator.md)は、 `Boolean`式の論理*否定*を実行します。 これにより、オペランドの論理逆が生成されます。 式がと`True`評価された場合`False` `Not` 、はを返します。 `False`式がと`True`評価された場合、 `Not`はを返します。 次に例を示します。  
+## <a name="unary-logical-operator"></a>Unary Logical Operator  
+ The [Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md) performs logical *negation* on a `Boolean` expression. It yields the logical opposite of its operand. If the expression evaluates to `True`, then `Not` returns `False`; if the expression evaluates to `False`, then `Not` returns `True`. 次に例を示します。  
   
  [!code-vb[VbVbalrOperators#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#77)]  
   
-## <a name="binary-logical-operators"></a>二項論理演算子  
- [And 演算子](../../../../visual-basic/language-reference/operators/and-operator.md)は、2 `Boolean`つの式の論理積を実行します。 両方`True`の式がに`True`評価される場合、はを返します。`And` 少なくとも1つの式がに`False`評価さ`And`れる`False`場合、はを返します。  
+## <a name="binary-logical-operators"></a>Binary Logical Operators  
+ The [And Operator](../../../../visual-basic/language-reference/operators/and-operator.md) performs logical *conjunction* on two `Boolean` expressions. If both expressions evaluate to `True`, then `And` returns `True`. If at least one of the expressions evaluates to `False`, then `And` returns `False`.  
   
- [Or 演算子](../../../../visual-basic/language-reference/operators/or-operator.md)は、2 `Boolean`つの式の論理*和*を実行します。 いずれかの式が`True`に評価された`True`場合、また`True`は両方がと評価された場合、 `Or`はを返します。 どちらの式もに`True`評価`Or`さ`False`れない場合、はを返します。  
+ The [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) performs logical *disjunction* or *inclusion* on two `Boolean` expressions. If either expression evaluates to `True`, or both evaluate to `True`, then `Or` returns `True`. If neither expression evaluates to `True`, `Or` returns `False`.  
   
- [Xor 演算子](../../../../visual-basic/language-reference/operators/xor-operator.md)は、2 `Boolean`つの式に対して論理的な除外を実行します。 1つの式だけがと`True`評価される場合、 `Xor`両方`True`ではなく、が返されます。 両方`True`の式がと評価されるか、両方`False`がに`False`評価される場合、 `Xor`はを返します。  
+ The [Xor Operator](../../../../visual-basic/language-reference/operators/xor-operator.md) performs logical *exclusion* on two `Boolean` expressions. If exactly one expression evaluates to `True`, but not both, `Xor` returns `True`. If both expressions evaluate to `True` or both evaluate to `False`, `Xor` returns `False`.  
   
- 次の例は、 `And`、 `Or`、および`Xor`の各演算子を示しています。  
+ The following example illustrates the `And`, `Or`, and `Xor` operators.  
   
  [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
-## <a name="short-circuiting-logical-operations"></a>ショートサーキット論理操作  
- [AndAlso 演算子](../../../../visual-basic/language-reference/operators/andalso-operator.md)は、2 `And` `Boolean`つの式に対して論理積も実行するという点で、演算子と非常によく似ています。 2つの間の主な違い`AndAlso`は、が*ショートサーキット*動作を示す点です。 `AndAlso`式の最初の式がに`False`評価される場合、2番目の式は評価されません。これは`AndAlso` 、 `False`最終的な結果を変更できず、がを返すためです。  
+## <a name="short-circuiting-logical-operations"></a>Short-Circuiting Logical Operations  
+ The [AndAlso Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md) is very similar to the `And` operator, in that it also performs logical conjunction on two `Boolean` expressions. The key difference between the two is that `AndAlso` exhibits *short-circuiting* behavior. If the first expression in an `AndAlso` expression evaluates to `False`, then the second expression is not evaluated because it cannot alter the final result, and `AndAlso` returns `False`.  
   
- 同様に、 [OrElse 演算子](../../../../visual-basic/language-reference/operators/orelse-operator.md)は、2 `Boolean`つの式の短絡論理和を実行します。 `OrElse`式の最初の式がに`True`評価される場合、2番目の式は評価されません。これは`OrElse` 、 `True`最終的な結果を変更できず、がを返すためです。  
+ Similarly, the [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md) performs short-circuiting logical disjunction on two `Boolean` expressions. If the first expression in an `OrElse` expression evaluates to `True`, then the second expression is not evaluated because it cannot alter the final result, and `OrElse` returns `True`.  
   
-### <a name="short-circuiting-trade-offs"></a>ショートサーキットトレードオフ  
- ショートサーキットを使用すると、論理演算の結果を変更できない式を評価しないことで、パフォーマンスを向上させることができます。 ただし、その式が追加のアクションを実行する場合、ショートサーキットはこれらのアクションをスキップします。 たとえば、式に`Function`プロシージャへの呼び出しが含まれている場合、式が短いサーキットの場合、そのプロシージャは呼び出されず、に含まれる追加の`Function`コードは実行されません。 このため、関数は、ときどき実行される場合があり、正しくテストされない可能性があります。 または、プログラムロジックがの`Function`コードに依存している場合もあります。  
+### <a name="short-circuiting-trade-offs"></a>Short-Circuiting Trade-Offs  
+ Short-circuiting can improve performance by not evaluating an expression that cannot alter the result of the logical operation. However, if that expression performs additional actions, short-circuiting skips those actions. For example, if the expression includes a call to a `Function` procedure, that procedure is not called if the expression is short-circuited, and any additional code contained in the `Function` does not run. Therefore, the function might run only occasionally, and might not be tested correctly. Or the program logic might depend on the code in the `Function`.  
   
- 次の例は、 `And`、 `Or`、および対応するショートサーキットの違いを示しています。  
+ The following example illustrates the difference between `And`, `Or`, and their short-circuiting counterparts.  
   
  [!code-vb[VbVbalrOperators#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#81)]  
   
@@ -63,43 +63,43 @@ ms.locfileid: "69963319"
   
  [!code-vb[VbVbalrOperators#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#79)]  
   
- 前の例では、の一部の重要な`checkIfValid()`コードは、サーキットの呼び出しでは実行されないことに注意してください。 はショート`If`サーキットで`checkIfValid()`はない`12 > 45`ため`False` 、`And`最初のステートメントはを返します。 2番`If`目のステートメントは`checkIfValid()`を呼び出しません`False`。 `AndAlso`がを返した場合`12 > 45` 、2番目の式がショートサーキットされるためです。 3番`If`目のステートメントは`12 < 45`を`True`返します`Or`が、はショートサーキットではないため、を呼び出し`checkIfValid()`ます。 4 `If`番目のステートメントは`checkIfValid()`を呼び出しません`True`。 `OrElse`がを返した場合`12 < 45` 、2番目の式がショートサーキットされるためです。  
+ In the preceding example, note that some important code inside `checkIfValid()` does not run when the call is short-circuited. The first `If` statement calls `checkIfValid()` even though `12 > 45` returns `False`, because `And` does not short-circuit. The second `If` statement does not call `checkIfValid()`, because when `12 > 45` returns `False`, `AndAlso` short-circuits the second expression. The third `If` statement calls `checkIfValid()` even though `12 < 45` returns `True`, because `Or` does not short-circuit. The fourth `If` statement does not call `checkIfValid()`, because when `12 < 45` returns `True`, `OrElse` short-circuits the second expression.  
   
-## <a name="bitwise-operations"></a>ビットごとの演算  
- ビットごとの演算では、2つの整数値が binary (base 2) 形式で評価されます。 これらは、対応する位置のビットを比較し、比較に基づいて値を割り当てます。 次の例は、 `And`演算子を示しています。  
+## <a name="bitwise-operations"></a>Bitwise Operations  
+ Bitwise operations evaluate two integral values in binary (base 2) form. They compare the bits at corresponding positions and then assign values based on the comparison. The following example illustrates the `And` operator.  
   
  [!code-vb[VbVbalrConcepts#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#2)]  
   
- 前の例では、の`x`値を1に設定しています。 これは、次の理由で発生します。  
+ The preceding example sets the value of `x` to 1. This happens for the following reasons:  
   
-- 値はバイナリとして扱われます。  
+- The values are treated as binary:  
   
-     3バイナリ形式の 3 = 011  
+     3 in binary form = 011  
   
-     5バイナリ形式 = 101  
+     5 in binary form = 101  
   
-- 演算子`And`は、一度に1つのバイナリ位置 (ビット) をバイナリ表現と比較します。 指定された位置にある両方のビットが1の場合、結果内のその位置に1が配置されます。 どちらかのビットが0の場合は、結果内のその位置に0が配置されます。 前の例では、これは次のように動作します。  
+- The `And` operator compares the binary representations, one binary position (bit) at a time. If both bits at a given position are 1, then a 1 is placed in that position in the result. If either bit is 0, then a 0 is placed in that position in the result. In the preceding example this works out as follows:  
   
-     011 (バイナリ形式の場合は 3)  
+     011 (3 in binary form)  
   
-     101 (バイナリ形式で 5)  
+     101 (5 in binary form)  
   
-     001 (バイナリ形式の結果)  
+     001 (The result, in binary form)  
   
-- 結果は decimal として扱われます。 値001は 1 `x`のバイナリ表現であり、= 1 です。  
+- The result is treated as decimal. The value 001 is the binary representation of 1, so `x` = 1.  
   
- ビットごと`Or`の演算は似ていますが、比較対象のビットのいずれかまたは両方が1の場合、結果ビットに1が割り当てられる点が異なります。 `Xor`比較されたビットの1つ (両方ではない) が1の場合、結果のビットに1を割り当てます。 `Not`1つのオペランドを受け取り、符号ビットを含むすべてのビットを反転し、その値を結果に代入します。 つまり、符号付き正の数値の`Not`場合、は常に負の値を返し、 `Not`負の数値の場合は正の値または0を返します。  
+ The bitwise `Or` operation is similar, except that a 1 is assigned to the result bit if either or both of the compared bits is 1. `Xor` assigns a 1 to the result bit if exactly one of the compared bits (not both) is 1. `Not` takes a single operand and inverts all the bits, including the sign bit, and assigns that value to the result. This means that for signed positive numbers, `Not` always returns a negative value, and for negative numbers, `Not` always returns a positive or zero value.  
   
- 演算子`AndAlso` と`OrElse`演算子は、ビットごとの演算をサポートしません。  
+ The `AndAlso` and `OrElse` operators do not support bitwise operations.  
   
 > [!NOTE]
-> ビットごとの演算は、整数型に対してのみ実行できます。 浮動小数点値は、ビットごとの演算を続行する前に、整数型に変換する必要があります。  
+> Bitwise operations can be performed on integral types only. Floating-point values must be converted to integral types before bitwise operation can proceed.  
   
 ## <a name="see-also"></a>関連項目
 
-- [論理/ビット演算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Logical/Bitwise Operators (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [ブール式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
-- [Visual Basic の算術演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Visual Basic の比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Visual Basic での連結演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
 - [演算子の効率のよい組み合わせ](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
