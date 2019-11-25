@@ -1,5 +1,5 @@
 ---
-title: 定数とリテラルのデータ型 (Visual Basic)
+title: 定数とリテラルのデータ型
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring constants [Visual Basic], literal data types
@@ -9,56 +9,56 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 9db7fa3f36021a39fafe6cf3da5af7070f0b5b0d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 8ebecddfab0724023c269e92c1fc5534f096bf1c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582978"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333725"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>定数とリテラルのデータ型 (Visual Basic)
-リテラルは、変数の値または式の結果 (数値3や文字列 "Hello" など) としてではなく、単独で表現される値です。 定数は、リテラルの代わりとなる意味のある名前で、値が変更される可能性がある変数とは対照的に、プログラム全体で同じ値を保持します。  
+A literal is a value that is expressed as itself rather than as a variable's value or the result of an expression, such as the number 3 or the string "Hello". A constant is a meaningful name that takes the place of a literal and retains this same value throughout the program, as opposed to a variable, whose value may change.  
   
- [オプションの推論](../../../../visual-basic/language-reference/statements/option-infer-statement.md)が `Off`、 [option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)が `On` 場合、データ型を使用してすべての定数を明示的に宣言する必要があります。 次の例では、`MyByte` のデータ型がデータ型 `Byte` として明示的に宣言されています。  
+ When [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) is `Off` and [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) is `On`, you must declare all constants explicitly with a data type. In the following example, the data type of `MyByte` is explicitly declared as data type `Byte`:  
   
  [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
- @No__t_0 が `On` または `Option Strict` が `Off` 場合は、`As` 句を使用してデータ型を指定せずに定数を宣言できます。 コンパイラは、式の型から定数の型を特定します。 数値整数リテラルは、既定で `Integer` データ型にキャストされます。 浮動小数点数の既定のデータ型は `Double` であり、キーワード `True` と `False` は `Boolean` 定数を指定します。  
+ When `Option Infer` is `On` or `Option Strict` is `Off`, you can declare a constant without specifying a data type with an `As` clause. The compiler determines the type of the constant from the type of the expression. A numeric integer literal is cast by default to the `Integer` data type. The default data type for floating-point numbers is `Double`, and the keywords `True` and `False` specify a `Boolean` constant.  
   
-## <a name="literals-and-type-coercion"></a>リテラルと型の強制変換  
- 場合によっては、リテラルを特定のデータ型に強制的に適用することが必要になることがあります。たとえば、`Decimal` 型の変数に特に大きな整数リテラル値を割り当てる場合などです。 次の例では、エラーが生成されます。  
+## <a name="literals-and-type-coercion"></a>Literals and Type Coercion  
+ In some cases, you might want to force a literal to a particular data type; for example, when assigning a particularly large integral literal value to a variable of type `Decimal`. The following example produces an error:  
   
 ```vb  
 Dim myDecimal as Decimal  
 myDecimal = 100000000000000000000   ' This causes a compiler error.  
 ```  
   
- このエラーは、リテラルの表現によって発生します。 @No__t_0 のデータ型はこの値を大きく保持できますが、リテラルは暗黙的に `Long` として表されます。これはできません。  
+ The error results from the representation of the literal. The `Decimal` data type can hold a value this large, but the literal is implicitly represented as a `Long`, which cannot.  
   
- リテラルを特定のデータ型に強制的に変換するには、型文字を追加する方法と、それを囲む文字内に配置する方法の2つの方法があります。 型文字または囲み文字は、リテラルの前または後に記述する必要があります。  
+ You can coerce a literal to a particular data type in two ways: by appending a type character to it, or by placing it within enclosing characters. A type character or enclosing characters must immediately precede and/or follow the literal, with no intervening space or characters of any kind.  
   
- 前の例を機能させるには、リテラルに `D` 型文字を追加して、それを `Decimal` として表すことができます。  
+ To make the previous example work, you can append the `D` type character to the literal, which causes it to be represented as a `Decimal`:  
   
  [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
- 次の例は、型文字と囲み文字の正しい使用法を示しています。  
+ The following example demonstrates correct usage of type characters and enclosing characters:  
   
  [!code-vb[VbVbalrConstants#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#3)]  
   
- 次の表は、Visual Basic で使用できる囲み文字と型文字を示しています。  
+ The following table shows the enclosing characters and type characters available in Visual Basic.  
   
-|データの種類|囲み文字|追加された型文字|  
+|データの種類|Enclosing character|Appended type character|  
 |---|---|---|  
 |`Boolean`|(なし)|(なし)|  
 |`Byte`|(なし)|(なし)|  
 |`Char`|"|C|  
 |`Date`|#|(なし)|  
-|`Decimal`|(なし)|D または@|  
-|`Double`|(なし)|R または#|  
-|`Integer`|(なし)|I または%|  
-|`Long`|(なし)|L または &|  
+|`Decimal`|(なし)|D or @|  
+|`Double`|(なし)|R or #|  
+|`Integer`|(なし)|I or %|  
+|`Long`|(なし)|L or &|  
 |`Short`|(なし)|S|  
-|`Single`|(なし)|F または!|  
+|`Single`|(なし)|F or !|  
 |`String`|"|(なし)|  
   
 ## <a name="see-also"></a>関連項目
@@ -69,7 +69,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 - [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Option Explicit ステートメント](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [列挙型の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [方法: 列挙型を宣言する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [列挙型と名前の修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
 - [定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)

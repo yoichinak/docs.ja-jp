@@ -1,15 +1,15 @@
 ---
-title: '方法: LINQ クエリ (Visual Basic) のカスタム メソッドを追加します。'
+title: '方法: LINQ クエリのカスタム メソッドを追加する'
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: 59d08f7b7799964063514ad294567aadd11b0579
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3004a9c9c7abeffd9993b848ad765e7ae2dc8876
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855375"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353374"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>方法: LINQ クエリ (Visual Basic) のカスタム メソッドを追加します。
+# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>How to: Add Custom Methods for LINQ Queries (Visual Basic)
 
 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスに拡張メソッドを追加することで、LINQ クエリに使用できるメソッド セットを拡張できます。 たとえば一連の値から単一の値を求めるために、平均値や最大値を求める標準的な演算に加えて、独自の集計メソッドを作成することができます。 また、一連の値を受け取って別の一連の値を返す特定のデータ変換やカスタム フィルターの働きを持ったメソッドを作成することもできます。 このようなメソッドには、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A>、<xref:System.Linq.Enumerable.Reverse%2A> があります。
 
@@ -53,7 +53,7 @@ End Module
 この拡張メソッドは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスにある他の集計メソッドを呼び出すときと同じように、列挙可能な任意のコレクションに対して呼び出すことができます。
 
 > [!NOTE]
-> Visual basic でできますか、またはを使用するメソッドの呼び出しの標準的なクエリ構文、`Aggregate`または`Group By`句。 詳細については、次を参照してください。 [Aggregate 句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)と[By 句のグループ](../../../../visual-basic/language-reference/queries/group-by-clause.md)します。
+> In Visual Basic, you can either use a method call or standard query syntax for the `Aggregate` or `Group By` clause. For more information, see [Aggregate Clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md) and [Group By Clause](../../../../visual-basic/language-reference/queries/group-by-clause.md).
 
 `double` 型の配列に対して `Median` メソッドを使用する方法を次のコード例に示します。
 
@@ -129,7 +129,7 @@ Function Median(Of T)(ByVal source As IEnumerable(Of T),
 End Function
 ```
 
-これで、任意の型の一連のオブジェクトに対して `Median` メソッドを呼び出すことができます。 型に固有のメソッド オーバーロードがない場合は、デリゲート パラメーターを渡す必要があります。 Visual basic では、この目的のため、ラムダ式を使用できます。 また、使用する場合、`Aggregate`または`Group By`句、メソッドの呼び出しではなく、任意の値またはこの句は、スコープ内の式を渡すことができます。
+これで、任意の型の一連のオブジェクトに対して `Median` メソッドを呼び出すことができます。 型に固有のメソッド オーバーロードがない場合は、デリゲート パラメーターを渡す必要があります。 In Visual Basic, you can use a lambda expression for this purpose. Also, if you use the `Aggregate` or `Group By` clause instead of the method call, you can pass any value or expression that is in the scope this clause.
 
 次のコード例では、整数の配列と文字列の配列に対して `Median` メソッドを呼び出す方法を示します。 文字列の場合は、配列に格納されている文字列の長さの中央値が計算されます。 この例は、それぞれのケースについて、`Median` メソッドに <xref:System.Func%602> デリゲート パラメーターを渡す方法を示しています。
 

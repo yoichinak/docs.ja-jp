@@ -1,5 +1,5 @@
 ---
-title: '方法 : LINQ を使用してデータベースのデータを変更する (Visual Basic)'
+title: 'How to: Modify Data in a Database by Using LINQ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -12,60 +12,60 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: ebf0ed1be8d74b60b7e626db996e7cefb1c01131
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9a10efef5ae92dd21888594ae80a3fc07869a8c0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524513"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344943"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>方法 : LINQ を使用してデータベースのデータを変更する (Visual Basic)
 
-統合言語クエリ (LINQ) クエリを使用すると、データベースの情報にアクセスし、データベース内の値を変更することが簡単にできます。
+Language-Integrated Query (LINQ) queries make it easy to access database information and modify values in the database.
 
-次の例では、SQL Server データベースの情報を取得および更新する新しいアプリケーションを作成する方法を示します。
+The following example shows how to create a new application that retrieves and updates information in a SQL Server database.
 
-このトピックの例では、Northwind サンプルデータベースを使用します。 開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロードセンターからダウンロードできます。 手順については、「[サンプルデータベースのダウンロード](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)」を参照してください。
+The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
 
-### <a name="to-create-a-connection-to-a-database"></a>データベースへの接続を作成するには
+### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database
 
-1. Visual Studio で **[表示]** メニューをクリックして**サーバーエクスプローラー** /**データベースエクスプローラー**を開き、[**サーバーエクスプローラー** /**データベースエクスプローラー**] を選択します。
+1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking the **View** menu, and then select **Server Explorer**/**Database Explorer**.
 
-2. **サーバーエクスプローラー** /**データベースエクスプローラー**で **[データ接続]** を右クリックし、 **[接続の追加]** をクリックします。
+2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer**, and click **Add Connection**.
 
-3. Northwind サンプルデータベースへの有効な接続を指定します。
+3. Specify a valid connection to the Northwind sample database.
 
-### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>LINQ to SQL ファイルを含むプロジェクトを追加するには
+### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>To add a Project with a LINQ to SQL file
 
-1. Visual Studio で、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 プロジェクトの種類として [Visual Basic **Windows フォームアプリケーション**] を選択します。
+1. Visual Studio で、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 Select Visual Basic **Windows Forms Application** as the project type.
 
-2. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 **[LINQ to SQL Classes]** 項目テンプレートを選択します。
+2. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 Select the **LINQ to SQL Classes** item template.
 
-3. そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 @No__t_0 ファイルのオブジェクトリレーショナルデザイナー (O/R デザイナー) が開きます。
+3. そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 The Object Relational Designer (O/R Designer) is opened for the `northwind.dbml` file.
 
-### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>デザイナーに対してクエリおよび変更するテーブルを追加するには
+### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>To add tables to query and modify to the designer
 
-1. **サーバーエクスプローラー** /**データベースエクスプローラー**で、Northwind データベースへの接続を展開します。 **[テーブル]** フォルダーを展開します。
+1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Tables** folder.
 
-     O/R デザイナーを閉じた場合は、前の手順で追加した `northwind.dbml` ファイルをダブルクリックして再度開くことができます。
+     If you have closed the O/R Designer, you can reopen it by double-clicking the `northwind.dbml` file that you added earlier.
 
-2. Customers テーブルをクリックし、デザイナーの左ペインにドラッグします。
+2. Click the Customers table and drag it to the left pane of the designer.
 
-     デザイナーによって、プロジェクトの新しい Customer オブジェクトが作成されます。
+     The designer creates a new Customer object for your project.
 
-3. 変更を保存し、デザイナーを閉じます。
+3. Save your changes and close the designer.
 
 4. プロジェクトを保存します。
 
-### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>データベースを変更して結果を表示するコードを追加するには
+### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>To add code to modify the database and display the results
 
-1. **[ツールボックス]** から、[<xref:System.Windows.Forms.DataGridView>] コントロールをプロジェクト Form1 の既定の Windows フォームにドラッグします。
+1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.
 
-2. O/R デザイナーにテーブルを追加すると、デザイナーによって <xref:System.Data.Linq.DataContext> オブジェクトがプロジェクトに追加されます。 このオブジェクトには、Customers テーブルにアクセスするために使用できるコードが含まれています。 また、ローカルの Customer オブジェクトとテーブルの Customers コレクションを定義するコードも含まれています。 プロジェクトの <xref:System.Data.Linq.DataContext> オブジェクトは、.dbml ファイルの名前に基づいて名前が付けられます。 このプロジェクトでは、<xref:System.Data.Linq.DataContext> オブジェクトに `northwindDataContext` という名前が付けられています。
+2. When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object to your project. This object contains code that you can use to access the Customers table. It also contains code that defines  a local Customer object and a Customers collection for the table. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.
 
-     コード内に <xref:System.Data.Linq.DataContext> オブジェクトのインスタンスを作成し、O/R デザイナーによって指定された Customers コレクションに対してクエリを実行し、変更することができます。 Customers コレクションに加えた変更は、<xref:System.Data.Linq.DataContext> オブジェクトの <xref:System.Data.Linq.DataContext.SubmitChanges%2A> メソッドを呼び出すことによって送信されるまで、データベースに反映されません。
+     You can create an instance of the <xref:System.Data.Linq.DataContext> object in your code and query and modify the Customers collection specified by the O/R Designer. Changes that you make to the Customers collection are not reflected in the database until you submit them by calling the <xref:System.Data.Linq.DataContext.SubmitChanges%2A> method of the <xref:System.Data.Linq.DataContext> object.
 
-     Windows フォームの Form1 をダブルクリックして、<xref:System.Windows.Forms.Form.Load> イベントにコードを追加し、<xref:System.Data.Linq.DataContext> のプロパティとして公開されている Customers テーブルに対してクエリを実行します。 次のコードを追加します。
+     Double-click the Windows Form, Form1, to add code to the <xref:System.Windows.Forms.Form.Load> event to query the Customers table that is exposed as a property of your <xref:System.Data.Linq.DataContext>. 次のコードを追加します。
 
     ```vb
     Private db As northwindDataContext
@@ -87,9 +87,9 @@ ms.locfileid: "72524513"
     End Sub
     ```
 
-3. **ツールボックス**から、3つの <xref:System.Windows.Forms.Button> コントロールをフォームにドラッグします。 最初の `Button` コントロールを選択します。 **[プロパティ]** ウィンドウで、`Button` コントロールの `Name` を `AddButton` に設定し、`Text` を `Add` に設定します。 2番目のボタンを選択し、[`Name`] プロパティを [`UpdateButton`] に設定し、[`Text`] プロパティを [`Update`] に設定します。 3番目のボタンを選択し、`Name` プロパティを `DeleteButton` に設定し、`Text` プロパティを `Delete` に設定します。
+3. From the **Toolbox**, drag three <xref:System.Windows.Forms.Button> controls onto the form. Select the first `Button` control. In the **Properties** window, set the `Name` of the `Button` control to `AddButton` and the `Text` to `Add`. Select the second button and set the `Name` property to `UpdateButton` and the `Text` property to `Update`. Select the third button and set the `Name` property to `DeleteButton` and the `Text` property to `Delete`.
 
-4. **[追加]** ボタンをダブルクリックして、`Click` イベントにコードを追加します。 次のコードを追加します。
+4. Double-click the **Add** button to add code to its `Click` event. 次のコードを追加します。
 
     ```vb
     Private Sub AddButton_Click(ByVal sender As System.Object,
@@ -114,7 +114,7 @@ ms.locfileid: "72524513"
     End Sub
     ```
 
-5. **[更新]** ボタンをダブルクリックして、`Click` イベントにコードを追加します。 次のコードを追加します。
+5. Double-click the **Update** button to add code to its `Click` event. 次のコードを追加します。
 
     ```vb
     Private Sub UpdateButton_Click(ByVal sender As System.Object, _
@@ -138,7 +138,7 @@ ms.locfileid: "72524513"
     End Sub
     ```
 
-6. **[削除]** ボタンをダブルクリックして、`Click` イベントにコードを追加します。 次のコードを追加します。
+6. Double-click the **Delete** button to add code to its `Click` event. 次のコードを追加します。
 
     ```vb
     Private Sub DeleteButton_Click(ByVal sender As System.Object, _
@@ -159,7 +159,7 @@ ms.locfileid: "72524513"
     End Sub
     ```
 
-7. F5 キーを押してプロジェクトを実行します。 新しいレコードを追加するには、 **[追加]** をクリックします。 新しいレコードを変更するには、 **[更新]** をクリックします。 新しいレコードを削除するには、 **[削除]** をクリックします。
+7. F5 キーを押してプロジェクトを実行します。 Click **Add** to add a new record. Click **Update** to modify the new record. Click **Delete** to delete the new record.
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,28 +1,28 @@
 ---
-title: My.Computer オブジェクト (Visual Basic)
+title: My.Computer オブジェクト
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: f0fbd2a795d90cb88a4b185669a6393c5ef22752
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1d6113872f2196f2db4ac1849222cd69f95ffd7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031084"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332111"
 ---
 # <a name="mycomputer-object"></a>My.Computer オブジェクト
 オーディオ、時計、キーボード、ファイル システムなどのコンピューター コンポーネントを操作するためのプロパティを提供します。  
   
 ## <a name="remarks"></a>Remarks  
- `My.Computer` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.Devices.Computer>」をご覧ください。 基本クラス<xref:Microsoft.VisualBasic.Devices.ServerComputer>はすべてのプロジェクトで使用できるメンバーを提供します。  
+ `My.Computer` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.Devices.Computer>」をご覧ください。 The base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects.  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>［要件］  
  **名前空間:** <xref:Microsoft.VisualBasic.Devices>  
   
- **クラス:** <xref:Microsoft.VisualBasic.Devices.Computer> (基本クラス<xref:Microsoft.VisualBasic.Devices.ServerComputer>はすべてのプロジェクトで使用できるメンバーを提供します)。  
+ **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (the base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects).  
   
- **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>関連項目
 

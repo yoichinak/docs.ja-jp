@@ -1,5 +1,5 @@
 ---
-title: With...End With ステートメント (Visual Basic)
+title: With...End With ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.With
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 3da04b85865389a2b4466b78091ff28529346269
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: eb8790d0d8f82232a4b10e4e0e30165745c065c0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582251"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352733"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With ステートメント (Visual Basic)
 
@@ -64,10 +64,10 @@ End With
 
 ブロック外から `With` ステートメント ブロックに分岐することはできません。
 
-ブロックの内部にループがなければ、ステートメントは一度だけ実行されます。 さまざまな種類の制御構造を入れ子にできます。 詳細については、[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md) を参照してください。
+ブロックの内部にループがなければ、ステートメントは一度だけ実行されます。 さまざまな種類の制御構造を入れ子にできます。 For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
 
 > [!NOTE]
-> また、オブジェクト初期化子で `With` キーワードを使用することもできます。 詳細と例については、「[オブジェクト初期化子: 名前付きおよび匿名](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)型」と「[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。
+> また、オブジェクト初期化子で `With` キーワードを使用することもできます。 For more information and examples, see [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 >
 > 直前にインスタンス化したオブジェクトのプロパティまたはフィールドのみを `With` ブロックを使用して初期化する場合は、代わりにオブジェクト初期化子を使用することを考慮します。
 

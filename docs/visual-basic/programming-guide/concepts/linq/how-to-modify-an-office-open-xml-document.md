@@ -1,18 +1,18 @@
 ---
-title: '方法: Office Open XML ドキュメントを変更する (Visual Basic)'
+title: '方法 : Office Open XML ドキュメントを変更する'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 0eb8704608fa7d529b32e44e754c0274d7a67b1d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 623376a68ee2f032fb53d51b61c4c5881b0b9e18
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319947"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336014"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>方法: Office Open XML ドキュメントを変更する (Visual Basic)
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>How to: Modify an Office Open XML Document (Visual Basic)
 このトピックでは、Office Open XML ドキュメントを開き、それを変更して保存する例について説明します。  
   
- Office Open XML の詳細については、「 [Eric ホワイトのブログ](http://www.ericwhite.com)」を参照してください。  
+ For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).  
   
 ## <a name="example"></a>例  
  この例では、ドキュメント内の最初の段落要素を検索します。 次に、段落からテキストを取得し、段落内のテキスト ランをすべて削除します。 また、大文字に変換された最初の段落のテキストから構成される新しいテキスト ランを作成します。 最後に、変更した XML を Open XML パッケージにシリアル化して閉じます。  
@@ -137,7 +137,7 @@ End Module
   
  このプログラムを実行した後で `SampleDoc.docx` を開くと、このプログラムによってドキュメント内の最初の段落が大文字に変換されたかどうかを確認できます。  
   
- 「ソースとなる[Office OPEN Xml ドキュメントを作成する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」で説明されているサンプルの open xml ドキュメントを使用して実行すると、この例では次の出力が生成されます。  
+ When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:  
   
 ```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
@@ -145,4 +145,4 @@ New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<
   
 ## <a name="see-also"></a>関連項目
 
-- [高度なクエリ手法 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

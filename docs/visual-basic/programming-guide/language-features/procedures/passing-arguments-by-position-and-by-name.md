@@ -1,5 +1,5 @@
 ---
-title: 位置と名前による引数渡し (Visual Basic)
+title: 位置と名前による引数渡し
 ms.date: 02/01/2018
 helpviewer_keywords:
 - arguments [Visual Basic], passing by name
@@ -22,66 +22,66 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: 2fa07a4ecf31b9dc0fee91593e793f3b00c5a83b
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b6588335f7634cc87a9fc14cbfc4ba80baad1abb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524436"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352618"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>位置と名前による引数渡し (Visual Basic)
 
-@No__t_0 または `Function` プロシージャを呼び出すと、プロシージャの定義に出現する順序で*位置によって*引数を渡すことができます。また、位置に関係なく*名前で*渡すこともできます。
+When you call a `Sub` or `Function` procedure, you can pass arguments *by position* — in the order in which they appear in the procedure's definition — or you can pass them *by name*, without regard to position.
 
-引数を名前で渡す場合は、引数の宣言名の後にコロンと等号 (`:=`) を指定し、その後に引数の値を指定します。 名前付き引数は任意の順序で指定できます。
+When you pass an argument by name, you specify the argument's declared name followed by a colon and an equal sign (`:=`), followed by the argument value. You can supply named arguments in any order.
 
-たとえば、次の `Sub` プロシージャでは、3つの引数が使用されます。
+For example, the following `Sub` procedure takes three arguments:
 
 [!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]
 
-このプロシージャを呼び出すと、位置、名前、または両方の組み合わせを使用して引数を指定できます。
+When you call this procedure, you can supply the arguments by position, by name, or by using a mixture of both.
 
-## <a name="passing-arguments-by-position"></a>渡す (位置によって引数を)
+## <a name="passing-arguments-by-position"></a>Passing Arguments by Position
 
-@No__t_0 メソッドは、次の例に示すように、位置によって渡され、コンマで区切られた引数を使用して呼び出すことができます。
+You can call the `Display` method with its arguments passed by position and delimited by commas, as shown in the following example:
 
 [!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)]
 
-位置指定引数リストで省略可能な引数を省略した場合は、コンマで区切ります。 次の例では、`age` 引数を指定せずに `Display` メソッドを呼び出します。
+If you omit an optional argument in a positional argument list, you must hold its place with a comma. The following example calls the `Display` method without the `age` argument:
 
 [!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)]
 
-## <a name="passing-arguments-by-name"></a>引数を名前で渡す
+## <a name="passing-arguments-by-name"></a>Passing Arguments by Name
 
-または、次の例に示すように、名前によって渡された引数を使用して `Display` を呼び出すこともできます。また、コンマで区切ることもできます。
+Alternatively, you can call `Display` with the arguments passed by name, also delimited by commas, as shown in the following example:
 
 [!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)]
 
-この方法で名前によって引数を渡すことは、複数の省略可能な引数を持つプロシージャを呼び出す場合に特に便利です。 名前で引数を指定する場合は、位置指定引数がないことを示すために連続するコンマを使用する必要はありません。 名前によって引数を渡すことにより、渡す引数と省略する引数を追跡しやすくなります。
+Passing arguments by name in this way is especially useful when you call a procedure that has more than one optional argument. If you supply arguments by name, you do not have to use consecutive commas to denote missing positional arguments. Passing arguments by name also makes it easier to keep track of which arguments you are passing and which ones you are omitting.
 
-## <a name="mixing-arguments-by-position-and-by-name"></a>位置と名前による引数の混在
+## <a name="mixing-arguments-by-position-and-by-name"></a>Mixing Arguments by Position and by Name
 
-次の例に示すように、1つのプロシージャ呼び出しで位置と名前の両方を引数として指定できます。
+You can supply arguments both by position and by name in a single procedure call, as shown in the following example:
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)]
 
-前の例では、`birth` が名前で渡されるため、省略された `age` 引数の代わりにコンマを追加する必要はありません。
+In the preceding example, no extra comma is necessary to hold the place of the omitted `age` argument, since `birth` is passed by name.
 
-15.5 より前のバージョンの Visual Basic では、位置と名前の組み合わせによって引数を指定する場合は、位置引数をすべて先に指定する必要があります。 名前で引数を指定すると、残りの引数はすべて名前で渡される必要があります。  たとえば、次の `Display` メソッドの呼び出しでは、コンパイラエラー [BC30241: 名前付き引数が必要](../../../misc/bc30241.md)です。
+In versions of Visual Basic before 15.5, when you supply arguments by a mixture of position and name, the positional arguments must all come first. Once you supply an argument by name, any remaining arguments must all be passed by name.  For example, the following call to the `Display` method displays compiler error [BC30241: Named argument expected](../../../misc/bc30241.md).
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)]
 
-Visual Basic 15.5 以降では、位置指定引数は、終了位置引数が正しい位置にある場合に名前付き引数に従うことができます。 Visual Basic 15.5 の下でコンパイルした場合、`Display` メソッドの前の呼び出しが正常にコンパイルされ、コンパイラエラー [BC30241](../../../misc/bc30241.md)が生成されなくなります。
+Starting with Visual Basic 15.5, positional arguments can follow named arguments if the ending positional arguments are in the correct position. If compiled under Visual Basic 15.5, the previous call to the `Display` method compiles successfully and no longer generates compiler error [BC30241](../../../misc/bc30241.md).
 
-この機能は、名前付き引数と位置指定引数を任意の順序で組み合わせることができ、コードを読みやすくするために名前付き引数を使用する場合に特に便利です。 たとえば、次の `Person` クラスコンストラクターには、`Person` 型の2つの引数が必要です。どちらも `Nothing` できます。
+This ability to mix and match named and positional arguments in any order is particularly useful when you want to use a named argument to make your code more readable. For example, the following `Person` class constructor requires two arguments of type `Person`, both of which can be `Nothing`.
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)]
 
-名前付き引数と位置指定引数を混在させることで、`father` 引数と `mother` 引数の値が `Nothing` 場合に、コードの意図を明確にすることができます。
+Using mixed named and positional arguments helps to make the intent of the code clear when the value of the `father` and `mother` arguments is `Nothing`:
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)]
 
-名前付き引数を使用して位置指定引数を実行するには、次の要素を Visual Basic プロジェクト (\* .vbproj) ファイルに追加する必要があります。
+To follow positional arguments with named arguments, you must add the following element to your Visual Basic project (\*.vbproj) file:
 
 ```xml
 <PropertyGroup>
@@ -89,13 +89,13 @@ Visual Basic 15.5 以降では、位置指定引数は、終了位置引数が�
 </PropertyGroup>
 ```
 
-詳細について[は、「Visual Basic 言語バージョンの設定](../../../language-reference/configure-language-version.md)」を参照してください。
+For more information see [setting the Visual Basic language version](../../../language-reference/configure-language-version.md).
 
-## <a name="restrictions-on-supplying-arguments-by-name"></a>名前による引数の指定に関する制限事項
+## <a name="restrictions-on-supplying-arguments-by-name"></a>Restrictions on Supplying Arguments by Name
 
-必須の引数を入力しないように、名前で引数を渡すことはできません。 省略可能な引数のみを省略できます。
+You cannot pass arguments by name to avoid entering required arguments. You can omit only the optional arguments.
 
-パラメーター配列を名前で渡すことはできません。 これは、プロシージャを呼び出すときに、パラメーター配列に対してコンマで区切られた少数の引数を指定し、コンパイラが1つの名前に複数の引数を関連付けることができないためです。
+You cannot pass a parameter array by name. This is because when you call the procedure, you supply an indefinite number of comma-separated arguments for the parameter array, and the compiler cannot associate more than one argument with a single name.
 
 ## <a name="see-also"></a>関連項目
 
