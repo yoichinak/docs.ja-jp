@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a82ce9709e008e092c5f31372a89bf9a16e1f88b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b551743227dc1c6069796038782a515e6dbe8c4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767017"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443777"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 列挙型
-重複のチェックとメタデータ トークンを指定します。  
+Specifies the metadata tokens that will be checked for duplicates.  
   
 ## <a name="syntax"></a>構文  
   
@@ -70,38 +68,38 @@ typedef enum CorCheckDuplicatesFor {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`MDDupAll`|すべてのメタデータ トークンの重複を確認します。|  
+|`MDDupAll`|Check all metadata tokens for duplicates.|  
 |`MDDupENC`|使用しません。|  
-|`MDNoDupChecks`|メタデータ トークンの重複をチェックしません。|  
-|`MDDupTypeDef`|重複をチェック`mdTypeDef`トークンです。|  
-|`MDDupInterfaceImpl`|重複をチェック`mdInterfaceImpl`トークンです。|  
-|`MDDupMethodDef`|重複をチェック`mdMethodDef`トークンです。|  
-|`MDDupTypeRef`|重複をチェック`mdTypeRef`トークンです。|  
-|`MDDupMemberRef`|重複をチェック`mdMemberRef`トークンです。|  
-|`MDDupCustomAttribute`|重複をチェック`mdCustomAttribute`トークンです。|  
-|`MDDupParamDef`|重複をチェック`mdParamDef`トークンです。|  
-|`MDDupPermission`|重複をチェック`mdPermission`トークンです。|  
-|`MDDupProperty`|重複をチェック`mdProperty`トークンです。|  
-|`MDDupEvent`|重複をチェック`mdEvent`トークンです。|  
-|`MDDupFieldDef`|重複をチェック`mdFieldDef`トークンです。|  
-|`MDDupSignature`|重複をチェック`mdSignature`トークンです。|  
-|`MDDupModuleRef`|重複をチェック`mdModuleRef`トークンです。|  
-|`MDDupTypeSpec`|重複をチェック`mdTypeSpec`トークンです。|  
-|`MDDupImplMap`|重複をチェック`mdImplMap`トークンです。|  
-|`MDDupAssemblyRef`|重複をチェック`mdAssemblyRef`トークンです。|  
-|`MDDupFile`|重複をチェック`mdFile`トークンです。|  
-|`MDDupExportedType`|重複をチェック`mdExportedType`トークンです。|  
-|`MDDupManifestResource`|重複をチェック`mdManifestResource`トークンです。|  
-|`MDDupGenericParam`|重複をチェック`mdGenericParam`トークンです。|  
-|`MDDupMethodSpec`|重複をチェック`mdMethodSpec`トークンです。|  
-|`MDDupGenericParamConstraint`|重複をチェック`mdGenericParamConstraint`トークンです。|  
-|`MDDupAssembly`|重複をチェック`mdAssembly`トークンです。|  
-|`MDDupDefault`|重複をチェック`mdMemberRef`、 `mdTypeRef`、 `mdSignature`、 `mdTypeSpec`、および`mdMethodSpec`トークンです。|  
+|`MDNoDupChecks`|Do not check metadata tokens for duplicates.|  
+|`MDDupTypeDef`|Check for duplicates of `mdTypeDef` tokens.|  
+|`MDDupInterfaceImpl`|Check for duplicates of `mdInterfaceImpl` tokens.|  
+|`MDDupMethodDef`|Check for duplicates of `mdMethodDef` tokens.|  
+|`MDDupTypeRef`|Check for duplicates of `mdTypeRef` tokens.|  
+|`MDDupMemberRef`|Check for duplicates of `mdMemberRef` tokens.|  
+|`MDDupCustomAttribute`|Check for duplicates of `mdCustomAttribute` tokens.|  
+|`MDDupParamDef`|Check for duplicates of `mdParamDef` tokens.|  
+|`MDDupPermission`|Check for duplicates of `mdPermission` tokens.|  
+|`MDDupProperty`|Check for duplicates of `mdProperty` tokens.|  
+|`MDDupEvent`|Check for duplicates of `mdEvent` tokens.|  
+|`MDDupFieldDef`|Check for duplicates of `mdFieldDef` tokens.|  
+|`MDDupSignature`|Check for duplicates of `mdSignature` tokens.|  
+|`MDDupModuleRef`|Check for duplicates of `mdModuleRef` tokens.|  
+|`MDDupTypeSpec`|Check for duplicates of `mdTypeSpec` tokens.|  
+|`MDDupImplMap`|Check for duplicates of `mdImplMap` tokens.|  
+|`MDDupAssemblyRef`|Check for duplicates of `mdAssemblyRef` tokens.|  
+|`MDDupFile`|Check for duplicates of `mdFile` tokens.|  
+|`MDDupExportedType`|Check for duplicates of `mdExportedType` tokens.|  
+|`MDDupManifestResource`|Check for duplicates of `mdManifestResource` tokens.|  
+|`MDDupGenericParam`|Check for duplicates of `mdGenericParam` tokens.|  
+|`MDDupMethodSpec`|Check for duplicates of `mdMethodSpec` tokens.|  
+|`MDDupGenericParamConstraint`|Check for duplicates of `mdGenericParamConstraint` tokens.|  
+|`MDDupAssembly`|Check for duplicates of `mdAssembly` tokens.|  
+|`MDDupDefault`|Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

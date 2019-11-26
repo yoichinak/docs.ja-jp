@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0667ef7-1d31-4c89-a2d3-d426f023f8d2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 27b2867019085bf5b44f2ee364c07af66144d4b5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a258ce9121a287929ca5bc39c480f1ca2596e78
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782338"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437464"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps メソッド
 指定した MethodDef トークンによって参照されるメソッドに関連付けられているメタデータを取得します。  
@@ -46,41 +44,41 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mb`  
- [in]メタデータを返すメソッドを表す MethodDef トークンです。  
+ [in] The MethodDef token that represents the method to return metadata for.  
   
  `pClass`  
- [out]メソッドを実装する型を表す TypeDef トークンへのポインター。  
+ [out] A Pointer to a TypeDef token that represents the type that implements the method.  
   
  `szMethod`  
- [out]メソッドの名前を保持するバッファーへのポインター。  
+ [out] A Pointer to a buffer that has the method's name.  
   
  `cchMethod`  
- [in]要求されたサイズの`szMethod`します。  
+ [in] The requested size of `szMethod`.  
   
  `pchMethod`  
- [out]ワイド文字のサイズへのポインター`szMethod`切り捨て、メソッド名のワイド文字の実際の数の場合。  
+ [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
   
  `pdwAttr`  
- [out]メソッドに関連付けられているすべてのフラグへのポインター。  
+ [out] A pointer to any flags associated with the method.  
   
  `ppvSigBlob`  
- [out]メソッドのバイナリ メタデータ シグネチャへのポインター。  
+ [out] A pointer to the binary metadata signature of the method.  
   
  `pcbSigBlob`  
- [out]サイズのバイト数へのポインター`ppvSigBlob`します。  
+ [out] A Pointer to the size in bytes of `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out]メソッドの相対仮想アドレスへのポインター。  
+ [out] A pointer to the relative virtual address of the method.  
   
  `pdwImplFlags`  
- [out]メソッドの場合は、任意の実装フラグへのポインター。  
+ [out] A pointer to any implementation flags for the method.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

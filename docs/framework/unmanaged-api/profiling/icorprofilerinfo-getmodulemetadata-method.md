@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a439d92-348a-44dd-b60f-cad7cba56379
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2e63cf698e41e70084c9b71bdf58d7ac60723d53
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7bf8e3ebedb17a4536b604909434c3e004fc828
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782790"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439830"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>ICorProfilerInfo::GetModuleMetaData メソッド
-指定したモジュールにマップされるメタデータ インターフェイス インスタンスを取得します。  
+Gets a metadata interface instance that maps to the specified module.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,26 +37,26 @@ HRESULT GetModuleMetaData(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleId`  
- [in]インターフェイス インスタンスのマップされたモジュールの ID。  
+ [in] The ID of the module to which the interface instance will be mapped.  
   
  `dwOpenFlags`  
- [in]値、 [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)マニフェスト ファイルを開くためのモードを指定する列挙体。 のみ、 `ofRead`、`ofWrite`と`ofNoTransform`のビットが無効です。  
+ [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration that specifies the mode for opening manifest files. Only the `ofRead`, `ofWrite` and `ofNoTransform` bits are valid.  
   
  `riid`  
- [in]参照 ID (GUID) のメタデータ インターフェイスを持つインスタンスが取得されます。 参照してください[メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)インターフェイスの一覧についてはします。  
+ [in] The reference ID (GUID) of the metadata interface whose instance will be retrieved. See [Metadata Interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) for a list of the interfaces.  
   
  `ppOut`  
- [out]メタデータ インターフェイス インスタンスのアドレスへのポインター。  
+ [out] A pointer to the address of the metadata interface instance.  
   
 ## <a name="remarks"></a>Remarks  
- 読み取り/書き込みモードで開かれるメタデータに問い合わせることができますが、その結果、プログラムのメタデータ、実行速度が、コンパイラからと同様に変更が加えられたため、メタデータは最適化できません。  
+ You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.  
   
- メタデータを所有している (リソース モジュール) などの一部のモジュールはありません。 その場合、`GetModuleMetaData`は S_FALSE とで null 値の HRESULT 値を返します *`ppOut`します。  
+ Some modules (such as resource modules) have no metadata. In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in *`ppOut`.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

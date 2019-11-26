@@ -1,5 +1,5 @@
 ---
-title: 2 つのオブジェクトが等しいかどうかをテストする方法 (Visual Basic)
+title: '方法: 2 つのオブジェクトが等しいかどうかをテストする'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], reference
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - objects [Visual Basic], variables referring to same
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
-ms.openlocfilehash: 6301228d786fe55e8851b6207dd84819671656f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 22e8e1e688d9e3bc3804899103ee78814aac235b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649679"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343618"
 ---
-# <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>2 つのオブジェクトが等しいかどうかをテストする方法 (Visual Basic)
-オブジェクトを参照する 2 つの変数があれば、いずれかを使用できる、`Is`または`IsNot`演算子、または両方を同じインスタンスを参照しているかどうかを判断します。  
+# <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>方法: 2 つのオブジェクトが等しいかどうかをテストする (Visual Basic)
+If you have two variables that refer to objects, you can use either the `Is` or `IsNot` operator, or both, to determine whether they refer to the same instance.  
   
-### <a name="to-test-whether-two-objects-are-the-same"></a>2 つのオブジェクトが等しいかどうかをテストするには  
+### <a name="to-test-whether-two-objects-are-the-same"></a>To test whether two objects are the same  
   
-- 使用して、 [Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)または[IsNot 演算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)オペランドとして 2 つの変数を使用します。  
+- Use the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) or the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) with the two variables as operands.  
   
      [!code-vb[VbVbalrOperators#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#69)]  
   
- 2 つのオブジェクトが同じインスタンスを参照するかどうかに応じて特定のアクションを実行する場合があります。 上記の例では、コントロール`c`フォーム上のアクティブ コントロールに対して`f`します。 作業中のコントロールがないかがある場合はこれ以上にできない場合と同じコントロール インスタンス`c`、`If`ステートメントが失敗し、手順をさらに処理することがなく返します。  
+ You might want to take a certain action depending on whether two objects refer to the same instance. The preceding example compares control `c` against the active control on form `f`. If there is no active control, or if there is one but it is not the same control instance as `c`, then the `If` statement fails and the procedure returns without further processing.  
   
- 使用するかどうか`Is`または`IsNot`に個人の利便性の問題です。 1 つは、指定された式で他よりも読みやすい可能性があります。  
+ Whether you use `Is` or `IsNot` is a matter of personal convenience to you. One might be easier to read than the other in a given expression.  
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

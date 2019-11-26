@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31272cce-506a-4f18-bcbf-01ee45e36356
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2b2298e2d67e8a50e11d53d864f0e78f3b549e45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17305f2c088dd6f479da4c823d3db0fd50c0b3d7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645182"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443227"
 ---
 # <a name="imetadatatables-interface"></a>IMetaDataTables インターフェイス
 テーブル内のメタデータ情報の格納と取得のためのメソッドを提供します。  
@@ -30,32 +28,32 @@ ms.locfileid: "61645182"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetBlob メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblob-method.md)|指定した列のインデックス位置にあるバイナリ ラージ オブジェクト (BLOB) へのポインターを取得します。|  
-|[GetBlobHeapSize メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblobheapsize-method.md)|BLOB ヒープのバイト単位のサイズを取得します。|  
-|[GetCodedTokenInfo メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|指定した行のインデックスに関連付けられているトークンの配列へのポインターを取得します。|  
-|[GetColumn メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|指定したテーブルのインデックス位置にあるテーブル内で指定された列のインデックス位置にある列に含まれる値にポインターを取得します。|  
-|[GetColumnInfo メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumninfo-method.md)|指定されたテーブルで指定された列に関するデータを取得します。|  
-|[GetGuid メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguid-method.md)|指定したインデックス位置の行から GUID を取得します。|  
-|[GetGuidHeapSize メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguidheapsize-method.md)|GUID ヒープのバイト単位のサイズを取得します。|  
-|[GetNextBlob メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextblob-method.md)|テーブル内には、次の BLOB のインデックスを取得します。|  
-|[GetNextGuid メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextguid-method.md)|現在のテーブルの列には、次の GUID 値のインデックスを取得します。|  
-|[GetNextString メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextstring-method.md)|現在のテーブルの列には、次の文字列のインデックスを取得します。|  
-|[GetNextUserString メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|現在のテーブル列で [次へ]、ハード コーディングされた文字列を含む行のインデックスを取得します。|  
-|[GetNumTables メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnumtables-method.md)|現在のスコープ内のテーブルの数を取得`IMetaDataTables`インスタンス。|  
-|[GetRow メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|指定したテーブルのインデックス位置にある表に、指定した行インデックス位置にある行を取得します。|  
-|[GetString メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|参照の現在のスコープ内のテーブル列から、指定したインデックス位置にある文字列を取得します。|  
-|[GetStringHeapSize メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|文字列ヒープのバイト単位のサイズを取得します。|  
-|[GetTableIndex メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableindex-method.md)|指定したトークンによって参照されるテーブルのインデックスを取得します。|  
-|[GetTableInfo メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|指定したテーブルのインデックス位置にある、名、行のサイズ、行の数、列の数と、テーブルのキー列のインデックスを取得します。|  
-|[GetUserString メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|現在のスコープ内で文字列の列で指定したインデックス位置には、ハード コーディングされた文字列を取得します。|  
-|[GetUserStringHeapSize メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstringheapsize-method.md)|ユーザー文字列ヒープのバイト単位のサイズを取得します。|  
+|[GetBlob メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblob-method.md)|Gets a pointer to the binary large object (BLOB) at the specified column index.|  
+|[GetBlobHeapSize メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblobheapsize-method.md)|Gets the size, in bytes, of the BLOB heap.|  
+|[GetCodedTokenInfo メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|Gets a pointer to an array of tokens associated with the specified row index.|  
+|[GetColumn メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|Gets a pointer to the values contained in the column at the specified column index, in the table at the specified table index.|  
+|[GetColumnInfo メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumninfo-method.md)|Gets data about the specified column in the specified table.|  
+|[GetGuid メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguid-method.md)|Gets a GUID from the row at the specified index.|  
+|[GetGuidHeapSize メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguidheapsize-method.md)|Gets the size, in bytes, of the GUID heap.|  
+|[GetNextBlob メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextblob-method.md)|Gets the index of the next BLOB in the table.|  
+|[GetNextGuid メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextguid-method.md)|Gets the index of the next GUID value in the current table column.|  
+|[GetNextString メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextstring-method.md)|Gets the index of the next string in the current table column.|  
+|[GetNextUserString メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|Gets the index of the row that contains the next hard-coded string in the current table column.|  
+|[GetNumTables メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnumtables-method.md)|Gets the number of tables in the scope of the current `IMetaDataTables` instance.|  
+|[GetRow メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|Gets the row at the specified row index, in the table at the specified table index.|  
+|[GetString メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|Gets the string at the specified index from the table column in the current reference scope.|  
+|[GetStringHeapSize メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|Gets the size, in bytes, of the string heap.|  
+|[GetTableIndex メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableindex-method.md)|Gets the index for the table referenced by the specified token.|  
+|[GetTableInfo メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|Gets the name, row size, number of rows, number of columns, and key column index of the table at the specified table index.|  
+|[GetUserString メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|Gets the hard-coded string at the specified index in the string column in the current scope.|  
+|[GetUserStringHeapSize メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstringheapsize-method.md)|Gets the size, in bytes, of the user string heap.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

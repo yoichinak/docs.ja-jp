@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: fac7b480-7adb-4450-a5e9-690fed81ffae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a36cd3c5fb638799a735e4b4a1a98959500300b5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 89111bf7eb03d20c2010c7a20c4cd055c2a021e3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761600"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430735"
 ---
 # <a name="osinfo-structure"></a>OSINFO 構造体
-アセンブリまたはモジュールのオペレーティング システムに関する詳細情報が含まれています。  
+Contains details about the operating system for an assembly or module.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,19 +38,19 @@ typedef struct {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`dwOSPlatformId`|Microsoft Windows プラットフォームの関数で定義された識別子の値のいずれかの`GetVersionEx`します。 次の値がサポートされています。<br /><br /> -VER_PLATFORM_WIN32s、または 0x0000、Microsoft Windows 3.1 を指定します。<br />-VER_PLATFORM_WIN32_WINDOWS、または 0x0001、Windows 95、Windows 98、またはそれらの子孫のオペレーティング システムを指定します。<br />-VER_PLATFORM_WIN32_NT、または 0x0010、Windows NT またはそこから継承したオペレーティング システムを指定します。|  
-|`dwOSMajorVersion`|オペレーティング システムのメジャー バージョン、または任意のバージョンを示す NULL 値。|  
-|`dwOSMinorVersion`|オペレーティング システムのマイナー バージョン、または任意のバージョンを示す NULL 値。|  
+|`dwOSPlatformId`|One of the identifier values defined by the Microsoft Windows platform function `GetVersionEx`. The following values are supported:<br /><br /> -   VER_PLATFORM_WIN32s, or 0x0000, to specify Microsoft Windows 3.1.<br />-   VER_PLATFORM_WIN32_WINDOWS, or 0x0001, to specify Windows 95, Windows 98, or operating systems descended from them.<br />-   VER_PLATFORM_WIN32_NT, or 0x0010, to specify Windows NT or operating systems descended from it.|  
+|`dwOSMajorVersion`|The operating system major version, or a NULL value to indicate any version.|  
+|`dwOSMinorVersion`|The operating system minor version, or a NULL value to indicate any version.|  
   
 ## <a name="remarks"></a>Remarks  
- `OSINFO` に基づいて、`OSVERSIONINFOEX`構造体で使用される関数の呼び出しを Microsoft Windows プラットフォーム`GetVersionEx`します。 この構造体は、そのオペレーティング システムのサポートを示す ASSEMBLYMETADATA 構造体によって使用されます。  
+ `OSINFO` is based on the `OSVERSIONINFOEX` structure that is used in calls to the Microsoft Windows platform function `GetVersionEx`. This structure is used by the ASSEMBLYMETADATA structure to indicate its operating system support.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

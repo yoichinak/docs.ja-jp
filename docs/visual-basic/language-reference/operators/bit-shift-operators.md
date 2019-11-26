@@ -1,22 +1,22 @@
 ---
-title: ビット シフト演算子 (Visual Basic)
+title: ビット シフト演算子
 ms.date: 07/20/2015
 helpviewer_keywords:
 - shift operators [Visual Basic], bit
 - operators [Visual Basic], shift
 - bit shift operators [Visual Basic]
 ms.assetid: 64889319-a057-471b-85d8-69fcd4af6230
-ms.openlocfilehash: e48576b0f09d58f0ce08cc4a7966b31c2880f570
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10f64f8f39c5f96072ebe56a1c60753afeafc022
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608277"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336123"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>ビット シフト演算子 (Visual Basic)
-Visual Basic で定義されているビット シフト演算子を次に示します。  
+The following are the bit shift operators defined in Visual Basic.  
   
- [<\< 演算子](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [<\< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
   
  [>> 演算子](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
   

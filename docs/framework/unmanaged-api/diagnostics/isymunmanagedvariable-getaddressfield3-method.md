@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d834721-ad8d-439d-b356-c6b4aef022fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 76199dd18799c9f51f37d5b92e589effd7f45a57
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3bdc79a6b6d81f6f0998f052f8bea1bf8af55402
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778300"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446109"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>ISymUnmanagedVariable::GetAddressField3 メソッド
-この変数の 3 番目のアドレス フィールドを取得します。 その意味は、アドレスの種類によって異なります。  
+Gets the third address field for this variable. Its meaning depends on the kind of address.  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,13 +34,13 @@ HRESULT GetAddressField3(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインターを`ULONG32`を受け取る 3 番目のアドレス フィールド。  
+ [out] A pointer to a `ULONG32` that receives the third address field.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

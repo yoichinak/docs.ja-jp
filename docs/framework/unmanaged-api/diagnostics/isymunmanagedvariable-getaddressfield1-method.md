@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25788ed1-0ce3-4b97-96fc-88f8997812a3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a035e8dd7bd880c4ead500eede5e1b095d701f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a59b50009e7f0ab2fff1b8439e368234403822c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778075"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446137"
 ---
 # <a name="isymunmanagedvariablegetaddressfield1-method"></a>ISymUnmanagedVariable::GetAddressField1 メソッド
-この変数の最初のアドレス フィールドを取得します。 その意味は、アドレスの種類によって異なります。  
+Gets the first address field for this variable. Its meaning depends on the kind of address.  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,13 +34,13 @@ HRESULT GetAddressField1(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインターを`ULONG32`を受け取る最初のアドレス フィールド。  
+ [out] A pointer to a `ULONG32` that receives the first address field.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5898f2f0900b0bbe392d4dbaa8fc1db5e0e45c9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 98183ed02f8821b7c40852de2d040775d30f2518
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767011"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443746"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity 列挙型
 宣言型セキュリティを使用して実行できるセキュリティ アクションを指定します。  
@@ -64,14 +62,14 @@ typedef enum CorDeclSecurity {
 |`dclActionNil`|予約済み。|  
 |`dclRequest`|予約済み。|  
 |`dclDemand`|呼び出し履歴の上位にあるすべての呼び出し元には、現在のアクセス許可オブジェクトで指定されたアクセス許可が付与されている必要があります。|  
-|`dclAssert`|呼び出し元のコードは、リソースにアクセスするためのアクセス許可が呼び出し元のスタックの上位に与えられていない場合でも、現在のアクセス許可オブジェクトで識別されるリソースにアクセスできます。|  
-|`dclDeny`|アクセス許可を付与されている場合でも、呼び出し元に対して、現在のアクセス許可オブジェクトによって指定されるリソースにアクセスする権限が拒否されました。|  
+|`dclAssert`|The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource|  
+|`dclDeny`|The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.|  
 |`dclPermitOnly`|他のリソースにアクセスできるアクセス許可がコードに付与されていても、このアクセス許可オブジェクトで指定されたリソースにしかアクセスできません。|  
-|`dclLinktimeCheck`|直前の呼び出し元は、一定の期間の指定した権限が付与されている必要があります。|  
-|`dclInheritanceCheck`|別のクラスを継承またはメソッドをオーバーライドする派生クラスは、指定した権限が付与されている必要があります。|  
-|`dclRequestMinimum`|呼び出し元は、コードを実行するために必要な最小限のアクセス許可を要求できます。 この操作は、アセンブリのスコープ内でのみ使用できます。|  
-|`dclRequestOptional`|呼び出し元は、追加は省略可能です (実行には必要ありません) のアクセス許可を要求できます。 この要求は、個別に要求されていない、他のすべてのアクセス許可を暗黙的に拒否します。 この操作は、アセンブリのスコープ内でのみ使用できます。|  
-|`dclRequestRefuse`|呼び出し元の要求が悪用された場合のアクセス許可は付与されません。 この操作は、アセンブリのスコープ内でのみ使用できます。|  
+|`dclLinktimeCheck`|The immediate caller is required to have been granted the specified permission for a given period of time.|  
+|`dclInheritanceCheck`|The derived class inheriting another class or overriding a method is required to have been granted the specified permission.|  
+|`dclRequestMinimum`|The caller can request for the minimum permissions required for code to run. この操作は、アセンブリのスコープ内でのみ使用できます。|  
+|`dclRequestOptional`|The caller can request for additional permissions that are optional (not required to run). この要求は、個別に要求されていない、他のすべてのアクセス許可を暗黙的に拒否します。 この操作は、アセンブリのスコープ内でのみ使用できます。|  
+|`dclRequestRefuse`|The caller's request for permissions that might be misused will not be granted. この操作は、アセンブリのスコープ内でのみ使用できます。|  
 |`dclPrejitGrant`|予約済み。|  
 |`dclPrejitDenied`|予約済み。|  
 |`dclNonCasDemand`|予約済み。|  
@@ -82,10 +80,10 @@ typedef enum CorDeclSecurity {
 |`dclDemandChoice`|予約済み。|  
 |`dclMaximumValue`|予約済み。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

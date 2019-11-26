@@ -1,5 +1,5 @@
 ---
-title: Visual Basic における配列のディメンション
+title: 配列の次元
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dimensions, arrays
@@ -9,89 +9,89 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: bbc9e523e9b74cf380c65135e7416f1feba01a2e
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 12e983ae62fa9f9ea762d434ffe5b73873a4a2e8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512892"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351908"
 ---
-# <a name="array-dimensions-in-visual-basic"></a>Visual Basic における配列のディメンション
+# <a name="array-dimensions-in-visual-basic"></a>Visual Basic における配列の次元
 
-*ディメンション*は、配列の要素の指定を変更できる方向です。 月の各日の売上合計を保持する配列には、1つのディメンション (その月の日付) があります。 月の各日の売上合計を部門別に保持する配列には、2つのディメンション (部署番号とその月の日) があります。 配列が持つ次元の数を*ランク*と呼びます。
+A *dimension* is a direction in which you can vary the specification of an array's elements. An array that holds the sales total for each day of the month has one dimension (the day of the month). An array that holds the sales total by department for each day of the month has two dimensions (the department number and the day of the month). The number of dimensions an array has is called its *rank*.
 
 > [!NOTE]
-> <xref:System.Array.Rank%2A>プロパティを使用して、配列の次元数を確認できます。
+> You can use the <xref:System.Array.Rank%2A> property to determine the how many dimensions an array has.
 
-## <a name="working-with-dimensions"></a>ディメンションの操作
+## <a name="working-with-dimensions"></a>Working with Dimensions
 
-配列の要素を指定するには、各次元の*インデックス*または*添字*を指定します。 要素は、インデックス0からそのディメンションの最大インデックスまで、各ディメンションに沿って連続しています。
+You specify an element of an array by supplying an *index* or *subscript* for each of its dimensions. The elements are contiguous along each dimension from index 0 through the highest index for that dimension.
 
-次の図は、異なるランクを持つ配列の概念構造を示しています。 図の各要素は、それにアクセスするインデックス値を示しています。 たとえば、インデックス`(1, 0)`を指定することにより、2次元配列の2番目の行の最初の要素にアクセスできます。
+The following illustrations show the conceptual structure of arrays with different ranks. Each element in the illustrations shows the index values that access it. For example, you can access the first element of the second row of the two-dimensional array by specifying indexes `(1, 0)`.
 
-![1次元配列を示す図。](./media/array-dimensions/one-dimensional-array.gif)
+![Diagram that shows a one-dimensional array.](./media/array-dimensions/one-dimensional-array.gif)
 
-![2次元配列を示す図。](./media/array-dimensions/two-dimensional-array.gif)
+![Diagram that shows a two-dimensional array.](./media/array-dimensions/two-dimensional-array.gif)
 
-![3次元配列を示す図。](./media/array-dimensions/three-dimensional-array.gif)
+![Diagram that shows a three-dimensional array.](./media/array-dimensions/three-dimensional-array.gif)
 
-### <a name="one-dimension"></a>1つのディメンション
+### <a name="one-dimension"></a>One Dimension
 
-多くの配列には、各年齢の人の数など、ディメンションが1つしかありません。 要素を指定する唯一の要件は、その要素がカウントを保持する期間です。 したがって、このような配列では、インデックスを1つだけ使用します。 次の例では、0 ~ 120 の年齢の年齢カウントの*1 次元配列*を保持する変数を宣言しています。
+Many arrays have only one dimension, such as the number of people of each age. The only requirement to specify an element is the age for which that element holds the count. Therefore, such an array uses only one index. The following example declares a variable to hold a *one-dimensional array* of age counts for ages 0 through 120.
 
 ```vb
 Dim ageCounts(120) As UInteger
 ```
 
-### <a name="two-dimensions"></a>2つのディメンション
+### <a name="two-dimensions"></a>Two Dimensions
 
-一部の配列には、キャンパス上の各建物の各フロアのオフィス数など、2つの次元があります。 要素の指定には、ビル番号とフロアの両方が必要です。各要素には、建物と床の組み合わせの数が保持されます。 そのため、このような配列では2つのインデックスを使用します。 次の例では、オフィス数が 0 ~ 40 で、床が 0 ~ 5 の*2 次元配列*を保持する変数を宣言しています。
+Some arrays have two dimensions, such as the number of offices on each floor of each building on a campus. The specification of an element requires both the building number and the floor, and each element holds the count for that combination of building and floor. Therefore, such an array uses two indexes. The following example declares a variable to hold a *two-dimensional array* of office counts, for buildings 0 through 40 and floors 0 through 5.
 
 ```vb
 Dim officeCounts(40, 5) As Byte
 ```
 
-2次元配列は、*四角形配列*とも呼ばれます。
+A two-dimensional array is also called a *rectangular array*.
 
-### <a name="three-dimensions"></a>3次元
+### <a name="three-dimensions"></a>Three Dimensions
 
-3次元空間の値など、いくつかの配列には3つの次元があります。 このような配列では、3つのインデックスが使用されます。この場合、物理空間の x、y、z 座標を表します。 次の例では、3次元ボリュームのさまざまな点で、航空温度の*3 次元配列*を保持する変数を宣言しています。
+A few arrays have three dimensions, such as values in three-dimensional space. Such an array uses three indexes, which in this case represent the x, y, and z coordinates of physical space. The following example declares a variable to hold a *three-dimensional array* of air temperatures at various points in a three-dimensional volume.
 
 ```vb
 Dim airTemperatures(99, 99, 24) As Single
 ```
 
-### <a name="more-than-three-dimensions"></a>3次元以上
+### <a name="more-than-three-dimensions"></a>More than Three Dimensions
 
-配列の次元は最大で32次元ですが、少なくとも3つを超えることはほとんどありません。
+Although an array can have as many as 32 dimensions, it is rare to have more than three.
 
 > [!NOTE]
-> 配列にディメンションを追加すると、配列に必要なストレージの合計容量が大幅に増加するので、多次元配列を使用することを考慮してください。
+> When you add dimensions to an array, the total storage needed by the array increases considerably, so use multidimensional arrays with care.
 
-## <a name="using-different-dimensions"></a>異なる次元の使用
+## <a name="using-different-dimensions"></a>Using Different Dimensions
 
-今月の各日の売上高を追跡するとします。 次の例に示すように、31個の要素を持つ1次元配列を、その月の各日に1つ宣言できます。
+Suppose you want to track sales amounts for every day of the present month. You might declare a one-dimensional array with 31 elements, one for each day of the month, as the following example shows.
 
 ```vb
 Dim salesAmounts(30) As Double
 ```
 
-次に、1か月のすべての日についてだけでなく、すべての月についても同じ情報を追跡するとします。 次の例に示すように、12行 (月) と31列 (曜日) を含む2次元配列を宣言できます。
+Now suppose you want to track the same information not only for every day of a month but also for every month of the year. You might declare a two-dimensional array with 12 rows (for the months) and 31 columns (for the days), as the following example shows.
 
 ```vb
 Dim salesAmounts(11, 30) As Double
 ```
 
-ここで、配列に複数の年の情報を保持することにしたとします。 5年間の売上高を追跡する場合は、次の例に示すように、5つのレイヤー、12行、および31列を含む3次元配列を宣言できます。
+Now suppose you decide to have your array hold information for more than one year. If you want to track sales amounts for 5 years, you could declare a three-dimensional array with 5 layers, 12 rows, and 31 columns, as the following example shows.
 
 ```vb
 Dim salesAmounts(4, 11, 30) As Double
 ```
 
-各インデックスは0から最大値まで変化するため、の各次元は`salesAmounts` 、その次元で必要な長さより1つの値として宣言されます。 また、新しいディメンションごとに配列のサイズが増加することにも注意してください。 前の例の3つのサイズは、それぞれ31、372、および1860要素です。
+Note that, because each index varies from 0 to its maximum, each dimension of `salesAmounts` is declared as one less than the required length for that dimension. Note also that the size of the array increases with each new dimension. The three sizes in the preceding examples are 31, 372, and 1,860 elements respectively.
 
 > [!NOTE]
-> `Dim` ステートメント`New`または句を使用せずに配列を作成できます。 たとえば、 <xref:System.Array.CreateInstance%2A>メソッドを呼び出すことができます。または、別のコンポーネントが、この方法で作成された配列をコードに渡すことができます。 このような配列は、0以外の下限を持つことができます。 ディメンションの下限は、 <xref:System.Array.GetLowerBound%2A>メソッド`LBound`または関数を使用していつでもテストできます。
+> You can create an array without using the `Dim` statement or the `New` clause. For example, you can call the <xref:System.Array.CreateInstance%2A> method, or another component can pass your code an array created in this manner. Such an array can have a lower bound other than 0. You can always test for the lower bound of a dimension by using the <xref:System.Array.GetLowerBound%2A> method or the `LBound` function.
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,13 +1,13 @@
 ---
-title: 属性の概要 (Visual Basic)
+title: Attributes overview
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: 15ed2f1437ca23b5780f1f8974204d46d93a86c1
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 97a2a13102718b6ee8829fca678b2b49df21e5d1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582106"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349482"
 ---
 # <a name="attributes-overview-visual-basic"></a>属性の概要 (Visual Basic)
 

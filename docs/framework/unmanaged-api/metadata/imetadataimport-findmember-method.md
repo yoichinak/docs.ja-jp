@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad32fb84-c2b6-41cd-888d-787ff3a90449
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4eefb7ec1e7d0d130ec64531a59d1d5bbce04963
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7a46fa5319a1badc0cf28dcdbf535a6ed017c9c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968930"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437917"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember メソッド
-指定した<xref:System.Type>と指定した名前とメタデータシグネチャを持つフィールドまたはメソッドの MemberDef トークンへのポインターを取得します。  
+Gets a pointer to the MemberDef token for field or method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,36 +39,36 @@ HRESULT FindMember (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- から検索対象のメンバーを囲むクラスまたはインターフェイスの TypeDef トークン。 この値が`mdTokenNil`の場合、グローバル変数またはグローバル関数の参照が行われます。  
+ [in] The TypeDef token for the class or interface that encloses the member to search for. If this value is `mdTokenNil`, the lookup is done for a global-variable or global-function.  
   
  `szName`  
- から検索対象のメンバーの名前。  
+ [in] The name of the member to search for.  
   
  `pvSigBlob`  
- からメンバーのバイナリメタデータシグネチャへのポインター。  
+ [in] A pointer to the binary metadata signature of the member.  
   
  `cbSigBlob`  
- からの`pvSigBlob`サイズ (バイト単位)。  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmb`  
- 入出力一致する MemberDef トークンへのポインター。  
+ [out] A pointer to the matching MemberDef token.  
   
 ## <a name="remarks"></a>Remarks  
- メンバーは、外側のクラスまたはインターフェイス (`td`)、その名前 (`szName`)、および必要に応じてシグネチャ`pvSigBlob`() を使用して指定します。 クラスまたはインターフェイスに同じ名前のメンバーが複数存在する可能性があります。 その場合は、メンバーのシグネチャを渡して、一意の一致を検索します。  
+ You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`). There might be multiple members with the same name in a class or interface. In that case, pass the member's signature to find the unique match.  
   
- 署名は特定の`FindMember`スコープにバインドされるため、に渡されるシグネチャは、現在のスコープで生成される必要があります。 署名には、外側のクラスまたは値の型を識別するトークンを埋め込むことができます。 トークンは、ローカルの TypeDef テーブルのインデックスです。 現在のスコープのコンテキスト外でランタイムシグネチャを作成し、その署名を入力として使用してへ`FindMember`の入力として使用することはできません。  
+ The signature passed to `FindMember` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMember`.  
   
- `FindMember`クラスまたはインターフェイスで直接定義されたメンバーのみを検索します。継承されたメンバーは見つかりません。  
+ `FindMember` finds only members that were defined directly in the class or interface; it does not find inherited members.  
   
 > [!NOTE]
-> `FindMember`は、ヘルパーメソッドです。 [IMetaDataImport:: FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); を呼び出します。この呼び出しで一致するものが見つからない`FindMember`場合は、 [IMetaDataImport:: findfield](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)を呼び出します。  
+> `FindMember` is a helper method. It calls [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); if that call does not find a match, `FindMember` then calls [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **Header:** Cor.h  
   
- **ライブラリ**Mscoree.dll にリソースとして含まれています  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

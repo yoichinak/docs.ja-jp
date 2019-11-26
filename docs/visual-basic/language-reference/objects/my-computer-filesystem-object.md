@@ -1,5 +1,5 @@
 ---
-title: My.user オブジェクト (Visual Basic)
+title: My.Computer.FileSystem オブジェクト
 ms.date: 07/20/2015
 helpviewer_keywords:
 - FileSystem module
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 311f605d3f4e77ac2828b8851cbf318da1a0e582
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 958483be7eb200b5f3d3b46738df0a3c50c4f3c3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963708"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347235"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem オブジェクト
 ドライブ、ファイル、ディレクトリを操作するためのプロパティとメソッドを提供します。  
@@ -25,17 +25,17 @@ ms.locfileid: "69963708"
 ## <a name="remarks"></a>Remarks  
  `My.Computer.FileSystem` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.FileIO.FileSystem>」をご覧ください。  
   
- 詳細については、「 [Visual Basic を使用したファイルアクセス](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)」を参照してください。  
+ For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
 > [!NOTE]
-> <xref:System.IO?displayProperty=nameWithType>名前空間のクラスを使用して、ドライブ、ファイル、およびディレクトリを操作することもできます。  
+> You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>［要件］  
  **名前空間:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **クラス:** (へのアクセス<xref:Microsoft.VisualBasic.FileIO.FileSystem>を提供) <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy>  
+ **Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   
- **組み立て**Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>関連項目
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d4d98676-444b-46ca-bfe6-0d827385cd22
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c13eb7ca16cdb7c70f3fef0dd4efcb9362cd3d87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b404a187d8628a04d2aa51df15f86fcc9d0b14f8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776581"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427859"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>ISymUnmanagedWriter::SetScopeRange メソッド
-指定した構文のスコープのオフセット範囲を定義します。 スコープは、新しい現在のスコープになり、スコープのスタックにプッシュされます。 スコープは、階層を形成する必要があります。 兄弟は、重複は許可されません。  
+指定した構文のスコープのオフセット範囲を定義します。 The scope becomes the new current scope and is pushed onto a stack of scopes. Scopes must form a hierarchy. Siblings are not allowed to overlap.  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,22 +36,22 @@ HRESULT OpenScope(
   
 ## <a name="parameters"></a>パラメーター  
  `scopeId`  
- [in]スコープのスコープの識別子です。  
+ [in] The scope identifier for the scope.  
   
  `startOffset`  
- [in]メソッドの先頭から構文のスコープ内の最初の命令のバイト単位のオフセット。  
+ [in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.  
   
  `endOffset`  
- [in]メソッドの先頭から構文のスコープの最後の命令のバイト単位のオフセット。  
+ [in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="remarks"></a>Remarks  
- [Isymunmanagedwriter::openscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md)で使用できる非透過スコープ識別子を返します`ISymUnmanagedWriter::SetScopeRange`スコープを定義するの開始位置と終了後にオフセットします。 この場合に渡したオフセット`ISymUnmanagedWriter::OpenScope`と[isymunmanagedwriter::closescope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md)は無視されます。 スコープ識別子は、現在のメソッドでは無効です。  
+ [ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time. In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored. Scope identifiers are only valid in the current method.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

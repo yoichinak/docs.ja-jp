@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: f8ba6fc8-f5aa-4066-ac96-56332758f5ec
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e8a22e958740b69ba0e09bf062bf4d86075c3ff1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2dcb363a2a84b3c2e0438e45663b96d9a0f83f61
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777010"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445554"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags メソッド
-アセンブリ固有ではないフラグを設定します。  
+Sets flags that are not assembly-specific.  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,13 +34,13 @@ HRESULT SetNonAssemblyFlags(
   
 ## <a name="parameters"></a>パラメーター  
  `afFlags`  
- ALink フラグ。  
+ ALink flags.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合、S_OK を返します。  
+ Returns S_OK if the method succeeds.  
   
-## <a name="requirements"></a>必要条件  
- Alink. h が必要です。  
+## <a name="requirements"></a>［要件］  
+ Requires alink.h  
   
 ## <a name="see-also"></a>関連項目
 

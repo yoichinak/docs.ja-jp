@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 54d5a233da2bf033d960fd02961ac89eb57151d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b7ca6f9878ed2fa2d90ea93e5101f0a66ec2d5e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776288"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440209"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile メソッド
 このアセンブリが参照するアセンブリのメタデータを含む `File` メタデータ構造体を作成し、関連付けられたメタデータ トークンを返します。  
@@ -41,29 +39,29 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>パラメーター  
  `szName`  
- [in]使用するファイルの名前。  
+ [in] The name of the file to be consumed.  
   
  `pbHashValue`  
- [in]アセンブリに関連付けられているデータのハッシュへのポインター。  
+ [in] A pointer to the hash data associated with the assembly.  
   
  `cbHashValue`  
- [in]バイト サイズ`pbHashValue`します。  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwFileFlags`  
- [in]ビットごとの組み合わせ`FileFlags`プロパティの設定を指定する値。  
+ [in] A bitwise combination of `FileFlags` values that specify property settings.  
   
  `pmdf`  
- [out]返されたポインター`File`トークンです。  
+ [out] A pointer to the returned `File` token.  
   
 ## <a name="remarks"></a>Remarks  
- 1 つ`File`メタデータを含むファイルを除く、このアセンブリの構築時にこのアセンブリの一部であった各ファイルのメタデータ構造を定義する必要があります。  
+ One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1e48243f-5de6-4bd6-a1d0-e1d248bca4b8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aec2304e00d5328fcf55adbf5521c08865c05c56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8d7c226d26d677a8b10df29e0343b71682c46699
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763307"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427362"
 ---
 # <a name="functiontailcall3-function"></a>FunctionTailcall3 関数
-現在実行中の関数が別の関数の末尾呼び出しを実行しようとすることをプロファイラーに通知します。  
+Notifies the profiler that the currently executing function is about to perform a tail call to another function.  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,27 +32,27 @@ void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>パラメーター  
  `functionOrRemappedID`  
- [in]Tail の呼び出しを行うには、現在実行中の関数の識別子です。  
+ [in] The identifier of the currently executing function that is about to make a tail call.  
   
 ## <a name="remarks"></a>Remarks  
- `FunctionTailcall3`ように関数が呼び出されるコールバック関数がプロファイラーに通知します。 使用して、 [icorprofilerinfo 3::setenterleavefunctionhooks3 メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)をこの関数の実装を登録します。  
+ The `FunctionTailcall3` callback function notifies the profiler as functions are being called. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
   
- `FunctionTailcall3`関数は、コールバックは、これを実装する必要があります。 実装を使用する必要があります、`__declspec(naked)`ストレージ クラス属性。  
+ The `FunctionTailcall3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
   
- 実行エンジンは、この関数を呼び出す前に、レジスタを保存できません。  
+ The execution engine does not save any registers before calling this function.  
   
-- 項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- 実装`FunctionTailcall3`をブロックしないでください、ガベージ コレクションは延期されます。 実装は、ガベージ コレクションをしないで、スタックはガベージ コレクションに適した状態ではない可能性が。 ランタイムがまでブロックはガベージ コレクションが試行されると、`FunctionTailcall3`を返します。  
+ The implementation of `FunctionTailcall3` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall3` returns.  
   
- `FunctionTailcall3`関数がマネージ コードを呼び出していない、または何らかの方法でマネージ メモリの割り当てが発生する必要があります。  
+ The `FunctionTailcall3` function must not call into managed code or cause a managed memory allocation in any way.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **ライブラリ:** CorGuids.lib  
   

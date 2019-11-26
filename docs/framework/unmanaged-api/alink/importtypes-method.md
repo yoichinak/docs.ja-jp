@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 351d4b4c-c939-486d-9471-51914a55f471
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f19dd114925ed1fd12bcc0056411c3e3d4181215
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76d2b163f959111923bffb1348890f6fbb29828e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777089"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445680"
 ---
 # <a name="importtypes-method"></a>ImportTypes メソッド
-[Importfile メソッド](importfile-method.md)を使用してインポートされた各スコープからの型のインポートを開始します。  
+Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,28 +39,28 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- インポート先のアセンブリの ID。  
+ ID of the assembly to import to.  
   
  `FileToken`  
- インポート元のファイルの ID。  
+ ID of the file to import from.  
   
  `dwScope`  
- インポートする0から始まるスコープ。  
+ Zero-based scope to import.  
   
  `phEnum`  
- このスコープ内の型の列挙子ハンドルを受け取ります。  
+ Receives enumerator handle for the types in this scope.  
   
  `ppImportScope`  
- 必要に応じて、 [IMetaDataImport インターフェイス](../metadata/imetadataimport-interface.md)インターフェイスを受け取ります。  
+ Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.  
   
  `pdwCountOfTypes`  
- 必要に応じて、指定されたスコープ内の型の数を受け取ります。  
+ Optionally receives count of types in the indicated scope.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合、S_OK を返します。  
+ Returns S_OK if the method succeeds.  
   
-## <a name="requirements"></a>必要条件  
- Alink. h が必要です。  
+## <a name="requirements"></a>［要件］  
+ Requires alink.h  
   
 ## <a name="see-also"></a>関連項目
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36cdc9f5-7579-4cd2-aa36-fc05c741584c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be8f4e396171f3e56b5b93969d3960b7aaea142e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e508ccd81d25aa3d303456fa88554903ec71d633
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780649"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439069"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread メソッド
-Win32 スレッドのハンドル、スレッドの ID にマップします。  
+Maps the ID of a thread to a Win32 thread handle.  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,18 +35,18 @@ HRESULT GetHandleFromThread(
   
 ## <a name="parameters"></a>パラメーター  
  `threadId`  
- [in]マップされることをスレッド ID です。  
+ [in] The thread ID to be mapped.  
   
  `phThread`  
- [out]Win32 スレッドのハンドルへのポインター。  
+ [out] A pointer to a Win32 thread handle.  
   
 ## <a name="remarks"></a>Remarks  
- プロファイラーは、Win32 を呼び出す必要があります`DuplicateHandle`関数を使用する前に、ハンドル。  
+ The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

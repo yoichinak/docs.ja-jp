@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 050649e5-ffc0-4458-a0a4-d9ee128a219e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c04b7862363b441ab35d6dd364c4dffaf7464153
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08fbf49e6944de4934a9fe7a960405ee96a7d8e3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769229"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445942"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>ICorProfilerCallback::ModuleLoadFinished メソッド
-モジュールの読み込みが完了したことをプロファイラーに通知します。  
+Notifies the profiler that a module has finished loading.  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +35,20 @@ HRESULT ModuleLoadFinished(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleId`  
- [in]読み込みが完了しているモジュールの ID。  
+ [in] The ID of the module that has finished loading.  
   
  `hrStatus`  
- [in]モジュールが正常に読み込まれたかどうかを示す HRESULT。  
+ [in] An HRESULT that indicates whether the module was loaded successfully.  
   
 ## <a name="remarks"></a>Remarks  
- 値`moduleId`まで情報の要求に対して無効です、`ModuleLoadFinished`メソッドが呼び出されます。  
+ The value of `moduleId` is not valid for an information request until the `ModuleLoadFinished` method is called.  
   
- モジュールの読み込みの一部が後に続ける可能性があります、`ModuleLoadFinished`コールバック。 エラーの HRESULT で`hrStatus`失敗を示します。 ただし、成功 HRESULT で`hrStatus`のみに、モジュールの読み込みの最初の部分が成功したことを示します。  
+ Some parts of loading the module might continue after the `ModuleLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the module has succeeded.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

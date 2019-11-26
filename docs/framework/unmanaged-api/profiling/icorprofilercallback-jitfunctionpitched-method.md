@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 116085df-7a77-404a-afac-d0557a12b986
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 71df3bc707099cbad06742d964881ee629216b69
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bb3934be4a2f4de4a3a235a00522c801331e1eb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782818"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448420"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>ICorProfilerCallback::JITFunctionPitched メソッド
-プロファイラーに通知を・ イン タイム (JIT) されている関数のコンパイル メモリから削除されました。  
+Notifies the profiler that a function that has been just-in-time (JIT)-compiled has been removed from memory.  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +34,17 @@ HRESULT JITFunctionPitched(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in]削除された関数の ID。  
+ [in] The ID of the function that was removed.  
   
 ## <a name="remarks"></a>Remarks  
- 削除された関数が呼び出されると、プロファイラーは、関数が再コンパイルされるときに、新しい JIT コンパイル イベントを受け取ります。 現時点では、共通言語ランタイム (CLR) の JIT コンパイラは削除されません関数をメモリからこのコールバックは現在は使用されませんし、プロファイラーでは受信できません。  
+ If the removed function is called, the profiler will receive new JIT-compilation events when the function is recompiled. Currently, the common language runtime (CLR) JIT compiler does not remove functions from memory, so this callback is currently not used and will not be received by the profiler.  
   
- 値`functionId`が、関数が再コンパイルされるまで、無効です。 関数を再コンパイルすると、同じ`functionId`値が使用されます。  
+ The value of `functionId` is not valid until the function is recompiled. When the function is recompiled, the same `functionId` value will be used.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

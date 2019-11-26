@@ -1,63 +1,63 @@
 ---
-title: Visual Basic における LINQ to XML の概要
+title: LINQ to XML の概要
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 5080efdf10a8e3b1f6815e836f9fffe968a8e4e0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 80d94ecb7dcc196ad831be7418bfecc785015cf9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939257"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346234"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic における LINQ to XML の概要
-Visual Basic は、xml [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]リテラルおよび xml 軸プロパティを使用したのサポートを提供します。 これにより、Visual Basic コードで XML を操作するための使い慣れた便利な構文を使用できます。 *Xml リテラル*を使用すると、コードに直接 xml を含めることができます。 *Xml 軸プロパティ*を使用すると、xml リテラルの子ノード、子孫ノード、および属性にアクセスできます。 詳細については、「 [Xml リテラルの概要](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)」および「 [VISUAL BASIC での Xml へのアクセス](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)」を参照してください。  
+Visual Basic provides support for [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] through XML literals and XML axis properties. This enables you to use a familiar, convenient syntax for working with XML in your Visual Basic code. *XML literals* enable you to include XML directly in your code. *XML axis properties* enable you to access child nodes, descendant nodes, and attributes of an XML literal. For more information, see [XML Literals Overview](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) and [Accessing XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]は、を利用[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]するために特に設計された、メモリ内の XML プログラミング API です。 Api は[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]直接呼び出すことができますが、xml リテラルを宣言し、xml 軸プロパティに直接アクセスできるのは、Visual Basic だけです。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is an in-memory XML programming API designed specifically to take advantage of [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Although you can call the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] APIs directly, only Visual Basic enables you to declare XML literals and directly access XML axis properties.  
   
 > [!NOTE]
-> XML リテラルおよび XML 軸のプロパティは、ASP.NET ページの宣言型コードではサポートされていません。 Visual Basic の XML 機能を使用するには、ASP.NET アプリケーションの分離コードページにコードを配置します。  
+> XML literals and XML axis properties are not supported in declarative code in an ASP.NET page. To use Visual Basic XML features, put your code in a code-behind page in your ASP.NET application.  
   
- [再生ボタン](./media/overview-of-linq-to-xml/play-video-icon-example.gif)関連するビデオデモについては、「 [LINQ to XML の使用を開始する方法](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml)」および「 [LINQ to XML を使用して Excel スプレッドシートを作成する方法](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml)」を参照してください。   
+ [Play button](./media/overview-of-linq-to-xml/play-video-icon-example.gif) For related video demonstrations, see [How Do I Get Started with LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml) and [How Do I Create Excel Spreadsheets using LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml).   
   
 ## <a name="creating-xml"></a>XML の作成  
- Visual Basic で XML ツリーを作成するには、2つの方法があります。 XML リテラルは、コード内で直接宣言することも、 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] api を使用してツリーを作成することもできます。 どちらのプロセスでも、コードは XML ツリーの最終構造を反映することができます。 たとえば、次のコード例では、XML 要素が作成されます。  
+ There are two ways to create XML trees in Visual Basic. You can declare an XML literal directly in code, or you can use the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] APIs to create the tree. Both processes enable the code to reflect the final structure of the XML tree. For example, the following code example creates an XML element:  
   
  [!code-vb[VbXmlSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
- 詳細については、「 [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)」を参照してください。  
+ For more information, see [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md).  
   
-## <a name="accessing-and-navigating-xml"></a>アクセスと XML への移動  
- Visual Basic は、XML 構造にアクセスしたり、XML 構造を移動したりするための XML 軸プロパティを提供します。 これらのプロパティを使用すると、xml の子要素名を指定することによって、XML の要素と属性にアクセスできます。 または、 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]メソッドを明示的に呼び出して、要素と属性の移動と検索を行うこともできます。 たとえば、次のコード例では、xml 要素の属性と子要素を参照するために XML 軸プロパティを使用しています。 このコード例では[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 、クエリを使用して子要素を取得し、XML 要素として出力し、変換を効果的に実行します。  
+## <a name="accessing-and-navigating-xml"></a>Accessing and Navigating XML  
+ Visual Basic provides XML axis properties for accessing and navigating XML structures. These properties enable you to access XML elements and attributes by specifying the XML child element names. Alternatively, you can explicitly call the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] methods for navigating and locating elements and attributes. For example, the following code example uses XML axis properties to refer to the attributes and child elements of an XML element. The code example uses a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query to retrieve child elements and output them as XML elements, effectively performing a transform.  
   
  [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
- 詳細については、「 [Visual Basic での XML へのアクセス](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)」を参照してください。  
+ For more information, see [Accessing XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
   
 ## <a name="xml-namespaces"></a>XML 名前空間  
- Visual Basic では、 `Imports`ステートメントを使用して、グローバル XML 名前空間の別名を指定できます。 次の例では、ステートメントを`Imports`使用して XML 名前空間をインポートする方法を示します。  
+ Visual Basic enables you to specify an alias to a global XML namespace by using the `Imports` statement. The following example shows how to use the `Imports` statement to import an XML namespace:  
   
  [!code-vb[VbXMLSamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#1)]  
   
- Xml 軸プロパティにアクセスし、xml ドキュメントおよび xml 要素の xml リテラルを宣言するときに、XML 名前空間エイリアスを使用できます。  
+ You can use an XML namespace alias when you access XML axis properties and declare XML literals for XML documents and elements.  
   
- [Getxmlnamespace 演算子](../../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)を<xref:System.Xml.Linq.XNamespace>使用すると、特定の名前空間プレフィックスのオブジェクトを取得できます。  
+ You can retrieve an <xref:System.Xml.Linq.XNamespace> object for a particular namespace prefix by using the [GetXmlNamespace Operator](../../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md).  
   
- 詳細については、「 [Imports ステートメント (XML 名前空間)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)」を参照してください。  
+ For more information, see [Imports Statement (XML Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
-### <a name="using-xml-namespaces-in-xml-literals"></a>Xml リテラルでの XML 名前空間の使用  
- 次の例は、グローバル名前空間<xref:System.Xml.Linq.XElement> `ns`を使用するオブジェクトを作成する方法を示しています。  
+### <a name="using-xml-namespaces-in-xml-literals"></a>Using XML Namespaces in XML Literals  
+ The following example shows how to create an <xref:System.Xml.Linq.XElement> object that uses the global namespace `ns`:  
   
  [!code-vb[VbXMLSamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#2)]  
   
- Visual Basic コンパイラは、xml 名前空間エイリアスを含む xml リテラルを、 `xmlns`属性と共に xml 名前空間を使用するための xml 表記法を使用する同等のコードに変換します。 コンパイル時に、前のセクションの例のコードでは、次の例と同じ実行可能コードが生成されます。  
+ The Visual Basic compiler translates XML literals that contain XML namespace aliases into equivalent code that uses the XML notation for using XML namespaces, with the `xmlns` attribute. When compiled, the code in the previous section's example produces essentially the same executable code as the following example:  
   
  [!code-vb[VbXMLSamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#3)]  
   
-### <a name="using-xml-namespaces-in-xml-axis-properties"></a>Xml 軸プロパティでの XML 名前空間の使用  
- Xml リテラルで宣言された XML 名前空間は、XML 軸プロパティでは使用できません。 ただし、XML 軸のプロパティではグローバル名前空間を使用できます。 XML 名前空間プレフィックスをローカル要素名から区切るには、コロンを使用します。 例を次に示します。  
+### <a name="using-xml-namespaces-in-xml-axis-properties"></a>Using XML Namespaces in XML Axis Properties  
+ XML namespaces declared in XML literals are not available for use in XML axis properties. However, global namespaces can be used with the XML axis properties. Use a colon to separate the XML namespace prefix from the local element name. 例を次に示します。  
   
  [!code-vb[VbXMLSamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#4)]  
   

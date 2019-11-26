@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 238a5f19bd8cbd89a5537b2b9297bfa9e1f54613
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 774a5d4e48f00ea8c28977f3f685dcd5a8da3199
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952888"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440586"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 関数
-関数が呼び出し元に戻りようとしていることをプロファイラーに通知します。  
+Notifies the profiler that a function is about to return to the caller.  
   
 > [!NOTE]
-> `FunctionLeave`関数は、.NET Framework 2.0 では非推奨とされます。 これは引き続き機能しますが、パフォーマンスが低下します。 代わりに、 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)関数を使用してください。  
+> The `FunctionLeave` function is deprecated in the .NET Framework 2.0. It will continue to work, but will incur a performance penalty. Use the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function instead.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,29 +37,29 @@ void __stdcall FunctionLeave (
   
 ## <a name="parameters"></a>パラメーター  
  `funcID`  
- からを返す関数の識別子。  
+ [in] The identifier of the function that is returning.  
   
 ## <a name="remarks"></a>Remarks  
- `FunctionLeave`関数はコールバックであるため、実装する必要があります。 実装では、 `__declspec`(`naked`) ストレージクラス属性を使用する必要があります。  
+ The `FunctionLeave` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- この関数を呼び出す前に、実行エンジンはレジスタを保存しません。  
+ The execution engine does not save any registers before calling this function.  
   
-- 入力時には、浮動小数点単位 (FPU) に含まれるすべてのレジスタを含め、使用するすべてのレジスタを保存する必要があります。  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 終了時に、呼び出し元によってプッシュされたすべてのパラメーターをポップして、スタックを復元する必要があります。  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- の`FunctionLeave`実装は、ガベージコレクションを遅延させるため、ブロックしないでください。 スタックがガベージコレクションに対応していない可能性があるため、この実装ではガベージコレクションを実行しないようにしてください。 ガベージコレクションが試行された場合、ランタイムはが`FunctionLeave`返されるまでブロックします。  
+ The implementation of `FunctionLeave` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave` returns.  
   
- また、関数`FunctionLeave`はマネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
+ Also, the `FunctionLeave` function must not call into managed code or in any way cause a managed memory allocation.  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Corprof.idl  
+ **Header:** CorProf.idl  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** 1.1、1.0  
+ **.NET Framework Versions:** 1.1, 1.0  
   
 ## <a name="see-also"></a>関連項目
 

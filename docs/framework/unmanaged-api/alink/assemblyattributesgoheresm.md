@@ -1,5 +1,5 @@
 ---
-title: AssemblyAttributesGoHereSM クラス (System.Runtime.CompilerServices)
+title: AssemblyAttributesGoHereSM Class (System.Runtime.CompilerServices)
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHereSM
@@ -15,16 +15,14 @@ helpviewer_keywords:
 ms.assetid: 4cf9bf39-1527-49e0-a0e9-55e7a018bf66
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01b156ed9c318e71a408ea10f2744911a85faedc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 379ba20ebf675bec71e6e5f5bcfc0dc2fbd1f92c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790339"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446599"
 ---
-# <a name="assemblyattributesgoheresm-class"></a>AssemblyAttributesGoHereSM クラス
+# <a name="assemblyattributesgoheresm-class"></a>AssemblyAttributesGoHereSM Class
 
 ALink でプレースホルダーとして使用し、カスタム属性に関する情報を格納します。
 
@@ -40,9 +38,9 @@ internal sealed class AssemblyAttributesGoHereSM
 
 この型への参照は、セキュリティに関連して複数の用途を持つカスタム属性を示します。
 
-これらの型が「内部」.NET Framework 内でマークされ、内にある、<xref:System.Runtime.CompilerServices>名前空間。
+These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 mscorlib.dll
 

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - metadata enumerations [.NET Framework]
 - unmanaged enumerations [.NET Framework], metadata
 ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f92b87cc2748a709361ff2c0c8129db5f7fe6046
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92f2419070738a49f78c1f1497652cc0b89f3b21
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042199"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447867"
 ---
 # <a name="metadata-enumerations"></a>メタデータ列挙体
 このセクションでは、メタデータ API が使用するアンマネージ列挙について説明します。  
@@ -26,16 +24,16 @@ ms.locfileid: "62042199"
  アセンブリ参照の機能を記述する値が格納されます。  
   
  [CeeSectionAttr 列挙型](../../../../docs/framework/unmanaged-api/metadata/ceesectionattr-enumeration.md)  
- 使用するセクションの属性を指定する値を提供、 [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)インターフェイス。  
+ Provides values that specify the attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
   
  [CeeSectionRelocType 列挙型](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md)  
- 種類に影響する値を提供`reloc`への呼び出しで出力される命令、 [iceegen::addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)メソッド。  
+ Provides values to influence the type of `reloc` instruction emitted in a call to the [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md) method.  
   
  [COINITICOR 列挙型](../../../../docs/framework/unmanaged-api/metadata/coiniticor-enumeration.md)  
- 使用される定数を指定します[CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)共通言語ランタイムを初期化するときにします。  
+ Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when initializing the common language runtime.  
   
  [COINITIEE 列挙型](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md)  
- 使用される定数を指定します[CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)共通言語ランタイムを初期化するときにします。  
+ Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.  
   
  [CorArgType 列挙型](../../../../docs/framework/unmanaged-api/metadata/corargtype-enumeration.md)  
  ランタイム ハンドルのネイティブな型を記述する値が格納されます。  
@@ -68,13 +66,13 @@ ms.locfileid: "62042199"
  フィールドについてのメタデータを記述する値が格納されます。  
   
  [CorFileFlags 列挙型](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)  
- 呼び出しで定義されているファイルの種類を記述する値が含まれています、 [imetadataassemblyemit::definefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)メソッド。  
+ Contains values that describe the type of file defined in a call to the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.  
   
  [CorFileMapping 列挙型](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)  
- 呼び出しから返されるファイル マッピングの種類を記述する値が含まれています、 [imetadatainfo::getfilemapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)メソッド。  
+ Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.  
   
  [CorGenericParamAttr 列挙型](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)  
- 記述する値が含まれています、<xref:System.Type>の呼び出しで使用される、ジェネリック型パラメーター、 [imetadataemit 2::definegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)メソッド。  
+ Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to the [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md) method.  
   
  [CorImportOptions 列挙型](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md)  
  現在のスコープ外のアセンブリのインポート中の動作を制御するフラグ値が格納されます。  
@@ -116,7 +114,7 @@ ms.locfileid: "62042199"
  メソッド パラメーターのメタデータを記述する値が格納されます。  
   
  [CorPEKind 列挙型](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)  
- 呼び出しから返されるように、ポータブル実行可能ファイルを記述する値が含まれています、 [imetadataimport 2::getpekind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)メソッド。  
+ Contains values that describe a portable executable file, as returned from a call to the [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md) method.  
   
  [CorPinvokeMap 列挙型](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)  
  PInvoke 呼び出しの機能を記述する値が格納されます。  
@@ -134,7 +132,7 @@ ms.locfileid: "62042199"
  保存操作のサイズの照会で要求される精度のレベルを示す値が格納されます。  
   
  [CorSerializationType 列挙型](../../../../docs/framework/unmanaged-api/metadata/corserializationtype-enumeration.md)  
- 共通言語ランタイムがオブジェクトをシリアル化する方法を記述する値が格納されます。 これらの値は、一般に、CorElementType 値に対応します。  
+ 共通言語ランタイムがオブジェクトをシリアル化する方法を記述する値が格納されます。 These values generally correspond to CorElementType values.  
   
  [CorSetENC 列挙型](../../../../docs/framework/unmanaged-api/metadata/corsetenc-enumeration.md)  
  メタデータの生成中の動作を決定する値が格納されます。  
@@ -152,10 +150,10 @@ ms.locfileid: "62042199"
  アンマネージ呼び出し規約を記述する値が格納されます。  
   
  [CorValidatorModuleType 列挙型](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md)  
- によって使用される値を提供します、 [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)モジュール (.obj ファイルと PE ファイル) の種類を指定するインターフェイス。  
+ Provides values used by the [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) interface to specify the type of the module (PE file vs. .obj file).  
   
  [COUNINITIEE 列挙型](../../../../docs/framework/unmanaged-api/metadata/couninitiee-enumeration.md)  
- 使用される定数を指定します[CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)共通言語ランタイムを初期化するときにします。  
+ Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.  
   
 ## <a name="related-sections"></a>関連項目  
  [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

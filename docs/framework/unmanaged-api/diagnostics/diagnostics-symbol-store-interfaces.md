@@ -9,57 +9,55 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bdb691570a9a2bf7bd2bb21af500b06c10b0bc53
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787895"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448527"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>シンボル ストア診断インターフェイス
-このトピックでは、デバッガーで使用するためのシンボル情報を生成するコンパイラを有効にするアンマネージ インターフェイスについて説明します。  
+This topic describes the unmanaged interfaces that enable a compiler to generate symbol information for use by a debugger.  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [IBindingDisplay インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)  
- 実行中のアプリケーションの現在のバインド情報を表示するメソッドを提供します。  
+ Provides methods that display current binding information about the running application.  
   
  [IDebugAutoAttach インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)  
- サーバー起動デバッガーの自動アタッチ用インターフェイスを定義します。  
+ Defines the interface for a server-invoked debugger auto attach.  
   
  [INotifyConnection2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- 登録と接続の通知のソースを登録解除のためのメソッドを宣言します。  
+ Declares methods for registering and unregistering a connection notification source.  
   
  [INotifySink2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- シンク通知メソッドを宣言します。  
+ Declares methods for sink notification.  
   
  [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- 通知フィルターを設定するためのメソッドを宣言します。  
+ Declares a method for setting notification filters.  
   
  [ISymENCUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)  
- エディット コンティニュの機能についてを説明します。  
+ Provides information for the Edit and Continue feature.  
   
  [ISymUnmanagedAsyncMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)  
- このインターフェイスは、読み取りの補足[ISymUnmanagedAsyncMethodPropertiesWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)します。  
+ This interface is the reading complement to [ISymUnmanagedAsyncMethodPropertiesWriter Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
   
  [ISymUnmanagedAsyncMethodPropertiesWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)  
- メソッドのシンボルごとの省略可能な非同期メソッドの情報を定義をできます。 開かれているメソッドで使用する必要があります (つまり、呼び出しの間で、 [OpenMethod メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)と[CloseMethod メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md))。  
+ Allows definition of optional async method information per method symbol. Must use with an opened method (that is, between calls to the [OpenMethod Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)and the [CloseMethod Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
   
  [ISymUnmanagedBinder インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
- アンマネージ コードのシンボル バインダーを表します。  
+ Represents a symbol binder for unmanaged code.  
   
  [ISymUnmanagedBinder2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
- アンマネージ コードのシンボル バインダーを表し、拡張、`ISymUnmanagedBinder`インターフェイス。  
+ Represents a symbol binder for unmanaged code, and extends the `ISymUnmanagedBinder` interface.  
   
  [ISymUnmanagedBinder3 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)  
- アンマネージ コードのシンボル バインダーを表し、拡張、`ISymUnmanagedBinder`インターフェイス。  
+ Represents a symbol binder for unmanaged code, and extends the `ISymUnmanagedBinder` interface.  
   
  [ISymUnmanagedConstant インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)  
- 非管理対象の定数へのアクセスを提供します。  
+ Provides access to unmanaged constants.  
   
  [ISymUnmanagedDispose インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)  
- アンマネージ リソースを破棄します。  
+ Disposes of unmanaged resources.  
   
  [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)  
  シンボル ストアによって参照されるドキュメントを表します。  
@@ -68,52 +66,52 @@ ms.locfileid: "61787895"
  シンボル ストアで参照されるドキュメントに書き込むためのメソッドを提供します。  
   
  [ISymUnmanagedENCUpdate インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)  
- エディット コンティニュの機能のメソッドを提供します。  
+ Provides methods for the Edit and Continue feature.  
   
  [ISymUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)  
- シンボル ストア内のメソッドを表します。  
+ Represents a method within the symbol store.  
   
  [ISymUnmanagedNamespace インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)  
- 名前空間を表します。  
+ Represents a namespace.  
   
  [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)  
- ドキュメント、メソッド、およびシンボル ストア内の変数へのアクセスを提供するためのシンボル リーダーを表します。  
+ Represents a symbol reader that provides access to documents, methods, and variables within a symbol store.  
   
  [ISymUnmanagedReader2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)  
- メソッドのトークンと編集、コピーのバージョン番号を指定して、シンボル リーダー メソッドを取得します。  
+ Gets a symbol reader method given a method token and an edit-and-copy version number.  
   
  [ISymUnmanagedReaderSymbolSearchInfo インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)  
- シンボルの検索情報を取得するメソッドを提供します。  
+ Provides methods that get symbol search information.  
   
  [ISymUnmanagedScope インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  
- メソッド内での構文のスコープを表します。  
+ Represents a lexical scope within a method.  
   
  [ISymUnmanagedScope2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)  
- メソッド内の構文のスコープを表し、拡張、`ISymUnmanagedScope`スコープ内で定義されている定数に関する情報を取得するメソッドを持つインターフェイス.  
+ Represents a lexical scope within a method, and extends the `ISymUnmanagedScope` interface with methods that get information about constants defined within the scope..  
   
  [ISymUnmanagedSourceServerModule インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)  
- モジュールのソース サーバーのデータを提供します。  
+ Provides source server data for a module.  
   
  [ISymUnmanagedSymbolSearchInfo インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)  
- 検索パスに関する情報を取得するメソッドを提供します。  
+ Provides methods that get information about the search path.  
   
  [ISymUnmanagedVariable インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
- パラメーター、ローカル変数またはフィールドなどの変数を表します。  
+ Represents a variable, such as a parameter, a local variable, or a field.  
   
  [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- シンボル ライターを表し、ドキュメント、シーケンス ポイント、構文のスコープ、および変数を定義するメソッドを提供します。  
+ Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables.  
   
  [ISymUnmanagedWriter2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- シンボル ライターを表し、ドキュメント、シーケンス ポイント、構文のスコープ、および変数を定義するメソッドを提供します。 拡張、`ISymUnmanagedWriter`インターフェイス。  
+ Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables. Extends the `ISymUnmanagedWriter` interface.  
   
  [ISymUnmanagedWriter3 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)  
- シンボル ライターを表し、ドキュメント、シーケンス ポイント、構文のスコープ、および変数を定義するメソッドを提供します。 拡張、`ISymUnmanagedWriter`インターフェイス。  
+ Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables. Extends the `ISymUnmanagedWriter` interface.  
   
  [ISymUnmanagedWriter4 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)  
- ISymUnmanagedWriter4 インターフェイスです。  
+ ISymUnmanagedWriter4 interface.  
   
  [ISymUnmanagedWriter5 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)  
- ISymUnmanagedWriter5 インターフェイスです。  
+ ISymUnmanagedWriter5 interface.  
   
 ## <a name="related-sections"></a>関連項目  
  [シンボル ストア診断列挙型](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  

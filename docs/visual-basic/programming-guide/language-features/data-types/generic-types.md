@@ -1,5 +1,5 @@
 ---
-title: Visual Basic におけるジェネリック型 (Visual Basic)
+title: ジェネリック型
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generic interfaces
@@ -36,19 +36,19 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 813ee167fdc09c7c7ea12f5f09602230e711d362
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3dcd7756b10fab8f66f4d5c10acedd8f600eb2e7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593386"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350116"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic におけるジェネリック型 (Visual Basic)
 *ジェネリック型* はさまざまなデータ型に対して同じ機能を実行するために必要な処理を行う、1 つのプログラミング要素です。 ジェネリック クラスまたはジェネリック プロシージャを定義すると、同じ機能を実行させる各データ型に対して、その機能を別々に定義する必要がありません。  
   
  これは、ヘッドの部分が交換可能な、ねじ回しのセットにたとえることができます。 回すねじを調べて、そのねじに合った正しいヘッド (マイナス、プラス、星型) を選択します。 ねじ回しのハンドルに正しいヘッドを挿入したら、ねじ回しを使ってまったく同じ作業 (ねじを回すこと) を行います。  
   
- ![別のヘッド、ねじ回しのセットのダイアグラム。](./media/generic-types/generic-screwdriver-set.gif)  
+ ![Diagram of a screwdriver set with different heads.](./media/generic-types/generic-screwdriver-set.gif)  
   
  ジェネリック型を定義する場合は、1 つ以上のデータ型でジェネリック型をパラメーター化します。 これにより、ジェネリック型を使用するコードで、データ型をコードの要件に合わせて変更できるようになります。 コードでは、1 つのジェネリックな要素から複数のプログラミング要素を宣言し、それぞれを異なるデータ型のセットに使用できます。 ただし、使用するデータ型が異なっていても、宣言した要素はどれも同じロジックを実行します。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "65593386"
   
  このときに、 `stringQ` を使って、 `String` 値だけを扱うように指定できます。 `stringQ` は、 `String` 値を汎用的に扱うのではなく `Object` だけを扱うことを意味するので、遅延バインディングまたは型変換は行いません。 その結果、実行時間が短縮され、ランタイム エラーが減少します。  
   
- ジェネリック型の使用に関する詳細については、次を参照してください。[方法。ジェネリック クラスを使用して、](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)します。  
+ ジェネリック型の使い方の詳細については、「 [How to: Use a Generic Class](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)」をご覧ください。  
   
 ## <a name="example-of-a-generic-class"></a>ジェネリック クラスの例  
  次の例は、ジェネリック クラスのスケルトン定義を示しています。  
@@ -73,12 +73,12 @@ ms.locfileid: "65593386"
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- より完全なコード例については、「[方法:異なるデータ型に同一の機能を提供するクラスを定義](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)します。  
+ For a more complete example, see [How to: Define a Class That Can Provide Identical Functionality on Different Data Types](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>使用できるプログラミング要素  
- ジェネリック クラス、構造体、インターフェイス、プロシージャ、およびデリゲートを定義して使用することができます。 .NET Framework には、いくつかのジェネリック クラス、構造、および一般的に使用されるジェネリックな要素を表すインターフェイスが定義されてことに注意してください。 <xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間には、ディクショナリ、リスト、キュー、スタックが用意されています。 独自のジェネリックな要素を定義する前に、それに相当する要素が既に <xref:System.Collections.Generic?displayProperty=nameWithType>に用意されていないかをご確認ください。  
+ ジェネリック クラス、構造体、インターフェイス、プロシージャ、およびデリゲートを定義して使用することができます。 Note that the .NET Framework defines several generic classes, structures, and interfaces that represent commonly used generic elements. <xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間には、ディクショナリ、リスト、キュー、スタックが用意されています。 独自のジェネリックな要素を定義する前に、それに相当する要素が既に <xref:System.Collections.Generic?displayProperty=nameWithType>に用意されていないかをご確認ください。  
   
- プロシージャは型ではありませんが、ジェネリック プロシージャを定義し、使用できます。 「 [Visual Basic におけるジェネリック プロシージャ](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
+ プロシージャは型ではありませんが、ジェネリック プロシージャを定義し、使用できます。 「 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
   
 ## <a name="advantages-of-generic-types"></a>ジェネリック型の利点  
  ジェネリック型は、それぞれが特定のデータ型を操作する複数のプログラミング要素を宣言するための基礎となります。 ジェネリック型の代わりになるものを以下に示します。  
@@ -116,7 +116,7 @@ ms.locfileid: "65593386"
 ### <a name="types-of-constraints"></a>制約の種類  
  次の要件を任意に組み合わせて制約を指定できます。  
   
-- 型引数は、1 つまたは複数のインターフェイスを実装する必要があります  
+- 型引数はインターフェイスを実装する必要があります  
   
 - 型引数は、クラスの型そのものであるか、最大 1 つのクラスを継承する必要があります  
   
@@ -124,9 +124,9 @@ ms.locfileid: "65593386"
   
 - 型引数は、 *参照型*である、または *値型*である必要があります  
   
- 複数の要件を指定する場合は、コンマで区切られた *制約リスト* を中かっこ (`{ }`) で囲みます。 含めるをアクセス可能のコンス トラクターを必要とする、 [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)キーワードをリストにします。 参照型であることを必須とするには、 `Class` キーワードを追加し、値型であることを必須とするには、 `Structure` キーワードを追加します。  
+ 複数の要件を指定する場合は、コンマで区切られた *制約リスト* を中かっこ (`{ }`) で囲みます。 To require an accessible constructor, you include the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the list. 参照型であることを必須とするには、 `Class` キーワードを追加し、値型であることを必須とするには、 `Structure` キーワードを追加します。  
   
- 制約の詳細については、[型リスト](../../../../visual-basic/language-reference/statements/type-list.md)に関するページをご覧ください。  
+ 制約の詳細については、「 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
   
 ### <a name="example-of-multiple-constraints"></a>複数の制約の例  
  次の例は、型パラメーターに制約リストがあるジェネリック クラスのスケルトン定義を示しています。 このクラスのインスタンスを作成するコードでは、型引数が <xref:System.IComparable> インターフェイスと <xref:System.IDisposable> インターフェイスの両方を実装し、参照型であり、アクセス可能なパラメーターなしのコンストラクターを公開する必要があります。  
@@ -151,7 +151,7 @@ ms.locfileid: "65593386"
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)

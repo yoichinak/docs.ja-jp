@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 909aa530-2e3b-4d0a-a38a-a2750e535d7d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7bebf254110d9970ff3a99f948ff2e831ffb6b35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd7ba7ff10918e5953ea8ae89a60af3115af48a3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782433"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437686"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName メソッド
-名前と所有者を指定するカスタム属性を取得します。  
+Gets the custom attribute, given its name and owner.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,26 +38,26 @@ HRESULT GetCustomAttributeByName (
   
 ## <a name="parameters"></a>パラメーター  
  `tkObj`  
- [in]カスタム属性を所有するオブジェクトを表すメタデータ トークンです。  
+ [in] A metadata token representing the object that owns the custom attribute.  
   
  `szName`  
- [in]カスタム属性の名前。  
+ [in] The name of the custom attribute.  
   
  `ppData`  
- [out]カスタム属性の値であるデータの配列へのポインター。  
+ [out] A pointer to an array of data that is the value of the custom attribute.  
   
  `pcbData`  
- [out]返されるデータのバイト サイズ *`ppData`します。  
+ [out] The size in bytes of the data returned in *`ppData`.  
   
 ## <a name="remarks"></a>Remarks  
- 所有者が同じ複数のカスタム属性を定義することはでも、同じ名前があります。 ただし、 `GetCustomAttributeByName` 1 つだけインスタンスを返します。 (`GetCustomAttributeByName`見つけた最初のインスタンスを返します)。カスタム属性のすべてのインスタンスを検索するには、呼び出し、 [imetadataimport::enumcustomattributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md)メソッド。  
+ It is legal to define multiple custom attributes for the same owner; they may even have the same name. However, `GetCustomAttributeByName` returns only one instance. (`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7596220c-f699-4b6c-8ae7-c83220610650
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3fee3c0b82bec102d8e292a76d3df5a14d40ace8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 06894f238f9fda3111d5484bb1b2add183a5abb2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757672"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448063"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge メソッド
-指定されたインポートされたスコープをマージするスコープの一覧に追加します。  
+Adds the specified imported scope to the list of scopes to be merged.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,23 +37,23 @@ HRESULT Merge (
   
 ## <a name="parameters"></a>パラメーター  
  `pImport`  
- [in]ポインター、 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)マージするインポートされたスコープを識別するオブジェクト。  
+ [in] A pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) object that identifies the imported scope to be merged.  
   
  `pIMap`  
- [in]ポインター、 [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)トークンの再マップを指定するオブジェクト。  
+ [in] A pointer to an [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) object that specifies the token re-map.  
   
  `pHandler`  
- [in]ポインター、 [IUnknown](/cpp/atl/iunknown)エラーを指定するオブジェクト。  
+ [in] A pointer to an [IUnknown](/cpp/atl/iunknown) object that specifies the errors.  
   
 ## <a name="remarks"></a>Remarks  
- 呼び出す[imetadataemit::mergeend](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md)を 1 つのスコープにメタデータの合併をトリガーします。  
+ Call [IMetaDataEmit::MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) to trigger the merger of metadata into a single scope.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

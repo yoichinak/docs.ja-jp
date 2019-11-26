@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3bf15b0-3250-4bbe-b9b5-c5d695289b6f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9a36e094689696b746fcf7f10c282a1b0d9c570
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 02b270677131d0960db67b0ac8db38cba2b5e2df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777839"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428045"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument メソッド
-ソース ドキュメントを定義します。 既知の言語、ベンダー、およびドキュメントの種類の Guid が提供されます。  
+ソース ドキュメントを定義します。 GUIDs are provided for known languages, vendors, and document types.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,25 +38,25 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>パラメーター  
  `url`  
- [in]ポインター、`WCHAR`ドキュメントを識別する uniform resource locator (URL) を定義します。  
+ [in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.  
   
  `language`  
- [in]ドキュメントの言語を定義する GUID へのポインター。  
+ [in] A pointer to a GUID that defines the document language.  
   
  `languageVendor`  
- [in]ドキュメントの言語のベンダーの id を定義する GUID へのポインター。  
+ [in] A pointer to a GUID that defines the identity of the vendor for the document language.  
   
  `documentType`  
- [in]ドキュメントの種類を定義する GUID へのポインター。  
+ [in] A pointer to a GUID that defines the type of the document.  
   
  `pRetVal`  
- [out]返されたポインター [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)インターフェイス。  
+ [out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,23 +1,23 @@
 ---
-title: Visual Basic 言語の機能
+title: 言語機能
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053783"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345065"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 言語の機能
-次のトピックでは、紹介し、Visual Basic では、オブジェクト指向のプログラミング言語の重要なコンポーネントについて説明します。 フォームとコントロールを使用してアプリケーションのユーザー インターフェイスを作成した後、アプリケーションの動作を定義するコードを作成する必要があります。 最新のプログラミング言語と Visual Basic では、さまざまな一般的なプログラミング構成要素と言語要素がサポートされています。  
+The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language. フォームとコントロールを使用してアプリケーションのユーザー インターフェイスを作成した後、アプリケーションの動作を定義するコードを作成する必要があります。 As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.  
   
- 他の言語でプログラミングしたことがある場合、このセクションで説明されている内容の大半はすでに知っている可能性があります。 構造のほとんどは、他の言語と似ていますが、Visual Basic のイベント ドリブンの特質は微妙な違いについて説明します。  
+ 他の言語でプログラミングしたことがある場合、このセクションで説明されている内容の大半はすでに知っている可能性があります。 While most of the constructs are similar to those in other languages, the event-driven nature of Visual Basic introduces some subtle differences.  
   
- プログラミングの経験がない場合、このセクションの説明は、コードを記述するための基礎を紹介するものになります。 基本を理解すると、Visual Basic を使用して強力なアプリケーションを作成できます。  
+ プログラミングの経験がない場合、このセクションの説明は、コードを記述するための基礎を紹介するものになります。 Once you understand the basics, you can create powerful applications using Visual Basic.  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "62053783"
  [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
  値を保持する要素を操作するコード要素、それらを効率的に使用する方法、およびそれらを組み合わせて新しい値を取得する方法について説明します。  
   
- [プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  `Sub`、`Function`、`Property`、`Operator` の各プロシージャと、再帰プロシージャやオーバーロード プロシージャなどの高度なトピックについて説明します。  
   
  [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)  
@@ -83,4 +83,4 @@ ms.locfileid: "62053783"
  .NET Framework で提供されているコレクションの種類について説明します。 単純なコレクションおよびキーと値のペアのコレクションを使用する方法を示します。  
   
  [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)  
- Visual Basic プログラミングのさまざまな側面に関するリファレンス情報を提供します。
+ Provides reference information on various aspects of Visual Basic programming.

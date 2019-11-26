@@ -1,5 +1,5 @@
 ---
-title: 単精度浮動小数点型 (Single) (Visual Basic)
+title: 単精度浮動小数点型 (Single)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Single
@@ -20,32 +20,34 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: af75f5eb5a4281f6efae8ec3c9442ce2b28f595e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60a688c510f6e36dca5809566b37a388429e18c7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646973"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343918"
 ---
 # <a name="single-data-type-visual-basic"></a>単精度浮動小数点型 (Single) (Visual Basic)
-IEEE 32 ビット (4 バイト) の単精度浮動小数点数が 3.4028235 e + 38 までの値の範囲の符号付き - 1.401298E を通じて-負の値と 1.401298E から 45-45 から 3.4028235 e + 38 までの正の値。 単精度の数値では、実数の概算値を格納します。  
+
+Holds signed IEEE 32-bit (4-byte) single-precision floating-point numbers ranging in value from -3.4028235E+38 through -1.401298E-45 for negative values and from 1.401298E-45 through 3.4028235E+38 for positive values. Single-precision numbers store an approximation of a real number.  
   
 ## <a name="remarks"></a>Remarks  
- 使用して、`Single`データ型の完全なデータの幅を必要としない浮動小数点値を含む`Double`します。 場合によっては、共通言語ランタイムでをパックできる場合があります、`Single`変数、緊密に協力し、メモリ消費量を保存します。  
+
+ Use the `Single` data type to contain floating-point values that do not require the full data width of `Double`. In some cases the common language runtime might be able to pack your `Single` variables closely together and save memory consumption.  
   
  `Single` の既定値は 0 です。  
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
-- **有効桁数です。** 浮動小数点数を使用する場合が常にないことを正確に表現メモリ内に留意してください。 値の比較などの特定の操作から予期しない結果に可能性と`Mod`演算子。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
+- **Precision.** When you work with floating-point numbers, keep in mind that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
-- **拡大します。** `Single`拡大変換後のデータ型`Double`します。 つまり、変換できる`Single`に`Double`遭遇することがなく、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
+- **Widening.** The `Single` data type widens to `Double`. This means you can convert `Single` to `Double` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.  
   
-- **後続のゼロ。** 浮動小数点データ型には、末尾の 0 文字の任意の内部表現はありません。 たとえば、これらは区別されません 4.2000 および 4.2 します。 その結果、末尾の 0 文字では、表示または浮動小数点値を印刷するときに表示されません。  
+- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing 0 characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing 0 characters do not appear when you display or print floating-point values.  
   
-- **型宣言文字。** あるリテラルにリテラルの型文字 `F` を付けると、そのリテラルは `Single` に変換されます。 ある識別子に識別子の型文字 `!` を付けると、その識別子は整数型 (`Single`) に変換されます。  
+- **Type Characters.** あるリテラルにリテラルの型文字 `F` を付けると、そのリテラルは `Single` に変換されます。 ある識別子に識別子の型文字 `!` を付けると、その識別子は整数型 (`Single`) に変換されます。  
   
-- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Single?displayProperty=nameWithType> 構造体です。  
+- **Framework Type.** .NET Framework において対応する型は、<xref:System.Single?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="see-also"></a>関連項目
 

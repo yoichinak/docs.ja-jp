@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 69b398fa003abc0dba00ee89a9bb911a8c2dd6df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f11b374ed0ecbfc137c43fb641ae691237604691
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777507"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431525"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty メソッド
-指定して、指定した型のプロパティの定義を作成します。`get`と`set`メソッド アクセサー、およびそのプロパティの定義にトークンを取得します。  
+Creates a property definition for the specified type, with the specified `get` and `set` method accessors, and gets a token to that property definition.  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,47 +46,47 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in]クラスまたはインターフェイスのプロパティを定義するトークンです。  
+ [in] The token for class or interface on which the property is being defined.  
   
  `szProperty`  
- [in]プロパティの名前。  
+ [in] The name of the property.  
   
  `dwPropFlags`  
- [in]プロパティのフラグ。  
+ [in] The property flags.  
   
  `pvSig`  
- [in]プロパティ シグネチャ。  
+ [in] The property signature.  
   
  `cbSig`  
- [in]内のバイト数`pvSig`します。  
+ [in] The count of bytes in `pvSig`.  
   
  `dwCPlusTypeFlag`  
- [in]プロパティの既定値の型。  
+ [in] The type of the property's default value.  
   
  `pValue`  
- [in]プロパティの既定値。  
+ [in] The default value for the property.  
   
  `cchValue`  
- [in] \(Unicode) の数の文字について`pValue`です。  
+ [in] The count of (Unicode) characters in `pValue`.  
   
  `mdSetter`  
- [in]このメソッドは、プロパティ値を設定します。  
+ [in] The method that sets the property value.  
   
  `mdGetter`  
- [in]このメソッドは、プロパティ値を取得します。  
+ [in] The method that gets the property value.  
   
  `rmdOtherMethods[]`  
- [in]プロパティに関連付けられているその他のメソッドの配列。 終了、配列、`mdTokenNil`します。  
+ [in] An array of other methods associated with the property. Terminate the array with an `mdTokenNil`.  
   
  `pmdProp`  
- [out]`mdProperty`に割り当てられたトークン。  
+ [out] The `mdProperty` token assigned.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

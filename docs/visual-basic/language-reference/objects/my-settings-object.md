@@ -1,5 +1,5 @@
 ---
-title: My.Settings オブジェクト (Visual Basic)
+title: My.Settings オブジェクト
 ms.date: 07/20/2015
 f1_keywords:
 - My.MySettingsProperty.Settings
@@ -7,50 +7,50 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 9533e8e1ccc51078fefcf6bf73feb2683ae8febb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9560a51332ea596d4cf2228f1e07c158a0457ece
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625278"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350361"
 ---
 # <a name="mysettings-object"></a>My.Settings オブジェクト
-プロパティと、アプリケーションの設定にアクセスするためのメソッドを提供します。  
+Provides properties and methods for accessing the application's settings.  
   
 ## <a name="remarks"></a>Remarks  
- `My.Settings`オブジェクトは、アプリケーションの設定へのアクセスを提供し、動的に格納し、プロパティの設定と、アプリケーションの他の情報を取得することができます。 詳細については、「[アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)」を参照してください。  
+ The `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application. 詳細については、「[アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)」を参照してください。  
   
 ## <a name="properties"></a>プロパティ  
- `My.Settings` オブジェクトのプロパティを使用すると、アプリケーションの設定にアクセスできます。 を追加または削除の設定を使用して、**設定デザイナー**します。  
+ `My.Settings` オブジェクトのプロパティを使用すると、アプリケーションの設定にアクセスできます。 To add or remove settings, use the **Settings Designer**.  
   
- 各設定は、**名前**、**型**、**スコープ**と**値**、これらの設定を確認する方法各設定にアクセスするプロパティ表示されます、`My.Settings`オブジェクト。  
+ Each setting has a **Name**, **Type**, **Scope**, and **Value**, and these settings determine how the property to access each setting appears in the `My.Settings` object:  
   
-- **名前**プロパティの名前を指定します。  
+- **Name** determines the name of the property.  
   
-- **型**プロパティの種類を決定します。  
+- **Type** determines the type of the property.  
   
-- **スコープ**プロパティは読み取り専用のかどうかを示します。 値が場合**アプリケーション**、プロパティは読み取り専用です。 値の場合**ユーザー**、プロパティが読み取り/書き込みです。  
+- **Scope** indicates if the property is read-only. If the value is **Application**, the property is read-only; if the value is **User**, the property is read-write.  
   
-- **値**はプロパティの既定値です。  
+- **Value** is the default value of the property.  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |---|---|  
-|`Reload`|最後に保存されている値からユーザーの設定を再読み込みします。|  
-|`Save`|現在のユーザー設定を保存します。|  
+|`Reload`|Reloads the user settings from the last saved values.|  
+|`Save`|Saves the current user settings.|  
   
- `My.Settings`オブジェクトは、高度なプロパティとから継承されたメソッドにも提供します、<xref:System.Configuration.ApplicationSettingsBase>クラス。  
+ The `My.Settings` object also provides advanced properties and methods, inherited from the <xref:System.Configuration.ApplicationSettingsBase> class.  
   
 ## <a name="tasks"></a>[タスク]  
- 次の表に、関連するタスクの例については、`My.Settings`オブジェクト。  
+ The following table lists examples of tasks involving the `My.Settings` object.  
   
-|目的|解決方法|  
+|終了|解決方法については、|  
 |---|---|  
-|アプリケーション設定を読み取り|[方法: Visual Basic でアプリケーション設定を読み取る](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
-|ユーザー設定を変更します。|[方法: Visual Basic でユーザー設定を変更する](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|ユーザー設定します。|[方法: Visual Basic でユーザー設定を永続化する](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|ユーザー設定のプロパティ グリッドを作成します。|[方法: Visual Basic でユーザー設定のためのプロパティ グリッドを作成する](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|Read an application setting|[方法: Visual Basic でアプリケーション設定を読み取る](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|Change a user setting|[方法: Visual Basic でユーザー設定を変更する](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|Persist user settings|[方法: Visual Basic でユーザー設定を永続化する](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|Create a property grid for user settings|[方法: Visual Basic でユーザー設定のためのプロパティ グリッドを作成する](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>例  
  次の例は、`Nickname` の設定値を表示します。  

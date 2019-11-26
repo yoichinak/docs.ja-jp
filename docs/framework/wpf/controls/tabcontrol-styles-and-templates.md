@@ -9,20 +9,20 @@ helpviewer_keywords:
 - states [WPF], TabControl
 - templates [WPF], TabControl
 ms.assetid: f6b19a30-f10e-4fa1-96ce-f17a54092ab6
-ms.openlocfilehash: 32ee86e2388808739a2c2ff5a02bb40fc641129b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c1410714660eb1dd867428b85a7cfacc881e5e56
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460539"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283713"
 ---
 # <a name="tabcontrol-styles-and-templates"></a>TabControl のスタイルとテンプレート
-このトピックでは、<xref:System.Windows.Controls.TabControl> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、<xref:System.Windows.Controls.TabControl> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」を参照してください。  
   
 ## <a name="tabcontrol-parts"></a>TabControl パーツ  
  次の表に、<xref:System.Windows.Controls.TabControl> コントロールの名前付きの部分を示します。  
   
-|パーツ|[種類]|説明|  
+|パーツ|[種類]|[説明]|  
 |-|-|-|  
 |PART_SelectedContentHost|<xref:System.Windows.Controls.ContentPresenter>|現在選択されている <xref:System.Windows.Controls.TabItem>の内容を表示するオブジェクト。|  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73460539"
 ## <a name="tabcontrol-states"></a>TabControl の状態  
  次の表は、<xref:System.Windows.Controls.TabControl> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|説明|  
+|VisualState 名|VisualStateGroup 名|[説明]|  
 |----------------------|---------------------------|-----------------|  
 |標準|CommonStates|既定の状態です。|  
 |Disabled|CommonStates|コントロールが無効になっています。|  
@@ -45,7 +45,7 @@ ms.locfileid: "73460539"
 ## <a name="tabitem-states"></a>TabItem の状態  
  次の表は、<xref:System.Windows.Controls.TabItem> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|説明|  
+|VisualState 名|VisualStateGroup 名|[説明]|  
 |----------------------|---------------------------|-----------------|  
 |標準|CommonStates|既定の状態です。|  
 |MouseOver|CommonStates|マウス ポインターがコントロール上に配置されます。|  
@@ -76,4 +76,4 @@ ms.locfileid: "73460539"
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
 - [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)
+- [コントロールのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)

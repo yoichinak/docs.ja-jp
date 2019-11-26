@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 847a5531-c37d-49cd-8844-9e54b5d86cf7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b42c7ed5614f5f436559ce4af462ff16896a89c0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17fdddbcc9d49d5b5b1aed01b1dc2e4c0424e3f3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746141"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435020"
 ---
 # <a name="iceegengetimaptokeniface-method"></a>ICeeGen::GetIMapTokenIface メソッド
-指定したトークンによって参照されているインターフェイスを取得します。  
+Gets the interface referenced by the specified token.  
   
- このメソッドは廃止され、使用する必要があります。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,14 +37,14 @@ HRESULT GetIMapTokenIface (
   
 ## <a name="parameters"></a>パラメーター  
  `pIMapToken`  
- [入力、出力]返されるインターフェイスのメタデータ トークン。  
+ [in, out] The metadata token for the interface to be returned.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

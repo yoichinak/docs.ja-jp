@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f0d721e2-b946-426d-8e20-9124bd04e4cb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c402b20f9d7f0d370cfa6ec8376603efa8c3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4549789ea1af584c0850a535d9f6bb54f844ce0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777992"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443548"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles メソッド
-現在のアセンブリ マニフェストで参照されるファイルを列挙します。  
+Enumerates the files referenced in the current assembly manifest.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,30 +38,30 @@ HRESULT EnumFiles (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 これには、このメソッドの最初の呼び出しで null 値があります。  
+ [in, out] A pointer to the enumerator. This must be a null value for the first call of this method.  
   
  `rFiles`  
- [out]配列の格納に使用される、`mdFile`メタデータ トークン。  
+ [out] The array used to store the `mdFile` metadata tokens.  
   
  `cMax`  
- [in]最大数`mdFile`トークン内に配置できる`rFiles`します。  
+ [in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.  
   
  `pcTokens`  
- [out]数`mdFile`トークンが実際に配置`rFiles`します。  
+ [out] The number of `mdFile` tokens actually placed in `rFiles`.  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles` 正常に返されます。|  
-|`S_FALSE`|トークンを列挙することはありません。 この場合、 `pcTokens` 0 に設定されます。|  
+|`S_OK`|`EnumFiles` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

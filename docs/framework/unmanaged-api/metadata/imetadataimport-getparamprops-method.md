@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e9d2c74adecdfb0201f9f0c08998feba674f9e0f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bb73ccdd9eee4b5a655a56b5d6757e0c6003fbc9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778928"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437125"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps メソッド
 指定した ParamDef トークンによって参照されるパラメーターのメタデータ値を取得します。  
@@ -46,45 +44,45 @@ HRESULT GetParamProps (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in]メタデータを返すパラメーターを表す ParamDef トークンです。  
+ [in] A ParamDef token that represents the parameter to return metadata for.  
   
  `pmd`  
- [out]パラメーターを受け取るメソッドを表す MethodDef トークンへのポインター。  
+ [out] A pointer to a MethodDef token representing the method that takes the parameter.  
   
  `pulSequence`  
- [out]メソッドの引数リストで、パラメーターの序数の位置。  
+ [out] The ordinal position of the parameter in the method argument list.  
   
  `szName`  
- [out]パラメーターの名前を保持するバッファー。  
+ [out] A buffer to hold the name of the parameter.  
   
  `cchName`  
- [in]要求されたサイズのワイド文字単位`szName`します。  
+ [in] The requested size in wide characters of `szName`.  
   
  `pchName`  
- [out]ワイド文字で返されるサイズ`szName`します。  
+ [out] The returned size in wide characters of `szName`.  
   
  `pdwAttr`  
- [out]パラメーターに関連付けられているすべての属性フラグへのポインター。 これは、ビットマスクの`CorParamAttr`値。  
+ [out] A pointer to any attribute flags associated with the parameter. This is a bitmask of `CorParamAttr` values.  
   
  `pdwCPlusTypeFlag`  
- [out]パラメーターを指定するフラグへのポインター、<xref:System.ValueType>します。  
+ [out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.  
   
  `ppValue`  
- [out]パラメーターによって返される定数文字列へのポインター。  
+ [out] A pointer to a constant string returned by the parameter.  
   
  `pcchValue`  
- [out]サイズ`ppValue`ワイド文字、または場合は 0 で`ppValue`文字列を保持しません。  
+ [out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.  
   
 ## <a name="remarks"></a>Remarks
 
-シーケンスの値で`pulSequence`パラメーターの 1 から始まります。 戻り値は、シーケンス番号は 0 です。
+The sequence values in `pulSequence` begin with 1 for parameters. A return value has a sequence number of 0.
 
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

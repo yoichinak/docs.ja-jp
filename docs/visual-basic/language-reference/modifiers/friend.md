@@ -1,5 +1,5 @@
 ---
-title: Friend (Visual Basic)
+title: Friend
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Friend
@@ -10,40 +10,40 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 2a5a2d6b9d99693a551480fa047cedf42888fdf3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 98f8ed947c9f4376c5778011a3a91ca8b094f9ec
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969046"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351559"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
-1つ以上の宣言されたプログラミング要素が、その宣言を含むアセンブリ内からのみアクセス可能であることを指定します。  
+Specifies that one or more declared programming elements are accessible only from within the assembly that contains their declaration.  
   
-## <a name="remarks"></a>コメント  
- 多くの場合、クラスや構造体などのプログラミング要素は、それを宣言するコンポーネントだけでなく、アセンブリ全体で使用する必要があります。 ただし、アセンブリ外部のコードからアクセスできないようにすることもできます (アプリケーションが独自に作成されている場合など)。 この方法で要素へのアクセスを制限する場合は、 `Friend`修飾子を使用して宣言できます。  
+## <a name="remarks"></a>Remarks  
+ In many cases, you want programming elements such as classes and structures to be used by the entire assembly, not only by the component that declares them. However, you might not want them to be accessible by code outside the assembly (for example, if the application is proprietary). If you want to limit access to an element in this way, you can declare it by using the `Friend` modifier.  
   
- 同じアセンブリにコンパイルされる他のクラス、構造体、およびモジュール内のコードは、 `Friend`そのアセンブリ内のすべての要素にアクセスできます。  
+ Code in other classes, structures, and modules that are compiled to the same assembly can access all the `Friend` elements in that assembly.  
   
- `Friend`多くの場合、アクセスはアプリケーションのプログラミング要素`Friend`に優先されるレベルであり、インターフェイス、モジュール、クラス、または構造体の既定のアクセスレベルです。  
+ `Friend` access is often the preferred level for an application's programming elements, and `Friend` is the default access level of an interface, a module, a class, or a structure.  
   
- は、モジュール`Friend` 、インターフェイス、または名前空間レベルでのみ使用できます。 したがって、 `Friend`要素の宣言コンテキストは、ソースファイル、名前空間、インターフェイス、モジュール、クラス、または構造体である必要があります。プロシージャにすることはできません。  
+ You can use `Friend` only at the module, interface, or namespace level. Therefore, the declaration context for a `Friend` element must be a source file, a namespace, an interface, a module, a class, or a structure; it can't be a procedure.  
 
 > [!NOTE]
-> [Protected Friend](protected-friend.md)アクセス修飾子を使用することもできます。これにより、クラスメンバーは、クラス内、派生クラス、およびクラスが定義されている同じアセンブリからアクセスできます。 使用して、同じアセンブリ内の派生クラスからそのクラス内からのメンバーへのアクセスを制限する、[Private Protected](private-protected.md)アクセス修飾子。
+> You can also use the [Protected Friend](protected-friend.md) access modifier, which makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined. To restrict access to a member from within its class and from derived classes in the same assembly, you use the [Private Protected](private-protected.md) access modifier.
 
- とその他の`Friend`アクセス修飾子の比較については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+ For a comparison of `Friend` and the other access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
-> 別のアセンブリがフレンドアセンブリであることを指定できます。これにより、として`Friend`マークされているすべての型とメンバーにアクセスできるようになります。 詳細については、[Friend アセンブリ](../../../standard/assembly/friend.md)に関するページを参照してください。
+> You can specify that another assembly is a friend assembly, which allows it to access all types and members that are marked as `Friend`. 詳細については、[Friend アセンブリ](../../../standard/assembly/friend.md)に関するページを参照してください。
 
 ## <a name="example"></a>例  
- 次のクラスは、 `Friend`修飾子を使用して、同じアセンブリ内の他のプログラミング要素が特定のメンバーにアクセスできるようにします。  
+ The following class uses the `Friend` modifier to allow other programming elements within the same assembly to access certain members.  
   
  [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
-## <a name="usage"></a>使用法  
- 修飾子は、 `Friend`次のコンテキストで使用できます。  
+## <a name="usage"></a>使用方法  
+ You can use the `Friend` modifier in these contexts:  
   
  [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "70969046"
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
-- [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

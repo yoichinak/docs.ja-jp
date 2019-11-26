@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5786f24f6543d4d262dd8a6389132aba02f9aacc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1586184c91619994ba0dfc9d5dcc277c10f99cf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779202"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436453"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 列挙型
 メタデータ型を示す値が格納されます。  
@@ -79,44 +77,44 @@ typedef enum CorTypeAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`tdVisibilityMask`|可視性の種類の情報に使用されます。|  
-|`tdNotPublic`|型がパブリック スコープでないことを指定します。|  
-|`tdPublic`|パブリック スコープで型を指定します。|  
-|`tdNestedPublic`|型がパブリックな可視性と入れ子になったことを指定します。|  
-|`tdNestedPrivate`|型がプライベートの可視性を持つ入れ子になったことを指定します。|  
-|`tdNestedFamily`|ファミリの可視性を持つ型が入れ子になっていることを指定します。|  
-|`tdNestedAssembly`|アセンブリの可視性を持つ型が入れ子になっていることを指定します。|  
-|`tdNestedFamANDAssem`|ファミリとアセンブリの可視性を持つ型が入れ子になっていることを指定します。|  
-|`tdNestedFamORAssem`|ファミリまたはアセンブリの可視性を持つ型が入れ子になっていることを指定します。|  
-|`tdLayoutMask`|型のレイアウト情報を取得します。|  
-|`tdAutoLayout`|この型のフィールドが自動的にレイアウトされることを指定します。|  
-|`tdSequentialLayout`|この型のフィールドが順番にレイアウトされることを指定します。|  
-|`tdExplicitLayout`|フィールド レイアウトは明示的に指定されたを指定します。|  
-|`tdClassSemanticsMask`|型に関するセマンティック情報を取得します。|  
+|`tdVisibilityMask`|Used for type visibility information.|  
+|`tdNotPublic`|Specifies that the type is not in public scope.|  
+|`tdPublic`|Specifies that the type is in public scope.|  
+|`tdNestedPublic`|Specifies that the type is nested with public visibility.|  
+|`tdNestedPrivate`|Specifies that the type is nested with private visibility.|  
+|`tdNestedFamily`|Specifies that the type is nested with family visibility.|  
+|`tdNestedAssembly`|Specifies that the type is nested with assembly visibility.|  
+|`tdNestedFamANDAssem`|Specifies that the type is nested with family and assembly visibility.|  
+|`tdNestedFamORAssem`|Specifies that the type is nested with family or assembly visibility.|  
+|`tdLayoutMask`|Gets layout information for the type.|  
+|`tdAutoLayout`|Specifies that the fields of this type are laid out automatically.|  
+|`tdSequentialLayout`|Specifies that the fields of this type are laid out sequentially.|  
+|`tdExplicitLayout`|Specifies that field layout is supplied explicitly.|  
+|`tdClassSemanticsMask`|Gets semantic information about the type.|  
 |`tdClass`|型がクラスであることを示します。|  
 |`tdInterface`|型がインターフェイスであることを示します。|  
 |`tdAbstract`|型が抽象的であることを示します。|  
-|`tdSealed`|型を拡張できないことを指定します。|  
-|`tdSpecialName`|特殊なクラス名を指定します。 その名前で記述する方法。|  
-|`tdImport`|型がインポートされることを指定します。|  
-|`tdSerializable`|型がシリアル化可能なことを指定します。|  
-|`tdWindowsRuntime`|この型が、Windows ランタイム型であることを指定します。|  
-|`tdStringFormatMask`|文字列のエンコードおよび書式設定方法に関する情報を取得します。|  
-|`tdAnsiClass`|この型に、LPTSTR ANSI として解釈するを指定します。|  
-|`tdUnicodeClass`|この型が Unicode として LPTSTR を解釈するを指定します。|  
-|`tdAutoClass`|この型が自動的に LPTSTR を解釈することを指定します。|  
-|`tdCustomFormatClass`|型が非標準のエンコーディングを持つことを指定で指定された`CustomFormatMask`します。|  
-|`tdCustomFormatMask`|このマスクを使用して、ネイティブ相互運用機能の非標準のエンコード情報を取得します。 これら 2 つのビットの値の意味では、指定されていません。|  
-|`tdBeforeFieldInit`|静的フィールドにアクセスする最初の試行する前に、型を初期化する必要がありますを指定します。|  
-|`tdForwarder`|型がエクスポートされたことを指定します。 型フォワーダーとします。|  
-|`tdReservedMask`|このフラグは、次のフラグは、共通言語ランタイムによって内部的に使用されます。|  
-|`tdRTSpecialName`|名前のエンコーディングに共通言語ランタイムが確認する必要がありますを指定します。|  
-|`tdHasSecurity`|型が関連付けられているセキュリティを指定します。|  
+|`tdSealed`|Specifies that the type cannot be extended.|  
+|`tdSpecialName`|Specifies that the class name is special. Its name describes how.|  
+|`tdImport`|Specifies that the type is imported.|  
+|`tdSerializable`|Specifies that the type is serializable.|  
+|`tdWindowsRuntime`|Specifies that this type is a Windows Runtime type.|  
+|`tdStringFormatMask`|Gets information about how strings are encoded and formatted.|  
+|`tdAnsiClass`|Specifies that this type interprets an LPTSTR as ANSI.|  
+|`tdUnicodeClass`|Specifies that this type interprets an LPTSTR as Unicode.|  
+|`tdAutoClass`|Specifies that this type interprets an LPTSTR automatically.|  
+|`tdCustomFormatClass`|Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.|  
+|`tdCustomFormatMask`|Use this mask to get non-standard encoding information for native interop. The meaning of the values of these two bits is unspecified.|  
+|`tdBeforeFieldInit`|Specifies that the type must be initialized before the first attempt to access a static field.|  
+|`tdForwarder`|Specifies that the type is exported, and a type forwarder.|  
+|`tdReservedMask`|This flag and the flags below are used internally by the common language runtime.|  
+|`tdRTSpecialName`|Specifies that the common language runtime should check the name encoding.|  
+|`tdHasSecurity`|Specifies that the type has security associated with it.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

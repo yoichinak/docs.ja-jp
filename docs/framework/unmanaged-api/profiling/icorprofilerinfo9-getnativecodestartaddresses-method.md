@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 80571933bc8d91c074dbee62aad50cece6277d51
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69665511"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444716"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses メソッド
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses Method
 
-指定された functionId と rejitId は、現在存在する、このコードのすべての just-in-time バージョンのネイティブコードの開始アドレスを列挙します。
+Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist.
 
 ## <a name="syntax"></a>構文
 
@@ -35,7 +35,7 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 #### <a name="parameters"></a>パラメーター
 
 `functionId` \
-からネイティブコードの開始アドレスを返す関数の ID。
+[in] The ID of the function whose native code start addresses should be returned.
 
 `reJitId` \
 [in] JIT 再コンパイルされた関数のID。
@@ -44,25 +44,25 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 [in] `codeStartAddresses` 配列の最大サイズ。
 
 `pcCodeStartAddresses` \
-入出力使用可能なアドレスの数。
+[out] The number of available addresses.
 
 `codeStartAddresses` \
-入出力の`UINT_PTR`配列。各は、指定された関数のネイティブ本体の開始アドレスです。
+[out] An array of `UINT_PTR`, each one of which is the start address for a native body for the specified function.
 
 ## <a name="remarks"></a>Remarks
 
-階層化コンパイルが有効になっている場合、関数は複数のネイティブコード本体を持つことができます。
+When tiered compilation is enabled, a function may have more than one native code body.
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**・** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/windows-prerequisites.md#net-core-supported-operating-systems)」を参照してください。
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**ヘッダー:** Corprof.idl、Corprof.idl
+**ヘッダー** : CorProf.idl、CorProf.h
 
-**ライブラリ**CorGuids .lib
+**ライブラリ:** CorGuids.lib
 
-**.Net のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo9 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

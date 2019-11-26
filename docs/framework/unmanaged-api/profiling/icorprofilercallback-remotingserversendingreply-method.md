@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfe84a19-2e03-4be2-8b25-f02bad38e4a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c73889a6daaa50d1694e786c78f50d0e87644967
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1aa5a0d20ee87fe4362016ed0d7fa29ef786460e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750431"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430719"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply メソッド
-プロセスがリモート メソッド呼び出し要求の処理が完了して、チャネルを介して応答を送信しようとしていますが、プロファイラーに通知します。  
+Notifies the profiler that the process has finished processing a remote method invocation request and is about to transmit the reply through a channel.  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,23 +35,23 @@ HRESULT RemotingServerSendingReply(
   
 ## <a name="parameters"></a>パラメーター  
  `pCookie`  
- [in]指定された値と対応する GUID へのポインター [icorprofilercallback::remotingclientreceivingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)これらの条件下で。  
+ [in] A pointer to a GUID that will correspond with the value provided in [ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) under these conditions:  
   
-- リモート処理の GUID の cookie はアクティブです。  
+- Remoting GUID cookies are active.  
   
-- チャネルは、メッセージの送信に成功します。  
+- The channel succeeds in transmitting the message.  
   
-- GUID の cookie は、クライアント側のプロセスでアクティブにします。  
+- GUID cookies are active on the client-side process.  
   
- これにより、リモート処理呼び出しと論理呼び出し履歴の作成のペアを容易にします。  
+ This allows easy pairing of remoting calls and the creation of a logical call stack.  
   
  `fIsAsync`  
- [in]値が`true`呼び出しが非同期。 それ以外の場合`false`します。  
+ [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

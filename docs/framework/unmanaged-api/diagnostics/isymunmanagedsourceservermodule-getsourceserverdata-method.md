@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 22321dc8f8c4b8d9c2ae50b061a2ba105f92ebb7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f25150d037a2f6fabb700f2c4bf2191e8e402a8e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746086"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446210"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData メソッド
-モジュールのソース サーバーのデータを返します。 使用して、呼び出し元がリソースを解放する必要があります`CoTaskMemFree`します。  
+Returns the source server data for the module. The caller must free resources by using `CoTaskMemFree`.  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,16 +35,16 @@ HRESULT GetSourceServerData(
   
 ## <a name="parameters"></a>パラメーター  
  `pDataByteCount`  
- [out]ポインター、`ULONG32`ソース サーバーのデータのバイト単位のサイズを受け取る。  
+ [out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.  
   
  `ppData`  
- [out]返されたポインター`pDataByteCount`値。  
+ [out] A pointer to the returned `pDataByteCount` value.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

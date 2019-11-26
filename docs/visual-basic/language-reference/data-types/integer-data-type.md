@@ -1,5 +1,5 @@
 ---
-title: '`Integer` データ型 (Visual Basic)'
+title: 整数型 (Integer)
 ms.date: 01/31/2018
 f1_keywords:
 - vb.Integer
@@ -21,37 +21,39 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: b553471fad6411cd5aa2edf42d8424aa652e9589
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c5b1041b8ef0ca9898a846fea03888537bb4abbf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592112"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343983"
 ---
-# <a name="integer-data-type-visual-basic"></a>`Integer` データ型 (Visual Basic)
+# <a name="integer-data-type-visual-basic"></a>Integer data type (Visual Basic)
+
 -2,147,483,648 から 2,147,483,647 までの符号付き 32 ビット (4 バイト) の整数を保持します。  
   
 ## <a name="remarks"></a>Remarks
+
  `Integer` データ型は、32 ビットのプロセッサでパフォーマンスが最大になります。 他の整数型では、メモリとの間の読み込みと格納により長い時間がかかります。  
   
  `Integer` の既定値は 0 です。  
 
-## <a name="literal-assignments"></a>リテラルの割り当て
+## <a name="literal-assignments"></a>Literal assignments
 
-宣言し、初期化を`Integer`10 進リテラル、16 進リテラル、8 進数のリテラルを割り当てることや (Visual Basic 2017 以降) バイナリ リテラルでは、変数。 整数リテラルが `Integer` の範囲外にある場合 (つまり、<xref:System.Int32.MinValue?displayProperty=nameWithType> より小さいか、<xref:System.Int32.MaxValue?displayProperty=nameWithType> より大きい場合)、コンパイル エラーが発生します。
+You can declare and initialize an `Integer` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. 整数リテラルが `Integer` の範囲外にある場合 (つまり、<xref:System.Int32.MinValue?displayProperty=nameWithType> より小さいか、<xref:System.Int32.MaxValue?displayProperty=nameWithType> より大きい場合)、コンパイル エラーが発生します。
 
 次の例では、整数 90,946 を 10 進リテラル、16 進リテラル、バイナリ リテラルで表したものが、`Integer` 値に割り当てられています。
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Int)]  
 
 > [!NOTE]
-> プレフィックスを使用する`&h`または`&H`を 16 進リテラル、プレフィックスを示すために`&b`または`&B`、バイナリ リテラル、およびプレフィックスを示すために`&o`または`&O`を 8 進数のリテラルを示すためにします。 10 進リテラルには、プレフィックスはありません。
+> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. 10 進リテラルには、プレフィックスはありません。
 
-Visual Basic 2017 から始めて、使用することできますも、アンダー スコア文字`_`、読みやすさを強化するために、桁区切り記号として次の例として示します。
+Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
-Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例:
+Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. (例:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -59,7 +61,7 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-数値リテラルを含めることも、 `I` [文字入力](../../programming-guide/language-features/data-types/type-characters.md)を示すために、`Integer`データ型は、次の例を示します。
+Numeric literals can also include the `I` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `Integer` data type, as the following example shows.
 
 ```vb
 Dim number = &H_035826I
@@ -67,13 +69,13 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **相互運用の考慮事項。** オートメーションまたは COM オブジェクトなど、.NET Framework 用に作成されていないコンポーネントとやり取りする場合に注意している`Integer`に他の環境は別のデータ幅 (16 ビット)。 そのようなコンポーネントに 16 ビットの引数を渡す場合は、新しい Visual Basic のコードで、整数型 (`Integer`) ではなく短整数型 (`Short`) として宣言します。  
+- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, such as Automation or COM objects, remember that `Integer` has a different data width (16 bits) in other environments. そのようなコンポーネントに 16 ビットの引数を渡す場合は、新しい Visual Basic のコードで、整数型 (`Integer`) ではなく短整数型 (`Short`) として宣言します。  
   
-- **拡大します。** `Integer` データ型は、`Long`、`Decimal`、`Single`、または `Double` に拡大変換されます。 これは、`Integer` エラーを発生させることなく、これらの型のいずれかに <xref:System.OverflowException?displayProperty=nameWithType> を変換できることを意味します。  
+- **Widening.** `Integer` データ型は、`Long`、`Decimal`、`Single`、または `Double` に拡大変換されます。 これは、`Integer` エラーを発生させることなく、これらの型のいずれかに <xref:System.OverflowException?displayProperty=nameWithType> を変換できることを意味します。  
   
-- **型宣言文字。** あるリテラルにリテラルの型文字 `I` を付けると、そのリテラルは `Integer` に変換されます。 ある識別子に識別子の型文字 `%` を付けると、その識別子は整数型 (`Integer`) に変換されます。  
+- **Type Characters.** あるリテラルにリテラルの型文字 `I` を付けると、そのリテラルは `Integer` に変換されます。 ある識別子に識別子の型文字 `%` を付けると、その識別子は整数型 (`Integer`) に変換されます。  
   
-- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Int32?displayProperty=nameWithType> 構造体です。  
+- **Framework Type.** .NET Framework において対応する型は、<xref:System.Int32?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="range"></a>範囲
 

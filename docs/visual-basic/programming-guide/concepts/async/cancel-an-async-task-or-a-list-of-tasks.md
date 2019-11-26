@@ -1,19 +1,19 @@
 ---
-title: 非同期タスクまたはタスクの一覧のキャンセル (Visual Basic)
+title: 非同期タスクまたはタスクの一覧のキャンセル
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 89a78e9e423ab4cce9fd3627ec433072ade238dc
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2956582cd0c8e044fcd37ffab13686489a7c854c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419864"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347960"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>非同期タスクまたはタスクの一覧のキャンセル (Visual Basic)
+# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Cancel an Async Task or a List of Tasks (Visual Basic)
 
 非同期のアプリケーションが終了するまで待機しない場合、それを取り消すために使用できるボタンを設定できます。 このトピックの例に従うと、1 つの Web サイトのコンテンツまたは Web サイトのリストをダウンロードするアプリケーションにキャンセル ボタンを追加できます。
 
-この例では、[非同期アプリケーションを微調整する UI (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)を使用します。
+The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) describes.
 
 > [!NOTE]
 > この例を実行するには、コンピューターに Visual Studio 2012 以降および .NET Framework 4.5 以降がインストールされている必要があります。
@@ -38,7 +38,7 @@ ms.locfileid: "73419864"
 
      Ctrl + F5 キーを押して、デバッグを行わずにプロジェクトを実行します。
 
- プロジェクトをダウンロードしない場合は、このトピックの最後にある Mainwindow.xaml ファイルを確認してください。
+ If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
 
 ### <a name="building-the-example"></a>例のビルド
 
@@ -46,7 +46,7 @@ ms.locfileid: "73419864"
 
 この例を自分でビルドするには、「例をダウンロードする」のセクションの詳細な手順の指示に従いますが、 **[スタートアップ プロジェクト]** として、 **[CancelATask]** の代わりに **[StarterCode]** を選択します。
 
-次に、そのプロジェクトの Mainwindow.xaml ファイルに次の変更を追加します。
+Then add the following changes to the MainWindow.xaml.vb file of that project.
 
 1. アクセスするすべてのメソッドのスコープである `CancellationTokenSource` 変数、`cts` を宣言します。
 
@@ -124,14 +124,14 @@ ms.locfileid: "73419864"
     End Function
     ```
 
-5. プログラムをキャンセルしない場合は、次の出力が生成されます。
+5. If you don’t cancel the program, it produces the following output:
 
     ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    プログラムがコンテンツのダウンロードを完了する前に **[キャンセル**] ボタンをクリックすると、次の出力が生成されます。
+    If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output:
 
     ```console
     Ready to download.
@@ -158,7 +158,7 @@ ms.locfileid: "73419864"
 
      Ctrl + F5 キーを押して、デバッグを行わずにプロジェクトを実行します。
 
- プロジェクトをダウンロードしない場合は、このトピックの最後にある Mainwindow.xaml ファイルを確認してください。
+ If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
 
 ### <a name="building-the-example"></a>例のビルド
 
@@ -209,7 +209,7 @@ ms.locfileid: "73419864"
     Next
     ```
 
-4. `AccessTheWebAsync` は長さを表示するため、メソッドは何も返す必要はありません。 return ステートメントを削除し、メソッドの戻り値の型を <xref:System.Threading.Tasks.Task> ではなく <xref:System.Threading.Tasks.Task%601> に変更します。
+4. `AccessTheWebAsync` は長さを表示するため、メソッドは何も返す必要はありません。 return ステートメントを削除し、メソッドの戻り値の型を <xref:System.Threading.Tasks.Task%601> ではなく <xref:System.Threading.Tasks.Task> に変更します。
 
     ```vb
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task
@@ -221,7 +221,7 @@ ms.locfileid: "73419864"
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. プログラムをキャンセルしない場合は、次の出力が生成されます。
+5. If you don’t cancel the program, it produces the following output:
 
     ```console
     Length of the downloaded string: 35939.
@@ -261,7 +261,7 @@ ms.locfileid: "73419864"
 
 ### <a name="cancel-a-task-example"></a>タスクを取り消す例
 
-次のコードは、単一のタスクをキャンセルする例の完全な Mainwindow.xaml ファイルです。
+The following code is the complete MainWindow.xaml.vb file for the example that cancels a single task.
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -346,7 +346,7 @@ End Class
 
 ### <a name="cancel-a-list-of-tasks-example"></a>タスクの一覧を取り消す例
 
-次のコードは、タスクの一覧をキャンセルする例の完全な Mainwindow.xaml ファイルです。
+The following code is the complete MainWindow.xaml.vb file for the example that cancels a list of tasks.
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.

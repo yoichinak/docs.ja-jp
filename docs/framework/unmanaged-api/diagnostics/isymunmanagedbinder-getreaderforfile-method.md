@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 46c06258-831e-47c8-a50a-8650af6b637e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6081e2dfd64625697295f2ea2d1560bc597838da
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94cda16466ea5a3d35a478a2ae80281e9414f719
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776858"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449359"
 ---
 # <a name="isymunmanagedbindergetreaderforfile-method"></a>ISymUnmanagedBinder::GetReaderForFile メソッド
-メタデータ インターフェイスおよびファイル名を指定されたを返します、正しい[ISymUnmanagedReader](isymunmanagedreader-interface.md)をモジュールに関連付けられているデバッグ シンボルを読み取る。  
+Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.  
   
- 実行可能ファイルの横にある場合にのみ、このメソッドは、プログラム データベース (PDB) ファイルを開きます。 セキュリティのために変更されています。 PDB ファイルをより広範な検索が必要な場合は、使用、 [isymunmanagedbinder 2::getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)メソッド。  
+ This method will open the program database (PDB) file only if it is next to the executable file. This change has been made for security purposes. If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,22 +39,22 @@ HRESULT GetReaderForFile(
   
 ## <a name="parameters"></a>パラメーター  
  `importer`  
- [in]メタデータ インポート インターフェイスへのポインター。  
+ [in] A pointer to the metadata import interface.  
   
  `fileName`  
- [in]ファイル名へのポインター。  
+ [in] A pointer to the file name.  
   
  `searchPath`  
- [in]検索パスへのポインター。  
+ [in] A pointer to the search path.  
   
  `pRetVal`  
- [out]設定されているポインターに返された[ISymUnmanagedReader](isymunmanagedreader-interface.md)インターフェイス。  
+ [out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

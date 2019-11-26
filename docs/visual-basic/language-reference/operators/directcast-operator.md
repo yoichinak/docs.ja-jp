@@ -1,5 +1,5 @@
 ---
-title: DirectCast 演算子 (Visual Basic)
+title: DirectCast 演算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.directCast
@@ -7,39 +7,39 @@ f1_keywords:
 helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-ms.openlocfilehash: 628ce4f06b91d0f514f71dea3aad8ea0fee6dccf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ea29b80cf27bbb2c21a8cebbfaa0a294e05f11d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778548"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331314"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast 演算子 (Visual Basic)
-継承または実装に基づいて、型変換操作をについて説明します。  
+Introduces a type conversion operation based on inheritance or implementation.  
   
 ## <a name="remarks"></a>Remarks  
- `DirectCast` 変換で多少を提供できるように、ランタイム ヘルパー ルーチンに比べてパフォーマンスが向上する Visual Basic を使用しません`CType`との間のデータ型を変換するときに`Object`します。  
+ `DirectCast` does not use the Visual Basic run-time helper routines for conversion, so it can provide somewhat better performance than `CType` when converting to and from data type `Object`.  
   
- 使用する、`DirectCast`キーワードを使用するのと同様、 [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)と[TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)キーワード。 最初の引数と 2 番目の引数は変換する型として式を指定します。 `DirectCast` 2 つの引数のデータ型の間の継承または実装のリレーションシップが必要です。 つまり 1 つの型が継承または他の実装する必要があります。  
+ You use the `DirectCast` keyword similar to the way you use the [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) and the [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md) keyword. You supply an expression as the first argument and a type to convert it to as the second argument. `DirectCast` requires an inheritance or implementation relationship between the data types of the two arguments. This means that one type must inherit from or implement the other.  
   
-## <a name="errors-and-failures"></a>エラーと障害  
- `DirectCast` 継承または実装のリレーションシップが存在しないことが検出された場合は、コンパイラ エラーを生成します。 コンパイラ エラーがないことに成功した変換が保証されません。 必要な変換を縮小すると、実行時に失敗する可能性が。 この場合、ランタイム、<xref:System.InvalidCastException>エラー。  
+## <a name="errors-and-failures"></a>Errors and Failures  
+ `DirectCast` generates a compiler error if it detects that no inheritance or implementation relationship exists. But the lack of a compiler error does not guarantee a successful conversion. If the desired conversion is narrowing, it could fail at run time. If this happens, the runtime throws an <xref:System.InvalidCastException> error.  
   
 ## <a name="conversion-keywords"></a>変換キーワード  
- 型変換のキーワードの比較は次のとおりです。  
+ A comparison of the type conversion keywords is as follows.  
   
-|キーワード|データの種類|引数の関係|実行時エラー|  
+|キーワード|データの種類|Argument relationship|Run-time failure|  
 |---|---|---|---|  
-|[CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)|すべてのデータ型|2 つのデータ型の間で拡大または縮小変換を定義する必要があります。|スローされます。 <xref:System.InvalidCastException>|  
-|`DirectCast`|すべてのデータ型|1 つの型を継承またはその他の型を実装する必要があります。|スローされます。 <xref:System.InvalidCastException>|  
-|[TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)|参照型のみ|1 つの型を継承またはその他の型を実装する必要があります。|返します[Nothing](../../../visual-basic/language-reference/nothing.md)|  
+|[CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)|Any data types|Widening or narrowing conversion must be defined between the two data types|Throws <xref:System.InvalidCastException>|  
+|`DirectCast`|Any data types|One type must inherit from or implement the other type|Throws <xref:System.InvalidCastException>|  
+|[TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)|Reference types only|One type must inherit from or implement the other type|Returns [Nothing](../../../visual-basic/language-reference/nothing.md)|  
   
 ## <a name="example"></a>例  
- 次の例では、2 つの用途の`DirectCast`、いずれかのいずれかの実行時に失敗するが成功するとします。  
+ The following example demonstrates two uses of `DirectCast`, one that fails at run time and one that succeeds.  
   
  [!code-vb[VbVbalrKeywords#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#1)]  
   
- 前の例では、実行時の入力の`q`は`Double`します。 `CType` 成功`Double`に変換できる`Integer`します。 ただし、最初の`DirectCast`実行時の型であるために、実行時に失敗`Double`継承関係を持たない`Integer`変換が存在する場合でも、します。 2 番目の`DirectCast`型からに変換されるためが成功すると<xref:System.Windows.Forms.Form>を入力する<xref:System.Windows.Forms.Control>、元の<xref:System.Windows.Forms.Form>継承します。  
+ In the preceding example, the run-time type of `q` is `Double`. `CType` succeeds because `Double` can be converted to `Integer`. However, the first `DirectCast` fails at run time because the run-time type of `Double` has no inheritance relationship with `Integer`, even though a conversion exists. The second `DirectCast` succeeds because it converts from type <xref:System.Windows.Forms.Form> to type <xref:System.Windows.Forms.Control>, from which <xref:System.Windows.Forms.Form> inherits.  
   
 ## <a name="see-also"></a>関連項目
 

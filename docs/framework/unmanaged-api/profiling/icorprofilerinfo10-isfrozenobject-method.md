@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d212c06c7ddc9f22095c0b95f19fd1083482435c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 250021c9eb475d0cbcb1bd14c8515b969fc9d30b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69661221"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449826"
 ---
-# <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10:: IsFrozenObject メソッド
+# <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10::IsFrozenObject Method
 
-ObjectID が指定された場合、オブジェクトが読み取り専用セグメント内にあるかどうかを判断します。
+Given an ObjectID, determines whether the object is in a read-only segment.
 
 ## <a name="syntax"></a>構文
 
@@ -32,21 +32,21 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 #### <a name="parameters"></a>パラメーター
 
 `objectId` \
-から調べるオブジェクト。
+[in] The object to examine.
 
 `pbFrozen` \
-入出力オブジェクトが読み取り専用セグメント内にあるかどうかを示すです。`BOOL`
+[out] A `BOOL` indicating if the object is in a read-only segment.
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**・** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/windows-prerequisites.md#net-core-supported-operating-systems)」を参照してください。
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**ヘッダー:** Corprof.idl、Corprof.idl
+**ヘッダー** : CorProf.idl、CorProf.h
 
-**ライブラリ**CorGuids .lib
+**ライブラリ:** CorGuids.lib
 
-**.Net のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo10 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

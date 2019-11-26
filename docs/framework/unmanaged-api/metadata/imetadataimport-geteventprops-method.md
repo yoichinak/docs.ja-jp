@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c87f2212c761dc31a75addabca6970c5497aa2a0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 18fe0c834506d0ac4cd15fd7af4c4f15904b0f81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782427"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437576"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps メソッド
-宣言する型の追加と削除メソッドのデリゲート、任意のフラグと関連付けられているその他のデータを含め、指定したイベント トークンによって表されるイベントのメタデータ情報を取得します。  
+Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,47 +47,47 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>パラメーター  
  `ev`  
- [in]メタデータを取得するイベントを表すイベントのメタデータ トークンです。  
+ [in] The event metadata token representing the event to get metadata for.  
   
  `pClass`  
- [out]イベントを宣言するクラスを表す TypeDef トークンへのポインター。  
+ [out] A pointer to the TypeDef token representing the class that declares the event.  
   
  `szEvent`  
- [out]によって参照されるイベントの名前`ev`します。  
+ [out] The name of the event referenced by `ev`.  
   
  `pchEvent`  
- [in]要求された長さのワイド文字で`szEvent`します。  
+ [in] The requested length in wide characters of `szEvent`.  
   
  `pdwEventFlags`  
- [out]ワイド文字で返される長さ`szEvent`します。  
+ [out] The returned length in wide characters of `szEvent`.  
   
  `ptkEventType`  
- [out]TypeRef または TypeDef メタデータ トークンを表すへのポインター、<xref:System.Delegate>イベントの種類。  
+ [out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.  
   
  `pmdAddOn`  
- [out]イベントのハンドラーを追加するメソッドを表すメタデータ トークンへのポインター。  
+ [out] A pointer to the metadata token representing the method that adds handlers for the event.  
   
  `pmdRemoveOn`  
- [out]イベントのハンドラーを削除するメソッドを表すメタデータ トークンへのポインター。  
+ [out] A pointer to the metadata token representing the method that removes handlers for the event.  
   
  `pmdFire`  
- [out]イベントを発生させるメソッドを表すメタデータ トークンへのポインター。  
+ [out] A pointer to the metadata token representing the method that raises the event.  
   
  `rmdOtherMethod`  
- [out]イベントに関連付けられているその他のメソッドへのトークンのポインターの配列。  
+ [out] An array of token pointers to other methods associated with the event.  
   
  `cMax`  
  [in] `rmdOtherMethod` 配列の最大サイズ。  
   
  `pcOtherMethod`  
- [out]トークンで返される数`rmdOtherMethod`します。  
+ [out] The number of tokens returned in `rmdOtherMethod`.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

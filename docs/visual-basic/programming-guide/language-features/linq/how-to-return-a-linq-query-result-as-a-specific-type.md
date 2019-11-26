@@ -1,5 +1,5 @@
 ---
-title: '方法: LINQ クエリの結果を返す特定の型 (Visual Basic)'
+title: '方法 : 特定の型での LINQ クエリ結果の取得'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], specific type returned
@@ -9,71 +9,71 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 5ccd71d93185f9478f6720419369df713d590c39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1084743b0c50d381375b76a3116ed7c9e6f9d769
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053757"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354200"
 ---
-# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>方法: LINQ クエリの結果を返す特定の型 (Visual Basic)
-統合言語クエリ (LINQ) により、簡単にデータベース情報にアクセスしてクエリを実行できます。 既定では、LINQ クエリは、匿名型としてオブジェクトの一覧を返します。 クエリを使用して、特定の種類の一覧を返すことを指定することも、`Select`句。  
+# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>方法 : LINQ クエリ結果を特定の型で返す (Visual Basic)
+Language-Integrated Query (LINQ) makes it easy to access database information and execute queries. By default, LINQ queries return a list of objects as an anonymous type. You can also specify that a query return a list of a specific type by using the `Select` clause.  
   
- 次の例では、SQL Server データベースに対するクエリを実行し、特定の名前付きの型として、結果を射影する新しいアプリケーションを作成する方法を示します。 詳細については、次を参照してください。[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)と[Select 句](../../../../visual-basic/language-reference/queries/select-clause.md)します。  
+ The following example shows how to create a new application that performs queries against a SQL Server database and projects the results as a specific named type. For more information, see [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) and [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md).  
   
- このトピックの例では、Northwind サンプル データベースを使用します。 開発用コンピューターにこのデータベースがいない場合は、Microsoft ダウンロード センターからダウンロードできます。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
+ The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-connection-to-a-database"></a>データベースへの接続を作成するには  
+### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database  
   
-1. Visual Studio で開く**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**をクリックして**サーバー エクスプ ローラー**/**データベースエクスプ ローラー**上、**ビュー**メニュー。  
+1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking **Server Explorer**/**Database Explorer** on the **View** menu.  
   
-2. 右クリック**データ接続**で**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**  をクリックし、**接続の追加**します。  
+2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer** and then click **Add Connection**.  
   
-3. Northwind サンプル データベースへの接続を有効なを指定します。  
+3. Specify a valid connection to the Northwind sample database.  
   
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>LINQ to SQL ファイルを格納しているプロジェクトを追加するには  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>To add a project that contains a LINQ to SQL file  
   
-1. Visual Studio で、**[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。 Visual Basic を選択**Windows フォーム アプリケーション**プロジェクトの種類として。  
+1. Visual Studio で、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 Select Visual Basic **Windows Forms Application** as the project type.  
   
-2. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 選択、 **LINQ to SQL クラス**項目テンプレート。  
+2. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 Select the **LINQ to SQL Classes** item template.  
   
-3. そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 Northwind.dbml ファイル用には、オブジェクト リレーショナル デザイナー (O/R デザイナー) を開きます。  
+3. そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 The Object Relational Designer (O/R Designer) is opened for the northwind.dbml file.  
   
-### <a name="to-add-tables-to-query-to-the-or-designer"></a>O/R デザイナーをクエリにテーブルを追加するには  
+### <a name="to-add-tables-to-query-to-the-or-designer"></a>To add tables to query to the O/R Designer  
   
-1. **サーバー エクスプ ローラー**/**データベース エクスプ ローラー**、Northwind データベースへの接続を展開します。 展開、**テーブル**フォルダー。  
+1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Tables** folder.  
   
-     O/R デザイナーを閉じた場合は、先ほど追加した northwind.dbml ファイルをダブルクリックして開くことができます。  
+     If you have closed the O/R Designer, you can reopen it by double-clicking the northwind.dbml file that you added earlier.  
   
-2. Customers テーブルをクリックし、デザイナーの左側のペインにドラッグします。  
+2. Click the Customers table and drag it to the left pane of the designer.  
   
-     デザイナーが新たに作成`Customer`プロジェクトのオブジェクト。 クエリの結果が射影することができます、`Customer`型または作成する型として。 このサンプルは後の手順で新しい型を作成し、クエリの結果がその型のプロジェクトします。  
+     The designer creates a new `Customer` object for your project. You can project a query result as the `Customer` type or as a type that you create. This sample will create a new type in a later procedure and project a query result as that type.  
   
-3. 変更を保存し、デザイナーを閉じます。  
+3. Save your changes and close the designer.  
   
 4. プロジェクトを保存します。  
   
-### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>データベース クエリを実行し、結果を表示するコードを追加するには  
+### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>To add code to query the database and display the results  
   
-1. **ツールボックス**、ドラッグ、<xref:System.Windows.Forms.DataGridView>に、プロジェクトの Form1 の既定の Windows フォーム コントロール。  
+1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.  
   
-2. Form1 クラスを変更する Form1 をダブルクリックします。  
+2. Double-click Form1 to modify the Form1 class.  
   
-3. 後に、 `End Class` Form1 クラスのステートメントを作成する次のコードを追加する、`CustomerInfo`このサンプルのクエリの結果を保持する型。  
+3. After the `End Class` statement of the Form1 class, add the following code to create a `CustomerInfo` type to hold the query results for this sample.  
   
      [!code-vb[VbLINQToSQLHowTos#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#16)]  
   
-4. O/R デザイナーにテーブルを追加したときに、デザイナーが追加、<xref:System.Data.Linq.DataContext>オブジェクトをプロジェクトにします。 このオブジェクトには、これらのテーブルにアクセスして、個々 のオブジェクトと各テーブルのコレクションへのアクセスに必要なコードが含まれています。 <xref:System.Data.Linq.DataContext>オブジェクトの名前は、プロジェクトに基づく .dbml ファイルの名前。 このプロジェクトで、<xref:System.Data.Linq.DataContext>オブジェクトの名前は`northwindDataContext`します。  
+4. When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object to your project. This object contains the code that you must have to access those tables, and to access individual objects and collections for each table. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.  
   
-     インスタンスを作成することができます、 <xref:System.Data.Linq.DataContext> O/R デザイナーによって、コードとクエリにテーブルが指定されています。  
+     You can create an instance of the <xref:System.Data.Linq.DataContext> in your code and query the tables specified by the O/R Designer.  
   
-     `Load` Form1 クラスのイベントは、データ コンテキストのプロパティとして公開されるテーブルを照会する次のコードを追加します。 `Select`新しいクエリの句が作成されます`CustomerInfo`クエリ結果の項目ごとに、匿名型ではなく型です。  
+     In the `Load` event of the Form1 class, add the following code to query the tables that are exposed as properties of your data context. The `Select` clause of the query will create a new `CustomerInfo` type instead of an anonymous type for each item of the query result.  
   
      [!code-vb[VbLINQToSQLHowTos#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#15)]  
   
-5. F5 キーを押してプロジェクトを実行し、結果を表示します。  
+5. Press F5 to run your project and view the results.  
   
 ## <a name="see-also"></a>関連項目
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 994e007eabf8b7fdcf5446d905c06eb4ab91bb3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6a732b98ae02ba2b273b45921b7de61ab4fd29f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777678"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432641"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute メソッド
-指定したオブジェクトに接続する、指定したメタデータ シグネチャを持つカスタム属性の定義を作成し、そのカスタム属性定義トークンを取得します。  
+Creates a definition for a custom attribute with the specified metadata signature, to be attached to the specified object, and gets a token to that custom attribute definition.  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,26 +39,26 @@ HRESULT DefineCustomAttribute (
   
 ## <a name="parameters"></a>パラメーター  
  `tkObj`  
- [in]所有者アイテムのトークンです。  
+ [in] The token for the owner item.  
   
  `tkType`  
- [in]カスタム属性を識別するトークンです。  
+ [in] The token that identifies the custom attribute.  
   
  `pCustomAttribute`  
- [in]カスタム属性へのポインター。  
+ [in] A pointer to the custom attribute.  
   
  `cbCustomAttribute`  
- [in]内のバイト数`pCustomAttribute`します。  
+ [in] The count of bytes in `pCustomAttribute`.  
   
  `pcv`  
- [out]`mdCustomAttribute`に割り当てられたトークン。  
+ [out] The `mdCustomAttribute` token assigned.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

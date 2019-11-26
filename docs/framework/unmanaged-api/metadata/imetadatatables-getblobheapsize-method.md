@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6330a9ee-8cd5-4299-86f1-b4de2c701a0d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9a73df0b73eb5043103479b7452fedc84b02819
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 715456317b880de89b6abdf1fa82acd040d17ced
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781555"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442041"
 ---
 # <a name="imetadatatablesgetblobheapsize-method"></a>IMetaDataTables::GetBlobHeapSize メソッド
-バイナリ ラージ オブジェクト (BLOB) ヒープのバイト単位のサイズを取得します。  
+Gets the size, in bytes, of the binary large object (BLOB) heap.  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,14 +35,14 @@ HRESULT GetBlobHeapSize (
   
 ## <a name="parameters"></a>パラメーター  
  `pcbBlobs`  
- [out]BLOB ヒープのバイト単位のサイズへのポインター。  
+ [out] A pointer to the size, in bytes, of the BLOB heap.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7087864d0305f0cdb0b4977f037cf5a7c4dee18d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20556d85655a0a1bbe069a94b99c19c774a13ce6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783141"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449685"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation メソッド
-プロファイリングされている共通言語ランタイム (CLR) のバージョンについて説明します。  
+Provides version information about the common language runtime (CLR) that is being profiled.  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,39 +43,39 @@ HRESULT GetRuntimeInformation(
   
 ## <a name="parameters"></a>パラメーター  
  `pClrInstanceId`  
- [out]プロセスで実行中の CLR インスタンスの担当者の ID。 これと同じ、 `ClrInstanceID` Windows (ETW) のスタートアップ イベント トレーシングのイベントをレポートすることです。  
+ [out] The representative ID of a running CLR instance in a process. This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.  
   
  `pRuntimeType`  
- [out]ランタイム型。 このパラメーターを返します`COR_PRF_DESKTOP_CLR`、CLR のデスクトップ バージョンのまたは`COR_PRF_CORE_CLR`Silverlight で使用されている CLR の core バージョン。  
+ [out] The runtime type. This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.  
   
  `pMajorVersion`  
- [out]CLR のメジャー バージョン番号。  
+ [out] The major version number of the CLR.  
   
  `pMinorVersion`  
- [out]CLR のマイナー バージョン番号。  
+ [out] The minor version number of the CLR.  
   
  `pBuildVersion`  
- [out]CLR のビルド バージョン番号。  
+ [out] The build version number of the CLR.  
   
  `pQFEVersion`  
- [out]ソフトウェア更新プログラムに関連付けられている CLR のバージョン番号。  
+ [out] The version number of the CLR that is associated with a software update.  
   
  `cchVersionString`  
- [in]バッファーの文字の長さを`szVersionString`を指します。  
+ [in] The length, in characters, of the buffer that `szVersionString` points to.  
   
  `pcchVersionString`  
- [out]長さを文字単位の`szVersionString`します。  
+ [out] The length, in characters, of `szVersionString`.  
   
  `szVersionString`  
- [out]CLR バージョン文字列です。  
+ [out] The CLR version string.  
   
 ## <a name="remarks"></a>Remarks  
- 任意のパラメーターに null を渡すことがあります。 ただし、 `pcchVersionString` null にすることはできませんしない限り、`szVersionString`も null です。  
+ You may pass null for any parameter. However, `pcchVersionString` cannot be null unless `szVersionString` is also null.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

@@ -1,5 +1,5 @@
 ---
-title: '方法: プロパティ (Visual Basic) を作成します。'
+title: '方法 : プロパティを作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -7,67 +7,67 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: 91f34de36e88724ccab21097bf54a4604f7eee37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee5a9f687765ce064eb3c3f84218ed36eb916d9d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665781"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349710"
 ---
-# <a name="how-to-create-a-property-visual-basic"></a>方法: プロパティ (Visual Basic) を作成します。
-プロパティの定義との間を囲む、`Property`ステートメントおよび`End Property`ステートメント。 この定義内で定義、 `Get` 、プロシージャ、`Set`プロシージャ、またはその両方です。 プロパティのすべてのコードが、これらのプロシージャ内に存在します。  
+# <a name="how-to-create-a-property-visual-basic"></a>方法: プロパティを作成する (Visual Basic)
+You enclose a property definition between a `Property` statement and an `End Property` statement. Within this definition you define a `Get` procedure, a `Set` procedure, or both. All the property's code lies within these procedures.  
   
- `Get`プロパティの値を取得し、`Set`プロシージャが値を格納します。 読み取り/書き込みアクセス権のプロパティを設定する場合、両方の手順を定義する必要があります。 読み取り専用プロパティを定義するのみ`Get`、書き込み専用プロパティで定義することのみ`Set`します。  
+ The `Get` procedure retrieves the property's value, and the `Set` procedure stores a value. If you want the property to have read/write access, you must define both procedures. For a read-only property, you define only `Get`, and for a write-only property, you define only `Set`.  
   
-### <a name="to-create-a-property"></a>プロパティを作成するには  
+### <a name="to-create-a-property"></a>To create a property  
   
-1. 任意のプロパティまたはプロシージャの外側を使用して、 [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)、その後に、`End Property`ステートメント。  
+1. Outside any property or procedure, use a [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md), followed by an `End Property` statement.  
   
-2. 次のプロパティは、パラメーターを受け取る場合、`Property`パラメーター リストをかっこで、プロシージャの名前を持つキーワード。  
+2. If the property takes parameters, follow the `Property` keyword with the name of the procedure, then the parameter list in parentheses.  
   
-3. かっこの後に、`As`プロパティの値のデータ型を指定する句。 書き込み専用プロパティの場合でもデータ型を指定する必要があります。  
+3. Follow the parentheses with an `As` clause to specify the data type of the property's value. You must specify the data type even for a write-only property.  
   
-4. 追加`Get`と`Set`プロシージャに、必要に応じて。 次の手順を参照してください。  
+4. Add `Get` and `Set` procedures, as appropriate. See the following directions.  
   
-### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>プロパティの値を取得する Get プロシージャを作成するには  
+### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>To create a Get procedure that retrieves a property value  
   
-1. 間、`Property`と`End Property`、ステートメントの記述、 [Get ステートメント](../../../../visual-basic/language-reference/statements/get-statement.md)、その後に、`End Get`ステートメント。 パラメーターを定義する必要はありません、`Get`プロシージャ。  
+1. Between the `Property` and `End Property` statements, write a [Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md), followed by an `End Get` statement. You do not need to define any parameters for the `Get` procedure.  
   
-2. 間で、プロパティの値を取得するコードのステートメントを配置、`Get`と`End Get`ステートメント。 その他の計算やデータ操作を生成して、プロパティの値を返すだけでなく、このコードを含めることができます。  
+2. Place the code statements to retrieve the property's value between the `Get` and `End Get` statements. This code can include other calculations and data manipulations in addition to generating and returning the property's value.  
   
-3. 使用して、`Return`ステートメントを呼び出し元のコードに、プロパティの値を返します。  
+3. Use a `Return` statement to return the property's value to the calling code.  
   
- 記述する必要があります、`Get`プロシージャおよび読み取り専用プロパティの読み取り/書き込みプロパティ。 定義する必要があります、`Get`書き込み専用プロパティ プロシージャをします。  
+ You must write a `Get` procedure for a read-write property and for a read-only property. You must not define a `Get` procedure for a write-only property.  
   
-### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>プロパティの値を書き込みます Set プロシージャを作成するには  
+### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>To create a Set procedure that writes a property's value  
   
-1. 間、`Property`と`End Property`、ステートメントの記述、 [Set ステートメント](../../../../visual-basic/language-reference/statements/set-statement.md)、その後に、`End Set`ステートメント。  
+1. Between the `Property` and `End Property` statements, write a [Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md), followed by an `End Set` statement.  
   
-2. `Set`ステートメントでは、以下の`Set`パラメーター リストをかっこで囲まれたキーワード。 このパラメーターの一覧には、呼び出し元のコードに渡される値の少なくとも値パラメーターを含める必要があります。 この値のパラメーターの既定の名前は`Value`、該当する場合は、別の名前を使用することができます。 データは、型、プロパティ自体と同じ値のパラメーターが必要です。  
+2. In the `Set` statement, follow the `Set` keyword with a parameter list in parentheses. This parameter list must include at least a value parameter for the value passed by the calling code. The default name for this value parameter is `Value`, but you can use a different name if appropriate. The value parameter must have the same data type as the property itself.  
   
-3. 間でプロパティに値を格納するコードのステートメントを配置、`Set`と`End Set`ステートメント。 このコードは、他の計算や検査して、プロパティの値を格納するだけでなくデータ操作を含めることができます。  
+3. Place the code statements to store a value in the property between the `Set` and `End Set` statements. This code can include other calculations and data manipulations in addition to validating and storing the property's value.  
   
-4. 値パラメーターを使用して、呼び出し元のコードによって提供される値をそのまま使用します。 この値は、代入ステートメントに直接格納するかを格納する内部値を計算する式で使用します。  
+4. Use the value parameter to accept the value supplied by the calling code. You can either store this value directly in an assignment statement, or use it in an expression to calculate the internal value to be stored.  
   
- 記述する必要があります、`Set`プロシージャの読み取り/書き込みプロパティおよび書き込み専用プロパティ。 定義する必要があります、`Set`読み取り専用プロパティ プロシージャをします。  
+ You must write a `Set` procedure for a read-write property and for a write-only property. You must not define a `Set` procedure for a read-only property.  
   
 ## <a name="example"></a>例  
- 次の例では、2 つの構成名、名、および、最後の名前と完全な名前を格納する読み取り/書き込みプロパティを作成します。 呼び出し元のコードを読み取るとき`fullName`、`Get`プロシージャは、2 つの構成名を結合し、完全な名前を返します。 呼び出し元のコードによって、新しい完全な名前を割り当てられるとき、`Set`プロシージャは、それを 2 つの部分に分割しようと試みます。 場所が見つからない場合すべて最初の名前として格納します。  
+ The following example creates a read/write property that stores a full name as two constituent names, the first name and the last name. When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name. When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names. If it does not find a space, it stores it all as the first name.  
   
  [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
- 次の例では、一般的なプロパティ プロシージャの呼び出し`fullName`します。 最初の呼び出しは、プロパティの値を設定し、2 番目の呼び出しでは、それを取得します。  
+ The following example shows typical calls to the property procedures of `fullName`. The first call sets the property value and the second call retrieves it.  
   
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [プロシージャ](./index.md)
+- [手順](./index.md)
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Visual Basic でのプロパティと変数の違い](./differences-between-properties-and-variables.md)
-- [方法: 混合アクセス レベルを持つプロパティを宣言します。](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [方法: プロパティ プロシージャを呼び出す](./how-to-call-a-property-procedure.md)
-- [方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す](./how-to-declare-and-call-a-default-property.md)
-- [方法: プロパティに値を格納します。](./how-to-put-a-value-in-a-property.md)
-- [方法: プロパティから値を取得します。](./how-to-get-a-value-from-a-property.md)
+- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [方法 : 複数のアクセス レベルを持つプロパティを宣言する](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [方法 : プロパティ プロシージャを呼び出す](./how-to-call-a-property-procedure.md)
+- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [方法 : プロパティに値を格納する](./how-to-put-a-value-in-a-property.md)
+- [方法 : プロパティから値を取得する](./how-to-get-a-value-from-a-property.md)

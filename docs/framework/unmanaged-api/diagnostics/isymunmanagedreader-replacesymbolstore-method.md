@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 43257761-8cb1-4eaf-8fb5-1f3980cb66cd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8721f7c30061fbfd4a761bed090b761762c3c13c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60c3537a80c39f758f46e6f2f0a5f2bcd27350b5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939016"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445736"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore メソッド
-既存のシンボル ストアをデルタ シンボル ストアで置き換えます。 このメソッドは、指定されたデルタが更新ではなく完全な置換として機能する点を除いて、"更新プログラム"[ストア](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)メソッドに似ています。  
+既存のシンボル ストアをデルタ シンボル ストアで置き換えます。 This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.  
   
 > [!NOTE]
-> `filename`またはパラメーターのいずれか1つ`pIStream`だけを指定する必要があります。両方を指定することはできません。 を`filename`指定した場合、シンボルストアはそのファイル内のシンボルで更新されます。 を`pIStream`指定した場合、ストアは<xref:System.Runtime.InteropServices.ComTypes.IStream>からのデータで更新されます。  
+> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,16 +38,16 @@ HRESULT ReplaceSymbolStore (
   
 ## <a name="parameters"></a>パラメーター  
  `filename`  
- からシンボルストアを格納しているファイルの名前。  
+ [in] The name of the file containing the symbol store.  
   
  `pIStream`  
- からパラメーターの`filename`代わりに使用されるファイルストリーム。  
+ [in] The file stream, used as an alternative to the `filename` parameter.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK を返します。それ以外の場合は E_FAIL またはその他のエラーコードを返します。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym .idl、CorSym .h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

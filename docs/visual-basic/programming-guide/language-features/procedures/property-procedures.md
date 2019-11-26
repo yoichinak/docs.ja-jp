@@ -1,5 +1,5 @@
 ---
-title: Property プロシージャ (Visual Basic)
+title: Property プロシージャ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Set statement [Visual Basic], Property procedures
@@ -13,35 +13,35 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: 118c9e776813f303ed921946f4cf6f1236ac02e3
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a4b8ac3e27348764f537ee9502ce1fbb165bb3ef
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040970"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352560"
 ---
 # <a name="property-procedures-visual-basic"></a>Property プロシージャ (Visual Basic)
 
-プロパティプロシージャは、モジュール、クラス、または構造体のカスタムプロパティを操作する一連の Visual Basic ステートメントです。 プロパティプロシージャは、*プロパティアクセサー*とも呼ばれます。
+A property procedure is a series of Visual Basic statements that manipulate a custom property on a module, class, or structure. Property procedures are also known as *property accessors*.
 
-Visual Basic には、次のプロパティプロシージャが用意されています。
+Visual Basic provides for the following property procedures:
 
-- `Get` プロシージャは、プロパティの値を返します。 これは、式のプロパティにアクセスするときに呼び出されます。
-- `Set` プロシージャは、オブジェクト参照を含む、プロパティを値に設定します。 これは、プロパティに値を割り当てるときに呼び出されます。
+- A `Get` procedure returns the value of a property. It is called when you access the property in an expression.
+- A `Set` procedure sets a property to a value, including an object reference. It is called when you assign a value to the property.
 
-通常は、`Get` ステートメントと `Set` ステートメントを使用して、ペアでプロパティプロシージャを定義しますが、プロパティが読み取り専用 ([Get ステートメント](../../../../visual-basic/language-reference/statements/get-statement.md)) または書き込み専用 ([Set ステートメント](../../../../visual-basic/language-reference/statements/set-statement.md)) の場合は、いずれかのプロシージャだけを定義できます。
+You usually define property procedures in pairs, using the `Get` and `Set` statements, but you can define either procedure alone if the property is read-only ([Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)) or write-only ([Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md)).
 
-自動実装プロパティを使用する場合は、`Get` と `Set` の手順を省略できます。 詳細については、「[自動実装プロパティ](./auto-implemented-properties.md)」を参照してください。
+You can omit the `Get` and `Set` procedure when using an auto-implemented property. 詳細については、「[自動実装プロパティ](./auto-implemented-properties.md)」を参照してください。
 
-クラス、構造体、およびモジュールのプロパティを定義できます。 プロパティは既定で `Public` されます。これは、プロパティのコンテナーにアクセスできるアプリケーション内の任意の場所から呼び出すことができることを意味します。
+You can define properties in classes, structures, and modules. Properties are `Public` by default, which means you can call them from anywhere in your application that can access the property's container.
 
-プロパティと変数の比較については、「 [Visual Basic のプロパティと変数の違い](differences-between-properties-and-variables.md)」を参照してください。
+For a comparison of properties and variables, see [Differences Between Properties and Variables in Visual Basic](differences-between-properties-and-variables.md).
 
-## <a name="declaration-syntax"></a>宣言の構文
+## <a name="declaration-syntax"></a>Declaration syntax
 
-プロパティ自体は、[プロパティステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)および `End Property` ステートメント内に囲まれたコードのブロックによって定義されます。 このブロックの内部では、各プロパティプロシージャは、宣言ステートメント (`Get` または `Set`) と一致する `End` 宣言内に囲まれた内部ブロックとして表示されます。
+A property itself is defined by a block of code enclosed within the [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. Inside this block, each property procedure appears as an internal block enclosed within a declaration statement (`Get` or `Set`) and the matching `End` declaration.
 
-プロパティとそのプロシージャを宣言する構文は次のとおりです。
+The syntax for declaring a property and its procedures is as follows:
 
 ```vb
 [Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]
@@ -60,62 +60,62 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]
 ```
 
-`Modifiers` は、オーバーロード、オーバーライド、共有、およびシャドウに関するアクセスレベルと情報、およびプロパティが読み取り専用であるか書き込み専用であるかを指定できます。 `Get` または `Set` プロシージャの `AccessLevel` には、プロパティ自体に対して指定されたアクセスレベルよりも制限の厳しい任意のレベルを指定できます。 詳細については、「 [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)」を参照してください。
+The `Modifiers` can specify access level and information regarding overloading, overriding, sharing, and shadowing, as well as whether the property is read-only or write-only. The `AccessLevel` on the `Get` or `Set` procedure can be any level that is more restrictive than the access level specified for the property itself. For more information, see [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md).
 
 ### <a name="data-type"></a>データの種類
 
-プロパティのデータ型とプリンシパルアクセスレベルは、プロパティプロシージャではなく、`Property` ステートメントで定義されます。 プロパティは、データ型を1つだけ持つことができます。 たとえば、`Decimal` 値を格納するプロパティを定義することはできませんが、`Double` 値を取得することはできません。
+A property's data type and principal access level are defined in the `Property` statement, not in the property procedures. A property can have only one data type. For example, you cannot define a property to store a `Decimal` value but retrieve a `Double` value.
 
-### <a name="access-level"></a>アクセスレベル
+### <a name="access-level"></a>Access Level
 
-ただし、プロパティのプリンシパルアクセスレベルを定義し、そのプロパティプロシージャのいずれかでアクセスレベルをさらに制限することができます。 たとえば、`Public` プロパティを定義し、`Private Set` プロシージャを定義できます。 `Get` プロシージャは `Public`のままです。 アクセスレベルを変更できるのは、プロパティのプロシージャの1つだけです。このアクセスレベルは、プリンシパルアクセスレベルよりも制限されます。 詳細については、「[方法: 混合アクセスレベルを持つプロパティを宣言](how-to-declare-a-property-with-mixed-access-levels.md)する」を参照してください。
+However, you can define a principal access level for a property and further restrict the access level in one of its property procedures. For example, you can define a `Public` property and then define a `Private Set` procedure. The `Get` procedure remains `Public`. You can change the access level in only one of a property's procedures, and you can only make it more restrictive than the principal access level. For more information, see [How to: Declare a Property with Mixed Access Levels](how-to-declare-a-property-with-mixed-access-levels.md).
 
-## <a name="parameter-declaration"></a>パラメーターの宣言
+## <a name="parameter-declaration"></a>Parameter declaration
 
-各パラメーターは、[サブプロシージャ](sub-procedures.md)に対して実行するのと同じ方法で宣言します。ただし、渡すメカニズムは `ByVal`する必要があります。
+You declare each parameter the same way you do for [Sub Procedures](sub-procedures.md), except that the passing mechanism must be `ByVal`.
 
-パラメーターリストの各パラメーターの構文は次のとおりです。
+The syntax for each parameter in the parameter list is as follows:
 
 ```vb
 [Optional] ByVal [ParamArray] parametername As datatype
 ```
 
-パラメーターが省略可能な場合は、宣言の一部として既定値を指定する必要もあります。 既定値を指定する構文は次のとおりです。
+If the parameter is optional, you must also supply a default value as part of its declaration. The syntax for specifying a default value is as follows:
 
 ```vb
 Optional ByVal parametername As datatype = defaultvalue
 ```
 
-## <a name="property-value"></a>プロパティ値
+## <a name="property-value"></a>Property value
 
-`Get` のプロシージャでは、プロパティの値として呼び出し元の式に戻り値が指定されます。
+In a `Get` procedure, the return value is supplied to the calling expression as the value of the property.
 
-`Set` のプロシージャでは、新しいプロパティ値が `Set` ステートメントのパラメーターに渡されます。 パラメーターを明示的に宣言する場合は、プロパティと同じデータ型を使用して宣言する必要があります。 パラメーターを宣言しない場合、コンパイラは、暗黙的なパラメーター `Value` を使用して、プロパティに割り当てられる新しい値を表します。
+In a `Set` procedure, the new property value is passed to the parameter of the `Set` statement. If you explicitly declare a parameter, you must declare it with the same data type as the property. If you do not declare a parameter, the compiler uses the implicit parameter `Value` to represent the new value to be assigned to the property.
 
-## <a name="calling-syntax"></a>呼び出し構文
+## <a name="calling-syntax"></a>Calling syntax
 
-プロパティを参照することによって、プロパティプロシージャを暗黙的に呼び出します。 プロパティの名前は、変数の名前を使用するのと同じ方法で使用します。ただし、省略可能なすべての引数の値を指定する必要があります。また、引数リストをかっこで囲む必要があります。 引数を指定しない場合は、必要に応じてかっこを省略できます。
+You invoke a property procedure implicitly by making reference to the property. You use the name of the property the same way you would use the name of a variable, except that you must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses.
 
-`Set` プロシージャへの暗黙的な呼び出しの構文は次のとおりです。
+The syntax for an implicit call to a `Set` procedure is as follows:
 
 ```vb
 propertyname[(argumentlist)] = expression
 ```
 
-`Get` プロシージャへの暗黙的な呼び出しの構文は次のとおりです。
+The syntax for an implicit call to a `Get` procedure is as follows:
 
 ```vb
 lvalue = propertyname[(argumentlist)]
 Do While (propertyname[(argumentlist)] > expression)
 ```
 
-### <a name="illustration-of-declaration-and-call"></a>宣言と呼び出しの図
+### <a name="illustration-of-declaration-and-call"></a>Illustration of declaration and call
 
-次のプロパティは、完全名を2つの構成名 (名と姓) として格納します。 呼び出し元のコードが `fullName`を読み取る場合、`Get` プロシージャは2つの構成名を結合し、完全な名前を返します。 呼び出し元のコードによって新しい完全名が割り当てられると、`Set` プロシージャは2つの構成名に分割しようとします。 スペースが見つからない場合は、そのすべてが最初の名前として格納されます。
+The following property stores a full name as two constituent names, the first name and the last name. When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name. When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names. If it does not find a space, it stores it all as the first name.
 
 [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]
 
-次の例は、`fullName`のプロパティプロシージャの一般的な呼び出しを示しています。
+The following example shows typical calls to the property procedures of `fullName`:
 
 [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]
 
@@ -125,9 +125,9 @@ Do While (propertyname[(argumentlist)] > expression)
 - [Function プロシージャ](function-procedures.md)
 - [演算子プロシージャ](operator-procedures.md)
 - [プロシージャのパラメーターと引数](procedure-parameters-and-arguments.md)
-- [Visual Basic のプロパティと変数の違い](differences-between-properties-and-variables.md)
+- [Differences Between Properties and Variables in Visual Basic](differences-between-properties-and-variables.md)
 - [方法 : プロパティを作成する](how-to-create-a-property.md)
 - [方法 : プロパティ プロシージャを呼び出す](how-to-call-a-property-procedure.md)
-- [方法: Visual Basic で既定のプロパティを宣言して呼び出す](how-to-declare-and-call-a-default-property.md)
+- [How to: Declare and Call a Default Property in Visual Basic](how-to-declare-and-call-a-default-property.md)
 - [方法 : プロパティに値を格納する](how-to-put-a-value-in-a-property.md)
 - [方法 : プロパティから値を取得する](how-to-get-a-value-from-a-property.md)

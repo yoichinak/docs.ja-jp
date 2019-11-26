@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a70c041bc17f58a5e17877dd2e1f2aa2944e689
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3e470250fa0e86610fcc9a6d6e2ca03569d62b54
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777920"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449448"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName メソッド
-名前およびそれを囲む型を指定するエクスポートされた型、ポインターを取得します。  
+Gets a pointer to an exported type, given its name and enclosing type.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,23 +37,23 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>パラメーター  
  `szName`  
- [in]エクスポートされる型の名前。  
+ [in] The name of the exported type.  
   
  `mdtExportedType`  
- [in]エクスポートされた型の外側のクラスのメタデータ トークン。 この値は`mdExportedTypeNil`型が入れ子になった型ではない場合は、要求されたエクスポートします。  
+ [in] The metadata token for the enclosing class of the exported type. This value is `mdExportedTypeNil` if the requested exported type is not a nested type.  
   
  `ptkExportedType`  
- [out]ポインター、`mdExportedType`エクスポートされる型を表すトークン。  
+ [out] A pointer to the `mdExportedType` token that represents the exported type.  
   
 ## <a name="remarks"></a>Remarks  
- `FindExportedTypeByName`メソッドは、参照を解決するための共通言語ランタイムによって使用されている標準の規則を使用します。  
+ The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

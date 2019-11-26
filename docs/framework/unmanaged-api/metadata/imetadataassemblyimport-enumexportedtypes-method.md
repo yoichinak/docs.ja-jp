@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 62c44d0c3bd2e931b1708abb48bc9c854431419f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 45e2348b4726447548544d975e60b93e464fb402
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751153"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450330"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes メソッド
-現在のメタデータ スコープ内のアセンブリ マニフェストで参照されているエクスポートされた型を列挙します。  
+Enumerates the exported types referenced in the assembly manifest in the current metadata scope.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,30 +38,30 @@ HRESULT EnumExportedTypes (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 これを null には値と、`EnumExportedTypes`メソッドは、最初に呼び出されます。  
+ [in, out] A pointer to the enumerator. This must be a null value when the `EnumExportedTypes` method is called for the first time.  
   
  `rExportedTypes`  
- [out]列挙体`mdExportedType`メタデータ トークン。  
+ [out] The enumeration of `mdExportedType` metadata tokens.  
   
  `cMax`  
- [in]最大数`mdExportedType`トークン内に配置できる、`rExportedTypes`配列。  
+ [in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.  
   
  `pcTokens`  
- [out]数`mdExportedType`トークンが実際に配置`rExportedTypes`します。  
+ [out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes` 正常に返されます。|  
-|`S_FALSE`|トークンを列挙することはありません。 この場合、 `pcTokens` 0 に設定されます。|  
+|`S_OK`|`EnumExportedTypes` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

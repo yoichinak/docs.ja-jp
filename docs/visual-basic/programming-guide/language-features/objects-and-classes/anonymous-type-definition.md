@@ -1,27 +1,27 @@
 ---
-title: 匿名型の定義 (Visual Basic)
+title: 匿名型の定義
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 5f6486965d9e44524420975523e10ded32a135b7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f8ac26577a7fbef865605a7ecf643fa733b2c2c0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755216"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344927"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>匿名型の定義 (Visual Basic)
 
-匿名型のインスタンスの宣言に応答してでは、コンパイラは、型の指定したプロパティを格納する新しいクラス定義を作成します。
+In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties for the type.
 
-## <a name="compiler-generated-code"></a>コンパイラによって生成されたコード
+## <a name="compiler-generated-code"></a>Compiler-Generated Code
 
-次の定義の`product`、コンパイラは、プロパティを格納する新しいクラス定義を作成します。 `Name`、 `Price`、と`OnHand`します。
+For the following definition of `product`, the compiler creates a new class definition that contains properties `Name`, `Price`, and `OnHand`.
 
 [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]
 
-クラス定義には、次のようなプロパティの定義が含まれています。 あることに注意してくださいありません`Set`メソッド主要なプロパティ。 キー プロパティの値とは、読み取り専用です。
+The class definition contains property definitions similar to the following. Notice that there is no `Set` method for the key properties. The values of key properties are read-only.
 
 ```vb
 Public Class $Anonymous1
@@ -52,38 +52,38 @@ Public Class $Anonymous1
 End Class
 ```
 
-さらに、匿名型の定義には、パラメーターなしのコンス トラクターが含まれます。 パラメーターを必要とするコンス トラクターが許可されていません。
+In addition, anonymous type definitions contain a parameterless constructor. Constructors that require parameters are not permitted.
 
-型定義から継承された 3 つのメンバーよりも優先される場合、匿名型の宣言には、少なくとも 1 つのキー プロパティが含まれています、 <xref:System.Object>: <xref:System.Object.Equals%2A>、 <xref:System.Object.GetHashCode%2A>、および<xref:System.Object.ToString%2A>します。 キー プロパティが宣言されていない場合、のみ<xref:System.Object.ToString%2A>オーバーライドされます。 上書きは、次の機能を提供します。
+If an anonymous type declaration contains at least one key property, the type definition overrides three members inherited from <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. If no key properties are declared, only <xref:System.Object.ToString%2A> is overridden. The overrides provide the following functionality:
 
-- `Equals` 返します`True`匿名型の 2 つのインスタンスが、同じインスタンスである場合、または、次の条件を満たしている場合。
+- `Equals` returns `True` if two anonymous type instances are the same instance, or if they meet the following conditions:
 
-  - 同じ数のプロパティがあります。
+  - They have the same number of properties.
 
-  - プロパティが同じ名前を持つ、同じ順序で宣言されているし、推論された型が同じです。 名前の比較は区別されません。
+  - The properties are declared in the same order, with the same names and the same inferred types. Name comparisons are not case-sensitive.
 
-  - キー プロパティでは、少なくとも 1 つのプロパティと`Key`キーワードは、同じのプロパティに適用されます。
+  - At least one of the properties is a key property, and the `Key` keyword is applied to the same properties.
 
-  - キー プロパティの対応する各ペアの比較を返します`True`します。
+  - Comparison of each corresponding pair of key properties returns `True`.
 
-    たとえば、次の例についてで`Equals`返します`True`のみ`employee01`と`employee08`。 各行の新しいインスタンスが一致しない理由理由を指定する前にコメント`employee01`します。
+    For example, in the following examples, `Equals` returns `True` only for `employee01` and `employee08`. The comment before each line specifies the reason why the new instance does not match `employee01`.
 
     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]
 
-- `GetHashcode` 適切に一意の GetHashCode アルゴリズムを提供します。 アルゴリズムでは、キー プロパティだけを使用して、ハッシュ コードを計算します。
+- `GetHashcode` provides an appropriately unique GetHashCode algorithm. The algorithm uses only the key properties to compute the hash code.
 
-- `ToString` 次の例に示すように、連結されたプロパティの値の文字列を返します。 キーとキー以外のプロパティの両方が含まれます。
+- `ToString` returns a string of concatenated property values, as shown in the following example. Both key and non-key properties are included.
 
   [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]
 
-生成されたこれらのメソッドと競合する、匿名型のプロパティを明示的に指定できません。 つまり、使用することはできません`.Equals`、 `.GetHashCode`、または`.ToString`にプロパティの名前します。
+Explicitly named properties of an anonymous type cannot conflict with these generated methods. That is, you cannot use `.Equals`, `.GetHashCode`, or `.ToString` to name a property.
 
-匿名型の定義には少なくとも 1 つ含まれているキー プロパティも実装、<xref:System.IEquatable%601?displayProperty=nameWithType>インターフェイス、場所`T`匿名型の種類です。
+Anonymous type definitions that include at least one key property also implement the <xref:System.IEquatable%601?displayProperty=nameWithType> interface, where `T` is the type of the anonymous type.
 
 > [!NOTE]
-> 同じアセンブリで発生した、そのプロパティは、同じ名前を持つと推論された型が同じ、プロパティを同じ順序で宣言および同じプロパティがキー プロパティとしてマークされている場合にのみ、匿名型の宣言は、同じ匿名型を作成します。
+> Anonymous type declarations create the same anonymous type only if they occur in the same assembly, their properties have the same names and the same inferred types, the properties are declared in the same order, and the same properties are marked as key properties.
 
 ## <a name="see-also"></a>関連項目
 
 - [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [方法: 匿名型の宣言におけるプロパティ名と型を推論します。](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [方法 : 匿名型の宣言におけるプロパティ名と型を推論する](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

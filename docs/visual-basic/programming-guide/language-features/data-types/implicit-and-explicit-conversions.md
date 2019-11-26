@@ -1,5 +1,5 @@
 ---
-title: 暗黙の型変換と明示的な型変換 (Visual Basic)
+title: 暗黙の型変換と明示的な型変換
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [Visual Basic], type
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 4bcf2d76a2983294f244b72f286842a92fb5e64e
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: b7215933cec89b7023f08e8996a283b39b3a3c83
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512867"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346371"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>暗黙の型変換と明示的な型変換 (Visual Basic)
 
-暗黙の型*変換*では、ソースコードに特別な構文は必要ありません。 次の例では、Visual Basic をに`k` `q`代入する前に、の値を単精度浮動小数点値に暗黙的に変換します。
+An *implicit conversion* does not require any special syntax in the source code. In the following example, Visual Basic implicitly converts the value of `k` to a single-precision floating-point value before assigning it to `q`.
 
 ```vb
 Dim k As Integer
@@ -39,9 +39,9 @@ k = 432
 q = k
 ```
 
-*明示的な変換*では、型変換キーワードを使用します。 Visual Basic には、かっこ内の式を目的のデータ型に強制的に変換するいくつかのキーワードが用意されています。 これらのキーワードは関数と同様に機能しますが、コンパイラによってインラインでコードが生成されるため、関数呼び出しの場合よりも実行速度が若干速くなります。
+An *explicit conversion* uses a type conversion keyword. Visual Basic provides several such keywords, which coerce an expression in parentheses to the desired data type. These keywords act like functions, but the compiler generates the code inline, so execution is slightly faster than with a function call.
 
-前の例の次の拡張機能では`CInt` 、キーワードをに`k`代入`q`する前に、の値を整数に変換します。
+In the following extension of the preceding example, the `CInt` keyword converts the value of `q` back to an integer before assigning it to `k`.
 
 ```vb
 ' q had been assigned the value 432 from k.
@@ -52,37 +52,37 @@ k = CInt(q)
 
 ## <a name="conversion-keywords"></a>変換キーワード
 
-次の表は、使用可能な変換キーワードを示しています。
+The following table shows the available conversion keywords.
 
-|型変換キーワード|式をデータ型に変換します。|変換する式の許容データ型|
+|Type conversion keyword|Converts an expression to data type|Allowable data types of expression to be converted|
 |---|---|---|
-|`CBool`|[Boolean データ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|任意の数値型 ( `Byte`、 `SByte`、および列挙型を含む`String`)、、`Object`|
-|`CByte`|[Byte データ型](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|任意の数値型 ( `SByte`および列挙型を含む`Boolean`) `String`、、、`Object`|
-|`CChar`|[Char データ型](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`, `Object`|
-|`CDate`|[Date データ型](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`, `Object`|
-|`CDbl`|[Double 型](../../../../visual-basic/language-reference/data-types/double-data-type.md)|任意の数値型 ( `Byte`、 `SByte`、および`String`列挙型を含む`Boolean`)、、、`Object`|
-|`CDec`|[Decimal データ型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|任意の数値型 ( `Byte`、 `SByte`、および`String`列挙型を含む`Boolean`)、、、`Object`|
-|`CInt`|[Integer データ型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|任意の数値型 ( `Byte`、 `SByte`、および`String`列挙型を含む`Boolean`)、、、`Object`|
-|`CLng`|[Long データ型](../../../../visual-basic/language-reference/data-types/long-data-type.md)|任意の数値型 ( `Byte`、 `SByte`、および`String`列挙型を含む`Boolean`)、、、`Object`|
+|`CBool`|[Boolean データ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `String`, `Object`|
+|`CByte`|[Byte データ型](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|Any numeric type (including `SByte` and enumerated types), `Boolean`, `String`, `Object`|
+|`CChar`|[Char データ型](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`、 `Object`|
+|`CDate`|[Date データ型](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`、 `Object`|
+|`CDbl`|[Double 型](../../../../visual-basic/language-reference/data-types/double-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
+|`CDec`|[Decimal データ型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
+|`CInt`|[Integer データ型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
+|`CLng`|[Long データ型](../../../../visual-basic/language-reference/data-types/long-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
 |`CObj`|[Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)|任意の型|
-|`CSByte`|[SByte データ型](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|任意の数値型 ( `Byte`および列挙型を含む`Boolean`) `String`、、、`Object`|
-|`CShort`|[Short データ型](../../../../visual-basic/language-reference/data-types/short-data-type.md)|任意の数値型 ( `Byte`、 `SByte`、および`String`列挙型を含む`Boolean`)、、、`Object`|
-|`CSng`|[Single データ型](../../../../visual-basic/language-reference/data-types/single-data-type.md)|任意の数値型 ( `Byte`、 `SByte`、および`String`列挙型を含む`Boolean`)、、、`Object`|
-|`CStr`|[String データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)|任意の数値型 ( `Byte`、 `SByte`、および列挙型を含む`Boolean`) `Char`、 `Char` 、、 `Date`array、、`Object`|
-|`CType`|コンマ (`,`) の後に指定された型|基本*データ型*(基本型の配列を含む) に変換する場合、対応する conversion キーワードで許可されているものと同じ型です。<br /><br /> *複合データ型*に変換する場合、それが実装するインターフェイスと継承元のクラス<br /><br /> オーバーロード`CType`されたクラスまたは構造体に変換する場合、そのクラスまたは構造体|
-|`CUInt`|[UInteger データ型](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|任意の数値型 ( `Byte`、 `SByte`、および`String`列挙型を含む`Boolean`)、、、`Object`|
-|`CULng`|[ULong データ型](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|任意の数値型 ( `Byte`、 `SByte`、および`String`列挙型を含む`Boolean`)、、、`Object`|
-|`CUShort`|[UShort データ型](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|任意の数値型 ( `Byte`、 `SByte`、および`String`列挙型を含む`Boolean`)、、、`Object`|
+|`CSByte`|[SByte データ型](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|Any numeric type (including `Byte` and enumerated types), `Boolean`, `String`, `Object`|
+|`CShort`|[Short データ型](../../../../visual-basic/language-reference/data-types/short-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
+|`CSng`|[Single データ型](../../../../visual-basic/language-reference/data-types/single-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
+|`CStr`|[String データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `Char`, `Char` array, `Date`, `Object`|
+|`CType`|Type specified following the comma (`,`)|When converting to an *elementary data type* (including an array of an elementary type), the same types as allowed for the corresponding conversion keyword<br /><br /> When converting to a *composite data type*, the interfaces it implements and the classes from which it inherits<br /><br /> When converting to a class or structure on which you have overloaded `CType`, that class or structure|
+|`CUInt`|[UInteger データ型](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
+|`CULng`|[ULong データ型](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
+|`CUShort`|[UShort データ型](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`|
 
-## <a name="the-ctype-function"></a>CType 関数
+## <a name="the-ctype-function"></a>The CType Function
 
-[CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)は、2つの引数を操作します。 1つ目は変換される式で、2番目は変換先のデータ型またはオブジェクトクラスです。 最初の引数は型ではなく、式である必要があることに注意してください。
+The [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) operates on two arguments. The first is the expression to be converted, and the second is the destination data type or object class. Note that the first argument must be an expression, not a type.
 
-`CType`は*インライン関数*です。つまり、コンパイルされたコードは、多くの場合、関数呼び出しを生成せずに変換を行います。 これにより、パフォーマンスが向上します。
+`CType` is an *inline function*, meaning the compiled code makes the conversion, often without generating a function call. This improves performance.
 
-`CType`と他の型変換キーワードの比較については、「 [DirectCast operator](../../../../visual-basic/language-reference/operators/directcast-operator.md) and [TryCast operator](../../../../visual-basic/language-reference/operators/trycast-operator.md)」を参照してください。
+For a comparison of `CType` with the other type conversion keywords, see [DirectCast Operator](../../../../visual-basic/language-reference/operators/directcast-operator.md) and [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md).
 
-### <a name="elementary-types"></a>基本型
+### <a name="elementary-types"></a>Elementary Types
 
 次の例は、`CType` の使い方を示しています。
 
@@ -92,9 +92,9 @@ k = CType(q, Integer)
 f = CType(w, Label)
 ```
 
-### <a name="composite-types"></a>複合型
+### <a name="composite-types"></a>Composite Types
 
-を使用`CType`すると、値を複合データ型だけでなく基本型にも変換できます。 また、次の例のように、このメソッドを使用して、オブジェクトクラスをそのインターフェイスの1つの型に強制的に変換することもできます。
+You can use `CType` to convert values to composite data types as well as to elementary types. You can also use it to coerce an object class to the type of one of its interfaces, as in the following example.
 
 ```vb
 ' Assume class cZone implements interface iZone.
@@ -105,9 +105,9 @@ Dim cZ As cZone
 h = CType(cZ, iZone)
 ```
 
-### <a name="array-types"></a>配列型
+### <a name="array-types"></a>Array Types
 
-`CType`次の例のように、配列のデータ型を変換することもできます。
+`CType` can also convert array data types, as in the following example.
 
 ```vb
 Dim v() As classV
@@ -120,27 +120,27 @@ If TypeOf obArray Is classV()
 End If
 ```
 
-詳細と例については、「[配列の変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)」を参照してください。
+For more information and an example, see [Array Conversions](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md).
 
-### <a name="types-defining-ctype"></a>CType を定義する型
+### <a name="types-defining-ctype"></a>Types Defining CType
 
-定義した`CType`クラスまたは構造体に対してを定義できます。 これにより、クラスまたは構造体の型との間で値を変換できます。 詳細と例については、 [「方法:変換演算子](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)を定義します。
+You can define `CType` on a class or structure you have defined. This allows you to convert values to and from the type of your class or structure. For more information and an example, see [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).
 
 > [!NOTE]
-> 変換キーワードと共に使用する値は、変換先のデータ型に対して有効でなければなりません。または、エラーが発生します。 たとえば`Long` 、を`Integer`に変換しようとした場合、の`Long`値は、 `Integer`データ型の有効な範囲内である必要があります。
+> Values used with a conversion keyword must be valid for the destination data type, or an error occurs. For example, if you attempt to convert a `Long` to an `Integer`, the value of the `Long` must be within the valid range for the `Integer` data type.
 
 > [!CAUTION]
-> ソース`CType`型が変換先の型から派生していない場合、実行時に、あるクラス型から別の型に変換するように指定すると、が失敗します。 このようなエラーが<xref:System.InvalidCastException>発生すると、例外がスローされます。
+> Specifying `CType` to convert from one class type to another fails at run time if the source type does not derive from the destination type. Such a failure throws an <xref:System.InvalidCastException> exception.
 
-ただし、型のいずれかが定義した構造体またはクラスであり、その構造体`CType`またはクラスでを定義している場合、 `CType`の要件を満たすと、変換が成功する可能性があります。 「[方法:変換演算子](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)を定義します。
+However, if one of the types is a structure or class you have defined, and if you have defined `CType` on that structure or class, a conversion can succeed if it satisfies the requirements of your `CType`. See [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).
 
-明示的な変換を実行することは、特定のデータ型またはオブジェクトクラスに式を*キャスト*することとも呼ばれます。
+Performing an explicit conversion is also known as *casting* an expression to a given data type or object class.
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [方法: オブジェクトを Visual Basic 内の別の型に変換する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [構造体](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
 - [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

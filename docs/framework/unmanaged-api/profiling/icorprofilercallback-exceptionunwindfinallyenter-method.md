@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7fab986-b69f-4ec8-b7b7-91dcfc239cd0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3b25ae535bfe50d216ca64a2e8163c0e6df58535
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f16add7b5a9d18e0c1eb33209b609e9bf7e18b0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755963"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445312"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a>ICorProfilerCallback::ExceptionUnwindFinallyEnter メソッド
-例外のアンワインド フェーズの処理が入ることをプロファイラーに通知を`finally`句が指定された関数に含まれています。  
+Notifies the profiler that the unwind phase of exception handling is entering a `finally` clause contained in the specified function.  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +34,17 @@ HRESULT ExceptionUnwindFinallyEnter(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in]含む関数の ID、`finally`句。  
+ [in] The ID of the function that contains the `finally` clause.  
   
 ## <a name="remarks"></a>Remarks  
- プロファイラーでは、スタックはガベージ コレクションを許可する状態にできない可能性がありますので、このメソッドの実装でブロックしないでくださいし、そのため、プリエンプティブなガベージ コレクションを有効にできません。 ここで、プロファイラーをブロックする場合とは、ガベージ コレクションが試行されると、ランタイムがこのコールバックが戻るまでブロックされます。  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- このメソッドのプロファイラーの実装には、任意の方法で管理されているメモリの割り当てが発生またはマネージ コードを呼び出さないでください。  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

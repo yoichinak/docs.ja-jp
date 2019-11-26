@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 347d7e5c-c90f-45ad-bd1e-2c7912b0b19c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a7d9874d4a609c353ae772b75a48af632bf4e85d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d0f443b5b7d2d358534e888c3fc84ad3f554119
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756547"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450045"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets メソッド
 指定したメタデータ スコープ内のオブジェクトのアクセス許可を列挙します。  
@@ -42,36 +40,36 @@ HRESULT EnumPermissionSets
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `tk`  
- [in]できるだけ広い範囲を検索する検索のスコープを制限するメタデータ トークンです。  
+ [in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.  
   
  `dwActions`  
- [in]フラグを表す、<xref:System.Security.Permissions.SecurityAction>に含める値`rPermission`、またはすべてのアクションを返す 0。  
+ [in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.  
   
  `rPermission`  
- [out]アクセス許可のトークンを格納するために使用する配列。  
+ [out] The array used to store the Permission tokens.  
   
  `cMax`  
  [in] `rPermission` 配列の最大サイズ。  
   
  `pcTokens`  
- [out]アクセス許可のトークンで返される数`rPermission`します。  
+ [out] The number of Permission tokens returned in `rPermission`.  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets` 正常に返されます。|  
-|`S_FALSE`|トークンを列挙することはありません。 その場合は、`pcTokens`は 0 です。|  
+|`S_OK`|`EnumPermissionSets` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

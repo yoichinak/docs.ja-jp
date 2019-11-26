@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f728de8-45c2-45a5-ac4a-45660bd36ecf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84ff6cb79abdb60a3c01c66580ed6fc10f6c137e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c9faff2d616d03d823c80fb2d9cd71d5fd5759ae
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762941"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445080"
 ---
 # <a name="icorprofilercallbackclassloadstarted-method"></a>ICorProfilerCallback::ClassLoadStarted メソッド
-クラスが読み込まれていることをプロファイラーに通知します。  
+Notifies the profiler that a class is being loaded.  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,15 +34,15 @@ HRESULT ClassLoadStarted(
   
 ## <a name="parameters"></a>パラメーター  
  `classId`  
- [in]読み込まれているクラスを識別します。  
+ [in] Identifies the class that is being loaded.  
   
 ## <a name="remarks"></a>Remarks  
- 値`classId`まで情報の要求に対して無効です、 [icorprofilercallback::classloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)メソッドが呼び出されます。  
+ The value of `classId` is not valid for an information request until the [ICorProfilerCallback::ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) method is called.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 737ccc8af41c9eca765a7ea06f29d1aec1ccfad6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ed193aab8beb0de1321aa1d52ec9f963b08b316c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758852"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441661"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName メソッド
 指定した名前を持つ指定した型のメンバーを表す MemberDef トークンを列挙します。  
@@ -42,39 +40,39 @@ HRESULT EnumMembersWithName (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in]列挙のメンバーを持つ型を表す TypeDef トークンです。  
+ [in] A TypeDef token representing the type with members to enumerate.  
   
  `szName`  
- [in]列挙子のスコープを制限するメンバーの名前。  
+ [in] The member name that limits the scope of the enumerator.  
   
  `rMembers`  
- [out]MemberDef トークンを格納するために使用する配列。  
+ [out] The array used to store the MemberDef tokens.  
   
  `cMax`  
  [in] `rMembers` 配列の最大サイズ。  
   
  `pcTokens`  
- [out]実際に返される MemberDef トークン数`rMembers`します。  
+ [out] The actual number of MemberDef tokens returned in `rMembers`.  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドは、フィールドと、メソッドがないプロパティまたはイベントを列挙します。 異なり[imetadataimport::enummembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)、`EnumMembersWithName`指定した名前がないすべてのフィールドとメンバーのトークンを破棄します。  
+ This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` discards all field and member tokens that do not have the specified name.  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` 正常に返されます。|  
-|`S_FALSE`|MemberDef トークンを列挙することはありません。 その場合は、`pcTokens`は 0 です。|  
+|`S_OK`|`EnumTypeDefs` returned successfully.|  
+|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

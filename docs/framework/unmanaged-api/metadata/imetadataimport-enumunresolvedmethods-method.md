@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb3187d7-74cf-44b1-aeeb-7a8d2b60e3b7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74d0c2e9777a7bd3d49622fb326ecb6b58fbec07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff9827174e43fd62f3a995e9f477c6fff66b227a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782546"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449958"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods メソッド
 現在のメタデータ スコープ内の未解決のメソッドを表す MemberDef トークンを列挙します。  
@@ -40,35 +38,35 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rMethods`  
- [out]MemberDef トークンを格納するために使用する配列。  
+ [out] The array used to store the MemberDef tokens.  
   
  `cMax`  
  [in] `rMethods` 配列の最大サイズ。  
   
  `pcTokens`  
- [out]返される MemberDef トークン数`rMethods`します。  
+ [out] The number of MemberDef tokens returned in `rMethods`.  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` 正常に返されます。|  
-|`S_FALSE`|トークンを列挙することはありません。 その場合は、`pcTokens`は 0 です。|  
+|`S_OK`|`EnumUnresolvedMethods` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="remarks"></a>Remarks  
- 未解決のメソッドは宣言されましたが、実装されていません。 メソッドがマークされている場合に、列挙体のメソッドが含まれている`miForwardRef`、`mdPinvokeImpl`または`miRuntime`0 に設定されます。 つまり、未解決のメソッドは、マークされているクラス メソッド`miForwardRef`(PInvoke 経由で到達)、アンマネージ コードで実装またはランタイム自体によって内部的に実装するはありませんが、  
+ An unresolved method is one that has been declared but not implemented. A method is included in the enumeration if the method is marked `miForwardRef` and either `mdPinvokeImpl` or `miRuntime` is set to zero. In other words, an unresolved method is a class method that is marked `miForwardRef` but which is not implemented in unmanaged code (reached via PInvoke) nor implemented internally by the runtime itself  
   
- 列挙体は、モジュール スコープ (グローバル) またはインターフェイスまたは抽象クラスで定義されているすべてのメソッドを除外します。  
+ The enumeration excludes all methods that are defined either at module scope (globals) or in interfaces or abstract classes.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

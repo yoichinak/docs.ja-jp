@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae6cfb29-bc2c-4606-af86-1d32ebd31020
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 35dd8dd272ea8b4fc21cb9d7dce6899ceb836265
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9407942b81c5318509f2b026fa5db1cdd163e02d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777008"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448281"
 ---
 # <a name="isymunmanagedreadergetmethod-method"></a>ISymUnmanagedReader::GetMethod メソッド
-シンボル リーダー メソッドでは、指定したメソッドのトークンを取得します。  
+Gets a symbol reader method, given a method token.  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,16 +35,16 @@ HRESULT GetMethod (
   
 ## <a name="parameters"></a>パラメーター  
  `token`  
- [in]メソッド トークンです。  
+ [in] The method token.  
   
  `pRetVal`  
- [out]返されたインターフェイスへのポインター。  
+ [out] A pointer to the returned interface.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

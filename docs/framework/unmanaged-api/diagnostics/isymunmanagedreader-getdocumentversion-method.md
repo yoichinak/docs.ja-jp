@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a51f1f64-e084-44c5-830c-2222da5a6bbf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efe4d28d207625f00634087b862d76c001518c8d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3bc578be680951a1d41c92fb2169c860882b2e31
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777026"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448309"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion メソッド
-指定されたドキュメントの指定したバージョンを取得します。 ドキュメントのバージョンが 1 から始まりを使用して、ドキュメントが更新されるたびに増分されますが、 [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)メソッド。 場合、`pbCurrent`パラメーターが`true`、これは、ドキュメントの最新バージョンです。  
+Gets the specified version of the specified document. The document version starts at 1 and is incremented each time the document is updated using the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method. If the `pbCurrent` parameter is `true`, this is the latest version of the document.  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,19 +36,19 @@ HRESULT GetDocumentVersion (
   
 ## <a name="parameters"></a>パラメーター  
  `pDoc`  
- [in]指定されたドキュメントです。  
+ [in] The specified document.  
   
  `version`  
- [out]指定されたドキュメントのバージョンを受け取る変数へのポインター。  
+ [out] A pointer to a variable that receives the version of the specified document.  
   
  `pbCurrent`  
- [out]受け取る変数へのポインター`true`場合、これは、ドキュメントの最新バージョンまたは`false`最新のバージョンでない場合。  
+ [out] A pointer to a variable that receives `true` if this is the latest version of the document, or `false` if it isn't the latest version.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

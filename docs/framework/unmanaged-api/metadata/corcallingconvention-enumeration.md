@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 576fb8632818a6b8ffc3e2c0acc50eaafd074de3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d4690cb6adedc77717e577d409cb52b18b1b5ca
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766965"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443837"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention 列挙型
 マネージド コードで作成される呼び出し規則のタイプを記述する値が格納されます。  
@@ -54,24 +52,24 @@ typedef enum CorCallingConvention
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|既定の呼び出し規約を示します。|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|メソッドが変数の数のパラメーターを受け取ることを示します。|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|フィールドへの呼び出しがあることを示します。|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|ローカル メソッド呼び出しがあることを示します。|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|プロパティへの呼び出しがあることを示します。|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|呼び出しが管理対象であることを示します。|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|ジェネリック メソッドのインスタンス化を示します。|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|可変個のパラメーターを受け取るメソッドへの 64 ビット PInvoke 呼び出しを示します。|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|無効な 4 ビット値をについて説明します。|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|下位 4 ビットで、呼び出し規則が記述されていることを示します。|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|最上位ビットを記述していることを示します、`this`パラメーター。|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|示します、`this`パラメーターは、署名には明示的に記述します。|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|型引数の明示的な数のジェネリック メソッドのシグネチャを示します。 これには、通常のパラメーター カウントよりも前します。|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indicates a default calling convention.|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|Indicates that the method takes a variable number of parameters.|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indicates that the call is to a field.|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indicates that the call is to a local method.|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indicates that the call is to a property.|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indicates that the call is unmanaged.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indicates a generic method instantiation.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|Describes an invalid 4-bit value.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|Indicates that the calling convention is described by the bottom four bits.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indicates that the top bit describes a `this` parameter.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indicates that a `this` parameter is explicitly described in the signature.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indicates a generic method signature with an explicit number of type arguments. This precedes an ordinary parameter count.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

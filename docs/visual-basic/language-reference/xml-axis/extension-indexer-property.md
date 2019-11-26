@@ -1,5 +1,5 @@
 ---
-title: 拡張インデクサー プロパティ (Visual Basic)
+title: 拡張インデクサー プロパティ
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlPropertyExtensionIndexer
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: 660cebadc78d260350f2849f7f4926f9cef7c8d2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5f91dc8a6b1a0d82daa4891cf826c16e2716839f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582186"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352695"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>拡張インデクサー プロパティ (Visual Basic)
 コレクション内の個々の要素にアクセスできます。  
@@ -29,25 +29,25 @@ object(index)
   
 |用語|定義|  
 |---|---|  
-|`object`|必須です。 クエリ可能なコレクション。 つまり、<xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Linq.IQueryable%601> を実装するコレクションです。|  
-|(|必須です。 インデクサープロパティの開始を示します。|  
-|`index`|必須です。 コレクションの要素の0から始まる位置を指定する整数式。|  
-|)|必須です。 インデクサープロパティの末尾を示します。|  
+|`object`|必須です。 A queryable collection. That is, a collection that implements <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>.|  
+|(|必須です。 Denotes the start of the indexer property.|  
+|`index`|必須です。 An integer expression that specifies the zero-based position of an element of the collection.|  
+|)|必須です。 Denotes the end of the indexer property.|  
   
 ## <a name="return-value"></a>戻り値  
- コレクション内の指定した位置にあるオブジェクト。インデックスが範囲外の場合は `Nothing`。  
+ The object from the specified location in the collection, or `Nothing` if the index is out of range.  
   
 ## <a name="remarks"></a>Remarks  
- 拡張インデクサープロパティを使用して、コレクション内の個々の要素にアクセスできます。 このインデクサープロパティは、通常、XML 軸プロパティの出力に使用されます。 XML 子および XML 子孫軸プロパティは、<xref:System.Xml.Linq.XElement> オブジェクトまたは属性値のコレクションを返します。  
+ You can use the extension indexer property to access individual elements in a collection. This indexer property is typically used on the output of XML axis properties. The XML child and XML descendent axis properties return collections of <xref:System.Xml.Linq.XElement> objects or an attribute value.  
   
- Visual Basic コンパイラは、拡張インデクサープロパティを `ElementAtOrDefault` メソッドの呼び出しに変換します。 配列インデクサーとは異なり、`ElementAtOrDefault` メソッドは、インデックスが範囲外の場合に `Nothing` を返します。 この動作は、コレクション内の要素の数を簡単に判断できない場合に便利です。  
+ The Visual Basic compiler converts extension indexer properties to calls to the `ElementAtOrDefault` method. Unlike an array indexer, the `ElementAtOrDefault` method returns `Nothing` if the index is out of range. This behavior is useful when you cannot easily determine the number of elements in a collection.  
   
- このインデクサープロパティは、<xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Linq.IQueryable%601> を実装するコレクションの拡張プロパティに似ています。このプロパティは、コレクションにインデクサーまたは default プロパティがない場合にのみ使用されます。  
+ This indexer property is like an extension property for collections that implement <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>: it is used only if the collection does not have an indexer or a default property.  
   
- @No__t_0 または <xref:System.Xml.Linq.XAttribute> オブジェクトのコレクション内の最初の要素の値にアクセスするには、XML `Value` プロパティを使用できます。 詳細については、「 [XML 値プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)」を参照してください。  
+ To access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects, you can use the XML `Value` property. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
 ## <a name="example"></a>例  
- 次の例では、拡張インデクサーを使用して、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション内の2番目の子ノードにアクセスする方法を示します。 コレクションにアクセスするには、子軸プロパティを使用します。このプロパティは、`contact` オブジェクト内の `phone` という名前のすべての子要素を取得します。  
+ The following example shows how to use the extension indexer to access the second child node in a collection of <xref:System.Xml.Linq.XElement> objects. The collection is accessed by using the child axis property, which gets all child elements named `phone` in the `contact` object.  
   
  [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  
   

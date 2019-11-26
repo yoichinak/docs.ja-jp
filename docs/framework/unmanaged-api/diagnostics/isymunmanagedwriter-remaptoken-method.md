@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bca92682-ee1e-467f-8fb0-d8d4617f82fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c04ca1d56f3e93c77f335218bb534f890e9053d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e441d4ff39632d9381e445ee99249d04539ad87
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776613"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427885"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>ISymUnmanagedWriter::RemapToken メソッド
-メタデータ トークンが再マップされたメタデータの生成とするシンボルのライターに通知します。 シンボルのライターがシンボル ストア内の古いトークンを格納してある場合、読み込みフェーズ中に再マップする対応するシンボル リーダーのマップを保存して格納したトークンを新しい値、またはそのどちらかの更新する必要があります。  
+Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted. If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,16 +35,16 @@ HRESULT RemapToken(
   
 ## <a name="parameters"></a>パラメーター  
  `oldToken`  
- [in]再マップされたメタデータ トークンです。  
+ [in] The metadata token that was remapped.  
   
  `newToken`  
- [in]新しいメタデータ トークンを`oldToken`が再マップします。  
+ [in] The new metadata token to which `oldToken` was remapped.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

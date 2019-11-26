@@ -1,22 +1,22 @@
 ---
-title: パスワードの複雑さ (Visual Basic) を検証しています
+title: Validating Passwords Complexity
 ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: ff0ac933be917b5604966240ff1fbd331a34ba77
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e8697379a6fbb5cc15b60291e5b822897c2c013
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663624"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348322"
 ---
-# <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>チュートリアル: パスワードの複雑な検証 (Visual Basic)
-このメソッドは、いくつかの強力なパスワードの特性を確認し、失敗、パスワードをチェックに関する情報を含む文字列パラメーターを更新します。  
+# <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>チュートリアル: パスワードの複雑さの検証 (Visual Basic)
+This method checks for some strong-password characteristics and updates a string parameter with information about which checks the password fails.  
   
- パスワードは、ユーザーを承認するために、セキュリティで保護されたシステムで使用できます。 ただし、パスワードは、承認されていないユーザーを推測するが困難である必要があります。 攻撃者が使用できる、*辞書攻撃*プログラムでは、ディクショナリ (または別の言語で複数の辞書) 内の単語のすべてを反復処理し、ユーザーのパスワードとして機能、単語のいずれかであるかどうかをテストします。 「ヤンキース」または「マスタング」などの脆弱なパスワードを簡単に推測できることができます。 強力なパスワードは、たとえば"でしょうか。'L1N3vaFiNdMeyeP@sSWerd!"が大幅に低下を推測できる可能性があります。 パスワードで保護されたシステムでは、ユーザーが強力なパスワードを選択することを確認してください。  
+ Passwords can be used in a secure system to authorize a user. However, the passwords must be difficult for unauthorized users to guess. Attackers can use a *dictionary attack* program, which iterates through all of the words in a dictionary (or multiple dictionaries in different languages) and tests whether any of the words work as a user's password. Weak passwords such as "Yankees" or "Mustang" can be guessed quickly. Stronger passwords, such as "?You'L1N3vaFiNdMeyeP@sSWerd!", are much less likely to be guessed. A password-protected system should ensure that users choose strong passwords.  
   
- 強力なパスワードは、(大文字、小文字、数字、および特殊文字の組み合わせを含む) 複合語ではないです。 この例では、複雑さを検証する方法を示します。  
+ A strong password is complex (containing a mixture of uppercase, lowercase, numeric, and special characters) and is not a word. This example demonstrates how to verify complexity.  
   
 ## <a name="example"></a>例  
   
@@ -24,24 +24,24 @@ ms.locfileid: "64663624"
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- パスワードを格納する文字列を渡すことによって、このメソッドを呼び出します。  
+ Call this method by passing the string that contains that password.  
   
  この例で必要な要素は次のとおりです。  
   
 - <xref:System.Text.RegularExpressions> 名前空間のメンバーへのアクセス許可。 コード内でメンバー名を完全修飾していない場合は、`Imports` ステートメントを追加します。 詳細については、「[Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)」を参照してください。  
   
 ## <a name="security"></a>セキュリティ  
- パスワードをネットワーク経由で移動する場合は、データを転送するためのセキュリティで保護されたメソッドを使用する必要があります。 詳細については、次を参照してください。 [ASP.NET Web アプリケーションのセキュリティ](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))します。
+ If you're moving the password across a network, you need to use a secure method for transferring data. For more information, see [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
- 精度を向上させることができます、`ValidatePassword`の他の複雑性チェックを追加することで機能します。  
+ You can improve the accuracy of the `ValidatePassword` function by adding additional complexity checks:  
   
-- パスワードとユーザーの名前、ユーザー識別子、およびアプリケーション定義の辞書からその部分文字列を比較します。 さらに、比較を実行するときに、視覚的に類似する文字と同等として扱われます。 たとえば、「1」と「3」の数字と同等として文字"l"と"e"を扱います。  
+- Compare the password and its substrings against the user's name, user identifier, and an application-defined dictionary. In addition, treat visually similar characters as equivalent when performing the comparisons. For example, treat the letters "l" and "e" as equivalent to the numerals "1" and "3".  
   
-- 1 つだけに大文字がある場合、パスワードの最初の文字ではないことを確認します。  
+- If there is only one uppercase character, make sure it is not the password's first character.  
   
-- パスワードの最後の 2 つの文字がアルファベットの文字であることを確認してください。  
+- Make sure that the last two characters of the password are letter characters.  
   
-- キーボードの一番上の行からのすべてのシンボルが入力されるパスワードは許可されません。  
+- Do not allow passwords in which all the symbols are entered from the keyboard's top row.  
   
 ## <a name="see-also"></a>関連項目
 

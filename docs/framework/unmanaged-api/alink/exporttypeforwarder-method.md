@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 55989fa9-ab43-4f08-8eb6-2eb56fa7ca76
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0ae4ddd07a2a3d3ab9b5d024eceb43329db96915
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 36c99477e9faead5e24799d5b0ae8901f1dd13c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787509"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448709"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder メソッド
-指定されたアセンブリの型テーブルに型フォワーダーを追加します。  
+Adds a type forwarder to the type table of the given assembly.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,22 +37,22 @@ HRESULT ExportTypeForwarder(
   
 ## <a name="parameters"></a>パラメーター  
  `tkAssemblyRef`  
- 型フォワーダーが参照するアセンブリへの参照。  
+ Reference to the assembly to which the type forwarder refers.  
   
  `pszTypename`  
- エクスポートする完全修飾型名。  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType``tdPublic` や`tdNested`などのフラグ。 この値は、この[メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
+ `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- エクスポートされた型のトークンを受け取ります。 これは、入れ子にされた型を出力する場合にのみ必要です。  
+ Receives the token of the exported type. This is necessary only for emitting nested types.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合、S_OK を返します。  
+ Returns S_OK if the method succeeds.  
   
-## <a name="requirements"></a>必要条件  
- Alink. h が必要です。  
+## <a name="requirements"></a>［要件］  
+ Requires alink.h  
   
 ## <a name="see-also"></a>関連項目
 

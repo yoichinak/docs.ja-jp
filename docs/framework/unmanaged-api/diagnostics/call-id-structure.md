@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: bfd46324-afec-4782-9c18-586d81fb4740
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2823c018ff22607052cb9a298f69dbd0c4fe2c23
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c606f67766334800444f39b115d90f65ecca13d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769496"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448597"
 ---
-# <a name="callid-structure"></a>CALL_ID 構造体
-デバッガーが呼び出される関数に関する情報を提供します。 参照してください、 [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)インターフェイスの詳細についてはします。  
+# <a name="call_id-structure"></a>CALL_ID 構造体
+Provides information to a debugger about a function that is being called. See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,15 +42,15 @@ typedef struct tagCALL_ID
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`szMachine`|呼び出しを行っているコンピューターを識別します。|  
-|`dwPid`|コンピューターのプロセッサを識別します。|  
-|`pUserThread`|呼び出しを実行しているスレッドを識別します。|  
-|`addrStackPointer`|呼び出し履歴のアドレスを指定します。|  
-|`szEntryPoint`|呼び出しのアドレスを指定します。|  
-|`szDestinationMachine`|呼び出しを実行するマシンを識別します。|  
+|`szMachine`|Identifies the machine that is making the call.|  
+|`dwPid`|Identifies the machine processor.|  
+|`pUserThread`|Identifies the thread that is executing the call.|  
+|`addrStackPointer`|Specifies the address of the call stack.|  
+|`szEntryPoint`|Specifies the address of the call.|  
+|`szDestinationMachine`|Identifies the machine that will execute the call.|  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** ProtocolNotify2.idl  
+## <a name="requirements"></a>［要件］  
+ **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>関連項目
 

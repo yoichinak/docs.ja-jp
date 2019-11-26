@@ -1,5 +1,5 @@
 ---
-title: オーバーロードの解決法 (Visual Basic)
+title: Overload Resolution
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -10,53 +10,53 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e69136b1e3015055cad9852bf04151f57558b88
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792026"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352646"
 ---
 # <a name="overload-resolution-visual-basic"></a>オーバーロードの解決法 (Visual Basic)
-Visual Basic コンパイラには、いくつかのオーバー ロードされたバージョンで定義されているプロシージャへの呼び出しが検出されると、コンパイラは、オーバー ロードを呼び出すを決める必要があります。 これは、次の手順を実行しています。  
+When the Visual Basic compiler encounters a call to a procedure that is defined in several overloaded versions, the compiler must decide which of the overloads to call. It does this by performing the following steps:  
   
-1. **アクセシビリティ。** 呼び出し元のコードの呼び出しを防止するアクセス レベルを持つオーバー ロードを排除します。  
+1. **アクセシビリティ。** It eliminates any overload with an access level that prevents the calling code from calling it.  
   
-2. **パラメーターの数。** 呼び出しでは指定された数と異なる数のパラメーターが定義されているオーバー ロードを除外します。  
+2. **Number of Parameters.** It eliminates any overload that defines a different number of parameters than are supplied in the call.  
   
-3. **パラメーターのデータ型。** コンパイラは、拡張メソッドよりインスタンス メソッドの優先を使用します。 拡大に合わせてプロシージャの呼び出しの変換のみを必要とする任意のインスタンス メソッドが見つかった場合は、すべての拡張メソッドは削除され、インスタンス メソッドの候補をコンパイラが続行されます。 このようなインスタンス メソッドが見つからない場合は、インスタンスと拡張メソッドの両方を続行します。  
+3. **Parameter Data Types.** The compiler gives instance methods preference over extension methods. If any instance method is found that requires only widening conversions to match the procedure call, all extension methods are dropped and the compiler continues with only the instance method candidates. If no such instance method is found, it continues with both instance and extension methods.  
   
-     この手順で、オーバー ロードで定義されているパラメーターの型に呼び出し元の引数のデータ型を変換できませんオーバー ロードを除外します。  
+     In this step, it eliminates any overload for which the data types of the calling arguments cannot be converted to the parameter types defined in the overload.  
   
-4. **縮小変換をします。** 呼び出し元の引数の型から定義されたパラメーターの型への縮小変換を必要なオーバー ロードを除外します。 型チェックを切り替えるかどうかこれが true ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) は`On`または`Off`します。  
+4. **Narrowing Conversions.** It eliminates any overload that requires a narrowing conversion from the calling argument types to the defined parameter types. This is true whether the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On` or `Off`.  
   
-5. **最小の拡大します。** コンパイラは、ペアで残りのオーバー ロードを検討します。 各ペアに定義されているパラメーターのデータ型を比較します。 内のすべてのオーバー ロードのいずれかの型は、他の対応する型に拡大変換する場合、コンパイラは後者を除外します。 これは、最小限の拡大が必要なオーバー ロードを保持します。  
+5. **Least Widening.** The compiler considers the remaining overloads in pairs. For each pair, it compares the data types of the defined parameters. If the types in one of the overloads all widen to the corresponding types in the other, the compiler eliminates the latter. That is, it retains the overload that requires the least amount of widening.  
   
-6. **1 つの候補。** オーバー ロードを 1 つだけまでのペアがそのまま残り、オーバー ロードし、そのオーバー ロードの呼び出しを解決することを検討して続行します。 コンパイラは、オーバー ロードを 1 つの候補を減らすことができない、エラーが生成されます。  
+6. **Single Candidate.** It continues considering overloads in pairs until only one overload remains, and it resolves the call to that overload. If the compiler cannot reduce the overloads to a single candidate, it generates an error.  
   
- 次の図は、一連の呼び出しのオーバー ロードされたバージョンを決定するプロセスを示します。  
+ The following illustration shows the process that determines which of a set of overloaded versions to call.  
   
- ![オーバー ロードの解決プロセスのフロー ダイアグラム](./media/overload-resolution/determine-overloaded-version.gif "オーバー ロードされたバージョンを解決します。")    
+ ![Flow diagram of overload resolution process](./media/overload-resolution/determine-overloaded-version.gif "Resolving among overloaded versions")    
   
- 次の例では、このオーバー ロード解決プロセスを示します。  
+ The following example illustrates this overload resolution process.  
   
  [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
  [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
- ため、最初の呼び出しで、コンパイラが最初のオーバー ロードを排除最初の引数の型 (`Short`) と対応するパラメーターの型へ縮小変換 (`Byte`)。 次に除去 3 番目のオーバー ロードは、2 番目のオーバー ロードに各引数を入力 (`Short`と`Single`) 3 番目のオーバー ロードでは、対応する型に拡大変換されます (`Integer`と`Single`)。 2 番目のオーバー ロードが必要な拡大が少ないので、コンパイラは、呼び出しの使用します。  
+ In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`). It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`). The second overload requires less widening, so the compiler uses it for the call.  
   
- 2 番目の呼び出しでは、コンパイラは縮小に基づいてオーバー ロードのいずれかを取り除くことはできません。 以下の引数の型の拡大と 2 番目のオーバー ロードを呼び出すことができますので、同じ理由で最初の呼び出しのように、3 番目のオーバー ロードを除外します。 ただし、コンパイラは、最初と 2 番目のオーバー ロードの解決できません。 それぞれが、それ以外の対応する型を拡張する 1 つの定義されているパラメーターの型 (`Byte`に`Short`が`Single`に`Double`)。 そのため、コンパイラは、オーバー ロードの解決エラーを生成します。  
+ In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing. It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types. However, the compiler cannot resolve between the first and second overloads. Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`). The compiler therefore generates an overload resolution error.  
   
-## <a name="overloaded-optional-and-paramarray-arguments"></a>省略可能なオーバー ロードと ParamArray 引数  
- 最後のパラメーターを宣言する点を除いて、プロシージャの 2 つのオーバー ロードが同じシグネチャを持つ場合[(省略可能)](../../../../visual-basic/language-reference/modifiers/optional.md)で 1 つと[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)コンパイラとしてそのプロシージャの呼び出しを解決して、その他次に示します。  
+## <a name="overloaded-optional-and-paramarray-arguments"></a>Overloaded Optional and ParamArray Arguments  
+ If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in one and [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure as follows:  
   
-|場合は、呼び出しとして最後の引数が指定されています|コンパイラは最後の引数として宣言するオーバー ロードの呼び出しを解決します。|  
+|If the call supplies the last argument as|The compiler resolves the call to the overload declaring the last argument as|  
 |---|---|  
-|値 (引数を省略) ではありません。|`Optional`|  
-|1 つの値|`Optional`|  
-|コンマ区切りの一覧で、2 つ以上の値|`ParamArray`|  
-|(空の配列を含む) 任意の長さの配列|`ParamArray`|  
+|No value (argument omitted)|`Optional`|  
+|A single value|`Optional`|  
+|Two or more values in a comma-separated list|`ParamArray`|  
+|An array of any length (including an empty array)|`ParamArray`|  
   
 ## <a name="see-also"></a>関連項目
 
@@ -64,10 +64,10 @@ Visual Basic コンパイラには、いくつかのオーバー ロードされ
 - [パラメーター配列](./parameter-arrays.md)
 - [プロシージャのオーバーロード](./procedure-overloading.md)
 - [プロシージャのトラブルシューティング](./troubleshooting-procedures.md)
-- [方法: 複数のバージョンのプロシージャを定義します。](./how-to-define-multiple-versions-of-a-procedure.md)
-- [方法: オーバー ロードされたプロシージャを呼び出す](./how-to-call-an-overloaded-procedure.md)
-- [方法: 省略可能なパラメーターを受け取るプロシージャをオーバー ロードします。](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [方法: 不特定数のパラメーターを受け取るプロシージャをオーバー ロードします。](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [方法 : プロシージャの複数のバージョンを定義する](./how-to-define-multiple-versions-of-a-procedure.md)
+- [方法 : オーバーロードされたプロシージャを呼び出す](./how-to-call-an-overloaded-procedure.md)
+- [方法 : 省略可能なパラメーターを受け取るプロシージャをオーバーロードする](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [方法 : 不特定数のパラメーターを受け取るプロシージャをオーバーロードする](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [プロシージャのオーバーロードに関する注意事項](./considerations-in-overloading-procedures.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [オーバーロード](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [拡張メソッド](./extension-methods.md)

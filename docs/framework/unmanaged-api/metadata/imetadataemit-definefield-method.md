@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 057bae1d702fa091ebc3d3178c9fba35d5dd3d90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40f24a4ea628ce92a27ab1bfe97fc87a57dfa4f0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777658"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432548"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField メソッド
-指定したメタデータ シグネチャを持つフィールドの定義を作成し、そのフィールド定義トークンを取得します。  
+Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,38 +43,38 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in]`mdTypeDef`外側のクラスまたはインターフェイスのトークン。  
+ [in] The `mdTypeDef` token for the enclosing class or interface.  
   
  `szName`  
- [in]Unicode でフィールド名です。  
+ [in] The field name in Unicode.  
   
  `dwFieldFlags`  
- [in]フィールドの属性。 これは、ビットマスクの`CorFieldAttr`値。  
+ [in] The field attributes. This is a bitmask of `CorFieldAttr` values.  
   
  `pvSigBlob`  
- [in]BLOB としてフィールド シグネチャ。  
+ [in] The field signature as a BLOB.  
   
  `cbSigBlob`  
- [in]内のバイト数`pvSigBlob`します。  
+ [in] The count of bytes in `pvSigBlob`.  
   
  `dwCPlusTypeFlag`  
- [in]`ELEMENT_TYPE_` *\** 定数の値。 これは、`CorElementType`値。 場合は、フィールドの定数値を定義しないを使用して、`ELEMENT_TYPE_END`します。  
+ [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If not defining a constant value for the field, use `ELEMENT_TYPE_END`.  
   
  `pValue`  
- [in]フィールドの定数値。  
+ [in] The constant value for the field.  
   
  `cchValue`  
- [in] \(Unicode) 文字のサイズ`pValue`します。  
+ [in] The size in (Unicode) characters of `pValue`.  
   
  `pmd`  
- [out]`mdFieldDef`に割り当てられたトークン。  
+ [out] The `mdFieldDef` token assigned.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

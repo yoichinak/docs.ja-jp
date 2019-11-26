@@ -1,15 +1,15 @@
 ---
-title: 完了後の残りの非同期タスクのキャンセル (Visual Basic)
+title: 完了後の残りの非同期タスクのキャンセル
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 329c1eb738f065ae34540e9980c80d44248da05c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e6747f35e665611ac7a48a87f955c8b893ee2b99
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419798"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347922"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>完了後の残りの非同期タスクのキャンセル (Visual Basic)
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancel Remaining Async Tasks after One Is Complete (Visual Basic)
 
 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> メソッドを <xref:System.Threading.CancellationToken> と共に使用すると、1 つのタスクが完了したときに残りのすべてのタスクを取り消しできます。 `WhenAny` メソッドは、タスクのコレクションである引数を受け取ります。 このメソッドは、すべてのタスクを開始し、単一のタスクを返します。 単一のタスクは、コレクションのいずれかのタスクが完了すると完了します。
 
@@ -40,11 +40,11 @@ ms.locfileid: "73419798"
 
 ## <a name="building-the-example"></a>例のビルド
 
-このトピックの例では、「[非同期タスクのキャンセル](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)」で開発したプロジェクトに追加し、タスクの一覧をキャンセルするタスクの一覧を追加します。 この例では、 **[キャンセル]** ボタンは明示的に使用していませんが、同じ UI を使用します。
+The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to cancel a list of tasks. この例では、 **[キャンセル]** ボタンは明示的に使用していませんが、同じ UI を使用します。
 
 この例を自分で 1 つずつビルドするには、"例をダウンロードする" セクションの手順に従います。ただし、 **[スタートアップ プロジェクト]** として **CancelAListOfTasks** を選択します。 そのプロジェクトに、このトピックでの変更を追加します。
 
-**Cancelmainwindow.xaml Stoftasks**プロジェクトのファイルで、各 web サイトの処理手順を `AccessTheWebAsync` のループから次の非同期メソッドに移動して、移行を開始します。
+In the MainWindow.xaml.vb file of the **CancelAListOfTasks** project, start the transition by moving the processing steps for each website from the loop in `AccessTheWebAsync` to the following async method.
 
 ```vb
 ' ***Bundle the processing steps for a website into one async method.

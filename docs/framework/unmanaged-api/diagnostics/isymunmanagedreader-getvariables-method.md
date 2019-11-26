@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 16dc49cb-2c60-4ac8-9c35-020e9afba3f8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d1db08dfcd2adf1247dd717d6c826bce4726b8a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4590d2734ea89bc1bc8a30db1c7ecac5effafd7b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777045"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429759"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables メソッド
-親と名前を指定、非ローカル変数を返します。  
+Returns a non-local variable, given its parent and name.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,22 +38,22 @@ HRESULT GetVariables (
   
 ## <a name="parameters"></a>パラメーター  
  `parent`  
- [in]変数の親です。  
+ [in] The parent of the variable.  
   
  `cVars`  
  [in] `pVars` 配列のサイズ。  
   
  `pcVars`  
- [out]返された変数の数を受け取る変数へのポインター`pVars`します。  
+ [out] A pointer to the variable that receives the number of variables returned in `pVars`.  
   
  `pVars`  
- [out]変数を受け取る変数へのポインター。  
+ [out] A pointer to the variable that receives the variables.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

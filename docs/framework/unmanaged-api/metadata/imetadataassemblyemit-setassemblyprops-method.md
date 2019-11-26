@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91b633d7-9e75-43c3-a8d2-2144984e5f9e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 34335321207e98a518ff3e0fdb5ea1dc3ac68b75
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f79320d5b7d2ad4ad44a79fae063ce6718490a70
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776259"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431953"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps メソッド
 指定された `Assembly` メタデータ構造体を変更します。  
@@ -43,35 +41,35 @@ HRESULT SetAssemblyProps (
   
 ## <a name="parameters"></a>パラメーター  
  `pma`  
- [in]メタデータ トークンを指定する、`Assembly`メタデータ構造を変更します。  
+ [in] The metadata token that specifies the `Assembly` metadata structure to be modified.  
   
  `pbPublicKey`  
- [in]アセンブリの発行者の公開キーへのポインター。  
+ [in] A pointer to the public key of the publisher of the assembly.  
   
  `cbPublicKey`  
- [in]バイト サイズ`pbPublicKey`します。  
+ [in] The size in bytes of `pbPublicKey`.  
   
  `ulHashAlgId`  
- [in]アセンブリ ファイルをハッシュするために使用するハッシュ アルゴリズムの識別子。  
+ [in] The identifier for the hash algorithm used to hash the assembly files.  
   
  `szName`  
- [in]アセンブリの人間が判読できるテキストの名前。  
+ [in] The human-readable text name of the assembly.  
   
  `pMetaData`  
- [in]アセンブリのバージョン、プラットフォーム、およびロケールの情報を含む ASSEMBLYMETADATA へのポインター。  
+ [in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.  
   
  `dwAssemblyFlags`  
- [in]ビットごとの組み合わせ[AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)アセンブリのさまざまな属性を指定する値。  
+ [in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.  
   
 ## <a name="remarks"></a>Remarks  
- 作成する、`Assembly`メタデータ構造体を使用して、 [imetadataassemblyemit::defineassembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md)メソッド。  
+ To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

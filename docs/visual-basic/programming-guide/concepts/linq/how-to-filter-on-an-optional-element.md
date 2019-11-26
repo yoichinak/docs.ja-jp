@@ -1,15 +1,15 @@
 ---
-title: '方法: 省略可能な要素をフィルター処理する (Visual Basic)'
+title: '方法 : 省略可能な要素をフィルター処理する'
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: 01ab143dd48b0cb0ff74aa039fa292501654056a
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: e67cb58710d49a19f322b3555efa96ac69b9f654
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250002"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353051"
 ---
-# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>方法: 省略可能な要素をフィルター処理する (Visual Basic)
+# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>How to: Filter on an Optional Element (Visual Basic)
 要素に対するフィルター処理が、その要素が XML ドキュメント内に存在しているかどうか明確でない場合でも必要になることがあります。 特定の要素が子要素を持たない場合、その要素に対するフィルター処理によって null 参照例外が発生しないように検索を実行する必要があります。 次の例では、`Child5` 要素には `Type` 子要素はありませんが、クエリは正常に実行されます。  
   
 ## <a name="example"></a>例  
@@ -57,7 +57,7 @@ Child Four Text
 ```  
   
 ## <a name="example"></a>例  
- 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、「[名前空間の概要」 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)を参照してください。  
+ 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -111,9 +111,9 @@ Child Four Text
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 - [XML 子軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
 - [XML 属性軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 - [XML Value プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
 - [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [プロジェクション操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Projection Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - GCCpuGroup element
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
-ms.openlocfilehash: 352890519c1a227d664d877c3123866e5e4e1657
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ae9c96c9d49cf3f6be94da3f77b91423cab12e0b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116829"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430483"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup > 要素
+# <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
 
 ガベージ コレクションが複数の CPU グループをサポートするかどうかを指定します。
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**
 
 ## <a name="syntax"></a>構文
 
@@ -57,10 +57,10 @@ ms.locfileid: "73116829"
 
 ## <a name="remarks"></a>Remarks
 
-コンピューターに複数の CPU グループがあり、サーバーのガベージコレクションが有効になっている場合 ( [\<gcServer >](gcserver-element.md)要素を参照)、この要素を有効にすると、すべての cpu グループにわたってガベージコレクションが拡張され、との作成時にすべてのコアが考慮されます。ヒープを分散しています。
+When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.
 
 > [!NOTE]
-> この要素は、ガベージ コレクション スレッドにのみ適用されます。 ランタイムがすべての CPU グループにユーザースレッドを分散できるようにするには、 [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)要素も有効にする必要があります。
+> この要素は、ガベージ コレクション スレッドにのみ適用されます。 To enable the runtime to distribute user threads across all CPU groups, you must also enable the [\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) element.
 
 ## <a name="example"></a>例
 
@@ -79,5 +79,5 @@ ms.locfileid: "73116829"
 
 - [ランタイム設定スキーマ](index.md)
 - [構成ファイル スキーマ](../index.md)
-- [同時実行ガベージコレクションを無効にするには](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [ワークステーションとサーバーのガベージ コレクション](../../../../standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+- [To disable concurrent garbage collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [ワークステーションとサーバーのガベージ コレクション](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)

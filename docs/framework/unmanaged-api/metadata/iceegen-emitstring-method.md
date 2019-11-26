@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ad2710a7-edb8-4493-8619-3fce235e3334
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3adc29f73a3ab4a43a399b024a6c0187f02b5851
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8433ff6e0ec550d6b0558bfb9c7698c49e98278c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750615"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436383"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString メソッド
-コード ベースに、指定した文字列を出力します。  
+Emits the specified string into the code base.  
   
- このメソッドは廃止され、使用する必要があります。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,17 +38,17 @@ HRESULT EmitString (
   
 ## <a name="parameters"></a>パラメーター  
  `lpString`  
- [in]出力する文字列。  
+ [in] The string to emit.  
   
  `RVA`  
- [out]生成された文字列の相対仮想アドレス。  
+ [out] The relative virtual address of the emitted string.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

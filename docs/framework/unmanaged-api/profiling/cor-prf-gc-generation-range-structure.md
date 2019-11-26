@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: e7e07273-8d10-4a68-807e-59634e3f8c5e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2f82b187a099ef7decca590da361f6b1abfa22e0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0bdb8cd02e0beb69e3ec594b0aadd741a5f0d924
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753798"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428338"
 ---
-# <a name="corprfgcgenerationrange-structure"></a>COR_PRF_GC_GENERATION_RANGE 構造体
+# <a name="cor_prf_gc_generation_range-structure"></a>COR_PRF_GC_GENERATION_RANGE 構造体
 ガーベッジ コレクションを実行中のメモリ範囲 (ブロック) を説明します。  
   
 ## <a name="syntax"></a>構文  
@@ -41,18 +39,18 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`generation`|値、 [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)メモリ ブロックを生成するように指定する列挙体が属しています。|  
-|`rangeStart`|メモリ ブロックの開始位置を指定するオブジェクトの ID。|  
-|`rangeLength`|メモリ ブロック (つまり、ブロック内で使用されるメモリ量) の使用部分のサイズを指定する整数へのポインター。|  
-|`rangeLengthReserved`|(つまり、ブロックのために予約されるメモリ量) メモリ ブロックのサイズを指定する整数へのポインター。|  
+|`generation`|A value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration that specifies the generation to which the block of memory belongs.|  
+|`rangeStart`|The ID of an object that specifies the starting location of the block of memory.|  
+|`rangeLength`|A pointer to an integer that specifies the size of the used portion of the memory block (that is, the amount of memory used within the block).|  
+|`rangeLengthReserved`|A pointer to an integer that specifies the size of the memory block (that is, the amount of memory reserved for the block).|  
   
 ## <a name="remarks"></a>Remarks  
- `rangeLength`値は正確であることが保証場合にのみ[icorprofilerinfo 2::getgenerationbounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md)または[icorprofilerinfo 2::getobjectgeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md)、使用するはどちらも、 `COR_PRF_GC_GENERATION_RANGE`構造体から呼び出される、 [icorprofilercallback 2::garbagecollectionstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)または[icorprofilercallback 2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)メソッド。  
+ The `rangeLength` value is guaranteed to be accurate only if [ICorProfilerInfo2::GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) or [ICorProfilerInfo2::GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), both of which use the `COR_PRF_GC_GENERATION_RANGE` structure, is called from the [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) or the [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) method.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **ライブラリ:** CorGuids.lib  
   

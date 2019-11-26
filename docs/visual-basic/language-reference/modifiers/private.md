@@ -1,5 +1,5 @@
 ---
-title: Private (Visual Basic)
+title: Private
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Private
@@ -7,31 +7,31 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: ddb2d165de330758f58fbbcb5872e820e639808f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5600744aeca79a54f51a1f9ecd0ef00fed4b00fd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642793"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351331"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
-1 つまたは複数の宣言されたプログラミング要素に内に含まれる任意の型を含む、宣言のコンテキストからのみアクセスできることを指定します。  
+Specifies that one or more declared programming elements are accessible only from within their declaration context, including from within any contained types.  
   
-## <a name="remarks"></a>コメント  
- プログラミング要素は、独自の機能または機密データを含む、通常はできるだけ厳密にへのアクセスを制限します。 最大の制限は、モジュール、クラス、またはそれへのアクセスを定義する構造のみを許可することで実現します。 この方法で要素へのアクセスを制限するために宣言できます`Private`します。  
+## <a name="remarks"></a>Remarks  
+ If a programming element represents proprietary functionality, or contains confidential data, you usually want to limit access to it as strictly as possible. You achieve the maximum limitation by allowing only the module, class, or structure that defines it to access it. To limit access to an element in this way, you can declare it with `Private`.  
 
 > [!NOTE]
-> 使用することも、[Private Protected](private-protected.md)メンバーにそのクラス内、および、含んでいるアセンブリにある派生クラスからアクセスできるよう、アクセス修飾子。
+> You can also use the [Private Protected](private-protected.md) access modifier, which makes a member accessible from within that class and from derived classes located in its containing assembly.
 
 ## <a name="rules"></a>ルール  
 
-- **宣言コンテキスト。** `Private` は、モジュール レベルでのみ使用できます。 これは、意味の宣言のコンテキストを`Private`要素は、モジュール、クラス、または構造体にある必要があるあり、ソース ファイル、名前空間、インターフェイス、またはプロシージャにすることはできません。  
+- **Declaration Context.** `Private` は、モジュール レベルでのみ使用できます。 This means the declaration context for a `Private` element must be a module, class, or structure, and cannot be a source file, namespace, interface, or procedure.  
   
 ## <a name="behavior"></a>動作  
   
-- **アクセス レベルです。** 宣言コンテキスト内ですべてのコードがアクセスできるその`Private`要素。 これには、入れ子になったクラスまたは列挙型の代入式などの包含の種類の中でコードが含まれます。 宣言コンテキストの外側でコードがアクセスできない、`Private`要素。  
+- **Access Level.** All code within a declaration context can access its `Private` elements. This includes code within a contained type, such as a nested class or an assignment expression in an enumeration. No code outside of the declaration context can access its `Private` elements.  
   
-- **アクセス修飾子。** アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 アクセス修飾子の比較は、次を参照してください。[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
+- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `Private` 修飾子は、次のコンテキストで使用できます。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "64642793"
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private Protected](./private-protected.md)
-- [Protected Friend](./protected-friend.md)[Visual Basic でのレベルのアクセス](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Protected Friend](./protected-friend.md)    [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

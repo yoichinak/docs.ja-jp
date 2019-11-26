@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0da1ef80-d242-4636-87d0-43e0470b342a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 208552dd94f587b9326280ad455ca2478ae4ac4d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9f97da4e68d4b76178198e91c3fb8f08b56dda7b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780259"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448187"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>ICorProfilerInfo::ForceGC メソッド
-共通言語ランタイム (CLR) 内に発生する強制的にガベージ コレクション。  
+Forces garbage collection to occur within the common language runtime (CLR).  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,12 +32,12 @@ HRESULT ForceGC();
 ```  
   
 ## <a name="remarks"></a>Remarks  
- `ForceGC`メソッドは、マネージ コードを実行していないと、スタックに任意のプロファイラーのコールバックがないスレッドからのみ呼び出す必要があります。 呼び出すプロファイラー内で別のスレッドを作成する最も便利な実装は、`ForceGC`シグナルを受け取るとします。  
+ The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack. The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

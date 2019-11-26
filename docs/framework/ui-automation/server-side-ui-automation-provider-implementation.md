@@ -6,21 +6,21 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 35754d49bf223e7afcdec32e8b24cfb749f48aa6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042766"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446852"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>サーバー側 UI オートメーション プロバイダーの実装
 
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
 
 このセクションでは、カスタム コントロールのサーバー側 UI オートメーション プロバイダーを実装する方法について説明します。
 
-Windows Presentation Foundation (WPF) 要素の実装と非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]要素 (向けに[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]設計された要素など) の実装は、根本的に異なります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] から派生したクラスを使用して <xref:System.Windows.Automation.Peers.AutomationPeer>をサポートします。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、プロバイダー インターフェイスの実装を通じてサポートを提供します。
+The implementation for Windows Presentation Foundation (WPF) elements and non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elements (such as those designed for [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) is fundamentally different. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] から派生したクラスを使用して <xref:System.Windows.Automation.Peers.AutomationPeer>をサポートします。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、プロバイダー インターフェイスの実装を通じてサポートを提供します。
 
 <a name="Security_Considerations"></a>
 
@@ -115,7 +115,7 @@ HWND ベースのコントロールのプロバイダーは通常、次のプロ
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> 単純な要素またはウィンドウでホストされているフラグメント ルートの <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> は、ウィンドウから取得されます。ただし、ルートの下にあるフラグメント要素 (リスト ボックス内のリスト項目など) は独自の識別子を提供する必要があります。 詳細については、「 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>」を参照してください。
+> 単純な要素またはウィンドウでホストされているフラグメント ルートの <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> は、ウィンドウから取得されます。ただし、ルートの下にあるフラグメント要素 (リスト ボックス内のリスト項目など) は独自の識別子を提供する必要があります。 詳細については、「<xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>」を参照してください。
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> は、 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] コントロールでホストされるプロバイダーに返される必要があります。 この場合、ウィンドウの既定のプロバイダーは適切な値を取得できないことがあります。
 >
