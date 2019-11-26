@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 50035799fcfa4c4b08404d63fe91e7dba85722fa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: acb772a64c8f13405f2836bb5f4f308986dce414
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758839"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447657"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers メソッド
 指定した型のメンバーを表す MemberDef トークンを列挙します。  
@@ -41,38 +39,38 @@ HRESULT EnumMembers (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in]そのメンバーが列挙型を表す TypeDef トークンです。  
+ [in] A TypeDef token representing the type whose members are to be enumerated.  
   
  `rMembers`  
- [out]MemberDef トークンを保持するために使用する配列。  
+ [out] The array used to hold the MemberDef tokens.  
   
  `cMax`  
  [in] `rMembers` 配列の最大サイズ。  
   
  `pcTokens`  
- [out]実際に返される MemberDef トークン数`rMembers`します。  
+ [out] The actual number of MemberDef tokens returned in `rMembers`.  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` 正常に返されます。|  
-|`S_FALSE`|MemberDef トークンを列挙することはありません。 その場合は、`pcTokens`は 0 です。|  
+|`S_OK`|`EnumMembers` returned successfully.|  
+|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="remarks"></a>Remarks  
- クラスのメンバーのコレクションを列挙する場合、`EnumMembers`メンバーのみを返します (フィールドおよびメソッドが**いない**プロパティまたはイベント)、クラスで直接定義されています。 クラスは、継承されたメンバーの実装を提供する場合でも、クラスが継承する任意のメンバーは返されません。 継承されたメンバーを列挙するために、呼び出し元は明示的に継承チェーンを走査する必要があります。 継承チェーンの規則は、言語や、元のメタデータを生成するコンパイラによって異なる場合がありますに注意してください。
+ When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class. It does not return any members that the class inherits, even if the class provides an implementation for those inherited members. To enumerate inherited members, the caller must explicitly walk the inheritance chain. Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.
  
- プロパティおよびイベントはによって列挙されない`EnumMembers`します。 使用して、それらを列挙する[EnumProperties](imetadataimport-enumproperties-method.md)または[EnumEvents](imetadataimport-enumevents-method.md)します。
+ Properties and events are not enumerated by `EnumMembers`. To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

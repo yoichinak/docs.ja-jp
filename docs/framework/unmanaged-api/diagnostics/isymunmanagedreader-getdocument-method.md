@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb203853-6a6d-4027-b9e9-603a7f28b9d3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32b7505a9e512f3c3e3e7a9fcbff40276e98ecf4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1fcb885b6e19457065c2ca9971f068b42f97147d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759348"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448347"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument メソッド
-ドキュメントを検索します。 ドキュメントの言語、ベンダー、および種類は省略可能です。  
+Finds a document. The document language, vendor, and type are optional.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,25 +38,25 @@ HRESULT GetDocument (
   
 ## <a name="parameters"></a>パラメーター  
  `url`  
- [in]ドキュメントを識別する URL です。  
+ [in] The URL that identifies the document.  
   
  `language`  
- [in]ドキュメントの言語。 このパラメーターは省略できます。  
+ [in] The document language. このパラメーターは省略できます。  
   
  `languageVendor`  
- [in]ドキュメントの言語のベンダーの id。 このパラメーターは省略できます。  
+ [in] The identity of the vendor for the document language. このパラメーターは省略できます。  
   
  `documentType`  
- [in]ドキュメントの種類。 このパラメーターは省略できます。  
+ [in] The type of the document. このパラメーターは省略できます。  
   
  `pRetVal`  
- [out]返されたインターフェイスへのポインター。  
+ [out] A pointer to the returned interface.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

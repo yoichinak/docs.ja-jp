@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e774eefe-858c-4362-8d2d-28ebf2ba1a24
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8fa385805d3e2dca8fef3e1490b2c67dd0583373
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 73f536b4ab98aa596c2395810cb8b616ffd309e9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755069"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438298"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 メソッド
-現在の構文のスコープの変数を 1 つ定義します。 このメソッドをスコープ全体で複数のホームのある同じ名前の変数を複数回呼び出すことができます。 この場合、ただしの値、`startOffset`と`endOffset`パラメーターが重複しない必要があります。  
+現在の構文のスコープの変数を 1 つ定義します。 This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,37 +42,37 @@ HRESULT DefineLocalVariable2(
   
 ## <a name="parameters"></a>パラメーター  
  `name`  
- [in]ローカル変数の名前。  
+ [in] The local variable name.  
   
  `attributes`  
- [in]ローカル変数の属性。  
+ [in] The local variable attributes.  
   
  `sigToken`  
- [in]シグネチャのメタデータ トークンです。  
+ [in] The metadata token of the signature.  
   
  `addrKind`  
- [in]アドレスの種類。  
+ [in] The address type.  
   
  `addr1`  
- [in]パラメーター指定の最初のアドレス。  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in]パラメーター指定の 2 番目のアドレス。  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in]パラメーター指定の 3 番目のアドレス。  
+ [in] The third address for the parameter specification.  
   
  `startOffset`  
- [in]変数の開始オフセット。 このパラメーターは省略できます。 0 の場合は、このパラメーターは無視され、スコープ全体で変数が定義されています。 0 以外の値の場合は、現在のスコープのオフセット内、変数となります。  
+ [in] The start offset for the variable. このパラメーターは省略できます。 If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
  `endOffset`  
- [in]変数の終了オフセット。 このパラメーターは省略できます。 0 の場合は、このパラメーターは無視され、スコープ全体で変数が定義されています。 0 以外の値の場合は、現在のスコープのオフセット内、変数となります。  
+ [in] The end offset for the variable. このパラメーターは省略できます。 If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl  
   
 ## <a name="see-also"></a>関連項目
 

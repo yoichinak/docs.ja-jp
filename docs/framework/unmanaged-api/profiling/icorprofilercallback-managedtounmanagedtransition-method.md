@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef3cd619-912d-40c5-a449-03ba02a39ee7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 277e035ab542f895ca700ecd5f3205cc757c9ddd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f4f5871bdd7adf11fcc811fd40c62e3027b8e607
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769312"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426176"
 ---
 # <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a>ICorProfilerCallback::ManagedToUnmanagedTransition メソッド
-マネージ コードからアンマネージ コードへの移行が発生したことをプロファイラーに通知します。  
+Notifies the profiler that a transition from managed code to unmanaged code has occurred.  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,18 +35,18 @@ HRESULT ManagedToUnmanagedTransition(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in]呼び出される関数の ID。  
+ [in] The ID of the function that is being called.  
   
  `reason`  
- [in]値、 [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) 、マネージ コードからアンマネージ コードへの呼び出しによって、またはアンマネージによって呼び出されるマネージ関数の戻り値のために、移行が発生したかどうかを示す列挙体。  
+ [in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into unmanaged code from managed code, or because of a return from a managed function called by an unmanaged one.  
   
 ## <a name="remarks"></a>Remarks  
- 場合の値`reason`COR_PRF_TRANSITION_CALL、こと、アンマネージ関数は決してコンパイルされたジャスト イン タイム コンパイラを使用して ID は、関数は、します。 アンマネージ関数では、名前といくつかのメタデータなど、それに関連付けられている基本情報があります。 暗黙的なプラットフォームを使用して、アンマネージ関数が呼び出された場合は、呼び出し (PInvoke)、ランタイムは、呼び出しの変換先およびの値を判別できません`functionId`は null になります。 詳細については、暗黙の PInvoke は、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)します。  
+ If the value of `reason` is COR_PRF_TRANSITION_CALL, the function ID is that of the unmanaged function, which will never have been compiled using the just-in-time compiler. Unmanaged functions have basic information associated with them, such as a name and some metadata. If the unmanaged function was called by using implicit platform invoke (PInvoke), the runtime cannot determine the destination of the call and the value of `functionId` will be null. For more information on implicit PInvoke, see [Using C++ Interop (Implicit PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

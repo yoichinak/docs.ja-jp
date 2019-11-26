@@ -1,5 +1,5 @@
 ---
-title: Visual Basic におけるステートメント
+title: ステートメント
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -15,236 +15,236 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-ms.openlocfilehash: e66acae5e98d561883f4ad59853dfd862c8ebfee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f63f0f0212913f95baab2a8a43c4b7f25a859cd9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946459"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352502"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic におけるステートメント
 
-Visual Basic でのステートメントは、完全な命令です。 これは、キーワード、演算子、変数、定数、および式に含めることができます。 各ステートメントは、次のカテゴリのいずれかに属します。
+A statement in Visual Basic is a complete instruction. It can contain keywords, operators, variables, constants, and expressions. Each statement belongs to one of the following categories:
 
-- **宣言ステートメント**変数、定数、またはプロシージャの名前し、データ型を指定できます。
+- **Declaration Statements**, which name a variable, constant, or procedure, and can also specify a data type.
 
-- **実行可能なステートメント**操作を開始します。 メソッドまたは関数の場合、これらのステートメントを呼び出すことができ、ループや分岐のコード ブロックすることができます。 実行可能ステートメントを含む**代入ステートメント**、変数または定数に値または式に代入します。
+- **Executable Statements**, which initiate actions. These statements can call a method or function, and they can loop or branch through blocks of code. Executable statements include **Assignment Statements**, which assign a value or expression to a variable or constant.
 
-このトピックでは、各カテゴリについて説明します。 また、このトピックでは、1 行に複数のステートメントを結合する方法と複数行ステートメントを続行する方法について説明します。
+This topic describes each category. Also, this topic describes how to combine multiple statements on a single line and how to continue a statement over multiple lines.
 
 ## <a name="declaration-statements"></a>宣言ステートメント
 
-宣言ステートメントを使用して名前を指定し、プロシージャ、変数、プロパティ、配列、および定数を定義します。 プログラミング要素を宣言するときに、そのデータ型、アクセス レベル、およびスコープも定義できます。 詳細については、次を参照してください。[宣言された要素の特性](./declared-elements/declared-element-characteristics.md)します。
+You use declaration statements to name and define procedures, variables, properties, arrays, and constants. When you declare a programming element, you can also define its data type, access level, and scope. For more information, see [Declared Element Characteristics](./declared-elements/declared-element-characteristics.md).
 
-次の例には、3 つの宣言が含まれています。
+The following example contains three declarations.
 
 [!code-vb[VbVbalrStatements#80](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#80)]
 
-最初の宣言は、`Sub`ステートメント。 その照合と共に`End Sub`という名前のプロシージャ宣言ステートメントでは、`applyFormat`します。 指定する`applyFormat`は`Public`、つまり、それを参照できる任意のコードで呼び出すことができます。
+The first declaration is the `Sub` statement. Together with its matching `End Sub` statement, it declares a procedure named `applyFormat`. It also specifies that `applyFormat` is `Public`, which means that any code that can refer to it can call it.
 
-2 番目の宣言は、`Const`ステートメントでは、定数を宣言しますが、`limit`を指定して、`Integer`データ型と 33 の値。
+The second declaration is the `Const` statement, which declares the constant `limit`, specifying the `Integer` data type and a value of 33.
 
-3 番目の宣言は、`Dim`ステートメントでは、変数を宣言しますが、`thisWidget`します。 データ型は、特定のオブジェクト、つまりからオブジェクトが作成された、`Widget`クラス。 任意の基本データ型、または使用するアプリケーションで公開されているオブジェクトの種類の変数を宣言することができます。
+The third declaration is the `Dim` statement, which declares the variable `thisWidget`. The data type is a specific object, namely an object created from the `Widget` class. You can declare a variable to be of any elementary data type or of any object type that is exposed in the application you are using.
 
-### <a name="initial-values"></a>初期値
+### <a name="initial-values"></a>Initial Values
 
-宣言ステートメントを含むコードを実行すると、Visual Basic は、宣言された要素に必要なメモリを予約します。 要素には、値が含まれる、Visual Basic により、データ型の既定値に初期化します。 詳細については、「動作」を参照してください[Dim ステートメント](../../language-reference/statements/dim-statement.md)します。
+When the code containing a declaration statement runs, Visual Basic reserves the memory required for the declared element. If the element holds a value, Visual Basic initializes it to the default value for its data type. For more information, see "Behavior" in [Dim Statement](../../language-reference/statements/dim-statement.md).
 
-次の例に示すように、その宣言の一部として変数に初期値を割り当てることができます。
+You can assign an initial value to a variable as part of its declaration, as the following example illustrates.
 
 [!code-vb[VbVbalrStatements#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#81)]
 
-使用して宣言するときに、明示的にそのクラスのインスタンスを作成する変数がオブジェクト変数の場合は、 [New 演算子](../../../visual-basic/language-reference/operators/new-operator.md)キーワードでは、次の例として示します。
+If a variable is an object variable, you can explicitly create an instance of its class when you declare it by using the [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) keyword, as the following example illustrates.
 
 [!code-vb[VbVbalrStatements#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#82)]
 
-宣言ステートメントに達するまで、宣言ステートメントで指定した初期値が変数に代入しないことに注意してください。 それまでは、変数には、そのデータ型の既定値が含まれています。
+Note that the initial value you specify in a declaration statement is not assigned to a variable until execution reaches its declaration statement. Until that time, the variable contains the default value for its data type.
 
-## <a name="executable-statements"></a>実行可能なステートメント
+## <a name="executable-statements"></a>Executable statements
 
-実行可能なステートメントは、操作を実行します。 式を評価するプロシージャのコードでいくつかのステートメントをループ処理する別の場所に分岐を呼び出すこともできます。 代入ステートメントは、実行可能なステートメントの特殊なケースです。
+An executable statement performs an action. It can call a procedure, branch to another place in the code, loop through several statements, or evaluate an expression. An assignment statement is a special case of an executable statement.
 
-次の例では、`If...Then...Else`変数の値に基づくコードの別のブロックを実行する構造を制御します。 各コード ブロック内で、`For...Next`ループの実行回数を指定します。
+The following example uses an `If...Then...Else` control structure to run different blocks of code based on the value of a variable. Within each block of code, a `For...Next` loop runs a specified number of times.
 
 [!code-vb[VbVbalrStatements#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#83)]
 
-`If`ステートメントは上記の例では、パラメーターの値を確認します。`clockwise`します。 値が場合`True`、呼び出し、`spinClockwise`メソッドの`aWidget`します。 値が場合`False`、呼び出し、`spinCounterClockwise`メソッドの`aWidget`します。 `If...Then...Else`制御構造が終わる`End If`します。
+The `If` statement in the preceding example checks the value of the parameter `clockwise`. If the value is `True`, it calls the `spinClockwise` method of `aWidget`. If the value is `False`, it calls the `spinCounterClockwise` method of `aWidget`. The `If...Then...Else` control structure ends with `End If`.
 
-`For...Next`各ブロック内でループ メソッドを呼び出して適切な時間数の値と等しく、`revolutions`パラメーター。
+The `For...Next` loop within each block calls the appropriate method a number of times equal to the value of the `revolutions` parameter.
 
-## <a name="assignment-statements"></a>代入ステートメント
+## <a name="assignment-statements"></a>Assignment statements
 
-代入ステートメントは、代入演算子の右側にある値を取得するので構成されている、代入演算を実行 (`=`) 次の例のように、左の要素に格納することです。
+Assignment statements carry out assignment operations, which consist of taking the value on the right side of the assignment operator (`=`) and storing it in the element on the left, as in the following example.
 
 [!code-vb[VbVbalrStatements#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#73)]
 
-前の例では、代入ステートメントは、変数のリテラル値 42 を格納`v`します。
+In the preceding example, the assignment statement stores the literal value 42 in the variable `v`.
 
-### <a name="eligible-programming-elements"></a>対象となるプログラミング要素
+### <a name="eligible-programming-elements"></a>Eligible programming elements
 
-代入演算子の左側にあるプログラミング要素は、そのまま使用し、値を格納できる必要があります。 つまり、変数またはプロパティが必要があります[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)、または配列要素があります。 代入ステートメントのコンテキストでこのような要素とも呼ばれます、*左辺値*の「左辺値です」。
+The programming element on the left side of the assignment operator must be able to accept and store a value. This means it must be a variable or property that is not [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), or it must be an array element. In the context of an assignment statement, such an element is sometimes called an *lvalue*, for "left value."
 
-代入演算子の右側にある値は、リテラル、定数、変数、プロパティ、配列の要素、その他の式、または関数呼び出しの組み合わせで構成される、式によって生成されます。 次に例を示します。
+The value on the right side of the assignment operator is generated by an expression, which can consist of any combination of literals, constants, variables, properties, array elements, other expressions, or function calls. 次に例を示します。
 
 [!code-vb[VbVbalrStatements#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#74)]
 
-上記の例では、変数に保持された値を追加します。`y`変数に保持された値に`z`、し、関数の呼び出しによって返される値を追加`findResult`します。 この式の合計値が変数に格納し、`x`します。
+The preceding example adds the value held in variable `y` to the value held in variable `z`, and then adds the value returned by the call to function `findResult`. The total value of this expression is then stored in variable `x`.
 
-### <a name="data-types-in-assignment-statements"></a>代入ステートメントでのデータ型
+### <a name="data-types-in-assignment-statements"></a>Data types in assignment statements
 
-数値の値に加えて、代入演算子は割り当てることができますも`String`値は、次の例に示すようにします。
+In addition to numeric values, the assignment operator can also assign `String` values, as the following example illustrates.
 
 [!code-vb[VbVbalrStatements#75](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#75)]
 
-割り当てることもできます`Boolean`値のいずれかを使用して、`Boolean`リテラルまたは`Boolean`式として次の例を示しています。
+You can also assign `Boolean` values, using either a `Boolean` literal or a `Boolean` expression, as the following example illustrates.
 
 [!code-vb[VbVbalrStatements#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#76)]
 
-同様のプログラミング要素に適切な値を割り当てることができます、 `Char`、 `Date`、または`Object`データ型。 そのインスタンスの作成元のクラスを指定して宣言された要素をオブジェクトのインスタンスを割り当てることもできます。
+Similarly, you can assign appropriate values to programming elements of the `Char`, `Date`, or `Object` data type. You can also assign an object instance to an element declared to be of the class from which that instance is created.
 
-### <a name="compound-assignment-statements"></a>複合代入ステートメント
+### <a name="compound-assignment-statements"></a>Compound assignment statements
 
-*複合代入ステートメント*最初プログラミング要素に割り当てる前に、式に対して操作を実行します。 次の例は、これらの演算子のいずれかを示しています`+=`右側の式の値によって、演算子の左側にある変数の値をインクリメントします。
+*Compound assignment statements* first perform an operation on an expression before assigning it to a programming element. The following example illustrates one of these operators, `+=`, which increments the value of the variable on the left side of the operator by the value of the expression on the right.
 
 [!code-vb[VbVbalrStatements#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#77)]
 
-前の例の値に 1 を加算する`n`でその新しい値を格納して`n`します。 短縮形は、次のステートメントのと同じです。
+The preceding example adds 1 to the value of `n`, and then stores that new value in `n`. It is a shorthand equivalent of the following statement:
 
 [!code-vb[VbVbalrStatements#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#78)]
 
-この種類の演算子を使用して、さまざまな複合代入演算を実行できます。 これらの演算子とその詳細情報の一覧は、次を参照してください。[代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)します。
+A variety of compound assignment operations can be performed using operators of this type. For a list of these operators and more information about them, see [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md).
 
-連結代入演算子 (`&=`) の既存の末尾に文字列を追加する場合に便利ですが、次の例に示すように、文字列します。
+The concatenation assignment operator (`&=`) is useful for adding a string to the end of already existing strings, as the following example illustrates.
 
 [!code-vb[VbVbalrStatements#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#79)]
 
-### <a name="type-conversions-in-assignment-statements"></a>代入ステートメントでの型変換
+### <a name="type-conversions-in-assignment-statements"></a>Type Conversions in Assignment Statements
 
-変換先の要素に適切なデータ型の変数、プロパティ、または配列要素に割り当てる値がある必要があります。 一般に、目的の要素のと同じデータ型の値を生成しようとする必要があります。 ただし、一部の種類は、割り当ての際に他の型に変換できます。
+The value you assign to a variable, property, or array element must be of a data type appropriate to that destination element. In general, you should try to generate a value of the same data type as that of the destination element. However, some types can be converted to other types during assignment.
 
-データ型の間で変換する方法については、次を参照してください。 [Visual Basic における型変換](./data-types/type-conversions.md)します。 簡単に言うと Visual Basic は、他の型、拡大変換に指定された型の値を自動的に変換します。 A*拡大変換*は 1 つを常に実行時に成功すると、すべてのデータが失われない。 Visual Basic の変換など、`Integer`値を`Double`適切な場合、ため`Integer`に拡大変換されます`Double`します。 詳細については、[拡大変換と縮小変換](./data-types/widening-and-narrowing-conversions.md)に関するページを参照してください。
+For information on converting between data types, see [Type Conversions in Visual Basic](./data-types/type-conversions.md). In brief, Visual Basic automatically converts a value of a given type to any other type to which it widens. A *widening conversion* is one in that always succeeds at run time and does not lose any data. For example, Visual Basic converts an `Integer` value to `Double` when appropriate, because `Integer` widens to `Double`. 詳細については、「 [Widening and Narrowing Conversions](./data-types/widening-and-narrowing-conversions.md)」を参照してください。
 
-*縮小変換*(拡大変換がないもの) の実行時に、エラーまたはデータ損失のリスクを実行します。 縮小変換を明示的に実行するには、型変換関数を使用して、または暗黙的に設定してすべての変換を実行するコンパイラに指示できます`Option Strict Off`します。 詳細については、次を参照してください。[暗黙的および明示的な変換](./data-types/implicit-and-explicit-conversions.md)します。
+*Narrowing conversions* (those that are not widening) carry a risk of failure at run time, or of data loss. You can perform a narrowing conversion explicitly by using a type conversion function, or you can direct the compiler to perform all conversions implicitly by setting `Option Strict Off`. For more information, see [Implicit and Explicit Conversions](./data-types/implicit-and-explicit-conversions.md).
 
-## <a name="putting-multiple-statements-on-one-line"></a>1 つの行に複数のステートメントを配置します。
+## <a name="putting-multiple-statements-on-one-line"></a>Putting multiple statements on one line
 
-コロンで区切られた 1 行に複数のステートメントがあることができます (`:`) 文字。 次に例を示します。
+You can have multiple statements on a single line separated by the colon (`:`) character. 次に例を示します。
 
 [!code-vb[VbVbalrStatements#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#70)]
 
-場合によっては便利な場合の構文は、この形式により、コード読み取りおよびメンテナンスが困難です。 そのため、行に 1 つのステートメントを維持することをお勧めします。
+Though occasionally convenient, this form of syntax makes your code hard to read and maintain. Thus, it is recommended that you keep one statement to a line.
 
-## <a name="continuing-a-statement-over-multiple-lines"></a>複数の行にまたがるステートメント
+## <a name="continuing-a-statement-over-multiple-lines"></a>Continuing a statement over multiple lines
 
-ステートメントは、通常は 1 つの行に収まるが長すぎるときに、スペースとアンダー スコア文字で構成される行連結シーケンスを使用して次の行に続けることができます (`_`) 後にキャリッジ リターン。 次の例では、`MsgBox`に 2 行の実行可能ステートメントが続きます。
+A statement usually fits on one line, but when it is too long, you can continue it onto the next line using a line-continuation sequence, which consists of a space followed by an underscore character (`_`) followed by a carriage return. In the following example, the `MsgBox` executable statement is continued over two lines.
 
 [!code-vb[VbVbalrStatements#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#71)]
 
-### <a name="implicit-line-continuation"></a>暗黙的な行継続
+### <a name="implicit-line-continuation"></a>Implicit line continuation
 
-多くの場合、せずに続行できますステートメントを次の連続する行にアンダー スコア文字を使用して (`_`)。 次の構文要素は、次のコード行で暗黙的に、ステートメントを続行します。
+In many cases, you can continue a statement on the next consecutive line without using the underscore character (`_`). The following syntax elements implicitly continue the statement on the next line of code.
 
-- コンマの後に (`,`)。 例えば:
+- After a comma (`,`). (例:
 
    [!code-vb[VbVbalrLineContinuation#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#1)]
 
-- 始めかっこの後 (`(`) または閉じかっこの前に、(`)`)。 例えば:
+- After an open parenthesis (`(`) or before a closing parenthesis (`)`). (例:
 
    [!code-vb[VbVbalrLineContinuation#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#2)]
 
-- かっこの後 (`{`) または右中かっこの前に (`}`)。 例:
+- After an open curly brace (`{`) or before a closing curly brace (`}`). (例:
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    詳細については、次を参照してください。[オブジェクト初期化子。名前付きの匿名型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)または[コレクション初期化子](./collection-initializers/index.md)します。
+    For more information, see [Object Initializers: Named and Anonymous Types](./objects-and-classes/object-initializers-named-and-anonymous-types.md) or [Collection Initializers](./collection-initializers/index.md).
 
-- 埋め込み式、開かれた後 (`<%=`) または埋め込み式の終了前に (`%>`) XML リテラル内で。 例えば:
+- After an open embedded expression (`<%=`) or before the close of an embedded expression (`%>`) within an XML literal. (例:
 
    [!code-vb[VbVbalrLineContinuation#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#4)]
 
-   詳細については、次を参照してください。 [XML での埋め込み式](./xml/embedded-expressions-in-xml.md)します。
+   For more information, see [Embedded Expressions in XML](./xml/embedded-expressions-in-xml.md).
 
-- 連結演算子の後に (`&`)。 例えば:
+- After the concatenation operator (`&`). (例:
 
    [!code-vb[VbVbcnConventions#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/vb/Class1.vb#9)]
 
-   詳細については、次を参照してください。[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)します。
+   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- 代入演算子の後 (`=`、 `&=`、 `:=`、 `+=`、 `-=`、 `*=`、 `/=`、 `\=`、 `^=`、 `<<=`、 `>>=`)。 例えば:
+- After assignment operators (`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=`, `^=`, `<<=`, `>>=`). (例:
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   詳細については、次を参照してください。[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)します。
+   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- 二項演算子の後 (`+`、 `-`、 `/`、 `*`、 `Mod`、 `<>`、 `<`、 `>`、 `<=`、 `>=`、 `^`、 `>>`、`<<`、 `And`、 `AndAlso`、 `Or`、 `OrElse`、 `Like`、 `Xor`) 式内で。 例えば:
+- After binary operators (`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`, `Or`, `OrElse`, `Like`, `Xor`) within an expression. (例:
 
    [!code-vb[VbVbalrLineContinuation#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#7)]
 
-   詳細については、次を参照してください。[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)します。
+   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- 後に、`Is`と`IsNot`演算子。 例えば:
+- After the `Is` and `IsNot` operators. (例:
 
    [!code-vb[VbVbalrLineContinuation#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#8)]
 
-   詳細については、次を参照してください。[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)します。
+   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- メンバー修飾子文字の後 (`.`) とメンバー名の前にします。 例えば:
+- After a member qualifier character (`.`) and before the member name. (例:
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   ただし、行連結文字を含める必要があります (`_`) を使用するメンバーの修飾子文字を以下に、`With`ステートメントまたは型の初期化リスト内の値を指定します。 代入演算子の後で改行を検討してください (たとえば、 `=`) を使用する場合`With`ステートメントやオブジェクトの初期化リスト。 例:
+   However, you must include a line-continuation character (`_`) following a member qualifier character when you are using the `With` statement or supplying values in the initialization list for a type. Consider breaking the line after the assignment operator (for example, `=`) when you are using `With` statements or object initialization lists. (例:
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   詳細については、次を参照してください[としています... ステートメントで終了して](../../../visual-basic/language-reference/statements/with-end-with-statement.md)または[オブジェクト初期化子。名前付きの匿名型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)します。
+   For more information, see [With...End With Statement](../../../visual-basic/language-reference/statements/with-end-with-statement.md) or [Object Initializers: Named and Anonymous Types](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
 
-- XML 軸プロパティ修飾子の後 (`.`または`.@`または`...`)。 ただし、行連結文字を含める必要があります (`_`) を使用するときにメンバー修飾子を指定すると、`With`キーワード。 例えば:
+- After an XML axis property qualifier (`.` or `.@` or `...`). However, you must include a line-continuation character (`_`) when you specify a member qualifier when you are using the `With` keyword. (例:
 
    [!code-vb[VbVbalrLineContinuation#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#9)]
 
-   詳細については、次を参照してください。 [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)します。
+   For more information, see [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/index.md).
 
-- 小後-不等号 (<)、または前に、大きい-不等号 (`>`) 属性を指定するとします。 大きい後も、不等号 (`>`) 属性を指定するとします。 ただし、行連結文字を含める必要があります (`_`) アセンブリ レベルまたはモジュール レベルの属性を指定するとします。 例えば:
+- After a less-than sign (<) or before a greater-than sign (`>`) when you specify an attribute. Also after a greater-than sign (`>`) when you specify an attribute. However, you must include a line-continuation character (`_`) when you specify assembly-level or module-level attributes. (例:
 
    [!code-vb[VbVbalrLineContinuation#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#10)]
 
-   詳細については、次を参照してください。[属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)します。
+   For more information, see [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md).
 
-- クエリ演算子の前後に (`Aggregate`、 `Distinct`、 `From`、 `Group By`、 `Group Join`、 `Join`、 `Let`、 `Order By`、 `Select`、 `Skip`、 `Skip While`、 `Take`、 `Take While`、 `Where`、 `In`、 `Into`、 `On`、 `Ascending`、および`Descending`)。 複数のキーワードで構成されているクエリ演算子のキーワードの間に行を分割することはできません (`Order By`、 `Group Join`、 `Take While`、および`Skip While`)。 例えば:
+- Before and after query operators (`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`, `In`, `Into`, `On`, `Ascending`, and `Descending`). You cannot break a line between the keywords of query operators that are made up of multiple keywords (`Order By`, `Group Join`, `Take While`, and `Skip While`). (例:
 
    [!code-vb[VbVbalrLineContinuation#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#11)]
 
-   詳細については、次を参照してください。[クエリ](../../../visual-basic/language-reference/queries/index.md)します。
+   For more information, see [Queries](../../../visual-basic/language-reference/queries/index.md).
 
-- 後に、`In`キーワード、`For Each`ステートメント。 例えば:
+- After the `In` keyword in a `For Each` statement. (例:
 
    [!code-vb[VbVbalrLineContinuation#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#12)]
 
-   詳細については、[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)を参照してください。
+   詳細については、[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md) を参照してください。
 
-- 後に、`From`コレクション初期化子内のキーワード。 例えば:
+- After the `From` keyword in a collection initializer. (例:
 
    [!code-vb[VbVbalrLineContinuation#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#13)]
 
    詳細については、「[コレクション初期化子](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)」を参照してください。
 
-## <a name="adding-comments"></a>コメントを追加します。
+## <a name="adding-comments"></a>Adding comments
 
-ソース コードは自明ですが、それを記述したプログラマにも常にします。 そのコードを文書化するには、そのため、プログラマのほとんどに利用リベラル派埋め込まれたコメント。 コード内のコメントには、プロシージャ、またはすべてのユーザーの読み取りまたは後で使用する特定の命令を説明します。 Visual Basic は、コンパイル時に、コメントを無視し、コンパイル済みコードには影響しません。
+Source code is not always self-explanatory, even to the programmer who wrote it. To help document their code, therefore, most programmers make liberal use of embedded comments. Comments in code can explain a procedure or a particular instruction to anyone reading or working with it later. Visual Basic ignores comments during compilation, and they do not affect the compiled code.
 
-コメント行はアポストロフィで始まります (`'`) または`REM`スペースします。 追加できる任意の場所コードでは、以外の文字列内で。 ステートメントにコメントを追加するには、アポストロフィを挿入または`REM`後、ステートメントの後に、コメント、します。 コメントは、独自の個別の行に移動できます。 次の例では、これらの可能性を示します。
+Comment lines begin with an apostrophe (`'`) or `REM` followed by a space. They can be added anywhere in code, except within a string. To append a comment to a statement, insert an apostrophe or `REM` after the statement, followed by the comment. Comments can also go on their own separate line. The following example demonstrates these possibilities.
 
 [!code-vb[VbVbalrStatements#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#72)]
 
-## <a name="checking-compilation-errors"></a>コンパイル エラーの確認
+## <a name="checking-compilation-errors"></a>Checking compilation errors
 
-後のコード行を入力する場合は、(エラー メッセージが表示されることも) 青色の波下線付きの行が表示されます、ステートメントに構文エラーがあります。 (タスク一覧で検索またはポインターを合わせると、マウス ポインターをエラーとエラー メッセージを読み取って) で新機能については、ステートメントで間違ったと、修正する必要があります。 コードですべての構文エラーを修正するまで、プログラムは正常にコンパイルは失敗します。
+If, after you type a line of code, the line is displayed with a wavy blue underline (an error message may appear as well), there is a syntax error in the statement. You must find out what is wrong with the statement (by looking in the task list, or hovering over the error with the mouse pointer and reading the error message) and correct it. Until you have fixed all syntax errors in your code, your program will fail to compile correctly.
 
 ## <a name="related-sections"></a>関連項目
 
 |用語|定義|
 |---|---|
-|[代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)|代入演算子をカバーするなどの言語リファレンスのページへのリンクを提供`=`、 `*=`、および`&=`します。|
-|[演算子および式](./operators-and-expressions/index.md)|新しい値を取得する演算子を含む要素を結合する方法を示します。|
-|[方法: コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|1 つのステートメントを複数の行に分割する方法と同じ行に複数のステートメントを配置する方法を示します。|
-|[方法: ステートメントへのラベル付け](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|コードの行にラベル付けする方法を示します。|
+|[代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)|Provides links to language reference pages covering assignment operators such as `=`, `*=`, and `&=`.|
+|[演算子および式](./operators-and-expressions/index.md)|Shows how to combine elements with operators to yield new values.|
+|[方法 : コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Shows how to break a single statement into multiple lines and how to place multiple statements on the same line.|
+|[方法 : ステートメントへのラベル付け](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Shows how to label a line of code.|

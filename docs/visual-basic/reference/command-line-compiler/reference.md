@@ -1,5 +1,5 @@
 ---
-title: -reference (Visual Basic)
+title: -reference
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /reference compiler option [Visual Basic]
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 8f144dbd9376f15ac92e283472dac786a6972045
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8b57affa05c77d8ed20bfead7de767a8dd994241
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775604"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348592"
 ---
 # <a name="-reference-visual-basic"></a>-reference (Visual Basic)
-コンパイラは、指定したアセンブリ内の型情報を、現在コンパイルしているプロジェクトで使用できるようにします。  
+Causes the compiler to make type information in the specified assemblies available to the project you are currently compiling.  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,24 +38,24 @@ ms.locfileid: "72775604"
 |`fileList`|必須です。 アセンブリ ファイル名のコンマ区切りリスト。 ファイル名に空白が含まれている場合は、名前を二重引用符で囲みます。|  
   
 ## <a name="remarks"></a>Remarks  
- インポートするファイルには、アセンブリメタデータが含まれている必要があります。 アセンブリの外部で参照できるのはパブリック型だけです。 [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)オプションは、モジュールからメタデータをインポートします。  
+ The file(s) you import must contain assembly metadata. Only public types are visible outside the assembly. The [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) option imports metadata from a module.  
   
- 別のアセンブリ (アセンブリ B) を参照するアセンブリ (アセンブリ A) を参照する場合は、次の場合にアセンブリ B を参照する必要があります。  
+ If you reference an assembly (Assembly A) which itself references another assembly (Assembly B), you need to reference Assembly B if:  
   
 - アセンブリ A の型がアセンブリ B の型から継承されているか、アセンブリ B のインターフェイスを実装する。  
   
 - アセンブリ B の戻り値の型またはパラメーターの型を使用するフィールド、プロパティ、イベント、またはメソッドが呼び出される。  
   
- アセンブリ参照が1つ以上存在するディレクトリを指定するには、 [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)を使用します。  
+ Use [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) to specify the directory in which one or more of your assembly references is located.  
   
- コンパイラがアセンブリ (モジュールではない) の型を認識するには、型を強制的に解決する必要があります。 これを行う方法の1つの例は、型のインスタンスを定義することです。 コンパイラのアセンブリの型名を解決するために、他の方法を使用できます。 たとえば、アセンブリ内の型から継承する場合、型名はコンパイラに認識されます。  
+ For the compiler to recognize a type in an assembly (not a module), it must be forced to resolve the type. One example of how you can do this is to define an instance of the type. Other ways are available to resolve type names in an assembly for the compiler. For example, if you inherit from a type in an assembly, the type name then becomes known to the compiler.  
   
- Vbc.exe ファイルは、一般的に使用される .NET Framework アセンブリを参照します。既定では、このファイルが使用されます。 コンパイラで Vbc.exe を使用しない場合は、`-noconfig` を使用します。  
+ The Vbc.rsp response file, which references commonly used .NET Framework assemblies, is used by default. Use `-noconfig` if you do not want the compiler to use Vbc.rsp.  
   
  `-reference` の省略形は `/r` です。  
   
 ## <a name="example"></a>例  
- 次のコマンドは、`Metad1.dll` と `Metad2.dll` からソースファイル `Input.vb` と参照アセンブリをコンパイルして `Out.exe` を生成します。  
+ The following command compiles source file `Input.vb` and reference assemblies from `Metad1.dll` and `Metad2.dll` to produce `Out.exe`.  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  

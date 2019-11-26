@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e875cbee-1ad9-4f1a-bf03-38cdb8ff371a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0ddbd1c034708326d75c59f8ed4764156f617b81
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cf455b3fb34d8eed78ffaadffad621062c2b9b22
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781490"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443502"
 ---
 # <a name="imetadatatablesgetguidheapsize-method"></a>IMetaDataTables::GetGuidHeapSize メソッド
-GUID ヒープのバイト単位のサイズを取得します。  
+Gets the size, in bytes, of the GUID heap.  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,14 +35,14 @@ HRESULT GetGuidHeapSize (
   
 ## <a name="parameters"></a>パラメーター  
  `pcbGuids`  
- [out]GUID ヒープのバイト単位のサイズへのポインター。  
+ [out] A pointer to the size, in bytes, of the GUID heap.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

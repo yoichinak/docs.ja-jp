@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5854bfb2-c568-4f19-904a-7c9d41e7b995
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5fcc9d19a400e23d98a997d051c26af1c1084a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fe204bbe6154bf3d512a998818cf053d1e96ab3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783020"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433535"
 ---
 # <a name="icorprofilercallbackruntimeresumestarted-method"></a>ICorProfilerCallback::RuntimeResumeStarted メソッド
-ランタイムが実行時のすべてのスレッドを再開することをプロファイラーに通知します。  
+Notifies the profiler that the runtime is resuming all run-time threads.  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,10 +31,10 @@ ms.locfileid: "67783020"
 HRESULT RuntimeResumeStarted();  
 ```  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

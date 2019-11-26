@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5b48ca60-dacd-44b2-9979-4a5122f00812
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a2bfb43002b79fd3e499272b87756bdc3ab0b589
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f2b78b35db6306c82e389955c4824875bcf25334
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787333"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447226"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope メソッド
-指定された型のスコープを取得します。  
+Retrieves the scope of a given type.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,22 +37,22 @@ HRESULT GetResolutionScope(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- アセンブリの ID。  
+ ID of the assembly.  
   
  `FileToken`  
- 参照が必要なファイル。  
+ File that is in need of a reference.  
   
  `TargetFile`  
- 型が定義されているファイルのトークン。通常は、 [Importfile メソッド](importfile-method.md)を使用して取得されます。  
+ Token of file that type is defined in, usually retrieved with [ImportFile Method](importfile-method.md).  
   
  `pScope`  
- アセンブリまたはモジュール参照を受け取ります。  
+ Receives the assembly or module reference.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合、S_OK を返します。  
+ Returns S_OK if the method succeeds.  
   
-## <a name="requirements"></a>必要条件  
- Alink. h が必要です。  
+## <a name="requirements"></a>［要件］  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>関連項目
 

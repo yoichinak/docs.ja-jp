@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f74e06ea4cb4d7a8eace8c7852f487bbdcbcd875
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b0683d43778c4733b476e9feef459207b9d1ee6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964624"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445032"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed メソッド
-COM 相互運用機能の vtable が破棄されていることをプロファイラーに通知します。  
+Notifies the profiler that a COM interop vtable is being destroyed.  
   
 > [!NOTE]
-> このコールバックは、vtable の破棄がシャットダウンに非常に近いために発生することはほとんどありません。  
+> This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,25 +39,25 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="parameters"></a>パラメーター  
  `wrappedClassId`  
- からこの vtable が作成されたクラスの ID。  
+ [in] The ID of the class for which this vtable was created.  
   
  `implementedIID`  
- からクラスによって実装されるインターフェイスの ID。 この値は、インターフェイスが内部でのみ使用されている場合は NULL になります。  
+ [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
   
  `pVTable`  
- からVtable の先頭へのポインター。  
+ [in] A pointer to the start of the vtable.  
   
 ## <a name="remarks"></a>Remarks  
- プロファイラーは、このメソッドの実装でブロックしないでください。スタックがガベージコレクションを許可する状態にならないため、プリエンプティブガベージコレクションを有効にすることはできません。 プロファイラーがここでブロックし、ガベージコレクションを実行しようとすると、このコールバックが戻るまでランタイムはブロックします。  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- プロファイラーによるこのメソッドの実装では、マネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
-## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Corprof.idl、Corprof.idl  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

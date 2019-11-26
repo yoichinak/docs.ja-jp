@@ -1,5 +1,5 @@
 ---
-title: 拡大変換と縮小変換 (Visual Basic)
+title: Widening and Narrowing Conversions
 ms.date: 07/20/2015
 helpviewer_keywords:
 - widening conversions [Visual Basic]
@@ -19,84 +19,84 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: d1822afc4b10a725e13c1469a068c30813d3a2d3
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 72cc1a2179db4f057c45cd2ff4de82a6437d6b58
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582738"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348686"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>拡大変換と縮小変換 (Visual Basic)
-型変換に関する重要な考慮事項は、変換の結果が変換先のデータ型の範囲内にあるかどうかです。  
+An important consideration with a type conversion is whether the result of the conversion is within the range of the destination data type.  
   
- *拡大変換*では、元のデータの任意の値を使用できるデータ型に値が変更されます。  拡大変換ではソース値が保持されますが、その表現を変更することができます。 このエラーは、整数型から `Decimal` に変換した場合、または `Char` から `String` に変換した場合に発生します。  
+ A *widening conversion* changes a value to a data type that can allow for any possible value of the original data.  Widening conversions preserve the source value but can change its representation. This occurs if you convert from an integral type to `Decimal`, or from `Char` to `String`.  
   
- *縮小変換* により、有効値の一部を保持できない可能性のあるデータ型に値が変更されます。 たとえば、小数値を整数型に変換すると丸められ、`Boolean` に変換される数値型は `True` または `False` に縮小されます。  
+ *縮小変換* により、有効値の一部を保持できない可能性のあるデータ型に値が変更されます。 For example, a fractional value is rounded when it is converted to an integral type, and a numeric type being converted to `Boolean` is reduced to either `True` or `False`.  
   
 ## <a name="widening-conversions"></a>拡大変換  
- 次の表は、標準の拡大変換を示しています。  
+ The following table shows the standard widening conversions.  
   
-|データの種類|データ型への拡大変換<sup>1</sup>|  
+|データの種類|Widens to data types <sup>1</sup>|  
 |---|---|  
 |[SByte](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|`SByte`, `Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
 |[Byte](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`、`Decimal`、`Single`、`Double`|  
 |[Short](../../../../visual-basic/language-reference/data-types/short-data-type.md)|`Short`、 `Integer`、 `Long`、 `Decimal`、 `Single`、 `Double`|  
 |[UShort](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|`UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`|  
-|[Integer](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|`Integer`、`Long`、`Decimal`、`Single`、`Double`<sup>2</sup>|  
-|[UInteger](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|`UInteger`、`Long`、`ULong`、`Decimal`、`Single`、`Double`<sup>2</sup>|  
-|[Long](../../../../visual-basic/language-reference/data-types/long-data-type.md)|`Long`、`Decimal`、`Single`、`Double`<sup>2</sup>|  
-|[ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|`ULong`、`Decimal`、`Single`、`Double`<sup>2</sup>|  
-|[Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`、`Single`、`Double`<sup>2</sup>|  
+|[Integer](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|`Integer`, `Long`, `Decimal`, `Single`, `Double`<sup>2</sup>|  
+|[UInteger](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|`UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`<sup>2</sup>|  
+|[Long](../../../../visual-basic/language-reference/data-types/long-data-type.md)|`Long`, `Decimal`, `Single`, `Double`<sup>2</sup>|  
+|[ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|`ULong`, `Decimal`, `Single`, `Double`<sup>2</sup>|  
+|[Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[Single](../../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`、 `Double`|  
 |[Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
-|任意の列挙型 ([列挙](../../../../visual-basic/language-reference/statements/enum-statement.md)型)|基になる整数型と、基になる型が拡大変換される任意の型。|  
+|Any enumerated type ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Its underlying integral type and any type to which the underlying type widens.|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`、 `String`|  
-|`Char` 配列|`Char` 配列、`String`|  
+|`Char` 配列|`Char` array, `String`|  
 |任意の型|[オブジェクト](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
-|任意の派生型|派生された<sup>3</sup>の基本型。|  
-|任意の型|実装する任意のインターフェイス。|  
-|[Nothing](../../../../visual-basic/language-reference/nothing.md)|任意のデータ型またはオブジェクト型。|  
+|Any derived type|Any base type from which it is derived <sup>3</sup>.|  
+|任意の型|Any interface it implements.|  
+|[Nothing](../../../../visual-basic/language-reference/nothing.md)|Any data type or object type.|  
   
- <sup>1</sup>定義により、すべてのデータ型がそれ自体に拡大変換されます。  
+ <sup>1</sup> By definition, every data type widens to itself.  
   
- <sup>2</sup> `Integer`、`UInteger`、`Long`、`ULong`、または `Decimal` から `Single` または `Double` への変換では、精度は失われますが、マグニチュードが失われることはありません。 この意味では、情報の損失は発生しません。  
+ <sup>2</sup> Conversions from `Integer`, `UInteger`, `Long`, `ULong`, or `Decimal` to `Single` or `Double` might result in loss of precision, but never in loss of magnitude. In this sense they do not incur information loss.  
   
- <sup>3</sup>派生型からその基本型の1つへの変換が拡大しているように思えるかもしれません。 理由は、派生型には基本型のすべてのメンバーが含まれているため、基本型のインスタンスとして修飾されます。 逆方向では、基本型には派生型によって定義された新しいメンバーは含まれません。  
+ <sup>3</sup> It might seem surprising that a conversion from a derived type to one of its base types is widening. The justification is that the derived type contains all the members of the base type, so it qualifies as an instance of the base type. In the opposite direction, the base type does not contain any new members defined by the derived type.  
   
- 拡大変換は実行時に常に成功し、データ損失は発生しません。 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)で型チェックスイッチを `On` に設定するか `Off` に設定するかにかかわらず、常に暗黙的に実行できます。  
+ Widening conversions always succeed at run time and never incur data loss. You can always perform them implicitly, whether the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) sets the type checking switch to `On` or to `Off`.  
   
 ## <a name="narrowing-conversions"></a>縮小変換  
- 標準的な縮小変換には、次のようなものがあります。  
+ The standard narrowing conversions include the following:  
   
-- 前の表の拡大変換の逆方向 (すべての型がそれ自体に拡大変換される点を除く)  
+- The reverse directions of the widening conversions in the preceding table (except that every type widens to itself)  
   
-- [ブール](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)型と任意の数値型の間の双方向の変換  
+- Conversions in either direction between [Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) and any numeric type  
   
-- 任意の数値型から任意の列挙型への変換 (`Enum`)  
+- Conversions from any numeric type to any enumerated type (`Enum`)  
   
-- [文字列](../../../../visual-basic/language-reference/data-types/string-data-type.md)と任意の数値型、`Boolean`、または[日付](../../../../visual-basic/language-reference/data-types/date-data-type.md)の間の双方向の変換  
+- Conversions in either direction between [String](../../../../visual-basic/language-reference/data-types/string-data-type.md) and any numeric type, `Boolean`, or [Date](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
-- データ型またはオブジェクト型から派生した型への変換  
+- Conversions from a data type or object type to a type derived from it  
   
- 縮小変換は実行時に必ず成功するわけではないため、失敗したり、データ損失が発生したりする可能性があります。 変換先のデータ型が変換されている値を受け取ることができない場合、エラーが発生します。 たとえば、数値変換でオーバーフローが発生する場合があります。 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)で型チェックスイッチが `Off` に設定されていない限り、コンパイラでは、暗黙的に縮小変換を実行することはできません。  
+ Narrowing conversions do not always succeed at run time, and can fail or incur data loss. An error occurs if the destination data type cannot receive the value being converted. For example, a numeric conversion can result in an overflow. The compiler does not allow you to perform narrowing conversions implicitly unless the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) sets the type checking switch to `Off`.  
   
 > [!NOTE]
-> @No__t_0 コレクション内の要素から loop コントロール変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、「」の「縮小変換」セクションを参照してください。 [次のステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
+> The narrowing-conversion error is suppressed for conversions from the elements in a `For Each…Next` collection to the loop control variable. For more information and examples, see the "Narrowing Conversions" section in [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
-### <a name="when-to-use-narrowing-conversions"></a>縮小変換を使用する場合  
- 変換元の値が変換先のデータ型に変換できることがわかっている場合は、縮小変換を使用します。エラーやデータの損失は発生しません。 たとえば、"True" または "False" のいずれかが含まれていることがわかっている `String` がある場合は、`CBool` キーワードを使用して `Boolean` に変換できます。  
+### <a name="when-to-use-narrowing-conversions"></a>When to Use Narrowing Conversions  
+ You use a narrowing conversion when you know the source value can be converted to the destination data type without error or data loss. For example, if you have a `String` that you know contains either "True" or "False," you can use the `CBool` keyword to convert it to `Boolean`.  
   
-## <a name="exceptions-during-conversion"></a>変換中の例外  
- 拡大変換は常に成功するため、例外はスローされません。 縮小変換では、エラーが発生した場合、通常、次の例外がスローされます。  
+## <a name="exceptions-during-conversion"></a>Exceptions During Conversion  
+ Because widening conversions always succeed, they do not throw exceptions. Narrowing conversions, when they fail, most commonly throw the following exceptions:  
   
-- <xref:System.InvalidCastException> —2つの型の間に変換が定義されていない場合  
+- <xref:System.InvalidCastException> — if no conversion is defined between the two types  
   
-- 変換後の値が対象の型に対して大きすぎる場合の <xref:System.OverflowException> (整数型のみ)  
+- <xref:System.OverflowException> — (integral types only) if the converted value is too large for the target type  
   
- クラスまたは構造体で、そのクラスまたは構造体への変換演算子として機能する[CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)が定義されている場合、その `CType` によって、適切な例外がスローされる可能性があります。 さらに、この `CType` は Visual Basic 関数または .NET Framework メソッドを呼び出す可能性があります。これにより、さまざまな例外がスローされる可能性があります。  
+ If a class or structure defines a [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) to serve as a conversion operator to or from that class or structure, that `CType` can throw any exception it deems appropriate. In addition, that `CType` might call Visual Basic functions or .NET Framework methods, which in turn could throw a variety of exceptions.  
   
-## <a name="changes-during-reference-type-conversions"></a>参照型変換中の変更  
- *参照型*からの変換では、ポインターだけが値にコピーされます。 値自体は、どのような方法でもコピーも変更もされません。 変更できるのは、ポインターを保持している変数のデータ型だけです。 次の例では、データ型は派生クラスから基本クラスに変換されますが、両方の変数が参照するオブジェクトは変更されません。  
+## <a name="changes-during-reference-type-conversions"></a>Changes During Reference Type Conversions  
+ A conversion from a *reference type* copies only the pointer to the value. The value itself is neither copied nor changed in any way. The only thing that can change is the data type of the variable holding the pointer. In the following example, the data type is converted from the derived class to its base class, but the object that both variables now point to is unchanged.  
   
 ```vb  
 ' Assume class cSquare inherits from class cShape.  
@@ -110,10 +110,10 @@ shape = square
 ## <a name="see-also"></a>関連項目
 
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [方法: Visual Basic でオブジェクトを別の型に変換する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [配列変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
 - [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

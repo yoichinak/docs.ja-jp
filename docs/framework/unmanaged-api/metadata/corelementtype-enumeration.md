@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6057bd48ff4fe3f852f82de2bab972d95fef138c
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 0ce84e1545523302cd47e60b9f047bc470e6bf0f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868564"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443630"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType 列挙型
 
-共通言語ランタイム<xref:System.Type>、型修飾子、またはメタデータ型シグネチャの型に関する情報を指定します。
+Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.
 
 ## <a name="syntax"></a>構文
 
@@ -81,70 +79,70 @@ typedef enum CorElementType {
 
 |メンバー|説明|
 |------------|-----------------|
-|`ELEMENT_TYPE_END`|内部的に使用されます。|
-|`ELEMENT_TYPE_VOID`|Void 型。|
-|`ELEMENT_TYPE_BOOLEAN`|ブール型|
+|`ELEMENT_TYPE_END`|Used internally.|
+|`ELEMENT_TYPE_VOID`|A void type.|
+|`ELEMENT_TYPE_BOOLEAN`|A Boolean type|
 |`ELEMENT_TYPE_CHAR`|文字型。|
-|`ELEMENT_TYPE_I1`|符号付き1バイト整数。|
+|`ELEMENT_TYPE_I1`|A signed 1-byte integer.|
 |`ELEMENT_TYPE_U1`|1 バイトの符号なし整数。|
-|`ELEMENT_TYPE_I2`|符号付き2バイト整数。|
-|`ELEMENT_TYPE_U2`|符号なし2バイト整数。|
-|`ELEMENT_TYPE_I4`|4バイトの符号付き整数。|
-|`ELEMENT_TYPE_U4`|4バイトの符号なし整数。|
-|`ELEMENT_TYPE_I8`|8バイトの符号付き整数。|
-|`ELEMENT_TYPE_U8`|8バイトの符号なし整数。|
-|`ELEMENT_TYPE_R4`|4バイト浮動小数点。|
-|`ELEMENT_TYPE_R8`|8バイト浮動小数点。|
-|`ELEMENT_TYPE_STRING`|System.string 型。|
-|`ELEMENT_TYPE_PTR`|ポインター型修飾子。|
-|`ELEMENT_TYPE_BYREF`|参照型修飾子。|
-|`ELEMENT_TYPE_VALUETYPE`|値型修飾子。|
-|`ELEMENT_TYPE_CLASS`|クラス型修飾子。|
-|`ELEMENT_TYPE_VAR`|クラス変数の型修飾子。|
-|`ELEMENT_TYPE_ARRAY`|多次元配列型修飾子。|
-|`ELEMENT_TYPE_GENERICINST`|ジェネリック型の型修飾子。|
+|`ELEMENT_TYPE_I2`|A signed 2-byte integer.|
+|`ELEMENT_TYPE_U2`|An unsigned 2-byte integer.|
+|`ELEMENT_TYPE_I4`|A signed 4-byte integer.|
+|`ELEMENT_TYPE_U4`|An unsigned 4-byte integer.|
+|`ELEMENT_TYPE_I8`|A signed 8-byte integer.|
+|`ELEMENT_TYPE_U8`|An unsigned 8-byte integer.|
+|`ELEMENT_TYPE_R4`|A 4-byte floating point.|
+|`ELEMENT_TYPE_R8`|An 8-byte floating point.|
+|`ELEMENT_TYPE_STRING`|A System.String type.|
+|`ELEMENT_TYPE_PTR`|A pointer type modifier.|
+|`ELEMENT_TYPE_BYREF`|A reference type modifier.|
+|`ELEMENT_TYPE_VALUETYPE`|A value type modifier.|
+|`ELEMENT_TYPE_CLASS`|A class type modifier.|
+|`ELEMENT_TYPE_VAR`|A class variable type modifier.|
+|`ELEMENT_TYPE_ARRAY`|A multi-dimensional array type modifier.|
+|`ELEMENT_TYPE_GENERICINST`|A type modifier for generic types.|
 |`ELEMENT_TYPE_TYPEDBYREF`|型指定された参照。|
-|`ELEMENT_TYPE_I`|ネイティブ整数のサイズ。|
-|`ELEMENT_TYPE_U`|符号なしネイティブ整数のサイズ。|
-|`ELEMENT_TYPE_FNPTR`|関数へのポインター。|
-|`ELEMENT_TYPE_OBJECT`|System.object 型。|
-|`ELEMENT_TYPE_SZARRAY`|1次元の下限の配列型修飾子。|
-|`ELEMENT_TYPE_MVAR`|メソッド変数の型修飾子。|
-|`ELEMENT_TYPE_CMOD_REQD`|C 言語で必要な修飾子。|
-|`ELEMENT_TYPE_CMOD_OPT`|C 言語の省略可能な修飾子。|
-|`ELEMENT_TYPE_INTERNAL`|内部的に使用されます。|
+|`ELEMENT_TYPE_I`|Size of a native integer.|
+|`ELEMENT_TYPE_U`|Size of an unsigned native integer.|
+|`ELEMENT_TYPE_FNPTR`|A pointer to a function.|
+|`ELEMENT_TYPE_OBJECT`|A System.Object type.|
+|`ELEMENT_TYPE_SZARRAY`|A single-dimensional, zero lower-bound array type modifier.|
+|`ELEMENT_TYPE_MVAR`|A method variable type modifier.|
+|`ELEMENT_TYPE_CMOD_REQD`|A C language required modifier.|
+|`ELEMENT_TYPE_CMOD_OPT`|A C language optional modifier.|
+|`ELEMENT_TYPE_INTERNAL`|Used internally.|
 |`ELEMENT_TYPE_MAX`|無効な型。|
-|`ELEMENT_TYPE_MODIFIER`|内部的に使用されます。|
-|`ELEMENT_TYPE_SENTINEL`|可変個のパラメーターのリストの sentinel である型修飾子。|
-|`ELEMENT_TYPE_PINNED`|内部的に使用されます。|
+|`ELEMENT_TYPE_MODIFIER`|Used internally.|
+|`ELEMENT_TYPE_SENTINEL`|A type modifier that is a sentinel for a list of a variable number of parameters.|
+|`ELEMENT_TYPE_PINNED`|Used internally.|
 
 ## <a name="remarks"></a>Remarks
 
-型修飾子は、より複雑な型を表すための基礎となります。 `CorElementType`型修飾子の値は、型シグネチャの直後に続く値に適用されます。 `CorElementType`型修飾子の値の後に続く値には`CorElementType` 、次の表に示すように、単純型の値、メタデータトークン、またはその他の値を指定できます。
+The type modifiers form the basis for representing more complex types. A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature. The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.
 
 > [!NOTE]
-> すべての数値 (*数値*、*引数の数*、*メタデータトークン*、*順位*、*カウント*、および*バインド*) は、圧縮された整数として格納されます。 詳細については、ECMA Web サイトの「 [STANDARD ECMA-335-共通言語基盤 (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) 」を参照してください。
+> All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers. See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.
 
-|型修飾子|Format|
+|Type modifier|形式|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<値`CorElementType`の >|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<値`CorElementType`の >|
-|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<を`mdTypeDef`メタデータトークン >|
-|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<を`mdTypeDef`メタデータトークン >|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number >|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<a `CorElementType` value>|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<a `CorElementType` value>|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number>|
 |`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN>|
-|`ELEMENT_TYPE_GENERICINST`|> \< `mdTypeDef` 引数数\<> arg1 > にメタデータトークンを ELEMENT_TYPE_GENERICINST しています... \<\<argN >|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<呼び出し規約を含む、関数のシグネチャの完全な署名 >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<値`CorElementType`の >|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number >|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef`または`mdTypeDef`メタデータトークンの >|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<a `mdTypeRef`または`mdTypeDef`メタデータトークンの >|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN>|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention>|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<a `CorElementType` value>|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number>|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef` or `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<a `mdTypeRef` or `mdTypeDef` metadata token>|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
 
-**ヘッダー:** CorHdr. h
+**Header:** CorHdr.h
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

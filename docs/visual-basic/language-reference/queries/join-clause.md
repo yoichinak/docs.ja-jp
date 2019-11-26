@@ -1,5 +1,5 @@
 ---
-title: Join 句 (Visual Basic)
+title: Join 句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryJoinIn
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: b5211d0ed3f618013dc9fe764a6d7b2db8177c26
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: b0baca9f897a00b3c6c67699629477ff385d6ef7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582294"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353265"
 ---
 # <a name="join-clause-visual-basic"></a>Join 句 (Visual Basic)
 
-2 つのコレクションを単一のコレクションに結合します。 結合操作は、一致するキーに基づいており、`Equals` 演算子を使用します。
+2 つのコレクションを単一のコレクションに結合します。 The join operation is based on matching keys and uses the `Equals` operator.
 
 ## <a name="syntax"></a>構文
 
@@ -32,45 +32,45 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 ## <a name="parts"></a>指定項目
 
-`element` 必須。 結合されているコレクションのコントロール変数。
+`element` 必須。 The control variable for the collection being joined.
 
 `collection`  
-必須です。 @No__t_0 演算子の左側で指定されているコレクションと結合するコレクション。 @No__t_0 句は、別の `Join` 句、または `Group Join` 句で入れ子にすることができます。
+必須です。 The collection to combine with the collection identified on the left side of the `Join` operator. A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.
 
 `joinClause`  
-省略可能です。 クエリをさらに絞り込むための1つ以上の `Join` 句。
+省略可能です。 One or more additional `Join` clauses to further refine the query.
 
 `groupJoinClause`  
-省略可能です。 クエリをさらに絞り込むための1つ以上の `Group Join` 句。
+省略可能です。 One or more additional `Group Join` clauses to further refine the query.
 
 `key1` `Equals` `key2`  
-必須です。 結合されているコレクションのキーを識別します。 @No__t_0 演算子を使用して、結合されているコレクションのキーを比較する必要があります。 結合条件を結合するには、複数のキーを識別するために、`And` 演算子を使用します。 `key1` は、`Join` 演算子の左側にあるコレクションからのものである必要があります。 `key2` は、`Join` 演算子の右側にあるコレクションからのものである必要があります。
+必須です。 Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. `key1` must be from the collection on the left side of the `Join` operator. `key2` must be from the collection on the right side of the `Join` operator.
 
-結合条件で使用されるキーは、コレクションの複数の項目を含む式にすることができます。 ただし、各キー式には、それぞれのコレクションの項目だけを含めることができます。
+The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.
 
 ## <a name="remarks"></a>Remarks
 
-@No__t_0 句は、結合されているコレクションのキー値の一致に基づいて2つのコレクションを結合します。 結果として得られるコレクションには、`Join` 演算子の左側で指定されたコレクションと、`Join` 句で識別されたコレクションの値の任意の組み合わせを含めることができます。 クエリから返されるのは、`Equals` 演算子によって指定された条件を満たした結果だけです。 これは、SQL の `INNER JOIN` に相当します。
+The `Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause. The query will return only results for which the condition specified by the `Equals` operator is met. This is equivalent to an `INNER JOIN` in SQL.
 
-クエリで複数の `Join` 句を使用すると、複数のコレクションを1つのコレクションに結合できます。
+You can use multiple `Join` clauses in a query to join two or more collections into a single collection.
 
-暗黙的結合を実行して、`Join` 句を使用せずにコレクションを結合することができます。 これを行うには、`From` 句に複数の `In` 句を含め、結合に使用するキーを識別する `Where` 句を指定します。
+You can perform an implicit join to combine collections without the `Join` clause. To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.
 
-@No__t_0 句を使用して、コレクションを1つの階層コレクションにまとめることができます。 これは、SQL の `LEFT OUTER JOIN` に似ています。
+You can use the `Group Join` clause to combine collections into a single hierarchical collection. This is like a `LEFT OUTER JOIN` in SQL.
 
 ## <a name="example"></a>例
 
-次のコード例では、暗黙的な結合を実行して顧客のリストと注文を結合します。
+The following code example performs an implicit join to combine a list of customers with their orders.
 
 [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]
 
 ## <a name="example"></a>例
 
-次のコード例では、`Join` 句を使用して2つのコレクションを結合します。
+The following code example joins two collections by using the `Join` clause.
 
 [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]
 
-この例では、次のような出力が生成されます。
+This example will produce output similar to the following:
 
 `winlogon (968), Windows Logon`
 
@@ -80,11 +80,11 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 ## <a name="example"></a>例
 
-次のコード例では、2つのキー列を持つ `Join` 句を使用して、2つのコレクションを結合します。
+The following code example joins two collections by using the `Join` clause with two key columns.
 
 [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]
 
-この例では、次のような出力が生成されます。
+The example will produce output similar to the following:
 
 `winlogon (968), Windows Logon, Priority = 13`
 

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c7c5b39a-d4ac-41f1-9d1e-44163f563a49
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 14ea8dab2c4258fe490ef362fd527d80bd8a0178
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c8ecab9d957e72bb6c0817af07c863fcff97cde
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746106"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436330"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer メソッド
-指定の相対仮想アドレスにあるメソッドの適切なサイズのバッファーを取得します。  
+Gets a buffer of the appropriate size for the method at the specified relative virtual address.  
   
- このメソッドは廃止され、使用する必要があります。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,17 +38,17 @@ HRESULT GetMethodBuffer (
   
 ## <a name="parameters"></a>パラメーター  
  `RVA`  
- [in]バッファーを返す対象のメソッドの相対仮想アドレス。  
+ [in] The relative virtual address of the method for which to return a buffer.  
   
  `lpBuffer`  
- [out]返されたバッファーへのポインター。  
+ [out] A pointer to the returned buffer.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

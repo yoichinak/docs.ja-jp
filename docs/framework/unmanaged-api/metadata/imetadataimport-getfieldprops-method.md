@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 574ac706a07e7fcd701ab04f923d5171bea6f64a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 462512fd2c2b33905b45bb67599b23b301fc71f7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782389"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437995"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps メソッド
 指定した FieldDef トークンによって参照されるフィールドに関連付けられているメタデータを取得します。  
@@ -47,44 +45,44 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mb`  
- [in]関連付けられているメタデータを取得するフィールドを表す FieldDef トークンです。  
+ [in] A FieldDef token that represents the field to get associated metadata for.  
   
  `pClass`  
- [out]フィールドが属するクラスの型を表す TypeDef トークンへのポインター。  
+ [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
   
  `szField`  
- [out]フィールドの名前。  
+ [out] The name of the field.  
   
  `cchField`  
- [in]サイズのバッファーのワイド文字単位*szField*します。  
+ [in] The size in wide characters of the buffer for *szField*.  
   
  `pchField`  
- [out]返されたバッファーの実際のサイズ。  
+ [out] The actual size of the returned buffer.  
   
  `pdwAttr`  
- [out]フィールドのメタデータに関連付けられたフラグ。  
+ [out] Flags associated with the field's metadata.  
   
  `ppvSigBlob`  
- [in]フィールドを説明するメタデータのバイナリ値へのポインター。  
+ [in] A pointer to the binary metadata value that describes the field.  
   
  `pcbSigBlob`  
- [out]バイト サイズ`ppvSigBlob`します。  
+ [out] The size in bytes of `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- [out]フィールドの値の型を指定するフラグ。  
+ [out] A flag that specifies the value type of the field.  
   
  `ppValue`  
- [out]フィールドの定数値。  
+ [out] A constant value for the field.  
   
  `pcchValue`  
- [out]サイズの文字で`ppValue`、または 0 の文字列が存在しない場合。  
+ [out] The size in chars of `ppValue`, or zero if no string exists.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

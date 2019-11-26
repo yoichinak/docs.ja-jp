@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d446e2b78f41d43aa70f429e23f1f4be22fd799
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 59512cc1c1b280d7fe6deb2f9d721ad53547e356
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782504"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437959"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef メソッド
-メンバーの MemberRef トークンへのポインターの参照を取得しますが、指定したで囲まれた<xref:System.Type>指定した名前とメタデータ シグネチャを持つとします。  
+Gets a pointer to the MemberRef token for the member reference that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,33 +39,33 @@ HRESULT FindMemberRef (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in]クラスまたはインターフェイスを検索するメンバーの参照を囲むの TypeRef トークンです。 この値が場合`mdTokenNil`、グローバル変数またはグローバル関数の参照、検索を実行します。  
+ [in] The TypeRef token for the class or interface that encloses the member reference to search for. If this value is `mdTokenNil`, the lookup is done for a global variable or a global-function reference.  
   
  `szName`  
- [in]検索するメンバーの参照の名前。  
+ [in] The name of the member reference to search for.  
   
  `pvSigBlob`  
- [in]メンバーの参照のバイナリ メタデータ シグネチャへのポインター。  
+ [in] A pointer to the binary metadata signature of the member reference.  
   
  `cbSigBlob`  
- [in]バイト サイズ`pvSigBlob`します。  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmr`  
- [out]一致する MemberRef トークンへのポインター。  
+ [out] A pointer to the matching MemberRef token.  
   
 ## <a name="remarks"></a>Remarks  
- 外側のクラスまたはインターフェイスを使用してメンバーを指定する (`td`)、その名前 (`szName`)、および必要に応じてその署名 (`pvSigBlob`)。  
+ You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
   
- 渡される署名`FindMemberRef`生成された現在のスコープで特定のスコープにバインドされるためです。 署名は、外側のクラスまたは値の型を識別するトークンを埋め込むことができます。 トークンは、ローカルの TypeDef テーブルへのインデックスです。 現在のスコープのコンテキスト外にあるランタイムのシグネチャを作成してへの入力としてその署名を使用することはできません`FindMemberRef`します。  
+ The signature passed to `FindMemberRef` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindMemberRef`.  
   
- `FindMemberRef` クラスまたはインターフェイス内で直接定義されたメンバーの参照のみを検索します。継承されたメンバーの参照が見つかりません。  
+ `FindMemberRef` finds only member references that were defined directly in the class or interface; it does not find inherited member references.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1763f9341af2d90cf465cb554bf7f282a4d92058
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 381c38542dcde242c0a1a4e71e9b99316328159d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777814"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436239"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope メソッド
-メモリの新しいメタデータを作成するには、新しい領域を作成します。  
+Creates a new area in memory in which you can create new metadata.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,30 +38,30 @@ HRESULT DefineScope (
   
 ## <a name="parameters"></a>パラメーター  
  `rclsid`  
- [in]作成するメタデータ構造体のバージョンの CLSID。 この値は、.NET Framework version 2.0 の CLSID_CorMetaDataRuntime を指定する必要があります。  
+ [in] The CLSID of the version of metadata structures to be created. This value must be CLSID_CorMetaDataRuntime for the .NET Framework version 2.0.  
   
  `dwCreateFlags`  
- [in]オプションを指定するフラグ。 この値は、.NET Framework 2.0 の 0 にする必要があります。  
+ [in] Flags that specify options. This value must be zero for the .NET Framework 2.0.  
   
  `riid`  
- [in]返される必要なメタデータ インターフェイスの IID呼び出し元はインターフェイスを使用して、新しいメタデータを作成します。  
+ [in] The IID of the desired metadata interface to be returned; the caller will use the interface to create the new metadata.  
   
- 値`riid`「生成」インターフェイスのいずれかを指定する必要があります。 有効な値は IID_IMetaDataEmit、IID_IMetaDataAssemblyEmit、または IID_IMetaDataEmit2 です。  
+ The value of `riid` must specify one of the "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit, or IID_IMetaDataEmit2.  
   
  `ppIUnk`  
- [out]返されたインターフェイスへのポインター。  
+ [out] The pointer to the returned interface.  
   
 ## <a name="remarks"></a>Remarks  
- `DefineScope` メモリ内のメタデータ テーブルのセットを作成し、メタデータの一意の GUID (モジュールのバージョンの識別子、または MVID) が生成されますが生成するコンパイル単位の module テーブル エントリを作成します。  
+ `DefineScope` creates a set of in-memory metadata tables, generates a unique GUID (module version identifier, or MVID) for the metadata, and creates an entry in the module table for the compilation unit being emitted.  
   
- 使用して、全体としてのメタデータ スコープの属性をアタッチすることができます、 [imetadataemit::setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)または[imetadataemit::definecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)として適切なメソッドです。  
+ You can attach attributes to the metadata scope as a whole by using the [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) or [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) method, as appropriate.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

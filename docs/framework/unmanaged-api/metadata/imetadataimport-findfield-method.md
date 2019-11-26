@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 38cd4e16-fbb2-471c-aa73-ac51a1931ad2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1baee71b5b8575f51eb54fbc8a037a5dddd24500
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 842d6c0deb90bc45cb59454fb30fcc3544d742f1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782531"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437941"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField メソッド
-囲まれたフィールドの FieldDef にポインターをトークン取得を指定した<xref:System.Type>指定した名前とメタデータ シグネチャを持つとします。  
+Gets a pointer to the FieldDef token for the field that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,33 +39,33 @@ HRESULT FindField (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in]クラスまたはインターフェイスを検索するフィールドを囲む TypeDef トークンです。 この値が場合`mdTokenNil`、グローバル変数の検索を実行します。  
+ [in] The TypeDef token for the class or interface that encloses the field to search for. If this value is `mdTokenNil`, the lookup is done for a global variable.  
   
  `szName`  
- [in]検索するフィールドの名前。  
+ [in] The name of the field to search for.  
   
  `pvSigBlob`  
- [in]フィールドのバイナリ メタデータ シグネチャへのポインター。  
+ [in] A pointer to the binary metadata signature of the field.  
   
  `cbSigBlob`  
- [in]バイト サイズ`pvSigBlob`します。  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmb`  
- [out]一致する FieldDef トークンへのポインター。  
+ [out] A pointer to the matching FieldDef token.  
   
 ## <a name="remarks"></a>Remarks  
- 外側のクラスまたはインターフェイスを使用して、フィールドを指定する (`td`)、その名前 (`szName`)、および必要に応じてその署名 (`pvSigBlob`)。  
+ You specify the field using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
   
- 渡される署名`FindField`生成された現在のスコープで特定のスコープにバインドされるためです。 署名は、外側のクラスまたは値の型を識別するトークンを埋め込むことができます。 (トークンは、ローカルの TypeDef テーブルへのインデックス) です。 現在のスコープのコンテキスト外にあるランタイムのシグネチャを作成してへの入力としてその署名を使用することはできません`FindField`します。  
+ The signature passed to `FindField` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. (The token is an index into the local TypeDef table). You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindField`.  
   
- `FindField` クラスまたはインターフェイス内で直接定義されたフィールドのみを検索します。継承されたフィールドは検索しません。  
+ `FindField` finds only fields that were defined directly in the class or interface; it does not find inherited fields.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

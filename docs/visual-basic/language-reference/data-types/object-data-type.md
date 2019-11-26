@@ -1,5 +1,5 @@
 ---
-title: Object データ型 (Visual Basic)
+title: Object Data Type
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Object
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 1ac906494c49810e3d389591b1044f412e7320bc
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 2ccb9b69b865c259d078ed9642d63c7f83514756
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68513044"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343966"
 ---
-# <a name="object-data-type"></a>Object データ型
+# <a name="object-data-type"></a>Object Data Type
 
-オブジェクトを参照するアドレスを保持します。 任意の参照型 (文字列、配列、クラス、またはインターフェイス) を`Object`変数に割り当てることができます。 変数`Object`は、任意の値型 (numeric、 `Boolean`、 `Char` `Date`、、structure、または enumeration) のデータを参照することもできます。
+Holds addresses that refer to objects. You can assign any reference type (string, array, class, or interface) to an `Object` variable. An `Object` variable can also refer to data of any value type (numeric, `Boolean`, `Char`, `Date`, structure, or enumeration).
 
 ## <a name="remarks"></a>Remarks
 
-データ`Object`型は、アプリケーションで認識される任意のデータ型のデータを指すことができます。 コンパイル`Object`時に変数が指している可能性のあるデータ型を把握していない場合は、を使用します。
+The `Object` data type can point to data of any data type, including any object instance your application recognizes. Use `Object` when you do not know at compile time what data type the variable might point to.
 
-の`Object`既定値は`Nothing` 、(null 参照) です。
+The default value of `Object` is `Nothing` (a null reference).
 
 ## <a name="data-types"></a>データの種類
 
-任意のデータ型の変数、定数、または式を`Object`変数に割り当てることができます。 `Object`変数で現在参照されているデータ型を確認するには<xref:System.Type.GetTypeCode%2A> 、 <xref:System.Type?displayProperty=nameWithType>クラスのメソッドを使用します。 次に例を示します。
+You can assign a variable, constant, or expression of any data type to an `Object` variable. To determine the data type an `Object` variable currently refers to, you can use the <xref:System.Type.GetTypeCode%2A> method of the <xref:System.Type?displayProperty=nameWithType> class. 次に例を示します。
 
 ```vb
 Dim myObject As Object
@@ -38,31 +38,31 @@ Dim datTyp As Integer
 datTyp = Type.GetTypeCode(myObject.GetType())
 ```
 
-`Object`データ型は参照型です。 ただし、Visual Basic は、 `Object`値型のデータを参照するときに、変数を値型として扱います。
+The `Object` data type is a reference type. However, Visual Basic treats an `Object` variable as a value type when it refers to data of a value type.
 
 ## <a name="storage"></a>記憶域
 
-参照先のデータ型にかかわらず`Object` 、変数にはデータ値自体は含まれませんが、値へのポインターが含まれます。 コンピューターのメモリでは常に4バイトを使用しますが、変数の値を表すデータのストレージは含まれません。 ポインターを使用してデータを検索するコードがあるため`Object` 、値型を保持する変数は、明示的に型指定された変数よりもアクセスが多少遅くなります。
+Whatever data type it refers to, an `Object` variable does not contain the data value itself, but rather a pointer to the value. It always uses four bytes in computer memory, but this does not include the storage for the data representing the value of the variable. Because of the code that uses the pointer to locate the data, `Object` variables holding value types are slightly slower to access than explicitly typed variables.
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **相互運用に関する考慮事項。** .NET Framework 用に作成されていないコンポーネント (オートメーションや COM オブジェクトなど) とやり取りする場合は、他の環境のポインター型が Visual Basic `Object`型と互換性がないことに注意してください。
+- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that pointer types in other environments are not compatible with the Visual Basic `Object` type.
 
-- **パフォーマンス。** `Object`型を使用して宣言する変数は、任意のオブジェクトへの参照を格納するのに十分な柔軟性があります。 ただし、このような変数に対してメソッドまたはプロパティを呼び出すと、常に*遅延バインディング*(実行時) が発生します。 (コンパイル時に)*事前バインディング*を強制的に実行し、パフォーマンスを向上させるには、特定のクラス名を持つ変数を宣言するか、特定のデータ型にキャストします。
+- **パフォーマンス。** A variable you declare with the `Object` type is flexible enough to contain a reference to any object. However, when you invoke a method or property on such a variable, you always incur *late binding* (at run time). To force *early binding* (at compile time) and better performance, declare the variable with a specific class name, or cast it to the specific data type.
 
-  オブジェクト変数を宣言するときは、汎用<xref:System.OperatingSystem> `Object`化された型ではなく、特定のクラス型を使用してみてください。 また、の<xref:System.Windows.Forms.Control>代わりに、使用可能な最も具体的な<xref:System.Windows.Forms.TextBox>クラスを使用して、そのプロパティとメソッドにアクセスできるようにする必要があります。 通常は、**オブジェクトブラウザー**の**クラス**の一覧を使用して、使用可能なクラス名を検索できます。
+  When you declare an object variable, try to use a specific class type, for example <xref:System.OperatingSystem>, instead of the generalized `Object` type. You should also use the most specific class available, such as <xref:System.Windows.Forms.TextBox> instead of <xref:System.Windows.Forms.Control>, so that you can access its properties and methods. You can usually use the **Classes** list in the **Object Browser** to find available class names.
 
-- **広げ.** すべてのデータ型とすべての参照型は`Object` 、データ型に拡大変換されます。 これは、エラーが`Object` <xref:System.OverflowException?displayProperty=nameWithType>発生することなく、任意の型をに変換できることを意味します。
+- **Widening.** All data types and all reference types widen to the `Object` data type. This means you can convert any type to `Object` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-  ただし、値型と`Object`の間で変換を行う場合、Visual Basic によって、*ボックス*化とボックス化*解除*と呼ばれる操作が実行され、実行速度が低下します。
+  However, if you convert between value types and `Object`, Visual Basic performs operations called *boxing* and *unboxing*, which make execution slower.
 
-- **文字を入力します。** `Object`にリテラルの型文字または識別子の型文字がありません。
+- **Type Characters.** `Object` has no literal type character or identifier type character.
 
-- **フレームワークの種類。** .NET Framework 内の対応する型は<xref:System.Object?displayProperty=nameWithType>クラスです。
+- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Object?displayProperty=nameWithType> class.
 
 ## <a name="example"></a>例
 
-次の例は、 `Object`オブジェクトインスタンスを指す変数を示しています。
+The following example illustrates an `Object` variable pointing to an object instance.
 
 ```vb
 Dim objDb As Object
@@ -78,5 +78,5 @@ objDb = myCollection.Item(1)
 - [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-- [方法: 2つのオブジェクトが関係しているかどうかを判断する](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
-- [方法: 2つのオブジェクトが同一かどうかを判断する](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [方法: 2 つのオブジェクトが関連しているかどうかを決める](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [方法: 2 つのオブジェクトが同一であるかどうか判別する](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

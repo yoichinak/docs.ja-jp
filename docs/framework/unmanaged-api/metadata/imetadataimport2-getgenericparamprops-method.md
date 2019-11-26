@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbb21e67-712b-49e7-a27c-a1e73ffd46c5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf9f6cc1e568463f2ca9afa38c10f50d0c247013
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8c5dd263401002deaee3d21f1e41b41a29faec2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755342"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427300"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps メソッド
-指定したトークンによって表されるジェネリック パラメーターに関連付けられているメタデータを取得します。  
+Gets the metadata associated with the generic parameter represented by the specified token.  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,35 +42,35 @@ HRESULT GetGenericParamProps (
   
 ## <a name="parameters"></a>パラメーター  
  `gp`  
- [in]メタデータを返す対象のジェネリック パラメーターを表すトークン。  
+ [in] The token that represents the generic parameter for which to return metadata.  
   
  `pulParamSeq`  
- [out]位置を表す序数、`Type`親コンス トラクターまたはメソッド パラメーター。  
+ [out] The ordinal position of the `Type` parameter in the parent constructor or method.  
   
  `pdwParamFlags`  
- [out]値、 [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)を表す列挙体、`Type`のジェネリック パラメーター。  
+ [out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.  
   
  `ptOwner`  
- [out]パラメーターの所有者を表す TypeDef または MethodDef トークンです。  
+ [out] A TypeDef or MethodDef token that represents the owner of the parameter.  
   
  `reserved`  
- [out]将来の機能拡張予約されています。  
+ [out] Reserved for future extensibility.  
   
  `wzName`  
- [out]ジェネリック パラメーターの名前。  
+ [out] The name of the generic parameter.  
   
  `cchName`  
- [in]サイズ、`wzName`バッファー。  
+ [in] The size of the `wzName` buffer.  
   
  `pchName`  
- [out]ワイド文字で、名前の返されたサイズ。  
+ [out] The returned size of the name, in wide characters.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

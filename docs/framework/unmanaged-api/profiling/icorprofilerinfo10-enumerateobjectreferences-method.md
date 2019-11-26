@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: ac193b6b78434245b8f11a4f627b4e1992feb8a7
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d6518612c213d21c2dc7d80878121ccd3b7e2abb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69661273"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449858"
 ---
-# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences メソッド
+# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10::EnumerateObjectReferences Method
 
-ObjectID、callback、および clientData を指定すると、各オブジェクト参照 (存在する場合) が列挙されます。
+Given an ObjectID, callback and clientData, enumerates each object reference (if any).
 
 ## <a name="syntax"></a>構文
 
@@ -33,28 +33,28 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 #### <a name="parameters"></a>パラメーター
 
 `objectId` \
-から参照を列挙するオブジェクト。
+[in] The object to enumerate references on.
 
 `callback` \
-からオブジェクトの参照を使用して呼び出される関数。
+[in] The function that will be called with the references for the object.
 
 `clientData` \
-から`callback`関数に渡されるプロファイラー提供のデータ。
+[in] Profiler-provided data to pass to the `callback` function.
 
 ## <a name="remarks"></a>Remarks
 
-`EnumerateObjectReferences` メソッドは [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) に似ていますが、参照を格納するために配列を事前に割り当てるのではなく、プロファイラーの要求時に参照をステップインする点が異なります。
+The `EnumerateObjectReferences` method is similar to [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**・** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/windows-prerequisites.md#net-core-supported-operating-systems)」を参照してください。
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**ヘッダー:** Corprof.idl、Corprof.idl
+**ヘッダー** : CorProf.idl、CorProf.h
 
-**ライブラリ**CorGuids .lib
+**ライブラリ:** CorGuids.lib
 
-**.Net のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo10 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

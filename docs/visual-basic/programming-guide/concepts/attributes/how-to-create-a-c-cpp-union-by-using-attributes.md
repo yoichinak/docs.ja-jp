@@ -1,15 +1,15 @@
 ---
-title: '方法: 属性を使用してC++ C 共用体を作成する (Visual Basic)'
+title: 'How to: Create a C-C++ Union by Using Attributes'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: 6595d6477d9d0838745e19eb2a44d26f6e534c70
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: acb8dc781e2872ae46e5aa058a98b3dd98f3e064
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524274"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349499"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>方法: 属性を使用してC++ C/共用体を作成する (Visual Basic)
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>How to: Create a C/C++ Union by Using Attributes (Visual Basic)
 
 属性を使用すると、構造体のメモリ内での配置をカスタマイズできます。 たとえば、`StructLayout(LayoutKind.Explicit)` 属性と `FieldOffset` 属性を使用すると、C/C++ の共用体と呼ばれるものを作成できます。
 

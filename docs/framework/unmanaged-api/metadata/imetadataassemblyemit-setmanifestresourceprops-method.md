@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef77efd1-849c-4e51-ba92-7ee3d2bf0339
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d080a3077df2cb4ad57ef463b5e02a3a28d8429d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6b5e12df60663b75e10b04eaa008a75d720d753
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779406"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434431"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps メソッド
 指定された `ManifestResource` メタデータ構造体を変更します。  
@@ -40,26 +38,26 @@ HRESULT SetManifestResourceProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mr`  
- [in]トークンを指定する、`ManifestResource`メタデータ構造を変更します。  
+ [in] The token that specifies the `ManifestResource` metadata structure to be modified.  
   
  `tkImplementation`  
- [in]型のトークン`File`または`AssemblyRef`、リソース プロバイダーにマップされます。  
+ [in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.  
   
  `dwOffset`  
- [in]リソース ファイル内の先頭までのオフセット。  
+ [in] The offset to the beginning of the resource within the file.  
   
  `dwResourceFlags`  
- [in]リソースの属性を指定するフラグの値のビットごとの組み合わせ。  
+ [in] A bitwise combination of flag values that specify the attributes of the resource.  
   
 ## <a name="remarks"></a>Remarks  
- 作成する、`ManifestResource`メタデータ構造体を使用して、 [imetadataassemblyemit::definemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)メソッド。  
+ To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

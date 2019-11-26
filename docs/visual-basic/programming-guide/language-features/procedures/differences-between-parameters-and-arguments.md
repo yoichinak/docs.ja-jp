@@ -1,5 +1,5 @@
 ---
-title: パラメーターと引数の違い (Visual Basic)
+title: パラメーターと引数の違い
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -11,40 +11,40 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: a69b956c7cffcc2a26916d6fc92f23dd4e2322d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4249dbf86bd1bfa7ef08e94059d2880333e9a92
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864248"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341375"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>パラメーターと引数の違い (Visual Basic)
-ほとんどの場合、プロシージャが呼び出されたときの状況に関する情報が必要です。 繰り返される、または共有のタスクを実行する手順では、呼び出しごとに異なる情報を使用します。 この情報は、変数、定数、および呼び出しでは、プロシージャに渡す式で構成されます。  
+In most cases, a procedure must have some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
   
- プロシージャには、この情報を通信するために、プロシージャの定義、*パラメーター*、呼び出し元のコードを渡します、*引数*パラメーターにします。 駐車場としてパラメーターと引数は、自動車を考えることができます。 さまざまな自動車は、異なる時刻で駐車場で駐車できると同様、呼び出し元のコードは、it は、プロシージャを呼び出すたびに、同じパラメーターを別の引数を渡すことができます。  
+ To communicate this information to the procedure, the procedure defines a *parameter*, and the calling code passes an *argument* to that parameter. You can think of the parameter as a parking space and the argument as an automobile. Just as different automobiles can park in a parking space at different times, the calling code can pass a different argument to the same parameter every time that it calls the procedure.  
   
 ## <a name="parameters"></a>パラメーター  
- A*パラメーター*プロシージャには、それを呼び出すときに渡すことが期待される値を表します。 プロシージャの宣言では、そのパラメーターを定義します。  
+ A *parameter* represents a value that the procedure expects you to pass when you call it. The procedure's declaration defines its parameters.  
   
- 定義するとき、`Function`または`Sub`プロシージャを指定する、*パラメーター リスト*プロシージャ名の直後に続くかっこ内に示します。 各パラメーターの名前、データ型、および引き渡し方法を指定 ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)または[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md))。 パラメーターが省略可能であるかも指定できます。 これは、その値を渡す呼び出し元のコードがないことを意味します。  
+ When you define a `Function` or `Sub` procedure, you specify a *parameter list* in parentheses immediately following the procedure name. For each parameter, you specify a name, a data type, and a passing mechanism ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). You can also indicate that a parameter is optional. This means that the calling code does not have to pass a value for it.  
   
- 各パラメーターの名前として、*ローカル変数*の手順でします。 パラメーター名は、他の変数を使用すると同じ方法で使用します。  
+ The name of each parameter serves as a *local variable* in the procedure. You use the parameter name the same way you use any other variable.  
   
 ## <a name="arguments"></a>引数  
- *引数*プロシージャを呼び出す場合、プロシージャのパラメーターに渡す値を表します。 プロシージャを呼び出すときに、呼び出し元のコードは、引数を提供します。  
+ An *argument* represents the value that you pass to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure.  
   
- 呼び出すと、`Function`または`Sub`プロシージャを含める、*引数リスト*プロシージャ名の直後に続くかっこで囲まれました。 各引数は、パラメーター リスト内の同じ位置に対応します。  
+ When you call a `Function` or `Sub` procedure, you include an *argument list* in parentheses immediately following the procedure name. Each argument corresponds to the parameter in the same position in the list.  
   
- パラメーターの定義とは対照的引数には名前がありません。 各引数は、0 以上の変数、定数、およびリテラルに含めることができる式です。 通常、対応するパラメーター、定義されているデータ型に一致する必要があります式の評価結果のデータ型と、いずれの場合も、パラメーターの型に変換できるあります。  
+ In contrast to parameter definition, arguments do not have names. Each argument is an expression, which can contain zero or more variables, constants, and literals. The data type of the evaluated expression should typically match the data type defined for the corresponding parameter, and in any case it must be convertible to the parameter type.  
   
 ## <a name="see-also"></a>関連項目
 
-- [プロシージャ](./index.md)
+- [手順](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [Function プロシージャ](./function-procedures.md)
 - [Property プロシージャ](./property-procedures.md)
 - [演算子プロシージャ](./operator-procedures.md)
-- [方法: プロシージャにパラメーターを定義する](./how-to-define-a-parameter-for-a-procedure.md)
+- [方法 : プロシージャにパラメーターを定義する](./how-to-define-a-parameter-for-a-procedure.md)
 - [方法: プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)
 - [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)
 - [再帰プロシージャ](./recursive-procedures.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6b01f38fbcf1cb0439b82a933b37971515b06ac4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea9dee6e83870d1f2e0fdccffa53f16e6f18dba
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758147"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430112"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError メソッド
-ジャストイン タイム (JIT) コンパイラに再コンパイル プロセスでエラーが発生したことをプロファイラーに通知します。  
+Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,16 +37,16 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleID`  
- [in]`ModuleID`再コンパイルが失敗した試行が行われる。  
+ [in] The `ModuleID` in which the failed recompilation attempt was made.  
   
  `methodId`  
- [in]`MethodDef`の再コンパイルが失敗した試行が行われたメソッド。  
+ [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
   
  `functionId`  
- [in]再コンパイルされたまたはマークの再コンパイルされている関数のインスタンス。 この値は、 `NULL` (たとえば、プロファイラーには、再コンパイルするメソッドを無効なメタデータ トークンが指定された) 場合、インスタンス化ごとにではなく、メソッドごとに障害が発生したかどうか。  
+ [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
   
  `hrStatus`  
- [in]エラーの性質を示す HRESULT。 値の一覧については、状態 HRESULT」を参照してください。  
+ [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
   
 ## <a name="return-value"></a>戻り値  
  このコールバックからの戻り値は無視されます。  
@@ -57,17 +55,17 @@ HRESULT ReJITError(
   
 |状態配列 HRESULT|説明|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|`moduleID`または`methodDef`トークンが`NULL`します。|  
+|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
 |CORPROF_E_DATAINCOMPLETE|モジュールが完全に読み込まれていないか、またはアンロード中です。|  
-|CORPROF_E_MODULE_IS_DYNAMIC|指定したモジュールを動的に生成されました (たとえば、 `Reflection.Emit`) はこのメソッドによってサポートされていませんので。|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|メソッドは、収集可能なアセンブリにインスタンス化であるため再コンパイルすることができません。 型に注意してくださいと非リフレクション コンテキストで定義されている関数 (たとえば、 `List<MyCollectibleStruct>`) 収集可能なアセンブリにインスタンス化することができます。|  
-|E_OUTOFMEMORY|CLR は JIT 再コンパイルの指定したメソッドをマークしているときにメモリ不足になりました。|  
-|Other|オペレーティング システムは、CLR 制御範囲外のエラーを返しました。 たとえば、メモリのページのアクセスの保護を変更するシステム コールに失敗した場合、オペレーティング システム エラーが表示されます。|  
+|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
+|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
+|その他|オペレーティング システムは、CLR 制御範囲外のエラーを返しました。 For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

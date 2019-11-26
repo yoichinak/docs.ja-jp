@@ -1,17 +1,17 @@
 ---
-title: Visual Basic のコーディング規則
+title: コーディング規則
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: 18c309e22cccfa5d835394996fc6974d95825b65
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 36cd3a927d2fdf197e6b496d9308fc43a555d59b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003112"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346153"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic のコーディング規則
 Microsoft は、ここで示すガイドラインに従ってサンプルおよびドキュメントを開発しています。 同じコーディング規則に従うと、次のような利点があります。  
@@ -26,7 +26,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 ## <a name="naming-conventions"></a>命名規則  
   
-- 名前付けのガイドラインについては、「[名前付けのガイドライン](../../../standard/design-guidelines/naming-guidelines.md)」を参照してください。  
+- For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.  
   
 - "My" または "my" を変数名の一部として使用しないようにします。 `My` オブジェクトとの混同を招くからです。  
   
@@ -36,7 +36,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 - タブを空白として挿入し、4 文字インデントによるスマート インデントを使用します。  
   
-- コード エディターでコードの書式を再整形するときは**コードの再フォーマット**を使用します。 詳細については、次を参照してください。[オプション、[テキスト エディター]、基本 (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)です。  
+- Use **Pretty listing (reformatting) of code** to reformat your code in the code editor. For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
   
 - 1 つの行には 1 つのステートメントのみを記述します。 Visual Basic の行区切り記号 (:) は使用しないでください。  
   
@@ -44,7 +44,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 - 1 つの行には 1 つの宣言のみを記述します。  
   
-- **コードの再フォーマット**が自動で行継続を整形しない場合、手動で継続行を1個のタブ ストップでインデントします。 ただし、リストの項目は常に左揃えにします。  
+- If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop. ただし、リストの項目は常に左揃えにします。  
   
     ```vb  
     a As Integer,  
@@ -63,7 +63,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
-- 整形されたアスタリスク のブロックでコメントを囲まないようにします。  
+- アスタリスク (*) を整形したブロックでコメントを囲まないようにします。  
   
 ## <a name="program-structure"></a>プログラムの構造  
   
@@ -129,7 +129,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
  `On Error Goto`は使用しないでください。  
   
 ### <a name="use-the-isnot-keyword"></a>IsNot キーワードの使用  
- `Not...Is Nothing` の代わりに `IsNot` キーワードを使用します。  
+ `IsNot` の代わりに `Not...Is Nothing` キーワードを使用します。  
   
 ### <a name="new-keyword"></a>New キーワード  
   
@@ -147,7 +147,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 ### <a name="event-handling"></a>イベント処理  
   
-- `AddHandler` ではなく `Handles` を使用します。  
+- `Handles` ではなく `AddHandler` を使用します。  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
@@ -159,7 +159,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- `RaiseEvent` メソッドを呼び出す前にイベントが `Nothing` (null) かどうか確認しないようにします。 `RaiseEvent` は、イベントを発生させる前に `Nothing` かどうか確認します。  
+- `Nothing` メソッドを呼び出す前にイベントが `RaiseEvent` (null) かどうか確認しないようにします。 `RaiseEvent` は、イベントを発生させる前に `Nothing` かどうか確認します。  
   
 ### <a name="using-shared-members"></a>共有メンバーの使用  
  `Shared` メンバーの呼び出しにはクラス名を使用し、インスタンス変数からは行わないようにします。  
@@ -203,7 +203,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- `Where` 句を使用して暗黙的に結合操作を定義する代わりに、`Join` 句を使用して明示的に結合操作を定義します。  
+- `Join` 句を使用して暗黙的に結合操作を定義する代わりに、`Where` 句を使用して明示的に結合操作を定義します。  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   

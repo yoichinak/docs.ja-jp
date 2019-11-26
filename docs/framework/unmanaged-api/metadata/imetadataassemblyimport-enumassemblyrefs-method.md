@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8844d0dd-730e-4592-8a7b-c1462d312c70
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5c7b512de76b5ada882b1d81c2968b4ead5c8c20
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 06b81615565a04db7d6cfef4da9b5372a85afd68
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775931"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450348"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs メソッド
-列挙、`mdAssemblyRef`アセンブリ マニフェストで定義されているインスタンス。  
+Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,30 +38,30 @@ HRESULT EnumAssemblyRefs (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 これを null には値と、`EnumAssemblyRefs`メソッドは、最初に呼び出されます。  
+ [in, out] A pointer to the enumerator. This must be a null value when the `EnumAssemblyRefs` method is called for the first time.  
   
  `rAssemblyRefs`  
- [out]列挙体`mdAssemblyRef`メタデータ トークン。  
+ [out] The enumeration of `mdAssemblyRef` metadata tokens.  
   
  `cMax`  
- [in]配置できるトークンの最大数、`rAssemblyRefs`配列。  
+ [in] The maximum number of tokens that can be placed in the `rAssemblyRefs` array.  
   
  `pcTokens`  
- [out]トークンの数が実際に配置`rAssemblyRefs`します。  
+ [out] The number of tokens actually placed in `rAssemblyRefs`.  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs` 正常に返されます。|  
-|`S_FALSE`|トークンを列挙することはありません。 この場合、 `pcTokens` 0 に設定されます。|  
+|`S_OK`|`EnumAssemblyRefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

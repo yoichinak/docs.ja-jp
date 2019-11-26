@@ -1,5 +1,5 @@
 ---
-title: TypeOf 演算子 (Visual Basic)
+title: TypeOf 演算子
 ms.date: 07/20/2015
 f1_keywords:
 - TypeOf
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: c6028f524a16b836310f0c8d564205244515cdc9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 22af5b8f8488ca44e388596530decd52e33525dc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701281"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350888"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 演算子 (Visual Basic)
-式の結果のランタイム型が、指定された型との間で型と互換性があるかどうかを確認します。
+Checks whether the runtime type of an expression's result is type-compatible with the specified type.
   
 ## <a name="syntax"></a>構文  
   
@@ -37,17 +37,17 @@ result = TypeOf objectexpression IsNot typename
  必須。 `Boolean` 値。  
   
  `objectexpression`  
- 必須。 参照型に評価される任意の式。  
+ 必須です。 参照型に評価される任意の式。  
   
  `typename`  
- 必須。 任意のデータ型名。  
+ 必須です。 任意のデータ型名。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `TypeOf` 演算子は、`objectexpression` の実行時の型が `typename` と互換性があるかどうかを調べます。 互換性は、`typename` の型のカテゴリに依存します。 互換性を決定する方法を次の表に示します。  
   
 |`typename` の型のカテゴリ|互換性の条件|  
 |---------------------------------|-----------------------------|  
-|クラス|`objectexpression` が `typename` 型である、または `typename` を継承する|  
+|インスタンス|`objectexpression` が `typename` 型である、または `typename` を継承する|  
 |構造体|`objectexpression` が `typename` 型である|  
 |Interface|`objectexpression` が `typename` を実装する、または `typename` を実装するクラスを継承する|  
   
@@ -66,7 +66,7 @@ result = TypeOf objectexpression IsNot typename
 
 - [Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot 演算子](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Visual Basic の比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

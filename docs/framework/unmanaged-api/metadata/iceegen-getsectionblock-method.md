@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84ccbd7a8be7d90a541fb2d54baa3d7f66d3d31e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746120"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434883"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock メソッド
-コード ベースのセクションのブロックを取得します。  
+Gets a section block of the code base.  
   
- このメソッドは廃止され、使用する必要があります。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,26 +40,26 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>パラメーター  
  `section`  
- [in]コード ベースのブロックの取得元となるセクション。  
+ [in] The section from which to retrieve a block of the code base.  
   
  `len`  
- [in]取得するブロックの長さ。  
+ [in] The length of the block to be retrieved.  
   
  `align`  
- [in]ブロックの最初のバイトを揃えるセクションの先頭からの相対バイト。 これは、セクション内のブロックの位置です。  
+ [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
   
  `ppBytes`  
- [out]取得されたブロックのアドレスを受け取る場所へのポインター。  
+ [out] A pointer to a location that receives the address of the retrieved block.  
   
 ## <a name="remarks"></a>Remarks  
- 呼び出す`GetSectionBlock`別の方法で処理されない特別なセクションの要件がある場合にのみです。  
+ Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

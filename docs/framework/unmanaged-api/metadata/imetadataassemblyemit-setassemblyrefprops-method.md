@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 984ec5dea757971081ce05c858788473a0f616e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5434aa2d12bd9a29a8c2fc784421442469ceb1ce
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775277"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440555"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps メソッド
 指定された `AssemblyRef` メタデータ構造体を変更します。  
@@ -44,38 +42,38 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>パラメーター  
  `ar`  
- [in]メタデータ トークンを指定する、`AssemblyRef`メタデータ構造を変更します。  
+ [in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.  
   
  `pbPublicKeyOrToken`  
- [in]参照先アセンブリの発行者の公開キー。  
+ [in] The public key of the publisher of the referenced assembly.  
   
  `cbPublicKeyOrToken`  
- [in]バイト サイズ`pbPublicKeyOrToken`します。  
+ [in] The size in bytes of `pbPublicKeyOrToken`.  
   
  `szName`  
- [in]アセンブリの人間が判読できるテキストの名前。  
+ [in] The human-readable text name of the assembly.  
   
  `pMetaData`  
- [in]アセンブリのバージョン、プラットフォーム、およびロケール情報を含む ASSEMBLYMETADATA インスタンスへのポインター。  
+ [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
   
  `pbHashValue`  
- [in]アセンブリに関連付けられているデータのハッシュへのポインター。  
+ [in] A pointer to the hash data associated with the assembly.  
   
  `cbHashValue`  
- [in]バイト サイズ`pbHashValue`します。  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in]ビットごとの組み合わせ[AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)参照アセンブリの属性を指定する値。  
+ [in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.  
   
 ## <a name="remarks"></a>Remarks  
- 作成する、`AssemblyRef`メタデータ構造体を使用して、 [imetadataassemblyemit::defineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)メソッド。  
+ To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

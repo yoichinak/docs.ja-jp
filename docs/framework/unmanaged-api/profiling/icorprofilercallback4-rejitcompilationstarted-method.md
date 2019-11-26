@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 512fdd00-262a-4456-a075-365ef4133c4d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 58293929b576493d3751f9ce30ba00cec92e180c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 074b0b11a822d2b8bcb9588484557e3e5eba69dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758168"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430196"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted メソッド
-関数を再コンパイル、ジャストイン タイム (JIT) コンパイラが開始されたことをプロファイラーに通知します。  
+Notifies the profiler that the just-in-time (JIT) compiler has started to recompile a function.  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,23 +36,23 @@ HRESULT ReJITCompilationStarted(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in]再コンパイル、JIT コンパイラが開始した関数の ID。  
+ [in] The ID of the function that the JIT compiler has started to recompile.  
   
  `rejitId`  
- [in]関数の新しいバージョンの再コンパイルの ID。  
+ [in] The recompilation ID of the new version of the function.  
   
  `fIsSafeToBlock`  
- [in]`true`をブロックしていることにより、ランタイムでこのコールバックから返される呼び出し元のスレッドを待機するかを示す`false`をブロックしてに影響しないこと、実行時の操作を示します。 値`true`ランタイムは害を及ぼしませんが、プロファイリングの結果に影響を与えることができます。  
+ [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime. A value of `true` does not harm the runtime, but can affect the profiling results.  
   
 ## <a name="remarks"></a>Remarks  
- 1 つ以上のペアを受信することは`ReJITCompilationStarted`と[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)メソッド呼び出しの各関数の方法により、ランタイム ハンドル クラスのコンス トラクター。 たとえば、メソッドを再コンパイルする、ランタイムが開始されますが、クラス B のクラス コンス トラクターを実行する必要があります。 そのため、ランタイムは B クラスのコンス トラクターを再コンパイルし、それを実行します。 コンス トラクターが実行されている、A で、メソッド、もう一度再コンパイルすると、メソッドの呼び出しになります。 このシナリオでは、メソッド A の最初の再コンパイルが停止します。 ただし、両方は、メソッドの JIT 再コンパイル イベントで報告されるが再コンパイルを試行します。  
+ It is possible to receive more than one pair of `ReJITCompilationStarted` and [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) method calls for each function because of the way the runtime handles class constructors. For example, the runtime starts to recompile method A, but the class constructor for class B needs to be run. Therefore, the runtime recompiles the constructor for class B and runs it. While the constructor is running, it makes a call to method A, which causes method A to be recompiled again. In this scenario, the first recompilation of method A is halted. However, both attempts to recompile method A are reported with JIT recompilation events.  
   
- プロファイラーは、場合、2 つのスレッドではコールバックを行う同時に JIT 再コンパイルのコールバックのシーケンスをサポートする必要があります。 たとえば、スレッド A が呼び出す`ReJITCompilationStarted`ただし、スレッド A 呼び出しの前に[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)、スレッド B 呼び出し[icorprofilercallback::exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)関数の id。`ReJITCompilationStarted`スレッド A のコールバック関数の ID がまだされないこと有効が表示されるためへの呼び出し[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)プロファイラーがまだ受信したされません。 ただし、この場合、関数の ID は有効です。  
+ Profilers must support the sequence of JIT recompilation callbacks in cases where two threads are simultaneously making callbacks. For example, thread A calls `ReJITCompilationStarted`; however, before thread A calls [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md), thread B calls [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) with the function ID from the `ReJITCompilationStarted` callback for thread A. It might appear that the function ID should not yet be valid because a call to [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) had not yet been received by the profiler. However, in this case, the function ID is valid.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

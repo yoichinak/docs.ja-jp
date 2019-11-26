@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1edd1670-976a-4fc8-bef7-7c41e60ad989
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7a7859bd890a2ecc10b5117f697ff8b06ad569f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 411fad0accb59431f776c5bd66e8bd3027ddd907
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781701"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450146"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement 列挙型
-トークンの再マップが発生したときに、メタデータ API クライアントに送信される通知を指定します。  
+Specifies the notifications that will be sent to the metadata API client when a token remap occurs.  
   
 ## <a name="syntax"></a>構文  
   
@@ -65,37 +63,37 @@ typedef enum CorNotificationForTokenMovement {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`MDNotifyDefault`|ときの通知`mdTypeRef`、 `mdMethodDef`、 `mdMemberRef`、または`mdFieldDef`トークン移動します。|  
-|`MDNotifyAll`|任意のトークンが移動したときに通知します。|  
-|`MDNotifyNone`|トークンの移動時に通知しません。|  
-|`MDNotifyMethodDef`|ときの通知、`mdMethodDef`トークン移動します。|  
-|`MDNotifyMemberRef`|ときの通知、`mdMemberRef`トークン移動します。|  
-|`MDNotifyFieldDef`|ときの通知、`mdFieldDef`トークン移動します。|  
-|`MDNotifyTypeRef`|ときの通知、`mdTypeRef`トークン移動します。|  
-|`MDNotifyTypeDef`|ときの通知、`mdTypeDef`トークン移動します。|  
-|`MDNotifyParamDef`|ときの通知、`mdParamDef`トークン移動します。|  
-|`MDNotifyInterfaceImpl`|ときの通知、`mdInterfaceImpl`トークン移動します。|  
-|`MDNotifyProperty`|ときの通知、`mdProperty`トークン移動します。|  
-|`MDNotifyEvent`|ときの通知、`mdEvent`トークン移動します。|  
-|`MDNotifySignature`|ときの通知、`mdSignature`トークン移動します。|  
-|`MDNotifyTypeSpec`|ときの通知、`mdTypeSpec`トークン移動します。|  
-|`MDNotifyCustomAttribute`|ときの通知、`mdCustomAttribute`トークン移動します。|  
-|`MDNotifySecurityValue`|ときの通知、`mdSecurityValue`トークン移動します。|  
-|`MDNotifyPermission`|ときの通知、`mdPermission`トークン移動します。|  
-|`MDNotifyModuleRef`|ときの通知、`mdModuleRef`トークン移動します。|  
-|`MDNotifyNameSpace`|ときの通知、`mdNameSpace`トークン移動します。|  
-|`MDNotifyAssemblyRef`|ときの通知、`mdAssemblyRef`トークン移動します。|  
-|`MDNotifyFile`|ときの通知、`mdFile`トークン移動します。|  
-|`MDNotifyExportedType`|ときの通知、`mdExportedType`トークン移動します。|  
-|`MDNotifyResource`|ときの通知、`mdManifestResource`トークン移動します。|  
+|`MDNotifyDefault`|Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.|  
+|`MDNotifyAll`|Notify when any token moves.|  
+|`MDNotifyNone`|Do not notify when tokens move.|  
+|`MDNotifyMethodDef`|Notify when an `mdMethodDef` token moves.|  
+|`MDNotifyMemberRef`|Notify when an `mdMemberRef` token moves.|  
+|`MDNotifyFieldDef`|Notify when an `mdFieldDef` token moves.|  
+|`MDNotifyTypeRef`|Notify when an `mdTypeRef` token moves.|  
+|`MDNotifyTypeDef`|Notify when an `mdTypeDef` token moves.|  
+|`MDNotifyParamDef`|Notify when an `mdParamDef` token moves.|  
+|`MDNotifyInterfaceImpl`|Notify when an `mdInterfaceImpl` token moves.|  
+|`MDNotifyProperty`|Notify when an `mdProperty` token moves.|  
+|`MDNotifyEvent`|Notify when an `mdEvent` token moves.|  
+|`MDNotifySignature`|Notify when an `mdSignature` token moves.|  
+|`MDNotifyTypeSpec`|Notify when an `mdTypeSpec` token moves.|  
+|`MDNotifyCustomAttribute`|Notify when an `mdCustomAttribute` token moves.|  
+|`MDNotifySecurityValue`|Notify when an `mdSecurityValue` token moves.|  
+|`MDNotifyPermission`|Notify when an `mdPermission` token moves.|  
+|`MDNotifyModuleRef`|Notify when an `mdModuleRef` token moves.|  
+|`MDNotifyNameSpace`|Notify when an `mdNameSpace` token moves.|  
+|`MDNotifyAssemblyRef`|Notify when an `mdAssemblyRef` token moves.|  
+|`MDNotifyFile`|Notify when an `mdFile` token moves.|  
+|`MDNotifyExportedType`|Notify when an `mdExportedType` token moves.|  
+|`MDNotifyResource`|Notify when an `mdManifestResource` token moves.|  
   
 ## <a name="remarks"></a>Remarks  
- トークンを再マップ (移動) するメタデータのマージ中にします。  
+ A token may be re-mapped (that is, moved) during a metadata merge.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

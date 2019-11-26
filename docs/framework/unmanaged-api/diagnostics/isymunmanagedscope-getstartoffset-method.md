@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: da6bbc75-94d1-4354-9722-0d455b4428fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d34bcaf1ef00806e3883996804336bd22b9b634f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d1ee82f24e1908af1998e424006415af3134456
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777846"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446274"
 ---
 # <a name="isymunmanagedscopegetstartoffset-method"></a>ISymUnmanagedScope::GetStartOffset メソッド
-このスコープの開始オフセットを取得します。  
+Gets the start offset for this scope.  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,13 +34,13 @@ HRESULT GetStartOffset(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインターを`ULONG32`開始オフセットを格納しています。  
+ [out] A pointer to a `ULONG32` that contains the starting offset.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

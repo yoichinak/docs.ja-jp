@@ -1,32 +1,32 @@
 ---
-title: '方法: オブジェクト変数が参照する型を確認する (Visual Basic)'
+title: '方法 : オブジェクト変数で参照している型を確認する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TypeOf operator [Visual Basic], determining object variable type
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 935623dd4b6edca188f932aca0e560130199e8f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9f9b89e2fea0bd69cba6d50fa1d1fb9cc3927685
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626572"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348613"
 ---
-# <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>方法: オブジェクト変数が参照する型を確認する (Visual Basic)
+# <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>方法: オブジェクト変数で参照している型を確認する (Visual Basic)
 
-オブジェクト変数には、他の場所に格納されているデータへのポインターが含まれています。 データの種類は、実行時に変更される可能性があります。 いつでも、 <xref:System.Type.GetTypeCode%2A>メソッドを使用して現在のランタイム型を判断したり、 [TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)を使用して、現在の実行時の型が指定された型と互換性があるかどうかを確認したりすることができます。
+An object variable contains a pointer to data that is stored elsewhere. The type of that data can change during run time. At any moment, you can use the <xref:System.Type.GetTypeCode%2A> method to determine the current run-time type, or the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to find out if the current run-time type is compatible with a specified type.
 
-### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>オブジェクト変数で現在参照されている正確な型を確認するには
+### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>To determine the exact type an object variable currently refers to
 
-1. オブジェクト変数で、 <xref:System.Object.GetType%2A>メソッドを呼び出してオブジェクトを<xref:System.Type?displayProperty=nameWithType>取得します。
+1. On the object variable, call the <xref:System.Object.GetType%2A> method to retrieve a <xref:System.Type?displayProperty=nameWithType> object.
 
     ```vb
     Dim myObject As Object
     myObject.GetType()
     ```
 
-2. クラスで、共有メソッド<xref:System.Type.GetTypeCode%2A>を呼び出して、オブジェクトの<xref:System.TypeCode>型の列挙値を取得します。 <xref:System.Type?displayProperty=nameWithType>
+2. On the <xref:System.Type?displayProperty=nameWithType> class, call the shared method <xref:System.Type.GetTypeCode%2A> to retrieve the <xref:System.TypeCode> enumeration value for the object's type.
 
     ```vb
     Dim myObject As Object
@@ -34,11 +34,11 @@ ms.locfileid: "68626572"
     MsgBox("myObject currently has type code " & CStr(datTyp))
     ```
 
-    列挙値は<xref:System.TypeCode> 、などの目的`Double`の列挙体メンバーに対してテストできます。
+    You can test the <xref:System.TypeCode> enumeration value against whichever enumeration members are of interest, such as `Double`.
 
-### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>オブジェクト変数の型が指定した型と互換性があるかどうかを判断するには
+### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>To determine whether an object variable's type is compatible with a specified type
 
-- 演算子を[is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md) `TypeOf`と組み合わせて使用して、... `TypeOf``Is`式。
+- Use the `TypeOf` operator in combination with the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) to test the object with a `TypeOf`...`Is` expression.
 
     ```vb
     If TypeOf objA Is System.Windows.Forms.Control Then
@@ -46,13 +46,13 @@ ms.locfileid: "68626572"
     End If
     ```
 
-    `TypeOf`...オブジェクトの`True`実行時の型が指定した型と互換性がある場合、式はを返します。 `Is`
+    The `TypeOf`...`Is` expression returns `True` if the object's run-time type is compatible with the specified type.
 
-    互換性の基準は、指定された型がクラス、構造体、またはインターフェイスのいずれであるかによって異なります。 一般に、オブジェクトがと同じ型であるか、指定された型を継承するか、または実装する場合、型は互換性があります。 詳細については、「 [TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)」を参照してください。
+    The criterion for compatibility depends on whether the specified type is a class, structure, or interface. In general, the types are compatible if the object is of the same type as, inherits from, or implements the specified type. For more information, see [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-指定された型を変数または式にすることはできません。 クラス、構造体、インターフェイスなど、定義された型の名前である必要があります。 これには、や`Integer` `String`などの組み込み型が含まれます。
+Note that the specified type cannot be a variable or expression. It must be the name of a defined type, such as a class, structure, or interface. This includes intrinsic types such as `Integer` and `String`.
 
 ## <a name="see-also"></a>関連項目
 

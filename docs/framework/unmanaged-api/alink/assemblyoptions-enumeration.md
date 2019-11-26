@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 84f83921-64cb-49e3-ac8b-22a0b77b18a8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 49e7b73559e8def890f8df8f596fbe8ad5bb5d3b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ed45e06297b77ea60304cdcfe1b08e97f9e4c085
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777485"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446590"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 列挙体
-アセンブリオプションを列挙します。  
+Enumerates the assembly options.  
   
 ## <a name="syntax"></a>構文  
   
@@ -58,31 +56,31 @@ typedef enum _AssemblyOptions {
   
 |フィールド|説明|  
 |-----------|-----------------|  
-|optAssemTitle|String-アセンブリのタイトルを表します。|  
-|optAssemDescription|String-アセンブリの説明が含まれています。|  
-|optAssemConfig|String-アセンブリ構成が含まれています。|  
-|optAssemOS|"DwOSPlatformId" としてエンコードされた文字列。|  
+|optAssemTitle|String - Represents the assembly title.|  
+|optAssemDescription|String - Contains the assembly description.|  
+|optAssemConfig|String - Contains the assembly configuration.|  
+|optAssemOS|String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|String-アセンブリロケールを格納します。|  
-|optAssemVersion|文字列エンコードの形式:"メジャー. マイナー. ビルド. リビジョン"。|  
-|optAssemCompany|文字列-会社を含みます。|  
-|optAssemProduct|文字列-製品名が含まれます。|  
-|optAssemProductVersion|文字列 (InformationalVersion とも呼ばれます)。|  
-|optAssemCopyright|文字列-著作権情報が含まれています。|  
-|optAssemTrademark|String-商標情報が含まれています。|  
-|optAssemKeyFile|文字列 (ファイル名)。|  
-|optAssemKeyName|文字列 (キー名)。|  
+|optAssemLocale|String - Contains the assembly locale.|  
+|optAssemVersion|String - Encoded as: "Major.Minor.Build.Revision".|  
+|optAssemCompany|String - Contains the company.|  
+|optAssemProduct|String - Contains the product name.|  
+|optAssemProductVersion|String (also known as InformationalVersion).|  
+|optAssemCopyright|String - Contains the copyright information.|  
+|optAssemTrademark|String - Contains the trademark information.|  
+|optAssemKeyFile|String (file name).|  
+|optAssemKeyName|String (The key name).|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (DelaySign とも呼ばれます)。|  
-|optAssemFileVersion|"Major. Minor. Build. Revision" としてエンコードされた文字列。 ProductVersion と同じです。|  
-|optAssemSatelliteVer|"Major. Minor. Build. Revision" としてエンコードされた文字列。|  
-|optlastassemoopt|要素数のカウンター。|  
+|optAssemHalfSign|Bool (Also known as DelaySign).|  
+|optAssemFileVersion|String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.|  
+|optAssemSatelliteVer|String - Encoded as "Major.Minor.Build.Revision".|  
+|optLastAssemOption|A counter of the number of elements.|  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** alink  
+## <a name="requirements"></a>［要件］  
+ **Header:** alink.h  
   
- **ライブラリ**: alink  
+ **Library**: alink.dll  
   
 ## <a name="see-also"></a>関連項目
 

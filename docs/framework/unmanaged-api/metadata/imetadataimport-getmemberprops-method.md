@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fcf32c4b27324ccc54eabbb248e8c9906cf693b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc5bbba2fa4a95955e52a2e083a2097178b5d96a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782359"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437521"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps メソッド
-名前、バイナリ シグネチャ、および相対仮想アドレスを含む、指定したメンバーの定義のメタデータに格納されている情報の取得、<xref:System.Type>指定したメタデータ トークンによって参照されるメンバー。 これは単純なヘルパー メソッド: 場合*mb*は、MethodDef **GetMethodProps**が呼び出されます場合*mb*は、の FieldDef **GetFieldProps** 。呼び出されます。 他の方法の詳細を参照してください。 
+Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token. This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called. See these other methods for details. 
   
 ## <a name="syntax"></a>構文  
   
@@ -49,50 +47,50 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mb`  
- [in]関連付けられているメタデータを取得するメンバーを参照するトークンです。  
+ [in] The token that references the member to get the associated metadata for.  
   
  `pClass`  
- [out]メンバーのクラスを表すメタデータ トークンへのポインター。  
+ [out] A pointer to the metadata token that represents the class of the member.  
   
  `szMember`  
- [out]メンバーの名前。  
+ [out] The name of the member.  
   
  `cchMember`  
- [in]ワイド文字のサイズ、`szMember`バッファー。  
+ [in] The size in wide characters of the `szMember` buffer.  
   
  `pchMember`  
- [out]返される名前のワイド文字単位のサイズ。  
+ [out] The size in wide characters of the returned name.  
   
  `pdwAttr`  
- [out]いずれかのフラグ値がメンバーに適用します。  
+ [out] Any flag values applied to the member.  
   
  `ppvSigBlob`  
- [out]メンバーのバイナリ メタデータ シグネチャへのポインター。  
+ [out] A pointer to the binary metadata signature of the member.  
   
  `pcbSigBlob`  
- [out]バイト サイズ`ppvSigBlob`します。  
+ [out] The size in bytes of `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out]メンバーの相対仮想アドレスへのポインター。  
+ [out] A pointer to the relative virtual address of the member.  
   
  `pdwImplFlags`  
- [out]メンバーに関連付けられているすべてメソッド実装フラグ。  
+ [out] Any method implementation flags associated with the member.  
   
  `pdwCPlusTypeFlag`  
- [out]マークするフラグを<xref:System.ValueType>します。 1 つは、`ELEMENT_TYPE_*`値。
+ [out] A flag that marks a <xref:System.ValueType>. It is one of the `ELEMENT_TYPE_*` values.
   
  `ppValue`  
- [out]このメンバーが返される定数文字列値。  
+ [out] A constant string value returned by this member.  
   
  `pcchValue`  
- [out]サイズの文字で`ppValue`、または場合は 0`ppValue`文字列を保持しません。  
+ [out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

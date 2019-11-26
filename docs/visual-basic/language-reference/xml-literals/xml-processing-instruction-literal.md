@@ -1,5 +1,5 @@
 ---
-title: XML 処理命令リテラル (Visual Basic)
+title: XML 処理命令リテラル
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlLiteralProcessingInstruction
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: c589d3f4ac6bbb9aa9b2b8f2535888bddbf9c934
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3602a81feae9287a77d060bb46f10eefee4fc05d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958477"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347046"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML 処理命令リテラル (Visual Basic)
-<xref:System.Xml.Linq.XProcessingInstruction>オブジェクトを表すリテラル。  
+A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,37 +26,37 @@ ms.locfileid: "69958477"
   
 ## <a name="parts"></a>指定項目  
  `<?`  
- 必須。 XML 処理命令リテラルの開始を示します。  
+ 必須です。 Denotes the start of the XML processing instruction literal.  
   
  `piName`  
- 必須。 処理命令が対象とするアプリケーションを示す名前。 "Xml" または "XML" で始めることはできません。  
+ 必須です。 Name indicating which application the processing instruction targets. Cannot begin with "xml" or "XML".  
   
  `piData`  
- 省略可能です。 `piName`が対象とするアプリケーションで XML ドキュメントを処理する方法を示す文字列。  
+ 省略可能です。 String indicating how the application targeted by `piName` should process the XML document.  
   
  `?>`  
- 必須。 処理命令の終了を示します。  
+ 必須です。 Denotes the end of the processing instruction.  
   
 ## <a name="return-value"></a>戻り値  
  <xref:System.Xml.Linq.XProcessingInstruction> オブジェクト。  
   
 ## <a name="remarks"></a>Remarks  
- XML 処理命令リテラルは、アプリケーションで XML ドキュメントを処理する方法を示します。 アプリケーションで XML ドキュメントが読み込まれると、アプリケーションは XML 処理命令を確認して、ドキュメントの処理方法を決定できます。 アプリケーションは、と`piName` `piData`の意味を解釈します。  
+ XML processing instruction literals indicate how applications should process an XML document. When an application loads an XML document, the application can check the XML processing instructions to determine how to process the document. The application interprets the meaning of `piName` and `piData`.  
   
- XML ドキュメントリテラルでは、XML 処理命令と同様の構文を使用します。 詳細については、「 [XML ドキュメントリテラル](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)」を参照してください。  
-  
-> [!NOTE]
-> Xml `piName` 1.0 仕様ではこれらの識別子が予約されているため、要素の先頭に文字列 "xml" または "xml" を指定することはできません。  
-  
- XML 処理命令リテラルを変数に割り当てるか、XML ドキュメントリテラルに含めることができます。  
+ The XML document literal uses syntax that is similar to that of the XML processing instruction. For more information, see [XML Document Literal](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
 > [!NOTE]
-> XML リテラルは、行連結文字を必要とせずに、複数の行にまたがることができます。 これにより、XML ドキュメントからコンテンツをコピーし、Visual Basic プログラムに直接貼り付けることができます。  
+> The `piName` element cannot begin with the strings "xml" or "XML", because the XML 1.0 specification reserves those identifiers.  
   
- Visual Basic コンパイラは、XML 処理命令のリテラルをコンストラクターの<xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A>呼び出しに変換します。  
+ You can assign an XML processing instruction literal to a variable or include it in an XML document literal.  
+  
+> [!NOTE]
+> An XML literal can span multiple lines without needing line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+  
+ The Visual Basic compiler converts the XML processing instruction literal to a call to the <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> constructor.  
   
 ## <a name="example"></a>例  
- 次の例では、XML ドキュメントのスタイルシートを識別する処理命令を作成します。  
+ The following example creates a processing instruction identifying a style-sheet for an XML document.  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   

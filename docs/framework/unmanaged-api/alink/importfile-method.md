@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: bcbe321f-b83a-4e9a-9f10-8d913e244dc9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7fee7a91de99e2db69609cbc7c73e22d85d045f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cda6d90865f8ad2b9d565f6a6378c35b03c65bf7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777062"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446994"
 ---
 # <a name="importfile-method"></a>ImportFile メソッド
-アセンブリとバインドされていないモジュールをインポートします。  
+Imports assemblies and unbound modules.  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,28 +39,28 @@ HRESULT ImportFile(
   
 ## <a name="parameters"></a>パラメーター  
  `pszFilename`  
- インポートするファイルの完全修飾名。  
+ Fully qualified name of file to be imported.  
   
  `pszTargetName`  
- アセンブリにリンクされているファイルの名前を変更するために使用できる省略可能な出力ファイル名です。  
+ Optional output file name that can be used to rename the file as it is linked into the assembly.  
   
  `fSmartImport`  
- TRUE の場合、ImportTypes が使用されます。それ以外の場合は、インポートを手動で実行する必要があります。  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `pImportToken`  
- 一意のファイル ID が格納されるトークンへのポインター。 ファイルには、アセンブリまたはファイルを指定できます。  
+ Pointer to token where a unique file ID will be stored. The file can be an assembly or a file.  
   
  `ppAssemblyScope`  
- [IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md)へのポインターを受け取ります。 ファイルがアセンブリでない場合は NULL を指定できます。  
+ Receives pointer to [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md). Can be NULL if the file is not an assembly.  
   
  `pdwCountOfScopes`  
- インポートされたファイルまたはスコープの数へのポインター。  
+ Pointer to the count of files and/or scopes that have been imported.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合、S_OK を返します。  
+ Returns S_OK if the method succeeds.  
   
-## <a name="requirements"></a>必要条件  
- Alink. h が必要です。  
+## <a name="requirements"></a>［要件］  
+ Requires alink.h  
   
 ## <a name="see-also"></a>関連項目
 

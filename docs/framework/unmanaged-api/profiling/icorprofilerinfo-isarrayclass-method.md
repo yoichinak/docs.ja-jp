@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5e00e7f39bc2f8c14db0676102a52089c7710bd6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57515ac4670b9b7e25bb496851347a62e1b246df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772252"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438711"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass メソッド
-指定したクラスが、配列クラスであるかどうかを判断します。  
+Determines whether the specified class is an array class.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,24 +37,24 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>パラメーター  
  `classId`  
- [in]調査するクラスの ID。  
+ [in] The ID of the class to be examined.  
   
  `pBaseElemType`  
- [out]配列要素の種類を示す CorElementType 列挙型の値へのポインター。  
+ [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
   
  `pBaseClassId`  
- [out]使用可能な場合は、配列の要素のクラス ID へのポインター。  
+ [out] A pointer to the class ID of the array elements, when available.  
   
  `pcRank`  
- [out]配列のランク (次元の数では、) を示す整数へのポインター。  
+ [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
   
 ## <a name="remarks"></a>Remarks  
- 指定したクラスが、配列クラスの場合、`IsArrayClass`メソッドは、S_OK HRESULT と null 以外の出力パラメーターに値を返します。 それ以外の場合、S_FALSE を返します。  
+ If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

@@ -1,5 +1,5 @@
 ---
-title: Out (ジェネリック修飾子) (Visual Basic)
+title: Out (ジェネリック修飾子)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.VarianceOut
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: fa14e83af16cd30a72ca1c165596fa9320842fce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0460015b44971fa638dba47183690ffcc89ca55f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053926"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351422"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (ジェネリック修飾子) (Visual Basic)
 
-ジェネリック型パラメーターの`Out`キーワードは、型が共変であるを指定します。
+For generic type parameters, the `Out` keyword specifies that the type is covariant.
 
 ## <a name="remarks"></a>Remarks
 
@@ -37,11 +37,11 @@ ms.locfileid: "62053926"
 
 - 型パラメーターがインターフェイス メソッドのジェネリック制約として使用されない。
 
-汎用デリゲートでは、型パラメーターを宣言できます共変場合、メソッドの戻り値の型としてのみ使用されメソッドの引数は使用されません。
+In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
 
 共変性および反変性は参照型ではサポートされますが、値の型ではサポートされません。
 
-Visual basic では、デリゲート型を指定せず共変のインターフェイスのイベントを宣言できません。 また、共変のインターフェイスは、クラス、列挙型、または構造体、入れ子にできませんが、インターフェイスを入れ子にできます。
+In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
 
 ## <a name="behavior"></a>動作
 
@@ -57,7 +57,7 @@ Visual basic では、デリゲート型を指定せず共変のインターフ�
 
 ## <a name="example"></a>例
 
-次の例では、共変の汎用デリゲートを宣言、インスタンス化、および呼び出す方法を示します。 また、デリゲート型の暗黙的な変換を使用する方法も示します。
+次の例では、共変の汎用デリゲートを宣言、インスタンス化、および呼び出す方法を示します。 It also shows how you can use implicit conversion for delegate types.
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 

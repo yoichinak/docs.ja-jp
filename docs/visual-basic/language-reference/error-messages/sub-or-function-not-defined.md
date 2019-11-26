@@ -1,34 +1,34 @@
 ---
-title: Sub または Function が定義されていません。(Visual Basic)
+title: Sub または Function が定義されていません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 3a56d5596c79900bb5818a6ed7f8736859b5ea15
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b81460eccb6be8baa2ea7bc68d0f80c9d16398e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593200"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349577"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub または Function が定義されていません。(Visual Basic)
-A`Sub`または`Function`呼び出すには定義する必要があります。 このエラーでは以下の原因が考えられます。  
+A `Sub` or `Function` must be defined in order to be called. このエラーでは以下の原因が考えられます。  
   
-- プロシージャ名のスペルが間違っています。  
+- Misspelling the procedure name.  
   
-- 別のプロジェクトからでは、そのプロジェクトへの参照を明示的に追加せず、プロシージャを呼び出そうとしている、**参照** ダイアログ ボックス。  
+- Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.  
   
-- 呼び出し元のプロシージャには表示されないプロシージャを指定します。  
+- Specifying a procedure that is not visible to the calling procedure.  
   
-- Windows ダイナミック リンク ライブラリ (DLL) のルーチンまたは指定したライブラリまたはコード リソース内にない Macintosh コード リソースのルーチンを宣言します。  
+- Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1. プロシージャ名のスペルが正しいことを確認します。  
+1. Make sure that the procedure name is spelled correctly.  
   
-2. 呼び出そうとプロシージャを含むプロジェクトの名前を検索、**参照** ダイアログ ボックス。 表示されない場合は、クリックして、**参照**検索ボタンをクリックします。 プロジェクト名の左側にチェック ボックスを選択し、クリックして**OK**します。  
+2. Find the name of the project containing the procedure you want to call in the **References** dialog box. If it does not appear, click the **Browse** button to search for it. Select the check box to the left of the project name, and then click **OK**.  
   
-3. ルーチンの名前を確認します。  
+3. Check the name of the routine.  
   
 ## <a name="see-also"></a>関連項目
 

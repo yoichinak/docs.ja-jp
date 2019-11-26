@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d91c3d89-8022-4a4c-a2a2-a8af2c387507
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 91c80566ed284403ad559583a1e4f1025eb09985
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0464c61e4ff01483e10fb5708d5ed4b5f5ed63d0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755319"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445240"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind メソッド
-取得ポータブル実行可能 (PE) でコードの性質を識別する値ファイルで、通常、DLL または EXE ファイルの現在のメタデータ スコープで定義されています。  
+Gets a value identifying the nature of the code in the portable executable (PE) file, typically a DLL or EXE file, that is defined in the current metadata scope.  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,26 +36,26 @@ HRESULT GetPEKind (
   
 ## <a name="parameters"></a>パラメーター  
  `pdwPEKind`  
- [out]値へのポインター、 [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) PE ファイルを表す列挙体。  
+ [out] A pointer to a value of the [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) enumeration that describes the PE file.  
   
  `pdwMachine`  
- [out]コンピューターのアーキテクチャを識別する値へのポインター。 使用可能な値は次のセクションを参照してください。  
+ [out] A pointer to a value that identifies the architecture of the machine. See the next section for possible values.  
   
 ## <a name="remarks"></a>Remarks  
- によって参照される値、`pdwMachine`パラメーターは、次のいずれかを指定できます。  
+ The value referenced by the `pdwMachine` parameter can be one of the following.  
   
-|値|コンピューターのアーキテクチャ|  
+|[値]|Machine architecture|  
 |-----------|--------------------------|  
 |IMAGE_FILE_MACHINE_I386<br /><br /> 0x014C|x86|  
 |IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel IPF|  
 |IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|X64|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

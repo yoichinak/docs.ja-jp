@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd5e9b64-b4a3-4ba6-9be6-ddb540f4ffcf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4141c79502dae89ec228e4e39da121615f292786
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4f8cfd912a3d6f66f5f2586a8942c7ce9bd52a63
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782969"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445891"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences メソッド
-指定したオブジェクトによって参照されているメモリ内のオブジェクトをプロファイラーに通知します。  
+Notifies the profiler about objects in memory that are being referenced by the specified object.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,30 +37,30 @@ HRESULT ObjectReferences(
   
 ## <a name="parameters"></a>パラメーター  
  `objectId`  
- [in]オブジェクトを参照しているオブジェクトの ID。  
+ [in] The ID of the object that is referencing objects.  
   
  `classId`  
- [in]指定したオブジェクトのインスタンスでは、クラスの ID。  
+ [in] The ID of the class that the specified object is an instance of.  
   
  `cObjectRefs`  
- [in]指定したオブジェクトによって参照されるオブジェクトの数 (つまり、内の要素の数、`objectRefIds`配列)。  
+ [in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).  
   
  `objectRefIds`  
- [in]によって参照されるオブジェクトの Id の配列`objectId`します。  
+ [in] An array of IDs of objects that are being referenced by `objectId`.  
   
 ## <a name="remarks"></a>Remarks  
- `ObjectReferences`ガベージ コレクションが完了した後のヒープの残りの各オブジェクトのメソッドが呼び出されます。 プロファイラーがこのコールバックからエラーを返した場合、プロファイリング サービスは、次のガベージ コレクションされるまでこのコールバックの呼び出しを中止します。  
+ The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed. If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.  
   
- `ObjectReferences`コールバックを組み合わせて使用することができます、 [icorprofilercallback::rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)ランタイムの完全なオブジェクト参照グラフを作成するコールバック。 共通言語ランタイム (CLR) により、それぞれのオブジェクト参照を一度だけ報告、`ObjectReferences`メソッド。  
+ The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime. The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.  
   
- によって返されるオブジェクト Id`ObjectReferences`コールバック自体の中に無効なため、オブジェクトを移動中にガベージ コレクションがある可能性があります。 そのため、プロファイラーは、中にオブジェクトを検査する試行する必要がありますいないを`ObjectReferences`呼び出します。 ときに[icorprofilercallback 2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)を呼び出すと、ガベージ コレクションが完了し、検査を安全に行うことができます。  
+ The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects. Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.  
   
- Null`ClassId`ことを示します`objectId`型をアンロードしていますがあります。  
+ A null `ClassId` indicates that `objectId` has a type that is unloading.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

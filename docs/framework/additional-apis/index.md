@@ -1,6 +1,6 @@
 ---
 title: 追加のクラス ライブラリと API
-ms.date: 10/17/2019
+ms.date: 11/19/2019
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -10,18 +10,18 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 4b47847e9d6e9424d4442d655c40a637383c7229
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e1e2af584c73b1c0b2548cdd3fcbd8517dfa330d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72847083"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429345"
 ---
 # <a name="additional-class-libraries-and-apis"></a>追加のクラス ライブラリと API
 
-.NET Framework は絶えず進化しています。 クロスプラットフォームの開発を改善し、新しい機能を早期に導入するために、新機能がアウトオブバンド (OOB) でリリースされます。 ここでは、ドキュメントが用意されている OOB プロジェクトの一覧を示します。  
+The .NET Framework is constantly evolving. To improve cross-platform development and introduce new functionality early, new features are released out of band (OOB). ここでは、ドキュメントが用意されている OOB プロジェクトの一覧を示します。  
   
-さらに、いくつかのライブラリは、特定のプラットフォームまたは .NET Framework の実装を対象にしています。 たとえば、<xref:System.Text.CodePagesEncodingProvider> クラスは、.NET Framework を使用して開発された UWP アプリでコードページエンコーディングを使用できるようにします。 ここでは、これらのライブラリの一覧も示します。  
+さらに、いくつかのライブラリは、特定のプラットフォームまたは .NET Framework の実装を対象にしています。 For example, the <xref:System.Text.CodePagesEncodingProvider> class makes code page encodings available to UWP apps developed using the .NET Framework. ここでは、これらのライブラリの一覧も示します。  
   
 ## <a name="oob-projects"></a>OOB プロジェクト
   
@@ -36,57 +36,61 @@ ms.locfileid: "72847083"
   
 | [プロジェクト] | 説明 |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | <xref:System.Text.EncodingProvider> クラスを拡張して、ユニバーサル Windows プラットフォームを対象とするアプリでコードページエンコーディングを使用できるようにします。 |  
+| <xref:System.Text.CodePagesEncodingProvider> | Extends the <xref:System.Text.EncodingProvider> class to make code page encodings available to apps that target the Universal Windows Platform. |  
   
 ## <a name="private-apis"></a>プライベート API  
 
 この API は製品インフラストラクチャをサポートします。コードから直接使用することはできません。  
   
-* [SmiOrderProperty プロパティの値です。](microsoft.sqlserver.server.smiorderproperty.item.md)
-* [PrepForRemoting メソッド](system.exception.prepforremoting.md)
-* [SqlTypes プロパティ (system.object のプロパティ)](system.data.sqltypes.sqlchars.stream.md)
-* [SqlTypes. SqlStreamChars コンストラクター](system.data.sqltypes.sqlstreamchars.-ctor.md)
-* [SqlTypes プロパティの値を検索します。](system.data.sqltypes.sqlstreamchars.canseek.md)
-* [SqlTypes プロパティの値を持つことができます。](system.data.sqltypes.sqlstreamchars.isnull.md)
-* [SqlTypes プロパティ ("system.string" プロパティ)](system.data.sqltypes.sqlstreamchars.length.md)
-* [SqlTypes メソッドを削除してください。](system.data.sqltypes.sqlstreamchars.close.md)
-* [SqlTypes メソッド (system.object の置換メソッド)](system.data.sqltypes.sqlstreamchars.dispose.md)
-* [System.string メソッド (SqlTypes...)](system.data.sqltypes.sqlstreamchars.flush.md)
-* [SqlTypes メソッドを参照してください。](system.data.sqltypes.sqlstreamchars.read.md)
-* [SqlTypes (システムのデータ. Seek メソッド)](system.data.sqltypes.sqlstreamchars.seek.md)
-* [SetLength メソッドを SqlTypes しています。](system.data.sqltypes.sqlstreamchars.setlength.md)
-* [SqlTypes メソッドを作成してください。](system.data.sqltypes.sqlstreamchars.write.md)
-* [System .Net. Connection クラス](connection.md)
-* [System .Net. Connection. m\_WriteList フィールド](m_writelist.md)
-* [システム .Net. ConnectionGroup クラス](connectiongroup.md)
-* [システム .Net. ConnectionGroup. m\_Connectiongroup フィールド](m_connectionlist.md)
-* [System .Net. ConnectStream. 接続プロパティ](system.net.connectstream.connection.md)
-* [CoreResponseData クラス](coreresponsedata.md)
-* [CoreResponseData. m\_ResponseHeaders フィールド](coreresponsedata_m_responseheaders.md)
-* [CoreResponseData\_の StatusCode フィールド](coreresponsedata_m_statuscode.md)
-* [HttpWebRequest AutoRedirects フィールドを\_します。](_autoredirects.md)
-* [HttpWebRequest.\_CoreResponse フィールド](httpwebrequest__coreresponse.md)
-* [HttpWebRequest.\_Httpresponse.cache フィールド](_httpresponse.md)
-* [System .Net. PooledStream. NetworkStream プロパティ](system.net.pooledstream.networkstream.md)
-* [System .Net. ServicePoint. m\_ConnectionGroupList フィールド](m_connectiongrouplist.md)
-* [System .Net. ServicePointManager. s\_Servicepointmanager フィールド](s_servicepointtable.md)
-* [TlsStream. m_Worker フィールド](system.net.tlsstream.m_worker.md)
-* [System .Net. Security. Sslstate プロパティ](system.net.security.sslstate.sslprotocol.md)
-* [IsDebuggerCheckDisabledForTestPurposes フィールドの\_システム ()](s-isdebuggercheckdisabledfortestpurposes-field.md)
-* [System.string クラス (DataMemberFieldEditor クラス)](datamemberfieldeditor-class.md)
-* [System.string クラス (DataMemberListEditor クラス)](datamemberlisteditor-class.md)
-* [System.xml. .Xml...。](system.xml.xmlreader.createsqlreader.md)
-* [adodb.recordset.接続インターフェイス](adodb.connection.md)
-* [adodb.recordset.EventReason 列挙型](adodb.eventreasonenum.md)
-* [adodb.recordset.EventStatus 列挙型](adodb.eventstatusenum.md)
-* [stdole.DISPPARAMS 構造体](stdole.dispparams.md)
-* [stdole.EXCEPINFO 構造体](stdole.excepinfo.md)
-* [stdole.IFont.Name プロパティ](stdole.ifont.name.md)
-* [stdole.IFontDisp インターフェイス](stdole.ifontdisp.md)
-* [stdole.IPicture. Handle プロパティ](stdole.ipicture.handle.md)
-* [stdole.IPictureDisp プロパティ](stdole.ipicturedisp.handle.md)
-* [stdole.StdFont インターフェイス](stdole.stdfont.md)
-* [stdole.StdPicture インターフェイス](stdole.stdpicture.md)
+* [Microsoft.SqlServer.Server.SmiOrderProperty.Item Property](microsoft.sqlserver.server.smiorderproperty.item.md)
+* [System.Exception.PrepForRemoting Method](system.exception.prepforremoting.md)
+* [System.Data.SqlTypes.SqlChars.Stream Property](system.data.sqltypes.sqlchars.stream.md)
+* [System.Data.SqlTypes.SqlStreamChars Constructor](system.data.sqltypes.sqlstreamchars.-ctor.md)
+* [System.Data.SqlTypes.SqlStreamChars.CanSeek Property](system.data.sqltypes.sqlstreamchars.canseek.md)
+* [System.Data.SqlTypes.SqlStreamChars.IsNull Property](system.data.sqltypes.sqlstreamchars.isnull.md)
+* [System.Data.SqlTypes.SqlStreamChars.Length Property](system.data.sqltypes.sqlstreamchars.length.md)
+* [System.Data.SqlTypes.SqlStreamChars.Close Method](system.data.sqltypes.sqlstreamchars.close.md)
+* [System.Data.SqlTypes.SqlStreamChars.Dispose Method](system.data.sqltypes.sqlstreamchars.dispose.md)
+* [System.Data.SqlTypes.SqlStreamChars.Flush Method](system.data.sqltypes.sqlstreamchars.flush.md)
+* [System.Data.SqlTypes.SqlStreamChars.Read Method](system.data.sqltypes.sqlstreamchars.read.md)
+* [System.Data.SqlTypes.SqlStreamChars.Seek Method](system.data.sqltypes.sqlstreamchars.seek.md)
+* [System.Data.SqlTypes.SqlStreamChars.SetLength Method](system.data.sqltypes.sqlstreamchars.setlength.md)
+* [System.Data.SqlTypes.SqlStreamChars.Write Method](system.data.sqltypes.sqlstreamchars.write.md)
+* [System.IO.MemoryStream.InternalGetOriginAndLength Method](system.io.memorystream.internalgetoriginandlength.md)
+* [System.Net.Connection Class](connection.md)
+* [System.Net.Connection.m\_WriteList Field](m_writelist.md)
+* [System.Net.ConnectionGroup Class](connectiongroup.md)
+* [System.Net.ConnectionGroup.m\_ConnectionList Field](m_connectionlist.md)
+* [System.Net.ConnectStream.Connection Property](system.net.connectstream.connection.md)
+* [System.Net.CoreResponseData Class](coreresponsedata.md)
+* [System.Net.CoreResponseData.m\_ResponseHeaders Field](coreresponsedata_m_responseheaders.md)
+* [System.Net.CoreResponseData.m\_StatusCode Field](coreresponsedata_m_statuscode.md)
+* [System.Net.HttpWebRequest.\_AutoRedirects Field](_autoredirects.md)
+* [System.Net.HttpWebRequest.\_CoreResponse Field](httpwebrequest__coreresponse.md)
+* [System.Net.HttpWebRequest.\_HttpResponse Field](_httpresponse.md)
+* [System.Net.PooledStream.NetworkStream Property](system.net.pooledstream.networkstream.md)
+* [System.Net.RtcState class](system.net.rtcstate.md)
+* [System.Net.ServicePoint.m\_ConnectionGroupList Field](m_connectiongrouplist.md)
+* [System.Net.ServicePointManager.s\_ServicePointTable Field](s_servicepointtable.md)
+* [System.Net.TlsStream.m_Worker Field](system.net.tlsstream.m_worker.md)
+* [System.Net.Security.SslState.SslProtocol Property](system.net.security.sslstate.sslprotocol.md)
+* [System.ServiceModel.Channels.Message.BodyToString Method](system.servicemodel.channels.message.bodytostring.md)
+* [System.ServiceModel.Channels.Message.WriteStartHeaders Method](system.servicemodel.channels.message.writestartheaders.md)
+* [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes Field](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [System.Windows.Forms.Design.DataMemberFieldEditor Class](datamemberfieldeditor-class.md)
+* [System.Windows.Forms.Design.DataMemberListEditor Class](datamemberlisteditor-class.md)
+* [System.Xml.XmlReader.CreateSqlReader Method](system.xml.xmlreader.createsqlreader.md)
+* [adodb.Connection Interface](adodb.connection.md)
+* [adodb.EventReason Enum](adodb.eventreasonenum.md)
+* [adodb.EventStatus Enum](adodb.eventstatusenum.md)
+* [stdole.DISPPARAMS Structure](stdole.dispparams.md)
+* [stdole.EXCEPINFO Structure](stdole.excepinfo.md)
+* [stdole.IFont.Name Property](stdole.ifont.name.md)
+* [stdole.IFontDisp Interface](stdole.ifontdisp.md)
+* [stdole.IPicture.Handle Property](stdole.ipicture.handle.md)
+* [stdole.IPictureDisp.Handle Property](stdole.ipicturedisp.handle.md)
+* [stdole.StdFont Interface](stdole.stdfont.md)
+* [stdole.StdPicture Interface](stdole.stdpicture.md)
   
 ## <a name="see-also"></a>関連項目
 

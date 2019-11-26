@@ -1,5 +1,5 @@
 ---
-title: プロシージャのオーバーロード (Visual Basic)
+title: プロシージャのオーバーロード
 ms.date: 07/20/2015
 helpviewer_keywords:
 - signatures
@@ -17,74 +17,74 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 91e76e8c051b1d6f8b6fc1604018a26b23b4945b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 41a971896fe726cbe9849fd46334910e7288afe0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663302"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352598"
 ---
 # <a name="procedure-overloading-visual-basic"></a>プロシージャのオーバーロード (Visual Basic)
 
-*オーバー ロード*プロシージャでは、異なるパラメーター リストが同じ名前を使用して、複数のバージョンを定義することを意味します。 オーバー ロードの目的では、名前で区別せずに密接に関連するいくつかのバージョンのプロシージャを定義します。 パラメーター リストをさまざまなこれを行います。
+*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name. You do this by varying the parameter list.
 
-## <a name="overloading-rules"></a>オーバー ロードの規則
+## <a name="overloading-rules"></a>Overloading Rules
 
-プロシージャをオーバー ロードする場合は、次の規則が適用されます。
+When you overload a procedure, the following rules apply:
 
-- **同じ名前**します。 各オーバー ロードされたバージョンでは、同じプロシージャ名を使用する必要があります。
+- **Same Name**. Each overloaded version must use the same procedure name.
 
-- **異なる署名**します。 各オーバー ロードされたバージョンは、次のうちの少なくとも 1 つにその他のすべてのオーバー ロードされたバージョンと異なる必要があります。
+- **Different Signature**. Each overloaded version must differ from all other overloaded versions in at least one of the following respects:
 
-  - パラメーターの数
+  - Number of parameters
 
-  - パラメーターの順序
+  - Order of the parameters
 
-  - パラメーターのデータ型
+  - Data types of the parameters
 
-  - (ジェネリック プロシージャの場合) の型パラメーターの数
+  - Number of type parameters (for a generic procedure)
 
-  - 戻り値の型 (変換演算子) の場合のみ
+  - Return type (only for a conversion operator)
 
-  プロシージャ名、と共に、上記の項目は、総称、*署名*プロシージャのです。 オーバー ロードされたプロシージャを呼び出すときに、コンパイラは、呼び出しが、定義を正しくと一致することを確認するのに署名を使用します。
+  Together with the procedure name, the preceding items are collectively called the *signature* of the procedure. When you call an overloaded procedure, the compiler uses the signature to check that the call correctly matches the definition.
 
-- **シグネチャの一部ではない項目**します。 シグネチャを変更せず、プロシージャをオーバー ロードすることはできません。 具体的には、プロシージャをオーバー ロードするだけで、次のものの 1 つ以上ことはできません。
+- **Items Not Part of Signature**. You cannot overload a procedure without varying the signature. In particular, you cannot overload a procedure by varying only one or more of the following items:
 
-  - プロシージャ修飾子キーワードなど`Public`、`Shared`と `Static`
+  - Procedure modifier keywords, such as `Public`, `Shared`, and `Static`
 
-  - パラメーターまたは型パラメーター名
+  - Parameter or type parameter names
 
-  - (ジェネリック プロシージャの場合) の型パラメーターの制約
+  - Type parameter constraints (for a generic procedure)
 
-  - パラメーター修飾子キーワードなど`ByRef`と `Optional`
+  - Parameter modifier keywords, such as `ByRef` and `Optional`
 
-  - 値を返すかどうか
+  - Whether it returns a value
 
-  - (変換演算子) を除く、戻り値のデータ型
+  - The data type of the return value (except for a conversion operator)
 
-  上記のリスト項目は、シグネチャの一部ではありません。 オーバー ロードされたバージョンを区別するために、それらを使用することはできませんは、そのシグネチャで区別する、オーバー ロードされたバージョン間で異なることができます。
+  The items in the preceding list are not part of the signature. Although you cannot use them to differentiate between overloaded versions, you can vary them among overloaded versions that are properly differentiated by their signatures.
 
-- **遅延バインディング引数**します。 として適切なパラメーターを宣言する必要があります、オーバー ロードされたバージョンに遅延バインディング オブジェクト変数を渡す場合は、<xref:System.Object>します。
+- **Late-Bound Arguments**. If you intend to pass a late bound object variable to an overloaded version, you must declare the appropriate parameter as <xref:System.Object>.
 
-## <a name="multiple-versions-of-a-procedure"></a>プロシージャの複数のバージョン
+## <a name="multiple-versions-of-a-procedure"></a>Multiple Versions of a Procedure
 
-作成すると、`Sub`に対して顧客のバランスでは、トランザクションをポストするプロシージャが名またはアカウントの数のいずれかを顧客に参照することができるようにします。 これに合わせて、2 つの異なる定義できます`Sub`手順については、次の例のように。
+Suppose you are writing a `Sub` procedure to post a transaction against a customer's balance, and you want to be able to refer to the customer either by name or by account number. To accommodate this, you can define two different `Sub` procedures, as in the following example:
 
 [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]
 
-### <a name="overloaded-versions"></a>オーバー ロードされたバージョン
+### <a name="overloaded-versions"></a>Overloaded Versions
 
-別の方法では、1 つのプロシージャ名をオーバー ロードします。 使用することができます、[オーバー ロード](../../../../visual-basic/language-reference/modifiers/overloads.md)キーワードを次のように各パラメーター一覧については、プロシージャのバージョンを定義します。
+An alternative is to overload a single procedure name. You can use the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword to define a version of the procedure for each parameter list, as follows:
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
-#### <a name="additional-overloads"></a>追加のオーバー ロード
+#### <a name="additional-overloads"></a>Additional Overloads
 
-いずれかでトランザクションの量をそのまま使用したい場合`Decimal`または`Single`、オーバー ロードすることがさらに`post`このバリエーションの 1 つを許可します。 これを実行した場合に上記の例ではオーバー ロードごとに、4 つ必要がある`Sub`4 つの異なるシグネチャを持つが、同じ名前のすべての手順。
+If you also wanted to accept a transaction amount in either `Decimal` or `Single`, you could further overload `post` to allow for this variation. If you did this to each of the overloads in the preceding example, you would have four `Sub` procedures, all with the same name but with four different signatures.
 
-## <a name="advantages-of-overloading"></a>オーバー ロードの利点
+## <a name="advantages-of-overloading"></a>Advantages of Overloading
 
-プロシージャのオーバー ロードの利点は、呼び出しの柔軟性です。 使用する、`post`プロシージャ宣言の前の例では、呼び出し元のコードは、いずれか、顧客 id を取得できます、`String`または`Integer`、いずれの場合も同じ手順を呼び出します。 次に例を示します。
+The advantage of overloading a procedure is in the flexibility of the call. To use the `post` procedure declared in the preceding example, the calling code can obtain the customer identification as either a `String` or an `Integer`, and then call the same procedure in either case. 次に例を示します。
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 
@@ -92,12 +92,12 @@ ms.locfileid: "67663302"
 
 ## <a name="see-also"></a>関連項目
 
-- [プロシージャ](./index.md)
-- [方法: 複数のバージョンのプロシージャを定義します。](./how-to-define-multiple-versions-of-a-procedure.md)
-- [方法: オーバー ロードされたプロシージャを呼び出す](./how-to-call-an-overloaded-procedure.md)
-- [方法: 省略可能なパラメーターを受け取るプロシージャをオーバー ロードします。](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [方法: 不特定数のパラメーターを受け取るプロシージャをオーバー ロードします。](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [手順](./index.md)
+- [方法 : プロシージャの複数のバージョンを定義する](./how-to-define-multiple-versions-of-a-procedure.md)
+- [方法 : オーバーロードされたプロシージャを呼び出す](./how-to-call-an-overloaded-procedure.md)
+- [方法 : 省略可能なパラメーターを受け取るプロシージャをオーバーロードする](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [方法 : 不特定数のパラメーターを受け取るプロシージャをオーバーロードする](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [プロシージャのオーバーロードに関する注意事項](./considerations-in-overloading-procedures.md)
 - [オーバーロードの解決](./overload-resolution.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [オーバーロード](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

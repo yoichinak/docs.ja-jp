@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c675ce7e-76e7-45ff-8273-3b6489a2767c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 26458e2512f331ff7a8c41868c99d092cfd30977
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7f04b5c100f1fd9c44e671b883fe469b16d33fa6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737234"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440141"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute メソッド
-その名前に基づくカスタム属性を取得します。 メタデータのカスタム属性とは異なり、これらのカスタム属性は、シンボル ストアに保持されます。  
+Gets a custom attribute based upon its name. Unlike metadata custom attributes, these custom attributes are held in the symbol store.  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,25 +39,25 @@ HRESULT GetSymAttribute (
   
 ## <a name="parameters"></a>パラメーター  
  `parent`  
- [in]属性を要求する対象のオブジェクトのメタデータ トークン。  
+ [in] The metadata token for the object for which the attribute is requested.  
   
  `name`  
- [in]取得する属性を示す変数へのポインター。  
+ [in] A pointer to the variable that indicates the attribute to retrieve.  
   
  `cBuffer`  
  [in] `buffer` 配列のサイズ。  
   
  `pcBuffer`  
- [out]属性データの長さを受け取る変数へのポインター。  
+ [out] A pointer to the variable that receives the length of the attribute data.  
   
  `buffer`  
- [out]属性のデータを受信する変数へのポインター。  
+ [out] A pointer to the variable that receives the attribute data.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

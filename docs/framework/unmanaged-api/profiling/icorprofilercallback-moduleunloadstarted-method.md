@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2debcaab-6005-4245-afdb-4268bb7e74bd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c99ddc66cca0a0d0083cfa19cfca34a1e557d4e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f0000e9b063022e828e52b9b940ec6f4e0ce4165
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769151"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445905"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted メソッド
-モジュールがアンロードされることをプロファイラーに通知します。  
+Notifies the profiler that a module is being unloaded.  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,15 +34,15 @@ HRESULT ModuleUnloadStarted(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleId`  
- [in]アンロードされているモジュールの ID。  
+ [in] The ID of the module that is being unloaded.  
   
 ## <a name="remarks"></a>Remarks  
- 値`moduleId`は後の情報の要求は無効です、`ModuleUnloadStarted`メソッドを返します。-これは、このモジュールに関する情報を取得するプロファイラーの最後のチャンスです。  
+ The value of `moduleId` is not valid for an information request after the `ModuleUnloadStarted` method returns — this is the profiler's last chance to get information about this module.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

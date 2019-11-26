@@ -6,69 +6,67 @@ helpviewer_keywords:
 - profiling global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], profiling
 ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ea65c06871d9762fa6daac229a568594b4c4479
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: d1d9b0a4c61ce7c3f8f9792046fb4bddf0fdfa05
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457477"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447438"
 ---
 # <a name="profiling-global-static-functions"></a>グローバル静的関数のプロファイル
-このセクションでは、プロファイル API で使用されるアンマネージ API 関数について説明します。  
+This section describes the unmanaged API functions that the profiling API uses.  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-## <a name="net-framework-version-1-profiling-functions"></a>.NET framework バージョン 1 のプロファイリング関数  
+## <a name="net-framework-version-1-profiling-functions"></a>.NET Framework version 1 Profiling Functions  
  [FunctionEnter 関数](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)  
- コントロールが関数に渡されることをプロファイラーに通知します。 .NET Framework 2.0 では、非推奨とされます。  
+ Notifies the profiler that control is being passed to a function. Deprecated in the .NET Framework 2.0.  
   
  [FunctionLeave 関数](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)  
- 関数が呼び出し元に戻ることをプロファイラーに通知します。 .NET Framework 2.0 では、非推奨とされます。  
+ Notifies the profiler that a function is about to return to the caller. Deprecated in the .NET Framework 2.0.  
   
  [FunctionTailcall 関数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md)  
- 現在実行中の関数が別の関数の末尾呼び出しを実行しようとすることをプロファイラーに通知します。 .NET Framework 2.0 では、非推奨とされます。  
+ Notifies the profiler that the currently executing function is about to perform a tail call to another function. Deprecated in the .NET Framework 2.0.  
   
-## <a name="net-framework-version-2-profiling-functions"></a>.NET framework バージョン 2 のプロファイリング関数  
+## <a name="net-framework-version-2-profiling-functions"></a>.NET Framework version 2 Profiling Functions  
  [FunctionIDMapper 関数](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)  
- 使用される代替 ID に、関数の指定した id 再割り当てされることをプロファイラーに通知、 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)、 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)、および[FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)その関数のコールバック。 プロファイラーがその関数のコールバックを受信するかどうかを指定するができます。  
+ Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), and [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) callbacks for that function. Also enables the profiler to indicate whether it wants to receive callbacks for that function  
   
  [FunctionEnter2 関数](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- コントロールは、関数に渡されると、フレームと関数の引数はスタックに関する情報を提供をプロファイラーに通知します。 .NET Framework 4 では、非推奨とされます。  
+ Notifies the profiler that control is being passed to a function and provides information about the stack frame and function arguments. Deprecated in the .NET Framework 4.  
   
  [FunctionLeave2 関数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- プロファイラーに通知関数が呼び出し元に戻るには、し、スタック フレームと関数の戻り値に関する情報を提供します。 .NET Framework 4 では、非推奨とされます。  
+ Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value. Deprecated in the .NET Framework 4.  
   
  [FunctionTailcall2 関数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- 現在実行中の関数が別の関数の末尾呼び出しを実行しようし、スタック フレームに関する情報を提供しますをプロファイラーに通知します。 .NET Framework 4 では、非推奨とされます。  
+ Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame. Deprecated in the .NET Framework 4.  
   
  [StackSnapshotCallback 関数](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
- によって開始されるスタック ウォーク中にスタックの各マネージ フレームとフレームの非管理対象の各実行に関する情報を使用してプロファイラーを提供、 [icorprofilerinfo 2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)メソッド。  
+ Provides the profiler with information about each managed frame and each run of unmanaged frames on the stack during a stack walk, which is initiated by the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
   
-## <a name="net-framework-version-4-profiling-functions"></a>.NET framework バージョン 4 のプロファイル関数  
+## <a name="net-framework-version-4-profiling-functions"></a>.NET Framework version 4 Profiling Functions  
  [FunctionIDMapper2 関数](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)  
- 使用される代替 ID に、関数の指定した id 再割り当てされることをプロファイラーに通知、 [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)、 [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)、および[FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)、または[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)、および[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)その関数のコールバック。 プロファイラーのコールバック関数を受信するかどうかを指定できます。  
+ Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), and [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), or[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) callbacks for that function. Also enables the profiler to indicate whether it wants to receive callbacks for that function.  
   
- `FunctionIDMapper2` 拡張、 [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)関数と、`clientData`パラメーターで、プロファイラーを使用してランタイム間であいまいさを解消します。  
+ `FunctionIDMapper2` extends the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function with a `clientData` parameter, which profilers may use to disambiguate among runtimes.  
   
  [FunctionEnter3 関数](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)  
- コントロールが関数に渡されることをプロファイラーに通知します。  
+ Notifies the profiler that control is being passed to a function.  
   
  [FunctionEnter3WithInfo 関数](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
- コントロールが、関数に渡されることをプロファイラーに通知しに渡すことができるハンドルを提供します[icorprofilerinfo 3::getfunctionenter3info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)スタック フレームと関数の引数を取得します。  
+ Notifies the profiler that control is being passed to a function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to retrieve the stack frame and function arguments.  
   
  [FunctionLeave3 関数](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)  
- コントロールが関数から返されることをプロファイラーに通知します。  
+ Notifies the profiler that control is being returned from a function.  
   
  [FunctionLeave3WithInfo 関数](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
- コントロールが、関数から返されることをプロファイラーに通知しに渡すことができるハンドルを提供します[icorprofilerinfo 3::getfunctionleave3info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md)スタック フレームおよび戻り値を取得します。  
+ Notifies the profiler that control is being returned from a function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) to retrieve the stack frame and the return value.  
   
  [FunctionTailcall3 関数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)  
- 現在実行中の関数が別の関数の末尾呼び出しを実行しようとすることをプロファイラーに通知します。  
+ Notifies the profiler that the currently executing function is about to perform a tail call to another function.  
   
  [FunctionTailcall3WithInfo 関数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
- 現在実行中の関数が別の関数の末尾呼び出しを実行しようとしているプロファイラーに通知しに渡すことができるハンドルを提供します[icorprofilerinfo 3::getfunctiontailcall3info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md)スタック フレームを取得します。  
+ Notifies the profiler that the currently executing function is about to perform a tail call to another function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionTailcall3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) to retrieve the stack frame.  
   
 ## <a name="related-sections"></a>関連項目  
  [プロファイルの概要](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  

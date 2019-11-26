@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 65063ad5-e0d9-4c01-8f8b-9a5950109fa6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e157c758b472ea89e21c1ed1ba8c17693c20a3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ce1af82631531f8f7105fbf92ba78db3cca437b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777798"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442331"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope メソッド
-既存のディスク上ファイルを開き、そのメタデータをメモリにマップされます。  
+Opens an existing, on-disk file and maps its metadata into memory.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,34 +38,34 @@ HRESULT OpenScope (
   
 ## <a name="parameters"></a>パラメーター  
  `szScope`  
- [in]開かれるファイルの名前。 ファイルには、共通言語ランタイム (CLR) メタデータを含める必要があります。  
+ [in] The name of the file to be opened. The file must contain common language runtime (CLR) metadata.  
   
  `dwOpenFlags`  
- [in]値、 [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)開くのためのモード (読み取り、書き込み、およびなど) を指定する列挙体。  
+ [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.  
   
  `riid`  
- [in]返される必要なメタデータ インターフェイスの IID呼び出し元は (読み取り) をインポートまたは (書き込み) メタデータを生成するインターフェイスを使用します。  
+ [in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.  
   
- 値`riid`"import"や「生成」インターフェイスのいずれかを指定する必要があります。 有効な値は、IID_IMetaDataEmit、IID_IMetaDataImport、IID_IMetaDataAssemblyEmit、IID_IMetaDataAssemblyImport、IID_IMetaDataEmit2、または IID_IMetaDataImport2 は。  
+ The value of `riid` must specify one of the "import" or "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.  
   
  `ppIUnk`  
- [out]返されたインターフェイスへのポインター。  
+ [out] The pointer to the returned interface.  
   
 ## <a name="remarks"></a>Remarks  
- メソッドを使用して、"import"インターフェイスのいずれかからまたは「生成」インターフェイスのいずれかからメソッドを使用する追加メタデータのメモリ内コピーを照会できます。  
+ The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.  
   
- ターゲット ファイルには、CLR メタデータが含まれていない場合、`OpenScope`メソッドは失敗します。  
+ If the target file does not contain CLR metadata, the `OpenScope` method will fail.  
   
- .NET Framework バージョン 1.0 と version 1.1 の場合、スコープが開かれてで`dwOpenFlags`ofRead に設定すると、資格が共有するためです。 つまり、以降の場合を呼び出す`OpenScope`以前、開かれたファイル名を渡し、既存のスコープが再利用し、データの構造体の新しいセットは作成されません。 ただし、この共有により問題が発生することができます。  
+ In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing. That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created. However, problems can arise due to this sharing.  
   
- .NET Framework version 2.0 でスコープが開かれた`dwOpenFlags`ofRead に設定が共有されなくなります。 共有するスコープを許可するのにには、ofReadOnly 値を使用します。 スコープを共有すると、「読み取り/書き込み」メタデータ インターフェイスを使用するクエリは失敗します。  
+ In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared. Use the ofReadOnly value to allow the scope to be shared. When a scope is shared, queries that use "read/write" metadata interfaces will fail.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

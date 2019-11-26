@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9cd301ac9d82dd49fc9680d2724714f267ed88ae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 202aed64de78675c79f998afb4483e0d19b811de
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763289"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445961"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo 関数
-現在実行中の関数が別の関数の末尾呼び出しを実行しようとしているプロファイラーに通知しに渡すことができるハンドルを提供します、 [icorprofilerinfo 3::getfunctiontailcall3info メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md)を取得しますスタック フレーム。  
+Notifies the profiler that the currently executing function is about to perform a tail call to another function, and provides a handle that can be passed to the [ICorProfilerInfo3::GetFunctionTailcall3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) to retrieve the stack frame.  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,30 +34,30 @@ void __stdcall FunctionTailcall3WithInfo(
   
 ## <a name="parameters"></a>パラメーター  
  `functionIDOrClientID`  
- [in]Tail の呼び出しを行うには、現在実行中の関数の識別子です。  
+ [in] The identifier of the currently executing function that is about to make a tail call.  
   
  `eltInfo`  
- [in] 特定のスタック フレームに関する情報を表す不透明ハンドル。 このハンドルは、渡されるコールバック中にのみ有効です。  
+ [in] 特定のスタック フレームに関する情報を表す不透明ハンドル。 This handle is valid only during the callback to which it is passed.  
   
 ## <a name="remarks"></a>Remarks  
- `FunctionTailcall3WithInfo`関数が呼び出され、により、プロファイラーを使用するコールバック メソッドをプロファイラーに通知、 [icorprofilerinfo 3::getfunctiontailcall3info メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md)スタック フレームを検査します。 スタック フレームの情報にアクセスする、`COR_PRF_ENABLE_FRAME_INFO`フラグを設定する必要があります。 プロファイラーは、使用、 [icorprofilerinfo::seteventmask メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)イベントのフラグを設定し、使用して、 [icorprofilerinfo 3::setenterleavefunctionhooks3withinfo メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)を登録する、この関数の実装です。  
+ The `FunctionTailcall3WithInfo` callback method notifies the profiler as functions are called, and allows the profiler to use the [ICorProfilerInfo3::GetFunctionTailcall3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) to inspect the stack frame. To access stack frame information, the `COR_PRF_ENABLE_FRAME_INFO` flag has to be set. The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags, and then use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) to register your implementation of this function.  
   
- `FunctionTailcall3WithInfo`関数は、コールバックは、これを実装する必要があります。 実装を使用する必要があります、`__declspec(naked)`ストレージ クラス属性。  
+ The `FunctionTailcall3WithInfo` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
   
- 実行エンジンは、この関数を呼び出す前に、レジスタを保存できません。  
+ The execution engine does not save any registers before calling this function.  
   
-- 項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- 実装`FunctionTailcall3WithInfo`をブロックしないでください、ガベージ コレクションは延期されます。 実装は、ガベージ コレクションをしないで、スタックはガベージ コレクションに適した状態ではない可能性が。 ランタイムがまでブロックはガベージ コレクションが試行されると、`FunctionTailcall3WithInfo`を返します。  
+ The implementation of `FunctionTailcall3WithInfo` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall3WithInfo` returns.  
   
- また、FunctionTailcall3WithInfo 関数がマネージ コードを呼び出していない、または任意の方法でマネージ メモリの割り当てが発生する必要があります。  
+ Also, the FunctionTailcall3WithInfo function must not call into managed code or cause a managed memory allocation in any way.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **ライブラリ:** CorGuids.lib  
   

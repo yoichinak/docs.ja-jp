@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 8c9a85e9f00027f597795eea55a9bbb0364790f8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7a38ee4ae74ca5b96dd082e752fc733eb85fca3f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69661237"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427027"
 ---
-# <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10:: GetLOHObjectSizeThreshold メソッド
+# <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10::GetLOHObjectSizeThreshold Method
 
-構成されたラージオブジェクトヒープ (LOH) のしきい値の値を取得します。
+Gets the value of the configured large object heap (LOH) threshold.
 
 ## <a name="syntax"></a>構文
 
@@ -31,22 +31,22 @@ HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 #### <a name="parameters"></a>パラメーター
 
 `pThreshold` \
-入出力ラージオブジェクトヒープのしきい値 (バイト単位)。
+[out] The large object heap threshold in bytes.
 
 ## <a name="remarks"></a>Remarks
 
-大きなオブジェクトヒープのしきい値より大きいオブジェクトは、大きなオブジェクトヒープに割り当てられます。 .Net Core 3.0 以降では、大きなオブジェクトヒープのしきい値`pThreshold`は構成可能で、アクティブなラージオブジェクトヒープのしきい値のサイズはバイト単位で格納されます。
+Objects larger than the large object heap threshold will be allocated on the large object heap. Starting with .NET Core 3.0 the large object heap threshold is configurable, `pThreshold` will contain the active large object heap threshold size in bytes.
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**・** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/windows-prerequisites.md#net-core-supported-operating-systems)」を参照してください。
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**ヘッダー:** Corprof.idl、Corprof.idl
+**ヘッダー** : CorProf.idl、CorProf.h
 
-**ライブラリ**CorGuids .lib
+**ライブラリ:** CorGuids.lib
 
-**.Net のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo10 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

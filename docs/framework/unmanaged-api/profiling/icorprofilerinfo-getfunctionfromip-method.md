@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f069802a-198f-46dd-9f09-4f77adffc9ba
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a9f6e63a1f24043ac502d139f735cada599df4f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 14b152474cd71dc3ff7b59c94b6ec4fa0cd7ce0c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780666"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439204"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a>ICorProfilerInfo::GetFunctionFromIP メソッド
-マネージ コードの命令ポインターのマップを`FunctionID`します。  
+Maps a managed code instruction pointer to a `FunctionID`.  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,15 +35,15 @@ HRESULT GetFunctionFromIP(
   
 ## <a name="parameters"></a>パラメーター  
  `ip`  
- [in]マネージ コードで命令ポインター。  
+ [in] The instruction pointer in managed code.  
   
  `pFunctionId`  
- [out]返される関数の id。  
+ [out] The returned function ID.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

@@ -1,5 +1,5 @@
 ---
-title: REM ステートメント (Visual Basic)
+title: REM ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.'
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: 729d0710d65c0cda750061e72309ced527bbcfe7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: bdde4beae242c3175b02cd2af252babb850416f6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582060"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346730"
 ---
 # <a name="rem-statement-visual-basic"></a>REM ステートメント (Visual Basic)
-プログラムのソースコードに説明の解説を含めるために使用されます。  
+Used to include explanatory remarks in the source code of a program.  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,18 +32,18 @@ REM comment
   
 ## <a name="parts"></a>指定項目  
  `comment`  
- 省略可能です。 追加するコメントのテキスト。 @No__t_0 キーワードと `comment` の間にはスペースが必要です。  
+ 省略可能です。 The text of any comment you want to include. A space is required between the `REM` keyword and `comment`.  
   
 ## <a name="remarks"></a>Remarks  
- @No__t_0 ステートメントを1行に単独で配置することも、別のステートメントの後の行に配置することもできます。 @No__t_0 ステートメントは、行の最後のステートメントである必要があります。 別のステートメントの後に続く場合、`REM` は、そのステートメントからスペースで区切る必要があります。  
+ You can put a `REM` statement alone on a line, or you can put it on a line following another statement. The `REM` statement must be the last statement on the line. If it follows another statement, the `REM` must be separated from that statement by a space.  
   
- @No__t_1 ではなく、単一引用符 (`'`) を使用できます。 これは、コメントが同じ行で別のステートメントに続くか、または行に単独で存在するかにかかわらず当てはまります。  
+ You can use a single quotation mark (`'`) instead of `REM`. This is true whether your comment follows another statement on the same line or sits alone on a line.  
   
 > [!NOTE]
-> 行連結シーケンス (`_`) を使用して、`REM` ステートメントを続行することはできません。 コメントが開始されると、コンパイラは文字が特別な意味を持つかどうかを検査しません。 複数行のコメントの場合は、各行に別の `REM` ステートメントまたはコメントシンボル (`'`) を使用します。  
+> You cannot continue a `REM` statement by using a line-continuation sequence (`_`). Once a comment begins, the compiler does not examine the characters for special meaning. For a multiple-line comment, use another `REM` statement or a comment symbol (`'`) on each line.  
   
 ## <a name="example"></a>例  
- 次の例は、プログラムに説明の解説を含めるために使用される `REM` ステートメントを示しています。 また、`REM` の代わりに単一引用符文字 (`'`) を使用する方法についても説明します。  
+ The following example illustrates the `REM` statement, which is used to include explanatory remarks in a program. It also shows the alternative of using the single quotation-mark character (`'`) instead of `REM`.  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   

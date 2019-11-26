@@ -9,20 +9,20 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 29b5c351031b799c148c1e4f525e7bdcf96480bb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 92671001733f525188ba3c7bcf3ed3c55615e301
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460770"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283789"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox のスタイルとテンプレート
-このトピックでは、<xref:System.Windows.Controls.ComboBox> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、<xref:System.Windows.Controls.ComboBox> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」を参照してください。  
   
 ## <a name="combobox-parts"></a>ComboBox パーツ  
  次の表に、<xref:System.Windows.Controls.ComboBox> コントロールの名前付きの部分を示します。  
   
-|パーツ|[種類]|説明|  
+|パーツ|[種類]|[説明]|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.ComboBox>のテキストを格納します。|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|コンボボックス内の項目を含むドロップダウン。|  
@@ -32,7 +32,7 @@ ms.locfileid: "73460770"
 ## <a name="combobox-states"></a>コンボボックスの状態  
  次の表に、<xref:System.Windows.Controls.ComboBox> コントロールの状態を示します。  
   
-|VisualState 名|VisualStateGroup 名|説明|  
+|VisualState 名|VisualStateGroup 名|[説明]|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
 |Disabled|CommonStates|コントロールが無効になっています。|  
@@ -52,7 +52,7 @@ ms.locfileid: "73460770"
 ## <a name="comboboxitem-states"></a>ComboBoxItem の状態  
  次の表に、<xref:System.Windows.Controls.ComboBoxItem> コントロールの状態を示します。  
   
-|VisualState 名|VisualStateGroup 名|説明|  
+|VisualState 名|VisualStateGroup 名|[説明]|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
 |Disabled|CommonStates|コントロールが無効になっています。|  
@@ -84,4 +84,4 @@ ms.locfileid: "73460770"
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
 - [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)
+- [コントロールのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)

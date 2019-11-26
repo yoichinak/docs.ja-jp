@@ -6,17 +6,17 @@ helpviewer_keywords:
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: 616bbab4d659cf00b1f730492e73ad6b847e3926
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 30ae83aa4b73f36afce1251387598ef9b61816d8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458001"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435164"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>UI オートメーション Invoke コントロール パターンの実装
 
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](https://go.microsoft.com/fwlink/?LinkID=156746)」を参照してください。
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
 
 このトピックでは、イベントおよびプロパティに関する情報など、 <xref:System.Windows.Automation.Provider.IInvokeProvider>の実装のためのガイドラインと規則について説明します。 その他のリファレンスへのリンクは、トピックの最後に記載します。
 
@@ -47,11 +47,11 @@ Invoke コントロール パターンを実装する場合は、次のガイド
 > [!NOTE]
 > マウス関連の副作用の結果として呼び出す以外にコントロールを呼び出す方法がない場合、そのような実装はユーザー補助に問題があるものと見なされます。
 
-- コントロールの呼び出しは、項目の選択とは異なります。 ただし、コントロールによっては、その呼び出しの副作用として、項目が選択された状態になることがあります。 たとえば、[マイドキュメント] フォルダー内の Microsoft Word 文書リスト項目を呼び出すと、両方とも項目が選択され、ドキュメントが開きます。
+- コントロールの呼び出しは、項目の選択とは異なります。 ただし、コントロールによっては、その呼び出しの副作用として、項目が選択された状態になることがあります。 For example, invoking a Microsoft Word document list item in the My Documents folder both selects the item and opens the document.
 
 - 要素は、呼び出されるとすぐに [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーから消える場合があります。 そのため、イベント コールバックで提供された要素に情報を要求すると失敗することがあります。 推奨される回避策は、キャッシュされた情報をプリフェッチすることです。
 
-- コントロールは、複数のコントロール パターンを実装できます。 たとえば、Microsoft Excel のツールバーの [塗りつぶしの色] コントロールには、<xref:System.Windows.Automation.InvokePattern> と <xref:System.Windows.Automation.ExpandCollapsePattern> の両方のコントロールパターンが実装されています。 <xref:System.Windows.Automation.ExpandCollapsePattern> はメニューを公開し、 <xref:System.Windows.Automation.InvokePattern> は選択された色でアクティブな選択内容を塗りつぶします。
+- コントロールは、複数のコントロール パターンを実装できます。 For example, the Fill Color control on the Microsoft Excel toolbar implements both the <xref:System.Windows.Automation.InvokePattern> and the <xref:System.Windows.Automation.ExpandCollapsePattern> control patterns. <xref:System.Windows.Automation.ExpandCollapsePattern> はメニューを公開し、 <xref:System.Windows.Automation.InvokePattern> は選択された色でアクティブな選択内容を塗りつぶします。
 
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
 
