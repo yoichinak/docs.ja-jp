@@ -1,62 +1,62 @@
 ---
-title: クエリ (Visual Basic)
+title: クエリ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a4a926d089a8bec1abaa47404f6c9112687e6df2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052145"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350453"
 ---
 # <a name="queries-visual-basic"></a>クエリ (Visual Basic)
-Visual Basic では、作成できます。 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 、コード内の式。  
+Visual Basic enables you to create [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- について説明します、`Aggregate`句は、1 つまたは複数の集計関数をコレクションに適用します。  
+ Describes the `Aggregate` clause, which applies one or more aggregate functions to a collection.  
   
  [Distinct 句](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- について説明します、`Distinct`句は、クエリの結果で、重複を排除する現在の範囲変数の値を制限します。  
+ Describes the `Distinct` clause, which restricts the values of the current range variable to eliminate duplicate values in query results.  
   
  [From 句](../../../visual-basic/language-reference/queries/from-clause.md)  
- について説明します、`From`句は、コレクションとクエリの範囲変数を指定します。  
+ Describes the `From` clause, which specifies a collection and a range variable for a query.  
   
  [Group By 句](../../../visual-basic/language-reference/queries/group-by-clause.md)  
- について説明します、`Group By`句では、クエリ結果の要素をグループ化し、各グループに集計関数を適用するために使用できます。  
+ Describes the `Group By` clause, which groups the elements of a query result and can be used to apply aggregate functions to each group.  
   
  [Group Join 句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- について説明します、`Group Join`句は、2 つのコレクションを 1 つの階層コレクションに結合します。  
+ Describes the `Group Join` clause, which combines two collections into a single hierarchical collection.  
   
  [Join 句](../../../visual-basic/language-reference/queries/join-clause.md)  
- について説明します、`Join`句は、2 つのコレクションを 1 つのコレクションに結合します。  
+ Describes the `Join` clause, which combines two collections into a single collection.  
   
  [Let 句](../../../visual-basic/language-reference/queries/let-clause.md)  
- について説明します、`Let`句では、値を計算し、クエリ内の新しい変数に割り当てられます。  
+ Describes the `Let` clause, which computes a value and assigns it to a new variable in the query.  
   
  [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- について説明します、`Order By`句は、クエリで列の並べ替え順序を指定します。  
+ Describes the `Order By` clause, which specifies the sort order for columns in a query.  
   
  [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)  
- について説明します、`Select`句は、クエリの範囲変数のセットを宣言します。  
+ Describes the `Select` clause, which declares a set of range variables for a query.  
   
  [Skip 句](../../../visual-basic/language-reference/queries/skip-clause.md)  
- について説明します、`Skip`句では、指定したコレクション内の要素数をバイパスし、残りの要素を返します。  
+ Describes the `Skip` clause, which bypasses a specified number of elements in a collection and then returns the remaining elements.  
   
  [Skip While 句](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- について説明します、`Skip While`句は、指定された条件があれば、コレクション内の要素をバイパスする`true`し、残りの要素を返します。  
+ Describes the `Skip While` clause, which bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements.  
   
  [Take 句](../../../visual-basic/language-reference/queries/take-clause.md)  
- について説明します、`Take`句は、コレクションの先頭から指定された数の連続する要素を返します。  
+ Describes the `Take` clause, which returns a specified number of contiguous elements from the start of a collection.  
   
  [Take While 句](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- について説明します、`Take While`句は、指定された条件があれば、コレクションの要素を含んだ`true`残りの要素をバイパスします。  
+ Describes the `Take While` clause, which includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.  
   
- [Where 句](../../../visual-basic/language-reference/queries/where-clause.md)  
- について説明します、`Where`句は、クエリのフィルター処理条件を指定します。  
+ [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)  
+ Describes the `Where` clause, which specifies a filtering condition for a query.  
   
 ## <a name="see-also"></a>関連項目
 

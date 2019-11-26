@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 02c789fd-16fc-48c6-9619-56e87e2a37ca
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a1c950e9a6e53e04cc0f2e52a140612562b32ff1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7e270dbfc63c03e77cb4b0694296e48c2035b8a6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776983"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445696"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2 メソッド
-アセンブリとバインドされていないモジュールをインポートします。 このメソッドは[Importfile メソッド](importfile-method.md)に似ていますが、インポートされるファイルがディスク上に存在しない場合でも機能します。  
+Imports assemblies and unbound modules. This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,34 +41,34 @@ HRESULT ImportFileEx2(
   
 ## <a name="parameters"></a>パラメーター  
  `pszFilename`  
- インポートするファイルの名前。  
+ Name of file to be imported.  
   
  `pszTargetName`  
- ターゲットファイルの名前 (省略可能)。  
+ Optional name of target file.  
   
  `pAssemblyScopeIn`  
- 省略可能なインポートスコープ[IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md)インターフェイス。  
+ Optional import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.  
   
  `fSmartImport`  
- TRUE の場合、ImportTypes が使用されます。それ以外の場合は、インポートを手動で実行する必要があります。  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `dwOpenFlags`  
- [Openscope メソッド](../metadata/imetadatadispenser-openscope-method.md)に渡されるフラグ。  
+ Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- アセンブリまたはファイルの一意の ID を受け取ります。  
+ Receives unique ID for the assembly or file.  
   
  `ppAssemblyScope`  
- アセンブリインポートスコープ[IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md)インターフェイスを受け取ります。 ファイルがアセンブリでない場合は NULL を指定できます。  
+ Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Can be NULL if the file is not an assembly.  
   
  `pdwCountOfScopes`  
- インポートされたファイルまたはスコープの数を受け取ります。  
+ Receives the number of files and/or scopes imported.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合、S_OK を返します。  
+ Returns S_OK if the method succeeds.  
   
-## <a name="requirements"></a>必要条件  
- Alink. h が必要です。  
+## <a name="requirements"></a>［要件］  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>関連項目
 

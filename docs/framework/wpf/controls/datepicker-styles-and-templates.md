@@ -9,20 +9,20 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: 323768b6221061d46446ab18f85555f5f7415e74
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 002d1c3271827239dcd3a319621f66fb5bc68d4e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460370"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283772"
 ---
 # <a name="datepicker-styles-and-templates"></a>DatePicker のスタイルとテンプレート
-このトピックでは、<xref:System.Windows.Controls.DatePicker> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、<xref:System.Windows.Controls.DatePicker> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」を参照してください。  
   
 ## <a name="datepicker-parts"></a>DatePicker パーツ  
  次の表に、<xref:System.Windows.Controls.DatePicker> コントロールの名前付きの部分を示します。  
   
-|パーツ|[種類]|説明|  
+|パーツ|[種類]|[説明]|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.Controls.Grid>|コントロールのルート。|  
 |PART_Button|<xref:System.Windows.Controls.Button>|<xref:System.Windows.Controls.Calendar>を開いて閉じるボタン。|  
@@ -32,7 +32,7 @@ ms.locfileid: "73460370"
 ## <a name="datepicker-states"></a>DatePicker の状態  
  次の表は、<xref:System.Windows.Controls.DatePicker> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|説明|  
+|VisualState 名|VisualStateGroup 名|[説明]|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
 |Disabled|CommonStates|<xref:System.Windows.Controls.DatePicker> が無効になっています。|  
@@ -43,7 +43,7 @@ ms.locfileid: "73460370"
 ## <a name="datepickertextbox-parts"></a>DatePickerTextBox パーツ  
  次の表に、<xref:System.Windows.Controls.Primitives.DatePickerTextBox> コントロールの名前付きの部分を示します。  
   
-|パーツ|[種類]|説明|  
+|パーツ|[種類]|[説明]|  
 |-|-|-|  
 |PART_Watermark|<xref:System.Windows.Controls.ContentControl>|<xref:System.Windows.Controls.DatePicker>の最初のテキストを含む要素。|  
 |PART_ContentElement|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.FrameworkElement>を含むことができるビジュアル要素。 <xref:System.Windows.Controls.TextBox> のテキストがこの要素に表示されます。|  
@@ -51,7 +51,7 @@ ms.locfileid: "73460370"
 ## <a name="datepickertextbox-states"></a>DatePickerTextBox の状態  
  次の表は、<xref:System.Windows.Controls.Primitives.DatePickerTextBox> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|説明|  
+|VisualState 名|VisualStateGroup 名|[説明]|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
 |Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.DatePickerTextBox> が無効になっています。|  
@@ -83,4 +83,4 @@ ms.locfileid: "73460370"
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
 - [コントロールのカスタマイズ](control-customization.md)
 - [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)
+- [コントロールのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)

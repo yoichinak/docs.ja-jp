@@ -1,5 +1,5 @@
 ---
-title: UInteger データ型 (Visual Basic)
+title: UInteger 型
 ms.date: 01/31/2018
 f1_keywords:
 - vb.uinteger
@@ -16,39 +16,39 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 1ae0cbd3a518bf863a3c57f50934837a486d2901
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ccff61608aed797734cb4f5ca0571d7ed73ba98b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583132"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343900"
 ---
 # <a name="uinteger-data-type"></a>UInteger データ型
 
-0 ~ 4294967295 の値の範囲内で、符号なし32ビット (4 バイト) の整数を保持します。
+Holds unsigned 32-bit (4-byte) integers ranging in value from 0 through 4,294,967,295.
 
 ## <a name="remarks"></a>Remarks
 
-@No__t_0 データ型は、最も効率的なデータ幅で最も大きな符号なしの値を提供します。
+The `UInteger` data type provides the largest unsigned value in the most efficient data width.
 
 `UInteger` の既定値は 0 です。
 
-## <a name="literal-assignments"></a>リテラルの代入
+## <a name="literal-assignments"></a>Literal assignments
 
-@No__t_0 変数は、10進リテラル、16進リテラル、8進数リテラル、または (Visual Basic 2017 で始まる) バイナリリテラルを割り当てることによって、宣言および初期化できます。 整数リテラルが `UInteger` の範囲外にある場合 (つまり、<xref:System.UInt32.MinValue?displayProperty=nameWithType> より小さいか、<xref:System.UInt32.MaxValue?displayProperty=nameWithType> より大きい場合)、コンパイル エラーが発生します。
+You can declare and initialize a `UInteger` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. 整数リテラルが `UInteger` の範囲外にある場合 (つまり、<xref:System.UInt32.MinValue?displayProperty=nameWithType> より小さいか、<xref:System.UInt32.MaxValue?displayProperty=nameWithType> より大きい場合)、コンパイル エラーが発生します。
 
 次の例では、整数 3,000,000,000 を 10 進リテラル、16 進リテラル、バイナリ リテラルで表したものが、`UInteger` 値に割り当てられています。
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UInt)]
 
 > [!NOTE]
-> プレフィックス `&h` または `&H` を使用して、16進リテラル、プレフィックス `&b` または `&B` がバイナリリテラルを示すようにし、プレフィックス `&o` または `&O` を使用して8進数リテラルを表します。 10 進リテラルには、プレフィックスはありません。
+> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. 10 進リテラルには、プレフィックスはありません。
 
-Visual Basic 2017 以降では、次の例に示すように、アンダースコア文字 (`_`) を桁区切り記号として使用して、読みやすくすることもできます。
+Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]
 
-Visual Basic 15.5 以降では、アンダースコア文字 (`_`) をプレフィックスと16進数、バイナリ、または8進数の間の先頭の区切り記号として使用することもできます。 (例:
+Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. (例:
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -56,7 +56,7 @@ Dim number As UInteger = &H_0F8C_0326
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-数値リテラルには、次の例に示すように、`UInteger` データ型を示す `UI` または `ui`[型の文字](../../programming-guide/language-features/data-types/type-characters.md)を含めることもできます。
+Numeric literals can also include the `UI` or `ui` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `UInteger` data type, as the following example shows.
 
 ```vb
 Dim number = &H_0FAC_14D7ui
@@ -64,19 +64,19 @@ Dim number = &H_0FAC_14D7ui
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-@No__t_0 データ型と `Integer` データ型により、32ビットプロセッサで最適なパフォーマンスが得られます。これは、使用するビット数が少ない場合でも、より少ない整数型 (`UShort`、`Short`、`Byte`、および `SByte`) が使用されるためです。、格納、およびフェッチを行います。
+The `UInteger` and `Integer` data types provide optimal performance on a 32-bit processor, because the smaller integer types (`UShort`, `Short`, `Byte`, and `SByte`), even though they use fewer bits, take more time to load, store, and fetch.
 
-- **負の数値。** @No__t_0 は符号なしの型であるため、負の数を表すことはできません。 @No__t_1 型に評価される式に対して単項マイナス記号 (`-`) 演算子を使用すると、Visual Basic 式が最初に `Long` に変換されます。
+- **Negative Numbers.** Because `UInteger` is an unsigned type, it cannot represent a negative number. If you use the unary minus (`-`) operator on an expression that evaluates to type `UInteger`, Visual Basic converts the expression to `Long` first.
 
-- **CLS 準拠。** @No__t_0 のデータ型は[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(cls) の一部ではないため、cls 準拠のコードはそれを使用するコンポーネントを使用できません。
+- **CLS Compliance.** The `UInteger` data type is not part of the [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), so CLS-compliant code cannot consume a component that uses it.
 
-- **相互運用に関する考慮事項。** .NET Framework 用に作成されていないコンポーネント (オートメーションや COM オブジェクトなど) とやり取りしている場合は、`uint` などの型が他の環境で異なるデータ幅 (16 ビット) を持つ可能性があることに注意してください。 このようなコンポーネントに16ビットの引数を渡す場合は、マネージ Visual Basic コードで `UInteger` ではなく、`UShort` として宣言します。
+- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that types such as `uint` can have a different data width (16 bits) in other environments. If you are passing a 16-bit argument to such a component, declare it as `UShort` instead of `UInteger` in your managed Visual Basic code.
 
-- **広げ.** @No__t_0 のデータ型は、`Long`、`ULong`、`Decimal`、`Single`、および `Double` に拡大変換されます。 つまり、<xref:System.OverflowException?displayProperty=nameWithType> エラーが発生することなく、`UInteger` をこれらの型のいずれかに変換できます。
+- **Widening.** The `UInteger` data type widens to `Long`, `ULong`, `Decimal`, `Single`, and `Double`. This means you can convert `UInteger` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-- **文字を入力します。** リテラルに `UI` リテラル型文字を追加すると、`UInteger` データ型に強制されます。 `UInteger` に識別子の型文字がありません。
+- **Type Characters.** Appending the literal type characters `UI` to a literal forces it to the `UInteger` data type. `UInteger` has no identifier type character.
 
-- **フレームワークの種類。** .NET Framework において対応する型は、<xref:System.UInt32?displayProperty=nameWithType> 構造体です。
+- **Framework Type.** .NET Framework において対応する型は、<xref:System.UInt32?displayProperty=nameWithType> 構造体です。
 
 ## <a name="see-also"></a>関連項目
 

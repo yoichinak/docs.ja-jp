@@ -1,19 +1,19 @@
 ---
-title: 文字列関数 (Visual Basic)
+title: 文字列関数
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 0002a3dd19b493f690f91f9b6c68a9241e6d6ea0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 2608159e28ee63a0fdb10c82054fd65efe79ac62
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582999"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349979"
 ---
 # <a name="string-functions-visual-basic"></a>文字列関数 (Visual Basic)
 
-次の表は、文字列を検索して操作するために <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> クラスで提供 Visual Basic れる関数を示しています。 これらは Visual Basic 組み込み関数と見なすことができます。つまり、例に示すように、クラスの明示的なメンバーとして呼び出す必要はありません。 @No__t_0 クラスでは、追加のメソッド、および場合によっては補完メソッドを使用できます。
+The following table lists the functions that Visual Basic provides in the <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> class to search and manipulate strings. They can be regarded as Visual Basic intrinsic functions; that is, you do not have to call them as explicit members of a class, as the examples show. Additional methods, and in some cases complementary methods, are available in the <xref:System.String?displayProperty=nameWithType> class.
 
 |.NET Framework メソッド|説明|
 |---------------------------|-----------------|
@@ -47,38 +47,38 @@ ms.locfileid: "72582999"
 |<xref:Microsoft.VisualBasic.Strings.Trim%2A>|指定された文字列から、先頭または末尾の空白を除いたコピーを格納する文字列を返します。|
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|指定された文字列を大文字に変換して文字列型または char 型の値を返します。|
 
-[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)ステートメントを使用すると、システムのロケール (`Text`) または文字の内部バイナリ表現 (`Binary`) によって決定される、大文字と小文字を区別しないテキストの並べ替え順序を使用して文字列を比較するかどうかを設定できます。 既定のテキスト比較方法は `Binary` です。
+You can use the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) statement to set whether strings are compared using a case-insensitive text sort order determined by your system's locale (`Text`) or by the internal binary representations of the characters (`Binary`). 既定のテキスト比較方法は `Binary` です。
 
-## <a name="example-ucase"></a>例: UCase
+## <a name="example-ucase"></a>Example: UCase
 
 `UCase` 関数を使って文字列を大文字に変換して返す例を次に示します。
 [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]
 
-## <a name="example-ltrim"></a>例: LTrim
+## <a name="example-ltrim"></a>Example: LTrim
 
 この例では、文字列変数から、`LTrim` 関数を使って先頭の空白を除去し、`RTrim` 関数を使って後続の空白を除去しています。 また、`Trim` 関数を使って両方のタイプの空白を除去しています。
 
 [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]
 
-## <a name="example-mid"></a>例: Mid
+## <a name="example-mid"></a>Example: Mid
 
 `Mid` 関数を使って、文字列から指定された字数を返す例を次に示します。
 
 [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]
 
-## <a name="example-len"></a>例: Len
+## <a name="example-len"></a>Example: Len
 
 `Len` 関数を使って文字列の文字数を返す例を次に示します。
 
 [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]
 
-## <a name="example-instr"></a>例: InStr
+## <a name="example-instr"></a>Example: InStr
 
 `InStr` 関数を使って、ある文字列の中から指定された文字列を検索し、最初に見つかった文字位置を返す例を次に示します。
 
 [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]
 
-## <a name="example-format"></a>例: 形式
+## <a name="example-format"></a>Example: Format
 
 `Format` の書式指定とユーザー定義の書式指定の両方を使って値の書式を指定する、`String` 関数のさまざまな使用例を次に示します。 日付の区切り記号 (`/`)、時刻の区切り記号 (`:`)、および午前/午後を示す文字 (`t` および `tt`) について、システムで実際に表示される書式は、コードが使用するロケール設定によって決まります。 時刻と日付を開発環境で表示する場合は、コード ロケールの短い時刻書式と短い日付書式が使用されます。
 
@@ -92,4 +92,4 @@ ms.locfileid: "72582999"
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)
 - [文字列操作の概要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
-- [System.string クラスのメソッド](xref:System.String#methods)
+- [System.String class methods](xref:System.String#methods)

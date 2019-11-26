@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ea9d9af-8709-4a46-872b-f54d9e840088
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2e11886917964134a2530ae8484dba3cde5e7b61
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da2906187c02bbc7a35c937663e3fc7db1ebda13
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759378"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433891"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces メソッド
-この名前空間の子を取得します。  
+Gets the children of this namespace.  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,19 +37,19 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>パラメーター  
  `cNameSpaces`  
- [in]A`ULONG32`のサイズを示す、`namespaces`配列。  
+ [in] A `ULONG32` that indicates the size of the `namespaces` array.  
   
  `pcNameSpaces`  
- [out]ポインターを`ULONG32`名前空間の格納に必要なバッファーの文字のサイズを受け取る。  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespaces.  
   
  `namespaces`  
- [out]名前空間を格納しているバッファーへのポインター。  
+ [out] A pointer to the buffer that contains the namespaces.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

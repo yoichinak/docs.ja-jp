@@ -1,5 +1,5 @@
 ---
-title: '方法: 1つの変数に複数の値を保持する (Visual Basic)'
+title: '方法 : 変数内で複数の値を保持する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,36 +11,36 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 8d07a34a98303f9d220dba0a3c955120b421340e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d452fbf35f9d200348234b38c40f8636f0ec4b4e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054194"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350014"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>方法: 1つの変数に複数の値を保持する (Visual Basic)
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>方法: 変数内で複数の値を保持する (Visual Basic)
 
-*複合データ型*として宣言すると、変数に複数の値が保持されます。
+A variable holds more than one value if you declare it to be of a *composite data type*.
 
-[複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)には、構造体、配列、およびクラスが含まれます。 複合データ型の変数は、基本データ型とその他の複合型の組み合わせを保持できます。 構造体とクラスは、データだけでなくコードも保持できます。
+[Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) include structures, arrays, and classes. A variable of a composite data type can hold a combination of elementary data types and other composite types. Structures and classes can hold code as well as data.
 
-## <a name="to-hold-more-than-one-value-in-a-variable"></a>変数に複数の値を格納するには
+## <a name="to-hold-more-than-one-value-in-a-variable"></a>To hold more than one value in a variable
 
-1. 変数に使用する複合データ型を決定します。
+1. Determine what composite data type you want to use for your variable.
 
-2. 複合データ型がまだ定義されていない場合は、変数で使用できるように定義します。
+2. If the composite data type is not already defined, define it so that your variable can use it.
 
-    - Structure[ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)を使用して構造体を定義します。
+    - Define a structure with a [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).
 
-    - [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)を使用して配列を定義します。
+    - Define an array with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
 
-    - Class[ステートメント](../../../../visual-basic/language-reference/statements/class-statement.md)を使用してクラスを定義します。
+    - Define a class with a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).
 
-3. ステートメントを`Dim`使用して変数を宣言します。
+3. Declare your variable with a `Dim` statement.
 
-4. 変数名`As`の後に句を指定します。
+4. Follow the variable name with an `As` clause.
 
-5. キーワードの`As`後に、適切な複合データ型の名前を入力します。
+5. Follow the `As` keyword with the name of the appropriate composite data type.
 
 ## <a name="see-also"></a>関連項目
 

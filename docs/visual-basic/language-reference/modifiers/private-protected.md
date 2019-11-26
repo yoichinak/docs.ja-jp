@@ -1,23 +1,23 @@
 ---
-title: Private Protected (Visual Basic)
+title: Private Protected
 ms.date: 05/10/2018
 helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
-ms.openlocfilehash: fea43558ac0fe8181f2786b69f2621346d446b2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 265141f77f4a61a61414a07214830feaa8a1ab05
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920498"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351340"
 ---
 # <a name="private-protected-visual-basic"></a>Private Protected (Visual Basic)
 
-キーワード組み合わせ `Private Protected` はメンバー アクセス修飾子です。 A`Private Protected`メンバーがアクセスできるは、外側のクラスから派生した型と、含まれるクラスのすべてのメンバーによっては、含んでいるアセンブリが見つかった場合にのみです。
+キーワード組み合わせ `Private Protected` はメンバー アクセス修飾子です。 A `Private Protected` member is accessible by all members in its containing class, as well as by types derived from the containing class, but only if they are found in its containing assembly.
 
-指定できます`Private Protected`クラスのメンバーにのみ適用することはできません`Private Protected`構造体のメンバーに構造体は継承できないためです。
+You can specify `Private Protected` only on members of classes; you cannot apply `Private Protected` to members of a structure because structures cannot be inherited.
 
-`Private Protected`アクセス修飾子は Visual Basic 15.5 以降でサポートされています。 これを使用する Visual Basic プロジェクトに次の要素を追加することができます (\*.vbproj) ファイル。 Visual Basic 15.5 いる限り、またはそれ以降は、システムにインストールされているが、最新バージョンの Visual Basic コンパイラでサポートされているすべての言語機能を活用することができます。
+The `Private Protected` access modifier is supported by Visual Basic 15.5 and later. To use it, you can add the following element to your Visual Basic project (\*.vbproj) file. As long as Visual Basic 15.5 or later is installed on your system, it lets you take advantage of all the language features supported by the latest version of the Visual Basic compiler:
 
 ```xml
 <PropertyGroup>
@@ -25,44 +25,44 @@ ms.locfileid: "61920498"
 </PropertyGroup>
 ```
 
-詳細については、次を参照してください。 [Visual Basic の言語バージョンを設定](../../language-reference/configure-language-version.md)します。
+For more information see [setting the Visual Basic language version](../../language-reference/configure-language-version.md).
 
 > [!NOTE]
-> Visual Studio での F1 ヘルプを選択する`private protected`のいずれかのヘルプを提供します。[プライベート](private.md)または[保護](protected.md)します。 IDE では、複合語ではなく、カーソルの下の 1 つのトークンを取得します。
+> In Visual Studio, selecting F1 help on `private protected` provides help for either [private](private.md) or [protected](protected.md). The IDE picks the single token under the cursor rather than the compound word.
 
 ## <a name="rules"></a>ルール
 
-- **宣言コンテキスト。** 使用することができます`Private Protected`クラス レベルでのみです。 これは、意味の宣言のコンテキストを`Protected`要素は、クラスでなければなりませんし、ソース ファイル、名前空間、インターフェイス、モジュール、構造体、またはプロシージャにすることはできません。
+- **Declaration Context.** You can use `Private Protected` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
 
 ## <a name="behavior"></a>動作
 
-- **アクセス レベルです。** クラスのすべてのコードは、その要素にアクセスできます。 基本クラスから派生し、同じアセンブリに含まれているすべてのクラスでコードがすべてにアクセスできる、`Private Protected`基底クラスの要素。 基本クラスを基底クラスから派生し、別のアセンブリに含まれているすべてのクラスでのコードでアクセスできませんただし、`Private Protected`要素。
+- **Access Level.** All code in a class can access its elements. Code in any class that derives from a base class and is contained in the same assembly can access all the `Private Protected` elements of the base class. However, code in any class that derives from a base class and is contained in a different assembly can't access the base class `Private Protected` elements.
 
-- **アクセス修飾子。** アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 アクセス修飾子の比較は、次を参照してください。[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。
+- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
 `Private Protected` 修飾子は、次のコンテキストで使用できます。
 
-- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)の入れ子になったクラス
+- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) of a nested class
 
 - [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)
 
 - [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
 
-- [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)デリゲートのクラスで入れ子になった
+- [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) of a delegate nested in a class
 
 - [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
 
-- [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)列挙型のクラスで入れ子になった
+- [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md) of an enumeration nested in a class
 
 - [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
 
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 
-- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)インターフェイスのクラスで入れ子になった
+- [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md) of an interface nested in a class
 
 - [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
 
-- [ステートメントの構造体](../../../visual-basic/language-reference/statements/structure-statement.md)クラスで入れ子になった構造体
+- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) of a structure nested in a class
 
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
 
@@ -73,7 +73,7 @@ ms.locfileid: "61920498"
 - [Friend](friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Protected Friend](./protected-friend.md)
-- [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

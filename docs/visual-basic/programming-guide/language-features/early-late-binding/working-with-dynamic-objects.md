@@ -1,22 +1,22 @@
 ---
-title: 動的オブジェクトの使用 (Visual Basic)
+title: 動的オブジェクトの使用
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic objects [Visual Basic]
 ms.assetid: bdee2a00-07ff-46f9-86dd-fdac9b99cc97
-ms.openlocfilehash: ea7d7aae1cd79a0243a9c721b5e3958fba82f84f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20d007fb48e1db352bab6d8e25d2e60e02554732
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973187"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345175"
 ---
 # <a name="working-with-dynamic-objects-visual-basic"></a>動的オブジェクトの使用 (Visual Basic)
-動的オブジェクトが他にも別の方法を提供、`Object`実行時にオブジェクトに遅延バインディングの種類。 動的オブジェクトで定義されている動的インターフェイスを使用して実行時のプロパティやメソッドなどのメンバーを公開します、<xref:System.Dynamic>名前空間。 クラスを使用することができます、<xref:System.Dynamic>名前空間を静的な型または形式が一致しないデータ構造を操作するオブジェクトを作成します。 IronPython や IronRuby などの動的言語で定義されている動的オブジェクトを使用することもできます。 動的オブジェクトを作成したり、動的言語で定義されている動的オブジェクトを使用する方法を示す例については、次を参照してください。[チュートリアル。動的オブジェクトの作成と](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)、 <xref:System.Dynamic.DynamicObject>、または<xref:System.Dynamic.ExpandoObject>します。  
+Dynamic objects provide another way, other than the `Object` type, to late bind to an object at run time. A dynamic object exposes members such as properties and methods at run time by using dynamic interfaces that are defined in the <xref:System.Dynamic> namespace. You can use the classes in the <xref:System.Dynamic> namespace to create objects that work with data structures that do not match a static type or format. You can also use the dynamic objects that are defined in dynamic languages such as IronPython and IronRuby. For examples that show how to create dynamic objects or use a dynamic object defined in a dynamic language, see [Walkthrough: Creating and Using Dynamic Objects](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md), <xref:System.Dynamic.DynamicObject>, or <xref:System.Dynamic.ExpandoObject>.  
   
- Visual Basic のオブジェクトへのバインド、動的言語ランタイムと動的言語 IronPython や IronRuby などを使用して、<xref:System.Dynamic.IDynamicMetaObjectProvider>インターフェイス。 実装するクラスの例については、`IDynamicMetaObjectProvider`インターフェイスは、<xref:System.Dynamic.DynamicObject>と<xref:System.Dynamic.ExpandoObject>クラス。  
+ Visual Basic binds to objects from the dynamic language runtime and dynamic languages such as IronPython and IronRuby by using the <xref:System.Dynamic.IDynamicMetaObjectProvider> interface. Examples of classes that implement the `IDynamicMetaObjectProvider` interface are the <xref:System.Dynamic.DynamicObject> and <xref:System.Dynamic.ExpandoObject> classes.  
   
- 実装するオブジェクトを遅延バインディング呼び出しが行われたかどうか、`IDynamicMetaObjectProvider`インターフェイス、そのインターフェイスを使用して、動的オブジェクトを Visual Basic をバインドします。 実装しないオブジェクトを遅延バインディング呼び出しが行われた場合、`IDynamicMetaObjectProvider`インターフェイス、または場合への呼び出し、`IDynamicMetaObjectProvider`インターフェイスが失敗した場合、Visual Basic が Visual Basic ランタイムの遅延バインディング機能を使用して、オブジェクトにバインドします。  
+ If a late-bound call is made to an object that implements the `IDynamicMetaObjectProvider` interface, Visual Basic binds to the dynamic object by using that interface. If a late-bound call is made to an object that does not implement the `IDynamicMetaObjectProvider` interface, or if the call to the `IDynamicMetaObjectProvider` interface fails, Visual Basic binds to the object by using the late-binding capabilities of the Visual Basic runtime.  
   
 ## <a name="see-also"></a>関連項目
 

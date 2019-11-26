@@ -1,5 +1,5 @@
 ---
-title: キーワード (Visual Basic)
+title: キーワード
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reserved keywords, Visual Basic
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 08444d757ed4186494100e54415e504c1ef117ce
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 8fd6389db453da4352fee12e870edc3004ce8f1b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197523"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74338791"
 ---
 # <a name="keywords-visual-basic"></a>キーワード (Visual Basic)
 
-次の表は、すべての Visual Basic 言語キーワードを示しています。
+The following tables list all Visual Basic language keywords.
 
 ## <a name="reserved-keywords"></a>予約済みのキーワード
 
@@ -80,7 +80,7 @@ ms.locfileid: "73197523"
 |[<\<=](../operators/left-shift-assignment-operator.md)|
 
 > [!NOTE]
-> `EndIf`、`GoSub`、`Variant`、および `Wend` は予約済みキーワードとして保持されますが、Visual Basic では使用されなくなりました。 `Let` キーワードは、意味が変更されました。 `Let` は、LINQ クエリで使用するようになっています。 詳細については、「[Let 句](../queries/let-clause.md)」を参照してください。
+> `EndIf`, `GoSub`, `Variant`, and `Wend` are retained as reserved keywords, although they are no longer used in Visual Basic. `Let` キーワードは、意味が変更されました。 `Let` は、LINQ クエリで使用するようになっています。 詳細については、「[Let 句](../queries/let-clause.md)」を参照してください。
 
 ## <a name="unreserved-keywords"></a>予約されていないキーワード
 

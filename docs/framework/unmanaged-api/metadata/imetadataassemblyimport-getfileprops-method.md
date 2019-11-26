@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f3883b0cd1b7aca6265b738eace483c81eb37b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: beb697d80417b937876a0887e4376341185a47d9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760145"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447209"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps メソッド
-指定したメタデータ シグネチャを持つファイルのプロパティを取得します。  
+Gets the properties of the file with the specified metadata signature.  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,32 +41,32 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mdf`  
- [in]`mdFile`プロパティを取得する対象のファイルを表すメタデータ トークン。  
+ [in] The `mdFile` metadata token that represents the file for which to get the properties.  
   
  `szName`  
- [out]ファイルの簡易名。  
+ [out] The simple name of the file.  
   
  `cchName`  
- [in]ワイド文字単位のサイズの`szName`します。  
+ [in] The size, in wide chars, of `szName`.  
   
  `pchName`  
- [out]実際に返されるワイド文字数`szName`します。  
+ [out] The number of wide chars actually returned in `szName`.  
   
  `ppbHashValue`  
- [out]ハッシュ値へのポインター。 これは、ファイルの sha-1 アルゴリズムを使用して、ハッシュです。  
+ [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the file.  
   
  `pcbHashValue`  
- [out]返されたハッシュ値のワイド文字の数。  
+ [out] The number of wide chars in the returned hash value.  
   
  `pdwFileFlags`  
- [out]ファイルに適用されるメタデータを記述するフラグへのポインター。 フラグの値は、1 つ以上の組み合わせ[CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)値。  
+ [out] A pointer to the flags that describe the metadata applied to a file. The flags value is a combination of one or more [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

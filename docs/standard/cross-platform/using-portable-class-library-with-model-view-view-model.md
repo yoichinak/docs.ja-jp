@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b53be90764c6537fb27cb1b5ed781a68e69effa0
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 445cf4178b90719f923b66a7778f60c1bc846766
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504675"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204976"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-View-View Model を利用した汎用性のあるクラス ライブラリの使用
-.NET Framework を使用して[ポータブル クラス ライブラリ](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)モデル-ビュー-ビュー モデル (MVVM) パターンを実装して、複数のプラットフォームでアセンブリを共有します。
+You can use the .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) to implement the Model-View-View Model (MVVM) pattern and share assemblies across multiple platforms.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
- MVVM では、基になるビジネス ロジックからユーザー インターフェイスを分離するアプリケーション パターンです。 Visual Studio 2012 のポータブル クラス ライブラリ プロジェクトでモデルとビュー モデル クラスを実装し、さまざまなプラットフォーム用にカスタマイズされたビューを作成できます。 このアプローチでは、データを記述できます。 モデルとビジネス ロジックを 1 回だけ、.NET Framework、Silverlight、Windows Phone のコードを使用および[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]アプリは、次の図に示すようにします。
+ MVVM is an application pattern that isolates the user interface from the underlying business logic. You can implement the model and view model classes in a Portable Class Library project in Visual Studio 2012, and then create views that are customized for different platforms. This approach enables you to write the data model and business logic only once, and use that code from .NET Framework, Silverlight, Windows Phone, and Windows 8.x Store apps, as shown in the following illustration.
 
- ![プラットフォーム間で共有アセンブリの MVVM を使用したポータブル クラス ライブラリを示します。](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
+ ![Shows the Portable Class Library with MVVM sharing assemblies across platforms.](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
- このトピックでは、MVVM パターンに関する一般的な情報は提供されません。 ポータブル クラス ライブラリを使用して、MVVM を実装する方法についての情報を提供するだけです。 MVVM の詳細については、次を参照してください。、 [MVVM クイック スタートで、wpf、Prism ライブラリ 5.0 が使用して](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))します。
+ This topic does not provide general information about the MVVM pattern. It only provides information about how to use Portable Class Library to implement MVVM. For more information about MVVM, see the [MVVM Quickstart Using the Prism Library 5.0 for WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40)).
 
-## <a name="classes-that-support-mvvm"></a>MVVM をサポートするクラス
- .NET Framework 4.5 を対象とする場合[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]Silverlight、またはポータブル クラス ライブラリ プロジェクトの Windows Phone 7.5 次のクラスは、MVVM パターンを実装します。
+## <a name="classes-that-support-mvvm"></a>Classes That Support MVVM
+ When you target the .NET Framework 4.5, [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight, or Windows Phone 7.5 for your Portable Class Library project, the following classes are available for implementing the MVVM pattern:
 
 - <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> クラス
 
@@ -52,42 +52,42 @@ ms.locfileid: "67504675"
 
 - <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> クラス
 
-- すべてのクラス、<xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>名前空間
+- All classes in the <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> namespace
 
-## <a name="implementing-mvvm"></a>MVVM の実装
- MVVM を実装するには、通常を作成するモデルとビュー モデルの両方でポータブル クラス ライブラリ プロジェクトでは、ポータブル クラス ライブラリ プロジェクトがポータブルでないプロジェクトを参照できないためです。 モデルとビュー モデルは、同じプロジェクト内、または別のプロジェクトを指定できます。 個別のプロジェクトを使用する場合は、モデル プロジェクトにビューのモデル プロジェクトからの参照を追加します。
+## <a name="implementing-mvvm"></a>Implementing MVVM
+ To implement MVVM, you typically create both the model and the view model in a Portable Class Library project, because a Portable Class Library project cannot reference a non-portable project. The model and view model can be in the same project or in separate projects. If you use separate projects, add a reference from the view model project to the model project.
 
- モデルをコンパイルし、モデル プロジェクトを表示すると後、は、ビューを含むアプリでそれらのアセンブリを参照します。 ビューは、ビュー モデルとのみやり取りをする場合のみ、ビュー モデルを含むアセンブリを参照する必要があります。
+ After you compile the model and view model projects, you reference those assemblies in the app that contains the view. If the view interacts only with the view model, you only have to reference the assembly that contains the view model.
 
 ### <a name="model"></a>モデル
- 次の例では、ポータブル クラス ライブラリ プロジェクトである単純なモデル クラスを示します。
+ The following example shows a simplified model class that could reside in a Portable Class Library project.
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
  [!code-vb[PortableClassLibraryMVVM#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customer.vb#1)]
 
- 次の例では、設定、取得、およびポータブル クラス ライブラリ プロジェクト内のデータを更新する簡単な方法を示します。 実際のアプリでは、Windows Communication Foundation (WCF) サービスなどのソースからデータを取得します。
+ The following example shows a simple way to populate, retrieve, and update the data in a Portable Class Library project. In a real app, you would retrieve the data from a source such as a Windows Communication Foundation (WCF) service.
 
  [!code-csharp[PortableClassLibraryMVVM#2](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customerrepository.cs#2)]
  [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]
 
-### <a name="view-model"></a>ビュー モデル
- MVVM パターンを実装するときに、ビュー モデルの基本クラスが頻繁に追加されます。 次の例では、基本クラスを示します。
+### <a name="view-model"></a>View Model
+ A base class for view models is frequently added when implementing the MVVM pattern. The following example shows a base class.
 
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
  [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]
 
- 実装、<xref:System.Windows.Input.ICommand>インターフェイスは、MVVM パターンでよく使用されます。 <xref:System.Windows.Input.ICommand> インターフェイスを実装する例を次に示します。
+ An implementation of the <xref:System.Windows.Input.ICommand> interface is frequently used with the MVVM pattern. <xref:System.Windows.Input.ICommand> インターフェイスを実装する例を次に示します。
 
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
  [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]
 
- 次の例では、簡略化されたビュー モデルを示します。
+ The following example shows a simplified view model.
 
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
-### <a name="view"></a>表示  
- .NET Framework 4.5 アプリから[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]アプリ、Silverlight ベースのアプリまたは Windows Phone 7.5 アプリの場合は、モデルとビュー モデル プロジェクトを含むアセンブリを参照することができます。  対話するビューを作成するには、ビュー モデルを使用します。 取得し、ビュー モデルからデータを更新する Windows Presentation Foundation (WPF) アプリを簡略化されたは、次の例です。 Windows Phone、Silverlight で同様のビューを作成または[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]アプリ。  
+### <a name="view"></a>View  
+ From a .NET Framework 4.5 app, Windows 8.x Store app, Silverlight-based app, or Windows Phone 7.5 app, you can reference the assembly that contains the model and view model projects.  You then create a view that interacts with the view model. The following example shows a simplified Windows Presentation Foundation (WPF) app that retrieves and updates data from the view model. You could create similar views in Silverlight, Windows Phone, or Windows 8.x Store apps.  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   

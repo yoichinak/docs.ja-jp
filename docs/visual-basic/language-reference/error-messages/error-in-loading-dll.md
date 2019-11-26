@@ -1,36 +1,36 @@
 ---
-title: DLL 読み込み時のエラーです。(Visual Basic)
+title: DLL 読み込み時のエラーです。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-ms.openlocfilehash: 5a26443a49b0b853f2f2188fb58d7ed907d671b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36452cc6ff03042939cd4066aef76129b5bb8f0a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659615"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329552"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>DLL 読み込み時のエラーです。(Visual Basic)
-ダイナミック リンク ライブラリ (DLL) がで指定されているライブラリ、`Lib`の句、`Declare`ステートメント。 このエラーの考えられる原因は次のとおりです。  
+A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement. Possible causes for this error include:  
   
-- ファイルは、DLL の実行可能ファイルではありません。  
+- The file is not DLL executable.  
   
-- ファイルは、Microsoft Windows の DLL ではありません。  
+- The file is not a Microsoft Windows DLL.  
   
-- DLL が存在しない別の DLL を参照します。  
+- The DLL references another DLL that is not present.  
   
-- DLL または参照される DLL がパスに指定されたディレクトリではありません。  
+- The DLL or referenced DLL is not in a directory specified in the path.  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- ソース テキスト ファイルとそのための DLL が実行可能ファイルがある場合に、コンパイルして DLL の実行可能ファイル形式にリンクする必要があります。  
+- If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.  
   
-- ファイルが Microsoft Windows DLL でない場合は、同等の Microsoft Windows を入手します。  
+- If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.  
   
-- DLL が存在しない別の DLL を参照する場合は、参照される DLL を入手して使用できるようにします。  
+- If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.  
   
-- DLL または参照される DLL がパスで指定されたディレクトリにない場合は、DLL を参照先のディレクトリに移動します。  
+- If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.  
   
 ## <a name="see-also"></a>関連項目
 

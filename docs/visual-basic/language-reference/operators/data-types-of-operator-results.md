@@ -1,5 +1,5 @@
 ---
-title: 演算子の結果のデータ型 (Visual Basic)
+title: 演算子の結果のデータ型
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data types [Visual Basic], operator result data types
@@ -9,97 +9,97 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: bc7f29ae0e29a4c2fbfdf2e40d2226e174a06d3a
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 3867d433ea5f9a6effe70db0ff4162390fb50b5c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856047"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331469"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>演算子の結果のデータ型 (Visual Basic)
-Visual Basic は、オペランドのデータ型に基づいて、操作の結果のデータ型を決定します。 場合によっては、これがいずれかのオペランドよりも範囲の広いデータ型である可能性があります。  
+Visual Basic determines the result data type of an operation based on the data types of the operands. In some cases this might be a data type with a greater range than that of either operand.  
   
 ## <a name="data-type-ranges"></a>データ型の範囲  
- 関連するデータ型の範囲は、小さい方から順に、次のようになります。  
+ The ranges of the relevant data types, in order from smallest to largest, are as follows:  
   
-- [ブール](../../../visual-basic/language-reference/data-types/boolean-data-type.md)値: 2 つの値を指定できます。  
+- [Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md) — two possible values  
   
-- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)、 [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) -256 可能な整数値  
+- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) — 256 possible integral values  
   
-- [Short](../../../visual-basic/language-reference/data-types/short-data-type.md)、 [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) -65536 (6.5... E + 4) 可能な整数値  
+- [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65,536 (6.5...E+4) possible integral values  
   
-- [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)、 [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) -4294967296 (4.2... E + 9) 可能な整数値  
+- [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4,294,967,296 (4.2...E+9) possible integral values  
   
-- [Long](../../../visual-basic/language-reference/data-types/long-data-type.md)、 [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) -18446744073709551615 (1.8... E + 19) 可能な整数値  
+- [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18,446,744,073,709,551,615 (1.8...E+19) possible integral values  
   
-- [10 進](../../../visual-basic/language-reference/data-types/decimal-data-type.md)-1.5... e + 29 可能な整数値、最大範囲 7.9... e + 28 (絶対値)  
+- [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) — 1.5...E+29 possible integral values, maximum range 7.9...E+28 (absolute value)  
   
-- [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) : 最大範囲 3.4... E + 38 (絶対値)  
+- [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) — maximum range 3.4...E+38 (absolute value)  
   
-- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) -最大範囲 1.7... E + 308 (絶対値)  
+- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) — maximum range 1.7...E+308 (absolute value)  
   
- Visual Basic のデータ型の詳細については、「[データ型](../../../visual-basic/language-reference/data-types/index.md)」を参照してください。  
+ For more information on Visual Basic data types, see [Data Types](../../../visual-basic/language-reference/data-types/index.md).  
   
- オペランドが[Nothing](../../../visual-basic/language-reference/nothing.md)と評価された場合、Visual Basic 算術演算子は0として処理します。  
+ If an operand evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the Visual Basic arithmetic operators treat it as zero.  
   
-## <a name="decimal-arithmetic"></a>10進数の算術演算  
- [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)データ型は、浮動小数点と整数のどちらでもないことに注意してください。  
+## <a name="decimal-arithmetic"></a>Decimal Arithmetic  
+ Note that the [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) data type is neither floating-point nor integer.  
   
- `+` 、`–`、 `Single` `Decimal` `Double`、、または`Mod`演算のオペランドのいずれかがであり、もう一方のオペランドがまたはでない場合は、Visual Basic もう一方のオペランドをに拡大変換します。 `/` `*` `Decimal`. このメソッドはで`Decimal`操作を実行し、結果のデータ型は`Decimal`です。  
+ If either operand of a `+`, `–`, `*`, `/`, or `Mod` operation is `Decimal` and the other is not `Single` or `Double`, Visual Basic widens the other operand to `Decimal`. It performs the operation in `Decimal`, and the result data type is `Decimal`.  
   
-## <a name="floating-point-arithmetic"></a>浮動小数点演算  
- Visual Basic は、ほとんどの浮動小数点演算を[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)で実行します。これは、このような操作にとって最も効率的なデータ型です。 一方のオペランドが[Single](../../../visual-basic/language-reference/data-types/single-data-type.md)で、もう一方のオペランドが`Double`でない場合、Visual Basic は`Single`で操作を実行します。 必要に応じて各オペランドを適切なデータ型に変換し、その結果をそのデータ型に変換します。  
+## <a name="floating-point-arithmetic"></a>Floating-Point Arithmetic  
+ Visual Basic performs most floating-point arithmetic in [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), which is the most efficient data type for such operations. However, if one operand is [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) and the other is not `Double`, Visual Basic performs the operation in `Single`. It widens each operand as necessary to the appropriate data type before the operation, and the result has that data type.  
   
-### <a name="-and--operators"></a>/および ^ 演算子  
- 演算子は、 [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)、[Single](../../../visual-basic/language-reference/data-types/single-data-type.md)、および[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)データ型に対してのみ定義されます。`/` 演算の前に各オペランドを適切なデータ型に拡大変換すると、結果のデータ型は Visual Basic になります。  
+### <a name="-and--operators"></a>/ and ^ Operators  
+ The `/` operator is defined only for the [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [Single](../../../visual-basic/language-reference/data-types/single-data-type.md), and [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) data types. Visual Basic widens each operand as necessary to the appropriate data type before the operation, and the result has that data type.  
   
- 次の表は、 `/`演算子の結果のデータ型を示しています。 このテーブルは対称であることに注意してください。オペランドデータ型の特定の組み合わせについては、オペランドの順序に関係なく、結果のデータ型は同じになります。  
+ The following table shows the result data types for the `/` operator. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
   
 ||||||  
 |---|---|---|---|---|  
-||`Decimal`|`Single`|`Double`|任意の整数型|  
-|`Decimal`|Decimal (10 進数型)|Single|倍精度浮動小数点型|Decimal (10 進数型)|  
-|`Single`|Single|Single|倍精度浮動小数点型|Single|  
-|`Double`|倍精度浮動小数点型|倍精度浮動小数点型|倍精度浮動小数点型|倍精度浮動小数点型|  
-|任意の整数型|Decimal (10 進数型)|Single|倍精度浮動小数点型|倍精度浮動小数点型|  
+||`Decimal`|`Single`|`Double`|Any integer type|  
+|`Decimal`|Decimal (10 進数型)|Single|Double|Decimal (10 進数型)|  
+|`Single`|Single|Single|Double|Single|  
+|`Double`|Double|Double|Double|Double|  
+|Any integer type|Decimal (10 進数型)|Single|Double|Double|  
   
- 演算子は、 `Double`データ型に対してのみ定義されます。 `^` 演算の前に各オペランドを`Double`必要に応じて拡大 Visual Basic し、結果のデータ`Double`型は常にになります。  
+ The `^` operator is defined only for the `Double` data type. Visual Basic widens each operand as necessary to `Double` before the operation, and the result data type is always `Double`.  
   
-## <a name="integer-arithmetic"></a>整数演算  
- 整数演算の結果のデータ型は、オペランドのデータ型によって異なります。 一般に、Visual Basic では、次のポリシーを使用して結果のデータ型を決定します。  
+## <a name="integer-arithmetic"></a>Integer Arithmetic  
+ The result data type of an integer operation depends on the data types of the operands. In general, Visual Basic uses the following policies for determining the result data type:  
   
-- 二項演算子の両方のオペランドのデータ型が同じである場合、結果はそのデータ型になります。 例外は`Boolean`です。これはに`Short`強制されます。  
+- If both operands of a binary operator have the same data type, the result has that data type. An exception is `Boolean`, which is forced to `Short`.  
   
-- 符号なしのオペランドが符号付きのオペランドに含まれている場合、結果の符号付きの型は、少なくともいずれかのオペランドと同じ範囲になります。  
+- If an unsigned operand participates with a signed operand, the result has a signed type with at least as large a range as either operand.  
   
-- それ以外の場合、結果は通常、2つのオペランドデータ型のうち、大きい方になります。  
+- Otherwise, the result usually has the larger of the two operand data types.  
   
- 結果のデータ型は、どちらのオペランドデータ型とも異なる場合があることに注意してください。  
+ Note that the result data type might not be the same as either operand data type.  
   
 > [!NOTE]
-> 結果のデータ型は、操作の結果として得られるすべての値を保持するのに十分な大きさではありません。 値が結果のデータ型に対して大きすぎる場合は、例外が発生する可能性があります。<xref:System.OverflowException>  
+> The result data type is not always large enough to hold all possible values resulting from the operation. An <xref:System.OverflowException> exception can occur if the value is too large for the result data type.  
   
-### <a name="unary--and--operators"></a>単項 + 演算子と–演算子  
- 次の表は、2つの単項演算子`+`と`–`の結果のデータ型を示しています。  
-  
-|||||||||||  
-|---|---|---|---|---|---|---|---|---|---|  
-||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|前置`+`|Short|SByte|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
-|前置`–`|Short|SByte|Short|Short|整数型|整数型|Long|Long|Decimal (10 進数型)|  
-  
-### <a name="-and--operators"></a><\<and > > 演算子  
- 次の表は、2つのビットシフト演算子`<<`と`>>`の結果のデータ型を示しています。 Visual Basic は、各ビットシフト演算子を左オペランド (シフトされるビットパターン) で単項演算子として扱います。  
+### <a name="unary--and--operators"></a>Unary + and – Operators  
+ The following table shows the result data types for the two unary operators, `+` and `–`.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`<<`, `>>`|Short|SByte|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
+|Unary `+`|Short|SByte|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
+|Unary `–`|Short|SByte|Short|Short|整数型|整数型|Long|Long|Decimal (10 進数型)|  
   
- 左側の`Decimal`オペランドが`Single` `Long` `String`、、 `Long`、またはの場合、Visual Basic は演算の前に変換しようとし、結果のデータ型はです。 `Double` 右オペランド (シフトするビット位置の数) は、または`Integer`に`Integer`拡大変換される型である必要があります。  
+### <a name="-and--operators"></a><\< and >> Operators  
+ The following table shows the result data types for the two bit-shift operators, `<<` and `>>`. Visual Basic treats each bit-shift operator as a unary operator on its left operand (the bit pattern to be shifted).  
   
-### <a name="binary----and-mod-operators"></a>二項演算子 +、– \*、、および Mod 演算子  
- 次の表は、 `+`バイナリおよび`–`演算子の結果のデータ型と`*` 、および`Mod`演算子を示しています。 このテーブルは対称であることに注意してください。オペランドデータ型の特定の組み合わせについては、オペランドの順序に関係なく、結果のデータ型は同じになります。  
+|||||||||||  
+|---|---|---|---|---|---|---|---|---|---|  
+||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
+|`<<`、 `>>`|Short|SByte|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
+  
+ If the left operand is `Decimal`, `Single`, `Double`, or `String`, Visual Basic attempts to convert it to `Long` before the operation, and the result data type is `Long`. The right operand (the number of bit positions to shift) must be `Integer` or a type that widens to `Integer`.  
+  
+### <a name="binary----and-mod-operators"></a>Binary +, –, \*, and Mod Operators  
+ The following table shows the result data types for the binary `+` and `–` operators and the `*` and `Mod` operators. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
@@ -115,7 +115,7 @@ Visual Basic は、オペランドのデータ型に基づいて、操作の結�
 |`ULong`|Decimal (10 進数型)|Decimal (10 進数型)|ULong|Decimal (10 進数型)|ULong|Decimal (10 進数型)|ULong|Decimal (10 進数型)|ULong|  
   
 ### <a name="-operator"></a>\\ 演算子  
- 次の表は、 `\`演算子の結果のデータ型を示しています。 このテーブルは対称であることに注意してください。オペランドデータ型の特定の組み合わせについては、オペランドの順序に関係なく、結果のデータ型は同じになります。  
+ The following table shows the result data types for the `\` operator. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
@@ -130,28 +130,28 @@ Visual Basic は、オペランドのデータ型に基づいて、操作の結�
 |`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Long|  
 |`ULong`|Long|Long|ULong|Long|ULong|Long|ULong|Long|ULong|  
   
- `\`演算子のいずれかのオペランドが[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)、 [Single](../../../visual-basic/language-reference/data-types/single-data-type.md)、または[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)の場合、Visual Basic は演算の前に[Long](../../../visual-basic/language-reference/data-types/long-data-type.md)への変換を試み、結果`Long`のデータ型はになります。  
+ If either operand of the `\` operator is [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [Single](../../../visual-basic/language-reference/data-types/single-data-type.md), or [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), Visual Basic attempts to convert it to [Long](../../../visual-basic/language-reference/data-types/long-data-type.md) before the operation, and the result data type is `Long`.  
   
-## <a name="relational-and-bitwise-comparisons"></a>関係とビットごとの比較  
- `=`リレーショナル操作の結果のデータ型 ( `<`、 `<>`、、 `>` `<=`、、 `>=`) は、常`Boolean`に[ブールデータ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)です。 オペランド`And`の`AndAlso` `Or` `Not`論理演算`OrElse`(、、、、 、`Xor`) でも同じことが当てはまります。 `Boolean`  
+## <a name="relational-and-bitwise-comparisons"></a>Relational and Bitwise Comparisons  
+ The result data type of a relational operation (`=`, `<>`, `<`, `>`, `<=`, `>=`) is always `Boolean`[Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md). The same is true for logical operations (`And`, `AndAlso`, `Not`, `Or`, `OrElse`, `Xor`) on `Boolean` operands.  
   
- ビットごとの論理演算の結果のデータ型は、オペランドのデータ型によって異なります。 とはに対し`Boolean`てのみ定義されており、Visual Basic は演算を`Boolean`実行する前に、必要に応じて各オペランドをに変換します。 `OrElse` `AndAlso`  
+ The result data type of a bitwise logical operation depends on the data types of the operands. Note that `AndAlso` and `OrElse` are defined only for `Boolean`, and Visual Basic converts each operand as necessary to `Boolean` before performing the operation.  
   
-### <a name="-----and--operators"></a>=、< >、 \<、>、 \<=、および > = 演算子  
- 両方のオペランドが`Boolean`の場合、 `True` Visual Basic はより`False`小さいと見なされます。 数値型とを比較`String`した場合、Visual Basic 操作の前に、 `Double` `String`をに変換しようとします。 または`Date`のオペランドは、同じデータ型の別のオペランドとのみ比較できます。 `Char` 結果のデータ型は常`Boolean`にです。  
+### <a name="-----and--operators"></a>=, <>, \<, >, \<=, and >= Operators  
+ If both operands are `Boolean`, Visual Basic considers `True` to be less than `False`. If a numeric type is compared with a `String`, Visual Basic attempts to convert the `String` to `Double` before the operation. A `Char` or `Date` operand can be compared only with another operand of the same data type. The result data type is always `Boolean`.  
   
-### <a name="bitwise-not-operator"></a>ビットごとの Not 演算子  
- 次の表は、ビットごと`Not`の演算子の結果のデータ型を示しています。  
+### <a name="bitwise-not-operator"></a>Bitwise Not Operator  
+ The following table shows the result data types for the bitwise `Not` operator.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
 |`Not`|ブール型|SByte|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
   
- オペランド`Decimal`が`Single` `String` `Long`、、 `Long` 、またはの場合、Visual Basic は演算の前に変換しようとし、結果のデータ型はです。 `Double`  
+ If the operand is `Decimal`, `Single`, `Double`, or `String`, Visual Basic attempts to convert it to `Long` before the operation, and the result data type is `Long`.  
   
-### <a name="bitwise-and-or-and-xor-operators"></a>ビットごとの And、Or、および Xor 演算子  
- 次の表は、ビットごと`And`の、 `Or`、および`Xor`演算子の結果のデータ型を示しています。 このテーブルは対称であることに注意してください。オペランドデータ型の特定の組み合わせについては、オペランドの順序に関係なく、結果のデータ型は同じになります。  
+### <a name="bitwise-and-or-and-xor-operators"></a>Bitwise And, Or, and Xor Operators  
+ The following table shows the result data types for the bitwise `And`, `Or`, and `Xor` operators. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
@@ -166,21 +166,21 @@ Visual Basic は、オペランドのデータ型に基づいて、操作の結�
 |`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Long|  
 |`ULong`|Long|Long|ULong|Long|ULong|Long|ULong|Long|ULong|  
   
- オペランド`Decimal`が`Single` `String` `Long`、、 `Long` 、またはの場合、Visual Basic は演算の前に変換しようとし、結果のデータ型はそのオペランドが既に存在していた場合と同じになります。 `Double`  
+ If an operand is `Decimal`, `Single`, `Double`, or `String`, Visual Basic attempts to convert it to `Long` before the operation, and the result data type is the same as if that operand had already been `Long`.  
   
 ## <a name="miscellaneous-operators"></a>その他の演算子  
- 演算子`&`は、オペランドの`String`連結に対してのみ定義されます。 Visual Basic は、必要に応じて`String`各オペランドを演算の前に変換し、結果`String`のデータ型は常にになります。 `&`演算子の目的では、が`On`の場合`Option Strict`で`String`も、へのすべての変換は拡大と見なされます。  
+ The `&` operator is defined only for concatenation of `String` operands. Visual Basic converts each operand as necessary to `String` before the operation, and the result data type is always `String`. For the purposes of the `&` operator, all conversions to `String` are considered to be widening, even if `Option Strict` is `On`.  
   
- `Is` および`IsNot`演算子では、両方のオペランドが参照型である必要があります。 `TypeOf`...`Is`式では、最初のオペランドが参照型で、2番目のオペランドがデータ型の名前である必要があります。 これらのすべての場合、結果のデータ`Boolean`型はです。  
+ The `Is` and `IsNot` operators require both operands to be of a reference type. The `TypeOf`...`Is` expression requires the first operand to be of a reference type and the second operand to be the name of a data type. In all these cases the result data type is `Boolean`.  
   
- 演算子`Like`は、オペランドの`String`パターンマッチングに対してのみ定義されます。 Visual Basic は、各オペランドを操作の前`String`に必要に応じて変換しようとします。 結果のデータ型は常`Boolean`にです。  
+ The `Like` operator is defined only for pattern matching of `String` operands. Visual Basic attempts to convert each operand as necessary to `String` before the operation. The result data type is always `Boolean`.  
   
 ## <a name="see-also"></a>関連項目
 
 - [データの種類](../../../visual-basic/language-reference/data-types/index.md)
 - [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Visual Basic の算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Visual Basic の比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [演算子](../../../visual-basic/language-reference/operators/index.md)
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

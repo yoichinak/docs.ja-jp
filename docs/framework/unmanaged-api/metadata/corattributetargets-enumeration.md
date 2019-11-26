@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9fb1dff80fccc920540d370797441b3a019d766c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780920"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443871"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 列挙型
 属性を適用できるアプリケーション要素を指定します。  
@@ -64,32 +62,32 @@ typedef enum CorAttributeTargets
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`catAssembly`|属性は、アセンブリに適用できます。|  
-|`catModule`|属性は、ポータブル実行可能ファイル (.dll または .exe) モジュールに適用できます。|  
-|`catClass`|属性は、クラスに適用できます。|  
-|`catStruct`|構造体に属性を適用できます。つまり、値を入力します。|  
-|`catEnum`|属性は、列挙体に適用できます。|  
-|`catConstructor`|属性は、コンス トラクターに適用できます。|  
-|`catMethod`|属性は、メソッドに適用できます。|  
-|`catProperty`|属性は、プロパティに適用できます。|  
-|`catField`|属性は、フィールドに適用できます。|  
-|`catEvent`|属性は、イベントに適用できます。|  
-|`catInterface`|属性は、インターフェイスに適用できます。|  
-|`catParameter`|属性は、パラメーターに適用できます。|  
-|`catDelegate`|属性は、デリゲートに適用できます。|  
-|`catGenericParameter`|属性は、ジェネリック パラメーターに適用できます。|  
-|`catAll`|属性は、任意のアプリケーション要素に適用できます。|  
-|`catClassMembers`|属性は、クラスのメンバーに適用できます。|  
+|`catAssembly`|Attribute can be applied to an assembly.|  
+|`catModule`|Attribute can be applied to a portable executable (.dll or .exe) module.|  
+|`catClass`|Attribute can be applied to a class.|  
+|`catStruct`|Attribute can be applied to a structure; that is, a value type.|  
+|`catEnum`|Attribute can be applied to an enumeration.|  
+|`catConstructor`|Attribute can be applied to a constructor.|  
+|`catMethod`|Attribute can be applied to a method.|  
+|`catProperty`|Attribute can be applied to a property.|  
+|`catField`|Attribute can be applied to a field.|  
+|`catEvent`|Attribute can be applied to an event.|  
+|`catInterface`|Attribute can be applied to an interface.|  
+|`catParameter`|Attribute can be applied to a parameter.|  
+|`catDelegate`|Attribute can be applied to a delegate.|  
+|`catGenericParameter`|Attribute can be applied to a generic parameter.|  
+|`catAll`|Attribute can be applied to any application element.|  
+|`catClassMembers`|Attribute can be applied to a member of a class.|  
   
 ## <a name="remarks"></a>Remarks  
- `CorAttributeTargets`列挙値は、任意の組み合わせを取得するビットごとの OR 演算と組み合わせることができます。  
+ The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.  
   
- `CorAttributeTargets`マネージ対応<xref:System.AttributeTargets?displayProperty=nameWithType>列挙体。  
+ The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

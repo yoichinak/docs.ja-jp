@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf064bac-9a9f-41c5-9e1d-108ff7af3afe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ba35cd678d88389854ca2e866020ea3a9364c923
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6966d0ad2fefd8401b19d8e8dcf7776799a066b2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777667"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432565"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent メソッド
-指定したメタデータ シグネチャを持つイベントの定義を作成し、そのイベント定義トークンを取得します。  
+Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,38 +43,38 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in]ターゲット クラスまたはインターフェイスのトークンです。 いずれかになります、`mdTypeDef`または`mdTypeDefNil`トークンです。  
+ [in] The token for the target class or interface. This is either a `mdTypeDef` or `mdTypeDefNil` token.  
   
  `szEvent`  
- [in]イベントの名前。  
+ [in] The name of the event.  
   
  `dwEventFlags`  
- [in]イベントのフラグ。  
+ [in] Event flags.  
   
  `tkEventType`  
- [in]イベント クラスのトークンです。 これは、 `mdTypeDef`、 `mdTypeRef`、または`mdTokenNil`トークンです。  
+ [in] The token for the event class. This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.  
   
  `mdAddOn`  
- [in]イベント、または null をサブスクライブするために使用するメソッド。  
+ [in] The method used to subscribe to the event, or null.  
   
  `mdRemoveOn`  
- [in]イベント、または null をアンサブスク ライブするメソッド。  
+ [in] The method used to unsubscribe to the event, or null.  
   
  `mdFire`  
- [in]イベントを発生させる (派生クラス) を使用するメソッド。  
+ [in] The method used (by a derived class) to raise the event.  
   
  `rmdOtherMethods[]`  
- [in]イベントに関連付けられているその他のメソッドのトークンの配列。 配列が終了しました、`mdMethodDefNil`トークンです。  
+ [in] An array of tokens for other methods associated with the event. The array is terminated with a `mdMethodDefNil` token.  
   
  `pmdEvent`  
- [out]イベントに割り当てられているメタデータ トークンです。  
+ [out] The metadata token assigned to the event.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

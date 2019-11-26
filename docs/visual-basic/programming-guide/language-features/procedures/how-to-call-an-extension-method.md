@@ -1,22 +1,22 @@
 ---
-title: '方法: 拡張メソッド (Visual Basic) を呼び出す'
+title: '方法 : 拡張メソッドを呼び出す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: f2058162ab939d2619d7255c884d88c35ee63715
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: a19705a8f90833d48869df26a18d19b0ad1488e0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512671"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340392"
 ---
-# <a name="how-to-call-an-extension-method-visual-basic"></a>方法: 拡張メソッド (Visual Basic) を呼び出す
+# <a name="how-to-call-an-extension-method-visual-basic"></a>方法: 拡張メソッドを呼び出す (Visual Basic)
 
-拡張メソッドを使用すると、既存のクラスにメソッドを追加できます。 拡張メソッドが宣言され、スコープ内に入ると、拡張された型のインスタンスメソッドのように呼び出すことができます。 拡張メソッドを記述する方法の詳細については[、「方法:拡張メソッド](./how-to-write-an-extension-method.md)を記述します。
+Extension methods enable you to add methods to an existing class. After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends. For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).
 
- 次の手順では、拡張`PrintAndPunctuate`メソッドについて説明します`punc`。拡張メソッドは、それを呼び出す文字列インスタンスを表示し、その後、2番目のパラメーターのに送信される任意の値を示します。
+ The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -31,40 +31,40 @@ Module StringExtensions
 End Module
 ```
 
-メソッドが呼び出されるときは、そのメソッドがスコープ内にある必要があります。
+The method must be in scope when it is called.
 
-### <a name="to-call-an-extension-method"></a>拡張メソッドを呼び出すには
+### <a name="to-call-an-extension-method"></a>To call an extension method
 
-1. 拡張メソッドの最初のパラメーターのデータ型を持つ変数を宣言します。 では、 <xref:System.String>変数が必要です。 `PrintAndPunctuate`
+1. Declare a variable that has the data type of the first parameter of the extension method. For `PrintAndPunctuate`, you need a <xref:System.String> variable:
 
     ```vb
     Dim example = "Ready"
     ```
 
-2. その変数は拡張メソッドを呼び出し、その値は最初のパラメーターで`aString`あるにバインドされます。 次の呼び出しステートメントが表示`Ready?`されます。
+2. That variable will invoke the extension method, and its value is bound to the first parameter, `aString`. The following calling statement will display `Ready?`.
 
     ```vb
     example.PrintAndPunctuate("?")
     ```
 
-     この拡張メソッドへの呼び出しは、1つのパラメーターを必要とするいずれか<xref:System.String>のインスタンスメソッドの呼び出しと同じように見えます。
+     Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:
 
     ```vb
     example.EndsWith("dy")
     example.IndexOf("R")
     ```
 
-3. 別の文字列変数を宣言し、メソッドを再度呼び出して、任意の文字列で動作することを確認します。
+3. Declare another string variable and call the method again to see that it works with any string.
 
     ```vb
     Dim example2 = " or not"
     example2.PrintAndPunctuate("!!!")
     ```
 
-     この時間は次のよう`or not!!!`になります。
+     The result this time is: `or not!!!`.
 
 ## <a name="example"></a>例
- 次のコードは、単純な拡張メソッドの作成と使用の完全な例です。
+ The following code is a complete example of the creation and use of a simple extension method.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -97,6 +97,6 @@ End Module
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: 拡張メソッドを記述する](./how-to-write-an-extension-method.md)
+- [方法 : 拡張メソッドを作成する](./how-to-write-an-extension-method.md)
 - [拡張メソッド](./extension-methods.md)
-- [Visual Basic 内のスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

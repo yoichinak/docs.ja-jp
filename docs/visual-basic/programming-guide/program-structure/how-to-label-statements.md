@@ -1,5 +1,5 @@
 ---
-title: '方法: ラベルステートメント (Visual Basic)'
+title: '方法 : ステートメントへのラベル付け'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - colons (:)
@@ -7,36 +7,36 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 9a5f2039716a18011cac3dfd9b011d5b3868c294
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: be116ac8046c43e89e44c2d9127c6131e4dfaa52
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054054"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347379"
 ---
-# <a name="how-to-label-statements-visual-basic"></a>方法: ラベルステートメント (Visual Basic)
+# <a name="how-to-label-statements-visual-basic"></a>方法: ステートメントへのラベル付け (Visual Basic)
 
-ステートメントブロックは、コロンで区切られたコード行で構成されます。 識別文字列または整数で始まるコード行には、ラベルが*付け*られています。 ステートメントラベルは、など`On Error Goto`のステートメントで使用するために、コード行をマークするために使用されます。
+Statement blocks are made up of lines of code delimited by colons. Lines of code preceded by an identifying string or integer are said to be *labeled*. Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.
 
-ラベルは、プログラミング要素を識別する Visual Basic 識別子や、整数リテラルなど、有効な識別子である場合があります。 ラベルは、ソースコードの行の先頭に記述する必要があります。また、同じ行にステートメントが続くかどうかに関係なく、コロンで続ける必要があります。
+Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals. A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.
 
-コンパイラは、行の先頭が既に定義されている識別子と一致するかどうかをチェックすることによって、ラベルを識別します。 そうでない場合、コンパイラはこれがラベルであると見なします。
+The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier. If it does not, the compiler assumes it is a label.
 
-ラベルには独自の宣言領域があり、他の識別子に干渉することはありません。 ラベルのスコープは、メソッドの本体です。 ラベル宣言は、あいまいな状況で優先されます。
+Labels have their own declaration space and do not interfere with other identifiers. A label's scope is the body of the method. Label declaration takes precedence in any ambiguous situation.
 
 > [!NOTE]
-> ラベルは、メソッド内の実行可能なステートメントでのみ使用できます。
+> Labels can be used only on executable statements inside methods.
 
-## <a name="to-label-a-line-of-code"></a>コード行にラベルを付けるには
+## <a name="to-label-a-line-of-code"></a>To label a line of code
 
-ソースコード行の先頭に、識別子、コロン、コロンの順に配置します。
+Place an identifier, followed by a colon, at the beginning of the line of source code.
 
-たとえば、次のコード行は、それぞれ`Jump`および`120`でラベル付けされています。
+For example, the following lines of code are labeled with `Jump` and `120`, respectively:
 
 [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]
 
 ## <a name="see-also"></a>関連項目
 
 - [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)
-- [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

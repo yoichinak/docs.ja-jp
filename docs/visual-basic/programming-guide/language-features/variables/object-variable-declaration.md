@@ -1,5 +1,5 @@
 ---
-title: オブジェクト変数の宣言 (Visual Basic)
+title: オブジェクト変数の宣言
 ms.date: 07/20/2015
 helpviewer_keywords:
 - early binding [Visual Basic]
@@ -12,28 +12,28 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-ms.openlocfilehash: 9e57d49965537a45bc62b9078079389efcfb2e2c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1964e3768124dde1deeabfada9006ff5a59def0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598744"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351812"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>オブジェクト変数の宣言 (Visual Basic)
-オブジェクト変数を宣言するのにには、通常の宣言ステートメントを使用します。 どちらかのデータ型を指定する`Object`(つまり、[オブジェクト データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)) または固有のオブジェクトの作成元のクラス。  
+You use a normal declaration statement to declare an object variable. For the data type, you specify either `Object` (that is, the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)) or a more specific class from which the object is to be created.  
   
- として変数を宣言する`Object`として宣言することと同じ<xref:System.Object?displayProperty=nameWithType>します。  
+ Declaring a variable as `Object` is the same as declaring it as <xref:System.Object?displayProperty=nameWithType>.  
   
- 特定のオブジェクト クラスを使用して変数を宣言するときに、すべてのメソッドとそのクラスと継承するクラスによって公開されるプロパティにアクセスできます。 使用して変数を宣言する場合<xref:System.Object>のメンバーだけにアクセスできる、<xref:System.Object>クラスにしない限り`Option Strict Off`遅延バインドできるようにします。  
+ When you declare a variable with a specific object class, it can access all the methods and properties exposed by that class and the classes from which it inherits. If you declare the variable with <xref:System.Object>, it can access only the members of the <xref:System.Object> class, unless you turn `Option Strict Off` to allow late binding.  
   
 ## <a name="declaration-syntax"></a>宣言の構文  
- オブジェクト変数を宣言するのにには、次の構文を使用します。  
+ Use the following syntax to declare an object variable:  
   
 ```vb  
 Dim variablename As [New] { objectclass | Object }  
 ```  
   
- 指定することも[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、[フレンド](../../../../visual-basic/language-reference/modifiers/friend.md)、 `Protected Friend`、[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)、 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)、または[静的](../../../../visual-basic/language-reference/modifiers/static.md)で宣言します。 次の例の宣言は有効です。  
+ You can also specify [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, [Private](../../../../visual-basic/language-reference/modifiers/private.md), [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), or [Static](../../../../visual-basic/language-reference/modifiers/static.md) in the declaration. The following example declarations are valid:  
   
 ```vb  
 Private objA As Object  
@@ -41,30 +41,30 @@ Static objB As System.Windows.Forms.Label
 Dim objC As System.OperatingSystem  
 ```  
   
-## <a name="late-binding-and-early-binding"></a>遅延バインディングと、事前バインディング  
- 場合があります、特定のクラスが、コードが実行されるまで不明です。 この場合でオブジェクト変数を宣言する必要があります、`Object`データ型。 これは、オブジェクトの任意の型への参照を一般的なをで作成され、特定のクラスは、実行時に割り当てられています。 これは呼び出されます*遅延バインディング*します。 遅延バインディングには、追加の実行時間が必要です。 メソッドとそれに割り当てる最も最近クラスのプロパティに、コードも制限されます。 これにより、別のクラスのメンバーにアクセスしようとすると、コード実行時エラーが発生することができます。  
+## <a name="late-binding-and-early-binding"></a>Late Binding and Early Binding  
+ Sometimes the specific class is unknown until your code runs. In this case, you must declare the object variable with the `Object` data type. This creates a general reference to any type of object, and the specific class is assigned at run time. This is called *late binding*. Late binding requires additional execution time. It also limits your code to the methods and properties of the class you have most recently assigned to it. This can cause run-time errors if your code attempts to access members of a different class.  
   
- コンパイル時に特定のクラスを認識する場合は、そのクラスのオブジェクト変数を宣言する必要があります。 これは、*事前バインディング*と呼ばれます。 事前バインディングでは、パフォーマンスが向上し、すべてのメソッドおよび特定のクラスのプロパティへのアクセスをコードが保証されます。 変数の場合は前の例を宣言で`objA`クラスのオブジェクトのみを使用して<xref:System.Windows.Forms.Label?displayProperty=nameWithType>、指定する必要があります`As System.Windows.Forms.Label`で宣言します。  
+ When you know the specific class at compile time, you should declare the object variable to be of that class. これは、*事前バインディング*と呼ばれます。 Early binding improves performance and guarantees your code access to all the methods and properties of the specific class. In the preceding example declarations, if variable `objA` uses only objects of class <xref:System.Windows.Forms.Label?displayProperty=nameWithType>, you should specify `As System.Windows.Forms.Label` in its declaration.  
   
 ### <a name="advantages-of-early-binding"></a>事前バインディングの利点  
- 特定のクラスとしてオブジェクト変数を宣言するにはいくつかの利点。  
+ Declaring an object variable as a specific class gives you several advantages:  
   
-- 自動的な型チェック  
+- Automatic type checking  
   
-- 特定のクラスのすべてのメンバーへのアクセスを保証  
+- Guaranteed access to all members of the specific class  
   
-- コード エディターで Microsoft IntelliSense サポート  
+- Microsoft IntelliSense support in the Code Editor  
   
-- コードの読みやすくします。  
+- Improved readability of your code  
   
-- コードのエラーの減少  
+- Fewer errors in your code  
   
-- エラーが検出は、コンパイル時ではなく実行時間  
+- Errors caught at compile time rather than run time  
   
-- コードの実行を高速化  
+- Faster code execution  
   
-## <a name="access-to-object-variable-members"></a>オブジェクト変数のメンバーへのアクセス  
- ときに`Option Strict`なって`On`メソッドとプロパティを宣言するクラスのオブジェクト変数にアクセスできます。 次に例を示します。  
+## <a name="access-to-object-variable-members"></a>Access to Object Variable Members  
+ When `Option Strict` is turned `On`, an object variable can access only the methods and properties of the class with which you declare it. 次に例を示します。  
   
 ```vb  
 ' Option statements must precede all other source file lines.  
@@ -86,8 +86,8 @@ End Sub
   
  この例の場合、 `p` で使用できるのは <xref:System.Object> クラス自体のメンバーのみです。 `Left` プロパティは含まれません。 一方、 `q` は、 <xref:System.Windows.Forms.Label>型として宣言されているため、 <xref:System.Windows.Forms.Label> 名前空間の <xref:System.Windows.Forms> クラスのすべてのメソッドとプロパティを使用できます。  
   
-## <a name="flexibility-of-object-variables"></a>オブジェクト変数の柔軟性  
- 継承階層内のオブジェクトを操作するときに、オブジェクト変数を宣言するために使用するクラスの選択があります。 クラスを選択するときに、クラスのメンバーへのアクセスに対してオブジェクトの割り当ての柔軟性のバランスを考慮する必要があります。 たとえば、継承階層につながる、<xref:System.Windows.Forms.Form?displayProperty=nameWithType>クラス。  
+## <a name="flexibility-of-object-variables"></a>Flexibility of Object Variables  
+ When working with objects in an inheritance hierarchy, you have a choice of which class to use for declaring your object variables. In making this choice, you must balance flexibility of object assignment against access to members of a class. For example, consider the inheritance hierarchy that leads to the <xref:System.Windows.Forms.Form?displayProperty=nameWithType> class:  
   
  <xref:System.Object>  
   
@@ -103,7 +103,7 @@ End Sub
   
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.Windows.Forms.Form>  
   
- アプリケーションと呼ばれるフォーム クラスを定義するとします`specialForm`、クラスから継承される<xref:System.Windows.Forms.Form>します。 具体的を参照するオブジェクト変数を宣言する`specialForm`次の例に示すように、します。  
+ Suppose your application defines a form class called `specialForm`, which inherits from class <xref:System.Windows.Forms.Form>. You can declare an object variable that refers specifically to `specialForm`, as the following example shows.  
   
 ```vb  
 Public Class specialForm  
@@ -113,25 +113,25 @@ End Class
 Dim nextForm As New specialForm  
 ```  
   
- 前の例で、宣言の制限、変数`nextForm`クラスのオブジェクトに`specialForm`がすべてのメソッドとプロパティのも、`specialForm`できる`nextForm`元となるすべてのクラスのすべてのメンバーだけでなく、`specialForm`を継承します。  
+ The declaration in the preceding example limits the variable `nextForm` to objects of class `specialForm`, but it also makes all the methods and properties of `specialForm` available to `nextForm`, as well as all the members of all the classes from which `specialForm` inherits.  
   
- 宣言する型にすることによりより一般的なオブジェクト変数を行うことができます<xref:System.Windows.Forms.Form>、次の例を示しています。  
+ You can make an object variable more general by declaring it to be of type <xref:System.Windows.Forms.Form>, as the following example shows.  
   
 ```vb  
 Dim anyForm As System.Windows.Forms.Form  
 ```  
   
- 上記の例では、宣言では、任意のフォームをアプリケーションを割り当てることができます`anyForm`します。 ただしが`anyForm`クラスのすべてのメンバーにアクセスできる<xref:System.Windows.Forms.Form>、追加のメソッドやプロパティなど、特定の形式の定義のいずれかを使用できません`specialForm`します。  
+ The declaration in the preceding example lets you assign any form in your application to `anyForm`. However, although `anyForm` can access all the members of class <xref:System.Windows.Forms.Form>, it cannot use any of the additional methods or properties defined for specific forms such as `specialForm`.  
   
- 基底クラスのすべてのメンバーは派生クラスで使用できますが、派生クラスの追加のメンバーは、基本クラスを使用できません。  
+ All the members of a base class are available to derived classes, but the additional members of a derived class are unavailable to the base class.  
   
 ## <a name="see-also"></a>関連項目
 
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [オブジェクト変数の代入](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
 - [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [方法: オブジェクト変数を宣言し、Visual Basic でオブジェクトを割り当てる](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
-- [方法: オブジェクトのメンバーへのアクセス](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [How to: Declare an Object Variable and Assign an Object to It in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [方法: オブジェクトのメンバーにアクセスする](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

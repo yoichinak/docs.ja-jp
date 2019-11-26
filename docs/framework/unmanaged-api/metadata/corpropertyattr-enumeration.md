@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5fb70d530af24798636972de0a4d6280dbcb8f1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d49a146a465210cea8466a75666ca3f800b090b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781627"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450141"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr 列挙型
 プロパティのメタデータを記述する値が格納されます。  
@@ -44,16 +42,16 @@ typedef enum CorPropertyAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`prSpecialName`|プロパティが、特別なであると、その名前を記述しているを指定しますか。|  
-|`prReservedMask`|共通言語ランタイムでは、内部使用のため予約されています。|  
-|`prRTSpecialName`|共通言語ランタイム メタデータの内部 Api がプロパティ名のエンコードを確認する必要がありますを指定します。|  
-|`prHasDefault`|既定値を持つプロパティを指定します。|  
+|`prSpecialName`|Specifies that the property is special, and that its name describes how.|  
+|`prReservedMask`|Reserved for internal use by the common language runtime.|  
+|`prRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the property name.|  
+|`prHasDefault`|Specifies that the property has a default value.|  
 |`prUnused`|使用されません。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

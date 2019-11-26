@@ -6,21 +6,21 @@ helpviewer_keywords:
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: 232bceba8286c2566a7df03b9001a5c43b348b20
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 073ff0727fc6aab1189f73a254aa95da60820cc3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043453"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447155"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>UI オートメーション ExpandCollapse コントロール パターンの実装
 
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
 
 このトピックでは、プロパティ、メソッド、イベントに関する情報など、 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>の実装のためのガイドラインと規則について説明します。 その他のリファレンスへのリンクは、概要の最後に記載します。
 
-<xref:System.Windows.Automation.ExpandCollapsePattern> コントロール パターンは、視覚的に展開してより多くのコンテンツを表示したり、折りたたんでコンテンツを非表示にしたりするコントロールをサポートするために使用します。 このコントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)」を参照してください。
+<xref:System.Windows.Automation.ExpandCollapsePattern> コントロール パターンは、視覚的に展開してより多くのコンテンツを表示したり、折りたたんでコンテンツを非表示にしたりするコントロールをサポートするために使用します。 このコントロール パターンを実装するコントロールの例については、「 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)」をご覧ください。
 
 <a name="Implementation_Guidelines_and_Conventions"></a>
 
@@ -53,12 +53,12 @@ ExpandCollapse コントロール パターンを実装する場合は、次の�
 
 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>の実装には、次のプロパティとメソッドが必要です。
 
-|必須メンバー|メンバーの型|メモ|
+|必須メンバー|メンバーの型|ノート|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|プロパティ|なし|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|メソッド|なし|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|メソッド|なし|
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|イベント|このコントロールには関連付けられているイベントがありません。この汎用デリゲートを使用します。|
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|property|None|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|メソッド|None|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|メソッド|None|
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|event|このコントロールには関連付けられているイベントがありません。この汎用デリゲートを使用します。|
 
 <a name="Exceptions"></a>
 
@@ -66,9 +66,9 @@ ExpandCollapse コントロール パターンを実装する場合は、次の�
 
 プロバイダーは、次の例外をスローする必要があります。
 
-|例外の型|条件|
+|例外の種類|条件|
 |--------------------|---------------|
-|<xref:System.InvalidOperationException>|が<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>の<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>場合、または<xref:System.Windows.Automation.ExpandCollapseState>  = の<xref:System.Windows.Automation.ExpandCollapseState.LeafNode>いずれかが呼び出されます。|
+|<xref:System.InvalidOperationException>|Either <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> or <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> is called when the <xref:System.Windows.Automation.ExpandCollapseState> = <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.|
 
 ## <a name="see-also"></a>関連項目
 

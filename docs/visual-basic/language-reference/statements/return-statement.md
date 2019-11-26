@@ -1,5 +1,5 @@
 ---
-title: Return ステートメント (Visual Basic)
+title: Return ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Return
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: edaaf09f5a984344f7e89c9da988c529774934e9
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: efc85a3a844898345aa2d16926ba0e35d7346d1b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583260"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333014"
 ---
 # <a name="return-statement-visual-basic"></a>Return ステートメント (Visual Basic)
-@No__t_0、`Sub`、`Get`、`Set`、または `Operator` プロシージャを呼び出したコードに制御を戻します。  
+Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,20 +29,20 @@ Return expression
   
 ## <a name="part"></a>パーツ  
  `expression`  
- @No__t_0、`Get`、または `Operator` プロシージャで必要です。 呼び出し元のコードに返される値を表す式。  
+ Required in a `Function`, `Get`, or `Operator` procedure. Expression that represents the value to be returned to the calling code.  
   
 ## <a name="remarks"></a>Remarks  
- @No__t_0 または `Set` プロシージャでは、`Return` ステートメントは `Exit Sub` または `Exit Property` ステートメントと同じであり、`expression` を指定することはできません。  
+ In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.  
   
- @No__t_0、`Get`、または `Operator` プロシージャでは、`Return` ステートメントに `expression` を含める必要があります。また、`expression` は、プロシージャの戻り値の型に変換可能なデータ型に評価される必要があります。 @No__t_0 または `Get` の手順では、プロシージャ名に式を代入して戻り値として使用し、`Exit Function` または `Exit Property` ステートメントを実行する方法もあります。 @No__t_0 の手順では、`Return expression` を使用する必要があります。  
+ In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure. In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement. In an `Operator` procedure, you must use `Return expression`.  
   
- 同じ手順で、必要に応じて `Return` ステートメントをいくつでも含めることができます。  
+ You can include as many `Return` statements as appropriate in the same procedure.  
   
 > [!NOTE]
-> @No__t_0 ブロック内のコードは、`Try` または `Catch` ブロック内の `Return` ステートメントが検出された後、その `Return` ステートメントが実行される前に実行されます。 @No__t_0 ステートメントを `Finally` ブロックに含めることはできません。  
+> The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes. A `Return` statement cannot be included in a `Finally` block.  
   
 ## <a name="example"></a>例  
- 次の例では、`Return` ステートメントを複数回使用して、プロシージャが他の操作を行う必要がない場合に、呼び出し元のコードに戻ります。  
+ The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   

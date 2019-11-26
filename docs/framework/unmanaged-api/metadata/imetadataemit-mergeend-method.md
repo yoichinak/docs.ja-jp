@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e512b7cd8869c6ede1472bbc5b6ec4c428b40ef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 34ecfc2f01f22971e135358806adeea632e02f8b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757646"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448030"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd メソッド
 
-マージを現在のスコープを 1 つまたは複数の前の呼び出しで指定されたすべてのメタデータ スコープ[imetadataemit::merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)します。
+Merges into the current scope all the metadata scopes specified by one or more prior calls to [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
 
 ## <a name="syntax"></a>構文
 
@@ -36,41 +34,41 @@ HRESULT MergeEnd ();
 
 ## <a name="parameters"></a>パラメーター
 
-このメソッドには、パラメーターはありません。
+This method takes no parameters.
 
 ## <a name="remarks"></a>Remarks
 
-このルーチンはトリガーのメタデータの実際の結合は、すべてのインポート前の呼び出しによって指定されたスコープ`IMetaDataEmit::Merge`出力の現在のスコープにします。
+This routine triggers the actual merge of metadata, of all import scopes specified by preceding calls to `IMetaDataEmit::Merge`, into the current output scope.
 
-マージに、次の特殊な条件が適用されます。
+The following special conditions apply to the merge:
 
-- モジュールのバージョン id (MVID) は、インポート スコープ内のメタデータに一意であるため、まったくインポートします。
+- A module version identifier (MVID) is never imported, because it is unique to the metadata in the import scope.
 
-- 既存のモジュール全体のプロパティは上書きされません。
+- No existing module-wide properties are overwritten.
 
-  モジュールのプロパティは、現在のスコープで既に設定された、モジュールのプロパティはインポートされません。 ただし、現在のスコープ内でモジュールのプロパティが設定されていない、最初に検出されたときに、一度だけがインポートされます。 これらのモジュールのプロパティが再度発生した場合、重複しています。 (MVID) を除くすべてのモジュールのプロパティの値が比較され、重複が見つからなかった場合、エラーが発生します。
+  If module properties were already set for the current scope, no module properties are imported. However, if module properties have not been set in the current scope, they are imported only once, when they are first encountered. If those module properties are encountered again, they are duplicates. If the values of all module properties (except MVID) are compared and no duplicates are found, an error is raised.
 
-- 型の定義 (`TypeDef`)、現在のスコープに重複はマージされません。 `TypeDef` オブジェクトはそれぞれに対して重複をチェック*オブジェクトの完全修飾名* + *GUID* + *バージョン番号*します。 名前または GUID のいずれかで一致があるその他の 2 つの要素のいずれかが異なる場合、エラーが発生します。 それ以外の場合、3 つすべての項目が一致する場合`MergeEnd`エントリが重複しないことを確認する簡単なチェックがない場合、エラーが発生します。 この簡単なチェックを探します。
+- For type definitions (`TypeDef`), no duplicates are merged into the current scope. `TypeDef` objects are checked for duplicates against each *fully-qualified object name* + *GUID* + *version number*. If there is a match on either name or GUID, and any of the other two elements is different, an error is raised. Otherwise, if all three items match, `MergeEnd` does a cursory check to ensure the entries are indeed duplicates; if not, an error is raised. This cursory check looks for:
 
-  - 同じメンバー宣言を同じ順序で発生しています。 メンバーとしてフラグが付いている`mdPrivateScope`(を参照してください、 [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)列挙型)。 この確認には含まれません特別にマージされます。
+  - The same member declarations, occurring in the same order. Members that are flagged as `mdPrivateScope` (see the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration) are not included in this check; they are merged specially.
 
-  - 同じクラス レイアウト。
+  - The same class layout.
 
-  つまり、`TypeDef`オブジェクトする必要があります常に完全かつ一貫して定義するすべてのメタデータ スコープで宣言されている完全な定義があると見なされます (クラス) をそのメンバーの実装が複数のコンパイル単位に分散している場合。すべてのスコープに存在して各スコープには増分されません。 たとえば、パラメーター名、コントラクトに関連する場合が送出同様に、すべてのスコープに関連いない場合、それらがメタデータに出力しないする必要があります。
+  This means that a `TypeDef` object must always be fully and consistently defined in every metadata scope in which it is declared; if its member implementations (for a class) are spread across multiple compilation units, the full definition is assumed to be present in every scope and not incremental to each scope. For example, if parameter names are relevant to the contract, they must be emitted the same way into every scope; if they are not relevant, they should not be emitted into metadata.
 
-  例外が、`TypeDef`オブジェクトとしてフラグが設定された増分のメンバーを持つことが`mdPrivateScope`します。 これらは、発生時に`MergeEnd`増分重複に関係なく、現在のスコープに追加します。 コンパイラは、プライベート スコープを認識するため、コンパイラはルールの適用を担当である必要があります。
+  The exception is that a `TypeDef` object can have incremental members flagged as `mdPrivateScope`. On encountering these, `MergeEnd` incrementally adds them to the current scope without regard for duplicates. Because the compiler understands the private scope, the compiler must be responsible for enforcing rules.
 
-- 相対仮想アドレス (Rva) がインポートまたは; マージできません。コンパイラは、この情報を再生成が必要です。
+- Relative virtual addresses (RVAs) are not imported or merged; the compiler is expected to re-emit this information.
 
-- アタッチされている項目がマージされた場合にのみ、カスタム属性がマージされます。 たとえば、クラスに関連付けられているカスタム属性は、クラスが最初に検出されたときにマージされます。 カスタム属性が関連付けられている場合、`TypeDef`または`MemberDef`はマージされません、削除またはそのようなメタデータを更新するコンパイラの責任です (メンバーのコンパイルのタイムスタンプ) などのコンパイル単位に固有です。
+- Custom attributes are merged only when the item to which they are attached is merged. For example, custom attributes associated with a class are merged when the class is first encountered. If custom attributes are associated with a `TypeDef` or `MemberDef` that is specific to the compilation unit (such as the time stamp of a member compile), they are not merged and it is up to the compiler to remove or update such metadata.
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
 
-**ヘッダー:** Cor.h
+**Header:** Cor.h
 
-**ライブラリ:** MSCorEE.dll にリソースとして使用
+**Library:** Used as a resource in MSCorEE.dll
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 

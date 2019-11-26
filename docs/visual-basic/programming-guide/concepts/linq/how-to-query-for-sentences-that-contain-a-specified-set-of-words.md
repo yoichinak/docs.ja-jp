@@ -1,13 +1,13 @@
 ---
-title: '方法 : 指定された単語のセットを含む文章を照会する (LINQ) (Visual Basic)'
+title: '方法 : 指定された単語のセットを含む文章を照会する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-ms.openlocfilehash: 81863706afc4f09abf114d7efbaaa02b1ee56084
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4a068f4f5500da5fd26e3dea753ec9591b6c7f5f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524134"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347676"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>方法 : 指定された単語のセットを含む文章を照会する (LINQ) (Visual Basic)
 
@@ -65,8 +65,8 @@ End Class
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-VB.NET コンソールアプリケーションプロジェクトを作成します。このプロジェクトには、名前空間の `Imports` ステートメントが含まれています。
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

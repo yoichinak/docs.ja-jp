@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d0f94949cdc82cdecd52f003f3400c43014fabf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4c819bff50e6644a733374e9863d670d3323ee68
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780459"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449524"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls メソッド
-指定したによって実装されるすべてのインターフェイスを列挙`TypeDef`します。 
+Enumerates all interfaces implemented by the specified `TypeDef`. 
   
 ## <a name="syntax"></a>構文  
   
@@ -41,37 +39,37 @@ HRESULT EnumInterfaceImpls (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。  
+ [in, out] A pointer to the enumerator.  
   
  `td`  
- [in]インターフェイスの実装を表す MethodDef トークンを持つが列挙 TypeDef のトークンです。  
+ [in] The token of the TypeDef whose MethodDef tokens representing interface implementations are to be enumerated.  
   
  `rImpls`  
- [out]MethodDef トークンを格納するために使用する配列。  
+ [out] The array used to store the MethodDef tokens.  
   
  `cMax`  
  [in] `rImpls` 配列の最大サイズ。  
   
  `pcImpls`  
- [out]実際のトークンで返される数`rImpls`します。  
+ [out] The actual number of tokens returned in `rImpls`.  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls` 正常に返されます。|  
-|`S_FALSE`|MethodDef トークンを列挙することはありません。 その場合は、 `pcImpls` 0 に設定されます。|  
+|`S_OK`|`EnumInterfaceImpls` returned successfully.|  
+|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcImpls` is set to zero.|  
 
 ## <a name="remarks"></a>Remarks
 
-列挙体のコレクションを返します`mdInterfaceImpl`各インターフェイスを指定した実装のためのトークン`TypeDef`します。 インターフェイスのトークンは、インターフェイスが指定された順序で返されます (を通じて`DefineTypeDef`または`SetTypeDefProps`)。 プロパティは、返された`mdInterfaceImpl`を使用してトークンを照会できます[GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)します。
+The enumeration returns a collection of `mdInterfaceImpl` tokens for each interface implemented by the specified `TypeDef`. Interface tokens are returned in the order the interfaces were specified (through `DefineTypeDef` or `SetTypeDefProps`). Properties of the returned `mdInterfaceImpl` tokens can be queried using [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: Enum ステートメント (Visual Basic)
+title: Enum ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Enum
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: be1780b00b4d58964e1de5ec199cb80dc0f9dba5
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 48220fd1e88cf38e67db5dd3a2ad90638eb6b6df
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583400"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343710"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum ステートメント (Visual Basic)
 
-列挙体を宣言し、そのメンバーの値を定義します。
+Declares an enumeration and defines the values of its members.
 
 ## <a name="syntax"></a>構文
 
@@ -35,13 +35,13 @@ End Enum
 
 - `attributelist`
 
-  省略可能です。 この列挙に適用される属性のリスト。 [属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)は山かっこ ("`<`" と "`>`") で囲む必要があります。
+  省略可能です。 List of attributes that apply to this enumeration. You must enclose the [attribute list](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").
 
-  @No__t_0 属性は、列挙体のインスタンスの値に複数の列挙体メンバーを含めることができ、各メンバーが列挙値のビットフィールドを表すことができることを示します。
+  The <xref:System.FlagsAttribute> attribute indicates that the value of an instance of the enumeration can include multiple enumeration members, and that each member represents a bit field in the enumeration value.
 
 - `accessmodifier`
 
-  省略可能です。 この列挙体にアクセスできるコードを指定します。 次のいずれかの値を指定します。
+  省略可能です。 Specifies what code can access this enumeration. 次のいずれかの値を指定します。
 
   - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 
@@ -57,26 +57,26 @@ End Enum
 
 - `Shadows`
 
-  省略可能です。 この列挙体が、基底クラスで同じ名前を持つプログラミング要素、またはオーバーロードされた要素のセットを直しして非表示にすることを指定します。 [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)は、そのメンバーではなく、列挙自体にのみ指定できます。
+  省略可能です。 Specifies that this enumeration redeclares and hides an identically named programming element, or set of overloaded elements, in a base class. You can specify [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) only on the enumeration itself, not on any of its members.
 
 - `enumerationname`
 
-  必須です。 列挙体の名前。 有効な名前の詳細については、「宣言された[要素名](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+  必須です。 Name of the enumeration. For information on valid names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
 - `datatype`
 
-  省略可能です。 列挙型とそのすべてのメンバーのデータ型。
+  省略可能です。 Data type of the enumeration and all its members.
 
 - `memberlist`
 
-  必須です。 このステートメントで宣言されているメンバー定数の一覧。 個々のソースコード行に複数のメンバーが表示されます。
+  必須です。 List of member constants being declared in this statement. Multiple members appear on individual source code lines.
 
-  各 `member` には、次の構文と部分があります。 `[<attribute list>] member name [ = initializer ]`
+  Each `member` has the following syntax and parts: `[<attribute list>] member name [ = initializer ]`
 
   |パーツ|説明|
   |---|---|
-  |`membername`|必須です。 このメンバーの名前。|
-  |`initializer`|省略可能です。 コンパイル時に評価され、このメンバーに割り当てられる式。|
+  |`membername`|必須です。 Name of this member.|
+  |`initializer`|省略可能です。 Expression that is evaluated at compile time and assigned to this member.|
 
 - `End` `Enum`
 
@@ -84,103 +84,103 @@ End Enum
 
 ## <a name="remarks"></a>Remarks
 
-論理的に相互に関連付けられている変化しない値のセットがある場合は、それらを列挙体でまとめて定義できます。 これにより、列挙体とそのメンバーにわかりやすい名前が提供され、その値よりも覚えやすくなります。 その後、コード内のさまざまな場所で列挙メンバーを使用できます。
+If you have a set of unchanging values that are logically related to each other, you can define them together in an enumeration. This provides meaningful names for the enumeration and its members, which are easier to remember than their values. You can then use the enumeration members in many places in your code.
 
-列挙を使用する利点は、次のとおりです。
+The benefits of using enumerations include the following:
 
-- 数値の転置またはミスによって発生するエラーを減らします。
+- Reduces errors caused by transposing or mistyping numbers.
 
-- では、将来の値の変更が簡単になります。
+- Makes it easy to change values in the future.
 
-- コードを読みやすくするため、エラーが発生する可能性は低くなります。
+- Makes code easier to read, which means it is less likely that errors will be introduced.
 
-- 上位互換性を確保します。 列挙型を使用する場合、後でメンバー名に対応する値を変更すると、コードが失敗する可能性は低くなります。
+- Ensures forward compatibility. If you use enumerations, your code is less likely to fail if in the future someone changes the values corresponding to the member names.
 
-列挙体には、名前、基になるデータ型、およびメンバーのセットが含まれます。 各メンバーは定数を表します。
+An enumeration has a name, an underlying data type, and a set of members. Each member represents a constant.
 
-プロシージャ以外のクラス、構造体、モジュール、またはインターフェイスレベルで宣言された列挙型は、*メンバー列挙*型です。 これは、それを宣言するクラス、構造体、モジュール、またはインターフェイスのメンバーです。
+An enumeration declared at class, structure, module, or interface level, outside any procedure, is a *member enumeration*. It is a member of the class, structure, module, or interface that declares it.
 
-メンバー列挙体には、クラス、構造体、モジュール、またはインターフェイス内のどこからでもアクセスできます。 クラス、構造体、またはモジュールの外部のコードでは、メンバーの列挙体の名前を、そのクラス、構造体、またはモジュールの名前で修飾する必要があります。 [インポート](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)ステートメントをソースファイルに追加することで、完全修飾名を使用する必要がないようにすることができます。
+Member enumerations can be accessed from anywhere within their class, structure, module, or interface. Code outside a class, structure, or module must qualify a member enumeration's name with the name of that class, structure, or module. You can avoid the need to use fully qualified names by adding an [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) statement to the source file.
 
-名前空間レベルで、任意のクラス、構造体、モジュール、またはインターフェイスの外側で宣言された列挙型は、それが出現する名前空間のメンバーになります。
+An enumeration declared at namespace level, outside any class, structure, module, or interface, is a member of the namespace in which it appears.
 
-列挙体の*宣言コンテキスト*は、ソースファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があり、プロシージャにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。
+The *declaration context* for an enumeration must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure. 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。
 
-列挙体全体に属性を適用することはできますが、メンバーには個別には適用できません。 属性は、アセンブリのメタデータに情報を提供します。
+You can apply attributes to an enumeration as a whole, but not to its members individually. An attribute contributes information to the assembly's metadata.
 
 ## <a name="data-type"></a>データの種類
 
-@No__t_0 ステートメントでは、列挙体のデータ型を宣言できます。 各メンバーは、列挙体のデータ型を受け取ります。 @No__t_0、`Integer`、`Long`、`SByte`、`Short`、`UInteger`、`ULong`、`UShort` を指定できます。
+The `Enum` statement can declare the data type of an enumeration. Each member takes the enumeration's data type. You can specify `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong`, or `UShort`.
 
-列挙に `datatype` を指定しない場合、各メンバーはその `initializer` のデータ型を受け取ります。 @No__t_0 と `initializer` の両方を指定する場合、`initializer` のデータ型は `datatype` に変換可能である必要があります。 @No__t_0 も `initializer` も存在しない場合、データ型は既定で `Integer` に設定されます。
+If you do not specify `datatype` for the enumeration, each member takes the data type of its `initializer`. If you specify both `datatype` and `initializer`, the data type of `initializer` must be convertible to `datatype`. If neither `datatype` nor `initializer` is present, the data type defaults to `Integer`.
 
-## <a name="initializing-members"></a>メンバーの初期化
+## <a name="initializing-members"></a>Initializing Members
 
-@No__t_0 ステートメントで `memberlist` で選択したメンバーの内容を初期化できます。 @No__t_0 を使用して、メンバーに割り当てられる式を指定します。
+The `Enum` statement can initialize the contents of selected members in `memberlist`. You use `initializer` to supply an expression to be assigned to the member.
 
-メンバーに `initializer` を指定しなかった場合は、Visual Basic 0 (`memberlist` の最初の `member`)、または直前の `member` の値より大きい値に初期化されます。
+If you do not specify `initializer` for a member, Visual Basic initializes it either to zero (if it is the first `member` in `memberlist`), or to a value greater by one than that of the immediately preceding `member`.
 
-各 `initializer` に用意されている式には、リテラル、既に定義されている他の定数、およびこの列挙の前のメンバーを含む定義済みの列挙型メンバーの任意の組み合わせを指定できます。 算術演算子と論理演算子を使用すると、このような要素を組み合わせることができます。
+The expression supplied in each `initializer` can be any combination of literals, other constants that are already defined, and enumeration members that are already defined, including a previous member of this enumeration. You can use arithmetic and logical operators to combine such elements.
 
-@No__t_0 では、変数または関数を使用できません。 ただし、`CByte` や `CShort` などの変換キーワードを使用することもできます。 定数 `String` または `Char` 引数を使用して呼び出す場合は、コンパイル時に評価できるため、`AscW` を使用することもできます。
+You cannot use variables or functions in `initializer`. However, you can use conversion keywords such as `CByte` and `CShort`. You can also use `AscW` if you call it with a constant `String` or `Char` argument, since that can be evaluated at compile time.
 
-列挙体に浮動小数点値を指定することはできません。 メンバーに浮動小数点値が割り当てられていて `Option Strict` が on に設定されている場合、コンパイラエラーが発生します。 @No__t_0 がオフの場合、値は自動的に `Enum` の種類に変換されます。
+Enumerations cannot have floating-point values. If a member is assigned a floating-point value and `Option Strict` is set to on, a compiler error occurs. If `Option Strict` is off, the value is automatically converted to the `Enum` type.
 
-メンバーの値が、基になるデータ型で許容される範囲を超えている場合、またはメンバーが基になるデータ型で許容される最大値に初期化されている場合、コンパイラはエラーを報告します。
+If the value of a member exceeds the allowable range for the underlying data type, or if you initialize any member to the maximum value allowed by the underlying data type, the compiler reports an error.
 
 ## <a name="modifiers"></a>修飾子
 
-クラス、構造体、モジュール、およびインターフェイスメンバーの列挙型は、既定でパブリックアクセスに設定されています。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 名前空間メンバーの列挙は、既定で friend アクセスに設定されています。 アクセスレベルはパブリックに調整できますが、プライベートまたは保護することはできません。 詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+Class, structure, module, and interface member enumerations default to public access. アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 Namespace member enumerations default to friend access. You can adjust their access levels to public, but not to private or protected. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-すべての列挙メンバーにはパブリックアクセスがあり、それらのメンバーに対してアクセス修飾子を使用することはできません。 ただし、列挙自体のアクセスレベルがより制限されている場合は、指定された列挙アクセスレベルが優先されます。
+All enumeration members have public access, and you cannot use any access modifiers on them. However, if the enumeration itself has a more restricted access level, the specified enumeration access level takes precedence.
 
-既定では、すべての列挙型とそのフィールドは定数です。 したがって、列挙型またはそのメンバーを宣言するときに、`Shared`、`Static`、および `ReadOnly` キーワードを使用することはできません。
+By default, all enumerations are types and their fields are constants. Therefore the `Shared`, `Static`, and `ReadOnly` keywords cannot be used when declaring an enumeration or its members.
 
-## <a name="assigning-multiple-values"></a>複数の値の割り当て
+## <a name="assigning-multiple-values"></a>Assigning Multiple Values
 
-列挙型は、通常、相互に排他的な値を表します。 @No__t_1 宣言に <xref:System.FlagsAttribute> 属性を含めることにより、複数の値を列挙型のインスタンスに割り当てることができます。 @No__t_0 属性は、列挙型をビットフィールド、つまりフラグのセットとして扱うことを指定します。 これらは*ビットごと*の列挙体と呼ばれます。
+Enumerations typically represent mutually exclusive values. By including the <xref:System.FlagsAttribute> attribute in the `Enum` declaration, you can instead assign multiple values to an instance of the enumeration. The <xref:System.FlagsAttribute> attribute specifies that the enumeration be treated as a bit field, that is, a set of flags. These are called *bitwise* enumerations.
 
-@No__t_0 属性を使用して列挙体を宣言する場合は、値に対して2の累乗 (1、2、4、8、16など) を使用することをお勧めします。 また、"None" は、値が0のメンバーの名前にすることをお勧めします。 その他のガイドラインについては、「<xref:System.FlagsAttribute>」および「<xref:System.Enum>」を参照してください。
+When you declare an enumeration by using the <xref:System.FlagsAttribute> attribute, we recommend that you use powers of 2, that is, 1, 2, 4, 8, 16, and so on, for the values. We also recommend that "None" be the name of a member whose value is 0. For additional guidelines, see <xref:System.FlagsAttribute> and <xref:System.Enum>.
 
 ## <a name="example"></a>例
 
-`Enum` ステートメントを使用する方法の例を次に示します。 メンバーは、`Medium` ではなく `EggSizeEnum.Medium` と呼ばれることに注意してください。
+`Enum` ステートメントを使用する方法の例を次に示します。 Note that the member is referred to as `EggSizeEnum.Medium`, and not as `Medium`.
 
 [!code-vb[VbEnumsTask#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#41)]
 
 ## <a name="example"></a>例
 
-次の例のメソッドは、`Egg` クラスの外側にあります。 したがって、`EggSizeEnum` は完全に `Egg.EggSizeEnum` として修飾されます。
+The method in the following example is outside the `Egg` class. Therefore, `EggSizeEnum` is fully qualified as `Egg.EggSizeEnum`.
 
 [!code-vb[VbEnumsTask#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#42)]
 
 ## <a name="example"></a>例
 
-次の例では、`Enum` ステートメントを使用して、関連する一連の名前付き定数値を定義します。 この場合、値は、データベースのデータ入力フォームをデザインするために選択できる色です。
+The following example uses the `Enum` statement to define a related set of named constant values. In this case, the values are colors you might choose to design data entry forms for a database.
 
 [!code-vb[VbEnumsTask#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#30)]
 
 ## <a name="example"></a>例
 
-次の例は、正と負の両方の値を含む値を示しています。
+The following example shows values that include both positive and negative numbers.
 
 [!code-vb[VbEnumsTask#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#31)]
 
 ## <a name="example"></a>例
 
-次の例では、`As` 句を使用して、列挙型の `datatype` を指定しています。
+In the following example, an `As` clause is used to specify the `datatype` of an enumeration.
 
 [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]
 
 ## <a name="example"></a>例
 
-ビットごとの列挙体を使用する方法を次の例に示します。 ビットごとの列挙体のインスタンスに複数の値を割り当てることができます。 @No__t_0 宣言には <xref:System.FlagsAttribute> 属性が含まれています。これは、列挙体をフラグのセットとして処理できることを示します。
+The following example shows how to use a bitwise enumeration. Multiple values can be assigned to an instance of a bitwise enumeration. The `Enum` declaration includes the <xref:System.FlagsAttribute> attribute, which indicates that the enumeration can be treated as a set of flags.
 
 [!code-vb[VbEnumsTask#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#61)]
 
 ## <a name="example"></a>例
 
-次の例では、列挙体を反復処理します。 @No__t_0 メソッドを使用して、列挙からメンバー名の配列を取得し、<xref:System.Enum.GetValues%2A> してメンバー値の配列を取得します。
+The following example iterates through an enumeration. It uses the <xref:System.Enum.GetNames%2A> method to retrieve an array of member names from the enumeration, and <xref:System.Enum.GetValues%2A> to retrieve an array of member values.
 
 [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]
 

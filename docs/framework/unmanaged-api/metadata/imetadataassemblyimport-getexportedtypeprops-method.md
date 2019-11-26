@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f8dd1daf3528bbc642033e254a809c18c3662ff1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 82302124828a2dab73b445128d7d847e112edd36
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779189"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448213"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps メソッド
-指定したメタデータ シグネチャを持つエクスポートされた型のプロパティのセットを取得します。  
+Gets the set of properties of the exported type with the specified metadata signature.  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,32 +41,32 @@ HRESULT GetExportedTypeProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mdct`  
- [in]`mdExportedType`エクスポートされた型を表すメタデータ トークン。  
+ [in] An `mdExportedType` metadata token that represents the exported type.  
   
  `szName`  
- [out]エクスポートされる型の名前。  
+ [out] The name of the exported type.  
   
  `cchName`  
- [in]ワイド文字単位のサイズの`szName`します。  
+ [in] The size, in wide characters, of `szName`.  
   
  `pchName`  
- [out]実際に返されるワイド文字の数 `szName`  
+ [out] The number of wide characters actually returned in `szName`  
   
  `ptkImplementation`  
- [out]`mdFile`、 `mdAssemblyRef`、または`mdExportedType`またはエクスポートされる型のプロパティにアクセスできるようにするメタデータ トークン。  
+ [out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.  
   
  `ptkTypeDef`  
- [out]ポインター、`mdTypeDef`ファイル内の型を表すトークン。  
+ [out] A pointer to an `mdTypeDef` token that represents a type in the file.  
   
  `pdwExportedTypeFlags`  
- [out]エクスポートされた型に適用されるメタデータを記述するフラグへのポインター。 1 つまたは複数フラグ値を指定できます[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)値。  
+ [out] A pointer to the flags that describe the metadata applied to the exported type. The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

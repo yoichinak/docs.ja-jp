@@ -1,52 +1,52 @@
 ---
-title: パッケージ化とカスタム My 拡張 (Visual Basic) の配置
+title: Packaging and deploying custom My extensions
 ms.date: 08/14/2018
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2e2a6705fb3d8d4424d46d96bbf49b41e1414af
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014207"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330257"
 ---
-# <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>パッケージ化し、カスタム My 拡張 (Visual Basic) のデプロイ
+# <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Package and deploy custom My extensions (Visual Basic)
 
-Visual Basic では、ユーザー設定を展開するための簡単な方法`My`Visual Studio テンプレートを使用して名前空間の拡張機能。 対象のプロジェクト テンプレートを作成する場合、`My`拡張機能は、新しいプロジェクトの種類の不可欠なカスタムを含めることができますのみ`My`テンプレートをエクスポートする場合は、プロジェクトで拡張機能のコード。 プロジェクト テンプレートをエクスポートする方法の詳細については、次を参照してください。[方法。プロジェクト テンプレートを作成](/visualstudio/ide/how-to-create-project-templates)です。
+Visual Basic provides an easy way for you to deploy your custom `My` namespace extensions by using Visual Studio templates. If you are creating a project template for which your `My` extensions are an integral part of the new project type, you can just include your custom `My` extension code with the project when you export the template. For more information about exporting project templates, see [How to: Create Project Templates](/visualstudio/ide/how-to-create-project-templates).
 
-場合、カスタム`My`拡張機能が 1 つのコード ファイルに、ユーザーは、あらゆる種類の Visual Basic プロジェクトに追加できる項目テンプレートとして、ファイルをエクスポートすることができます。 追加の機能と、カスタムの動作を有効にする項目テンプレートをカスタマイズすることができますし`My`Visual Basic プロジェクトで拡張機能。 これらの機能を以下に示します。
+If your custom `My` extension is in a single code file, you can export the file as an item template that users can add to any type of Visual Basic project. You can then customize the item template to enable additional capabilities and behavior for your custom `My` extension in a Visual Basic project. Those capabilities include the following:
 
-- ユーザーが、カスタム管理できるように`My`から拡張機能、**マイ拡張**Visual Basic のプロジェクト デザイナーのページ。
+- Allowing users to manage your custom `My` extension from the **My Extensions** page of the Visual Basic Project Designer.
 
-- 自動的に追加するカスタム`My`拡張機能と、指定したアセンブリへの参照がプロジェクトに追加します。
+- Automatically adding your custom `My` extension when a reference to a specified assembly is added to a project.
 
-- 非表示、`My`拡張機能の項目テンプレートを**項目の追加**ダイアログ ボックスがプロジェクト項目の一覧には含まれません。
+- Hiding the `My` extension item template in the **Add Item** dialog box so that it is not included in the list of project items.
 
-このトピックでは、カスタムのパッケージ化する方法を説明`My`拡張機能から管理可能な非表示の項目テンプレートとして、**マイ拡張**Visual Basic のプロジェクト デザイナーのページ。 カスタム`My`拡張機能追加することも自動的に指定したアセンブリへの参照がプロジェクトに追加されたときにします。
+This topic discusses how to package a custom `My` extension as a hidden item template that can be managed from the **My Extensions** page of the Visual Basic Project Designer. The custom `My` extension can also be added automatically when a reference to a specified assembly is added to a project.
 
-## <a name="create-a-my-namespace-extension"></a>作成、My 名前空間拡張
+## <a name="create-a-my-namespace-extension"></a>Create a My namespace extension
 
-カスタムの配置パッケージの作成の最初のステップ`My`拡張機能は、1 つのコード ファイルとして拡張機能を作成します。 詳細およびカスタムを作成する方法についてガイダンス`My`拡張機能を参照してください[Visual Basic の My Namespace の拡張](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)します。
+The first step in creating a deployment package for a custom `My` extension is to create the extension as a single code file. For details and guidance about how to create a custom `My` extension, see [Extending the My Namespace in Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md).
 
-## <a name="export-a-my-namespace-extension-as-an-item-template"></a>エクスポートする項目のテンプレートと My 名前空間拡張
+## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Export a My namespace extension as an item template
 
-含むコード ファイルを作成したら、`My`名前空間の拡張機能は、Visual Studio 項目テンプレートとして、コード ファイルをエクスポートすることができます。 Visual Studio 項目テンプレートとしてファイルにエクスポートする方法の詳細については、次を参照してください。[方法。項目テンプレートを作成](/visualstudio/ide/how-to-create-item-templates)です。
+After you have a code file that includes your `My` namespace extension, you can export the code file as a Visual Studio item template. For instructions on how to export a file as a Visual Studio item template, see [How to: Create Item Templates](/visualstudio/ide/how-to-create-item-templates).
 
 > [!NOTE]
-> 場合、`My`名前空間の拡張機能は、特定のアセンブリに対する依存関係を持つ、自動的にインストールするように項目テンプレートをカスタマイズすることができます、`My`そのアセンブリへの参照が追加されたときに名前空間の拡張機能。 その結果、コード ファイルを Visual Studio 項目テンプレートとしてエクスポートするときに、アセンブリ参照を除外するされます。
+> If your `My` namespace extension has a dependency on a particular assembly, you can customize your item template to automatically install your `My` namespace extension when a reference to that assembly is added. As a result, you will want to exclude that assembly reference when you export the code file as a Visual Studio item template.
 
-## <a name="customize-the-item-template"></a>項目テンプレートをカスタマイズします。
+## <a name="customize-the-item-template"></a>Customize the item template
 
-項目テンプレートを管理することができます、**マイ拡張**Visual Basic のプロジェクト デザイナーのページ。 項目テンプレートを指定したアセンブリへの参照がプロジェクトに追加されたときに自動的に追加することもできます。 これらのカスタマイズを有効にするのには、テンプレート、CustomData ファイルと呼ばれる、新しいファイルに追加し、.vstemplate ファイルで XML を新しい要素を追加します。
+You can enable your item template to be managed from the **My Extensions** page of the Visual Basic Project Designer. You can also enable the item template to be added automatically when a reference to a specified assembly is added to a project. To enable these customizations, you will add a new file, called the CustomData file, to your template, and then add a new element to the XML in your .vstemplate file.
 
-### <a name="add-the-customdata-file"></a>CustomData ファイルを追加します。
+### <a name="add-the-customdata-file"></a>Add the CustomData file
 
-CustomData ファイルは、ファイル名拡張子を持つテキスト ファイルです。CustomData (ファイル名設定できます任意の値に、テンプレートに意味のある) XML を格納しているとします。 CustomData ファイル内の XML を含める Visual Basic の指示、`My`ユーザーの使用時に拡張子、**マイ拡張**Visual Basic のプロジェクト デザイナーのページ。 必要に応じて追加することができます、<`AssemblyFullName>` CustomData ファイルの XML を属性します。 これにより、ユーザー設定を自動的にインストールする Visual Basic`My`特定のアセンブリへの参照時に拡張子がプロジェクトに追加します。 CustomData ファイルを作成する任意のテキスト エディターまたは XML エディターを使用し、項目テンプレートの圧縮フォルダー (.zip ファイル) に追加できます。
+The CustomData file is a text file that has a file name extension of .CustomData (the file name can be set to any value meaningful to your template) and that contains XML. The XML in the CustomData file instructs Visual Basic to include your `My` extension when users use the **My Extensions** page of the Visual Basic Project Designer. You can optionally add the <`AssemblyFullName>` attribute to your CustomData file XML. This instructs Visual Basic to automatically install your custom `My` extension when a reference to a particular assembly is added to the project. You can use any text editor or XML editor to create the CustomData file, and then add it to your item template's compressed folder (.zip file).
 
-たとえば、次の XML では Microsoft.VisualBasic.PowerPacks.Vs.dll アセンブリへの参照時に、Visual Basic プロジェクトの My の拡張機能フォルダーにテンプレート項目を追加する CustomData ファイルの内容は、プロジェクトに追加されます。
+For example, the following XML shows the contents of a CustomData file that will add the template item to the My Extensions folder of a Visual Basic project when a reference to the Microsoft.VisualBasic.PowerPacks.Vs.dll assembly is added to the project.
 
 ```xml
 <VBMyExtensionTemplate
@@ -56,25 +56,25 @@ CustomData ファイルは、ファイル名拡張子を持つテキスト フ�
 />
 ```
 
-CustomData ファイルを含む、<`VBMyExtensionTemplate>`を次の表に記載されている属性を持つ要素。
+The CustomData file contains a <`VBMyExtensionTemplate>` element that has attributes as listed in the following table.
 
 |属性|説明|
 |---|---|
-|`ID`|必須。 拡張機能の一意の識別子。 この ID を持つ拡張機能は、プロジェクトに既に追加されている場合、もう一度追加するない、ユーザーが求められます。|
-|`Version`|必須。 項目テンプレートのバージョン番号です。|
-|`AssemblyFullName`|任意。 アセンブリ名。 追加するユーザーの入力を求め、このアセンブリへの参照がプロジェクトに追加されると、`My`この項目テンプレートからの拡張機能。|
+|`ID`|必須です。 A unique identifier for the extension. If the extension that has this ID has already been added to the project, the user will not be prompted to add it again.|
+|`Version`|必須です。 A version number for the item template.|
+|`AssemblyFullName`|省略可能です。 アセンブリ名。 When a reference to this assembly is added to the project, the user will be prompted to add the `My` extension from this item template.|
 
-### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>追加、 \<CustomDataSignature > 要素を .vstemplate ファイル
+### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Add the \<CustomDataSignature> element to the .vstemplate file
 
-として、Visual Studio 項目テンプレートを識別するために、`My`名前空間の拡張項目テンプレートの .vstemplate ファイルを変更することも必要があります。 追加する必要があります、`<CustomDataSignature>`要素を`<TemplateData>`要素。 `<CustomDataSignature>`要素は、テキストを含める必要があります`Microsoft.VisualBasic.MyExtension`次の例のようにします。
+To identify your Visual Studio item template as a `My` namespace extension, you must also modify the .vstemplate file for your item template. You must add a `<CustomDataSignature>` element to the `<TemplateData>` element. The `<CustomDataSignature>` element must contain the text `Microsoft.VisualBasic.MyExtension`, as shown in the following example.
 
 ```xml
 <CustomDataSignature>Microsoft.VisualBasic.MyExtension</CustomDataSignature>
 ```
 
-圧縮されたフォルダー (.zip ファイル) 内のファイルを直接変更することはできません。 .Vstemplate ファイルを圧縮フォルダーからコピー、変更、および、更新されたコピーを使用して、圧縮フォルダーの .vstemplate ファイルを置換する必要があります。
+You cannot modify files in a compressed folder (.zip file) directly. You must copy the .vstemplate file from the compressed folder, modify it, and then replace the .vstemplate file in the compressed folder with your updated copy.
 
-次の例を含む .vstemplate ファイルの内容を示しています、`<CustomDataSignature>`要素を追加します。
+The following example shows the contents of a .vstemplate file that has the `<CustomDataSignature>` element added.
 
 ```xml
 <VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
@@ -97,9 +97,9 @@ CustomData ファイルを含む、<`VBMyExtensionTemplate>`を次の表に記�
 </VSTemplate>
 ```
 
-## <a name="install-the-template"></a>テンプレートをインストールします。
+## <a name="install-the-template"></a>Install the template
 
-テンプレートをインストールするには、圧縮フォルダーをコピーすることができます (*.zip*ファイル)、Visual Basic 項目テンプレート フォルダーにします。 既定では、ユーザー項目テンプレートに *%USERPROFILE%\Documents\Visual Studio\<バージョン\>\Templates\ItemTemplates\Visual Basic*します。 また、Visual Studio インストーラーとしてテンプレートを公開することができます (*.vsi*) ファイル。
+To install the template, you can copy the compressed folder ( *.zip* file) to the Visual Basic item templates folder. By default, user item templates are located in *%USERPROFILE%\Documents\Visual Studio \<Version\>\Templates\ItemTemplates\Visual Basic*. Alternatively, you can publish the template as a Visual Studio Installer ( *.vsi*) file.
 
 ## <a name="see-also"></a>関連項目
 

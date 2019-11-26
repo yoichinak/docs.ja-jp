@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7ae84d6-81e8-4cb7-a1f9-d48b6cde5d79
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a7fa192a8e8b8a876f672e36bb906a714b1266e2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 70c1d87ae32fb70f8d9f6e32b527394022459526
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736665"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446430"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument メソッド
-指定されたドキュメント内の行情報を持つすべてのメソッドを取得します。  
+Gets every method that has line information in the provided document.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,22 +38,22 @@ HRESULT GetMethodsInDocument(
   
 ## <a name="parameters"></a>パラメーター  
  `document`  
- [in]ドキュメントへのポインター。  
+ [in] A pointer to the document.  
   
  `cMethod`  
- [in]A`ULONG32`のサイズを示す、`pRetVal`配列。  
+ [in] A `ULONG32` that indicates the size of the  `pRetVal` array.  
   
  `pcMethod`  
- [out]ポインターを`ULONG32`メソッドの格納に必要なバッファーのサイズを受け取る。  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.  
   
  `pRetVal`  
- [out]メソッドが受け取るバッファーへのポインター。  
+ [out] A pointer to the buffer that receives the methods.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

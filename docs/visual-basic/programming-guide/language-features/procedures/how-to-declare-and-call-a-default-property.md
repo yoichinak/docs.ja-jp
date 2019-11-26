@@ -1,5 +1,5 @@
 ---
-title: '方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す'
+title: 'How to: Declare and Call a Default Property'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -10,86 +10,86 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b01188ed8a9ff4da95a6975dcac3509625fdffb2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665768"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349682"
 ---
-# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す
-A*プロパティの既定*クラスまたは構造体のプロパティで、指定しなくても、コードにアクセスできます。 呼び出し元のコードは、クラスまたは構造体がないプロパティ、およびコンテキスト プロパティへのアクセスを許可、存在する場合、Visual Basic がそのクラスまたは構造体の既定のプロパティにアクセスを解決します。  
+# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>方法: 既定のプロパティを宣言して呼び出す (Visual Basic)
+A *default property* is a class or structure property that your code can access without specifying it. When calling code names a class or structure but not a property, and the context allows access to a property, Visual Basic resolves the access to that class or structure's default property if one exists.  
   
- クラスまたは構造体が多くて 1 つの既定のプロパティ。 ただし、既定プロパティはオーバー ロードし、その 1 つ以上のバージョンがあります。  
+ A class or structure can have at most one default property. However, you can overload a default property and have more than one version of it.  
   
- 詳細については、次を参照してください。[既定](../../../../visual-basic/language-reference/modifiers/default.md)します。  
+ For more information, see [Default](../../../../visual-basic/language-reference/modifiers/default.md).  
   
-### <a name="to-declare-a-default-property"></a>既定のプロパティを宣言するには  
+### <a name="to-declare-a-default-property"></a>To declare a default property  
   
-1. 通常の方法でプロパティを宣言します。 指定しない、`Shared`または`Private`キーワード。  
+1. Declare the property in the normal way. Do not specify the `Shared` or `Private` keyword.  
   
-2. 含める、`Default`プロパティ宣言でキーワード。  
+2. Include the `Default` keyword in the property declaration.  
   
-3. プロパティの少なくとも 1 つのパラメーターを指定します。 少なくとも 1 つの引数を受け取らない既定のプロパティを定義することはできません。  
+3. Specify at least one parameter for the property. You cannot define a default property that does not take at least one argument.  
   
      [!code-vb[VbVbcnProcedures#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#17)]  
   
-### <a name="to-call-a-default-property"></a>既定のプロパティを呼び出す  
+### <a name="to-call-a-default-property"></a>To call a default property  
   
-1. それを含むクラスまたは構造体の型の変数を宣言します。  
+1. Declare a variable of the containing class or structure type.  
   
      [!code-vb[VbVbcnProcedures#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#16)]  
   
-2. プロパティ名を通常は式の中で単独で変数名を使用します。  
+2. Use the variable name alone in an expression where you would normally include the property name.  
   
      [!code-vb[VbVbcnProcedures#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#21)]  
   
-3. 引数リストをかっこで、変数名に従ってください。 既定のプロパティは、少なくとも 1 つの引数を受け取る必要があります。  
+3. Follow the variable name with an argument list in parentheses. A default property must take at least one argument.  
   
      [!code-vb[VbVbcnProcedures#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#20)]  
   
-4. プロパティの既定値を取得するには、次の等値または式の中で、引数リストでという名前の変数を使用 (`=`)、代入ステートメントにサインインします。  
+4. To retrieve the default property value, use the variable name, with an argument list, in an expression or following the equal (`=`) sign in an assignment statement.  
   
      [!code-vb[VbVbcnProcedures#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#15)]  
   
-5. プロパティの既定値を設定するには、代入ステートメントの左側にある、引数のリストを持つという名前の変数を使用します。  
+5. To set the default property value, use the variable name, with an argument list, on the left side of an assignment statement.  
   
      [!code-vb[VbVbcnProcedures#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#14)]  
   
-6. 他のプロパティにアクセスするための作業と同様、という名前の変数と共に既定のプロパティ名を必ず指定することができます。  
+6. You can always specify the default property name together with the variable name, just as you would do to access any other property.  
   
      [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
 ## <a name="example"></a>例  
- 次の例では、クラスの既定のプロパティを宣言します。  
+ The following example declares a default property on a class.  
   
  [!code-vb[VbVbcnProcedures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>例  
- 次の例では、既定のプロパティを呼び出す方法`myProperty`クラス`class1`します。 次の 3 つの代入ステートメントで値を格納する`myProperty`、および<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>呼び出しは、値を読み取ります。  
+ The following example demonstrates how to call the default property `myProperty` on class `class1`. The three assignment statements store values in `myProperty`, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> call reads the values.  
   
  [!code-vb[VbVbcnProcedures#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#13)]  
   
- 既定のプロパティの最も一般的な用途は、<xref:Microsoft.VisualBasic.Collection.Item%2A>さまざまなコレクション クラスのプロパティ。  
+ The most common use of a default property is the <xref:Microsoft.VisualBasic.Collection.Item%2A> property on various collection classes.  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
- 既定のプロパティは、ソース コードの文字のわずかな低下につながるが行えるように、コードが読みにくくします。 クラスまたは構造体名への参照を行うときに、呼び出し元のコードがクラスまたは構造に習熟していない場合にすることはできません特定その参照が、クラスまたは構造体自体、または既定のプロパティにアクセスするかどうか。 これについては、コンパイラ エラーまたはランタイム ロジックの微妙なエラーにつながります。  
+ Default properties can result in a small reduction in source code-characters, but they can make your code more difficult to read. If the calling code is not familiar with your class or structure, when it makes a reference to the class or structure name it cannot be certain whether that reference accesses the class or structure itself, or a default property. This can lead to compiler errors or subtle run-time logic errors.  
   
- 常を使用して既定のプロパティのエラーの可能性を低くことができますやや、 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)コンパイラ型チェックを設定する`On`します。  
+ You can somewhat reduce the chance of default property errors by always using the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) to set compiler type checking to `On`.  
   
- 使用して、定義済みのクラスまたは構造体コードで判断する必要があります、既定のプロパティがあるかどうかであればしようとしている場合、名前は。  
+ If you are planning to use a predefined class or structure in your code, you must determine whether it has a default property, and if so, what its name is.  
   
- このような短所のためには、既定のプロパティを定義しないを検討してください。 コードを読みやすくは必要がありますも常に明示的に参照するすべてのプロパティを検討してくださいも既定のプロパティ。  
+ Because of these disadvantages, you should consider not defining default properties. For code readability, you should also consider always referring to all properties explicitly, even default properties.  
   
 ## <a name="see-also"></a>関連項目
 
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Default](../../../../visual-basic/language-reference/modifiers/default.md)
-- [Visual Basic でのプロパティと変数の違い](./differences-between-properties-and-variables.md)
-- [方法: プロパティを作成します。](./how-to-create-a-property.md)
-- [方法: 混合アクセス レベルを持つプロパティを宣言します。](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [方法: プロパティ プロシージャを呼び出す](./how-to-call-a-property-procedure.md)
-- [方法: プロパティに値を格納します。](./how-to-put-a-value-in-a-property.md)
-- [方法: プロパティから値を取得します。](./how-to-get-a-value-from-a-property.md)
+- [default](../../../../visual-basic/language-reference/modifiers/default.md)
+- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [方法 : プロパティを作成する](./how-to-create-a-property.md)
+- [方法 : 複数のアクセス レベルを持つプロパティを宣言する](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [方法 : プロパティ プロシージャを呼び出す](./how-to-call-a-property-procedure.md)
+- [方法 : プロパティに値を格納する](./how-to-put-a-value-in-a-property.md)
+- [方法 : プロパティから値を取得する](./how-to-get-a-value-from-a-property.md)

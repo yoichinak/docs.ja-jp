@@ -1,5 +1,5 @@
 ---
-title: パラメーター配列 (Visual Basic)
+title: パラメーター配列
 ms.date: 07/20/2015
 helpviewer_keywords:
 - parameter arrays [Visual Basic], about parameter arrays
@@ -10,47 +10,47 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: 285a5f10e2394fcb001a652fad66e8128b9fbc1a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ffb532fbac70b9aa8ab210450e4d9207f5e0291f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424614"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351124"
 ---
 # <a name="parameter-arrays-visual-basic"></a>パラメーター配列 (Visual Basic)
-通常、プロシージャの宣言よりも多くの引数を指定してプロシージャを呼び出すことはできません。 不特定数の引数が必要な場合は、パラメーター*配列*を宣言して、プロシージャがパラメーターの値の配列を受け取ることができるようにすることができます。 プロシージャを定義するときに、パラメーター配列内の要素の数を知る必要はありません。 配列のサイズは、プロシージャの呼び出しごとに個別に決定されます。  
+Usually, you cannot call a procedure with more arguments than the procedure declaration specifies. When you need an indefinite number of arguments, you can declare a *parameter array*, which allows a procedure to accept an array of values for a parameter. You do not have to know the number of elements in the parameter array when you define the procedure. The array size is determined individually by each call to the procedure.  
   
-## <a name="declaring-a-paramarray"></a>ParamArray の宣言  
- パラメーターリストのパラメーター配列を示すには、 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)キーワードを使用します。 次の規則が適用されます。  
+## <a name="declaring-a-paramarray"></a>Declaring a ParamArray  
+ You use the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) keyword to denote a parameter array in the parameter list. 次の規則が適用されます。  
   
-- プロシージャは、パラメーター配列を1つだけ定義できます。また、プロシージャ定義の最後のパラメーターである必要があります。  
+- A procedure can define only one parameter array, and it must be the last parameter in the procedure definition.  
   
-- パラメーター配列は、値で渡す必要があります。 プロシージャの定義に[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)キーワードを明示的に含めることをお勧めします。  
+- The parameter array must be passed by value. It is good programming practice to explicitly include the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword in the procedure definition.  
   
-- パラメーター配列は、自動的に省略可能です。 既定値は、パラメーター配列の要素型の空の1次元配列です。  
+- The parameter array is automatically optional. Its default value is an empty one-dimensional array of the parameter array's element type.  
   
-- パラメーター配列の前にあるすべてのパラメーターが必要です。 パラメーター配列は、唯一の省略可能なパラメーターである必要があります。  
+- All parameters preceding the parameter array must be required. The parameter array must be the only optional parameter.  
   
-## <a name="calling-a-paramarray"></a>ParamArray の呼び出し  
- パラメーター配列を定義するプロシージャを呼び出す場合は、次のいずれかの方法で引数を指定できます。  
+## <a name="calling-a-paramarray"></a>Calling a ParamArray  
+ When you call a procedure that defines a parameter array, you can supply the argument in any one of the following ways:  
   
-- Nothing: つまり、 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)引数を省略できます。 この場合、空の配列がプロシージャに渡されます。 [Nothing](../../../../visual-basic/language-reference/nothing.md)キーワードを明示的に渡すと、null 配列がプロシージャに渡され、呼び出されたプロシージャがこの条件をチェックしない場合、NullReferenceException が発生する可能性があります。
+- Nothing — that is, you can omit the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argument. In this case, an empty array is passed to the procedure. If you explicitly pass the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, a null array is passed to the procedure and may result in a NullReferenceException if the called procedure does not check for this condition.
   
-- コンマで区切られた任意の数の引数のリスト。 各引数のデータ型は、`ParamArray` 要素型に暗黙的に変換できる必要があります。  
+- A list of an arbitrary number of arguments, separated by commas. The data type of each argument must be implicitly convertible to the `ParamArray` element type.  
   
-- パラメーター配列の要素型と同じ要素型を持つ配列。  
+- An array with the same element type as the parameter array's element type.  
   
- どのような場合でも、プロシージャ内のコードは、パラメーター配列を `ParamArray` データ型と同じデータ型の要素を持つ1次元配列として扱います。  
+ In all cases, the code within the procedure treats the parameter array as a one-dimensional array with elements of the same data type as the `ParamArray` data type.  
   
 > [!IMPORTANT]
-> 無限に大きくなる可能性がある配列を処理する場合、アプリケーションの内部容量がオーバーランするリスクがあります。 パラメーター配列を受け入れる場合は、呼び出し元のコードが配列のサイズを渡すかどうかをテストする必要があります。 アプリケーションに対して大きすぎる場合は、適切な手順を実行してください。 詳細については、「[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)」を参照してください。  
+> Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array, you should test for the size of the array that the calling code passed to it. Take appropriate steps if it is too large for your application. 詳細については、「[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、関数 `calcSum`を定義して呼び出します。 パラメーター `args` の `ParamArray` 修飾子は、関数が可変個の引数を受け取ることができるようにします。  
+ The following example defines and calls the function `calcSum`. The `ParamArray` modifier for the parameter `args` enables the function to accept a variable number of arguments.  
   
  [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
- 次の例では、パラメーター配列を使用してプロシージャを定義し、パラメーター配列に渡されたすべての配列要素の値を出力します。  
+ The following example defines a procedure with a parameter array, and outputs the values of all the array elements passed to the parameter array.  
   
  [!code-vb[VbVbcnProcedures#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#48)]  
   

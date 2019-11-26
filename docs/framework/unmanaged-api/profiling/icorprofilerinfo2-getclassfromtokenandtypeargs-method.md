@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b25c88f0-71b9-443b-8eea-1c94db0a44b9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a88a6c19a5c8b45576dd6f632adf70f7ec2eed55
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b6c0159b432d2a70f583357bbcf714b27399633
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751877"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447169"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs メソッド
-取得、`ClassID`指定したメタデータ トークンを使用して型の`ClassID`いずれかの値が引数を入力します。  
+Gets the `ClassID` of a type by using the specified metadata token and the `ClassID` values of any type arguments.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,31 +38,31 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleID`  
- [in]型が存在するモジュールの ID。  
+ [in] The ID of the module in which the type resides.  
   
  `typeDef`  
- [in]`mdTypeDef`型を参照するメタデータ トークン。  
+ [in] An `mdTypeDef` metadata token that references the type.  
   
  `cTypeArgs`  
- [in]指定した型の型パラメーターの数。 この値は、非ジェネリック型に対しては 0 である必要があります。  
+ [in] The number of type parameters for the given type. This value must be zero for non-generic types.  
   
  `typeArgs`  
- [in]配列の`ClassID`型の引数は、それぞれの値。 値`typeArgs`場合に NULL が`cTypeArgs`0 に設定されます。  
+ [in] An array of `ClassID` values, each of which is an argument of the type. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
   
  `pClassID`  
- [out]ポインター、`ClassID`の指定した型。  
+ [out] A pointer to the `ClassID` of the specified type.  
   
 ## <a name="remarks"></a>Remarks  
- 呼び出す、`GetClassFromTokenAndTypeArgs`メソッドを`mdTypeRef`の代わりに、`mdTypeDef`メタデータ トークンが予期しない結果を持つことができます。 呼び出し元を解決する必要があります、`mdTypeRef`を、`mdTypeDef`渡すとき。  
+ Calling the `GetClassFromTokenAndTypeArgs` method with an `mdTypeRef` instead of an `mdTypeDef` metadata token can have unpredictable results; callers should resolve the `mdTypeRef` to an `mdTypeDef` when passing it.  
   
- 型が既に読み込まれていない場合は、呼び出す`GetClassFromTokenAndTypeArgs`読み込み、これはさまざまなコンテキストで危険な操作がトリガーされます。 たとえば、モジュールまたはその他の型の読み込み中にこのメソッドを呼び出すと、ランタイムが循環的に読み込みしよう無限ループが発生する可能性があります。  
+ If the type is not already loaded, calling `GetClassFromTokenAndTypeArgs` will trigger loading, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or other types could lead to an infinite loop as the runtime attempts to circularly load things.  
   
- 一般の使用`GetClassFromTokenAndTypeArgs`をお勧めします。 プロファイラー イベントは、特定の型の場合、保存する必要があります、`ModuleID`と`mdTypeDef`その種類、および使用の[icorprofilerinfo 2::getclassidinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)を確認するかどうかを指定した`ClassID`の目的の型。  
+ In general, use of `GetClassFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular type, they should store the `ModuleID` and `mdTypeDef` of that type, and use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) to check whether a given `ClassID` is that of the desired type.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 40f9bd9e-16ec-447e-81b0-168c875e9866
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 502e7841f8c413aa48732bcea0b6c2178d70c061
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ffb5953c843a338b4548253457a0c3b1ca0c20f5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776450"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444302"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 列挙体
-アセンブリの実行時の機能を記述する値が含まれています。  
+Contains values that describe run-time features of an assembly.  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,21 +40,21 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|エクスポートされた種類の定義がアセンブリを構成するファイル内で暗黙的なを指定します。 .NET Framework バージョン 1.0 および 1.1 では、この値は常に設定されると想定します。|  
-|`afImplicitResources`|リソース定義がアセンブリを構成するファイル内で暗黙的なを指定します。 .NET Framework 1.0 および 1.1 では、この値は常に設定されると想定します。|  
-|`afNonSideBySideAppDomain`|アセンブリは他のバージョンが同じアプリケーション ドメインで実行されている場合に実行できないことを指定します。|  
-|`afNonSideBySideProcess`|アセンブリは他のバージョンが同じプロセスで実行されている場合に実行できないことを指定します。|  
-|`afNonSideBySideMachine`|アセンブリは他のバージョンが同じコンピューターで実行されている場合に実行できないことを指定します。|  
+|`afImplicitExportedTypes`|Specifies that exported type definitions are implicit within the files that comprise the assembly. In the .NET Framework versions 1.0 and 1.1, this value is always assumed to be set.|  
+|`afImplicitResources`|Specifies that resource definitions are implicit within the files that comprise the assembly. In the .NET Framework 1.0 and 1.1, this value is always assumed to be set.|  
+|`afNonSideBySideAppDomain`|Specifies that the assembly cannot execute with other versions if they are running in the same application domain.|  
+|`afNonSideBySideProcess`|Specifies that the assembly cannot execute with other versions if they are running in the same process.|  
+|`afNonSideBySideMachine`|Specifies that the assembly cannot execute with other versions if they are running on the same computer.|  
   
 ## <a name="remarks"></a>Remarks  
- 参照アセンブリのサイド バイ サイドでの互換性機能を記述する 0x0010 と 0x0070、両端を含むまでの値が使用されます。 これらの値を設定すると、アセンブリがサイド バイ サイドで互換性のあると見なされます。  
+ The values between 0x0010 and 0x0070, inclusive, are used to describe side-by-side compatibility features of the referenced assembly. If none of these values are set, the assembly is assumed to be side-by-side compatible.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MsCorEE.h  
+ **Header:** MsCorEE.h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

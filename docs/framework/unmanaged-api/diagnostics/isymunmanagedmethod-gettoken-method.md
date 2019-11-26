@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4effbe95-c36e-4a45-8b2a-ee21339415fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1bb9a444d8e8b674d1f173214d8bac427f24e408
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 048d784a55fd7c29c837a54fbd5adcdcf62a7a2c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759399"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448849"
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a>ISymUnmanagedMethod::GetToken メソッド
-このメソッドのメタデータ トークンを返します。  
+Returns the metadata token for this method.  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,13 +34,13 @@ HRESULT GetToken(
   
 ## <a name="parameters"></a>パラメーター  
  `pToken`  
- [out]ポインター、`mdMethodDef`メタデータの格納に必要なバッファーの文字のサイズを受け取る。  
+ [out] A pointer to a `mdMethodDef` that receives the size, in characters, of the buffer required to contain the metadata.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

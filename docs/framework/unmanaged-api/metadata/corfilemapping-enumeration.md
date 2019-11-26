@@ -1,5 +1,5 @@
 ---
-title: CorFileMapping 列挙型
+title: CorFileMapping 列挙体
 ms.date: 03/30/2017
 api_name:
 - CorFileMapping
@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3ca41592-b8da-475a-8032-a15627730003
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 719f0522cc43625a4d6cc8afa838d869e47b40d1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f85a36c810df52f871ecc75b92a3b4440455c66b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781836"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450297"
 ---
-# <a name="corfilemapping-enumeration"></a>CorFileMapping 列挙型
-呼び出しから返されるファイル マッピングの種類を記述する値が含まれています、 [imetadatainfo::getfilemapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)メソッド。  
+# <a name="corfilemapping-enumeration"></a>CorFileMapping 列挙体
+Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +39,13 @@ typedef enum CorFileMapping {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`fmFlat`|ファイルは、データ ファイルとしてマップされます。 つまり、`SEC_IMAGE`フラグは、Microsoft Win32 に渡されなかった`CreateFileMapping`関数。|  
-|`fmExecutableImage`|いずれかを使用して、実行するため、ファイルがマップされている、`LoadLibrary`関数または`CreateFileMapping`関数と、`SEC_IMAGE`フラグ。|  
+|`fmFlat`|The file is mapped as a data file. That is, the `SEC_IMAGE` flag was not passed to the Microsoft Win32 `CreateFileMapping` function.|  
+|`fmExecutableImage`|The file is mapped for execution, by using either the `LoadLibrary` function or the `CreateFileMapping` function with the `SEC_IMAGE` flag.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7700236efe7b031866867f5ed859ba71683a8a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b5b3b3b5a3613668f4470f48083ae010cc9d336
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782293"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445254"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps メソッド
-指定した MethodSpec によって参照されるメソッドのメタデータ署名のトークンを取得します。  
+Gets the metadata signature of the method referenced by the specified MethodSpec token.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,23 +38,23 @@ HRESULT GetMethodSpecProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mi`  
- [in]メソッドのインスタンス化を表す MethodSpec トークンです。  
+ [in] A MethodSpec token that represents the instantiation of the method.  
   
  `tkParent`  
- [out]メソッド定義を表す MethodDef または新しいトークンへのポインター。  
+ [out] A pointer to the MethodDef or MethodRef token that represents the method definition.  
   
  `ppvSigBlob`  
- [out]メソッドのバイナリ メタデータ シグネチャへのポインター。  
+ [out] A pointer to the binary metadata signature of the method.  
   
  `pcbSigBlob`  
- [out]サイズ (バイト単位) の`ppvSigBlob`します。  
+ [out] The size, in bytes, of `ppvSigBlob`.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

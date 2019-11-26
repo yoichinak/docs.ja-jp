@@ -1,5 +1,5 @@
 ---
-title: Take 句 (Visual Basic)
+title: Take 句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryTake
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: 32a4c7fd7f1e2f6fe640f3f53f15579f014759d5
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3082954ef84560ccb70f7a47cd3532f622829392
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004716"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349645"
 ---
 # <a name="take-clause-visual-basic"></a>Take 句 (Visual Basic)
 コレクションの先頭から、指定された数の連続する要素を返します。  
@@ -26,19 +26,19 @@ Take count
   
 ## <a name="parts"></a>指定項目  
  `count`  
- 必須。 返されるシーケンスの要素数に評価される値または式。  
+ 必須です。 A value or an expression that evaluates to the number of elements of the sequence to return.  
   
-## <a name="remarks"></a>コメント  
- @No__t-0 句を指定すると、クエリでは、結果リストの先頭から指定された数の連続する要素を含めることができます。 含める要素の数は、`count` パラメーターによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ The `Take` clause causes a query to include a specified number of contiguous elements from the start of a results list. The number of elements to include is specified by the `count` parameter.  
   
- @No__t-1 句を指定した `Take` 句を使用すると、クエリの任意のセグメントからデータの範囲を取得できます。 これを行うには、範囲の最初の要素のインデックスを `Skip` 句に、範囲のサイズを `Take` 句に渡します。 この場合は、`Skip` 句の後に `Take` 句を指定する必要があります。  
+ You can use the `Take` clause with the `Skip` clause to return a range of data from any segment of a query. To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause. In this case, the `Take` clause must be specified after the `Skip` clause.  
   
- クエリで `Take` 句を使用する場合、`Take` の句に意図した結果を含めることができる順序で結果が返されるようにすることも必要になる場合があります。 クエリ結果の順序付けの詳細については、「 [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)」を参照してください。  
+ When you use the `Take` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Take` clause to include the intended results. For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- 指定された条件に応じて、特定の要素のみが返されるように指定するには、`TakeWhile` 句を使用します。  
+ You can use the `TakeWhile` clause to specify that only certain elements be returned, depending on a supplied condition.  
   
 ## <a name="example"></a>例  
- 次のコード例では、`Skip` 句と共に `Take` 句を使用して、ページ内のクエリからデータを返します。 GetCustomers 関数は、`Skip` 句を使用して、指定された開始インデックス値までリスト内の顧客をバイパスし、`Take` 句を使用して、そのインデックス値から始まる顧客のページを返します。  
+ The following code example uses the `Take` clause together with the `Skip` clause to return data from a query in pages. The GetCustomers function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9543b111-5705-40c9-935c-a3ffc7a581aa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 717682bdcb2409a5f58f040a3ac2eafd73f01f7e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2748460826deb422a3851713db11343209fe449a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777957"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449560"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources メソッド
-現在のアセンブリ マニフェストで参照されるリソースの列挙子へのポインターを取得します。  
+Gets a pointer to an enumerator for the resources referenced in the current assembly manifest.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,30 +38,30 @@ HRESULT EnumManifestResources (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 これを null には値と、`EnumManifestResources`メソッドは、最初に呼び出されます。  
+ [in, out] A pointer to the enumerator. This must be a null value when the `EnumManifestResources` method is called for the first time.  
   
  `rManifestResources`  
- [out]配列の格納に使用される、`mdManifestResource`メタデータ トークン。  
+ [out] The array used to store the `mdManifestResource` metadata tokens.  
   
  `cMax`  
- [in]最大数`mdManifestResource`トークン内に配置できる`rManifestResources`します。  
+ [in] The maximum number of `mdManifestResource` tokens that can be placed in `rManifestResources`.  
   
  `pcTokens`  
- [out]数`mdManifestResource`トークンが実際に配置`rManifestResources`します。  
+ [out] The number of `mdManifestResource` tokens actually placed in `rManifestResources`.  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources` 正常に返されます。|  
-|`S_FALSE`|トークンを列挙することはありません。 この場合、 `pcTokens` 0 に設定されます。|  
+|`S_OK`|`EnumManifestResources` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

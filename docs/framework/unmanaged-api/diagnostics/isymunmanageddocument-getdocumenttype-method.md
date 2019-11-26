@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2d381ab1-7e7c-4281-af2b-e54d879b3ef8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ae3575b759d8b6191f0b5e5cd557a6f6e56323fc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3def5db8912bc7e27c0c76898b7bafc8eb3ebbd1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776738"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449196"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>ISymUnmanagedDocument::GetDocumentType メソッド
-このドキュメントのドキュメントの種類を取得します。  
+Gets the document type of this document.  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,10 +34,10 @@ HRESULT GetDocumentType(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ドキュメントの種類を受け取る変数へのポインター。  
+ [out] Pointer to a variable that receives the document type.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。  
+ S_OK if the method succeeds.  
   
 ## <a name="see-also"></a>関連項目
 

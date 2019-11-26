@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 027547098edefdca71317b8f885e71f468dc6e77
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3898b095809e2b84f71aba2036f4d7a294dfdf6a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777202"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444653"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam メソッド
-ジェネリック型パラメーターの定義を作成し、そのジェネリック型パラメーターのトークンを取得します。  
+Creates a definition for a generic type parameter, and gets a token to that generic type parameter.  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,32 +41,32 @@ HRESULT DefineGenericParam (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in]`mdTypeDef`または`mdMethodDef`メソッドまたはジェネリック パラメーターを定義する対象のコンス トラクターを表すトークン。  
+ [in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.  
   
  `ulParamSeq`  
- [in]ジェネリック パラメーターのインデックス。  
+ [in] The index of the generic parameter.  
   
  `dwParamFlags`  
- [in]値、 [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)ジェネリック パラメーターの型を表す列挙体。  
+ [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
   
  `szname`  
- [in]パラメーターの名前。  
+ [in] The name of the parameter.  
   
  `reserved`  
- [in]このパラメーターは、将来の機能拡張予約されています。  
+ [in] This parameter is reserved for future extensibility.  
   
  `rtkConstraints`  
- [in]型の制約の 0 で終わる配列。 配列のメンバーである必要があります、 `mdTypeDef`、 `mdTypeRef`、または`mdTypeSpec`メタデータ トークン。  
+ [in] A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
   
  `pgp`  
- [out]ジェネリック パラメーターを表すトークン。  
+ [out] A token that represents the generic parameter.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04d569d6-a151-4957-9872-f3f694c3e4a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 12475b1ac8a1a81e565aa689eac2ae1a9b55e73a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894457"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438289"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 メソッド
-1つのグローバル変数を定義します。  
+Defines a single global variable.  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,31 +40,31 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>パラメーター  
  `name`  
- からグローバル変数名。  
+ [in] The global variable name.  
   
  `attributes`  
- からグローバル変数属性。  
+ [in] The global variable attributes.  
   
  `sigToken`  
- から署名のメタデータトークン。  
+ [in] The metadata token of the signature.  
   
  `addrKind`  
- からアドレスの種類。  
+ [in] The address type.  
   
  `addr1`  
- からパラメーター指定の最初のアドレス。  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- からパラメーター指定の2番目のアドレス。  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- からパラメーター指定の3番目のアドレス。  
+ [in] The third address for the parameter specification.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK を返します。それ以外の場合は E_FAIL またはその他のエラーコードを返します。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym .idl  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl  
   
 ## <a name="see-also"></a>関連項目
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44eef087-f21f-4fe2-b481-f8a0ee022e7d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f4f639f9794002748e1019821514c546e4f4429f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ed2553f2d971deefd85f731dd39f383cd096c5b0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746869"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439817"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted メソッド
-ガベージ コレクションが開始されたことをコード プロファイラーに通知します。  
+Notifies the code profiler that garbage collection has started.  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,25 +36,25 @@ HRESULT GarbageCollectionStarted(
   
 ## <a name="parameters"></a>パラメーター  
  `cGenerations`  
- [in]内のエントリの合計数、`generationCollected`配列。  
+ [in] The total number of entries in the `generationCollected` array.  
   
  `generationCollected`  
- [in]ブール値の配列`true`このガベージ コレクションによって収集されます。 それ以外の場合、配列のインデックスに対応する生成されている場合`false`します。  
+ [in] An array of Boolean values, which are `true` if the generation that corresponds to the array index is being collected by this garbage collection; otherwise, `false`.  
   
- 値によって、配列のインデックスが、 [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)列挙体は、ジェネレーションを示します。  
+ The array is indexed by a value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration, which indicates the generation.  
   
  `reason`  
- [in]値、 [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md)ガベージ コレクション理由を示す列挙体が発生しました。  
+ [in] A value of the [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) enumeration that indicates the reason the garbage collection was induced.  
   
 ## <a name="remarks"></a>Remarks  
- このガベージ コレクションに関連するすべてのコールバック間で発生する、`GarbageCollectionStarted`コールバックと、対応する[icorprofilercallback 2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)コールバック。 これらのコールバックは、同じスレッドでは発生する必要があります。  
+ All callbacks that pertain to this garbage collection will occur between the `GarbageCollectionStarted` callback and the corresponding [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback. These callbacks need not occur on the same thread.  
   
- プロファイラーが中に元の場所にオブジェクトを検査するは安全では、`GarbageCollectionStarted`コールバック。 ガベージ コレクターが移動オブジェクトからの戻り値の後に開始されます`GarbageCollectionStarted`します。 プロファイラーがこのコールバックから戻ると後、プロファイラーが受信するまで無効にするすべてのオブジェクト Id を検討してください、`ICorProfilerCallback2::GarbageCollectionFinished`コールバック。  
+ It is safe for the profiler to inspect objects in their original locations during the `GarbageCollectionStarted` callback. The garbage collector will begin moving objects after the return from `GarbageCollectionStarted`. After the profiler has returned from this callback, the profiler should consider all object IDs to be invalid until it receives a `ICorProfilerCallback2::GarbageCollectionFinished` callback.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   

@@ -1,5 +1,5 @@
 ---
-title: ReDim ステートメント (Visual Basic)
+title: ReDim ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ReDim
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: a9384ba118df2a84fbd2581e6a8bacb58e41ddcc
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: fabfd9a45d47cc1b881b3743181a03e89158f939
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582080"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346747"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim ステートメント (Visual Basic)
 配列変数の記憶域を再割り当てします。  
@@ -59,31 +59,31 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>ルール  
   
-- **複数の変数。** 同じ宣言ステートメントで複数の配列変数のサイズを変更し、各変数の `name` と `boundlist` の部分を指定できます。 複数の変数を指定するときは、コンマで区切ります。  
+- **Multiple Variables.** You can resize several array variables in the same declaration statement and specify the `name` and `boundlist` parts for each variable. 複数の変数を指定するときは、コンマで区切ります。  
   
-- **配列の境界。** @No__t_0 内の各エントリは、そのディメンションの下限と上限を指定できます。 下限は常に 0 (ゼロ) です。 上限は次元の長さ (上限に 1 を足したもの) ではなく、その次元で可能な最大インデックス値です。 各次元のインデックスは 0 ～ 上限値の範囲で変わります。  
+- **Array Bounds.** Each entry in `boundlist` can specify the lower and upper bounds of that dimension. 下限は常に 0 (ゼロ) です。 上限は次元の長さ (上限に 1 を足したもの) ではなく、その次元で可能な最大インデックス値です。 各次元のインデックスは 0 ～ 上限値の範囲で変わります。  
   
      `boundlist` の次元数は配列の次元の元の数 (r順位) に一致する必要があります。  
   
-- **データ型。** @No__t_0 ステートメントでは、配列変数またはその要素のデータ型を変更することはできません。  
+- **Data Types.** The `ReDim` statement cannot change the data type of an array variable or its elements.  
   
-- **イニシャライズ.** @No__t_0 ステートメントでは、配列要素の新しい初期化値を指定できません。  
+- **Initialization.** The `ReDim` statement cannot provide new initialization values for the array elements.  
   
-- **ランク.** @No__t_0 ステートメントでは、配列のランク (次元数) を変更することはできません。  
+- **Rank.** The `ReDim` statement cannot change the rank (the number of dimensions) of the array.  
   
-- **保持してサイズを変更します。** @No__t_0 を使用する場合は、配列の最後の次元だけのサイズを変更できます。 他のすべての次元については、既存の配列の境界を指定する必要があります。  
+- **Resizing with Preserve.** If you use `Preserve`, you can resize only the last dimension of the array. 他のすべての次元については、既存の配列の境界を指定する必要があります。  
   
      たとえば、配列に次元が 1 つだけある場合、その次元のサイズを変更し、配列のすべてのコンテンツを保持できます。最後で唯一の次元を変更するためです。 ただし、配列に次元が 2 つ以上あるときは、`Preserve` を使用する場合、最後の次元だけのサイズを変更できます。  
   
-- **属性.** 値の配列を保持するプロパティで `ReDim` を使用できます。  
+- **Properties.** You can use `ReDim` on a property that holds an array of values.  
   
 ## <a name="behavior"></a>動作  
   
-- **配列の置換。** `ReDim` は、既存の配列を解放し、同じランクの新しい配列を作成します。 新しい配列は配列変数で解放された配列に取って代わります。  
+- **Array Replacement.** `ReDim` releases the existing array and creates a new array with the same rank. 新しい配列は配列変数で解放された配列に取って代わります。  
   
-- **保持せずに初期化します。** @No__t_0 を指定しない場合、`ReDim` データ型の既定値を使用して、新しい配列の要素を初期化します。  
+- **Initialization without Preserve.** If you do not specify `Preserve`, `ReDim` initializes the elements of the new array by using the default value for their data type.  
   
-- **Preserve を使用した初期化。** @No__t_0 を指定した場合、は既存の配列から新しい配列に要素をコピー Visual Basic ます。  
+- **Initialization with Preserve.** If you specify `Preserve`, Visual Basic copies the elements from the existing array to the new array.  
   
 ## <a name="example"></a>例  
  次の例では、配列の既存データを失うことなく動的配列の最後の次元のサイズを増やし、その後、一部のデータを損失しサイズを減らします。 最後に、サイズを減らして元の値に戻し、すべての配列要素を再初期化します。  
@@ -98,7 +98,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  3 番目の `ReDim` は新しい配列をもう 1 つ作成し、すべての層のすべての行の終わりから別の 5 つの列を削除します。 このとき、既存の要素はコピーされません。 このステートメントは配列を元のサイズに戻します。 ステートメントに `Preserve` 修飾子が含まれないため、すべての配列要素が元の初期値に設定されます。  
   
- その他の例については、「[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)」を参照してください。  
+ For additional examples, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="see-also"></a>関連項目
 

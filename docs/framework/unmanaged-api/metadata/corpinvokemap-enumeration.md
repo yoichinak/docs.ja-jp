@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a876ff1ba0d2342f7975bf5adfc8ec03d21578f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17b7af7016cf88fd3ae263dd952502d515b0c833
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781641"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441561"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 列挙型
-PInvoke 呼び出しのオプションを指定します。  
+Specifies options for a PInvoke call.  
   
 ## <a name="syntax"></a>構文  
   
@@ -67,33 +65,33 @@ typedef enum  CorPinvokeMap {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`pmNoMangle`|指定された各メンバー名を使用します。|  
+|`pmNoMangle`|Use each member name as specified.|  
 |`pmCharSetMask`|予約済み。|  
 |`pmCharSetNotSpec`|予約済み。|  
-|`pmCharSetAnsi`|マルチ バイト文字の文字列として文字列をマーシャ リングします。|  
-|`pmCharSetUnicode`|Unicode 2 バイト文字の文字列をマーシャ リングします。|  
-|`pmCharSetAuto`|自動的に対象のオペレーティング システムを適切に文字列をマーシャ リングします。 既定値は Unicode では、Windows NT、Windows 2000、Windows XP、および Windows Server 2003 ファミリです。既定値はし、Windows 98 および Windows me では ANSI|  
+|`pmCharSetAnsi`|Marshal strings as multiple-byte character strings.|  
+|`pmCharSetUnicode`|Marshal strings as Unicode 2-byte characters.|  
+|`pmCharSetAuto`|Automatically marshal strings appropriately for the target operating system. The default is Unicode on Windows NT, Windows 2000, Windows XP, and the Windows Server 2003 family; the default is ANSI on Windows 98 and Windows Me.|  
 |`pmBestFitUseAssem`|予約済み。|  
-|`pmBestFitEnabled`|ANSI 文字セットで一致がない Unicode 文字の最適なマッピングを実行します。|  
-|`pmBestFitDisabled`|Unicode 文字の最適なマッピングを実行しません。 この場合、すべてのマップできない文字に置き換えられます、'?' です。|  
+|`pmBestFitEnabled`|Perform best-fit mapping of Unicode characters that lack an exact match in the ANSI character set.|  
+|`pmBestFitDisabled`|Do not perform best-fit mapping of Unicode characters. In this case, all unmappable characters will be replaced by a ‘?’.|  
 |`pmBestFitMask`|予約済み。|  
 |`pmThrowOnUnmappableCharUseAssem`|予約済み。|  
-|`pmThrowOnUnmappableCharEnabled`|相互運用マーシャラーは、マップできない文字を検出した場合は、例外をスローします。|  
-|`pmThrowOnUnmappableCharDisabled`|相互運用マーシャラーは、マップできない文字を検出したときに例外をスローしません。|  
+|`pmThrowOnUnmappableCharEnabled`|Throw an exception when the interop marshaler encounters an unmappable character.|  
+|`pmThrowOnUnmappableCharDisabled`|Do not throw an exception when the interop marshaler encounters an unmappable character.|  
 |`pmThrowOnUnmappableCharMask`|予約されています。|  
-|`pmSupportsLastError`|呼び出す、Win32 呼び出しを許可する`SetLastError`属性付きメソッドから戻る前に関数。|  
+|`pmSupportsLastError`|Allow the callee to call the Win32 `SetLastError` function before returning from the attributed method.|  
 |`pmCallConvMask`|予約されています。|  
-|`pmCallConvWinapi`|既定のプラットフォーム呼び出し規約を使用します。 たとえば、Windows の既定値は`StdCall`とは、Windows CE .NET`Cdecl`します。|  
-|`pmCallConvCdecl`|使用して、`Cdecl`呼び出し規約。 この場合、呼び出し元がスタックを消去します。 これにより、関数を呼び出す`varargs`(可変個のパラメーターを受け入れる関数)。|  
-|`pmCallConvStdcall`|使用して、`StdCall`呼び出し規約。 この場合、呼び出し先がスタックを消去します。 これは、アンマネージ関数を呼び出すプラットフォーム呼び出しの既定の規則です。|  
-|`pmCallConvThiscall`|使用して、`ThisCall`呼び出し規約。 この場合は、最初のパラメーターは、`this`ポインター レジスタ ECX に格納されます。 その他のパラメーターは、スタックにプッシュされます。 `ThisCall`アンマネージ DLL からエクスポートしたクラスのメソッドの呼び出しに使用呼び出し規約。|  
+|`pmCallConvWinapi`|Use the default platform calling convention. For example, on Windows the default is `StdCall` and on Windows CE .NET it is `Cdecl`.|  
+|`pmCallConvCdecl`|Use the `Cdecl` calling convention. In this case, the caller cleans the stack. This enables calling functions with `varargs` (that is, functions that accept a variable number of parameters).|  
+|`pmCallConvStdcall`|Use the `StdCall` calling convention. In this case, the callee cleans the stack. This is the default convention for calling unmanaged functions with platform invoke.|  
+|`pmCallConvThiscall`|Use the `ThisCall` calling convention. In this case, the first parameter is the `this` pointer and is stored in register ECX. Other parameters are pushed on the stack. The `ThisCall` calling convention is used to call methods on classes exported from an unmanaged DLL.|  
 |`pmCallConvFastcall`|予約済み。|  
 |`pmMaxValue`|予約済み。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: For...Next ステートメント (Visual Basic)
+title: For...Next ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Step
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: a60293fc837b6d12810a211892c391f24a46d4e6
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 3cae44abb8e790542f11e6c5a5f1e317675ff988
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582957"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351182"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next ステートメント (Visual Basic)
 
-ステートメントのグループを指定された回数だけ繰り返します。
+Repeats a group of statements a specified number of times.
 
 ## <a name="syntax"></a>構文
 
@@ -50,107 +50,107 @@ Next [ counter ]
 
 |パーツ|説明|
 |----------|-----------------|
-|`counter`|@No__t_0 ステートメントで必要です。 数値変数。 ループのコントロール変数。 詳細については、このトピックで後述する「 [Counter 引数](#BKMK_Counter)」を参照してください。|
-|`datatype`|省略可能です。 @No__t_0 のデータ型。 詳細については、このトピックで後述する「 [Counter 引数](#BKMK_Counter)」を参照してください。|
-|`start`|必須です。 数値式。 `counter` の初期値になります。|
-|`end`|必須です。 数値式。 @No__t_0 の最終的な値。|
-|`step`|省略可能です。 数値式。 ループを通じて毎回 `counter` をインクリメントする量。|
-|`statements`|省略可能です。 指定した回数だけ実行される、`For` と `Next` 間の1つ以上のステートメント。|
-|`Continue For`|省略可能です。 次のループの反復処理に制御を転送します。|
-|`Exit For`|省略可能です。 @No__t_0 ループから制御を転送します。|
-|`Next`|必須です。 @No__t_0 ループの定義を終了します。|
+|`counter`|Required in the `For` statement. Numeric variable. The control variable for the loop. For more information, see [Counter Argument](#BKMK_Counter) later in this topic.|
+|`datatype`|省略可能です。 Data type of `counter`. For more information, see [Counter Argument](#BKMK_Counter) later in this topic.|
+|`start`|必須です。 Numeric expression. `counter` の初期値になります。|
+|`end`|必須です。 Numeric expression. The final value of `counter`.|
+|`step`|省略可能です。 Numeric expression. The amount by which `counter` is incremented each time through the loop.|
+|`statements`|省略可能です。 One or more statements between `For` and `Next` that run the specified number of times.|
+|`Continue For`|省略可能です。 Transfers control to the next loop iteration.|
+|`Exit For`|省略可能です。 Transfers control out of the `For` loop.|
+|`Next`|必須です。 Terminates the definition of the `For` loop.|
 
 > [!NOTE]
-> このステートメントで `To` キーワードを使用して、カウンターの範囲を指定します。 このキーワードは、 [Select...Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)と配列宣言。 配列の宣言の詳細については、「 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)」を参照してください。
+> The `To` keyword is used in this statement to specify the range for the counter. You can also use this keyword in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md) and in array declarations. For more information about array declarations, see [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).
 
-## <a name="simple-examples"></a>簡単な例
+## <a name="simple-examples"></a>Simple Examples
 
-@No__t_0 を使用しています...一連のステートメントを設定された回数繰り返し実行する場合は `Next` 構造体。
+You use a `For`...`Next` structure when you want to repeat a set of statements a set number of times.
 
-次の例では、`index` 変数は値1で始まり、ループの反復ごとにインクリメントされ、`index` の値が5に達した後に終了します。
+In the following example, the `index` variable starts with a value of 1 and is incremented with each iteration of the loop, ending after the value of `index` reaches 5.
 
 [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]
 
-次の例では、`number` 変数は2から始まり、ループの反復ごとに0.25 によって減少し、`number` の値が0に達した後に終了します。 @No__t_1 の `Step` 引数は、ループの各反復処理で値を0.25 ずつ減らします。
+In the following example, the `number` variable starts at 2 and is reduced by 0.25 on each iteration of the loop, ending after the value of `number` reaches 0. The `Step` argument of `-.25` reduces the value by 0.25 on each iteration of the loop.
 
 [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]
 
 > [!TIP]
-> しばらくお待ちください... [End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)または[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)は、ループ内でステートメントを実行する回数が事前にわからない場合に適しています。 ただし、ループを特定の回数繰り返し実行することが予想される場合は、`For`...`Next` ループの方が適しています。 ループに最初に入るときのイテレーションの数を決定します。
+> A [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) or [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md) works well when you don't know in advance how many times to run the statements in the loop. However, when you expect to run the loop a specific number of times, a `For`...`Next` loop is a better choice. You determine the number of iterations when you first enter the loop.
 
-## <a name="nesting-loops"></a>ループの入れ子
+## <a name="nesting-loops"></a>Nesting Loops
 
-ループを入れ子にするには、別のループ内にループを挿入し `For` ます。 入れ子になった `For` の例を次に示します。異なるステップ値を持つ構造体を `Next` します。 外側のループは、ループの反復ごとに文字列を作成します。 内側のループは、ループの反復ごとにループカウンター変数をデクリメントします。
+You can nest `For` loops by putting one loop within another. The following example demonstrates nested `For`...`Next` structures that have different step values. The outer loop creates a string for every iteration of the loop. The inner loop decrements a loop counter variable for every iteration of the loop.
 
 [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]
 
-ループを入れ子にする場合、各ループには一意の `counter` 変数が必要です。
+When nesting loops, each loop must have a unique `counter` variable.
 
-また、さまざまな種類のコントロール構造を入れ子にすることもできます。 詳細については、[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md) を参照してください。
+You can also nest different kinds control structures within each other. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
 
-## <a name="exit-for-and-continue-for"></a>を終了し、を続行します。
+## <a name="exit-for-and-continue-for"></a>Exit For and Continue For
 
-@No__t_0 ステートメントは、すぐに `For`... `Next` を終了します。 ループし、`Next` ステートメントの後のステートメントに制御を転送します。
+The `Exit For` statement immediately exits the `For`…`Next` loop and transfers control to the statement that follows the `Next` statement.
 
-@No__t_0 ステートメントは、ループの次の反復処理に制御を直ちに転送します。 詳細については、「 [Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)」を参照してください。
+The `Continue For` statement transfers control immediately to the next iteration of the loop. For more information, see [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).
 
-次の例は、`Continue For` と `Exit For` ステートメントの使用方法を示しています。
+The following example illustrates the use of the `Continue For` and `Exit For` statements.
 
 [!code-vb[VbVbalrStatements#115](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#115)]
 
-@No__t_1 には、任意の数の `Exit For` ステートメントを含めることができ `Next` ループ. 入れ子になった `For`... `Next` 内で使用する場合 ループ、`Exit For` 最も内側のループを終了し、次に高い入れ子レベルに制御を転送します。
+You can put any number of `Exit For` statements in a `For`…`Next` loop. When used within nested `For`…`Next` loops, `Exit For` exits the innermost loop and transfers control to the next higher level of nesting.
 
-`Exit For` は、何らかの条件 (たとえば、`If`... `Then`... `Else` 構造) を評価した後によく使用されます。 次の条件に `Exit For` を使用することもできます。
+`Exit For` is often used after you evaluate some condition (for example, in an `If`...`Then`...`Else` structure). You might want to use `Exit For` for the following conditions:
 
-- 反復処理を続行することは不要または不可能です。 この条件は、エラー値または終了要求によって作成できます。
+- Continuing to iterate is unnecessary or impossible. An erroneous value or a termination request might create this condition.
 
-- @No__t_0...`Catch`...`Finally` ステートメントは例外をキャッチします。 @No__t_1 ブロックの末尾に `Exit For` を使用することもできます。
+- A `Try`...`Catch`...`Finally` statement catches an exception. You might use `Exit For` at the end of the `Finally` block.
 
-- 無限ループがあります。これは、大規模または無限の回数実行されるループです。 このような条件を検出した場合は、`Exit For` を使用してループをエスケープできます。 詳細については、「 [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)。
+- You have an endless loop, which is a loop that could run a large or even infinite number of times. If you detect such a condition, you can use `Exit For` to escape the loop. For more information, see [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md).
 
 ## <a name="technical-implementation"></a>技術的な実装
 
-@No__t_0 の場合`Next` ループが開始され、Visual Basic は `start`、`end`、および `step` を評価します。 Visual Basic は、現時点ではこれらの値のみを評価し、`start` を `counter` に割り当てます。 ステートメントブロックが実行される前に、Visual Basic は `counter` と `end` を比較します。 @No__t_0 が `end` の値よりも大きい場合 (または `step` が負の場合) は、`For` ループが終了し、制御が `Next` ステートメントの後のステートメントに渡されます。 それ以外の場合は、ステートメントブロックが実行されます。
+When a `For`...`Next` loop starts, Visual Basic evaluates `start`, `end`, and `step`. Visual Basic evaluates these values only at this time and then assigns `start` to `counter`. Before the statement block runs, Visual Basic compares `counter` to `end`. If `counter` is already larger than the `end` value (or smaller if `step` is negative), the `For` loop ends and control passes to the statement that follows the `Next` statement. Otherwise, the statement block runs.
 
-Visual Basic が `Next` ステートメントを検出するたびに、`step` によって `counter` がインクリメントされ、`For` ステートメントに戻ります。 ここでも、`counter` を `end` と比較し、その結果に応じてブロックを実行するか、ループを終了します。 このプロセスは `counter` が `end` になるか、`Exit For` ステートメントが検出されるまで続行されます。
+Each time Visual Basic encounters the `Next` statement, it increments `counter` by `step` and returns to the `For` statement. Again it compares `counter` to `end`, and again it either runs the block or exits the loop, depending on the result. This process continues until `counter` passes `end` or an `Exit For` statement is encountered.
 
-@No__t_0 が `end` になるまで、ループは停止しません。 @No__t_0 が `end` に等しい場合、ループは続行されます。 ブロックを実行するかどうかを決定する比較は、`step` が正の場合は `end`  <=  `counter`、`counter` が負の場合は  >=  `end` `step` になります。
+The loop doesn't stop until `counter` has passed `end`. If `counter` is equal to `end`, the loop continues. The comparison that determines whether to run the block is `counter` <= `end` if `step` is positive and `counter` >= `end` if `step` is negative.
 
-ループ内で `counter` の値を変更すると、コードの読み取りやデバッグが困難になることがあります。 @No__t_0、`end`、または `step` の値を変更しても、ループが最初に入力されたときに決定された反復値には影響しません。
+If you change the value of `counter` while inside a loop, your code might be more difficult to read and debug. Changing the value of `start`, `end`, or `step` doesn't affect the iteration values that were determined when the loop was first entered.
 
-ループを入れ子にした場合、内部レベルの `Next` ステートメントの前に外側の入れ子レベルの `Next` ステートメントが検出されると、コンパイラはエラーを通知します。 ただし、コンパイラは、すべての `Next` ステートメントで `counter` を指定した場合にのみ、この重複エラーを検出できます。
+If you nest loops, the compiler signals an error if it encounters the `Next` statement of an outer nesting level before the `Next` statement of an inner level. However, the compiler can detect this overlapping error only if you specify `counter` in every `Next` statement.
 
-### <a name="step-argument"></a>ステップ引数
+### <a name="step-argument"></a>Step Argument
 
-@No__t_0 の値には、正または負のどちらかを指定できます。 このパラメーターは、次の表に従ってループ処理を決定します。
+The value of `step` can be either positive or negative. This parameter determines loop processing according to the following table:
 
-|**ステップ値**|**ループが実行される場合**|
+|**Step value**|**Loop executes if**|
 |--------------------|--------------------------|
-|正または0|`counter` <= `end`|
+|Positive or zero|`counter` <= `end`|
 |負|`counter` >= `end`|
 
-@No__t_0 の既定値は1です。
+The default value of `step` is 1.
 
-### <a name="BKMK_Counter"></a>Counter 引数
+### <a name="BKMK_Counter"></a> Counter Argument
 
-次の表は、`counter` が `For…Next` ループ全体を対象とする新しいローカル変数を定義するかどうかを示しています。 この決定は `datatype` が存在するかどうか、`counter` が既に定義されているかどうかによって異なります。
+The following table indicates whether `counter` defines a new local variable that’s scoped to the entire `For…Next` loop. This determination depends on whether `datatype` is present and whether `counter` is already defined.
 
-|@No__t_0 存在しますか?|@No__t_0 既に定義されていますか?|結果 (`counter` で、`For...Next` ループ全体にスコープが設定された新しいローカル変数が定義されているかどうか)|
+|Is `datatype` present?|Is `counter` already defined?|Result (whether `counter` defines a new local variable that’s scoped to the entire `For...Next` loop)|
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|
-|Ｘ|[はい]|いいえ。 `counter` は既に定義されています。 @No__t_0 のスコープがプロシージャに対してローカルでない場合は、コンパイル時の警告が発生します。|
-|Ｘ|Ｘ|はい。 データ型は、`start`、`end`、および `step` 式から推論されます。 型の推定の詳細については、「[オプション推論ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)と[ローカル型の推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)」を参照してください。|
-|[はい]|[はい]|はい。ただし、既存の `counter` 変数がプロシージャの外部で定義されている場合に限ります。 この変数は個別に保持されます。 既存の `counter` 変数のスコープがプロシージャに対してローカルである場合は、コンパイル時エラーが発生します。|
+|Ｘ|[はい]|No, because `counter` is already defined. If the scope of `counter` isn't local to the procedure, a compile-time warning occurs.|
+|Ｘ|Ｘ|はい。 The data type is inferred from the `start`, `end`, and `step` expressions. For information about type inference, see [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|
+|[はい]|[はい]|Yes, but only if the existing `counter` variable is defined outside the procedure. That variable remains separate. If the scope of the existing `counter` variable is local to the procedure, a compile-time error occurs.|
 |[はい]|Ｘ|はい。|
 
-@No__t_0 のデータ型によって、イテレーションの種類が決定されます。この型は、次のいずれかの型である必要があります。
+The data type of `counter` determines the type of the iteration, which must be one of the following types:
 
-- @No__t_0、`SByte`、`UShort`、`Short`、`UInteger`、`Integer`、`ULong`、`Long`、`Decimal`、`Single`、0。
+- A `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, or `Double`.
 
-- [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)を使用して宣言する列挙体。
+- An enumeration that you declare by using an [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md).
 
 - `Object`。
 
-- 次の演算子を持つ `T` 型。 `B` は `Boolean` 式で使用できる型です。
+- A type `T` that has the following operators, where `B` is a type that can be used in a `Boolean` expression.
 
   `Public Shared Operator >= (op1 As T, op2 As T) As B`
 
@@ -160,25 +160,25 @@ Visual Basic が `Next` ステートメントを検出するたびに、`step` �
 
   `Public Shared Operator + (op1 As T, op2 As T) As T`
 
-必要に応じて、`Next` ステートメントで `counter` 変数を指定することもできます。 この構文を使用すると、特に `For` ループが入れ子になっている場合に、プログラムの読みやすさが向上します。 対応する `For` ステートメントに表示される変数を指定する必要があります。
+You can optionally specify the `counter` variable in the `Next` statement. This syntax improves the readability of your program, especially if you have nested `For` loops. You must specify the variable that appears in the corresponding `For` statement.
 
-@No__t_0、`end`、および `step` 式は、`counter` の型に拡大変換される任意のデータ型に評価されます。 @No__t_0 にユーザー定義型を使用する場合は、`start`、`end`、または `step` の型を `counter` の型に変換するために、`CType` 変換演算子を定義することが必要になる場合があります。
+The `start`, `end`, and `step` expressions can evaluate to any data type that widens to the type of `counter`. If you use a user-defined type for `counter`, you might have to define the `CType` conversion operator to convert the types of `start`, `end`, or `step` to the type of `counter`.
 
 ## <a name="example"></a>例
 
-次の例では、ジェネリックリストからすべての要素を削除します。 [For Each...次のステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)の例では、`For` を示しています...`Next` ステートメントを降順で反復処理します。 この例では、`removeAt` メソッドによって、削除された要素の後にある要素のインデックス値が小さくなるため、この手法を使用します。
+The following example removes all elements from a generic list. Instead of a [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md), the example shows a `For`...`Next` statement that iterates in descending order. The example uses this technique because the `removeAt` method causes elements after the removed element to have a lower index value.
 
 [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]
 
 ## <a name="example"></a>例
 
-次の例では、列挙[ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)を使用して宣言された列挙型を反復処理します。
+The following example iterates through an enumeration that's declared by using an [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md).
 
 [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]
 
 ## <a name="example"></a>例
 
-次の例では、ステートメントのパラメーターは、`+`、`-`、`>=`、および `<=` の各演算子に対して演算子のオーバーロードを持つクラスを使用しています。
+In the following example, the statement parameters use a class that has operator overloads for the `+`, `-`, `>=`, and `<=` operators.
 
 [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]
 

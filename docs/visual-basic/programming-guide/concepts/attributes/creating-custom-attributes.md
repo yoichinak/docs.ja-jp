@@ -1,15 +1,15 @@
 ---
-title: カスタム属性の作成 (Visual Basic)
+title: カスタム属性の作成
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 3b1b03f69229bd4d824d6fff734b83400c2aab44
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 773a3e8e974f37a1554892dd3441c115681c5bae
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524289"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350145"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a>カスタム属性の作成 (Visual Basic)
+# <a name="creating-custom-attributes-visual-basic"></a>Creating Custom Attributes (Visual Basic)
 
 属性クラスを定義することで、独自のカスタム属性を作成できます。属性クラスは、<xref:System.Attribute> の直接的または間接的な派生クラスです。これにより、メタデータの中で属性の定義をすばやく簡単に特定できます。 型にそれを記述したプログラマーの名前でタグを付けるとします。 `Author` というカスタム属性クラスを定義します。
 

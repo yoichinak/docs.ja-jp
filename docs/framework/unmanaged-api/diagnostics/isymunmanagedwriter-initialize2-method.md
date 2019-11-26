@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93de56b6-4ae8-4cca-acdc-25a434623509
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4087bdd82041152a9946a576e0eb96bf63f177c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 041df959139a0be77f40d6aa5655ff15f93fb26f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777277"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427949"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 メソッド
-このライターが関連付けられるメタデータ エミッタ インターフェイスを設定し、デバッグ シンボルが書き込まれる出力ファイル名を設定します。 このメソッドを使用して、プログラム データベース (PDB) ファイルの最後の位置を設定することもできます。  
+Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written. This method also lets you set the final location of the program database (PDB) file.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,25 +38,25 @@ HRESULT Initialize2(
   
 ## <a name="parameters"></a>パラメーター  
  `emitter`  
- [in]メタデータ エミッタ インターフェイスへのポインター。  
+ [in] A pointer to the metadata emitter interface.  
   
  `tempfilename`  
- [in]ポインターを`WCHAR`デバッグ シンボルが書き込まれるファイル名を格納しています。 ファイル名を使用しないライターに対してファイル名を指定した場合、このパラメーターは無視されます。  
+ [in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written. ファイル名を使用しないライターに対してファイル名を指定した場合、このパラメーターは無視されます。  
   
  `pIStream`  
- [in]シンボルのライターにシンボルを出力、指定されている場合、指定された<xref:System.Runtime.InteropServices.ComTypes.IStream>で指定されたファイルではなく、`filename`パラメーター。 `pIStream` パラメーターは省略可能です。  
+ [in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. `pIStream` パラメーターは省略可能です。  
   
  `fFullBuild`  
- [in]`true`場合、これは、完全な再構築します。`false`インクリメンタル コンパイルの場合。  
+ [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
   
  `finalfilename`  
- [in]ポインターを`WCHAR`は PDB ファイルの最終的な場所にパス文字列。  
+ [in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
 

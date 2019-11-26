@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31214d3a-715e-49af-92b3-0fd11e4f218a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b89409a08ed2dff0111b3b6e552960ac78a5882e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 577a4f6bb8315cfb1cb462703dd0cb9b23b60704
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781533"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434061"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>IMetaDataTables::GetCodedTokenInfo メソッド
-指定した行のインデックスに関連付けられているトークンの配列へのポインターを取得します。  
+Gets a pointer to an array of tokens associated with the specified row index.  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,23 +38,23 @@ HRESULT GetCodedTokenInfo (
   
 ## <a name="parameters"></a>パラメーター  
  `ixCdTkn`  
- [in]コード化されたトークンの種類。  
+ [in] The kind of coded token to return.  
   
  `pcTokens`  
- [out]長さへのポインター`ppTokens`します。  
+ [out] A pointer to the length of `ppTokens`.  
   
  `ppTokens`  
- [out]返されたトークンの一覧を格納している配列へのポインターへのポインター。  
+ [out] A pointer to a pointer to an array that contains the list of returned tokens.  
   
  `ppName`  
- [out]トークンの名前へのポインターへのポインター`ixCdTkn`します。  
+ [out] A pointer to a pointer to the name of the token at `ixCdTkn`.  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **Header:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

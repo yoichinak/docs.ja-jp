@@ -1,5 +1,5 @@
 ---
-title: Visual Basic における演算子の優先順位
+title: 演算子の優先順位
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], precedence
@@ -14,71 +14,71 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: df40aced45442c9c7895c8d10ece64b21e292508
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 318fcc3f35276ba0b2061ba9677c5fde29429f6f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659924"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348276"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic における演算子の優先順位
-式の中で複数の操作が発生した場合、各部分は、演算子の*優先順位*と呼ばれる事前に定義された順序で評価および解決されます。
+When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called *operator precedence*.
 
-## <a name="precedence-rules"></a>優先順位の規則
- 式に複数のカテゴリの演算子が含まれている場合は、次の規則に従って評価されます。
+## <a name="precedence-rules"></a>Precedence Rules
+ When expressions contain operators from more than one category, they are evaluated according to the following rules:
 
-- 算術演算子と連結演算子の優先順位は次のセクションで説明しています。また、すべての演算子は、比較演算子、論理演算子、ビットごとの演算子よりも優先順位が高くなります。
+- The arithmetic and concatenation operators have the order of precedence described in the following section, and all have greater precedence than the comparison, logical, and bitwise operators.
 
-- すべての比較演算子の優先順位は同じで、すべての比較演算子は論理演算子とビット処理演算子よりも優先順位が高くなりますが、算術演算子と連結演算子より優先順位は低くなります。
+- All comparison operators have equal precedence, and all have greater precedence than the logical and bitwise operators, but lower precedence than the arithmetic and concatenation operators.
 
-- 論理演算子とビット処理演算子は、次のセクションで説明する優先順位を持ち、算術演算子、連結演算子、および比較演算子よりも優先順位が低くなります。
+- The logical and bitwise operators have the order of precedence described in the following section, and all have lower precedence than the arithmetic, concatenation, and comparison operators.
 
-- 優先順位が同じ演算子は、式に出現する順序で左から右に評価されます。
+- Operators with equal precedence are evaluated left to right in the order in which they appear in the expression.
 
-## <a name="precedence-order"></a>優先順位
- 演算子は、次の優先順位で評価されます。
+## <a name="precedence-order"></a>Precedence Order
+ Operators are evaluated in the following order of precedence:
 
 ### <a name="await-operator"></a>Await 演算子
  Await
 
-### <a name="arithmetic-and-concatenation-operators"></a>算術演算子と連結演算子
- 累乗 (`^`)
+### <a name="arithmetic-and-concatenation-operators"></a>Arithmetic and Concatenation Operators
+ Exponentiation (`^`)
 
- 単項 id と否定`+`( `–`,)
+ Unary identity and negation (`+`, `–`)
 
- 乗算および浮動小数点除算 (`*`, `/`)
+ Multiplication and floating-point division (`*`, `/`)
 
- 整数除算 (`\`)
+ Integer division (`\`)
 
- モジュール式 (`Mod`)
+ Modular arithmetic (`Mod`)
 
- 加算および減算 (`+`, `–`)
+ Addition and subtraction (`+`, `–`)
 
- 文字列連結 (`&`)
+ String concatenation (`&`)
 
- 算術ビットシフト (`<<`, `>>`)
+ Arithmetic bit shift (`<<`, `>>`)
 
 ### <a name="comparison-operators"></a>比較演算子
- すべての比較演算子`=`( `<>` `<`、、 `<=`、 `>` 、、`IsNot`、 、、、`TypeOf`... `Is` `>=` `Like``Is`)
+ All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)
 
 ### <a name="logical-and-bitwise-operators"></a>論理演算子とビット処理演算子
- 否定 (`Not`)
+ Negation (`Not`)
 
- (`And`,) `AndAlso`の組み合わせ
+ Conjunction (`And`, `AndAlso`)
 
- 包括和 (`Or`, `OrElse`)
+ Inclusive disjunction (`Or`, `OrElse`)
 
- 排他的論理和`Xor`()
+ Exclusive disjunction (`Xor`)
 
 ### <a name="comments"></a>コメント
- `=`演算子は、代入演算子ではなく、等値比較演算子にすぎません。
+ The `=` operator is only the equality comparison operator, not the assignment operator.
 
- 文字列連結演算子 (`&`) は算術演算子ではありませんが、優先順位は算術演算子でグループ化されます。
+ The string concatenation operator (`&`) is not an arithmetic operator, but in precedence it is grouped with the arithmetic operators.
 
- 演算子`Is` と`IsNot`演算子は、オブジェクト参照の比較演算子です。 2つのオブジェクトの値を比較しません。2つのオブジェクト変数が同じオブジェクトインスタンスを参照しているかどうかを確認するだけです。
+ The `Is` and `IsNot` operators are object reference comparison operators. They do not compare the values of two objects; they check only to determine whether two object variables refer to the same object instance.
 
 ## <a name="associativity"></a>結合規則
- 同じ優先順位の演算子が乗算や除算などの式に一緒に表示される場合、コンパイラは各操作を左から右に検出するたびに評価します。 次に例を示します。
+ When operators of equal precedence appear together in an expression, for example multiplication and division, the compiler evaluates each operation as it encounters it from left to right. 次に例を示します。
 
 ```vb
 Dim n1 As Integer = 96 / 8 / 4
@@ -86,12 +86,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)
 ```
 
- 最初の式では、除算 96/8 (結果 12) と除算 12/4 が評価されます。これは3つになります。 コンパイラでは、の`n1`操作が左から右に評価されるため、その順序がに`n2`明示的に指定されている場合、評価は同じになります。 `n1` と`n2`の両方に3の結果があります。 これに対し`n3` 、の結果は48です。これは、かっこによってコンパイラによって最初に 8/4 が評価されるためです。
+ The first expression evaluates the division 96 / 8 (which results in 12) and then the division 12 / 4, which results in three. Because the compiler evaluates the operations for `n1` from left to right, the evaluation is the same when that order is explicitly indicated for `n2`. Both `n1` and `n2` have a result of three. By contrast, `n3` has a result of 48, because the parentheses force the compiler to evaluate 8 / 4 first.
 
- この動作により、Visual Basic では、演算子が*左結合*されていると言います。
+ Because of this behavior, operators are said to be *left associative* in Visual Basic.
 
-## <a name="overriding-precedence-and-associativity"></a>優先順位と結合規則のオーバーライド
- かっこを使用して、式の一部の部分を他の式の前に評価するように強制できます。 これにより、優先順位と左結合規則の両方がオーバーライドされる可能性があります。 Visual Basic は、かっこで囲まれた操作を外部のの前に常に実行します。 ただし、かっこで囲まれている場合は、かっこ内でかっこを使用しない限り、通常の優先順位と結合規則が維持されます。 次に例を示します。
+## <a name="overriding-precedence-and-associativity"></a>Overriding Precedence and Associativity
+ You can use parentheses to force some parts of an expression to be evaluated before others. This can override both the order of precedence and the left associativity. Visual Basic always performs operations that are enclosed in parentheses before those outside. However, within parentheses, it maintains ordinary precedence and associativity, unless you use parentheses within the parentheses. 次に例を示します。
 
 ```vb
 Dim a, b, c, d, e, f, g As Double

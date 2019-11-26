@@ -1,17 +1,17 @@
 ---
-title: 共通属性 (Visual Basic)
+title: 共通の属性
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 5bc568279a6952fdc5e0a000b1208cd7f9cfd6e7
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2889411779a275baa8c91862d4cac2f820d660d0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524288"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353528"
 ---
-# <a name="common-attributes-visual-basic"></a>共通属性 (Visual Basic)
+# <a name="common-attributes-visual-basic"></a>Common Attributes (Visual Basic)
 
-このトピックでは、Visual Basic プログラムで最もよく使用される属性について説明します。
+This topic describes the attributes that are most commonly used in Visual Basic programs.
 
 - [グローバル属性](#Global)
 
@@ -21,7 +21,7 @@ ms.locfileid: "72524288"
 
 - [呼び出し元情報属性](#CallerInfo)
 
-- [Visual Basic 属性](#VB)
+- [Visual Basic Attributes](#VB)
 
 ## <a name="Global"></a> グローバル属性
 
@@ -31,7 +31,7 @@ ms.locfileid: "72524288"
 <Assembly: AssemblyVersion("1.0.0.0")>
 ```
 
-グローバル属性は、トップレベルの `Imports` ステートメントの後、型、モジュール、または名前空間の宣言の前に、ソースコードに表示されます。 グローバル属性は複数のソース ファイルに指定できますが、それらのファイルは、1 つのコンパイル パスでコンパイルする必要があります。 Visual Basic プロジェクトでは、通常、グローバル属性は AssemblyInfo ファイルに格納されます (Visual Studio でプロジェクトを作成すると、ファイルは自動的に作成されます)。
+Global attributes appear in the source code after any top-level `Imports` statements and before any type, module, or namespace declarations. グローバル属性は複数のソース ファイルに指定できますが、それらのファイルは、1 つのコンパイル パスでコンパイルする必要があります。 For Visual Basic projects, global attributes are generally put in the AssemblyInfo.vb file (the file is created automatically when you create a project in Visual Studio).
 
 アセンブリの属性は、アセンブリに関する情報を提供する値です。 これらは次のカテゴリに分けられます。
 
@@ -130,8 +130,8 @@ b.NewMethod()
 
 ```vb
 #Const TRACE_ON = True
-Imports System
 Imports System.Diagnostics
+
 Module TestConditionalAttribute
     Public Class Trace
         <Conditional("TRACE_ON")>
@@ -228,32 +228,32 @@ End Class
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|呼び出し元を含むソース ファイルのフル パスです。 これはコンパイル時のパスです。|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|メソッドの呼び出し元であるソース ファイルの行番号。|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼び出し元のメソッド名またはプロパティ名。 詳細については、「[呼び出し元情報 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)」を参照してください。|`String`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼び出し元のメソッド名またはプロパティ名。 For more information, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
 
-呼び出し元情報の属性の詳細については、「[呼び出し元情報 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)」を参照してください。
+For more information about the Caller Info attributes, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
 
-## <a name="VB"></a>Visual Basic 属性
+## <a name="VB"></a> Visual Basic Attributes
 
-次の表に、Visual Basic に固有の属性を示します。
+The following table lists the attributes that are specific to Visual Basic.
 
 |属性|目的|
 |---------------|-------------|
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|クラスを COM オブジェクトとして公開する必要があることをコンパイラに示します。|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|モジュールに必要な修飾のみを使用してモジュールメンバーにアクセスできるようにします。|
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|ファイルの入出力関数で使用する構造体の固定長文字列のサイズを指定します。|
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|ファイルの入出力関数で使用する構造体の固定配列のサイズを指定します。|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Indicates to the compiler that the class should be exposed as a COM object.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Allows module members to be accessed using only the qualification needed for the module.|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Specifies the size of a fixed-length string in a structure for use with file input and output functions.|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Specifies the size of a fixed array in a structure for use with file input and output functions.|
 
 ### <a name="comclassattribute"></a>COMClassAttribute
 
-@No__t_0 を使用すると、Visual Basic から COM コンポーネントを作成するプロセスを簡略化できます。 COM オブジェクトは .NET Framework アセンブリとは大きく異なり、`COMClassAttribute` を使用せずに、Visual Basic から COM オブジェクトを生成するには、いくつかの手順に従う必要があります。 @No__t_0 でマークされたクラスの場合、コンパイラはこれらの手順の多くを自動的に実行します。
+Use `COMClassAttribute` to simplify the process of creating COM components from Visual Basic. COM objects are considerably different from .NET Framework assemblies, and without `COMClassAttribute`, you need to follow a number of steps to generate a COM object from Visual Basic. For classes marked with `COMClassAttribute`, the compiler performs many of these steps automatically.
 
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute
 
-モジュールに必要な修飾だけを使用してモジュールメンバーにアクセスできるようにするには、`HideModuleNameAttribute` を使用します。
+Use `HideModuleNameAttribute` to allow module members to be accessed by using only the qualification needed for the module.
 
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute
 
-@No__t_0 を使用して、Visual Basic に固定長文字列を強制的に作成します。 既定では、文字列の長さは可変長です。この属性は、文字列をファイルに格納する場合に便利です。 次のコードはこれを示しています。
+Use `VBFixedStringAttribute` to force Visual Basic to create a fixed-length string. Strings are of variable length by default, and this attribute is useful when storing strings to files. The following code demonstrates this:
 
 ```vb
 Structure Worker
@@ -267,7 +267,7 @@ End Structure
 
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute
 
-サイズが固定されている配列を宣言するには、`VBFixedArrayAttribute` を使用します。 Visual Basic 文字列と同様に、配列の長さは既定で可変長です。 この属性は、ファイルに対してデータをシリアル化または書き込む場合に便利です。
+Use `VBFixedArrayAttribute` to declare arrays that are fixed in size. Like Visual Basic strings, arrays are of variable length by default. This attribute is useful when serializing or writing data to files.
 
 ## <a name="see-also"></a>関連項目
 

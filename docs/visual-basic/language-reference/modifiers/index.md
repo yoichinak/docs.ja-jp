@@ -1,13 +1,13 @@
 ---
-title: 修飾子 (Visual Basic)
+title: 修飾子
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 466d69ec966037ae3a980bba381fc61be52f30e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0379a0d0571a66bda4df06f5c2d3282d80034cae
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051183"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351541"
 ---
 # <a name="modifiers-visual-basic"></a>修飾子 (Visual Basic)
 このセクションのトピックでは、Visual Basic ランタイム修飾子を示します。  
@@ -39,7 +39,7 @@ ms.locfileid: "62051183"
   
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
   
  [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62051183"
   
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [オーバーロード](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
  [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62051183"
   
  [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
   
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
+ [ReadOnly](../../../visual-basic/language-reference/modifiers/withevents.md)  
   
  [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
   

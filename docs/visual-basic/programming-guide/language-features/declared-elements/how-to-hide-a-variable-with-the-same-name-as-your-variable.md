@@ -1,5 +1,5 @@
 ---
-title: '方法: 変数と同じ名前の変数を非表示にします (Visual Basic)'
+title: '方法 : 自分で宣言した変数と同じ名前の変数を隠す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -12,41 +12,41 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: 487e0a15ba6b52f92ab39fe0bae4ab15fa92707f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0915adbbabb778b1bdd3b6b30e56725a7e74867c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629989"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345368"
 ---
-# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>方法: 変数と同じ名前の変数を非表示にします (Visual Basic)
+# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>方法: 自分で宣言した変数と同じ名前の変数を隠す (Visual Basic)
 
-変数を非表示にするには、その変数を同じ名前の変数で再定義することによって、その変数を*シャドウ*することができます。 非表示にする変数は、次の2つの方法でシャドウすることができます。
+You can hide a variable by *shadowing* it, that is, by redefining it with a variable of the same name. You can shadow the variable you want to hide in two ways:
 
-- **スコープによるシャドウ処理。** スコープを通じてシャドウするには、非表示にする変数が含まれている領域のサブ領域内で再宣言します。
+- **Shadowing Through Scope.** You can shadow it through scope by redeclaring it inside a subregion of the region containing the variable you want to hide.
 
-- **継承によるシャドウ処理。** 非表示にする変数がクラスレベルで定義されている場合は、派生クラスで[Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)キーワードを使用して再宣言することで、継承によってシャドウできます。
+- **Shadowing Through Inheritance.** If the variable you want to hide is defined at class level, you can shadow it through inheritance by redeclaring it with the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in a derived class.
 
-## <a name="two-ways-to-hide-a-variable"></a>変数を非表示にする2つの方法
+## <a name="two-ways-to-hide-a-variable"></a>Two Ways to Hide a Variable
 
-#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>スコープを使用して変数をシャドウすることによって変数を非表示にするには
+#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>To hide a variable by shadowing it through scope
 
-1. 非表示にする変数を定義するリージョンを決定し、変数で再定義するサブ領域を決定します。
+1. Determine the region defining the variable you want to hide, and determine a subregion in which to redefine it with your variable.
 
-    |変数の領域|再定義に使用できるサブ領域|
+    |Variable's region|Allowable subregion for redefining it|
     |-----------------------|-------------------------------------------|
-    |Module|モジュール内のクラス|
-    |クラス|クラス内のサブクラスです。<br /><br /> クラス内のプロシージャ|
+    |Module|A class within the module|
+    |インスタンス|A subclass within the class<br /><br /> A procedure within the class|
 
-    再定義できませんそのプロシージャ内のブロックでプロシージャの変数などの、 `If`...`End If`構築または`For`ループします。
+    You cannot redefine a procedure variable in a block within that procedure, for example in an `If`...`End If` construction or a `For` loop.
 
-2. サブ領域がまだ存在しない場合は作成します。
+2. Create the subregion if it does not already exist.
 
-3. サブ領域内で、シャドウする変数を宣言する[Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)を記述します。
+3. Within the subregion, write a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) declaring the shadowing variable.
 
-    サブ領域内のコードが変数名を参照すると、コンパイラはシャドウしている変数への参照を解決します。
+    When code inside the subregion refers to the variable name, the compiler resolves the reference to the shadowing variable.
 
-    次の例は、スコープを使用したシャドウ処理と、シャドウをバイパスする参照を示しています。
+    The following example illustrates shadowing through scope, as well as a reference that bypasses the shadowing.
 
     ```vb
     Module shadowByScope
@@ -68,21 +68,21 @@ ms.locfileid: "68629989"
     End Module
     ```
 
-    前の例では、 `num`モジュールレベルとプロシージャレベル (プロシージャ`show`内) の両方で変数を宣言しています。 ローカル変数`num`は内`show`のモジュールレベル変数`num`をシャドウするため、ローカル変数は2に設定されます。 ただし、この`num` `useModuleLevelNum`プロシージャには、シャドウするローカル変数はありません。 したがって`useModuleLevelNum` 、では、モジュールレベル変数の値が1に設定されます。
+    The preceding example declares the variable `num` both at module level and at procedure level (in the procedure `show`). The local variable `num` shadows the module-level variable `num` within `show`, so the local variable is set to 2. However, there is no local variable to shadow `num` in the `useModuleLevelNum` procedure. Therefore, `useModuleLevelNum` sets the value of the module-level variable to 1.
 
-    内`MsgBox` `num`の呼び出しは、モジュール名で修飾することによって、シャドウ機構をバイパスします。 `show` そのため、ローカル変数の代わりにモジュールレベルの変数が表示されます。
+    The `MsgBox` call inside `show` bypasses the shadowing mechanism by qualifying `num` with the module name. Therefore, it displays the module-level variable instead of the local variable.
 
-#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>継承によって変数をシャドウして非表示にするには
+#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>To hide a variable by shadowing it through inheritance
 
-1. 非表示にする変数がクラスで宣言されていること、およびクラスレベル (プロシージャの外側) で宣言されていることを確認してください。 それ以外の場合、継承によってシャドウを行うことはできません。
+1. Be sure the variable you want to hide is declared in a class, and at class level (outside any procedure). Otherwise you cannot shadow it through inheritance.
 
-2. 変数がまだ存在しない場合は、そのクラスから派生したクラスを定義します。
+2. Define a class derived from the variable's class if one does not already exist.
 
-3. 派生クラス内で、変数を`Dim`宣言するステートメントを記述します。 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)キーワードを宣言に含めます。
+3. Inside the derived class, write a `Dim` statement declaring your variable. Include the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in the declaration.
 
-    派生クラスのコードが変数名を参照すると、コンパイラは変数への参照を解決します。
+    When code in the derived class refers to the variable name, the compiler resolves the reference to your variable.
 
-    次の例は、継承によるシャドウ処理を示しています。 2つの参照が作成されます。1つはシャドウを行う変数にアクセスし、もう1つはシャドウ処理をバイパスします。
+    The following example illustrates shadowing through inheritance. It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.
 
     ```vb
     Public Class shadowBaseClass
@@ -99,19 +99,19 @@ ms.locfileid: "68629989"
     End Class
     ```
 
-    前の例では、 `shadowString`基底クラスの変数を宣言し、派生クラスでその変数をシャドウしています。 派生クラス`showStrings`のプロシージャは、名前`shadowString`が修飾されていない場合に、文字列のシャドウバージョンを表示します。 次に、が`shadowString` `MyBase`キーワードで修飾されている場合に、シャドウされたバージョンを表示します。
+    The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase` keyword.
 
 ## <a name="robust-programming"></a>信頼性の高いプログラミング
 
-シャドウでは、同じ名前の変数の複数のバージョンが導入されます。 コードステートメントが変数名を参照する場合、コンパイラが参照を解決するバージョンは、コードステートメントの場所や修飾文字列の存在などの要因によって異なります。 これにより、シャドウされた変数の意図しないバージョンを参照するリスクが増加する可能性があります。 シャドウされた変数へのすべての参照を完全に修飾することで、そのリスクを軽減することができます。
+Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to an unintended version of a shadowed variable. You can lower that risk by fully qualifying all references to a shadowed variable.
 
 ## <a name="see-also"></a>関連項目
 
 - [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic でのシャドウ処理](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [シャドウとオーバーライドの違い](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [方法: 継承された変数の非表示](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
-- [方法: 派生クラスによって非表示にされている変数へのアクセス](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [方法: 継承された変数を隠す](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
+- [方法: 派生クラスによって非表示になっている変数にアクセスする](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me、My、MyBase、および MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [継承の基本](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

@@ -1,5 +1,5 @@
 ---
-title: 匿名型 (Visual Basic)
+title: 匿名型
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AnonymousType
@@ -8,129 +8,129 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 2d134b8c8ef202a91b35ad8645bf63622b5e8030
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 064c43274069be3951f816eaafafac0bbece7651
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040840"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347157"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名型 (Visual Basic)
-Visual Basic は匿名型をサポートしているため、データ型のクラス定義を記述せずにオブジェクトを作成できます。 クラスは、コンパイラによって生成されます。 クラスには使用可能な名前がなく、 <xref:System.Object>から直接継承され、オブジェクトの宣言時に指定したプロパティが含まれます。 データ型の名前は指定されていないため、*匿名型*と呼ばれます。  
+Visual Basic supports anonymous types, which enable you to create objects without writing a class definition for the data type. クラスは、コンパイラによって生成されます。 The class has no usable name, inherits directly from <xref:System.Object>, and contains the properties you specify in declaring the object. Because the name of the data type is not specified, it is referred to as an *anonymous type*.  
   
- 次の例では、 `product` `Name`と`Price`という2つのプロパティを持つ匿名型のインスタンスとして、変数を宣言して作成します。  
+ The following example declares and creates variable `product` as an instance of an anonymous type that has two properties, `Name` and `Price`.  
   
  [!code-vb[VbVbalrAnonymousTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#1)]  
   
- *クエリ式*では、クエリによって選択されたデータの列を結合するために、匿名型を使用します。 特定のクエリによって選択される列を予測できないため、結果の型を事前に定義することはできません。 匿名型を使用すると、任意の数の列を任意の順序で選択するクエリを記述できます。 コンパイラは、指定されたプロパティと指定された順序に一致するデータ型を作成します。  
+ A *query expression* uses anonymous types to combine columns of data selected by a query. You cannot define the type of the result in advance, because you cannot predict the columns a particular query might select. Anonymous types enable you to write a query that selects any number of columns, in any order. The compiler creates a data type that matches the specified properties and the specified order.  
   
- 次の例では`products` 、は製品オブジェクトの一覧であり、それぞれに多くのプロパティがあります。 変数`namePriceQuery`は、クエリが実行されると、2つのプロパティ`Price`を`Name`持つ匿名型のインスタンスのコレクションを返すクエリの定義を保持します。  
+ In the following examples, `products` is a list of product objects, each of which has many properties. Variable `namePriceQuery` holds the definition of a query that, when it is executed, returns a collection of instances of an anonymous type that has two properties, `Name` and `Price`.  
   
  [!code-vb[VbVbalrAnonymousTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#2)]  
   
- 変数`nameQuantityQuery`は、クエリが実行されると、2つのプロパティ`OnHand`を`Name`持つ匿名型のインスタンスのコレクションを返すクエリの定義を保持します。  
+ Variable `nameQuantityQuery` holds the definition of a query that, when it is executed, returns a collection of instances of an anonymous type that has two properties, `Name` and `OnHand`.  
   
  [!code-vb[VbVbalrAnonymousTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#3)]  
   
- 匿名型のコンパイラによって作成されたコードの詳細については、「[匿名型の定義](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)」を参照してください。  
+ For more information about the code created by the compiler for an anonymous type, see [Anonymous Type Definition](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
 > [!CAUTION]
-> 匿名型の名前はコンパイラによって生成されるため、コンパイルごとに異なる場合があります。 プロジェクトを再コンパイルするときに名前が変更される可能性があるため、コードで匿名型の名前を使用したり、使用したりしないでください。  
+> The name of the anonymous type is compiler generated and may vary from compilation to compilation. Your code should not use or rely on the name of an anonymous type because the name might change when a project is recompiled.  
   
-## <a name="declaring-an-anonymous-type"></a>匿名型の宣言  
- 匿名型のインスタンスの宣言では、初期化子リストを使用して、型のプロパティを指定します。 メソッドやイベントなどの他のクラス要素ではなく、匿名型を宣言する場合は、プロパティのみを指定できます。 次の例では`product1` 、は`Name`とと`Price`いう2つのプロパティを持つ匿名型のインスタンスです。  
+## <a name="declaring-an-anonymous-type"></a>Declaring an Anonymous Type  
+ The declaration of an instance of an anonymous type uses an initializer list to specify the properties of the type. You can specify only properties when you declare an anonymous type, not other class elements such as methods or events. In the following example, `product1` is an instance of an anonymous type that has two properties: `Name` and `Price`.  
   
  [!code-vb[VbVbalrAnonymousTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#4)]  
   
- プロパティをキープロパティとして指定した場合は、これらのプロパティを使用して、2つの匿名型インスタンスが等しいかどうかを比較できます。 ただし、キープロパティの値は変更できません。 詳細については、このトピックで後述する「キーのプロパティ」を参照してください。  
+ If you designate properties as key properties, you can use them to compare two anonymous type instances for equality. However, the values of key properties cannot be changed. See the Key Properties section later in this topic for more information.  
   
- 匿名型のインスタンスを宣言することは、オブジェクト初期化子を使用して名前付きの型のインスタンスを宣言するのと似ています。  
+ Notice that declaring an instance of an anonymous type is like declaring an instance of a named type by using an object initializer:  
   
  [!code-vb[VbVbalrAnonymousTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#5)]  
   
- 匿名型のプロパティを指定するその他の方法の詳細[については、「方法:匿名型の宣言](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)のプロパティ名と型を推論します。  
+ For more information about other ways to specify anonymous type properties, see [How to: Infer Property Names and Types in Anonymous Type Declarations](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
 ## <a name="key-properties"></a>キー プロパティ  
- キープロパティは、次のいくつかの基本的な方法で、キー以外のプロパティとは異なります。  
+ Key properties differ from non-key properties in several fundamental ways:  
   
-- 2つのインスタンスが等しいかどうかを判断するために、キープロパティの値のみが比較されます。  
+- Only the values of key properties are compared in order to determine whether two instances are equal.  
   
-- キープロパティの値は読み取り専用で、変更することはできません。  
+- The values of key properties are read-only and cannot be changed.  
   
-- コンパイラによって生成された匿名型のハッシュコードアルゴリズムには、キープロパティ値のみが含まれます。  
+- Only key property values are included in the compiler-generated hash code algorithm for an anonymous type.  
   
 ### <a name="equality"></a>等価比較  
- 匿名型のインスタンスは、同じ匿名型のインスタンスである場合にのみ、同じにすることができます。 コンパイラは、次の条件を満たす場合、2つのインスタンスを同じ型のインスタンスとして扱います。  
+ Instances of anonymous types can be equal only if they are instances of the same anonymous type. The compiler treats two instances as instances of the same type if they meet the following conditions:  
   
-- これらは同じアセンブリ内で宣言されています。  
+- They are declared in the same assembly.  
   
-- これらのプロパティは同じ名前を持ち、推論される型は同じであり、同じ順序で宣言されています。 名前比較では、大文字と小文字は区別されません。  
+- Their properties have the same names, the same inferred types, and are declared in the same order. Name comparisons are not case-sensitive.  
   
-- 各の同じプロパティは、キープロパティとしてマークされます。  
+- The same properties in each are marked as key properties.  
   
-- 各宣言の少なくとも1つのプロパティがキープロパティです。  
+- At least one property in each declaration is a key property.  
   
- キープロパティを持たない匿名型のインスタンスは、それ自体と同じです。  
+ An instance of an anonymous types that has no key properties is equal only to itself.  
   
  [!code-vb[VbVbalrAnonymousTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#6)]  
   
- キープロパティの値が等しい場合、同じ匿名型の2つのインスタンスは等しいと見なされます。 次の例は、等値のテスト方法を示しています。  
+ Two instances of the same anonymous type are equal if the values of their key properties are equal. The following examples illustrate how equality is tested.  
   
  [!code-vb[VbVbalrAnonymousTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#7)]  
   
-### <a name="read-only-values"></a>読み取り専用の値  
- キープロパティの値は変更できません。 たとえば、前の`prod8`例`Name`のでは、フィールドと`Price`フィールドは`read-only`ですが`OnHand` 、変更することができます。  
+### <a name="read-only-values"></a>Read-Only Values  
+ The values of key properties cannot be changed. For example, in `prod8` in the previous example, the `Name` and `Price` fields are `read-only`, but `OnHand` can be changed.  
   
  [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
-## <a name="anonymous-types-from-query-expressions"></a>クエリ式からの匿名型  
- クエリ式では、必ずしも匿名型を作成する必要はありません。 可能な場合は、既存の型を使用して列データを保持します。 このエラーは、クエリがデータソースからレコード全体を返すか、または各レコードのフィールドを1つだけ返す場合に発生します。 次のコード例では`customers` 、は`Customer`クラスのオブジェクトのコレクションです。 クラスには多くのプロパティがあり、クエリの結果には、任意の順序で1つ以上のプロパティを含めることができます。 最初の2つの例では、クエリは名前付きの型の要素を選択するため、匿名型は必要ありません。  
+## <a name="anonymous-types-from-query-expressions"></a>Anonymous Types from Query Expressions  
+ Query expressions do not always require the creation of anonymous types. When possible, they use an existing type to hold the column data. This occurs when the query returns either whole records from the data source, or only one field from each record. In the following code examples, `customers` is a collection of objects of a `Customer` class. The class has many properties, and you can include one or more of them in the query result, in any order. In the first two examples, no anonymous types are required because the queries select elements of named types:  
   
-- `custs1`は文字列であるため`cust.Name` 、文字列のコレクションが含まれています。  
+- `custs1` contains a collection of strings, because `cust.Name` is a string.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
-- `custs2`の`Customer` `Customer`各要素がオブジェクトであり、要素全体がクエリによって選択されるため、オブジェクトのコレクションが格納されます。 `customers`  
+- `custs2` contains a collection of `Customer` objects, because each element of `customers` is a `Customer` object, and the whole element is selected by the query.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   
- ただし、適切な名前付きの型は常に使用できるとは限りません。 お客様は、1つの目的で顧客の名前と住所、別の顧客の ID 番号と場所、顧客名、住所、および注文履歴を選択することができます。 匿名型を使用すると、プロパティの任意の組み合わせを任意の順序で選択できます。最初に、結果を保持するために新しい名前付きの型を宣言する必要はありません。 代わりに、コンパイラは、プロパティのコンパイルごとに匿名型を作成します。 次のクエリでは、の`Customer` `customers`各オブジェクトから、顧客の名前と ID 番号のみを選択します。 したがって、コンパイラは、これら2つのプロパティのみを含む匿名型を作成します。  
+ However, appropriate named types are not always available. You might want to select customer names and addresses for one purpose, customer ID numbers and locations for another, and customer names, addresses, and order histories for a third. Anonymous types enable you to select any combination of properties, in any order, without first declaring a new named type to hold the result. Instead, the compiler creates an anonymous type for each compilation of properties. The following query selects only the customer's name and ID number from each `Customer` object in `customers`. Therefore, the compiler creates an anonymous type that contains only those two properties.  
   
  [!code-vb[VbVbalrAnonymousTYpes#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#32)]  
   
- 匿名型のプロパティの名前とデータ型は`Select`、、、 `cust.Name`および`cust.ID`の各引数から取得されます。 クエリによって作成される匿名型のプロパティは、常にキープロパティです。 次`custs3` `Name` `ID`のループでを実行すると、結果は、2つのキープロパティ (と) を持つ匿名型のインスタンスのコレクションになります。 `For Each`  
+ Both the names and the data types of the properties in the anonymous type are taken from the arguments to `Select`, `cust.Name` and `cust.ID`. The properties in an anonymous type that is created by a query are always key properties. When `custs3` is executed in the following `For Each` loop, the result is a collection of instances of an anonymous type with two key properties, `Name` and `ID`.  
   
  [!code-vb[VbVbalrAnonymousTypes#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#33)]  
   
- によって`custs3`表されるコレクション内の要素は厳密に型指定されます。 IntelliSense を使用して、使用可能なプロパティ間を移動し、型を確認できます。  
+ The elements in the collection represented by `custs3` are strongly typed, and you can use IntelliSense to navigate through the available properties and to verify their types.  
   
- 詳細については、「 [Visual Basic での LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)」を参照してください。  
+ For more information, see [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
-## <a name="deciding-whether-to-use-anonymous-types"></a>匿名型を使用するかどうかの決定  
- オブジェクトを匿名クラスのインスタンスとして作成する前に、それが最適なオプションであるかどうかを検討してください。 たとえば、関連データを格納する一時オブジェクトを作成する場合に、完全なクラスに含まれる可能性のある他のフィールドやメソッドが不要な場合は、匿名型を使用することをお勧めします。 匿名型は、各宣言に対して異なるプロパティを選択する場合や、プロパティの順序を変更する場合にも便利です。 ただし、同じプロパティを持つ複数のオブジェクトがプロジェクトに含まれている場合は、クラスコンストラクターを持つ名前付きの型を使用して、より簡単に宣言することができます。 たとえば、適切なコンストラクターを使用すると、匿名型の複数のインスタンスを`Product`宣言するよりも、クラスの複数のインスタンスを宣言する方が簡単です。  
+## <a name="deciding-whether-to-use-anonymous-types"></a>Deciding Whether to Use Anonymous Types  
+ Before you create an object as an instance of an anonymous class, consider whether that is the best option. For example, if you want to create a temporary object to contain related data, and you have no need for other fields and methods that a complete class might contain, an anonymous type is a good solution. Anonymous types are also convenient if you want a different selection of properties for each declaration, or if you want to change the order of the properties. However, if your project includes several objects that have the same properties, in a fixed order, you can declare them more easily by using a named type with a class constructor. For example, with an appropriate constructor, it is easier to declare several instances of a `Product` class than it is to declare several instances of an anonymous type.  
   
  [!code-vb[VbVbalrAnonymousTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#9)]  
   
- 名前付きの型のもう1つの利点は、コンパイラがプロパティ名の誤入力をキャッチできることです。 前の例`firstProd2` `secondProd2`では、、、 `thirdProd2`およびは、同じ匿名型のインスタンスとして使用されています。 ただし、次のいずれかの方法`thirdProd2`で誤ってを宣言すると、その型はとの`firstProd2`型と`secondProd2`異なります。  
+ Another advantage of named types is that the compiler can catch an accidental mistyping of a property name. In the previous examples, `firstProd2`, `secondProd2`, and `thirdProd2` are intended to be instances of the same anonymous type. However, if you were to accidentally declare `thirdProd2` in one of the following ways, its type would be different from that of `firstProd2` and `secondProd2`.  
   
  [!code-vb[VbVbalrAnonymousTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#10)]  
   
- さらに重要な点として、名前付きの型のインスタンスには適用されない匿名型の使用に関する制限があります。 `firstProd2`、 `secondProd2`、および`thirdProd2`は、同じ匿名型のインスタンスです。 ただし、共有されている匿名型の名前は使用できません。また、コードで型名を指定する場所を指定することはできません。 たとえば、匿名型を使用して、メソッドシグネチャを定義したり、別の変数やフィールドを宣言したり、任意の型宣言で宣言したりすることはできません。 そのため、メソッド間で情報を共有する必要がある場合、匿名型は適切ではありません。  
+ More importantly, there are limitations on the use of anonymous types that do not apply to instances of named types. `firstProd2`, `secondProd2`, and `thirdProd2` are instances of the same anonymous type. However, the name for the shared anonymous type is not available and cannot appear where a type name is expected in your code. For example, an anonymous type cannot be used to define a method signature, to declare another variable or field, or in any type declaration. As a result, anonymous types are not appropriate when you have to share information across methods.  
   
-## <a name="an-anonymous-type-definition"></a>匿名型の定義  
- 匿名型のインスタンスの宣言に応答して、コンパイラは、指定されたプロパティを含む新しいクラス定義を作成します。  
+## <a name="an-anonymous-type-definition"></a>An Anonymous Type Definition  
+ In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties.  
   
- 匿名型に少なくとも1つのキープロパティが含まれている場合、 <xref:System.Object>定義<xref:System.Object.Equals%2A>は<xref:System.Object.GetHashCode%2A>、、 <xref:System.Object.ToString%2A>、およびから継承された3つのメンバーをオーバーライドします。 等価性をテストし、ハッシュコード値を決定するために生成されたコードは、キープロパティのみを考慮します。 匿名型にキープロパティが含まれてい<xref:System.Object.ToString%2A>ない場合は、のみがオーバーライドされます。 匿名型の明示的に名前が付けられたプロパティは、これらの生成されたメソッドと競合しません。 つまり、、 `.GetHashCode`、または`.Equals` `.ToString`を使用してプロパティの名前を指定することはできません。  
+ If the anonymous type contains at least one key property, the definition overrides three members inherited from <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. The code produced for testing equality and determining the hash code value considers only the key properties. If the anonymous type contains no key properties, only <xref:System.Object.ToString%2A> is overridden. Explicitly named properties of an anonymous type cannot conflict with these generated methods. That is, you cannot use `.Equals`, `.GetHashCode`, or `.ToString` to name a property.  
   
- 少なくとも1つのキープロパティを持つ匿名型定義<xref:System.IEquatable%601?displayProperty=nameWithType>は、インターフェイス`T`も実装します。ここで、は匿名型の型です。  
+ Anonymous type definitions that have at least one key property also implement the <xref:System.IEquatable%601?displayProperty=nameWithType> interface, where `T` is the type of the anonymous type.  
   
- コンパイラによって作成されたコードと、オーバーライドされたメソッドの機能の詳細については、「[匿名型の定義](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)」を参照してください。  
+ For more information about the code created by the compiler and the functionality of the overridden methods, see [Anonymous Type Definition](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
 ## <a name="see-also"></a>関連項目
 
-- [オブジェクト初期化子:名前付きの型と匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [オブジェクト初期化子 : 名前付きの型と匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [方法: 匿名型の宣言でプロパティの名前と型を推論する](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [方法 : 匿名型の宣言におけるプロパティ名と型を推論する](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [匿名型の定義](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
 - [Key](../../../../visual-basic/language-reference/modifiers/key.md)
