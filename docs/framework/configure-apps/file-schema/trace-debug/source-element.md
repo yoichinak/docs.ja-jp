@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/14/2019
 ms.locfileid: "74088832"
 ---
-# <a name="source-element"></a>\<ソース > 要素
+# <a name="source-element"></a>\<source> 要素
 トレース メッセージを開始するトレース ソースを指定します。  
 
 [ **\<configuration>** ](../configuration-element.md)\
