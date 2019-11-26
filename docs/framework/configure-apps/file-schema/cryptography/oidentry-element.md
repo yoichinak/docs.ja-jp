@@ -15,14 +15,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/14/2019
 ms.locfileid: "74088546"
 ---
-# <a name="oidentry-element"></a>\<oidEntry> 要素
+# <a name="oidentry-element"></a>\<oidEntry > 要素
 ASN.1 オブジェクト識別子 (OID) を表示名にマップします。  
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<mscorlib>** ](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings>** ](cryptographysettings-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<oidMap>** ](oidmap-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**oidEntry>**
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings**](cryptographysettings-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<oidMap >** ](oidmap-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**oidEntry >**
 
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +38,7 @@ ASN.1 オブジェクト識別子 (OID) を表示名にマップします。
 |属性|説明|  
 |---------------|-----------------|  
 |**OID**|必須の属性です。<br /><br /> クラスによって実装されたアルゴリズムに対応する asn.1 OID を指定します。|  
-|**name**|必須の属性です。<br /><br /> [\<nameEntry>](nameentry-element.md)タグの**name**属性の値を指定します。|  
+|**name**|必須の属性です。<br /><br /> [\<nameEntry >](nameentry-element.md)タグの**name**属性の値を指定します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -56,7 +56,7 @@ ASN.1 オブジェクト識別子 (OID) を表示名にマップします。
  Asn.1 オブジェクト識別子は、一部の暗号化形式でアルゴリズムを識別します。 オブジェクト識別子を、識別するアルゴリズムのフレンドリ名にマップします。  
   
 ## <a name="example"></a>例  
- 次の例は、 **\<oidEntry>** 要素を使用して、160 RIPEMD ハッシュアルゴリズムのオブジェクト識別子をそのハッシュアルゴリズムの実装にマップする方法を示しています。  
+ 次の例は、 **\<oidEntry >** 要素を使用して、160 RIPEMD ハッシュアルゴリズムのオブジェクト識別子をそのハッシュアルゴリズムの実装にマップする方法を示しています。  
   
 ```xml  
 <configuration>  
