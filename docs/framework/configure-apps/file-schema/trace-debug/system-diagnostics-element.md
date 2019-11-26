@@ -1,5 +1,5 @@
 ---
-title: < diagnostics > 要素
+title: < diagnostics> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
@@ -15,11 +15,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699194"
 ---
-# <a name="systemdiagnostics-element"></a>\<diagnostics > 要素
+# <a name="systemdiagnostics-element"></a>\<diagnostics> 要素
 メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<の >**  
+&nbsp;&nbsp; **\<system.diagnostics>**
   
 ## <a name="syntax"></a>構文  
   
