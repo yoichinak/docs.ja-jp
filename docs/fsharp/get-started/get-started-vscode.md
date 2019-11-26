@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Code で F# をはじめる
+title: Visual Studio Code で F# をはじめよう
 description: を Visual Studio Code と Ionide F# plugin suite と共に使用する方法について説明します。
 ms.date: 12/23/2018
 ms.openlocfilehash: 2802438144eb2352c3abeeccfc126b16c6a87d8f
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204913"
 ---
-# <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code で F# をはじめる
+# <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code で F# をはじめよう
 
 [Ionide プラグイン](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)をF#使用して[Visual Studio Code](https://code.visualstudio.com)に記述すると、IntelliSense とコードリファクタリングを使用して、優れたクロスプラットフォームで軽量の統合開発環境 (IDE) エクスペリエンスを実現できます。 プラグインの詳細については、 [Ionide.io](http://ionide.io) を参照してください。
 
@@ -62,7 +62,7 @@ Visual Studio Code にプロジェクトが読み込まれると、ウィンド�
 2. FSI.EXE プロセスでハイライト表示したコードが送信されました。
 3. FSI.EXE プロセスは、送信したコードを評価しました。
 
-送信したのは [関数](../language-reference/functions/index.md) だったので、fsi.exe を使用してその関数を呼び出すことができます。 対話型ウィンドウで、次のように入力します。
+送信した [関数](../language-reference/functions/index.md) により、FSI でその関数を呼び出すことができます。 対話型ウィンドウで、次のように入力します。 対話型ウィンドウで、次のように入力します。
 
 ```fsharp
 toPigLatin "banana";;
@@ -113,19 +113,19 @@ val toPigLatin : word:string -> string
 
    [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L2-L6)]
 
-2. 最初の文字が母音であるかどうかを確認し、最初の文字が母音であるかどうかに基づいて、入力文字から戻り値を構築する[`if..then..else`](../language-reference/conditional-expressions-if-then-else.md) 式。
+2. 最初の文字が母音かどうかをチェックし、最初の文字が母音であるかどうかに基づいて、入力文字から戻り値を構築する[`if..then..else`](../language-reference/conditional-expressions-if-then-else.md) 式。
 
    [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L8-L11)]
 
 したがって、 `toPigLatin`のフローは次の通りです。
 
-入力単語の最初の文字が母音であるかどうかを確認します。 そうである場合は、単語の末尾に "yay" を付加します。 それ以外の場合は、最初の文字を単語の末尾に移動し、それに "ay" を追加します。
+入力された単語の最初の文字が母音であるかどうかを確認します。 母音の場合は、単語の末尾に "yay" を付加します。 それ以外の場合は、最初の文字を単語の末尾に移動し、それに "ay" を追加します。
 
 この点については最後に説明します。他の多くの言語とは異なり、関数から戻る明示的な命令はありません。 これは、 F# が式ベースであり、関数本体の最後の式が戻り値であるためです。 `if..then..else`はそれ自体が式であるため、`then`ブロックの本体または`else`ブロックの本体の値が返されます。
 
 ## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>コンソールアプリを Pig Latin ジェネレーターにする
 
-この記事の前のセクションには、F# コードの記述の一般的な最初の手順を示しました。 最初に関数を記述して、FSI を使用して対話的に実行します。 これは REPL ドリブン開発と呼ばれます。 [repl](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) は "Read Evaluate-Print Loop" を表します。 何かが機能するまで機能を試すのに最適な方法です。
+この記事の前のセクションでは、F# コードを記述する一般的な最初の手順が示されています。 最初に関数を記述し、FSI を使用して対話的に実行します。 これは REPL ドリブン開発と呼ばれます [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) は "Read Evaluate-Print Loop" の略称です。 この機能を試してみることをお勧めします。
 
 REPL 駆動型開発の次の手順では、作業コードを F# 実装ファイルに移動します。 その後、F# コンパイラによって実行可能なアセンブリにコンパイルできます。
 
