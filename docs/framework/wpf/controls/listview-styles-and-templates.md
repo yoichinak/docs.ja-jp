@@ -27,9 +27,9 @@ ms.locfileid: "74283723"
 ## <a name="listview-states"></a>ListView の状態  
  次の表は、<xref:System.Windows.Controls.ListView> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
@@ -39,17 +39,17 @@ ms.locfileid: "74283723"
 ## <a name="listviewitem-states"></a>ListViewItem の状態  
  次の表に、<xref:System.Windows.Controls.ListViewItem> コントロールの状態を示します。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
-|Disabled|CommonStates|コントロールが無効になっています。|  
+|無効|CommonStates|コントロールが無効になっています。|  
 |MouseOver|CommonStates|マウスポインターが <xref:System.Windows.Controls.ComboBox> コントロールの上にあります。|  
 |フォーカスされている|FocusStates|コントロールにフォーカスがあります。|  
 |フォーカスされていない|FocusStates|コントロールにフォーカスがありません。|  
-|選択済み|SelectionStates|項目は現在選択されています。|  
+|Selected|SelectionStates|項目は現在選択されています。|  
 |未選択|SelectionStates|この項目は選択されていません。|  
 |SelectedUnfocused|SelectionStates|この項目は選択されていますが、フォーカスがありません。|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "74283723"
   
  完全なサンプルについては、[Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>

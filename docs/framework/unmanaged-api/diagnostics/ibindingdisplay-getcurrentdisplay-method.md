@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448498"
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>IBindingDisplay::GetCurrentDisplay メソッド
-Returns the current binding display information.  
+現在のバインディング表示情報を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,23 +35,23 @@ HRESULT GetCurrentDisplay (
   
 ## <a name="parameters"></a>パラメーター  
  `display`  
- [out, retval] A pointer to a safearray containing the binding display information.  
+ [out, retval]バインディング表示情報を格納している safearray へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.  
+## <a name="remarks"></a>コメント  
+ [IBindingDisplay:: InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)メソッドが既に成功しており、プログラムがデバッガーによって停止されている必要があります。  
   
- The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).  
+ 呼び出し元は、 [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy)を使用して返された `SAFEARRAY` メモリの割り当てを解除する必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** BindingDisplay.h  
+ **ヘッダー:** BindingDisplay. h  
   
- **Library:** BindingDisplay.idl  
+ **ライブラリ:** BindingDisplay .idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IBindingDisplay インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)
 - [InitializeForProcess メソッド](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)

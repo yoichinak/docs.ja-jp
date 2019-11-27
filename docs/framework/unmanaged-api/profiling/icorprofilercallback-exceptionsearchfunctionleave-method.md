@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445373"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionleave-method"></a>ICorProfilerCallback::ExceptionSearchFunctionLeave メソッド
-Notifies the profiler that the search phase of exception handling has finished searching a function.  
+例外処理の検索フェーズで関数の検索が終了したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,7 +31,7 @@ Notifies the profiler that the search phase of exception handling has finished s
 HRESULT ExceptionSearchFunctionLeave();  
 ```  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -40,7 +40,7 @@ HRESULT ExceptionSearchFunctionLeave();
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ExceptionSearchFunctionEnter メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)

@@ -12,26 +12,26 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74329552"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>DLL 読み込み時のエラーです。(Visual Basic)
-A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement. Possible causes for this error include:  
+ダイナミックリンクライブラリ (DLL) は、`Declare` ステートメントの `Lib` 句で指定されたライブラリです。 このエラーには、次の原因が考えられます。  
   
-- The file is not DLL executable.  
+- ファイルが DLL 実行可能ファイルではありません。  
   
-- The file is not a Microsoft Windows DLL.  
+- ファイルは Microsoft Windows DLL ではありません。  
   
-- The DLL references another DLL that is not present.  
+- DLL が、存在しない別の DLL を参照しています。  
   
-- The DLL or referenced DLL is not in a directory specified in the path.  
+- DLL または参照先の DLL が、パスで指定されたディレクトリにありません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.  
+- ファイルがソーステキストファイルであり、DLL 実行可能ファイルでない場合は、コンパイルして DLL の実行可能な形式にリンクする必要があります。  
   
-- If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.  
+- ファイルが Microsoft Windows DLL でない場合は、Microsoft Windows と同等のものを取得します。  
   
-- If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.  
+- DLL が存在しない別の DLL を参照している場合は、参照されている DLL を取得し、使用できるようにします。  
   
-- If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.  
+- DLL または参照先の DLL がパスによって指定されたディレクトリにない場合は、DLL を参照先のディレクトリに移動します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)

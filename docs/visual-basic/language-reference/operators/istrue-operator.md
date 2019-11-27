@@ -15,36 +15,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349510"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue 演算子 (Visual Basic)
-Determines whether an expression is `True`.  
+式が `True`かどうかを判断します。  
   
- You cannot call `IsTrue` explicitly in your code, but the Visual Basic compiler can use it to generate code from `OrElse` clauses. If you define a class or structure and then use a variable of that type in an `OrElse` clause, you must define `IsTrue` on that class or structure.  
+ コード内で `IsTrue` を明示的に呼び出すことはできませんが、Visual Basic コンパイラはそれを使用して `OrElse` 句からコードを生成できます。 クラスまたは構造体を定義し、その型の変数を `OrElse` 句で使用する場合は、そのクラスまたは構造体で `IsTrue` を定義する必要があります。  
   
- The compiler considers the `IsTrue` and `IsFalse` operators as a *matched pair*. This means that if you define one of them, you must also define the other one.  
+ コンパイラは、`IsTrue` と `IsFalse` 演算子を一致する*ペア*と見なします。 これは、そのいずれかを定義する場合は、もう一方も定義する必要があることを意味します。  
   
-## <a name="compiler-use-of-istrue"></a>Compiler Use of IsTrue  
- When you have defined a class or structure, you can use a variable of that type in a `For`, `If`, `Else If`, or `While` statement, or in a `When` clause. If you do this, the compiler requires an operator that converts your type into a `Boolean` value so it can test a condition. It searches for a suitable operator in the following order:  
+## <a name="compiler-use-of-istrue"></a>IsTrue のコンパイラの使用  
+ クラスまたは構造体を定義したら、その型の変数を `For`、`If`、`Else If`、または `While` ステートメントで使用することも、`When` 句で使用することもできます。 これを行う場合、コンパイラは、条件をテストできるように、型を `Boolean` 値に変換する演算子を必要とします。 適切な演算子を次の順序で検索します。  
   
-1. A widening conversion operator from your class or structure to `Boolean`.  
+1. クラスまたは構造体から `Boolean`への拡大変換演算子。  
   
-2. A widening conversion operator from your class or structure to `Boolean?`.  
+2. クラスまたは構造体から `Boolean?`への拡大変換演算子。  
   
-3. The `IsTrue` operator on your class or structure.  
+3. クラスまたは構造体の `IsTrue` 演算子。  
   
-4. A narrowing conversion to `Boolean?` that does not involve a conversion from `Boolean` to `Boolean?`.  
+4. `Boolean` から `Boolean?`への変換が関係しない `Boolean?` への縮小変換。  
   
-5. A narrowing conversion operator from your class or structure to `Boolean`.  
+5. クラスまたは構造体から `Boolean`への縮小変換演算子。  
   
- If you have not defined any conversion to `Boolean` or an `IsTrue` operator, the compiler signals an error.  
+ `Boolean` または `IsTrue` 演算子への変換が定義されていない場合、コンパイラはエラーを通知します。  
   
 > [!NOTE]
-> The `IsTrue` operator can be *overloaded*, which means that a class or structure can redefine its behavior when its operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+> `IsTrue` 演算子は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 コードでこのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- The following code example defines the outline of a structure that includes definitions for the `IsFalse` and `IsTrue` operators.  
+ 次のコード例では、`IsFalse` 演算子と `IsTrue` 演算子の定義を含む構造体のアウトラインを定義します。  
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IsFalse 演算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)
 - [方法 : 演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)

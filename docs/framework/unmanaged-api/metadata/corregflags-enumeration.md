@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450112"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags 列挙型
-Provides flag values used for registration when installing a module or composite image.  
+モジュールまたは複合イメージをインストールするときに登録に使用されるフラグ値を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,19 +39,19 @@ typedef enum
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`regNoCopy`|Specifies that files should not be copied into the destination.|  
-|`regConfig`|Specifies that the module or composite is a configuration.|  
-|`regHasRefs`|Specifies that the module or composite has class references.|  
+|`regNoCopy`|転送先にファイルをコピーしないことを指定します。|  
+|`regConfig`|モジュールまたは複合が構成であることを指定します。|  
+|`regHasRefs`|モジュールまたは複合にクラス参照があることを指定します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

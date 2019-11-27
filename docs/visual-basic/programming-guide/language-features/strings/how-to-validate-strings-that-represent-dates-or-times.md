@@ -13,18 +13,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344356"
 ---
 # <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>方法: 日付または時刻を表す文字列を検証する (Visual Basic)
-The following code example sets a `Boolean` value that indicates whether a string represents a valid date or time.  
+次のコード例では、文字列が有効な日付または時刻を表すかどうかを示す `Boolean` 値を設定します。  
   
 ## <a name="example"></a>例  
  [!code-vb[VbVbcnRegEx#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#2)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- Replace `("01/01/03")` and `"9:30 PM"` with the date and time you want to validate. You can replace the string with another hard-coded string, with a `String` variable, or with a method that returns a string, such as `InputBox`.  
+ `("01/01/03")` と `"9:30 PM"` を、検証する日付と時刻に置き換えます。 文字列を別のハードコーディングされた文字列に置き換えたり、`String` 変数を使用したり、文字列を返すメソッド (`InputBox`など) に置き換えることができます。  
   
-## <a name="robust-programming"></a>信頼性の高いプログラミング  
- Use this method to validate the string before trying to convert the `String` to a `DateTime` variable. By checking the date or time first, you can avoid generating an exception at run time.  
+## <a name="robust-programming"></a>堅牢性の高いプログラミング  
+ `String` を `DateTime` 変数に変換する前に、このメソッドを使用して文字列を検証します。 最初に日付または時刻を確認することで、実行時に例外が生成されないようにすることができます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.Information.IsDate%2A>
 - <xref:Microsoft.VisualBasic.Interaction.InputBox%2A>

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442656"
 ---
 # <a name="imetadatatables2getmetadatastorage-method"></a>IMetaDataTables2::GetMetaDataStorage メソッド
-Gets the size and contents of the metadata stored in the specified section.  
+指定したセクションに格納されているメタデータのサイズと内容を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,21 +36,21 @@ HRESULT GetMetaDataStorage (
   
 ## <a name="parameters"></a>パラメーター  
  `ppvMd`  
- [in, out] A pointer to a metadata section.  
+ [入力、出力]メタデータセクションへのポインター。  
   
  `pcbMd`  
- [out] The size of the metadata stream.  
+ 入出力メタデータストリームのサイズ。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
 - [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)

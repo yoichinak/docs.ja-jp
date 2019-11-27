@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447226"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope メソッド
-Retrieves the scope of a given type.  
+指定された型のスコープを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,24 +37,24 @@ HRESULT GetResolutionScope(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of the assembly.  
+ アセンブリの ID。  
   
  `FileToken`  
- File that is in need of a reference.  
+ 参照が必要なファイル。  
   
  `TargetFile`  
- Token of file that type is defined in, usually retrieved with [ImportFile Method](importfile-method.md).  
+ 型が定義されているファイルのトークン。通常は、 [Importfile メソッド](importfile-method.md)を使用して取得されます。  
   
  `pScope`  
- Receives the assembly or module reference.  
+ アセンブリまたはモジュール参照を受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h.  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

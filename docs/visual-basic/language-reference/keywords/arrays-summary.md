@@ -14,14 +14,14 @@ ms.locfileid: "74349943"
 # <a name="arrays-summary-visual-basic"></a>配列の概要 (Visual Basic)
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
   
-|操作|言語要素|  
+|操作|Language 要素|  
 |------------|----------------------|  
 |配列かどうかの確認|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|  
-|配列の宣言と初期化|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md), [Private](../../../visual-basic/language-reference/modifiers/private.md), [Public](../../../visual-basic/language-reference/modifiers/public.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
-|配列の上限の確認|<xref:Microsoft.VisualBasic.Information.LBound%2A>、 <xref:Microsoft.VisualBasic.Information.UBound%2A>|  
-|配列の再初期化|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
+|配列の宣言と初期化|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)、 [Private](../../../visual-basic/language-reference/modifiers/private.md)、 [Public](../../../visual-basic/language-reference/modifiers/public.md)、 [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
+|配列の上限の確認|<xref:Microsoft.VisualBasic.Information.LBound%2A>, <xref:Microsoft.VisualBasic.Information.UBound%2A>|  
+|配列の再初期化|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md)、 [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -40,40 +40,40 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
  `td`  
- [in] A TypeDef token for the type whose method implementations to enumerate.  
+ から列挙するメソッド実装を持つ型の TypeDef トークン。  
   
  `rMethodBody`  
- [out] The array to store the MethodBody tokens.  
+ 入出力MethodBody トークンを格納する配列。  
   
  `rMethodDecl`  
- [out] The array to store the MethodDeclaration tokens.  
+ 入出力MethodDeclaration トークンを格納する配列。  
   
  `cMax`  
- [in] The maximum size of the `rMethodBody` and `rMethodDecl` arrays.  
+ から`rMethodBody` および `rMethodDecl` 配列の最大サイズ。  
   
  `pcTokens`  
- [in] The actual number of methods returned in `rMethodBody` and `rMethodDecl`.  
+ から`rMethodBody` および `rMethodDecl`で返されるメソッドの実際の数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` returned successfully.|  
-|`S_FALSE`|There are no method tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethodImpls` が正常に返されました。|  
+|`S_FALSE`|列挙するメソッドトークンがありません。 この場合、`pcTokens` は0になります。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

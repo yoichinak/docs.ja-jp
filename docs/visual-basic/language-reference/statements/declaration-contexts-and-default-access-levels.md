@@ -17,41 +17,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354103"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>宣言コンテキストと既定のアクセス レベル (Visual Basic)
-This topic describes which Visual Basic types can be declared within which other types, and what their access levels default to if not specified.  
+このトピックでは、他の型を使用して宣言できる Visual Basic 型と、指定されていない場合のアクセスレベルの既定値について説明します。  
   
-## <a name="declaration-context-levels"></a>Declaration Context Levels  
- The *declaration context* of a programming element is the region of code in which it is declared. This is often another programming element, which is then called the *containing element*.  
+## <a name="declaration-context-levels"></a>宣言コンテキストレベル  
+ プログラミング要素の*宣言コンテキスト*は、そのプログラミング要素が宣言されているコードの領域です。 多くの場合、これは別のプログラミング要素であり、それを含んでいる*要素*と呼びます。  
   
- The levels for declaration contexts are the following:  
+ 宣言コンテキストのレベルは次のとおりです。  
   
-- *Namespace level* — within a source file or namespace but not within a class, structure, module, or interface  
+- *名前空間レベル*-ソースファイルまたは名前空間内で、クラス、構造体、モジュール、またはインターフェイス内ではありません。  
   
-- *Module level* — within a class, structure, module, or interface but not within a procedure or block  
+- *モジュールレベル*: クラス、構造体、モジュール、またはインターフェイス内で、プロシージャまたはブロック内には含まれません。  
   
-- *Procedure level* — within a procedure or block (such as `If` or `For`)  
+- プロシージャ*レベル*-プロシージャまたはブロック内 (`If` や `For`など)  
   
- The following table shows the default access levels for various declared programming elements, depending on their declaration contexts.  
+ 宣言コンテキストに応じて、宣言されたさまざまなプログラミング要素の既定のアクセスレベルを次の表に示します。  
   
-|宣言された要素|Namespace level|Module level|Procedure level|  
+|宣言された要素|名前空間レベル|モジュールレベル|プロシージャレベル|  
 |----------------------|---------------------|------------------|---------------------|  
-|Variable ([Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md))|使用できません|`Private` (`Public` in `Structure`, not allowed in `Interface`)|`Public`|  
-|Constant ([Const Statement](../../../visual-basic/language-reference/statements/const-statement.md))|使用できません|`Private` (`Public` in `Structure`, not allowed in `Interface`)|`Public`|  
-|Enumeration ([Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|使用できません|  
-|Class ([Class Statement](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|使用できません|  
-|Structure ([Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|使用できません|  
-|Module ([Module Statement](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|使用できません|使用できません|  
-|Interface ([Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|使用できません|  
-|Procedure ([Function Statement](../../../visual-basic/language-reference/statements/function-statement.md), [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md))|使用できません|`Public`|使用できません|  
-|External reference ([Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md))|使用できません|`Public` (not allowed in `Interface`)|使用できません|  
-|Operator ([Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md))|使用できません|`Public` (not allowed in `Interface` or `Module`)|使用できません|  
-|Property ([Property Statement](../../../visual-basic/language-reference/statements/property-statement.md))|使用できません|`Public`|使用できません|  
-|Default property ([Default](../../../visual-basic/language-reference/modifiers/default.md))|使用できません|`Public` (not allowed in `Module`)|使用できません|  
-|Event ([Event Statement](../../../visual-basic/language-reference/statements/event-statement.md))|使用できません|`Public`|使用できません|  
-|Delegate ([Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|使用できません|  
+|Variable ([Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md))|使用不可|`Private` (`Structure`で`Public`、`Interface`では使用できません)|`Public`|  
+|定数 ([Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md))|使用不可|`Private` (`Structure`で`Public`、`Interface`では使用できません)|`Public`|  
+|Enumeration ([Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|使用不可|  
+|Class ([Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|使用不可|  
+|Structure ([Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|使用不可|  
+|Module ([モジュールステートメント](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|使用不可|使用不可|  
+|Interface ([Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|使用不可|  
+|プロシージャ ([Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)、 [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md))|使用不可|`Public`|使用不可|  
+|外部参照 ([Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md))|使用不可|`Public` (`Interface`では許可されていません)|使用不可|  
+|Operator ([Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md))|使用不可|`Public` (`Interface` または `Module`では許可されていません)|使用不可|  
+|Property ([Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md))|使用不可|`Public`|使用不可|  
+|Default プロパティ ([既定値](../../../visual-basic/language-reference/modifiers/default.md))|使用不可|`Public` (`Module`では許可されていません)|使用不可|  
+|Event ([イベントステートメント](../../../visual-basic/language-reference/statements/event-statement.md))|使用不可|`Public`|使用不可|  
+|Delegate ([Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|使用不可|  
   
- For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ 詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)

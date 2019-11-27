@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445633"
 ---
 # <a name="linkresource-method"></a>LinkResource メソッド
-Links in a resource.  
+リソース内のリンク。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,27 +38,27 @@ HRESULT LinkResource(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of the assembly.  
+ アセンブリの ID。  
   
  `pszFileName`  
  ファイルの名前。  
   
  `pszNewLocation`  
- Optional new file name. If non-NULL, `pszFileName` will be copied to pszNewLocation.  
+ 省略可能な新しいファイル名。 NULL 以外の場合、`pszFileName` は pszNewLocation にコピーされます。  
   
  `pszResourceName`  
  リソースの名前。  
   
  `dwFlags`  
- Accessibility flags such as `mrPublic` and `mrPrivate`. This parameter may be passed to [DefineManifestResource Method](../metadata/imetadataassemblyemit-definemanifestresource-method.md).  
+ `mrPublic` や `mrPrivate`などのアクセシビリティフラグ。 このパラメーターは、 [DefineManifestResource メソッド](../metadata/imetadataassemblyemit-definemanifestresource-method.md)に渡すことができます。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h.  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

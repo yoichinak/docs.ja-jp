@@ -18,58 +18,58 @@ ms.locfileid: "74345976"
 ---
 # <a name="lambda-expressions-visual-basic"></a>ラムダ式 (Visual Basic)
 
-A *lambda expression* is a function or subroutine without a name that can be used wherever a delegate is valid. Lambda expressions can be functions or subroutines and can be single-line or multi-line. You can pass values from the current scope to a lambda expression.
+*ラムダ式*は、デリゲートが有効な場所であれば使用できる名前のない関数またはサブルーチンです。 ラムダ式は関数またはサブルーチンにすることができ、単一行または複数行にすることができます。 現在のスコープからラムダ式に値を渡すことができます。
 
 > [!NOTE]
-> The `RemoveHandler` statement is an exception. You cannot pass a lambda expression in for the delegate parameter of `RemoveHandler`.
+> `RemoveHandler` ステートメントは例外です。 `RemoveHandler`のデリゲートパラメーターに対してラムダ式を渡すことはできません。
 
-You create lambda expressions by using the `Function` or `Sub` keyword, just as you create a standard function or subroutine. However, lambda expressions are included in a statement.
+ラムダ式を作成するには、標準の関数またはサブルーチンを作成する場合と同様に、`Function` または `Sub` キーワードを使用します。 ただし、ラムダ式はステートメントに含まれています。
 
-The following example is a lambda expression that increments its argument and returns the value. The example shows both the single-line and multi-line lambda expression syntax for a function.
+次の例は、引数をインクリメントして値を返すラムダ式です。 この例では、関数の単一行と複数行のラムダ式の構文の両方を示しています。
 
 [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]
 
-The following example is a lambda expression that writes a value to the console. The example shows both the single-line and multi-line lambda expression syntax for a subroutine.
+次の例は、値をコンソールに書き込むラムダ式です。 この例では、サブルーチンの単一行と複数行のラムダ式の構文の両方を示しています。
 
 [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]
 
-Notice that in the previous examples the lambda expressions are assigned to a variable name. Whenever you refer to the variable, you invoke the lambda expression. You can also declare and invoke a lambda expression at the same time, as shown in the following example.
+前の例では、ラムダ式は変数名に割り当てられていることに注意してください。 変数を参照するときは常に、ラムダ式を呼び出します。 次の例に示すように、同時にラムダ式を宣言して呼び出すこともできます。
 
 [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]
 
-A lambda expression can be returned as the value of a function call (as is shown in the example in the [Context](#context) section later in this topic), or passed in as an argument to a parameter that takes a delegate type, as shown in the following example.
+ラムダ式は、次の例に示すように、関数呼び出しの値として返すことができます (このトピックで後述する[コンテキスト](#context)セクションの例に示すように)。または、デリゲート型を受け取るパラメーターに引数として渡されます。
 
 [!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]
 
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文
 
-The syntax of a lambda expression resembles that of a standard function or subroutine. The differences are as follows:
+ラムダ式の構文は、標準の関数またはサブルーチンの構文に似ています。 相違点は、次のとおりです。
 
-- A lambda expression does not have a name.
+- ラムダ式に名前がありません。
 
-- Lambda expressions cannot have modifiers, such as `Overloads` or `Overrides`.
+- ラムダ式には、`Overloads` や `Overrides`などの修飾子を含めることはできません。
 
-- Single-line lambda functions do not use an `As` clause to designate the return type. Instead, the type is inferred from the value that the body of the lambda expression evaluates to. For example, if the body of the lambda expression is `cust.City = "London"`, its return type is `Boolean`.
+- 単一行のラムダ関数は、戻り値の型を指定するために `As` 句を使用しません。 代わりに、ラムダ式の本体が評価される値から型が推論されます。 たとえば、ラムダ式の本体が `cust.City = "London"`場合、その戻り値の型は `Boolean`になります。
 
-- In multi-line lambda functions, you can either specify a return type by using an `As` clause, or omit the `As` clause so that the return type is inferred. When the `As` clause is omitted for a multi-line lambda function, the return type is inferred to be the dominant type from all the `Return` statements in the multi-line lambda function. The *dominant type* is a unique type that all other types can widen to. If this unique type cannot be determined, the dominant type is the unique type that all other types in the array can narrow to. これらの一意の型をどちらも特定できない場合は、 `Object`が最も優先度の高い型になります。 In this case, if `Option Strict` is set to `On`, a compiler error occurs.
+- 複数行のラムダ関数では、`As` 句を使用して戻り値の型を指定することも、戻り値の型が推論されるように `As` 句を省略することもできます。 複数行のラムダ関数に対して `As` 句を省略した場合、戻り値の型は、複数行のラムダ関数のすべての `Return` ステートメントから最も優先的な型になります。 最も優先される*型*は、他のすべての型の幅を広げることができる一意の型です。 この一意の型を特定できない場合、最も優先される型は、配列内の他のすべての型を絞り込むことができる一意の型になります。 これらの一意の型をどちらも特定できない場合は、 `Object`が最も優先度の高い型になります。 この場合、`Option Strict` が `On`に設定されていると、コンパイラエラーが発生します。
 
-     For example, if the expressions supplied to the `Return` statement contain values of type `Integer`, `Long`, and `Double`, the resulting array is of type `Double`. Both `Integer` and `Long` widen to `Double` and only `Double`. そのため、 `Double` が最も優先度の高い型になります。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
+     たとえば、`Return` ステートメントに指定された式に `Integer`、`Long`、および `Double`型の値が含まれている場合、結果の配列の型は `Double`になります。 `Integer` と `Long` はどちらも `Double` に広げ、`Double`のみです。 そのため、 `Double` が最も優先度の高い型になります。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
 
-- The body of a single-line function must be an expression that returns a value, not a statement. There is no `Return` statement for single-line functions. The value returned by the single-line function is the value of the expression in the body of the function.
+- 単一行関数の本体は、ステートメントではなく、値を返す式である必要があります。 単一行関数の `Return` ステートメントはありません。 単一行関数によって返される値は、関数本体の式の値です。
 
-- The body of a single-line subroutine must be single-line statement.
+- 単一行のサブルーチンの本体は単一行ステートメントである必要があります。
 
-- Single-line functions and subroutines do not include an `End Function` or `End Sub` statement.
+- 単一行関数とサブルーチンには、`End Function` または `End Sub` ステートメントは含まれません。
 
-- You can specify the data type of a lambda expression parameter by using the `As` keyword, or the data type of the parameter can be inferred. Either all parameters must have specified data types or all must be inferred.
+- ラムダ式のパラメーターのデータ型は、`As` キーワードを使用して指定できます。また、パラメーターのデータ型を推論することもできます。 すべてのパラメーターのデータ型が指定されているか、すべてのパラメーターが推論される必要があります。
 
-- `Optional` and `Paramarray` parameters are not permitted.
+- `Optional` パラメーターと `Paramarray` パラメーターは使用できません。
 
-- Generic parameters are not permitted.
+- ジェネリックパラメーターは使用できません。
 
 ## <a name="async-lambdas"></a>非同期ラムダ
 
-You can easily create lambda expressions and statements that incorporate asynchronous processing by using the [Async](../../../../visual-basic/language-reference/modifiers/async.md) and [Await Operator](../../../../visual-basic/language-reference/operators/await-operator.md) keywords. たとえば、次に示す Windows フォーム例には、非同期メソッド `ExampleMethodAsync`を呼び出して待機するイベント ハンドラーが含まれています。
+[Async](../../../../visual-basic/language-reference/modifiers/async.md)および[Await 演算子](../../../../visual-basic/language-reference/operators/await-operator.md)キーワードを使用して、非同期処理を組み込むラムダ式およびステートメントを簡単に作成できます。 たとえば、次に示す Windows フォーム例には、非同期メソッド `ExampleMethodAsync`を呼び出して待機するイベント ハンドラーが含まれています。
 
 ```vb
 Public Class Form1
@@ -88,7 +88,7 @@ Public Class Form1
 End Class
 ```
 
-You can add the same event handler by using an async lambda in an [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md). 次の例に示すように、このハンドラーを追加するには、ラムダ パラメーター リストの前に `Async` 修飾子を追加します。
+[AddHandler ステートメント](../../../../visual-basic/language-reference/statements/addhandler-statement.md)で非同期ラムダを使用して、同じイベントハンドラーを追加できます。 次の例に示すように、このハンドラーを追加するには、ラムダ パラメーター リストの前に `Async` 修飾子を追加します。
 
 ```vb
 Public Class Form1
@@ -110,53 +110,53 @@ Public Class Form1
 End Class
 ```
 
-For more information about how to create and use async methods, see [Asynchronous Programming with Async and Await](../../../../visual-basic/programming-guide/concepts/async/index.md).
+非同期メソッドを作成して使用する方法の詳細については、「 [async および Await を使用した非同期プログラミング](../../../../visual-basic/programming-guide/concepts/async/index.md)」を参照してください。
 
-## <a name="context"></a>コンテキスト
+## <a name="context"></a>Context
 
-A lambda expression shares its context with the scope within which it is defined. It has the same access rights as any code written in the containing scope. This includes access to member variables, functions and subs, `Me`, and parameters and local variables in the containing scope.
+ラムダ式は、そのコンテキストを定義されているスコープと共有します。 コンテナースコープで記述されたコードと同じアクセス権を持っています。 これには、コンテナースコープ内のメンバー変数、関数、および sub、`Me`、およびパラメーターとローカル変数へのアクセスが含まれます。
 
-Access to local variables and parameters in the containing scope can extend beyond the lifetime of that scope. As long as a delegate referring to a lambda expression is not available to garbage collection, access to the variables in the original environment is retained. In the following example, variable `target` is local to `makeTheGame`, the method in which the lambda expression `playTheGame` is defined. Note that the returned lambda expression, assigned to `takeAGuess` in `Main`, still has access to the local variable `target`.
+外側のスコープ内のローカル変数とパラメーターへのアクセスは、そのスコープの有効期間を超えて拡張できます。 ラムダ式を参照するデリゲートがガベージコレクションに使用できない限り、元の環境の変数へのアクセスは保持されます。 次の例では、変数 `target` が `makeTheGame`に対してローカルであり、ラムダ式 `playTheGame` が定義されているメソッドが定義されています。 `Main`の `takeAGuess` に割り当てられたラムダ式が、ローカル変数 `target`に引き続きアクセスできることに注意してください。
 
 [!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]
 
-The following example demonstrates the wide range of access rights of the nested lambda expression. When the returned lambda expression is executed from `Main` as `aDel`, it accesses these elements:
+次の例は、入れ子になったラムダ式の幅広いアクセス権を示しています。 返されたラムダ式が `aDel`として `Main` から実行されると、次の要素にアクセスします。
 
-- A field of the class in which it is defined: `aField`
+- 定義されているクラスのフィールド: `aField`
 
-- A property of the class in which it is defined: `aProp`
+- 定義されているクラスのプロパティ: `aProp`
 
-- A parameter of method `functionWithNestedLambda`, in which it is defined: `level1`
+- 定義されているメソッド `functionWithNestedLambda`のパラメーター: `level1`
 
-- A local variable of `functionWithNestedLambda`: `localVar`
+- `functionWithNestedLambda`のローカル変数: `localVar`
 
-- A parameter of the lambda expression in which it is nested: `level2`
+- 入れ子になっているラムダ式のパラメーター: `level2`
 
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]
 
-## <a name="converting-to-a-delegate-type"></a>Converting to a Delegate Type
+## <a name="converting-to-a-delegate-type"></a>デリゲート型への変換
 
-A lambda expression can be implicitly converted to a compatible delegate type. For information about the general requirements for compatibility, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md). For example, the following code example shows a lambda expression that implicitly converts to `Func(Of Integer, Boolean)` or a matching delegate signature.
+ラムダ式は、互換性のあるデリゲート型に暗黙的に変換できます。 互換性に関する一般的な要件の詳細については、「厳密でない[デリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」を参照してください。 たとえば、次のコード例は、`Func(Of Integer, Boolean)` または一致するデリゲートシグネチャに暗黙的に変換するラムダ式を示しています。
 
 [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]
 
-The following code example shows a lambda expression that implicitly converts to `Sub(Of Double, String, Double)` or a matching delegate signature.
+次のコード例は、`Sub(Of Double, String, Double)` または一致するデリゲートシグネチャに暗黙的に変換するラムダ式を示しています。
 
 [!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]
 
-When you assign lambda expressions to delegates or pass them as arguments to procedures, you can specify the parameter names but omit their data types, letting the types be taken from the delegate.
+デリゲートにラムダ式を割り当てたり、プロシージャに引数として渡したりする場合は、パラメーター名を指定し、データ型を省略して、デリゲートから型を取得することができます。
 
 ## <a name="examples"></a>使用例
 
-- The following example defines a lambda expression that returns `True` if the nullable argument has an assigned value, and `False` if its value is `Nothing`.
+- 次の例では、null 許容型の引数に値が割り当てられている場合に `True` を返すラムダ式を定義し、その値が `Nothing`場合は `False` します。
 
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]
 
-- The following example defines a lambda expression that returns the index of the last element in an array.
+- 次の例では、配列内の最後の要素のインデックスを返すラムダ式を定義します。
 
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

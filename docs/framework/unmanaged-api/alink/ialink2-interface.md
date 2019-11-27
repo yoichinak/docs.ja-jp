@@ -14,7 +14,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431372"
 ---
 # <a name="ialink2-interface"></a>IALink2 インターフェイス
-Complements the [IALink Interface](ialink-interface.md) by declaring methods that operate on newer metadata interfaces such as [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md). Additionally, IALink2 declares methods that provide additional usage flexibility over the original IALink interfaces.  
+[IMetaDataEmit2 インターフェイス](../metadata/imetadataemit2-interface.md)などの新しいメタデータインターフェイスを操作するメソッドを宣言して、 [ialink インターフェイス](ialink-interface.md)を補完します。 また、IALink2 は、元の IALink インターフェイスよりも追加の使用の柔軟性を提供するメソッドを宣言します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [AddFile2 メソッド](addfile2-method.md)  
@@ -39,7 +39,7 @@ Complements the [IALink Interface](ialink-interface.md) by declaring methods tha
   
  [SetPEKind メソッド](setpekind-method.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ALink API](index.md)
 - [IALink インターフェイス](ialink-interface.md)

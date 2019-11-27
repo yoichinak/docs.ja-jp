@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336108"
 ---
-# <a name="how-to-load-xml-from-a-file-visual-basic"></a>How to: Load XML from a File (Visual Basic)
+# <a name="how-to-load-xml-from-a-file-visual-basic"></a>方法: ファイルから XML を読み込む (Visual Basic)
 
 このトピックでは、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> メソッドを使用して URI から XML を読み込む方法について説明します。
 
@@ -50,6 +50,6 @@ Console.WriteLine(booksFromFile)
 </Catalog>
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML の解析 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

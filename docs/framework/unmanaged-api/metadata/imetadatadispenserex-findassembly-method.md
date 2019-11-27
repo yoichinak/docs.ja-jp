@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442284"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>IMetaDataDispenserEx::FindAssembly メソッド
-このメソッドは実装されていません。 If called, it returns E_NOTIMPL.  
+このメソッドは実装されていません。 呼び出された場合は E_NOTIMPL を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,36 +41,36 @@ HRESULT FindAssembly(
   
 ## <a name="parameters"></a>パラメーター  
  `szAppBase`  
- [in] Not used.  
+ から使用しません。  
   
  `szPrivateBin`  
- [in] Not used.  
+ から使用しません。  
   
  `szGlobalBin`  
- [in] Not used.  
+ から使用しません。  
   
  `szAssemblyName`  
- [in] The assembly to be found.  
+ から検索するアセンブリ。  
   
  `szName`  
- [out] The simple name of the assembly.  
+ 入出力アセンブリの簡易名。  
   
  `cchName`  
- [in] The size, in bytes, of `szName`.  
+ から`szName`のサイズ (バイト単位)。  
   
  `pcName`  
- [out] The number of characters actually returned in `szName`.  
+ 入出力`szName`に実際に返された文字数。  
   
-## <a name="requirements"></a>［要件］  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataDispenserEx インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [IMetaDataDispenser インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

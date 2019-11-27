@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437787"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>IMetaDataImport::FindTypeRef メソッド
-Gets a pointer to the TypeRef token for the <xref:System.Type> reference that is in the specified scope and that has the specified name.  
+指定したスコープ内にあり、指定した名前を持つ <xref:System.Type> 参照の TypeRef トークンへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,24 +37,24 @@ HRESULT FindTypeRef (
   
 ## <a name="parameters"></a>パラメーター  
  `tkResolutionScope`  
- [in] A ModuleRef, AssemblyRef, or TypeRef token that specifies the module, assembly, or type, respectively, in which the type reference is defined.  
+ から型参照が定義されているモジュール、アセンブリ、または型をそれぞれ指定する ModuleRef、AssemblyRef、または TypeRef トークン。  
   
  `szName`  
- [in] The name of the type reference to search for.  
+ から検索する型参照の名前。  
   
  `ptr`  
- [out] A pointer to the matching TypeRef token.  
+ 入出力一致する TypeRef トークンへのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

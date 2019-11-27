@@ -36,19 +36,19 @@ Option Compare { Binary | Text }
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`Binary`|省略可能です。 文字列比較は、文字の内部バイナリ表現から派生した並べ替え順序に基づきます。<br /><br /> この種類の比較は、文字列にテキストとして解釈されない文字を含めることができる場合に特に便利です。 この場合、大文字と小文字の区別など、アルファベットの等値比較にバイアスをかけないことをお勧めします。|  
-|`Text`|省略可能です。 文字列比較は、システムのロケールによって決まる、大文字と小文字を区別しないテキストの並べ替え順序に基づきます。<br /><br /> この種類の比較は、文字列にすべてのテキスト文字が含まれており、大文字と小文字を区別しないことや類縁の文字など、アルファベットの等値を考慮して文字列を比較する場合に便利です。 たとえば、`A` と `a` は等しく、`Ä` と `ä` は `B` と `b` よりも前に位置すると見なされるようにできます。|  
+|`Binary`|省略可。 文字列比較は、文字の内部バイナリ表現から派生した並べ替え順序に基づきます。<br /><br /> この種類の比較は、文字列にテキストとして解釈されない文字を含めることができる場合に特に便利です。 この場合、大文字と小文字の区別など、アルファベットの等値比較にバイアスをかけないことをお勧めします。|  
+|`Text`|省略可。 文字列比較は、システムのロケールによって決まる、大文字と小文字を区別しないテキストの並べ替え順序に基づきます。<br /><br /> この種類の比較は、文字列にすべてのテキスト文字が含まれており、大文字と小文字を区別しないことや類縁の文字など、アルファベットの等値を考慮して文字列を比較する場合に便利です。 たとえば、`A` と `a` は等しく、`Ä` と `ä` は `B` と `b` よりも前に位置すると見なされるようにできます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  使用した場合、`Option Compare` ステートメントはファイル内で他のソース コード ステートメントよりも前に記述する必要があります。  
   
  `Option Compare` ステートメントでは、文字列の比較方法 (`Binary` または `Text`) を指定します。  既定のテキスト比較方法は `Binary` です。  
   
  `Binary` 比較では、各文字列の各文字の Unicode 数値が比較されます。 `Text` 比較では、現在のカルチャでの語彙的意味に基づいて各 Unicode 文字が比較されます。  
   
- Microsoft Windows では、並べ替え順序はコード ページによって決まります。 詳細については、「[コード ページ](/cpp/c-runtime-library/code-pages)」を参照してください。  
+ Microsoft Windows では、並べ替え順序はコード ページによって決まります。 詳細については、「[コード ページ](/cpp/c-runtime-library/code-pages)」をご覧ください。  
   
  次の例では、英語/ヨーロッパ言語のコード ページ (ANSI 1252) の文字が、`Option Compare Binary` を使用して並べ替えられ、一般的なバイナリ並べ替え順序が生成されます。  
   
@@ -59,7 +59,7 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Option Compare ステートメントが指定されていない場合  
- If the source code does not contain an `Option Compare` statement, the **Option Compare** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. If you use the command-line compiler, the setting specified by the [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) compiler option is used.  
+ ソースコードに `Option Compare` ステートメントが含まれていない場合、[コンパイル] ページの [**オプションの比較]** 設定[(プロジェクトデザイナー (Visual Basic))](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)が使用されます。 コマンドラインコンパイラを使用する場合は、 [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)コンパイラオプションで指定された設定が使用されます。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -69,13 +69,13 @@ Option Compare { Binary | Text }
   
 2. **[コンパイル]** タブをクリックします。  
   
-3. Set the value in the **Option Compare** box.  
+3. **[オプションの比較]** ボックスで値を設定します。  
   
- When you create a project, the **Option Compare** setting on the **Compile** tab is set to the **Option Compare** setting in the **Options** dialog box. To change this setting, on the **Tools** menu, click **Options**. **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、 **[VISUAL BASIC の既定値]** をクリックします。 The initial default setting in **VB Defaults** is **Binary**.  
+ プロジェクトを作成すると、 **[コンパイル]** タブの **[option compare]** 設定が **[オプション]** ダイアログボックスの **[比較]** 設定に設定されます。 この設定を変更するには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、 **[VISUAL BASIC の既定値]** をクリックします。 既定では、 **VB**の既定の設定は**バイナリ**です。  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>コマンド ラインで Option Compare を設定するには  
   
-- Include the [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) compiler option in the **vbc** command.  
+- **Vbc.exe**コマンドに[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)コンパイラオプションを含めます。  
   
 ## <a name="example"></a>例  
  次の例では、`Option Compare` ステートメントを使用して、既定の文字列比較方法としてバイナリ比較を設定します。 このコードを使用するには、`Option Compare Binary` ステートメントのコメントを解除し、ソース ファイルの先頭に配置します。  
@@ -87,7 +87,7 @@ Option Compare { Binary | Text }
   
  [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>
@@ -96,7 +96,7 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic の比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Like 演算子](../../../visual-basic/language-reference/operators/like-operator.md)
 - [文字列関数](../../../visual-basic/language-reference/functions/string-functions.md)
 - [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)

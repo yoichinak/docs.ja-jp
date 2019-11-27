@@ -13,9 +13,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343733"
 ---
-# <a name="end-keyword-statement-visual-basic"></a>End \<keyword> Statement (Visual Basic)
+# <a name="end-keyword-statement-visual-basic"></a>End \<keyword > ステートメント (Visual Basic)
 
-When followed by an additional keyword, terminates the definition of the statement block introduced by that keyword.
+その後に追加のキーワードが続くと、は、そのキーワードによって導入されたステートメントブロックの定義を終了します。
 
 ## <a name="syntax"></a>構文
 
@@ -46,36 +46,36 @@ End With
   
 ## <a name="parts"></a>指定項目
 
-|パーツ|説明|
+|要素|説明|
 |---|---|
-|`End`|必須です。 Terminates the definition of the programming element.|
-|`AddHandler`|Required to terminate an `AddHandler` accessor begun by a matching `AddHandler` statement in a custom [Event Statement](event-statement.md).|
-|`Class`|Required to terminate a class definition begun by a matching [Class Statement](class-statement.md).|
-|`Enum`|Required to terminate an enumeration definition begun by a matching [Enum Statement](enum-statement.md).|
-|`Event`|Required to terminate a `Custom` event definition begun by a matching [Event Statement](event-statement.md).|  
-|`Function`|Required to terminate a `Function` procedure definition begun by a matching [Function Statement](function-statement.md). If execution encounters an `End Function` statement, control returns to the calling code.|
-|`Get`|Required to terminate a `Property` procedure definition begun by a matching [Get Statement](get-statement.md). If execution encounters an `End Get` statement, control returns to the statement requesting the property's value.|
-|`If`|Required to terminate an `If`...`Then`...`Else` block definition begun by a matching `If` statement. See [If...Then...Else Statement](if-then-else-statement.md).|
-|`Interface`|Required to terminate an interface definition begun by a matching [Interface Statement](interface-statement.md).|
-|`Module`|Required to terminate a module definition begun by a matching [Module Statement](module-statement.md).|
-|`Namespace`|Required to terminate a namespace definition begun by a matching [Namespace Statement](namespace-statement.md).|
-|`Operator`|Required to terminate an operator definition begun by a matching [Operator Statement](operator-statement.md).|
-|`Property`|Required to terminate a property definition begun by a matching [Property Statement](property-statement.md).|
-|`RaiseEvent`|Required to terminate a `RaiseEvent` accessor begun by a matching `RaiseEvent` statement in a custom [Event Statement](event-statement.md).|
-|`RemoveHandler`|Required to terminate a `RemoveHandler` accessor begun by a matching `RemoveHandler` statement in a custom [Event Statement](event-statement.md).|
-|`Select`|Required to terminate a `Select`...`Case` block definition begun by a matching `Select` statement. See [Select...Case Statement](select-case-statement.md).  
-|`Set`|Required to terminate a `Property` procedure definition begun by a matching [Set Statement](set-statement.md). If execution encounters an `End Set` statement, control returns to the statement setting the property's value.  
-|`Structure`|Required to terminate a structure definition begun by a matching [Structure Statement](structure-statement.md).  
-|`Sub`|Required to terminate a `Sub` procedure definition begun by a matching [Sub Statement](sub-statement.md). If execution encounters an `End Sub` statement, control returns to the calling code.  
-|`SyncLock`|Required to terminate a `SyncLock` block definition begun by a matching `SyncLock` statement. See [SyncLock Statement](synclock-statement.md).  
-|`Try`|Required to terminate a `Try`...`Catch`...`Finally` block definition begun by a matching `Try` statement. See [Try...Catch...Finally Statement](try-catch-finally-statement.md).  
-|`While`|Required to terminate a `While` loop definition begun by a matching `While` statement. See [While...End While Statement](while-end-while-statement.md).  
-|`With`| Required to terminate a `With` block definition begun by a matching `With` statement. See [With...End With Statement](with-end-with-statement.md).  
+|`End`|必須。 プログラミング要素の定義を終了します。|
+|`AddHandler`|カスタム[イベントステートメント](event-statement.md)内の一致する `AddHandler` ステートメントによって開始された `AddHandler` アクセサーを終了するために必要です。|
+|`Class`|一致する[クラスステートメント](class-statement.md)によって開始されたクラス定義を終了するために必要です。|
+|`Enum`|一致する列挙[ステートメント](enum-statement.md)によって開始された列挙型定義を終了するために必要です。|
+|`Event`|一致する[イベントステートメント](event-statement.md)によって開始された `Custom` イベント定義を終了するために必要です。|  
+|`Function`|一致する[Function ステートメント](function-statement.md)によって開始された `Function` プロシージャ定義を終了するために必要です。 実行時に `End Function` ステートメントが発生すると、呼び出し元のコードに制御が戻ります。|
+|`Get`|一致する[Get ステートメント](get-statement.md)によって開始された `Property` プロシージャ定義を終了するために必要です。 実行時に `End Get` ステートメントが発生すると、プロパティの値を要求するステートメントに制御が戻ります。|
+|`If`|一致する `If` ステートメントによって開始された `If`...`Then``Else` ブロック定義を終了するために必要です。 参照してください.. [.そうしたら。。。Else ステートメント](if-then-else-statement.md)。|
+|`Interface`|一致する[インターフェイスステートメント](interface-statement.md)によって開始されたインターフェイス定義を終了するために必要です。|
+|`Module`|一致する[モジュールステートメント](module-statement.md)によって開始されたモジュール定義を終了するために必要です。|
+|`Namespace`|一致する[名前空間ステートメント](namespace-statement.md)で開始された名前空間定義を終了するために必要です。|
+|`Operator`|一致する[Operator ステートメント](operator-statement.md)によって開始された演算子定義を終了するために必要です。|
+|`Property`|一致する[プロパティステートメント](property-statement.md)によって開始されたプロパティ定義を終了するために必要です。|
+|`RaiseEvent`|カスタム[イベントステートメント](event-statement.md)内の一致する `RaiseEvent` ステートメントによって開始された `RaiseEvent` アクセサーを終了するために必要です。|
+|`RemoveHandler`|カスタム[イベントステートメント](event-statement.md)内の一致する `RemoveHandler` ステートメントによって開始された `RemoveHandler` アクセサーを終了するために必要です。|
+|`Select`|一致する `Select` ステートメントによって開始された `Select`...`Case` ブロック定義を終了するために必要です。 参照してください.. [.Case ステートメント](select-case-statement.md)。  
+|`Set`|一致する[Set ステートメント](set-statement.md)によって開始される `Property` プロシージャの定義を終了するために必要です。 実行時に `End Set` ステートメントが発生した場合、プロパティの値を設定するステートメントに制御が戻ります。  
+|`Structure`|一致する[構造ステートメント](structure-statement.md)によって開始された構造体定義を終了するために必要です。  
+|`Sub`|一致する[サブステートメント](sub-statement.md)によって開始された `Sub` プロシージャ定義を終了するために必要です。 実行時に `End Sub` ステートメントが発生すると、呼び出し元のコードに制御が戻ります。  
+|`SyncLock`|一致する `SyncLock` ステートメントによって開始された `SyncLock` ブロック定義を終了するために必要です。 「 [SyncLock ステートメント](synclock-statement.md)」を参照してください。  
+|`Try`|一致する `Try` ステートメントによって開始された `Try`...`Catch``Finally` ブロック定義を終了するために必要です。 [試してみる...キャッチ...Finally ステートメント](try-catch-finally-statement.md)。  
+|`While`|一致する `While` ステートメントによって開始された `While` ループ定義を終了するために必要です。 しばらくお待ちください.. [.End While ステートメント](while-end-while-statement.md)。  
+|`With`| 一致する `With` ステートメントによって開始された `With` ブロック定義を終了するために必要です。 参照[してください...End With ステートメント](with-end-with-statement.md)。  
 |||
   
 ## <a name="directives"></a>ディレクティブ
 
-When preceded by a number sign (`#`), the `End` keyword terminates a preprocessing block introduced by the corresponding directive.  
+先頭に番号記号 (`#`) がある場合、`End` キーワードは、対応するディレクティブによって導入された前処理ブロックを終了します。  
 
 ```vb
 #End ExternalSource
@@ -83,22 +83,22 @@ When preceded by a number sign (`#`), the `End` keyword terminates a preprocessi
 #End Region
 ```
 
-|パーツ|説明|
+|要素|説明|
 |---|---|
-|`#End`|必須です。 Terminates the definition of the preprocessing block.|
-|`ExternalSource`|Required to terminate an external source block begun by a matching [#ExternalSource Directive](../directives/externalsource-directive.md).|
-|`If`|Required to terminate a conditional compilation block begun by a matching `#If` directive. See [#If...Then...#Else Directives](../directives/if-then-else-directives.md).|
-|`Region`|Required to terminate a source region block begun by a matching [#Region Directive](../directives/region-directive.md).|
+|`#End`|必須。 プリプロセスブロックの定義を終了します。|
+|`ExternalSource`|一致する[#ExternalSource ディレクティブ](../directives/externalsource-directive.md)で開始された外部ソースブロックを終了するために必要です。|
+|`If`|一致する `#If` ディレクティブで開始された条件付きコンパイルブロックを終了するために必要です。 #If を参照してください.. [.次に、ディレクティブ #Else](../directives/if-then-else-directives.md)ます。|
+|`Region`|一致する[#Region ディレクティブ](../directives/region-directive.md)で開始されたソースリージョンブロックを終了するために必要です。|
 |||
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The [End Statement](end-statement.md), without an additional keyword, terminates execution immediately.
+追加のキーワードを指定せずに[End ステートメント](end-statement.md)を実行すると、すぐに実行が終了します。
 
-## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
+## <a name="smart-device-developer-notes"></a>スマートデバイスの開発者向けメモ  
 
-The `End` statement, without an additional keyword, is not supported.  
+追加のキーワードを使用しない `End` ステートメントはサポートされていません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [End ステートメント](end-statement.md)

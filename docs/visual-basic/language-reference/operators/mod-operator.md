@@ -19,9 +19,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350915"
 ---
-# <a name="mod-operator-visual-basic"></a>Mod operator (Visual Basic)
+# <a name="mod-operator-visual-basic"></a>Mod 演算子 (Visual Basic)
 
-Divides two numbers and returns only the remainder.
+2つの数値を除算し、剰余だけを返します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,26 +32,26 @@ result = number1 Mod number2
 ## <a name="parts"></a>指定項目
 
 `result` \
-必須です。 Any numeric variable or property.
+必須。 任意の数値変数またはプロパティ。
 
 `number1` \
-必須です。 任意の数式。
+必須。 任意の数式。
 
 `number2` \
-必須です。 任意の数式。
+必須。 任意の数式。
 
-## <a name="supported-types"></a>Supported types
+## <a name="supported-types"></a>サポートされている型
 
-すべての数値型。 This includes the unsigned and floating-point types and `Decimal`.
+すべての数値型。 これには、符号なしおよび浮動小数点型と `Decimal`が含まれます。
 
 ## <a name="result"></a>結果
 
-The result is the remainder after `number1` is divided by `number2`. For example, the expression `14 Mod 4` evaluates to 2.
+結果は、`number1` が `number2`で除算された後の剰余になります。 たとえば、式 `14 Mod 4` は2に評価されます。
 
 > [!NOTE]
-> There is a difference between *remainder* and *modulus* in mathematics, with different results for negative numbers. The `Mod` operator in Visual Basic, the .NET Framework `op_Modulus` operator, and the underlying [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL instruction all perform a remainder operation.
+> 算術の*剰余*と*剰余*の違いはありますが、負の数値の結果は異なります。 Visual Basic の `Mod` 演算子、.NET Framework `op_Modulus` 演算子、および基になる[rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL 命令はすべて、剰余演算を実行します。
 
-The result of a `Mod` operation retains the sign of the dividend, `number1`, and so it may be positive or negative. The result is always in the range (-`number2`, `number2`), exclusive. (例:
+`Mod` 操作の結果では、被除数の符号 (`number1`) が保持されるため、正または負のどちらの場合でもかまいません。 結果は常に (-`number2`、`number2`) の範囲内にあります。 例 :
 
 ```vb
 Public Module Example
@@ -69,54 +69,54 @@ End Module
 '      -8 Mod -3 = -2
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-If either `number1` or `number2` is a floating-point value, the floating-point remainder of the division is returned. The data type of the result is the smallest data type that can hold all possible values that result from division with the data types of `number1` and `number2`.
+`number1` または `number2` のいずれかが浮動小数点値の場合は、除算の浮動小数点の剰余が返されます。 結果のデータ型は、`number1` および `number2`のデータ型との除算によって得られるすべての値を保持できる最小のデータ型です。
 
-If `number1` or `number2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.
+`number1` または `number2` が[Nothing](../../../visual-basic/language-reference/nothing.md)と評価された場合、0として扱われます。
 
-Related operators include the following:
+関連する演算子は次のとおりです。
 
-- The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient of a division. For example, the expression `14 \ 4` evaluates to 3.
+- [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)は、除算の整数の商を返します。 たとえば、式 `14 \ 4` は3に評価されます。
 
-- The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, including the remainder, as a floating-point number. For example, the expression `14 / 4` evaluates to 3.5.
+- [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)は、剰余を含む完全な商を浮動小数点数として返します。 たとえば、式 `14 / 4` は3.5 に評価されます。
 
-## <a name="attempted-division-by-zero"></a>Attempted division by zero
+## <a name="attempted-division-by-zero"></a>0による除算を試行しました
 
-If `number2` evaluates to zero, the behavior of the `Mod` operator depends on the data type of the operands:
+`number2` が0に評価される場合、`Mod` 演算子の動作は、オペランドのデータ型によって異なります。
 
-- An integral division throws a <xref:System.DivideByZeroException> exception if `number2` cannot be determined in compile-time and generates a compile-time error `BC30542 Division by zero occurred while evaluating this expression` if `number2` is evaluated to zero at compile-time.
-- A floating-point division returns <xref:System.Double.NaN?displayProperty=nameWithType>.
+- コンパイル時に `number2` を特定できず、コンパイル時にゼロに評価され `number2` た場合 `BC30542 Division by zero occurred while evaluating this expression` コンパイル時エラーを生成する場合、整数除算は <xref:System.DivideByZeroException> 例外をスローします。
+- 浮動小数点除算は <xref:System.Double.NaN?displayProperty=nameWithType>を返します。
 
-## <a name="equivalent-formula"></a>Equivalent formula
+## <a name="equivalent-formula"></a>同等の式
 
-The expression `a Mod b` is equivalent to either of the following formulas:
+`a Mod b` 式は、次の数式のいずれかに相当します。
 
 `a - (b * (a \ b))`
 
 `a - (b * Fix(a / b))`
 
-## <a name="floating-point-imprecision"></a>Floating-point imprecision
+## <a name="floating-point-imprecision"></a>浮動小数点おける誤差
 
-When you work with floating-point numbers, remember that they do not always have a precise decimal representation in memory. This can lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+浮動小数点数を使用する場合は、メモリ内で常に正確な10進表現が使用されるわけではないことに注意してください。 これにより、値の比較や `Mod` 演算子など、特定の操作によって予期しない結果が発生する可能性があります。 詳細については、「[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)」を参照してください。
 
 ## <a name="overloading"></a>オーバーロード
 
-The `Mod` operator can be *overloaded*, which means that a class or structure can redefine its behavior. If your code applies `Mod` to an instance of a class or structure that includes such an overload, be sure you understand its redefined behavior. 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
+`Mod` 演算子は*オーバーロード*することができます。つまり、クラスまたは構造体で動作を再定義できます。 コードが、そのようなオーバーロードを含むクラスまたは構造体のインスタンスに `Mod` 適用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-The following example uses the `Mod` operator to divide two numbers and return only the remainder. If either number is a floating-point number, the result is a floating-point number that represents the remainder.
+次の例では、`Mod` 演算子を使用して2つの数値を除算し、剰余だけを返します。 どちらかの数値が浮動小数点数の場合、結果は剰余を表す浮動小数点数になります。
 
 [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]
 
 ## <a name="example"></a>例
 
-The following example demonstrates the potential imprecision of floating-point operands. In the first statement, the operands are `Double`, and 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001. In the second statement, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation.
+次の例は、浮動小数点オペランドのおける誤差の可能性を示しています。 最初のステートメントでは、オペランドが `Double`、0.2 は0.20000000000000001 の値が格納された無限の連続するバイナリ部分です。 2番目のステートメントでは、リテラル型文字 `D` は両方のオペランドを強制的に `Decimal`し、0.2 には正確な表現が含まれています。
 
 [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
@@ -124,5 +124,5 @@ The following example demonstrates the potential imprecision of floating-point o
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [トラブルシューティング (データ型)](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [Visual Basic の算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)

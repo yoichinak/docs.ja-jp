@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435879"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>ICorProfilerInfo2::GetAppDomainStaticAddress メソッド
-Gets the address of the specified application domain-static field that is in the scope of the specified application domain.  
+指定したアプリケーションドメインのスコープ内にある、指定したアプリケーションドメインの静的フィールドのアドレスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,27 +37,27 @@ RESULT GetAppDomainStaticAddress(
   
 ## <a name="parameters"></a>パラメーター  
  `classId`  
- [in] The class ID of the class that contains the requested application domain-static field.  
+ から要求されたアプリケーションドメインの静的フィールドを含むクラスのクラス ID。  
   
  `fieldToken`  
- [in] The metadata token for the requested application domain-static field.  
+ から要求されたアプリケーションドメインの静的フィールドのメタデータトークン。  
   
  `appDomainId`  
- [in] The ID of the application domain that is the scope for the requested static field.  
+ から要求された静的フィールドのスコープであるアプリケーションドメインの ID。  
   
  `ppAddress`  
- [out] A pointer to the address of the static field that is within the specified application domain.  
+ 入出力指定されたアプリケーションドメイン内の静的フィールドのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- The `GetAppDomainStaticAddress` method may return one of the following:  
+## <a name="remarks"></a>コメント  
+ `GetAppDomainStaticAddress` メソッドは、次のいずれかを返す場合があります。  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- 指定されたコンテキストで、指定された静的フィールドにアドレスが割り当てられていない場合は CORPROF_E_DATAINCOMPLETE HRESULT。  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- ガベージコレクションヒープ内に存在する可能性があるオブジェクトのアドレス。 これらのアドレスは、ガベージコレクションの後に無効になることがあります。そのため、ガベージコレクションの後、プロファイラーはそれらが有効であると想定してはなりません。  
   
- Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
+ クラスのクラスコンストラクターが完了する前に、`GetAppDomainStaticAddress` はすべての静的フィールドに対して CORPROF_E_DATAINCOMPLETE を返します。ただし、静的フィールドの一部は既に初期化されており、ガベージコレクションオブジェクトがルート化される場合があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -66,7 +66,7 @@ RESULT GetAppDomainStaticAddress(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

@@ -36,13 +36,13 @@ End With
 
 ## <a name="parts"></a>指定項目
 
-|用語|定義|
+|用語|Definition|
 |---|---|
-|`objectExpression`|必須です。 オブジェクトとして評価される式。 この式は、任意で複雑にできます。評価されるのは 1 回のみです。 基本データ型だけでなく、どのデータ型として評価される式でも指定できます。|
-|`statements`|省略可能です。 `With` の評価によって生成されるオブジェクトのメンバーを参照できる、`End With` と `objectExpression` 間の 1 つ以上のステートメント。|
-|`End With`|必須です。 `With` ブロックの定義を終了します。|
+|`objectExpression`|必須。 オブジェクトとして評価される式。 この式は、任意で複雑にできます。評価されるのは 1 回のみです。 基本データ型だけでなく、どのデータ型として評価される式でも指定できます。|
+|`statements`|省略可。 `With` の評価によって生成されるオブジェクトのメンバーを参照できる、`End With` と `objectExpression` 間の 1 つ以上のステートメント。|
+|`End With`|必須。 `With` ブロックの定義を終了します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 `With...End With` を使用すると、特定のオブジェクトの名前を複数回指定することなく、そのオブジェクトに対して一連のステートメントを実行できます。 `With` ステートメント ブロック内では、先頭に `With` ステートメント オブジェクトを付ける場合と同様に、先頭にピリオドを付けてオブジェクトのメンバーを指定できます。
 
@@ -64,10 +64,10 @@ End With
 
 ブロック外から `With` ステートメント ブロックに分岐することはできません。
 
-ブロックの内部にループがなければ、ステートメントは一度だけ実行されます。 さまざまな種類の制御構造を入れ子にできます。 For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+ブロックの内部にループがなければ、ステートメントは一度だけ実行されます。 さまざまな種類の制御構造を入れ子にできます。 詳細については、「[入れ子になったコントロール構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
 
 > [!NOTE]
-> また、オブジェクト初期化子で `With` キーワードを使用することもできます。 For more information and examples, see [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+> また、オブジェクト初期化子で `With` キーワードを使用することもできます。 詳細と例については、「[オブジェクト初期化子: 名前付きおよび匿名](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)型」と「[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。
 >
 > 直前にインスタンス化したオブジェクトのプロパティまたはフィールドのみを `With` ブロックを使用して初期化する場合は、代わりにオブジェクト初期化子を使用することを考慮します。
 
@@ -83,7 +83,7 @@ End With
 
 [!code-vb[VbVbalrWithStatement#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#1)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Collections.Generic.List%601>
 - [入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)

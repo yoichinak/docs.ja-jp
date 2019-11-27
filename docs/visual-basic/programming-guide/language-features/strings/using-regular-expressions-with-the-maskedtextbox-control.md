@@ -13,49 +13,49 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346263"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic の MaskedTextBox コントロールによる正規表現を使用する
-This example demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.  
+この例では、単純な正規表現を変換して、<xref:System.Windows.Forms.MaskedTextBox> コントロールを操作する方法を示します。  
   
-## <a name="description-of-the-masking-language"></a>Description of the Masking Language  
- The standard <xref:System.Windows.Forms.MaskedTextBox> masking language is based on the one used by the `Masked Edit` control in Visual Basic 6.0 and should be familiar to users migrating from that platform.  
+## <a name="description-of-the-masking-language"></a>マスク言語の説明  
+ 標準 <xref:System.Windows.Forms.MaskedTextBox> マスク言語は Visual Basic 6.0 の `Masked Edit` コントロールによって使用される言語に基づいており、そのプラットフォームから移行するユーザーには慣れている必要があります。  
   
- The <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of the <xref:System.Windows.Forms.MaskedTextBox> control specifies what input mask to use. The mask must be a string composed of one or more of the masking elements from the following table.  
+ <xref:System.Windows.Forms.MaskedTextBox> コントロールの <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> プロパティでは、使用する入力マスクを指定します。 マスクは、次の表の1つ以上のマスク要素で構成される文字列である必要があります。  
   
-|Masking element|説明|Regular expression element|  
+|マスク要素|説明|正規表現の要素|  
 |---------------------|-----------------|--------------------------------|  
-|0|Any single digit between 0 and 9. Entry required.|\d|  
-|9|Digit or space. Entry optional.|[ \d]?|  
-|#|Digit or space. Entry optional. If this position is left blank in the mask, it will be rendered as a space. Plus (+) and minus (-) signs are allowed.|[ \d+-]?|  
-|L|ASCII letter. Entry required.|[a-zA-Z]|  
-|?|ASCII letter. Entry optional.|[a-zA-Z]?|  
-|&|文字です。 Entry required.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|C|文字です。 Entry optional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
-|A|Alphanumeric. Entry optional.|\W|  
-|である必要があります。|Culture-appropriate decimal placeholder.|使用できません。|  
-|の場合、|Culture-appropriate thousands placeholder.|使用できません。|  
-|:|Culture-appropriate time separator.|使用できません。|  
-|/|Culture-appropriate date separator.|使用できません。|  
-|$|Culture-appropriate currency symbol.|使用できません。|  
-|\<|Converts all characters that follow to lowercase.|使用できません。|  
-|>|Converts all characters that follow to uppercase.|使用できません。|  
-|&#124;|Undoes a previous shift up or shift down.|使用できません。|  
-|&#92;|Escapes a mask character, turning it into a literal. "\\\\" is the escape sequence for a backslash.|&#92;|  
-|All other characters.|Literals. All non-mask elements will appear as themselves within <xref:System.Windows.Forms.MaskedTextBox>.|All other characters.|  
+|0|0から9までの任意の1桁。 エントリが必要です。|\d|  
+|9|数字またはスペース。 エントリは省略可能です。|[\d]?|  
+|#|数字またはスペース。 エントリは省略可能です。 マスクでこの位置を空白のままにすると、スペースとして表示されます。 正符号 (+) とマイナス記号 (-) は使用できます。|[\d +-]?|  
+|L|ASCII 文字。 エントリが必要です。|[zA-Z]|  
+|?|ASCII 文字。 エントリは省略可能です。|[zA-Z]?|  
+|&|文字です。 エントリが必要です。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
+|C|文字です。 エントリは省略可能です。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
+|A|英数字. エントリは省略可能です。|\W|  
+|。|カルチャに応じた小数点のプレースホルダー。|使用できません。|  
+|,|カルチャに応じた桁プレースホルダー。|使用できません。|  
+|:|カルチャに適した時間区切り。|使用できません。|  
+|/|カルチャに適した日付の区切り記号。|使用できません。|  
+|$|カルチャに適した通貨記号。|使用できません。|  
+|\<|後続のすべての文字を小文字に変換します。|使用できません。|  
+|>|に続くすべての文字を大文字に変換します。|使用できません。|  
+|&#124;|前のシフトを元に戻すか、シフトします。|使用できません。|  
+|&#92;|マスク文字をエスケープし、その文字をリテラルに変換します。 "\\\\" は、円記号のエスケープシーケンスです。|&#92;|  
+|その他のすべての文字。|リテラル. マスクされていないすべての要素は、<xref:System.Windows.Forms.MaskedTextBox>内に自身として表示されます。|その他のすべての文字。|  
   
- The decimal (.), thousandths (,), time (:), date (/), and currency ($) symbols default to displaying those symbols as defined by the application's culture. You can force them to display symbols for another culture by using the <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> property.  
+ 10進数 (.)、桁区切り記号 (,)、時刻 (:)、日付 (/)、および通貨 ($) のシンボルは、既定では、アプリケーションのカルチャによって定義されている記号を表示します。 <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> プロパティを使用して、別のカルチャのシンボルを表示するように強制できます。  
   
-## <a name="regular-expressions-and-masks"></a>Regular Expressions and Masks  
- Although you can use regular expressions and masks to validate user input, they are not completely equivalent. Regular expressions can express more complex patterns than masks, but masks can express the same information more succinctly and in a culturally relevant format.  
+## <a name="regular-expressions-and-masks"></a>正規表現とマスク  
+ 正規表現とマスクを使用してユーザー入力を検証することもできますが、完全に同等であるとは限りません。 正規表現はマスクよりも複雑なパターンを表現できますが、マスクは同じ情報をより簡潔で、カルチャに関連する形式で表現することができます。  
   
- The following table compares four regular expressions and the equivalent mask for each.  
+ 次の表では、4つの正規表現とそれぞれの対応するマスクを比較しています。  
   
-|正規表現|マスク|ノート|  
+|正規表現|マスク|説明|  
 |------------------------|----------|-----------|  
-|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|The `/` character in the mask is a logical date separator, and it will appear to the user as the date separator appropriate to the application's current culture.|  
-|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|A date (day, month abbreviation, and year) in United States format in which the three-letter month abbreviation is displayed with an initial uppercase letter followed by two lowercase letters.|  
-|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|United States phone number, area code optional. If the user does not wish to enter the optional characters, she can either enter spaces or place the mouse pointer directly at the position in the mask represented by the first 0.|  
-|`$\d{6}.00`|`$999,999.00`|A currency value in the range of 0 to 999999. The currency, thousandth, and decimal characters will be replaced at run-time with their culture-specific equivalents.|  
+|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|マスク内の `/` 文字は論理日付の区切り記号であり、アプリケーションの現在のカルチャに適した日付の区切り記号としてユーザーに表示されます。|  
+|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|米国形式の日付 (日、月の省略形、および年)。3文字の月の省略形は、最初の大文字と2つの小文字で表示されます。|  
+|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|米国電話番号、市外局番は省略可能です。 ユーザーがオプションの文字を入力したくない場合は、スペースを入力するか、最初の0によって表されるマスク内の位置にマウスポインターを直接配置できます。|  
+|`$\d{6}.00`|`$999,999.00`|0 ~ 999999 の範囲の通貨値。 通貨、分、および10進文字は、実行時にカルチャ固有の同等のものに置き換えられます。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>

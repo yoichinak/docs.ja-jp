@@ -25,27 +25,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345873"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements 句 (Visual Basic)
-Indicates that a class or structure member is providing the implementation for a member defined in an interface.  
+クラスまたは構造体のメンバーが、インターフェイスで定義されているメンバーの実装を提供していることを示します。  
   
-## <a name="remarks"></a>Remarks  
-The `Implements` keyword is not the same as the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md). You use the `Implements` statement to specify that a class or structure implements one or more interfaces, and then for each member you use the `Implements` keyword to specify which interface and which member it implements.
+## <a name="remarks"></a>コメント  
+`Implements` キーワードは[Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)と同じではありません。 `Implements` ステートメントを使用して、クラスまたは構造体が1つ以上のインターフェイスを実装することを指定し、各メンバーに対して `Implements` キーワードを使用して、実装するインターフェイスとメンバーを指定します。
 
-If a class or structure implements an interface, it must include the `Implements` statement immediately after the [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) or [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md), and it must implement all the members defined by the interface.
+クラスまたは構造体がインターフェイスを実装する場合は、[クラスステートメント](../../../visual-basic/language-reference/statements/class-statement.md)または[構造体ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)の直後に `Implements` ステートメントを含める必要があります。また、インターフェイスで定義されているすべてのメンバーを実装する必要があります。
 
-## <a name="reimplementation"></a>Reimplementation  
-In a derived class, you can reimplement an interface member that the base class has already implemented. This is different from overriding the base class member in the following respects:
+## <a name="reimplementation"></a>再実装  
+派生クラスでは、基底クラスに既に実装されているインターフェイスメンバーを再実装できます。 これは、次の点で基底クラスのメンバーをオーバーライドすることとは異なります。
 
-- The base class member does not need to be [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) to be reimplemented.
-- You can reimplement the member with a different name.
+- 基底クラスのメンバーは、再実装として[オーバーライド](../../../visual-basic/language-reference/modifiers/overridable.md)可能である必要はありません。
+- 別の名前を使用してメンバーを再実装できます。
 
-The `Implements` keyword can be used in the following contexts:
+`Implements` キーワードは、次のコンテキストで使用できます。
 
 - [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)
 - [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)

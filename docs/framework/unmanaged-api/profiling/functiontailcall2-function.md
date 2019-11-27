@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427428"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 関数
-Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.  
+現在実行中の関数が別の関数の末尾呼び出しを実行しようとしていることをプロファイラーに通知し、スタックフレームに関する情報を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,43 +36,43 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="parameters"></a>パラメーター  
  `funcId`  
- [in] The identifier of the currently executing function that is about to make a tail call.  
+ から末尾呼び出しを実行しようとしている現在実行中の関数の識別子。  
   
  `clientData`  
- [in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.  
+ から末尾呼び出しを実行しようとしている現在実行中の関数の、プロファイラーが以前に[Functionidmapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)を使用して指定した、再マップされた関数識別子。  
   
  `func`  
- [in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.  
+ からスタックフレームに関する情報を指す `COR_PRF_FRAME_INFO` 値。  
   
- The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.  
+ プロファイラーは、これを[ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)メソッドの実行エンジンに渡すことができる不透明なハンドルとして処理する必要があります。  
   
-## <a name="remarks"></a>Remarks  
- The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call. This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.  
+## <a name="remarks"></a>コメント  
+ Tail 呼び出しの対象となる関数は、現在のスタックフレームを使用し、末尾呼び出しを行った関数の呼び出し元に直接戻ります。 つまり、 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)コールバックは、末尾呼び出しのターゲットである関数に対しては発行されません。  
   
- The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.  
+ `func` パラメーターの値は、値が変更または破棄される可能性があるため、`FunctionTailcall2` 関数から制御が戻った後に有効ではありません。  
   
- The `FunctionTailcall2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ `FunctionTailcall2` 関数はコールバックです。実装する必要があります。 実装では、`__declspec`(`naked`) ストレージクラス属性を使用する必要があります。  
   
- The execution engine does not save any registers before calling this function.  
+ この関数を呼び出す前に、実行エンジンはレジスタを保存しません。  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- 入力時には、浮動小数点単位 (FPU) に含まれるすべてのレジスタを含め、使用するすべてのレジスタを保存する必要があります。  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- 終了時に、呼び出し元によってプッシュされたすべてのパラメーターをポップして、スタックを復元する必要があります。  
   
- The implementation of `FunctionTailcall2` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.  
+ `FunctionTailcall2` の実装では、ガベージコレクションが遅延するため、ブロックしないでください。 スタックがガベージコレクションに対応していない可能性があるため、この実装ではガベージコレクションを実行しないようにしてください。 ガベージコレクションを実行しようとすると、ランタイムは `FunctionTailcall2` が返されるまでブロックします。  
   
- Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.  
+ また、`FunctionTailcall2` 関数は、マネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorProf.idl  
+ **ヘッダー:** Corprof.idl  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [FunctionEnter2 関数](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [FunctionLeave2 関数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)

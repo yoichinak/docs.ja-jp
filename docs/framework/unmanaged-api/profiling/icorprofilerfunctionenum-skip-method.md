@@ -33,20 +33,20 @@ HRESULT Skip([in] ULONG celt);
   
 ## <a name="parameters"></a>パラメーター  
  `celt`  
- [in] The number of elements to be skipped.  
+ からスキップする要素の数。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`celt` elements were skipped.|  
-|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
+|S_OK|`celt` の要素はスキップされました。|  
+|S_FALSE|`celt` 要素がスキップされました。これは、要素がこれ以上存在しないことを示します。|  
   
-## <a name="remarks"></a>Remarks  
- The new position of this enumerator's cursor is (current position) + `celt`.  
+## <a name="remarks"></a>コメント  
+ この列挙子のカーソルの新しい位置は、(現在位置) + `celt`です。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -55,7 +55,7 @@ HRESULT Skip([in] ULONG celt);
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerFunctionEnum インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
 - [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

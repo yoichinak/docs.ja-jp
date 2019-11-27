@@ -12,13 +12,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350795"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>インデックスが有効範囲にありません。 (Visual Basic)
-An array subscript is not valid because it falls outside the allowable range. The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.  
+配列の添字は、許容範囲を超えているため無効です。 次元の最も小さい添字の値は常に0で、最大の添字の値はそのディメンションの `GetUpperBound` メソッドによって返されます。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- Change the subscript so it falls within the valid range.  
+- 有効な範囲内に収まるように、添字を変更します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>
 - [配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)

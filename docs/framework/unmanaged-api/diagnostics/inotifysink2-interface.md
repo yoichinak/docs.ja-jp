@@ -22,21 +22,21 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440977"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 インターフェイス
-Declares methods for sink notification.  
+シンク通知のメソッドを宣言します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[OnSyncCallEnter メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|Gets invoked when entering a call.|  
-|[OnSyncCallExit メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|Gets invoked when exiting a call.|  
-|[OnSyncCallOut メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|Gets invoked when a call is out.|  
-|[OnSyncCallReturn メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|Gets invoked when a call returns.|  
+|[OnSyncCallEnter メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|呼び出しを入力したときに呼び出されます。|  
+|[OnSyncCallExit メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|呼び出しを終了したときに呼び出されます。|  
+|[OnSyncCallOut メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|呼び出しがタイムアウトしたときに呼び出されます。|  
+|[OnSyncCallReturn メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|呼び出しから制御が戻ったときに呼び出されます。|  
   
-## <a name="requirements"></a>［要件］  
- **Header:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [INotifyConnection2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)

@@ -46,7 +46,7 @@ HRESULT ConditionalWeakTableElementReferences(
 [入力] それぞれが依存ハンドル ペアのプライマリ要素の `ObjectID` を含む、オブジェクト ID の配列。
 
 `valueRefIds`\
-[入力] それぞれが依存ハンドル ペアのセカンダリ要素の `ObjectID` を含む、オブジェクト ID の配列。 (`keyRefIds[i]` keeps `valueRefIds[i]` alive.)
+[入力] それぞれが依存ハンドル ペアのセカンダリ要素の `ObjectID` を含む、オブジェクト ID の配列。 (`keyRefIds[i]` は `valueRefIds[i]` 生きています)。
 
 `rootIds`\
 [入力] ガーベッジ コレクション ルートについての追加情報を含む整数を指し示す `GCHandleID` 値の配列
@@ -55,7 +55,7 @@ HRESULT ConditionalWeakTableElementReferences(
 
 ## <a name="example"></a>例
 
-The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.
+次のコード例は、 [ICorProfilerCallback5](icorprofilercallback5-interface.md)を実装し、このメソッドを使用する方法を示しています。
 
 ```cpp
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
@@ -78,11 +78,11 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 }
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-A profiler for the .NET Framework 4.5 or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method. `ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries. These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.
+.NET Framework 4.5 以降のバージョンのプロファイラーは、 [ICorProfilerCallback5](icorprofilercallback5-interface.md)インターフェイスを実装し、`ConditionalWeakTableElementReferences` メソッドによって指定された依存関係を記録します。 `ICorProfilerCallback5` `ConditionalWeakTable` エントリによって表されるライブオブジェクト間の依存関係の完全なセットを提供します。 これらの依存関係および[ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md)メソッドによって指定されたメンバーフィールド参照を使用すると、マネージプロファイラーでライブオブジェクトの完全オブジェクトグラフを生成できます。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
 
@@ -90,6 +90,6 @@ A profiler for the .NET Framework 4.5 or later versions implements the [ICorProf
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback5 インターフェイス](icorprofilercallback5-interface.md)

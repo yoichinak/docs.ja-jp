@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437841"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>IMetaDataImport::FindTypeDefByName メソッド
-Gets a pointer to the TypeDef metadata token for the <xref:System.Type> with the specified name.  
+指定した名前の <xref:System.Type> の TypeDef メタデータトークンへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,24 +37,24 @@ HRESULT FindTypeDefByName
   
 ## <a name="parameters"></a>パラメーター  
  `szTypeDef`  
- [in] The name of the type for which to get the TypeDef token.  
+ からTypeDef トークンを取得する型の名前。  
   
  `tkEnclosingClass`  
- [in] A TypeDef or TypeRef token representing the enclosing class. If the type to find is not a nested class, set this value to NULL.  
+ から外側のクラスを表す TypeDef または TypeRef トークン。 検索する型が入れ子になったクラスでない場合は、この値を NULL に設定します。  
   
  `ptd`  
- [out] A pointer to the matching TypeDef token.  
+ 入出力一致する TypeDef トークンへのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

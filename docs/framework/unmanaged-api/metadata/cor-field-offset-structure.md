@@ -37,20 +37,20 @@ typedef struct COR_FIELD_OFFSET {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`ridOfField`|An `mdFieldDef` metadata token that represents the field.|  
-|`ulOffset`|The field's offset within its class.|  
+|`ridOfField`|フィールドを表す `mdFieldDef` メタデータトークン。|  
+|`ulOffset`|クラス内のフィールドのオフセット。|  
   
-## <a name="remarks"></a>Remarks  
- [IMetaDataImport::GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) and [IMetaDataEmit::SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) methods take a parameter of type `COR_FIELD_OFFSET`.  
+## <a name="remarks"></a>コメント  
+ [IMetaDataImport:: GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md)メソッドと[IMetaDataEmit:: SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md)メソッドは `COR_FIELD_OFFSET`型のパラメーターを受け取ります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h, CorProf.idl  
+ **ヘッダー:** CorHdr .h、Corprof.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ構造体](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

@@ -12,7 +12,7 @@ ms.locfileid: "74346576"
 # <a name="querying-xml-trees-visual-basic"></a>XML ツリーのクエリ (Visual Basic)
 ここでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリの例について説明します。  
   
- For more information about writing [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, see [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリの記述の詳細については、「 [Visual Basic での LINQ のはじめに](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)」を参照してください。  
   
  XML ツリーをインスタンス化してからクエリを記述することが、ツリーからデータを抽出する最も効率的な方法です。 また、関数型構築と組み合わせてクエリを実行すると、元のドキュメントとは異なる形式の新しい XML ドキュメントを生成できます。  
   
@@ -20,13 +20,13 @@ ms.locfileid: "74346576"
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)|XML ツリーのクエリの一般的な例について説明します。|  
-|[Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)|XML ツリーからの射影と XML ツリーの変換の一般的な例について説明します。|  
-|[Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)|より高度なシナリオで役立つクエリ手法について説明します。|  
-|[LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)|多くの XPath 式と対応する [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の式について説明します。|  
-|[Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)|関数型のプログラミング形式でクエリを記述する簡単なチュートリアルについて説明します。|  
+|[基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)|XML ツリーのクエリの一般的な例について説明します。|  
+|[プロジェクションと変換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)|XML ツリーからの射影と XML ツリーの変換の一般的な例について説明します。|  
+|[高度なクエリ手法 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)|より高度なシナリオで役立つクエリ手法について説明します。|  
+|[XPath ユーザーの LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)|多くの XPath 式と対応する [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の式について説明します。|  
+|[XML の純粋関数型変換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)|関数型のプログラミング形式でクエリを記述する簡単なチュートリアルについて説明します。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [プログラミングガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
 - [Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

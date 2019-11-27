@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350925"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>論理/ビット演算子 (Visual Basic)
-The following are the logical/bitwise operators defined in Visual Basic.  
+次に示すのは、Visual Basic で定義されている論理/ビット演算子です。  
   
  [And 演算子](../../../visual-basic/language-reference/operators/and-operator.md)  
   
@@ -31,7 +31,7 @@ The following are the logical/bitwise operators defined in Visual Basic.
   
  [IsTrue 演算子](../../../visual-basic/language-reference/operators/istrue-operator.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic の論理演算子とビット処理演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

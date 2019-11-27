@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support current locale setting
+title: オブジェクトは現在のロケール設定をサポートしていません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID447
@@ -18,6 +18,6 @@ ms.locfileid: "74353892"
   
 - オブジェクトでサポートされるロケール設定を確認します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [エラーの種類](../../visual-basic/programming-guide/language-features/error-types.md)

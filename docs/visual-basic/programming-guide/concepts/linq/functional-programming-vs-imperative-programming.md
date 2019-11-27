@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353439"
 ---
-# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Functional Programming vs. Imperative Programming (Visual Basic)
+# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>関数型プログラミングと命令型プログラミング (Visual Basic)
 このトピックでは、関数型プログラミングを従来の命令型 (手続き型) プログラミングと比較対照します。  
   
 ## <a name="functional-programming-vs-imperative-programming"></a>関数型プログラミングと命令型プログラミング  
@@ -17,7 +17,7 @@ ms.locfileid: "74353439"
   
  命令型の方法では、開発者はコードを記述して、目的を達成するためにコンピューターが実行するステップを詳細に示します。 これを "*アルゴリズム*" プログラミングと呼ぶこともあります。 一方、関数型の方法では、実行される一連の関数として問題が組み立てられ、 それぞれの関数に何が入力され、何が返されるのかが、慎重に定義されます。 この 2 つの方法の一般的な違いを次の表に示します。  
   
-|特徴|命令型の方法|関数型の方法|  
+|特性|命令型の方法|関数型の方法|  
 |--------------------|-------------------------|-------------------------|  
 |プログラミングの焦点|タスク (アルゴリズム) の実行方法と状態の変化の追跡方法。|目的となる情報と必要な変換。|  
 |状態変更|重要。|存在しない。|  
@@ -25,12 +25,12 @@ ms.locfileid: "74353439"
 |主要なフロー制御|ループ、条件、および関数 (メソッド) 呼び出し。|関数呼び出し (再帰を含む)。|  
 |主要な操作単位|構造体またはクラスのインスタンス。|ファーストクラス オブジェクトとしての関数とデータ コレクション。|  
   
- ほとんどの言語は特定のプログラミング パラダイムをサポートするために作成されていますが、汎用言語の多くは、複数のパラダイムをサポートできる柔軟性を備えています。 たとえば、関数ポインターを含むほとんどの言語で関数型プログラミングがサポートされます。 Furthermore, Visual Basic includes explicit language extensions to support functional programming, including lambda expressions and type inference. LINQ テクノロジは、宣言型 (関数型) プログラミングの一種です。  
+ ほとんどの言語は特定のプログラミング パラダイムをサポートするために作成されていますが、汎用言語の多くは、複数のパラダイムをサポートできる柔軟性を備えています。 たとえば、関数ポインターを含むほとんどの言語で関数型プログラミングがサポートされます。 さらに、Visual Basic には、ラムダ式や型推論など、関数型プログラミングをサポートするための明示的な言語拡張が含まれています。 LINQ テクノロジは、宣言型 (関数型) プログラミングの一種です。  
   
 ## <a name="functional-programming-using-xslt"></a>XSLT による関数型プログラミング  
- 純粋関数型の方法については、多くの XSLT 開発者が精通しています。 XSLT スタイル シートを開発するための最も効果的な方法では、各テンプレートが、分離された構成可能な変換として扱われ、 実行の順序はまったく重要ではなくなります。 また、XSLT では副作用も許可されません (例外として、手続き型のコードを実行するためのエスケープ メカニズムによって副作用が導入されることがあります。このため、純粋関数型ではなくなる場合があります)。 XSLT は有効なツールですが、その一方で、最適とは言えない特性もあります。 たとえば、プログラミング構成要素が XML で表現されるため、コードが比較的冗長になり、保守が困難になります。 また、フロー制御のために再帰に大きく依存しているため、コードが読みにくくなることがあります。 XSLT について詳しくは、「[XSLT 変換](../../../../standard/data/xml/xslt-transformations.md)」を参照してください。  
+ 純粋関数型の方法については、多くの XSLT 開発者が精通しています。 XSLT スタイル シートを開発するための最も効果的な方法では、各テンプレートが、分離された構成可能な変換として扱われ、 実行の順序はまったく重要ではなくなります。 また、XSLT では副作用も許可されません (例外として、手続き型のコードを実行するためのエスケープ メカニズムによって副作用が導入されることがあります。このため、純粋関数型ではなくなる場合があります)。 XSLT は有効なツールですが、その一方で、最適とは言えない特性もあります。 たとえば、プログラミング構成要素が XML で表現されるため、コードが比較的冗長になり、保守が困難になります。 また、フロー制御のために再帰に大きく依存しているため、コードが読みにくくなることがあります。 XSLT について詳しくは、「[XSLT 変換](../../../../standard/data/xml/xslt-transformations.md)」をご覧ください。  
   
- ただし、XML の形式を変換する場合に純粋関数型の方法を使用する意味は、XSLT によって証明されます。 LINQ to XML による純粋関数型プログラミングは多くの点で XSLT に似ていますが、 However, the programming constructs introduced by LINQ to XML and Visual Basic allow you to write pure functional transformations that are more readable and maintainable than XSLT.  
+ ただし、XML の形式を変換する場合に純粋関数型の方法を使用する意味は、XSLT によって証明されます。 LINQ to XML による純粋関数型プログラミングは多くの点で XSLT に似ていますが、 ただし、LINQ to XML および Visual Basic によって導入されるプログラミング構成要素を使用すると、XSLT よりも読みやすく、保守しやすい純粋関数型変換を記述できます。  
   
 ## <a name="advantages-of-pure-functions"></a>純粋関数の利点  
  関数型変換を純粋関数として実装する最大の理由は、純粋関数が構成可能であること (自己完結していて、ステートレスなこと) です。 これらの特性は、以下に示すようなさまざまな利点をもたらします。  
@@ -48,10 +48,10 @@ ms.locfileid: "74353439"
   
  一方、関数型プログラミングでは、計算の問題を、データ コレクションの純粋関数型変換の 1 つの課題として捉えます。 関数型プログラミングでは、状態や変化するデータを避け、関数の適用を重視します。  
   
- Fortunately, Visual Basic doesn't require the full leap to functional programming, because it supports both imperative and functional programming approaches. 開発者は、個々のシナリオに適した方法を選択できます。 実際、プログラムで両方の方法が組み合わされている場合もよくあります。  
+ 幸いにも、Visual Basic は、命令型プログラミングと関数型プログラミングの両方の方法をサポートしているため、完全な関数型プログラミングを必要としません。 開発者は、個々のシナリオに適した方法を選択できます。 実際、プログラムで両方の方法が組み合わされている場合もよくあります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [純粋関数型変換の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [XSLT 変換](../../../../standard/data/xml/xslt-transformations.md)
-- [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [純粋関数へのリファクタリング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

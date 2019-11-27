@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442856"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs メソッド
-Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated. This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).  
+割り当てられている指定された関数のすべての JIT 再コンパイルバージョンを識別する Id の配列を返します。 これには、後で元に戻されたがまだ解放されていない関数の JIT 再コンパイルバージョンが含まれます (たとえば、元に戻された関数を含むアプリケーションドメインがまだ使用されている場合など)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,21 +37,21 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in] The `FunctionID` of the function instance for which to enumerate versions.  
+ からバージョンを列挙する関数インスタンスの `FunctionID`。  
   
  `cReJitIds`  
- [in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.  
+ から`reJitIds` 配列に割り当てられた JIT 再コンパイルされた Id の数。  
   
  `pcReJitIds`  
- [out] The actual number of JIT-recompiled IDs.  
+ 入出力JIT 再コンパイルされた Id の実際の数。  
   
  `reJitIds`  
- [out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.  
+ 入出力指定した関数の JIT 再コンパイルされた Id を格納する、呼び出し元が割り当てた配列。  
   
-## <a name="remarks"></a>Remarks  
- `GetReJITIDs` enumerates the active JIT-recompiled IDs for a given function instance. It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.  
+## <a name="remarks"></a>コメント  
+ `GetReJITIDs` は、指定された関数インスタンスのアクティブな JIT 再コンパイル済み Id を列挙します。 これは、呼び出し元が割り当てたバッファーを受け入れる他の `ICorProfilerInfo` 関数と同じ使用パターンに従います。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -60,7 +60,7 @@ HRESULT GetReJITIDs (
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo4 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
 - [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -22,53 +22,53 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350810"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolean 式 (Visual Basic)
-A *Boolean expression* is an expression that evaluates to a value of the [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` or `False`. `Boolean` expressions can take several forms. The simplest is the direct comparison of the value of a `Boolean` variable to a `Boolean` literal, as shown in the following example.  
+*ブール式*は、`True` または `False`[ブールデータ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)の値に評価される式です。 `Boolean` 式には、複数の形式を使用できます。 最も単純なのは、次の例に示すように、`Boolean` 変数の値を `Boolean` リテラルに直接比較することです。  
   
  [!code-vb[VbVbalrOperators#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#87)]  
   
-## <a name="two-meanings-of-the--operator"></a>Two Meanings of the = Operator  
- Notice that the assignment statement `newCustomer = True` looks the same as the expression in the preceding example, but it performs a different function and is used differently. In the preceding example, the expression `newCustomer = True` represents a Boolean value, and the `=` sign is interpreted as a comparison operator. In a stand-alone statement, the `=` sign is interpreted as an assignment operator and assigns the value on the right to the variable on the left. 次に例を示します。  
+## <a name="two-meanings-of-the--operator"></a>= 演算子の2つの意味  
+ 代入ステートメント `newCustomer = True` は、前の例の式と同じように見えますが、別の関数を実行し、異なる方法で使用します。 前の例では、式 `newCustomer = True` はブール値を表し、`=` 符号は比較演算子として解釈されます。 スタンドアロンのステートメントでは、`=` 記号は代入演算子として解釈され、右側の値が左側の変数に代入されます。 これを次の例に示します。  
   
  [!code-vb[VbVbalrOperators#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#88)]  
   
- For further information, see [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) and [Statements](../../../../visual-basic/language-reference/statements/index.md).  
+ 詳細については、「[値の比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)と[ステートメント](../../../../visual-basic/language-reference/statements/index.md)」を参照してください。  
   
 ## <a name="comparison-operators"></a>比較演算子  
- Comparison operators such as `=`, `<`, `>`, `<>`, `<=`, and `>=` produce Boolean expressions by comparing the expression on the left side of the operator to the expression on the right side of the operator and evaluating the result as `True` or `False`. 次に例を示します。  
+ `=`、`<`、`>`、`<>`、`<=`、`>=` などの比較演算子は、演算子の左辺の式を演算子の右辺の式と比較し、結果を `True` または `False`として評価することによって、ブール式を生成します。 これを次の例に示します。  
   
  `42 < 81`  
   
- Because 42 is less than 81, the Boolean expression in the preceding example evaluates to `True`. For more information on this kind of expression, see [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md).  
+ 42は81未満であるため、前の例のブール式は `True`に評価されます。 この種類の式の詳細については、「[値の比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)」を参照してください。  
   
-### <a name="comparison-operators-combined-with-logical-operators"></a>Comparison Operators Combined with Logical Operators  
- Comparison expressions can be combined using logical operators to produce more complex Boolean expressions. The following example demonstrates the use of comparison operators in conjunction with a logical operator.  
+### <a name="comparison-operators-combined-with-logical-operators"></a>論理演算子と組み合わせた比較演算子  
+ 論理演算子を使用して比較式を組み合わせると、より複雑なブール式を生成できます。 次の例では、論理演算子と共に比較演算子を使用する方法を示します。  
   
  `x > y And x < 1000`  
   
- In the preceding example, the value of the overall expression depends on the values of the expressions on each side of the `And` operator. If both expressions are `True`, then the overall expression evaluates to `True`. If either expression is `False`, then the entire expression evaluates to `False`.  
+ 前の例では、式全体の値は、`And` 演算子の各辺の式の値によって決まります。 両方の式が `True`場合、全体の式が `True`に評価されます。 いずれかの式が `False`場合、式全体が `False`に評価されます。  
   
-## <a name="short-circuiting-operators"></a>Short-Circuiting Operators  
- The logical operators `AndAlso` and `OrElse` exhibit behavior known as *short-circuiting*. A short-circuiting operator evaluates the left operand first. If the left operand determines the value of the entire expression, then program execution proceeds without evaluating the right expression. 次に例を示します。  
+## <a name="short-circuiting-operators"></a>ショートサーキット演算子  
+ 論理演算子 `AndAlso` と `OrElse`*ショートサーキット*と呼ばれる動作を示すことができます。 ショートサーキット演算子は、左オペランドを最初に評価します。 左側のオペランドで式全体の値が決定された場合、プログラムの実行は正しい式を評価せずに続行されます。 これを次の例に示します。  
   
  [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
- In the preceding example, the operator evaluates the left expression, `45 < 12`. Because the left expression evaluates to `False`, the entire logical expression must evaluate to `False`. Program execution thus skips execution of the code within the `If` block without evaluating the right expression, `testFunction(3)`. This example does not call `testFunction()` because the left expression falsifies the entire expression.  
+ 前の例では、演算子は左の式の `45 < 12`を評価します。 左の式は `False`と評価されるため、論理式全体が `False`に評価される必要があります。 このため、プログラムを実行すると、正しい式 `testFunction(3)`を評価せずに `If` ブロック内のコードの実行がスキップされます。 この例では `testFunction()` は呼び出されません。左の式が式全体を falsifies ためです。  
   
- Similarly, if the left expression in a logical expression using `OrElse` evaluates to `True`, execution proceeds to the next line of code without evaluating the right expression, because the left expression has already validated the entire expression.  
+ 同様に、`OrElse` を使用する論理式の左式が `True`に評価される場合、左の式では式全体が検証済みであるため、右の式を評価せずに次のコード行に実行が進みます。  
   
-### <a name="comparison-with-non-short-circuiting-operators"></a>Comparison with Non-Short-Circuiting Operators  
- By contrast, both sides of the logical operator are evaluated when the logical operators `And` and `Or` are used. 次に例を示します。  
+### <a name="comparison-with-non-short-circuiting-operators"></a>非ショートサーキット演算子との比較  
+ 一方、論理演算子の両側は、論理演算子 `And` と `Or` が使用されるときに評価されます。 これを次の例に示します。  
   
  [!code-vb[VbVbalrOperators#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#90)]  
   
- The preceding example calls `testFunction()` even though the left expression evaluates to `False`.  
+ 前の例では、左の式が `False`に評価された場合でも `testFunction()` が呼び出されます。  
   
-## <a name="parenthetical-expressions"></a>Parenthetical Expressions  
- You can use parentheses to control the order of evaluation of Boolean expressions. Expressions enclosed by parentheses evaluate first. For multiple levels of nesting, precedence is granted to the most deeply nested expressions. Within parentheses, evaluation proceeds according to the rules of operator precedence. For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+## <a name="parenthetical-expressions"></a>かっこで囲まれる式  
+ かっこを使用して、ブール式の評価順序を制御できます。 かっこで囲まれた式は最初に評価されます。 入れ子のレベルが複数ある場合は、最も深い入れ子になった式に優先順位が与えられます。 かっこ内で、評価は演算子の優先順位の規則に従って行われます。 詳細については、「 [Visual Basic での演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic の論理演算子とビット処理演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [値の比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [ステートメント](../../../../visual-basic/programming-guide/language-features/statements.md)
 - [比較演算子](../../../../visual-basic/language-reference/operators/comparison-operators.md)

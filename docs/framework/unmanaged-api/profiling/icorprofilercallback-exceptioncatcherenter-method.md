@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445022"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>ICorProfilerCallback::ExceptionCatcherEnter メソッド
-Notifies the profiler that control is being passed to the appropriate `catch` block.  
+適切な `catch` ブロックに制御が渡されていることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,19 +35,19 @@ HRESULT ExceptionCatcherEnter(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in] The identifier of the function containing the `catch` block.  
+ から`catch` ブロックを格納している関数の識別子。  
   
  `objectId`  
- [in] The identifier of the exception being handled.  
+ から処理されている例外の識別子。  
   
-## <a name="remarks"></a>Remarks  
- The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler. An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification. The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.  
+## <a name="remarks"></a>コメント  
+ `ExceptionCatcherEnter` メソッドは、catch ポイントが just-in-time (JIT) コンパイラを使用してコンパイルされたコード内にある場合にのみ呼び出されます。 アンマネージコードまたはランタイムの内部コードでキャッチされた例外は、この通知を呼び出しません。 `objectId` 値は、ガベージコレクションが `ExceptionThrown` 通知以降にオブジェクトを移動した可能性があるため、再度渡されます。  
   
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ プロファイラーは、このメソッドの実装でブロックしないでください。スタックがガベージコレクションを許可する状態にならないため、プリエンプティブガベージコレクションを有効にすることはできません。 プロファイラーがここでブロックし、ガベージコレクションを実行しようとすると、このコールバックが戻るまでランタイムはブロックします。  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ プロファイラーによるこのメソッドの実装では、マネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -56,7 +56,7 @@ HRESULT ExceptionCatcherEnter(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ExceptionCatcherLeave メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)

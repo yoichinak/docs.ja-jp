@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432976"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo メソッド
-Gets a value that indicates the kind of static that applies to the specified field.  
+指定したフィールドに適用される静的の種類を示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,20 +36,20 @@ HRESULT GetStaticFieldInfo (
   
 ## <a name="parameters"></a>パラメーター  
  `classId`  
- [in] The ID of the class in which the static field is defined.  
+ から静的フィールドが定義されているクラスの ID。  
   
  `fieldToken`  
- [in] The metadata token for the static field.  
+ から静的フィールドのメタデータトークン。  
   
  `pFieldInfo`  
- [out] A pointer to a value of the [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.  
+ 入出力指定されたフィールドが静的かどうかを示す[COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md)列挙体の値へのポインター。存在する場合は、フィールドに適用される静的の種類。  
   
-## <a name="remarks"></a>Remarks  
- This information can be used to determine which function to call to get the address of the static field.  
+## <a name="remarks"></a>コメント  
+ この情報は、静的フィールドのアドレスを取得するために呼び出す関数を決定するために使用できます。  
   
- The profiler code should still check the metadata for a static field to ensure that it actually has an address. Static literals (that is, constants) exist only in the metadata and do not have an address.  
+ プロファイラーコードでは、静的フィールドのメタデータを確認して、実際にアドレスがあることを確認する必要があります。 静的リテラル (つまり、定数) はメタデータにのみ存在し、アドレスを持ちません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -58,7 +58,7 @@ HRESULT GetStaticFieldInfo (
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

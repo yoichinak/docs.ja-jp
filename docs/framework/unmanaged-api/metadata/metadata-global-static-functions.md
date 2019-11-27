@@ -14,9 +14,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447826"
 ---
 # <a name="metadata-global-static-functions"></a>メタデータ グローバル静的関数
-Beginning with the .NET Framework 4, the documentation for the `_Cor*`, `CoInitialize*`, `CoUninitialize*`, and `CoEEShutDownCOM` functions, which pertain to hosting, is located in [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md). メタデータに関連するグローバル静的関数はありません。  
+.NET Framework 4 以降では、ホストに関連する `_Cor*`、`CoInitialize*`、`CoUninitialize*`、および `CoEEShutDownCOM` の各関数のドキュメントは、[非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)にあります。 メタデータに関連するグローバル静的関数はありません。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
  [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  

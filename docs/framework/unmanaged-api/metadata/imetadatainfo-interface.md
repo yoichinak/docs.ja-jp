@@ -28,18 +28,18 @@ ms.locfileid: "74442101"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetFileMapping メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)|Gets the memory region of the mapped file, and the kind of mapping.|  
+|[GetFileMapping メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)|マップされたファイルのメモリ領域とマッピングの種類を取得します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [CorFileMapping 列挙型](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

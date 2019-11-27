@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333037"
 ---
 # <a name="removehandler-statement"></a>RemoveHandler ステートメント
-Removes the association between an event and an event handler.  
+イベントとイベントハンドラーの間の関連付けを削除します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -27,23 +27,23 @@ RemoveHandler event, AddressOf eventhandler
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`event`|The name of the event being handled.|  
-|`eventhandler`|The name of the procedure currently handling the event.|  
+|`event`|処理されるイベントの名前。|  
+|`eventhandler`|イベントを現在処理しているプロシージャの名前。|  
   
-## <a name="remarks"></a>Remarks  
- The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling for a specific event at any time during program execution.  
+## <a name="remarks"></a>コメント  
+ `AddHandler` および `RemoveHandler` ステートメントを使用すると、プログラムの実行中に、特定のイベントのイベント処理をいつでも開始および停止できます。  
   
 > [!NOTE]
-> For custom events, the `RemoveHandler` statement invokes the event's `RemoveHandler` accessor. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+> カスタムイベントの場合は、`RemoveHandler` ステートメントによって、イベントの `RemoveHandler` アクセサーが呼び出されます。 カスタムイベントの詳細については、「 [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [!](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
 - [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448746"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer メソッド
-Determines the buffer for the specified code section.  
+指定されたコードセクションのバッファーを決定します。  
   
- This method is obsolete and should not be used.  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,23 +39,23 @@ HRESULT ComputePointer (
   
 ## <a name="parameters"></a>パラメーター  
  `section`  
- [in] The code section for which to return a buffer.  
+ からバッファーを返す対象のコードセクション。  
   
  `RVA`  
- [in] The relative virtual address of the method for which to get a pointer.  
+ からポインターを取得するメソッドの相対仮想アドレス。  
   
  `lpBuffer`  
- [out] A pointer to the returned buffer.  
+ 入出力返されたバッファーへのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

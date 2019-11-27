@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438130"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2 メソッド
-Opens a method and provides its real section offset in the image.  
+メソッドを開き、イメージ内の実際のセクションオフセットを提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,21 +36,21 @@ HRESULT OpenMethod2(
   
 ## <a name="parameters"></a>パラメーター  
  `method`  
- [in] The metadata token for the method to be opened.  
+ から開くメソッドのメタデータトークン。  
   
  `isect`  
- [in] The section offset in the image.  
+ からイメージ内のセクションオフセット。  
   
  `offset`  
- [in] The offset in the image.  
+ からイメージ内のオフセット。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedWriter3 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
 - [OpenMethod メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

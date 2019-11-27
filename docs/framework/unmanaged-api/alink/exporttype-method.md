@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438571"
 ---
 # <a name="exporttype-method"></a>ExportType メソッド
-Specifies that a type is exportable.  
+型がエクスポート可能であることを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,30 +39,30 @@ HRESULT ExportType(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of the assembly to export from.  
+ エクスポート元のアセンブリの ID。  
   
  `FileToken`  
- File token or assembly ID of file that defines the exportable type.  
+ エクスポート可能な型を定義するファイルのファイルトークンまたはアセンブリ ID。  
   
  `TypeToken`  
- Token of type to be made exportable.  
+ エクスポート可能にする型のトークン。  
   
  `pszTypename`  
- Fully qualified type name to be made exportable.  
+ エクスポート可能にする完全修飾型名。  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `tdPublic` や `tdNested`などのフラグを `ComType` します。 このパラメーターは、この[メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
   
  `pType`  
- Receives token for exported type.  
+ エクスポートされた型のトークンを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439069"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread メソッド
-Maps the ID of a thread to a Win32 thread handle.  
+スレッドの ID を Win32 スレッドハンドルにマップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +35,15 @@ HRESULT GetHandleFromThread(
   
 ## <a name="parameters"></a>パラメーター  
  `threadId`  
- [in] The thread ID to be mapped.  
+ から割り当てられるスレッド ID。  
   
  `phThread`  
- [out] A pointer to a Win32 thread handle.  
+ 入出力Win32 スレッドハンドルへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.  
+## <a name="remarks"></a>コメント  
+ プロファイラーは、使用前にハンドルに対して Win32 `DuplicateHandle` 関数を呼び出す必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -52,6 +52,6 @@ HRESULT GetHandleFromThread(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

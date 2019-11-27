@@ -15,12 +15,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331850"
 ---
 # <a name="on-visual-basic"></a>On (Visual Basic)
-Introduces a response to a run-time error or turns a compiler option on.  
+実行時エラーに対する応答を導入するか、コンパイラオプションをオンにします。  
   
- In queries, identifies keys for the collections being joined.  
+ クエリでは、は、結合されているコレクションのキーを識別します。  
   
-## <a name="remarks"></a>Remarks  
- The `On` keyword is used in these contexts:  
+## <a name="remarks"></a>コメント  
+ `On` キーワードは、次のコンテキストで使用されます。  
   
  [Group Join 句](../../visual-basic/language-reference/queries/group-join-clause.md)  
   
@@ -34,6 +34,6 @@ Introduces a response to a run-time error or turns a compiler option on.
   
  [Option Strict ステートメント](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [キーワード](../../visual-basic/language-reference/keywords/index.md)

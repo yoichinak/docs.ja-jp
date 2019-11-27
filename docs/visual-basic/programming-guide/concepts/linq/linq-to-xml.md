@@ -18,13 +18,13 @@ LINQ to XML には、.NET 統合言語クエリ (LINQ) フレームワークを�
  [はじめに (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
  <xref:System.Xml.Linq?displayProperty=nameWithType> クラスの概念や概要など、LINQ to XML に関する概要を説明します。  
   
- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
+ [プログラミングガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
  LINQ to XML を使用したプログラミングに関する概念と方法について説明します。  
   
  [リファレンス (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/reference-linq-to-xml.md)  
  LINQ to XML の管理に関するリファレンス ドキュメントについて説明します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic における LINQ to XML の概要](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

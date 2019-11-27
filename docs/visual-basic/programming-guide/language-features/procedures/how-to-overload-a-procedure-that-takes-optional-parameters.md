@@ -18,25 +18,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350864"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>方法: 省略可能なパラメーターを受け取るプロシージャをオーバーロードする (Visual Basic)
-If a procedure has one or more [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) parameters, you cannot define an overloaded version matching any of its implicit overloads. For more information, see "Implicit Overloads for Optional Parameters" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
+プロシージャに[省略可能](../../../../visual-basic/language-reference/modifiers/optional.md)なパラメーターが1つ以上ある場合、その暗黙的なオーバーロードのいずれかに一致するオーバーロードされたバージョンを定義することはできません。 詳細については、「[プロシージャのオーバーロードに関する考慮事項](./considerations-in-overloading-procedures.md)」の「省略可能なパラメーターの暗黙のオーバーロード」を参照してください。  
   
-## <a name="one-optional-parameter"></a>One Optional Parameter  
+## <a name="one-optional-parameter"></a>1つの省略可能なパラメーター  
   
-#### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>To overload a procedure that takes one optional parameter  
+#### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>省略可能なパラメーターを1つ受け取るプロシージャをオーバーロードするには  
   
-1. Write a `Sub` or `Function` declaration statement that includes the optional parameter in the parameter list. Do not use the `Optional` keyword in this overloaded version.  
+1. パラメーターリストに省略可能なパラメーターを含む `Sub` または `Function` 宣言ステートメントを記述します。 このオーバーロードされたバージョンでは、`Optional` キーワードを使用しないでください。  
   
-2. Precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.  
+2. `Sub` または `Function` キーワードの前に[Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)キーワードを付けます。  
   
-3. Write the procedure code that should execute when the calling code supplies the optional argument.  
+3. 呼び出し元のコードがオプションの引数を提供するときに実行する必要があるプロシージャコードを記述します。  
   
-4. Terminate the procedure with the `End Sub` or `End Function` statement as appropriate.  
+4. 必要に応じて、`End Sub` または `End Function` ステートメントを使用してプロシージャを終了します。  
   
-5. Write a second declaration statement that is identical to the first declaration except that it does not include the optional parameter in the parameter list.  
+5. パラメーターリストに省略可能なパラメーターが含まれない点を除いて、最初の宣言と同じである2番目の宣言ステートメントを記述します。  
   
-6. Write the procedure code that should execute when the calling code does not supply the optional argument. Terminate the procedure with the `End Sub` or `End Function` statement as appropriate.  
+6. 呼び出し元のコードで省略可能な引数が指定されていない場合に実行するプロシージャコードを記述します。 必要に応じて、`End Sub` または `End Function` ステートメントを使用してプロシージャを終了します。  
   
-     The following example shows a procedure defined with an optional parameter,  an equivalent set of two overloaded procedures, and finally examples of both invalid and valid overloaded versions.  
+     次の例では、省略可能なパラメーターを使用して定義されたプロシージャ、2つのオーバーロードされたプロシージャのセット、および無効なオーバーロードバージョンと有効なオーバーロードされたバージョンの両方の最後の例を示します。  
   
      [!code-vb[VbVbcnProcedures#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#59)]  
   
@@ -44,24 +44,24 @@ If a procedure has one or more [Optional](../../../../visual-basic/language-refe
   
      [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
-## <a name="multiple-optional-parameters"></a>Multiple Optional Parameters  
- For a procedure with more than one optional parameter, you normally need more than two overloaded versions. For example, if there are two optional parameters, and the calling code can supply or omit each one independently of the other, you need four overloaded versions, one for each possible combination of supplied arguments.  
+## <a name="multiple-optional-parameters"></a>複数の省略可能なパラメーター  
+ 省略可能なパラメーターを複数持つプロシージャの場合は、通常、3つ以上のオーバーロードされたバージョンが必要です。 たとえば、2つの省略可能なパラメーターがあり、呼び出し元のコードが互いに独立してそれぞれを指定または省略できる場合は、指定された引数の組み合わせごとに1つずつ、4つのオーバーロードされたバージョンが必要です。  
   
- As the number of optional parameters increases, the complexity of the overloading increases. Unless some combinations of supplied arguments are not acceptable, for N optional parameters you need 2 ^ N overloaded versions. Depending on the nature of the procedure, you might find that the clarity of logic justifies the extra effort of defining all the overloaded versions.  
+ 省略可能なパラメーターの数が増えるにつれて、オーバーロードの複雑さが増します。 指定された引数の組み合わせが受け入れられない場合は、N 個の省略可能なパラメーターについては、2 ^ N のオーバーロードされたバージョンが必要です。 プロシージャの性質によっては、オーバーロードされたすべてのバージョンを定義する余分な作業をロジックが明確にすることがわかります。  
   
-#### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>To overload a procedure that takes more than one optional parameter  
+#### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>複数の省略可能なパラメーターを受け取るプロシージャをオーバーロードするには  
   
-1. Determine which combinations of supplied optional arguments are acceptable to the logic of the procedure. An unacceptable combination might arise if one optional parameter depends on another. For example, if one parameter accepts a person's name and another accepts the person's age, a combination of arguments supplying the age but omitting the name is unacceptable.  
+1. 指定された省略可能な引数の組み合わせを、プロシージャのロジックに対して使用できるかどうかを判断します。 1つの省略可能なパラメーターが別のパラメーターに依存している場合、許容されない組み合わせが発生する可能性が たとえば、1つのパラメーターが人名を受け取り、別のパラメーターがその年齢を受け入れる場合、age を指定し、名前を省略する引数の組み合わせは使用できません。  
   
-2. For each acceptable combination of supplied optional arguments, write a `Sub` or `Function` declaration statement that defines the corresponding parameter list. Do not use the `Optional` keyword.  
+2. 指定された省略可能な引数の組み合わせを使用できる場合は、対応するパラメーターリストを定義する `Sub` または `Function` 宣言ステートメントを記述します。 `Optional` キーワードは使用しないでください。  
   
-3. In each declaration, precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.  
+3. 各宣言で、`Sub` または `Function` キーワードの前に[Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)キーワードを使用します。  
   
-4. Following each declaration, write the procedure code that should execute when the calling code supplies an argument list corresponding to that declaration's parameter list.  
+4. 各宣言の後に、呼び出し元のコードがその宣言のパラメーターリストに対応する引数リストを提供するときに実行する必要があるプロシージャコードを記述します。  
   
-5. Terminate each procedure with the `End Sub` or `End Function` statement as appropriate.  
+5. 必要に応じて、`End Sub` または `End Function` ステートメントを使用して各プロシージャを終了します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)

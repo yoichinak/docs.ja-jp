@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427270"
 ---
 # <a name="cor_prf_snapshot_info-enumeration"></a>COR_PRF_SNAPSHOT_INFO 列挙型
-Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.  
+プロファイラーの[Stacksnapshotcallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)関数を呼び出すたびに、スタックスナップショットで返すデータ量を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,14 +38,14 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
 |メンバー|説明|  
 |-------------|-----------------|  
-|`COR_PRF_SNAPSHOT_DEFAULT`|Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.|  
-|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.|  
-|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|Indicates that a simpler, alternative stack-walking algorithm will be used.|  
+|`COR_PRF_SNAPSHOT_DEFAULT`|`context` パラメーターを除くすべての `StackSnapshotCallback` パラメーターに対して値を渡す必要があることを示します。|  
+|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|`context` パラメーターを含め、すべての `StackSnapshotCallback` パラメーターに対して値を渡す必要があることを示します。|  
+|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|よりシンプルで代替のスタックウォークアルゴリズムが使用されることを示します。|  
   
-## <a name="remarks"></a>Remarks  
- Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
+## <a name="remarks"></a>コメント  
+ `COR_PRF_SNAPSHOT_INFO` 列挙体によって指定された値は、 [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)メソッドにパラメーターとして渡されます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -54,7 +54,7 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DoStackSnapshot メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
 - [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

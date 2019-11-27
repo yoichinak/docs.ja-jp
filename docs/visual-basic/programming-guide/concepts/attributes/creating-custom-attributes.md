@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350145"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a>Creating Custom Attributes (Visual Basic)
+# <a name="creating-custom-attributes-visual-basic"></a>カスタム属性の作成 (Visual Basic)
 
 属性クラスを定義することで、独自のカスタム属性を作成できます。属性クラスは、<xref:System.Attribute> の直接的または間接的な派生クラスです。これにより、メタデータの中で属性の定義をすばやく簡単に特定できます。 型にそれを記述したプログラマーの名前でタグを付けるとします。 `Author` というカスタム属性クラスを定義します。
 
@@ -27,7 +27,7 @@ Public Class Author
 End Class
 ```
 
-クラス名は属性の名前の `Author` です。 このクラスは `System.Attribute` から派生しているので、カスタム属性クラスです。 コンストラクターのパラメーターはカスタム属性の位置指定パラメーターです。 この例では、`name` が位置指定パラメーターになります。 パブリックな読み取り/書き込みフィールドまたはプロパティは名前付きパラメーターです。 この場合は、`version` が唯一の名前付きパラメーターです。 `AttributeUsage` 属性を使用して、クラスと `Structure` の宣言に対してのみ `Author` 属性を有効にしていることに注意してください。
+クラス名は属性の名前の `Author` です。 このクラスは `System.Attribute` から派生しているので、カスタム属性クラスです。 コンストラクターのパラメーターはカスタム属性の位置指定パラメーターです。 この例では、`name` が位置指定パラメーターになります。 パブリックな読み取り/書き込みフィールドまたはプロパティは名前付きパラメーターです。 この場合は、`version` が唯一の名前付きパラメーターです。 `AttributeUsage` 属性を使用して、クラスと `Author` の宣言に対してのみ `Structure` 属性を有効にしていることに注意してください。
 
 この新しい属性の使用方法は次のとおりです。
 
@@ -63,7 +63,7 @@ End Class
 > [!NOTE]
 > 属性クラスにプロパティが含まれている場合、そのプロパティは読み取り/書き込み可能である必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Reflection>
 - [Visual Basic のプログラミング ガイド](../../../../visual-basic/programming-guide/index.md)

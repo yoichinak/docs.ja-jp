@@ -14,35 +14,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330439"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic での XML の操作
-You can use *XML literals* to load XML from an external source such as a string, file, or stream. You can then use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to manipulate the XML and use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] to query the XML.  
+*Xml リテラル*を使用して、文字列、ファイル、ストリームなどの外部ソースから xml を読み込むことができます。 次に、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して XML を操作し、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] を使用して XML にクエリを実行できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法 : ファイル、文字列、またはストリームからの XML の読み込み](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
- Demonstrates how to load XML into an <xref:System.Xml.Linq.XDocument> or <xref:System.Xml.Linq.XElement> object from a text file, string, or stream.  
+ テキストファイル、文字列、またはストリームから <xref:System.Xml.Linq.XDocument> または <xref:System.Xml.Linq.XElement> オブジェクトに XML を読み込む方法について説明します。  
   
  [方法 : LINQ を使用した XML の変換](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
- Demonstrates how to transform the contents of an <xref:System.Xml.Linq.XDocument> object into a new XML document.  
+ <xref:System.Xml.Linq.XDocument> オブジェクトの内容を新しい XML ドキュメントに変換する方法を示します。  
   
  [方法 : XML リテラルの変更](../../../../visual-basic/programming-guide/language-features/xml/how-to-modify-xml-literals.md)  
- Demonstrates how to modify the elements, attributes, and values in an XML literal.  
+ XML リテラル内の要素、属性、および値を変更する方法を示します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [XML 軸プロパティ](../../../../visual-basic/language-reference/xml-axis/index.md)  
- Provides links to sections that describe the various XML access properties.  
+ さまざまな XML アクセスプロパティについて説明するセクションへのリンクを示します。  
   
  [Visual Basic における LINQ to XML の概要](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ Visual Basic での [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の使用方法について説明します。  
   
  [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- Provides an introduction to using XML literals in Visual Basic.  
+ Visual Basic での XML リテラルの使用方法について説明します。  
   
  [Visual Basic での XML へのアクセス](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
- Demonstrates how to access parts of an XML element or document in Visual Basic.  
+ Visual Basic 内の XML 要素またはドキュメントの一部にアクセスする方法を示します。  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Provides links to sections that describe how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ Visual Basic での [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の使用方法について説明するセクションへのリンクを示します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

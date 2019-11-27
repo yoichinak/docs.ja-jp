@@ -1,5 +1,5 @@
 ---
-title: CorFileMapping 列挙体
+title: CorFileMapping 列挙型
 ms.date: 03/30/2017
 api_name:
 - CorFileMapping
@@ -21,8 +21,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450297"
 ---
-# <a name="corfilemapping-enumeration"></a>CorFileMapping 列挙体
-Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.  
+# <a name="corfilemapping-enumeration"></a>CorFileMapping 列挙型
+[IMetaDataInfo:: GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)メソッドの呼び出しから返されるファイルマッピングの種類を記述する値を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,17 +39,17 @@ typedef enum CorFileMapping {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`fmFlat`|The file is mapped as a data file. That is, the `SEC_IMAGE` flag was not passed to the Microsoft Win32 `CreateFileMapping` function.|  
-|`fmExecutableImage`|The file is mapped for execution, by using either the `LoadLibrary` function or the `CreateFileMapping` function with the `SEC_IMAGE` flag.|  
+|`fmFlat`|ファイルはデータファイルとしてマップされます。 つまり、`SEC_IMAGE` フラグが Microsoft Win32 `CreateFileMapping` 関数に渡されませんでした。|  
+|`fmExecutableImage`|ファイルは、`LoadLibrary` 関数または `SEC_IMAGE` フラグを持つ `CreateFileMapping` 関数のいずれかを使用して、実行用にマップされます。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
 - [GetFileMapping メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)

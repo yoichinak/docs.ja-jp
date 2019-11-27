@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431733"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>IMetaDataEmit::DefineModuleRef メソッド
-Creates the metadata signature for a module with the specified name.  
+指定された名前を持つモジュールのメタデータシグネチャを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,21 +36,21 @@ HRESULT DefineModuleRef (
   
 ## <a name="parameters"></a>パラメーター  
  `szName`  
- [in] The name of the other metadata file, typically a DLL. This is the file name only. Do not use a full path name.  
+ から他のメタデータファイルの名前 (通常は DLL)。 これはファイル名のみです。 完全なパス名は使用しないでください。  
   
  `pmur`  
- [out] The assigned `mdModuleRef` token.  
+ 入出力割り当てられた `mdModuleRef` トークン。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -19,27 +19,27 @@ ms.locfileid: "74352552"
 ---
 # <a name="recursive-procedures-visual-basic"></a>再帰プロシージャ (Visual Basic)
 
-A *recursive* procedure is one that calls itself. In general, this is not the most effective way to write Visual Basic code.  
+*再帰*プロシージャは、それ自体を呼び出すものです。 一般に、これは Visual Basic コードを記述するための最も効果的な方法ではありません。  
   
- The following procedure uses recursion to calculate the factorial of its original argument.  
+ 次の手順では、再帰を使用して、元の引数の階乗を計算します。  
   
  [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
-## <a name="considerations-with-recursive-procedures"></a>Considerations with Recursive Procedures
+## <a name="considerations-with-recursive-procedures"></a>再帰プロシージャに関する考慮事項
 
- **Limiting Conditions**. You must design a recursive procedure to test for at least one condition that can terminate the recursion, and you must also handle the case where no such condition is satisfied within a reasonable number of recursive calls. Without at least one condition that can be met without fail, your procedure runs a high risk of executing in an infinite loop.
+ **条件の制限**。 再帰プロシージャは、再帰を終了できる条件が少なくとも1つ必要であることをテストするように設計する必要があります。また、適切な数の再帰呼び出しで条件が満たされない場合にも処理する必要があります。 失敗せずに1つ以上の条件を満たすことができない場合、プロシージャは無限ループで実行されるリスクが高くなります。
 
- **メモリ使用状況**。 Your application has a limited amount of space for local variables. Each time a procedure calls itself, it uses more of that space for additional copies of its local variables. If this process continues indefinitely, it eventually causes a <xref:System.StackOverflowException> error.
+ **メモリ使用状況**。 アプリケーションのローカル変数には、限られた量の領域があります。 プロシージャがそれ自体を呼び出すたびに、そのローカル変数のコピーを追加するために、その領域を使用します。 この処理が無期限に続行されると、最終的に <xref:System.StackOverflowException> エラーが発生します。
 
- **Efficiency**. You can almost always substitute a loop for recursion. A loop does not have the overhead of passing arguments, initializing additional storage, and returning values. Your performance can be much better without recursive calls.
+ **効率**。 ほとんどの場合、再帰のためにループを置き換えることができます。 ループには、引数を渡したり、追加のストレージを初期化したり、値を返したりするオーバーヘッドがありません。 再帰呼び出しを行わないと、パフォーマンスが大幅に向上します。
 
- **Mutual Recursion**. You might observe very poor performance, or even an infinite loop, if two procedures call each other. Such a design presents the same problems as a single recursive procedure, but can be harder to detect and debug.
+ **相互再帰**。 2つのプロシージャが互いに呼び出す場合、パフォーマンスが低下したり、無限ループが発生したりする可能性があります。 このような設計では、単一の再帰プロシージャと同じ問題が発生しますが、検出とデバッグが困難な場合があります。
 
- **Calling with Parentheses**. When a `Function` procedure calls itself recursively, you must follow the procedure name with parentheses, even if there is no argument list. Otherwise, the function name is taken as representing the return value of the function.
+ **かっこを使用してを呼び出して**います。 `Function` プロシージャがそれ自体を再帰的に呼び出す場合は、引数リストがない場合でも、プロシージャ名の後にかっこを指定する必要があります。 それ以外の場合、関数名は関数の戻り値を表すものとして取得されます。
 
- **Testing**. If you write a recursive procedure, you should test it very carefully to make sure it always meets some limiting condition. You should also ensure that you cannot run out of memory due to having too many recursive calls.
+ **テスト**。 再帰プロシージャを記述する場合は、常に一定の制限条件を満たしていることを確認するために、慎重にテストする必要があります。 また、再帰呼び出しが多すぎるため、メモリが不足することがないようにする必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.StackOverflowException>
 - [手順](index.md)

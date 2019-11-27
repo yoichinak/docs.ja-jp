@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446501"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes メソッド
-Emits types added to the assembly. Call this method after known internal types have been added.  
+アセンブリに追加された型を出力します。 既知の内部型が追加された後に、このメソッドを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +35,15 @@ HRESULT EmitInternalExportedTypes(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of assembly.  
+ アセンブリの ID。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink2 インターフェイス](ialink2-interface.md)
 - [IALink インターフェイス](ialink-interface.md)

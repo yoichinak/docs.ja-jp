@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348345"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>How to: Write a LINQ to XML Axis Method (Visual Basic)
+# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>方法: LINQ to XML 軸メソッドを記述する (Visual Basic)
 XML ツリーからコレクションを取得する独自の軸メソッドを記述できます。 これを行うための最適な方法の 1 つは、要素または属性のコレクションを返す拡張メソッドを記述することです。 アプリケーションの要件に基づいて、要素または属性の特定のサブセットを返す拡張メソッドを記述できます。  
   
 ## <a name="example"></a>例  
@@ -215,6 +215,6 @@ End Module
 1999-10-22  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [高度なクエリ手法 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

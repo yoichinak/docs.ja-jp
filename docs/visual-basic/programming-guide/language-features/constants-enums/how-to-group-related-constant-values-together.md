@@ -13,19 +13,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354041"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a>方法: 関連する定数値をまとめてグループ化する (Visual Basic)
-An enumeration is the best way to group related constants together. You create an enumeration with the `Enum` statement in the declarations section of a class or a module. For more information, see [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md).  
+列挙は、関連する定数をグループ化するための最適な方法です。 列挙体を作成するには、クラスまたはモジュールの宣言セクションにある `Enum` ステートメントを使用します。 詳細については、「[方法: 列挙型を宣言](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)する」を参照してください。  
   
-### <a name="to-group-related-constant-values"></a>To group related constant values  
+### <a name="to-group-related-constant-values"></a>関連する定数値をグループ化するには  
   
-1. Write a declaration that includes a code access level, the `Enum` keyword, and a valid name. This example creates the `Private` enumeration, `temperatureValues`.  
+1. コードアクセスレベル、`Enum` キーワード、および有効な名前を含む宣言を記述します。 この例では、`Private` 列挙型、`temperatureValues`を作成します。  
   
      [!code-vb[VbEnumsTask#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#21)]  
   
-2. Define the constants in the enumeration. This example creates the `Public` enumeration `temperatureValues` and assigns its values.  
+2. 列挙体の定数を定義します。 この例では、`Public` 列挙 `temperatureValues` を作成し、その値を割り当てます。  
   
      [!code-vb[VbEnumsTask#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#1)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [列挙型と名前の修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [方法 : 列挙型のメンバーを参照する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)

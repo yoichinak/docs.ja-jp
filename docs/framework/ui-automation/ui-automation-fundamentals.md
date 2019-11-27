@@ -15,9 +15,9 @@ ms.locfileid: "74441378"
 ---
 # <a name="ui-automation-fundamentals"></a>UI オートメーションの基礎
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
   
- This section contains high-level overviews of the [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API.  
+ このセクションには、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API の概要が記載されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [UI オートメーションの概要](ui-automation-overview.md)  
@@ -29,7 +29,7 @@ ms.locfileid: "74441378"
  [UI オートメーションのセキュリティの概要](ui-automation-security-overview.md)  
  [UI オートメーションによる自動テスト](using-ui-automation-for-automated-testing.md)  
   
-## <a name="reference"></a>辞書／辞典／その他  
+## <a name="reference"></a>参照  
  <xref:System.Windows.Automation>  
   
  <xref:System.Windows.Automation.Provider>  

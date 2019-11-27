@@ -14,21 +14,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340957"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>方法: 値を返さないプロシージャを呼び出す (Visual Basic)
-A `Sub` procedure does not return a value to the calling code. You call it explicitly with a stand-alone calling statement. You cannot call it by simply using its name within an expression.  
+`Sub` プロシージャは、呼び出し元のコードに値を返しません。 これは、スタンドアロンの呼び出しステートメントを使用して明示的に呼び出します。 単に式の中で名前を使用して呼び出すことはできません。  
   
-### <a name="to-call-a-sub-procedure"></a>To call a Sub procedure  
+### <a name="to-call-a-sub-procedure"></a>Sub プロシージャを呼び出すには  
   
-1. Specify the name of the `Sub` procedure.  
+1. `Sub` プロシージャの名前を指定します。  
   
-2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
+2. 引数リストを囲むには、プロシージャ名をかっこで囲みます。 引数がない場合は、必要に応じてかっこを省略できます。 ただし、かっこを使用すると、コードが読みやすくなります。  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Sub` procedure defines the corresponding parameters.  
+3. 引数リストに引数をコンマで区切ってかっこ内に配置します。 引数は、`Sub` プロシージャが対応するパラメーターを定義する順序と同じ順序で指定してください。  
   
-     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> function to activate an application window. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> takes the window title as its sole argument. It does not return a value to the calling code. If a Notepad process is not running, the example throws an <xref:System.ArgumentException>. The `Shell` procedure assumes the applications are in the paths specified.  
+     次の例では、Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> 関数を呼び出して、アプリケーションウィンドウをアクティブにします。 <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> は、ウィンドウのタイトルを唯一の引数として受け取ります。 呼び出し元のコードに値は返されません。 メモ帳のプロセスが実行されていない場合、この例では <xref:System.ArgumentException>がスローされます。 `Shell` の手順では、アプリケーションが指定されたパスにあることを前提としています。  
   
      [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
 - <xref:System.ArgumentException>
@@ -38,4 +38,4 @@ A `Sub` procedure does not return a value to the calling code. You call it expli
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [方法 : プロシージャを作成する](./how-to-create-a-procedure.md)
 - [方法: 値を返すプロシージャを呼び出す](./how-to-call-a-procedure-that-returns-a-value.md)
-- [How to: Call an Event Handler in Visual Basic](./how-to-call-an-event-handler.md)
+- [方法: Visual Basic でイベントハンドラーを呼び出す](./how-to-call-an-event-handler.md)

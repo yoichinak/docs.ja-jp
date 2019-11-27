@@ -62,35 +62,35 @@ typedef enum CorAttributeTargets
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`catAssembly`|Attribute can be applied to an assembly.|  
-|`catModule`|Attribute can be applied to a portable executable (.dll or .exe) module.|  
-|`catClass`|Attribute can be applied to a class.|  
-|`catStruct`|Attribute can be applied to a structure; that is, a value type.|  
-|`catEnum`|Attribute can be applied to an enumeration.|  
-|`catConstructor`|Attribute can be applied to a constructor.|  
-|`catMethod`|Attribute can be applied to a method.|  
-|`catProperty`|Attribute can be applied to a property.|  
-|`catField`|Attribute can be applied to a field.|  
-|`catEvent`|Attribute can be applied to an event.|  
-|`catInterface`|Attribute can be applied to an interface.|  
-|`catParameter`|Attribute can be applied to a parameter.|  
-|`catDelegate`|Attribute can be applied to a delegate.|  
-|`catGenericParameter`|Attribute can be applied to a generic parameter.|  
-|`catAll`|Attribute can be applied to any application element.|  
-|`catClassMembers`|Attribute can be applied to a member of a class.|  
+|`catAssembly`|アセンブリに属性を適用できます。|  
+|`catModule`|属性は、移植可能な実行可能ファイル (.dll または .exe) モジュールに適用できます。|  
+|`catClass`|クラスに属性を適用できます。|  
+|`catStruct`|構造体に属性を適用できます。つまり、値型です。|  
+|`catEnum`|属性を列挙に適用できます。|  
+|`catConstructor`|コンストラクターに属性を適用できます。|  
+|`catMethod`|メソッドに属性を適用できます。|  
+|`catProperty`|属性をプロパティに適用できます。|  
+|`catField`|フィールドに属性を適用できます。|  
+|`catEvent`|イベントに属性を適用できます。|  
+|`catInterface`|インターフェイスに属性を適用できます。|  
+|`catParameter`|パラメーターに属性を適用できます。|  
+|`catDelegate`|デリゲートに属性を適用できます。|  
+|`catGenericParameter`|ジェネリックパラメーターに属性を適用できます。|  
+|`catAll`|任意のアプリケーション要素に属性を適用できます。|  
+|`catClassMembers`|属性は、クラスのメンバーに適用できます。|  
   
-## <a name="remarks"></a>Remarks  
- The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.  
+## <a name="remarks"></a>コメント  
+ `CorAttributeTargets` 列挙値をビットごとの OR 演算と組み合わせて、適切な組み合わせを取得できます。  
   
- The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.  
+ `CorAttributeTargets` は、マネージ <xref:System.AttributeTargets?displayProperty=nameWithType> 列挙体と同じです。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

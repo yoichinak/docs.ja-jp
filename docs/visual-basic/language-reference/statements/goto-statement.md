@@ -21,7 +21,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351083"
 ---
 # <a name="goto-statement"></a>GoTo ステートメント
-Branches unconditionally to a specified line in a procedure.  
+プロシージャ内の指定された行に無条件に分岐します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,39 +29,39 @@ Branches unconditionally to a specified line in a procedure.
 GoTo line  
 ```  
   
-## <a name="part"></a>パーツ  
+## <a name="part"></a>要素  
  `line`  
- 必須です。 Any line label.  
+ 必須。 任意の行ラベル。  
   
-## <a name="remarks"></a>Remarks  
- The `GoTo` statement can branch only to lines in the procedure in which it appears. The line must have a line label that `GoTo` can refer to. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+## <a name="remarks"></a>コメント  
+ `GoTo` ステートメントは、そのステートメントが出現するプロシージャ内の行にのみ分岐できます。 線には、`GoTo` が参照できる行ラベルが必要です。 詳細については、「 [How to: Label ステートメント](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)」を参照してください。  
   
 > [!NOTE]
-> `GoTo` statements can make code difficult to read and maintain. Whenever possible, use a control structure instead. For more information, see [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+> `GoTo` ステートメントを使用すると、コードの読み取りと保守が困難になる場合があります。 可能な限り、代わりに制御構造を使用してください。 詳細については、「[制御フロー](../../../visual-basic/programming-guide/language-features/control-flow/index.md)」を参照してください。  
   
- You cannot use a `GoTo` statement to branch from outside a `For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, or `Using`...`End Using` construction to a label inside.  
+ `GoTo` ステートメントを使用して `For`の外部から分岐することはできません...`Next`、`For Each`...`Next`、`SyncLock`...`End SyncLock`、`Try`...`Catch`、`Finally`... `With`、`End With`の構造を内部のラベルにします。`Using``End Using`  
   
-## <a name="branching-and-try-constructions"></a>Branching and Try Constructions  
- Within a `Try`...`Catch`...`Finally` construction, the following rules apply to branching with the `GoTo` statement.  
+## <a name="branching-and-try-constructions"></a>分岐と Try の構造  
+ `Try`...`Catch``Finally` 構築では、`GoTo` ステートメントを使用した分岐に次の規則が適用されます。  
   
-|Block or region|Branching in from outside|Branching out from inside|  
+|ブロックまたはリージョン|外部からの分岐|内部からの分岐|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try` block|Only from a `Catch` block of the same construction <sup>1</sup>|Only to outside the whole construction|  
-|`Catch` block|Never allowed|Only to outside the whole construction, or to the `Try` block of the same construction <sup>1</sup>|  
-|`Finally` block|Never allowed|Never allowed|  
+|`Try` ブロック|同じ構築の `Catch` ブロックからのみ<sup>1</sup>|構築全体の外側にのみ|  
+|`Catch` ブロック|許可しない|構築全体の外側、または<sup>同じ構造体</sup>の `Try` ブロックにのみ|  
+|`Finally` ブロック|許可しない|許可しない|  
   
- <sup>1</sup> If one `Try`...`Catch`...`Finally` construction is nested within another, a `Catch` block can branch into the `Try` block at its own nesting level, but not into any other `Try` block. A nested `Try`...`Catch`...`Finally` construction must be contained completely in a `Try` or `Catch` block of the construction within which it is nested.  
+ <sup>1</sup> `Try`...`Catch`...`Finally` 構築が別の構造体に入れ子になっている場合、`Catch` ブロックは独自の入れ子レベルで `Try` ブロックに分岐できますが、他の `Try` ブロックには分岐できません。 入れ子になった `Try`...`Catch``Finally` 構築は、入れ子になっている構築の `Try` または `Catch` ブロックに完全に含まれている必要があります。  
   
- The following illustration shows one `Try` construction nested within another. Various branches among the blocks of the two constructions are indicated as valid or invalid.  
+ 次の図は、別の `Try` 構築を入れ子にしたものを示しています。 2つの構造のブロック間のさまざまな分岐は、有効または無効として示されます。  
   
  ![Try 構造内の分岐のグラフィック ダイアグラム](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>例  
- The following example uses the `GoTo` statement to branch to line labels in a procedure.  
+ 次の例では、`GoTo` ステートメントを使用して、プロシージャ内の行ラベルに分岐します。  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)
 - [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)

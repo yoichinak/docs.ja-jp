@@ -19,60 +19,60 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352532"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub プロシージャ (Visual Basic)
-A `Sub` procedure is a series of Visual Basic statements enclosed by the `Sub` and `End Sub` statements. The `Sub` procedure performs a task and then returns control to the calling code, but it does not return a value to the calling code.  
+`Sub` プロシージャは、`Sub` および `End Sub` ステートメントで囲まれた一連の Visual Basic ステートメントです。 `Sub` プロシージャはタスクを実行した後、呼び出し元のコードに制御を戻しますが、呼び出し元のコードには値を返しません。  
   
- Each time the procedure is called, its statements are executed, starting with the first executable statement after the `Sub` statement and ending with the first `End Sub`, `Exit Sub`, or `Return` statement encountered.  
+ プロシージャが呼び出されるたびに、ステートメントが実行されます。これは、`Sub` ステートメントの後の最初の実行可能ステートメントから開始し、最初の `End Sub`、`Exit Sub`、または `Return` ステートメントで終了します。  
   
- You can define a `Sub` procedure in modules, classes, and structures. By default, it is `Public`, which means you can call it from anywhere in your application that has access to the module, class, or structure in which you defined it. The term, *method*, describes a `Sub` or `Function` procedure that is accessed from outside its defining module, class, or structure. 詳細については、「[プロシージャ](./index.md)」を参照してください。  
+ モジュール、クラス、および構造体で `Sub` プロシージャを定義できます。 既定では `Public`になっています。これは、アプリケーション内の任意の場所から、これを定義したモジュール、クラス、または構造体にアクセスできることを意味します。 *メソッド*は、定義されているモジュール、クラス、または構造体の外部からアクセスされる、`Sub` または `Function` プロシージャを記述します。 詳細については、「[プロシージャ](./index.md)」を参照してください。  
   
- A `Sub` procedure can take arguments, such as constants, variables, or expressions, which are passed to it by the calling code.  
+ `Sub` プロシージャは、呼び出し元のコードによって渡される定数、変数、式などの引数を受け取ることができます。  
   
 ## <a name="declaration-syntax"></a>宣言の構文  
- The syntax for declaring a `Sub` procedure is as follows:  
+ `Sub` プロシージャを宣言する構文は次のとおりです。  
   
- `[` *modifiers* `] Sub`  *subname* `[(` *parameterlist* `)]`  
+ `[`*修飾子*`] Sub`*subname* `[(` *parameterlist* `)]`  
   
  `' Statements of the Sub procedure.`  
   
  `End Sub`  
   
- The `modifiers` can specify access level and information about overloading, overriding, sharing, and shadowing. For more information, see [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ `modifiers` では、アクセスレベルと、オーバーロード、オーバーライド、共有、およびシャドウに関する情報を指定できます。 詳細については、「 [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)」を参照してください。  
   
-## <a name="parameter-declaration"></a>Parameter Declaration  
- You declare each procedure parameter similarly to how you declare a variable, specifying the parameter name and data type. You can also specify the passing mechanism, and whether the parameter is optional or a parameter array.  
+## <a name="parameter-declaration"></a>パラメーターの宣言  
+ パラメーター名とデータ型を指定して、変数を宣言するのと同じように各プロシージャパラメーターを宣言します。 また、渡す機構と、パラメーターが省略可能またはパラメーター配列であるかどうかを指定することもできます。  
   
- The syntax for each parameter in the parameter list is as follows:  
+ パラメーターリストの各パラメーターの構文は次のとおりです。  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*  `As`  *datatype*  
+ `[Optional] [ByVal | ByRef] [ParamArray]`*parametername*`As`*datatype*  
   
- If the parameter is optional, you must also supply a default value as part of its declaration. The syntax for specifying a default value is as follows:  
+ パラメーターが省略可能な場合は、宣言の一部として既定値を指定する必要もあります。 既定値を指定する構文は次のとおりです。  
   
- `Optional [ByVal | ByRef]`  *parametername*  `As`  *datatype*  `=`  *defaultvalue*  
+ `Optional [ByVal | ByRef]`*parametername*`As`*datatype*`=`*defaultvalue*  
   
-### <a name="parameters-as-local-variables"></a>Parameters as Local Variables  
- When control passes to the procedure, each parameter is treated as a local variable. This means that its lifetime is the same as that of the procedure, and its scope is the whole procedure.  
+### <a name="parameters-as-local-variables"></a>ローカル変数としてのパラメーター  
+ コントロールがプロシージャに渡されると、各パラメーターはローカル変数として扱われます。 これは、その有効期間がプロシージャの有効期間と同じであり、そのスコープがプロシージャ全体であることを意味します。  
   
-## <a name="calling-syntax"></a>Calling Syntax  
- You invoke a `Sub` procedure explicitly with a stand-alone calling statement. You cannot call it by using its name in an expression. You must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses. The use of the `Call` keyword is optional but not recommended.  
+## <a name="calling-syntax"></a>呼び出し構文  
+ `Sub` プロシージャは、スタンドアロンの呼び出しステートメントを使用して明示的に呼び出すことができます。 式で名前を使用して呼び出すことはできません。 省略可能なすべての引数の値を指定する必要があり、引数リストをかっこで囲む必要があります。 引数を指定しない場合は、必要に応じてかっこを省略できます。 `Call` キーワードの使用は省略可能ですが、推奨されません。  
   
- The syntax for a call to a `Sub` procedure is as follows:  
+ `Sub` プロシージャの呼び出しの構文は次のとおりです。  
   
- `[Call]`  *subname* `[(` *argumentlist* `)]`  
+ `[Call]`*subname* `[(` *argumentlist* `)]`  
   
- You can call a `Sub` method from outside the class that defines it. First, you have to use the `New` keyword to create an instance of the class, or call a method that returns an instance of the class. For more information, see [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md). Then, you can use the following syntax to call the `Sub` method on the instance object:  
+ `Sub` メソッドは、それを定義するクラスの外部から呼び出すことができます。 最初に、`New` キーワードを使用してクラスのインスタンスを作成するか、クラスのインスタンスを返すメソッドを呼び出す必要があります。 詳細については、「 [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md)」を参照してください。 その後、次の構文を使用して、インスタンスオブジェクトの `Sub` メソッドを呼び出すことができます。  
   
- *Object*.*methodname*`[(`*argumentlist*`)]`  
+ *オブジェクト*。*methodname*`[(`*argumentlist*`)]`  
   
-### <a name="illustration-of-declaration-and-call"></a>Illustration of Declaration and Call  
- The following `Sub` procedure tells the computer operator which task the application is about to perform, and also displays a time stamp. Instead of duplicating this code at the start of every task, the application just calls `tellOperator` from various locations. Each call passes a string in the `task` argument that identifies the task being started.  
+### <a name="illustration-of-declaration-and-call"></a>宣言と呼び出しの図  
+ 次の `Sub` 手順では、アプリケーションが実行しようとしているタスクをコンピューターオペレーターに指示し、タイムスタンプも表示します。 すべてのタスクの開始時にこのコードを複製するのではなく、アプリケーションはさまざまな場所から `tellOperator` を呼び出します。 各呼び出しは、開始されるタスクを識別する `task` 引数に文字列を渡します。  
   
  [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
- The following example shows a typical call to `tellOperator`.  
+ 次の例は、`tellOperator`の一般的な呼び出しを示しています。  
   
  [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [Function プロシージャ](./function-procedures.md)
@@ -81,4 +81,4 @@ A `Sub` procedure is a series of Visual Basic statements enclosed by the `Sub` a
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [方法 : 値を返さないプロシージャを呼び出す](./how-to-call-a-procedure-that-does-not-return-a-value.md)
-- [How to: Call an Event Handler in Visual Basic](./how-to-call-an-event-handler.md)
+- [方法: Visual Basic でイベントハンドラーを呼び出す](./how-to-call-an-event-handler.md)

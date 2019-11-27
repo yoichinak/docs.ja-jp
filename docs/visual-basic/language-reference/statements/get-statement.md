@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351173"
 ---
 # <a name="get-statement"></a>Get ステートメント
-Declares a `Get` property procedure used to retrieve the value of a property.  
+プロパティの値を取得するために使用される `Get` プロパティプロシージャを宣言します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,45 +31,45 @@ End Get
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`attributelist`|省略可能です。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Optional on at most one of the `Get` and `Set` statements in this property. 次のいずれかの値を指定します。<br /><br /> -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
-|`statements`|省略可能です。 One or more statements that run when the `Get` property procedure is called.|  
-|`End Get`|必須です。 Terminates the definition of the `Get` property procedure.|  
+|`attributelist`|省略可。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。|  
+|`accessmodifier`|このプロパティの `Get` および `Set` ステートメントのうちの1つで、省略可能です。 次のいずれかになります。<br /><br /> [保護されている](../../../visual-basic/language-reference/modifiers/protected.md)-   <br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [プライベート](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
+|`statements`|省略可。 `Get` プロパティプロシージャが呼び出されたときに実行される1つ以上のステートメント。|  
+|`End Get`|必須。 `Get` property プロシージャの定義を終了します。|  
   
-## <a name="remarks"></a>Remarks  
- Every property must have a `Get` property procedure unless the property is marked `WriteOnly`. The `Get` procedure is used to return the current value of the property.  
+## <a name="remarks"></a>コメント  
+ プロパティが `WriteOnly`としてマークされている場合を除き、すべてのプロパティには `Get` プロパティプロシージャが必要です。 `Get` プロシージャは、プロパティの現在の値を返すために使用されます。  
   
- Visual Basic automatically calls a property's `Get` procedure when an expression requests the property's value.  
+ Visual Basic は、プロパティの値を式が要求すると、プロパティの `Get` プロシージャを自動的に呼び出します。  
   
- The body of the property declaration can contain only the property's `Get` and `Set` procedures between the [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. It cannot store anything other than those procedures. In particular, it cannot store the property's current value. You must store this value outside the property, because if you store it inside either of the property procedures, the other property procedure cannot access it. The usual approach is to store the value in a [Private](../../../visual-basic/language-reference/modifiers/private.md) variable declared at the same level as the property. You must define a `Get` procedure inside the property to which it applies.  
+ プロパティ宣言の本体には、プロパティの `Get` と、[プロパティステートメント](../../../visual-basic/language-reference/statements/property-statement.md)と `End Property` ステートメントの間の `Set` プロシージャのみを含めることができます。 これらのプロシージャ以外を格納することはできません。 特に、プロパティの現在の値を格納することはできません。 この値はプロパティの外部に格納する必要があります。これは、プロパティプロシージャの内部に格納する場合、他のプロパティプロシージャがアクセスできないためです。 通常の方法では、プロパティと同じレベルで宣言された[プライベート](../../../visual-basic/language-reference/modifiers/private.md)変数に値を格納します。 `Get` プロシージャは、適用先のプロパティ内で定義する必要があります。  
   
- The `Get` procedure defaults to the access level of its containing property unless you use `accessmodifier` in the `Get` statement.  
+ `Get` ステートメントで `accessmodifier` を使用しない限り、`Get` プロシージャの既定値は、それを含むプロパティのアクセスレベルです。  
   
 ## <a name="rules"></a>ルール  
   
-- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Get` procedure `Private`, but not `Public`.  
+- **混合アクセスレベル。** 読み取り/書き込みプロパティを定義する場合は、必要に応じて、`Get` または `Set` のいずれかのプロシージャに対して異なるアクセスレベルを指定できますが、両方を指定することはできません。 この場合、プロシージャのアクセスレベルは、プロパティのアクセスレベルよりも制限されている必要があります。 たとえば、プロパティが `Friend`として宣言されている場合は、`Get` プロシージャ `Private`を宣言できますが、`Public`は宣言できません。  
   
-     If you are defining a `ReadOnly` property, the `Get` procedure represents the entire property. You cannot declare a different access level for `Get`, because that would set two access levels for the property.  
+     `ReadOnly` プロパティを定義する場合、`Get` プロシージャはプロパティ全体を表します。 `Get`に対して異なるアクセスレベルを宣言することはできません。これは、プロパティに2つのアクセスレベルが設定されるためです。  
   
-- **Return Type.** The [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) can declare the data type of the value it returns. The `Get` procedure automatically returns that data type. You can specify any data type or the name of an enumeration, structure, class, or interface.  
+- **戻り値の型。** [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)では、返される値のデータ型を宣言できます。 `Get` プロシージャは、そのデータ型を自動的に返します。 任意のデータ型を指定することも、列挙型、構造体、クラス、またはインターフェイスの名前を指定することもできます。  
   
-     If the `Property` statement does not specify `returntype`, the procedure returns `Object`.  
+     `Property` ステートメントで `returntype`が指定されていない場合、プロシージャは `Object`を返します。  
   
 ## <a name="behavior"></a>動作  
   
-- **Returning from a Procedure.** When the `Get` procedure returns to the calling code, execution continues within the statement that requested the property value.  
+- **プロシージャからを返します。** `Get` プロシージャが呼び出し元のコードに戻ると、プロパティ値を要求したステートメント内で実行が続行されます。  
   
-     `Get` property procedures can return a value using either the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) or by assigning the return value to the property name. For more information, see "Return Value" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get` のプロパティプロシージャは、 [Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)を使用するか、プロパティ名に戻り値を割り当てることによって、値を返すことができます。 詳細については、「 [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)」の「戻り値」を参照してください。  
   
-     The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.  
+     `Exit Property` ステートメントおよび `Return` ステートメントでは、プロパティプロシージャがすぐに終了します。 プロシージャ内の任意の場所で任意の数の `Exit Property` および `Return` ステートメントを使用できます。また、`Exit Property` と `Return` のステートメントを混在させることができます。  
   
-- **Return Value.** To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md). The `Return` statement simultaneously assigns the `Get` procedure return value and exits the procedure.  
+- **戻り値。** `Get` プロシージャから値を返すには、プロパティ名に値を割り当てるか、 [Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)に含めることができます。 `Return` ステートメントでは、`Get` プロシージャの戻り値が同時に割り当てられ、プロシージャが終了します。  
   
-     If you use `Exit Property` without assigning a value to the property name, the `Get` procedure returns the default value for the property's data type. For more information, see "Return Value" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).  
+     プロパティ名に値を割り当てずに `Exit Property` を使用する場合、`Get` プロシージャは、プロパティのデータ型の既定値を返します。 詳細については、「 [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)」の「戻り値」を参照してください。  
   
-     The following example illustrates two ways the read-only property `quoteForTheDay` can return the value held in the private variable `quoteValue`.  
+     次の例は、読み取り専用プロパティ `quoteForTheDay` が、プライベート変数 `quoteValue`に保持されている値を返す方法を示しています。  
   
      [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
@@ -78,11 +78,11 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>例  
- The following example uses the `Get` statement to return the value of a property.  
+ 次の例では、`Get` ステートメントを使用して、プロパティの値を返します。  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Set ステートメント](../../../visual-basic/language-reference/statements/set-statement.md)
 - [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)

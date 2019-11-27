@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435914"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished メソッド
-Notifies the profiler that a class has finished unloading.  
+クラスのアンロードが終了したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +35,15 @@ HRESULT ClassUnloadFinished(
   
 ## <a name="parameters"></a>パラメーター  
  `classId`  
- [in] Identifies the class that was unloaded.  
+ からアンロードされたクラスを識別します。  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the class was unloaded successfully.  
+ からクラスが正常にアンロードされたかどうかを示す HRESULT。  
   
-## <a name="remarks"></a>Remarks  
- Some parts of unloading the class might continue after the `ClassUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.  
+## <a name="remarks"></a>コメント  
+ `ClassUnloadFinished` コールバックの後に、クラスのアンロードの一部が続行される場合があります。 `hrStatus` のエラー HRESULT はエラーを示します。 ただし、`hrStatus` の成功 HRESULT は、クラスのアンロードの最初の部分が成功したことのみを示します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -52,7 +52,7 @@ HRESULT ClassUnloadFinished(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ClassUnloadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)

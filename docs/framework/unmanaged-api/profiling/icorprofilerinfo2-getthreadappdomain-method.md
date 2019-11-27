@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443107"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>ICorProfilerInfo2::GetThreadAppDomain メソッド
-Gets the ID of the application domain in which the specified thread is currently executing code.  
+指定したスレッドが現在コードを実行しているアプリケーションドメインの ID を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,12 +35,12 @@ HRESULT GetThreadAppDomain(
   
 ## <a name="parameters"></a>パラメーター  
  `threadId`  
- [in] The ID specifying the thread.  
+ からスレッドを指定する ID。  
   
  `pAppDomainId`  
- [out] A pointer to the ID of the application domain.  
+ 入出力アプリケーションドメインの ID へのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -49,7 +49,7 @@ HRESULT GetThreadAppDomain(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

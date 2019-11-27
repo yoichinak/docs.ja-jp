@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436323"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps メソッド
-Gets the set of properties of the manifest resource with the specified metadata signature.  
+指定されたメタデータシグネチャを持つマニフェストリソースのプロパティのセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,35 +41,35 @@ HRESULT GetManifestResourceProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mdmr`  
- [in] An `mdManifestResource` token that represents the resource for which to get the properties.  
+ からプロパティを取得する対象のリソースを表す `mdManifestResource` トークン。  
   
  `szName`  
- [out] The name of the resource.  
+ 入出力リソースの名前。  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ から`szName`のサイズ (ワイド文字単位)。  
   
  `pchName`  
- [out] A pointer to the number of wide chars actually returned in `szName`.  
+ 入出力`szName`に実際に返されるワイド文字数へのポインター。  
   
  `ptkImplementation`  
- [out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.  
+ 入出力リソースを格納しているファイルまたはアセンブリを表す、`mdFile` トークンまたは `mdAssemblyRef` トークンへのポインター。  
   
  `pdwOffset`  
- [out] A pointer to a value that specifies the offset to the beginning of the resource within the file.  
+ 入出力ファイル内のリソースの先頭へのオフセットを指定する値へのポインター。  
   
  `pdwResourceFlags`  
- [out] A pointer to flags that describe the metadata applied to a resource. The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.  
+ 入出力リソースに適用されるメタデータを記述するフラグへのポインター。 Flags 値は、1つ以上の[Cormanifestresourceflags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md)値を組み合わせたものです。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

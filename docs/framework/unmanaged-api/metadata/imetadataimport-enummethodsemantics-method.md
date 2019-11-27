@@ -39,40 +39,40 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
  `mb`  
- [in] A MethodDef token that limits the scope of the enumeration.  
+ から列挙型のスコープを制限する MethodDef トークン。  
   
  `rEventProp`  
- [out] The array used to store the events or properties.  
+ 入出力イベントまたはプロパティを格納するために使用される配列。  
   
  `cMax`  
  [in] `rEventProp` 配列の最大サイズ。  
   
  `pcEventProp`  
- [out] The number of events or properties returned in `rEventProp`.  
+ 入出力`rEventProp`で返されるイベントまたはプロパティの数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics` returned successfully.|  
-|`S_FALSE`|There are no events or properties to enumerate. In that case, `pcEventProp` is zero.|  
+|`S_OK`|`EnumMethodSemantics` が正常に返されました。|  
+|`S_FALSE`|列挙するイベントやプロパティはありません。 この場合、`pcEventProp` は0になります。|  
   
-## <a name="remarks"></a>Remarks  
- Many common language runtime types define *Property*`Changed` events and `On`*Property*`Changed` methods related to their properties. For example, the <xref:System.Windows.Forms.Control?displayProperty=nameWithType> type defines a <xref:System.Windows.Forms.Control.Font%2A> property, a <xref:System.Windows.Forms.Control.FontChanged> event, and an <xref:System.Windows.Forms.Control.OnFontChanged%2A> method. The set accessor method of the <xref:System.Windows.Forms.Control.Font%2A> property calls <xref:System.Windows.Forms.Control.OnFontChanged%2A> method, which in turn raises the <xref:System.Windows.Forms.Control.FontChanged> event. You would call `EnumMethodSemantics` using the MethodDef for <xref:System.Windows.Forms.Control.OnFontChanged%2A> to get references to the <xref:System.Windows.Forms.Control.Font%2A> property and the <xref:System.Windows.Forms.Control.FontChanged> event.  
+## <a name="remarks"></a>コメント  
+ 多くの共通言語ランタイム型では、プロパティ`Changed` イベント *、`On`プロパティ*に関連*するプロパティ`Changed`* メソッドが定義されています。 たとえば、<xref:System.Windows.Forms.Control?displayProperty=nameWithType> 型は、<xref:System.Windows.Forms.Control.Font%2A> プロパティ、<xref:System.Windows.Forms.Control.FontChanged> イベント、および <xref:System.Windows.Forms.Control.OnFontChanged%2A> メソッドを定義します。 <xref:System.Windows.Forms.Control.Font%2A> プロパティの set アクセサーメソッドは <xref:System.Windows.Forms.Control.OnFontChanged%2A> メソッドを呼び出します。このメソッドによって、<xref:System.Windows.Forms.Control.FontChanged> イベントが発生します。 <xref:System.Windows.Forms.Control.OnFontChanged%2A> に対して MethodDef を使用して `EnumMethodSemantics` を呼び出し、<xref:System.Windows.Forms.Control.Font%2A> プロパティと <xref:System.Windows.Forms.Control.FontChanged> イベントへの参照を取得します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

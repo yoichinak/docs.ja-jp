@@ -21,34 +21,34 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350106"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>データ型の有効な使用方法 (Visual Basic)
-Undeclared variables and variables declared without a data type are assigned the `Object` data type. This makes it easy to write programs quickly, but it can cause them to execute more slowly.
+宣言されていない変数およびデータ型を使用せずに宣言された変数には、`Object` データ型が割り当てられます。 これにより、プログラムをすばやく簡単に記述できるようになりますが、実行速度が低下する可能性があります。
 
-## <a name="strong-typing"></a>Strong Typing
- Specifying data types for all your variables is known as *strong typing*. Using strong typing has several advantages:
+## <a name="strong-typing"></a>厳密な型指定
+ すべての変数のデータ型を指定することを、*厳密な*型指定と呼びます。 厳密な型指定を使用すると、いくつかの利点があります。
 
-- It enables IntelliSense support for your variables. This allows you to see their properties and other members as you type in the code.
+- これにより、変数の IntelliSense サポートが有効になります。 これにより、コードで入力するときに、プロパティや他のメンバーを表示できます。
 
-- It takes advantage of compiler type checking. This catches statements that can fail at run time due to errors such as overflow. It also catches calls to methods on objects that do not support them.
+- コンパイラの型チェックを利用します。 これは、オーバーフローなどのエラーによって実行時に失敗する可能性があるステートメントをキャッチします。 また、サポートされていないオブジェクトのメソッドの呼び出しもキャッチします。
 
-- It results in faster execution of your code.
+- これにより、コードの実行時間が短縮されます。
 
-## <a name="most-efficient-data-types"></a>Most Efficient Data Types
- For variables that never contain fractions, the integral data types are more efficient than the nonintegral types. In Visual Basic, `Integer` and `UInteger` are the most efficient numeric types.
+## <a name="most-efficient-data-types"></a>最も効率的なデータ型
+ 分数を含まない変数の場合、整数データ型は非整数型よりも効率的です。 Visual Basic では、`Integer` と `UInteger` が最も効率的な数値型です。
 
- For fractional numbers, `Double` is the most efficient data type, because the processors on current platforms perform floating-point operations in double precision. However, operations with `Double` are not as fast as with the integral types such as `Integer`.
+ 小数値の場合、現在のプラットフォームのプロセッサは倍精度で浮動小数点演算を実行するため、`Double` は最も効率的なデータ型です。 ただし、`Double` の操作は、`Integer`などの整数型ほど高速ではありません。
 
-## <a name="specifying-data-type"></a>Specifying Data Type
- Use the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) to declare a variable of a specific type. You can simultaneously specify its access level by using the [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword, as in the following example.
+## <a name="specifying-data-type"></a>データ型の指定
+ [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)を使用して、特定の型の変数を宣言します。 次の例に示すように、 [Public](../../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)、または[Private](../../../../visual-basic/language-reference/modifiers/private.md)キーワードを使用して、アクセスレベルを同時に指定できます。
 
 ```vb
 Private x As Double
 Protected s As String
 ```
 
-## <a name="character-conversion"></a>Character Conversion
- The `AscW` and `ChrW` functions operate in Unicode. You should use them in preference to `Asc` and `Chr`, which must translate into and out of Unicode.
+## <a name="character-conversion"></a>文字変換
+ `AscW` 関数と `ChrW` 関数は Unicode で動作します。 これらの設定は、`Asc` と `Chr`に使用する必要があります。これは、Unicode との間で変換を行う必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>

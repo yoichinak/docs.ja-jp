@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445573"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps メソッド
-Assigns assembly-level properties.  
+アセンブリレベルのプロパティを割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,24 +37,24 @@ HRESULT SetAssemblyProps(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of the assembly.  
+ アセンブリの ID。  
   
  `FileToken`  
- File that defines the property. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ プロパティを定義するファイルです。 `AssemblyID` がバインドされていない .netmodule を示していない場合は NULL を指定できます。  
   
  `Option`  
- Indicates the option to modify.  
+ 変更するオプションを示します。  
   
  `Value`  
- New value of the option.  
+ オプションの新しい値。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h.  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

@@ -25,7 +25,7 @@ ms.locfileid: "74335482"
 -linkresource:filename[,identifier[,public|private]]  
 ```
 
-、または  
+または  
 
 ```console
 -linkres:filename[,identifier[,public|private]]  
@@ -33,35 +33,35 @@ ms.locfileid: "74335482"
   
 ## <a name="arguments"></a>引数  
  `filename`  
- 必須です。 The resource file to link to the assembly. If the file name contains a space, enclose the name in quotation marks (" ").  
+ 必須。 アセンブリにリンクするリソースファイル。 ファイル名にスペースが含まれている場合は、名前を引用符 ("") で囲みます。  
   
  `identifier`  
- 省略可能です。 The logical name for the resource. The name that is used to load the resource. 既定値は、ファイルの名前です。 Optionally, you can specify whether the file is public or private in the assembly manifest, for example: `-linkres:filename.res,myname.res,public`. By default, `filename` is public in the assembly.  
+ 省略可。 リソースの論理名。 リソースの読み込みに使用される名前。 既定値は、ファイルの名前です。 必要に応じて、ファイルがアセンブリマニフェスト内でパブリックであるかプライベートであるかを指定できます (例: `-linkres:filename.res,myname.res,public`)。 既定では、`filename` はアセンブリで公開されています。  
   
-## <a name="remarks"></a>Remarks  
- The `-linkresource` option does not embed the resource file in the output file; use the `-resource` option to do this.  
+## <a name="remarks"></a>コメント  
+ `-linkresource` オプションでは、リソースファイルは出力ファイルに埋め込まれません。これを行うには、`-resource` オプションを使用します。  
   
- The `-linkresource` option requires one of the `-target` options other than `-target:module`.  
+ `-linkresource` オプションでは、`-target:module`以外の `-target` オプションのいずれかが必要です。  
   
- If `filename` is a .NET Framework resource file created, for example, by the [Resgen.exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) or in the development environment, it can be accessed with members in the <xref:System.Resources> namespace. (For more information, see <xref:System.Resources.ResourceManager>.) To access all other resources at run time, use the methods that begin with `GetManifestResource` in the <xref:System.Reflection.Assembly> class.  
+ たとえば、 [resgen.exe (リソースファイルジェネレーター)](../../../framework/tools/resgen-exe-resource-file-generator.md)や開発環境などによって作成された .NET Framework のリソースファイル `filename` 場合は、<xref:System.Resources> 名前空間のメンバーを使用してアクセスできます。 (詳細については、「<xref:System.Resources.ResourceManager>」を参照してください)。実行時に他のすべてのリソースにアクセスするには、<xref:System.Reflection.Assembly> クラスの `GetManifestResource` で始まるメソッドを使用します。  
   
- The file name can be any file format. たとえば、ネイティブ DLL をアセンブリの一部にすることで、グローバル アセンブリ キャッシュにインストールして、アセンブリ内のマネージド コードからアクセスできるようにすることができます。  
+ ファイル名には任意のファイル形式を使用できます。 たとえば、ネイティブ DLL をアセンブリの一部にすることで、グローバル アセンブリ キャッシュにインストールして、アセンブリ内のマネージド コードからアクセスできるようにすることができます。  
   
  `-linkresource` の省略形は `-linkres` です。  
   
 > [!NOTE]
-> The `-linkresource` option is not available from the Visual Studio development environment; it is available only when you compile from the command line.  
+> `-linkresource` オプションは、Visual Studio 開発環境では使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
   
 ## <a name="example"></a>例  
- The following code compiles `in.vb` and links to resource file `rf.resource`.  
+ 次のコードでは、`in.vb` とリソースファイル `rf.resource`へのリンクをコンパイルします。  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
+- [-リソース (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

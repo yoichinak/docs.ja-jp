@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445419"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags 列挙型
-Contains values that describe the type of file defined in a call to [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+[IMetaDataAssemblyEmit::D efineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)への呼び出しで定義されているファイルの種類を記述する値を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,16 +39,16 @@ typedef enum CorFileFlags {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`ffContainsMetaData`|Indicates that the file is not a resource file.|  
-|`ffContainsNoMetaData`|Indicates that the file, possibly a resource file, does not contain metadata.|  
+|`ffContainsMetaData`|は、ファイルがリソースファイルではないことを示します。|  
+|`ffContainsNoMetaData`|ファイル (場合によってはリソースファイル) にメタデータが含まれていないことを示します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

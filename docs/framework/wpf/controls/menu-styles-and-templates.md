@@ -27,16 +27,16 @@ ms.locfileid: "74283473"
 ## <a name="menu-states"></a>メニューの状態  
  次の表は、<xref:System.Windows.Controls.Menu> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
 ## <a name="menuitem-parts"></a>MenuItem パーツ  
  次の表に、<xref:System.Windows.Controls.Menu> コントロールの名前付きの部分を示します。  
   
-|パーツ|[種類]|[説明]|  
+|要素|種類|説明|  
 |-|-|-|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|サブメニューの領域。|  
   
@@ -45,9 +45,9 @@ ms.locfileid: "74283473"
 ## <a name="menuitem-states"></a>MenuItem の状態  
  次の表は、<xref:System.Windows.Controls.MenuItem> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
@@ -70,7 +70,7 @@ ms.locfileid: "74283473"
   
  完全なサンプルについては、[Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>

@@ -18,23 +18,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351952"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>方法 : バックグラウンド スレッドを使用してファイルを検索する
-The <xref:System.ComponentModel.BackgroundWorker> component replaces and adds functionality to the <xref:System.Threading> namespace; however, the <xref:System.Threading> namespace is retained for both backward compatibility and future use, if you choose. For more information, see [BackgroundWorker Component Overview](backgroundworker-component-overview.md).
+<xref:System.ComponentModel.BackgroundWorker> コンポーネントによって、<xref:System.Threading> 名前空間に置き換えられ、機能が追加されます。ただし、<xref:System.Threading> 名前空間は、下位互換性と将来の使用の両方で保持されます (選択した場合)。 詳細については、「 [BackgroundWorker コンポーネントの概要](backgroundworker-component-overview.md)」を参照してください。
 
- Windows Forms uses the single-threaded apartment (STA) model because Windows Forms is based on native Win32 windows that are inherently apartment-threaded. The STA model implies that a window can be created on any thread, but it cannot switch threads once created, and all function calls to it must occur on its creation thread. Outside Windows Forms, classes in the .NET Framework use the free threading model. For information about threading in the .NET Framework, see [Threading](../../../standard/threading/index.md).
+ Windows フォームは、シングルスレッドアパートメント (STA) モデルを使用します。これは、Windows フォームが本質的にアパートメントスレッドであるネイティブの Win32 ウィンドウに基づいているためです。 STA モデルは、任意のスレッドでウィンドウを作成できることを意味しますが、作成されたスレッドを切り替えることはできません。また、スレッドに対するすべての関数呼び出しは、作成スレッドで実行する必要があります。 Windows フォーム外部では、.NET Framework のクラスはフリースレッドモデルを使用します。 .NET Framework のスレッド処理の詳細については、「[スレッド処理](../../../standard/threading/index.md)」を参照してください。
 
- The STA model requires that any methods on a control that need to be called from outside the control's creation thread must be marshaled to (executed on) the control's creation thread. The base class <xref:System.Windows.Forms.Control> provides several methods (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, and <xref:System.Windows.Forms.Control.EndInvoke%2A>) for this purpose. <xref:System.Windows.Forms.Control.Invoke%2A> makes synchronous method calls; <xref:System.Windows.Forms.Control.BeginInvoke%2A> makes asynchronous method calls.
+ STA モデルでは、コントロールの作成スレッドの外部から呼び出す必要があるコントロールのメソッドは、コントロールの作成スレッドにマーシャリングされる必要があります。 基本クラス <xref:System.Windows.Forms.Control> には、この目的でいくつかのメソッド (<xref:System.Windows.Forms.Control.Invoke%2A>、<xref:System.Windows.Forms.Control.BeginInvoke%2A>、および <xref:System.Windows.Forms.Control.EndInvoke%2A>) が用意されています。 <xref:System.Windows.Forms.Control.Invoke%2A> は、同期メソッドを呼び出します。<xref:System.Windows.Forms.Control.BeginInvoke%2A> は、非同期メソッドを呼び出します。
 
- If you use multithreading in your control for resource-intensive tasks, the user interface can remain responsive while a resource-intensive computation executes on a background thread.
+ リソースを集中的に使用するタスクのためにコントロールでマルチスレッドを使用する場合、リソースを集中的に使用する計算がバックグラウンドスレッドで実行されている間は、ユーザーインターフェイスの応答性を維持できます。
 
- The following sample (`DirectorySearcher`) shows a multithreaded Windows Forms control that uses a background thread to recursively search a directory for files matching a specified search string and then populates a list box with the search result. The key concepts illustrated by the sample are as follows:
+ 次のサンプル (`DirectorySearcher`) では、バックグラウンドスレッドを使用して、指定された検索文字列に一致するファイルをディレクトリで再帰的に検索し、検索結果をリストボックスに設定する、マルチスレッドの Windows フォームコントロールを示します。 このサンプルで示す主な概念は次のとおりです。
 
-- `DirectorySearcher` starts a new thread to perform the search. The thread executes the `ThreadProcedure` method that in turn calls the helper `RecurseDirectory` method to do the actual search and to populate the list box. However, populating the list box requires a cross-thread call, as explained in the next two bulleted items.
+- `DirectorySearcher` は、新しいスレッドを開始して検索を実行します。 スレッドは `ThreadProcedure` メソッドを実行します。このメソッドはヘルパー `RecurseDirectory` メソッドを呼び出して、実際の検索を実行し、リストボックスにデータを設定します。 ただし、リストボックスを設定するには、次の2つの箇条書き項目で説明されているように、スレッド間の呼び出しが必要です。
 
-- `DirectorySearcher` defines the `AddFiles` method to add files to a list box; however, `RecurseDirectory` cannot directly invoke `AddFiles` because `AddFiles` can execute only in the STA thread that created `DirectorySearcher`.
+- `DirectorySearcher` は、ファイルをリストボックスに追加するための `AddFiles` メソッドを定義します。ただし、`DirectorySearcher`を作成した STA スレッドでのみ `AddFiles` を実行できるため、`RecurseDirectory` は `AddFiles` を直接呼び出すことはできません。
 
-- The only way `RecurseDirectory` can call `AddFiles` is through a cross-thread call — that is, by calling <xref:System.Windows.Forms.Control.Invoke%2A> or <xref:System.Windows.Forms.Control.BeginInvoke%2A> to marshal `AddFiles` to the creation thread of `DirectorySearcher`. `RecurseDirectory` uses <xref:System.Windows.Forms.Control.BeginInvoke%2A> so that the call can be made asynchronously.
+- `RecurseDirectory` が `AddFiles` を呼び出すことができるのは、<xref:System.Windows.Forms.Control.Invoke%2A> または <xref:System.Windows.Forms.Control.BeginInvoke%2A> を呼び出して `AddFiles` の作成スレッドに `DirectorySearcher`をマーシャリングすることです。 `RecurseDirectory` は <xref:System.Windows.Forms.Control.BeginInvoke%2A> を使用して、呼び出しを非同期に実行できるようにします。
 
-- Marshaling a method requires the equivalent of a function pointer or callback. This is accomplished using delegates in the .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> takes a delegate as an argument. `DirectorySearcher` therefore defines a delegate (`FileListDelegate`), binds `AddFiles` to an instance of `FileListDelegate` in its constructor, and passes this delegate instance to <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` also defines an event delegate that is marshaled when the search is completed.
+- メソッドをマーシャリングするには、関数ポインターまたはコールバックと同等のものが必要です。 これは、.NET Framework のデリゲートを使用して実現されます。 <xref:System.Windows.Forms.Control.BeginInvoke%2A> は、引数としてデリゲートを受け取ります。 したがって、`DirectorySearcher` はデリゲート (`FileListDelegate`) を定義し、`AddFiles` をコンストラクター内の `FileListDelegate` のインスタンスにバインドし、このデリゲートインスタンスを <xref:System.Windows.Forms.Control.BeginInvoke%2A>に渡します。 また `DirectorySearcher` は、検索の完了時にマーシャリングされるイベントデリゲートを定義します。
 
 ```vb
 Option Strict
@@ -568,8 +568,8 @@ namespace Microsoft.Samples.DirectorySearcher
 }
 ```
 
-## <a name="using-the-multithreaded-control-on-a-form"></a>Using the Multithreaded Control on a Form
- The following example shows how the multithreaded `DirectorySearcher` control can be used on a form.
+## <a name="using-the-multithreaded-control-on-a-form"></a>フォームでのマルチスレッドコントロールの使用
+ 次の例は、マルチスレッドの `DirectorySearcher` コントロールをフォームで使用する方法を示しています。
 
 ```vb
 Option Explicit
@@ -760,7 +760,7 @@ namespace SampleUsage
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)

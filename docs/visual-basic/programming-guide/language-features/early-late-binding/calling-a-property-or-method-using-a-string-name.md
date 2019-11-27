@@ -20,33 +20,33 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345209"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>文字列名によるプロパティまたはメソッドの呼び出し (Visual Basic)
-In most cases, you can discover the properties and methods of an object at design time, and write code to handle them. However, in some cases you may not know about an object's properties and methods in advance, or you may just want the flexibility of enabling an end user to specify properties or execute methods at run time.  
+ほとんどの場合、オブジェクトのプロパティとメソッドをデザイン時に検出し、それらを処理するコードを記述できます。 ただし、場合によっては、オブジェクトのプロパティやメソッドを事前に把握していない場合や、エンドユーザーが実行時にプロパティを指定したりメソッドを実行したりできるようにすることが必要になる場合もあります。  
   
-## <a name="callbyname-function"></a>CallByName Function  
- Consider, for example, a client application that evaluates expressions entered by the user by passing an operator to a COM component. Suppose you are constantly adding new functions to the component that require new operators. When you use standard object access techniques, you must recompile and redistribute the client application before it could use the new operators. To avoid this, you can use the `CallByName` function to pass the new operators as strings, without changing the application.  
+## <a name="callbyname-function"></a>CallByName 関数  
+ たとえば、演算子を COM コンポーネントに渡すことによってユーザーによって入力された式を評価するクライアントアプリケーションなどを考えてみます。 新しい演算子を必要とする新しい関数をコンポーネントに常に追加するとします。 標準のオブジェクトアクセス手法を使用する場合は、新しい演算子を使用する前に、クライアントアプリケーションを再コンパイルして再配布する必要があります。 これを回避するには、`CallByName` 関数を使用して、アプリケーションを変更せずに、新しい演算子を文字列として渡すことができます。  
   
- The `CallByName` function lets you use a string to specify a property or method at run time. The signature for the `CallByName` function looks like this:  
+ `CallByName` 関数を使用すると、実行時に文字列を使用してプロパティまたはメソッドを指定できます。 `CallByName` 関数のシグネチャは次のようになります。  
   
- *Result* = `CallByName`(*Object*, *ProcedureName*, *CallType*, *Arguments*())  
+ *結果* = `CallByName`(*Object*、 *ProcedureName*、 *CallType*、 *Arguments*())  
   
- The first argument, *Object*, takes the name of the object you want to act upon. The *ProcedureName* argument takes a string that contains the name of the method or property procedure to be invoked. The *CallType* argument takes a constant that represents the type of procedure to invoke: a method (`Microsoft.VisualBasic.CallType.Method`), a property read (`Microsoft.VisualBasic.CallType.Get`), or a property set (`Microsoft.VisualBasic.CallType.Set`). The *Arguments* argument, which is optional, takes an array of type `Object` that contains any arguments to the procedure.  
+ 最初の引数*object*は、操作対象のオブジェクトの名前を受け取ります。 *ProcedureName*引数は、呼び出されるメソッドまたはプロパティプロシージャの名前を含む文字列を受け取ります。 *CallType*引数は、呼び出すプロシージャの種類を表す定数を受け取ります。メソッド (`Microsoft.VisualBasic.CallType.Method`)、読み取りプロパティ (`Microsoft.VisualBasic.CallType.Get`)、またはプロパティセット (`Microsoft.VisualBasic.CallType.Set`) です。 *Arguments*引数 (省略可能) は、プロシージャの引数を含む `Object` 型の配列を受け取ります。  
   
- You can use `CallByName` with classes in your current solution, but it is most often used to access COM objects or objects from .NET Framework assemblies.  
+ 現在のソリューションではクラスと共に `CallByName` を使用できますが、ほとんどの場合、.NET Framework アセンブリから COM オブジェクトまたはオブジェクトにアクセスするために使用されます。  
   
- Suppose you add a reference to an assembly that contains a class named `MathClass`, which has a new function named `SquareRoot`, as shown in the following code:  
+ 次のコードに示すように、`MathClass`という名前のクラスを含むアセンブリへの参照を追加するとします。このクラスには、`SquareRoot`という名前の新しい関数があります。  
   
  [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
- Your application could use text box controls to control which method will be called and its arguments. For example, if `TextBox1` contains the expression to be evaluated, and `TextBox2` is used to enter the name of the function, you can use the following code to invoke the `SquareRoot` function on the expression in `TextBox1`:  
+ アプリケーションでは、テキストボックスコントロールを使用して、呼び出すメソッドとその引数を制御できます。 たとえば、評価する式が `TextBox1` に含まれていて、`TextBox2` を使用して関数の名前を入力した場合は、次のコードを使用して `TextBox1`の式で `SquareRoot` 関数を呼び出すことができます。  
   
  [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
- If you enter "64" in `TextBox1`, "SquareRoot" in `TextBox2`, and then call the `CallMath` procedure, the square root of the number in `TextBox1` is evaluated. The code in the example invokes the `SquareRoot` function (which takes a string that contains the expression to be evaluated as a required argument) and returns "8" in `TextBox1` (the square root of 64). Of course, if the user enters an invalid string in `TextBox2`, if the string contains the name of a property instead of a method, or if the method had an additional required argument, a run-time error occurs. You have to add robust error-handling code when you use `CallByName` to anticipate these or any other errors.  
+ `TextBox2`の `TextBox1`"SquareRoot" に「64」と入力し、`CallMath` プロシージャを呼び出すと、`TextBox1` 内の数値の平方根が評価されます。 この例のコードでは、`SquareRoot` 関数 (必須の引数として評価される式を含む文字列を受け取ります) を呼び出し、`TextBox1` (64 の平方根) で "8" を返します。 もちろん、ユーザーが `TextBox2`に無効な文字列を入力した場合、文字列にメソッドではなくプロパティの名前が含まれている場合、またはメソッドに追加の必須引数がある場合は、実行時エラーが発生します。 `CallByName` を使用してこれらのエラーやその他のエラーを予測する場合は、堅牢なエラー処理コードを追加する必要があります。  
   
 > [!NOTE]
-> While the `CallByName` function may be useful in some cases, you must weigh its usefulness against the performance implications — using `CallByName` to invoke a procedure is slightly slower than a late-bound call. If you are invoking a function that is called repeatedly, such as inside a loop, `CallByName` can have a severe effect on performance.  
+> `CallByName` 関数は役に立つ場合がありますが、パフォーマンスへの影響を考慮する必要があります。つまり、`CallByName` を使用してプロシージャを呼び出すと、遅延バインディングの呼び出しより少し遅くなります。 ループの内部など、繰り返し呼び出される関数を呼び出す場合、`CallByName` はパフォーマンスに重大な影響を与える可能性があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>
 - [オブジェクトの型の決定](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)

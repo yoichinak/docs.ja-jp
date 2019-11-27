@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444653"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam メソッド
-Creates a definition for a generic type parameter, and gets a token to that generic type parameter.  
+ジェネリック型パラメーターの定義を作成し、そのジェネリック型パラメーターへのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,36 +41,36 @@ HRESULT DefineGenericParam (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.  
+ からジェネリックパラメーターを定義するメソッドまたはコンストラクターを表す `mdTypeDef` または `mdMethodDef` トークン。  
   
  `ulParamSeq`  
- [in] The index of the generic parameter.  
+ からジェネリックパラメーターのインデックス。  
   
  `dwParamFlags`  
- [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
+ からジェネリックパラメーターの型を記述する[Corgenericparamattr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)列挙体の値。  
   
  `szname`  
- [in] The name of the parameter.  
+ からパラメーターの名前。  
   
  `reserved`  
- [in] This parameter is reserved for future extensibility.  
+ からこのパラメーターは、将来の拡張のために予約されています。  
   
  `rtkConstraints`  
- [in] A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
+ から型制約の0から終わる配列。 配列メンバーは、`mdTypeDef`、`mdTypeRef`、または `mdTypeSpec` メタデータトークンである必要があります。  
   
  `pgp`  
- [out] A token that represents the generic parameter.  
+ 入出力ジェネリックパラメーターを表すトークン。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

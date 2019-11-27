@@ -18,51 +18,51 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345271"
 ---
 # <a name="type-promotion-visual-basic"></a>型の上位変換 (Visual Basic)
-When you declare a programming element in a module, Visual Basic promotes its scope to the namespace containing the module. This is known as *type promotion*.  
+モジュールでプログラミング要素を宣言すると、Visual Basic はそのスコープをモジュールを含む名前空間に昇格させます。 これは、*型の上位変換*と呼ばれます。  
   
- The following example shows a skeleton definition of a module and two members of that module.  
+ 次の例は、モジュールのスケルトン定義とそのモジュールの2つのメンバーを示しています。  
   
  [!code-vb[VbVbalrDeclaredElements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#1)]  
   
- Within `projModule`, programming elements declared at module level are promoted to `projNamespace`. In the preceding example, `basicEnum` and `innerClass` are promoted, but `numberSub` is not, because it is not declared at module level.  
+ `projModule`内では、モジュールレベルで宣言されたプログラミング要素が `projNamespace`に昇格されます。 前の例では、`basicEnum` と `innerClass` は昇格されますが、`numberSub` はありません。これは、モジュールレベルで宣言されていないためです。  
   
-## <a name="effect-of-type-promotion"></a>Effect of Type Promotion  
- The effect of type promotion is that a qualification string does not need to include the module name. The following example makes two calls to the procedure in the preceding example.  
+## <a name="effect-of-type-promotion"></a>型の上位変換の効果  
+ 型の上位変換の効果は、修飾文字列にモジュール名を含める必要がないことです。 次の例では、前の例のプロシージャを2回呼び出します。  
   
  [!code-vb[VbVbalrDeclaredElements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#2)]  
   
- In the preceding example, the first call uses complete qualification strings. However, this is not necessary because of type promotion. The second call also accesses the module's members without including `projModule` in the qualification strings.  
+ 前の例では、最初の呼び出しで完全修飾文字列を使用しています。 ただし、型の上位変換のためには必要ありません。 2番目の呼び出しは、修飾文字列に `projModule` を含めずに、モジュールのメンバーにもアクセスします。  
   
-## <a name="defeat-of-type-promotion"></a>Defeat of Type Promotion  
- If the namespace already has a member with the same name as a module member, type promotion is defeated for that module member. The following example shows a skeleton definition of an enumeration and a module within the same namespace.  
+## <a name="defeat-of-type-promotion"></a>型の上位変換の無効化  
+ 名前空間にモジュールメンバーと同じ名前のメンバーが既に存在する場合、そのモジュールメンバーに対して型の上位変換は使用されません。 次の例は、同じ名前空間内の列挙型とモジュールのスケルトン定義を示しています。  
   
  [!code-vb[VbVbalrDeclaredElements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#3)]  
   
- In the preceding example, Visual Basic cannot promote class `abc` to `thisNameSpace` because there is already an enumeration with the same name at namespace level. To access `abcSub`, you must use the full qualification string `thisNamespace.thisModule.abc.abcSub`. However, class `xyz` is still promoted, and you can access `xyzSub` with the shorter qualification string `thisNamespace.xyz.xyzSub`.  
+ 前の例では、名前空間レベルで同じ名前の列挙が既に存在するため、Visual Basic はクラス `abc` を `thisNameSpace` に昇格できません。 `abcSub`にアクセスするには、完全修飾文字列 `thisNamespace.thisModule.abc.abcSub`を使用する必要があります。 ただし、クラス `xyz` は引き続き昇格され、`xyzSub` には、短い修飾文字列 `thisNamespace.xyz.xyzSub`を使用してアクセスできます。  
   
-### <a name="defeat-of-type-promotion-for-partial-types"></a>Defeat of Type Promotion for Partial Types  
- If a class or structure inside a module uses the [Partial](../../../../visual-basic/language-reference/modifiers/partial.md) keyword, type promotion is automatically defeated for that class or structure, whether or not the namespace has a member with the same name. Other elements in the module are still eligible for type promotion.  
+### <a name="defeat-of-type-promotion-for-partial-types"></a>部分型の型の上位変換の無効化  
+ モジュール内のクラスまたは構造体が[Partial](../../../../visual-basic/language-reference/modifiers/partial.md)キーワードを使用している場合は、そのクラスまたは構造体に対して型の昇格が自動的に無効になります。名前空間に同じ名前のメンバーが含まれているかどうかは異なります。 モジュール内の他の要素は、引き続き型の上位変換の対象になります。  
   
- **Consequences.** Defeat of type promotion of a partial definition can cause unexpected results and even compiler errors. The following example shows skeleton partial definitions of a class, one of which is inside a module.  
+ **措置.** 部分定義の型の上位変換を無効にすると、予期しない結果が発生し、コンパイラエラーが発生する可能性があります。 次の例は、クラスのスケルトン部分定義を示しています。そのうちの1つがモジュール内にあります。  
   
  [!code-vb[VbVbalrDeclaredElements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#4)]  
   
- In the preceding example, the developer might expect the compiler to merge the two partial definitions of `sampleClass`. However, the compiler does not consider promotion for the partial definition inside `sampleModule`. As a result, it attempts to compile two separate and distinct classes, both named `sampleClass` but with different qualification paths.  
+ 前の例では、開発者は、`sampleClass`の2つの部分定義をマージすることをコンパイラに要求する場合があります。 ただし、コンパイラは `sampleModule`内の部分定義の上位変換を考慮しません。 結果として、2つの個別のクラスと別個のクラスをコンパイルしようとします。このクラスには `sampleClass` 名前が付けられますが、修飾パスは異なります。  
   
  コンパイラは、完全修飾されたパスがまったく同じ場合にのみ、部分定義をマージします。  
   
 ## <a name="recommendations"></a>推奨事項  
- The following recommendations represent good programming practice.  
+ 次の推奨事項は、適切なプログラミング手法を示しています。  
   
-- **Unique Names.** When you have full control over the naming of programming elements, it is always a good idea to use unique names everywhere. Identical names require extra qualification and can make your code harder to read. They can also lead to subtle errors and unexpected results.  
+- **一意の名前。** プログラミング要素の名前付けを完全に制御できる場合は、常に一意の名前を使用することをお勧めします。 同一の名前には追加の修飾が必要であり、コードが読みにくくなる可能性があります。 また、軽度のエラーや予期しない結果につながる可能性もあります。  
   
-- **Full Qualification.** When you are working with modules and other elements in the same namespace, the safest approach is to always use full qualification for all programming elements. If type promotion is defeated for a module member and you do not fully qualify that member, you could inadvertently access a different programming element.  
+- **完全修飾。** 同じ名前空間内のモジュールとその他の要素を使用する場合、最も安全な方法は、すべてのプログラミング要素に対して常に完全修飾を使用することです。 モジュールメンバーの型の上位変換が無効になっていて、そのメンバーを完全に修飾していない場合、誤って別のプログラミング要素にアクセスする可能性があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Module ステートメント](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Namespace ステートメント](../../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic 内のスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [方法: 変数のスコープを制御する](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438298"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 メソッド
-現在の構文のスコープの変数を 1 つ定義します。 This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
+現在の構文のスコープの変数を 1 つ定義します。 このメソッドは、スコープ全体で複数のホームを持つ同じ名前の変数に対して複数回呼び出すことができます。 ただし、この場合、`startOffset` パラメーターと `endOffset` パラメーターの値は重複してはなりません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,39 +42,39 @@ HRESULT DefineLocalVariable2(
   
 ## <a name="parameters"></a>パラメーター  
  `name`  
- [in] The local variable name.  
+ からローカル変数名。  
   
  `attributes`  
- [in] The local variable attributes.  
+ からローカル変数の属性。  
   
  `sigToken`  
- [in] The metadata token of the signature.  
+ から署名のメタデータトークン。  
   
  `addrKind`  
- [in] The address type.  
+ からアドレスの種類。  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ からパラメーター指定の最初のアドレス。  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ からパラメーター指定の2番目のアドレス。  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ からパラメーター指定の3番目のアドレス。  
   
  `startOffset`  
- [in] The start offset for the variable. このパラメーターは省略できます。 If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ から変数の開始オフセット。 このパラメーターはオプションです。 0の場合、このパラメーターは無視され、スコープ全体にわたって変数が定義されます。 0以外の値の場合、変数は現在のスコープのオフセット内になります。  
   
  `endOffset`  
- [in] The end offset for the variable. このパラメーターは省略できます。 If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ から変数の終了オフセット。 このパラメーターはオプションです。 0の場合、このパラメーターは無視され、スコープ全体にわたって変数が定義されます。 0以外の値の場合、変数は現在のスコープのオフセット内になります。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedWriter2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
 - [DefineLocalVariable メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)

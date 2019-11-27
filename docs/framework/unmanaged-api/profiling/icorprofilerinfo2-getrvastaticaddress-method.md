@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433012"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress メソッド
-Gets the address of the specified relative virtual address (RVA) static field.  
+指定した相対仮想アドレス (RVA) の静的フィールドのアドレスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,24 +36,24 @@ HRESULT GetRVAStaticAddress(
   
 ## <a name="parameters"></a>パラメーター  
  `classId`  
- [in] The ID of the class that contains the requested RVA-static field.  
+ から要求された RVA 静的フィールドを含むクラスの ID。  
   
  `fieldToken`  
- [in] Metadata token for the requested RVA-static field.  
+ から要求された RVA 静的フィールドのメタデータトークン。  
   
  `ppAddress`  
- [out] A pointer to the address of the RVA-static field.  
+ 入出力RVA の静的フィールドのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- The `GetRVAStaticAddress` method may return one of the following:  
+## <a name="remarks"></a>コメント  
+ `GetRVAStaticAddress` メソッドは、次のいずれかを返す場合があります。  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- 指定されたコンテキストで、指定された静的フィールドにアドレスが割り当てられていない場合は CORPROF_E_DATAINCOMPLETE HRESULT。  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- ガベージコレクションヒープ内に存在する可能性があるオブジェクトのアドレス。 これらのアドレスは、ガベージコレクションの後に無効になることがあります。そのため、ガベージコレクションの後、プロファイラーはそれらが有効であると想定してはなりません。  
   
- Before a class’s class constructor is completed, `GetRVAStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and may be rooting garbage collection objects.  
+ クラスのクラスコンストラクターが完了する前に、`GetRVAStaticAddress` はすべての静的フィールドに対して CORPROF_E_DATAINCOMPLETE を返します。ただし、一部の静的フィールドは既に初期化されており、ガベージコレクションオブジェクトをルート化する可能性があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -62,7 +62,7 @@ HRESULT GetRVAStaticAddress(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

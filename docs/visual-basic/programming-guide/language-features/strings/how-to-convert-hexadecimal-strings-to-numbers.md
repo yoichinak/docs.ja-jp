@@ -17,24 +17,24 @@ ms.locfileid: "74347172"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>方法: 16 進文字列を数値に変換する (Visual Basic)
 
-This example converts a hexadecimal string to an integer using the <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> method.
+この例では、<xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> メソッドを使用して、16進数の文字列を整数に変換します。
 
-## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>To convert a hexadecimal string to a number
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>16進数の文字列を数値に変換するには
 
-- Use the <xref:System.Convert.ToInt32(System.String,System.Int32)> method to convert the number expressed in base-16 to an integer.
+- Base-16 で表現された数値を整数に変換するには、<xref:System.Convert.ToInt32(System.String,System.Int32)> メソッドを使用します。
 
-  The first argument of the <xref:System.Convert.ToInt32(System.String,System.Int32)> method is the string to convert. The second argument describes what base the number is expressed in; hexadecimal is base 16.
+  <xref:System.Convert.ToInt32(System.String,System.Int32)> メソッドの最初の引数は、変換する文字列です。 2番目の引数は、数値がどのように表されるかを示します。16進数は base 16 です。
 
   [!code-vb[VbVbalrStrings#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#62)]
 
-- Note that the hexadecimal string has the following restrictions:
+- 16進数の文字列には次の制限があることに注意してください。
 
-  - It cannot include the `&h` prefix.
-  - It cannot include the `_` digit separator.
+  - `&h` プレフィックスを含めることはできません。
+  - `_` 桁区切り記号を含めることはできません。
 
-  If the prefix or a digit separator is present, the call to the <xref:System.Convert.ToInt32(System.String,System.Int32)> method throws a <xref:System.FormatException>.
+  プレフィックスまたは桁区切り記号がある場合、<xref:System.Convert.ToInt32(System.String,System.Int32)> メソッドを呼び出すと、<xref:System.FormatException>がスローされます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
 - <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>

@@ -56,13 +56,13 @@ ms.locfileid: "74350041"
   
     - パラメーターなしのコンストラクターを公開する  
   
-     制約を指定しない場合、コードで使用できる演算とメンバーは、 [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)でサポートされるものだけになります。 詳細については、「[Type List](../../../../visual-basic/language-reference/statements/type-list.md)」を参照してください。  
+     制約を指定しない場合、コードで使用できる演算とメンバーは、 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)でサポートされるものだけになります。 詳細については、「 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)」を参照してください。  
   
 5. 渡された型を使って宣言する必要のある各クラス メンバーを識別し、それを `As` `typeparameter`として宣言します。 これは、内部ストレージ、プロシージャのパラメーター、戻り値に適用されます。  
   
 6. コードでは、 `itemType`に渡される可能性があるすべてのデータ型でサポートされる演算とメソッドだけを使用します。  
   
-     次のコード例は、ごく単純なリストを管理するクラスを定義しています。 このクラスは、リストを内部配列 `items`に格納します。このクラスを使用するコードでは、このリストの要素のデータ型を宣言できます。 A parameterized constructor allows the using code to set the upper bound of `items`, and the parameterless constructor sets this to 9 (for a total of 10 items).  
+     次のコード例は、ごく単純なリストを管理するクラスを定義しています。 このクラスは、リストを内部配列 `items`に格納します。このクラスを使用するコードでは、このリストの要素のデータ型を宣言できます。 パラメーター化されたコンストラクターを使用すると、コードを使用して `items`の上限を設定でき、パラメーターなしのコンストラクターはこれを9に設定します (合計10個の項目)。  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
@@ -74,12 +74,12 @@ ms.locfileid: "74350041"
   
      [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [言語への非依存性、および言語非依存コンポーネント](../../../../standard/language-independence-and-language-independent-components.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [型リスト](../../../../visual-basic/language-reference/statements/type-list.md)
 - [方法 : ジェネリック クラスを使用する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)

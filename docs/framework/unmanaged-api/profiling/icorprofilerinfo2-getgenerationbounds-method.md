@@ -42,18 +42,18 @@ HRESULT GetGenerationBounds(
  [out] その一部または全部が `ranges` 配列で返される範囲の総数を指定する整数へのポインター。  
   
  `ranges`  
- [out] An array of [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structures, each of which describes a range (that is, block) of memory within the generation that is undergoing garbage collection.  
+ 入出力[COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)構造体の配列。それぞれがガベージコレクションを行っているジェネレーション内のメモリの範囲 (つまり、ブロック) を記述します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  ガベージ コレクションを処理中でない場合、`GetGenerationBounds` メソッドは任意のプロファイラー コールバックから呼び出すことができます。
 
  通常、ジェネレーションの移動はガベージ コレクション中に行われます。 コレクションの間にジェネレーションが増大する可能性はありますが、一般的に移動はありません。 したがって、`GetGenerationBounds` を呼び出す上で最も注目すべき地点は `ICorProfilerCallback2::GarbageCollectionStarted` と `ICorProfilerCallback2::GarbageCollectionFinished` の間です。  
   
- プログラムの起動中に、いくつかのオブジェクトが共通言語ランタイム (CLR) 自体によって割り当てられます。これは、一般的にはジェネレーションの 3 と 0 で行われます。 したがって、マネージド コードが実行を開始するまでに、これらのジェネレーションには既にオブジェクトが含まれています。 通常、ジェネレーションの 1 と 2 は、ガベージ コレクターによって生成されたダミー オブジェクトを除き、空です。 (The size of dummy objects is 12 bytes in 32-bit implementations of the CLR; the size is larger in 64-bit implementations.) You might also see generation 2 ranges that are inside modules produced by the Native Image Generator (NGen.exe). In this case, the objects in generation 2 are *frozen objects*, which are allocated when NGen.exe runs rather than by the garbage collector.  
+ プログラムの起動中に、いくつかのオブジェクトが共通言語ランタイム (CLR) 自体によって割り当てられます。これは、一般的にはジェネレーションの 3 と 0 で行われます。 したがって、マネージド コードが実行を開始するまでに、これらのジェネレーションには既にオブジェクトが含まれています。 通常、ジェネレーションの 1 と 2 は、ガベージ コレクターによって生成されたダミー オブジェクトを除き、空です。 (ダミーオブジェクトのサイズは、CLR の32ビット実装では12バイトです。64ビットの実装では、サイズは大きくなります)。また、ネイティブイメージジェネレーター (Ngen.exe) によって生成されたモジュール内にあるジェネレーション2の範囲が表示される場合もあります。 この場合、ジェネレーション2のオブジェクトは固定された*オブジェクト*であり、ガベージコレクターではなく ngen.exe が実行されるときに割り当てられます。  
   
  この関数は、呼び出し元が割り当てたバッファーを使用します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -62,7 +62,7 @@ HRESULT GetGenerationBounds(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

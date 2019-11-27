@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436383"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString メソッド
-Emits the specified string into the code base.  
+指定した文字列をコードベースに出力します。  
   
- This method is obsolete and should not be used.  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,20 +38,20 @@ HRESULT EmitString (
   
 ## <a name="parameters"></a>パラメーター  
  `lpString`  
- [in] The string to emit.  
+ から出力する文字列。  
   
  `RVA`  
- [out] The relative virtual address of the emitted string.  
+ 入出力出力された文字列の相対仮想アドレス。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

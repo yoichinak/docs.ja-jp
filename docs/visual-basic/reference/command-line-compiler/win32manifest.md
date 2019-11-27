@@ -24,33 +24,33 @@ ms.locfileid: "74349131"
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`fileName`|The path of the custom manifest file.|  
+|`fileName`|カスタムマニフェストファイルのパス。|  
   
-## <a name="remarks"></a>Remarks  
- By default, the Visual Basic compiler embeds an application manifest that specifies a requested execution level of asInvoker. It creates the manifest in the same folder in which the executable file is built, typically the bin\Debug or bin\Release folder when you use Visual Studio. If you want to supply a custom manifest, for example to specify a requested execution level of highestAvailable or requireAdministrator, use this option to specify the name of the file.  
+## <a name="remarks"></a>コメント  
+ 既定では、Visual Basic コンパイラは、asInvoker の要求実行レベルを指定するアプリケーションマニフェストを埋め込みます。 実行可能ファイルがビルドされたフォルダー (通常は、Visual Studio を使用する場合は bin\Debug または bin\Release フォルダー) にマニフェストが作成されます。 HighestAvailable または requireAdministrator の要求実行レベルを指定するなど、カスタムマニフェストを指定する場合は、このオプションを使用してファイルの名前を指定します。  
   
 > [!NOTE]
-> This option and the [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) option are mutually exclusive. If you try to use both options in the same command line, you will get a build error.  
+> このオプションと[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)オプションは同時に指定できません。 同じコマンドラインで両方のオプションを使用しようとすると、ビルドエラーが発生します。  
   
  アプリケーション マニフェストを持たないアプリケーションは、要求実行レベルを指定した場合、Windows Vista のユーザー アカウント制御機能によって、ファイルまたはレジストリの仮想化の対象となります。 仮想化について詳しくは、「[Windows Vista の ClickOnce 配置](/visualstudio/deployment/clickonce-deployment-on-windows-vista)」を参照してください。  
   
- Your application will be subject to virtualization if either of the following conditions is true:  
+ 次のいずれかの条件に該当する場合、アプリケーションは仮想化の対象になります。  
   
-1. You use the `-nowin32manifest` option and you do not provide a manifest in a later build step or as part of a Windows Resource (.res) file by using the `-win32resource` option.  
+1. `-nowin32manifest` オプションを使用していて、後のビルド手順でマニフェストを提供していないか、または `-win32resource` オプションを使用して Windows リソース (.res) ファイルの一部として指定されていません。  
   
 2. 要求実行レベルが指定されていないカスタム マニフェストを提供している。  
   
- Visual Studio は、既定の .manifest ファイルを作成し、それを実行可能ファイルと一緒にデバッグ ディレクトリとリリース ディレクトリに保存します。 You can view or edit the default app.manifest file by clicking **View UAC Settings** on the **Application** tab in the Project Designer. 詳細については、「[[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)」を参照してください。  
+ Visual Studio は、既定の .manifest ファイルを作成し、それを実行可能ファイルと一緒にデバッグ ディレクトリとリリース ディレクトリに保存します。 既定のアプリケーションマニフェストファイルを表示または編集するには、プロジェクトデザイナーの **[アプリケーション]** タブで **[UAC 設定の表示]** をクリックします。 詳細については、「 [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)」を参照してください。  
   
- You can provide the application manifest as a custom post-build step or as part of a Win32 resource file by using the `-nowin32manifest` option. アプリケーションを Windows Vista でファイルまたはレジストリの仮想化の対象にする場合は、これと同じオプションを使用します。 This will prevent the compiler from creating and embedding a default manifest in the PE file.  
+ アプリケーションマニフェストは、カスタムのビルド後の手順として提供することも、`-nowin32manifest` オプションを使用して Win32 リソースファイルの一部として指定することもできます。 アプリケーションを Windows Vista でファイルまたはレジストリの仮想化の対象にする場合は、これと同じオプションを使用します。 これにより、コンパイラは既定のマニフェストを作成し、PE ファイルに埋め込むことができなくなります。  
   
 ## <a name="example"></a>例  
- The following example shows the default manifest that the Visual Basic compiler inserts into a PE.  
+ 次の例は、Visual Basic コンパイラによって PE に挿入される既定のマニフェストを示しています。  
   
 > [!NOTE]
-> The compiler inserts a standard application name MyApplication.app into the manifest XML. これは、アプリケーションを Windows Server 2003 Service Pack 3 で実行できるようにするための回避策です。  
+> コンパイラは、標準のアプリケーション名 MyApplication をマニフェスト XML に挿入します。 これは、アプリケーションを Windows Server 2003 Service Pack 3 で実行できるようにするための回避策です。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -66,7 +66,7 @@ ms.locfileid: "74349131"
 </assembly>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-nowin32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)

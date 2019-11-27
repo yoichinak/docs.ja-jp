@@ -12,16 +12,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346669"
 ---
 # <a name="type-mismatch-visual-basic"></a>型が一致しません。(Visual Basic)
-You attempted to convert a value to another type in a way that is not valid.  
+無効な方法で値を別の型に変換しようとしました。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1. Check the assignment to make sure it is valid.  
+1. 割り当てを確認して、有効であることを確認してください。  
   
-2. Make sure you did not pass an object to a procedure that expects a single property or value.  
+2. 1つのプロパティまたは値を必要とするプロシージャにオブジェクトを渡していないことを確認します。  
   
-3. Make sure you did not use a module or project name where an expression was expected.  
+3. 式が必要な場合は、モジュール名またはプロジェクト名を使用していないことを確認してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)

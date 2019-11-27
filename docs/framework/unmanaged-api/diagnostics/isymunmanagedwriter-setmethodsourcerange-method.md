@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427871"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange メソッド
-Specifies the true start and end of a method within a source file. Use this method to specify the extent of a method independently of the sequence points that exist within the method.  
+ソースファイル内のメソッドの実際の開始と終了を指定します。 メソッドの範囲を、メソッド内に存在するシーケンスポイントとは別に指定するには、このメソッドを使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,29 +39,29 @@ HRESULT SetMethodSourceRange(
   
 ## <a name="parameters"></a>パラメーター  
  `startDoc`  
- [in] A pointer to the document containing the starting position.  
+ から開始位置を格納しているドキュメントへのポインター。  
   
  `startLine`  
- [in] The starting line number.  
+ から開始行番号。  
   
  `startColumn`  
- [in] The starting column.  
+ から開始列。  
   
  `endDoc`  
- [in] A pointer to the document containing the ending position.  
+ から終了位置を含むドキュメントへのポインター。  
   
  `endLine`  
- [in] The ending line number.  
+ から終了行番号。  
   
  `endColumn`  
- [in] The ending column number.  
+ から終了列番号。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

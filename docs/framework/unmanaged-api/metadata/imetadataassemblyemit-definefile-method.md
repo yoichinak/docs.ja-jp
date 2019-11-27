@@ -39,32 +39,32 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>パラメーター  
  `szName`  
- [in] The name of the file to be consumed.  
+ から使用するファイルの名前。  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the assembly.  
+ からアセンブリに関連付けられているハッシュデータへのポインター。  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ から`pbHashValue`のサイズ (バイト単位)。  
   
  `dwFileFlags`  
- [in] A bitwise combination of `FileFlags` values that specify property settings.  
+ からプロパティ設定を指定する `FileFlags` 値のビットごとの組み合わせ。  
   
  `pmdf`  
- [out] A pointer to the returned `File` token.  
+ 入出力返された `File` トークンへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.  
+## <a name="remarks"></a>コメント  
+ このアセンブリがビルドされた時点で、このアセンブリに含まれていたファイルごとに1つの `File` メタデータ構造を定義する必要があります。メタデータを含むファイルは除きます。  
   
-## <a name="requirements"></a>［要件］  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

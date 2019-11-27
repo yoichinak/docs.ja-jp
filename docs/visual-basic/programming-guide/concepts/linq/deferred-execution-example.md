@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354224"
 ---
-# <a name="deferred-execution-example-visual-basic"></a>Deferred Execution Example (Visual Basic)
+# <a name="deferred-execution-example-visual-basic"></a>遅延実行の例 (Visual Basic)
 
 このトピックでは、遅延実行とレイジー評価が LINQ to XML クエリの実行にどのように影響するかについて説明します。
 
@@ -61,6 +61,6 @@ Main: str GHI
 
 返されるコレクションの各アイテムが `foreach` の `Main` ループで処理されるまで、文字列の配列全体は大文字に変換されないことを確認できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [チュートリアル: 遅延実行 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

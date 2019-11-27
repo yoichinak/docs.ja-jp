@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432730"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption メソッド
-Sets the specified option to a given value for the current metadata scope. The option controls how calls to the current metadata scope are handled.  
+指定されたオプションを、現在のメタデータスコープの指定された値に設定します。 オプションは、現在のメタデータスコープへの呼び出しの処理方法を制御します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,40 +36,40 @@ HRESULT SetOption (
   
 ## <a name="parameters"></a>パラメーター  
  `optionId`  
- [in] A pointer to a GUID that specifies the option to be set.  
+ から設定するオプションを指定する GUID へのポインター。  
   
  `pValue`  
- [in] The value to use to set the option. The type of this value must be a variant of the specified option's type.  
+ からオプションを設定するために使用する値。 この値の型は、指定されたオプションの型のバリアントである必要があります。  
   
-## <a name="remarks"></a>Remarks  
- The following table lists the available GUIDs that the `optionId` parameter can point to and the corresponding valid values for the `pValue` parameter.  
+## <a name="remarks"></a>コメント  
+ 次の表に、`optionId` パラメーターが指すことのできる Guid と、`pValue` パラメーターに対応する有効な値を示します。  
   
-|GUID|説明|`pValue` Parameter|  
+|GUID|説明|`pValue` パラメーター|  
 |----------|-----------------|------------------------|  
-|MetaDataCheckDuplicatesFor|Controls which items are checked for duplicates. Each time you call an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) method that creates a new item, you can ask the method to check whether the item already exists in the current scope. For example, you can check for the existence of `mdMethodDef` items; in this case, when you call [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), it will check that the method does not already exist in the current scope. This check uses the key that uniquely identifies a given method: parent type, name, and signature.|Must be a variant of type UI4, and must contain a combination of the values of the [CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md) enumeration.|  
-|MetaDataRefToDefCheck|Controls which referenced items are converted to definitions. By default, the metadata engine will optimize the code by converting a referenced item to its definition if the referenced item is actually defined in the current scope.|Must be a variant of type UI4, and must contain a combination of the values of the [CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md) enumeration.|  
-|MetaDataNotificationForTokenMovement|Controls which token remaps occurring during a metadata merge generate callbacks. Use the [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) method to establish your [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interface.|Must be a variant of type UI4, and must contain a combination of the values of the [CorNotificationForTokenMovement](../../../../docs/framework/unmanaged-api/metadata/cornotificationfortokenmovement-enumeration.md) enumeration.|  
-|MetaDataSetENC|Controls the behavior of edit-and-continue (ENC). Only one mode of behavior can be set at a time.|Must be a variant of type UI4, and must contain a value of the [CorSetENC](../../../../docs/framework/unmanaged-api/metadata/corsetenc-enumeration.md) enumeration. The value is not a bitmask.|  
-|MetaDataErrorIfEmitOutOfOrder|Controls which emitted-out-of-order errors generate callbacks. Emitting metadata out of order is not fatal; however, if you emit metadata in an order that is favored by the metadata engine, the metadata is more compact and therefore can be more efficiently searched. Use the `IMetaDataEmit::SetHandler` method to establish your [IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) interface.|Must be a variant of type UI4, and must contain a combination of the values of the [CorErrorIfEmitOutOfOrder](../../../../docs/framework/unmanaged-api/metadata/corerrorifemitoutoforder-enumeration.md) enumeration.|  
-|MetaDataImportOption|Controls which kinds of items that were deleted during an ENC are retrieved by an enumerator.|Must be a variant of type UI4, and must contain a combination of the values of the [CorImportOptions Enumeration](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md) enumeration.|  
-|MetaDataThreadSafetyOptions|Controls whether the metadata engine obtains reader/writer locks, thereby ensuring thread safety. By default, the engine assumes that access is single-threaded by the caller, so no locks are obtained. Clients are responsible for maintaining proper thread synchronization when using the metadata API.|Must be a variant of type UI4, and must contain a value of the [CorThreadSafetyOptions](../../../../docs/framework/unmanaged-api/metadata/corthreadsafetyoptions-enumeration.md) enumeration. The value is not a bitmask.|  
-|MetaDataGenerateTCEAdapters|Controls whether the type library importer should generate the tightly coupled event (TCE) adapters for COM connection point containers.|Must be a variant of type BOOL. If `pValue` is set to `true`, the type library importer generates the TCE adapters.|  
-|MetaDataTypeLibImportNamespace|Specifies a non-default namespace for the type library that is being imported.|Must be either a null value or a variant of type BSTR. If `pValue` is a null value, the current namespace is set to null; otherwise, the current namespace is set to the string that is held in the variant's BSTR type.|  
-|MetaDataLinkerOptions|Controls whether the linker should generate an assembly or a .NET Framework module file.|Must be a variant of type UI4, and must contain a combination of the values of the [CorLinkerOptions](../../../../docs/framework/unmanaged-api/metadata/corlinkeroptions-enumeration.md) enumeration.|  
-|MetaDataRuntimeVersion|Specifies the version of the common language runtime against which this image was built. The version is stored as a string, such as "v1.0.3705".|Must be a null value, a VT_EMPTY value, or a variant of type BSTR. If `pValue` is null, the runtime version is set to null. If `pValue` is VT_EMPTY, the version is set to a default value, which is drawn from the version of Mscorwks.dll within which the metadata code is running. Otherwise, the runtime version is set to the string that is held in the variant's BSTR type.|  
-|MetaDataMergerOptions|Specifies options for merging metadata.|Must be a variant of type UI4, and must contain a combination of the values of the `MergeFlags` enumeration, which is described in the CorHdr.h file.|  
-|MetaDataPreserveLocalRefs|Disables optimizing local references into definitions.|Must contain a combination of the values of the [CorLocalRefPreservation](../../../../docs/framework/unmanaged-api/metadata/corlocalrefpreservation-enumeration.md) enumeration.|  
+|MetaDataCheckDuplicatesFor|重複しているかどうかをチェックする項目を制御します。 新しい項目を作成する[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)メソッドを呼び出すたびに、その項目が現在のスコープ内に既に存在するかどうかを確認するようにメソッドに要求できます。 たとえば、`mdMethodDef` の項目があるかどうかを確認できます。この場合、 [IMetaDataEmit::D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)を呼び出すと、メソッドが現在のスコープに存在していないかどうかがチェックされます。 このチェックでは、指定されたメソッドを一意に識別するキー (親の型、名前、および署名) を使用します。|は UI4 型のバリアントである必要があり、 [CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md)列挙体の値の組み合わせを含んでいる必要があります。|  
+|MetaDataRefToDefCheck|定義に変換される参照項目を制御します。 既定では、参照される項目が現在のスコープで実際に定義されている場合は、参照される項目をその定義に変換することで、メタデータエンジンによってコードが最適化されます。|は UI4 型のバリアントである必要があり、 [Correftodefcheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md)列挙体の値の組み合わせを含んでいる必要があります。|  
+|MetaDataNotificationForTokenMovement|メタデータのマージ中に発生するトークンのリマップを制御してコールバックを生成します。 [IMetaDataEmit:: SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)メソッドを使用して、 [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)インターフェイスを確立します。|は UI4 型のバリアントである必要があり、 [Cornotificationfortokenmovement](../../../../docs/framework/unmanaged-api/metadata/cornotificationfortokenmovement-enumeration.md)列挙の値の組み合わせを含んでいる必要があります。|  
+|MetaDataSetENC|エディットコンティニュ (ENC) の動作を制御します。 一度に設定できる動作のモードは1つだけです。|は UI4 型のバリアントである必要があり、 [Corsetenc](../../../../docs/framework/unmanaged-api/metadata/corsetenc-enumeration.md)列挙子の値を含んでいる必要があります。 値がビットマスクではありません。|  
+|MetaDataErrorIfEmitOutOfOrder|発生した順不同エラーがコールバックを生成するように制御します。 順序のないメタデータの出力は致命的ではありません。ただし、メタデータエンジンで優先される順序でメタデータを出力する場合、メタデータはよりコンパクトであるため、より効率的に検索することができます。 `IMetaDataEmit::SetHandler` メソッドを使用して、 [IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)インターフェイスを確立します。|は UI4 型のバリアントである必要があり、 [CorErrorIfEmitOutOfOrder](../../../../docs/framework/unmanaged-api/metadata/corerrorifemitoutoforder-enumeration.md)列挙体の値の組み合わせを含んでいる必要があります。|  
+|MetaDataImportOption|は、ENC 中に削除された項目の種類を、列挙子によって取得します。|は UI4 型のバリアントである必要があり、 [CorImportOptions 列挙](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md)型の値の組み合わせを含んでいる必要があります。|  
+|Metadatathreadsaf Etyoptions|メタデータエンジンが読み取り/書き込みロックを取得するかどうかを制御し、それによってスレッドセーフを確保します。 既定では、エンジンは、アクセスが呼び出し元によってシングルスレッドであることを前提としているため、ロックは取得されません。 クライアントは、メタデータ API を使用するときに、適切なスレッド同期を維持する役割を担います。|は UI4 型のバリアントである必要があり、 [Corthreadsaf Etyoptions](../../../../docs/framework/unmanaged-api/metadata/corthreadsafetyoptions-enumeration.md)列挙体の値を含んでいる必要があります。 値がビットマスクではありません。|  
+|MetaDataGenerateTCEAdapters|タイプライブラリインポーターが COM 接続ポイントコンテナー用の密結合イベント (TCE) アダプターを生成する必要があるかどうかを制御します。|BOOL 型の variant である必要があります。 `pValue` が `true`に設定されている場合は、タイプライブラリインポーターによって、TCE アダプターが生成されます。|  
+|MetaDataTypeLibImportNamespace|インポートされるタイプライブラリの既定以外の名前空間を指定します。|Null 値または BSTR 型のバリアントのいずれかである必要があります。 `pValue` が null 値の場合、現在の名前空間は null に設定されます。それ以外の場合、現在の名前空間は、バリアントの BSTR 型に保持されている文字列に設定されます。|  
+|MetaDataLinkerOptions|リンカーがアセンブリまたは .NET Framework モジュールファイルを生成するかどうかを制御します。|は UI4 型のバリアントである必要があり、 [CorLinkerOptions](../../../../docs/framework/unmanaged-api/metadata/corlinkeroptions-enumeration.md)列挙体の値の組み合わせを含んでいる必要があります。|  
+|MetaDataRuntimeVersion|このイメージの作成に使用された共通言語ランタイムのバージョンを指定します。 バージョンは、"v v1.0.3705" などの文字列として格納されます。|は、null 値、VT_EMPTY 値、または BSTR 型のバリアントである必要があります。 `pValue` が null の場合、ランタイムのバージョンは null に設定されます。 `pValue` が VT_EMPTY 場合、バージョンは既定値に設定されます。これは、メタデータコードが実行されている Mscorwks.dll のバージョンから描画されます。 それ以外の場合、ランタイムのバージョンは、バリアントの BSTR 型に保持されている文字列に設定されます。|  
+|MetaDataMergerOptions|メタデータをマージするためのオプションを指定します。|UI4 型のバリアントである必要があります。また、CorHdr .h ファイルに記述されている `MergeFlags` 列挙型の値の組み合わせが含まれている必要があります。|  
+|MetaDataPreserveLocalRefs|定義へのローカル参照の最適化を無効にします。|[Corlocalrefpreservation](../../../../docs/framework/unmanaged-api/metadata/corlocalrefpreservation-enumeration.md)列挙の値の組み合わせが含まれている必要があります。|  
   
-## <a name="requirements"></a>［要件］  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataDispenserEx インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [IMetaDataDispenser インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

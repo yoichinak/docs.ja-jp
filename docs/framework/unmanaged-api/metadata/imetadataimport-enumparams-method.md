@@ -39,37 +39,37 @@ HRESULT EnumParams (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
  `mb`  
- [in] A MethodDef token representing the method with the parameters to enumerate.  
+ から列挙するパラメーターを使用してメソッドを表す MethodDef トークン。  
   
  `rParams`  
- [out] The array used to store the ParamDef tokens.  
+ 入出力ParamDef トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rParams` 配列の最大サイズ。  
   
  `pcTokens`  
- [out] The number of ParamDef tokens returned in `rParams`.  
+ 入出力`rParams`で返される ParamDef トークンの数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumParams` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumParams` が正常に返されました。|  
+|`S_FALSE`|列挙するトークンがありません。 この場合、`pcTokens` は0になります。|  
   
-## <a name="requirements"></a>［要件］  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445174"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished メソッド
-Notifies the profiler that an assembly has finished loading.  
+アセンブリの読み込みが完了したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,17 +35,17 @@ HRESULT AssemblyLoadFinished(
   
 ## <a name="parameters"></a>パラメーター  
  `assemblyId`  
- [in] Identifies the assembly that was loaded.  
+ から読み込まれたアセンブリを識別します。  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the assembly finished loading successfully.  
+ からアセンブリの読み込みが正常に終了したかどうかを示す HRESULT。  
   
-## <a name="remarks"></a>Remarks  
- The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.  
+## <a name="remarks"></a>コメント  
+ `assemblyId` の値は、`AssemblyLoadFinished` メソッドが呼び出されるまで、情報要求に対して有効ではありません。  
   
- Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.  
+ `AssemblyLoadFinished` コールバックの後も、アセンブリの読み込みの一部が続行される場合があります。 `hrStatus` のエラー HRESULT はエラーを示します。 ただし、`hrStatus` の成功 HRESULT は、アセンブリの読み込みの最初の部分が成功したことのみを示します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -54,6 +54,6 @@ HRESULT AssemblyLoadFinished(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438711"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass メソッド
-Determines whether the specified class is an array class.  
+指定したクラスが配列クラスであるかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,21 +37,21 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>パラメーター  
  `classId`  
- [in] The ID of the class to be examined.  
+ から調べるクラスの ID。  
   
  `pBaseElemType`  
- [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
+ 入出力配列要素の型を示す CorElementType 列挙値へのポインター。  
   
  `pBaseClassId`  
- [out] A pointer to the class ID of the array elements, when available.  
+ 入出力使用可能な場合は、配列要素のクラス ID へのポインター。  
   
  `pcRank`  
- [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
+ 入出力配列のランク (次元の数) を示す整数を指すポインターです。  
   
-## <a name="remarks"></a>Remarks  
- If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
+## <a name="remarks"></a>コメント  
+ 指定したクラスが配列クラスの場合、`IsArrayClass` メソッドは、null 以外の出力パラメーターの S_OK HRESULT と値を返します。 それ以外の場合は S_FALSE を返します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -60,6 +60,6 @@ HRESULT IsArrayClass(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

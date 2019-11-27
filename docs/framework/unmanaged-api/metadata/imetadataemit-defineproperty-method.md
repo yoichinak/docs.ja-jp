@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431525"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty メソッド
-Creates a property definition for the specified type, with the specified `get` and `set` method accessors, and gets a token to that property definition.  
+指定した `get` および `set` メソッドアクセサーを使用して、指定した型のプロパティ定義を作成し、そのプロパティ定義へのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,51 +46,51 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in] The token for class or interface on which the property is being defined.  
+ からプロパティが定義されているクラスまたはインターフェイスのトークン。  
   
  `szProperty`  
- [in] The name of the property.  
+ からプロパティの名前。  
   
  `dwPropFlags`  
- [in] The property flags.  
+ からプロパティフラグ。  
   
  `pvSig`  
- [in] The property signature.  
+ からプロパティシグネチャ。  
   
  `cbSig`  
- [in] The count of bytes in `pvSig`.  
+ から`pvSig`内のバイト数。  
   
  `dwCPlusTypeFlag`  
- [in] The type of the property's default value.  
+ からプロパティの既定値の型。  
   
  `pValue`  
- [in] The default value for the property.  
+ からプロパティの既定値。  
   
  `cchValue`  
- [in] The count of (Unicode) characters in `pValue`.  
+ から`pValue`内の (Unicode) 文字の数。  
   
  `mdSetter`  
- [in] The method that sets the property value.  
+ からプロパティ値を設定するメソッド。  
   
  `mdGetter`  
- [in] The method that gets the property value.  
+ からプロパティ値を取得するメソッド。  
   
  `rmdOtherMethods[]`  
- [in] An array of other methods associated with the property. Terminate the array with an `mdTokenNil`.  
+ からプロパティに関連付けられている他のメソッドの配列。 `mdTokenNil`で配列を終了します。  
   
  `pmdProp`  
- [out] The `mdProperty` token assigned.  
+ 入出力割り当てられた `mdProperty` トークン。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350633"
 ---
-# <a name="serializing-with-an-xml-declaration-visual-basic"></a>Serializing with an XML Declaration (Visual Basic)
+# <a name="serializing-with-an-xml-declaration-visual-basic"></a>XML 宣言を使用したシリアル化 (Visual Basic)
 このトピックでは、シリアル化を実行する際に XML 宣言を生成するかどうかを制御する方法について説明します。  
   
 ## <a name="xml-declaration-generation"></a>XML 宣言の生成  
@@ -61,6 +61,6 @@ Console.WriteLine(sb.ToString())
 <Root><Child>child content</Child></Root>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Serializing XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [XML ツリーのシリアル化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

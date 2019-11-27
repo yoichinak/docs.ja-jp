@@ -27,27 +27,27 @@ object(index)
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`object`|必須です。 A queryable collection. That is, a collection that implements <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>.|  
-|(|必須です。 Denotes the start of the indexer property.|  
-|`index`|必須です。 An integer expression that specifies the zero-based position of an element of the collection.|  
-|)|必須です。 Denotes the end of the indexer property.|  
+|`object`|必須。 クエリ可能なコレクション。 つまり、<xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Linq.IQueryable%601>を実装するコレクションです。|  
+|(|必須。 インデクサープロパティの開始を示します。|  
+|`index`|必須。 コレクションの要素の0から始まる位置を指定する整数式。|  
+|)|必須。 インデクサープロパティの末尾を示します。|  
   
 ## <a name="return-value"></a>戻り値  
- The object from the specified location in the collection, or `Nothing` if the index is out of range.  
+ コレクション内の指定した位置にあるオブジェクト。インデックスが範囲外の場合は `Nothing`。  
   
-## <a name="remarks"></a>Remarks  
- You can use the extension indexer property to access individual elements in a collection. This indexer property is typically used on the output of XML axis properties. The XML child and XML descendent axis properties return collections of <xref:System.Xml.Linq.XElement> objects or an attribute value.  
+## <a name="remarks"></a>コメント  
+ 拡張インデクサープロパティを使用して、コレクション内の個々の要素にアクセスできます。 このインデクサープロパティは、通常、XML 軸プロパティの出力に使用されます。 XML 子および XML 子孫軸プロパティは、<xref:System.Xml.Linq.XElement> オブジェクトまたは属性値のコレクションを返します。  
   
- The Visual Basic compiler converts extension indexer properties to calls to the `ElementAtOrDefault` method. Unlike an array indexer, the `ElementAtOrDefault` method returns `Nothing` if the index is out of range. This behavior is useful when you cannot easily determine the number of elements in a collection.  
+ Visual Basic コンパイラは、拡張インデクサープロパティを `ElementAtOrDefault` メソッドの呼び出しに変換します。 配列インデクサーとは異なり、`ElementAtOrDefault` メソッドは、インデックスが範囲外の場合に `Nothing` を返します。 この動作は、コレクション内の要素の数を簡単に判断できない場合に便利です。  
   
- This indexer property is like an extension property for collections that implement <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>: it is used only if the collection does not have an indexer or a default property.  
+ このインデクサープロパティは、<xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Linq.IQueryable%601>を実装するコレクションの拡張プロパティに似ています。このプロパティは、コレクションにインデクサーまたは default プロパティがない場合にのみ使用されます。  
   
- To access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects, you can use the XML `Value` property. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ <xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XAttribute> オブジェクトのコレクション内の最初の要素の値にアクセスするには、XML `Value` プロパティを使用できます。 詳細については、「 [XML 値プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- The following example shows how to use the extension indexer to access the second child node in a collection of <xref:System.Xml.Linq.XElement> objects. The collection is accessed by using the child axis property, which gets all child elements named `phone` in the `contact` object.  
+ 次の例では、拡張インデクサーを使用して、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション内の2番目の子ノードにアクセスする方法を示します。 コレクションにアクセスするには、子軸プロパティを使用します。このプロパティは、`contact` オブジェクト内の `phone` という名前のすべての子要素を取得します。  
   
  [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  
   
@@ -55,7 +55,7 @@ object(index)
   
  `Second phone number: 425-555-0145`  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Linq.XElement>
 - [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)

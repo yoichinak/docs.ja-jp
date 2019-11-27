@@ -17,30 +17,30 @@ ms.locfileid: "74435498"
 ---
 # <a name="get-ui-automation-element-properties"></a>UI オートメーション要素のプロパティの取得
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
   
- This topic shows how to retrieve properties of a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element.  
+ このトピックでは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要素のプロパティを取得する方法について説明します。  
   
-### <a name="get-a-current-property-value"></a>Get a Current Property Value  
+### <a name="get-a-current-property-value"></a>現在のプロパティ値を取得します。  
   
-1. Obtain the <xref:System.Windows.Automation.AutomationElement> whose property you wish to get.  
+1. 取得するプロパティを持つ <xref:System.Windows.Automation.AutomationElement> を取得します。  
   
-2. Call <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, or retrieve the <xref:System.Windows.Automation.AutomationElement.Current%2A> property structure and get the value from one of its members.  
+2. <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>を呼び出すか、<xref:System.Windows.Automation.AutomationElement.Current%2A> のプロパティ構造体を取得し、そのメンバーの1つから値を取得します。  
   
-### <a name="get-a-cached-property-value"></a>Get a Cached Property Value  
+### <a name="get-a-cached-property-value"></a>キャッシュされたプロパティ値を取得する  
   
-1. Obtain the <xref:System.Windows.Automation.AutomationElement> whose property you wish to get. The property must have been specified in the <xref:System.Windows.Automation.CacheRequest>.  
+1. 取得するプロパティを持つ <xref:System.Windows.Automation.AutomationElement> を取得します。 プロパティは、<xref:System.Windows.Automation.CacheRequest>で指定されている必要があります。  
   
-2. Call <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, or retrieve the <xref:System.Windows.Automation.AutomationElement.Cached%2A> property structure and get the value from one of its members.  
+2. <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>を呼び出すか、<xref:System.Windows.Automation.AutomationElement.Cached%2A> のプロパティ構造体を取得し、そのメンバーの1つから値を取得します。  
   
 ## <a name="example"></a>例  
- The following example shows various ways to retrieve current properties of an <xref:System.Windows.Automation.AutomationElement>.  
+ 次の例は、<xref:System.Windows.Automation.AutomationElement>の現在のプロパティを取得するさまざまな方法を示しています。  
   
  [!code-csharp[UIAClient_snip#170](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#170)]
  [!code-vb[UIAClient_snip#170](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#170)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [クライアントの UI オートメーション プロパティ](ui-automation-properties-for-clients.md)
+- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)
-- [UI オートメーション クライアントにおけるキャッシュ](caching-in-ui-automation-clients.md)
+- [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)

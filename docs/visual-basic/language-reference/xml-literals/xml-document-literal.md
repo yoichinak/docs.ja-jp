@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349382"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML ドキュメント リテラル (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XDocument> object.  
+<xref:System.Xml.Linq.XDocument> オブジェクトを表すリテラル。  
   
 ## <a name="syntax"></a>構文  
   
@@ -30,32 +30,32 @@ rootElement
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`encoding`|省略可能です。 Literal text declaring which encoding the document uses.|  
-|`standalone`|省略可能です。 Literal text. Must be "yes" or "no".|  
-|`piCommentList`|省略可能です。 List of XML processing instructions and XML comments. Takes the following format:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Each `piComment` can be one of the following:<br /><br /> -   [XML Processing Instruction Literal](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [XML Comment Literal](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
-|`rootElement`|必須です。 Root element of the document. The format is one of the following:<br /><br /> <ul><li>[XML Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Embedded expression of the form `<%=` `elementExp` `%>`. The `elementExp` returns one of the following:<br /><br /> <ul><li><xref:System.Xml.Linq.XElement> オブジェクト。</li><li>A collection that contains one <xref:System.Xml.Linq.XElement> object and any number of <xref:System.Xml.Linq.XProcessingInstruction> and <xref:System.Xml.Linq.XComment> objects.</li></ul></li></ul><br /> For more information, see [Embedded Expressions in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
+|`encoding`|省略可。 ドキュメントが使用するエンコーディングを宣言するリテラルテキスト。|  
+|`standalone`|省略可。 リテラルテキスト。 "Yes" または "no" にする必要があります。|  
+|`piCommentList`|省略可。 XML 処理命令と XML コメントの一覧。 は、次の形式をとります。<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> 各 `piComment` は、次のいずれかになります。<br /><br /> [XML 処理命令リテラル](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)を -   します。<br />[XML コメントリテラル](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)を -   します。|  
+|`rootElement`|必須。 ドキュメントのルート要素。 形式は、次のいずれかになります。<br /><br /> <ul><li>[XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。</li><li>`elementExp` `%>``<%=` フォームの埋め込み式。 `elementExp` は、次のいずれかを返します。<br /><br /> <ul><li><xref:System.Xml.Linq.XElement> オブジェクト。</li><li>1つの <xref:System.Xml.Linq.XElement> オブジェクトと、任意の数の <xref:System.Xml.Linq.XProcessingInstruction> および <xref:System.Xml.Linq.XComment> オブジェクトを含むコレクション。</li></ul></li></ul><br /> 詳細については、「 [XML での埋め込み式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)」を参照してください。|  
   
 ## <a name="return-value"></a>戻り値  
  <xref:System.Xml.Linq.XDocument> オブジェクト。  
   
-## <a name="remarks"></a>Remarks  
- An XML document literal is identified by the XML declaration at the start of the literal. Although each XML document literal must have exactly one root XML element, it can have any number of XML processing instructions and XML comments.  
+## <a name="remarks"></a>コメント  
+ XML ドキュメントリテラルは、リテラルの先頭にある XML 宣言によって識別されます。 各 XML ドキュメントリテラルは1つのルート XML 要素を持つ必要がありますが、xml 処理命令と XML コメントは、任意の数を持つことができます。  
   
- An XML document literal cannot appear in an XML element.  
+ Xml ドキュメントリテラルは XML 要素には記述できません。  
   
 > [!NOTE]
-> An XML literal can span multiple lines without using line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> XML リテラルは、行連結文字を使用せずに、複数の行にまたがることができます。 これにより、XML ドキュメントからコンテンツをコピーし、Visual Basic プログラムに直接貼り付けることができます。  
   
- The Visual Basic compiler converts the XML document literal into calls to the <xref:System.Xml.Linq.XDocument.%23ctor%2A> and <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> constructors.  
+ Visual Basic コンパイラは、XML ドキュメントリテラルを、<xref:System.Xml.Linq.XDocument.%23ctor%2A> コンストラクターと <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> コンストラクターの呼び出しに変換します。  
   
 ## <a name="example"></a>例  
- The following example creates an XML document that has an XML declaration, a processing instruction, a comment, and an element that contains another element.  
+ 次の例では、xml 宣言、処理命令、コメント、および別の要素を含む要素を含む XML ドキュメントを作成します。  
   
  [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Linq.XElement>
 - <xref:System.Xml.Linq.XProcessingInstruction>
