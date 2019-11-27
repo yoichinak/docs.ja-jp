@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442440"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention 列挙型
-Specifies the calling conventions for unmanaged code.  
+アンマネージコードの呼び出し規約を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,25 +46,25 @@ typedef enum CorUnmanagedCallingConvention {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|The C language calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|The standard calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|The "this" calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|The "fast" calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|C 言語の呼び出し規約。|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|標準の呼び出し規約。|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"This" 呼び出し規約。|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|"高速" 呼び出し規約。|  
 |`IMAGE_CEE_CS_CALLCONV_C`|使用しません。|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|使用しません。|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|使用しません。|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|使用しません。|  
   
-## <a name="remarks"></a>Remarks  
- The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.  
+## <a name="remarks"></a>コメント  
+ CLR では、.NET Framework バージョン1.0 での "高速" 呼び出し規約はサポートされていません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

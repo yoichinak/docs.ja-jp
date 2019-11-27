@@ -22,35 +22,35 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439689"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 インターフェイス
-Provides methods that are used by the common language runtime (CLR) to notify a code profiler when the events to which the profiler has subscribed occur. The `ICorProfilerCallback2` interface is an extension of the [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interface. That is, it provides new callbacks introduced in the .NET Framework version 2.0.  
+プロファイラーがサブスクライブしたイベントが発生したときにコードプロファイラーに通知するために、共通言語ランタイム (CLR) によって使用されるメソッドを提供します。 `ICorProfilerCallback2` インターフェイスは、 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)インターフェイスの拡張機能です。 つまり、.NET Framework バージョン2.0 で導入された新しいコールバックを提供します。  
   
 > [!NOTE]
-> Each method implementation must return an HRESULT having a value of S_OK on success or E_FAIL on failure. Currently, the CLR ignores the HRESULT that is returned by each callback except [ICorProfilerCallback::ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md).  
+> 各メソッドの実装は、成功した場合は S_OK の値を持つ HRESULT を返し、失敗した場合は E_FAIL を返す必要があります。 現在、CLR では、 [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)を除く各コールバックによって返される HRESULT は無視されます。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[FinalizeableObjectQueued メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.|  
-|[GarbageCollectionFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|Notifies the profiler that a garbage collection has completed and all garbage collection callbacks have been issued for it.|  
-|[GarbageCollectionStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)|Notifies the code profiler that a garbage collection has started.|  
-|[HandleCreated メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)|Notifies the code profiler that a garbage collection handle has been created.|  
-|[HandleDestroyed メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)|Notifies the code profiler that a garbage collection handle has been destroyed.|  
-|[RootReferences2 メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)|Notifies the profiler about root references after a garbage collection has occurred. This method is an extension of the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) method.|  
-|[SurvivingReferences メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)|Notifies the profiler about object references that have survived a garbage collection.|  
-|[ThreadNameChanged メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)|Notifies the code profiler that the name of a thread has changed.|  
+|[FinalizeableObjectQueued メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|ファイナライザーを持つオブジェクトが `Finalize` メソッドを実行するためにファイナライザースレッドに対してキューに登録されていることをコードプロファイラーに通知します。|  
+|[GarbageCollectionFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|ガベージコレクションが完了し、すべてのガベージコレクションコールバックが発行されたことをプロファイラーに通知します。|  
+|[GarbageCollectionStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)|ガベージコレクションが開始されたことをコードプロファイラーに通知します。|  
+|[HandleCreated メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)|ガベージコレクションハンドルが作成されたことをコードプロファイラーに通知します。|  
+|[HandleDestroyed メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)|ガベージコレクションハンドルが破棄されたことをコードプロファイラーに通知します。|  
+|[RootReferences2 メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)|ガベージコレクションが発生した後のルート参照をプロファイラーに通知します。 このメソッドは、 [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)メソッドの拡張です。|  
+|[SurvivingReferences メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)|ガベージコレクションで残ったオブジェクト参照をプロファイラーに通知します。|  
+|[ThreadNameChanged メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)|スレッドの名前が変更されたことをコードプロファイラーに通知します。|  
   
-## <a name="remarks"></a>Remarks  
- The CLR calls a method in the `ICorProfilerCallback` (or `ICorProfilerCallback2`) interface to notify the profiler when an event, to which the profiler had subscribed, occurs. This is the primary callback interface through which the CLR communicates with the code profiler.  
+## <a name="remarks"></a>コメント  
+ CLR は、`ICorProfilerCallback` (または `ICorProfilerCallback2`) インターフェイスのメソッドを呼び出して、プロファイラーがサブスクライブしているイベントが発生したときにプロファイラーに通知します。 これは、CLR がコードプロファイラーと通信するときに使用する主要なコールバックインターフェイスです。  
   
- A code profiler must implement the methods of the `ICorProfilerCallback` interface. For the .NET Framework 2.0 and later versions, the profiler must also implement the `ICorProfilerCallback2` methods. Each method implementation must return an HRESULT having a value of S_OK on success or E_FAIL on failure. Currently, the CLR ignores the HRESULT that is returned by each callback except [ICorProfilerCallback::ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md).  
+ コードプロファイラーは、`ICorProfilerCallback` インターフェイスのメソッドを実装する必要があります。 .NET Framework 2.0 以降のバージョンでは、プロファイラーで `ICorProfilerCallback2` メソッドも実装する必要があります。 各メソッドの実装は、成功した場合は S_OK の値を持つ HRESULT を返し、失敗した場合は E_FAIL を返す必要があります。 現在、CLR では、 [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)を除く各コールバックによって返される HRESULT は無視されます。  
   
- A code profiler must register in the Microsoft Windows registry, its COM object that implements the `ICorProfilerCallback` and `ICorProfilerCallback2` interfaces. A code profiler subscribes to the events for which it wants to receive notification by calling [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md). This is usually done in the profiler's implementation of [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md). The profiler is then able to receive notification from the runtime when an event is about to occur or has just occurred in an executing runtime process.  
+ コードプロファイラーは、Microsoft Windows レジストリ、`ICorProfilerCallback` および `ICorProfilerCallback2` インターフェイスを実装する COM オブジェクトに登録する必要があります。 コードプロファイラーは、 [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)を呼び出して、通知を受信するイベントをサブスクライブします。 これは通常、プロファイラーによる[ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)の実装で行われます。 その後、プロファイラーは、実行中のランタイムプロセスでイベントが発生するか、発生したばかりの場合に、ランタイムから通知を受け取ることができます。  
   
 > [!NOTE]
-> The profiler registers a single COM object. If the profiler is targeting .NET Framework version 1.0 or 1.1, that COM object need only implement the methods of `ICorProfilerCallback`. If it is targeting .NET Framework version 2.0 and later, the COM object must also implement the methods of `ICorProfilerCallback2`.  
+> プロファイラーは、1つの COM オブジェクトを登録します。 プロファイラーが .NET Framework バージョン1.0 または1.1 を対象としている場合、その COM オブジェクトは `ICorProfilerCallback`のメソッドのみを実装する必要があります。 .NET Framework バージョン2.0 以降を対象としている場合、COM オブジェクトは `ICorProfilerCallback2`のメソッドも実装する必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

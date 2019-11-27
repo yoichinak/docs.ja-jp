@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445696"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2 メソッド
-Imports assemblies and unbound modules. This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.  
+アセンブリとバインドされていないモジュールをインポートします。 このメソッドは[Importfile メソッド](importfile-method.md)に似ていますが、インポートされるファイルがディスク上に存在しない場合でも機能します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,36 +41,36 @@ HRESULT ImportFileEx2(
   
 ## <a name="parameters"></a>パラメーター  
  `pszFilename`  
- Name of file to be imported.  
+ インポートするファイルの名前。  
   
  `pszTargetName`  
- Optional name of target file.  
+ ターゲットファイルの名前 (省略可能)。  
   
  `pAssemblyScopeIn`  
- Optional import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.  
+ 省略可能なインポートスコープ[IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md)インターフェイス。  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ TRUE の場合、ImportTypes が使用されます。それ以外の場合は、インポートを手動で実行する必要があります。  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ [Openscope メソッド](../metadata/imetadatadispenser-openscope-method.md)に渡されるフラグ。  
   
  `pImportToken`  
- Receives unique ID for the assembly or file.  
+ アセンブリまたはファイルの一意の ID を受け取ります。  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Can be NULL if the file is not an assembly.  
+ アセンブリインポートスコープ[IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md)インターフェイスを受け取ります。 ファイルがアセンブリでない場合は NULL を指定できます。  
   
  `pdwCountOfScopes`  
- Receives the number of files and/or scopes imported.  
+ インポートされたファイルまたはスコープの数を受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h.  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink2 インターフェイス](ialink2-interface.md)
 - [IALink インターフェイス](ialink-interface.md)
