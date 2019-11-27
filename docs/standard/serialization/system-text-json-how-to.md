@@ -377,11 +377,11 @@ JSON プロパティの名前付けポリシー:
 
 シリアル化し、JSON 出力を行うオブジェクトの例を次に示します。
 
-|property |[値]  |
+|プロパティ |値  |
 |---------|---------|
-| 日付    | 8/1/2019 12:00:00 AM-07:00|
+| date    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| 概要| null|
+| まとめ| null|
 
 ```json
 {
@@ -571,11 +571,11 @@ Camel 形式のプロパティ名を持つ JSON の例を次に示します。 P
 
 前に示した JSON をこのサンプル型に逆シリアル化すると、余分なデータが `ExtensionData` プロパティのキーと値のペアになります。
 
-|property |[値]  |注  |
+|プロパティ |値  |メモ  |
 |---------|---------|---------|
-| 日付    | 8/1/2019 12:00:00 AM-07:00||
+| date    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | 大文字と小文字が区別されない (JSON で`temperatureCelsius`) ため、プロパティが設定されていません。 |
-| 概要 | 熱い ||
+| まとめ | 高 ||
 | ExtensionData | temperatureCelsius:25 |大文字と小文字が一致しなかったため、この JSON プロパティは余分で、ディクショナリ内のキーと値のペアになります。|
 || 使用可能な日:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |JSON からの追加のプロパティはキーと値のペアになり、値オブジェクトとして配列が使用されます。|
 | |概要語:<br>Cool<br>強風<br>Humid |JSON からの追加のプロパティはキーと値のペアになり、値オブジェクトとして配列が使用されます。|
@@ -714,7 +714,7 @@ JSON 内の Null 値は、有効な場合にのみ無視されます。 Null 非
 
 [!code-json[](~/samples/snippets/core/system-text-json/csharp/Universities.json)]
 
-## <a name="additional-resources"></a>その他の技術情報
+## <a name="additional-resources"></a>その他のリソース
 
 * [System.string の概要](system-text-json-overview.md)
 * [System.string API リファレンス](xref:System.Text.Json)

@@ -24,7 +24,7 @@ ms.locfileid: "74283458"
 
 次の表に、<xref:System.Windows.Controls.PasswordBox> コントロールの名前付きの部分を示します。
 
-|パーツ|[種類]|[説明]|
+|要素|型|説明|
 |-|-|-|
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.FrameworkElement>を含むことができるビジュアル要素。 <xref:System.Windows.Controls.PasswordBox> のテキストがこの要素に表示されます。|
 
@@ -32,14 +32,14 @@ ms.locfileid: "74283458"
 
 次の表は、<xref:System.Windows.Controls.PasswordBox> コントロールの表示状態を示しています。
 
-|VisualState 名|VisualStateGroup 名|[説明]|
+|VisualState 名|VisualStateGroup 名|説明|
 |-|-|-|
 |標準|CommonStates|既定の状態です。|
 |MouseOver|CommonStates|マウス ポインターがコントロール上に配置されます。|
 |Disabled|CommonStates|コントロールが無効になっています。|
 |フォーカスされている|FocusStates|コントロールにフォーカスがあります。|
 |フォーカスされていない|FocusStates|コントロールにフォーカスがありません。|
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|
 

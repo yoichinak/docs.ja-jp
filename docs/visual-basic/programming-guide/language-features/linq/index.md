@@ -1,5 +1,5 @@
 ---
-title: LINQ
+title: LINQ (LINQ)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
@@ -11,7 +11,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354181"
 ---
-# <a name="linq-in-visual-basic"></a>LINQ (Visual Basic における)
+# <a name="linq-in-visual-basic"></a>Visual Basic での LINQ
 このセクションでは、Visual Basic と [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] を理解して使用するのに役立つ概要、例、および背景情報を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

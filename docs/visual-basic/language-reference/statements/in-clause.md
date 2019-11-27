@@ -14,10 +14,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353578"
 ---
 # <a name="in-clause-visual-basic"></a>In 句 (Visual Basic)
-Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.  
+ループ変数が `For Each` ループ内を走査するグループを指定します。または、`From`、`Join`、または `Group Join` 句でクエリを実行するコレクションを指定します。  
   
-## <a name="remarks"></a>Remarks  
- The `In` keyword can be used in the following contexts:  
+## <a name="remarks"></a>コメント  
+ `In` キーワードは、次のコンテキストで使用できます。  
   
  [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   

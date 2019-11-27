@@ -1,5 +1,5 @@
 ---
-title: Connection Class (System.Net)
+title: Connection クラス (System.Net)
 ms.date: 05/01/2017
 ms.technology: dotnet-networking
 topic_type:
@@ -22,7 +22,7 @@ ms.locfileid: "74429351"
 ---
 # <a name="connection-class"></a>Connection クラス
 
-The `Connection` class parses server responses, queue requests, and pipeline requests.
+`Connection` クラスは、サーバーの応答、キューの要求、およびパイプライン要求を解析します。
 
 ## <a name="syntax"></a>構文
   
@@ -31,14 +31,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> The `Connection` class is internal and is not meant to be used directly in your code.
+> `Connection` クラスは内部であり、コードで直接使用するためのものではありません。
 > 
-> Microsoft does not support the use of this class in a production application under any circumstance.
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのクラスの使用はサポートしていません。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **名前空間:** <xref:System.Net>
 
-**Assembly:** System (in System.dll)
+**アセンブリ:** システム (.dll 内)
 
-**.NET Framework versions:** Available since 2.0.
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

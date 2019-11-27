@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350219"
 ---
 # <a name="arithmetic-operators-visual-basic"></a>算術演算子 (Visual Basic)
-The following are the arithmetic operators defined in Visual Basic.  
+Visual Basic で定義されている算術演算子を次に示します。  
   
  [^ 演算子](../../../visual-basic/language-reference/operators/exponentiation-operator.md)  
   
@@ -26,11 +26,11 @@ The following are the arithmetic operators defined in Visual Basic.
   
  [Mod 演算子](../../../visual-basic/language-reference/operators/mod-operator.md)  
   
- [+ Operator](../../../visual-basic/language-reference/operators/addition-operator.md) (unary and binary)  
+ [+ 演算子](../../../visual-basic/language-reference/operators/addition-operator.md)(単項および二項)  
   
- [- Operator](../../../visual-basic/language-reference/operators/subtraction-operator.md) (unary and binary)  
+ [-演算子](../../../visual-basic/language-reference/operators/subtraction-operator.md)(単項および二項)  
   
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic の算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

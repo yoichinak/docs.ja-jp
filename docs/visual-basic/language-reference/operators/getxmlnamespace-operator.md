@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353192"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>GetXmlNamespace 演算子 (Visual Basic)
-Gets the <xref:System.Xml.Linq.XNamespace> object that corresponds to the specified XML namespace prefix.  
+指定した XML 名前空間プレフィックスに対応する <xref:System.Xml.Linq.XNamespace> オブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,22 +26,22 @@ GetXmlNamespace(xmlNamespacePrefix)
   
 ## <a name="parts"></a>指定項目  
  `xmlNamespacePrefix`  
- 省略可能です。 The string that identifies the XML namespace prefix. If supplied, this string must be a valid XML identifier. For more information, see [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md). If no prefix is specified, the default namespace is returned. If no default namespace is specified, the empty namespace is returned.  
+ 任意。 XML 名前空間プレフィックスを識別する文字列。 指定する場合、この文字列は有効な XML 識別子である必要があります。 詳細については、「宣言され[た XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。 プレフィックスが指定されていない場合は、既定の名前空間が返されます。 既定の名前空間が指定されていない場合は、空の名前空間が返されます。  
   
 ## <a name="return-value"></a>戻り値  
- The <xref:System.Xml.Linq.XNamespace> object that corresponds to the XML namespace prefix.  
+ XML 名前空間プレフィックスに対応する <xref:System.Xml.Linq.XNamespace> オブジェクト。  
   
-## <a name="remarks"></a>Remarks  
- The `GetXmlNamespace` operator gets the <xref:System.Xml.Linq.XNamespace> object that corresponds to the XML namespace prefix `xmlNamespacePrefix`.  
+## <a name="remarks"></a>コメント  
+ `GetXmlNamespace` 演算子は、XML 名前空間プレフィックス `xmlNamespacePrefix`に対応する <xref:System.Xml.Linq.XNamespace> オブジェクトを取得します。  
   
- You can use XML namespace prefixes directly in XML literals and XML axis properties. However, you must use the `GetXmlNamespace` operator to convert a namespace prefix to an <xref:System.Xml.Linq.XNamespace> object before you can use it in your code. You can append an unqualified element name to an <xref:System.Xml.Linq.XNamespace> object to get a fully qualified <xref:System.Xml.Linq.XName> object, which many [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] methods require.  
+ Xml 名前空間プレフィックスは、xml リテラルおよび XML 軸プロパティで直接使用できます。 ただし、コードで使用するには、`GetXmlNamespace` 演算子を使用して、名前空間プレフィックスを <xref:System.Xml.Linq.XNamespace> オブジェクトに変換する必要があります。 <xref:System.Xml.Linq.XNamespace> オブジェクトに修飾されていない要素名を追加して、完全修飾 <xref:System.Xml.Linq.XName> オブジェクトを取得できます。これには、多くの [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] メソッドが必要です。  
   
 ## <a name="example"></a>例  
- The following example imports `ns` as an XML namespace prefix. It then uses the prefix of the namespace to create an XML literal and access the first child node that has the qualified name `ns:phone`. It then passes that child node to the `ShowName` subroutine, which constructs a qualified name by using the `GetXmlNamespace` operator. The `ShowName` subroutine then passes the qualified name to the <xref:System.Xml.Linq.XNode.Ancestors%2A> method to get the parent `ns:contact` node.  
+ 次の例では、`ns` を XML 名前空間プレフィックスとしてインポートします。 次に、名前空間のプレフィックスを使用して XML リテラルを作成し、修飾名 `ns:phone`を持つ最初の子ノードにアクセスします。 次に、その子ノードを `ShowName` サブルーチンに渡します。これにより、`GetXmlNamespace` 演算子を使用して修飾名が構築されます。 次に、`ShowName` サブルーチンは修飾名を <xref:System.Xml.Linq.XNode.Ancestors%2A> メソッドに渡して、親 `ns:contact` ノードを取得します。  
   
  [!code-vb[VbXMLSamples#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/GetXmlNamespace.vb#38)]  
   
- When you call `TestGetXmlNamespace.RunSample()`, it displays a message box that contains the following text:  
+ `TestGetXmlNamespace.RunSample()`を呼び出すと、次のテキストを含むメッセージボックスが表示されます。  
   
  `Name: Patrick Hines`  
   

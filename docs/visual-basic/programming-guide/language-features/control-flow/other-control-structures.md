@@ -13,13 +13,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348131"
 ---
 # <a name="other-control-structures-visual-basic"></a>その他の制御構造 (Visual Basic)
-Visual Basic provides control structures that help you dispose of a resource or reduce the number of times you have to repeat an object reference.  
+Visual Basic には、リソースを破棄したり、オブジェクト参照を繰り返す回数を減らしたりするのに役立つ制御構造が用意されています。  
   
-## <a name="usingend-using-construction"></a>Using...End Using Construction  
- The `Using...End Using` construction establishes a statement block within which you make use of a resource such as a SQL connection. You can optionally acquire the resource with the `Using` statement. When you exit the `Using` block, Visual Basic automatically disposes of the resource so that it is available for other code to use. The resource must be local and disposable. 詳細については、「[sing ステートメント](../../../../visual-basic/language-reference/statements/using-statement.md)」を参照してください。  
+## <a name="usingend-using-construction"></a>Using...End Using の構築  
+ `Using...End Using` の構築では、SQL 接続などのリソースを使用するステートメントブロックを確立します。 必要に応じて、`Using` ステートメントを使用してリソースを取得することもできます。 `Using` ブロックを終了すると Visual Basic、他のコードが使用できるようにリソースが自動的に破棄されます。 リソースはローカルおよび破棄可能である必要があります。 詳細については、「[sing ステートメント](../../../../visual-basic/language-reference/statements/using-statement.md)」を参照してください。  
   
-## <a name="withend-with-construction"></a>With...End With Construction  
- The `With...End With` construction lets you specify an object reference once and then run a series of statements that access its members. This can simplify your code and improve performance because Visual Basic does not have to re-establish the reference for each statement that accesses it. For more information, see [With...End With Statement](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
+## <a name="withend-with-construction"></a>With...End With の構築  
+ `With...End With` の構築では、オブジェクト参照を一度指定した後、そのメンバーにアクセスする一連のステートメントを実行できます。 これにより、コードを簡略化し、パフォーマンスを向上させることができます。これは、Visual Basic にアクセスする各ステートメントの参照を再確立する必要がないためです。 詳細については、「」を参照してください。 [End With ステートメント](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)。  
   
 ## <a name="see-also"></a>関連項目
 

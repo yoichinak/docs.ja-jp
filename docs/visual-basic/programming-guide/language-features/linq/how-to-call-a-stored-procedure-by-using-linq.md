@@ -1,5 +1,5 @@
 ---
-title: 'How to: Call a Stored Procedure by Using LINQ'
+title: '方法: LINQ を使用してストアドプロシージャを呼び出す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], stored procedure calls
@@ -15,58 +15,58 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345020"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>方法 : LINQ を使用してストアド プロシージャを呼び出す (Visual Basic)
-Language-Integrated Query (LINQ) makes it easy to access database information, including database objects such as stored procedures.  
+統合言語クエリ (LINQ) を使用すると、ストアドプロシージャなどのデータベースオブジェクトを含むデータベース情報に簡単にアクセスできます。  
   
- The following example shows how to create an application that calls a stored procedure in a SQL Server database. The sample shows how to call two different stored procedures in the database. Each procedure returns the results of a query. One procedure takes input parameters, and the other procedure does not take parameters.  
+ 次の例では、SQL Server データベースでストアドプロシージャを呼び出すアプリケーションを作成する方法を示します。 このサンプルでは、データベースで2つの異なるストアドプロシージャを呼び出す方法を示します。 各プロシージャは、クエリの結果を返します。 1つのプロシージャは入力パラメーターを受け取り、もう一方のプロシージャはパラメーターを受け取りません。  
   
- The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ このトピックの例では、Northwind サンプルデータベースを使用します。 開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード センターからダウンロードします。 手順については、「[サンプルデータベースのダウンロード](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)」を参照してください。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database  
+### <a name="to-create-a-connection-to-a-database"></a>データベースへの接続を作成するには  
   
-1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking **Server Explorer**/**Database Explorer** on the **View** menu.  
+1. Visual Studio で**サーバーエクスプローラー**/**データベースエクスプローラー**を開くには、 **[表示]** メニューの [**サーバーエクスプローラー** **/データベースエクスプローラー** ] をクリックします。  
   
-2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer** and then click **Add Connection**.  
+2. **サーバーエクスプローラー**/で **[データ接続]** を右クリックし**データベースエクスプローラー** **[接続の追加]** をクリックします。  
   
-3. Specify a valid connection to the Northwind sample database.  
+3. Northwind サンプルデータベースへの有効な接続を指定します。  
   
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>To add a project that contains a LINQ to SQL file  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>LINQ to SQL ファイルを含むプロジェクトを追加するには  
   
-1. Visual Studio で、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 Select Visual Basic **Windows Forms Application** as the project type.  
+1. Visual Studio で、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 プロジェクトの種類として [Visual Basic **Windows フォームアプリケーション**] を選択します。  
   
-2. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 Select the **LINQ to SQL Classes** item template.  
+2. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 **[LINQ to SQL Classes]** 項目テンプレートを選択します。  
   
-3. そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 The Object Relational Designer (O/R Designer) is opened for the northwind.dbml file.  
+3. そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 Northwind .dbml ファイルのオブジェクトリレーショナルデザイナー (O/R デザイナー) が開きます。  
   
-### <a name="to-add-stored-procedures-to-the-or-designer"></a>To add stored procedures to the O/R Designer  
+### <a name="to-add-stored-procedures-to-the-or-designer"></a>ストアドプロシージャを O/R デザイナーに追加するには  
   
-1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Stored Procedures** folder.  
+1. **サーバーエクスプローラー**/**データベースエクスプローラー**で、Northwind データベースへの接続を展開します。 **[ストアドプロシージャ]** フォルダーを展開します。  
   
-     If you have closed the O/R Designer, you can reopen it by double-clicking the northwind.dbml file that you added earlier.  
+     O/R デザイナーを閉じた場合は、前の手順で追加した northwind .dbml ファイルをダブルクリックして再度開くことができます。  
   
-2. Click the **Sales by Year** stored procedure and drag it to the right pane of the designer. Click the **Ten Most Expensive Products** stored procedure drag it to the right pane of the designer.  
+2. **[Sales By Year]** ストアドプロシージャをクリックし、デザイナーの右ペインにドラッグします。 **[最もコストの高い10個の製品]** ストアドプロシージャをクリックして、デザイナーの右ペインにドラッグします。  
   
-3. Save your changes and close the designer.  
+3. 変更を保存し、デザイナーを閉じます。  
   
 4. プロジェクトを保存します。  
   
-### <a name="to-add-code-to-display-the-results-of-the-stored-procedures"></a>To add code to display the results of the stored procedures  
+### <a name="to-add-code-to-display-the-results-of-the-stored-procedures"></a>ストアドプロシージャの結果を表示するコードを追加するには  
   
-1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.  
+1. **[ツールボックス]** から、[<xref:System.Windows.Forms.DataGridView>] コントロールをプロジェクト Form1 の既定の Windows フォームにドラッグします。  
   
-2. Double-click Form1 to add code to its `Load` event.  
+2. Form1 をダブルクリックして、`Load` イベントにコードを追加します。  
   
-3. When you added stored procedures to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object for your project. This object contains the code that you must have to access those procedures. The <xref:System.Data.Linq.DataContext> object for the project is named based on the name of the .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.  
+3. ストアドプロシージャを O/R デザイナーに追加したときに、デザイナーによってプロジェクトの <xref:System.Data.Linq.DataContext> オブジェクトが追加されました。 このオブジェクトには、これらのプロシージャにアクセスするために必要なコードが含まれています。 プロジェクトの <xref:System.Data.Linq.DataContext> オブジェクトの名前は、.dbml ファイルの名前に基づいて付けられます。 このプロジェクトでは、<xref:System.Data.Linq.DataContext> オブジェクトに `northwindDataContext`という名前が付けられています。  
   
-     You can create an instance of the <xref:System.Data.Linq.DataContext> in your code and call the stored procedure methods specified by the O/R Designer. To bind to the <xref:System.Windows.Forms.DataGridView> object, you may have to force the query to execute immediately by calling the <xref:System.Linq.Enumerable.ToList%2A> method on the results of the stored procedure.  
+     コード内に <xref:System.Data.Linq.DataContext> のインスタンスを作成し、O/R デザイナーによって指定されたストアドプロシージャメソッドを呼び出すことができます。 <xref:System.Windows.Forms.DataGridView> オブジェクトにバインドするには、ストアドプロシージャの結果に対して <xref:System.Linq.Enumerable.ToList%2A> メソッドを呼び出すことによって、クエリの実行を直ちに強制する必要がある場合があります。  
   
-     Add the following code to the `Load` event to call either of the stored procedures exposed as methods for your data context.  
+     次のコードを `Load` イベントに追加して、データコンテキストのメソッドとして公開されているストアドプロシージャのいずれかを呼び出すことができます。  
   
      [!code-vb[VbLINQtoSQLHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form3.vb#1)]  
     [!code-vb[VbLINQtoSQLHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form3.vb#2)]  
   
-4. Press F5 to run your project and view the results.  
+4. F5 キーを押してプロジェクトを実行し、結果を表示します。  
   
 ## <a name="see-also"></a>関連項目
 

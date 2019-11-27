@@ -22,7 +22,7 @@ ms.locfileid: "74283772"
 ## <a name="datepicker-parts"></a>DatePicker パーツ  
  次の表に、<xref:System.Windows.Controls.DatePicker> コントロールの名前付きの部分を示します。  
   
-|パーツ|[種類]|[説明]|  
+|要素|型|説明|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.Controls.Grid>|コントロールのルート。|  
 |PART_Button|<xref:System.Windows.Controls.Button>|<xref:System.Windows.Controls.Calendar>を開いて閉じるボタン。|  
@@ -32,18 +32,18 @@ ms.locfileid: "74283772"
 ## <a name="datepicker-states"></a>DatePicker の状態  
  次の表は、<xref:System.Windows.Controls.DatePicker> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
 |Disabled|CommonStates|<xref:System.Windows.Controls.DatePicker> が無効になっています。|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
 ## <a name="datepickertextbox-parts"></a>DatePickerTextBox パーツ  
  次の表に、<xref:System.Windows.Controls.Primitives.DatePickerTextBox> コントロールの名前付きの部分を示します。  
   
-|パーツ|[種類]|[説明]|  
+|要素|型|説明|  
 |-|-|-|  
 |PART_Watermark|<xref:System.Windows.Controls.ContentControl>|<xref:System.Windows.Controls.DatePicker>の最初のテキストを含む要素。|  
 |PART_ContentElement|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.FrameworkElement>を含むことができるビジュアル要素。 <xref:System.Windows.Controls.TextBox> のテキストがこの要素に表示されます。|  
@@ -51,7 +51,7 @@ ms.locfileid: "74283772"
 ## <a name="datepickertextbox-states"></a>DatePickerTextBox の状態  
  次の表は、<xref:System.Windows.Controls.Primitives.DatePickerTextBox> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
 |Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.DatePickerTextBox> が無効になっています。|  
@@ -61,7 +61,7 @@ ms.locfileid: "74283772"
 |フォーカスされていない|FocusStates|コントロールにフォーカスがありません。|  
 |目標|WatermarkStates|コントロールには、最初のテキストが表示されます。  <xref:System.Windows.Controls.Primitives.DatePickerTextBox> は、ユーザーがテキストを入力しなかった場合、または日付を選択した場合の状態になります。|  
 |Unwatermarked|WatermarkStates|ユーザーが <xref:System.Windows.Controls.Primitives.DatePickerTextBox> にテキストを入力したか、<xref:System.Windows.Controls.DatePicker>で日付を選択しました。|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティが `true`、コントロールにフォーカスがあります。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティが `true`、コントロールにフォーカスがありません。|  
   

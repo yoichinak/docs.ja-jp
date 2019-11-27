@@ -1,5 +1,5 @@
 ---
-title: 'How to: Initialize an Array Variable'
+title: '方法: 配列変数を初期化する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], initializing
@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351878"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>方法: Visual Basic で配列変数を初期化する
-配列リテラルを `New` 句に含めること、および配列の初期値を指定することで、配列変数を初期化します。 型を指定するか、配列リテラル内の値から推論することを許可できます。 For more information about how the type is inferred, see "Populating an Array with Initial Values" in [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+配列リテラルを `New` 句に含めること、および配列の初期値を指定することで、配列変数を初期化します。 型を指定するか、配列リテラル内の値から推論することを許可できます。 型の推論方法の詳細については、 [「配列」](../../../../visual-basic/programming-guide/language-features/arrays/index.md)の「配列に初期値を設定する」を参照してください。  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>配列リテラルを使用して配列変数を初期化するには  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74351878"
   
 ### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>配列リテラルを使用してジャグ配列変数を初期化するには  
   
-- 中かっこ (`{}`) で囲んだオブジェクトの値を入れ子にします。 Although you can also nest array literals that specify arrays of different lengths, in the case of a jagged array, make sure that the nested array literals are enclosed in parentheses (`()`). かっこで囲むことで、入れ子になった配列リテラルが強制的に評価され、結果の配列がジャグ配列の初期値として使用されるようになります。 ジャグ配列を初期化する 2 つの例を次に示します。  
+- 中かっこ (`{}`) で囲んだオブジェクトの値を入れ子にします。 さまざまな長さの配列を指定する配列リテラルを入れ子にすることもできますが、ジャグ配列の場合は、入れ子になった配列リテラルがかっこ (`()`) で囲まれていることを確認してください。 かっこで囲むことで、入れ子になった配列リテラルが強制的に評価され、結果の配列がジャグ配列の初期値として使用されるようになります。 ジャグ配列を初期化する 2 つの例を次に示します。  
   
      [!code-vb[VbVbalrArrays#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#19)]  
   

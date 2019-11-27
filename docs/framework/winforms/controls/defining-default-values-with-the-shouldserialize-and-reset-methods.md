@@ -16,18 +16,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336760"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>ShouldSerialize メソッドと Reset メソッドによる既定値の定義
-`ShouldSerialize` and `Reset` are optional methods that you can provide for a property, if the property does not a have simple default value. If the property has a simple default value, you should apply the <xref:System.ComponentModel.DefaultValueAttribute> and supply the default value to the attribute class constructor instead. Either of these mechanisms enables the following features in the designer:
+`ShouldSerialize` と `Reset` は、プロパティに単純な既定値がない場合に、プロパティに対して指定できる省略可能なメソッドです。 プロパティに単純な既定値がある場合は、<xref:System.ComponentModel.DefaultValueAttribute> を適用し、代わりに属性クラスコンストラクターに既定値を指定する必要があります。 これらのメカニズムのいずれかにより、デザイナーで次の機能が有効になります。
 
-- The property provides visual indication in the property browser if it has been modified from its default value.
+- プロパティは、既定値から変更されている場合、プロパティブラウザーで視覚的に表示されます。
 
-- The user can right-click on the property and choose **Reset** to restore the property to its default value.
+- ユーザーはプロパティを右クリックし、 **[リセット]** をクリックして、プロパティを既定値に戻すことができます。
 
-- The designer generates more efficient code.
+- デザイナーでは、より効率的なコードが生成されます。
 
     > [!NOTE]
-    > Either apply the <xref:System.ComponentModel.DefaultValueAttribute> or provide `Reset`*PropertyName* and `ShouldSerialize`*PropertyName* methods. Do not use both.
+    > <xref:System.ComponentModel.DefaultValueAttribute> を適用するか、`Reset`*propertyname*と `ShouldSerialize`*propertyname*メソッドを指定してください。 両方を使用しないでください。
 
- The `Reset`*PropertyName* method sets a property to its default value, as shown in the following code fragment.
+ `Reset`*PropertyName*メソッドは、次のコードに示すように、プロパティを既定値に設定します。
 
 ```vb
 Public Sub ResetMyFont()
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```
 
 > [!NOTE]
-> If a property does not have a `Reset` method, is not marked with a <xref:System.ComponentModel.DefaultValueAttribute>, and does not have a default value supplied in its declaration, the `Reset` option for that property is disabled in the shortcut menu of the **Properties** window of the Windows Forms Designer in Visual Studio.
+> プロパティに `Reset` メソッドがなく、<xref:System.ComponentModel.DefaultValueAttribute>でマークされておらず、その宣言で既定値が指定されていない場合、Visual Studio の Windows フォームデザイナーの **[プロパティ]** ウィンドウのショートカットメニューで、そのプロパティの [`Reset`] オプションは無効になります。
 
- Designers such as Visual Studio use the `ShouldSerialize`*PropertyName* method to check whether a property has changed from its default value and write code into the form only if a property is changed, thus allowing for more efficient code generation. (例:
+ Visual Studio などのデザイナーでは、`ShouldSerialize`*PropertyName*メソッドを使用して、プロパティが既定値から変更されたかどうかを確認し、プロパティが変更された場合にのみコードをフォームに記述します。これにより、コードをより効率的に生成できます。 次に例を示します。
 
 ```vb
 'Returns true if the font has changed; otherwise, returns false.
@@ -62,7 +62,7 @@ public bool ShouldSerializeMyFont() {
 }
 ```
 
- A complete code example follows.
+ 完全なコード例を次に示します。
 
 ```vb
 Option Explicit
@@ -140,7 +140,7 @@ public class MyControl : Control {
 }
 ```
 
- In this case, even when the value of the private variable accessed by the `MyFont` property is `null`, the property browser does not display `null`; instead, it displays the <xref:System.Windows.Forms.Control.Font%2A> property of the parent, if it is not `null`, or the default <xref:System.Windows.Forms.Control.Font%2A> value defined in <xref:System.Windows.Forms.Control>. Thus the default value for `MyFont` cannot be simply set, and a <xref:System.ComponentModel.DefaultValueAttribute> cannot be applied to this property. Instead, the `ShouldSerialize` and `Reset` methods must be implemented for the `MyFont` property.
+ この場合、`MyFont` プロパティによってアクセスされるプライベート変数の値が `null`場合でも、プロパティブラウザーは `null`を表示しません。代わりに、親の <xref:System.Windows.Forms.Control.Font%2A> プロパティ (`null`されていない場合)、または <xref:System.Windows.Forms.Control>で定義されている既定の <xref:System.Windows.Forms.Control.Font%2A> 値が表示されます。 したがって、`MyFont` の既定値を単に設定することはできず、<xref:System.ComponentModel.DefaultValueAttribute> をこのプロパティに適用することはできません。 代わりに、`ShouldSerialize` および `Reset` メソッドを `MyFont` プロパティに実装する必要があります。
 
 ## <a name="see-also"></a>関連項目
 

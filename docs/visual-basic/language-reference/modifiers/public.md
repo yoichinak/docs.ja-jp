@@ -1,5 +1,5 @@
 ---
-title: Public
+title: パブリック
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Public
@@ -16,24 +16,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351294"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
-Specifies that one or more declared programming elements have no access restrictions.  
+1つ以上の宣言されたプログラミング要素にアクセス制限がないことを指定します。  
   
-## <a name="remarks"></a>Remarks  
- If you are publishing a component or set of components, such as a class library, you usually want the programming elements to be accessible by any code that interoperates with your assembly. To confer such unlimited access on an element, you can declare it with `Public`.  
+## <a name="remarks"></a>コメント  
+ クラスライブラリなど、コンポーネントまたはコンポーネントのセットを発行する場合は、通常、アセンブリと相互運用できるコードでプログラミング要素にアクセスできるようにする必要があります。 要素に対して無制限のアクセス権を付与するには、`Public`で宣言します。  
   
- Public access is the normal level for a programming element when you do not need to limit access to it. Note that the access level of an element declared within an interface, module, class, or structure defaults to `Public` if you do not declare it otherwise.  
+ パブリックアクセスは、プログラミング要素へのアクセスを制限する必要がない場合の通常のレベルです。 インターフェイス、モジュール、クラス、または構造体で宣言されている要素のアクセスレベルは、既定では、宣言しない場合は `Public` になることに注意してください。  
   
 ## <a name="rules"></a>ルール  
   
-- **Declaration Context.** You can use `Public` only at module, interface, or namespace level. This means the declaration context for a `Public` element must be a source file, namespace, interface, module, class, or structure, and cannot be a procedure.  
+- **宣言コンテキスト。** `Public` は、モジュール、インターフェイス、または名前空間レベルでのみ使用できます。 つまり、`Public` 要素の宣言コンテキストは、ソースファイル、名前空間、インターフェイス、モジュール、クラス、または構造体である必要があり、プロシージャにすることはできません。  
   
 ## <a name="behavior"></a>動作  
   
-- **Access Level.** All code that can access a module, class, or structure can access its `Public` elements.  
+- **アクセスレベル。** モジュール、クラス、または構造体にアクセスできるすべてのコードは、その `Public` 要素にアクセスできます。  
   
-- **Default Access.** Local variables inside a procedure default to public access, and you cannot use any access modifiers on them.  
+- **既定のアクセス。** プロシージャ内のローカル変数は、既定でパブリックアクセスに設定されているので、アクセス修飾子を使用することはできません。  
   
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **アクセス修飾子。** アクセスレベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
  `Public` 修飾子は、次のコンテキストで使用できます。  
   
@@ -41,7 +41,7 @@ Specifies that one or more declared programming elements have no access restrict
   
  [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
  [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
@@ -57,7 +57,7 @@ Specifies that one or more declared programming elements have no access restrict
   
  [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)  
   
- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
  [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
   
@@ -72,7 +72,7 @@ Specifies that one or more declared programming elements have no access restrict
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

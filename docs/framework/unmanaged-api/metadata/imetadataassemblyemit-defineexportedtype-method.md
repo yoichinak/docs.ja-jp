@@ -39,37 +39,37 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>パラメーター  
  `szName`  
- [in] The name of type to be exported. For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.  
+ からエクスポートする型の名前。 共通言語ランタイムのバージョン1.1 では、エクスポートされた型の名前は、型の `TypeDef` で指定された名前と完全に一致する必要があります。  
   
  `tkImplementation`  
- [in] A token specifying where the exported type is implemented. The valid values and their associated meanings are:  
+ からエクスポートされた型を実装する場所を指定するトークン。 有効な値とそれに関連付けられている意味は次のとおりです。  
   
-- `mdFile` The type is implemented in a different file within this assembly.  
+- 型 `mdFile`、このアセンブリ内の別のファイルに実装されています。  
   
-- `mdAssemblyRef` The type is implemented in a different assembly.  
+- 型が別のアセンブリに実装されて `mdAssemblyRef`。  
   
-- `mdExportedTYpe` The type is nested within some other type.  
+- 型が他の型の中で入れ子になって `mdExportedTYpe`。  
   
-- `mdFileNil` The type is in the same file as the manifest and is not a nested type.  
+- `mdFileNil` 型がマニフェストと同じファイル内にあり、入れ子にされた型ではありません。  
   
  `tkTypeDef`  
- [in] A token to the metadata that specifies the type to be exported. This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.  
+ からエクスポートする型を指定するメタデータのトークン。 この値は、型を実装するファイルの `TypeDef` テーブルに入力され、そのファイルがこのアセンブリ内にある場合にのみ関連します。  
   
  `dwExportedTypeFlags`  
- [in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.  
+ からエクスポートされた型のプロパティ設定を定義する[Cortypeattr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)列挙値のビットごとの組み合わせ。  
   
  `pmdct`  
- [out] A pointer to the returned metadata token that indicates the exported type.  
+ 入出力エクスポートされた型を示す、返されたメタデータトークンへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.  
+## <a name="remarks"></a>コメント  
+ このアセンブリによって公開され、マニフェストを含むモジュール以外のモジュールで実装される型ごとに、`ExportedType` メタデータ構造を定義する必要があります。  
   
-## <a name="requirements"></a>［要件］  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

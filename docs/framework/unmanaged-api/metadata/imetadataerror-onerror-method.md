@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431224"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError メソッド
-Provides notification of errors that occur during the metadata merge.  
+メタデータのマージ中に発生したエラーの通知を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,20 +36,20 @@ HRESULT OnError (
   
 ## <a name="parameters"></a>パラメーター  
  `hrError`  
- [in] The HRESULT error value returned to the calling method.  
+ から呼び出し元のメソッドに返される HRESULT エラー値。  
   
  `token`  
- [in] The metadata token of the code object that was being merged when the error occurred.  
+ からエラーが発生したときにマージされていたコードオブジェクトのメタデータトークン。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataError インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

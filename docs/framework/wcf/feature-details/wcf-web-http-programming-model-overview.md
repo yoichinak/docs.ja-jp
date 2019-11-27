@@ -14,13 +14,13 @@ Windows Communication Foundation (WCF) WEB HTTP プログラミングモデル�
   
 - Uri**と uri の処理**Uri は、WEB HTTP サービスの設計で中心的な役割を果たします。 WCF WEB HTTP プログラミングモデルでは、<xref:System.UriTemplate> クラスと <xref:System.UriTemplateTable> クラスを使用して、URI 処理機能を提供します。  
   
-- **GET 操作と POST 操作のサポート** WEB HTTP サービスは、データ変更やリモート呼び出しに必要なさまざまな起動用の動詞に加えて、データ取得用に GET 動詞を使用します。 WCF WEB HTTP プログラミングモデルでは、<xref:System.ServiceModel.Web.WebGetAttribute> と <xref:System.ServiceModel.Web.WebInvokeAttribute> を使用して、サービス操作を GET と、PUT、POST、DELETE などの他の HTTP 動詞の両方に関連付けます。  
+- **GET 操作と POST 操作のサポート**WEB HTTP サービスは、データ変更やリモート呼び出しのためのさまざまな呼び出し動詞に加えて、データ取得のために GET 動詞を使用します。 WCF WEB HTTP プログラミングモデルでは、<xref:System.ServiceModel.Web.WebGetAttribute> と <xref:System.ServiceModel.Web.WebInvokeAttribute> を使用して、サービス操作を GET と、PUT、POST、DELETE などの他の HTTP 動詞の両方に関連付けます。  
   
-- **複数のデータ形式** Web スタイル サービスは SOAP メッセージ以外にもさまざまな種類のデータを処理します。 WCF WEB HTTP プログラミングモデルでは、<xref:System.ServiceModel.WebHttpBinding> と <xref:System.ServiceModel.Description.WebHttpBehavior> を使用して、XML ドキュメント、JSON データオブジェクト、バイナリコンテンツ (画像、ビデオファイル、プレーンテキストなど) のストリームなど、さまざまなデータ形式をサポートしています。  
+- **複数のデータ形式**Web スタイルサービスは、SOAP メッセージに加えて、さまざまな種類のデータを処理します。 WCF WEB HTTP プログラミングモデルでは、<xref:System.ServiceModel.WebHttpBinding> と <xref:System.ServiceModel.Description.WebHttpBehavior> を使用して、XML ドキュメント、JSON データオブジェクト、バイナリコンテンツ (画像、ビデオファイル、プレーンテキストなど) のストリームなど、さまざまなデータ形式をサポートしています。  
   
  WCF WEB HTTP プログラミングモデルは、WEB HTTP サービス、AJAX および JSON サービス、配信 (ATOM/RSS) フィードを含む Web スタイルのシナリオに対応するために、WCF の範囲を拡張します。 AJAX および JSON サービスの詳細については、「 [ajax の統合と json のサポート](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)」を参照してください。 配信の詳細については、「 [WCF 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)」を参照してください。  
   
- WEB HTTP サービスから返されるデータの種類に追加の制限はありません。 WEB HTTP サービス操作からは任意のシリアル化可能な型を返すことができます。 WEB HTTP サービス操作は Web ブラウザーによって呼び出すことができるため、URL に指定できるデータ型に制限があります。 既定でサポートされる型の詳細については、以下の「**UriTemplate クエリ文字列パラメーターと URL**」を参照してください。 既定の動作は、URL で指定されたパラメーターから実際のパラメーター型への変換方法を指定する独自の T:System.ServiceModel.Dispatcher.QueryStringConverter 実装を提供することで変更できます。 詳細については、「<xref:System.ServiceModel.Dispatcher.QueryStringConverter>」を参照してください。  
+ WEB HTTP サービスから返されるデータの種類に追加の制限はありません。 WEB HTTP サービス操作からは任意のシリアル化可能な型を返すことができます。 WEB HTTP サービス操作は Web ブラウザーによって呼び出すことができるため、URL に指定できるデータ型に制限があります。 既定でサポートされている型の詳細については、以下の「 **UriTemplate クエリ文字列パラメーターと url** 」セクションを参照してください。 既定の動作は、URL で指定されたパラメーターから実際のパラメーター型への変換方法を指定する独自の T:System.ServiceModel.Dispatcher.QueryStringConverter 実装を提供することで変更できます。 詳細については、「<xref:System.ServiceModel.Dispatcher.QueryStringConverter>」を参照してください。  
   
 > [!CAUTION]
 > WCF WEB HTTP プログラミングモデルで記述されたサービスは、SOAP メッセージを使用しません。 SOAP は使用されないため、WCF によって提供されるセキュリティ機能は使用できません。 ただし、HTTPS でサービスをホストすることによってトランスポート ベースのセキュリティを使用できます。 WCF セキュリティの詳細については、「[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)」を参照してください。  
@@ -45,7 +45,7 @@ Windows Communication Foundation (WCF) WEB HTTP プログラミングモデル�
   
  .NET Framework は <xref:System.UriTemplate> という URI テンプレートでの作業に使用できる新しい API を提供します。 `UriTemplates` では、次の操作を実行できます。  
   
-- 一連のパラメーターで `Bind` メソッドの 1 つを呼び出し、テンプレートに適合する*完全にクローズである URI* を生成できます。 つまり、URI テンプレート内の変数がすべて、実際の値に置き換えられます。  
+- パラメーターのセットを使用していずれかの `Bind` メソッドを呼び出すと、テンプレートに一致する*完全に終了*した URI を生成できます。 つまり、URI テンプレート内の変数がすべて、実際の値に置き換えられます。  
   
 - 候補の URI を使用して `Match`() を呼び出すことができます。このメソッドは、テンプレートを使用して候補の URI を構成要素に分解し、テンプレート内の変数に従って分類される URI のさまざまな要素を収めたディクショナリを返します。  
   
@@ -101,7 +101,7 @@ interface ICustomer
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate クエリ文字列パラメーターと URL  
  サービス操作に関連付けられた URL を入力することによって、Web ブラウザーから Web スタイルのサービスを呼び出すことができます。 このようなサービス操作は、文字列形式で指定する必要があるクエリ文字列パラメーターを URL 内で受け取ることができます。 次の表に、URL 内で渡すことができる型と、使用される形式を示します。  
   
-|[種類]|形式|  
+|型|[形式]|  
 |----------|------------|  
 |<xref:System.Byte>|0 - 255|  
 |<xref:System.SByte>|-128 - 127|  
