@@ -12,37 +12,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74338343"
 ---
 # <a name="constants-overview-visual-basic"></a>定数の概要 (Visual Basic)
-A constant is a meaningful name that takes the place of a number or string that does not change. Constants store values that, as the name implies, remain the same throughout the execution of an application. You can greatly improve the readability of your code and make it easier to maintain by using constants. Use them in code that contains values that reappear or that depends on certain numbers that are difficult to remember or have no obvious meaning.  
+定数は、変更されない数値または文字列の代わりとなるわかりやすい名前です。 定数は、名前が示すように、アプリケーションの実行全体で同じままになる値を格納します。 コードの読みやすさを大幅に向上させ、定数を使用して保守を容易にすることができます。 再表示される値を含むコードで使用するか、覚えにくい特定の数値に依存するか、明確な意味を持たないコードで使用します。  
   
-## <a name="how-to-create-and-use-constants"></a>How to Create and Use Constants  
- Visual Basic contains a number of predefined constants, mainly using for printing and displaying. You can also create your own constants with the `Const` statement, using the same guidelines you would for creating a variable name. If `Option Strict` is `On`, you must explicitly declare the constant type.  
+## <a name="how-to-create-and-use-constants"></a>定数を作成して使用する方法  
+ Visual Basic には、主に印刷と表示のためにを使用する多数の定義済み定数が含まれています。 変数名を作成する場合と同じガイドラインを使用して、`Const` ステートメントを使用して独自の定数を作成することもできます。 `Option Strict` が `On`場合は、定数型を明示的に宣言する必要があります。  
   
- A constant's scope, which is the set of all code that can refer to it without qualifying its name, is the same as that of a variable declared in the same location. To create a constant that exists within the scope of a particular procedure, declare it inside that procedure. To create a constant that is available throughout an application, declare it using the `Public` keyword in the declarations section of the class.  
+ 定数のスコープは、その名前を修飾せずに参照できるすべてのコードのセットであり、同じ場所で宣言された変数のものと同じです。 特定のプロシージャのスコープ内に存在する定数を作成するには、そのプロシージャ内で宣言します。 アプリケーション全体で使用できる定数を作成するには、クラスの宣言セクションで `Public` キーワードを使用して宣言します。  
   
 > [!NOTE]
-> Although constants somewhat resemble variables, you cannot modify them or assign new values to them as you can to variables.  
+> 定数は変数に似ていますが、変数に対して変更を加えたり、変数に新しい値を割り当てたりすることはできません。  
   
- The constants you use in your code can be defined by the object model for controls or components you work with, or they can be user-defined (that is, those you create yourself).  
+ コードで使用する定数は、操作するコントロールまたはコンポーネントのオブジェクトモデルによって定義できます。また、ユーザー定義 (自分で作成したもの) にすることもできます。  
   
-## <a name="compile-time-and-run-time-constants"></a>Compile-time and Run-time Constants  
- A compile-time constant is computed at the time the code is compiled, while a run-time constant can only be computed while the application is running. A compile-time constant will have the same value each time an application runs, while a run-time constant may change each time. Compile-time constants are required for cases such as array bounds, case expressions, or enumerator initializers.  
+## <a name="compile-time-and-run-time-constants"></a>コンパイル時と実行時の定数  
+ コンパイル時の定数は、コードのコンパイル時に計算されますが、実行時の定数は、アプリケーションの実行中にのみ計算できます。 コンパイル時の定数は、アプリケーションが実行されるたびに同じ値を持ちますが、実行時の定数は毎回変わる可能性があります。 コンパイル時定数は、配列の境界、case 式、列挙子初期化子などの場合に必要です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 |定義|用語|  
 |---|---|  
-|[方法 : 定数を宣言する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Explains how to use the `Const` statement to declare a constant and set its value; by declaring a constant, you assign a meaningful name to the value.|  
-|[ユーザー定義定数](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Describes how to create your own constants, including information on scoping and how to avoid circular references.|  
-|[定数とリテラルのデータ型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Provides information on how the Visual Basic compiler initializes constants when `Option Explicit` is turned off.|  
-|[方法 : 関連する定数値をまとめてグループ化する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Demonstrates how to group constant values that are related.|  
+|[方法 : 定数を宣言する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|`Const` ステートメントを使用して定数を宣言し、その値を設定する方法について説明します。定数を宣言することで、値にわかりやすい名前を割り当てます。|  
+|[ユーザー定義定数](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|スコープに関する情報や循環参照を回避する方法など、独自の定数を作成する方法について説明します。|  
+|[定数とリテラルのデータ型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|`Option Explicit` がオフになっている場合に Visual Basic コンパイラが定数を初期化する方法について説明します。|  
+|[方法 : 関連する定数値をまとめてグループ化する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|関連する定数値をグループ化する方法を示します。|  
   
-## <a name="reference"></a>辞書／辞典／その他  
+## <a name="reference"></a>参照  
   
 |定義|用語|  
 |---|---|  
-|[定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Lists the constants predefined by Visual Basic.|  
-|[Const ステートメント](../../../../visual-basic/language-reference/statements/const-statement.md)|Describes the `Const` statement and its use.|  
-|[Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Describes the `Option Strict` statement and its use.|  
+|[定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Visual Basic によって定義済みの定数を一覧表示します。|  
+|[Const ステートメント](../../../../visual-basic/language-reference/statements/const-statement.md)|`Const` ステートメントとその使用方法について説明します。|  
+|[Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|`Option Strict` ステートメントとその使用方法について説明します。|  
   
 ## <a name="see-also"></a>関連項目
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450387"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a>ICorProfilerInfo::GetCurrentThreadID メソッド
-Gets the ID of the current thread, if it is a managed thread.  
+マネージスレッドの場合、現在のスレッドの ID を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,12 +34,12 @@ HRESULT GetCurrentThreadID(
   
 ## <a name="parameters"></a>パラメーター  
  `pThreadId`  
- [out] A pointer to the returned ID of the managed thread.  
+ 入出力返されたマネージスレッドの ID へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.  
+## <a name="remarks"></a>コメント  
+ 現在のスレッドが内部ランタイムスレッドまたはその他のアンマネージスレッドである場合、`GetCurrentThreadID` は HRESULT として CORPROF_E_NOT_MANAGED_THREAD を返し、`pThreadId` パラメーターの戻り値は null になります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -48,6 +48,6 @@ HRESULT GetCurrentThreadID(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

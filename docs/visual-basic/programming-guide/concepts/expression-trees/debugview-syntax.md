@@ -1,5 +1,5 @@
 ---
-title: Syntax used by DebugView property
+title: DebugView プロパティで使用される構文
 description: 式ツリーを文字列で表現する目的で DebugView プロパティにより使用される特別な構文について説明します。
 author: zspitz
 ms.author: wiwagn
@@ -19,7 +19,7 @@ ms.locfileid: "74346876"
 
 `DebugView` プロパティ (デバッグ時にのみ利用可能) により、式ツリーが文字列でレンダリングされます。 構文の大部分はかなりわかりやすいです。特別なケースについて以降のセクションで説明します。
 
-Each example is followed by a comment block containing the `DebugView`.
+各例には、`DebugView`を含むコメントブロックが続きます。
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -43,11 +43,11 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 ## <a name="constantexpressions"></a>ConstantExpressions
 
-整数値、文字列、および `null` を表す <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> オブジェクトの場合、定数の値が表示されます。
+整数値、文字列、および <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> を表す `null` オブジェクトの場合、定数の値が表示されます。
 
-For some numeric types, a suffix is added to the value:
+数値型によっては、次のような値にサフィックスが追加されます。
 
-| [種類] | キーワード | サフィックス |
+| 型 | Keyword | Suffix |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |

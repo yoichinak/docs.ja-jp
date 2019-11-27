@@ -27,23 +27,23 @@ ms.locfileid: "74343904"
 ---
 # <a name="string-data-type-visual-basic"></a>文字列型 (String) (Visual Basic)
 
-Holds sequences of unsigned 16-bit (2-byte) code points that range in value from 0 through 65535. Each *code point*, or character code, represents a single Unicode character. A string can contain from 0 to approximately two billion (2 ^ 31) Unicode characters.  
+0 ~ 65535 の範囲の値を範囲とする符号なし16ビット (2 バイト) コードポイントのシーケンスを保持します。 各*コードポイント*(文字コード) は、1つの Unicode 文字を表します。 文字列には、0 ~ 約 20億 (2 ^ 31) の Unicode 文字を含めることができます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
 
- Use the `String` data type to hold multiple characters without the array management overhead of `Char()`, an array of `Char` elements.  
+ `String` データ型を使用して、`Char` 要素の配列である `Char()`の配列管理オーバーヘッドを発生させることなく、複数の文字を保持します。  
   
- The default value of `String` is `Nothing` (a null reference). Note that this is not the same as the empty string (value `""`).  
+ `String` の既定値は `Nothing` (null 参照) です。 これは空の文字列 (値 `""`) と同じではないことに注意してください。  
   
 ## <a name="unicode-characters"></a>Unicode 文字  
 
- The first 128 code points (0–127) of Unicode correspond to the letters and symbols on a standard U.S. keyboard. These first 128 code points are the same as those the ASCII character set defines. The second 128 code points (128–255) represent special characters, such as Latin-based alphabet letters, accents, currency symbols, and fractions. Unicode uses the remaining code points (256-65535) for a wide variety of symbols. This includes worldwide textual characters, diacritics, and mathematical and technical symbols.  
+ Unicode の最初の128コードポイント (0 ~ 127) は、標準の U.S. キーボードの文字と記号に対応しています。 これらの最初の128コードポイントは、ASCII 文字セットで定義されているものと同じです。 2番目の128コードポイント (128 ~ 255) は、ラテン語に基づくアルファベット文字、アクセント、通貨記号、分数などの特殊文字を表します。 Unicode では、さまざまなシンボルについて、残りのコードポイント (256-65535) を使用します。 これには、世界中のテキスト文字、分音記号、数学、およびテクニカルシンボルが含まれます。  
   
- You can use methods such as <xref:System.Char.IsDigit%2A> and <xref:System.Char.IsPunctuation%2A> on an individual character in a `String` variable to determine its Unicode classification.  
+ `String` 変数内の個々の文字に <xref:System.Char.IsDigit%2A> や <xref:System.Char.IsPunctuation%2A> などのメソッドを使用して、Unicode 分類を決定することができます。  
   
 ## <a name="format-requirements"></a>書式の要件  
 
- You must enclose a `String` literal within quotation marks (`" "`). If you must include a quotation mark as one of the characters in the string, you use two contiguous quotation marks (`""`). 次に例を示します。  
+ `String` リテラルは引用符 (`" "`) で囲む必要があります。 文字列内のいずれかの文字として引用符を含める必要がある場合は、2つの連続する引用符 (`""`) を使用します。 次に例を示します。  
   
 ```vb  
 Dim j As String = "Joe said ""Hello"" to me."  
@@ -55,13 +55,13 @@ MsgBox("Joe said " & """" & h & """" & " to me.")
 MsgBox("Joe said """ & h & """ to me.")  
 ```  
   
- Note that the contiguous quotation marks that represent a quotation mark in the string are independent of the quotation marks that begin and end the `String` literal.  
+ 文字列内の引用符を表す連続する引用符は、`String` リテラルを開始および終了する引用符とは関係がないことに注意してください。  
   
-## <a name="string-manipulations"></a>String Manipulations  
+## <a name="string-manipulations"></a>文字列操作  
 
- Once you assign a string to a `String` variable, that string is *immutable*, which means you cannot change its length or contents. When you alter a string in any way, Visual Basic creates a new string and abandons the previous one. The `String` variable then points to the new string.  
+ 文字列を `String` 変数に代入すると、その文字列は*不変*になります。つまり、長さや内容を変更することはできません。 文字列を任意の方法で変更すると、Visual Basic によって新しい文字列が作成され、前の文字列が破棄されます。 `String` 変数は、新しい文字列を指します。  
   
- You can manipulate the contents of a `String` variable by using a variety of string functions. The following example illustrates the <xref:Microsoft.VisualBasic.Strings.Left%2A> function  
+ `String` 変数の内容を操作するには、さまざまな文字列関数を使用します。 <xref:Microsoft.VisualBasic.Strings.Left%2A> 関数の例を次に示します。  
   
 ```vb  
 Dim S As String = "Database"  
@@ -69,26 +69,26 @@ Dim S As String = "Database"
 S = Microsoft.VisualBasic.Left(S, 4)  
 ```  
   
- A string created by another component might be padded with leading or trailing spaces. If you receive such a string, you can use the <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, and <xref:Microsoft.VisualBasic.Strings.RTrim%2A> functions to remove these spaces.  
+ 別のコンポーネントによって作成された文字列は、先頭または末尾にスペースが埋め込まれている可能性があります。 このような文字列を受け取った場合は、<xref:Microsoft.VisualBasic.Strings.Trim%2A>、<xref:Microsoft.VisualBasic.Strings.LTrim%2A>、および <xref:Microsoft.VisualBasic.Strings.RTrim%2A> の各関数を使用して、これらのスペースを削除できます。  
   
- For more information about string manipulations, see [Strings](../../../visual-basic/programming-guide/language-features/strings/index.md).  
+ 文字列操作の詳細については、「[文字列](../../../visual-basic/programming-guide/language-features/strings/index.md)」を参照してください。  
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
-- **Negative Numbers.** Remember that the characters held by `String` are unsigned and cannot represent negative values. In any case, you should not use `String` to hold numeric values.  
+- **負の数値。** `String` によって保持されている文字は符号なしであり、負の値を表すことはできないことに注意してください。 どのような場合でも、`String` を使用して数値を保持しないでください。  
   
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, remember that string characters have a different data width (8 bits) in other environments. If you are passing a string argument of 8-bit characters to such a component, declare it as `Byte()`, an array of `Byte` elements, instead of `String` in your new Visual Basic code.  
+- **相互運用に関する考慮事項。** .NET Framework 用に作成されていないコンポーネント (たとえば、オートメーションや COM オブジェクト) とやり取りする場合は、他の環境で文字列文字のデータ幅が異なる (8 ビット) ことに注意してください。 8ビット文字の文字列引数をこのようなコンポーネントに渡す場合は、新しい Visual Basic コードで `String` するのではなく、`Byte` 要素の配列 `Byte()`として宣言します。  
   
-- **Type Characters.** Appending the identifier type character `$` to any identifier forces it to the `String` data type. `String` has no literal type character. However, the compiler treats literals enclosed in quotation marks (`" "`) as `String`.  
+- **文字を入力します。** 識別子の型に `$` 識別子を追加すると、その識別子が `String` データ型に強制されます。 `String` にリテラルの型文字がありません。 ただし、コンパイラは、引用符 (`" "`) で囲まれたリテラルを `String`として扱います。  
   
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.String?displayProperty=nameWithType> class.  
+- **フレームワークの種類。** .NET Framework 内の対応する型は、<xref:System.String?displayProperty=nameWithType> クラスです。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.String?displayProperty=nameWithType>
 - [データの種類](../../../visual-basic/language-reference/data-types/index.md)
 - [Char データ型](../../../visual-basic/language-reference/data-types/char-data-type.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [方法 : 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
 - [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

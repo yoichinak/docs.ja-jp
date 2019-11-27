@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448727"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling インターフェイス
-Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method, which enables a profiler to attach to a running process.  
+[ICLRProfiling:: attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)メソッドを提供します。これにより、実行中のプロセスにプロファイラーをアタッチできます。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -30,9 +30,9 @@ Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanage
 |------------|-----------------|  
 |[AttachProfiler メソッド](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|指定されたプロファイラーを、指定されたプロセスにアタッチします。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426798"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString メソッド
-Gets the string at the specified index from the table column in the current reference scope.  
+現在の参照スコープのテーブル列から、指定したインデックス位置にある文字列を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +36,17 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>パラメーター  
  `ixString`  
- [in] The index at which to start to search for the next value.  
+ から次の値の検索を開始する位置のインデックス。  
   
  `ppString`  
- [out] A pointer to a pointer to the returned string value.  
+ 入出力返された文字列値へのポインターへのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

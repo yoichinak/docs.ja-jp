@@ -15,11 +15,11 @@ ms.locfileid: "74447019"
 ---
 # <a name="accessibility"></a>ユーザー補助
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] is the new accessibility framework for Microsoft Windows. [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] に関する情報へのプログラムによるアクセスを提供することで、ユーザー補助技術製品および自動テスト フレームワークに対するニーズに応えます。 さらに、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] を使用することで、コントロールとアプリケーション開発者は自社製品をアクセス可能にすることができます。  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] は、Microsoft Windows の新しいアクセシビリティフレームワークです。 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] に関する情報へのプログラムによるアクセスを提供することで、ユーザー補助技術製品および自動テスト フレームワークに対するニーズに応えます。 さらに、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] を使用することで、コントロールとアプリケーション開発者は自社製品をアクセス可能にすることができます。  
   
- This documentation describes the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API for managed code. C++ での [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプログラミングの詳細については、「[UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal)」 (Win32 アプリケーションの UI オートメーション) を参照してください。  
+ このドキュメントでは、マネージコード用の [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API について説明します。 C++ での [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプログラミングの詳細については、「[UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal)」 (Win32 アプリケーションの UI オートメーション) を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ユーザー補助のベスト プラクティス](accessibility-best-practices.md)  
@@ -28,9 +28,9 @@ ms.locfileid: "74447019"
  [マネージド コードの UI オートメーション クライアント](ui-automation-clients-for-managed-code.md)  
  [UI オートメーション コントロール パターン](ui-automation-control-patterns.md)  
  [UI オートメーション テキスト パターン](ui-automation-text-pattern.md)  
- [UI オートメーション コントロール型](ui-automation-control-types.md)  
+ [UI Automation Control Types](ui-automation-control-types.md)  
  [UI Automation Specification および UI Automation Community Promise](ui-automation-specification-and-community-promise.md)  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
 
 - [ユーザー補助のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 

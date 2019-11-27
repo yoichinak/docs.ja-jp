@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432152"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map メソッド
-Maps a relationship between the assemblies using metadata signatures.  
+メタデータシグネチャを使用して、アセンブリ間のリレーションシップをマップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,23 +36,23 @@ HRESULT Map (
   
 ## <a name="parameters"></a>パラメーター  
  `tkImp`  
- [in] The metadata token that represents the imported code object.  
+ からインポートされたコードオブジェクトを表すメタデータトークン。  
   
  `tkEmit`  
- [in] The metadata token that represents the emitted code object.  
+ から出力されたコードオブジェクトを表すメタデータトークン。  
   
-## <a name="remarks"></a>Remarks  
- When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.  
+## <a name="remarks"></a>コメント  
+ マージ中にトークンの再マップが行われると、元のトークンはインポートされた (ソース) メタデータスコープ内でスコープが設定され、新しいトークンのスコープは、出力された (ターゲット) メタデータスコープに設定されます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMapToken インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

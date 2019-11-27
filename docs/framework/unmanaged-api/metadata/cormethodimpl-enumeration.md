@@ -56,27 +56,27 @@ typedef enum CorMethodImpl {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`miCodeTypeMask`|Flags that describe code type.|  
-|`miIL`|Specifies that the method implementation is Microsoft intermediate language (MSIL).|  
+|`miCodeTypeMask`|コードの種類を記述するフラグ。|  
+|`miIL`|メソッドの実装が Microsoft 中間言語 (MSIL) であることを指定します。|  
 |`miNative`|メソッド実装がネイティブであることを指定します。|  
-|`miOPTIL`|Specifies that the method implementation is OPTIL.|  
-|`miRuntime`|Specifies that the method implementation is provided by the common language runtime.|  
-|`miManagedMask`|Flags that indicate whether the code is managed or unmanaged.|  
-|`miUnmanaged`|Specifies that the method implementation is unmanaged.|  
-|`miManaged`|Specifies that the method implementation is managed.|  
-|`miForwardRef`|Specifies that the method is defined. This flag is used primarily in merge scenarios.|  
-|`miPreserveSig`|Specifies that the method signature cannot be mangled for an HRESULT conversion.|  
-|`miInternalCall`|Reserved for internal use by the common language runtime.|  
-|`miSynchronized`|Specifies that the method is single-threaded through its body.|  
+|`miOPTIL`|メソッドの実装が OPTIL であることを指定します。|  
+|`miRuntime`|メソッドの実装が共通言語ランタイムによって提供されることを指定します。|  
+|`miManagedMask`|コードがマネージとアンマネージのどちらであるかを示すフラグ。|  
+|`miUnmanaged`|メソッドの実装がアンマネージであることを指定します。|  
+|`miManaged`|メソッドの実装が管理されることを指定します。|  
+|`miForwardRef`|メソッドが定義されていることを指定します。 このフラグは、主にマージシナリオで使用されます。|  
+|`miPreserveSig`|HRESULT 変換のメソッドシグネチャを破損させることができないことを指定します。|  
+|`miInternalCall`|共通言語ランタイムによる内部使用のために予約されています。|  
+|`miSynchronized`|メソッドがその本体を通じてシングルスレッドであることを指定します。|  
 |`miNoInlining`|メソッドがインライン化できないことを指定します。|  
-|`miAggressiveInlining`|Specifies that the method should be inlined if possible.|  
-|`miNoOptimization`|Specifies that the method should not be optimized.|  
-|`miMaxMethodImplVal`|The maximum valid value for a `CorMethodImpl`.|  
+|`miAggressiveInlining`|可能な場合は、メソッドをインライン展開することを指定します。|  
+|`miNoOptimization`|メソッドを最適化しないことを指定します。|  
+|`miMaxMethodImplVal`|`CorMethodImpl`の有効な最大値。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

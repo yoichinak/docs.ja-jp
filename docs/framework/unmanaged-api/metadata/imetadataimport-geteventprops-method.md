@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437576"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps メソッド
-Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.  
+宣言する型、デリゲートの add メソッドおよび remove メソッド、すべてのフラグおよびその他の関連データを含む、指定したイベントトークンによって表されるイベントのメタデータ情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,47 +47,47 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>パラメーター  
  `ev`  
- [in] The event metadata token representing the event to get metadata for.  
+ からメタデータを取得するイベントを表すイベントメタデータトークン。  
   
  `pClass`  
- [out] A pointer to the TypeDef token representing the class that declares the event.  
+ 入出力イベントを宣言するクラスを表す TypeDef トークンへのポインター。  
   
  `szEvent`  
- [out] The name of the event referenced by `ev`.  
+ 入出力`ev`によって参照されるイベントの名前。  
   
  `pchEvent`  
- [in] The requested length in wide characters of `szEvent`.  
+ から`szEvent`の、要求された長さをワイド文字数で指定します。  
   
  `pdwEventFlags`  
- [out] The returned length in wide characters of `szEvent`.  
+ 入出力`szEvent`のワイド文字数で返された長さ。  
   
  `ptkEventType`  
- [out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.  
+ 入出力イベントの <xref:System.Delegate> 型を表す TypeRef または TypeDef メタデータトークンへのポインター。  
   
  `pmdAddOn`  
- [out] A pointer to the metadata token representing the method that adds handlers for the event.  
+ 入出力イベントのハンドラーを追加するメソッドを表すメタデータトークンへのポインター。  
   
  `pmdRemoveOn`  
- [out] A pointer to the metadata token representing the method that removes handlers for the event.  
+ 入出力イベントのハンドラーを削除するメソッドを表すメタデータトークンへのポインター。  
   
  `pmdFire`  
- [out] A pointer to the metadata token representing the method that raises the event.  
+ 入出力イベントを発生させるメソッドを表すメタデータトークンへのポインター。  
   
  `rmdOtherMethod`  
- [out] An array of token pointers to other methods associated with the event.  
+ 入出力イベントに関連付けられている他のメソッドへのトークンポインターの配列。  
   
  `cMax`  
  [in] `rmdOtherMethod` 配列の最大サイズ。  
   
  `pcOtherMethod`  
- [out] The number of tokens returned in `rmdOtherMethod`.  
+ 入出力`rmdOtherMethod`で返されたトークンの数。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

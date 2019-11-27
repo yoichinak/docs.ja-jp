@@ -1,5 +1,5 @@
 ---
-title: 'How to: Combine Data with LINQ by Using Joins'
+title: '方法: 結合を使用して LINQ とデータを結合する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], joins
@@ -17,67 +17,67 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345002"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>方法 : LINQ の結合を使用してデータを結合する (Visual Basic)
-Visual Basic provides the `Join` and `Group Join` query clauses to enable you to combine the contents of multiple collections based on common values between the collections. These values are known as *key* values. Developers familiar with relational database concepts will recognize the `Join` clause as an INNER JOIN and the `Group Join` clause as, effectively, a LEFT OUTER JOIN.  
+Visual Basic には、コレクション間の共通値に基づいて複数のコレクションの内容を結合できるようにするための `Join` および `Group Join` クエリ句が用意されています。 これらの値は*キー*値として知られています。 リレーショナルデータベースの概念を理解している開発者は、`Join` 句を内部結合として認識し、`Group Join` 句を、実質的に左外部結合として認識します。  
   
- The examples in this topic demonstrate a few ways to combine data by using the `Join` and `Group Join` query clauses.  
+ このトピックの例では、`Join` と `Group Join` のクエリ句を使用してデータを結合するいくつかの方法を示します。  
   
-## <a name="create-a-project-and-add-sample-data"></a>Create a Project and Add Sample Data  
+## <a name="create-a-project-and-add-sample-data"></a>プロジェクトを作成してサンプルデータを追加する  
   
-#### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>To create a project that contains sample data and types  
+#### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>サンプルデータとデータ型を含むプロジェクトを作成するには  
   
-1. To run the samples in this topic, open Visual Studio and add a new Visual Basic Console Application project. Double-click the Module1.vb file created by Visual Basic.  
+1. このトピックのサンプルを実行するには、Visual Studio を開き、新しい Visual Basic コンソールアプリケーションプロジェクトを追加します。 Visual Basic によって作成された module1.vb ファイルをダブルクリックします。  
   
-2. The samples in this topic use the `Person` and `Pet` types and data from the following code example. Copy this code into the default `Module1` module created by Visual Basic.  
+2. このトピックのサンプルでは、次のコード例の `Person` と `Pet` 型とデータを使用します。 Visual Basic によって作成された既定の `Module1` モジュールにこのコードをコピーします。  
   
      [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
-## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Perform an Inner Join by Using the Join Clause  
- An INNER JOIN combines data from two collections. Items for which the specified key values match are included. Any items from either collection that do not have a matching item in the other collection are excluded.  
+## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Join 句を使用して内部結合を実行する  
+ 内部結合では、2つのコレクションのデータを結合します。 指定されたキー値が一致する項目が含まれます。 いずれかのコレクションの項目のうち、他のコレクションに一致する項目がない項目は除外されます。  
   
- In Visual Basic, LINQ provides two options for performing an INNER JOIN: an implicit join and an explicit join.  
+ Visual Basic では、LINQ で内部結合を実行するためのオプションとして、暗黙の結合と明示的な結合の2つのオプションが用意されています。  
   
- An implicit join specifies the collections to be joined in a `From` clause and identifies the matching key fields in a `Where` clause. Visual Basic implicitly joins the two collections based on the specified key fields.  
+ 暗黙の結合では、`From` 句で結合するコレクションを指定し、`Where` 句で一致するキーフィールドを識別します。 Visual Basic は、指定されたキーフィールドに基づいて、2つのコレクションを暗黙的に結合します。  
   
- You can specify an explicit join by using the `Join` clause when you want to be specific about which key fields to use in the join. In this case, a `Where` clause can still be used to filter the query results.  
+ 結合で使用するキーフィールドを特定する場合は、`Join` 句を使用して明示的な結合を指定できます。 この場合でも、`Where` 句を使用してクエリ結果をフィルター処理できます。  
   
-#### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>To perform an Inner Join by using the Join clause  
+#### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>Join 句を使用して内部結合を実行するには  
   
-1. Add the following code to the `Module1` module in your project to see examples of both an implicit and explicit inner join.  
+1. 次のコードをプロジェクトの `Module1` モジュールに追加して、暗黙的および明示的な内部結合の例を確認します。  
   
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
-## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Perform a Left Outer Join by Using the Group Join Clause  
- A LEFT OUTER JOIN includes all the items from the left-side collection of the join and only matching values from the right-side collection of the join. Any items from the right-side collection of the join that do not have a matching item in the left-side collection are excluded from the query result.  
+## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Group Join 句を使用して左外部結合を実行する  
+ 左外部結合には、結合の左側のコレクションのすべての項目が含まれ、結合の右側のコレクションの値のみが一致します。 左側のコレクションに一致する項目がない結合の右側のコレクションの項目は、クエリ結果から除外されます。  
   
- The `Group Join` clause performs, in effect, a LEFT OUTER JOIN. The difference between what is typically known as a LEFT OUTER JOIN and what the `Group Join` clause returns is that the `Group Join` clause groups results from the right-side collection of the join for each item in the left-side collection. In a relational database, a LEFT OUTER JOIN returns an ungrouped result in which each item in the query result contains matching items from both collections in the join. In this case, the items from the left-side collection of the join are repeated for each matching item from the right-side collection. You will see what this looks like when you complete the next procedure.  
+ `Group Join` 句は、左外部結合を実行します。 通常、左外部結合と呼ばれるものと、`Group Join` 句が返すものの違いは、`Group Join` 句が左側のコレクションの各項目について、結合の右側のコレクションから結果をグループ化することです。 リレーショナルデータベースでは、左外部結合はグループ化されていない結果を返します。この場合、クエリ結果の各項目には、結合内の両方のコレクションの一致する項目が含まれます。 この場合、結合の左側のコレクションの項目は、右側のコレクションの一致する項目ごとに繰り返されます。 次の手順を完了すると、次のような内容が表示されます。  
   
- You can retrieve the results of a `Group Join` query as an ungrouped result by extending your query to return an item for each grouped query result. To accomplish this, you have to ensure that you query on the `DefaultIfEmpty` method of the grouped collection. This ensures that items from the left-side collection of the join are still included in the query result even if they have no matching results from the right-side collection. You can add code to your query to provide a default result value when there is no matching value from the right-side collection of the join.  
+ クエリを拡張し、グループ化されたクエリ結果ごとに1つの項目を返すようにすることで、`Group Join` クエリの結果をグループ化されていない結果として取得できます。 これを実現するには、グループ化されたコレクションの `DefaultIfEmpty` メソッドに対してクエリを実行する必要があります。 これにより、右側のコレクションと一致する結果がない場合でも、結合の左側のコレクションの項目がクエリ結果に引き続き含まれるようになります。 結合の右側のコレクションから一致する値がない場合は、クエリにコードを追加して既定の結果値を指定できます。  
   
-#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>To perform a Left Outer Join by using the Group Join clause  
+#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Group Join 句を使用して左外部結合を実行するには  
   
-1. Add the following code to the `Module1` module in your project to see examples of both a grouped left outer join and an ungrouped left outer join.  
+1. 次のコードをプロジェクトの `Module1` モジュールに追加して、グループ化された左外部結合とグループ化されていない左外部結合の両方の例を確認します。  
   
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
-## <a name="perform-a-join-by-using-a-composite-key"></a>Perform a Join by Using a Composite Key  
- You can use the `And` keyword in a `Join` or `Group Join` clause to identify multiple key fields to use when matching values from the collections being joined. The `And` keyword specifies that all specified key fields must match for items to be joined.  
+## <a name="perform-a-join-by-using-a-composite-key"></a>複合キーを使用して結合を実行する  
+ `Join` または `Group Join` 句で `And` キーワードを使用すると、結合されているコレクションの値を照合するときに使用する複数のキーフィールドを識別できます。 `And` キーワードは、指定されたすべてのキーフィールドが結合される項目に一致する必要があることを指定します。  
   
-#### <a name="to-perform-a-join-by-using-a-composite-key"></a>To perform a Join by using a composite key  
+#### <a name="to-perform-a-join-by-using-a-composite-key"></a>複合キーを使用して結合を実行するには  
   
-1. Add the following code to the `Module1` module in your project to see examples of a join that uses a composite key.  
+1. 次のコードをプロジェクトの `Module1` モジュールに追加して、複合キーを使用する結合の例を確認します。  
   
      [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
-## <a name="run-the-code"></a>Run the Code  
+## <a name="run-the-code"></a>コードを実行する  
   
-#### <a name="to-add-code-to-run-the-examples"></a>To add code to run the examples  
+#### <a name="to-add-code-to-run-the-examples"></a>例を実行するコードを追加するには  
   
-1. Replace the `Sub Main` in the `Module1` module in your project with the following code to run the examples in this topic.  
+1. プロジェクトの `Module1` モジュールの `Sub Main` を次のコードに置き換えて、このトピックの例を実行します。  
   
      [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
-2. Press F5 to run the examples.  
+2. F5 キーを押して、例を実行します。  
   
 ## <a name="see-also"></a>関連項目
 

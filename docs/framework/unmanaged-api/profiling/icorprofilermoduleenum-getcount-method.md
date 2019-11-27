@@ -33,9 +33,9 @@ HRESULT GetCount([out] ULONG * pcelt);
   
 ## <a name="parameters"></a>パラメーター  
  `celt`  
- [out] The number of runtime modules in the collection.  
+ 入出力コレクション内のランタイムモジュールの数。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

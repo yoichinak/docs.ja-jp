@@ -16,15 +16,15 @@ ms.locfileid: "74446852"
 # <a name="server-side-ui-automation-provider-implementation"></a>サーバー側 UI オートメーション プロバイダーの実装
 
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
 
 このセクションでは、カスタム コントロールのサーバー側 UI オートメーション プロバイダーを実装する方法について説明します。
 
-The implementation for Windows Presentation Foundation (WPF) elements and non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elements (such as those designed for [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) is fundamentally different. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] から派生したクラスを使用して <xref:System.Windows.Automation.Peers.AutomationPeer>をサポートします。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、プロバイダー インターフェイスの実装を通じてサポートを提供します。
+Windows Presentation Foundation (WPF) 要素と非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素 ([!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]向けに設計された要素など) の実装は、根本的に異なります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] から派生したクラスを使用して <xref:System.Windows.Automation.Peers.AutomationPeer>をサポートします。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、プロバイダー インターフェイスの実装を通じてサポートを提供します。
 
 <a name="Security_Considerations"></a>
 
-## <a name="security-considerations"></a>セキュリティの考慮事項
+## <a name="security-considerations"></a>セキュリティに関する考慮事項
 
 プロバイダーは、部分的に信頼された環境で動作できるように記述する必要があります。 UIAutomationClient.dll は部分的な信頼で動作するように構成されていないため、プロバイダーのコードではこのアセンブリを参照しないでください。 参照している場合、完全に信頼された環境ではコードを実行できますが、部分的に信頼された環境では失敗します。
 
@@ -56,15 +56,15 @@ The implementation for Windows Presentation Foundation (WPF) elements and non-[!
 
 すべての [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロバイダーは、次のインターフェイスのいずれかを実装する必要があります。
 
-|Interface|説明|
+|インターフェイス|説明|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|コントロール パターンやプロパティのサポートを含む、ウィンドウでホストされる単純なコントロールの機能を提供します。|
-|<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>から継承します。 フラグメント内のナビゲーション、フォーカスの設定、要素の四角形領域の復帰などを含む、複雑なコントロールの要素の機能を追加します。|
+|<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>から継承します。 フラグメント内のナビゲーション、フォーカスの設定、要素の外接する四角形の復帰などを含む、複雑なコントロールの要素の機能を追加します。|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>|<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>から継承します。 指定した座標での子要素の検索やコントロール全体のフォーカス状態の設定などを含む、複雑なコントロールのルート要素の機能を追加します。|
 
 次のインターフェイスは追加機能を提供しますが、実装する必要はありません。
 
-|Interface|説明|
+|インターフェイス|説明|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|プロバイダーがイベントの要求を追跡できるようにします。|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|フラグメントの [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー内のウィンドウ ベースの要素の位置を変更できるようにします。|
@@ -115,13 +115,13 @@ HWND ベースのコントロールのプロバイダーは通常、次のプロ
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> 単純な要素またはウィンドウでホストされているフラグメント ルートの <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> は、ウィンドウから取得されます。ただし、ルートの下にあるフラグメント要素 (リスト ボックス内のリスト項目など) は独自の識別子を提供する必要があります。 詳細については、「<xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>」を参照してください。
+> 単純な要素またはウィンドウでホストされているフラグメント ルートの <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> は、ウィンドウから取得されます。ただし、ルートの下にあるフラグメント要素 (リスト ボックス内のリスト項目など) は独自の識別子を提供する必要があります。 詳細については、「 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>」を参照してください。
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> は、 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] コントロールでホストされるプロバイダーに返される必要があります。 この場合、ウィンドウの既定のプロバイダーは適切な値を取得できないことがあります。
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> は通常、ホスト プロバイダーによって提供されます。 たとえば、カスタム コントロールが <xref:System.Windows.Forms.Control>から派生している場合、名前はこのコントロールの `Text` プロパティから派生します。
 
-コード例については、「 [UI オートメーション プロバイダーからのプロパティの返却](return-properties-from-a-ui-automation-provider.md)」を参照してください。
+コード例については、「 [Return Properties from a UI Automation Provider](return-properties-from-a-ui-automation-provider.md)」を参照してください。
 
 <a name="Events_in_Non_WPF_Providers"></a>
 
@@ -142,7 +142,7 @@ HWND ベースのコントロールのプロバイダーは通常、次のプロ
 |メソッド|説明|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|この静的プロパティは、クライアント アプリケーションが [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントにサブスクライブしているかどうかを指定します。|
-|<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|プロバイダーがこのインターフェイスをフラグメント ルートに実装すると、クライアントがフラグメント上のイベント用のイベント ハンドラーを登録および登録解除したときに通知されるようにすることができます。|
+|<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|プロバイダーがこのインターフェイスをフラグメント ルートに実装すると、クライアントが フラグメント上のイベン用のイベント ハンドラーを登録および登録解除したときに通知されるようにすることができます。|
 
 <a name="Non_WPF_Provider_Navigation"></a>
 
