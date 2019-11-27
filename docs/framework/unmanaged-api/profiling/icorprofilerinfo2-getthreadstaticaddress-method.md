@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443057"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress メソッド
-Gets the address of the specified thread-static field that is in the scope of the specified thread.  
+指定したスレッドのスコープ内にある、指定したスレッド静的フィールドのアドレスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,27 +37,27 @@ HRESULT GetThreadStaticAddress(
   
 ## <a name="parameters"></a>パラメーター  
  `classId`  
- [in] The ID of the class that contains the requested thread-static field.  
+ から要求されたスレッド静的フィールドを含むクラスの ID。  
   
  `fieldToken`  
- [in] The metadata token for the requested thread-static field.  
+ から要求されたスレッドの静的フィールドのメタデータトークン。  
   
  `threadId`  
- [in] The ID of the thread that is the scope for the requested static field.  
+ から要求された静的フィールドのスコープであるスレッドの ID。  
   
  `ppAddress`  
- [out] A pointer to the address of the static field that is within the specified thread.  
+ 入出力指定したスレッド内の静的フィールドのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- The `GetThreadStaticAddress` method may return one of the following:  
+## <a name="remarks"></a>コメント  
+ `GetThreadStaticAddress` メソッドは、次のいずれかを返す場合があります。  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- 指定されたコンテキストで、指定された静的フィールドにアドレスが割り当てられていない場合は CORPROF_E_DATAINCOMPLETE HRESULT。  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection profilers should not assume that they are valid.  
+- ガベージコレクションヒープ内に存在する可能性があるオブジェクトのアドレス。 これらのアドレスは、ガベージコレクションの後に無効になることがあります。そのため、ガベージコレクションプロファイラーは、これらのアドレスが有効であると想定することはできません。  
   
- Before a class’s class constructor is completed, `GetThreadStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
+ クラスのクラスコンストラクターが完了する前に、`GetThreadStaticAddress` はすべての静的フィールドに対して CORPROF_E_DATAINCOMPLETE を返します。ただし、静的フィールドの一部は既に初期化されており、ガベージコレクションオブジェクトがルート化される場合があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

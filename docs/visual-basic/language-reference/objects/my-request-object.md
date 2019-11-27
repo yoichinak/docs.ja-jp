@@ -17,13 +17,13 @@ ms.locfileid: "74350675"
 # <a name="myrequest-object"></a>My.Request オブジェクト
 要求されたページの <xref:System.Web.HttpRequest> オブジェクトを取得します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `My.Request` オブジェクトには、現在の HTTP 要求に関する情報が含まれています。  
   
  `My.Request` オブジェクトは、ASP.NET アプリケーションでのみ使うことができます。  
   
 ## <a name="example"></a>例  
- The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.  
+ 次の例では、`My.Request` オブジェクトからヘッダーコレクションを取得し、`My.Response` オブジェクトを使用して ASP.NET ページに書き込みます。  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   

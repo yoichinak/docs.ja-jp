@@ -1,5 +1,5 @@
 ---
-title: Imports Statement - .NET Namespace and Type
+title: Imports ステートメント-.NET 名前空間と型
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Imports
@@ -25,7 +25,7 @@ ms.locfileid: "74351066"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports ステートメント (.NET 名前空間および型)
 
-Enables type names to be referenced without namespace qualification.
+名前空間の修飾なしで型名を参照できるようにします。
 
 ## <a name="syntax"></a>構文
 
@@ -39,54 +39,54 @@ Imports [ aliasname = ] namespace.element
 
 |用語|定義|
 |---|---|
-|`aliasname`|省略可能です。 An *import alias* or name by which code can refer to `namespace` instead of the full qualification string. 「 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
-|`namespace`|必須です。 The fully qualified name of the namespace being imported. Can be a string of namespaces nested to any level.|
-|`element`|省略可能です。 The name of a programming element declared in the namespace. Can be any container element.|
+|`aliasname`|任意。 完全修飾文字列ではなく、コードが `namespace` を参照できる*インポートエイリアス*または名前。 「 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
+|`namespace`|必須。 インポートされる名前空間の完全修飾名。 には、任意のレベルに入れ子になった名前空間の文字列を指定できます。|
+|`element`|任意。 名前空間で宣言されているプログラミング要素の名前。 任意のコンテナー要素を指定できます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The `Imports` statement enables types that are contained in a given namespace to be referenced directly.
+`Imports` ステートメントを使用すると、特定の名前空間に含まれている型を直接参照できます。
 
-You can supply a single namespace name or a string of nested namespaces. Each nested namespace is separated from the next higher level namespace by a period (`.`), as the following example illustrates:
+1つの名前空間名または入れ子になった名前空間の文字列を指定できます。 入れ子になった各名前空間は、次の例に示すように、ピリオド (`.`) で次の上位レベルの名前空間から分離されます。
 
 ```vb
 Imports System.Collections.Generic
 ```
 
-Each source file can contain any number of `Imports` statements. These must follow any option declarations, such as the `Option Strict` statement, and they must precede any programming element declarations, such as `Module` or `Class` statements.
+各ソースファイルには、任意の数の `Imports` ステートメントを含めることができます。 これらは、`Option Strict` ステートメントなど、任意のオプション宣言に従う必要があり、`Module` や `Class` ステートメントなどのプログラミング要素の宣言の前に記述する必要があります。
 
-You can use `Imports` only at file level. This means the declaration context for importation must be a source file, and cannot be a namespace, class, structure, module, interface, procedure, or block.
+`Imports` は、ファイルレベルでのみ使用できます。 つまり、インポートの宣言コンテキストはソースファイルである必要があり、名前空間、クラス、構造体、モジュール、インターフェイス、プロシージャ、またはブロックにすることはできません。
 
-Note that the `Imports` statement does not make elements from other projects and assemblies available to your project. Importing does not take the place of setting a reference. It only removes the need to qualify names that are already available to your project. For more information, see "Importing Containing Elements" in [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+`Imports` ステートメントでは、プロジェクトで他のプロジェクトおよびアセンブリの要素を使用できないことに注意してください。 インポートでは、参照の設定は行われません。 これにより、プロジェクトで既に使用可能な名前を修飾する必要がなくなります。 詳細については、「宣言された[要素への参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)」の「コンテナー要素のインポート」を参照してください。
 
 > [!NOTE]
-> You can define implicit `Imports` statements by using the [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). For more information, see [How to: Add or Remove Imported Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).
+> 暗黙の `Imports` ステートメントを定義するには、[[参照] ページの [プロジェクトデザイナー] (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)を使用します。 詳細については、「[方法: インポートされた名前空間を追加または削除する (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)」を参照してください。
 
 ## <a name="import-aliases"></a>インポート エイリアス
 
-An *import alias* defines the alias for a namespace or type. Import aliases are useful when you need to use items with the same name that are declared in one or more namespaces. For more information and an example, see "Qualifying an Element Name" in [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+*インポートエイリアス*は、名前空間または型のエイリアスを定義します。 インポートエイリアスは、1つまたは複数の名前空間で宣言されているものと同じ名前の項目を使用する必要がある場合に便利です。 詳細と例については、「宣言された[要素への参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)」の「要素名の修飾」を参照してください。
 
-You should not declare a member at module level with the same name as `aliasname`. If you do, the Visual Basic compiler uses `aliasname` only for the declared member and no longer recognizes it as an import alias.
+モジュールレベルで `aliasname`と同じ名前のメンバーを宣言することはできません。 この場合、Visual Basic コンパイラは、宣言されたメンバーに対してのみ `aliasname` を使用し、それをインポートエイリアスとして認識しなくなります。
 
-Although the syntax used for declaring an import alias is like that used for importing an XML namespace prefix, the results are different. An import alias can be used as an expression in your code, whereas an XML namespace prefix can be used only in XML literals or XML axis properties as the prefix for a qualified element or attribute name.
+インポートエイリアスの宣言に使用される構文は、XML 名前空間プレフィックスのインポートに使用される構文と似ていますが、結果は異なります。 インポートエイリアスは、コード内で式として使用できます。一方、XML 名前空間プレフィックスは、xml リテラルまたは XML 軸プロパティで、修飾された要素名または属性名のプレフィックスとしてのみ使用できます。
 
 ### <a name="element-names"></a>要素の名前
 
-If you supply `element`, it must represent a *container element*, that is, a programming element that can contain other elements. Container elements include classes, structures, modules, interfaces, and enumerations.
+`element`を指定する場合は、*コンテナー要素*、つまり、他の要素を含むことができるプログラミング要素を表す必要があります。 コンテナー要素には、クラス、構造体、モジュール、インターフェイス、および列挙体が含まれます。
 
-The scope of the elements made available by an `Imports` statement depends on whether you specify `element`. If you specify only `namespace`, all uniquely named members of that namespace, and members of container elements within that namespace, are available without qualification. If you specify both `namespace` and `element`, only the members of that element are available without qualification.
+`Imports` ステートメントで使用できる要素のスコープは、`element`を指定したかどうかによって異なります。 `namespace`だけを指定した場合、その名前空間の一意の名前を持つすべてのメンバーと、その名前空間内のコンテナー要素のメンバーは、修飾なしで使用できます。 `namespace` と `element`の両方を指定すると、その要素のメンバーだけが修飾なしで使用できます。
 
 ## <a name="example"></a>例
 
-The following example returns all the folders in the *C:\\* directory by using the <xref:System.IO.DirectoryInfo> class:
+次の例では、<xref:System.IO.DirectoryInfo> クラスを使用して、 *C:\\* ディレクトリ内のすべてのフォルダーを返します。
 
-The code has no `Imports` statements at the top of the file. Therefore, the <xref:System.IO.DirectoryInfo>, <xref:System.Text.StringBuilder>, and <xref:Microsoft.VisualBasic.ControlChars.CrLf> references are all fully qualified with the namespaces.
+コードには、ファイルの先頭に `Imports` ステートメントがありません。 したがって、<xref:System.IO.DirectoryInfo>、<xref:System.Text.StringBuilder>、および <xref:Microsoft.VisualBasic.ControlChars.CrLf> 参照はすべて、名前空間で完全修飾されています。
 
 [!code-vb[VbVbalrStatements#152](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#152)]
 
 ## <a name="example"></a>例
 
-The following example includes `Imports` statements for the referenced namespaces. Therefore, the types do not have to be fully qualified with the namespaces.
+次の例には、参照先の名前空間の `Imports` ステートメントが含まれています。 そのため、型は名前空間で完全修飾されている必要はありません。
 
 [!code-vb[VbVbalrStatements#153](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#153)]
 
@@ -94,7 +94,7 @@ The following example includes `Imports` statements for the referenced namespace
   
 ## <a name="example"></a>例
 
-The following example includes `Imports` statements that create aliases for the referenced namespaces. The types are qualified with the aliases.
+次の例には、参照先の名前空間のエイリアスを作成する `Imports` ステートメントが含まれています。 型はエイリアスで修飾されます。
 
 [!code-vb[VbVbalrStatements#155](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#155)]
 
@@ -102,7 +102,7 @@ The following example includes `Imports` statements that create aliases for the 
 
 ## <a name="example"></a>例
 
-The following example includes `Imports` statements that create aliases for the referenced types. Aliases are used to specify the types.
+次の例には、参照される型のエイリアスを作成する `Imports` ステートメントが含まれています。 エイリアスは、型を指定するために使用されます。
 
 [!code-vb[VbVbalrStatements#157](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#157)]
 
@@ -111,7 +111,7 @@ The following example includes `Imports` statements that create aliases for the 
 ## <a name="see-also"></a>関連項目
 
 - [Namespace ステートメント](namespace-statement.md)
-- [Namespaces in Visual Basic](../../programming-guide/program-structure/namespaces.md)
+- [Visual Basic 内の名前空間](../../programming-guide/program-structure/namespaces.md)
 - [参照と Imports ステートメント](../../programming-guide/program-structure/references-and-the-imports-statement.md)
 - [Imports ステートメント (XML 名前空間)](imports-statement-xml-namespace.md)
 - [宣言された要素の参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

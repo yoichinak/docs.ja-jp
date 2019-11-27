@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445477"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource メソッド
-Installs a specified notification source.  
+指定された通知ソースをインストールします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,16 +37,16 @@ HRESULT RegisterNotifySource
   
 ## <a name="parameters"></a>パラメーター  
  `in_pNotifySource`  
- [in] Specifies the object to be used as the notification source.  
+ から通知ソースとして使用するオブジェクトを指定します。  
   
  `out_ppNotifySink`  
- [out] Receives the object to be used as the notification sink.  
+ 入出力通知シンクとして使用されるオブジェクトを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
 ## <a name="see-also"></a>関連項目
 

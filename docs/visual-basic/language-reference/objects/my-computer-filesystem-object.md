@@ -22,20 +22,20 @@ ms.locfileid: "74347235"
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem オブジェクト
 ドライブ、ファイル、ディレクトリを操作するためのプロパティとメソッドを提供します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `My.Computer.FileSystem` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.FileIO.FileSystem>」をご覧ください。  
   
- For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
+ 詳細については、「 [Visual Basic を使用したファイルアクセス](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)」を参照してください。  
   
 > [!NOTE]
-> You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.  
+> <xref:System.IO?displayProperty=nameWithType> 名前空間のクラスを使用して、ドライブ、ファイル、およびディレクトリを操作することもできます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **名前空間:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
+ **クラス:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (<xref:Microsoft.VisualBasic.FileIO.FileSystem>へのアクセスを提供します)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
 ## <a name="see-also"></a>関連項目
 

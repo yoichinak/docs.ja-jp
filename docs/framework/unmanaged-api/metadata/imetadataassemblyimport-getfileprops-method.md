@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447209"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps メソッド
-Gets the properties of the file with the specified metadata signature.  
+指定したメタデータシグネチャを持つファイルのプロパティを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,32 +41,32 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mdf`  
- [in] The `mdFile` metadata token that represents the file for which to get the properties.  
+ からプロパティを取得する対象のファイルを表す `mdFile` メタデータトークン。  
   
  `szName`  
- [out] The simple name of the file.  
+ 入出力ファイルの簡易名。  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ から`szName`のサイズ (ワイド文字単位)。  
   
  `pchName`  
- [out] The number of wide chars actually returned in `szName`.  
+ 入出力`szName`に実際に返されるワイド文字数。  
   
  `ppbHashValue`  
- [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the file.  
+ 入出力ハッシュ値へのポインター。 これは、ファイルの SHA-1 アルゴリズムを使用したハッシュです。  
   
  `pcbHashValue`  
- [out] The number of wide chars in the returned hash value.  
+ 入出力返されたハッシュ値のワイド文字の数。  
   
  `pdwFileFlags`  
- [out] A pointer to the flags that describe the metadata applied to a file. The flags value is a combination of one or more [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values.  
+ 入出力ファイルに適用されるメタデータを記述するフラグへのポインター。 Flags 値は、1つまたは複数の[Corfileflags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)値を組み合わせたものです。  
   
-## <a name="requirements"></a>［要件］  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

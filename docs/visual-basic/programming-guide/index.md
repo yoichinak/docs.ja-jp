@@ -14,11 +14,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345448"
 ---
 # <a name="visual-basic-programming-guide"></a>Visual Basic のプログラミング ガイド
-As with any modern programming language, Visual Basic supports many common programming constructs and language elements. This guide describes all the major elements of programming with Visual Basic.  
+最新のプログラミング言語と同様に、Visual Basic では、多くの一般的なプログラミング構成要素と言語要素がサポートされています。 このガイドでは、Visual Basic を使用したプログラミングの主要な要素について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [プログラム構造とコード規則](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Contains documentation on the basic structure and code conventions of Visual Basic, such as naming conventions, comments in code, and limitations within Visual Basic.  
+ 名前付け規則、コード内のコメント、Visual Basic 内の制限事項など、Visual Basic の基本的な構造とコード規則に関するドキュメントが含まれています。  
   
  [Visual Basic 言語の機能](../../visual-basic/programming-guide/language-features/index.md)  
  LINQ や XML リテラルなど、Visual Basic の重要な機能に関するトピックへのリンクを示します。  
@@ -28,7 +28,7 @@ As with any modern programming language, Visual Basic supports many common progr
   
 ## <a name="related-sections"></a>関連項目  
  [Visual Basic の言語リファレンス](../../visual-basic/language-reference/index.md)  
- Provides reference information about various aspects of Visual Basic programming.  
+ Visual Basic プログラミングのさまざまな側面に関するリファレンス情報を提供します。  
   
  [Visual Basic のコマンド ライン コンパイラ](../../visual-basic/reference/command-line-compiler/index.md)  
- Offers information on using the Visual Basic command-line compiler, the compiler options, and the Keyword Upgrade tool.
+ Visual Basic コマンドラインコンパイラ、コンパイラオプション、およびキーワードアップグレードツールの使用に関する情報を提供します。

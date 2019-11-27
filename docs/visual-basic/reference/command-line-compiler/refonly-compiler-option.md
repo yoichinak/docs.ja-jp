@@ -16,7 +16,7 @@ ms.locfileid: "74348573"
 ---
 # <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
-The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly. `-refonly` パラメーターは、参照アセンブリを実行できない場合に、PDB の出力を暗黙的に無効にします。
+**-Refonly**オプションは、コンパイルのプライマリ出力を実装アセンブリではなく参照アセンブリにする必要があることを示します。 `-refonly` パラメーターは、参照アセンブリを実行できない場合に、PDB の出力を暗黙的に無効にします。
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -26,9 +26,9 @@ The **-refonly** option indicates that the primary output of the compilation sho
 -refonly
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Visual Basic supports the `-refonly` switch starting with version 15.3.
+Visual Basic では、バージョン15.3 以降の `-refonly` スイッチがサポートされています。
 
 参照アセンブリは、ライブラリのパブリック API サーフェイスを表すために必要最小限のメタデータのみを含む特殊なアセンブリです。 これには、ビルド ツールでアセンブリを参照するときに重要なすべてのメンバーの宣言が含まれます。ただし、すべてのメンバーの実装と、その API コントラクトに影響を与えないプライベート メンバーの宣言は除外されます。 詳細については、.NET のガイドの「[参照アセンブリ](../../../standard/assembly/reference-assemblies.md)」を参照してください。
 

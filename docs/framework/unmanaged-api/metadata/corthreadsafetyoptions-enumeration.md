@@ -39,15 +39,15 @@ typedef enum CorThreadSafetyOptions {
 
 |メンバー|説明|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|Default value. `MDThreadSafetyOff` と同じ。|
-|`MDThreadSafetyOff`|Indicates that a reader/writer lock cannot be set.|
-|`MDThreadSafetyOn`|Indicates that a reader/writer lock can be set.|
+|`MDThreadSafetyDefault`|既定値。 `MDThreadSafetyOff` と同じ。|
+|`MDThreadSafetyOff`|リーダー/ライターロックを設定できないことを示します。|
+|`MDThreadSafetyOn`|リーダー/ライターロックを設定できることを示します。|
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
 
-**Header:** CorHdr.h
+**ヘッダー:** CorHdr. h
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

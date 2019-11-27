@@ -15,22 +15,22 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448542"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>シンボル ストア診断列挙体
-This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.  
+このトピックでは、診断シンボルストア API が使用するアンマネージ列挙について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [CorSymAddrKind 列挙型](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
- Indicates the type of memory address.  
+ メモリアドレスの種類を示します。  
   
  [CorSymSearchPolicyAttributes 列挙型](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- Specifies the policy to be used when doing a search for a symbol reader.  
+ シンボルリーダーの検索を実行するときに使用するポリシーを指定します。  
   
  [CorSymVarFlag 列挙型](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- Indicates whether a variable is compiler-generated.  
+ 変数がコンパイラによって生成されたかどうかを示します。  
   
  [NOTIFY_FILTER 列挙型](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
- Identifies callbacks for debugger functions.  
+ デバッガー関数のコールバックを識別します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
   
  [シンボル ストア診断構造体](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  

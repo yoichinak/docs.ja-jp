@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437542"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps メソッド
-Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.
+指定したメソッドを実装する <xref:System.Type> のメタデータトークンへのポインターと、そのメソッドを宣言するインターフェイスを取得します。
   
 ## <a name="syntax"></a>構文  
   
@@ -37,27 +37,27 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>パラメーター  
  `iiImpl`  
- [in] The metadata token representing the method to return the class and interface tokens for.  
+ からクラスとインターフェイストークンを返すメソッドを表すメタデータトークン。  
   
  `pClass`  
- [out] The metadata token representing the class that implements the method.  
+ 入出力メソッドを実装するクラスを表すメタデータトークン。  
   
  `ptkIface`  
- [out] The metadata token representing the interface that defines the implemented method.  
+ 入出力実装されたメソッドを定義するインターフェイスを表すメタデータトークン。  
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
- You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.
+ `iImpl` の値を取得するには、 [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md)メソッドを呼び出します。
  
- For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens: 
+ たとえば、クラスの `mdTypeDef` トークン値が0x02000007 で、型にトークンが含まれている3つのインターフェイスを実装しているとします。 
 
 - 0x02000003 (TypeDef)
 - 0x0100000A (TypeRef)
 - 0x0200001C (TypeDef)
 
-Conceptually, this information is stored into an interface implementation table as:
+概念的には、この情報は次のようにインターフェイス実装テーブルに格納されます。
 
-| Row number | Class token | Interface token |
+| 行番号 | クラストークン | インターフェイストークン |
 |------------|-------------|-----------------|
 | 4          |             |                 |
 | 5          | 02000007    | 02000003        |
@@ -65,19 +65,19 @@ Conceptually, this information is stored into an interface implementation table 
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-Recall, the token is a 4-byte value:
+これは、トークンが4バイトの値であることを思い出してください。
 
-- The lower 3 bytes hold the row number, or RID.
-- The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.
+- 下位3バイトは、行番号 (RID) を保持します。
+- 上位バイトは、`mdtInterfaceImpl`のトークンの種類 (0x09) を保持します。
 
-`GetInterfaceImplProps` returns the information held in the row whose token you provide in the `iImpl` argument. 
+`GetInterfaceImplProps` は、`iImpl` 引数で指定したトークンを持つ行に保持されている情報を返します。 
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -22,17 +22,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449231"
 ---
 # <a name="isymunmanageddispose-interface"></a>ISymUnmanagedDispose インターフェイス
-Disposes of unmanaged resources.  
+アンマネージリソースを破棄します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[destroy メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|Causes the underlying object to release all internal references and return failure on any subsequent method calls.|  
+|[destroy メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|基になるオブジェクトがすべての内部参照を解放し、後続のメソッド呼び出しの失敗を返します。|  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

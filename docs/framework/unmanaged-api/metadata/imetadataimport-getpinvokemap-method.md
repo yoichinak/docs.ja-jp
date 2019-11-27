@@ -40,29 +40,29 @@ HRESULT GetPinvokeMap (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.  
+ からPInvoke マッピングメタデータを取得する FieldDef または MethodDef トークン。  
   
  `pdwMappingFlags`  
- [out] A pointer to flags used for mapping. This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.  
+ 入出力マッピングに使用されるフラグへのポインター。 この値は、 [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)列挙体のビットマスクです。  
   
  `szImportName`  
- [out] The name of the unmanaged target DLL.  
+ 入出力アンマネージターゲット DLL の名前。  
   
  `cchImportName`  
- [in] The size in wide characters of `szImportName`.  
+ から`szImportName`のワイド文字単位のサイズ。  
   
  `pchImportName`  
- [out] The number of wide characters returned in `szImportName`.  
+ 入出力`szImportName`に返されるワイド文字数。  
   
  `pmrImportDLL`  
- [out] A pointer to a ModuleRef token that represents the unmanaged target object library.  
+ 入出力アンマネージターゲットオブジェクトライブラリを表す ModuleRef トークンへのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

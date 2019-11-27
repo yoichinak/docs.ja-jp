@@ -14,15 +14,15 @@ ms.locfileid: "74344095"
 # <a name="mycomputerclock-object"></a>My.Computer.Clock オブジェクト
 システム クロックから現在の現地時刻と世界協定時刻 (グリニッジ標準時に相当します) にアクセスするためのプロパティを提供します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `My.Computer.Clock` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.Devices.Clock>」をご覧ください。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **名前空間:** <xref:Microsoft.VisualBasic.Devices>  
   
  **クラス:** <xref:Microsoft.VisualBasic.Devices.Clock>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
 ## <a name="see-also"></a>関連項目
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432747"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec メソッド
-Creates a generic instance of a method, and gets a token to the definition.  
+メソッドのジェネリックインスタンスを作成し、その定義へのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,27 +38,27 @@ HRESULT DefineMethodSpec (
   
 ## <a name="parameters"></a>パラメーター  
  `tkParent`  
- [in] A token for the method of which to create the generic instance. The token must be of type `mdMethodDef` or `mdMemberRef`.  
+ からジェネリックインスタンスを作成するメソッドのトークン。 トークンは `mdMethodDef` または `mdMemberRef`型である必要があります。  
   
  `pvSigBlob`  
- [in] A pointer to the binary COM+ signature of the method.  
+ からメソッドのバイナリ COM + シグネチャへのポインター。  
   
  `cbSibBlob`  
- [in] The size, in bytes, of `pvSigBlob`.  
+ から`pvSigBlob`のサイズ (バイト単位)。  
   
  `pmi`  
- [out] A token to the metadata signature definition of the method.  
+ 入出力メソッドのメタデータシグネチャ定義へのトークン。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

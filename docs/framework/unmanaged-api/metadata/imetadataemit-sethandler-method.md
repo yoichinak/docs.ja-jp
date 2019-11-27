@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442155"
 ---
 # <a name="imetadataemitsethandler-method"></a>IMetaDataEmit::SetHandler メソッド
-Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.  
+指定した `IUnknown` ポインターによって参照されるメソッドを、トークンリマップの通知コールバックとして設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,19 +35,19 @@ HRESULT SetHandler (
   
 ## <a name="parameters"></a>パラメーター  
  `pUnk`  
- [in] The handler to register.  
+ から登録するハンドラー。  
   
-## <a name="remarks"></a>Remarks  
- The metadata engine sends notification by using the method that is provided by `SetHandler`, to compilers that do not generate records in an optimized way and that would like to optimize saved records.  
+## <a name="remarks"></a>コメント  
+ メタデータエンジンは、`SetHandler`によって提供されるメソッドを使用して、最適化された方法でレコードを生成せず、保存されたレコードを最適化するコンパイラに通知を送信します。  
   
- If the callback method is not provided through `SetHandler`, no optimization will be performed on save except where several import scopes have been merged using `IMapToken` on merge for each scope.  
+ コールバックメソッドが `SetHandler`によって提供されていない場合、`IMapToken` を使用して複数のインポートスコープがマージされている場合を除き、保存時に最適化は実行されません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

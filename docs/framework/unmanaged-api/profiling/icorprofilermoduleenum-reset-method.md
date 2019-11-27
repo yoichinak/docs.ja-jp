@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428286"
 ---
 # <a name="icorprofilermoduleenumreset-method"></a>ICorProfilerModuleEnum::Reset メソッド
-Moves this enumerator's cursor to the starting position of the sequence.  
+この列挙子のカーソルをシーケンスの開始位置に移動します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,9 +31,9 @@ Moves this enumerator's cursor to the starting position of the sequence.
 HRESULT Reset();  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

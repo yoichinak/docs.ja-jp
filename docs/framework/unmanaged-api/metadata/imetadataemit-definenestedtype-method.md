@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431707"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType メソッド
-Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.  
+型定義のメタデータシグネチャを作成し、その型の `mdTypeDef` トークンを返し、`tdEncloser` パラメーターによって参照される型のメンバーであることを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,29 +40,29 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>パラメーター  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ からUnicode での型の名前。  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
+ [in] 属性 `TypeDef` ます。 これは `CorTypeAttr` 値のビットマスクです。  
   
  `tkExtends`  
- [in] The token of the base class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ から基本クラスのトークン。 これは、`mdTypeDef` または `mdTypeRef` トークンのいずれかです。  
   
  `rtkImplements`[]  
- [in] An array of tokens that specify the interfaces that this class or interface implements.  
+ からこのクラスまたはインターフェイスが実装するインターフェイスを指定するトークンの配列。  
   
  `tdEncloser`  
- [in] The token of the enclosing type. The last element of the array must be `mdTokenNil`.  
+ から外側の型のトークン。 配列の最後の要素は `mdTokenNil`である必要があります。  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ 入出力割り当てられた `mdTypeDef` トークン。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

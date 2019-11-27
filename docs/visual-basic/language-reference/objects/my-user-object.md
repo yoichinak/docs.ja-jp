@@ -15,13 +15,13 @@ ms.locfileid: "74350647"
 # <a name="myuser-object"></a>My.User オブジェクト
 現在のユーザーに関する情報へのアクセスを提供します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `My.User` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>」をご覧ください。  
   
- For more information, see [Accessing User Data](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
+ 詳細については、「[ユーザーデータへのアクセス](../../../visual-basic/developing-apps/programming/accessing-user-data.md)」を参照してください。  
   
-## <a name="requirements"></a>［要件］  
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+## <a name="requirements"></a>要件  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
 ## <a name="see-also"></a>関連項目
 

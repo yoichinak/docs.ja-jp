@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432495"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>IMetaDataEmit::SetParamProps メソッド
-Sets or changes features of a method parameter that was defined by a prior call to [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
+[IMetaDataEmit::D efineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md)の前の呼び出しで定義されたメソッドパラメーターの機能を設定または変更します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,29 +40,29 @@ HRESULT SetParamProps (
   
 ## <a name="parameters"></a>パラメーター  
  `pd`  
- [in] The token for the target parameter.  
+ から対象のパラメーターのトークン。  
   
  `szName`  
- [in] The name of the parameter in Unicode.  
+ からUnicode でのパラメーターの名前。  
   
  `dwParamFlags`  
- [in] The flags for the parameter.  
+ からパラメーターのフラグ。  
   
  `dwCPlusTypeFlag`  
- [in] The ELEMENT_TYPE_* for the constant value.  
+ から定数値の ELEMENT_TYPE_ *。  
   
  `pValue`  
- [in] The constant value for the parameter.  
+ からパラメーターの定数値。  
   
  `cchValue`  
- [in] The size in (Unicode) characters of `pValue`.  
+ から`pValue`の (Unicode) 文字のサイズ。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

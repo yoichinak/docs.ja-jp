@@ -15,13 +15,13 @@ ms.locfileid: "74351890"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>方法: 配列を別の配列に代入する (Visual Basic)
 
-Because arrays are objects, you can use them in assignment statements like other object types. An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.
+配列はオブジェクトであるため、他の種類のオブジェクトと同様に代入ステートメントで使用できます。 配列変数は、配列要素とランクおよび長さの情報を構成するデータへのポインターを保持し、割り当てによってこのポインターのみがコピーされます。
 
-### <a name="to-assign-one-array-to-another-array"></a>To assign one array to another array
+### <a name="to-assign-one-array-to-another-array"></a>1つの配列を別の配列に割り当てるには
 
-1. Ensure that the two arrays have the same rank (number of dimensions) and compatible element data types.
+1. 2つの配列のランク (次元の数) と互換性のある要素のデータ型が同じであることを確認します。
 
-2. Use a standard assignment statement to assign the source array to the destination array. Do not follow either array name with parentheses.
+2. 標準の代入ステートメントを使用して、コピー元の配列をコピー先の配列に代入します。 配列名のいずれかをかっこで囲んでください。
 
     ```vb
     Dim formArray() As System.Windows.Forms.Form
@@ -29,19 +29,19 @@ Because arrays are objects, you can use them in assignment statements like other
     controlArray = formArray
     ```
 
-When you assign one array to another, the following rules apply:
+1つの配列を別の配列に割り当てる場合は、次の規則が適用されます。
 
-- **Equal Ranks.** The rank (number of dimensions) of the destination array must be the same as that of the source array.
+- **等順位。** コピー先の配列のランク (次元数) は、ソース配列と同じである必要があります。
 
-  Provided the ranks of the two arrays are equal, the dimensions do not need to be equal. The number of elements in a given dimension can change during assignment.
+  2つの配列のランクが等しい場合、次元は同じである必要はありません。 指定されたディメンション内の要素の数は、割り当て時に変更される可能性があります。
 
-- **Element Types.** Either both arrays must have *reference type* elements or both arrays must have *value type* elements. 詳細については、「 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。
+- **要素の型。** 両方の配列に*参照型*の要素が含まれているか、両方の配列が*値の型*の要素を持っている必要があります。 詳細については、「 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。
 
-  - If both arrays have value type elements, the element data types must be exactly the same. The only exception to this is that you can assign an array of `Enum` elements to an array of the base type of that `Enum`.
+  - 両方の配列に値型の要素がある場合、要素のデータ型はまったく同じである必要があります。 唯一の例外は、`Enum` 要素の配列を、その `Enum`の基本型の配列に割り当てることができることです。
 
-  - If both arrays have reference type elements, the source element type must derive from the destination element type. When this is the case, the two arrays have the same inheritance relationship as their elements. This is called *array covariance*.
+  - 両方の配列に参照型の要素がある場合、ソース要素の型は、変換先の要素の型から派生する必要があります。 この場合、2つの配列は、要素と同じ継承関係を持ちます。 これは、*配列の共変性*と呼ばれます。
 
-The compiler reports an error if the above rules are violated, for example if the data types are not compatible or the ranks are unequal. You can add error handling to your code to make sure that the arrays are compatible before attempting an assignment. You can also use the [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) keyword if you want to avoid throwing an exception.
+上記の規則に違反すると、コンパイラはエラーを報告します。たとえば、データ型に互換性がない場合や、ランクが等しくない場合などです。 コードにエラー処理を追加して、割り当てを試行する前に配列に互換性があることを確認できます。 例外がスローされないようにする場合は、 [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md)キーワードを使用することもできます。
 
 ## <a name="see-also"></a>関連項目
 

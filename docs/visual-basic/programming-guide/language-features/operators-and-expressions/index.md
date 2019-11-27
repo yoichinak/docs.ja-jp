@@ -23,7 +23,7 @@ ms.locfileid: "74343608"
  *式*は、演算子で結合され、新しい値を生成する一連の値要素です。 演算子は、値要素に対して、計算、比較、またはその他の演算を実行します。  
   
 ## <a name="types-of-operators"></a>演算子の種類  
- Visual Basic provides the following types of operators:  
+ Visual Basic には、次の種類の演算子があります。  
   
 - [算術演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)は、数値に対して一般的な計算を実行します (ビット パターンのシフトも含まれます)。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "74343608"
   
  [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
- In the preceding example, Visual Basic performs the operations in the expression on the right side of the assignment operator (`=`), then assigns the resulting value to the variable `x` on the left. 1 つの式で使用できる演算子の数には、事実上制限はありません。ただし、正しい結果を得るには、[Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)を理解する必要があります。  
+ 前の例では、Visual Basic 代入演算子 (`=`) の右側にある式の演算を実行し、結果の値を左側の変数 `x` に代入します。 1 つの式で使用できる演算子の数には、事実上制限はありません。ただし、正しい結果を得るには、[Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)を理解する必要があります。  
 
 ## <a name="see-also"></a>関連項目
 

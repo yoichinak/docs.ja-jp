@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440492"
 ---
 # <a name="imetadataemit2getdeltasavesize-method"></a>IMetaDataEmit2::GetDeltaSaveSize メソッド
-Gets a value indicating any change in metadata size that results from the current edit-and-continue session.  
+現在のエディットコンティニュセッションの結果として得られるメタデータサイズの変更を示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +36,17 @@ HRESULT GetDeltaSaveSize (
   
 ## <a name="parameters"></a>パラメーター  
  `fSave`  
- [in] One of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) values, indicating the level of precision desired. For the .NET Framework version 2.0, this parameter is ignored.  
+ から[CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md)値の1つ。必要な精度のレベルを示します。 .NET Framework バージョン2.0 では、このパラメーターは無視されます。  
   
  `pdwSaveSize`  
- [out] The change in the size of the metadata.  
+ 入出力メタデータのサイズの変更。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

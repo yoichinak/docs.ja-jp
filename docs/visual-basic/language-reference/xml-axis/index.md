@@ -15,17 +15,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352686"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML 軸プロパティ (Visual Basic)
-The topics in this section document the syntax of XML axis properties in Visual Basic. The XML axis properties make it easy to access XML directly in your code.  
+このセクションのトピックでは、Visual Basic の XML 軸プロパティの構文について説明します。 XML 軸プロパティを使用すると、コード内で直接 XML に簡単にアクセスできるようになります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[XML 属性軸プロパティ](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|Describes how to access the attributes of an <xref:System.Xml.Linq.XElement> object.|  
-|[XML 子軸プロパティ](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|Describes how to access the children of an <xref:System.Xml.Linq.XElement> object.|  
-|[XML 子孫軸プロパティ](../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|Describes how to access the descendants of an <xref:System.Xml.Linq.XElement> object.|  
-|[拡張インデクサー プロパティ](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|Describes how to access individual elements in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects.|  
-|[XML Value プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|Describes how to access the value of the first element of a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects.|  
+|[XML 属性軸プロパティ](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|<xref:System.Xml.Linq.XElement> オブジェクトの属性にアクセスする方法について説明します。|  
+|[XML 子軸プロパティ](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|<xref:System.Xml.Linq.XElement> オブジェクトの子にアクセスする方法について説明します。|  
+|[XML 子孫軸プロパティ](../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|<xref:System.Xml.Linq.XElement> オブジェクトの子孫にアクセスする方法について説明します。|  
+|[拡張インデクサー プロパティ](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|<xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XAttribute> オブジェクトのコレクション内の個々の要素にアクセスする方法について説明します。|  
+|[XML Value プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|<xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XAttribute> オブジェクトのコレクションの最初の要素の値にアクセスする方法について説明します。|  
   
 ## <a name="see-also"></a>関連項目
 

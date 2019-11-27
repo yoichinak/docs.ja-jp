@@ -19,7 +19,7 @@ Windows イベント トレーシング (ETW: Event Tracing for Windows) を使�
 
 - Windows オペレーティング システムに含まれる [Logman](/windows-server/administration/windows-commands/logman) および [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) コマンド ライン ツール。
 
-- [Windows Performance Toolkit](/windows-hardware/test/wpt/) の [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) ツール。 Xperf の詳細については、[Windows のパフォーマンスに関するブログ](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)を参照してください。
+- [Windows Performance Toolkit](/windows-hardware/test/wpt/xperf-command-line-reference) の [Xperf](/windows-hardware/test/wpt/) ツール。 Xperf の詳細については、[Windows のパフォーマンスに関するブログ](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)を参照してください。
 
 CLR イベントの情報をキャプチャするには、コンピューターに CLR プロバイダーがインストールされている必要があります。 プロバイダーがインストールされているかどうかを確認するには、コマンド プロンプトで「`logman query providers`」と入力します。 プロバイダーの一覧が表示されます。 その一覧に、次のような CLR プロバイダーのエントリが含まれている必要があります。
 
@@ -29,7 +29,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-一覧に CLR プロバイダーが含まれていない場合は、Windows Vista 以降のオペレーティング システムで Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) コマンド ライン ツールを使用してインストールできます。 管理者としてコマンド プロンプト ウィンドウを開き、 Change the prompt directory to the .NET Framework 4 folder (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ). このフォルダーに、CLR-ETW.man ファイルが含まれています。 コマンド プロンプトで次のコマンドを入力して CLR プロバイダーをインストールします。
+一覧に CLR プロバイダーが含まれていない場合は、Windows Vista 以降のオペレーティング システムで Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) コマンド ライン ツールを使用してインストールできます。 管理者としてコマンド プロンプト ウィンドウを開き、 Prompt ディレクトリを .NET Framework 4 フォルダー (%WINDIR%\Microsoft.NET\Framework [64] \ v4.\<.NET バージョン > \) に変更します。 このフォルダーに、CLR-ETW.man ファイルが含まれています。 コマンド プロンプトで次のコマンドを入力して CLR プロバイダーをインストールします。
 
 `wevtutil im CLR-ETW.man`
 
@@ -47,17 +47,17 @@ Provider                                 GUID
 
 ### <a name="to-capture-clr-etw-events-using-logman"></a>Logman を使用して CLR ETW イベントをキャプチャするには
 
-1. コマンド プロンプトで、次のコマンドを入力します。
+1. コマンド プロンプトで、次のように入力します。
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
-     ここで、
+     それぞれの文字の説明は次のとおりです。
 
     - `-p` パラメーターはプロバイダーの GUID を識別します。
 
-    - `0x1CCBD` は、発生するイベントのカテゴリを指定しています。
+    - `0x1CCBD` は、発生するイベントのカテゴリを指定します。
 
-    - `0x5` は、ログ レベルを設定しています (この場合は詳細 (5))。
+    - `0x5` は、ログ記録のレベル (この場合は verbose (5)) を設定します。
 
     - `-ets` パラメーターは、コマンドをイベント トレース セッションに送信するように指定します。
 
@@ -71,7 +71,7 @@ Provider                                 GUID
 
 ### <a name="to-capture-clr-etw-events-using-xperf"></a>Xperf を使用して CLR ETW イベントをキャプチャするには
 
-1. コマンド プロンプトで、次のコマンドを入力します。
+1. コマンド プロンプトで、次のように入力します。
 
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`
 
@@ -89,7 +89,7 @@ CLR ETW イベントを表示するには、以下のコマンドを使用しま
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>Tracerpt を使用して CLR ETW イベントを表示するには
 
-- コマンド プロンプトで、次のコマンドを入力します。
+- コマンド プロンプトで、次のように入力します。
 
      `tracerpt clrevents.etl`
 
@@ -97,7 +97,7 @@ CLR ETW イベントを表示するには、以下のコマンドを使用しま
 
 ### <a name="to-view-clr-etw-events-using-xperf"></a>Xperf を使用して CLR ETW イベントを表示するには
 
-- コマンド プロンプトで、次のコマンドを入力します。
+- コマンド プロンプトで、次のように入力します。
 
      `xperf clrevents.etl`
 
@@ -105,7 +105,7 @@ CLR ETW イベントを表示するには、以下のコマンドを使用しま
 
 ### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>.etl ファイルをコンマ区切り値ファイルに変換するには
 
-- コマンド プロンプトで、次のコマンドを入力します。
+- コマンド プロンプトで、次のように入力します。
 
      `xperf -i clrevents.etl -f clrevents.csv`
 
@@ -113,5 +113,5 @@ CLR ETW イベントを表示するには、以下のコマンドを使用しま
 
 ## <a name="see-also"></a>関連項目
 
-- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
+- [Windows パフォーマンスツールキット](/windows-hardware/test/wpt/)
 - [共通言語ランタイムの ETW イベント](etw-events-in-the-common-language-runtime.md)

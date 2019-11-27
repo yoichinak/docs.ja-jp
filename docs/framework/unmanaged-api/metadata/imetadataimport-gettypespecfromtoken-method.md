@@ -37,23 +37,23 @@ HRESULT GetTypeSpecFromToken (
   
 ## <a name="parameters"></a>パラメーター  
  `typespec`  
- [in] The TypeSpec token associated with the requested metadata signature.  
+ から要求されたメタデータ署名に関連付けられている TypeSpec トークン。  
   
  `ppvSig`  
- [out] A pointer to the binary metadata signature.  
+ 入出力バイナリメタデータシグネチャへのポインター。  
   
  `pcbSig`  
- [out] The size, in bytes, of the metadata signature.  
+ 入出力メタデータシグネチャのサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- An HRESULT that indicates success or failure. Failures can be tested with the FAILED macro.  
+ 成功または失敗を示す HRESULT。 失敗したマクロを使用してエラーをテストできます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

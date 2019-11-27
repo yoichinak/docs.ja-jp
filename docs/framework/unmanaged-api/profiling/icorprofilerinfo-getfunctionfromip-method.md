@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439204"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a>ICorProfilerInfo::GetFunctionFromIP メソッド
-Maps a managed code instruction pointer to a `FunctionID`.  
+マネージコード命令ポインターを `FunctionID`にマップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,12 +35,12 @@ HRESULT GetFunctionFromIP(
   
 ## <a name="parameters"></a>パラメーター  
  `ip`  
- [in] The instruction pointer in managed code.  
+ からマネージコード内の命令ポインター。  
   
  `pFunctionId`  
- [out] The returned function ID.  
+ 入出力返された関数 ID。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -49,6 +49,6 @@ HRESULT GetFunctionFromIP(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437572"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>IMetaDataImport::GetFieldMarshal メソッド
-Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.  
+指定されたフィールドメタデータトークンによって表されるフィールドの、ネイティブなアンマネージ型へのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +37,20 @@ HRESULT GetFieldMarshal (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in] The metadata token that represents the field to get interop marshaling information for.  
+ から相互運用マーシャリング情報を取得するフィールドを表すメタデータトークン。  
   
  `ppvNativeType`  
- [out] A pointer to the metadata signature of the field's native type.  
+ 入出力フィールドのネイティブ型のメタデータシグネチャへのポインター。  
   
  `pcbNativeType`  
- [out] The size in bytes of `ppvNativeType`.  
+ 入出力`ppvNativeType`のサイズ (バイト単位)。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

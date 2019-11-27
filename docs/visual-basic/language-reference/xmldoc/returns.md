@@ -12,8 +12,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352242"
 ---
-# <a name="returns-visual-basic"></a>\<returns> (Visual Basic)
-Specifies the return value of the property or function.  
+# <a name="returns-visual-basic"></a>\<によって > (Visual Basic) が返されます
+プロパティまたは関数の戻り値を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -25,13 +25,13 @@ Specifies the return value of the property or function.
  `description`  
  戻り値の説明。  
   
-## <a name="remarks"></a>Remarks  
- Use the `<returns>` tag in the comment for a method declaration to describe the return value.  
+## <a name="remarks"></a>コメント  
+ メソッド宣言のコメントにある `<returns>` タグを使用して、戻り値を記述します。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- This example uses the `<returns>` tag to explain what the `DoesRecordExist` function returns.  
+ この例では、`<returns>` タグを使用して、`DoesRecordExist` 関数が返す内容を説明します。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430691"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob メソッド
-Retrieves Win32 resource blob. Call this method after setting assembly options.  
+Win32 リソース blob を取得します。 アセンブリオプションを設定した後に、このメソッドを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,28 +39,28 @@ HRESULT GetWin32ResBlob(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of the assembly.  
+ アセンブリの ID。  
   
  `FileToken`  
- File token used to retrieve the filename to be used when constructing the Win32 Version resource  
+ Win32 バージョンリソースの構築時に使用されるファイル名を取得するために使用されるファイルトークン  
   
  `fDll`  
- TRUE if file is a DLL, false for an EXE.  
+ ファイルが DLL の場合は TRUE、EXE の場合は false。  
   
  `pszIconFile`  
- Optional icon to insert into the resource blob.  
+ リソース blob に挿入するオプションアイコン。  
   
  `ppResBlob`  
- Receives the resource blob.  
+ リソース blob を受信します。  
   
  `pcbResBlob`  
- Receives the size of the blob.  
+ Blob のサイズを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 

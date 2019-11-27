@@ -17,13 +17,13 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
   
 |操作|言語要素|  
 |------------|----------------------|  
-|減価償却費の計算|<xref:Microsoft.VisualBasic.Financial.DDB%2A>では、 <xref:Microsoft.VisualBasic.Financial.SLN%2A>では、 <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
+|減価償却費の計算|<xref:Microsoft.VisualBasic.Financial.DDB%2A>、<xref:Microsoft.VisualBasic.Financial.SLN%2A>、<xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
 |将来価値の計算|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
 |利率の計算|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
-|内部利益率の計算|<xref:Microsoft.VisualBasic.Financial.IRR%2A>、 <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
+|内部利益率の計算|<xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
 |期間の計算|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
-|支払い額の計算|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>では、 <xref:Microsoft.VisualBasic.Financial.Pmt%2A>では、 <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
-|正味現在価値の計算|<xref:Microsoft.VisualBasic.Financial.NPV%2A>、 <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
+|支払い額の計算|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>、<xref:Microsoft.VisualBasic.Financial.Pmt%2A>、<xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
+|正味現在価値の計算|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
   
 ## <a name="see-also"></a>関連項目
 

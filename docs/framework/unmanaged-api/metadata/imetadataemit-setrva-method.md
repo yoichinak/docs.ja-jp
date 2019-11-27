@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426815"
 ---
 # <a name="imetadataemitsetrva-method"></a>IMetaDataEmit::SetRVA メソッド
-Sets the relative virtual address of the specified method.  
+指定したメソッドの相対仮想アドレスを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +36,17 @@ HRESULT SetRVA (
   
 ## <a name="parameters"></a>パラメーター  
  `md`  
- [in] The token for the target method or method implementation.  
+ から対象のメソッドまたはメソッドの実装のトークン。  
   
  `ulRVA`  
- [in] The address of the code or data area.  
+ からコードまたはデータ領域のアドレス。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

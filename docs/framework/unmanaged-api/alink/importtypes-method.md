@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445680"
 ---
 # <a name="importtypes-method"></a>ImportTypes メソッド
-Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).  
+[Importfile メソッド](importfile-method.md)を使用してインポートされた各スコープからの型のインポートを開始します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,30 +39,30 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of the assembly to import to.  
+ インポート先のアセンブリの ID。  
   
  `FileToken`  
- ID of the file to import from.  
+ インポート元のファイルの ID。  
   
  `dwScope`  
- Zero-based scope to import.  
+ インポートする0から始まるスコープ。  
   
  `phEnum`  
- Receives enumerator handle for the types in this scope.  
+ このスコープ内の型の列挙子ハンドルを受け取ります。  
   
  `ppImportScope`  
- Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.  
+ 必要に応じて、 [IMetaDataImport インターフェイス](../metadata/imetadataimport-interface.md)インターフェイスを受け取ります。  
   
  `pdwCountOfTypes`  
- Optionally receives count of types in the indicated scope.  
+ 必要に応じて、指定されたスコープ内の型の数を受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 既定
+title: 既定値
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Default
@@ -18,24 +18,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351577"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
-Identifies a property as the default property of its class, structure, or interface.  
+クラス、構造体、またはインターフェイスの既定のプロパティとしてプロパティを識別します。  
   
-## <a name="remarks"></a>Remarks  
- A class, structure, or interface can designate at most one of its properties as the *default property*, provided that property takes at least one parameter. If code makes a reference to a class or structure without specifying a member, Visual Basic resolves that reference to the default property.  
+## <a name="remarks"></a>コメント  
+ クラス、構造体、またはインターフェイスは、そのプロパティが少なくとも1つのパラメーターを受け取ることができる限り、そのプロパティを*既定のプロパティ*として1つだけ指定できます。 コードがメンバーを指定せずにクラスまたは構造体への参照を作成した場合、Visual Basic は既定のプロパティへの参照を解決します。  
   
- Default properties can result in a small reduction in source code-characters, but they can make your code more difficult to read. If the calling code is not familiar with your class or structure, when it makes a reference to the class or structure name it cannot be certain whether that reference accesses the class or structure itself, or a default property. This can lead to compiler errors or subtle run-time logic errors.  
+ 既定のプロパティを使用すると、ソースコード文字が小さくなることがありますが、コードの読み取りが困難になる可能性があります。 呼び出し元のコードがクラスまたは構造体に精通していない場合、クラスまたは構造体の名前への参照を作成するときに、その参照がクラスまたは構造体自体、または既定のプロパティにアクセスするかどうかを特定できません。 これにより、コンパイラエラーまたは微妙な実行時のロジックエラーが発生する可能性があります。  
   
- You can somewhat reduce the chance of default property errors by always using the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) to set compiler type checking to `On`.  
+ [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)を常に使用してコンパイラの型チェックを `On`に設定することにより、既定のプロパティエラーが発生する可能性を多少減らすことができます。  
   
- If you are planning to use a predefined class or structure in your code, you must determine whether it has a default property, and if so, what its name is.  
+ 定義済みのクラスまたは構造体をコード内で使用する予定の場合は、既定のプロパティがあるかどうかを判断し、存在する場合はその名前を確認する必要があります。  
   
- Because of these disadvantages, you should consider not defining default properties. For code readability, you should also consider always referring to all properties explicitly, even default properties.  
+ これらの欠点があるため、既定のプロパティを定義しないことを検討してください。 コードを読みやすくするために、常にすべてのプロパティを明示的に参照することも検討する必要があります。既定のプロパティも同様です。  
   
- The `Default` modifier can be used in this context:  
+ このコンテキストでは、`Default` 修飾子を使用できます。  
   
  [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [How to: Declare and Call a Default Property in Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
+- [方法: Visual Basic で既定のプロパティを宣言して呼び出す](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

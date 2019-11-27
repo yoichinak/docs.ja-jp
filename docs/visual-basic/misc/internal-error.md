@@ -1,5 +1,5 @@
 ---
-title: Internal error
+title: 内部エラー。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID51
@@ -12,7 +12,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74329500"
 ---
 # <a name="internal-error-visual-basic"></a>内部エラー (Visual Basic)
-An internal malfunction has occurred in Visual Basic.  
+Visual Basic で内部の不具合が発生しました。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
