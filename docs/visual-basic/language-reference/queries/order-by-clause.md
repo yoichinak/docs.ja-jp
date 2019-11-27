@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350423"
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By 句 (Visual Basic)
-Specifies the sort order for a query result.  
+クエリ結果の並べ替え順序を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,29 +28,29 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
   
 ## <a name="parts"></a>指定項目  
  `orderExp1`  
- 必須です。 One or more fields from the current query result that identify how to order the returned values. The field names must be separated by commas (,). You can identify each field as sorted in ascending or descending order by using the `Ascending` or `Descending` keywords. If no `Ascending` or `Descending` keyword is specified, the default sort order is ascending. The sort order fields are given precedence from left to right.  
+ 必須。 返された値の順序付け方法を示す、現在のクエリ結果の1つまたは複数のフィールド。 フィールド名は、コンマ (,) で区切る必要があります。 `Ascending` または `Descending` キーワードを使用して、昇順または降順で並べ替えられた各フィールドを識別できます。 `Ascending` または `Descending` キーワードが指定されていない場合、既定の並べ替え順序は昇順です。 並べ替え順序のフィールドは、左から右に優先されます。  
   
-## <a name="remarks"></a>Remarks  
- You can use the `Order By` clause to sort the results of a query. The `Order By` clause can only sort a result based on the range variable for the current scope. For example, the `Select` clause introduces a new scope in a query expression with new iteration variables for that scope. Range variables defined before a `Select` clause in a query are not available after the `Select` clause. Therefore, if you want to order your results by a field that is not available in the `Select` clause, you must put the `Order By` clause before the `Select` clause. One example of when you would have to do this is when you want to sort your query by fields that are not returned as part of the result.  
+## <a name="remarks"></a>コメント  
+ `Order By` 句を使用して、クエリの結果を並べ替えることができます。 `Order By` 句では、現在のスコープの範囲変数に基づいてのみ結果を並べ替えることができます。 たとえば、`Select` 句では、クエリ式に新しいスコープを追加し、そのスコープに新しいイテレーション変数を指定します。 クエリ内の `Select` 句の前に定義された範囲変数は、`Select` 句の後では使用できません。 したがって、`Select` 句で使用できないフィールドで結果を並べ替える場合は、`Order By` 句を `Select` 句の前に配置する必要があります。 これを行う必要がある場合の1つの例は、結果の一部として返されないフィールドによってクエリを並べ替える場合です。  
   
- Ascending and descending order for a field is determined by the implementation of the <xref:System.IComparable> interface for the data type of the field. If the data type does not implement the <xref:System.IComparable> interface, the sort order is ignored.  
+ フィールドの昇順と降順の順序は、フィールドのデータ型の <xref:System.IComparable> インターフェイスの実装によって決定されます。 データ型に <xref:System.IComparable> インターフェイスが実装されていない場合、並べ替え順序は無視されます。  
   
 ## <a name="example"></a>例  
- The following query expression uses a `From` clause to declare a range variable `book` for the `books` collection. The `Order By` clause sorts the query result by price in ascending order (the default). Books with the same price are sorted by title in ascending order. The `Select` clause selects the `Title` and `Price` properties as the values returned by the query.  
+ 次のクエリ式では、`From` 句を使用して、`books` コレクションの範囲変数 `book` を宣言します。 `Order By` 句は、クエリの結果を価格で昇順に並べ替えます (既定値)。 同じ価格の書籍は、タイトルの昇順で並べ替えられます。 `Select` 句は、クエリによって返される値として `Title` と `Price` プロパティを選択します。  
   
  [!code-vb[VbSimpleQuerySamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#24)]  
   
 ## <a name="example"></a>例  
- The following query expression uses the `Order By` clause to sort the query result by price in descending order. Books with the same price are sorted by title in ascending order.  
+ 次のクエリ式では、`Order By` 句を使用して、クエリ結果を価格で降順に並べ替えます。 同じ価格の書籍は、タイトルの昇順で並べ替えられます。  
   
  [!code-vb[VbSimpleQuerySamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#25)]  
   
 ## <a name="example"></a>例  
- The following query expression uses a `Select` clause to select the book title, price, publish date, and author. It then populates the `Title`, `Price`, `PublishDate`, and `Author` fields of the range variable for the new scope. The `Order By` clause orders the new range variable by author name, book title, and then price. Each column is sorted in the default order (ascending).  
+ 次のクエリ式では、`Select` 句を使用して、書籍のタイトル、価格、発行日、および作成者を選択します。 次に、新しいスコープの範囲変数の `Title`、`Price`、`PublishDate`、および `Author` の各フィールドを設定します。 `Order By` 句は、作成者名、書籍のタイトル、価格で新しい範囲変数を並べ替えます。 各列は、既定の順序 (昇順) で並べ替えられます。  
   
  [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)

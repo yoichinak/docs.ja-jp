@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348568"
 ---
-# <a name="-resource-visual-basic"></a>-resource (Visual Basic)
+# <a name="-resource-visual-basic"></a>-リソース (Visual Basic)
 マネージド リソースをアセンブリに埋め込みます。  
   
 ## <a name="syntax"></a>構文  
@@ -25,7 +25,7 @@ ms.locfileid: "74348568"
 -resource:filename[,identifier[,public|private]]  
 ```
 
-、または  
+または  
 
 ```console
 -res:filename[,identifier[,public|private]]  
@@ -33,28 +33,28 @@ ms.locfileid: "74348568"
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`filename`|必須です。 The name of the resource file to embed in the output file. By default, `filename` is public in the assembly. Enclose the file name in quotation marks (" ") if it contains a space.|  
-|`identifier`|省略可能です。 The logical name for the resource; the name used to load it. 既定値は、ファイルの名前です。 Optionally, you can specify whether the resource is public or private in the assembly manifest, as with the following: `-res:filename.res, myname.res, public`|  
+|`filename`|必須。 出力ファイルに埋め込むリソースファイルの名前。 既定では、`filename` はアセンブリで公開されています。 ファイル名にスペースが含まれている場合は、ファイル名を引用符 ("") で囲みます。|  
+|`identifier`|省略可。 リソースの論理名。読み込みに使用される名前。 既定値は、ファイルの名前です。 必要に応じて、次のように、アセンブリマニフェストでリソースがパブリックであるかプライベートであるかを指定できます。 `-res:filename.res, myname.res, public`|  
   
-## <a name="remarks"></a>Remarks  
- Use `-linkresource` to link a resource to an assembly without placing the resource file in the output file.  
+## <a name="remarks"></a>コメント  
+ リソースファイルを出力ファイルに配置せずに、リソースをアセンブリにリンクするには、`-linkresource` を使用します。  
   
- If `filename` is a .NET Framework resource file created, for example, by the [Resgen.exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) or in the development environment, it can be accessed with members in the <xref:System.Resources> namespace (see <xref:System.Resources.ResourceManager> for more information). To access all other resources at run time, use one of the following methods: <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>, <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>, or <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>.  
+ たとえば、 [resgen.exe (リソースファイルジェネレーター)](../../../framework/tools/resgen-exe-resource-file-generator.md)や開発環境などによって作成された .NET Framework のリソースファイル `filename` 場合は、<xref:System.Resources> 名前空間のメンバーを使用してアクセスできます (詳細については、「<xref:System.Resources.ResourceManager>」を参照してください)。 実行時に他のすべてのリソースにアクセスするには、次のいずれかの方法を使用します。 <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>、<xref:System.Reflection.Assembly.GetManifestResourceNames%2A>、または <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>。  
   
  `-resource` の省略形は `-res` です。  
   
- For information about how to set `-resource` in the Visual Studio IDE, see [Managing Application Resources (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
+ Visual Studio IDE で `-resource` を設定する方法の詳細については、「[アプリケーションリソースの管理 (.net)](/visualstudio/ide/managing-application-resources-dotnet)」を参照してください。  
   
 ## <a name="example"></a>例  
- The following code compiles `In.vb` and attaches resource file `Rf.resource`.  
+ 次のコードでは、`In.vb` をコンパイルし、リソースファイル `Rf.resource`をアタッチします。  
   
 ```console
 vbc -res:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)

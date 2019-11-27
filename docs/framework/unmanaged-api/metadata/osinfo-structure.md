@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430735"
 ---
 # <a name="osinfo-structure"></a>OSINFO 構造体
-Contains details about the operating system for an assembly or module.  
+アセンブリまたはモジュールのオペレーティングシステムの詳細が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,23 +38,23 @@ typedef struct {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`dwOSPlatformId`|One of the identifier values defined by the Microsoft Windows platform function `GetVersionEx`. The following values are supported:<br /><br /> -   VER_PLATFORM_WIN32s, or 0x0000, to specify Microsoft Windows 3.1.<br />-   VER_PLATFORM_WIN32_WINDOWS, or 0x0001, to specify Windows 95, Windows 98, or operating systems descended from them.<br />-   VER_PLATFORM_WIN32_NT, or 0x0010, to specify Windows NT or operating systems descended from it.|  
-|`dwOSMajorVersion`|The operating system major version, or a NULL value to indicate any version.|  
-|`dwOSMinorVersion`|The operating system minor version, or a NULL value to indicate any version.|  
+|`dwOSPlatformId`|Microsoft Windows プラットフォーム関数によって定義された識別子の値の1つ `GetVersionEx`。 次の値がサポートされています。<br /><br /> -VER_PLATFORM_WIN32s、または0x0000。 Microsoft Windows 3.1 を指定します。<br />-VER_PLATFORM_WIN32_WINDOWS、または0x0001 を指定して、Windows 95、Windows 98、またはそれらから派生したオペレーティングシステムを指定します。<br />-VER_PLATFORM_WIN32_NT、または0x0010 を指定して、Windows NT またはそれからのオペレーティングシステムを指定します。|  
+|`dwOSMajorVersion`|オペレーティングシステムのメジャーバージョン。任意のバージョンを示す NULL 値。|  
+|`dwOSMinorVersion`|オペレーティングシステムのマイナーバージョン。任意のバージョンを示す NULL 値。|  
   
-## <a name="remarks"></a>Remarks  
- `OSINFO` is based on the `OSVERSIONINFOEX` structure that is used in calls to the Microsoft Windows platform function `GetVersionEx`. This structure is used by the ASSEMBLYMETADATA structure to indicate its operating system support.  
+## <a name="remarks"></a>コメント  
+ `OSINFO` は、Microsoft Windows プラットフォーム関数 `GetVersionEx`の呼び出しで使用される `OSVERSIONINFOEX` の構造に基づいています。 この構造体は、そのオペレーティングシステムのサポートを示すために ASSEMBLYMETADATA 構造体によって使用されます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ構造体](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

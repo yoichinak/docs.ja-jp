@@ -1,5 +1,5 @@
 ---
-title: 'How to: create strings using a StringBuilder'
+title: '方法: StringBuilder を使用して文字列を作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - StringBuilder class
@@ -12,17 +12,17 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344381"
 ---
-# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>How to: create strings using a StringBuilder in Visual Basic
+# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>方法: Visual Basic の StringBuilder を使用して文字列を作成する
 
-This example constructs a long string from many smaller strings using the <xref:System.Text.StringBuilder> class. The <xref:System.Text.StringBuilder> class is more efficient than the `&=` operator for concatenating many strings.
+この例では、<xref:System.Text.StringBuilder> クラスを使用して、多数の小さい文字列から長い文字列を構築します。 <xref:System.Text.StringBuilder> クラスは、多数の文字列を連結するための `&=` 演算子よりも効率的です。
 
 ## <a name="example"></a>例
 
-The following example creates an instance of the <xref:System.Text.StringBuilder> class, appends 1,000 strings to that instance, and then returns its string representation:
+次の例では、<xref:System.Text.StringBuilder> クラスのインスタンスを作成し、そのインスタンスに1000文字列を追加して、その文字列形式を返します。
 
  [!code-vb[VbVbalrStrings#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#70)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [StringBuilder クラスの使用](../../../../standard/base-types/stringbuilder.md)
 - [& = 演算子](../../../language-reference/operators/and-assignment-operator.md)

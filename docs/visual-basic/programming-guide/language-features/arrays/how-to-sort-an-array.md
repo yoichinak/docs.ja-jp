@@ -1,5 +1,5 @@
 ---
-title: 'How to: Sort An Array'
+title: '方法: 配列を並べ替える'
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -14,13 +14,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351852"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>How to: sort an array in Visual Basic
+# <a name="how-to-sort-an-array-in-visual-basic"></a>方法: Visual Basic で配列を並べ替える
 
-This article shows an example of how to sort an array of strings in Visual Basic.
+この記事では、Visual Basic で文字列の配列を並べ替える方法の例を示します。
 
 ## <a name="example"></a>例
 
-This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:
+この例では、`zooAnimals`という名前の `String` オブジェクトの配列を宣言し、それを設定して、アルファベット順に並べ替えます。
   
 ```vb
 Private Sub SortAnimals()
@@ -36,11 +36,11 @@ End Sub
 
 次の条件を満たす場合は、例外が発生する可能性があります。
 
-- Array is empty (<xref:System.ArgumentNullException> class).
-- Array is multidimensional (<xref:System.RankException> class).
-- One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).
+- 配列が空です (<xref:System.ArgumentNullException> クラス)。
+- 配列は多次元 (<xref:System.RankException> クラス) です。
+- 配列の1つ以上の要素が <xref:System.IComparable> インターフェイス (<xref:System.InvalidOperationException> クラス) を実装していません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>
 - [配列](index.md)

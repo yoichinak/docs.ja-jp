@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426726"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints メソッド
-Gets an enumerator for an array of generic parameter constraints associated with the generic parameter represented by the specified token.  
+指定したトークンによって表されるジェネリックパラメーターに関連付けられているジェネリックパラメーター制約の配列の列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,37 +39,37 @@ HRESULT EnumGenericParamConstraints (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [入力、出力]列挙子へのポインター。  
   
  `tk`  
- [in]   A token that represents the generic parameter whose constraints are to be enumerated.  
+ から  制約を列挙するジェネリックパラメーターを表すトークン。  
   
  `rGenericParamConstraints`  
- [out] The array of generic parameter constraints to enumerate.  
+ 入出力列挙するジェネリックパラメーター制約の配列。  
   
  `cMax`  
- [in]   The requested maximum number of tokens to place in `rGenericParamConstraints`.  
+ から  `rGenericParamConstraints`に格納する、要求されたトークンの最大数。  
   
  `pcGenericParamConstraints`  
- [out] A pointer to the number of tokens placed in `rGenericParamConstraints`.  
+ 入出力`rGenericParamConstraints`に配置されたトークンの数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParameterConstraints` is set to 0 (zero).|  
+|`S_OK`|`EnumGenericParameterConstraints` が正常に返されました。|  
+|`S_FALSE`|`phEnum` にメンバー要素がありません。 この場合、`pcGenericParameterConstraints` は 0 (ゼロ) に設定されます。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

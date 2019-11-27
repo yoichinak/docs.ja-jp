@@ -17,8 +17,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336056"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp; Operator (Visual Basic)
-Generates a string concatenation of two expressions.  
+# <a name="amp-operator-visual-basic"></a>&amp; 演算子 (Visual Basic)
+2つの式の文字列連結を生成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,34 +28,34 @@ result = expression1 & expression2
   
 ## <a name="parts"></a>指定項目  
  `result`  
- 必須です。 Any `String` or `Object` variable.  
+ 必須。 任意の `String` または `Object` 変数。  
   
  `expression1`  
- 必須です。 Any expression with a data type that widens to `String`.  
+ 必須。 `String`に拡大変換されるデータ型を持つ任意の式。  
   
  `expression2`  
- 必須です。 Any expression with a data type that widens to `String`.  
+ 必須。 `String`に拡大変換されるデータ型を持つ任意の式。  
   
-## <a name="remarks"></a>Remarks  
- If the data type of `expression1` or `expression2` is not `String` but widens to `String`, it is converted to `String`. If either of the data types does not widen to `String`, the compiler generates an error.  
+## <a name="remarks"></a>コメント  
+ `expression1` または `expression2` のデータ型が `String` ではなく `String`に拡大変換される場合は、`String`に変換されます。 いずれかのデータ型が `String`に拡大されない場合、コンパイラはエラーを生成します。  
   
- The data type of `result` is `String`. If one or both expressions evaluate to [Nothing](../../../visual-basic/language-reference/nothing.md) or have a value of <xref:System.DBNull.Value?displayProperty=nameWithType>, they are treated as a string with a value of "".  
-  
-> [!NOTE]
-> The `&` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `result` のデータ型が `String`。 一方または両方の式が[Nothing](../../../visual-basic/language-reference/nothing.md)に評価される場合、または値が <xref:System.DBNull.Value?displayProperty=nameWithType>の場合は、値が "" である文字列として扱われます。  
   
 > [!NOTE]
-> The ampersand (&) character can also be used to identify variables as type `Long`. For more information, see [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
+> `&` 演算子は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 コードでこのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+  
+> [!NOTE]
+> アンパサンド (&) 文字は `Long`型として変数を識別するためにも使用できます。 詳細については、「[型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- This example uses the `&` operator to force string concatenation. The result is a string value representing the concatenation of the two string operands.  
+ この例では、`&` 演算子を使用して、文字列の連結を強制的に実行します。 結果は、2つの文字列オペランドの連結を表す文字列値です。  
   
  [!code-vb[VbVbalrOperators#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#2)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [& = 演算子](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
 - [連結演算子](../../../visual-basic/language-reference/operators/concatenation-operators.md)
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Concatenation Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic での連結演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

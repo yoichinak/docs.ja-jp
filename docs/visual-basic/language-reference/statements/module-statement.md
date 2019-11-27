@@ -22,7 +22,7 @@ ms.locfileid: "74348013"
 ---
 # <a name="module-statement"></a>Module ステートメント
 
-Declares the name of a module and introduces the definition of the variables, properties, events, and procedures that the module comprises.
+モジュールの名前を宣言し、モジュールが構成する変数、プロパティ、イベント、およびプロシージャの定義を紹介します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,10 +35,10 @@ End Module
 ## <a name="parts"></a>指定項目
 
 `attributelist`  
-省略可能です。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).
+省略可。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。
 
 `accessmodifier`  
-省略可能です。 次のいずれかの値を指定します。
+省略可。 次のいずれかになります。
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 
@@ -47,61 +47,61 @@ End Module
 「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 `name`  
-必須です。 Name of this module. 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+必須。 このモジュールの名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
 `statements`  
-省略可能です。 Statements which define the variables, properties, events, procedures, and nested types of this module.
+省略可。 このモジュールの変数、プロパティ、イベント、プロシージャ、および入れ子にされた型を定義するステートメント。
 
 `End Module`  
 `Module` の定義を終了します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-A `Module` statement defines a reference type available throughout its namespace. A *module* (sometimes called a *standard module*) is similar to a class but with some important distinctions. Every module has exactly one instance and does not need to be created or assigned to a variable. Modules do not support inheritance or implement interfaces. Notice that a module is not a *type* in the sense that a class or structure is — you cannot declare a programming element to have the data type of a module.
+`Module` ステートメントでは、名前空間全体で使用できる参照型を定義します。 *モジュール*(*標準モジュール*と呼ばれることもあります) はクラスに似ていますが、重要な違いがいくつかあります。 すべてのモジュールにはインスタンスが1つだけあり、変数を作成したり、変数に割り当てたりする必要はありません。 モジュールは、継承をサポートしていないか、インターフェイスを実装していません。 モジュールが、クラスまたは構造体の意味では*型*ではないことに注意してください。モジュールのデータ型を持つプログラミング要素を宣言することはできません。
 
-You can use `Module` only at namespace level. This means the *declaration context* for a module must be a source file or namespace, and cannot be a class, structure, module, interface, procedure, or block. You cannot nest a module within another module, or within any type. 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。
+`Module` は、名前空間レベルでのみ使用できます。 つまり、モジュールの*宣言コンテキスト*はソースファイルまたは名前空間である必要があり、クラス、構造体、モジュール、インターフェイス、プロシージャ、またはブロックにすることはできません。 モジュールは、別のモジュール内、または任意の型の中で入れ子にすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。
 
-A module has the same lifetime as your program. Because its members are all `Shared`, they also have lifetimes equal to that of the program.
+モジュールには、プログラムと同じ有効期間があります。 メンバーはすべて `Shared`ので、プログラムの有効期間と同じになります。
 
-Modules default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access. アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+モジュールは既定で[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスになります。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
-All members of a module are implicitly `Shared`.
+モジュールのすべてのメンバーは、暗黙的に `Shared`ます。
 
-## <a name="classes-and-modules"></a>Classes and Modules
+## <a name="classes-and-modules"></a>クラスとモジュール
 
-These elements have many similarities, but there are some important differences as well.
+これらの要素には多くの類似点がありますが、重要な相違点もいくつかあります。
 
-- **Terminology.** Previous versions of Visual Basic recognize two types of modules: *class modules* (.cls files) and *standard modules* (.bas files). The current version calls these *classes* and *modules*, respectively.
+- **関する.** 以前のバージョンの Visual Basic では、*クラスモジュール*(cls ファイル) と*標準モジュール*(.bas ファイル) という2種類のモジュールが認識されています。 現在のバージョンは、これらの*クラス*と*モジュール*をそれぞれ呼び出します。
 
-- **Shared Members.** You can control whether a member of a class is a shared or instance member.
+- **共有メンバー。** クラスのメンバーが共有メンバーまたはインスタンスメンバーであるかどうかを制御できます。
 
-- **Object Orientation.** Classes are object-oriented, but modules are not. So only classes can be instantiated as objects. For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).
+- **オブジェクトの向き。** クラスはオブジェクト指向ですが、モジュールはそうではありません。 したがって、オブジェクトとしてインスタンス化できるのはクラスだけです。 詳細については、「[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)」を参照してください。
 
 ## <a name="rules"></a>ルール
 
-- **Modifiers.** All module members are implicitly [Shared](../../../visual-basic/language-reference/modifiers/shared.md). You cannot use the `Shared` keyword when declaring a member, and you cannot alter the shared status of any member.
+- **ド.** すべてのモジュールメンバーは暗黙的に[共有](../../../visual-basic/language-reference/modifiers/shared.md)されます。 メンバーを宣言するときに `Shared` キーワードを使用することはできません。また、メンバーの共有ステータスを変更することもできません。
 
-- **継承。** A module cannot inherit from any type other than <xref:System.Object>, from which all modules inherit. In particular, one module cannot inherit from another.
+- **継承。** モジュールは、すべてのモジュールが継承する <xref:System.Object>以外の型から継承することはできません。 特に、1つのモジュールが別のモジュールから継承することはできません。
 
-  You cannot use the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md) in a module definition, even to specify <xref:System.Object>.
+  <xref:System.Object>を指定する場合でも、モジュール定義で[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)を使用することはできません。
 
-- **Default Property.** You cannot define any default properties in a module. For more information, see [Default](../../../visual-basic/language-reference/modifiers/default.md).
+- **既定のプロパティ。** モジュールでは、既定のプロパティを定義することはできません。 詳細については、「 [Default](../../../visual-basic/language-reference/modifiers/default.md)」を参照してください。
 
 ## <a name="behavior"></a>動作
 
-- **Access Level.** Within a module, you can declare each member with its own access level. Module members default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access, except variables and constants, which default to [Private](../../../visual-basic/language-reference/modifiers/private.md) access. When a module has more restricted access than one of its members, the specified module access level takes precedence.
+- **アクセスレベル。** モジュール内では、各メンバーを独自のアクセス レベルで宣言できます。 モジュールメンバーの既定の[パブリック](../../../visual-basic/language-reference/modifiers/public.md)アクセスは、変数と定数を除き、既定で[プライベート](../../../visual-basic/language-reference/modifiers/private.md)アクセスになります。 モジュールがそのメンバーの 1 つ以上のアクセス権を持っている場合、指定されたモジュールへのアクセス レベルが優先されます。
 
-- **Scope.** A module is in scope throughout its namespace.
+- **検索.** モジュールは、名前空間全体でスコープ内にあります。
 
-  The scope of every module member is the entire module. Notice that all members undergo *type promotion*, which causes their scope to be promoted to the namespace containing the module. For more information, see [Type Promotion](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).
+  すべてのモジュールメンバーのスコープは、モジュール全体です。 すべてのメンバーに*型の上位変換*が適用されていることに注意してください。これにより、そのスコープがモジュールを含む名前空間に昇格します。 詳細については、「[型の上位変換](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)」を参照してください。
 
-- **Qualification.** You can have multiple modules in a project, and you can declare members with the same name in two or more modules. However, you must qualify any reference to such a member with the appropriate module name if the reference is from outside that module. 詳細については、「 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。
+- **評価.** プロジェクトには複数のモジュールを含めることができます。また、2 つ以上の複数のモジュールで同じ名前を持つメンバーを宣言することができます。 ただし、そのようなメンバーへの参照がそのモジュールの外部からのものである場合は、適切なモジュール名を使用して修飾する必要があります。 詳細については、「 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。
 
 ## <a name="example"></a>例
 
 [!code-vb[VbVbalrStatements#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#69)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Namespace ステートメント](../../../visual-basic/language-reference/statements/namespace-statement.md)
