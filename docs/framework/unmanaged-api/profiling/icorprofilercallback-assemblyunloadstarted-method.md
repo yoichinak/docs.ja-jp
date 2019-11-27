@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445131"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted メソッド
-Notifies the profiler that an assembly is being unloaded.  
+アセンブリがアンロードされていることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,12 +34,12 @@ HRESULT AssemblyUnloadStarted(
   
 ## <a name="parameters"></a>パラメーター  
  `assemblyId`  
- [in] Identifies the assembly that is being unloaded.  
+ からアンロードされるアセンブリを識別します。  
   
-## <a name="remarks"></a>Remarks  
- The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.  
+## <a name="remarks"></a>コメント  
+ `assemblyId` の値は、`AssemblyUnloadStarted` メソッドから返された後の情報要求に対して無効です。これは、このアセンブリに関する情報を取得するためのプロファイラーの最後の機会です。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

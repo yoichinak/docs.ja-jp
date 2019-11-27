@@ -12,8 +12,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346957"
 ---
-# <a name="exception-visual-basic"></a>\<exception> (Visual Basic)
-Specifies which exceptions can be thrown.  
+# <a name="exception-visual-basic"></a>\<例外 > (Visual Basic)
+スローできる例外を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,13 +28,13 @@ Specifies which exceptions can be thrown.
  `description`  
  説明です。  
   
-## <a name="remarks"></a>Remarks  
- Use the `<exception>` tag to specify which exceptions can be thrown. このタグは、メソッドの定義に適用されます。  
+## <a name="remarks"></a>コメント  
+ `<exception>` タグを使用して、スローできる例外を指定します。 このタグは、メソッドの定義に適用されます。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- This example uses the `<exception>` tag to describe an exception that the `IntDivide` function can throw.  
+ この例では、`<exception>` タグを使用して、`IntDivide` 関数がスローできる例外を記述します。  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   

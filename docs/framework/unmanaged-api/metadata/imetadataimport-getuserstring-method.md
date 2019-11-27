@@ -38,23 +38,23 @@ HRESULT GetUserString (
   
 ## <a name="parameters"></a>パラメーター  
  `stk`  
- [in] The String token to return the associated string for.  
+ から関連付けられている文字列を返す文字列トークン。  
   
  `szString`  
- [out] A copy of the requested string.  
+ 入出力要求された文字列のコピー。  
   
  `cchString`  
- [in] The maximum size in wide characters of the requested `szString`.  
+ から要求された `szString`のワイド文字単位の最大サイズ。  
   
  `pchString`  
- [out] The size in wide characters of the returned `szString`.  
+ 入出力返される `szString`のワイド文字単位のサイズ。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

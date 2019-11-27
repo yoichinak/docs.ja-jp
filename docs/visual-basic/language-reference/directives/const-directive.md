@@ -24,7 +24,7 @@ ms.locfileid: "74343845"
 ---
 # <a name="const-directive"></a>#Const ディレクティブ
 
-Defines conditional compiler constants for Visual Basic.  
+Visual Basic の条件付きコンパイラ定数を定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,16 +35,16 @@ Defines conditional compiler constants for Visual Basic.
 ## <a name="parts"></a>指定項目  
 
  `constname`  
- 必須です。 Name of the constant being defined.  
+ 必須。 定義されている定数の名前。  
   
  `expression`  
- 必須です。 Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.  
+ 必須。 リテラル、その他の条件付きコンパイラ定数、または `Is`を除く任意またはすべての算術演算子または論理演算子を含む任意の組み合わせ。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
 
- Conditional compiler constants are always private to the file in which they appear. You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.  
+ 条件付きコンパイラ定数は、それらが表示されるファイルに対して常にプライベートです。 `#Const` ディレクティブを使用して、パブリックコンパイラ定数を作成することはできません。これらは、ユーザーインターフェイスまたは `/define` コンパイラオプションでのみ作成できます。  
   
- You can use only conditional compiler constants and literals in `expression`. Using a standard constant defined with `Const` causes an error. Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation. Constants can also be undefined, in which case they have a value of `Nothing`.  
+ `expression`では、条件付きコンパイラ定数とリテラルのみを使用できます。 `Const` で定義された標準定数を使用すると、エラーが発生します。 逆に、`#Const` キーワードで定義された定数は、条件付きコンパイルに対してのみ使用できます。 定数を未定義にすることもできます。その場合、値は `Nothing`になります。  
   
 ## <a name="example"></a>例  
 

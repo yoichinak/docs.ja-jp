@@ -38,33 +38,33 @@ HRESULT EnumUserStrings (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
  `rStrings`  
- [out] The array used to store the String tokens.  
+ 入出力文字列トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rStrings` 配列の最大サイズ。  
   
  `pcStrings`  
- [out] The number of String tokens returned in `rStrings`.  
+ 入出力`rStrings`で返された文字列トークンの数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcStrings` is zero.|  
+|`S_OK`|`EnumUserStrings` が正常に返されました。|  
+|`S_FALSE`|列挙するトークンがありません。 この場合、`pcStrings` は0になります。|  
   
-## <a name="remarks"></a>Remarks  
- The String tokens are created by the [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) method. This method is designed to be used by a metadata browser rather than by a compiler.  
+## <a name="remarks"></a>コメント  
+ 文字列トークンは、 [IMetaDataEmit::D efineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md)メソッドによって作成されます。 このメソッドは、コンパイラではなく、メタデータブラウザーによって使用されるように設計されています。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

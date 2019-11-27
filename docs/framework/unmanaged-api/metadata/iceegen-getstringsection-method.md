@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443268"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection メソッド
-Gets a string representation of the code section referenced by the specified handle.  
+指定したハンドルによって参照されるコードセクションの文字列表現を取得します。  
   
- This method is obsolete and should not be used.  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,14 +37,14 @@ HRESULT GetStringSection (
   
 ## <a name="parameters"></a>パラメーター  
  `section`  
- [in, out] The handle to the code section.  
+ [入力、出力]コードセクションへのハンドル。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

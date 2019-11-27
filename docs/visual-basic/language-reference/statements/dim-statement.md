@@ -38,7 +38,7 @@ ms.locfileid: "74343763"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim ステートメント (Visual Basic)
 
-Declares and allocates storage space for one or more variables.
+1つ以上の変数に対して記憶領域を宣言して割り当てます。
 
 ## <a name="syntax"></a>構文
 
@@ -51,11 +51,11 @@ Dim [ WithEvents ] variablelist
 
 - `attributelist`
 
-  省略可能です。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).
+  任意。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。
 
 - `accessmodifier`
 
-  省略可能です。 次のいずれかの値を指定します。
+  任意。 次のいずれかになります。
 
   - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 
@@ -73,27 +73,27 @@ Dim [ WithEvents ] variablelist
 
 - `Shared`
 
-  省略可能です。 See [Shared](../../../visual-basic/language-reference/modifiers/shared.md).
+  任意。 「[共有](../../../visual-basic/language-reference/modifiers/shared.md)」を参照してください。
 
 - `Shadows`
 
-  省略可能です。 See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+  任意。 「[シャドウ](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
 
 - `Static`
 
-  省略可能です。 See [Static](../../../visual-basic/language-reference/modifiers/static.md).
+  任意。 「[静的](../../../visual-basic/language-reference/modifiers/static.md)」を参照してください。
 
 - `ReadOnly`
 
-  省略可能です。 See [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).
+  任意。 「 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)」を参照してください。
 
 - `WithEvents`
 
-省略可能です。 Specifies that these are object variables that refer to instances of a class that can raise events. See [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).
+任意。 イベントを発生させるクラスのインスタンスを参照するオブジェクト変数であることを指定します。 「 [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)」を参照してください。
 
 - `variablelist`
 
-  必須です。 List of variables being declared in this statement.
+  必須。 このステートメントで宣言されている変数のリスト。
 
   `variable [ , variable ... ]`
 
@@ -101,45 +101,45 @@ Dim [ WithEvents ] variablelist
 
   `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`
 
-  |パーツ|説明|
+  |要素|説明|
   |---|---|
-  |`variablename`|必須です。 変数名。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
-  |`boundslist`|省略可能です。 List of bounds of each dimension of an array variable.|
-  |`New`|省略可能です。 Creates a new instance of the class when the `Dim` statement runs.|
-  |`datatype`|省略可能です。 Data type of the variable.|
-  |`With`|省略可能です。 Introduces the object initializer list.|
-  |`propertyname`|省略可能です。 The name of a property in the class you are making an instance of.|
-  |`propinitializer`|Required after `propertyname` =. The expression that is evaluated and assigned to the property name.|
-  |`initializer`|Optional if `New` is not specified. Expression that is evaluated and assigned to the variable when it is created.|
+  |`variablename`|必須。 変数の名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
+  |`boundslist`|任意。 配列変数の各次元の境界の一覧。|
+  |`New`|任意。 `Dim` ステートメントの実行時に、クラスの新しいインスタンスを作成します。|
+  |`datatype`|任意。 変数のデータ型。|
+  |`With`|任意。 オブジェクト初期化子リストについて説明します。|
+  |`propertyname`|任意。 インスタンスを作成しているクラスのプロパティの名前。|
+  |`propinitializer`|`propertyname` = の後に指定する必要があります。 評価され、プロパティ名に割り当てられる式。|
+  |`initializer`|`New` が指定されていない場合は省略可能です。 評価され、作成時に変数に割り当てられる式。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The Visual Basic compiler uses the `Dim` statement to determine the variable's data type and other information, such as what code can access the variable. The following example declares a variable to hold an `Integer` value.
+Visual Basic コンパイラは、`Dim` ステートメントを使用して、変数のデータ型やその他の情報 (変数にアクセスできるコードなど) を決定します。 次の例では、`Integer` 値を保持する変数を宣言しています。
 
 ```vb
 Dim numberOfStudents As Integer
 ```
 
-You can specify any data type or the name of an enumeration, structure, class, or interface.
+任意のデータ型を指定することも、列挙型、構造体、クラス、またはインターフェイスの名前を指定することもできます。
 
 ```vb
 Dim finished As Boolean
 Dim monitorBox As System.Windows.Forms.Form
 ```
 
-For a reference type, you use the `New` keyword to create a new instance of the class or structure that is specified by the data type. If you use `New`, you do not use an initializer expression. Instead, you supply arguments, if they are required, to the constructor of the class from which you are creating the variable.
+参照型の場合は、`New` キーワードを使用して、データ型によって指定されたクラスまたは構造体の新しいインスタンスを作成します。 `New`を使用する場合、初期化子式は使用しません。 代わりに、変数を作成するクラスのコンストラクターに、必要に応じて引数を指定します。
 
 ```vb
 Dim bottomLabel As New System.Windows.Forms.Label
 ```
 
-You can declare a variable in a procedure, block, class, structure, or module. You cannot declare a variable in a source file, namespace, or interface. 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。
+プロシージャ、ブロック、クラス、構造体、またはモジュールで変数を宣言できます。 ソースファイル、名前空間、またはインターフェイスで変数を宣言することはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。
 
-A variable that is declared at module level, outside any procedure, is a *member variable* or *field*. Member variables are in scope throughout their class, structure, or module. A variable that is declared at procedure level is a *local variable*. Local variables are in scope only within their procedure or block.
+モジュールレベルで、プロシージャの外部で宣言されている変数は、*メンバー変数*または*フィールド*です。 メンバー変数は、クラス、構造体、またはモジュール全体でスコープ内にあります。 プロシージャレベルで宣言された変数は、*ローカル変数*です。 ローカル変数は、プロシージャまたはブロック内でのみスコープ内にあります。
 
-The following access modifiers are used to declare variables outside a procedure: `Public`, `Protected`, `Friend`, `Protected Friend`, and `Private`. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+次のアクセス修飾子は、プロシージャの外部で変数を宣言するために使用されます: `Public`、`Protected`、`Friend`、`Protected Friend`、および `Private`。 詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
-The `Dim` keyword is optional and usually omitted if you specify any of the following modifiers: `Public`, `Protected`, `Friend`, `Protected Friend`, `Private`, `Shared`, `Shadows`, `Static`, `ReadOnly`, or `WithEvents`.
+`Dim` キーワードは省略可能で、通常、`Public`、`Protected`、`Friend`、`Protected Friend`、`Private`、`Shared`、`Shadows`、`Static`、`ReadOnly`、`WithEvents`のいずれかの修飾子を指定すると省略されます。
 
 ```vb
 Public maximumAllowed As Double
@@ -148,18 +148,18 @@ Private salary As Decimal
 Static runningTotal As Integer
 ```
 
-If `Option Explicit` is on (the default), the compiler requires a declaration for every variable you use. For more information, see [Option Explicit Statement](../../../visual-basic/language-reference/statements/option-explicit-statement.md).
+`Option Explicit` が on (既定値) の場合、コンパイラは使用するすべての変数の宣言を必要とします。 詳細については、「 [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)」を参照してください。
 
-## <a name="specifying-an-initial-value"></a>Specifying an Initial Value
+## <a name="specifying-an-initial-value"></a>初期値の指定
 
-You can assign a value to a variable when it is created. For a value type, you use an *initializer* to supply an expression to be assigned to the variable. The expression must evaluate to a constant that can be calculated at compile time.
+変数を作成するときに、変数に値を割り当てることができます。 値型の場合は、*初期化子*を使用して、変数に代入する式を指定します。 式は、コンパイル時に計算できる定数に評価される必要があります。
 
 ```vb
 Dim quantity As Integer = 10
 Dim message As String = "Just started"
 ```
 
-If an initializer is specified and a data type is not specified in an `As` clause, *type inference* is used to infer the data type from the initializer. In the following example, both `num1` and `num2` are strongly typed as integers. In the second declaration, type inference infers the type from the value 3.
+初期化子が指定されていて、`As` 句でデータ型が指定されていない場合、*型の推定*は、初期化子からデータ型を推論するために使用されます。 次の例では、`num1` と `num2` の両方が整数として厳密に型指定されています。 2番目の宣言では、型の推定によって値3から型が推論されます。
 
 ```vb
 ' Use explicit typing.
@@ -169,30 +169,30 @@ Dim num1 As Integer = 3
 Dim num2 = 3
 ```
 
-Type inference applies at the procedure level. It does not apply outside a procedure in a class, structure, module, or interface. For more information about type inference, see [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
+型の推定はプロシージャレベルで適用されます。 クラス、構造体、モジュール、またはインターフェイスのプロシージャの外側には適用されません。 型の推定の詳細については、「[オプション推論ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)と[ローカル型の推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)」を参照してください。
 
-For information about what happens when a data type or initializer is not specified, see [Default Data Types and Values](../../../visual-basic/language-reference/statements/dim-statement.md#default) later in this topic.
+データ型または初期化子が指定されていない場合の動作については、このトピックで後述する「[既定のデータ型と値](../../../visual-basic/language-reference/statements/dim-statement.md#default)」を参照してください。
 
-You can use an *object initializer* to declare instances of named and anonymous types. The following code creates an instance of a `Student` class and uses an object initializer to initialize properties.
+*オブジェクト初期化子*を使用して、名前付きの型と匿名型のインスタンスを宣言できます。 次のコードでは、`Student` クラスのインスタンスを作成し、オブジェクト初期化子を使用してプロパティを初期化します。
 
 ```vb
 Dim student1 As New Student With {.First = "Michael",
                                   .Last = "Tucker"}
 ```
 
-For more information about object initializers, see [How to: Declare an Object by Using an Object Initializer](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md), [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md), and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+オブジェクト初期化子の詳細については、「[方法: オブジェクト初期化子を使用してオブジェクトを宣言](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)する」、「[オブジェクト初期化子: 名前付きおよび匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)」、および「[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。
 
-## <a name="declaring-multiple-variables"></a>Declaring Multiple Variables
+## <a name="declaring-multiple-variables"></a>複数の変数の宣言
 
-You can declare several variables in one declaration statement, specifying the variable name for each one, and following each array name with parentheses. 複数の変数を指定するときは、コンマで区切ります。
+1つの宣言ステートメントで複数の変数を宣言し、それぞれに変数名を指定し、各配列名をかっこで囲んで指定することができます。 複数の変数を指定するときは、コンマで区切ります。
 
 ```vb
 Dim lastTime, nextTime, allTimes() As Date
 ```
 
-If you declare more than one variable with one `As` clause, you cannot supply an initializer for that group of variables.
+1つの `As` 句で複数の変数を宣言する場合、その変数グループの初期化子を指定することはできません。
 
-You can specify different data types for different variables by using a separate `As` clause for each variable you declare. Each variable takes the data type specified in the first `As` clause encountered after its `variablename` part.
+宣言する変数ごとに個別の `As` 句を使用して、異なる変数に異なるデータ型を指定できます。 各変数は、`variablename` 部分の後に出現する最初の `As` 句に指定されたデータ型を受け取ります。
 
 ```vb
 Dim a, b, c As Single, x, y As Double, i As Integer
@@ -201,26 +201,26 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 
 ## <a name="arrays"></a>配列
 
-You can declare a variable to hold an *array*, which can hold multiple values. To specify that a variable holds an array, follow its `variablename` immediately with parentheses. 配列の詳細については、「[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)」を参照してください。
+複数の値を保持できる*配列*を保持する変数を宣言できます。 変数が配列を保持するように指定するには、その `variablename` の直後にかっこを付けます。 配列の詳細については、「[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)」を参照してください。
 
-You can specify the lower and upper bound of each dimension of an array. To do this, include a `boundslist` inside the parentheses. For each dimension, the `boundslist` specifies the upper bound and optionally the lower bound. The lower bound is always zero, whether you specify it or not. Each index can vary from zero through its upper bound value.
+配列の各次元の下限と上限を指定できます。 これを行うには、かっこ内に `boundslist` を含めます。 ディメンションごとに、`boundslist` は上限を指定し、必要に応じて下限を指定します。 下限は、指定したかどうかにかかわらず、常に0になります。 各インデックスは、0から上限値までの範囲内で異なる場合があります。
 
-The following two statements are equivalent. Each statement declares an array of 21 `Integer` elements. When you access the array, the index can vary from 0 through 20.
+次の2つのステートメントは等価です。 各ステートメントは、21個の `Integer` 要素の配列を宣言します。 配列にアクセスする場合、インデックスは 0 ~ 20 で異なる場合があります。
 
 ```vb
 Dim totals(20) As Integer
 Dim totals(0 To 20) As Integer
 ```
 
-The following statement declares a two-dimensional array of type `Double`. The array has 4 rows (3 + 1) of 6 columns (5 + 1) each. Note that an upper bound represents the highest possible value for the index, not the length of the dimension. The length of the dimension is the upper bound plus one.
+次のステートメントは、`Double`型の2次元配列を宣言しています。 配列には、6つの列 (5 + 1) の4行 (3 + 1) があります。 上限は、ディメンションの長さではなく、インデックスの最大有効値を表します。 ディメンションの長さは、上限に1を加えた値です。
 
 ```vb
 Dim matrix2(3, 5) As Double
 ```
 
-An array can have from 1 to 32 dimensions.
+配列は、1 ~ 32 の次元を持つことができます。
 
-You can leave all the bounds blank in an array declaration. If you do this, the array has the number of dimensions you specify, but it is uninitialized. It has a value of `Nothing` until you initialize at least some of its elements. The `Dim` statement must specify bounds either for all dimensions or for no dimensions.
+配列宣言では、すべての境界を空白のままにすることができます。 これを行うと、指定した次元の数が配列に含まれていますが、初期化されていません。 この値は、少なくともその要素の一部を初期化するまで `Nothing` の値を持ちます。 `Dim` ステートメントでは、すべてのディメンションに対して、またはディメンションなしの境界を指定する必要があります。
 
 ```vb
 ' Declare an array with blank array bounds.
@@ -229,97 +229,97 @@ Dim messages() As String
 ReDim messages(4)
 ```
 
-If the array has more than one dimension, you must include commas between the parentheses to indicate the number of dimensions.
+配列に複数の次元がある場合は、ディメンションの数を示すために、かっこの間にコンマを含める必要があります。
 
 ```vb
 Dim oneDimension(), twoDimensions(,), threeDimensions(,,) As Byte
 ```
 
-You can declare a *zero-length array* by declaring one of the array's dimensions to be -1. A variable that holds a zero-length array does not have the value `Nothing`. Zero-length arrays are required by certain common language runtime functions. If you try to access such an array, a runtime exception occurs. 詳細については、「[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)」を参照してください。
+配列の次元の1つを-1 に宣言することによって、*長さ0の配列*を宣言できます。 長さ0の配列を保持する変数には `Nothing`値がありません。 特定の共通言語ランタイム関数では、長さが0の配列が必要です。 このような配列にアクセスしようとすると、ランタイム例外が発生します。 詳細については、「[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)」を参照してください。
 
-You can initialize the values of an array by using an array literal. To do this, surround the initialization values with braces (`{}`).
+配列リテラルを使用して、配列の値を初期化できます。 これを行うには、初期化値を中かっこ (`{}`) で囲みます。
 
 ```vb
 Dim longArray() As Long = {0, 1, 2, 3}
 ```
 
-For multidimensional arrays, the initialization for each separate dimension is enclosed in braces in the outer dimension. The elements are specified in row-major order.
+多次元配列の場合、各次元の初期化は外側の次元で中かっこで囲まれます。 これらの要素は、行優先順で指定されます。
 
 ```vb
 Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 ```
 
-For more information about array literals, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+配列リテラルの詳細については、「[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)」を参照してください。
 
-## <a name="default"></a> Default Data Types and Values
+## <a name="default"></a>既定のデータ型と値
 
 次の表では、`Dim` ステートメントのデータ型と初期化子を指定するさまざまな組み合わせの結果を示します。
 
 |データ型が指定されているか|初期化子が指定されているか|例|結果|
 |---|---|---|---|
-|Ｘ|Ｘ|`Dim qty`|If [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) is off (the default), the variable is set to `Nothing`.<br /><br /> `Option Strict` がオンの場合、コンパイル時エラーが発生します。|
-|Ｘ|[はい]|`Dim qty = 5`|If [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) is on (the default), the variable takes the data type of the initializer. See [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|
-|[はい]|Ｘ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 See the table later in this section.|
-|[はい]|[はい]|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|
+|いいえ|いいえ|`Dim qty`|[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)がオフ (既定値) の場合、変数は `Nothing`に設定されます。<br /><br /> `Option Strict` がオンの場合、コンパイル時エラーが発生します。|
+|いいえ|はい|`Dim qty = 5`|[オプションの推論](../../../visual-basic/language-reference/statements/option-infer-statement.md)が on (既定値) の場合、変数は初期化子のデータ型を受け取ります。 「[ローカル型の推定](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)」を参照してください。<br /><br /> `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|
+|はい|いいえ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 このセクションで後述する表を参照してください。|
+|はい|はい|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|
 
-If you specify a data type but do not specify an initializer, Visual Basic initializes the variable to the default value for its data type. The following table shows the default initialization values.
+データ型を指定しても初期化子を指定しなかった場合は、Visual Basic 変数をそのデータ型の既定値に初期化します。 既定の初期化値を次の表に示します。
 
-|データの種類|既定値|
+|データ型|既定値|
 |---|---|
-|All numeric types (including `Byte` and `SByte`)|0|
-|`Char`|Binary 0|
-|All reference types (including `Object`, `String`, and all arrays)|`Nothing`|
+|すべての数値型 (`Byte` と `SByte`を含む)|0|
+|`Char`|バイナリ0|
+|すべての参照型 (`Object`、`String`、すべての配列を含む)|`Nothing`|
 |`Boolean`|`False`|
-|`Date`|12:00 AM of January 1 of the year 1 (01/01/0001 12:00:00 AM)|
+|`Date`|12:00 年1月1日の午前 (午前 01/01/0001 12:00:00 時)|
 
-Each element of a structure is initialized as if it were a separate variable. If you declare the length of an array but do not initialize its elements, each element is initialized as if it were a separate variable.
+構造体の各要素は、個別の変数であるかのように初期化されます。 配列の長さを宣言するが、その要素を初期化しない場合、各要素は個別の変数であるかのように初期化されます。
 
-## <a name="static-local-variable-lifetime"></a>Static Local Variable Lifetime
+## <a name="static-local-variable-lifetime"></a>静的ローカル変数の有効期間
 
-A `Static` local variable has a longer lifetime than that of the procedure in which it is declared. The boundaries of the variable's lifetime depend on where the procedure is declared and whether it is `Shared`.
+`Static` ローカル変数の有効期間は、宣言されているプロシージャよりも長くなります。 変数の有効期間の境界は、プロシージャが宣言されている場所と `Shared`かどうかによって異なります。
 
-|Procedure declaration|Variable initialized|Variable stops existing|
+|プロシージャの宣言|変数の初期化|既存の変数の停止|
 |---|---|---|
-|In a module|The first time the procedure is called|When your program stops execution|
-|In a class or structure, procedure is `Shared`|The first time the procedure is called either on a specific instance or on the class or structure itself|When your program stops execution|
-|In a class or structure, procedure isn't `Shared`|The first time the procedure is called on a specific instance|When the instance is released for garbage collection (GC)|
+|モジュール内|プロシージャが初めて呼び出されたとき|プログラムの実行を停止したとき|
+|クラスまたは構造体では、プロシージャは `Shared`|プロシージャが最初に呼び出されたときに、特定のインスタンスまたはクラスまたは構造体自体で呼び出されます。|プログラムの実行を停止したとき|
+|クラスまたは構造体では、プロシージャは `Shared` ません。|特定のインスタンスで最初にプロシージャが呼び出されたとき|インスタンスがガベージコレクション (GC) 用に解放されたとき|
 
-## <a name="attributes-and-modifiers"></a>Attributes and Modifiers
+## <a name="attributes-and-modifiers"></a>属性と修飾子
 
-You can apply attributes only to member variables, not to local variables. An attribute contributes information to the assembly's metadata, which is not meaningful for temporary storage such as local variables.
+属性は、ローカル変数ではなくメンバー変数にのみ適用できます。 属性は、アセンブリのメタデータに情報を提供します。これは、ローカル変数などの一時的なストレージには意味がありません。
 
-At module level, you cannot use the `Static` modifier to declare member variables. At procedure level, you cannot use `Shared`, `Shadows`, `ReadOnly`, `WithEvents`, or any access modifiers to declare local variables.
+モジュールレベルでは、`Static` 修飾子を使用してメンバー変数を宣言することはできません。 プロシージャレベルでは、`Shared`、`Shadows`、`ReadOnly`、`WithEvents`、または任意のアクセス修飾子を使用してローカル変数を宣言することはできません。
 
-You can specify what code can access a variable by supplying an `accessmodifier`. Class and module member variables (outside any procedure) default to private access, and structure member variables default to public access. アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 You cannot use access modifiers on local variables (inside a procedure).
+`accessmodifier`を指定することによって、変数にアクセスできるコードを指定できます。 クラスおよびモジュールメンバー変数 (プロシージャ以外) では、既定でプライベートアクセスが使用され、構造体メンバー変数は既定でパブリックアクセスになります。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 ローカル変数 (プロシージャ内) では、アクセス修飾子を使用できません。
 
-You can specify `WithEvents` only on member variables, not on local variables inside a procedure. If you specify `WithEvents`, the data type of the variable must be a specific class type, not `Object`. You cannot declare an array with `WithEvents`. For more information about events, see [Events](../../../visual-basic/programming-guide/language-features/events/index.md).
+`WithEvents` は、プロシージャ内のローカル変数ではなく、メンバー変数に対してのみ指定できます。 `WithEvents`を指定する場合、変数のデータ型は、`Object`ではなく、特定のクラス型である必要があります。 `WithEvents`で配列を宣言することはできません。 イベントの詳細については、「 [events](../../../visual-basic/programming-guide/language-features/events/index.md)」を参照してください。
 
 > [!NOTE]
-> Code outside a class, structure, or module must qualify a member variable's name with the name of that class, structure, or module. Code outside a procedure or block cannot refer to any local variables within that procedure or block.
+> クラス、構造体、またはモジュールの外部のコードでは、メンバー変数の名前を、そのクラス、構造体、またはモジュールの名前で修飾する必要があります。 プロシージャまたはブロックの外側のコードは、そのプロシージャまたはブロック内のローカル変数を参照できません。
 
-## <a name="releasing-managed-resources"></a>Releasing Managed Resources
+## <a name="releasing-managed-resources"></a>マネージリソースの解放
 
-The .NET Framework garbage collector disposes of managed resources without any extra coding on your part. However, you can force the disposal of a managed resource instead of waiting for the garbage collector.
+.NET Framework ガベージコレクターは、追加のコーディングなしでマネージリソースを破棄します。 ただし、ガベージコレクターを待機するのではなく、マネージリソースを強制的に破棄することができます。
 
-If a class holds onto a particularly valuable and scarce resource (such as a database connection or file handle), you might not want to wait until the next garbage collection to clean up a class instance that's no longer in use. A class may implement the <xref:System.IDisposable> interface to provide a way to release resources before a garbage collection. A class that implements that interface exposes a `Dispose` method that can be called to force valuable resources to be released immediately.
+クラスが特に貴重なリソース (データベース接続やファイルハンドルなど) を保持している場合は、次のガベージコレクションが使用されなくなったクラスインスタンスをクリーンアップするまで待機することはできません。 クラスは、ガベージコレクションの前にリソースを解放する手段を提供するために、<xref:System.IDisposable> インターフェイスを実装できます。 このインターフェイスを実装するクラスは、重要なリソースを直ちに解放するために呼び出すことができる `Dispose` メソッドを公開します。
 
-The `Using` statement automates the process of acquiring a resource, executing a set of statements, and then disposing of the resource. However, the resource must implement the <xref:System.IDisposable> interface. 詳細については、「[sing ステートメント](../../../visual-basic/language-reference/statements/using-statement.md)」を参照してください。
+`Using` ステートメントは、リソースを取得し、一連のステートメントを実行して、リソースを破棄するプロセスを自動化します。 ただし、リソースは <xref:System.IDisposable> インターフェイスを実装する必要があります。 詳細については、「[sing ステートメント](../../../visual-basic/language-reference/statements/using-statement.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-The following example declares variables by using the `Dim` statement with various options.
+次の例では、さまざまなオプションを使用して `Dim` ステートメントを使用して変数を宣言しています。
 
 [!code-vb[VbVbalrStatements#141](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#141)]
 
 ## <a name="example"></a>例
 
-The following example lists the prime numbers between 1 and 30. The scope of local variables is described in code comments.
+次の例では、1から30までの素数を一覧表示します。 ローカル変数のスコープについては、「コードコメント」を参照してください。
 
 [!code-vb[VbVbalrStatements#142](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#142)]
 
 ## <a name="example"></a>例
 
-In the following example, the `speedValue` variable is declared at the class level. The `Private` keyword is used to declare the variable. The variable can be accessed by any procedure in the `Car` class.
+次の例では、`speedValue` 変数がクラスレベルで宣言されています。 `Private` キーワードは、変数を宣言するために使用されます。 変数には、`Car` クラスの任意のプロシージャからアクセスできます。
 
 [!code-vb[VbVbalrStatements#144](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#144)]
 

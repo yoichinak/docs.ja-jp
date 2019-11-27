@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448082"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen メソッド
-Gets the length of the specified section.  
+指定したセクションの長さを取得します。  
   
- This method is obsolete and should not be used.  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,20 +38,20 @@ HRESULT GetSectionDataLen (
   
 ## <a name="parameters"></a>パラメーター  
  `section`  
- [in] The data section whose length will be retrieved.  
+ から長さを取得するデータセクション。  
   
  `dataLen`  
- [out] The returned length of the specified section.  
+ 入出力指定したセクションの返された長さ。  
   
-## <a name="remarks"></a>Remarks  
- Call `GetSectionDataLen` only if you have special section requirements that are not handled by other methods.  
+## <a name="remarks"></a>コメント  
+ 他のメソッドによって処理されない特殊なセクション要件がある場合にのみ、`GetSectionDataLen` を呼び出します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

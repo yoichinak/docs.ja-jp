@@ -38,26 +38,26 @@ HRESULT SetFileProps (
   
 ## <a name="parameters"></a>パラメーター  
  `file`  
- [in] The metadata token that specifies the `File` metadata structure to be modified.  
+ から変更する `File` メタデータ構造を指定するメタデータトークン。  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the file.  
+ からファイルに関連付けられているハッシュデータへのポインター。  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ から`pbHashValue`のサイズ (バイト単位)。  
   
  `dwFileFlags`  
- [in] A bitwise combination of [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values that specify various attributes of the file.  
+ からファイルのさまざまな属性を指定する[Corfileflags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)値のビットごとの組み合わせ。  
   
-## <a name="remarks"></a>Remarks  
- To create a `File` metadata structure, use the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.  
+## <a name="remarks"></a>コメント  
+ `File` メタデータ構造を作成するには、 [IMetaDataAssemblyEmit::D efineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)メソッドを使用します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

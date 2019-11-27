@@ -12,8 +12,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352173"
 ---
-# <a name="value-visual-basic"></a>\<value> (Visual Basic)
-Specifies the description of a property.  
+# <a name="value-visual-basic"></a>\<値 > (Visual Basic)
+プロパティの説明を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -25,13 +25,13 @@ Specifies the description of a property.
  `property-description`  
  プロパティの説明。  
   
-## <a name="remarks"></a>Remarks  
- Use the `<value>` tag to describe a property. Note that when you add a property using the code wizard in the Visual Studio development environment, it will add a [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md) tag for the new property. You should then manually add a `<value>` tag to describe the value that the property represents.  
+## <a name="remarks"></a>コメント  
+ プロパティを記述するには、`<value>` タグを使用します。 Visual Studio 開発環境でコードウィザードを使用してプロパティを追加すると、新しいプロパティの[\<summary >](../../../visual-basic/language-reference/xmldoc/summary.md)タグが追加されることに注意してください。 次に、プロパティが表す値を記述する `<value>` タグを手動で追加する必要があります。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- This example uses the `<value>` tag to describe what value the `Counter` property holds.  
+ この例では、`<value>` タグを使用して、`Counter` プロパティに保持されている値を記述します。  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

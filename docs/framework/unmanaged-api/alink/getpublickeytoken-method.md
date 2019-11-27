@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447246"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken メソッド
-Retrieves the public key token for a given keyfile or key container.  
+指定されたキーキーまたはキーコンテナーの公開キートークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,24 +37,24 @@ HRESULT GetPublicKeyToken(
   
 ## <a name="parameters"></a>パラメーター  
  `pszKeyFile`  
- Filename of the key.  
+ キーのファイル名。  
   
  `pszKeyContainer`  
- Name of the key container.  
+ キーコンテナーの名前。  
   
  `pvPublicKeyToken`  
- Address where key token is to be stored.  
+ キートークンを格納するアドレス。  
   
  `pcbPublicKeyToken`  
- Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`. Upon return, contains actual number of bytes used.  
+ `pvPublicKeyToken`によって示されるバッファーのサイズ (バイト単位) を指定します。 戻り時には、実際に使用されたバイト数が含まれます。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h.  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink2 インターフェイス](ialink2-interface.md)
 - [IALink インターフェイス](ialink-interface.md)

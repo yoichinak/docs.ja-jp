@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438289"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 メソッド
-Defines a single global variable.  
+1つのグローバル変数を定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,31 +40,31 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>パラメーター  
  `name`  
- [in] The global variable name.  
+ からグローバル変数名。  
   
  `attributes`  
- [in] The global variable attributes.  
+ からグローバル変数属性。  
   
  `sigToken`  
- [in] The metadata token of the signature.  
+ から署名のメタデータトークン。  
   
  `addrKind`  
- [in] The address type.  
+ からアドレスの種類。  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ からパラメーター指定の最初のアドレス。  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ からパラメーター指定の2番目のアドレス。  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ からパラメーター指定の3番目のアドレス。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl  
   
 ## <a name="see-also"></a>関連項目
 

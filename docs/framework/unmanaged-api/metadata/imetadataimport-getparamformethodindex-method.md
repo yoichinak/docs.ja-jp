@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437166"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex メソッド
-Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.  
+指定した MethodDef トークンによって表されるメソッドの、指定したパラメーターを表すトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,24 +37,24 @@ HRESULT GetParamForMethodIndex (
   
 ## <a name="parameters"></a>パラメーター  
  `md`  
- [in] A token that represents the method to return the parameter token for.  
+ からパラメータートークンを返すメソッドを表すトークン。  
   
  `ulParamSeq`  
- [in] The ordinal position in the parameter list where the requested parameter occurs. Parameters are numbered starting from one, with the method's return value in position zero.  
+ から要求されたパラメーターが発生するパラメーターリスト内の序数位置。 パラメーターには1から始まる番号が付けられ、メソッドの戻り値は0の位置にあります。  
   
  `ppd`  
- [out] A pointer to a ParamDef token that represents the requested parameter.  
+ 入出力要求されたパラメーターを表す ParamDef トークンへのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

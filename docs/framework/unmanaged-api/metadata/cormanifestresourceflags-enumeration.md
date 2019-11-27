@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450259"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 列挙型
-Indicates the visibility of resources encoded in an assembly manifest.  
+アセンブリマニフェストでエンコードされたリソースを表示するかどうかを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ typedef enum CorManifestResourceFlags {
 |メンバー|説明|  
 |------------|-----------------|  
 |`mrVisibilityMask`|予約済み。|  
-|`mrPublic`|The resources are public.|  
-|`mrPrivate`|The resources are private.|  
+|`mrPublic`|リソースはパブリックです。|  
+|`mrPrivate`|リソースはプライベートです。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

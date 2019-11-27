@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437115"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps メソッド
-Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.  
+指定したアクセス許可トークンによって表される <xref:System.Security.PermissionSet?displayProperty=nameWithType> に関連付けられているメタデータを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,23 +38,23 @@ HRESULT GetPermissionSetProps (
   
 ## <a name="parameters"></a>パラメーター  
  `pm`  
- [in] The Permission metadata token that represents the permission set to get the metadata properties for.  
+ からメタデータプロパティを取得するアクセス許可セットを表すアクセス許可メタデータトークン。  
   
  `pdwAction`  
- [out] A pointer to the permission set.  
+ 入出力アクセス許可セットへのポインター。  
   
  `ppvPermission`  
- [out] A pointer to the binary metadata signature of the permission set.  
+ 入出力アクセス許可セットのバイナリメタデータシグネチャへのポインター。  
   
  `pcbPermission`  
- [out] The size in bytes of `ppvPermission`.  
+ 入出力`ppvPermission`のサイズ (バイト単位)。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

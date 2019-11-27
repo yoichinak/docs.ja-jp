@@ -39,33 +39,33 @@ HRESULT EnumMethods (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
  `cl`  
- [in] A TypeDef token representing the type with the methods to enumerate.  
+ から列挙するメソッドを持つ型を表す TypeDef トークン。  
   
  `rMethods`  
- [out] The array to store the MethodDef tokens.  
+ 入出力MethodDef トークンを格納する配列。  
   
  `cMax`  
- [in] The maximum size of the MethodDef `rMethods` array.  
+ からMethodDef `rMethods` 配列の最大サイズ。  
   
  `pcTokens`  
- [out] The number of MethodDef tokens returned in `rMethods`.  
+ 入出力`rMethods`で返される MethodDef トークンの数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` returned successfully.|  
-|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethods` が正常に返されました。|  
+|`S_FALSE`|列挙する MethodDef トークンがありません。 この場合、`pcTokens` は0になります。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

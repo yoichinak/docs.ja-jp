@@ -1,5 +1,5 @@
 ---
-title: RtcState Class (System.Net)
+title: RtcState クラス (System.Net)
 ms.date: 11/01/2019
 ms.technology: dotnet-networking
 topic_type:
@@ -20,9 +20,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451294"
 ---
-# <a name="rtcstate-class"></a>RtcState Class
+# <a name="rtcstate-class"></a>RtcState クラス
 
-The `RtcState` class represents state data for a real-time communication (RTC) request.
+`RtcState` クラスは、リアルタイム通信 (RTC) 要求の状態データを表します。
 
 ## <a name="syntax"></a>構文
   
@@ -31,14 +31,14 @@ internal class RtcState
 ```
 
 > [!WARNING]
-> The `RtcState` class is internal and is not meant to be used directly in your code.
+> `RtcState` クラスは内部であり、コードで直接使用するためのものではありません。
 > 
-> Microsoft does not support the use of this class in a production application under any circumstance.
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのクラスの使用はサポートしていません。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **名前空間:** <xref:System.Net>
 
-**Assembly:** System (in System.dll)
+**アセンブリ:** システム (.dll 内)
 
-**.NET Framework versions:** Available since 4.5.
+**.NET Framework のバージョン:** 4.5 以降で使用できます。

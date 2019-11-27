@@ -58,7 +58,7 @@ ms.locfileid: "74351914"
 ## <a name="designer-serialization"></a>デザイナーのシリアル化  
  デザイナーのシリアル化はシリアル化の特殊な形式であり、通常は開発ツールに関連付けられているオブジェクトの永続性の種類を含みます。 デザイナーのシリアル化は、後でオブジェクト グラフを復元できるように、オブジェクト グラフをソース ファイルに変換するプロセスです。 ソース ファイルには、コードとマークアップを含めることができますが、SQL テーブル情報を含めることもできます。  
   
-## <a name="BKMK_RelatedTopics"></a>関連トピックと例  
+## <a name="BKMK_RelatedTopics">関連トピックと例</a>  
  [チュートリアル: Visual Studio でのオブジェクトの永続化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  シリアル化によってインスタンス間でオブジェクトのデータを永続化して値を保存しておき、次にそのオブジェクトをインスタンス化するときにその値を取得する方法を示します。  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431692"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam メソッド
-Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.  
+指定したトークンによって参照されるメソッドに対して、指定したシグネチャを持つパラメーター定義を作成し、そのパラメーター定義のトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,38 +42,38 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>パラメーター  
  `md`  
- [in] The token for the method whose parameter is being defined.  
+ からパラメーターが定義されているメソッドのトークン。  
   
  `ulParamSeq`  
- [in] The parameter sequence number.  
+ からパラメーターのシーケンス番号。  
   
  `szName`  
- [in] The name of the parameter in Unicode.  
+ からUnicode でのパラメーターの名前。  
   
  `dwParamFlags`  
- [in] Flags for the parameter. This is a bitmask of `CorParamAttr` values.  
+ からパラメーターのフラグ。 これは `CorParamAttr` 値のビットマスクです。  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** for the constant value.  
+ [in] 定数値の *\** を `ELEMENT_TYPE_`します。  
   
  `pValue`  
- [in] The constant value for the parameter.  
+ からパラメーターの定数値。  
   
  `cchValue`  
- [in] The size, in Unicode characters, of `pValue`.  
+ から`pValue`のサイズ (Unicode 文字)。  
   
  `ppd`  
- [out] The `mdParamDef` token assigned.  
+ 入出力割り当てられた `mdParamDef` トークン。  
   
-## <a name="remarks"></a>Remarks  
- The sequence values in `ulParamSeq` begin with 1 for parameters. A return value has a sequence number of 0.  
+## <a name="remarks"></a>コメント  
+ `ulParamSeq` のシーケンス値は、パラメーターに対して1から始まります。 戻り値のシーケンス番号は0です。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

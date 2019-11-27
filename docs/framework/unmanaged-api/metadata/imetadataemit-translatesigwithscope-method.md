@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440479"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope メソッド
-Imports an assembly into the current scope and gets a new metadata signature for the merged scope.  
+現在のスコープにアセンブリをインポートし、マージされたスコープの新しいメタデータシグネチャを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,44 +45,44 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>パラメーター  
  `pAssemImport`  
- [in] The interface for import assembly (where the signature is defined).  
+ [in] (署名が定義されている) インポート アセンブリのインターフェイスです。  
   
  `pbHashValue`  
- [in] The hash blob for the assembly.  
+ からアセンブリのハッシュ blob。  
   
  `cbHashValue`  
- [in] The count of bytes in `pbHashValue`.  
+ から`pbHashValue`内のバイト数。  
   
  `import`  
- [in] The interface for import metadata scope.  
+ からインポートメタデータスコープのインターフェイス。  
   
  `pbSigBlob`  
- [in] The signature to be imported.  
+ からインポートされる署名。  
   
  `cbSigBlob`  
- [in] The size, in bytes, of `pbSigBlob`.  
+ から`pbSigBlob`のサイズ (バイト単位)。  
   
  `pAssemEmit`  
- [in] The interface for export assembly.  
+ からエクスポートアセンブリのインターフェイス。  
   
  `emit`  
- [in] The interface for export metadata scope.  
+ からエクスポートメタデータスコープのインターフェイス。  
   
  `pvTranslatedSig`  
- [out] The buffer to hold the translated signature blob.  
+ 入出力変換された署名 blob を保持するバッファー。  
   
  `cbTranslatedSigMax`  
- [in] The capacity, in bytes, of `pvTranslatedSig`.  
+ から`pvTranslatedSig`の容量 (バイト単位)。  
   
  `pcbTranslatedSig`  
- [out] The number of actual bytes in the translated signature.  
+ 入出力変換されたシグネチャの実際のバイト数。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

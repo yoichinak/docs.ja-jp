@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448928"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges メソッド
-Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method. The array is an array of integers and has the format [start, end, start, end]. The number of range pairs is the length of the array divided by 2.  
+ドキュメント内の位置が指定されている場合、は、位置がこのメソッド内でカバーする Microsoft 中間言語 (MSIL) の範囲に対応する開始オフセットと終了オフセットのペアの配列を返します。 配列は整数の配列であり、[開始、終了、開始、終了] の形式です。 範囲ペアの数は、配列の長さを2で除算した値です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,29 +40,29 @@ HRESULT GetRanges(
   
 ## <a name="parameters"></a>パラメーター  
  `document`  
- [in] The document for which the offset is requested.  
+ からオフセットが要求されるドキュメント。  
   
  `line`  
- [in] The document line corresponding to the ranges.  
+ から範囲に対応するドキュメント行。  
   
  `column`  
- [in] The document column corresponding to the ranges.  
+ から範囲に対応するドキュメント列。  
   
  `cRanges`  
  [in] `ranges` 配列のサイズ。  
   
  `pcRanges`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.  
+ 入出力範囲を格納するために必要なバッファーのサイズを受け取る `ULONG32` へのポインター。  
   
  `ranges`  
- [out] A pointer to the buffer that receives the ranges.  
+ 入出力範囲を受け取るバッファーへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

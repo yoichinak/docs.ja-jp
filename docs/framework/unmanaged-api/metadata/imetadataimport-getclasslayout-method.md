@@ -40,33 +40,33 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in] The TypeDef token for the class with the layout to return.  
+ から返されるレイアウトを持つクラスの TypeDef トークン。  
   
  `pdwPackSize`  
- [out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.  
+ 入出力クラスのパックサイズを表す1、2、4、8、または16のいずれかの値。  
   
  `rFieldOffset`  
- [out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.  
+ 入出力[COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)値の配列。  
   
  `cMax`  
  [in] `rFieldOffset` 配列の最大サイズ。  
   
  `pcFieldOffset`  
- [out] The number of elements returned in `rFieldOffset`.  
+ 入出力`rFieldOffset`で返される要素の数。  
   
  `pulClassSize`  
- [out] The size in bytes of the class represented by `td`.  
+ 入出力`td`によって表されるクラスのサイズ (バイト単位)。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

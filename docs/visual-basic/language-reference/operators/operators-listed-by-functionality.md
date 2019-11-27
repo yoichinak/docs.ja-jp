@@ -12,19 +12,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348266"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>機能別の演算子一覧 (Visual Basic)
-See one of the categories listed below, or open this portion of the Help table of contents to see an alphabetical list of Visual Basic operators.  
+次に示すカテゴリの1つを参照するか、ヘルプの目次のこの部分を開いて、Visual Basic 演算子のアルファベット順の一覧を表示します。  
   
-## <a name="categories-of-operators"></a>Categories of Operators  
+## <a name="categories-of-operators"></a>演算子のカテゴリ  
   
 |演算子|説明|  
 |---------------|-----------------|  
-|[算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)|These operators perform mathematical calculations.|  
-|[代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)|These operators perform assignment operations.|  
-|[比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)|These operators perform comparisons.|  
-|[連結演算子](../../../visual-basic/language-reference/operators/concatenation-operators.md)|These operators combine strings.|  
-|[論理/ビット演算子](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)|These operators perform logical operations.|  
-|[ビット シフト演算子](../../../visual-basic/language-reference/operators/bit-shift-operators.md)|These operators perform arithmetic shifts on bit patterns.|  
-|[その他の演算子](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)|These operators perform miscellaneous operations.|  
+|[算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)|これらの演算子は、数学的な計算を実行します。|  
+|[代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)|これらの演算子は、代入演算を実行します。|  
+|[比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)|これらの演算子は、比較を実行します。|  
+|[連結演算子](../../../visual-basic/language-reference/operators/concatenation-operators.md)|これらの演算子は、文字列を結合します。|  
+|[論理/ビット演算子](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)|これらの演算子は、論理操作を実行します。|  
+|[ビット シフト演算子](../../../visual-basic/language-reference/operators/bit-shift-operators.md)|これらの演算子は、ビットパターンに対して算術シフトを実行します。|  
+|[その他の演算子](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)|これらの演算子は、その他の操作を実行します。|  
   
 ## <a name="see-also"></a>関連項目
 

@@ -27,32 +27,32 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343972"
 ---
-# <a name="long-data-type-visual-basic"></a>Long data type (Visual Basic)
+# <a name="long-data-type-visual-basic"></a>Long データ型 (Visual Basic)
 
-Holds signed 64-bit (8-byte) integers ranging in value from -9,223,372,036,854,775,808 through 9,223,372,036,854,775,807 (9.2...E+18).
+-9223372036854775808 ~ 9223372036854775807 (9.2... E + 18) の値の範囲内で、64ビット (8 バイト) の符号付き整数を保持します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Use the `Long` data type to contain integer numbers that are too large to fit in the `Integer` data type.
+`Long` データ型を使用して、`Integer` データ型には大きすぎる整数値を格納します。
 
 `Long` の既定値は 0 です。
 
-## <a name="literal-assignments"></a>Literal assignments
+## <a name="literal-assignments"></a>リテラルの代入
 
-You can declare and initialize a `Long` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. 整数リテラルが `Long` の範囲外にある場合 (つまり、<xref:System.Int64.MinValue?displayProperty=nameWithType> より小さいか、<xref:System.Int64.MaxValue?displayProperty=nameWithType> より大きい場合)、コンパイル エラーが発生します。
+`Long` 変数は、10進リテラル、16進リテラル、8進数リテラル、または (Visual Basic 2017 で始まる) バイナリリテラルを割り当てることによって、宣言および初期化できます。 整数リテラルが `Long` の範囲外にある場合 (つまり、<xref:System.Int64.MinValue?displayProperty=nameWithType> より小さいか、<xref:System.Int64.MaxValue?displayProperty=nameWithType> より大きい場合)、コンパイル エラーが発生します。
 
 次の例では、整数 4,294,967,296 を 10 進リテラル、16 進リテラル、バイナリ リテラルで表したものが、`Long` 値に割り当てられています。
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Long)]
 
 > [!NOTE]
-> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. 10 進リテラルには、プレフィックスはありません。
+> プレフィックス `&h` または `&H` を使用して、16進リテラル、プレフィックス `&b` または `&B` がバイナリリテラルを示すようにし、プレフィックス `&o` または `&O` を使用して8進数リテラルを表します。 10 進リテラルには、プレフィックスはありません。
 
-Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
+Visual Basic 2017 以降では、次の例に示すように、アンダースコア文字 (`_`) を桁区切り記号として使用して、読みやすくすることもできます。
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. (例:
+Visual Basic 15.5 以降では、アンダースコア文字 (`_`) をプレフィックスと16進数、バイナリ、または8進数の間の先頭の区切り記号として使用することもできます。 次に例を示します。
 
 ```vb
 Dim number As Long = &H_0FAC_0326_1489_D68C
@@ -60,7 +60,7 @@ Dim number As Long = &H_0FAC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Numeric literals can also include the `L` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `Long` data type, as the following example shows.
+数値リテラルには、次の例に示すように、`Long` データ型を示す `L`[型文字](../../programming-guide/language-features/data-types/type-characters.md)を含めることもできます。
 
 ```vb
 Dim number = &H_0FAC_0326_1489_D68CL
@@ -68,13 +68,13 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, remember that `Long` has a different data width (32 bits) in other environments. If you are passing a 32-bit argument to such a component, declare it as `Integer` instead of `Long` in your new Visual Basic code.
+- **相互運用に関する考慮事項。** .NET Framework 用に作成されていないコンポーネント (たとえば、オートメーションや COM オブジェクト) とやり取りする場合は、他の環境で `Long` が異なるデータ幅 (32 ビット) を持っていることに注意してください。 このようなコンポーネントに32ビットの引数を渡す場合は、新しい Visual Basic コードで `Long` の代わりに `Integer` として宣言します。
 
-- **Widening.** The `Long` data type widens to `Decimal`, `Single`, or `Double`. これは、`Long` エラーを発生させることなく、これらの型のいずれかに <xref:System.OverflowException?displayProperty=nameWithType> を変換できることを意味します。
+- **広げ.** `Long` のデータ型は、`Decimal`、`Single`、または `Double`に拡大変換されます。 これは、`Long` エラーを発生させることなく、これらの型のいずれかに <xref:System.OverflowException?displayProperty=nameWithType> を変換できることを意味します。
 
-- **Type Characters.** あるリテラルにリテラルの型文字 `L` を付けると、そのリテラルは `Long` に変換されます。 ある識別子に識別子の型文字 `&` を付けると、その識別子は整数型 (`Long`) に変換されます。
+- **文字を入力します。** あるリテラルにリテラルの型文字 `L` を付けると、そのリテラルは `Long` に変換されます。 ある識別子に識別子の型文字 `&` を付けると、その識別子は整数型 (`Long`) に変換されます。
 
-- **Framework Type.** .NET Framework において対応する型は、<xref:System.Int64?displayProperty=nameWithType> 構造体です。
+- **フレームワークの種類。** .NET Framework において対応する型は、<xref:System.Int64?displayProperty=nameWithType> 構造体です。
 
 ## <a name="see-also"></a>関連項目
 
@@ -82,6 +82,6 @@ Dim number = &H_0FAC_0326_1489_D68CL
 - [データの種類](../../../visual-basic/language-reference/data-types/index.md)
 - [Integer データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)
 - [Short データ型](../../../visual-basic/language-reference/data-types/short-data-type.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

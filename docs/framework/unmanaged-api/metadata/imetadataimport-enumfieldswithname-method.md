@@ -40,39 +40,39 @@ HRESULT EnumFieldsWithName (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [入力、出力]列挙子へのポインター。  
   
  `cl`  
- [in] The token of the type whose fields are to be enumerated.  
+ からフィールドを列挙する型のトークン。  
   
  `szName`  
- [in] The field name that limits the scope of the enumeration.  
+ から列挙型のスコープを制限するフィールド名。  
   
  `rFields`  
- [out] Array used to store the FieldDef tokens.  
+ 入出力FieldDef トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rFields` 配列の最大サイズ。  
   
  `pcTokens`  
- [out] The actual number of FieldDef tokens returned in `rFields`.  
+ 入出力`rFields`で返された FieldDef トークンの実際の数。  
   
-## <a name="remarks"></a>Remarks  
- Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.  
+## <a name="remarks"></a>コメント  
+ [IMetaDataImport:: EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md)とは異なり、`EnumFieldsWithName` は、指定された名前のないすべてのフィールドトークンを破棄します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName` returned successfully.|  
-|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumFieldsWithName` が正常に返されました。|  
+|`S_FALSE`|列挙するフィールドがありません。 この場合、`pcTokens` は0になります。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

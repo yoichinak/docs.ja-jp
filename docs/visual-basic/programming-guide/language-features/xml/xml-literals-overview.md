@@ -15,42 +15,42 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346202"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML リテラルの概要 (Visual Basic)
-An *XML literal* allows you to incorporate XML directly into your Visual Basic code. The XML literal syntax represents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is the similar to the XML 1.0 syntax. This makes it easier to create XML elements and documents programmatically because your code has the same structure as the final XML.  
+*Xml リテラル*を使用すると、xml を Visual Basic コードに直接組み込むことができます。 XML リテラルの構文は [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトを表し、XML 1.0 の構文に似ています。 これにより、コードが最終的な XML と同じ構造を持つため、XML 要素とドキュメントをプログラムによって簡単に作成できます。  
   
- Visual Basic compiles XML literals into [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] provides a simple object model for creating and manipulating XML, and this model integrates well with [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. 詳細については、「<xref:System.Xml.Linq.XElement>」を参照してください。  
+ Visual Basic は、XML リテラルを [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトにコンパイルします。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] には、XML を作成および操作するための簡単なオブジェクトモデルが用意されています。このモデルは、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]と密接に連携しています。 詳細については、「 <xref:System.Xml.Linq.XElement>」を参照してください。  
   
- You can embed a Visual Basic expression in an XML literal. At run time, your application creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object for each literal, incorporating the values of the embedded expressions. This lets you specify dynamic content inside an XML literal. For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ XML リテラルに Visual Basic 式を埋め込むことができます。 実行時に、アプリケーションは、埋め込み式の値を組み込んで、各リテラルの [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトを作成します。 これにより、XML リテラル内に動的コンテンツを指定できます。 詳細については、「 [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)」を参照してください。  
   
- For more information about the differences between the XML literal syntax and the XML 1.0 syntax, see [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
+ Xml リテラル構文と XML 1.0 構文の違いの詳細については、「 [Xml リテラルと xml 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。  
   
-## <a name="simple-literals"></a>Simple Literals  
- You can create a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object in your Visual Basic code by typing or pasting in valid XML. An XML element literal returns an <xref:System.Xml.Linq.XElement> object. For more information, see [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) and [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md). The following example creates an XML element that has several child elements.  
+## <a name="simple-literals"></a>単純なリテラル  
+ Visual Basic コードに [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトを作成するには、有効な XML を入力するか、貼り付けます。 XML 要素リテラルは <xref:System.Xml.Linq.XElement> オブジェクトを返します。 詳細については、「 [Xml 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)と xml リテラル」と「Xml [1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。 次の例では、複数の子要素を持つ XML 要素を作成します。  
   
  [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
- You can create an XML document by starting an XML literal with `<?xml version="1.0"?>`, as shown in the following example. An XML document literal returns an <xref:System.Xml.Linq.XDocument> object. For more information, see [XML Document Literal](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
+ 次の例に示すように、`<?xml version="1.0"?>`で XML リテラルを開始することで、XML ドキュメントを作成できます。 XML ドキュメントリテラルは、<xref:System.Xml.Linq.XDocument> オブジェクトを返します。 詳細については、「 [XML ドキュメントリテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)」を参照してください。  
   
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 > [!NOTE]
-> The XML literal syntax in Visual Basic is not identical to the syntax in the XML 1.0 specification. For more information, see [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
+> Visual Basic の XML リテラル構文は、XML 1.0 仕様の構文と同一ではありません。 詳細については、「 [Xml リテラル」と「xml 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。  
   
-## <a name="line-continuation"></a>Line Continuation  
- An XML literal can span multiple lines without using line continuation characters (the space-underscore-enter sequence). This makes it easier to compare XML literals in code with XML documents.  
+## <a name="line-continuation"></a>行の連結  
+ XML リテラルは、行連結文字を使用せずに、複数の行にまたがることができます (スペース-アンダースコア-入力シーケンス)。 これにより、コード内の XML リテラルを XML ドキュメントと比較しやすくなります。  
   
- The compiler treats line continuation characters as part of an XML literal. Therefore, you should use the space-underscore-enter sequence only when it belongs in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object.  
+ コンパイラは、行連結文字を XML リテラルの一部として扱います。 そのため、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトに属している場合にのみ、スペース-アンダースコア-enter シーケンスを使用する必要があります。  
   
- However, you do need line continuation characters if you have a multiline expression in an embedded expression. For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ ただし、埋め込み式に複数行式がある場合は、行連結文字が必要になります。 詳細については、「 [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)」を参照してください。  
   
-## <a name="embedding-queries-in-xml-literals"></a>Embedding Queries in XML Literals  
- You can use a query in an embedded expression. When you do this, the elements returned by the query are added to the XML element. This lets you add dynamic content, such as the result of a user's query, to an XML literal.  
+## <a name="embedding-queries-in-xml-literals"></a>XML リテラルへのクエリの埋め込み  
+ 埋め込み式では、クエリを使用できます。 この操作を行うと、クエリによって返される要素が XML 要素に追加されます。 これにより、ユーザーのクエリの結果などの動的なコンテンツを XML リテラルに追加できます。  
   
- For example, the following code uses an embedded query to create XML elements from the members of the `phoneNumbers2` array and then add those elements as children of `contact2`.  
+ たとえば、次のコードでは、埋め込みクエリを使用して `phoneNumbers2` 配列のメンバーから XML 要素を作成し、それらの要素を `contact2`の子として追加しています。  
   
  [!code-vb[VbXMLSamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#7)]  
   
-## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>How the Compiler Creates Objects from XML Literals  
- The Visual Basic compiler translates XML literals into calls to the equivalent [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] constructors to build up the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object. For example, the Visual Basic compiler will translate the following code example into a call to the <xref:System.Xml.Linq.XProcessingInstruction> constructor for the XML version instruction, calls to the <xref:System.Xml.Linq.XElement> constructor for the `<contact>`, `<name>`, and `<phone>` elements, and calls to the <xref:System.Xml.Linq.XAttribute> constructor for the `type` attribute. Specifically, given the attributes in the following sample, the Visual Basic compiler will call the <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> constructor twice. The first will pass the value `type` for the `name` parameter and the value `home` for the `value` parameter. The second will also pass the value `type` for the `name` parameter, but the value `work` for the `value` parameter.  
+## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>コンパイラが XML リテラルからオブジェクトを作成する方法  
+ Visual Basic コンパイラは、XML リテラルを同等の [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] コンストラクターの呼び出しに変換し、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトを構築します。 たとえば、Visual Basic コンパイラは、次のコード例を XML バージョン命令の <xref:System.Xml.Linq.XProcessingInstruction> コンストラクターの呼び出しに変換し、`<contact>`、`<name>`、および `<phone>` の要素に対して <xref:System.Xml.Linq.XElement> コンストラクターを呼び出し、<xref:System.Xml.Linq.XAttribute> 属性の `type` コンストラクターを呼び出します。 具体的には、次のサンプルの属性を指定すると、Visual Basic コンパイラは、<xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> コンストラクターを2回呼び出します。 最初のは、`name` パラメーターの値 `type` と `value` パラメーターの値 `home` を渡します。 2番目のパラメーターは、`name` パラメーターの値 `type` も渡しますが、`value` パラメーターの値 `work` を渡します。  
   
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   

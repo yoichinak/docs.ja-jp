@@ -51,7 +51,7 @@ CLR と同様に、DLR は .NET Framework の一部であり、.NET Framework �
 
 - IronPython。 [GitHub](https://github.com/IronLanguages/ironpython2) の Web サイトから、オープン ソース ソフトウェアとして入手できます。
 
-- IronRuby。 Available as open-source software from the [IronRuby](http://ironruby.net/) website.
+- IronRuby。 [IronRuby](http://ironruby.net/) web サイトからオープンソースソフトウェアとして入手できます。
 
 ## <a name="primary-dlr-advantages"></a>DLR の主な利点
  DLR には、次の利点があります。
@@ -74,7 +74,7 @@ CLR と同様に、DLR は .NET Framework の一部であり、.NET Framework �
 ## <a name="dlr-architecture"></a>DLR のアーキテクチャ
  動的言語ランタイムのアーキテクチャを次の図に示します。
 
- ![Dynamic Language Runtime Architecture Overview](./media/dlr-archoverview.png "DLR_ArchOverview") DLR architecture
+ ![動的言語ランタイムアーキテクチャの概要](./media/dlr-archoverview.png "DLR_ArchOverview")DLR のアーキテクチャ
 
  DLR は、動的言語のサポートを強化するために一連のサービスを CLR に追加します。 これらのサービスには、次のようなものが含まれます。
 

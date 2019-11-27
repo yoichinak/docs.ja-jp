@@ -15,20 +15,20 @@ ms.locfileid: "74344102"
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard オブジェクト
 クリップボードを操作するためのメソッドを提供します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `My.Computer.Clipboard` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>」をご覧ください。  
   
- For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
+ 詳細については、「[クリップボードからのデータの格納と読み取り](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)」を参照してください。  
   
 > [!NOTE]
-> You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.  
+> <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> クラスのメソッドを使用してクリップボードを操作することもできます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **名前空間:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)  
+ **クラス:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (<xref:System.Windows.Forms.Clipboard>へのアクセスを提供します)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
 ## <a name="see-also"></a>関連項目
 

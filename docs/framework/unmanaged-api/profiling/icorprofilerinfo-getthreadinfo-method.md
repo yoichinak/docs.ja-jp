@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449895"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo メソッド
-Gets the current Win32 thread identity for the specified thread.  
+指定したスレッドの現在の Win32 スレッド id を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,12 +35,12 @@ HRESULT GetThreadInfo(
   
 ## <a name="parameters"></a>パラメーター  
  `threadId`  
- [in] The ID of the thread for which to get the current Win32 ID.  
+ から現在の Win32 ID を取得するスレッドの ID。  
   
  `pdwWin32ThreadId`  
- [out] A pointer to the specified thread's current Win32 thread ID.  
+ 入出力指定したスレッドの現在の Win32 スレッド ID へのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -49,6 +49,6 @@ HRESULT GetThreadInfo(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

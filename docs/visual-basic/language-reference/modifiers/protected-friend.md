@@ -13,14 +13,14 @@ ms.locfileid: "74351315"
 ---
 # <a name="protected-friend-visual-basic"></a>Protected Friend (Visual Basic)
 
-キーワード組み合わせ `Protected Friend` はメンバー アクセス修飾子です。 It confers both [Friend](friend.md) access and [Protected](protected.md) access on the declared elements, so they are accessible from anywhere in the same assembly, from their own class, and from derived classes. You can specify `Protected Friend` only on members of classes; you cannot apply `Protected Friend` to members of a structure because structures cannot be inherited.
+キーワード組み合わせ `Protected Friend` はメンバー アクセス修飾子です。 このクラスは、宣言された要素に対して[フレンド](friend.md)アクセスと[保護された](protected.md)アクセスの両方を実行するため、同じアセンブリ内の任意の場所、独自のクラス、および派生クラスからアクセスできます。 `Protected Friend` は、クラスのメンバーに対してのみ指定できます。構造体のメンバーに `Protected Friend` を適用することはできません。構造体を継承することはできません。
 
 > [!NOTE]
-> In Visual Studio, selecting F1 help on `protected friend` provides help for either [protected](protected.md) or [friend](friend.md). The IDE picks the single token under the cursor rather than the compound word.
+> Visual Studio では、`protected friend` で F1 ヘルプを選択すると、 [protected](protected.md)または[friend](friend.md)のヘルプが表示されます。 IDE は、複合単語ではなくカーソルの下にある1つのトークンを選択します。
 
 ## <a name="rules"></a>ルール
 
-**Declaration Context.** You can use `Protected Friend` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+**宣言コンテキスト。** `Protected Friend` はクラスレベルでのみ使用できます。 つまり、`Protected` 要素の宣言コンテキストはクラスである必要があり、ソースファイル、名前空間、インターフェイス、モジュール、構造体、またはプロシージャにすることはできません。
 
 ## <a name="see-also"></a>関連項目
 
@@ -29,7 +29,7 @@ ms.locfileid: "74351315"
 - [Friend](friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](./private-protected.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

@@ -32,15 +32,15 @@ ALink でプレースホルダーとして使用し、カスタム属性に関�
 internal sealed class AssemblyAttributesGoHereS
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 この型への参照は、ソースにアセンブリのカスタム属性が含まれている netmodule 内部に埋め込まれていることがあります。 これらの型への参照が含まれる 1 つまたは複数の  netmodule からアセンブリ マニフェストを作成すると、ALink はこれらの参照にアタッチされた情報を使用して、実際のカスタム属性を生成します。 このため、この型がインスタンス化されることはなく、その型への参照はビルド処理の一部としてのみ使用され、最終的なアセンブリでは使用されません。
 
 この型への参照は、セキュリティに関連せず複数の用途を持たないカスタム属性を示します。
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+これらの型は、.NET Framework 内で "internal" とマークされ、<xref:System.Runtime.CompilerServices> 名前空間に配置されます。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 mscorlib.dll
 

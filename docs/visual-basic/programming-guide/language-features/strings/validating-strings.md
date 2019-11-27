@@ -15,20 +15,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346248"
 ---
 # <a name="validating-strings-in-visual-basic"></a>Visual Basic における文字列の検証
-This section discusses how to validate strings in Visual Basic.  
+ここでは、Visual Basic で文字列を検証する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [How to: Validate File Names and Paths in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
- How to determine whether a string represents a file name or path.  
+ [方法: Visual Basic でファイル名とパスを検証する](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
+ 文字列がファイル名またはパスを表すかどうかを確認する方法。  
   
  [方法: 日付または時刻を表す文字列を検証する](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-strings-that-represent-dates-or-times.md)  
- How to determine whether a string represents a valid date.  
+ 文字列が有効な日付を表すかどうかを確認する方法。  
   
- [Using Regular Expressions with the MaskedTextBox Control in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
- Demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.  
+ [Visual Basic での MaskedTextBox コントロールでの正規表現の使用](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
+ 単純な正規表現を変換して、<xref:System.Windows.Forms.MaskedTextBox> コントロールと連携させる方法を示します。  
   
  [チュートリアル: パスワードの複雑さの検証](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
- How to determine whether a string has the characteristics of a strong password.  
+ 文字列に強力なパスワードの特性があるかどうかを確認する方法。  
   
 ## <a name="see-also"></a>関連項目
 
