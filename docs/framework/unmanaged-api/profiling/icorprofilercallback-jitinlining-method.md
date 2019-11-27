@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449908"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>ICorProfilerCallback::JITInlining メソッド
-Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.  
+Just-in-time (JIT) コンパイラが、別の関数と共に関数を挿入しようとしていることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,20 +36,20 @@ HRESULT JITInlining(
   
 ## <a name="parameters"></a>パラメーター  
  `callerId`  
- [in] The ID of the function into which the `calleeId` function will be inserted.  
+ から`calleeId` 関数が挿入される関数の ID。  
   
  `calleeId`  
- [in] The ID of the function to be inserted.  
+ から挿入する関数の ID。  
   
  `pfShouldInline`  
- [out] `true` to allow the insertion to occur; otherwise, `false`.  
+ [out] 挿入を行うことができるように `true` します。それ以外の場合は、`false`ます。  
   
-## <a name="remarks"></a>Remarks  
- The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function. Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.  
+## <a name="remarks"></a>コメント  
+ プロファイラーは `pfShouldInline` を `false` に設定して、`calleeId` 関数が `callerId` 関数に挿入されないようにすることができます。 また、プロファイラーは、 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列挙体の COR_PRF_DISABLE_INLINING 値を使用して、インライン挿入をグローバルに無効にすることができます。  
   
- Functions inserted inline do not raise events for entering or leaving. Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph. Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.  
+ インラインで挿入された関数は、入力または終了するためのイベントを発生させません。 したがって、正確なコールグラフを生成するためには、プロファイラーで `pfShouldInline` を `false` に設定する必要があります。 `pfShouldInline` を `false` に設定すると、パフォーマンスに影響します。インライン挿入では通常、速度が向上し、挿入されたメソッドの個別の JIT コンパイルイベントの数が減少するためです。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -58,6 +58,6 @@ HRESULT JITInlining(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441561"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 列挙型
-Specifies options for a PInvoke call.  
+PInvoke 呼び出しのオプションを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -65,36 +65,36 @@ typedef enum  CorPinvokeMap {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`pmNoMangle`|Use each member name as specified.|  
+|`pmNoMangle`|各メンバー名は、指定されたとおりに使用します。|  
 |`pmCharSetMask`|予約済み。|  
 |`pmCharSetNotSpec`|予約済み。|  
-|`pmCharSetAnsi`|Marshal strings as multiple-byte character strings.|  
-|`pmCharSetUnicode`|Marshal strings as Unicode 2-byte characters.|  
-|`pmCharSetAuto`|Automatically marshal strings appropriately for the target operating system. The default is Unicode on Windows NT, Windows 2000, Windows XP, and the Windows Server 2003 family; the default is ANSI on Windows 98 and Windows Me.|  
+|`pmCharSetAnsi`|文字列を複数バイト文字列としてマーシャリングします。|  
+|`pmCharSetUnicode`|文字列を Unicode 2 バイト文字としてマーシャリングします。|  
+|`pmCharSetAuto`|対象のオペレーティングシステムに合わせて自動的に文字列をマーシャリングします。 既定値は、Windows NT、Windows 2000、Windows XP、および Windows Server 2003 ファミリの Unicode です。Windows 98 および Windows Me では、既定値は ANSI です。|  
 |`pmBestFitUseAssem`|予約済み。|  
-|`pmBestFitEnabled`|Perform best-fit mapping of Unicode characters that lack an exact match in the ANSI character set.|  
-|`pmBestFitDisabled`|Do not perform best-fit mapping of Unicode characters. In this case, all unmappable characters will be replaced by a ‘?’.|  
+|`pmBestFitEnabled`|ANSI 文字セットと完全に一致しない Unicode 文字の最適マッピングを実行します。|  
+|`pmBestFitDisabled`|Unicode 文字の最適マッピングを実行しないでください。 この場合、マップされていないすべての文字は、'? ' に置き換えられます。|  
 |`pmBestFitMask`|予約済み。|  
 |`pmThrowOnUnmappableCharUseAssem`|予約済み。|  
-|`pmThrowOnUnmappableCharEnabled`|Throw an exception when the interop marshaler encounters an unmappable character.|  
-|`pmThrowOnUnmappableCharDisabled`|Do not throw an exception when the interop marshaler encounters an unmappable character.|  
-|`pmThrowOnUnmappableCharMask`|予約されています。|  
-|`pmSupportsLastError`|Allow the callee to call the Win32 `SetLastError` function before returning from the attributed method.|  
-|`pmCallConvMask`|予約されています。|  
-|`pmCallConvWinapi`|Use the default platform calling convention. For example, on Windows the default is `StdCall` and on Windows CE .NET it is `Cdecl`.|  
-|`pmCallConvCdecl`|Use the `Cdecl` calling convention. In this case, the caller cleans the stack. This enables calling functions with `varargs` (that is, functions that accept a variable number of parameters).|  
-|`pmCallConvStdcall`|Use the `StdCall` calling convention. In this case, the callee cleans the stack. This is the default convention for calling unmanaged functions with platform invoke.|  
-|`pmCallConvThiscall`|Use the `ThisCall` calling convention. In this case, the first parameter is the `this` pointer and is stored in register ECX. Other parameters are pushed on the stack. The `ThisCall` calling convention is used to call methods on classes exported from an unmanaged DLL.|  
+|`pmThrowOnUnmappableCharEnabled`|相互運用マーシャラーがマップされていない文字を検出したときに、例外をスローします。|  
+|`pmThrowOnUnmappableCharDisabled`|相互運用マーシャラーがマップ不可能な文字を検出した場合は、例外をスローしないでください。|  
+|`pmThrowOnUnmappableCharMask`|予約済み|  
+|`pmSupportsLastError`|呼び出し先が、属性付きメソッドから戻る前に Win32 `SetLastError` 関数を呼び出すことができるようにします。|  
+|`pmCallConvMask`|予約済み|  
+|`pmCallConvWinapi`|既定のプラットフォーム呼び出し規約を使用します。 たとえば、Windows では、既定値は `StdCall` であり Windows CE .NET では `Cdecl`です。|  
+|`pmCallConvCdecl`|`Cdecl` の呼び出し規約を使用します。 この場合、呼び出し元はスタックを消去します。 これにより、`varargs` (つまり、可変個のパラメーターを受け取る関数) を使用して関数を呼び出すことができます。|  
+|`pmCallConvStdcall`|`StdCall` の呼び出し規約を使用します。 この場合、呼び出し先がスタックを消去します。 これは、プラットフォーム呼び出しでアンマネージ関数を呼び出す場合の既定の規則です。|  
+|`pmCallConvThiscall`|`ThisCall` の呼び出し規約を使用します。 この場合、最初のパラメーターは `this` ポインターであり、レジスタ ECX に格納されます。 その他のパラメーターはスタックにプッシュされます。 `ThisCall` 呼び出し規約は、アンマネージ DLL からエクスポートされたクラスのメソッドを呼び出すために使用されます。|  
 |`pmCallConvFastcall`|予約済み。|  
 |`pmMaxValue`|予約済み。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

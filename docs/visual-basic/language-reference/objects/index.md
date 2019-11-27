@@ -45,7 +45,7 @@ ms.locfileid: "74344153"
 |[My.WebServices オブジェクト](../../../visual-basic/language-reference/objects/my-webservices-object.md)|現在のプロジェクトによって参照される各 Web サービスの単一のインスタンスを作成してアクセスするためのプロパティを提供します。|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|構造化テキスト ファイルの解析に使用するメソッドとプロパティを提供します。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../../visual-basic/index.md)

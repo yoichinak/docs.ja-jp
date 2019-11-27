@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448878"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints メソッド
-Gets all the sequence points within this method.  
+このメソッド内のすべてのシーケンスポイントを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,35 +41,35 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>パラメーター  
  `cPoints`  
- [in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.  
+ から`offsets`、`documents`、`lines`、`columns`、`endLines`、および `endColumns` の各配列のサイズを受け取る `ULONG32`。  
   
  `pcPoints`  
- [out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.  
+ 入出力シーケンスポイントを格納するために必要なバッファーの長さを受け取る `ULONG32` へのポインター。  
   
  `offsets`  
- [in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.  
+ からシーケンスポイントのメソッドの先頭からの MSIL (Microsoft 中間言語) オフセットを格納する配列。  
   
  `documents`  
- [in] An array in which to store the documents in which the sequence points are located.  
+ からシーケンスポイントが配置されているドキュメントを格納する配列。  
   
  `lines`  
- [in] An array in which to store the lines in the documents at which the sequence points are located.  
+ からシーケンスポイントが配置されているドキュメント内の行を格納する配列。  
   
  `columns`  
- [in] An array in which to store the columns in the documents at which the sequence points are located.  
+ からシーケンスポイントが配置されているドキュメント内の列を格納する配列。  
   
  `endLines`  
- [in] The array of lines in the documents at which the sequence points end.  
+ からシーケンスポイントが終了するドキュメント内の行の配列。  
   
  `endColumns`  
- [in] The array of columns in the documents at which the sequence points end.  
+ からシーケンスポイントが終了するドキュメント内の列の配列。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

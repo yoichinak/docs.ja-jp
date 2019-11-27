@@ -1,5 +1,5 @@
 ---
-title: Optional
+title: ［オプション］
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Optional
@@ -17,17 +17,17 @@ ms.locfileid: "74351434"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 
-Specifies that a procedure argument can be omitted when the procedure is called.
+プロシージャを呼び出すときにプロシージャ引数を省略できることを指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-For each optional parameter, you must specify a constant expression as the default value of that parameter. If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.
+省略可能なパラメーターごとに、そのパラメーターの既定値として定数式を指定する必要があります。 式が[Nothing](../../../visual-basic/language-reference/nothing.md)と評価された場合、値のデータ型の既定値がパラメーターの既定値として使用されます。
 
-If the parameter list contains an optional parameter, every parameter that follows it must also be optional.
+パラメーターリストに省略可能なパラメーターが含まれている場合は、その後に続くすべてのパラメーターも省略可能である必要があります。
 
 `Optional` 修飾子は、次のコンテキストで使用できます。
 
-- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
 
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 
@@ -36,14 +36,14 @@ If the parameter list contains an optional parameter, every parameter that follo
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
 
 > [!NOTE]
-> When calling a procedure with or without optional parameters, you can pass arguments by position or by name. For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
+> 省略可能なパラメーターを指定して、または使用せずにプロシージャを呼び出すと、位置または名前によって引数を渡すことができます。 詳細については、「[位置と名前による引数の引き渡し](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)」を参照してください。
 
 > [!NOTE]
-> You can also define a procedure with optional parameters by using overloading. If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t. 詳細については、「 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。
+> オーバーロードを使用して、省略可能なパラメーターを持つプロシージャを定義することもできます。 省略可能なパラメーターが1つある場合は、2つのオーバーロードされたバージョンのプロシージャを定義できます。1つはパラメーターを受け取り、もう1つはパラメーターを受け入れません。 詳細については、「 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-The following example defines a procedure that has an optional parameter.
+次の例では、省略可能なパラメーターを持つプロシージャを定義します。
 
 ```vb
 Public Function FindMatches(ByRef values As List(Of String),
@@ -66,11 +66,11 @@ End Function
 
 ## <a name="example"></a>例
 
-The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name. The procedure has two optional parameters.
+次の例では、位置によって渡される引数と、名前で渡される引数を使用してプロシージャを呼び出す方法を示します。 プロシージャには、2つの省略可能なパラメーターがあります。
 
 [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)
 - [省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)

@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448095"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate メソッド
-Generates and gets a code section using the specified name and flag values.  
+指定された名前とフラグ値を使用して、コードセクションを生成して取得します。  
   
- This method is obsolete and should not be used.  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,26 +39,26 @@ HRESULT GetSectionCreate (
   
 ## <a name="parameters"></a>パラメーター  
  `name`  
- [in] A pointer to a string that specifies the name of the section to be created.  
+ から作成するセクションの名前を指定する文字列へのポインター。  
   
  `flags`  
- [in] Flags that specify options.  
+ からオプションを指定するフラグ。  
   
  `section`  
- [out] A pointer to the newly created code section.  
+ 入出力新しく作成されたコードセクションへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.  
+## <a name="remarks"></a>コメント  
+ 他のメソッドによって処理されない特殊なセクション要件がある場合にのみ、`GetSectionCreate` を呼び出します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

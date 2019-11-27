@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443145"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 メソッド
-Maps a managed code instruction pointer to the JIT-recompiled version of a function.  
+マネージコード命令ポインターを JIT 再コンパイルされた関数のバージョンにマップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,21 +36,21 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>パラメーター  
  `ip`  
- [in] The instruction pointer in managed code.  
+ からマネージコード内の命令ポインター。  
   
  `pFunctionId`  
- [out] The function ID.  
+ 入出力関数 ID。  
   
  `pReJitId`  
- [out] The identity of the JIT-recompiled version of the function.  
+ 入出力関数の JIT 再コンパイルバージョンの id。  
   
-## <a name="remarks"></a>Remarks  
- `GetFunctionFromIP2` is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.  
+## <a name="remarks"></a>コメント  
+ `GetFunctionFromIP2` は `GetFunctionFromIP`に似ていますが、指定された IP アドレスを含む関数の関数 ID ではなく、JIT 再コンパイルされた ID を取得する点が異なります。  
   
 > [!NOTE]
-> `GetFunctionFromIP2` can trigger a garbage collection, whereas `GetFunctionFromIP` will not.  For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+> `GetFunctionFromIP2` はガベージコレクションをトリガーできますが、`GetFunctionFromIP` は実行されません。  詳細については、「 [HRESULT CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)」を参照してください。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -59,6 +59,6 @@ HRESULT GetFunctionFromIP2(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

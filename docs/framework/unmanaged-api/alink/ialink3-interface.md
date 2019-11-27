@@ -14,18 +14,18 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441799"
 ---
 # <a name="ialink3-interface"></a>IALink3 インターフェイス
-Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.  
+には、`SetManifestFile`という単一のメソッドが用意されています。これにより、アセンブリの作成時にリンカーが使用するマニフェストファイルを指定またはリセットできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [SetManifestFile メソッド](setmanifestfile-method.md)  
- Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.  
+ リンカーがアセンブリを作成するときに使用するマニフェストファイルを指定またはリセットできます。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [ALink API](index.md)  
  .NET Framework アセンブリと非バインド モジュールの作成をサポートします。  
   
  [IALink インターフェイス](ialink-interface.md)  
- Helps in constructing .NET Framework assemblies.  
+ .NET Framework アセンブリの構築に役立ちます。  
   
  [Al.exe (アセンブリ リンカー)](../../tools/al-exe-assembly-linker.md)  
- Generates a file that has an assembly manifest from one or more files that are either modules or resource files.
+ モジュールまたはリソースファイルのいずれかである1つ以上のファイルから、アセンブリマニフェストを含むファイルを生成します。

@@ -36,20 +36,20 @@ HRESULT SetCheckSum(
   
 ## <a name="parameters"></a>パラメーター  
  `algorithmId`  
- [in] The GUID that represents the algorithm identifier.  
+ からアルゴリズム識別子を表す GUID。  
   
  `checkSumSize`  
- [in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.  
+ から`checkSum` バッファーのサイズ (バイト単位) を示す `ULONG32`。  
   
  `checkSum`  
- [in] The buffer that stores the checksum information.  
+ からチェックサム情報を格納するバッファー。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedDocumentWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

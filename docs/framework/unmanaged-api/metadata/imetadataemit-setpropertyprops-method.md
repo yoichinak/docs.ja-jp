@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440540"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps メソッド
-Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+以前の呼び出し[プロパティメソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)の呼び出しで定義されたプロパティのメタデータに格納されている機能を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,39 +42,39 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>パラメーター  
  `pr`  
- [in] The token for the property to be changed  
+ から変更するプロパティのトークン  
   
  `dwPropFlags`  
- [in] Property flags.  
+ からプロパティフラグ。  
   
  `dwCPlusTypeFlag`  
- [in] The type of the property's default value.  
+ からプロパティの既定値の型。  
   
  `pValue`  
- [in] The default value for the property.  
+ からプロパティの既定値。  
   
  `cchValue`  
- [in] The count of (Unicode) characters in `pValue`.  
+ から`pValue`内の (Unicode) 文字の数。  
   
  `mdSetter`  
- [in] The method that sets the property value.  
+ からプロパティ値を設定するメソッド。  
   
  `mdGetter`  
- [in] The method that gets the property value.  
+ からプロパティ値を取得するメソッド。  
   
  `rmdOtherMethods[]`  
- [in] An array of other methods associated with the property. Terminate this array with an `mdTokenNil` token.  
+ からプロパティに関連付けられている他のメソッドの配列。 `mdTokenNil` トークンを使用して、この配列を終了します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

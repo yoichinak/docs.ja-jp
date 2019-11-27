@@ -12,12 +12,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346992"
 ---
 # <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a>プロシージャ呼び出しまたは引数が有効ではありません。(Visual Basic)
-Some part of the call cannot be completed.  
+呼び出しの一部を完了できません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.  
+- 許容される引数の範囲を確認して、配置が許可された値を超えていないことを確認してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)

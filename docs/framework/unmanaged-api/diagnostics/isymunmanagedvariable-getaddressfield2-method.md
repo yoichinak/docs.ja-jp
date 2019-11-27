@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446125"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a>ISymUnmanagedVariable::GetAddressField2 メソッド
-Gets the second address field for this variable. Its meaning depends on the kind of address.  
+この変数の2番目のアドレスフィールドを取得します。 その意味は、アドレスの種類によって異なります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,15 +34,15 @@ HRESULT GetAddressField2(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the second address field.  
+ 入出力2番目のアドレスフィールドを受け取る `ULONG32` へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedVariable インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
 - [GetAddressField1 メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)

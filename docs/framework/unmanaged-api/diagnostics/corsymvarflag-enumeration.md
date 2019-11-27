@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448551"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag 列挙体
-Indicates whether a variable is compiler-generated.  
+変数がコンパイラによって生成されたかどうかを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,11 +37,11 @@ typedef enum CorSymVarFlag
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|Indicates that the given variable is compiler-generated.|  
+|`VAR_IS_COMP_GEN`|指定された変数がコンパイラによって生成されることを示します。|  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [シンボル ストア診断列挙型](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

@@ -15,9 +15,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331935"
 ---
 # <a name="off-visual-basic"></a>Off (Visual Basic)
-Turns a compiler option off.  
+コンパイラオプションをオフにします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  キーワード `Off` は次のコンテキストで使用できます。  
   
  [Option Explicit ステートメント](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
@@ -26,6 +26,6 @@ Turns a compiler option off.
   
  [Option Infer ステートメント](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [キーワード](../../visual-basic/language-reference/keywords/index.md)

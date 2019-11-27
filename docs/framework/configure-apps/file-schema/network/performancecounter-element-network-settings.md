@@ -31,23 +31,23 @@ ms.locfileid: "74283092"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
- 以降のセクションでは、属性、子要素、および親要素について説明します。  
+## <a name="attributes-and-elements"></a>属性と要素  
+ 次のセクションでは、属性、子要素、親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
 |`enabled`|ネットワークパフォーマンスカウンターを有効にするかどうかを指定します。 既定値は `false` です。|  
   
 ### <a name="child-elements"></a>子要素  
- ありません。  
+ [なし]。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|[説明]|  
+|要素|説明|  
 |-------------|-----------------|  
-|[settings](settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
+|[設定](settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
 ## <a name="remarks"></a>コメント  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
@@ -73,7 +73,7 @@ ms.locfileid: "74283092"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>

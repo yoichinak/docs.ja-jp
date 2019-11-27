@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449126"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL メソッド
-Returns the uniform resource locator (URL) for this document.  
+このドキュメントの URL (uniform resource locator) を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,14 +39,14 @@ HRESULT GetURL(
  [入力] `szURL` バッファーのサイズ (文字単位)。  
   
  `pcchUrl`  
- [out] A pointer to a variable that receives the size of the URL, including the null termination.  
+ 入出力Null 終了を含む、URL のサイズを受け取る変数へのポインター。  
   
  `szUrl`  
- [out] The buffer containing the URL.  
+ 入出力URL を格納しているバッファー。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, an error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、エラーコード。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352354"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>How to: Serialize Using XmlSerializer (Visual Basic)
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>方法: XmlSerializer を使用してシリアル化する (Visual Basic)
 このトピックでは、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化および逆シリアル化を行う例について説明します。  
   
 ## <a name="example"></a>例  
@@ -80,6 +80,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Serializing Object Graphs that Contain XElement Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [XElement オブジェクトを含むオブジェクトグラフのシリアル化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

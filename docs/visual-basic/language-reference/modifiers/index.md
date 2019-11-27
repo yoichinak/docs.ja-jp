@@ -15,7 +15,7 @@ ms.locfileid: "74351541"
 ## <a name="in-this-section"></a>このセクションの内容  
  [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
+ [アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)  
   
  [Async](../../../visual-basic/language-reference/modifiers/async.md)  
   
@@ -23,9 +23,9 @@ ms.locfileid: "74351541"
   
  [ByRef](../../../visual-basic/language-reference/modifiers/byref.md)  
   
- [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)  
+ [ParamArray](../../../visual-basic/language-reference/modifiers/byval.md)  
   
- [default](../../../visual-basic/language-reference/modifiers/default.md)  
+ [Shared](../../../visual-basic/language-reference/modifiers/default.md)  
   
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74351541"
   
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
- [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [MyBase](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
   
  [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "74351541"
   
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
- [オーバーロード](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
  [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
@@ -83,11 +83,11 @@ ms.locfileid: "74351541"
   
  [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
   
- [ReadOnly](../../../visual-basic/language-reference/modifiers/withevents.md)  
+ [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
   
  [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)

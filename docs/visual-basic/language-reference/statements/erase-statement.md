@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343700"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase ステートメント (Visual Basic)
-Used to release array variables and deallocate the memory used for their elements.  
+配列変数を解放し、それらの要素に使用されるメモリの割り当てを解除するために使用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -25,19 +25,19 @@ Erase arraylist
   
 ## <a name="parts"></a>指定項目  
  `arraylist`  
- 必須です。 List of array variables to be erased. 複数の変数を指定するときは、コンマで区切ります。  
+ 必須。 消去する配列変数の一覧。 複数の変数を指定するときは、コンマで区切ります。  
   
-## <a name="remarks"></a>Remarks  
- The `Erase` statement can appear only at procedure level. This means you can release arrays inside a procedure but not at class or module level.  
+## <a name="remarks"></a>コメント  
+ `Erase` ステートメントは、プロシージャレベルでのみ使用できます。 これは、プロシージャ内では、クラスレベルまたはモジュールレベルではなく、配列を解放できることを意味します。  
   
- The `Erase` statement is equivalent to assigning `Nothing` to each array variable.  
+ `Erase` ステートメントは、各配列変数に `Nothing` を割り当てることと同じです。  
   
 ## <a name="example"></a>例  
- The following example uses the `Erase` statement to clear two arrays and free their memory (1000 and 100 storage elements, respectively). The `ReDim` statement then assigns a new array instance to the three-dimensional array.  
+ 次の例では、`Erase` ステートメントを使用して2つの配列をクリアし、メモリ (それぞれ1000と100のストレージ要素) を解放します。 次に、`ReDim` ステートメントによって、3次元配列に新しい配列インスタンスが割り当てられます。  
   
  [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Nothing](../../../visual-basic/language-reference/nothing.md)
 - [ReDim ステートメント](../../../visual-basic/language-reference/statements/redim-statement.md)

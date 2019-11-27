@@ -32,41 +32,41 @@ ms.locfileid: "74343865"
 ---
 # <a name="user-defined-data-type"></a>ユーザー定義型
 
-Holds data in a format you define. The `Structure` statement defines the format.
+では、定義した形式でデータを保持します。 `Structure` ステートメントは、形式を定義します。
 
-Previous versions of Visual Basic support the user-defined type (UDT). The current version expands the UDT to a *structure*. A structure is a concatenation of one or more *members* of various data types. Visual Basic treats a structure as a single unit, although you can also access its members individually.
+以前のバージョンの Visual Basic では、ユーザー定義型 (UDT) がサポートされています。 現在のバージョンは、UDT を*構造体*に拡張します。 構造体は、さまざまなデータ型の1つ以上の*メンバー*を連結したものです。 Visual Basic は、構造体を1つの単位として扱いますが、そのメンバーに個別にアクセスすることもできます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Define and use a structure data type when you need to combine various data types into a single unit, or when none of the elementary data types serve your needs.
+さまざまなデータ型を1つの単位に結合する必要がある場合、または基本データ型のいずれも必要でない場合は、構造体のデータ型を定義して使用します。
 
-The default value of a structure data type consists of the combination of the default values of each of its members.
+構造体のデータ型の既定値は、各メンバーの既定値の組み合わせで構成されます。
 
-## <a name="declaration-format"></a>Declaration Format
+## <a name="declaration-format"></a>宣言の形式
 
-A structure declaration starts with the [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) and ends with the `End Structure` statement. The `Structure` statement supplies the name of the structure, which is also the identifier of the data type the structure is defining. Other parts of the code can use this identifier to declare variables, parameters, and function return values to be of this structure's data type.
+構造体の宣言は、 [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)で始まり、`End Structure` ステートメントで終了します。 `Structure` ステートメントは、構造体の名前を指定します。これは、構造体が定義しているデータ型の識別子でもあります。 コードの他の部分では、この識別子を使用して、この構造体のデータ型の変数、パラメーター、および関数の戻り値を宣言できます。
 
-The declarations between the `Structure` and `End Structure` statements define the members of the structure.
+`Structure` ステートメントと `End Structure` ステートメントの間の宣言では、構造体のメンバーを定義します。
 
-## <a name="member-access-levels"></a>Member Access Levels
+## <a name="member-access-levels"></a>メンバーアクセスレベル
 
-You must declare every member using a [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md) or a statement that specifies access level, such as [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../visual-basic/language-reference/modifiers/private.md). If you use a `Dim` statement, the access level defaults to public.
+すべてのメンバーは、 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)を使用するか、 [Public](../../../visual-basic/language-reference/modifiers/public.md)、 [Friend](../../../visual-basic/language-reference/modifiers/friend.md)、 [Private](../../../visual-basic/language-reference/modifiers/private.md)などのアクセスレベルを指定するステートメントを使用して宣言する必要があります。 `Dim` ステートメントを使用する場合、アクセスレベルの既定値は public です。
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **Memory Consumption.** 他のすべての複合データ型と同様に、構造体の総メモリ使用量を計算する場合、各メンバーのストレージ割り当ての公称サイズを単に合計しただけでは安全ではありません。 さらに、メモリ内に格納される順序が宣言の順序と同じであると仮定するのも安全ではありません。 構造体のストレージ レイアウトを制御する必要がある場合は、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を `Structure` ステートメントに適用します。
+- **メモリ使用量。** 他のすべての複合データ型と同様に、構造体の総メモリ使用量を計算する場合、各メンバーのストレージ割り当ての公称サイズを単に合計しただけでは安全ではありません。 さらに、メモリ内に格納される順序が宣言の順序と同じであると仮定するのも安全ではありません。 構造体のストレージ レイアウトを制御する必要がある場合は、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を `Structure` ステートメントに適用します。
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that user-defined types in other environments are not compatible with Visual Basic structure types.
+- **相互運用に関する考慮事項。** オートメーションまたは COM オブジェクトなどの .NET Framework 用に作成されていないコンポーネントをやり取りする場合、他の環境でのユーザー定義型は Visual Basic 構造型と互換性がないことに注意してください。
 
-- **Widening.** There is no automatic conversion to or from any structure data type. You can define conversion operators on your structure using the [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), and you can declare each conversion operator to be `Widening` or `Narrowing`.
+- **広げ.** 任意の構造体のデータ型との間で自動変換が行われることはありません。 [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)を使用して構造体に変換演算子を定義できます。また、各変換演算子を `Widening` または `Narrowing`として宣言できます。
 
-- **Type Characters.** Structure data types have no literal type character or identifier type character.
+- **文字を入力します。** 構造体のデータ型には、リテラルの型文字または識別子の型文字がありません。
 
-- **Framework Type.** There is no corresponding type in the .NET Framework. All structures inherit from the .NET Framework class <xref:System.ValueType?displayProperty=nameWithType>, but no individual structure corresponds to <xref:System.ValueType?displayProperty=nameWithType>.
+- **フレームワークの種類。** .NET Framework に対応する型がありません。 すべての構造体は .NET Framework クラス <xref:System.ValueType?displayProperty=nameWithType>から継承されますが、<xref:System.ValueType?displayProperty=nameWithType>に対応する個々の構造はありません。
 
 ## <a name="example"></a>例
 
-The following paradigm shows the outline of the declaration of a structure.
+次のパラダイムは、構造体の宣言の概要を示しています。
 
 ```vb
 [Public | Protected | Friend | Protected Friend | Private] Structure structname
@@ -76,12 +76,12 @@ The following paradigm shows the outline of the declaration of a structure.
 End Structure
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.ValueType>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)

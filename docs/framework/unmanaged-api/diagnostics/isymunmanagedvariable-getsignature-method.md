@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446045"
 ---
 # <a name="isymunmanagedvariablegetsignature-method"></a>ISymUnmanagedVariable::GetSignature メソッド
-Gets the signature of this variable.  
+この変数のシグネチャを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +37,20 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>パラメーター  
  `cSig`  
- [in] The length of the buffer pointed to by the `sig` parameter.  
+ から`sig` パラメーターが指すバッファーの長さ。  
   
  `pcSig`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.  
+ 入出力署名を格納するために必要なバッファーのサイズ (文字数) を受け取る `ULONG32` へのポインター。  
   
  `sig`  
- [out] The buffer that stores the signature.  
+ 入出力署名を格納するバッファー。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedVariable インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

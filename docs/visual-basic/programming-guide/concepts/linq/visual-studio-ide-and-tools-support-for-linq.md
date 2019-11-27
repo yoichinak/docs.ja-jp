@@ -9,21 +9,21 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351034"
 ---
-# <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE and Tools Support for LINQ (Visual Basic)
+# <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE およびツールの LINQ のサポート (Visual Basic)
 Visual Studio 統合開発環境 (IDE) では、LINQ アプリケーションの開発をサポートする次の機能が提供されています。  
   
-## <a name="object-relational-designer"></a>Object Relational Designer  
- The Object Relational Designer is a visual design tool that you can use in [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) applications to generate classes in Visual Basic that represent the relational data in an underlying database. 詳しくは、「[Visual Studio の LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)」をご覧ください。  
+## <a name="object-relational-designer"></a>オブジェクト リレーショナル デザイナー  
+ オブジェクトリレーショナルデザイナーは、 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)アプリケーションで使用して、基になるデータベース内のリレーショナルデータを表す Visual Basic のクラスを生成できるビジュアルデザインツールです。 詳しくは、「[Visual Studio の LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)」をご覧ください。  
   
 ## <a name="sqlmetal-command-line-tool"></a>SQLMetal コマンド ライン ツール  
  SQLMetal は、ビルド プロセスで使用できるコマンド ライン ツールです。既存のデータベースから、LINQ to SQL アプリケーションで使用するためのクラスを生成できます。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   
 ## <a name="linq-aware-code-editor"></a>LINQ 対応のコード エディター  
- The Visual Basic code editor supports LINQ extensively with IntelliSense and formatting capabilities.  
+ Visual Basic コードエディターでは、IntelliSense と書式設定機能を使用して LINQ を幅広くサポートしています。  
   
 ## <a name="visual-studio-debugger-support"></a>Visual Studio デバッガーのサポート  
  Visual Studio デバッガーは、クエリ式のデバッグをサポートしています。 詳しくは、「[LINQ のデバッグ](/visualstudio/debugger/debugging-linq)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [統合言語クエリ (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

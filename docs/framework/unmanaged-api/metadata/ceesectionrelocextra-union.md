@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444168"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra 共用体
-Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section.  
+セクションを再配置するために[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)インターフェイスによって使用されるアドレスオフセットを表します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +36,17 @@ typedef union  {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`highAdj`|The upper address adjustment for the section.|  
+|`highAdj`|セクションの上限アドレスの調整。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ共用体](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)

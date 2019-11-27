@@ -21,7 +21,7 @@ ms.locfileid: "74447451"
  コードが入った、または出た例外句のタイプを示します。  
   
  [COR_PRF_CODEGEN_FLAGS 列挙型](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md)  
- Defines the code generation flags that can be set with the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method.  
+ [ICorProfilerFunctionControl:: SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)メソッドで設定できるコード生成フラグを定義します。  
   
  [COR_PRF_FINALIZER_FLAGS 列挙型](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md)  
  オブジェクトのファイナライザーを記述します。  
@@ -36,10 +36,10 @@ ms.locfileid: "74447451"
  ガベージ コレクターのルートのプロパティを示します。  
   
  [COR_PRF_GC_ROOT_KIND 列挙型](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md)  
- Indicates the kind of garbage collector root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.  
+ [ICorProfilerCallback2:: RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)コールバックによって公開されるガベージコレクターのルートの種類を示します。  
   
  [COR_PRF_HIGH_MONITOR 列挙型](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)  
- Provides flags in addition to those found in the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration that the profiler can specify to the [ICorProfilerInfo5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) method when it is loading.  
+ プロファイラーが読み込み時に[ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)メソッドに対して指定できる、 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列挙に含まれるフラグだけでなく、フラグも提供します。  
   
  [COR_PRF_JIT_CACHE 列挙型](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md)  
  キャッシュされている関数検索の結果を示します。  
@@ -68,7 +68,7 @@ ms.locfileid: "74447451"
  [COR_PRF_TRANSITION_REASON 列挙型](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md)  
  マネージド コードからアンマネージド コードへ、またはその逆の遷移の理由を示します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [プロファイルの概要](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
   
  [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  

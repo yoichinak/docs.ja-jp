@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431243"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName メソッド
-Provides the on-disk file name of the symbol store.  
+シンボルストアのディスク上のファイル名を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +37,20 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="parameters"></a>パラメーター  
  `cchName`  
- [in] The size of the `szName` buffer.  
+ から`szName` バッファーのサイズ。  
   
  `pcchName`  
- [out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.  
+ 入出力Null 終了を含む `szName`で返された名前の長さを受け取る変数へのポインター。  
   
  `szName`  
- [out] A pointer to the variable that receives the file name of the symbol store.  
+ 入出力シンボルストアのファイル名を受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

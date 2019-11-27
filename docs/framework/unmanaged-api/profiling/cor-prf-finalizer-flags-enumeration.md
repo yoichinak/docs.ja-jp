@@ -36,12 +36,12 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_FINALIZER_CRITICAL`|The finalizer is critical.|  
+|`COR_PRF_FINALIZER_CRITICAL`|ファイナライザーは重要です。|  
   
-## <a name="remarks"></a>Remarks  
- The `COR_PRF_FINALIZER_FLAGS` enumeration is used by the [ICorProfilerCallback2::FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) method to describe the finalizer for an object.  
+## <a name="remarks"></a>コメント  
+ `COR_PRF_FINALIZER_FLAGS` 列挙体は、 [ICorProfilerCallback2:: FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)メソッドによって、オブジェクトのファイナライザーを記述するために使用されます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -50,6 +50,6 @@ typedef enum {
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

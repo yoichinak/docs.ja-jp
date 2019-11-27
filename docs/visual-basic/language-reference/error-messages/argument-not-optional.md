@@ -13,14 +13,14 @@ ms.locfileid: "74353911"
 ---
 # <a name="argument-not-optional-visual-basic"></a>引数は省略できません。(Visual Basic)
 
-The number and types of arguments must match those expected. Either there is an incorrect number of arguments, or an omitted argument is not optional. An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.  
+引数の数と型は、予期されるものと一致している必要があります。 引数の数が正しくないか、省略された引数が省略可能ではありません。 引数は、プロシージャの定義で `Optional` 宣言されている場合にのみ、ユーザー定義プロシージャの呼び出しから省略できます。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1. Supply all necessary arguments.  
+1. 必要なすべての引数を指定します。  
   
-2. Make sure omitted arguments are optional. If they are not, either supply the argument in the call, or declare the parameter `Optional` in the definition.  
+2. 省略された引数は省略可能であることを確認します。 指定されていない場合は、呼び出しに引数を指定するか、定義内の `Optional` パラメーターを宣言します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)

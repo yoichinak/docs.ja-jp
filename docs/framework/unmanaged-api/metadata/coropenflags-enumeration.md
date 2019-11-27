@@ -56,21 +56,21 @@ typedef enum CorOpenFlags
 |`ofCopyMemory`|ファイルがメモリ内に読み込まれることを示します。 メタデータは自身のコピーを保持する必要があります。|  
 |`ofCacheImage`|互換性のために残されています。 このフラグは無視されます。|  
 |`ofManifestMetadata`|互換性のために残されています。 このフラグは無視されます。|  
-|`ofReadOnly`|Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.|  
-|`ofTakeOwnership`|Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.|  
+|`ofReadOnly`|は、ファイルを読み取り用に開く必要があること、および[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)の `QueryInterface` の呼び出しを行うことができないことを示します。|  
+|`ofTakeOwnership`|[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)への呼び出しを使用してメモリが割り当てられ、メタデータによって解放されることを示します。|  
 |`ofNoTypeLib`|互換性のために残されています。 このフラグは無視されます。|  
-|`ofNoTransform`|.winmd ファイルの自動変換を無効にする必要があることを示します。 つまり、Windows Runtime タイプから .NET Framework タイプへの投射は無効になります。 For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
-|`ofReserved1`|内部使用のために予約されています。|  
-|`ofReserved2`|内部使用のために予約されています。|  
-|`ofReserved`|内部使用のために予約されています。|  
+|`ofNoTransform`|.winmd ファイルの自動変換を無効にする必要があることを示します。 つまり、Windows Runtime タイプから .NET Framework タイプへの投射は無効になります。 詳細については、「 [Windows ランタイムと CLR-.net と Windows ランタイム](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime)」を参照してください。|  
+|`ofReserved1`|内部使用のために予約済みです。|  
+|`ofReserved2`|内部使用のために予約済みです。|  
+|`ofReserved`|内部使用のために予約済みです。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

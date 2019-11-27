@@ -25,17 +25,17 @@ ms.locfileid: "74353982"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
 |[定数の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|このセクションのトピックでは定数とその使用方法について説明します。|  
 |[列挙型の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|このセクションのトピックでは列挙型とその使用方法について説明します。|  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
 |[Const ステートメント](../../../../visual-basic/language-reference/statements/const-statement.md)|整数の宣言に使用される、`Const` ステートメントについて説明します。|  
 |[Enum ステートメント](../../../../visual-basic/language-reference/statements/enum-statement.md)|列挙型の作成に使用される、`Enum` ステートメントについて説明します。|  
 |[Option Explicit ステートメント](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|`Option Explicit` ステートメントについて説明します。このステートメントはモジュール レベルで使用され、そのモジュール内のすべての変数の明示的な宣言を強制します。|  
 |[Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|`Option Infer` ステートメントについて説明します。このステートメントは、変数の宣言でローカル型推論を使用できるようにします。|  
-|[Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|`Object` ステートメントについて説明します。このステートメントは、暗黙的なデータ型変換を拡大変換のみに制限し、遅延バインディングを許可せず、`Option Strict` 型になる暗黙的な型指定も許可しません。|
+|[Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|`Option Strict` ステートメントについて説明します。このステートメントは、暗黙的なデータ型変換を拡大変換のみに制限し、遅延バインディングを許可せず、`Object` 型になる暗黙的な型指定も許可しません。|

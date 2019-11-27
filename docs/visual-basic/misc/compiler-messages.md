@@ -13,4 +13,4 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353312"
 ---
 # <a name="visual-basic-compiler-messages"></a>Visual Basic コンパイラ メッセージ
-This section contains the Visual Basic error messages that occur at compile time.
+ここでは、コンパイル時に発生する Visual Basic エラーメッセージについて説明します。

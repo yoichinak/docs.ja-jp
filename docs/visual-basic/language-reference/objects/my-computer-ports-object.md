@@ -15,21 +15,21 @@ ms.locfileid: "74332019"
 # <a name="mycomputerports-object"></a>My.Computer.Ports オブジェクト
 コンピューターのシリアル ポートにアクセスするためのプロパティとメソッドを提供します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `My.Computer.Ports` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.Devices.Ports>」をご覧ください。  
   
- For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
+ 詳細については、「[コンピューターのポートへのアクセス](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)」を参照してください。  
   
 > [!NOTE]
-> You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.  
+> <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> クラスのプロパティとメソッドを使用して、コンピューターのシリアルポートにアクセスすることもできます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **名前空間:** <xref:Microsoft.VisualBasic.Devices>  
   
  **クラス:** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [My.Computer オブジェクト](../../../visual-basic/language-reference/objects/my-computer-object.md)

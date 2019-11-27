@@ -12,8 +12,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348481"
 ---
-# <a name="example-visual-basic"></a>\<example> (Visual Basic)
-Specifies an example for the member.  
+# <a name="example-visual-basic"></a>\<の例 > (Visual Basic)
+メンバーの例を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -25,16 +25,16 @@ Specifies an example for the member.
  `description`  
  コード例の説明です。  
   
-## <a name="remarks"></a>Remarks  
- The `<example>` tag lets you specify an example of how to use a method or other library member. 一般的に、[\<code>](../../../visual-basic/language-reference/xmldoc/code.md) タグが使用されます。  
+## <a name="remarks"></a>コメント  
+ `<example>` タグを使用すると、メソッドまたはその他のライブラリメンバーを使用する方法の例を指定できます。 一般的に、[\<code>](../../../visual-basic/language-reference/xmldoc/code.md) タグが使用されます。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- This example uses the `<example>` tag to include an example for using the `ID` field.  
+ この例では、`<example>` タグを使用して、`ID` フィールドを使用する例を含めます。  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

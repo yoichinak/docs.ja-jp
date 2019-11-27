@@ -1,5 +1,5 @@
 ---
-title: CorDebugNGenPolicy 列挙型
+title: CorDebugNGenPolicy 列挙体
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -23,7 +23,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204858"
 ---
-# <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy 列挙型
+# <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy 列挙体
 デバッガーがネイティブ イメージ キャッシュからネイティブ (NGen) イメージを読み込むかどうかを指定する値を提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,12 +38,12 @@ enum CorDebugNGENPolicy {
   
 |メンバー名|説明|  
 |-----------------|-----------------|  
-|`DISABLE_LOCAL_NIC`|In a Windows 8.x Store app, the use of images from the local native image cache is disabled. In a desktop app, this setting has no effect.|  
+|`DISABLE_LOCAL_NIC`|Windows 8.x ストアアプリでは、ローカルのネイティブイメージキャッシュからのイメージの使用は無効になっています。 デスクトップアプリでは、この設定による影響はありません。|  
   
-## <a name="remarks"></a>Remarks  
- The `CorDebugNGENPolicy` enumeration is used by the [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) method. Disabling the use of images from the local native image cache provides for a consistent debugging experience by ensuring that the debugger loads debuggable JIT-compiled images instead of optimized native images.  
+## <a name="remarks"></a>コメント  
+ `CorDebugNGENPolicy` 列挙体は、 [ICorDebugProcess5:: EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)メソッドによって使用されます。 ローカルのネイティブイメージキャッシュからのイメージの使用を無効にすると、最適化されたネイティブイメージの代わりにデバッグ可能な JIT コンパイルイメージをデバッガーが読み込むことができるため、一貫したデバッグエクスペリエンスを実現できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -52,6 +52,6 @@ enum CorDebugNGENPolicy {
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

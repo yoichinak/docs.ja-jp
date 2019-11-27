@@ -1,5 +1,5 @@
 ---
-title: Variable uses an Automation type not supported
+title: サポートされていないオートメーション型を変数で使用しています
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID458
@@ -13,16 +13,16 @@ ms.locfileid: "74344828"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>Visual Basic でサポートされていないオートメーションが変数で使用されています。
 
-You tried to use a variable defined in a type library or object library that has a data type not supported by Visual Basic.
+Visual Basic でサポートされていないデータ型を持つタイプライブラリまたはオブジェクトライブラリで定義された変数を使用しようとしました。
 
 ## <a name="to-correct-this-error"></a>このエラーを解決するには
 
-- Use a variable of a type recognized by Visual Basic.
+- Visual Basic によって認識される型の変数を使用します。
 
-     -または-
+     または
 
-- If you encounter this error while using `FileGet` or `FileGetObject`, make sure the file you are trying to use was written to with `FilePut` or `FilePutObject`.
+- `FileGet` または `FileGetObject`の使用中にこのエラーが発生した場合は、使用しようとしているファイルが `FilePut` または `FilePutObject`で書き込まれていることを確認してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [データの種類](../../../visual-basic/language-reference/data-types/index.md)

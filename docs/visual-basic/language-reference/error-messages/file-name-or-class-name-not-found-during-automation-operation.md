@@ -12,12 +12,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353722"
 ---
 # <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a>オートメーションの操作中にファイル名またはクラス名を見つけられませんでした。(Visual Basic)
-The name specified for file name or class in a call to the `GetObject` function could not be found.  
+`GetObject` 関数の呼び出しで、ファイル名またはクラスに指定された名前が見つかりませんでした。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- Check the names and try again. Make sure the name used for the `class` parameter matches that registered with the system.  
+- 名前を確認して、もう一度やり直してください。 `class` パラメーターに使用されている名前が、システムに登録されている名前と一致していることを確認してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)

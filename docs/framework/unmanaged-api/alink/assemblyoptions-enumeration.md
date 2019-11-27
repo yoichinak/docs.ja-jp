@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446590"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 列挙体
-Enumerates the assembly options.  
+アセンブリオプションを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,32 +56,32 @@ typedef enum _AssemblyOptions {
   
 |フィールド|説明|  
 |-----------|-----------------|  
-|optAssemTitle|String - Represents the assembly title.|  
-|optAssemDescription|String - Contains the assembly description.|  
-|optAssemConfig|String - Contains the assembly configuration.|  
-|optAssemOS|String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
+|optAssemTitle|String-アセンブリのタイトルを表します。|  
+|optAssemDescription|String-アセンブリの説明が含まれています。|  
+|optAssemConfig|String-アセンブリ構成が含まれています。|  
+|optAssemOS|"DwOSPlatformId" としてエンコードされた文字列。|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|String - Contains the assembly locale.|  
-|optAssemVersion|String - Encoded as: "Major.Minor.Build.Revision".|  
-|optAssemCompany|String - Contains the company.|  
-|optAssemProduct|String - Contains the product name.|  
-|optAssemProductVersion|String (also known as InformationalVersion).|  
-|optAssemCopyright|String - Contains the copyright information.|  
-|optAssemTrademark|String - Contains the trademark information.|  
-|optAssemKeyFile|String (file name).|  
-|optAssemKeyName|String (The key name).|  
+|optAssemLocale|String-アセンブリロケールを格納します。|  
+|optAssemVersion|"Major. Minor. Build. Revision" としてエンコードされた文字列。|  
+|optAssemCompany|文字列-会社を含みます。|  
+|optAssemProduct|文字列-製品名が含まれます。|  
+|optAssemProductVersion|文字列 (InformationalVersion とも呼ばれます)。|  
+|optAssemCopyright|文字列-著作権情報が含まれています。|  
+|optAssemTrademark|String-商標情報が含まれています。|  
+|optAssemKeyFile|文字列 (ファイル名)。|  
+|optAssemKeyName|文字列 (キー名)。|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (Also known as DelaySign).|  
-|optAssemFileVersion|String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.|  
-|optAssemSatelliteVer|String - Encoded as "Major.Minor.Build.Revision".|  
-|optLastAssemOption|A counter of the number of elements.|  
+|optAssemHalfSign|Bool (DelaySign とも呼ばれます)。|  
+|optAssemFileVersion|"Major. Minor. Build. Revision" としてエンコードされた文字列。 ProductVersion と同じです。|  
+|optAssemSatelliteVer|"Major. Minor. Build. Revision" としてエンコードされた文字列。|  
+|optlastassemoopt|要素数のカウンター。|  
   
-## <a name="requirements"></a>［要件］  
- **Header:** alink.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** alink  
   
- **Library**: alink.dll  
+ **ライブラリ**: alink  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Al.exe (アセンブリ リンカー)](../../tools/al-exe-assembly-linker.md)

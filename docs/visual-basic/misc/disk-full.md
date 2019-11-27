@@ -1,5 +1,5 @@
 ---
-title: Disk full
+title: ディスクがいっぱいです
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID61
@@ -18,6 +18,6 @@ ms.locfileid: "74351111"
   
 - 一部のファイルを別のディスクに移動するか削除して、ディスク上の空き領域を増やします。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [エラーの種類](../../visual-basic/programming-guide/language-features/error-types.md)

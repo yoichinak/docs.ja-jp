@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446461"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore メソッド
-既存のシンボル ストアをデルタ シンボル ストアで更新します。 This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.  
+既存のシンボル ストアをデルタ シンボル ストアで更新します。 このメソッドは、元のポータブル実行可能 (PE) ファイルにデルタを一致するようにシンボルストアを更新するために、エディットコンティニュシナリオで使用されます。  
   
 > [!NOTE]
-> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> 両方ではなく、`filename` または `pIStream` のパラメーターのいずれか1つだけを指定する必要があります。 `filename` が指定されている場合、シンボルストアはそのファイル内のシンボルで更新されます。 `pIStream` が指定されている場合、ストアは <xref:System.Runtime.InteropServices.ComTypes.IStream>からのデータで更新されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,17 +38,17 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="parameters"></a>パラメーター  
  `filename`  
- [in] The name of the file that contains the symbol store.  
+ からシンボルストアが格納されているファイルの名前。  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the `filename` parameter.  
+ から`filename` パラメーターの代わりに使用されるファイルストリーム。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

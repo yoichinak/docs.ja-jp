@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448685"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a>INotifySink2::OnSyncCallExit メソッド
-Gets invoked when exiting a call.  
+呼び出しを終了したときに呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,21 +38,21 @@ HRESULT OnSyncCallExit
   
 ## <a name="parameters"></a>パラメーター  
  `in_CallID`  
- [in] ID of the call being exited. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ から終了する呼び出しの ID。 「 [CALL_ID 構造](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)」を参照してください。  
   
  `out_ppBuffer`  
- [out] Call buffer.  
+ 入出力呼び出しバッファー。  
   
  `out_pBufferSize`  
- [out] Size of the call buffer, in bytes.  
+ 入出力呼び出しバッファーのサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [INotifySink2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)

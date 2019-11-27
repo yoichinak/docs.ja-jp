@@ -1,5 +1,5 @@
 ---
-title: CorLocalRefPreservation 列挙型
+title: CorLocalRefPreservation Enumeration
 ms.date: 03/30/2017
 api_name:
 - CorLocalRefPreservation
@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450246"
 ---
-# <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation 列挙型
+# <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation Enumeration
 ローカル参照の処理のためのフラグ値が格納されます。  
   
 ## <a name="syntax"></a>構文  
@@ -39,17 +39,17 @@ typedef enum CorLocalRefPreservation
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|Preserve no local references.|  
-|`MDPreserveLocalTypeRef`|Preserve local type references.|  
-|`MDPreserveLocalMemberRef`|Preserve local member references.|  
+|`MDPreserveLocalRefsNone`|ローカル参照を保持しません。|  
+|`MDPreserveLocalTypeRef`|ローカル型参照を保持します。|  
+|`MDPreserveLocalMemberRef`|ローカルメンバー参照を保持します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

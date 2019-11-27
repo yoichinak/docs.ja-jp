@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450373"
 ---
 # <a name="cor_prf_runtime_type-enumeration"></a>COR_PRF_RUNTIME_TYPE 列挙体
-Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.  
+Silverlight で使用される共通言語ランタイム (CLR) のバージョンを示す値を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,12 +38,12 @@ typedef enum
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_DESKTOP_CLR`|The desktop version of the CLR.|  
-|`COR_PRF_CORE_CLR`|The core version of the CLR, used in Silverlight.|  
+|`COR_PRF_DESKTOP_CLR`|CLR のデスクトップバージョン。|  
+|`COR_PRF_CORE_CLR`|Silverlight で使用される CLR のコアバージョン。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -52,6 +52,6 @@ typedef enum
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

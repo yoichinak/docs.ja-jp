@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346980"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>方法: 複数のソースからオブジェクトコレクションにデータを設定する (LINQ) (Visual Basic)
 
 この例では、さまざまなソースから一連の新しい型にデータをマージする方法を示します。
 
@@ -18,7 +18,7 @@ ms.locfileid: "74346980"
 
 ## <a name="to-create-the-data-file"></a>データ ファイルを作成するには
 
-- Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- 「[方法: 異種ファイルのコンテンツを結合する (LINQ)」 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)の説明に従って、.csv ファイルとスコア .csv ファイルをプロジェクトフォルダーにコピーします。
 
 ## <a name="example"></a>例
 
@@ -100,7 +100,7 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.
+[Select 句](../../../../visual-basic/language-reference/queries/select-clause.md)の句では、オブジェクト初期化子を使用して、2つのソースのデータを使用して新しい `Student` オブジェクトをインスタンス化します。
 
 クエリの結果を格納する必要がない場合は、名前付きの型よりも匿名型の方が便利です。 クエリが実行されたメソッドの外部にクエリ結果を渡す場合は、名前付きの型が必要になります。 次の例では、前の例と同じタスクを実行しますが、名前付きの型ではなく匿名型が使用します。
 
@@ -128,6 +128,6 @@ For Each s In queryNamesScores2
 Next
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

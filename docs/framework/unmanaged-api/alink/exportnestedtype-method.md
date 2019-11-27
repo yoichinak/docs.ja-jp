@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438424"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType メソッド
-Specifies nested types as exportable. The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.  
+入れ子にされた型をエクスポート可能として指定します。 [Exporttype メソッド](exporttype-method.md)も入れ子になった型をエクスポートできますが、このメソッドの方が高速です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,33 +41,33 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of assembly to export from.  
+ エクスポート元のアセンブリの ID。  
   
  `FileToken`  
- File token or Assembly of file that defines the type to be made exportable.  
+ エクスポート可能にする型を定義するファイルのトークンまたはアセンブリ。  
   
  `TypeToken`  
- Type token of type to be made exportable.  
+ エクスポート可能にする型の型トークン。  
   
  `ParentType`  
- Token of parent type.  
+ 親の種類のトークン。  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ エクスポートする完全修飾型名。  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `tdPublic` や `tdNested`などのフラグを `ComType` します。 この値は、この[メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
   
  `pType`  
- Receives token for exported type.  
+ エクスポートされた型のトークンを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

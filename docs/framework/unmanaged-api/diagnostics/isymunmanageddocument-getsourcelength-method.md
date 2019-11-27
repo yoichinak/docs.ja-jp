@@ -34,11 +34,11 @@ HRESULT GetSourceLength(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out] A pointer to a variable that indicates the length, in bytes, of the embedded source.  
+ 入出力埋め込まれたソースの長さ (バイト単位) を示す変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

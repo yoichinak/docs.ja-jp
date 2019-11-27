@@ -15,21 +15,21 @@ ms.locfileid: "74330990"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-- [Operator precedence in Visual Basic](operator-precedence.md)
-- [Operators listed by functionality](operators-listed-by-functionality.md)
-- [Data types of operator results](data-types-of-operator-results.md)
-- [DirectCast operator](directcast-operator.md)
-- [TryCast operator](trycast-operator.md)
-- [NameOf operator](nameof.md)
-- [New operator](new-operator.md)
-- [Null-conditional operators](null-conditional-operators.md)
+- [Visual Basic での演算子の優先順位](operator-precedence.md)
+- [機能別の演算子一覧](operators-listed-by-functionality.md)
+- [演算子の結果のデータ型](data-types-of-operator-results.md)
+- [DirectCast 演算子](directcast-operator.md)
+- [TryCast 演算子](trycast-operator.md)
+- [この操作](nameof.md)
+- [New 演算子](new-operator.md)
+- [Null 条件演算子](null-conditional-operators.md)
 - [算術演算子](arithmetic-operators.md)
 - [代入演算子](assignment-operators.md)
-- [Bit Shift operators](bit-shift-operators.md)
+- [ビットシフト演算子](bit-shift-operators.md)
 - [比較演算子](comparison-operators.md)
-- [Concatenation operators](concatenation-operators.md)
-- [Logical/Bitwise operators](logical-bitwise-operators.md)
-- [Miscellaneous operators](miscellaneous-operators.md)
+- [連結演算子](concatenation-operators.md)
+- [論理/ビット演算子](logical-bitwise-operators.md)
+- [その他の演算子](miscellaneous-operators.md)
 
 ## <a name="related-sections"></a>関連項目
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449877"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody メソッド
-Replaces the body of the specified function in the specified module.  
+指定したモジュール内の指定した関数の本体を置き換えます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,22 +36,22 @@ HRESULT SetILFunctionBody(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ から関数が存在するモジュールの ID。  
   
  `methodid`  
- [in] The token of the function for which to replace the body.  
+ から本文の置換対象となる関数のトークン。  
   
  `pbNewILMethodHeader`  
- [in] The new header for the function.  
+ から関数の新しいヘッダー。  
   
-## <a name="remarks"></a>Remarks  
- The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.  
+## <a name="remarks"></a>コメント  
+ `SetILFunctionBody` メソッドは、メタデータ内の関数の相対仮想アドレスを置き換えて、新しい関数本体をポイントし、必要に応じて内部データ構造を調整します。  
   
- The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.  
+ `SetILFunctionBody` メソッドは、just-in-time (JIT) コンパイラによってコンパイルされたことがない関数に対してのみ呼び出すことができます。  
   
- Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.  
+ [ICorProfilerInfo:: GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md)メソッドを使用して、新しいメソッドの領域を割り当て、バッファーに互換性があることを確認します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -60,6 +60,6 @@ HRESULT SetILFunctionBody(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -24,27 +24,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351398"
 ---
 # <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
-Specifies that a property or procedure can be overridden by an identically named property or procedure in a derived class.  
+派生クラス内の同じ名前のプロパティまたはプロシージャによって、プロパティまたはプロシージャをオーバーライドできることを指定します。  
   
-## <a name="remarks"></a>Remarks  
- The `Overridable` modifier allows a property or method in a class to be overridden in a derived class. The [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modifier prevents a property or method from being overridden in a derived class.  詳細については、「[継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ `Overridable` 修飾子を使用すると、クラスのプロパティまたはメソッドを派生クラスでオーバーライドできます。 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)修飾子は、プロパティまたはメソッドが派生クラスでオーバーライドされないようにします。  詳細については、「[継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)」を参照してください。  
   
- If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
+ `Overridable` または `NotOverridable` 修飾子が指定されていない場合、既定の設定は、プロパティまたはメソッドが基底クラスのプロパティまたはメソッドをオーバーライドするかどうかによって異なります。 プロパティまたはメソッドが基底クラスのプロパティまたはメソッドをオーバーライドする場合、既定の設定は `Overridable`になります。それ以外の場合は、`NotOverridable`ます。  
   
- You can shadow or override to redefine an inherited element, but there are significant differences between the two approaches. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Shadow または override を使用して継承された要素を再定義できますが、この2つの方法には大きな違いがあります。 詳細については、「 [Visual Basic でのシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。  
   
- An element that can be overridden is sometimes referred to as a *virtual* element. If it can be overridden, but does not have to be, it is sometimes also called a *concrete* element.  
+ オーバーライドできる要素は、*仮想*要素と呼ばれることもあります。 オーバーライドできるが、にする必要がない場合は、*具象*要素とも呼ばれます。  
   
- You can use `Overridable` only in a property or procedure declaration statement.  
+ `Overridable` は、プロパティまたはプロシージャの宣言ステートメントでのみ使用できます。  
   
-## <a name="combined-modifiers"></a>Combined Modifiers  
- You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
+## <a name="combined-modifiers"></a>結合された修飾子  
+ `Private` メソッドに `Overridable` または `NotOverridable` を指定することはできません。  
   
- You cannot specify `Overridable` together with `MustOverride`, `NotOverridable`, or `Shared` in the same declaration.  
+ 同じ宣言内で `MustOverride`、`NotOverridable`、または `Shared` と共に `Overridable` を指定することはできません。  
   
  オーバーライドする要素は暗黙的にオーバーライド可能であるため、`Overridable` と `Overrides` を結合することはできません。  
   
-## <a name="usage"></a>使用方法  
+## <a name="usage"></a>使用法  
  `Overridable` 修飾子は、次のコンテキストで使用できます。  
   
  [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
@@ -53,12 +53,12 @@ Specifies that a property or procedure can be overridden by an identically named
   
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [修飾子](../../../visual-basic/language-reference/modifiers/index.md)
 - [継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [MyBase](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic でのシャドウ処理](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

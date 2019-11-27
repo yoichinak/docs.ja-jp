@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434883"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock メソッド
-Gets a section block of the code base.  
+コードベースのセクションブロックを取得します。  
   
- This method is obsolete and should not be used.  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,29 +40,29 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>パラメーター  
  `section`  
- [in] The section from which to retrieve a block of the code base.  
+ からコードベースのブロックを取得する対象となるセクション。  
   
  `len`  
- [in] The length of the block to be retrieved.  
+ から取得するブロックの長さ。  
   
  `align`  
- [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
+ からブロックの最初のバイトを揃えるために使用する、セクションの先頭を基準とするバイト。 これは、セクション内のブロックの位置です。  
   
  `ppBytes`  
- [out] A pointer to a location that receives the address of the retrieved block.  
+ 入出力取得されたブロックのアドレスを受け取る場所へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
+## <a name="remarks"></a>コメント  
+ 他のメソッドによって処理されない特殊なセクション要件がある場合にのみ、`GetSectionBlock` を呼び出します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341596"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>How to: Create Hierarchy Using Grouping (Visual Basic)
+# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>方法: グループ化を使用して階層を作成する (Visual Basic)
 この例では、データをグループ化し、そのグループ化に基づいて XML を生成する方法を示します。  
   
 ## <a name="example"></a>例  
@@ -79,6 +79,6 @@ Console.WriteLine(newData)
 </Root>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [高度なクエリ手法 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

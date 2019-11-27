@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435020"
 ---
 # <a name="iceegengetimaptokeniface-method"></a>ICeeGen::GetIMapTokenIface メソッド
-Gets the interface referenced by the specified token.  
+指定したトークンによって参照されるインターフェイスを取得します。  
   
- This method is obsolete and should not be used.  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,17 +37,17 @@ HRESULT GetIMapTokenIface (
   
 ## <a name="parameters"></a>パラメーター  
  `pIMapToken`  
- [in, out] The metadata token for the interface to be returned.  
+ [入力、出力]返されるインターフェイスのメタデータトークン。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

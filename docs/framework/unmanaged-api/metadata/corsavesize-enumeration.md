@@ -38,19 +38,19 @@ typedef enum CorSaveSize {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`cssAccurate`|Specifies that the return value should be exact.|  
-|`cssQuick`|Specifies that the return value should be estimated.|  
-|`cssDiscardTransientCAs`|Specifies that discardable types should be removed.|  
+|`cssAccurate`|戻り値が正確であることを指定します。|  
+|`cssQuick`|戻り値を推定することを指定します。|  
+|`cssDiscardTransientCAs`|破棄可能な型を削除する必要があることを指定します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

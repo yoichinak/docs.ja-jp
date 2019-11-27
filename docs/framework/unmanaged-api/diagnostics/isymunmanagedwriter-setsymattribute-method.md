@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427845"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute メソッド
-Defines a custom attribute based upon its name. These attributes are held in the symbol store, unlike metadata custom attributes.  
+名前に基づいてカスタム属性を定義します。 これらの属性は、メタデータのカスタム属性とは異なり、シンボルストアに保持されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,23 +37,23 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>パラメーター  
  `parent`  
- [in] The metadata token for which the attribute is being defined.  
+ から属性を定義するメタデータトークン。  
   
  `name`  
- [in] A pointer to a `WCHAR` that contains the attribute name.  
+ から属性名を格納している `WCHAR` へのポインター。  
   
  `cData`  
- [in] A `ULONG32` that indicates the size of the `data` array.  
+ から`data` 配列のサイズを示す `ULONG32`。  
   
  `data`  
- [in] The attribute value.  
+ から属性値。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

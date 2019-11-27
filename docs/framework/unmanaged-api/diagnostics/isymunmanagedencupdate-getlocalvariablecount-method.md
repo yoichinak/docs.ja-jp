@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449064"
 ---
 # <a name="isymunmanagedencupdategetlocalvariablecount-method"></a>ISymUnmanagedENCUpdate::GetLocalVariableCount メソッド
-Gets the number of local variables.  
+ローカル変数の数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,17 +35,17 @@ HRESULT GetLocalVariableCount(
   
 ## <a name="parameters"></a>パラメーター  
  `mdMethodToken`  
- [in] The metadata token of methods.  
+ からメソッドのメタデータトークン。  
   
  `pcLocals`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.  
+ 入出力ローカル変数の数を格納するために必要なバッファーのサイズ (文字数) を受け取る `ULONG32` へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedENCUpdate インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

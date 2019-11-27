@@ -32,9 +32,9 @@ ms.locfileid: "74345343"
   
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-- [Declare ステートメント](../../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare Statement](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-- [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
 - [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74345343"
  [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
  コンパイラが宣言への参照を一致させる方法と、名前を修飾する方法を説明します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [プログラム構造とコード規則](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  コードの読み取り、理解、保守を容易にするためのガイドラインを示します。  
   

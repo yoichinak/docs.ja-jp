@@ -17,7 +17,7 @@ ms.locfileid: "74283217"
 すべてのエンドポイントにはこれと関連するアドレスがあり、エンドポイントの検索と識別に使用されます。 このアドレスは主にエンドポイントの位置を指定する URI (Uniform Resource Identifier) で構成されます。 エンドポイントアドレスは、Windows Communication Foundation (WCF) プログラミングモデルで <xref:System.ServiceModel.EndpointAddress> クラスによって表されます。このクラスには、メッセージを交換する他のエンドポイントによるエンドポイントの認証を可能にするオプションの <xref:System.ServiceModel.EndpointAddress.Identity%2A> プロパティと、サービスに接続するために必要な他の SOAP ヘッダーを定義するオプションの <xref:System.ServiceModel.EndpointAddress.Headers%2A> プロパティのセットが含まれます。 オプションのヘッダーは、サービス エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 エンドポイントのアドレスは、ネットワーク上では WS-Addressing エンドポイント参照 (EPR) として表されます。  
   
 ## <a name="uri-structure-of-an-address"></a>アドレスの URI 構造  
- ほとんどのトランスポートの URI アドレスは、4 つの部分から構成されます。 URI の 4 つの部分ではたとえば、 `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` 次のように取り上げることができます。  
+ ほとんどのトランスポートの URI アドレスは、4 つの部分から構成されます。 たとえば、URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` の4つの部分は次のようにまとめられています。  
   
 - スキーム: `http:`
   
@@ -137,7 +137,7 @@ ms.locfileid: "74283217"
   
  シナリオによっては、適切な `To` ヘッダーを持つメッセージだけではなく、基になるトランスポートに到着したすべてのメッセージをエンドポイントで受信します。 これを行うには、ユーザーは <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> クラスを使用します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [エンドポイント アドレスの指定](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
 - [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428143"
 ---
 # <a name="icorprofilerobjectenumreset-method"></a>ICorProfilerObjectEnum::Reset メソッド
-Moves this enumerator's cursor to the starting position of the sequence.  
+この列挙子のカーソルをシーケンスの開始位置に移動します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,7 +31,7 @@ Moves this enumerator's cursor to the starting position of the sequence.
 HRESULT Reset ();  
 ```  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -40,6 +40,6 @@ HRESULT Reset ();
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerObjectEnum インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

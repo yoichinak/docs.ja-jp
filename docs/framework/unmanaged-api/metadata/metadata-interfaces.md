@@ -36,7 +36,7 @@ ms.locfileid: "74431590"
  タイプ ライブラリをそれぞれのメタデータ署名にマップして、一方から他方に変換するメソッドを提供します。  
   
  [IMetaDataDispenser インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
- `IMetaDataDispenser` は互換性のために残されています。 代わりに、`IMetaDataDispenserEx` を使用してください。  
+ `IMetaDataDispenser` は互換性のために残されています。 代わりに、 `IMetaDataDispenserEx` を使用してください。  
   
  [IMetaDataDispenserEx インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
  メタデータを作成または変更するためのメモリ領域を割り当てるメソッドを提供します。  
@@ -71,7 +71,7 @@ ms.locfileid: "74431590"
  [IMetaDataValidate インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)  
  メタデータ署名の検証で使用するメソッドを提供します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
   
  [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  

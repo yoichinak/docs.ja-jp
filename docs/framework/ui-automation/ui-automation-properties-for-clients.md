@@ -17,7 +17,7 @@ ms.locfileid: "74441365"
 ---
 # <a name="ui-automation-properties-for-clients"></a>クライアントの UI オートメーション プロパティ
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
   
  ここでは、UI オートメーション クライアント アプリケーションに公開される [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティについて説明します。  
   
@@ -27,15 +27,15 @@ ms.locfileid: "74441365"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティは読み取り専用です。 コントロールのプロパティを設定するには、適切なコントロール パターンのメソッドを使用する必要があります。 たとえば、スクロール ウィンドウの位置の値を変更する場合は、 <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> を使用します。  
   
- パフォーマンスを向上させるために、 <xref:System.Windows.Automation.AutomationElement> オブジェクトを取得したときに、コントロールおよびコントロール パターンのプロパティ値をキャッシュできます。 For more information, see [Caching in UI Automation Clients](caching-in-ui-automation-clients.md).  
+ パフォーマンスを向上させるために、 <xref:System.Windows.Automation.AutomationElement> オブジェクトを取得したときに、コントロールおよびコントロール パターンのプロパティ値をキャッシュできます。 詳細については、「 [UI オートメーションクライアントでのキャッシュ](caching-in-ui-automation-clients.md)」を参照してください。  
   
 ## <a name="property-ids"></a>プロパティ ID  
- Property identifiers (IDs) are unique, constant values that are encapsulated in <xref:System.Windows.Automation.AutomationProperty> objects. UI Automation client applications get these IDs from the <xref:System.Windows.Automation.AutomationElement> class or from the appropriate control pattern class, such as <xref:System.Windows.Automation.ScrollPattern>. UI オートメーション プロバイダーは、 <xref:System.Windows.Automation.AutomationElementIdentifiers> またはコントロール パターン識別子クラスの 1 つ ( <xref:System.Windows.Automation.ScrollPatternIdentifiers>など) からこれらを取得します。  
+ プロパティ識別子 (IDs) は、<xref:System.Windows.Automation.AutomationProperty> オブジェクトにカプセル化される一意の定数値です。 UI オートメーションクライアントアプリケーションは、これらの Id を <xref:System.Windows.Automation.AutomationElement> クラスまたは適切なコントロールパターンクラス (<xref:System.Windows.Automation.ScrollPattern>など) から取得します。 UI オートメーション プロバイダーは、 <xref:System.Windows.Automation.AutomationElementIdentifiers> またはコントロール パターン識別子クラスの 1 つ ( <xref:System.Windows.Automation.ScrollPatternIdentifiers>など) からこれらを取得します。  
   
  <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> の数値 <xref:System.Windows.Automation.AutomationProperty> は、 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> メソッドで照会するプロパティを識別するために、プロバイダーによって使用されます。 通常、クライアント アプリケーションで <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>を調べる必要はありません。 <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> は、デバッグと診断の目的のみに使用されます。  
   
 ## <a name="property-conditions"></a>プロパティ条件  
- The property IDs are used in constructing <xref:System.Windows.Automation.PropertyCondition> objects used to find <xref:System.Windows.Automation.AutomationElement> objects. たとえば、特定の名前を持つ <xref:System.Windows.Automation.AutomationElement> を検出したい場合や、すべての有効なコントロールを検出したい場合があります。 各 <xref:System.Windows.Automation.PropertyCondition> では、 <xref:System.Windows.Automation.AutomationProperty> 識別子と、そのプロパティが一致する必要がある値を指定します。  
+ プロパティ Id は、<xref:System.Windows.Automation.AutomationElement> オブジェクトを検索するために使用される <xref:System.Windows.Automation.PropertyCondition> オブジェクトの構築に使用されます。 たとえば、特定の名前を持つ <xref:System.Windows.Automation.AutomationElement> を検出したい場合や、すべての有効なコントロールを検出したい場合があります。 各 <xref:System.Windows.Automation.PropertyCondition> では、 <xref:System.Windows.Automation.AutomationProperty> 識別子と、そのプロパティが一致する必要がある値を指定します。  
   
  詳細については、次のリファレンス トピックを参照してください。  
   
@@ -90,15 +90,15 @@ ms.locfileid: "74441365"
 ## <a name="additional-automationelement-properties"></a>その他の AutomationElement プロパティ  
  <xref:System.Windows.Automation.AutomationElement.Current%2A> プロパティおよび <xref:System.Windows.Automation.AutomationElement.Cached%2A> プロパティの構造体に加えて、 <xref:System.Windows.Automation.AutomationElement> には、単純なプロパティ アクセサーを介して取得される次のプロパティがあります。  
   
-|property|説明|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |<xref:System.Windows.Automation.AutomationElement.CachedChildren%2A>|キャッシュ内にある子 <xref:System.Windows.Automation.AutomationElement> オブジェクトのコレクション。|  
 |<xref:System.Windows.Automation.AutomationElement.CachedParent%2A>|キャッシュ内にある <xref:System.Windows.Automation.AutomationElement> 親オブジェクト。|  
 |<xref:System.Windows.Automation.AutomationElement.FocusedElement%2A>|(静的なプロパティ) 入力フォーカスがある <xref:System.Windows.Automation.AutomationElement> 。|  
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(静的プロパティ) ルート <xref:System.Windows.Automation.AutomationElement>。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [UI オートメーション クライアントにおけるキャッシュ](caching-in-ui-automation-clients.md)
+- [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)
 - [サーバー側 UI オートメーション プロバイダーの実装](server-side-ui-automation-provider-implementation.md)
 - [UI オートメーション イベントのサブスクライブ](subscribe-to-ui-automation-events.md)

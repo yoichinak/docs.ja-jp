@@ -48,20 +48,20 @@ typedef enum CorSetENC {
 |------------|-----------------|  
 |`MDSetENCOn`|互換性のために残されています。|  
 |`MDSetENCOff`|互換性のために残されています。|  
-|`MDUpdateENC`|Indicates that whereas metadata can be updated, tokens cannot be moved.|  
-|`MDUpdateFull`|Indicates that tokens can be moved during updates.|  
-|`MDUpdateExtension`|Indicates that updates can consist only of additions. Tokens cannot be moved.|  
-|`MDUpdateIncremental`|Indicates that compilation is incremental.|  
-|`MDUpdateDelta`|Indicates that only changed metadata should be saved.|  
-|`MDUpdateMask`|Includes `MDUpdateENC`, `MDUpdateFull` and `MDUpdateIncremental`.|  
+|`MDUpdateENC`|メタデータを更新できるのに対して、トークンを移動できないことを示します。|  
+|`MDUpdateFull`|更新中にトークンを移動できることを示します。|  
+|`MDUpdateExtension`|更新プログラムが追加のみで構成されることを示します。 トークンは移動できません。|  
+|`MDUpdateIncremental`|コンパイルが増分であることを示します。|  
+|`MDUpdateDelta`|は、変更されたメタデータのみを保存することを示します。|  
+|`MDUpdateMask`|`MDUpdateENC`、`MDUpdateFull` および `MDUpdateIncremental`が含まれます。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

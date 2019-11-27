@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352865"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 言語仕様
-The Visual Basic Language Specification is the authoritative source for answers to all questions about Visual Basic grammar and syntax. It contains detailed information about the language, including many points not covered in the Visual Basic reference documentation.  
+Visual Basic 言語仕様は、Visual Basic の文法と構文に関するすべての質問への回答を得るための権限のあるソースです。 これには、Visual Basic リファレンスドキュメントに記載されていない多くのポイントを含む、言語に関する詳細情報が含まれています。  
   
  この仕様は、[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=188623)で入手できます。  
   
@@ -22,7 +22,7 @@ The Visual Basic Language Specification is the authoritative source for answers 
 
 仕様の問題は [dotnet/vblang](https://github.com/dotnet/vblang/issues) リポジトリで作成する必要があります。 見つけたエラーを修正したい場合は、同じレポジトリに[Pull Request](https://github.com/dotnet/vblang/pulls)を送信できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)
 

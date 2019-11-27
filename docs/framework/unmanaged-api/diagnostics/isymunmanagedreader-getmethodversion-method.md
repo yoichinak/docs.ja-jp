@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436013"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>ISymUnmanagedReader::GetMethodVersion メソッド
-Gets the method version. The method version starts at 1 and is incremented each time the method is recompiled. Recompilation can happen without changes to the method.  
+メソッドのバージョンを取得します。 メソッドのバージョンは1から始まり、メソッドが再コンパイルされるたびにインクリメントされます。 再コンパイルは、メソッドを変更せずに発生する可能性があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,17 +35,17 @@ HRESULT GetMethodVersion (
   
 ## <a name="parameters"></a>パラメーター  
  `pMethod`  
- [in] The method for which to get the version.  
+ からバージョンを取得するメソッド。  
   
  `version`  
- [out] A pointer to a variable that receives the method version.  
+ 入出力メソッドのバージョンを受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

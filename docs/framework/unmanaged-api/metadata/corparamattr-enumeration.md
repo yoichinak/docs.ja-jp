@@ -46,21 +46,21 @@ typedef enum CorParamAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`pdIn`|Specifies that the parameter is passed into the method call.|  
-|`pdOut`|Specifies that the parameter is passed from the method return.|  
-|`pdOptional`|Specifies that the parameter is optional.|  
-|`pdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`pdHasDefault`|Specifies that the parameter has a default value.|  
-|`pdHasFieldMarshal`|Specifies that the parameter has marshaling information.|  
-|`pdUnused`|使用されません。|  
+|`pdIn`|パラメーターがメソッドの呼び出しに渡されることを指定します。|  
+|`pdOut`|パラメーターがメソッドの戻り値から渡されることを指定します。|  
+|`pdOptional`|パラメーターが省略可能であることを指定します。|  
+|`pdReservedMask`|共通言語ランタイムによる内部使用のために予約されています。|  
+|`pdHasDefault`|パラメーターに既定値が設定されていることを指定します。|  
+|`pdHasFieldMarshal`|パラメーターにマーシャリング情報があることを指定します。|  
+|`pdUnused`|未使用。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

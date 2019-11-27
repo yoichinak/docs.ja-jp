@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450330"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes メソッド
-Enumerates the exported types referenced in the assembly manifest in the current metadata scope.  
+現在のメタデータスコープ内のアセンブリマニフェストで参照される、エクスポートされた型を列挙します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,33 +38,33 @@ HRESULT EnumExportedTypes (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value when the `EnumExportedTypes` method is called for the first time.  
+ [入力、出力]列挙子へのポインター。 `EnumExportedTypes` メソッドを初めて呼び出すときは、null 値を指定する必要があります。  
   
  `rExportedTypes`  
- [out] The enumeration of `mdExportedType` metadata tokens.  
+ 入出力`mdExportedType` メタデータトークンの列挙体。  
   
  `cMax`  
- [in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.  
+ から`rExportedTypes` 配列に格納できる `mdExportedType` トークンの最大数。  
   
  `pcTokens`  
- [out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.  
+ 入出力`rExportedTypes`に実際に配置されている `mdExportedType` トークンの数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumExportedTypes` が正常に返されました。|  
+|`S_FALSE`|列挙するトークンがありません。 この場合、`pcTokens` は0に設定されます。|  
   
-## <a name="requirements"></a>［要件］  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

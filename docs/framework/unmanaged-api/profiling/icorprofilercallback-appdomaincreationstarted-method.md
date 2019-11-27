@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445207"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>ICorProfilerCallback::AppDomainCreationStarted メソッド
-Notifies the profiler that an application domain is being created.  
+アプリケーションドメインが作成中であることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,12 +34,12 @@ HRESULT AppDomainCreationStarted(
   
 ## <a name="parameters"></a>パラメーター  
  `appDomainId`  
- [in] Identifies the domain which is being created.  
+ から作成されるドメインを識別します。  
   
-## <a name="remarks"></a>Remarks  
- The ID is not valid for any information request until the [ICorProfilerCallback::AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) method is called.  
+## <a name="remarks"></a>コメント  
+ ID は、 [ICorProfilerCallback:: AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md)メソッドが呼び出されるまで、情報要求に対して有効ではありません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -48,6 +48,6 @@ HRESULT AppDomainCreationStarted(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

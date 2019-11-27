@@ -15,23 +15,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350748"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-Specifies that one or more declared member variables refer to an instance of a class that can raise events.
+1つ以上の宣言されたメンバー変数が、イベントを発生させることができるクラスのインスタンスを参照することを指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-When a variable is defined using `WithEvents`, you can declaratively specify that a method handles the variable's events using the `Handles` keyword.
+`WithEvents`を使用して変数が定義されている場合は、メソッドが `Handles` キーワードを使用して変数のイベントを処理するように、宣言によって指定できます。
 
-You can use `WithEvents` only at class or module level. This means the declaration context for a `WithEvents` variable must be a class or module and cannot be a source file, namespace, structure, or procedure.
+`WithEvents` は、クラスレベルまたはモジュールレベルでのみ使用できます。 つまり、`WithEvents` 変数の宣言コンテキストは、クラスまたはモジュールである必要があり、ソースファイル、名前空間、構造体、またはプロシージャにすることはできません。
 
-You cannot use `WithEvents` on a structure member.
+構造体メンバーで `WithEvents` を使用することはできません。
 
-You can declare only individual variables—not arrays—with `WithEvents`.
+`WithEvents`では、配列ではなく個々の変数のみを宣言できます。
 
 ## <a name="rules"></a>ルール
 
-**Element Types.** You must declare `WithEvents` variables to be object variables so that they can accept class instances. However, you cannot declare them as `Object`. You must declare them as the specific class that can raise the events.
+**要素の型。** オブジェクト変数として `WithEvents` 変数を宣言して、クラスのインスタンスを受け入れるようにする必要があります。 ただし、`Object`として宣言することはできません。 これらのクラスは、イベントを発生させることができる特定のクラスとして宣言する必要があります。
 
-The `WithEvents` modifier can be used in this context: [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)
+`WithEvents` 修飾子は、次のコンテキストで使用できます: [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
 
 ## <a name="example"></a>例
 
@@ -39,8 +39,8 @@ The `WithEvents` modifier can be used in this context: [Dim Statement](../../../
 Dim WithEvents app As Application
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [!](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
 - [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)

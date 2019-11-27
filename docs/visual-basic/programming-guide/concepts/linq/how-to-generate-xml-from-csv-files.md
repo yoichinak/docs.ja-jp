@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344592"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>How to: Generate XML from CSV Files (Visual Basic)
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>方法: CSV ファイルから XML を生成する (Visual Basic)
 この例では、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] および [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して、コンマ区切り (CSV) ファイルから XML ファイルを生成する方法について説明します。  
   
 ## <a name="example"></a>例  
@@ -107,6 +107,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [プロジェクションと変換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

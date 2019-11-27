@@ -37,13 +37,13 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_TRANSITION_CALL`|The transition is due to a call into a function.|  
-|`COR_PRF_TRANSITION_RETURN`|The transition is due to a return from a function.|  
+|`COR_PRF_TRANSITION_CALL`|遷移は、関数の呼び出しによるものです。|  
+|`COR_PRF_TRANSITION_RETURN`|遷移は、関数からの戻り値によるものです。|  
   
-## <a name="remarks"></a>Remarks  
- When a transition occurs, the profiler receives an [ICorProfilerCallback::ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) or [ICorProfilerCallback::UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) callback, either of which provides a value of the `COR_PRF_TRANSITION_REASON` enumeration to indicate the reason for the transition.  
+## <a name="remarks"></a>コメント  
+ 遷移が発生すると、プロファイラーは[ICorProfilerCallback:: ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)または[ICorProfilerCallback:: UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)コールバックを受け取ります。いずれの場合も、遷移の理由を示すために `COR_PRF_TRANSITION_REASON` 列挙値を提供します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

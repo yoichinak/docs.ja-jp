@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445736"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore メソッド
-既存のシンボル ストアをデルタ シンボル ストアで置き換えます。 This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.  
+既存のシンボル ストアをデルタ シンボル ストアで置き換えます。 このメソッドは、指定されたデルタが更新ではなく完全な置換として機能する点を除いて、"更新プログラム"[ストア](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)メソッドに似ています。  
   
 > [!NOTE]
-> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> 両方ではなく、`filename` または `pIStream` のパラメーターのいずれか1つだけを指定する必要があります。 `filename` が指定されている場合、シンボルストアはそのファイル内のシンボルで更新されます。 `pIStream` が指定されている場合、ストアは <xref:System.Runtime.InteropServices.ComTypes.IStream>からのデータで更新されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,17 +38,17 @@ HRESULT ReplaceSymbolStore (
   
 ## <a name="parameters"></a>パラメーター  
  `filename`  
- [in] The name of the file containing the symbol store.  
+ からシンボルストアを格納しているファイルの名前。  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the `filename` parameter.  
+ から`filename` パラメーターの代わりに使用されるファイルストリーム。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

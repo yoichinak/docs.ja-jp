@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445640"
 ---
 # <a name="init-method"></a>Init メソッド
-Prepares objects implementing the [IALink Interface](ialink-interface.md) for use.  
+使用する[Ialink インターフェイス](ialink-interface.md)を実装するオブジェクトを準備します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,18 +35,18 @@ HRESULT Init(
   
 ## <a name="parameters"></a>パラメーター  
  `pDispenser`  
- [IMetaDataDispenserEx Interface](../metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.  
+ [IMetaDataDispenserEx インターフェイス](../metadata/imetadatadispenserex-interface.md)のメタデータディスペンサーへのポインター。  
   
  `pErrorHandler`  
- [IMetaDataError Interface](../metadata/imetadataerror-interface.md) pointer to an optional error handling interface.  
+ [IMetaDataError インターフェイス](../metadata/imetadataerror-interface.md)は、省略可能なエラー処理インターフェイスへのポインターです。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

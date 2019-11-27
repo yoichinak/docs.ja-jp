@@ -24,18 +24,18 @@ ms.locfileid: "74343545"
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`id`|必須です。 The compiler uses the code page specified by `id` to interpret the encoding of the source files.|  
+|`id`|必須。 コンパイラは、`id` によって指定されたコードページを使用して、ソースファイルのエンコーディングを解釈します。|  
   
-## <a name="remarks"></a>Remarks  
- To compile source code saved with a specific encoding, you can use `-codepage` to specify which code page should be used. The `-codepage` option applies to all source-code files in your compilation. For more information, see [Character Encoding in the .NET Framework](../../../standard/base-types/character-encoding.md).  
+## <a name="remarks"></a>コメント  
+ 特定のエンコーディングを使用して保存されたソースコードをコンパイルするには、`-codepage` を使用して、使用するコードページを指定します。 `-codepage` オプションは、コンパイル時にすべてのソースコードファイルに適用されます。 詳細については、「 [.NET Framework の文字エンコード](../../../standard/base-types/character-encoding.md)」を参照してください。  
   
- The `-codepage` option is not needed if the source-code files were saved using the current ANSI code page, Unicode, or UTF-8 with a signature. Visual Studio saves all source-code files with the current ANSI code page by default, unless the user specifies another encoding in the **Encoding** dialog box. Visual Studio uses the **Encoding** dialog box to open source-code files saved with a different code page.  
+ 現在の ANSI コードページ、Unicode、または UTF-8 を使用してソースコードファイルが保存されている場合、`-codepage` オプションは必要ありません。 Visual Studio では、ユーザーが **[エンコード]** ダイアログボックスで別のエンコードを指定しない限り、既定では、すべてのソースコードファイルが現在の ANSI コードページと共に保存されます。 Visual Studio では、 **[エンコード]** ダイアログボックスを使用して、別のコードページを使用して保存されたソースコードファイルを開きます。  
   
 > [!NOTE]
-> The `-codepage` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> `-codepage` オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)

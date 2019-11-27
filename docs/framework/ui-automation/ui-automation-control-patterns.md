@@ -16,9 +16,9 @@ ms.locfileid: "74441461"
 ---
 # <a name="ui-automation-control-patterns"></a>UI オートメーション コントロール パターン
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
   
- This section provides detailed information about how to use [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] control patterns.  
+ ここでは、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] コントロールパターンの使用方法について詳しく説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [UI オートメーション Dock コントロール パターンの実装](implementing-the-ui-automation-dock-control-pattern.md)  
@@ -38,4 +38,4 @@ ms.locfileid: "74441461"
  [UI オートメーション Transform コントロール パターンの実装](implementing-the-ui-automation-transform-control-pattern.md)  
  [UI オートメーション Value コントロール パターンの実装](implementing-the-ui-automation-value-control-pattern.md)  
  [UI オートメーション Window コントロール パターンの実装](implementing-the-ui-automation-window-control-pattern.md)  
- [方法トピック](ui-automation-control-patterns-how-to-topics.md)
+ [方法のトピック](ui-automation-control-patterns-how-to-topics.md)

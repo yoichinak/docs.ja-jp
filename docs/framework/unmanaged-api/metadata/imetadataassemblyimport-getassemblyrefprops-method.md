@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448229"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps メソッド
-Gets the set of properties for the assembly reference with the specified metadata signature.  
+指定されたメタデータシグネチャを持つアセンブリ参照のプロパティのセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,47 +44,47 @@ HRESULT GetAssemblyRefProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mdar`  
- [in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.  
+ からプロパティを取得する対象のアセンブリ参照を表す `mdAssemblyRef` メタデータトークン。  
   
  `ppbPublicKeyOrToken`  
- [out] A pointer to the public key or the metadata token.  
+ 入出力公開キーまたはメタデータトークンへのポインター。  
   
  `pcbPublicKeyOrToken`  
- [out] The number of bytes in the returned public key or token.  
+ 入出力返される公開キーまたはトークン内のバイト数。  
   
  `szName`  
- [out] The simple name of the assembly.  
+ 入出力アセンブリの簡易名。  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ から`szName`のサイズ (ワイド文字単位)。  
   
  `pchName`  
- [out] A pointer to the number of wide chars actually returned in `szName`.  
+ 入出力`szName`に実際に返されるワイド文字数へのポインター。  
   
  `pMetaData`  
- [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
+ 入出力アセンブリメタデータを格納している ASSEMBLYMETADATA 構造体へのポインター。  
   
  `ppbHashValue`  
- [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.  
+ 入出力ハッシュ値へのポインター。 これは、参照されるアセンブリの `PublicKey` プロパティの SHA-1 アルゴリズムを使用したハッシュです。 [Assemblyrefflags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)の列挙の arfFullOriginator フラグが設定されている場合を除きます。  
   
  `pcbHashValue`  
- [out] The number of wide chars in the returned hash value.  
+ 入出力返されたハッシュ値のワイド文字の数。  
   
  `pdwAssemblyRefFlags`  
- [out] A pointer to flags that describe the metadata applied to an assembly. The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
+ 入出力アセンブリに適用されるメタデータを記述するフラグへのポインター。 Flags 値は、1つまたは複数の[Corassemblyflags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)値を組み合わせたものです。  
   
 ## <a name="return-value"></a>戻り値  
- This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.  
+ 成功した場合、このメソッドは S_OK を返します。それ以外の場合は、Winerror.h ヘッダーファイルで定義されているエラーコードの1つを返します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

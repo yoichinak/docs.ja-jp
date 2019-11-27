@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450215"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef メソッド
-Creates a type definition for a common language runtime type, and gets a metadata token for that type definition.  
+共通言語ランタイム型の型定義を作成し、その型定義のメタデータトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,37 +39,37 @@ HRESULT DefineTypeDef (
   
 ## <a name="parameters"></a>パラメーター  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ からUnicode での型の名前。  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CoreTypeAttr` values.  
+ [in] 属性 `TypeDef` ます。 これは `CoreTypeAttr` 値のビットマスクです。  
   
  `tkExtends`  
- [in] The token of the base class. It must be either an `mdTypeDef` or an `mdTypeRef` token.  
+ から基本クラスのトークン。 `mdTypeDef` または `mdTypeRef` トークンのいずれかである必要があります。  
   
  `rtkImplements`  
- [in] An array of tokens specifying the interfaces that this class or interface implements.  
+ からこのクラスまたはインターフェイスが実装するインターフェイスを指定するトークンの配列。  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ 入出力割り当てられた `mdTypeDef` トークン。  
   
-## <a name="remarks"></a>Remarks  
- A flag in `dwTypeDefFlags` specifies whether the type being created is a common type system reference type (class or interface) or a common type system value type.  
+## <a name="remarks"></a>コメント  
+ `dwTypeDefFlags` のフラグは、作成される型が共通型システム参照型 (クラスまたはインターフェイス) であるか、共通型システム値型であるかを指定します。  
   
- Depending on the parameters supplied, this method, as a side effect, may also create an `mdInterfaceImpl` record for each interface that is inherited or implemented by this type. However, this method does not return any of these `mdInterfaceImpl` tokens. If a client wants to later add or modify an `mdInterfaceImpl` token, it must use the `IMetaDataImport` interface to enumerate them. If you want to use COM semantics of the `[default]` interface, you should supply the default interface as the first element in `rtkImplements`; a custom attribute set on the class will indicate that the class has a default interface (which is always assumed to be the first `mdInterfaceImpl` token declared for the class).  
+ このメソッドは、指定されたパラメーターに応じて、この型によって継承または実装されるインターフェイスごとに `mdInterfaceImpl` レコードを作成する場合もあります。 ただし、このメソッドはこれらの `mdInterfaceImpl` トークンを返しません。 クライアントが後で `mdInterfaceImpl` トークンを追加または変更する場合は、`IMetaDataImport` インターフェイスを使用してそれらを列挙する必要があります。 `[default]` インターフェイスの COM セマンティクスを使用する場合は、`rtkImplements`の最初の要素として既定のインターフェイスを指定する必要があります。クラスに設定されたカスタム属性は、クラスに既定のインターフェイスがあることを示します (これは常に、クラスに対して宣言された最初の `mdInterfaceImpl` トークンと見なされます)。  
   
- Each element of the `rtkImplements` array holds an `mdTypeDef` or `mdTypeRef` token. The last element in the array must be `mdTokenNil`.  
+ `rtkImplements` 配列の各要素は、`mdTypeDef` または `mdTypeRef` トークンを保持します。 配列の最後の要素は `mdTokenNil`である必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

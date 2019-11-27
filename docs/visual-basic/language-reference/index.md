@@ -62,7 +62,7 @@ ms.locfileid: "74349953"
  [演算子](../../visual-basic/language-reference/operators/index.md)  
  Visual Basic で使用できる演算子について説明します。  
   
- [Properties](../../visual-basic/language-reference/properties.md)  
+ [プロパティ](../../visual-basic/language-reference/properties.md)  
  Visual Basic で使用可能なプロパティについて説明します。  
   
  [クエリ](../../visual-basic/language-reference/queries/index.md)  
@@ -83,7 +83,7 @@ ms.locfileid: "74349953"
  [エラー メッセージ](../../visual-basic/language-reference/error-messages/index.md)  
  Visual Basic コンパイラとランタイムエラーメッセージの一覧を示し、それらを処理する方法について説明します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
 
  [Visual Basic](../../visual-basic/index.md)  
  Visual Basic 言語のすべての領域に関する包括的なヘルプを提供します。  

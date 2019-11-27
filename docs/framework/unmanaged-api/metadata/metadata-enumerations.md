@@ -24,16 +24,16 @@ ms.locfileid: "74447867"
  アセンブリ参照の機能を記述する値が格納されます。  
   
  [CeeSectionAttr 列挙型](../../../../docs/framework/unmanaged-api/metadata/ceesectionattr-enumeration.md)  
- Provides values that specify the attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
+ [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)インターフェイスで使用するセクションの属性を指定する値を提供します。  
   
  [CeeSectionRelocType 列挙型](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md)  
- Provides values to influence the type of `reloc` instruction emitted in a call to the [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md) method.  
+ [ICeeGen:: AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)メソッドの呼び出しで生成された `reloc` 命令の型に影響を与える値を提供します。  
   
  [COINITICOR 列挙型](../../../../docs/framework/unmanaged-api/metadata/coiniticor-enumeration.md)  
- Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when initializing the common language runtime.  
+ 共通言語ランタイムを初期化するときに、 [Co初期化 Ecor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)によって使用される定数を指定します。  
   
  [COINITIEE 列挙型](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md)  
- Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.  
+ 共通言語ランタイムを初期化するときに[Coinitializeee](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)によって使用される定数を指定します。  
   
  [CorArgType 列挙型](../../../../docs/framework/unmanaged-api/metadata/corargtype-enumeration.md)  
  ランタイム ハンドルのネイティブな型を記述する値が格納されます。  
@@ -66,13 +66,13 @@ ms.locfileid: "74447867"
  フィールドについてのメタデータを記述する値が格納されます。  
   
  [CorFileFlags 列挙型](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)  
- Contains values that describe the type of file defined in a call to the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.  
+ [IMetaDataAssemblyEmit::D efineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)メソッドの呼び出しで定義されているファイルの種類を記述する値を格納します。  
   
  [CorFileMapping 列挙型](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)  
- Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.  
+ [IMetaDataInfo:: GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)メソッドの呼び出しから返されるファイルマッピングの種類を記述する値を格納します。  
   
  [CorGenericParamAttr 列挙型](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)  
- Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to the [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md) method.  
+ [IMetaDataEmit2::D efineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)メソッドの呼び出しで使用される、ジェネリック型の <xref:System.Type> パラメーターを記述する値を格納します。  
   
  [CorImportOptions 列挙型](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md)  
  現在のスコープ外のアセンブリのインポート中の動作を制御するフラグ値が格納されます。  
@@ -114,7 +114,7 @@ ms.locfileid: "74447867"
  メソッド パラメーターのメタデータを記述する値が格納されます。  
   
  [CorPEKind 列挙型](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)  
- Contains values that describe a portable executable file, as returned from a call to the [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md) method.  
+ [IMetaDataImport2:: GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)メソッドの呼び出しから返される、移植可能な実行可能ファイルを記述する値を格納します。  
   
  [CorPinvokeMap 列挙型](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)  
  PInvoke 呼び出しの機能を記述する値が格納されます。  
@@ -132,7 +132,7 @@ ms.locfileid: "74447867"
  保存操作のサイズの照会で要求される精度のレベルを示す値が格納されます。  
   
  [CorSerializationType 列挙型](../../../../docs/framework/unmanaged-api/metadata/corserializationtype-enumeration.md)  
- 共通言語ランタイムがオブジェクトをシリアル化する方法を記述する値が格納されます。 These values generally correspond to CorElementType values.  
+ 共通言語ランタイムがオブジェクトをシリアル化する方法を記述する値が格納されます。 これらの値は、通常、CorElementType 値に対応しています。  
   
  [CorSetENC 列挙型](../../../../docs/framework/unmanaged-api/metadata/corsetenc-enumeration.md)  
  メタデータの生成中の動作を決定する値が格納されます。  
@@ -150,12 +150,12 @@ ms.locfileid: "74447867"
  アンマネージ呼び出し規約を記述する値が格納されます。  
   
  [CorValidatorModuleType 列挙型](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md)  
- Provides values used by the [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) interface to specify the type of the module (PE file vs. .obj file).  
+ モジュールの型 (PE ファイルと .obj ファイル) を指定するために[IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)インターフェイスによって使用される値を提供します。  
   
  [COUNINITIEE 列挙型](../../../../docs/framework/unmanaged-api/metadata/couninitiee-enumeration.md)  
- Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.  
+ 共通言語ランタイムを初期化するときに[CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)によって使用される定数を指定します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
  [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  

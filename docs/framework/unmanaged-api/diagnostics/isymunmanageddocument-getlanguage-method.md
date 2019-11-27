@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449178"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>ISymUnmanagedDocument::GetLanguage メソッド
-Gets the language identifier of this document  
+このドキュメントの言語識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,11 +34,11 @@ HRESULT GetLanguage(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out] A pointer to a variable that receives the language identifier.  
+ 入出力言語識別子を受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

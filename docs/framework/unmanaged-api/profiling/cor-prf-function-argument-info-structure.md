@@ -38,26 +38,26 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`numRanges`|The number of blocks of arguments. That is, this value is the number of [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures in the `ranges` array.|  
-|`totalArgumentSize`|The total size of all arguments. In other words, this value is the sum of the argument lengths.|  
-|`ranges`|An array of `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which represents one block of function arguments.|  
+|`numRanges`|引数のブロックの数。 つまり、この値は、`ranges` 配列内の[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)構造体の数です。|  
+|`totalArgumentSize`|すべての引数の合計サイズ。 言い換えると、この値は引数の長さの合計になります。|  
+|`ranges`|`COR_PRF_FUNCTION_ARGUMENT_RANGE` 構造体の配列。それぞれが関数の引数の1つのブロックを表します。|  
   
-## <a name="remarks"></a>Remarks  
- A function may have many arguments. Those arguments might not be stored contiguously in memory. You might have a block of three arguments in one place, a block of two arguments in another place, and a final block of one argument in a different place. These arguments are all for the same function; they're just stored in different places.  
+## <a name="remarks"></a>コメント  
+ 関数には、多くの引数を含めることができます。 これらの引数は、連続してメモリに格納されていない可能性があります。 1つの場所に3つの引数のブロック、別の場所に2つの引数のブロック、および別の場所にある1つの引数の最後のブロックがある場合があります。 これらの引数はすべて同じ関数に対して使用されます。これらは、さまざまな場所に格納されています。  
   
- The `COR_PRF_FUNCTION_ARGUMENT_INFO` structure represents all the arguments of a single function. It uses an array to reference all the blocks of function arguments. So, for a single function, you have a single `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, which references multiple `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which points to one or more function arguments.  
+ `COR_PRF_FUNCTION_ARGUMENT_INFO` 構造体は、1つの関数のすべての引数を表します。 配列を使用して、関数の引数のすべてのブロックを参照します。 そのため、1つの関数に対して、1つの `COR_PRF_FUNCTION_ARGUMENT_INFO` 構造体を使用して、それぞれが1つ以上の関数引数を指し示す複数の `COR_PRF_FUNCTION_ARGUMENT_RANGE` 構造体を参照します。  
   
- Arguments that are stored in registers are spilled into memory to build the structures.  
+ レジスタに格納されている引数は、構造体を構築するためにメモリに書き込まれます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorProf.idl  
+ **ヘッダー:** Corprof.idl  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [構造体のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448435"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted メソッド
-Notifies the profiler that a search has started for a function that was compiled previously using the Native Image Generator (NGen.exe).  
+以前にネイティブイメージジェネレーター (Ngen.exe) を使用してコンパイルされた関数に対して検索が開始されたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,21 +35,21 @@ HRESULT JITCachedFunctionSearchStarted(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in] The ID of the function for which the search is being performed.  
+ から検索を実行する関数の ID。  
   
  `pbUseCachedFunction`  
- [out] `true` if the execution engine should use the cached version of a function (if available); otherwise `false`. If the value is `false`, the execution engine JIT-compiles the function instead of using a version that is not JIT-compiled.  
+ [out] キャッシュされたバージョンの関数を実行エンジンが使用する必要がある場合 (使用可能な場合) に `true` します。それ以外の場合は `false`。 値が `false`場合、実行エンジンは、JIT コンパイルされていないバージョンを使用するのではなく、関数を JIT コンパイルします。  
   
-## <a name="remarks"></a>Remarks  
- In the .NET Framework version 2.0, the `JITCachedFunctionSearchStarted` and [ICorProfilerCallback::JITCachedFunctionSearchFinished Method](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md) callbacks will not be made for all functions in regular NGen images. Only NGen images optimized for a profile will generate callbacks for all functions in the image. However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT). Otherwise, the profiler should use a lazy strategy for gathering function information.  
+## <a name="remarks"></a>コメント  
+ .NET Framework バージョン2.0 では、通常の NGen イメージのすべての関数に対して `JITCachedFunctionSearchStarted` および[ICorProfilerCallback:: JITCachedFunctionSearchFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md)のコールバックは行われません。 プロファイル用に最適化された NGen イメージのみが、イメージ内のすべての関数のコールバックを生成します。 ただし、オーバーヘッドが増加するため、プロファイラーは、これらのコールバックを使用して just-in-time (JIT) コンパイルを強制的に実行する場合にのみ、プロファイラーで最適化された NGen イメージを要求する必要があります。 それ以外の場合、プロファイラーは関数情報を収集するためにレイジー戦略を使用する必要があります。  
   
- Profilers must support cases where multiple threads of a profiled application are calling the same method simultaneously. For example, thread A calls `JITCachedFunctionSearchStarted` and the profiler responds by setting *pbUseCachedFunction*to FALSE to force JIT compilation. Thread A then calls [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) and [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md).  
+ プロファイラーは、プロファイルされたアプリケーションの複数のスレッドが同時に同じメソッドを呼び出す場合をサポートする必要があります。 たとえば、スレッド A は `JITCachedFunctionSearchStarted` を呼び出し、プロファイラーは JIT コンパイルを強制するために*pbUseCachedFunction*を FALSE に設定することによって応答します。 次に、スレッド A は[ICorProfilerCallback:: JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)と[ICorProfilerCallback:: JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)を呼び出します。  
   
- Now thread B calls `JITCachedFunctionSearchStarted` for the same function. Even though the profiler has stated its intention to JIT-compile the function, the profiler receives the second callback because thread B sends the callback before the profiler has responded to thread A's call to `JITCachedFunctionSearchStarted`. The order in which the threads make calls depends on how the threads are scheduled.  
+ ここで、スレッド B は同じ関数の `JITCachedFunctionSearchStarted` を呼び出します。 プロファイラーは、関数を JIT コンパイルすることを意図していましたが、プロファイラーは2番目のコールバックを受け取ります。これは、プロファイラーが `JITCachedFunctionSearchStarted`へのスレッド A の呼び出しに応答する前に、スレッド B がコールバックを送信するためです。 スレッドが呼び出しを行う順序は、スレッドがどのようにスケジュールされているかによって異なります。  
   
- When the profiler receives duplicate callbacks, it must set the value referenced by `pbUseCachedFunction` to the same value for all the duplicate callbacks. That is, when `JITCachedFunctionSearchStarted` is called multiple times with the same `functionId` value, the profiler must respond the same each time.  
+ プロファイラーは、重複コールバックを受信するときに、`pbUseCachedFunction` によって参照される値を、重複するすべてのコールバックについて同じ値に設定する必要があります。 つまり、同じ `functionId` 値を使用して `JITCachedFunctionSearchStarted` が複数回呼び出された場合、プロファイラーは毎回同じ応答を返す必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -58,6 +58,6 @@ HRESULT JITCachedFunctionSearchStarted(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

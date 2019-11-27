@@ -37,10 +37,10 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|The garbage collection was induced by a <xref:System.GC.Collect%2A> method.|  
-|`COR_PRF_GC_OTHER`|The reason is unspecified.|  
+|`COR_PRF_GC_INDUCED`|ガベージコレクションは、<xref:System.GC.Collect%2A> メソッドによって発生しました。|  
+|`COR_PRF_GC_OTHER`|理由が指定されていません。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -49,6 +49,6 @@ typedef enum {
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

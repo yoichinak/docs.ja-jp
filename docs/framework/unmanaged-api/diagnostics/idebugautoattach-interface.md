@@ -22,17 +22,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445505"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach インターフェイス
-Defines the interface for server-invoked debugger auto attach.  
+サーバーによって呼び出されるデバッガーの自動アタッチのインターフェイスを定義します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[AutoAttach メソッド](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Performs server-invoked debugger auto attach.|  
+|[AutoAttach メソッド](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|サーバーによって呼び出されたデバッガーの自動アタッチを実行します。|  
   
-## <a name="requirements"></a>［要件］  
- **Header:** DbgAutoAttach.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** DbgAutoAttach .idl  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

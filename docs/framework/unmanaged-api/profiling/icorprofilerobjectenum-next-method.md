@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428151"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next メソッド
-Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.  
+シーケンス内の列挙子の現在位置を開始位置として、オブジェクトのシーケンシャルコレクションから、指定された数の連続するオブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,12 +41,12 @@ HRESULT Next (
  [in] 取得するオブジェクトの数。  
   
  `objects`  
- [out] An array of `ObjectID` values, each of which represents a retrieved object.  
+ 入出力`ObjectID` 値の配列。各値は取得されたオブジェクトを表します。  
   
  `pceltFetched`  
  [out] `objects` 配列で実際に返されるモジュールの数へのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -55,6 +55,6 @@ HRESULT Next (
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerObjectEnum インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

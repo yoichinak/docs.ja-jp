@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448620"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument メソッド
-Gets the smallest start line and largest end line for the method in a specific document.  
+特定のドキュメント内のメソッドの最小の開始行と最大の終了行を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,20 +36,20 @@ HRESULT GetSourceExtentInDocument(
   
 ## <a name="parameters"></a>パラメーター  
  `document`  
- [in] A pointer to the document.  
+ からドキュメントへのポインター。  
   
  `pstartLine`  
- [out] A pointer to a `ULONG32` that receives the start line.  
+ 入出力開始行を受け取る `ULONG32` へのポインター。  
   
  `pendLine`  
- [out] A pointer to a `ULONG32` that receives the end line.  
+ 入出力終了行を受け取る `ULONG32` へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymENCUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

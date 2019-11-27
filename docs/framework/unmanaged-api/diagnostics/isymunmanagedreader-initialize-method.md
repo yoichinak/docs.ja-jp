@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429740"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize メソッド
-Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.  
+このリーダーが関連付けられるメタデータインポーターインターフェイスと、モジュールのファイル名を使用して、シンボルリーダーを初期化します。  
   
 > [!NOTE]
-> This method can be called only once, and must be called before any other reader methods.  
+> このメソッドを呼び出すことができるのは1回だけです。他のリーダーメソッドの前に呼び出す必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,26 +40,26 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>パラメーター  
  `importer`  
- [in] The metadata importer interface with which this reader will be associated.  
+ からこのリーダーが関連付けられるメタデータインポーターインターフェイス。  
   
  `filename`  
- [in] The file name of the module. You can use the `pIStream` parameter instead.  
+ からモジュールのファイル名。 代わりに、`pIStream` パラメーターを使用できます。  
   
  `searchPath`  
- [in] The path to search. このパラメーターは省略できます。  
+ から検索するパス。 このパラメーターはオプションです。  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the filename parameter.  
+ からファイルストリーム。 filename パラメーターの代わりに使用されます。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="remarks"></a>Remarks  
- You need to specify only one of the `filename` or the `pIStream` parameters, not both. `searchPath` パラメーターは省略可能です。  
+## <a name="remarks"></a>コメント  
+ 両方ではなく、`filename` または `pIStream` のパラメーターのいずれか1つだけを指定する必要があります。 `searchPath` パラメーターは省略可能です。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

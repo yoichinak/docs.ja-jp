@@ -15,7 +15,7 @@ ms.locfileid: "74341516"
 
 ### <a name="to-create-a-file-that-contains-data"></a>データを含むファイルを作成するには
 
-Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.
+トピック「[方法: 異種ファイルのコンテンツを結合する (LINQ) (Visual Basic)」の「方法: コンテンツ](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)をソリューションフォルダーに保存する」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -70,12 +70,12 @@ End Class
 ' 115, 35, 72, 91, 70
 ```
 
-This example also demonstrates how to return a query variable from a Function.
+また、この例では、関数からクエリ変数を返す方法も示しています。
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+VB.NET コンソールアプリケーションプロジェクトを作成します。このプロジェクトには、名前空間の `Imports` ステートメントが含まれています。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

@@ -32,7 +32,7 @@ ms.locfileid: "74444609"
  [OSINFO 構造体](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)  
  オペレーティング システムに関する情報が含まれます。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
  [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  

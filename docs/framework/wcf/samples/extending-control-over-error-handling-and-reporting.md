@@ -17,7 +17,7 @@ ms.locfileid: "74281702"
   
  サービスは <xref:System.ServiceModel.Dispatcher.IErrorHandler> インターフェイスを使用して、エラーを途中受信して処理を実行し、エラーを報告する方法を制御できます。 このインターフェイスには、<xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> と <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> の 2 つのメソッドを実装できます。 <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> メソッドを使用すると、例外に対して生成されるエラー メッセージを追加または変更したり、非表示にすることができます。 <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> メソッドを使用すると、エラーの発生時にエラー処理を実行することができます。またこのメソッドは追加のエラー処理を実行するかどうかを制御します。  
   
- このサンプルでは、`CalculatorErrorHandler` 型は <xref:System.ServiceModel.Dispatcher.IErrorHandler> インターフェイスを実装します。 の  
+ このサンプルでは、`CalculatorErrorHandler` 型は <xref:System.ServiceModel.Dispatcher.IErrorHandler> インターフェイスを実装します。 「  
   
  <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> メソッドは `CalculatorErrorHandler`、エラーのログを c:\ のエラー txt テキストファイルに書き込みます。 このサンプルではエラーを記録して表示します。このエラーの報告は、クライアントに返されます。  
   
@@ -143,7 +143,7 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
   
 1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2. ソリューションをビルドするには、「[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
 3. error.txt ファイル用に c:\logs ディレクトリを作成したことを確認します。 または、`CalculatorErrorHandler.HandleError` で使用されるファイル名を変更します。  
   

@@ -15,51 +15,51 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350361"
 ---
 # <a name="mysettings-object"></a>My.Settings オブジェクト
-Provides properties and methods for accessing the application's settings.  
+アプリケーションの設定にアクセスするためのプロパティとメソッドを提供します。  
   
-## <a name="remarks"></a>Remarks  
- The `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application. 詳細については、「[アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ `My.Settings` オブジェクトは、アプリケーションの設定へのアクセスを提供し、アプリケーションのプロパティ設定やその他の情報を動的に格納および取得できるようにします。 詳細については、[アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet) を参照してください。  
   
 ## <a name="properties"></a>プロパティ  
- `My.Settings` オブジェクトのプロパティを使用すると、アプリケーションの設定にアクセスできます。 To add or remove settings, use the **Settings Designer**.  
+ `My.Settings` オブジェクトのプロパティを使用すると、アプリケーションの設定にアクセスできます。 設定を追加または削除するには、**設定デザイナー**を使用します。  
   
- Each setting has a **Name**, **Type**, **Scope**, and **Value**, and these settings determine how the property to access each setting appears in the `My.Settings` object:  
+ 各設定には**名前**、**種類**、**スコープ**、および**値**があり、これらの設定によって、各設定にアクセスするプロパティが `My.Settings` オブジェクトにどのように表示されるかが決まります。  
   
-- **Name** determines the name of the property.  
+- **Name**プロパティの名前を指定します。  
   
-- **Type** determines the type of the property.  
+- **Type**は、プロパティの型を決定します。  
   
-- **Scope** indicates if the property is read-only. If the value is **Application**, the property is read-only; if the value is **User**, the property is read-write.  
+- **スコープ**は、プロパティが読み取り専用かどうかを示します。 値が**アプリケーション**の場合、プロパティは読み取り専用です。値が**User**の場合、プロパティは読み取り/書き込み可能です。  
   
-- **Value** is the default value of the property.  
+- **値**は、プロパティの既定値です。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |---|---|  
-|`Reload`|Reloads the user settings from the last saved values.|  
-|`Save`|Saves the current user settings.|  
+|`Reload`|最後に保存した値からユーザー設定を再読み込みします。|  
+|`Save`|現在のユーザー設定を保存します。|  
   
- The `My.Settings` object also provides advanced properties and methods, inherited from the <xref:System.Configuration.ApplicationSettingsBase> class.  
+ `My.Settings` オブジェクトは、<xref:System.Configuration.ApplicationSettingsBase> クラスから継承された高度なプロパティやメソッドも提供します。  
   
-## <a name="tasks"></a>[タスク]  
- The following table lists examples of tasks involving the `My.Settings` object.  
+## <a name="tasks"></a>タスク  
+ 次の表に、`My.Settings` オブジェクトに関連するタスクの例を示します。  
   
-|終了|解決方法については、|  
+|目的|参照先|  
 |---|---|  
-|Read an application setting|[方法: Visual Basic でアプリケーション設定を読み取る](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
-|Change a user setting|[方法: Visual Basic でユーザー設定を変更する](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|Persist user settings|[方法: Visual Basic でユーザー設定を永続化する](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Create a property grid for user settings|[方法: Visual Basic でユーザー設定のためのプロパティ グリッドを作成する](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|アプリケーション設定の読み取り|[方法: Visual Basic でアプリケーション設定を読み取る](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|ユーザー設定を変更する|[方法: Visual Basic でユーザー設定を変更する](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|ユーザー設定を保持する|[方法: Visual Basic でユーザー設定を永続化する](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|ユーザー設定のプロパティグリッドを作成する|[方法: Visual Basic でユーザー設定のためのプロパティ グリッドを作成する](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>例  
  次の例は、`Nickname` の設定値を表示します。  
   
  [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
- この例を実行するには、アプリケーションで `String` 型の `Nickname` を設定する必要があります。  
+ この例を実行するには、アプリケーションで `Nickname` 型の `String` を設定する必要があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - [方法: Visual Basic でアプリケーション設定を読み取る](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)

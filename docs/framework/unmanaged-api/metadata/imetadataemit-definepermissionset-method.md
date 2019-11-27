@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431574"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>IMetaDataEmit::DefinePermissionSet メソッド
-Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.  
+指定したメタデータシグネチャを持つアクセス許可セットの定義を作成し、そのアクセス許可セットの定義に対するトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,30 +39,30 @@ HRESULT DefinePermissionSet (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in] The object to be decorated.  
+ から修飾されるオブジェクト。  
   
  `dwAction`  
- [in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.  
+ から使用する宣言セキュリティの種類を指定する[CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md)値です。  
   
  `pvPermission`  
- [in] The permission BLOB.  
+ からアクセス許可 BLOB。  
   
  `cbPermission`  
- [in] The size, in bytes, of `pvPermission`.  
+ から`pvPermission`のサイズ (バイト単位)。  
   
  `ppm`  
- [out] The returned permission token.  
+ 入出力返されたアクセス許可トークン。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

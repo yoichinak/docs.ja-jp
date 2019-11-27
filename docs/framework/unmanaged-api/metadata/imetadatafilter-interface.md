@@ -28,19 +28,19 @@ ms.locfileid: "74440167"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IsTokenMarked メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|Gets a value indicating whether the specified metadata token has been processed.|  
-|[MarkToken メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|Sets a value indicating that the specified metadata token has been processed.|  
-|[UnmarkAll メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|Removes the processing marks from all the tokens in the current metadata scope.|  
+|[IsTokenMarked メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|指定したメタデータトークンが処理されたかどうかを示す値を取得します。|  
+|[MarkToken メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|指定したメタデータトークンが処理されたことを示す値を設定します。|  
+|[UnmarkAll メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|現在のメタデータスコープ内のすべてのトークンから処理マークを削除します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

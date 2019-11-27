@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445032"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed メソッド
-Notifies the profiler that a COM interop vtable is being destroyed.  
+COM 相互運用機能の vtable が破棄されていることをプロファイラーに通知します。  
   
 > [!NOTE]
-> This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.  
+> このコールバックは、vtable の破棄がシャットダウンに非常に近いために発生することはほとんどありません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,20 +39,20 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="parameters"></a>パラメーター  
  `wrappedClassId`  
- [in] The ID of the class for which this vtable was created.  
+ からこの vtable が作成されたクラスの ID。  
   
  `implementedIID`  
- [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
+ からクラスによって実装されるインターフェイスの ID。 この値は、インターフェイスが内部でのみ使用されている場合は NULL になります。  
   
  `pVTable`  
- [in] A pointer to the start of the vtable.  
+ からVtable の先頭へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+## <a name="remarks"></a>コメント  
+ プロファイラーは、このメソッドの実装でブロックしないでください。スタックがガベージコレクションを許可する状態にならないため、プリエンプティブガベージコレクションを有効にすることはできません。 プロファイラーがここでブロックし、ガベージコレクションを実行しようとすると、このコールバックが戻るまでランタイムはブロックします。  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ プロファイラーによるこのメソッドの実装では、マネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -61,7 +61,7 @@ HRESULT COMClassicVTableDestroyed(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [COMClassicVTableCreated メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)

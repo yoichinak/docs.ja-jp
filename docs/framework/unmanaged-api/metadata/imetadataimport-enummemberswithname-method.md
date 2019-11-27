@@ -40,43 +40,43 @@ HRESULT EnumMembersWithName (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [入力、出力]列挙子へのポインター。  
   
  `cl`  
- [in] A TypeDef token representing the type with members to enumerate.  
+ から列挙するメンバーを持つ型を表す TypeDef トークン。  
   
  `szName`  
- [in] The member name that limits the scope of the enumerator.  
+ から列挙子のスコープを制限するメンバー名。  
   
  `rMembers`  
- [out] The array used to store the MemberDef tokens.  
+ 入出力MemberDef トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rMembers` 配列の最大サイズ。  
   
  `pcTokens`  
- [out] The actual number of MemberDef tokens returned in `rMembers`.  
+ 入出力`rMembers`で返された MemberDef トークンの実際の数。  
   
-## <a name="remarks"></a>Remarks  
- This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` discards all field and member tokens that do not have the specified name.  
+## <a name="remarks"></a>コメント  
+ このメソッドは、フィールドとメソッドを列挙しますが、プロパティやイベントは列挙しません。 [IMetaDataImport:: EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)とは異なり、`EnumMembersWithName` は、指定された名前のないすべてのフィールドとメンバートークンを破棄します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` returned successfully.|  
-|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumTypeDefs` が正常に返されました。|  
+|`S_FALSE`|列挙する MemberDef トークンがありません。 この場合、`pcTokens` は0になります。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

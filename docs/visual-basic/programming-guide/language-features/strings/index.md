@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344338"
 ---
 # <a name="strings-in-visual-basic"></a>Visual Basic における文字列
-This section describes the basic concepts behind using strings in Visual Basic.  
+ここでは、Visual Basic での文字列の使用に関する基本的な概念について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- Lists topics that describe the basic concepts behind using strings in Visual Basic.  
+ Visual Basic での文字列の使用に関する基本的な概念について説明するトピックの一覧を示します。  
   
  [方法 : Visual Basic の StringBuilder を使用して文字列を作成する](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
  長い文字列を多数のより短い文字列から効率的に作成する方法を紹介します。  
@@ -34,6 +34,6 @@ This section describes the basic concepts behind using strings in Visual Basic.
  [チュートリアル : Visual Basic での文字列の暗号化と複合化](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
  Triple Data Encryption Standard アルゴリズムの暗号化サービス プロバイダー バージョンを使用して文字列を暗号化および暗号化解除する方法を説明します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic 言語の機能](../../../../visual-basic/programming-guide/language-features/index.md)
