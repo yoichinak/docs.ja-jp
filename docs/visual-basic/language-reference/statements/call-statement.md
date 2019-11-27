@@ -17,7 +17,7 @@ ms.locfileid: "74350158"
 ---
 # <a name="call-statement-visual-basic"></a>Call ステートメント (Visual Basic)
 
-Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.  
+`Function`、`Sub`、またはダイナミックリンクライブラリ (DLL) プロシージャに制御を転送します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,27 +29,27 @@ Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedur
 
 |||
 |---|---|
-|`procedureName`|必須です。 Name of the procedure to call.|
-|`argumentList`|省略可能です。 List of variables or expressions representing arguments that are passed to the procedure when it is called. Multiple arguments are separated by commas. If you include `argumentList`, you must enclose it in parentheses.|
+|`procedureName`|必須。 呼び出すプロシージャの名前。|
+|`argumentList`|省略可。 プロシージャが呼び出されたときにプロシージャに渡される引数を表す変数または式のリスト。 複数の引数は、コンマで区切ります。 `argumentList`を含める場合は、かっこで囲む必要があります。|
 |||
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
- You can use the `Call` keyword when you call a procedure. For most procedure calls, you aren’t required to use this  keyword.
+ プロシージャを呼び出すときに、`Call` キーワードを使用できます。 ほとんどのプロシージャ呼び出しでは、このキーワードを使用する必要はありません。
 
- You typically use the `Call` keyword when the called expression doesn’t start with an identifier. Use of the `Call` keyword for other uses isn't recommended.
+ 通常、呼び出された式が識別子で始まらない場合は、`Call` キーワードを使用します。 他の用途には `Call` キーワードを使用しないことをお勧めします。
 
- If the procedure returns a value, the `Call` statement discards it.
+ プロシージャが値を返す場合、`Call` ステートメントによって値が破棄されます。
 
 ## <a name="example"></a>例
 
- The following code shows two examples where the `Call` keyword is necessary to call a procedure. In both examples, the called expression doesn't start with an identifier.
+ 次のコードは、プロシージャを呼び出すために `Call` キーワードが必要な2つの例を示しています。 どちらの例でも、呼び出された式の先頭が識別子ではありません。
 
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Function ステートメント](function-statement.md)
 - [Sub ステートメント](sub-statement.md)
-- [Declare ステートメント](declare-statement.md)
+- [Declare Statement](declare-statement.md)
 - [ラムダ式](../../programming-guide/language-features/procedures/lambda-expressions.md)

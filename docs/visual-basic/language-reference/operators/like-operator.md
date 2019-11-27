@@ -30,10 +30,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350946"
 ---
 # <a name="like-operator-visual-basic"></a>Like 演算子 (Visual Basic)
-Compares a string against a pattern.  
+文字列をパターンと比較します。  
 
 > [!IMPORTANT]
-> The `Like` operator is currently not supported in .NET Core and .NET Standard projects.
+> `Like` 演算子は、現在、.NET Core および .NET Standard プロジェクトではサポートされていません。
 
 ## <a name="syntax"></a>構文  
   
@@ -43,69 +43,69 @@ result = string Like pattern
   
 ## <a name="parts"></a>指定項目  
  `result`  
- 必須です。 Any `Boolean` variable. The result is a `Boolean` value indicating whether or not the `string` satisfies the `pattern`.  
+ 必須。 任意の `Boolean` 変数。 結果は、`string` が `pattern`を満たすかどうかを示す `Boolean` 値です。  
   
  `string`  
- 必須です。 任意のブール型 ( `String` ) の式を指定します。  
+ 必須。 任意のブール型 ( `String` ) の式を指定します。  
   
  `pattern`  
- 必須です。 Any `String` expression conforming to the pattern-matching conventions described in "Remarks."  
+ 必須。 「解説」で説明されているパターン一致規則に準拠した任意の `String` 式。  
   
-## <a name="remarks"></a>Remarks  
- If the value in `string` satisfies the pattern contained in `pattern`, `result` is `True`. If the string does not satisfy the pattern, `result` is `False`. If both `string` and `pattern` are empty strings, the result is `True`.  
+## <a name="remarks"></a>コメント  
+ `string` の値が `pattern`に含まれるパターンを満たす場合、`result` は `True`です。 文字列がパターンを満たさない場合は、`result` が `False`ます。 `string` と `pattern` の両方が空の文字列の場合、結果は `True`ます。  
   
-## <a name="comparison-method"></a>Comparison Method  
- The behavior of the `Like` operator depends on the [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md). The default string comparison method for each source file is `Option Compare Binary`.  
+## <a name="comparison-method"></a>比較方法  
+ `Like` 演算子の動作は、 [Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)によって異なります。 各ソースファイルの既定の文字列比較方法は `Option Compare Binary`です。  
   
-## <a name="pattern-options"></a>Pattern Options  
- Built-in pattern matching provides a versatile tool for string comparisons. The pattern-matching features allow you to match each character in `string` against a specific character, a wildcard character, a character list, or a character range. The following table shows the characters allowed in `pattern` and what they match.  
+## <a name="pattern-options"></a>パターンオプション  
+ 組み込みのパターン照合では、文字列比較に使用できるさまざまなツールが用意されています。 パターンマッチング機能を使用すると、`string` 内の各文字を、特定の文字、ワイルドカード文字、文字リスト、または文字範囲に対して一致させることができます。 次の表に、`pattern` で使用できる文字と、それらが一致する文字を示します。  
   
-|Characters in `pattern`|Matches in `string`|  
+|`pattern` 内の文字|`string` 内の一致|  
 |-----------------------------|-------------------------|  
 |`?`|任意の 1 文字|  
-|`*`|Zero or more characters|  
-|`#`|Any single digit (0–9)|  
-|`[charlist]`|Any single character in `charlist`|  
-|`[!charlist]`|Any single character not in `charlist`|  
+|`*`|0個以上の文字|  
+|`#`|任意の1桁 (0 ~ 9)|  
+|`[charlist]`|`charlist` 内の任意の1文字|  
+|`[!charlist]`|`charlist` にない任意の1文字|  
   
-## <a name="character-lists"></a>Character Lists  
- A group of one or more characters (`charlist`) enclosed in brackets (`[ ]`) can be used to match any single character in `string` and can include almost any character code, including digits.  
+## <a name="character-lists"></a>文字リスト  
+ 角かっこ (`[ ]`) で囲まれた1つ以上の文字 (`charlist`) のグループを使用して `string` 内の任意の1文字と一致させることができ、数字を含むほぼすべての文字コードを含めることができます。  
   
- An exclamation point (`!`) at the beginning of `charlist` means that a match is made if any character except the characters in `charlist` is found in `string`. When used outside brackets, the exclamation point matches itself.  
+ `charlist` の先頭にある感嘆符 (`!`) は、`charlist` 内の文字を除く任意の文字が `string`で見つかった場合に一致することを意味します。 かっこの外側で使用すると、感嘆符自体が一致します。  
   
 ## <a name="special-characters"></a>特殊文字  
- To match the special characters left bracket (`[`), question mark (`?`), number sign (`#`), and asterisk (`*`), enclose them in brackets. The right bracket (`]`) cannot be used within a group to match itself, but it can be used outside a group as an individual character.  
+ 特殊文字の左角かっこ (`[`)、疑問符 (`?`)、番号記号 (`#`)、アスタリスク (`*`) と一致させるには、角かっこで囲みます。 右角かっこ (`]`) は、それ自体に一致するグループ内では使用できませんが、グループの外側で個別の文字として使用することはできます。  
   
- The character sequence `[]` is considered a zero-length string (`""`). However, it cannot be part of a character list enclosed in brackets. If you want to check whether a position in `string` contains one of a group of characters or no character at all, you can use `Like` twice. For an example, see [How to: Match a String against a Pattern](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ 文字シーケンス `[]` は、長さが0の文字列 (`""`) と見なされます。 ただし、角かっこで囲まれた文字リストの一部にすることはできません。 `string` 内の位置に文字のグループのいずれかが含まれているかどうかを確認したい場合は、`Like` を2回使用できます。 例については、「[方法: 文字列をパターンに一致させる](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)」を参照してください。  
   
-## <a name="character-ranges"></a>Character Ranges  
- By using a hyphen (`–`) to separate the lower and upper bounds of the range, `charlist` can specify a range of characters. For example, `[A–Z]` results in a match if the corresponding character position in `string` contains any character within the range `A`–`Z`, and `[!H–L]` results in a match if the corresponding character position contains any character outside the range `H`–`L`.  
+## <a name="character-ranges"></a>文字範囲  
+ ハイフン (`–`) を使用して範囲の下限と上限を区切ることにより、`charlist` は文字の範囲を指定できます。 たとえば、`string` 内の対応する文字位置に `A`–`Z`の範囲内の任意の文字が含まれている場合、`[A–Z]` は一致と見なされます。また、対応する文字位置に範囲外の文字が含まれている場合は、`[!H–L]` – `H`に一致します。`L`  
   
- When you specify a range of characters, they must appear in ascending sort order, that is, from lowest to highest. Thus, `[A–Z]` is a valid pattern, but `[Z–A]` is not.  
+ 文字の範囲を指定する場合は、昇順の並べ替え順序、つまり、小さい方から順に表示する必要があります。 したがって、`[A–Z]` は有効なパターンですが、`[Z–A]` は有効ではありません。  
   
-### <a name="multiple-character-ranges"></a>Multiple Character Ranges  
- To specify multiple ranges for the same character position, put them within the same brackets without delimiters. For example, `[A–CX–Z]` results in a match if the corresponding character position in `string` contains any character within either the range `A`–`C` or the range `X`–`Z`.  
+### <a name="multiple-character-ranges"></a>複数の文字範囲  
+ 同じ文字位置に複数の範囲を指定するには、区切り記号を使用せずに同じ角かっこ内に配置します。 たとえば、`string` 内の対応する文字位置に `A`–`C` または `X`~`Z`の範囲内のいずれかの文字が含まれている場合は、`[A–CX–Z]` 結果が一致します。  
   
-### <a name="usage-of-the-hyphen"></a>Usage of the Hyphen  
- A hyphen (`–`) can appear either at the beginning (after an exclamation point, if any) or at the end of `charlist` to match itself. In any other location, the hyphen identifies a range of characters delimited by the characters on either side of the hyphen.  
+### <a name="usage-of-the-hyphen"></a>ハイフンの使用  
+ ハイフン (`–`) は、先頭 (感嘆符の後)、または `charlist` の末尾に、それ自体に一致させることができます。 その他の場所では、ハイフンは、ハイフンの両側の文字で区切られた文字の範囲を識別します。  
   
-## <a name="collating-sequence"></a>Collating Sequence  
- The meaning of a specified range depends on the character ordering at run time, as determined by `Option Compare` and the locale setting of the system the code is running on. With `Option Compare Binary`, the range `[A–E]` matches `A`, `B`, `C`, `D`, and `E`. With `Option Compare Text`, `[A–E]` matches `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`, and `e`. The range does not match `Ê` or `ê` because accented characters collate after unaccented characters in the sort order.  
+## <a name="collating-sequence"></a>照合順序  
+ 指定された範囲の意味は、実行時の文字の順序によって異なります。 `Option Compare` と、コードが実行されているシステムのロケール設定によって決まります。 `Option Compare Binary`の場合、`[A–E]` 範囲は `A`、`B`、`C`、`D`、および `E`と一致します。 `Option Compare Text`では、`[A–E]` は `A`、`a`、`À`、`à`、`B`、`b`、`C`、`c`、`D`、`d`、`E`、`e`と一致します。 この範囲は `Ê` または `ê` と一致しません。これは、アクセント記号付き文字が並べ替え順序でアクセントが付いていない文字の後になるためです。  
   
-## <a name="digraph-characters"></a>Digraph Characters  
- In some languages, there are alphabetic characters that represent two separate characters. For example, several languages use the character `æ` to represent the characters `a` and `e` when they appear together. The `Like` operator recognizes that the single digraph character and the two individual characters are equivalent.  
+## <a name="digraph-characters"></a>Digraph の文字  
+ 言語によっては、2つの異なる文字を表すアルファベット文字があります。 たとえば、いくつかの言語では、文字 `æ` を使用して `a` と `e` 文字が一緒に表示されます。 `Like` 演算子は、1つの digraph 文字と2つの個別の文字が等価であることを認識します。  
   
- When a language that uses a digraph character is specified in the system locale settings, an occurrence of the single digraph character in either `pattern` or `string` matches the equivalent two-character sequence in the other string. Similarly, a digraph character in `pattern` enclosed in brackets (by itself, in a list, or in a range) matches the equivalent two-character sequence in `string`.  
+ Digraph 文字を使用する言語がシステムのロケール設定で指定されている場合、`pattern` または `string` の1つの digraph 文字が、他の文字列の等価の2文字シーケンスと一致します。 同様に、角かっこで囲まれた `pattern` の digraph 文字 (単独、リスト、または範囲内) は、`string`内の等価の2文字シーケンスと一致します。  
   
 ## <a name="overloading"></a>オーバーロード  
- The `Like` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `Like` 演算子は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 コードでこのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- This example uses the `Like` operator to compare strings to various patterns. The results go into a `Boolean` variable indicating whether each string satisfies the pattern.  
+ この例では、`Like` 演算子を使用して、文字列をさまざまなパターンと比較します。 結果は、各文字列がパターンを満たすかどうかを示す `Boolean` 変数に入ります。  
   
  [!code-vb[VbVbalrOperators#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#30)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>

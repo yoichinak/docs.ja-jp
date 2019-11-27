@@ -1,5 +1,5 @@
 ---
-title: Where 句
+title: WHERE 句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryWhere
@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349625"
 ---
 # <a name="where-clause-visual-basic"></a>Where 句 (Visual Basic)
-Specifies the filtering condition for a query.  
+クエリのフィルター条件を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,26 +26,26 @@ Where condition
   
 ## <a name="parts"></a>指定項目  
  `condition`  
- 必須です。 An expression that determines whether the values for the current item in the collection are included in the output collection. The expression must evaluate to a `Boolean` value or the equivalent of a `Boolean` value. If the condition evaluates to `True`, the element is included in the query result; otherwise, the element is excluded from the query result.  
+ 必須。 コレクション内の現在の項目の値が出力コレクションに含まれるかどうかを決定する式。 式は、`Boolean` 値または `Boolean` 値に相当する値に評価される必要があります。 条件が `True`と評価された場合、要素はクエリの結果に含まれます。それ以外の場合、要素はクエリの結果から除外されます。  
   
-## <a name="remarks"></a>Remarks  
- The `Where` clause enables you to filter query data by selecting only elements that meet certain criteria. Elements whose values cause the `Where` clause to evaluate to `True` are included in the query result; other elements are excluded. The expression that is used in a `Where` clause must evaluate to a `Boolean` or the equivalent of a `Boolean`, such as an Integer that evaluates to `False` when its value is zero. You can combine multiple expressions in a `Where` clause by using logical operators such as `And`, `Or`, `AndAlso`, `OrElse`, `Is`, and `IsNot`.  
+## <a name="remarks"></a>コメント  
+ `Where` 句を使用すると、特定の条件を満たす要素のみを選択してクエリデータをフィルター処理できます。 `Where` 句が `True` と評価される値を持つ要素がクエリ結果に含まれます。その他の要素は除外されます。 `Where` 句で使用される式は、値が0の場合に `False` に評価される整数など、`Boolean` または `Boolean`に相当するものに評価される必要があります。 `And`、`Or`、`AndAlso`、`OrElse`、`Is`、`IsNot`などの論理演算子を使用して、`Where` 句で複数の式を組み合わせることができます。  
   
- By default, query expressions are not evaluated until they are accessed—for example, when they are data-bound or iterated through in a `For` loop. As a result, the `Where` clause is not evaluated until the query is accessed. If you have values external to the query that are used in the `Where` clause, ensure that the appropriate value is used in the `Where` clause at the time the query is executed. For more information about query execution, see [Writing Your First LINQ Query](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+ 既定では、クエリ式は、アクセスされるまで評価されません。たとえば、データバインドされている場合や、`For` ループ内で反復処理される場合です。 その結果、`Where` 句は、クエリがアクセスされるまで評価されません。 `Where` 句で使用されているクエリの外部の値がある場合は、クエリの実行時に `Where` 句で適切な値が使用されていることを確認してください。 クエリ実行の詳細については、「初めての[LINQ クエリの作成](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)」を参照してください。  
   
- You can call functions within a `Where` clause to perform a calculation or operation on a value from the current element in the collection. Calling a function in a `Where` clause can cause the query to be executed immediately when it is defined instead of when it is accessed. For more information about query execution, see [Writing Your First LINQ Query](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+ `Where` 句内で関数を呼び出して、コレクション内の現在の要素の値に対して計算または操作を実行することができます。 `Where` 句で関数を呼び出すと、クエリがアクセス時ではなく定義された直後に実行される可能性があります。 クエリ実行の詳細については、「初めての[LINQ クエリの作成](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- The following query expression uses a `From` clause to declare a range variable `cust` for each `Customer` object in the `customers` collection. The `Where` clause uses the range variable to restrict the output to customers from the specified region. The `For Each` loop displays the company name for each customer in the query result.  
+ 次のクエリ式では、`From` 句を使用して、`customers` コレクション内の各 `Customer` オブジェクトに対して `cust` 範囲変数を宣言します。 `Where` 句では、範囲変数を使用して、指定された地域の顧客に出力を制限します。 `For Each` ループでは、クエリ結果に各顧客の会社名が表示されます。  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="example"></a>例  
- The following example uses `And` and `Or` logical operators in the `Where` clause.  
+ 次の例では、`Where` 句で `And` および `Or` 論理演算子を使用します。  
   
  [!code-vb[VbSimpleQuerySamples#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#31)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)

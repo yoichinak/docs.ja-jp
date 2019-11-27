@@ -16,51 +16,51 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340555"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>方法: プロパティ プロシージャを呼び出す (Visual Basic)
-You call a property procedure by storing a value in the property or retrieving its value. You access a property the same way you access a variable.  
+プロパティプロシージャを呼び出すには、プロパティに値を格納するか、値を取得します。 プロパティには、変数にアクセスするのと同じ方法でアクセスします。  
   
- The property's `Set` procedure stores a value, and its `Get` procedure retrieves the value. However, you do not explicitly call these procedures by name. You use the property in an assignment statement or an expression, just as you would store or retrieve the value of a variable. Visual Basic makes the calls to the property's procedures.  
+ プロパティの `Set` プロシージャは値を格納し、その `Get` プロシージャは値を取得します。 ただし、これらのプロシージャを名前で明示的に呼び出すことはできません。 変数の値を格納または取得する場合と同様に、代入ステートメントまたは式でプロパティを使用します。 Visual Basic によって、プロパティのプロシージャが呼び出されます。  
   
-### <a name="to-call-a-propertys-get-procedure"></a>To call a property's Get procedure  
+### <a name="to-call-a-propertys-get-procedure"></a>プロパティの Get プロシージャを呼び出すには  
   
-1. Use the property name in an expression the same way you would use a variable name. You can use a property anywhere you can use a variable or a constant.  
+1. 変数名を使用する場合と同じように、式でプロパティ名を使用します。 変数または定数を使用できる場所であればどこでもプロパティを使用できます。  
   
-     -または-  
+     または  
   
-     Use the property name following the equal (`=`) sign in an assignment statement.  
+     代入ステートメントの等号 (`=`) の後にあるプロパティ名を使用します。  
   
-     The following example reads the value of the <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> property, implicitly calling its `Get` procedure.  
+     次の例では、<xref:Microsoft.VisualBasic.DateAndTime.Now%2A> プロパティの値を読み取り、その `Get` プロシージャを暗黙的に呼び出します。  
   
      [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
-2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
+2. プロパティが引数を受け取る場合は、プロパティ名の後にかっこを付けて引数リストを囲みます。 引数がない場合は、必要に応じてかっこを省略できます。  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
+3. 引数リストに引数をコンマで区切ってかっこ内に配置します。 引数は、プロパティが対応するパラメーターを定義する順序と同じ順序で指定してください。  
   
- The value of the property participates in the expression just as a variable or constant would, or it is stored in the variable or property on the left side of the assignment statement.  
+ プロパティの値は、変数または定数と同様に式に参加します。または、代入ステートメントの左側にある変数またはプロパティに格納されます。  
   
-### <a name="to-call-a-propertys-set-procedure"></a>To call a property's Set procedure  
+### <a name="to-call-a-propertys-set-procedure"></a>プロパティの Set プロシージャを呼び出すには  
   
-1. Use the property name on the left side of an assignment statement.  
+1. 代入ステートメントの左側にあるプロパティ名を使用します。  
   
-     The following example sets the value of the <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> property, implicitly calling the `Set` procedure.  
+     次の例では、<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> プロパティの値を設定し、`Set` プロシージャを暗黙的に呼び出します。  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
-2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
+2. プロパティが引数を受け取る場合は、プロパティ名の後にかっこを付けて引数リストを囲みます。 引数がない場合は、必要に応じてかっこを省略できます。  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
+3. 引数リストに引数をコンマで区切ってかっこ内に配置します。 引数は、プロパティが対応するパラメーターを定義する順序と同じ順序で指定してください。  
   
- The value generated on the right side of the assignment statement is stored in the property.  
+ 代入ステートメントの右辺に生成される値は、プロパティに格納されます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Visual Basic のプロパティと変数の違い](./differences-between-properties-and-variables.md)
 - [方法 : プロパティを作成する](./how-to-create-a-property.md)
 - [方法 : 複数のアクセス レベルを持つプロパティを宣言する](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [方法: Visual Basic で既定のプロパティを宣言して呼び出す](./how-to-declare-and-call-a-default-property.md)
 - [方法 : プロパティに値を格納する](./how-to-put-a-value-in-a-property.md)
 - [方法 : プロパティから値を取得する](./how-to-get-a-value-from-a-property.md)
 - [Get ステートメント](../../../../visual-basic/language-reference/statements/get-statement.md)

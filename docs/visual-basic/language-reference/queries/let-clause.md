@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350435"
 ---
 # <a name="let-clause-visual-basic"></a>Let 句 (Visual Basic)
-Computes a value and assigns it to a new variable within the query.  
+値を計算し、クエリ内の新しい変数に代入します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,16 +28,16 @@ Let variable = expression [, ...]
   
 |用語|定義|  
 |---|---|  
-|`variable`|必須です。 An alias that can be used to reference the results of the supplied expression.|  
-|`expression`|必須です。 An expression that will be evaluated and assigned to the specified variable.|  
+|`variable`|必須。 指定された式の結果を参照するために使用できるエイリアス。|  
+|`expression`|必須。 評価され、指定された変数に割り当てられる式。|  
   
-## <a name="remarks"></a>Remarks  
- The `Let` clause enables you to compute values for each query result and reference them by using an alias. The alias can be used in other clauses, such as the `Where` clause. The `Let` clause enables you to create a query statement that is easier to read because you can specify an alias for an expression clause included in the query and substitute the alias each time the expression clause is used.  
+## <a name="remarks"></a>コメント  
+ `Let` 句を使用すると、各クエリ結果の値を計算し、別名を使用してその値を参照できます。 別名は、`Where` 句などの他の句で使用できます。 `Let` 句を使用すると、クエリに含まれる式の句の別名を指定し、expression 句が使用されるたびに別名を置き換えることができるため、読みやすいクエリステートメントを作成できます。  
   
- You can include any number of `variable` and `expression` assignments in the `Let` clause. Separate each assignment with a comma (,).  
+ `Let` 句には、任意の数の `variable` と `expression` の割り当てを含めることができます。 各割り当てはコンマ (,) で区切ります。  
   
 ## <a name="example"></a>例  
- The following code example uses the `Let` clause to compute a 10 percent discount on products.  
+ 次のコード例では、`Let` 句を使用して、製品に対して10% の割引を計算します。  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   

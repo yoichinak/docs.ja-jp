@@ -12,25 +12,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350737"
 ---
 # <a name="myapplication-object"></a>My.Application オブジェクト
-Provides properties, methods, and events related to the current application.  
+現在のアプリケーションに関連するプロパティ、メソッド、およびイベントを提供します。  
   
-## <a name="remarks"></a>Remarks  
- For information about the methods and properties of the `My.Application` object, see the following resources:  
+## <a name="remarks"></a>コメント  
+ `My.Application` オブジェクトのメソッドとプロパティの詳細については、次のリソースを参照してください。  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> for members that are available in all projects.  
+- すべてのプロジェクトで使用できるメンバーを <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> します。  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> for members that are available in Windows Forms applications.  
+- Windows フォームアプリケーションで使用できるメンバーを <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> します。  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> for members that are available in console applications.  
+- コンソールアプリケーションで使用できるメンバーを <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **名前空間:** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (the base class <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications, and its base class <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides the members that are available in all projects)  
+ **Class:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (基本クラス <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> は、コンソールアプリケーションで使用できるメンバーを提供し、その基本クラス <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> すべてのプロジェクトで使用できるメンバーを提供します)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [My.Application.Info オブジェクト](../../../visual-basic/language-reference/objects/my-application-info-object.md)
 - [My.Application.Log オブジェクト](../../../visual-basic/language-reference/objects/my-application-log-object.md)

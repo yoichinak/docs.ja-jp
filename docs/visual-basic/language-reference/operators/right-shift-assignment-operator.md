@@ -17,8 +17,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351993"
 ---
-# <a name="-operator-visual-basic"></a>>>= Operator (Visual Basic)
-Performs an arithmetic right shift on the value of a variable or property and assigns the result back to the variable or property.  
+# <a name="-operator-visual-basic"></a>> > = 演算子 (Visual Basic)
+変数またはプロパティの値に対して算術右シフトを実行し、その結果を変数またはプロパティに代入します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,27 +28,27 @@ variableorproperty >>= amount
   
 ## <a name="parts"></a>指定項目  
  `variableorproperty`  
- 必須です。 Variable or property of an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).  
+ 必須。 整数型の変数またはプロパティ (`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`)。  
   
  `amount`  
- 必須です。 Numeric expression of a data type that widens to `Integer`.  
+ 必須。 `Integer`に拡大変換されるデータ型の数値式。  
   
-## <a name="remarks"></a>Remarks  
- The element on the left side of the `>>=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+## <a name="remarks"></a>コメント  
+ `>>=` 演算子の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)にすることはできません。  
   
- The `>>=` operator first performs an arithmetic right shift on the value of the variable or property. The operator then assigns the result of that operation back to the variable or property.  
+ `>>=` 演算子は、まず変数またはプロパティの値に対して算術右シフトを実行します。 次に、演算子は、その操作の結果を変数またはプロパティに戻します。  
   
- Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic right shift, the bits shifted beyond the rightmost bit position are discarded, and the leftmost bit is propagated into the bit positions vacated at the left. This means that if `variableorproperty` has a negative value, the vacated positions are set to one. If `variableorproperty` is positive, or if its data type is an unsigned type, the vacated positions are set to zero.  
+ 算術シフトは循環していません。つまり、結果の一方の端からシフトされたビットはもう一方の端には再入されません。 算術右シフトでは、右端のビット位置を超えてシフトされたビットは破棄され、左端のビットは左側に空いているビット位置に反映されます。 これは、`variableorproperty` に負の値がある場合、空いている位置が1に設定されることを意味します。 `variableorproperty` が正の場合、またはそのデータ型が符号なしの型の場合、空いた位置は0に設定されます。  
   
 ## <a name="overloading"></a>オーバーロード  
- The [>> Operator](../../../visual-basic/language-reference/operators/right-shift-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `>>` operator affects the behavior of the `>>=` operator. If your code uses `>>=` on a class or structure that overloads `>>`, be sure you understand its redefined behavior. 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ [> > 演算子](../../../visual-basic/language-reference/operators/right-shift-operator.md)は*オーバーロード*できます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `>>` 演算子のオーバーロードは、`>>=` 演算子の動作に影響します。 コードで `>>`をオーバーロードするクラスまたは構造体の `>>=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- The following example uses the `>>=` operator to shift the bit pattern of an `Integer` variable right by the specified amount and assign the result to the variable.  
+ 次の例では、`>>=` 演算子を使用して、`Integer` 変数のビットパターンを指定した量だけ右にシフトし、その結果を変数に代入します。  
   
  [!code-vb[VbVbalrOperators#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [>> 演算子](../../../visual-basic/language-reference/operators/right-shift-operator.md)
 - [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)

@@ -1,5 +1,5 @@
 ---
-title: < diagnostics > 要素
+title: < diagnostics> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics

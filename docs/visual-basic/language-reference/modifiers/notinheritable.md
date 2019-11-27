@@ -23,12 +23,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351459"
 ---
 # <a name="notinheritable-visual-basic"></a>NotInheritable (Visual Basic)
-Specifies that a class cannot be used as a base class.  
+クラスを基底クラスとして使用できないことを指定します。  
   
-## <a name="remarks"></a>Remarks  
- **Alternate Terms**. A class that cannot be inherited is sometimes called a *sealed* class.  
+## <a name="remarks"></a>コメント  
+ **代替語句**。 継承できないクラスは、*シール*クラスと呼ばれることもあります。  
   
- The `NotInheritable` modifier can be used in this context:  
+ このコンテキストでは、`NotInheritable` 修飾子を使用できます。  
   
  [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)  
   

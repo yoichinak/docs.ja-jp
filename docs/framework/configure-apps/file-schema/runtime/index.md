@@ -6,16 +6,16 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], runtime settings
 - runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
-ms.openlocfilehash: 5a46a2fcb0fe5a9dfc426cea589c8a9eec47e7a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d5af9f3299b48d431b43566c11610d745167b60b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116548"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431051"
 ---
-# <a name="runtime-settings-schema"></a>ランタイム設定スキーマ
+# <a name="run-time-settings-schema"></a>ランタイム設定スキーマ
 
-ランタイム設定は、.NET Framework を対象とするアプリケーションを構成する共通言語ランタイムによって使用されます。
+実行時の設定は、.NET Framework を対象とするアプリケーションを構成するために共通言語ランタイムによって使用されます。
 
 ## <a name="the-runtime-section-and-its-parent-and-child-elements"></a>\<ランタイム > セクションとその親要素と子要素
 
@@ -48,29 +48,33 @@ ms.locfileid: "73116548"
 &nbsp;&nbsp;&nbsp;&nbsp;[\<gcAllowVeryLargeObjects >](gcconcurrent-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<gcConcurrent >](gcconcurrent-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<GCCpuGroup >](gccpugroup-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<GCHeapAffinitizeMask >](gcheapaffinitizemask-element.md)\
+&nbsp;&nbsp;&nbsp;[\<](gcheapcount-element.md) &nbsp;>\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<GCLOHThreshold](gclohthreshold-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<GCNoAffinitize >](gcnoaffinitize-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<gcServer >](gcserver-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<generatePublisherEvidence >](generatepublisherevidence-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<legacyCorruptedStateExceptionsPolicy >](legacycorruptedstateexceptionspolicy-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<legacyImpersonationPolicy >](legacyimpersonationpolicy-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<loadfromRemoteSources >](loadfromremotesources-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx40_LegacySecurityPolicy >](netfx40-legacysecuritypolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx40_PInvokeStackResilience >](netfx40-pinvokestackresilience-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings >](netfx45-cultureawarecomparergethashcode-longstrings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<](netfx40-legacysecuritypolicy-element.md) NetFx40_LegacySecurityPolicy >\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<](netfx40-pinvokestackresilience-element.md) NetFx40_PInvokeStackResilience >\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<](netfx45-cultureawarecomparergethashcode-longstrings-element.md) NetFx45_CultureAwareComparerGetHashCode_LongStrings >\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<PreferComInsteadOfManagedRemoting >](prefercominsteadofmanagedremoting-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<relativebindforresources> >](relativebindforresources-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<shadowcopyverifybytimestamp> >](shadowcopyverifybytimestamp-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<](thread-useallcpugroups-element.md) Thread_UseAllCpuGroups >\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<ThrowUnobservedTaskExceptions >](throwunobservedtaskexceptions-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<TimeSpan_LegacyFormatMode >](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<](runtime-element.md) TimeSpan_LegacyFormatMode >\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<uselegacyjit> >](uselegacyjit-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<UseRandomizedStringHashAlgorithm >](userandomizedstringhashalgorithm-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<UseSmallInternalThreadStacks >](usesmallinternalthreadstacks-element.md)\
 &nbsp;&nbsp;[\<の >](system-runtime-caching-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<memoryCache >](memorycache-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[namedcaches >](namedcaches-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[追加](add-element-for-namedcaches.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[クリア](clear-element-for-namedcaches.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[削除 >](remove-element-for-namedcaches.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[追加](add-element-for-namedcaches.md)>\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[クリア](clear-element-for-namedcaches.md)>\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[削除 >](remove-element-for-namedcaches.md)
 
 ## <a name="alphabetical-list-of-runtime-elements"></a>\<ランタイム > 要素のアルファベット順の一覧
 
@@ -101,6 +105,10 @@ ms.locfileid: "73116548"
 |[\<gcAllowVeryLargeObjects>](gcallowverylargeobjects-element.md)|64 ビット プラットフォームで、合計サイズが 2 GB (ギガバイト) を超える配列を有効にします。|
 |[\<gcConcurrent>](gcconcurrent-element.md)|ランタイムがガベージ コレクションを並列に実行するかどうかを指定します。|
 |[\<GCCpuGroup>](gccpugroup-element.md)|ガベージ コレクションが複数の CPU グループをサポートするかどうかを指定します。|
+|[\<GCHeapAffinitizeMask >](gcheapaffinitizemask-element.md)|GC ヒープと個々のプロセッサ間の関係を定義します。|
+|[\<G>](gcheapcount-element.md)|サーバーのガベージコレクションに使用するヒープまたはスレッドの数を指定します。  |
+|[\<GCLOHThreshold >](gclohthreshold-element.md)|オブジェクトが大きなオブジェクトヒープ (LOH) に入るしきい値のサイズを指定します。|
+|[\<GCNoAffinitize >](gcnoaffinitize-element.md)|Cpu を使用してサーバー GC スレッドを関係付けするかどうかを指定します。|
 |[\<gcServer>](gcserver-element.md)|共通言語ランタイムがサーバーのガベージ コレクションを実行するかどうかを指定します。|
 |[\<generatePublisherEvidence>](generatepublisherevidence-element.md)|ランタイムがコード アクセス セキュリティ (CAS) の発行元ポリシーを使用するかどうかを指定します。|
 |[\<legacyCorruptedStateExceptionsPolicy>](legacycorruptedstateexceptionspolicy-element.md)|ランタイムがアクセス違反およびその他の破損状態例外をキャッチするマネージド コードを許可するかどうかを指定します。|
@@ -128,7 +136,7 @@ ms.locfileid: "73116548"
 |[\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md)|ランタイムがアプリケーション ドメインごとに文字列のハッシュ コードを計算するかどうかを指定します。|
 |[\<UseSmallInternalThreadStacks>](usesmallinternalthreadstacks-element.md)|ランタイムが内部的に使用する特定のスレッド作成時に、既定のスタック サイズではなく明示的なスタック サイズを使用することを要求します。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [構成ファイル スキーマ](../index.md)
 - [同時実行ガベージコレクションを無効にするには](gcconcurrent-element.md#to-disable-background-garbage-collection)

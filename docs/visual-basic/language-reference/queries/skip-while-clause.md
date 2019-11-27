@@ -26,23 +26,23 @@ Skip While expression
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`expression`|必須です。 An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
+|`expression`|必須。 テスト要素の条件を表す式。 式は、`Boolean` 値または同等の機能 (`Boolean`として評価される `Integer` など) を返す必要があります。|  
   
-## <a name="remarks"></a>Remarks  
- The `Skip While` clause bypasses elements from the beginning of a query result until the supplied `expression` returns `false`. After `expression` returns `false`, the query returns all the remaining elements. The `expression` is ignored for the remaining results.  
+## <a name="remarks"></a>コメント  
+ `Skip While` 句は、指定された `expression` が `false`を返すまで、クエリ結果の先頭からの要素をバイパスします。 `expression` が `false`を返した後、クエリは残りのすべての要素を返します。 残りの結果については、`expression` は無視されます。  
   
- The `Skip While` clause differs from the `Where` clause in that the `Where` clause can be used to exclude all elements from a query that do not meet a particular condition. The `Skip While` clause excludes elements only until the first time that the condition is not satisfied. The `Skip While` clause is most useful when you are working with an ordered query result.  
+ `Skip While` 句は、特定の条件を満たしていないクエリからすべての要素を除外するために `Where` 句を使用できるという点で、`Where` 句とは異なります。 `Skip While` 句では、最初に条件が満たされない限り、要素は除外されます。 `Skip While` 句は、順序付けられたクエリ結果を操作する場合に最も役立ちます。  
   
- You can bypass a specific number of results from the beginning of a query result by using the `Skip` clause.  
+ `Skip` 句を使用すると、クエリ結果の先頭から特定の数の結果をバイパスできます。  
   
 ## <a name="example"></a>例  
- The following code example uses the `Skip While` clause to bypass results until the first customer from the United States is found.  
+ 次のコード例では、`Skip While` 句を使用して、米国の最初の顧客が見つかるまで結果をバイパスします。  
   
  [!code-vb[VbSimpleQuerySamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#3)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)
