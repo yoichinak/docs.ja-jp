@@ -1,5 +1,5 @@
 ---
-title: Object-oriented programming
+title: オブジェクト指向プログラミング
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
 ms.openlocfilehash: 3739919273f4cdd285d519c414c542f1a82a16d2
@@ -9,9 +9,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348159"
 ---
-# <a name="object-oriented-programming-visual-basic"></a>Object-oriented programming (Visual Basic)
+# <a name="object-oriented-programming-visual-basic"></a>オブジェクト指向プログラミング (Visual Basic)
 
-Visual Basic provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.
+Visual Basic は、カプセル化、継承、ポリモーフィズムなど、オブジェクト指向プログラミングを完全にサポートします。
 
  "*カプセル化*" とは、関連するプロパティ、メソッド、およびその他のメンバーのグループが 1 つの単位またはオブジェクトとして扱われることを意味します。
 
@@ -23,18 +23,18 @@ Visual Basic provides full support for object-oriented programming including enc
 
 - [クラスとオブジェクト](#classes-and-objects)
   - [クラス メンバー](#class-members)
-    - [Properties and fields](#properties-and-fields)
+    - [プロパティとフィールド](#properties-and-fields)
     - [メソッド](#methods)
     - [コンストラクター](#constructors)
     - [デストラクター](#destructors)
     - [イベント](#events)
-    - [Nested classes](#nested-classes)
-  - [Access modifiers and access levels](#access-modifiers-and-access-levels)
-    - [Instantiating classes](#instantiating-classes)
-    - [Shared classes and members](#shared-classes-and-members)
+    - [入れ子になったクラス](#nested-classes)
+  - [アクセス修飾子とアクセスレベル](#access-modifiers-and-access-levels)
+    - [クラスのインスタンス化](#instantiating-classes)
+    - [共有クラスとメンバー](#shared-classes-and-members)
     - [匿名型](#anonymous-types)
 - [継承](#inheritance)
-  - [Overriding members](#overriding-members)
+  - [オーバーライド (メンバーを)](#overriding-members)
 - [インターフェイス](#interfaces)
 - [ジェネリック](#generics)
 - [デリゲート](#delegates)
@@ -50,7 +50,7 @@ Class SampleClass
 End Class
 ```
 
-Visual Basic also provides a light version of classes called *structures* that are useful when you need to create large array of objects and do not want to consume too much memory for that.
+Visual Basic には、*構造体*と呼ばれる軽量バージョンのクラスも用意されています。これは、オブジェクトの大きな配列を作成する必要があり、そのために大量のメモリを消費したくない場合に便利です。
 
 構造体を定義するコード例を次に示します。
 
@@ -59,7 +59,7 @@ Structure SampleStructure
 End Structure
 ```
 
-詳細については次を参照してください:
+詳細については、以下をご覧ください。
 
 - [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
@@ -68,7 +68,7 @@ End Structure
 
 各クラスには、さまざまな "*クラス メンバー*" を含めることができます。クラス メンバーには、クラスのデータを記述するプロパティ、クラスの動作を定義するメソッド、異なるクラスやオブジェクト間で通信するためのイベントが含まれます。
 
-#### <a name="properties-and-fields"></a>Properties and fields
+#### <a name="properties-and-fields"></a>プロパティとフィールド
 
 フィールドとプロパティは、オブジェクトに格納されている情報を表します。 フィールドは、直接読み取ったり設定したりできるので変数と似ています。
 
@@ -82,7 +82,7 @@ End Class
 
 プロパティには get プロシージャと set プロシージャがあり、これらを使用することで値の設定方法や戻り値をより細かく制御できます。
 
-Visual Basic allows you either to create a private field for storing the property value or use so-called auto-implemented properties that create this field automatically behind the scenes and provide the basic logic for the property procedures.
+Visual Basic を使用すると、プロパティ値を格納するためのプライベートフィールドを作成したり、自動実装プロパティを使用して、このフィールドをバックグラウンドで自動的に作成したり、プロパティプロシージャの基本的なロジックを提供したりすることができます。
 
 自動実装プロパティを定義するコード例を次に示します。
 
@@ -112,7 +112,7 @@ End Class
 
 ほとんどのプロパティには、プロパティ値の設定と取得を行うための両方のメソッドまたはプロシージャがあります。 ただし、読み取り専用または書き込み専用のプロパティを作成して、プロパティの変更や読み取りを制限することもできます。 そのためには、Visual Basic では `ReadOnly` キーワードと `WriteOnly` キーワードを使用します。 ただし、自動実装プロパティを読み取り専用または書き込み専用にすることはできません。
 
-詳細については次を参照してください:
+詳細については、以下をご覧ください。
 
 - [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)
@@ -150,13 +150,13 @@ Overloads Sub Display(ByVal theInteger As Integer)
 End Sub
 ```
 
-ほとんどの場合、メソッドはクラス定義内で宣言します。 However, Visual Basic also supports *extension methods* that allow you to add methods to an existing class outside the actual definition of the class.
+ほとんどの場合、メソッドはクラス定義内で宣言します。 ただし、Visual Basic では、クラスの実際の定義の外部にある既存のクラスにメソッドを追加できる*拡張メソッド*もサポートされています。
 
-詳細については次を参照してください:
+詳細については、以下をご覧ください。
 
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [オーバーロード](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
 - [拡張メソッド](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
 
 #### <a name="constructors"></a>コンストラクター
@@ -173,7 +173,7 @@ Class SampleClass
 End Class
 ```
 
-For more information, see: [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+詳細については、「[オブジェクトの有効期間: オブジェクトの作成と破棄のしくみ](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)」を参照してください。
 
 #### <a name="destructors"></a>デストラクター
 
@@ -185,15 +185,15 @@ For more information, see: [Object Lifetime: How Objects Are Created and Destroy
 
 クラスやオブジェクトは、何か重要なことが起こった場合に、イベントを使用して他のクラスまたはオブジェクトに通知を送ります。 イベントを送信する (発生させる) クラスは "*パブリッシャー*" と呼ばれ、イベントを受信する (処理する) クラスは "*サブスクライバー*" と呼ばれます。 イベント、およびイベントの発生と処理の詳細については、「[イベント](../../../standard/events/index.md)」をご覧ください。
 
-- To declare events, use the [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).
+- イベントを宣言するには、[イベントステートメント](../../../visual-basic/language-reference/statements/event-statement.md)を使用します。
 
-- To raise events, use the [RaiseEvent Statement](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
+- イベントを発生させるには、 [RaiseEvent ステートメント](../../../visual-basic/language-reference/statements/raiseevent-statement.md)を使用します。
 
-- To specify event handlers using a declarative way, use the [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) statement and the [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) clause.
+- 宣言型の方法を使用してイベントハンドラーを指定するには、 [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)ステートメントと[Handles](../../../visual-basic/language-reference/statements/handles-clause.md)句を使用します。
 
-- To be able to dynamically add, remove, and change the event handler associated with an event, use the [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) and [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) together with the [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md).
+- イベントに関連付けられたイベントハンドラーを動的に追加、削除、および変更できるようにするには、 [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)と[RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)を[AddressOf 演算子](../../../visual-basic/language-reference/operators/addressof-operator.md)と共に使用します。
 
-#### <a name="nested-classes"></a>Nested classes
+#### <a name="nested-classes"></a>入れ子になったクラス
 
 別のクラス内で定義されているクラスを "*入れ子になったクラス*" と呼びます。 既定では、入れ子になったクラスはプライベートです。
 
@@ -211,13 +211,13 @@ End Class
 Dim nestedInstance As Container.Nested = New Container.Nested()
 ```
 
-### <a name="access-modifiers-and-access-levels"></a>Access modifiers and access levels
+### <a name="access-modifiers-and-access-levels"></a>アクセス修飾子とアクセスレベル
 
 すべてのクラスおよびクラス メンバーでは、"*アクセス修飾子*" を使って、他のクラスに提供するアクセス レベルを指定できます。
 
 次のアクセス修飾子を使用できます。
 
-|Visual Basic の修飾子|定義|
+|Visual Basic の修飾子|Definition|
 |---------------------------|----------------|
 |[Public](../../../visual-basic/language-reference/modifiers/public.md)|この型またはメンバーには、同じアセンブリ内の他のコードや、そのアセンブリを参照する別のアセンブリ内の任意のコードからアクセスできます。|
 |[Private](../../../visual-basic/language-reference/modifiers/private.md)|この型またはメンバーには、同じクラスのコードのみがアクセスできます。|
@@ -225,9 +225,9 @@ Dim nestedInstance As Container.Nested = New Container.Nested()
 |[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|この型またはメンバーには、同じアセンブリ内の任意のコードからアクセスできますが、別のアセンブリからはアクセスできません。|
 |`Protected Friend`|この型またはメンバーには、同じアセンブリ内の任意のコード、または別のアセンブリ内の任意の派生クラスからアクセスできます。|
 
-For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
-### <a name="instantiating-classes"></a>Instantiating classes
+### <a name="instantiating-classes"></a>クラスのインスタンス化
 
 オブジェクトを作成するには、クラスをインスタンス化する (クラスのインスタンスを作成する) 必要があります。
 
@@ -251,16 +251,16 @@ Dim sampleObject = New SampleClass With
     {.FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-詳細については次を参照してください:
+詳細については、以下をご覧ください。
 
 - [New 演算子](../../../visual-basic/language-reference/operators/new-operator.md)
 - [オブジェクト初期化子 : 名前付きの型と匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-### <a name="shared-classes-and-members"></a>Shared classes and members
+### <a name="shared-classes-and-members"></a>共有クラスとメンバー
 
- A shared member of the class is a property, procedure, or field that is shared by all instances of a class.
+ クラスの共有メンバーは、クラスのすべてのインスタンスによって共有されるプロパティ、プロシージャ、またはフィールドです。
 
- To define a shared member:
+ 共有メンバーを定義するには:
 
 ```vb
 Class SampleClass
@@ -268,15 +268,15 @@ Class SampleClass
 End Class
 ```
 
- To access the shared member, use the name of the class without creating an object of this class:
+ 共有メンバーにアクセスするには、このクラスのオブジェクトを作成せずに、クラスの名前を使用します。
 
 ```vb
 MsgBox(SampleClass.SampleString)
 ```
 
- Shared modules in Visual Basic have shared members only and cannot be instantiated. Shared members also cannot access non-shared properties, fields or methods
+ Visual Basic の共有モジュールには共有メンバーのみが存在し、インスタンス化することはできません。 共有メンバーは、共有していないプロパティ、フィールド、またはメソッドにアクセスすることもできません。
 
- 詳細については次を参照してください:
+ 詳細については、以下をご覧ください。
 
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)
@@ -297,10 +297,10 @@ Dim sampleObject =
 
 ## <a name="inheritance"></a>継承
 
-継承を使用すると、他のクラスで定義されている動作を再利用、拡張、および変更する新しいクラスを作成できます。 メンバーが継承される側のクラスを "*基底クラス*" と呼び、メンバーを継承する側のクラスを "*派生クラス*" と呼びます。 However, all classes in Visual Basic implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.
+継承を使用すると、他のクラスで定義されている動作を再利用、拡張、および変更する新しいクラスを作成できます。 メンバーが継承される側のクラスを "*基底クラス*" と呼び、メンバーを継承する側のクラスを "*派生クラス*" と呼びます。 ただし、Visual Basic のすべてのクラスは、.NET クラスの階層をサポートし、すべてのクラスに下位レベルのサービスを提供する <xref:System.Object> クラスから暗黙的に継承します。
 
 > [!NOTE]
-> Visual Basic doesn't support multiple inheritance. つまり、派生クラスに対して指定できる基底クラスは 1 つだけです。
+> Visual Basic は複数の継承をサポートしていません。 つまり、派生クラスに対して指定できる基底クラスは 1 つだけです。
 
 基底クラスを継承するコード例を次に示します。
 
@@ -326,24 +326,24 @@ MustInherit Class BaseClass
 End Class
 ```
 
-詳細については次を参照してください:
+詳細については、以下をご覧ください。
 
 - [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 
-### <a name="overriding-members"></a>Overriding members
+### <a name="overriding-members"></a>オーバーライド (メンバーを)
 
 既定では、派生クラスは基底クラスのすべてのメンバーを継承します。 継承したメンバーの動作を変更する場合は、そのメンバーをオーバーライドする必要があります。 つまり、派生クラスに、メソッド、プロパティ、またはイベントの新しい実装を定義できます。
 
 プロパティやメソッドのオーバーライド方法を制御するには、次の修飾子を使用します。
 
-|Visual Basic の修飾子|定義|
+|Visual Basic の修飾子|Definition|
 |---------------------------|----------------|
 |[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|派生クラスでのクラス メンバーのオーバーライドを許可します。|
 |[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|基底クラスで定義されている仮想メンバー (オーバーライドできるメンバー) をオーバーライドします。|
 |[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|継承するクラスでのメンバーのオーバーライドを禁止します。|
-|[New](../../../visual-basic/language-reference/modifiers/mustoverride.md)|派生クラスでのクラス メンバーのオーバーライドを必須にします。|
+|[MyBase](../../../visual-basic/language-reference/modifiers/mustoverride.md)|派生クラスでのクラス メンバーのオーバーライドを必須にします。|
 |[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|基底クラスから継承されたメンバーを隠ぺいします。|
 
 ## <a name="interfaces"></a>インターフェイス
@@ -369,7 +369,7 @@ Class SampleClass
 End Class
 ```
 
-詳細については次を参照してください:
+詳細については、以下をご覧ください。
 
 - [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
 - [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)
@@ -377,7 +377,7 @@ End Class
 
 ## <a name="generics"></a>ジェネリック
 
-Classes, structures, interfaces and methods in .NET can include *type parameters* that define types of objects that they can store or use. ジェネリックの最も一般的な例として、コレクションがあります。コレクションには、その中に格納されるオブジェクトの型を指定できます。
+.NET のクラス、構造体、インターフェイス、およびメソッドには、格納または使用できるオブジェクトの型を定義する*型パラメーター*を含めることができます。 ジェネリックの最も一般的な例として、コレクションがあります。コレクションには、その中に格納されるオブジェクトの型を指定できます。
 
 ジェネリック クラスを定義するコード例を次に示します。
 
@@ -394,10 +394,10 @@ Dim sampleObject As New SampleGeneric(Of String)
 sampleObject.Field = "Sample string"
 ```
 
-詳細については次を参照してください:
+詳細については、以下をご覧ください。
 
 - [ジェネリック](../../../standard/generics/index.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 
 ## <a name="delegates"></a>デリゲート
 
@@ -428,12 +428,12 @@ Class SampleClass
 End Class
 ```
 
-詳細については次を参照してください:
+詳細については、以下をご覧ください。
 
 - [デリゲート](../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [AddressOf 演算子](../../../visual-basic/language-reference/operators/addressof-operator.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のプログラミング ガイド](../../../visual-basic/programming-guide/index.md)

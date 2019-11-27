@@ -1,5 +1,5 @@
 ---
-title: 移行のガイドライン
+title: 移行ガイダンス
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 ms.openlocfilehash: 8abc241331b3d322763ffd67b41ff676ebc680fb
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74283210"
 ---
-# <a name="migration-guidance"></a>移行のガイドライン
+# <a name="migration-guidance"></a>移行ガイダンス
 
 .NET Framework 4 では、Microsoft は、Windows Workflow Foundation (WF) の2番目のメジャーバージョンをリリースしています。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] は、WinFX でリリースされました (これには、WF3 と呼ばれる\* 名前空間の型が含まれていました) と .NET Framework 3.5 で強化されました。 WF3 も .NET Framework 4 に含まれていますが、新しいワークフローテクノロジ (WF4 名前空間の\* 型、と呼ばれます) と共に存在します。 WF4 の導入時期を検討する場合は、最初にそのタイミングの管理を認識することが重要です。  
   
@@ -56,6 +56,6 @@ ms.locfileid: "74283210"
  [WF のガイダンス: ワークフローサービス](https://go.microsoft.com/fwlink/?LinkId=275564)  
  事前定義アクティビティの一般的なシナリオ向けに、WF3 で作成した Windows Communication Foundation (WCF) Web サービス (一般にワークフロー サービスと呼ばれます) を実装するワークフローを WF4 を使用するように再設計するための詳細な手順を例を中心として示します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Activities.Statements.Interop>

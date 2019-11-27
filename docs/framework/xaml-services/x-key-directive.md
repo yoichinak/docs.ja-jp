@@ -20,7 +20,7 @@ ms.locfileid: "74283856"
 # <a name="xkey-directive"></a>x:Key ディレクティブ
 XAML で定義されたディクショナリで作成および参照される要素を一意に識別します。 `x:Key` 値を XAML オブジェクトに追加するのは、リソース ディクショナリ (<xref:System.Windows.ResourceDictionary> など) のリソースを識別するための最も一般的な方法です。  
   
-## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法  
+## <a name="xaml-attribute-usage"></a>XAML 属性の使用  
   
 ```xaml  
 <object x:Key="stringKeyValue".../>  
@@ -40,7 +40,7 @@ XAML で定義されたディクショナリで作成および参照される要
 </object.Resources>  
 ```  
   
-## <a name="xaml-values"></a>XAML 値  
+## <a name="xaml-values"></a>XAML の値  
   
 |||  
 |-|-|  
@@ -73,7 +73,7 @@ XAML で定義されたディクショナリで作成および参照される要
   
  基本的な XAML 定義では、キーと名前で異なるディレクティブと言語要素 (`x:Key` と `x:Name`) が使用されます。 また、キーと名前は、それらの概念の WPF 定義およびアプリケーションにより異なる状況において使用されます。 詳細については、「 [WPF XAML 名前スコープ](../wpf/advanced/wpf-xaml-namescopes.md)」を参照してください。  
   
- 既に説明したように、キー値はマークアップ拡張機能によって指定され、文字列値以外になる場合があります。 WPF シナリオの例としては、`x:Key` の値が [ComponentResourceKey](../wpf/advanced/componentresourcekey-markup-extension.md) になる場合が挙げられます。 特定のコントロールでは、スタイルを完全に置き換えることなく、そのコントロールの外観と動作の一部に影響を与えるカスタム スタイル リソースの型に対応するスタイル キーが公開されます。 このようなキーの例として、<xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A> が挙げられます。  
+ 既に説明したように、キー値はマークアップ拡張機能によって指定され、文字列値以外になる場合があります。 WPF シナリオの例として、`x:Key` の値が[ComponentResourceKey](../wpf/advanced/componentresourcekey-markup-extension.md)であることが挙げられます。 特定のコントロールでは、スタイルを完全に置き換えることなく、そのコントロールの外観と動作の一部に影響を与えるカスタム スタイル リソースの型に対応するスタイル キーが公開されます。 このようなキーの例として、<xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A> が挙げられます。  
   
  WPF のマージされたディクショナリ機能では、キーの一意性およびキーの検索動作について考慮を要する点があります。 詳細については、「[Merged Resource Dictionaries](../wpf/advanced/merged-resource-dictionaries.md)」を参照してください。  
   
@@ -95,7 +95,7 @@ keyObject
 </object>  
 ```  
   
-### <a name="xaml-values"></a>XAML 値  
+### <a name="xaml-values"></a>XAML の値  
   
 |||  
 |-|-|  
@@ -110,7 +110,7 @@ keyObject
 ## <a name="silverlight-usage-notes"></a>Silverlight の使用上の注意  
  Silverlight の `x:Key` は個別に記載されています。 詳細については、「 [XAML 名前空間 (x:)」を参照してください。言語機能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XAML リソース](../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [リソースとコード](../wpf/advanced/resources-and-code.md)

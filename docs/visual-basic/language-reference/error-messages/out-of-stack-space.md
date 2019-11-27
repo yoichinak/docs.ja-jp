@@ -12,22 +12,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349185"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>スタック領域が不足しています。(Visual Basic)
-The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program. Its limits have been exceeded.  
+スタックは、実行中のプログラムの要求に応じて動的に拡張および縮小されるメモリの作業領域です。 制限を超えました。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1. Check that procedures are not nested too deeply.  
+1. プロシージャの入れ子のレベルが深すぎないことを確認します。  
   
-2. Make sure recursive procedures terminate properly.  
+2. 再帰プロシージャが正常に終了することを確認します。  
   
-3. If local variables require more local variable space than is available, try declaring some variables at the module level. You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`. Or you can use the `Static` statement to declare individual static variables within procedures.  
+3. ローカル変数で使用できるよりも多くのローカル変数空間が必要な場合は、モジュールレベルでいくつかの変数を宣言してみてください。 また、`Static`で `Property`、`Sub`、または `Function` キーワードを前に付けて、プロシージャ内のすべての変数を静的に宣言することもできます。 または、`Static` ステートメントを使用して、プロシージャ内で個々の静的変数を宣言することもできます。  
   
-4. Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings. You can also define the string at module level where it requires no stack space.  
+4. 固定長文字列は可変長文字列よりも多くのスタック領域を使用するため、固定長文字列の一部を可変長文字列として再定義します。 モジュールレベルで、スタック領域を必要としない文字列を定義することもできます。  
   
-5. Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.  
+5. [`Calls`] ダイアログボックスを使用して、スタック上でアクティブになっているプロシージャを表示して、入れ子になった `DoEvents` 関数呼び出しの数を確認します。  
   
-6. Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack. An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code. Use the `Calls` dialog box to view which procedures are active on the stack.  
+6. 既にスタックにあるイベントプロシージャを呼び出すイベントをトリガーすることによって、"イベントの連鎖" が発生していないことを確認します。 イベント連鎖は、終了していない再帰プロシージャ呼び出しに似ていますが、コード内の明示的な呼び出しではなく Visual Basic によって呼び出しが行われるため、あまり明確ではありません。 [`Calls`] ダイアログボックスを使用すると、スタック上でアクティブになっているプロシージャを表示できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [[メモリ] ウィンドウ](/visualstudio/debugger/memory-windows)

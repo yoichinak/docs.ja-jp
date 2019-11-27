@@ -17,12 +17,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349065"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>配列のトラブルシューティング (Visual Basic)
-This page lists some common problems that can occur when working with arrays.  
+このページでは、配列を使用するときに発生する可能性のある一般的な問題をいくつか示します。  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Compilation Errors Declaring and Initializing an Array  
- Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays. The most common causes of errors are the following:  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a>配列の宣言と初期化に関するコンパイルエラー  
+ コンパイルエラーは、配列の宣言、作成、および初期化に関する規則の誤解から生じる可能性があります。 エラーの最も一般的な原因は次のとおりです。  
   
-- Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration. The following code lines show invalid declarations of this type.  
+- 配列変数宣言で次元の長さを指定した後に、[新しい Operator](../../../../visual-basic/language-reference/operators/new-operator.md)句を指定します。 次のコード行は、この型の無効な宣言を示しています。  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ This page lists some common problems that can occur when working with arrays.
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
-- Specifying dimension lengths for more than the top-level array of a jagged array. The following code line shows an invalid declaration of this type.  
+- ジャグ配列の最上位レベル配列を超える次元の長さを指定します。 次のコード行は、この型の無効な宣言を示しています。  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
-- Omitting the `New` keyword when specifying the element values. The following code line shows an invalid declaration of this type.  
+- 要素の値を指定するときに、`New` キーワードを省略します。 次のコード行は、この型の無効な宣言を示しています。  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
-- Supplying a `New` clause without braces (`{}`). The following code lines show invalid declarations of this type.  
+- 中かっこ (`{}`) のない `New` 句を指定します。 次のコード行は、この型の無効な宣言を示しています。  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -48,16 +48,16 @@ This page lists some common problems that can occur when working with arrays.
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>Accessing an Array Out of Bounds  
- The process of initializing an array assigns an upper bound and a lower bound to each dimension. Every access to an element of the array must specify a valid index, or subscript, for every dimension. If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results. The compiler cannot detect such an error, so an error occurs at run time.  
+## <a name="accessing-an-array-out-of-bounds"></a>配列へのアクセス (範囲外)  
+ 配列を初期化するプロセスでは、各次元に上限と下限が割り当てられます。 配列の要素へのすべてのアクセスでは、各次元に有効なインデックス (添字) を指定する必要があります。 インデックスが下限を下回るか上限を超えている場合、<xref:System.IndexOutOfRangeException> 例外が発生します。 コンパイラはこのようなエラーを検出できないため、実行時にエラーが発生します。  
   
-### <a name="determining-bounds"></a>Determining Bounds  
- If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions. You should always determine the upper bound for every dimension of an array before you attempt to access any elements. If the array has been created by some means other than a Visual Basic `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.  
+### <a name="determining-bounds"></a>範囲の決定  
+ 別のコンポーネントがコードに配列を渡す場合 (たとえば、プロシージャの引数として)、その配列のサイズや次元の長さはわかりません。 すべての要素にアクセスする前に、配列の各次元の上限を常に決定する必要があります。 配列が Visual Basic `New` 句以外の何らかの方法で作成されている場合、下限は0以外の値になる可能性があり、下限が下限であるかどうかを判断するのは安全です。  
   
-### <a name="specifying-the-dimension"></a>Specifying the Dimension  
- When determining the bounds of a multidimensional array, take care how you specify the dimension. The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.  
+### <a name="specifying-the-dimension"></a>ディメンションの指定  
+ 多次元配列の範囲を決定するときは、ディメンションをどのように指定するかを考慮してください。 <xref:System.Array.GetLowerBound%2A> メソッドと <xref:System.Array.GetUpperBound%2A> メソッドの `dimension` パラメーターは0から始まるものですが、Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> 関数と <xref:Microsoft.VisualBasic.Information.UBound%2A> 関数の `Rank` パラメーターは1から始まるものです。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [方法: Visual Basic で配列変数を初期化する](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

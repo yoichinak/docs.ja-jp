@@ -11,17 +11,17 @@ ms.locfileid: "74345266"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>方法: デリゲート メソッドを呼び出す (Visual Basic)
 
-This example shows how to associate a method with a delegate and then invoke that method through the delegate.
+この例では、メソッドをデリゲートに関連付けて、デリゲートを使用してそのメソッドを呼び出す方法を示します。
 
-### <a name="create-the-delegate-and-matching-procedures"></a>Create the delegate and matching procedures
+### <a name="create-the-delegate-and-matching-procedures"></a>デリゲートと一致するプロシージャを作成する
 
-1. Create a delegate named `MySubDelegate`.
+1. `MySubDelegate`という名前のデリゲートを作成します。
 
     ```vb
     Delegate Sub MySubDelegate(ByVal x As Integer)
     ```
 
-2. Declare a class that contains a method with the same signature as the delegate.
+2. デリゲートと同じシグネチャを持つメソッドを含むクラスを宣言します。
 
     ```vb
     Class class1
@@ -31,7 +31,7 @@ This example shows how to associate a method with a delegate and then invoke tha
     End Class
     ```
 
-3. Define a method that creates an instance of the delegate and invokes the method associated with the delegate by calling the built-in `Invoke` method.
+3. デリゲートのインスタンスを作成し、組み込みの `Invoke` メソッドを呼び出すことによって、デリゲートに関連付けられているメソッドを呼び出すメソッドを定義します。
 
     ```vb
     Protected Sub DelegateTest()
@@ -43,7 +43,7 @@ This example shows how to associate a method with a delegate and then invoke tha
     End Sub
     ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Delegate ステートメント](../../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)

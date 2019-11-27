@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349290"
 ---
-# <a name="xdocument-class-overview-visual-basic"></a>XDocument Class Overview (Visual Basic)
+# <a name="xdocument-class-overview-visual-basic"></a>XDocument クラスの概要 (Visual Basic)
 このトピックでは、<xref:System.Xml.Linq.XDocument> クラスについて説明します。  
   
 ## <a name="overview-of-the-xdocument-class"></a>XDocument クラスの概要  
@@ -81,6 +81,6 @@ doc.Save("test.xml")
 <!--This is another comment.-->  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML プログラミングの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

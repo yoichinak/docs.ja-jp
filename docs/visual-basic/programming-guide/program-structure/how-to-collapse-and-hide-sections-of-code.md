@@ -15,22 +15,22 @@ ms.locfileid: "74347409"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>方法: コードのセクションを折りたたんで非表示にする (Visual Basic)
 
-The `#Region` directive enables you to collapse and hide sections of code in Visual Basic files. The `#Region` directive lets you specify a block of code that you can expand or collapse when using the Visual Studio code editor. The ability to hide code selectively makes your files more manageable and easier to read. 詳細については、「[アウトライン](/visualstudio/ide/outlining)」を参照してください。
+`#Region` ディレクティブを使用すると、Visual Basic ファイル内のコードのセクションを折りたたんで非表示にすることができます。 `#Region` ディレクティブを使用すると、Visual Studio コードエディターを使用して展開または折りたたむことができるコードブロックを指定できます。 コードを選択的に非表示にする機能により、ファイルの管理が容易になり、読みやすくなります。 詳細については、「[アウトライン](/visualstudio/ide/outlining)」を参照してください。
 
-`#Region` directives support code block semantics such as `#If...#End If`. This means they cannot begin in one block and end in another; the start and end must be in the same block. `#Region` directives are not supported within functions.
+`#Region` ディレクティブは、`#If...#End If`などのコードブロックのセマンティクスをサポートします。 つまり、1つのブロックで開始し、別のブロックで終了することはできません。start と end は同じブロック内になければなりません。 `#Region` ディレクティブは、関数内ではサポートされていません。
 
-## <a name="to-collapse-and-hide-a-section-of-code"></a>To collapse and hide a section of code
+## <a name="to-collapse-and-hide-a-section-of-code"></a>コードのセクションを折りたたんで非表示にするには
 
-Place the section of code between the `#Region` and `#End Region` statements, as in the following example:
+次の例に示すように、`#Region` と `#End Region` のステートメントの間にコードのセクションを配置します。
 
 [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]
 
-The `#Region` block can be used multiple times in a code file; thus, users can define their own blocks of procedures and classes that can, in turn, be collapsed. `#Region` blocks can also be nested within other `#Region` blocks.
+`#Region` ブロックは、コードファイル内で複数回使用できます。そのため、ユーザーは、折りたたまれる可能性があるプロシージャとクラスの独自のブロックを定義できます。 `#Region` ブロックは、他の `#Region` ブロック内で入れ子にすることもできます。
 
 > [!NOTE]
-> Hiding code does not prevent it from being compiled and does not affect `#If...#End If` statements.
+> コードを非表示にしても、コンパイルが妨げられることはなく、`#If...#End If` のステートメントには影響しません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
 - [#Region ディレクティブ](../../../visual-basic/language-reference/directives/region-directive.md)

@@ -56,7 +56,7 @@ ms.locfileid: "74281631"
 3. IAsyncResult 非同期パターン  
   
 #### <a name="task-based-asynchronous-pattern"></a>タスク ベースの非同期パターン  
- 非同期操作を実装する方法としては、最も直接的でわかりやすいタスク ベースの非同期パターンが推奨されます。 この方法を使用するには、単にサービス操作を実装し、戻り値の型 Task\<T> (T は論理操作によって返される型) を指定します。 次に例を示します。  
+ 非同期操作を実装する方法としては、最も直接的でわかりやすいタスク ベースの非同期パターンが推奨されます。 この方法を使用するには、単にサービス操作を実装し、戻り値の型 Task\<T> (T は論理操作によって返される型) を指定します。 例 :  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -192,7 +192,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
   
  メッセージ オブジェクトを `Result` プロパティとして受け取り、返された値をそのオブジェクトのプロパティとして取得する場合は、 **/messageContract** コマンド オプションを使用します。 これにより、`Result` オブジェクトの <xref:System.EventArgs> プロパティとして応答メッセージを返すシグネチャが生成されます。 すべての内部戻り値は、応答メッセージ オブジェクトのプロパティになります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

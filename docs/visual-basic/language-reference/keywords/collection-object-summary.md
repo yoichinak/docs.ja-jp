@@ -14,7 +14,7 @@ ms.locfileid: "74349927"
 # <a name="collection-object-summary-visual-basic"></a>Collection オブジェクトの概要 (Visual Basic)
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
   
-|操作|言語要素|  
+|操作|Language 要素|  
 |------------|----------------------|  
 |`Collection` オブジェクトを作成します。|<xref:Microsoft.VisualBasic.Collection>|  
 |コレクションへの項目の追加|<xref:Microsoft.VisualBasic.Collection.Add*>|  
@@ -22,7 +22,7 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
 |コレクション内の項目の参照|<xref:Microsoft.VisualBasic.Collection.Item*>|  
 |<xref:System.Collections.IEnumerator> インターフェイスに対する参照の取得|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)

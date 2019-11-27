@@ -9,11 +9,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344575"
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>How to: Generate Text Files from XML (Visual Basic)
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>方法: XML からテキストファイルを生成する (Visual Basic)
 この例では、XML ファイルからコンマ区切り (CSV) ファイルを生成する方法について説明します。  
   
 ## <a name="example"></a>例  
- The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.  
+ Visual Basic バージョンでは、手続き型のコードを使用して、文字列のコレクションを1つの文字列に集約します。  
   
  この例では、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)」の XML ドキュメントを使用します。  
   
@@ -51,6 +51,6 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [プロジェクションと変換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

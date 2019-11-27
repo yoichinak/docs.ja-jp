@@ -18,21 +18,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345156"
 ---
 # <a name="error-types-visual-basic"></a>エラーの種類 (Visual Basic)
-In Visual Basic, errors fall into one of three categories: syntax errors, run-time errors, and logic errors.
+Visual Basic では、エラーは構文エラー、実行時エラー、および論理エラーの3つのカテゴリのいずれかに分類されます。
 
 ## <a name="syntax-errors"></a>構文エラー
- *Syntax errors* are those that appear while you write code. If you're using Visual Studio, Visual Basic checks your code as you type it in the **Code Editor** window and alerts you if you make a mistake, such as misspelling a word or using a language element improperly. If you compile from the command line, Visual Basic displays a compiler error with information about the syntax error. Syntax errors are the most common type of errors. You can fix them easily in the coding environment as soon as they occur.
+ *構文エラー*は、コードの記述中に表示されるエラーです。 Visual Studio を使用している場合、コード**エディター**ウィンドウでコードを入力すると、Visual Basic によってコードがチェックされ、単語のスペルミスや言語要素の不適切な使用などの誤りが発生した場合に警告が表示されます。 コマンドラインからコンパイルした場合、Visual Basic には、構文エラーに関する情報を含むコンパイラエラーが表示されます。 構文エラーは、最も一般的なエラーの種類です。 コーディング環境では、問題が発生するとすぐに簡単に修正できます。
 
 > [!NOTE]
-> The `Option Explicit` statement is one means of avoiding syntax errors. It forces you to declare, in advance, all the variables to be used in the application. Therefore, when those variables are used in the code, any typographic errors are caught immediately and can be fixed.
+> `Option Explicit` ステートメントは、構文エラーを回避するための1つの手段です。 これにより、アプリケーションで使用されるすべての変数が事前に宣言されます。 そのため、これらの変数がコード内で使用されている場合は、すべての活字エラーが即座にキャッチされ、修正できます。
 
-## <a name="run-time-errors"></a>Run-Time Errors
- *Run-time errors* are those that appear only after you compile and run your code. These involve code that may appear to be correct in that it has no syntax errors, but that will not execute. For example, you might correctly write a line of code to open a file. But if the file does not exist, the application cannot open the file, and it throws an exception. You can fix most run-time errors by rewriting the faulty code or by using [exception handling](../../language-reference/statements/try-catch-finally-statement.md), and then recompiling and rerunning it.
+## <a name="run-time-errors"></a>実行時エラー
+ *実行時エラー*は、コードをコンパイルして実行した後にのみ表示されるエラーです。 このようなコードには、構文エラーがないにもかかわらず、実行できないと思われるコードが含まれます。 たとえば、ファイルを開くためのコード行が正しく記述されているとします。 ただし、ファイルが存在しない場合、アプリケーションはファイルを開くことができず、例外がスローされます。 ほとんどのランタイムエラーは、問題のあるコードを書き直すか、[例外処理](../../language-reference/statements/try-catch-finally-statement.md)を使用して再コンパイルし、再実行することによって修正できます。
   
-## <a name="logic-errors"></a>Logic Errors
- *Logic errors* are those that appear once the application is in use. They are most often faulty assumptions made by the developer, or unwanted or unexpected results in response to user actions. For example, a mistyped key might provide incorrect information to a method, or you may assume that a valid value is always supplied to a method when that is not the case. Although logic errors can be handled by using [exception handling](../../language-reference/statements/try-catch-finally-statement.md) (for example, by testing whether an argument is `Nothing` and throwing an <xref:System.ArgumentNullException>), most commonly they should be addressed by correcting the error in logic and recompiling the application.
+## <a name="logic-errors"></a>ロジックエラー
+ *ロジックエラー*は、アプリケーションが使用された後に表示されるエラーです。 ほとんどの場合、開発者によって作成された仮定に誤りがあるか、またはユーザーの操作に対する応答として望ましくないまたは予期しない結果になります。 たとえば、誤って入力されたキーによってメソッドに誤った情報が提供されることがあります。そうでない場合は、常に有効な値がメソッドに渡されると想定できます。 [例外処理](../../language-reference/statements/try-catch-finally-statement.md)を使用してロジックエラーを処理することもできますが (たとえば、引数が `Nothing` であるかどうかをテストし、<xref:System.ArgumentNullException>をスローするなど)、ほとんどの場合、ロジックのエラーを修正し、アプリケーションを再コンパイルすることによって対処する必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [デバッガーの基本事項](/visualstudio/debugger/debugger-feature-tour)

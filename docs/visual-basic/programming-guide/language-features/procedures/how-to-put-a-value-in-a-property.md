@@ -16,33 +16,33 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346054"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>方法: プロパティに値を格納する (Visual Basic)
-You store a value in a property by putting the property name on the left side of an assignment statement.  
+プロパティに値を格納するには、プロパティ名を代入ステートメントの左側に配置します。  
   
- The property's `Set` procedure stores a value, but you do not explicitly call it by name. You use the property just as you would use a variable. Visual Basic makes the calls to the property's procedures.  
+ プロパティの `Set` プロシージャには値が格納されますが、名前で明示的に呼び出すことはありません。 変数を使用する場合と同じように、プロパティを使用します。 Visual Basic によって、プロパティのプロシージャが呼び出されます。  
   
-### <a name="to-store-a-value-in-a-property"></a>To store a value in a property  
+### <a name="to-store-a-value-in-a-property"></a>プロパティに値を格納するには  
   
-1. Use the property name on the left side of an assignment statement.  
+1. 代入ステートメントの左側にあるプロパティ名を使用します。  
   
-     The following example sets the value of the Visual Basic `TimeOfDay` property to noon, implicitly calling its `Set` procedure.  
+     次の例では、Visual Basic `TimeOfDay` プロパティの値を正午に設定し、その `Set` プロシージャを暗黙的に呼び出します。  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
-2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
+2. プロパティが引数を受け取る場合は、プロパティ名の後にかっこを付けて引数リストを囲みます。 引数がない場合は、必要に応じてかっこを省略できます。  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
+3. 引数リストに引数をコンマで区切ってかっこ内に配置します。 引数は、プロパティが対応するパラメーターを定義する順序と同じ順序で指定してください。  
   
-4. The value generated on the right side of the assignment statement is stored in the property.  
+4. 代入ステートメントの右辺に生成される値は、プロパティに格納されます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Visual Basic のプロパティと変数の違い](./differences-between-properties-and-variables.md)
 - [方法 : プロパティを作成する](./how-to-create-a-property.md)
 - [方法 : 複数のアクセス レベルを持つプロパティを宣言する](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [方法 : プロパティ プロシージャを呼び出す](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [方法: Visual Basic で既定のプロパティを宣言して呼び出す](./how-to-declare-and-call-a-default-property.md)
 - [方法 : プロパティから値を取得する](./how-to-get-a-value-from-a-property.md)

@@ -38,11 +38,11 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.|  
-|`PROFILER_GLOBAL_CLASS`|The default class identifier for global constants that do not belong to a class.|  
-|`PROFILER_GLOBAL_MODULE`|The default module identifier for global objects that do not belong to a module.|  
+|`PROFILER_PARENT_UNKNOWN`|アセンブリにまだアタッチされていないモジュールに対して[ICorProfilerInfo:: GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)によって使用される既定の識別子。|  
+|`PROFILER_GLOBAL_CLASS`|クラスに属していないグローバル定数の既定のクラス識別子。|  
+|`PROFILER_GLOBAL_MODULE`|モジュールに属さないグローバルオブジェクトの既定のモジュール識別子。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -51,6 +51,6 @@ typedef enum {
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

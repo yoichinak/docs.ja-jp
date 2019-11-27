@@ -13,9 +13,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353652"
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic ランタイム メッセージ
-This section contains the Visual Basic error messages that occur at run time.  
+ここでは、実行時に発生する Visual Basic エラーメッセージについて説明します。  
   
- [\<address> is not a valid remote file address](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
+ [\<アドレス > は有効なリモートファイルアドレスではありません](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
   
  [区切り記号は Nothing または空の文字列は使用できません](../../visual-basic/misc/a-delimiter-cannot-be-nothing-or-an-empty-string.md)  
   
@@ -27,9 +27,9 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [スタートアップ フォームが指定されていません。](../../visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md)  
   
- [Access denied to '\<name>'](../../visual-basic/misc/access-denied-to-name.md)  
+ ['\<名 > ' へのアクセスが拒否されました](../../visual-basic/misc/access-denied-to-name.md)  
   
- [Add failed. Duplicate key value supplied](../../visual-basic/misc/add-failed-duplicate-key-value-supplied.md)  
+ [追加に失敗しました。指定されたキー値が重複しています](../../visual-basic/misc/add-failed-duplicate-key-value-supplied.md)  
   
  [最後の要素以外のすべてのフィールド幅は 0 より大きくなければなりません。](../../visual-basic/misc/all-field-widths-except-the-last-element-must-be-greater-than-zero.md)  
   
@@ -41,51 +41,51 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [アプリケーション定義またはオブジェクト定義のエラーです。](../../visual-basic/misc/application-defined-or-object-defined-error.md)  
   
- [Argument '\<argument1>' must be less than or equal to the length of argument '\<argument2>'](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
+ [引数 '\<引数 1 > ' は、引数 '\<引数 2 > ' の長さ以下でなければなりません](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
   
- [Argument '\<argumentname>' cannot be a multidimensional array](../../visual-basic/misc/argument-argumentname-cannot-be-a-multidimensional-array.md)  
+ [引数 '\<argumentname > ' を多次元配列にすることはできません](../../visual-basic/misc/argument-argumentname-cannot-be-a-multidimensional-array.md)  
   
- [Argument \<argumentname> cannot be an empty string or Nothing](../../visual-basic/misc/argument-argumentname-cannot-be-an-empty-string-or-nothing.md)  
+ [引数 \<argumentname > に空の文字列または Nothing を指定することはできません](../../visual-basic/misc/argument-argumentname-cannot-be-an-empty-string-or-nothing.md)  
   
- [Argument '\<argumentname>' cannot be converted to a numeric value](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-a-numeric-value.md)  
+ [引数 '\<argumentname > ' を数値に変換することはできません](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-a-numeric-value.md)  
   
- [Argument '\<argumentname>' cannot be converted to type '\<typename>'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-typename.md)  
+ [引数 '\<argumentname > ' を型 '\<typename > ' に変換することはできません](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-typename.md)  
   
- [Argument '\<argumentname>' cannot be converted to type 'Date'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-date.md)  
+ [引数 '\<argumentname > ' を ' Date ' 型に変換することはできません](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-date.md)  
   
- [Argument '\<argumentname>' is not a valid value](../../visual-basic/misc/argument-argumentname-is-not-a-valid-value.md)  
+ [引数 '\<argumentname > ' は有効な値ではありません](../../visual-basic/misc/argument-argumentname-is-not-a-valid-value.md)  
   
- [Argument '\<argumentname>' is not valid for the array](../../visual-basic/misc/argument-argumentname-is-not-valid-for-the-array.md)  
+ [引数 '\<argumentname > ' は配列に対して有効ではありません](../../visual-basic/misc/argument-argumentname-is-not-valid-for-the-array.md)  
   
- [Argument '\<argumentname>' is Nothing](../../visual-basic/misc/argument-argumentname-is-nothing.md)  
+ [引数 '\<argumentname > ' は Nothing です](../../visual-basic/misc/argument-argumentname-is-nothing.md)  
   
- [Argument '\<argumentname>' is Nothing or empty](../../visual-basic/misc/argument-argumentname-is-nothing-or-empty.md)  
+ [引数 '\<argumentname > ' は Nothing または空です](../../visual-basic/misc/argument-argumentname-is-nothing-or-empty.md)  
   
- [Argument '\<argumentname>' must be greater than 0 or equal to -1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-0-or-equal-to-1.md)  
+ [引数 '\<argumentname > ' は、0より大きいか-1 と同じでなければなりません](../../visual-basic/misc/argument-argumentname-must-be-greater-than-0-or-equal-to-1.md)  
   
- [Argument '\<argumentname>' must be greater than or equal to 1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1.md)  
+ [引数 '\<argumentname > ' は1以上でなければなりません](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1.md)  
   
- [Argument '\<argumentname>' must be greater than or equal to -1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1-1.md)  
+ [引数 '\<argumentname > ' は-1 以上でなければなりません](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1-1.md)  
   
- [Argument \<argumentname> must be greater than or equal to zero](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero-1.md)  
+ [引数 \<argumentname > には0以上の値を指定しなければなりません](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero-1.md)  
   
- [Argument '\<argumentname>' must be greater than or equal to zero](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero.md)  
+ [引数 '\<argumentname > ' は0以上でなければなりません](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero.md)  
   
- [Argument '\<argumentname>' must be greater than zero](../../visual-basic/misc/argument-argumentname-must-be-greater-than-zero.md)  
+ [引数 '\<argumentname > ' は0より大きい値でなければなりません](../../visual-basic/misc/argument-argumentname-must-be-greater-than-zero.md)  
   
- [Argument '\<argumentname>' must be in the range of -32768 to 65535](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
+ [引数 '\<argumentname > ' は-32768 ~ 65535 の範囲内でなければなりません](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
   
- [Argument '\<argumentname>' must be within the range 0 to 99](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
+ [引数 '\<argumentname > ' は 0 ~ 99 の範囲内でなければなりません](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
   
- [Argument '\<argumentname>' must be within the range 1 to 255](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
+ [引数 '\<argumentname > ' は 1 ~ 255 の範囲内でなければなりません](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
   
- [Argument '\<argumentname1>' must be less than or equal the length of argument '\<argumentname2>'](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
+ [引数 '\<argumentname1 > ' は、引数 '\<argumentname2 > ' の長さ以下でなければなりません](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
   
- [Argument 'Access' is not valid. Valid values for Append mode are 'OpenAccess.Write' and 'OpenAccess.Default'](../../visual-basic/misc/argument-access-is-not-valid-append-mode.md)  
+ [引数 ' Access ' は有効ではありません。Append モードの有効な値は、' Openaccess.default ' と ' Openaccess.default ' です。](../../visual-basic/misc/argument-access-is-not-valid-append-mode.md)  
   
- [Argument 'Access' is not valid. Valid values for Input mode are 'OpenAccess.Read' and 'OpenAccess.Default'](../../visual-basic/misc/argument-access-is-not-valid-input-mode.md)  
+ [引数 ' Access ' は有効ではありません。入力モードの有効な値は、' Openaccess.default ' と ' Openaccess.default ' です。](../../visual-basic/misc/argument-access-is-not-valid-input-mode.md)  
   
- [Argument 'Access' is not valid. Valid values for Output mode are 'OpenAccess.Write' and 'OpenAccess.Default'](../../visual-basic/misc/argument-access-is-not-valid.md)  
+ [引数 ' Access ' は有効ではありません。出力モードの有効な値は、' Openaccess.default ' と ' Openaccess.default ' です。](../../visual-basic/misc/argument-access-is-not-valid.md)  
   
  [引数 BasePath はフォルダーへのパスである必要があります](../../visual-basic/misc/argument-basepath-must-be-a-path-to-a-folder.md)  
   
@@ -99,7 +99,7 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [引数 'Life' を 0 にすることはできません](../../visual-basic/misc/argument-life-cannot-be-zero.md)  
   
- [Argument not optional (Visual Basic)](../../visual-basic/language-reference/error-messages/argument-not-optional.md)  
+ [引数を省略できません (Visual Basic)](../../visual-basic/language-reference/error-messages/argument-not-optional.md)  
   
  [引数 'NPer' は 0 より大きくなければなりません](../../visual-basic/misc/argument-nper-must-be-greater-than-zero.md)  
   
@@ -109,7 +109,7 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [引数 'Period' は 'Life' 引数以下でなければなりません](../../visual-basic/misc/argument-period-must-be-less-than-or-equal-to-argument-life.md)  
   
- [Argument value '\<pathname>' contains characters that are not valid in a path name](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
+ [引数値 '\<pathname > ' に、パス名に無効な文字が含まれています](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
   
  [引数が有効ではありません](../../visual-basic/misc/arguments-are-not-valid.md)  
   
@@ -141,11 +141,11 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [定義クラスのインスタンスではないオブジェクトのフレンド関数は呼び出せません](../../visual-basic/misc/cannot-call-friend-function-on-object-which-is-not-instance-of-defining-class.md)  
   
- [Cannot convert argument '\<argumentname>' of type '\<type1>' to type '\<type2>'](../../visual-basic/misc/cannot-convert-argument-argumentname-of-type-type1-to-type-type2.md)  
+ [型 '\<type1 > ' の引数 '\<argumentname > ' を型 '\<' 型 ' > ' ' に変換できません。](../../visual-basic/misc/cannot-convert-argument-argumentname-of-type-type1-to-type-type2.md)  
   
- [Cannot convert start value of type '\<type1>' and step value of type '\<type2>' to a common type](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
+ [型 '\<type1 > ' の開始値と型 '\<' 型 ' > ' のステップ値を共通の型に変換することはできません](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
   
- [Cannot convert start value of type '\<type1>', limit value of '\<type2>' and step value of '\<type3>' to a common type](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
+ ['\<type1 > ' 型の開始値を変換できません。 '\<type1 > ' の値と '\<type3 > ' のステップ値を共通の型に変換できません](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
   
  [ActiveX コンポーネントを作成できません。](../../visual-basic/language-reference/error-messages/cannot-create-activex-component.md)  
   
@@ -161,11 +161,11 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [要求された操作を実行できません (Visual Basic)](../../visual-basic/misc/cant-perform-requested-operation.md)  
   
- [Cast from string "\<string>" to type '\<typename>' is not valid](../../visual-basic/misc/cast-from-string-string-to-type-typename-is-not-valid.md)  
+ [文字列 "\<string >" から型 '\<typename > ' へのキャストは有効ではありません](../../visual-basic/misc/cast-from-string-string-to-type-typename-is-not-valid.md)  
   
- [Cast from type '\<typename1>' to type '\<typename2>' is not valid](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
+ [型 '\<typename1 > ' から型 '\<typename2 > ' へのキャストは有効ではありません](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
   
- [Class '\<classname>' does not implement the System.Collections.ICollection interface](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
+ [クラス '\<classname > ' は、system.string インターフェイスを実装していません。](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
   
  [クラスがオートメーションをサポートしていないか、必要なインターフェイスをサポートしていません。](../../visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md)  
   
@@ -203,27 +203,27 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [0 による除算 (Visual Basic 実行時エラー)](../../visual-basic/misc/division-by-zero-run-time-error.md)  
   
- [Drive '\<drivename>' not found](../../visual-basic/misc/drive-drivename-not-found.md)  
+ [ドライブ '\<drivename > ' が見つかりません](../../visual-basic/misc/drive-drivename-not-found.md)  
   
  [エンコードは Nothing に設定できません](../../visual-basic/misc/encoding-cannot-be-set-to-nothing.md)  
   
- [Error in loading DLL (Visual Basic)](../../visual-basic/language-reference/error-messages/error-in-loading-dll.md)  
+ [DLL の読み込み中にエラーが発生した (Visual Basic)](../../visual-basic/language-reference/error-messages/error-in-loading-dll.md)  
   
  [エラー番号は 0 から 65535 の範囲でなければなりません](../../visual-basic/misc/error-number-must-be-within-the-range-0-and-65535.md)  
   
- [Expression '\<name>' is not a procedure, but occurs as the target of a procedure call](../../visual-basic/misc/expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call.md)  
+ [式 '\<name > ' はプロシージャではありませんが、プロシージャ呼び出しのターゲットとして発生します](../../visual-basic/misc/expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call.md)  
   
  [式が複雑すぎます。](../../visual-basic/language-reference/error-messages/expression-too-complex.md)  
   
  [機能がまだ実装されていません](../../visual-basic/misc/feature-not-yet-implemented.md)  
   
- [Field '\<fieldname>' of type '\<typename>' is 'ReadOnly'](../../visual-basic/misc/field-fieldname-of-type-typename-is-readonly.md)  
+ [型 '\<typename > ' のフィールド '\<fieldname > ' は ' ReadOnly ' です](../../visual-basic/misc/field-fieldname-of-type-typename-is-readonly.md)  
   
- [File '\<filename>' cannot be deleted because it is open](../../visual-basic/misc/file-filename-cannot-be-deleted-because-it-is-open.md)  
+ [ファイル '\<filename > ' は開いているため、削除できません](../../visual-basic/misc/file-filename-cannot-be-deleted-because-it-is-open.md)  
   
- [File '\<filename>' is write protected](../../visual-basic/misc/file-filename-is-write-protected.md)  
+ [ファイル '\<ファイル名 > ' は書き込み禁止です](../../visual-basic/misc/file-filename-is-write-protected.md)  
   
- [File '\<filename>' not found](../../visual-basic/misc/file-filename-not-found.md)  
+ [ファイル '\<ファイル名 > ' が見つかりません](../../visual-basic/misc/file-filename-not-found.md)  
   
  [ファイルは既に存在します](../../visual-basic/misc/file-already-exists.md)  
   
@@ -231,9 +231,9 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [ファイル形式が有効ではありません](../../visual-basic/misc/file-format-not-valid.md)  
   
- [File I/O of a structure with field '\<fieldname>' of type '\<typename>' is not valid](../../visual-basic/misc/file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid.md)  
+ [型 '\<typename > ' のフィールド '\<fieldname > ' を持つ構造体のファイル i/o が有効ではありません](../../visual-basic/misc/file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid.md)  
   
- [File I/O with type '\<typename>' is not valid](../../visual-basic/misc/file-i-o-with-type-typename-is-not-valid.md)  
+ ['\<typename > ' 型のファイル i/o が無効です](../../visual-basic/misc/file-i-o-with-type-typename-is-not-valid.md)  
   
  [ファイルが存在しない場合、ファイル情報を照会することはできません](../../visual-basic/misc/file-information-cannot-be-queried-if-the-file-does-not-exist.md)  
   
@@ -241,7 +241,7 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [バイト配列に読み取るにはファイルが大きすぎます。](../../visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md)  
   
- [File name or class name not found during Automation operation (Visual Basic)](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
+ [Automation 操作中にファイル名またはクラス名が見つかりません (Visual Basic)](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
   
  [ファイルが見つかりません。(Visual Basic ランタイム エラー)](../../visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md)  
   
@@ -269,7 +269,7 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [内部エラー (Visual Basic)](../../visual-basic/misc/internal-error.md)  
   
- [Internal error happened at \<location>](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
+ [\<の場所で内部エラーが発生しました >](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
   
  [Microsoft Visual Basic ランタイムで内部エラーが発生しました](../../visual-basic/misc/internal-error-in-the-microsoft-visual-basic-runtime.md)  
   
@@ -277,31 +277,31 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [サブキーがあるためキーを削除できません](../../visual-basic/misc/key-cannot-be-deleted-because-it-has-subkeys.md)  
   
- [Late-bound assignment to a field of value type '\<typename>' is not valid when '\<name>' is the result of a late-bound expression](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
+ ['\<name > ' が遅延バインディング式の結果である場合、値型 '\<typename > ' のフィールドへの遅延バインディングの割り当ては無効です。](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
   
- [Length of argument '\<argumentname>' must be greater than zero](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
+ [引数 '\<argumentname > ' の長さは0より大きい値でなければなりません](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
   
- [Line \<number> cannot be parsed using the current Delimiters](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
+ [現在の区切り記号を使用して行 \<番号 > 解析できません](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
   
- [Line \<number> cannot be parsed using the current FieldWidths](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-fieldwidths.md)  
+ [現在の FieldWidths を使用して行 \<番号 > を解析できません](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-fieldwidths.md)  
   
- [Line \<number> cannot be read because it exceeds the maximum line size.](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
+ [行の最大サイズを超えているため、行 \<番号 > 読み取ることができません。](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
   
- [Locale ID '\<name>' is not supported on this system](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
+ [ロケール ID '\<name > ' はこのシステムではサポートされていません](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
   
- [Loop control variable of type '\<typename>' does not implement the 'System.IComparable' interface](../../visual-basic/misc/loop-control-variable-of-type-typename-does-not-implement-system-icomparable.md)  
+ [型 '\<typename > ' の Loop コントロール変数は ' System.icomparable ' インターフェイスを実装していません](../../visual-basic/misc/loop-control-variable-of-type-typename-does-not-implement-system-icomparable.md)  
   
  [COM クラスから派生したマネージド クラスは、遅延バインディングされた呼び出しはできません。](../../visual-basic/misc/managed-classes-derived-from-a-com-class-cannot-be-called-late-bound.md)  
   
- [Method '\<methodname>' cannot be called with \<number> arguments](../../visual-basic/misc/method-methodname-cannot-be-called-with-number-arguments.md)  
+ [メソッド '\<methodname > ' は \<number > 引数と共に呼び出すことはできません](../../visual-basic/misc/method-methodname-cannot-be-called-with-number-arguments.md)  
   
- [Method '\<methodname>' has no parameter named '\<parametername>'](../../visual-basic/misc/method-methodname-has-no-parameter-named-parametername.md)  
+ [メソッド '\<methodname > ' に '\<parametername > ' という名前のパラメーターがありません](../../visual-basic/misc/method-methodname-has-no-parameter-named-parametername.md)  
   
  [メソッドまたはデータ メンバーが見つかりません](../../visual-basic/misc/method-or-data-member-not-found.md)  
   
- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
+ [.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
   
- [Named argument '\<argumentname>' specified multiple times](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
+ [名前付き引数 '\<argumentname > ' が複数回指定されました](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
   
  [名前付き引数が見つかりません (Visual Basic)](../../visual-basic/misc/named-argument-not-found.md)  
   
@@ -309,19 +309,19 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [プロパティ配列のインデックスが必要です。](../../visual-basic/language-reference/error-messages/need-property-array-index.md)  
   
- [No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
+ [縮小変換せずにこれらの引数と共に呼び出すことができる、アクセス可能なオーバーロードされた '\<methodname > ' はありません](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
   
- [No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion: \<list>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
+ [縮小変換を使用せずに、これらの引数と共に呼び出すことができる、アクセス可能なオーバーロードされた '\<methodname > ' がありません: \<リスト >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
   
- [No accessible overloaded '\<methodname>' can be called with these arguments without a widening conversion: \<list>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
+ [拡張変換: \<リストを使用せずに、これらの引数と共に呼び出すことができる、アクセス可能なオーバーロードされた '\<methodname > ' がありません >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
   
- [No accessible overloaded '\<methodname>' can be called with these arguments: \<list>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
+ [次の引数を使用して呼び出すことができる、アクセス可能なオーバーロードされた '\<methodname > ' がありません: \<の一覧 >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
   
- [No default member found for type '\<typename>'](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
+ [型 '\<typename > ' の既定のメンバーが見つかりません](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
   
- [No files found matching '\<filename>'](../../visual-basic/misc/no-files-found-matching-filename.md)  
+ ['\<filename > ' に一致するファイルが見つかりませんでした](../../visual-basic/misc/no-files-found-matching-filename.md)  
   
- [No method '\<methodname>' can accept an argument of type '\<typename>' for parameter '\<parametername>'](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
+ [メソッド '\<methodname > ' は、パラメーター '\<parametername > ' に対して型 '\<typename > ' の引数を受け取ることはできません](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
   
  [マウスが存在しません](../../visual-basic/misc/no-mouse-is-present.md)  
   
@@ -347,39 +347,39 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [カスタム ログ名の最初の 8 文字が有効です](../../visual-basic/misc/only-the-first-eight-characters-of-a-custom-log-name-are-significant.md)  
   
- [Operator is not valid for '\<name1>' and '\<name2>'](../../visual-basic/misc/operator-is-not-valid-for-name1-and-name2.md)  
+ [演算子は '\<name1 > ' および '\<name2 > ' に対して無効です](../../visual-basic/misc/operator-is-not-valid-for-name1-and-name2.md)  
   
- [Operator is not valid for type '\<typename>'](../../visual-basic/misc/operator-is-not-valid-for-type-typename.md)  
+ [演算子は型 '\<typename > ' に対して有効ではありません](../../visual-basic/misc/operator-is-not-valid-for-type-typename.md)  
   
  [序数が有効ではありません。](../../visual-basic/language-reference/error-messages/ordinal-is-not-valid.md)  
   
  [メモリが不足しています。(Visual Basic ランタイム エラー)](../../visual-basic/misc/out-of-memory-run-time-error.md)  
   
- [Out of stack space (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
+ [スタック領域が不足しています (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
   
- [Out of string space (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
+ [文字列領域が不足しています (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
   
  [オーバーフローしました。(Visual Basic ランタイム エラー)](../../visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md)  
   
- [Path '\<pathname>' not found](../../visual-basic/misc/path-pathname-not-found.md)  
+ [パス '\<パス名 > ' が見つかりません](../../visual-basic/misc/path-pathname-not-found.md)  
   
  [パスが見つかりません。](../../visual-basic/language-reference/error-messages/path-not-found.md)  
   
- [Path/File access error](../../visual-basic/language-reference/error-messages/path-file-access-error.md)  
+ [パス/ファイルアクセスエラー](../../visual-basic/language-reference/error-messages/path-file-access-error.md)  
   
- [Permission denied (Visual Basic)](../../visual-basic/language-reference/error-messages/permission-denied.md)  
+ [アクセス許可が拒否されました (Visual Basic)](../../visual-basic/language-reference/error-messages/permission-denied.md)  
   
  [ピクチャが有効ではありません](../../visual-basic/misc/picture-is-not-valid.md)  
   
  [プリンター エラーです](../../visual-basic/misc/printer-error.md)  
   
- [Procedure call or argument is not valid (Visual Basic)](../../visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md)  
+ [プロシージャの呼び出しまたは引数が有効ではありません (Visual Basic)](../../visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md)  
   
- [Process '\<processname>' was not found](../../visual-basic/misc/process-processname-was-not-found.md)  
+ [プロセス '\<processname > ' が見つかりませんでした](../../visual-basic/misc/process-processname-was-not-found.md)  
   
- [Property \<propertyname> cannot be set to an empty string or Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
+ [プロパティ \<propertyname > を空の文字列または Nothing に設定することはできません](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
   
- [Property \<propertyname> cannot be set to Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-nothing.md)  
+ [プロパティ \<propertyname > を Nothing に設定することはできません](../../visual-basic/misc/property-propertyname-cannot-be-set-to-nothing.md)  
   
  [プロパティの配列インデックスが有効ではありません。](../../visual-basic/language-reference/error-messages/property-array-index-is-not-valid.md)  
   
@@ -391,7 +391,7 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [プロパティの値が無効です](../../visual-basic/misc/property-value-is-not-valid.md)  
   
- [Public member '\<membername>' on type '\<typename>' not found](../../visual-basic/misc/public-member-membername-on-type-typename-not-found.md)  
+ [型 '\<typename > ' のパブリックメンバー '\<membername > ' が見つかりません](../../visual-basic/misc/public-member-membername-on-type-typename-not-found.md)  
   
  ['ReDim' では最も右にある次元のみ変更できます](../../visual-basic/misc/redim-can-only-change-the-right-most-dimension.md)  
   
@@ -399,9 +399,9 @@ This section contains the Visual Basic error messages that occur at run time.
   
  ['ReDim' Preserve オペランドを Nothing に指定することはできません](../../visual-basic/misc/redim-preserve-operand-cannot-be-nothing.md)  
   
- [Registry key '\<keyname>' could not be created](../../visual-basic/misc/registry-key-keyname-could-not-be-created.md)  
+ [レジストリキー '\<keyname > ' を作成できませんでした](../../visual-basic/misc/registry-key-keyname-could-not-be-created.md)  
   
- [Registry key '\<keyname>' could not be found](../../visual-basic/misc/registry-key-keyname-could-not-be-found.md)  
+ [レジストリキー '\<keyname > ' が見つかりませんでした](../../visual-basic/misc/registry-key-keyname-could-not-be-found.md)  
   
  [置換後の文字列が長すぎます](../../visual-basic/misc/replacements-too-long.md)  
   
@@ -443,9 +443,9 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [文字列の長さは 'FileSystem' API に対する 32767 文字の上限を超えています。](../../visual-basic/misc/string-length-exceeds-maximum-length-of-32767-characters-for-filesystem-apis.md)  
   
- [Sub or Function not defined (Visual Basic)](../../visual-basic/language-reference/error-messages/sub-or-function-not-defined.md)  
+ [Sub または Function が定義されていません (Visual Basic)](../../visual-basic/language-reference/error-messages/sub-or-function-not-defined.md)  
   
- [Subscript out of range (Visual Basic)](../../visual-basic/language-reference/error-messages/subscript-out-of-range.md)  
+ [添字が有効範囲にありません (Visual Basic)](../../visual-basic/language-reference/error-messages/subscript-out-of-range.md)  
   
  [システム イベント ログを削除できません](../../visual-basic/misc/system-event-log-cannot-be-deleted.md)  
   
@@ -453,7 +453,7 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [TargetFilePath は既存のフォルダーを指定します](../../visual-basic/misc/targetfilepath-specifies-an-existing-folder.md)  
   
- [TextFieldParser does not support comment tokens that contain white space](../../visual-basic/misc/textfieldparser-does-not-support-comment-tokens-that-contain-whitespace.md)  
+ [TextFieldParser は空白を含むコメントトークンをサポートしていません](../../visual-basic/misc/textfieldparser-does-not-support-comment-tokens-that-contain-whitespace.md)  
   
  [TextFieldParser は行末文字を含む区切り記号をサポートしていません。](../../visual-basic/misc/textfieldparser-does-not-support-delimiters-that-contain-endline-characters.md)  
   
@@ -485,11 +485,11 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [TextFieldParser に渡されたストリームを読み取れません](../../visual-basic/misc/the-stream-passed-to-textfieldparser-cannot-be-read.md)  
   
- [The value of \<argumentname> must be a positive number](../../visual-basic/misc/the-value-of-argumentname-must-be-a-positive-number.md)  
+ [\<argumentname > の値は正の数値である必要があります](../../visual-basic/misc/the-value-of-argumentname-must-be-a-positive-number.md)  
   
- [The value of \<argumentname> must be greater than or equal to 1000](../../visual-basic/misc/the-value-of-argumentname-must-be-greater-than-or-equal-to-1000.md)  
+ [\<argumentname > の値は1000以上である必要があります](../../visual-basic/misc/the-value-of-argumentname-must-be-greater-than-or-equal-to-1000.md)  
   
- [This array is fixed or temporarily locked (Visual Basic)](../../visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md)  
+ [この配列は固定または一時的にロックされています (Visual Basic)](../../visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md)  
   
  [このキーは既にこのコレクションの要素に割り当てられています。](../../visual-basic/language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md)  
   
@@ -509,9 +509,9 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [ファイルが多すぎます。](../../visual-basic/language-reference/error-messages/too-many-files.md)  
   
- [Type mismatch (Visual Basic)](../../visual-basic/language-reference/error-messages/type-mismatch.md)  
+ [型が一致しません (Visual Basic)](../../visual-basic/language-reference/error-messages/type-mismatch.md)  
   
- [Type of argument '\<argumentname>' is '\<typename>', which is not numeric](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
+ [引数 '\<argumentname > ' の型は '\<typename > ' で、数値ではありません](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
   
  [内部システム エラーにより、シリアル ポート名を取得できません。](../../visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md)  
   
@@ -553,6 +553,6 @@ This section contains the Visual Basic error messages that occur at run time.
   
  [現在のフォルダーの下のパスか、そのフォルダーのサブフォルダー 1 つを指定する必要があります](../../visual-basic/misc/you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [エラー メッセージ](../../visual-basic/language-reference/error-messages/index.md)

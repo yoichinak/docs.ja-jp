@@ -22,21 +22,21 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447546"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc インターフェイス
-Provides a method to allocate memory for a new Microsoft intermediate language (MSIL) function body.  
+新しい Microsoft 中間言語 (MSIL) 関数の本体にメモリを割り当てる方法を提供します。  
   
 > [!NOTE]
-> The `IMethodMalloc` interface is a simple memory allocator. It allows you to allocate memory, but not to free it.  
+> `IMethodMalloc` インターフェイスは、単純なメモリアロケーターです。 メモリを割り当てることはできますが、解放することはできません。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Alloc メソッド](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Attempts to allocate a specified amount of memory for a new MSIL function body.|  
+|[Alloc メソッド](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|新しい MSIL 関数本体に指定された量のメモリを割り当てようとします。|  
   
-## <a name="remarks"></a>Remarks  
- Each allocator is module-specific and ensures that the function body will be at a positive offset from the base of the module. Memory above the base of a module can be precious, so the allocator should be used to allocate memory only for a function body.  
+## <a name="remarks"></a>コメント  
+ 各アロケーターはモジュール固有であり、関数本体がモジュールのベースから正のオフセットになるようにします。 モジュールのベースを超えるメモリは貴重な場合があるため、アロケーターを使用して、関数本体にのみメモリを割り当てる必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -45,6 +45,6 @@ Provides a method to allocate memory for a new Microsoft intermediate language (
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

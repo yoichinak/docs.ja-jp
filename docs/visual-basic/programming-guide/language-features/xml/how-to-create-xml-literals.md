@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333000"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>方法 : XML リテラルを作成する (Visual Basic)
-You can create an XML document, fragment, or element directly in code by using an XML literal. The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.  
+Xml リテラルを使用して、XML ドキュメント、フラグメント、または要素をコード内で直接作成できます。 このトピックの例では、3つの子要素を持つ XML 要素を作成する方法と、XML ドキュメントを作成する方法を示します。  
   
- You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. 詳細については、「<xref:System.Xml.Linq.XElement>」を参照してください。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Api を使用して、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトを作成することもできます。 詳細については、「 <xref:System.Xml.Linq.XElement>」を参照してください。  
   
-### <a name="to-create-an-xml-element"></a>To create an XML element  
+### <a name="to-create-an-xml-element"></a>XML 要素を作成するには  
   
-- Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.  
+- Xml リテラル構文を使用して XML インラインを作成します。これは、実際の XML 構文と同じです。  
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
-     コードを実行します。 The output of this code is:  
+     コードを実行します。 このコードの出力は次のとおりです。  
   
      `<contact>`  
   
@@ -34,13 +34,13 @@ You can create an XML document, fragment, or element directly in code by using a
   
      `</contact>`  
   
-### <a name="to-create-an-xml-document"></a>To create an XML document  
+### <a name="to-create-an-xml-document"></a>XML ドキュメントを作成するには  
   
-- Create the XML document inline. The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.  
+- XML ドキュメントをインラインで作成します。 次のコードでは、リテラル構文、XML 宣言、処理命令、コメント、および別の要素を含む要素を含む XML ドキュメントを作成します。  
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-     コードを実行します。 The output of this code is:  
+     コードを実行します。 このコードの出力は次のとおりです。  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   
@@ -52,7 +52,7 @@ You can create an XML document, fragment, or element directly in code by using a
   
      `</books>`  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

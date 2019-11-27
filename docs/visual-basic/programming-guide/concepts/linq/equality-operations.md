@@ -9,17 +9,17 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346833"
 ---
-# <a name="equality-operations-visual-basic"></a>Equality Operations (Visual Basic)
+# <a name="equality-operations-visual-basic"></a>等値演算 (Visual Basic)
 2 つのシーケンスの対応する要素が等しく、要素数も同じである場合、これらのシーケンスは等しいと見なされます。  
   
 ## <a name="methods"></a>メソッド  
   
-|メソッド名|説明|Visual Basic Query Expression Syntax|説明|  
+|メソッド名|説明|Visual Basic クエリ式の構文|詳細|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |SequenceEqual|要素をペアにして比較することで、2 つのシーケンスが等しいかどうかを判断します。|該当しない。|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)
+- [方法: 2 つのフォルダーの内容を比較する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)

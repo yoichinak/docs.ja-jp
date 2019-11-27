@@ -19,46 +19,46 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340244"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>方法: 演算子プロシージャを呼び出す (Visual Basic)
-You call an operator procedure by using the operator symbol in an expression. In the case of a conversion operator, you call the [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) to convert a value from one data type to another.  
+演算子プロシージャを呼び出すには、式の中で演算子記号を使用します。 変換演算子の場合は、 [CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)を呼び出して、あるデータ型から別のデータ型に値を変換します。  
   
- You do not call operator procedures explicitly. You just use the operator, or the `CType` function, in an assignment statement or an expression, the same way you ordinarily use an operator. Visual Basic makes the call to the operator procedure.  
+ 演算子プロシージャを明示的に呼び出すことはできません。 演算子を使用するのは、通常、演算子を使用する場合と同じように、代入ステートメントまたは式で `CType` 関数を使用することだけです。 Visual Basic は、演算子プロシージャを呼び出します。  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ クラスまたは構造体に対して演算子を定義することは、演算子の*オーバーロード*とも呼ばれます。  
   
-### <a name="to-call-an-operator-procedure"></a>To call an operator procedure  
+### <a name="to-call-an-operator-procedure"></a>演算子プロシージャを呼び出すには  
   
-1. Use the operator symbol in an expression in the ordinary way.  
+1. 通常の方法では、演算子記号を式の中で使用します。  
   
-2. Be sure the data types of the operands are appropriate for the operator, and in the correct order.  
+2. オペランドのデータ型が演算子に適していること、および正しい順序であることを確認してください。  
   
-3. The operator contributes to the value of the expression as expected.  
+3. 演算子は、式の値に想定どおりに貢献します。  
   
-### <a name="to-call-a-conversion-operator-procedure"></a>To call a conversion operator procedure  
+### <a name="to-call-a-conversion-operator-procedure"></a>変換演算子プロシージャを呼び出すには  
   
-1. Use `CType` inside an expression.  
+1. 式の内部で `CType` を使用します。  
   
-2. Be sure the data types of the operands are appropriate for the conversion, and in the correct order.  
+2. オペランドのデータ型が変換に適していること、および正しい順序であることを確認してください。  
   
-3. `CType` calls the conversion operator procedure and returns the converted value.  
+3. `CType` は変換演算子プロシージャを呼び出し、変換された値を返します。  
   
 ## <a name="example"></a>例  
- The following example creates two <xref:System.TimeSpan> structures, adds them together, and stores the result in a third <xref:System.TimeSpan> structure. The <xref:System.TimeSpan> structure defines operator procedures to overload several standard operators.  
+ 次の例では、2つの <xref:System.TimeSpan> 構造体を作成し、それらをまとめて追加し、結果を3番目の <xref:System.TimeSpan> 構造体に格納します。 <xref:System.TimeSpan> 構造体は、いくつかの標準演算子をオーバーロードする演算子プロシージャを定義します。  
   
  [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
   
- Because <xref:System.TimeSpan> overloads the standard `+` operator, the previous example calls an operator procedure when it calculates the value of `combinedSpan`.  
+ <xref:System.TimeSpan> は標準の `+` 演算子をオーバーロードするので、前の例では `combinedSpan`の値を計算するときに演算子プロシージャを呼び出しています。  
   
- For an example of calling a conversation operator procedure, see [How to: Use a Class that Defines Operators](./how-to-use-a-class-that-defines-operators.md).  
+ メッセージ交換演算子プロシージャを呼び出す例については、「[方法: 演算子を定義するクラスを使用する](./how-to-use-a-class-that-defines-operators.md)」を参照してください。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- Be sure the class or structure you are using defines the operator you want to use.  
+ 使用するクラスまたは構造体で、使用する演算子が定義されていることを確認してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [演算子プロシージャ](./operator-procedures.md)
 - [方法 : 演算子を定義する](./how-to-define-an-operator.md)
 - [方法 : 変換演算子を定義する](./how-to-define-a-conversion-operator.md)
-- [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)

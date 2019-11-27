@@ -14,37 +14,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346024"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>方法: プロシージャから値を返す (Visual Basic)
-A `Function` procedure returns a value to the calling code either by executing a `Return` statement or by encountering an `Exit Function` or `End Function` statement.  
+`Function` プロシージャは、`Return` ステートメントを実行するか `Exit Function` または `End Function` ステートメントを実行して、呼び出し元のコードに値を返します。  
   
-### <a name="to-return-a-value-using-the-return-statement"></a>To return a value using the Return statement  
+### <a name="to-return-a-value-using-the-return-statement"></a>Return ステートメントを使用して値を返すには  
   
-1. Put a `Return` statement at the point where the procedure's task is completed.  
+1. プロシージャのタスクが完了した位置に `Return` ステートメントを配置します。  
   
-2. Follow the `Return` keyword with an expression that yields the value you want to return to the calling code.  
+2. `Return` キーワードの後に、呼び出し元のコードに返す値を生成する式を入力します。  
   
 3. 同じプロシージャ内に複数の `Return` ステートメントを含めることができます。  
   
-     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, and returns it to the calling code.  
+     次の `Function` の手順では、直角三角形の最長の辺 (斜辺) を計算し、呼び出し元のコードに返します。  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     The following example shows a typical call to `hypotenuse`, which stores the returned value.  
+     次の例は、戻り値を格納する `hypotenuse`の一般的な呼び出しを示しています。  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
-### <a name="to-return-a-value-using-exit-function-or-end-function"></a>To return a value using Exit Function or End Function  
+### <a name="to-return-a-value-using-exit-function-or-end-function"></a>Exit 関数または End 関数を使用して値を返すには  
   
-1. In at least one place in the `Function` procedure, assign a value to the procedure's name.  
+1. `Function` プロシージャ内の少なくとも1つの場所で、プロシージャの名前に値を割り当てます。  
   
-2. When you execute an `Exit Function` or `End Function` statement, Visual Basic returns the value most recently assigned to the procedure's name.  
+2. `Exit Function` または `End Function` ステートメントを実行すると、Visual Basic は、プロシージャの名前に最後に割り当てられた値を返します。  
   
 3. 同じプロシージャ内に複数の `Exit Function` ステートメントを含めることができ、さらに同じプロシージャ内に `Return` ステートメントと `Exit Function` ステートメントを混在させることができます。  
   
-4. You can have only one `End Function` statement in a `Function` procedure.  
+4. `Function` プロシージャには、`End Function` ステートメントを1つだけ含めることができます。  
   
-     For more information and an example, see "Return Value" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
+     詳細と例については、「 [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)」の「戻り値」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)

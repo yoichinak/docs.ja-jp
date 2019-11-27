@@ -14,41 +14,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345219"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>厳密でないデリゲート変換 (Visual Basic)
-Relaxed delegate conversion enables you to assign subs and functions to delegates or handlers even when their signatures are not identical. Therefore, binding to delegates becomes consistent with the binding already allowed for method invocations.  
+厳密でないデリゲート変換を使用すると、シグネチャが同一でない場合でも、デリゲートまたはハンドラーにサブルーチンおよび関数を割り当てることができます。 したがって、デリゲートへのバインドは、メソッドの呼び出しに対して既に許可されているバインディングと一致します。  
   
-## <a name="parameters-and-return-type"></a>Parameters and Return Type  
- In place of exact signature match, relaxed conversion requires that the following conditions be met when `Option Strict` is set to `On`:  
+## <a name="parameters-and-return-type"></a>パラメーターと戻り値の型  
+ 厳密なシグネチャ一致の代わりに、`Option Strict` が `On`に設定されている場合は、次の条件を満たす必要があります。  
   
-- A widening conversion must exist from the data type of each delegate parameter to the data type of the corresponding parameter of the assigned function or `Sub`. In the following example, the delegate `Del1` has one parameter, an `Integer`. Parameter `m` in the assigned lambda expressions must have a data type for which there is a widening conversion from `Integer`, such as `Long` or `Double`.  
+- 拡大変換は、各デリゲートパラメーターのデータ型から、割り当てられた関数または `Sub`の対応するパラメーターのデータ型に存在する必要があります。 次の例では、デリゲート `Del1` に1つのパラメーター (`Integer`) があります。 割り当てられたラムダ式のパラメーター `m` には、`Long` や `Double`などの `Integer`からの拡大変換があるデータ型が含まれている必要があります。  
   
      [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
      [!code-vb[VbVbalrRelaxedDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#2)]  
   
-     Narrowing conversions are permitted only when `Option Strict` is set to `Off`.  
+     縮小変換は、`Option Strict` が `Off`に設定されている場合にのみ許可されます。  
   
      [!code-vb[VbVbalrRelaxedDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#8)]  
   
-- A widening conversion must exist in the opposite direction from the return type of the assigned function or `Sub` to the return type of the delegate. In the following examples, the body of each assigned lambda expression must evaluate to a data type that widens to `Integer` because the return type of `del1` is `Integer`.  
+- 拡大変換は、割り当てられた関数の戻り値の型からの逆方向に存在するか、デリゲートの戻り値の型に `Sub` 必要があります。 次の例では、割り当てられている各ラムダ式の本体は、`del1` の戻り値の型が `Integer`であるため、`Integer` に拡大変換されるデータ型に評価される必要があります。  
   
      [!code-vb[VbVbalrRelaxedDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#3)]  
   
- If `Option Strict` is set to `Off`, the widening restriction is removed in both directions.  
+ `Option Strict` が `Off`に設定されている場合、拡大制限は両方向に削除されます。  
   
  [!code-vb[VbVbalrRelaxedDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#4)]  
   
-## <a name="omitting-parameter-specifications"></a>Omitting Parameter Specifications  
- Relaxed delegates also allow you to completely omit parameter specifications in the assigned method:  
+## <a name="omitting-parameter-specifications"></a>パラメーターの指定を省略する  
+ 緩やかなデリゲートでは、割り当てられたメソッドでパラメーターの指定を完全に省略することもできます。  
   
  [!code-vb[VbVbalrRelaxedDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#5)]  
   
  [!code-vb[VbVbalrRelaxedDelegates#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#6)]  
   
- Note that you cannot specify some parameters and omit others.  
+ 一部のパラメーターを指定したり、他のパラメーターを省略したりすることはできません。  
   
  [!code-vb[VbVbalrRelaxedDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#15)]  
   
- The ability to omit parameters is helpful in a situation such as defining an event handler, where several complex parameters are involved. The arguments to some event handlers are not used. Instead, the handler directly accesses the state of the control on which the event is registered, and ignores the arguments. Relaxed delegates allow you to omit the arguments in such declarations when no ambiguities result. In the following example, the fully specified method `OnClick` can be rewritten as `RelaxedOnClick`.  
+ パラメーターを省略する機能は、複数の複雑なパラメーターが関係するイベントハンドラーを定義するなどの状況で役立ちます。 一部のイベントハンドラーへの引数は使用されません。 代わりに、ハンドラーは、イベントが登録されているコントロールの状態に直接アクセスし、引数を無視します。 厳密でないデリゲートを使用すると、あいまいさの結果がない場合に、このような宣言の引数を省略できます。 次の例では、完全に指定されたメソッド `OnClick` を `RelaxedOnClick`として書き直すことができます。  
   
 ```vb  
 Sub OnClick(ByVal sender As Object, ByVal e As EventArgs) Handles b.Click  
@@ -60,10 +60,10 @@ Sub RelaxedOnClick() Handles b.Click
 End Sub  
 ```  
   
-## <a name="addressof-examples"></a>AddressOf Examples  
- Lambda expressions are used in the previous examples to make the type relationships easy to see. However, the same relaxations are permitted for delegate assignments that use `AddressOf`, `Handles`, or `AddHandler`.  
+## <a name="addressof-examples"></a>AddressOf の例  
+ 前の例では、ラムダ式を使用して、型の関係を簡単に確認できます。 ただし、`AddressOf`、`Handles`、または `AddHandler`を使用するデリゲートの割り当てに対しても、同じリラクゼーションが許可されます。  
   
- In the following example, functions `f1`, `f2`, `f3`, and `f4` can all be assigned to `Del1`.  
+ 次の例では、関数 `f1`、`f2`、`f3`、および `f4` をすべて `Del1`に割り当てることができます。  
   
  [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
@@ -71,18 +71,18 @@ End Sub
   
  [!code-vb[VbVbalrRelaxedDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#9)]  
   
- The following example is valid only when `Option Strict` is set to `Off`.  
+ 次の例は、`Option Strict` が `Off`に設定されている場合にのみ有効です。  
   
  [!code-vb[VbVbalrRelaxedDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#14)]  
   
-## <a name="dropping-function-returns"></a>Dropping Function Returns  
- Relaxed delegate conversion enables you to assign a function to a `Sub` delegate, effectively ignoring the return value of the function. However, you cannot assign a `Sub` to a function delegate. In the following example, the address of function `doubler` is assigned to `Sub` delegate `Del3`.  
+## <a name="dropping-function-returns"></a>関数の戻り値の削除  
+ 厳密でないデリゲート変換を使用すると、関数を `Sub` デリゲートに割り当てて、関数の戻り値を効果的に無視できます。 ただし、`Sub` を関数デリゲートに割り当てることはできません。 次の例では、関数 `doubler` のアドレスが `Sub` デリゲート `Del3`に割り当てられています。  
   
  [!code-vb[VbVbalrRelaxedDelegates#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#10)]  
   
  [!code-vb[VbVbalrRelaxedDelegates#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#11)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ラムダ式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

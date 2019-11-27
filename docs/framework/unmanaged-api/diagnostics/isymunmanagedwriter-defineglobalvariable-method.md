@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428025"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable メソッド
-Defines a single global variable.  
+1つのグローバル変数を定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,36 +41,36 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>パラメーター  
  `name`  
- [in] A pointer to a `WCHAR` that defines the global variable name.  
+ からグローバル変数名を定義する `WCHAR` へのポインター。  
   
  `attributes`  
- [in] The global variable attributes.  
+ からグローバル変数属性。  
   
  `cSig`  
- [in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.  
+ から`signature` バッファーのサイズを文字数で示す `ULONG32`。  
   
  `signature`  
- [in] The global variable signature.  
+ からグローバル変数シグネチャ。  
   
  `addrKind`  
- [in] The address type.  
+ からアドレスの種類。  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ からパラメーター指定の最初のアドレス。  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ からパラメーター指定の2番目のアドレス。  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ からパラメーター指定の3番目のアドレス。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [DefineLocalVariable メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)

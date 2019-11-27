@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344251"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
-Indicates whether a 64-bit executable or an executable that's marked by the [-platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) compiler option supports high entropy Address Space Layout Randomization (ASLR).  
+64ビットの実行可能ファイルまたは[-platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md)コンパイラオプションによってマークされた実行可能ファイルが、高エントロピアドレス空間レイアウトのランダム化 (ASLR) をサポートするかどうかを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -23,14 +23,14 @@ Indicates whether a 64-bit executable or an executable that's marked by the [-pl
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 省略可能です。 The option is off by default or if you specify `-highentropyva-`. The option is on if you specify `-highentropyva` or `-highentropyva+`.  
+ 省略可。 このオプションは、既定ではオフになっています。また、`-highentropyva-`を指定した場合はです。 `-highentropyva` または `-highentropyva+`を指定した場合、オプションは on になります。  
   
-## <a name="remarks"></a>Remarks  
- If you specify this option, compatible versions of the Windows kernel can use higher degrees of entropy when the kernel randomizes the address space layout of a process as part of ASLR. If the kernel uses higher degrees of entropy, a larger number of addresses can be allocated to memory regions such as stacks and heaps. これによって特定のメモリ領域の位置を推測しづらくなる効果が得られます。  
+## <a name="remarks"></a>コメント  
+ このオプションを指定すると、カーネルが ASLR の一部としてプロセスのアドレス空間レイアウトをランダムに処理したときに、互換性のあるバージョンの Windows カーネルでエントロピを使用できるようになります。 カーネルがより高いエントロピを使用する場合は、スタックやヒープなどのメモリ領域により多くのアドレスを割り当てることができます。 これによって特定のメモリ領域の位置を推測しづらくなる効果が得られます。  
   
- When the option is on, the target executable and any modules on which it depends must be able to handle pointer values that are larger than 4 gigabytes (GB) when those modules are running as 64-bit processes.  
+ このオプションが on に設定されている場合、ターゲットの実行可能ファイルとそれが依存するモジュールは、これらのモジュールが64ビットプロセスとして実行されている場合、4ギガバイト (GB) を超えるポインター値を処理できる必要があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

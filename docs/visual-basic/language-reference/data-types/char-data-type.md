@@ -19,25 +19,25 @@ ms.locfileid: "74344045"
 ---
 # <a name="char-data-type-visual-basic"></a>文字型 (Char) (Visual Basic)
 
-Holds unsigned 16-bit (2-byte) code points ranging in value from 0 through 65535. Each *code point*, or character code, represents a single Unicode character.
+0 ~ 65535 の値の範囲内の符号なし16ビット (2 バイト) コードポイントを保持します。 各*コードポイント*(文字コード) は、1つの Unicode 文字を表します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Use the `Char` data type when you need to hold only a single character and do not need the overhead of `String`. In some cases you can use `Char()`, an array of `Char` elements, to hold multiple characters.
+1文字だけを保持する必要があり、`String`のオーバーヘッドを必要としない場合は、`Char` データ型を使用します。 場合によっては、複数の文字を保持するために、`Char` 要素の配列 `Char()`を使用できます。
 
-The default value of `Char` is the character with a code point of 0.
+`Char` の既定値は、コードポイントが0の文字です。
 
 ## <a name="unicode-characters"></a>Unicode 文字
 
-The first 128 code points (0–127) of Unicode correspond to the letters and symbols on a standard U.S. keyboard. These first 128 code points are the same as those the ASCII character set defines. The second 128 code points (128–255) represent special characters, such as Latin-based alphabet letters, accents, currency symbols, and fractions. Unicode uses the remaining code points (256-65535) for a wide variety of symbols, including worldwide textual characters, diacritics, and mathematical and technical symbols.
+Unicode の最初の128コードポイント (0 ~ 127) は、標準の U.S. キーボードの文字と記号に対応しています。 これらの最初の128コードポイントは、ASCII 文字セットで定義されているものと同じです。 2番目の128コードポイント (128 ~ 255) は、ラテン語に基づくアルファベット文字、アクセント、通貨記号、分数などの特殊文字を表します。 Unicode では、世界中のコードポイント (256-65535) を使用して、世界中のテキスト文字、分音記号、数学記号、技術記号などのさまざまなシンボルを使用します。
 
-You can use methods like <xref:System.Char.IsDigit%2A> and <xref:System.Char.IsPunctuation%2A> on a `Char` variable to determine its Unicode classification.
+`Char` 変数に <xref:System.Char.IsDigit%2A> や <xref:System.Char.IsPunctuation%2A> などのメソッドを使用して、Unicode 分類を決定することができます。
 
 ## <a name="type-conversions"></a>型変換
 
-Visual Basic does not convert directly between `Char` and the numeric types. You can use the <xref:Microsoft.VisualBasic.Strings.Asc%2A> or <xref:Microsoft.VisualBasic.Strings.AscW%2A> function to convert a `Char` value to an `Integer` that represents its code point. You can use the <xref:Microsoft.VisualBasic.Strings.Chr%2A> or <xref:Microsoft.VisualBasic.Strings.ChrW%2A> function to convert an `Integer` value to a `Char` that has that code point.
+Visual Basic は、`Char` と数値型の間で直接変換されません。 <xref:Microsoft.VisualBasic.Strings.Asc%2A> または <xref:Microsoft.VisualBasic.Strings.AscW%2A> 関数を使用すると、`Char` 値をそのコードポイントを表す `Integer` に変換できます。 <xref:Microsoft.VisualBasic.Strings.Chr%2A> または <xref:Microsoft.VisualBasic.Strings.ChrW%2A> 関数を使用すると、`Integer` 値をそのコードポイントを持つ `Char` に変換できます。
 
-If the type checking switch (the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)) is on, you must append the literal type character to a single-character string literal to identify it as the `Char` data type. 次に例を示します。 The first assignment to the `charVar` variable generates compiler error [BC30512](../../misc/bc30512.md) because `Option Strict` is on. The second compiles successfully because the `c` literal type character identifies the literal as a `Char` value.
+型チェックスイッチ ( [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)) がオンになっている場合は、リテラル型の文字を1文字の文字列リテラルに追加して、`Char` データ型として識別する必要があります。 これを次の例に示します。 `charVar` 変数への最初の代入では、`Option Strict` がオンになっているため、コンパイラエラー [BC30512](../../misc/bc30512.md)が生成されます。 リテラルの型文字 `c` が `Char` 値としてリテラルを識別するため、2番目のが正常にコンパイルされます。
 
 ```vb
 Option Strict On
@@ -57,17 +57,17 @@ End Module
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **Negative Numbers.** `Char` is an unsigned type and cannot represent a negative value. In any case, you should not use `Char` to hold numeric values.
+- **負の数値。** `Char` は符号なしの型であり、負の値を表すことはできません。 どのような場合でも、`Char` を使用して数値を保持しないでください。
 
-- **Interop Considerations.** If you interface with components not written for the .NET Framework, for example Automation or COM objects, remember that character types have a different data width (8 bits) in other environments. If you pass an 8-bit argument to such a component, declare it as `Byte` instead of `Char` in your new Visual Basic code.
+- **相互運用に関する考慮事項。** .NET Framework 用に作成されていないコンポーネント (オートメーションや COM オブジェクトなど) とのインターフェイスを使用する場合は、文字型のデータ幅が異なる (8 ビット) ことに注意してください。 このようなコンポーネントに8ビットの引数を渡す場合は、新しい Visual Basic コードで `Char` ではなく、`Byte` として宣言します。
 
-- **Widening.** The `Char` data type widens to `String`. This means you can convert `Char` to `String` and will not encounter a <xref:System.OverflowException?displayProperty=nameWithType>.
+- **広げ.** `Char` データ型は、`String`に拡大変換されます。 つまり、`Char` を `String` に変換することができ、<xref:System.OverflowException?displayProperty=nameWithType>は発生しません。
 
-- **Type Characters.** Appending the literal type character `C` to a single-character string literal forces it to the `Char` data type. `Char` has no identifier type character.
+- **文字を入力します。** リテラル型の文字 `C` を1つの文字列リテラルに追加すると、`Char` データ型に強制されます。 `Char` に識別子の型文字がありません。
 
-- **Framework Type.** .NET Framework において対応する型は、<xref:System.Char?displayProperty=nameWithType> 構造体です。
+- **フレームワークの種類。** .NET Framework において対応する型は、<xref:System.Char?displayProperty=nameWithType> 構造体です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Char?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
@@ -76,7 +76,7 @@ End Module
 - <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
 - [データの種類](../../../visual-basic/language-reference/data-types/index.md)
 - [String データ型](../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [方法 : 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
 - [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

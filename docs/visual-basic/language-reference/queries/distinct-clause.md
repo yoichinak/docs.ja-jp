@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335372"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct 句 (Visual Basic)
-Restricts the values of the current range variable to eliminate duplicate values in subsequent query clauses.  
+現在の範囲変数の値を制限して、後続のクエリ句で重複する値を削除します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -24,15 +24,15 @@ Restricts the values of the current range variable to eliminate duplicate values
 Distinct  
 ```  
   
-## <a name="remarks"></a>Remarks  
- You can use the `Distinct` clause to return a list of unique items. The `Distinct` clause causes the query to ignore duplicate query results. The `Distinct` clause applies to duplicate values for all return fields specified by the `Select` clause. If no `Select` clause is specified, the `Distinct` clause is applied to the range variable for the query identified in the `From` clause. If the range variable is not an immutable type, the query will only ignore a query result if all members of the type match an existing query result.  
+## <a name="remarks"></a>コメント  
+ `Distinct` 句を使用して、一意の項目の一覧を返すことができます。 `Distinct` 句により、クエリで重複するクエリ結果が無視されます。 `Distinct` 句は、`Select` 句で指定されたすべての戻り値に対して、重複する値に適用されます。 `Select` 句が指定されていない場合、`Distinct` 句は `From` 句で指定されたクエリの範囲変数に適用されます。 範囲変数が変更できない型である場合、クエリでは、型のすべてのメンバーが既存のクエリの結果と一致する場合にのみ、クエリの結果が無視されます。  
   
 ## <a name="example"></a>例  
- The following query expression joins a list of customers and a list of customer orders. The `Distinct` clause is included to return a list of unique customer names and order dates.  
+ 次のクエリ式では、顧客の一覧と顧客の注文リストを結合します。 `Distinct` 句は、一意の顧客名と注文日の一覧を返すために含まれています。  
   
  [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)

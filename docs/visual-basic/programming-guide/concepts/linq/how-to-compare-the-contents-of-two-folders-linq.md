@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348412"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>方法: 2 つのフォルダーの内容を比較する (LINQ) (Visual Basic)
 
 この例では、2 つのファイル リストを比較する 3 つの方法を示します。
 
@@ -116,9 +116,9 @@ End Module
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+VB.NET コンソールアプリケーションプロジェクトを作成します。このプロジェクトには、名前空間の `Imports` ステートメントが含まれています。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

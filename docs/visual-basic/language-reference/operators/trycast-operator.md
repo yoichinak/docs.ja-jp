@@ -15,31 +15,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348208"
 ---
 # <a name="trycast-operator-visual-basic"></a>TryCast 演算子 (Visual Basic)
-Introduces a type conversion operation that does not throw an exception.  
+例外をスローしない型変換操作を導入します。  
   
-## <a name="remarks"></a>Remarks  
- If an attempted conversion fails, `CType` and `DirectCast` both throw an <xref:System.InvalidCastException> error. This can adversely affect the performance of your application. `TryCast` returns [Nothing](../../../visual-basic/language-reference/nothing.md), so that instead of having to handle a possible exception, you need only test the returned result against `Nothing`.  
+## <a name="remarks"></a>コメント  
+ 変換の試行が失敗した場合、`CType` と `DirectCast` の両方で <xref:System.InvalidCastException> エラーがスローされます。 これにより、アプリケーションのパフォーマンスが低下する可能性があります。 `TryCast` は[何も返しません](../../../visual-basic/language-reference/nothing.md)。そのため、考えられる例外を処理する代わりに、返された結果を `Nothing`に対してのみテストする必要があります。  
   
- You use the `TryCast` keyword the same way you use the [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) and the [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) keyword. You supply an expression as the first argument and a type to convert it to as the second argument. `TryCast` operates only on reference types, such as classes and interfaces. It requires an inheritance or implementation relationship between the two types. This means that one type must inherit from or implement the other.  
+ `TryCast` キーワードは、 [CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)と[DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md)キーワードを使用するのと同じ方法で使用します。 最初の引数として式を指定し、2番目の引数として変換する型を指定します。 `TryCast` は、クラスやインターフェイスなどの参照型に対してのみ動作します。 2つの型の間の継承または実装関係が必要です。 これは、一方の型が他の型を継承または実装する必要があることを意味します。  
   
-## <a name="errors-and-failures"></a>Errors and Failures  
- `TryCast` generates a compiler error if it detects that no inheritance or implementation relationship exists. But the lack of a compiler error does not guarantee a successful conversion. If the desired conversion is narrowing, it could fail at run time. If this happens, `TryCast` returns [Nothing](../../../visual-basic/language-reference/nothing.md).  
+## <a name="errors-and-failures"></a>エラーとエラー  
+ `TryCast` は、継承または実装関係が存在しないことを検出すると、コンパイラエラーを生成します。 ただし、コンパイラエラーが発生しても、正常に変換できないことは保証されません。 目的の変換が縮小されている場合は、実行時に失敗する可能性があります。 この場合、`TryCast` は[何も](../../../visual-basic/language-reference/nothing.md)返しません。  
   
 ## <a name="conversion-keywords"></a>変換キーワード  
- A comparison of the type conversion keywords is as follows.  
+ 型変換のキーワードの比較を次に示します。  
   
-|キーワード|データの種類|Argument relationship|Run-time failure|  
+|Keyword|データの種類|引数のリレーションシップ|実行時エラー|  
 |---|---|---|---|  
-|[CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)|Any data types|Widening or narrowing conversion must be defined between the two data types|Throws <xref:System.InvalidCastException>|  
-|[DirectCast 演算子](../../../visual-basic/language-reference/operators/directcast-operator.md)|Any data types|One type must inherit from or implement the other type|Throws <xref:System.InvalidCastException>|  
-|`TryCast`|Reference types only|One type must inherit from or implement the other type|Returns [Nothing](../../../visual-basic/language-reference/nothing.md)|  
+|[CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)|任意のデータ型|拡大または縮小変換は、2つのデータ型の間で定義する必要があります|スロー <xref:System.InvalidCastException>|  
+|[DirectCast 演算子](../../../visual-basic/language-reference/operators/directcast-operator.md)|任意のデータ型|一方の型は、他の型を継承するか、他の型を実装する必要があります|スロー <xref:System.InvalidCastException>|  
+|`TryCast`|参照型のみ|一方の型は、他の型を継承するか、他の型を実装する必要があります|[Nothing](../../../visual-basic/language-reference/nothing.md)を返します|  
   
 ## <a name="example"></a>例  
  次の例は、`TryCast` を使用する方法を示しています。  
   
  [!code-vb[VbVbalrKeywords#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [暗黙の型変換と明示的な型変換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

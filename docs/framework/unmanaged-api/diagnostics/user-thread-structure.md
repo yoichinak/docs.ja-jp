@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437974"
 ---
 # <a name="user_thread-structure"></a>USER_THREAD 構造体
-Provides information to a debugger about a thread. For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.  
+スレッドに関する情報をデバッガーに提供します。 詳細については、 [INotifySource2:: SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)メソッドを参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,14 +39,14 @@ typedef struct tagUSER_THREAD
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`pSidBuffer`|Address of thread buffer.|  
-|`dwSidLen`|Length of thread buffer, in bytes.|  
-|`dwTid`|Thread ID.|  
+|`pSidBuffer`|スレッドバッファーのアドレス。|  
+|`dwSidLen`|スレッドバッファーの長さ (バイト単位)。|  
+|`dwTid`|スレッド ID。|  
   
-## <a name="requirements"></a>［要件］  
- **Header:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [SetNotifyFilter メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)
 - [シンボル ストア診断構造体](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

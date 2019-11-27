@@ -14,22 +14,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351133"
 ---
 # <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a>方法: 列挙値に関連付けられている文字列を確認する (Visual Basic)
-The <xref:System.Enum.GetValues%2A> and <xref:System.Enum.GetNames%2A> methods allow you to determine the strings and values associated with enumeration members.  
+<xref:System.Enum.GetValues%2A> メソッドと <xref:System.Enum.GetNames%2A> メソッドを使用すると、列挙メンバーに関連付けられている文字列と値を確認できます。  
   
-### <a name="to-determine-the-string-associated-with-an-enumeration"></a>To determine the string associated with an enumeration  
+### <a name="to-determine-the-string-associated-with-an-enumeration"></a>列挙体に関連付けられている文字列を確認するには  
   
-- Use the <xref:System.Enum.GetNames%2A> method to retrieve the strings associated with the enumeration members. This example declares an enumeration, `flavorEnum`, then uses the <xref:System.Enum.GetNames%2A> method to display the strings associated with each member.  
+- <xref:System.Enum.GetNames%2A> メソッドを使用して、列挙体のメンバーに関連付けられている文字列を取得します。 この例では、列挙型を宣言し、`flavorEnum`、<xref:System.Enum.GetNames%2A> メソッドを使用して、各メンバーに関連付けられている文字列を表示します。  
   
      [!code-vb[VbEnumsTask#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#2)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Enum.GetValues%2A>
 - <xref:System.Enum.GetNames%2A>
 - <xref:System.Enum>
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [方法: 列挙型を宣言する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [方法 : 列挙型のメンバーを参照する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [列挙型と名前の修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [方法: Visual Basic 内の列挙体を反復処理する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [列挙型を使用する状況](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [Enum ステートメント](../../../../visual-basic/language-reference/statements/enum-statement.md)

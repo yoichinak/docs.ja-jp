@@ -15,7 +15,7 @@ ms.locfileid: "74336074"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot 演算子 (Visual Basic)
 
-Compares two object reference variables.
+2つのオブジェクト参照変数を比較します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,23 +26,23 @@ result = object1 IsNot object2
 ## <a name="parts"></a>指定項目
  `result` 必須。 `Boolean` 値。
 
- `object1` 必須。 Any `Object` variable or expression.
+ `object1` 必須。 任意の `Object` 変数または式。
 
- `object2` 必須。 Any `Object` variable or expression.
+ `object2` 必須。 任意の `Object` 変数または式。
 
-## <a name="remarks"></a>Remarks
- The `IsNot` operator determines if two object references refer to different objects. However, it does not perform value comparisons. If `object1` and `object2` both refer to the exact same object instance, `result` is `False`; if they do not, `result` is `True`.
+## <a name="remarks"></a>コメント
+ `IsNot` 演算子は、2つのオブジェクト参照が異なるオブジェクトを参照するかどうかを決定します。 ただし、値の比較は実行されません。 `object1` と `object2` 両方がまったく同じオブジェクトインスタンスを参照している場合、`result` は `False`です。そうでない場合は、`result` が `True`ます。
 
- `IsNot` is the opposite of the `Is` operator. The advantage of `IsNot` is that you can avoid awkward syntax with `Not` and `Is`, which can be difficult to read.
+ `IsNot` は、`Is` 演算子とは逆です。 `IsNot` の利点は、`Not` と `Is`での不適切な構文を避けることができることです。これは読みにくくなる可能性があります。
 
- You can use the `Is` and `IsNot` operators to test both early-bound and late-bound objects.
+ `Is` 演算子と `IsNot` 演算子を使用すると、事前バインディングオブジェクトと遅延バインディングオブジェクトの両方をテストできます。
 
 ## <a name="example"></a>例
- The following code example uses both the `Is` operator and the `IsNot` operator to accomplish the same comparison.
+ 次のコード例では、`Is` 演算子と `IsNot` 演算子の両方を使用して、同じ比較を実行します。
 
  [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Is 演算子](is-operator.md)
 - [TypeOf 演算子](typeof-operator.md)

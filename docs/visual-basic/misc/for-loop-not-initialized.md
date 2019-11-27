@@ -1,5 +1,5 @@
 ---
-title: For loop not initialized
+title: For ループが初期化されていません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID92
@@ -18,7 +18,7 @@ ms.locfileid: "74348444"
   
 1. ループへのジャンプを削除します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [For Each...Next ステートメント](../../visual-basic/language-reference/statements/for-each-next-statement.md)
 - [方法 : ステートメントへのラベル付け](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)

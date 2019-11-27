@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353003"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>How to: Find a List of Child Elements (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>方法: 子要素の一覧を検索する (XPath LINQ to XML) (Visual Basic)
 このトピックでは、XPath の子要素軸と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 軸を比較します。  
   
  XPath 式は `./*` です。  
@@ -52,6 +52,6 @@ Results are identical
 <Country>USA</Country>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath ユーザーの LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Convert an Object to Another Type'
+title: '方法: オブジェクトを別の型に変換する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
@@ -12,10 +12,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350073"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>方法: Visual Basic でオブジェクトを別の型に変換する
-You convert an `Object` variable to another data type by using a conversion keyword such as [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md).  
+`Object` 変数を別のデータ型に変換するには、 [CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)などの変換キーワードを使用します。  
   
 ## <a name="example"></a>例  
- The following example converts an `Object` variable to an `Integer` and a `String`.  
+ 次の例では、`Object` 変数を `Integer` と `String`に変換します。  
   
 ```vb  
 Public Sub objectConversion(ByVal anObject As Object)  
@@ -26,21 +26,21 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- If you know that the contents of an `Object` variable are of a particular data type, it is better to convert the variable to that data type. If you continue to use the `Object` variable, you incur either *boxing* and *unboxing* (for a value type) or *late binding* (for a reference type). These operations all take extra execution time and make your performance slower.  
+ `Object` 変数の内容が特定のデータ型であることがわかっている場合は、変数をそのデータ型に変換することをお勧めします。 `Object` 変数を引き続き使用する場合は、*ボックス*化とボックス化*解除*(値型の場合) または*遅延バインディング*(参照型の場合) のいずれかが発生します。 これらの操作はすべて、追加の実行時間がかかり、パフォーマンスが低下します。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
 - <xref:System?displayProperty=nameWithType> 名前空間への参照  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Object>
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
 - [配列変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [構造体](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
-- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CString](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

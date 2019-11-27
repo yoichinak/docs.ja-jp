@@ -1,5 +1,5 @@
 ---
-title: データの種類
+title: データ型
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data types [Visual Basic], declaring
@@ -23,25 +23,25 @@ ms.locfileid: "74346349"
   
 |プログラミング要素|データ型の宣言|  
 |-------------------------|---------------------------|  
-|変数|[Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)<br /><br /> `Dim`   `amount As Double`<br /><br /> `Static`   `yourName As String`<br /><br /> `Public`   `billsPaid As Decimal = 0`|  
+|[Variable]|[Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)<br /><br /> `Dim`   `amount As Double`<br /><br /> `Static`   `yourName As String`<br /><br /> `Public`   `billsPaid As Decimal = 0`|  
 |Literal|リテラルの型文字で指定する場合は、「[Type Characters (型文字)](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)」の「Literal Type Characters (リテラルの型文字)」を参照してください<br /><br /> `Dim searchChar As Char = "."`  `C`|  
 |定数|[Const ステートメント](../../../../visual-basic/language-reference/statements/const-statement.md)<br /><br /> `Const`   `modulus As Single = 4.17825F`|  
-|列挙|[Enum ステートメント](../../../../visual-basic/language-reference/statements/enum-statement.md)<br /><br /> `Public`   `Enum`   `colors`|  
-|property|[Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
+|列挙型|[Enum ステートメント](../../../../visual-basic/language-reference/statements/enum-statement.md)<br /><br /> `Public`   `Enum`   `colors`|  
+|プロパティ|[Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
 |プロシージャ パラメーター|[Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)、[Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)、または[Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Sub addSale(ByVal`   `amount`   `As Double)`|  
 |プロシージャ引数|呼び出しコードの各引数は、すでに宣言されているプログラミング要素、または宣言されている要素を含む式です<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
 |プロシージャの戻り値|[Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)、または[Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  
   
  Visual Basic のデータ型の一覧については、[データ型](../../../../visual-basic/language-reference/data-types/index.md)に関するページをご覧ください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [構造体](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [タプル](tuples.md)
 - [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

@@ -1,5 +1,5 @@
 ---
-title: '[スコープ]'
+title: スコープ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - module scope [Visual Basic]
@@ -24,40 +24,40 @@ ms.locfileid: "74345287"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic におけるスコープ
 
-The *scope* of a declared element is the set of all code that can refer to it without qualifying its name or making it available through an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). An element can have scope at one of the following levels:
+宣言された要素の*スコープ*は、その名前を修飾したり、 [Imports ステートメント (.net 名前空間と型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)を通じて使用できるようにしたりせずに参照できるすべてのコードのセットです。 要素は、次のいずれかのレベルでスコープを持つことができます。
 
-|レベル|説明|
+|Level|説明|
 |-----------|-----------------|
-|ブロック スコープ|Available only within the code block in which it is declared|
-|Procedure scope|Available to all code within the procedure in which it is declared|
-|Module scope|Available to all code within the module, class, or structure in which it is declared|
-|Namespace scope|Available to all code in the namespace in which it is declared|
+|ブロック スコープ|宣言されているコードブロック内でのみ使用可能|
+|プロシージャスコープ|宣言されているプロシージャ内のすべてのコードで使用できます。|
+|モジュールのスコープ|宣言されているモジュール、クラス、または構造体内のすべてのコードで使用できます。|
+|名前空間のスコープ|宣言されている名前空間のすべてのコードで使用可能|
 
-These levels of scope progress from the narrowest (block) to the widest (namespace), where *narrowest scope* means the smallest set of code that can refer to the element without qualification. For more information, see "Levels of Scope" on this page.
+最も狭い (ブロック) から最も幅の広い (名前空間) までの範囲の処理レベル。最も*狭いスコープ*は、要素を修飾なしで参照できる最小のコードセットを意味します。 詳細については、このページの「範囲のレベル」を参照してください。
 
-## <a name="specifying-scope-and-defining-variables"></a>Specifying Scope and Defining Variables
+## <a name="specifying-scope-and-defining-variables"></a>スコープの指定と変数の定義
 
-You specify the scope of an element when you declare it. The scope can depend on the following factors:
+要素のスコープは、宣言するときに指定します。 スコープは、次の要因に依存する場合があります。
 
-- The region (block, procedure, module, class, or structure) in which you declare the element
+- 要素を宣言する領域 (ブロック、プロシージャ、モジュール、クラス、または構造体)
 
-- The namespace containing the element's declaration
+- 要素の宣言を含む名前空間
 
-- The access level you declare for the element
+- 要素に対して宣言するアクセスレベル
 
-Use care when you define variables with the same name but different scope, because doing so can lead to unexpected results. 詳細については、「 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。
+同じ名前でスコープが異なる変数を定義する場合は、慎重に行う必要があります。これは、予期しない結果につながる可能性があるためです。 詳細については、「 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。
 
-## <a name="levels-of-scope"></a>Levels of Scope
+## <a name="levels-of-scope"></a>スコープのレベル
 
-A programming element is available throughout the region in which you declare it. All code in the same region can refer to the element without qualifying its name.
+プログラミング要素は、宣言する領域全体で使用できます。 同じリージョン内のすべてのコードは、その名前を修飾せずに要素を参照できます。
 
-### <a name="block-scope"></a>Block Scope
+### <a name="block-scope"></a>ブロックスコープ
 
-A block is a set of statements enclosed within initiating and terminating declaration statements, such as the following:
+ブロックは、次のように、宣言ステートメントの開始と終了に囲まれた一連のステートメントです。
 
 - `Do` および `Loop`
 
-- `For` [`Each`] and `Next`
+- `For` [`Each`] と `Next`
 
 - `If` および `End If`
 
@@ -71,7 +71,7 @@ A block is a set of statements enclosed within initiating and terminating declar
 
 - `With` および `End With`
 
-If you declare a variable within a block, you can use it only within that block. In the following example, the scope of the integer variable `cube` is the block between `If` and `End If`, and you can no longer refer to `cube` when execution passes out of the block.
+ブロック内で変数を宣言すると、そのブロック内でのみ変数を使用できます。 次の例では、整数変数 `cube` のスコープが `If` と `End If`間のブロックであり、ブロックから実行が渡されたときに `cube` を参照することはできません。
 
 ```vb
 If n < 1291 Then
@@ -81,26 +81,26 @@ End If
 ```
 
 > [!NOTE]
-> Even if the scope of a variable is limited to a block, its lifetime is still that of the entire procedure. If you enter the block more than once during the procedure, each block variable retains its previous value. To avoid unexpected results in such a case, it is wise to initialize block variables at the beginning of the block.
+> 変数のスコープがブロックに限定されている場合でも、その有効期間はプロシージャ全体の有効期間になります。 プロシージャの実行中にブロックを複数回入力した場合、各ブロック変数の前の値が保持されます。 このような場合に予期しない結果が生じないようにするには、ブロックの先頭でブロック変数を初期化することをお勧めします。
 
-### <a name="procedure-scope"></a>Procedure Scope
+### <a name="procedure-scope"></a>プロシージャスコープ
 
-An element declared within a procedure is not available outside that procedure. Only the procedure that contains the declaration can use it. Variables at this level are also known as *local variables*. You declare them with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), with or without the [Static](../../../../visual-basic/language-reference/modifiers/static.md) keyword.
+プロシージャ内で宣言された要素は、そのプロシージャの外部では使用できません。 宣言を含むプロシージャだけが使用できます。 このレベルの変数は、*ローカル変数*とも呼ばれます。 これらの宣言は、 [Static](../../../../visual-basic/language-reference/modifiers/static.md)キーワードの有無にかかわらず、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)を使用して宣言します。
 
-Procedure and block scope are closely related. If you declare a variable inside a procedure but outside any block within that procedure, you can think of the variable as having block scope, where the block is the entire procedure.
+プロシージャとブロックのスコープは密接に関連しています。 プロシージャ内で変数を宣言し、そのプロシージャ内のブロックの外側で変数を宣言した場合、その変数はブロックスコープを持つと考えることができます。ブロックはプロシージャ全体です。
 
 > [!NOTE]
-> All local elements, even if they are `Static` variables, are private to the procedure in which they appear. You cannot declare any element using the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword within a procedure.
+> すべてのローカル要素は `Static` 変数であっても、それらが表示されるプロシージャに対してプライベートです。 プロシージャ内で[Public](../../../../visual-basic/language-reference/modifiers/public.md)キーワードを使用して要素を宣言することはできません。
 
-### <a name="module-scope"></a>Module Scope
+### <a name="module-scope"></a>モジュールのスコープ
 
-For convenience, the single term *module level* applies equally to modules, classes, and structures. You can declare elements at this level by placing the declaration statement outside of any procedure or block but within the module, class, or structure.
+便宜上、単項*モジュールレベル*はモジュール、クラス、および構造体にも同様に適用されます。 このレベルで要素を宣言するには、宣言ステートメントをプロシージャまたはブロックの外側に配置し、モジュール、クラス、または構造体の内部に配置します。
 
-When you make a declaration at the module level, the access level you choose determines the scope. The namespace that contains the module, class, or structure also affects the scope.
+モジュールレベルで宣言を行うと、選択したアクセスレベルによってスコープが決まります。 モジュール、クラス、または構造体を含む名前空間は、スコープにも影響します。
 
-Elements for which you declare [Private](../../../../visual-basic/language-reference/modifiers/private.md) access level are available to every procedure in that module, but not to any code in a different module. The `Dim` statement at module level defaults to `Private` if you do not use any access level keywords. However, you can make the scope and access level more obvious by using the `Private` keyword in the `Dim` statement.
+[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)アクセスレベルを宣言する要素は、そのモジュール内のすべてのプロシージャで使用できますが、別のモジュール内のコードには使用できません。 アクセスレベルのキーワードを使用しない場合、モジュールレベルの `Dim` ステートメントは既定で `Private` になります。 ただし、`Dim` ステートメントで `Private` キーワードを使用すると、スコープとアクセスレベルをより明確にすることができます。
 
-In the following example, all procedures defined in the module can refer to the string variable `strMsg`. When the second procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.
+次の例では、モジュールで定義されているすべてのプロシージャが文字列変数 `strMsg`を参照できます。 2番目のプロシージャを呼び出すと、`strMsg` 文字列変数の内容がダイアログボックスに表示されます。
 
 ```vb
 ' Put the following declaration at module level (not in any procedure).
@@ -115,40 +115,40 @@ Sub usePrivateVariable()
 End Sub
 ```
 
-### <a name="namespace-scope"></a>Namespace Scope
+### <a name="namespace-scope"></a>名前空間のスコープ
 
-If you declare an element at module level using the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword, it becomes available to all procedures throughout the namespace in which the element is declared. With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.
+[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)または[Public](../../../../visual-basic/language-reference/modifiers/public.md)キーワードを使用してモジュールレベルで要素を宣言すると、その要素が宣言されている名前空間全体のすべてのプロシージャで使用できるようになります。 前の例を次のように変更すると、`strMsg` 文字列変数は、宣言の名前空間内の任意の場所でコードによって参照できます。
 
 ```vb
 ' Include this declaration at module level (not inside any procedure).
 Public strMsg As String
 ```
 
-Namespace scope includes nested namespaces. An element available from within a namespace is also available from within any namespace nested inside that namespace.
+名前空間スコープには入れ子になった名前空間が含まれます。 名前空間内から使用できる要素は、その名前空間内で入れ子になっている名前空間内からも使用できます。
 
-If your project does not contain any [Namespace Statement](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, everything in the project is in the same namespace. In this case, namespace scope can be thought of as project scope. `Public` elements in a module, class, or structure are also available to any project that references their project.
+プロジェクトに[名前空間ステートメント](../../../../visual-basic/language-reference/statements/namespace-statement.md)が含まれていない場合、プロジェクト内のすべてのものが同じ名前空間にあります。 この場合、名前空間のスコープはプロジェクトスコープと考えることができます。 モジュール、クラス、または構造体内の `Public` 要素は、そのプロジェクトを参照するすべてのプロジェクトでも使用できます。
 
-## <a name="choice-of-scope"></a>Choice of Scope
+## <a name="choice-of-scope"></a>スコープの選択
 
-When you declare a variable, you should keep in mind the following points when choosing its scope.
+変数を宣言するときは、そのスコープを選択するときに、次の点に注意する必要があります。
 
-### <a name="advantages-of-local-variables"></a>Advantages of Local Variables
+### <a name="advantages-of-local-variables"></a>ローカル変数の利点
 
-Local variables are a good choice for any kind of temporary calculation, for the following reasons:
+ローカル変数は、次の理由により、任意の種類の一時的な計算に適しています。
 
-- **Name Conflict Avoidance.** Local variable names are not susceptible to conflict. For example, you can create several different procedures containing a variable called `intTemp`. As long as each `intTemp` is declared as a local variable, each procedure recognizes only its own version of `intTemp`. Any one procedure can alter the value in its local `intTemp` without affecting `intTemp` variables in other procedures.
+- **名前の競合の回避。** ローカル変数名が競合する可能性はありません。 たとえば、`intTemp`という変数を含むいくつかの異なるプロシージャを作成できます。 各 `intTemp` がローカル変数として宣言されている限り、各プロシージャは独自のバージョンの `intTemp`のみを認識します。 1つのプロシージャでは、他のプロシージャの `intTemp` 変数に影響を与えることなく、ローカル `intTemp` の値を変更できます。
 
-- **Memory Consumption.** Local variables consume memory only while their procedure is running. Their memory is released when the procedure returns to the calling code. By contrast, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) and [Static](../../../../visual-basic/language-reference/modifiers/static.md) variables consume memory resources until your application stops running, so use them only when necessary. *Instance variables* consume memory while their instance continues to exist, which makes them less efficient than local variables, but potentially more efficient than `Shared` or `Static` variables.
+- **メモリ使用量。** ローカル変数は、プロシージャの実行中にのみメモリを消費します。 メモリは、プロシージャが呼び出し元のコードに戻ったときに解放されます。 これに対し、[共有](../../../../visual-basic/language-reference/modifiers/shared.md)変数と[静的](../../../../visual-basic/language-reference/modifiers/static.md)変数は、アプリケーションが実行を停止するまでメモリリソースを消費するため、必要な場合にのみ使用します。 インスタンス*変数*は、インスタンスが存在している間はメモリを消費するため、ローカル変数よりも効率的ではありませんが、`Shared` または `Static` 変数よりも効率的です。
 
-### <a name="minimizing-scope"></a>Minimizing Scope
+### <a name="minimizing-scope"></a>スコープの最小化
 
-In general, when declaring any variable or constant, it is good programming practice to make the scope as narrow as possible (block scope is the narrowest). This helps conserve memory and minimizes the chances of your code erroneously referring to the wrong variable. Similarly, you should declare a variable to be [Static](../../../../visual-basic/language-reference/modifiers/static.md) only when it is necessary to preserve its value between procedure calls.
+一般に、変数または定数を宣言するときは、可能な限り範囲を絞り込むことをお勧めします (ブロックスコープが最も狭い)。 これにより、メモリを節約し、コードが間違った変数を誤って参照する可能性を最小限に抑えることができます。 同様に、プロシージャ呼び出し間で値を保持する必要がある場合にのみ、変数を[静的](../../../../visual-basic/language-reference/modifiers/static.md)に宣言する必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [宣言された要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [方法: 変数のスコープを制御する](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
-- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic の有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic のアクセスレベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

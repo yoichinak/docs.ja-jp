@@ -30,12 +30,12 @@ proceduredeclaration Handles eventlist
  `eventlist`  
  コンマで区切られた、`proceduredeclaration` が処理するイベントの一覧。 イベントは、現在のクラスの基底クラス、または `WithEvents` キーワードを使用して宣言されたオブジェクトによって発生する必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  プロシージャ宣言の最後で `Handles` キーワードを使用すると、 `WithEvents` キーワードで宣言されたオブジェクト変数によって発生したイベントが処理されるようになります。 また、`Handles` キーワードを派生クラスで使用すると、基底クラスからのイベントを処理することもできます。  
   
- `Handles` キーワードと `AddHandler` ステートメントはどちらも特定のプロシージャで特定のイベントを処理するように指定できますが、両者には違いがあります。 `Handles` キーワードは、プロシージャの定義時に特定のイベントを処理するよう指定する場合に使用します。 `AddHandler` ステートメントは、実行時にプロシージャをイベントに接続します。 For more information, see [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md).  
+ `Handles` キーワードと `AddHandler` ステートメントはどちらも特定のプロシージャで特定のイベントを処理するように指定できますが、両者には違いがあります。 `Handles` キーワードは、プロシージャの定義時に特定のイベントを処理するよう指定する場合に使用します。 `AddHandler` ステートメントは、実行時にプロシージャをイベントに接続します。 詳細については、「 [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)」を参照してください。  
   
- カスタム イベントの場合、アプリケーションは、プロシージャをイベント ハンドラーとして追加するときにイベントの `AddHandler` アクセサーを呼び出します。 For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+ カスタム イベントの場合、アプリケーションは、プロシージャをイベント ハンドラーとして追加するときにイベントの `AddHandler` アクセサーを呼び出します。 カスタムイベントの詳細については、「 [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  [!code-vb[VbVbalrEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#2)]  
@@ -45,18 +45,18 @@ proceduredeclaration Handles eventlist
  [!code-vb[VbVbalrEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>例  
- The following example contains two button event handlers for a **WPF Application** project.  
+ 次の例には、 **WPF アプリケーション**プロジェクトの2つのボタンイベントハンドラーが含まれています。  
   
  [!code-vb[VbVbalrEvents#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#41)]  
   
 ## <a name="example"></a>例  
- 次の例は、前の例と同じです。 `Handles` 句の `eventlist` には 2 つのボタンのイベントが含まれています。  
+ 次の例は、前の例と同じです。 `eventlist` 句の `Handles` には 2 つのボタンのイベントが含まれています。  
   
  [!code-vb[VbVbalrEvents#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#42)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [ReadOnly](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
 - [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)
 - [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)
 - [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)

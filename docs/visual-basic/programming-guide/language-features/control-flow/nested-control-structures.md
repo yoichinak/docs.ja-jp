@@ -18,12 +18,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348151"
 ---
 # <a name="nested-control-structures-visual-basic"></a>入れ子になった制御構造 (Visual Basic)
-You can place control statements inside other control statements, for example an `If...Then...Else` block within a `For...Next` loop. A control statement placed inside another control statement is said to be *nested*.  
+制御ステートメントは、`For...Next` ループ内の `If...Then...Else` ブロックなど、他のコントロールステートメント内に配置できます。 別の control ステートメント内に配置された control ステートメントは、*入れ子になっ*ていると言います。  
   
-## <a name="nesting-levels"></a>Nesting Levels  
- Control structures in Visual Basic can be nested to as many levels as you want. It is common practice to make nested structures more readable by indenting the body of each one. The integrated development environment (IDE) editor automatically does this.  
+## <a name="nesting-levels"></a>入れ子のレベル  
+ Visual Basic の制御構造は、必要な数のレベルに入れ子にすることができます。 入れ子構造体を読みやすくするには、それぞれの本文をインデントするのが一般的です。 これは、統合開発環境 (IDE) エディターによって自動的に行われます。  
   
- In the following example, the procedure `sumRows` adds together the positive elements of each row of the matrix.  
+ 次の例では、プロシージャ `sumRows`、マトリックスの各行の正の要素を加算します。  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- In the preceding example, the first `Next` statement closes the inner `For` loop and the last `Next` statement closes the outer `For` loop.  
+ 前の例では、最初の `Next` ステートメントは内側の `For` ループを閉じ、最後の `Next` ステートメントは外側の `For` ループを閉じます。  
   
- Likewise, in nested `If` statements, the `End If` statements automatically apply to the nearest prior `If` statement. Nested `Do` loops work in a similar fashion, with the innermost `Loop` statement matching the innermost `Do` statement.  
+ 同様に、入れ子になった `If` ステートメントでは、`End If` ステートメントが最も近い直前の `If` ステートメントに自動的に適用されます。 入れ子になった `Do` ループは同様の方法で動作し、最も内側の `Loop` ステートメントは最も内側の `Do` ステートメントと一致します。  
   
 > [!NOTE]
-> For many control structures, when you click a keyword, all of the keywords in the structure are highlighted. For instance, when you click `If` in an `If...Then...Else` construction, all instances of `If`, `Then`, `ElseIf`, `Else`, and `End If` in the construction are highlighted. To move to the next or previous highlighted keyword, press CTRL+SHIFT+DOWN ARROW or CTRL+SHIFT+UP ARROW.  
+> 多くの制御構造では、キーワードをクリックすると、構造内のすべてのキーワードが強調表示されます。 たとえば、`If...Then...Else` の構築で [`If`] をクリックすると、構築内の `If`、`Then`、`ElseIf`、`Else`、および `End If` のすべてのインスタンスが強調表示されます。 次または前の強調表示されたキーワードに移動するには、CTRL + SHIFT + ↓キーを押すか、CTRL + SHIFT + 上方向キーを押します。  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Nesting Different Kinds of Control Structures  
- You can nest one kind of control structure within another kind. The following example uses a `With` block inside a `For Each` loop and nested `If` blocks inside the `With` block.  
+## <a name="nesting-different-kinds-of-control-structures"></a>さまざまな種類の制御構造の入れ子  
+ 1つの種類のコントロール構造を別の種類に入れ子にすることができます。 次の例では、`With` ブロック内で `For Each` ループと入れ子になった `If` ブロック内の `With` ブロックを使用します。  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -64,14 +64,14 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## <a name="overlapping-control-structures"></a>Overlapping Control Structures  
- You cannot overlap control structures. This means that any nested structure must be completely contained within the next innermost structure. For example, the following arrangement is invalid because the `For` loop terminates before the inner `With` block terminates.  
+## <a name="overlapping-control-structures"></a>重複する制御構造  
+ 制御構造を重ねることはできません。 つまり、入れ子構造は、次の最も内側の構造体内に完全に含まれている必要があります。 たとえば、次の配置は、内部 `With` ブロックが終了する前に `For` ループが終了するため無効です。  
   
- ![Diagram that shows an example of invalid nesting.](./media/nested-control-structures/example-invalid-nesting.gif) 
+ ![無効な入れ子の例を示す図。](./media/nested-control-structures/example-invalid-nesting.gif) 
   
- The Visual Basic compiler detects such overlapping control structures and signals a compile-time error.  
+ Visual Basic コンパイラは、このような重複する制御構造を検出し、コンパイル時エラーを通知します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [制御フロー](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [条件判断構造](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)

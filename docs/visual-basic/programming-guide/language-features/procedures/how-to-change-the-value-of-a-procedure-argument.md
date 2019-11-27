@@ -21,41 +21,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74339953"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>方法: プロシージャ引数の値を変更する (Visual Basic)
-When you call a procedure, each argument you supply corresponds to one of the parameters defined in the procedure. In some cases, the procedure code can change the value underlying an argument in the calling code. In other cases, the procedure can change only its local copy of an argument.  
+プロシージャを呼び出すと、指定した各引数は、プロシージャで定義されたパラメーターのいずれかに対応します。 場合によっては、プロシージャコードは、呼び出し元のコードの引数の基になる値を変更できます。 それ以外の場合、プロシージャは引数のローカルコピーだけを変更できます。  
   
- When you call the procedure, Visual Basic makes a local copy of every argument that is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). For each argument passed [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic gives the procedure code a direct reference to the programming element underlying the argument in the calling code.  
+ プロシージャを呼び出すと、Visual Basic によって、 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)で渡されるすべての引数のローカルコピーが作成されます。 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)で渡された引数ごとに、Visual Basic は、呼び出し元のコードの引数の基になるプログラミング要素への直接参照をプロシージャコードに付与します。  
   
- If the underlying element in the calling code is a modifiable element and the argument is passed `ByRef`, the procedure code can use the direct reference to change the element's value in the calling code.  
+ 呼び出し元のコード内の基になる要素が変更可能な要素であり、引数が `ByRef`渡される場合、プロシージャコードは直接参照を使用して、呼び出し元のコード内の要素の値を変更できます。  
   
-## <a name="changing-the-underlying-value"></a>Changing the Underlying Value  
+## <a name="changing-the-underlying-value"></a>基になる値の変更  
   
-#### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>To change the underlying value of a procedure argument in the calling code  
+#### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>呼び出し元コードのプロシージャ引数の基になる値を変更するには  
   
-1. In the procedure declaration, specify [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) for the parameter corresponding to the argument.  
+1. プロシージャの宣言で、引数に対応するパラメーターに[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)を指定します。  
   
-2. In the calling code, pass a modifiable programming element as the argument.  
+2. 呼び出し元のコードで、変更可能なプログラミング要素を引数として渡します。  
   
-3. In the calling code, do not enclose the argument in parentheses in the argument list.  
+3. 呼び出し元のコードでは、引数リストのかっこで引数を囲まないでください。  
   
-4. In the procedure code, use the parameter name to assign a value to the underlying element in the calling code.  
+4. プロシージャコードでは、パラメーター名を使用して、呼び出し元のコードの基になる要素に値を割り当てます。  
   
- See the example further down for a demonstration.  
+ デモについては、「例」を参照してください。  
   
-## <a name="changing-local-copies"></a>Changing Local Copies  
- If the underlying element in the calling code is a nonmodifiable element, or if the argument is passed `ByVal`, the procedure cannot change its value in the calling code. However, the procedure can change its local copy of such an argument.  
+## <a name="changing-local-copies"></a>ローカルコピーの変更  
+ 呼び出し元のコード内の基になる要素が変更不可能な要素である場合、または引数が `ByVal`渡される場合、プロシージャは呼び出し元のコード内の値を変更できません。 ただし、このプロシージャは、このような引数のローカルコピーを変更できます。  
   
-#### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>To change the copy of a procedure argument in the procedure code  
+#### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>プロシージャコードのプロシージャ引数のコピーを変更するには  
   
-1. In the procedure declaration, specify [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) for the parameter corresponding to the argument.  
+1. プロシージャの宣言で、引数に対応するパラメーターに[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)を指定します。  
   
-     -または-  
+     または  
   
-     In the calling code, enclose the argument in parentheses in the argument list. This forces Visual Basic to pass the argument by value, even if the corresponding parameter specifies `ByRef`.  
+     呼び出し元のコードの引数リストで、引数をかっこで囲みます。 これにより、対応するパラメーターで `ByRef`が指定されている場合でも、値渡しで引数を渡すことが Visual Basic されます。  
   
-2. In the procedure code, use the parameter name to assign a value to the local copy of the argument. The underlying value in the calling code is not changed.  
+2. プロシージャコードでは、パラメーター名を使用して、引数のローカルコピーに値を割り当てます。 呼び出し元のコードの基になる値は変更されません。  
   
 ## <a name="example"></a>例  
- The following example shows two procedures that take an array variable and operate on its elements. The `increase` procedure simply adds one to each element. The `replace` procedure assigns a new array to the parameter `a()` and then adds one to each element.  
+ 次の例は、配列変数を受け取り、その要素を操作する2つのプロシージャを示しています。 `increase` の手順では、単に各要素に1つを追加します。 `replace` プロシージャは、新しい配列をパラメーター `a()` に割り当て、各要素に1つを追加します。  
   
  [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
@@ -63,21 +63,21 @@ When you call a procedure, each argument you supply corresponds to one of the pa
   
  [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
- The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41". Because the array `n` is a reference type, `replace` can change its members, even though the passing mechanism is `ByVal`.  
+ 最初の `MsgBox` の呼び出しでは、"後に増加する (n):11, 21, 31, 41" と表示されます。 配列 `n` は参照型であるため、渡される機構が `ByVal`場合でも、`replace` はそのメンバーを変更できます。  
   
- The second `MsgBox` call displays "After replace(n): 101, 201, 301". Because `n` is passed `ByRef`, `replace` can modify the variable `n` in the calling code and assign a new array to it. Because `n` is a reference type, `replace` can also change its members.  
+ 2番目の `MsgBox` 呼び出しでは、"置換後 (n): 101, 201, 301" と表示されます。 `n` は `ByRef`渡されるので、`replace` は呼び出し元のコードの変数 `n` を変更し、その変数に新しい配列を割り当てることができます。 `n` は参照型であるため、`replace` はそのメンバーを変更することもできます。  
   
- You can prevent the procedure from modifying the variable itself in the calling code. See [How to: Protect a Procedure Argument Against Value Changes](./how-to-protect-a-procedure-argument-against-value-changes.md).  
+ プロシージャが呼び出し元のコードで変数自体を変更しないようにすることができます。 「[方法: プロシージャ引数を値の変更に対して保護](./how-to-protect-a-procedure-argument-against-value-changes.md)する」を参照してください。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- When you pass a variable by reference, you must use the `ByRef` keyword to specify this mechanism.  
+ 変数を参照渡しで渡す場合は、`ByRef` キーワードを使用してこのメカニズムを指定する必要があります。  
   
- The default in Visual Basic is to pass arguments by value. However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter. This makes your code easier to read.  
+ Visual Basic の既定では、値渡しで引数を渡します。 ただし、すべての宣言されたパラメーターに[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)キーワードまたは[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)キーワードを含めることをお勧めします。 これにより、コードが読みやすくなります。  
   
-## <a name="net-framework-security"></a>.NET Framework セキュリティ  
- There is always a potential risk in allowing a procedure to change the value underlying an argument in the calling code. Make sure you expect this value to be changed, and be prepared to check it for validity before using it.  
+## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
+ プロシージャが呼び出し元のコードの引数の基になる値を変更できるようにすると、常にリスクが発生する可能性があります。 この値が変更されることが予想されることを確認し、使用前に有効かどうかを確認できるように準備してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)

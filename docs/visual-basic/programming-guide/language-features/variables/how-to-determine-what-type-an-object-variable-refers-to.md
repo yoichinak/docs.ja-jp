@@ -15,18 +15,18 @@ ms.locfileid: "74348613"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>方法: オブジェクト変数で参照している型を確認する (Visual Basic)
 
-An object variable contains a pointer to data that is stored elsewhere. The type of that data can change during run time. At any moment, you can use the <xref:System.Type.GetTypeCode%2A> method to determine the current run-time type, or the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to find out if the current run-time type is compatible with a specified type.
+オブジェクト変数には、他の場所に格納されているデータへのポインターが含まれています。 データの種類は、実行時に変更される可能性があります。 現時点では、<xref:System.Type.GetTypeCode%2A> メソッドを使用して現在のランタイム型を判断したり、 [TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)を使用して、現在の実行時の型が指定した型と互換性があるかどうかを調べることができます。
 
-### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>To determine the exact type an object variable currently refers to
+### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>オブジェクト変数で現在参照されている正確な型を確認するには
 
-1. On the object variable, call the <xref:System.Object.GetType%2A> method to retrieve a <xref:System.Type?displayProperty=nameWithType> object.
+1. オブジェクト変数で、<xref:System.Object.GetType%2A> メソッドを呼び出して、<xref:System.Type?displayProperty=nameWithType> オブジェクトを取得します。
 
     ```vb
     Dim myObject As Object
     myObject.GetType()
     ```
 
-2. On the <xref:System.Type?displayProperty=nameWithType> class, call the shared method <xref:System.Type.GetTypeCode%2A> to retrieve the <xref:System.TypeCode> enumeration value for the object's type.
+2. <xref:System.Type?displayProperty=nameWithType> クラスで、共有メソッド <xref:System.Type.GetTypeCode%2A> を呼び出して、オブジェクトの型の <xref:System.TypeCode> 列挙値を取得します。
 
     ```vb
     Dim myObject As Object
@@ -34,11 +34,11 @@ An object variable contains a pointer to data that is stored elsewhere. The type
     MsgBox("myObject currently has type code " & CStr(datTyp))
     ```
 
-    You can test the <xref:System.TypeCode> enumeration value against whichever enumeration members are of interest, such as `Double`.
+    <xref:System.TypeCode> 列挙値は、`Double`など、目的の列挙体のメンバーに対してテストできます。
 
-### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>To determine whether an object variable's type is compatible with a specified type
+### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>オブジェクト変数の型が指定した型と互換性があるかどうかを判断するには
 
-- Use the `TypeOf` operator in combination with the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) to test the object with a `TypeOf`...`Is` expression.
+- `TypeOf` 演算子を[Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)と組み合わせて使用し、`TypeOf`...`Is` 式を使用してオブジェクトをテストします。
 
     ```vb
     If TypeOf objA Is System.Windows.Forms.Control Then
@@ -46,15 +46,15 @@ An object variable contains a pointer to data that is stored elsewhere. The type
     End If
     ```
 
-    The `TypeOf`...`Is` expression returns `True` if the object's run-time type is compatible with the specified type.
+    `TypeOf`...`Is` 式は、オブジェクトの実行時の型が指定した型と互換性がある場合に `True` を返します。
 
-    The criterion for compatibility depends on whether the specified type is a class, structure, or interface. In general, the types are compatible if the object is of the same type as, inherits from, or implements the specified type. For more information, see [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).
+    互換性の基準は、指定された型がクラス、構造体、またはインターフェイスのいずれであるかによって異なります。 一般に、オブジェクトがと同じ型であるか、指定された型を継承するか、または実装する場合、型は互換性があります。 詳細については、「 [TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)」を参照してください。
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-Note that the specified type cannot be a variable or expression. It must be the name of a defined type, such as a class, structure, or interface. This includes intrinsic types such as `Integer` and `String`.
+指定された型を変数または式にすることはできません。 クラス、構造体、インターフェイスなど、定義された型の名前である必要があります。 これには、`Integer` や `String`などの組み込み型が含まれます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
@@ -62,4 +62,4 @@ Note that the specified type cannot be a variable or expression. It must be the 
 - <xref:System.TypeCode>
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)

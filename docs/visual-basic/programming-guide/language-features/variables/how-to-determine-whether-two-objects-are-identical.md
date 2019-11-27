@@ -14,45 +14,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348595"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>方法: 2 つのオブジェクトが同一であるかどうか判別する (Visual Basic)
-In Visual Basic, two variable references are considered identical if their pointers are the same, that is, if both variables point to the same class instance in memory. For example, in a Windows Forms application, you might want to make a comparison to determine whether the current instance (`Me`) is the same as a particular instance, such as `Form2`.  
+Visual Basic では、ポインターが同じである場合は2つの変数参照が同一であると見なされます。つまり、両方の変数がメモリ内の同じクラスインスタンスを指している場合はです。 たとえば、Windows フォームアプリケーションでは、現在のインスタンス (`Me`) が `Form2`などの特定のインスタンスと同じかどうかを判断するための比較を行うことができます。  
   
- Visual Basic provides two operators to compare pointers. The [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) returns `True` if the objects are identical, and the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) returns `True` if they are not.  
+ Visual Basic には、ポインターを比較する2つの演算子が用意されています。 [Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)は `True` を返します。オブジェクトが同一である場合は、 [IsNot 演算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)が `True` を返します (存在しない場合)。  
   
-## <a name="determining-if-two-objects-are-identical"></a>Determining if Two Objects Are Identical  
+## <a name="determining-if-two-objects-are-identical"></a>2つのオブジェクトが同一かどうかを判断する  
   
-#### <a name="to-determine-if-two-objects-are-identical"></a>To determine if two objects are identical  
+#### <a name="to-determine-if-two-objects-are-identical"></a>2つのオブジェクトが同一かどうかを確認するには  
   
-1. Set up a `Boolean` expression to test the two objects.  
+1. 2つのオブジェクトをテストするための `Boolean` 式を設定します。  
   
-2. In your testing expression, use the `Is` operator with the two objects as operands.  
+2. テスト式では、2つのオブジェクトをオペランドとして使用して、`Is` 演算子を使用します。  
   
-     `Is` returns `True` if the objects point to the same class instance.  
+     オブジェクトが同じクラスインスタンスを指している場合、`Is` は `True` を返します。  
   
-## <a name="determining-if-two-objects-are-not-identical"></a>Determining if Two Objects Are Not Identical  
- Sometimes you want to perform an action if the two objects are not identical, and it can be awkward to combine `Not` and `Is`, for example `If Not obj1 Is obj2`. In such a case you can use the `IsNot` operator.  
+## <a name="determining-if-two-objects-are-not-identical"></a>2つのオブジェクトが同一でないかどうかを判断する  
+ 2つのオブジェクトが同一でない場合にアクションを実行することが必要になる場合があります。たとえば、`If Not obj1 Is obj2`のような `Not` と `Is`を組み合わせて使用するのは不便です。 このような場合は、`IsNot` 演算子を使用できます。  
   
-#### <a name="to-determine-if-two-objects-are-not-identical"></a>To determine if two objects are not identical  
+#### <a name="to-determine-if-two-objects-are-not-identical"></a>2つのオブジェクトが同一でないかどうかを調べるには  
   
-1. Set up a `Boolean` expression to test the two objects.  
+1. 2つのオブジェクトをテストするための `Boolean` 式を設定します。  
   
-2. In your testing expression, use the `IsNot` operator with the two objects as operands.  
+2. テスト式では、2つのオブジェクトをオペランドとして使用して、`IsNot` 演算子を使用します。  
   
-     `IsNot` returns `True` if the objects do not point to the same class instance.  
+     オブジェクトが同じクラスインスタンスを指していない場合、`IsNot` は `True` を返します。  
   
 ## <a name="example"></a>例  
- The following example tests pairs of `Object` variables to see if they point to the same class instance.  
+ 次の例では、`Object` 変数のペアをテストして、それらが同じクラスインスタンスを指しているかどうかを確認します。  
   
  [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  
   
- The preceding example displays the following output.  
+ 前の例では、次の出力が表示されます。  
   
  `objA different from objB? True`  
   
  `objA identical to objC? True`  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)

@@ -15,36 +15,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340739"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>方法: 値を返すプロシージャを呼び出す (Visual Basic)
-A `Function` procedure returns a value to the calling code. You call it by including its name and arguments either on the right side of an assignment statement or in an expression.  
+`Function` プロシージャは、呼び出し元のコードに値を返します。 これを呼び出すには、代入ステートメントの右側または式に名前と引数を含めます。  
   
-### <a name="to-call-a-function-procedure-within-an-expression"></a>To call a Function procedure within an expression  
+### <a name="to-call-a-function-procedure-within-an-expression"></a>式内で関数プロシージャを呼び出すには  
   
-1. Use the `Function` procedure name the same way you would use a variable. You can use a `Function` procedure call anywhere you can use a variable or constant in an expression.  
+1. `Function` プロシージャ名は、変数を使用する場合と同じ方法で使用します。 式で変数または定数を使用できる場所であればどこでも、`Function` プロシージャ呼び出しを使用できます。  
   
-2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
+2. 引数リストを囲むには、プロシージャ名をかっこで囲みます。 引数がない場合は、必要に応じてかっこを省略できます。 ただし、かっこを使用すると、コードが読みやすくなります。  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Function` procedure defines the corresponding parameters.  
+3. 引数リストに引数をコンマで区切ってかっこ内に配置します。 引数は、`Function` プロシージャが対応するパラメーターを定義する順序と同じ順序で指定してください。  
   
-     Alternatively, you can pass one or more arguments by name. For more information, see [Passing Arguments by Position and by Name](./passing-arguments-by-position-and-by-name.md).  
+     または、名前で1つ以上の引数を渡すこともできます。 詳細については、「[位置と名前による引数の引き渡し](./passing-arguments-by-position-and-by-name.md)」を参照してください。  
   
-4. The value returned from the procedure participates in the expression just as the value of a variable or constant would.  
+4. プロシージャから返される値は、変数または定数の値と同じように、式に含まれます。  
   
-### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>To call a Function procedure in an assignment statement  
+### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>代入ステートメントで Function プロシージャを呼び出すには  
   
-1. Use the `Function` procedure name following the equal (`=`) sign in the assignment statement.  
+1. 代入ステートメントで等号 (`=`) の後に `Function` プロシージャ名を使用します。  
   
-2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
+2. 引数リストを囲むには、プロシージャ名をかっこで囲みます。 引数がない場合は、必要に応じてかっこを省略できます。 ただし、かっこを使用すると、コードが読みやすくなります。  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Function` procedure defines the corresponding parameters, unless you are passing them by name.  
+3. 引数リストに引数をコンマで区切ってかっこ内に配置します。 引数は、名前で渡す場合を除き、`Function` プロシージャが対応するパラメーターを定義する順序と同じ順序で指定してください。  
   
-4. The value returned from the procedure is stored in the variable or property on the left side of the assignment statement.  
+4. プロシージャから返される値は、代入ステートメントの左側にある変数またはプロパティに格納されます。  
   
 ## <a name="example"></a>例  
- The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> to retrieve the value of an operating system environment variable. The first line calls `Environ` within an expression, and the second line calls it in an assignment statement. `Environ` takes the variable name as its sole argument. It returns the variable's value to the calling code.  
+ 次の例では、Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> を呼び出して、オペレーティングシステム環境変数の値を取得します。 最初の行は、式の中で `Environ` を呼び出し、2番目の行は代入ステートメントでそれを呼び出します。 `Environ` は、変数名を唯一の引数として受け取ります。 このメソッドは、呼び出し元のコードに変数の値を返します。  
   
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Function プロシージャ](./function-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)

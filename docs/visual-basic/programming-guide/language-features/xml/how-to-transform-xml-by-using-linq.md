@@ -14,17 +14,17 @@ ms.locfileid: "74353645"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>方法 : LINQ を使用して XML を変換する (Visual Basic)
 
-[XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) make it easy to read XML from one source and transform it to a new XML format. You can take advantage of LINQ queries to retrieve the content to transform, or change content in an existing document to a new XML format.
+[Xml リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)を使用すると、1つのソースから xml を簡単に読み取り、新しい xml 形式に変換することができます。 LINQ クエリを利用して、変換するコンテンツを取得したり、既存のドキュメントの内容を新しい XML 形式に変更したりできます。
 
-The example in this topic transforms content from an XML source document to HTML to be viewed in a browser.
+このトピックの例では、XML ソースドキュメントから HTML にコンテンツを変換し、ブラウザーで表示されるようにします。
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-### <a name="to-transform-an-xml-document"></a>To transform an XML document
+### <a name="to-transform-an-xml-document"></a>XML ドキュメントを変換するには
 
-1. In Visual Studio, create a new Visual Basic project in the **Console Application** project template.
+1. Visual Studio で、**コンソールアプリケーション**プロジェクトテンプレートに新しい Visual Basic プロジェクトを作成します。
 
-2. Double-click the Module1.vb file created in the project to modify the Visual Basic code. Add the following code to the `Sub Main` of the `Module1` module. This code creates the source XML document as an <xref:System.Xml.Linq.XDocument> object.
+2. プロジェクトで作成された module1.vb ファイルをダブルクリックして、Visual Basic コードを変更します。 `Module1` モジュールの `Sub Main` に次のコードを追加します。 このコードでは、ソース XML ドキュメントを <xref:System.Xml.Linq.XDocument> オブジェクトとして作成します。
 
     ```vb
     Dim catalog =
@@ -58,11 +58,11 @@ The example in this topic transforms content from an XML source document to HTML
         </Catalog>
     ```
 
-     [How to: Load XML from a File, String, or Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).
+     [方法: ファイル、文字列、またはストリームから XML を読み込む](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
 
-3. After the code to create the source XML document, add the following code to retrieve all the \<Book> elements from the object and transform them into an HTML document. The list of \<Book> elements is created by using a LINQ query that returns a collection of <xref:System.Xml.Linq.XElement> objects that contain the transformed HTML. You can use embedded expressions to put the values from the source document in the new XML format.
+3. ソース XML ドキュメントを作成するコードの後に、次のコードを追加して、オブジェクトからすべての \<Book > 要素を取得し、それらを HTML ドキュメントに変換します。 \<Book > の要素の一覧は、変換された HTML を含む <xref:System.Xml.Linq.XElement> オブジェクトのコレクションを返す LINQ クエリを使用して作成されます。 埋め込み式を使用して、ソースドキュメントの値を新しい XML 形式で格納できます。
 
-     The resulting HTML document is written to a file by using the <xref:System.Xml.Linq.XElement.Save%2A> method.
+     結果として得られる HTML ドキュメントは、<xref:System.Xml.Linq.XElement.Save%2A> メソッドを使用してファイルに書き込まれます。
 
     ```vb
     Dim htmlOutput =
@@ -83,11 +83,11 @@ The example in this topic transforms content from an XML source document to HTML
     htmlOutput.Save("BookDescription.html")
     ```
 
-4. After `Sub Main` of `Module1`, add a new method (`Sub`) to transform a \<Description> node into the specified HTML format. This method is called by the code in the previous step and is used to preserve the format of the \<Description> elements.
+4. `Module1`の `Sub Main` 後に、新しいメソッド (`Sub`) を追加して、\<説明 > ノードを指定された HTML 形式に変換します。 このメソッドは、前の手順のコードによって呼び出され、\<Description > 要素の形式を維持するために使用されます。
 
-     This method replaces sub-elements of the \<Description> element with HTML. The `ReplaceWith` method is used to preserve the location of the sub-elements. The transformed content of the \<Description> element is included in an HTML paragraph (\<p>) element. The <xref:System.Xml.Linq.XContainer.Nodes%2A> property is used to retrieve the transformed content of the \<Description> element. This ensures that sub-elements are included in the transformed content.
+     このメソッドは、\<Description > 要素のサブ要素を HTML に置き換えます。 `ReplaceWith` メソッドは、サブ要素の場所を保持するために使用されます。 \<Description > 要素の変換された内容は、HTML 段落 (\<p >) 要素に含まれます。 <xref:System.Xml.Linq.XContainer.Nodes%2A> プロパティは、\<Description > 要素の変換された内容を取得するために使用されます。 これにより、変換されたコンテンツにサブ要素が含まれるようになります。
 
-     Add the following code after `Sub Main` of `Module1`.
+     `Module1`の `Sub Main` の後に、次のコードを追加します。
 
     ```vb
     Public Function TransformDescription(ByVal desc As XElement) As XElement
@@ -115,9 +115,9 @@ The example in this topic transforms content from an XML source document to HTML
     End Function
     ```
 
-5. 変更内容を保存します。
+5. 変更を [保存] します。
 
-6. Press F5 to run the code. The resulting saved document will resemble the following:
+6. F5 キーを押してコードを実行します。 結果として保存されるドキュメントは、次のようになります。
 
     ```html
     <?xml version="1.0"?>
@@ -156,7 +156,7 @@ The example in this topic transforms content from an XML source document to HTML
     </html>
     ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XML リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)
 - [Visual Basic での XML の操作](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)

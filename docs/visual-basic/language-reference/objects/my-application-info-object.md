@@ -13,21 +13,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344141"
 ---
 # <a name="myapplicationinfo-object"></a>My.Application.Info オブジェクト
-Provides properties for getting the information about the application, such as the version number, description, loaded assemblies, and so on.  
+バージョン番号、説明、読み込まれたアセンブリなど、アプリケーションに関する情報を取得するためのプロパティを提供します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `My.Application.Info` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>」をご覧ください。  
   
 > [!NOTE]
-> You can use properties of the <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> class to obtain information about a file on disk.  
+> <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> クラスのプロパティを使用して、ディスク上のファイルに関する情報を取得できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **名前空間:** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
  **クラス:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [My.Application オブジェクト](../../../visual-basic/language-reference/objects/my-application-object.md)

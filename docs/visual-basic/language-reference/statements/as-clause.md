@@ -16,9 +16,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350171"
 ---
 # <a name="as-clause-visual-basic"></a>As 句 (Visual Basic)
-Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.  
+では、宣言ステートメントまたはジェネリック型パラメーターの制約リストのデータ型を識別する `As` 句が導入されています。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  キーワード `As` は次のコンテキストで使用できます。  
   
  [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
@@ -27,7 +27,7 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
  [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
@@ -37,9 +37,9 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [For...Next Statements](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [...次のステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [For Each...Next Statements](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [各...次のステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [From 句](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -49,7 +49,7 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
  [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
   
@@ -57,13 +57,13 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try...Catch...Finally Statements](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [お試しください...キャッチ...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [方法 : 新しい変数を作成する](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
 - [データの種類](../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [変数宣言](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [型リスト](../../../visual-basic/language-reference/statements/type-list.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

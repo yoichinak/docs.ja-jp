@@ -22,63 +22,63 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348276"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic における演算子の優先順位
-When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called *operator precedence*.
+式の中で複数の操作が発生した場合、各部分は、演算子の*優先順位*と呼ばれる事前に定義された順序で評価および解決されます。
 
-## <a name="precedence-rules"></a>Precedence Rules
- When expressions contain operators from more than one category, they are evaluated according to the following rules:
+## <a name="precedence-rules"></a>優先順位の規則
+ 式に複数のカテゴリの演算子が含まれている場合は、次の規則に従って評価されます。
 
-- The arithmetic and concatenation operators have the order of precedence described in the following section, and all have greater precedence than the comparison, logical, and bitwise operators.
+- 算術演算子と連結演算子の優先順位は次のセクションで説明しています。また、すべての演算子は、比較演算子、論理演算子、ビットごとの演算子よりも優先順位が高くなります。
 
-- All comparison operators have equal precedence, and all have greater precedence than the logical and bitwise operators, but lower precedence than the arithmetic and concatenation operators.
+- すべての比較演算子の優先順位は同じで、すべての比較演算子は論理演算子とビット処理演算子よりも優先順位が高くなりますが、算術演算子と連結演算子より優先順位は低くなります。
 
-- The logical and bitwise operators have the order of precedence described in the following section, and all have lower precedence than the arithmetic, concatenation, and comparison operators.
+- 論理演算子とビット処理演算子は、次のセクションで説明する優先順位を持ち、算術演算子、連結演算子、および比較演算子よりも優先順位が低くなります。
 
-- Operators with equal precedence are evaluated left to right in the order in which they appear in the expression.
+- 優先順位が同じ演算子は、式に出現する順序で左から右に評価されます。
 
-## <a name="precedence-order"></a>Precedence Order
- Operators are evaluated in the following order of precedence:
+## <a name="precedence-order"></a>優先順位
+ 演算子は、次の優先順位で評価されます。
 
 ### <a name="await-operator"></a>Await 演算子
  Await
 
-### <a name="arithmetic-and-concatenation-operators"></a>Arithmetic and Concatenation Operators
- Exponentiation (`^`)
+### <a name="arithmetic-and-concatenation-operators"></a>算術演算子と連結演算子
+ 累乗 (`^`)
 
- Unary identity and negation (`+`, `–`)
+ 単項 id と否定 (`+`、`–`)
 
- Multiplication and floating-point division (`*`, `/`)
+ 乗算および浮動小数点除算 (`*`、`/`)
 
- Integer division (`\`)
+ 整数除算 (`\`)
 
- Modular arithmetic (`Mod`)
+ モジュール式 (`Mod`)
 
- Addition and subtraction (`+`, `–`)
+ 加算および減算 (`+`、`–`)
 
- String concatenation (`&`)
+ 文字列の連結 (`&`)
 
- Arithmetic bit shift (`<<`, `>>`)
+ 算術ビットシフト (`<<`、`>>`)
 
 ### <a name="comparison-operators"></a>比較演算子
- All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)
+ すべての比較演算子 (`=`、`<>`、`<`、`<=`、`>`、`>=`、`Is`、`IsNot`、`Like`、`TypeOf`)`Is`
 
 ### <a name="logical-and-bitwise-operators"></a>論理演算子とビット処理演算子
- Negation (`Not`)
+ 否定 (`Not`)
 
- Conjunction (`And`, `AndAlso`)
+ 組み合わせ (`And`、`AndAlso`)
 
- Inclusive disjunction (`Or`, `OrElse`)
+ 包括和 (`Or`、`OrElse`)
 
- Exclusive disjunction (`Xor`)
+ 排他的和 (`Xor`)
 
 ### <a name="comments"></a>コメント
- The `=` operator is only the equality comparison operator, not the assignment operator.
+ `=` 演算子は等値比較演算子であり、代入演算子ではありません。
 
- The string concatenation operator (`&`) is not an arithmetic operator, but in precedence it is grouped with the arithmetic operators.
+ 文字列連結演算子 (`&`) は算術演算子ではありませんが、優先順位の高い演算子でグループ化されています。
 
- The `Is` and `IsNot` operators are object reference comparison operators. They do not compare the values of two objects; they check only to determine whether two object variables refer to the same object instance.
+ `Is` 演算子と `IsNot` 演算子は、オブジェクト参照の比較演算子です。 2つのオブジェクトの値を比較しません。2つのオブジェクト変数が同じオブジェクトインスタンスを参照しているかどうかを確認するだけです。
 
 ## <a name="associativity"></a>結合規則
- When operators of equal precedence appear together in an expression, for example multiplication and division, the compiler evaluates each operation as it encounters it from left to right. 次に例を示します。
+ 同じ優先順位の演算子が乗算や除算などの式に一緒に表示される場合、コンパイラは各操作を左から右に検出するたびに評価します。 これを次の例に示します。
 
 ```vb
 Dim n1 As Integer = 96 / 8 / 4
@@ -86,12 +86,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)
 ```
 
- The first expression evaluates the division 96 / 8 (which results in 12) and then the division 12 / 4, which results in three. Because the compiler evaluates the operations for `n1` from left to right, the evaluation is the same when that order is explicitly indicated for `n2`. Both `n1` and `n2` have a result of three. By contrast, `n3` has a result of 48, because the parentheses force the compiler to evaluate 8 / 4 first.
+ 最初の式では、除算 96/8 (結果 12) と除算 12/4 が評価されます。これは3つになります。 コンパイラでは `n1` の操作が左から右に評価されるため、この順序が `n2`に明示的に指定されている場合、評価は同じになります。 `n1` と `n2` の両方の結果が3になります。 これに対して、`n3` の結果は48になります。これは、かっこによってコンパイラによって最初に 8/4 が評価されるためです。
 
- Because of this behavior, operators are said to be *left associative* in Visual Basic.
+ この動作により、Visual Basic では、演算子が*左結合*されていると言います。
 
-## <a name="overriding-precedence-and-associativity"></a>Overriding Precedence and Associativity
- You can use parentheses to force some parts of an expression to be evaluated before others. This can override both the order of precedence and the left associativity. Visual Basic always performs operations that are enclosed in parentheses before those outside. However, within parentheses, it maintains ordinary precedence and associativity, unless you use parentheses within the parentheses. 次に例を示します。
+## <a name="overriding-precedence-and-associativity"></a>優先順位と結合規則のオーバーライド
+ かっこを使用して、式の一部の部分を他の式の前に評価するように強制できます。 これにより、優先順位と左結合規則の両方がオーバーライドされる可能性があります。 Visual Basic は、かっこで囲まれた操作を外部のの前に常に実行します。 ただし、かっこで囲まれている場合は、かっこ内でかっこを使用しない限り、通常の優先順位と結合規則が維持されます。 これを次の例に示します。
 
 ```vb
 Dim a, b, c, d, e, f, g As Double
@@ -111,7 +111,7 @@ g = (a - (b + c)) / (d * e)
 ' The preceding line sets g to 0.5.
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [= 演算子](../../../visual-basic/language-reference/operators/assignment-operator.md)
 - [Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)

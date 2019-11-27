@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344404"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>How to: Find Descendants with a Specific Element Name (Visual Basic)
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>方法: 特定の要素名を持つ子孫を検索する (Visual Basic)
 特定の名前を持つ子孫をすべて検索しなければならない場合があります。 すべての子孫を反復処理するコードを記述することもできますが、<xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用する方が簡単です。  
   
 ## <a name="example"></a>例  
@@ -54,7 +54,7 @@ Some text that is broken up into multiple segments.
 ```  
   
 ## <a name="example"></a>例  
- 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、「[名前空間の概要」 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)を参照してください。  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -100,7 +100,7 @@ End Module
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -26,39 +26,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352580"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>プロシージャのパラメーターと引数 (Visual Basic)
-In most cases, a procedure needs some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
+ほとんどの場合、プロシージャは、呼び出された状況に関する情報を必要とします。 繰り返しまたは共有タスクを実行するプロシージャは、呼び出しごとに異なる情報を使用します。 この情報は、呼び出し時にプロシージャに渡す変数、定数、および式で構成されます。  
   
- A *parameter* represents a value that the procedure expects you to supply when you call it. The procedure's declaration defines its parameters.  
+ *パラメーター*は、プロシージャが呼び出し時に指定する必要がある値を表します。 プロシージャの宣言では、パラメーターを定義します。  
   
- You can define a procedure with no parameters, one parameter, or more than one. The part of the procedure definition that specifies the parameters is called the *parameter list*.  
+ パラメーターのないプロシージャ、1つのパラメーター、または複数のプロシージャを定義できます。 パラメーターを指定するプロシージャ定義の一部は、*パラメーターリスト*と呼ばれます。  
   
- An *argument* represents the value you supply to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure. The part of the procedure call that specifies the arguments is called the *argument list*.  
+ *引数*は、プロシージャを呼び出すときにプロシージャパラメーターに指定する値を表します。 呼び出し元のコードは、プロシージャを呼び出すときに引数を指定します。 引数を指定するプロシージャ呼び出しの部分は、*引数リスト*と呼ばれます。  
   
- The following illustration shows code calling the procedure `safeSquareRoot` from two different places. The first call passes the value of the variable `x` (4.0) to the parameter `number`, and the return value in `root` (2.0) is assigned to the variable `y`. The second call passes the literal value 9.0 to `number`, and assigns the return value (3.0) to variable `z`.  
+ 次の図は、2つの異なる場所から `safeSquareRoot` プロシージャを呼び出すコードを示しています。 最初の呼び出しでは、変数 `x` (4.0) の値が `number`パラメーターに渡され、`root` (2.0) の戻り値が変数 `y`に代入されます。 2番目の呼び出しは、リテラル値9.0 を `number`に渡し、戻り値 (3.0) を変数 `z`に代入します。  
   
- ![Diagram that shows passing an argument to a parameter](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
+ ![引数をパラメーターに渡す方法を示す図](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
- For more information, see [Differences Between Parameters and Arguments](./differences-between-parameters-and-arguments.md).  
+ 詳細については、「[パラメーターと引数の違い](./differences-between-parameters-and-arguments.md)」を参照してください。  
   
-## <a name="parameter-data-type"></a>Parameter Data Type  
- You define a data type for a parameter by using the `As` clause in its declaration. For example, the following function accepts a string and an integer.  
+## <a name="parameter-data-type"></a>パラメーターのデータ型  
+ パラメーターのデータ型を定義するには、その宣言で `As` 句を使用します。 たとえば、次の関数は、文字列と整数を受け取ります。  
   
  [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
   
- If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off,` the `As` clause is optional, except that if any one parameter uses it, all parameters must use it. If type checking is `On`, the `As` clause is required for all procedure parameters.  
+ 型チェックスイッチ ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) が `Off,` 場合、`As` 句は省略可能です。ただし、いずれか1つのパラメーターで使用する場合は、すべてのパラメーターで使用する必要があります。 型チェックが `On`場合は、すべてのプロシージャパラメーターに `As` 句が必要です。  
   
- If the calling code expects to supply an argument with a data type different from that of its corresponding parameter, such as `Byte` to a `String` parameter, it must do one of the following:  
+ 呼び出し元のコードが、対応するパラメーターとは異なるデータ型の引数を指定することを想定している場合 (`String` パラメーターへの `Byte` など)、次のいずれかの操作を行う必要があります。  
   
-- Supply only arguments with data types that widen to the parameter data type;  
+- パラメーターのデータ型に拡大変換されるデータ型の引数のみを指定します。  
   
-- Set `Option Strict Off` to allow implicit narrowing conversions; or  
+- `Option Strict Off` を設定して、暗黙的な縮小変換を許可します。もしくは  
   
-- Use a conversion keyword to explicitly convert the data type.  
+- 変換キーワードを使用して、データ型を明示的に変換します。  
   
 ### <a name="type-parameters"></a>型パラメーター  
- A *generic procedure* also defines one or more *type parameters* in addition to its normal parameters. A generic procedure allows the calling code to pass different data types each time it calls the procedure, so it can tailor the data types to the requirements of each individual call. 「 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
+ *ジェネリックプロシージャ*は、通常のパラメーターに加えて、1つまたは複数の*型パラメーター*も定義します。 ジェネリックプロシージャを使用すると、呼び出し元のコードはプロシージャを呼び出すたびに異なるデータ型を渡すことができるので、データ型を個々の呼び出しの要件に合わせて調整できます。 「 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
@@ -69,4 +69,4 @@ In most cases, a procedure needs some information about the circumstances in whi
 - [方法: プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)
 - [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)
 - [プロシージャのオーバーロード](./procedure-overloading.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

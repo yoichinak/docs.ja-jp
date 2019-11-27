@@ -26,23 +26,23 @@ Skip count
   
 ## <a name="parts"></a>指定項目  
  `count`  
- 必須です。 A value or an expression that evaluates to the number of elements of the sequence to skip.  
+ 必須。 スキップするシーケンスの要素数に評価される値または式。  
   
-## <a name="remarks"></a>Remarks  
- The `Skip` clause causes a query to bypass elements at the beginning of a results list and return the remaining elements. The number of elements to skip is identified by the `count` parameter.  
+## <a name="remarks"></a>コメント  
+ `Skip` 句を使用すると、クエリは結果リストの先頭の要素をバイパスし、残りの要素を返します。 スキップする要素の数は、`count` パラメーターによって識別されます。  
   
- You can use the `Skip` clause with the `Take` clause to return a range of data from any segment of a query. To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause.  
+ `Take` 句と共に `Skip` 句を使用すると、クエリの任意のセグメントからデータの範囲を返すことができます。 これを行うには、範囲の最初の要素のインデックスを `Skip` 句に渡し、範囲のサイズを `Take` 句に渡します。  
   
- When you use the `Skip` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Skip` clause to bypass the intended results. For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ クエリで `Skip` 句を使用する場合は、`Skip` の句が意図した結果をバイパスできるように、結果が返される順序になるようにする必要もあります。 クエリ結果の順序付けの詳細については、「 [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)」を参照してください。  
   
- You can use the `SkipWhile` clause to specify that only certain elements are ignored, depending on a supplied condition.  
+ 指定した条件に応じて、特定の要素のみを無視するように指定するには、`SkipWhile` 句を使用します。  
   
 ## <a name="example"></a>例  
- The following code example uses the `Skip` clause together with the `Take` clause to return data from a query in pages. The `GetCustomers` function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.  
+ 次のコード例では、`Take` 句と共に `Skip` 句を使用して、ページ内のクエリからデータを返します。 `GetCustomers` 関数は、`Skip` 句を使用して、指定された開始インデックス値までリスト内の顧客をバイパスし、`Take` 句を使用して、そのインデックス値から始まる顧客のページを返します。  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)

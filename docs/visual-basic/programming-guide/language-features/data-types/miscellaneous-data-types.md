@@ -13,24 +13,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346342"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>その他のデータ型 (Visual Basic)
-Visual Basic supplies several data types that are not oriented toward numbers or characters. Instead, they deal with specialized data such as yes/no values, date/time values, and object addresses.  
+Visual Basic には、数値や文字に向いていない複数のデータ型が用意されています。 代わりに、yes/no 値、日付/時刻値、オブジェクトアドレスなどの特殊なデータを処理します。  
   
- For a table showing a side-by-side comparison of the Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
+ Visual Basic のデータ型の並列比較を示す表については、「[データ型](../../../../visual-basic/language-reference/data-types/index.md)」を参照してください。  
   
-## <a name="boolean-type"></a>Boolean Type  
- The [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) is an unsigned value that is interpreted as either `True` or `False`. Its data width depends on the implementing platform. If a variable can contain only two-state values such as true/false, yes/no, or on/off, declare it as `Boolean`.  
+## <a name="boolean-type"></a>ブール型  
+ [ブールデータ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)は、`True` または `False`として解釈される符号なしの値です。 データ幅は、実装するプラットフォームによって異なります。 変数に、true/false、yes/no、on/off などの2つの状態の値のみを含めることができる場合は、それを `Boolean`として宣言します。  
   
-## <a name="date-type"></a>Date Type  
- The [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) is a 64-bit value that holds both date and time information. Each increment represents 100 nanoseconds of elapsed time since the beginning (12:00 AM) of January 1 of the year 1 in the Gregorian calendar. If a variable can contain a date value, a time value, or both, declare it as `Date`.  
+## <a name="date-type"></a>日付型  
+ [日付データ型](../../../../visual-basic/language-reference/data-types/date-data-type.md)は、日付と時刻の両方の情報を保持する64ビット値です。 各インクリメントは、グレゴリオ暦の1年1月1日の開始 (12:00 AM) からの経過時間の100ナノ秒を表します。 変数に日付値、時刻値、またはその両方を含めることができる場合は、`Date`として宣言します。  
   
 ## <a name="object-type"></a>オブジェクトの型  
- The [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) is a 32-bit address that points to an object instance within your application or in some other application. An `Object` variable can refer to any object your application recognizes, or to data of any data type. This includes both *value types*, such as `Integer`, `Boolean`, and structure instances, and *reference types*, which are instances of objects created from classes such as `String` and <xref:System.Windows.Forms.Form>, and array instances.  
+ [オブジェクトのデータ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)は、アプリケーション内または他のアプリケーション内のオブジェクトインスタンスを指す32ビットアドレスです。 `Object` 変数は、アプリケーションが認識する任意のオブジェクト、または任意のデータ型のデータを参照できます。 これには、`Integer`、`Boolean`、構造体のインスタンスなどの*値型*と、`String` や <xref:System.Windows.Forms.Form>、配列インスタンスなどのクラスから作成されたオブジェクトのインスタンスである*参照型*の両方が含まれます。  
   
- If a variable stores a pointer to an instance of a class that you do not know at compile time, or if it can point to data of various data types, declare it as `Object`.  
+ コンパイル時にわからないクラスのインスタンスへのポインターが変数に格納されている場合、または、さまざまなデータ型のデータを参照できる場合は、それを `Object`として宣言します。  
   
- The advantage of the `Object` data type is that you can use it to store data of any data type. The disadvantage is that you incur extra operations that take more execution time and make your application perform slower. If you use an `Object` variable for value types, you incur *boxing* and *unboxing*. If you use it for reference types, you incur *late binding*.  
+ `Object` データ型の利点は、任意のデータ型のデータを格納するために使用できることです。 欠点は、実行時間のかかる追加操作が発生し、アプリケーションの実行速度が低下することです。 値型に `Object` 変数を使用すると、*ボックス*化と*ボックス化解除*が発生します。 参照型に使用すると、*遅延バインディング*が発生します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)

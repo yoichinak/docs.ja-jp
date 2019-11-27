@@ -9,15 +9,15 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331646"
 ---
-# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] には、XML ツリーを直接変更できるさまざまなメソッドが含まれています。 たとえば、要素の追加、要素の削除、要素の内容の変更、属性の追加などの操作を行うことができます。 This programming interface is described in [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). いずれかの軸 (<xref:System.Xml.Linq.XContainer.Elements%2A> など) を反復処理する場合に、その過程で XML ツリーを変更すると、見慣れないバグが発生することがあります。  
+# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>宣言型コードと命令型コードの混在のバグ (LINQ to XML) (Visual Basic)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] には、XML ツリーを直接変更できるさまざまなメソッドが含まれています。 たとえば、要素の追加、要素の削除、要素の内容の変更、属性の追加などの操作を行うことができます。 このプログラミングインターフェイスについては、「 [XML ツリーの変更 (LINQ to XML)」 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)を参照してください。 いずれかの軸 (<xref:System.Xml.Linq.XContainer.Elements%2A> など) を反復処理する場合に、その過程で XML ツリーを変更すると、見慣れないバグが発生することがあります。  
   
  この問題は、"ハロウィーン問題" と呼ばれることがあります。  
   
 ## <a name="definition-of-the-problem"></a>問題の定義  
  コレクションを反復処理するコードを LINQ を使用して記述する場合は、宣言型スタイルでコードを記述することになります。 この場合、*どのように*処理するかではなく、*何が*必要かを記述します。 たとえば、1) 最初の要素を取得する、2) この要素を何らかの条件に対してテストする、3) この要素を変更する、4) この要素をリストに戻す、というコードを記述した場合、それは命令型のコードです。 必要な処理を*どのように*行うかをコンピューターに指示しています。  
   
- この 2 つのスタイルのコードが同じ操作に混在していると、問題の原因になります。 次に例を示します。  
+ この 2 つのスタイルのコードが同じ操作に混在していると、問題の原因になります。 次のような項目を考慮します。  
   
  3 つの項目 (a、b、および c) を含むリンク リストがあるとします。  
   
@@ -176,6 +176,6 @@ Dim newRoot As XElement = New XElement("Root", _
 Console.WriteLine(newRoot)  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [高度な LINQ to XML プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Declare Enumerations'
+title: '方法: 列挙型を宣言する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], enumerations
@@ -14,39 +14,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354043"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>方法: 列挙型を宣言する (Visual Basic)
-You create an enumeration with the `Enum` statement in the declarations section of a class or module. You cannot declare an enumeration within a method. To specify the appropriate level of access, use `Private`, `Protected`, `Friend`, or `Public`.  
+列挙体を作成するには、クラスまたはモジュールの宣言セクションにある `Enum` ステートメントを使用します。 メソッド内で列挙を宣言することはできません。 適切なアクセスレベルを指定するには、`Private`、`Protected`、`Friend`、または `Public`を使用します。  
   
- An `Enum` type has a name, an underlying type, and a set of fields, each representing a constant. The name must be a valid Visual Basic .NET qualifier. The underlying type must be one of the integer types—`Byte`, `Short`, `Long` or `Integer`. `Integer` が既定値です。 Enumerations are always strongly typed and are not interchangeable with integer number types.  
+ `Enum` 型には、名前、基になる型、および一連のフィールドがあり、それぞれが定数を表します。 名前は、有効な Visual Basic .NET 修飾子である必要があります。 基になる型は、整数型 (`Byte`、`Short`、`Long`、または `Integer`のいずれかである必要があります。 既定値は `Integer` です。 列挙は常に厳密に型指定され、整数の数値型とは交換できません。  
   
- Enumerations cannot have floating-point values. If an enumeration is assigned a floating-point value with `Option Strict On`, a compiler error results. If `Option Strict` is `Off`, the value is automatically converted to the `Enum` type.  
+ 列挙体に浮動小数点値を指定することはできません。 列挙に `Option Strict On`を持つ浮動小数点値が割り当てられている場合、コンパイラエラーが発生します。 `Option Strict` が `Off`場合、値は `Enum` の型に自動的に変換されます。  
   
- For information on names, and how to use the `Imports` statement to make name qualification unnecessary, see [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
+ 名前について、および `Imports` ステートメントを使用して名前の修飾を不要にする方法については、「[列挙型と名前の修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)」を参照してください。  
   
-### <a name="to-declare-an-enumeration"></a>To declare an enumeration  
+### <a name="to-declare-an-enumeration"></a>列挙体を宣言するには  
   
-1. Write a declaration that includes a code access level, the `Enum` keyword, and a valid name, as in the following examples, each of which declares a different `Enum`.  
+1. 次の例に示すように、コードアクセスレベル、`Enum` キーワード、有効な名前を含む宣言を記述します。それぞれが異なる `Enum`を宣言します。  
   
      [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
-2. Define the constants in the enumeration. By default, the first constant in an enumeration is initialized to `0`, and subsequent constants are initialized to a value of one more than the previous constant. For example, the following enumeration, `Days`, contains a constant named `Sunday` with the value `0`, a constant named `Monday` with the value `1`, a constant named `Tuesday` with the value of `2`, and so on.  
+2. 列挙体の定数を定義します。 既定では、列挙体の最初の定数は `0`に初期化され、後続の定数は前の定数より1つ大きい値に初期化されます。 たとえば、次の列挙型の `Days`には、値 `0`を持つ `Sunday` という定数と、値 `1`を持つ `Monday` という名前の定数が含まれています。また、`Tuesday` という名前の定数を `2`の値と共に使用することもできます。  
   
      [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
-3. You can explicitly assign values to constants in an enumeration by using an assignment statement. You can assign any integer value, including negative numbers. For example, you may want constants with values less than zero to represent error conditions. In the following enumeration, the constant `Invalid` is explicitly assigned the value `–1`, and the constant `Sunday` is assigned the value `0`. Because it is the first constant in the enumeration, `Saturday` is also initialized to the value `0`. The value of `Monday` is `1` (one more than the value of `Sunday`); the value of `Tuesday` is `2`, and so on.  
+3. 代入ステートメントを使用して、列挙体の定数に値を明示的に割り当てることができます。 負の数値を含む任意の整数値を割り当てることができます。 たとえば、0未満の値を持つ定数を使用して、エラー条件を表すことができます。 次の列挙体では、定数 `Invalid` に `–1`値が明示的に割り当てられており、定数 `Sunday` に `0`値が割り当てられています。 列挙体の最初の定数であるため、`Saturday` も `0`値に初期化されます。 `Monday` の値が `1` (`Sunday`の値を超えています)。`Tuesday` の値は `2`のようになります。  
   
      [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
-### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>To declare an enumeration as an explicit type  
+### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>列挙型を明示的な型として宣言するには  
   
-- Specify the type of the enum by using the `As` clause, as shown in the following example.  
+- 次の例に示すように、`As` 句を使用して列挙型の型を指定します。  
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [列挙型と名前の修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [方法 : 列挙型のメンバーを参照する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [方法: Visual Basic 内の列挙体を反復処理する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [方法 : 列挙値に関連付けられている文字列を確認する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [列挙型を使用する状況](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [定数の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)

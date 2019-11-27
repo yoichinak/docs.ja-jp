@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332339"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>方法 : XML 子要素にアクセスする (Visual Basic)
-This example shows how to use a child axis property to access all XML child elements that have a specified name in an XML element. In particular, it uses the <xref:System.Xml.Linq.XElement.Value%2A> property to get the value of the first element in the collection that the `name` child axis property returns. The `name` child axis property gets all child elements named `phone` in the `contact` object. This example also uses the `phone` child axis property to access all child elements named `phone` that are contained in the `contact` object.  
+この例では、子軸プロパティを使用して、XML 要素内で指定された名前を持つすべての XML 子要素にアクセスする方法を示します。 具体的には、<xref:System.Xml.Linq.XElement.Value%2A> プロパティを使用して、`name` 子軸プロパティが返すコレクション内の最初の要素の値を取得します。 子軸プロパティ `name` は、`contact` オブジェクト内の `phone` という名前のすべての子要素を取得します。 また、この例では、`phone` 子軸プロパティを使用して、`contact` オブジェクトに含まれる `phone` という名前のすべての子要素にアクセスします。  
   
 ## <a name="example"></a>例  
  [!code-vb[VbXMLSamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#10)]  
@@ -25,7 +25,7 @@ This example shows how to use a child axis property to access all XML child elem
   
 - <xref:System.Xml.Linq> 名前空間への参照  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - [XML 子軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)

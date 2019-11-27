@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349566"
 ---
 # <a name="set-statement-visual-basic"></a>Set ステートメント (Visual Basic)
-Declares a `Set` property procedure used to assign a value to a property.  
+プロパティに値を割り当てるために使用される `Set` プロパティプロシージャを宣言します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -30,10 +30,10 @@ End Set
   
 ## <a name="parts"></a>指定項目  
  `attributelist`  
- 省略可能です。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ 省略可。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。  
   
  `accessmodifier`  
- Optional on at most one of the `Get` and `Set` statements in this property. 次のいずれかの値を指定します。  
+ このプロパティの `Get` および `Set` ステートメントのうちの1つで、省略可能です。 次のいずれかになります。  
   
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
@@ -46,48 +46,48 @@ End Set
  「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
  `value`  
- 必須です。 Parameter containing the new value for the property.  
+ 必須。 プロパティの新しい値を格納しているパラメーター。  
   
  `datatype`  
- Required if `Option Strict` is `On`. Data type of the `value` parameter. The data type specified must be the same as the data type of the property where this `Set` statement is declared.  
+ `Option Strict` が `On`の場合は必須です。 `value` パラメーターのデータ型。 指定するデータ型は、この `Set` ステートメントが宣言されているプロパティのデータ型と同じである必要があります。  
   
  `statements`  
- 省略可能です。 One or more statements that run when the `Set` property procedure is called.  
+ 省略可。 `Set` プロパティプロシージャが呼び出されたときに実行される1つ以上のステートメント。  
   
  `End Set`  
- 必須です。 Terminates the definition of the `Set` property procedure.  
+ 必須。 `Set` property プロシージャの定義を終了します。  
   
-## <a name="remarks"></a>Remarks  
- Every property must have a `Set` property procedure unless the property is marked `ReadOnly`. The `Set` procedure is used to set the value of the property.  
+## <a name="remarks"></a>コメント  
+ プロパティが `ReadOnly`としてマークされている場合を除き、すべてのプロパティには `Set` プロパティプロシージャが必要です。 `Set` プロシージャは、プロパティの値を設定するために使用されます。  
   
- Visual Basic automatically calls a property's `Set` procedure when an assignment statement provides a value to be stored in the property.  
+ Visual Basic は、プロパティに格納される値が代入ステートメントによって提供されるときに、プロパティの `Set` プロシージャを自動的に呼び出します。  
   
- Visual Basic passes a parameter to the `Set` procedure during property assignments. If you do not supply a parameter for `Set`, the integrated development environment (IDE) uses an implicit parameter named `value`. The parameter holds the value to be assigned to the property. You typically store this value in a private local variable and return it whenever the `Get` procedure is called.  
+ Visual Basic は、プロパティの割り当て時に `Set` プロシージャにパラメーターを渡します。 `Set`のパラメーターを指定しない場合、統合開発環境 (IDE) は `value`という名前の暗黙的なパラメーターを使用します。 パラメーターは、プロパティに割り当てられる値を保持します。 通常、この値はプライベートローカル変数に格納し、`Get` プロシージャが呼び出されるたびに返されます。  
   
- The body of the property declaration can contain only the property's `Get` and `Set` procedures between the [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. It cannot store anything other than those procedures. In particular, it cannot store the property's current value. You must store this value outside the property, because if you store it inside either of the property procedures, the other property procedure cannot access it. The usual approach is to store the value in a [Private](../../../visual-basic/language-reference/modifiers/private.md) variable declared at the same level as the property. You must define a `Set` procedure inside the property to which it applies.  
+ プロパティ宣言の本体には、プロパティの `Get` と、[プロパティステートメント](../../../visual-basic/language-reference/statements/property-statement.md)と `End Property` ステートメントの間の `Set` プロシージャのみを含めることができます。 これらのプロシージャ以外を格納することはできません。 特に、プロパティの現在の値を格納することはできません。 この値はプロパティの外部に格納する必要があります。これは、プロパティプロシージャの内部に格納する場合、他のプロパティプロシージャがアクセスできないためです。 通常の方法では、プロパティと同じレベルで宣言された[プライベート](../../../visual-basic/language-reference/modifiers/private.md)変数に値を格納します。 `Set` プロシージャは、適用先のプロパティ内で定義する必要があります。  
   
- The `Set` procedure defaults to the access level of its containing property unless you use `accessmodifier` in the `Set` statement.  
+ `Set` ステートメントで `accessmodifier` を使用しない限り、`Set` プロシージャの既定値は、それを含むプロパティのアクセスレベルです。  
   
 ## <a name="rules"></a>ルール  
   
-- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Set` procedure `Private`, but not `Public`.  
+- **混合アクセスレベル。** 読み取り/書き込みプロパティを定義する場合は、必要に応じて、`Get` または `Set` のいずれかのプロシージャに対して異なるアクセスレベルを指定できますが、両方を指定することはできません。 この場合、プロシージャのアクセスレベルは、プロパティのアクセスレベルよりも制限されている必要があります。 たとえば、プロパティが `Friend`として宣言されている場合は、`Set` プロシージャ `Private`を宣言できますが、`Public`は宣言できません。  
   
-     If you are defining a `WriteOnly` property, the `Set` procedure represents the entire property. You cannot declare a different access level for `Set`, because that would set two access levels for the property.  
+     `WriteOnly` プロパティを定義する場合、`Set` プロシージャはプロパティ全体を表します。 `Set`に対して異なるアクセスレベルを宣言することはできません。これは、プロパティに2つのアクセスレベルが設定されるためです。  
   
 ## <a name="behavior"></a>動作  
   
-- **Returning from a Property Procedure.** When the `Set` procedure returns to the calling code, execution continues following the statement that provided the value to be stored.  
+- **プロパティプロシージャからを返します。** `Set` プロシージャが呼び出し元のコードに戻ると、格納される値が指定されたステートメントの後で実行が続行されます。  
   
-     `Set` property procedures can return using either the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) or the [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set` プロパティプロシージャは、 [Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)または[Exit ステートメント](../../../visual-basic/language-reference/statements/exit-statement.md)のいずれかを使用してを返すことができます。  
   
-     The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.  
+     `Exit Property` ステートメントおよび `Return` ステートメントでは、プロパティプロシージャがすぐに終了します。 プロシージャ内の任意の場所で任意の数の `Exit Property` および `Return` ステートメントを使用できます。また、`Exit Property` と `Return` のステートメントを混在させることができます。  
   
 ## <a name="example"></a>例  
- The following example uses the `Set` statement to set the value of a property.  
+ 次の例では、`Set` ステートメントを使用して、プロパティの値を設定します。  
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)
 - [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)

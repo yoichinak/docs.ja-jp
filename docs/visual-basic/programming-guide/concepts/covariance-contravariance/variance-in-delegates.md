@@ -1,5 +1,5 @@
 ---
-title: デリゲートの変性
+title: デリゲートの分散
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
 ms.openlocfilehash: 11146bc4a60f55fc0373f0b5dfa5d44dcf748a5b
@@ -9,9 +9,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348998"
 ---
-# <a name="variance-in-delegates-visual-basic"></a>Variance in Delegates (Visual Basic)
+# <a name="variance-in-delegates-visual-basic"></a>デリゲートの変性 (Visual Basic)
 
-.NET Framework 3.5 introduced variance support for matching method signatures with delegate types in all delegates in C# and Visual Basic. つまり、シグネチャが一致するメソッドだけでなく、デリゲート型で指定された型よりも強い派生型を返す (共変性) メソッドや、弱い派生型のパラメーターを受け取る (反変性) メソッドを、デリゲートに割り当てることができます。 これには、汎用デリゲートと非汎用デリゲートの両方が含まれます。
+.NET Framework 3.5 では、および Visual Basic のC#すべてのデリゲートのデリゲート型を使用して、メソッドシグネチャの照合がサポートされるようになりました。 つまり、シグネチャが一致するメソッドだけでなく、デリゲート型で指定された型よりも強い派生型を返す (共変性) メソッドや、弱い派生型のパラメーターを受け取る (反変性) メソッドを、デリゲートに割り当てることができます。 これには、汎用デリゲートと非汎用デリゲートの両方が含まれます。
 
 たとえば、次のコードについて考えます。このコードには、2 つのクラスと、汎用と非汎用の 2 つのデリゲートが含まれています。
 
@@ -76,11 +76,11 @@ Dim dGeneric As SampleGenericDelegate(Of Second, First) = AddressOf ASecondRFirs
 Dim dGenericConversion As SampleGenericDelegate(Of Second, First) = AddressOf AFirstRSecond
 ```
 
-For more examples, see [Using Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+その他の例については、「[デリゲートの分散の使用」 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)および「 [Func と Action 汎用デリゲートの分散の使用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)」を参照してください。
 
 ## <a name="variance-in-generic-type-parameters"></a>ジェネリック型パラメーターの変性
 
-In .NET Framework 4 and later you can enable implicit conversion between delegates, so that generic delegates that have different types specified by generic type parameters can be assigned to each other, if the types are inherited from each other as required by variance.
+.NET Framework 4 以降では、ジェネリック型パラメーターによって指定された型が異なる汎用デリゲートを相互に割り当てることができるように、デリゲート間で暗黙的な変換を有効にできます。sv.
 
 暗黙的な変換を有効にするには、`in` キーワードまたは `out` キーワードを使用して、デリゲートでジェネリック パラメーターを共変または反変として明示的に宣言する必要があります。
 
@@ -99,7 +99,7 @@ End Sub
 
 変性サポートのみを使用してメソッド シグネチャをデリゲート型に一致させ、`in` キーワードと `out` キーワードを使用しない場合、同等のラムダ式かメソッドを使用すれば、デリゲートをインスタンス化できることがありますが、デリゲートを別のデリゲートに割り当てることはできません。
 
-In the following code example, `SampleGenericDelegate(Of String)` can't be explicitly converted to `SampleGenericDelegate(Of Object)`, although `String` inherits `Object`. この問題を修正するには、ジェネリック パラメーター `T` を `out` キーワードでマークします。
+次のコード例では、`SampleGenericDelegate(Of String)` を `SampleGenericDelegate(Of Object)`に明示的に変換することはできませんが、`String` は `Object`を継承します。 この問題を修正するには、ジェネリック パラメーター `T` を `out` キーワードでマークします。
 
 ```vb
 Public Delegate Function SampleGenericDelegate(Of T)() As T
@@ -121,11 +121,11 @@ End Sub
 
 ### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework のバリアント型パラメーターが含まれる汎用デリゲート
 
-.NET Framework 4 では、既存の複数の汎用デリゲートで、ジェネリック型パラメーターに対して変性サポートが導入されました。
+.NET Framework 4 では、既存の複数の汎用デリゲートで、ジェネリック型パラメーターに対して分散サポートが導入されました。
 
-- <xref:System> 名前空間の `Action` デリゲート。<xref:System.Action%601>、<xref:System.Action%602> など
+- `Action` 名前空間の <xref:System> デリゲート。<xref:System.Action%601>、<xref:System.Action%602> など
 
-- <xref:System> 名前空間の `Func` デリゲート。<xref:System.Func%601>、<xref:System.Func%602> など
+- `Func` 名前空間の <xref:System> デリゲート。<xref:System.Func%601>、<xref:System.Func%602> など
 
 - <xref:System.Predicate%601> デリゲート
 
@@ -133,7 +133,7 @@ End Sub
 
 - <xref:System.Converter%602> デリゲート
 
-For more information and examples, see [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+詳細と例については、「 [Func と Action 汎用デリゲートの分散の使用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)」を参照してください。
 
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>汎用デリゲートのバリアント型パラメーターの宣言
 
@@ -152,9 +152,9 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```
 
 > [!IMPORTANT]
-> `ByRef` parameters in Visual Basic can't be marked as variant.
+> Visual Basic 内の `ByRef` パラメーターをバリアントとしてマークすることはできません。
 
-同じデリゲートで、型パラメーターが異なる場合は、変性と共変性の両方をサポートすることもできます。 これを次の例に示します。
+同じデリゲートで、型パラメーターが異なる場合は、分散と共変性の両方をサポートすることもできます。 これを次の例に示します。
 
 ```vb
 Public Delegate Function DVariant(Of In A, Out R)(ByVal a As A) As R
@@ -171,7 +171,7 @@ dvariant("test")
 
 ### <a name="combining-variant-generic-delegates"></a>バリアント汎用デリゲートの結合
 
-バリアント デリゲートの結合はお勧めしません。 <xref:System.Delegate.Combine%2A> メソッドはバリアント デリゲートの変換をサポートしていないため、デリゲートが厳密に同じ型である必要があります。 This can lead to a run-time exception when you combine delegates either by using the <xref:System.Delegate.Combine%2A> method (in C# and Visual Basic) or by using the `+` operator (in C#), as shown in the following code example.
+バリアント デリゲートの結合はお勧めしません。 <xref:System.Delegate.Combine%2A> メソッドはバリアント デリゲートの変換をサポートしていないため、デリゲートが厳密に同じ型である必要があります。 この場合、次のコード例に示すように、<xref:System.Delegate.Combine%2A> メソッド ( C#および Visual Basic) を使用するか、`+` 演算子 (のC#) を使用してデリゲートを結合すると、実行時例外が発生する可能性があります。
 
 ```vb
 Dim actObj As Action(Of Object) = Sub(x) Console.WriteLine("object: {0}", x)
@@ -181,11 +181,11 @@ Dim actStr As Action(Of String) = Sub(x) Console.WriteLine("string: {0}", x)
 ' Dim actCombine = [Delegate].Combine(actStr, actObj)
 ```
 
-## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>値型と参照型でのジェネリック型パラメーターの変性
+## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>値型と参照型でのジェネリック型パラメーターの分散
 
-ジェネリック型パラメーターの変性がサポートされるのは参照型だけです。 For example, `DVariant(Of Int)`can't be implicitly converted to `DVariant(Of Object)` or `DVariant(Of Long)`, because integer is a value type.
+ジェネリック型パラメーターの変性がサポートされるのは参照型だけです。 たとえば、整数は値型であるため、`DVariant(Of Int)`を `DVariant(Of Object)` または `DVariant(Of Long)`に暗黙的に変換することはできません。
 
-次の例は、値型ではジェネリック型パラメーターの変性がサポートされないことを示しています。
+次の例は、値型ではジェネリック型パラメーターの分散がサポートされないことを示しています。
 
 ```vb
 ' The type T is covariant.
@@ -207,11 +207,11 @@ Sub Test()
 End Sub
 ```
 
-## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Relaxed Delegate Conversion in Visual Basic
+## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Visual Basic での緩やかになったデリゲート変換
 
-Relaxed delegate conversion enables more flexibility in matching method signatures with delegate types. For example, it lets you omit parameter specifications and omit function return values when you assign a method to a delegate. For more information, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).
+厳密でないデリゲート変換を使用すると、メソッドシグネチャをデリゲート型と照合する際の柔軟性が向上します。 たとえば、メソッドをデリゲートに割り当てるときに、パラメーターの指定を省略したり、関数の戻り値を省略したりすることができます。 詳細については、「[緩やかなデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ジェネリック](../../../../standard/generics/index.md)
 - [Func および Action 汎用デリゲートでの分散の使用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

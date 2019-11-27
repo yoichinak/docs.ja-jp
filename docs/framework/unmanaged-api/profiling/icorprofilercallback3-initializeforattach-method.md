@@ -39,15 +39,15 @@ HRESULT InitializeForAttach(
  [in] `ICorProfilerInfo*` インターフェイスへのインターフェイス ポインター。  
   
  `pvClientData`  
- [in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter. このパラメーターが null の場合、`cbClientData` は 0 (ゼロ) になります。 CLR は、`InitializeForAttach` から戻るとこのメモリを解放します。  
+ から`pvClientData` パラメーターで[IClrProfiling:: AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)メソッドに渡されるデータへのポインター。 このパラメーターが null の場合、`cbClientData` は 0 (ゼロ) になります。 CLR は、`InitializeForAttach` から戻るとこのメモリを解放します。  
   
  `cbClientData`  
  [in] `pvClientData` がポイントするデータのサイズ (バイト単位)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  CLR は `InitializeForAttach` を呼び出し、コールバックを要求できる機会をプロファイラーに与えます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -56,7 +56,7 @@ HRESULT InitializeForAttach(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)

@@ -14,30 +14,30 @@ ms.locfileid: "74347417"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>方法 : Visual Basic で XML ドキュメントを作成する
 
-This example shows how to add XML documentation comments to your code.
+この例では、XML ドキュメントコメントをコードに追加する方法を示します。
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-xml-documentation-for-a-type-or-member"></a>To create XML documentation for a type or member
+## <a name="to-create-xml-documentation-for-a-type-or-member"></a>型またはメンバーの XML ドキュメントを作成するには
 
-1. In the **Code Editor**, position your cursor on the line above the type or member for which you want to create documentation.
+1. **コードエディター**で、ドキュメントを作成する型またはメンバーの上の行にカーソルを置きます。
 
-2. Type `'''` (three single-quotation marks).
+2. 「`'''` (3 つの単一引用符)」と入力します。
 
-    An XML skeleton for the type or member is added in the **Code Editor**.
+    型またはメンバーの XML スケルトンが**コードエディター**に追加されます。
 
-3. Add descriptive information between the appropriate tags.
+3. 適切なタグの間に説明情報を追加します。
 
     > [!NOTE]
-    > If you add additional lines within the XML documentation block, each line must begin with `'''`.
+    > XML ドキュメントブロック内に行を追加する場合は、各行を `'''`で始める必要があります。
 
-4. Add additional code that uses the type or member with the new XML documentation comments.
+4. 新しい XML ドキュメントコメントと共に型またはメンバーを使用するコードを追加します。
 
-    IntelliSense displays the text from the \<summary> tag for the type or member.
+    IntelliSense では、型またはメンバーの \<summary > タグのテキストが表示されます。
 
-5. Compile the code to generate an XML file containing the documentation comments. 詳細については、「[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)」を参照してください。
+5. コードをコンパイルして、ドキュメントコメントを含む XML ファイルを生成します。 詳細については、「[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XML の使用によるコードのドキュメントの作成](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

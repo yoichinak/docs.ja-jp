@@ -44,49 +44,49 @@ HRESULT GetParamProps (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in] A ParamDef token that represents the parameter to return metadata for.  
+ からメタデータを返すパラメーターを表す ParamDef トークン。  
   
  `pmd`  
- [out] A pointer to a MethodDef token representing the method that takes the parameter.  
+ 入出力パラメーターを受け取るメソッドを表す MethodDef トークンへのポインター。  
   
  `pulSequence`  
- [out] The ordinal position of the parameter in the method argument list.  
+ 入出力メソッド引数リスト内のパラメーターの序数位置。  
   
  `szName`  
- [out] A buffer to hold the name of the parameter.  
+ 入出力パラメーターの名前を保持するバッファー。  
   
  `cchName`  
- [in] The requested size in wide characters of `szName`.  
+ から`szName`のワイド文字で要求されたサイズ。  
   
  `pchName`  
- [out] The returned size in wide characters of `szName`.  
+ 入出力`szName`のワイド文字で返されたサイズ。  
   
  `pdwAttr`  
- [out] A pointer to any attribute flags associated with the parameter. This is a bitmask of `CorParamAttr` values.  
+ 入出力パラメーターに関連付けられているすべての属性フラグへのポインター。 これは `CorParamAttr` 値のビットマスクです。  
   
  `pdwCPlusTypeFlag`  
- [out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.  
+ 入出力パラメーターが <xref:System.ValueType>であることを示すフラグへのポインター。  
   
  `ppValue`  
- [out] A pointer to a constant string returned by the parameter.  
+ 入出力パラメーターによって返される定数文字列へのポインター。  
   
  `pcchValue`  
- [out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.  
+ 入出力ワイド文字の `ppValue` のサイズ。 `ppValue` が文字列を保持していない場合は0。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The sequence values in `pulSequence` begin with 1 for parameters. A return value has a sequence number of 0.
+`pulSequence` のシーケンス値は、パラメーターに対して1から始まります。 戻り値のシーケンス番号は0です。
 
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

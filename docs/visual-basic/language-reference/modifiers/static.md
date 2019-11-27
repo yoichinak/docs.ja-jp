@@ -1,5 +1,5 @@
 ---
-title: スタティック
+title: 静的
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Static
@@ -15,42 +15,42 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350760"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
-Specifies that one or more declared local variables are to continue to exist and retain their latest values after termination of the procedure in which they are declared.  
+1つ以上の宣言されたローカル変数が引き続き存在し、宣言されているプロシージャの終了後もその最新の値を保持することを指定します。  
   
-## <a name="remarks"></a>Remarks  
- Normally, a local variable in a procedure ceases to exist as soon as the procedure stops. A static variable continues to exist and retains its most recent value. The next time your code calls the procedure, the variable is not reinitialized, and it still holds the latest value that you assigned to it. A static variable continues to exist for the lifetime of the class or module that it is defined in.  
+## <a name="remarks"></a>コメント  
+ 通常、プロシージャ内のローカル変数は、プロシージャが停止するとすぐに存在しなくなります。 静的変数は引き続き存在し、最新の値が保持されます。 次回コードがプロシージャを呼び出したとき、変数は再初期化されず、割り当てた最新の値も保持されます。 静的変数は、その変数が定義されているクラスまたはモジュールの有効期間にわたって存在し続けます。  
   
 ## <a name="rules"></a>ルール  
   
-- **Declaration Context.** You can use `Static` only on local variables. This means the declaration context for a `Static` variable must be a procedure or a block in a procedure, and it cannot be a source file, namespace, class, structure, or module.  
+- **宣言コンテキスト。** `Static` は、ローカル変数に対してのみ使用できます。 つまり、`Static` 変数の宣言コンテキストはプロシージャ内のプロシージャまたはブロックである必要があり、ソースファイル、名前空間、クラス、構造体、またはモジュールにすることはできません。  
   
-     You cannot use `Static` inside a structure procedure.  
+     構造体プロシージャ内で `Static` を使用することはできません。  
   
-- The data types of `Static` local variables cannot be inferred. For more information, see [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+- `Static` ローカル変数のデータ型を推論できません。 詳細については、「[ローカル型の推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)」を参照してください。  
   
-- **Combined Modifiers.** You cannot specify `Static` together with `ReadOnly`, `Shadows`, or `Shared` in the same declaration.  
+- **結合された修飾子。** 同じ宣言内で `ReadOnly`、`Shadows`、または `Shared` と共に `Static` を指定することはできません。  
   
 ## <a name="behavior"></a>動作  
- When you declare a static variable in a `Shared` procedure, only one copy of the static variable is available for the whole application. You call a `Shared` procedure by using the class name, not a variable that points to an instance of the class.  
+ `Shared` プロシージャで静的変数を宣言する場合、アプリケーション全体で使用できる静的変数のコピーは1つだけです。 クラスのインスタンスを参照する変数ではなく、クラス名を使用して `Shared` プロシージャを呼び出します。  
   
- When you declare a static variable in a procedure that isn't `Shared`, only one copy of the variable is available for each instance of the class. You call a non-shared procedure by using a variable that points to a specific instance of the class.  
+ `Shared`ていないプロシージャで静的変数を宣言した場合、クラスの各インスタンスに対して使用できる変数のコピーは1つだけです。 非共有プロシージャを呼び出すには、クラスの特定のインスタンスを指す変数を使用します。  
   
 ## <a name="example"></a>例  
  次の例は、`Static` の使い方を示しています。  
   
  [!code-vb[VbVbalrKeywords#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#5)]  
   
- The `Static` variable `totalSales` is initialized to 0 only one time. Each time that you enter `updateSales`, `totalSales` still has the most recent value that you calculated for it.  
+ `Static` 変数 `totalSales` は、1回だけ0に初期化されます。 `updateSales`を入力するたびに、`totalSales` に計算した最新の値がまだ含まれています。  
   
- The `Static` modifier can be used in this context:  
+ このコンテキストでは、`Static` 修飾子を使用できます。  
   
  [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic の有効期間](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [変数宣言](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [ローカル型の推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

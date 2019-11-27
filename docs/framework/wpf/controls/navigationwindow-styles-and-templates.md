@@ -22,16 +22,16 @@ ms.locfileid: "74283491"
 ## <a name="navigationwindow-parts"></a>NavigationWindow パーツ  
  次の表に、<xref:System.Windows.Navigation.NavigationWindow> コントロールの名前付きの部分を示します。  
   
-|パーツ|[種類]|[説明]|  
+|要素|種類|説明|  
 |-|-|-|  
 |PART_NavWinCP|<xref:System.Windows.Controls.ContentPresenter>|コンテンツの領域。|  
   
 ## <a name="navigationwindow-states"></a>NavigationWindow の状態  
  次の表は、<xref:System.Windows.Navigation.NavigationWindow> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "74283491"
   
  完全なサンプルについては、[Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>

@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346466"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop ステートメント (Visual Basic)
-Suspends execution.  
+実行を中断します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,19 +28,19 @@ Suspends execution.
 Stop  
 ```  
   
-## <a name="remarks"></a>Remarks  
- You can place `Stop` statements anywhere in procedures to suspend execution. Using the `Stop` statement is similar to setting a breakpoint in the code.  
+## <a name="remarks"></a>コメント  
+ プロシージャ内の任意の場所に `Stop` ステートメントを配置して、実行を中断することができます。 `Stop` ステートメントの使用は、コードにブレークポイントを設定することと似ています。  
   
- The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.  
+ `Stop` ステートメントは実行を中断しますが、`End`とは異なり、コンパイル済みの実行可能 (.exe) ファイルに存在しない限り、ファイルは閉じられず、変数はクリアされません。  
   
 > [!NOTE]
-> If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked. This is true regardless of whether the code was compiled in debug or retail mode.  
+> 統合開発環境 (IDE: integrated development environment) の外部で実行されているコードで `Stop` ステートメントが検出されると、デバッガーが呼び出されます。 これは、コードがデバッグモードとリテールモードのどちらでコンパイルされたかに関係なく当てはまります。  
   
 ## <a name="example"></a>例  
- This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.  
+ この例では、`Stop` ステートメントを使用して、`For...Next` ループを通じて各反復処理の実行を中断します。  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [End ステートメント](../../../visual-basic/language-reference/statements/end-statement.md)

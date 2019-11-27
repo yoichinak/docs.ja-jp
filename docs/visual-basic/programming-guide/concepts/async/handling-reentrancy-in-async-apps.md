@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354266"
 ---
-# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Handling Reentrancy in Async Apps (Visual Basic)
+# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>非同期アプリでの再入の処理 (Visual Basic)
 
 非同期コードをアプリに含める場合は、再入を考慮し、場合によっては回避することをお勧めします。これは、完了前に非同期操作の再入力を参照します。 再入の可能性を特定して処理しないと、予期しない結果が発生する可能性があります。
 
@@ -126,7 +126,7 @@ End Sub
 
 **[Start]** ボタンを無効にせず、有効の状態を保持できますが、ユーザーがボタンを再度クリックしたときに、実行中の処理を取り消し、最後に開始された処理を続行できます。
 
-For more information about cancellation, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
+キャンセルの詳細については、「[非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)」を参照してください。
 
 このシナリオを設定するには、「[例のアプリをレビューして実行する](#BKMD_SettingUpTheExample)」に用意されている基本コードを次のように変更します。 また、完成したアプリを「[Async Samples: Reentrancy in .NET Desktop Apps (非同期の例: .NET デスクトップ アプリでの再入)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」からダウンロードすることもできます。 このプロジェクトの名前は CancelAndRestart です。
 
@@ -139,7 +139,7 @@ For more information about cancellation, see [Fine-Tuning Your Async Application
         Dim cts As CancellationTokenSource
     ```
 
-2. `StartButton_Click` で、処理が既に実行されているかどうかを確認します。 If the value of `cts` is `Nothing`, no operation is already active. If the value isn't `Nothing`, the operation that is already running is canceled.
+2. `StartButton_Click` で、処理が既に実行されているかどうかを確認します。 `cts` の値が `Nothing`場合、操作は既にアクティブになっていません。 値が `Nothing`ない場合、既に実行されている操作は取り消されます。
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -156,7 +156,7 @@ For more information about cancellation, see [Fine-Tuning Your Async Application
     cts = newCTS
     ```
 
-4. At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to `Nothing`.
+4. `StartButton_Click`の最後に、現在のプロセスが完了したので、`cts` の値を `Nothing`に戻します。
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -248,7 +248,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output:
+このアプリの実行中に何度も **[開始]** ボタンをクリックすると、次の出力のような結果が生成されます。
 
 ```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -474,7 +474,7 @@ End Function
 
 この例を実行するには、変更を「[アプリケーションをビルドする](#BKMK_BuildingTheApp)」のコードに貼り付けます。また、「[アプリをダウンロードする](#BKMK_DownloadingTheApp)」の手順に従って、サンプルをダウンロードし、QueueResults プロジェクトを実行することもできます。
 
-#### <a name="points-of-interest"></a>目的のポイント
+#### <a name="points-of-interest"></a>重要点
 
 出力で先頭にシャープ記号 (#) が付いている情報行は、この例の動作を明確に示しています。
 
@@ -516,7 +516,7 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- The `pendingWork` task is `Nothing` at the start of `FinishOneGroupAsync` only for group A, which started first. `FinishOneGroupAsync` に達したとき、グループ A はまだ await 式を完了していません。 したがって、コントロールは `AccessTheWebAsync` に戻っておらず、`pendingWork` への最初の割り当ては発生していません。
+- `pendingWork` タスクは、最初に開始されたグループ A に対してのみ、`FinishOneGroupAsync` の開始時に `Nothing` ます。 `FinishOneGroupAsync` に達したとき、グループ A はまだ await 式を完了していません。 したがって、コントロールは `AccessTheWebAsync` に戻っておらず、`pendingWork` への最初の割り当ては発生していません。
 
 - 次の 2 行は、出力に必ず同時に表示されます。 `StartButton_Click` のグループ操作が開始してから、グループのタスクが `pendingWork` に割り当てられるまでの間、コードが中断されることは決してありません。
 
@@ -556,11 +556,11 @@ End Function
 
 1. Visual Studio を起動します。
 
-2. メニュー バーで **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順にクリックします。
+2. メニュー バーで、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
 
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
-3. In the **Installed Templates** pane, expand **Visual Basic**, and then expand **Windows**.
+3. **[インストールされたテンプレート]** ペインで、 **[Visual Basic]** を展開し、 **[Windows]** を展開します。
 
 4. プロジェクトの種類の一覧の **[WPF アプリケーション]** をクリックします。
 
@@ -596,9 +596,9 @@ End Function
 
      まだ選択されていない場合は、<xref:System.Net.Http> の参照を追加します。
 
-9. In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.
+9. **ソリューションエクスプローラー**で、mainwindow.xaml のショートカットメニューを開き、 **[コードの表示]** を選択します。
 
-10. In MainWindow.xaml.vb , replace the code with the following code.
+10. Mainwindow.xaml で、コードを次のコードに置き換えます。
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.
@@ -682,7 +682,7 @@ End Function
 
 12. 「[[Start] ボタンを無効にする](#BKMK_DisableTheStartButton)」、「[操作を取り消して再開する](#BKMK_CancelAndRestart)」、または「[複数の操作を実行して出力をキューに登録する](#BKMK_RunMultipleOperations)」の変更を行って再入を処理します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

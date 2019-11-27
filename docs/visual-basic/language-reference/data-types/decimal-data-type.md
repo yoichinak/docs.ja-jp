@@ -29,23 +29,23 @@ ms.locfileid: "74344043"
 ---
 # <a name="decimal-data-type-visual-basic"></a>10 進型 (Decimal) (Visual Basic)
 
-Holds signed 128-bit (16-byte) values representing 96-bit (12-byte) integer numbers scaled by a variable power of 10. The scaling factor specifies the number of digits to the right of the decimal point; it ranges from 0 through 28. With a scale of 0 (no decimal places), the largest possible value is +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9228162514264337593543950335E+28). With 28 decimal places, the largest value is +/-7.9228162514264337593543950335, and the smallest nonzero value is +/-0.0000000000000000000000000001 (+/-1E-28).
+可変 10 の累乗によってスケーリングされた 96 ビット (12 バイト) 整数値を表す符号付き 128 ビット (16 バイト) 値を保持します。 スケールファクターは、小数点の右側の桁数を指定します。0から28までの範囲です。 小数点以下桁数が 0 (小数点以下桁数) の場合、有効な最大値は +/-79228162514264337593543950335 (+/-7.9228162514264337593543950335E + 28) です。 小数点以下を28桁にすると、最大値は +/-7.9228162514264337593543950335、0以外の最小値は +/-0.0000000000000000000000000001 (+/-1E-28) になります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The `Decimal` data type provides the greatest number of significant digits for a number. It supports up to 29 significant digits and can represent values in excess of 7.9228 x 10^28. It is particularly suitable for calculations, such as financial, that require a large number of digits but cannot tolerate rounding errors.
+`Decimal` データ型は、数値の最大有効桁数を提供します。 最大29桁の有効桁数をサポートし、7.9228 x 10 ^ 28 を超える値を表すことができます。 これは、多くの数字を必要とするが丸め誤差を許容できない財務などの計算に特に適しています。
 
 `Decimal` の既定値は 0 です。
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **Precision.** `Decimal` is not a floating-point data type. The `Decimal` structure holds a binary integer value, together with a sign bit and an integer scaling factor that specifies what portion of the value is a decimal fraction. Because of this, `Decimal` numbers have a more precise representation in memory than floating-point types (`Single` and `Double`).
+- **精度.** `Decimal` は、浮動小数点データ型ではありません。 `Decimal` 構造体は、2進数の整数値を保持します。符号ビットと、値のどの部分が小数点であるかを指定する整数の拡大率です。 このため、`Decimal` の数値は、浮動小数点型 (`Single` と `Double`) よりもメモリ内でより正確に表現されます。
 
-- **パフォーマンス。** The `Decimal` data type is the slowest of all the numeric types. You should weigh the importance of precision against performance before choosing a data type.
+- **パフォーマンス。** `Decimal` データ型は、すべての数値型の中で最も低速なデータ型です。 データ型を選択する前に、精度の重要性をパフォーマンスと比較する必要があります。
 
-- **Widening.** The `Decimal` data type widens to `Single` or `Double`. This means you can convert `Decimal` to either of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
+- **広げ.** `Decimal` データ型は、`Single` または `Double`に拡大変換されます。 つまり、<xref:System.OverflowException?displayProperty=nameWithType> エラーが発生することなく、これらの型のいずれかに `Decimal` を変換できます。
 
-- **Trailing Zeros.** Visual Basic does not store trailing zeros in a `Decimal` literal. However, a `Decimal` variable preserves any trailing zeros acquired computationally. 次に例を示します。
+- **後続のゼロ。** Visual Basic は、末尾のゼロを `Decimal` リテラルに格納しません。 ただし、`Decimal` 変数は、計算を取得した後続のゼロを保持します。 これを次の例に示します。
 
   ```vb
   Dim d1, d2, d3, d4 As Decimal
@@ -57,19 +57,19 @@ The `Decimal` data type provides the greatest number of significant digits for a
         ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))
   ```
 
-  The output of `MsgBox` in the preceding example is as follows:
+  前の例の `MsgBox` の出力は次のとおりです。
 
   ```console
   d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4
   ```
 
-- **Type Characters.** あるリテラルにリテラルの型文字 `D` を付けると、そのリテラルは `Decimal` に変換されます。 ある識別子に識別子の型文字 `@` を付けると、その識別子は整数型 (`Decimal`) に変換されます。
+- **文字を入力します。** あるリテラルにリテラルの型文字 `D` を付けると、そのリテラルは `Decimal` に変換されます。 ある識別子に識別子の型文字 `@` を付けると、その識別子は整数型 (`Decimal`) に変換されます。
 
-- **Framework Type.** .NET Framework において対応する型は、<xref:System.Decimal?displayProperty=nameWithType> 構造体です。
+- **フレームワークの種類。** .NET Framework において対応する型は、<xref:System.Decimal?displayProperty=nameWithType> 構造体です。
 
-## <a name="range"></a>範囲
+## <a name="range"></a>[範囲]
 
- You might need to use the `D` type character to assign a large value to a `Decimal` variable or constant. This requirement is because the compiler interprets a literal as `Long` unless a literal type character follows the literal, as the following example shows.
+ `Decimal` の変数または定数に大きな値を割り当てるには、`D` 型文字を使用することが必要になる場合があります。 この要件は、次の例に示すように、リテラルの型文字がリテラルの後に続く場合を除き、コンパイラがリテラルを `Long` として解釈するためです。
 
 ```vb
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.
@@ -77,13 +77,13 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
 ```
 
-The declaration for `bigDec1` doesn't produce an overflow because the value that's assigned to it falls within the range for `Long`. The `Long` value can be assigned to the `Decimal` variable.
+割り当てられた値が `Long`の範囲内にあるため、`bigDec1` の宣言でオーバーフローが発生することはありません。 `Long` 値は `Decimal` 変数に割り当てることができます。
 
-The declaration for `bigDec2` generates an overflow error because the value that's assigned to it is too large for `Long`. Because the numeric literal can't first be interpreted as a `Long`, it can't be assigned to the `Decimal` variable.
+`bigDec2` の宣言でオーバーフローエラーが発生するのは、割り当てられた値が `Long`に対して大きすぎるためです。 数値リテラルは最初に `Long`として解釈できないため、`Decimal` 変数に割り当てることはできません。
 
-For `bigDec3`, the literal type character `D` solves the problem by forcing the compiler to interpret the literal as a `Decimal` instead of as a `Long`.
+`bigDec3`の場合、リテラルの型文字 `D` は、コンパイラが `Long`ではなく `Decimal` としてリテラルを解釈するよう強制することによって、問題を解決します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Decimal?displayProperty=nameWithType>
 - <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>
@@ -91,6 +91,6 @@ For `bigDec3`, the literal type character `D` solves the problem by forcing the 
 - [データの種類](../../../visual-basic/language-reference/data-types/index.md)
 - [Single データ型](../../../visual-basic/language-reference/data-types/single-data-type.md)
 - [Double 型](../../../visual-basic/language-reference/data-types/double-data-type.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -112,7 +112,7 @@ public MyClass : SomeBaseClass {
 #### <a name="setting-dependency-properties-with-setvalue"></a>SetValue による依存関係プロパティの設定  
  プロパティ設定の便宜のためにラッパーを持たないプロパティを設定し、<xref:System.Windows.DependencyObject.SetValue%2A>で値を設定する場合にも、同じパターンが適用されます。 コンストラクターパラメーターをパススルーする <xref:System.Windows.DependencyObject.SetValue%2A> を呼び出すと、初期化のためにクラスのパラメーターなしのコンストラクターも呼び出される必要があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [カスタム依存関係プロパティ](custom-dependency-properties.md)
 - [依存関係プロパティの概要](dependency-properties-overview.md)

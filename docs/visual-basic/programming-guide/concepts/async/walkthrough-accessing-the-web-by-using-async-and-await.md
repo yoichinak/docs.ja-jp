@@ -13,7 +13,7 @@ ms.locfileid: "74349093"
 
 async/await 機能を使用することで、非同期プログラムをより簡単かつ直感的に記述できます。 同期コードに似た非同期コードを記述し、通常の非同期コードが必要とする難しいコールバック関数や継続の処理をコンパイラに任せます。
 
-For more information about the Async feature, see [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).
+非同期機能の詳細については、「 [async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)」を参照してください。
 
 このチュートリアルは、Web サイトの一覧でのバイト数の合計を計算する同期 Windows Presentation Foundation (WPF) アプリケーションから開始します。 その後、新しい機能を使用して、アプリケーションを非同期ソリューションに変換します。
 
@@ -23,33 +23,33 @@ For more information about the Async feature, see [Asynchronous Programming with
 
 > [!div class="checklist"]
 >
-> - [Create a WPF application](#create-a-wpf-application)
-> - [Design a simple WPF MainWindow](#design-a-simple-wpf-mainwindow)
-> - [Add a reference](#add-a-reference)
-> - [Add necessary Imports statements](#add-necessary-imports-statements)
-> - [Create a synchronous application](#create-a-synchronous-application)
-> - [Test the synchronous solution](#test-the-synchronous-solution)
-> - [Convert GetURLContents to an asynchronous method](#convert-geturlcontents-to-an-asynchronous-method)
-> - [Convert SumPageSizes to an asynchronous method](#convert-sumpagesizes-to-an-asynchronous-method)
-> - [Convert startButton_Click to an asynchronous method](#convert-startbutton_click-to-an-asynchronous-method)
-> - [Test the asynchronous solution](#test-the-asynchronous-solution)
-> - [Replace the GetURLContentsAsync method with a .NET Framework method](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
+> - [WPF アプリケーションの作成](#create-a-wpf-application)
+> - [単純な WPF Mainwindow.xaml を設計する](#design-a-simple-wpf-mainwindow)
+> - [参照を追加する](#add-a-reference)
+> - [必要な Imports ステートメントを追加する](#add-necessary-imports-statements)
+> - [同期アプリケーションを作成する](#create-a-synchronous-application)
+> - [同期ソリューションをテストする](#test-the-synchronous-solution)
+> - [GetURLContents を非同期メソッドに変換する](#convert-geturlcontents-to-an-asynchronous-method)
+> - [SumPageSizes を非同期メソッドに変換する](#convert-sumpagesizes-to-an-asynchronous-method)
+> - [StartButton_Click を非同期メソッドに変換する](#convert-startbutton_click-to-an-asynchronous-method)
+> - [非同期ソリューションをテストする](#test-the-asynchronous-solution)
+> - [Geturlの Async メソッドを .NET Framework メソッドに置き換えます。](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
 
-See the [Example](#example) section for the complete asynchronous example.
+完全な非同期の例については、「[例](#example)」を参照してください。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>前提条件
 
-お使いのコンピューターに、Visual Studio 2012 以降がインストールされている必要があります。 For more information, see the Visual Studio [Downloads](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) page.
+お使いのコンピューターに、Visual Studio 2012 以降がインストールされている必要があります。 詳細については、Visual Studio の[ダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)ページを参照してください。
 
 ## <a name="create-a-wpf-application"></a>WPF アプリケーションを作成する
 
 1. Visual Studio を起動します。
 
-2. メニュー バーで **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順にクリックします。
+2. メニュー バーで、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
 
     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
-3. In the **Installed Templates** pane, choose Visual Basic, and then choose **WPF Application** from the list of project types.
+3. **[インストールされたテンプレート]** ペインで、Visual Basic を選択し、プロジェクトの種類の一覧から  **[WPF アプリケーション]** を選択します。
 
 4. **[名前]** ボックスに「`AsyncExampleWPF`」と入力して、 **[OK]** を選択します。
 
@@ -99,11 +99,11 @@ See the [Example](#example) section for the complete asynchronous example.
 
 6. **[OK]** をクリックしてダイアログ ボックスを閉じます。
 
-## <a name="add-necessary-imports-statements"></a>Add necessary Imports statements
+## <a name="add-necessary-imports-statements"></a>必要な Imports ステートメントを追加する
 
-1. In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.
+1. **ソリューションエクスプローラー**で、mainwindow.xaml のショートカットメニューを開き、 **[コードの表示]** を選択します。
 
-2. Add the following `Imports` statements at the top of the code file if they’re not already present.
+2. 次の `Imports` ステートメントをコードファイルの先頭に追加します (まだ存在していない場合)。
 
     ```vb
     Imports System.Net.Http
@@ -111,11 +111,11 @@ See the [Example](#example) section for the complete asynchronous example.
     Imports System.IO
     ```
 
-## <a name="create-a-synchronous-application"></a>Create a synchronous application
+## <a name="create-a-synchronous-application"></a>同期アプリケーションを作成する
 
-1. In the design window, MainWindow.xaml, double-click the **Start** button to create the `startButton_Click` event handler in MainWindow.xaml.vb.
+1. デザインウィンドウの Mainwindow.xaml で、 **[Start]** ボタンをダブルクリックして、mainwindow.xaml に `startButton_Click` イベントハンドラーを作成します。
 
-2. In MainWindow.xaml.vb, copy the following code into the body of `startButton_Click`:
+2. Mainwindow.xaml で、次のコードを `startButton_Click`の本文にコピーします。
 
     ```vb
     resultsTextBox.Clear()
@@ -135,7 +135,7 @@ See the [Example](#example) section for the complete asynchronous example.
 
     - `DisplayResults` は、各 URL のバイト配列内のバイト数を表示します。
 
-    Copy the following four methods, and then paste them under the `startButton_Click` event handler in MainWindow.xaml.vb:
+    次の4つのメソッドをコピーし、Mainwindow.xaml の `startButton_Click` イベントハンドラーの下に貼り付けます。
 
     ```vb
     Private Sub SumPageSizes()
@@ -238,7 +238,7 @@ See the [Example](#example) section for the complete asynchronous example.
 
 ## <a name="convert-geturlcontents-to-an-asynchronous-method"></a>GetURLContents を非同期メソッドに変換する
 
-1. To convert the synchronous solution to an asynchronous solution, the best place to start is in `GetURLContents` because the calls to the <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=nameWithType> method and to the <xref:System.IO.Stream.CopyTo%2A?displayProperty=nameWithType> method are where the application accesses the web. .NET Framework には両方のメソッドの非同期バージョンが用意されているため、変換は簡単です。
+1. 同期ソリューションを非同期ソリューションに変換する場合、開始するのが最適な場所は `GetURLContents` です。これは、<xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=nameWithType> メソッドと <xref:System.IO.Stream.CopyTo%2A?displayProperty=nameWithType> メソッドの呼び出しがアプリケーションによって web にアクセスするためです。 .NET Framework には両方のメソッドの非同期バージョンが用意されているため、変換は簡単です。
 
     `GetURLContents` で使用されているメソッドの詳細については、「<xref:System.Net.WebRequest>」を参照してください。
 
@@ -253,7 +253,7 @@ See the [Example](#example) section for the complete asynchronous example.
 
 2. `GetResponseAsync` は、<xref:System.Threading.Tasks.Task%601> を返します。 この場合、*タスク戻り変数*の `TResult` の型は <xref:System.Net.WebResponse> です。 このタスクは、要求されたデータのダウンロードが完了し、タスクが最後まで実行された後に、実際の `WebResponse` オブジェクトを生成するという約束です。
 
-    To retrieve the `WebResponse` value from the task, apply an [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator to the call to `GetResponseAsync`, as the following code shows.
+    タスクから `WebResponse` 値を取得するには、次のコードに示すように、`GetResponseAsync`への呼び出しに[Await](../../../../visual-basic/language-reference/operators/await-operator.md)演算子を適用します。
 
     ```vb
     Using response As WebResponse = Await webReq.GetResponseAsync()
@@ -268,11 +268,11 @@ See the [Example](#example) section for the complete asynchronous example.
     Using response As WebResponse = Await responseTask
     ```
 
-    `webReq.GetResponseAsync` への呼び出しによって、`Task(Of WebResponse)` または `Task<WebResponse>` が返されます。 Then an `Await` operator is applied to the task to retrieve the `WebResponse` value.
+    `webReq.GetResponseAsync` への呼び出しによって、`Task(Of WebResponse)` または `Task<WebResponse>` が返されます。 次に、`WebResponse` 値を取得するために、タスクに `Await` 演算子が適用されます。
 
-    非同期メソッドにタスクの完了に依存しない処理がある場合、メソッドはこれら 2 つのステートメントの間、つまり非同期メソッドへの呼び出しから、await 演算子の適用までの間にその処理を続行することができます。 For examples, see [How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) and [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+    非同期メソッドにタスクの完了に依存しない処理がある場合、メソッドはこれら 2 つのステートメントの間、つまり非同期メソッドへの呼び出しから、await 演算子の適用までの間にその処理を続行することができます。 例については、「[方法: async と Await を使用して複数の Web 要求を並列実行する方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) 」および「[方法: task.whenall (Visual Basic) を使用して非同期のチュートリアルを拡張する](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)」を参照してください。
 
-3. 前の手順で `Await` 演算子を追加したため、コンパイラ エラーが発生します。 The operator can be used only in methods that are marked with the [Async](../../../../visual-basic/language-reference/modifiers/async.md) modifier. `CopyTo` への呼び出しを `CopyToAsync` への呼び出しに置き換える変換手順を繰り返す間は、エラーを無視してください。
+3. 前の手順で `Await` 演算子を追加したため、コンパイラ エラーが発生します。 演算子は、 [Async](../../../../visual-basic/language-reference/modifiers/async.md)修飾子でマークされているメソッドでのみ使用できます。 `CopyTo` への呼び出しを `CopyToAsync` への呼び出しに置き換える変換手順を繰り返す間は、エラーを無視してください。
 
     - 呼び出されるメソッドの名前を <xref:System.IO.Stream.CopyToAsync%2A> に変更します。
 
@@ -293,15 +293,15 @@ See the [Example](#example) section for the complete asynchronous example.
         Await copyTask
         ```
 
-4. `GetURLContents` 内で必要な作業として残っているのは、メソッド シグネチャの調整のみです。 You can use the `Await` operator only in methods that are marked with the [Async](../../../../visual-basic/language-reference/modifiers/async.md) modifier. 次のコードに示すように、修飾子を追加し、メソッドを*非同期メソッド*としてマークします。
+4. `GetURLContents` 内で必要な作業として残っているのは、メソッド シグネチャの調整のみです。 `Await` 演算子は、 [Async](../../../../visual-basic/language-reference/modifiers/async.md)修飾子でマークされているメソッドでのみ使用できます。 次のコードに示すように、修飾子を追加し、メソッドを*非同期メソッド*としてマークします。
 
     ```vb
     Private Async Function GetURLContents(url As String) As Byte()
     ```
 
-5. The return type of an async method can only be <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>. Visual Basic でのメソッドは、`Task` または `Task(Of T)` を返す `Function` にするか、`Sub` にする必要があります。 Typically, a `Sub` method  is used only in an async event handler, where `Sub` is required. In other cases, you use `Task(T)` if the completed method has a [Return](../../../../visual-basic/language-reference/statements/return-statement.md) statement that returns a value of type T, and you use `Task` if the completed method doesn’t return a meaningful value.
+5. 非同期メソッドの戻り値の型には、<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>のみを指定できます。 Visual Basic でのメソッドは、`Function` または `Task` を返す `Task(Of T)` にするか、`Sub` にする必要があります。 通常、`Sub` メソッドは、`Sub` が必要な非同期イベントハンドラーでのみ使用されます。 `Task` また、完了したメソッドに T 型の値を返す[Return](../../../../visual-basic/language-reference/statements/return-statement.md)ステートメントがあり、完成したメソッドが意味のある値を返さない場合は、`Task(T)` を使用します。
 
-    For more information, see [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
+    詳細については、「[非同期の戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)」を参照してください。
 
     メソッド `GetURLContents` には return ステートメントがあり、このステートメントはバイト配列を返します。 そのため、非同期バージョンの戻り値の型は Task(T) であり、T はバイト配列です。 メソッド シグネチャに、次の変更を加えます。
 
@@ -346,7 +346,7 @@ See the [Example](#example) section for the complete asynchronous example.
 
     - メソッド名に "Async" を追加します。
 
-    - There is no task return variable, T, this time because `SumPageSizesAsync` doesn’t return a value for T. (The method has no `Return` statement.) However, the method must return a `Task` to be awaitable. Therefore, change the method type from `Sub` to `Function`. 関数の戻り値の型は、`Task` です。
+    - 現時点では、タスクの戻り変数 T がありません。これは `SumPageSizesAsync` が T の値を返さないためです (このメソッドには `Return` ステートメントがありません)。ただし、メソッドは、待機可能になる `Task` を返す必要があります。 そのため、メソッドの種類を `Sub` から `Function`に変更します。 関数の戻り値の型は、`Task` です。
 
     これらの変更を次のコードに示します。
 
@@ -362,7 +362,7 @@ See the [Example](#example) section for the complete asynchronous example.
 
 2. `SumPageSizesAsync` は非同期メソッドであるため、結果を待機するイベント ハンドラーのコードを変更します。
 
-    `SumPageSizesAsync` への呼び出しは、`GetURLContentsAsync` の `CopyToAsync` への呼び出しに似ています。 この呼び出しによって、`Task(T)` ではなく `Task` が返されます。
+    `SumPageSizesAsync` への呼び出しは、`CopyToAsync` の `GetURLContentsAsync` への呼び出しに似ています。 この呼び出しによって、`Task` ではなく `Task(T)` が返されます。
 
     前述した手順と同様に、1 つまたは 2 つのステートメントを使用して、呼び出しを変換できます。 これらの変更を次のコードに示します。
 
@@ -389,7 +389,7 @@ See the [Example](#example) section for the complete asynchronous example.
     startButton.IsEnabled = True
     ```
 
-    For more information about reentrancy, see [Handling Reentrancy in Async Apps (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).
+    再入の詳細については、「[非同期アプリでの再入の処理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)」を参照してください。
 
 4. 最後に、`Async` 修飾子を宣言に追加し、イベント ハンドラーが `SumPagSizesAsync` を待機できるようにします。
 
@@ -397,7 +397,7 @@ See the [Example](#example) section for the complete asynchronous example.
     Async Sub startButton_Click(sender As Object, e As RoutedEventArgs) Handles startButton.Click
     ```
 
-    通常、イベント ハンドラーの名前は変更されません。 The return type isn’t changed to `Task` because event handlers must be `Sub` procedures in Visual Basic.
+    通常、イベント ハンドラーの名前は変更されません。 イベントハンドラーは Visual Basic 内の `Sub` プロシージャである必要があるため、戻り値の型を `Task` に変更することはできません。
 
     同期処理から非同期処理へのプロジェクトの変換が完了しました。
 
@@ -411,11 +411,11 @@ See the [Example](#example) section for the complete asynchronous example.
 
     - 最も重要な点は、ダウンロード中に UI スレッドがブロックされないことです。 Web リソースをダウンロード、カウント、および表示している間に、ウィンドウの移動やサイズ変更を行うことができます。 いずれかの Web サイトの処理が遅い、または応答しない場合、**閉じる**ボタン (右上隅の赤色のフィールドにある [x]) をクリックすることで、操作を取り消すことができます。
 
-## <a name="replace-the-geturlcontentsasync-method-with-a-net-framework-method"></a>Replace the GetURLContentsAsync method with a .NET Framework method
+## <a name="replace-the-geturlcontentsasync-method-with-a-net-framework-method"></a>Geturlの Async メソッドを .NET Framework メソッドに置き換えます。
 
-1. The .NET Framework provides many async methods that you can use. One of them, the <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29?displayProperty=nameWithType> method, does just what you need for this walkthrough. これを、前述の手順で作成した `GetURLContentsAsync` メソッドの代わりに使用できます。
+1. .NET Framework には、使用できる非同期メソッドが数多く用意されています。 そのうちの1つは、このチュートリアルで必要なのは、<xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29?displayProperty=nameWithType> メソッドです。 これを、前述の手順で作成した `GetURLContentsAsync` メソッドの代わりに使用できます。
 
-    The first step is to create an <xref:System.Net.Http.HttpClient> object in the `SumPageSizesAsync` method. 次の宣言をメソッドの先頭に追加します。
+    最初の手順では、`SumPageSizesAsync` メソッドに <xref:System.Net.Http.HttpClient> オブジェクトを作成します。 次の宣言をメソッドの先頭に追加します。
 
     ```vb
     ' Declare an HttpClient object and increase the buffer size. The
@@ -438,7 +438,7 @@ See the [Example](#example) section for the complete asynchronous example.
 
 ## <a name="example"></a>例
 
-The following is the full example of the converted asynchronous solution that uses the asynchronous `GetURLContentsAsync` method. この例は、元の同期ソリューションと非常によく似ています。
+非同期 `GetURLContentsAsync` メソッドを使用する変換された非同期ソリューションの完全な例を次に示します。 この例は、元の同期ソリューションと非常によく似ています。
 
 ```vb
 ' Add the following Imports statements, and add a reference for System.Net.Http.
@@ -658,7 +658,7 @@ Class MainWindow
 End Class
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [非同期サンプル: Web へのアクセスのチュートリアル (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [Await 演算子](../../../../visual-basic/language-reference/operators/await-operator.md)

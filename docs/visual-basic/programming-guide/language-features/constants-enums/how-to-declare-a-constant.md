@@ -31,41 +31,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347466"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>方法: 定数を宣言する (Visual Basic)
-You use the `Const` statement to declare a constant and set its value. By declaring a constant, you assign a meaningful name to a value. Once a constant is declared, it cannot be modified or assigned a new value.  
+`Const` ステートメントを使用して定数を宣言し、その値を設定します。 定数を宣言すると、意味のある名前を値に代入します。 定数を宣言すると、変更したり、新しい値を割り当てたりすることはできません。  
   
- You declare a constant within a procedure or in the declarations section of a module, class, or structure. Class or structure-level constants are `Private` by default, but may also be declared as `Public`, `Friend`, `Protected`, or `Protected Friend` for the appropriate level of code access.  
+ 定数は、プロシージャ内で、またはモジュール、クラス、または構造体の宣言セクションで宣言します。 クラスまたは構造体レベルの定数は既定で `Private` されますが、適切なレベルのコードアクセスに対して `Public`、`Friend`、`Protected`、または `Protected Friend` として宣言することもできます。  
   
- The constant must have a valid symbolic name (the rules are the same as those for creating variable names) and an expression composed of numeric or string constants and operators (but no function calls).  
+ 定数には有効なシンボリック名 (規則は変数名を作成するための規則と同じです) と、数値または文字列の定数と演算子で構成される式 (ただし関数呼び出しは含まれません) が必要です。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-declare-a-constant"></a>To declare a constant  
+### <a name="to-declare-a-constant"></a>定数を宣言するには  
   
-- Write a declaration that includes an access specifier, the `Const` keyword, and an expression, as in the following examples:  
+- 次の例に示すように、アクセス指定子、`Const` キーワード、および式を含む宣言を記述します。  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
-     When [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) is `Off` and [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) is `On`, you must declare a constant explicitly by specifying a data type (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, or `String`).  
+     [オプションの推論](../../../../visual-basic/language-reference/statements/option-infer-statement.md)が `Off`、 [option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)が `On`の場合、データ型 (`Boolean`、`Byte`、`Char`、`DateTime`、`Decimal`、`Double`、`Integer`、`Long`、`Short`、`Single`、`String`) を指定して、定数を明示的に宣言する必要があります。  
   
-     When `Option Infer` is `On` or `Option Strict` is `Off`, you can declare a constant without specifying a data type with an `As` clause. The compiler determines the type of the constant from the type of the expression. For more information, see [Constant and Literal Data Types](constant-and-literal-data-types.md).  
+     `Option Infer` が `On` または `Option Strict` が `Off`場合は、`As` 句を使用してデータ型を指定せずに定数を宣言できます。 コンパイラは、式の型から定数の型を特定します。 詳細については、「[定数データ型とリテラルデータ型](constant-and-literal-data-types.md)」を参照してください。  
   
-### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>To declare a constant that has an explicitly stated data type  
+### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>明示的に記述されたデータ型を持つ定数を宣言するには  
   
-- Write a declaration that includes the `As` keyword and an explicit data type, as in the following examples:  
+- 次の例に示すように、`As` キーワードと明示的なデータ型を含む宣言を記述します。  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
-     You can declare multiple constants on a single line, although your code is more readable if you declare only a single constant per line. If you declare multiple constants on a single line, they must all have the same access level (`Public`, `Private`, `Friend`, `Protected`, or `Protected Friend`).  
+     1行に複数の定数を宣言することはできますが、1行につき1つの定数のみを宣言すると、コードが読みやすくなります。 複数の定数を1つの行で宣言する場合は、すべてが同じアクセスレベル (`Public`、`Private`、`Friend`、`Protected`、または `Protected Friend`) である必要があります。  
   
-### <a name="to-declare-multiple-constants-on-a-single-line"></a>To declare multiple constants on a single line  
+### <a name="to-declare-multiple-constants-on-a-single-line"></a>1行で複数の定数を宣言するには  
   
-- Separate the declarations with a comma and a space, as in the following example:  
+- 次の例のように、宣言をコンマとスペースで区切ります。  
   
     ```vb  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Const ステートメント](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [定数とリテラルのデータ型](constant-and-literal-data-types.md)
@@ -84,7 +84,7 @@ You use the `Const` statement to declare a constant and set its value. By declar
 
 - [列挙型の概要](enumerations-overview.md)
 - [定数の概要](constants-overview.md)
-- [How to: Declare an Enumeration](how-to-declare-enumerations.md)
+- [方法: 列挙型を宣言する](how-to-declare-enumerations.md)
 - [列挙型と名前の修飾](enumerations-and-name-qualification.md)
 - [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)

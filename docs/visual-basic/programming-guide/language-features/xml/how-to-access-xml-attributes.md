@@ -15,12 +15,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332327"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>方法 : XML 属性にアクセスする (Visual Basic)
-This example shows how to use an attribute axis property to access XML attributes in an XML element by name. In particular, it uses the `type` attribute axis property to access the attribute named `type` in the `phone` object.  
+この例では、属性軸プロパティを使用して、XML 要素の XML 属性に名前でアクセスする方法を示します。 特に、`type` 属性軸プロパティを使用して、`phone` オブジェクト内の `type` という名前の属性にアクセスします。  
   
 ## <a name="example"></a>例  
  [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
 - [XML 属性軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)

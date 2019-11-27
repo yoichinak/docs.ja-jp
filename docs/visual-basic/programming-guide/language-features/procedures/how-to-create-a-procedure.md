@@ -17,45 +17,45 @@ ms.locfileid: "74344907"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>方法: プロシージャを作成する (Visual Basic)
 
-You enclose a procedure between a starting declaration statement (`Sub` or `Function`) and an ending declaration statement (`End Sub` or `End Function`). All the procedure's code lies between these statements.
+プロシージャは、開始宣言ステートメント (`Sub` または `Function`) と終了宣言ステートメント (`End Sub` または `End Function`) の間で囲みます。 すべてのプロシージャのコードは、これらのステートメントの間にあります。
 
- A procedure cannot contain another procedure, so its starting and ending statements must be outside any other procedure.
+ プロシージャに別のプロシージャを含めることはできません。そのため、プロシージャの開始と終了のステートメントを他のプロシージャの外側に指定する必要があります。
 
- If you have code that performs the same task in different places, you can write the task once as a procedure and then call it from different places in your code.
+ 異なる場所で同じタスクを実行するコードがある場合は、そのタスクを1回のプロシージャとして記述し、コード内のさまざまな場所から呼び出すことができます。
 
-### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>To create a procedure that does not return a value
+### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>値を返さないプロシージャを作成するには
 
-1. Outside any other procedure, use a `Sub` statement, followed by an `End Sub` statement.
+1. 他のプロシージャの外部では、`Sub` ステートメントを使用し、その後に `End Sub` ステートメントを使用します。
 
-2. In the `Sub` statement, follow the `Sub` keyword with the name of the procedure, then the parameter list in parentheses.
+2. `Sub` ステートメントで、`Sub` キーワードの後にプロシージャの名前を入力し、パラメーターリストをかっこで囲んで指定します。
 
-3. Place the procedure's code statements between the `Sub` and `End Sub` statements.
+3. プロシージャのコードステートメントを `Sub` と `End Sub` ステートメントの間に配置します。
 
-### <a name="to-create-a-procedure-that-returns-a-value"></a>To create a procedure that returns a value
+### <a name="to-create-a-procedure-that-returns-a-value"></a>値を返すプロシージャを作成するには
 
-1. Outside any other procedure, use a `Function` statement, followed by an `End Function` statement.
+1. 他のプロシージャの外部では、`Function` ステートメントを使用し、その後に `End Function` ステートメントを使用します。
 
-2. In the `Function` statement, follow the `Function` keyword with the name of the procedure, then the parameter list in parentheses, and then an `As` clause specifying the data type of the return value.
+2. `Function` ステートメントで、`Function` キーワードの後にプロシージャの名前を入力します。次に、かっこで囲まれたパラメーターリストを入力し、戻り値のデータ型を指定する `As` 句を指定します。
 
-3. Place the procedure's code statements between the `Function` and `End Function` statements.
+3. プロシージャのコードステートメントを `Function` と `End Function` ステートメントの間に配置します。
 
-4. Use a `Return` statement to return the value to the calling code.
+4. `Return` ステートメントを使用して、呼び出し元のコードに値を返します。
 
-### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>To connect your new procedure with the old, repetitive blocks of code
+### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>新しいプロシージャを古い繰り返しのコードブロックに接続するには
 
-1. Make sure you define the new procedure in a place where the old code has access to it.
+1. 古いコードがアクセスできる場所に新しいプロシージャを定義していることを確認します。
 
-2. In your old, repetitive code block, replace the statements that perform the repetitive task with a single statement that calls the `Sub` or `Function` procedure.
+2. 繰り返し実行されるコードブロックで、繰り返し発生するタスクを実行するステートメントを、`Sub` または `Function` プロシージャを呼び出す1つのステートメントに置き換えます。
 
-3. If your procedure is a `Function` that returns a value, ensure that your calling statement performs an action with the returned value, such as storing it in a variable, or else the value will be lost.
+3. プロシージャが値を返す `Function` である場合は、呼び出し元のステートメントが戻り値を持つアクション (変数に格納するなど) を実行していることを確認してください。そうでない場合、値は失われます。
 
 ## <a name="example"></a>例
 
- The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides:
+ 次の `Function` プロシージャは、他の2つの辺の値を指定して、直角三角形の最長の辺 (斜辺) を計算します。
 
  [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](index.md)
 - [Sub プロシージャ](sub-procedures.md)

@@ -30,14 +30,14 @@ Visual Basic ファイルのコードのセクションを折りたたんで非�
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`identifier_string`|必須です。 領域が折りたたまれたときにその領域のタイトルとして機能する文字列です。 既定では、領域は折りたたまれています。|  
+|`identifier_string`|必須。 領域が折りたたまれたときにその領域のタイトルとして機能する文字列です。 既定では、領域は折りたたまれています。|  
 |`#End Region`|`#Region` ブロックを終了します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
 
- Visual Studio Code エディターのアウトライン機能を使うときに展開または折りたたみの対象となるコード ブロックを指定するには、`#Region` ディレクティブを使用します。 You can place, or *nest*, regions within other regions to group similar regions together.  
+ Visual Studio Code エディターのアウトライン機能を使うときに展開または折りたたみの対象となるコード ブロックを指定するには、`#Region` ディレクティブを使用します。 他の領域内の領域を配置または*入れ子*にして、類似した領域をまとめてグループ化することができます。  
   
 ## <a name="example"></a>例  
 
@@ -45,7 +45,7 @@ Visual Basic ファイルのコードのセクションを折りたたんで非�
   
  [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [アウトライン](/visualstudio/ide/outlining)

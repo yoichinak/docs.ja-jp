@@ -9,10 +9,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332416"
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>How to: Transform the Shape of an XML Tree (Visual Basic)
+# <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>方法: XML ツリーの構造を変換する (Visual Basic)
 XML ドキュメントの "*構造*" とは、XML ドキュメントの要素名、属性名、およびその階層の特性を表すものです。  
   
- XML ドキュメントの構造を変更しなければならない場合があります。 たとえば、既存の XML ドキュメントを、異なる要素名と属性名を必要とする別のシステムに送信するとします。 ドキュメント全体を調べ、必要に応じて要素の削除や要素名の変更を行うことも可能ですが、関数型構築を使用する方が、読みやすく保守しやすいコードを生成できます。 For more information about functional construction, see [Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ XML ドキュメントの構造を変更しなければならない場合があります。 たとえば、既存の XML ドキュメントを、異なる要素名と属性名を必要とする別のシステムに送信するとします。 ドキュメント全体を調べ、必要に応じて要素の削除や要素名の変更を行うことも可能ですが、関数型構築を使用する方が、読みやすく保守しやすいコードを生成できます。 関数型構築の詳細については、「[関数型構築 (LINQ to XML)」 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)を参照してください。  
   
  最初の例では、XML ドキュメントの編成を変更します。 ここでは、複合要素をツリー内で移動します。  
   
@@ -142,6 +142,6 @@ End Sub
 </PO>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [プロジェクションと変換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

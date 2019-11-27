@@ -16,26 +16,26 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347355"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic の Main プロシージャ
-Every Visual Basic application must contain a procedure called `Main`. This procedure serves as the starting point and overall control for your application. The .NET Framework calls your `Main` procedure when it has loaded your application and is ready to pass control to it. Unless you are creating a Windows Forms application, you must write the `Main` procedure for applications that run on their own.
+すべての Visual Basic アプリケーションには、`Main`と呼ばれるプロシージャを含める必要があります。 この手順は、アプリケーションの開始点と全体的な制御として機能します。 .NET Framework は、アプリケーションが読み込まれ、それに制御を渡す準備ができたときに、`Main` プロシージャを呼び出します。 Windows フォームアプリケーションを作成する場合を除き、独自に実行するアプリケーションの場合は、`Main` の手順を記述する必要があります。
 
- `Main` contains the code that runs first. In `Main`, you can determine which form is to be loaded first when the program starts, find out if a copy of your application is already running on the system, establish a set of variables for your application, or open a database that the application requires.
+ `Main` には、最初に実行されるコードが含まれています。 `Main`では、プログラムの開始時に最初に読み込まれるフォームを特定し、アプリケーションのコピーが既にシステムで実行されているかどうかを確認したり、アプリケーションの一連の変数を設定したり、アプリケーションが必要とするデータベースを開いたりすることができます。
 
-## <a name="requirements-for-the-main-procedure"></a>Requirements for the Main Procedure
- A file that runs on its own (usually with extension .exe) must contain a `Main` procedure. A library (for example with extension .dll) does not run on its own and does not require a `Main` procedure. The requirements for the different types of projects you can create are as follows:
+## <a name="requirements-for-the-main-procedure"></a>Main プロシージャの要件
+ 独自の (通常は拡張子 .exe) で実行されるファイルには、`Main` プロシージャが含まれている必要があります。 ライブラリ (拡張子 .dll など) は独自には実行されず、`Main` の手順は必要ありません。 作成できるさまざまな種類のプロジェクトの要件は次のとおりです。
 
-- Console applications run on their own, and you must supply at least one `Main` procedure.
+- コンソールアプリケーションは自身で実行されるため、少なくとも1つの `Main` プロシージャを指定する必要があります。
 
-- Windows Forms applications run on their own. However, the Visual Basic compiler automatically generates a `Main` procedure in such an application, and you do not need to write one.
+- Windows フォームアプリケーションは独自に実行されます。 ただし、このようなアプリケーションでは、Visual Basic コンパイラによって `Main` プロシージャが自動的に生成されるため、作成する必要はありません。
 
-- Class libraries do not require a `Main` procedure. These include Windows Control Libraries and Web Control Libraries. Web applications are deployed as class libraries.
+- クラスライブラリには `Main` プロシージャは必要ありません。 これには、Windows コントロールライブラリと Web コントロールライブラリが含まれます。 Web アプリケーションはクラスライブラリとして配置されます。
 
-## <a name="declaring-the-main-procedure"></a>Declaring the Main Procedure
- There are four ways to declare the `Main` procedure. It can take arguments or not, and it can return a value or not.
+## <a name="declaring-the-main-procedure"></a>Main プロシージャの宣言
+ `Main` プロシージャを宣言するには、次の4つの方法があります。 引数を受け取ることも、それ以外の値を返すこともできます。
 
 > [!NOTE]
-> If you declare `Main` in a class, you must use the `Shared` keyword. In a module, `Main` does not need to be `Shared`.
+> クラスで `Main` を宣言する場合は、`Shared` キーワードを使用する必要があります。 モジュールでは、`Main` を `Shared`する必要はありません。
 
-- The simplest way is to declare a `Sub` procedure that does not take arguments or return a value.
+- 最も簡単な方法は、引数を取らず、値を返さない `Sub` プロシージャを宣言することです。
 
     ```vb
     Module mainModule
@@ -47,7 +47,7 @@ Every Visual Basic application must contain a procedure called `Main`. This proc
     End Module
     ```
 
-- `Main` can also return an `Integer` value, which the operating system uses as the exit code for your program. Other programs can test this code by examining the Windows ERRORLEVEL value. To return an exit code, you must declare `Main` as a `Function` procedure instead of a `Sub` procedure.
+- `Main` は、オペレーティングシステムがプログラムの終了コードとして使用する `Integer` 値を返すこともできます。 他のプログラムでは、Windows の ERRORLEVEL 値を調べることによって、このコードをテストできます。 終了コードを返すには、`Main` を `Sub` プロシージャの代わりに `Function` プロシージャとして宣言する必要があります。
 
     ```vb
     Module mainModule
@@ -64,7 +64,7 @@ Every Visual Basic application must contain a procedure called `Main`. This proc
     End Module
     ```
 
-- `Main` can also take a `String` array as an argument. Each string in the array contains one of the command-line arguments used to invoke your program. You can take different actions depending on their values.
+- `Main` は、引数として `String` 配列を受け取ることもできます。 配列内の各文字列には、プログラムを呼び出すために使用されるコマンドライン引数の1つが含まれています。 値に応じて、さまざまなアクションを実行できます。
 
     ```vb
     Module mainModule
@@ -88,7 +88,7 @@ Every Visual Basic application must contain a procedure called `Main`. This proc
     End Module
     ```
 
-- You can declare `Main` to examine the command-line arguments but not return an exit code, as follows.
+- 次のように、`Main` を宣言して、コマンドライン引数を確認し、終了コードを返すことはできません。
 
     ```vb
     Module mainModule
@@ -108,12 +108,12 @@ Every Visual Basic application must contain a procedure called `Main`. This proc
     End Module
     ```
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
-- [Structure of a Visual Basic Program](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
+- [Visual Basic プログラムの構造](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)

@@ -14,16 +14,16 @@ ms.locfileid: "74347211"
 # <a name="mycomputerinfo-object"></a>My.Computer.Info オブジェクト
 コンピューターのメモリ、読み込まれたアセンブリ、名前、オペレーティング システムに関する情報を取得するためのプロパティを提供します。  
   
-## <a name="remarks"></a>Remarks  
- For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
+## <a name="remarks"></a>コメント  
+ `My.Computer.Info` オブジェクトのプロパティの詳細については、「<xref:Microsoft.VisualBasic.Devices.ComputerInfo>」を参照してください。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **名前空間:** <xref:Microsoft.VisualBasic.Devices>  
   
  **クラス:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [My.Computer オブジェクト](../../../visual-basic/language-reference/objects/my-computer-object.md)
