@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445526"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach メソッド
-Performs server-invoked debugger auto attach.  
+サーバーによって呼び出されたデバッガーの自動アタッチを実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,26 +40,26 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>パラメーター  
  `guidPort`  
- [in] Always set to `GUID_NULL`.  
+ から常に `GUID_NULL`に設定します。  
   
  `dwPid`  
- [in] Process ID, normally retrieved with the `GetCurrentProcessId` function.  
+ からプロセス ID。通常は `GetCurrentProcessId` 関数を使用して取得されます。  
   
  `dwProgramType`  
- [in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.  
+ からプログラムの種類: `AUTOATTACH_PROGRAM_WIN32`、`AUTOATTACH_PROGRAM_COMPLUS`、または `AUTOATTACH_PROGRAM_UNKNOWN`。  
   
  `dwProgramId`  
- [in] Program ID.  
+ からプログラム ID。  
   
  `pszSessionId`  
- [in] String passed by the debug verb.  
+ からデバッグ動詞によって渡された文字列。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** DbgAutoAttach.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** DbgAutoAttach .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IDebugAutoAttach インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

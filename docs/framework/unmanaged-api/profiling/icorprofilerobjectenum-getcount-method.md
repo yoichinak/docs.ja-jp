@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428264"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>ICorProfilerObjectEnum::GetCount メソッド
-Gets the total number of frozen objects in the collection.  
+コレクション内の固定されたオブジェクトの合計数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,11 +35,11 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>パラメーター  
  `pcelt`  
- [out] A pointer to the number of frozen objects in the collection.  
+ 入出力コレクション内の固定されたオブジェクトの数へのポインター。  
   
- This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.  
+ このメソッドは、.NET Framework バージョン 3.5 Service Pack 1 (SP1) 以降のバージョンで常に0を返します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -48,6 +48,6 @@ HRESULT GetCount (
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerObjectEnum インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433964"
 ---
 # <a name="isymunmanagednamespacegetname-method"></a>ISymUnmanagedNamespace::GetName メソッド
-Gets the name of this namespace.  
+この名前空間の名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +37,20 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>パラメーター  
  `cchName`  
- [in] A `ULONG32` that indicates the size of the `szName` buffer.  
+ から`szName` バッファーのサイズを示す `ULONG32`。  
   
  `pcchName`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.  
+ 入出力Null 終了を含む、名前空間の名前を格納するために必要なバッファーのサイズ (文字数) を受け取る `ULONG32` へのポインター。  
   
  `szName`  
- [out] A pointer to a buffer that contains the namespace name.  
+ 入出力名前空間の名前を格納しているバッファーへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedNamespace インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

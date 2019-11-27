@@ -25,11 +25,11 @@ ms.locfileid: "74348075"
   
  [文字列関数](../../../visual-basic/language-reference/functions/string-functions.md)  
   
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
   
- [CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)  
+ [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)

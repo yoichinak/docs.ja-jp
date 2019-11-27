@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436041"
 ---
 # <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a>ICorProfilerInfo2::EnumModuleFrozenObjects メソッド
-Gets an enumerator that allows iteration over the frozen objects in the specified module.This method is obsolete.  
+指定したモジュール内の固定されたオブジェクトを反復処理できる列挙子を取得します。このメソッドは互換性のために残されています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,21 +35,21 @@ HRESULT EnumModuleFrozenObjects(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleID`  
- [in] The ID of the module that contains the frozen objects to be enumerated.  
+ から列挙される固定オブジェクトを含むモジュールの ID。  
   
  `ppEnum`  
- [out] A pointer to the address of an [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface, which enumerates the frozen objects.  
+ 入出力固定されたオブジェクトを列挙する[ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)インターフェイスのアドレスへのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework Versions:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0  
+ **.NET Framework のバージョン:** 3.5、3.0 SP1、3.0、2.0 SP1、2.0  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434325"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize メソッド
-Gets the estimated binary size of the assembly and its metadata in the current scope.  
+現在のスコープ内のアセンブリとそのメタデータの推定バイナリサイズを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,34 +36,34 @@ HRESULT GetSaveSize (
   
 ## <a name="parameters"></a>パラメーター  
  `fSave`  
- [in] A value of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) enumeration that specifies whether to get an accurate or approximate size. Only three values are valid: cssAccurate, cssQuick, and cssDiscardTransientCAs:  
+ から正確またはおおよそのサイズを取得するかどうかを指定する[CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md)列挙体の値。 有効な値は、cssAccurate、cssQuick、cssDiscardTransientCAs の3つだけです。  
   
-- cssAccurate returns the exact save size but takes longer to calculate.  
+- cssAccurate は正確な保存サイズを返しますが、計算にかかる時間は長くなります。  
   
-- cssQuick returns a size, padded for safety, but takes less time to calculate.  
+- cssQuick は、サイズを返します。これは安全性のために埋め込まれていますが、計算にかかる時間は短くなります。  
   
-- cssDiscardTransientCAs tells `GetSaveSize` that it can throw away discardable custom attributes.  
+- cssDiscardTransientCAs は、破棄可能なカスタム属性を破棄できることを `GetSaveSize` に伝えます。  
   
  `pdwSaveSize`  
- [out] A pointer to the size that is required to save the file.  
+ 入出力ファイルを保存するために必要なサイズへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- `GetSaveSize` calculates the space required, in bytes, to save the assembly and all its metadata in the current scope. (A call to the [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) method would emit this number of bytes.)  
+## <a name="remarks"></a>コメント  
+ `GetSaveSize` は、現在のスコープ内のアセンブリとそのすべてのメタデータを保存するために必要な領域をバイト単位で計算します。 ( [IMetaDataEmit:: SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md)メソッドを呼び出すと、このバイト数が出力されます)。  
   
- If the caller implements the [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interface (through [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) or [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` will perform two passes over the metadata to optimize and compress it. Otherwise, no optimizations are performed.  
+ 呼び出し元が[IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)インターフェイス ( [IMetaDataEmit:: SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)または[IMetaDataEmit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)) を実装している場合、`GetSaveSize` はメタデータに対して2つのパスを実行し、最適化と圧縮を行います。 それ以外の場合、最適化は実行されません。  
   
- If optimization is performed, the first pass simply sorts the metadata structures to tune the performance of import-time searches. This step typically results in moving records around, with the side effect that tokens retained by the tool for future reference are invalidated. The metadata does not inform the caller of these token changes until after the second pass, however. In the second pass, various optimizations are performed that are intended to reduce the overall size of the metadata, such as optimizing away (early binding) `mdTypeRef` and `mdMemberRef` tokens when the reference is to a type or member that is declared in the current metadata scope. In this pass, another round of token mapping occurs. After this pass, the metadata engine notifies the caller, through its `IMapToken` interface, of any changed token values.  
+ 最適化が実行された場合、最初のパスは単にメタデータ構造を並べ替えて、インポート時の検索のパフォーマンスを調整します。 この手順では、通常、後で参照するためにツールによって保持されているトークンが無効になるという副作用で、レコードを移動します。 ただし、メタデータは、2番目のパスの後に、これらのトークンの変更を呼び出し元に通知しません。 2番目のパスでは、現在のメタデータスコープ内で宣言されている型またはメンバーへの参照である場合に、メタ `mdMemberRef` `mdTypeRef` データの全体的なサイズを縮小することを目的としたさまざまな最適化を実行します このパスでは、別のトークンマッピングのラウンドが発生します。 このパスが経過すると、メタデータエンジンは、変更されたトークン値の `IMapToken` インターフェイスを介して呼び出し元に通知します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

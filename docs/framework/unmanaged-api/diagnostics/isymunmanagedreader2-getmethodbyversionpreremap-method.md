@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446452"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>ISymUnmanagedReader2::GetMethodByVersionPreRemap メソッド
-Gets a symbol reader method, given a method token and an edit-and-continue version number. Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-continue operation.  
+メソッドトークンとエディットコンティニュバージョン番号を指定して、シンボルリーダーメソッドを取得します。 バージョン番号は1から始まり、エディットコンティニュ操作の結果としてメソッドが変更されるたびに増分されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,20 +36,20 @@ HRESULT GetMethodByVersionPreRemap(
   
 ## <a name="parameters"></a>パラメーター  
  `token`  
- [in] The method metadata token.  
+ からメソッドメタデータトークン。  
   
  `version`  
- [in] The method version.  
+ からメソッドのバージョン。  
   
  `pRetVal`  
- [out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.  
+ 入出力返された[ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)インターフェイスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl. CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl。 CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedReader2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

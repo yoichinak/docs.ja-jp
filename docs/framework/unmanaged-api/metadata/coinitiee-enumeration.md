@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444102"
 ---
 # <a name="coinitiee-enumeration"></a>COINITIEE 列挙型
-Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.  
+共通言語ランタイムを初期化するときに[Coinitializeee](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)によって使用される定数を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,19 +38,19 @@ typedef enum tagCOINITEE {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COINITEE_DEFAULT`|Default initialization mode. This initializes the runtime and creates the default <xref:System.AppDomain>.|  
-|`COINITEE_DLL`|Initializes to run a managed DLL.|  
-|`COINITEE_MAIN`|Initializes to run a managed EXE. This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.|  
+|`COINITEE_DEFAULT`|既定の初期化モード。 これにより、ランタイムが初期化され、既定の <xref:System.AppDomain>が作成されます。|  
+|`COINITEE_DLL`|マネージ DLL を実行するように初期化します。|  
+|`COINITEE_MAIN`|マネージ EXE を実行するように初期化します。 これにより、ランタイムが初期化されますが、既定の <xref:System.AppDomain>は作成されません。これは、EXE のメインルーチンを入力した後に作成されます。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

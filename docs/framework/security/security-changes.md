@@ -20,6 +20,6 @@ ms.locfileid: "74204506"
 ---
 # <a name="security-changes-in-the-net-framework"></a>.NET Framework におけるセキュリティの変更点
 
-The most important change to security in the .NET Framework 4.5 is in strong naming. これらの変更の詳細については、「 [Enhanced Strong Naming](../../standard/assembly/enhanced-strong-naming.md) 」を参照してください。  
+.NET Framework 4.5 でのセキュリティの最も重要な変更点は、厳密な名前付けです。 これらの変更の詳細については、「 [Enhanced Strong Naming](../../standard/assembly/enhanced-strong-naming.md) 」を参照してください。  
   
-.NET Framework は、マネージド アプリケーションに 2 階層のセキュリティ モデルを提供します。 Windows 8.x Store apps run in a Windows security container that limits access to resources. そのコンテナー内では、マネージド アプリケーションは完全に信頼された状態で実行します。 コード アクセス セキュリティの (CAS) の観点からは、権限を昇格するために開発者が実行できる操作はありません。 Windows で与えられる権限の詳細については、Windows デベロッパー センターの「 [App capability declarations (Windows Store apps)](https://go.microsoft.com/fwlink/?LinkId=230436) 」 (アプリの機能宣言 (Windows ストア アプリ)) を参照してください。 For information about creating a Windows 8.x Store app, see [Create your first Windows Store app using C# or Visual Basic](https://go.microsoft.com/fwlink/?LinkId=230461).
+.NET Framework は、マネージド アプリケーションに 2 階層のセキュリティ モデルを提供します。 Windows 8.x ストアアプリは、リソースへのアクセスを制限する Windows セキュリティコンテナーで実行されます。 そのコンテナー内では、マネージド アプリケーションは完全に信頼された状態で実行します。 コード アクセス セキュリティの (CAS) の観点からは、権限を昇格するために開発者が実行できる操作はありません。 Windows で与えられる権限の詳細については、Windows デベロッパー センターの「 [App capability declarations (Windows Store apps)](https://go.microsoft.com/fwlink/?LinkId=230436) 」 (アプリの機能宣言 (Windows ストア アプリ)) を参照してください。 Windows 8.x ストアアプリの作成の詳細については、「」[または「Visual Basic をC#使用した初めての windows ストアアプリの作成](https://go.microsoft.com/fwlink/?LinkId=230461)」を参照してください。

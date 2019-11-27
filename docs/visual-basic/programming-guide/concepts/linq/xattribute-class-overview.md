@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349326"
 ---
-# <a name="xattribute-class-overview-visual-basic"></a>XAttribute Class Overview (Visual Basic)
+# <a name="xattribute-class-overview-visual-basic"></a>XAttribute クラスの概要 (Visual Basic)
 属性は、要素に関連付けられている名前と値のペアです。 <xref:System.Xml.Linq.XAttribute> クラスは、XML 属性を表します。  
   
 ## <a name="overview"></a>概要  
@@ -25,7 +25,7 @@ ms.locfileid: "74349326"
 |`XAttribute(XName name, object content)`|<xref:System.Xml.Linq.XAttribute> オブジェクトを作成します。 `name` 引数には属性の名前を指定し、`content` には属性のコンテンツを指定します。|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>属性を持つ要素の作成  
- The following code shows an element that contains an attribute using XML literals in Visual Basic:  
+ 次のコードは、Visual Basic で XML リテラルを使用して属性を含む要素を示しています。  
   
 ```vb  
 Dim phone As XElement = <Phone Type="Home">555-555-5555</Phone>  
@@ -74,6 +74,6 @@ Console.WriteLine(c)
   
  属性と要素の区別は主に、ノード レベルで XML ツリーを操作するコードを記述する開発者にとってのみ重要な意味を持ちます。 多くの開発者は、この区別を考慮する必要はありません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML プログラミングの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

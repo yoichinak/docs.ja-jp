@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448045"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionleave-method"></a>ICorProfilerCallback::ExceptionUnwindFunctionLeave メソッド
-Notifies the profiler that the unwind phase of exception handling has finished unwinding a function.  
+例外処理のアンワインドフェーズが関数のアンワインドを完了したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,14 +31,14 @@ Notifies the profiler that the unwind phase of exception handling has finished u
 HRESULT ExceptionUnwindFunctionLeave();  
 ```  
   
-## <a name="remarks"></a>Remarks  
- When the `ExceptionUnwindFunctionLeave` method is called, the function instance and its stack data are removed from the stack.  
+## <a name="remarks"></a>コメント  
+ `ExceptionUnwindFunctionLeave` メソッドが呼び出されると、関数インスタンスとそのスタックデータがスタックから削除されます。  
   
- The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.  
+ スタックがガベージコレクションを許可する状態ではなく、したがって、プリエンプティブガベージコレクションを有効にできないため、この呼び出し中にプロファイラーはブロックしないでください。 プロファイラーがここでブロックし、ガベージコレクションを実行しようとすると、このコールバックが戻るまでランタイムはブロックします。  
   
- Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.  
+ また、この呼び出しでは、プロファイラーはマネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -47,7 +47,7 @@ HRESULT ExceptionUnwindFunctionLeave();
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ExceptionUnwindFunctionEnter メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionenter-method.md)

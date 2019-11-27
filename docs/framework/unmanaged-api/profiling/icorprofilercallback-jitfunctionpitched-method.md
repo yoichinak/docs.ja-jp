@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448420"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>ICorProfilerCallback::JITFunctionPitched メソッド
-Notifies the profiler that a function that has been just-in-time (JIT)-compiled has been removed from memory.  
+Just-in-time (JIT) でコンパイルされた関数がメモリから削除されたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,14 +34,14 @@ HRESULT JITFunctionPitched(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in] The ID of the function that was removed.  
+ から削除された関数の ID。  
   
-## <a name="remarks"></a>Remarks  
- If the removed function is called, the profiler will receive new JIT-compilation events when the function is recompiled. Currently, the common language runtime (CLR) JIT compiler does not remove functions from memory, so this callback is currently not used and will not be received by the profiler.  
+## <a name="remarks"></a>コメント  
+ 削除された関数が呼び出されると、関数が再コンパイルされると、プロファイラーは新しい JIT コンパイルイベントを受け取ります。 現在、共通言語ランタイム (CLR) の JIT コンパイラでは、メモリから関数が削除されないため、このコールバックは現在使用されていないため、プロファイラーによって受信されません。  
   
- The value of `functionId` is not valid until the function is recompiled. When the function is recompiled, the same `functionId` value will be used.  
+ `functionId` の値は、関数が再コンパイルされるまで有効ではありません。 関数を再コンパイルすると、同じ `functionId` 値が使用されます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -50,6 +50,6 @@ HRESULT JITFunctionPitched(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

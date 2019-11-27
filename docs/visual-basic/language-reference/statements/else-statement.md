@@ -14,17 +14,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343754"
 ---
 # <a name="else-statement-visual-basic"></a>Else ステートメント (Visual Basic)
-Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.  
+ステートメントの他の条件グループが実行またはコンパイルされていない場合に、実行またはコンパイルされるステートメントのグループを導入します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  キーワード `Else` は次のコンテキストで使用できます。  
   
  [If...Then...Else ステートメント](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
  [Select...Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If...Then... #Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

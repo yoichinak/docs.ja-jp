@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428037"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField メソッド
-Defines a single variable that is not within a method. This method is used for certain fields in classes, bit fields, and so on.  
+メソッド内にない単一の変数を定義します。 このメソッドは、クラス、ビットフィールドなどの特定のフィールドに対して使用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,38 +42,38 @@ HRESULT DefineField(
   
 ## <a name="parameters"></a>パラメーター  
  `parent`  
- [in] The metadata type or method token.  
+ からメタデータ型またはメソッドトークン。  
   
  `name`  
- [in] The field name.  
+ からフィールド名。  
   
  `attributes`  
- [in] The field attributes.  
+ からフィールド属性。  
   
  `cSig`  
- [in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.  
+ からフィールドシグネチャを格納するために必要なバッファーのサイズ (文字数) を表す `ULONG32`。  
   
  `signature`  
- [in] The array of field signatures.  
+ からフィールドシグネチャの配列。  
   
  `addrKind`  
- [in] The address type.  
+ からアドレスの種類。  
   
  `addr1`  
- [in] The first address for the field specification.  
+ からフィールド指定の最初のアドレス。  
   
  `addr2`  
- [in] The second address for the field specification.  
+ からフィールド指定の2番目のアドレス。  
   
  `addr3`  
- [in] The third address for the field specification.  
+ からフィールド指定の3番目のアドレス。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

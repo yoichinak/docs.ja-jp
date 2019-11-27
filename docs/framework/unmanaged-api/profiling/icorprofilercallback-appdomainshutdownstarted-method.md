@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445183"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted メソッド
-Notifies the profiler that an application domain is being unloaded from a process.  
+アプリケーションドメインがプロセスからアンロードされていることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,12 +34,12 @@ HRESULT AppDomainShutdownStarted(
   
 ## <a name="parameters"></a>パラメーター  
  `appDomainId`  
- [in] Identifies the domain in which the application's assemblies are stored.  
+ からアプリケーションのアセンブリが格納されているドメインを識別します。  
   
-## <a name="remarks"></a>Remarks  
- The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.  
+## <a name="remarks"></a>コメント  
+ `appDomainId` の値は、`AppDomainShutdownStarted` メソッドから返された後の情報要求に対して無効です。これは、このアプリケーションドメインに関する情報を取得するためのプロファイラーの最後の機会です。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -48,6 +48,6 @@ HRESULT AppDomainShutdownStarted(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

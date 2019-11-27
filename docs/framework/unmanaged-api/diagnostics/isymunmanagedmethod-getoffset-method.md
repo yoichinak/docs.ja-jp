@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448939"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset メソッド
-Returns the offset within this method that corresponds to a given position within a document.  
+ドキュメント内の指定された位置に対応する、このメソッド内のオフセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,23 +37,23 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>パラメーター  
  `document`  
- [in] A pointer to the document for which the offset is requested.  
+ からオフセットが要求されるドキュメントへのポインター。  
   
  `line`  
- [in] The document line for which the offset is requested.  
+ からオフセットの要求対象となるドキュメント行。  
   
  `column`  
- [in] The document column for which the offset is requested.  
+ からオフセットが要求されるドキュメント列。  
   
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the offsets.  
+ 入出力オフセットを受け取る `ULONG32` へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

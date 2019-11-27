@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440141"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute メソッド
-Gets a custom attribute based upon its name. Unlike metadata custom attributes, these custom attributes are held in the symbol store.  
+名前に基づいてカスタム属性を取得します。 メタデータのカスタム属性とは異なり、これらのカスタム属性はシンボルストアに保持されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,26 +39,26 @@ HRESULT GetSymAttribute (
   
 ## <a name="parameters"></a>パラメーター  
  `parent`  
- [in] The metadata token for the object for which the attribute is requested.  
+ から属性を要求する対象のオブジェクトのメタデータトークン。  
   
  `name`  
- [in] A pointer to the variable that indicates the attribute to retrieve.  
+ から取得する属性を示す変数へのポインター。  
   
  `cBuffer`  
  [in] `buffer` 配列のサイズ。  
   
  `pcBuffer`  
- [out] A pointer to the variable that receives the length of the attribute data.  
+ 入出力属性データの長さを受け取る変数へのポインター。  
   
  `buffer`  
- [out] A pointer to the variable that receives the attribute data.  
+ 入出力属性データを受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

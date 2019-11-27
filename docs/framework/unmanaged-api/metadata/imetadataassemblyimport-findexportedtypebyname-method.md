@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449448"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName メソッド
-Gets a pointer to an exported type, given its name and enclosing type.  
+名前と外側の型を指定して、エクスポートされた型へのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,27 +37,27 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>パラメーター  
  `szName`  
- [in] The name of the exported type.  
+ からエクスポートされた型の名前。  
   
  `mdtExportedType`  
- [in] The metadata token for the enclosing class of the exported type. This value is `mdExportedTypeNil` if the requested exported type is not a nested type.  
+ からエクスポートする型の外側のクラスのメタデータトークン。 要求されたエクスポート型が入れ子にされた型ではない場合、この値は `mdExportedTypeNil` です。  
   
  `ptkExportedType`  
- [out] A pointer to the `mdExportedType` token that represents the exported type.  
+ 入出力エクスポートされた型を表す `mdExportedType` トークンへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.  
+## <a name="remarks"></a>コメント  
+ `FindExportedTypeByName` メソッドは、参照を解決するために共通言語ランタイムによって採用されている標準の規則を使用します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
 - [ランタイムがアセンブリを検索する方法](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
