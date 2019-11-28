@@ -16,13 +16,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/14/2019
 ms.locfileid: "74088744"
 ---
-# <a name="add-element-for-appsettings"></a>\<appSettings > の > 要素を追加 \<には
+# <a name="add-element-for-appsettings"></a>\<appSettings> の \<add> 要素
 
 カスタムアプリケーション設定を追加します。
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<追加 >**
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
 
 ## <a name="syntax"></a>構文
 
