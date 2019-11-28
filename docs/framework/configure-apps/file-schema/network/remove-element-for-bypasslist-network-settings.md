@@ -17,15 +17,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697893"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>bypasslist の > 要素を削除する \<(ネットワーク設定)
-
+# <a name="remove-element-for-bypasslist-network-settings"></a>bypasslist の \<remove> 要素 (ネットワーク設定)
 プロキシバイパスリストから IP アドレスまたは DNS 名を削除します。
 
 [ **\<configuration>** ](../configuration-element.md)  
 &nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **defaultproxy\<** ](defaultproxy-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[ **bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**削除 >**  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultproxy>** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[ **\<bypasslist>** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**  
 
 ## <a name="syntax"></a>構文
 
