@@ -19,9 +19,9 @@ ms.locfileid: "73115860"
 # <a name="probing-element"></a>\<probing> 要素
 アセンブリの読み込み時に共通言語ランタイムが検索するアプリケーションの基本サブディレクトリを指定します。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp; &nbsp; &nbsp; &nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md) > \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**probing>**  
   
 ## <a name="syntax"></a>構文  
