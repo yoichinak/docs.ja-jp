@@ -15,13 +15,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/14/2019
 ms.locfileid: "74089190"
 ---
-# <a name="proxy-element-network-settings"></a>\<proxy > 要素 (ネットワーク設定)
+# <a name="proxy-element-network-settings"></a>\<proxy> 要素 (ネットワーク設定)
 プロキシ サーバーを定義します。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**defaultProxy >** ](defaultproxy-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**プロキシ >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system. net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<proxy>**
 
 ## <a name="syntax"></a>構文  
   
