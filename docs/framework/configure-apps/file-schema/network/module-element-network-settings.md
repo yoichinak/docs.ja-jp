@@ -15,13 +15,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/14/2019
 ms.locfileid: "74089247"
 ---
-# <a name="module-element-network-settings"></a>\<module > 要素 (ネットワーク設定)
+# <a name="module-element-network-settings"></a>\<module> 要素 (ネットワーク設定)
 新しいプロキシ モジュールをアプリケーションに追加します。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**defaultProxy >** ](defaultproxy-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**モジュール >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system. net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp**\<module>**
 
 ## <a name="syntax"></a>構文  
   
