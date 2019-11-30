@@ -8,12 +8,12 @@ metadata:
   author: cartermp
   ms.author: phcart
   ms.date: 11/25/2019
-  ms.openlocfilehash: 7aef8012a5ef58c1c0a142dce8baf7ccb73f50fa
-  ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-  ms.translationtype: HT
+  ms.openlocfilehash: 113a99d75f77cba56639abf485bf646155f0ff36
+  ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+  ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/27/2019
-  ms.locfileid: "74553063"
+  ms.lasthandoff: 11/28/2019
+  ms.locfileid: "74569499"
 landingContent:
 - title: プログラムについてF#
   linkLists:
@@ -53,6 +53,16 @@ landingContent:
     links:
     - text: での非同期プログラミングF#
       url: tutorials/asynchronous-and-concurrent-programming/async.md
+- title: の新機能F#
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: 4.7 のF#新機能
+      url: whats-new/fsharp-47.md
+    - text: 4.6 のF#新機能
+      url: whats-new/fsharp-46.md
+    - text: 4.5 のF#新機能
+      url: whats-new/fsharp-45.md
 - title: F#言語リファレンス
   linkLists:
   - linkListType: reference
