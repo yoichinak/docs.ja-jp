@@ -73,7 +73,8 @@
       href: whats-new/dotnet-core-2-1.md
     - name: .NET Core 2.0 の新機能
       href: whats-new/dotnet-core-2-0.md
-- name: アプリケーションの互換性
+- name: 互換性に影響する変更
+  displayName: app compatibility
   href: compatibility/
 - name: チュートリアル
   href: tutorials/index.md
@@ -321,23 +322,27 @@
       href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
     - name: XML シリアライザー ジェネレーター
       href: additional-tools/xml-serializer-generator.md
-- name: .NET Framework からの移植
+- name: .NET Framework から移植する
   href: porting/index.md
   items:
     - name: .NET Core で使用できない .NET Framework テクノロジ
       href: porting/net-framework-tech-unavailable.md
-    - name: サードパーティの依存関係の分析
+    - name: サード パーティの依存関係を分析する
       href: porting/third-party-deps.md
-    - name: ライブラリの移植
+    - name: ライブラリを移植する
       href: porting/libraries.md
-    - name: .NET Core のプロジェクトの整理
+    - name: .NET Core のプロジェクトを整理する
       href: porting/project-structure.md
-    - name: .NET Core への移植で役立つツール
+    - name: ツール
       href: porting/tools.md
-    - name: Windows 互換機能パックの使用
+    - name: Windows 互換機能パックを使用する
       href: porting/windows-compat-pack.md
     - name: Windows フォーム プロジェクトを移植する
-      href: porting/winforms.md
+      items:
+        - name: プロジェクトを移植する方法
+          href: porting/winforms.md
+        - name: 互換性に影響する変更
+          href: porting/winforms-breaking-changes.md
     - name: WPF プロジェクトを移植する
       href: porting/wpf.md
 - name: 依存関係の読み込み
