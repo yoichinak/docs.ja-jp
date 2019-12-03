@@ -1,5 +1,5 @@
 ---
-title: Sub 式
+title: Sub 式 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [Visual Basic], sub expression
