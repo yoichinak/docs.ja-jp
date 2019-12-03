@@ -21,9 +21,9 @@ ms.locfileid: "71699302"
 # <a name="sharedlisteners-element"></a>\<sharedListeners > 要素
 任意の source 要素または trace 要素が参照できるリスナーを含みます。  これらのリスナーは、既定ではトレースを受信せず、実行時にこれらのリスナーを取得することはできません。 共有リスナーとして識別されるリスナーは、名前を指定してソースまたはトレースに追加できます。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<の >** ](system-diagnostics-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<sharedListeners >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<sharedListeners>**  
   
 ## <a name="syntax"></a>構文  
   
