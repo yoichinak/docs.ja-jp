@@ -23,7 +23,9 @@ ms.locfileid: "74348208"
  `TryCast` キーワードは、 [CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)と[DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md)キーワードを使用するのと同じ方法で使用します。 最初の引数として式を指定し、2番目の引数として変換する型を指定します。 `TryCast` は、クラスやインターフェイスなどの参照型に対してのみ動作します。 2つの型の間の継承または実装関係が必要です。 これは、一方の型が他の型を継承または実装する必要があることを意味します。  
   
 ## <a name="errors-and-failures"></a>エラーとエラー  
+
  `TryCast` は、継承または実装関係が存在しないことを検出すると、コンパイラエラーを生成します。 ただし、コンパイラエラーがないからといって、変換に成功するとは限りません。 目的の変換が縮小されている場合は、実行時に失敗する可能性があります。 この場合、`TryCast` は [Nothing](../../../visual-basic/language-reference/nothing.md) を返します。 
+
   
 ## <a name="conversion-keywords"></a>変換キーワード  
  型変換のキーワードの比較を次に示します。  
