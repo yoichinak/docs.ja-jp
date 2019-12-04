@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64662086"
 ---
-# <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>'\<functionname >' は宣言されていません (スマート デバイスおよび Visual Basic コンパイラ エラー)
+# <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>'\<functionname >' (は宣言されていません (スマート デバイスおよび Visual Basic コンパイラ エラー)
 <`functionname`> は宣言されていません。 通常、ファイル I/O 機能は `Microsoft.VisualBasic` 名前空間で使用できますが、.NET Compact Framework のターゲット バージョンではサポートされていません。  
   
  **エラー ID:** BC30766  

@@ -21,11 +21,11 @@ ms.locfileid: "71697893"
 
 プロキシバイパスリストから IP アドレスまたは DNS 名を削除します。
 
-[**\<configuration>**](../configuration-element.md)  
-&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bypasslist>**](bypasslist-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<system.net>** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy>** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bypasslist>** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**  
 
 ## <a name="syntax"></a>構文
 
