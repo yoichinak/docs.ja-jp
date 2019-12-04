@@ -20,7 +20,7 @@ ms.locfileid: "74330990"
 - [演算子の結果のデータ型](data-types-of-operator-results.md)
 - [DirectCast 演算子](directcast-operator.md)
 - [TryCast 演算子](trycast-operator.md)
-- [この操作](nameof.md)
+- [NameOf 演算子](nameof.md)
 - [New 演算子](new-operator.md)
 - [Null 条件演算子](null-conditional-operators.md)
 - [算術演算子](arithmetic-operators.md)
