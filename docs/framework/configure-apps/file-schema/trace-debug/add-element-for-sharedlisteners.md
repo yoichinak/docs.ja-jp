@@ -15,13 +15,15 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/14/2019
 ms.locfileid: "74088967"
 ---
-# <a name="add-element-for-sharedlisteners"></a>\<sharedListeners の > \<add> 要素
+
+# <a name="add-element-for-sharedlisteners"></a>\<sharedListeners の \<add> 要素
 `sharedListeners` コレクションにリスナーを追加します。 `sharedListeners` は、 [\<source>](source-element.md)または[\<trace>](trace-element.md)が参照できるリスナーのコレクションです。  既定では、`sharedListeners` コレクション内のリスナーは `Listeners` コレクションに配置されません。 これらのファイルは、 [\<source>](source-element.md)または[\<trace>](trace-element.md)に名前で追加する必要があります。 実行時にコード内の `sharedListeners` コレクション内のリスナーを取得することはできません。  
 
 [**\<configuration>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<system.diagnostics**](system-diagnostics-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<sharedListeners>**](sharedlisteners-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**add>**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
+
 
 ## <a name="syntax"></a>構文  
   
