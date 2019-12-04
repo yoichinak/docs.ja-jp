@@ -1,5 +1,5 @@
 ---
-title: Char データ型
+title: Char データ型 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Char
