@@ -19,9 +19,9 @@ ms.locfileid: "74428191"
  .NET Framework には、Windows クライアントおよびサーバー アプリケーション (ASP.NET など) のパフォーマンスとスケーラビリティの改善に使用できるキャッシュ機能があります。  
   
 > [!NOTE]
-> In the .NET Framework 3.5 and earlier versions, ASP.NET provided an in-memory cache implementation in the <xref:System.Web.Caching> namespace. In previous versions of the .NET Framework, caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes. .NET Framework 4 では、Web アプリケーションと非 Web アプリケーション両方のために設計された API が <xref:System.Runtime.Caching> 名前空間に含まれています。  
+> .NET Framework 3.5 以前のバージョンでは、ASP.NET は、<xref:System.Web.Caching> 名前空間にメモリ内キャッシュの実装を提供していました。 以前のバージョンの .NET Framework では、キャッシュは <xref:System.Web> 名前空間でのみ使用できるため、ASP.NET クラスに依存する必要がありました。 .NET Framework 4 では、Web アプリケーションと非 Web アプリケーション両方のために設計された API が <xref:System.Runtime.Caching> 名前空間に含まれています。  
   
-## <a name="caching-data"></a>キャッシュされたデータ  
+## <a name="caching-data"></a>データのキャッシュ  
  情報をキャッシュするには、<xref:System.Runtime.Caching> 名前空間のクラスを使用します。 この名前空間のキャッシュ クラスには、次の機能があります。  
   
 - カスタムのキャッシュ実装を作成するための基礎として機能する抽象型。  
@@ -47,7 +47,7 @@ ms.locfileid: "74428191"
  <xref:System.Runtime.Caching> 名前空間のキャッシュ クラスには、ASP.NET のデータをキャッシュするための機能があります。  
   
 > [!NOTE]
-> If your application targets the .NET Framework 3.5 or earlier, you must use the caching classes that are defined in the <xref:System.Web.Caching> namespace. 詳細については、「[ASP.NET のキャッシュの概要](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))」を参照してください。  
+> アプリケーションが3.5 またはそれ以前の .NET Framework を対象としている場合は、<xref:System.Web.Caching> 名前空間で定義されているキャッシュクラスを使用する必要があります。 詳細については、「[ASP.NET のキャッシュの概要](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))」を参照してください。  
   
 > [!NOTE]
 > 新しいアプリケーションを開発する場合は、<xref:System.Runtime.Caching.MemoryCache> クラスを使用することをお勧めします。 <xref:System.Runtime.Caching> 名前空間に用意されている API は、<xref:System.Web.Caching.Cache> 名前空間に用意されている API と似ています。 そのため、旧バージョンの ASP.NET でキャッシュを使用していた場合は、なじみやすい API です。 ASP.NET アプリケーションでキャッシュを使用する方法の例については、「[チュートリアル: ASP.NET 内のアプリケーション データのキャッシュ](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))」を参照してください。  
@@ -75,7 +75,7 @@ ms.locfileid: "74428191"
   
  詳細については、Scott Guthrie のブログのエントリ「[Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://weblogs.asp.net/scottgu/extensible-output-caching-with-asp-net-4-vs-2010-and-net-4-0-series)」(ASP.NET 4 を使用した拡張可能な出力キャッシュ (VS 2010 および .NET 4.0 シリーズ)) を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446537"
 ---
 # <a name="embedresource-method"></a>EmbedResource メソッド
-Declares an embedded resource. This method does not actually embed the resource.  
+埋め込みリソースを宣言します。 このメソッドは、実際にはリソースを埋め込みません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,27 +39,27 @@ HRESULT EmbedResource(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of the assembly.  
+ アセンブリの ID。  
   
  `FileToken`  
- File token or assembly ID of file that contains the resource.  
+ リソースが含まれているファイルのファイルトークンまたはアセンブリ ID。  
   
  `pszResourceName`  
  リソースの名前。  
   
  `dwOffset`  
- Offset of resource from RVA.  
+ RVA からのリソースのオフセット。  
   
  `dwFlags`  
- Accessibility flags such as `mrPublic` and `mrPrivate`. These flags may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `mrPublic` や `mrPrivate`などのアクセシビリティフラグ。 これらのフラグは、を使用して、この[メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h.  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

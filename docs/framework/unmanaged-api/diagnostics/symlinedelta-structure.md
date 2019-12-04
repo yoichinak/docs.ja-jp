@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438016"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA 構造体
-Provides information to the symbol handler about methods that were moved as a result of edits.  
+編集の結果として移動されたメソッドについて、シンボルハンドラーに情報を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,12 +38,12 @@ typedef struct _SYMLINEDELTA
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`mdMethod`|The method's metadata token.|  
-|`delta`|The number of lines the method was moved.|  
+|`mdMethod`|メソッドのメタデータトークン。|  
+|`delta`|メソッドが移動された行の数。|  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [シンボル ストア診断構造体](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347046"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML 処理命令リテラル (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.  
+<xref:System.Xml.Linq.XProcessingInstruction> オブジェクトを表すリテラル。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,41 +26,41 @@ A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.
   
 ## <a name="parts"></a>指定項目  
  `<?`  
- 必須です。 Denotes the start of the XML processing instruction literal.  
+ 必須。 XML 処理命令リテラルの開始を示します。  
   
  `piName`  
- 必須です。 Name indicating which application the processing instruction targets. Cannot begin with "xml" or "XML".  
+ 必須。 処理命令が対象とするアプリケーションを示す名前。 "Xml" または "XML" で始めることはできません。  
   
  `piData`  
- 省略可能です。 String indicating how the application targeted by `piName` should process the XML document.  
+ 省略可。 `piName` が対象とするアプリケーションで XML ドキュメントを処理する方法を示す文字列。  
   
  `?>`  
- 必須です。 Denotes the end of the processing instruction.  
+ 必須。 処理命令の終了を示します。  
   
 ## <a name="return-value"></a>戻り値  
  <xref:System.Xml.Linq.XProcessingInstruction> オブジェクト。  
   
-## <a name="remarks"></a>Remarks  
- XML processing instruction literals indicate how applications should process an XML document. When an application loads an XML document, the application can check the XML processing instructions to determine how to process the document. The application interprets the meaning of `piName` and `piData`.  
+## <a name="remarks"></a>コメント  
+ XML 処理命令リテラルは、アプリケーションで XML ドキュメントを処理する方法を示します。 アプリケーションで XML ドキュメントが読み込まれると、アプリケーションは XML 処理命令を確認して、ドキュメントの処理方法を決定できます。 アプリケーションは、`piName` と `piData`の意味を解釈します。  
   
- The XML document literal uses syntax that is similar to that of the XML processing instruction. For more information, see [XML Document Literal](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
-  
-> [!NOTE]
-> The `piName` element cannot begin with the strings "xml" or "XML", because the XML 1.0 specification reserves those identifiers.  
-  
- You can assign an XML processing instruction literal to a variable or include it in an XML document literal.  
+ XML ドキュメントリテラルでは、XML 処理命令と同様の構文を使用します。 詳細については、「 [XML ドキュメントリテラル](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)」を参照してください。  
   
 > [!NOTE]
-> An XML literal can span multiple lines without needing line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> XML 1.0 仕様ではこれらの識別子が予約されているため、`piName` 要素を文字列 "xml" または "XML" で始めることはできません。  
   
- The Visual Basic compiler converts the XML processing instruction literal to a call to the <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> constructor.  
+ XML 処理命令リテラルを変数に割り当てるか、XML ドキュメントリテラルに含めることができます。  
+  
+> [!NOTE]
+> XML リテラルは、行連結文字を必要とせずに、複数の行にまたがることができます。 これにより、XML ドキュメントからコンテンツをコピーし、Visual Basic プログラムに直接貼り付けることができます。  
+  
+ Visual Basic コンパイラは、XML 処理命令のリテラルを <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> コンストラクターへの呼び出しに変換します。  
   
 ## <a name="example"></a>例  
- The following example creates a processing instruction identifying a style-sheet for an XML document.  
+ 次の例では、XML ドキュメントのスタイルシートを識別する処理命令を作成します。  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Linq.XProcessingInstruction>
 - [XML ドキュメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)

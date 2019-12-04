@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449503"
 ---
 # <a name="imetadatatablesgetnumtables-method"></a>IMetaDataTables::GetNumTables メソッド
-Gets the number of tables in the scope of the current `IMetaDataTables` instance.  
+現在の `IMetaDataTables` インスタンスのスコープ内にあるテーブルの数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,18 +35,18 @@ HRESULT GetNumTables (
   
 ## <a name="parameters"></a>パラメーター  
  `pcTables`  
- [out] A pointer to the number of tables in the current instance scope.  
+ 入出力現在のインスタンススコープ内にあるテーブルの数へのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

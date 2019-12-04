@@ -12,8 +12,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352264"
 ---
-# <a name="permission-visual-basic"></a>\<permission> (Visual Basic)
-Specifies a required permission for the member.  
+# <a name="permission-visual-basic"></a>\<のアクセス許可 > (Visual Basic)
+メンバーに必要な権限を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -23,18 +23,18 @@ Specifies a required permission for the member.
   
 ## <a name="parameters"></a>パラメーター  
  `member`  
- 現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。 コンパイラは、指定されたコード要素が存在し、出力の XML で `member` が正規要素名に変換されることを確認します。 Enclose `member` in quotation marks (" ").  
+ 現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。 コンパイラは、指定されたコード要素が存在し、出力の XML で `member` が正規要素名に変換されることを確認します。 `member` を引用符 ("") で囲みます。  
   
  `description`  
  メンバーへのアクセスの説明です。  
   
-## <a name="remarks"></a>Remarks  
- Use the `<permission>` tag to document the access of a member. Use the <xref:System.Security.PermissionSet> class to specify access to a member.  
+## <a name="remarks"></a>コメント  
+ `<permission>` タグを使用して、メンバーのアクセスを文書化します。 <xref:System.Security.PermissionSet> クラスを使用して、メンバーへのアクセスを指定します。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.  
+ この例では、`<permission>` タグを使用して、`ReadFile` メソッドで <xref:System.Security.Permissions.FileIOPermission> が必要であることを説明します。  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   

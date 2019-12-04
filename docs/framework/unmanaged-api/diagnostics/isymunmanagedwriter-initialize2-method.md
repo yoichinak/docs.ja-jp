@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427949"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 メソッド
-Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written. This method also lets you set the final location of the program database (PDB) file.  
+このライターが関連付けられるメタデータエミッタインターフェイスを設定し、デバッグシンボルの書き込み先となる出力ファイル名を設定します。 この方法では、プログラムデータベース (PDB) ファイルの最終的な場所を設定することもできます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,25 +38,25 @@ HRESULT Initialize2(
   
 ## <a name="parameters"></a>パラメーター  
  `emitter`  
- [in] A pointer to the metadata emitter interface.  
+ からメタデータエミッタインターフェイスへのポインター。  
   
  `tempfilename`  
- [in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written. ファイル名を使用しないライターに対してファイル名を指定した場合、このパラメーターは無視されます。  
+ からデバッグシンボルが書き込まれるファイル名を格納している `WCHAR` へのポインター。 ファイル名を使用しないライターに対してファイル名を指定した場合、このパラメーターは無視されます。  
   
  `pIStream`  
- [in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. `pIStream` パラメーターは省略可能です。  
+ から指定した場合、シンボルライターは、`filename` パラメーターで指定されたファイルではなく、指定された <xref:System.Runtime.InteropServices.ComTypes.IStream> にシンボルを出力します。 `pIStream` パラメーターは省略可能です。  
   
  `fFullBuild`  
- [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
+ [in] フルリビルドの場合は `true`インクリメンタルコンパイルの場合は `false` します。  
   
  `finalfilename`  
- [in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.  
+ からPDB ファイルの最終的な場所へのパス文字列である `WCHAR` へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 

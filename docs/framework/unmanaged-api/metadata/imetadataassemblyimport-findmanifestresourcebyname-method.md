@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448257"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName メソッド
-Gets a pointer to the manifest resource with the specified name.  
+指定した名前のマニフェストリソースへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,20 +36,20 @@ HRESULT FindManifestResourceByName (
   
 ## <a name="parameters"></a>パラメーター  
  `szName`  
- [in] The name of the resource.  
+ からリソースの名前。  
   
  `ptkManifestResource`  
- [out] The array used to store the `mdManifestResource` metadata tokens, each of which represents a manifest resource.  
+ 入出力`mdManifestResource` メタデータトークンを格納するために使用される配列。それぞれがマニフェストリソースを表します。  
   
-## <a name="remarks"></a>Remarks  
- The `FindManifestResourceByName` method uses the standard rules employed by the common language runtime for resolving references.  
+## <a name="remarks"></a>コメント  
+ `FindManifestResourceByName` メソッドは、参照を解決するために共通言語ランタイムによって採用されている標準の規則を使用します。  
   
-## <a name="requirements"></a>［要件］  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

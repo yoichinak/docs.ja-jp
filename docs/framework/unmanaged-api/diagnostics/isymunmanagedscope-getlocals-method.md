@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446331"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>ISymUnmanagedScope::GetLocals メソッド
-Gets the local variables defined within this scope.  
+このスコープ内で定義されているローカル変数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +37,20 @@ HRESULT GetLocals(
   
 ## <a name="parameters"></a>パラメーター  
  `cLocals`  
- [in] A `ULONG32` that indicates the size of the `locals` array.  
+ から`locals` 配列のサイズを示す `ULONG32`。  
   
  `pcLocals`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the local variables.  
+ 入出力ローカル変数を格納するために必要なバッファーのサイズを受け取る `ULONG32` へのポインター。  
   
  `locals`  
- [out] The array that receives the local variables.  
+ 入出力ローカル変数を受け取る配列。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedScope インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

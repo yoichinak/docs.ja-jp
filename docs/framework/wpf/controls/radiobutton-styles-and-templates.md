@@ -25,7 +25,7 @@ ms.locfileid: "74283434"
 ## <a name="radiobutton-states"></a>RadioButton の状態  
  次の表は、<xref:System.Windows.Controls.RadioButton> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |----------------------|---------------------------|-----------------|  
 |標準|CommonStates|既定の状態です。|  
 |MouseOver|CommonStates|マウス ポインターがコントロール上に配置されます。|  
@@ -36,7 +36,7 @@ ms.locfileid: "74283434"
 |チェック済み|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> は `true` です。|  
 |再帰|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> は `false` です。|  
 |確定|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> が `true` で、<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> が `null` です。|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   

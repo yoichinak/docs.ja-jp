@@ -48,7 +48,7 @@ ms.locfileid: "74350116"
   
  これは、ヘッドの部分が交換可能な、ねじ回しのセットにたとえることができます。 回すねじを調べて、そのねじに合った正しいヘッド (マイナス、プラス、星型) を選択します。 ねじ回しのハンドルに正しいヘッドを挿入したら、ねじ回しを使ってまったく同じ作業 (ねじを回すこと) を行います。  
   
- ![Diagram of a screwdriver set with different heads.](./media/generic-types/generic-screwdriver-set.gif)  
+ ![異なるヘッドで設定されたドライバーの図。](./media/generic-types/generic-screwdriver-set.gif)  
   
  ジェネリック型を定義する場合は、1 つ以上のデータ型でジェネリック型をパラメーター化します。 これにより、ジェネリック型を使用するコードで、データ型をコードの要件に合わせて変更できるようになります。 コードでは、1 つのジェネリックな要素から複数のプログラミング要素を宣言し、それぞれを異なるデータ型のセットに使用できます。 ただし、使用するデータ型が異なっていても、宣言した要素はどれも同じロジックを実行します。  
   
@@ -73,10 +73,10 @@ ms.locfileid: "74350116"
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- For a more complete example, see [How to: Define a Class That Can Provide Identical Functionality on Different Data Types](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ 詳細な例については、「[方法: 異なるデータ型に同一の機能を提供できるクラスを定義](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)する」を参照してください。  
   
 ## <a name="eligible-programming-elements"></a>使用できるプログラミング要素  
- ジェネリック クラス、構造体、インターフェイス、プロシージャ、およびデリゲートを定義して使用することができます。 Note that the .NET Framework defines several generic classes, structures, and interfaces that represent commonly used generic elements. <xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間には、ディクショナリ、リスト、キュー、スタックが用意されています。 独自のジェネリックな要素を定義する前に、それに相当する要素が既に <xref:System.Collections.Generic?displayProperty=nameWithType>に用意されていないかをご確認ください。  
+ ジェネリック クラス、構造体、インターフェイス、プロシージャ、およびデリゲートを定義して使用することができます。 .NET Framework では、一般的に使用されるジェネリック要素を表すいくつかのジェネリッククラス、構造体、およびインターフェイスが定義されていることに注意してください。 <xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間には、ディクショナリ、リスト、キュー、スタックが用意されています。 独自のジェネリックな要素を定義する前に、それに相当する要素が既に <xref:System.Collections.Generic?displayProperty=nameWithType>に用意されていないかをご確認ください。  
   
  プロシージャは型ではありませんが、ジェネリック プロシージャを定義し、使用できます。 「 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "74350116"
   
 - **タイプ セーフ。** ジェネリック型では、コンパイル時に型がチェックされます。 一方、 `Object` に基づく型はすべてのデータ型を受け入れるので、入力したデータ型が受け入れられる型かどうかをチェックするコードを記述する必要があります。 ジェネリック型を使うと、型の不一致は実行する前にコンパイラで検出できます。  
   
-- **パフォーマンス。** それぞれが特定の 1 つのデータ型に特化されるので、データを *ボックス化* したり、 *ボックス化を解除* したりする必要がありません。 `Object` に基づいて操作を実行する場合、入力したデータ型をボックス化して `Object` に変換したり、出力時にデータのボックス化を解除したりする必要があります。 ボックス化とボックス化解除は、パフォーマンスを低下させます。  
+- **パフォーマンス。** それぞれが特定の 1 つのデータ型に特化されるので、データを *ボックス化* したり、 *unボックス化* したりする必要がありません。 `Object` に基づいて操作を実行する場合、入力したデータ型をボックス化して `Object` に変換したり、出力時にデータのボックス化を解除したりする必要があります。 ボックス化とボックス化解除は、パフォーマンスを低下させます。  
   
      また、 `Object` に基づく型は遅延バインディングでもあります。つまり、この型のメンバーにアクセスするには、実行時に余分なコードが必要になります。 これも、パフォーマンスを低下させます。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "74350116"
 ### <a name="types-of-constraints"></a>制約の種類  
  次の要件を任意に組み合わせて制約を指定できます。  
   
-- 型引数はインターフェイスを実装する必要があります  
+- 型引数は、1 つまたは複数のインターフェイスを実装する必要があります  
   
 - 型引数は、クラスの型そのものであるか、最大 1 つのクラスを継承する必要があります  
   
@@ -124,7 +124,7 @@ ms.locfileid: "74350116"
   
 - 型引数は、 *参照型*である、または *値型*である必要があります  
   
- 複数の要件を指定する場合は、コンマで区切られた *制約リスト* を中かっこ (`{ }`) で囲みます。 To require an accessible constructor, you include the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the list. 参照型であることを必須とするには、 `Class` キーワードを追加し、値型であることを必須とするには、 `Structure` キーワードを追加します。  
+ 複数の要件を指定する場合は、コンマで区切られた *制約リスト* を中かっこ (`{ }`) で囲みます。 アクセス可能なコンストラクターを要求するには、リストに[New Operator](../../../../visual-basic/language-reference/operators/new-operator.md)キーワードを含めます。 参照型であることを必須とするには、 `Class` キーワードを追加し、値型であることを必須とするには、 `Structure` キーワードを追加します。  
   
  制約の詳細については、「 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
   
@@ -146,16 +146,16 @@ ms.locfileid: "74350116"
   
 - *構成型*。 型パラメーターに型引数を指定してジェネリック型から宣言されるクラス、構造体、インターフェイス、プロシージャ、またはデリゲートです。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [共変性と反変性](../../concepts/covariance-contravariance/index.md)
 - [反復子](../../../../visual-basic/programming-guide/concepts/iterators.md)

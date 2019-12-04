@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427999"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter メソッド
-Defines a single parameter in the current method. The parameter type is taken from the parameter's position (sequence) within the method's signature.  
+現在のメソッドの1つのパラメーターを定義します。 パラメーターの型は、メソッドのシグネチャ内のパラメーターの位置 (シーケンス) から取得されます。  
   
- If parameters are defined in the metadata for a given method, you do not have to define them again by using this method. The symbol readers must check the normal metadata for the parameters before checking the symbol store.  
+ パラメーターが特定のメソッドのメタデータで定義されている場合は、このメソッドを使用してこれらを再定義する必要はありません。 シンボルリーダーは、シンボルストアを確認する前に、パラメーターの通常のメタデータを確認する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,32 +42,32 @@ HRESULT DefineParameter(
   
 ## <a name="parameters"></a>パラメーター  
  `name`  
- [in] The parameter name.  
+ からパラメーター名。  
   
  `attributes`  
- [in] The parameter attributes.  
+ からパラメーターの属性。  
   
  `sequence`  
- [in] The parameter signature.  
+ からパラメーターシグネチャ。  
   
  `addrKind`  
- [in] The address type.  
+ からアドレスの種類。  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ からパラメーター指定の最初のアドレス。  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ からパラメーター指定の2番目のアドレス。  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ からパラメーター指定の3番目のアドレス。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -18,9 +18,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444716"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses Method
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses メソッド
 
-Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist.
+指定された functionId と rejitId は、現在存在する、このコードのすべての just-in-time バージョンのネイティブコードの開始アドレスを列挙します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,7 +35,7 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 #### <a name="parameters"></a>パラメーター
 
 `functionId` \
-[in] The ID of the function whose native code start addresses should be returned.
+からネイティブコードの開始アドレスを返す関数の ID。
 
 `reJitId` \
 [in] JIT 再コンパイルされた関数のID。
@@ -44,25 +44,25 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 [in] `codeStartAddresses` 配列の最大サイズ。
 
 `pcCodeStartAddresses` \
-[out] The number of available addresses.
+入出力使用可能なアドレスの数。
 
 `codeStartAddresses` \
-[out] An array of `UINT_PTR`, each one of which is the start address for a native body for the specified function.
+入出力`UINT_PTR`の配列。各配列は、指定された関数のネイティブ本体の開始アドレスです。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-When tiered compilation is enabled, a function may have more than one native code body.
+階層化コンパイルが有効になっている場合、関数は複数のネイティブコード本体を持つことができます。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)」を参照してください。
 
 **ヘッダー** : CorProf.idl、CorProf.h
 
 **ライブラリ:** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.Net のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

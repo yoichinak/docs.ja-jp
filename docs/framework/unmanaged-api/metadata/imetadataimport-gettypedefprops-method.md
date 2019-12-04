@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436752"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps メソッド
-Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.  
+指定した TypeDef トークンによって表される <xref:System.Type> のメタデータ情報を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,29 +40,29 @@ HRESULT GetTypeDefProps (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in] The TypeDef token that represents the type to return metadata for.  
+ からメタデータを返す型を表す TypeDef トークン。  
   
  `szTypeDef`  
- [out] A buffer containing the type name.  
+ 入出力型名を格納しているバッファー。  
   
  `cchTypeDef`  
- [in] The size in wide characters of `szTypeDef`.  
+ から`szTypeDef`のワイド文字単位のサイズ。  
   
  `pchTypeDef`  
- [out] The number of wide characters returned in `szTypeDef`.  
+ 入出力`szTypeDef`に返されるワイド文字数。  
   
  `pdwTypeDefFlags`  
- [out] A pointer to any flags that modify the type definition. This value is a bitmask from the [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration.  
+ 入出力型定義を変更するすべてのフラグへのポインター。 この値は、 [Cortypeattr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)列挙子のビットマスクです。  
   
  `ptkExtends`  
- [out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.  
+ 入出力要求された型の基本型を表す TypeDef または TypeRef メタデータトークン。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

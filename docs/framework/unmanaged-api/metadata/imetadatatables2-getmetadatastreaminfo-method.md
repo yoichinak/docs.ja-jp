@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426220"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo メソッド
-Gets the name, size, and contents of the metadata stream at the specified index.  
+指定したインデックス位置にあるメタデータストリームの名前、サイズ、および内容を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,23 +38,23 @@ HRESULT GetMetaDataStreamInfo (
   
 ## <a name="parameters"></a>パラメーター  
  `ix`  
- [in] The index of the requested metadata stream.  
+ から要求されたメタデータストリームのインデックス。  
   
  `ppchName`  
- [out] A pointer to the name of the stream.  
+ 入出力ストリームの名前へのポインター。  
   
  `ppv`  
- [out] A pointer to the metadata stream.  
+ 入出力メタデータストリームへのポインター。  
   
  `pcb`  
- [out] The size, in bytes, of `ppv`.  
+ 入出力`ppv`のサイズ (バイト単位)。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

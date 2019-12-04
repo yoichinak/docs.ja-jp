@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450231"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 列挙型
-Contains values that describe the features of a method.  
+メソッドの機能を記述する値を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,38 +66,38 @@ typedef enum CorMethodAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`mdMemberAccessMask`|Specifies member access.|  
-|`mdPrivateScope`|Specifies that the member cannot be referenced.|  
-|`mdPrivate`|Specifies that the member is accessible only by the parent type.|  
-|`mdFamANDAssem`|Specifies that the member is accessible by subtypes only in this assembly.|  
-|`mdAssem`|Specifies that the member is accessibly by anyone in the assembly.|  
-|`mdFamily`|Specifies that the member is accessible only by type and subtypes.|  
-|`mdFamORAssem`|Specifies that the member is accessible by derived classes and by other types in its assembly.|  
-|`mdPublic`|Specifies that the member is accessible by all types with access to the scope.|  
-|`mdStatic`|Specifies that the member is defined as part of the type rather than as a member of an instance.|  
-|`mdFinal`|Specifies that the method cannot be overridden.|  
-|`mdVirtual`|Specifies that the method can be overridden.|  
-|`mdHideBySig`|Specifies that the method hides by name and signature, rather than just by name.|  
-|`mdVtableLayoutMask`|Specifies virtual table layout.|  
-|`mdReuseSlot`|Specifies that the slot used for this method in the virtual table be reused. 既定値です。|  
-|`mdNewSlot`|Specifies that the method always gets a new slot in the virtual table.|  
-|`mdCheckAccessOnOverride`|Specifies that the method can be overridden by the same types to which it is visible.|  
-|`mdAbstract`|Specifies that the method is not implemented.|  
-|`mdSpecialName`|Specifies that the method is special, and that its name describes how.|  
-|`mdPinvokeImpl`|Specifies that the method implementation is forwarded using PInvoke.|  
-|`mdUnmanagedExport`|Specifies that the method is a managed method exported to unmanaged code.|  
-|`mdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`mdRTSpecialName`|Specifies that the common language runtime should check the encoding of the method name.|  
-|`mdHasSecurity`|Specifies that the method has security associated with it.|  
-|`mdRequireSecObject`|Specifies that the method calls another method containing security code.|  
+|`mdMemberAccessMask`|メンバーアクセスを指定します。|  
+|`mdPrivateScope`|メンバーを参照できないことを指定します。|  
+|`mdPrivate`|メンバーが親の型によってのみアクセス可能であることを指定します。|  
+|`mdFamANDAssem`|このアセンブリ内のサブタイプだけがメンバーにアクセスできることを指定します。|  
+|`mdAssem`|メンバーがアセンブリ内のすべてのユーザーによって accessibly されることを指定します。|  
+|`mdFamily`|メンバーが型とサブタイプによってのみアクセス可能であることを指定します。|  
+|`mdFamORAssem`|メンバーが、派生クラスおよびそのアセンブリ内の他の型によってアクセス可能であることを指定します。|  
+|`mdPublic`|スコープへのアクセス権を持つすべての型からメンバーにアクセスできることを指定します。|  
+|`mdStatic`|メンバーがインスタンスのメンバーとしてではなく、型の一部として定義されることを指定します。|  
+|`mdFinal`|メソッドをオーバーライドできないことを指定します。|  
+|`mdVirtual`|メソッドをオーバーライドできることを指定します。|  
+|`mdHideBySig`|メソッドが名前だけではなく、名前とシグネチャで非表示になるように指定します。|  
+|`mdVtableLayoutMask`|仮想テーブルのレイアウトを指定します。|  
+|`mdReuseSlot`|仮想テーブルでこのメソッドに使用されるスロットを再利用することを指定します。 既定値です。|  
+|`mdNewSlot`|メソッドが常に仮想テーブル内の新しいスロットを取得することを指定します。|  
+|`mdCheckAccessOnOverride`|メソッドを、表示されているのと同じ型でオーバーライドできることを指定します。|  
+|`mdAbstract`|メソッドが実装されていないことを指定します。|  
+|`mdSpecialName`|メソッドが特別であり、その名前がどのように説明するかを指定します。|  
+|`mdPinvokeImpl`|メソッドの実装が PInvoke を使用して転送されることを指定します。|  
+|`mdUnmanagedExport`|メソッドがアンマネージコードにエクスポートされたマネージメソッドであることを指定します。|  
+|`mdReservedMask`|共通言語ランタイムによる内部使用のために予約されています。|  
+|`mdRTSpecialName`|共通言語ランタイムがメソッド名のエンコーディングを確認する必要があることを指定します。|  
+|`mdHasSecurity`|メソッドにセキュリティが関連付けられていることを指定します。|  
+|`mdRequireSecObject`|メソッドが、セキュリティコードを含む別のメソッドを呼び出すことを指定します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

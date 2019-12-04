@@ -1,5 +1,5 @@
 ---
-title: Overloads
+title: Shadows
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Shadows
@@ -20,29 +20,29 @@ ms.locfileid: "74351262"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 
-Specifies that a declared programming element redeclares and hides an identically named element, or set of overloaded elements, in a base class.
+宣言されたプログラミング要素が、基底クラスで同じ名前を持つ要素、またはオーバーロードされた要素のセットを直しし、非表示にすることを指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The main purpose of shadowing (which is also known as *hiding by name*) is to preserve the definition of your class members. The base class might undergo a change that creates an element with the same name as one you have already defined. If this happens, the `Shadows` modifier forces references through your class to be resolved to the member you defined, instead of to the new base class element.
+シャドウの主な目的は (*名前で非表示*とも呼ばれます)、クラスメンバーの定義を保持することです。 基本クラスには、既に定義されているものと同じ名前の要素を作成する変更が含まれる場合があります。 この場合、`Shadows` 修飾子は、新しい基底クラス要素ではなく、定義したメンバーに解決されるように、クラスを通じて参照を強制します。
 
-シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、「 [Visual Basic でのシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。
 
 ## <a name="rules"></a>ルール
 
-- **Declaration Context.** You can use `Shadows` only at class level. This means the declaration context for a `Shadows` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+- **宣言コンテキスト。** `Shadows` はクラスレベルでのみ使用できます。 つまり、`Shadows` 要素の宣言コンテキストはクラスである必要があり、ソースファイル、名前空間、インターフェイス、モジュール、構造体、またはプロシージャにすることはできません。
 
-  You can declare only one shadowing element in a single declaration statement.
+  1つの宣言ステートメントでは、シャドウ要素を1つだけ宣言できます。
 
-- **Combined Modifiers.** You cannot specify `Shadows` together with `Overloads`, `Overrides`, or `Static` in the same declaration.
+- **結合された修飾子。** 同じ宣言内で `Overloads`、`Overrides`、または `Static` と共に `Shadows` を指定することはできません。
 
-- **Element Types.** 宣言された要素は、他の任意の種類の要素でシャドウできます。 If you shadow a property or procedure with another property or procedure, the parameters and the return type do not have to match those in the base class property or procedure.
+- **要素の型。** 宣言された要素は、他の任意の種類の要素でシャドウできます。 別のプロパティまたはプロシージャを使用してプロパティまたはプロシージャをシャドウする場合、パラメーターと戻り値の型は、基底クラスのプロパティまたはプロシージャ内のパラメーターと一致する必要はありません。
 
-- **Accessing.** The shadowed element in the base class is normally unavailable from within the derived class that shadows it. However, the following considerations apply.
+- **しよう.** 基底クラスのシャドウされた要素は、通常、それをシャドウする派生クラス内からは使用できません。 ただし、次の考慮事項が適用されます。
 
-  - If the shadowing element is not accessible from the code referring to it, the reference is resolved to the shadowed element. For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.
+  - シャドウしている要素が、それを参照するコードからアクセスできない場合は、シャドウされた要素に参照が解決されます。 たとえば、`Private` 要素が基本クラス要素をシャドウする場合、`Private` 要素にアクセスするためのアクセス許可を持たないコードは、代わりに基本クラス要素にアクセスします。
 
-  - If you shadow an element, you can still access the shadowed element through an object declared with the type of the base class. You can also access it through `MyBase`.
+  - 要素をシャドウする場合でも、基底クラスの型で宣言されたオブジェクトを使用して、シャドウされた要素にアクセスできます。 また、`MyBase`経由でアクセスすることもできます。
 
 `Shadows` 修飾子は、次のコンテキストで使用できます。
 
@@ -50,7 +50,7 @@ The main purpose of shadowing (which is also known as *hiding by name*) is to pr
 
 - [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)
 
-- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
 
 - [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)
 
@@ -77,9 +77,9 @@ The main purpose of shadowing (which is also known as *hiding by name*) is to pr
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Me、My、MyBase、および MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [MyBase](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [オーバーロード](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic でのシャドウ処理](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

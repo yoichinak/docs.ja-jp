@@ -13,24 +13,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350102"
 ---
 # <a name="elementary-data-types-visual-basic"></a>基本データ型 (Visual Basic)
-Visual Basic supplies a set of predefined data types, which you can use for many of your programming elements. This section describes these types and how to use them.  
+Visual Basic には、一連の定義済みデータ型が用意されています。これは、多くのプログラミング要素に使用できます。 ここでは、これらの型とその使用方法について説明します。  
   
 > [!NOTE]
-> Every elementary data type in Visual Basic is supported by a structure or a class that is in the <xref:System> namespace. The compiler uses each data type keyword as an alias for the underlying structure or class. For example, declaring a variable by using the reserved word `Byte` is the same as declaring it by using the fully qualified structure name <xref:System.Byte?displayProperty=nameWithType>.  
+> Visual Basic のすべての基本データ型は、<xref:System> 名前空間にある構造体またはクラスによってサポートされています。 コンパイラは、基になる構造体またはクラスの別名として、各データ型のキーワードを使用します。 たとえば、予約語 `Byte` を使用して変数を宣言することは、完全修飾構造名 <xref:System.Byte?displayProperty=nameWithType>を使用して宣言することと同じです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [数値のデータ型](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
- Describes the integral and non-integral numeric types.  
+ 整数および整数以外の数値型について説明します。  
   
  [文字データ型](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- Describes the `Char` and `String` types.  
+ `Char` 型と `String` 型について説明します。  
   
  [その他のデータ型](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
- Describes the `Boolean`, `Date`, and `Object` types.  
+ `Boolean`、`Date`、および `Object` 型について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
  [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Introduces the Visual Basic data types and describes how to use them.  
+ Visual Basic のデータ型について説明し、その使用方法について説明します。  
   
  [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
- Provides an overview of the elementary data types supplied by Visual Basic.
+ Visual Basic によって提供される基本データ型の概要について説明します。

@@ -16,23 +16,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347366"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic の制限事項
-Earlier versions of Visual Basic enforced boundaries in code, such as the length of variable names, the number of variables allowed in modules, and module size. In Visual Basic .NET, these restrictions have been relaxed, giving you greater freedom in writing and arranging your code.  
+以前のバージョンの Visual Basic では、変数名の長さ、モジュールで許容される変数の数、モジュールのサイズなど、コードに境界が適用されていました。 Visual Basic .NET では、これらの制限は緩和されているため、コードの記述と配置をより自由に行うことができます。  
   
- Physical limits are dependent more on run-time memory than on compile-time considerations. If you use prudent programming practices, and divide large applications into multiple classes and modules, then there is very little chance of encountering an internal Visual Basic limitation.  
+ 物理的な制限は、コンパイル時の考慮事項に比べて、実行時のメモリに大きく依存します。 賢明なプログラミングプラクティスを使用し、大規模なアプリケーションを複数のクラスとモジュールに分割する場合、内部的な Visual Basic 制限が発生する可能性はほとんどありません。  
   
- The following are some limitations that you might encounter in extreme cases:  
+ 極端な場合に発生する可能性があるいくつかの制限を次に示します。  
   
-- **Name Length.** There is a maximum number of characters for the name of every declared programming element. This maximum applies to an entire qualification string if the element name is qualified. 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。  
+- **名前の長さ。** 宣言されたすべてのプログラミング要素の名前には最大文字数があります。 要素名が修飾されている場合、この最大値は修飾文字列全体に適用されます。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。  
   
-- **Line Length.** There is a maximum of 65535 characters in a physical line of source code. The logical source code line can be longer if you use line continuation characters. See [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+- **行の長さ。** ソースコードの物理的な行には、最大65535文字があります。 行連結文字を使用すると、論理ソースコード行が長くなる可能性があります。 「[方法: コード内のステートメントを分割して結合する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)」を参照してください。  
   
-- **Array Dimensions.** There is a maximum number of dimensions you can declare for an array. This limits how many indexes you can use to specify an array element. See [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
+- **配列の次元。** 配列に対して宣言できる次元の最大数があります。 これにより、配列要素を指定するために使用できるインデックスの数が制限されます。 [Visual Basic の配列ディメンションを](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)参照してください。  
   
-- **String Length.** There is a maximum number of Unicode characters you can store in a single string. See [String Data Type](../../../visual-basic/language-reference/data-types/string-data-type.md).  
+- **文字列の長さ。** Unicode 文字の最大数は、1つの文字列に格納できます。 「 [String データ型](../../../visual-basic/language-reference/data-types/string-data-type.md)」を参照してください。  
   
-- **Environment String Length.** There is a maximum of 32768 characters for any environment string used as a command-line argument. This is a limitation on all platforms.  
+- **環境文字列の長さ。** コマンドライン引数として使用される環境文字列には、最大32768文字があります。 これは、すべてのプラットフォームに関する制限です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic 名前付け規則](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

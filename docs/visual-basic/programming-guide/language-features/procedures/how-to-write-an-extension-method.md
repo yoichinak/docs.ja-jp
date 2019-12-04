@@ -15,27 +15,27 @@ ms.locfileid: "74346013"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>方法: 拡張メソッドを作成する (Visual Basic)
 
-Extension methods enable you to add methods to an existing class. The extension method can be called as if it were an instance of that class.
+拡張メソッドを使用すると、既存のクラスにメソッドを追加できます。 拡張メソッドは、そのクラスのインスタンスであるかのように呼び出すことができます。
 
-### <a name="to-define-an-extension-method"></a>To define an extension method
+### <a name="to-define-an-extension-method"></a>拡張メソッドを定義するには
 
-1. Open a new or existing Visual Basic application in Visual Studio.
+1. Visual Studio で新規または既存の Visual Basic アプリケーションを開きます。
 
-2. At the top of the file in which you want to define an extension method, include the following import statement:
+2. 拡張メソッドを定義するファイルの先頭に、次の import ステートメントを追加します。
 
     ```vb
     Imports System.Runtime.CompilerServices
     ```
 
-3. Within a module in your new or existing application, begin the method definition with the [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) attribute:
+3. 新規または既存のアプリケーションのモジュール内で、 [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute)属性を使用してメソッド定義を開始します。
 
     ```vb
     <Extension()>
     ```
 
-    Note that the `Extension` attribute can only be applied to a method (a `Sub` or `Function` procedure) in a Visual Basic [Module](../../../language-reference/statements/module-statement.md). If you apply it to a method in a `Class` or a `Structure`, the Visual Basic compiler generates error [BC36551](../../../misc/bc36551.md), "Extension methods can be defined only in modules."
+    `Extension` 属性は、Visual Basic[モジュール](../../../language-reference/statements/module-statement.md)内のメソッド (`Sub` または `Function` プロシージャ) にのみ適用できます。 `Class` または `Structure`のメソッドに適用すると、Visual Basic コンパイラによってエラー [BC36551](../../../misc/bc36551.md)が生成されます。 "拡張メソッドはモジュール内でのみ定義できます。"
 
-4. Declare your method in the ordinary way, except that the type of the first parameter must be the data type you want to extend.
+4. 通常の方法でメソッドを宣言します。ただし、最初のパラメーターの型は、拡張するデータ型である必要があります。
 
     ```vb
     <Extension()>
@@ -46,7 +46,7 @@ Extension methods enable you to add methods to an existing class. The extension 
 
 ## <a name="example"></a>例
 
-The following example declares an extension method in module `StringExtensions`. A second module, `Module1`, imports `StringExtensions` and calls the method. The extension method must be in scope when it is called. Extension method `PrintAndPunctuate` extends the <xref:System.String> class with a method that displays the string instance followed by a string of punctuation symbols sent in as a parameter.
+次の例では、モジュール `StringExtensions`で拡張メソッドを宣言しています。 2番目のモジュールである `Module1`は、`StringExtensions` をインポートし、メソッドを呼び出します。 拡張メソッドが呼び出されたときは、その拡張メソッドがスコープ内にある必要があります。 拡張メソッド `PrintAndPunctuate` は、文字列インスタンスを表示するメソッドと、でパラメーターとしてに送信される区切り記号の文字列の後に、<xref:System.String> クラスを拡張します。
 
 ```vb
 ' Declarations will typically be in a separate module.
@@ -78,17 +78,17 @@ Module Module1
 End Module
 ```
 
-Notice that the method is defined with two parameters and called with only one. The first parameter, `aString`, in the method definition is bound to `example`, the instance of `String` that calls the method. この例の出力は次のとおりです。
+メソッドは2つのパラメーターで定義され、1つだけを使用して呼び出されることに注意してください。 メソッド定義内の最初のパラメーターである `aString`は、メソッドを呼び出す `String` のインスタンス `example`にバインドされます。 この例の出力は次のとおりです。
 
 ```console
 Hello?
 Hello!!!!
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [拡張メソッド](extension-methods.md)
 - [Module ステートメント](../../../language-reference/statements/module-statement.md)
 - [プロシージャのパラメーターと引数](procedure-parameters-and-arguments.md)
-- [Scope in Visual Basic](../declared-elements/scope.md)
+- [Visual Basic 内のスコープ](../declared-elements/scope.md)

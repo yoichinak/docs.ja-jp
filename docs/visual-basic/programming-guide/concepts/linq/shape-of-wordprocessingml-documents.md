@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350605"
 ---
-# <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Shape of WordprocessingML Documents (Visual Basic)
+# <a name="shape-of-wordprocessingml-documents-visual-basic"></a>WordprocessingML ドキュメントの構造 (Visual Basic)
 このトピックでは、WordprocessingML ドキュメントの XML 構造について説明します。  
   
 ## <a name="microsoft-office-formats"></a>Microsoft Office 形式  
@@ -87,13 +87,13 @@ Module Module1
 End Module  
 ```  
   
-## <a name="external-resources"></a>外部リソース  
+## <a name="external-resources"></a>外部資料  
  [Office (2007) Open XML ファイル形式の概要](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))  
   
  [WordprocessingML の概要](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812(v=office.11))  
   
  [Office 2003: XML リファレンス スキーマのダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=98095)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

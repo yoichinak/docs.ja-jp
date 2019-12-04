@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442331"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope メソッド
-Opens an existing, on-disk file and maps its metadata into memory.  
+ディスク上の既存のファイルを開き、そのメタデータをメモリにマップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,34 +38,34 @@ HRESULT OpenScope (
   
 ## <a name="parameters"></a>パラメーター  
  `szScope`  
- [in] The name of the file to be opened. The file must contain common language runtime (CLR) metadata.  
+ から開くファイルの名前。 ファイルには、共通言語ランタイム (CLR) メタデータが含まれている必要があります。  
   
  `dwOpenFlags`  
- [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.  
+ から開くためのモード (読み取り、書き込みなど) を指定する[Coropenflags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列挙体の値。  
   
  `riid`  
- [in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.  
+ から返される、必要なメタデータインターフェイスの IID。呼び出し元は、インターフェイスを使用して、メタデータのインポート (読み取り) または出力 (書き込み) を行います。  
   
- The value of `riid` must specify one of the "import" or "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.  
+ `riid` の値には、"import" インターフェイスまたは "emit" インターフェイスのいずれかを指定する必要があります。 有効な値は、IID_IMetaDataEmit、IID_IMetaDataImport、IID_IMetaDataAssemblyEmit、IID_IMetaDataAssemblyImport、IID_IMetaDataEmit2、または IID_IMetaDataImport2 です。  
   
  `ppIUnk`  
- [out] The pointer to the returned interface.  
+ 入出力返されたインターフェイスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.  
+## <a name="remarks"></a>コメント  
+ メタデータのメモリ内コピーは、"import" インターフェイスのいずれかのメソッドを使用してクエリを実行するか、"emit" インターフェイスのいずれかのメソッドを使用してに追加できます。  
   
- If the target file does not contain CLR metadata, the `OpenScope` method will fail.  
+ ターゲットファイルに CLR メタデータが含まれていない場合、`OpenScope` メソッドは失敗します。  
   
- In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing. That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created. However, problems can arise due to this sharing.  
+ .NET Framework バージョン1.0 およびバージョン1.1 では、`dwOpenFlags` が ofRead に設定されているスコープを開くと、共有の対象になります。 つまり、`OpenScope` の後続の呼び出しで、以前に開いたファイルの名前が渡された場合、既存のスコープが再利用され、新しいデータ構造のセットは作成されません。 ただし、この共有によって問題が発生する可能性があります。  
   
- In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared. Use the ofReadOnly value to allow the scope to be shared. When a scope is shared, queries that use "read/write" metadata interfaces will fail.  
+ .NET Framework バージョン2.0 では、`dwOpenFlags` を ofRead に設定して開いたスコープは共有されなくなりました。 スコープを共有できるようにするには、ofReadOnly 値を使用します。 スコープが共有されると、"読み取り/書き込み" メタデータインターフェイスを使用するクエリは失敗します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -38,32 +38,32 @@ HRESULT GetThreadStaticAddress2(
   
 ## <a name="parameters"></a>パラメーター  
  `classId`  
- [in] The ID of the class that contains the requested thread-static field.  
+ から要求されたスレッド静的フィールドを含むクラスの ID。  
   
  `fieldToken`  
- [in] The metadata token for the requested thread-static field.  
+ から要求されたスレッドの静的フィールドのメタデータトークン。  
   
  `appDomainId`  
  [in] アプリケーション ドメインの ID。  
   
  `threadId`  
- [in] The ID of the thread that is the scope for the requested static field.  
+ から要求された静的フィールドのスコープであるスレッドの ID。  
   
  `ppAddress`  
- [out] A pointer to the address of the static field that is within the specified thread.  
+ 入出力指定したスレッド内の静的フィールドのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- The `GetThreadStaticAddress2` method may return one of the following:  
+## <a name="remarks"></a>コメント  
+ `GetThreadStaticAddress2` メソッドは、次のいずれかを返す場合があります。  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- 指定されたコンテキストで、指定された静的フィールドにアドレスが割り当てられていない場合は CORPROF_E_DATAINCOMPLETE HRESULT。  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- ガベージコレクションヒープ内に存在する可能性があるオブジェクトのアドレス。 これらのアドレスは、ガベージコレクションの後に無効になることがあります。そのため、ガベージコレクションの後、プロファイラーはそれらが有効であると想定してはなりません。  
   
- Before a class’s class constructor is completed, `GetThreadStaticAddress2` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
+ クラスのクラスコンストラクターが完了する前に、`GetThreadStaticAddress2` はすべての静的フィールドに対して CORPROF_E_DATAINCOMPLETE を返します。ただし、静的フィールドの一部は既に初期化されており、ガベージコレクションオブジェクトがルート化される場合があります。  
   
- The [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) method is similar to the `GetThreadStaticAddress2` method, but does not accept an application domain argument.  
+ [ICorProfilerInfo2:: GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md)メソッドは `GetThreadStaticAddress2` メソッドに似ていますが、アプリケーションドメインの引数を受け取りません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -72,7 +72,7 @@ HRESULT GetThreadStaticAddress2(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo3 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

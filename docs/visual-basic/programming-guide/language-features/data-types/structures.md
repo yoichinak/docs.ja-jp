@@ -17,28 +17,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350774"
 ---
 # <a name="structures-visual-basic"></a>構造体 (Visual Basic)
-A *structure* is a generalization of the user-defined type (UDT) supported by previous versions of Visual Basic. In addition to fields, structures can expose properties, methods, and events. A structure can implement one or more interfaces, and you can declare individual access levels for each field.  
+*構造体*は、以前のバージョンの Visual Basic でサポートされているユーザー定義型 (UDT) を一般化したものです。 フィールドに加えて、構造体は、プロパティ、メソッド、およびイベントを公開できます。 構造体は、1つまたは複数のインターフェイスを実装でき、各フィールドの個別のアクセスレベルを宣言できます。  
   
- You can combine data items of different types to create a structure. A structure associates one or more *elements* with each other and with the structure itself. When you declare a structure, it becomes a *composite data type*, and you can declare variables of that type.  
+ さまざまな種類のデータ項目を組み合わせて、構造体を作成できます。 構造体は、1つまたは複数の*要素*を互いに関連付けます。 構造体を宣言すると、*複合データ型*になり、その型の変数を宣言できます。  
   
- Structures are useful when you want a single variable to hold several related pieces of information. For example, you might want to keep an employee's name, telephone extension, and salary together. You could use several variables for this information, or you could define a structure and use it for a single employee variable. The advantage of the structure becomes apparent when you have many employees and therefore many instances of the variable.  
+ 構造体は、複数の関連する情報を1つの変数に保持する場合に便利です。 たとえば、従業員の名前、電話の内線番号、および給与をまとめて保持することができます。 この情報にはいくつかの変数を使用できます。また、構造を定義し、1つの employee 変数に使用することもできます。 多くの従業員がいて、その変数のインスタンスが多数ある場合、構造の利点が明らかになります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法 : 構造体を宣言する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- Shows how to declare a structure and its elements.  
+ 構造体とその要素を宣言する方法について説明します。  
   
  [構造体変数](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- Covers assigning a structure to a variable and accessing its elements.  
+ 構造体を変数に割り当て、その要素にアクセスする方法について説明します。  
   
  [構造体とその他のプログラミング要素](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- Summarizes how structures interact with arrays, objects, procedures, and each other.  
+ 構造体が配列、オブジェクト、プロシージャなどとどのように対話するかをまとめます。  
   
  [構造体とクラス](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- Describes the similarities and differences between structures and classes.  
+ 構造体とクラスの類似点と相違点について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
  [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Introduces the Visual Basic data types and describes how to use them.  
+ Visual Basic のデータ型について説明し、その使用方法について説明します。  
   
  [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
- Lists the elementary data types supplied by Visual Basic.
+ Visual Basic によって提供される基本データ型の一覧を示します。

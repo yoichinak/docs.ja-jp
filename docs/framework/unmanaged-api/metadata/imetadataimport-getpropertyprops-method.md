@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437062"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps メソッド
-Gets the metadata for the property represented by the specified token.  
+指定したトークンによって表されるプロパティのメタデータを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,59 +50,59 @@ HRESULT GetPropertyProps (
   
 ## <a name="parameters"></a>パラメーター  
  `prop`  
- [in] A token that represents the property to return metadata for.  
+ からメタデータを返すプロパティを表すトークン。  
   
  `pClass`  
- [out] A pointer to the TypeDef token that represents the type that implements the property.  
+ 入出力プロパティを実装する型を表す TypeDef トークンへのポインター。  
   
  `szProperty`  
- [out] A buffer to hold the property name.  
+ 入出力プロパティ名を保持するバッファー。  
   
  `cchProperty`  
- [in] The size in wide characters of `szProperty`.  
+ から`szProperty`のワイド文字単位のサイズ。  
   
  `pchProperty`  
- [out] The number of wide characters returned in `szProperty`.  
+ 入出力`szProperty`に返されるワイド文字数。  
   
  `pdwPropFlags`  
- [out] A pointer to any attribute flags applied to the property. This value is a bitmask from the [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeration.  
+ 入出力プロパティに適用されている属性フラグへのポインター。 この値は、 [Corpropertyattr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md)列挙子のビットマスクです。  
   
  `ppvSig`  
- [out] A pointer to the metadata signature of the property.  
+ 入出力プロパティのメタデータシグネチャへのポインター。  
   
  `pbSig`  
- [out] The number of bytes returned in `ppvSig`.  
+ 入出力`ppvSig`で返されたバイト数。  
   
  `pdwCPlusTypeFlag`  
- [out] A flag specifying the type of the constant that is the default value of the property. This value is from the CorElementType enumeration.  
+ 入出力プロパティの既定値である定数の型を指定するフラグ。 この値は CorElementType 列挙子からのものです。  
   
  `ppDefaultValue`  
- [out] A pointer to the bytes that store the default value for this property.  
+ 入出力このプロパティの既定値を格納するバイトへのポインター。  
   
  `pcchDefaultValue`  
- [out] The size in wide characters of `ppDefaultValue`, if `pdwCPlusTypeFlag` is ELEMENT_TYPE_STRING; otherwise, this value is not relevant. In that case, the length of `ppDefaultValue` is inferred from the type that is specified by `pdwCPlusTypeFlag`.  
+ 入出力`pdwCPlusTypeFlag` が ELEMENT_TYPE_STRING 場合、`ppDefaultValue`のワイド文字のサイズ。それ以外の場合、この値は関係ありません。 この場合、`ppDefaultValue` の長さは、`pdwCPlusTypeFlag`によって指定された型から推論されます。  
   
  `pmdSetter`  
- [out] A pointer to the MethodDef token that represents the set accessor method for the property.  
+ 入出力プロパティの set アクセサーメソッドを表す MethodDef トークンへのポインター。  
   
  `pmdGetter`  
- [out] A pointer to the MethodDef token that represents the get accessor method for the property.  
+ 入出力プロパティの get アクセサーメソッドを表す MethodDef トークンへのポインター。  
   
  `rmdOtherMethod`  
- [out] An array of MethodDef tokens that represent other methods associated with the property.  
+ 入出力プロパティに関連付けられている他のメソッドを表す MethodDef トークンの配列。  
   
  `cMax`  
- [in] `rmdOtherMethod` 配列の最大サイズ。 If you do not provide an array large enough to hold all the methods, they are skipped without warning.  
+ [in] `rmdOtherMethod` 配列の最大サイズ。 すべてのメソッドを保持するのに十分な大きさの配列を指定しなかった場合、警告なしにスキップされます。  
   
  `pcOtherMethod`  
- [out] The number of MethodDef tokens returned in `rmdOtherMethod`.  
+ 入出力`rmdOtherMethod`で返される MethodDef トークンの数。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

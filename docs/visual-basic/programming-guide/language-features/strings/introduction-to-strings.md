@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344314"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Visual Basic の文字列の概要
-This section describes the basic concepts behind using strings in Visual Basic.  
+ここでは、Visual Basic での文字列の使用に関する基本的な概念について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [文字列の基本](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Introduces the basic concepts behind using strings and string variables.  
+ 文字列と文字列変数の使用に関する基本的な概念について説明します。  
   
- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- Introduces several different ways to analyze and manipulate strings.  
+ [Visual Basic の文字列操作メソッドの型](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ では、文字列を分析および操作するためのさまざまな方法が導入されています。  
   
- [How Culture Affects Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Discusses how Visual Basic uses culture information to perform string conversions and comparisons.  
+ [カルチャが Visual Basic 内の文字列に与える影響](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ Visual Basic がカルチャ情報を使用して文字列の変換と比較を実行する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目
 

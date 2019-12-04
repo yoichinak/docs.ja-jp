@@ -21,61 +21,61 @@ ms.locfileid: "74351833"
 ---
 # <a name="local-type-inference-visual-basic"></a>ローカル型の推論 (Visual Basic)
 
-The Visual Basic compiler uses *type inference* to determine the data types of local variables declared without an `As` clause. The compiler infers the type of the variable from the type of the initialization expression. This enables you to declare variables without explicitly stating a type, as shown in the following example. As a result of the declarations, both `num1` and `num2` are strongly typed as integers.
+Visual Basic コンパイラは、*型の推定*を使用して、`As` 句を使用せずに宣言されたローカル変数のデータ型を決定します。 コンパイラは、初期化式の型から変数の型を推測します。 これにより、次の例に示すように、明示的に型を指定せずに変数を宣言できます。 宣言の結果として、`num1` と `num2` の両方が整数として厳密に型指定されます。
 
 [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]
 
 > [!NOTE]
-> If you do not want `num2` in the previous example to be typed as an `Integer`, you can specify another type by using a declaration like `Dim num3 As Object = 3` or `Dim num4 As Double = 3`.
+> 前の例の `num2` を `Integer`として入力したくない場合は、`Dim num3 As Object = 3` や `Dim num4 As Double = 3`などの宣言を使用して別の型を指定できます。
 
 > [!NOTE]
-> Type inference can be used only for non-static local variables; it cannot be used to determine the type of class fields, properties, or functions.
+> 型の推定は、非静的ローカル変数に対してのみ使用できます。クラスフィールド、プロパティ、または関数の型を判断するために使用することはできません。
 
-Local type inference applies at procedure level. It cannot be used to declare variables at module level (within a class, structure, module, or interface but not within a procedure or block). If `num2` in the previous example were a field of a class instead of a local variable in a procedure, the declaration would cause an error with `Option Strict` on, and would classify `num2` as an `Object` with `Option Strict` off. Similarly, local type inference does not apply to procedure level variables declared as `Static`.
+ローカル型の推論はプロシージャレベルで適用されます。 モジュールレベルで変数を宣言するために使用することはできません (クラス、構造体、モジュール、またはインターフェイス内で、プロシージャまたはブロック内には含まれません)。 前の例の `num2` がプロシージャ内のローカル変数ではなくクラスのフィールドであった場合、宣言によって `Option Strict` でエラーが発生し、`num2` が `Option Strict` off の `Object` として分類されます。 同様に、ローカル型の推定は、`Static`として宣言されたプロシージャレベルの変数には適用されません。
 
-## <a name="type-inference-vs-late-binding"></a>Type Inference vs. Late Binding
+## <a name="type-inference-vs-late-binding"></a>型推論と遅延バインディング
 
-Code that uses type inference resembles code that relies on late binding. However, type inference strongly types the variable instead of leaving it as `Object`. The compiler uses a variable's initializer to determine the variable's type at compile time to produce early-bound code. In the previous example, `num2`, like `num1`, is typed as an `Integer`.
+型の推定を使用するコードは、遅延バインディングに依存するコードに似ています。 ただし、型の推定では、変数が `Object`として保持されるのではなく、厳密に型になります。 コンパイラは、コンパイル時に変数の初期化子を使用して、事前バインディングされたコードを生成します。 前の例では、`num1`のように `num2`が `Integer`として型指定されています。
 
-The behavior of early-bound variables differs from that of late-bound variables, for which the type is known only at run time. Knowing the type early enables the compiler to identify problems before execution, allocate memory precisely, and perform other optimizations. Early binding also enables the Visual Basic integrated development environment (IDE) to provide IntelliSense Help about the members of an object. Early binding is also preferred for performance. This is because all data stored in a late-bound variable must be wrapped as type `Object`, and accessing members of the type at run time makes the program slower.
+事前バインディングされた変数の動作は、遅延バインディングされた変数の動作とは異なり、型は実行時にのみ認識されます。 型を早期に把握すると、コンパイラは実行前に問題を特定し、メモリを正確に割り当て、その他の最適化を実行できます。 また、事前バインディングを使用すると、Visual Basic 統合開発環境 (IDE) で、オブジェクトのメンバーに関する IntelliSense のヘルプを提供することもできます。 事前バインディングは、パフォーマンスのためにも推奨されます。 これは、遅延バインディング変数に格納されているすべてのデータが `Object`型としてラップされる必要があり、実行時にその型のメンバーにアクセスするとプログラムの速度が低下するためです。
 
 ## <a name="examples"></a>使用例
 
-Type inference occurs when a local variable is declared without an `As` clause and initialized. The compiler uses the type of the assigned initial value as the type of the variable. For example, each of the following lines of code declares a variable of type `String`.
+型の推定は、ローカル変数が `As` 句なしで宣言されて初期化される場合に発生します。 コンパイラは、割り当てられた初期値の型を変数の型として使用します。 たとえば、次のコード行では、`String`型の変数を宣言しています。
 
 [!code-vb[VbVbalrTypeInference#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#2)]
 
-The following code demonstrates two equivalent ways to create an array of integers.
+次のコードは、整数の配列を作成する2つの同等の方法を示しています。
 
 [!code-vb[VbVbalrTypeInference#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#3)]
 
-It is convenient to use type inference to determine the type of a loop control variable. In the following code, the compiler infers that `number` is an `Integer` because `someNumbers2` from the previous example is an array of integers.
+型の推定を使用して、ループコントロール変数の型を決定すると便利です。 次のコードでは、前の例の `someNumbers2` が整数の配列であるため、コンパイラは `number` が `Integer` であると推論します。
 
 [!code-vb[VbVbalrTypeInference#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#4)]
 
-Local type inference can be used in `Using` statements to establish the type of the resource name, as the following example demonstrates.
+次の例に示すように、`Using` ステートメントでローカル型の推論を使用して、リソース名の型を設定できます。
 
 [!code-vb[VbVbalrTypeInference#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#7)]
 
-The type of a variable can also be inferred from the return values of functions, as the following example demonstrates. Both `pList1` and `pList2` are arrays of processes because `Process.GetProcesses` returns an array of processes.
+変数の型は、次の例に示すように、関数の戻り値から推論することもできます。 `Process.GetProcesses` はプロセスの配列を返すため、`pList1` と `pList2` はどちらもプロセスの配列です。
 
 [!code-vb[VbVbalrTypeInference#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#5)]
 
-## <a name="option-infer"></a>Option Infer
+## <a name="option-infer"></a>オプションの推論
 
-`Option Infer` enables you specify whether local type inference is allowed in a particular file. To enable or to block the option, type one of the following statements at the start of the file.
+`Option Infer` を使用すると、特定のファイルでローカル型の推論が許可されるかどうかを指定できます。 オプションを有効または禁止するには、ファイルの先頭に次のいずれかのステートメントを入力します。
 
 `Option Infer On`
 
 `Option Infer Off`
 
-If you do not specify a value for `Option Infer` in your code, the compiler default is `Option Infer On`.
+コードで `Option Infer` の値を指定しない場合、コンパイラの既定値は `Option Infer On`になります。
 
 ファイルの `Option Infer` に設定した値が IDE またはコマンド ラインに設定した値と競合した場合は、ファイルの値が優先されます。
 
-For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
+詳細については、[[オプションの推論ステートメント]](../../../../visual-basic/language-reference/statements/option-infer-statement.md)と [[コンパイル] ページ (プロジェクトデザイナー) (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [事前バインディングと遅延バインディング](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)

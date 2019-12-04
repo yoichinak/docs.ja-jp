@@ -18,17 +18,17 @@ ms.locfileid: "74345407"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>方法: 派生クラスによって非表示になっている変数にアクセスする (Visual Basic)
 
-When code in a derived class accesses a variable, the compiler normally resolves the reference to the closest accessible version, that is, the accessible version the fewest derivational steps backward from the accessing class. If the variable is defined in the derived class, the code normally accesses that definition.
+派生クラスのコードが変数にアクセスすると、コンパイラは通常、最も近いアクセス可能なバージョン (アクセス可能なバージョン) への参照を解決します。これは、アクセスしているクラスからさかのぼって最も少ない derivational 手順です。 変数が派生クラスで定義されている場合、コードは通常、その定義にアクセスします。
 
-If the derived class variable shadows a variable in the base class, it hides the base class version. However, you can access the base class variable by qualifying it with the `MyBase` keyword.
+派生クラス変数が基底クラスの変数をシャドウすると、基底クラスのバージョンが非表示になります。 ただし、基底クラスの変数にアクセスするには、`MyBase` キーワードを使用して修飾する必要があります。
 
-### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>To access a base class variable hidden by a derived class
+### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>派生クラスによって非表示にされた基本クラス変数にアクセスするには
 
-- In an expression or assignment statement, precede the variable name with the `MyBase` keyword and a period (`.`).
+- 式または代入ステートメントでは、変数名の前に `MyBase` キーワードとピリオド (`.`) を指定します。
 
-    The compiler resolves the reference to the base class version of the variable.
+    コンパイラは、変数の基本クラスバージョンへの参照を解決します。
 
-    The following example illustrates shadowing through inheritance. It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.
+    次の例は、継承によるシャドウ処理を示しています。 2つの参照が作成されます。1つはシャドウを行う変数にアクセスし、もう1つはシャドウ処理をバイパスします。
 
     ```vb
     Public Class shadowBaseClass
@@ -45,16 +45,16 @@ If the derived class variable shadows a variable in the base class, it hides the
     End Class
     ```
 
-    The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase`  keyword.
+    前の例では、基底クラスで `shadowString` 変数を宣言し、派生クラスでそれをシャドウしています。 派生クラスのプロシージャ `showStrings` は、名前 `shadowString` が修飾されていない場合に、文字列のシャドウバージョンを表示します。 `shadowString` が `MyBase` キーワードで修飾されている場合は、シャドウされたバージョンが表示されます。
 
 ## <a name="robust-programming"></a>信頼性の高いプログラミング
 
-To lower the risk of referring to an unintended version of a shadowed variable, you can fully qualify all references to a shadowed variable. Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to the wrong version of the variable.
+シャドウされた変数の意図しないバージョンを参照する危険性を低くするために、シャドウされた変数へのすべての参照を完全修飾することができます。 シャドウでは、同じ名前の変数の複数のバージョンが導入されます。 コードステートメントが変数名を参照する場合、コンパイラが参照を解決するバージョンは、コードステートメントの場所や修飾文字列の存在などの要因によって異なります。 これにより、変数の間違ったバージョンを参照するリスクが増加する可能性があります。
 
 ## <a name="see-also"></a>関連項目
 
 - [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic でのシャドウ処理](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [シャドウとオーバーライドの違い](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [方法: 自分で宣言した変数と同じ名前の変数を隠す](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [方法: 継承された変数を隠す](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)

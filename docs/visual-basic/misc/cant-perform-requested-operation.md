@@ -1,5 +1,5 @@
 ---
-title: Can't perform requested operation
+title: 要求された操作を実行できません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID17
@@ -18,6 +18,6 @@ ms.locfileid: "74353320"
   
 - コードの実行を停止し、必要に応じて変更を加え、操作をやり直します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [エラーの種類](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -91,7 +91,7 @@ ms.locfileid: "74434738"
 |[ResetEnum メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-resetenum-method.md)|指定した列挙子を指定した位置にリセットします。|  
 |[ResolveTypeRef メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-resolvetyperef-method.md)|指定した TypeRef トークンによって参照される型の型情報を取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `IMetaDataImport` インターフェイスは、型情報のインポート (開発ツールなど)、または配置されたコンポーネントの管理 (解決サービス、アクティブ化サービスなど) を行うツールとサービスで使用することを主な目的としてデザインされています。 `IMetaDataImport` のメソッドは、次のタスク カテゴリに分類されます。  
   
 - メタデータ スコープ内の項目のコレクションの列挙。  
@@ -102,12 +102,12 @@ ms.locfileid: "74434738"
   
 - Get メソッドは、メタデータ項目の単一値のプロパティを返すように特別にデザインされています。 プロパティが別の項目への参照である場合、その項目のトークンが返されます。 特定の値が要求されていないことを示すために、ポインター入力型を NULL に設定できます。 基本的にコレクション オブジェクトであるプロパティ (クラスが実装するインターフェイスのコレクションなど) を取得するには、列挙メソッドを使用します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

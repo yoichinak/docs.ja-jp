@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353072"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>How to: Debug Empty Query Results Sets (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>方法: 空のクエリ結果セットをデバッグする (Visual Basic)
 
 XML ツリーのクエリにおける最も一般的な問題の 1 つは、XML ツリーに既定の名前空間がある場合に、XML が名前空間に含まれていないものとして開発者がクエリを記述してしまうことです。
 
@@ -17,7 +17,7 @@ XML ツリーのクエリにおける最も一般的な問題の 1 つは、XML 
 
 2 番目に示す一連の例では、名前空間内の XML に対してクエリを実行できるようにするために必要な修正を示しています。
 
-For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).
+詳細については、「[名前空間の概要」 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)を参照してください。
 
 ## <a name="example"></a>例
 
@@ -54,7 +54,7 @@ End of result set
 
 この例では、名前空間内にある XML の作成と、適切に記述されたクエリを示します。
 
-The solution is to declare and initialize a global default namespace. これにより、すべての XML プロパティが既定の名前空間に配置されます。 この例を正しく動作させるために必要な変更はこれだけです。
+これを解決するには、グローバルな既定の名前空間を宣言して初期化します。 これにより、すべての XML プロパティが既定の名前空間に配置されます。 この例を正しく動作させるために必要な変更はこれだけです。
 
 ```vb
 Imports <xmlns="http://www.adventure-works.com">
@@ -94,4 +94,4 @@ End of result set
 
 ## <a name="see-also"></a>関連項目
 
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

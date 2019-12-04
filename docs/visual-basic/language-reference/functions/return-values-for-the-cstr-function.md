@@ -19,23 +19,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349995"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>CStr 関数の戻り値 (Visual Basic)
-The following table describes the return values for `CStr` for different data types of `expression`.  
+次の表では、`expression`のさまざまなデータ型に対する `CStr` の戻り値について説明します。  
   
-|If `expression` type is|`CStr` 戻り値|  
+|`expression` 型がの場合|`CStr` 戻り値|  
 |-----------------------------|--------------------|  
-|[Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|A string containing "True" or "False".|  
-|[Date データ型](../../../visual-basic/language-reference/data-types/date-data-type.md)|A string containing a `Date` value (date and time) in the short date format of your system.|  
-|[数値のデータ型](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|A string representing the number.|  
+|[Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|"True" または "False" を含む文字列。|  
+|[Date データ型](../../../visual-basic/language-reference/data-types/date-data-type.md)|システムの短い日付形式の `Date` 値 (日付と時刻) を含む文字列。|  
+|[数値のデータ型](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|数値を表す文字列。|  
   
-## <a name="cstr-and-date"></a>CStr and Date  
- The `Date` type always contains both date and time information. For purposes of type conversion, Visual Basic considers 1/1/0001 (January 1 of the year 1) to be a *neutral value* for the date, and 00:00:00 (midnight) to be a neutral value for the time. `CStr` does not include neutral values in the resulting string. For example, if you convert `#January 1, 0001 9:30:00#` to a string, the result is "9:30:00 AM"; the date information is suppressed. However, the date information is still present in the original `Date` value and can be recovered with functions such as <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
+## <a name="cstr-and-date"></a>CStr と日付  
+ `Date` 型には、常に日付と時刻の両方の情報が含まれます。 型変換の場合、Visual Basic は 1/1/0001 (1 年1月1日) を日付の*ニュートラル値*と見なし、00:00:00 (午前0時) はその時刻のニュートラル値と見なされます。 `CStr` には、結果の文字列にニュートラル値は含まれません。 たとえば、`#January 1, 0001 9:30:00#` を文字列に変換した場合、結果は "9:30:00 AM" になります。日付情報は表示されません。 ただし、日付情報は依然として元の `Date` 値に存在し、<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>などの関数を使用して回復できます。  
   
 > [!NOTE]
-> The `CStr` function performs its conversion based on the current culture settings for the application. To get the string representation of a number in a particular culture, use the number's `ToString(IFormatProvider)` method. For example, use <xref:System.Double.ToString%2A?displayProperty=nameWithType> when converting a value of type `Double` to a `String`.  
+> `CStr` 関数は、アプリケーションの現在のカルチャ設定に基づいて変換を実行します。 特定のカルチャの数値の文字列形式を取得するには、数値の `ToString(IFormatProvider)` メソッドを使用します。 たとえば、型 `Double` の値を `String`に変換する場合は、<xref:System.Double.ToString%2A?displayProperty=nameWithType> を使用します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)
 - [Date データ型](../../../visual-basic/language-reference/data-types/date-data-type.md)

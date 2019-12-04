@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353387"
 ---
-# <a name="grouping-data-visual-basic"></a>Grouping Data (Visual Basic)
+# <a name="grouping-data-visual-basic"></a>データのグループ化 (Visual Basic)
 グループ化とは、各グループの要素が共通の属性を持つようにデータをグループに分ける操作を指します。  
   
  次の図は、文字のシーケンスをグループ化した結果を示しています。 各グループのキーは文字です。  
@@ -20,7 +20,7 @@ ms.locfileid: "74353387"
   
 ## <a name="methods"></a>メソッド  
   
-|メソッド名|説明|Visual Basic Query Expression Syntax|説明|  
+|メソッド名|説明|Visual Basic クエリ式の構文|詳細|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |GroupBy|共通の属性を共有する要素をグループ化します。 各グループは <xref:System.Linq.IGrouping%602> オブジェクトによって表されます。|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|キー セレクター関数に基づいて、<xref:System.Linq.Lookup%602> (一対多の辞書) に要素を挿入します。|該当しない。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
@@ -63,10 +63,10 @@ MsgBox(sb.ToString())
 ' 208  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Group By 句](../../../../visual-basic/language-reference/queries/group-by-clause.md)
-- [How to: Group Files by Extension (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [方法: 拡張子別にファイルをグループ化する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [方法: グループを使用してファイルを複数のファイルに分割する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

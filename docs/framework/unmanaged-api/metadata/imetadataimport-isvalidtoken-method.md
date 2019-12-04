@@ -35,21 +35,21 @@ BOOL IsValidToken (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in] The token to check the reference validity for.  
+ から参照の有効性を確認するトークン。  
   
 ## <a name="return-value"></a>戻り値  
- `true` if `tk` is a valid metadata token within the current scope. それ以外の場合は `false`。  
+ `tk` が現在のスコープ内の有効なメタデータトークンである場合は `true` します。 それ以外の場合は、`false` になります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

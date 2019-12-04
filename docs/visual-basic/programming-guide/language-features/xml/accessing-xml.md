@@ -16,45 +16,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351749"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Visual Basic での XML へのアクセス
-Visual Basic provides XML axis properties for accessing and navigating [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] structures. These properties use a special syntax to enable you to access elements and attributes by specifying the XML names.  
+Visual Basic には、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 構造体にアクセスして移動するための XML 軸プロパティが用意されています。 これらのプロパティでは、XML 名を指定して要素と属性にアクセスできるように、特殊な構文を使用します。  
   
- The following table lists the language features that enable you to access XML elements and attributes in Visual Basic.  
+ 次の表に、Visual Basic の XML 要素と属性にアクセスできるようにする言語機能を示します。  
   
 ### <a name="xml-axis-properties"></a>XML 軸プロパティ  
   
-|Property description|例|説明|  
+|プロパティの説明|例|説明|  
 |--------------------------|-------------|-----------------|  
-|*child axis*|`contact.<phone>`|Gets all `phone` elements that are child elements of the `contact` element.|  
-|*attribute axis*|`phone.@type`|Gets all `type` attributes of the `phone` element.|  
-|*descendant axis*|`contacts...<name>`|Gets all `name` elements of the `contacts` element, regardless of how deep in the hierarchy they occur.|  
-|*extension indexer*|`contacts...<name>(0)`|Gets the first `name` element from the sequence.|  
-|*value*|`contacts...<name>.Value`|Gets the string representation of the first object in the sequence, or `Nothing` if the sequence is empty.|  
+|*子軸*|`contact.<phone>`|`contact` 要素の子要素であるすべての `phone` 要素を取得します。|  
+|*属性軸*|`phone.@type`|`phone` 要素のすべての `type` 属性を取得します。|  
+|*子孫軸*|`contacts...<name>`|発生した階層の深さに関係なく、`contacts` 要素のすべての `name` 要素を取得します。|  
+|*拡張機能のインデクサー*|`contacts...<name>(0)`|シーケンスから最初の `name` 要素を取得します。|  
+|*値*|`contacts...<name>.Value`|シーケンス内の最初のオブジェクトの文字列表現を取得します。シーケンスが空の場合は `Nothing` します。|  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法: XML 子孫要素にアクセスする](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
- Shows how to use a descendant axis property to access all XML elements that have a specified name and that are contained under a specified XML element.  
+ 子孫軸プロパティを使用して、指定した名前を持ち、指定した XML 要素の下に含まれるすべての XML 要素にアクセスする方法を示します。  
   
  [方法: XML 子要素にアクセスする](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
- Shows how to use a child axis property to access all XML child elements that have a specified name in an XML element.  
+ 子軸プロパティを使用して、XML 要素内で指定された名前を持つすべての XML 子要素にアクセスする方法を示します。  
   
  [方法: XML 属性にアクセスする](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
- Shows how to use an attribute axis property to access all XML attributes that have a specified name in an XML element.  
+ 属性軸プロパティを使用して、XML 要素内で指定した名前を持つすべての XML 属性にアクセスする方法を示します。  
   
  [方法 : XML 名前空間プレフィックスを宣言して使用する](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
- Shows how to declare an XML namespace prefix and use it to create and access XML elements.  
+ XML 名前空間プレフィックスを宣言し、それを使用して XML 要素を作成およびアクセスする方法を示します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [XML 軸プロパティ](../../../../visual-basic/language-reference/xml-axis/index.md)  
- Provides links to sections describing the various XML access properties.  
+ さまざまな XML アクセスプロパティについて説明するセクションへのリンクを示します。  
   
  [Visual Basic における LINQ to XML の概要](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ Visual Basic での [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の使用方法について説明します。  
   
  [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- Provides an introduction to using XML literals in Visual Basic.  
+ Visual Basic での XML リテラルの使用方法について説明します。  
   
  [Visual Basic での XML の操作](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
- Provides links to sections about loading and modifying XML in Visual Basic.  
+ Visual Basic での XML の読み込みと変更に関するセクションへのリンクを示します。  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Provides links to sections describing how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.
+ Visual Basic での [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の使用方法を説明するセクションへのリンクを示します。

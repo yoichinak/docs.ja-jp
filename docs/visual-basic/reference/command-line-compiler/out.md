@@ -24,27 +24,27 @@ ms.locfileid: "74352390"
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`filename`|必須です。 The name of the output file the compiler creates. If the file name contains a space, enclose the name in quotation marks (" ").|  
+|`filename`|必須。 コンパイラによって作成される出力ファイルの名前。 ファイル名にスペースが含まれている場合は、名前を引用符 ("") で囲みます。|  
   
-## <a name="remarks"></a>Remarks  
- Specify the full name and extension of the file to create. If you do not, the .exe file takes its name from the source-code file containing the `Sub Main` procedure, and the .dll file takes its name from the first source-code file.  
+## <a name="remarks"></a>コメント  
+ 作成するファイルの完全な名前と拡張子を指定します。 そうしないと、.exe ファイルの名前が `Sub Main` プロシージャを含むソースコードファイルから取得され、.dll ファイルの名前が最初のソースコードファイルの名前になります。  
   
- If you specify a file name without an .exe or .dll extension, the compiler automatically adds the extension for you, depending on the value specified for the `-target` compiler option.  
+ .Exe または .dll 拡張子のないファイル名を指定すると、コンパイラは、`-target` コンパイラオプションに指定された値に応じて、自動的に拡張機能を追加します。  
   
-|To set -out in the Visual Studio integrated development environment|  
+|Visual Studio 統合開発環境でを設定するには|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.  Click the **Application** tab.<br />3.  Modify the value in the **Assembly Name** box.|  
+|1.**ソリューションエクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[アプリケーション]** タブをクリックします。<br />3. **[アセンブリ名]** ボックスの値を変更します。|  
   
 ## <a name="example"></a>例  
- The following code compiles `T2.vb` and creates output file `T2.exe`.  
+ 次のコードは `T2.vb` をコンパイルし、出力ファイル `T2.exe`を作成します。  
   
 ```console
 vbc t2.vb -out:t3.exe  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

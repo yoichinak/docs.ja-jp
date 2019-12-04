@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445394"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>ICorProfilerCallback::ExceptionSearchCatcherFound メソッド
-Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.  
+例外処理の検索フェーズによってスローされた例外のハンドラーが見つかったことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,9 +34,9 @@ RESULT ExceptionSearchCatcherFound(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in] The ID of the function that contains the exception handler.  
+ から例外ハンドラーを含む関数の ID。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -45,6 +45,6 @@ RESULT ExceptionSearchCatcherFound(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

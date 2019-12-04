@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445591"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 メソッド
-Sets the name of and options for a new assembly. Do not call this method when you produce unbound modules.  
+新しいアセンブリのオプションとオプションの名前を設定します。 バインドされていないモジュールを生成する場合は、このメソッドを呼び出さないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,24 +37,24 @@ HRESULT SetAssemblyFile2(
   
 ## <a name="parameters"></a>パラメーター  
  `pszFilename`  
- Name of manifest file.  
+ マニフェストファイルの名前。  
   
  `pEmitter`  
- [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface for this file.  
+ このファイルの[IMetaDataEmit2 インターフェイス](../metadata/imetadataemit2-interface.md)インターフェイス。  
   
  `afFlags`  
- Options represented by [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
+ [Assemblyflags 列挙体](../metadata/assemblyflags-enumeration.md)によって表されるオプション。  
   
  `pAssemblyID`  
- Receives unique ID for the assembly being constructed.  
+ 構築されるアセンブリの一意の ID を受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h.  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink2 インターフェイス](ialink2-interface.md)
 - [IALink インターフェイス](ialink-interface.md)

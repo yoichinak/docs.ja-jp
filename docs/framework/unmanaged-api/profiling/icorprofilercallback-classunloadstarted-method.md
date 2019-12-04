@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445070"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a>ICorProfilerCallback::ClassUnloadStarted メソッド
-Notifies the profiler that a class is being unloaded.  
+クラスがアンロードされていることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,12 +34,12 @@ HRESULT ClassUnloadStarted(
   
 ## <a name="parameters"></a>パラメーター  
  `classId`  
- [in] Identifies the class that is being unloaded.  
+ からアンロードするクラスを識別します。  
   
-## <a name="remarks"></a>Remarks  
- The value of `classId` is not valid for an information request after the `ClassUnloadStarted` method returns — this is the profiler's last chance to obtain information about this class.  
+## <a name="remarks"></a>コメント  
+ `classId` の値は、`ClassUnloadStarted` メソッドから返された後の情報要求に対して無効です。これは、このクラスに関する情報を取得するためのプロファイラーの最後の機会です。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -48,7 +48,7 @@ HRESULT ClassUnloadStarted(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ClassUnloadFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)

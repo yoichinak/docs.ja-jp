@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333058"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent ステートメント
-Triggers an event declared at module level within a class, form, or document.  
+クラス、フォーム、またはドキュメント内のモジュールレベルで宣言されたイベントをトリガーします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,57 +28,57 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="parts"></a>指定項目  
  `eventname`  
- 必須です。 Name of the event to trigger.  
+ 必須。 トリガーするイベントの名前。  
   
  `argumentlist`  
- 省略可能です。 Comma-delimited list of variables, arrays, or expressions. The `argumentlist` argument must be enclosed by parentheses. If there are no arguments, the parentheses must be omitted.  
+ 省略可。 変数、配列、または式のコンマ区切りの一覧。 `argumentlist` 引数は、かっこで囲む必要があります。 引数がない場合は、かっこを省略する必要があります。  
   
-## <a name="remarks"></a>Remarks  
- The required `eventname` is the name of an event declared within the module. It follows Visual Basic variable naming conventions.  
+## <a name="remarks"></a>コメント  
+ 必須の `eventname` は、モジュール内で宣言されたイベントの名前です。 Visual Basic 変数の名前付け規則に従います。  
   
- If the event has not been declared within the module in which it is raised, an error occurs. The following code fragment illustrates an event declaration and a procedure in which the event is raised.  
+ イベントが発生したモジュール内でイベントが宣言されていない場合は、エラーが発生します。 次のコードフラグメントは、イベントの宣言と、イベントが発生するプロシージャを示しています。  
   
  [!code-vb[VbVbalrEvents#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#37)]  
   
- You cannot use `RaiseEvent` to raise events that are not explicitly declared in the module. For example, all forms inherit a <xref:System.Windows.Forms.Control.Click> event from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>, it cannot be raised using `RaiseEvent` in a derived form. If you declare a `Click` event in the form module, it shadows the form's own <xref:System.Windows.Forms.Control.Click> event. You can still invoke the form's <xref:System.Windows.Forms.Control.Click> event by calling the <xref:System.Windows.Forms.Control.OnClick%2A> method.  
+ `RaiseEvent` を使用して、モジュールで明示的に宣言されていないイベントを発生させることはできません。 たとえば、すべてのフォームが <xref:System.Windows.Forms.Form?displayProperty=nameWithType>から <xref:System.Windows.Forms.Control.Click> イベントを継承し、派生フォームで `RaiseEvent` を使用して発生させることはできません。 フォームモジュールで `Click` イベントを宣言すると、フォーム独自の <xref:System.Windows.Forms.Control.Click> イベントが影付きで表示されます。 <xref:System.Windows.Forms.Control.OnClick%2A> メソッドを呼び出すことによって、フォームの <xref:System.Windows.Forms.Control.Click> イベントを呼び出すこともできます。  
   
- By default, an event defined in Visual Basic raises its event handlers in the order that the connections are established. Because events can have `ByRef` parameters, a process that connects late may receive parameters that have been changed by an earlier event handler. After the event handlers execute, control is returned to the subroutine that raised the event.  
-  
-> [!NOTE]
-> Non-shared events should not be raised within the constructor of the class in which they are declared. Although such events do not cause run-time errors, they may fail to be caught by associated event handlers. Use the `Shared` modifier to create a shared event if you need to raise an event from a constructor.  
+ 既定では、Visual Basic で定義されたイベントによって、接続が確立された順序でイベントハンドラーが発生します。 イベントは `ByRef` パラメーターを持つことができるため、遅延を接続するプロセスは、以前のイベントハンドラーによって変更されたパラメーターを受け取る場合があります。 イベントハンドラーが実行されると、イベントを発生させたサブルーチンに制御が返されます。  
   
 > [!NOTE]
-> You can change the default behavior of events by defining a custom event. For custom events, the `RaiseEvent` statement invokes the event's `RaiseEvent` accessor. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+> 共有されていないイベントは、宣言されているクラスのコンストラクター内では発生しません。 このようなイベントでは実行時エラーは発生しませんが、関連するイベントハンドラーによってキャッチされない場合があります。 コンストラクターからイベントを発生させる必要がある場合は、`Shared` 修飾子を使用して共有イベントを作成します。  
+  
+> [!NOTE]
+> イベントの既定の動作を変更するには、カスタムイベントを定義します。 カスタムイベントの場合は、`RaiseEvent` ステートメントによって、イベントの `RaiseEvent` アクセサーが呼び出されます。 カスタムイベントの詳細については、「 [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、イベントを使用して 10 秒から 0 秒までカウント ダウンします。 The code illustrates several of the event-related methods, properties, and statements, including the `RaiseEvent` statement.  
+ 次の例では、イベントを使用して 10 秒から 0 秒までカウント ダウンします。 このコードは、`RaiseEvent` ステートメントを含む、イベント関連のメソッド、プロパティ、およびステートメントのいくつかを示しています。  
   
  イベントを発生させるクラスをイベント ソース、イベントを処理するメソッドをイベント ハンドラーと呼びます。 イベント ソースでは、生成されるイベントに対して複数のイベント ハンドラーを設定できます。 クラスでイベントが発生すると、そのイベントは、オブジェクトのインスタンスに対するイベントを処理するために選択されたすべてのクラスで発生します。  
   
- また、この例では、ボタン (`Button1`) とテキスト ボックス (`TextBox1`) を含んだフォーム (`Form1`) も使用しています。 ボタンをクリックすると、1 つ目のテキスト ボックスに 10 秒から 0 秒までのカウントダウンが表示されます。 カウントダウンが終わると (10 秒が経過すると)、1 つ目のテキスト ボックスに "Done" と表示されます。  
+ また、この例では、ボタン (`Form1`) とテキスト ボックス (`Button1`) を含んだフォーム (`TextBox1`) も使用しています。 ボタンをクリックすると、1 つ目のテキスト ボックスに 10 秒から 0 秒までのカウントダウンが表示されます。 カウントダウンが終わると (10 秒が経過すると)、1 つ目のテキスト ボックスに "Done" と表示されます。  
   
  `Form1` のコードでは、フォームの初期状態と終了状態を指定しています。 イベント発生時に実行されるコードも含まれています。  
   
- To use this example, open a new Windows Application project, add a button named `Button1` and a text box named `TextBox1` to the main form, named `Form1`. Then right-click the form and click **View Code** to open the Code Editor.  
+ この例を使用するには、新しい Windows アプリケーションプロジェクトを開き、`Button1` という名前のボタンと、`TextBox1` という名前のテキストボックスを、`Form1`という名前のメインフォームに追加します。 次に、フォームを右クリックし、 **[コードの表示]** をクリックしてコードエディターを開きます。  
   
- Add a `WithEvents` variable to the declarations section of the `Form1` class.  
+ `Form1` クラスの宣言セクションに `WithEvents` 変数を追加します。  
   
  [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>例  
- `Form1` のコードに次のコードを追加します。 Replace any duplicate procedures that may exist, such as `Form_Load`, or `Button_Click`.  
+ `Form1` のコードに次のコードを追加します。 `Form_Load`、`Button_Click`など、存在する可能性のある重複するプロシージャを置き換えます。  
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
- Press F5 to run the preceding example, and click the button labeled **Start**. 最初のテキスト ボックスで、秒のカウント ダウンが開始されます。 カウントダウンが終わると (10 秒が経過すると)、1 つ目のテキスト ボックスに "Done" と表示されます。  
+ F5 キーを押して前の例を実行し、 **[Start]** というラベルのボタンをクリックします。 最初のテキスト ボックスで、秒のカウント ダウンが開始されます。 カウントダウンが終わると (10 秒が経過すると)、1 つ目のテキスト ボックスに "Done" と表示されます。  
   
 > [!NOTE]
-> The `My.Application.DoEvents` method does not process events in exactly the same way as the form does. To allow the form to handle the events directly, you can use multithreading. For more information, see [Managed Threading](../../../standard/threading/index.md).  
+> `My.Application.DoEvents` メソッドは、フォームとまったく同じ方法でイベントを処理しません。 フォームがイベントを直接処理できるようにするには、マルチスレッドを使用します。 詳細については、「[マネージスレッド処理](../../../standard/threading/index.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)
 - [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
 - [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)
 - [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [!](../../../visual-basic/language-reference/statements/handles-clause.md)

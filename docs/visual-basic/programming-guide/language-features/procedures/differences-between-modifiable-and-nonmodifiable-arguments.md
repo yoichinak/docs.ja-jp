@@ -16,28 +16,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341387"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>変更できる引数と変更できない引数の違い (Visual Basic)
-When you call a procedure, you typically pass one or more arguments to it. Each argument corresponds to an underlying programming element. Both the underlying elements and the arguments themselves can be either modifiable or nonmodifiable.  
+プロシージャを呼び出す場合、通常は1つ以上の引数を渡します。 各引数は、基になるプログラミング要素に対応します。 基になる要素と引数自体の両方を変更可能または変更できません。  
   
-## <a name="modifiable-and-nonmodifiable-elements"></a>Modifiable and Nonmodifiable Elements  
- A programming element can be either a *modifiable element*, which can have its value changed, or a *nonmodifiable element*, which has a fixed value once it has been created.  
+## <a name="modifiable-and-nonmodifiable-elements"></a>変更可能な要素と変更不可能な要素  
+ プログラミング要素には、変更可能な*要素*(値を変更することができます)、または作成後に固定値を持つ変更でき*ない要素の*いずれかを指定できます。  
   
- The following table lists modifiable and nonmodifiable programming elements.  
+ 次の表に、変更可能なプログラミング要素と変更できないプログラミング要素の一覧を示します。  
   
-|Modifiable elements|Nonmodifiable elements|  
+|変更可能な要素|不変の要素|  
 |-------------------------|----------------------------|  
-|Local variables (declared inside procedures), including object variables, except for read-only|Read-only variables, fields, and properties|  
-|Fields (member variables of modules, classes, and structures), except for read-only|Constants and literals|  
-|Properties, except for read-only|Enumeration members|  
-|Array elements|Expressions (even if their elements are modifiable)|  
+|ローカル変数 (プロシージャ内で宣言されます)。読み取り専用を除き、オブジェクト変数を含みます。|読み取り専用の変数、フィールド、およびプロパティ|  
+|フィールド (モジュール、クラス、および構造体のメンバー変数) (読み取り専用を除く)|定数とリテラル|  
+|プロパティ (読み取り専用を除く)|列挙型のメンバー|  
+|配列要素|式 (要素が変更可能な場合でも)|  
   
-## <a name="modifiable-and-nonmodifiable-arguments"></a>Modifiable and Nonmodifiable Arguments  
- A *modifiable argument* is one with a modifiable underlying element. The calling code can store a new value at any time, and if you pass the argument [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the code in the procedure can also modify the underlying element in the calling code.  
+## <a name="modifiable-and-nonmodifiable-arguments"></a>変更可能な引数と変更不可能な引数  
+ 変更可能な*引数*は、変更可能な基になる要素を持つものです。 呼び出し元のコードは、新しい値をいつでも格納できます。引数[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)を渡すと、プロシージャ内のコードは、呼び出し元のコード内の基になる要素を変更することもできます。  
   
- A *nonmodifiable argument* either has a nonmodifiable underlying element or is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). The procedure cannot modify the underlying element in the calling code, even if it is a modifiable element. If it is a nonmodifiable element, the calling code itself cannot modify it.  
+ *不変の引数*は、基になる要素が不変であるか、または[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)で渡されています。 プロシージャは、変更可能な要素であっても、呼び出し元のコード内の基になる要素を変更することはできません。 変更できない要素の場合は、呼び出し元のコード自体が変更することはできません。  
   
- The called procedure might modify its local copy of a nonmodifiable argument, but that modification does not affect the underlying element in the calling code.  
+ 呼び出されたプロシージャは、変更できない引数のローカルコピーを変更する場合がありますが、その変更は呼び出し元のコードの基になる要素に影響しません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)

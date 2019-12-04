@@ -12,19 +12,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332285"
 ---
 # <a name="mycomputernetwork-object"></a>My.Computer.Network オブジェクト
-Provides a property, event, and methods for interacting with the network to which the computer is connected.  
+コンピューターが接続されているネットワークと対話するためのプロパティ、イベント、およびメソッドを提供します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `My.Computer.Network` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.Devices.Network>」をご覧ください。  
   
- For more information, see [Performing Network Operations](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
+ 詳細については、「[ネットワーク操作の実行](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)」を参照してください。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **名前空間:** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType>  
   
  **クラス:** <xref:Microsoft.VisualBasic.Devices.Network>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
 ## <a name="see-also"></a>関連項目
 

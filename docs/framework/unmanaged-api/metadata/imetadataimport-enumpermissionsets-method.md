@@ -40,40 +40,40 @@ HRESULT EnumPermissionSets
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
  `tk`  
- [in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.  
+ から検索範囲を制限するメタデータトークン。または、可能な限り広い範囲を検索する場合は NULL。  
   
  `dwActions`  
- [in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.  
+ から`rPermission`に含める <xref:System.Security.Permissions.SecurityAction> 値を表すフラグ。すべてのアクションを返す場合は0。  
   
  `rPermission`  
- [out] The array used to store the Permission tokens.  
+ 入出力アクセス許可トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rPermission` 配列の最大サイズ。  
   
  `pcTokens`  
- [out] The number of Permission tokens returned in `rPermission`.  
+ 入出力`rPermission`で返されるアクセス許可トークンの数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumPermissionSets` が正常に返されました。|  
+|`S_FALSE`|列挙するトークンがありません。 この場合、`pcTokens` は0になります。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

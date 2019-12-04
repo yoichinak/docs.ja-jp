@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440819"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 関数
-Notifies the profiler that control is being passed to a function.  
+コントロールが関数に渡されていることをプロファイラーに通知します。  
   
 > [!NOTE]
-> The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty. Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.  
+> `FunctionEnter` 関数は .NET Framework バージョン2.0 では非推奨とされており、その使用によってパフォーマンスが低下します。 代わりに、 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)関数を使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,29 +37,29 @@ void __stdcall FunctionEnter (
   
 ## <a name="parameters"></a>パラメーター  
  `funcID`  
- [in] The identifier of the function to which control is passed.  
+ からコントロールが渡される関数の識別子。  
   
-## <a name="remarks"></a>Remarks  
- The `FunctionEnter` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+## <a name="remarks"></a>コメント  
+ `FunctionEnter` 関数はコールバックです。実装する必要があります。 実装では、`__declspec`(`naked`) ストレージクラス属性を使用する必要があります。  
   
- The execution engine does not save any registers before calling this function.  
+ この関数を呼び出す前に、実行エンジンはレジスタを保存しません。  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- 入力時には、浮動小数点単位 (FPU) に含まれるすべてのレジスタを含め、使用するすべてのレジスタを保存する必要があります。  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- 終了時に、呼び出し元によってプッシュされたすべてのパラメーターをポップして、スタックを復元する必要があります。  
   
- The implementation of `FunctionEnter` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.  
+ `FunctionEnter` の実装では、ガベージコレクションが遅延するため、ブロックしないでください。 スタックがガベージコレクションに対応していない可能性があるため、この実装ではガベージコレクションを実行しないようにしてください。 ガベージコレクションを実行しようとすると、ランタイムは `FunctionEnter` が返されるまでブロックします。  
   
- Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.  
+ また、`FunctionEnter` 関数は、マネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorProf.idl  
+ **ヘッダー:** Corprof.idl  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework のバージョン:** 1.1、1.0  
   
 ## <a name="see-also"></a>関連項目
 

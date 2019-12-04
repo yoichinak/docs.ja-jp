@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335435"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
-Suppresses display of the copyright banner and informational messages during compilation.  
+コンパイル中に著作権情報のバナーおよび情報メッセージを表示しません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -23,20 +23,20 @@ Suppresses display of the copyright banner and informational messages during com
 -nologo  
 ```  
   
-## <a name="remarks"></a>Remarks  
- If you specify `-nologo`, the compiler does not display a copyright banner. 既定では、`-nologo` は無効です。  
+## <a name="remarks"></a>コメント  
+ `-nologo`を指定した場合、コンパイラは著作権情報のバナーを表示しません。 既定では、`-nologo` は無効です。  
   
 > [!NOTE]
-> The `-nologo` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> `-nologo` オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
   
 ## <a name="example"></a>例  
- The following code compiles `T2.vb` and does not display a copyright banner.  
+ 次のコードは `T2.vb` をコンパイルし、著作権のバナーを表示しません。  
   
 ```console
 vbc -nologo t2.vb  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

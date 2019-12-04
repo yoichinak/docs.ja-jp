@@ -13,20 +13,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344383"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>方法: Char 値の配列から文字列を作成する (Visual Basic)
-This example creates the string "abcd" from individual characters.  
+この例では、個々の文字から文字列 "abcd" を作成します。  
   
 ## <a name="example"></a>例  
  [!code-vb[VbVbalrStrings#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#61)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- This method has no special requirements.  
+ このメソッドには特別な要件はありません。  
   
- The syntax `"a"c`, where a single `c` follows a single character in quotation marks, is used to create a character literal.  
+ `"a"c`構文では、1つの `c` が引用符で囲まれた単一の文字に続く場合、文字リテラルの作成に使用されます。  
   
-## <a name="robust-programming"></a>信頼性の高いプログラミング  
- Null characters (equivalent to `Chr(0)`) in the string lead to unexpected results when using the string. The null character will be included with the string, but characters following the null character will not be displayed in some situations.  
+## <a name="robust-programming"></a>堅牢性の高いプログラミング  
+ 文字列の Null 文字 (`Chr(0)`に相当) は、文字列を使用すると予期しない結果になります。 Null 文字は文字列に含まれますが、一部の状況では、null 文字の後の文字は表示されません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.String>
 - [Char データ型](../../../../visual-basic/language-reference/data-types/char-data-type.md)

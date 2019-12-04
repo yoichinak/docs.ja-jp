@@ -1,5 +1,5 @@
 ---
-title: キー
+title: Key
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AnonymousKey
@@ -16,44 +16,44 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351518"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
-The `Key` keyword enables you to specify behavior for properties of anonymous types. Only properties you designate as key properties participate in tests of equality between anonymous type instances, or calculation of hash code values. The values of key properties cannot be changed.  
+`Key` キーワードを使用すると、匿名型のプロパティの動作を指定できます。 キープロパティとして指定したプロパティのみが、匿名型インスタンス間の等価性のテスト、またはハッシュコード値の計算に参加します。 キープロパティの値は変更できません。  
   
- You designate a property of an anonymous type as a key property by placing the keyword `Key` in front of its declaration in the initialization list. In the following example, `Airline` and `FlightNo` are key properties, but `Gate` is not.  
+ 匿名型のプロパティをキープロパティとして指定するには、初期化リストの宣言の前にキーワード `Key` を配置します。 次の例では、`Airline` と `FlightNo` はキープロパティですが、`Gate` はありません。  
   
  [!code-vb[VbVbalrAnonymousTypes#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#26)]  
   
- When a new anonymous type is created, it inherits directly from <xref:System.Object>. The compiler overrides three inherited members: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. The override code that is produced for <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> is based on key properties. If there are no key properties in the type, <xref:System.Object.GetHashCode%2A> and <xref:System.Object.Equals%2A> are not overridden.  
+ 新しい匿名型を作成すると、<xref:System.Object>から直接継承されます。 コンパイラは、継承された3つのメンバー (<xref:System.Object.Equals%2A>、<xref:System.Object.GetHashCode%2A>、および <xref:System.Object.ToString%2A>) をオーバーライドします。 <xref:System.Object.Equals%2A> と <xref:System.Object.GetHashCode%2A> に対して生成されるオーバーライドコードは、キープロパティに基づいています。 型にキープロパティがない場合、<xref:System.Object.GetHashCode%2A> と <xref:System.Object.Equals%2A> はオーバーライドされません。  
   
 ## <a name="equality"></a>等価比較  
- Two anonymous type instances are equal if they are instances of the same type and if the values of their key properties are equal. In the following examples, `flight2` is equal to `flight1` from the previous example because they are instances of the same anonymous type and they have matching values for their key properties. However, `flight3` is not equal to `flight1` because it has a different value for a key property, `FlightNo`. Instance `flight4` is not the same type as `flight1` because they designate different properties as key properties.  
+ 2つの匿名型のインスタンスは、同じ型のインスタンスであり、キープロパティの値が等しい場合に等しくなります。 次の例では、`flight2` は、同じ匿名型のインスタンスであり、キープロパティの値が一致しているため、前の例の `flight1` と同じです。 ただし、キープロパティの値が異なるため、`flight3` は `flight1` と同じではありません。 `FlightNo`。 インスタンス `flight4` が `flight1` と同じ型ではありません。キープロパティとして異なるプロパティが指定されているためです。  
   
  [!code-vb[VbVbalrAnonymousTypes#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#27)]  
   
- If two instances are declared with only non-key properties, identical in name, type, order, and value, the two instances are not equal. An instance without key properties is equal only to itself.  
+ 2つのインスタンスが、名前、型、順序、および値のキー以外のプロパティのみで宣言されている場合、2つのインスタンスが等しくないことを示します。 キープロパティのないインスタンスは、それ自体と同じです。  
   
- For more information about the conditions under which two anonymous type instances are instances of the same anonymous type, see [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+ 2つの匿名型インスタンスが同じ匿名型のインスタンスである場合の条件の詳細については、「[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。  
   
-## <a name="hash-code-calculation"></a>Hash Code Calculation  
- Like <xref:System.Object.Equals%2A>, the hash function that is defined in <xref:System.Object.GetHashCode%2A> for an anonymous type is based on the key properties of the type. The following examples show the interaction between key properties and hash code values.  
+## <a name="hash-code-calculation"></a>ハッシュコードの計算  
+ <xref:System.Object.Equals%2A>と同様に、匿名型の <xref:System.Object.GetHashCode%2A> で定義されているハッシュ関数は、型のキープロパティに基づいています。 次の例は、キープロパティとハッシュコード値の間の相互作用を示しています。  
   
- Instances of an anonymous type that have the same values for all key properties have the same hash code value, even if non-key properties do not have matching values. The following statement returns `True`.  
+ すべてのキープロパティに同じ値を持つ匿名型のインスタンスのハッシュコード値は、キー以外のプロパティに一致する値がない場合でも同じです。 次のステートメントは `True`を返します。  
   
  [!code-vb[VbVbalrAnonymousTypes#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#37)]  
   
- Instances of an anonymous type that have different values for one or more key properties have different hash code values. The following statement returns `False`.  
+ 1つまたは複数のキープロパティの値が異なる匿名型のインスタンスには、異なるハッシュコード値があります。 次のステートメントは `False`を返します。  
   
  [!code-vb[VbVbalrAnonymousTypes#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#38)]  
   
- Instances of anonymous types that designate different properties as key properties are not instances of the same type. They have different hash code values even when the names and values of all properties are the same. The following statement returns `False`.  
+ キープロパティとして異なるプロパティを指定する匿名型のインスタンスは、同じ型のインスタンスではありません。 すべてのプロパティの名前と値が同じであっても、ハッシュコードの値は異なります。 次のステートメントは `False`を返します。  
   
  [!code-vb[VbVbalrAnonymousTypes#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#39)]  
   
-## <a name="read-only-values"></a>Read-Only Values  
- The values of key properties cannot be changed. For example, in `flight1` in the earlier examples, the `Airline` and `FlightNo` fields are read-only, but `Gate` can be changed.  
+## <a name="read-only-values"></a>読み取り専用の値  
+ キープロパティの値は変更できません。 たとえば、前の例の `flight1` では、`Airline` フィールドと `FlightNo` フィールドは読み取り専用ですが、`Gate` は変更できます。  
   
  [!code-vb[VbVbalrAnonymousTypes#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#28)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [匿名型の定義](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
 - [方法 : 匿名型の宣言におけるプロパティ名と型を推論する](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

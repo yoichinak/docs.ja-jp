@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428429"
 ---
 # <a name="imetadataemit2resetenclog-method"></a>IMetaDataEmit2::ResetENCLog メソッド
-Resets the edit-and-continue log and starts a new session.  
+エディットコンティニュログをリセットし、新しいセッションを開始します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,14 +32,14 @@ HRESULT ResetENCLog ();
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- `ResetENCLog` takes no parameters.  
+ `ResetENCLog` はパラメーターを受け取りません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

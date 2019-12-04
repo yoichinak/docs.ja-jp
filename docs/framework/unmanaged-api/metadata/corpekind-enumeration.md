@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436476"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind 列挙型
-Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
+[IMetaDataImport2:: GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)の呼び出しから返される、ポータブル実行可能 (PE) ファイルを記述する値を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,23 +43,23 @@ typedef enum CorPEKind {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`peNot`|Indicates that this is not a PE file.|  
-|`peILOnly`|Indicates that this PE file contains only managed code.|  
-|`pe32BitRequired`|Indicates that this PE file makes Win32 calls.|  
-|`pe32Plus`|Indicates that this PE file runs on a 64-bit platform.|  
-|`pe32Unmanaged`|Indicates that this PE file is native code.|  
-|pe32BitPreferred|Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.|  
+|`peNot`|これが PE ファイルではないことを示します。|  
+|`peILOnly`|この PE ファイルにマネージコードのみが含まれていることを示します。|  
+|`pe32BitRequired`|この PE ファイルが Win32 呼び出しを行うことを示します。|  
+|`pe32Plus`|この PE ファイルが64ビットプラットフォームで実行されることを示します。|  
+|`pe32Unmanaged`|この PE ファイルがネイティブコードであることを示します。|  
+|pe32BitPreferred|この PE ファイルがプラットフォームに依存せず、32ビット環境で読み込まれることを示すことを示します。|  
   
-## <a name="remarks"></a>Remarks  
- These values can be used in bitwise combinations.  
+## <a name="remarks"></a>コメント  
+ これらの値は、ビットごとの組み合わせで使用できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

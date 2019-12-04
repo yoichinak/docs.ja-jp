@@ -12,8 +12,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348511"
 ---
-# <a name="c-visual-basic"></a>\<c> (Visual Basic)
-Indicates that text within a description is code.  
+# <a name="c-visual-basic"></a>\<c > (Visual Basic)
+説明内のテキストがコードであることを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -27,16 +27,16 @@ Indicates that text within a description is code.
 |---|---|  
 |`text`|コードとして指定するテキストです。|  
   
-## <a name="remarks"></a>Remarks  
- The `<c>` tag gives you a way to indicate that text within a description should be marked as code. 複数行をコードとして指定する場合は、[\<code>](../../../visual-basic/language-reference/xmldoc/code.md) タグを使用します。  
+## <a name="remarks"></a>コメント  
+ `<c>` タグを使用すると、説明内のテキストをコードとしてマークする必要があることを示すことができます。 複数行をコードとして指定する場合は、[\<code>](../../../visual-basic/language-reference/xmldoc/code.md) タグを使用します。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- This example uses the `<c>` tag in the summary section to indicate that `Counter` is code.  
+ この例では、summary セクションの `<c>` タグを使用して、`Counter` がコードであることを示します。  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

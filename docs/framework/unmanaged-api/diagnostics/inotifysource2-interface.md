@@ -22,18 +22,18 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448690"
 ---
 # <a name="inotifysource2-interface"></a>INotifySource2 インターフェイス
-Declares a method for setting notification filters.  
+通知フィルターを設定するためのメソッドを宣言します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[SetNotifyFilter メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|Assigns a notification filter for use with this source.|  
+|[SetNotifyFilter メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|このソースで使用する通知フィルターを割り当てます。|  
   
-## <a name="requirements"></a>［要件］  
- **Header:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [INotifyConnection2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [INotifySink2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430112"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError メソッド
-Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
+Just-in-time (JIT) コンパイラが再コンパイルプロセスでエラーを検出したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,16 +37,16 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleID`  
- [in] The `ModuleID` in which the failed recompilation attempt was made.  
+ から再コンパイルの試行が失敗した `ModuleID`。  
   
  `methodId`  
- [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
+ から再コンパイルの試行が失敗したメソッドの `MethodDef`。  
   
  `functionId`  
- [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
+ から再コンパイルまたは再コンパイルのマークが付けられている関数インスタンス。 この値は、インスタンス化ごとにではなく、メソッドごとにエラーが発生した場合に `NULL` ことがあります (たとえば、プロファイラーがメソッドを再コンパイルするために無効なメタデータトークンを指定した場合など)。  
   
  `hrStatus`  
- [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
+ からエラーの性質を示す HRESULT。 値の一覧については、「Status HRESULT」セクションを参照してください。  
   
 ## <a name="return-value"></a>戻り値  
  このコールバックからの戻り値は無視されます。  
@@ -55,14 +55,14 @@ HRESULT ReJITError(
   
 |状態配列 HRESULT|説明|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
+|E_INVALIDARG|`moduleID` または `methodDef` トークンが `NULL`。|  
 |CORPROF_E_DATAINCOMPLETE|モジュールが完全に読み込まれていないか、またはアンロード中です。|  
-|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
-|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
-|その他|オペレーティング システムは、CLR 制御範囲外のエラーを返しました。 For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|指定されたモジュールは (たとえば、`Reflection.Emit`によって) 動的に生成されたため、このメソッドではサポートされません。|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|メソッドは、収集可能なアセンブリにインスタンス化されるため、再コンパイルできません。 非リフレクションコンテキストで定義されている型および関数 (`List<MyCollectibleStruct>`など) は、収集可能なアセンブリにインスタンス化できます。|  
+|E_OUTOFMEMORY|CLR は、指定されたメソッドに JIT 再コンパイルのマークを付けようとしている間にメモリ不足になりました。|  
+|その他|オペレーティング システムは、CLR 制御範囲外のエラーを返しました。 たとえば、メモリページのアクセス保護を変更するシステムコールが失敗した場合、オペレーティングシステムエラーが表示されます。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

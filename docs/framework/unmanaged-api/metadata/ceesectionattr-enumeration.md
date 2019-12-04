@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444246"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr 列挙型
-Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
+[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)インターフェイスで使用するセクションの属性を指定する値を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,20 +41,20 @@ typedef enum  {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`sdNone`|Section has no attributes.|  
-|`sdReadOnly`|Section contains initialized data that can be only read, not updated.|  
-|`sdReadWrite`|Section contains initialized data that can be read or updated.|  
-|`sdExecute`|Section contains executable code that is allowed to be read and executed.|  
+|`sdNone`|Section には属性がありません。|  
+|`sdReadOnly`|セクションには、読み取りのみが可能な、更新されていない初期化済みのデータが含まれています。|  
+|`sdReadWrite`|セクションには、読み取りまたは更新が可能な初期化済みのデータが含まれています。|  
+|`sdExecute`|セクションには、読み取りと実行が許可されている実行可能コードが含まれています。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -22,7 +22,7 @@ ms.locfileid: "74283713"
 ## <a name="tabcontrol-parts"></a>TabControl パーツ  
  次の表に、<xref:System.Windows.Controls.TabControl> コントロールの名前付きの部分を示します。  
   
-|パーツ|[種類]|[説明]|  
+|要素|型|説明|  
 |-|-|-|  
 |PART_SelectedContentHost|<xref:System.Windows.Controls.ContentPresenter>|現在選択されている <xref:System.Windows.Controls.TabItem>の内容を表示するオブジェクト。|  
   
@@ -31,11 +31,11 @@ ms.locfileid: "74283713"
 ## <a name="tabcontrol-states"></a>TabControl の状態  
  次の表は、<xref:System.Windows.Controls.TabControl> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |----------------------|---------------------------|-----------------|  
 |標準|CommonStates|既定の状態です。|  
 |Disabled|CommonStates|コントロールが無効になっています。|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
@@ -45,16 +45,16 @@ ms.locfileid: "74283713"
 ## <a name="tabitem-states"></a>TabItem の状態  
  次の表は、<xref:System.Windows.Controls.TabItem> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |----------------------|---------------------------|-----------------|  
 |標準|CommonStates|既定の状態です。|  
 |MouseOver|CommonStates|マウス ポインターがコントロール上に配置されます。|  
 |Disabled|CommonStates|コントロールが無効になっています。|  
 |フォーカスされている|FocusStates|コントロールにフォーカスがあります。|  
 |フォーカスされていない|FocusStates|コントロールにフォーカスがありません。|  
-|選択済み|SelectionStates|コントロールが選択されています。|  
+|Selected|SelectionStates|コントロールが選択されています。|  
 |未選択|SelectionStates|コントロールが選択されていません。|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   

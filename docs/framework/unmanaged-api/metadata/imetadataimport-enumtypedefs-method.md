@@ -38,37 +38,37 @@ HRESULT EnumTypeDefs (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [out] A pointer to the new enumerator. This must be NULL for the first call of this method.  
+ 入出力新しい列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
  `rTypeDefs`  
- [in] The array used to store the TypeDef tokens.  
+ からTypeDef トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rTypeDefs` 配列の最大サイズ。  
   
  `pcTypeDefs`  
- [out] The number of TypeDef tokens returned in `rTypeDefs`.  
+ 入出力`rTypeDefs`で返された TypeDef トークンの数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeDefs` is zero.|  
+|`S_OK`|`EnumTypeDefs` が正常に返されました。|  
+|`S_FALSE`|列挙するトークンがありません。 この場合、`pcTypeDefs` は0になります。|  
   
-## <a name="remarks"></a>Remarks  
- The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.  
+## <a name="remarks"></a>コメント  
+ TypeDef トークンは、クラスやインターフェイスなどの型、および拡張メカニズムを使用して追加された型を表します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

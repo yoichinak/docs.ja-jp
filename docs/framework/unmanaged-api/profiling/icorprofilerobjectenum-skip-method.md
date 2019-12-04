@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428135"
 ---
 # <a name="icorprofilerobjectenumskip-method"></a>ICorProfilerObjectEnum::Skip メソッド
-Advances the cursor of this enumerator from its current position so that the specified number of elements are skipped.  
+指定された数の要素がスキップされるように、この列挙子のカーソルを現在の位置から進めます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,12 +35,12 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>パラメーター  
  `celt`  
- [in] The number of elements to be skipped.  
+ からスキップする要素の数。  
   
-## <a name="remarks"></a>Remarks  
- The new position of this enumerator's cursor is: (current position) + `celt` .  
+## <a name="remarks"></a>コメント  
+ この列挙子のカーソルの新しい位置は、(現在位置) + `celt` です。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -49,6 +49,6 @@ HRESULT Skip (
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerObjectEnum インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

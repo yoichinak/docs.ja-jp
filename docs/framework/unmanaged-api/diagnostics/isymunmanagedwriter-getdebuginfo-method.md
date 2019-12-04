@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427965"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo メソッド
-Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header. The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`. (The compiler is responsible for setting these two fields appropriately.)  
+コンパイラがポータブル実行可能 (PE) ファイルヘッダーにデバッグディレクトリエントリを書き込むために必要な情報を返します。 シンボルライターは、`TimeDateStamp` と `PointerToRawData`を除くすべてのフィールドに入力します。 (コンパイラは、これらの2つのフィールドを適切に設定する必要があります)。  
   
- A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file. The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.  
+ コンパイラはこのメソッドを呼び出し、PE ファイルにデータ blob を出力します。次に、IMAGE_DEBUG_DIRECTORY 内の `PointerToRawData` フィールドを、出力されたデータを指すように設定し、IMAGE_DEBUG_DIRECTORY を PE ファイルに書き込みます。 また、コンパイラは、生成される PE ファイルの `TimeDateStamp` と等しいように `TimeDateStamp` フィールドを設定する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,23 +40,23 @@ HRESULT GetDebugInfo(
   
 ## <a name="parameters"></a>パラメーター  
  `pIDD`  
- [in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.  
+ [入力、出力]シンボルライターが入力する IMAGE_DEBUG_DIRECTORY へのポインター。  
   
  `cData`  
- [in] A `DWORD` that contains the size of the debug data.  
+ からデバッグデータのサイズを格納している `DWORD`。  
   
  `pcData`  
- [out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.  
+ 入出力デバッグデータを格納するために必要なバッファーのサイズを受け取る `DWORD` へのポインター。  
   
  `data`  
- [out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.  
+ 入出力シンボルストアのデバッグデータを保持するのに十分な大きさのバッファーへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

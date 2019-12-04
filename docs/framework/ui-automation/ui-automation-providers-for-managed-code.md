@@ -17,12 +17,12 @@ ms.locfileid: "74441487"
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>マネージド コードの UI オートメーション プロバイダー
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
   
- This section contains overviews and how-to topics that describe how to write [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for custom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.  
+ ここでは、カスタム [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 要素の [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] プロバイダーを作成する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [サーバー側 UI オートメーション プロバイダーの実装](server-side-ui-automation-provider-implementation.md)  
  [UI オートメーション プロバイダーの概要](ui-automation-providers-overview.md)  
  [クライアント側 UI オートメーション プロバイダーの実装](client-side-ui-automation-provider-implementation.md)  
- [方法トピック](ui-automation-providers-for-managed-code-how-to-topics.md)
+ [方法のトピック](ui-automation-providers-for-managed-code-how-to-topics.md)

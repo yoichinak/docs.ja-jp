@@ -12,16 +12,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354140"
 ---
 # <a name="clauses-visual-basic"></a>句 (Visual Basic)
-The topics in this section document Visual Basic run-time clauses.  
+このセクションのトピックでは、Visual Basic ランタイム句について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
   
  [As](../../../visual-basic/language-reference/statements/as-clause.md)  
   
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ [!](../../../visual-basic/language-reference/statements/handles-clause.md)  
   
- [Sub New](../../../visual-basic/language-reference/statements/implements-clause.md)  
+ [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
   
  [In](../../../visual-basic/language-reference/statements/in-clause.md)  
   

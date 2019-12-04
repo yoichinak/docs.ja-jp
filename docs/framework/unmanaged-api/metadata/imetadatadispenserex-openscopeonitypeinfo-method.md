@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431129"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo メソッド
-このメソッドは実装されていません。 If called, it returns E_NOTIMPL.  
+このメソッドは実装されていません。 呼び出された場合は E_NOTIMPL を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,23 +38,23 @@ HRESULT OpenScopeOnITypeInfo (
   
 ## <a name="parameters"></a>パラメーター  
  `pITI`  
- [in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.  
+ からスコープを開く対象の型情報を提供する[ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)インターフェイスへのポインター。  
   
  `dwOpenFlags`  
- [in] The open mode flags.  
+ からOpen モードフラグ。  
   
  `riid`  
- [in] The desired interface.  
+ から目的のインターフェイス。  
   
  `ppIUnk`  
- [out] Pointer to a pointer to the returned interface.  
+ 入出力返されたインターフェイスへのポインターへのポインター。  
   
-## <a name="requirements"></a>［要件］  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

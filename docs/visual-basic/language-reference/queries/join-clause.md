@@ -19,7 +19,7 @@ ms.locfileid: "74353265"
 ---
 # <a name="join-clause-visual-basic"></a>Join 句 (Visual Basic)
 
-2 つのコレクションを単一のコレクションに結合します。 The join operation is based on matching keys and uses the `Equals` operator.
+2 つのコレクションを単一のコレクションに結合します。 結合操作は、一致するキーに基づいており、`Equals` 演算子を使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,45 +32,45 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 ## <a name="parts"></a>指定項目
 
-`element` 必須。 The control variable for the collection being joined.
+`element` 必須。 結合されているコレクションのコントロール変数。
 
 `collection`  
-必須です。 The collection to combine with the collection identified on the left side of the `Join` operator. A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.
+必須。 `Join` 演算子の左側で指定されているコレクションと結合するコレクション。 `Join` 句は、別の `Join` 句、または `Group Join` 句で入れ子にすることができます。
 
 `joinClause`  
-省略可能です。 One or more additional `Join` clauses to further refine the query.
+省略可。 クエリをさらに絞り込むための1つ以上の `Join` 句。
 
 `groupJoinClause`  
-省略可能です。 One or more additional `Group Join` clauses to further refine the query.
+省略可。 クエリをさらに絞り込むための1つ以上の `Group Join` 句。
 
 `key1` `Equals` `key2`  
-必須です。 Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. `key1` must be from the collection on the left side of the `Join` operator. `key2` must be from the collection on the right side of the `Join` operator.
+必須。 結合されているコレクションのキーを識別します。 `Equals` 演算子を使用して、結合されているコレクションのキーを比較する必要があります。 結合条件を結合するには、複数のキーを識別するために、`And` 演算子を使用します。 `key1` は、`Join` 演算子の左側にあるコレクションからのものである必要があります。 `key2` は、`Join` 演算子の右側にあるコレクションからのものである必要があります。
 
-The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.
+結合条件で使用されるキーは、コレクションの複数の項目を含む式にすることができます。 ただし、各キー式には、それぞれのコレクションの項目だけを含めることができます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The `Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause. The query will return only results for which the condition specified by the `Equals` operator is met. This is equivalent to an `INNER JOIN` in SQL.
+`Join` 句は、結合されているコレクションのキー値の一致に基づいて2つのコレクションを結合します。 結果として得られるコレクションには、`Join` 演算子の左側で指定されたコレクションと、`Join` 句で識別されたコレクションの値の任意の組み合わせを含めることができます。 クエリから返されるのは、`Equals` 演算子によって指定された条件を満たした結果だけです。 これは、SQL の `INNER JOIN` に相当します。
 
-You can use multiple `Join` clauses in a query to join two or more collections into a single collection.
+クエリで複数の `Join` 句を使用すると、複数のコレクションを1つのコレクションに結合できます。
 
-You can perform an implicit join to combine collections without the `Join` clause. To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.
+暗黙的結合を実行して、`Join` 句を使用せずにコレクションを結合することができます。 これを行うには、`From` 句に複数の `In` 句を含め、結合に使用するキーを識別する `Where` 句を指定します。
 
-You can use the `Group Join` clause to combine collections into a single hierarchical collection. This is like a `LEFT OUTER JOIN` in SQL.
+`Group Join` 句を使用して、コレクションを1つの階層コレクションにまとめることができます。 これは、SQL の `LEFT OUTER JOIN` に似ています。
 
 ## <a name="example"></a>例
 
-The following code example performs an implicit join to combine a list of customers with their orders.
+次のコード例では、暗黙的な結合を実行して顧客のリストと注文を結合します。
 
 [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]
 
 ## <a name="example"></a>例
 
-The following code example joins two collections by using the `Join` clause.
+次のコード例では、`Join` 句を使用して2つのコレクションを結合します。
 
 [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]
 
-This example will produce output similar to the following:
+この例では、次のような出力が生成されます。
 
 `winlogon (968), Windows Logon`
 
@@ -80,11 +80,11 @@ This example will produce output similar to the following:
 
 ## <a name="example"></a>例
 
-The following code example joins two collections by using the `Join` clause with two key columns.
+次のコード例では、2つのキー列を持つ `Join` 句を使用して、2つのコレクションを結合します。
 
 [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]
 
-The example will produce output similar to the following:
+この例では、次のような出力が生成されます。
 
 `winlogon (968), Windows Logon, Priority = 13`
 
@@ -92,7 +92,7 @@ The example will produce output similar to the following:
 
 `explorer (2424), File Explorer, Priority = 8`
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)

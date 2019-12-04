@@ -16,7 +16,7 @@ XML ツリーを作成した後、または XML ドキュメントを XML ツリ
   
  コレクションを返す軸メソッド以外に、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリでよく使用されるメソッドが 2 つあります。 <xref:System.Xml.Linq.XContainer.Element%2A> メソッドは、1 つの <xref:System.Xml.Linq.XElement> を返します。 <xref:System.Xml.Linq.XElement.Attribute%2A> メソッドは、1 つの <xref:System.Xml.Linq.XAttribute> を返します。  
   
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリは多くの用途において、ツリーを調べてデータを抽出し、それを変換する方法として最も強力です。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリは、<xref:System.Collections.Generic.IEnumerable%601> を実装するオブジェクトに対して機能します。[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 軸が、<xref:System.Xml.Linq.XElement> コレクションの <xref:System.Collections.Generic.IEnumerable%601> と <xref:System.Xml.Linq.XAttribute> コレクションの <xref:System.Collections.Generic.IEnumerable%601> を返します。 クエリを実行するには、これらのコレクションが必要です。  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリは多くの用途において、ツリーを調べてデータを抽出し、それを変換する方法として最も強力です。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリは、<xref:System.Collections.Generic.IEnumerable%601> を実装するオブジェクトに対して機能します。[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 軸が、<xref:System.Collections.Generic.IEnumerable%601> コレクションの <xref:System.Xml.Linq.XElement> と <xref:System.Collections.Generic.IEnumerable%601> コレクションの <xref:System.Xml.Linq.XAttribute> を返します。 クエリを実行するには、これらのコレクションが必要です。  
   
  要素と属性のコレクションを取得する軸メソッドに加えて、ツリーを詳細に反復処理するための軸メソッドもあります。 たとえば、要素と属性を処理する代わりに、ツリーのノードを操作できます。 ノードは、要素や属性よりも細かい粒度レベルです。 ノードの操作時には、XML コメント、テキスト ノード、処理命令などを調べることができます。 この機能は、たとえば、文書を XML として保存できるワード プロセッサを作成する場合に重要です。 ただし、大多数の XML プログラマが主に扱うのは、要素、属性、およびその値です。  
   
@@ -54,6 +54,6 @@ XML ツリーを作成した後、または XML ドキュメントを XML ツリ
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|指定された <xref:System.Xml.Linq.XAttribute> を持つ <xref:System.Xml.Linq.XName> を返します。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

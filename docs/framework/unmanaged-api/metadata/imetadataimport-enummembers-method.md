@@ -39,42 +39,42 @@ HRESULT EnumMembers (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [入力、出力]列挙子へのポインター。  
   
  `cl`  
- [in] A TypeDef token representing the type whose members are to be enumerated.  
+ からメンバーを列挙する型を表す TypeDef トークン。  
   
  `rMembers`  
- [out] The array used to hold the MemberDef tokens.  
+ 入出力MemberDef トークンを保持するために使用される配列。  
   
  `cMax`  
  [in] `rMembers` 配列の最大サイズ。  
   
  `pcTokens`  
- [out] The actual number of MemberDef tokens returned in `rMembers`.  
+ 入出力`rMembers`で返された MemberDef トークンの実際の数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` returned successfully.|  
-|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMembers` が正常に返されました。|  
+|`S_FALSE`|列挙する MemberDef トークンがありません。 この場合、`pcTokens` は0になります。|  
   
-## <a name="remarks"></a>Remarks  
- When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class. It does not return any members that the class inherits, even if the class provides an implementation for those inherited members. To enumerate inherited members, the caller must explicitly walk the inheritance chain. Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.
+## <a name="remarks"></a>コメント  
+ クラスのメンバーのコレクションを列挙すると、`EnumMembers` は、クラスで直接定義されたメンバー (プロパティまたはイベントでは**ない**) のみを返します。 クラスが継承されたメンバーの実装を提供している場合でも、クラスが継承するメンバーは返しません。 継承されたメンバーを列挙するには、呼び出し元が継承チェーンを明示的にウォークする必要があります。 継承チェーンの規則は、元のメタデータを出力した言語またはコンパイラによって異なる場合があることに注意してください。
  
- Properties and events are not enumerated by `EnumMembers`. To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).
+ プロパティとイベントは、`EnumMembers`によって列挙されません。 これらを列挙するには、 [Enumproperties](imetadataimport-enumproperties-method.md)または[enumproperties](imetadataimport-enumevents-method.md)を使用します。
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

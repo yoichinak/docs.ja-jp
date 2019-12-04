@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448149"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject メソッド
-Gets the `ClassID` of an object, given its `ObjectID`.  
+`ObjectID`指定されたオブジェクトの `ClassID` を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +35,15 @@ HRESULT GetClassFromObject(
   
 ## <a name="parameters"></a>パラメーター  
  `objectId`  
- [in] The ID of the object for which to get the `ClassID`.  
+ から`ClassID`を取得する対象のオブジェクトの ID。  
   
  `pClassId`  
- [out] A pointer to the returned `ClassID`.  
+ 入出力返された `ClassID`へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- A null `pClassId` indicates that `objectId` has a type that is unloading.  
+## <a name="remarks"></a>コメント  
+ Null `pClassId` は、`objectId` にアンロード中の型があることを示します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -52,6 +52,6 @@ HRESULT GetClassFromObject(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

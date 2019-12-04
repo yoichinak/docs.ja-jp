@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440236"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes メソッド
-Enumerates custom attribute-definition tokens associated with the specified type or member.  
+指定した型またはメンバーに関連付けられているカスタム属性定義トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,36 +40,36 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the returned enumerator.  
+ [入力、出力]返された列挙子へのポインター。  
   
  `tk`  
- [in] A token for the scope of the enumeration, or zero for all custom attributes.  
+ から列挙体のスコープのトークン、またはすべてのカスタム属性の0。  
   
  `tkType`  
- [in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.  
+ から列挙する属性の型のコンストラクターのトークン、またはすべての型の `null`。  
   
  `rCustomAttributes`  
- [out] An array of custom attribute tokens.  
+ 入出力カスタム属性トークンの配列。  
   
  `cMax`  
  [in] `rCustomAttributes` 配列の最大サイズ。  
   
  `pcCustomAttributes`  
- [out, optional] The actual number of token values returned in `rCustomAttributes`.  
+ [out、省略可能]`rCustomAttributes`で返されるトークン値の実際の数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` returned successfully.|  
-|`S_FALSE`|There are no custom attributes to enumerate. In that case, `pcCustomAttributes` is zero.|  
+|`S_OK`|`EnumCustomAttributes` が正常に返されました。|  
+|`S_FALSE`|列挙するカスタム属性はありません。 この場合、`pcCustomAttributes` は0になります。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -1,6 +1,6 @@
 ---
 title: XML
-description: Learn how to use XML and LINQ to XML features in your Visual Basic code.
+description: Visual Basic コードで XML および LINQ to XML 機能を使用する方法について説明します。
 ms.date: 10/20/2017
 helpviewer_keywords:
 - LINQ to XML [Visual Basic]
@@ -14,7 +14,7 @@ ms.locfileid: "74330800"
 ---
 # <a name="xml-in-visual-basic"></a>Visual Basic における XML
 
-Visual Basic provides integrated language support that enables it to interact with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+Visual Basic は、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]との対話を可能にする統合言語サポートを提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 
@@ -22,12 +22,12 @@ Visual Basic provides integrated language support that enables it to interact wi
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[Visual Basic における LINQ to XML の概要](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|Describes how Visual Basic supports [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Visual Basic における LINQ to XML の概要](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|Visual Basic が [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]をサポートする方法について説明します。|  
 |[Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)|[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して、XML リテラル オブジェクトを作成する方法について説明します。|  
 |[Visual Basic での XML の操作](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)|Visual Basic を使用して XML を読み込み、解析する方法について説明します。|  
 |[Visual Basic での XML へのアクセス](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|XML 軸プロパティと XML 要素と属性にアクセスする [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] メソッドについて説明します。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Linq>
 - [XML リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)

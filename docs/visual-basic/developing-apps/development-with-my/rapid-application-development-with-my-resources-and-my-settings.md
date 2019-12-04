@@ -16,20 +16,20 @@ ms.locfileid: "74349264"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>My.Resources と My.Settings による Rapid Application Development (Visual Basic)
 
-The `My.Resources` object provides access to the application's resources and allows you to dynamically retrieve resources for your application.  
+`My.Resources` オブジェクトは、アプリケーションのリソースへのアクセスを提供し、アプリケーションのリソースを動的に取得できるようにします。  
   
 ## <a name="retrieving-resources"></a>リソースの取得  
 
- A number of resources such as audio files, icons, images, and strings can be retrieved through the `My.Resources` object. For example, you can access the application's culture-specific resource files. The following example sets the icon of the form to the icon named `Form1Icon` stored in the application's resource file.  
+ `My.Resources` オブジェクトを使用して、オーディオファイル、アイコン、画像、文字列などのさまざまなリソースを取得できます。 たとえば、アプリケーションのカルチャ固有のリソースファイルにアクセスできます。 次の例では、フォームのアイコンを、アプリケーションのリソースファイルに格納されている `Form1Icon` という名前のアイコンに設定します。  
   
  [!code-vb[VbVbcnMy#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#7)]  
   
- The `My.Resources` object exposes only global resources. It does not provide access to resource files associated with forms. You must access the form resources from the form.  
+ `My.Resources` オブジェクトは、グローバルリソースのみを公開します。 フォームに関連付けられたリソースファイルへのアクセスは提供されません。 フォームリソースには、フォームからアクセスする必要があります。  
   
- Similarly, the `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application. For more information, see [My.Resources Object](../../../visual-basic/language-reference/objects/my-resources-object.md) and [My.Settings Object](../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ 同様に、`My.Settings` オブジェクトを使用すると、アプリケーションの設定にアクセスして、アプリケーションのプロパティ設定やその他の情報を動的に格納および取得することができます。 詳細については、「 [My.resources オブジェクト](../../../visual-basic/language-reference/objects/my-resources-object.md)」と「 [my.settings オブジェクト](../../../visual-basic/language-reference/objects/my-settings-object.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [My.Resources オブジェクト](../../../visual-basic/language-reference/objects/my-resources-object.md)
 - [My.Settings オブジェクト](../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [アプリケーション設定へのアクセス](../../../visual-basic/developing-apps/programming/app-settings/index.md)
+- [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432239"
 ---
 # <a name="ihostfiltermarktoken-method"></a>IHostFilter::MarkToken メソッド
-Indicates that the specified metadata token will be processed.  
+指定されたメタデータトークンが処理されることを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,17 +35,17 @@ HRESULT MarkToken (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in] The metadata token to be processed.  
+ から処理するメタデータトークン。  
   
-## <a name="remarks"></a>Remarks  
- Typically, you want a token to be processed if it is in the metadata scope. The `MarkToken` method is passed to the metadata engine via the [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) method.  
+## <a name="remarks"></a>コメント  
+ 通常、トークンがメタデータスコープ内にある場合は、トークンを処理する必要があります。 `MarkToken` メソッドは、 [IMetaDataEmit:: SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)メソッドを使用してメタデータエンジンに渡されます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

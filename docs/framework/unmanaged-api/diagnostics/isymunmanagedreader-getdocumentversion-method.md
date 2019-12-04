@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448309"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion メソッド
-Gets the specified version of the specified document. The document version starts at 1 and is incremented each time the document is updated using the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method. If the `pbCurrent` parameter is `true`, this is the latest version of the document.  
+指定したドキュメントの指定したバージョンを取得します。 ドキュメントのバージョンは1から始まり、更新される[たびに増分](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)されます。 `pbCurrent` パラメーターが `true`の場合、これはドキュメントの最新バージョンです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,20 +36,20 @@ HRESULT GetDocumentVersion (
   
 ## <a name="parameters"></a>パラメーター  
  `pDoc`  
- [in] The specified document.  
+ から指定されたドキュメント。  
   
  `version`  
- [out] A pointer to a variable that receives the version of the specified document.  
+ 入出力指定されたドキュメントのバージョンを受け取る変数へのポインター。  
   
  `pbCurrent`  
- [out] A pointer to a variable that receives `true` if this is the latest version of the document, or `false` if it isn't the latest version.  
+ 入出力ドキュメントの最新バージョンである場合は `true` を受け取る変数へのポインター。最新バージョンでない場合は `false`。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

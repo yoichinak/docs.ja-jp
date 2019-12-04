@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349275"
 ---
-# <a name="reflection-visual-basic"></a>Reflection (Visual Basic)
+# <a name="reflection-visual-basic"></a>リフレクション (Visual Basic)
 リフレクションは、アセンブリ、モジュール、および型を記述する (<xref:System.Type> 型の) オブジェクトを提供します。 リフレクションを使用すると、動的に型のインスタンスを作成したり、作成したインスタンスを既存のオブジェクトにバインドしたり、さらに既存のオブジェクトから型を取得してそのオブジェクトのメソッドを呼び出したり、フィールドやプロパティにアクセスしたりできます。 コードで属性を使用している場合は、リフレクションを使用してそれらにアクセスできます。 詳細については、「[属性](../../../standard/attributes/index.md)」を参照してください。  
   
  次の例は、`GetType` メソッドを使用して変数の型を取得する簡単なリフレクションを示しています。このメソッドは、`Object` 基底クラスからすべての型に継承される静的メソッドです。  
@@ -48,8 +48,8 @@ System.Console.WriteLine(info)
   
 - 遅延バインディングを実行するために、実行時に作成された型でメソッドにアクセスする。 「[型の動的な読み込みおよび使用](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)」を参照してください。  
   
-## <a name="related-sections"></a>関連項目  
- 詳細情報  
+## <a name="related-sections"></a>関連セクション  
+ 詳細:  
   
 - [リフレクション](../../../framework/reflection-and-codedom/reflection.md)  
   
@@ -61,7 +61,7 @@ System.Console.WriteLine(info)
   
 - [属性に格納されている情報の取得](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のプログラミング ガイド](../../../visual-basic/programming-guide/index.md)
 - [.NET のアセンブリ](../../../standard/assembly/index.md)

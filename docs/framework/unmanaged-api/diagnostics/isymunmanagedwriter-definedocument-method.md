@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428045"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument メソッド
-ソース ドキュメントを定義します。 GUIDs are provided for known languages, vendors, and document types.  
+ソース ドキュメントを定義します。 Guid は、既知の言語、ベンダー、およびドキュメントの種類に対して提供されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,25 +38,25 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>パラメーター  
  `url`  
- [in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.  
+ からドキュメントを識別する URL (uniform resource locator) を定義する `WCHAR` へのポインター。  
   
  `language`  
- [in] A pointer to a GUID that defines the document language.  
+ からドキュメントの言語を定義する GUID へのポインター。  
   
  `languageVendor`  
- [in] A pointer to a GUID that defines the identity of the vendor for the document language.  
+ からドキュメント言語のベンダの id を定義する GUID へのポインター。  
   
  `documentType`  
- [in] A pointer to a GUID that defines the type of the document.  
+ からドキュメントの種類を定義する GUID へのポインター。  
   
  `pRetVal`  
- [out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.  
+ 入出力返された[ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)インターフェイスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 

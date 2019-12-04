@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441802"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition メソッド
-Returns an array of methods, each of which contains the breakpoint at the given position in a document.  
+メソッドの配列を返します。各メソッドには、ドキュメント内の指定された位置にあるブレークポイントが含まれています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,29 +40,29 @@ HRESULT GetMethodsFromDocumentPosition (
   
 ## <a name="parameters"></a>パラメーター  
  `document`  
- [in] The specified document.  
+ から指定されたドキュメント。  
   
  `line`  
- [in] The line of the specified document.  
+ から指定したドキュメントの行。  
   
  `column`  
- [in] The column of the specified document.  
+ から指定されたドキュメントの列。  
   
  `cMethod`  
  [in] `pRetVal` 配列のサイズ。  
   
  `pcMethod`  
- [out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.  
+ 入出力`pRetVal` 配列に返される要素の数を受け取る変数へのポインター。  
   
  `pRetVal`  
- [out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.  
+ 入出力ポインターの配列。各ポインターは、ブレークポイントを含むメソッドを表す[ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)オブジェクトを指します。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

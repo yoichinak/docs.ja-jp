@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431475"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef メソッド
-Resolves a <xref:System.Type> reference represented by the specified TypeRef token.  
+指定した TypeRef トークンによって表される <xref:System.Type> 参照を解決します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,32 +38,32 @@ HRESULT ResolveTypeRef (
   
 ## <a name="parameters"></a>パラメーター  
  `tr`  
- [in] The TypeRef metadata token to return the referenced type information for.  
+ から参照される型情報を返す TypeRef メタデータトークン。  
   
  `riid`  
- [in] The IID of the interface to return in `ppIScope`. Typically, this would be IID_IMetaDataImport.  
+ から`ppIScope`で返すインターフェイスの IID。 通常、これは IID_IMetaDataImport になります。  
   
  `ppIScope`  
- [out] An interface to the module scope in which the referenced type is defined.  
+ 入出力参照される型が定義されているモジュールスコープへのインターフェイス。  
   
  `ptd`  
- [out] A pointer to a TypeDef token that represents the referenced type.  
+ 入出力参照された型を表す TypeDef トークンへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!IMPORTANT]
-> Do not use this method if multiple application domains are loaded. The method does not respect application domain boundaries. If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.  
+> 複数のアプリケーションドメインが読み込まれる場合は、この方法を使用しないでください。 メソッドは、アプリケーションドメインの境界を尊重しません。 アセンブリの複数のバージョンが読み込まれ、同じ名前空間を持つ同じ型が含まれている場合、メソッドは最初に見つかった型のモジュールスコープを返します。  
   
- The `ResolveTypeRef` method searches for the type definition in other modules. If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.  
+ `ResolveTypeRef` メソッドは、他のモジュールで型定義を検索します。 型定義が見つかった場合、`ResolveTypeRef` はそのモジュールスコープへのインターフェイスと、その型の TypeDef トークンを返します。  
   
- If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method. This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.  
+ 解決する型参照の解決スコープが AssemblyRef の場合、`ResolveTypeRef` メソッドは、 [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)メソッドまたは[IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)メソッドの呼び出しで既に開かれているメタデータスコープ内でのみ一致を検索します。 これは、`ResolveTypeRef` が、ディスク上またはグローバルアセンブリキャッシュ内の、アセンブリが格納されている AssemblyRef スコープだけからは判断できないためです。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

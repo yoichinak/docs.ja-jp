@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439817"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted メソッド
-Notifies the code profiler that garbage collection has started.  
+ガベージコレクションが開始されたことをコードプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,22 +36,22 @@ HRESULT GarbageCollectionStarted(
   
 ## <a name="parameters"></a>パラメーター  
  `cGenerations`  
- [in] The total number of entries in the `generationCollected` array.  
+ から`generationCollected` 配列内のエントリの合計数。  
   
  `generationCollected`  
- [in] An array of Boolean values, which are `true` if the generation that corresponds to the array index is being collected by this garbage collection; otherwise, `false`.  
+ からブール値の配列。配列インデックスに対応する世代がこのガベージコレクションによって収集されている場合に `true` ます。それ以外の場合は、`false`ます。  
   
- The array is indexed by a value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration, which indicates the generation.  
+ 配列は、生成を示す[COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)列挙体の値によってインデックスが作成されます。  
   
  `reason`  
- [in] A value of the [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) enumeration that indicates the reason the garbage collection was induced.  
+ からガベージコレクションが発生した理由を示す[COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md)列挙体の値。  
   
-## <a name="remarks"></a>Remarks  
- All callbacks that pertain to this garbage collection will occur between the `GarbageCollectionStarted` callback and the corresponding [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback. These callbacks need not occur on the same thread.  
+## <a name="remarks"></a>コメント  
+ このガベージコレクションに関連するすべてのコールバックは、`GarbageCollectionStarted` コールバックと、対応する[ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)コールバックの間で発生します。 これらのコールバックは、同じスレッドでは実行されません。  
   
- It is safe for the profiler to inspect objects in their original locations during the `GarbageCollectionStarted` callback. The garbage collector will begin moving objects after the return from `GarbageCollectionStarted`. After the profiler has returned from this callback, the profiler should consider all object IDs to be invalid until it receives a `ICorProfilerCallback2::GarbageCollectionFinished` callback.  
+ `GarbageCollectionStarted` コールバック中に、プロファイラーが元の場所のオブジェクトを検査するのは安全です。 `GarbageCollectionStarted`から戻った後、ガベージコレクターがオブジェクトの移動を開始します。 プロファイラーは、このコールバックから返された後、`ICorProfilerCallback2::GarbageCollectionFinished` コールバックを受け取るまで、すべてのオブジェクト Id が無効であると見なす必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -60,7 +60,7 @@ HRESULT GarbageCollectionStarted(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

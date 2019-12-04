@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350782"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>この配列は固定か、または一時的にロックされています。(Visual Basic)
-This error has the following possible causes:  
+このエラーには、次のような原因が考えられます。  
   
-- Using `ReDim` to change the number of elements of a fixed-size array.  
+- `ReDim` を使用して、固定サイズの配列の要素数を変更します。  
   
-- Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure. If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.  
+- モジュールレベルの動的配列を再配置します。この配列では、1つの要素がプロシージャに引数として渡されています。 要素が渡された場合、配列は、プロシージャ内の参照パラメーターのメモリの解放を防ぐためにロックされます。  
   
-- Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.  
+- 配列を含む `Variant` 変数に値を割り当てようとしましたが、`Variant` は現在ロックされています。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1. Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.  
+1. `ReDim` (配列がプロシージャ内で宣言されている場合) で宣言するか、要素の数を指定せずに宣言することによって、元の配列を固定ではなく動的にします (配列がモジュールレベルで宣言されている場合)。  
   
-2. Determine whether you really need to pass the element, since it is visible within all procedures in the module.  
+2. 要素を渡す必要があるかどうかを判断します。これは、モジュール内のすべてのプロシージャ内に表示されるためです。  
   
-3. Determine what is locking the `Variant` and remedy it.  
+3. `Variant` をロックしているものを特定し、それを修復します。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -22,7 +22,7 @@ ms.locfileid: "74283447"
 ## <a name="progressbar-parts"></a>ProgressBar のパーツ  
  次の表に、<xref:System.Windows.Controls.ProgressBar> コントロールの名前付きの部分を示します。  
   
-|パーツ|[種類]|[説明]|  
+|要素|型|説明|  
 |-|-|-|  
 |PART_Indicator|<xref:System.Windows.FrameworkElement>|進行状況を示すオブジェクト。|  
 |PART_Track|<xref:System.Windows.FrameworkElement>|進行状況インジケーターのパスを定義するオブジェクト。|  
@@ -31,11 +31,11 @@ ms.locfileid: "74283447"
 ## <a name="progressbar-states"></a>ProgressBar の状態  
  次の表は、<xref:System.Windows.Controls.ProgressBar> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |----------------------|---------------------------|-----------------|  
 |一定|CommonStates|<xref:System.Windows.Controls.ProgressBar> は、<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> プロパティに基づいて進行状況をレポートします。|  
 |確定|CommonStates|<xref:System.Windows.Controls.ProgressBar> は、繰り返しパターンを使用して一般的な進行状況を報告します。|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   

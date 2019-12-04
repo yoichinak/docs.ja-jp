@@ -1,5 +1,5 @@
 ---
-title: How to query the contents of files in a folder (LINQ)
+title: フォルダー内のファイルの内容を照会する方法 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
 ms.openlocfilehash: 02ffa398c495ca5af77685d62299c59cfc3b9d9c
@@ -9,9 +9,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347613"
 ---
-# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>How to query the contents of files in a folder (LINQ) (Visual Basic)
+# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>フォルダー内のファイルの内容を照会する方法 (LINQ) (Visual Basic)
 
-この例では、指定したディレクトリ ツリーに含まれるすべてのファイルを照会し、個々のファイルを開いて、その内容を調べています。 同様の手法を使えば、ディレクトリ ツリーの内容に対するインデックスや逆インデックスを作成することもできます。 この例で行っているのは単純な文字列検索です。 しかし正規表現を使うと、もっと複雑なパターン マッチングを行うことができます。 For more information, see [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md).  
+この例では、指定したディレクトリ ツリーに含まれるすべてのファイルを照会し、個々のファイルを開いて、その内容を調べています。 同様の手法を使えば、ディレクトリ ツリーの内容に対するインデックスや逆インデックスを作成することもできます。 この例で行っているのは単純な文字列検索です。 しかし正規表現を使うと、もっと複雑なパターン マッチングを行うことができます。 詳細については、「[方法: LINQ クエリと正規表現を組み合わせる (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md)」を参照してください。  
   
 ## <a name="example"></a>例  
   
@@ -75,9 +75,9 @@ End Module
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.
+VB.NET console アプリケーションプロジェクトを作成し、コードサンプルをコピーして貼り付けて、プロジェクトのプロパティでスタートアップオブジェクトの値を調整します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [LINQ to Objects (Visual Basic)](linq-to-objects.md)
 - [LINQ とファイル ディレクトリ (Visual Basic)](linq-and-file-directories.md)

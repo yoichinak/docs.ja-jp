@@ -52,24 +52,24 @@ typedef enum CorCallingConvention
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indicates a default calling convention.|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|Indicates that the method takes a variable number of parameters.|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indicates that the call is to a field.|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indicates that the call is to a local method.|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indicates that the call is to a property.|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indicates that the call is unmanaged.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indicates a generic method instantiation.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|Describes an invalid 4-bit value.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|Indicates that the calling convention is described by the bottom four bits.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indicates that the top bit describes a `this` parameter.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indicates that a `this` parameter is explicitly described in the signature.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indicates a generic method signature with an explicit number of type arguments. This precedes an ordinary parameter count.|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|既定の呼び出し規約を示します。|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|メソッドが可変個のパラメーターを受け取ることを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|は、フィールドへの呼び出しであることを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|呼び出しがローカルメソッドに対して行うことを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|は、プロパティへの呼び出しであることを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|呼び出しがアンマネージであることを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|ジェネリックメソッドのインスタンス化を示します。|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|可変個のパラメーターを受け取るメソッドへの64ビット PInvoke 呼び出しを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|4ビットの値が無効であることを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|呼び出し規則が下位4ビットによって記述されていることを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|最上位ビットが `this` パラメーターを記述することを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|`this` パラメーターがシグネチャに明示的に記述されていることを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|型引数の数が明示的に指定されたジェネリックメソッドシグネチャを示します。 これは、通常のパラメーターカウントの前になります。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

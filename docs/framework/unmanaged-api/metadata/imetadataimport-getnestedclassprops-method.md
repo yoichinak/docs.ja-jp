@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437144"
 ---
 # <a name="imetadataimportgetnestedclassprops-method"></a>IMetaDataImport::GetNestedClassProps メソッド
-Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.  
+指定した入れ子にされた型の親 <xref:System.Type> の TypeDef トークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +36,17 @@ HRESULT GetNestedClassProps (
   
 ## <a name="parameters"></a>パラメーター  
  `tdNestedClass`  
- [in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.  
+ から親クラストークンを返す <xref:System.Type> を表す TypeDef トークン。  
   
  `ptdEnclosingClass`  
- [out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.  
+ 入出力`tdNestedClass` が入れ子になっている <xref:System.Type> の TypeDef トークンへのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447185"
 ---
 # <a name="getscope2-method"></a>GetScope2 メソッド
-Gets an import scope.  
+インポートスコープを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,24 +37,24 @@ HRESULT GetScope2(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of target assembly.  
+ ターゲットアセンブリの ID。  
   
  `FileToken`  
- ID of file from which to import.  
+ インポート元のファイルの ID。  
   
  `dwScope`  
- Zero-based scope to import.  
+ インポートする0から始まるスコープ。  
   
  `ppImportScope`  
- Receives pointer to [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface for indicated scope.  
+ 指定されたスコープの[IMetaDataImport2 インターフェイス](../metadata/imetadataimport2-interface.md)インターフェイスへのポインターを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h.  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink2 インターフェイス](ialink2-interface.md)
 - [IALink インターフェイス](ialink-interface.md)

@@ -31,12 +31,12 @@ ms.locfileid: "74426118"
 |[ValidateMetaData メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatemetadata-method.md)|現在のメタデータ スコープ内にあるオブジェクトのメタデータ署名を検証します。|  
 |[ValidatorInit メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|現在のメタデータ スコープ内にあるモジュールの種類を指定するフラグを設定し、指定されたコールバック メソッドを検証エラー用に登録します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

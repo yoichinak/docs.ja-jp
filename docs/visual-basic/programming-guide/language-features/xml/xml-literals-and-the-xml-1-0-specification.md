@@ -12,23 +12,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346181"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML リテラルと XML 1.0 仕様 (Visual Basic)
-The XML literal syntax in Visual Basic supports most of the Extensible Markup Language (XML) 1.0 specification. For details about the XML 1.0 specification, see [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) on the W3C Web site.  
+Visual Basic の XML リテラル構文は、拡張マークアップ言語 (XML) 1.0 仕様の大部分をサポートしています。 XML 1.0 仕様の詳細については、W3C Web サイトの「[拡張マークアップ言語 (xml) 1.0](https://www.w3.org/TR/xml) 」を参照してください。  
   
-## <a name="what-visual-basic-does-not-support"></a>What Visual Basic Does Not Support  
+## <a name="what-visual-basic-does-not-support"></a>サポートされていない Visual Basic  
   
-- An XML literal cannot contain a document type definition (DTD).  
+- XML リテラルにドキュメント型定義 (DTD) を含めることはできません。  
   
-- An XML document literal must start with an XML document declaration.  
+- XML ドキュメントリテラルは、XML ドキュメント宣言で始める必要があります。  
   
-- An XML literal cannot contain more than 65,535 characters on one line.  
+- XML リテラルでは、1行に65535文字を超える文字を含めることはできません。  
   
-- XML namespace prefixes, element names, and attribute names cannot contain more than 1,024 characters.  
+- XML 名前空間プレフィックス、要素名、および属性名は、1024文字を超えることはできません。  
   
-## <a name="extra-features-that-visual-basic-supports"></a>Extra Features That Visual Basic Supports  
+## <a name="extra-features-that-visual-basic-supports"></a>Visual Basic がサポートする追加機能  
   
-- The embedded expression syntax allowed in document and element literals is not valid XML.  
+- ドキュメントリテラルと要素リテラルで許可されている埋め込み式の構文が有効な XML ではありません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML ドキュメント リテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)

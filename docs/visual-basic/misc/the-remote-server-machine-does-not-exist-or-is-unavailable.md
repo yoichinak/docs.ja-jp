@@ -1,5 +1,5 @@
 ---
-title: The remote server machine does not exist or is unavailable
+title: リモートサーバーコンピューターが存在しないか、使用できません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
@@ -18,6 +18,6 @@ ms.locfileid: "74348182"
   
 - ネットワークに再接続し、もう一度やり直してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [エラーの種類](../../visual-basic/programming-guide/language-features/error-types.md)

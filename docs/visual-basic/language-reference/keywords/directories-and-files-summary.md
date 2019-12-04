@@ -16,7 +16,7 @@ ms.locfileid: "74349837"
 # <a name="directories-and-files-summary-visual-basic"></a>ディレクトリとファイルの概要 (Visual Basic)
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
   
- `My` 機能を使用すると、これらのメンバーを使用するよりもファイル I/O 処理の生産性とパフォーマンスが格段に向上します。 詳細については、「<xref:Microsoft.VisualBasic.FileIO.FileSystem>」を参照してください。  
+ `My` 機能を使用すると、これらのメンバーを使用するよりもファイル I/O 処理の生産性とパフォーマンスが格段に向上します。 詳細については、「 <xref:Microsoft.VisualBasic.FileIO.FileSystem>」を参照してください。  
   
 |**動作**|**言語要素**|  
 |----------------|--------------------------|  
@@ -33,7 +33,7 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
 |ファイル名またはボリューム ラベルの取得|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
 |ファイルの属性情報の設定|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)

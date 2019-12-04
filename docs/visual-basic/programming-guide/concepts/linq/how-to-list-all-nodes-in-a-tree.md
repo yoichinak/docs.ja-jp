@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336136"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>How to: List All Nodes in a Tree (Visual Basic)
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>方法: ツリー内のすべてのノードを一覧表示する (Visual Basic)
 ツリー内のすべてのノードを一覧表示すると便利な場合があります。 これは、メソッドやプロパティがツリーに及ぼす影響を確認するときに役立ちます。 すべてのノードをテキスト形式で一覧表示する方法の 1 つは、ツリー内の任意のノードを正確かつ明確に識別する XPath 式を生成することです。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して XPath 式を実行する方法は特に有効ではありません。 XPath 式は [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリよりパフォーマンスが低く、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリの方がはるかに強力です。 ただし、XPath 式は、XML ツリー内のノードを識別する手段としては有効です。  
@@ -263,6 +263,6 @@ End Module
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [高度なクエリ手法 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

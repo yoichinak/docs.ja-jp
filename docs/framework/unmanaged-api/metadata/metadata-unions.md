@@ -18,9 +18,9 @@ ms.locfileid: "74430679"
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [CeeSectionRelocExtra 共用体](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section  
+ セクションを再配置するために[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)インターフェイスによって使用されるアドレスオフセットを表します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
  [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  

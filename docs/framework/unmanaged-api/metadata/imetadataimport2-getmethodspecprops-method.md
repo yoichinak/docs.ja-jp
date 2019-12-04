@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445254"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps メソッド
-Gets the metadata signature of the method referenced by the specified MethodSpec token.  
+指定した MethodSpec トークンによって参照されるメソッドのメタデータシグネチャを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,27 +38,27 @@ HRESULT GetMethodSpecProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mi`  
- [in] A MethodSpec token that represents the instantiation of the method.  
+ からメソッドのインスタンス化を表す MethodSpec トークン。  
   
  `tkParent`  
- [out] A pointer to the MethodDef or MethodRef token that represents the method definition.  
+ 入出力メソッド定義を表す MethodDef または MethodRef トークンへのポインター。  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the method.  
+ 入出力メソッドのバイナリメタデータシグネチャへのポインター。  
   
  `pcbSigBlob`  
- [out] The size, in bytes, of `ppvSigBlob`.  
+ 入出力`ppvSigBlob`のサイズ (バイト単位)。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

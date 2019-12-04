@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445264"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl メソッド
-Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.  
+インターフェイスから継承されたメソッドの実装の定義を作成し、そのメソッド実装定義にトークンを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +37,20 @@ HRESULT DefineMethodImpl (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in] The `mdTypedef` token of the implementing class.  
+ から実装するクラスの `mdTypedef` トークン。  
   
  `tkBody`  
- [in] The `mdMethodDef` or `mdMemberRef` token of the code body.  
+ からコード本体の `mdMethodDef` または `mdMemberRef` トークン。  
   
  `tkDecl`  
- [in] The `mdMethodDef` or `mdMemberRef` token of the interface method being implemented.  
+ から実装されているインターフェイスメソッドの `mdMethodDef` または `mdMemberRef` トークン。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

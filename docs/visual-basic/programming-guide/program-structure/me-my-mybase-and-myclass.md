@@ -29,12 +29,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347334"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic における Me、My、MyBase、MyClass
-`Me`, `My`, `MyBase`, and `MyClass` in Visual Basic have similar names, but different purposes. This topic describes each of these entities in order to distinguish them.  
+Visual Basic の `Me`、`My`、`MyBase`、および `MyClass` の名前は似ていますが、目的は異なります。 このトピックでは、これらの各エンティティについて説明します。  
   
 ## <a name="me"></a>Me  
- The `Me` keyword provides a way to refer to the specific instance of a class or structure in which the code is currently executing. `Me` behaves like either an object variable or a structure variable referring to the current instance. Using `Me` is particularly useful for passing information about the currently executing instance of a class or structure to a procedure in another class, structure, or module.  
+ `Me` キーワードは、コードが現在実行されているクラスまたは構造体の特定のインスタンスを参照する手段を提供します。 `Me` は、オブジェクト変数または現在のインスタンスを参照する構造体変数のいずれかのように動作します。 `Me` の使用は、クラスまたは構造体の現在実行中のインスタンスに関する情報を、別のクラス、構造体、またはモジュール内のプロシージャに渡す場合に特に便利です。  
   
- For example, suppose you have the following procedure in a module.  
+ たとえば、モジュールに次のプロシージャがあるとします。  
   
 ```vb  
 Sub ChangeFormColor(FormName As Form)  
@@ -43,20 +43,20 @@ Sub ChangeFormColor(FormName As Form)
 End Sub  
 ```  
   
- You can call this procedure and pass the current instance of the <xref:System.Windows.Forms.Form> class as an argument by using the following statement.  
+ 次のステートメントを使用して、このプロシージャを呼び出して、<xref:System.Windows.Forms.Form> クラスの現在のインスタンスを引数として渡すことができます。  
   
 ```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>My  
- The `My` feature provides easy and intuitive access to a number of .NET Framework classes, enabling the Visual Basic user to interact with the computer, application, settings, resources, and so on.  
+ `My` 機能を使用すると、さまざまな .NET Framework クラスに簡単かつ直感的にアクセスできるので、Visual Basic ユーザーはコンピューター、アプリケーション、設定、リソースなどを操作できます。  
   
 ## <a name="mybase"></a>MyBase  
- The `MyBase` keyword behaves like an object variable referring to the base class of the current instance of a class. `MyBase` is commonly used to access base class members that are overridden or shadowed in a derived class. `MyBase.New` is used to explicitly call a base class constructor from a derived class constructor.  
+ `MyBase` キーワードは、クラスの現在のインスタンスの基底クラスを参照するオブジェクト変数のように動作します。 `MyBase` は、通常、派生クラスでオーバーライドまたはシャドウされる基底クラスのメンバーにアクセスするために使用されます。 `MyBase.New` は、派生クラスのコンストラクターから基底クラスのコンストラクターを明示的に呼び出すために使用されます。  
   
 ## <a name="myclass"></a>MyClass  
- The `MyClass` keyword behaves like an object variable referring to the current instance of a class as originally implemented. `MyClass` is similar to `Me`, but all method calls on it are treated as if the method were `NotOverridable`.  
+ `MyClass` キーワードは、もともと実装されているクラスの現在のインスタンスを参照するオブジェクト変数のように動作します。 `MyClass` は `Me`に似ていますが、メソッドの呼び出しはすべて、メソッドが `NotOverridable`されているかのように扱われます。  
   
 ## <a name="see-also"></a>関連項目
 

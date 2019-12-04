@@ -15,26 +15,26 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350856"
 ---
-# <a name="sample-compilation-command-lines-visual-basic"></a>Sample compilation command lines (Visual Basic)
+# <a name="sample-compilation-command-lines-visual-basic"></a>コンパイルコマンドラインのサンプル (Visual Basic)
 
-As an alternative to compiling Visual Basic programs from within Visual Studio, you can compile from the command line to produce executable (.exe) files or dynamic-link library (.dll) files.
+Visual Studio 内から Visual Basic プログラムをコンパイルする代わりに、コマンドラインからコンパイルして、実行可能 (.exe) ファイルまたはダイナミックリンクライブラリ (.dll) ファイルを生成することもできます。
 
-The Visual Basic command-line compiler supports a complete set of options that control input and output files, assemblies, and debug and preprocessor options. Each option is available in two interchangeable forms: `-option` and `/option`. This documentation shows only the `-option` form.
+Visual Basic のコマンドラインコンパイラは、入力ファイル、出力ファイル、アセンブリ、およびデバッグオプションとプリプロセッサオプションを制御するオプションの完全なセットをサポートしています。 各オプションは、`-option` と `/option`の2つの交換可能な形式で使用できます。 このドキュメントでは、`-option` フォームのみを示します。
 
-The following table lists some sample command lines you can modify for your own use.
+次の表に、自分で使用するために変更できるサンプルコマンドラインを示します。
 
-|終了|上限のファイル数を変更するには、|
+|目的|新しく使用する機能|
 |--------|---------|
-|Compile File.vb and create File.exe|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
-|Compile File.vb and create File.dll|`vbc -target:library File.vb`|
-|Compile File.vb and create My.exe|`vbc -out:My.exe File.vb`|
-|Compile File.vb and create both a library and a reference assembly named File.dll|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
-|Compile all Visual Basic files in the current directory, with optimizations on and the `DEBUG` symbol defined, producing File2.exe|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
-|Compile all Visual Basic files in the current directory, producing a debug version of File2.dll without displaying the logo or warnings|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
-|Compile all Visual Basic files in the current directory to Something.dll|`vbc -target:library -out:Something.dll *.vb`|
+|ファイル .vb をコンパイルして、ファイルを作成します。|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
+|ファイル .vb をコンパイルし、ファイル .dll を作成します。|`vbc -target:library File.vb`|
+|ファイル .vb をコンパイルして、.exe を作成します。|`vbc -out:My.exe File.vb`|
+|ファイル .vb をコンパイルし、ファイル .dll という名前のライブラリと参照アセンブリの両方を作成します。|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
+|最適化をオンにし、定義した `DEBUG` シンボルを使用して、現在のディレクトリにあるすべての Visual Basic ファイルをコンパイルします。|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
+|現在のディレクトリにあるすべての Visual Basic ファイルをコンパイルし、ロゴまたは警告を表示せずに、File2 のデバッグバージョンを生成します。|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
+|現在のディレクトリにあるすべての Visual Basic ファイルを何らかの .dll にコンパイルします。|`vbc -target:library -out:Something.dll *.vb`|
 
 > [!TIP]
-> When you build a project by using the Visual Studio IDE, you can display information about the associated **vbc** command with its compiler options in the output window. To display this information, open the [Options Dialog Box,  Projects and Solutions, Build and Run](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), and then set the **MSBuild project build output verbosity** to **Normal** or a higher level of verbosity.
+> Visual Studio IDE を使用してプロジェクトをビルドする場合、関連付けられている**vbc.exe**コマンドに関する情報を [出力] ウィンドウのコンパイラオプションと共に表示できます。 この情報を表示するには、[オプション] ダイアログボックス、[プロジェクトとソリューション]、[ビルドと実行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run) の順に開き、 **MSBuild プロジェクトのビルド出力の詳細**レベルを **[標準]** または 高レベルの詳細 に設定します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -21,45 +21,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331626"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>宣言された要素の特性 (Visual Basic)
-A *characteristic* of a declared element is an aspect of that element that affects how code can interact with it. Every declared element has one or more of the following characteristics associated with it:  
+宣言された要素の*特性*は、コードと対話する方法に影響する要素の側面です。 宣言されたすべての要素には、次の1つ以上の特性が関連付けられています。  
   
-- *Data type* — the values the element can hold, and how it stores those values. 詳細については、「[Data Types](../../../../visual-basic/language-reference/data-types/index.md)」(データ型) を参照してください。  
+- *データ型*: 要素が保持できる値と、その値を格納する方法。 詳細については、「[Data Types](../../../../visual-basic/language-reference/data-types/index.md)」(データ型) を参照してください。  
   
-- *Lifetime* — the period of execution time during which the element is available for use. For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+- *有効期間*-要素を使用できるようになるまでの実行時間。 詳細については、「 [Visual Basic の有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)」を参照してください。  
   
-- *Scope* — the set of all code that can refer to the element without qualifying its name. For more information, see [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+- *スコープ*-名前を修飾せずに要素を参照できるすべてのコードのセット。 詳細については、「[方法: 変数のスコープを制御する](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)」を参照してください。  
   
-- *Access level* — the permission for code to make use of the element. For more information, see [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+- *アクセスレベル*-要素を使用するためのコードのアクセス許可。 詳細については、「[方法: 変数の可用性を制御する](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)」を参照してください。  
   
-## <a name="characteristics-of-the-elements"></a>Characteristics of the Elements  
- The following table shows the declared elements and the characteristics that apply to each one.  
+## <a name="characteristics-of-the-elements"></a>要素の特性  
+ 次の表は、宣言された要素と、それぞれに適用される特性を示しています。  
   
-|要素|データの種類|有効期間|Scope <sup>1</sup>|Access Level|  
+|要素|データ型|有効期間|スコープ<sup>1</sup>|アクセスレベル|  
 |-------------|---------------|--------------|------------------------|------------------|  
-|変数|[はい]|[はい]|[はい]|[はい]|  
-|定数|[はい]|Ｘ|[はい]|[はい]|  
-|列挙|[はい]|Ｘ|[はい]|[はい]|  
-|構造体|Ｘ|Ｘ|[はい]|[はい]|  
-|property|[はい]|[はい]|[はい]|[はい]|  
-|メソッド|Ｘ|[はい]|[はい]|[はい]|  
-|Procedure (`Sub` or `Function`)|Ｘ|[はい]|[はい]|[はい]|  
-|プロシージャ パラメーター|[はい]|[はい]|[はい]|Ｘ|  
-|Function return|[はい]|[はい]|[はい]|Ｘ|  
-|演算子|[はい]|Ｘ|[はい]|[はい]|  
-|Interface|Ｘ|Ｘ|[はい]|[はい]|  
-|インスタンス|Ｘ|Ｘ|[はい]|[はい]|  
-|event|Ｘ|Ｘ|[はい]|[はい]|  
-|delegate|Ｘ|Ｘ|[はい]|[はい]|  
+|変数|はい|はい|はい|はい|  
+|定数|はい|いいえ|はい|はい|  
+|列挙値|はい|いいえ|はい|はい|  
+|構造体|いいえ|いいえ|はい|はい|  
+|プロパティ|はい|はい|はい|はい|  
+|メソッド|いいえ|はい|はい|はい|  
+|プロシージャ (`Sub` または `Function`)|いいえ|はい|はい|はい|  
+|プロシージャ パラメーター|はい|はい|はい|いいえ|  
+|関数の戻り値|はい|はい|はい|いいえ|  
+|演算子|はい|いいえ|はい|はい|  
+|インターフェイス|いいえ|いいえ|はい|はい|  
+|クラス|いいえ|いいえ|はい|はい|  
+|event|いいえ|いいえ|はい|はい|  
+|デリゲート|いいえ|いいえ|はい|はい|  
   
- <sup>1</sup> Scope is sometimes referred to as *visibility*.  
+ <sup>1</sup>スコープは、*可視性*と呼ばれることもあります。  
   
 ## <a name="see-also"></a>関連項目
 
 - [宣言された要素](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic の有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic 内のスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic のアクセスレベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

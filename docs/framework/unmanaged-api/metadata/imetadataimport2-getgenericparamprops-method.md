@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427300"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps メソッド
-Gets the metadata associated with the generic parameter represented by the specified token.  
+指定したトークンによって表されるジェネリックパラメーターに関連付けられているメタデータを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,35 +42,35 @@ HRESULT GetGenericParamProps (
   
 ## <a name="parameters"></a>パラメーター  
  `gp`  
- [in] The token that represents the generic parameter for which to return metadata.  
+ からメタデータを返す対象のジェネリックパラメーターを表すトークン。  
   
  `pulParamSeq`  
- [out] The ordinal position of the `Type` parameter in the parent constructor or method.  
+ 入出力親コンストラクターまたはメソッド内の `Type` パラメーターの序数位置。  
   
  `pdwParamFlags`  
- [out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.  
+ 入出力ジェネリックパラメーターの `Type` を記述する[Corgenericparamattr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)列挙体の値。  
   
  `ptOwner`  
- [out] A TypeDef or MethodDef token that represents the owner of the parameter.  
+ 入出力パラメーターの所有者を表す TypeDef または MethodDef トークン。  
   
  `reserved`  
- [out] Reserved for future extensibility.  
+ 入出力将来の拡張のために予約されています。  
   
  `wzName`  
- [out] The name of the generic parameter.  
+ 入出力ジェネリックパラメーターの名前。  
   
  `cchName`  
- [in] The size of the `wzName` buffer.  
+ から`wzName` バッファーのサイズ。  
   
  `pchName`  
- [out] The returned size of the name, in wide characters.  
+ 入出力名前の返されたサイズ (ワイド文字単位)。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

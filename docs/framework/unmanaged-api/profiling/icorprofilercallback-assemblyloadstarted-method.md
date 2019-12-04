@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445164"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>ICorProfilerCallback::AssemblyLoadStarted メソッド
-Notifies the profiler that an assembly is being loaded.  
+アセンブリが読み込まれていることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,12 +34,12 @@ HRESULT AssemblyLoadStarted(
   
 ## <a name="parameters"></a>パラメーター  
  `assemblyId`  
- [in] Identifies the assembly that is being loaded.  
+ から読み込まれているアセンブリを識別します。  
   
-## <a name="remarks"></a>Remarks  
- The value of `assemblyId` is not valid for an information request until the [ICorProfilerCallback::AssemblyLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md) method is called.  
+## <a name="remarks"></a>コメント  
+ `assemblyId` の値は、 [ICorProfilerCallback:: AssemblyLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md)メソッドが呼び出されるまで、情報要求に対して無効です。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -48,6 +48,6 @@ HRESULT AssemblyLoadStarted(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

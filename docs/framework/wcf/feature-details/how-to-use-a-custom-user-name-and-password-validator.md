@@ -52,11 +52,11 @@ ms.locfileid: "74283255"
 
     1. 構成ファイルで、 [\<system.servicemodel >](../../configure-apps/file-schema/wcf/system-servicemodel.md)要素の下に[\<バインド >](../../configure-apps/file-schema/wcf/bindings.md)要素を追加します。
 
-    2. [\<wsHttpBinding >](../../configure-apps/file-schema/wcf/wshttpbinding.md) または [\<basicHttpBinding >](../../configure-apps/file-schema/wcf/basichttpbinding.md) 要素をバインディング セクションに追加します。 WCF バインド要素の作成の詳細については　[方法: 構成でサービス バインディングを指定する](../how-to-specify-a-service-binding-in-configuration.md) を参照してください。
+    2. [\<wsHttpBinding >](../../configure-apps/file-schema/wcf/wshttpbinding.md)または[\<basicHttpBinding >](../../configure-apps/file-schema/wcf/basichttpbinding.md)要素をバインドセクションに追加します。 WCF バインド要素の作成の詳細については、「[方法: 構成でサービスバインディングを指定](../how-to-specify-a-service-binding-in-configuration.md)する」を参照してください。
 
     3. [\<セキュリティ >](../../configure-apps/file-schema/wcf/security-of-wshttpbinding.md)または[\<セキュリティ >](../../configure-apps/file-schema/wcf/security-of-basichttpbinding.md)の `mode` 属性を `Message`、`Transport`、または `TransportWithMessageCredential`に設定します。
 
-    4. `clientCredentialType`[message>\< または　](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)[transport>\< の　](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) 属性を設定します。
+    4. [\<メッセージ >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)または[\<トランスポート >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)の `clientCredentialType` 属性を設定します。
 
         メッセージセキュリティを使用する場合は、 [\<メッセージ >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)の `clientCredentialType` 属性を `UserName`に設定します。
 
@@ -65,7 +65,7 @@ ms.locfileid: "74283255"
         > [!NOTE]
         > WCF サービスがトランスポートレベルのセキュリティを使用してインターネットインフォメーションサービス (IIS) でホストされ、<xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> プロパティが <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>に設定されている場合、カスタム認証スキームは Windows 認証のサブセットを使用します。 このシナリオでは、WCF がカスタム認証システムを呼び出す前に、IIS が Windows 認証を実行します。
 
-    WCF バインド要素の作成の詳細については　[方法: 構成でサービス バインディングを指定する](../how-to-specify-a-service-binding-in-configuration.md) を参照してください。
+    WCF バインド要素の作成の詳細については、「[方法: 構成でサービスバインディングを指定](../how-to-specify-a-service-binding-in-configuration.md)する」を参照してください。
 
     次の例は、バインディングの構成コードを示しています。
 

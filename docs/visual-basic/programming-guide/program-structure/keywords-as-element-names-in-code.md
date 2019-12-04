@@ -15,23 +15,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347388"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>コード内の要素名としてのキーワード (Visual Basic)
-Any program element — such as a variable, class, or member — can have the same name as a restricted keyword. For example, you can create a variable named `Loop`. However, to refer to your version of it — which has the same name as the restricted `Loop` keyword — you must either precede it with a full qualification string or enclose it in square brackets (`[ ]`), as the following example shows.  
+すべてのプログラム要素 (変数、クラス、メンバーなど) は、制限付きキーワードと同じ名前を持つことができます。 たとえば、`Loop`という名前の変数を作成できます。 ただし、制限された `Loop` キーワードと同じ名前を持つバージョンを参照するには、次の例に示すように、完全修飾文字列を使用するか、角かっこ (`[ ]`) で囲む必要があります。  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
   
- If you do not do either of these, then Visual Basic assumes use of the intrinsic `Loop` keyword and produces an error, as in the following example:  
+ これらのいずれも実行しない場合、Visual Basic は、次の例に示すように、組み込みの `Loop` キーワードを使用することを前提として、エラーを生成します。  
   
  `' The following statement causes a compiler error.`  
   
  `Loop.Visible = True`  
   
- You can use square brackets when referring to forms and controls, and when declaring a variable or defining a procedure with the same name as a restricted keyword. It can be easy to forget to qualify names or include square brackets, and thus introduce errors into your code and make it harder to read. For this reason, we recommend that you not use restricted keywords as the names of program elements. However, if a future version of Visual Basic defines a new keyword that conflicts with an existing form or control name, then you can use this technique when updating your code to work with the new version.  
+ フォームとコントロールを参照する場合や、変数を宣言する場合、または制限されたキーワードと同じ名前のプロシージャを定義する場合は、角かっこを使用できます。 名前を修飾したり、角かっこを含めたりすることは簡単ではありません。したがって、コードにエラーが発生して読みにくくなります。 このため、プログラム要素の名前として制限付きキーワードを使用しないことをお勧めします。 ただし、Visual Basic の将来のバージョンで、既存のフォーム名またはコントロール名と競合する新しいキーワードが定義されている場合は、新しいバージョンで動作するようにコードを更新するときに、この手法を使用できます。  
   
 > [!NOTE]
-> Your program also might include element names provided by other referenced assemblies. If these names conflict with restricted keywords, then placing square brackets around them causes Visual Basic to interpret them as your defined elements.  
+> プログラムには、他の参照アセンブリによって提供される要素名を含めることもできます。 これらの名前が制限付きキーワードと競合している場合は、角かっこを配置すると、Visual Basic によって定義済みの要素として解釈されます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic 名前付け規則](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445124"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished メソッド
-Notifies the profiler that a class has finished loading.  
+クラスが読み込みを完了したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,17 +35,17 @@ HRESULT ClassLoadFinished(
   
 ## <a name="parameters"></a>パラメーター  
  `classId`  
- [in] Identifies the class that was loaded.  
+ から読み込まれたクラスを識別します。  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the class loaded successfully.  
+ からクラスが正常に読み込まれたかどうかを示す HRESULT。  
   
-## <a name="remarks"></a>Remarks  
- The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.  
+## <a name="remarks"></a>コメント  
+ `classId` の値は、`ClassLoadFinished` メソッドが呼び出されるまで、情報要求に対して有効ではありません。  
   
- Some parts of loading the class might continue after the `ClassLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.  
+ `ClassLoadFinished` コールバックの後も、クラスの読み込みの一部が続行される場合があります。 `hrStatus` のエラー HRESULT はエラーを示します。 ただし、`hrStatus` の成功 HRESULT は、クラスの読み込みの最初の部分が成功したことのみを示します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

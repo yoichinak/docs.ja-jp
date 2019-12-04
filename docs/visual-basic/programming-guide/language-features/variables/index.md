@@ -1,5 +1,5 @@
 ---
-title: 変数
+title: '変数:'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic]
@@ -13,10 +13,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352406"
 ---
 # <a name="variables-in-visual-basic"></a>Visual Basic における変数
-You often have to store values when you perform calculations with Visual Basic. たとえば、いくつかの値を計算し、比較し、比較の結果に応じて、さまざまな操作を実行する必要があるとします。 比較する場合には、その値を保持する必要があります。  
+Visual Basic で計算を実行するときは、多くの場合、値を格納する必要があります。 たとえば、いくつかの値を計算し、比較し、比較の結果に応じて、さまざまな操作を実行する必要があるとします。 比較する場合には、その値を保持する必要があります。  
   
 ## <a name="usage"></a>使用方法  
- Visual Basic, just like most programming languages, uses variables for storing values. *変数*には (変数に含まれる値を参照するために使用する語である) 名前があります。 変数には、(変数に格納できるデータの種類を決定する) データ型もあります。 密接に関連するデータ項目のインデックス セットを格納する必要がある場合、変数で配列を表現することもできます。  
+ Visual Basic は、ほとんどのプログラミング言語と同様に、値を格納するために変数を使用します。 *変数*には (変数に含まれる値を参照するために使用する語である) 名前があります。 変数には、(変数に格納できるデータの種類を決定する) データ型もあります。 密接に関連するデータ項目のインデックス セットを格納する必要がある場合、変数で配列を表現することもできます。  
   
  ローカル型推論では、データ型を明示的に指定せずに変数を宣言できます。 代わりに、コンパイラは、初期化式の型から変数の型を推測します。 詳細については、「[ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)」と「[Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)」を参照してください。  
   
@@ -39,5 +39,5 @@ You often have to store values when you perform calculations with Visual Basic. 
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [変数のトラブルシューティング](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)
 - [方法 : 変数に値を格納する、および変数から値を取得する](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
-- [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)
+- [Visual Basic のプロパティと変数の違い](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)
 - [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

@@ -36,17 +36,17 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>パラメーター  
  `cData`  
- [in] The length of the buffer provided by the `data` parameter  
+ から`data` パラメーターによって提供されるバッファーの長さ  
   
  `pcData`  
- [out] The size and length of the checksum, in bytes.  
+ 入出力チェックサムのサイズと長さ (バイト単位)。  
   
  `data`  
- [out] The buffer that receives the checksum.  
+ 入出力チェックサムを受け取るバッファー。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, an error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、エラーコード。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

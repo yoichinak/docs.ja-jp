@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352800"
 ---
 # <a name="then-statement"></a>Then ステートメント
-Introduces a statement block to be compiled or executed if a tested condition is true.  
+テストされた条件が true の場合にコンパイルまたは実行されるステートメントブロックを導入します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  キーワード `Then` は次のコンテキストで使用できます。  
   
- [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If...Then... #Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
  [If...Then...Else ステートメント](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

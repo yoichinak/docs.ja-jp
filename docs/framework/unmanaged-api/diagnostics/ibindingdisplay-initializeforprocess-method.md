@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448485"
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>IBindingDisplay::InitializeForProcess メソッド
-Initializes the [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) object.  
+[IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)オブジェクトを初期化します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,20 +35,20 @@ HRESULT InitializeForProcess (
   
 ## <a name="parameters"></a>パラメーター  
  `pid`  
- [in] The process identifier.  
+ からプロセス識別子。  
   
-## <a name="remarks"></a>Remarks  
- The debugger calls the `InitializeForProcess` method at creation time to initialize the binding display. `InitializeForProcess` must be called at creation time before any other method on `IBindingDisplay` is called.  
+## <a name="remarks"></a>コメント  
+ デバッガーは、作成時に `InitializeForProcess` メソッドを呼び出して、バインド表示を初期化します。 `IBindingDisplay` の他のメソッドが呼び出される前に、作成時に `InitializeForProcess` を呼び出す必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** BindingDisplay.h  
+ **ヘッダー:** BindingDisplay. h  
   
- **Library:** BindingDisplay.idl  
+ **ライブラリ:** BindingDisplay .idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IBindingDisplay インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448213"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps メソッド
-Gets the set of properties of the exported type with the specified metadata signature.  
+指定したメタデータシグネチャを持つ、エクスポートされた型のプロパティのセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,35 +41,35 @@ HRESULT GetExportedTypeProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mdct`  
- [in] An `mdExportedType` metadata token that represents the exported type.  
+ からエクスポートされた型を表す `mdExportedType` メタデータトークン。  
   
  `szName`  
- [out] The name of the exported type.  
+ 入出力エクスポートされた型の名前。  
   
  `cchName`  
- [in] The size, in wide characters, of `szName`.  
+ から`szName`のサイズ (ワイド文字単位)。  
   
  `pchName`  
- [out] The number of wide characters actually returned in `szName`  
+ 入出力実際に返されるワイド文字の数 `szName`  
   
  `ptkImplementation`  
- [out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.  
+ 入出力エクスポートされた型のプロパティへのアクセスを格納または許可する、`mdFile`、`mdAssemblyRef`、または `mdExportedType` メタデータトークン。  
   
  `ptkTypeDef`  
- [out] A pointer to an `mdTypeDef` token that represents a type in the file.  
+ 入出力ファイル内の型を表す `mdTypeDef` トークンへのポインター。  
   
  `pdwExportedTypeFlags`  
- [out] A pointer to the flags that describe the metadata applied to the exported type. The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.  
+ 入出力エクスポートされた型に適用されるメタデータを記述するフラグへのポインター。 Flags 値には、1つまたは複数の[Cortypeattr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)値を指定できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447197"
 ---
 # <a name="getscope-method"></a>GetScope メソッド
-Gets an import scope.  
+インポートスコープを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,22 +37,22 @@ HRESULT GetScope(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- Unique ID of assembly to import to.  
+ インポート先のアセンブリの一意の ID。  
   
  `FileToken`  
- Unique ID of the file to import from.  
+ インポート元のファイルの一意の ID。  
   
  `dwScope`  
- Zero-based scope to import.  
+ インポートする0から始まるスコープ。  
   
  `ppImportScope`  
- Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.  
+ スコープの[IMetaDataImport インターフェイス](../metadata/imetadataimport-interface.md)インターフェイスを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 

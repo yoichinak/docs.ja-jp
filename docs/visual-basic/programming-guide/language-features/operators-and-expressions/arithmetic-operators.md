@@ -21,84 +21,84 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352658"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic における算術演算子
-Arithmetic operators are used to perform many of the familiar arithmetic operations that involve the calculation of numeric values represented by literals, variables, other expressions, function and property calls, and constants. Also classified with arithmetic operators are the bit-shift operators, which act at the level of the individual bits of the operands and shift their bit patterns to the left or right.  
+算術演算子は、リテラル、変数、その他の式、関数およびプロパティの呼び出し、および定数によって表される数値の計算を含む一般的な算術演算の多くを実行するために使用されます。 また、算術演算子に分類されているビットシフト演算子は、オペランドの個々のビットのレベルで動作し、ビットパターンを左または右にシフトします。  
   
-## <a name="arithmetic-operations"></a>Arithmetic Operations  
- You can add two values in an expression together with the [+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md), or subtract one from another with the [- Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), as the following example demonstrates.  
+## <a name="arithmetic-operations"></a>算術演算  
+ 次の例に示すように、式には、 [+ 演算子](../../../../visual-basic/language-reference/operators/addition-operator.md)と共に2つの値を加算したり、 [-演算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)を使用して別の値を減算したりできます。  
   
  [!code-vb[VbVbalrOperators#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#57)]  
   
- Negation also uses the [- Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), but with only one operand, as the following example demonstrates.  
+ 否定では、次の例に示すように、 [-演算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)も使用しますが、オペランドは1つだけです。  
   
  [!code-vb[VbVbalrOperators#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#58)]  
   
- Multiplication and division use the [* Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md) and [/ Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), respectively, as the following example demonstrates.  
+ 乗算と除算では、次の例に示すように、それぞれ[* 演算子](../../../../visual-basic/language-reference/operators/multiplication-operator.md)および[/演算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)を使用します。  
   
  [!code-vb[VbVbalrOperators#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#59)]  
   
- Exponentiation uses the [^ Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), as the following example demonstrates.  
+ 次の例に示すように、累乗では[^ 演算子](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)が使用されます。  
   
  [!code-vb[VbVbalrOperators#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#60)]  
   
- Integer division is carried out using the [\ Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md). Integer division returns the quotient, that is, the integer that represents the number of times the divisor can divide into the dividend without consideration of any remainder. Both the divisor and the dividend must be integral types (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, and `ULong`) for this operator. All other types must be converted to an integral type first. The following example demonstrates integer division.  
+ 整数除算は、 [\ 演算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md)を使用して実行されます。 整数除算は、商を返します。これは、除数が余りを考慮せずに被除数に分割できる回数を表す整数です。 除数と被除数は両方とも、この演算子の整数型 (`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`) である必要があります。`ULong` その他のすべての型は、最初に整数型に変換する必要があります。 整数除算の例を次に示します。  
   
  [!code-vb[VbVbalrOperators#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#61)]  
   
- Modulus arithmetic is performed using the [Mod Operator](../../../../visual-basic/language-reference/operators/mod-operator.md). This operator returns the remainder after dividing the divisor into the dividend an integral number of times. If both divisor and dividend are integral types, the returned value is integral. If divisor and dividend are floating-point types, the returned value is also floating-point. The following example demonstrates this behavior.  
+ 剰余演算は、 [Mod 演算子](../../../../visual-basic/language-reference/operators/mod-operator.md)を使用して実行されます。 この演算子は、除数を被除数に除算した後の剰余を整数値で返します。 除数と被除数の両方が整数型の場合、戻り値は整数になります。 除数と被除数が浮動小数点型の場合、戻り値も浮動小数点になります。 次の例でその動作を示します。  
   
  [!code-vb[VbVbalrOperators#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#62)]  
   
  [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
-### <a name="attempted-division-by-zero"></a>Attempted Division by Zero  
- Division by zero has different results depending on the data types involved. In integral divisions (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), the .NET Framework throws a <xref:System.DivideByZeroException> exception. In division operations on the `Decimal` or `Single` data type, the .NET Framework also throws a <xref:System.DivideByZeroException> exception.  
+### <a name="attempted-division-by-zero"></a>0による除算を試行しました  
+ 0による除算の結果は、関連するデータ型によって異なります。 整数部 (`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`) では、.NET Framework 例外がスローされます。<xref:System.DivideByZeroException> `Decimal` または `Single` データ型に対する除算演算では、.NET Framework は <xref:System.DivideByZeroException> 例外もスローします。  
   
- In floating-point divisions involving the `Double` data type, no exception is thrown, and the result is the class member representing <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, or <xref:System.Double.NegativeInfinity>, depending on the dividend. The following table summarizes the various results of attempting to divide a `Double` value by zero.  
+ `Double` データ型を含む浮動小数点除算では、例外はスローされず、結果は被除数に応じて <xref:System.Double.NaN>、<xref:System.Double.PositiveInfinity>、または <xref:System.Double.NegativeInfinity>を表すクラスメンバーになります。 次の表は、`Double` 値を0で除算した場合のさまざまな結果をまとめたものです。  
   
-|Dividend data type|Divisor data type|Dividend value|結果|  
+|被除数データ型|除数データ型|被除数の値|結果|  
 |---|---|---|---|  
-|`Double`|`Double`|0|<xref:System.Double.NaN> (not a mathematically defined number)|  
+|`Double`|`Double`|0|<xref:System.Double.NaN> (数学的に定義された数ではありません)|  
 |`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity>|  
 |`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity>|  
   
- When you catch a <xref:System.DivideByZeroException> exception, you can use its members to help you handle it. For example, the <xref:System.Exception.Message%2A> property holds the message text for the exception. 詳しくは、「[Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」をご覧ください。  
+ <xref:System.DivideByZeroException> 例外をキャッチすると、そのメンバーを使用して処理することができます。 たとえば、<xref:System.Exception.Message%2A> プロパティは、例外のメッセージテキストを保持します。 詳しくは、「[Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」をご覧ください。  
   
-## <a name="bit-shift-operations"></a>Bit-Shift Operations  
- A bit-shift operation performs an arithmetic shift on a bit pattern. The pattern is contained in the operand on the left, while the operand on the right specifies the number of positions to shift the pattern. You can shift the pattern to the right with the [>> Operator](../../../../visual-basic/language-reference/operators/right-shift-operator.md) or to the left with the [<< Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md).  
+## <a name="bit-shift-operations"></a>ビットシフト操作  
+ ビットシフト演算では、ビットパターンに基づいて算術シフトが実行されます。 パターンは左側のオペランドに含まれていますが、右側のオペランドは、パターンをシフトする位置の数を指定します。 パターンを右にシフトするには、 [> > 演算子](../../../../visual-basic/language-reference/operators/right-shift-operator.md)を使用するか、左に[< < 演算子](../../../../visual-basic/language-reference/operators/left-shift-operator.md)を使用します。  
   
- The data type of the pattern operand must be `SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`. The data type of the shift amount operand must be `Integer` or must widen to `Integer`.  
+ パターンオペランドのデータ型は、`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、または `ULong`である必要があります。 シフト amount オペランドのデータ型は `Integer` であるか、または `Integer`に拡大変換する必要があります。  
   
- Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. The bit positions vacated by a shift are set as follows:  
+ 算術シフトは循環していません。つまり、結果の一方の端からシフトされたビットはもう一方の端には再入されません。 シフトによって空いたビット位置は、次のように設定されます。  
   
-- 0 for an arithmetic left shift  
+- 0 (算術左シフトの場合)  
   
-- 0 for an arithmetic right shift of a positive number  
+- 正の数値の算術右シフトの場合は0  
   
-- 0 for an arithmetic right shift of an unsigned data type (`Byte`, `UShort`, `UInteger`, `ULong`)  
+- 符号なしのデータ型 (`Byte`、`UShort`、`UInteger`、`ULong`) の算術右シフトの場合は0  
   
-- 1 for an arithmetic right shift of a negative number (`SByte`, `Short`, `Integer`, or `Long`)  
+- 負の数値の算術右シフト (`SByte`、`Short`、`Integer`、または `Long`) の場合は1  
   
- The following example shifts an `Integer` value both left and right.  
+ 次の例では、`Integer` 値を左右にシフトします。  
   
  [!code-vb[VbVbalrOperators#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#64)]  
   
- Arithmetic shifts never generate overflow exceptions.  
+ 算術シフトではオーバーフロー例外は生成されません。  
   
-## <a name="bitwise-operations"></a>Bitwise Operations  
- In addition to being logical operators, `Not`, `Or`, `And`, and `Xor` also perform bitwise arithmetic when used on numeric values. For more information, see "Bitwise Operations" in [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md).  
+## <a name="bitwise-operations"></a>ビットごとの演算  
+ 論理演算子に加えて、`Not`、`Or`、`And`、および `Xor` は、数値に対して使用する場合にビットごとの算術演算も実行します。 詳細については、「 [Visual Basic の論理演算子とビット処理演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)」の「ビットごとの演算」を参照してください。  
   
-## <a name="type-safety"></a>Type Safety  
- Operands should normally be of the same type. For example, if you are doing addition with an `Integer` variable, you should add it to another `Integer` variable, and you should assign the result to a variable of type `Integer` as well.  
+## <a name="type-safety"></a>タイプセーフ  
+ 通常、オペランドは同じ型である必要があります。 たとえば、`Integer` 変数を使用して加算を行う場合は、それを別の `Integer` 変数に追加し、その結果を `Integer` 型の変数にも代入する必要があります。  
   
- One way to ensure good type-safe coding practice is to use the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md). If you set `Option Strict On`, Visual Basic automatically performs *type-safe* conversions. For example, if you try to add an `Integer` variable to a `Double` variable and assign the value to a `Double` variable, the operation proceeds normally, because an `Integer` value can be converted to `Double` without loss of data. Type-unsafe conversions, on the other hand, cause a compiler error with `Option Strict On`. For example, if you try to add an `Integer` variable to a `Double` variable and assign the value to an `Integer` variable, a compiler error results, because a `Double` variable cannot be implicitly converted to type `Integer`.  
+ タイプセーフなコーディング方法として、 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)を使用する方法があります。 `Option Strict On`を設定した場合、Visual Basic は*タイプセーフな*変換を自動的に実行します。 たとえば、`Double` 変数に `Integer` 変数を追加し、その値を `Double` 変数に代入しようとすると、データを失うことなく `Integer` 値を `Double` に変換できるため、操作は正常に続行されます。 一方、タイプセーフでない変換では、`Option Strict On`でコンパイラエラーが発生します。 たとえば、`Double` 変数に `Integer` 変数を追加し、その値を `Integer` 変数に代入しようとすると、コンパイラエラーが発生します。これは、`Double` 変数を型 `Integer`に暗黙的に変換できないためです。  
   
- If you set `Option Strict Off`, however, Visual Basic allows implicit narrowing conversions to take place, although they can result in the unexpected loss of data or precision. For this reason, we recommend that you use `Option Strict On` when writing production code. 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
+ ただし、`Option Strict Off`を設定した場合、Visual Basic は暗黙的な縮小変換を行うことができますが、予期しないデータまたは精度の損失が発生する可能性があります。 このため、実稼働コードを記述するときには `Option Strict On` を使用することをお勧めします。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [算術演算子](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [ビット シフト演算子](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic の比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic での連結演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic の論理演算子とビット処理演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [演算子の効率のよい組み合わせ](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

@@ -23,20 +23,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351492"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
-Specifies that a property or procedure is not implemented in this class and must be overridden in a derived class before it can be used.  
+プロパティまたはプロシージャがこのクラスで実装されておらず、派生クラスでオーバーライドされてから使用できるようにする必要があることを指定します。  
   
-## <a name="remarks"></a>Remarks  
- You can use `MustOverride` only in a property or procedure declaration statement. The property or procedure that specifies `MustOverride` must be a member of a class, and the class must be marked [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
+## <a name="remarks"></a>コメント  
+ `MustOverride` は、プロパティまたはプロシージャの宣言ステートメントでのみ使用できます。 `MustOverride` を指定するプロパティまたはプロシージャは、クラスのメンバーである必要があります。また、クラスは[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)に設定する必要があります。  
   
 ## <a name="rules"></a>ルール  
   
-- **Incomplete Declaration.** When you specify `MustOverride`, you do not supply any additional lines of code for the property or procedure, not even the `End Function`, `End Property`, or `End Sub` statement.  
+- **不完全な宣言です。** `MustOverride`を指定すると、`End Function`、`End Property`、または `End Sub` ステートメントではなく、プロパティまたはプロシージャに追加のコード行を指定することはできません。  
   
-- **Combined Modifiers.** You cannot specify `MustOverride` together with `NotOverridable`, `Overridable`, or `Shared` in the same declaration.  
+- **結合された修飾子。** 同じ宣言内で `NotOverridable`、`Overridable`、または `Shared` と共に `MustOverride` を指定することはできません。  
   
-- **Shadowing and Overriding.** シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+- **シャドウとオーバーライド。** シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、「 [Visual Basic でのシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。  
   
-- **Alternate Terms.** An element that cannot be used except in an override is sometimes called a *pure virtual* element.  
+- **代替語句。** オーバーライドでは使用できない要素は、*純粋仮想*要素と呼ばれることもあります。  
   
  `MustOverride` 修飾子は、次のコンテキストで使用できます。  
   
@@ -53,4 +53,4 @@ Specifies that a property or procedure is not implemented in this class and must
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic でのシャドウ処理](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

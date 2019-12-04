@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448375"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables メソッド
-Returns all variables defined at global scope within this namespace.  
+この名前空間内のグローバルスコープで定義されているすべての変数を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +37,20 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>パラメーター  
  `cVars`  
- [in] A `ULONG32` that indicates the size of the `pVars` array.  
+ から`pVars` 配列のサイズを示す `ULONG32`。  
   
  `pcVars`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.  
+ 入出力名前空間を格納するために必要なバッファーのサイズを受け取る `ULONG32` へのポインター。  
   
  `pVars`  
- [out] A pointer to a buffer that contains the namespaces.  
+ 入出力名前空間を格納しているバッファーへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedNamespace インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

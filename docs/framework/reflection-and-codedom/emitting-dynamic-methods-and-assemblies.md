@@ -34,7 +34,7 @@ ms.locfileid: "74446786"
   
 <xref:System.Reflection.Emit> 名前空間のマネージド型に加えて、アンマネージド メタデータ インターフェイスもあります。これについては、[メタデータ インターフェイス](../unmanaged-api/metadata/metadata-interfaces.md)に関するリファレンス ドキュメントを参照してください。 マネージド リフレクション出力は、アンマネージド メタデータ インターフェイスよりも強力なセマンティック エラー チェック機能、より高水準なメタデータの抽象化クラスを提供します。  
   
-メタデータと MSIL を使用する際に役立つリソースとしては、他に、共通言語基盤 (CLI: Common Language Infrastructure) のドキュメント、特に「Partition II: Metadata Definition and Semantics」と「Partition III: CIL Instruction Set」などもあります。 The documentation is available online at the [Ecma Web site](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+メタデータと MSIL を使用する際に役立つリソースとしては、他に、共通言語基盤 (CLI: Common Language Infrastructure) のドキュメント、特に「Partition II: Metadata Definition and Semantics」と「Partition III: CIL Instruction Set」などもあります。 ドキュメントは、 [Ecma Web サイト](https://www.ecma-international.org/publications/standards/Ecma-335.htm)からオンラインで入手できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容
   
@@ -53,7 +53,7 @@ ms.locfileid: "74446786"
 [動的な型生成のための収集可能なアセンブリ](collectible-assemblies.md)   
 そのアセンブリが作成されたアプリケーション ドメインをアンロードせずにアンロードできる動的アセンブリである、収集可能なアセンブリについて説明します。
   
-## <a name="reference"></a>辞書／辞典／その他  
+## <a name="reference"></a>参照  
 
 <xref:System.Reflection.Emit.OpCodes>  
 メソッド本体の構築に使用できる MSIL 命令コードのカタログを作成します。  

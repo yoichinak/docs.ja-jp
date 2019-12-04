@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336552"
 ---
 # <a name="assignment-operators-visual-basic"></a>代入演算子 (Visual Basic)
-The following are the assignment operators defined in Visual Basic.  
+Visual Basic で定義されている代入演算子を次に示します。  
   
  [= 演算子](../../../visual-basic/language-reference/operators/assignment-operator.md)  
   
@@ -25,19 +25,19 @@ The following are the assignment operators defined in Visual Basic.
   
  [/= 演算子](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [\\= 演算子](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
   
  [+= 演算子](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
  [-= 演算子](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
   
- [<\<= Operator](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
+ [<\<= 演算子](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
   
  [>>= 演算子](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
   
  [& = 演算子](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

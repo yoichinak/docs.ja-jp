@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448656"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset メソッド
-Gets the file name for the line associated with an offset.  
+オフセットに関連付けられた行のファイル名を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,23 +38,23 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="parameters"></a>パラメーター  
  `dwOffset`  
- [in] A `ULONG32` that contains the offset.  
+ からオフセットを格納している `ULONG32`。  
   
  `cchName`  
- [in] A `ULONG32` that indicates the size of the `szName` buffer.  
+ から`szName` バッファーのサイズを示す `ULONG32`。  
   
  `pcchName`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.  
+ 入出力ファイル名を格納するために必要なバッファーのサイズ (文字数) を受け取る `ULONG32` へのポインター。  
   
  `szName`  
- [out] The buffer that contains the file names.  
+ 入出力ファイル名を格納しているバッファー。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymENCUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

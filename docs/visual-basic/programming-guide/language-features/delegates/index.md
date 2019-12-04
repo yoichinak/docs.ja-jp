@@ -14,13 +14,13 @@ ms.locfileid: "74345232"
 ---
 # <a name="delegates-visual-basic"></a>デリゲート (Visual Basic)
 
-デリゲートは、メソッドを参照するオブジェクトです。 デリゲートは他のプログラミング言語で使用される関数ポインターに似ているため、"*タイプ セーフ関数ポインター*" と説明されることがあります。 But unlike function pointers, Visual Basic delegates are a reference type based on the class <xref:System.Delegate?displayProperty=nameWithType>. デリゲートは、共有メソッド (特定のクラスのインスタンスがなくても呼び出すことのできるメソッド) とインスタンス メソッドの両方を参照できます。
+デリゲートは、メソッドを参照するオブジェクトです。 デリゲートは他のプログラミング言語で使用される関数ポインターに似ているため、"*タイプ セーフ関数ポインター*" と説明されることがあります。 ただし、関数ポインターとは異なり、Visual Basic デリゲートはクラス <xref:System.Delegate?displayProperty=nameWithType>に基づく参照型です。 デリゲートは、共有メソッド (特定のクラスのインスタンスがなくても呼び出すことのできるメソッド) とインスタンス メソッドの両方を参照できます。
 
 ## <a name="delegates-and-events"></a>デリゲートとイベント
 
-デリゲートは、呼び出し側プロシージャと呼び出されるプロシージャの間の媒介手段が必要な状況で役立ちます。 たとえば、イベントを発生させるオブジェクトが、異なる状況で別個のイベント ハンドラーを呼び出せるようにする必要がある場合があります。 しかし、イベントを発生させるオブジェクトは、どのイベント ハンドラーが特定のイベントを処理するかをあらかじめ把握できません。 Visual Basic lets you dynamically associate event handlers with events by creating a delegate for you when you use the `AddHandler` statement. 実行時に、デリゲートによって適切なイベント ハンドラーに呼び出しが転送されます。
+デリゲートは、呼び出し側プロシージャと呼び出されるプロシージャの間の媒介手段が必要な状況で役立ちます。 たとえば、イベントを発生させるオブジェクトが、異なる状況で別個のイベント ハンドラーを呼び出せるようにする必要がある場合があります。 しかし、イベントを発生させるオブジェクトは、どのイベント ハンドラーが特定のイベントを処理するかをあらかじめ把握できません。 Visual Basic を使用すると、`AddHandler` ステートメントを使用するときにデリゲートを作成することによって、イベントハンドラーをイベントに動的に関連付けることができます。 実行時に、デリゲートによって適切なイベント ハンドラーに呼び出しが転送されます。
 
-Although you can create your own delegates, in most cases Visual Basic creates the delegate and takes care of the details for you. たとえば、`Event` ステートメントは、`Event` ステートメントを含むクラスの入れ子のクラスとして、`<EventName>EventHandler` という名前のデリゲート クラスをイベントと同じシグネチャを使用して暗黙的に定義します。 `AddressOf` ステートメントは、特定のプロシージャを参照するデリゲートのインスタンスを暗黙的に作成します。 次の 2 つのコード行は同等です。 最初の行では、`EventHandler` のインスタンスが明示的に作成され、メソッド `Button1_Click` への参照が引数として渡されます。 2 番目の行は、より便利な方法で同じことを実行します。
+独自のデリゲートを作成することもできますが、ほとんどの場合 Visual Basic デリゲートが作成され、詳細が処理されます。 たとえば、`Event` ステートメントは、`<EventName>EventHandler` ステートメントを含むクラスの入れ子のクラスとして、`Event` という名前のデリゲート クラスをイベントと同じシグネチャを使用して暗黙的に定義します。 `AddressOf` ステートメントは、特定のプロシージャを参照するデリゲートのインスタンスを暗黙的に作成します。 次の 2 つのコード行は同等です。 最初の行では、`EventHandler` のインスタンスが明示的に作成され、メソッド `Button1_Click` への参照が引数として渡されます。 2 番目の行は、より便利な方法で同じことを実行します。
 
 [!code-vb[VbVbalrDelegates#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#6)]
 
@@ -64,7 +64,7 @@ Although you can create your own delegates, in most cases Visual Basic creates t
 
 ## <a name="related-topics"></a>関連トピック
 
-|Title|説明|
+|タイトル|説明|
 |-----------|-----------------|
 |[方法: デリゲート メソッドを呼び出す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|メソッドをデリゲートに関連付け、デリゲートからそのメソッドを呼び出す方法の例を示します。|
 |方法 : [Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|デリゲートを使用してプロシージャを別のプロシージャに渡す方法を示します。|

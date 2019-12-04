@@ -19,25 +19,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341375"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>パラメーターと引数の違い (Visual Basic)
-In most cases, a procedure must have some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
+ほとんどの場合、プロシージャには、呼び出された状況に関する情報が含まれている必要があります。 繰り返しまたは共有タスクを実行するプロシージャは、呼び出しごとに異なる情報を使用します。 この情報は、呼び出し時にプロシージャに渡す変数、定数、および式で構成されます。  
   
- To communicate this information to the procedure, the procedure defines a *parameter*, and the calling code passes an *argument* to that parameter. You can think of the parameter as a parking space and the argument as an automobile. Just as different automobiles can park in a parking space at different times, the calling code can pass a different argument to the same parameter every time that it calls the procedure.  
+ プロシージャにこの情報を伝えるために、プロシージャは*パラメーター*を定義し、呼び出し元のコードはそのパラメーターに*引数*を渡します。 パラメーターは、駐車スペースおよび自動車としての引数と考えることができます。 さまざまな自動車が駐車スペースで異なるタイミングでパークできるのと同様に、呼び出し元のコードは、プロシージャを呼び出すたびに、同じパラメーターに別の引数を渡すことができます。  
   
 ## <a name="parameters"></a>パラメーター  
- A *parameter* represents a value that the procedure expects you to pass when you call it. The procedure's declaration defines its parameters.  
+ *パラメーター*は、プロシージャが呼び出し時に渡すことを予期している値を表します。 プロシージャの宣言では、パラメーターを定義します。  
   
- When you define a `Function` or `Sub` procedure, you specify a *parameter list* in parentheses immediately following the procedure name. For each parameter, you specify a name, a data type, and a passing mechanism ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). You can also indicate that a parameter is optional. This means that the calling code does not have to pass a value for it.  
+ `Function` または `Sub` プロシージャを定義する場合は、プロシージャ名の直後にかっこで囲まれた*パラメーターリスト*を指定します。 各パラメーターには、名前、データ型、および渡す機構 ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)または[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)) を指定します。 また、パラメーターが省略可能であることを示すこともできます。 これは、呼び出し元のコードが値を渡す必要がないことを意味します。  
   
- The name of each parameter serves as a *local variable* in the procedure. You use the parameter name the same way you use any other variable.  
+ 各パラメーターの名前は、プロシージャの*ローカル変数*として機能します。 パラメーター名は、他の変数を使用する場合と同じ方法で使用します。  
   
 ## <a name="arguments"></a>引数  
- An *argument* represents the value that you pass to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure.  
+ *引数*は、プロシージャを呼び出すときにプロシージャパラメーターに渡す値を表します。 呼び出し元のコードは、プロシージャを呼び出すときに引数を指定します。  
   
- When you call a `Function` or `Sub` procedure, you include an *argument list* in parentheses immediately following the procedure name. Each argument corresponds to the parameter in the same position in the list.  
+ `Function` または `Sub` プロシージャを呼び出すときには、プロシージャ名の直後に*引数リスト*をかっこで囲んで指定します。 各引数は、リスト内の同じ位置にあるパラメーターに対応します。  
   
- In contrast to parameter definition, arguments do not have names. Each argument is an expression, which can contain zero or more variables, constants, and literals. The data type of the evaluated expression should typically match the data type defined for the corresponding parameter, and in any case it must be convertible to the parameter type.  
+ パラメーターの定義とは異なり、引数には名前がありません。 各引数は式であり、0個以上の変数、定数、およびリテラルを含むことができます。 評価された式のデータ型は、通常、対応するパラメーターに対して定義されているデータ型と一致し、任意の場合はパラメーターの型に変換可能である必要があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)

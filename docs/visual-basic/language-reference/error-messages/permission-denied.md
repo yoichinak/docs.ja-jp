@@ -12,16 +12,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347002"
 ---
 # <a name="permission-denied-visual-basic"></a>アクセス許可は拒否されました。(Visual Basic)
-An attempt was made to write to a write-protected disk or to access a locked file.  
+書き込み禁止ディスクに書き込もうとしたか、ロックされたファイルにアクセスしようとしました。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1. To open a write-protected file, change the write-protection attribute of the file.  
+1. 書き込み禁止ファイルを開くには、ファイルの書き込み保護属性を変更します。  
   
-2. Make sure that another process has not locked the file, and wait to open the file until the other process releases it.  
+2. 別のプロセスによってファイルがロックされていないことを確認し、他のプロセスによってファイルが解放されるまで待機します。  
   
-3. To access the registry, check that your user permissions include this type of registry access.  
+3. レジストリにアクセスするには、ユーザーのアクセス許可にこの種類のレジストリアクセスが含まれていることを確認します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)

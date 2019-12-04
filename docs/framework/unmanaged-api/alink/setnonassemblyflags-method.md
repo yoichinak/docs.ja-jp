@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445554"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags メソッド
-Sets flags that are not assembly-specific.  
+アセンブリ固有ではないフラグを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,13 +34,13 @@ HRESULT SetNonAssemblyFlags(
   
 ## <a name="parameters"></a>パラメーター  
  `afFlags`  
- ALink flags.  
+ ALink フラグ。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 

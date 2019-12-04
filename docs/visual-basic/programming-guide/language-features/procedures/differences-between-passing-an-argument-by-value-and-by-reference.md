@@ -16,30 +16,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341230"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>引数の値渡しと参照渡しの違い (Visual Basic)
-When you pass one or more arguments to a procedure, each argument corresponds to an underlying programming element in the calling code. You can pass either the value of this underlying element, or a reference to it. This is known as the *passing mechanism*.  
+プロシージャに1つ以上の引数を渡すと、各引数は、呼び出し元のコード内の基になるプログラミング要素に対応します。 この基になる要素の値、またはこの要素への参照を渡すことができます。 これは、*引き渡しメカニズム*と呼ばれます。  
   
 ## <a name="passing-by-value"></a>値渡し  
- You pass an argument *by value* by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic copies the value of the underlying programming element into a local variable in the procedure. The procedure code does not have any access to the underlying element in the calling code.  
+ 引数を*値で*渡すには、プロシージャ定義の対応するパラメーターに[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)キーワードを指定します。 この引き渡し機構を使用すると、Visual Basic は、基になるプログラミング要素の値をプロシージャのローカル変数にコピーします。 プロシージャコードには、呼び出し元のコード内の基になる要素へのアクセス権がありません。  
   
-## <a name="passing-by-reference"></a>Passing by Reference  
- You pass an argument *by reference* by specifying the [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic gives the procedure a direct reference to the underlying programming element in the calling code.  
+## <a name="passing-by-reference"></a>渡す (参照渡しで)  
+ *参照で*引数を渡すには、プロシージャ定義の対応するパラメーターに[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)キーワードを指定します。 この引き渡し機構を使用すると、Visual Basic は、呼び出し元のコード内の基になるプログラミング要素への直接参照をプロシージャに付与します。  
   
-## <a name="passing-mechanism-and-element-type"></a>Passing Mechanism and Element Type  
- The choice of passing mechanism is not the same as the classification of the underlying element type. Passing by value or by reference refers to what Visual Basic supplies to the procedure code. A value type or reference type refers to how a programming element is stored in memory.  
+## <a name="passing-mechanism-and-element-type"></a>渡す (機構と要素の型を)  
+ 渡す機構の選択は、基になる要素型の分類と同じではありません。 値渡しまたは参照渡しでは、プロシージャコードに提供される Visual Basic が参照されます。 値型または参照型は、プログラミング要素がどのようにメモリに格納されるかを示します。  
   
- However, the passing mechanism and element type are interrelated. The value of a reference type is a pointer to the data elsewhere in memory. This means that when you pass a reference type by value, the procedure code has a pointer to the underlying element's data, even though it cannot access the underlying element itself. For example, if the element is an array variable, the procedure code does not have access to the variable itself, but it can access the array members.  
+ ただし、渡すメカニズムと要素の型は相互に関連しています。 参照型の値は、メモリ内の別の場所にあるデータへのポインターです。 これは、参照型を値で渡す場合、基になる要素自体にアクセスできない場合でも、プロシージャコードには基になる要素のデータへのポインターがあることを意味します。 たとえば、要素が配列変数の場合、プロシージャコードは変数自体にアクセスすることはできませんが、配列のメンバーにアクセスすることはできます。  
   
-## <a name="ability-to-modify"></a>Ability to Modify  
- When you pass a nonmodifiable element as an argument, the procedure can never modify it in the calling code, whether it is passed `ByVal` or `ByRef`.  
+## <a name="ability-to-modify"></a>変更する機能  
+ 変更できない要素を引数として渡すと、その要素が `ByVal` または `ByRef`に渡されたかどうかにかかわらず、呼び出し元のコードでプロシージャを変更することはできません。  
   
- For a modifiable element, the following table summarizes the interaction between the element type and the passing mechanism.  
+ 変更可能な要素の場合、次の表は、要素の型と渡す機構の相互作用をまとめたものです。  
   
-|要素型|Passed `ByVal`|Passed `ByRef`|  
+|要素型|渡された `ByVal`|渡された `ByRef`|  
 |------------------|--------------------|--------------------|  
-|Value type (contains only a value)|The procedure cannot change the variable or any of its members.|The procedure can change the variable and its members.|  
-|Reference type (contains a pointer to a class or structure instance)|The procedure cannot change the variable but can change members of the instance to which it points.|The procedure can change the variable and members of the instance to which it points.|  
+|値の型 (値のみを含む)|プロシージャでは、変数またはそのメンバーを変更することはできません。|プロシージャは、変数とそのメンバーを変更できます。|  
+|参照型 (クラスまたは構造体のインスタンスへのポインターを含む)|プロシージャは変数を変更できませんが、参照先のインスタンスのメンバーを変更することはできます。|プロシージャは、参照先のインスタンスの変数とメンバーを変更できます。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)

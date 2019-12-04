@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439755"
 ---
 # <a name="icorprofilercallback2handledestroyed-method"></a>ICorProfilerCallback2::HandleDestroyed メソッド
-Notifies the code profiler that a garbage collection handle has been destroyed.  
+ガベージコレクションハンドルが破棄されたことをコードプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,9 +34,9 @@ HRESULT HandleDestroyed(
   
 ## <a name="parameters"></a>パラメーター  
  `handleId`  
- [in] The ID of the handle for the garbage collection.  
+ からガベージコレクションのハンドルの ID。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

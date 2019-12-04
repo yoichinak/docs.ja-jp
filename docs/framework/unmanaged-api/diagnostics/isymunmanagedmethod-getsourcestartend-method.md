@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448867"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd メソッド
-Gets the start and end document positions for the source of this method. The first array position is the start, and the second array position is the end.  
+このメソッドのソースのドキュメントの開始位置と終了位置を取得します。 最初の配列の位置は start で、2番目の配列の位置は末尾です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,23 +37,23 @@ HRESULT GetSourceStartEnd(
   
 ## <a name="parameters"></a>パラメーター  
  `docs`  
- [in] The starting and ending source documents.  
+ から開始と終了のソースドキュメント。  
   
  `lines`  
- [in] The starting and ending lines in the corresponding source documents.  
+ から対応するソースドキュメントの開始行と終了行。  
   
  `columns`  
- [in] The starting and ending columns in the corresponding source documents.  
+ から対応するソースドキュメント内の開始列と終了列。  
   
  `pRetVal`  
- [out] `true` if positions were defined; otherwise, `false`.  
+ [out] 位置が定義されている場合は `true`。それ以外の場合は、`false`ます。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

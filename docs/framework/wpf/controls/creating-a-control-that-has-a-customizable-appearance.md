@@ -36,9 +36,9 @@ ms.locfileid: "74283574"
 ![NumericUpDown カスタムコントロール。](./media/ndp-numericupdown.png "NDP_NumericUPDown")
 カスタム NumericUpDown コントロール
 
-このトピックには、次のセクションが含まれています。
+このトピックには、次のセクションが含まれます。
 
-- [前提条件](#prerequisites)
+- [必要条件](#prerequisites)
 
 - [部品と状態モデル](#parts_and_states_model)
 
@@ -52,7 +52,7 @@ ms.locfileid: "74283574"
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 このトピックでは、既存のコントロールの新しい <xref:System.Windows.Controls.ControlTemplate> を作成する方法、コントロールコントラクトの要素について理解し、「[コントロールのテンプレートを作成](../../../desktop-wpf/themes/how-to-create-apply-template.md)する」で説明されている概念を理解していることを前提としています。
 
@@ -253,7 +253,7 @@ Parts および states モデルを使用してカスタムコントロールを
 [!code-csharp[VSMCustomControl#ControlLogic](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#controllogic)]
 [!code-vb[VSMCustomControl#ControlLogic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [コントロールのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)
 - [コントロールのカスタマイズ](control-customization.md)

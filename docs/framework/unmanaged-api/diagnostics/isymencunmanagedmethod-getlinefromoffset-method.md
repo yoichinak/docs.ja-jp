@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448639"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset メソッド
-Gets the line information associated with an offset. If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.  
+オフセットに関連付けられている行情報を取得します。 オフセットパラメーター (`dwOffset`) がシーケンスポイントでない場合、このメソッドは、前のオフセットに関連付けられている行情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,29 +39,29 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>パラメーター  
  `dwOffset`  
- [in] A `ULONG32` that contains the offset.  
+ からオフセットを格納している `ULONG32`。  
   
  `pline`  
- [out] A pointer to a `ULONG32` that receives the line.  
+ 入出力行を受け取る `ULONG32` へのポインター。  
   
  `pcolumn`  
- [out] A pointer to a `ULONG32` that receives the column.  
+ 入出力列を受け取る `ULONG32` へのポインター。  
   
  `pendLine`  
- [out] A pointer to a `ULONG32` that receives the end line.  
+ 入出力終了行を受け取る `ULONG32` へのポインター。  
   
  `pendColumn`  
- [out] A pointer to a `ULONG32` that receives the end column.  
+ 入出力終了列を受け取る `ULONG32` へのポインター。  
   
  `pdwStartOffset`  
- [out] A pointer to a `ULONG32` that receives the associated sequence point.  
+ 入出力関連付けられたシーケンスポイントを受け取る `ULONG32` へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymENCUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

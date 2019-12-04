@@ -47,10 +47,10 @@ HRESULT SetILFunctionBody(
 |-------------|-----------------|  
 |S_OK|置換が成功しました。|  
   
-## <a name="remarks"></a>Remarks  
- Unlike the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, the `SetILFunctionBody` method manages the memory required for the new CIL body. This means that the CIL body provided by the profiler does not have to be allocated by using the [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface or allocated within a particular range. この本体は、どのヒープにも割り当てることができます。 The profiler can free the memory used for its CIL body after `SetILFunctionBody` returns.  
+## <a name="remarks"></a>コメント  
+ [ICorProfilerInfo:: SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)メソッドとは異なり、`SetILFunctionBody` メソッドは、新しい CIL 本体に必要なメモリを管理します。 これは、プロファイラーによって提供される CIL 本体を[Imethodmalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)インターフェイスを使用して割り当てたり、特定の範囲内で割り当てたりする必要がないことを意味します。 この本体は、どのヒープにも割り当てることができます。 プロファイラーは `SetILFunctionBody` が返された後に、その CIL 本体に使用されるメモリを解放できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -59,6 +59,6 @@ HRESULT SetILFunctionBody(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerFunctionControl インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)

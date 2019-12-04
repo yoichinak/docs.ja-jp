@@ -16,43 +16,43 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344882"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>方法: プロシージャに対してパラメーターを定義する (Visual Basic)
-A *parameter* allows the calling code to pass a value to the procedure when it calls it. You declare each parameter for a procedure the same way you declare a variable, specifying its name and data type. You also specify the passing mechanism, and whether the parameter is optional.  
+*パラメーター*を使用すると、呼び出し元のコードは、呼び出し時にプロシージャに値を渡すことができます。 プロシージャの各パラメーターは、変数を宣言する場合と同じ方法で宣言し、名前とデータ型を指定します。 また、渡す機構と、パラメーターが省略可能かどうかも指定します。  
   
- For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
+ 詳細については、「[プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)」を参照してください。  
   
-### <a name="to-define-a-procedure-parameter"></a>To define a procedure parameter  
+### <a name="to-define-a-procedure-parameter"></a>プロシージャパラメーターを定義するには  
   
-1. In the procedure declaration, add the parameter name to the procedure's parameter list, separating it from other parameters by commas.  
+1. プロシージャの宣言で、プロシージャのパラメーターリストにパラメーター名を追加し、他のパラメーターとコンマで区切ります。  
   
-2. Decide the data type of the parameter.  
+2. パラメーターのデータ型を決定します。  
   
-3. Follow the parameter name with an `As` clause to specify the data type.  
+3. パラメーター名の後に `As` 句を入力して、データ型を指定します。  
   
-4. Decide the passing mechanism you want for the parameter. Normally you pass a parameter by value, unless you want the procedure to be able to change its value in the calling code.  
+4. パラメーターに渡すメカニズムを決定します。 通常、プロシージャが呼び出し元のコードで値を変更できないようにする場合は、パラメーターを値で渡します。  
   
-5. Precede the parameter name with [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) to specify the passing mechanism. For more information, see [Differences Between Passing an Argument By Value and By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5. パラメーター名の前に、 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)または[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)を渡して、渡すメカニズムを指定します。 詳細については、「[引数を値で渡す方法と参照渡しの違い](./differences-between-passing-an-argument-by-value-and-by-reference.md)」を参照してください。  
   
-6. If the parameter is optional, precede the passing mechanism with [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) and follow the parameter data type with an equal sign (`=`) and a default value.  
+6. パラメーターが省略可能な場合は、渡される機構の前に[オプション](../../../../visual-basic/language-reference/modifiers/optional.md)を指定し、等号 (`=`) と既定値を指定してパラメーターのデータ型に従います。  
   
-     The following example defines the outline of a `Sub` procedure with three parameters. The first two are required and the third is optional. The parameter declarations are separated in the parameter list by commas.  
+     次の例では、3つのパラメーターを持つ `Sub` プロシージャのアウトラインを定義します。 最初の2つは必須で、3番目のオプションは省略可能です。 パラメーターの宣言は、パラメーターリスト内でコンマで区切られます。  
   
      [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
-     The first parameter accepts a `customer` object, and `updateCustomer` can directly update the variable passed to `c` because the argument is passed [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). The procedure cannot change the values of the last two arguments because they are passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
+     最初のパラメーターは `customer` オブジェクトを受け入れます。引数は[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)で渡されるため、`updateCustomer` は `c` に渡された変数を直接更新できます。 プロシージャは[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)で渡されるため、最後の2つの引数の値を変更することはできません。  
   
-     If the calling code does not supply a value for the `level` parameter, Visual Basic sets it to the default value of 0.  
+     呼び出し元のコードが `level` パラメーターの値を指定していない場合は、Visual Basic 既定値の0に設定されます。  
   
-     If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off`, the `As` clause is optional when you define a parameter. However, if any one parameter uses an `As` clause, all of them must use it. If the type checking switch is `On`, the `As` clause is required for every parameter definition.  
+     型チェックスイッチ ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) が `Off`場合、パラメーターを定義するときに、`As` 句は省略可能です。 ただし、1つのパラメーターで `As` 句を使用する場合は、すべてのパラメーターでそれを使用する必要があります。 型チェックスイッチが `On`場合は、すべてのパラメーター定義に対して `As` 句が必要です。  
   
-     Specifying data types for all your programming elements is known as *strong typing*. When you set `Option Strict On`, Visual Basic enforces strong typing. This is strongly recommended, for the following reasons:  
+     すべてのプログラミング要素のデータ型の指定は、*厳密な*型指定と呼ばれます。 `Option Strict On`を設定すると、Visual Basic は厳密な型指定を適用します。 これは、次の理由から強くお勧めします。  
   
-    - It enables IntelliSense support for your variables and parameters. This allows you to see their properties and other members as you type in your code.  
+    - これにより、変数とパラメーターの IntelliSense サポートが有効になります。 これにより、コードを入力するときに、プロパティとその他のメンバーを表示できます。  
   
-    - It allows the compiler to perform type checking. This helps catch statements that can fail at run time due to errors such as overflow. It also catches calls to methods on objects that do not support them.  
+    - これにより、コンパイラは型チェックを実行できます。 これは、オーバーフローなどのエラーによって実行時に失敗する可能性があるステートメントをキャッチするのに役立ちます。 また、サポートされていないオブジェクトのメソッドの呼び出しもキャッチします。  
   
-    - It results in faster execution of your code. One reason for this is that if you do not specify a data type for a programming element, the Visual Basic compiler assigns it the `Object` type. Your compiled code might have to convert back and forth between `Object` and other data types, which reduces performance.  
+    - これにより、コードの実行時間が短縮されます。 その理由の1つは、プログラミング要素のデータ型を指定しない場合、Visual Basic コンパイラによって `Object` 型に割り当てられることです。 コンパイルされたコードは、`Object` とその他のデータ型との間で変換を行う必要があります。これにより、パフォーマンスが低下します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)

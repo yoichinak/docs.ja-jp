@@ -15,17 +15,17 @@ ms.locfileid: "74344118"
 # <a name="mycomputeraudio-object"></a>My.Computer.Audio オブジェクト
 サウンドを再生するためのメソッドを提供します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `My.Computer.Audio` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.Devices.Audio>」をご覧ください。  
   
- For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+ 詳細については、「[サウンドの再生](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)」を参照してください。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **名前空間:** <xref:Microsoft.VisualBasic.Devices>  
   
  **クラス:** <xref:Microsoft.VisualBasic.Devices.Audio>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
 ## <a name="see-also"></a>関連項目
 

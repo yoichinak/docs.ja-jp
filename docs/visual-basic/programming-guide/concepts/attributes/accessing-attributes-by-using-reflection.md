@@ -9,9 +9,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353556"
 ---
-# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Accessing Attributes by Using Reflection (Visual Basic)
+# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>リフレクションを使用した属性へのアクセス (Visual Basic)
 
-カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、「<xref:System.Attribute>」を参照してください。
+カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、「 <xref:System.Attribute>」を参照してください。
 
 次のような属性指定は、
 
@@ -29,7 +29,7 @@ Dim anonymousAuthorObject As Author = New Author("P. Ackerman")
 anonymousAuthorObject.version = 1.1
 ```
 
-ただし、属性について `SampleClass` が照会されるまで、コードは実行されません。 `SampleClass` について `GetCustomAttributes` を呼び出すと、`Author` オブジェクトが作成され、上記のように初期化されます。 クラスに他の属性がある場合は、他の属性オブジェクトも同様に作成されます。 `GetCustomAttributes` はその後、`Author` オブジェクトと配列内の他の属性オブジェクトを返します。 その後、この配列を反復処理し、各配列要素の型に基づいてどの属性が適用されたかを確認して、属性オブジェクトから情報を抽出することができます。
+ただし、属性について `SampleClass` が照会されるまで、コードは実行されません。 `GetCustomAttributes` について `SampleClass` を呼び出すと、`Author` オブジェクトが作成され、上記のように初期化されます。 クラスに他の属性がある場合は、他の属性オブジェクトも同様に作成されます。 `GetCustomAttributes` はその後、`Author` オブジェクトと配列内の他の属性オブジェクトを返します。 その後、この配列を反復処理し、各配列要素の型に基づいてどの属性が適用されたかを確認して、属性オブジェクトから情報を抽出することができます。
 
 ## <a name="example"></a>例
 
@@ -101,7 +101,7 @@ Class TestAuthorAttribute
 End Class
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>

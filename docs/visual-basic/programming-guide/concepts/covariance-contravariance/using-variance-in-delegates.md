@@ -1,5 +1,5 @@
 ---
-title: デリゲートの変性の使用
+title: デリゲートの分散の使用
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
 ms.openlocfilehash: 9c2aad0e4b9408939600938412fe5c3e73b5bf15
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349028"
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a>Using Variance in Delegates (Visual Basic)
+# <a name="using-variance-in-delegates-visual-basic"></a>デリゲートの変性の使用 (Visual Basic)
 
 メソッドをデリゲートに割り当てると、"*共変性*" と "*反変性*" により、デリゲート型をメソッドのシグネチャに柔軟に一致させることができます。 共変性により、メソッドの戻り値の型の派生を、デリゲートに定義されている型よりも強くできます。 また、反変性により、メソッドのパラメーター型の派生をデリゲート型よりも弱くできます。
 
@@ -50,13 +50,13 @@ End Class
 
 この例は、型がデリゲート シグネチャ パラメーター型の基本データ型であるパラメーターを持つメソッドでデリゲートを使用する方法を示しています。 反変性により、複数のハンドラーの代わりに単一のイベント ハンドラーを使用できます。 次の例では、2 つのデリゲートを使用します。
 
-- [Button.KeyDown](xref:System.Windows.Forms.Control.KeyDown) イベントのシグネチャを定義する <xref:System.Windows.Forms.KeyEventHandler> デリゲート。 そのシグネチャ:
+- <xref:System.Windows.Forms.KeyEventHandler>Button.KeyDown[ イベントのシグネチャを定義する ](xref:System.Windows.Forms.Control.KeyDown) デリゲート。 そのシグネチャ:
 
    ```vb
    Public Delegate Sub KeyEventHandler(sender As Object, e As KeyEventArgs)
    ```
 
-- [Button.MouseClick](xref:System.Windows.Forms.Control.MouseDown) イベントのシグネチャを定義する <xref:System.Windows.Forms.MouseEventHandler> デリゲート。 そのシグネチャ:
+- <xref:System.Windows.Forms.MouseEventHandler>Button.MouseClick[ イベントのシグネチャを定義する ](xref:System.Windows.Forms.Control.MouseDown) デリゲート。 そのシグネチャ:
 
    ```vb
    Public Delegate Sub MouseEventHandler(sender As Object, e As MouseEventArgs)
@@ -86,7 +86,7 @@ Private Sub Form1_Load(ByVal sender As System.Object,
 End Sub
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [デリゲートの変性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [デリゲートの分散 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
 - [Func および Action 汎用デリゲートでの分散の使用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

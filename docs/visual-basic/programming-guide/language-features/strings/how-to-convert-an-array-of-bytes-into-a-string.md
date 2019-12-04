@@ -1,5 +1,5 @@
 ---
-title: 'How to: Convert an Array of Bytes into a String'
+title: '方法: バイト配列を文字列に変換する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string conversion [Visual Basic], arrays
@@ -15,31 +15,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351987"
 ---
 # <a name="how-to-convert-an-array-of-bytes-into-a-string-in-visual-basic"></a>方法 : Visual Basic でバイトの配列を文字列に変換する
-This topic shows how to convert the bytes from a byte array into a string.  
+このトピックでは、バイト配列のバイトを文字列に変換する方法について説明します。  
   
 ## <a name="example"></a>例  
- This example uses the <xref:System.Text.Encoding.GetString%2A> method of the <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> encoding class to convert all the bytes from a byte array into a string.  
+ この例では、<xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> encoding クラスの <xref:System.Text.Encoding.GetString%2A> メソッドを使用して、バイト配列のすべてのバイトを文字列に変換します。  
   
  [!code-vb[VbVbalrStrings#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#72)]  
   
- You can choose from several encoding options to convert a byte array into a string:  
+ 複数のエンコードオプションから選択して、バイト配列を文字列に変換することができます。  
   
-- <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType>: Gets an encoding for the ASCII (7-bit) character set.  
+- <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType>: ASCII (7 ビット) 文字セットのエンコーディングを取得します。  
   
-- <xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-16 format using the big-endian byte order.  
+- <xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=nameWithType>: ビッグエンディアンのバイト順を使用する UTF-16 形式のエンコーディングを取得します。  
   
-- <xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>: Gets an encoding for the system's current ANSI code page.  
+- <xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>: システムの現在の ANSI コードページのエンコーディングを取得します。  
   
-- <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-16 format using the little-endian byte order.  
+- <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>: リトルエンディアンのバイト順を使用する UTF-16 形式のエンコーディングを取得します。  
   
-- <xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-32 format using the little-endian byte order.  
+- <xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: リトルエンディアンのバイト順を使用して、32形式のエンコーディングを取得します。  
   
-- <xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-7 format.  
+- <xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType>: UTF-7 形式のエンコーディングを取得します。  
   
-- <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-8 format.  
+- <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: UTF-8 形式のエンコーディングを取得します。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Text.Encoding?displayProperty=nameWithType>
 - <xref:System.Text.Encoding.GetString%2A>
-- [How to: Convert Strings into an Array of Bytes in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-strings-into-an-array-of-bytes.md)
+- [方法: Visual Basic で文字列をバイト配列に変換する](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-strings-into-an-array-of-bytes.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437686"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName メソッド
-Gets the custom attribute, given its name and owner.  
+名前と所有者を指定して、カスタム属性を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,30 +38,30 @@ HRESULT GetCustomAttributeByName (
   
 ## <a name="parameters"></a>パラメーター  
  `tkObj`  
- [in] A metadata token representing the object that owns the custom attribute.  
+ からカスタム属性を所有するオブジェクトを表すメタデータトークン。  
   
  `szName`  
- [in] The name of the custom attribute.  
+ からカスタム属性の名前。  
   
  `ppData`  
- [out] A pointer to an array of data that is the value of the custom attribute.  
+ 入出力カスタム属性の値であるデータの配列へのポインター。  
   
  `pcbData`  
- [out] The size in bytes of the data returned in *`ppData`.  
+ 入出力*`ppData`に返されるデータのサイズ (バイト単位)。  
   
-## <a name="remarks"></a>Remarks  
- It is legal to define multiple custom attributes for the same owner; they may even have the same name. However, `GetCustomAttributeByName` returns only one instance. (`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.  
+## <a name="remarks"></a>コメント  
+ 同じ所有者に対して複数のカスタム属性を定義することは有効です。同じ名前を持つ場合もあります。 ただし、`GetCustomAttributeByName` は1つのインスタンスのみを返します。 (`GetCustomAttributeByName` は、最初に見つかったインスタンスを返します)。カスタム属性のすべてのインスタンスを検索するには、 [IMetaDataImport:: EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md)メソッドを呼び出します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

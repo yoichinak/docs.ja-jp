@@ -260,6 +260,6 @@ using System.Xml;
 XmlAttribute attr = doc.DocumentElement.Attributes[0];
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

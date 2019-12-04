@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434409"
 ---
 # <a name="endmerge-method"></a>EndMerge メソッド
-Indicates that all custom attributes have been merged into the emit scope.  
+すべてのカスタム属性が生成スコープにマージされたことを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +35,15 @@ HRESULT EndMerge(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of the assembly.  
+ アセンブリの ID。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

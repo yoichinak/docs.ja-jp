@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445716"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>ICorProfilerInfo4::InitializeCurrentThread メソッド
-Initializes the current thread in advance of subsequent profiler API calls on the same thread, so that deadlock can be avoided.  
+デッドロックを回避できるように、同じスレッドで、後続のプロファイラー API 呼び出しの前に現在のスレッドを初期化します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,13 +31,13 @@ Initializes the current thread in advance of subsequent profiler API calls on th
 HRESULT InitializeCurrentThread ();  
 ```  
   
-## <a name="remarks"></a>Remarks  
- We recommend that you call `InitializeCurrentThread` on any thread that will call a profiler API while there are suspended threads. This method is typically used by sampling profilers that create their own thread to call the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method to perform stack walks while the target thread is suspended. By calling `InitializeCurrentThread` once when the profiler first creates the sampling thread, profilers can ensure that lazy per-thread initialization that the CLR would otherwise perform during the first call to `DoStackSnapshot` can now occur safely when no other threads are suspended.  
+## <a name="remarks"></a>コメント  
+ 中断されたスレッドがあるときにプロファイラー API を呼び出すスレッドで `InitializeCurrentThread` を呼び出すことをお勧めします。 このメソッドは、通常、 [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)メソッドを呼び出して、ターゲットスレッドが中断されている間にスタックウォークを実行する独自のスレッドを作成する、サンプリングプロファイラーによって使用されます。 プロファイラーでは、最初にサンプリングスレッドを作成するときに `InitializeCurrentThread` を呼び出すことによって、他のスレッドが中断されていないときに、CLR が `DoStackSnapshot` の最初の呼び出し時に実行する遅延時間の遅延を保証できます。  
   
 > [!NOTE]
-> `InitializeCurrentThread` does the initialization in advance to finish tasks that take locks, and may deadlock. Call `InitializeCurrentThread` only when there are no suspended threads.  
+> `InitializeCurrentThread` は、ロックを受け取るタスクを完了するために事前に初期化を行い、デッドロックが発生する可能性があります。 中断されたスレッドが存在しない場合にのみ `InitializeCurrentThread` を呼び出します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -46,7 +46,7 @@ HRESULT InitializeCurrentThread ();
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo4 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
 - [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

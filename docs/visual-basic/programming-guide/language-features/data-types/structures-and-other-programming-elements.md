@@ -16,13 +16,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346120"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>構造体およびその他のプログラミング要素 (Visual Basic)
-You can use structures in conjunction with arrays, objects, and procedures, as well as with each other. The interactions use the same syntax as these elements use individually.  
+構造体は、配列、オブジェクト、およびプロシージャと組み合わせて使用することも、相互に使用することもできます。 相互作用は、これらの要素が個別に使用するのと同じ構文を使用します。  
   
 > [!NOTE]
-> You cannot initialize any of the structure elements in the structure declaration. You can assign values only to elements of a variable that has been declared to be of a structure type.  
+> 構造体の宣言で構造体の要素を初期化することはできません。 値は、構造体型として宣言されている変数の要素にのみ割り当てることができます。  
   
-## <a name="structures-and-arrays"></a>Structures and Arrays  
- A structure can contain an array as one or more of its elements. 次に例を示します。  
+## <a name="structures-and-arrays"></a>構造体と配列  
+ 構造体には、配列を1つ以上の要素として含めることができます。 これを次の例に示します。  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- You access the values of an array within a structure the same way you access a property on an object. 次に例を示します。  
+ 構造体内の配列の値には、オブジェクトのプロパティにアクセスするのと同じ方法でアクセスします。 これを次の例に示します。  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,13 +41,13 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- You can also declare an array of structures. 次に例を示します。  
+ 構造体の配列を宣言することもできます。 これを次の例に示します。  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- You follow the same rules to access the components of this data architecture. 次に例を示します。  
+ このデータアーキテクチャのコンポーネントにアクセスするには、同じ規則に従います。 これを次の例に示します。  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -55,8 +55,8 @@ allSystems(5).CPU = "386SX"
 allSystems(5).diskDrives(2) = "100M SCSI"  
 ```  
   
-## <a name="structures-and-objects"></a>Structures and Objects  
- A structure can contain an object as one or more of its elements. 次に例を示します。  
+## <a name="structures-and-objects"></a>構造体とオブジェクト  
+ 構造体には、オブジェクトを1つ以上の要素として含めることができます。 これを次の例に示します。  
   
 ```vb  
 Protected Structure userInput  
@@ -66,10 +66,10 @@ Protected Structure userInput
 End Structure  
 ```  
   
- You should use a specific object class in such a declaration, rather than `Object`.  
+ `Object`ではなく、このような宣言では特定のオブジェクトクラスを使用する必要があります。  
   
-## <a name="structures-and-procedures"></a>Structures and Procedures  
- You can pass a structure as a procedure argument. 次に例を示します。  
+## <a name="structures-and-procedures"></a>構造体とプロシージャ  
+ プロシージャ引数として構造体を渡すことができます。 これを次の例に示します。  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- The preceding example passes the structure *by reference*, which allows the procedure to modify its elements so that the changes take effect in the calling code. If you want to protect a structure against such modification, pass it by value.  
+ 前の例では、*参照によって*構造体を渡しています。これにより、プロシージャは、呼び出し元のコードで変更が有効になるように要素を変更できます。 このような変更に対して構造体を保護する場合は、値で渡します。  
   
- You can also return a structure from a `Function` procedure. 次に例を示します。  
+ `Function` プロシージャから構造体を返すこともできます。 これを次の例に示します。  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,8 +96,8 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a>Structures Within Structures  
- Structures can contain other structures. 次に例を示します。  
+## <a name="structures-within-structures"></a>構造体内の構造体  
+ 構造体には他の構造体を含めることができます。 これを次の例に示します。  
   
 ```vb  
 Public Structure driveInfo  
@@ -118,11 +118,11 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- You can also use this technique to encapsulate a structure defined in one module within a structure defined in a different module.  
+ また、この方法を使用して、あるモジュールで定義されている構造体を、別のモジュールで定義されている構造体内にカプセル化することもできます。  
   
- Structures can contain other structures to an arbitrary depth.  
+ 構造体には、任意の深さの他の構造体を含めることができます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)

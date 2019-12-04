@@ -22,26 +22,26 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441620"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError インターフェイス
-Provides a callback mechanism for reporting errors during the metadata merge.  
+メタデータのマージ中にエラーを報告するためのコールバックメカニズムを提供します。  
   
 > [!NOTE]
-> The `IMetaDataError` interface must be implemented by the client.  
+> `IMetaDataError` インターフェイスは、クライアントによって実装される必要があります。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[OnError メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Provides notification of errors that occur during the metadata merge.|  
+|[OnError メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|メタデータのマージ中に発生したエラーの通知を提供します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

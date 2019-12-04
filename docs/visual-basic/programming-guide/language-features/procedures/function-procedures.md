@@ -17,16 +17,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341087"
 ---
 # <a name="function-procedures-visual-basic"></a>Function プロシージャ (Visual Basic)
-A `Function` procedure is a series of Visual Basic statements enclosed by the `Function` and `End Function` statements. The `Function` procedure performs a task and then returns control to the calling code. When it returns control, it also returns a value to the calling code.  
+`Function` プロシージャは、`Function` および `End Function` ステートメントで囲まれた一連の Visual Basic ステートメントです。 `Function` プロシージャはタスクを実行し、呼び出し元のコードに制御を戻します。 コントロールが返されると、呼び出し元のコードにも値が返されます。  
   
- Each time the procedure is called, its statements run, starting with the first executable statement after the `Function` statement and ending with the first `End Function`, `Exit Function`, or `Return` statement encountered.  
+ プロシージャが呼び出されるたびに、ステートメントが実行され、`Function` ステートメントの後の最初の実行可能ステートメントから開始し、最初の `End Function`、`Exit Function`、または `Return` ステートメントで終了します。  
   
- You can define a `Function` procedure in a module, class, or structure. It is `Public` by default, which means you can call it from anywhere in your application that has access to the module, class, or structure in which you defined it.  
+ モジュール、クラス、または構造体で `Function` プロシージャを定義できます。 既定では `Public` されています。これは、アプリケーション内の任意の場所から、これを定義したモジュール、クラス、または構造体にアクセスできることを意味します。  
   
- A `Function` procedure can take arguments, such as constants, variables, or expressions, which are passed to it by the calling code.  
+ `Function` プロシージャは、呼び出し元のコードによって渡される定数、変数、式などの引数を受け取ることができます。  
   
 ## <a name="declaration-syntax"></a>宣言の構文  
- The syntax for declaring a `Function` procedure is as follows:  
+ `Function` プロシージャを宣言する構文は次のとおりです。  
   
 ```vb  
 [Modifiers] Function FunctionName [(ParameterList)] As ReturnType  
@@ -34,12 +34,12 @@ A `Function` procedure is a series of Visual Basic statements enclosed by the `F
 End Function  
 ```  
   
- The *modifiers* can specify access level and information regarding overloading, overriding, sharing, and shadowing. For more information, see [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
+ *修飾子*では、アクセスレベルと、オーバーロード、オーバーライド、共有、およびシャドウに関する情報を指定できます。 詳細については、「 [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)」を参照してください。  
   
- You declare each parameter the same way you do for [Sub Procedures](./sub-procedures.md).  
+ 各パラメーターは、[サブプロシージャ](./sub-procedures.md)に対して実行するのと同じ方法で宣言します。  
   
-### <a name="data-type"></a>データの種類  
- Every `Function` procedure has a data type, just as every variable does. This data type is specified by the `As` clause in the `Function` statement, and it determines the data type of the value the function returns to the calling code. The following sample declarations illustrate this.  
+### <a name="data-type"></a>データ型  
+ すべての `Function` プロシージャには、すべての変数と同様にデータ型があります。 このデータ型は、`Function` ステートメントの `As` 句によって指定され、関数が呼び出し元のコードに返す値のデータ型を決定します。 この例を次の宣言に示します。  
   
 ```vb  
 Function yesterday() As Date  
@@ -49,12 +49,12 @@ Function findSqrt(ByVal radicand As Single) As Single
 End Function  
 ```  
   
- For more information, see "Parts" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
+ 詳細については、「 [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)」の「Parts」を参照してください。  
   
-## <a name="returning-values"></a>Returning Values  
- The value a `Function` procedure sends back to the calling code is called its return value. The procedure returns this value in one of two ways:  
+## <a name="returning-values"></a>戻り値  
+ `Function` プロシージャから呼び出し元のコードに返される値は、戻り値と呼ばれます。 このプロシージャは、次の2つの方法のいずれかでこの値を返します。  
   
-- It uses the `Return` statement to specify the return value, and returns control immediately to the calling program. 次に例を示します。  
+- `Return` ステートメントを使用して戻り値を指定し、呼び出し元のプログラムに制御を直ちに返します。 これを次の例に示します。  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
-- It assigns a value to its own function name in one or more statements of the procedure. Control does not return to the calling program until an `Exit Function` or `End Function` statement is executed. 次に例を示します。  
+- このメソッドは、プロシージャの1つ以上のステートメントで、独自の関数名に値を割り当てます。 `Exit Function` または `End Function` ステートメントが実行されるまで、コントロールは呼び出し元のプログラムに戻りません。 これを次の例に示します。  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -74,31 +74,31 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
- The advantage of assigning the return value to the function name is that control does not return from the procedure until it encounters an `Exit Function` or `End Function` statement. This allows you to assign a preliminary value and adjust it later if necessary.  
+ 関数名に戻り値を代入する利点は、コントロールが、`Exit Function` または `End Function` ステートメントを検出するまでプロシージャから戻らないことです。 これにより、必要に応じて暫定値を割り当て、後で調整することができます。  
   
- For more information about returning values, see [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md). For information about returning arrays, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ 値を返す方法の詳細については、「 [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)」を参照してください。 配列を返す方法については、「[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)」を参照してください。  
   
-## <a name="calling-syntax"></a>Calling Syntax  
- You invoke a `Function` procedure by including its name and arguments either on the right side of an assignment statement or in an expression. You must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses.  
+## <a name="calling-syntax"></a>呼び出し構文  
+ `Function` プロシージャを呼び出すには、代入ステートメントの右側または式に名前と引数を含めます。 省略可能なすべての引数の値を指定する必要があり、引数リストをかっこで囲む必要があります。 引数を指定しない場合は、必要に応じてかっこを省略できます。  
   
- The syntax for a call to a `Function` procedure is as follows:  
+ `Function` プロシージャの呼び出しの構文は次のとおりです。  
   
- *lvalue*  `=`  *functionname* `[(` *argumentlist* `)]`  
+ *左辺*値`=`*functionname* `[(` *argumentlist* `)]`  
   
- `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=`  *expression* `) Then`  
+ `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=`*式*`) Then`  
   
- When you call a `Function` procedure, you do not have to use its return value. If you do not, all the actions of the function are performed, but the return value is ignored. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> is often called in this manner.  
+ `Function` プロシージャを呼び出す場合、その戻り値を使用する必要はありません。 そうしないと、関数のすべてのアクションが実行されますが、戻り値は無視されます。 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> は、多くの場合、この方法で呼び出されます。  
   
-### <a name="illustration-of-declaration-and-call"></a>Illustration of Declaration and Call  
- The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
+### <a name="illustration-of-declaration-and-call"></a>宣言と呼び出しの図  
+ 次の `Function` プロシージャは、他の2つの辺の値を指定して、直角三角形の最長の辺 (斜辺) を計算します。  
   
  [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
- The following example shows a typical call to `hypotenuse`.  
+ 次の例は、`hypotenuse`の一般的な呼び出しを示しています。  
   
  [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)

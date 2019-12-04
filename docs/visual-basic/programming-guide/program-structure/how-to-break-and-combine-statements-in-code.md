@@ -30,36 +30,36 @@ ms.locfileid: "74347434"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>方法: コード内でステートメントを分割および連結する (Visual Basic)
 
-When writing your code, you might at times create lengthy statements that necessitate horizontal scrolling in the Code Editor. Although this doesn't affect the way your code runs, it makes it difficult for you or anyone else to read the code as it appears on the monitor. In such cases, you should consider breaking the single long statement into several lines.
+コードを記述するときに、コードエディターで水平スクロールを必要とする長いステートメントを作成する場合があります。 これはコードの実行方法には影響しませんが、モニターに表示されるコードをユーザーまたは他のユーザーが読み取ることが困難になります。 このような場合は、1つの long ステートメントを複数の行に分割することを検討してください。
 
-## <a name="to-break-a-single-statement-into-multiple-lines"></a>To break a single statement into multiple lines
+## <a name="to-break-a-single-statement-into-multiple-lines"></a>1つのステートメントを複数の行に分割するには
 
-Use the line-continuation character, which is an underscore (`_`), at the point at which you want the line to break. The underscore must be immediately preceded by a space and immediately followed by a line terminator (carriage return) or (starting with version 16.0) a comment followed by a carriage return.
+行連結文字を使用します。これは、改行する位置で、アンダースコア (`_`) となります。 アンダースコアは、直後にスペースを付け、その直後に行終端記号 (キャリッジリターン) を付けるか、または (バージョン16.0 以降) コメントの後に復帰を続けます。
 
   > [!NOTE]
-  > In some cases, if you omit the line-continuation character, the Visual Basic compiler will implicitly continue the statement on the next line of code. For a list of syntax elements for which you can omit the line-continuation character, see "Implicit Line Continuation" in [Statements](../../../visual-basic/programming-guide/language-features/statements.md).
+  > 場合によっては、行連結文字を省略すると、Visual Basic コンパイラは、次のコード行でステートメントを暗黙的に続行します。 行連結文字を省略できる構文要素の一覧については、「[ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)」の「暗黙的な行の連結」を参照してください。
 
-  In the following example, the statement is broken into four lines with line-continuation characters terminating all but the last line.
+  次の例では、ステートメントは、行連結文字が最後の行以外のすべてを終了する4行に分割されます。
 
   [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]
 
-  Using this sequence makes your code easier to read, both online and when printed.
+  このシーケンスを使用すると、コードがオンラインでも印刷時でも読みやすくなります。
 
-  The line-continuation character must be the last character on a line. You can't follow it with anything else on the same line.
+  行連結文字は、行の最後の文字である必要があります。 同じ行の他の何にも従うことはできません。
 
-  Some limitations exist as to where you can use the line-continuation character; for example, you can't use it in the middle of an argument name. You can break an argument list with the line-continuation character, but the individual names of the arguments must remain intact.
+  行連結文字を使用できる場所については、いくつかの制限があります。たとえば、引数名の途中で使用することはできません。 行連結文字を使用して引数リストを分割することはできますが、引数の個々の名前はそのままにしておく必要があります。
 
-  You can't continue a comment by using a line-continuation character. The compiler doesn't examine the characters in a comment for special meaning. For a multiple-line comment, repeat the comment symbol (`'`) on each line.
+  行連結文字を使用してコメントを続行することはできません。 コンパイラは、コメント内の文字が特別な意味を持つかどうかを確認しません。 複数行のコメントの場合は、各行にコメント記号 (`'`) を繰り返します。
 
- Although placing each statement on a separate line is the recommended method, Visual Basic also allows you to place multiple statements on the same line.
+ 各ステートメントを別々の行に配置することをお勧めしますが、Visual Basic 複数のステートメントを同じ行に配置することもできます。
 
-## <a name="to-place-multiple-statements-on-the-same-line"></a>To place multiple statements on the same line
+## <a name="to-place-multiple-statements-on-the-same-line"></a>複数のステートメントを同じ行に配置するには
 
-Separate the statements with a colon (`:`), as in the following example:
+次の例のように、ステートメントをコロン (`:`) で区切ります。
 
   [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)

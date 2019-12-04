@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446548"
 ---
 # <a name="createalink-function"></a>CreateALink 関数
-Creates an instance of the Assembly Linker and sets a pointer to the specified interface.  
+アセンブリリンカーのインスタンスを作成し、指定したインターフェイスへのポインターを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,12 +38,12 @@ HRESULT CreateALink (
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|`riid`|The physical name of one of the Assembly Linker interfaces.|  
-|`ppInterface`|The location that on successful completion contains a pointer to the `riid` interface.|  
+|`riid`|アセンブリリンカーインターフェイスの1つの物理名。|  
+|`ppInterface`|正常に完了した場所には、`riid` インターフェイスへのポインターが含まれています。|  
   
-## <a name="requirements"></a>［要件］  
- **Library**: alink.dll  
+## <a name="requirements"></a>要件  
+ **ライブラリ**: alink  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Al.exe (アセンブリ リンカー)](../../tools/al-exe-assembly-linker.md)

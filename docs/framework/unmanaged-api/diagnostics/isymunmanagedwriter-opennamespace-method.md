@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427910"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>ISymUnmanagedWriter::OpenNamespace メソッド
-新しい名前空間を開きます。 Call this method before defining methods or variables that occupy a namespace. Namespaces can be nested.  
+新しい名前空間を開きます。 名前空間を占有するメソッドまたは変数を定義する前に、このメソッドを呼び出します。 名前空間は入れ子にすることができます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,15 +34,15 @@ HRESULT OpenNamespace(
   
 ## <a name="parameters"></a>パラメーター  
  `name`  
- [in] A pointer to the name of the new namespace.  
+ から新しい名前空間の名前へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [CloseNamespace メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)

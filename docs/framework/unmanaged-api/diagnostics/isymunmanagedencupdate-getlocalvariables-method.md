@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449034"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables メソッド
-Gets the local variables.  
+ローカル変数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,23 +38,23 @@ HRESULT GetLocalVariables(
   
 ## <a name="parameters"></a>パラメーター  
  `mdMethodToken`  
- [in] The metadata token of the method.  
+ からメソッドのメタデータトークン。  
   
  `cLocals`  
- [in] A `ULONG` that indicates the size of the `rgLocals` parameter.  
+ から`rgLocals` パラメーターのサイズを示す `ULONG`。  
   
  `rgLocals`  
- [out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.  
+ 入出力返される[ISymUnmanagedVariable](isymunmanagedvariable-interface.md)インスタンスの配列。  
   
  `pceltFetched`  
- [out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.  
+ 入出力ローカルを格納するために必要な `rgLocals` バッファーのサイズを受け取る `ULONG` へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedENCUpdate インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

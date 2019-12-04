@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350202"
 ---
 # <a name="-operator-visual-basic"></a>= 演算子 (Visual Basic)
-Assigns a value to a variable or property.  
+変数またはプロパティに値を割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,33 +26,33 @@ variableorproperty = value
   
 ## <a name="parts"></a>指定項目  
  `variableorproperty`  
- Any writable variable or any property.  
+ 任意の書き込み可能な変数または任意のプロパティ。  
   
  `value`  
- Any literal, constant, or expression.  
+ 任意のリテラル、定数、または式。  
   
-## <a name="remarks"></a>Remarks  
- The element on the left side of the equal sign (`=`) can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). The `=` operator assigns the value on its right to the variable or property on its left.  
+## <a name="remarks"></a>コメント  
+ 等号 (`=`) の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)にすることはできません。 `=` 演算子は、右辺の値を左側の変数またはプロパティに代入します。  
   
 > [!NOTE]
-> The `=` operator is also used as a comparison operator. For details, see [Comparison Operators](../../../visual-basic/language-reference/operators/comparison-operators.md).  
+> `=` 演算子は、比較演算子としても使用されます。 詳細については、「[比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)」を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
- The `=` operator can be overloaded only as a relational comparison operator, not as an assignment operator. 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `=` 演算子は、代入演算子としてではなく、関係比較演算子としてのみオーバーロードできます。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- The following example demonstrates the assignment operator. The value on the right is assigned to the variable on the left.  
+ 次の例は、代入演算子を示しています。 右側の値は、左側の変数に割り当てられます。  
   
  [!code-vb[VbVbalrOperators#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [& = 演算子](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
 - [*= 演算子](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
 - [+= 演算子](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
-- [-= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [-= 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [/= 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [\\= 演算子](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [^= 演算子](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
 - [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)
 - [比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)

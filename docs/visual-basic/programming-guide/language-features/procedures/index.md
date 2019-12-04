@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345994"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic におけるプロシージャ
-A *procedure* is a block of Visual Basic statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration. All executable statements in Visual Basic must be within some procedure.  
+*プロシージャ*は、宣言ステートメント (`Function`、`Sub`、`Operator`、`Get`、`Set`)、および一致する `End` 宣言で囲まれた Visual Basic ステートメントのブロックです。 Visual Basic 内のすべての実行可能なステートメントは、何らかのプロシージャ内になければなりません。  
   
 ## <a name="calling-a-procedure"></a>プロシージャの呼び出し  
  コード内の他の場所からプロシージャを呼び出します。 これは、*プロシージャ コール*と呼ばれています。 プロシージャの実行が終了すると、それを呼び出したコード (*呼び出しコード*と呼ばれます) に制御が戻ります。 呼び出しコードは、名前でプロシージャを指定して、これに制御を転送するステートメント、またはステートメント内の式です。  
@@ -34,7 +34,7 @@ A *procedure* is a block of Visual Basic statements enclosed by a declaration st
  プロシージャは、ほとんどの場合、呼び出すたびにデータごとに動作する必要があります。 この情報は、プロシージャ コールの一部としてプロシージャに渡すことができます。 プロシージャは、*パラメーター*を 0 個、またはそれ以上でも定義することができ、それぞれが渡す必要がある値を表しています。 プロシージャ定義の各パラメーターに相当するのが、プロシージャ コールの*引数*です。 引数は、指定したプロシージャ コールの対応するパラメーターに渡される値を表しています。  
   
 ## <a name="types-of-procedures"></a>プロシージャの種類  
- Visual Basic uses several types of procedures:  
+ Visual Basic は、次のようないくつかの種類のプロシージャを使用します。  
   
 - [Sub プロシージャ](./sub-procedures.md)はアクションを実行しますが、呼び出しコードに値を返しません。  
   
@@ -61,7 +61,7 @@ A *procedure* is a block of Visual Basic statements enclosed by a declaration st
   
 - 1 つのプログラムで使用するために開発したプロシージャを、他のプログラムでも使用できます。多くの場合、プログラムをほとんどまたはまったく変更せずに使用できます。 これにより、コードの重複を避けることができます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [方法 : プロシージャを作成する](./how-to-create-a-procedure.md)
 - [Sub プロシージャ](./sub-procedures.md)

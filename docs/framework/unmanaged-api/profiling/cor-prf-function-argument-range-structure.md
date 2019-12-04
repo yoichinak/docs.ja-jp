@@ -37,18 +37,18 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
 |メンバー|説明|  
 |-------------|-----------------|  
-|`startAddress`|The starting address of the block.|  
-|`length`|The length of the contiguous block.|  
+|`startAddress`|ブロックの開始アドレス。|  
+|`length`|連続するブロックの長さ。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorProf.idl  
+ **ヘッダー:** Corprof.idl  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [構造体のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

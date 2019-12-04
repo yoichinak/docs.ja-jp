@@ -18,7 +18,7 @@ ms.locfileid: "74353095"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>方法 : XML 要素および XML 属性名を修飾する
 
-XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
+<xref:System.Xml.Serialization.XmlSerializerNamespaces> クラスのインスタンスに含まれる XML 名前空間は、 [xml の名前空間](https://www.w3.org/TR/REC-xml-names/)と呼ばれる WORLD WIDE WEB コンソーシアム (W3C) の仕様に準拠している必要があります。
 
 XML 名前空間を使用すると、XML ドキュメント内の XML 要素および XML 属性の名前を修飾できます。 修飾名は、プレフィックスとローカル名がコロンで区切られた構成になっています。 プレフィックスはプレースホルダーとしてのみ機能し、名前空間を指定する URI に割り当てられます。 汎用的に管理される URI 名前空間とローカル名を組み合わせることにより、生成される名前は、必ず汎用的に一意になります。
 
@@ -170,12 +170,12 @@ public class Book
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML スキーマ定義ツールと XML シリアル化](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML シリアル化の概要](introducing-xml-serialization.md)
-- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
+- [XmlSerializer クラス](xref:System.Xml.Serialization.XmlSerializer)
 - [XML シリアル化を制御する属性](attributes-that-control-xml-serialization.md)
 - [方法 : XML ストリームの代替要素名を指定する](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [方法 : オブジェクトをシリアル化する](how-to-serialize-an-object.md)

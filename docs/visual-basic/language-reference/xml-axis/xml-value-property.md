@@ -18,7 +18,7 @@ ms.locfileid: "74349418"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Value プロパティ (Visual Basic)
 
-Provides access to the value of the first element of a collection of <xref:System.Xml.Linq.XElement> objects.
+<xref:System.Xml.Linq.XElement> オブジェクトのコレクションの最初の要素の値へのアクセスを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,32 +28,32 @@ object.Value
 
 ## <a name="parts"></a>指定項目
 
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`object`|必須です。 <xref:System.Xml.Linq.XElement> オブジェクトのコレクション。|  
+|`object`|必須。 <xref:System.Xml.Linq.XElement> オブジェクトのコレクション。|  
 
 ## <a name="return-value"></a>戻り値
 
- A `String` that contains the value of the first element of the collection, or `Nothing` if the collection is empty.
+ コレクションの最初の要素の値を格納している `String`。コレクションが空の場合は `Nothing`。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
- The <xref:System.Xml.Linq.XElement.Value%2A> property makes it easy to access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> objects. This property first checks whether the collection contains at least one object. If the collection is empty, this property returns `Nothing`. Otherwise, this property returns the value of the <xref:System.Xml.Linq.XElement.Value%2A> property of the first element in the collection.
+ <xref:System.Xml.Linq.XElement.Value%2A> プロパティを使用すると、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション内の最初の要素の値に簡単にアクセスできます。 このプロパティは、まず、コレクションに少なくとも1つのオブジェクトが含まれているかどうかを確認します。 コレクションが空の場合、このプロパティは `Nothing`を返します。 それ以外の場合、このプロパティは、コレクション内の最初の要素の <xref:System.Xml.Linq.XElement.Value%2A> プロパティの値を返します。
 
 > [!NOTE]
-> When you access the value of an XML attribute using the '\@' identifier, the attribute value is returned as a `String` and you do not need to explicitly specify the <xref:System.Xml.Linq.XAttribute.Value%2A> property.
+> '\@' 識別子を使用して XML 属性の値にアクセスすると、属性値が `String` として返されるため、<xref:System.Xml.Linq.XAttribute.Value%2A> プロパティを明示的に指定する必要はありません。
 
- To access other elements in a collection, you can use the XML extension indexer property. For more information, see [Extension Indexer Property](extension-indexer-property.md).
+ コレクション内の他の要素にアクセスするには、XML 拡張インデクサープロパティを使用できます。 詳細については、「[拡張インデクサープロパティ](extension-indexer-property.md)」を参照してください。
 
 ## <a name="inheritance"></a>継承
 
- Most users will not have to implement <xref:System.Collections.Generic.IEnumerable%601>, and can therefore ignore this section.
+ ほとんどのユーザーは <xref:System.Collections.Generic.IEnumerable%601>を実装する必要がないため、このセクションを無視できます。
 
- The <xref:System.Xml.Linq.XElement.Value%2A> property is an extension property for types that implement `IEnumerable(Of XElement)`. The binding of this extension property is like the binding of extension methods: if a type implements one of the interfaces and defines a property that has the name "Value", that property has precedence over the extension property. In other words, this <xref:System.Xml.Linq.XElement.Value%2A> property can be overridden by defining a new property in a class that implements `IEnumerable(Of XElement)`.
+ <xref:System.Xml.Linq.XElement.Value%2A> プロパティは、`IEnumerable(Of XElement)`を実装する型の拡張プロパティです。 この拡張プロパティのバインディングは、拡張メソッドのバインディングに似ています。型がインターフェイスの1つを実装し、"Value" という名前のプロパティを定義する場合、そのプロパティは拡張プロパティよりも優先されます。 言い換えると、`IEnumerable(Of XElement)`を実装するクラスで新しいプロパティを定義することで、この <xref:System.Xml.Linq.XElement.Value%2A> プロパティをオーバーライドできます。
 
 ## <a name="example"></a>例
 
- The following example shows how to use the <xref:System.Xml.Linq.XElement.Value%2A> property to access the first node in a collection of <xref:System.Xml.Linq.XElement> objects. The example uses the child axis property to get the collection of all child nodes named `phone` that are in the `contact` object.
+ 次の例では、<xref:System.Xml.Linq.XElement.Value%2A> プロパティを使用して、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション内の最初のノードにアクセスする方法を示します。 この例では、子軸プロパティを使用して、`contact` オブジェクト内にある `phone` という名前のすべての子ノードのコレクションを取得します。
 
  [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]
 
@@ -63,7 +63,7 @@ object.Value
 
 ## <a name="example"></a>例
 
- The following example shows how to get the value of an XML attribute from a collection of <xref:System.Xml.Linq.XAttribute> objects. The example uses the attribute axis property to display the value of the `type` attribute for all of the `phone` elements.
+ 次の例は、<xref:System.Xml.Linq.XAttribute> オブジェクトのコレクションから XML 属性の値を取得する方法を示しています。 この例では、属性軸プロパティを使用して、すべての `phone` 要素の `type` 属性の値を表示します。
 
  [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]
 
@@ -74,7 +74,7 @@ object.Value
  work
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Linq.XElement>
 - <xref:System.Collections.Generic.IEnumerable%601>

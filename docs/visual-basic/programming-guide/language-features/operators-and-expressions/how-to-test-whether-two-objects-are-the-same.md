@@ -17,18 +17,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343618"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>方法: 2 つのオブジェクトが等しいかどうかをテストする (Visual Basic)
-If you have two variables that refer to objects, you can use either the `Is` or `IsNot` operator, or both, to determine whether they refer to the same instance.  
+オブジェクトを参照する変数が2つある場合は、`Is` または `IsNot` のいずれかの演算子、またはその両方を使用して、同じインスタンスを参照しているかどうかを判断できます。  
   
-### <a name="to-test-whether-two-objects-are-the-same"></a>To test whether two objects are the same  
+### <a name="to-test-whether-two-objects-are-the-same"></a>2つのオブジェクトが同一かどうかをテストするには  
   
-- Use the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) or the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) with the two variables as operands.  
+- 2つの変数がオペランドとして使用されて[いる場合は、Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)または[IsNot 演算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)を使用します。  
   
      [!code-vb[VbVbalrOperators#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#69)]  
   
- You might want to take a certain action depending on whether two objects refer to the same instance. The preceding example compares control `c` against the active control on form `f`. If there is no active control, or if there is one but it is not the same control instance as `c`, then the `If` statement fails and the procedure returns without further processing.  
+ 2つのオブジェクトが同じインスタンスを参照しているかどうかによって、特定のアクションを実行することができます。 前の例では、コントロールの `c` とフォーム `f`のアクティブコントロールとを比較しています。 アクティブなコントロールがない場合、または存在していても `c`と同じコントロールインスタンスではない場合、`If` ステートメントは失敗し、プロシージャはそれ以上の処理を行わずに戻ります。  
   
- Whether you use `Is` or `IsNot` is a matter of personal convenience to you. One might be easier to read than the other in a given expression.  
+ `Is` と `IsNot` のどちらを使用する場合でも、個人的に便利です。 指定された式では、もう一方の方よりも読みやすくなる場合があります。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic の比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

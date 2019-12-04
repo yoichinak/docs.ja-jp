@@ -13,15 +13,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331489"
 ---
 # <a name="concatenation-operators-visual-basic"></a>連結演算子 (Visual Basic)
-The following are the concatenation operators defined in Visual Basic.  
+Visual Basic で定義されている連結演算子を次に示します。  
   
  [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
   
  [+ 演算子](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Concatenation Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic での連結演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

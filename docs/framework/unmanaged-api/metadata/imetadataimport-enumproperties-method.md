@@ -39,33 +39,33 @@ HRESULT EnumProperties (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
  `td`  
- [in] A TypeDef token representing the type with properties to enumerate.  
+ から列挙するプロパティを持つ型を表す TypeDef トークン。  
   
  `rProperties`  
- [out] The array used to store the PropertyDef tokens.  
+ 入出力PropertyDef トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rProperties` 配列の最大サイズ。  
   
  `pcProperties`  
- [out] The number of PropertyDef tokens returned in `rProperties`.  
+ 入出力`rProperties`で返された PropertyDef トークンの数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumProperties` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcProperties` is zero.|  
+|`S_OK`|`EnumProperties` が正常に返されました。|  
+|`S_FALSE`|列挙するトークンがありません。 この場合、`pcProperties` は0になります。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

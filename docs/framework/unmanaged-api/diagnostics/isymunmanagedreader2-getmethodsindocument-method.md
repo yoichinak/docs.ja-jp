@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446430"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument メソッド
-Gets every method that has line information in the provided document.  
+指定されたドキュメントに行情報が含まれるすべてのメソッドを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,22 +38,22 @@ HRESULT GetMethodsInDocument(
   
 ## <a name="parameters"></a>パラメーター  
  `document`  
- [in] A pointer to the document.  
+ からドキュメントへのポインター。  
   
  `cMethod`  
- [in] A `ULONG32` that indicates the size of the  `pRetVal` array.  
+ から`pRetVal` 配列のサイズを示す `ULONG32`。  
   
  `pcMethod`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.  
+ 入出力メソッドを格納するために必要なバッファーのサイズを受け取る `ULONG32` へのポインター。  
   
  `pRetVal`  
- [out] A pointer to the buffer that receives the methods.  
+ 入出力メソッドを受け取るバッファーへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 

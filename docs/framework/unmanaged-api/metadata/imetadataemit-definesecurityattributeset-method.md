@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428248"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet メソッド
-Creates a set of security permissions to attach to the object referenced by the specified token.  
+指定したトークンによって参照されるオブジェクトにアタッチするセキュリティアクセス許可のセットを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,27 +38,27 @@ HRESULT DefineSecurityAttributeSet (
   
 ## <a name="parameters"></a>パラメーター  
  `tkObj`  
- [in] The token to which the security information is attached.  
+ からセキュリティ情報がアタッチされるトークン。  
   
  `rSecAttrs`  
- [in] An array of `COR_SECATTR` structures.  
+ から`COR_SECATTR` 構造体の配列。  
   
  `cSecAttrs`  
- [in] The number of elements in `rSecAttrs`.  
+ から`rSecAttrs`内の要素の数。  
   
  `pulErrorAttr`  
- [out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.  
+ 入出力メソッドが失敗した場合は、問題の原因となった要素の `rSecAttrs` のインデックスを指定します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

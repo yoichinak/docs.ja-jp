@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445227"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString メソッド
-Gets the version number of the runtime that was used to build the assembly.  
+アセンブリのビルドに使用されたランタイムのバージョン番号を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,27 +37,27 @@ HRESULT GetVersionString (
   
 ## <a name="parameters"></a>パラメーター  
  `pwzBuf`  
- [out] An array to store the string that specifies the version.  
+ 入出力バージョンを指定する文字列を格納する配列。  
   
  `ccBufSize`  
- [in] The size, in wide characters, of the `pwzBuf` array.  
+ から`pwzBuf` 配列のサイズ (ワイド文字単位)。  
   
  `pccBufSize`  
- [out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.  
+ 入出力`pwzBuf` 配列で返されるワイド文字の数 (null 終端記号を含む)。  
   
-## <a name="remarks"></a>Remarks  
- The `GetVersionString` method gets the built-for version of the current metadata scope. If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.  
+## <a name="remarks"></a>コメント  
+ `GetVersionString` メソッドは、現在のメタデータスコープの組み込みバージョンを取得します。 スコープが一度も保存されていない場合は、ビルドされたバージョンがないため、空の文字列が返されます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

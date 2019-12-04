@@ -19,36 +19,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349124"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
-Specifies that one or more declared programming elements are associated with a class or structure at large, and not with a specific instance of the class or structure.  
+1つ以上の宣言されたプログラミング要素が、クラスまたは構造体の特定のインスタンスではなく、大規模なクラスまたは構造体に関連付けられていることを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
-## <a name="when-to-use-shared"></a>When to Use Shared  
- Sharing a member of a class or structure makes it available to every instance, rather than *nonshared*, where each instance keeps its own copy. This is useful, for example, if the value of a variable applies to the entire application. If you declare that variable to be `Shared`, then all instances access the same storage location, and if one instance changes the variable's value, all instances access the updated value.  
+## <a name="when-to-use-shared"></a>共有を使用する場合  
+ クラスまたは構造体のメンバーを共有すると、共有ではなく、すべてのインスタンスで使用できるようになります。この*場合、各*インスタンスは独自のコピーを保持します。 これは、変数の値がアプリケーション全体に適用される場合などに便利です。 この変数を `Shared`するように宣言すると、すべてのインスタンスが同じストレージの場所にアクセスし、1つのインスタンスが変数の値を変更すると、すべてのインスタンスが更新された値にアクセスします。  
   
- Sharing does not alter the access level of a member. For example, a class member can be shared and private (accessible only from within the class), or nonshared and public. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ 共有によってメンバーのアクセスレベルが変更されることはありません。 たとえば、クラスメンバーは、共有およびプライベート (クラス内からのみアクセス可能)、または非共有およびパブリックにすることができます。 詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
 ## <a name="rules"></a>ルール  
   
-- **Declaration Context.** `Shared` は、モジュール レベルでのみ使用できます。 This means the declaration context for a `Shared` element must be a class or structure, and cannot be a source file, namespace, or procedure.  
+- **宣言コンテキスト。** `Shared` は、モジュール レベルでのみ使用できます。 つまり、`Shared` 要素の宣言コンテキストは、クラスまたは構造体である必要があり、ソースファイル、名前空間、またはプロシージャにすることはできません。  
   
-- **Combined Modifiers.** You cannot specify `Shared` together with [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), or [Static](../../../visual-basic/language-reference/modifiers/static.md) in the same declaration.  
+- **結合された修飾子。** 同じ宣言で、[オーバーライド](../../../visual-basic/language-reference/modifiers/overrides.md)、 [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)、 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)、 [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)、または[Static](../../../visual-basic/language-reference/modifiers/static.md)と共に `Shared` を指定することはできません。  
   
-- **Accessing.** You access a shared element by qualifying it with its class or structure name, not with the variable name of a specific instance of its class or structure. You do not even have to create an instance of a class or structure to access its shared members.  
+- **しよう.** 共有要素には、そのクラスまたは構造体の特定のインスタンスの変数名ではなく、そのクラスまたは構造体の名前を修飾することによってアクセスします。 クラスまたは構造体のインスタンスを作成しなくても、その共有メンバーにアクセスすることはできません。  
   
-     The following example calls the shared procedure <xref:System.Double.IsNaN%2A> exposed by the <xref:System.Double> structure.  
+     次の例では、<xref:System.Double> 構造によって公開される <xref:System.Double.IsNaN%2A> 共有プロシージャを呼び出します。  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
-- **Implicit Sharing.** You cannot use the `Shared` modifier in a [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md), but constants are implicitly shared. Similarly, you cannot declare a member of a module or an interface to be `Shared`, but they are implicitly shared.  
+- **暗黙の共有。** [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)では `Shared` 修飾子を使用できませんが、定数は暗黙的に共有されます。 同様に、モジュールまたはインターフェイスのメンバーを `Shared`するように宣言することはできませんが、暗黙的に共有されます。  
   
 ## <a name="behavior"></a>動作  
   
-- **Storage.** A shared variable or event is stored in memory only once, no matter how many or few instances you create of its class or structure. Similarly, a shared procedure or property holds only one set of local variables.  
+- **・.** 共有変数またはイベントは、クラスまたは構造体を作成するインスタンスの数または数に関係なく、メモリに1回だけ格納されます。 同様に、共有プロシージャまたはプロパティは、ローカル変数のセットを1つだけ保持します。  
   
-- **Accessing through an Instance Variable.** It is possible to access a shared element by qualifying it with the name of a variable that contains a specific instance of its class or structure. Although this usually works as expected, the compiler generates a warning message and makes the access through the class or structure name instead of the variable.  
+- **インスタンス変数を使用したへのアクセス。** 共有要素にアクセスするには、そのクラスまたは構造体の特定のインスタンスを含む変数の名前を指定します。 これは通常、想定どおりに動作しますが、コンパイラは警告メッセージを生成し、変数ではなくクラスまたは構造体の名前を使用してアクセスを行います。  
   
-- **Accessing through an Instance Expression.** If you access a shared element through an expression that returns an instance of its class or structure, the compiler makes the access through the class or structure name instead of evaluating the expression. This produces unexpected results if you intended the expression to perform other actions as well as returning the instance. 次に例を示します。  
+- **インスタンス式を使用したへのアクセス。** クラスまたは構造体のインスタンスを返す式を使用して共有要素にアクセスする場合、コンパイラは、式を評価するのではなく、クラスまたは構造体の名前を使用してアクセスを行います。 これにより、他のアクションを実行するための式を作成する場合や、インスタンスを返す場合に、予期しない結果が発生します。 これを次の例に示します。  
   
     ```vb
     Sub main()  
@@ -76,7 +76,7 @@ Specifies that one or more declared programming elements are associated with a c
     End Class  
     ```  
   
-     In the preceding example, the compiler generates a warning message both times the code accesses the shared variable `total` through an instance. In each case it makes the access directly through the class `shareTotal` and does not make use of any instance. In the case of the intended call to the procedure `returnClass`, this means it does not even generate a call to `returnClass`, so the additional action of displaying "Function returnClass() called" is not performed.  
+     前の例では、コードがインスタンスを介して `total` 共有変数にアクセスするときに、コンパイラによって警告メッセージが生成されます。 各ケースでは、クラス `shareTotal` を通じて直接アクセスを行い、インスタンスを使用しません。 このプロシージャ `returnClass`の呼び出しの場合、これは `returnClass`の呼び出しを生成しないことを意味するため、"関数 returnClass ()" を表示する追加のアクションは実行されません。  
   
  `Shared` 修飾子は、次のコンテキストで使用できます。  
   
@@ -86,17 +86,17 @@ Specifies that one or more declared programming elements are associated with a c
   
  [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
  [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
   
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Static](../../../visual-basic/language-reference/modifiers/static.md)
-- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic の有効期間](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

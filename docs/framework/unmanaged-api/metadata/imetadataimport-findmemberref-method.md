@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437959"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef メソッド
-Gets a pointer to the MemberRef token for the member reference that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
+指定した <xref:System.Type> で囲まれ、指定された名前とメタデータシグネチャを持つメンバー参照の MemberRef トークンへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,37 +39,37 @@ HRESULT FindMemberRef (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in] The TypeRef token for the class or interface that encloses the member reference to search for. If this value is `mdTokenNil`, the lookup is done for a global variable or a global-function reference.  
+ から検索対象のメンバー参照を囲むクラスまたはインターフェイスの TypeRef トークン。 この値が `mdTokenNil`場合、グローバル変数またはグローバル関数参照に対して参照が行われます。  
   
  `szName`  
- [in] The name of the member reference to search for.  
+ から検索対象のメンバー参照の名前。  
   
  `pvSigBlob`  
- [in] A pointer to the binary metadata signature of the member reference.  
+ からメンバー参照のバイナリメタデータシグネチャへのポインター。  
   
  `cbSigBlob`  
- [in] The size in bytes of `pvSigBlob`.  
+ から`pvSigBlob`のサイズ (バイト単位)。  
   
  `pmr`  
- [out] A pointer to the matching MemberRef token.  
+ 入出力一致する MemberRef トークンへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
+## <a name="remarks"></a>コメント  
+ メンバーは、外側のクラスまたはインターフェイス (`td`)、その名前 (`szName`)、および必要に応じてシグネチャ (`pvSigBlob`) を使用して指定します。  
   
- The signature passed to `FindMemberRef` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindMemberRef`.  
+ シグネチャは特定のスコープにバインドされているため、`FindMemberRef` に渡される署名は、現在のスコープで生成される必要があります。 署名には、外側のクラスまたは値の型を識別するトークンを埋め込むことができます。 トークンは、ローカルの TypeDef テーブルのインデックスです。 現在のスコープのコンテキスト外でランタイムシグネチャを作成し、その署名を `FindMemberRef`の入力として使用することはできません。  
   
- `FindMemberRef` finds only member references that were defined directly in the class or interface; it does not find inherited member references.  
+ `FindMemberRef` は、クラスまたはインターフェイスで直接定義されたメンバー参照だけを検索します。継承されたメンバー参照は見つかりません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

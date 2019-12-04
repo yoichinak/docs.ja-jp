@@ -25,35 +25,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347494"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>列挙型と名前修飾 (Visual Basic)
-Normally, when referring to a member of an enumeration, you must qualify the member name with the enumeration name. For example, to refer to the `Sunday` member of your `Days` enumeration, you would use the following syntax:  
+通常、列挙体のメンバーを参照する場合は、列挙名でメンバー名を修飾する必要があります。 たとえば、`Days` 列挙体の `Sunday` メンバーを参照するには、次の構文を使用します。  
   
  [!code-vb[VbEnumsTask#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#18)]  
   
-## <a name="using-the-imports-statement"></a>Using the Imports Statement  
- You can avoid using fully qualified names by adding an `Imports` statement to the namespace declarations section of your code, as in the following example:  
+## <a name="using-the-imports-statement"></a>Imports ステートメントの使用  
+ 次の例のように、コードの名前空間宣言セクションに `Imports` ステートメントを追加することで、完全修飾名を使用しないようにすることができます。  
   
  [!code-vb[VbEnumsTask#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#22)]  
   
- An `Imports` statement imports namespace names from referenced projects and assemblies and from within the same project as the module in which the statement appears. Once this statement is added, you can refer to your enumeration members without qualification, as in the following example:  
+ `Imports` ステートメントは、参照されるプロジェクトおよびアセンブリから名前空間名をインポートし、ステートメントが記述されているモジュールと同じプロジェクト内から名前空間名をインポートします。 このステートメントを追加すると、次の例のように、修飾子を使用せずに列挙メンバーを参照できます。  
   
  [!code-vb[VbEnumsTask#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#24)]  
   
- By organizing sets of related constants in enumerations, you can use the same constant names in different contexts. For example, you can use the same names for the weekday constants in the `Days` and `WorkDays` enumerations. If you use the `Imports` statement with your enumerations, you must be careful to avoid ambiguous references. 次に例を示します。  
+ 一連の関連する定数を列挙にまとめることによって、異なるコンテキストで同じ定数名を使用することができます。 たとえば、`Days` と `WorkDays` の列挙体の曜日定数に同じ名前を使用できます。 `Imports` ステートメントを列挙体と共に使用する場合は、あいまいな参照を避けるために注意する必要があります。 次に例を示します。  
   
  [!code-vb[VbEnumsTask#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#22)]  
   
  [!code-vb[VbEnumsTask#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#25)]  
   
- Assuming that `Monday` is a member of both the `Days` enumeration and the `Workdays` enumeration, this code generates a compiler error. To avoid ambiguous references when referring to an individual constant, qualify the constant name with its enumeration. The following code refers to the `Saturday` constants in the `Days` and `WorkDays` enumerations.  
+ `Monday` が `Days` 列挙と `Workdays` 列挙の両方のメンバーであると仮定すると、このコードはコンパイラエラーを生成します。 個々の定数を参照するときにあいまいな参照を回避するには、定数名を列挙体で修飾します。 次のコードは、`Days` と `WorkDays` 列挙体の `Saturday` 定数を参照します。  
   
  [!code-vb[VbEnumsTask#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#32)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [方法: 列挙型を宣言する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [方法 : 列挙型のメンバーを参照する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [方法: Visual Basic 内の列挙体を反復処理する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [方法 : 列挙値に関連付けられている文字列を確認する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [列挙型を使用する状況](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [定数とリテラルのデータ型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)

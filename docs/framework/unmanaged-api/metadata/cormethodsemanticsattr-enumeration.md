@@ -43,20 +43,20 @@ typedef enum CorMethodSemanticsAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`msSetter`|Specifies that the method is a `set` accessor for a property.|  
-|`msGetter`|Specifies that the method is a `get` accessor for a property.|  
-|`msOther`|Specifies that the method has a relationship to a property or an event other than those defined here.|  
-|`msAddOn`|Specifies that the method adds handler methods for an event.|  
-|`msRemoveOn`|Specifies that the method removes handler methods for an event.|  
-|`msFire`|Specifies that the method raises an event.|  
+|`msSetter`|メソッドがプロパティの `set` アクセサーであることを指定します。|  
+|`msGetter`|メソッドがプロパティの `get` アクセサーであることを指定します。|  
+|`msOther`|メソッドが、ここで定義されたプロパティ以外のプロパティまたはイベントへのリレーションシップを持つことを指定します。|  
+|`msAddOn`|メソッドがイベントのハンドラーメソッドを追加することを指定します。|  
+|`msRemoveOn`|メソッドがイベントのハンドラーメソッドを削除することを指定します。|  
+|`msFire`|メソッドがイベントを発生させることを指定します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

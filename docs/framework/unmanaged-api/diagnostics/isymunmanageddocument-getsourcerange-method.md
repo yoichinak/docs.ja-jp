@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449141"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange メソッド
-Returns the specified range of the embedded source into the given buffer. The buffer must be large enough to hold the source.  
+指定されたバッファーに、埋め込みソースの指定された範囲を返します。 バッファーは、ソースを保持するのに十分な大きさである必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,29 +41,29 @@ HRESULT GetSourceRange(
   
 ## <a name="parameters"></a>パラメーター  
  `startLine`  
- [in] The starting line in the current document.  
+ から現在のドキュメントの開始行。  
   
  `startColumn`  
- [in] The starting column in the current document.  
+ から現在のドキュメントの開始列。  
   
  `endLine`  
- [in] The final line in the current document.  
+ から現在のドキュメントの最終行。  
   
  `endColumn`  
- [in] The final column in the current document.  
+ から現在のドキュメントの最後の列。  
   
  `cSourceBytes`  
- [in] The size of the source, in bytes.  
+ [in] \(バイト単位)、ソースのサイズ。  
   
  `pcSourceBytes`  
- [out] A pointer to a variable that receives the source size.  
+ 入出力ソースサイズを受け取る変数へのポインター。  
   
  `source`  
- [out] The size and length of the specified range of the source document, in bytes.  
+ 入出力ソースドキュメントの指定した範囲のサイズと長さ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

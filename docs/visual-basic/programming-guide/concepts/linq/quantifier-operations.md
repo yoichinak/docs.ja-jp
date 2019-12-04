@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346580"
 ---
-# <a name="quantifier-operations-visual-basic"></a>Quantifier Operations (Visual Basic)
+# <a name="quantifier-operations-visual-basic"></a>量指定子操作 (Visual Basic)
 量指定子操作は、シーケンス内の要素の一部またはすべてが条件を満たしているかどうかを示す <xref:System.Boolean> 値を返します。  
   
  次の図は、2 つの異なるソース シーケンスに対する、2 つの異なる量指定子操作を示しています。 最初の操作では、1 つ以上の要素が文字 'A' であるかどうかを尋ねていて、その結果は `true` です。 2 番目の操作では、すべての要素が文字 'A' であるかどうかを尋ねていて、その結果は `true` です。  
@@ -20,26 +20,26 @@ ms.locfileid: "74346580"
   
 ## <a name="methods"></a>メソッド  
   
-|メソッド名|説明|Visual Basic Query Expression Syntax|説明|  
+|メソッド名|説明|Visual Basic クエリ式の構文|詳細|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|すべて|シーケンス内のすべての要素が条件を満たしているかどうかを調べます。|`Aggregate … In … Into All(…)`|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
-|どれでも可|シーケンス内のいずれかの要素が条件を満たしているかどうかを調べます。|`Aggregate … In … Into Any()`|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
-|内容|指定した要素がシーケンスに格納されているかどうかを調べます。|該当しない。|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
+|[すべて]|シーケンス内のすべての要素が条件を満たしているかどうかを調べます。|`Aggregate … In … Into All(…)`|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
+|任意|シーケンス内のいずれかの要素が条件を満たしているかどうかを調べます。|`Aggregate … In … Into Any()`|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
+|次の値を含む|指定した要素がシーケンスに格納されているかどうかを調べます。|該当しない。|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>クエリ式の構文例  
- These examples use the `Aggregate` clause in Visual Basic as part of the filtering condition in a LINQ query.  
+ これらの例では、LINQ クエリのフィルター条件の一部として Visual Basic の `Aggregate` 句を使用します。  
   
- The following example uses the `Aggregate` clause and the <xref:System.Linq.Enumerable.All%2A> extension method to return from a collection those people whose pets are all older than a specified age.  
+ 次の例では、`Aggregate` 句と <xref:System.Linq.Enumerable.All%2A> 拡張メソッドを使用して、指定された年齢を超えるペットを持つユーザーをコレクションから返します。  
   
  [!code-vb[CsLINQAnyAll#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#1)]  
   
- The next example uses the `Aggregate` clause and the <xref:System.Linq.Enumerable.Any%2A> extension method to return from a collection those people who have at least one pet that is older than a specified age.  
+ 次の例では、`Aggregate` 句と <xref:System.Linq.Enumerable.Any%2A> 拡張メソッドを使用して、指定した年齢よりも古いペットを1つ以上持つユーザーをコレクションから返します。  
   
  [!code-vb[CsLINQAnyAll#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#2)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Aggregate 句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
-- [How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)
+- [方法: 指定された単語のセットを含む文章を照会する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)

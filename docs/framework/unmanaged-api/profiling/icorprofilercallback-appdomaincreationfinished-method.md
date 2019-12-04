@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445275"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished メソッド
-Notifies the profiler that an application domain has been created.  
+アプリケーションドメインが作成されたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,17 +35,17 @@ HRESULT AppDomainCreationFinished(
   
 ## <a name="parameters"></a>パラメーター  
  `appDomainId`  
- [in] Identifies the domain which has been created.  
+ から作成されたドメインを識別します。  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether creation of the application domain completed successfully.  
+ からアプリケーションドメインの作成が正常に完了したかどうかを示す HRESULT。  
   
-## <a name="remarks"></a>Remarks  
- The application ID is not valid for any information request until the `AppDomainCreationFinished` method is called.  
+## <a name="remarks"></a>コメント  
+ アプリケーション ID は、`AppDomainCreationFinished` メソッドが呼び出されるまで、情報要求に対して有効ではありません。  
   
- Some parts of loading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of creating the application domain has succeeded.  
+ `AppDomainCreationFinished` コールバックの後も、アプリケーションドメインの読み込みの一部が続行される場合があります。 `hrStatus` のエラー HRESULT はエラーを示します。 ただし、`hrStatus` の成功 HRESULT は、アプリケーションドメインの作成の最初の部分が成功したことのみを示します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -54,6 +54,6 @@ HRESULT AppDomainCreationFinished(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

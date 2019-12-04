@@ -12,13 +12,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430483"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
+# <a name="gccpugroup-element"></a>\<GCCpuGroup > 要素
 
 ガベージ コレクションが複数の CPU グループをサポートするかどうかを指定します。
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**
 
 ## <a name="syntax"></a>構文
 
@@ -27,9 +27,9 @@ ms.locfileid: "74430483"
    enabled="true|false"/>
 ```
 
-## <a name="attributes-and-elements"></a>属性および要素
+## <a name="attributes-and-elements"></a>属性と要素
 
-以降のセクションでは、属性、子要素、および親要素について説明します。
+次のセクションでは、属性、子要素、親要素について説明します。
 
 ### <a name="attributes"></a>属性
 
@@ -39,14 +39,14 @@ ms.locfileid: "74430483"
 
 ## <a name="enabled-attribute"></a>enabled 属性
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |`false`|ガベージ コレクションは複数の CPU グループをサポートしていません。 既定値です。|
 |`true`|ガベージ コレクションは、サーバーのガベージ コレクションが有効な場合に複数の CPU グループをサポートします。|
 
 ### <a name="child-elements"></a>子要素
 
-なし。
+[なし]。
 
 ### <a name="parent-elements"></a>親要素
 
@@ -55,12 +55,12 @@ ms.locfileid: "74430483"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.
+コンピューターに複数の CPU グループがあり、サーバーのガベージコレクションが有効になっている場合 ( [\<gcServer >](gcserver-element.md)要素を参照)、この要素を有効にすると、すべての cpu グループにわたってガベージコレクションが拡張され、ヒープを作成および分散するときにすべてのコアが考慮されます。
 
 > [!NOTE]
-> この要素は、ガベージ コレクション スレッドにのみ適用されます。 To enable the runtime to distribute user threads across all CPU groups, you must also enable the [\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) element.
+> この要素は、ガベージ コレクション スレッドにのみ適用されます。 ランタイムがすべての CPU グループにユーザースレッドを分散できるようにするには、 [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)要素を有効にする必要もあります。
 
 ## <a name="example"></a>例
 
@@ -75,9 +75,9 @@ When a computer has multiple CPU groups and server garbage collection is enabled
 </configuration>
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ランタイム設定スキーマ](index.md)
 - [構成ファイル スキーマ](../index.md)
-- [To disable concurrent garbage collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [同時実行ガベージコレクションを無効にするには](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [ワークステーションとサーバーのガベージ コレクション](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)

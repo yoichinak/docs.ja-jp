@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430270"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>ICorProfilerCallback::RuntimeThreadResumed メソッド
-Notifies the profiler that the specified thread has resumed after being suspended.  
+指定したスレッドが中断された後に再開されたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,9 +34,9 @@ HRESULT RuntimeThreadResumed(
   
 ## <a name="parameters"></a>パラメーター  
  `threadId`  
- [in] The ID of the thread that has been resumed.  
+ から再開されたスレッドの ID。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -45,7 +45,7 @@ HRESULT RuntimeThreadResumed(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [RuntimeThreadSuspended メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448763"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType 列挙型
-Specifies the type of a module.  
+モジュールの種類を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,23 +43,23 @@ typedef enum
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|The module is an invalid type.|  
-|`ValidatorModuleTypeMin`|The minimum value of the `CorValidatorModuleType` enum.|  
-|`ValidatorModuleTypePE`|The module is a portable executable (PE) file.|  
-|`ValidatorModuleTypeObj`|The module is a .obj file.|  
-|`ValidatorModuleTypeEnc`|The module is an edit-and-continue debugger session.|  
-|`ValidatorModuleTypeIncr`|The module is one that has been incrementally built.|  
-|`ValidatorModuleTypeMax`|The maximum value of the `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypeInvalid`|モジュールの型が無効です。|  
+|`ValidatorModuleTypeMin`|`CorValidatorModuleType` 列挙型の最小値。|  
+|`ValidatorModuleTypePE`|モジュールは、移植可能な実行可能 (PE) ファイルです。|  
+|`ValidatorModuleTypeObj`|モジュールは .obj ファイルです。|  
+|`ValidatorModuleTypeEnc`|モジュールは、エディットコンティニュのデバッガーセッションです。|  
+|`ValidatorModuleTypeIncr`|モジュールは、インクリメンタルビルドされたモジュールです。|  
+|`ValidatorModuleTypeMax`|`CorValidatorModuleType` 列挙型の最大値。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

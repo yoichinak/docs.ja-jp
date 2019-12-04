@@ -14,16 +14,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345132"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>方法: カスタム イベントを宣言してメモリを節約する (Visual Basic)
-There are several circumstances when it is important that an application keep its memory usage low. Custom events allow the application to use memory only for the events that it handles.  
+アプリケーションでメモリ使用量を少なくすることが重要な状況がいくつかあります。 カスタムイベントを使用すると、アプリケーションが処理するイベントにのみメモリを使用できます。  
   
- By default, when a class declares an event, the compiler allocates memory for a field to store the event information. If a class has many unused events, they needlessly take up memory.  
+ 既定では、クラスがイベントを宣言すると、コンパイラは、イベント情報を格納するために、フィールドにメモリを割り当てます。 クラスに使用されているイベントの数が多い場合は、不必要にメモリを占有します。  
   
- Instead of using the default implementation of events that Visual Basic provides, you can use custom events to manage the memory usage more carefully.  
+ Visual Basic が提供するイベントの既定の実装を使用する代わりに、カスタムイベントを使用してメモリ使用量をより慎重に管理できます。  
   
 ## <a name="example"></a>例  
- In this example, the class uses one instance of the <xref:System.ComponentModel.EventHandlerList> class, stored in the `Events` field, to store information about the events in use. The <xref:System.ComponentModel.EventHandlerList> class is an optimized list class designed to hold delegates.  
+ この例では、クラスは、`Events` フィールドに格納されている <xref:System.ComponentModel.EventHandlerList> クラスの1つのインスタンスを使用して、使用中のイベントに関する情報を格納します。 <xref:System.ComponentModel.EventHandlerList> クラスは、デリゲートを保持するように設計された最適化リストクラスです。  
   
- All events in the class use the `Events` field to keep track of what methods are handling each event.  
+ クラスのすべてのイベントでは、`Events` フィールドを使用して、各イベントを処理しているメソッドを追跡します。  
   
  [!code-vb[VbVbalrEvents#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#22)]  
   

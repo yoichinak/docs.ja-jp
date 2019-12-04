@@ -25,26 +25,26 @@ ms.locfileid: "74344269"
 -help  
 ```
 
-、または  
+または  
 
 ```console
 -?  
 ```  
   
-## <a name="remarks"></a>Remarks  
- If you include this option in a compilation, no output file is created and no compilation takes place.  
+## <a name="remarks"></a>コメント  
+ このオプションをコンパイルに含めた場合、出力ファイルは作成されず、コンパイルも行われません。  
   
 > [!NOTE]
-> The `-help` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> `-help` オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
   
 ## <a name="example"></a>例  
- The following code displays help from the command line.  
+ 次のコードは、コマンドラインからヘルプを表示します。  
   
 ```console  
 vbc -help  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -12,10 +12,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348038"
 ---
 # <a name="into-clause-visual-basic"></a>Into 句 (Visual Basic)
-Identifies aggregate functions or groupings to apply to a collection.  
+コレクションに適用する集計関数またはグループ化を識別します。  
   
-## <a name="remarks"></a>Remarks  
- The `Each` keyword is used in the following contexts:  
+## <a name="remarks"></a>コメント  
+ `Each` キーワードは、次のコンテキストで使用されます。  
   
  [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
@@ -23,6 +23,6 @@ Identifies aggregate functions or groupings to apply to a collection.
   
  [Group Join 句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

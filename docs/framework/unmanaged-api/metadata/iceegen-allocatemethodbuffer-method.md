@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436395"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>ICeeGen::AllocateMethodBuffer メソッド
-Creates a buffer of the specified size for a method, and gets the relative virtual address of the method.  
+メソッドに対して指定したサイズのバッファーを作成し、メソッドの相対仮想アドレスを取得します。  
   
- This method is obsolete and should not be used.  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,23 +39,23 @@ HRESULT AllocateMethodBuffer (
   
 ## <a name="parameters"></a>パラメーター  
  `cchBuffer`  
- [in] The length of the buffer to create.  
+ から作成するバッファーの長さ。  
   
  `lpBuffer`  
- [out] The returned buffer.  
+ 入出力返されたバッファー。  
   
  `RVA`  
- [out] The relative virtual address of the method.  
+ 入出力メソッドの相対仮想アドレス。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

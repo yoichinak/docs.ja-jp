@@ -1,5 +1,5 @@
 ---
-title: Module <keyword>
+title: モジュール <keyword>
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ModuleAttribute
@@ -15,18 +15,18 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351553"
 ---
-# <a name="module-keyword-visual-basic"></a>Module \<keyword> (Visual Basic)
-Specifies that an attribute at the beginning of a source file applies to the current assembly module.  
+# <a name="module-keyword-visual-basic"></a>Module \<キーワード > (Visual Basic)
+ソースファイルの先頭の属性が現在のアセンブリモジュールに適用されることを指定します。  
   
-## <a name="remarks"></a>Remarks  
- Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
+## <a name="remarks"></a>コメント  
+ クラスやプロパティなど、多くの属性が個々のプログラミング要素に関連しています。 このような属性を適用するには、山かっこ (`< >`) 内で属性ブロックを宣言ステートメントに直接アタッチします。  
   
- If an attribute pertains not only to the following element but to the current assembly module, you place the attribute block at the beginning of the source file and identify the attribute with the `Module` keyword. If it applies to the entire assembly, you use the [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) keyword.  
+ 属性が次の要素だけでなく、現在のアセンブリモジュールに関連する場合は、属性ブロックをソースファイルの先頭に配置し、`Module` キーワードを使用して属性を識別します。 アセンブリ全体に適用される場合は、 [assembly](../../../visual-basic/language-reference/modifiers/assembly.md)キーワードを使用します。  
   
- The `Module` modifier is not the same as the [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).  
+ `Module` 修飾子は、 [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)と同じではありません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)
 - [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)
 - [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)

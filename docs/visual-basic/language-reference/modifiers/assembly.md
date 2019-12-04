@@ -1,5 +1,5 @@
 ---
-title: Assembly
+title: アセンブリ
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Assembly
@@ -18,16 +18,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351648"
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
-Specifies that an attribute at the beginning of a source file applies to the entire assembly.  
+ソースファイルの先頭の属性がアセンブリ全体に適用されることを指定します。  
   
-## <a name="remarks"></a>Remarks  
- Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
+## <a name="remarks"></a>コメント  
+ クラスやプロパティなど、多くの属性が個々のプログラミング要素に関連しています。 このような属性を適用するには、山かっこ (`< >`) 内で属性ブロックを宣言ステートメントに直接アタッチします。  
   
- If an attribute pertains not only to the following element but to the entire assembly, you place the attribute block at the beginning of the source file and identify the attribute with the `Assembly` keyword. If it applies to the current assembly module, you use the [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md) keyword.  
+ 属性が次の要素だけでなく、アセンブリ全体に関連する場合は、属性ブロックをソースファイルの先頭に配置し、`Assembly` キーワードを使用して属性を識別します。 現在のアセンブリモジュールに適用される場合は、 [module](../../../visual-basic/language-reference/modifiers/module-keyword.md)キーワードを使用します。  
   
- You can also apply an attribute to an assembly in the AssemblyInfo.vb file, in which case you do not have to use an attribute block in your main source-code file.  
+ また、AssemblyInfo ファイル内のアセンブリに属性を適用することもできます。この場合、メインのソースコードファイルで属性ブロックを使用する必要はありません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Module \<キーワード>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
 - [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)

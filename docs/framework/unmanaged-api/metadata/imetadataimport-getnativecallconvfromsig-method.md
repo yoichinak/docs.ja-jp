@@ -37,24 +37,24 @@ HRESULT GetNativeCallConvFromSig (
   
 ## <a name="parameters"></a>パラメーター  
  `pvSig`  
- [in] A pointer to the metadata signature of the method to return the calling convention for.  
+ から呼び出し規約を返すメソッドのメタデータシグネチャへのポインター。  
   
  `cbSig`  
- [in] The size in bytes of `pvSig`.  
+ から`pvSig`のサイズ (バイト単位)。  
   
  `pCallConv`  
- [out] A pointer to the native calling convention.  
+ 入出力ネイティブ呼び出し規約へのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Runtime.InteropServices.CallingConvention>
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

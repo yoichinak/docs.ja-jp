@@ -14,44 +14,44 @@ ms.locfileid: "74346904"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>方法: 変数に値を格納する、および変数から値を取得する (Visual Basic)
 
-You store a value in a variable by putting the variable name on the left side of an assignment statement.
+変数に値を格納するには、代入ステートメントの左側に変数名を指定します。
 
-## <a name="putting-data-in-a-variable"></a>Putting Data in a Variable
+## <a name="putting-data-in-a-variable"></a>変数にデータを格納する
 
-#### <a name="to-store-a-value-in-a-variable"></a>To store a value in a variable
+#### <a name="to-store-a-value-in-a-variable"></a>変数に値を格納するには
 
-- Use the variable name on the left side of an assignment statement.
+- 代入ステートメントの左側にある変数名を使用します。
 
-    The following example sets the value of the variable `alpha`.
+    次の例では、変数 `alpha`の値を設定します。
 
     ```vb
     alpha = (beta * 6.27) / (gamma + 2.1)
     ```
 
-    The value generated on the right side of the assignment statement is stored in the variable.
+    代入ステートメントの右辺に生成される値は、変数に格納されます。
 
-## <a name="getting-data-from-a-variable"></a>Getting Data from a Variable
+## <a name="getting-data-from-a-variable"></a>変数からのデータの取得
 
-You retrieve a variable's value by including the variable name in an expression.
+変数の値を取得するには、式に変数名を含めます。
 
-#### <a name="to-retrieve-a-value-from-a-variable"></a>To retrieve a value from a variable
+#### <a name="to-retrieve-a-value-from-a-variable"></a>変数から値を取得するには
 
-- Use the variable name in an expression. You can use a variable anywhere you can use a constant or a literal, except in an expression that defines the value of a constant.
+- 式では変数名を使用します。 定数またはリテラルを使用できる場所であればどこでも変数を使用できます。ただし、定数の値を定義する式では使用できません。
 
   \- または -
 
-- Use the variable name following the equal (`=`) sign in an assignment statement.
+- 代入ステートメントで等号 (`=`) 記号に続く変数名を使用します。
 
-  The following example reads the value of the variable `startValue` and then uses the value of the variable `counter` in an expression.
+  次の例では `startValue` 変数の値を読み取り、式で `counter` 変数の値を使用します。
 
   ```vb
   counter = startValue
   cellValue = (counter + 5) ^ 2
   ```
 
-  The value of the variable participates in the expression just as a constant would, and then it is stored in the variable or property on the left side of the assignment statement.
+  変数の値は定数と同様に式に参加し、代入ステートメントの左側にある変数またはプロパティに格納されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [変数](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

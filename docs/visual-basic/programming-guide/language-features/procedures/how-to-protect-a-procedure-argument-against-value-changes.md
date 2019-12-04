@@ -1,5 +1,5 @@
 ---
-title: '方法 : プロシージャ引数の値が変化しないようにする'
+title: '方法: プロシージャ引数の値が変化しないようにする'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -22,12 +22,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344854"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>方法: プロシージャ引数の値が変化しないようにする (Visual Basic)
-If a procedure declares a parameter as [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic gives the procedure code a direct reference to the programming element underlying the argument in the calling code. This permits the procedure to change the value underlying the argument in the calling code. In some cases the calling code might want to protect against such a change.  
+プロシージャがパラメーターを[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)として宣言している場合、Visual Basic は、呼び出し元のコードの引数の基になるプログラミング要素への直接参照をプロシージャコードに付与します。 これにより、プロシージャは、呼び出し元のコードの引数の基になる値を変更できます。 場合によっては、呼び出し元のコードでこのような変更から保護することが必要になることがあります。  
   
- You can always protect an argument from change by declaring the corresponding parameter [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) in the procedure. If you want to be able to change a given argument in some cases but not others, you can declare it `ByRef` and let the calling code determine the passing mechanism in each call. It does this by enclosing the corresponding argument in parentheses to pass it by value, or not enclosing it in parentheses to pass it by reference. For more information, see [How to: Force an Argument to Be Passed by Value](./how-to-force-an-argument-to-be-passed-by-value.md).  
+ プロシージャ内で対応するパラメーター [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)を宣言することによって、変更から引数を常に保護することができます。 特定の引数を他のケース以外でも変更できるようにする場合は、その引数を `ByRef` 宣言し、呼び出し元のコードが各呼び出しで渡される機構を決定できるようにします。 これを行うには、対応する引数をかっこで囲み、値で渡します。または、かっこで囲まないようにして、参照渡しで渡すことができます。 詳細については、「[方法: 引数を強制的に値で渡す](./how-to-force-an-argument-to-be-passed-by-value.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- The following example shows two procedures that take an array variable and operate on its elements. The `increase` procedure simply adds one to each element. The `replace` procedure assigns a new array to the parameter `a()` and then adds one to each element. However, the reassignment does not affect the underlying array variable in the calling code.  
+ 次の例は、配列変数を受け取り、その要素を操作する2つのプロシージャを示しています。 `increase` の手順では、単に各要素に1つを追加します。 `replace` プロシージャは、新しい配列をパラメーター `a()` に割り当て、各要素に1つを追加します。 ただし、再割り当ては、呼び出し元のコード内の基になる配列変数には影響しません。  
   
  [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
@@ -35,14 +35,14 @@ If a procedure declares a parameter as [ByRef](../../../../visual-basic/language
   
  [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
- The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41". Because the array `n` is a reference type, `increase` can change its members, even though the passing mechanism is `ByVal`.  
+ 最初の `MsgBox` の呼び出しでは、"後に増加する (n):11, 21, 31, 41" と表示されます。 配列 `n` は参照型であるため、渡される機構が `ByVal`場合でも、`increase` はそのメンバーを変更できます。  
   
- The second `MsgBox` call displays "After replace(n): 11, 21, 31, 41". Because `n` is passed `ByVal`, `replace` cannot modify the variable `n` in the calling code by assigning a new array to it. When `replace` creates the new array instance `k` and assigns it to the local variable `a`, it loses the reference to `n` passed in by the calling code. When it changes the members of `a`, only the local array `k` is affected. Therefore, `replace` does not increment the values of array `n` in the calling code.  
+ 2番目の `MsgBox` 呼び出しでは、"After replace (n):11, 21, 31, 41" と表示されます。 `n` は `ByVal`渡されるので、`replace` 新しい配列を割り当てることによって、呼び出し元のコードの変数 `n` を変更することはできません。 `replace` によって新しい配列インスタンス `k` 作成され、それがローカル変数 `a`に代入されると、呼び出し元のコードによって渡された `n` への参照が失われます。 `a`のメンバーを変更すると、ローカル配列 `k` のみが影響を受けます。 したがって、`replace` では、呼び出し元のコードの配列 `n` の値はインクリメントされません。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- The default in Visual Basic is to pass arguments by value. However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter. This makes your code easier to read.  
+ Visual Basic の既定では、値渡しで引数を渡します。 ただし、すべての宣言されたパラメーターに[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)キーワードまたは[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)キーワードを含めることをお勧めします。 これにより、コードが読みやすくなります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)

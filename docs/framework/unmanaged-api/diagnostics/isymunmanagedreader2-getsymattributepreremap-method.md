@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446422"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap メソッド
-Gets a custom attribute based upon its name. Unlike metadata custom attributes, these attributes are held in the symbol store.  
+名前に基づいてカスタム属性を取得します。 メタデータのカスタム属性とは異なり、これらの属性はシンボルストアに保持されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,26 +39,26 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="parameters"></a>パラメーター  
  `parent`  
- [in] The metadata token of the parent.  
+ から親のメタデータトークン。  
   
  `name`  
- [in] A pointer to a `WCHAR` that contains the name.  
+ から名前を格納している `WCHAR` へのポインター。  
   
  `cBuffer`  
- [in] A `ULONG32` that indicates the size of the `buffer` array.  
+ から`buffer` 配列のサイズを示す `ULONG32`。  
   
  `pcBuffer`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the attribute bytes.  
+ 入出力属性バイトを格納するために必要なバッファーのサイズを受け取る `ULONG32` へのポインター。  
   
  `buffer`  
- [out] A pointer to the buffer that receives the attribute bytes.  
+ 入出力属性バイトを受け取るバッファーへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedReader2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

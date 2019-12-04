@@ -17,106 +17,106 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345084"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>チュートリアル: イベントの処理 (Visual Basic)
-This is the second of two topics that demonstrate how to work with events. The first topic, [Walkthrough: Declaring and Raising Events](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), shows how to declare and raise events. This section uses the form and class from that walkthrough to show how to handle events when they take place.  
+これは、イベントを操作する方法を示す2つのトピックのうち2番目のトピックです。 最初のトピック「[チュートリアル: イベントの宣言と発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)」では、イベントを宣言して発生させる方法を示します。 このセクションでは、そのチュートリアルのフォームとクラスを使用して、発生したイベントの処理方法を示します。  
   
- The `Widget` class example uses traditional event-handling statements. Visual Basic provides other techniques for working with events. As an exercise, you can modify this example to use the `AddHandler` and `Handles` statements.  
+ `Widget` クラスの例では、従来のイベント処理ステートメントを使用します。 Visual Basic には、イベントを操作するためのその他の手法が用意されています。 演習として、この例を変更して、`AddHandler` および `Handles` ステートメントを使用することができます。  
   
-### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>To handle the PercentDone event of the Widget class  
+### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>ウィジェットクラスの PercentDone イベントを処理するには  
   
-1. Place the following code in `Form1`:  
+1. `Form1`に次のコードを配置します。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
-     The `WithEvents` keyword specifies that the variable `mWidget` is used to handle an object's events. You specify the kind of object by supplying the name of the class from which the object will be created.  
+     `WithEvents` キーワードは、オブジェクトのイベントを処理するために `mWidget` 変数が使用されることを指定します。 オブジェクトの種類を指定するには、オブジェクトの作成元となるクラスの名前を指定します。  
   
-     The variable `mWidget` is declared in `Form1` because `WithEvents` variables must be class-level. This is true regardless of the type of class you place them in.  
+     変数 `mWidget` は `Form1` で宣言されています。 `WithEvents` 変数はクラスレベルである必要があるためです。 これは、配置したクラスの型に関係なく当てはまります。  
   
-     The variable `mblnCancel` is used to cancel the `LongTask` method.  
+     `LongTask` メソッドを取り消すには、`mblnCancel` 変数を使用します。  
   
-## <a name="writing-code-to-handle-an-event"></a>Writing Code to Handle an Event  
- As soon as you declare a variable using `WithEvents`, the variable name appears in the left drop-down list of the class's **Code Editor**. When you select `mWidget`, the `Widget` class's events appear in the right drop-down list. Selecting an event displays the corresponding event procedure, with the prefix `mWidget` and an underscore. All the event procedures associated with a `WithEvents` variable are given the variable name as a prefix.  
+## <a name="writing-code-to-handle-an-event"></a>イベントを処理するコードの記述  
+ `WithEvents`を使用して変数を宣言するとすぐに、クラスの**コードエディター**の左側のドロップダウンリストに変数名が表示されます。 [`mWidget`] を選択すると、`Widget` クラスのイベントが右のドロップダウンリストに表示されます。 イベントを選択すると、対応するイベントプロシージャにプレフィックス `mWidget` とアンダースコアが表示されます。 `WithEvents` 変数に関連付けられているすべてのイベントプロシージャには、プレフィックスとして変数名が割り当てられます。  
   
 #### <a name="to-handle-an-event"></a>イベントを処理するには  
   
-1. Select `mWidget` from the left drop-down list in the **Code Editor**.  
+1. **コードエディター**の左側のドロップダウンリストから [`mWidget`] を選択します。  
   
-2. Select the `PercentDone` event from the right drop-down list. The **Code Editor** opens the `mWidget_PercentDone` event procedure.  
+2. 右側のドロップダウンリストから `PercentDone` イベントを選択します。 **コードエディター**で、`mWidget_PercentDone` イベントプロシージャが開きます。  
   
     > [!NOTE]
-    > The **Code Editor** is useful, but not required, for inserting new event handlers. In this walkthrough, it is more direct to just copy the event handlers directly into your code.  
+    > **コードエディター**は、新しいイベントハンドラーを挿入する場合には便利ですが、必須ではありません。 このチュートリアルでは、コードに直接イベントハンドラーをコピーするだけで済みます。  
   
 3. `mWidget_PercentDone` イベント ハンドラーに次のコードを追加します。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
-     Whenever the `PercentDone` event is raised, the event procedure displays the percent complete in a `Label` control. The `DoEvents` method allows the label to repaint, and also gives the user the opportunity to click the **Cancel** button.  
+     イベントプロシージャは、`PercentDone` イベントが発生するたびに、`Label` コントロールの完了率を表示します。 `DoEvents` メソッドを使用すると、ラベルを再描画できます。また、ユーザーは **[キャンセル]** ボタンをクリックすることもできます。  
   
-4. Add the following code for the `Button2_Click` event handler:  
+4. `Button2_Click` イベントハンドラーに次のコードを追加します。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
- If the user clicks the **Cancel** button while `LongTask` is running, the `Button2_Click` event is executed as soon as the `DoEvents` statement allows event processing to occur. The class-level variable `mblnCancel` is set to `True`, and the `mWidget_PercentDone` event then tests it and sets the `ByRef Cancel` argument to `True`.  
+ `LongTask` の実行中にユーザーが **[キャンセル**] ボタンをクリックした場合、`DoEvents` ステートメントによってイベント処理が可能になるとすぐに、`Button2_Click` イベントが実行されます。 クラスレベルの変数 `mblnCancel` が `True`に設定され、`mWidget_PercentDone` イベントによってテストされ、`ByRef Cancel` 引数が `True`に設定されます。  
   
-## <a name="connecting-a-withevents-variable-to-an-object"></a>Connecting a WithEvents Variable to an Object  
- `Form1` is now set up to handle a `Widget` object's events. All that remains is to find a `Widget` somewhere.  
+## <a name="connecting-a-withevents-variable-to-an-object"></a>WithEvents 変数をオブジェクトに接続する  
+ `Form1` は、`Widget` オブジェクトのイベントを処理するようにセットアップされました。 残っているのは、どこかの `Widget` を見つけることだけです。  
   
- When you declare a variable `WithEvents` at design time, no object is associated with it. A `WithEvents` variable is just like any other object variable. You have to create an object and assign a reference to it with the `WithEvents` variable.  
+ デザイン時に `WithEvents` 変数を宣言しても、オブジェクトにはオブジェクトが関連付けられていません。 `WithEvents` 変数は、他のオブジェクト変数と同じです。 オブジェクトを作成し、そのオブジェクトへの参照を `WithEvents` 変数で割り当てる必要があります。  
   
-#### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>To create an object and assign a reference to it  
+#### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>オブジェクトを作成し、そのオブジェクトへの参照を割り当てるには  
   
-1. Select **(Form1 Events)** from the left drop-down list in the **Code Editor**.  
+1. **コードエディター**の左側のドロップダウンリストで **[(Form1 イベント)]** を選択します。  
   
-2. Select the `Load` event from the right drop-down list. The **Code Editor** opens the `Form1_Load` event procedure.  
+2. 右側のドロップダウンリストから `Load` イベントを選択します。 **コードエディター**で、`Form1_Load` イベントプロシージャが開きます。  
   
-3. Add the following code for the `Form1_Load` event procedure to create the `Widget`:  
+3. `Widget`を作成するには、`Form1_Load` イベントプロシージャに次のコードを追加します。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
- When this code executes, Visual Basic creates a `Widget` object and connects its events to the event procedures associated with `mWidget`. From that point on, whenever the `Widget` raises its `PercentDone` event, the `mWidget_PercentDone` event procedure is executed.  
+ このコードが実行されると、Visual Basic は `Widget` オブジェクトを作成し、そのイベントを `mWidget`に関連付けられているイベントプロシージャに接続します。 その時点から、`Widget` が `PercentDone` イベントを発生させるたびに、`mWidget_PercentDone` イベントプロシージャが実行されます。  
   
-#### <a name="to-call-the-longtask-method"></a>To call the LongTask method  
+#### <a name="to-call-the-longtask-method"></a>LongTask メソッドを呼び出すには  
   
 - `Button1_Click` イベント ハンドラーに次のコードを追加します。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
- Before the `LongTask` method is called, the label that displays the percent complete must be initialized, and the class-level `Boolean` flag for canceling the method must be set to `False`.  
+ `LongTask` メソッドが呼び出される前に、完了率を示すラベルを初期化する必要があります。また、メソッドをキャンセルするためのクラスレベルの `Boolean` フラグを `False`に設定する必要があります。  
   
- `LongTask` is called with a task duration of 12.2 seconds. The `PercentDone` event is raised once every one-third of a second. Each time the event is raised, the `mWidget_PercentDone` event procedure is executed.  
+ `LongTask` は、タスク期間が12.2 秒の場合に呼び出されます。 `PercentDone` イベントは、1秒間に1回発生します。 イベントが発生するたびに、`mWidget_PercentDone` イベントプロシージャが実行されます。  
   
- When `LongTask` is done, `mblnCancel` is tested to see if `LongTask` ended normally, or if it stopped because `mblnCancel` was set to `True`. The percent complete is updated only in the former case.  
+ `LongTask` が完了すると、`mblnCancel` は `LongTask` が正常に終了したかどうか、または `mblnCancel` が `True`に設定されているために停止したかどうかをテストします。 完了率は、前者の場合にのみ更新されます。  
   
 #### <a name="to-run-the-program"></a>プログラムを実行するには  
   
-1. Press F5 to put the project in run mode.  
+1. F5 キーを押して、プロジェクトを実行モードにします。  
   
-2. Click the **Start Task** button. Each time the `PercentDone` event is raised, the label is updated with the percentage of the task that is complete.  
+2. **[タスクの開始]** ボタンをクリックします。 `PercentDone` イベントが発生するたびに、完了したタスクの割合でラベルが更新されます。  
   
-3. Click the **Cancel** button to stop the task. Notice that the appearance of the **Cancel** button does not change immediately when you click it. The `Click` event cannot happen until the `My.Application.DoEvents` statement allows event processing.  
+3. **[キャンセル]** ボタンをクリックして、タスクを停止します。 **[キャンセル]** ボタンの外観は、クリックしてもすぐには変更されないことに注意してください。 `My.Application.DoEvents` ステートメントによってイベント処理が許可されるまで、`Click` イベントは発生しません。  
   
     > [!NOTE]
-    > The `My.Application.DoEvents` method does not process events in exactly the same way as the form does. For example, in this walkthrough, you must click the **Cancel** button twice. To allow the form to handle the events directly, you can use multithreading. For more information, see [Managed Threading](../../../../standard/threading/index.md).
+    > `My.Application.DoEvents` メソッドは、フォームとまったく同じ方法でイベントを処理しません。 たとえば、このチュートリアルでは、 **[キャンセル]** ボタンを2回クリックする必要があります。 フォームがイベントを直接処理できるようにするには、マルチスレッドを使用します。 詳細については、「[マネージスレッド処理](../../../../standard/threading/index.md)」を参照してください。
   
- You may find it instructive to run the program with F11 and step through the code a line at a time. You can clearly see how execution enters `LongTask`, and then briefly re-enters `Form1` each time the `PercentDone` event is raised.  
+ F11 キーを使用してプログラムを実行し、一度に1行ずつコードをステップ実行することをお勧めします。 `LongTask`実行がどのようになるかを明確に確認し、`PercentDone` イベントが発生するたびに `Form1` を再入力することができます。  
   
- What would happen if, while execution was back in the code of `Form1`, the `LongTask` method were called again? At worst, a stack overflow might occur if `LongTask` were called every time the event was raised.  
+ `Form1`のコードで実行が戻ったときに、`LongTask` メソッドが再度呼び出された場合はどうなるでしょうか。 最悪の場合、イベントが発生するたびに `LongTask` が呼び出されると、スタックオーバーフローが発生する可能性があります。  
   
- You can cause the variable `mWidget` to handle events for a different `Widget` object by assigning a reference to the new `Widget` to `mWidget`. In fact, you can make the code in `Button1_Click` do this every time you click the button.  
+ 新しい `Widget` への参照を `mWidget`に割り当てることによって、変数 `mWidget` が別の `Widget` オブジェクトのイベントを処理するようにすることができます。 実際には、ボタンをクリックするたびに、`Button1_Click` コードを作成できます。  
   
-#### <a name="to-handle-events-for-a-different-widget"></a>To handle events for a different widget  
+#### <a name="to-handle-events-for-a-different-widget"></a>別のウィジェットのイベントを処理するには  
   
-- Add the following line of code to the `Button1_Click` procedure, immediately preceding the line that reads `mWidget.LongTask(12.2, 0.33)`:  
+- `mWidget.LongTask(12.2, 0.33)`を読み取る行の直前に、次のコード行を `Button1_Click` プロシージャに追加します。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#9)]  
   
- The code above creates a new `Widget` each time the button is clicked. As soon as the `LongTask` method completes, the reference to the `Widget` is released, and the `Widget` is destroyed.  
+ 上記のコードでは、ボタンがクリックされるたびに新しい `Widget` が作成されます。 `LongTask` メソッドが完了するとすぐに、`Widget` への参照が解放され、`Widget` が破棄されます。  
   
- A `WithEvents` variable can contain only one object reference at a time, so if you assign a different `Widget` object to `mWidget`, the previous `Widget` object's events will no longer be handled. If `mWidget` is the only object variable containing a reference to the old `Widget`, the object is destroyed. If you want to handle events from several `Widget` objects, use the `AddHandler` statement to process events from each object separately.  
+ `WithEvents` 変数には一度に1つのオブジェクト参照のみを含めることができます。したがって、別の `Widget` オブジェクトを `mWidget`に割り当てると、前の `Widget` オブジェクトのイベントは処理されなくなります。 `mWidget` が古い `Widget`への参照を含む唯一のオブジェクト変数である場合、オブジェクトは破棄されます。 複数の `Widget` オブジェクトのイベントを処理する場合は、`AddHandler` ステートメントを使用して各オブジェクトのイベントを個別に処理します。  
   
 > [!NOTE]
-> You can declare as many `WithEvents` variables as you need, but arrays of `WithEvents` variables are not supported.  
+> `WithEvents` 変数は必要な数だけ宣言できますが、`WithEvents` 変数の配列はサポートされていません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [チュートリアル : イベントの宣言と発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
 - [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)

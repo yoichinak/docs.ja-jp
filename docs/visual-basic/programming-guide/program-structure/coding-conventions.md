@@ -24,9 +24,9 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 - コードが Visual Basic の "ベスト プラクティス" に従っていることを確認できます。  
   
-## <a name="naming-conventions"></a>命名規則  
+## <a name="naming-conventions"></a>名前付け規則  
   
-- For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.  
+- 名前付けのガイドラインについては、「[名前付けのガイドライン](../../../standard/design-guidelines/naming-guidelines.md)」を参照してください。  
   
 - "My" または "my" を変数名の一部として使用しないようにします。 `My` オブジェクトとの混同を招くからです。  
   
@@ -36,7 +36,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 - タブを空白として挿入し、4 文字インデントによるスマート インデントを使用します。  
   
-- Use **Pretty listing (reformatting) of code** to reformat your code in the code editor. For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
+- コードエディターでコードを再フォーマットするには、**コードを簡単に一覧表示 (再フォーマット)** します。 詳細については、「[[オプション]、[テキストエディター]、[基本] (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)」を参照してください。  
   
 - 1 つの行には 1 つのステートメントのみを記述します。 Visual Basic の行区切り記号 (:) は使用しないでください。  
   
@@ -44,7 +44,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 - 1 つの行には 1 つの宣言のみを記述します。  
   
-- If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop. ただし、リストの項目は常に左揃えにします。  
+- **コードの一覧表示 (再フォーマット)** によって、継続行の書式が自動的に設定されない場合は、継続行を手動で1タブストップでインデントします。 ただし、リストの項目は常に左揃えにします。  
   
     ```vb  
     a As Integer,  
@@ -63,7 +63,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
-- アスタリスク (*) を整形したブロックでコメントを囲まないようにします。  
+- 整形されたアスタリスク (*) のブロックでコメントを囲まないようにします。  
   
 ## <a name="program-structure"></a>プログラムの構造  
   
@@ -159,7 +159,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- `Nothing` メソッドを呼び出す前にイベントが `RaiseEvent` (null) かどうか確認しないようにします。 `RaiseEvent` は、イベントを発生させる前に `Nothing` かどうか確認します。  
+- `Nothing` メソッドを呼び出す前にイベントが `RaiseEvent` (null) かどうか確認しないようにします。 `RaiseEvent` は、イベントを発生させる前に `Nothing` を確認します。  
   
 ### <a name="using-shared-members"></a>共有メンバーの使用  
  `Shared` メンバーの呼び出しにはクラス名を使用し、インスタンス変数からは行わないようにします。  

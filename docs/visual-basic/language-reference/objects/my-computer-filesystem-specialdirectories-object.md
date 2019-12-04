@@ -15,19 +15,19 @@ ms.locfileid: "74347223"
 # <a name="mycomputerfilesystemspecialdirectories-object"></a>My.Computer.FileSystem.SpecialDirectories オブジェクト
 一般的に参照されるディレクトリにアクセスするためのプロパティを提供します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `My.Computer.FileSystem.SpecialDirectories` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>」をご覧ください。  
   
- For more information, see [How to: Retrieve the Contents of the My Documents Directory](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).  
+ 詳細については、「[方法: My Documents ディレクトリの内容を取得する](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)」を参照してください。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **名前空間:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)  
+ **クラス:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (<xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>へのアクセスを提供します)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [My.Computer.FileSystem オブジェクト](../../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
 - [My.Computer オブジェクト](../../../visual-basic/language-reference/objects/my-computer-object.md)

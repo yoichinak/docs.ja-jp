@@ -2,12 +2,12 @@
 title: .NET Framework 4.5 の外部化されたポリシー アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: efc8b8169a6b984e003444c4669122ce6fa7f9d0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9184386751bb44e89dfdcedd34ab0ab84a27323e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283166"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710927"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 の外部化されたポリシー アクティビティ
 
@@ -15,11 +15,11 @@ ms.locfileid: "74283166"
 
 ## <a name="projects-in-this-sample"></a>このサンプルのプロジェクト
 
-|プロジェクト名|[説明]|メイン ファイル|
+|プロジェクト名|説明|メイン ファイル|
 |-|-|-|
-|ExternalizedPolicy4|ExternalizedPolicy4 アクティビティとその WF 4.5 デザイナーが含まれます。|**ExternalizedPolicy4.cs**: アクティビティ定義。<br /><br /> **ExternalizedPolicy4Designer.xaml**: ExternalizedPolicy4 アクティビティのカスタム デザイナーです。 WF 3.5 ルール エンジンからルール エディター (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) を使用します。|
-|ImperativeCodeClientSample|命令型 C# コードで、ExternalizedPolicy4 アプリケーションを使用してワークフローを構成および実行するサンプル クライアント アプリケーションです (デザイナーは不使用)。|**ApplyDiscount.rules**: [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ルール定義が記述されたファイルです。<br /><br /> **Order.cs**: 顧客の注文を表す型。 ルールはこの型のオブジェクトに適用されます。<br /><br /> **Program.cs**: Policy4 アクティビティを使用するワークフローを構成および実行して、ApplyDiscount.rules で定義されているルールを Order オブジェクトのインスタンスに適用します。<br /><br /> App.config: ルール ファイルのパスが記述された構成ファイルです。|
-|DesignerClientSample|[!INCLUDE[wf1](../../../../includes/wf1-md.md)] デザイナーで、ExternalPolicy4 アプリケーションを使用してワークフローを構成および実行するサンプル クライアント アプリケーションです。|**Sequence1.xaml**: Policy4 アクティビティを使用してルール評価を実行するシーケンシャル ワークフローです。<br /><br /> **Program.cs**: Sequence1.xaml で定義されているワークフローのインスタンスを実行します。|
+|ExternalizedPolicy4|ExternalizedPolicy4 アクティビティとその WF 4.5 デザイナーが含まれます。|**ExternalizedPolicy4.cs**: アクティビティ定義。<br /><br /> **ExternalizedPolicy4Designer**: ExternalizedPolicy4 アクティビティのカスタムデザイナー。 WF 3.5 ルール エンジンからルール エディター (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) を使用します。|
+|ImperativeCodeClientSample|命令型 C# コードで、ExternalizedPolicy4 アプリケーションを使用してワークフローを構成および実行するサンプル クライアント アプリケーションです (デザイナーは不使用)。|**Applydiscount。 rules**: [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ルール定義を含むファイル。<br /><br /> **Order.cs**: 顧客の注文を表す型。 ルールはこの型のオブジェクトに適用されます。<br /><br /> **Program.cs**: Policy4 アクティビティを持つワークフローを構成および実行して、applydiscount で定義されたルールを適用します。ルールオブジェクトのインスタンスにルールを適用します。<br /><br /> App.config: ルール ファイルのパスが記述された構成ファイルです。|
+|DesignerClientSample|[!INCLUDE[wf1](../../../../includes/wf1-md.md)] デザイナーで、ExternalPolicy4 アプリケーションを使用してワークフローを構成および実行するサンプル クライアント アプリケーションです。|**Sequence1**: Policy4 アクティビティを使用してルールの評価を実行するシーケンシャルワークフローです。<br /><br /> **Program.cs**: Sequence1 で定義されているワークフローのインスタンスを実行します。|
 
 ## <a name="the-externalizedpolicy4-activity"></a>ExternalizedPolicy4 アクティビティ
 
@@ -42,7 +42,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 }
 ```
 
-|property|[説明]|
+|property|説明|
 |-|-|
 |RuleSetFilePath|アクティビティが実行されるときに評価される .NET Framework 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> ファイルのパスです。|
 |RuleSetName|.rules ファイル内で使用される <xref:System.Workflow.Activities.Rules.RuleSet> の名前です。|
@@ -52,7 +52,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 ## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4 アクティビティ デザイナー
 
-ExternalizedPolicy4 デザイナーを使用すると、コードを記述せずに、既存の RuleSet を使用するようにアクティビティを構成できます。 .rules ファイルのパスを設定し、使用する <xref:System.Workflow.Activities.Rules.RuleSet> の名前を指定するだけです。 また、<xref:System.Workflow.Activities.Rules.RuleSet> を変更することもできます。 ソリューションをビルドすると、Microsoft.Samples.Activities.Rules セクションのツールボックス内からこのデザイナーを使用できるようになります。 このデザイナーでは、.rules ファイルと <xref:System.Workflow.Activities.Rules.RuleSet> を選択できます。 **[Edit RuleSet]** ボタンをクリックすると、WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> が表示されます。 このダイアログはホストを変更した WF 3.5 ルール エディターであり、ExternalizedPolicy4 アクティビティで実行するルールを表示および編集するために使用します。
+ExternalizedPolicy4 デザイナーを使用すると、コードを記述せずに、既存の RuleSet を使用するようにアクティビティを構成できます。 .rules ファイルのパスを設定し、使用する <xref:System.Workflow.Activities.Rules.RuleSet> の名前を指定するだけです。 また、<xref:System.Workflow.Activities.Rules.RuleSet> を変更することもできます。 ソリューションをビルドすると、Microsoft.Samples.Activities.Rules セクションのツールボックス内からこのデザイナーを使用できるようになります。 このデザイナーでは、.rules ファイルと <xref:System.Workflow.Activities.Rules.RuleSet> を選択できます。 **[ルールセットの編集]** ボタンをクリックすると、WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> が表示されます。 このダイアログはホストを変更した WF 3.5 ルール エディターであり、ExternalizedPolicy4 アクティビティで実行するルールを表示および編集するために使用します。
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 と ExternalPolicy4
 
@@ -68,7 +68,7 @@ ExternalizedPolicy4 デザイナーを使用すると、コードを記述せず
 
 1. Visual Studio を使用して、 *policy4sample.sln*ソリューションファイルを開きます。
 
-2. **ソリューション エクスプローラー**で、**ImperativeCodeClientSample** プロジェクトを右クリックし、 **[スタートアップ プロジェクトに設定]** をクリックします。
+2. **ソリューションエクスプローラー**で、 **ImperativeCodeClientSample**プロジェクトを右クリックし、 **[スタートアッププロジェクトに設定]** を選択します。
 
 3. プロジェクトを実行するには、 **Ctrl**キーを押し+**F5**キーを押します。
 
@@ -76,7 +76,7 @@ ExternalizedPolicy4 デザイナーを使用すると、コードを記述せず
 
 1. Visual Studio を使用して、 *policy4sample.sln*ソリューションファイルを開きます。
 
-2. **ソリューション エクスプローラー**で、**DesignerClientSample** プロジェクトを右クリックし、 **[スタートアップ プロジェクトに設定]** をクリックします。
+2. **ソリューションエクスプローラー**で、**デザイナ clientsample**プロジェクトを右クリックし、 **[スタートアッププロジェクトに設定]** を選択します。
 
 3. **Ctrl**+**Shift**+**B**キーを押して、プロジェクトをコンパイルします。
 
@@ -87,7 +87,7 @@ ExternalizedPolicy4 デザイナーを使用すると、コードを記述せず
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。
 >
 > このサンプルは、次のディレクトリに格納されます。
 >

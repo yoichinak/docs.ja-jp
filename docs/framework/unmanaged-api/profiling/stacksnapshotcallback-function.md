@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427082"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback 関数
-Provides the profiler with information about each managed frame and each run of unmanaged frames on the stack during a stack walk, which is initiated by the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
+[ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)メソッドによって開始されるスタックウォーク中に、各マネージフレームおよびスタック上のアンマネージフレームの各実行に関する情報をプロファイラーに提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,40 +39,40 @@ HRESULT __stdcall StackSnapshotCallback (
   
 ## <a name="parameters"></a>パラメーター  
  `funcId`  
- [in] If this value is zero, this callback is for a run of unmanaged frames; otherwise, it is the identifier of a managed function and this callback is for a managed frame.  
+ からこの値が0の場合、このコールバックはアンマネージフレームの実行用です。それ以外の場合は、マネージ関数の識別子であり、このコールバックはマネージフレーム用です。  
   
  `ip`  
- [in] The value of the native code instruction pointer in the frame.  
+ からフレーム内のネイティブコード命令ポインターの値。  
   
  `frameInfo`  
- [in] A `COR_PRF_FRAME_INFO` value that references information about the stack frame. This value is valid for use only during this callback.  
+ からスタックフレームに関する情報を参照する `COR_PRF_FRAME_INFO` 値。 この値は、このコールバック中にのみ使用できます。  
   
  `contextSize`  
- [in] The size of the `CONTEXT` structure, which is referenced by the `context` parameter.  
+ から`context` パラメーターによって参照される `CONTEXT` 構造体のサイズ。  
   
  `context`  
- [in] A pointer to a Win32 `CONTEXT` structure that represents the state of the CPU for this frame.  
+ からこのフレームの CPU の状態を表す Win32 `CONTEXT` 構造体へのポインター。  
   
- The `context` parameter is valid only if the COR_PRF_SNAPSHOT_CONTEXT flag was passed in `ICorProfilerInfo2::DoStackSnapshot`.  
+ `context` パラメーターは `ICorProfilerInfo2::DoStackSnapshot`で COR_PRF_SNAPSHOT_CONTEXT フラグが渡された場合にのみ有効です。  
   
  `clientData`  
- [in] A pointer to the client data, which is passed straight through from `ICorProfilerInfo2::DoStackSnapshot`.  
+ から`ICorProfilerInfo2::DoStackSnapshot`から直接渡されるクライアントデータへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- The `StackSnapshotCallback` function is implemented by the profiler writer. You must limit the complexity of work done in `StackSnapshotCallback`. For example, when using `ICorProfilerInfo2::DoStackSnapshot` in an asynchronous manner, the target thread may be holding locks. If code within `StackSnapshotCallback` requires the same locks, a deadlock could ensue.  
+## <a name="remarks"></a>コメント  
+ `StackSnapshotCallback` 関数は、プロファイラーライターによって実装されます。 `StackSnapshotCallback`で実行する作業の複雑さを制限する必要があります。 たとえば、非同期方式で `ICorProfilerInfo2::DoStackSnapshot` を使用する場合、ターゲットスレッドがロックを保持している可能性があります。 `StackSnapshotCallback` 内のコードで同じロックが要求された場合、デッドロックが発生する可能性があります。  
   
- The `ICorProfilerInfo2::DoStackSnapshot` method calls the `StackSnapshotCallback` function once per managed frame or once per run of unmanaged frames. If `StackSnapshotCallback` is called for a run of unmanaged frames, the profiler may use the register context (referenced by the `context` parameter) to perform its own unmanaged stack walk. In this case, the Win32 `CONTEXT` structure represents the CPU state for the most recently pushed frame within the run of unmanaged frames. Although the Win32 `CONTEXT` structure includes values for all registers, you should rely only on the values of the stack pointer register, frame pointer register, instruction pointer register, and the nonvolatile (that is, preserved) integer registers.  
+ `ICorProfilerInfo2::DoStackSnapshot` メソッドは、マネージフレームごとに1回、またはアンマネージフレームの実行ごとに1回、`StackSnapshotCallback` 関数を呼び出します。 アンマネージフレームの実行に対して `StackSnapshotCallback` が呼び出された場合、プロファイラーは、(`context` パラメーターによって参照される) レジスタコンテキストを使用して、独自のアンマネージスタックウォークを実行できます。 この場合、Win32 `CONTEXT` 構造体は、アンマネージフレームの実行中に最後にプッシュされたフレームの CPU 状態を表します。 Win32 `CONTEXT` 構造体にはすべてのレジスタの値が含まれていますが、スタックポインターレジスタ、フレームポインターレジスタ、命令ポインターレジスタ、および不揮発性の (つまり、保持されている) 整数レジスタの値のみに依存する必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorProf.idl  
+ **ヘッダー:** Corprof.idl  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DoStackSnapshot メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
 - [グローバル静的関数のプロファイル](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

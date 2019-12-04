@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437917"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember メソッド
-Gets a pointer to the MemberDef token for field or method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
+指定した <xref:System.Type> で囲まれ、指定された名前とメタデータシグネチャを持つフィールドまたはメソッドの MemberDef トークンへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,40 +39,40 @@ HRESULT FindMember (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in] The TypeDef token for the class or interface that encloses the member to search for. If this value is `mdTokenNil`, the lookup is done for a global-variable or global-function.  
+ から検索対象のメンバーを囲むクラスまたはインターフェイスの TypeDef トークン。 この値が `mdTokenNil`場合は、グローバル変数またはグローバル関数の参照が行われます。  
   
  `szName`  
- [in] The name of the member to search for.  
+ から検索対象のメンバーの名前。  
   
  `pvSigBlob`  
- [in] A pointer to the binary metadata signature of the member.  
+ からメンバーのバイナリメタデータシグネチャへのポインター。  
   
  `cbSigBlob`  
- [in] The size in bytes of `pvSigBlob`.  
+ から`pvSigBlob`のサイズ (バイト単位)。  
   
  `pmb`  
- [out] A pointer to the matching MemberDef token.  
+ 入出力一致する MemberDef トークンへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`). There might be multiple members with the same name in a class or interface. In that case, pass the member's signature to find the unique match.  
+## <a name="remarks"></a>コメント  
+ メンバーは、外側のクラスまたはインターフェイス (`td`)、その名前 (`szName`)、および必要に応じてシグネチャ (`pvSigBlob`) を使用して指定します。 クラスまたはインターフェイスに同じ名前のメンバーが複数存在する可能性があります。 その場合は、メンバーのシグネチャを渡して、一意の一致を検索します。  
   
- The signature passed to `FindMember` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMember`.  
+ シグネチャは特定のスコープにバインドされているため、`FindMember` に渡される署名は、現在のスコープで生成される必要があります。 署名には、外側のクラスまたは値の型を識別するトークンを埋め込むことができます。 トークンは、ローカルの TypeDef テーブルのインデックスです。 現在のスコープのコンテキスト外でランタイムシグネチャを作成し、その署名を入力として使用して `FindMember`することはできません。  
   
- `FindMember` finds only members that were defined directly in the class or interface; it does not find inherited members.  
+ `FindMember` は、クラスまたはインターフェイスで直接定義されたメンバーのみを検索します。継承されたメンバーは見つかりません。  
   
 > [!NOTE]
-> `FindMember` is a helper method. It calls [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); if that call does not find a match, `FindMember` then calls [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
+> `FindMember` はヘルパーメソッドです。 [IMetaDataImport:: FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); を呼び出します。この呼び出しで一致するものが見つからない場合は、`FindMember` [IMetaDataImport:: FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)を呼び出します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

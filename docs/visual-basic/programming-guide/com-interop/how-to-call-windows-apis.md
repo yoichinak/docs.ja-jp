@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348707"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>方法: Windows API を呼び出す (Visual Basic)
-This example defines and calls the `MessageBox` function in user32.dll and then passes a string to it.  
+この例では、user32.dll で `MessageBox` 関数を定義して呼び出し、その関数に文字列を渡します。  
   
 ## <a name="example"></a>例  
  [!code-vb[VbVbalrInterop#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#1)]  
@@ -25,20 +25,20 @@ This example defines and calls the `MessageBox` function in user32.dll and then 
   
 - <xref:System> 名前空間への参照  
   
-## <a name="robust-programming"></a>信頼性の高いプログラミング  
+## <a name="robust-programming"></a>堅牢性の高いプログラミング  
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
-- The method is not static, is abstract, or has been previously defined. The parent type is an interface, or the length of *name* or *dllName* is zero. (<xref:System.ArgumentException>)  
+- メソッドが静的でない、または抽象メソッドである、または以前に定義されているメソッドの場合。 親の型がインターフェイスであるか、または*名前*または*dllName*の長さが0です。 (<xref:System.ArgumentException>)  
   
-- The *name* or *dllName* is `Nothing`. (<xref:System.ArgumentNullException>)  
+- *名前*または*dllName*が `Nothing`。 (<xref:System.ArgumentNullException>)  
   
 - 含んでいる型が `CreateType` を使用して以前に作成されています。 (<xref:System.InvalidOperationException>)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [プラットフォーム呼び出しの詳細](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [プラットフォーム呼び出しの例](../../../framework/interop/platform-invoke-examples.md)
 - [アンマネージ DLL 関数の処理](../../../framework/interop/consuming-unmanaged-dll-functions.md)
-- [Defining a Method with Reflection Emit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
+- [リフレクション出力によるメソッドの定義](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
 - [チュートリアル : Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 - [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)

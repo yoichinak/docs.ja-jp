@@ -14,37 +14,37 @@ ms.locfileid: "74348643"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>方法: 値の変わらない変数を作成する (Visual Basic)
 
-The notion of a variable that does not change its value might appear to be contradictory. But there are situations when a constant is not feasible and it is useful to have a variable with a fixed value. In such a case you can define a member variable with the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.
+値を変更しない変数の概念は、矛盾しているように見えることがあります。 しかし、定数を使用できない場合は、固定値を持つ変数を使用すると便利です。 このような場合は、 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)キーワードを使用してメンバー変数を定義できます。
 
-You cannot use the [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value in the following circumstances:
+次のような状況では、 [Const ステートメント](../../../../visual-basic/language-reference/statements/const-statement.md)を使用して定数値を宣言して割り当てることはできません。
 
-- The `Const` statement does not accept the data type you want to use
+- `Const` ステートメントは、使用するデータ型を受け入れません。
 
-- You do not know the value at compile time
+- コンパイル時に値がわからない
 
-- You are unable to compute the constant value at compile time
+- コンパイル時に定数値を計算できません
 
-### <a name="to-create-a-variable-that-does-not-change-in-value"></a>To create a variable that does not change in value
+### <a name="to-create-a-variable-that-does-not-change-in-value"></a>値を変更しない変数を作成するには
 
-1. At module level, declare a member variable with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), and include the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.
+1. モジュールレベルで、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)を使用してメンバー変数を宣言し、 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)キーワードを含めます。
 
     ```vb
     Dim ReadOnly timeStarted
     ```
 
-    You can specify `ReadOnly` only on a member variable. This means you must define the variable at module level, outside of any procedure.
+    `ReadOnly` は、メンバー変数に対してのみ指定できます。 これは、プロシージャの外部でモジュールレベルで変数を定義する必要があることを意味します。
 
-2. If you can compute the value in a single statement at compile time, use an initialization clause in the `Dim` statement. Follow the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause with an equal sign (`=`), followed by an expression. Be sure the compiler can evaluate this expression to a constant value.
+2. コンパイル時に1つのステートメントで値を計算できる場合は、`Dim` ステートメントで初期化句を使用します。 [As](../../../../visual-basic/language-reference/statements/as-clause.md)句に続けて等号 (`=`) を指定し、その後に式を指定します。 コンパイラがこの式を定数値に評価できることを確認してください。
 
     ```vb
     Dim ReadOnly timeStarted As Date = Now
     ```
 
-    You can assign a value to a `ReadOnly` variable only once. Once you do so, no code can ever change its value.
+    `ReadOnly` 変数に値を割り当てることができるのは1回だけです。 その後、コードで値を変更することはできません。
 
-    If you do not know the value at compile time, or cannot compute it at compile time in a single statement, you can still assign it at run time in a constructor. To do this, you must declare the `ReadOnly` variable at class or structure level. In the constructor for that class or structure, compute the variable's fixed value, and assign it to the variable before returning from the constructor.
+    コンパイル時に値がわからない場合、またはコンパイル時に1つのステートメントで値を計算できない場合でも、コンストラクターで実行時に割り当てることができます。 これを行うには、クラスまたは構造レベルで `ReadOnly` 変数を宣言する必要があります。 そのクラスまたは構造体のコンストラクターで、変数の固定値を計算し、コンストラクターから戻る前に変数に代入します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
 - [Const ステートメント](../../../../visual-basic/language-reference/statements/const-statement.md)

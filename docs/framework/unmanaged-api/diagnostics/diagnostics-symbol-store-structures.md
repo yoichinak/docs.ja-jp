@@ -15,19 +15,19 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448516"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>シンボル ストア診断構造体
-This topic describes the unmanaged structures that the diagnostics symbol store API uses.  
+このトピックでは、診断シンボルストア API が使用するアンマネージ構造体について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [CALL_ID 構造](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
- Provides information to a debugger about a function that is being called.  
+ 呼び出されている関数についての情報をデバッガーに提供します。  
   
  [SYMLINEDELTA 構造](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- Provides information to the symbol handler about methods that were moved as a result of edits.  
+ 編集の結果として移動されたメソッドについて、シンボルハンドラーに情報を提供します。  
   
  [USER_THREAD 構造](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
- Provides information to a debugger about a thread.  
+ スレッドに関する情報をデバッガーに提供します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
   
  [シンボル ストア診断列挙型](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  

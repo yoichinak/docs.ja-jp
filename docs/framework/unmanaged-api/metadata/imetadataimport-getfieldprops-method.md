@@ -45,44 +45,44 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mb`  
- [in] A FieldDef token that represents the field to get associated metadata for.  
+ から関連付けられたメタデータを取得する対象のフィールドを表す FieldDef トークン。  
   
  `pClass`  
- [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
+ 入出力フィールドが属するクラスの型を表す TypeDef トークンへのポインター。  
   
  `szField`  
- [out] The name of the field.  
+ 入出力フィールドの名前。  
   
  `cchField`  
- [in] The size in wide characters of the buffer for *szField*.  
+ から*Szfield*のバッファーのサイズ (ワイド文字単位)。  
   
  `pchField`  
- [out] The actual size of the returned buffer.  
+ 入出力返されたバッファーの実際のサイズ。  
   
  `pdwAttr`  
- [out] Flags associated with the field's metadata.  
+ 入出力フィールドのメタデータに関連付けられているフラグ。  
   
  `ppvSigBlob`  
- [in] A pointer to the binary metadata value that describes the field.  
+ からフィールドを説明するバイナリメタデータ値へのポインター。  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ 入出力`ppvSigBlob`のサイズ (バイト単位)。  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that specifies the value type of the field.  
+ 入出力フィールドの値の型を指定するフラグ。  
   
  `ppValue`  
- [out] A constant value for the field.  
+ 入出力フィールドの定数値。  
   
  `pcchValue`  
- [out] The size in chars of `ppValue`, or zero if no string exists.  
+ 入出力`ppValue`の文字数のサイズ。文字列が存在しない場合は0。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

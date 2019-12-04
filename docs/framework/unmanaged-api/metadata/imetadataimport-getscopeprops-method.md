@@ -38,30 +38,30 @@ HRESULT GetScopeProps (
   
 ## <a name="parameters"></a>パラメーター  
  `szName`  
- [out] A buffer for the assembly or module name.  
+ 入出力アセンブリ名またはモジュール名のバッファー。  
   
  `cchName`  
- [in] The size in wide characters of `szName`.  
+ から`szName`のワイド文字単位のサイズ。  
   
  `pchName`  
- [out] The number of wide characters returned in `szName`.  
+ 入出力`szName`に返されるワイド文字数。  
   
  `pmvid`  
- [out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.  
+ [out、省略可能]アセンブリまたはモジュールのバージョンを一意に識別する GUID へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.  
+## <a name="remarks"></a>コメント  
+ これらのプロパティを設定するには、 [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)メソッドを使用します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

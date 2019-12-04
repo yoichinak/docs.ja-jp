@@ -36,24 +36,24 @@ HRESULT GetNameFromToken (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in] The token representing the object to return the name for.  
+ から名前を返すオブジェクトを表すトークン。  
   
  `pszUtf8NamePtr`  
- [out] A pointer to the UTF-8 object name in the heap.  
+ 入出力ヒープ内の UTF-8 オブジェクト名へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- `GetNameFromToken` は互換性のために残されています。 As an alternative, call a method to get the properties of the particular type of token required, such as `GetFieldProps` for a field or `GetMethodProps` for a method.  
+## <a name="remarks"></a>コメント  
+ `GetNameFromToken` は互換性のために残されています。 別の方法として、メソッドを呼び出して、メソッドのフィールドまたは `GetMethodProps` の `GetFieldProps` など、必要な特定の種類のトークンのプロパティを取得します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework Versions:** 1.0  
+ **.NET Framework のバージョン:** 1.0  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

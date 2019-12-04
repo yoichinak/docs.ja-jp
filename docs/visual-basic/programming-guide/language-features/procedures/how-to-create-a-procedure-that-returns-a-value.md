@@ -14,29 +14,29 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349722"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>方法: 値を返すプロシージャを作成する (Visual Basic)
-You use a `Function` procedure to return a value to the calling code.  
+呼び出し元のコードに値を返すには、`Function` プロシージャを使用します。  
   
-### <a name="to-create-a-procedure-that-returns-a-value"></a>To create a procedure that returns a value  
+### <a name="to-create-a-procedure-that-returns-a-value"></a>値を返すプロシージャを作成するには  
   
-1. Outside any other procedure, use a `Function` statement, followed by an `End Function` statement.  
+1. 他のプロシージャの外部では、`Function` ステートメントを使用し、その後に `End Function` ステートメントを使用します。  
   
-2. In the `Function` statement, follow the `Function` keyword with the name of the procedure, and then the parameter list in parentheses.  
+2. `Function` ステートメントで、`Function` キーワードにプロシージャの名前を指定し、その後にかっこで囲んだパラメーターリストを指定します。  
   
-3. Follow the parentheses with an `As` clause to specify the data type of the returned value.  
+3. かっこの後に `As` 句を入力し、戻り値のデータ型を指定します。  
   
-4. Place the procedure's code statements between the `Function` and `End Function` statements.  
+4. プロシージャのコードステートメントを `Function` と `End Function` ステートメントの間に配置します。  
   
-5. Use a `Return` statement to return the value to the calling code.  
+5. `Return` ステートメントを使用して、呼び出し元のコードに値を返します。  
   
-     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
+     次の `Function` プロシージャは、他の2つの辺の値を指定して、直角三角形の最長の辺 (斜辺) を計算します。  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     The following example shows a typical call to `hypotenuse`.  
+     次の例は、`hypotenuse`の一般的な呼び出しを示しています。  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)

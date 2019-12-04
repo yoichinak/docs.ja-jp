@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449112"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>ISymUnmanagedDocument::HasEmbeddedSource メソッド
-Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.  
+ドキュメントにデバッグシンボルに埋め込まれているソースがある場合に `true` を返します。それ以外の場合は `false`を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,11 +34,11 @@ HRESULT HasEmbeddedSource(
   
 ## <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.  
+ 入出力ドキュメントにデバッグシンボルに埋め込まれたソースがあるかどうかを示す変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

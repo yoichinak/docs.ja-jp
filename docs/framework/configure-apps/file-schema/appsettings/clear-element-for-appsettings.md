@@ -20,9 +20,9 @@ ms.locfileid: "74088733"
 
 カスタムアプリケーション設定をクリアします。
 
-[ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**]appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>構文
 

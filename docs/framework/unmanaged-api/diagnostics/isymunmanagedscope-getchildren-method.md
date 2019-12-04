@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446365"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren メソッド
-Gets the children of this scope.  
+このスコープの子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,21 +37,21 @@ HRESULT GetChildren(
   
 ## <a name="parameters"></a>パラメーター  
  `cChildren`  
- [in] A `ULONG32` that indicates the size of the `children` array.  
+ から`children` 配列のサイズを示す `ULONG32`。  
   
  `pcChildren`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.  
+ 入出力子を格納するために必要なバッファーのサイズを受け取る `ULONG32` へのポインター。  
   
  `children`  
- [out] The returned array of children.  
+ 入出力返された子の配列。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedScope インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
 - [GetParent メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)

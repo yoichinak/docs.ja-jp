@@ -15,31 +15,31 @@ ms.locfileid: "74330336"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Visual Basic でのプロジェクトのカスタマイズと My の拡張
 
-You can customize project templates to provide additional `My` objects. This makes it easy for other developers to find and use your objects.
+プロジェクトテンプレートをカスタマイズして、追加の `My` オブジェクトを提供できます。 これにより、他の開発者がオブジェクトを簡単に見つけて使用できるようになります。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 - [Visual Basic における My 名前空間の拡張](extending-the-my-namespace.md)  
- Describes how to add custom members and values to the `My` namespace in Visual Basic.
+ Visual Basic の `My` 名前空間にカスタムメンバーと値を追加する方法について説明します。
 - [カスタム My 拡張のパッケージ化と配置](packaging-and-deploying-custom-my-extensions.md)  
- Describes how to publish custom `My` namespace extensions by using Visual Studio templates.
+ Visual Studio テンプレートを使用して、カスタム `My` 名前空間拡張を発行する方法について説明します。
 - [Visual Basic アプリケーション モデルの拡張](extending-the-visual-basic-application-model.md)  
- Describes how to specify your own extensions to the application model by overriding members of the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> class.
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> クラスのメンバーをオーバーライドして、アプリケーションモデルに独自の拡張機能を指定する方法について説明します。
 - [My で利用可能なオブジェクトのカスタマイズ](customizing-which-objects-are-available-in-my.md)  
- Describes how to control which `My` objects are enabled by setting your project's \_MYTYPE conditional-compilation constant.
+ プロジェクトの \_MYTYPE の条件付きコンパイル定数を設定することによって、どの `My` オブジェクトを有効にするかを制御する方法について説明します。
 
 ## <a name="related-sections"></a>関連項目
 
 - [My による開発](../development-with-my/index.md)  
- Describes which `My` objects are available in different project types by default.
+ 既定では、さまざまなプロジェクトの種類で使用できる `My` オブジェクトについて説明します。
 - [Visual Basic アプリケーション モデルの概要](../development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describes Visual Basic's model for controlling the behavior of Windows Forms applications.
+ Windows フォームアプリケーションの動作を制御するための Visual Basic のモデルについて説明します。
 - [プロジェクトの種類に応じた My の機能](../development-with-my/how-my-depends-on-project-type.md)  
- Describes which `My` objects are available in different project types by default.
+ 既定では、さまざまなプロジェクトの種類で使用できる `My` オブジェクトについて説明します。
 - [条件付きコンパイル](../../programming-guide/program-structure/conditional-compilation.md)  
- Discusses how the compiler uses conditional-compilation to select particular sections of code to compile and exclude other sections.
+ コンパイラが条件付きコンパイルを使用してコードの特定のセクションを選択し、コンパイルして他のセクションを除外する方法について説明します。
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- Describes the `My` object that provides properties, methods, and events related to the current application.
+ 現在のアプリケーションに関連するプロパティ、メソッド、およびイベントを提供する `My` オブジェクトについて説明します。
 
 ## <a name="see-also"></a>関連項目
 

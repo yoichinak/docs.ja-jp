@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446506"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute メソッド
-Call to set assembly-level custom attributes.  
+を呼び出して、アセンブリレベルのカスタム属性を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,31 +41,31 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of the assembly.  
+ アセンブリの ID。  
   
  `FileToken`  
- File that defiles the attribute. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ 属性をなするファイル。 `AssemblyID` がバインドされていない .netmodule を示していない場合は NULL を指定できます。  
   
  `tkType`  
- Type of the custom attribute.  
+ カスタム属性の型。  
   
  `pCustomValue`  
- Custom value data.  
+ カスタム値データ。  
   
  `cbCustomValue`  
- Length of custom value data.  
+ カスタム値データの長さ。  
   
  `bSecurity`  
- TRUE if the custom attribute is related to assembly signing.  
+ カスタム属性がアセンブリ署名に関連付けられている場合は TRUE。  
   
  `bAllowMulti`  
- TRUE if multiple attributes are to be emitted.  
+ 複数の属性を出力する場合は TRUE。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: Miscellaneous operators
+title: その他の演算子
 ms.date: 10/18/2018
 helpviewer_keywords:
 - operators [Visual Basic]
@@ -12,25 +12,25 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344064"
 ---
-# <a name="miscellaneous-operators-visual-basic"></a>Miscellaneous operators (Visual Basic)
-The following are miscellaneous operators defined in Visual Basic.  
+# <a name="miscellaneous-operators-visual-basic"></a>その他の演算子 (Visual Basic)
+Visual Basic で定義されているその他の演算子を次に示します。  
   
-[?. null-conditional operator](null-conditional-operators.md)
+[?.null 条件演算子](null-conditional-operators.md)
 
-[?() null-conditional operator](null-conditional-operators.md)
+[?() null 条件演算子](null-conditional-operators.md)
 
- [AddressOf operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [AddressOf 演算子](../../../visual-basic/language-reference/operators/addressof-operator.md)  
   
- [Await operator](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [Await 演算子](../../../visual-basic/language-reference/operators/await-operator.md)  
   
- [GetType operator](../../../visual-basic/language-reference/operators/gettype-operator.md)  
+ [GetType 演算子](../../../visual-basic/language-reference/operators/gettype-operator.md)  
   
- [Function expression](../../../visual-basic/language-reference/operators/function-expression.md)  
+ [関数式](../../../visual-basic/language-reference/operators/function-expression.md)  
 
- [If operator](../../../visual-basic/language-reference/operators/if-operator.md)  
+ [If 演算子](../../../visual-basic/language-reference/operators/if-operator.md)  
   
- [TypeOf operator](../../../visual-basic/language-reference/operators/typeof-operator.md)  
+ [TypeOf 演算子](../../../visual-basic/language-reference/operators/typeof-operator.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Operators listed by functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

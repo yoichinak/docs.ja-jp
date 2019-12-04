@@ -15,27 +15,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351798"
 ---
 # <a name="object-variable-values-visual-basic"></a>オブジェクト変数の値 (Visual Basic)
-A variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) can refer to data of any type. The value you store in an `Object` variable is kept elsewhere in memory, while the variable itself holds a pointer to the data.  
+[オブジェクトのデータ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)の変数は、任意の型のデータを参照できます。 `Object` 変数に格納した値はメモリ内の他の場所に保持されますが、変数自体はデータへのポインターを保持します。  
   
-## <a name="object-classifier-functions"></a>Object Classifier Functions  
- Visual Basic supplies functions that return information about what an `Object` variable refers to, as shown in the following table.  
+## <a name="object-classifier-functions"></a>オブジェクト分類子関数  
+ Visual Basic には、次の表に示すように、`Object` 変数の参照先に関する情報を返す関数が用意されています。  
   
-|機能|Returns True if the Object variable refers to|  
+|関数|オブジェクト変数がを参照している場合に True を返します。|  
 |--------------|---------------------------------------------------|  
-|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|An array of values, rather than a single value|  
-|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|A [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) value, or a string that can be interpreted as a date and time value|  
-|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|An object of type <xref:System.DBNull>, which represents missing or nonexistent data|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A>|An exception object, which derives from <xref:System.Exception>|  
-|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nothing](../../../../visual-basic/language-reference/nothing.md), that is, no object is currently assigned to the variable|  
-|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|A number, or a string that can be interpreted as a number|  
-|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|A reference type (such as a string, array, delegate, or class type)|  
+|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|単一の値ではなく、値の配列。|  
+|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|[日付データ型](../../../../visual-basic/language-reference/data-types/date-data-type.md)の値、または日付と時刻の値として解釈できる文字列|  
+|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|<xref:System.DBNull>型のオブジェクト。存在しないデータまたは存在しないデータを表します。|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|<xref:System.Exception> から派生した例外オブジェクト|  
+|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[何も](../../../../visual-basic/language-reference/nothing.md)ありません。つまり、現在変数にオブジェクトが割り当てられていません。|  
+|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|数値、または数値として解釈できる文字列|  
+|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|参照型 (文字列、配列、デリゲート、またはクラス型など)|  
   
- You can use these functions to avoid submitting an invalid value to an operation or a procedure.  
+ これらの関数を使用すると、操作またはプロシージャに無効な値が送信されないようにすることができます。  
   
 ## <a name="typeof-operator"></a>TypeOf 演算子  
- You can also use the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to determine whether an object variable currently refers to a specific data type. The `TypeOf`...`Is` expression evaluates to `True` if the run-time type of the operand is derived from or implements the specified type.  
+ また、 [TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)を使用して、オブジェクト変数が現在特定のデータ型を参照しているかどうかを判断することもできます。 オペランドの実行時の型がから派生しているか、指定された型を実装している場合、`TypeOf`...`Is` 式は `True` に評価されます。  
   
- The following example uses `TypeOf` on object variables referring to value and reference types.  
+ 次の例では、値型と参照型を参照するオブジェクト変数に対して `TypeOf` を使用します。  
   
 ```vb  
 ' The following statement puts a value type (Integer) in an Object variable.  
@@ -51,7 +51,7 @@ If TypeOf frm Is Label Then Debug.WriteLine("frm is Label")
 If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")  
 ```  
   
- The preceding example writes the following lines to the **Debug** window:  
+ 前の例では、次の行を**デバッグ**ウィンドウに書き込みます。  
   
  `num is Integer`  
   
@@ -61,12 +61,12 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
   
  `frm is Object`  
   
- The object variable `num` refers to data of type `Integer`, and `frm` refers to an object of class <xref:System.Windows.Forms.Form>.  
+ オブジェクト変数 `num` は `Integer`型のデータを参照し、`frm` はクラス <xref:System.Windows.Forms.Form>のオブジェクトを参照します。  
   
-## <a name="object-arrays"></a>Object Arrays  
- You can declare and use an array of `Object` variables. This is useful when you need to handle a variety of data types and object classes. All the elements in an array must have the same declared data type. Declaring this data type as `Object` allows you to store objects and class instances alongside other data types in the array.  
+## <a name="object-arrays"></a>オブジェクトの配列  
+ `Object` 変数の配列を宣言して使用することができます。 これは、さまざまなデータ型およびオブジェクトクラスを処理する必要がある場合に便利です。 配列内のすべての要素は、宣言されたデータ型と同じである必要があります。 このデータ型を `Object` として宣言すると、オブジェクトとクラスインスタンスを配列内の他のデータ型と共に格納できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [オブジェクト変数の宣言](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)

@@ -15,8 +15,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350982"
 ---
-# <a name="-operator-visual-basic"></a>\<\< Operator (Visual Basic)
-Performs an arithmetic left shift on a bit pattern.  
+# <a name="-operator-visual-basic"></a>\<\< 演算子 (Visual Basic)
+ビットパターンに対して算術左シフトを実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,51 +26,51 @@ result = pattern << amount
   
 ## <a name="parts"></a>指定項目  
  `result`  
- 必須です。 Integral numeric value. The result of shifting the bit pattern. The data type is the same as that of `pattern`.  
+ 必須。 整数の数値。 ビットパターンをシフトした結果。 データ型は `pattern`のデータ型と同じです。  
   
  `pattern`  
- 必須です。 Integral numeric expression. The bit pattern to be shifted. The data type must be an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).  
+ 必須。 整数の数値式。 シフトされるビットパターン。 データ型は、整数型 (`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、または `ULong`) である必要があります。  
   
  `amount`  
- 必須です。 Numeric expression. The number of bits to shift the bit pattern. The data type must be `Integer` or widen to `Integer`.  
+ 必須。 数値式。 ビットパターンをシフトするビット数。 データ型 `Integer`、または `Integer`に拡大変換する必要があります。  
   
-## <a name="remarks"></a>Remarks  
- Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic left shift, the bits shifted beyond the range of the result data type are discarded, and the bit positions vacated on the right are set to zero.  
+## <a name="remarks"></a>コメント  
+ 算術シフトは循環していません。つまり、結果の一方の端からシフトされたビットはもう一方の端には再入されません。 算術左シフトでは、結果のデータ型の範囲を超えてシフトされたビットは破棄され、右側に空いているビット位置は0に設定されます。  
   
- To prevent a shift by more bits than the result can hold, Visual Basic masks the value of `amount` with a size mask that corresponds to the data type of `pattern`. The binary AND of these values is used for the shift amount. The size masks are as follows:  
+ 結果よりも多くのビットでシフトを防止するために、Visual Basic は `pattern`のデータ型に対応するサイズマスクを使用して `amount` の値をマスクします。 これらの値のバイナリとは、シフトの量に使用されます。 サイズマスクは次のとおりです。  
   
-|Data type of `pattern`|Size mask (decimal)|Size mask (hexadecimal)|  
+|`pattern` のデータ型|サイズマスク (10 進数)|サイズマスク (16 進数)|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`、 `Byte`|7|&H00000007|  
-|`Short`、 `UShort`|16|&H0000000F|  
-|`Integer`、 `UInteger`|31|&H0000001F|  
-|`Long`、 `ULong`|63|&H0000003F|  
+|`SByte`, `Byte`|7|& H00000007|  
+|`Short`, `UShort`|15|& H0000000F|  
+|`Integer`, `UInteger`|31|& H0000001F|  
+|`Long`, `ULong`|63|& H0000003F|  
   
- If `amount` is zero, the value of `result` is identical to the value of `pattern`. If `amount` is negative, it is taken as an unsigned value and masked with the appropriate size mask.  
+ `amount` が0の場合、`result` の値は `pattern`の値と同じになります。 `amount` が負の場合は、符号なしの値として取得され、適切なサイズマスクでマスクされます。  
   
- Arithmetic shifts never generate overflow exceptions.  
+ 算術シフトではオーバーフロー例外は生成されません。  
   
 > [!NOTE]
-> The `<<` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure that you understand its redefined behavior. 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+> `<<` 演算子は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 コードでこのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- The following example uses the `<<` operator to perform arithmetic left shifts on integral values. The result always has the same data type as that of the expression being shifted.  
+ 次の例では、`<<` 演算子を使用して、整数値に対して算術左シフトを実行します。 結果は、シフトする式と同じデータ型になります。  
   
  [!code-vb[VbVbalrOperators#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#12)]  
   
- The results of the previous example are as follows:  
+ 前の例の結果は次のようになります。  
   
-- `result1` is 192 (0000 0000 1100 0000).  
+- `result1` は 192 (0000 0000 1100 0000) です。  
   
-- `result2` is 3072 (0000 1100 0000 0000).  
+- `result2` は 3072 (0000 1100 0000 0000) です。  
   
-- `result3` is -32768 (1000 0000 0000 0000).  
+- `result3` は-32768 (1000 0000 0000 0000) です。  
   
-- `result4` is 384 (0000 0001 1000 0000).  
+- `result4` は 384 (0000 0001 1000 0000) です。  
   
-- `result5` is 0 (shifted 15 places to the left).  
+- `result5` が 0 (左に15桁に移動) です。  
   
- The shift amount for `result4` is calculated as 17 AND 15, which equals 1.  
+ `result4` のシフト量は、1に等しい17と15として計算されます。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -79,4 +79,4 @@ result = pattern << amount
 - [<<= 演算子](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic の算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

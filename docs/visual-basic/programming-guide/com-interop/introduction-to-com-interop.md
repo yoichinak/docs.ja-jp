@@ -13,45 +13,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353201"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM 相互運用の概要 (Visual Basic)
-The Component Object Model (COM) lets an object expose its functionality to other components and to host applications. While COM objects have been fundamental to Windows programming for many years, applications designed for the common language runtime (CLR) offer many advantages.  
+コンポーネントオブジェクトモデル (COM) を使用すると、オブジェクトはその機能を他のコンポーネントに公開したり、アプリケーションをホストしたりできます。 COM オブジェクトは長年にわたって Windows プログラミングの基本となっていますが、共通言語ランタイム (CLR) 用に設計されたアプリケーションには多くの利点があります。  
   
- .NET Framework applications will eventually replace those developed with COM. Until then, you may have to use or create COM objects by using Visual Studio. Interoperability with COM, or *COM interop*, enables you to use existing COM objects while transitioning to the .NET Framework at your own pace.  
+ .NET Framework アプリケーションは、最終的には COM で開発したものと置き換えます。 それまでは、Visual Studio を使用して COM オブジェクトを使用するか、作成する必要があります。 COM または*com 相互運用機能*との相互運用性により、既存の com オブジェクトを使用して、自分のペースで .NET Framework に移行することができます。  
   
- By using the .NET Framework to create COM components, you can use registration-free COM interop. This lets you control which DLL version is enabled when more than one version is installed on a computer, and lets end users use XCOPY or FTP to copy your application to an appropriate directory on their computer where it can be run. For more information, see [Registration-Free COM Interop](../../../framework/interop/registration-free-com-interop.md).  
+ .NET Framework を使用して COM コンポーネントを作成することにより、登録を必要としない COM 相互運用機能を使用できます。 これにより、1台のコンピューターに複数のバージョンがインストールされている場合に有効にする DLL バージョンを制御できます。エンドユーザーは、XCOPY または FTP を使用して、アプリケーションを実行可能なコンピューター上の適切なディレクトリにコピーできます。 詳細については、「登録を使用しない[COM 相互運用機能](../../../framework/interop/registration-free-com-interop.md)」を参照してください。  
   
-## <a name="managed-code-and-data"></a>Managed Code and Data  
- Code developed for the .NET Framework is referred to as *managed code*, and contains metadata that is used by the CLR. Data used by .NET Framework applications is called *managed data* because the runtime manages data-related tasks such as allocating and reclaiming memory and performing type checking. By default, Visual Basic .NET uses managed code and data, but you can access the unmanaged code and data of COM objects using interop assemblies (described later on this page).  
+## <a name="managed-code-and-data"></a>マネージコードとデータ  
+ .NET Framework 用に開発されたコードは*マネージコード*と呼ばれ、CLR によって使用されるメタデータが含まれます。 .NET Framework アプリケーションで使用されるデータは*マネージデータ*と呼ばれます。これは、ランタイムがメモリの割り当てや解放、型チェックの実行などのデータ関連タスクを管理するためです。 既定では Visual Basic .NET はマネージコードとデータを使用しますが、相互運用機能アセンブリを使用して COM オブジェクトのアンマネージコードとデータにアクセスすることができます (このページで後ほど説明します)。  
   
 ## <a name="assemblies"></a>アセンブリ  
- An assembly is the primary building block of a .NET Framework application. It is a collection of functionality that is built, versioned, and deployed as a single implementation unit containing one or more files. Each assembly contains an assembly manifest.  
+ アセンブリは、.NET Framework アプリケーションの主な構成要素です。 これは、1つ以上のファイルを含む1つの実装単位としてビルド、バージョン管理、および展開される機能のコレクションです。 各アセンブリには、アセンブリマニフェストが含まれています。  
   
-## <a name="type-libraries-and-assembly-manifests"></a>Type Libraries and Assembly Manifests  
- Type libraries describe characteristics of COM objects, such as member names and data types. Assembly manifests perform the same function for .NET Framework applications. They include information about the following:  
+## <a name="type-libraries-and-assembly-manifests"></a>タイプライブラリとアセンブリマニフェスト  
+ タイプライブラリは、メンバー名やデータ型など、COM オブジェクトの特性を記述します。 アセンブリマニフェストは、.NET Framework アプリケーションに対して同じ機能を実行します。 これらには、次の情報が含まれます。  
   
-- Assembly identity, version, culture, and digital signature.  
+- アセンブリ id、バージョン、カルチャ、およびデジタル署名。  
   
-- Files that make up the assembly implementation.  
+- アセンブリの実装を構成するファイル。  
   
-- Types and resources that make up the assembly. This includes those that are exported from it.  
+- アセンブリを構成する型とリソース。 これには、エクスポートされたものも含まれます。  
   
-- Compile-time dependencies on other assemblies.  
+- 他のアセンブリに対するコンパイル時の依存関係。  
   
-- Permissions required for the assembly to run correctly.  
+- アセンブリを正常に実行するために必要なアクセス許可。  
   
- For more information about assemblies and assembly manifests, see [Assemblies in .NET](../../../standard/assembly/index.md).  
+ アセンブリとアセンブリマニフェストの詳細については、「 [.net のアセンブリ](../../../standard/assembly/index.md)」を参照してください。  
   
-### <a name="importing-and-exporting-type-libraries"></a>Importing and Exporting Type Libraries  
- Visual Studio contains a utility, Tlbimp, that lets you import information from a type library into a .NET Framework application. You can generate type libraries from assemblies by using the Tlbexp utility.  
+### <a name="importing-and-exporting-type-libraries"></a>タイプライブラリのインポートとエクスポート  
+ Visual Studio には、Tlbimp というユーティリティが含まれています。これを使用すると、タイプライブラリから .NET Framework アプリケーションに情報をインポートできます。 アセンブリからタイプライブラリを生成するには、Tlbexp.exe ユーティリティを使用します。  
   
- For information about Tlbimp and Tlbexp, see [Tlbimp.exe (Type Library Importer)](../../../framework/tools/tlbimp-exe-type-library-importer.md) and [Tlbexp.exe (Type Library Exporter)](../../../framework/tools/tlbexp-exe-type-library-exporter.md).  
+ Tlbimp と Tlbexp.exe の詳細については、「 [tlbimp.exe (タイプライブラリインポーター)](../../../framework/tools/tlbimp-exe-type-library-importer.md) 」および「 [Tlbexp.exe (タイプライブラリエクスポーター)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)」を参照してください。  
   
-## <a name="interop-assemblies"></a>Interop Assemblies  
- Interop assemblies are .NET Framework assemblies that bridge between managed and unmanaged code, mapping COM object members to equivalent .NET Framework managed members. Interop assemblies created by Visual Basic .NET handle many of the details of working with COM objects, such as interoperability marshaling.  
+## <a name="interop-assemblies"></a>相互運用機能アセンブリ  
+ 相互運用機能アセンブリは、マネージコードとアンマネージコードの間を橋渡しし、COM オブジェクトメンバーを同等のマネージメンバー .NET Framework にマップする .NET Framework アセンブリです。 Visual Basic .NET によって作成された相互運用アセンブリは、相互運用性のマーシャリングなど、COM オブジェクトの操作に関する多くの詳細を処理します。  
   
-## <a name="interoperability-marshaling"></a>Interoperability Marshaling  
- All .NET Framework applications share a set of common types that enable interoperability of objects, regardless of the programming language that is used. The parameters and return values of COM objects sometimes use data types that differ from those used in managed code. *Interoperability marshaling* is the process of packaging parameters and return values into equivalent data types as they move to and from COM objects. For more information, see [Interop Marshaling](../../../framework/interop/interop-marshaling.md).  
+## <a name="interoperability-marshaling"></a>相互運用性のマーシャリング  
+ すべての .NET Framework アプリケーションは、使用されるプログラミング言語に関係なく、オブジェクトの相互運用性を実現する一連の共通型を共有します。 COM オブジェクトのパラメーターと戻り値は、マネージコードで使用されるものとは異なるデータ型を使用する場合があります。 *相互運用性のマーシャリング*は、COM オブジェクトとの間で移動するときに、パラメーターと戻り値を同等のデータ型にパッケージ化するプロセスです。 詳細については、「[相互運用マーシャリング](../../../framework/interop/interop-marshaling.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)
 - [チュートリアル : COM オブジェクトによる継承の実装](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)

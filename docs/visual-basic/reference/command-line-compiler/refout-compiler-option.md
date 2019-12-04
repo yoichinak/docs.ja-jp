@@ -29,11 +29,11 @@ ms.locfileid: "74348650"
 ## <a name="arguments"></a>引数
 
 `filepath`  
-The path and filename of the reference assembly. It should generally be in a sub-folder of the primary assembly. (MSBuild で使用される) 推奨規則は、プライマリ アセンブリに相対する "ref/" サブ フォルダー内に参照アセンブリを配置することです。 All folders in `filepath` must exist; the compiler does not create them.
+参照アセンブリのパスとファイル名。 通常、プライマリアセンブリのサブフォルダーに存在する必要があります。 (MSBuild で使用される) 推奨規則は、プライマリ アセンブリに相対する "ref/" サブ フォルダー内に参照アセンブリを配置することです。 `filepath` 内のすべてのフォルダーが存在している必要があります。コンパイラでは、これらは作成されません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Visual Basic supports the `-refout` switch starting with version 15.3.
+Visual Basic では、バージョン15.3 以降の `-refout` スイッチがサポートされています。
 
 参照アセンブリは、ライブラリのパブリック API サーフェイスを表すために必要最小限のメタデータのみを含む特殊なアセンブリです。 これには、ビルド ツールでアセンブリを参照するときに重要なすべてのメンバーの宣言が含まれます。ただし、すべてのメンバーの実装と、その API コントラクトに影響を与えないプライベート メンバーの宣言は除外されます。 詳細については、.NET のガイドの「[参照アセンブリ](../../../standard/assembly/reference-assemblies.md)」を参照してください。
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438764"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>ICorProfilerInfo::GetThreadContext メソッド
-Gets the context identity currently associated with the specified thread.  
+指定したスレッドに現在関連付けられているコンテキスト id を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,12 +35,12 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>パラメーター  
  `threadId`  
- [in] The ID of the thread.  
+ からスレッドの ID。  
   
  `pContextId`  
- [out] A pointer to the context ID currently associated with the specified thread. If the thread has no context currently associated with it, this function will return CORPROF_E_DATAINCOMPLETE.  
+ 入出力指定されたスレッドに現在関連付けられているコンテキスト ID へのポインター。 スレッドに現在関連付けられているコンテキストがない場合、この関数は CORPROF_E_DATAINCOMPLETE を返します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -49,6 +49,6 @@ HRESULT GetThreadContext(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436097"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo メソッド
-Gets data about the specified column in the specified table.  
+指定されたテーブル内の指定された列に関するデータを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,59 +42,59 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- [in] The index of the desired table.  
+ から目的のテーブルのインデックス。  
   
  `ixCol`  
- [in] The index of the desired column.  
+ から目的の列のインデックス。  
   
  `poCol`  
- [out] A pointer to the offset of the column in the row.  
+ 入出力行内の列のオフセットへのポインター。  
   
  `pcbCol`  
- [out] A pointer to the size, in bytes, of the column.  
+ 入出力列のサイズ (バイト単位) へのポインター。  
   
  `pType`  
- [out] A pointer to the type of the values in the column.  
+ 入出力列内の値の型へのポインター。  
   
  `ppName`  
- [out] A pointer to a pointer to the column name.  
+ 入出力列名へのポインターへのポインター。  
  
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The returned column type falls within a range of values:
+返される列の型は、値の範囲内にあります。
 
-| pType                    | 説明   | Helper function                   |
+| pType                    | 説明   | ヘルパー関数                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0..63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Coded token | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `0`..`iRidMax`<br>(0.. 63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | コード化されたトークン | **IsCodedTokenType** <br>**IsRidOrToken** |
 | `iSHORT` (96)            | Int16         | **IsFixedType**                   |
 | `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
 | `iLONG` (98)             | Int32         | **IsFixedType**                   |
 | `iULONG` (99)            | UInt32        | **IsFixedType**                   |
-| `iBYTE` (100)            | Byte          | **IsFixedType**                   |
-| `iSTRING` (101)          | 文字列型        | **IsHeapType**                    |
-| `iGUID` (102)            | GUID          | **IsHeapType**                    |
-| `iBLOB` (103)            | Blob          | **IsHeapType**                    |
+| `iBYTE` (100)            | バイト          | **IsFixedType**                   |
+| `iSTRING` (101)          | String        | **IsHeapType**                    |
+| `iGUID` (102)            | Guid          | **IsHeapType**                    |
+| `iBLOB` (103)            | BLOB          | **IsHeapType**                    |
 
-Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:
+*ヒープ*に格納されている値 (つまり `IsHeapType == true`) は、次の方法で読み取ることができます。
 
-- `iSTRING`: **IMetadataTables.GetString**
-- `iGUID`: **IMetadataTables.GetGUID**
-- `iBLOB`: **IMetadataTables.GetBlob**
+- `iSTRING`: **Imetadatatables**
+- `iGUID`: **Imetadatatables 実行できます。 GetGUID**
+- `iBLOB`: **Imetadatatables 実行できます。 GetBlob**
 
 > [!IMPORTANT]
-> To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.
+> 上の表で定義されている定数を使用するには、 *cor*ヘッダーファイルによって提供されるディレクティブ `#define _DEFINE_META_DATA_META_CONSTANTS` を含めます。
 
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

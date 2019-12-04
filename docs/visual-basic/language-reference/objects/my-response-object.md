@@ -15,19 +15,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350658"
 ---
 # <a name="myresponse-object"></a>My.Response オブジェクト
-Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>. このオブジェクトでは、HTTP 応答データをクライアントに送信し、その応答に関する情報を含めることができます。  
+<xref:System.Web.UI.Page>に関連付けられている <xref:System.Web.HttpResponse> オブジェクトを取得します。 このオブジェクトでは、HTTP 応答データをクライアントに送信し、その応答に関する情報を含めることができます。  
   
-## <a name="remarks"></a>Remarks  
- The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.  
+## <a name="remarks"></a>コメント  
+ `My.Response` オブジェクトには、ページに関連付けられている現在の <xref:System.Web.HttpResponse> オブジェクトが含まれています。  
   
- The `My.Response` object is only available for ASP.NET applications.  
+ `My.Response` オブジェクトは、ASP.NET アプリケーションでのみ使用できます。  
   
 ## <a name="example"></a>例  
- The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.  
+ 次の例では、`My.Request` オブジェクトからヘッダーコレクションを取得し、`My.Response` オブジェクトを使用して ASP.NET ページに書き込みます。  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Web.HttpResponse>
 - [My.Request オブジェクト](../../../visual-basic/language-reference/objects/my-request-object.md)

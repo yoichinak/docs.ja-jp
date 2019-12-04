@@ -13,9 +13,9 @@ ms.locfileid: "74330294"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic でのコンポーネントの作成および使用
 
-*コンポーネント*は、<xref:System.ComponentModel.IComponent?displayProperty=nameWithType> インターフェイスを実装するか、<xref:System.ComponentModel.IComponent> を実装するクラスから直接的または間接的に派生するクラスです。 A .NET Framework component is an object that is reusable, can interact with other objects, and provides control over external resources and design-time support.  
+*コンポーネント*は、<xref:System.ComponentModel.IComponent?displayProperty=nameWithType> インターフェイスを実装するか、<xref:System.ComponentModel.IComponent> を実装するクラスから直接的または間接的に派生するクラスです。 .NET Framework コンポーネントは、再利用可能なオブジェクトであり、他のオブジェクトと対話したり、外部のリソースやデザイン時のサポートを制御したりすることができます。  
   
- コンポーネントの重要な特徴の 1 つは、コンポーネントがデザイン可能であるということです。つまり、コンポーネントであるクラスは Visual Studio 統合開発環境で使用できます。 コンポーネントは、ツールボックスへの追加、フォームへのドラッグ アンド ドロップ、デザイン サーフェイスでの操作が可能です。 Notice that base design-time support for components is built into the .NET Framework; a component developer does not have to do any additional work to take advantage of the base design-time functionality.  
+ コンポーネントの重要な特徴の 1 つは、コンポーネントがデザイン可能であるということです。つまり、コンポーネントであるクラスは Visual Studio 統合開発環境で使用できます。 コンポーネントは、ツールボックスへの追加、フォームへのドラッグ アンド ドロップ、デザイン サーフェイスでの操作が可能です。 コンポーネントの基本デザイン時サポートが .NET Framework に組み込まれていることに注意してください。基本デザイン時機能を利用するために、コンポーネント開発者は追加の作業を行う必要はありません。  
   
  デザイン可能という点では、"*コントロール*" もコンポーネントに似ています。 ただし、コントロールにはユーザー インターフェイスが用意されているのに対し、コンポーネントには用意されていません。 コントロールは基本コントロール クラスである <xref:System.Windows.Forms.Control> または <xref:System.Web.UI.Control> から派生する必要があります。  
   
@@ -37,35 +37,35 @@ ms.locfileid: "74330294"
   
  核となるコンポーネント クラスは次のとおりです。  
   
-- <xref:System.ComponentModel.Component>. <xref:System.ComponentModel.IComponent> インターフェイスの基本実装。 このクラスにより、アプリケーション間でオブジェクトの共有が可能になります。  
+- <xref:System.ComponentModel.Component> で初期化します。 <xref:System.ComponentModel.IComponent> インターフェイスの基本実装。 このクラスにより、アプリケーション間でオブジェクトの共有が可能になります。  
   
-- <xref:System.ComponentModel.MarshalByValueComponent>. <xref:System.ComponentModel.IComponent> インターフェイスの基本実装。  
+- <xref:System.ComponentModel.MarshalByValueComponent> で初期化します。 <xref:System.ComponentModel.IComponent> インターフェイスの基本実装。  
   
-- <xref:System.ComponentModel.Container>. <xref:System.ComponentModel.IContainer> インターフェイスの基本実装。 このクラスは、0 個以上のコンポーネントをカプセル化します。  
+- <xref:System.ComponentModel.Container> で初期化します。 <xref:System.ComponentModel.IContainer> インターフェイスの基本実装。 このクラスは、0 個以上のコンポーネントをカプセル化します。  
   
  コンポーネントのライセンス処理に使用するクラスのいくつかを次に示します。  
   
-- <xref:System.ComponentModel.License>. すべてのライセンスの抽象基底クラスです。 ライセンスは、コンポーネントの特定のインスタンスに付与されます。  
+- <xref:System.ComponentModel.License> で初期化します。 すべてのライセンスの抽象基底クラスです。 ライセンスは、コンポーネントの特定のインスタンスに付与されます。  
   
-- <xref:System.ComponentModel.LicenseManager>. コンポーネントにライセンスを追加し、<xref:System.ComponentModel.LicenseProvider> を管理するためのプロパティとメソッドを提供します。  
+- <xref:System.ComponentModel.LicenseManager> で初期化します。 コンポーネントにライセンスを追加し、<xref:System.ComponentModel.LicenseProvider> を管理するためのプロパティとメソッドを提供します。  
   
-- <xref:System.ComponentModel.LicenseProvider>. ライセンス プロバイダーを実装するための抽象基底クラスです。  
+- <xref:System.ComponentModel.LicenseProvider> で初期化します。 ライセンス プロバイダーを実装するための抽象基底クラスです。  
   
-- <xref:System.ComponentModel.LicenseProviderAttribute>. クラスで使用する <xref:System.ComponentModel.LicenseProvider> クラスを指定します。  
+- <xref:System.ComponentModel.LicenseProviderAttribute> で初期化します。 クラスで使用する <xref:System.ComponentModel.LicenseProvider> クラスを指定します。  
   
  コンポーネントの説明や永続化に一般的に使用するクラスを次に示します。  
   
-- <xref:System.ComponentModel.TypeDescriptor>. 属性、プロパティ、イベントなど、コンポーネントの特性に関する情報を提供します。  
+- <xref:System.ComponentModel.TypeDescriptor> で初期化します。 属性、プロパティ、イベントなど、コンポーネントの特性に関する情報を提供します。  
   
-- <xref:System.ComponentModel.EventDescriptor>. イベントに関する情報を提供します。  
+- <xref:System.ComponentModel.EventDescriptor> で初期化します。 イベントに関する情報を提供します。  
   
-- <xref:System.ComponentModel.PropertyDescriptor>. プロパティに関する情報を提供します。  
+- <xref:System.ComponentModel.PropertyDescriptor> で初期化します。 プロパティに関する情報を提供します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
 
  [コントロールとコンポーネントの作成時のトラブルシューティング](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  一般的な問題に対処する方法について説明します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [方法: Windows フォームでデザイン時サポートにアクセスする](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

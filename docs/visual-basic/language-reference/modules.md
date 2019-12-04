@@ -13,24 +13,24 @@ ms.locfileid: "74344186"
 ---
 # <a name="modules-visual-basic"></a>モジュール (Visual Basic)
 
-Visual Basic provides several modules that enable you to simplify common tasks in your code, including manipulating strings, performing mathematical calculations, getting system information, performing file and directory operations, and so on. The following table lists the modules provided by Visual Basic.  
+Visual Basic には、文字列の操作、算術計算の実行、システム情報の取得、ファイルとディレクトリの操作の実行など、コード内の一般的なタスクを簡略化するためのいくつかのモジュールが用意されています。 次の表に、Visual Basic によって提供されるモジュールの一覧を示します。  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.Constants>|Contains miscellaneous constants. These constants can be used anywhere in your code.|  
-|<xref:Microsoft.VisualBasic.ControlChars>|Contains constant control characters for printing and displaying text.|  
-|<xref:Microsoft.VisualBasic.Conversion>|Contains members that convert decimal numbers to other bases, numbers to strings, strings to numbers, and one data type to another.|  
-|<xref:Microsoft.VisualBasic.DateAndTime>|Contains members that get the current date or time, perform date calculations, return a date or time, set the date or time, or time the duration of a process.|  
-|<xref:Microsoft.VisualBasic.ErrObject>|Contains information about run-time errors and methods to raise or clear an error.|  
-|<xref:Microsoft.VisualBasic.FileSystem>|Contains members that perform file, directory or folder, and system operations.|  
-|<xref:Microsoft.VisualBasic.Financial>|Contains procedures that are used to perform financial calculations.|  
-|<xref:Microsoft.VisualBasic.Globals>|Contains information about the current scripting engine version.|  
-|<xref:Microsoft.VisualBasic.Information>|Contains the members that return, test for, or verify information such as array size, type names, and so on.|  
-|<xref:Microsoft.VisualBasic.Interaction>|Contains members interact with objects, applications, and systems.|  
-|<xref:Microsoft.VisualBasic.Strings>|Contains members that perform string operations such as reformatting strings, searching a string, getting the length of a string, and so on.|  
-|<xref:Microsoft.VisualBasic.VBMath>|Contains members perform mathematical operations.|  
+|<xref:Microsoft.VisualBasic.Constants>|その他の定数を含みます。 これらの定数は、コード内の任意の場所で使用できます。|  
+|<xref:Microsoft.VisualBasic.ControlChars>|テキストを印刷および表示するための一定の制御文字が含まれています。|  
+|<xref:Microsoft.VisualBasic.Conversion>|10進数を他の基数に変換するメンバー、数値を文字列に変換するメンバー、数値に文字列を変換するメンバー、および1つのデータ型を別のデータ型に変換するメンバーが含まれます。|  
+|<xref:Microsoft.VisualBasic.DateAndTime>|現在の日付または時刻を取得したり、日付の計算を実行したり、日付または時刻を返したり、プロセスの日付または時刻を設定したりするメンバーが含まれます。|  
+|<xref:Microsoft.VisualBasic.ErrObject>|エラーを発生させる、またはクリアするためのランタイムエラーとメソッドについて説明します。|  
+|<xref:Microsoft.VisualBasic.FileSystem>|ファイル、ディレクトリ、またはフォルダー、およびシステム操作を実行するメンバーが含まれています。|  
+|<xref:Microsoft.VisualBasic.Financial>|財務計算の実行に使用する手順について説明します。|  
+|<xref:Microsoft.VisualBasic.Globals>|現在のスクリプトエンジンのバージョンに関する情報を格納します。|  
+|<xref:Microsoft.VisualBasic.Information>|配列のサイズ、型名などの情報を返す、テストする、または検証するメンバーが含まれています。|  
+|<xref:Microsoft.VisualBasic.Interaction>|メンバーは、オブジェクト、アプリケーション、およびシステムと対話します。|  
+|<xref:Microsoft.VisualBasic.Strings>|文字列の再フォーマット、文字列の検索、文字列の長さの取得などの文字列操作を実行するメンバーが含まれます。|  
+|<xref:Microsoft.VisualBasic.VBMath>|数学演算を実行するメンバーが含まれています。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic の言語リファレンス](../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../visual-basic/index.md)

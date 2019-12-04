@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448021"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted メソッド
-Notifies the profiler that the runtime has started to unload a function.  
+ランタイムが関数のアンロードを開始したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,12 +34,12 @@ HRESULT FunctionUnloadStarted(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in] The ID of the function that is being unloaded.  
+ からアンロードされる関数の ID。  
   
-## <a name="remarks"></a>Remarks  
- The value of the `functionId` parameter is no longer valid after this method returns to the caller.  
+## <a name="remarks"></a>コメント  
+ このメソッドが呼び出し元に戻った後、`functionId` パラメーターの値は無効になりました。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -48,6 +48,6 @@ HRESULT FunctionUnloadStarted(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446928"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated メソッド
-Notifies the profiler that a thread has been created.  
+スレッドが作成されたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,12 +34,12 @@ HRESULT ThreadCreated(
   
 ## <a name="parameters"></a>パラメーター  
  `threadId`  
- [in] The ID of the thread that has been created.  
+ から作成されたスレッドの ID。  
   
-## <a name="remarks"></a>Remarks  
- The `threadId` value is immediately valid.  
+## <a name="remarks"></a>コメント  
+ `threadId` 値はすぐに有効になります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

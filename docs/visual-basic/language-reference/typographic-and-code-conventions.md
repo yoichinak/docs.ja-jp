@@ -19,39 +19,39 @@ ms.locfileid: "74352711"
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>表記規則とコード規則 (Visual Basic)
 
-Visual Basic documentation uses the following typographic and code conventions.  
+Visual Basic のドキュメントでは、次の表記規則とコード規則に従って記述されています。  
   
-## <a name="typographic-conventions"></a>Typographic Conventions  
-  
-|例|説明|  
-|-------------|-----------------|  
-|`Sub`、 `If`、 `ChDir`、 `Print`、 `True`、 `Debug`|Language-specific keywords and runtime members have initial uppercase letters and are formatted as shown in this example.|  
-|**SmallProject**, **ButtonCollection**|Words and phrases you are instructed to type are formatted as shown in this example.|  
-|[Module ステートメント](../../visual-basic/language-reference/statements/module-statement.md)|Links you can click to go to another Help page are formatted as shown in this example.|  
-|*object*, *variableName*, `argumentList`|Placeholders for information that you supply are formatted as shown in this example.|  
-|[ Shadows ], [ *expressionList* ]|In syntax, optional items are enclosed in brackets.|  
-|{ `Public` &#124; `Friend` &#124; `Private` }|In syntax, when you must make a choice between two or more items, the items are enclosed in braces and separated by vertical bars.<br /><br /> You must select one, and only one, of the items.|  
-|[ `Protected` &#124; `Friend` ]|In syntax, when you have the option of selecting between two or more items, the items are enclosed in square brackets and separated by vertical bars.<br /><br /> You can select any combination of the items, or no item.|  
-|[{ `ByVal` &#124; `ByRef` }]|In syntax, when you can select no more than one item, but you can also omit the items completely, the items are enclosed in square brackets surrounded by braces and separated by vertical bars.|  
-|*memberName*1, *memberName*2, *memberName*3|Multiple instances of the same placeholder are differentiated by subscripts, as shown in the example.|  
-|*memberName1*<br /><br /> ...<br /><br /> *memberNameN*|In syntax, an ellipsis (...) is used to indicate an indefinite number of items of the kind immediately in front of the ellipsis.<br /><br /> In code, ellipses signify code omitted for the sake of clarity.|  
-|ESC, ENTER|Key names and key sequences on the keyboard appear in all uppercase letters.|  
-|ALT+F1|When plus signs (+) appear between key names, you must hold down one key while pressing the other. For example, ALT+F1 means hold down the ALT key while pressing the F1 key.|  
-  
-## <a name="code-conventions"></a>Code Conventions  
+## <a name="typographic-conventions"></a>表記規則  
   
 |例|説明|  
 |-------------|-----------------|  
-|`sampleString = "Hello, world!"`|Code samples appear in a fixed-pitch font and are formatted as shown in this example.|  
-|The previous statement sets the value of `sampleString` to "Hello, world!"|Code elements in explanatory text appear in a fixed-pitch font, as shown in this example.|  
-|`' This is a comment.`<br /><br /> `REM This is also a comment.`|Code comments are introduced by an apostrophe (') or the REM keyword.|  
-|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|A space followed by an underscore ( _) at the end of a line indicates that the statement continues on the following line.|  
+|`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|Visual Basic 特有のキーワードやランタイム メンバは、太字で先頭を大文字にして表記します。|  
+|**SmallProject**、 **buttoncollection**|入力する語句は、次の例に示すように書式設定されます。|  
+|[Module ステートメント](../../visual-basic/language-reference/statements/module-statement.md)|別のヘルプページにアクセスするためにクリックできるリンクは、この例に示すように書式設定されています。|  
+|*object*、 *variableName*、`argumentList`|指定する情報のプレースホルダーは、次の例に示すように書式設定されます。|  
+|[影]、[*式の一覧*]|構文では、省略可能な項目が角かっこで囲まれています。|  
+|{`Public` &#124; `Friend` &#124; `Private`}|構文では、2つ以上の項目のいずれかを選択する必要がある場合、項目は中かっこで囲まれ、縦棒で区切られます。<br /><br /> 項目を1つだけ選択する必要があります。|  
+|[`Protected` &#124; `Friend`]|構文では、2つ以上の項目を選択するオプションがある場合、項目は角かっこで囲まれ、縦棒で区切られます。<br /><br /> 項目の任意の組み合わせを選択することも、項目を使用しないこともできます。|  
+|[{`ByVal` &#124; `ByRef`}]|構文では、複数の項目を選択できますが、項目を完全に省略することもできます。これらの項目は、中かっこで囲まれ、縦棒で区切られて角かっこで囲まれます。|  
+|*membername*1、 *Membername*2、 *membername*3|同じプレースホルダーの複数のインスタンスは、例に示すように、添字によって区別されます。|  
+|*memberName1*<br /><br /> ...<br /><br /> *memberNameN*|構文では、省略記号 (...) を使用して、省略記号の直前にある種類の項目の不定数を示します。<br /><br /> コードでは、省略記号はわかりやすくするために省略されていることを示します。|  
+|ESC, ENTER|キーボードのキー名とキーシーケンスは、すべて大文字で表示されます。|  
+|ALT + F1|プラス記号 (+) は、キーの組み合わせを表します。 たとえば、Alt + F1 は Alt キーを押しながら、F1 キーを押すことを表します。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="code-conventions"></a>コード規則  
+  
+|例|説明|  
+|-------------|-----------------|  
+|`sampleString = "Hello, world!"`|コードサンプルは固定ピッチフォントで表示され、次の例に示すように書式設定されます。|  
+|前のステートメントにより、`sampleString` の値が "Hello, world!" に設定されます。|説明のテキスト内のコード要素は、この例で示すように固定ピッチ フォントで表示されます。|  
+|`' This is a comment.`<br /><br /> `REM This is also a comment.`|コードコメントは、アポストロフィ (') または REM キーワードによって導入されます。|  
+|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|行の末尾にスペースとアンダースコア (_) が続く場合は、ステートメントが次の行で続行されることを示します。|  
+  
+## <a name="see-also"></a>参照
 
 - [Visual Basic の言語リファレンス](../../visual-basic/language-reference/index.md)
 - [キーワード](../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic ランタイム ライブラリのメンバー](../../visual-basic/language-reference/runtime-library-members.md)
-- [Visual Basic Naming Conventions](../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic 名前付け規則](../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [方法 : コード内でステートメントを分割および連結する](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
 - [コード内のコメント](../../visual-basic/programming-guide/program-structure/comments-in-code.md)

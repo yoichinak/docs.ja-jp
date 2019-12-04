@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333014"
 ---
 # <a name="return-statement-visual-basic"></a>Return ステートメント (Visual Basic)
-Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.  
+`Function`、`Sub`、`Get`、`Set`、または `Operator` プロシージャを呼び出したコードに制御を戻します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -27,32 +27,32 @@ Return
 Return expression  
 ```  
   
-## <a name="part"></a>パーツ  
+## <a name="part"></a>要素  
  `expression`  
- Required in a `Function`, `Get`, or `Operator` procedure. Expression that represents the value to be returned to the calling code.  
+ `Function`、`Get`、または `Operator` プロシージャで必要です。 呼び出し元のコードに返される値を表す式。  
   
-## <a name="remarks"></a>Remarks  
- In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.  
+## <a name="remarks"></a>コメント  
+ `Sub` または `Set` プロシージャでは、`Return` ステートメントは `Exit Sub` または `Exit Property` ステートメントと同じであり、`expression` を指定することはできません。  
   
- In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure. In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement. In an `Operator` procedure, you must use `Return expression`.  
+ `Function`、`Get`、または `Operator` プロシージャでは、`Return` ステートメントに `expression`を含める必要があります。また、`expression` は、プロシージャの戻り値の型に変換可能なデータ型に評価される必要があります。 `Function` または `Get` の手順では、プロシージャ名に式を代入して戻り値として使用し、`Exit Function` または `Exit Property` ステートメントを実行する方法もあります。 `Operator` の手順では、`Return expression`を使用する必要があります。  
   
- You can include as many `Return` statements as appropriate in the same procedure.  
+ 同じ手順で、必要に応じて `Return` ステートメントをいくつでも含めることができます。  
   
 > [!NOTE]
-> The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes. A `Return` statement cannot be included in a `Finally` block.  
+> `Finally` ブロック内のコードは、`Try` または `Catch` ブロック内の `Return` ステートメントが検出された後、その `Return` ステートメントが実行される前に実行されます。 `Return` ステートメントを `Finally` ブロックに含めることはできません。  
   
 ## <a name="example"></a>例  
- The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.  
+ 次の例では、`Return` ステートメントを複数回使用して、プロシージャが他の操作を行う必要がない場合に、呼び出し元のコードに戻ります。  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)
 - [Set ステートメント](../../../visual-basic/language-reference/statements/set-statement.md)
-- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Exit ステートメント](../../../visual-basic/language-reference/statements/exit-statement.md)
 - [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

@@ -38,33 +38,33 @@ HRESULT EnumTypeRefs (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
  `rTypeRefs`  
- [out] The array used to store the TypeRef tokens.  
+ 入出力TypeRef トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rTypeRefs` 配列の最大サイズ。  
   
  `pcTypeRefs`  
- [out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.  
+ 入出力`rTypeRefs`で返された TypeRef トークンの数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeRefs` is zero.|  
+|`S_OK`|`EnumTypeRefs` が正常に返されました。|  
+|`S_FALSE`|列挙するトークンがありません。 この場合、`pcTypeRefs` は0になります。|  
   
-## <a name="remarks"></a>Remarks  
- A TypeRef token represents a reference to a type.  
+## <a name="remarks"></a>コメント  
+ TypeRef トークンは、型への参照を表します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

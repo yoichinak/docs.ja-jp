@@ -40,13 +40,13 @@ ms.locfileid: "74345055"
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>インターフェイスの実装  
- The Visual Basic reserved word `Implements` is used in two ways. `Implements` ステートメントは、クラスまたは構造体がインターフェイスを実装することを示します。 `Implements` キーワードは、クラス メンバーまたは構造体メンバーが特定のインターフェイス メンバーを実装することを示します。  
+ Visual Basic の予約語 `Implements` は、次の2つの方法で使用されます。 `Implements` ステートメントは、クラスまたは構造体がインターフェイスを実装することを示します。 `Implements` キーワードは、クラス メンバーまたは構造体メンバーが特定のインターフェイス メンバーを実装することを示します。  
   
 ### <a name="implements-statement"></a>Implements ステートメント  
  クラスまたは構造体が 1 つ以上のインターフェイスを実装する場合は、`Implements` ステートメントを `Class` または `Structure` ステートメントの直後に記述する必要があります。 `Implements` ステートメントには、クラスによって実装されるインターフェイスのコンマ区切りのリストが必要です。 クラスまたは構造体は、すべてのインターフェイス メンバーを `Implements` キーワードを使用して実装する必要があります。  
   
 ### <a name="implements-keyword"></a>Implements キーワード  
- `Implements` キーワードには、実装されるインターフェイス メンバーのコンマ区切りのリストが必要です。 一般的には、1 つのインターフェイス メンバーのみが指定されますが、複数のメンバーを指定することもできます。 インターフェイス メンバーの指定は、クラス内の implements ステートメントで指定する必要があるインターフェイス名と、ピリオドと、実装されるメンバー関数、プロパティ、またはイベントの名前で構成されます。 The name of a member that implements an interface member can use any legal identifier, and it is not limited to the `InterfaceName_MethodName` convention used in earlier versions of Visual Basic.  
+ `Implements` キーワードには、実装されるインターフェイス メンバーのコンマ区切りのリストが必要です。 一般的には、1 つのインターフェイス メンバーのみが指定されますが、複数のメンバーを指定することもできます。 インターフェイス メンバーの指定は、クラス内の implements ステートメントで指定する必要があるインターフェイス名と、ピリオドと、実装されるメンバー関数、プロパティ、またはイベントの名前で構成されます。 インターフェイスメンバーを実装するメンバーの名前には、任意の有効な識別子を使用できます。また、以前のバージョンの Visual Basic で使用されている `InterfaceName_MethodName` 規則に限定されません。  
   
  たとえば、次のコードは、インターフェイスのメソッドを実装する `Sub1` という名前のサブルーチンを宣言する方法を示しています。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "74345055"
   
  [!code-vb[VbVbalrOOP#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#40)]  
   
- 最後の例は、`Interface1` から継承されたメソッドを含めて、`Interface2` を実装します。  
+ 最後の例は、`Interface2` から継承されたメソッドを含めて、`Interface1` を実装します。  
   
  [!code-vb[VbVbalrOOP#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#41)]  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74345055"
   
 ## <a name="related-topics"></a>関連トピック  
   
-|Title|説明|  
+|[タイトル]|説明|  
 |-----------|-----------------|  
 |[チュートリアル: インターフェイスの作成と実装](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|独自のインターフェイスを定義および実装する処理の詳細な手順を説明します。|  
-|[ジェネリック インターフェイスの変性](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|ジェネリック インターフェイスでの共変性と反変性について説明し、.NET Framework でのバリアント ジェネリック インターフェイスの一覧を示します。|
+|[ジェネリック インターフェイスの分散](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|ジェネリック インターフェイスでの共変性と反変性について説明し、.NET Framework でのバリアント ジェネリック インターフェイスの一覧を示します。|

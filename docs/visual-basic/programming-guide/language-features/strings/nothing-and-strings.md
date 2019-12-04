@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344296"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a>Visual Basic の Nothing と文字列
-The Visual Basic runtime and the .NET Framework evaluate `Nothing` differently when it comes to strings.  
+Visual Basic ランタイムと .NET Framework は、文字列に関して異なる `Nothing` を評価します。  
   
-## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic Runtime and the .NET Framework  
+## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic ランタイムと .NET Framework  
  次に例を示します。  
   
  [!code-vb[VbVbalrStrings#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#47)]  
   
- The Visual Basic runtime usually evaluates `Nothing` as an empty string (""). The .NET Framework does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.  
+ Visual Basic ランタイムは通常、`Nothing` を空の文字列 ("") として評価します。 ただし、.NET Framework は、`Nothing`で文字列操作を実行しようとしたときに、例外をスローします。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

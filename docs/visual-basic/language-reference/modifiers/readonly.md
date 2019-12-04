@@ -18,26 +18,26 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351276"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
-Specifies that a variable or property can be read but not written.
+変数またはプロパティを読み取ることができても書き込まれないことを指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 ## <a name="rules"></a>ルール
 
-- **Declaration Context.** `ReadOnly` は、モジュール レベルでのみ使用できます。 This means the declaration context for a `ReadOnly` element must be a class, structure, or module, and cannot be a source file, namespace, or procedure.
+- **宣言コンテキスト。** `ReadOnly` は、モジュール レベルでのみ使用できます。 つまり、`ReadOnly` 要素の宣言コンテキストはクラス、構造体、またはモジュールである必要があり、ソースファイル、名前空間、またはプロシージャにすることはできません。
 
-- **Combined Modifiers.** You cannot specify `ReadOnly` together with `Static` in the same declaration.
+- **結合された修飾子。** 同じ宣言内の `Static` と共に `ReadOnly` を指定することはできません。
 
-- **Assigning a Value.** Code consuming a `ReadOnly` property cannot set its value. But code that has access to the underlying storage can assign or change the value at any time.
+- **値の割り当て。** `ReadOnly` プロパティを使用するコードでは、値を設定できません。 ただし、基になるストレージにアクセスできるコードは、いつでも値を割り当てたり、変更したりできます。
 
-     You can assign a value to a `ReadOnly` variable only in its declaration or in the constructor of a class or structure in which it is defined.
+     `ReadOnly` 変数に値を割り当てることができるのは、その宣言、またはそれが定義されているクラスまたは構造体のコンストラクター内でのみです。
 
-## <a name="when-to-use-a-readonly-variable"></a>When to Use a ReadOnly Variable
+## <a name="when-to-use-a-readonly-variable"></a>ReadOnly 変数を使用する場合
 
-There are situations in which you cannot use a [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value. For example, the `Const` statement might not accept the data type you want to assign, or you might not be able to compute the value at compile time with a constant expression. You might not even know the value at compile time. In these cases, you can use a `ReadOnly` variable to hold a constant value.
+[Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)を使用して定数値を宣言し、割り当てることができない場合があります。 たとえば、`Const` ステートメントでは、割り当てたいデータ型が受け入れられない場合や、コンパイル時に定数式を使用して値を計算できない場合があります。 コンパイル時に値がわからない場合もあります。 このような場合は、`ReadOnly` 変数を使用して定数値を保持できます。
 
 > [!IMPORTANT]
-> If the data type of the variable is a reference type, such as an array or a class instance, its members can be changed even if the variable itself is `ReadOnly`. 次に例を示します。
+> 変数のデータ型が配列やクラスインスタンスなどの参照型である場合、変数自体が `ReadOnly`場合でも、そのメンバーを変更できます。 これを次の例に示します。
 
 ```vb
 ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}
@@ -46,13 +46,13 @@ Sub ChangeArrayElement()
 End Sub
 ```
 
-When initialized, the array pointed to by `characterArray()` holds "x", "y", and "z". Because the variable `characterArray` is `ReadOnly`, you cannot change its value once it is initialized; that is, you cannot assign a new array to it. However, you can change the values of one or more of the array members. Following a call to the procedure `ChangeArrayElement`, the array pointed to by `characterArray()` holds "x", "M", and "z".
+初期化されると、`characterArray()` が指す配列は、"x"、"y"、および "z" を保持します。 変数 `characterArray` が `ReadOnly`ので、初期化後に値を変更することはできません。つまり、新しい配列を割り当てることはできません。 ただし、1つまたは複数の配列メンバーの値を変更できます。 プロシージャ `ChangeArrayElement`の呼び出しの後、`characterArray()` が指す配列は、"x"、"M"、および "z" を保持します。
 
-Note that this is similar to declaring a procedure parameter to be [ByVal](byval.md), which prevents the procedure from changing the calling argument itself but allows it to change its members.
+これは、プロシージャパラメーターを[ByVal](byval.md)に宣言するのと似ています。これにより、プロシージャが呼び出し元の引数自体を変更するのではなく、メンバーを変更することができます。
 
 ## <a name="example"></a>例
 
-The following example defines a `ReadOnly` property for the date on which an employee was hired. The class stores the property value internally as a `Private` variable, and only code inside the class can change that value. However, the property is `Public`, and any code that can access the class can read the property.
+次の例では、従業員が雇用された日付の `ReadOnly` プロパティを定義します。 クラスは `Private` 変数として内部的にプロパティ値を格納します。クラス内のコードだけがその値を変更できます。 ただし、プロパティは `Public`、クラスにアクセスできるすべてのコードでプロパティを読み取ることができます。
 
 [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]
 
@@ -61,7 +61,7 @@ The following example defines a `ReadOnly` property for the date on which an emp
 - [Dim ステートメント](../statements/dim-statement.md)
 - [Property ステートメント](../statements/property-statement.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WriteOnly](writeonly.md)
 - [キーワード](../keywords/index.md)

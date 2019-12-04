@@ -38,23 +38,23 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mur`  
- [in] The ModuleRef metadata token that references the module to get metadata information for.  
+ からメタデータ情報を取得するモジュールを参照する ModuleRef メタデータトークン。  
   
  `szName`  
- [out] A buffer to hold the module name.  
+ 入出力モジュール名を保持するバッファー。  
   
  `cchName`  
- [in] The requested size of `szName` in wide characters.  
+ から要求されたサイズの `szName` ワイド文字数。  
   
  `pchName`  
- [out] The returned size of `szName` in wide characters.  
+ 入出力`szName` の返されたサイズをワイド文字数で返します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

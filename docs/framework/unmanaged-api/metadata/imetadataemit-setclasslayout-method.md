@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441767"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout メソッド
-Completes the layout of fields for a class that has been defined by a prior call to [DefineTypeDef Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+以前に呼び出した[Typedef メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)の呼び出しで定義されたクラスのフィールドのレイアウトを完了します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,36 +38,36 @@ HRESULT SetClassLayout (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in] An `mdTypeDef` token that specifies the class to be laid out.  
+ からレイアウトするクラスを指定する `mdTypeDef` トークン。  
   
  `dwPackSize`  
- [in] The packing size: 1, 2, 4, 8 or 16 bytes. The packing size is the number of bytes between adjacent fields.  
+ からパッキングサイズは1、2、4、8、または16バイトです。 パッキングサイズは、隣接するフィールド間のバイト数です。  
   
  `rFieldOffsets`  
- [in] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) structures, each of which specifies a field of the class and the field's offset within the class. Terminate the array with `mdTokenNil`.  
+ から[COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)構造体の配列。各構造体は、クラスのフィールドと、クラス内のフィールドのオフセットを指定します。 `mdTokenNil`で配列を終了します。  
   
  `ulClassSize`  
- [in] The size, in bytes, of the class.  
+ からクラスのサイズ (バイト単位)。  
   
-## <a name="remarks"></a>Remarks  
- The class is initially defined by calling the [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) method, and specifying one of three layouts for the fields of the class: automatic, sequential, or explicit. Normally, you would use automatic layout and let the runtime choose the best way to lay out the fields.  
+## <a name="remarks"></a>コメント  
+ クラスを最初に定義するには、 [IMetaDataEmit::D efineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)メソッドを呼び出し、クラスのフィールドに対して3つのレイアウト (automatic、シーケンシャル、explicit) のいずれかを指定します。 通常は、自動レイアウトを使用し、フィールドをレイアウトする最適な方法をランタイムが選択できるようにします。  
   
- However, you might want the fields laid out according to the arrangement that unmanaged code uses. In this case, choose either sequential or explicit layout and call `SetClassLayout` to complete the layout of the fields:  
+ ただし、アンマネージコードが使用する配置に従って、フィールドをレイアウトすることが必要になる場合があります。 この場合は、シーケンシャルまたは明示的なレイアウトを選択し `SetClassLayout` を呼び出して、フィールドのレイアウトを完成させます。  
   
-- Sequential layout: Specify the packing size. A field is aligned according to either its natural size or the packing size, whichever results in the smaller offset of the field. Set `rFieldOffsets` and `ulClassSize` to zero.  
+- シーケンシャルレイアウト: パッキングサイズを指定します。 フィールドは、自然サイズまたはパッキングサイズのいずれかに従って整列されます。どちらの場合も、フィールドのオフセットは小さくなります。 `rFieldOffsets` と `ulClassSize` を0に設定します。  
   
-- Explicit layout: Either specify the offset of each field or specify the class size and the packing size.  
+- 明示的なレイアウト: 各フィールドのオフセットを指定するか、クラスのサイズとパッキングサイズを指定します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

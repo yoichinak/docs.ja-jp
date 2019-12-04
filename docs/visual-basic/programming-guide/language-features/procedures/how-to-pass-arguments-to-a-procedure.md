@@ -1,5 +1,5 @@
 ---
-title: '方法 : プロシージャに引数を渡す'
+title: '方法: プロシージャに引数を渡す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -19,33 +19,33 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344844"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>方法: プロシージャに引数を渡す (Visual Basic)
-When you call a procedure, you follow the procedure name with an argument list in parentheses. You supply an argument corresponding to every required parameter the procedure defines, and you can optionally supply arguments to the `Optional` parameters. If you do not supply an `Optional` parameter in the call, you must include a comma to mark its place in the argument list if you are supplying any subsequent arguments.  
+プロシージャを呼び出すときは、かっこで囲んだ引数リストを使用してプロシージャ名を指定します。 プロシージャで定義されているすべての必須パラメーターに対応する引数を指定します。また、必要に応じて `Optional` パラメーターに引数を指定することもできます。 呼び出しに `Optional` パラメーターを指定しない場合は、後続の引数を指定する場合に、引数リスト内でその位置をマークするためにコンマを含める必要があります。  
   
- If you intend to pass an argument of a data type different from that of its corresponding parameter, such as `Byte` to `String`, you can set the type-checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) to `Off`. If `Option Strict` is `On`, you must use either widening conversions or explicit conversion keywords. For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ `Byte` など、対応するパラメーターとは異なるデータ型の引数を `String`に渡す場合は、型チェックスイッチ ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) を `Off`に設定できます。 `Option Strict` が `On`場合は、拡大変換または明示的な変換キーワードのいずれかを使用する必要があります。 詳細については、「[拡大および縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」と「[型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)」を参照してください。  
   
- For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
+ 詳細については、「[プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)」を参照してください。  
   
-### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>To pass one or more arguments to a procedure  
+### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>プロシージャに1つ以上の引数を渡すには  
   
-1. In the calling statement, follow the procedure name with parentheses.  
+1. 呼び出し元のステートメントで、プロシージャ名の後にかっこを付けます。  
   
-2. Inside the parentheses, put an argument list. Include an argument for each required parameter the procedure defines, and separate the arguments with commas.  
+2. かっこ内に引数リストを入力します。 プロシージャが定義する必須パラメーターごとに引数を含め、引数をコンマで区切ります。  
   
-3. Make sure each argument is a valid expression that evaluates to a data type convertible to the type the procedure defines for the corresponding parameter.  
+3. 各引数が、対応するパラメーターに対して定義されている型に変換できるデータ型に評価される有効な式であることを確認します。  
   
-4. If a parameter is defined as [Optional](../../../../visual-basic/language-reference/modifiers/optional.md), you can either include it in the argument list or omit it. If you omit it, the procedure uses the default value defined for that parameter.  
+4. パラメーターが[省略可能](../../../../visual-basic/language-reference/modifiers/optional.md)として定義されている場合は、引数リストに含めるか、または省略することができます。 省略した場合、プロシージャは、そのパラメーターに対して定義されている既定値を使用します。  
   
-5. If you omit an argument for an `Optional` parameter and there is another parameter after it in the parameter list, you can mark the place of the omitted argument by an extra comma in the argument list.  
+5. `Optional` パラメーターの引数を省略していて、パラメーターリスト内に別のパラメーターがある場合は、引数リストで省略された引数の代わりにコンマを追加してマークできます。  
   
-     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function.  
+     次の例では、Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 関数を呼び出します。  
   
      [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
-     The preceding example supplies the required first argument, which is the message string to be displayed. It omits an argument for the optional second parameter, which specifies the buttons to be displayed on the message box. Because the call does not supply a value, `MsgBox` uses the default value, `MsgBoxStyle.OKOnly`, which displays only an **OK** button.  
+     前の例では、必要な最初の引数が指定されています。これは、表示されるメッセージ文字列です。 省略可能な2番目のパラメーターの引数を省略して、メッセージボックスに表示するボタンを指定します。 呼び出しで値が指定されていないため、`MsgBox` は既定値の `MsgBoxStyle.OKOnly`を使用し、 **[OK** ] ボタンのみを表示します。  
   
-     The second comma in the argument list marks the place of the omitted second argument, and the last string is passed to the optional third parameter of `MsgBox`, which is the text to be displayed in the title bar.  
+     引数リストの2番目のコンマは省略された2番目の引数の位置をマークし、最後の文字列は `MsgBox`の3番目のパラメーター (タイトルバーに表示されるテキスト) に渡されます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Sub プロシージャ](./sub-procedures.md)
 - [Function プロシージャ](./function-procedures.md)

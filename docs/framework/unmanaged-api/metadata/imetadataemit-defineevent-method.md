@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432565"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent メソッド
-Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.  
+指定したメタデータシグネチャを持つイベントの定義を作成し、そのイベント定義へのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,42 +43,42 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in] The token for the target class or interface. This is either a `mdTypeDef` or `mdTypeDefNil` token.  
+ からターゲットクラスまたはインターフェイスのトークン。 これは、`mdTypeDef` または `mdTypeDefNil` トークンのいずれかです。  
   
  `szEvent`  
- [in] The name of the event.  
+ からイベントの名前。  
   
  `dwEventFlags`  
- [in] Event flags.  
+ からイベントフラグ。  
   
  `tkEventType`  
- [in] The token for the event class. This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.  
+ からイベントクラスのトークン。 これは、`mdTypeDef`、`mdTypeRef`、または `mdTokenNil` トークンです。  
   
  `mdAddOn`  
- [in] The method used to subscribe to the event, or null.  
+ からイベントの定期受信に使用するメソッド、または null。  
   
  `mdRemoveOn`  
- [in] The method used to unsubscribe to the event, or null.  
+ からイベントのサブスクリプションを解除するために使用するメソッド、または null。  
   
  `mdFire`  
- [in] The method used (by a derived class) to raise the event.  
+ からイベントを発生させるために (派生クラスによって) 使用されるメソッド。  
   
  `rmdOtherMethods[]`  
- [in] An array of tokens for other methods associated with the event. The array is terminated with a `mdMethodDefNil` token.  
+ からイベントに関連付けられている他のメソッドのトークンの配列。 配列は `mdMethodDefNil` トークンで終了します。  
   
  `pmdEvent`  
- [out] The metadata token assigned to the event.  
+ 入出力イベントに割り当てられたメタデータトークン。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

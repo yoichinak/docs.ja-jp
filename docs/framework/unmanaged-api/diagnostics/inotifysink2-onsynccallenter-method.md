@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440869"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter メソッド
-Gets invoked when entering a call.  
+呼び出しを入力したときに呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,19 +38,19 @@ HRESULT OnSyncCallEnter
   
 ## <a name="parameters"></a>パラメーター  
  `in_CallID`  
- [in] ID of the call being entered. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ から入力されている呼び出しの ID。 「 [CALL_ID 構造](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)」を参照してください。  
   
  `in_pBuffer`  
- [in] Call buffer.  
+ から呼び出しバッファー。  
   
  `in_BufferSize`  
- [in] Size of the call buffer, in bytes.  
+ から呼び出しバッファーのサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
 ## <a name="see-also"></a>関連項目
 

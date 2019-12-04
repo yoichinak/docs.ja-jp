@@ -24,23 +24,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351444"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
-Specifies that a property or procedure cannot be overridden in a derived class.  
+プロパティまたはプロシージャを派生クラスでオーバーライドできないことを指定します。  
   
-## <a name="remarks"></a>Remarks  
- The `NotOverridable` modifier prevents a property or method from being overridden in a derived class.  The [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) modifier allows a property or method in a class to be overridden in a derived class. 詳細については、「[継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ `NotOverridable` 修飾子は、派生クラスでプロパティまたはメソッドがオーバーライドされるのを防ぎます。  [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)修飾子を使用すると、クラス内のプロパティまたはメソッドを派生クラスでオーバーライドできます。 詳細については、「[継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)」を参照してください。  
   
- If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
+ `Overridable` または `NotOverridable` 修飾子が指定されていない場合、既定の設定は、プロパティまたはメソッドが基底クラスのプロパティまたはメソッドをオーバーライドするかどうかによって異なります。 プロパティまたはメソッドが基底クラスのプロパティまたはメソッドをオーバーライドする場合、既定の設定は `Overridable`になります。それ以外の場合は、`NotOverridable`ます。  
   
- An element that cannot be overridden is sometimes called a *sealed* element.  
+ オーバーライドできない要素は、*シール*された要素と呼ばれることもあります。  
   
- You can use `NotOverridable` only in a property or procedure declaration statement. You can specify `NotOverridable` only on a property or procedure that overrides another property or procedure, that is, only in combination with `Overrides`.  
+ `NotOverridable` は、プロパティまたはプロシージャの宣言ステートメントでのみ使用できます。 `NotOverridable` を指定できるのは、別のプロパティまたはプロシージャをオーバーライドするプロパティまたはプロシージャ、つまり `Overrides`との組み合わせだけです。  
   
-## <a name="combined-modifiers"></a>Combined Modifiers  
- You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
+## <a name="combined-modifiers"></a>結合された修飾子  
+ `Private` メソッドに `Overridable` または `NotOverridable` を指定することはできません。  
   
- You cannot specify `NotOverridable` together with `MustOverride`, `Overridable`, or `Shared` in the same declaration.  
+ 同じ宣言内で `MustOverride`、`Overridable`、または `Shared` と共に `NotOverridable` を指定することはできません。  
   
-## <a name="usage"></a>使用方法  
+## <a name="usage"></a>使用法  
  `NotOverridable` 修飾子は、次のコンテキストで使用できます。  
   
  [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
@@ -49,12 +49,12 @@ Specifies that a property or procedure cannot be overridden in a derived class.
   
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [修飾子](../../../visual-basic/language-reference/modifiers/index.md)
 - [継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [MyBase](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic でのシャドウ処理](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427471"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace メソッド
-Specifies that the given fully qualified namespace name is being used within the currently open lexical scope. The namespace will be used within all scopes that inherit from the currently open scope. Closing the current scope will also stop the use of the namespace.  
+現在開いている構文のスコープ内で、指定された完全修飾名前空間名が使用されていることを指定します。 名前空間は、現在開いているスコープから継承されるすべてのスコープ内で使用されます。 現在のスコープを終了すると、名前空間も使用できなくなります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,14 +34,14 @@ HRESULT UsingNamespace(
   
 ## <a name="parameters"></a>パラメーター  
  `fullName`  
- [in] A pointer to the fully qualified name of the namespace.  
+ から名前空間の完全修飾名へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

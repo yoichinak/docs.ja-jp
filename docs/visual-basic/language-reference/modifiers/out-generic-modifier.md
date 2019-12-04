@@ -16,9 +16,9 @@ ms.locfileid: "74351422"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (ジェネリック修飾子) (Visual Basic)
 
-For generic type parameters, the `Out` keyword specifies that the type is covariant.
+ジェネリック型パラメーターの場合、`Out` キーワードは、型が共変であることを指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 共変性は、ジェネリック パラメーターによって指定された型よりも強い派生型を使用できるようにする機能です。 これにより、バリアント インターフェイスを実装するクラスの暗黙の型変換とデリゲート型の暗黙の型変換が可能となります。
 
@@ -37,11 +37,11 @@ For generic type parameters, the `Out` keyword specifies that the type is covari
 
 - 型パラメーターがインターフェイス メソッドのジェネリック制約として使用されない。
 
-In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
+ジェネリックデリゲートでは、メソッドの戻り値の型としてのみ使用され、メソッドの引数には使用されない場合、型パラメーターを共変として宣言できます。
 
 共変性および反変性は参照型ではサポートされますが、値の型ではサポートされません。
 
-In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
+Visual Basic では、デリゲート型を指定しなくても、共変のインターフェイスでイベントを宣言することはできません。 また、共変のインターフェイスは、入れ子になったクラス、列挙型、または構造体を持つことはできませんが、入れ子になったインターフェイスを持つことができます
 
 ## <a name="behavior"></a>動作
 
@@ -57,11 +57,11 @@ In Visual Basic, you cannot declare events in covariant interfaces without speci
 
 ## <a name="example"></a>例
 
-次の例では、共変の汎用デリゲートを宣言、インスタンス化、および呼び出す方法を示します。 It also shows how you can use implicit conversion for delegate types.
+次の例では、共変の汎用デリゲートを宣言、インスタンス化、および呼び出す方法を示します。 また、デリゲート型に対して暗黙的な変換を使用する方法についても説明します。
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [ジェネリック インターフェイスの変性](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [ジェネリック インターフェイスの分散](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

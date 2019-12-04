@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436436"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE 列挙型
-Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.  
+共通言語ランタイムを初期化するときに[CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)によって使用される定数を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,18 +38,18 @@ typedef enum tagCOUNINITEE
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|Indicates default uninitialization mode.|  
-|`COUNINITEE_DLL`|Indicates uninitialization mode for unloading an assembly.|  
+|`COUNINITEE_DEFAULT`|既定の初期化解除中モードを示します。|  
+|`COUNINITEE_DLL`|アセンブリをアンロードするための初期化解除中モードを示します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348356"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>方法: 注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する (Visual Basic)
 
 注釈を使用することで、XML ツリーの変換が容易になります。
 
@@ -19,7 +19,7 @@ XML ドキュメントには、"ドキュメント中心で混合コンテンツ
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>
 ```
 
-どのテキスト ノードにも、任意の数の `<b>` と `<i>` が子要素として存在する可能性があります。 This approach extends to a number of other situations: such as, pages that can contain a variety of child elements, such as regular paragraphs, bulleted paragraphs, and bitmaps. テーブルのセルには、テキスト、ドロップダウン リスト、またはビットマップが含まれている場合があります。 ドキュメント中心の XML の主要な特性の 1 つは、特定の要素がどの子要素を持つかがわからない点です。
+どのテキスト ノードにも、任意の数の `<b>` と `<i>` が子要素として存在する可能性があります。 この方法は、他の多くの状況にまで拡張されています。たとえば、通常の段落、箇条書きの段落、ビットマップなど、さまざまな子要素を含むことができるページなどです。 テーブルのセルには、テキスト、ドロップダウン リスト、またはビットマップが含まれている場合があります。 ドキュメント中心の XML の主要な特性の 1 つは、特定の要素がどの子要素を持つかがわからない点です。
 
 ツリー内の要素を変換するとき、その要素の子について詳しく理解している必要がない場合は、注釈を使用するこの方法が効果的です。
 
@@ -43,7 +43,7 @@ XML ドキュメントには、"ドキュメント中心で混合コンテンツ
 
 ## <a name="transforming-a-tree"></a>ツリーの変換
 
-This first example renames all `Paragraph` nodes to `para`:
+最初の例では、すべての `Paragraph` ノードの名前を `para`に変更します。
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -83,7 +83,7 @@ End Module
 </Root>
 ```
 
-## <a name="a-more-complicated-transform"></a>A more complicated transform
+## <a name="a-more-complicated-transform"></a>より複雑な変換
 
 次の例では、ツリーに対してクエリを実行し、`Data` 要素の平均と合計を計算して、それらを新しい要素としてツリーに追加します。
 
@@ -158,29 +158,29 @@ After Transform
 </Root>
 ```
 
-## <a name="effecting-the-transform"></a>Effecting the transform
+## <a name="effecting-the-transform"></a>変換の影響
 
 小さな関数 `XForm` によって、元の注釈付きツリーから変換された新しいツリーが作成されます。
 
 この関数の擬似コードはかなり単純です。
 
-> The function takes an XElement as an argument and returns an XElement.
+> 関数は、引数として XElement を受け取り、XElement を返します。
 >
-> If an element has an XElement annotation, then return a new XElement:
+> 要素に XElement 注釈がある場合は、新しい XElement を返します。
 >
-> - The name of the new XElement is the annotation element's name.
-> - All attributes are copied from the annotation to the new node.
-> - All child nodes are copied from the annotation, with the exception that the special node xf:ApplyTransforms is recognized, and the source element's child nodes are iterated. If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
+> - 新しい XElement の名前は、annotation 要素の名前です。
+> - すべての属性が注釈から新しいノードにコピーされます。
+> - すべての子ノードは注釈からコピーされます。ただし、特殊なノード xf: ApplyTransforms が認識され、ソース要素の子ノードが反復処理される点が異なります。 ソースの子ノードが XElement でない場合は、新しいツリーにコピーされます。 ソースの子が XElement の場合は、この関数を再帰的に呼び出して変換されます。
 >
-> If an element is not annotated:
+> 要素に注釈が付いていない場合は、次のようになります。
 >
-> - Return a new XElement
->   - The name of the new XElement is the source element's name.
->   - All attributes are copied from the source element to the destination's element.
->   - All child nodes are copied from the source element.
->   - If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
+> - 新しい XElement を返す
+>   - 新しい XElement の名前は、ソース要素の名前です。
+>   - すべての属性は、ソース要素からコピー先の要素にコピーされます。
+>   - すべての子ノードは、ソース要素からコピーされます。
+>   - ソースの子ノードが XElement でない場合は、新しいツリーにコピーされます。 ソースの子が XElement の場合は、この関数を再帰的に呼び出して変換されます。
 
-The following code is the implementation of this function:
+この関数の実装を次のコードに示します。
 
 ```vb
 ' Build a transformed XML tree per the annotations.
@@ -222,7 +222,7 @@ Private Function GetExpandedNodes(ByVal n2 As XNode) As XNode
 End Function
 ```
 
-## <a name="complete-example"></a>コード例全体
+## <a name="complete-example"></a>完全な例
 
 次に示すのは、`XForm` 関数を含んだ完全なサンプル コードです。 ここには、この種の変換の一般的な使用方法がいくつか示されています。
 
@@ -374,6 +374,6 @@ After Transform
 </Root>
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [高度な LINQ to XML プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

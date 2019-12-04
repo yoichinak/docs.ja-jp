@@ -27,37 +27,37 @@ ms.locfileid: "74283634"
 ## <a name="treeview-states"></a>TreeView の状態  
  次の表は、<xref:System.Windows.Controls.TreeView> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
 ## <a name="treeviewitem-parts"></a>TreeViewItem パーツ  
  次の表に、<xref:System.Windows.Controls.TreeViewItem> コントロールの名前付きの部分を示します。  
   
-|パーツ|[種類]|[説明]|  
+|要素|種類|説明|  
 |----------|----------|-----------------|  
 |PART_Header|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.Controls.TreeView> コントロールのヘッダーの内容を格納しているビジュアル要素。|  
   
 ## <a name="treeviewitem-states"></a>TreeViewItem の状態  
  次の表は、<xref:System.Windows.Controls.TreeViewItem> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |----------------------|---------------------------|-----------------|  
 |標準|CommonStates|既定の状態です。|  
 |MouseOver|CommonStates|マウスポインターが <xref:System.Windows.Controls.TreeViewItem>上に配置されています。|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.TreeViewItem> が無効になっています。|  
+|無効|CommonStates|<xref:System.Windows.Controls.TreeViewItem> が無効になっています。|  
 |フォーカスされている|FocusStates|<xref:System.Windows.Controls.TreeViewItem> にフォーカスがあります。|  
 |フォーカスされていない|FocusStates|<xref:System.Windows.Controls.TreeViewItem> にフォーカスがありません。|  
 |[展開済み]|すべての状態|<xref:System.Windows.Controls.TreeViewItem> コントロールが展開されます。|  
 |Collapsed|すべての状態|<xref:System.Windows.Controls.TreeViewItem> コントロールが折りたたまれています。|  
 |HasItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> には項目があります。|  
 |NoItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> には項目がありません。|  
-|選択済み|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> が選択されています。|  
+|Selected|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> が選択されています。|  
 |SelectedInactive|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> が選択されていますが、アクティブになっていません。|  
 |未選択|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> が選択されていません。|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74283634"
   
  完全なサンプルについては、[Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>

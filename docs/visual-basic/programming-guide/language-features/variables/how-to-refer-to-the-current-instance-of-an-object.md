@@ -16,20 +16,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346882"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>方法: オブジェクトの現在のインスタンスを参照する (Visual Basic)
-The *current instance* of an object is the instance in which the code is currently executing.  
+オブジェクトの*現在のインスタンス*は、コードが現在実行されているインスタンスです。  
   
- You use the `Me` keyword to refer to the current instance.  
+ 現在のインスタンスを参照するには、`Me` キーワードを使用します。  
   
-### <a name="to-refer-to-the-current-instance"></a>To refer to the current instance  
+### <a name="to-refer-to-the-current-instance"></a>現在のインスタンスを参照するには  
   
-- Use the `Me` keyword where you would normally use the name of an object variable.  
+- 通常はオブジェクト変数の名前を使用する場合は、`Me` キーワードを使用します。  
   
     ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     Although `Me` behaves like an object variable, you cannot declare it or assign anything to it. `Me` always refers to the current instance.  
+     `Me` はオブジェクト変数のように動作しますが、宣言したり、何も割り当てたりすることはできません。 `Me` は常に現在のインスタンスを参照します。  
   
 ## <a name="see-also"></a>関連項目
 

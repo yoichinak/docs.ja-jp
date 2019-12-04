@@ -77,47 +77,47 @@ typedef enum CorTypeAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`tdVisibilityMask`|Used for type visibility information.|  
-|`tdNotPublic`|Specifies that the type is not in public scope.|  
-|`tdPublic`|Specifies that the type is in public scope.|  
-|`tdNestedPublic`|Specifies that the type is nested with public visibility.|  
-|`tdNestedPrivate`|Specifies that the type is nested with private visibility.|  
-|`tdNestedFamily`|Specifies that the type is nested with family visibility.|  
-|`tdNestedAssembly`|Specifies that the type is nested with assembly visibility.|  
-|`tdNestedFamANDAssem`|Specifies that the type is nested with family and assembly visibility.|  
-|`tdNestedFamORAssem`|Specifies that the type is nested with family or assembly visibility.|  
-|`tdLayoutMask`|Gets layout information for the type.|  
-|`tdAutoLayout`|Specifies that the fields of this type are laid out automatically.|  
-|`tdSequentialLayout`|Specifies that the fields of this type are laid out sequentially.|  
-|`tdExplicitLayout`|Specifies that field layout is supplied explicitly.|  
-|`tdClassSemanticsMask`|Gets semantic information about the type.|  
+|`tdVisibilityMask`|型の可視性情報に使用されます。|  
+|`tdNotPublic`|型がパブリックスコープ内にないことを指定します。|  
+|`tdPublic`|型がパブリックスコープ内にあることを指定します。|  
+|`tdNestedPublic`|型がパブリックの可視性で入れ子になっていることを指定します。|  
+|`tdNestedPrivate`|型がプライベート可視性で入れ子になっていることを指定します。|  
+|`tdNestedFamily`|型がファミリの可視性で入れ子になっていることを指定します。|  
+|`tdNestedAssembly`|型がアセンブリの可視性で入れ子になっていることを指定します。|  
+|`tdNestedFamANDAssem`|型がファミリおよびアセンブリの可視性で入れ子になっていることを指定します。|  
+|`tdNestedFamORAssem`|型が、ファミリまたはアセンブリの参照可能範囲に入れ子になっていることを指定します。|  
+|`tdLayoutMask`|型のレイアウト情報を取得します。|  
+|`tdAutoLayout`|この型のフィールドが自動的にレイアウトされることを指定します。|  
+|`tdSequentialLayout`|この型のフィールドを順番に配置することを指定します。|  
+|`tdExplicitLayout`|フィールドレイアウトが明示的に指定されていることを指定します。|  
+|`tdClassSemanticsMask`|型に関するセマンティック情報を取得します。|  
 |`tdClass`|型がクラスであることを示します。|  
 |`tdInterface`|型がインターフェイスであることを示します。|  
 |`tdAbstract`|型が抽象的であることを示します。|  
-|`tdSealed`|Specifies that the type cannot be extended.|  
-|`tdSpecialName`|Specifies that the class name is special. Its name describes how.|  
-|`tdImport`|Specifies that the type is imported.|  
-|`tdSerializable`|Specifies that the type is serializable.|  
-|`tdWindowsRuntime`|Specifies that this type is a Windows Runtime type.|  
-|`tdStringFormatMask`|Gets information about how strings are encoded and formatted.|  
-|`tdAnsiClass`|Specifies that this type interprets an LPTSTR as ANSI.|  
-|`tdUnicodeClass`|Specifies that this type interprets an LPTSTR as Unicode.|  
-|`tdAutoClass`|Specifies that this type interprets an LPTSTR automatically.|  
-|`tdCustomFormatClass`|Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.|  
-|`tdCustomFormatMask`|Use this mask to get non-standard encoding information for native interop. The meaning of the values of these two bits is unspecified.|  
-|`tdBeforeFieldInit`|Specifies that the type must be initialized before the first attempt to access a static field.|  
-|`tdForwarder`|Specifies that the type is exported, and a type forwarder.|  
-|`tdReservedMask`|This flag and the flags below are used internally by the common language runtime.|  
-|`tdRTSpecialName`|Specifies that the common language runtime should check the name encoding.|  
-|`tdHasSecurity`|Specifies that the type has security associated with it.|  
+|`tdSealed`|型を拡張できないことを指定します。|  
+|`tdSpecialName`|クラス名が特別であることを指定します。 その名前は、方法を説明します。|  
+|`tdImport`|型がインポートされることを指定します。|  
+|`tdSerializable`|型がシリアル化可能であることを指定します。|  
+|`tdWindowsRuntime`|この型が Windows ランタイム型であることを指定します。|  
+|`tdStringFormatMask`|文字列をエンコードおよび書式設定する方法に関する情報を取得します。|  
+|`tdAnsiClass`|この型が LPTSTR を ANSI と解釈することを指定します。|  
+|`tdUnicodeClass`|この型が LPTSTR を Unicode として解釈することを指定します。|  
+|`tdAutoClass`|この型が LPTSTR を自動的に解釈することを指定します。|  
+|`tdCustomFormatClass`|`CustomFormatMask`によって指定された標準以外のエンコーディングを型が持つことを指定します。|  
+|`tdCustomFormatMask`|ネイティブ相互運用機能の非標準のエンコード情報を取得するには、このマスクを使用します。 これら2つのビットの値の意味は、指定されていません。|  
+|`tdBeforeFieldInit`|静的フィールドに最初にアクセスしようとする前に型を初期化する必要があることを指定します。|  
+|`tdForwarder`|型がエクスポートされ、型フォワーダーが指定されていることを示します。|  
+|`tdReservedMask`|このフラグと以下のフラグは、共通言語ランタイムによって内部的に使用されます。|  
+|`tdRTSpecialName`|共通言語ランタイムが名前のエンコーディングを確認する必要があることを指定します。|  
+|`tdHasSecurity`|型にセキュリティが関連付けられていることを指定します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

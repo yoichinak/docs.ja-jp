@@ -26,21 +26,21 @@ Take While expression
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`expression`|必須です。 An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
+|`expression`|必須。 テスト要素の条件を表す式。 式は、`Boolean` 値または同等の機能 (`Boolean`として評価される `Integer` など) を返す必要があります。|  
   
-## <a name="remarks"></a>Remarks  
- The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`. After the `expression` returns `false`, the query will bypass all remaining elements. The `expression` is ignored for the remaining results.  
+## <a name="remarks"></a>コメント  
+ `Take While` 句には、指定された `expression` が `false`を返すまで、クエリ結果の先頭からの要素が含まれます。 `expression` が `false`を返した後、クエリは残りのすべての要素をバイパスします。 残りの結果については、`expression` は無視されます。  
   
- The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition. The `Take While` clause includes elements only until the first time that the condition is not satisfied. The `Take While` clause is most useful when you are working with an ordered query result.  
+ `Take While` 句は、特定の条件を満たすクエリのすべての要素を含めるために `Where` 句を使用できるという点で、`Where` 句とは異なります。 `Take While` 句には、最初に条件が満たされない限り、要素が含まれます。 `Take While` 句は、順序付けられたクエリ結果を操作する場合に最も役立ちます。  
   
 ## <a name="example"></a>例  
- The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.  
+ 次のコード例では、`Take While` 句を使用して、注文のない最初の顧客が見つかるまで結果を取得します。  
   
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)

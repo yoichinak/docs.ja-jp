@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432879"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType 列挙型
-Specifies how an object is serialized by the common language runtime.  
+共通言語ランタイムによってオブジェクトをシリアル化する方法を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -57,34 +57,34 @@ typedef enum CorSerializationType {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|Serialization of the object is undefined.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|Object is serialized as a Boolean type|  
-|`SERIALIZATION_TYPE_CHAR`|Object is serialized as a character type.|  
-|`SERIALIZATION_TYPE_I1`|Object is serialized as a signed 1-byte integer.|  
-|`SERIALIZATION_TYPE_U1`|Object is serialized as an unsigned 1-byte integer.|  
-|`SERIALIZATION_TYPE_I2`|Object is serialized as a signed 2-byte integer.|  
-|`SERIALIZATION_TYPE_U2`|Object is serialized as an unsigned 2-byte integer.|  
-|`SERIALIZATION_TYPE_I4`|Object is serialized as a signed 4-byte integer.|  
-|`SERIALIZATION_TYPE_U4`|Object is serialized as an unsigned 4-byte integer.|  
-|`SERIALIZATION_TYPE_I8`|Object is serialized as a signed 8-byte integer.|  
-|`SERIALIZATION_TYPE_U8`|Object is serialized as an unsigned 8-byte integer.|  
-|`SERIALIZATION_TYPE_R4`|Object is serialized as a 4-byte floating point.|  
-|`SERIALIZATION_TYPE_R8`|Object is serialized as an 8-byte floating point.|  
-|`SERIALIZATION_TYPE_STRING`|Object is serialized as a System.String type.|  
-|`SERIALIZATION_TYPE_SZARRAY`|Object is serialized as a single-dimensional, zero lower-bound array.|  
-|`SERIALIZATION_TYPE_TYPE`|Object is serialized as a generic type.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Object is serialized as a tagged object.|  
-|`SERIALIZATION_TYPE_FIELD`|Object is serialized as a field.|  
-|`SERIALIZATION_TYPE_PROPERTY`|Object is serialized as a property.|  
-|`SERIALIZATION_TYPE_ENUM`|Object is serialized as an enumeration.|  
+|`SERIALIZATION_TYPE_UNDEFINED`|オブジェクトのシリアル化が定義されていません。|  
+|`SERIALIZATION_TYPE_BOOLEAN`|オブジェクトはブール型としてシリアル化されます|  
+|`SERIALIZATION_TYPE_CHAR`|オブジェクトは文字型としてシリアル化されます。|  
+|`SERIALIZATION_TYPE_I1`|オブジェクトは符号付き1バイト整数としてシリアル化されます。|  
+|`SERIALIZATION_TYPE_U1`|オブジェクトは、符号なし1バイト整数としてシリアル化されます。|  
+|`SERIALIZATION_TYPE_I2`|オブジェクトは、符号付き2バイト整数としてシリアル化されます。|  
+|`SERIALIZATION_TYPE_U2`|オブジェクトは、符号なし2バイト整数としてシリアル化されます。|  
+|`SERIALIZATION_TYPE_I4`|オブジェクトは、符号付き4バイト整数としてシリアル化されます。|  
+|`SERIALIZATION_TYPE_U4`|オブジェクトは、4バイトの符号なし整数としてシリアル化されます。|  
+|`SERIALIZATION_TYPE_I8`|オブジェクトは、符号付き8バイト整数としてシリアル化されます。|  
+|`SERIALIZATION_TYPE_U8`|オブジェクトは、8バイトの符号なし整数としてシリアル化されます。|  
+|`SERIALIZATION_TYPE_R4`|オブジェクトは、4バイトの浮動小数点としてシリアル化されます。|  
+|`SERIALIZATION_TYPE_R8`|オブジェクトは8バイト浮動小数点としてシリアル化されます。|  
+|`SERIALIZATION_TYPE_STRING`|オブジェクトは System.string 型としてシリアル化されます。|  
+|`SERIALIZATION_TYPE_SZARRAY`|オブジェクトは、1次元の下限の配列としてシリアル化されます。|  
+|`SERIALIZATION_TYPE_TYPE`|オブジェクトは、ジェネリック型としてシリアル化されます。|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|オブジェクトはタグ付きオブジェクトとしてシリアル化されます。|  
+|`SERIALIZATION_TYPE_FIELD`|オブジェクトはフィールドとしてシリアル化されます。|  
+|`SERIALIZATION_TYPE_PROPERTY`|オブジェクトはプロパティとしてシリアル化されます。|  
+|`SERIALIZATION_TYPE_ENUM`|オブジェクトは列挙体としてシリアル化されます。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

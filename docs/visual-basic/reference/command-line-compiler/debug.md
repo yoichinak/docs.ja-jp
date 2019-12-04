@@ -16,7 +16,7 @@ ms.locfileid: "74344776"
 ---
 # <a name="-debug-visual-basic"></a>-debug (Visual Basic)
 
-Causes the compiler to generate debugging information and place it in the output file(s).
+コンパイラによってデバッグ情報が生成され、出力ファイルに配置されます。
 
 ## <a name="syntax"></a>構文
 
@@ -24,7 +24,7 @@ Causes the compiler to generate debugging information and place it in the output
 -debug[+ | -]
 ```
 
-、または
+または
 
 ```console
 -debug:[full | pdbonly]
@@ -32,32 +32,32 @@ Causes the compiler to generate debugging information and place it in the output
 
 ## <a name="arguments"></a>引数
 
-|用語|定義|
+|用語|Definition|
 |---|---|
-|`+` &#124; `-`|省略可能です。 Specifying `+` or `/debug` causes the compiler to generate debugging information and place it in a .pdb file. Specifying `-` has the same effect as not specifying `/debug`.|
-|`full` &#124; `pdbonly`|省略可能です。 コンパイラによって生成されるデバッグ情報の種類を指定します。 If you do not specify `/debug:pdbonly`, the default is `full`, which enables you to attach a debugger to the running program. The `pdbonly` argument allows source-code debugging when the program is started in the debugger, but it displays assembly-language code only when the running program is attached to the debugger.|
+|`+` &#124; `-`|省略可。 `+` または `/debug` を指定すると、コンパイラによってデバッグ情報が生成され、.pdb ファイルに配置されます。 `-` を指定すると、`/debug`を指定しない場合と同じ効果があります。|
+|`full` &#124; `pdbonly`|省略可。 コンパイラによって生成されるデバッグ情報の種類を指定します。 `/debug:pdbonly`を指定しない場合、既定値は `full`になります。これにより、実行中のプログラムにデバッガーをアタッチできます。 `pdbonly` 引数を使用すると、プログラムがデバッガーで開始されたときにソースコードのデバッグが可能になりますが、実行中のプログラムがデバッガーにアタッチされている場合にのみ、アセンブリ言語コードが表示されます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-このオプションを使用してデバッグ ビルドを作成します。 If you do not specify `/debug`, `/debug+`, or `/debug:full`, you will be unable to debug the output file of your program.
+このオプションを使用してデバッグ ビルドを作成します。 `/debug`、`/debug+`、または `/debug:full`を指定しない場合は、プログラムの出力ファイルをデバッグできません。
 
-By default, debugging information is not emitted (`/debug-`). To emit debugging information, specify `/debug` or `/debug+`.
+既定では、デバッグ情報は出力されません (`/debug-`)。 デバッグ情報を生成するには、`/debug` または `/debug+`を指定します。
 
 アプリケーションのデバッグ パフォーマンスを構成する方法については、「[イメージのデバッグの簡略化](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)」を参照してください。
 
-|To set -debug in the Visual Studio integrated development environment|
+|Visual Studio 統合開発環境で-debug を設定するには|
 |---|
-|1.  With a project selected in **Solution Explorer**, on the **Project** menu, click **Properties**. <br />2.  Click the **Compile** tab.<br />3.  Click **Advanced Compile Options**.<br />4.  Modify the value in the **Generate Debug Info** box.|
+|1.**ソリューションエクスプローラー**でプロジェクトを選択した状態で、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[詳細コンパイルオプション]** をクリックします。<br />4. **[デバッグ情報の生成]** ボックスの値を変更します。|
 
 ## <a name="example"></a>例
 
-The following example puts debugging information in output file `App.exe`.
+次の例では、デバッグ情報を出力ファイル `App.exe`に格納します。
 
 ```console
 vbc -debug -out:app.exe test.vb
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)

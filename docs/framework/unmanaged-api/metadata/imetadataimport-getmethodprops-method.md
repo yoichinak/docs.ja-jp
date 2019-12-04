@@ -44,45 +44,45 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mb`  
- [in] The MethodDef token that represents the method to return metadata for.  
+ からメタデータを返すメソッドを表す MethodDef トークン。  
   
  `pClass`  
- [out] A Pointer to a TypeDef token that represents the type that implements the method.  
+ 入出力メソッドを実装する型を表す TypeDef トークンへのポインター。  
   
  `szMethod`  
- [out] A Pointer to a buffer that has the method's name.  
+ 入出力メソッドの名前を持つバッファーへのポインター。  
   
  `cchMethod`  
- [in] The requested size of `szMethod`.  
+ から要求された `szMethod`のサイズ。  
   
  `pchMethod`  
- [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
+ 入出力`szMethod`のワイド文字のサイズへのポインター。または、切り捨ての場合は、メソッド名の実際のワイド文字数。  
   
  `pdwAttr`  
- [out] A pointer to any flags associated with the method.  
+ 入出力メソッドに関連付けられているフラグへのポインター。  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the method.  
+ 入出力メソッドのバイナリメタデータシグネチャへのポインター。  
   
  `pcbSigBlob`  
- [out] A Pointer to the size in bytes of `ppvSigBlob`.  
+ 入出力`ppvSigBlob`のサイズ (バイト単位) へのポインター。  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the method.  
+ 入出力メソッドの相対仮想アドレスへのポインター。  
   
  `pdwImplFlags`  
- [out] A pointer to any implementation flags for the method.  
+ 入出力メソッドの実装フラグへのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -8,12 +8,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349603"
 ---
-# <a name="special-characters-visual-basic-reference"></a>Special Characters (Visual Basic Reference)
+# <a name="special-characters-visual-basic-reference"></a>特殊文字 (Visual Basic リファレンス)
 
-Special characters are predefined, contextual characters that modifies the program element to which they are prepended. Visual Basic supports the following special character:
+特殊文字は、事前に定義されたコンテキスト文字であり、先頭に付加されるプログラム要素を変更します。 Visual Basic は、次の特殊文字をサポートしています。
 
 - [$](interpolated.md): 挿入文字列の文字。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic リファレンス](../../../visual-basic/language-reference/index.md)

@@ -12,8 +12,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352198"
 ---
-# <a name="summary-visual-basic"></a>\<summary> (Visual Basic)
-Specifies the summary of the member.  
+# <a name="summary-visual-basic"></a>\<概要 > (Visual Basic)
+メンバーの概要を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -25,18 +25,18 @@ Specifies the summary of the member.
  `description`  
  オブジェクトの概要。  
   
-## <a name="remarks"></a>Remarks  
- Use the `<summary>` tag to describe a type or a type member. 型の説明に補足情報を追加するには、[\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) タグを使用します。  
+## <a name="remarks"></a>コメント  
+ 型または型のメンバーを記述するには、`<summary>` タグを使用します。 型の説明に補足情報を追加するには、[\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) タグを使用します。  
   
- The text for the `<summary>` tag is the only source of information about the type in IntelliSense, and is also displayed in the Object Browser. For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).  
+ `<summary>` タグのテキストは、IntelliSense の型に関する唯一の情報源であり、オブジェクトブラウザーにも表示されます。 オブジェクトブラウザーの詳細については、「[コードの構造の表示](/visualstudio/ide/viewing-the-structure-of-code)」を参照してください。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- This example uses the `<summary>` tag to describe the `ResetCounter` method and `Counter` property.  
+ この例では、`<summary>` タグを使用して、`ResetCounter` メソッドと `Counter` プロパティを記述します。  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426054"
 ---
 # <a name="getfiledef-method"></a>GetFileDef メソッド
-Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).  
+ALink によって割り当てられたトークンとは対照的に、メタデータで使用される実際の FileDef トークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,19 +36,19 @@ HRESULT GetFileDef(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of the assembly.  
+ アセンブリの ID。  
   
  `TargetFile`  
- Token of the added file as retrieved from AddFile Method or AddImport Method.  
+ AddFile メソッドまたは AddImport メソッドから取得された追加ファイルのトークン。  
   
  `pScope`  
- Receives the FileDef token.  
+ FileDef トークンを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 

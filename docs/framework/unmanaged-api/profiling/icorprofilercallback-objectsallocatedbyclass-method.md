@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445858"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass メソッド
-Notifies the profiler about the number of instances of each specified class that have been created since the most recent garbage collection.  
+最後のガベージコレクション以降に作成された、指定した各クラスのインスタンスの数をプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,22 +36,22 @@ HRESULT ObjectsAllocatedByClass(
   
 ## <a name="parameters"></a>パラメーター  
  `cClassCount`  
- [in] The size of the `classIds` and `cObjects` arrays.  
+ から`classIds` および `cObjects` 配列のサイズ。  
   
  `classIds`  
- [in] An array of class IDs, where each ID specifies a class with one or more instances.  
+ からクラス Id の配列。各 ID は、1つ以上のインスタンスを持つクラスを指定します。  
   
  `cObjects`  
- [in] An array of integers, where each integer specifies the number of instances for the corresponding class in the `classIds` array.  
+ から整数の配列。各整数は、`classIds` 配列内の対応するクラスのインスタンスの数を指定します。  
   
-## <a name="remarks"></a>Remarks  
- The `classIds` and `cObjects` arrays are parallel arrays. For example, `classIds[i]` and `cObjects[i]` reference the same class. If no instance of a class has been created since the previous garbage collection, the class is omitted. The `ObjectsAllocatedByClass` callback will not report objects allocated in the large object heap.  
+## <a name="remarks"></a>コメント  
+ `classIds` 配列と `cObjects` 配列は、並列配列です。 たとえば、`classIds[i]` と `cObjects[i]` は同じクラスを参照します。 前のガベージコレクションの後にクラスのインスタンスが作成されていない場合、クラスは省略されます。 `ObjectsAllocatedByClass` コールバックは、大きなオブジェクトヒープに割り当てられたオブジェクトを報告しません。  
   
- The numbers reported by `ObjectsAllocatedByClass` are only estimates. For exact counts, use [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
+ `ObjectsAllocatedByClass` によって報告される数値は、推定値のみです。 正確にカウントするには、 [ICorProfilerCallback:: ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)を使用します。  
   
- The `classIds` array may contain one or more null entries if the corresponding `cObjects` array has types that are unloading.  
+ 対応する `cObjects` 配列にアンロードされている型がある場合、`classIds` 配列には1つ以上の null エントリを含めることができます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -60,6 +60,6 @@ HRESULT ObjectsAllocatedByClass(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

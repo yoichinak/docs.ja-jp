@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436178"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping メソッド
-Gets the memory region of the mapped file, and the type of mapping.  
+マップされたファイルのメモリ領域とマッピングの種類を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,37 +37,37 @@ HRESULT GetFileMapping (
   
 ## <a name="parameters"></a>パラメーター  
  `ppvData`  
- [out] A pointer to the start of the mapped file.  
+ 入出力マップされたファイルの先頭へのポインター。  
   
  `pcbData`  
- [out] The size of the mapped region. If `pdwMappingType` is `fmFlat`, this is the size of the file.  
+ 入出力マップされた領域のサイズ。 `pdwMappingType` が `fmFlat`場合は、ファイルのサイズです。  
   
  `pdwMappingType`  
- [out] A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) value that indicates the type of mapping. The current implementation of the common language runtime (CLR) always returns `fmFlat`. Other values are reserved for future use. However, you should always verify the returned value, because other values may be enabled in future versions or service releases.  
+ 入出力マッピングの種類を示す[CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)値です。 共通言語ランタイム (CLR) の現在の実装では、常に `fmFlat`を返します。 他の値は将来使用するために予約されています。 ただし、その他の値は将来のバージョンまたはサービスリリースで有効になる可能性があるため、常に戻り値を確認する必要があります。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|All outputs are filled.|  
-|`E_INVALIDARG`|NULL was passed as an argument value.|  
-|`COR_E_NOTSUPPORTED`|The CLR implementation cannot provide information about the memory region. This can happen for the following reasons:<br /><br /> -   The metadata scope was opened with the `ofWrite` or `ofCopyMemory` flag.<br />-   The metadata scope was opened without the `ofReadOnly` flag.<br />-   The [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method was used to open only the metadata portion of the file.<br />-   The file is not a portable executable (PE) file. **Note:**  These conditions depend on the CLR implementation, and are likely to be weakened in future versions of the CLR.|  
+|`S_OK`|すべての出力が入力されます。|  
+|`E_INVALIDARG`|引数の値として NULL が渡されました。|  
+|`COR_E_NOTSUPPORTED`|CLR 実装では、メモリ領域に関する情報を提供できません。 これは、次の理由で発生することがあります。<br /><br /> -メタデータスコープが、`ofWrite` または `ofCopyMemory` フラグで開かれました。<br />-`ofReadOnly` フラグを指定せずにメタデータスコープが開かれました。<br />- [IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)メソッドは、ファイルのメタデータ部分のみを開くために使用されました。<br />-ファイルは、ポータブル実行可能 (PE) ファイルではありません。 **注:** これらの条件は CLR の実装によって異なり、CLR の将来のバージョンでは緩和される可能性があります。|  
   
-## <a name="remarks"></a>Remarks  
- The memory that `ppvData` points to is valid only as long as the underlying metadata scope is open.  
+## <a name="remarks"></a>コメント  
+ `ppvData` が指すメモリは、基になるメタデータスコープが開いている間のみ有効です。  
   
- In order for this method to work, when you map the metadata of an on-disk file into memory by calling the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method, you must specify the `ofReadOnly` flag and you must not specify the `ofWrite` or `ofCopyMemory` flag.  
+ このメソッドを機能させるには、 [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)メソッドを呼び出して、ディスク上のファイルのメタデータをメモリにマップするときに、`ofReadOnly` フラグを指定し、`ofWrite` または `ofCopyMemory` フラグを指定しないようにする必要があります。  
   
- The choice of file mapping type for each scope is specific to a given implementation of the CLR. It cannot be set by the user. The current implementation of the CLR always returns `fmFlat` in `pdwMappingType`, but this can change in future versions of the CLR or in future service releases of a given version. You should always check the returned value in `pdwMappingType`, because different types will have different layouts and offsets.  
+ 各スコープでのファイルマッピングの種類の選択は、CLR の特定の実装に固有です。 ユーザーが設定することはできません。 CLR の現在の実装では、常に `pdwMappingType`で `fmFlat` が返されますが、これは CLR の将来のバージョンまたは特定のバージョンの今後のサービスリリースで変更される可能性があります。 型によってレイアウトとオフセットが異なるため、必ず `pdwMappingType`で戻り値を確認してください。  
   
- Passing NULL for any of the three parameters is not supported. The method returns `E_INVALIDARG`, and none of the outputs are filled. Ignoring the mapping type or the size of the region can result in abnormal program termination.  
+ 3つのパラメーターのいずれかに対して NULL を渡すことはサポートされていません。 メソッドは `E_INVALIDARG`を返し、出力はすべて入力されません。 マッピングの種類または領域のサイズを無視すると、プログラムが異常終了する可能性があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

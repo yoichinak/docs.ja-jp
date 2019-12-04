@@ -20,29 +20,29 @@ ms.locfileid: "74350014"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>方法: 変数内で複数の値を保持する (Visual Basic)
 
-A variable holds more than one value if you declare it to be of a *composite data type*.
+*複合データ型*として宣言すると、変数に複数の値が保持されます。
 
-[Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) include structures, arrays, and classes. A variable of a composite data type can hold a combination of elementary data types and other composite types. Structures and classes can hold code as well as data.
+[複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)には、構造体、配列、およびクラスが含まれます。 複合データ型の変数は、基本データ型とその他の複合型の組み合わせを保持できます。 構造体とクラスは、データだけでなくコードも保持できます。
 
-## <a name="to-hold-more-than-one-value-in-a-variable"></a>To hold more than one value in a variable
+## <a name="to-hold-more-than-one-value-in-a-variable"></a>変数に複数の値を格納するには
 
-1. Determine what composite data type you want to use for your variable.
+1. 変数に使用する複合データ型を決定します。
 
-2. If the composite data type is not already defined, define it so that your variable can use it.
+2. 複合データ型がまだ定義されていない場合は、変数で使用できるように定義します。
 
-    - Define a structure with a [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).
+    - Structure[ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)を使用して構造体を定義します。
 
-    - Define an array with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
+    - [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)を使用して配列を定義します。
 
-    - Define a class with a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).
+    - Class[ステートメント](../../../../visual-basic/language-reference/statements/class-statement.md)を使用してクラスを定義します。
 
-3. Declare your variable with a `Dim` statement.
+3. `Dim` ステートメントを使用して変数を宣言します。
 
-4. Follow the variable name with an `As` clause.
+4. 変数名の後に `As` 句を指定します。
 
-5. Follow the `As` keyword with the name of the appropriate composite data type.
+5. `As` キーワードに続けて、適切な複合データ型の名前を指定します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
 - [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

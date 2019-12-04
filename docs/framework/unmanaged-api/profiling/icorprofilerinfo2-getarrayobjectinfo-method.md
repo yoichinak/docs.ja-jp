@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436036"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo メソッド
-Gets detailed information about an array object.  
+配列オブジェクトに関する詳細情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,24 +38,24 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>パラメーター  
  `objectId`  
- [in] The ID of a valid array object.  
+ から有効な配列オブジェクトの ID。  
   
  `cDimensions`  
- [in] The rank (number of dimensions) of the array.  
+ から配列のランク (次元数)。  
   
  `pDimensionSizes`  
- [out] An array that contains integers, each representing the size of a dimension of the array.  
+ 入出力それぞれが配列の次元のサイズを表す整数を格納している配列。  
   
  `pDimensionLowerBounds`  
- [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
+ 入出力それぞれが配列の次元の下限を表す整数を格納している配列。  
   
  `ppData`  
- [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
+ 入出力C++規則に従ってレイアウトされる、配列の生バッファーのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
+## <a name="remarks"></a>コメント  
+ `pDimensionSizes` と `pDimensionLowerBounds` は並列配列であるため、各配列内の同じインデックスにある要素は同じエンティティの特性です。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

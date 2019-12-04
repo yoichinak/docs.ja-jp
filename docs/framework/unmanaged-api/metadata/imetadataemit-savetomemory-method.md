@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435797"
 ---
 # <a name="imetadataemitsavetomemory-method"></a>IMetaDataEmit::SaveToMemory メソッド
-Saves all metadata in the current scope to the specified area of memory.  
+現在のスコープ内のすべてのメタデータを、指定したメモリ領域に保存します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +36,17 @@ HRESULT SaveToMemory (
   
 ## <a name="parameters"></a>パラメーター  
  `pbData`  
- [out] The address at which to begin writing metadata.  
+ 入出力メタデータの書き込みを開始するアドレス。  
   
  `cbData`  
- [in] The size, in bytes, of the allocated memory.  
+ から割り当てられたメモリのサイズ (バイト単位)。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

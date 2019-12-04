@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350283"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf 演算子 (Visual Basic)
-Creates a delegate instance that references the specific procedure.  
+特定のプロシージャを参照するデリゲートインスタンスを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,26 +26,26 @@ AddressOf procedurename
   
 ## <a name="parts"></a>指定項目  
  `procedurename`  
- 必須です。 Specifies the procedure to be referenced by the newly created delegate.  
+ 必須。 新しく作成されたデリゲートによって参照されるプロシージャを指定します。  
   
-## <a name="remarks"></a>Remarks  
- The `AddressOf` operator creates a delegate that points to the sub or function specified by `procedurename`. When the specified procedure is an instance method then the delegate refers to both the instance and the method. Then, when the  delegate is invoked the specified method of the specified instance is called.  
+## <a name="remarks"></a>コメント  
+ `AddressOf` 演算子は、`procedurename`によって指定されたサブまたは関数を指すデリゲートを作成します。 指定されたプロシージャがインスタンスメソッドの場合、デリゲートはインスタンスとメソッドの両方を参照します。 次に、デリゲートが呼び出されると、指定したインスタンスの指定したメソッドが呼び出されます。  
   
- The `AddressOf` operator can be used as the operand of a delegate constructor or it can be used in a context in which the type of the delegate can be determined by the compiler.  
+ `AddressOf` 演算子は、デリゲートコンストラクターのオペランドとして使用することも、コンパイラによってデリゲートの型を決定できるコンテキストで使用することもできます。  
   
 ## <a name="example"></a>例  
- This example uses the `AddressOf` operator to designate a delegate to handle the `Click` event of a button.  
+ この例では、`AddressOf` 演算子を使用して、ボタンの `Click` イベントを処理するデリゲートを指定します。  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>例  
- The following example uses the `AddressOf` operator to designate the startup function for a thread.  
+ 次の例では、`AddressOf` 演算子を使用して、スレッドのスタートアップ関数を指定します。  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [デリゲート](../../../visual-basic/programming-guide/language-features/delegates/index.md)

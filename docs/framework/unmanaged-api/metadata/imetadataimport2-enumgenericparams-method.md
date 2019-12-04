@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428306"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams メソッド
-Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.  
+指定した TypeDef または MethodDef トークンに関連付けられているジェネリックパラメータートークンの配列の列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,37 +39,37 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [入力、出力]列挙子へのポインター。  
   
  `tk`  
- [in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.  
+ からジェネリックパラメーターを列挙する TypeDef または MethodDef トークン。  
   
  `rGenericParams`  
- [out] The array of generic parameters to enumerate.  
+ 入出力列挙するジェネリックパラメーターの配列。  
   
  `cMax`  
- [in] The requested maximum number of tokens to place in `rGenericParams`.  
+ から`rGenericParams`に格納する、要求されたトークンの最大数。  
   
  `pcGenericParams`  
- [out] The returned number of tokens placed in `rGenericParams`.  
+ 入出力`rGenericParams`に格納された、返されたトークンの数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParams` is set to 0 (zero).|  
+|`S_OK`|`EnumGenericParams` が正常に返されました。|  
+|`S_FALSE`|`phEnum` にメンバー要素がありません。 この場合、`pcGenericParams` は 0 (ゼロ) に設定されます。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -22,31 +22,31 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447918"
 ---
 # <a name="imetadataemit2-interface"></a>IMetaDataEmit2 インターフェイス
-Extends the [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interface primarily to provide the ability to work with generic types.  
+[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)インターフェイスを拡張して、主にジェネリック型を操作できるようにします。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[DefineGenericParam メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)|Creates a definition for a generic type parameter, and gets a token to that generic type parameter.|  
-|[DefineMethodSpec メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md)|Creates a generic instance of a method, and gets a token to the definition.|  
-|[GetDeltaSaveSize メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md)|Gets a value indicating the difference in size of the data that is required to express the changes for the current edit-and-continue session.|  
-|[ResetENCLog メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md)|Resets the edit-and-continue log and starts a new session.|  
-|[SaveDelta メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedelta-method.md)|Saves changes from the current edit-and-continue session to the specified file.|  
-|[SaveDeltaToMemory メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)|Saves changes from the current edit-and-continue session to memory.|  
-|[SaveDeltaToStream メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatostream-method.md)|Saves changes from the current edit-and-continue session to the specified stream.|  
-|[SetGenericParamProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-setgenericparamprops-method.md)|Sets property values for the generic parameter definition referenced by the specified token.|  
+|[DefineGenericParam メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)|ジェネリック型パラメーターの定義を作成し、そのジェネリック型パラメーターへのトークンを取得します。|  
+|[DefineMethodSpec メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md)|メソッドのジェネリックインスタンスを作成し、その定義へのトークンを取得します。|  
+|[GetDeltaSaveSize メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md)|現在のエディットコンティニュセッションの変更を表すために必要なデータのサイズの差を示す値を取得します。|  
+|[ResetENCLog メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md)|エディットコンティニュログをリセットし、新しいセッションを開始します。|  
+|[SaveDelta メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedelta-method.md)|現在のエディットコンティニュセッションから、指定したファイルへの変更を保存します。|  
+|[SaveDeltaToMemory メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)|現在のエディットコンティニュセッションの変更をメモリに保存します。|  
+|[SaveDeltaToStream メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatostream-method.md)|現在のエディットコンティニュセッションから、指定されたストリームに変更を保存します。|  
+|[SetGenericParamProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-setgenericparamprops-method.md)|指定したトークンによって参照されるジェネリックパラメーター定義のプロパティ値を設定します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

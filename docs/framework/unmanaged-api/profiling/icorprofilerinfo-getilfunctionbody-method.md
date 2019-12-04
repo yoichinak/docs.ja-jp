@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450360"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>ICorProfilerInfo::GetILFunctionBody メソッド
-Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.  
+Microsoft 中間言語 (MSIL) コード内のメソッドの本文へのポインターを、ヘッダーを開始位置として取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,23 +37,23 @@ HRESULT GetILFunctionBody(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ から関数が存在するモジュールの ID。  
   
  `methodId`  
- [in] The metadata token for the method.  
+ からメソッドのメタデータトークン。  
   
  `ppMethodHeader`  
- [out] A pointer to the method's header.  
+ 入出力メソッドのヘッダーへのポインター。  
   
  `pcbMethodSize`  
- [out] An integer that specifies the size of the method.  
+ 入出力メソッドのサイズを指定する整数。  
   
-## <a name="remarks"></a>Remarks  
- A method is scoped by the module in which it lives. Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.  
+## <a name="remarks"></a>コメント  
+ メソッドは、それが存在するモジュールによってスコープが設定されます。 `GetILFunctionBody` メソッドは、MSIL コードが共通言語ランタイム (CLR) によって読み込まれる前に、ツールにアクセスできるように設計されているため、メソッドのメタデータトークンを使用して目的のインスタンスを検索します。  
   
- `GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).  
+ `methodId` が MSIL コード (抽象メソッドや platform invoke (PInvoke) メソッドなど) を含まないメソッドを指している場合、`GetILFunctionBody` は CORPROF_E_FUNCTION_NOT_IL HRESULT を返すことができます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -62,6 +62,6 @@ HRESULT GetILFunctionBody(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

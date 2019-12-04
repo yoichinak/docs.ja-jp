@@ -12,36 +12,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347299"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>XML ファイルの処理 (Visual Basic)
-コンパイラは、ドキュメントを生成するためにタグ付けされたコードのコンストラクトごとに、ID 文字列を生成します。 (For information on how to tag your code, see [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/index.md).) The ID string uniquely identifies the construct. Programs that process the XML file can use the ID string to identify the corresponding .NET Framework metadata/reflection item.  
+コンパイラは、ドキュメントを生成するためにタグ付けされたコードのコンストラクトごとに、ID 文字列を生成します。 (コードにタグを付ける方法については、「 [XML コメントタグ](../../../visual-basic/language-reference/xmldoc/index.md)」を参照してください)。ID 文字列は、コンストラクトを一意に識別します。 XML ファイルを処理するプログラムでは、ID 文字列を使用して、対応する .NET Framework メタデータ/リフレクション項目を識別できます。  
   
- The XML file is not a hierarchical representation of your code; it is a flat list with a generated ID for each element.  
+ XML ファイルは、コードの階層的な表現ではありません。これは、要素ごとに生成された ID を持つ単純なリストです。  
   
  コンパイラは、次の規則に基づいて ID 文字列を生成します。  
   
 - 文字列に空白は配置されません。  
   
-- ID 文字列の最初の部分は、単一の文字とそれに続くコロンで識別されるメンバーの種類を示します。 The following member types are used.  
+- ID 文字列の最初の部分は、単一の文字とそれに続くコロンで識別されるメンバーの種類を示します。 次のメンバーの種類が使用されます。  
   
 |文字|説明|  
 |---|---|  
-|N|名前空間<br /><br /> You cannot add documentation comments to a namespace, but you can make CREF references to them, where supported.|  
-|T|type: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
-|F|field: `Dim`|  
-|P|property: `Property` (including default properties)|  
-|M|method: `Sub`, `Function`, `Declare`, `Operator`|  
-|E|event: `Event`|  
-|!|エラー文字列<br /><br /> あとに続く文字列で、エラーの情報を示します。 The Visual Basic compiler generates error information for links that cannot be resolved.|  
+|N|namespace<br /><br /> ドキュメントのコメントを名前空間に追加することはできませんが、サポートされている場合には CREF 参照を行うことができます。|  
+|T|種類: `Class`、`Module`、`Interface`、`Structure`、`Enum`、`Delegate`|  
+|F|フィールド: `Dim`|  
+|P|プロパティ: `Property` (既定のプロパティを含む)|  
+|M|方法: `Sub`、`Function`、`Declare`、`Operator`|  
+|E|イベント: `Event`|  
+|!|エラー文字列<br /><br /> あとに続く文字列で、エラーの情報を示します。 Visual Basic コンパイラは、解決できないリンクのエラー情報を生成します。|  
   
-- The second part of the `String` is the fully qualified name of the item, starting at the root of the namespace. The name of the item, its enclosing type(s), and the namespace are separated by periods. If the name of the item itself contains periods, they are replaced by the number sign (#). It is assumed that no item has a number sign directly in its name. For example, the fully qualified name of the `String` constructor would be `System.String.#ctor`.  
+- `String` の2番目の部分は、名前空間のルートから開始する項目の完全修飾名です。 項目の名前、それを囲む型、および名前空間は、ピリオドで区切られます。 アイテム自体の名前にピリオドが含まれている場合、それらはシャープ記号 (#) で置き換えられます。 名前に番号記号が付いている項目がないことを前提としています。 たとえば、`String` コンストラクターの完全修飾名は `System.String.#ctor`ます。  
   
-- プロパティおよびメソッドについては、メソッドに引数がある場合は、引数のリストをかっこで囲み、メソッドに続けて指定します。 引数がない場合は、かっこはありません。 引数はコンマで区切られます。 The encoding of each argument follows directly how it is encoded in a .NET Framework signature.  
+- プロパティおよびメソッドについては、メソッドに引数がある場合は、引数のリストをかっこで囲み、メソッドに続けて指定します。 引数がない場合は、かっこはありません。 引数はコンマで区切られます。 各引数のエンコーディングは、.NET Framework シグネチャでのエンコード方法に直接従います。  
   
 ## <a name="example"></a>例  
- The following code shows how the ID strings for a class and its members are generated.  
+ 次のコードは、クラスとそのメンバーの ID 文字列が生成される方法を示しています。  
   
  [!code-vb[VbVbcnXmlDocComments#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#10)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 - [方法: XML ドキュメントを作成する](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

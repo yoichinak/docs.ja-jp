@@ -27,9 +27,9 @@ ms.locfileid: "74283753"
 ## <a name="listbox-states"></a>リスト ボックスの状態  
  次の表は、<xref:System.Windows.Controls.ListBox> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
-|有効|ValidationStates|コントロールは有効です。|  
+|Valid|ValidationStates|コントロールは有効です。|  
 |InvalidFocused|ValidationStates|コントロールが無効で、フォーカスがあります。|  
 |InvalidUnfocused|ValidationStates|コントロールが無効で、フォーカスがありません。|  
   
@@ -39,17 +39,17 @@ ms.locfileid: "74283753"
 ## <a name="listboxitem-states"></a>ListBoxItem の状態  
  次の表は、<xref:System.Windows.Controls.ListBox> コントロールの表示状態を示しています。  
   
-|VisualState 名|VisualStateGroup 名|[説明]|  
+|VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
 |標準|CommonStates|既定の状態です。|  
 |MouseOver|CommonStates|マウス ポインターがコントロール上に配置されます。|  
-|Disabled|CommonStates|この項目は無効です。|  
+|無効|CommonStates|この項目は無効です。|  
 |フォーカスされている|FocusStates|この項目にフォーカスがあります。|  
 |フォーカスされていない|FocusStates|この項目にフォーカスがありません。|  
 |未選択|SelectionStates|この項目は選択されていません。|  
-|選択済み|SelectionStates|この項目は、選択した currentlyplate です。|  
+|Selected|SelectionStates|この項目は、選択した currentlyplate です。|  
 |SelectedUnfocused|SelectionStates|この項目は選択されていますが、フォーカスがありません。|  
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "74283753"
   
  完全なサンプルについては、[Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>

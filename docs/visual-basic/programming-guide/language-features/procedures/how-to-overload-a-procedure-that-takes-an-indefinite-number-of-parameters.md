@@ -18,42 +18,42 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345851"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>方法: 不特定数のパラメーターを受け取るプロシージャをオーバーロードする (Visual Basic)
-If a procedure has a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter, you cannot define an overloaded version taking a one-dimensional array for the parameter array. For more information, see "Implicit Overloads for a ParamArray Parameter" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
+プロシージャに[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)パラメーターがある場合、パラメーター配列に1次元配列を受け取るオーバーロードされたバージョンを定義することはできません。 詳細については、「[プロシージャのオーバーロードに関する考慮事項](./considerations-in-overloading-procedures.md)」の「ParamArray パラメーターの暗黙のオーバーロード」を参照してください。  
   
-### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>To overload a procedure that takes a variable number of parameters  
+### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>可変個のパラメーターを受け取るプロシージャをオーバーロードするには  
   
-1. Ascertain that the procedure and calling code logic benefits from overloaded versions more than from a `ParamArray` parameter. See "Overloads and ParamArrays" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
+1. プロシージャと呼び出しコードロジックが、`ParamArray` パラメーターよりも多くのオーバーロードされたバージョンの恩恵を得られることを確認します。 「オーバーロードと ParamArrays」の「[オーバーロードと](./considerations-in-overloading-procedures.md)paramarrays」を参照してください。  
   
-2. Determine which numbers of supplied values the procedure should accept in the variable part of the parameter list. This might include the case of no value, and it might include the case of a single one-dimensional array.  
+2. パラメーターリストの変数部分で、プロシージャが受け入れる指定された値の数を決定します。 これには、値のないケース、1つの1次元配列のケースなどが含まれます。  
   
-3. For each acceptable number of supplied values, write a `Sub` or `Function` declaration statement that defines the corresponding parameter list. Do not use either the `Optional` or the `ParamArray` keyword in this overloaded version.  
+3. 指定された許容される値の数ごとに、対応するパラメーターリストを定義する `Sub` または `Function` 宣言ステートメントを記述します。 このオーバーロードされたバージョンでは、`Optional` または `ParamArray` キーワードは使用しないでください。  
   
-4. In each declaration, precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.  
+4. 各宣言で、`Sub` または `Function` キーワードの前に[Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)キーワードを使用します。  
   
-5. Following each declaration, write the procedure code that should execute when the calling code supplies values corresponding to that declaration's parameter list.  
+5. 各宣言の後に、呼び出し元のコードがその宣言のパラメーターリストに対応する値を指定したときに実行する必要があるプロシージャコードを記述します。  
   
-6. Terminate each procedure with the `End Sub` or `End Function` statement as appropriate.  
+6. 必要に応じて、`End Sub` または `End Function` ステートメントを使用して各プロシージャを終了します。  
   
 ## <a name="example"></a>例  
- The following example shows a procedure defined with a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter, and then an equivalent set of overloaded procedures.  
+ 次の例では、 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)パラメーターを使用して定義されたプロシージャと、それと同等のオーバーロードされたプロシージャのセットを示します。  
   
  [!code-vb[VbVbcnProcedures#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#69)]  
   
  [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
- You cannot overload such a procedure with a parameter list that takes a one-dimensional array for the parameter array. However, you can use the signatures of the other implicit overloads. The following declarations illustrate this.  
+ パラメーター配列の1次元配列を受け取るパラメーターリストを使用して、このようなプロシージャをオーバーロードすることはできません。 ただし、他の暗黙的なオーバーロードのシグネチャを使用することもできます。 次の宣言はこれを示しています。  
   
  [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
- The code in the overloaded versions does not have to test whether the calling code supplied one or more values for the `ParamArray` parameter, or if so, how many. Visual Basic passes control to the version matching the calling argument list.  
+ オーバーロードされたバージョンのコードでは、呼び出し元のコードが `ParamArray` パラメーターに対して1つ以上の値を提供したかどうかをテストする必要はありません。 Visual Basic は、呼び出し元の引数リストと一致するバージョンに制御を渡します。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- Because a procedure with a `ParamArray` parameter is equivalent to a set of overloaded versions, you cannot overload such a procedure with a parameter list corresponding to any of these implicit overloads. For more information, see [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
+ `ParamArray` パラメーターを持つプロシージャは、オーバーロードされたバージョンのセットと等価であるため、このようなプロシージャは、これらの暗黙的なオーバーロードのいずれかに対応するパラメーターリストを使用してオーバーロードすることはできません。 詳細については、「[プロシージャのオーバーロードに関する考慮事項](./considerations-in-overloading-procedures.md)」を参照してください。  
   
-## <a name="net-framework-security"></a>.NET Framework セキュリティ  
- Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array, you should test for the length of the array the calling code passed to it, and take appropriate steps if it is too large for your application.  
+## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
+ 無限に大きくなる可能性がある配列を処理する場合、アプリケーションの内部容量がオーバーランするリスクがあります。 パラメーター配列を受け入れる場合は、渡された呼び出し元のコードが配列の長さであるかどうかをテストし、アプリケーションに対して大きすぎる場合は適切な手順を実行する必要があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)

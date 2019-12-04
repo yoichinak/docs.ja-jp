@@ -1,5 +1,5 @@
 ---
-title: 命名規則
+title: 名前付け規則
 ms.date: 07/20/2015
 helpviewer_keywords:
 - names [Visual Basic], Visual Basic rules
@@ -18,29 +18,29 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347320"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic の名前付け規則
-When you name an element in your Visual Basic application, the first character of that name must be an alphabetic character or an underscore. Note, however, that names beginning with an underscore are not compliant with the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
+Visual Basic アプリケーションの要素に名前を付けるときは、その名前の最初の文字は、英字またはアンダー スコアにする必要があります。 ただし、アンダースコアで始まる名前は、[言語に依存しないコンポーネント](../../../standard/language-independence-and-language-independent-components.md)(CLS) に準拠していないことに注意してください。  
   
- The following suggestions apply to naming.  
+ 次の提案が、名前付けに適用されます。  
   
-- Begin each separate word in a name with a capital letter, as in `FindLastRecord` and `RedrawMyForm`.  
+- `FindLastRecord` と `RedrawMyForm`のように、名前に含まれる各単語の大文字を大文字にして開始します。  
   
-- Begin function and method names with a verb, as in `InitNameArray` or `CloseDialog`.  
+- `InitNameArray` または `CloseDialog`のように、動詞を使用して関数名とメソッド名を開始します。  
   
-- Begin class, structure, module, and property names with a noun, as in `EmployeeName` or `CarAccessory`.  
+- `EmployeeName` または `CarAccessory`のように、クラス、構造体、モジュール、およびプロパティの名前を名詞で開始します。  
   
-- Begin interface names with the prefix "I", followed by a noun or a noun phrase, like `IComponent`, or with an adjective describing the interface's behavior, like `IPersistable`. Do not use the underscore, and use abbreviations sparingly, because abbreviations can cause confusion.  
+- "I" というプレフィックスを使用してインターフェイス名を開始し、`IComponent`のように名詞または名詞句を続けます。または、`IPersistable`のように、インターフェイスの動作を記述する形容詞を使用します。 アンダー スコアは使用しないで、略語の使用も控えてください。 なぜなら略語は混乱を招くからです。  
   
-- Begin event handler names with a noun describing the type of event followed by the "`EventHandler`" suffix, as in "`MouseEventHandler`".  
+- "`MouseEventHandler`" のように、イベントの種類と "`EventHandler`" サフィックスが記述されている名詞を使用して、イベントハンドラー名を開始します。  
   
-- In names of event argument classes, include the "`EventArgs`" suffix.  
+- イベント引数クラスの名前には、"`EventArgs`" サフィックスを含めます。  
   
-- If an event has a concept of "before" or "after," use a suffix in present or past tense, as in "`ControlAdd`" or "`ControlAdded`".  
+- イベントの概念が "before" または "after" の場合は、"`ControlAdd`" または "`ControlAdded`" のように、現在または過去の形でサフィックスを使用します。  
   
-- For long or frequently used terms, use abbreviations to keep name lengths reasonable, for example, "HTML", instead of "Hypertext Markup Language". In general, variable names greater than 32 characters are difficult to read on a monitor set to a low resolution. Also, make sure your abbreviations are consistent throughout the entire application. Randomly switching in a project between "HTML" and "Hypertext Markup Language" can lead to confusion.  
+- 長い、または頻繁に使用される用語では、名前の長さを適切に維持するために略語を使用します。 たとえば、"Hypertext Markup Language"の代わりに"HTML"を使用します。 一般的に、32 文字を超える変数の名前は低解像度のモニターでは読むことが困難です。 また、略語はアプリケーション全体を通して一貫性のあるようにしてください。 プロジェクトの中で"HTML"と"Hypertext Markup Language"をランダムに切り替えることは混乱を招く可能性があります。  
   
-- Avoid using names in an inner scope that are the same as names in an outer scope. Errors can result if the wrong variable is accessed. If a conflict occurs between a variable and the keyword of the same name, you must identify the keyword by preceding it with the appropriate type library. For example, if you have a variable called `Date`, you can use the intrinsic `Date` function only by calling <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
+- 外部スコープで使われている名前と同じものを、内部スコープの中で使用することは避けてください。 誤った変数がアクセスされた場合エラーが発生する可能性があります。 同名のキーワードと変数の間でコンフリクトが起きる場合、適切な種類のライブラリを使って先立ってキーワードを識別しなければなりません。 たとえば、`Date`という変数がある場合は、<xref:System.DateTime.Date%2A?displayProperty=nameWithType>を呼び出すことによってのみ、組み込みの `Date` 関数を使用できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [コード内の要素名としてのキーワード](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)
 - [Me、My、MyBase、および MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

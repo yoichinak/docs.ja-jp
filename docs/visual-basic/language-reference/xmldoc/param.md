@@ -12,8 +12,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352297"
 ---
-# <a name="param-visual-basic"></a>\<param> (Visual Basic)
-Defines a parameter name and description.  
+# <a name="param-visual-basic"></a>\<param > (Visual Basic)
+パラメーターの名前と説明を定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,19 +28,19 @@ Defines a parameter name and description.
  `description`  
  パラメーターの説明です。  
   
-## <a name="remarks"></a>Remarks  
- The `<param>` tag should be used in the comment for a method declaration to describe one of the parameters for the method.  
+## <a name="remarks"></a>コメント  
+ メソッド宣言のコメントには、メソッドのパラメーターの1つを記述するために `<param>` タグを使用する必要があります。  
   
- The text for the `<param>` tag will appear in the following locations:  
+ `<param>` タグのテキストは次の場所に表示されます。  
   
-- Parameter Info of IntelliSense. 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。  
+- IntelliSense のパラメーター情報。 詳細については、「 [Using IntelliSense](/visualstudio/ide/using-intellisense)」を参照してください。  
   
-- Object Browser. 詳細については、「[コードの構造の表示](/visualstudio/ide/viewing-the-structure-of-code)」を参照してください。  
+- オブジェクト ブラウザー。 詳細については、「[コードの構造の表示](/visualstudio/ide/viewing-the-structure-of-code)」を参照してください。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- This example uses the `<param>` tag to describe the `id` parameter.  
+ この例では、`<param>` タグを使用して、`id` パラメーターを記述します。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

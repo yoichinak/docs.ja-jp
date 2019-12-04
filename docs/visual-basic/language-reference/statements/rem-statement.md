@@ -21,7 +21,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346730"
 ---
 # <a name="rem-statement-visual-basic"></a>REM ステートメント (Visual Basic)
-Used to include explanatory remarks in the source code of a program.  
+プログラムのソースコードに説明の解説を含めるために使用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,22 +32,22 @@ REM comment
   
 ## <a name="parts"></a>指定項目  
  `comment`  
- 省略可能です。 The text of any comment you want to include. A space is required between the `REM` keyword and `comment`.  
+ 省略可。 追加するコメントのテキスト。 `REM` キーワードと `comment`の間にはスペースが必要です。  
   
-## <a name="remarks"></a>Remarks  
- You can put a `REM` statement alone on a line, or you can put it on a line following another statement. The `REM` statement must be the last statement on the line. If it follows another statement, the `REM` must be separated from that statement by a space.  
+## <a name="remarks"></a>コメント  
+ `REM` ステートメントを1行に単独で配置することも、別のステートメントの後の行に配置することもできます。 `REM` ステートメントは、行の最後のステートメントである必要があります。 別のステートメントの後に続く場合、`REM` は、そのステートメントからスペースで区切る必要があります。  
   
- You can use a single quotation mark (`'`) instead of `REM`. This is true whether your comment follows another statement on the same line or sits alone on a line.  
+ `REM`ではなく、単一引用符 (`'`) を使用できます。 これは、コメントが同じ行で別のステートメントに続くか、または行に単独で存在するかにかかわらず当てはまります。  
   
 > [!NOTE]
-> You cannot continue a `REM` statement by using a line-continuation sequence (`_`). Once a comment begins, the compiler does not examine the characters for special meaning. For a multiple-line comment, use another `REM` statement or a comment symbol (`'`) on each line.  
+> 行連結シーケンス (`_`) を使用して、`REM` ステートメントを続行することはできません。 コメントが開始されると、コンパイラは文字が特別な意味を持つかどうかを検査しません。 複数行のコメントの場合は、各行に別の `REM` ステートメントまたはコメントシンボル (`'`) を使用します。  
   
 ## <a name="example"></a>例  
- The following example illustrates the `REM` statement, which is used to include explanatory remarks in a program. It also shows the alternative of using the single quotation-mark character (`'`) instead of `REM`.  
+ 次の例は、プログラムに説明の解説を含めるために使用される `REM` ステートメントを示しています。 また、`REM`の代わりに単一引用符文字 (`'`) を使用する方法についても説明します。  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [コード内のコメント](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
 - [方法 : コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

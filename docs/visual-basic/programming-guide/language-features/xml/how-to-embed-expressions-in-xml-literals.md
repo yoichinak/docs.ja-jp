@@ -13,17 +13,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332938"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>方法: XML リテラルに式を埋め込む (Visual Basic)
-You can combine XML literals with embedded expressions to create an XML document, fragment, or element that contains content created at run time. The following examples demonstrate how to use embedded expressions to populate element content, attributes, and element names at run time.  
+XML リテラルと埋め込み式を組み合わせて、実行時に作成されたコンテンツを含む XML ドキュメント、フラグメント、または要素を作成できます。 次の例では、埋め込み式を使用して、実行時に要素の内容、属性、および要素名を設定する方法を示します。  
   
- The syntax for an embedded expression is `<%=` `exp` `%>`, which is the same syntax that ASP.NET uses. For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ 埋め込み式の構文は `%>``exp` `<%=` ます。これは、ASP.NET が使用する構文と同じです。 詳細については、「 [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)」を参照してください。  
   
- You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. 詳細については、「<xref:System.Xml.Linq.XElement>」を参照してください。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Api を使用して、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトを作成することもできます。 詳細については、「 <xref:System.Xml.Linq.XElement>」を参照してください。  
   
 ## <a name="procedures"></a>手順  
   
-#### <a name="to-insert-text-as-element-content"></a>To insert text as element content  
+#### <a name="to-insert-text-as-element-content"></a>要素のコンテンツとしてテキストを挿入するには  
   
-- The following example shows how to insert the text that is contained in the `contactName` variable between the opening and closing name elements.  
+- 次の例では、名前の開始要素と終了要素の間に `contactName` 変数に含まれるテキストを挿入する方法を示します。  
   
      [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
@@ -35,9 +35,9 @@ You can combine XML literals with embedded expressions to create an XML document
     </contact>  
     ```  
   
-#### <a name="to-insert-text-as-an-attribute-value"></a>To insert text as an attribute value  
+#### <a name="to-insert-text-as-an-attribute-value"></a>属性値としてテキストを挿入するには  
   
-- The following example shows how to insert the text that is contained in the `phoneType` variable as the value of the `type` attribute.  
+- 次の例では、`phoneType` 変数に含まれるテキストを `type` 属性の値として挿入する方法を示します。  
   
      [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
@@ -49,11 +49,11 @@ You can combine XML literals with embedded expressions to create an XML document
     </contact>  
     ```  
   
-#### <a name="to-insert-text-for-an-element-name"></a>To insert text for an element name  
+#### <a name="to-insert-text-for-an-element-name"></a>要素名のテキストを挿入するには  
   
-- The following example shows how to insert the text that is contained in the `elementName` variable as the name of an element.  
+- 次の例は、`elementName` 変数に含まれるテキストを要素の名前として挿入する方法を示しています。  
   
-     When creating elements by using this technique, you must close them with the \</> tag.  
+     この手法を使用して要素を作成する場合は、\</> タグで終了する必要があります。  
   
      [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   

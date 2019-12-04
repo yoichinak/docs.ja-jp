@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344550"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>How to: Group Files by Extension (LINQ) (Visual Basic)
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>方法: 拡張子別にファイルをグループ化する (LINQ) (Visual Basic)
 この例では、LINQ を使用して、ファイルまたはフォルダーの一覧に対して、高度なグループ化および並べ替えを実行する方法を示します。 また、<xref:System.Linq.Enumerable.Skip%2A> メソッドと <xref:System.Linq.Enumerable.Take%2A> メソッドを使用して、出力をページごとにコンソール ウィンドウに表示する方法も示します。  
   
 ## <a name="example"></a>例  
@@ -94,9 +94,9 @@ End Module
  このプログラムの出力は、ローカル ファイル システムの詳細と `startFolder` の設定内容に応じて長くなる可能性があります。 すべての結果を確認できるように、次の例では、結果をページごとに出力する方法を示します。 同じ手法を Windows アプリケーションや Web アプリケーションに適用できます。 このコードでは、グループ内の項目をページごとに処理するため、`For Each` ループを入れ子にする必要があります。 また、一覧内での現在位置を計算し、ユーザーがページングを停止してプログラムを終了できるようにするロジックも追加されています。 この場合、ページング クエリは、元のクエリからキャッシュされた結果に対して実行されます。 LINQ to SQL などの他のコンテキストでは、このようなキャッシュは必要ありません。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+VB.NET コンソールアプリケーションプロジェクトを作成します。このプロジェクトには、名前空間の `Imports` ステートメントが含まれています。
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

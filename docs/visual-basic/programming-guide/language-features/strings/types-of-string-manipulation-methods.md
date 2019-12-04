@@ -13,36 +13,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346270"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Visual Basic における文字列操作メソッドの種類
-There are several different ways to analyze and manipulate your strings. Some of the methods are a part of the Visual Basic language, and others are inherent in the `String` class.  
+文字列を分析して操作するには、いくつかの方法があります。 一部のメソッドは Visual Basic 言語の一部であり、`String` クラスに固有のものです。  
   
-## <a name="visual-basic-language-and-the-net-framework"></a>Visual Basic Language and the .NET Framework  
- Visual Basic methods are used as inherent functions of the language. They may be used without qualification in your code. The following example shows typical use of a Visual Basic string-manipulation command:  
+## <a name="visual-basic-language-and-the-net-framework"></a>Visual Basic 言語と .NET Framework  
+ Visual Basic メソッドは、言語の固有の関数として使用されます。 これらは、コード内で修飾なしで使用することができます。 次の例は、Visual Basic 文字列操作コマンドの一般的な使用法を示しています。  
   
  [!code-vb[VbVbalrStrings#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#44)]  
   
- In this example, the `Mid` function performs a direct operation on `aString` and assigns the value to `bString`.  
+ この例では、`Mid` 関数が `aString` に対して直接操作を実行し `bString`に値を代入します。  
   
- For a list of Visual Basic string manipulation methods, see [String Manipulation Summary](../../../../visual-basic/language-reference/keywords/string-manipulation-summary.md).  
+ Visual Basic 文字列操作メソッドの一覧については、「[文字列操作の概要](../../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)」を参照してください。  
   
-### <a name="shared-methods-and-instance-methods"></a>Shared Methods and Instance Methods  
- You can also manipulate strings with the methods of the `String` class. There are two types of methods in `String`: *shared* methods and *instance* methods.  
+### <a name="shared-methods-and-instance-methods"></a>共有メソッドとインスタンスメソッド  
+ `String` クラスのメソッドを使用して、文字列を操作することもできます。 `String`には、*共有*メソッドと*インスタンス*メソッドという2種類のメソッドがあります。  
   
-#### <a name="shared-methods"></a>Shared Methods  
- A shared method is a method that stems from the `String` class itself and does not require an instance of that class to work. These methods can be qualified with the name of the class (`String`) rather than with an instance of the `String` class. (例:  
+#### <a name="shared-methods"></a>共有メソッド  
+ 共有メソッドは、`String` クラス自体からのメソッドであり、そのクラスのインスタンスが動作するためには必要ありません。 これらのメソッドは、`String` クラスのインスタンスではなく、クラスの名前 (`String`) で修飾できます。 例 :  
   
  [!code-vb[VbVbalrStrings#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#45)]  
   
- In the preceding example, the <xref:System.String.Copy%2A?displayProperty=nameWithType> method is a static method, which acts upon an expression it is given and assigns the resulting value to `bString`.  
+ 前の例では、<xref:System.String.Copy%2A?displayProperty=nameWithType> メソッドは静的メソッドです。このメソッドは、指定された式に対して動作し、結果として得られる値を `bString`に代入します。  
   
-#### <a name="instance-methods"></a>Instance Methods  
- Instance methods, by contrast, stem from a particular instance of `String` and must be qualified with the instance name. (例:  
+#### <a name="instance-methods"></a>インスタンスメソッド  
+ これに対して、インスタンスメソッドは、`String` の特定のインスタンスからのものであり、インスタンス名で修飾する必要があります。 例 :  
   
  [!code-vb[VbVbalrStrings#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#46)]  
   
- In this example, the <xref:System.String.Substring%2A?displayProperty=nameWithType> method is a method of the instance of `String` (that is, `aString`). It performs an operation on `aString` and assigns that value to `bString`.  
+ この例では、<xref:System.String.Substring%2A?displayProperty=nameWithType> メソッドは、`String` のインスタンス (つまり、`aString`) のメソッドです。 `aString` に対して操作を実行し、その値を `bString`に割り当てます。  
   
- For more information, see the documentation for the <xref:System.String> class.  
+ 詳細については、<xref:System.String> クラスのドキュメントを参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

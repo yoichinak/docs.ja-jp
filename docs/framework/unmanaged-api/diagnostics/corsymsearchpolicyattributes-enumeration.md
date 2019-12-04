@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448563"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes 列挙体
-Specifies the policy to be used when doing a search for a symbol reader. These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.  
+シンボルリーダーの検索を実行するときに使用するポリシーを指定します。 これらの定数は、 [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)メソッドと[ISymUnmanagedBinder3:: GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)メソッドによって使用されます。  
   
 > [!IMPORTANT]
-> It is a security risk to open a program database (PDB) file from an untrusted source.  
+> 信頼されていないソースからプログラムデータベース (PDB) ファイルを開くと、セキュリティ上の危険があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,13 +43,13 @@ typedef enum CorSymSearchPolicyAttributes
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|Queries the registry for symbol search paths.|  
-|`AllowSymbolServerAccess`|Accesses a symbol server.|  
-|`AllowOriginalPathAccess`|Searches the path specified in the Debug directory.|  
-|`AllowReferencePathAccess`|Searches for the PDB in the place where the .exe file is.|  
+|`AllowRegistryAccess`|シンボル検索パスのレジストリを照会します。|  
+|`AllowSymbolServerAccess`|シンボルサーバーにアクセスします。|  
+|`AllowOriginalPathAccess`|デバッグディレクトリに指定されているパスを検索します。|  
+|`AllowReferencePathAccess`|.Exe ファイルがある場所で PDB を検索します。|  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 

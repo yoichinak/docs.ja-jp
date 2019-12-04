@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331078"
 ---
 # <a name="function-expression-visual-basic"></a>Function 式 (Visual Basic)
-Declares the parameters and code that define a function lambda expression.  
+関数ラムダ式を定義するパラメーターとコードを宣言します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,51 +28,51 @@ End Function
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`parameterlist`|省略可能です。 A list of local variable names that represent the parameters of this procedure. The parentheses must be present even when the list is empty. See [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`expression`|必須です。 A single expression. The type of the expression is the return type of the function.|  
-|`statements`|必須です。 A list of statements that returns a value by using the `Return` statement. (See [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md).) The type of the value returned is the return type of the function.|  
+|`parameterlist`|省略可。 このプロシージャのパラメーターを表すローカル変数名の一覧です。 リストが空の場合でも、かっこは存在する必要があります。 「[パラメーターリスト](../../../visual-basic/language-reference/statements/parameter-list.md)」を参照してください。|  
+|`expression`|必須。 1つの式。 式の型は、関数の戻り値の型です。|  
+|`statements`|必須。 `Return` ステートメントを使用して値を返すステートメントの一覧。 ( [Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)を参照してください)。返される値の型は、関数の戻り値の型です。|  
   
-## <a name="remarks"></a>Remarks  
- A *lambda expression* is a function without a name that calculates and returns a value. You can use a lambda expression anywhere you can use a delegate type, except as an argument to `RemoveHandler`. For more information about delegates, and the use of lambda expressions with delegates, see [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) and [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+## <a name="remarks"></a>コメント  
+ *ラムダ式*は、値を計算して返す名前のない関数です。 ラムダ式は、デリゲート型を使用できる場所であればどこでも使用できます。ただし、`RemoveHandler`の引数として使用することはできません。 デリゲートの詳細と、デリゲートでのラムダ式の使用については、「[デリゲートステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)」および「厳密でない[デリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」を参照してください。  
   
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文  
- The syntax of a lambda expression resembles that of a standard function. The differences are as follows:  
+ ラムダ式の構文は、標準関数の構文に似ています。 相違点は、次のとおりです。  
   
-- A lambda expression does not have a name.  
+- ラムダ式に名前がありません。  
   
-- Lambda expressions cannot have modifiers, such as `Overloads` or `Overrides`.  
+- ラムダ式には、`Overloads` や `Overrides`などの修飾子を含めることはできません。  
   
-- Lambda expressions do not use an `As` clause to designate the return type of the function. Instead, the type is inferred from the value that the body of a single-line lambda expression evaluates to, or the return value of a multiline lambda expression. For example, if the body of a single-line lambda expression is `Where cust.City = "London"`, its return type is `Boolean`.  
+- ラムダ式では、関数の戻り値の型を指定するために `As` 句を使用しません。 代わりに、型は、単一行のラムダ式の結果が評価される値、または複数行ラムダ式の戻り値から推論されます。 たとえば、単一行のラムダ式の本体が `Where cust.City = "London"`場合、その戻り値の型は `Boolean`になります。  
   
-- The body of a single-line lambda expression must be an expression, not a statement. The body can consist of a call to a function procedure, but not a call to a sub procedure.  
+- 単一行のラムダ式の本体は、ステートメントではなく、式である必要があります。 本文は、関数プロシージャの呼び出しで構成できますが、サブプロシージャの呼び出しでは使用できません。  
   
-- Either all parameters must have specified data types or all must be inferred.  
+- すべてのパラメーターのデータ型が指定されているか、すべてのパラメーターが推論される必要があります。  
   
-- Optional and Paramarray parameters are not permitted.  
+- 省略可能なおよび Paramarray パラメーターは使用できません。  
   
-- Generic parameters are not permitted.  
+- ジェネリックパラメーターは使用できません。  
   
 ## <a name="example"></a>例  
- The following examples show two ways to create simple lambda expressions. The first uses a `Dim` to provide a name for the function. To call the function, you send in a value for the parameter.  
+ 次の例は、単純なラムダ式を作成する2つの方法を示しています。 最初のは、`Dim` を使用して、関数の名前を指定します。 関数を呼び出すには、パラメーターの値を送信します。  
   
  [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
  [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
 ## <a name="example"></a>例  
- Alternatively, you can declare and run the function at the same time.  
+ または、関数を同時に宣言して実行することもできます。  
   
  [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>例  
- Following is an example of a lambda expression that increments its argument and returns the value. The example shows both the single-line and multiline lambda expression syntax for a function. For more examples, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ 引数をインクリメントし、値を返すラムダ式の例を次に示します。 この例では、関数の単一行と複数行のラムダ式の構文を示します。 その他の例については、「[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)」を参照してください。  
   
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>例  
- Lambda expressions underlie many of the query operators in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], and can be used explicitly in method-based queries. The following example shows a typical [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query, followed by the translation of the query into method format.  
+ ラムダ式は [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]内のクエリ演算子の多くを基にしており、メソッドベースのクエリで明示的に使用することができます。 次の例では、一般的な [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを示し、その後にクエリをメソッド形式に変換します。  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  
@@ -85,9 +85,9 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- For more information about query methods, see [Queries](../../../visual-basic/language-reference/queries/index.md). For more information about standard query operators, see [Standard Query Operators Overview](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ クエリメソッドの詳細については、「[クエリ](../../../visual-basic/language-reference/queries/index.md)」を参照してください。 標準クエリ演算子の詳細については、「[標準クエリ演算子の概要](../../programming-guide/concepts/linq/standard-query-operators-overview.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

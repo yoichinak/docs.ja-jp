@@ -41,38 +41,38 @@ HRESULT SetAssemblyProps (
   
 ## <a name="parameters"></a>パラメーター  
  `pma`  
- [in] The metadata token that specifies the `Assembly` metadata structure to be modified.  
+ から変更する `Assembly` メタデータ構造を指定するメタデータトークン。  
   
  `pbPublicKey`  
- [in] A pointer to the public key of the publisher of the assembly.  
+ からアセンブリの発行者の公開キーへのポインター。  
   
  `cbPublicKey`  
- [in] The size in bytes of `pbPublicKey`.  
+ から`pbPublicKey`のサイズ (バイト単位)。  
   
  `ulHashAlgId`  
- [in] The identifier for the hash algorithm used to hash the assembly files.  
+ からアセンブリファイルのハッシュに使用されるハッシュアルゴリズムの識別子。  
   
  `szName`  
- [in] The human-readable text name of the assembly.  
+ からユーザーが判読できる、アセンブリのテキスト名。  
   
  `pMetaData`  
- [in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.  
+ からアセンブリのバージョン、プラットフォーム、およびロケール情報を格納している ASSEMBLYMETADATA へのポインター。  
   
  `dwAssemblyFlags`  
- [in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.  
+ からアセンブリのさまざまな属性を指定する[Assemblyflags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)値のビットごとの組み合わせ。  
   
-## <a name="remarks"></a>Remarks  
- To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.  
+## <a name="remarks"></a>コメント  
+ `Assembly` メタデータ構造を作成するには、 [IMetaDataAssemblyEmit::D efineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md)メソッドを使用します。  
   
-## <a name="requirements"></a>［要件］  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

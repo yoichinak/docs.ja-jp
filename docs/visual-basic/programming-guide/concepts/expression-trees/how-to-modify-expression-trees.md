@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353746"
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>How to: Modify Expression Trees (Visual Basic)
+# <a name="how-to-modify-expression-trees-visual-basic"></a>方法: 式ツリーを変更する (Visual Basic)
 
 このトピックでは、式ツリーを変更する方法について説明します。 式ツリーは変更不可であるため、直接変更を加えることができません。 式ツリーを変更するには、既存の式ツリーのコピーを作成する必要があります。コピーを作成する際に、必要な変更を加えます。 <xref:System.Linq.Expressions.ExpressionVisitor> クラスを使用して、既存の式ツリーを走査し、走査した各ノードをコピーすることができます。
 
@@ -17,7 +17,7 @@ ms.locfileid: "74353746"
 
 1. 新しい**コンソール アプリケーション** プロジェクトを作成します。
 
-2. Add an `Imports` statement to the file for the `System.Linq.Expressions` namespace.
+2. `System.Linq.Expressions` 名前空間のファイルに `Imports` ステートメントを追加します。
 
 3. `AndAlsoModifier` クラスをプロジェクトに追加します。
 
@@ -45,11 +45,11 @@ ms.locfileid: "74353746"
     End Class
     ```
 
-    このクラスは、`AND` 条件演算を表す式を変更するための特別なクラスで、<xref:System.Linq.Expressions.ExpressionVisitor> クラスを継承します。 このクラスによって条件 `AND` が条件 `OR` に変更されます。 そのために、クラスは基本データ型の <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> メソッドをオーバーライドします。`AND` 条件式は二項式で表されるためです。 `VisitBinary` メソッドでは、渡される式が `AND` 条件演算を表す場合、`AND` 条件演算子ではなく `OR` 条件演算子を含む新しい式がコードによって作成されます。 `VisitBinary` に渡される式が `AND` 条件演算を表さない場合は、基底クラスの実装が延期されます。 基底クラスのメソッドによって、渡された式ツリーに似たノードが作成されますが、そのノードのサブツリーは、ビジターによって再帰的に作成される式ツリーに置き換えられます。
+    このクラスは、<xref:System.Linq.Expressions.ExpressionVisitor> 条件演算を表す式を変更するための特別なクラスで、`AND` クラスを継承します。 このクラスによって条件 `AND` が条件 `OR` に変更されます。 そのために、クラスは基本データ型の <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> メソッドをオーバーライドします。`AND` 条件式は二項式で表されるためです。 `VisitBinary` メソッドでは、渡される式が `AND` 条件演算を表す場合、`OR` 条件演算子ではなく `AND` 条件演算子を含む新しい式がコードによって作成されます。 `VisitBinary` に渡される式が `AND` 条件演算を表さない場合は、基底クラスの実装が延期されます。 基底クラスのメソッドによって、渡された式ツリーに似たノードが作成されますが、そのノードのサブツリーは、ビジターによって再帰的に作成される式ツリーに置き換えられます。
 
-4. Add an `Imports` statement to the file for the `System.Linq.Expressions` namespace.
+4. `System.Linq.Expressions` 名前空間のファイルに `Imports` ステートメントを追加します。
 
-5. Add code to the `Main` method in the Module1.vb file to create an expression tree and pass it to the method that will modify it.
+5. Module1.vb ファイルの `Main` メソッドにコードを追加して、式ツリーを作成し、それを変更するメソッドに渡します。
 
     ```vb
     Dim expr As Expression(Of Func(Of String, Boolean)) = _
@@ -71,7 +71,7 @@ ms.locfileid: "74353746"
 
 6. アプリケーションをコンパイルして実行します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [方法: 式ツリーを実行する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [式ツリー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)

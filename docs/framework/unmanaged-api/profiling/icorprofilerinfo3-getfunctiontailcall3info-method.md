@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449693"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info メソッド
-Provides the stack frame of the function that is being reported to the profiler by the [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) function. このメソッドは、`FunctionTailcall3WithInfo` コールバック中にのみ呼び出すことができます。  
+[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)関数によってプロファイラーに報告される関数のスタックフレームを提供します。 このメソッドは、`FunctionTailcall3WithInfo` コールバック中にのみ呼び出すことができます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +36,17 @@ HRESULT GetFunctionTailcall3Info(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in] The `FunctionID` of the function that is returning.  
+ からを返す関数の `FunctionID`。  
   
  `eltInfo`  
- [in] 特定のスタック フレームに関する情報を表す不透明ハンドル。 The profiler should provide the same `eltInfo` that was given to the profiler by the `FunctionTailcall3WithInfo` function.  
+ [in] 特定のスタック フレームに関する情報を表す不透明ハンドル。 プロファイラーは、`FunctionTailcall3WithInfo` 関数によってプロファイラーに与えられたのと同じ `eltInfo` を提供する必要があります。  
   
  `pFrameInfo`  
  [out] 特定のスタック フレームに関するジェネリック情報を表す不透明ハンドル。 このハンドルは、プロファイラーが `FunctionTailcall3WithInfo` メソッドを呼び出した `GetFunctionTailcall3Info` コールバック内でのみ有効です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -55,7 +55,7 @@ HRESULT GetFunctionTailcall3Info(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
 - [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)

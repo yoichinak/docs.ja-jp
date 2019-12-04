@@ -9,11 +9,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347773"
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a>How to: Project an Object Graph (Visual Basic)
+# <a name="how-to-project-an-object-graph-visual-basic"></a>方法: オブジェクトグラフを射影する (Visual Basic)
 このトピックでは、XML からオブジェクト グラフを射影 (作成) する方法を示します。  
   
 ## <a name="example"></a>例  
- 次のコードでは、「[サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)」という XML ドキュメントから `Address`、`PurchaseOrder`、および `PurchaseOrderItem` の各クラスを使用してオブジェクト グラフを作成します。  
+ 次のコードでは、「`Address`サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)`PurchaseOrder`」という XML ドキュメントから `PurchaseOrderItem`、[、および ](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) の各クラスを使用してオブジェクト グラフを作成します。  
   
 ```vb  
 Class Address  
@@ -337,8 +337,8 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [プロジェクションと変換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

@@ -29,7 +29,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352828"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case ステートメント (Visual Basic)
-Runs one of several groups of statements, depending on the value of an expression.  
+式の値に応じて、いくつかのステートメントグループのうちの1つを実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,39 +46,39 @@ End Select
   
 |用語|定義|  
 |---|---|  
-|`testexpression`|必須です。 Expression. Must evaluate to one of the elementary data types (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, and `UShort`).|  
-|`expressionlist`|Required in a `Case` statement. List of expression clauses representing match values for `testexpression`. Multiple expression clauses are separated by commas. Each clause can take one of the following forms:<br /><br /> -   *expression1* `To` *expression2*<br />-   [ `Is` ] *comparisonoperator* *expression*<br />-   *expression*<br /><br /> Use the `To` keyword to specify the boundaries of a range of match values for `testexpression`. The value of `expression1` must be less than or equal to the value of `expression2`.<br /><br /> Use the `Is` keyword with a comparison operator (`=`, `<>`, `<`, `<=`, `>`, or `>=`) to specify a restriction on the match values for `testexpression`. If the `Is` keyword is not supplied, it is automatically inserted before *comparisonoperator*.<br /><br /> The form specifying only `expression` is treated as a special case of the `Is` form where *comparisonoperator* is the equal sign (`=`). This form is evaluated as `testexpression` = `expression`.<br /><br /> The expressions in `expressionlist` can be of any data type, provided they are implicitly convertible to the type of `testexpression` and the appropriate `comparisonoperator` is valid for the two types it is being used with.|  
-|`statements`|省略可能です。 One or more statements following `Case` that run if `testexpression` matches any clause in `expressionlist`.|  
-|`elsestatements`|省略可能です。 One or more statements following `Case Else` that run if `testexpression` does not match any clause in the `expressionlist` of any of the `Case` statements.|  
-|`End Select`|Terminates the definition of the `Select`...`Case` construction.|  
+|`testexpression`|必須。 条件. は、基本データ型 (`Boolean`、`Byte`、`Char`、`Date`、`Double`、`Decimal`、`Integer`、`Long`、`Object`、`SByte`、`Short`、`Single`) のいずれかに評価される必要があります。`String``UInteger``ULong``UShort`|  
+|`expressionlist`|`Case` ステートメントでは必須です。 `testexpression`の一致値を表す式の句の一覧。 複数の式句は、コンマで区切ります。 各句には、次のいずれかの形式を使用できます。<br /><br /> -   *expression1* `To` *expression2*<br />-[`Is`] *comparisonoperator* *式*<br />-   *式*<br /><br /> `To` キーワードを使用して、`testexpression`の一致値の範囲の境界を指定します。 `expression1` の値は `expression2`の値以下である必要があります。<br /><br /> 比較演算子 (`=`、`<>`、`<`、`<=`、`>`、または `>=`) と共に `Is` キーワードを使用して、`testexpression`の一致値に制限を指定します。 `Is` キーワードが指定されていない場合は、 *comparisonoperator*の前に自動的に挿入されます。<br /><br /> `expression` のみを指定するフォームは、`Is` 形式の特殊なケースとして扱われます。ここで、 *comparisonoperator*は等号 (`=`) です。 このフォームは `testexpression` = `expression`として評価されます。<br /><br /> `expressionlist` の式は、任意のデータ型にすることができます。 `testexpression` の型に暗黙的に変換可能であり、適切な `comparisonoperator` が使用されている2つの型に対して有効であることが条件となります。|  
+|`statements`|任意。 `testexpression` が `expressionlist`内のいずれかの句と一致する場合に実行される `Case` に続く1つ以上のステートメント。|  
+|`elsestatements`|任意。 `testexpression` が `Case` ステートメントの `expressionlist` 内のどの句とも一致しない場合に実行される `Case Else` に続く1つ以上のステートメント。|  
+|`End Select`|`Select`...`Case` の構築の定義を終了します。|  
   
-## <a name="remarks"></a>Remarks  
- If `testexpression` matches any `Case` `expressionlist` clause, the statements following that `Case` statement run up to the next `Case`, `Case Else`, or `End Select` statement. Control then passes to the statement following `End Select`. If `testexpression` matches an `expressionlist` clause in more than one `Case` clause, only the statements following the first match run.  
+## <a name="remarks"></a>コメント  
+ `testexpression` が `Case` `expressionlist` 句と一致する場合、その `Case` ステートメントに続くステートメントは、次の `Case`、`Case Else`、または `End Select` ステートメントまで実行されます。 次に、コントロールは `End Select`に続くステートメントにを渡します。 `testexpression` が1つ以上の `Case` 句の `expressionlist` 句と一致する場合、最初の一致を実行した後のステートメントのみが実行されます。  
   
- The `Case Else` statement is used to introduce the `elsestatements` to run if no match is found between the `testexpression` and an `expressionlist` clause in any of the other `Case` statements. Although not required, it is a good idea to have a `Case Else` statement in your `Select Case` construction to handle unforeseen `testexpression` values. If no `Case` `expressionlist` clause matches `testexpression` and there is no `Case Else` statement, control passes to the statement following `End Select`.  
+ `Case Else` ステートメントを使用して、他の `Case` ステートメントで `testexpression` と `expressionlist` 句の間に一致が検出されなかった場合に実行する `elsestatements` を導入します。 必須ではありませんが、予期しない `testexpression` 値を処理するために、`Select Case` の構築に `Case Else` ステートメントを用意することをお勧めします。 `Case` `expressionlist` 句が `testexpression` に一致せず、`Case Else` ステートメントが存在しない場合、制御は `End Select`に続くステートメントに渡されます。  
   
- You can use multiple expressions or ranges in each `Case` clause. For example, the following line is valid.  
+ 各 `Case` 句では、複数の式または範囲を使用できます。 たとえば、次の行は有効です。  
   
  `Case 1 To 4, 7 To 9, 11, 13, Is > maxNumber`  
   
 > [!NOTE]
-> The `Is` keyword used in the `Case` and `Case Else` statements is not the same as the [Is Operator](../../../visual-basic/language-reference/operators/is-operator.md), which is used for object reference comparison.  
+> `Case` および `Case Else` ステートメントで使用されている `Is` キーワードは、オブジェクト参照の比較に使用される[Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)と同じではありません。  
   
- You can specify ranges and multiple expressions for character strings. In the following example, `Case` matches any string that is exactly equal to "apples", has a value between "nuts" and "soup" in alphabetical order, or contains the exact same value as the current value of `testItem`.  
+ 文字列の範囲と複数の式を指定できます。 次の例では、`Case` は、"リンゴ" と完全に等価な任意の文字列と、アルファベット順の "ナット" と "スープ" の間の値を持つか、`testItem`の現在の値とまったく同じ値を含んでいます。  
   
  `Case "apples", "nuts" To "soup", testItem`  
   
- The setting of `Option Compare` can affect string comparisons. Under `Option Compare Text`, the strings "Apples" and "apples" compare as equal, but under `Option Compare Binary`, they do not.  
+ `Option Compare` の設定は、文字列比較に影響を与える可能性があります。 `Option Compare Text`では、文字列 "りんご" と "りんご" は等しいとして比較されますが、`Option Compare Binary`の下では、これらは等しくありません。  
   
 > [!NOTE]
-> A `Case` statement with multiple clauses can exhibit behavior known as *short-circuiting*. Visual Basic evaluates the clauses from left to right, and if one produces a match with `testexpression`, the remaining clauses are not evaluated. Short-circuiting can improve performance, but it can produce unexpected results if you are expecting every expression in `expressionlist` to be evaluated. For more information on short-circuiting, see [Boolean Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).  
+> 複数の句を持つ `Case` ステートメントでは、*ショートサーキット*と呼ばれる動作を使用できます。 Visual Basic では、句が左から右に評価されます。一方が `testexpression`と一致する場合、残りの句は評価されません。 ショートサーキットはパフォーマンスを向上させることができますが、`expressionlist` 内のすべての式を評価する必要がある場合は、予期しない結果が生じる可能性があります。 ショートサーキットの詳細については、「[ブール式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)」を参照してください。  
   
- If the code within a `Case` or `Case Else` statement block does not need to run any more of the statements in the block, it can exit the block by using the `Exit Select` statement. This transfers control immediately to the statement following `End Select`.  
+ `Case` または `Case Else` ステートメントブロック内のコードが、ブロック内のステートメントを実行する必要がない場合は、`Exit Select` ステートメントを使用してブロックを終了できます。 これにより、`End Select`に続くステートメントに制御が直ちに移ります。  
   
- `Select Case` constructions can be nested. Each nested `Select Case` construction must have a matching `End Select` statement and must be completely contained within a single `Case` or `Case Else` statement block of the outer `Select Case` construction within which it is nested.  
+ `Select Case` の構造は入れ子にすることができます。 入れ子になった `Select Case` 構築にはそれぞれ、一致する `End Select` ステートメントが必要です。また、入れ子になっている外側の `Select Case` 構築の1つの `Case` または `Case Else` ステートメントブロック内に完全に含まれている必要があります。  
   
 ## <a name="example"></a>例  
- The following example uses a `Select Case` construction to write a line corresponding to the value of the variable `number`. The second `Case` statement contains the value that matches the current value of `number`, so the statement that writes "Between 6 and 8, inclusive" runs.  
+ 次の例では、`Select Case` 構築を使用して、変数 `number`の値に対応する行を書き込みます。 2番目の `Case` ステートメントには、`number`の現在の値と一致する値が含まれています。そのため、"Between 6 ~ 8" を含むステートメントが実行されます。  
   
  [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
   

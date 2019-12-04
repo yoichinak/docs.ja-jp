@@ -15,54 +15,54 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350348"
 ---
 # <a name="mywebservices-object"></a>My.WebServices オブジェクト
-Provides properties for creating and accessing a single instance of each XML Web service referenced by the current project.  
+現在のプロジェクトによって参照される各 XML Web サービスの1つのインスタンスを作成してアクセスするためのプロパティを提供します。  
   
-## <a name="remarks"></a>Remarks  
- `My.WebServices` オブジェクトは、現在のプロジェクトにより参照されている各 Web サービスのインスタンスを提供します。 各インスタンスは要求に応じてインスタンス化されます。 これらの Web サービスには `My.WebServices` オブジェクトのプロパティを介してアクセスできます。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じになります。 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> から継承されたクラスはすべて Web サービスです。 For information about adding Web services to a project, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+## <a name="remarks"></a>コメント  
+ `My.WebServices` オブジェクトは、現在のプロジェクトにより参照されている各 Web サービスのインスタンスを提供します。 各インスタンスは要求に応じてインスタンス化されます。 これらの Web サービスには `My.WebServices` オブジェクトのプロパティを介してアクセスできます。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じになります。 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> から継承されたクラスはすべて Web サービスです。 プロジェクトへの Web サービスの追加については、「[アプリケーション Web サービス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)へのアクセス」を参照してください。  
   
- The `My.WebServices` object exposes only the Web services associated with the current project. It does not provide access to Web services declared in referenced DLLs. To access a Web service that a DLL provides, you must use the qualified name of the Web service, in the form *DllName*.*WebServiceName*. For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ `My.WebServices` オブジェクトは、現在のプロジェクトに関連付けられている Web サービスだけを公開します。 参照先の Dll で宣言されている Web サービスへのアクセスを提供しません。 DLL が提供する Web サービスにアクセスするには、Web サービスの修飾名を*DllName*の形式で使用する必要があります。*Webservicename*。 詳細については、「[アプリケーション Web サービスへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)」を参照してください。  
   
- The object and its properties are not available for Web applications.  
+ オブジェクトとそのプロパティは、Web アプリケーションでは使用できません。  
   
 ## <a name="properties"></a>プロパティ  
- Each property of the `My.WebServices` object provides access to an instance of a Web service referenced by the current project. The name of the property is the same as the name of the Web service that the property accesses, and the property type is the same as the Web service's type.  
+ `My.WebServices` オブジェクトの各プロパティは、現在のプロジェクトによって参照される Web サービスのインスタンスへのアクセスを提供します。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じです。プロパティの型は、Web サービスの型と同じです。  
   
 > [!NOTE]
-> If there is a name collision, the property name for accessing a Web service is *RootNamespace*_*Namespace*\_*ServiceName*. For example, consider two Web services named `Service1`. If one of these services is in the root namespace `WindowsApplication1` and in the namespace `Namespace1`, you would access that service by using `My.WebServices.WindowsApplication1_Namespace1_Service1`.  
+> 名前の競合がある場合、Web サービスにアクセスするためのプロパティ名は*RootNamespace*_*名前空間*\_*ServiceName*です。 たとえば、`Service1`という名前の2つの Web サービスを考えてみます。 これらのサービスのいずれかがルート名前空間 `WindowsApplication1` であり、名前空間 `Namespace1`にある場合、`My.WebServices.WindowsApplication1_Namespace1_Service1`を使用してそのサービスにアクセスします。  
   
- When you first access one of the `My.WebServices` object's properties, it creates a new instance of the Web service and stores it. Subsequent accesses of that property return that instance of the Web service.  
+ `My.WebServices` オブジェクトのいずれかのプロパティに初めてアクセスすると、Web サービスの新しいインスタンスが作成され、保存されます。 そのプロパティの後続のアクセスでは、Web サービスのインスタンスが返されます。  
   
- You can dispose of a Web service by assigning `Nothing` to the property for that Web service. The property setter assigns `Nothing` to the stored value. If you assign any value other than `Nothing` to the property, the setter throws an <xref:System.ArgumentException> exception.  
+ Web サービスのプロパティに `Nothing` を割り当てることによって、Web サービスを破棄できます。 プロパティセッターは、格納されている値に `Nothing` を割り当てます。 `Nothing` 以外の値をプロパティに割り当てた場合、setter は <xref:System.ArgumentException> 例外をスローします。  
   
- You can test whether a property of the `My.WebServices` object stores an instance of the Web service by using the `Is` or `IsNot` operator. You can use those operators to check if the value of the property is `Nothing`.  
+ `Is` または `IsNot` 演算子を使用して、`My.WebServices` オブジェクトのプロパティに Web サービスのインスタンスが格納されているかどうかをテストできます。 これらの演算子を使用すると、プロパティの値が `Nothing`かどうかを確認できます。  
   
 > [!NOTE]
-> Typically, the `Is` or `IsNot` operator has to read the value of the property to perform the comparison. However, if the property currently stores `Nothing`, the property creates a new instance of the Web service and then returns that instance. However, the Visual Basic compiler treats the properties of the `My.WebServices` object specially, and allows the `Is` or `IsNot` operator to check the status of the property without altering its value.  
+> 通常、`Is` または `IsNot` 演算子は、比較を実行するためにプロパティの値を読み取る必要があります。 ただし、プロパティが現在 `Nothing`を格納している場合は、プロパティによって Web サービスの新しいインスタンスが作成され、そのインスタンスが返されます。 ただし、Visual Basic コンパイラは、`My.WebServices` オブジェクトのプロパティを特別に処理し、`Is` または `IsNot` の演算子が、値を変更せずにプロパティの状態を確認できるようにします。  
   
 ## <a name="example"></a>例  
- This example calls the `FahrenheitToCelsius` method of the `TemperatureConverter` XML Web service, and returns the result.  
+ この例では、`TemperatureConverter` XML Web サービスの `FahrenheitToCelsius` メソッドを呼び出し、その結果を返します。  
   
  [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
   
- For this example to work, your project must reference a Web service named `Converter`, and that Web service must expose the `ConvertTemperature` method. For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ この例を機能させるには、プロジェクトで `Converter`という名前の Web サービスを参照し、その Web サービスが `ConvertTemperature` メソッドを公開する必要があります。 詳細については、「[アプリケーション Web サービスへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)」を参照してください。  
   
- This code does not work in a Web application project.  
+ このコードは、Web アプリケーションプロジェクトでは機能しません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
   
-### <a name="availability-by-project-type"></a>Availability by Project Type  
+### <a name="availability-by-project-type"></a>プロジェクトの種類別の可用性  
   
-|プロジェクトの種類|使用可能|  
+|プロジェクトの種類|利用可能|  
 |---|---|  
 |Windows アプリケーション|**はい**|  
 |クラス ライブラリ|**はい**|  
 |コンソール アプリケーション|**はい**|  
-|Windows Control Library|**はい**|  
-|Web Control Library|**はい**|  
+|Windows コントロールライブラリ|**はい**|  
+|Web コントロールライブラリ|**はい**|  
 |Windows サービス|**はい**|  
-|Web サイト|Ｘ|  
+|Web サイト|いいえ|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>
 - <xref:System.ArgumentException>

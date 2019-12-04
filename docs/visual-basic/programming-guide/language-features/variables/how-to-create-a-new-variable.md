@@ -14,49 +14,49 @@ ms.locfileid: "74353631"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>方法: 新しい変数を作成する (Visual Basic)
 
-You create a variable with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
+変数を作成するには、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)を使用します。
 
 ### <a name="to-create-a-new-variable"></a>新しい変数を作成するには
 
-1. Declare the variable in a `Dim` statement.
+1. `Dim` ステートメントで変数を宣言します。
 
     ```vb
     Dim newCustomer
     ```
 
-2. Include specifications for the variable's characteristics, such as [Private](../../../../visual-basic/language-reference/modifiers/private.md), [Static](../../../../visual-basic/language-reference/modifiers/static.md), [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md), or [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md). For more information, see [Declared Element Characteristics](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md).
+2. [Private](../../../../visual-basic/language-reference/modifiers/private.md)、 [Static](../../../../visual-basic/language-reference/modifiers/static.md)、 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)、 [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)など、変数の特性の仕様を含めます。 詳細については、「宣言された[要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)」を参照してください。
 
     ```vb
     Public Static newCustomer
     ```
 
-    You do not need the `Dim` keyword if you use other keywords in the declaration.
+    宣言で他のキーワードを使用する場合、`Dim` キーワードは必要ありません。
 
-3. Follow the specifications with the variable's name, which must follow Visual Basic rules and conventions. For more information, see [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+3. 仕様に従って変数の名前を指定します。これは Visual Basic の規則と規則に従う必要があります。 詳細については、「宣言された[要素名](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
     ```vb
     Public Static newCustomer
     ```
 
-4. Follow the name with the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause to specify the variable's data type.
+4. 名前の後に As 句を使用し[て](../../../../visual-basic/language-reference/statements/as-clause.md)、変数のデータ型を指定します。
 
     ```vb
     Public Static newCustomer As Customer
     ```
 
-    If you do not specify the data type, it uses the default: `Object`.
+    データ型を指定しない場合、既定値の `Object`が使用されます。
 
-5. Follow the `As` clause with an equal sign (`=`) and follow the equal sign with the variable's initial value.
+5. `As` 句に等号 (`=`) を付けて、等号に続けて変数の初期値を指定します。
 
-    Visual Basic assigns the specified value to the variable every time it runs the `Dim` statement. If you do not specify an initial value, Visual Basic assigns the default initial value for the variable's data type when it first enters the code that contains the `Dim` statement.
+    Visual Basic は、`Dim` ステートメントを実行するたびに、指定された値を変数に代入します。 初期値を指定しなかった場合、`Dim` ステートメントを含むコードを最初に入力したときに、変数のデータ型の既定の初期値が Visual Basic に割り当てられます。
 
-    If the variable is a reference type, you can create an instance of its class by including the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the `As` clause. If you do not use `New`, the initial value of the variable is [Nothing](../../../../visual-basic/language-reference/nothing.md).
+    変数が参照型の場合は、`As` 句に[New Operator](../../../../visual-basic/language-reference/operators/new-operator.md)キーワードを含めることで、そのクラスのインスタンスを作成できます。 `New`を使用しない場合、変数の初期値は[Nothing](../../../../visual-basic/language-reference/nothing.md)です。
 
     ```vb
     Public Static newCustomer As New Customer
     ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [変数](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

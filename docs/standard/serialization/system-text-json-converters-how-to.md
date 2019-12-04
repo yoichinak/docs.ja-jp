@@ -292,7 +292,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 * 外部データを受け入れる `List<T>` コンバーター
 * コンマで区切られた数値のリストを処理する `Long[]` コンバーター 
 
-## <a name="additional-resources"></a>その他の技術情報
+## <a name="additional-resources"></a>その他のリソース
 
 * [System.string の概要](system-text-json-overview.md)
 * [System.string API リファレンス](xref:System.Text.Json)

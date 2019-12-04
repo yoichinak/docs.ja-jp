@@ -21,7 +21,7 @@ ms.locfileid: "74343830"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource ディレクティブ
 
-Indicates a mapping between specific lines of source code and text external to the source.  
+ソースコードの特定の行と、ソースの外部のテキストとの間のマッピングを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,25 +34,25 @@ Indicates a mapping between specific lines of source code and text external to t
 ## <a name="parts"></a>指定項目  
 
  `StringLiteral`  
- The path to the external source.  
+ 外部ソースへのパス。  
   
  `IntLiteral`  
- The line number of the first line of the external source.  
+ 外部ソースの最初の行の行番号。  
   
  `LogicalLine`  
- The line where the error occurs in the external source.  
+ 外部ソースでエラーが発生した行。  
   
  `#End ExternalSource`  
  `#ExternalSource` ブロックを終了します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
 
- This directive is used only by the compiler and the debugger.  
+ このディレクティブは、コンパイラとデバッガーでのみ使用されます。  
   
- A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file. If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.  
+ ソースファイルには、ソースファイル内の特定のコード行と、.aspx ファイルなどのソースの外部テキストとの間のマッピングを示す、外部ソースディレクティブを含めることができます。 コンパイル時に指定したソースコードでエラーが発生した場合は、外部ソースからのものとして識別されます。  
   
- External source directives have no effect on compilation and cannot be nested. They are intended for internal use by the application only.  
+ 外部ソースディレクティブはコンパイルには影響しません。入れ子にすることはできません。 アプリケーションでの内部使用のみを目的としています。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

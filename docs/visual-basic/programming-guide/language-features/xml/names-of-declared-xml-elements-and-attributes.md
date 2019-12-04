@@ -16,35 +16,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335996"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>宣言する XML 要素と属性の名前 (Visual Basic)
-This topic provides Visual Basic guidelines for naming XML elements and attributes in XML literals.  In an XML literal, you can specify a local name or a qualified name. A qualified name consists of an XML namespace prefix, a colon, and a local name. For more information about XML namespace prefixes, see [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+このトピックでは、xml リテラルの XML 要素と属性に名前を付けるための Visual Basic ガイドラインについて説明します。  XML リテラルでは、ローカル名または修飾名を指定できます。 修飾名は、XML 名前空間プレフィックス、コロン、およびローカル名で構成されます。 XML 名前空間プレフィックスの詳細については、「 [Xml 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)」を参照してください。  
   
 ## <a name="rules"></a>ルール  
- A local name of an element or attribute in Visual Basic must adhere to the following rules.  
+ Visual Basic 内の要素または属性のローカル名は、次の規則に従う必要があります。  
   
-- It can begin with a namespace. It must begin with an alphabetical character or an underscore (`_`).  
+- 名前空間で開始できます。 先頭は英文字またはアンダースコア (`_`) である必要があります。  
   
-- It must contain only alphabetical characters, decimal digits, underscores, periods (.), and hyphens (-).  
+- アルファベット文字、10進数字、アンダースコア、ピリオド (.)、ハイフン (-) のみを含める必要があります。  
   
-- It must not be more than 1,024 characters long.  
+- 長さは1024文字以下でなければなりません。  
   
-- Colons that appear in names indicate namespace demarcation. Therefore, you can use colons only to specify an XML namespace for a particular name.  
+- 名前に表示されるコロンは、名前空間の境界を示します。 したがって、コロンは、特定の名前の XML 名前空間を指定する場合にのみ使用できます。  
   
- In addition, you should adhere to the following guideline.  
+ さらに、次のガイドラインに従う必要があります。  
   
-- The XML 1.0 specification reserves all names starting with the string "xml", of any capitalization variation. Therefore, do not use those names for your element and attribute names.  
+- XML 1.0 仕様では、文字列 "xml" で始まるすべての名前が、大文字と小文字の違いによって予約されています。 したがって、要素名と属性名にはこれらの名前を使用しないでください。  
   
-### <a name="name-length-guidelines"></a>Name Length Guidelines  
- As a practical matter, a name should be as short as possible while still clearly identifying the nature of the element. This improves the readability of your code and reduces line length and source-file size.  
+### <a name="name-length-guidelines"></a>名前の長さのガイドライン  
+ 実際には、要素の性質を明確に識別しながら、可能な限り短い名前を使用する必要があります。 これにより、コードの読みやすさが向上し、行の長さとソースファイルのサイズが減少します。  
   
- However, your name should not be so short that it does not adequately describe the element or how your code uses it. This is important for the readability of your code. If somebody else is trying to understand it, or if you yourself are looking at it a long time after you wrote it, appropriate element names can save time.  
+ ただし、要素が正しく記述されていない場合や、コードで要素が使用されている場合は、名前を短くすることはできません。 これは、コードを読みやすくするために重要です。 他のユーザーがそれを理解しようとしている場合、または記述した後に長い時間を見ている場合は、適切な要素名を使用すると時間を節約できます。  
   
-## <a name="case-sensitivity-in-names"></a>Case Sensitivity in Names  
- XML element names are case sensitive. This means that when the Visual Basic compiler compares two names that differ in alphabetical case only, it interprets them as different names. For example, it interprets `ABC` and `abc` as referring to separate elements.  
+## <a name="case-sensitivity-in-names"></a>名前の大文字と小文字の区別  
+ XML 要素名では大文字と小文字が区別されます。 つまり、Visual Basic コンパイラでは、アルファベット順の場合にのみ異なる2つの名前を比較すると、異なる名前として解釈されます。 たとえば、`ABC` を解釈し、個別の要素を参照するように `abc` します。  
   
 ## <a name="xml-namespaces"></a>XML 名前空間  
- When creating an XML element literal, you can specify the XML namespace prefix for the element name. For more information, see [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+ XML 要素リテラルを作成するときに、要素名の XML 名前空間プレフィックスを指定できます。 詳細については、「 [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

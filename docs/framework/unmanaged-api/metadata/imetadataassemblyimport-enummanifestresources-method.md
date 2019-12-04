@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449560"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources メソッド
-Gets a pointer to an enumerator for the resources referenced in the current assembly manifest.  
+現在のアセンブリマニフェストで参照されているリソースの列挙子へのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,33 +38,33 @@ HRESULT EnumManifestResources (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value when the `EnumManifestResources` method is called for the first time.  
+ [入力、出力]列挙子へのポインター。 `EnumManifestResources` メソッドを初めて呼び出すときは、null 値を指定する必要があります。  
   
  `rManifestResources`  
- [out] The array used to store the `mdManifestResource` metadata tokens.  
+ 入出力`mdManifestResource` メタデータトークンを格納するために使用される配列。  
   
  `cMax`  
- [in] The maximum number of `mdManifestResource` tokens that can be placed in `rManifestResources`.  
+ から`rManifestResources`に配置できる `mdManifestResource` トークンの最大数。  
   
  `pcTokens`  
- [out] The number of `mdManifestResource` tokens actually placed in `rManifestResources`.  
+ 入出力`rManifestResources`に実際に配置されている `mdManifestResource` トークンの数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumManifestResources` が正常に返されました。|  
+|`S_FALSE`|列挙するトークンがありません。 この場合、`pcTokens` は0に設定されます。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

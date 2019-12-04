@@ -1,5 +1,5 @@
 ---
-title: 'How to: Declare an Object Variable and Assign an Object to It'
+title: '方法: オブジェクト変数を宣言し、それにオブジェクトを割り当てる'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], declaring
@@ -14,18 +14,18 @@ ms.locfileid: "74352904"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>方法 : Visual Basic でオブジェクト変数を宣言し、オブジェクト変数にオブジェクトを代入する
 
-You declare a variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) by specifying `As Object` in a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md). You assign an object to such a variable by placing the object after the equal sign (`=`) in an assignment statement or initialization clause.
+[オブジェクトデータ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)の変数を宣言するには、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)で `As Object` を指定します。 このような変数にオブジェクトを代入するには、代入ステートメントまたは初期化句で等号 (`=`) の後にオブジェクトを配置します。
 
 ## <a name="example"></a>例
 
-The following example declares an `Object` variable and assigns the current instance to it.
+次の例では、`Object` 変数を宣言し、現在のインスタンスをその変数に代入します。
 
 ```vb
 Dim thisObject As Object
 thisObject = "This is an Object"
 ```
 
-You can combine the declaration and assignment by initializing the variable as part of its declaration. The following example is equivalent to the preceding example.
+宣言の一部として変数を初期化することで、宣言と代入を組み合わせることができます。 次の例は、前の例と同じです。
 
 ```vb
 Dim thisObject As Object= "This is an Object"
@@ -37,16 +37,16 @@ Dim thisObject As Object= "This is an Object"
 
 - <xref:System> 名前空間への参照
 
-- A class, structure, or module in which to put the `Dim` statement.
+- `Dim` ステートメントを格納するクラス、構造体、またはモジュール。
 
-- A procedure in which to put the assignment statement.
+- 代入ステートメントを配置するプロシージャ。
 
 ## <a name="see-also"></a>関連項目
 
 - [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [オブジェクト変数の宣言](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

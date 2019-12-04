@@ -24,22 +24,22 @@ UTF-8 エンコードを使用してコンパイラ出力を表示します。
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 省略可能です。 The default for this option is `-utf8output-`, which means compiler output does not use UTF-8 encoding. `-utf8output` を指定することは、`-utf8output+` を指定することと同じです。  
+ 省略可。 このオプションの既定値は `-utf8output-`です。これは、コンパイラの出力で UTF-8 エンコーディングが使用されないことを意味します。 `-utf8output` を指定することは、`-utf8output+` を指定することと同じです。  
   
-## <a name="remarks"></a>Remarks  
- In some international configurations, compiler output cannot be displayed correctly in the console. In such situations, use `-utf8output` and redirect compiler output to a file.  
+## <a name="remarks"></a>コメント  
+ 国際対応の構成によっては、コンパイラの出力をコンソールに正しく表示できない場合があります。 このような場合は、`-utf8output` を使用し、コンパイラの出力をファイルにリダイレクトします。  
   
 > [!NOTE]
-> The `-utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> `-utf8output` オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
   
 ## <a name="example"></a>例  
- The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.  
+ 次のコードは `In.vb` をコンパイルし、UTF-8 エンコーディングを使用して出力を表示するようにコンパイラに指示します。  
   
 ```console  
 vbc -utf8output in.vb  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

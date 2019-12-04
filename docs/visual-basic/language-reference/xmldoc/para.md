@@ -12,8 +12,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352300"
 ---
-# <a name="para-visual-basic"></a>\<para> (Visual Basic)
-Specifies that the content is formatted as a paragraph.  
+# <a name="para-visual-basic"></a>\<の段落 > (Visual Basic)
+コンテンツが段落として書式設定されることを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -25,16 +25,16 @@ Specifies that the content is formatted as a paragraph.
  `content`  
  段落のテキストです。  
   
-## <a name="remarks"></a>Remarks  
- The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.  
+## <a name="remarks"></a>コメント  
+ `<para>` タグは、 [\<概要 >](../../../visual-basic/language-reference/xmldoc/summary.md)、 [\<解説 >](../../../visual-basic/language-reference/xmldoc/remarks.md)、 [\<返す](../../../visual-basic/language-reference/xmldoc/returns.md)> など、タグ内で使用するためのものであり、テキストに構造を追加することができます。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.  
+ この例では、`<para>` タグを使用して、`UpdateRecord` メソッドの解説セクションを2つの段落に分割します。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

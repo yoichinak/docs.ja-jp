@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432331"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>IMetaDataEmit::SetPermissionSetProps メソッド
-Sets or updates features of the metadata signature of a permission set defined by a prior call to [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
+[IMetaDataEmit::D efinepermissionset](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md)の前の呼び出しで定義されたアクセス許可セットのメタデータ署名の機能を設定または更新します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,26 +39,26 @@ HRESULT SetPermissionSetProps (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in] A metadata token that represents the object to be decorated.  
+ から修飾されるオブジェクトを表すメタデータトークン。  
   
  `dwAction`  
- [in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.  
+ から使用する宣言セキュリティの種類を指定する[CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md)値です。  
   
  `pvPermission`  
- [in] The permission BLOB.  
+ からアクセス許可 BLOB。  
   
  `cbPermission`  
- [in] The size, in bytes, of `pvPermission`.  
+ から`pvPermission`のサイズ (バイト単位)。  
   
  `ppm`  
- [out] An `mdPermission` metadata token that represents the updated permissions.  
+ 入出力更新されたアクセス許可を表す `mdPermission` メタデータトークン。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

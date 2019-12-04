@@ -15,21 +15,21 @@ ms.locfileid: "74350700"
 # <a name="mycomputerregistry-object"></a>My.Computer.Registry オブジェクト
 レジストリを操作するためのプロパティとメソッドを提供します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `My.Computer.Registry` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>」をご覧ください。  
   
- For more information, see [Reading from and Writing to the Registry](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).  
+ 詳細については、「[レジストリの読み取りと書き込み](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)」を参照してください。  
   
 > [!NOTE]
-> You can also manipulate the registry by using methods of the <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> class.  
+> <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> クラスのメソッドを使用して、レジストリを操作することもできます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **名前空間:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (provides access to <xref:Microsoft.Win32.Registry>)  
+ **クラス:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (<xref:Microsoft.Win32.Registry>へのアクセスを提供します)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [My.Computer オブジェクト](../../../visual-basic/language-reference/objects/my-computer-object.md)

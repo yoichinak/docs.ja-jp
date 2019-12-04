@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support this action
+title: オブジェクトはこの操作をサポートしていません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID445
@@ -20,6 +20,6 @@ ms.locfileid: "74353880"
   
 2. プロパティとメソッドの名前のスペルが正しいことを確認します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [エラーの種類](../../visual-basic/programming-guide/language-features/error-types.md)

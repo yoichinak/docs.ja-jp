@@ -16,26 +16,26 @@ ms.locfileid: "74347379"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>方法: ステートメントへのラベル付け (Visual Basic)
 
-Statement blocks are made up of lines of code delimited by colons. Lines of code preceded by an identifying string or integer are said to be *labeled*. Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.
+ステートメントブロックは、コロンで区切られたコード行で構成されます。 識別文字列または整数で始まるコード行には、ラベルが*付け*られています。 ステートメントラベルを使用して、コード行をマークし、`On Error Goto`などのステートメントで使用するように指定します。
 
-Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals. A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.
+ラベルは、プログラミング要素を識別する Visual Basic 識別子や、整数リテラルなど、有効な識別子である場合があります。 ラベルは、ソースコードの行の先頭に記述する必要があります。また、同じ行にステートメントが続くかどうかに関係なく、コロンで続ける必要があります。
 
-The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier. If it does not, the compiler assumes it is a label.
+コンパイラは、行の先頭が既に定義されている識別子と一致するかどうかをチェックすることによって、ラベルを識別します。 そうでない場合、コンパイラはこれがラベルであると見なします。
 
-Labels have their own declaration space and do not interfere with other identifiers. A label's scope is the body of the method. Label declaration takes precedence in any ambiguous situation.
+ラベルには独自の宣言領域があり、他の識別子に干渉することはありません。 ラベルのスコープは、メソッドの本体です。 ラベル宣言は、あいまいな状況で優先されます。
 
 > [!NOTE]
-> Labels can be used only on executable statements inside methods.
+> ラベルは、メソッド内の実行可能なステートメントでのみ使用できます。
 
-## <a name="to-label-a-line-of-code"></a>To label a line of code
+## <a name="to-label-a-line-of-code"></a>コード行にラベルを付けるには
 
-Place an identifier, followed by a colon, at the beginning of the line of source code.
+ソースコード行の先頭に、識別子、コロン、コロンの順に配置します。
 
-For example, the following lines of code are labeled with `Jump` and `120`, respectively:
+たとえば、次のコード行には、`Jump` と `120`のラベルが付けられています。
 
 [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)
 - [宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446565"
 ---
 # <a name="closeenum-method"></a>CloseEnum メソッド
-Closes the indicated enumeration and frees associated resources.  
+指定された列挙体を閉じ、関連付けられているリソースを解放します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +35,15 @@ HRESULT CloseEnum(
   
 ## <a name="parameters"></a>パラメーター  
  `hEnum`  
- Handle of enumeration to be closed.  
+ 閉じられる列挙体のハンドル。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

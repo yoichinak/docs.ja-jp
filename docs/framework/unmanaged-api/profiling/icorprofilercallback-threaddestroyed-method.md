@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439931"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>ICorProfilerCallback::ThreadDestroyed メソッド
-Notifies the profiler that a thread has been destroyed.  
+スレッドが破棄されたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,12 +34,12 @@ HRESULT ThreadDestroyed(
   
 ## <a name="parameters"></a>パラメーター  
  `threadId`  
- [in] The ID of the thread that has been destroyed.  
+ から破棄されたスレッドの ID。  
   
-## <a name="remarks"></a>Remarks  
- The `threadId` value is no longer valid at the time of this call.  
+## <a name="remarks"></a>コメント  
+ この呼び出し時に、`threadId` の値は有効ではなくなりました。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

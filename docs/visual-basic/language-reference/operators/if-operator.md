@@ -20,7 +20,7 @@ ms.locfileid: "74331014"
 ---
 # <a name="if-operator-visual-basic"></a>If 演算子 (Visual Basic)
 
-Uses short-circuit evaluation to conditionally return one of two values. The `If` operator can be called with three arguments or with two arguments.
+は、ショートサーキット評価を使用して、条件に応じて2つの値のいずれかを返します。 `If` 演算子は、3つの引数または2つの引数を指定して呼び出すことができます。
 
 ## <a name="syntax"></a>構文
 
@@ -28,38 +28,38 @@ Uses short-circuit evaluation to conditionally return one of two values. The `If
 If( [argument1,] argument2, argument3 )
 ```
 
-## <a name="if-operator-called-with-three-arguments"></a>If operator called with three arguments
+## <a name="if-operator-called-with-three-arguments"></a>3つの引数を指定して演算子が呼び出された場合
 
-When `If` is called by using three arguments, the first argument must evaluate to a value that can be cast as a `Boolean`. That `Boolean` value will determine which of the other two arguments is evaluated and returned. The following list applies only when the `If` operator is called by using three arguments.
+3つの引数を使用して `If` が呼び出された場合、最初の引数は `Boolean`としてキャストできる値に評価される必要があります。 この `Boolean` 値によって、他の2つの引数のどちらが評価され、返されるかが決まります。 次の一覧は、3つの引数を使用して `If` 演算子が呼び出された場合にのみ適用されます。
 
 ### <a name="parts"></a>指定項目
 
 |用語|定義|
 |---|---|
-|`argument1`|必須です。 `Boolean`. Determines which of the other arguments to evaluate and return.|
-|`argument2`|必須です。 `Object`. Evaluated and returned if `argument1` evaluates to `True`.|
-|`argument3`|必須です。 `Object`. Evaluated and returned if `argument1` evaluates to `False` or if `argument1` is a [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)`Boolean` variable that evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md).|
+|`argument1`|必須。 `Boolean` で初期化します。 他のどの引数を評価して返すかを決定します。|
+|`argument2`|必須。 `Object` で初期化します。 評価され、`argument1` が `True`に評価される場合に返されます。|
+|`argument3`|必須。 `Object` で初期化します。 `argument1` が `False` と評価された場合、または `argument1` が[Nothing](../../../visual-basic/language-reference/nothing.md)に評価される[null 許容](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)の`Boolean` 変数である場合に評価され、返されます。|
 
-An `If` operator that is called with three arguments works like an `IIf` function except that it uses short-circuit evaluation. An `IIf` function always evaluates all three of its arguments, whereas an `If` operator that has three arguments evaluates only two of them. The first `If` argument is evaluated and the result is cast as a `Boolean` value, `True` or `False`. If the value is `True`, `argument2` is evaluated and its value is returned, but `argument3` is not evaluated. If the value of the `Boolean` expression is `False`, `argument3` is evaluated and its value is returned, but `argument2` is not evaluated. The following examples illustrate the use of `If` when three arguments are used:
+3つの引数を指定して呼び出される `If` 演算子は、ショートサーキット評価を使用する点を除いて、`IIf` 関数と同様に機能します。 `IIf` 関数は、常に3つの引数をすべて評価します。一方、3つの引数を持つ `If` 演算子は、そのうち2つだけを評価します。 最初の `If` 引数が評価され、結果は `Boolean` 値、`True`、または `False`としてキャストされます。 値が `True`場合、`argument2` が評価され、その値が返されますが、`argument3` は評価されません。 `Boolean` 式の値が `False`場合、`argument3` が評価され、その値が返されますが、`argument2` は評価されません。 次の例は、3つの引数を使用する場合の `If` の使用方法を示しています。
 
 [!code-vb[VbVbalrOperators#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#100)]
 
-The following example illustrates the value of short-circuit evaluation. The example shows two attempts to divide variable `number` by variable `divisor` except when `divisor` is zero. In that case, a 0 should be returned, and no attempt should be made to perform the division because a run-time error would result. Because the `If` expression uses short-circuit evaluation, it evaluates either the second or the third argument, depending on the value of the first argument. If the first argument is true, the divisor is not zero and it is safe to evaluate the second argument and perform the division. If the first argument is false, only the third argument is evaluated and a 0 is returned. Therefore, when the divisor is 0, no attempt is made to perform the division and no error results. However, because `IIf` does not use short-circuit evaluation, the second argument is evaluated even when the first argument is false. This causes a run-time divide-by-zero error.
+次の例は、ショートサーキット評価の値を示しています。 この例では、`divisor` がゼロの場合を除き、変数 `divisor` によって変数 `number` を分割する2回の試行を示しています。 この場合、0が返されます。実行時エラーが発生するため、除算を行わないでください。 `If` 式ではショートサーキット評価が使用されるため、最初の引数の値に応じて、2番目または3番目の引数のいずれかが評価されます。 最初の引数が true の場合、除数はゼロではなく、2番目の引数を評価して除算を実行しても安全です。 最初の引数が false の場合は、3番目の引数のみが評価され、0が返されます。 したがって、除数が0の場合、除算は実行されず、エラーも発生しません。 ただし、`IIf` ではショートサーキット評価を使用しないため、最初の引数が false の場合でも2番目の引数が評価されます。 これにより、実行時の0除算エラーが発生します。
 
 [!code-vb[VbVbalrOperators#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#101)]
 
-## <a name="if-operator-called-with-two-arguments"></a>If operator called with two arguments
+## <a name="if-operator-called-with-two-arguments"></a>2つの引数を指定して演算子が呼び出された場合
 
-The first argument to `If` can be omitted. This enables the operator to be called by using only two arguments. The following list applies only when the `If` operator is called with two arguments.
+`If` の最初の引数は省略できます。 これにより、2つの引数のみを使用して演算子を呼び出すことができます。 次の一覧は、`If` 演算子が2つの引数を指定して呼び出された場合にのみ適用されます。
 
 ### <a name="parts"></a>指定項目
 
 |用語|定義|
 |---|---|
-|`argument2`|必須です。 `Object`. Must be a reference or nullable type. Evaluated and returned when it evaluates to anything other than `Nothing`.|
-|`argument3`|必須です。 `Object`. Evaluated and returned if `argument2` evaluates to `Nothing`.|
+|`argument2`|必須。 `Object` で初期化します。 参照または null 許容型である必要があります。 評価され、`Nothing`以外のものに評価された場合に返されます。|
+|`argument3`|必須。 `Object` で初期化します。 評価され、`argument2` が `Nothing`に評価される場合に返されます。|
 
-When the `Boolean` argument is omitted, the first argument must be a reference or nullable type. If the first argument evaluates to `Nothing`, the value of the second argument is returned. In all other cases, the value of the first argument is returned. The following example illustrates how this evaluation works:
+`Boolean` 引数を省略した場合、最初の引数は参照または null 許容型である必要があります。 最初の引数が `Nothing`に評価された場合、2番目の引数の値が返されます。 それ以外の場合は、最初の引数の値が返されます。 次の例は、この評価のしくみを示しています。
 
 [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]
 

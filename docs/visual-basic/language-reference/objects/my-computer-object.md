@@ -14,17 +14,17 @@ ms.locfileid: "74332111"
 # <a name="mycomputer-object"></a>My.Computer オブジェクト
 オーディオ、時計、キーボード、ファイル システムなどのコンピューター コンポーネントを操作するためのプロパティを提供します。  
   
-## <a name="remarks"></a>Remarks  
- `My.Computer` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.Devices.Computer>」をご覧ください。 The base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects.  
+## <a name="remarks"></a>コメント  
+ `My.Computer` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.Devices.Computer>」をご覧ください。 基本クラス <xref:Microsoft.VisualBasic.Devices.ServerComputer> は、すべてのプロジェクトで使用できるメンバーを提供します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **名前空間:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (the base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects).  
+ **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (基本クラス <xref:Microsoft.VisualBasic.Devices.ServerComputer> には、すべてのプロジェクトで使用できるメンバーが用意されています)。  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [My.Computer.Audio オブジェクト](../../../visual-basic/language-reference/objects/my-computer-audio-object.md)
 - [My.Computer.Clipboard オブジェクト](../../../visual-basic/language-reference/objects/my-computer-clipboard-object.md)

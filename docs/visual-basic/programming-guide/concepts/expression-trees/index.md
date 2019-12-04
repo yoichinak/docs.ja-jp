@@ -144,8 +144,8 @@ Console.WriteLine(expr.Compile()(4))
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq.Expressions>
-- [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [How to: Modify Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [方法: 式ツリーを実行する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [方法: 式ツリーを変更する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
 - [ラムダ式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [動的言語ランタイムの概要](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [プログラミングの概念 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)

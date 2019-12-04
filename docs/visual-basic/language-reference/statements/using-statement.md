@@ -18,7 +18,7 @@ ms.locfileid: "74352756"
 ---
 # <a name="using-statement-visual-basic"></a>Using ステートメント (Visual Basic)
 
-Declares the beginning of a `Using` block and optionally acquires the system resources that the block controls.
+`Using` ブロックの先頭を宣言し、必要に応じて、ブロックが制御するシステムリソースを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,62 +30,62 @@ End Using
 
 ## <a name="parts"></a>指定項目
 
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`resourcelist`|Required if you do not supply `resourceexpression`. List of one or more system resources that this `Using` block controls, separated by commas.|  
-|`resourceexpression`|Required if you do not supply `resourcelist`. Reference variable or expression referring to a system resource to be controlled by this `Using` block.|  
-|`statements`|省略可能です。 Block of statements that the `Using` block runs.|  
-|`End Using`|必須です。 Terminates the definition of the `Using` block and disposes of all the resources that it controls.|  
+|`resourcelist`|`resourceexpression`を指定しない場合は必須です。 この `Using` ブロックをコンマで区切った1つまたは複数のシステムリソースの一覧。|  
+|`resourceexpression`|`resourcelist`を指定しない場合は必須です。 この `Using` ブロックによって制御されるシステムリソースを参照する、参照変数または式。|  
+|`statements`|省略可。 `Using` ブロックによって実行されるステートメントのブロック。|  
+|`End Using`|必須。 `Using` ブロックの定義を終了し、制御しているすべてのリソースを破棄します。|  
 
- Each resource in the `resourcelist` part has the following syntax and parts:
+ `resourcelist` パートの各リソースには、次の構文と部分があります。
 
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`
 
- -または-
+ または
 
  `resourcename As resourcetype = resourceexpression`
 
-## <a name="resourcelist-parts"></a>resourcelist Parts
+## <a name="resourcelist-parts"></a>resourcelist パーツ
 
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`resourcename`|必須です。 Reference variable that refers to a system resource that the `Using` block controls.|  
-|`New`|Required if the `Using` statement acquires the resource. If you have already acquired the resource, use the second syntax alternative.|  
-|`resourcetype`|必須です。 The class of the resource. The class must implement the <xref:System.IDisposable> interface.|  
-|`arglist`|省略可能です。 List of arguments you are passing to the constructor to create an instance of `resourcetype`. See [Parameter List](parameter-list.md).|  
-|`resourceexpression`|必須です。 Variable or expression referring to a system resource satisfying the requirements of `resourcetype`. If you use the second syntax alternative, you must acquire the resource before passing control to the `Using` statement.|  
+|`resourcename`|必須。 `Using` ブロックで制御されるシステムリソースを参照する参照変数。|  
+|`New`|`Using` ステートメントがリソースを取得する場合は必須です。 リソースを既に取得している場合は、2番目の構文を使用します。|  
+|`resourcetype`|必須。 リソースのクラス。 クラスは、<xref:System.IDisposable> インターフェイスを実装する必要があります。|  
+|`arglist`|省略可。 `resourcetype`のインスタンスを作成するためにコンストラクターに渡す引数のリスト。 「[パラメーターリスト](parameter-list.md)」を参照してください。|  
+|`resourceexpression`|必須。 `resourcetype`の要件を満たすシステムリソースを参照する変数または式。 2番目の構文を使用する場合は、`Using` ステートメントに制御を渡す前にリソースを取得する必要があります。|  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
- Sometimes your code requires an unmanaged resource, such as a file handle, a COM wrapper, or a SQL connection. A `Using` block guarantees the disposal of one or more such resources when your code is finished with them. This makes them available for other code to use.
+ コードには、ファイルハンドル、COM ラッパー、SQL 接続などのアンマネージリソースが必要な場合があります。 `Using` ブロックは、コードが終了したときに、そのようなリソースが確実に破棄されるようにします。 これにより、他のコードで使用できるようになります。
 
- Managed resources are disposed of by the .NET Framework garbage collector (GC) without any extra coding on your part. You do not need a `Using` block for managed resources. However, you can still use a `Using` block to force the disposal of a managed resource instead of waiting for the garbage collector.
+ マネージリソースは、.NET Framework ガベージコレクター (GC) によって破棄されます。その際、追加のコーディングは必要ありません。 マネージリソースに `Using` ブロックは必要ありません。 ただし、`Using` ブロックを使用して、ガベージコレクターを待機するのではなく、マネージリソースを強制的に破棄することもできます。
 
- A `Using` block has three parts: acquisition, usage, and disposal.
+ `Using` ブロックには、取得、使用、および破棄という3つの部分があります。
 
-- *Acquisition* means creating a variable and initializing it to refer to the system resource. The `Using` statement can acquire one or more resources, or you can acquire exactly one resource before entering the block and supply it to the `Using` statement. If you supply `resourceexpression`, you must acquire the resource before passing control to the `Using` statement.
+- *取得*とは、変数を作成して初期化し、システムリソースを参照することを意味します。 `Using` ステートメントは1つ以上のリソースを取得できます。また、ブロックを入力する前に1つのリソースだけを取得し、それを `Using` ステートメントに指定することもできます。 `resourceexpression`を指定する場合は、`Using` ステートメントに制御を渡す前にリソースを取得する必要があります。
 
-- *Usage* means accessing the resources and performing actions with them. The statements between `Using` and `End Using` represent the usage of the resources.
+- *使用状況*とは、リソースにアクセスし、それらのリソースでアクションを実行することを意味します。 `Using` と `End Using` 間のステートメントは、リソースの使用状況を表します。
 
-- *Disposal* means calling the <xref:System.IDisposable.Dispose%2A> method on the object in `resourcename`. This allows the object to cleanly terminate its resources. The `End Using` statement disposes of the resources under the `Using` block's control.
+- *破棄*とは、`resourcename`内のオブジェクトに対して <xref:System.IDisposable.Dispose%2A> メソッドを呼び出すことを意味します。 これにより、オブジェクトはリソースを完全に終了できます。 `End Using` ステートメントは、`Using` ブロックのコントロールの下にあるリソースを破棄します。
 
 ## <a name="behavior"></a>動作
 
- A `Using` block behaves like a `Try`...`Finally` construction in which the `Try` block uses the resources and the `Finally` block disposes of them. Because of this, the `Using` block guarantees disposal of the resources, no matter how you exit the block. This is true even in the case of an unhandled exception, except for a <xref:System.StackOverflowException>.
+ `Using` ブロックは `Try`...`Finally` 構築のように動作し、`Try` ブロックはリソースを使用し、`Finally` ブロックはそれらを破棄します。 このため、ブロックの終了方法に関係なく、`Using` ブロックによってリソースが確実に破棄されます。 これは、ハンドルされない例外が発生した場合でも、<xref:System.StackOverflowException>を除き、true になります。
 
- The scope of every resource variable acquired by the `Using` statement is limited to the `Using` block.
+ `Using` ステートメントによって取得されるすべてのリソース変数のスコープは、`Using` ブロックに制限されます。
 
- If you specify more than one system resource in the `Using` statement, the effect is the same as if you nested `Using` blocks one within another.
+ `Using` ステートメントで複数のシステムリソースを指定した場合、その効果は、入れ子になった `Using` ブロックを別のでブロックした場合と同じになります。
 
- If `resourcename` is `Nothing`, no call to <xref:System.IDisposable.Dispose%2A> is made, and no exception is thrown.
+ `resourcename` が `Nothing`場合、<xref:System.IDisposable.Dispose%2A> の呼び出しは行われず、例外はスローされません。
 
-## <a name="structured-exception-handling-within-a-using-block"></a>Structured Exception Handling Within a Using Block
+## <a name="structured-exception-handling-within-a-using-block"></a>Using ブロック内での構造化例外処理
 
- If you need to handle an exception that might occur within the `Using` block, you can add a complete `Try`...`Finally` construction to it. If you need to handle the case where the `Using` statement is not successful in acquiring a resource, you can test to see if `resourcename` is `Nothing`.
+ `Using` ブロック内で発生する可能性のある例外を処理する必要がある場合は、完全な `Try`...`Finally` 構築を追加できます。 `Using` ステートメントがリソースの取得に失敗した場合に対処する必要がある場合は、`resourcename` が `Nothing`かどうかをテストして確認できます。
 
-## <a name="structured-exception-handling-instead-of-a-using-block"></a>Structured Exception Handling Instead of a Using Block
+## <a name="structured-exception-handling-instead-of-a-using-block"></a>Using ブロックの代わりに構造化例外処理
 
- If you need finer control over the acquisition of the resources, or you need additional code in the `Finally` block, you can rewrite the `Using` block as a `Try`...`Finally` construction. The following example shows skeleton `Try` and `Using` constructions that are equivalent in the acquisition and disposal of `resource`.
+ リソースの取得をより細かく制御する必要がある場合、または `Finally` ブロックに追加のコードが必要な場合は、`Using` ブロックを `Try`...`Finally` の構築として書き換えることができます。 次の例は、`resource`の取得と破棄に相当するスケルトン `Try` と `Using` の構造を示しています。
 
 ```vb
 Using resource As New resourceType
@@ -105,17 +105,17 @@ End Try
 ```
 
 > [!NOTE]
-> The code inside the `Using` block should not assign the object in `resourcename` to another variable. When you exit the `Using` block, the resource is disposed, and the other variable cannot access the resource to which it points.
+> `Using` ブロック内のコードでは、`resourcename` 内のオブジェクトを別の変数に割り当てることはできません。 `Using` ブロックを終了すると、リソースが破棄され、他の変数はそのリソースが指すリソースにアクセスできなくなります。
 
 ## <a name="example"></a>例
 
- The following example creates a file that is named log.txt and writes two lines of text to the file. The example also reads that same file and displays the lines of text:
+ 次の例では、test.txt という名前のファイルを作成し、ファイルに2行のテキストを書き込みます。 この例でも同じファイルが読み取られ、テキスト行が表示されます。
 
- Because the <xref:System.IO.TextWriter> and <xref:System.IO.TextReader> classes implement the <xref:System.IDisposable> interface, the code can use `Using` statements to ensure that the file is correctly closed after the write and read operations.
+ <xref:System.IO.TextWriter> クラスと <xref:System.IO.TextReader> クラスには <xref:System.IDisposable> インターフェイスが実装されているため、コードでは `Using` ステートメントを使用して、書き込み操作と読み取り操作の後でファイルが正しく閉じられるようにすることができます。
 
  [!code-vb[VbVbalrStatements#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#50)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.IDisposable>
 - [Try...Catch...Finally ステートメント](try-catch-finally-statement.md)

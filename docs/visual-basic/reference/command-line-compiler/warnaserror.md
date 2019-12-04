@@ -24,12 +24,12 @@ ms.locfileid: "74351708"
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|+ &#124; -|省略可能です。 既定では `-warnaserror-` は有効です。警告が発生しても、コンパイラは出力ファイルを生成します。 `-warnaserror` オプションは `-warnaserror+` と同じで、警告がエラーとして扱われます。|  
-|`numberList`|省略可能です。 `-warnaserror` オプションを適用する、警告 ID 番号のコンマ区切りのリスト。 警告 ID が指定されていない場合、`-warnaserror`オプションはすべての警告に適用されます。|  
+|+ &#124; -|省略可。 既定では `-warnaserror-` は有効です。警告が発生しても、コンパイラは出力ファイルを生成します。 `-warnaserror` オプションは `-warnaserror+` と同じで、警告がエラーとして扱われます。|  
+|`numberList`|省略可。 `-warnaserror` オプションを適用する、警告 ID 番号のコンマ区切りのリスト。 警告 ID が指定されていない場合、`-warnaserror`オプションはすべての警告に適用されます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `-warnaserror` オプションで、すべての警告がエラーとして扱われます。 通常は警告として報告されるすべてのメッセージが、代わりにエラーとして報告されます。 コンパイラは、後続の同じ警告の発生を警告として報告します。  
   
  既定では `-warnaserror-` が有効であり、警告は情報提供のみになります。 `-warnaserror` オプションは `-warnaserror+` と同じで、警告がエラーとして扱われます。  
@@ -41,11 +41,11 @@ ms.locfileid: "74351708"
   
 |-warnaserror を設定し、Visual Studio IDE ですべての警告をエラーとして扱う|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Check the **Treat all warnings as errors** check box.|  
+|1.**ソリューションエクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. [すべての**警告を無効にする**] チェックボックスがオフになっていることを確認します。<br />4. **[すべての警告をエラーとして扱う]** チェックボックスをオンにします。|  
   
 |-warnaserror を設定し、Visual Studio IDE で特定の警告をエラーとして扱う|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。<br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Make sure the **Treat all warnings as errors** check box is unchecked.<br />5.  Select **Error** from the **Notification** column adjacent to the warning that should be treated as an error.|  
+|1.**ソリューションエクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。<br />2. **[コンパイル]** タブをクリックします。<br />3. [すべての**警告を無効にする**] チェックボックスがオフになっていることを確認します。<br />4. [すべての**警告をエラーとして扱う**] チェックボックスがオフになっていることを確認します。<br />5. 警告の隣にある**通知**列から、エラーとして処理する必要がある**エラー**を選択します。|  
   
 ## <a name="example"></a>例  
  次のコードは `In.vb` をコンパイルし、最初に見つけたすべての警告をエラーとして表示するようにコンパイラに指示します。  
@@ -61,8 +61,8 @@ vbc -warnaserror in.vb
 vbc -warnaserror:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)
+- [Visual Basic での警告の構成](/visualstudio/ide/configuring-warnings-in-visual-basic)

@@ -16,18 +16,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351604"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)
-Specifies that an argument is passed in such a way that the called procedure can change the value of a variable underlying the argument in the calling code.  
+呼び出されたプロシージャが呼び出し元のコードの引数の基になる変数の値を変更できるように、引数が渡されることを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `ByRef` 修飾子は、次のコンテキストで使用できます。  
   
- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
  [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
   
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
 - [引数の値渡しと参照渡し](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

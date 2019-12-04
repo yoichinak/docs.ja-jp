@@ -22,26 +22,26 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426141"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter インターフェイス
-Provides a method to indicate that a specified token will be processed.  
+指定したトークンが処理されることを示すメソッドを提供します。  
   
 > [!NOTE]
-> The `IHostFilter` interface must be implemented by the client.  
+> `IHostFilter` インターフェイスは、クライアントによって実装される必要があります。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[MarkToken メソッド](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Indicates that the specified metadata token will be processed.|  
+|[MarkToken メソッド](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|指定されたメタデータトークンが処理されることを示します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

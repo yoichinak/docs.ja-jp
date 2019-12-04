@@ -16,19 +16,19 @@ ms.locfileid: "74330215"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>My.Forms および My.WebServices が提供する既定のオブジェクト インスタンス (Visual Basic)
 
-The [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) and [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) objects provide access to forms, data sources, and XML Web services used by your application. They do this by providing collections of *default instances* of each of these objects.  
+My.forms オブジェクトと[My](../../../visual-basic/language-reference/objects/my-webservices-object.md) Web Web サービス[オブジェクトは、](../../../visual-basic/language-reference/objects/my-forms-object.md)アプリケーションで使用されるフォーム、データソース、および XML Web サービスへのアクセスを提供します。 これらの操作は、これらの各オブジェクトの*既定のインスタンス*のコレクションを提供することによって行います。  
   
-## <a name="default-instances"></a>Default Instances  
+## <a name="default-instances"></a>既定のインスタンス  
 
- A default instance is an instance of the class that is provided by the runtime and does not need to be declared and instantiated using the `Dim` and `New` statements. The following example demonstrates how you might have declared and instantiated an instance of a <xref:System.Windows.Forms.Form> class called `Form1`, and how you are now able to get a default instance of this <xref:System.Windows.Forms.Form> class through `My.Forms`.  
+ 既定のインスタンスは、ランタイムによって提供されるクラスのインスタンスであり、`Dim` および `New` ステートメントを使用して宣言およびインスタンス化する必要はありません。 次の例では、`Form1`と呼ばれる <xref:System.Windows.Forms.Form> クラスのインスタンスを宣言およびインスタンス化し、`My.Forms`を通じてこの <xref:System.Windows.Forms.Form> クラスの既定のインスタンスを取得できるようになった方法を示します。  
   
  [!code-vb[VbVbcnMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#5)]  
   
  [!code-vb[VbVbcnMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#6)]  
   
- The `My.Forms` object returns a collection of default instances for every `Form` class that exists in your project. Similarly, `My.WebServices` provides a default instance of the proxy class for every Web service that you have created a reference to in your application.  
+ `My.Forms` オブジェクトは、プロジェクトに存在するすべての `Form` クラスの既定のインスタンスのコレクションを返します。 同様に、`My.WebServices` は、アプリケーションで参照を作成したすべての Web サービスに対して、プロキシクラスの既定のインスタンスを提供します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [My.Forms オブジェクト](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.WebServices オブジェクト](../../../visual-basic/language-reference/objects/my-webservices-object.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440360"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum メソッド
-Gets the number of elements in the enumeration that was retrieved by the specified enumerator.  
+指定した列挙子によって取得された列挙体の要素の数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,20 +36,20 @@ HRESULT CountEnum (
   
 ## <a name="parameters"></a>パラメーター  
  `hEnum`  
- [in] The handle for the enumerator.  
+ から列挙子のハンドルです。  
   
  `pulCount`  
- [out] The number of elements enumerated.  
+ 入出力列挙された要素の数。  
   
-## <a name="remarks"></a>Remarks  
- The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+## <a name="remarks"></a>コメント  
+ `hEnum` によって指定されたハンドルは、前の `Enum`*名*の呼び出し (たとえば、 [IMetaDataImport:: enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)) から取得されます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

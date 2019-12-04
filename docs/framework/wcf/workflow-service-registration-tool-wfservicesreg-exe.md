@@ -23,7 +23,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  次の表は、ワークフロー サービス登録ツール (WFServicesReg.exe) で使用できるオプションです。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |`/c`|Windows ワークフロー サービスを構成します。 インストールおよび修復を行う場合に使用します。|  
 |`/r`|Windows ワークフロー サービスの構成を削除します。|  
@@ -67,7 +67,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 > [!NOTE]
 > ServiceModelreg.exe とは異なり、WFServicesReg.exe では、特定の Web サイトのスクリプトマップまたはハンドラーの追加、削除、修復を行うことはできません。 この問題の回避策については、「スクリプトマップの修復」セクションを参照してください。  
   
-## <a name="usage-scenarios"></a>使用シナリオ  
+## <a name="usage-scenarios"></a>使用例  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>.NET Framework 3.5 インストール後の IIS のインストール  
  [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] コンピューターでは、IIS をインストールする前に .NET Framework 3.5 がインストールされます。 IIS メタベースが使用できないため、.NET Framework 3.5 のインストールは、xoml および. rules スクリプトマップをインストールせずに成功します。  

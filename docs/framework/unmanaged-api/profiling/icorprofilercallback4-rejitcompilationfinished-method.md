@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439311"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished メソッド
-Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.  
+Just-in-time (JIT) コンパイラが関数の再コンパイルを完了したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,20 +36,20 @@ HRESULT ReJITCompilationFinished(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in] The ID of the function that was recompiled.  
+ から再コンパイルされた関数の ID。  
   
  `rejitId`  
  [in] JIT 再コンパイルされた関数のID。  
   
  `hrStatus`  
- [in] A value that indicates whether the JIT recompilation was successful.  
+ からJIT 再コンパイルが成功したかどうかを示す値。  
   
  `fIsSafeToBlock`  
- [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.  
+ [in] ブロックによって、呼び出し元のスレッドがこのコールバックから戻るまでランタイムが待機する可能性があることを示す `true` ます。`false` は、ブロックがランタイムの操作に影響を与えないことを示します。  
   
- A value of `true` does not harm the runtime, but can affect the profiling results.  
+ `true` の値はランタイムに害を与えませんが、プロファイルの結果に影響を与える可能性があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -58,7 +58,7 @@ HRESULT ReJITCompilationFinished(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

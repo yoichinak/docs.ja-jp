@@ -16,23 +16,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340208"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>方法: オーバーロードされたプロシージャを呼び出す (Visual Basic)
-The advantage of overloading a procedure is in the flexibility of the call. The calling code can obtain the information it needs to pass to the procedure and then call a single procedure name, no matter what arguments it is passing.  
+プロシージャをオーバーロードする利点は、呼び出しの柔軟性です。 呼び出し元のコードは、プロシージャに渡す必要がある情報を取得し、渡す引数に関係なく、1つのプロシージャ名を呼び出すことができます。  
   
-### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>To call a procedure that has more than one version defined  
+### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>複数のバージョンが定義されているプロシージャを呼び出すには  
   
-1. In the calling code, determine which data to pass to the procedure.  
+1. 呼び出し元のコードで、プロシージャに渡すデータを決定します。  
   
-2. Write the procedure call in the normal way, presenting the data in the argument list. Be sure the arguments match the parameter list in one of the versions defined for the procedure.  
+2. 通常の方法でプロシージャ呼び出しを記述し、引数リストにデータを提示します。 引数が、プロシージャに対して定義されているいずれかのバージョンのパラメーターリストと一致していることを確認してください。  
   
-3. You do not have to determine which version of the procedure to call. Visual Basic passes control to the version matching your argument list.  
+3. 呼び出すプロシージャのバージョンを判断する必要はありません。 Visual Basic は、引数リストに一致するバージョンに制御を渡します。  
   
-     The following example calls the `post` procedure declared in [How to: Define Multiple Versions of a Procedure](./how-to-define-multiple-versions-of-a-procedure.md). It obtains the customer identification, determines whether it is a `String` or an `Integer`, and then in either case calls the same procedure.  
+     次の例では、 [「方法: 複数のバージョンのプロシージャを定義する](./how-to-define-multiple-versions-of-a-procedure.md)」で宣言した `post` プロシージャを呼び出します。 顧客 id を取得し、それが `String` か `Integer`かを判断して、どちらの場合も同じプロシージャを呼び出します。  
   
      [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   
      [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [手順](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
@@ -43,4 +43,4 @@ The advantage of overloading a procedure is in the flexibility of the call. The 
 - [方法 : 不特定数のパラメーターを受け取るプロシージャをオーバーロードする](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [プロシージャのオーバーロードに関する注意事項](./considerations-in-overloading-procedures.md)
 - [オーバーロードの解決](./overload-resolution.md)
-- [オーバーロード](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)

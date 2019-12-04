@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345065"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 言語の機能
-The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language. フォームとコントロールを使用してアプリケーションのユーザー インターフェイスを作成した後、アプリケーションの動作を定義するコードを作成する必要があります。 As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.  
+次のトピックでは、オブジェクト指向プログラミング言語である Visual Basic の重要なコンポーネントについて説明します。 フォームとコントロールを使用してアプリケーションのユーザー インターフェイスを作成した後、アプリケーションの動作を定義するコードを作成する必要があります。 最新のプログラミング言語と同様に、Visual Basic では、多くの一般的なプログラミング構成要素と言語要素がサポートされています。  
   
- 他の言語でプログラミングしたことがある場合、このセクションで説明されている内容の大半はすでに知っている可能性があります。 While most of the constructs are similar to those in other languages, the event-driven nature of Visual Basic introduces some subtle differences.  
+ 他の言語でプログラミングしたことがある場合、このセクションで説明されている内容の大半はすでに知っている可能性があります。 ほとんどのコンストラクトは他の言語の構造と似ていますが、Visual Basic のイベント駆動型の性質にはいくつかの微妙な違いがあります。  
   
- プログラミングの経験がない場合、このセクションの説明は、コードを記述するための基礎を紹介するものになります。 Once you understand the basics, you can create powerful applications using Visual Basic.  
+ プログラミングの経験がない場合、このセクションの説明は、コードを記述するための基礎を紹介するものになります。 基本を理解したら、Visual Basic を使用して強力なアプリケーションを作成できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -77,10 +77,10 @@ The following topics introduce and discuss the essential components of Visual Ba
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
  Visual Basic での XML の使用方法について説明しているトピックへのリンクを示します。  
   
-## <a name="related-sections"></a>関連項目
+## <a name="related-sections"></a>関連セクション
 
  [コレクション](../../../visual-basic/programming-guide/concepts/collections.md)  
  .NET Framework で提供されているコレクションの種類について説明します。 単純なコレクションおよびキーと値のペアのコレクションを使用する方法を示します。  
   
  [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)  
- Provides reference information on various aspects of Visual Basic programming.
+ Visual Basic プログラミングのさまざまな側面に関するリファレンス情報を提供します。

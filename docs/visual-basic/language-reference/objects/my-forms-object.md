@@ -16,61 +16,61 @@ ms.locfileid: "74350373"
 ---
 # <a name="myforms-object"></a>My.Forms オブジェクト
 
-Provides properties for accessing an instance of each Windows form declared in the current project.
+現在のプロジェクトで宣言されている各 Windows フォームのインスタンスにアクセスするためのプロパティを提供します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The `My.Forms` object provides an instance of each form in the current project. The name of the property is the same as the name of the form that the property accesses.
+`My.Forms` オブジェクトは、現在のプロジェクトの各フォームのインスタンスを提供します。 プロパティの名前は、プロパティがアクセスするフォームの名前と同じです。
 
-You can access the forms provided by the `My.Forms` object by using the name of the form, without qualification. Because the property name is the same as the form's type name, this allows you to access a form as if it had a default instance. たとえば、`My.Forms.Form1.Show` は、`Form1.Show` と同じです。
+`My.Forms` オブジェクトによって提供されるフォームには、修飾子を付けずにフォーム名を使用してアクセスできます。 プロパティ名はフォームの型名と同じであるため、既定のインスタンスがあるかのようにフォームにアクセスできます。 たとえば、`My.Forms.Form1.Show` は、`Form1.Show` と同じです。
 
-The `My.Forms` object exposes only the forms associated with the current project. It does not provide access to forms declared in referenced DLLs. To access a form that a DLL provides, you must use the qualified name of the form, written as *DllName*.*FormName*.
+`My.Forms` オブジェクトは、現在のプロジェクトに関連付けられているフォームのみを公開します。 参照先の Dll で宣言されたフォームへのアクセスを提供しません。 DLL が提供するフォームにアクセスするには、 *DllName*として記述されたフォームの修飾名を使用する必要があります。*FormName*。
 
-You can use the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> property to get a collection of all the application's open forms.
+<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> プロパティを使用して、すべてのアプリケーションの開いているフォームのコレクションを取得できます。
 
-The object and its properties are available only for Windows applications.
+オブジェクトとそのプロパティは、Windows アプリケーションでのみ使用できます。
 
 ## <a name="properties"></a>プロパティ
 
-Each property of the `My.Forms` object provides access to an instance of a form in the current project. The name of the property is the same as the name of the form that the property accesses, and the property type is the same as the form's type.
+`My.Forms` オブジェクトの各プロパティは、現在のプロジェクトのフォームのインスタンスへのアクセスを提供します。 プロパティの名前は、プロパティがアクセスするフォームの名前と同じであり、プロパティの型はフォームの型と同じです。
 
 > [!NOTE]
-> If there is a name collision, the property name to access a form is *RootNamespace*_*Namespace*\_*FormName*. For example, consider two forms named `Form1.`If one of these forms is in the root namespace `WindowsApplication1` and in the namespace `Namespace1`, you would access that form through `My.Forms.WindowsApplication1_Namespace1_Form1`.
+> 名前の競合がある場合、フォームにアクセスするためのプロパティ名は*RootNamespace*_*Namespace*\_*FormName*になります。 たとえば、`Form1.`という名前の2つのフォームを考えてみます。これらのフォームのいずれかがルート名前空間 `WindowsApplication1` であり、名前空間 `Namespace1`では、`My.Forms.WindowsApplication1_Namespace1_Form1`経由でそのフォームにアクセスします。
 
-The `My.Forms` object provides access to the instance of the application's main form that was created on startup. For all other forms, the `My.Forms` object creates a new instance of the form when it is accessed and stores it. Subsequent attempts to access that property return that instance of the form.
+`My.Forms` オブジェクトを使用すると、起動時に作成されたアプリケーションのメインフォームのインスタンスにアクセスできます。 その他のすべてのフォームでは、`My.Forms` オブジェクトは、アクセス時にフォームの新しいインスタンスを作成して格納します。 その後、そのプロパティにアクセスしようとすると、フォームのインスタンスが返されます。
 
-You can dispose of a form by assigning `Nothing` to the property for that form. The property setter calls the <xref:System.Windows.Forms.Form.Close%2A> method of the form, and then assigns `Nothing` to the stored value. If you assign any value other than `Nothing` to the property, the setter throws an <xref:System.ArgumentException> exception.
+フォームのプロパティに `Nothing` を割り当てることによって、フォームを破棄できます。 プロパティ setter は、フォームの <xref:System.Windows.Forms.Form.Close%2A> メソッドを呼び出し、格納されている値に `Nothing` を割り当てます。 `Nothing` 以外の値をプロパティに割り当てた場合、setter は <xref:System.ArgumentException> 例外をスローします。
 
-You can test whether a property of the `My.Forms` object stores an instance of the form by using the `Is` or `IsNot` operator. You can use those operators to check if the value of the property is `Nothing`.
+`Is` または `IsNot` 演算子を使用して、`My.Forms` オブジェクトのプロパティがフォームのインスタンスを格納するかどうかをテストできます。 これらの演算子を使用すると、プロパティの値が `Nothing`かどうかを確認できます。
 
 > [!NOTE]
-> Typically, the `Is` or `IsNot` operator has to read the value of the property to perform the comparison. However, if the property currently stores `Nothing`, the property creates a new instance of the form and then returns that instance. However, the Visual Basic compiler treats the properties of the `My.Forms` object differently and allows the `Is` or `IsNot` operator to check the status of the property without altering its value.
+> 通常、`Is` または `IsNot` 演算子は、比較を実行するためにプロパティの値を読み取る必要があります。 ただし、プロパティが現在 `Nothing`を格納している場合は、プロパティによってフォームの新しいインスタンスが作成され、そのインスタンスが返されます。 ただし、Visual Basic コンパイラは、`My.Forms` オブジェクトのプロパティを異なる方法で処理し、`Is` または `IsNot` の演算子が、値を変更せずにプロパティの状態を確認できるようにします。
 
 ## <a name="example"></a>例
 
-This example changes the title of the default `SidebarMenu` form.
+この例では、既定の `SidebarMenu` フォームのタイトルを変更します。
 
 [!code-vb[VbVbalrMyForms#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyForms/VB/Class1.vb#2)]
 
-For this example to work, your project must have a form named `SidebarMenu`.
+この例を使用するには、プロジェクトに `SidebarMenu`という名前のフォームが必要です。
 
-This code will work only in a Windows Application project.
+このコードは、Windows アプリケーションプロジェクトでのみ機能します。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-### <a name="availability-by-project-type"></a>Availability by Project Type
+### <a name="availability-by-project-type"></a>プロジェクトの種類別の可用性
 
-|プロジェクトの種類|使用可能|
+|プロジェクトの種類|利用可能|
 |---|---|
 |Windows アプリケーション|**はい**|
-|クラス ライブラリ|Ｘ|
-|コンソール アプリケーション|Ｘ|
-|Windows Control Library|Ｘ|
-|Web Control Library|Ｘ|
-|Windows サービス|Ｘ|
-|Web サイト|Ｘ|
+|クラス ライブラリ|いいえ|
+|コンソール アプリケーション|いいえ|
+|Windows コントロールライブラリ|いいえ|
+|Web コントロールライブラリ|いいえ|
+|Windows サービス|いいえ|
+|Web サイト|いいえ|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:System.Windows.Forms.Form>

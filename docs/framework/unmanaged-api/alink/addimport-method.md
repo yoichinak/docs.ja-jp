@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446658"
 ---
 # <a name="addimport-method"></a>AddImport メソッド
-Adds imports to the assembly.  
+アセンブリにインポートを追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,24 +38,24 @@ HRESULT AddImport(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- Unique ID of assembly to be augmented.  
+ 補強するアセンブリの一意の ID。  
   
  `ImportToken`  
- Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.  
+ インポートするファイルの[Importfile メソッド](importfile-method.md)から取得された一意の ID。  
   
  `dwFlags`  
- COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ `ffContainsNoMetaData` や `ffWriteable`などの COM + FileDef フラグ。 `dwFlags` は、の[メソッド](../metadata/imetadataassemblyemit-definefile-method.md)に渡されます。  
   
  `pFileToken`  
- Pointer to token that receives the ID for the resulting file.  
+ 結果ファイルの ID を受け取るトークンへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

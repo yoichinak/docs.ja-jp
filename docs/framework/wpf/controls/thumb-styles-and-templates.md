@@ -28,7 +28,7 @@ ms.locfileid: "74283688"
 
 次の表は、<xref:System.Windows.Controls.Primitives.Thumb> コントロールの表示状態を示しています。
 
-|VisualState 名|VisualStateGroup 名|[説明]|
+|VisualState 名|VisualStateGroup 名|説明|
 |-|-|-|
 |標準|CommonStates|既定の状態です。|
 |MouseOver|CommonStates|マウス ポインターがコントロール上に配置されます。|
@@ -36,7 +36,7 @@ ms.locfileid: "74283688"
 |Disabled|CommonStates|コントロールが無効になっています。|
 |フォーカスされている|FocusStates|コントロールにフォーカスがあります。|
 |フォーカスされていない|FocusStates|コントロールにフォーカスがありません。|
-|有効|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|
+|Valid|ValidationStates|コントロールは <xref:System.Windows.Controls.Validation> クラスを使用し、<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは `false`ます。|
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがある `true` です。|
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 添付プロパティは、コントロールにフォーカスがない `true` です。|
 

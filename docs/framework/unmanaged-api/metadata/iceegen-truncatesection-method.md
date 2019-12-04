@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426137"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection メソッド
-Truncates the specified code section by the specified length.  
+指定したコードセクションを指定した長さだけ切り捨てます。  
   
- This method is obsolete and should not be used.  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,23 +38,23 @@ HRESULT TruncateSection (
   
 ## <a name="parameters"></a>パラメーター  
  `section`  
- [in] The section to truncate.  
+ から切り捨てるセクション。  
   
  `len`  
- [in] The length, in bytes, by which to truncate the section.  
+ からセクションを切り捨てる長さ (バイト単位)。  
   
-## <a name="remarks"></a>Remarks  
- Call `TruncateSection` only if you have special section requirements that are not handled by other methods.  
+## <a name="remarks"></a>コメント  
+ 他のメソッドによって処理されない特殊なセクション要件がある場合にのみ、`TruncateSection` を呼び出します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

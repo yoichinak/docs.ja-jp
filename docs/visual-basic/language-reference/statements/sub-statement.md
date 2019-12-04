@@ -38,7 +38,7 @@ ms.locfileid: "74346437"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub ステートメント (Visual Basic)
 
-Declares the name, parameters, and code that define a `Sub` procedure.
+`Sub` プロシージャを定義する名前、パラメーター、およびコードを宣言します。
 
 ## <a name="syntax"></a>構文
 
@@ -55,15 +55,15 @@ End Sub
 
 - `attributelist`
 
-  省略可能です。 See [Attribute List](attribute-list.md).
+  省略可。 「[属性リスト](attribute-list.md)」を参照してください。
 
 - `Partial`
 
-  省略可能です。 Indicates definition of a partial method. See [Partial Methods](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).
+  省略可。 部分メソッドの定義を示します。 「[部分メソッド](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)」を参照してください。
 
 - `accessmodifier`
 
-  省略可能です。 次のいずれかの値を指定します。
+  省略可。 次のいずれかになります。
 
   - [Public](../modifiers/public.md)
 
@@ -81,9 +81,9 @@ End Sub
 
 - `proceduremodifiers`
 
-  省略可能です。 次のいずれかの値を指定します。
+  省略可。 次のいずれかになります。
 
-  - [オーバーロード](../modifiers/overloads.md)
+  - [Overloads](../modifiers/overloads.md)
 
   - [Overrides](../modifiers/overrides.md)
 
@@ -91,7 +91,7 @@ End Sub
 
   - [NotOverridable](../modifiers/notoverridable.md)
 
-  - [New](../modifiers/mustoverride.md)
+  - [MyBase](../modifiers/mustoverride.md)
 
   - `MustOverride Overrides`
 
@@ -99,31 +99,31 @@ End Sub
 
 - `Shared`
 
-  省略可能です。 See [Shared](../modifiers/shared.md).
+  省略可。 「[共有](../modifiers/shared.md)」を参照してください。
 
 - `Shadows`
 
-  省略可能です。 See [Shadows](../modifiers/shadows.md).
+  省略可。 「[シャドウ](../modifiers/shadows.md)」を参照してください。
 
 - `Async`
 
-  省略可能です。 See [Async](../modifiers/async.md).
+  省略可。 「 [Async](../modifiers/async.md)」を参照してください。
 
 - `name`
 
-  必須です。 Name of the procedure. 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。 To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword. For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+  必須。 プロシージャの名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。 クラスのコンストラクタープロシージャを作成するには、`Sub` プロシージャの名前を `New` キーワードに設定します。 詳細については、「[オブジェクトの有効期間: オブジェクトの作成方法と破棄方法](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)」を参照してください。
 
 - `typeparamlist`
 
-  省略可能です。 List of type parameters for a generic procedure. See [Type List](type-list.md).
+  省略可。 ジェネリックプロシージャの型パラメーターのリスト。 [型リスト](type-list.md)を参照してください。
 
 - `parameterlist`
 
-  省略可能です。 List of local variable names representing the parameters of this procedure. See [Parameter List](parameter-list.md).
+  省略可。 このプロシージャのパラメーターを表すローカル変数名の一覧。 「[パラメーターリスト](parameter-list.md)」を参照してください。
 
 - `Implements`
 
-  省略可能です。 Indicates that this procedure implements one or more `Sub` procedures, each one defined in an interface implemented by this procedure's containing class or structure. See [Implements Statement](implements-statement.md).
+  省略可。 このプロシージャが1つ以上の `Sub` プロシージャを実装することを示します。各プロシージャは、このプロシージャのクラスまたは構造体を含むインターフェイスで定義されています。 「 [Implements ステートメント](implements-statement.md)」を参照してください。
 
 - `implementslist`
 
@@ -135,18 +135,18 @@ End Sub
 
   `interface.definedname`
 
-  |パーツ|説明|
+  |要素|説明|
   |---|---|
-  |`interface`|必須です。 Name of an interface implemented by this procedure's containing class or structure.|
-  |`definedname`|必須です。 `interface` の中でプロシージャを定義するために使用する名前。|
+  |`interface`|必須。 このプロシージャのクラスまたは構造体によって実装されるインターフェイスの名前。|
+  |`definedname`|必須。 `interface` の中でプロシージャを定義するために使用する名前。|
 
 - `Handles`
 
-  省略可能です。 Indicates that this procedure can handle one or more specific events. See [Handles](handles-clause.md).
+  省略可。 このプロシージャが1つ以上の特定のイベントを処理できることを示します。 「[ハンドル](handles-clause.md)」を参照してください。
 
 - `eventlist`
 
-  `Handles` を指定する場合は、必ず指定します。 List of events this procedure handles.
+  `Handles` を指定する場合は、必ず指定します。 このプロシージャが処理するイベントの一覧です。
 
   `eventspecifier [ , eventspecifier ... ]`
 
@@ -154,36 +154,36 @@ End Sub
 
   `eventvariable.event`
 
-  |パーツ|説明|
+  |要素|説明|
   |---|---|
-  |`eventvariable`|必須です。 Object variable declared with the data type of the class or structure that raises the event.|
-  |`event`|必須です。 Name of the event this procedure handles.|
+  |`eventvariable`|必須。 イベントを発生させるクラスまたは構造体のデータ型で宣言されたオブジェクト変数。|
+  |`event`|必須。 このプロシージャが処理するイベントの名前。|
 
 - `statements`
 
-  省略可能です。 Block of statements to run within this procedure.
+  省略可。 このプロシージャ内で実行するステートメントのブロック。
 
 - `End Sub`
 
-  Terminates the definition of this procedure.
+  このプロシージャの定義を終了します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-All executable code must be inside a procedure. Use a `Sub` procedure when you don't want to return a value to the calling code. Use a `Function` procedure when you want to return a value.
+すべての実行可能コードは、プロシージャ内になければなりません。 呼び出し元のコードに値を返さないようにする場合は、`Sub` プロシージャを使用します。 値を返す場合は、`Function` プロシージャを使用します。
 
-## <a name="defining-a-sub-procedure"></a>Defining a Sub Procedure
+## <a name="defining-a-sub-procedure"></a>Sub プロシージャの定義
 
-You can define a `Sub` procedure only at the module level. The declaration context for a sub procedure must, therefore, be a class, a structure, a module, or an interface and can't be a source file, a namespace, a procedure, or a block. 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
+`Sub` プロシージャは、モジュールレベルでのみ定義できます。 したがって、サブプロシージャの宣言コンテキストは、クラス、構造体、モジュール、またはインターフェイスにする必要があり、ソースファイル、名前空間、プロシージャ、またはブロックにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
 
-`Sub` procedures default to public access. You can adjust their access levels by using the access modifiers.
+`Sub` プロシージャは、既定でパブリックアクセスになります。 アクセス修飾子を使用して、アクセスレベルを調整できます。
 
-If the procedure uses the `Implements` keyword, the containing class or structure must have an `Implements` statement that immediately follows its `Class` or `Structure` statement. The `Implements` statement must include each interface that's specified in `implementslist`. However, the name by which an interface defines the `Sub` (in `definedname`) doesn't have to match the name of this procedure (in `name`).
+プロシージャが `Implements` キーワードを使用している場合、含んでいるクラスまたは構造体には、その `Class` または `Structure` ステートメントの直後にある `Implements` ステートメントが含まれている必要があります。 `Implements` ステートメントには、`implementslist`で指定されている各インターフェイスを含める必要があります。 ただし、インターフェイスが `Sub` (`definedname`) を定義する際には、このプロシージャの名前 (`name`) と一致する必要はありません。
 
-## <a name="returning-from-a-sub-procedure"></a>Returning from a Sub Procedure
+## <a name="returning-from-a-sub-procedure"></a>Sub プロシージャからの戻り
 
-When a `Sub` procedure returns to the calling code, execution continues with the statement after the statement that called it.
+`Sub` プロシージャが呼び出し元のコードに戻ると、ステートメントを呼び出したステートメントの後のステートメントで実行が続行されます。
 
-The following example shows a return from a `Sub` procedure.
+次の例は、`Sub` プロシージャからの戻り値を示しています。
 
 ```vb
 Sub mySub(ByVal q As String)
@@ -191,50 +191,50 @@ Sub mySub(ByVal q As String)
 End Sub
 ```
 
-The `Exit Sub` and `Return` statements cause an immediate exit from a `Sub` procedure. Any number of `Exit Sub` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Sub` and `Return` statements.
+`Exit Sub` ステートメントおよび `Return` ステートメントを行うと、`Sub` プロシージャからすぐに終了します。 プロシージャ内の任意の場所で任意の数の `Exit Sub` および `Return` ステートメントを使用できます。また、`Exit Sub` と `Return` のステートメントを混在させることができます。
 
-## <a name="calling-a-sub-procedure"></a>Calling a Sub Procedure
+## <a name="calling-a-sub-procedure"></a>Sub プロシージャの呼び出し
 
-You call a `Sub` procedure by using the procedure name in a statement and then following that name with its argument list in parentheses. You can omit the parentheses only if you don't supply any arguments. However, your code is more readable if you always include the parentheses.
+`Sub` プロシージャを呼び出すには、ステートメントでプロシージャ名を使用し、その名前の後にかっこで囲んだ引数リストを指定します。 かっこを省略できるのは、引数を指定しない場合のみです。 ただし、常にかっこを含めると、コードが読みやすくなります。
 
-A `Sub` procedure and a `Function` procedure  can have parameters and perform a series of statements. However, a `Function` procedure returns a value, and a `Sub` procedure doesn't. Therefore, you can't use a `Sub` procedure in an expression.
+`Sub` プロシージャと `Function` プロシージャは、パラメーターを持つことができ、一連のステートメントを実行できます。 ただし、`Function` プロシージャは値を返し、`Sub` プロシージャは返しません。 したがって、式の中で `Sub` プロシージャを使用することはできません。
 
-You can use the `Call` keyword when you call a `Sub` procedure, but that keyword isn't recommended for most uses. For more information, see [Call Statement](call-statement.md).
+`Sub` プロシージャを呼び出すときに `Call` キーワードを使用することはできますが、ほとんどの場合、そのキーワードは推奨されません。 詳細については、「 [Call ステートメント](call-statement.md)」を参照してください。
 
-Visual Basic sometimes rearranges arithmetic expressions to increase internal efficiency. For that reason, if your argument list includes expressions that call other procedures, you shouldn't assume that those expressions will be called in a particular order.
+Visual Basic は、内部効率を向上させるために算術式を再配置することがあります。 そのため、引数リストに他のプロシージャを呼び出す式が含まれている場合は、それらの式が特定の順序で呼び出されると想定しないでください。
 
-## <a name="async-sub-procedures"></a>Async Sub Procedures
+## <a name="async-sub-procedures"></a>非同期サブプロシージャ
 
-By using the Async feature, you can invoke asynchronous functions without using explicit callbacks or manually splitting your code across multiple functions or lambda expressions.
+非同期機能を使用すると、明示的なコールバックを使用したり、複数の関数やラムダ式にコードを手動で分割したりせずに、非同期関数を呼び出すことができます。
 
-If you mark a procedure with the [Async](../modifiers/async.md) modifier, you can use the [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator in the procedure. When control reaches an `Await` expression in the `Async` procedure, control returns to the caller, and progress in the procedure is suspended until the awaited task completes. When the task is complete, execution can resume in the procedure.
+プロシージャに[Async](../modifiers/async.md)修飾子を指定した場合は、プロシージャで[Await](../../../visual-basic/language-reference/operators/await-operator.md)演算子を使用できます。 コントロールが `Async` プロシージャ内の `Await` 式に到達すると、コントロールは呼び出し元に戻り、待機中のタスクが完了するまで、プロシージャの進行状況は中断されます。 タスクが完了すると、プロシージャで実行を再開できます。
 
 > [!NOTE]
-> An `Async` procedure returns to the caller when either the first awaited object that’s not yet complete is encountered or the end of the `Async` procedure is reached, whichever occurs first.
+> `Async` プロシージャは、まだ完了していない最初の待機中のオブジェクトが検出された場合、または `Async` プロシージャの最後に到達した場合に、呼び出し元に戻ります。
 
-You can also mark a [Function Statement](function-statement.md) with the `Async` modifier. An `Async` function can have a return type of <xref:System.Threading.Tasks.Task%601> or <xref:System.Threading.Tasks.Task>. An example later in this topic shows an `Async` function that has a return type of <xref:System.Threading.Tasks.Task%601>.
+[関数ステートメント](function-statement.md)を `Async` 修飾子でマークすることもできます。 `Async` 関数は、<xref:System.Threading.Tasks.Task%601> または <xref:System.Threading.Tasks.Task>の戻り値の型を持つことができます。 このトピックの後半の例では、<xref:System.Threading.Tasks.Task%601>の戻り値の型を持つ `Async` 関数を示します。
 
-`Async` `Sub` procedures are primarily used for event handlers, where a value can't be returned. An `Async` `Sub` procedure can't be awaited, and the caller of an `Async` `Sub` procedure can't catch exceptions that the `Sub` procedure throws.
+`Async` の `Sub` プロシージャは、主に、値を返すことができないイベントハンドラーに使用されます。 `Async` `Sub` プロシージャは待機できません。また、`Async` の `Sub` プロシージャの呼び出し元は、`Sub` プロシージャがスローする例外をキャッチできません。
 
-An `Async` procedure can't declare any [ByRef](../modifiers/byref.md) parameters.
+`Async` プロシージャで[ByRef](../modifiers/byref.md)パラメーターを宣言することはできません。
 
-For more information about `Async` procedures, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md), [Control Flow in Async Programs](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md), and [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
+`Async` の手順の詳細については、「 [async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)」、「非同期[プログラムでの制御フロー](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)」、および「非同期の[戻り値の型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-The following example uses the `Sub` statement to define the name, parameters, and code that form the body of a `Sub` procedure.
+次の例では、`Sub` ステートメントを使用して、`Sub` プロシージャの本体を形成する名前、パラメーター、およびコードを定義します。
 
 [!code-vb[VbVbalrStatements#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#58)]
 
 ## <a name="example"></a>例
 
-In the following example, `DelayAsync` is an `Async` `Function` that has a return type of <xref:System.Threading.Tasks.Task%601>. `DelayAsync` には、整数を返す `Return` ステートメントがあります。 Therefore, the function declaration of `DelayAsync` must have a return type of `Task(Of Integer)`. Because the return type is `Task(Of Integer)`, the evaluation of the `Await` expression in `DoSomethingAsync` produces an integer, as the following statement shows: `Dim result As Integer = Await delayTask`.
+次の例では、`DelayAsync` は、戻り値の型が <xref:System.Threading.Tasks.Task%601>の `Async` `Function` です。 `DelayAsync` には、整数を返す `Return` ステートメントがあります。 したがって、`DelayAsync` の関数宣言には、`Task(Of Integer)`の戻り値の型を指定する必要があります。 戻り値の型が `Task(Of Integer)`ので、次のステートメントに `Dim result As Integer = Await delayTask`示すように、`DoSomethingAsync` で `Await` 式を評価すると整数が生成されます。
 
-The `startButton_Click` procedure is an example of an `Async Sub` procedure. Because `DoSomethingAsync` is an `Async` function, the task for the call to `DoSomethingAsync` must be awaited, as the following statement shows: `Await DoSomethingAsync()`. The `startButton_Click` `Sub` procedure must be defined with the `Async` modifier because it has an `Await` expression.
+`startButton_Click` プロシージャは、`Async Sub` プロシージャの一例です。 `DoSomethingAsync` は `Async` 関数であるため、次のステートメントに示すように、`DoSomethingAsync` を呼び出すためのタスクを待機する必要があります。 `Await DoSomethingAsync()`。 `startButton_Click` `Sub` プロシージャには `Await` 式があるため、`Async` 修飾子を使用して定義する必要があります。
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Implements ステートメント](implements-statement.md)
 - [Function ステートメント](function-statement.md)

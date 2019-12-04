@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341546"
 ---
-# <a name="how-to-sort-elements-visual-basic"></a>How to: Sort Elements (Visual Basic)
+# <a name="how-to-sort-elements-visual-basic"></a>方法: 要素を並べ替える (Visual Basic)
 この例では、結果を並べ替えるクエリの作成方法を示します。  
   
 ## <a name="example"></a>例  
@@ -40,7 +40,7 @@ Next
 ```  
   
 ## <a name="example"></a>例  
- 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、「[名前空間の概要」 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)を参照してください。  
   
  この例では、「[サンプル XML ファイル: 名前空間内の数値データ](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)」の XML ドキュメントを使用します。  
   
@@ -77,4 +77,4 @@ End Module
 ## <a name="see-also"></a>関連項目
 
 - [データの並べ替え](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

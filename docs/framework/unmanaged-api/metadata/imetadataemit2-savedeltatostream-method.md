@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447874"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream メソッド
-Saves changes from the current edit-and-continue session to the specified stream.  
+現在のエディットコンティニュセッションから、指定されたストリームに変更を保存します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +36,17 @@ HRESULT SaveDeltaToStream (
   
 ## <a name="parameters"></a>パラメーター  
  `pIStream`  
- [in] An interface pointer to the writable stream to which to save changes.  
+ から変更を保存する書き込み可能なストリームへのインターフェイスポインター。  
   
  `dwSaveFlags`  
- [in] 予約されています。 This value must be zero.  
+ [in] 予約されています。 この値は0にする必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

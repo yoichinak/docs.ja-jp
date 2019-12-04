@@ -17,19 +17,19 @@ ms.locfileid: "74346814"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>方法: 長い修飾パスを持つオブジェクトに対するアクセス時間を短縮する (Visual Basic)
 
-If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.
+複数のメソッドおよびプロパティの修飾パスを必要とするオブジェクトに頻繁にアクセスする場合は、修飾パスを繰り返さないことでコードを高速化できます。
 
-There are two ways you can avoid repeating the qualification path. You can assign the object to a variable, or you can use it in a `With`...`End With` block.
+修飾パスの繰り返しを回避するには、2つの方法があります。 変数にオブジェクトを割り当てることも、`With`...`End With` ブロックで使用することもできます。
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>To speed up access to a heavily qualified object by assigning it to a variable
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>変数に割り当てて、高い修飾オブジェクトへのアクセスを高速化するには
 
-1. Declare a variable of the type of the object that you are accessing frequently. Specify the qualification path in the initialization part of the declaration.
+1. 頻繁にアクセスするオブジェクトの型の変数を宣言します。 宣言の初期化部分に修飾パスを指定します。
 
     ```vb
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl
     ```
 
-2. Use the variable to access the object's members.
+2. オブジェクトのメンバーにアクセスするには、変数を使用します。
 
     ```vb
     ctrlActv.Text = "Test"
@@ -37,15 +37,15 @@ There are two ways you can avoid repeating the qualification path. You can assig
     ctrlActv.Show()
     ```
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>To speed up access to a heavily qualified object by using a With...End With block
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>With... を使用して、高い修飾オブジェクトへのアクセスを高速化するには末尾をブロックにする
 
-1. Put the qualification path in a `With` statement.
+1. `With` ステートメントに修飾パスを配置します。
 
     ```vb
     With someForm.ActiveForm.ActiveControl
     ```
 
-2. Access the object's members inside the `With` block, before the `End With` statement.
+2. `End With` ステートメントの前に、`With` ブロック内のオブジェクトのメンバーにアクセスします。
 
     ```vb
         .Text = "Test"
@@ -54,7 +54,7 @@ There are two ways you can avoid repeating the qualification path. You can assig
     End With
     ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [With...End With ステートメント](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)

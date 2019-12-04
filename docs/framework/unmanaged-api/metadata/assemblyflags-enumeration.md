@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444302"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 列挙体
-Contains values that describe run-time features of an assembly.  
+アセンブリのランタイム機能を記述する値を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,25 +40,25 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|Specifies that exported type definitions are implicit within the files that comprise the assembly. In the .NET Framework versions 1.0 and 1.1, this value is always assumed to be set.|  
-|`afImplicitResources`|Specifies that resource definitions are implicit within the files that comprise the assembly. In the .NET Framework 1.0 and 1.1, this value is always assumed to be set.|  
-|`afNonSideBySideAppDomain`|Specifies that the assembly cannot execute with other versions if they are running in the same application domain.|  
-|`afNonSideBySideProcess`|Specifies that the assembly cannot execute with other versions if they are running in the same process.|  
-|`afNonSideBySideMachine`|Specifies that the assembly cannot execute with other versions if they are running on the same computer.|  
+|`afImplicitExportedTypes`|エクスポートされた型定義が、アセンブリを構成するファイル内で暗黙的に指定されることを指定します。 .NET Framework バージョン1.0 および1.1 では、この値は常に設定されると想定されます。|  
+|`afImplicitResources`|アセンブリを構成するファイル内でリソース定義が暗黙的であることを指定します。 .NET Framework 1.0 および1.1 では、この値は常に設定されると想定されます。|  
+|`afNonSideBySideAppDomain`|アセンブリが同じアプリケーションドメインで実行されている場合、その他のバージョンでは実行できないことを指定します。|  
+|`afNonSideBySideProcess`|同じプロセスで実行されている場合、アセンブリを他のバージョンと一緒に実行できないことを指定します。|  
+|`afNonSideBySideMachine`|アセンブリが同じコンピューター上で実行されている場合、その他のバージョンでは実行できないことを指定します。|  
   
-## <a name="remarks"></a>Remarks  
- The values between 0x0010 and 0x0070, inclusive, are used to describe side-by-side compatibility features of the referenced assembly. If none of these values are set, the assembly is assumed to be side-by-side compatible.  
+## <a name="remarks"></a>コメント  
+ 0x0010 と0x0070 の間の値は、参照アセンブリのサイドバイサイドの互換性機能を記述するために使用されます。 これらの値のいずれも設定されていない場合、アセンブリはサイドバイサイドで互換性があると見なされます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** MsCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
 - [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

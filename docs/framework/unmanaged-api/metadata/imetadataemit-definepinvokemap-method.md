@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431491"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap メソッド
-Sets features of the PInvoke signature of the method referenced by the specified token.  
+指定したトークンによって参照されるメソッドの PInvoke 署名の特徴を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,27 +38,27 @@ HRESULT DefinePinvokeMap (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in] The token for the target method.  
+ からターゲットメソッドのトークン。  
   
  `dwMappingFlags`  
- [in] Flags used by PInvoke to do the mapping.  
+ からマッピングを行うために PInvoke によって使用されるフラグ。  
   
  `szImportName`  
- [in] The name of the target export method in an unmanaged DLL.  
+ からアンマネージ DLL 内の対象のエクスポートメソッドの名前。  
   
  `mrImportDLL`  
- [in] The token for the target native DLL.  
+ からターゲットのネイティブ DLL のトークン。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

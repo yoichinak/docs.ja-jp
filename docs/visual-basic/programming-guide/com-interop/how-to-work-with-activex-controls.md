@@ -13,27 +13,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353210"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>方法: ActiveX コントロールを操作する (Visual Basic)
-ActiveX controls are COM components or objects you can insert into a Web page or other application to reuse packaged functionality someone else has programmed. You can use ActiveX controls developed for Visual Basic 6.0 and earlier versions to add features to the **Toolbox** of Visual Studio.  
+ActiveX コントロールは、他のユーザーがプログラムを使用してパッケージ機能を再利用するために、Web ページまたは他のアプリケーションに挿入できる COM コンポーネントまたはオブジェクトです。 Visual Basic 6.0 以前のバージョン用に開発された ActiveX コントロールを使用して、Visual Studio の**ツールボックス**に機能を追加できます。  
   
-### <a name="to-add-activex-controls-to-the-toolbox"></a>To add ActiveX controls to the toolbox  
+### <a name="to-add-activex-controls-to-the-toolbox"></a>ActiveX コントロールをツールボックスに追加するには  
   
-1. On the **Tools** menu, click **Choose Toolbox Items**.  
+1. **[ツール]** メニューの **[ツールボックスアイテムの選択]** をクリックします。  
   
-     The **Choose Toolbox** dialog box appears.  
+     **[ツールボックスの選択]** ダイアログボックスが表示されます。  
   
-2. Click the **COM Components** tab.  
+2. **[COM コンポーネント]** タブをクリックします。  
   
-3. Select the check box next to the ActiveX control you want to use, and then click **OK**.  
+3. 使用する ActiveX コントロールの横にあるチェックボックスをオンにし、[ **OK]** をクリックします。  
   
-     The new control appears with the other tools in the **Toolbox**.  
+     新しいコントロールは、ツール**ボックス**の他のツールと共に表示されます。  
   
     > [!NOTE]
-    > You can use the Aximp utility to manually create an interop assembly for ActiveX controls. For more information, see [Aximp.exe (Windows Forms ActiveX Control Importer)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
+    > Aximp.exe ユーティリティを使用すると、ActiveX コントロールの相互運用機能アセンブリを手動で作成できます。 詳細については、「 [aximp.exe (ActiveX コントロールインポーター Windows フォーム)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)
-- [方法: Windows フォームに ActiveX コントロールを追加する](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [方法 : Windows フォームに ActiveX コントロールを追加する](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
 - [Aximp.exe (Windows フォーム ActiveX コントロール インポーター)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [Windows フォームで ActiveX コントロールをホストする場合の考慮事項](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
 - [相互運用性のトラブルシューティング](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436469"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 列挙型
-Indicates the type of a metadata token.  
+メタデータトークンの種類を示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -63,43 +63,43 @@ typedef enum CorTokenType {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`mdtModule`|An `mdModule` token.|  
-|`mdtTypeRef`|An `mdTypeRef` token.|  
-|`mdtTypeDef`|An `mdTypeDef` token.|  
-|`mdtFieldDef`|An `mdFieldDef` token.|  
-|`mdtMethodDef`|An `mdMethodDef` token.|  
-|`mdtParamDef`|An `mdParamDef` token.|  
-|`mdtInterfaceImpl`|An `mdInterfaceImpl` token.|  
-|`mdtMemberRef`|An `mdMemberRef` token.|  
-|`mdtCustomAttribute`|An `mdCustomAttribute` token.|  
-|`mdtPermission`|An `mdPermission` token.|  
-|`mdtSignature`|An `mdSignature` token.|  
-|`mdtEvent`|An `mdEvent` token.|  
-|`mdtProperty`|An `mdProperty` token.|  
-|`mdtModuleRef`|An `mdModuleRef` token.|  
-|`mdtTypeSpec`|An `mdTypeSpec` token.|  
-|`mdtAssembly`|An `mdAssembly` token.|  
-|`mdtAssemblyRef`|An `mdAssemblyRef` token.|  
-|`mdtFile`|An `mdFile` token.|  
-|`mdtExportedType`|An `mdExportedType` token.|  
-|`mdtManifestResource`|An `mdManifestResource` token.|  
-|`mdtGenericParam`|An `mdGenericParam` token.|  
-|`mdtMethodSpec`|An `mdMethodSpec` token.|  
-|`mdtGenericParamConstraint`|An `mdGenericParamConstraint` token.|  
-|`mdtString`|An `mdString` token.|  
-|`mdtName`|An `mdName` token.|  
+|`mdtModule`|`mdModule` トークンです。|  
+|`mdtTypeRef`|`mdTypeRef` トークンです。|  
+|`mdtTypeDef`|`mdTypeDef` トークンです。|  
+|`mdtFieldDef`|`mdFieldDef` トークンです。|  
+|`mdtMethodDef`|`mdMethodDef` トークンです。|  
+|`mdtParamDef`|`mdParamDef` トークンです。|  
+|`mdtInterfaceImpl`|`mdInterfaceImpl` トークンです。|  
+|`mdtMemberRef`|`mdMemberRef` トークンです。|  
+|`mdtCustomAttribute`|`mdCustomAttribute` トークンです。|  
+|`mdtPermission`|`mdPermission` トークンです。|  
+|`mdtSignature`|`mdSignature` トークンです。|  
+|`mdtEvent`|`mdEvent` トークンです。|  
+|`mdtProperty`|`mdProperty` トークンです。|  
+|`mdtModuleRef`|`mdModuleRef` トークンです。|  
+|`mdtTypeSpec`|`mdTypeSpec` トークンです。|  
+|`mdtAssembly`|`mdAssembly` トークンです。|  
+|`mdtAssemblyRef`|`mdAssemblyRef` トークンです。|  
+|`mdtFile`|`mdFile` トークンです。|  
+|`mdtExportedType`|`mdExportedType` トークンです。|  
+|`mdtManifestResource`|`mdManifestResource` トークンです。|  
+|`mdtGenericParam`|`mdGenericParam` トークンです。|  
+|`mdtMethodSpec`|`mdMethodSpec` トークンです。|  
+|`mdtGenericParamConstraint`|`mdGenericParamConstraint` トークンです。|  
+|`mdtString`|`mdString` トークンです。|  
+|`mdtName`|`mdName` トークンです。|  
 |`mdtBaseType`|使用しません。|  
   
-## <a name="remarks"></a>Remarks  
- Each value is equal to the value of the top byte in the corresponding metadata token.  
+## <a name="remarks"></a>コメント  
+ 各値は、対応するメタデータトークンの上位バイトの値に相当します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

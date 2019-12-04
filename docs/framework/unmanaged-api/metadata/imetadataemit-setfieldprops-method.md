@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445456"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps メソッド
-Sets or updates the default value for the field referenced by the specified field token.  
+指定したフィールドトークンによって参照されるフィールドの既定値を設定または更新します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,26 +39,26 @@ HRESULT SetFieldProps (
   
 ## <a name="parameters"></a>パラメーター  
  `fd`  
- [in] The token for the target field.  
+ からターゲットフィールドのトークン。  
   
  `dwFieldFlags`  
- [in] Field attributes. This is a bitmask of `CorFieldAttr` values.  
+ からフィールド属性。 これは `CorFieldAttr` 値のビットマスクです。  
   
  `dwCPlusTypeFlag`  
- [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.  
+ から定数値の `ELEMENT_TYPE_` *\** 。 これは `CorElementType` の値です。 定数が定義されていない場合は、この値を `ELEMENT_TYPE_END`に設定します。  
   
  `pValue`  
- [in] The constant value for the field.  
+ からフィールドの定数値。  
   
  `cchValue`  
- [in] The size, in Unicode characters, of `pValue`.  
+ から`pValue`のサイズ (Unicode 文字)。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

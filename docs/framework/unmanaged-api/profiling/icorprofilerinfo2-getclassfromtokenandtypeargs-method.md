@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447169"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs メソッド
-Gets the `ClassID` of a type by using the specified metadata token and the `ClassID` values of any type arguments.  
+指定されたメタデータトークンと任意の型引数の `ClassID` 値を使用して、型の `ClassID` を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,28 +38,28 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleID`  
- [in] The ID of the module in which the type resides.  
+ から型が存在するモジュールの ID。  
   
  `typeDef`  
- [in] An `mdTypeDef` metadata token that references the type.  
+ から型を参照する `mdTypeDef` メタデータトークン。  
   
  `cTypeArgs`  
- [in] The number of type parameters for the given type. This value must be zero for non-generic types.  
+ から指定された型の型パラメーターの数。 非ジェネリック型の場合、この値は0である必要があります。  
   
  `typeArgs`  
- [in] An array of `ClassID` values, each of which is an argument of the type. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
+ から`ClassID` 値の配列。それぞれが型の引数です。 `cTypeArgs` が0に設定されている場合、`typeArgs` の値は NULL になります。  
   
  `pClassID`  
- [out] A pointer to the `ClassID` of the specified type.  
+ 入出力指定した型の `ClassID` へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- Calling the `GetClassFromTokenAndTypeArgs` method with an `mdTypeRef` instead of an `mdTypeDef` metadata token can have unpredictable results; callers should resolve the `mdTypeRef` to an `mdTypeDef` when passing it.  
+## <a name="remarks"></a>コメント  
+ `mdTypeDef` メタデータトークンではなく `mdTypeRef` を使用して `GetClassFromTokenAndTypeArgs` メソッドを呼び出すと、予期しない結果が発生する可能性があります。呼び出し元は、`mdTypeRef` を渡すときに `mdTypeDef` に解決する必要があります。  
   
- If the type is not already loaded, calling `GetClassFromTokenAndTypeArgs` will trigger loading, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or other types could lead to an infinite loop as the runtime attempts to circularly load things.  
+ 型がまだ読み込まれていない場合は、`GetClassFromTokenAndTypeArgs` を呼び出すと読み込みがトリガーされます。これは、多くのコンテキストでは危険な操作です。 たとえば、モジュールまたはその他の型の読み込み中にこのメソッドを呼び出すと、ランタイムが循環読み込みを試みたときに無限ループが発生する可能性があります。  
   
- In general, use of `GetClassFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular type, they should store the `ModuleID` and `mdTypeDef` of that type, and use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) to check whether a given `ClassID` is that of the desired type.  
+ 一般に、`GetClassFromTokenAndTypeArgs` の使用は推奨されていません。 プロファイラーが特定の型のイベントに関心を持っている場合は、その型の `ModuleID` と `mdTypeDef` を格納し、 [ICorProfilerInfo2:: GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)を使用して、特定の `ClassID` が目的の型であるかどうかを確認する必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

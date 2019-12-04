@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445539"
 ---
 # <a name="setpekind-method"></a>SetPEKind メソッド
-Determines the portable executable type, either machine-specific or machine-agnostic.  
+ポータブル実行可能ファイルの種類 (マシン固有またはコンピューターに依存しない) を決定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,22 +37,22 @@ HRESULT SetPEKind(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of the assembly.  
+ アセンブリの ID。  
   
  `FileToken`  
- Token of file for which the PE type is to be set. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ PE の種類を設定するファイルのトークン。 `AssemblyID` がバインドされていない .netmodule を示していない場合は NULL を指定できます。  
   
  `dwPEKind`  
- The type of PE, as indicated by the [CorPEKind Enumeration](../metadata/corpekind-enumeration.md).  
+ [Corpekind 列挙体](../metadata/corpekind-enumeration.md)によって示される PE の種類。  
   
  `dwMachine`  
- The target machine architecture, as indicated in the NT header.  
+ NT ヘッダーに示されている、対象コンピューターのアーキテクチャ。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h.  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 

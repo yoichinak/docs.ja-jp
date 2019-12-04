@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445432"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob メソッド
-Gets a pointer to the binary large object (BLOB) at the specified column index.  
+指定した列インデックスにあるバイナリラージオブジェクト (BLOB) へのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,20 +37,20 @@ HRESULT GetBlob (
   
 ## <a name="parameters"></a>パラメーター  
  `ixBlob`  
- [in] The memory address from which to get `ppData`.  
+ から`ppData`の取得元となるメモリアドレス。  
   
  `pcbData`  
- [out] A pointer to the size, in bytes, of `ppData`.  
+ 入出力`ppData`のサイズ (バイト単位) へのポインター。  
   
  `ppData`  
- [out] A pointer to a pointer to the binary data retrieved.  
+ 入出力取得したバイナリデータへのポインターへのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

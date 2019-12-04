@@ -25,7 +25,7 @@ ms.locfileid: "74344760"
 -define:["]symbol[=value][,symbol[=value]]["]  
 ```
 
-、または
+または
 
 ```console  
 -d:["]symbol[=value][,symbol[=value]]["]  
@@ -33,30 +33,30 @@ ms.locfileid: "74344760"
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`symbol`|必須です。 定義する記号。|  
-|`value`|省略可能です。 `symbol` に代入する値。 If `value` is a string, it must be surrounded by backslash/quotation-mark sequences (\\") instead of quotation marks. 値が指定されていない場合は、True として処理されます。|  
+|`symbol`|必須。 定義する記号。|  
+|`value`|省略可。 `symbol` に代入する値。 `value` が文字列の場合は、引用符ではなく円記号/引用符 (\\") で囲む必要があります。 値が指定されていない場合は、True として処理されます。|  
   
-## <a name="remarks"></a>Remarks  
- The `-define` option has an effect similar to using a `#Const` preprocessor directive in your source file, except that constants defined with `-define` are public and apply to all files in the project.  
+## <a name="remarks"></a>コメント  
+ `-define` オプションは、ソースファイルで `#Const` プリプロセッサディレクティブを使用するのと同様の効果があります。ただし、`-define` で定義された定数はパブリックであり、プロジェクト内のすべてのファイルに適用されます。  
   
  このオプションで作成される記号を `#If`...`Then`...`#Else` ディレクティブで使用すると、ソース ファイルを条件付きでコンパイルできます。  
   
- `-d` は `-define` の省略形です。  
+ `-d` は `-define`の短縮形です。  
   
  記号の定義をコンマで区切ると、`-define` を使用して複数の記号を定義できます。  
   
 |Visual Studio 統合開発環境で /define を設定するには|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.  Click the **Compile** tab.<br />3.  Click **Advanced**.<br />4.  Modify the value in the **Custom Constants** box.|  
+|1.**ソリューションエクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[詳細設定]** をクリックします。<br />4. **[カスタム定数]** ボックスの値を変更します。|  
   
 ## <a name="example"></a>例  
  2 つの条件付きコンパイル定数を定義して使用する場合のコード例を次に示します。  
   
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

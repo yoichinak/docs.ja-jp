@@ -24,16 +24,16 @@ ms.locfileid: "74352342"
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
 |`x86`|32 ビット x86 互換 CLR で実行されるように、アセンブリをコンパイルします。|  
 |`x64`|AMD64 または EM64T 命令セットをサポートするコンピューター上の 64 ビット CLR で実行されるように、アセンブリをコンパイルします。|  
 |`Itanium`|Itanium プロセッサ搭載のコンピューター上の 64 ビット CLR で実行されるように、アセンブリをコンパイルします。|  
 |`arm`|ARM (アドバンスト RISC マシン) プロセッサ搭載のコンピューター上で実行されるように、アセンブリをコンパイルします。|  
 |`anycpu`|任意のプラットフォーム上で実行されるように、アセンブリをコンパイルします。 アプリケーションは、Windows の 32 ビット バージョンでは 32 ビット アプリケーションとして、Windows の 64 ビット バージョンでは 64 ビット アプリケーションとして実行されます。 このフラグが既定値です。|  
-|`anycpu32bitpreferred`|任意のプラットフォーム上で実行されるように、アセンブリをコンパイルします。 アプリケーションは、Windows の 32 ビット バージョンおよび 64 ビット バージョンの両方で、 32 ビット アプリケーションとして実行されます。 This flag is valid only for executables (.EXE) and requires .NET Framework 4.5.|  
+|`anycpu32bitpreferred`|任意のプラットフォーム上で実行されるように、アセンブリをコンパイルします。 アプリケーションは、Windows の 32 ビット バージョンおよび 64 ビット バージョンの両方で、 32 ビット アプリケーションとして実行されます。 このフラグは、実行可能ファイル () に対してのみ有効です。EXE) と .NET Framework 4.5 が必要です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  出力ファイルの対象となるプロセッサの種類を指定するには、`-platform` オプションを使用します。  
   
  通常、Visual Basic で記述された .NET Framework アセンブリは、プラットフォームに関係なく、同じように実行されます。 ただし、プラットフォーム間で動作が異なる場合があります。 その一般的な例を次に示します。  
@@ -48,7 +48,7 @@ ms.locfileid: "74352342"
   
 - すべてのプラットフォームに存在するとは限らないコンポーネントを使用したプラットフォーム呼び出しまたは COM 相互運用機能の使用  
   
- The **-platform** option will mitigate some issues if you know you have made assumptions about the architecture your code will run on. 具体的には、次のように使用します。  
+ **-Platform**オプションを使用すると、コードが実行されるアーキテクチャについて想定したことがわかった場合に、いくつかの問題を軽減できます。 具体的な内容は次のとおりです。  
   
 - 64 ビット プラットフォームを対象にし、アプリケーションを 32 ビット マシンで実行した場合、エラー メッセージは、このスイッチを使用しない場合よりも、エラー メッセージがかなり早期に出力され、より絞り込まれた内容になります。  
   
@@ -64,15 +64,15 @@ ms.locfileid: "74352342"
   
 - `-platform:anycpu32bitpreferred` でコンパイルされた実行可能ファイルは、32 ビット CLR で実行されます。  
   
- For more information about how to develop an application to run on a 64-bit version of Windows, see [64-bit Applications](../../../framework/64-bit-apps.md).  
+ 64ビットバージョンの Windows で実行するアプリケーションを開発する方法の詳細については、「 [64 ビットアプリケーション](../../../framework/64-bit-apps.md)」を参照してください。  
   
-### <a name="to-set--platform-in-the-visual-studio-ide"></a>To set -platform in the Visual Studio IDE  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>Visual Studio IDE でプラットフォームを設定するには  
   
-1. In **Solution Explorer**, choose the project, open the **Project** menu, and then click **Properties**.  
+1. **ソリューションエクスプローラー**で、プロジェクトを選択し、 **[プロジェクト]** メニューを開き、 **[プロパティ]** をクリックします。  
   
-2. On the **Compile** tab, select or clear the **Prefer 32-bit** check box, or, in the **Target CPU** list, choose a value.  
+2. **[コンパイル]** タブで、 **[32 ビットを優先]** チェックボックスをオンまたはオフにします。または、 **[ターゲット CPU]** の一覧で値を選択します。  
   
-     For more information, see [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+     詳細については、「[[コンパイル] ページ (プロジェクトデザイナー)」 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)を参照してください。  
   
 ## <a name="example"></a>例  
  次の例は、`-platform` コンパイラ オプションを使用する方法を示しています。  
@@ -81,7 +81,7 @@ ms.locfileid: "74352342"
 vbc -platform:x86 myFile.vb  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [-target (Visual Basic)](target.md)
 - [Visual Basic のコマンド ライン コンパイラ](index.md)

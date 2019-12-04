@@ -13,7 +13,7 @@ ms.locfileid: "74283191"
 <xref:System.Activities.Statements.Interop> アクティビティは、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ワークフロー内の .NET Framework 3.5 (WF 3.5) アクティビティをラップする [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) アクティビティです。 WF 3 アクティビティは、単一のリーフ アクティビティまたはツリー全体のアクティビティです。 実行 (キャンセルと例外処理を含む) と .NET Framework 3.5 アクティビティの永続化は、実行されている [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ワークフローインスタンスのコンテキスト内で発生します。  
   
 > [!NOTE]
-> <xref:System.Activities.Statements.Interop> アクティビティをワークフロー デザイナー ツールボックスに表示するには、ワークフローのプロジェクトで **[ターゲット フレームワーク]** 設定を **[.NET Framework 4.5]** に設定します。  
+> ワークフローのプロジェクトで **[ターゲットフレームワーク]** 設定が **[.NET Framework 4.5]** に設定されていない限り、<xref:System.Activities.Statements.Interop> アクティビティはワークフローデザイナーツールボックスに表示されません。  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>WF 3 アクティビティと Interop アクティビティを使用するための基準  
  <xref:System.Activities.Statements.Interop> アクティビティ内で WF 3 アクティビティを正常に実行するには、次の基準を満たす必要があります。  

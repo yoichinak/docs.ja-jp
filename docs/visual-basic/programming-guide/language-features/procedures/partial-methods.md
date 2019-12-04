@@ -19,28 +19,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352636"
 ---
 # <a name="partial-methods-visual-basic"></a>部分メソッド (Visual Basic)
-Partial methods enable developers to insert custom logic into code. Typically, the code is part of a designer-generated class. Partial methods are defined in a partial class that is created by a code generator, and they are commonly used to provide notification that something has been changed. They enable the developer to specify custom behavior in response to the change.  
+部分メソッドを使用すると、開発者はカスタムロジックをコードに挿入できます。 通常、このコードはデザイナーによって生成されるクラスの一部です。 部分メソッドは、コードジェネレーターによって作成される部分クラスで定義され、通常は、何らかの変更が行われたことを通知するために使用されます。 これにより、開発者は、変更に応じてカスタム動作を指定できます。  
   
- The designer of the code generator defines only the method signature and one or more calls to the method. Developers can then provide implementations for the method if they want to customize the behavior of the generated code. When no implementation is provided, calls to the method are removed by the compiler, resulting in no additional performance overhead.  
+ コードジェネレーターのデザイナーは、メソッドシグネチャと、メソッドの1つ以上の呼び出しのみを定義します。 開発者は、生成されたコードの動作をカスタマイズする場合に、メソッドの実装を提供できます。 実装が指定されていない場合、メソッドの呼び出しはコンパイラによって削除され、その結果、追加のパフォーマンスオーバーヘッドが発生しません。  
   
 ## <a name="declaration"></a>宣言  
- The generated code marks the definition of a partial method by placing the keyword `Partial` at the start of the signature line.  
+ 生成されたコードは、署名行の先頭に `Partial` キーワードを配置することで、部分メソッドの定義をマークします。  
   
 ```vb  
 Partial Private Sub QuantityChanged()  
 End Sub  
 ```  
   
- The definition must meet the following conditions:  
+ 定義は、次の条件を満たしている必要があります。  
   
-- The method must be a `Sub`, not a `Function`.  
+- メソッドは、`Function`ではなく、`Sub`である必要があります。  
   
-- The body of the method must be left empty.  
+- メソッドの本体は空のままにする必要があります。  
   
-- The access modifier must be `Private`.  
+- アクセス修飾子は `Private`である必要があります。  
   
 ## <a name="implementation"></a>実装  
- The implementation consists primarily of filling in the body of the partial method. The implementation is typically in a separate partial class from the definition, and is written by a developer who wants to extend the generated code.  
+ 実装は、主に部分メソッドの本体を埋めることによって構成されます。 実装は、通常、定義とは別の部分クラスにあり、生成されたコードを拡張する開発者によって記述されます。  
   
 ```vb  
 Private Sub QuantityChanged()  
@@ -48,25 +48,25 @@ Private Sub QuantityChanged()
 End Sub  
 ```  
   
- The previous example duplicates the signature in the declaration exactly, but variations are possible. In particular, other modifiers can be added, such as `Overloads` or `Overrides`. Only one `Overrides` modifier is permitted. For more information about method modifiers, see [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ 前の例では、宣言のシグネチャを正確に複製しますが、バリエーションを使用することもできます。 特に、`Overloads` や `Overrides`などの他の修飾子を追加できます。 1つの `Overrides` 修飾子のみが許可されます。 メソッド修飾子の詳細については、「 [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)」を参照してください。  
   
-## <a name="use"></a>上限のファイル数を変更するには、  
- You call a partial method as you would call any other `Sub` procedure. If the method has been implemented, the arguments are evaluated and the body of the method is executed. However, remember that implementing a partial method is optional. If the method is not implemented, a call to it has no effect, and expressions passed as arguments to the method are not evaluated.  
+## <a name="use"></a>新しく使用する機能  
+ 部分メソッドは、他の `Sub` プロシージャと同じように呼び出すことができます。 メソッドが実装されている場合は、引数が評価され、メソッドの本体が実行されます。 ただし、部分メソッドの実装は省略可能であることに注意してください。 メソッドが実装されていない場合、その呼び出しは無効であり、メソッドに引数として渡された式は評価されません。  
   
 ## <a name="example"></a>例  
- In a file named Product.Designer.vb, define a `Product` class that has a `Quantity` property.  
+ .Vb という名前のファイルで、`Quantity` プロパティを持つ `Product` クラスを定義します。  
   
  [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  
   
- In a file named Product.vb, provide an implementation for `QuantityChanged`.  
+ Product .vb という名前のファイルに、`QuantityChanged`の実装を指定します。  
   
  [!code-vb[VbVbalrPartialMeths#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#5)]  
   
- Finally, in the Main method of a project, declare a `Product` instance and provide an initial value for its `Quantity` property.  
+ 最後に、プロジェクトの Main メソッドで、`Product` インスタンスを宣言し、その `Quantity` プロパティの初期値を指定します。  
   
  [!code-vb[VbVbalrPartialMeths#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#6)]  
   
- A message box should appear that displays this message:  
+ メッセージボックスが表示され、次のメッセージが表示されます。  
   
  `Quantity was changed to 100`  
   

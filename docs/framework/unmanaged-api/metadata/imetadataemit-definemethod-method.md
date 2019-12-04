@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431805"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod メソッド
-Creates a definition for a method or global function with the specified signature, and returns a token to that method definition.  
+指定したシグネチャを使用してメソッドまたはグローバル関数の定義を作成し、そのメソッド定義に対するトークンを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,75 +42,75 @@ HRESULT DefineMethod (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in] The `mdTypedef` token of the parent class or parent interface of the method. Set `td` to `mdTokenNil`, if you are defining a global function.  
+ からメソッドの親クラスまたは親インターフェイスの `mdTypedef` トークン。 グローバル関数を定義する場合は、`td` を `mdTokenNil`に設定します。  
   
  `szName`  
- [in] The member name in Unicode.  
+ からUnicode のメンバー名。  
   
  `dwMethodFlags`  
- [in] A value of the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration that specifies the attributes of the method or global function.  
+ からメソッドまたはグローバル関数の属性を指定する[CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)列挙体の値。  
   
  `pvSigBlob`  
- [in] The method signature. The signature is persisted as supplied. If you need to specify additional information for any parameters, use the [IMetaDataEmit::SetParamProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md) method.  
+ からメソッドシグネチャ。 署名は、指定されたとおりに永続化されます。 任意のパラメーターの追加情報を指定する必要がある場合は、 [IMetaDataEmit:: SetParamProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md)メソッドを使用します。  
   
  `cbSigBlob`  
- [in] The count of bytes in `pvSigBlob`.  
+ から`pvSigBlob`内のバイト数。  
   
  `ulCodeRVA`  
- [in] The address of the code.  
+ からコードのアドレス。  
   
  `dwImplFlags`  
- [in] A value of the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration that specifies the implementation features of the method.  
+ からメソッドの実装機能を指定する[Cormethodimpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)列挙体の値。  
   
  `pmd`  
- [out] The member token.  
+ 入出力メンバートークン。  
   
-## <a name="remarks"></a>Remarks  
- The metadata API guarantees to persist methods in the same order as the caller emits them for a given enclosing class or interface, which is specified in the `td` parameter.  
+## <a name="remarks"></a>コメント  
+ メタデータ API は、呼び出し元が指定された外側のクラスまたはインターフェイスに対してメソッドを出力するのと同じ順序でメソッドを永続化することを保証します。これは、`td` パラメーターで指定します。  
   
- Additional information regarding the use of `DefineMethod` and particular parameter settings is given below.  
+ `DefineMethod` と特定のパラメーター設定の使用に関する追加情報を次に示します。  
   
-## <a name="slots-in-the-v-table"></a>Slots in the V-table  
- The runtime uses method definitions to set up v-table slots. In the case where one or more slots need to be skipped, such as to preserve parity with a COM interface layout, a dummy method is defined to take up the slot or slots in the v-table; set the `dwMethodFlags` to the `mdRTSpecialName` value of the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration and specify the name as:  
+## <a name="slots-in-the-v-table"></a>V テーブルのスロット  
+ ランタイムは、メソッド定義を使用して、v テーブルスロットを設定します。 COM インターフェイスのレイアウトでパリティを保持するなど、1つ以上のスロットをスキップする必要がある場合は、v テーブルのスロットまたはスロットを取得するためにダミーメソッドが定義されています。`dwMethodFlags` を[CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)列挙の `mdRTSpecialName` 値に設定し、名前をとして指定します。  
   
  _VtblGap\<*SequenceNumber*>\<\_*CountOfSlots*>
   
- where *SequenceNumber* is the sequence number of the method and *CountOfSlots* is the number of slots to skip in the v-table. If *CountOfSlots* is omitted, 1 is assumed. These dummy methods are not callable from either managed or unmanaged code and any attempt to call them, from either managed or unmanaged code, generates an exception. Their only purpose is to take up space in the v-table that the runtime generates for COM integration.  
+ ここで、 *SequenceNumber*はメソッドのシーケンス番号、 *CountOfSlots*は v テーブルでスキップするスロットの数です。 *CountOfSlots*を省略すると、1が想定されます。 これらのダミーメソッドは、マネージコードまたはアンマネージコードから呼び出すことはできません。また、マネージコードまたはアンマネージコードから呼び出しを試みると、例外が生成されます。 その唯一の目的は、ランタイムが COM 統合用に生成する v テーブルの領域を占有することです。  
   
-## <a name="duplicate-methods"></a>Duplicate Methods  
- You should not define duplicate methods. That is, you should not call `DefineMethod` with a duplicate set of values in the `td`, `wzName`, and `pvSig` parameters. (These three parameters together uniquely define the method.). However, you can use a duplicate triple provided that, for one of the method definitions, you set the `mdPrivateScope` bit in the `dwMethodFlags` parameter. (The `mdPrivateScope` bit means that the compiler will not emit a reference to this method definition.)  
+## <a name="duplicate-methods"></a>重複するメソッド  
+ 重複するメソッドは定義しないでください。 つまり、`td`、`wzName`、および `pvSig` のパラメーターの値のセットが重複して `DefineMethod` を呼び出すことはできません。 (これら3つのパラメーターを組み合わせて、メソッドを一意に定義します)。 ただし、重複するトリプルを使用することもできます。この場合、メソッド定義の1つに対して、`dwMethodFlags` パラメーターに `mdPrivateScope` ビットを設定します。 (`mdPrivateScope` ビットは、コンパイラがこのメソッド定義への参照を生成しないことを意味します)。  
   
-## <a name="method-implementation-information"></a>Method Implementation Information  
- Information about the method implementation is often not known at the time the method is declared. Therefore, you do not need to pass values in the `ulCodeRVA` and `dwImplFlags` parameters when calling `DefineMethod`. The values can be supplied later through [IMetaDataEmit::SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md) or [IMetaDataEmit::SetRVA](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md), as appropriate.  
+## <a name="method-implementation-information"></a>メソッドの実装情報  
+ メソッドの実装に関する情報は、多くの場合、メソッドが宣言されているときには認識されません。 したがって、`DefineMethod`を呼び出すときに、`ulCodeRVA` と `dwImplFlags` のパラメーターに値を渡す必要はありません。 値は、必要に応じて、後で[IMetaDataEmit:: SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md)または[IMetaDataEmit:: SetRVA](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md)を使用して指定できます。  
   
- In some situations, such as platform invocation (PInvoke) or COM interop scenarios, the method body will not be supplied, and `ulCodeRVA` should be set to zero. In these situations, the method should not be tagged as abstract, because the runtime will locate the implementation.  
+ プラットフォーム呼び出し (PInvoke) や COM 相互運用のシナリオなど、状況によっては、メソッド本体が提供されず、`ulCodeRVA` を0に設定する必要があります。 このような状況では、ランタイムによって実装が特定されるため、メソッドを abstract としてタグ付けすることはできません。  
   
-## <a name="defining-a-method-for-pinvoke"></a>Defining a Method for PInvoke  
- For each unmanaged function to be called through PInvoke, you must define a managed method that represents the target unmanaged function. To define the managed method, use `DefineMethod` with some of the parameters set to certain values, depending on the way in which PInvoke is used:  
+## <a name="defining-a-method-for-pinvoke"></a>PInvoke のメソッドの定義  
+ PInvoke を通じて呼び出される各アンマネージ関数に対して、対象のアンマネージ関数を表すマネージメソッドを定義する必要があります。 マネージメソッドを定義するには、PInvoke の使用方法に応じて、いくつかのパラメーターを特定の値に設定して `DefineMethod` を使用します。  
   
-- True PInvoke - involves invocation of an external unmanaged method that resides in an unmanaged DLL.  
+- True PInvoke-アンマネージ DLL に存在する外部アンマネージメソッドの呼び出しが含まれます。  
   
-- Local PInvoke - involves invocation of a native unmanaged method that is embedded in the current managed module.  
+- ローカル PInvoke-現在のマネージモジュールに埋め込まれているネイティブアンマネージメソッドの呼び出しが含まれます。  
   
- The parameter settings are given in the following table.  
+ パラメーターの設定を次の表に示します。  
   
-|パラメーター|Values for true PInvoke|Values for local PInvoke|  
+|パラメーター|True PInvoke の値|ローカル PInvoke の値|  
 |---------------|-----------------------------|------------------------------|  
-|`dwMethodFlags`||Set `mdStatic`; clear `mdSynchronized` and `mdAbstract`.|  
-|`pvSigBlob`|A valid common language runtime (CLR) method signature with parameters that are valid managed types.|A valid CLR method signature with parameters that are valid managed types.|  
+|`dwMethodFlags`||`mdStatic`を設定します。`mdSynchronized` と `mdAbstract`をクリアします。|  
+|`pvSigBlob`|有効なマネージ型であるパラメーターを持つ有効な共通言語ランタイム (CLR) メソッドシグネチャ。|有効なマネージ型であるパラメーターを含む有効な CLR メソッドシグネチャ。|  
 |`ulCodeRVA`||0|  
-|`dwImplFlags`|Set `miCil` and `miManaged`.|Set `miNative` and `miUnmanaged`.|  
+|`dwImplFlags`|`miCil` と `miManaged`を設定します。|`miNative` と `miUnmanaged`を設定します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

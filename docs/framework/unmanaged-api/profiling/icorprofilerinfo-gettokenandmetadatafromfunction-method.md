@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438742"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction メソッド
-Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.  
+指定された関数のトークンに対して使用できるメタデータトークンとメタデータインターフェイスインスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,18 +37,18 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in] The ID of the function for which to get the metadata token and metadata interface.  
+ からメタデータトークンとメタデータインターフェイスを取得する対象の関数の ID。  
   
  `riid`  
- [in] The reference ID of the metadata interface to get the instance of.  
+ からインスタンスを取得するメタデータインターフェイスの参照 ID。  
   
  `ppImport`  
- [out] A pointer to the address of the metadata interface instance that can be used against the token for the specified function.  
+ 入出力指定された関数のトークンに対して使用できるメタデータインターフェイスインスタンスのアドレスへのポインター。  
   
  `pToken`  
- [out] A pointer to the metadata token for the specified function.  
+ 入出力指定された関数のメタデータトークンへのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -57,6 +57,6 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

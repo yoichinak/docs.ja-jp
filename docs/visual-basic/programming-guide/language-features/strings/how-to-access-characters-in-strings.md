@@ -13,19 +13,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352456"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>方法 : Visual Basic で文字列の文字にアクセスする
-This example demonstrates how to use the <xref:System.String.Chars%2A> property to access the character at the specified location in a string.  
+この例では、<xref:System.String.Chars%2A> プロパティを使用して、文字列内の指定した位置にある文字にアクセスする方法を示します。  
   
 ## <a name="example"></a>例  
- Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string. You can think of a string as an array of characters (`Char` instances); you can retrieve a particular character by referencing the index of that character through the <xref:System.String.Chars%2A> property.  
+ 文字列内の文字に関するデータと文字列内の文字の位置を取得すると便利な場合があります。 文字列は、文字の配列 (`Char` インスタンス) と考えることができます。特定の文字を取得するには、<xref:System.String.Chars%2A> プロパティを使用してその文字のインデックスを参照します。  
   
  [!code-vb[VbVbalrStrings#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#49)]  
   
- The `index` parameter of the <xref:System.String.Chars%2A> property is zero-based.  
+ <xref:System.String.Chars%2A> プロパティの `index` パラメーターは0から始まります。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
- The <xref:System.String.Chars%2A> property returns the character at the specified position. However, some Unicode characters can be represented by more than one character. For more information on how to work with Unicode characters, see [How to: Convert a String to an Array of Characters](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).  
+ <xref:System.String.Chars%2A> プロパティは、指定された位置にある文字を返します。 ただし、一部の Unicode 文字は複数の文字で表すことができます。 Unicode 文字の使用方法の詳細については、「[方法: 文字列を文字配列に変換](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)する」を参照してください。  
   
- The <xref:System.String.Chars%2A> property throws an <xref:System.IndexOutOfRangeException> exception if the `index` parameter is greater than or equal to the length of the string, or if it is less than zero  
+ `index` パラメーターが文字列の長さ以上である場合、または0未満の場合、<xref:System.String.Chars%2A> プロパティは <xref:System.IndexOutOfRangeException> の例外をスローします。  
   
 ## <a name="see-also"></a>関連項目
 

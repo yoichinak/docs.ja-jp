@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431374"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>IMetaDataImport2::GetGenericParamConstraintProps メソッド
-Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.  
+指定された制約トークンによって表されるジェネリックパラメーター制約に関連付けられているメタデータを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,24 +37,24 @@ HRESULT GetGenericParamConstraintProps (
   
 ## <a name="parameters"></a>パラメーター  
  `gpc`  
- [in] The token to the generic parameter constraint for which to return the metadata.  
+ からメタデータを返す対象のジェネリックパラメーター制約へのトークン。  
   
  `ptGenericParam`  
- [out] A pointer to the token that represents the generic parameter that is constrained.  
+ 入出力制約されているジェネリックパラメーターを表すトークンへのポインター。  
   
  `ptkConstraintType`  
- [out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.  
+ 入出力`ptGenericParam`の制約を表す TypeDef、TypeRef、または TypeSpec トークンへのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

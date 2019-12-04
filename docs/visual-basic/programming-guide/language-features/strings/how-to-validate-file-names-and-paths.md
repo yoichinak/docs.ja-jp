@@ -1,5 +1,5 @@
 ---
-title: 'How to: Validate File Names and Paths'
+title: '方法: ファイル名とパスを検証する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file names [Visual Basic], validating
@@ -15,12 +15,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344363"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>方法 : Visual Basic でファイル名とパスを検証する
-This example returns a `Boolean` value that indicates whether a string represents a file name or path. The validation checks if the name contains characters that are not allowed by the file system.  
+この例では、文字列がファイル名またはパスを表すかどうかを示す `Boolean` 値を返します。 検証では、ファイルシステムで許可されていない文字が名前に含まれているかどうかを確認します。  
   
 ## <a name="example"></a>例  
  [!code-vb[VbVbcnRegEx#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#4)]  
   
- This example does not check if the name has incorrectly placed colons, or directories with no name, or if the length of the name exceeds the system-defined maximum length. It also does not check if the application has permission to access the file-system resource with the specified name.  
+ この例では、名前のコロンが誤って配置されているか、名前のないディレクトリがあるか、または名前の長さがシステムで定義されている最大長を超えていないかを確認しません。 また、指定した名前のファイルシステムリソースにアクセスするためのアクセス許可がアプリケーションにあるかどうかも確認しません。  
   
 ## <a name="see-also"></a>関連項目
 

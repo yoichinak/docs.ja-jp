@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442509"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>INotifySink2::OnSyncCallOut メソッド
-Gets invoked when a call is out.  
+呼び出しがタイムアウトしたときに呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,19 +38,19 @@ HRESULT OnSyncCallOut
   
 ## <a name="parameters"></a>パラメーター  
  `in_CallID`  
- [in] ID of the call that is out. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ から発信する呼び出しの ID。「 [CALL_ID 構造](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)」を参照してください。  
   
  `out_ppBuffer`  
- [out] Call buffer.  
+ 入出力呼び出しバッファー。  
   
  `out_pBufferSize`  
- [out] Size of the call buffer, in bytes.  
+ 入出力呼び出しバッファーのサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
 ## <a name="see-also"></a>関連項目
 

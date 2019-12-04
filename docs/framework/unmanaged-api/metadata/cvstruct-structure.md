@@ -39,17 +39,17 @@ typedef struct {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|Major|Major version build number.|  
-|マイナー|Minor version build number.|  
-|Sub|Sub-build number.|  
-|Build|Build number.|  
+|メジャー|メジャーバージョンのビルド番号。|  
+|マイナー|マイナーバージョンのビルド番号。|  
+|サブ|サブビルド番号。|  
+|Build|ビルド番号。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

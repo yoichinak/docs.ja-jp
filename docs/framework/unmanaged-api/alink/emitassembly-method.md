@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446525"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly メソッド
-Creates the assembly. Call this method after all other files are closed except for the assembly file. Do not call this method when producing unbound modules.  
+アセンブリを作成します。 アセンブリファイルを除く他のすべてのファイルが閉じられた後に、このメソッドを呼び出します。 バインドされていないモジュールを生成する場合は、このメソッドを呼び出さないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,13 +35,13 @@ HRESULT EmitAssembly(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of the assembly.  
+ アセンブリの ID。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 

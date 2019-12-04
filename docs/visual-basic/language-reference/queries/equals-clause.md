@@ -14,10 +14,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335393"
 ---
 # <a name="equals-clause-visual-basic"></a>Equals 句 (Visual Basic)
-Compares keys from collections being joined.  
+結合されているコレクションのキーを比較します。  
   
-## <a name="remarks"></a>Remarks  
- The `Equals` keyword is used in the following contexts:  
+## <a name="remarks"></a>コメント  
+ `Equals` キーワードは、次のコンテキストで使用されます。  
   
  [Group Join 句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   

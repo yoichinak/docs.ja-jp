@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440784"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 関数
-Notifies the profiler that control is being passed to a function.  
+コントロールが関数に渡されていることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,23 +32,23 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>パラメーター  
  `functionOrRemappedID`  
- [in] The identifier of the function to which control is passed.  
+ からコントロールが渡される関数の識別子。  
   
-## <a name="remarks"></a>Remarks  
- The `FunctionEnter3` callback function notifies the profiler as functions are being called, but does not support argument inspection. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
+## <a name="remarks"></a>コメント  
+ `FunctionEnter3` のコールバック関数は、関数が呼び出されていることをプロファイラーに通知しますが、引数の検査はサポートしていません。 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)を使用して、この関数の実装を登録します。  
   
- The `FunctionEnter3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
+ `FunctionEnter3` 関数はコールバックです。実装する必要があります。 実装では、`__declspec(naked)` のストレージクラス属性を使用する必要があります。  
   
- The execution engine does not save any registers before calling this function.  
+ この関数を呼び出す前に、実行エンジンはレジスタを保存しません。  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- 入力時には、浮動小数点単位 (FPU) に含まれるすべてのレジスタを含め、使用するすべてのレジスタを保存する必要があります。  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- 終了時に、呼び出し元によってプッシュされたすべてのパラメーターをポップして、スタックを復元する必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorProf.idl  
+ **ヘッダー:** Corprof.idl  
   
  **ライブラリ:** CorGuids.lib  
   

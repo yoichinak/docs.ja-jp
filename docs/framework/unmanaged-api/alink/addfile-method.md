@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446687"
 ---
 # <a name="addfile-method"></a>AddFile メソッド
-Adds files to the assembly. Can also be used to create unbound modules.  
+アセンブリにファイルを追加します。 は、バインドされていないモジュールを作成するためにも使用できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,27 +39,27 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- Unique ID of the assembly to be augmented.  
+ 補強するアセンブリの一意の ID。  
   
  `pszFilename`  
- Fully qualified name of file to be added.  
+ 追加するファイルの完全修飾名。  
   
  `dwFlags`  
- COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ `ffContainsNoMetaData` や `ffWriteable`などの COM + FileDef フラグ。 `dwFlags` は、の[メソッド](../metadata/imetadataassemblyemit-definefile-method.md)に渡されます。  
   
  `pEmitter`  
- [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.  
+ 必要に応じて、メタデータを出力するために使用される[IMetaDataEmit インターフェイス](../metadata/imetadataemit-interface.md)インターフェイス。  
   
  `pFileToken`  
- Pointer to where the unique ID of the added file will be stored.  
+ 追加されたファイルの一意の ID が格納される場所へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h.  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

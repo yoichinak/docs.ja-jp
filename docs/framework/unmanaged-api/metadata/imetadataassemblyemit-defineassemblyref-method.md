@@ -42,43 +42,43 @@ HRESULT DefineAssemblyRef (
   
 ## <a name="parameters"></a>パラメーター  
  `pbPublicKeyOrToken`  
- [in] The public key of the publisher of the referenced assembly. The helper function [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) can be used to get the hash of the public key to pass as this parameter.  
+ から参照アセンブリの発行元の公開キー。 ヘルパー関数[StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)を使用して、このパラメーターとして渡す公開キーのハッシュを取得できます。  
   
  `cbPublicKeyOrToken`  
- [in] The size in bytes of `pbPublicKeyOrToken`.  
+ から`pbPublicKeyOrToken`のサイズ (バイト単位)。  
   
  `szName`  
- [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
+ からユーザーが判読できる、アセンブリのテキスト名。 この値は、1024文字を超えないようにする必要があります。  
   
  `pMetaData`  
- [in] An ASSEMBLYMETADATA instance that contains the version, platform and locale information of the referenced assembly.  
+ から参照されたアセンブリのバージョン、プラットフォーム、およびロケール情報を格納している ASSEMBLYMETADATA インスタンス。  
   
  `pbHashValue`  
- [in] The hash data associated with the referenced assembly. 省略可能です。  
+ から参照アセンブリに関連付けられているハッシュデータ。 省略可。  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ から`pbHashValue`のサイズ (バイト単位)。  
   
  `dwAssemblyRefFlags`  
- [in] A bitwise combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that influence the behavior of the execution engine.  
+ から実行エンジンの動作に影響を与える[Corassemblyflags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)値のビットごとの組み合わせ。  
   
  `pmdar`  
- [out] A pointer to the returned `AssemblyRef` metadata token.  
+ 入出力返された `AssemblyRef` メタデータトークンへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- One `AssemblyRef` metadata structure must be defined for each assembly that this assembly references.  
+## <a name="remarks"></a>コメント  
+ このアセンブリが参照するアセンブリごとに1つの `AssemblyRef` メタデータ構造を定義する必要があります。  
   
- At run time, the details of a referenced assembly are passed to the assembly resolver with an indication that they represent the "as built" information. The assembly resolver then applies policy.  
+ 実行時には、参照されたアセンブリの詳細がアセンブリリゾルバーに渡され、"ビルド済み" の情報を表すことが示されます。 次に、アセンブリリゾルバーがポリシーを適用します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

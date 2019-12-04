@@ -41,36 +41,36 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mr`  
- [in] The MemberRef token to return associated metadata for.  
+ から関連付けられたメタデータを返す MemberRef トークン。  
   
  `ptk`  
- [out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.  
+ 入出力メンバーを宣言するクラスを表す TypeDef または TypeRef または TypeSpec トークン、またはメンバーを宣言するモジュールクラスを表す ModuleRef トークン、またはメンバーを表す MethodDef。  
   
  `szMember`  
- [out] A string buffer for the member's name.  
+ 入出力メンバーの名前の文字列バッファー。  
   
  `cchMember`  
- [in] The requested size in wide characters of `szMember`.  
+ から`szMember`のワイド文字で要求されたサイズ。  
   
  `pchMember`  
- [out] The returned size in wide characters of `szMember`.  
+ 入出力`szMember`のワイド文字で返されたサイズ。  
   
  `ppvSibBlob`  
- [out] A pointer to the binary metadata signature for the member.  
+ 入出力メンバーのバイナリメタデータシグネチャへのポインター。  
   
  `pbSig`  
- [out] The size in bytes of `ppvSigBlob`.  
+ 入出力`ppvSigBlob`のサイズ (バイト単位)。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

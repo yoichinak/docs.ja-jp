@@ -12,8 +12,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352229"
 ---
-# <a name="see-visual-basic"></a>\<see> (Visual Basic)
-Specifies a link to another member.  
+# <a name="see-visual-basic"></a>\<> (Visual Basic) を参照してください。
+別のメンバーへのリンクを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -25,13 +25,13 @@ Specifies a link to another member.
  `member`  
  現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。 コンパイラは、指定されたコード要素が存在するかどうかを確認し、`member` を出力 XML 内の要素名に渡します。 `member` は、二重引用符 (" ") で囲む必要があります。  
   
-## <a name="remarks"></a>Remarks  
- Use the `<see>` tag to specify a link from within text. Use [\<seealso>](../../../visual-basic/language-reference/xmldoc/seealso.md) to indicate text that you might want to appear in a "See Also" section.  
+## <a name="remarks"></a>コメント  
+ `<see>` タグを使用して、テキスト内からリンクを指定します。 [\<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md)を使用して、[参照] セクションに表示するテキストを指定します。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- This example uses the `<see>` tag in the `UpdateRecord` remarks section to refer to the `DoesRecordExist` method.  
+ この例では、`UpdateRecord` 解説セクションの `<see>` タグを使用して、`DoesRecordExist` メソッドを参照します。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

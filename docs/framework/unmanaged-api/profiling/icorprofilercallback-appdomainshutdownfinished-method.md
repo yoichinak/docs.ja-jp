@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445201"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished メソッド
-Notifies the profiler that an application domain has been unloaded from a process.  
+アプリケーションドメインがプロセスからアンロードされたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,17 +35,17 @@ HRESULT AppDomainShutdownFinished(
   
 ## <a name="parameters"></a>パラメーター  
  `appDomainId`  
- [in] Identifies the domain in which the application's assemblies are stored.  
+ からアプリケーションのアセンブリが格納されているドメインを識別します。  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the application domain was unloaded successfully.  
+ からアプリケーションドメインが正常にアンロードされたかどうかを示す HRESULT。  
   
-## <a name="remarks"></a>Remarks  
- The value of `appDomainId` is not valid for an information request after the [ICorProfilerCallback::AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) method returns.  
+## <a name="remarks"></a>コメント  
+ `appDomainId` の値は、 [ICorProfilerCallback:: AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md)メソッドが返された後の情報要求に対して無効です。  
   
- Some parts of unloading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the application domain has succeeded.  
+ アプリケーションドメインのアンロードの一部は、`AppDomainCreationFinished` コールバックの後も続行される場合があります。 `hrStatus` のエラー HRESULT はエラーを示します。 ただし、`hrStatus` の成功 HRESULT は、アプリケーションドメインのアンロードの最初の部分が成功したことのみを示します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

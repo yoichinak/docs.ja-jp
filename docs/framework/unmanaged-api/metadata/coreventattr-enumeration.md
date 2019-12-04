@@ -41,17 +41,17 @@ typedef enum CorEventAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`evSpecialName`|Specifies that the event is special, and that its name describes how.|  
-|`evReservedMask`|Reserved for internal use by the common language runtime.|  
-|`evRTSpecialName`|Specifies that the common language runtime should check the encoding of the event name.|  
+|`evSpecialName`|イベントが特別であり、その名前がどのように記述するかを指定します。|  
+|`evReservedMask`|共通言語ランタイムによる内部使用のために予約されています。|  
+|`evRTSpecialName`|共通言語ランタイムがイベント名のエンコーディングを確認する必要があることを指定します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

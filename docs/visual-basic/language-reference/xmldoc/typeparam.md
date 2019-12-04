@@ -12,8 +12,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352186"
 ---
-# <a name="typeparam-visual-basic"></a>\<typeparam> (Visual Basic)
-Defines a type parameter name and description.  
+# <a name="typeparam-visual-basic"></a>\<typeparam > (Visual Basic)
+型パラメーターの名前と説明を定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,18 +26,18 @@ Defines a type parameter name and description.
  型パラメーターの名前。 名前は二重引用符 (" ") で囲みます。  
   
  `description`  
- A description of the type parameter.  
+ 型パラメーターの説明。  
   
-## <a name="remarks"></a>Remarks  
- Use the `<typeparam>` tag in the comment for a generic type or generic member declaration to describe one of the type parameters.  
+## <a name="remarks"></a>コメント  
+ ジェネリック型またはジェネリックメンバー宣言のコメントに `<typeparam>` タグを使用して、型パラメーターの1つを記述します。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- This example uses the `<typeparam>` tag to describe the `id` parameter.  
+ この例では、`<typeparam>` タグを使用して、`id` パラメーターを記述します。  
   
  [!code-vb[VbVbcnXmlDocComments#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#8)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

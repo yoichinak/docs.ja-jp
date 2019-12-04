@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347914"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
-Causes the compiler not to automatically reference the standard libraries.  
+コンパイラが標準ライブラリを自動的に参照しないようにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -22,17 +22,17 @@ Causes the compiler not to automatically reference the standard libraries.
 -nostdlib  
 ```  
   
-## <a name="remarks"></a>Remarks  
- The `-nostdlib` option removes the automatic reference to the System.dll assembly and prevents the compiler from reading the Vbc.rsp file. The Vbc.rsp file, which is located in the same directory as the Vbc.exe file, references the commonly used .NET Framework assemblies and imports the `System` and `Microsoft.VisualBasic` namespaces.  
+## <a name="remarks"></a>コメント  
+ `-nostdlib` オプションを指定すると、System .dll アセンブリへの自動参照が削除され、コンパイラによって Vbc.exe ファイルが読み取られなくなります。 Vbc.exe ファイルと同じディレクトリにある Vbc.exe ファイルは、一般的に使用される .NET Framework アセンブリを参照し、`System` と `Microsoft.VisualBasic` 名前空間をインポートします。  
   
 > [!NOTE]
-> The Mscorlib.dll and Microsoft.VisualBasic.dll assemblies are always referenced.  
+> Mscorlib.dll および Microsoft の .dll アセンブリは常に参照されます。  
   
 > [!NOTE]
-> The `-nostdlib` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> `-nostdlib` オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
   
 ## <a name="example"></a>例  
- The following code compiles `T2.vb` without referencing the standard libraries. You must set the `_MYTYPE` conditional-compilation constant to the string "Empty" to remove the `My` object.  
+ 次のコードは、標準ライブラリを参照せずに `T2.vb` をコンパイルします。 `My` オブジェクトを削除するには、`_MYTYPE` 条件付きコンパイル定数を文字列 "Empty" に設定する必要があります。  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  

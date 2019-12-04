@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446472"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes メソッド
-Retrieves assembly-level custom attributes.  
+アセンブリレベルのカスタム属性を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,27 +39,27 @@ HRESULT EnumCustomAttributes(
   
 ## <a name="parameters"></a>パラメーター  
  `hEnum`  
- Handle of enumerator.  
+ 列挙子のハンドル。  
   
  `tkType`  
- Type of attributes to be enumerated. Use `mdTokenNill` for all attributes.  
+ 列挙する属性の型。 すべての属性には `mdTokenNill` を使用します。  
   
  `rCustomValues`  
- Receives custom attributes tokens.  
+ カスタム属性トークンを受け取ります。  
   
  `cMax`  
- Specifies size of `rCustomValues` array.  
+ `rCustomValues` 配列のサイズを指定します。  
   
  `pcCustomValues`  
- Optionally receives count of token values.  
+ 必要に応じて、トークンの値の数を受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink インターフェイス](ialink-interface.md)
 - [IALink2 インターフェイス](ialink2-interface.md)

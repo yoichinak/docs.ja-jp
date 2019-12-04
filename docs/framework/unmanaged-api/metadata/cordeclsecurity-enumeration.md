@@ -62,14 +62,14 @@ typedef enum CorDeclSecurity {
 |`dclActionNil`|予約済み。|  
 |`dclRequest`|予約済み。|  
 |`dclDemand`|呼び出し履歴の上位にあるすべての呼び出し元には、現在のアクセス許可オブジェクトで指定されたアクセス許可が付与されている必要があります。|  
-|`dclAssert`|The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource|  
-|`dclDeny`|The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.|  
+|`dclAssert`|スタック内の上位の呼び出し元にリソースへのアクセス許可が付与されていない場合でも、呼び出し元のコードは、現在のアクセス許可オブジェクトによって識別されるリソースにアクセスできます。|  
+|`dclDeny`|現在のアクセス許可オブジェクトによって指定されたリソースにアクセスする権限は、呼び出し元に対してアクセス許可が付与されている場合でも、拒否されます。|  
 |`dclPermitOnly`|他のリソースにアクセスできるアクセス許可がコードに付与されていても、このアクセス許可オブジェクトで指定されたリソースにしかアクセスできません。|  
-|`dclLinktimeCheck`|The immediate caller is required to have been granted the specified permission for a given period of time.|  
-|`dclInheritanceCheck`|The derived class inheriting another class or overriding a method is required to have been granted the specified permission.|  
-|`dclRequestMinimum`|The caller can request for the minimum permissions required for code to run. この操作は、アセンブリのスコープ内でのみ使用できます。|  
-|`dclRequestOptional`|The caller can request for additional permissions that are optional (not required to run). この要求は、個別に要求されていない、他のすべてのアクセス許可を暗黙的に拒否します。 この操作は、アセンブリのスコープ内でのみ使用できます。|  
-|`dclRequestRefuse`|The caller's request for permissions that might be misused will not be granted. この操作は、アセンブリのスコープ内でのみ使用できます。|  
+|`dclLinktimeCheck`|直前の呼び出し元には、指定された期間の指定したアクセス許可が付与されている必要があります。|  
+|`dclInheritanceCheck`|別のクラスを継承する派生クラス、またはメソッドをオーバーライドする派生クラスには、指定されたアクセス許可が付与されている必要があります。|  
+|`dclRequestMinimum`|呼び出し元は、コードを実行するために必要な最小限のアクセス許可を要求できます。 この操作は、アセンブリのスコープ内でのみ使用できます。|  
+|`dclRequestOptional`|呼び出し元は、オプションである (実行に必須ではない) 追加のアクセス許可を要求できます。 この要求は、個別に要求されていない、他のすべてのアクセス許可を暗黙的に拒否します。 この操作は、アセンブリのスコープ内でのみ使用できます。|  
+|`dclRequestRefuse`|誤用される可能性のあるアクセス許可に対する呼び出し元の要求は付与されません。 この操作は、アセンブリのスコープ内でのみ使用できます。|  
 |`dclPrejitGrant`|予約済み。|  
 |`dclPrejitDenied`|予約済み。|  
 |`dclNonCasDemand`|予約済み。|  
@@ -80,13 +80,13 @@ typedef enum CorDeclSecurity {
 |`dclDemandChoice`|予約済み。|  
 |`dclMaximumValue`|予約済み。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

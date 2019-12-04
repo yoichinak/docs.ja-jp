@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346628"
 ---
-# <a name="projection-operations-visual-basic"></a>Projection Operations (Visual Basic)
+# <a name="projection-operations-visual-basic"></a>プロジェクション操作 (Visual Basic)
 
 射影とは、オブジェクトを、必要なプロパティだけで構成された別の形式に変換する操作のことをいいます。 射影を使用することにより、個々のオブジェクトから構築された新しい型を作成できます。 プロパティを投影し、それに対して数値演算関数を実行できます。 また、元のオブジェクトを変更せずに射影することもできます。
 
@@ -17,7 +17,7 @@ ms.locfileid: "74346628"
 
 ## <a name="methods"></a>メソッド
 
-|メソッド名|説明|Visual Basic Query Expression Syntax|説明|
+|メソッド名|説明|Visual Basic クエリ式の構文|詳細|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |[選択]|変換関数に基づいて値を射影します。|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|
 |SelectMany|変換関数に基づいて値のシーケンスを射影し、それを 1 つのシーケンスに平坦化します。|複数の `From` 句を使用|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|
@@ -52,7 +52,7 @@ MsgBox(sb.ToString())
 
 ### <a name="selectmany"></a>SelectMany
 
-The following example uses multiple `From` clauses to project each word from each string in a list of strings.
+次の例では、複数の `From` 句を使用して、文字列のリスト内の各文字列の各単語を射影します。
 
 ```vb
 Dim phrases = New List(Of String) From {"an apple a day", "the quick brown fox"}
@@ -175,12 +175,12 @@ Sub SelectVsSelectMany()
 End Sub
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Select 句](../../../../visual-basic/language-reference/queries/select-clause.md)
 - [方法 : 結合を使用したデータの結合](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
-- [How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [方法: 複数のソースからオブジェクトコレクションにデータを設定する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
 - [方法 : 特定の型での LINQ クエリ結果の取得](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
-- [How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [方法: グループを使用してファイルを複数のファイルに分割する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

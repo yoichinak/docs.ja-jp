@@ -9,14 +9,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347781"
 ---
-# <a name="linq-and-reflection-visual-basic"></a>LINQ and Reflection (Visual Basic)
+# <a name="linq-and-reflection-visual-basic"></a>LINQ とリフレクション (Visual Basic)
 .NET Framework クラス ライブラリのリフレクション API を使用すると、.NET アセンブリ内のメタデータを調べ、そのアセンブリ内にある型、型メンバー、パラメーターなどのコレクションを作成できます。 これらのコレクションは、ジェネリック `IEnumerable` インターフェイスをサポートするため、LINQ を使用して照会できます。  
   
- このセクションでは、以下のトピックについて説明します。  
+ このセクションでは、次のトピックについて説明します。  
   
- [How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
+ [方法: リフレクションを使用してアセンブリのメタデータを照会する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
  リフレクションと共に LINQ を使用する方法を紹介します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

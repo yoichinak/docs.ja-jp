@@ -17,9 +17,9 @@ ms.locfileid: "74448826"
 # <a name="ui-automation-control-types"></a>UI オートメーション コントロール型
 
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
 
-This section contains information about support for control types in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].
+ここでは、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]でのコントロール型のサポートについて説明します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -63,10 +63,10 @@ This section contains information about support for control types in [!INCLUDE[T
 - [UI オートメーションによる TreeItem コントロール型のサポート](ui-automation-support-for-the-treeitem-control-type.md)
 - [UI オートメーションによる Window コントロール型のサポート](ui-automation-support-for-the-window-control-type.md)
 
-## <a name="reference"></a>辞書／辞典／その他
+## <a name="reference"></a>参照
 
 <xref:System.Windows.Automation.ControlType>
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [UI オートメーション コントロール パターン](ui-automation-control-patterns.md)

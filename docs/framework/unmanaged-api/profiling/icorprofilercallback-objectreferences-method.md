@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445891"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences メソッド
-Notifies the profiler about objects in memory that are being referenced by the specified object.  
+指定したオブジェクトによって参照されているメモリ内のオブジェクトに関する情報をプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,27 +37,27 @@ HRESULT ObjectReferences(
   
 ## <a name="parameters"></a>パラメーター  
  `objectId`  
- [in] The ID of the object that is referencing objects.  
+ からオブジェクトを参照しているオブジェクトの ID。  
   
  `classId`  
- [in] The ID of the class that the specified object is an instance of.  
+ から指定したオブジェクトがインスタンスであるクラスの ID。  
   
  `cObjectRefs`  
- [in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).  
+ から指定したオブジェクトによって参照されるオブジェクトの数 (つまり、`objectRefIds` 配列内の要素の数)。  
   
  `objectRefIds`  
- [in] An array of IDs of objects that are being referenced by `objectId`.  
+ から`objectId`によって参照されているオブジェクトの Id の配列。  
   
-## <a name="remarks"></a>Remarks  
- The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed. If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.  
+## <a name="remarks"></a>コメント  
+ `ObjectReferences` メソッドは、ガベージコレクションが完了した後にヒープ内の残りのオブジェクトに対して呼び出されます。 プロファイラーがこのコールバックからエラーを返すと、プロファイリングサービスは、次のガベージコレクションまでこのコールバックの呼び出しを中止します。  
   
- The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime. The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.  
+ `ObjectReferences` コールバックは、 [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)コールバックと組み合わせて使用して、ランタイムの完全なオブジェクト参照グラフを作成できます。 共通言語ランタイム (CLR) では、各オブジェクト参照が `ObjectReferences` メソッドによって1回だけ報告されるようにします。  
   
- The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects. Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.  
+ `ObjectReferences` によって返されるオブジェクト Id は、コールバック自体では無効です。これは、ガベージコレクションがオブジェクトを移動する途中である可能性があるためです。 そのため、`ObjectReferences` の呼び出し中に、プロファイラーがオブジェクトの検査を試行することはできません。 [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)が呼び出されると、ガベージコレクションが完了し、検査を安全に行うことができます。  
   
- A null `ClassId` indicates that `objectId` has a type that is unloading.  
+ Null `ClassId` は、`objectId` にアンロード中の型があることを示します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

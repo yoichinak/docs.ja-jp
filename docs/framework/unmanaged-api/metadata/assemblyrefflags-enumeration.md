@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444228"
 ---
 # <a name="assemblyrefflags-enumeration"></a>AssemblyRefFlags 列挙型
-Contains values that describe features of an assembly reference.  
+アセンブリ参照の機能を記述する値を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,12 +36,12 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`arfFullOriginator`|Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.|  
+|`arfFullOriginator`|アセンブリ参照に、アセンブリの発行者に関する完全なハッシュされていない情報が含まれることを指定します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

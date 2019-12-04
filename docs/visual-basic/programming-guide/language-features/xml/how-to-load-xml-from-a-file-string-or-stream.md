@@ -14,35 +14,35 @@ ms.locfileid: "74330960"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>方法 : ファイル、文字列、またはストリームから XML を読み込む (Visual Basic)
 
-You can create [XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) and populate them with the contents from an external source such as a file, a string, or a stream by using several methods. These methods are shown in the following examples.
+[XML リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)を作成し、複数のメソッドを使用して、ファイル、文字列、ストリームなどの外部ソースからの内容を読み込むことができます。 これらのメソッドを次の例に示します。
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-load-xml-from-a-file"></a>To load XML from a file
+## <a name="to-load-xml-from-a-file"></a>ファイルから XML を読み込むには
 
-To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a file, use the `Load` method. This method can take a file path, text stream, or XML stream as input.
+ファイルの <xref:System.Xml.Linq.XElement> や <xref:System.Xml.Linq.XDocument> オブジェクトなどの XML リテラルにデータを設定するには、`Load` メソッドを使用します。 このメソッドは、ファイルパス、テキストストリーム、または XML ストリームを入力として受け取ることができます。
 
-The following code example shows the use of the <xref:System.Xml.Linq.XDocument.Load%28System.String%29> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from a text file.
+次のコード例では、<xref:System.Xml.Linq.XDocument.Load%28System.String%29> メソッドを使用して、テキストファイルの XML で <xref:System.Xml.Linq.XDocument> オブジェクトを設定する方法を示します。
 
 [!code-vb[VbXMLSamples#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#43)]
 
-## <a name="to-load-xml-from-a-string"></a>To load XML from a string
+## <a name="to-load-xml-from-a-string"></a>文字列から XML を読み込むには
 
-To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a string, you can use the `Parse` method.
+<xref:System.Xml.Linq.XElement> や <xref:System.Xml.Linq.XDocument> オブジェクトなどの XML リテラルを文字列から設定するには、`Parse` メソッドを使用します。
 
-The following code example shows the use of the <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from a string.
+次のコード例では、<xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> メソッドを使用して、文字列の XML で <xref:System.Xml.Linq.XDocument> オブジェクトを設定する方法を示します。
 
 [!code-vb[VbXMLSamples#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#47)]
 
-## <a name="to-load-xml-from-a-stream"></a>To load XML from a stream
+## <a name="to-load-xml-from-a-stream"></a>ストリームから XML を読み込むには
 
-To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a stream, you can use the `Load` method or the <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> method.
+ストリームから <xref:System.Xml.Linq.XElement> や <xref:System.Xml.Linq.XDocument> オブジェクトなどの XML リテラルにデータを設定するには、`Load` メソッドまたは <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> メソッドを使用します。
 
-The following code example shows the use of the <xref:System.Xml.Linq.XNode.ReadFrom%2A> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from an XML stream.
+次のコード例では、<xref:System.Xml.Linq.XNode.ReadFrom%2A> メソッドを使用して、XML ストリームの XML で <xref:System.Xml.Linq.XDocument> オブジェクトを設定する方法を示します。
 
 [!code-vb[VbXMLSamples#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#46)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>

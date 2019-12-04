@@ -55,9 +55,9 @@ Class Class1
 End Class
 ```
 
-この例では、`AllowMultiple` が `true` に設定されているので、`MultiUseAttr` を繰り返し適用できます。 示されているどちらの形式でも、複数の属性を適用できます。
+この例では、`MultiUseAttr` が `AllowMultiple` に設定されているので、`true` を繰り返し適用できます。 示されているどちらの形式でも、複数の属性を適用できます。
 
-`Inherited` を `false` に設定すると、属性化されたクラスから派生するクラスは属性を継承しません。 (例:
+`Inherited` を `false` に設定すると、属性化されたクラスから派生するクラスは属性を継承しません。 例 :
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, Inherited:=False)>
@@ -77,7 +77,7 @@ End Class
 
 この例では、`Attr1` は継承によって `DClass` に適用されません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 `AttributeUsage` 属性は、1 回だけ使用できる属性です。同じクラスに複数回適用することはできません。 `AttributeUsage` は <xref:System.AttributeUsageAttribute> の別名です。
 
@@ -85,7 +85,7 @@ End Class
 
 ## <a name="example"></a>例
 
-次の例を見ると、`AttributeUsage` 属性に対する `Inherited` 引数と `AllowMultiple` 引数の効果、およびクラスに適用されているカスタム属性の列挙方法がわかります。
+次の例を見ると、`Inherited` 属性に対する `AllowMultiple` 引数と `AttributeUsage` 引数の効果、およびクラスに適用されているカスタム属性の列挙方法がわかります。
 
 ```vb
 ' Create some custom attributes:
@@ -136,7 +136,7 @@ Public Class TestAttributeUsage
 End Class
 ```
 
-## <a name="sample-output"></a>出力例
+## <a name="sample-output"></a>サンプル出力
 
 ```console
 Attributes on Base Class:
@@ -148,7 +148,7 @@ A3
 A2
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>

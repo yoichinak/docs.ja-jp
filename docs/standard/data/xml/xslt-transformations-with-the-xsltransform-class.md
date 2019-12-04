@@ -20,7 +20,7 @@ ms.locfileid: "74347899"
 > [!NOTE]
 > .NET Framework 2.0 では <xref:System.Xml.Xsl.XslTransform> クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳細については、「[XslCompiledTransform クラスの使用](using-the-xslcompiledtransform-class.md)」と「[XslTransform クラスからの移行](migrating-from-the-xsltransform-class.md)」を参照してください。
 
-XSLT の目的は、たとえば、XML を Web サイトで使われる HTML に変換したり、XML ドキュメントをアプリケーションが必要とするフィールドのみが含まれたドキュメントに変換するなど、ソース XML ドキュメントの内容を形式や構造の異なる別のドキュメントに変換することです。 この変換処理の仕様は、W3C (World Wide Web Consortium) [勧告 XSLT バージョン 1.0](https://www.w3.org/TR/1999/REC-xslt-19991116) で規定されています。 .NET Framework では、<xref:System.Xml.Xsl> 名前空間にある <xref:System.Xml.Xsl.XslTransform> クラスが、この仕様の機能を実装する XSLT プロセッサです。 W3C 勧告『XSLT Version 1.0』から実装された機能の他に、「[XslTransform からの出力](outputs-from-an-xsltransform.md)」に記載されている機能がいくつかあります。 .NET Framework の変換アーキテクチャを次の図に示します。
+XSLT の目的は、たとえば、XML を Web サイトで使われる HTML に変換したり、XML ドキュメントをアプリケーションが必要とするフィールドのみが含まれたドキュメントに変換するなど、ソース XML ドキュメントの内容を形式や構造の異なる別のドキュメントに変換することです。 この変換処理の仕様は、W3C (World Wide Web Consortium) [勧告 XSLT バージョン 1.0](https://www.w3.org/TR/1999/REC-xslt-19991116) で規定されています。 .NET Framework では、<xref:System.Xml.Xsl.XslTransform> 名前空間にある <xref:System.Xml.Xsl> クラスが、この仕様の機能を実装する XSLT プロセッサです。 W3C 勧告『XSLT Version 1.0』から実装された機能の他に、「[XslTransform からの出力](outputs-from-an-xsltransform.md)」に記載されている機能がいくつかあります。 .NET Framework の変換アーキテクチャを次の図に示します。
 
 ## <a name="overview"></a>概要
 
@@ -30,7 +30,7 @@ XSLT 勧告では、XPath (XML Path Language) を使って XML ドキュメン�
 
 <xref:System.Xml.Xsl.XslTransform> と XPath を使用するときによく使われるクラスと、それぞれの機能を次の表に示します。
 
-|クラスまたはインターフェイス|機能|
+|クラスまたはインターフェイス|関数|
 |------------------------|--------------|
 |<xref:System.Xml.XPath.XPathNavigator>|ストア内で移動するためのカーソル スタイルのモデルを提供し、XPath クエリをサポートする API です。 元になるストアを編集する機能は提供しません。 編集には <xref:System.Xml.XmlDocument> クラスを使用します。|
 |<xref:System.Xml.XPath.IXPathNavigable>|`CreateNavigator` に <xref:System.Xml.XPath.XPathNavigator> メソッドを提供するストア用のインターフェイスです。|
@@ -94,7 +94,7 @@ public class Sample
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [XslTransform クラスによる XSLT プロセッサの実装](xsltransform-class-implements-the-xslt-processor.md)

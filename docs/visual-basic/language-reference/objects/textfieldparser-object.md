@@ -22,14 +22,14 @@ ms.locfileid: "74350316"
 Public Class TextFieldParser  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `TextFieldParser` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>」をご覧ください。  
   
- For more information, see [Reading from Files](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).  
+ 詳細については、「[ファイルからの読み取り](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)」を参照してください。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **名前空間:** <xref:Microsoft.VisualBasic.FileIO>  
   
  **クラス:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)

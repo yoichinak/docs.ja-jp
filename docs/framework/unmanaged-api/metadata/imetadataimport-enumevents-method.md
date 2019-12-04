@@ -39,33 +39,33 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [入力、出力]列挙子へのポインター。  
   
  `td`  
- [in] The TypeDef token whose event definitions are to be enumerated.  
+ からイベント定義を列挙する TypeDef トークン。  
   
  `rEvents`  
- [out] The array of returned events.  
+ 入出力返されたイベントの配列。  
   
  `cMax`  
  [in] `rEvents` 配列の最大サイズ。  
   
  `pcEvents`  
- [out] The actual number of events returned in `rEvents`.  
+ 入出力`rEvents`で返されるイベントの実際の数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` returned successfully.|  
-|`S_FALSE`|There are no events to enumerate. In that case, `pcEvents` is zero.|  
+|`S_OK`|`EnumEvents` が正常に返されました。|  
+|`S_FALSE`|列挙するイベントがありません。 この場合、`pcEvents` は0になります。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

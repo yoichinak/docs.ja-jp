@@ -9,10 +9,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336014"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>How to: Modify an Office Open XML Document (Visual Basic)
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>方法: Office Open XML ドキュメントを変更する (Visual Basic)
 このトピックでは、Office Open XML ドキュメントを開き、それを変更して保存する例について説明します。  
   
- For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).  
+ Office Open XML の詳細については、「 [Eric ホワイトのブログ](http://www.ericwhite.com)」を参照してください。  
   
 ## <a name="example"></a>例  
  この例では、ドキュメント内の最初の段落要素を検索します。 次に、段落からテキストを取得し、段落内のテキスト ランをすべて削除します。 また、大文字に変換された最初の段落のテキストから構成される新しいテキスト ランを作成します。 最後に、変更した XML を Open XML パッケージにシリアル化して閉じます。  
@@ -137,12 +137,12 @@ End Module
   
  このプログラムを実行した後で `SampleDoc.docx` を開くと、このプログラムによってドキュメント内の最初の段落が大文字に変換されたかどうかを確認できます。  
   
- When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:  
+ 「ソースとなる[Office OPEN Xml ドキュメントを作成する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」で説明されているサンプルの open xml ドキュメントを使用して実行すると、この例では次の出力が生成されます。  
   
 ```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [高度なクエリ手法 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

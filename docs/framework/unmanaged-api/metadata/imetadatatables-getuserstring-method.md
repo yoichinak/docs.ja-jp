@@ -24,7 +24,7 @@ ms.locfileid: "74431435"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>IMetaDataTables::GetUserString メソッド
 
-Gets the hard-coded string at the specified index in the string column in the current scope.
+現在のスコープ内の文字列列にある、指定したインデックス位置にあるハードコーディングされた文字列を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,21 +39,21 @@ HRESULT GetUserString (
 ## <a name="parameters"></a>パラメーター
 
 `ixUserString`\
-[in] The index value from which the hard-coded string will be retrieved.
+からハードコーディングされた文字列の取得元のインデックス値。
 
 `pcbData`\
-[out] A pointer to the size of `ppData`.
+入出力`ppData`のサイズへのポインター。
 
 `ppData`\
-[out] A pointer to a pointer to the returned string.
+入出力返された文字列へのポインターへのポインター。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
 
-**Header:** Cor.h
+**ヘッダー:** Cor
 
-**Library:** Used as a resource in MsCorEE.dll
+**ライブラリ:** Mscoree.dll のリソースとして使用されます。
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 

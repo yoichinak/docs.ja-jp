@@ -28,7 +28,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351257"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop ステートメント (Visual Basic)
-Repeats a block of statements while a `Boolean` condition is `True` or until the condition becomes `True`.  
+`Boolean` 条件が `True` 場合、または条件が `True`になるまで、ステートメントのブロックを繰り返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,61 +52,61 @@ Loop { While | Until } condition
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`Do`|必須です。 Starts the definition of the `Do` loop.|  
-|`While`|`Until` を使用しない場合に、必ず指定します。 Repeat the loop until `condition` is `False`.|  
-|`Until`|`While` を使用しない場合に、必ず指定します。 Repeat the loop until `condition` is `True`.|  
-|`condition`|省略可能です。 `Boolean` expression. If `condition` is `Nothing`, Visual Basic treats it as `False`.|  
-|`statements`|省略可能です。 One or more statements that are repeated while, or until, `condition` is `True`.|  
-|`Continue Do`|省略可能です。 Transfers control to the next iteration of the `Do` loop.|  
-|`Exit Do`|省略可能です。 Transfers control out of the `Do` loop.|  
-|`Loop`|必須です。 Terminates the definition of the `Do` loop.|  
+|`Do`|必須。 `Do` ループの定義を開始します。|  
+|`While`|`Until` を使用しない場合に、必ず指定します。 `condition` が `False`になるまでループを繰り返します。|  
+|`Until`|`While` を使用しない場合に、必ず指定します。 `condition` が `True`になるまでループを繰り返します。|  
+|`condition`|省略可。 `Boolean` 式です。 `condition` が `Nothing`場合、Visual Basic はそれを `False`として扱います。|  
+|`statements`|省略可。 1つまたは複数のステートメントが繰り返されている間、または `condition` が `True`されます。|  
+|`Continue Do`|省略可。 `Do` ループの次の反復処理に制御を転送します。|  
+|`Exit Do`|省略可。 `Do` ループから制御を転送します。|  
+|`Loop`|必須。 `Do` ループの定義を終了します。|  
   
-## <a name="remarks"></a>Remarks  
- Use a `Do...Loop` structure when you want to repeat a set of statements an indefinite number of times, until a condition is satisfied. If you want to repeat the statements a set number of times, the [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) is usually a better choice.  
+## <a name="remarks"></a>コメント  
+ 条件が満たされるまで、一連のステートメントを無限に繰り返す必要がある場合は、`Do...Loop` 構造体を使用します。 ステートメントを設定された回数繰り返し実行する場合は、.. [.次のステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)は通常、より適しています。  
   
- You can use either `While` or `Until` to specify `condition`, but not both.  
+ `While` または `Until` のいずれかを使用して `condition`を指定できますが、両方を指定することはできません。  
   
- You can test `condition` only one time, at either the start or the end of the loop. If you test `condition` at the start of the loop (in the `Do` statement), the loop might not run even one time. If you test at the end of the loop (in the `Loop` statement), the loop always runs at least one time.  
+ ループの開始時または終了時に、`condition` テストできるのは1回だけです。 ループの開始時に (`Do` ステートメントで) `condition` をテストした場合、ループは一度も実行されない可能性があります。 ループの最後 (`Loop` ステートメント) でテストした場合、ループは常に少なくとも1回は実行されます。  
   
- The condition usually results from a comparison of two values, but it can be any expression that evaluates to a [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) value (`True` or `False`). This includes values of other data types, such as numeric types, that have been converted to `Boolean`.  
+ 通常、この条件は2つの値の比較によって得られますが、[ブールデータ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)の値 (`True` または `False`) に評価される任意の式を指定できます。 これには、`Boolean`に変換されたその他のデータ型 (数値型など) の値が含まれます。  
   
- You can nest `Do` loops by putting one loop within another. You can also nest different kinds of control structures within each other. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ ループを入れ子にするには、別のループ内にループを挿入し `Do` ます。 また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、「[入れ子になったコントロール構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。  
   
 > [!NOTE]
-> The `Do...Loop` structure gives you more flexibility than the [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) because it enables you to decide whether to end the loop when `condition` stops being `True` or when it first becomes `True`. It also enables you to test `condition` at either the start or the end of the loop.  
+> `Do...Loop` 構造では、より高い柔軟性が得[られます。End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)を使用すると、`condition` が `True` 停止したとき、または最初に `True`になったときにループを終了するかどうかを決定できます。 また、ループの開始時または終了時に `condition` をテストすることもできます。  
   
-## <a name="exit-do"></a>Exit Do  
- The [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) statement can provide an alternative way to exit a `Do…Loop`. `Exit Do` transfers control immediately to the statement that follows the `Loop` statement.  
+## <a name="exit-do"></a>終了  
+ [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md)ステートメントを使用すると、別の方法で `Do…Loop`を終了できます。 `Exit Do` は、`Loop` ステートメントの直後のステートメントに制御を直ちに転送します。  
   
- `Exit Do` is often used after some condition is evaluated, for example in an `If...Then...Else` structure. You might want to exit a loop if you detect a condition that makes it unnecessary or impossible to continue iterating, such as an erroneous value or a termination request. One use of `Exit Do` is to test for a condition that could cause an *endless loop*, which is a loop that could run a large or even infinite number of times. You can use `Exit Do` to escape the loop.  
+ `Exit Do` は、`If...Then...Else` 構造などの条件を評価した後に頻繁に使用されます。 誤った値や終了要求など、反復処理を続行することが不要または不可能な条件を検出した場合は、ループを終了することができます。 `Exit Do` の使用方法の1つは、*無限ループ*の原因となる可能性のある条件をテストすることです。これは、大規模または無限の回数実行されるループです。 `Exit Do` を使用すると、ループをエスケープできます。  
   
- You can include any number of `Exit Do` statements anywhere in a `Do…Loop`.  
+ `Do…Loop`内の任意の場所に、任意の数の `Exit Do` ステートメントを含めることができます。  
   
- When used within nested `Do` loops, `Exit Do` transfers control out of the innermost loop and into the next higher level of nesting.  
+ 入れ子になった `Do` ループ内で使用された場合、`Exit Do` は最も内側のループから次の上位レベルの入れ子に制御を転送します。  
   
 ## <a name="example"></a>例  
- In the following example, the statements in the loop continue to run until the `index` variable is greater than 10. The `Until` clause is at the end of the loop.  
+ 次の例では、ループ内のステートメントは、`index` 変数が10を超えるまで実行を続けます。 `Until` 句がループの最後にあります。  
   
  [!code-vb[VbVbalrStatements#131](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#131)]  
   
 ## <a name="example"></a>例  
- The following example uses a `While` clause instead of an `Until` clause, and `condition` is tested at the start of the loop instead of at the end.  
+ 次の例では、`Until` 句ではなく `While` 句を使用します。 `condition` は最後ではなくループの開始時にテストされます。  
   
  [!code-vb[VbVbalrStatements#132](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#132)]  
   
 ## <a name="example"></a>例  
- In the following example, `condition` stops the loop when the `index` variable is greater than 100. The `If` statement in the loop, however, causes the `Exit Do` statement to stop the loop when the index variable is greater than 10.  
+ 次の例では、`index` 変数が100より大きい場合、`condition` はループを停止します。 ただし、ループ内の `If` ステートメントでは、インデックス変数が10より大きい場合、`Exit Do` ステートメントによってループが停止されます。  
   
  [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>例  
- The following example reads all lines in a text file. The <xref:System.IO.File.OpenText%2A> method opens the file and returns a <xref:System.IO.StreamReader> that reads the characters. In the `Do...Loop` condition, the <xref:System.IO.StreamReader.Peek%2A> method of the `StreamReader` determines whether there are any additional characters.  
+ 次の例では、テキストファイル内のすべての行を読み取ります。 <xref:System.IO.File.OpenText%2A> メソッドは、ファイルを開き、文字を読み取る <xref:System.IO.StreamReader> を返します。 `Do...Loop` 条件では、`StreamReader` の <xref:System.IO.StreamReader.Peek%2A> メソッドによって、追加の文字があるかどうかが判断されます。  
   
  [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ループ構造](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)

@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349552"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType 演算子 (Visual Basic)
-Returns a <xref:System.Type> object for the specified type. The <xref:System.Type> object provides information about the type such as its properties, methods, and events.  
+指定された型の <xref:System.Type> オブジェクトを返します。 <xref:System.Type> オブジェクトは、プロパティ、メソッド、イベントなどの型に関する情報を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -27,33 +27,33 @@ GetType(typename)
   
 |パラメーター|説明|  
 |---|---|  
-|`typename`|The name of the type for which you desire information.|  
+|`typename`|情報を必要とする型の名前。|  
   
-## <a name="remarks"></a>Remarks  
- The `GetType` operator returns the <xref:System.Type> object for the specified `typename`. You can pass the name of any defined type in `typename`. 次に例を示します。  
+## <a name="remarks"></a>コメント  
+ `GetType` 演算子は、指定された `typename`の <xref:System.Type> オブジェクトを返します。 `typename`には、定義されている型の名前を渡すことができます。 これには、次の内容が含まれます。  
   
-- Any Visual Basic data type, such as `Boolean` or `Date`.  
+- `Boolean` や `Date`などの Visual Basic のデータ型。  
   
-- Any .NET Framework class, structure, module, or interface, such as <xref:System.ArgumentException?displayProperty=nameWithType> or <xref:System.Double?displayProperty=nameWithType>.  
+- .NET Framework クラス、構造体、モジュール、またはインターフェイス (<xref:System.ArgumentException?displayProperty=nameWithType> や <xref:System.Double?displayProperty=nameWithType>など)。  
   
-- Any class, structure, module, or interface defined by your application.  
+- アプリケーションで定義されている任意のクラス、構造体、モジュール、またはインターフェイス。  
   
-- Any array defined by your application.  
+- アプリケーションで定義されている任意の配列。  
   
-- Any delegate defined by your application.  
+- アプリケーションで定義されている任意のデリゲート。  
   
-- Any enumeration defined by Visual Basic, the .NET Framework, or your application.  
+- Visual Basic、.NET Framework、またはアプリケーションによって定義された任意の列挙体。  
   
- If you want to get the type object of an object variable, use the <xref:System.Type.GetType%2A?displayProperty=nameWithType> method.  
+ オブジェクト変数の型オブジェクトを取得する場合は、<xref:System.Type.GetType%2A?displayProperty=nameWithType> メソッドを使用します。  
   
- The `GetType` operator can be useful in the following circumstances:  
+ `GetType` 演算子は、次のような場合に役立ちます。  
   
-- You must access the metadata for a type at run time. The <xref:System.Type> object supplies metadata such as type members and deployment information. You need this, for example, to reflect over an assembly. 詳細については、「<xref:System.Reflection?displayProperty=nameWithType>」を参照してください。  
+- 実行時には、型のメタデータにアクセスする必要があります。 <xref:System.Type> オブジェクトは、型のメンバーや配置情報などのメタデータを提供します。 これは、たとえば、アセンブリを反映するために必要です。 詳細については、「 <xref:System.Reflection?displayProperty=nameWithType>」を参照してください。  
   
-- You want to compare two object references to see if they refer to instances of the same type. If they do, `GetType` returns references to the same <xref:System.Type> object.  
+- 2つのオブジェクト参照を比較して、同じ型のインスタンスを参照しているかどうかを確認します。 存在する場合、`GetType` は同じ <xref:System.Type> オブジェクトへの参照を返します。  
   
 ## <a name="example"></a>例  
- The following examples show the `GetType` operator in use.  
+ 次の例は、使用されている `GetType` 演算子を示しています。  
   
  [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  
   

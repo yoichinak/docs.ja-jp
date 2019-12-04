@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448347"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument メソッド
-Finds a document. The document language, vendor, and type are optional.  
+ドキュメントを検索します。 ドキュメントの言語、ベンダ、および種類はオプションです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,26 +38,26 @@ HRESULT GetDocument (
   
 ## <a name="parameters"></a>パラメーター  
  `url`  
- [in] The URL that identifies the document.  
+ からドキュメントを識別する URL。  
   
  `language`  
- [in] The document language. このパラメーターは省略できます。  
+ からドキュメントの言語。 このパラメーターはオプションです。  
   
  `languageVendor`  
- [in] The identity of the vendor for the document language. このパラメーターは省略できます。  
+ からドキュメント言語のベンダの id。 このパラメーターはオプションです。  
   
  `documentType`  
- [in] The type of the document. このパラメーターは省略できます。  
+ からドキュメントの種類。 このパラメーターはオプションです。  
   
  `pRetVal`  
- [out] A pointer to the returned interface.  
+ 入出力返されたインターフェイスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

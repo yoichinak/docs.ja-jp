@@ -22,23 +22,23 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432227"
 ---
 # <a name="imaptoken-interface"></a>IMapToken インターフェイス
-Provides mapping capabilities between assemblies.  
+アセンブリ間のマッピング機能を提供します。  
   
 > [!NOTE]
-> The `IMapToken` interface must be implemented by the client.  
+> `IMapToken` インターフェイスは、クライアントによって実装される必要があります。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Map メソッド](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Maps a relationship between two assemblies using metadata signatures.|  
+|[Map メソッド](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|メタデータシグネチャを使用して、2つのアセンブリ間のリレーションシップをマップします。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,23 +15,23 @@ ms.locfileid: "74448776"
 # <a name="ui-automation-security-overview"></a>UI オートメーションのセキュリティの概要
 
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
 
-This overview describes the security model for [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in Windows Vista.
+この概要では、Windows Vista の [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] のセキュリティモデルについて説明します。
 
 <a name="User_Account_Control"></a>
 
 ## <a name="user-account-control"></a>ユーザー アカウント制御
 
-Security is a major focus of Windows Vista and among the innovations is the ability for users to run as standard (non-administrator) users without necessarily being blocked from running applications and services that require higher privileges.
+セキュリティは Windows Vista の主な焦点であり、イノベーションの中では、より高い特権を必要とするアプリケーションやサービスの実行がブロックされることなく、ユーザーが標準 (管理者以外の) ユーザーとして実行できるようにする機能があります。
 
-In Windows Vista, most applications are supplied with either a standard or an administrative token. アプリケーションが管理アプリケーションとして識別できない場合は、既定で標準のアプリケーションとして起動されます。 Before an application identified as administrative can be launched, Windows Vista prompts the user for consent to run the application as elevated. ユーザーがローカル管理者グループのメンバーである場合でも、同意を求めるメッセージは既定で表示されます。これは、管理者の資格情報を必要とするアプリケーションまたはシステム コンポーネントが実行の許可を要求するまで、管理者は標準ユーザーとして実行するためです。
+Windows Vista では、ほとんどのアプリケーションに標準トークンまたは管理トークンが付属しています。 アプリケーションが管理アプリケーションとして識別できない場合は、既定で標準のアプリケーションとして起動されます。 管理対象として識別されたアプリケーションを起動できるようになる前に、Windows Vista では、昇格されたアプリケーションの実行に同意するようにユーザーに求めます。 ユーザーがローカル管理者グループのメンバーである場合でも、同意を求めるメッセージは既定で表示されます。これは、管理者の資格情報を必要とするアプリケーションまたはシステム コンポーネントが実行の許可を要求するまで、管理者は標準ユーザーとして実行するためです。
 
 <a name="Tasks_Requiring_Higher_Privileges"></a>
 
 ## <a name="tasks-requiring-higher-privileges"></a>より高い特権が必要なタスク
 
-When a user attempts to perform a task that requires administrative privileges, Windows Vista presents a dialog box asking the user for consent to continue. このダイアログ ボックスは、悪意のあるソフトウェアがユーザー入力をシミュレートできないように、プロセス間通信から保護されます。 同様に、デスクトップのログオン画面は、通常は他のプロセスからはアクセスできません。
+ユーザーが管理者特権を必要とするタスクを実行しようとすると、Windows Vista では、ユーザーに続行の同意を求めるダイアログボックスが表示されます。 このダイアログ ボックスは、悪意のあるソフトウェアがユーザー入力をシミュレートできないように、プロセス間通信から保護されます。 同様に、デスクトップのログオン画面は、通常は他のプロセスからはアクセスできません。
 
 UI オートメーション クライアントは、他のプロセスと通信する必要があります。プロセスによっては、より高い特権レベルで実行している可能性があります。 クライアントにも、通常は他のプロセスによって表示できないシステム ダイアログ ボックスへのアクセスが必要になる可能性があります。 そのため、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] クライアントはシステムによって信頼されている必要があり、特別な特権で実行する必要があります。
 
@@ -41,7 +41,7 @@ UI オートメーション クライアントは、他のプロセスと通信�
 
 ## <a name="manifest-files"></a>マニフェスト ファイル
 
-To gain access to the protected system UI, applications must be built with a manifest file that includes the `uiAccess` attribute in the `requestedExecutionLevel` tag, as follows:
+保護されたシステム UI にアクセスするには、次のように、`requestedExecutionLevel` タグに `uiAccess` 属性を含むマニフェストファイルを使用してアプリケーションをビルドする必要があります。
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -57,4 +57,4 @@ To gain access to the protected system UI, applications must be built with a man
 
 このコードの `level` 属性の値は一例にすぎません。
 
-`uiAccess` is "false" by default; that is, if the attribute is omitted, or if there is no manifest for the assembly, the application will not be able to gain access to protected UI.
+既定では、`uiAccess` は "false" です。つまり、属性を省略した場合、またはアセンブリのマニフェストが存在しない場合、アプリケーションは保護された UI にアクセスできなくなります。

@@ -9,22 +9,22 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353138"
 ---
-# <a name="performance-linq-to-xml-visual-basic"></a>Performance (LINQ to XML) (Visual Basic)
+# <a name="performance-linq-to-xml-visual-basic"></a>パフォーマンス (LINQ to XML) (Visual Basic)
 ここでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] のパフォーマンス、特に関数型構築とクエリのパフォーマンスについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Performance of Chained Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-of-chained-queries-linq-to-xml.md)  
+ [連結クエリのパフォーマンス (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-of-chained-queries-linq-to-xml.md)  
  連結された [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリのパフォーマンス情報を提供します。  
   
- [Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)  
+ [アトミック化された XName および XNamespace オブジェクト (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)  
  <xref:System.Xml.Linq.XName> オブジェクトと <xref:System.Xml.Linq.XNamespace> オブジェクトの分解処理に関するパフォーマンス情報を提供します。  
   
- [Pre-Atomization of XName Objects (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md)  
+ [XName オブジェクト (LINQ to XML) の事前アトミック化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md)  
  <xref:System.Xml.Linq.XName> オブジェクトと <xref:System.Xml.Linq.XNamespace> オブジェクトを事前に分解する方法を説明します。 これにより、パフォーマンスを大幅に向上させることができます。  
   
- [Statically Compiled Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
+ [静的にコンパイルされたクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
  XPath 式エバリュエーターで実行される必要がある解析や処理と比較した場合の、静的にコンパイルされたクエリに関するパフォーマンス情報を提供します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [プログラミングガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

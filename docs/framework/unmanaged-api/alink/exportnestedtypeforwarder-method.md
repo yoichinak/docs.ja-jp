@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438417"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder メソッド
-Adds a type forwarder for a nested type to the type table of the given assembly.  
+入れ子になった型の型フォワーダーを、指定されたアセンブリの型テーブルに追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,31 +40,31 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- ID of the assembly to export from.  
+ エクスポート元のアセンブリの ID。  
   
  `FileToken`  
- File token or assembly ID of file that defines the type.  
+ 型を定義するファイルのファイルトークンまたはアセンブリ ID。  
   
  `TypeToken`  
- Token for the type.  
+ 型のトークン。  
   
  `ParentType`  
- Token of parent type.  
+ 親の種類のトークン。  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ エクスポートする完全修飾型名。  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`.  
+ `tdPublic` や `tdNested`などのフラグを `ComType` します。  
   
  `pType`  
- Receives token of export type. This is necessary only for emitting nested types.  
+ エクスポートの種類のトークンを受け取ります。 これは、入れ子にされた型を出力する場合にのみ必要です。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -17,9 +17,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346480"
 ---
-# <a name="parameter-list-visual-basic"></a>パラメーターの一覧 (Visual Basic)
+# <a name="parameter-list-visual-basic"></a>パラメーター リスト (Visual Basic)
 
-Specifies the parameters a procedure expects when it is called. Multiple parameters are separated by commas. The following is the syntax for one parameter.
+プロシージャが呼び出されるときに予期されるパラメーターを指定します。 複数のパラメーターはコンマで区切られます。 1つのパラメーターの構文を次に示します。
 
 ## <a name="syntax"></a>構文
 
@@ -31,71 +31,71 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 ## <a name="parts"></a>指定項目
 
 `attributelist`  
-省略可能です。 List of attributes that apply to this parameter. You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").
+省略可。 このパラメーターに適用される属性の一覧。 [属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)は山かっこ ("`<`" と "`>`") で囲む必要があります。
 
 `Optional`  
-省略可能です。 Specifies that this parameter is not required when the procedure is called.
+省略可。 プロシージャを呼び出すときに、このパラメーターが必要ないことを指定します。
 
 `ByVal`  
-省略可能です。 Specifies that the procedure cannot replace or reassign the variable element underlying the corresponding argument in the calling code.
+省略可。 プロシージャが、呼び出し元のコードの対応する引数の基になる変数要素を置換または再割り当てできないことを指定します。
 
 `ByRef`  
-省略可能です。 Specifies that the procedure can modify the underlying variable element in the calling code the same way the calling code itself can.
+省略可。 プロシージャが、呼び出し元のコード自体と同じように、呼び出し元のコード内の基になる変数要素を変更できることを指定します。
 
 `ParamArray`  
-省略可能です。 Specifies that the last parameter in the parameter list is an optional array of elements of the specified data type. This lets the calling code pass an arbitrary number of arguments to the procedure.
+省略可。 パラメーターリストの最後のパラメーターが、指定されたデータ型の要素のオプションの配列であることを指定します。 これにより、呼び出し元のコードは、プロシージャに任意の数の引数を渡すことができます。
 
 `parametername`  
-必須です。 Name of the local variable representing the parameter.
+必須。 パラメーターを表すローカル変数の名前。
 
 `parametertype`  
-Required if `Option Strict` is `On`. Data type of the local variable representing the parameter.
+`Option Strict` が `On`の場合は必須です。 パラメーターを表すローカル変数のデータ型。
 
 `defaultvalue`  
-Required for `Optional` parameters. Any constant or constant expression that evaluates to the data type of the parameter. If the type is `Object`, or a class, interface, array, or structure, the default value can only be `Nothing`.
+`Optional` パラメーターに必要です。 パラメーターのデータ型に評価される定数または定数式。 型が `Object`、クラス、インターフェイス、配列、または構造体の場合、既定値は `Nothing`のみ可能です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Parameters are surrounded by parentheses and separated by commas. A parameter can be declared with any data type. If you do not specify `parametertype`, it defaults to `Object`.
+パラメーターは、かっこで囲まれ、コンマで区切られます。 パラメーターは任意のデータ型で宣言できます。 `parametertype`を指定しない場合、既定で `Object`が使用されます。
 
-When the calling code calls the procedure, it passes an *argument* to each required parameter. For more information, see [Differences Between Parameters and Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).
+呼び出し元のコードがプロシージャを呼び出すと、必要な各パラメーターに*引数*が渡されます。 詳細については、「[パラメーターと引数の違い](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md)」を参照してください。
 
-The argument the calling code passes to each parameter is a pointer to an underlying element in the calling code. If this element is *nonvariable* (a constant, literal, enumeration, or expression), it is impossible for any code to change it. If it is a *variable* element (a declared variable, field, property, array element, or structure element), the calling code can change it. For more information, see [Differences Between Modifiable and Nonmodifiable Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).
+呼び出し元のコードが各パラメーターに渡す引数は、呼び出し元のコード内の基になる要素へのポインターです。 この要素が*不変*(定数、リテラル、列挙型、または式) の場合、どのコードでも変更することはできません。 *変数*要素 (宣言された変数、フィールド、プロパティ、配列要素、または構造体要素) の場合は、呼び出し元のコードで変更できます。 詳細については、「変更可能な[引数と変更できない引数の違い](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md)」を参照してください。
 
-If a variable element is passed `ByRef`, the procedure can change it as well. For more information, see [Differences Between Passing an Argument By Value and By Reference](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).
+変数要素が `ByRef`渡された場合は、プロシージャでも変更できます。 詳細については、「[引数を値で渡す方法と参照渡しの違い](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)」を参照してください。
 
 ## <a name="rules"></a>ルール
 
-- **Parentheses.** If you specify a parameter list, you must enclose it in parentheses. If there are no parameters, you can still use parentheses enclosing an empty list. This improves the readability of your code by clarifying that the element is a procedure.
+- **内側.** パラメーターリストを指定する場合は、かっこで囲む必要があります。 パラメーターがない場合でも、空のリストを囲むかっこを使用できます。 これにより、要素がプロシージャであることを明確にすることで、コードの読みやすさが向上します。
 
-- **Optional Parameters.** If you use the `Optional` modifier on a parameter, all subsequent parameters in the list must also be optional and be declared by using the `Optional` modifier.
+- **省略可能なパラメーター。** パラメーターで `Optional` 修飾子を使用する場合は、リスト内の後続のすべてのパラメーターも省略可能であり、`Optional` 修飾子を使用して宣言されている必要があります。
 
-     Every optional parameter declaration must supply the `defaultvalue` clause.
+     省略可能なすべてのパラメーター宣言では、`defaultvalue` 句を指定する必要があります。
 
-     For more information, see [Optional Parameters](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).
+     詳細については、「[省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)」を参照してください。
 
-- **Parameter Arrays.** You must specify `ByVal` for a `ParamArray` parameter.
+- **パラメーター配列。** `ParamArray` パラメーターには `ByVal` を指定する必要があります。
 
-     You cannot use both `Optional` and `ParamArray` in the same parameter list.
+     同じパラメーターリストで `Optional` と `ParamArray` の両方を使用することはできません。
 
-     For more information, see [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).
+     詳細については、「[パラメーター配列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)」を参照してください。
 
-- **Passing Mechanism.** The default mechanism for every argument is `ByVal`, which means the procedure cannot change the underlying variable element. However, if the element is a reference type, the procedure can modify the contents or members of the underlying object, even though it cannot replace or reassign the object itself.
+- **渡すメカニズム。** すべての引数の既定の機構は `ByVal`です。これは、プロシージャが基になる変数要素を変更できないことを意味します。 ただし、要素が参照型の場合、このプロシージャでは、オブジェクト自体を置き換えることも再割り当てできない場合でも、基になるオブジェクトの内容やメンバーを変更できます。
 
-- **Parameter Names.** If the parameter's data type is an array, follow `parametername` immediately by parentheses. For more information on parameter names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+- **パラメーター名。** パラメーターのデータ型が配列である場合は、`parametername` の直後にかっこを入力します。 パラメーター名の詳細については、「宣言された[要素名](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-The following example shows a `Function` procedure that defines two parameters.
+次の例は、2つのパラメーターを定義する `Function` プロシージャを示しています。
 
 [!code-vb[VbVbalrStatements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#2)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)

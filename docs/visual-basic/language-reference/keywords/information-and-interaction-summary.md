@@ -17,13 +17,13 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
   
 |操作|言語要素|  
 |------------|----------------------|  
-|他のプログラムの実行|<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>、 <xref:Microsoft.VisualBasic.Interaction.Shell%2A>|  
+|他のプログラムの実行|<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>, <xref:Microsoft.VisualBasic.Interaction.Shell%2A>|  
 |メソッドやプロパティの呼び出し|<xref:Microsoft.VisualBasic.Interaction.CallByName%2A>|  
 |コンピューターのビープ音|<xref:Microsoft.VisualBasic.Interaction.Beep%2A>|  
 |コマンド ライン文字列の提供|<xref:Microsoft.VisualBasic.Interaction.Command%2A>|  
-|COM オブジェクトの操作|<xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>、 <xref:Microsoft.VisualBasic.Interaction.GetObject%2A>|  
-|色情報の取得|<xref:Microsoft.VisualBasic.Information.QBColor%2A>、 <xref:Microsoft.VisualBasic.Information.RGB%2A>|  
-|ダイアログ ボックスの制御|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>、 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
+|COM オブジェクトの操作|<xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>, <xref:Microsoft.VisualBasic.Interaction.GetObject%2A>|  
+|色情報の取得|<xref:Microsoft.VisualBasic.Information.QBColor%2A>, <xref:Microsoft.VisualBasic.Information.RGB%2A>|  
+|ダイアログ ボックスの制御|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
   
 ## <a name="see-also"></a>関連項目
 

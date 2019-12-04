@@ -12,8 +12,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352280"
 ---
-# <a name="paramref-visual-basic"></a>\<paramref> (Visual Basic)
-Formats a word as a parameter.  
+# <a name="paramref-visual-basic"></a>\<paramref > (Visual Basic)
+単語をパラメーターとして書式設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -25,13 +25,13 @@ Formats a word as a parameter.
  `name`  
  参照されるパラメーターの名前です。 名前は二重引用符 (" ") で囲みます。  
   
-## <a name="remarks"></a>Remarks  
- The `<paramref>` tag gives you a way to indicate that a word is a parameter. The XML file can be processed to format this parameter in some distinct way.  
+## <a name="remarks"></a>コメント  
+ `<paramref>` タグを使用すると、単語がパラメーターであることを示すことができます。 XML ファイルを処理して、このパラメーターを別の方法で書式設定することができます。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- This example uses the `<paramref>` tag to refer to the `id` parameter.  
+ この例では、`<paramref>` タグを使用して、`id` パラメーターを参照します。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

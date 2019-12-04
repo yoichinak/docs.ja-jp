@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449685"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation メソッド
-Provides version information about the common language runtime (CLR) that is being profiled.  
+プロファイリングされている共通言語ランタイム (CLR) に関するバージョン情報を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,36 +43,36 @@ HRESULT GetRuntimeInformation(
   
 ## <a name="parameters"></a>パラメーター  
  `pClrInstanceId`  
- [out] The representative ID of a running CLR instance in a process. This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.  
+ 入出力プロセス内で実行されている CLR インスタンスの代表 ID。 これは、event tracing for Windows (ETW) のスタートアップイベントで報告される `ClrInstanceID` と同じです。  
   
  `pRuntimeType`  
- [out] The runtime type. This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.  
+ 入出力ランタイム型。 このパラメーターは、CLR のデスクトップバージョンの `COR_PRF_DESKTOP_CLR`、または Silverlight で使用される CLR のコアバージョンの `COR_PRF_CORE_CLR` を返します。  
   
  `pMajorVersion`  
- [out] The major version number of the CLR.  
+ 入出力CLR のメジャーバージョン番号。  
   
  `pMinorVersion`  
- [out] The minor version number of the CLR.  
+ 入出力CLR のマイナーバージョン番号。  
   
  `pBuildVersion`  
- [out] The build version number of the CLR.  
+ 入出力CLR のビルドバージョン番号。  
   
  `pQFEVersion`  
- [out] The version number of the CLR that is associated with a software update.  
+ 入出力ソフトウェア更新プログラムに関連付けられている CLR のバージョン番号。  
   
  `cchVersionString`  
- [in] The length, in characters, of the buffer that `szVersionString` points to.  
+ から`szVersionString` が指すバッファーの長さ (文字数)。  
   
  `pcchVersionString`  
- [out] The length, in characters, of `szVersionString`.  
+ 入出力`szVersionString`の長さ (文字数)。  
   
  `szVersionString`  
- [out] The CLR version string.  
+ 入出力CLR のバージョン文字列。  
   
-## <a name="remarks"></a>Remarks  
- You may pass null for any parameter. However, `pcchVersionString` cannot be null unless `szVersionString` is also null.  
+## <a name="remarks"></a>コメント  
+ 任意のパラメーターに null を渡すことができます。 ただし、`szVersionString` が null の場合を除き、`pcchVersionString` を null にすることはできません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -81,7 +81,7 @@ HRESULT GetRuntimeInformation(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo3 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

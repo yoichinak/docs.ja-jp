@@ -16,64 +16,64 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350327"
 ---
 # <a name="myresources-object"></a>My.Resources オブジェクト
-Provides properties and classes for accessing the application's resources.  
+アプリケーションのリソースにアクセスするためのプロパティとクラスを提供します。  
   
-## <a name="remarks"></a>Remarks  
- The `My.Resources` object provides access to the application's resources and lets you dynamically retrieve resources for your application. For more information, see [Managing Application Resources (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
+## <a name="remarks"></a>コメント  
+ `My.Resources` オブジェクトは、アプリケーションのリソースへのアクセスを提供し、アプリケーションのリソースを動的に取得できるようにします。 詳細については、「[アプリケーションリソースの管理 (.net)](/visualstudio/ide/managing-application-resources-dotnet)」を参照してください。  
   
- The `My.Resources` object exposes only global resources. It does not provide access to resource files associated with forms. You must access the form resources from the form.  
+ `My.Resources` オブジェクトは、グローバルリソースのみを公開します。 フォームに関連付けられたリソースファイルへのアクセスは提供されません。 フォームリソースには、フォームからアクセスする必要があります。  
   
- You can access the application's culture-specific resource files from the `My.Resources` object. By default, the `My.Resources` object looks up resources from the resource file that matches the culture in the <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> property. However, you can override this behavior and specify a particular culture to use for the resources. 詳細については、「[デスクトップ アプリケーションのリソース](../../../framework/resources/index.md)」を参照してください。  
+ `My.Resources` オブジェクトから、アプリケーションのカルチャ固有のリソースファイルにアクセスできます。 既定では、`My.Resources` オブジェクトは、<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> プロパティのカルチャに一致するリソースファイルからリソースを検索します。 ただし、この動作をオーバーライドして、リソースに使用する特定のカルチャを指定することができます。 詳細については、「[デスクトップ アプリケーションのリソース](../../../framework/resources/index.md)」を参照してください。  
   
-## <a name="properties"></a>プロパティ  
- The properties of the `My.Resources` object provide read-only access to your application's resources. To add or remove resources, use the **Project Designer**. You can access resources added through the **Project Designer** by using `My.Resources.`*resourceName*.  
+## <a name="properties"></a>[プロパティ]  
+ `My.Resources` オブジェクトのプロパティは、アプリケーションのリソースへの読み取り専用アクセスを提供します。 リソースを追加または削除するには、**プロジェクトデザイナー**を使用します。 **プロジェクトデザイナー**によって追加されたリソースにアクセスするには *、`My.Resources.`リソースを使用します*。  
   
- You can also add or remove resource files by selecting your project in **Solution Explorer** and clicking **Add New Item** or **Add Existing Item** from the **Project** menu. You can access resources added in this manner by using `My.Resources.`*resourceFileName*`.`*resourceName*.  
+ また、**ソリューションエクスプローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[新しい項目の追加]** または **[既存項目の追加]** をクリックして、リソースファイルを追加または削除することもできます。 この方法で追加されたリソースにアクセスするには、`My.Resources.`*Resourcefilename* *`.`を使用します*。  
   
- Each resource has a name, category, and value, and these resource settings determine how the property to access the resource appears in the `My.Resources` object. For resources added in the **Project Designer**:  
+ 各リソースには名前、カテゴリ、および値があり、これらのリソースの設定によって、リソースにアクセスするためのプロパティが `My.Resources` オブジェクトにどのように表示されるかが決まります。 **プロジェクトデザイナー**に追加されたリソースの場合:  
   
-- The name determines the name of the property,  
+- 名前によって、プロパティの名前が決まります。  
   
-- The resource data is the value of the property,  
+- リソースデータはプロパティの値です。  
   
-- The category determines the type of the property:  
+- カテゴリによって、プロパティの種類が決まります。  
   
-|カテゴリ|Property data type|  
+|カテゴリ|プロパティのデータ型|  
 |---|---|  
 |**文字列**|[String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
 |**イメージ**|<xref:System.Drawing.Bitmap>|  
 |**アイコン**|<xref:System.Drawing.Icon>|  
-|**オーディオ**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> The <xref:System.IO.UnmanagedMemoryStream> class derives from the <xref:System.IO.Stream> class, so it can be used with methods that take streams, such as the <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> method.|  
-|**ファイル**|-   [String](../../../visual-basic/language-reference/data-types/string-data-type.md) for text files.<br />-   <xref:System.Drawing.Bitmap> for image files.<br />-   <xref:System.Drawing.Icon> for icon files.<br />-   <xref:System.IO.UnmanagedMemoryStream> for sound files.|  
-|**その他**|Determined by the information in the designer's **Type** column.|  
+|**オーディオ**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> <xref:System.IO.UnmanagedMemoryStream> クラスは <xref:System.IO.Stream> クラスから派生するので、<xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> メソッドなどのストリームを受け取るメソッドで使用できます。|  
+|**ファイル**|テキストファイルの[文字列](../../../visual-basic/language-reference/data-types/string-data-type.md)を -   します。<br />イメージファイルの <xref:System.Drawing.Bitmap> を -   します。<br />アイコンファイルの <xref:System.Drawing.Icon> を -   します。<br />サウンドファイルの <xref:System.IO.UnmanagedMemoryStream> を -   します。|  
+|**その他**|デザイナーの**Type**列の情報によって決定されます。|  
   
 ## <a name="classes"></a>クラス  
- The `My.Resources` object exposes each resource file as a class with shared properties. The class name is the same as the name of the resource file. As described in the previous section, the resources in a resource file are exposed as properties in the class.  
+ `My.Resources` オブジェクトは、各リソースファイルを共有プロパティを持つクラスとして公開します。 クラス名は、リソースファイルの名前と同じです。 前のセクションで説明したように、リソースファイル内のリソースはクラスのプロパティとして公開されます。  
   
 ## <a name="example"></a>例  
- This example sets the title of a form to the string resource named `Form1Title` in the application resource file. For the example to work, the application must have a string named `Form1Title` in its resource file.  
+ この例では、フォームのタイトルを、アプリケーションリソースファイル内の `Form1Title` という名前の文字列リソースに設定します。 この例を使用するには、アプリケーションのリソースファイルに `Form1Title` という名前の文字列が必要です。  
   
  [!code-vb[VbVbalrMyResources#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#1)]  
   
 ## <a name="example"></a>例  
- This example sets the icon of the form to the icon named `Form1Icon` that is stored in the application's resource file. For the example to work, the application must have an icon named `Form1Icon` in its resource file.  
+ この例では、フォームのアイコンを、アプリケーションのリソースファイルに格納されている `Form1Icon` という名前のアイコンに設定します。 この例を使用するには、アプリケーションのリソースファイルに `Form1Icon` という名前のアイコンが必要です。  
   
  [!code-vb[VbVbalrMyResources#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#2)]  
   
 ## <a name="example"></a>例  
- This example sets the background image of a form to the image resource named `Form1Background`, which is in the application resource file. For this example to work, the application must have an image resource named `Form1Background` in its resource file.  
+ この例では、フォームの背景画像を、アプリケーションリソースファイル内の `Form1Background`という名前のイメージリソースに設定します。 この例を使用するには、アプリケーションのリソースファイルに `Form1Background` という名前のイメージリソースが必要です。  
   
  [!code-vb[VbVbalrMyResources#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>例  
- This example plays the sound that is stored as an audio resource named `Form1Greeting` in the application's resource file. For the example to work, the application must have an audio resource named `Form1Greeting` in its resource file. The `My.Computer.Audio.Play` method is available only for Windows Forms applications.  
+ この例では、アプリケーションのリソースファイルに `Form1Greeting` という名前のオーディオリソースとして格納されているサウンドを再生します。 この例を使用するには、アプリケーションのリソースファイルに `Form1Greeting` という名前のオーディオリソースが必要です。 `My.Computer.Audio.Play` メソッドは、Windows フォームアプリケーションに対してのみ使用できます。  
   
  [!code-vb[VbVbalrMyResources#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#4)]  
   
 ## <a name="example"></a>例  
- This example retrieves the French-culture version of a  string resource of the application. The resource is named `Message`. To change the culture that the `My.Resources` object uses, the example uses <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
+ この例では、アプリケーションの文字列リソースのフランス語カルチャバージョンを取得します。 リソースには `Message`という名前が付けられます。 `My.Resources` オブジェクトが使用するカルチャを変更するために、この例では <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>を使用します。  
   
- For this example to work, the application must have a string named `Message` in its resource file, and the application should have the French-culture version of that resource file, Resources.fr-FR.resx. If the application does not have the French-culture version of the resource file, the `My.Resource` object retrieves the resource from the default-culture resource file.  
+ この例を使用するには、アプリケーションのリソースファイルに `Message` という名前の文字列が必要です。また、アプリケーションには、そのリソースファイル Resources.fr のフランス語カルチャバージョンが必要です。 アプリケーションにフランス語カルチャバージョンのリソースファイルがない場合、`My.Resource` オブジェクトは、既定のカルチャリソースファイルからリソースを取得します。  
   
  [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create a Document with Namespaces (LINQ to XML)'
+title: '方法: 名前空間を持つドキュメントを作成する (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
 ms.openlocfilehash: bbd23840b0356cf14d2c7d6cb71591fe6461a8bd
@@ -18,7 +18,7 @@ ms.locfileid: "74332586"
   
  既定の名前空間およびプレフィックスを持つ名前空間の両方を定義する場合は、`Imports` キーワードを使用します。  
   
- For more information, see [Introduction to XML Literals in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
+ 詳細については、「 [Visual Basic での XML リテラルの概要](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)」を参照してください。  
   
  既定の XML 名前空間は要素だけに適用され、属性には適用されないことに注意してください。 属性は、既定では常に名前空間に含まれません。 ただし、名前空間プレフィックスを使用して属性を名前空間に含めることができます。  
   
@@ -116,4 +116,4 @@ End Module
   
 ## <a name="see-also"></a>関連項目
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [名前空間の概要 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

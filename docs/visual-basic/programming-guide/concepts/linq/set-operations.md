@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350614"
 ---
-# <a name="set-operations-visual-basic"></a>Set Operations (Visual Basic)
+# <a name="set-operations-visual-basic"></a>操作の設定 (Visual Basic)
 
 LINQ のセット操作は、同一または別個のコレクション (またはセット) に等しい要素があるかどうかに基づいて、結果を生成するクエリ操作です。
 
@@ -17,12 +17,12 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 
 ## <a name="methods"></a>メソッド
 
-|メソッド名|説明|Visual Basic Query Expression Syntax|説明|
+|メソッド名|説明|Visual Basic クエリ式の構文|詳細情報|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |Distinct|コレクションから重複する値を削除します。|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|
-|除く|差集合 (一方のコレクションにだけ存在し、もう一方のコレクションには出現しない要素) を返します。|該当しない。|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|
-|交差|積集合 (2 つのコレクションのそれぞれに出現する要素) を返します。|該当しない。|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|
-|和集合|和集合 (2 つのコレクションのどちらかに出現する一意の要素) を返します。|該当しない。|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|
+|除く|差集合 (一方のコレクションにだけ存在し、もう一方のコレクションには出現しない要素) を返します。|該当なし。|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|
+|交差|積集合 (2 つのコレクションのそれぞれに出現する要素) を返します。|該当なし。|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|
+|Union|和集合 (2 つのコレクションのどちらかに出現する一意の要素) を返します。|該当なし。|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|
 
 ## <a name="comparison-of-set-operations"></a>セット操作の比較
 
@@ -36,7 +36,7 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 
 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> の動作を次の図に示します。 返されたシーケンスには、1 つ目の入力シーケンスのうち、2 つ目の入力シーケンスには存在しない要素が格納されています。
 
-![Graphic showing the action of Except&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Shows the behavior of Except.")
+![Except&#40;&#41; のアクションを示すグラフィック。](./media/set-operations/except-behavior-graphic.png "Except の動作を示します。")
 
 ### <a name="intersect"></a>交差
 
@@ -44,7 +44,7 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 
 ![2 つのシーケンスの交差部分を示すグラフィック。](./media/set-operations/intersection-two-sequences.png)
 
-### <a name="union"></a>和集合
+### <a name="union"></a>Union
 
 次の図は、2 つの文字シーケンスに対する和集合演算を示しています。 返されたシーケンスには、両方の入力シーケンスからの一意の要素が格納されています。
 
@@ -52,7 +52,7 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 
 ## <a name="query-expression-syntax-example"></a>クエリ式の構文例
 
-The following example uses the `Distinct` clause in a LINQ query to return the unique numbers from a list of integers.
+次の例では、LINQ クエリで `Distinct` 句を使用して、整数のリストから一意の数値を返します。
 
 [!code-vb[CsLINQSetOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQSetOps/VB/setops.vb#1)]
 
@@ -61,5 +61,5 @@ The following example uses the `Distinct` clause in a LINQ query to return the u
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Distinct 句](../../../../visual-basic/language-reference/queries/distinct-clause.md)
-- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
-- [How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+- [方法: 文字列コレクションを結合および比較する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [方法: 2 つのリストの差集合を検索する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

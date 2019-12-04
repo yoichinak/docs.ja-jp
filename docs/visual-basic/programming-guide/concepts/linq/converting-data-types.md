@@ -9,11 +9,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354253"
 ---
-# <a name="converting-data-types-visual-basic"></a>Converting Data Types (Visual Basic)
+# <a name="converting-data-types-visual-basic"></a>データ型の変換 (Visual Basic)
 
 変換メソッドは、入力オブジェクトの型を変更します。
 
- LINQ クエリの変換操作は、さまざまなアプリケーションで役に立ちます。 The following are some examples:
+ LINQ クエリの変換操作は、さまざまなアプリケーションで役に立ちます。 次に例をいくつか示します。
 
 - <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> メソッドを使用すると、標準クエリ演算子の型のカスタム実装を非表示することができます。
 
@@ -27,7 +27,7 @@ ms.locfileid: "74354253"
 
 名前が "As" で始まるこの表の変換メソッドは、ソース コレクションの静的型を変更しますが、ソース コレクションを列挙しません。 名前が "To" で始まるメソッドは、ソース コレクションを列挙し、各項目を対応するコレクション型に変換します。
 
-|メソッド名|説明|Visual Basic Query Expression Syntax|説明|
+|メソッド名|説明|Visual Basic クエリ式の構文|詳細|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |AsEnumerable|<xref:System.Collections.Generic.IEnumerable%601> として型指定された入力を返します。|該当しない。|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
 |AsQueryable|(ジェネリック) <xref:System.Collections.IEnumerable> を (ジェネリック) <xref:System.Linq.IQueryable> に変換します。|該当しない。|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
@@ -40,7 +40,7 @@ ms.locfileid: "74354253"
 
 ## <a name="query-expression-syntax-example"></a>クエリ式の構文例
 
-The following code example uses the `From As` clause to cast a type to a subtype before accessing a member that is available only on the subtype.
+次のコード例では、`From As` 句を使用して、サブタイプでのみ使用できるメンバーにアクセスする前に型をサブタイプにキャストします。
 
 ```vb
 Class Plant
@@ -80,9 +80,9 @@ Sub Cast()
 End Sub
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [From 句](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [How to: Query an ArrayList with LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [方法: LINQ を使用して ArrayList を照会する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

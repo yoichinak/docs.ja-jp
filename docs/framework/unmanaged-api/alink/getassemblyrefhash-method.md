@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433876"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash メソッド
-Retrieves a hash blob for a given assembly.  
+指定されたアセンブリのハッシュ blob を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,19 +36,19 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>パラメーター  
  `FileToken`  
- ID of assembly to which the hash will refer.  
+ ハッシュが参照するアセンブリの ID。  
   
  `ppvHash`  
- Receives the resulting hash blob.  
+ 結果のハッシュ blob を受け取ります。  
   
  `pcbHash`  
- Receives size, in bytes, of hash blob.  
+ ハッシュ blob のサイズをバイト単位で受信します。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 

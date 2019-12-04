@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450146"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement 列挙型
-Specifies the notifications that will be sent to the metadata API client when a token remap occurs.  
+トークンの再マップが発生したときにメタデータ API クライアントに送信される通知を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -63,40 +63,40 @@ typedef enum CorNotificationForTokenMovement {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`MDNotifyDefault`|Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.|  
-|`MDNotifyAll`|Notify when any token moves.|  
-|`MDNotifyNone`|Do not notify when tokens move.|  
-|`MDNotifyMethodDef`|Notify when an `mdMethodDef` token moves.|  
-|`MDNotifyMemberRef`|Notify when an `mdMemberRef` token moves.|  
-|`MDNotifyFieldDef`|Notify when an `mdFieldDef` token moves.|  
-|`MDNotifyTypeRef`|Notify when an `mdTypeRef` token moves.|  
-|`MDNotifyTypeDef`|Notify when an `mdTypeDef` token moves.|  
-|`MDNotifyParamDef`|Notify when an `mdParamDef` token moves.|  
-|`MDNotifyInterfaceImpl`|Notify when an `mdInterfaceImpl` token moves.|  
-|`MDNotifyProperty`|Notify when an `mdProperty` token moves.|  
-|`MDNotifyEvent`|Notify when an `mdEvent` token moves.|  
-|`MDNotifySignature`|Notify when an `mdSignature` token moves.|  
-|`MDNotifyTypeSpec`|Notify when an `mdTypeSpec` token moves.|  
-|`MDNotifyCustomAttribute`|Notify when an `mdCustomAttribute` token moves.|  
-|`MDNotifySecurityValue`|Notify when an `mdSecurityValue` token moves.|  
-|`MDNotifyPermission`|Notify when an `mdPermission` token moves.|  
-|`MDNotifyModuleRef`|Notify when an `mdModuleRef` token moves.|  
-|`MDNotifyNameSpace`|Notify when an `mdNameSpace` token moves.|  
-|`MDNotifyAssemblyRef`|Notify when an `mdAssemblyRef` token moves.|  
-|`MDNotifyFile`|Notify when an `mdFile` token moves.|  
-|`MDNotifyExportedType`|Notify when an `mdExportedType` token moves.|  
-|`MDNotifyResource`|Notify when an `mdManifestResource` token moves.|  
+|`MDNotifyDefault`|`mdTypeRef`、`mdMethodDef`、`mdMemberRef`、または `mdFieldDef` のトークンが移動したときに通知します。|  
+|`MDNotifyAll`|任意のトークンが移動したときに通知します。|  
+|`MDNotifyNone`|トークンの移動時に通知しません。|  
+|`MDNotifyMethodDef`|`mdMethodDef` トークンが移動したときに通知します。|  
+|`MDNotifyMemberRef`|`mdMemberRef` トークンが移動したときに通知します。|  
+|`MDNotifyFieldDef`|`mdFieldDef` トークンが移動したときに通知します。|  
+|`MDNotifyTypeRef`|`mdTypeRef` トークンが移動したときに通知します。|  
+|`MDNotifyTypeDef`|`mdTypeDef` トークンが移動したときに通知します。|  
+|`MDNotifyParamDef`|`mdParamDef` トークンが移動したときに通知します。|  
+|`MDNotifyInterfaceImpl`|`mdInterfaceImpl` トークンが移動したときに通知します。|  
+|`MDNotifyProperty`|`mdProperty` トークンが移動したときに通知します。|  
+|`MDNotifyEvent`|`mdEvent` トークンが移動したときに通知します。|  
+|`MDNotifySignature`|`mdSignature` トークンが移動したときに通知します。|  
+|`MDNotifyTypeSpec`|`mdTypeSpec` トークンが移動したときに通知します。|  
+|`MDNotifyCustomAttribute`|`mdCustomAttribute` トークンが移動したときに通知します。|  
+|`MDNotifySecurityValue`|`mdSecurityValue` トークンが移動したときに通知します。|  
+|`MDNotifyPermission`|`mdPermission` トークンが移動したときに通知します。|  
+|`MDNotifyModuleRef`|`mdModuleRef` トークンが移動したときに通知します。|  
+|`MDNotifyNameSpace`|`mdNameSpace` トークンが移動したときに通知します。|  
+|`MDNotifyAssemblyRef`|`mdAssemblyRef` トークンが移動したときに通知します。|  
+|`MDNotifyFile`|`mdFile` トークンが移動したときに通知します。|  
+|`MDNotifyExportedType`|`mdExportedType` トークンが移動したときに通知します。|  
+|`MDNotifyResource`|`mdManifestResource` トークンが移動したときに通知します。|  
   
-## <a name="remarks"></a>Remarks  
- A token may be re-mapped (that is, moved) during a metadata merge.  
+## <a name="remarks"></a>コメント  
+ メタデータのマージ中に、トークンが再マップ (移動) される場合があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

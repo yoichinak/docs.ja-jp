@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448577"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 列挙体
-Indicates the type of memory address.  
+メモリアドレスの種類を示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,20 +46,20 @@ typedef enum CorSymAddrKind
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|Indicates a Microsoft intermediate language (MSIL) local variable or parameter index.|  
-|`ADDR_NATIVE_RVA`|Indicates a relative virtual address into a module.|  
-|`ADDR_NATIVE_REGISTER`|Indicates a CPU register.|  
-|`ADDR_NATIVE_REGREL`|Indicates that the first address is a register and the second address is an offset.|  
-|`ADDR_NATIVE_OFFSET`|Indicates an offset from a base address.|  
-|`ADDR_NATIVE_REGREG`|Indicates that the first address is the low portion of a register, and the second address is the high portion.|  
-|`ADDR_NATIVE_REGSTK`|Indicates that the first address is the low portion of a register, the second is the high portion, and the third is an offset.|  
-|`ADDR_NATIVE_STKREG`|Indicates that the first address is a register, the second is an offset, and the third is the high portion of the register.|  
-|`ADDR_BITFIELD`|Indicates that the first address is the start of a field and the second address is the field length.|  
-|`ADDR_NATIVE_ISECTOFFSET`|Indicates that the first address is the section and the second address is an offset.|  
+|`ADDR_IL_OFFSET`|Microsoft 中間言語 (MSIL) のローカル変数またはパラメーターインデックスを示します。|  
+|`ADDR_NATIVE_RVA`|モジュール内の相対仮想アドレスを示します。|  
+|`ADDR_NATIVE_REGISTER`|CPU レジスタを示します。|  
+|`ADDR_NATIVE_REGREL`|は、最初のアドレスがレジスタで、2番目のアドレスがオフセットであることを示します。|  
+|`ADDR_NATIVE_OFFSET`|ベースアドレスからのオフセットを示します。|  
+|`ADDR_NATIVE_REGREG`|最初のアドレスがレジスタの低い部分であり、2番目のアドレスが上位部分であることを示します。|  
+|`ADDR_NATIVE_REGSTK`|最初のアドレスがレジスタの下位にあり、2番目が上位の部分、3番目のアドレスがオフセットであることを示します。|  
+|`ADDR_NATIVE_STKREG`|は、最初のアドレスがレジスタ、2番目のアドレスがオフセット、3番目がレジスタの上位部分であることを示します。|  
+|`ADDR_BITFIELD`|最初のアドレスがフィールドの先頭で、2番目のアドレスがフィールド長であることを示します。|  
+|`ADDR_NATIVE_ISECTOFFSET`|は、最初のアドレスがセクションで、2番目のアドレスがオフセットであることを示します。|  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [シンボル ストア診断列挙型](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

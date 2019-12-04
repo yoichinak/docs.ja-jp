@@ -19,27 +19,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346038"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>方法: 演算子を定義するクラスを使用する (Visual Basic)
-If you are using a class or structure that defines its own operators, you can access those operators from Visual Basic.  
+独自の演算子を定義するクラスまたは構造体を使用している場合は、Visual Basic からこれらの演算子にアクセスできます。  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ クラスまたは構造体に対して演算子を定義することは、演算子の*オーバーロード*とも呼ばれます。  
   
 ## <a name="example"></a>例  
- The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a Visual Basic string. Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a Visual Basic string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.  
+ 次の例では、sql 構造 <xref:System.Data.SqlTypes.SqlString>にアクセスします。これにより、SQL 文字列と Visual Basic 文字列の双方向の変換演算子 ([CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)) が定義されます。 `CType(`*sql 文字列式*、`String)` を使用して sql 文字列を Visual Basic 文字列に変換し、Visual Basic*文字列式*を `CType(`して、他の方向に変換します。<xref:System.Data.SqlTypes.SqlString>`)`  
   
  [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
  [!code-vb[VbVbcnProcedures#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#31)]  
   
- The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`. The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.  
+ <xref:System.Data.SqlTypes.SqlString> 構造体は、`String` から <xref:System.Data.SqlTypes.SqlString> への変換演算子 (CType 関数) と、<xref:System.Data.SqlTypes.SqlString> から `String`への変換演算子 ([CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)) を定義します。 `jobTitle` に `title` を割り当てるステートメントは、最初の演算子を使用し、<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 関数呼び出しは2番目の演算子を使用します。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- Be sure the class or structure you are using defines the operator you want to use. Do not assume that the class or structure has defined every operator available for overloading. For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+ 使用するクラスまたは構造体で、使用する演算子が定義されていることを確認してください。 クラスまたは構造体で、オーバーロードに使用できるすべての演算子が定義されていると想定しないでください。 使用可能な演算子の一覧については、「 [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)」を参照してください。  
   
- Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).  
+ ソースファイルの先頭にある SQL 文字列に適切な `Imports` ステートメント (この場合は <xref:System.Data.SqlTypes>) を含めます。  
   
- Your project must have references to System.Data and System.XML.  
+ プロジェクトは、system.string と SYSTEM.XML への参照を持っている必要があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [演算子プロシージャ](./operator-procedures.md)
 - [方法 : 演算子を定義する](./how-to-define-an-operator.md)

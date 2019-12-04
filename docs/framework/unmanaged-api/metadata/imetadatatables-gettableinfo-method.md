@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426660"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo メソッド
-Gets the name, row size, number of rows, number of columns, and key column index of the specified table.  
+指定されたテーブルの名前、行のサイズ、行数、列の数、およびキー列のインデックスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,29 +40,29 @@ HRESULT GetTableInfo (
   
 ## <a name="parameters"></a>パラメーター  
  `ixTbl`  
- [in] The identifier of the table whose properties to return.  
+ から返されるプロパティを持つテーブルの識別子。  
   
  `pcbRow`  
- [out] A pointer to the size, in bytes, of a table row.  
+ 入出力テーブル行のサイズ (バイト単位) へのポインター。  
   
  `pcRows`  
- [out] A pointer to the number of rows in the table.  
+ 入出力テーブル内の行の数へのポインター。  
   
  `pcCols`  
- [out] A pointer to the number of columns in the table.  
+ 入出力テーブル内の列数へのポインター。  
   
  `piKey`  
- [out] A pointer to the index of the key column, or -1 if the table has no key column.  
+ 入出力キー列のインデックスへのポインター。テーブルにキー列がない場合は-1。  
   
  `ppName`  
- [out] A pointer to a pointer to the table name.  
+ 入出力テーブル名へのポインターへのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

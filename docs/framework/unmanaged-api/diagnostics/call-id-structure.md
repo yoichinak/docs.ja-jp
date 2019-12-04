@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448597"
 ---
 # <a name="call_id-structure"></a>CALL_ID 構造体
-Provides information to a debugger about a function that is being called. See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.  
+呼び出されている関数についての情報をデバッガーに提供します。 詳細については、 [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)インターフェイスを参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,17 +42,17 @@ typedef struct tagCALL_ID
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`szMachine`|Identifies the machine that is making the call.|  
-|`dwPid`|Identifies the machine processor.|  
-|`pUserThread`|Identifies the thread that is executing the call.|  
-|`addrStackPointer`|Specifies the address of the call stack.|  
-|`szEntryPoint`|Specifies the address of the call.|  
-|`szDestinationMachine`|Identifies the machine that will execute the call.|  
+|`szMachine`|呼び出しを行っているコンピューターを識別します。|  
+|`dwPid`|マシンプロセッサを識別します。|  
+|`pUserThread`|呼び出しを実行しているスレッドを識別します。|  
+|`addrStackPointer`|呼び出し履歴のアドレスを指定します。|  
+|`szEntryPoint`|呼び出しのアドレスを指定します。|  
+|`szDestinationMachine`|呼び出しを実行するコンピューターを識別します。|  
   
-## <a name="requirements"></a>［要件］  
- **Header:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [INotifySink2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [シンボル ストア診断構造体](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

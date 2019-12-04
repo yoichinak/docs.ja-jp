@@ -14,72 +14,72 @@ ms.locfileid: "74348666"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>方法: オブジェクトのメンバーにアクセスする (Visual Basic)
 
-When you have an object variable that refers to an object, you often want to work with the members of that object, such as its methods, properties, fields, and events. For example, once you have created a new <xref:System.Windows.Forms.Form> object, you might want to set its <xref:System.Windows.Forms.Control.Text%2A> property or call its <xref:System.Windows.Forms.Control.Focus%2A> method.
+オブジェクトを参照するオブジェクト変数がある場合は、そのオブジェクトのメソッド、プロパティ、フィールド、イベントなどのメンバーを使用することがよくあります。 たとえば、新しい <xref:System.Windows.Forms.Form> オブジェクトを作成したら、そのオブジェクトの <xref:System.Windows.Forms.Control.Text%2A> プロパティを設定するか、その <xref:System.Windows.Forms.Control.Focus%2A> メソッドを呼び出すことができます。
 
-## <a name="accessing-members"></a>Accessing Members
+## <a name="accessing-members"></a>メンバーへのアクセス
 
-You access an object's members through the variable that refers to it.
+オブジェクトのメンバーにアクセスするには、それを参照する変数を使用します。
 
-#### <a name="to-access-members-of-an-object"></a>To access members of an object
+#### <a name="to-access-members-of-an-object"></a>オブジェクトのメンバーにアクセスするには
 
-- Use the member-access operator (`.`) between the object variable name and the member name.
+- オブジェクト変数名とメンバー名の間には、メンバーアクセス演算子 (`.`) を使用します。
 
     ```vb
     currentText = newForm.Text
     ```
 
-    If the member is [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), you do not need a variable to access it.
+    メンバーが[共有](../../../../visual-basic/language-reference/modifiers/shared.md)されている場合は、そのメンバーにアクセスするための変数は必要ありません。
 
-## <a name="accessing-members-of-an-object-of-known-type"></a>Accessing Members of an Object of Known Type
+## <a name="accessing-members-of-an-object-of-known-type"></a>既知の型のオブジェクトのメンバーへのアクセス
 
-If you know the type of an object at compile time, you can use *early binding* for a variable that refers to it.
+コンパイル時にオブジェクトの型がわかっている場合は、それを参照する変数に*事前バインディング*を使用できます。
 
-#### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>To access members of an object for which you know the type at compile time
+#### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>コンパイル時に型がわかっているオブジェクトのメンバーにアクセスするには
 
-1. Declare the object variable to be of the type of the object you intend to assign to the variable.
+1. 変数に割り当てるオブジェクトの型として、オブジェクト変数を宣言します。
 
     ```vb
     Dim extraForm As System.Windows.Forms.Form
     ```
 
-    With `Option Strict On`, you can assign only <xref:System.Windows.Forms.Form> objects (or objects of a type derived from <xref:System.Windows.Forms.Form>) to `extraForm`. If you have defined a class or structure with a widening `CType` conversion to <xref:System.Windows.Forms.Form>, you can also assign that class or structure to `extraForm`.
+    `Option Strict On`では、<xref:System.Windows.Forms.Form> オブジェクト (または <xref:System.Windows.Forms.Form>から派生した型のオブジェクト) のみを `extraForm`に割り当てることができます。 <xref:System.Windows.Forms.Form>への拡大 `CType` 変換を使用してクラスまたは構造体を定義した場合は、そのクラスまたは構造体を `extraForm`に割り当てることもできます。
 
-2. Use the member-access operator (`.`) between the object variable name and the member name.
+2. オブジェクト変数名とメンバー名の間には、メンバーアクセス演算子 (`.`) を使用します。
 
     ```vb
     extraForm.Show()
     ```
 
-    You can access all of the methods and properties specific to the <xref:System.Windows.Forms.Form> class, no matter what the `Option Strict` setting is.
+    `Option Strict` の設定に関係なく、<xref:System.Windows.Forms.Form> クラスに固有のすべてのメソッドとプロパティにアクセスできます。
 
-## <a name="accessing-members-of-an-object-of-unknown-type"></a>Accessing Members of an Object of Unknown Type
+## <a name="accessing-members-of-an-object-of-unknown-type"></a>不明な型のオブジェクトのメンバーへのアクセス
 
-If you do not know the type of an object at compile time, you must use *late binding* for any variable that refers to it.
+コンパイル時にオブジェクトの型がわからない場合は、そのオブジェクトを参照する任意の変数に対して*遅延バインディング*を使用する必要があります。
 
-#### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>To access members of an object for which you do not know the type at compile time
+#### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>コンパイル時に型がわからないオブジェクトのメンバーにアクセスするには
 
-1. Declare the object variable to be of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). (Declaring a variable as `Object` is the same as declaring it as <xref:System.Object?displayProperty=nameWithType>.)
+1. オブジェクトの[データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)であるオブジェクト変数を宣言します。 (変数を `Object` として宣言することは <xref:System.Object?displayProperty=nameWithType>として宣言することと同じです)。
 
     ```vb
     Dim someControl As Object
     ```
 
-    With `Option Strict On`, you can access only the members that are defined on the <xref:System.Object> class.
+    `Option Strict On`では、<xref:System.Object> クラスで定義されているメンバーのみにアクセスできます。
 
-2. Use the member-access operator (`.`) between the object variable name and the member name.
+2. オブジェクト変数名とメンバー名の間には、メンバーアクセス演算子 (`.`) を使用します。
 
     ```vb
     someControl.GetType()
     ```
 
-    To be able to access the members of any object you assign to the object variable, you must set `Option Strict Off`. When you do this, the compiler cannot guarantee that a given member is exposed by the object you assign to the variable. If the object does not expose a member you attempt to access, a <xref:System.MemberAccessException> exception occurs.
+    オブジェクト変数に割り当てるオブジェクトのメンバーにアクセスできるようにするには、`Option Strict Off`を設定する必要があります。 この場合、コンパイラは、変数に割り当てたオブジェクトによって、特定のメンバーが公開されることを保証できません。 アクセスしようとしたメンバーがオブジェクトによって公開されていない場合、<xref:System.MemberAccessException> 例外が発生します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Object>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.MemberAccessException>
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [オブジェクト変数の宣言](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

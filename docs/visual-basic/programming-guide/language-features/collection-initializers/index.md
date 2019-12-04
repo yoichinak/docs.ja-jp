@@ -28,7 +28,7 @@ ms.locfileid: "74346782"
 
 ## <a name="syntax"></a>構文
 
-コレクション初期化子は、次のコードのように、先頭に `From` キーワードが付いた、中かっこ (`{}`) で囲まれたコンマ区切りの値の一覧で構成されます。
+コレクション初期化子は、次のコードのように、先頭に `{}` キーワードが付いた、中かっこ (`From`) で囲まれたコンマ区切りの値の一覧で構成されます。
 
 [!code-vb[VbVbalrCollectionInitializers#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#2)]
 
@@ -39,7 +39,7 @@ ms.locfileid: "74346782"
 > [!NOTE]
 > コレクション初期化子とオブジェクト初期化子を組み合わせて、同じコレクション オブジェクトを初期化することはできません。 コレクション初期化子内のオブジェクトを初期化するには、オブジェクト初期化子を使用します。
 
-## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Creating a Collection by Using a Collection Initializer
+## <a name="creating-a-collection-by-using-a-collection-initializer"></a>コレクション初期化子を使用したコレクションの作成
 
 コレクション初期化子を使用してコレクションを作成する場合、コレクション初期化子内の各値は、コレクション内の適切な `Add` メソッドに渡されます。 たとえば、コレクション初期化子を使用して <xref:System.Collections.Generic.List%601> 作成する場合、コレクション初期化子内の各文字列値は <xref:System.Collections.Generic.List%601.Add%2A> メソッドに渡されます。 コレクション初期化子を使用してコレクションを作成する場合は、指定した型は有効なコレクション型である必要があります。 有効なコレクションの型には、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装するクラスや、<xref:System.Collections.CollectionBase> クラスを継承するクラスなどがあります。 指定した型には、次の条件を満たす `Add` メソッドも公開されている必要があります。
 
@@ -57,13 +57,13 @@ ms.locfileid: "74346782"
 
 [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]
 
-`Customer` オブジェクトのコンストラクターと一致するパラメーターを持つ `Add` メソッドがコレクションにある場合、次のセクションで説明するように、コレクション初期化子内に `Add` メソッドのパラメーター値を入れ子にすることができます。 コレクションにこのような `Add` メソッドがない場合、それを拡張メソッドとして作成できます。 コレクションの拡張メソッドとして `Add` メソッドを作成する方法の例については、「[方法: コレクション初期化子で使用される拡張メソッドを作成または追加する](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)」を参照してください。 コレクション初期化子で使用できるカスタム コレクションを作成する方法の例については、「[方法: コレクション初期化子を使用してコレクションを作成する](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)」を参照してください。
+`Add` オブジェクトのコンストラクターと一致するパラメーターを持つ `Customer` メソッドがコレクションにある場合、次のセクションで説明するように、コレクション初期化子内に `Add` メソッドのパラメーター値を入れ子にすることができます。 コレクションにこのような `Add` メソッドがない場合、それを拡張メソッドとして作成できます。 コレクションの拡張メソッドとして `Add` メソッドを作成する方法の例については、「[方法: コレクション初期化子で使用される拡張メソッドを作成または追加する](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)」を参照してください。 コレクション初期化子で使用できるカスタム コレクションを作成する方法の例については、「[方法: コレクション初期化子を使用してコレクションを作成する](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)」を参照してください。
 
 ## <a name="nesting-collection-initializers"></a>コレクション初期化子を入れ子にする
 
 作成するコレクションの `Add` メソッドで固有のオーバーロードを指定するため、コレクション初期化子内の値を入れ子にすることができます。 `Add` メソッドに渡す値は、配列リテラルまたはコレクション初期化子の場合と同じように、コンマで区切り、中かっこ (`{}`) で囲む必要があります。
 
-入れ子にした値でコレクションを作成する場合、入れ子になった値一覧の各要素は、要素の型に一致する `Add` メソッドに引数として渡されます。 たとえば、次のコード例では、キーは `Integer` 型で値は `String` 型の <xref:System.Collections.Generic.Dictionary%602> が作成されます。 一連の入れ子になった値は、それぞれ `Dictionary` の <xref:System.Collections.Generic.Dictionary%602.Add%2A> メソッドと照合されます。
+入れ子にした値でコレクションを作成する場合、入れ子になった値一覧の各要素は、要素の型に一致する `Add` メソッドに引数として渡されます。 たとえば、次のコード例では、キーは <xref:System.Collections.Generic.Dictionary%602> 型で値は `Integer` 型の `String` が作成されます。 一連の入れ子になった値は、それぞれ <xref:System.Collections.Generic.Dictionary%602.Add%2A> の `Dictionary` メソッドと照合されます。
 
 [!code-vb[VbVbalrCollectionInitializers#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#5)]
 
@@ -75,12 +75,12 @@ ms.locfileid: "74346782"
 
 ## <a name="related-topics"></a>関連トピック
 
-|Title|説明|
+|タイトル|説明|
 |---|---|
 |[方法: コレクション初期化子で使用される拡張メソッドを作成または追加する](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|コレクション初期化子の値をコレクションに入力するために使用できる `Add` と呼ばれる拡張メソッドを作成する方法を示します。|
-|[方法: コレクション初期化子を使用してコレクションを作成する](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|`IEnumerable` を実装するコレクション クラスに `Add` メソッドを含めてコレクション初期化子を使用できるようにする方法を説明します。|
+|[方法: コレクション初期化子を使用してコレクションを作成する](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|`Add` を実装するコレクション クラスに `IEnumerable` メソッドを含めてコレクション初期化子を使用できるようにする方法を説明します。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [コレクション](../../../../visual-basic/programming-guide/concepts/collections.md)
 - [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

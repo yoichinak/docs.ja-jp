@@ -15,20 +15,20 @@ ms.locfileid: "74348630"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>方法: 2 つのオブジェクトが関連しているかどうかを判別する (Visual Basic)
 
-You can compare two objects to determine the relationship, if any, between the classes from which they are created. The <xref:System.Type.IsInstanceOfType%2A> method of the <xref:System.Type?displayProperty=nameWithType> class returns `True` if the specified class inherits from the current class, or if the current type is an interface supported by the specified class.
+2つのオブジェクトを比較して、作成元のクラス間のリレーションシップ (存在する場合) を判断できます。 <xref:System.Type?displayProperty=nameWithType> クラスの <xref:System.Type.IsInstanceOfType%2A> メソッドは、指定したクラスが現在のクラスから継承している場合、または現在の型が指定したクラスでサポートされているインターフェイスである場合に `True` を返します。
 
-### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>To determine if one object inherits from another object's class or interface
+### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>あるオブジェクトが別のオブジェクトのクラスまたはインターフェイスから継承しているかどうかを確認するには
 
-1. On the object you think might be of the base type, invoke the <xref:System.Object.GetType%2A> method.
+1. 基本型と考えられるオブジェクトで、<xref:System.Object.GetType%2A> メソッドを呼び出します。
 
-2. On the <xref:System.Type?displayProperty=nameWithType> object returned by <xref:System.Object.GetType%2A>, invoke the <xref:System.Type.IsInstanceOfType%2A> method.
+2. <xref:System.Object.GetType%2A>によって返される <xref:System.Type?displayProperty=nameWithType> オブジェクトで、<xref:System.Type.IsInstanceOfType%2A> メソッドを呼び出します。
 
-3. In the argument list for <xref:System.Type.IsInstanceOfType%2A>, specify the object you think might be of the derived type.
+3. <xref:System.Type.IsInstanceOfType%2A>の引数リストで、派生型として考えられるオブジェクトを指定します。
 
-    <xref:System.Type.IsInstanceOfType%2A> returns `True` if its argument type inherits from the <xref:System.Type?displayProperty=nameWithType> object type.
+    引数の型が <xref:System.Type?displayProperty=nameWithType> オブジェクト型から継承されている場合、<xref:System.Type.IsInstanceOfType%2A> は `True` を返します。
 
 ## <a name="example"></a>例
- The following example determines whether one object represents a class derived from another object's class.
+ 次の例では、あるオブジェクトが、別のオブジェクトのクラスから派生したクラスを表しているかどうかを判断します。
 
 ```vb
 Public Class baseClass
@@ -46,14 +46,14 @@ Public Class testTheseClasses
 End Class
 ```
 
-Note the unexpected placement of the two object variables in the call to <xref:System.Type.IsInstanceOfType%2A>. The supposed base type is used to generate the <xref:System.Type?displayProperty=nameWithType> class, and the supposed derived type is passed as an argument to the <xref:System.Type.IsInstanceOfType%2A> method.
+<xref:System.Type.IsInstanceOfType%2A>の呼び出しで、2つのオブジェクト変数が予期せずに配置されていることに注意してください。 想定される基本型を使用して <xref:System.Type?displayProperty=nameWithType> クラスを生成し、想定される派生型を引数として <xref:System.Type.IsInstanceOfType%2A> メソッドに渡します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [方法: 2 つのオブジェクトが同一であるかどうか判別する](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

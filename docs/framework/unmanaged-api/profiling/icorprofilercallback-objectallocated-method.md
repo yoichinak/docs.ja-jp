@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445849"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated メソッド
-Notifies the profiler that memory within the heap has been allocated for an object.  
+ヒープ内のメモリがオブジェクトに割り当てられたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +35,15 @@ HRESULT ObjectAllocated(
   
 ## <a name="parameters"></a>パラメーター  
  `objectId`  
- [in] The ID of the object for which memory was allocated.  
+ からメモリが割り当てられたオブジェクトの ID。  
   
  `classId`  
- [in] The ID of the class of which the object is an instance.  
+ からオブジェクトがインスタンスとして使用されているクラスの ID。  
   
-## <a name="remarks"></a>Remarks  
- The `ObjectedAllocated` method is not called for allocations from either the stack or unmanaged memory. The `classId` parameter can refer to a class in managed code that has not been loaded yet. The profiler will receive a class load callback for that class immediately after the `ObjectAllocated` callback.  
+## <a name="remarks"></a>コメント  
+ `ObjectedAllocated` メソッドは、スタックまたはアンマネージメモリからの割り当てに対しては呼び出されません。 `classId` パラメーターは、まだ読み込まれていないマネージコード内のクラスを参照できます。 プロファイラーは、`ObjectAllocated` コールバックの直後に、そのクラスのクラス読み込みコールバックを受け取ります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -52,7 +52,7 @@ HRESULT ObjectAllocated(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ClassLoadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)

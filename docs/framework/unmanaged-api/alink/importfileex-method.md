@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446953"
 ---
 # <a name="importfileex-method"></a>ImportFileEx メソッド
-Imports indicated assembly or unbound module.  
+指定したアセンブリまたはバインドされていないモジュールをインポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,33 +40,33 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>パラメーター  
  `pszFilename`  
- Fully qualified name of file from which to import.  
+ インポート元のファイルの完全修飾名。  
   
  `pszTargetName`  
- Optional name of target file.  
+ ターゲットファイルの名前 (省略可能)。  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ TRUE の場合、ImportTypes が使用されます。それ以外の場合は、インポートを手動で実行する必要があります。  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ [Openscope メソッド](../metadata/imetadatadispenser-openscope-method.md)に渡されるフラグ。  
   
  `pImportToken`  
- Receives ID of the file being imported.  
+ インポートされるファイルの ID を受け取ります。  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
+ アセンブリインポートスコープ[IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md)インターフェイスを受け取ります。 ファイルがアセンブリでない場合、は NULL に設定されます。  
   
  `pdwCountOfScopes`  
- Receives count of imported files and/or scopes.  
+ インポートされたファイルまたはスコープの数を受信します。  
   
 ## <a name="return-value"></a>戻り値  
- Returns S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>［要件］  
- Requires alink.h.  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IALink2 インターフェイス](ialink2-interface.md)
 - [IALink インターフェイス](ialink-interface.md)

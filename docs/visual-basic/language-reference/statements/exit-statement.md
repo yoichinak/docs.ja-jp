@@ -21,7 +21,7 @@ ms.locfileid: "74345937"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit ステートメント (Visual Basic)
 
-Exits a procedure or block and transfers control immediately to the statement following the procedure call or the block definition.
+プロシージャまたはブロックを終了し、プロシージャ呼び出しまたはブロック定義に続くステートメントに制御を直ちに転送します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,56 +32,56 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
 ## <a name="statements"></a>ステートメント
 
  `Exit Do`  
- Immediately exits the `Do` loop in which it appears. Execution continues with the statement following the `Loop` statement. `Exit Do` can be used only inside a `Do` loop. When used within nested `Do` loops, `Exit Do` exits the innermost loop and transfers control to the next higher level of nesting.
+ が表示されている `Do` ループを直ちに終了します。 実行は、`Loop` ステートメントに続くステートメントを使用して続行されます。 `Exit Do` は、`Do` ループ内でのみ使用できます。 入れ子になった `Do` ループ内で使用すると、`Exit Do` 最も内側のループを終了し、次に高い入れ子レベルに制御を転送します。
 
  `Exit For`  
- Immediately exits the `For` loop in which it appears. Execution continues with the statement following the `Next` statement. `Exit For` can be used only inside a `For`...`Next` or `For Each`...`Next` loop. When used within nested `For` loops, `Exit For` exits the innermost loop and transfers control to the next higher level of nesting.
+ が表示されている `For` ループを直ちに終了します。 実行は、`Next` ステートメントに続くステートメントを使用して続行されます。 `Exit For` は、`For`...`Next` または `For Each`...`Next` ループ内でのみ使用できます。 入れ子になった `For` ループ内で使用すると、`Exit For` 最も内側のループを終了し、次に高い入れ子レベルに制御を転送します。
 
  `Exit Function`  
- Immediately exits the `Function` procedure in which it appears. Execution continues with the statement following the statement that called the `Function` procedure. `Exit Function` can be used only inside a `Function` procedure.
+ が表示されている `Function` プロシージャをすぐに終了します。 実行は、`Function` プロシージャを呼び出したステートメントの後に続くステートメントから続行されます。 `Exit Function` は、`Function` プロシージャ内でのみ使用できます。
 
- To specify a return value, you can assign the value to the function name on a line before the `Exit Function` statement. To assign the return value and exit the function in one statement, you can instead use the [Return Statement](return-statement.md).
+ 戻り値を指定するには、`Exit Function` ステートメントの前にある行の関数名に値を代入します。 戻り値を割り当てて、1つのステートメントで関数を終了するには、代わりに[Return ステートメント](return-statement.md)を使用できます。
 
  `Exit Property`  
- Immediately exits the `Property` procedure in which it appears. Execution continues with the statement that called the `Property` procedure, that is, with the statement requesting or setting the property's value. `Exit Property` can be used only inside a property's `Get` or `Set` procedure.
+ が表示されている `Property` プロシージャをすぐに終了します。 実行は、`Property` プロシージャを呼び出したステートメント、つまり、プロパティの値を要求または設定するステートメントによって続行されます。 `Exit Property` は、プロパティの `Get` または `Set` プロシージャ内でのみ使用できます。
 
- To specify a return value in a `Get` procedure, you can assign the value to the function name on a line before the `Exit Property` statement. To assign the return value and exit the `Get` procedure in one statement, you can instead use the `Return` statement.
+ `Get` プロシージャで戻り値を指定するには、`Exit Property` ステートメントの前にある行の関数名に値を割り当てることができます。 1つのステートメントで戻り値を割り当てて `Get` プロシージャを終了するには、代わりに `Return` ステートメントを使用できます。
 
- In a `Set` procedure, the `Exit Property` statement is equivalent to the `Return` statement.
+ `Set` のプロシージャでは、`Exit Property` ステートメントは `Return` ステートメントと同じです。
 
  `Exit Select`  
- Immediately exits the `Select Case` block in which it appears. Execution continues with the statement following the `End Select` statement. `Exit Select` can be used only inside a `Select Case` statement.
+ が表示されている `Select Case` ブロックを直ちに終了します。 実行は、`End Select` ステートメントに続くステートメントを使用して続行されます。 `Exit Select` は、`Select Case` ステートメント内でのみ使用できます。
 
  `Exit Sub`  
- Immediately exits the `Sub` procedure in which it appears. Execution continues with the statement following the statement that called the `Sub` procedure. `Exit Sub` can be used only inside a `Sub` procedure.
+ が表示されている `Sub` プロシージャをすぐに終了します。 実行は、`Sub` プロシージャを呼び出したステートメントの後に続くステートメントから続行されます。 `Exit Sub` は、`Sub` プロシージャ内でのみ使用できます。
 
- In a `Sub` procedure, the `Exit Sub` statement is equivalent to the `Return` statement.
+ `Sub` のプロシージャでは、`Exit Sub` ステートメントは `Return` ステートメントと同じです。
 
  `Exit Try`  
- Immediately exits the `Try` or `Catch` block in which it appears. Execution continues with the `Finally` block if there is one, or with the statement following the `End Try` statement otherwise. `Exit Try` can be used only inside a `Try` or `Catch` block, and not inside a `Finally` block.
+ が表示されている `Try` または `Catch` ブロックを直ちに終了します。 実行は、存在する場合は `Finally` ブロックで続行されます。それ以外の場合は `End Try` ステートメントの後のステートメントで続行されます。 `Exit Try` は、`Finally` ブロック内ではなく、`Try` または `Catch` ブロック内でのみ使用できます。
 
  `Exit While`  
- Immediately exits the `While` loop in which it appears. Execution continues with the statement following the `End While` statement. `Exit While` can be used only inside a `While` loop. When used within nested `While` loops, `Exit While` transfers control to the loop that is one nested level above the loop where `Exit While` occurs.
+ が表示されている `While` ループを直ちに終了します。 実行は、`End While` ステートメントに続くステートメントを使用して続行されます。 `Exit While` は、`While` ループ内でのみ使用できます。 入れ子になった `While` ループ内で使用される場合、`Exit While` は `Exit While` が発生するループの上に入れ子になった1つのレベルであるループに制御を転送します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Do not confuse `Exit` statements with `End` statements. `Exit` does not define the end of a statement.
+`Exit` ステートメントを `End` ステートメントと混同しないでください。 `Exit` では、ステートメントの末尾が定義されていません。
 
 ## <a name="example"></a>例
 
-In the following example, the loop condition stops the loop when the `index` variable is greater than 100. The `If` statement in the loop, however, causes the `Exit Do` statement to stop the loop when the index variable is greater than 10.
+次の例では、`index` 変数が100より大きい場合、ループ条件によってループが停止します。 ただし、ループ内の `If` ステートメントでは、インデックス変数が10より大きい場合、`Exit Do` ステートメントによってループが停止されます。
 
 [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]
 
 ## <a name="example"></a>例
 
-The following example assigns the return value to the function name `myFunction`, and then uses `Exit Function` to return from the function:
+次の例では、関数名 `myFunction`に戻り値を代入し、`Exit Function` を使用して関数からを返します。
 
 [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
 
 ## <a name="example"></a>例
 
-The following example uses the [Return Statement](return-statement.md) to assign the return value and exit the function:
+次の例では、 [Return ステートメント](return-statement.md)を使用して戻り値を割り当て、関数を終了します。
 
 [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
 

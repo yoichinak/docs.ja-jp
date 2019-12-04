@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343778"
 ---
 # <a name="from-clause-visual-basic"></a>From 句 (Visual Basic)
-Specifies one or more range variables and a collection to query.  
+1つ以上の範囲変数と、クエリを実行するコレクションを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,47 +29,47 @@ From element [ As type ] In collection [ _ ]
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`element`|必須です。 A *range variable* used to iterate through the elements of the collection. A range variable is used to refer to each member of the `collection` as the query iterates through the `collection`. Must be an enumerable type.|  
-|`type`|省略可能です。 `element` の型。 If no `type` is specified, the type of `element` is inferred from `collection`.|  
-|`collection`|必須です。 Refers to the collection to be queried. Must be an enumerable type.|  
+|`element`|必須。 コレクションの要素を反復処理するために使用する*範囲変数*。 範囲変数は、クエリが `collection`を反復処理するときに、`collection` の各メンバーを参照するために使用されます。 列挙可能な型である必要があります。|  
+|`type`|省略可。 `element` の型。 `type` が指定されていない場合、`element` の種類は `collection`から推論されます。|  
+|`collection`|必須。 クエリ対象のコレクションを参照します。 列挙可能な型である必要があります。|  
   
-## <a name="remarks"></a>Remarks  
- The `From` clause is used to identify the source data for a query and the variables that are used to refer to an element from the source collection. These variables are called *range variables*. The `From` clause is required for a query, except when the `Aggregate` clause is used to identify a query that returns only aggregated results. For more information, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+## <a name="remarks"></a>コメント  
+ `From` 句は、クエリのソースデータと、ソースコレクションの要素を参照するために使用される変数を識別するために使用されます。 これらの変数は*範囲変数*と呼ばれます。 `Aggregate` 句を使用して集計結果のみを返すクエリを識別する場合を除き、クエリには `From` 句が必要です。 詳細については、「 [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)」を参照してください。  
   
- You can specify multiple `From` clauses in a query to identify multiple collections to be joined. When multiple collections are specified, they are iterated over independently, or you can join them if they are related. You can join collections implicitly by using the `Select` clause, or explicitly by using the `Join` or `Group Join` clauses. As an alternative, you can specify multiple range variables and collections in a single `From` clause, with each related range variable and collection separated from the others by a comma. The following code example shows both syntax options for the `From` clause.  
+ クエリで複数の `From` 句を指定すると、結合する複数のコレクションを識別できます。 複数のコレクションが指定されている場合は、個別に反復処理されるか、または関連付けられている場合は結合できます。 `Select` 句を使用して暗黙的にコレクションを結合することも、`Join` または `Group Join` 句を使用して明示的に結合することもできます。 別の方法として、1つの `From` 句で複数の範囲変数とコレクションを指定し、関連する範囲変数とコレクションをコンマで区切って指定することもできます。 次のコード例は、`From` 句の両方の構文オプションを示しています。  
   
  [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
- The `From` clause defines the scope of a query, which is similar to the scope of a `For` loop. Therefore, each `element` range variable in the scope of a query must have a unique name. Because you can specify multiple `From` clauses for a query, subsequent `From` clauses can refer to range variables in the `From` clause, or they can refer to range variables in a previous `From` clause. For example, the following example shows a nested `From` clause where the collection in the second clause is based on a property of the range variable in the first clause.  
+ `From` 句は、クエリのスコープを定義します。これは、`For` ループのスコープに似ています。 したがって、クエリのスコープ内の各 `element` 範囲変数には、一意の名前を付ける必要があります。 クエリに対して複数の `From` 句を指定できるので、後続の `From` 句は `From` 句の範囲変数を参照できます。また、前の `From` 句の範囲変数を参照することもできます。 たとえば、次の例は入れ子になった `From` 句を示しています。2番目の句のコレクションは、最初の句の範囲変数のプロパティに基づいています。  
   
  [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
- Each `From` clause can be followed by any combination of additional query clauses to refine the query. You can refine the query in the following ways:  
+ 各 `From` 句の後に、追加のクエリ句の任意の組み合わせを使用して、クエリを絞り込むことができます。 クエリは、次の方法で絞り込むことができます。  
   
-- Combine multiple collections implicitly by using the `From` and `Select` clauses, or explicitly by using the `Join` or `Group Join` clauses.  
+- `From` と `Select` の句を使用して、または明示的に `Join` または `Group Join` 句を使用して、複数のコレクションを暗黙的に結合します。  
   
-- Use the `Where` clause to filter the query result.  
+- クエリ結果をフィルター処理するには、`Where` 句を使用します。  
   
-- Sort the result by using the `Order By` clause.  
+- `Order By` 句を使用して結果を並べ替えます。  
   
-- Group similar results together by using the `Group By` clause.  
+- `Group By` 句を使用して、類似した結果をまとめてグループ化します。  
   
-- Use the `Aggregate` clause to identify aggregate functions to evaluate for the whole query result.  
+- `Aggregate` 句を使用して、クエリ結果全体に対して評価する集計関数を識別します。  
   
-- Use the `Let` clause to introduce an iteration variable whose value is determined by an expression instead of a collection.  
+- `Let` 句を使用して、コレクションではなく式によって値が決定される反復変数を導入します。  
   
-- Use the `Distinct` clause to ignore duplicate query results.  
+- `Distinct` 句を使用して、重複するクエリ結果を無視します。  
   
-- Identify parts of the result to return by using the `Skip`, `Take`, `Skip While`, and `Take While` clauses.  
+- `Skip`、`Take`、`Skip While`、および `Take While` 句を使用して返される結果の部分を識別します。  
   
 ## <a name="example"></a>例  
- The following query expression uses a `From` clause to declare a range variable `cust` for each `Customer` object in the `customers` collection. The `Where` clause uses the range variable to restrict the output to customers from the specified region. The `For Each` loop displays the company name for each customer in the query result.  
+ 次のクエリ式では、`From` 句を使用して、`customers` コレクション内の各 `Customer` オブジェクトに対して `cust` 範囲変数を宣言します。 `Where` 句では、範囲変数を使用して、指定された地域の顧客に出力を制限します。 `For Each` ループでは、クエリ結果に各顧客の会社名が表示されます。  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

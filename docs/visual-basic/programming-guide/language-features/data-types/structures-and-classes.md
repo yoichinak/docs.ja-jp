@@ -17,76 +17,76 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346326"
 ---
 # <a name="structures-and-classes-visual-basic"></a>構造体とクラス (Visual Basic)
-Visual Basic unifies the syntax for structures and classes, with the result that both entities support most of the same features. However, there are also important differences between structures and classes.  
+Visual Basic は構造体とクラスの構文を統一します。結果として、両方のエンティティが同じ機能の大部分をサポートします。 ただし、構造体とクラスには重要な違いもあります。  
   
- Classes have the advantage of being reference types — passing a reference is more efficient than passing a structure variable with all its data. On the other hand, structures do not require allocation of memory on the global heap.  
+ クラスには参照型を使用できるという利点があります。参照を渡すことは、構造体変数をすべてのデータと共に渡すよりも効率的です。 一方、構造体では、グローバルヒープにメモリを割り当てる必要はありません。  
   
- Because you cannot inherit from a structure, structures should be used only for objects that do not need to be extended. Use structures when the object you wish to create has a small instance size, and take into account the performance characteristics of classes versus structures.  
+ 構造体から継承することはできないため、構造体は拡張する必要のないオブジェクトに対してのみ使用してください。 作成するオブジェクトのインスタンスサイズが小さい場合は構造体を使用し、クラスと構造体のパフォーマンス特性を考慮してください。  
   
-## <a name="similarities"></a>Similarities  
- Structures and classes are similar in the following respects:  
+## <a name="similarities"></a>共通  
+ 構造体とクラスは、次の点で似ています。  
   
-- Both are *container* types, meaning that they contain other types as members.  
+- どちらも*コンテナー*型であり、他の型をメンバーとして含むことを意味します。  
   
-- Both have members, which can include constructors, methods, properties, fields, constants, enumerations, events, and event handlers. However, do not confuse these members with the declared *elements* of a structure.  
+- どちらにもメンバーがあります。これには、コンストラクター、メソッド、プロパティ、フィールド、定数、列挙体、イベント、およびイベントハンドラーを含めることができます。 ただし、これらのメンバーは、構造体の宣言された*要素*と混同しないでください。  
   
-- Members of both can have individualized access levels. For example, one member can be declared `Public` and another `Private`.  
+- どちらのメンバーも、個別のアクセスレベルを持つことができます。 たとえば、1つのメンバーを `Public` および別の `Private`として宣言できます。  
   
-- Both can implement interfaces.  
+- どちらもインターフェイスを実装できます。  
   
-- Both can have shared constructors, with or without parameters.  
+- どちらも、パラメーターの有無にかかわらず、共有コンストラクターを持つことができます。  
   
-- Both can expose a *default property*, provided that property takes at least one parameter.  
+- プロパティが少なくとも1つのパラメーターを受け取る場合は、どちらも*既定のプロパティ*を公開できます。  
   
-- Both can declare and raise events, and both can declare delegates.  
+- どちらもイベントを宣言して発生させることができ、どちらもデリゲートを宣言できます。  
   
-## <a name="differences"></a>Differences  
- Structures and classes differ in the following particulars:  
+## <a name="differences"></a>[残領域]  
+ 構造体とクラスは、次の点で異なります。  
   
-- Structures are *value types*; classes are *reference types*. A variable of a structure type contains the structure's data, rather than containing a reference to the data as a class type does.  
+- 構造体は*値型*です。クラスは*参照型*です。 構造体型の変数は、データへの参照をクラス型として格納するのではなく、構造体のデータを格納します。  
   
-- Structures use stack allocation; classes use heap allocation.  
+- 構造体はスタック割り当てを使用します。クラスは、ヒープ割り当てを使用します。  
   
-- All structure elements are `Public` by default; class variables and constants are `Private` by default, while other class members are `Public` by default. This behavior for class members provides compatibility with the Visual Basic 6.0 system of defaults.  
+- 既定では、すべての構造体要素が `Public` されます。クラス変数および定数は既定では `Private` ますが、他のクラスメンバーは既定では `Public` ます。 クラスメンバーのこの動作は、既定の Visual Basic 6.0 システムとの互換性を提供します。  
   
-- A structure must have at least one nonshared variable or nonshared, noncustom event element; a class can be completely empty.  
+- 構造体には、少なくとも1つの非共有変数または非共有のカスタム event 要素が必要です。クラスは完全に空にすることができます。  
   
-- Structure elements cannot be declared as `Protected`; class members can.  
+- 構造体要素を `Protected`として宣言することはできません。クラスメンバーは、を使用できます。  
   
-- A structure procedure can handle events only if it is a [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` procedure, and only by means of the [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md); any class procedure can handle events, using either the [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) keyword or the `AddHandler` statement. 詳細については、「[イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)」を参照してください。  
+- 構造体プロシージャでイベントを処理できるのは、それが[共有](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` プロシージャであり、かつ、 [AddHandler ステートメント](../../../../visual-basic/language-reference/statements/addhandler-statement.md)を使用した場合のみです。すべてのクラスプロシージャは、 [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md)キーワードまたは `AddHandler` ステートメントを使用して、イベントを処理できます。 詳細については、「 [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。  
   
-- Structure variable declarations cannot specify initializers or initial sizes for arrays; class variable declarations can.  
+- 構造体変数の宣言では、配列の初期化子または初期サイズを指定できません。クラス変数宣言では、を使用できます。  
   
-- Structures implicitly inherit from the <xref:System.ValueType?displayProperty=nameWithType> class and cannot inherit from any other type; classes can inherit from any class or classes other than <xref:System.ValueType?displayProperty=nameWithType>.  
+- 構造体は <xref:System.ValueType?displayProperty=nameWithType> クラスから暗黙的に継承し、他の型から継承することはできません。クラスは、<xref:System.ValueType?displayProperty=nameWithType>以外のクラスまたはクラスから継承できます。  
   
-- Structures are not inheritable; classes are.  
+- 構造体は継承できません。クラスはです。  
   
-- Structures are never terminated, so the common language runtime (CLR) never calls the <xref:System.Object.Finalize%2A> method on any structure; classes are terminated by the garbage collector (GC), which calls <xref:System.Object.Finalize%2A> on a class when it detects there are no active references remaining.  
+- 構造体は終了されないため、共通言語ランタイム (CLR) は、どの構造体でも <xref:System.Object.Finalize%2A> メソッドを呼び出すことはありません。クラスは、ガベージコレクター (GC) によって終了されます。これは、アクティブな参照が残っていないことを検出したときに、クラスの <xref:System.Object.Finalize%2A> を呼び出します。  
   
-- A structure does not require a constructor; a class does.  
+- 構造体はコンストラクターを必要としません。クラスは、を行います。  
   
-- Structures can have nonshared constructors only if they take parameters; classes can have them with or without parameters.  
+- 構造体は、パラメーターを受け取る場合にのみ、非共有コンストラクターを持つことができます。クラスは、パラメーターの有無にかかわらず、これらを持つことができます。  
   
- Every structure has an implicit public constructor without parameters. This constructor initializes all the structure's data elements to their default values. You cannot redefine this behavior.  
+ すべての構造体には、パラメーターを持たない暗黙のパブリックコンストラクターがあります。 このコンストラクターは、すべての構造体のデータ要素を既定値に初期化します。 この動作を再定義することはできません。  
   
-## <a name="instances-and-variables"></a>Instances and Variables  
- Because structures are value types, each structure variable is permanently bound to an individual structure instance. But classes are reference types, and an object variable can refer to various class instances at different times. This distinction affects your usage of structures and classes in the following ways:  
+## <a name="instances-and-variables"></a>インスタンスと変数  
+ 構造体は値型であるため、各構造体変数は個々の構造体インスタンスに永続的にバインドされます。 ただし、クラスは参照型であり、オブジェクト変数はさまざまなタイミングでさまざまなクラスインスタンスを参照できます。 この区別は、次の方法で構造体とクラスの使用に影響します。  
   
-- **Initialization.** A structure variable implicitly includes an initialization of the elements using the structure's parameterless constructor. Therefore, `Dim s As struct1` is equivalent to `Dim s As struct1 = New struct1()`.  
+- **イニシャライズ.** 構造体変数には、構造体のパラメーターなしのコンストラクターを使用した要素の初期化が暗黙的に含まれます。 したがって、`Dim s As struct1` は `Dim s As struct1 = New struct1()`と同じです。  
   
-- **Assigning Variables.** When you assign one structure variable to another, or pass a structure instance to a procedure argument, the current values of all the variable elements are copied to the new structure. When you assign one object variable to another, or pass an object variable to a procedure, only the reference pointer is copied.  
+- **変数を割り当てています。** ある構造体変数を別の構造体変数に割り当てるか、または構造体インスタンスをプロシージャ引数に渡すと、すべての変数要素の現在の値が新しい構造体にコピーされます。 あるオブジェクト変数を別のオブジェクト変数に割り当てるか、またはオブジェクト変数をプロシージャに渡すと、参照ポインターだけがコピーされます。  
   
-- **Assigning Nothing.** You can assign the value [Nothing](../../../../visual-basic/language-reference/nothing.md) to a structure variable, but the instance continues to be associated with the variable. You can still call its methods and access its data elements, although variable elements are reinitialized by the assignment.  
+- **何も割り当てません。** 構造体変数に値[Nothing](../../../../visual-basic/language-reference/nothing.md)を割り当てることができますが、インスタンスは引き続き変数に関連付けられます。 変数要素は割り当てによって再初期化されますが、そのメソッドを呼び出してデータ要素にアクセスすることはできます。  
   
-     In contrast, if you set an object variable to `Nothing`, you dissociate it from any class instance, and you cannot access any members through the variable until you assign another instance to it.  
+     これに対して、オブジェクト変数を `Nothing`に設定した場合、どのクラスインスタンスとも関連付けを解除すると、別のインスタンスを割り当てるまで変数を介してメンバーにアクセスすることはできません。  
   
-- **Multiple Instances.** An object variable can have different class instances assigned to it at different times, and several object variables can refer to the same class instance at the same time. Changes you make to the values of class members affect those members when accessed through another variable pointing to the same instance.  
+- **複数のインスタンス。** オブジェクト変数は、異なるタイミングで異なるクラスインスタンスを割り当てることができ、複数のオブジェクト変数が同じクラスインスタンスを同時に参照できます。 クラスメンバーの値に加えた変更は、同じインスタンスを指す別の変数を介してアクセスされた場合に、それらのメンバーに影響を与えます。  
   
-     Structure elements, however, are isolated within their own instance. Changes to their values are not reflected in any other structure variables, even in other instances of the same `Structure` declaration.  
+     ただし、構造体要素は、独自のインスタンス内で分離されます。 その値に対する変更は、同じ `Structure` 宣言の他のインスタンスであっても、他の構造体変数には反映されません。  
   
-- **Equality.** Equality testing of two structures must be performed with an element-by-element test. Two object variables can be compared using the <xref:System.Object.Equals%2A> method. <xref:System.Object.Equals%2A> indicates whether the two variables point to the same instance.  
+- **等.** 2つの構造体の等価テストは、要素ごとのテストで実行する必要があります。 <xref:System.Object.Equals%2A> メソッドを使用して、2つのオブジェクト変数を比較できます。 <xref:System.Object.Equals%2A> 2 つの変数が同じインスタンスを指しているかどうかを示します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

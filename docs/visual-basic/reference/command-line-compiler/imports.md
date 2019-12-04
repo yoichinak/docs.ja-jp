@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332967"
 ---
 # <a name="-imports-visual-basic"></a>-imports (Visual Basic)
-Imports namespaces from a specified assembly.  
+指定したアセンブリから名前空間をインポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -24,21 +24,21 @@ Imports namespaces from a specified assembly.
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`namespaceList`|必須です。 Comma-delimited list of namespaces to be imported.|  
+|`namespaceList`|必須。 インポートする名前空間のコンマ区切りの一覧。|  
   
-## <a name="remarks"></a>Remarks  
- The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.  
+## <a name="remarks"></a>コメント  
+ `-imports` オプションは、ソースファイルの現在のセットまたは参照されているアセンブリの中で定義されているすべての名前空間をインポートします。  
   
- The members in a namespace specified with `-imports` are available to all source-code files in the compilation. Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.  
+ `-imports` で指定された名前空間のメンバーは、コンパイル時にすべてのソースコードファイルで使用できます。 [Imports ステートメント (.Net 名前空間と型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)を使用して、1つのソースコードファイルで名前空間を使用します。  
   
-|To set /imports in the Visual Studio integrated development environment|  
+|Visual Studio 統合開発環境で/imports を設定するには|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.  Click the **References** tab.<br />3.  Enter the namespace name in the box beside the **Add User Import** button.<br />4.  Click the **Add User Import** button.|  
+|1.**ソリューションエクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[参照]** タブをクリックします。<br />3. **[ユーザーインポートの追加]** ボタンの横にあるボックスに名前空間名を入力します。<br />4. **[ユーザーインポートの追加]** ボタンをクリックします。|  
   
 ## <a name="example"></a>例  
- The following code compiles when `/imports:system.globalization` is specified. Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ `/imports:system.globalization` を指定すると、次のコードがコンパイルされます。 それがない場合、コンパイルが成功するには、ソースコードファイルの先頭に `Imports System.Globalization` ステートメントが含まれているか、プロパティが `System.Globalization.CultureInfo.CurrentCulture.Name`として完全に修飾されている必要があります。
 
 ```vb
 Module Example
@@ -48,7 +48,7 @@ Module Example
 End Module
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [参照と Imports ステートメント](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)

@@ -14,20 +14,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345147"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>方法: カスタム イベントを宣言してブロックを回避する (Visual Basic)
-There are several circumstances when it is important that one event handler not block subsequent event handlers. Custom events allow the event to call its event handlers asynchronously.  
+1つのイベントハンドラーが後続のイベントハンドラーをブロックしないようにすることが重要な状況がいくつかあります。 カスタムイベントを使用すると、イベントでイベントハンドラーを非同期に呼び出すことができます。  
   
- By default, the backing-store field for an event declaration is a multicast delegate that serially combines all the event handlers. This means that if one handler takes a long time to complete, it blocks the other handlers until it completes. (Well-behaved event handlers should never perform lengthy or potentially blocking operations.)  
+ 既定では、イベント宣言のバッキングストアフィールドは、すべてのイベントハンドラーを順番に結合するマルチキャストデリゲートです。 これは、1つのハンドラーの完了に時間がかかる場合、完了するまで他のハンドラーがブロックされることを意味します。 (適切に動作するイベントハンドラーでは、時間がかかるか、ブロックする可能性のある操作を実行しないでください)。  
   
- Instead of using the default implementation of events that Visual Basic provides, you can use a custom event to execute the event handlers asynchronously.  
+ によって提供さ Visual Basic イベントの既定の実装を使用する代わりに、カスタムイベントを使用してイベントハンドラーを非同期的に実行できます。  
   
 ## <a name="example"></a>例  
- In this example, the `AddHandler` accessor adds the delegate for each handler of the `Click` event to an <xref:System.Collections.ArrayList> stored in the `EventHandlerList` field.  
+ この例では、`AddHandler` アクセサーは、`Click` イベントの各ハンドラーのデリゲートを `EventHandlerList` フィールドに格納されている <xref:System.Collections.ArrayList> に追加します。  
   
- When code raises the `Click` event, the `RaiseEvent` accessor invokes all the event handler delegates asynchronously using the <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> method. That method invokes each handler on a worker thread and returns immediately, so handlers cannot block one another.  
+ コードで `Click` イベントが発生すると、`RaiseEvent` アクセサーは <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> メソッドを使用して、すべてのイベントハンドラーデリゲートを非同期的に呼び出します。 このメソッドは、ワーカースレッド上の各ハンドラーを呼び出し、すぐに制御を戻します。そのため、ハンドラーは互いにブロックできません。  
   
  [!code-vb[VbVbalrEvents#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#27)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Collections.ArrayList>
 - <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>

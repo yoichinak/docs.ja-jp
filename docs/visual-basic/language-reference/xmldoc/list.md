@@ -20,8 +20,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352318"
 ---
-# <a name="list-visual-basic"></a>\<list> (Visual Basic)
-Defines a list or table.  
+# <a name="list-visual-basic"></a>\<一覧 > (Visual Basic)
+リストまたはテーブルを定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,25 +40,25 @@ Defines a list or table.
   
 ## <a name="parameters"></a>パラメーター  
  `type`  
- The type of the list. Must be a "bullet" for a bulleted list, "number" for a numbered list, or "table" for a two-column table.  
+ リストの種類。 箇条書きの場合は "箇条書き"、番号付きリストの場合は "数値"、2列テーブルの場合は "table" にする必要があります。  
   
  `term`  
- Only used when `type` is "table." A term to define, which is defined in the description tag.  
+ `type` が "table" の場合にのみ使用されます。 Description タグで定義されている定義対象の用語。  
   
  `description`  
- When `type` is "bullet" or "number," `description` is an item in the list When `type` is "table," `description` is the definition of `term`.  
+ `type` が "bullet" または "number" の場合、`description` は `type` が "table" の場合はリスト内の項目であり、`description` は `term`の定義です。  
   
-## <a name="remarks"></a>Remarks  
- The `<listheader>` block defines the heading of either a table or definition list. When defining a table, you only have to supply an entry for `term` in the heading.  
+## <a name="remarks"></a>コメント  
+ `<listheader>` ブロックでは、テーブルまたは定義リストの見出しを定義します。 テーブルを定義する場合は、見出しに `term` のエントリを指定するだけで済みます。  
   
- Each item in the list is specified with an `<item>` block. When creating a definition list, you must specify both `term` and `description`. However, for a table, bulleted list, or numbered list, you only have to supply an entry for `description`.  
+ リスト内の各項目には、`<item>` ブロックが指定されています。 定義リストを作成する場合は、`term` と `description`の両方を指定する必要があります。 ただし、テーブル、箇条書きリスト、番号付きリストの場合は、`description`のエントリを指定するだけで済みます。  
   
- A list or table can have as many `<item>` blocks as needed.  
+ リストまたはテーブルには、必要に応じて `<item>` ブロックをいくつでも含めることができます。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- This example uses the `<list>` tag to define a bulleted list in the remarks section.  
+ この例では、`<list>` タグを使用して、「解説」で箇条書きリストを定義します。  
   
  [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   

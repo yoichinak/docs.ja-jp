@@ -1,5 +1,5 @@
 ---
-title: GCLOHThreshold element
+title: GCLOHThreshold 要素
 ms.date: 11/20/2019
 helpviewer_keywords:
 - GCLOHThreshold element
@@ -11,13 +11,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451324"
 ---
-# <a name="gclohthreshold-element"></a>GCLOHThreshold element
+# <a name="gclohthreshold-element"></a>GCLOHThreshold 要素
 
-Specifies the threshold size, in bytes, that causes the garbage collector to put objects on the large object heap (LOH).
+ガベージコレクターがラージオブジェクトヒープ (LOH) にオブジェクトを配置するしきい値のサイズをバイト単位で指定します。
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold>
+&nbsp;&nbsp;[\<ランタイム >](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold >
 
 ## <a name="syntax"></a>構文
 
@@ -30,13 +30,13 @@ Specifies the threshold size, in bytes, that causes the garbage collector to put
 
 |属性|説明|
 |---------------|-----------------|
-|`enabled`|必須の属性です。<br /><br />Specifies the threshold size that causes objects to go on the large object heap.|
+|`enabled`|必須の属性です。<br /><br />オブジェクトが大きなオブジェクトヒープに対して実行されるしきい値のサイズを指定します。|
 
-### <a name="enabled-attribute"></a>enabled attribute
+### <a name="enabled-attribute"></a>enabled 属性
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
-|`nnnn`|The threshold size, in bytes, that causes objects to go on the large object heap.|
+|`nnnn`|オブジェクトが大きなオブジェクトヒープに対して実行されるしきい値のサイズ (バイト単位)。|
 
 ## <a name="child-elements"></a>子要素
 
@@ -49,13 +49,13 @@ Specifies the threshold size, in bytes, that causes the garbage collector to put
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-This setting was introduced in .NET Framework 4.8.
+この設定は .NET Framework 4.8 で導入されました。
 
 ## <a name="see-also"></a>関連項目
 
-- [Run-time settings schema](index.md)
+- [実行時設定スキーマ](index.md)
 - [構成ファイル スキーマ](../index.md)
 - [ガベージ コレクションの基礎](../../../../standard/garbage-collection/fundamentals.md)
-- [NET Core run-time config options for GC](../../../../core/run-time-config/garbage-collector.md)
+- [GC の NET Core ランタイム構成オプション](../../../../core/run-time-config/garbage-collector.md)

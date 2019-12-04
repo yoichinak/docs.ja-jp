@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434386"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName メソッド
-Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.  
+現在のスコープ外にある、指定されたスコープで定義されている型のメタデータトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,34 +37,34 @@ HRESULT DefineTypeRefByName (
   
 ## <a name="parameters"></a>パラメーター  
  `tkResolutionScope`  
- [in] The token specifying the resolution scope. The following token types are valid:  
+ から解決スコープを指定するトークン。 有効なトークンの種類は次のとおりです。  
   
-- `mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.  
+- 型が、呼び出し元が定義されている同じアセンブリで定義されている場合は `mdModuleRef`。  
   
-- `mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.  
+- 型が、呼び出し元が定義されているアセンブリ以外のアセンブリで定義されている場合は `mdAssemblyRef`。  
   
-- `mdTypeRef`, if the type is a nested type.  
+- 型が入れ子にされた型の場合は `mdTypeRef`。  
   
-- `mdModule`, if the type is defined in the same module in which the caller is defined.  
+- 型が、呼び出し元が定義されている同じモジュールで定義されている場合は `mdModule`。  
   
-- Null, if the type is defined globally.  
+- 型がグローバルに定義されている場合は Null。  
   
  `szName`  
- [in] The name of the target type in Unicode.  
+ からUnicode での対象の型の名前。  
   
  `ptr`  
- [out] A pointer to the `mdTypeRef` token that is assigned to the type.  
+ 入出力型に割り当てられている `mdTypeRef` トークンへのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

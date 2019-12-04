@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348000"
 ---
 # <a name="com-interop-visual-basic"></a>COM 相互運用 (Visual Basic)
-コンポーネント オブジェクト モデル (COM) では、オブジェクトがその機能を他のコンポーネントに公開し、アプリケーションをホストすることを許可します。 今日のソフトウェアのほとんどに、COM オブジェクトが含まれています。 .NET アセンブリは新しいアプリケーションに最適ですが、時には COM オブジェクトを使用する必要があります。 This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
+コンポーネント オブジェクト モデル (COM) では、オブジェクトがその機能を他のコンポーネントに公開し、アプリケーションをホストすることを許可します。 今日のソフトウェアのほとんどに、COM オブジェクトが含まれています。 .NET アセンブリは新しいアプリケーションに最適ですが、時には COM オブジェクトを使用する必要があります。 このセクションでは、Visual Basic での COM オブジェクトの作成と使用に関連するいくつかの問題について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [COM 相互運用の概要](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
@@ -23,7 +23,7 @@ ms.locfileid: "74348000"
  タイプ ライブラリがある COM オブジェクトへの参照を追加する方法を説明します。  
   
  [方法 : ActiveX コントロールを操作する](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
+ 既存の ActiveX コントロールを使用して、Visual Studio のツールボックスに機能を追加する方法を示します。  
   
  [チュートリアル : Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Windows オペレーティング システムの一部である API を呼び出すプロセスの手順を示します。  
@@ -46,7 +46,7 @@ ms.locfileid: "74348000"
  [チュートリアル : COM オブジェクトによる継承の実装](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  新しいオブジェクトの基本として既存の COM オブジェクトを使用する方法を説明します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [アンマネージ コードとの相互運用](../../../framework/interop/index.md)  
  共通言語ランタイムが提供する相互運用サービスについて説明します。  
   

@@ -24,53 +24,53 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74338688"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>相互運用性のトラブルシューティング (Visual Basic)
-When you interoperate between COM and the managed code of the .NET Framework, you may encounter one or more of the following common issues.  
+.NET Framework の COM とマネージコードの間で相互運用を行う場合は、次の一般的な問題の1つ以上が発生する可能性があります。  
   
-## <a name="vbconinteroperabilitymarshalinganchor1"></a> Interop Marshaling  
- At times, you may have to use data types that are not part of the .NET Framework. Interop assemblies handle most of the work for COM objects, but you may have to control the data types that are used when managed objects are exposed to COM. For example, structures in class libraries must specify the `BStr` unmanaged type on strings sent to COM objects created by Visual Basic 6.0 and earlier versions. In such cases, you can use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to cause managed types to be exposed as unmanaged types.  
+## <a name="vbconinteroperabilitymarshalinganchor1"></a>相互運用マーシャリング  
+ 場合によっては、.NET Framework の一部ではないデータ型の使用が必要になることがあります。 相互運用機能アセンブリは COM オブジェクトのほとんどの作業を処理しますが、マネージオブジェクトが COM に公開されるときに使用されるデータ型の制御が必要になる場合があります。 たとえば、クラスライブラリ内の構造体は、Visual Basic 6.0 以前のバージョンで作成された COM オブジェクトに送信される文字列に `BStr` アンマネージ型を指定する必要があります。 このような場合は、<xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性を使用して、マネージ型をアンマネージ型として公開することができます。  
   
-## <a name="vbconinteroperabilitymarshalinganchor2"></a> Exporting Fixed-Length Strings to Unmanaged Code  
- In Visual Basic 6.0 and earlier versions, strings are exported to COM objects as sequences of bytes without a null termination character. For compatibility with other languages, Visual Basic .NET includes a termination character when exporting strings. The best way to address this incompatibility is to export strings that lack the termination character as arrays of `Byte` or `Char`.  
+## <a name="vbconinteroperabilitymarshalinganchor2"></a>アンマネージコードへの固定長文字列のエクスポート  
+ Visual Basic 6.0 以前のバージョンでは、文字列は、null 終端文字のないバイトのシーケンスとして COM オブジェクトにエクスポートされます。 他の言語との互換性のために、Visual Basic .NET には文字列をエクスポートするときに終了文字が含まれます。 この非互換性に対処する最善の方法は、`Byte` または `Char`の配列として終了文字を持たない文字列をエクスポートすることです。  
   
-## <a name="vbconinteroperabilitymarshalinganchor3"></a> Exporting Inheritance Hierarchies  
- Managed class hierarchies flatten out when exposed as COM objects. For example, if you define a base class with a member, and then inherit the base class in a derived class that is exposed as a COM object, clients that use the derived class in the COM object will not be able to use the inherited members. Base class members can be accessed from COM objects only as instances of a base class, and then only if the base class is also created as a COM object.  
+## <a name="vbconinteroperabilitymarshalinganchor3"></a>継承階層のエクスポート  
+ COM オブジェクトとして公開されると、マネージクラスの階層はフラット化されます。 たとえば、メンバーを持つ基本クラスを定義した後、COM オブジェクトとして公開されている派生クラスで基底クラスを継承した場合、COM オブジェクトの派生クラスを使用するクライアントは、継承されたメンバーを使用できません。 基底クラスのメンバーは、COM オブジェクトから基底クラスのインスタンスとしてのみアクセスできます。その後、基底クラスも COM オブジェクトとして作成されます。  
   
 ## <a name="overloaded-methods"></a>オーバーロードされたメソッド  
- Although you can create overloaded methods with Visual Basic, they are not supported by COM. When a class that contains overloaded methods is exposed as a COM object, new method names are generated for the overloaded methods.  
+ オーバーロードされたメソッドは Visual Basic で作成できますが、COM ではサポートされていません。 オーバーロードされたメソッドを含むクラスが COM オブジェクトとして公開されると、オーバーロードされたメソッドの新しいメソッド名が生成されます。  
   
- For example, consider a class that has two overloads of the `Synch` method. When the class is exposed as a COM object, the new generated method names could be `Synch` and `Synch_2`.  
+ たとえば、`Synch` メソッドの2つのオーバーロードを持つクラスを考えてみます。 クラスが COM オブジェクトとして公開されている場合は、生成された新しいメソッド名を `Synch` して `Synch_2`できます。  
   
- The renaming can cause two problems for consumers of the COM object.  
+ 名前を変更すると、COM オブジェクトのコンシューマーに2つの問題が発生する可能性があります。  
   
-1. Clients might not expect the generated method names.  
+1. クライアントは、生成されたメソッド名を予期していない可能性があります。  
   
-2. The generated method names in the class exposed as a COM object can change when new overloads are added to the class or its base class. This can cause versioning problems.  
+2. COM オブジェクトとして公開されるクラスに生成されたメソッド名は、新しいオーバーロードがクラスまたはその基底クラスに追加されたときに変更される可能性があります。 これにより、バージョン管理の問題が発生する可能性があります。  
   
- To solve both problems, give each method a unique name, instead of using overloading, when you develop objects that will be exposed as COM objects.  
+ 両方の問題を解決するには、COM オブジェクトとして公開されるオブジェクトを開発するときに、オーバーロードを使用するのではなく、各メソッドに一意の名前を指定します。  
   
-## <a name="vbconinteroperabilitymarshalinganchor4"></a> Use of COM Objects Through Interop Assemblies  
- You use interop assemblies almost as if they are managed code replacements for the COM objects they represent. However, because they are wrappers and not actual COM objects, there are some differences between using interop assemblies and standard assemblies. These areas of difference include the exposure of classes, and data types for parameters and return values.  
+## <a name="vbconinteroperabilitymarshalinganchor4"></a>相互運用機能アセンブリによる COM オブジェクトの使用  
+ 相互運用機能アセンブリは、それらが表す COM オブジェクトのマネージコード置換の場合とほぼ同じように使用します。 ただし、これらはラッパーであり、実際の COM オブジェクトではないため、相互運用機能アセンブリと標準アセンブリの使用にはいくつかの違いがあります。 これらの違いの領域には、クラスの公開、およびパラメーターと戻り値のデータ型が含まれます。  
   
-## <a name="vbconinteroperabilitymarshalinganchor5"></a> Classes Exposed as Both Interfaces and Classes  
- Unlike classes in standard assemblies, COM classes are exposed in interop assemblies as both an interface and a class that represents the COM class. The interface's name is identical to that of the COM class. The name of the interop class is the same as that of the original COM class, but with the word "Class" appended. For example, suppose you have a project with a reference to an interop assembly for a COM object. If the COM class is named `MyComClass`, IntelliSense and the Object Browser show an interface named `MyComClass` and a class named `MyComClassClass`.  
+## <a name="vbconinteroperabilitymarshalinganchor5"></a>インターフェイスとクラスの両方として公開されるクラス  
+ 標準アセンブリのクラスとは異なり、COM クラスは相互運用機能アセンブリで、COM クラスを表すインターフェイスとクラスの両方として公開されます。 インターフェイスの名前は、COM クラスの名前と同じです。 相互運用クラスの名前は、元の COM クラスの名前と同じですが、"Class" という単語が追加されています。 たとえば、COM オブジェクトの相互運用機能アセンブリへの参照を持つプロジェクトがあるとします。 COM クラスに `MyComClass`という名前が付けられている場合、IntelliSense とオブジェクトブラウザーには、`MyComClass` という名前のインターフェイスと、`MyComClassClass`という名前のクラスが表示されます。  
   
-## <a name="vbconinteroperabilitymarshalinganchor6"></a> Creating Instances of a .NET Framework Class  
- Generally, you create an instance of a .NET Framework class using the `New` statement with a class name. Having a COM class represented by an interop assembly is the one case in which you can use the `New` statement with an interface. Unless you are using the COM class with an `Inherits` statement, you can use the interface just as you would a class. The following code demonstrates how to create a `Command` object in a project that has a reference to the Microsoft ActiveX Data Objects 2.8 Library COM object:  
+## <a name="vbconinteroperabilitymarshalinganchor6"></a>.NET Framework クラスのインスタンスの作成  
+ 一般に、クラス名を指定した `New` ステートメントを使用して、.NET Framework クラスのインスタンスを作成します。 相互運用機能アセンブリによって表される COM クラスは、インターフェイスで `New` ステートメントを使用できるケースの1つです。 `Inherits` ステートメントで COM クラスを使用している場合を除き、クラスの場合と同様に、インターフェイスを使用できます。 次のコードは、Microsoft ActiveX データオブジェクト2.8 ライブラリ COM オブジェクトへの参照を含むプロジェクトに `Command` オブジェクトを作成する方法を示しています。  
   
  [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
- However, if you are using the COM class as the base for a derived class, you must use the interop class that represents the COM class, as in the following code:  
+ ただし、COM クラスを派生クラスのベースとして使用している場合は、次のコードのように、COM クラスを表す interop クラスを使用する必要があります。  
   
  [!code-vb[VbVbalrInterop#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#21)]  
   
 > [!NOTE]
-> Interop assemblies implicitly implement interfaces that represent COM classes. You should not try to use the `Implements` statement to implement these interfaces or an error will result.  
+> 相互運用機能アセンブリは、COM クラスを表すインターフェイスを暗黙的に実装します。 これらのインターフェイスを実装するために `Implements` ステートメントを使用しないでください。または、エラーが発生します。  
   
-## <a name="vbconinteroperabilitymarshalinganchor7"></a> Data Types for Parameters and Return Values  
- Unlike members of standard assemblies, interop assembly members may have data types that differ from those used in the  original object declaration. Although interop assemblies implicitly convert COM types to compatible common language runtime types, you should pay attention to the data types that are used by both sides to prevent runtime errors. For example, in COM objects created in Visual Basic 6.0 and earlier versions, values of type `Integer` assume the .NET Framework equivalent type, `Short`. It is recommended that you use the Object Browser to examine the characteristics of imported members before you use them.  
+## <a name="vbconinteroperabilitymarshalinganchor7"></a>パラメーターと戻り値のデータ型  
+ 標準アセンブリのメンバーとは異なり、相互運用機能アセンブリのメンバーは、元のオブジェクト宣言で使用されるデータ型とは異なるデータ型を持つ場合があります。 相互運用機能アセンブリは、COM 型を互換性のある共通言語ランタイム型に暗黙的に変換しますが、ランタイムエラーを防ぐために、両側で使用されるデータ型に注意する必要があります。 たとえば、Visual Basic 6.0 以前のバージョンで作成された COM オブジェクトでは、型 `Integer` の値は、`Short`の .NET Framework 等価な型を想定しています。 インポートしたメンバーを使用する前に、その特性を確認するには、オブジェクトブラウザーを使用することをお勧めします。  
   
-## <a name="vbconinteroperabilitymarshalinganchor8"></a> Module level COM methods  
- Most COM objects are used by creating an instance of a COM class using the `New` keyword and then calling methods of the object. One exception to this rule involves COM objects that contain `AppObj` or `GlobalMultiUse` COM classes. Such classes resemble module level methods in Visual Basic .NET classes. Visual Basic 6.0 and earlier versions implicitly create instances of such objects for you the first time that you call one of their methods. For example, in Visual Basic 6.0 you can add a reference to the Microsoft DAO 3.6 Object Library and call the `DBEngine` method without first creating an instance:  
+## <a name="vbconinteroperabilitymarshalinganchor8"></a>モジュールレベルの COM メソッド  
+ ほとんどの COM オブジェクトは、`New` キーワードを使用して COM クラスのインスタンスを作成し、そのオブジェクトのメソッドを呼び出すことによって使用されます。 この規則の1つの例外として、`AppObj` または `GlobalMultiUse` COM クラスを含む COM オブジェクトがあります。 このようなクラスは Visual Basic .NET クラスのモジュールレベルメソッドに似ています。 Visual Basic 6.0 以前のバージョンでは、メソッドのいずれかを初めて呼び出すときに、これらのオブジェクトのインスタンスが暗黙的に作成されます。 たとえば、Visual Basic 6.0 では、Microsoft DAO 3.6 オブジェクトライブラリへの参照を追加し、最初にインスタンスを作成せずに `DBEngine` メソッドを呼び出すことができます。  
   
 ```vb  
 Dim db As DAO.Database  
@@ -79,54 +79,54 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ' Use the database object.  
 ```  
   
- Visual Basic .NET requires that you always create instances of COM objects before you can use their methods. To use these methods in Visual Basic, declare a variable of the desired class and use the new keyword to assign the object to the object variable. The `Shared` keyword can be used when you want to make sure that only one instance of the class is created.  
+ Visual Basic .NET では、メソッドを使用する前に、常に COM オブジェクトのインスタンスを作成する必要があります。 これらのメソッドを Visual Basic で使用するには、目的のクラスの変数を宣言し、new キーワードを使用してオブジェクトをオブジェクト変数に割り当てます。 `Shared` キーワードは、クラスのインスタンスが1つだけ作成されるようにする場合に使用できます。  
   
  [!code-vb[VbVbalrInterop#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#23)]  
   
-## <a name="vbconinteroperabilitymarshalinganchor9"></a> Unhandled Errors in Event Handlers  
- One common interop problem involves errors in event handlers that handle events raised by COM objects. Such errors are ignored unless you specifically check for errors using `On Error` or `Try...Catch...Finally` statements. For example, the following example is from a Visual Basic .NET project that has a reference to the Microsoft ActiveX Data Objects 2.8 Library COM object.  
+## <a name="vbconinteroperabilitymarshalinganchor9"></a>イベントハンドラーでのハンドルされないエラー  
+ 一般的な相互運用の問題には、COM オブジェクトによって発生するイベントを処理するイベントハンドラーでのエラーが含まれます。 `On Error` または `Try...Catch...Finally` ステートメントを使用してエラーを明示的にチェックしない限り、このようなエラーは無視されます。 たとえば、次の例は、Microsoft ActiveX データオブジェクト2.8 ライブラリ COM オブジェクトへの参照を含む Visual Basic .NET プロジェクトからのものです。  
   
  [!code-vb[VbVbalrInterop#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#24)]  
   
- This example raises an error as expected. However, if you try the same example without the `Try...Catch...Finally` block, the error is ignored as if you used the `OnError Resume Next` statement. Without error handling, the division by zero silently fails. Because such errors never raise unhandled exception errors, it is important that you use some form of exception handling in event handlers that handle events from COM objects.  
+ この例では、予期したとおりにエラーが発生します。 ただし、`Try...Catch...Finally` ブロックを指定せずに同じ例を試した場合、`OnError Resume Next` ステートメントを使用した場合と同様に、エラーは無視されます。 エラー処理がなければ、0による除算は自動的に失敗します。 このようなエラーによってハンドルされない例外エラーが発生することはないため、COM オブジェクトからのイベントを処理するイベントハンドラーで何らかの形式の例外処理を使用することが重要です。  
   
-### <a name="understanding-com-interop-errors"></a>Understanding COM interop errors  
- Without error handling, interop calls often generate errors that provide little information. Whenever possible, use structured error handling to provide more information about problems when they occur. This can be especially helpful when you debug applications. (例:  
+### <a name="understanding-com-interop-errors"></a>COM 相互運用エラーについて  
+ エラー処理を行わないと、相互運用呼び出しによって多くの情報を提供するエラーが発生することがよくあります。 可能な限り、構造化されたエラー処理を使用して、発生した問題に関する詳細情報を提供します。 これは、アプリケーションをデバッグするときに特に役立ちます。 例 :  
   
  [!code-vb[VbVbalrInterop#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#25)]  
   
- You can find information such as the error description, HRESULT, and the source of COM errors by examining the contents of the exception object.  
+ 例外オブジェクトの内容を調べることによって、エラーの説明、HRESULT、COM エラーの発生源などの情報を確認できます。  
   
-## <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX Control Issues  
- Most ActiveX controls that work with Visual Basic 6.0 work with Visual Basic .NET without trouble. The main exceptions are container controls, or controls that visually contain other controls. Some examples of older controls that do not work correctly with Visual Studio are as follows:  
+## <a name="vbconinteroperabilitymarshalinganchor10"></a>ActiveX コントロールの問題  
+ Visual Basic 6.0 で動作するほとんどの ActiveX コントロールは、Visual Basic .NET では問題なく動作します。 主な例外は、コンテナーコントロール、または他のコントロールを視覚的に含むコントロールです。 Visual Studio で正しく動作しない古いコントロールの例を次に示します。  
   
-- Microsoft Forms 2.0 Frame control  
+- Microsoft Forms 2.0 Frame コントロール  
   
-- Up-Down control, also known as the spin control  
+- アップダウンコントロール。スピンコントロールとも呼ばれます。  
   
-- Sheridan Tab Control  
+- Sheridan タブコントロール  
   
- There are only a few workarounds for unsupported ActiveX control problems. You can migrate existing controls to Visual Studio if you own the original source code. Otherwise, you can check with software vendors for updated .NET-compatible versions of controls to replace unsupported ActiveX controls.  
+ サポートされていない ActiveX コントロールの問題には、いくつかの回避策があります。 元のソースコードを所有している場合は、既存のコントロールを Visual Studio に移行できます。 それ以外の場合は、ソフトウェアベンダーに更新プログラムがあるかどうかを確認できます。サポートされていない ActiveX コントロールを置き換える、互換性のあるコントロールのバージョン。  
   
-## <a name="vbconinteroperabilitymarshalinganchor11"></a> Passing ReadOnly Properties of Controls ByRef  
- Visual Basic .NET sometimes raises COM errors such as, "Error 0x800A017F CTL_E_SETNOTSUPPORTED", when you pass `ReadOnly` properties of some older ActiveX controls as `ByRef` parameters to other procedures. Similar procedure calls from Visual Basic 6.0 do not raise an error, and the parameters are treated as if you passed them by value. The Visual Basic .NET error message indicates that you are trying to change a property that does not have a property `Set` procedure.  
+## <a name="vbconinteroperabilitymarshalinganchor11"></a>コントロールの読み取り専用プロパティを ByRef で渡す  
+ Visual Basic .NET では、一部の古い ActiveX コントロールの `ReadOnly` プロパティを他のプロシージャに `ByRef` パラメーターとして渡すと、"Error 0x800A017F CTL_E_SETNOTSUPPORTED" などの COM エラーが発生することがあります。 Visual Basic 6.0 からの同様のプロシージャ呼び出しではエラーは発生せず、パラメーターは値渡しで渡されたものとして扱われます。 Visual Basic .NET のエラーメッセージは、プロパティ `Set` プロシージャを持たないプロパティを変更しようとしていることを示します。  
   
- If you have access to the procedure being called, you can prevent this error by using the `ByVal` keyword to declare parameters that accept `ReadOnly` properties. (例:  
+ 呼び出されているプロシージャにアクセスできる場合は、`ByVal` キーワードを使用して `ReadOnly` プロパティを受け取るパラメーターを宣言することで、このエラーを回避できます。 例 :  
   
  [!code-vb[VbVbalrInterop#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#26)]  
   
- If you do not have access to the source code for the procedure being called, you can force the property to be passed by value by adding an extra set of brackets around the calling procedure. For example, in a project that has a reference to the Microsoft ActiveX Data Objects 2.8 Library COM object, you can use:  
+ 呼び出されているプロシージャのソースコードにアクセスできない場合は、呼び出し元のプロシージャの周囲に余分な角かっこを追加することで、プロパティを強制的に値で渡すことができます。 たとえば、Microsoft ActiveX データオブジェクト2.8 ライブラリ COM オブジェクトへの参照を持つプロジェクトでは、次のようなを使用できます。  
   
  [!code-vb[VbVbalrInterop#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#27)]  
   
-## <a name="vbconinteroperabilitymarshalinganchor12"></a> Deploying Assemblies That Expose Interop  
- Deploying assemblies that expose COM interfaces presents some unique challenges. For example, a potential problem occurs when separate applications reference the same COM assembly. This situation is common when a new version of an assembly is installed and another application is still using the old version of the assembly. If you uninstall an assembly that shares a DLL, you can unintentionally make it unavailable to the other assemblies.  
+## <a name="vbconinteroperabilitymarshalinganchor12"></a>相互運用機能を公開するアセンブリの配置  
+ COM インターフェイスを公開するアセンブリを配置すると、いくつかの固有の課題が生じます。 たとえば、別のアプリケーションが同じ COM アセンブリを参照すると、問題が発生する可能性があります。 この状況は、新しいバージョンのアセンブリがインストールされていて、別のアプリケーションが以前のバージョンのアセンブリを引き続き使用している場合によく発生します。 DLL を共有するアセンブリをアンインストールする場合、そのアセンブリを他のアセンブリで使用できないようにすることができます。  
   
- To avoid this problem, you should install shared assemblies to the Global Assembly Cache (GAC) and use a MergeModule for the component. If you cannot install the application in the GAC, it should be installed to CommonFilesFolder in a version-specific subdirectory.  
+ この問題を回避するには、共有アセンブリをグローバルアセンブリキャッシュ (GAC) にインストールし、コンポーネントにマージモジュールを使用する必要があります。 GAC にアプリケーションをインストールできない場合は、バージョン固有のサブディレクトリにある CommonFilesFolder にインストールする必要があります。  
   
- Assemblies that are not shared should be located side by side in the directory with the calling application.  
+ 共有されていないアセンブリは、呼び出し元のアプリケーションのディレクトリに並べて配置する必要があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)

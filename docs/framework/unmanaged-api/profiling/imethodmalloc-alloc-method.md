@@ -24,7 +24,7 @@ ms.locfileid: "74447570"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc メソッド
 
-Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.
+新しい Microsoft 中間言語 (MSIL) 関数本体に対して、指定された量のメモリを割り当てようとします。
 
 ## <a name="syntax"></a>構文
 
@@ -37,15 +37,15 @@ PVOID Alloc (
 ## <a name="parameters"></a>パラメーター
 
 `cb`\
-[in] The number of bytes to allocate for the method body.
+からメソッド本体に割り当てるバイト数。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
- The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator. In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address. If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.
+ 割り当てられたメモリは、このアロケーターに関連付けられているモジュールのベースアドレスよりも大きいアドレスから開始されます。 つまり、各アロケーターは特定のモジュールに対して作成され、そのベースアドレスからの正のオフセットでメモリの割り当てが試行されます。 `Alloc` が、モジュールのベースアドレスよりも大きいアドレスで、要求されたバイト数を割り当てることができなかった場合は、使用可能なメモリ領域の実際の量に関係なく、E_OUTOFMEMORY を返します。
 
- The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) method.
+ `Alloc` メソッドは、 [ICorProfilerInfo:: SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md)メソッドと組み合わせて使用する必要があります。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
 
  **ヘッダー** : CorProf.idl、CorProf.h
@@ -54,6 +54,6 @@ PVOID Alloc (
 
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMethodMalloc インターフェイス](imethodmalloc-interface.md)

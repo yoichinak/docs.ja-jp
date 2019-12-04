@@ -26,23 +26,23 @@ Take count
   
 ## <a name="parts"></a>指定項目  
  `count`  
- 必須です。 A value or an expression that evaluates to the number of elements of the sequence to return.  
+ 必須。 返されるシーケンスの要素数に評価される値または式。  
   
-## <a name="remarks"></a>Remarks  
- The `Take` clause causes a query to include a specified number of contiguous elements from the start of a results list. The number of elements to include is specified by the `count` parameter.  
+## <a name="remarks"></a>コメント  
+ `Take` 句を指定すると、クエリに結果リストの先頭から指定した数の連続する要素が含まれます。 含める要素の数は `count` パラメーターによって指定されます。  
   
- You can use the `Take` clause with the `Skip` clause to return a range of data from any segment of a query. To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause. In this case, the `Take` clause must be specified after the `Skip` clause.  
+ `Skip` 句と共に `Take` 句を使用すると、クエリの任意のセグメントからデータの範囲を返すことができます。 これを行うには、範囲の最初の要素のインデックスを `Skip` 句に渡し、範囲のサイズを `Take` 句に渡します。 この場合、`Skip` 句の後に `Take` 句を指定する必要があります。  
   
- When you use the `Take` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Take` clause to include the intended results. For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ クエリで `Take` 句を使用する場合は、`Take` 句に意図した結果を含めることができる順序で結果が返されるようにすることも必要になる場合があります。 クエリ結果の順序付けの詳細については、「 [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)」を参照してください。  
   
- You can use the `TakeWhile` clause to specify that only certain elements be returned, depending on a supplied condition.  
+ 指定された条件に応じて、特定の要素のみが返されるように指定するには、`TakeWhile` 句を使用します。  
   
 ## <a name="example"></a>例  
- The following code example uses the `Take` clause together with the `Skip` clause to return data from a query in pages. The GetCustomers function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.  
+ 次のコード例では、`Skip` 句と共に `Take` 句を使用して、ページ内のクエリからデータを返します。 GetCustomers 関数は、`Skip` 句を使用して、指定された開始インデックス値までリスト内の顧客をバイパスし、`Take` 句を使用して、そのインデックス値から始まる顧客のページを返します。  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)

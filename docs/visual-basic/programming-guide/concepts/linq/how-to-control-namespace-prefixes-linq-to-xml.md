@@ -1,5 +1,5 @@
 ---
-title: 'How to: Control Namespace Prefixes (LINQ to XML)'
+title: '方法: 名前空間プレフィックスを制御する (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
 ms.openlocfilehash: 5ba415452a8671466c3a4c71a88731e5bd3cda60
@@ -15,7 +15,7 @@ ms.locfileid: "74348382"
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- この例では、2 つの名前空間を宣言します。 It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.  
+ この例では、2 つの名前空間を宣言します。 `http://www.adventure-works.com` 名前空間にプレフィックス `aw`があり、`www.fourthcoffee.com` 名前空間のプレフィックスが `fc`であることを指定します。  
   
 ### <a name="code"></a>コード  
   
@@ -55,4 +55,4 @@ End Module
   
 ## <a name="see-also"></a>関連項目
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [名前空間の概要 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

@@ -27,7 +27,7 @@ ms.locfileid: "74343813"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else ディレクティブ
 
-Conditionally compiles selected blocks of Visual Basic code.
+選択された Visual Basic コードのブロックを条件付きでコンパイルします。
 
 ## <a name="syntax"></a>構文
 
@@ -47,26 +47,26 @@ Conditionally compiles selected blocks of Visual Basic code.
 ## <a name="parts"></a>指定項目
 
 `expression`  
-Required for `#If` and `#ElseIf` statements, optional elsewhere. Any expression, consisting exclusively of one or more conditional compiler constants, literals, and operators, that evaluates to `True` or `False`.
+`#If` および `#ElseIf` のステートメント、他の場所では省略可能です。 `True` または `False`に評価される1つ以上の条件付きコンパイラ定数、リテラル、および演算子で構成される任意の式。
 
 `statements`  
-Required for `#If` statement block, optional elsewhere. Visual Basic program lines or compiler directives that are compiled if the associated expression evaluates to `True`.
+`#If` ステートメントブロックに必要です。他の場所では省略可能です。 関連付けられた式が `True`に評価される場合にコンパイルされるプログラムラインまたはコンパイラディレクティブを Visual Basic します。
 
 `#End If`  
-Terminates the `#If` statement block.
+`#If` ステートメントブロックを終了します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-On the surface, the behavior of the `#If...Then...#Else` directives appears the same as that of the `If...Then...Else` statements. However, the `#If...Then...#Else` directives evaluate what is compiled by the compiler, whereas the `If...Then...Else` statements evaluate conditions at run time.
+サーフェイスでは、`#If...Then...#Else` ディレクティブの動作は、`If...Then...Else` ステートメントと同じになります。 ただし、`#If...Then...#Else` ディレクティブは、コンパイラによってコンパイルされた内容を評価します。一方、`If...Then...Else` ステートメントは、実行時に条件を評価します。
 
-Conditional compilation is typically used to compile the same program for different platforms. It is also used to prevent debugging code from appearing in an executable file. Code excluded during conditional compilation is completely omitted from the final executable file, so it has no effect on size or performance.
+通常、条件付きコンパイルは、異なるプラットフォームに対して同じプログラムをコンパイルするために使用されます。 また、デバッグコードが実行可能ファイルに表示されないようにするためにも使用されます。 条件付きコンパイル中に除外されたコードは、最終的な実行可能ファイルから完全に省略されるため、サイズやパフォーマンスには影響しません。
 
-Regardless of the outcome of any evaluation, all expressions are evaluated using `Option Compare Binary`. The `Option Compare` statement does not affect expressions in `#If` and `#ElseIf` statements.
+評価の結果に関係なく、すべての式は `Option Compare Binary`を使用して評価されます。 `Option Compare` ステートメントは、`#If` および `#ElseIf` ステートメントの式には影響しません。
 
 > [!NOTE]
-> No single-line form of the `#If`, `#Else`, `#ElseIf`, and `#End If` directives exists. No other code can appear on the same line as any of the directives.
+> `#If`、`#Else`、`#ElseIf`、および `#End If` ディレクティブの単一行形式は存在しません。 ディレクティブと同じ行に他のコードを記述することはできません。
 
-The statements within a conditional compilation block must be complete logical statements. For example, you cannot conditionally compile only the attributes of a function, but you can conditionally declare the function along with its attributes:
+条件付きコンパイルブロック内のステートメントは、完全な論理ステートメントである必要があります。 たとえば、条件付きで関数の属性のみをコンパイルすることはできませんが、その属性と共に関数を条件付きで宣言することはできます。
 
 ```vb
 #If DEBUG Then
@@ -80,7 +80,7 @@ Public Function SomeFunction() As String
 
 ## <a name="example"></a>例
 
-This example uses the `#If...Then...#Else` construct to determine whether to compile certain statements.
+この例では、`#If...Then...#Else` コンストラクトを使用して、特定のステートメントをコンパイルするかどうかを判断します。
 
 [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]
 

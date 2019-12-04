@@ -31,7 +31,7 @@ ms.locfileid: "74353572"
   
  [型リスト](../../../visual-basic/language-reference/statements/type-list.md)  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)

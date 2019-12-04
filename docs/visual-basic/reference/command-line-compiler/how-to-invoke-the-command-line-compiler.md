@@ -16,49 +16,49 @@ ms.locfileid: "74344259"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>方法: コマンド ライン コンパイラを起動する (Visual Basic)
 
-You can invoke the command-line compiler by typing the name of its executable file into the command line, also known as the MS-DOS prompt. If you compile from the default Windows Command Prompt, you must type the fully qualified path to the executable file. To override this default behavior, you can either use the Developer Command Prompt for Visual Studio, or modify the PATH environment variable. Both allow you to compile from any directory by simply typing the compiler name.
+コマンドラインコンパイラを起動するには、実行可能ファイルの名前をコマンドラインに入力します (MS-DOS プロンプトとも呼ばれます)。 既定の Windows コマンドプロンプトからコンパイルする場合は、実行可能ファイルへの完全修飾パスを入力する必要があります。 この既定の動作をオーバーライドするには、Visual Studio の開発者コマンドプロンプトを使用するか、または PATH 環境変数を変更します。 どちらの方法でも、コンパイラ名を入力するだけで、任意のディレクトリからコンパイルできます。
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>To invoke the compiler using the Developer Command Prompt for Visual Studio
+## <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>Visual Studio の開発者コマンドプロンプトを使用してコンパイラを呼び出すには
 
-1. Open the Visual Studio Tools program folder within the Microsoft Visual Studio program group.
+1. Microsoft Visual Studio プログラムグループ内の Visual Studio Tools program フォルダーを開きます。
 
-2. You can use the Developer Command Prompt for Visual Studio to access the compiler from any directory on your machine, if Visual Studio is installed.
+2. Visual studio がインストールされている場合は、Visual Studio の開発者コマンドプロンプトを使用して、コンピューター上の任意のディレクトリからコンパイラにアクセスできます。
 
-3. Invoke the Developer Command Prompt for Visual Studio.
+3. Visual Studio の開発者コマンドプロンプトを起動します。
 
-4. At the command line, type `vbc.exe` *sourceFileName* and then press ENTER.
+4. コマンドラインで、「`vbc.exe` *Sourcefilename* 」と入力し、enter キーを押します。
 
-    For example, if you stored your source code in a directory called `SourceFiles`, you would open the Command Prompt and type `cd SourceFiles` to change to that directory. If the directory contained a source file named `Source.vb`, you could compile it by typing `vbc.exe Source.vb`.
+    たとえば、ソースコードを `SourceFiles`という名前のディレクトリに保存した場合は、コマンドプロンプトを開き `cd SourceFiles` と入力して、そのディレクトリに変更します。 ディレクトリに `Source.vb`という名前のソースファイルが含まれている場合は、「`vbc.exe Source.vb`」と入力してコンパイルできます。
 
-## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>To set the PATH environment variable to the compiler for the Windows Command Prompt
+## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Windows のコマンドプロンプト用に PATH 環境変数をコンパイラに設定するには
 
-1. Use the Windows Search feature to find Vbc.exe on your local disk.
+1. Windows 検索機能を使用して、ローカルディスクで Vbc.exe を検索します。
 
-    The exact name of the directory where the compiler is located depends on the location of the Windows directory and the version of the ".NET Framework" installed. If you have more than one version of the ".NET Framework" installed, you must determine which version to use (typically the latest version).
+    コンパイラが配置されているディレクトリの正確な名前は、Windows ディレクトリの場所とインストールされている ".NET Framework" のバージョンによって異なります。 ".NET Framework" の複数のバージョンがインストールされている場合は、使用するバージョン (通常は最新バージョン) を決定する必要があります。
 
-2. From your **Start** Menu, right-click **My Computer**, and then click **Properties** from the shortcut menu.
+2. **[スタート]** メニューの **[マイコンピューター]** を右クリックし、ショートカットメニューの **[プロパティ]** をクリックします。
 
-3. Click the **Advanced** tab, and then click **Environment Variables**.
+3. **[詳細]** タブをクリックして **[環境変数]** をクリックします。
 
-4. In the **System** variables pane, select **Path** from the list and click **Edit**.
+4. **[システム]** 変数 ペインで、一覧から **[パス]** を選択し、 **[編集]** をクリックします。
 
-5. In the **Edit System** Variable dialog box, move the insertion point to the end of the string in the **Variable Value** field and type a semicolon (;) followed by the full directory name found in Step 1.
+5. システム変数の **[編集]** ダイアログボックスで、 **[変数の値]** フィールドの文字列の末尾にカーソルを移動し、セミコロン (;) を入力します。の後に、手順 1. で見つかった完全なディレクトリ名を指定します。
 
-6. Click **OK** to confirm your edits and close the dialog boxes.
+6. **[OK]** をクリックして編集内容を確認し、ダイアログボックスを閉じます。
 
-     After you change the PATH environment variable, you can run the Visual Basic compiler at the Windows Command Prompt from any directory on the computer.
+     PATH 環境変数を変更した後、コンピューター上の任意のディレクトリから Windows コマンドプロンプトで Visual Basic コンパイラを実行できます。
 
-## <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>To invoke the compiler using the Windows Command Prompt
+## <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Windows のコマンドプロンプトを使用してコンパイラを呼び出すには
 
-1. From the **Start** menu, click on the **Accessories** folder, and then open the **Windows Command Prompt**.
+1. **[スタート]** メニューの **[アクセサリ]** フォルダーをクリックし、 **Windows コマンドプロンプト**を開きます。
 
-2. At the command line, type `vbc.exe`*sourceFileName* and then press ENTER.
+2. コマンドラインで、「`vbc.exe`*Sourcefilename* 」と入力し、enter キーを押します。
 
-     For example, if you stored your source code in a directory called `SourceFiles`, you would open the Command Prompt and type `cd SourceFiles` to change to that directory. If the directory contained a source file named `Source.vb`, you could compile it by typing `vbc.exe Source.vb`.
+     たとえば、ソースコードを `SourceFiles`という名前のディレクトリに保存した場合は、コマンドプロンプトを開き `cd SourceFiles` と入力して、そのディレクトリに変更します。 ディレクトリに `Source.vb`という名前のソースファイルが含まれている場合は、「`vbc.exe Source.vb`」と入力してコンパイルできます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

@@ -19,7 +19,7 @@ ms.locfileid: "74349446"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML 子孫軸プロパティ (Visual Basic)
 
-Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.
+<xref:System.Xml.Linq.XElement> オブジェクト、<xref:System.Xml.Linq.XDocument> オブジェクト、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション、または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションの子孫へのアクセスを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -31,34 +31,34 @@ object...<descendant>
 
 `object` 必須。 <xref:System.Xml.Linq.XElement> オブジェクト、<xref:System.Xml.Linq.XDocument> オブジェクト、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション、または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションです。
 
-`...<` 必須。 Denotes the start of a descendant axis property.
+`...<` 必須。 子孫軸プロパティの開始を示します。
 
-`descendant` 必須。 Name of the descendant nodes to access, of the form [`prefix:]name`.
+`descendant` 必須。 アクセスする子孫ノードの名前 ([`prefix:]name`)。
 
-|パーツ|説明|
+|要素|説明|
 |----------|-----------------|
-|`prefix`|省略可能です。 XML namespace prefix for the descendant node. Must be a global XML namespace that is defined by using an `Imports` statement.|
-|`name`|必須です。 Local name of the descendant node. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
+|`prefix`|省略可。 子孫ノードの XML 名前空間プレフィックス。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間である必要があります。|
+|`name`|必須。 子孫ノードのローカル名。 「[宣言された XML 要素と属性の名前」を](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)参照してください。|
 
-`>` 必須。 Denotes the end of a descendant axis property.
+`>` 必須。 子孫軸プロパティの末尾を示します。
 
 ## <a name="return-value"></a>戻り値
 
 <xref:System.Xml.Linq.XElement> オブジェクトのコレクション。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects. Use the XML `Value` property to access the value of the first descendant node in the returned collection. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
+XML 子孫軸プロパティを使用して、<xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XDocument> オブジェクトから、または <xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションから、子孫ノードに名前でアクセスできます。 返されたコレクション内の最初の子孫ノードの値にアクセスするには、XML `Value` プロパティを使用します。 詳細については、「 [XML 値プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)」を参照してください。
 
-The Visual Basic compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.
+Visual Basic コンパイラは、子孫軸のプロパティを <xref:System.Xml.Linq.XContainer.Descendants%2A> メソッドの呼び出しに変換します。
 
 ## <a name="xml-namespaces"></a>XML 名前空間
 
-The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement. It cannot use XML namespaces declared locally within XML element literals. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+子孫軸プロパティの名前は、`Imports` ステートメントでグローバルに宣言された XML 名前空間のみを使用できます。 XML 要素リテラル内でローカルに宣言された XML 名前空間を使用することはできません。 詳細については、「 [Imports ステートメント (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.
+次の例は、`name` という名前の最初の子孫ノードの値と、`contacts` オブジェクトから `phone` という名前のすべての子孫ノードの値にアクセスする方法を示しています。
 
 [!code-vb[VbXMLSamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#25)]
 
@@ -70,7 +70,7 @@ The following example shows how to access the value of the first descendant node
 
 ## <a name="example"></a>例
 
-次の例では、`ns` を名前空間プレフィックスとして宣言します。 It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.
+次の例では、`ns` を名前空間プレフィックスとして宣言します。 次に、名前空間のプレフィックスを使用して XML リテラルを作成し、修飾名 `ns:name`を持つ最初の子ノードの値にアクセスします。
 
 [!code-vb[VbXMLSamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples12.vb#26)]
 
@@ -78,7 +78,7 @@ The following example shows how to access the value of the first descendant node
 
 `Name: Patrick Hines`
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Linq.XElement>
 - [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)

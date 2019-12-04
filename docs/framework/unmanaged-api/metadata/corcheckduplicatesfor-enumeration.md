@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443777"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 列挙型
-Specifies the metadata tokens that will be checked for duplicates.  
+重複をチェックするメタデータトークンを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -68,41 +68,41 @@ typedef enum CorCheckDuplicatesFor {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`MDDupAll`|Check all metadata tokens for duplicates.|  
+|`MDDupAll`|すべてのメタデータトークンの重複を確認します。|  
 |`MDDupENC`|使用しません。|  
-|`MDNoDupChecks`|Do not check metadata tokens for duplicates.|  
-|`MDDupTypeDef`|Check for duplicates of `mdTypeDef` tokens.|  
-|`MDDupInterfaceImpl`|Check for duplicates of `mdInterfaceImpl` tokens.|  
-|`MDDupMethodDef`|Check for duplicates of `mdMethodDef` tokens.|  
-|`MDDupTypeRef`|Check for duplicates of `mdTypeRef` tokens.|  
-|`MDDupMemberRef`|Check for duplicates of `mdMemberRef` tokens.|  
-|`MDDupCustomAttribute`|Check for duplicates of `mdCustomAttribute` tokens.|  
-|`MDDupParamDef`|Check for duplicates of `mdParamDef` tokens.|  
-|`MDDupPermission`|Check for duplicates of `mdPermission` tokens.|  
-|`MDDupProperty`|Check for duplicates of `mdProperty` tokens.|  
-|`MDDupEvent`|Check for duplicates of `mdEvent` tokens.|  
-|`MDDupFieldDef`|Check for duplicates of `mdFieldDef` tokens.|  
-|`MDDupSignature`|Check for duplicates of `mdSignature` tokens.|  
-|`MDDupModuleRef`|Check for duplicates of `mdModuleRef` tokens.|  
-|`MDDupTypeSpec`|Check for duplicates of `mdTypeSpec` tokens.|  
-|`MDDupImplMap`|Check for duplicates of `mdImplMap` tokens.|  
-|`MDDupAssemblyRef`|Check for duplicates of `mdAssemblyRef` tokens.|  
-|`MDDupFile`|Check for duplicates of `mdFile` tokens.|  
-|`MDDupExportedType`|Check for duplicates of `mdExportedType` tokens.|  
-|`MDDupManifestResource`|Check for duplicates of `mdManifestResource` tokens.|  
-|`MDDupGenericParam`|Check for duplicates of `mdGenericParam` tokens.|  
-|`MDDupMethodSpec`|Check for duplicates of `mdMethodSpec` tokens.|  
-|`MDDupGenericParamConstraint`|Check for duplicates of `mdGenericParamConstraint` tokens.|  
-|`MDDupAssembly`|Check for duplicates of `mdAssembly` tokens.|  
-|`MDDupDefault`|Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.|  
+|`MDNoDupChecks`|メタデータトークンの重複をチェックしないでください。|  
+|`MDDupTypeDef`|`mdTypeDef` トークンの重複を確認します。|  
+|`MDDupInterfaceImpl`|`mdInterfaceImpl` トークンの重複を確認します。|  
+|`MDDupMethodDef`|`mdMethodDef` トークンの重複を確認します。|  
+|`MDDupTypeRef`|`mdTypeRef` トークンの重複を確認します。|  
+|`MDDupMemberRef`|`mdMemberRef` トークンの重複を確認します。|  
+|`MDDupCustomAttribute`|`mdCustomAttribute` トークンの重複を確認します。|  
+|`MDDupParamDef`|`mdParamDef` トークンの重複を確認します。|  
+|`MDDupPermission`|`mdPermission` トークンの重複を確認します。|  
+|`MDDupProperty`|`mdProperty` トークンの重複を確認します。|  
+|`MDDupEvent`|`mdEvent` トークンの重複を確認します。|  
+|`MDDupFieldDef`|`mdFieldDef` トークンの重複を確認します。|  
+|`MDDupSignature`|`mdSignature` トークンの重複を確認します。|  
+|`MDDupModuleRef`|`mdModuleRef` トークンの重複を確認します。|  
+|`MDDupTypeSpec`|`mdTypeSpec` トークンの重複を確認します。|  
+|`MDDupImplMap`|`mdImplMap` トークンの重複を確認します。|  
+|`MDDupAssemblyRef`|`mdAssemblyRef` トークンの重複を確認します。|  
+|`MDDupFile`|`mdFile` トークンの重複を確認します。|  
+|`MDDupExportedType`|`mdExportedType` トークンの重複を確認します。|  
+|`MDDupManifestResource`|`mdManifestResource` トークンの重複を確認します。|  
+|`MDDupGenericParam`|`mdGenericParam` トークンの重複を確認します。|  
+|`MDDupMethodSpec`|`mdMethodSpec` トークンの重複を確認します。|  
+|`MDDupGenericParamConstraint`|`mdGenericParamConstraint` トークンの重複を確認します。|  
+|`MDDupAssembly`|`mdAssembly` トークンの重複を確認します。|  
+|`MDDupDefault`|`mdMemberRef`、`mdTypeRef`、`mdSignature`、`mdTypeSpec`、および `mdMethodSpec` トークンの重複を確認します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

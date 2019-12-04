@@ -40,19 +40,19 @@ typedef enum CorRefToDefCheck {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Specifies that type references and member references should be converted to definitions. This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Specifies that all referenced items should be converted to definitions.|  
-|`MDRefToDefNone`|Specifies that no referenced items should be converted to definitions.|  
-|`MDTypeRefToDef`|Specifies that only type references should be converted to type definitions.|  
-|`MDMemberRefToDef`|Specifies that only member references should be converted to definitions. That is, member references should be converted to either method definitions or field definitions.|  
+|`MDRefToDefDefault`|型参照とメンバー参照を定義に変換する必要があることを指定します。 これは既定値 (`MDTypeRefToDef` &#124; `MDMemberRefToDef`) です。|  
+|`MDRefToDefAll`|参照されるすべての項目を定義に変換することを指定します。|  
+|`MDRefToDefNone`|参照される項目を定義に変換しないことを指定します。|  
+|`MDTypeRefToDef`|型の参照のみを型定義に変換することを指定します。|  
+|`MDMemberRefToDef`|メンバー参照のみを定義に変換することを指定します。 つまり、メンバー参照は、メソッド定義またはフィールド定義に変換される必要があります。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

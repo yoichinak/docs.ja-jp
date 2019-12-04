@@ -28,34 +28,34 @@ ms.locfileid: "74344012"
 ---
 # <a name="double-data-type-visual-basic"></a>倍精度浮動小数点数型 (Double) (Visual Basic)
 
-Holds signed IEEE 64-bit (8-byte) double-precision floating-point numbers that range in value from -1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values and from 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values. Double-precision numbers store an approximation of a real number.
+負の値に対して-1.79769313486231570 E + 308 から-4.94065645841246544 E-324 までの値を範囲とする、符号付き IEEE 64 ビット (8 バイト) の倍精度浮動小数点数を保持します。 4.94065645841246544 E-324 から 1.79769313486231570 E + 308 まで正の値。 倍精度数値は、実数の概数を格納します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The `Double` data type provides the largest and smallest possible magnitudes for a number.
+`Double` データ型は、数値に対して可能な最大値と最小大きくなりを提供します。
 
 `Double` の既定値は 0 です。
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **Precision.** When you work with floating-point numbers, remember that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+- **精度.** 浮動小数点数を使用する場合は、メモリ内に常に正確な表現がないという点に注意してください。 これにより、値の比較や `Mod` 演算子など、特定の操作によって予期しない結果が生じる可能性があります。 詳細については、「[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)」を参照してください。
 
-- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing zero characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing zero characters do not appear when you display or print floating-point values.
+- **後続のゼロ。** 浮動小数点データ型には、後続のゼロ文字の内部表現がありません。 たとえば、4.2000 と4.2 を区別しません。 そのため、浮動小数点値を表示または印刷するときに、後続のゼロ文字は表示されません。
 
-- **Type Characters.** あるリテラルにリテラルの型文字 `R` を付けると、そのリテラルは `Double` に変換されます。 For example, if an integer value is followed by `R`, the value is changed to a `Double`.
+- **文字を入力します。** あるリテラルにリテラルの型文字 `R` を付けると、そのリテラルは `Double` に変換されます。 たとえば、整数値の後に `R`がある場合、値は `Double`に変更されます。
 
   ```vb
   ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:
   Dim dub As Double = 4.0R
   ```
 
-  ある識別子に識別子の型文字 `#` を付けると、その識別子は整数型 (`Double`) に変換されます。 In the following example, the variable `num` is typed as a `Double`:
+  ある識別子に識別子の型文字 `#` を付けると、その識別子は整数型 (`Double`) に変換されます。 次の例では、変数 `num` が `Double`として型指定されています。
 
   ```vb
   Dim num# = 3
   ```
 
-- **Framework Type.** .NET Framework において対応する型は、<xref:System.Double?displayProperty=nameWithType> 構造体です。
+- **フレームワークの種類。** .NET Framework において対応する型は、<xref:System.Double?displayProperty=nameWithType> 構造体です。
 
 ## <a name="see-also"></a>関連項目
 
@@ -63,7 +63,7 @@ The `Double` data type provides the largest and smallest possible magnitudes for
 - [データの種類](../../../visual-basic/language-reference/data-types/index.md)
 - [Decimal データ型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
 - [Single データ型](../../../visual-basic/language-reference/data-types/single-data-type.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
 - [トラブルシューティング (データ型)](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

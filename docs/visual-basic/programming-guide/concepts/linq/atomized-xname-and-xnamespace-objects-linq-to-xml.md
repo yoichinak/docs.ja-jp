@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345727"
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>アトミック化された XName および XNamespace オブジェクト (LINQ to XML) (Visual Basic)
 
 <xref:System.Xml.Linq.XName> オブジェクトと <xref:System.Xml.Linq.XNamespace> オブジェクトは "*アトミック化*" されています。つまり、同じ修飾名を含んでいる場合は、同じオブジェクトを参照します。 これによってクエリのパフォーマンスが向上します。これは、2 つのアトミック化された名前の等価性を比べる場合に、基になる中間言語が、2 つの参照が同じオブジェクトを指しているかどうかを判別するだけで済むためです。 基になるコードは、時間のかかる文字列比較を行う必要がありません。
 
@@ -19,7 +19,7 @@ ms.locfileid: "74345727"
 
 アトミック化されたオブジェクトをクラスに対して有効にするには、クラスのコンストラクターがパブリックではなく、プライベートであることが必要です。 その理由は、コンストラクターがパブリックであれば、アトミック化されていないオブジェクトを作成できるからです。 <xref:System.Xml.Linq.XName> クラスと <xref:System.Xml.Linq.XNamespace> クラスは暗黙的な変換演算子を実装して、文字列を <xref:System.Xml.Linq.XName> または <xref:System.Xml.Linq.XNamespace> に変換します。 この方法でこれらのオブジェクトのインスタンスを取得します。 コンストラクターにはアクセスできないため、コンストラクターを使用してインスタンスを取得することはできません。
 
-<xref:System.Xml.Linq.XName> と <xref:System.Xml.Linq.XNamespace> は等値演算子と非等値演算子も実装して、比較する 2 個のオブジェクトが同じインスタンスを参照しているかどうかを判別します。
+<xref:System.Xml.Linq.XName> と <xref:System.Xml.Linq.XNamespace> は、等値演算子と非等値演算子も実装して、比較対象の2つのオブジェクトが同じインスタンスへの参照であるかどうかを判断します。
 
 ## <a name="example"></a>例
 
@@ -74,4 +74,4 @@ Next
 
 ## <a name="see-also"></a>関連項目
 
-- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [パフォーマンス (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

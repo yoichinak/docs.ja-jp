@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 6ce570460984d975b19fd2a696b668bc41e9054e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1af17be16061aedab9226bf2b4a0419b0a8d63b7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283835"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552838"
 ---
 # <a name="net-guide"></a>.NET のガイド
 
@@ -58,7 +58,7 @@ ms.locfileid: "74283835"
 さらに、.NET の主要な 3 つの言語については、各言語のガイドを参照してください。
 
 * [C# のガイド](../csharp/index.yml)
-* [F# のガイド](../fsharp/index.md)
+* [F# のガイド](../fsharp/index.yml)
 * [Visual Basic のガイド](../visual-basic/index.md)
 
 ## <a name="api-reference"></a>API リファレンス

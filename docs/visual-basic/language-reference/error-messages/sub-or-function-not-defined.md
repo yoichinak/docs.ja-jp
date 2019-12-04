@@ -12,25 +12,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349577"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub または Function が定義されていません。(Visual Basic)
-A `Sub` or `Function` must be defined in order to be called. このエラーでは以下の原因が考えられます。  
+呼び出されるには、`Sub` または `Function` が定義されている必要があります。 このエラーでは以下の原因が考えられます。  
   
-- Misspelling the procedure name.  
+- プロシージャ名のスペルが間違っています。  
   
-- Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.  
+- **[参照]** ダイアログボックスでそのプロジェクトへの参照を明示的に追加せずに、別のプロジェクトからプロシージャを呼び出そうとしています。  
   
-- Specifying a procedure that is not visible to the calling procedure.  
+- 呼び出し元のプロシージャからは参照できないプロシージャを指定します。  
   
-- Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.  
+- 指定されたライブラリまたはコードリソースにない Windows ダイナミックリンクライブラリ (DLL) ルーチンまたは Macintosh コードリソースルーチンを宣言しています。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1. Make sure that the procedure name is spelled correctly.  
+1. プロシージャ名のスペルが正しいことを確認してください。  
   
-2. Find the name of the project containing the procedure you want to call in the **References** dialog box. If it does not appear, click the **Browse** button to search for it. Select the check box to the left of the project name, and then click **OK**.  
+2. **[参照]** ダイアログボックスで、呼び出すプロシージャを含むプロジェクトの名前を検索します。 表示されない場合は、 **[参照]** ボタンをクリックして検索します。 プロジェクト名の左側にあるチェックボックスをオンにして、[ **OK]** をクリックします。  
   
-3. Check the name of the routine.  
+3. ルーチンの名前を確認します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [プロジェクト内の参照の管理](/visualstudio/ide/managing-references-in-a-project)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445794"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage メソッド
-Notifies the profiler that the client is sending a request to the server.  
+クライアントがサーバーに要求を送信していることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,20 +35,20 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>パラメーター  
  `pCookie`  
- [in] A value that corresponds with the value provided in [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) under these conditions:  
+ から次の条件下で[ICorProfilerCallback:: RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md)で指定された値に対応する値。  
   
-- Remoting GUID cookies are active.  
+- リモート処理 GUID クッキーはアクティブです。  
   
-- The channel succeeds in transmitting the message.  
+- チャネルは、メッセージの送信に成功します。  
   
-- GUID cookies are active on the server-side process.  
+- GUID クッキーはサーバー側のプロセスでアクティブです。  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ これにより、リモート処理呼び出しと論理呼び出し履歴の作成を簡単に組み合わせることができます。  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ から呼び出しが非同期の場合に `true` される値。それ以外の場合は、`false`ます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -57,6 +57,6 @@ HRESULT RemotingClientSendingMessage(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

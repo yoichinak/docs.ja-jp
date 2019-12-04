@@ -13,11 +13,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353777"
 ---
-# <a name="option-keyword-statement"></a>Option \<keyword> Statement
-Introduces a statement that specifies a compiler option that applies to the entire source file.  
+# <a name="option-keyword-statement"></a>Option \<keyword > ステートメント
+ソースファイル全体に適用されるコンパイラオプションを指定するステートメントを導入します。  
   
-## <a name="remarks"></a>Remarks  
- The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.  
+## <a name="remarks"></a>コメント  
+ コンパイラオプションでは、すべての変数を明示的に宣言する必要があるかどうか、縮小型変換を明示的に行う必要があるかどうか、または文字列をテキストとして比較するか、バイナリ数量として比較するかを制御できます。  
   
  キーワード `Option` は次のコンテキストで使用できます。  
   
@@ -29,6 +29,6 @@ Introduces a statement that specifies a compiler option that applies to the enti
   
  [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

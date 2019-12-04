@@ -1,5 +1,5 @@
 ---
-title: Overloaded properties and methods
+title: オーバーロードされたプロパティとメソッド
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [Visual Basic], overloading
@@ -19,74 +19,74 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346089"
 ---
-# <a name="overloaded-properties-and-methods-visual-basic"></a>Overloaded properties and methods (Visual Basic)
+# <a name="overloaded-properties-and-methods-visual-basic"></a>オーバーロードされたプロパティとメソッド (Visual Basic)
 
-Overloading is the creation of more than one procedure, instance constructor, or property in a class with the same name but different argument types.
+オーバーロードとは、同じ名前で引数の型が異なるクラスで、複数のプロシージャ、インスタンスコンストラクター、またはプロパティを作成することです。
 
-## <a name="overloading-usage"></a>Overloading usage
+## <a name="overloading-usage"></a>オーバーロードの使用
 
-Overloading is especially useful when your object model dictates that you employ identical names for procedures that operate on different data types. For example, a class that can display several different data types could have `Display` procedures that look like this:
+オーバーロードは、さまざまなデータ型を操作するプロシージャに対して、オブジェクトモデルで同じ名前を使用することが指示された場合に特に便利です。 たとえば、いくつかの異なるデータ型を表示できるクラスでは、次のような `Display` のプロシージャが存在する可能性があります。
 
 [!code-vb[VbVbalrOOP#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#64)]
 
-Without overloading, you would need to create distinct names for each procedure, even though they do the same thing, as shown next:
+オーバーロードを使用しない場合は、次に示すように、プロシージャごとに個別の名前を作成する必要があります。
 
 [!code-vb[VbVbalrOOP#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#65)]
 
-Overloading makes it easier to use properties or methods because it provides a choice of data types that can be used. For example, the overloaded `Display` method discussed previously can be called with any of the following lines of code:
+オーバーロードを使用すると、使用可能なデータ型を選択できるため、プロパティやメソッドの使用が簡単になります。 たとえば、前に説明したオーバーロードされた `Display` メソッドは、次のいずれかのコード行を使用して呼び出すことができます。
 
 [!code-vb[VbVbalrOOP#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#66)]
 
-At run time, Visual Basic calls the correct procedure based on the data types of the parameters you specify.
+実行時に、Visual Basic は、指定したパラメーターのデータ型に基づいて正しいプロシージャを呼び出します。
 
-## <a name="overloading-rules"></a>Overloading rules
+## <a name="overloading-rules"></a>オーバーロード (規則を)
 
- You create an overloaded member for a class by adding two or more properties or methods with the same name. Except for overloaded derived members, each overloaded member must have different parameter lists, and the following items cannot be used as a differentiating feature when overloading a property or procedure:
+ クラスのオーバーロードされたメンバーを作成するには、同じ名前を持つ2つ以上のプロパティまたはメソッドを追加します。 オーバーロードされた派生メンバーを除き、オーバーロードされた各メンバーは異なるパラメーターリストを持つ必要があります。また、プロパティまたはプロシージャをオーバーロードするときに、次の項目を区別機能として使用することはできません。
 
-- Modifiers, such as `ByVal` or `ByRef`, that apply to a member, or parameters of the member.
+- メンバーまたはメンバーのパラメーターに適用される、`ByVal` や `ByRef`などの修飾子。
 
-- Names of parameters
+- パラメーターの名前
 
-- Return types of procedures
+- プロシージャの戻り値の型
 
-The `Overloads` keyword is optional when overloading, but if any overloaded member uses the `Overloads` keyword, then all other overloaded members with the same name must also specify this keyword.
+`Overloads` キーワードはオーバーロード時には省略可能ですが、オーバーロードされたメンバーが `Overloads` キーワードを使用している場合は、同じ名前の他のすべてのオーバーロードされたメンバーもこのキーワードを指定する必要があります。
 
-Derived classes can overload inherited members with members that have identical parameters and parameter types, a process known as *shadowing by name and signature*. If the `Overloads` keyword is used when shadowing by name and signature, the derived class's implementation of the member will be used instead of the implementation in the base class, and all other overloads for that member will be available to instances of the derived class.
+派生クラスでは、同じパラメーターとパラメーターの型を持つメンバーを持つ継承されたメンバーをオーバーロードできます。これは、*名前とシグネチャによるシャドウ*処理と呼ばれるプロセスです。 名前とシグネチャでシャドウするときに `Overloads` キーワードを使用すると、基底クラスの実装ではなく、派生クラスのメンバーの実装が使用され、そのメンバーの他のすべてのオーバーロードが派生クラスのインスタンスで使用できるようになります。
 
-If the `Overloads` keyword is omitted when overloading an inherited member with a member that has identical parameters and parameter types, then the overloading is called *shadowing by name*. Shadowing by name replaces the inherited implementation of a member, and it makes all other overloads unavailable to instances of the derived class and its decedents.
+同じパラメーターとパラメーターの型を持つメンバーを持つ継承されたメンバーをオーバーロードするときに `Overloads` キーワードを省略すると、オーバーロードは*名前によるシャドウ*処理と呼ばれます。 名前によるシャドウ処理により、メンバーの継承された実装が置き換えられます。これにより、派生クラスのインスタンスとその他のすべてのオーバーロードが使用できなくなります。
 
-The `Overloads` and `Shadows` modifiers cannot both be used with the same property or method.
+`Overloads` と `Shadows` の修飾子を同じプロパティまたはメソッドと共に使用することはできません。
 
 ### <a name="example"></a>例
 
-The following example creates overloaded methods that accept either a `String` or `Decimal` representation of a dollar amount and return a string containing the sales tax.
+次の例では、金額の `String` または `Decimal` 表現を受け入れるオーバーロードされたメソッドを作成し、売上税を含む文字列を返します。
 
-#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>To use this example to create an overloaded method
+#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>この例を使用して、オーバーロードされたメソッドを作成するには
 
-1. Open a new project and add a class named `TaxClass`.
+1. 新しいプロジェクトを開き、`TaxClass`という名前のクラスを追加します。
 
 2. `TaxClass` クラスに次のコードを追加します。
 
     [!code-vb[VbVbalrOOP#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#67)]
 
-3. Add the following procedure to your form.
+3. 次のプロシージャをフォームに追加します。
 
     [!code-vb[VbVbalrOOP#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#68)]
 
-4. Add a button to your form and call the `ShowTax` procedure from the `Button1_Click` event of the button.
+4. フォームにボタンを追加し、ボタンの `Button1_Click` イベントから `ShowTax` プロシージャを呼び出します。
 
-5. Run the project and click the button on the form to test the overloaded `ShowTax` procedure.
+5. プロジェクトを実行し、フォームのボタンをクリックして、オーバーロードされた `ShowTax` プロシージャをテストします。
 
-At run time, the compiler chooses the appropriate overloaded function that matches the parameters being used. When you click the button, the overloaded method is called first with a `Price` parameter that is a string and the message, "Price is a String. Tax is $5.12" is displayed. `TaxAmount` is called with a `Decimal` value the second time and the message, "Price is a Decimal. Tax is $5.12" is displayed.
+実行時に、コンパイラは、使用されているパラメーターに一致するオーバーロードされた適切な関数を選択します。 このボタンをクリックすると、オーバーロードされたメソッドが最初に呼び出されます。このメソッドは、文字列である `Price` パラメーターと "Price は文字列です。 税 $5.12 "が表示されます。 2回目の `Decimal` 値を使用して `TaxAmount` が呼び出されます。 "Price は Decimal です。 税 $5.12 "が表示されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [クラスとオブジェクト](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic でのシャドウ処理](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [継承の基本](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
-- [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/byval.md)
 - [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)
-- [オーバーロード](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)

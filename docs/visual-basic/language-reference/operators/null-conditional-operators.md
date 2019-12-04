@@ -1,5 +1,5 @@
 ---
-title: Null-conditional Operators
+title: Null 条件演算子
 ms.date: 10/19/2018
 helpviewer_keywords:
 - null-conditional operators [Visual Basic]
@@ -13,11 +13,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348289"
 ---
-# <a name="-and--null-conditional-operators-visual-basic"></a>?. and ?() null-conditional operators (Visual Basic)
+# <a name="-and--null-conditional-operators-visual-basic"></a>?. そして。() null 条件演算子 (Visual Basic)
 
-Tests the value of the left-hand operand for null (`Nothing`) before performing a member access (`?.`) or index (`?()`) operation; returns `Nothing` if the left-hand operand evaluates to `Nothing`. Note that in expressions that ordinarily return value types, the null-conditional operator returns a <xref:System.Nullable%601>.
+メンバーアクセス (`?.`) 操作またはインデックス (`?()`) 操作を実行する前に、左側のオペランドの値を null (`Nothing`) に対してテストします。左側のオペランドが `Nothing`に評価された場合に `Nothing` を返します。 通常、値型を返す式では、null 条件演算子は <xref:System.Nullable%601>を返します。
 
-These operators help you write less code to handle null checks, especially when descending into data structures. (例:
+これらの演算子を使用すると、特にデータ構造への降順で、null チェックを処理するコードを記述しやすくなります。 次に例を示します。
 
 ```vb
 ' Nothing if customers is Nothing
@@ -30,7 +30,7 @@ Dim first As Customer = customers?(0)
 Dim count As Integer? = customers?(0)?.Orders?.Count()
 ```
 
-For comparison, the alternative code for the first of these expressions without a null-conditional operator is:
+比較のために、null 条件演算子を使用しない最初の式の代替コードは次のとおりです。
 
 ```vb
 Dim length As Integer
@@ -39,7 +39,7 @@ If customers IsNot Nothing Then
 End If
 ```
 
-Sometimes you need to take an action on an object that may be null, based on the value of a Boolean member on that object (like the Boolean property `IsAllowedFreeShipping` in the following example):
+場合によっては、オブジェクトのブール型の値に基づいて、null である可能性のあるオブジェクトに対してアクションを実行する必要があります (次の例で `IsAllowedFreeShipping` ブール型プロパティと同様)。
 
 ```vb
 Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
@@ -49,7 +49,7 @@ If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
 End If
 ```
 
-You can shorten your code and avoid manually checking for null by using the null-conditional operator as follows:
+次のように、null 条件演算子を使用すると、コードを短くして、null を手動でチェックすることを回避できます。
 
 ```vb
 Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
@@ -57,13 +57,13 @@ Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
 If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
-Null 条件演算子はショートサーキットです。  If one operation in a chain of conditional member access and index operations returns `Nothing`, the rest of the chain’s execution stops.  In the following example, `C(E)` isn't evaluated if `A`, `B`, or `C` evaluates to `Nothing`.
+Null 条件演算子はショートサーキットです。  条件付きメンバーアクセスとインデックス操作のチェーンの1つの操作が `Nothing`を返す場合、チェーンの残りの実行は停止します。  次の例では、`A`、`B`、または `C` が `Nothing`に評価される場合、`C(E)` は評価されません。
 
 ```vb
 A?.B?.C?(E)
 ```
 
-Another use for null-conditional member access is to invoke delegates in a thread-safe way with much less code.  The following example defines two types, a `NewsBroadcaster` and a `NewsReceiver`. News items are sent to the receiver by the `NewsBroadcaster.SendNews` delegate.
+Null 条件メンバーアクセスのもう1つの用途は、はるかに少ないコードでスレッドセーフな方法でデリゲートを呼び出すことです。  次の例では、`NewsBroadcaster` と `NewsReceiver`の2つの型を定義しています。 ニュース項目は `NewsBroadcaster.SendNews` デリゲートによって受信者に送信されます。
 
 ```vb
 Public Module NewsBroadcaster
@@ -91,7 +91,7 @@ Public Class NewsReceiver
 End Class
 ```
 
-If there are no elements in the `SendNews` invocation list, the `SendNews` delegate throws a <xref:System.NullReferenceException>. Before null conditional operators, code like the following ensured that the delegate invocation list was not `Nothing`:
+`SendNews` の呼び出しリストに要素がない場合、`SendNews` デリゲートは <xref:System.NullReferenceException>をスローします。 Null 条件演算子の前に、次のようなコードは、デリゲート呼び出しリストが `Nothing`されていないことを保証しています。
 
 ```vb
 SendNews = SendNews.Combine({SendNews, client})
@@ -107,10 +107,10 @@ SendNews = SendNews.Combine({SendNews, client})
 SendNews?.Invoke("Just in...")
 ```
 
-コンパイラが `SendNews` を評価するためのコードを一度しか生成せず、一時変数に結果が保持されるため、新しい方法はスレッド セーフです。 null 条件デリゲート呼び出し構文 `SendNews?(String)` がないため、`Invoke` メソッドを明示的に呼び出す必要があります。
+コンパイラが `SendNews` を評価するためのコードを一度しか生成せず、一時変数に結果が保持されるため、新しい方法はスレッド セーフです。 null 条件デリゲート呼び出し構文 `Invoke` がないため、`SendNews?(String)` メソッドを明示的に呼び出す必要があります。
 
 ## <a name="see-also"></a>関連項目
 
-- [Operators (Visual Basic)](index.md)
+- [演算子 (Visual Basic)](index.md)
 - [Visual Basic のプログラミング ガイド](../../../visual-basic/programming-guide/index.md)
 - [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)

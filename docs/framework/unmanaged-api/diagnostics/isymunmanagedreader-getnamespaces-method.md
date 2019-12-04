@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447735"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>ISymUnmanagedReader::GetNamespaces メソッド
-Gets the namespaces defined at global scope within this symbol store.  
+このシンボルストア内のグローバルスコープで定義されている名前空間を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,20 +38,20 @@ HRESULT GetNamespaces (
   
 ## <a name="parameters"></a>パラメーター  
  `cNameSpaces`  
- [in] The size of the namespaces array.  
+ から名前空間配列のサイズ。  
   
  `pcNameSpaces`  
- [out] A pointer to a variable that receives the length of the namespace list.  
+ 入出力名前空間リストの長さを受け取る変数へのポインター。  
   
  `namespaces`  
- [out] A pointer to a variable that receives the namespace list.  
+ 入出力名前空間リストを受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

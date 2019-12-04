@@ -26,11 +26,11 @@ ms.locfileid: "74351383"
 
 ## <a name="rules"></a>ルール
 
-- **Declaration Context.** You can use `Overrides` only in a property or procedure declaration statement.
+- **宣言コンテキスト。** `Overrides` は、プロパティまたはプロシージャの宣言ステートメントでのみ使用できます。
 
-- **Combined Modifiers.** You cannot specify `Overrides` together with `Shadows` or `Shared` in the same declaration. オーバーライドする要素は暗黙的にオーバーライド可能であるため、`Overridable` と `Overrides` を結合することはできません。
+- **結合された修飾子。** 同じ宣言内で `Shadows` または `Shared` と共に `Overrides` を指定することはできません。 オーバーライドする要素は暗黙的にオーバーライド可能であるため、`Overridable` と `Overrides` を結合することはできません。
 
-- **Matching Signatures.** The signature of this declaration must exactly match the *signature* of the property or procedure that it overrides. つまり、パラメーター リストには、同じ数のパラメーターを、同じ順序、同じデータ型で指定する必要があります。
+- **一致する署名。** この宣言のシグネチャは、オーバーライドするプロパティまたはプロシージャの*シグネチャ*と完全に一致する必要があります。 つまり、パラメーター リストには、同じ数のパラメーターを、同じ順序、同じデータ型で指定する必要があります。
 
   オーバーライドする宣言は、シグネチャに加え、次の点でも完全に一致している必要があります。
 
@@ -38,17 +38,17 @@ ms.locfileid: "74351383"
 
   - 戻り値の型 (戻り値がある場合)
 
-- **Generic Signatures.** ジェネリック プロシージャでは、シグネチャに型パラメーターの数が含まれます。 したがって、オーバーライドする宣言は、その点でも基底クラスのバージョンに一致している必要があります。
+- **汎用署名。** ジェネリック プロシージャでは、シグネチャに型パラメーターの数が含まれます。 したがって、オーバーライドする宣言は、その点でも基底クラスのバージョンに一致している必要があります。
 
-- **Additional Matching.** この宣言は、基底クラスのバージョンのシグネチャに一致していることに加え、次の点でも基底クラスと一致している必要があります。
+- **追加の一致。** この宣言は、基底クラスのバージョンのシグネチャに一致していることに加え、次の点でも基底クラスと一致している必要があります。
 
-  - Access-level modifier (such as [Public](../../../visual-basic/language-reference/modifiers/public.md))
+  - アクセスレベル修飾子 ( [Public](../../../visual-basic/language-reference/modifiers/public.md)など)
 
-  - Passing mechanism of each parameter ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
+  - 各パラメーターのメカニズムを渡す ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md)または[ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
 
   - ジェネリック プロシージャの型パラメーターごとの制約リスト
 
-- **Shadowing and Overriding.** シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+- **シャドウとオーバーライド。** シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、「 [Visual Basic でのシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。
 
 `Overrides` を使用する場合は、ライブラリ API と C# が連携しやすくなるように、コンパイラが暗黙的に `Overloads` を追加します。
 
@@ -62,10 +62,10 @@ ms.locfileid: "74351383"
 
 ## <a name="see-also"></a>関連項目
 
-- [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [MyBase](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic でのシャドウ処理](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [型リスト](../../../visual-basic/language-reference/statements/type-list.md)

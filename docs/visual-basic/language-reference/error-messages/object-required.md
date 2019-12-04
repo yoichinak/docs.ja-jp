@@ -12,18 +12,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349664"
 ---
 # <a name="object-required-visual-basic"></a>オブジェクトが必要です。(Visual Basic)
-References to properties and methods often require an explicit object qualifier. This is such a case.  
+プロパティやメソッドへの参照では、明示的なオブジェクト修飾子が必要になることがよくあります。 このようなケースです。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1. Check that references to an object property or method have valid object qualifier. Specify an object qualifier if you didn't provide one.  
+1. オブジェクトのプロパティまたはメソッドへの参照に有効なオブジェクト修飾子があることを確認してください。 オブジェクト修飾子を指定しなかった場合は、それを指定します。  
   
-2. Check the spelling of the object qualifier and make sure the object is visible in the part of the program in which you are referencing it.  
+2. オブジェクト修飾子のスペルを確認し、オブジェクトが参照しているプログラムの部分にオブジェクトが表示されていることを確認します。  
   
-3. If a path is supplied to a host application's **File Open** command, check that the arguments in it are correct.  
+3. ホストアプリケーションの **[ファイルを開く**] コマンドにパスが指定されている場合は、その中の引数が正しいことを確認します。  
   
-4. Check the object's documentation and make sure the action is valid.  
+4. オブジェクトのドキュメントを確認し、アクションが有効であることを確認してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)

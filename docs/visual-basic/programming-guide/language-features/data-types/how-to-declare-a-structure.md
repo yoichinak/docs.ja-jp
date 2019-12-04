@@ -15,28 +15,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350010"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>方法: 構造体を宣言する (Visual Basic)
-You begin a structure declaration with the [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md), and you end it with the `End Structure` statement. Between these two statements you must declare at least one *element*. The elements can be of any data type, but at least one must be either a nonshared variable or a nonshared, noncustom event.  
+Structure[ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)を使用して構造体の宣言を開始し、`End Structure` ステートメントで終了します。 これら2つのステートメントの間には、少なくとも1つの*要素*を宣言する必要があります。 要素は任意のデータ型にすることができますが、少なくとも1つは非共有変数または非共有のカスタムイベントのいずれかである必要があります。  
   
- You cannot initialize any of the structure elements in the structure declaration. When you declare a variable to be of a structure type, you assign values to the elements by accessing them through the variable.  
+ 構造体の宣言で構造体の要素を初期化することはできません。 変数を構造体型として宣言する場合は、変数を使用して値にアクセスすることによって、要素に値を代入します。  
   
- For a discussion of the differences between structures and classes, see [Structures and Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
+ 構造体とクラスの違いについては、「[構造体とクラス](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)」を参照してください。  
   
- For demonstration purposes, consider a situation where you want to keep track of an employee's name, telephone extension, and salary. A structure allows you to do this in a single variable.  
+ デモンストレーションを目的として、従業員の名前、電話の内線番号、給与を追跡する状況について考えてみましょう。 構造体を使用すると、1つの変数でこれを行うことができます。  
   
-### <a name="to-declare-a-structure"></a>To declare a structure  
+### <a name="to-declare-a-structure"></a>構造体を宣言するには  
   
-1. Create the beginning and ending statements for the structure.  
+1. 構造体の開始および終了ステートメントを作成します。  
   
-     You can specify the access level of a structure using the [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword, or you can let it default to `Public`.  
+     [Public](../../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)、または[Private](../../../../visual-basic/language-reference/modifiers/private.md)キーワードを使用して構造体のアクセスレベルを指定できます。また、既定の `Public`に設定することもできます。  
   
     ```vb  
     Private Structure employee  
     End Structure  
     ```  
   
-2. Add elements to the body of the structure.  
+2. 構造体の本体に要素を追加します。  
   
-     A structure must have at least one element. You must declare every element and specify an access level for it. If you use the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) without any keywords, the accessibility defaults to `Public`.  
+     構造体には、少なくとも1つの要素が必要です。 すべての要素を宣言し、そのアクセスレベルを指定する必要があります。 キーワードを指定せずに[Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)を使用すると、ユーザー補助の既定値は `Public`になります。  
   
     ```vb  
     Private Structure employee  
@@ -51,11 +51,11 @@ You begin a structure declaration with the [Structure Statement](../../../../vis
     End Structure  
     ```  
   
-     The `salary` field in the preceding example is `Private`, which means it is inaccessible outside the structure, even from the containing class. However, the `giveRaise` procedure is `Public`, so it can be called from outside the structure. Similarly, you can raise the `salaryReviewTime` event from outside the structure.  
+     前の例の `salary` フィールドは `Private`です。これは、コンテナークラスからであっても、構造体の外部ではアクセスできないことを意味します。 ただし、`giveRaise` プロシージャは `Public`ため、構造の外部から呼び出すことができます。 同様に、構造の外部から `salaryReviewTime` イベントを発生させることもできます。  
   
-     In addition to variables, `Sub` procedures, and events, you can also define constants, `Function` procedures, and properties in a structure. You can designate at most one property as the *default property*, provided it takes at least one argument. You can handle an event with a [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` procedure. For more information, see [How to: Declare and Call a Default Property in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
+     変数、`Sub` プロシージャ、およびイベントに加えて、構造体の定数、`Function` プロシージャ、およびプロパティを定義することもできます。 少なくとも1つの引数を指定する場合は、*既定のプロパティ*として最大で1つのプロパティを指定できます。 [共有](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` プロシージャを使用して、イベントを処理できます。 詳細については、「[方法: Visual Basic で既定のプロパティを宣言して呼び出す](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)

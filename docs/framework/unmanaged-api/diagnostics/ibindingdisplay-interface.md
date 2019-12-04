@@ -22,24 +22,24 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448478"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay インターフェイス
-Provides methods that display current binding information about the running application.  
+実行中のアプリケーションに関する現在のバインド情報を表示するメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetCurrentDisplay メソッド](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|Returns the current binding display information.|  
+|[GetCurrentDisplay メソッド](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|現在のバインディング表示情報を返します。|  
 |[InitializeForProcess メソッド](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|`IBindingDisplay` オブジェクトを初期化します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** BindingDisplay.h  
+ **ヘッダー:** BindingDisplay. h  
   
- **Library:** BindingDisplay.idl  
+ **ライブラリ:** BindingDisplay .idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

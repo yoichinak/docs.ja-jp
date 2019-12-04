@@ -12,8 +12,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348457"
 ---
-# <a name="include-visual-basic"></a>\<include> (Visual Basic)
-Refers to another file that describes the types and members in your source code.  
+# <a name="include-visual-basic"></a>> を含める \<(Visual Basic)
+は、ソースコード内の型とメンバーを記述する別のファイルを参照します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -23,28 +23,28 @@ Refers to another file that describes the types and members in your source code.
   
 ## <a name="parameters"></a>パラメーター  
  `filename`  
- 必須です。 文書を含むファイルの名前。 ファイル名をパスで修飾することができます。 Enclose `filename` in double quotation marks (" ").  
+ 必須。 文書を含むファイルの名前。 ファイル名をパスで修飾することができます。 `filename` を二重引用符 ("") で囲みます。  
   
  `tagpath`  
- 必須です。 タグ `name` につながる `filename` 内のタグのパス。 Enclose the path in double quotation marks (" ").  
+ 必須。 タグ `filename` につながる `name` 内のタグのパス。 パスは二重引用符 ("") で囲みます。  
   
  `name`  
- 必須です。 The name specifier in the tag that precedes the comments. `Name` will have an `id`.  
+ 必須。 コメントの前にあるタグの名前指定子。 `Name` には `id`があります。  
   
  `id`  
- 必須です。 コメントの前に配置するタグの ID。 Enclose the ID in single quotation marks (' ').  
+ 必須。 コメントの前に配置するタグの ID。 ID は単一引用符 (' ') で囲みます。  
   
-## <a name="remarks"></a>Remarks  
- Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code. これは文書化のコメントをソース コード ファイル内に直接配置する方法の代替です。  
+## <a name="remarks"></a>コメント  
+ `<include>` タグを使用して、ソースコード内の型とメンバーを記述する別のファイル内のコメントを参照します。 これは文書化のコメントをソース コード ファイル内に直接配置する方法の代替です。  
   
- The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation. For more information about ways to customize your `<include>` use, see <https://www.w3.org/TR/xpath>.  
+ `<include>` タグでは、W3C 勧告『 XML Path Language (XPath) バージョン1.0 が使用されています。 `<include>` の使用方法をカスタマイズする方法の詳細については、「<https://www.w3.org/TR/xpath>」を参照してください。  
   
 ## <a name="example"></a>例  
- This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.  
+ この例では、`<include>` タグを使用して、`commentFile.xml`という名前のファイルからメンバードキュメントコメントをインポートします。  
   
  [!code-vb[VbVbcnXmlDocComments#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#4)]  
   
- The format of the `commentFile.xml` is as follows.  
+ `commentFile.xml` の形式は次のとおりです。  
   
 ```xml  
 <Docs>  
@@ -59,6 +59,6 @@ Refers to another file that describes the types and members in your source code.
 </Docs>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

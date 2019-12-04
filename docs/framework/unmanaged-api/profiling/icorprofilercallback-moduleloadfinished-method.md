@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445942"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>ICorProfilerCallback::ModuleLoadFinished メソッド
-Notifies the profiler that a module has finished loading.  
+モジュールが読み込みを終了したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,17 +35,17 @@ HRESULT ModuleLoadFinished(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleId`  
- [in] The ID of the module that has finished loading.  
+ から読み込みを終了したモジュールの ID。  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the module was loaded successfully.  
+ からモジュールが正常に読み込まれたかどうかを示す HRESULT。  
   
-## <a name="remarks"></a>Remarks  
- The value of `moduleId` is not valid for an information request until the `ModuleLoadFinished` method is called.  
+## <a name="remarks"></a>コメント  
+ `moduleId` の値は、`ModuleLoadFinished` メソッドが呼び出されるまで、情報要求に対して有効ではありません。  
   
- Some parts of loading the module might continue after the `ModuleLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the module has succeeded.  
+ `ModuleLoadFinished` コールバックの後も、モジュールの読み込みの一部が続行される場合があります。 `hrStatus` のエラー HRESULT はエラーを示します。 ただし、`hrStatus` の成功 HRESULT は、モジュールの読み込みの最初の部分が成功したことのみを示します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -54,7 +54,7 @@ HRESULT ModuleLoadFinished(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ModuleLoadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadstarted-method.md)

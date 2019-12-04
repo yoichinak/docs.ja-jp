@@ -24,7 +24,7 @@ ms.locfileid: "74448736"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes メソッド
 
-Enumerates each type in each scope.
+各スコープ内の各型を列挙します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,24 +40,24 @@ HRESULT EnumImportTypes(
 ## <a name="parameters"></a>パラメーター
 
 `hEnum`\
-Handle for enumerator.
+列挙子のハンドル。
 
 `dwMax`\
-Maximum number of types to retrieve.
+取得する型の最大数。
 
 `aTypeDefs`\
-Receives type tokens, not to exceed `dwMax`.
+`dwMax`を超えないように、型トークンを受け取ります。
 
 `pdwCount`\
-Receives actual number of type in `aTypeDefs`.
+`aTypeDefs`内の実際の型の数を受け取ります。
 
 ## <a name="return-value"></a>戻り値
 
-Returns S_OK if the method succeeds.
+メソッドが成功した場合は S_OK を返します。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-Requires alink.h
+Alink. h が必要です。
 
 ## <a name="see-also"></a>関連項目
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444159"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 列挙型
-Provides values to influence the type of `reloc` instruction emitted in a call to [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
+[ICeeGen:: AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)への呼び出しで生成される `reloc` 命令の型に影響を与える値を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,28 +52,28 @@ typedef enum  {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`srRelocAbsolute`|Generates only a section-relative `reloc`, sending nothing into a .reloc section.|  
-|`srRelocHighLow`|Generates a `reloc` for a pointer-sized location. This is transformed into BASED_HIGHLOW or BASED_DIR64 depending on the platform.|  
-|`srRelocHighAdj`|Generates a `reloc` for the top 16 bits of a 32-bit number, where the bottom 16 bits are included in the next word in the .reloc table.|  
-|`srRelocMapToken`|Generates a token map relocation, sending nothing into a .reloc section.|  
-|`srRelocRelative`|Indicates that the value is a relative address fixup.|  
-|`srRelocFilePos`|Generates only a section-relative `reloc`, sending nothing into a .reloc section. This `reloc` is relative to the file position of the section, not the section's virtual address.|  
-|`srRelocCodeRelative`|Specifies a code-relative address fixup.|  
-|`srRelocIA64Imm64`|Generates a `reloc` for a 64 bit address in an ia64 `movl` instruction.|  
-|`srRelocDir64`|Generates a `reloc` for a 64-bit address.|  
-|`srRelocIA64PcRel25`|Generate a `reloc` for a 25-bit PC-relative address in an ia64 `br.call` instruction.|  
-|`srRelocIA64PcRel64`|Generates a `reloc` for a 64-bit PC-relative address in an ia64 `brl.call` instruction.|  
-|`srRelocAbsoluteTagged`|Generates a 30-bit section-relative `reloc`, used for tagged pointer values.|  
-|`srRelocSentinel`|A sentinel value to help ensure any additions to this enum are reflected to the internal `reloc` name array.|  
-|`srNoBaseReloc`|Specifies not to emit a base `reloc`.|  
-|`srRelocPtr`|A value indicating that the pre-fixup contents of memory are a pointer rather than a section offset.|  
+|`srRelocAbsolute`|では、セクション相対 `reloc`が生成され、reloc セクションには何も送信されません。|  
+|`srRelocHighLow`|ポインターサイズの位置の `reloc` を生成します。 これは、プラットフォームに応じて BASED_HIGHLOW または BASED_DIR64 に変換されます。|  
+|`srRelocHighAdj`|では、32ビット数値の上位16ビットの `reloc` が生成されます。この場合、下位16ビットが、reloc テーブルの次の単語に含まれます。|  
+|`srRelocMapToken`|トークンマップの再配置を生成し、reloc セクションに何も送信しません。|  
+|`srRelocRelative`|値が相対アドレスの修正であることを示します。|  
+|`srRelocFilePos`|では、セクション相対 `reloc`が生成され、reloc セクションには何も送信されません。 この `reloc` は、セクションの仮想アドレスではなく、セクションのファイルの位置を基準としています。|  
+|`srRelocCodeRelative`|コード相対アドレスのフィックスアップを指定します。|  
+|`srRelocIA64Imm64`|Ia64 `movl` 命令に64ビットアドレスの `reloc` を生成します。|  
+|`srRelocDir64`|64ビットアドレスの `reloc` を生成します。|  
+|`srRelocIA64PcRel25`|Ia64 `br.call` 命令で25ビット PC 相対アドレスの `reloc` を生成します。|  
+|`srRelocIA64PcRel64`|Ia64 `brl.call` 命令で64ビット PC 相対アドレスの `reloc` を生成します。|  
+|`srRelocAbsoluteTagged`|タグ付きポインター値に使用される、30ビットのセクション相対 `reloc`を生成します。|  
+|`srRelocSentinel`|この列挙型への追加が内部 `reloc` 名配列に反映されるようにするための sentinel 値。|  
+|`srNoBaseReloc`|基本 `reloc`を生成しないように指定します。|  
+|`srRelocPtr`|メモリの事前修正の内容が、セクションオフセットではなくポインターであることを示す値。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

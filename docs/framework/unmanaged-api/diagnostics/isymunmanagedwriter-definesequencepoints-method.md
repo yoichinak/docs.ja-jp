@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427986"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints メソッド
-現在のメソッド内のシーケンス ポイントのグループを定義します。 Each starting line and starting column define the start of a statement within a method. Each ending line and ending column define the end of a statement within a method. The arrays should be sorted in increasing order of offsets. The offset is always measured from the start of the method, in bytes.  
+現在のメソッド内のシーケンス ポイントのグループを定義します。 開始行と開始列はそれぞれ、メソッド内のステートメントの開始を定義します。 各終了行と終了列は、メソッド内のステートメントの末尾を定義します。 配列は、オフセットの昇順で並べ替える必要があります。 オフセットは、常にメソッドの先頭からバイト単位で測定されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,31 +40,31 @@ HRESULT DefineSequencePoints(
   
 ## <a name="parameters"></a>パラメーター  
  `document`  
- [in] The document object for which the sequence points are being defined.  
+ からシーケンスポイントが定義されているドキュメントオブジェクト。  
   
  `spCount`  
- [in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.  
+ から各 `offsets`、`lines`、`columns`、`endLines`、および `endColumns` バッファーのサイズを示す `ULONG32`。  
   
  `offsets`  
- [in] The offset of the sequence points measured from the beginning of the method.  
+ からメソッドの先頭から計測されたシーケンスポイントのオフセット。  
   
  `lines`  
- [in] The starting line numbers of the sequence points.  
+ からシーケンスポイントの開始行番号。  
   
  `columns`  
- [in] The starting column numbers of the sequence points.  
+ からシーケンスポイントの開始列番号。  
   
  `endLines`  
- [in] The ending line numbers of the sequence points. このパラメーターは省略できます。  
+ からシーケンスポイントの終了行番号。 このパラメーターはオプションです。  
   
  `endColumns`  
- [in] The ending column numbers of the sequence points. このパラメーターは省略できます。  
+ からシーケンスポイントの終了列番号。 このパラメーターはオプションです。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 

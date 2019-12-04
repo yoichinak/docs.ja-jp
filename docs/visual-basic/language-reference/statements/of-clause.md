@@ -25,10 +25,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353839"
 ---
 # <a name="of-clause-visual-basic"></a>Of 句 (Visual Basic)
-Introduces an `Of` clause, which identifies a *type parameter* on a *generic* class, structure, interface, delegate, or procedure. For information on generic types, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+では、*ジェネリック*クラス、構造体、インターフェイス、デリゲート、またはプロシージャの*型パラメーター*を識別する `Of` 句が導入されています。 ジェネリック型の詳細については、「 [Visual Basic のジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」を参照してください。  
   
-## <a name="using-the-of-keyword"></a>Using the Of Keyword  
- The following code example uses the `Of` keyword to define the outline of a class that takes two type parameters. It *constrains* the `keyType` parameter by the <xref:System.IComparable> interface, which means the consuming code must supply a type argument that implements <xref:System.IComparable>. This is necessary so that the `add` procedure can call the <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> method. 制約の詳細については、「 [Type List](../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
+## <a name="using-the-of-keyword"></a>Of キーワードの使用  
+ 次のコード例では、`Of` キーワードを使用して、2つの型パラメーターを受け取るクラスのアウトラインを定義します。 `keyType` パラメーターは <xref:System.IComparable> インターフェイスによって*制限*されます。つまり、コンシューマー側のコードは <xref:System.IComparable>を実装する型引数を指定する必要があります。 これは、`add` プロシージャが <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> メソッドを呼び出すことができるようにするために必要です。 制約の詳細については、「 [Type List](../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
   
 ```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -42,9 +42,9 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- If you complete the preceding class definition, you can construct a variety of `dictionary` classes from it. The types you supply to `entryType` and `keyType` determine what type of entry the class holds and what type of key it associates with each entry. Because of the constraint, you must supply to `keyType` a type that implements <xref:System.IComparable>.  
+ 前のクラス定義を完了すると、そこからさまざまな `dictionary` クラスを構築できます。 `entryType` するために指定する型は、クラスに保持されているエントリの種類と、各エントリに関連付けられているキーの種類を決定 `keyType` ます。 制約があるため、<xref:System.IComparable>を実装する型を `keyType` するには、を指定する必要があります。  
   
- The following code example creates an object that holds `String` entries and associates an `Integer` key with each one. `Integer` implements <xref:System.IComparable> and therefore satisfies the constraint on `keyType`.  
+ 次のコード例では、`String` エントリを保持し、`Integer` キーをそれぞれに関連付けるオブジェクトを作成します。 `Integer` は <xref:System.IComparable> を実装するため、`keyType`の制約を満たすことになります。  
   
 ```vb  
 Dim d As New dictionary(Of String, Integer)  
@@ -64,10 +64,10 @@ Dim d As New dictionary(Of String, Integer)
   
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.IComparable>
 - [型リスト](../../../visual-basic/language-reference/statements/type-list.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
 - [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

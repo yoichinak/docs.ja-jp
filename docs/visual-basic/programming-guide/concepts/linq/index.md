@@ -1,5 +1,5 @@
 ---
-title: '統合言語クエリ (LINQ: Language-Integrated Query)'
+title: 統合言語クエリ (LINQ)
 ms.date: 07/20/2015
 ms.assetid: a99371f7-097c-49a0-b62b-0e31c34aad0e
 ms.openlocfilehash: 63dd5f0b76f4dc9b7004d4d9dcdcf3eb9cbb83bc

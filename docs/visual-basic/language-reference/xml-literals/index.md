@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349411"
 ---
 # <a name="xml-literals-visual-basic"></a>XML リテラル (Visual Basic)
-The topics in this section document the syntax of XML literals in Visual Basic. XML リテラルの構文を使用すると、コード内に直接 XML を組み込むことができます。  
+このセクションのトピックでは、Visual Basic の XML リテラルの構文について説明します。 XML リテラルの構文を使用すると、コード内に直接 XML を組み込むことができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

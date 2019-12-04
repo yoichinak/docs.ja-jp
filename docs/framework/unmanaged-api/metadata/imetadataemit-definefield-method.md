@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432548"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField メソッド
-Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.  
+指定したメタデータシグネチャを持つフィールドの定義を作成し、そのフィールド定義へのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,38 +43,38 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in] The `mdTypeDef` token for the enclosing class or interface.  
+ から外側のクラスまたはインターフェイスの `mdTypeDef` トークン。  
   
  `szName`  
- [in] The field name in Unicode.  
+ からUnicode でのフィールド名。  
   
  `dwFieldFlags`  
- [in] The field attributes. This is a bitmask of `CorFieldAttr` values.  
+ からフィールド属性。 これは `CorFieldAttr` 値のビットマスクです。  
   
  `pvSigBlob`  
- [in] The field signature as a BLOB.  
+ からBLOB としてのフィールドシグネチャ。  
   
  `cbSigBlob`  
- [in] The count of bytes in `pvSigBlob`.  
+ から`pvSigBlob`内のバイト数。  
   
  `dwCPlusTypeFlag`  
- [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If not defining a constant value for the field, use `ELEMENT_TYPE_END`.  
+ から定数値の `ELEMENT_TYPE_` *\** 。 これは `CorElementType` の値です。 フィールドの定数値を定義していない場合は、`ELEMENT_TYPE_END`を使用します。  
   
  `pValue`  
- [in] The constant value for the field.  
+ からフィールドの定数値。  
   
  `cchValue`  
- [in] The size in (Unicode) characters of `pValue`.  
+ から`pValue`の (Unicode) 文字のサイズ。  
   
  `pmd`  
- [out] The `mdFieldDef` token assigned.  
+ 入出力割り当てられた `mdFieldDef` トークン。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

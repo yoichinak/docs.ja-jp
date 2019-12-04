@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440134"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>IMetaDataFilter::UnmarkAll メソッド
-Removes the processing marks from all the tokens in the current metadata scope.  
+現在のメタデータスコープ内のすべてのトークンから処理マークを削除します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,17 +32,17 @@ HRESULT UnmarkAll ();
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- `UnmarkAll` takes no parameters.  
+ `UnmarkAll` はパラメーターを受け取りません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataFilter インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

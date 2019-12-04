@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436024"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout メソッド
-Gets information about where the specified value type is located when it is boxed.  
+指定された値型がボックス化されている場合の位置に関する情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +35,15 @@ HRESULT GetBoxClassLayout(
   
 ## <a name="parameters"></a>パラメーター  
  `classId`  
- [in] The ID of the class that describes the value type that is boxed.  
+ からボックス化された値の型を記述するクラスの ID。  
   
  `pBufferOffset`  
- [out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.  
+ 入出力値型のボックス化されたオブジェクト ID ポインターを基準とするオフセットを表す整数。  
   
-## <a name="remarks"></a>Remarks  
- The `pBufferOffset` value is the location of the value type within a box. After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.  
+## <a name="remarks"></a>コメント  
+ `pBufferOffset` 値は、ボックス内の値型の場所です。 ボックス化されたオブジェクトに `pBufferOffset` が適用された後、値型のクラスレイアウトを使用して、オブジェクトの値を解釈できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

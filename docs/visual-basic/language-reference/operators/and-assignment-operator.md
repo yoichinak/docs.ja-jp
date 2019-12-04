@@ -1,5 +1,5 @@
 ---
-title: '&amp;= Operator'
+title: '&amp;= 演算子'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&=
@@ -17,8 +17,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350260"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;= Operator (Visual Basic)
-Concatenates a `String` expression to a `String` variable or property and assigns the result to the variable or property.  
+# <a name="amp-operator-visual-basic"></a>&amp;= 演算子 (Visual Basic)
+`String` 式を `String` 変数またはプロパティに連結し、その結果を変数またはプロパティに代入します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,19 +28,19 @@ variableorproperty &= expression
   
 ## <a name="parts"></a>指定項目  
  `variableorproperty`  
- 必須です。 Any `String` variable or property.  
+ 必須。 任意の `String` 変数またはプロパティ。  
   
  `expression`  
- 必須です。 任意のブール型 ( `String` ) の式を指定します。  
+ 必須。 任意のブール型 ( `String` ) の式を指定します。  
   
-## <a name="remarks"></a>Remarks  
- The element on the left side of the `&=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). The `&=` operator concatenates the `String` expression on its right to the `String` variable or property on its left, and assigns the result to the variable or property on its left.  
+## <a name="remarks"></a>コメント  
+ `&=` 演算子の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)にすることはできません。 `&=` 演算子は、右側にある `String` 式を左側の `String` 変数またはプロパティに連結し、その結果を左側の変数またはプロパティに代入します。  
   
 ## <a name="overloading"></a>オーバーロード  
- The [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `&` operator affects the behavior of the `&=` operator. If your code uses `&=` on a class or structure that overloads `&`, be sure you understand its redefined behavior. 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `&` 演算子のオーバーロードは、`&=` 演算子の動作に影響します。 コードで `&`をオーバーロードするクラスまたは構造体の `&=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- The following example uses the `&=` operator to concatenate two `String` variables and assign the result to the first variable.  
+ 次の例では、`&=` 演算子を使用して2つの `String` 変数を連結し、その結果を最初の変数に代入します。  
   
  [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   

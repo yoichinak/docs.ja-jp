@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435960"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>INotifySource2::SetNotifyFilter メソッド
-Assigns a notification filter for use with this source.  
+このソースで使用する通知フィルターを割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,18 +37,18 @@ HRESULT SetNotifyFilter
   
 ## <a name="parameters"></a>パラメーター  
  `in_NotifyFilter`  
- [in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.  
+ からデバッガー API のコールバックを識別する[NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)列挙値のビットごとの組み合わせ。  
   
  `in_pUserThreadFilter`  
- [in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.  
+ からデバッガー API のスレッドを識別する[USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)構造体へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- S_OK if the method succeeds.  
+ メソッドが成功した場合は S_OK します。  
   
-## <a name="requirements"></a>［要件］  
- **Header:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [INotifyConnection2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

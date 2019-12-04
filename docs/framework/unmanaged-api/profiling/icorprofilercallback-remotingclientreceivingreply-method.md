@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445811"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply メソッド
-Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.  
+リモート処理呼び出しのサーバー側の部分が完了し、クライアントが応答を受信および処理するようになったことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,20 +35,20 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>パラメーター  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) under these conditions:  
+ から次の条件下で[ICorProfilerCallback:: RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)で指定された値に対応する値。  
   
-- Remoting GUID cookies are active.  
+- リモート処理 GUID クッキーはアクティブです。  
   
-- The channel succeeds in transmitting the message.  
+- チャネルは、メッセージの送信に成功します。  
   
-- GUID cookies are active on the server-side process.  
+- GUID クッキーはサーバー側のプロセスでアクティブです。  
   
- This allows easy pairing of remoting calls.  
+ これにより、リモート処理呼び出しを簡単に組み合わせることができます。  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ から呼び出しが非同期の場合に `true` される値。それ以外の場合は、`false`ます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  

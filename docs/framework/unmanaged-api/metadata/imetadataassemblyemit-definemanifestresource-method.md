@@ -39,32 +39,32 @@ HRESULT DefineManifestResource (
   
 ## <a name="parameters"></a>パラメーター  
  `szName`  
- [in] The name of the resource.  
+ からリソースの名前。  
   
  `tkImplementation`  
- [in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider. A NULL value indicates that the file in which the metadata is embedded is the resource provider.  
+ からリソースプロバイダーにマップされる `mdtFile` または `mdtAssemblyRef` 型のメタデータトークン。 NULL 値は、メタデータが埋め込まれているファイルがリソースプロバイダーであることを示します。  
   
  `dwOffset`  
- [in] The offset to the beginning of the resource within the file. For resources in standalone files, this will always be zero. If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.  
+ からファイル内のリソースの先頭へのオフセット。 スタンドアロンファイルのリソースの場合、この値は常に0になります。 リソースが PE (ポータブル実行可能ファイル) ファイルに埋め込まれている場合、これはリソース BLOB のオフセットになります。これは、cor ヘッダーファイルで指定された場所から開始されます。  
   
  `dwResourceFlags`  
- [in] A bitwise combination of flag values that specify property settings for the resource definition.  
+ からリソース定義のプロパティ設定を指定するフラグ値のビットごとの組み合わせ。  
   
  `pmdmr`  
- [out] A pointer to the returned metadata token.  
+ 入出力返されたメタデータトークンへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.  
+## <a name="remarks"></a>コメント  
+ 各アセンブリのファイルに実装されている各リソースに対して、1つの `ManifestResource` メタデータ構造を定義する必要があります。  
   
-## <a name="requirements"></a>［要件］  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

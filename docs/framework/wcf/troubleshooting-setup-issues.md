@@ -25,7 +25,7 @@ ms.locfileid: "74281605"
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- **[コントロール パネル]** の **[プログラムの追加と削除]** から起動した .NET Framework 3.0 インストーラーを使用して修復を実行しても、上記のキーは再作成されません。 これらのキーを正しく再作成するには、.NET Framework 3.0 をアンインストール後、再インストールする必要があります。  
+ **コントロールパネル**の **[プログラムの追加と削除]** アプレットから起動した .NET Framework 3.0 インストーラーを使用して修復を実行した場合、キーは再作成されません。 これらのキーを正しく再作成するには、.NET Framework 3.0 をアンインストール後、再インストールする必要があります。  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>WMI サービスの破損により .NET Framework 3.0 パッケージのインストール中に Windows Communication Foundation WMI プロバイダーのインストールがブロックされる  
  WMI サービスの破損により、Windows Communication Foundation WMI プロバイダーのインストールがブロックされることがあります。 インストール中、Windows Communication Foundation インストーラーは mofcomp.exe コンポーネントを使用して WCF .mof ファイルを登録できません。 発生する現象を次に示します。  
@@ -54,7 +54,7 @@ ms.locfileid: "74281605"
   
 1. [WMI Diagnosis Utility バージョン 2.0](https://go.microsoft.com/fwlink/?LinkId=94685)を実行して、WMI サービスを修復します。 このツールの使用方法の詳細については、「 [WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686) 」を参照してください。  
   
- **[コントロール パネル]** にある **[プログラムの追加と削除]** アプレットを使用して、.NET Framework 3.0 のインストールを修復するか、.NET Framework 3.0 をアンインストール後に再インストールします。  
+ **コントロールパネル**にある **[プログラムの追加と削除]** アプレットを使用して .NET Framework 3.0 インストールを修復するか、.NET Framework 3.0 をアンインストールまたは再インストールします。  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>.NET Framework 3.5 のインストール後に .NET Framework 3.0 を修復すると、.NET Framework 3.5 によって導入された machine.config 内の構成要素が削除される  
  .NET Framework 3.5 をインストールした後に .NET Framework 3.0 の修復を実行すると、machine.config で .NET Framework 3.5 によって導入された構成要素が削除されます。 ただし、web.config は元の状態のままになります。 回避策としては、この後の ARP を使用して .NET Framework 3.5 を修復するか、`/c` スイッチを使用して[ワークフローサービス登録ツール (変更可能な reg .exe)](workflow-service-registration-tool-wfservicesreg-exe.md)を使用します。  

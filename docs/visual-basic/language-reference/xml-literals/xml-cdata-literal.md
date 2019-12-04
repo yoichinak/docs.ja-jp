@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349432"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA リテラル (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XCData> object.  
+<xref:System.Xml.Linq.XCData> オブジェクトを表すリテラル。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,37 +26,37 @@ A literal representing an <xref:System.Xml.Linq.XCData> object.
   
 ## <a name="parts"></a>指定項目  
  `<![CDATA[`  
- 必須です。 Denotes the start of the XML CDATA section.  
+ 必須。 XML CDATA セクションの先頭を示します。  
   
  `content`  
- 必須です。 Text content to appear in the XML CDATA section.  
+ 必須。 XML CDATA セクションに表示されるテキストコンテンツ。  
   
  `]]>`  
- 必須です。 Denotes the end of the section.  
+ 必須。 セクションの末尾を示します。  
   
 ## <a name="return-value"></a>戻り値  
  <xref:System.Xml.Linq.XCData> オブジェクト。  
   
-## <a name="remarks"></a>Remarks  
- XML CDATA sections contain raw text that should be included, but not parsed, with the XML that contains it. A XML CDATA section can contain any text. This includes reserved XML characters. The XML CDATA section ends with the sequence "]]>". This implies the following points:  
+## <a name="remarks"></a>コメント  
+ XML CDATA セクションには未加工のテキストが含まれていますが、それを含む XML では解析できません。 XML CDATA セクションには、任意のテキストを含めることができます。 これには、予約済みの XML 文字が含まれます。 XML CDATA セクションは、シーケンス "]" > "で終了します。 これは、次の点を意味します。  
   
-- You cannot use an embedded expression in an XML CDATA literal because the embedded expression delimiters are valid XML CDATA content.  
+- 埋め込み式の区切り記号が有効な XML CDATA コンテンツであるため、XML CDATA リテラルで埋め込み式を使用することはできません。  
   
-- XML CDATA sections cannot be nested, because `content` cannot contain the value "]]>".  
+- XML CDATA セクションを入れ子にすることはできません。 `content` に値 "]] >" を含めることはできません。  
   
- You can assign an XML CDATA literal to a variable, or include it in an XML element literal.  
+ XML CDATA リテラルを変数に割り当てるか、XML 要素リテラルに含めることができます。  
   
 > [!NOTE]
-> An XML literal can span multiple lines but does not use line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> XML リテラルは複数の行にまたがることができますが、行連結文字は使用しません。 これにより、XML ドキュメントからコンテンツをコピーし、Visual Basic プログラムに直接貼り付けることができます。  
   
- The Visual Basic compiler converts the XML CDATA literal to a call to the <xref:System.Xml.Linq.XCData.%23ctor%2A> constructor.  
+ Visual Basic コンパイラは、XML CDATA リテラルを <xref:System.Xml.Linq.XCData.%23ctor%2A> コンストラクターへの呼び出しに変換します。  
   
 ## <a name="example"></a>例  
- The following example creates a CDATA section that contains the text "Can contain literal \<XML> tags".  
+ 次の例では、"リテラル \<XML > タグを含めることができる" というテキストを含む CDATA セクションを作成します。  
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Linq.XCData>
 - [XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

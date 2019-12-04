@@ -23,7 +23,7 @@ ms.locfileid: "74352793"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw ステートメント (Visual Basic)
 
-Throws an exception within a procedure.
+プロシージャ内で例外をスローします。
 
 ## <a name="syntax"></a>構文
 
@@ -31,26 +31,26 @@ Throws an exception within a procedure.
 Throw [ expression ]
 ```
 
-## <a name="part"></a>パーツ
+## <a name="part"></a>要素
 
 `expression`\
-Provides information about the exception to be thrown. Optional when residing in a `Catch` statement, otherwise required.
+スローされる例外に関する情報を提供します。 `Catch` ステートメント内に存在する場合は省略可能です。それ以外の場合は必須です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`). You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.
+`Throw` ステートメントは、構造化例外処理コード (`Try`...`Catch`...`Finally`) または非構造化例外処理コード (`On Error GoTo`) で処理できる例外をスローします。 `Throw` ステートメントを使用してコード内のエラーをトラップすることができます。これは、Visual Basic によって、適切な例外処理コードが見つかるまで呼び出し履歴が上に移動されるためです。
 
-A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.
+式が指定されていない `Throw` ステートメントは、`Catch` ステートメントでのみ使用できます。この場合、ステートメントは、現在 `Catch` ステートメントによって処理されている例外を再スローします。
 
-The `Throw` statement resets the call stack for the `expression` exception. If `expression` is not provided, the call stack is left unchanged. You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.
+`Throw` ステートメントは、`expression` 例外の呼び出し履歴をリセットします。 `expression` が指定されていない場合、呼び出し履歴は変更されません。 <xref:System.Exception.StackTrace%2A> プロパティを使用して、例外の呼び出し履歴にアクセスできます。
 
 ## <a name="example"></a>例
 
-The following code uses the `Throw` statement to throw an exception:
+次のコードでは、`Throw` ステートメントを使用して例外をスローします。
 
 [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [On Error ステートメント](../../../visual-basic/language-reference/statements/on-error-statement.md)

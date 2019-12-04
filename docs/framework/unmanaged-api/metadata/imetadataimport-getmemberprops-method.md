@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437521"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps メソッド
-Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token. This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called. See these other methods for details. 
+指定されたメタデータトークンによって参照される <xref:System.Type> メンバーの、名前、バイナリ署名、相対仮想アドレスなど、指定されたメンバー定義のメタデータに格納されている情報を取得します。 これは単純なヘルパーメソッドです。 *mb*が MethodDef の場合は、 **getmethodprops**が呼び出されます。*mb*が FieldDef の場合は、 **getfieldprops**が呼び出されます。 詳細については、これらの他の方法を参照してください。 
   
 ## <a name="syntax"></a>構文  
   
@@ -47,54 +47,54 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mb`  
- [in] The token that references the member to get the associated metadata for.  
+ から関連付けられているメタデータを取得するメンバーを参照するトークン。  
   
  `pClass`  
- [out] A pointer to the metadata token that represents the class of the member.  
+ 入出力メンバーのクラスを表すメタデータトークンへのポインター。  
   
  `szMember`  
- [out] The name of the member.  
+ 入出力メンバーの名前。  
   
  `cchMember`  
- [in] The size in wide characters of the `szMember` buffer.  
+ から`szMember` バッファーのワイド文字単位のサイズ。  
   
  `pchMember`  
- [out] The size in wide characters of the returned name.  
+ 入出力返される名前のワイド文字単位のサイズ。  
   
  `pdwAttr`  
- [out] Any flag values applied to the member.  
+ 入出力メンバーに適用されるフラグ値。  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the member.  
+ 入出力メンバーのバイナリメタデータシグネチャへのポインター。  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ 入出力`ppvSigBlob`のサイズ (バイト単位)。  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the member.  
+ 入出力メンバーの相対仮想アドレスへのポインター。  
   
  `pdwImplFlags`  
- [out] Any method implementation flags associated with the member.  
+ 入出力メンバーに関連付けられているメソッド実装フラグ。  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that marks a <xref:System.ValueType>. It is one of the `ELEMENT_TYPE_*` values.
+ 入出力<xref:System.ValueType>をマークするフラグ。 これは `ELEMENT_TYPE_*` の値の1つです。
   
  `ppValue`  
- [out] A constant string value returned by this member.  
+ 入出力このメンバーによって返される定数文字列値。  
   
  `pcchValue`  
- [out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.  
+ 入出力`ppValue`の文字単位のサイズ。 `ppValue` が文字列を保持していない場合は0。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

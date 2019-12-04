@@ -40,20 +40,20 @@ typedef enum
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`nlfNone`|Indicates no flags.|  
-|`nlfLastError`|Indicates a `setLastError` keyword.|  
-|`nlfNoMangle`|Indicates a `nomangle` keyword.|  
+|`nlfNone`|フラグがないことを示します。|  
+|`nlfLastError`|`setLastError` キーワードを示します。|  
+|`nlfNoMangle`|`nomangle` キーワードを示します。|  
 |`nlfMaxValue`|使用しません。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** Cor.h  
+ **ヘッダー:** Cor  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450285"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr 列挙型
-Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+[IMetaDataEmit2::D efineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)の呼び出しで使用される、ジェネリック型の <xref:System.Type> パラメーターを記述する値を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,23 +47,23 @@ typedef enum CorGenericParamAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`gpVarianceMask`|Parameter variance applies only to generic parameters for interfaces and delegates.|  
-|`gpNonVariant`|Indicates the absence of variance.|  
-|`gpCovariant`|Indicates covariance.|  
-|`gpContravariant`|Indicates contravariance.|  
-|`gpSpecialConstraintMask`|Special constraints can apply to any <xref:System.Type> parameter.|  
-|`gpNoSpecialConstraint`|Indicates that no constraint applies to the <xref:System.Type> parameter.|  
-|`gpReferenceTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a reference type.|  
-|`gpNotNullableValueTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.|  
-|`gpDefaultConstructorConstraint`|Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.|  
+|`gpVarianceMask`|パラメーターの分散は、インターフェイスとデリゲートのジェネリックパラメーターにのみ適用されます。|  
+|`gpNonVariant`|分散が存在しないことを示します。|  
+|`gpCovariant`|共変性を示します。|  
+|`gpContravariant`|反変性を示します。|  
+|`gpSpecialConstraintMask`|特殊な制約は、任意の <xref:System.Type> パラメーターに適用できます。|  
+|`gpNoSpecialConstraint`|<xref:System.Type> パラメーターに制約が適用されないことを示します。|  
+|`gpReferenceTypeConstraint`|<xref:System.Type> パラメーターが参照型である必要があることを示します。|  
+|`gpNotNullableValueTypeConstraint`|<xref:System.Type> パラメーターを null 値にすることができない値型である必要があることを示します。|  
+|`gpDefaultConstructorConstraint`|<xref:System.Type> パラメーターに、パラメーターをとらない既定のパブリックコンストラクターが必要であることを示します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **Header:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
