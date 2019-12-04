@@ -16,7 +16,7 @@ ms.locfileid: "70971546"
 # <a name="specifying-an-assemblys-location"></a>アセンブリの場所の指定
 アセンブリの場所を指定するには、次の2つの方法があります。  
   
-- [\<codeBase>](./file-schema/runtime/codebase-element.md) 要素を使用  
+- [ \<codeBase>](./file-schema/runtime/codebase-element.md) 要素を使用  
   
 - [\<probing>](./file-schema/runtime/probing-element.md) 要素を使用  
   
