@@ -17,6 +17,8 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Databricks のデプロイする
       href: tutorials/databricks-deployment.md
+    - name: 構造化ストリーミング
+      href: tutorials/streaming.md
 - name: 使い方ガイド
   items:
     - name: アプリケーションをデバッグする
