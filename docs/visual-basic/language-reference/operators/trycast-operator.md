@@ -24,7 +24,8 @@ ms.locfileid: "74348208"
   
 ## <a name="errors-and-failures"></a>エラーとエラー  
 `TryCast` は、継承または実装関係が存在しないことを検出すると、コンパイラエラーを生成します。 ただし、コンパイラエラーがないからといって、正常に変換できるとは限りません。 目的の変換が縮小されている場合は、実行時に失敗する可能性があります。 この場合、`TryCast` は [Nothing](../../../visual-basic/language-reference/nothing.md) を返します。 
-  
+
+
 ## <a name="conversion-keywords"></a>変換キーワード  
  型変換のキーワードの比較を次に示します。  
   
