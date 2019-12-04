@@ -2,12 +2,12 @@
 title: WCF 開発ツールの使用
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: afa62a63aa955dc868791da635418331f93e9e87
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 59913f4c00c32699d788e2a0244798fc652361be
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420678"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802413"
 ---
 # <a name="using-the-wcf-development-tools"></a>WCF 開発ツールの使用
 このセクションでは、WCFservice の開発に役立つ Visual Studio 開発ツールについて説明します。  
@@ -43,9 +43,9 @@ ms.locfileid: "73420678"
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   
- Netsh.exe の詳細については、「 [Netsh.exe ツールとコマンドラインスイッチの使用方法](https://go.microsoft.com/fwlink/?LinkId=97877)」を参照してください。  
+ Netsh.exe の詳細については、「 [Netsh.exe ツールとコマンドラインスイッチの使用方法](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WCF Visual Studio テンプレート](wcf-vs-templates.md)
 - [WCF サービス ホスト (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
