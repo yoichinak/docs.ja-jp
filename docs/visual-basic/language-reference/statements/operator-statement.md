@@ -58,7 +58,7 @@ End Operator
 省略可。 「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
 
 `Widening`  
-`Narrowing`を指定しない限り、変換演算子に対しては必須です。 この演算子プロシージャが [Widening](../../../visual-basic/language-reference/modifiers/widening.md) 変換を定義することを示します。 このヘルプページの「拡大変換と縮小変換」を参照してください。
+`Narrowing`を指定しない限り、変換演算子に対しては必須です。 この演算子プロシージャが [Widening](../../../visual-basic/language-reference/modifiers/widening.md) 変換を定義することを示します。 このヘルプページの「Widening and Narrowing Conversions」を参照してください。
 
 `Narrowing`  
 `Widening`を指定しない限り、変換演算子に対しては必須です。 この演算子プロシージャが[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)変換を定義することを示します。 このヘルプページの「Widening and Narrowing Conversions」を参照してください。

@@ -293,9 +293,6 @@
             - name: デスクトップ アプリのリソース
               tocHref: /dotnet/framework/resources/
               topicHref: /dotnet/framework/resources/index
-            - name: .NET Framework におけるセキュリティ
-              tocHref: /dotnet/framework/security/
-              topicHref: /dotnet/framework/security/index
             - name: .NET Framework ツール
               tocHref: /dotnet/framework/tools/
               topicHref: /dotnet/framework/tools/index
