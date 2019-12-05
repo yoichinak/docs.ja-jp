@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 939c9c6b8a8a8822174f08d5c0b50ef051264ee1
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802085"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837299"
 ---
 # <a name="security-wpf"></a>セキュリティ (WPF)
 <a name="introduction"></a>Windows Presentation Foundation (WPF) のスタンドアロンアプリケーションとブラウザーでホストされるアプリケーションを開発する場合は、セキュリティモデルを考慮する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] スタンドアロンアプリケーションは、Windows インストーラー (.msi)、XCopy、または ClickOnce を使用してデプロイされているかどうかにかかわらず、無制限のアクセス許可 (CAS**FullTrust**アクセス許可セット) で実行されます。 部分的に信頼されたスタンドアロンの WPF アプリケーションを ClickOnce で展開することはサポートされていません。 ただし、完全に信頼されたホストアプリケーションでは、.NET Framework アドインモデルを使用して部分信頼 <xref:System.AppDomain> を作成できます。 詳細については、「 [WPF アドインの概要](./app-development/wpf-add-ins-overview.md)」を参照してください。  
@@ -87,7 +87,7 @@ ms.locfileid: "74802085"
   
 <a name="InternetExplorerSecuritySettings"></a>   
 ## <a name="web-browsing-software-security-settings"></a>Web ブラウザーのセキュリティ設定  
- コンピューターのセキュリティ設定によって、Web ブラウザーに付与されるアクセス権が決まります。 Web ブラウザーソフトウェアには、 [WinINet](https://go.microsoft.com/fwlink/?LinkId=179379)または[UrlMon](https://go.microsoft.com/fwlink/?LinkId=179383) api を使用するアプリケーションまたはコンポーネントが含まれます (Internet Explorer とプレゼンテーションの cluster.exe を含む)。  
+ コンピューターのセキュリティ設定によって、Web ブラウザーに付与されるアクセス権が決まります。 Web ブラウザーソフトウェアには、 [WinINet](/windows/win32/wininet/portal)または[UrlMon](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767916(v=vs.85)) api を使用するアプリケーションまたはコンポーネントが含まれます (Internet Explorer とプレゼンテーションの cluster.exe を含む)。  
   
  Internet Explorer には、次のような、または Internet Explorer からの実行が許可されている機能を構成するためのメカニズムが用意されています。  
   
@@ -148,14 +148,14 @@ ms.locfileid: "74802085"
   
 <a name="webbrowser_control_and_feature_controls"></a>   
 ## <a name="webbrowser-control-and-feature-controls"></a>WebBrowser コントロールと機能コントロール  
- WPF <xref:System.Windows.Controls.WebBrowser> コントロールを使用して、Web コンテンツをホストできます。 WPF <xref:System.Windows.Controls.WebBrowser> コントロールは、基になる WebBrowser ActiveX コントロールをラップします。 Wpf <xref:System.Windows.Controls.WebBrowser> コントロールを使用して信頼されていない Web コンテンツをホストする場合、WPF はアプリケーションをセキュリティで保護するためのサポートを提供します。 ただし、一部のセキュリティ機能は、<xref:System.Windows.Controls.WebBrowser> コントロールを使用して、アプリケーションによって直接適用される必要があります。 WebBrowser ActiveX コントロールの詳細については、「 [Webbrowser コントロールの概要とチュートリアル](https://go.microsoft.com/fwlink/?LinkId=179388)」を参照してください。  
+ WPF <xref:System.Windows.Controls.WebBrowser> コントロールを使用して、Web コンテンツをホストできます。 WPF <xref:System.Windows.Controls.WebBrowser> コントロールは、基になる WebBrowser ActiveX コントロールをラップします。 Wpf <xref:System.Windows.Controls.WebBrowser> コントロールを使用して信頼されていない Web コンテンツをホストする場合、WPF はアプリケーションをセキュリティで保護するためのサポートを提供します。 ただし、一部のセキュリティ機能は、<xref:System.Windows.Controls.WebBrowser> コントロールを使用して、アプリケーションによって直接適用される必要があります。 WebBrowser ActiveX コントロールの詳細については、「 [Webbrowser コントロールの概要とチュートリアル](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752041(v=vs.85))」を参照してください。  
   
 > [!NOTE]
 > このセクションは、<xref:System.Windows.Controls.WebBrowser> を使用して HTML コンテンツに移動するため、<xref:System.Windows.Controls.Frame> コントロールにも適用されます。  
   
  WPF <xref:System.Windows.Controls.WebBrowser> コントロールを使用して信頼されていない Web コンテンツをホストしている場合は、アプリケーションが部分信頼の <xref:System.AppDomain> を使用して、悪意のある可能性のある HTML スクリプトコードからアプリケーションコードを隔離する必要があります。 これは、アプリケーションが <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> メソッドと <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> プロパティを使用してホストされているスクリプトと対話する場合に特に当てはまります。 詳細については、「 [WPF アドインの概要](./app-development/wpf-add-ins-overview.md)」を参照してください。  
   
- アプリケーションで WPF <xref:System.Windows.Controls.WebBrowser> コントロールを使用する場合は、セキュリティを強化し、攻撃を軽減するもう1つの方法は、Internet Explorer の機能コントロールを有効にすることです。 機能コントロールは Internet Explorer に追加されており、管理者および開発者はこのコントロールを使用して、WPF <xref:System.Windows.Controls.WebBrowser> コントロールをラップする WebBrowser ActiveX コントロールをホストする Internet Explorer とアプリケーションの機能を構成できます。 機能コントロールは、 [Cointernetsetfeatureenabled](https://go.microsoft.com/fwlink/?LinkId=179394)関数を使用するか、レジストリの値を変更することによって構成できます。 機能コントロールの詳細については、「[機能コントロール](https://go.microsoft.com/fwlink/?LinkId=179390)と[インターネット機能コントロール](https://go.microsoft.com/fwlink/?LinkId=179392)の概要」を参照してください。  
+ アプリケーションで WPF <xref:System.Windows.Controls.WebBrowser> コントロールを使用する場合は、セキュリティを強化し、攻撃を軽減するもう1つの方法は、Internet Explorer の機能コントロールを有効にすることです。 機能コントロールは Internet Explorer に追加されており、管理者および開発者はこのコントロールを使用して、WPF <xref:System.Windows.Controls.WebBrowser> コントロールをラップする WebBrowser ActiveX コントロールをホストする Internet Explorer とアプリケーションの機能を構成できます。 機能コントロールは、 [Cointernetsetfeatureenabled](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537168(v=vs.85))関数を使用するか、レジストリの値を変更することによって構成できます。 機能コントロールの詳細については、「[機能コントロール](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537184(v=vs.85))と[インターネット機能コントロール](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/general-info/ee330720(v=vs.85))の概要」を参照してください。  
   
  WPF <xref:System.Windows.Controls.WebBrowser> コントロールを使用するスタンドアロン WPF アプリケーションを開発している場合、WPF は、アプリケーションに対して次の機能コントロールを自動的に有効にします。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "74802085"
  機能コントロールは、WebBrowser ActiveX オブジェクトをインスタンス化するプロセスによって適用されます。 そのため、信頼されていないコンテンツに移動できるスタンドアロン アプリケーションを作成する場合は、その他の機能コントロールを有効にすることを検討すべきです。  
   
 > [!NOTE]
-> この推奨事項は、MSHTML および SHDOCVW ホスト セキュリティの一般的な推奨事項に基づいています。 詳細については、「 [Mshtml ホストのセキュリティに関する faq: パート I ii](https://go.microsoft.com/fwlink/?LinkId=179396) 」と「 [Mshtml ホストのセキュリティに関する FAQ: 第2部](https://go.microsoft.com/fwlink/?LinkId=179415)」を参照してください。  
+> この推奨事項は、MSHTML および SHDOCVW ホスト セキュリティの一般的な推奨事項に基づいています。 詳細については、「 [Mshtml ホストのセキュリティに関する faq: パート I ii](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx) 」と「 [Mshtml ホストのセキュリティに関する FAQ: 第2部](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx)」を参照してください。  
   
  実行可能ファイルでは、レジストリ値を 1 に設定して以下の機能コントロールを有効にすることを検討してください。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "74802085"
   
  Windows Internet Explorer で WPF <xref:System.Windows.Controls.WebBrowser> コントロールを含む部分信頼 XAML ブラウザーアプリケーション (XBAP) を実行すると、WPF は Internet Explorer プロセスのアドレス空間で WebBrowser ActiveX コントロールをホストします。 WebBrowser ActiveX コントロールは Internet Explorer プロセスでホストされているため、Internet Explorer のすべての機能コントロールが WebBrowser ActiveX コントロールに対しても有効になります。  
   
- Internet Explorer で実行されている XBAP にも、標準のスタンドアロン アプリケーションよりも高いレベルのセキュリティが適用されます。 この追加のセキュリティは、Internet Explorer (したがって、WebBrowser ActiveX コントロール) が Windows Vista および Windows 7 では既定で保護モードで実行されるためです。 保護モードの詳細については、「 [Internet Explorer の保護モードの概要と操作](https://go.microsoft.com/fwlink/?LinkId=179393)」を参照してください。  
+ Internet Explorer で実行されている XBAP にも、標準のスタンドアロン アプリケーションよりも高いレベルのセキュリティが適用されます。 この追加のセキュリティは、Internet Explorer (したがって、WebBrowser ActiveX コントロール) が Windows Vista および Windows 7 では既定で保護モードで実行されるためです。 保護モードの詳細については、「 [Internet Explorer の保護モードの概要と操作](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/)」を参照してください。  
   
 > [!NOTE]
 > インターネットゾーン内で、WPF <xref:System.Windows.Controls.WebBrowser> コントロールを含む XBAP を Firefox で実行しようとすると、<xref:System.Security.SecurityException> がスローされます。 これは、WPF セキュリティ ポリシーが原因です。  
@@ -266,7 +266,7 @@ ms.locfileid: "74802085"
   
 |区分|Resource|  
 |----------|--------------|  
-|マネージド コード|[patterns & practices アプリケーション セキュリティ ガイダンス インデックス](https://go.microsoft.com/fwlink/?LinkId=117426)|  
+|マネージド コード|[patterns & practices アプリケーション セキュリティ ガイダンス インデックス](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
 |CAS|[コード アクセス セキュリティ](../misc/code-access-security.md)|  
 |ClickOnce|[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信頼セキュリティ](wpf-partial-trust-security.md)|  
@@ -276,7 +276,7 @@ ms.locfileid: "74802085"
 - [WPF 部分信頼セキュリティ](wpf-partial-trust-security.md)
 - [WPF のセキュリティ方針 - プラットフォーム セキュリティ](wpf-security-strategy-platform-security.md)
 - [WPF のセキュリティ方針 - セキュリティ エンジニアリング](wpf-security-strategy-security-engineering.md)
-- [patterns & practices アプリケーション セキュリティ ガイダンス インデックス](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [patterns & practices アプリケーション セキュリティ ガイダンス インデックス](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))
 - [コード アクセス セキュリティ](../misc/code-access-security.md)
 - [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)
 - [XAML の概要 (WPF)](../../desktop-wpf/fundamentals/xaml.md)
