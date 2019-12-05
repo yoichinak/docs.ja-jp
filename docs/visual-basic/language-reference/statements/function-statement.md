@@ -94,11 +94,11 @@ End Function
 
 - `Shared`
 
-  省略可。 「[共有](../../../visual-basic/language-reference/modifiers/shared.md)」を参照してください。
+  省略可。 「[Shared](../../../visual-basic/language-reference/modifiers/shared.md)」を参照してください。
 
 - `Shadows`
 
-  省略可。 「[シャドウ](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
+  省略可。 「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
 
 - `Async`
 
@@ -145,7 +145,7 @@ End Function
 
 - `Handles`
 
-  省略可。 このプロシージャが1つ以上の特定のイベントを処理できることを示します。 「[ハンドル](handles-clause.md)」を参照してください。
+  省略可。 このプロシージャが1つ以上の特定のイベントを処理できることを示します。 「[Handles 句](handles-clause.md)」を参照してください。
 
 - `eventlist`
 
@@ -238,7 +238,7 @@ Visual Basic は、内部効率を向上させるために算術式を再配置�
 
 *反復子*関数は、リストや配列などのコレクションに対してカスタムの反復処理を実行します。 Iterator 関数は[Yield](yield-statement.md)ステートメントを使用して、各要素を1回に1つ返します。 [Yield](yield-statement.md)ステートメントに到達すると、コード内の現在の場所が記憶されます。 次回、反復子メソッドが呼び出されると、この位置から実行が再開されます。
 
-For Each を使用して、クライアントコードから反復子を呼び出します。 [次](for-each-next-statement.md)のステートメント。
+[For Each...Next](for-each-next-statement.md) ステートメントを使用して、クライアントコードから反復子を呼び出します。。
 
 反復子関数の戻り値の型には、<xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator>、または <xref:System.Collections.Generic.IEnumerator%601>を指定できます。
 
