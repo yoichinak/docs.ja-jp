@@ -1,4 +1,4 @@
-- name: .NET Core のガイド
+- name: .NET Core ガイド
   href: index.md
 - name: .NET Core について
   href: about.md
@@ -47,21 +47,21 @@
   items:
     - name: 'C# および Visual Studio Code の使用を開始する'
       href: tutorials/with-visual-studio-code.md
-    - name: 'Visual Studio 2017 で .NET Core を使用して C# Hello World アプリを構築する'
+    - name: 'Visual Studio での C# を使用した Hello World アプリの構築'
       href: tutorials/with-visual-studio.md
-    - name: Visual Studio 2017 で .NET Core を使用して Visual Basic Hello World アプリを構築する
+    - name: Visual Studio での Visual Basic を使用した Hello World アプリの構築
       href: tutorials/vb-with-visual-studio.md
-    - name: 'Visual Studio 2017 を使用して C# または Visual Basic .NET Core の Hello World アプリケーションをデバッグする'
+    - name: Visual Studio を使用したアプリケーションのデバッグ
       href: tutorials/debugging-with-visual-studio.md
-    - name: Visual Studio 2017 での Hello World アプリケーションの発行
+    - name: Visual Studio でのアプリケーションの発行
       href: tutorials/publishing-with-visual-studio.md
-    - name: 'Visual Studio 2017 で C# と .NET Core を使用して .NET Standard ライブラリを構築する'
+    - name: 'Visual Studio での C# を使用した .NET Standard ライブラリの構築'
       href: tutorials/library-with-visual-studio.md
-    - name: Visual Studio 2017 で Visual Basic と .NET Core を使用して .NET Standard ライブラリを構築する
+    - name: Visual Studio での Visual Basic を使用した .NET Standard ライブラリの構築
       href: tutorials/vb-library-with-visual-studio.md
-    - name: Visual Studio 2017 での .NET Core を使用した .NET Standard ライブラリのテスト
+    - name: Visual Studio での .NET Standard ライブラリのテスト
       href: tutorials/testing-library-with-visual-studio.md
-    - name: Visual Studio 2017 での .NET Standard ライブラリの使用
+    - name: Visual Studio での .NET Standard ライブラリの使用
       href: tutorials/consuming-library-with-visual-studio.md
 - name: .NET Core の新機能
   items:
@@ -141,7 +141,7 @@
       href: deploying/deploy-with-cli.md
     - name: Visual Studio を使用したアプリの展開
       href: deploying/deploy-with-vs.md
-    - name: クロス プラットフォーム ツールによる NuGet パッケージの作成
+    - name: クロスプラットフォーム ツールを使用した NuGet パッケージの作成
       href: deploying/creating-nuget-packages.md
     - name: 自己完結型展開ランタイムのロール フォワード
       href: deploying/runtime-patch-selection.md
@@ -198,7 +198,7 @@
       href: testing/selective-unit-tests.md
     - name: 発行された出力の単体テスト
       href: testing/unit-testing-published-output.md
-    - name: Visual Studio を使用した .NET Core プロジェクトの Live Unit Testing
+    - name: Visual Studio での .NET Core プロジェクトのライブ単体テスト
       href: /visualstudio/test/live-unit-testing-start
 - name: 継続的インテグレーション
   href: tools/using-ci-with-cli.md
@@ -211,7 +211,7 @@
       href: versions/remove-runtime-sdk-versions.md
 - name: ランタイム識別子 (RID) のカタログ
   href: rid-catalog.md
-- name: .NET Core SDK 概要
+- name: .NET Core SDK の概要
   href: sdk.md
 - name: .NET Core CLI
   items:
@@ -355,11 +355,11 @@
       items:
         - name: 既定の依存関係プローブ
           href: dependency-loading/default-probing.md
-        - name: マネージド アセンブリを読み込んでいます
+        - name: マネージド アセンブリを読み込む
           href: dependency-loading/loading-managed.md
-        - name: サテライト アセンブリを読み込んでいます
+        - name: サテライト アセンブリを読み込む
           href: dependency-loading/loading-resources.md
-        - name: アンマネージド ライブラリを読み込んでいます
+        - name: アンマネージド ライブラリを読み込む
           href: dependency-loading/loading-unmanaged.md
     - name: チュートリアル
       items:

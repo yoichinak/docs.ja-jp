@@ -2,12 +2,12 @@
 title: .NET Core について
 description: .NET Core について説明します。
 ms.date: 09/17/2019
-ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416741"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552241"
 ---
 # <a name="about-net-core"></a>.NET Core について
 
@@ -29,14 +29,14 @@ ms.locfileid: "73416741"
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 - サブライム テキスト
 - Vim
- 
+
 この統合は、[OmniSharp](https://www.omnisharp.net/) および [Ionide](http://ionide.io) プロジェクトの共同作成者によって、一部提供されています。
 
 ## <a name="apis"></a>API
 
 .NET Core は多くのシナリオに対応する API を公開しています。次のうちのいくつかを次に示します。
 
-- [bool](../csharp/language-reference/keywords/bool.md) や [int](../csharp/language-reference/builtin-types/integral-numeric-types.md) などのプリミティブ型。
+- <xref:System.Boolean?displayProperty=nameWithType> や <xref:System.Int32?displayProperty=nameWithType> などのプリミティブ型。
 - <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> や <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> などのコレクション。
 - <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> や <xref:System.IO.FileStream?displayProperty=nameWithType> などのユーティリティ型。
 - <xref:System.Data.DataSet?displayProperty=nameWithType> や [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/) などのデータ型。

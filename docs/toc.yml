@@ -1,8 +1,8 @@
 - name: ようこそ
   href: welcome.md
-- name: .NET のガイド
+- name: .NET ガイド
   href: standard/
-- name: .NET Core のガイド
+- name: .NET Core ガイド
   href: core/
 - name: .NET Framework ガイド
   href: framework/
@@ -12,7 +12,7 @@
   href: csharp/index.yml
 - name: 'F# のガイド'
   href: fsharp/
-- name: Visual Basic のガイド
+- name: Visual Basic ガイド
   href: visual-basic/
 - name: ML.NET ガイド
   href: machine-learning/index.yml
