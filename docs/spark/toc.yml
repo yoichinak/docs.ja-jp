@@ -25,6 +25,8 @@
       href: how-to-guides/debug.md
     - name: HDInsight にジョブを送信する
       href: how-to-guides/hdinsight-deploy-methods.md
+    - name: Databricks にジョブを送信する
+      href: how-to-guides/databricks-deploy-methods.md
 - name: 辞書／辞典／その他
   items:
     - name: API リファレンス

@@ -65,6 +65,8 @@
       href: tutorials/consuming-library-with-visual-studio.md
 - name: .NET Core の新機能
   items:
+    - name: .NET Core 3.1 の新機能
+      href: whats-new/dotnet-core-3-1.md
     - name: .NET Core 3.0 の新機能
       href: whats-new/dotnet-core-3-0.md
     - name: .NET Core 2.2 の新機能
@@ -109,8 +111,18 @@
   items:
     - name: 設定
       href: run-time-config/index.md
+    - name: コンパイル設定
+      href: run-time-config/compilation.md
+    - name: 設定のデバッグとプロファイリング
+      href: run-time-config/debugging-profiling.md
     - name: ガベージ コレクター設定
       href: run-time-config/garbage-collector.md
+    - name: グローバリゼーションの設定
+      href: run-time-config/globalization.md
+    - name: ネットワークの設定
+      href: run-time-config/networking.md
+    - name: スレッドの設定
+      href: run-time-config/threading.md
 - name: ネイティブ相互運用性
   items:
     - name: COM への .NET Core コンポーネントの公開
