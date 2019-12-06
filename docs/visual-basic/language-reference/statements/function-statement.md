@@ -94,11 +94,11 @@ End Function
 
 - `Shared`
 
-  省略可。 「[共有](../../../visual-basic/language-reference/modifiers/shared.md)」を参照してください。
+  省略可。 「[Shared](../../../visual-basic/language-reference/modifiers/shared.md)」を参照してください。
 
 - `Shadows`
 
-  省略可。 「[シャドウ](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
+  省略可。 「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
 
 - `Async`
 
