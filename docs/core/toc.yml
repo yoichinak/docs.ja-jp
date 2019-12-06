@@ -96,7 +96,7 @@
     - name: macOS での完全な .NET Core ソリューションの構築
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: CLI ツールを使用する .NET Core に関する概要
-      href: tutorials/using-with-xplat-cli.md
+      href: tutorials/cli-create-console-app.md
     - name: .NET Core CLI を使用したプロジェクトの整理およびテスト
       href: tutorials/testing-with-cli.md
     - name: クロスプラットフォーム ツールによるライブラリの開発
