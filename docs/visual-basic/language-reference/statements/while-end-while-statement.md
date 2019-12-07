@@ -51,7 +51,7 @@ End While
   
  `While` ステートメントは、ループを開始する前に常に条件をチェックします。 ループは、条件が `True`のまま続行されます。 最初にループを入力したときに `condition` が `False` 場合は、一度も実行されません。  
   
- 通常、`condition` は2つの値を比較した結果になりますが、[ブールデータ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)の値 (`True` または `False`) に評価される任意の式を指定できます。 この式には、`Boolean`に変換された別のデータ型 (数値型など) の値を含めることができます。  
+ 通常、`condition` は2つの値を比較した結果になりますが、[Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)の値 (`True` または `False`) に評価される任意の式を指定できます。 この式には、`Boolean`に変換された別のデータ型 (数値型など) の値を含めることができます。  
   
  ループを `While` 入れ子にするには、別のループ内に1つのループを配置します。 また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、「[入れ子になったコントロール構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。  
   
