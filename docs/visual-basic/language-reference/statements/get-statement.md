@@ -34,7 +34,7 @@ End Get
 |用語|Definition|  
 |---|---|  
 |`attributelist`|省略可。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。|  
-|`accessmodifier`|このプロパティの `Get` および `Set` ステートメントのうちの1つで、省略可能です。 次のいずれかになります。<br /><br /> -     [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
+|`accessmodifier`|このプロパティの `Get` および `Set` ステートメントのうちの1つで、省略可能です。 次のいずれかになります。<br /><br /> -     [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [プライベート](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
 |`statements`|省略可。 `Get` プロパティプロシージャが呼び出されたときに実行される1つ以上のステートメント。|  
 |`End Get`|必須。 `Get` property プロシージャの定義を終了します。|  
   
@@ -67,7 +67,7 @@ End Get
   
 - **戻り値。** `Get` プロシージャから値を返すには、プロパティ名に値を割り当てるか、 [Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)に含めることができます。 `Return` ステートメントでは、`Get` プロシージャの戻り値が同時に割り当てられ、プロシージャが終了します。  
   
-     プロパティ名に値を割り当てずに `Exit Property` を使用する場合、`Get` プロシージャは、プロパティのデータ型の既定値を返します。 詳細については、「 [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)」の「戻り値」を参照してください。  
+     プロパティ名に値を割り当てずに `Exit Property` を使用する場合、`Get` プロシージャは、プロパティのデータ型の既定値を返します。 詳細については、「[Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)」の「戻り値」を参照してください。  
   
      次の例は、読み取り専用プロパティ `quoteForTheDay` が、プライベート変数 `quoteValue`に保持されている値を返す方法を示しています。  
   

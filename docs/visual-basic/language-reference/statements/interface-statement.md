@@ -39,7 +39,7 @@ End Interface
 |---|---|  
 |`attributelist`|省略可。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。|  
 |`accessmodifier`|省略可。 次のいずれかになります。<br /><br /> -   [パブリック](../../../visual-basic/language-reference/modifiers/public.md)<br />[保護されている](../../../visual-basic/language-reference/modifiers/protected.md)-   <br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [プライベート](../../../visual-basic/language-reference/modifiers/private.md)<br />[保護されたフレンド](../../language-reference/modifiers/protected-friend.md)の -  <br/>- [プライベート保護](../../language-reference/modifiers/private-protected.md)<br /><br /> 「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
-|`Shadows`|省略可。 「[シャドウ](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。|  
+|`Shadows`|省略可。 「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。|  
 |`name`|必須。 このインターフェイスの名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
 |`Of`|省略可。 これがジェネリックインターフェイスであることを指定します。|  
 |`typelist`|[Of](../../../visual-basic/language-reference/statements/of-clause.md)キーワードを使用する場合は必須です。 このインターフェイスの型パラメーターのリスト。 必要に応じて、`In` および `Out` ジェネリック修飾子を使用して、各型パラメーターをバリアントとして宣言できます。 [型リスト](../../../visual-basic/language-reference/statements/type-list.md)を参照してください。|  
@@ -63,7 +63,7 @@ End Interface
   
  `Interface` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、インターフェイスの*宣言コンテキスト*は、ソースファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があり、プロシージャまたはブロックにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
- インターフェイスは、既定で[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスに設定されます。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+ インターフェイスは、既定で[Friend](../../../visual-basic/language-reference/modifiers/friend.md)アクセスに設定されます。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
 ## <a name="rules"></a>ルール  
   

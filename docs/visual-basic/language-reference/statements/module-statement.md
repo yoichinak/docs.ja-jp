@@ -63,7 +63,7 @@ End Module
 
 モジュールには、プログラムと同じ有効期間があります。 メンバーはすべて `Shared`ので、プログラムの有効期間と同じになります。
 
-モジュールは既定で[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスになります。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+モジュールは既定で[Friend](../../../visual-basic/language-reference/modifiers/friend.md)アクセスになります。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 モジュールのすべてのメンバーは、暗黙的に `Shared`ます。
 
@@ -85,11 +85,11 @@ End Module
 
   <xref:System.Object>を指定する場合でも、モジュール定義で[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)を使用することはできません。
 
-- **既定のプロパティ。** モジュールでは、既定のプロパティを定義することはできません。 詳細については、「 [Default](../../../visual-basic/language-reference/modifiers/default.md)」を参照してください。
+- **既定のプロパティ。** モジュールでは、既定のプロパティを定義することはできません。 詳細については、「[Default](../../../visual-basic/language-reference/modifiers/default.md)」を参照してください。
 
 ## <a name="behavior"></a>動作
 
-- **アクセスレベル。** モジュール内では、各メンバーを独自のアクセス レベルで宣言できます。 モジュールメンバーの既定の[パブリック](../../../visual-basic/language-reference/modifiers/public.md)アクセスは、変数と定数を除き、既定で[プライベート](../../../visual-basic/language-reference/modifiers/private.md)アクセスになります。 モジュールがそのメンバーの 1 つ以上のアクセス権を持っている場合、指定されたモジュールへのアクセス レベルが優先されます。
+- **アクセスレベル。** モジュール内では、各メンバーを独自のアクセス レベルで宣言できます。 モジュールメンバーの既定の [Public](../../../visual-basic/language-reference/modifiers/public.md) アクセスは、変数と定数を除き、既定で [Private](../../../visual-basic/language-reference/modifiers/private.md) アクセスになります。 モジュールがそのメンバーの 1 つ以上のアクセス権を持っている場合、指定されたモジュールへのアクセス レベルが優先されます。
 
 - **検索.** モジュールは、名前空間全体でスコープ内にあります。
 
