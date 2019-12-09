@@ -57,7 +57,7 @@ ms.locfileid: "74352774"
 
 ## <a name="rules"></a>ルール
 
-- **内側.** 型パラメーターリストを指定する場合は、それをかっこで囲む必要があります。[Of](../../../visual-basic/language-reference/statements/of-clause.md) キーワードを使って特定する必要があります。 `Of` は、はリストの先頭に一度だけ記述します。
+- **Parentheses. ** 型パラメーターリストを指定する場合は、それをかっこで囲む必要があります。[Of](../../../visual-basic/language-reference/statements/of-clause.md) キーワードを使って特定する必要があります。 `Of` は、リストの先頭に一度だけ記述します。
 
 - **Constraints.** 型パラメーターに対する*制約*の一覧には、次の項目を任意の組み合わせで含めることができます。
 
