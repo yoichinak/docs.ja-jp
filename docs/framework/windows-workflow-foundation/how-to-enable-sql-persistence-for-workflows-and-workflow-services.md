@@ -2,12 +2,12 @@
 title: ワークフローとワークフロー サービスの SQL 永続性を有効にする方法
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: bbbd2e6a5eb3babeb1a4d06976fdefd621581766
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802584"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837689"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>ワークフローとワークフロー サービスの SQL 永続性を有効にする方法
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> ユーザー名やパスワードなどの機密情報は、Web.config ファイルに保存しないことをお勧めします。 Web.config ファイルに機密情報を保存する場合は、ファイル システムのアクセス制御リスト (ACL) を使用して、Web.config ファイルへのアクセスをセキュリティで保護する必要があります。 さらに、「[保護された構成を使用した構成情報の暗号化](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100))」で説明されているように、構成ファイル内の構成値をセキュリティで保護することもできます。
+> ユーザー名やパスワードなどの機密情報は、Web.config ファイルに保存しないことをお勧めします。 Web.config ファイルに機密情報を保存する場合は、ファイル システムのアクセス制御リスト (ACL) を使用して、Web.config ファイルへのアクセスをセキュリティで保護する必要があります。 さらに、「[保護された構成を使用した構成情報の暗号化](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))」で説明されているように、構成ファイル内の構成値をセキュリティで保護することもできます。
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>SQL Workflow Instance Store 機能に関連する Machine.config の要素
 

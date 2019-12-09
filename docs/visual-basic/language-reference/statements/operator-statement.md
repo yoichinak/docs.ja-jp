@@ -46,22 +46,22 @@ End Operator
 省略可。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。
 
 `Public`  
-必須。 この演算子プロシージャに[パブリック](../../../visual-basic/language-reference/modifiers/public.md)アクセスがあることを示します。
+必須。 この演算子プロシージャに [Public](../../../visual-basic/language-reference/modifiers/public.md) アクセスがあることを示します。
 
 `Overloads`  
-省略可。 「[オーバーロード](../../../visual-basic/language-reference/modifiers/overloads.md)」を参照してください。
+省略可。 「[Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)」を参照してください。
 
 `Shared`  
-必須。 この演算子プロシージャが[共有](../../../visual-basic/language-reference/modifiers/shared.md)プロシージャであることを示します。
+必須。 この演算子プロシージャが [Shared](../../../visual-basic/language-reference/modifiers/shared.md) プロシージャであることを示します。
 
 `Shadows`  
-省略可。 「[シャドウ](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
+省略可。 「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
 
 `Widening`  
-`Narrowing`を指定しない限り、変換演算子に対しては必須です。 この演算子プロシージャが[拡大](../../../visual-basic/language-reference/modifiers/widening.md)変換を定義することを示します。 このヘルプページの「拡大変換と縮小変換」を参照してください。
+`Narrowing`を指定しない限り、変換演算子に対しては必須です。 この演算子プロシージャが [Widening](../../../visual-basic/language-reference/modifiers/widening.md) 変換を定義することを示します。 このヘルプページの「Widening and Narrowing Conversions」を参照してください。
 
 `Narrowing`  
-`Widening`を指定しない限り、変換演算子に対しては必須です。 この演算子プロシージャが[縮小](../../../visual-basic/language-reference/modifiers/narrowing.md)変換を定義することを示します。 このヘルプページの「拡大変換と縮小変換」を参照してください。
+`Widening`を指定しない限り、変換演算子に対しては必須です。 この演算子プロシージャが[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)変換を定義することを示します。 このヘルプページの「Widening and Narrowing Conversions」を参照してください。
 
 `operatorsymbol`  
 必須。 この演算子プロシージャが定義する演算子のシンボルまたは識別子。

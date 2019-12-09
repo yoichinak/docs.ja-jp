@@ -94,11 +94,11 @@ End Function
 
 - `Shared`
 
-  省略可。 「[共有](../../../visual-basic/language-reference/modifiers/shared.md)」を参照してください。
+  省略可。 「[Shared](../../../visual-basic/language-reference/modifiers/shared.md)」を参照してください。
 
 - `Shadows`
 
-  省略可。 「[シャドウ](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
+  省略可。 「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
 
 - `Async`
 
@@ -145,7 +145,7 @@ End Function
 
 - `Handles`
 
-  省略可。 このプロシージャが1つ以上の特定のイベントを処理できることを示します。 「[ハンドル](handles-clause.md)」を参照してください。
+  省略可。 このプロシージャが 1 つ以上の特定のイベントを処理できることを示します。 「[Handles 句](handles-clause.md)」を参照してください。
 
 - `eventlist`
 
