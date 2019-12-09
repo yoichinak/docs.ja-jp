@@ -30,10 +30,10 @@ Const constantlist
 省略可。 このステートメントで宣言されているすべての定数に適用される属性のリスト。 山かっこ ("`<`" と "`>`") の[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)を参照してください。
 
 `accessmodifier`  
-省略可。 これらの定数にアクセスできるコードを指定するには、これを使用します。 [Public](../../../visual-basic/language-reference/modifiers/public.md)、 [protected](../../../visual-basic/language-reference/modifiers/protected.md)、 [friend](../../../visual-basic/language-reference/modifiers/friend.md)、 [Protected Friend](../modifiers/protected-friend.md)、 [private](../../../visual-basic/language-reference/modifiers/private.md)、または[private](../../language-reference/modifiers/private-protected.md)を指定できます。
+省略可。 これらの定数にアクセスできるコードを指定するには、これを使用します。 [Public](../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../visual-basic/language-reference/modifiers/protected.md)、 [Friend](../../../visual-basic/language-reference/modifiers/friend.md)、 [Protected Friend](../modifiers/protected-friend.md)、 [private](../../../visual-basic/language-reference/modifiers/private.md)、または[Private](../../language-reference/modifiers/private-protected.md)を指定できます。
 
 `Shadows`  
-省略可。 基底クラスのプログラミング要素を再宣言および非表示にするには、これを使用します。 「[シャドウ](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
+省略可。 基底クラスのプログラミング要素を再宣言および非表示にするには、これを使用します。 「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
 
 `constantlist`  
 必須。 このステートメントで宣言されている定数の一覧。
