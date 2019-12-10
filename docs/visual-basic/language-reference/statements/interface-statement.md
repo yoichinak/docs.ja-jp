@@ -38,7 +38,7 @@ End Interface
 |用語|Definition|  
 |---|---|  
 |`attributelist`|省略可。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。|  
-|`accessmodifier`|省略可。 次のいずれかになります。<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />[Protected](../../../visual-basic/language-reference/modifiers/protected.md)-   <br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />[Protected Friend](../../language-reference/modifiers/protected-friend.md)の -  <br/>- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> 「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
+|`accessmodifier`|省略可。 次のいずれかになります。<br /><br /> - [Public](../../../visual-basic/language-reference/modifiers/public.md)<br /> - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br /> - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br /> - [Private](../../../visual-basic/language-reference/modifiers/private.md)<br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br /> - [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> 「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
 |`Shadows`|省略可。 「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。|  
 |`name`|必須。 このインターフェイスの名前。 「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
 |`Of`|省略可。 これがジェネリックインターフェイスであることを指定します。|  
@@ -67,13 +67,13 @@ End Interface
   
 ## <a name="rules"></a>ルール  
   
-- **インターフェイスを入れ子。** 1つのインターフェイスを別の内に定義できます。 外側のインターフェイスは、*包含インターフェイス*と呼ばれ、内側のインターフェイスは*入れ子になったインターフェイス*と呼ばれます。  
+- **インターフェイスを入れ子にする。** 1 つのインターフェイスを別の内に定義できます。 外側のインターフェイスは、*包含インターフェイス*と呼ばれ、内側のインターフェイスは*入れ子になったインターフェイス*と呼ばれます。  
   
 - **メンバー宣言。** インターフェイスのメンバーとしてプロパティまたはプロシージャを宣言する場合は、そのプロパティまたはプロシージャの*シグネチャ*のみを定義します。 これには、要素の型 (プロパティまたはプロシージャ)、パラメーターとパラメーターの型、および戻り値の型が含まれます。 このため、メンバー定義は1行のコードだけを使用し、`End Function` や `End Property` などの終了ステートメントは、インターフェイスでは有効ではありません。  
   
      これに対し、列挙体、構造体、または入れ子になったクラスまたはインターフェイスを定義する場合は、そのデータメンバーを含める必要があります。  
   
-- **メンバーの宣言。** モジュールメンバーを定義するときにアクセス修飾子を使用することはできません。また、[Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)を除く[Shared](../../../visual-basic/language-reference/modifiers/shared.md)またはプロシージャ修飾子を指定することもできません。 [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)を使用して任意のメンバーを宣言できます。また、プロパティを定義するときには、 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)または[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)として[Default](../../../visual-basic/language-reference/modifiers/default.md)を使用できます。  
+- **メンバー修飾子。** モジュールメンバーを定義するときにアクセス修飾子を使用することはできません。また、[Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)を除く[Shared](../../../visual-basic/language-reference/modifiers/shared.md)またはプロシージャ修飾子を指定することもできません。 [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)を使用して任意のメンバーを宣言できます。また、プロパティを定義するときには、 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)または[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)として[Default](../../../visual-basic/language-reference/modifiers/default.md)を使用できます。  
   
 - **継承。** インターフェイスで[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)が使用されている場合は、1つまたは複数の基本インターフェイスを指定できます。 それぞれが同じ名前のメンバーを定義している場合でも、2つのインターフェイスから継承できます。 その場合、実装するコードでは、実装するメンバーを指定するために名前の修飾を使用する必要があります。  
   
