@@ -38,9 +38,9 @@ End Interface
 |用語|Definition|  
 |---|---|  
 |`attributelist`|省略可。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。|  
-|`accessmodifier`|省略可。 次のいずれかになります。<br /><br /> -   [パブリック](../../../visual-basic/language-reference/modifiers/public.md)<br />[保護されている](../../../visual-basic/language-reference/modifiers/protected.md)-   <br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [プライベート](../../../visual-basic/language-reference/modifiers/private.md)<br />[保護されたフレンド](../../language-reference/modifiers/protected-friend.md)の -  <br/>- [プライベート保護](../../language-reference/modifiers/private-protected.md)<br /><br /> 「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
+|`accessmodifier`|省略可。 次のいずれかになります。<br /><br /> -   [パブリック](../../../visual-basic/language-reference/modifiers/public.md)<br />-     [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [プライベート](../../../visual-basic/language-reference/modifiers/private.md)<br />[保護されたフレンド](../../language-reference/modifiers/protected-friend.md)の -  <br/>- [プライベート保護](../../language-reference/modifiers/private-protected.md)<br /><br /> 「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
 |`Shadows`|省略可。 「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。|  
-|`name`|必須。 このインターフェイスの名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
+|`name`|必須。 このインターフェイスの名前。 「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
 |`Of`|省略可。 これがジェネリックインターフェイスであることを指定します。|  
 |`typelist`|[Of](../../../visual-basic/language-reference/statements/of-clause.md)キーワードを使用する場合は必須です。 このインターフェイスの型パラメーターのリスト。 必要に応じて、`In` および `Out` ジェネリック修飾子を使用して、各型パラメーターをバリアントとして宣言できます。 [型リスト](../../../visual-basic/language-reference/statements/type-list.md)を参照してください。|  
 |`Inherits`|省略可。 このインターフェイスが、別のインターフェイスまたはインターフェイスの属性とメンバーを継承することを示します。 「 [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)」を参照してください。|  
@@ -99,11 +99,11 @@ End Interface
   
      `varAsInterface`を通じてクラスメンバーにアクセスすると、すべてのメンバーにパブリックアクセス権が与えられます。 ただし、`varAsClass`を通じてメンバーにアクセスする場合は、`doSomething` `Sub` プロシージャにプライベートアクセスがあります。  
   
-- **検索.** インターフェイスは、名前空間、クラス、構造体、またはモジュール全体でスコープ内にあります。  
+- **スコープ。 ** インターフェイスは、名前空間、クラス、構造体、またはモジュール全体でスコープ内にあります。  
   
      すべてのインターフェイスメンバーのスコープは、インターフェイス全体です。  
   
-- **最短.** インターフェイスには、それ自体が有効期間やメンバーを持つことはありません。 クラスがインターフェイスを実装し、そのクラスのインスタンスとしてオブジェクトが作成される場合、オブジェクトは、そのオブジェクトが実行されているアプリケーション内の有効期間を持ちます。 詳細については、「 [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)」の「有効期間」を参照してください。  
+- **有効期間。 ** インターフェイスには、それ自体が有効期間やメンバーを持つことはありません。 クラスがインターフェイスを実装し、そのクラスのインスタンスとしてオブジェクトが作成される場合、オブジェクトは、そのオブジェクトが実行されているアプリケーション内の有効期間を持ちます。 詳細については、「 [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)」の「有効期間」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`Interface` ステートメントを使用して `thisInterface`という名前のインターフェイスを定義します。これは、`Property` ステートメントと `Function` ステートメントで実装する必要があります。  
