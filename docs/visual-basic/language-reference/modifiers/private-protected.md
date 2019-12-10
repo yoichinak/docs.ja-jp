@@ -1,5 +1,5 @@
 ---
-title: Private Protected
+title: Private Protected (Visual Basic)
 ms.date: 05/10/2018
 helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
@@ -11,7 +11,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351340"
 ---
-# <a name="private-protected-visual-basic"></a>プライベート保護 (Visual Basic)
+# <a name="private-protected-visual-basic"></a>Private Protected (Visual Basic)
 
 キーワード組み合わせ `Private Protected` はメンバー アクセス修飾子です。 `Private Protected` メンバーは、それを含んでいるクラスのすべてのメンバーと、それを含むクラスから派生した型によってアクセスできますが、それを含んでいるアセンブリ内に存在する場合に限ります。
 

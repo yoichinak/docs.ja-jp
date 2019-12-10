@@ -38,7 +38,9 @@ End Interface
 |用語|Definition|  
 |---|---|  
 |`attributelist`|省略可。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。|  
+
 |`accessmodifier`|省略可。 次のいずれかになります。<br /><br /> - [Public](../../../visual-basic/language-reference/modifiers/public.md)<br /> - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br /> - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br /> - [Private](../../../visual-basic/language-reference/modifiers/private.md)<br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br /> - [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> 「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
+
 |`Shadows`|省略可。 「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。|  
 |`name`|必須。 このインターフェイスの名前。 「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
 |`Of`|省略可。 これがジェネリックインターフェイスであることを指定します。|  
@@ -99,11 +101,13 @@ End Interface
   
      `varAsInterface`を通じてクラスメンバーにアクセスすると、すべてのメンバーにパブリックアクセス権が与えられます。 ただし、`varAsClass`を通じてメンバーにアクセスする場合は、`doSomething` `Sub` プロシージャにプライベートアクセスがあります。  
   
+
 - **スコープ。** インターフェイスは、名前空間、クラス、構造体、またはモジュール全体でスコープ内にあります。  
   
      すべてのインターフェイスメンバーのスコープは、インターフェイス全体です。  
   
 - **有効期間。** インターフェイスには、それ自体が有効期間やメンバーを持つことはありません。 クラスがインターフェイスを実装し、そのクラスのインスタンスとしてオブジェクトが作成される場合、オブジェクトは、そのオブジェクトが実行されているアプリケーション内の有効期間を持ちます。 詳細については、「 [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)」の「有効期間」を参照してください。  
+
   
 ## <a name="example"></a>例  
  次の例では、`Interface` ステートメントを使用して `thisInterface`という名前のインターフェイスを定義します。これは、`Property` ステートメントと `Function` ステートメントで実装する必要があります。  

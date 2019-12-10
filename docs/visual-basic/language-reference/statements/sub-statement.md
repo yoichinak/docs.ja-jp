@@ -99,11 +99,11 @@ End Sub
 
 - `Shared`
 
-  省略可。 「[共有](../modifiers/shared.md)」を参照してください。
+  省略可。 「[Shared](../modifiers/shared.md)」を参照してください。
 
 - `Shadows`
 
-  省略可。 「[シャドウ](../modifiers/shadows.md)」を参照してください。
+  省略可。 「[Shadows](../modifiers/shadows.md)」を参照してください。
 
 - `Async`
 
@@ -142,7 +142,7 @@ End Sub
 
 - `Handles`
 
-  省略可。 このプロシージャが1つ以上の特定のイベントを処理できることを示します。 「[ハンドル](handles-clause.md)」を参照してください。
+  省略可。 このプロシージャが1つ以上の特定のイベントを処理できることを示します。 「[Handles](handles-clause.md)」を参照してください。
 
 - `eventlist`
 
