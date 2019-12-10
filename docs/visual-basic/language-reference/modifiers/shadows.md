@@ -1,5 +1,5 @@
 ---
-title: Shadows
+title: Shadows (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Shadows
@@ -26,7 +26,7 @@ ms.locfileid: "74351262"
 
 シャドウの主な目的は (*名前で非表示*とも呼ばれます)、クラスメンバーの定義を保持することです。 基本クラスには、既に定義されているものと同じ名前の要素を作成する変更が含まれる場合があります。 この場合、`Shadows` 修飾子は、新しい基底クラス要素ではなく、定義したメンバーに解決されるように、クラスを通じて参照を強制します。
 
-シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、「 [Visual Basic でのシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。
+シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、「[Visual Basic でのシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。
 
 ## <a name="rules"></a>ルール
 
@@ -50,7 +50,7 @@ ms.locfileid: "74351262"
 
 - [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)
 
-- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
 
 - [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)
 

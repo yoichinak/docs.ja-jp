@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 4c9acc3ef806eabea05d1b64080275293c83e895
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c7859ab610f5eae54eeb31833cb370b694df6553
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802147"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959790"
 ---
 # <a name="graphics-rendering-tiers"></a>グラフィックスの描画層
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションを実行するデバイスのグラフィックス ハードウェア性能は描画層で決まります。  
@@ -89,7 +89,7 @@ ms.locfileid: "74802147"
 |<xref:System.Windows.Media.TileBrush> を使用するタイル化されたコンテンツ|<xref:System.Windows.Media.TileBrush> の <xref:System.Windows.Media.TileBrush.TileMode%2A> プロパティが <xref:System.Windows.Media.TileMode.Tile>に設定されているタイル化されたコンテンツ。|  
 |グラフィックス ハードウェアの最大テクスチャ サイズを超過する表面|ほとんどのグラフィックス ハードウェアの場合、大きな表面のサイズは 2048x2048 ピクセルか 4096x4096 ピクセルになります。|  
 |ビデオ RAM 要件がグラフィックス ハードウェアのメモリを超える操作|Windows SDK の [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) に含まれる Perforator ツールを利用し、アプリケーションのビデオ RAM 使用率を監視できます。|  
-|レイヤード ウィンドウ|レイヤード ウィンドウを利用することで、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションは四角形以外のウィンドウ内の画面にコンテンツを描画できます。 Windows Vista や Windows 7 など、Windows Display Driver Model (WDDM) をサポートするオペレーティングシステムでは、レイヤードウィンドウはハードウェアアクセラレータになります。 [!INCLUDE[winxp](../../../../includes/winxp-md.md)] のような他のシステムの場合、ハードウェア高速化なしで、ソフトウェアによりレイヤード ウィンドウが描画されます。<br /><br /> 次の <xref:System.Windows.Window> プロパティを設定することにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でレイヤードウィンドウを有効にすることができます。<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|レイヤード ウィンドウ|レイヤード ウィンドウを利用することで、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションは四角形以外のウィンドウ内の画面にコンテンツを描画できます。 Windows Vista や Windows 7 など、Windows Display Driver Model (WDDM) をサポートするオペレーティングシステムでは、レイヤードウィンドウはハードウェアアクセラレータになります。 Windows XP などの他のシステムでは、レイヤードウィンドウはハードウェアアクセラレータなしのソフトウェアによってレンダリングされます。<br /><br /> 次の <xref:System.Windows.Window> プロパティを設定することにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でレイヤードウィンドウを有効にすることができます。<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>その他の参照情報  
