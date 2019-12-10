@@ -73,19 +73,19 @@ Dim [ WithEvents ] variablelist
 
 - `Shared`
 
-  任意。 「[共有](../../../visual-basic/language-reference/modifiers/shared.md)」を参照してください。
+  任意。 「[Shared](../../../visual-basic/language-reference/modifiers/shared.md)」を参照してください。
 
 - `Shadows`
 
-  任意。 「[シャドウ](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
+  任意。 「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
 
 - `Static`
 
-  任意。 「[静的](../../../visual-basic/language-reference/modifiers/static.md)」を参照してください。
+  任意。 「[Static](../../../visual-basic/language-reference/modifiers/static.md)」を参照してください。
 
 - `ReadOnly`
 
-  任意。 「 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)」を参照してください。
+  任意。 「[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)」を参照してください。
 
 - `WithEvents`
 

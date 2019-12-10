@@ -35,7 +35,7 @@ ms.locfileid: "74345873"
 ## <a name="reimplementation"></a>再実装  
 派生クラスでは、基底クラスに既に実装されているインターフェイスメンバーを再実装できます。 これは、次の点で基底クラスのメンバーをオーバーライドすることとは異なります。
 
-- 基底クラスのメンバーは、再実装として[オーバーライド](../../../visual-basic/language-reference/modifiers/overridable.md)可能である必要はありません。
+- 基底クラスのメンバーを再実装するのに、[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) とする必要はありません。
 - 別の名前を使用してメンバーを再実装できます。
 
 `Implements` キーワードは、次のコンテキストで使用できます。
