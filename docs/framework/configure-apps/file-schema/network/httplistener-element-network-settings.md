@@ -9,13 +9,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/14/2019
 ms.locfileid: "74088373"
 ---
-# <a name="httplistener-element-network-settings"></a>\<httpListener> 要素 (ネットワーク設定)
+# <a name="httplistener-element-network-settings"></a>\<httpListener > 要素 (ネットワーク設定)
 <xref:System.Net.HttpListener> クラスによって使用されるパラメーターをカスタマイズします。  
 
-[**\<configuration>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<httpListener>**
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<設定 >** ](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**httpListener >**
 
 ## <a name="syntax"></a>構文  
   

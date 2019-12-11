@@ -15,13 +15,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/14/2019
 ms.locfileid: "74089087"
 ---
-# <a name="socket-element-network-settings"></a>\<socket> 要素 (ネットワーク設定)
+# <a name="socket-element-network-settings"></a>\<socket > 要素 (ネットワーク設定)
 ソケット操作が完了ポートを使用するかどうかを指定します。  
 
-[**\<configuration>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<socket>**
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<設定 >** ](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**ソケット >**
 
 ## <a name="syntax"></a>構文  
   

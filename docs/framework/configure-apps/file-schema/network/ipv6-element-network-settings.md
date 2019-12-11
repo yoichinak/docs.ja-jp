@@ -18,10 +18,10 @@ ms.locfileid: "74088133"
 # <a name="ipv6-element-network-settings"></a>\<ipv6> 要素 (ネットワーク設定)
 <xref:System.Net.Dns> クラスの互換性のために残されているメンバーからのインターネットプロトコルバージョン 6 (IPv6) 応答を有効にします。  
 
-[**\<configuration>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<ipv6>**
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<設定 >** ](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ipv6\<**
 
 ## <a name="syntax"></a>構文  
   
