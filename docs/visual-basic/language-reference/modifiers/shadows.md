@@ -38,7 +38,7 @@ ms.locfileid: "74351262"
 
 - **要素の型。** 宣言された要素は、他の任意の種類の要素でシャドウできます。 別のプロパティまたはプロシージャを使用してプロパティまたはプロシージャをシャドウする場合、パラメーターと戻り値の型は、基底クラスのプロパティまたはプロシージャ内のパラメーターと一致する必要はありません。
 
-- **しよう.** 基底クラスのシャドウされた要素は、通常、それをシャドウする派生クラス内からは使用できません。 ただし、次の考慮事項が適用されます。
+- **アクセス。** 基底クラスのシャドウされた要素は、通常、それをシャドウする派生クラス内からは使用できません。 ただし、次の考慮事項が適用されます。
 
   - シャドウしている要素が、それを参照するコードからアクセスできない場合は、シャドウされた要素に参照が解決されます。 たとえば、`Private` 要素が基本クラス要素をシャドウする場合、`Private` 要素にアクセスするためのアクセス許可を持たないコードは、代わりに基本クラス要素にアクセスします。
 
@@ -82,4 +82,4 @@ ms.locfileid: "74351262"
 - [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Visual Basic でのシャドウ処理](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
