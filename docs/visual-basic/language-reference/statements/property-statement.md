@@ -89,11 +89,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Shared`
 
-  任意。 「[共有](../modifiers/shared.md)」を参照してください。
+  任意。 「[Shared](../modifiers/shared.md)」を参照してください。
 
 - `Shadows`
 
-  任意。 「[シャドウ](../modifiers/shadows.md)」を参照してください。
+  任意。 「[Shadows](../modifiers/shadows.md)」を参照してください。
 
 - `ReadOnly`
 
@@ -105,7 +105,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Iterator`
 
-  任意。 「[反復子](../modifiers/iterator.md)」を参照してください。
+  任意。 「[Iterator](../modifiers/iterator.md)」を参照してください。
 
 - `name`
 

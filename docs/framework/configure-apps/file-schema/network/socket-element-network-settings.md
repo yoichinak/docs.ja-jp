@@ -51,7 +51,7 @@ ms.locfileid: "74089087"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[設定](settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
+|[settings](settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
  `alwaysUseCompletionPortsForAccept` 属性と `alwaysUseCompletionPortsForConnect` 属性を使用して、<xref:System.Net.Sockets?displayProperty=nameWithType>のクラスによる完了ポートの使用に関する既定の動作を指定します。 ハイパフォーマンスサーバーアプリケーションでは、完了ポートをお勧めします。  

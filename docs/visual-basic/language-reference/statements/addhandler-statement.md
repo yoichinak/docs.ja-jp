@@ -36,7 +36,9 @@ AddHandler event, AddressOf eventhandler
   
  `eventhandler` プロシージャのシグネチャは、イベント `event`の署名と一致している必要があります。  
   
+
  `Handles` キーワードと `AddHandler` ステートメントはどちらも特定のプロシージャで特定のイベントを処理するように指定できますが、両者には違いがあります。`AddHandler` ステートメントは、実行時にプロシージャをイベントに接続させます。`Handles` キーワードは、プロシージャの定義時に特定のイベントを処理するよう指定する場合に使用します。詳細については、「[Handles 句 (Visual Basic)](../../../visual-basic/language-reference/statements/handles-clause.md)」を参照してください。  
+
   
 > [!NOTE]
 > カスタムイベントの場合は、`AddHandler` ステートメントによって、イベントの `AddHandler` アクセサーが呼び出されます。 カスタムイベントの詳細については、「[Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)」を参照してください。  

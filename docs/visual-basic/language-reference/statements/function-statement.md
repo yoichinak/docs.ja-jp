@@ -145,7 +145,7 @@ End Function
 
 - `Handles`
 
-  省略可。 このプロシージャが1つ以上の特定のイベントを処理できることを示します。 「[ハンドル](handles-clause.md)」を参照してください。
+  省略可。 このプロシージャが 1 つ以上の特定のイベントを処理できることを示します。 「[Handles 句](handles-clause.md)」を参照してください。
 
 - `eventlist`
 
