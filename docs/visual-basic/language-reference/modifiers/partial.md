@@ -27,7 +27,7 @@ ms.locfileid: "74351360"
  `Partial` キーワードを使用して、型の定義を複数の宣言に分割できます。 部分宣言は必要に応じていくつでも使用でき、複数のソース ファイルとして作成することもできます。 ただし、すべての宣言は同じアセンブリおよび同じ名前空間にある必要があります。  
   
 > [!NOTE]
-> Visual Basic では、部分クラスで通常実装される*部分メソッド*がサポートされます。 詳細については、「[部分メソッド](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)と[サブステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)」を参照してください。  
+> Visual Basic では、部分クラスで通常実装される*部分メソッド*がサポートされます。 詳細については、「[部分メソッド](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)と[Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
