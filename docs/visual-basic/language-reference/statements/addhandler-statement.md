@@ -47,6 +47,6 @@ AddHandler event, AddressOf eventhandler
 ## <a name="see-also"></a>関連項目
 
 - [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)
-- [!](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Handles 句](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
 - [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)
