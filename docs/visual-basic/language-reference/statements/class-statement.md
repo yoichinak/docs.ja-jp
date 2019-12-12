@@ -61,7 +61,7 @@ End Class
   
  クラスの各インスタンスは、他のすべてのインスタンスとは独立した有効期間を持ちます。 この有効期間は、[新しい Operator](../../../visual-basic/language-reference/operators/new-operator.md)句によって作成されるか、<xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>などの関数によって開始されます。 インスタンスを指すすべての変数が[Nothing](../../../visual-basic/language-reference/nothing.md)または他のクラスのインスタンスに設定されている場合に終了します。  
   
- クラスは既定で[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスになります。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+ クラスは既定で[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスになります。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
 ## <a name="rules"></a>ルール  
   
@@ -73,9 +73,9 @@ End Class
   
      クラスは、入れ子にされたクラスから継承することはできません。  
   
-- **ション.** クラスで[Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)を使用する場合は、`interfacenames`で指定するすべてのインターフェイスで定義されているすべてのメンバーを実装する必要があります。 この例外は、基底クラスのメンバーの再実装です。 詳細については、「 [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)」の「再実装」を参照してください。  
+- **ション.** クラスで[Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)を使用する場合は、`interfacenames`で指定するすべてのインターフェイスで定義されているすべてのメンバーを実装する必要があります。 この例外は、基底クラスのメンバーの再実装です。 詳細については、「[Implements](../../../visual-basic/language-reference/statements/implements-clause.md)」の「再実装」を参照してください。  
   
-- **既定のプロパティ。** クラスは、*既定のプロパティ*として最大で1つのプロパティを指定できます。 詳細については、「 [Default](../../../visual-basic/language-reference/modifiers/default.md)」を参照してください。  
+- **既定のプロパティ。** クラスは、*既定のプロパティ*として最大で1つのプロパティを指定できます。 詳細については、「[Default](../../../visual-basic/language-reference/modifiers/default.md)」を参照してください。  
   
 ## <a name="behavior"></a>動作  
   
@@ -85,9 +85,9 @@ End Class
   
      すべてのクラスメンバーのスコープは、クラス全体です。  
   
-     **最短.** Visual Basic は、静的クラスをサポートしていません。 静的クラスに相当する機能は、モジュールによって提供されます。 詳細については、「 [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)」を参照してください。  
+     **最短.** Visual Basic は、静的クラスをサポートしていません。 静的クラスに相当する機能は、モジュールによって提供されます。 詳細については、「[Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)」を参照してください。  
   
-     クラスメンバーの有効期間は、どのように宣言されているかによって異なります。 詳細については、「 [Visual Basic の有効期間](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)」を参照してください。  
+     クラスメンバーの有効期間は、どのように宣言されているかによって異なります。 詳細については、「[Visual Basic の有効期間](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)」を参照してください。  
   
 - **評価.** クラスの外部のコードでは、メンバーの名前をそのクラスの名前で修飾する必要があります。  
   
