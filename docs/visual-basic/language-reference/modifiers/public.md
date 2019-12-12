@@ -33,7 +33,7 @@ ms.locfileid: "74351294"
   
 - **既定のアクセス。** プロシージャ内のローカル変数は、既定でパブリックアクセスに設定されているので、アクセス修飾子を使用することはできません。  
   
-- **アクセス修飾子。** アクセスレベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「[Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+- **アクセス修飾子。** アクセスレベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
  `Public` 修飾子は、次のコンテキストで使用できます。  
   
