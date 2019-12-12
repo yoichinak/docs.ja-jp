@@ -47,7 +47,7 @@ Web プロキシを検出するために使用するスクリプトの特性を�
   
 |要素|説明|  
 |-------------|-----------------|  
-|[設定](settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
+|[settings](settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
   

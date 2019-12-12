@@ -137,7 +137,7 @@ Dim bottomLabel As New System.Windows.Forms.Label
 
 モジュールレベルで、プロシージャの外部で宣言されている変数は、*メンバー変数*または*フィールド*です。 メンバー変数は、クラス、構造体、またはモジュール全体でスコープ内にあります。 プロシージャレベルで宣言された変数は、*ローカル変数*です。 ローカル変数は、プロシージャまたはブロック内でのみスコープ内にあります。
 
-次のアクセス修飾子は、プロシージャの外部で変数を宣言するために使用されます: `Public`、`Protected`、`Friend`、`Protected Friend`、および `Private`。 詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+次のアクセス修飾子は、プロシージャの外部で変数を宣言するために使用されます: `Public`、`Protected`、`Friend`、`Protected Friend`、および `Private`。 詳細については、「[Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 `Dim` キーワードは省略可能で、通常、`Public`、`Protected`、`Friend`、`Protected Friend`、`Private`、`Shared`、`Shadows`、`Static`、`ReadOnly`、`WithEvents`のいずれかの修飾子を指定すると省略されます。
 

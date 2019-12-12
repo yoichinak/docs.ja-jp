@@ -47,7 +47,7 @@ ms.locfileid: "74283092"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[設定](settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
+|[settings](settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
 ## <a name="remarks"></a>コメント  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
