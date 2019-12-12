@@ -47,7 +47,7 @@ ms.locfileid: "74088133"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[設定](settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
+|[settings](settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
  この設定により、<xref:System.Net.Dns> クラスの古いメンバー (<xref:System.Net.Dns.BeginGetHostByName%2A>、<xref:System.Net.Dns.BeginResolve%2A>、<xref:System.Net.Dns.EndGetHostByName%2A>、<xref:System.Net.Dns.EndResolve%2A>、<xref:System.Net.Dns.GetHostByAddress%2A>、<xref:System.Net.Dns.GetHostByName%2A>、<xref:System.Net.Dns.Resolve%2A>) の IPv6 サポートが有効になります。 <xref:System.Net?displayProperty=nameWithType> 名前空間のその他のメンバーについては、オペレーティングシステムで IPv6 が有効になっている場合、IPv6 アドレスが返されることがあります。  

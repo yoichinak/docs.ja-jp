@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: a7a11029c4e896b0486311bc3caf42fab53d1ea6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802103"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960156"
 ---
 # <a name="graphics-rendering-registry-settings"></a>グラフィックス レンダリングのレジストリ設定
 ここでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションに影響を与える [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] グラフィックス レンダリングのレジストリ設定の概要を示します。  
@@ -24,7 +24,7 @@ ms.locfileid: "74802103"
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>XPDM と WDDM について  
- グラフィックス レンダリングのレジストリの一部の設定は、ビデオ カードが XPDM ドライバーまたは WDDM ドライバーのどちらを使用するかによって既定値が異なります。 XPDM は [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Display Driver Model、WDDM は Windows Display Driver Model の略です。 WDDM は、Windows Vista および Windows 7 を実行しているコンピューターで使用できます。 XPDM は、Windows Vista、[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]、[!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]を実行しているコンピューターで使用できます。 WDDM について詳しくは、「[Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394)」(Windows Vista Display Driver Model 設計ガイド) をご覧ください。  
+ グラフィックス レンダリングのレジストリの一部の設定は、ビデオ カードが XPDM ドライバーまたは WDDM ドライバーのどちらを使用するかによって既定値が異なります。 XPDM は Microsoft Windows XP Display Driver Model で、WDDM は Windows Display Driver Model です。 WDDM は、Windows Vista および Windows 7 を実行しているコンピューターで使用できます。 XPDM は、Windows Vista、Microsoft Windows XP、および [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]を実行しているコンピューターで使用できます。 WDDM について詳しくは、「[Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394)」(Windows Vista Display Driver Model 設計ガイド) をご覧ください。  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>レジストリ設定  
@@ -57,7 +57,7 @@ ms.locfileid: "74802103"
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **最大マルチサンプル値**を使用すると、3-d コンテンツのアンチエイリアシングの最大量を調整できます。 このレベルを使用して、Windows Vista で3d アンチエイリアシングを無効にするか、[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]で有効にします。  
+ **最大マルチサンプル値**を使用すると、3-d コンテンツのアンチエイリアシングの最大量を調整できます。 Windows Vista で3-d アンチエイリアシングを無効にするには、このレベルを使用します。  
   
  **[maximum multisample value]** (最大マルチサンプル値) は 0 から 16 の DWORD 値です。 値 0 は、3-D コンテンツのマルチサンプル アンチエイリアシングが無効になることを指定し、値 16 では、ビデオ カードでサポートされる場合に最大で 16 倍のマルチサンプル アンチエイリアシングの使用が試行されます。 XPDM ドライバーを使用しているコンピューターにこのレジストリキー値を設定すると、アプリケーションで大量の追加ビデオメモリが使用され、3-d レンダリングのパフォーマンスが低下し、レンダリングエラーと安定性が発生する可能性があることに注意してください。問題.  
   

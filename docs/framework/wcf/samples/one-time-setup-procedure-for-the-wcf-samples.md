@@ -2,12 +2,12 @@
 title: Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: cfe50cb2bb017292b69f578bfff2bf84bf6ba8f0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 95bba89546e6667cc36fa06a0090aa8e9570fc7e
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837832"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960141"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 
@@ -16,7 +16,7 @@ ms.locfileid: "74837832"
 **ServiceModelSamples**仮想ディレクトリは、IIS でホストされるサービスを使用するすべてのサンプルをビルドして実行するために使用されます。 サンプルの実行に必要な仮想ディレクトリはこれだけです。 サンプルをビルドすると、この仮想ディレクトリにある、以前に配置されたサービスがすべて置き換えられます。この仮想ディレクトリには最近ビルドされたサンプルだけが配置されるため、そのサンプルしか使用できません。
 
 > [!NOTE]
-> すべてのコマンドは、ローカル管理者アカウントで実行する必要があります。 Windows 7、[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]、または Windows Server 2008 R2 を使用している場合は、コマンド プロンプトも管理者権限で実行する必要があります。 これを行うには、コマンドプロンプトアイコンを右クリックし、 **[管理者として実行]** をクリックします。 このトピックで使用するすべてのコマンドは、適切なパスが設定されているコマンド プロンプトで実行する必要があります。  このようにするための最も簡単な方法は、Visual Studio コマンド プロンプトを使用する方法です。 このプロンプトを開くには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[visual studio 2010]** の順にスクロールし、 **[Visual Studio Tools]** をクリックします。次に、 **[visual studio コマンドプロンプト (2010)]** を右クリックし、 **[管理者として実行]** をクリックします。 Visual Studio Express Editions のいずれかがインストールされている場合は、このコマンド プロンプトを使用できません。この場合、システム パスに "C:\Windows\Microsoft.Net\Framework\v4.0" を追加する必要があります。
+> すべてのコマンドは、ローカル管理者アカウントで実行する必要があります。 Windows 7、Windows Vista、または Windows Server 2008 R2 を使用している場合は、管理者特権でコマンドプロンプトを実行する必要もあります。 これを行うには、コマンドプロンプトアイコンを右クリックし、 **[管理者として実行]** をクリックします。 このトピックで使用するすべてのコマンドは、適切なパスが設定されているコマンド プロンプトで実行する必要があります。  このようにするための最も簡単な方法は、Visual Studio コマンド プロンプトを使用する方法です。 このプロンプトを開くには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[visual studio 2010]** の順にスクロールし、 **[Visual Studio Tools]** をクリックします。次に、 **[visual studio コマンドプロンプト (2010)]** を右クリックし、 **[管理者として実行]** をクリックします。 Visual Studio Express Editions のいずれかがインストールされている場合は、このコマンド プロンプトを使用できません。この場合、システム パスに "C:\Windows\Microsoft.Net\Framework\v4.0" を追加する必要があります。
 
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF サンプルの 1 回限りのセットアップの手順
 

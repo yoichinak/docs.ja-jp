@@ -19,9 +19,9 @@ ms.locfileid: "74088814"
 # <a name="sources-element"></a>\<sources> 要素
 トレースメッセージを開始するトレースソースを指定します。  
 
-[**\<configuration>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<sources>**
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.diagnostics>** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<sources>**
 
 ## <a name="syntax"></a>構文  
   
