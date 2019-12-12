@@ -21,7 +21,7 @@ ms.locfileid: "74710909"
   
 - <xref:System.Activities.Statements.Transition>  
   
- ステート マシン ワークフローを作成するときは、<xref:System.Activities.Statements.StateMachine> アクティビティに状態が追加され、状態間のフローのコントロールには遷移が使用されます。 次のスクリーンショットでは、[はじめにチュートリアル](getting-started-tutorial.md)の手順[「方法: ステートマシンワークフローを作成](how-to-create-a-state-machine-workflow.md)する」では、3つの状態と3つの遷移を持つステートマシンワークフローを示します。 **Initialize ターゲット**は初期状態であり、ワークフローの最初の状態を表します。 これは、**開始**ノードからこの行に到達する行によって指定されます。 ワークフローの最終状態は**Finalstate**という名前で、ワークフローが完了した時点を表します。  
+ ステート マシン ワークフローを作成するときは、<xref:System.Activities.Statements.StateMachine> アクティビティに状態が追加され、状態間のフローのコントロールには遷移が使用されます。 次のスクリーンショットでは、[はじめにチュートリアル](getting-started-tutorial.md)の手順で [方法を説明しています。ステートマシンワークフロー](how-to-create-a-state-machine-workflow.md)を作成し、3つの状態と3つの遷移を持つステートマシンワークフローを示します。 **Initialize ターゲット**は初期状態であり、ワークフローの最初の状態を表します。 これは、**開始**ノードからこの行に到達する行によって指定されます。 ワークフローの最終状態は**Finalstate**という名前で、ワークフローが完了した時点を表します。  
   
  ![完成したステートマシンのワークフローを示す図。](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
@@ -59,12 +59,12 @@ ms.locfileid: "74710909"
 > [!NOTE]
 > 遷移の <xref:System.Activities.Statements.Transition.Condition%2A> が `False` と評価された場合 (またはトリガーを共有する遷移すべての状態が `False` と評価された場合)、遷移は行われず、その状態からのすべての遷移のすべてのトリガーが再スケジュールされます。  
   
- ステートマシンワークフローの作成の詳細については、「[方法: ステートマシンワークフローを作成](how-to-create-a-state-machine-workflow.md)する」、「 [StateMachine アクティビティデザイナー](/visualstudio/workflow-designer/statemachine-activity-designer)」、「[状態アクティビティデザイナー](/visualstudio/workflow-designer/state-activity-designer)」、「 [Finalstate アクティビティデザイナー](/visualstudio/workflow-designer/finalstate-activity-designer)」、および「 [Transition アクティビティデザイナー](/visualstudio/workflow-designer/transition-activity-designer)」を参照してください。  
+ ステートマシンワークフローの作成の詳細については、「[方法:ステートマシンワークフロー](how-to-create-a-state-machine-workflow.md)、 [StateMachine アクティビティデザイナー](/visualstudio/workflow-designer/statemachine-activity-designer)、[状態アクティビティデザイナー](/visualstudio/workflow-designer/state-activity-designer)、 [finalstate アクティビティデザイナー](/visualstudio/workflow-designer/finalstate-activity-designer)、および[Transition アクティビティデザイナー](/visualstudio/workflow-designer/transition-activity-designer)を作成します。  
   
 ## <a name="state-machine-terminology"></a>ステート マシン用語  
  このセクションでは、このトピック全体で使用しているステート マシン用語の定義を示します。  
   
- 都道府県  
+ 状態  
  ステート マシンを構成する基本単位。 1 つのステート マシンは、任意の特定の時点において 1 つの状態をとることができます。  
   
  エントリ アクション  
@@ -73,13 +73,13 @@ ms.locfileid: "74710909"
  終了アクション  
  状態を終了するときに実行されるアクティビティです。  
   
- 切り替え効果  
+ Transition  
  2 つの状態を結ぶ、方向を持った関係。あるステート マシンが特定の種類のイベントの発生に対して行う応答全体を表します。  
   
  共有遷移  
  1 つ以上の別の遷移と同じソースの状態およびトリガーを共有する遷移。一意の条件とアクションを持ちます。  
   
- [トリガー]  
+ トリガー  
  遷移を発生させるトリガー アクティビティです。  
   
  条件  
@@ -100,9 +100,9 @@ ms.locfileid: "74710909"
  最終状態  
  ステート マシンの完了を示す状態です。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [方法: ステート マシン ワークフローを作成する](how-to-create-a-state-machine-workflow.md)
+- [方法: ステートマシンワークフローの作成](how-to-create-a-state-machine-workflow.md)
 - [StateMachine アクティビティ デザイナー](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [State アクティビティ デザイナー](/visualstudio/workflow-designer/state-activity-designer)
 - [FinalState アクティビティ デザイナー](/visualstudio/workflow-designer/finalstate-activity-designer)
