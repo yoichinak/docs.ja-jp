@@ -26,7 +26,7 @@ ms.locfileid: "74349124"
 ## <a name="when-to-use-shared"></a>共有を使用する場合  
  クラスまたは構造体のメンバーを共有すると、共有ではなく、すべてのインスタンスで使用できるようになります。この*場合、各*インスタンスは独自のコピーを保持します。 これは、変数の値がアプリケーション全体に適用される場合などに便利です。 この変数を `Shared`するように宣言すると、すべてのインスタンスが同じストレージの場所にアクセスし、1つのインスタンスが変数の値を変更すると、すべてのインスタンスが更新された値にアクセスします。  
   
- 共有によってメンバーのアクセスレベルが変更されることはありません。 たとえば、クラスメンバーは、共有およびプライベート (クラス内からのみアクセス可能)、または非共有およびパブリックにすることができます。 詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+ 共有によってメンバーのアクセスレベルが変更されることはありません。 たとえば、クラスメンバーは、共有およびプライベート (クラス内からのみアクセス可能)、または非共有およびパブリックにすることができます。 詳細については、「[Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
 ## <a name="rules"></a>ルール  
   
@@ -34,7 +34,7 @@ ms.locfileid: "74349124"
   
 - **結合された修飾子。** 同じ宣言で、[オーバーライド](../../../visual-basic/language-reference/modifiers/overrides.md)、 [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)、 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)、 [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)、または[Static](../../../visual-basic/language-reference/modifiers/static.md)と共に `Shared` を指定することはできません。  
   
-- **しよう.** 共有要素には、そのクラスまたは構造体の特定のインスタンスの変数名ではなく、そのクラスまたは構造体の名前を修飾することによってアクセスします。 クラスまたは構造体のインスタンスを作成しなくても、その共有メンバーにアクセスすることはできません。  
+- **アクセス。 ** 共有要素には、そのクラスまたは構造体の特定のインスタンスの変数名ではなく、そのクラスまたは構造体の名前を修飾することによってアクセスします。 クラスまたは構造体のインスタンスを作成しなくても、その共有メンバーにアクセスできます。  
   
      次の例では、<xref:System.Double> 構造によって公開される <xref:System.Double.IsNaN%2A> 共有プロシージャを呼び出します。  
   
