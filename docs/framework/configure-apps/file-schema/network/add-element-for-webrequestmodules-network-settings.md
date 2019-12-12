@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/14/2019
 ms.locfileid: "74088513"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>webRequestModules の \<add> 要素 (ネットワーク設定)
+# <a name="add-element-for-webrequestmodules-network-settings"></a>webRequestModules の <add> 要素 (ネットワーク設定)
 アプリケーションにカスタム Web 要求モジュールを追加します。  
 
 [**\<configuration>**](../configuration-element.md)\
