@@ -67,13 +67,13 @@ End Interface
   
 ## <a name="rules"></a>ルール  
   
-- **インターフェイスを入れ子にします。** 1つのインターフェイスを別の内に定義できます。 外側のインターフェイスは、*包含インターフェイス*と呼ばれ、内側のインターフェイスは*入れ子になったインターフェイス*と呼ばれます。  
+- **インターフェイスを入れ子にする。** 1 つのインターフェイスを別の内に定義できます。 外側のインターフェイスは、*包含インターフェイス*と呼ばれ、内側のインターフェイスは*入れ子になったインターフェイス*と呼ばれます。  
   
 - **メンバー宣言。** インターフェイスのメンバーとしてプロパティまたはプロシージャを宣言する場合は、そのプロパティまたはプロシージャの*シグネチャ*のみを定義します。 これには、要素の型 (プロパティまたはプロシージャ)、パラメーターとパラメーターの型、および戻り値の型が含まれます。 このため、メンバー定義は1行のコードだけを使用し、`End Function` や `End Property` などの終了ステートメントは、インターフェイスでは有効ではありません。  
   
      これに対し、列挙体、構造体、または入れ子になったクラスまたはインターフェイスを定義する場合は、そのデータメンバーを含める必要があります。  
   
-- **メンバー修飾子。** モジュールメンバーを定義するときにアクセス修飾子を使用することはできません。また、[オーバーロード](../../../visual-basic/language-reference/modifiers/overloads.md)を除く[共有](../../../visual-basic/language-reference/modifiers/shared.md)またはプロシージャ修飾子を指定することもできません。 [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)を使用して任意のメンバーを宣言できます。また、プロパティを定義するときには、 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)または[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)として[既定値](../../../visual-basic/language-reference/modifiers/default.md)を使用できます。  
+- **メンバー修飾子。** モジュールメンバーを定義するときにアクセス修飾子を使用することはできません。また、[Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)を除く[Shared](../../../visual-basic/language-reference/modifiers/shared.md)またはプロシージャ修飾子を指定することもできません。 [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)を使用して任意のメンバーを宣言できます。また、プロパティを定義するときには、 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)または[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)として[Default](../../../visual-basic/language-reference/modifiers/default.md)を使用できます。  
   
 - **継承。** インターフェイスで[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)が使用されている場合は、1つまたは複数の基本インターフェイスを指定できます。 それぞれが同じ名前のメンバーを定義している場合でも、2つのインターフェイスから継承できます。 その場合、実装するコードでは、実装するメンバーを指定するために名前の修飾を使用する必要があります。  
   
@@ -91,7 +91,7 @@ End Interface
   
 ## <a name="behavior"></a>動作  
   
-- **アクセスレベル。** すべてのインターフェイスメンバーは、暗黙的に[パブリック](../../../visual-basic/language-reference/modifiers/public.md)アクセスを持ちます。 メンバーを定義するときに、アクセス修飾子を使用することはできません。 ただし、インターフェイスを実装するクラスは、実装されている各メンバーのアクセスレベルを宣言できます。  
+- **アクセスレベル。** すべてのインターフェイスメンバーは、暗黙的に [Public](../../../visual-basic/language-reference/modifiers/public.md) アクセスを持ちます。 メンバーを定義するときに、アクセス修飾子を使用することはできません。 ただし、インターフェイスを実装するクラスは、実装されている各メンバーのアクセスレベルを宣言できます。  
   
      クラスインスタンスを変数に割り当てる場合、そのメンバーのアクセスレベルは、変数のデータ型が基になるインターフェイスまたは実装しているクラスであるかどうかによって異なります。 これを次の例に示します。  
   
