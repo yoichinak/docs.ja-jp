@@ -44,7 +44,7 @@ ms.locfileid: "74349124"
   
 ## <a name="behavior"></a>動作  
   
-- **・.** 共有変数またはイベントは、クラスまたは構造体を作成するインスタンスの数または数に関係なく、メモリに1回だけ格納されます。 同様に、共有プロシージャまたはプロパティは、ローカル変数のセットを1つだけ保持します。  
+- **ストレージ。 ** 共有変数またはイベントは、クラスまたは構造体に生成されたインスタンスの数に関係なく、メモリに 1 回だけ格納されます。 同様に、共有プロシージャまたはプロパティは、ローカル変数のセットを 1 つだけ保持します。  
   
 - **インスタンス変数を使用したへのアクセス。** 共有要素にアクセスするには、そのクラスまたは構造体の特定のインスタンスを含む変数の名前を指定します。 これは通常、想定どおりに動作しますが、コンパイラは警告メッセージを生成し、変数ではなくクラスまたは構造体の名前を使用してアクセスを行います。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "74349124"
   
  [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
  [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "74349124"
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Static](../../../visual-basic/language-reference/modifiers/static.md)
-- [Visual Basic の有効期間](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Visual Basic における有効期間](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic におけるプロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
