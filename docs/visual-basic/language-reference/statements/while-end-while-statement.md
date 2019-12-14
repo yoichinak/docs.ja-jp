@@ -42,7 +42,7 @@ End While
 |`End While`|必須。 `While` ブロックの定義を終了します。|  
   
 ## <a name="remarks"></a>コメント  
- 条件が `True`のままである限り、一連のステートメントを無期限に繰り返す場合は、`While...End While` 構造体を使用します。 条件またはテスト対象の結果をテストする場所を柔軟に指定できるようにするには、[実行] を選択します。 [Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)。 ステートメントを設定された回数繰り返し実行する場合は、.. [.次のステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)は通常、より適しています。  
+ 条件が `True`のままである限り、一連のステートメントを無期限に繰り返す場合は、`While...End While` 構造体を使用します。 条件またはテスト対象の結果をテストする場所を柔軟に指定できるようにするには、[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md) を選択します。 ステートメントを設定された回数繰り返し実行する場合は、[For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)は通常、より適しています。  
   
 > [!NOTE]
 > `While` キーワードは、 [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)、 [Skip while 句](../../../visual-basic/language-reference/queries/skip-while-clause.md)、 [Take while 句](../../../visual-basic/language-reference/queries/take-while-clause.md)。  
