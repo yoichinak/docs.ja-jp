@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74283092"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<performanceCounter > 要素 (ネットワーク設定)
+# <a name="performancecounter-element-network-settings"></a>\<performanceCounter> 要素 (ネットワーク設定)
 ネットワークパフォーマンスカウンターを有効または無効にします。  
 
 [ **\<configuration>** ](../configuration-element.md)\

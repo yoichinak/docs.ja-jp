@@ -102,7 +102,7 @@ End Function
 
 - `Async`
 
-  省略可。 「 [Async](../../../visual-basic/language-reference/modifiers/async.md)」を参照してください。
+  省略可。 「[Async](../../../visual-basic/language-reference/modifiers/async.md)」を参照してください。
 
 - `Iterator`
 
@@ -110,7 +110,7 @@ End Function
 
 - `name`
 
-  必須。 プロシージャの名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+  必須。 プロシージャの名前。 「[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
 - `typeparamlist`
 
@@ -126,7 +126,7 @@ End Function
 
 - `Implements`
 
-  省略可。 このプロシージャが1つ以上の `Function` プロシージャを実装することを示します。各プロシージャは、このプロシージャのクラスまたは構造体を含むインターフェイスで定義されています。 「 [Implements ステートメント](implements-statement.md)」を参照してください。
+  省略可。 このプロシージャが1つ以上の `Function` プロシージャを実装することを示します。各プロシージャは、このプロシージャのクラスまたは構造体を含むインターフェイスで定義されています。 「[Implements ステートメント](implements-statement.md)」を参照してください。
 
 - `implementslist`
 
@@ -213,7 +213,7 @@ End Function
 
 `Function` プロシージャは、`Sqrt`、`Cos`、`ChrW`などのライブラリ関数を呼び出すのと同じ方法で呼び出すことができます。
 
-`Call` キーワードを使用して関数を呼び出すこともできます。 その場合、戻り値は無視されます。 ほとんどの場合、`Call` キーワードの使用は推奨されていません。 詳細については、「 [Call ステートメント](call-statement.md)」を参照してください。
+`Call` キーワードを使用して関数を呼び出すこともできます。 その場合、戻り値は無視されます。 ほとんどの場合、`Call` キーワードの使用は推奨されていません。 詳細については、「[Call ステートメント](call-statement.md)」を参照してください。
 
 Visual Basic は、内部効率を向上させるために算術式を再配置することがあります。 そのため、関数が同じ式の変数の値を変更する場合は、算術式で `Function` プロシージャを使用しないでください。
 
@@ -232,7 +232,7 @@ Visual Basic は、内部効率を向上させるために算術式を再配置�
 
 [Sub ステートメント](sub-statement.md)を `Async` 修飾子でマークすることもできます。 これは主に、値を返すことができないイベントハンドラーに使用されます。 `Async` `Sub` プロシージャは待機できません。また、`Async` の `Sub` プロシージャの呼び出し元は、`Sub` プロシージャによってスローされた例外をキャッチできません。
 
-`Async` 関数の詳細については、「 [async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)」、「非同期[プログラムでの制御フロー](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)」、および「非同期の[戻り値の型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)」を参照してください。
+`Async` 関数の詳細については、「[async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)」、「非同期[プログラムでの制御フロー](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)」、および「非同期の[戻り値の型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)」を参照してください。
 
 ## <a name="iterator-functions"></a>反復子メソッド
 

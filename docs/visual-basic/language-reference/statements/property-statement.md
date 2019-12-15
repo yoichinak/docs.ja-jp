@@ -1,5 +1,5 @@
 ---
-title: Property Statement
+title: Property ステートメント
 ms.date: 05/12/2018
 f1_keywords:
 - vb.PropertySet
@@ -18,7 +18,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346758"
 ---
-# <a name="property-statement"></a>Property Statement
+# <a name="property-statement"></a>Property ステートメント
 
 プロパティの名前、およびプロパティの値を格納および取得するために使用されるプロパティプロシージャを宣言します。
 
@@ -97,11 +97,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `ReadOnly`
 
-  任意。 「 [ReadOnly](../modifiers/readonly.md)」を参照してください。
+  任意。 「[ReadOnly](../modifiers/readonly.md)」を参照してください。
 
 - `WriteOnly`
 
-  任意。 「 [WriteOnly](../modifiers/writeonly.md)」を参照してください。
+  任意。 「[WriteOnly](../modifiers/writeonly.md)」を参照してください。
 
 - `Iterator`
 
@@ -109,7 +109,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `name`
 
-  必須。 プロパティ名。 「 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+  必須。 プロパティ名。 「[Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
 - `parameterlist`
 
@@ -121,7 +121,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Implements`
 
-  任意。 このプロパティが1つ以上のプロパティを実装することを示します。各プロパティは、このプロパティのクラスまたは構造体を含むインターフェイスで定義されています。 「 [Implements ステートメント](implements-statement.md)」を参照してください。
+  任意。 このプロパティが1つ以上のプロパティを実装することを示します。各プロパティは、このプロパティのクラスまたは構造体を含むインターフェイスで定義されています。 「[Implements ステートメント](implements-statement.md)」を参照してください。
 
 - `implementslist`
 
