@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/14/2019
 ms.locfileid: "74089142"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>webRequestModules の <remove> 要素 (ネットワーク設定)
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>webRequestModules の \<remove> 要素 (ネットワーク設定)
 アプリケーションからカスタム Web 要求モジュールを削除します。  
   
 [**\<configuration>**](../configuration-element.md)\
