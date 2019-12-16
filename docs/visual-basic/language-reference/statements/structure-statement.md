@@ -39,7 +39,7 @@ End Structure
 |用語|定義|
 |---|---|
 |`attributelist`|任意。 「[属性リスト](attribute-list.md)」を参照してください。|
-|`accessmodifier`|任意。 次のいずれかになります。<br /><br /> -   [Public](../modifiers/public.md)<br /> -   [Protected](../modifiers/protected.md)<br /> -   [Friend](../modifiers/friend.md)<br /> -   [Private](../modifiers/private.md)<br /> -   [Protected Friend](../modifiers/protected-friend.md)<br/> -   [Private Protected](../modifiers/private-protected.md) <br /><br /> 「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|
+|`accessmodifier`|任意。 次のいずれかになります。<br /><br /> - [Public](../modifiers/public.md)<br />[Protected](../modifiers/protected.md)- <br />- [Friend](../modifiers/friend.md)<br />- [Private](../modifiers/private.md)<br />[Protected Friend](../modifiers/protected-friend.md)の - <br/>- [Private Protected](../modifiers/private-protected.md) <br /><br /> 「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|
 |`Shadows`|任意。 「[シャドウ](../modifiers/shadows.md)」を参照してください。|
 |`Partial`|任意。 構造体の部分定義を示します。 「[部分](../modifiers/partial.md)」を参照してください。|
 |`name`|必須。 この構造体の名前です。 「[Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
