@@ -25,7 +25,7 @@ ms.locfileid: "74351340"
 </PropertyGroup>
 ```
 
-詳細について[は、「Visual Basic 言語バージョンの設定](../../language-reference/configure-language-version.md)」を参照してください。
+詳細については、[「Visual Basic 言語バージョンの設定](../../language-reference/configure-language-version.md)」を参照してください。
 
 > [!NOTE]
 > Visual Studio で、`private protected` で F1 ヘルプを選択すると、 [private](private.md)または[protected](protected.md)のヘルプが表示されます。 IDE は、複合単語ではなくカーソルの下にある1つのトークンを選択します。
@@ -74,6 +74,6 @@ ms.locfileid: "74351340"
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Protected Friend](./protected-friend.md)
 - [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Visual Basic におけるプロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
