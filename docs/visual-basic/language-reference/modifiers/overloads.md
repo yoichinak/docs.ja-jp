@@ -69,7 +69,7 @@ ms.locfileid: "74351411"
 
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 
-- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)
 
 - [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
 
