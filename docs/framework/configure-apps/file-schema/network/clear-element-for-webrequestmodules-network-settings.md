@@ -20,10 +20,10 @@ ms.locfileid: "74088501"
 # <a name="clear-element-for-webrequestmodules-network-settings"></a>webRequestModules の \<clear> 要素 (ネットワーク設定)
 アプリケーションから、登録されているすべての Web 要求モジュールを削除します。  
 
-[**\<configuration>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<webRequestModules>**](webrequestmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.net>** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webRequestModules>** ](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**clear>**
 
 ## <a name="syntax"></a>構文  
   

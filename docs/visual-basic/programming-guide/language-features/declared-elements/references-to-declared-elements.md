@@ -1,5 +1,5 @@
 ---
-title: References to Declared Elements
+title: 宣言された要素の参照
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic]
@@ -191,7 +191,7 @@ Dim xDoc As xD.XmlDocument
  すべての要素に一意の名前を付けることで、名前のあいまいさを回避できます。 その後、名前を名前空間、モジュール、またはクラスで修飾することなく、任意の要素を参照できます。 間違った要素が誤って参照される可能性を低くすることもできます。  
   
 ## <a name="shadowing"></a>シャドウ  
- 2つのプログラミング要素が同じ名前を共有している場合、そのうちの1つは、もう一方を非表示にしたり*影*を付けることができます。 シャドウされた要素を参照することはできません。代わりに、シャドウされた要素名を使用するコードでは、Visual Basic コンパイラによってシャドウ要素に解決されます。 例の詳細については、「 [Visual Basic でのシャドウ](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。  
+ 2 つのプログラミング要素が同じ名前を共有している場合、そのうちの 1 つを非表示にしたり、もう一方に*シャドウ*を付けることができます。 シャドウされた要素を参照することはできません。代わりに、シャドウされた要素名を使用するコードでは、Visual Basic コンパイラによってシャドウ要素に解決されます。 例の詳細については、「[Visual Basic におけるシャドウ](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照
 
