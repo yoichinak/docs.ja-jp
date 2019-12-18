@@ -26,7 +26,7 @@ ms.locfileid: "74352300"
  段落のテキストです。  
   
 ## <a name="remarks"></a>コメント  
- `<para>` タグは、 [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md)、 [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md)、 [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md)> など、タグ内で使用するためのものであり、テキストに構造を追加することができます。  
+ `<para>` タグは、 [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md)、 [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md)、 [\<returns](../../../visual-basic/language-reference/xmldoc/returns.md)> など、タグ内で使用するためのものであり、テキストに構造を追加することができます。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
