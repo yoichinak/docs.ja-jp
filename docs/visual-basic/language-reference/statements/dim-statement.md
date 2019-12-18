@@ -103,7 +103,7 @@ Dim [ WithEvents ] variablelist
 
   |要素|説明|
   |---|---|
-  |`variablename`|必須。 変数の名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
+  |`variablename`|必須。 変数の名前。 「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
   |`boundslist`|任意。 配列変数の各次元の境界の一覧。|
   |`New`|任意。 `Dim` ステートメントの実行時に、クラスの新しいインスタンスを作成します。|
   |`datatype`|任意。 変数のデータ型。|

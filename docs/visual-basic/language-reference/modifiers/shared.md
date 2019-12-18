@@ -32,7 +32,7 @@ ms.locfileid: "74349124"
   
 - **宣言コンテキスト。** `Shared` は、モジュール レベルでのみ使用できます。 つまり、`Shared` 要素の宣言コンテキストは、クラスまたは構造体である必要があり、ソースファイル、名前空間、またはプロシージャにすることはできません。  
   
-- **結合された修飾子。** 同じ宣言で、[オーバーライド](../../../visual-basic/language-reference/modifiers/overrides.md)、 [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)、 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)、 [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)、または[Static](../../../visual-basic/language-reference/modifiers/static.md)と共に `Shared` を指定することはできません。  
+- **修飾子の結合。** 同じ宣言で、[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)、 [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)、 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)、 [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)、または[Static](../../../visual-basic/language-reference/modifiers/static.md) と共に `Shared` を指定することはできません。  
   
 - **アクセス。 ** 共有要素には、そのクラスまたは構造体の特定のインスタンスの変数名ではなく、そのクラスまたは構造体の名前を修飾することによってアクセスします。 クラスまたは構造体のインスタンスを作成しなくても、その共有メンバーにアクセスできます。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "74349124"
   
 - **ストレージ。 ** 共有変数またはイベントは、クラスまたは構造体に生成されたインスタンスの数に関係なく、メモリに 1 回だけ格納されます。 同様に、共有プロシージャまたはプロパティは、ローカル変数のセットを 1 つだけ保持します。  
   
-- **インスタンス変数を使用したへのアクセス。** 共有要素にアクセスするには、そのクラスまたは構造体の特定のインスタンスを含む変数の名前を指定します。 これは通常、想定どおりに動作しますが、コンパイラは警告メッセージを生成し、変数ではなくクラスまたは構造体の名前を使用してアクセスを行います。  
+- **インスタンス変数を使用したアクセス。** 共有要素にアクセスするには、そのクラスまたは構造体の特定のインスタンスを含む変数の名前を指定します。 これは通常、想定どおりに動作しますが、コンパイラは警告メッセージを生成し、変数ではなくクラスまたは構造体の名前を使用してアクセスを行います。  
   
-- **インスタンス式を使用したへのアクセス。** クラスまたは構造体のインスタンスを返す式を使用して共有要素にアクセスする場合、コンパイラは、式を評価するのではなく、クラスまたは構造体の名前を使用してアクセスを行います。 これにより、他のアクションを実行するための式を作成する場合や、インスタンスを返す場合に、予期しない結果が発生します。 これを次の例に示します。  
+- **インスタンス式を使用したアクセス。** クラスまたは構造体のインスタンスを返す式を使用して共有要素にアクセスする場合、コンパイラは式を評価するのではなく、クラスまたは構造体の名前を使用してアクセスを行います。 これにより、他のアクションを実行するための式を作成する場合や、インスタンスを返す場合に、予期しない結果が発生します。 これを次の例に示します。  
   
     ```vb
     Sub main()  
