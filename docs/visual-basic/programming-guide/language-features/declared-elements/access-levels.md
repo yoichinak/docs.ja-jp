@@ -105,7 +105,7 @@ Private Protected internalValue As Integer
 </PropertyGroup>
 ```
 
-詳細について[は、「Visual Basic 言語バージョンの設定](../../../language-reference/configure-language-version.md)」を参照してください。
+詳細については、[Visual Basic の言語バージョンの設定](../../../language-reference/configure-language-version.md)」を参照してください。
 
 ## <a name="access-modifiers"></a>アクセス修飾子
 
@@ -128,7 +128,7 @@ Private Protected internalValue As Integer
 - [宣言された要素の参照](references-to-declared-elements.md)
 - [宣言された要素の特性](declared-element-characteristics.md)
 - [Visual Basic の有効期間](lifetime.md)
-- [Visual Basic 内のスコープ](scope.md)
+- [Visual Basic におけるスコープ](scope.md)
 - [方法: 変数の可用性を制御する](how-to-control-the-availability-of-a-variable.md)
 - [変数](../variables/index.md)
 - [変数宣言](../variables/variable-declaration.md)
