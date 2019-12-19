@@ -57,7 +57,7 @@ Friend stringForThisProject As String
 
 ## <a name="protected-friend"></a>Protected Friend
 
-宣言ステートメントで[Protected Friend](../../../language-reference/modifiers/protected-friend.md)キーワードを組み合わせると、派生クラスまたは同じアセンブリ内、またはその両方から要素にアクセスできることが指定されます。 次のコードは、`Protected Friend` の宣言の例を示しています。
+宣言ステートメントで [Protected Friend](../../../language-reference/modifiers/protected-friend.md) キーワードを組み合わせると、派生クラスまたは同じアセンブリ内、またはその両方から要素にアクセスできることが指定されます。 次のコードは、`Protected Friend` の宣言の例を示しています。
 
 ```vb
 Protected Friend stringForProjectAndHeirs As String
@@ -79,7 +79,7 @@ Private _numberForMeOnly As Integer
 
 ## <a name="private-protected"></a>Private Protected
 
-宣言ステートメント内の[Private Protected](../../../language-reference/modifiers/private-protected.md)キーワードの組み合わせは、同じクラス内から、および親クラスと同じアセンブリ内にある派生クラスからのみ、要素にアクセスできることを指定します。 `Private Protected` アクセス修飾子は Visual Basic 15.5 以降でサポートされています。
+宣言ステートメント内の [Private Protected](../../../language-reference/modifiers/private-protected.md) キーワードの組み合わせは、同じクラス内から、および親クラスと同じアセンブリ内にある派生クラスからのみ、要素にアクセスできることを指定します。 `Private Protected` アクセス修飾子は Visual Basic 15.5 以降でサポートされています。
 
 次の例は、`Private Protected` 宣言を示しています。
 
