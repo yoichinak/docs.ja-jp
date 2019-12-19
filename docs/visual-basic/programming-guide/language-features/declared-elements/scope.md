@@ -45,7 +45,7 @@ ms.locfileid: "74345287"
 
 - 要素に対して宣言するアクセスレベル
 
-同じ名前でスコープが異なる変数を定義する場合は、慎重に行う必要があります。これは、予期しない結果につながる可能性があるためです。 詳細については、「 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。
+同じ名前でスコープが異なる変数を定義する場合は、慎重に行う必要があります。これは、予期しない結果につながる可能性があるためです。詳細については、「[宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。
 
 ## <a name="levels-of-scope"></a>スコープのレベル
 
@@ -126,7 +126,7 @@ Public strMsg As String
 
 名前空間スコープには入れ子になった名前空間が含まれます。 名前空間内から使用できる要素は、その名前空間内で入れ子になっている名前空間内からも使用できます。
 
-プロジェクトに[名前空間ステートメント](../../../../visual-basic/language-reference/statements/namespace-statement.md)が含まれていない場合、プロジェクト内のすべてのものが同じ名前空間にあります。 この場合、名前空間のスコープはプロジェクトスコープと考えることができます。 モジュール、クラス、または構造体内の `Public` 要素は、そのプロジェクトを参照するすべてのプロジェクトでも使用できます。
+プロジェクトに [Namespace ステートメント](../../../../visual-basic/language-reference/statements/namespace-statement.md)が含まれていない場合、プロジェクト内のすべてのものが同じ名前空間にあります。 この場合、名前空間のスコープはプロジェクトスコープと考えることができます。 モジュール、クラス、または構造体内の `Public` 要素は、そのプロジェクトを参照するすべてのプロジェクトでも使用できます。
 
 ## <a name="choice-of-scope"></a>スコープの選択
 
