@@ -45,7 +45,7 @@ ms.locfileid: "74345287"
 
 - 要素に対して宣言するアクセスレベル
 
-同じ名前でスコープが異なる変数を定義する場合は、慎重に行う必要があります。これは、予期しない結果につながる可能性があるためです。 詳細については、「[宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。
+同じ名前でスコープが異なる変数を定義する場合は、慎重に行う必要があります。これは、予期しない結果につながる可能性があるためです。詳細については、「[宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。
 
 ## <a name="levels-of-scope"></a>スコープのレベル
 
