@@ -31,7 +31,7 @@ ms.locfileid: "74351331"
   
 - **アクセスレベル。** 宣言コンテキスト内のすべてのコードは、その `Private` 要素にアクセスできます。 これには、入れ子になったクラスや列挙体の代入式など、含まれている型内のコードが含まれます。 宣言コンテキストの外部のコードは、その `Private` 要素にアクセスできません。  
   
-- **アクセス修飾子。** アクセスレベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+- **アクセス修飾子。** アクセスレベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
  `Private` 修飾子は、次のコンテキストで使用できます。  
   
@@ -66,8 +66,7 @@ ms.locfileid: "74351331"
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private Protected](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
-- Visual Basic の[保護されたフレンド](./protected-friend.md)[アクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Visual Basic におけるプロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
