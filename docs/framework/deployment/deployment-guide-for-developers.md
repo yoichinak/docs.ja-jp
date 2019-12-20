@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 62777356dae6e2dce9753b832f08ab2fa2cb5881
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 1b7fccc673f82986a53dcb3dfcb68e8575b99dfd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801877"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959993"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 配置ガイド (開発者向け)
 このトピックでは、.NET Framework 4.5 から [!INCLUDE[net_current](../../../includes/net-current-version.md)] までの任意のバージョンの .NET Framework を、それぞれのアプリと共にインストールする開発者向けの情報を提供します。
@@ -51,7 +51,7 @@ ms.locfileid: "74801877"
 
 - .NET Framework 4.5 とそのポイント リリースをインストールするには、管理者特権が必要です。
 
-- .NET Framework 4.5 は、Windows 8 と [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] に含まれるため、これらのオペレーティング システムではアプリと一緒に配置する必要はありません。 同様に、.NET Framework 4.5.1 は Windows 8.1 と Windows Server 2012 R2 に含まれます。 .NET Framework 4.5.2 はどのオペレーティング システムにも含まれていません。 .NET Framework 4.6 は Windows 10 に含まれます。 .NET Framework 4.6.1 は Windows 10 November Update に含まれます。 .NET Framework 4.6.2 は Windows 10 Anniversary Update に含まれます。  .NET Framework 4.7 は Windows 10 Creators Update に、.NET Framework 4.7.1 は Windows 10 Fall Creators Update に、.NET Framework 4.7.2 は Windows 10 October 2018 Update と Windows 10 April 2018 Update にそれぞれ含まれます。 .NET Framework 4.8 は Windows 10 May 2019 Update に含まれています。 ハードウェア要件とソフトウェア要件の一覧については、「[システム要件](../get-started/system-requirements.md)」を参照してください。
+- .NET Framework 4.5 は、Windows 8 と Windows Server 2012 に含まれているため、これらのオペレーティング システムではアプリと一緒に配置する必要はありません。 同様に、.NET Framework 4.5.1 は Windows 8.1 と Windows Server 2012 R2 に含まれます。 .NET Framework 4.5.2 はどのオペレーティング システムにも含まれていません。 .NET Framework 4.6 は Windows 10 に含まれます。 .NET Framework 4.6.1 は Windows 10 November Update に含まれます。 .NET Framework 4.6.2 は Windows 10 Anniversary Update に含まれます。  .NET Framework 4.7 は Windows 10 Creators Update に、.NET Framework 4.7.1 は Windows 10 Fall Creators Update に、.NET Framework 4.7.2 は Windows 10 October 2018 Update と Windows 10 April 2018 Update にそれぞれ含まれます。 .NET Framework 4.8 は Windows 10 May 2019 Update に含まれています。 ハードウェア要件とソフトウェア要件の一覧については、「[システム要件](../get-started/system-requirements.md)」を参照してください。
 
 - .NET Framework 4.5 以降では、ユーザーはセットアップ中に、実行されている .NET Framework アプリケーションの一覧を表示し、簡単に終了できます。 これにより、.NET Framework のインストールによるシステムの再起動を回避できます。 「 [システム再起動の削減](reducing-system-restarts.md)」を参照してください。
 

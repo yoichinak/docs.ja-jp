@@ -1,5 +1,5 @@
 ---
-title: Extension のメソッド
+title: 拡張メソッド
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ExtensionMethods
@@ -180,4 +180,4 @@ Instance method
 - [省略可能なパラメーター](optional-parameters.md)
 - [パラメーター配列](parameter-arrays.md)
 - [属性の概要](../../concepts/attributes/index.md)
-- [Visual Basic 内のスコープ](../declared-elements/scope.md)
+- [Visual Basic におけるスコープ](../declared-elements/scope.md)
