@@ -1,5 +1,5 @@
 ---
-title: 型パラメーターは修飾子として使用できません。
+title: 型パラメータは修飾子として使用できません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32098
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/10/2019
 ms.locfileid: "72250336"
 ---
-# <a name="type-parameters-cannot-be-used-as-qualifiers"></a>型パラメーターは修飾子として使用できません。
+# <a name="type-parameters-cannot-be-used-as-qualifiers"></a>型パラメータは修飾子として使用できません。
 
 プログラミング要素は、型パラメーターを含む修飾文字列で修飾されます。
 
@@ -42,5 +42,5 @@ End Function
 ## <a name="see-also"></a>関連項目
 
 - [宣言された要素の参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Generic Types in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic におけるジェネリック型](../../programming-guide/language-features/data-types/generic-types.md)
 - [型リスト](../statements/type-list.md)
