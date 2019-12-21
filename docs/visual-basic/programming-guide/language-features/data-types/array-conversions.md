@@ -22,11 +22,11 @@ ms.locfileid: "74345858"
 # <a name="array-conversions-visual-basic"></a>配列の変換 (Visual Basic)
 次の条件を満たしている場合は、配列型を別の配列型に変換できます。  
   
-- **等順位。** 2つの配列のランクは同じである必要があります。つまり、次元数が同じである必要があります。 ただし、それぞれの次元の長さは同じである必要はありません。  
+- **ランクが等しいこと。** 2つの配列のランクは同じである必要があります。つまり、次元数が同じである必要があります。 ただし、それぞれの次元の長さは同じである必要はありません。  
   
 - **要素のデータ型。** 両方の配列の要素のデータ型は、参照型である必要があります。 少なくとも1つの値型が関係しているため、`Integer` 配列を `Long` 配列に変換したり、`Object` 配列に変換したりすることはできません。 詳細については、「[値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。  
   
-- **Convertibility.** 2つの配列の要素型の間で、拡大または縮小のいずれかの変換を実行できる必要があります。 この要件を満たさない例として、`String` 配列と <xref:System.Attribute?displayProperty=nameWithType>から派生したクラスの配列との間での変換が試行されます。 これらの2つの型は共通していません。これらの型の間にはどのような種類の変換もありません。  
+- **変換性。** 2つの配列の要素型の間で、拡大または縮小のいずれかの変換を実行できる必要があります。 この要件を満たさない例として、`String` 配列と <xref:System.Attribute?displayProperty=nameWithType>から派生したクラスの配列との間での変換が試行されます。 これらの2つの型は共通していません。これらの型の間にはどのような種類の変換もありません。  
   
  ある配列型から別の配列型への変換は、それぞれの要素の変換が拡大または縮小のどちらであるかによって、拡大または縮小されます。 詳細については、「[拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
   
