@@ -82,7 +82,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 
 - **渡すメカニズム。** すべての引数の既定の機構は `ByVal`です。これは、プロシージャが基になる変数要素を変更できないことを意味します。 ただし、要素が参照型の場合、このプロシージャでは、オブジェクト自体を置き換えることも再割り当てできない場合でも、基になるオブジェクトの内容やメンバーを変更できます。
 
-- **パラメーター名。** パラメーターのデータ型が配列である場合は、`parametername` の直後にかっこを入力します。 パラメーター名の詳細については、「宣言された[要素名](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+- **パラメーター名。** パラメーターのデータ型が配列である場合は、`parametername` の直後にかっこを入力します。 パラメーター名の詳細については、「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
 ## <a name="example"></a>例
 
