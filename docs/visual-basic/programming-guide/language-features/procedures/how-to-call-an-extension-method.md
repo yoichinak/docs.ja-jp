@@ -1,5 +1,5 @@
 ---
-title: '方法: 拡張メソッドを呼び出す (Visual Basic)'
+title: '方法 : 拡張メソッドを呼び出す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - calling extension methods [Visual Basic]

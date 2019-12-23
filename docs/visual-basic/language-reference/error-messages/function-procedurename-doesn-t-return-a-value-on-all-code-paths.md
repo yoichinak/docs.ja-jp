@@ -27,7 +27,7 @@ ms.locfileid: "64662100"
   
 - 値を代入します、`Function`プロシージャ名前を指定し、実行、`End Function`ステートメント。  
   
- 値をプロシージャ名に代入しないで、制御を`Exit Function`または`End Function`に渡した場合、プロシージャは戻り値のデータ型の既定値を返します。 詳細については、[Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md) の「動作」を参照してください。
+ 値をプロシージャ名に代入しないで、制御を`Exit Function`または`End Function`に渡した場合、プロシージャは戻り値のデータ型の既定値を返します。 詳細については、[Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md) の「動作」を参照してください。  
   
  既定では、このメッセージは警告です。 警告を非表示にする方法や、警告をエラーとして扱う方法の詳細については、「[Visual Basic での警告の構成](/visualstudio/ide/configuring-warnings-in-visual-basic)」を参照してください。  
   
