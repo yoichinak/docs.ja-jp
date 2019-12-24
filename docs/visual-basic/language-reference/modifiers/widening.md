@@ -39,6 +39,6 @@ ms.locfileid: "74347831"
 - [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [方法 : 演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)
 - [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [方法 : 変換演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
