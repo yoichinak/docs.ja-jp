@@ -185,7 +185,7 @@ End Class
 
 クラスやオブジェクトは、何か重要なことが起こった場合に、イベントを使用して他のクラスまたはオブジェクトに通知を送ります。 イベントを送信する (発生させる) クラスは "*パブリッシャー*" と呼ばれ、イベントを受信する (処理する) クラスは "*サブスクライバー*" と呼ばれます。 イベント、およびイベントの発生と処理の詳細については、「[イベント](../../../standard/events/index.md)」をご覧ください。
 
-- イベントを宣言するには、[イベントステートメント](../../../visual-basic/language-reference/statements/event-statement.md)を使用します。
+- イベントを宣言するには、[Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)を使用します。
 
 - イベントを発生させるには、 [RaiseEvent ステートメント](../../../visual-basic/language-reference/statements/raiseevent-statement.md)を使用します。
 
