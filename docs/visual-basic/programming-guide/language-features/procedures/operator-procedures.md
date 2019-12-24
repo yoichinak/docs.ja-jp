@@ -28,7 +28,7 @@ ms.locfileid: "74345999"
 
 Visual Basic は、基本データ型に対してのみ演算子を定義します。 1つまたは両方のオペランドがクラスまたは構造体の型である場合は、演算子の動作を定義できます。
 
-詳細については、「 [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)」を参照してください。
+詳細については、「[Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)」を参照してください。
 
 ## <a name="types-of-operator-procedure"></a>演算子プロシージャの種類
 
@@ -66,7 +66,7 @@ End Operator
 
 定義したクラスまたは構造体に演算子を定義しているため、少なくとも1つのオペランドがそのクラスまたは構造体のデータ型である必要があります。 型変換演算子の場合、オペランドまたは戻り値の型は、クラスまたは構造体のデータ型である必要があります。
 
-詳細については、「 [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)」を参照してください。
+詳細については、「[Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)」を参照してください。
 
 ## <a name="calling-syntax"></a>呼び出し構文
 
@@ -95,7 +95,7 @@ End Operator
 - [Function プロシージャ](./function-procedures.md)
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [方法 : 演算子を定義する](./how-to-define-an-operator.md)
 - [方法 : 変換演算子を定義する](./how-to-define-a-conversion-operator.md)
 - [方法 : 演算子プロシージャを呼び出す](./how-to-call-an-operator-procedure.md)
