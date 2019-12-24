@@ -60,7 +60,7 @@ End Operator
 
 2つのオペランドを宣言して二項演算子を定義し、1つのオペランドを宣言して、単項演算子 (型変換演算子を含む) を定義します。 すべてのオペランドは `ByVal`として宣言する必要があります。
 
-各オペランドは、[サブプロシージャ](./sub-procedures.md)のパラメーターを宣言するのと同じ方法で宣言します。
+各オペランドは、[Sub プロシージャ](./sub-procedures.md)のパラメーターを宣言するのと同じ方法で宣言します。
 
 ### <a name="data-type"></a>データ型
 
@@ -90,7 +90,7 @@ End Operator
 
 ## <a name="see-also"></a>参照
 
-- [手順](./index.md)
+- [Visual Basic におけるプロシージャ](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [Function プロシージャ](./function-procedures.md)
 - [Property プロシージャ](./property-procedures.md)
