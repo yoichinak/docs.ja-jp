@@ -60,7 +60,7 @@ object.@<attribute>
  XML 属性の名前付け規則は、Visual Basic 識別子の名前付け規則とは異なります。 有効な Visual Basic 識別子ではない名前を持つ XML 属性にアクセスするには、山かっこ (\< と >) で名前を囲みます。  
   
 ## <a name="xml-namespaces"></a>XML 名前空間  
- 属性軸プロパティの名前は、`Imports` ステートメントを使用してグローバルに宣言された XML 名前空間プレフィックスのみを使用できます。 XML 要素リテラル内でローカルに宣言されている XML 名前空間プレフィックスは使用できません。 詳細については、「 [Imports ステートメント (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)」を参照してください。  
+ 属性軸プロパティの名前は、`Imports` ステートメントを使用してグローバルに宣言された XML 名前空間プレフィックスのみを使用できます。 XML 要素リテラル内でローカルに宣言されている XML 名前空間プレフィックスは使用できません。 詳細については、「[Imports ステートメント (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例は、`phone`という名前の XML 要素のコレクションから、`type` という名前の XML 属性の値を取得する方法を示しています。  

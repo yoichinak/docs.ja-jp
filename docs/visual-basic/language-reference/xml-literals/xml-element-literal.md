@@ -86,9 +86,9 @@ ms.locfileid: "74347027"
 
   - XML 要素リテラル。
 
-  - XML コメントリテラル。 「 [XML コメントリテラル](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)」を参照してください。
+  - XML コメントリテラル。 「[XML コメントリテラル](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)」を参照してください。
 
-  - XML 処理命令リテラル。 「 [XML 処理命令リテラル](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)」を参照してください。
+  - XML 処理命令リテラル。 「[XML 処理命令リテラル](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)」を参照してください。
 
   - XML CDATA リテラル。 「 [XML CDATA Literal](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)」を参照してください。
 

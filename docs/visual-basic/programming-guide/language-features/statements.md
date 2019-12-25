@@ -48,7 +48,7 @@ Visual Basic のステートメントは完全な命令です。 キーワード
 
 ### <a name="initial-values"></a>初期値
 
-宣言ステートメントを含むコードを実行すると、Visual Basic は、宣言された要素に必要なメモリを予約します。 要素が値を保持している場合は、Visual Basic そのデータ型の既定値に初期化します。 詳細については、「 [Dim ステートメント](../../language-reference/statements/dim-statement.md)」の「動作」を参照してください。
+宣言ステートメントを含むコードを実行すると、Visual Basic は、宣言された要素に必要なメモリを予約します。 要素が値を保持している場合は、Visual Basic そのデータ型の既定値に初期化します。 詳細については、「[Dim ステートメント](../../language-reference/statements/dim-statement.md)」の「動作」を参照してください。
 
 次の例に示すように、変数に初期値を宣言の一部として割り当てることができます。
 
