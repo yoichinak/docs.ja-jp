@@ -29,7 +29,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="parts"></a>指定項目
 
 `xmlNamespacePrefix`  
-省略可。 XML 要素と属性が `xmlNamespaceName`を参照できる文字列。 `xmlNamespacePrefix` が指定されていない場合、インポートされた XML 名前空間が既定の XML 名前空間になります。 有効な XML 識別子である必要があります。 詳細については、「宣言され[た XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。
+省略可。 XML 要素と属性が `xmlNamespaceName`を参照できる文字列。 `xmlNamespacePrefix` が指定されていない場合、インポートされた XML 名前空間が既定の XML 名前空間になります。 有効な XML 識別子である必要があります。 詳細については、「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。
 
 `xmlNamespaceName`  
 必須。 インポートされる XML 名前空間を識別する文字列。
