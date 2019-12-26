@@ -14,7 +14,7 @@ ms.locfileid: "74352904"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>方法 : Visual Basic でオブジェクト変数を宣言し、オブジェクト変数にオブジェクトを代入する
 
-[オブジェクトデータ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)の変数を宣言するには、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)で `As Object` を指定します。 このような変数にオブジェクトを代入するには、代入ステートメントまたは初期化句で等号 (`=`) の後にオブジェクトを配置します。
+[Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)の変数を宣言するには、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)で `As Object` を指定します。 このような変数にオブジェクトを代入するには、代入ステートメントまたは初期化句で等号 (`=`) の後にオブジェクトを配置します。
 
 ## <a name="example"></a>例
 
@@ -46,7 +46,7 @@ Dim thisObject As Object= "This is an Object"
 - [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [オブジェクト変数の宣言](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
