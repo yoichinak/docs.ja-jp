@@ -19,7 +19,7 @@ ms.locfileid: "74344901"
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>方法: 変換演算子を定義する (Visual Basic)
 クラスまたは構造体を定義している場合は、クラスまたは構造体の型と、別のデータ型 (`Integer`、`Double`、`String`など) の間の型変換演算子を定義できます。  
   
- クラスまたは構造体内で、型変換を[CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)プロシージャとして定義します。 すべての変換プロシージャは `Public Shared`である必要があり、それぞれが[拡大](../../../../visual-basic/language-reference/modifiers/widening.md)または[縮小](../../../../visual-basic/language-reference/modifiers/narrowing.md)のどちらかを指定する必要があります。  
+ クラスまたは構造体内で、型変換を [CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)プロシージャとして定義します。 すべての変換プロシージャは `Public Shared`である必要があり、それぞれが[拡大](../../../../visual-basic/language-reference/modifiers/widening.md)または[縮小](../../../../visual-basic/language-reference/modifiers/narrowing.md)のどちらかを指定する必要があります。  
   
  クラスまたは構造体に対して演算子を定義することは、演算子の*オーバーロード*とも呼ばれます。  
   

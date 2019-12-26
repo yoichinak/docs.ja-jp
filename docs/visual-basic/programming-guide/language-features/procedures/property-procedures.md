@@ -35,7 +35,7 @@ Visual Basic には、次のプロパティプロシージャが用意されて�
 
 クラス、構造体、およびモジュールのプロパティを定義できます。 プロパティは既定で `Public` されます。これは、プロパティのコンテナーにアクセスできるアプリケーション内の任意の場所から呼び出すことができることを意味します。
 
-プロパティと変数の比較については、「 [Visual Basic のプロパティと変数の違い](differences-between-properties-and-variables.md)」を参照してください。
+プロパティと変数の比較については、「[Visual Basic のプロパティと変数の違い](differences-between-properties-and-variables.md)」を参照してください。
 
 ## <a name="declaration-syntax"></a>宣言の構文
 
@@ -60,7 +60,7 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]
 ```
 
-`Modifiers` は、オーバーロード、オーバーライド、共有、およびシャドウに関するアクセスレベルと情報、およびプロパティが読み取り専用であるか書き込み専用であるかを指定できます。 `Get` または `Set` プロシージャの `AccessLevel` には、プロパティ自体に対して指定されたアクセスレベルよりも制限の厳しい任意のレベルを指定できます。 詳細については、「 [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)」を参照してください。
+`Modifiers` は、オーバーロード、オーバーライド、共有、およびシャドウに関するアクセスレベルと情報、およびプロパティが読み取り専用であるか書き込み専用であるかを指定できます。 `Get` または `Set` プロシージャの `AccessLevel` には、プロパティ自体に対して指定されたアクセスレベルよりも制限の厳しい任意のレベルを指定できます。 詳細については、「[Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)」を参照してください。
 
 ### <a name="data-type"></a>データ型
 
