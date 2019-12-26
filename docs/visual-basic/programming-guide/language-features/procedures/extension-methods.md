@@ -20,7 +20,7 @@ ms.locfileid: "74341172"
 
 ## <a name="remarks"></a>コメント
 
-拡張メソッドになるのは、`Sub` プロシージャと `Function` プロシージャだけです。 拡張プロパティ、拡張フィールド、拡張イベントを定義することはできません。 すべての拡張メソッドは、<xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 名前空間から `<Extension>` 拡張属性でマークする必要があり、[Module](../../../language-reference/statements/module-statement.md)で定義する必要があります。 拡張メソッドがモジュール外で定義されている場合、Visual Basic コンパイラによってエラー [BC36551](../../../misc/bc36551.md)が生成されます。 "拡張メソッドはモジュール内でのみ定義できます"。
+拡張メソッドになるのは、`Sub` プロシージャと `Function` プロシージャだけです。 拡張プロパティ、拡張フィールド、拡張イベントを定義することはできません。 すべての拡張メソッドは、<xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 名前空間から `<Extension>` 拡張属性でマークする必要があり、[モジュール](../../../language-reference/statements/module-statement.md)で定義する必要があります。 拡張メソッドがモジュール外で定義されている場合、Visual Basic コンパイラによってエラー [BC36551](../../../misc/bc36551.md)が生成されます。 "拡張メソッドはモジュール内でのみ定義できます"。
 
 拡張メソッド定義の最初のパラメーターでは、そのメソッドが拡張するデータ型を指定します。 メソッドが実行されると、最初のパラメーターは、そのメソッドを呼び出すデータ型のインスタンスにバインディングされます。
 

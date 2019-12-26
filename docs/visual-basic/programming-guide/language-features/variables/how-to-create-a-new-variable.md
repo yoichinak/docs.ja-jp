@@ -24,7 +24,7 @@ ms.locfileid: "74353631"
     Dim newCustomer
     ```
 
-2. [Private](../../../../visual-basic/language-reference/modifiers/private.md)、 [Static](../../../../visual-basic/language-reference/modifiers/static.md)、 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)、 [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)など、変数の特性の仕様を含めます。 詳細については、「宣言された[要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)」を参照してください。
+2. [Private](../../../../visual-basic/language-reference/modifiers/private.md)、 [Static](../../../../visual-basic/language-reference/modifiers/static.md)、 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)、 [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)など、変数の特性の仕様を含めます。 詳細については、「[宣言された要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)」を参照してください。
 
     ```vb
     Public Static newCustomer
@@ -32,7 +32,7 @@ ms.locfileid: "74353631"
 
     宣言で他のキーワードを使用する場合、`Dim` キーワードは必要ありません。
 
-3. 仕様に従って変数の名前を指定します。これは Visual Basic の規則と規則に従う必要があります。 詳細については、「宣言された[要素名](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+3. 仕様に従って変数の名前を指定します。これは Visual Basic の規則と規則に従う必要があります。 詳細については、「[宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
     ```vb
     Public Static newCustomer
