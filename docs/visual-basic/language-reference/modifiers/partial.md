@@ -51,7 +51,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 |`MustInherit`|省略可。 「[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)」を参照してください。|  
 |`NotInheritable`|省略可。 「[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)」を参照してください。|  
 |`name`|必須。 この型の名前です。 同じ型の他のすべての部分宣言で定義されている名前と一致する必要があります。|  
-|`Of`|省略可。 これがジェネリック型であることを指定します。 「[Visual Basic のジェネリック型」](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md) を参照してください。|  
+|`Of`|省略可。 これがジェネリック型であることを指定します。 「[Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」を参照してください。|  
 |`typelist`|[Of](../../../visual-basic/language-reference/statements/of-clause.md) を使用する場合は必須です。 [型リスト](../../../visual-basic/language-reference/statements/type-list.md)を参照してください。|  
 |`Inherits`|省略可。 「[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)」を参照してください。|  
 |`classname`|`Inherits` を使用する場合は必ず指定します。 このクラスの派生元のクラスまたはインターフェイスの名前です。|  

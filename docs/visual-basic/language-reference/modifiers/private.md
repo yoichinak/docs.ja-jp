@@ -65,8 +65,10 @@ ms.locfileid: "74351331"
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private Protected](./private-protected.md)
+
 - [Protected Friend](./protected-friend.md)
 - [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Visual Basic におけるプロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

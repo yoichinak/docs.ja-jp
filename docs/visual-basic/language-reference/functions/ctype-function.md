@@ -1,5 +1,5 @@
 ---
-title: CType Function
+title: CType 関数
 ms.date: 07/20/2015
 f1_keywords:
 - vb.CType
@@ -50,7 +50,7 @@ CType(expression, typename)
 
 ## <a name="overloading"></a>オーバーロード
 
-`CType` 演算子も、コードの外部で定義されたクラスまたは構造体でオーバーロードできます。 このようなクラスまたは構造体からの変換、またはこのクラスまたは構造体への変換を行う場合は、その `CType` 演算子の動作を確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
+`CType` 演算子も、コードの外部で定義されたクラスまたは構造体でオーバーロードできます。 このようなクラスまたは構造体からの変換、またはこのクラスまたは構造体への変換を行う場合は、その `CType` 演算子の動作を確認してください。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
 
 ## <a name="converting-dynamic-objects"></a>動的オブジェクトの変換
 
@@ -70,6 +70,6 @@ CType(expression, typename)
 - <xref:System.InvalidCastException>
 - [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [変換関数](../../../visual-basic/language-reference/functions/conversion-functions.md)
-- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [方法 : 変換演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
 - [.NET Framework における型変換](../../../standard/base-types/type-conversion.md)
