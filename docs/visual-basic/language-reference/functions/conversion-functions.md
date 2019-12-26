@@ -38,7 +38,7 @@ ms.locfileid: "74348104"
 - [CShort 関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [CSng 関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [CStr 関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)
 - [CUInt 関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [集計関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [CUShort 関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

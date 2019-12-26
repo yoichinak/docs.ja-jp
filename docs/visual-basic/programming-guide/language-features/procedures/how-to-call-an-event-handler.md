@@ -27,7 +27,7 @@ ms.locfileid: "74340428"
 
 ### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>ハンドルと WithEvents を使用してイベントハンドラーを呼び出すには
 
-1. イベントが[イベントステートメント](../../../language-reference/statements/event-statement.md)を使用して宣言されていることを確認します。
+1. イベントが [Event ステートメント](../../../language-reference/statements/event-statement.md)を使用して宣言されていることを確認します。
 
 2. [WithEvents](../../../language-reference/modifiers/withevents.md)キーワードを使用して、モジュールまたはクラスレベルでオブジェクト変数を宣言します。 この変数の `As` 句には、イベントを発生させるクラスを指定する必要があります。
 
