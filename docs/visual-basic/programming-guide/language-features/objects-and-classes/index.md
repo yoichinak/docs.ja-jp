@@ -104,7 +104,7 @@ warningLabel.ForeColor = System.Drawing.Color.Red
 
 - プロパティは `String` データ型であり、文字列のサイズまたは値に制限がない。
 
-- 詳細については、「[プロパティ プロシージャ](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)」を参照してください。
+- 詳細については、「[Property プロシージャ](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)」を参照してください。
 
 ### <a name="methods"></a>メソッド
 
