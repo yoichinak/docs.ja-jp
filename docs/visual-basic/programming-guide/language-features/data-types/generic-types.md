@@ -124,9 +124,9 @@ ms.locfileid: "74350116"
   
 - 型引数は、 *参照型*である、または *値型*である必要があります  
   
- 複数の要件を指定する場合は、コンマで区切られた *制約リスト* を中かっこ (`{ }`) で囲みます。 アクセス可能なコンストラクターを要求するには、リストに[New Operator](../../../../visual-basic/language-reference/operators/new-operator.md)キーワードを含めます。 参照型であることを必須とするには、 `Class` キーワードを追加し、値型であることを必須とするには、 `Structure` キーワードを追加します。  
+ 複数の要件を指定する場合は、コンマで区切られた *制約リスト* を中かっこ (`{ }`) で囲みます。 アクセス可能なコンストラクターを要求するには、リストに [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)キーワードを含めます。 参照型であることを必須とするには、 `Class` キーワードを追加し、値型であることを必須とするには、 `Structure` キーワードを追加します。  
   
- 制約の詳細については、「 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
+ 制約の詳細については、「[型リスト](../../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
   
 ### <a name="example-of-multiple-constraints"></a>複数の制約の例  
  次の例は、型パラメーターに制約リストがあるジェネリック クラスのスケルトン定義を示しています。 このクラスのインスタンスを作成するコードでは、型引数が <xref:System.IComparable> インターフェイスと <xref:System.IDisposable> インターフェイスの両方を実装し、参照型であり、アクセス可能なパラメーターなしのコンストラクターを公開する必要があります。  

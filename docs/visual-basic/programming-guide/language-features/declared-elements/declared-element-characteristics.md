@@ -23,7 +23,7 @@ ms.locfileid: "74331626"
 # <a name="declared-element-characteristics-visual-basic"></a>宣言された要素の特性 (Visual Basic)
 宣言された要素の*特性*は、コードと対話する方法に影響する要素の側面です。 宣言されたすべての要素には、次の1つ以上の特性が関連付けられています。  
   
-- *データ型*: 要素が保持できる値と、その値を格納する方法。 詳細については、「[Data Types](../../../../visual-basic/language-reference/data-types/index.md)」(データ型) を参照してください。  
+- *データ型*: 要素が保持できる値と、その値を格納する方法。 詳細については、「[データ型の概要](../../../../visual-basic/language-reference/data-types/index.md)」(データ型) を参照してください。  
   
 - *有効期間*-要素を使用できるようになるまでの実行時間。 詳細については、「 [Visual Basic の有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)」を参照してください。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74331626"
 - [宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic の有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Visual Basic 内のスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Visual Basic のアクセスレベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
