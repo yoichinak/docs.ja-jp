@@ -24,7 +24,7 @@ ms.locfileid: "74354060"
 ## <a name="parts"></a>指定項目  
 |||
 |---|---|
-|`attributemodifier`|ソースファイルの先頭で適用される属性に必要です。 [アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)または[モジュール](../../../visual-basic/language-reference/modifiers/module-keyword.md)を指定できます。|
+|`attributemodifier`|ソースファイルの先頭で適用される属性に必要です。 [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)または[Module](../../../visual-basic/language-reference/modifiers/module-keyword.md)を指定できます。|
 |`attributename`| 必須。 属性の名前。|
 |`attributearguments`|省略可。 この属性の位置指定引数の一覧。 複数の引数は、コンマで区切ります。|
 |`attributeinitializer`|省略可。 この属性の変数またはプロパティ初期化子のリスト。 複数の初期化子は、コンマで区切られます。|
@@ -55,7 +55,7 @@ ms.locfileid: "74354060"
   
 ## <a name="see-also"></a>参照
 
-- [アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)
-- [Module \<キーワード>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [Module (Visual Basic)](../../../visual-basic/language-reference/modifiers/module-keyword.md)
 - [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [方法 : コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
