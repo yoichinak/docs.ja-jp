@@ -64,7 +64,7 @@ k = CInt(q)
 |`CDec`|[Decimal データ型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|任意の数値型 (`Byte`、`SByte`、列挙型など)、`Boolean`、`String`、`Object`|
 |`CInt`|[Integer データ型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|任意の数値型 (`Byte`、`SByte`、列挙型など)、`Boolean`、`String`、`Object`|
 |`CLng`|[Long データ型](../../../../visual-basic/language-reference/data-types/long-data-type.md)|任意の数値型 (`Byte`、`SByte`、列挙型など)、`Boolean`、`String`、`Object`|
-|`CObj`|[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)|任意の型|
+|`CObj`|[Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)|任意の型|
 |`CSByte`|[SByte データ型](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|任意の数値型 (`Byte` と列挙型を含む)、`Boolean`、`String`、`Object`|
 |`CShort`|[Short データ型](../../../../visual-basic/language-reference/data-types/short-data-type.md)|任意の数値型 (`Byte`、`SByte`、列挙型など)、`Boolean`、`String`、`Object`|
 |`CSng`|[Single データ型](../../../../visual-basic/language-reference/data-types/single-data-type.md)|任意の数値型 (`Byte`、`SByte`、列挙型など)、`Boolean`、`String`、`Object`|
