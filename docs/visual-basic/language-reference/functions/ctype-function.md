@@ -38,7 +38,7 @@ CType(expression, typename)
 > 次の関数を使用して型変換を実行することもできます。
 >
 > - 特定のデータ型への変換を実行する、`CByte`、`CDbl`、`CInt` などの型変換関数。 詳細については、「[型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)」を参照してください。
-> - [DirectCast operator](../../../visual-basic/language-reference/operators/directcast-operator.md)または[TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)。 これらの演算子では、一方の型が他方の型を継承または実装している必要があります。 これらの場合は、`CType` データ型との間で変換を行うときに、`Object` よりもいくらかパフォーマンスが向上します。
+> - [DirectCast operator](../../../visual-basic/language-reference/operators/directcast-operator.md) または [TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)。 これらの演算子では、一方の型が他方の型を継承または実装している必要があります。 これらの場合は、`CType` データ型との間で変換を行うときに、`Object` よりもいくらかパフォーマンスが向上します。
 
 `CType` はインラインでコンパイルされます。これは、変換コードが式を評価するコードの一部であることを意味します。 場合によっては、変換を実行するプロシージャが呼び出されないため、コードの実行速度が速くなります。
 
