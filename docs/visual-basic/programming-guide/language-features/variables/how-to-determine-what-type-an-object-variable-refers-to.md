@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
 ms.openlocfilehash: 9f9b89e2fea0bd69cba6d50fa1d1fb9cc3927685
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348613"
@@ -48,7 +48,7 @@ ms.locfileid: "74348613"
 
     `TypeOf`...`Is` 式は、オブジェクトの実行時の型が指定した型と互換性がある場合に `True` を返します。
 
-    互換性の基準は、指定された型がクラス、構造体、またはインターフェイスのいずれであるかによって異なります。 一般に、オブジェクトがと同じ型であるか、指定された型を継承するか、または実装する場合、型は互換性があります。 詳細については、「 [TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)」を参照してください。
+    互換性の基準は、指定された型がクラス、構造体、またはインターフェイスのいずれであるかによって異なります。 一般に、オブジェクトがと同じ型であるか、指定された型を継承するか、または実装する場合、型は互換性があります。 詳細については、「[TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)」を参照してください。
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
