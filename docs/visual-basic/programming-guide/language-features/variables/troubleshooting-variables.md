@@ -20,7 +20,7 @@ ms.locfileid: "74351774"
   
 - オブジェクト変数を特定の型として宣言した後、その型で定義されていないメンバーを参照すると、コンパイラによってエラー メッセージが生成されることがあります。  
   
-- オブジェクト変数に代入されたオブジェクトが、コードからアクセスしようとしたメンバーを公開していないと、ランタイム <xref:System.MemberAccessException> が発生します。 [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)の変数の場合、メンバーが `Public`ない場合は、この例外を取得することもできます。 この原因は、遅延バインディングで許可されているのは、 `Public` メンバーへのアクセスのみのためです。  
+- オブジェクト変数に代入されたオブジェクトが、コードからアクセスしようとしたメンバーを公開していないと、ランタイム <xref:System.MemberAccessException> が発生します。 [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)の変数の場合、メンバーが `Public`でない場合は、この例外を取得することもできます。 この原因は、遅延バインディングで許可されているのは、 `Public` メンバーへのアクセスのみのためです。  
   
  [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) で型チェックが `On`に設定されている場合、オブジェクト変数がアクセスできるのは、その変数の宣言時に指定したクラスのメソッドとプロパティだけです。 これを次の例に示します。  
 
