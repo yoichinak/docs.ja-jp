@@ -46,7 +46,7 @@ Const constantlist
 
 |要素|説明|
 |----------|-----------------|
-|`constantname`|必須。 定数の名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
+|`constantname`|必須。 定数の名前。 「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
 |`datatype`|`Option Strict` が `On`の場合は必須です。 定数のデータ型。|
 |`initializer`|必須。 コンパイル時に評価され、定数に割り当てられる式。|
 
