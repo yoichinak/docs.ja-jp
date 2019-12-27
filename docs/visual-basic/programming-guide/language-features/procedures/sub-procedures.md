@@ -59,7 +59,7 @@ ms.locfileid: "74352532"
   
  `[Call]`*subname* `[(` *argumentlist* `)]`  
   
- `Sub` メソッドは、それを定義するクラスの外部から呼び出すことができます。 最初に、`New` キーワードを使用してクラスのインスタンスを作成するか、クラスのインスタンスを返すメソッドを呼び出す必要があります。 詳細については、「 [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md)」を参照してください。 その後、次の構文を使用して、インスタンスオブジェクトの `Sub` メソッドを呼び出すことができます。  
+ `Sub` メソッドは、それを定義するクラスの外部から呼び出すことができます。 最初に、`New` キーワードを使用してクラスのインスタンスを作成するか、クラスのインスタンスを返すメソッドを呼び出す必要があります。 詳細については、「[New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)」を参照してください。 その後、次の構文を使用して、インスタンスオブジェクトの `Sub` メソッドを呼び出すことができます。  
   
  *オブジェクト*。*methodname*`[(`*argumentlist*`)]`  
   
@@ -74,7 +74,7 @@ ms.locfileid: "74352532"
   
 ## <a name="see-also"></a>参照
 
-- [手順](./index.md)
+- [Visual Basic におけるプロシージャ](./index.md)
 - [Function プロシージャ](./function-procedures.md)
 - [Property プロシージャ](./property-procedures.md)
 - [演算子プロシージャ](./operator-procedures.md)
