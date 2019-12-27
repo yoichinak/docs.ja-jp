@@ -55,7 +55,7 @@ End While
   
  通常、`condition` は2つの値を比較した結果になりますが、[Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md) の値 (`True` または `False`) に評価される任意の式を指定できます。 この式には、`Boolean`に変換された別のデータ型 (数値型など) の値を含めることができます。  
   
- ループを `While` 入れ子にするには、別のループ内に1つのループを配置します。 また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、「[入れ子になったコントロール構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。  
+ ループを `While` 入れ子にするには、別のループ内に1つのループを配置します。 また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、「[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。  
   
 ## <a name="exit-while"></a>Exit While  
  [Exit While](../../../visual-basic/language-reference/statements/exit-statement.md)ステートメントを使用すると、`While` ループを終了する別の方法を指定できます。 `Exit While` は、`End While` ステートメントの後にあるステートメントに制御を直ちに転送します。  
@@ -66,7 +66,7 @@ End While
   
  入れ子になった `While` ループ内で使用された場合、`Exit While` は最も内側のループから次の上位レベルの入れ子に制御を転送します。  
   
- `Continue While` ステートメントは、ループの次の反復処理に制御を直ちに転送します。 詳細については、「 [Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)」を参照してください。  
+ `Continue While` ステートメントは、ループの次の反復処理に制御を直ちに転送します。 詳細については、「[Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、ループ内のステートメントは、`index` 変数が10を超えるまで実行を続けます。  
