@@ -62,4 +62,4 @@ ms.locfileid: "74348613"
 - <xref:System.TypeCode>
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
