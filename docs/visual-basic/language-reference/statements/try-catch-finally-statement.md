@@ -94,7 +94,7 @@ A`Finally`ブロックは、例外がある場合でも実行する必要があ�
 
 - [End ステートメント](end-statement.md)で発生した、`Try`または`Catch`ブロックします。
 
-- A<xref:System.StackOverflowException>でスローされたが、`Try`または`Catch`ブロックします。
+- <xref:System.StackOverflowException>でスローされたが、`Try`または`Catch`ブロックします。
 
 実行を明示的に転送することはできません、`Finally`ブロックします。 転送の実行、`Finally`ブロックが例外を除いて有効でないです。
 
