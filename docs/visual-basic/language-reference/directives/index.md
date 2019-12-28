@@ -23,7 +23,7 @@ ms.locfileid: "74838144"
   
  [#ExternalSource ディレクティブ](../../../visual-basic/language-reference/directives/externalsource-directive.md)--ソース行とソース外部のテキストとの間のマッピングを示します。  
   
- [#If...次に... #Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)--選択したコードブロックをコンパイルします  
+ [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)--選択したコードブロックをコンパイルします  
   
  [#Region ディレクティブ](../../../visual-basic/language-reference/directives/region-directive.md)--Visual Studio エディターでコードのセクションを折りたたんで非表示にします  
   
