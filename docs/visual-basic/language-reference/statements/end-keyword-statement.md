@@ -48,8 +48,8 @@ End With
 
 |要素|説明|
 |---|---|
-|`End`|必須。 プログラミング要素の定義を終了します。|
-|`AddHandler`|カスタム[イベントステートメント](event-statement.md)内の一致する `AddHandler` ステートメントによって開始された `AddHandler` アクセサーを終了するために必要です。|
+|`End`|必ず指定します。プログラミング要素の定義を終了します。|
+|`AddHandler`|カスタムの [Event ステートメント](event-statement.md)で、対応する `AddHandler` ステートメントによって開始された `AddHandler` アクセサを終了する場合に必要です。|
 |`Class`|一致する[クラスステートメント](class-statement.md)によって開始されたクラス定義を終了するために必要です。|
 |`Enum`|一致する列挙[ステートメント](enum-statement.md)によって開始された列挙型定義を終了するために必要です。|
 |`Event`|一致する[イベントステートメント](event-statement.md)によって開始された `Custom` イベント定義を終了するために必要です。|  
