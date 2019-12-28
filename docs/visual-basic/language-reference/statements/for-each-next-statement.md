@@ -86,7 +86,7 @@ Next [ element ]
 
 [Exit For](../../../visual-basic/language-reference/statements/exit-statement.md)ステートメントを実行すると、`For`...`Next` が終了します ループし、`Next` ステートメントの後のステートメントに制御を転送します。
 
-`Continue For` ステートメントは、ループの次の反復処理に制御を直ちに転送します。 詳細については、「 [Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)」を参照してください。
+`Continue For` ステートメントは、ループの次の反復処理に制御を直ちに転送します。 詳細については、「[Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)」を参照してください。
 
 次の例では、`Continue For` ステートメントと `Exit For` ステートメントを使用する方法を示します。
 
@@ -100,8 +100,7 @@ Next [ element ]
 
 - 例外は、`Try`...`Catch`...`Finally`でキャッチされます。`Finally` ブロックの末尾に `Exit For` を使用することもできます。
 
-- 無限ループがあります。これは、大規模または無限の回数実行されるループです。 このような条件を検出した場合は、`Exit For` を使用してループをエスケープできます。 詳細については、「 [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)。
-
+- 無限ループがあります。これは、大規模または無限の回数実行されるループです。 このような条件を検出した場合は、`Exit For` を使用してループをエスケープできます。 詳細については、「[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)」を参照してください。
 ## <a name="iterators"></a>反復子
 
 *反復子*を使用して、コレクションに対してカスタムの反復処理を実行します。 反復子は、関数または `Get` アクセサーにすることができます。 `Yield` ステートメントを使用して、コレクションの各要素を一度に1つ返します。
@@ -120,7 +119,7 @@ Next [ element ]
 
 コレクション内のすべての要素が `element`に連続して割り当てられると、`For Each` ループが停止し、`Next` ステートメントに続くステートメントに制御が移ります。
 
-[オプションの推論](option-infer-statement.md)が on (既定の設定) の場合、Visual Basic コンパイラは `element`のデータ型を推測できます。 Off で、`element` がループの外側で宣言されていない場合は、`For Each` ステートメントで宣言する必要があります。 `element` のデータ型を明示的に宣言するには、`As` 句を使用します。 要素のデータ型が `For Each`...`Next` コンストラクトの外側で定義されている場合を除き、そのスコープはループの本体です。 ループ内で `element` 宣言することはできません。
+[Option Infer ステートメント](option-infer-statement.md)が on (既定の設定) の場合、Visual Basic コンパイラは `element`のデータ型を推測できます。 Off で、`element` がループの外側で宣言されていない場合は、`For Each` ステートメントで宣言する必要があります。 `element` のデータ型を明示的に宣言するには、`As` 句を使用します。 要素のデータ型が `For Each`...`Next` コンストラクトの外側で定義されている場合を除き、そのスコープはループの本体です。 ループ内で `element` 宣言することはできません。
 
 必要に応じて、`Next` ステートメントで `element` を指定することもできます。 これにより、特に `For Each` ループが入れ子になっている場合に、プログラムの読みやすさが向上します。 対応する `For Each` ステートメントに表示されるものと同じ変数を指定する必要があります。
 
@@ -148,11 +147,11 @@ Next [ element ]
 
 Visual Basic が `Next` ステートメントを検出するたびに、`For Each` ステートメントに戻ります。 この場合も、`MoveNext` と `Current` を呼び出して次の要素を返します。もう一度、ブロックを実行するか、結果に応じてループを停止します。 このプロセスは、次の要素が存在しないこと、または `Exit For` ステートメントが発生したことが `MoveNext` によって示されるまで続行されます。
 
-**コレクションを変更しています。** <xref:System.Collections.IEnumerable.GetEnumerator%2A> によって返される列挙子オブジェクトは、要素の追加、削除、置換、または並べ替えを行うことによって、コレクションを変更することはできません。 `For Each`...`Next` ループを開始した後にコレクションを変更した場合、列挙子オブジェクトは無効になり、次に要素にアクセスしようとすると <xref:System.InvalidOperationException> 例外が発生します。
+**コレクションの変更。** <xref:System.Collections.IEnumerable.GetEnumerator%2A> によって返される列挙子オブジェクトは、要素の追加、削除、置換、または並べ替えを行うことによって、コレクションを変更することはできません。 `For Each`...`Next` ループを開始した後にコレクションを変更した場合、列挙子オブジェクトは無効になり、次に要素にアクセスしようとすると <xref:System.InvalidOperationException> 例外が発生します。
 
 ただし、この変更のブロックは Visual Basic によって決定されるのではなく、<xref:System.Collections.IEnumerable> インターフェイスの実装によって決まります。 反復処理中に変更を許可する方法で `IEnumerable` を実装することができます。 このような動的な変更を検討している場合は、使用しているコレクションの `IEnumerable` 実装の特性を理解していることを確認してください。
 
-**コレクション要素を変更しています。** 列挙子オブジェクトの <xref:System.Collections.IEnumerator.Current%2A> プロパティは[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)であり、各コレクション要素のローカルコピーを返します。 つまり、`For Each`...`Next` ループで要素自体を変更することはできません。 行った変更は、`Current` からのローカルコピーにのみ適用され、基になるコレクションには反映されません。 ただし、要素が参照型の場合は、その要素が指すインスタンスのメンバーを変更できます。 次の例では、各 `thisControl` 要素の `BackColor` メンバーを変更します。 ただし、`thisControl` 自体を変更することはできません。
+**コレクション要素の変更。** 列挙子オブジェクトの <xref:System.Collections.IEnumerator.Current%2A> プロパティは[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)であり、各コレクション要素のローカルコピーを返します。 つまり、`For Each`...`Next` ループで要素自体を変更することはできません。 行った変更は、`Current` からのローカルコピーにのみ適用され、基になるコレクションには反映されません。 ただし、要素が参照型の場合は、その要素が指すインスタンスのメンバーを変更できます。 次の例では、各 `thisControl` 要素の `BackColor` メンバーを変更します。 ただし、`thisControl` 自体を変更することはできません。
 
 ```vb
 Sub LightBlueBackground(thisForm As System.Windows.Forms.Form)
@@ -164,7 +163,7 @@ End Sub
 
 前の例では、各 `thisControl` 要素の `BackColor` メンバーを変更できますが、`thisControl` 自体を変更することはできません。
 
-**配列を走査しています。** <xref:System.Array> クラスは <xref:System.Collections.IEnumerable> インターフェイスを実装するため、すべての配列は <xref:System.Array.GetEnumerator%2A> メソッドを公開します。 これは、`For Each`...`Next` ループで配列を反復処理できることを意味します。 ただし、読み取ることができるのは配列要素だけです。 変更することはできません。
+**配列の反復処理。** <xref:System.Array> クラスは <xref:System.Collections.IEnumerable> インターフェイスを実装するため、すべての配列は <xref:System.Array.GetEnumerator%2A> メソッドを公開します。 これは、`For Each`...`Next` ループで配列を反復処理できることを意味します。 ただし、読み取ることができるのは配列要素だけです。 変更することはできません。
 
 ## <a name="example"></a>例
 
