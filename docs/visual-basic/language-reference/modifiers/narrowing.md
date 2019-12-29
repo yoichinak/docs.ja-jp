@@ -29,13 +29,13 @@ ms.locfileid: "74351476"
   
  このコンテキストでは、`Narrowing` キーワードを使用できます。  
   
- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
 ## <a name="see-also"></a>参照
 
-- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
 - [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [方法 : 演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)
 - [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)

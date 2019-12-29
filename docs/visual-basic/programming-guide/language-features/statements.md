@@ -162,7 +162,7 @@ Visual Basic のステートメントは完全な命令です。 キーワード
 
    [!code-vb[VbVbalrLineContinuation#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#4)]
 
-   詳細については、「 [XML での埋め込み式](./xml/embedded-expressions-in-xml.md)」を参照してください。
+   詳細については、「[XML での埋め込み式](./xml/embedded-expressions-in-xml.md)」を参照してください。
 
 - 連結演算子 (`&`) の後。 例 :
 
@@ -202,7 +202,7 @@ Visual Basic のステートメントは完全な命令です。 キーワード
 
    [!code-vb[VbVbalrLineContinuation#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#9)]
 
-   詳細については、「 [XML 軸のプロパティ](../../../visual-basic/language-reference/xml-axis/index.md)」を参照してください。
+   詳細については、「[XML 軸のプロパティ](../../../visual-basic/language-reference/xml-axis/index.md)」を参照してください。
 
 - 属性を指定するときに、小なり記号 (<) またはそれより大きい記号 (`>`) の後。 属性を指定する場合は、大なり記号 (`>`) の後にもなります。 ただし、アセンブリレベルまたはモジュールレベルの属性を指定する場合は、行連結文字 (`_`) を含める必要があります。 例 :
 

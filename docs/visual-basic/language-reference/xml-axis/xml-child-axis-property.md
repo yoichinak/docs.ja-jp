@@ -32,7 +32,7 @@ object.<child>
 |---|---|  
 |`object`|必須。 <xref:System.Xml.Linq.XElement> オブジェクト、<xref:System.Xml.Linq.XDocument> オブジェクト、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション、または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションです。|  
 |. <|必須。 子軸プロパティの開始を示します。|  
-|`child`|必須。 [`prefix:]name`の形式で、アクセスする子ノードの名前。<br /><br /> -   `Prefix`-省略可能です。 子ノードの XML 名前空間プレフィックスです。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間を指定する必要があります。<br />-   `Name`-必須。 ローカル子ノードの名前です。 「[宣言された XML 要素と属性の名前」を](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)参照してください。|  
+|`child`|必須。 `[prefix:]name` の形式で、アクセスする子ノードの名前です。<br /><br /> -   `Prefix`-省略可能です。 子ノードの XML 名前空間プレフィックスです。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間を指定する必要があります。<br />-   `Name`-必須。 ローカル子ノードの名前です。 「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。|  
 |>|必須。 子軸プロパティの終了を示します。|  
   
 ## <a name="return-value"></a>戻り値  

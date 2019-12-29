@@ -49,7 +49,7 @@ End Function
 
 ## <a name="return-types"></a>戻り値の型
 
-非同期メソッドは、[サブ](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)プロシージャ、または戻り値の型が <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601>の[関数](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)プロシージャです。 メソッドで[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)パラメーターを宣言することはできません。
+非同期メソッドは、[Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) プロシージャ、または戻り値の型が <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> の [Function](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) プロシージャです。 メソッドで [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) パラメーターを宣言することはできません。
 
 メソッドの[return](../../../visual-basic/language-reference/statements/return-statement.md)ステートメントに TResult 型のオペランドが含まれている場合は、非同期メソッドの戻り値の型に `Task(Of TResult)` を指定します。 メソッドの完了時に意味のある値を返さない場合は、`Task` を使用します。 これにより、メソッドの呼び出しでは `Task` が返されますが、`Task` の完了時に、`Await` を待機している `Task` ステートメントは結果値を生成しません。
 
