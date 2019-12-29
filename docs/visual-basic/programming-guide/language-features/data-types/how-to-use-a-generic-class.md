@@ -37,7 +37,7 @@ ms.locfileid: "74350059"
   
 ### <a name="to-use-a-class-that-takes-a-type-parameter"></a>型パラメーターを受け取るクラスを使用するには  
   
-1. ソースファイルの先頭に、 [Imports ステートメント (.Net 名前空間と型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)を含めて、<xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間をインポートします。 これにより、<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> などの他のキュー クラスと区別するために完全修飾しなくても <xref:System.Collections.Queue?displayProperty=nameWithType> クラスを参照できるようになります。  
+1. ソースファイルの先頭に、 [Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)を含めて、<xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間をインポートします。 これにより、<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> などの他のキュー クラスと区別するために完全修飾しなくても <xref:System.Collections.Queue?displayProperty=nameWithType> クラスを参照できるようになります。  
   
 2. 通常の方法でオブジェクトを作成しますが、クラス名の直後に `(Of type)` を追加します。  
   

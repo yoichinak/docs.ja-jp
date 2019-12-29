@@ -58,7 +58,7 @@ ms.locfileid: "74350116"
   
  このときに、 `stringQ` を使って、 `String` 値だけを扱うように指定できます。 `stringQ` は、 `String` 値を汎用的に扱うのではなく `Object` だけを扱うことを意味するので、遅延バインディングまたは型変換は行いません。 その結果、実行時間が短縮され、ランタイム エラーが減少します。  
   
- ジェネリック型の使い方の詳細については、「 [How to: Use a Generic Class](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)」をご覧ください。  
+ ジェネリック型の使い方の詳細については、「[方法: ジェネリック クラスを使用する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)」をご覧ください。  
   
 ## <a name="example-of-a-generic-class"></a>ジェネリック クラスの例  
  次の例は、ジェネリック クラスのスケルトン定義を示しています。  
@@ -78,7 +78,7 @@ ms.locfileid: "74350116"
 ## <a name="eligible-programming-elements"></a>使用できるプログラミング要素  
  ジェネリック クラス、構造体、インターフェイス、プロシージャ、およびデリゲートを定義して使用することができます。 .NET Framework では、一般的に使用されるジェネリック要素を表すいくつかのジェネリッククラス、構造体、およびインターフェイスが定義されていることに注意してください。 <xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間には、ディクショナリ、リスト、キュー、スタックが用意されています。 独自のジェネリックな要素を定義する前に、それに相当する要素が既に <xref:System.Collections.Generic?displayProperty=nameWithType>に用意されていないかをご確認ください。  
   
- プロシージャは型ではありませんが、ジェネリック プロシージャを定義し、使用できます。 「 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
+ プロシージャは型ではありませんが、ジェネリック プロシージャを定義し、使用できます。 「[Visual Basic におけるジェネリック プロシージャ](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
   
 ## <a name="advantages-of-generic-types"></a>ジェネリック型の利点  
  ジェネリック型は、それぞれが特定のデータ型を操作する複数のプログラミング要素を宣言するための基礎となります。 ジェネリック型の代わりになるものを以下に示します。  
@@ -124,9 +124,9 @@ ms.locfileid: "74350116"
   
 - 型引数は、 *参照型*である、または *値型*である必要があります  
   
- 複数の要件を指定する場合は、コンマで区切られた *制約リスト* を中かっこ (`{ }`) で囲みます。 アクセス可能なコンストラクターを要求するには、リストに[New Operator](../../../../visual-basic/language-reference/operators/new-operator.md)キーワードを含めます。 参照型であることを必須とするには、 `Class` キーワードを追加し、値型であることを必須とするには、 `Structure` キーワードを追加します。  
+ 複数の要件を指定する場合は、コンマで区切られた *制約リスト* を中かっこ (`{ }`) で囲みます。 アクセス可能なコンストラクターを要求するには、リストに [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)キーワードを含めます。 参照型であることを必須とするには、 `Class` キーワードを追加し、値型であることを必須とするには、 `Structure` キーワードを追加します。  
   
- 制約の詳細については、「 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
+ 制約の詳細については、「[型リスト](../../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
   
 ### <a name="example-of-multiple-constraints"></a>複数の制約の例  
  次の例は、型パラメーターに制約リストがあるジェネリック クラスのスケルトン定義を示しています。 このクラスのインスタンスを作成するコードでは、型引数が <xref:System.IComparable> インターフェイスと <xref:System.IDisposable> インターフェイスの両方を実装し、参照型であり、アクセス可能なパラメーターなしのコンストラクターを公開する必要があります。  

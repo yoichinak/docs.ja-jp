@@ -40,7 +40,7 @@ End Structure
 |---|---|
 |`attributelist`|任意。 「[属性リスト](attribute-list.md)」を参照してください。|
 |`accessmodifier`|任意。 次のいずれかになります。<br /><br /> - [Public](../modifiers/public.md)<br />[Protected](../modifiers/protected.md)- <br />- [Friend](../modifiers/friend.md)<br />- [Private](../modifiers/private.md)<br />- [Protected Friend](../modifiers/protected-friend.md)<br/>- [Private Protected](../modifiers/private-protected.md) <br /><br /> 「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|
-|`Shadows`|任意。 「[シャドウ](../modifiers/shadows.md)」を参照してください。|
+|`Shadows`|任意。 「[Shadows](../modifiers/shadows.md)」を参照してください。|
 |`Partial`|任意。 構造体の部分定義を示します。 「[Partial](../modifiers/partial.md)」を参照してください。|
 |`name`|必須。 この構造体の名前です。 「[宣言された要素の名前](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
 |`Of`|任意。 これがジェネリックな構造体であることを指定します。|
@@ -97,7 +97,7 @@ End Structure
 
 - **修飾。** 構造体の外部にあるコードでは、メンバーの名前をその構造体の名前で修飾する必要があります。
 
-     入れ子構造体の内部のコードでプログラミング要素を修飾なしで参照した場合、Visual Basic はその要素をまず入れ子構造体の内部で探し、その次にコンテナー構造体の内部で探します。この手順が、最も外側のコンテナー要素にまで繰り返されます。 詳細については、「[References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。
+     入れ子構造体の内部のコードでプログラミング要素を修飾なしで参照した場合、Visual Basic はその要素をまず入れ子構造体の内部で探し、その次にコンテナー構造体の内部で探します。この手順が、最も外側のコンテナー要素にまで繰り返されます。 詳細については、「[宣言された要素の参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。
 
 - **メモリ使用量。** 他のすべての複合データ型と同様に、構造体の総メモリ使用量を計算する場合、各メンバーのストレージ割り当ての公称サイズを単に合計しただけでは安全ではありません。 さらに、メモリ内に格納される順序が宣言の順序と同じであると仮定するのも安全ではありません。 構造体のストレージ レイアウトを制御する必要がある場合は、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を `Structure` ステートメントに適用します。
 
