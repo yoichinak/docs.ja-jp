@@ -139,7 +139,7 @@ result = string Like pattern
  数値比較では、`Nothing` を0として扱います。 文字列比較では、`Nothing` を `""` (空の文字列) として扱います。
 
 ## <a name="overloading"></a>オーバーロード
- 関係比較演算子 (`<`。 `<=`、`>`、`>=`、`=`、`<>`) は*オーバーロード*できます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体で動作を再定義できます。 このようなクラスまたは構造体でこれらの演算子のいずれかを使用するコードの場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
+ 関係比較演算子 (`<`。 `<=`、`>`、`>=`、`=`、`<>`) は*オーバーロード*できます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体で動作を再定義できます。 このようなクラスまたは構造体でこれらの演算子のいずれかを使用するコードの場合は、再定義された動作を理解していることを確認してください。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
 
  [= 演算子](../../../visual-basic/language-reference/operators/assignment-operator.md)は、代入演算子としてではなく、関係比較演算子としてのみオーバーロードできることに注意してください。
 

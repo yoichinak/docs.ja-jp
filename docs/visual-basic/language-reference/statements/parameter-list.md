@@ -60,7 +60,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 
 呼び出し元のコードがプロシージャを呼び出すと、必要な各パラメーターに*引数*が渡されます。 詳細については、「[パラメーターと引数の違い](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md)」を参照してください。
 
-呼び出し元のコードが各パラメーターに渡す引数は、呼び出し元のコード内の基になる要素へのポインターです。 この要素が*不変*(定数、リテラル、列挙型、または式) の場合、どのコードでも変更することはできません。 *変数*要素 (宣言された変数、フィールド、プロパティ、配列要素、または構造体要素) の場合は、呼び出し元のコードで変更できます。 詳細については、「変更可能な[引数と変更できない引数の違い](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md)」を参照してください。
+呼び出し元のコードが各パラメーターに渡す引数は、呼び出し元のコード内の基になる要素へのポインターです。 この要素が*不変* (定数、リテラル、列挙型、または式) の場合、どのコードでも変更することはできません。 *変数*要素 (宣言された変数、フィールド、プロパティ、配列要素、または構造体要素) の場合は、呼び出し元のコードで変更できます。 詳細については、「[変更できる引数と変更できない引数の違い](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md)」を参照してください。
 
 変数要素が `ByRef`渡された場合は、プロシージャでも変更できます。 詳細については、「[引数を値で渡す方法と参照渡しの違い](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)」を参照してください。
 
@@ -82,7 +82,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 
 - **渡すメカニズム。** すべての引数の既定の機構は `ByVal`です。これは、プロシージャが基になる変数要素を変更できないことを意味します。 ただし、要素が参照型の場合、このプロシージャでは、オブジェクト自体を置き換えることも再割り当てできない場合でも、基になるオブジェクトの内容やメンバーを変更できます。
 
-- **パラメーター名。** パラメーターのデータ型が配列である場合は、`parametername` の直後にかっこを入力します。 パラメーター名の詳細については、「宣言された[要素名](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+- **パラメーター名。** パラメーターのデータ型が配列である場合は、`parametername` の直後にかっこを入力します。 パラメーター名の詳細については、「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -95,7 +95,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)

@@ -15,7 +15,7 @@ ms.locfileid: "74353516"
 # <a name="visual-basic-features-that-support-linq"></a>LINQ をサポートする Visual Basic の機能
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 名前は、クエリ構文やその他の言語構成を言語で直接サポートする Visual Basic のテクノロジを指します。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]では、外部データソースに対してクエリを実行するための新しい言語を習得する必要はありません。 Visual Basic を使用すると、リレーショナルデータベース、XML ストア、またはオブジェクトのデータに対してクエリを実行できます。 この言語へのクエリ機能の統合により、コンパイル時に構文エラーやタイプセーフをチェックできるようになります。 また、この統合により、Visual Basic で豊富な多様なクエリを作成するために必要な知識のほとんどを把握しておくことができます。  
   
- 以下のセクションでは、入門ドキュメント、コード例、およびサンプルアプリケーションの概要を理解できるように、LINQ をサポートするための詳細な言語構成要素について説明します。 また、リンクをクリックして、言語機能の詳細な説明を参照して、統合言語クエリを有効にすることもできます。 まず、 [「チュートリアル: Visual Basic でのクエリの作成」](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)をお勧めします。  
+ 以下のセクションでは、入門ドキュメント、コード例、およびサンプルアプリケーションの概要を理解できるように、LINQ をサポートするための詳細な言語構成要素について説明します。 また、リンクをクリックして、言語機能の詳細な説明を参照して、統合言語クエリを有効にすることもできます。 まず、 「 [チュートリアル: Visual Basic でのクエリの作成](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)」をお勧めします。  
   
 ## <a name="query-expressions"></a>クエリ式  
  Visual Basic のクエリ式は、SQL または XQuery と同様の宣言構文で表現できます。 コンパイル時に、クエリ構文は、LINQ プロバイダーによる標準クエリ演算子の拡張メソッドの実装に対するメソッド呼び出しに変換されます。 アプリケーションでは、`Imports` ステートメントを使用して適切な名前空間を指定することによって、スコープ内の標準クエリ演算子を制御します。 Visual Basic のクエリ式の構文は次のようになります。  
@@ -55,7 +55,7 @@ ms.locfileid: "74353516"
   
  詳細については、「[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。  
   
-## <a name="extension-methods"></a>Extension のメソッド  
+## <a name="extension-methods"></a>拡張メソッド  
  拡張メソッドを使用すると、定義の外部からデータ型またはインターフェイスにメソッドを追加できます。 この機能を使用すると、実際に型を変更することなく、既存の型に新しいメソッドを追加できます。 標準クエリ演算子は、それ自体が、<xref:System.Collections.Generic.IEnumerable%601>を実装する任意の型に対して [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ機能を提供する拡張メソッドのセットです。 その他の <xref:System.Collections.Generic.IEnumerable%601> の拡張機能には、<xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Union%2A>、および <xref:System.Linq.Enumerable.Intersect%2A>が含まれます。  
   
  次の拡張メソッドは、print メソッドを <xref:System.String> クラスに追加します。  
