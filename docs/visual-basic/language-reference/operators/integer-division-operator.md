@@ -59,7 +59,7 @@ expression1 \ expression2
  `expression2` が0に評価される場合、`\` 演算子は <xref:System.DivideByZeroException> 例外をスローします。 これは、オペランドのすべての数値データ型に当てはまります。  
   
 > [!NOTE]
-> `\` 演算子は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 コードでこのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+> `\` 演算子は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 コードでこのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`\` 演算子を使用して、整数除算を実行します。 結果は、2つのオペランドの整数の商を表す整数で、残りの部分は破棄されます。  

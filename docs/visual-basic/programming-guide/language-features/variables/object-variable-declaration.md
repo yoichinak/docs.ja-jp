@@ -33,7 +33,7 @@ ms.locfileid: "74351812"
 Dim variablename As [New] { objectclass | Object }  
 ```  
   
- 宣言に [Public](../../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)、`Protected Friend`、 [Private](../../../../visual-basic/language-reference/modifiers/private.md)、 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)、または[Static](../../../../visual-basic/language-reference/modifiers/static.md)を指定することもできます。 有効な宣言の例を次に示します。  
+ 宣言に [Public](../../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)、`Protected Friend`、 [Private](../../../../visual-basic/language-reference/modifiers/private.md)、 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)、または [Static](../../../../visual-basic/language-reference/modifiers/static.md)を指定することもできます。 有効な宣言の例を次に示します。  
   
 ```vb  
 Private objA As Object  
