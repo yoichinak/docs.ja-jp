@@ -38,10 +38,10 @@ variableorproperty /= expression
   
  `/=` 演算子は、まず、変数またはプロパティの値 (演算子の左辺) を式の値 (演算子の右側) によって除算しています。 次に、演算子は、その演算の浮動小数点の結果を変数またはプロパティに代入します。  
   
- このステートメントにより、左側の変数またはプロパティに `Double` 値が割り当てられます。 `Option Strict` が `On`場合、`variableorproperty` は `Double`である必要があります。 `Option Strict` が `Off`場合、Visual Basic は暗黙的な変換を実行し、結果の値を `variableorproperty`に割り当てます。実行時にエラーが発生する可能性があります。 詳細については、「[拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」および「 [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)」を参照してください。  
+ このステートメントにより、左側の変数またはプロパティに `Double` 値が割り当てられます。 `Option Strict` が `On`場合、`variableorproperty` は `Double`である必要があります。 `Option Strict` が `Off`場合、Visual Basic は暗黙的な変換を実行し、結果の値を `variableorproperty`に割り当てます。実行時にエラーが発生する可能性があります。 詳細については、「[拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」および「[Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)」を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
- [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `/` 演算子のオーバーロードは、`/=` 演算子の動作に影響します。 コードで `/`をオーバーロードするクラスまたは構造体の `/=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `/` 演算子のオーバーロードは、`/=` 演算子の動作に影響します。 コードで `/`をオーバーロードするクラスまたは構造体の `/=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`/=` 演算子を使用して1つの `Integer` 変数を2番目の変数に除算し、商を最初の変数に代入します。  
