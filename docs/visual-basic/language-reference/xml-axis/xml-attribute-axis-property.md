@@ -44,7 +44,7 @@ object.@<attribute>
 |要素|説明|  
 |----------|-----------------|  
 |`prefix`|省略可。 属性の XML 名前空間プレフィックス。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間を指定する必要があります。|  
-|`name`|必須。 ローカル属性名。 「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。|  
+|`name`|必須。 ローカル属性名です。 「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。|  
   
  \>  
  省略可。 `attribute` が Visual Basic の有効な識別子ではない場合に、属性の名前の末尾を示します。  
