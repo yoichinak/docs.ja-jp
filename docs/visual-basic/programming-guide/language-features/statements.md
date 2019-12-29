@@ -122,7 +122,7 @@ Visual Basic のステートメントは完全な命令です。 キーワード
 
 変数、プロパティ、または配列要素に割り当てる値は、そのターゲット要素に適したデータ型である必要があります。 一般に、destination 要素と同じデータ型の値を生成することをお勧めします。 ただし、割り当て時に他の型に変換できる型もあります。
 
-データ型間の変換の詳細については、「[Visual Basic での型変換](./data-types/type-conversions.md)」を参照してください。 簡単に言えば、Visual Basic は、指定された型の値を、拡大変換先の他の型に自動的に変換します。 *拡大変換*は、常に実行時に成功し、データを失うことのないの1つです。 たとえば、Visual Basic は、`Integer` が `Double`に拡大変換されるため、必要に応じて `Integer` 値を `Double` に変換します。 詳細については、「 [Widening and Narrowing Conversions](./data-types/widening-and-narrowing-conversions.md)」を参照してください。
+データ型間の変換の詳細については、「[Visual Basic での型変換](./data-types/type-conversions.md)」を参照してください。 簡単に言えば、Visual Basic は、指定された型の値を、拡大変換先の他の型に自動的に変換します。 *拡大変換*は、常に実行時に成功し、データを失うことのないの1つです。 たとえば、Visual Basic は、`Integer` が `Double`に拡大変換されるため、必要に応じて `Integer` 値を `Double` に変換します。 詳細については、「[拡大変換と縮小変換](./data-types/widening-and-narrowing-conversions.md)」を参照してください。
 
 *縮小変換*(拡大されていないもの) は、実行時またはデータ損失のリスクを発生させます。 型変換関数を使用して縮小変換を明示的に実行することも、`Option Strict Off`を設定することによって暗黙的にすべての変換を実行するようにコンパイラに指示することもできます。 詳細については、「[暗黙的な変換と明示的な変換](./data-types/implicit-and-explicit-conversions.md)」を参照してください。
 
@@ -162,7 +162,7 @@ Visual Basic のステートメントは完全な命令です。 キーワード
 
    [!code-vb[VbVbalrLineContinuation#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#4)]
 
-   詳細については、「 [XML での埋め込み式](./xml/embedded-expressions-in-xml.md)」を参照してください。
+   詳細については、「[XML での埋め込み式](./xml/embedded-expressions-in-xml.md)」を参照してください。
 
 - 連結演算子 (`&`) の後。 例 :
 
@@ -202,7 +202,7 @@ Visual Basic のステートメントは完全な命令です。 キーワード
 
    [!code-vb[VbVbalrLineContinuation#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#9)]
 
-   詳細については、「 [XML 軸のプロパティ](../../../visual-basic/language-reference/xml-axis/index.md)」を参照してください。
+   詳細については、「[XML 軸のプロパティ](../../../visual-basic/language-reference/xml-axis/index.md)」を参照してください。
 
 - 属性を指定するときに、小なり記号 (<) またはそれより大きい記号 (`>`) の後。 属性を指定する場合は、大なり記号 (`>`) の後にもなります。 ただし、アセンブリレベルまたはモジュールレベルの属性を指定する場合は、行連結文字 (`_`) を含める必要があります。 例 :
 

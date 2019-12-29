@@ -43,13 +43,13 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function
 ```
 
-通常、`Async` キーワードによって変更されたメソッドには、少なくとも1つの[Await](../../../visual-basic/language-reference/modifiers/async.md)式またはステートメントが含まれています。 メソッドは、最初の `Await` に到達するまで同期的に実行されますが、この時点で、待機していたタスクが完了するまで中断されます。 その間、コントロールはメソッドの呼び出し元に戻されます。 メソッドに `Await` 式またはステートメントが含まれていない場合、メソッドは中断されず、同期メソッドとして実行されます。 `Await` が含まれていない非同期メソッドが存在する場合は、その状態がエラーを示す可能性があるため、コンパイラによって警告が通知されます。 詳細については、「[コンパイラエラー](../error-messages/bc42358.md)」を参照してください。
+通常、`Async` キーワードによって変更されたメソッドには、少なくとも1つの [Await](../../../visual-basic/language-reference/modifiers/async.md)式またはステートメントが含まれています。 メソッドは、最初の `Await` に到達するまで同期的に実行されますが、この時点で、待機していたタスクが完了するまで中断されます。 その間、コントロールはメソッドの呼び出し元に戻されます。 メソッドに `Await` 式またはステートメントが含まれていない場合、メソッドは中断されず、同期メソッドとして実行されます。 `Await` が含まれていない非同期メソッドが存在する場合は、その状態がエラーを示す可能性があるため、コンパイラによって警告が通知されます。 詳細については、「[コンパイラエラー](../error-messages/bc42358.md)」を参照してください。
 
 `Async` キーワードは、予約されていないキーワードです。 メソッドまたはラムダ式を修飾する場合にキーワードとなります。 それ以外の場合は、識別子として解釈されます。
 
 ## <a name="return-types"></a>戻り値の型
 
-非同期メソッドは、[サブ](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)プロシージャ、または戻り値の型が <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601>の[関数](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)プロシージャです。 メソッドで[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)パラメーターを宣言することはできません。
+非同期メソッドは、[Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) プロシージャ、または戻り値の型が <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> の [Function](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) プロシージャです。 メソッドで [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) パラメーターを宣言することはできません。
 
 メソッドの[return](../../../visual-basic/language-reference/statements/return-statement.md)ステートメントに TResult 型のオペランドが含まれている場合は、非同期メソッドの戻り値の型に `Task(Of TResult)` を指定します。 メソッドの完了時に意味のある値を返さない場合は、`Task` を使用します。 これにより、メソッドの呼び出しでは `Task` が返されますが、`Task` の完了時に、`Await` を待機している `Task` ステートメントは結果値を生成しません。
 
