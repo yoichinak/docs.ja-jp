@@ -25,10 +25,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353839"
 ---
 # <a name="of-clause-visual-basic"></a>Of 句 (Visual Basic)
-では、*ジェネリック*クラス、構造体、インターフェイス、デリゲート、またはプロシージャの*型パラメーター*を識別する `Of` 句が導入されています。 ジェネリック型の詳細については、「 [Visual Basic のジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」を参照してください。  
+では、*ジェネリック*クラス、構造体、インターフェイス、デリゲート、またはプロシージャの*型パラメーター*を識別する `Of` 句が導入されています。 ジェネリック型の詳細については、「[Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」を参照してください。  
   
 ## <a name="using-the-of-keyword"></a>Of キーワードの使用  
- 次のコード例では、`Of` キーワードを使用して、2つの型パラメーターを受け取るクラスのアウトラインを定義します。 `keyType` パラメーターは <xref:System.IComparable> インターフェイスによって*制限*されます。つまり、コンシューマー側のコードは <xref:System.IComparable>を実装する型引数を指定する必要があります。 これは、`add` プロシージャが <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> メソッドを呼び出すことができるようにするために必要です。 制約の詳細については、「 [Type List](../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
+ 次のコード例では、`Of` キーワードを使用して、2つの型パラメーターを受け取るクラスのアウトラインを定義します。 `keyType` パラメーターは <xref:System.IComparable> インターフェイスによって*制限*されます。つまり、コンシューマー側のコードは <xref:System.IComparable>を実装する型引数を指定する必要があります。 これは、`add` プロシージャが <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> メソッドを呼び出すことができるようにするために必要です。 制約の詳細については、「[型リスト](../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
   
 ```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  

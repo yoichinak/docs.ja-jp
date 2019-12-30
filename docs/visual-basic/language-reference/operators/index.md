@@ -21,7 +21,7 @@ ms.locfileid: "74838170"
 - [DirectCast 演算子](directcast-operator.md)
 - [TryCast 演算子](trycast-operator.md)
 - [この操作](nameof.md)
-- [[新しいオペレーター]](new-operator.md)
+- [New 演算子](new-operator.md)
 - [Null 条件演算子](null-conditional-operators.md)
 - [算術演算子](arithmetic-operators.md)
 - [代入演算子](assignment-operators.md)

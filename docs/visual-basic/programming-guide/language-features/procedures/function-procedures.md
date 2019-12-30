@@ -34,9 +34,9 @@ ms.locfileid: "74341087"
 End Function  
 ```  
   
- *修飾子*では、アクセスレベルと、オーバーロード、オーバーライド、共有、およびシャドウに関する情報を指定できます。 詳細については、「 [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)」を参照してください。  
+ *修飾子*では、アクセスレベルと、オーバーロード、オーバーライド、共有、およびシャドウに関する情報を指定できます。 詳細については、「[Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)」を参照してください。  
   
- 各パラメーターは、[サブプロシージャ](./sub-procedures.md)に対して実行するのと同じ方法で宣言します。  
+ 各パラメーターは、[Sub プロシージャ](./sub-procedures.md)に対して実行するのと同じ方法で宣言します。  
   
 ### <a name="data-type"></a>データ型  
  すべての `Function` プロシージャには、すべての変数と同様にデータ型があります。 このデータ型は、`Function` ステートメントの `As` 句によって指定され、関数が呼び出し元のコードに返す値のデータ型を決定します。 この例を次の宣言に示します。  
@@ -49,7 +49,7 @@ Function findSqrt(ByVal radicand As Single) As Single
 End Function  
 ```  
   
- 詳細については、「 [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)」の「Parts」を参照してください。  
+ 詳細については、「[Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)」の「Parts」を参照してください。  
   
 ## <a name="returning-values"></a>戻り値  
  `Function` プロシージャから呼び出し元のコードに返される値は、戻り値と呼ばれます。 このプロシージャは、次の2つの方法のいずれかでこの値を返します。  
@@ -76,7 +76,7 @@ End Function
   
  関数名に戻り値を代入する利点は、コントロールが、`Exit Function` または `End Function` ステートメントを検出するまでプロシージャから戻らないことです。 これにより、必要に応じて暫定値を割り当て、後で調整することができます。  
   
- 値を返す方法の詳細については、「 [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)」を参照してください。 配列を返す方法については、「[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)」を参照してください。  
+ 値を返す方法の詳細については、「[Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)」を参照してください。 配列を返す方法については、「[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)」を参照してください。  
   
 ## <a name="calling-syntax"></a>呼び出し構文  
  `Function` プロシージャを呼び出すには、代入ステートメントの右側または式に名前と引数を含めます。 省略可能なすべての引数の値を指定する必要があり、引数リストをかっこで囲む必要があります。 引数を指定しない場合は、必要に応じてかっこを省略できます。  
