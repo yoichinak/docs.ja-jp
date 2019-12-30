@@ -113,7 +113,9 @@ ms.locfileid: "74350513"
 
 縮小変換の欠点は、実行時にエラーが発生する可能性があることです。 たとえば、`String` 変数に "True" または "False" 以外のものが含まれている場合、その変数を `Boolean`に変換することはできません。 区切り文字が含まれている場合、任意の数値型への変換は失敗します。 `String` 変数が、変換先の型で受け入れ可能な値を常に保持していることがわかっている場合を除き、変換を試行しないでください。
 
+
 `String` から別のデータ型に変換する必要がある場合、最も安全な手順は、試行された変換を [Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) で囲むことです。これにより、実行時エラーに対処できます。
+
 
 ### <a name="character-arrays"></a>文字配列
 
