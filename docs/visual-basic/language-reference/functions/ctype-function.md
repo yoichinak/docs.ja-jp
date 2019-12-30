@@ -1,5 +1,5 @@
 ---
-title: CType Function
+title: CType 関数
 ms.date: 07/20/2015
 f1_keywords:
 - vb.CType
@@ -38,7 +38,7 @@ CType(expression, typename)
 > 次の関数を使用して型変換を実行することもできます。
 >
 > - 特定のデータ型への変換を実行する、`CByte`、`CDbl`、`CInt` などの型変換関数。 詳細については、「[型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)」を参照してください。
-> - [DirectCast operator](../../../visual-basic/language-reference/operators/directcast-operator.md)または[TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)。 これらの演算子では、一方の型が他方の型を継承または実装している必要があります。 これらの場合は、`CType` データ型との間で変換を行うときに、`Object` よりもいくらかパフォーマンスが向上します。
+> - [DirectCast operator](../../../visual-basic/language-reference/operators/directcast-operator.md) または [TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)。 これらの演算子では、一方の型が他方の型を継承または実装している必要があります。 これらの場合は、`CType` データ型との間で変換を行うときに、`Object` よりもいくらかパフォーマンスが向上します。
 
 `CType` はインラインでコンパイルされます。これは、変換コードが式を評価するコードの一部であることを意味します。 場合によっては、変換を実行するプロシージャが呼び出されないため、コードの実行速度が速くなります。
 
@@ -50,7 +50,7 @@ CType(expression, typename)
 
 ## <a name="overloading"></a>オーバーロード
 
-`CType` 演算子も、コードの外部で定義されたクラスまたは構造体でオーバーロードできます。 このようなクラスまたは構造体からの変換、またはこのクラスまたは構造体への変換を行う場合は、その `CType` 演算子の動作を確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
+`CType` 演算子も、コードの外部で定義されたクラスまたは構造体でオーバーロードできます。 このようなクラスまたは構造体からの変換、またはこのクラスまたは構造体への変換を行う場合は、その `CType` 演算子の動作を確認してください。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
 
 ## <a name="converting-dynamic-objects"></a>動的オブジェクトの変換
 
@@ -70,6 +70,6 @@ CType(expression, typename)
 - <xref:System.InvalidCastException>
 - [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [変換関数](../../../visual-basic/language-reference/functions/conversion-functions.md)
-- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [方法 : 変換演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
 - [.NET Framework における型変換](../../../standard/base-types/type-conversion.md)
