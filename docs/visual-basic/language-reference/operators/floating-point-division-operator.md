@@ -71,7 +71,7 @@ expression1 / expression2
 |整数 (符号付きまたは符号なし)|整数型への変換 <xref:System.Double.NaN> は、<xref:System.Double.PositiveInfinity>、<xref:System.Double.NegativeInfinity>、またはを受け入れることができないため、<xref:System.OverflowException> をスローします|  
   
 > [!NOTE]
-> `/` 演算子は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 コードでこのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+> `/` 演算子は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 コードでこのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  この例では、`/` 演算子を使用して、浮動小数点除算を実行します。 結果は、2つのオペランドの商になります。  
