@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
 ms.openlocfilehash: d45aca8b137f56cf058b63b9286504259c0005eb
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346697"
@@ -104,7 +104,7 @@ warningLabel.ForeColor = System.Drawing.Color.Red
 
 - プロパティは `String` データ型であり、文字列のサイズまたは値に制限がない。
 
-- 詳細については、「[プロパティ プロシージャ](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)」を参照してください。
+- 詳細については、「[Property プロシージャ](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)」を参照してください。
 
 ### <a name="methods"></a>メソッド
 
