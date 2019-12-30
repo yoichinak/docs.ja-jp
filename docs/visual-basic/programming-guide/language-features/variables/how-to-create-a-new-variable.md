@@ -24,7 +24,7 @@ ms.locfileid: "74353631"
     Dim newCustomer
     ```
 
-2. [Private](../../../../visual-basic/language-reference/modifiers/private.md)、 [Static](../../../../visual-basic/language-reference/modifiers/static.md)、 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)、 [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)など、変数の特性の仕様を含めます。 詳細については、「宣言された[要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)」を参照してください。
+2. [Private](../../../../visual-basic/language-reference/modifiers/private.md)、 [Static](../../../../visual-basic/language-reference/modifiers/static.md)、 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)、 [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)など、変数の特性の仕様を含めます。 詳細については、「[宣言された要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)」を参照してください。
 
     ```vb
     Public Static newCustomer
@@ -32,13 +32,13 @@ ms.locfileid: "74353631"
 
     宣言で他のキーワードを使用する場合、`Dim` キーワードは必要ありません。
 
-3. 仕様に従って変数の名前を指定します。これは Visual Basic の規則と規則に従う必要があります。 詳細については、「宣言された[要素名](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+3. 仕様に従って変数の名前を指定します。これは Visual Basic の規則と規則に従う必要があります。 詳細については、「[宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
     ```vb
     Public Static newCustomer
     ```
 
-4. 名前の後に As 句を使用し[て](../../../../visual-basic/language-reference/statements/as-clause.md)、変数のデータ型を指定します。
+4. 名前の後に [As](../../../../visual-basic/language-reference/statements/as-clause.md) 句を使用して、変数のデータ型を指定します。
 
     ```vb
     Public Static newCustomer As Customer
@@ -50,7 +50,7 @@ ms.locfileid: "74353631"
 
     Visual Basic は、`Dim` ステートメントを実行するたびに、指定された値を変数に代入します。 初期値を指定しなかった場合、`Dim` ステートメントを含むコードを最初に入力したときに、変数のデータ型の既定の初期値が Visual Basic に割り当てられます。
 
-    変数が参照型の場合は、`As` 句に[New Operator](../../../../visual-basic/language-reference/operators/new-operator.md)キーワードを含めることで、そのクラスのインスタンスを作成できます。 `New`を使用しない場合、変数の初期値は[Nothing](../../../../visual-basic/language-reference/nothing.md)です。
+    変数が参照型の場合は、`As` 句に [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md) キーワードを含めることで、そのクラスのインスタンスを作成できます。 `New`を使用しない場合、変数の初期値は [Nothing](../../../../visual-basic/language-reference/nothing.md) となります。
 
     ```vb
     Public Static newCustomer As New Customer
