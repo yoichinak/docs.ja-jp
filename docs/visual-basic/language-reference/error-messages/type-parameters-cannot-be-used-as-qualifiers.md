@@ -1,5 +1,5 @@
 ---
-title: 型パラメータは修飾子として使用できません。
+title: 型パラメーターは修飾子として使用できません。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32098
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/10/2019
 ms.locfileid: "72250336"
 ---
-# <a name="type-parameters-cannot-be-used-as-qualifiers"></a>型パラメータは修飾子として使用できません。
+# <a name="type-parameters-cannot-be-used-as-qualifiers"></a>型パラメーターは修飾子として使用できません。
 
 プログラミング要素は、型パラメーターを含む修飾文字列で修飾されます。
 
