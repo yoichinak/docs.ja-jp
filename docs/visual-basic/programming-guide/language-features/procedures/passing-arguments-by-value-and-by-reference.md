@@ -30,7 +30,7 @@ Visual Basic では、値または*参照に* *よって*プロシージャに�
   
 - 引数のデータ型が値型であるか、参照型であるか  
   
- 詳細については、「[変更できる引数と変更できない引数の違い](./differences-between-modifiable-and-nonmodifiable-arguments.md)」と「[引数を値で渡す場合と参照渡しの](./differences-between-passing-an-argument-by-value-and-by-reference.md)違い」を参照してください。  
+ 詳細については、「[変更できる引数と変更できない引数の違い](./differences-between-modifiable-and-nonmodifiable-arguments.md)」と「[引数の値渡しと参照渡しの違い](./differences-between-passing-an-argument-by-value-and-by-reference.md)」を参照してください。  
   
 ## <a name="choice-of-passing-mechanism"></a>渡すメカニズムの選択  
  引数ごとに、渡すメカニズムを慎重に選択する必要があります。  
