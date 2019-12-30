@@ -22,6 +22,7 @@ ms.locfileid: "74350134"
  これらのすべての代入の変換は、どちらの方向でも縮小変換です。 型変換のキーワード (`CBool`、`CByte`、`CDate`、`CDbl`、`CDec`、`CInt`、`CLng`、`CSByte`、`CShort`、`CSng`、`CStr`) を使用する必要があります。`CUInt``CULng``CUShort``CType` <xref:Microsoft.VisualBasic.Strings.Format%2A> 関数と <xref:Microsoft.VisualBasic.Conversion.Val%2A> 関数を使用すると、文字列と数値の間の変換をさらに制御できます。  
   
  クラスまたは構造体を定義している場合は、`String` とクラスまたは構造体の型との間で型変換演算子を定義できます。詳細については、「[方法: 変換演算子を定義する](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)」を参照してください。  
+
   
 ## <a name="conversion-of-numbers-to-strings"></a>数値から文字列への変換  
  `Format` 関数を使用すると、数値を書式設定された文字列に変換できます。これには、適切な数字だけでなく、通貨記号 (`$`など)、桁区切り記号、*桁*区切り記号 (`,`など)、小数点区切り記号 (`.`など) も含まれます。 `Format` は、Windows の**コントロールパネル**で指定されている**地域のオプション**の設定に従って、適切なシンボルを自動的に使用します。  
@@ -42,7 +43,7 @@ Str = "The total count is " & count
   
 ## <a name="see-also"></a>参照
 
-- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [方法: Visual Basic でオブジェクトを別の型に変換する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)

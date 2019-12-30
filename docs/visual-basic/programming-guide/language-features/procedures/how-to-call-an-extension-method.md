@@ -14,7 +14,7 @@ ms.locfileid: "74340392"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>方法: 拡張メソッドを呼び出す (Visual Basic)
 
-拡張メソッドを使用すると、既存のクラスにメソッドを追加できます。 拡張メソッドが宣言され、スコープ内に入ると、拡張された型のインスタンスメソッドのように呼び出すことができます。 拡張メソッドを記述する方法の詳細については、「[方法: 拡張メソッドを記述](./how-to-write-an-extension-method.md)する」を参照してください。
+拡張メソッドを使用すると、既存のクラスにメソッドを追加できます。 拡張メソッドが宣言され、スコープ内に入ると、拡張された型のインスタンスメソッドのように呼び出すことができます。 拡張メソッドを記述する方法の詳細については、「[方法: 拡張メソッドを作成する](./how-to-write-an-extension-method.md)」を参照してください。
 
  次の手順では、拡張メソッド `PrintAndPunctuate`について説明します。拡張メソッドは、それを呼び出す文字列インスタンスを表示し、その後、2番目のパラメーターの `punc`に送信される任意の値を示します。
 
@@ -97,6 +97,6 @@ End Module
 
 ## <a name="see-also"></a>関連項目
 
-- [方法 : 拡張メソッドを作成する](./how-to-write-an-extension-method.md)
+- [方法: 拡張メソッドを作成する](./how-to-write-an-extension-method.md)
 - [拡張メソッド](./extension-methods.md)
-- [Visual Basic 内のスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

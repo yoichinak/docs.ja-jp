@@ -22,7 +22,7 @@ ms.locfileid: "74353944"
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>コードが終了したときにデータベース接続を破棄するには  
   
-1. ソースファイルの先頭に、データベース接続に適した[Imports ステートメント (.Net 名前空間と型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)が含まれていることを確認してください (この場合は <xref:System.Data.SqlClient>)。  
+1. ソースファイルの先頭に、データベース接続に適した[Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)が含まれていることを確認してください (この場合は <xref:System.Data.SqlClient>)。  
   
 2. `Using` ステートメントと `End Using` ステートメントを使用して、`Using` ブロックを作成します。 ブロック内で、データベース接続を扱うコードを配置します。  
   
