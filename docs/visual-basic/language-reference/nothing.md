@@ -26,9 +26,9 @@ ms.locfileid: "74344174"
 
 `Nothing` は、データ型の既定値を表します。 既定値は、変数が値型であるか、参照型であるかによって異なります。
 
-*値型*の変数には、その値が直接含まれています。 値型には、すべての数値データ型、`Boolean`、`Char`、`Date`、すべての構造体、すべての列挙が含まれます。 *参照型*の変数は、メモリ内のオブジェクトのインスタンスへの参照を格納します。 参照型には、クラス、配列、デリゲート、および文字列が含まれます。 詳細については、「[値型と参照型](../programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。
+*値型*の変数には、その値が直接含まれています。値型には、すべての数値データ型、`Boolean`、`Char`、`Date`、すべての構造体、すべての列挙が含まれます。*参照型*の変数は、メモリ内のオブジェクトのインスタンスへの参照を格納します。参照型には、クラス、配列、デリゲート、および文字列が含まれます。詳細については、「[値型と参照型](../programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。
 
-変数が値型の場合、`Nothing` の動作は、変数が null 許容型かどうかによって異なります。 Null 許容値型を表すには、型名に `?` 修飾子を追加します。 `Nothing` を null 許容変数に割り当てると、値が `null`に設定されます。 詳細と例については、「[Null 許容値型](../programming-guide/language-features/data-types/nullable-value-types.md)」を参照してください。
+変数が値型の場合、`Nothing` の動作は、変数が null 許容型かどうかによって異なります。Null 許容値型を表すには、型名に `?` 修飾子を追加します。`Nothing` を null 許容変数に割り当てると、値が `null`に設定されます。詳細と例については、「[Null 許容値型](../programming-guide/language-features/data-types/nullable-value-types.md)」を参照してください。
 
 変数が null 値が許容されない値型である場合、その変数に `Nothing` を割り当てると、宣言された型の既定値に設定されます。 その型に変数メンバーが含まれている場合は、すべてが既定値に設定されます。 次の例では、スカラー型について説明します。
 
