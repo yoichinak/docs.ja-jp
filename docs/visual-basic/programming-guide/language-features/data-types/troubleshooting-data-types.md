@@ -32,7 +32,7 @@ ms.locfileid: "74350513"
 
 ## <a name="floating-point-expressions-do-not-compare-as-equal"></a>浮動小数点式は等しいと比較されません
 
-浮動小数点数 ([単精度浮動小数点型 (Single) ](../../../../visual-basic/language-reference/data-types/single-data-type.md)と[倍精度浮動小数点数型 (Double) ](../../../../visual-basic/language-reference/data-types/double-data-type.md)) を使用する場合は、それらがバイナリの分数として格納されていることに注意してください。 つまり、二進小数ではない（k /（2 ^ n）の形式で、k と n は整数）数量を正確に表すことはできません。 たとえば、0.5 (1/2 =) および 0.3125 (= 5/16) は正確な値として保持できますが、0.2（= 1/5）、0.3 （= 3/10）は 近似値にしかなりません。
+浮動小数点数 ([単精度浮動小数点データ型(Single Data Type)](../../../../visual-basic/language-reference/data-types/single-data-type.md)と[倍精度浮動小数点データ型(Double Data Type)](../../../../visual-basic/language-reference/data-types/double-data-type.md)) を使用する場合は、それらがバイナリの分数として格納されていることに注意してください。 つまり、二進小数ではない（k /（2 ^ n）の形式で、k と n は整数）数量を正確に表すことはできません。 たとえば、0.5 (1/2 =) および 0.3125 (= 5/16) は正確な値として保持できますが、0.2（= 1/5）、0.3 （= 3/10）は 近似値にしかなりません。
 
 このおける誤差により、浮動小数点値を操作するときに正確な結果を利用することはできません。 特に、理論的に等しい2つの値の表現は多少異なる場合があります。
 
@@ -113,7 +113,7 @@ ms.locfileid: "74350513"
 
 縮小変換の欠点は、実行時にエラーが発生する可能性があることです。 たとえば、`String` 変数に "True" または "False" 以外のものが含まれている場合、その変数を `Boolean`に変換することはできません。 区切り文字が含まれている場合、任意の数値型への変換は失敗します。 `String` 変数が、変換先の型で受け入れ可能な値を常に保持していることがわかっている場合を除き、変換を試行しないでください。
 
-`String` から別のデータ型に変換する必要がある場合、最も安全な手順は、試行された変換を[Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。 これにより、実行時エラーに対処できます。
+`String` から別のデータ型に変換する必要がある場合、最も安全な手順は、試行された変換を [Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) で囲むことです。これにより、実行時エラーに対処できます。
 
 ### <a name="character-arrays"></a>文字配列
 
