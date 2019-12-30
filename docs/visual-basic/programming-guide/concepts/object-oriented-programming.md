@@ -185,7 +185,7 @@ End Class
 
 クラスやオブジェクトは、何か重要なことが起こった場合に、イベントを使用して他のクラスまたはオブジェクトに通知を送ります。 イベントを送信する (発生させる) クラスは "*パブリッシャー*" と呼ばれ、イベントを受信する (処理する) クラスは "*サブスクライバー*" と呼ばれます。 イベント、およびイベントの発生と処理の詳細については、「[イベント](../../../standard/events/index.md)」をご覧ください。
 
-- イベントを宣言するには、[イベントステートメント](../../../visual-basic/language-reference/statements/event-statement.md)を使用します。
+- イベントを宣言するには、[Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)を使用します。
 
 - イベントを発生させるには、 [RaiseEvent ステートメント](../../../visual-basic/language-reference/statements/raiseevent-statement.md)を使用します。
 
@@ -225,7 +225,7 @@ Dim nestedInstance As Container.Nested = New Container.Nested()
 |[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|この型またはメンバーには、同じアセンブリ内の任意のコードからアクセスできますが、別のアセンブリからはアクセスできません。|
 |`Protected Friend`|この型またはメンバーには、同じアセンブリ内の任意のコード、または別のアセンブリ内の任意の派生クラスからアクセスできます。|
 
-詳細については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+詳細については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 ### <a name="instantiating-classes"></a>クラスのインスタンス化
 
