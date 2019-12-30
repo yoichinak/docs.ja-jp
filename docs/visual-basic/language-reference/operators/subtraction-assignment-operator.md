@@ -39,7 +39,7 @@ variableorproperty -= expression
  `-=` 演算子は、まず、演算子の右辺にある式の値を、変数またはプロパティの値 (演算子の左側) から減算します (演算子の左辺にある)。 次に、演算子は、その操作の結果を変数またはプロパティに代入します。  
   
 ## <a name="overloading"></a>オーバーロード  
- [-演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)は*オーバーロード*できます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `-` 演算子のオーバーロードは、`-=` 演算子の動作に影響します。 コードで `-`をオーバーロードするクラスまたは構造体の `-=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ [-演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)は*オーバーロード*できます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `-` 演算子のオーバーロードは、`-=` 演算子の動作に影響します。 コードで `-`をオーバーロードするクラスまたは構造体の `-=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`-=` 演算子を使用して、ある `Integer` 変数を別の変数から減算し、その結果を後者の変数に代入します。  
