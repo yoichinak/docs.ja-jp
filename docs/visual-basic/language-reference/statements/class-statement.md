@@ -65,7 +65,7 @@ End Class
   
 ## <a name="rules"></a>ルール  
   
-- **入れ子。** 1つのクラスを別のクラス内で定義できます。 外側のクラスは、含んでいる*クラス*と呼ばれ、内側のクラスは*入れ子になったクラス*と呼ばれます。  
+- **入れ子。** 1 つのクラスを別のクラス内で定義できます。 外側のクラスは、含んでいる*クラス*と呼ばれ、内側のクラスは*入れ子になったクラス*と呼ばれます。  
   
 - **継承。** クラスが[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)を使用する場合、指定できる基底クラスまたはインターフェイスは1つだけです。 クラスは、複数の要素から継承することはできません。  
   
@@ -73,7 +73,7 @@ End Class
   
      クラスは、入れ子にされたクラスから継承することはできません。  
   
-- **実装。** クラスで[Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)を使用する場合は、`interfacenames`で指定するすべてのインターフェイスで定義されているすべてのメンバーを実装する必要があります。 この例外は、基底クラスのメンバーの再実装です。 詳細については、「[Implements](../../../visual-basic/language-reference/statements/implements-clause.md)」の「再実装」を参照してください。  
+- **実装。** クラスで [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)を使用する場合は、`interfacenames`で指定するすべてのインターフェイスで定義されているすべてのメンバーを実装する必要があります。この例外は、基底クラスのメンバーの再実装です。詳細については、「[Implements](../../../visual-basic/language-reference/statements/implements-clause.md)」の「再実装」を参照してください。  
   
 - **既定のプロパティ。** クラスは、*既定のプロパティ*として最大で1つのプロパティを指定できます。 詳細については、「[Default](../../../visual-basic/language-reference/modifiers/default.md)」を参照してください。  
   
@@ -96,7 +96,7 @@ End Class
 ## <a name="classes-and-modules"></a>クラスとモジュール  
  これらの要素には多くの類似点がありますが、重要な相違点もいくつかあります。  
   
-- **用語。** 以前のバージョンの Visual Basic では、*クラスモジュール*(cls ファイル) と*標準モジュール*(.bas ファイル) という2種類のモジュールが認識されています。 現在のバージョンは、これらの*クラス*と*モジュール*をそれぞれ呼び出します。  
+- **用語。** 以前のバージョンの Visual Basic では、*クラスモジュール*(cls ファイル) と*標準モジュール*(.bas ファイル) という 2 種類のモジュールが認識されています。 現在のバージョンは、これらの*クラス*と*モジュール*をそれぞれ呼び出します。	  
   
 - **共有メンバー。** クラスのメンバーが共有メンバーまたはインスタンスメンバーであるかどうかを制御できます。  
   
