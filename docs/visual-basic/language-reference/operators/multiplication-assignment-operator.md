@@ -34,12 +34,12 @@ variableorproperty *= expression
  必須。 任意の数式。  
   
 ## <a name="remarks"></a>コメント  
- `*=` 演算子の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)にすることはできません。  
+ `*=` 演算子の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) にすることはできません。  
   
  `*=` 演算子は、最初に式の値 (演算子の右側) を変数またはプロパティの値 (演算子の左側) に乗算します。この値は、演算子の左辺にあります。 次に、演算子は、その操作の結果を変数またはプロパティに代入します。  
   
 ## <a name="overloading"></a>オーバーロード  
- [* 演算子](../../../visual-basic/language-reference/operators/multiplication-operator.md)は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `*` 演算子のオーバーロードは、`*=` 演算子の動作に影響します。 コードで `*`をオーバーロードするクラスまたは構造体の `*=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ [* 演算子](../../../visual-basic/language-reference/operators/multiplication-operator.md)は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `*` 演算子のオーバーロードは、`*=` 演算子の動作に影響します。 コードで `*`をオーバーロードするクラスまたは構造体の `*=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`*=` 演算子を使用して、1つの `Integer` 変数を2番目の変数に乗算し、その結果を最初の変数に代入します。  
