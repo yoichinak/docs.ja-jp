@@ -164,6 +164,6 @@ End Class
 - [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [null 許容値型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- 方法 : [Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [方法 : Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
 - [方法 : ラムダ式を作成する](./how-to-create-a-lambda-expression.md)
 - [厳密でないデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
