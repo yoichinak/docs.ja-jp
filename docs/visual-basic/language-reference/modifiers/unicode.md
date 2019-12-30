@@ -28,7 +28,7 @@ ms.locfileid: "74344220"
 ## <a name="remarks"></a>コメント  
  このコンテキストでは、`Unicode` 修飾子を使用できます。  
   
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
 ## <a name="smart-device-developer-notes"></a>スマートデバイスの開発者向けメモ  
  このキーワードはサポートされていません。  

@@ -38,7 +38,7 @@ variableorproperty = value
 > `=` 演算子は、比較演算子としても使用されます。 詳細については、「[比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)」を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
- `=` 演算子は、代入演算子としてではなく、関係比較演算子としてのみオーバーロードできます。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `=` 演算子は、代入演算子としてではなく、関係比較演算子としてのみオーバーロードできます。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例は、代入演算子を示しています。 右側の値は、左側の変数に割り当てられます。  
