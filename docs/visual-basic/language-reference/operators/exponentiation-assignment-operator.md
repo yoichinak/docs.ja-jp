@@ -42,7 +42,7 @@ variableorproperty ^= expression
  `expression` の値には、小数、負、またはその両方を指定できます。  
   
 ## <a name="overloading"></a>オーバーロード  
- [^ 演算子](../../../visual-basic/language-reference/operators/exponentiation-operator.md)は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できることを意味します。 `^` 演算子のオーバーロードは、`^=` 演算子の動作に影響します。 コードで `^`をオーバーロードするクラスまたは構造体の `^=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ [^ 演算子](../../../visual-basic/language-reference/operators/exponentiation-operator.md)は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できることを意味します。 `^` 演算子のオーバーロードは、`^=` 演算子の動作に影響します。 コードで `^`をオーバーロードするクラスまたは構造体の `^=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`^=` 演算子を使用して、1つの `Integer` 変数の値を2番目の変数のべき乗に上げ、その結果を最初の変数に代入します。  

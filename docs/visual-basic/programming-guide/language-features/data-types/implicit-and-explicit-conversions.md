@@ -64,7 +64,7 @@ k = CInt(q)
 |`CDec`|[Decimal データ型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|任意の数値型 (`Byte`、`SByte`、列挙型など)、`Boolean`、`String`、`Object`|
 |`CInt`|[Integer データ型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|任意の数値型 (`Byte`、`SByte`、列挙型など)、`Boolean`、`String`、`Object`|
 |`CLng`|[Long データ型](../../../../visual-basic/language-reference/data-types/long-data-type.md)|任意の数値型 (`Byte`、`SByte`、列挙型など)、`Boolean`、`String`、`Object`|
-|`CObj`|[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)|任意の型|
+|`CObj`|[Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)|任意の型|
 |`CSByte`|[SByte データ型](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|任意の数値型 (`Byte` と列挙型を含む)、`Boolean`、`String`、`Object`|
 |`CShort`|[Short データ型](../../../../visual-basic/language-reference/data-types/short-data-type.md)|任意の数値型 (`Byte`、`SByte`、列挙型など)、`Boolean`、`String`、`Object`|
 |`CSng`|[Single データ型](../../../../visual-basic/language-reference/data-types/single-data-type.md)|任意の数値型 (`Byte`、`SByte`、列挙型など)、`Boolean`、`String`、`Object`|
@@ -80,7 +80,7 @@ k = CInt(q)
 
 `CType` は*インライン関数*です。つまり、コンパイルされたコードは、多くの場合、関数呼び出しを生成せずに変換を行います。 これにより、パフォーマンスが向上します。
 
-他の型変換キーワードと `CType` の比較については、「 [DirectCast operator](../../../../visual-basic/language-reference/operators/directcast-operator.md) And [TryCast operator](../../../../visual-basic/language-reference/operators/trycast-operator.md)」を参照してください。
+他の型変換キーワードと `CType` の比較については、「[DirectCast 演算子](../../../../visual-basic/language-reference/operators/directcast-operator.md)」および「[TryCast 演算子](../../../../visual-basic/language-reference/operators/trycast-operator.md)」を参照してください。
 
 ### <a name="elementary-types"></a>基本型
 
@@ -124,7 +124,7 @@ End If
 
 ### <a name="types-defining-ctype"></a>CType を定義する型
 
-定義したクラスまたは構造体で `CType` を定義できます。 これにより、クラスまたは構造体の型との間で値を変換できます。 詳細と例については、「[方法: 変換演算子を定義](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)する」を参照してください。
+定義したクラスまたは構造体で `CType` を定義できます。 これにより、クラスまたは構造体の型との間で値を変換できます。 詳細と例については、「[方法: 変換演算子を定義する](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)」を参照してください。
 
 > [!NOTE]
 > 変換キーワードと共に使用する値は、変換先のデータ型に対して有効でなければなりません。または、エラーが発生します。 たとえば、`Long` を `Integer`に変換しようとした場合、`Long` の値は、`Integer` データ型の有効な範囲内である必要があります。
@@ -132,13 +132,13 @@ End If
 > [!CAUTION]
 > ソース型が変換先の型から派生していない場合、あるクラス型から別の型に変換する `CType` の指定は実行時に失敗します。 このようなエラーが発生すると、<xref:System.InvalidCastException> 例外がスローされます。
 
-ただし、型のいずれかが定義した構造体またはクラスであり、その構造体またはクラスに `CType` が定義されている場合、`CType`の要件を満たすと変換が成功する可能性があります。 「[方法: 変換演算子を定義](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)する」を参照してください。
+ただし、型のいずれかが定義した構造体またはクラスであり、その構造体またはクラスに `CType` が定義されている場合、`CType` の要件を満たすと変換が成功する可能性があります。 「[方法: 変換演算子を定義する](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)」を参照してください。
 
 明示的な変換を実行することは、特定のデータ型またはオブジェクトクラスに式を*キャスト*することとも呼ばれます。
 
 ## <a name="see-also"></a>参照
 
-- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
 - [方法: Visual Basic でオブジェクトを別の型に変換する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [構造体](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)

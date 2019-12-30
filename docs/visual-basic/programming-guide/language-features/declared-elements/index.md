@@ -32,9 +32,9 @@ ms.locfileid: "74345343"
   
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-- [Declare Statement](../../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare ステートメント](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
 - [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)  
   

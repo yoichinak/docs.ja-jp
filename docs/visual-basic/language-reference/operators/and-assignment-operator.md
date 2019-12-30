@@ -37,7 +37,7 @@ variableorproperty &= expression
  `&=` 演算子の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)にすることはできません。 `&=` 演算子は、右側にある `String` 式を左側の `String` 変数またはプロパティに連結し、その結果を左側の変数またはプロパティに代入します。  
   
 ## <a name="overloading"></a>オーバーロード  
- [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `&` 演算子のオーバーロードは、`&=` 演算子の動作に影響します。 コードで `&`をオーバーロードするクラスまたは構造体の `&=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `&` 演算子のオーバーロードは、`&=` 演算子の動作に影響します。 コードで `&`をオーバーロードするクラスまたは構造体の `&=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`&=` 演算子を使用して2つの `String` 変数を連結し、その結果を最初の変数に代入します。  
