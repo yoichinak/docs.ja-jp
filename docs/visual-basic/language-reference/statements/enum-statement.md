@@ -61,7 +61,7 @@ End Enum
 
 - `enumerationname`
 
-  必須。 列挙体の名前。 有効な名前の詳細については、「宣言された[要素名](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+  必須。 列挙体の名前。 有効な名前の詳細については、「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
 - `datatype`
 
