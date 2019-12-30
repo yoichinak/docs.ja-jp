@@ -60,7 +60,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`charsetmodifier`|省略可。 文字セットとファイル検索情報を指定します。 次のいずれかになります。<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) (既定値)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|
 |`Sub`|省略可能ですが、`Sub` または `Function` のいずれかが表示されている必要があります。 外部プロシージャが値を返さないことを示します。|
 |`Function`|省略可能ですが、`Sub` または `Function` のいずれかが表示されている必要があります。 外部プロシージャが値を返すことを示します。|
-|`name`|必須。 この外部参照の名前です。 詳細については、「宣言された[要素名](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
+|`name`|必須。 この外部参照の名前です。 詳細については、「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
 |`Lib`|必須。 では、外部プロシージャを含む外部ファイル (DLL またはコードリソース) を識別する `Lib` 句が導入されています。|
 |`libname`|必須。 宣言されたプロシージャを含むファイルの名前。|
 |`Alias`|省略可。 宣言されているプロシージャが、`name`で指定された名前によってファイル内で識別されないことを示します。 Id は `aliasname`で指定します。|
