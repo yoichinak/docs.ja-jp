@@ -42,7 +42,7 @@ result = expression1 & expression2
  `result` のデータ型が `String`。 一方または両方の式が[Nothing](../../../visual-basic/language-reference/nothing.md)に評価される場合、または値が <xref:System.DBNull.Value?displayProperty=nameWithType>の場合は、値が "" である文字列として扱われます。  
   
 > [!NOTE]
-> `&` 演算子は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 コードでこのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+> `&` 演算子は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 コードでこのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 > [!NOTE]
 > アンパサンド (&) 文字は `Long`型として変数を識別するためにも使用できます。 詳細については、「[型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)」を参照してください。  

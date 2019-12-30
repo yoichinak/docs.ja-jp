@@ -212,7 +212,7 @@ Visual Basic は、内部効率を向上させるために算術式を再配置�
 > [!NOTE]
 > `Async` プロシージャは、まだ完了していない最初の待機中のオブジェクトが検出された場合、または `Async` プロシージャの最後に到達した場合に、呼び出し元に戻ります。
 
-[関数ステートメント](function-statement.md)を `Async` 修飾子でマークすることもできます。 `Async` 関数は、<xref:System.Threading.Tasks.Task%601> または <xref:System.Threading.Tasks.Task>の戻り値の型を持つことができます。 このトピックの後半の例では、<xref:System.Threading.Tasks.Task%601>の戻り値の型を持つ `Async` 関数を示します。
+[Function ステートメント](function-statement.md)を `Async` 修飾子でマークすることもできます。 `Async` 関数は、<xref:System.Threading.Tasks.Task%601> または <xref:System.Threading.Tasks.Task>の戻り値の型を持つことができます。 このトピックの後半の例では、<xref:System.Threading.Tasks.Task%601>の戻り値の型を持つ `Async` 関数を示します。
 
 `Async` の `Sub` プロシージャは、主に、値を返すことができないイベントハンドラーに使用されます。 `Async` `Sub` プロシージャは待機できません。また、`Async` の `Sub` プロシージャの呼び出し元は、`Sub` プロシージャがスローする例外をキャッチできません。
 
