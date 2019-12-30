@@ -30,12 +30,12 @@ End Sub
   
 |用語|Definition|  
 |---|---|  
-|`parameterlist`|省略可。 プロシージャのパラメーターを表すローカル変数名の一覧です。 リストが空の場合でも、かっこは存在する必要があります。 詳細については、「 [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)」を参照してください。|  
+|`parameterlist`|省略可。 プロシージャのパラメーターを表すローカル変数名の一覧です。 リストが空の場合でも、かっこは存在する必要があります。 詳細については、「[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)」を参照してください。|  
 |`statement`|必須。 1つのステートメント。|  
 |`statements`|必須。 ステートメントの一覧。|  
   
 ## <a name="remarks"></a>コメント  
- *ラムダ式*は、名前がなく、1つ以上のステートメントを実行するサブルーチンです。 ラムダ式は、デリゲート型を使用できる場所であればどこでも使用できます。ただし、`RemoveHandler`の引数として使用することはできません。 デリゲートの詳細と、デリゲートでのラムダ式の使用については、「[デリゲートステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)」および「厳密でない[デリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」を参照してください。  
+ *ラムダ式*は、名前がなく、1つ以上のステートメントを実行するサブルーチンです。 ラムダ式は、デリゲート型を使用できる場所であればどこでも使用できます。ただし、`RemoveHandler`の引数として使用することはできません。 デリゲートの詳細と、デリゲートでのラムダ式の使用については、「[Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)」および「[厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」を参照してください。  
   
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文  
  ラムダ式の構文は、標準のサブルーチンの構文に似ています。 相違点は、次のとおりです。  
@@ -44,7 +44,7 @@ End Sub
   
 - ラムダ式には、`Overloads` や `Overrides`などの修飾子を含めることはできません。  
   
-- 単一行のラムダ式の本体は、式ではなく、ステートメントでなければなりません。 本文は、サブプロシージャの呼び出しで構成できますが、関数プロシージャを呼び出すことはできません。  
+- 単一行のラムダ式の本体は、式ではなく、ステートメントでなければなりません。 本文は、Sub プロシージャの呼び出しで構成できますが、Function プロシージャを呼び出すことはできません。  
   
 - ラムダ式では、すべてのパラメーターのデータ型が指定されているか、すべてのパラメーターが推論される必要があります。  
   
