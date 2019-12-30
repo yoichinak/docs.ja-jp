@@ -59,7 +59,7 @@ End Structure
 
 `Structure` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、構造体の*宣言コンテキスト*は、ソースファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があり、プロシージャまたはブロックにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
 
-構造体は、既定で [Friend](../modifiers/friend.md) アクセスに設定されます。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+構造体は、既定で [Friend](../modifiers/friend.md) アクセスに設定されます。アクセス修飾子を使用してこれらのアクセス レベルを調整できます。詳細については、「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 ## <a name="rules"></a>ルール
 
@@ -75,7 +75,7 @@ End Structure
 
      <xref:System.ValueType>を指定する場合でも、構造体の定義で[Inherits ステートメント](inherits-statement.md)を使用することはできません。
 
-- **実装。** 構造体が[Implements ステートメント](implements-statement.md)を使用する場合は、`interfacenames`で指定するすべてのインターフェイスで定義されているすべてのメンバーを実装する必要があります。
+- **実装。** 構造体が [Implements ステートメント](implements-statement.md)を使用する場合は、`interfacenames`で指定するすべてのインターフェイスで定義されているすべてのメンバーを実装する必要があります。
 
 - **既定のプロパティ。** 構造体では、[既定](../modifiers/default.md)の修飾子を使用して、最大で1つのプロパティを*既定のプロパティ*として指定できます。 詳細については、「[Default](../modifiers/default.md)」を参照してください。
 
