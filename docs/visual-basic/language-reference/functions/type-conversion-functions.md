@@ -319,4 +319,4 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 - <xref:Microsoft.VisualBasic.Conversion.Str%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
 - [変換関数](../../../visual-basic/language-reference/functions/conversion-functions.md)
-- [Visual Basic での型変換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic における型変換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
