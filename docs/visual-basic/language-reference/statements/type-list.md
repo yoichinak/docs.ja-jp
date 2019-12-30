@@ -55,7 +55,7 @@ ms.locfileid: "74352774"
 
 すべてのジェネリックプログラミング要素は、少なくとも1つの型パラメーターを受け取る必要があります。 型パラメーターは、ジェネリック型のインスタンスを作成するときにクライアントコードによって指定される特定の型 (構築された*要素*) のプレースホルダーです。 ジェネリッククラス、構造体、インターフェイス、プロシージャ、またはデリゲートを定義できます。
 
-ジェネリック型を定義する場合の詳細については、「[Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」を参照してください。 型パラメーター名の詳細については、「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+ジェネリック型を定義する場合の詳細については、「[Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」を参照してください。型パラメーター名の詳細については、「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
 ## <a name="rules"></a>ルール
 
