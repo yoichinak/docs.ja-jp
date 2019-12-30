@@ -58,7 +58,7 @@ ms.locfileid: "74340244"
 - [演算子プロシージャ](./operator-procedures.md)
 - [方法 : 演算子を定義する](./how-to-define-an-operator.md)
 - [方法 : 変換演算子を定義する](./how-to-define-a-conversion-operator.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)
