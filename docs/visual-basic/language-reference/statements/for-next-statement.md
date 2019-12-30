@@ -166,7 +166,7 @@ Visual Basic が `Next` ステートメントを検出するたびに、`step` �
 
 ## <a name="example"></a>例
 
-次の例では、ジェネリックリストからすべての要素を削除します。 [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)の例では、降順に反復処理する `For`...`Next` ステートメントを示しています。 この例では、`removeAt` メソッドによって、削除された要素の後にある要素のインデックス値が小さくなるため、この手法を使用します。
+次の例では、ジェネリックリストからすべての要素を削除します。 [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)の例では、降順に反復処理する `For`...`Next` ステートメントを示しています。この例では、`removeAt` メソッドによって、削除された要素の後にある要素のインデックス値が小さくなるため、この手法を使用します。
 
 [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]
 
