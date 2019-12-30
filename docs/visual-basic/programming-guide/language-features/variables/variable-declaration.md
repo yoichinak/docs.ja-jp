@@ -27,7 +27,7 @@ ms.locfileid: "74351759"
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic での変数宣言
 変数を宣言して、その名前と特性を指定します。 変数の宣言ステートメントは、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)です。 その場所と内容によって、変数の特性が決まります。  
   
- 変数の名前付け規則と考慮事項については、「宣言された[要素名](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。  
+ 変数の名前付け規則と考慮事項については、「[宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。  
   
 ## <a name="declaration-levels"></a>宣言レベル  
   
