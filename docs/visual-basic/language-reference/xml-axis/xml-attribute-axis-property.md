@@ -44,7 +44,7 @@ object.@<attribute>
 |要素|説明|  
 |----------|-----------------|  
 |`prefix`|省略可。 属性の XML 名前空間プレフィックス。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間を指定する必要があります。|  
-|`name`|必須。 ローカル属性名。 「[宣言された XML 要素と属性の名前」を](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)参照してください。|  
+|`name`|必須。 ローカル属性名です。 「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。|  
   
  \>  
  省略可。 `attribute` が Visual Basic の有効な識別子ではない場合に、属性の名前の末尾を示します。  
@@ -60,7 +60,7 @@ object.@<attribute>
  XML 属性の名前付け規則は、Visual Basic 識別子の名前付け規則とは異なります。 有効な Visual Basic 識別子ではない名前を持つ XML 属性にアクセスするには、山かっこ (\< と >) で名前を囲みます。  
   
 ## <a name="xml-namespaces"></a>XML 名前空間  
- 属性軸プロパティの名前は、`Imports` ステートメントを使用してグローバルに宣言された XML 名前空間プレフィックスのみを使用できます。 XML 要素リテラル内でローカルに宣言されている XML 名前空間プレフィックスは使用できません。 詳細については、「 [Imports ステートメント (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)」を参照してください。  
+ 属性軸プロパティの名前は、`Imports` ステートメントを使用してグローバルに宣言された XML 名前空間プレフィックスのみを使用できます。 XML 要素リテラル内でローカルに宣言されている XML 名前空間プレフィックスは使用できません。 詳細については、「[Imports ステートメント (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例は、`phone`という名前の XML 要素のコレクションから、`type` という名前の XML 属性の値を取得する方法を示しています。  
