@@ -29,7 +29,7 @@ ms.locfileid: "72005508"
 ## <a name="remarks"></a>コメント  
  このオプションは、実行可能ファイルまたは Windows 実行可能プログラムを作成するときに使用します。 **-Main**オプションを省略した場合、コンパイラは、すべてのパブリッククラスとモジュールで有効な共有 `Sub Main` を検索します。  
   
- `Main` プロシージャのさまざまな形式の詳細については、「 [Visual Basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)」を参照してください。  
+ `Main` プロシージャのさまざまな形式の詳細については、「[Visual Basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)」を参照してください。  
   
  `location` が <xref:System.Windows.Forms.Form>から継承するクラスである場合、コンパイラは、クラスに `Main` プロシージャがない場合にアプリケーションを起動する既定の `Main` プロシージャを提供します。 これにより、開発環境で作成されたコマンドラインでコードをコンパイルできます。  
   
@@ -54,7 +54,7 @@ vbc t2.vb t3.vb -main:Test2
   
 ## <a name="see-also"></a>参照
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Visual Basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
