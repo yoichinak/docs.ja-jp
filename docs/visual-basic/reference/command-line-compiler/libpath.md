@@ -59,5 +59,5 @@ vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb
 ## <a name="see-also"></a>関連項目
 
 - [.NET のアセンブリ](../../../standard/assembly/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
