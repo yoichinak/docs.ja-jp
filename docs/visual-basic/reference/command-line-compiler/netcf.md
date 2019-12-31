@@ -37,7 +37,7 @@ ms.locfileid: "72005453"
 
 `-netcf` オプションは、次の言語機能を変更します。
 
-- [End \<キーワード > Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md)キーワードは、プログラムの実行を終了しますが、無効になっています。 次のプログラムは `-netcf` せずにコンパイルして実行しますが、コンパイル時に `-netcf`で失敗します。
+- [End \<キーワード > ステートメント](../../../visual-basic/language-reference/statements/end-keyword-statement.md)キーワードは、プログラムの実行を終了しますが、無効になっています。 次のプログラムは `-netcf` せずにコンパイルして実行しますが、コンパイル時に `-netcf`で失敗します。
 
   [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]
 
@@ -45,7 +45,7 @@ ms.locfileid: "72005453"
 
   [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]
 
-- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)、 [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)、および[Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)の各修飾子は無効になっています。 [Declare statement](../../../visual-basic/language-reference/statements/declare-statement.md)ステートメントの構文も `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`に変更されています。 次のコードは、コンパイル時の `-netcf` の効果を示しています。
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)、 [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)、および[Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)の各修飾子は無効になっています。 [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)の構文も `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`に変更されています。 次のコードは、コンパイル時の `-netcf` の効果を示しています。
 
   [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]
 
@@ -93,6 +93,6 @@ vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactF
 
 ## <a name="see-also"></a>参照
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
