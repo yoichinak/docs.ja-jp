@@ -15,9 +15,9 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64624306"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic プログラムの構造
-Visual Basic プログラムは、標準の構成ブロックから構築します。 A*ソリューション*は 1 つまたは複数のプロジェクトで構成されます。 A*プロジェクト*さらに、1 つまたは複数のアセンブリを含めることができます。 各*アセンブリ*が 1 つまたは複数のソース ファイルからコンパイルします。 A*ソース ファイル*定義とクラス、構造体、モジュール、および、最終的には、すべてのコードが含まれているインターフェイスの実装を提供します。  
+Visual Basic プログラムは、標準の構成ブロックから構築します。 *ソリューション*は 1 つまたは複数のプロジェクトで構成されます。 *プロジェクト*さらに、1 つまたは複数のアセンブリを含めることができます。 各*アセンブリ*が 1 つまたは複数のソース ファイルからコンパイルします。 *ソース ファイル*定義とクラス、構造体、モジュール、および、最終的には、すべてのコードが含まれているインターフェイスの実装を提供します。  
   
- Visual Basic プログラムの詳細については、これらのビルディング ブロックは、次を参照してください。[ソリューションとプロジェクト](/visualstudio/ide/solutions-and-projects-in-visual-studio)と[.net アセンブリ](../../../standard/assembly/index.md)します。  
+ Visual Basic プログラムの詳細については、これらのビルディング ブロックは、次を参照してください。[ソリューションとプロジェクト](/visualstudio/ide/solutions-and-projects-in-visual-studio)と[.NET のアセンブリ](../../../standard/assembly/index.md)します。  
   
 ## <a name="file-level-programming-elements"></a>ファイル レベルのプログラミング要素  
  プロジェクトまたはファイルを開始し、コード エディターを開き、既にとを正しい順序でいくつかのコードが表示されます。 作成するすべてのコードは、次のシーケンスに従う必要があります。  
@@ -90,7 +90,7 @@ Visual Basic プログラムは、標準の構成ブロックから構築しま�
   
 - `Function Main(ByVal cmdArgs() As String) As Integer`  
   
- この手順の最も一般的なさまざまなの`Sub Main()`します。 詳細については、次を参照してください。 [Visual basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)します。  
+ この手順の最も一般的なさまざまなの`Sub Main()`します。 詳細については、「[Visual basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)」を参照してください。
   
 ## <a name="see-also"></a>関連項目
 
