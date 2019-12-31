@@ -40,7 +40,7 @@ ms.locfileid: "72775634"
  モジュールの作成の詳細については、「[-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)」を参照してください。 フレンドアセンブリの詳細については、「[フレンド アセンブリ](../../../standard/assembly/friend.md)」を参照してください。  
   
 > [!NOTE]
-> @No__t_0 オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドプロンプトからコンパイルする場合にのみ使用できます。  
+> `-moduleassemblyname ` オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドプロンプトからコンパイルする場合にのみ使用できます。  
   
 ## <a name="see-also"></a>関連項目
 
