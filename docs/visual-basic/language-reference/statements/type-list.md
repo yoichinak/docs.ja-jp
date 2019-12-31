@@ -103,7 +103,7 @@ ms.locfileid: "74352774"
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)
 - [New 演算子](../../../visual-basic/language-reference/operators/new-operator.md)
 - [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object データ型](../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
