@@ -48,7 +48,7 @@ ms.locfileid: "74338791"
 |[Function](../statements/function-statement.md)|[Get](../statements/get-statement.md)|[GetType](../operators/gettype-operator.md)|[GetXMLNamespace](../operators/getxmlnamespace-operator.md)|  
 |[Global](../../../visual-basic/programming-guide/program-structure/namespaces.md)|`GoSub`|[GoTo](../statements/goto-statement.md)|[!](../statements/handles-clause.md)|  
 |[If](../statements/if-then-else-statement.md)|[If()](../operators/if-operator.md)|[Implements](../statements/implements-clause.md)|[Implements ステートメント](../statements/implements-statement.md)|  
-|[Imports (.NET 名前空間と型)](../statements/imports-statement-net-namespace-and-type.md)|[Imports (XML 名前空間)](../statements/imports-statement-xml-namespace.md)|[In](../statements/in-clause.md)|[In (ジェネリック修飾子)](../modifiers/in-generic-modifier.md)|  
+|[Imports (.NET 名前空間および型)](../statements/imports-statement-net-namespace-and-type.md)|[Imports (XML 名前空間)](../statements/imports-statement-xml-namespace.md)|[In](../statements/in-clause.md)|[In (ジェネリック修飾子)](../modifiers/in-generic-modifier.md)|  
 |[Inherits](../statements/inherits-statement.md)|[Integer](../data-types/integer-data-type.md)|[Interface](../statements/interface-statement.md)|[Is](../operators/is-operator.md)|  
 |[IsNot](../operators/isnot-operator.md)|[Let](../queries/let-clause.md)|[Lib](../statements/declare-statement.md)|[Like](../operators/like-operator.md)|  
 |[Long](../data-types/long-data-type.md)|[Loop](../statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../operators/mod-operator.md)|  
