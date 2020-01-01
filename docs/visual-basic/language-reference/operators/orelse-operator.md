@@ -49,7 +49,7 @@ result = expression1 OrElse expression2
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>データ型  
- `OrElse` 演算子は、[ブールデータ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)に対してのみ定義されます。 Visual Basic は、式を評価する前に、必要に応じて各オペランドを `Boolean` に変換します。 結果を数値型に代入すると、Visual Basic によって `Boolean` からその型に変換され、`False` が `0` になり、`True` が `-1`になります。
+ `OrElse` 演算子は、[Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)に対してのみ定義されます。 Visual Basic は、式を評価する前に、必要に応じて各オペランドを `Boolean` に変換します。 結果を数値型に代入すると、Visual Basic によって `Boolean` からその型に変換され、`False` が `0` になり、`True` が `-1`になります。
 詳細については、「[ブール型変換](../data-types/boolean-data-type.md#type-conversions)」を参照してください。
   
 ## <a name="overloading"></a>オーバーロード  

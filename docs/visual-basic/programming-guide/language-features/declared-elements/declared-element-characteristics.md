@@ -25,7 +25,7 @@ ms.locfileid: "74331626"
   
 - *データ型*: 要素が保持できる値と、その値を格納する方法。 詳細については、「[データ型の概要](../../../../visual-basic/language-reference/data-types/index.md)」(データ型) を参照してください。  
   
-- *有効期間*-要素を使用できるようになるまでの実行時間。 詳細については、「 [Visual Basic の有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)」を参照してください。  
+- *有効期間*-要素を使用できるようになるまでの実行時間。 詳細については、「[Visual Basic の有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)」を参照してください。  
   
 - *スコープ*-名前を修飾せずに要素を参照できるすべてのコードのセット。 詳細については、「[方法: 変数のスコープを制御する](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)」を参照してください。  
   
