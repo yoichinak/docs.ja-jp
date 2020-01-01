@@ -42,7 +42,7 @@ ms.locfileid: "74352552"
 ## <a name="see-also"></a>参照
 
 - <xref:System.StackOverflowException>
-- [手順](index.md)
+- [Visual Basic におけるプロシージャ](index.md)
 - [Sub プロシージャ](sub-procedures.md)
 - [Function プロシージャ](function-procedures.md)
 - [Property プロシージャ](property-procedures.md)
