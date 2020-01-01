@@ -70,7 +70,7 @@ ms.locfileid: "74348686"
   
 - 前の表の拡大変換の逆方向 (すべての型がそれ自体に拡大変換される点を除く)  
   
-- [ブール](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)型と任意の数値型の間の双方向の変換  
+- [Boolean データ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)と任意の数値型の間の双方向の変換  
   
 - 任意の数値型から任意の列挙型への変換 (`Enum`)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74348686"
  縮小変換は実行時に必ず成功するわけではないため、失敗したり、データ損失が発生したりする可能性があります。 変換先のデータ型が変換されている値を受け取ることができない場合、エラーが発生します。 たとえば、数値変換でオーバーフローが発生する場合があります。 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)で型チェックスイッチが `Off`に設定されていない限り、コンパイラでは、暗黙的に縮小変換を実行することはできません。  
   
 > [!NOTE]
-> `For Each…Next` コレクション内の要素から loop コントロール変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、「」の「縮小変換」セクションを参照してください。 [次のステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
+> `For Each…Next` コレクション内の要素から loop コントロール変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、「[For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)」の「縮小変換」セクションを参照してください。
   
 ### <a name="when-to-use-narrowing-conversions"></a>縮小変換を使用する場合  
  変換元の値が変換先のデータ型に変換できることがわかっている場合は、縮小変換を使用します。エラーやデータの損失は発生しません。 たとえば、"True" または "False" のいずれかが含まれていることがわかっている `String` がある場合は、`CBool` キーワードを使用して `Boolean`に変換できます。  
@@ -110,7 +110,7 @@ shape = square
 ## <a name="see-also"></a>参照
 
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
 - [方法: Visual Basic でオブジェクトを別の型に変換する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)

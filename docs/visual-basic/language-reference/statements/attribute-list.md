@@ -24,7 +24,7 @@ ms.locfileid: "74354060"
 ## <a name="parts"></a>指定項目  
 |||
 |---|---|
-|`attributemodifier`|ソースファイルの先頭で適用される属性に必要です。 [アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)または[モジュール](../../../visual-basic/language-reference/modifiers/module-keyword.md)を指定できます。|
+|`attributemodifier`|ソースファイルの先頭で適用される属性に必要です。 [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)または[Module](../../../visual-basic/language-reference/modifiers/module-keyword.md)を指定できます。|
 |`attributename`| 必須。 属性の名前。|
 |`attributearguments`|省略可。 この属性の位置指定引数の一覧。 複数の引数は、コンマで区切ります。|
 |`attributeinitializer`|省略可。 この属性の変数またはプロパティ初期化子のリスト。 複数の初期化子は、コンマで区切られます。|
@@ -32,7 +32,7 @@ ms.locfileid: "74354060"
 ## <a name="remarks"></a>コメント  
  1つまたは複数の属性を、ほぼすべてのプログラミング要素 (型、プロシージャ、プロパティなど) に適用できます。 属性は、アセンブリのメタデータに表示され、コードに注釈を付けたり、特定のプログラミング要素の使用方法を指定したりするのに役立ちます。 Visual Basic と .NET Framework で定義された属性を適用し、独自の属性を定義することができます。  
 
- 属性を使用する場合の詳細については、「[属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)」を参照してください。 属性名の詳細については、「宣言された[要素名](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。  
+ 属性を使用する場合の詳細については、「[属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)」を参照してください。 属性名の詳細については、「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。  
   
 ## <a name="rules"></a>ルール  
   
@@ -55,7 +55,7 @@ ms.locfileid: "74354060"
   
 ## <a name="see-also"></a>参照
 
-- [アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
 - [Module \<キーワード>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
 - [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [方法 : コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

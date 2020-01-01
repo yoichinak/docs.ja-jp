@@ -1,5 +1,5 @@
 ---
-title: 型リスト
+title: 型リスト (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - StructureConstraint
@@ -45,9 +45,7 @@ ms.locfileid: "74352774"
 
 |用語|Definition|
 |---|---|
-
 |`genericmodifier`|省略可。 は、ジェネリックインターフェイスおよびデリゲートでのみ使用できます。[Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) キーワードを使用して共変性を宣言するか、 [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) キーワードを使用して反変性を宣言できます。 [共変性と反変性](../../programming-guide/concepts/covariance-contravariance/index.md)を参照してください。|
-
 |`typename`|必須。 型パラメーターの名前。 これは、対応する型引数によって提供される定義済みの型に置き換えられるプレースホルダーです。|
 |`constraintlist`|省略可。 `typename`に指定できるデータ型を制限する要件の一覧。 複数の制約がある場合は、それらを中かっこ (`{ }`) で囲み、コンマで区切ります。 制約リストは [As](../../../visual-basic/language-reference/statements/as-clause.md) キーワードを使用して導入する必要があります。 `As` は、リストの先頭で1回だけ使用します。|
 
@@ -55,13 +53,12 @@ ms.locfileid: "74352774"
 
 すべてのジェネリックプログラミング要素は、少なくとも1つの型パラメーターを受け取る必要があります。 型パラメーターは、ジェネリック型のインスタンスを作成するときにクライアントコードによって指定される特定の型 (構築された*要素*) のプレースホルダーです。 ジェネリッククラス、構造体、インターフェイス、プロシージャ、またはデリゲートを定義できます。
 
-ジェネリック型を定義する場合の詳細については、「[Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」を参照してください。 型パラメーター名の詳細については、「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+ジェネリック型を定義する場合の詳細については、「[Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」を参照してください。型パラメーター名の詳細については、「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+
 
 ## <a name="rules"></a>ルール
 
-
 - **Parentheses.** 型パラメーターリストを指定する場合は、それをかっこで囲む必要があります。[Of](../../../visual-basic/language-reference/statements/of-clause.md) キーワードを使って特定する必要があります。 `Of` は、リストの先頭に一度だけ記述します。
-
 
 - **Constraints.** 型パラメーターに対する*制約*の一覧には、次の項目を任意の組み合わせで含めることができます。
 
