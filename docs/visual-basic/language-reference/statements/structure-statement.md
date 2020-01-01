@@ -40,7 +40,7 @@ End Structure
 |---|---|
 |`attributelist`|任意。 「[属性リスト](attribute-list.md)」を参照してください。|
 |`accessmodifier`|任意。 次のいずれかになります。<br /><br /> -   [パブリック](../modifiers/public.md)<br />-     [Protected](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [プライベート](../modifiers/private.md)<br />[保護されたフレンド](../modifiers/protected-friend.md)の - <br/>- [プライベート保護](../modifiers/private-protected.md) <br /><br /> 「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|
-|`Shadows`|任意。 「[シャドウ](../modifiers/shadows.md)」を参照してください。|
+|`Shadows`|任意。 「[Shadows](../modifiers/shadows.md)」を参照してください。|
 |`Partial`|任意。 構造体の部分定義を示します。 「[Partial](../modifiers/partial.md)」を参照してください。|
 |`name`|必須。 この構造体の名前です。 「[宣言された要素の名前](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
 |`Of`|任意。 これがジェネリックな構造体であることを指定します。|
