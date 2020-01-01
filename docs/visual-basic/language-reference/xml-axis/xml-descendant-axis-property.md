@@ -38,7 +38,7 @@ object...<descendant>
 |要素|説明|
 |----------|-----------------|
 |`prefix`|省略可。 子孫ノードの XML 名前空間プレフィックス。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間である必要があります。|
-|`name`|必須。 子孫ノードのローカル名です。 「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。|
+|`name`|必須。子孫ノードのローカル名です。「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。|
 
 `>` 必須。 子孫軸プロパティの末尾を示します。
 
@@ -48,13 +48,13 @@ object...<descendant>
 
 ## <a name="remarks"></a>コメント
 
-XML 子孫軸プロパティを使用して、<xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XDocument> オブジェクトから、または <xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションから、子孫ノードに名前でアクセスできます。 返されたコレクション内の最初の子孫ノードの値にアクセスするには、XML `Value` プロパティを使用します。 詳細については、「 [XML 値プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)」を参照してください。
+XML 子孫軸プロパティを使用して、<xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XDocument> オブジェクトから、または <xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションから、子孫ノードに名前でアクセスできます。 返されたコレクション内の最初の子孫ノードの値にアクセスするには、XML `Value` プロパティを使用します。 詳細については、「[XML 値プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)」を参照してください。
 
 Visual Basic コンパイラは、子孫軸のプロパティを <xref:System.Xml.Linq.XContainer.Descendants%2A> メソッドの呼び出しに変換します。
 
 ## <a name="xml-namespaces"></a>XML 名前空間
 
-子孫軸プロパティの名前は、`Imports` ステートメントでグローバルに宣言された XML 名前空間のみを使用できます。 XML 要素リテラル内でローカルに宣言された XML 名前空間を使用することはできません。 詳細については、「 [Imports ステートメント (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)」を参照してください。
+子孫軸プロパティの名前は、`Imports` ステートメントでグローバルに宣言された XML 名前空間のみを使用できます。 XML 要素リテラル内でローカルに宣言された XML 名前空間を使用することはできません。 詳細については、「[Imports ステートメント (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)」を参照してください。
 
 ## <a name="example"></a>例
 

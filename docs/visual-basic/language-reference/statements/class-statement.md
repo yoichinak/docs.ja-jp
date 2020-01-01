@@ -39,7 +39,7 @@ End Class
 |用語|Definition|  
 |---|---|  
 |`attributelist`|省略可。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。|  
-|`accessmodifier`|省略可。 次のいずれかになります。<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br /> -  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br/><br/> 「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
+|`accessmodifier`|省略可。 次のいずれかになります。<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br/><br/> 「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
 |`Shadows`|省略可。 「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。|  
 |`MustInherit`|省略可。 「[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)」を参照してください。|  
 |`NotInheritable`|省略可。 「[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)」を参照してください。|  
@@ -49,7 +49,7 @@ End Class
 |`typelist`|[Of](../../../visual-basic/language-reference/statements/of-clause.md)キーワードを使用する場合は必須です。 このクラスの型パラメーターのリスト。 [型リスト](../../../visual-basic/language-reference/statements/type-list.md)を参照してください。|  
 |`Inherits`|省略可。 このクラスが別のクラスのメンバーを継承することを示します。 「[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)」を参照してください。|  
 |`classname`|`Inherits` ステートメントを使用する場合は必ず指定します。 このクラスの派生元であるクラスの名前。|  
-|`Implements`|省略可。 このクラスが1つ以上のインターフェイスのメンバーを実装することを示します。 「[Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)」を参照してください。|  
+|`Implements`|省略可。 このクラスが 1 つ以上のインターフェイスのメンバーを実装することを示します。 「[Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)」を参照してください。|  
 |`interfacenames`|`Implements` ステートメントを使用する場合は必ず指定します。 このクラスが実装するインターフェイスの名前。|  
 |`statements`|省略可。 このクラスのメンバーを定義するステートメント。|  
 |`End Class`|必須。 `Class` の定義を終了します。|  
