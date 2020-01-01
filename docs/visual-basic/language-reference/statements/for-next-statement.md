@@ -50,8 +50,8 @@ Next [ counter ]
 
 |要素|説明|
 |----------|-----------------|
-|`counter`|`For` ステートメントで必要です。 数値変数。 ループのコントロール変数。 詳細については、このトピックで後述する「 [Counter 引数](#BKMK_Counter)」を参照してください。|
-|`datatype`|省略可。 `counter`のデータ型。 詳細については、このトピックで後述する「 [Counter 引数](#BKMK_Counter)」を参照してください。|
+|`counter`|`For` ステートメントで必要です。 数値変数。 ループのコントロール変数。 詳細については、このトピックで後述する「[Counter 引数](#BKMK_Counter)」を参照してください。|
+|`datatype`|省略可。 `counter`のデータ型。 詳細については、このトピックで後述する「[Counter 引数](#BKMK_Counter)」を参照してください。|
 |`start`|必須。 数値式。 `counter` の初期値になります。|
 |`end`|必須。 数値式。 `counter`の最終的な値。|
 |`step`|省略可。 数値式。 ループを通じて毎回 `counter` をインクリメントする量。|
@@ -86,13 +86,13 @@ Next [ counter ]
 
 ループを入れ子にする場合、各ループには一意の `counter` 変数が必要です。
 
-さまざまな種類の制御構造を入れ子にすることもできます。 詳細については、「[入れ子になったコントロール構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
+さまざまな種類の制御構造を入れ子にすることもできます。 詳細については、「[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
 
 ## <a name="exit-for-and-continue-for"></a>Exit For と Continue For
 
 `Exit For` ステートメントは、すぐに `For`...`Next` を終了します。 ループし、`Next` ステートメントの後のステートメントに制御を転送します。
 
-`Continue For` ステートメントは、ループの次の反復処理に制御を直ちに転送します。 詳細については、「 [Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)」を参照してください。
+`Continue For` ステートメントは、ループの次の反復処理に制御を直ちに転送します。 詳細については、「[Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)」を参照してください。
 
 次の例は、`Continue For` と `Exit For` ステートメントの使用方法を示しています。
 
@@ -106,7 +106,7 @@ Next [ counter ]
 
 - `Try`...`Catch`...`Finally` ステートメントが例外をキャッチします。 `Finally` ブロックの末尾に `Exit For` を使用することもできます。
 
-- 無限ループがあります。これは、大規模または無限の回数実行されるループです。 このような条件を検出した場合は、`Exit For` を使用してループをエスケープできます。 詳細については、「 [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)。
+- 無限ループがあります。これは、大規模または無限の回数実行されるループです。 このような条件を検出した場合は、`Exit For` を使用してループをエスケープできます。 詳細については、「[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)」を参照してください。
 
 ## <a name="technical-implementation"></a>技術的な実装
 
@@ -166,7 +166,9 @@ Visual Basic が `Next` ステートメントを検出するたびに、`step` �
 
 ## <a name="example"></a>例
 
-次の例では、ジェネリックリストからすべての要素を削除します。 [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)の例では、降順に反復処理する `For`...`Next` ステートメントを示しています。 この例では、`removeAt` メソッドによって、削除された要素の後にある要素のインデックス値が小さくなるため、この手法を使用します。
+
+次の例では、ジェネリックリストからすべての要素を削除します。 [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)の例では、降順に反復処理する `For`...`Next` ステートメントを示しています。この例では、`removeAt` メソッドによって、削除された要素の後にある要素のインデックス値が小さくなるため、この手法を使用します。
+
 
 [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]
 

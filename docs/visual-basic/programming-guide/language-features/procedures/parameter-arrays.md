@@ -59,7 +59,7 @@ ms.locfileid: "74351124"
 ## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
-- [手順](./index.md)
+- [Visual Basic におけるプロシージャ](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)
 - [位置と名前による引数渡し](./passing-arguments-by-position-and-by-name.md)
