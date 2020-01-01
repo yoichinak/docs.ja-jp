@@ -39,7 +39,7 @@ ms.locfileid: "74354103"
 |列挙型 ([Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|使用不可|  
 |クラス ([Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|使用不可|  
 |構造体 ([Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|使用不可|  
-|モジュール ([モジュールステートメント](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|使用不可|使用不可|  
+|モジュール ([Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|使用不可|使用不可|  
 |インターフェイス ([Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|使用不可|  
 |プロシージャ ([Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)、 [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md))|使用不可|`Public`|使用不可|  
 |外部参照 ([Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md))|使用不可|`Public` (`Interface`では許可されていません)|使用不可|  

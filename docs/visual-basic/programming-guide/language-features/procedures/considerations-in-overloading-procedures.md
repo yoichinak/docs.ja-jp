@@ -83,7 +83,7 @@ ms.locfileid: "74351010"
  詳細については、「[パラメーター配列](./parameter-arrays.md)」を参照してください。  
   
 ## <a name="implicit-overloads-for-optional-parameters"></a>省略可能なパラメーターの暗黙のオーバーロード  
- [省略可能](../../../../visual-basic/language-reference/modifiers/optional.md)なパラメーターを持つプロシージャは、2つのオーバーロードされたプロシージャに相当します。1つは省略可能なパラメーターで、もう1つは使用しません。 このようなプロシージャは、これらのいずれかに対応するパラメーターリストを使用してオーバーロードすることはできません。 次の宣言はこれを示しています。  
+ [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)パラメーターを持つプロシージャは、2つのオーバーロードされたプロシージャに相当します。1つは省略可能なパラメーターで、もう1つは使用しません。 このようなプロシージャは、これらのいずれかに対応するパラメーターリストを使用してオーバーロードすることはできません。 次の宣言はこれを示しています。  
   
  [!code-vb[VbVbcnProcedures#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#58)]  
   
@@ -123,7 +123,7 @@ ms.locfileid: "74351010"
   
 ## <a name="see-also"></a>関連項目
 
-- [手順](./index.md)
+- [Visual Basic におけるプロシージャ](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [プロシージャのトラブルシューティング](./troubleshooting-procedures.md)
 - [方法 : プロシージャの複数のバージョンを定義する](./how-to-define-multiple-versions-of-a-procedure.md)
