@@ -35,11 +35,11 @@ Visual Basic には、次のプロパティプロシージャが用意されて�
 
 クラス、構造体、およびモジュールのプロパティを定義できます。 プロパティは既定で `Public` されます。これは、プロパティのコンテナーにアクセスできるアプリケーション内の任意の場所から呼び出すことができることを意味します。
 
-プロパティと変数の比較については、「 [Visual Basic のプロパティと変数の違い](differences-between-properties-and-variables.md)」を参照してください。
+プロパティと変数の比較については、「[Visual Basic のプロパティと変数の違い](differences-between-properties-and-variables.md)」を参照してください。
 
 ## <a name="declaration-syntax"></a>宣言の構文
 
-プロパティ自体は、[プロパティステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)および `End Property` ステートメント内に囲まれたコードのブロックによって定義されます。 このブロックの内部では、各プロパティプロシージャは、宣言ステートメント (`Get` または `Set`) と一致する `End` 宣言内に囲まれた内部ブロックとして表示されます。
+プロパティ自体は、[Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)および `End Property` ステートメント内に囲まれたコードのブロックによって定義されます。 このブロックの内部では、各プロパティプロシージャは、宣言ステートメント (`Get` または `Set`) と一致する `End` 宣言内に囲まれた内部ブロックとして表示されます。
 
 プロパティとそのプロシージャを宣言する構文は次のとおりです。
 
@@ -60,7 +60,7 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]
 ```
 
-`Modifiers` は、オーバーロード、オーバーライド、共有、およびシャドウに関するアクセスレベルと情報、およびプロパティが読み取り専用であるか書き込み専用であるかを指定できます。 `Get` または `Set` プロシージャの `AccessLevel` には、プロパティ自体に対して指定されたアクセスレベルよりも制限の厳しい任意のレベルを指定できます。 詳細については、「 [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)」を参照してください。
+`Modifiers` は、オーバーロード、オーバーライド、共有、およびシャドウに関するアクセスレベルと情報、およびプロパティが読み取り専用であるか書き込み専用であるかを指定できます。 `Get` または `Set` プロシージャの `AccessLevel` には、プロパティ自体に対して指定されたアクセスレベルよりも制限の厳しい任意のレベルを指定できます。 詳細については、「[Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)」を参照してください。
 
 ### <a name="data-type"></a>データ型
 
@@ -72,7 +72,7 @@ End Property
 
 ## <a name="parameter-declaration"></a>パラメーターの宣言
 
-各パラメーターは、[サブプロシージャ](sub-procedures.md)に対して実行するのと同じ方法で宣言します。ただし、渡すメカニズムは `ByVal`する必要があります。
+各パラメーターは、[Sub プロシージャ](sub-procedures.md)に対して実行するのと同じ方法で宣言します。ただし、渡すメカニズムは `ByVal`する必要があります。
 
 パラメーターリストの各パラメーターの構文は次のとおりです。
 
@@ -121,7 +121,7 @@ Do While (propertyname[(argumentlist)] > expression)
 
 ## <a name="see-also"></a>参照
 
-- [手順](index.md)
+- [Visual Basic におけるプロシージャ](index.md)
 - [Function プロシージャ](function-procedures.md)
 - [演算子プロシージャ](operator-procedures.md)
 - [プロシージャのパラメーターと引数](procedure-parameters-and-arguments.md)

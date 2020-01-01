@@ -54,7 +54,7 @@ ms.locfileid: "74344517"
   
 ## <a name="see-also"></a>関連項目
 
-- [手順](./index.md)
+- [Visual Basic におけるプロシージャ](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [方法: プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)
 - [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)
