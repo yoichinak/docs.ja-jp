@@ -35,14 +35,14 @@ variableorproperty \= expression
  必須。 任意の数式。  
   
 ## <a name="remarks"></a>コメント  
- `\=` 演算子の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)にすることはできません。  
+ `\=` 演算子の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) にすることはできません。  
   
  `\=` 演算子は、変数またはプロパティの値を右側の値で除算し、整数の結果をその左側の変数またはプロパティに代入します。  
   
- 整数除算の詳細については、「 [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)」を参照してください。  
+ 整数除算の詳細については、「[\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)」を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
- `\` 演算子は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `\` 演算子のオーバーロードは、`\=` 演算子の動作に影響します。 コードで `\`をオーバーロードするクラスまたは構造体の `\=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `\` 演算子は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `\` 演算子のオーバーロードは、`\=` 演算子の動作に影響します。 コードで `\`をオーバーロードするクラスまたは構造体の `\=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`\=` 演算子を使用して1つの `Integer` 変数を2番目の変数に除算し、整数の結果を最初の変数に代入します。  
