@@ -26,6 +26,7 @@ ms.locfileid: "74345287"
 
 宣言された要素の*スコープ*は、その名前を修飾したり、 [Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)を通じて使用可能にすることなく参照できるすべてのコードのセットです。 要素は、次のいずれかのレベルでスコープを持つことができます。
 
+
 |Level|説明|
 |-----------|-----------------|
 |ブロック スコープ|宣言されているコードブロック内でのみ使用可能|

@@ -91,10 +91,10 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [Visual Basic コマンドラインコンパイラ](index.md)
 - [チュートリアル: マネージド アセンブリからの型の埋め込み](../../../standard/assembly/embed-types-visual-studio.md)
 - [-reference (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)
-- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)
+- [コンパイルコマンドラインのサンプル](sample-compilation-command-lines.md)
 - [COM 相互運用の概要](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
