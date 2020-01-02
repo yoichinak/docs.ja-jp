@@ -39,7 +39,7 @@ Visual Basic には、次のプロパティプロシージャが用意されて�
 
 ## <a name="declaration-syntax"></a>宣言の構文
 
-プロパティ自体は、[プロパティステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)および `End Property` ステートメント内に囲まれたコードのブロックによって定義されます。 このブロックの内部では、各プロパティプロシージャは、宣言ステートメント (`Get` または `Set`) と一致する `End` 宣言内に囲まれた内部ブロックとして表示されます。
+プロパティ自体は、[Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)および `End Property` ステートメント内に囲まれたコードのブロックによって定義されます。 このブロックの内部では、各プロパティプロシージャは、宣言ステートメント (`Get` または `Set`) と一致する `End` 宣言内に囲まれた内部ブロックとして表示されます。
 
 プロパティとそのプロシージャを宣言する構文は次のとおりです。
 
@@ -72,7 +72,7 @@ End Property
 
 ## <a name="parameter-declaration"></a>パラメーターの宣言
 
-各パラメーターは、[サブプロシージャ](sub-procedures.md)に対して実行するのと同じ方法で宣言します。ただし、渡すメカニズムは `ByVal`する必要があります。
+各パラメーターは、[Sub プロシージャ](sub-procedures.md)に対して実行するのと同じ方法で宣言します。ただし、渡すメカニズムは `ByVal`する必要があります。
 
 パラメーターリストの各パラメーターの構文は次のとおりです。
 
@@ -121,7 +121,7 @@ Do While (propertyname[(argumentlist)] > expression)
 
 ## <a name="see-also"></a>参照
 
-- [手順](index.md)
+- [Visual Basic におけるプロシージャ](index.md)
 - [Function プロシージャ](function-procedures.md)
 - [演算子プロシージャ](operator-procedures.md)
 - [プロシージャのパラメーターと引数](procedure-parameters-and-arguments.md)

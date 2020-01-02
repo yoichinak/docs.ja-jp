@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
 ms.openlocfilehash: 8261d126f988bdcf05b4a2af3106b38717e46bc8
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344517"
@@ -54,7 +54,7 @@ ms.locfileid: "74344517"
   
 ## <a name="see-also"></a>関連項目
 
-- [手順](./index.md)
+- [Visual Basic におけるプロシージャ](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [方法: プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)
 - [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)
