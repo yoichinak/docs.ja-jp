@@ -42,7 +42,8 @@ ms.locfileid: "74347027"
     |要素|説明|
     |---|---|
     |`ePrefix`|省略可。 要素の XML 名前空間プレフィックス。 は、ファイルまたはプロジェクトレベルで `Imports` ステートメントで定義されているグローバル XML 名前空間であるか、またはこの要素または親要素で定義されているローカル XML 名前空間である必要があります。|
-    |`eName`|必須。 要素名 形式は、次のいずれかになります。<br /><br /> -リテラルテキスト。 「[宣言された XML 要素と属性の名前」を](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)参照してください。<br />-フォーム `<%= eNameExp %>`の埋め込み式。 `eNameExp` の型は `String` であるか、または <xref:System.Xml.Linq.XName>に暗黙的に変換できる型である必要があります。|
+    |`eName`|必須。 要素名 形式は、次のいずれかになります。<br /><br /> -リテラルテキスト。 「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。<br />-フォーム `<%= eNameExp %>`の埋め込み式。 `eNameExp` の型は `String` であるか、または <xref:System.Xml.Linq.XName>に暗黙的に変換できる型である必要があります。|
+
 
   - `<%= nameExp %>`形式の埋め込み式。 `nameExp` の型は、`String` または <xref:System.Xml.Linq.XName>に暗黙的に変換できる型である必要があります。 埋め込み式は、要素の終了タグでは使用できません。
 
@@ -59,7 +60,8 @@ ms.locfileid: "74347027"
     |要素|説明|
     |---|---|
     |`aPrefix`|省略可。 属性の XML 名前空間プレフィックス。 は、`Imports` ステートメント、またはこの要素または親要素で定義されているローカル XML 名前空間で定義されているグローバル XML 名前空間である必要があります。|
-    |`aName`|必須。 属性の名前。 形式は、次のいずれかになります。<br /><br /> -リテラルテキスト。 「[宣言された XML 要素と属性の名前」を](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)参照してください。<br />-フォーム `<%= aNameExp %>`の埋め込み式。 `aNameExp` の型は `String` であるか、または <xref:System.Xml.Linq.XName>に暗黙的に変換できる型である必要があります。|
+    |`aName`|必須。 属性の名前。 形式は、次のいずれかになります。<br /><br /> -リテラルテキスト。 「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。<br />-フォーム `<%= aNameExp %>`の埋め込み式。 `aNameExp` の型は `String` であるか、または <xref:System.Xml.Linq.XName>に暗黙的に変換できる型である必要があります。|
+
     |`aValue`|省略可。 属性の値。 形式は、次のいずれかになります。<br /><br /> -リテラルテキスト (引用符で囲まれています)。<br />-フォーム `<%= aValueExp %>`の埋め込み式。 任意の型を使用できます。|
 
   - `<%= aExp %>`形式の埋め込み式。

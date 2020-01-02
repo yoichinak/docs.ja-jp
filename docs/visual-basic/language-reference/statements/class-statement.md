@@ -39,17 +39,17 @@ End Class
 |用語|Definition|  
 |---|---|  
 |`attributelist`|省略可。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。|  
-|`accessmodifier`|省略可。 次のいずれかになります。<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />[Protected](../../../visual-basic/language-reference/modifiers/protected.md)-   <br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br/><br/> 「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
-|`Shadows`|省略可。 「[シャドウ](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。|  
-|`MustInherit`|省略可。 「 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)」を参照してください。|  
-|`NotInheritable`|省略可。 「 [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)」を参照してください。|  
-|`Partial`|省略可。 クラスの部分定義を示します。 「[部分](../../../visual-basic/language-reference/modifiers/partial.md)」を参照してください。|  
-|`name`|必須。 このクラスの名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
+|`accessmodifier`|省略可。 次のいずれかになります。<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br/><br/> 「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
+|`Shadows`|省略可。 「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。|  
+|`MustInherit`|省略可。 「[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)」を参照してください。|  
+|`NotInheritable`|省略可。 「[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)」を参照してください。|  
+|`Partial`|省略可。 クラスの部分定義を示します。 「[Partial](../../../visual-basic/language-reference/modifiers/partial.md)」を参照してください。|  
+|`name`|必須。 このクラスの名前。 「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
 |`Of`|省略可。 これがジェネリッククラスであることを指定します。|  
 |`typelist`|[Of](../../../visual-basic/language-reference/statements/of-clause.md)キーワードを使用する場合は必須です。 このクラスの型パラメーターのリスト。 [型リスト](../../../visual-basic/language-reference/statements/type-list.md)を参照してください。|  
-|`Inherits`|省略可。 このクラスが別のクラスのメンバーを継承することを示します。 「 [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)」を参照してください。|  
+|`Inherits`|省略可。 このクラスが別のクラスのメンバーを継承することを示します。 「[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)」を参照してください。|  
 |`classname`|`Inherits` ステートメントを使用する場合は必ず指定します。 このクラスの派生元であるクラスの名前。|  
-|`Implements`|省略可。 このクラスが1つ以上のインターフェイスのメンバーを実装することを示します。 「 [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)」を参照してください。|  
+|`Implements`|省略可。 このクラスが 1 つ以上のインターフェイスのメンバーを実装することを示します。 「[Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)」を参照してください。|  
 |`interfacenames`|`Implements` ステートメントを使用する場合は必ず指定します。 このクラスが実装するインターフェイスの名前。|  
 |`statements`|省略可。 このクラスのメンバーを定義するステートメント。|  
 |`End Class`|必須。 `Class` の定義を終了します。|  
@@ -59,7 +59,7 @@ End Class
   
  `Class` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、クラスの*宣言コンテキスト*は、ソースファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があり、プロシージャまたはブロックにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
- クラスの各インスタンスは、他のすべてのインスタンスとは独立した有効期間を持ちます。 この有効期間は、[新しい Operator](../../../visual-basic/language-reference/operators/new-operator.md)句によって作成されるか、<xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>などの関数によって開始されます。 インスタンスを指すすべての変数が[Nothing](../../../visual-basic/language-reference/nothing.md)または他のクラスのインスタンスに設定されている場合に終了します。  
+ クラスの各インスタンスは、他のすべてのインスタンスとは独立した有効期間を持ちます。 この有効期間は、[New 演算子](../../../visual-basic/language-reference/operators/new-operator.md)句によって作成されるか、<xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>などの関数によって開始されます。 インスタンスを指すすべての変数が[Nothing](../../../visual-basic/language-reference/nothing.md)または他のクラスのインスタンスに設定されている場合に終了します。  
   
  クラスは既定で[Friend](../../../visual-basic/language-reference/modifiers/friend.md)アクセスになります。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   

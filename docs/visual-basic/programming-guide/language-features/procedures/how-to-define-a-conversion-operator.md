@@ -38,7 +38,7 @@ ms.locfileid: "74344901"
 - [方法 : 演算子を定義する](./how-to-define-an-operator.md)
 - [方法 : 演算子プロシージャを呼び出す](./how-to-call-an-operator-procedure.md)
 - [方法: 演算子を定義するクラスを使用する](./how-to-use-a-class-that-defines-operators.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [方法 : 構造体を宣言する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
