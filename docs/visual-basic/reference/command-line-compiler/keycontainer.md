@@ -52,6 +52,6 @@ vbc -keycontainer:key1 input.vb
 ## <a name="see-also"></a>関連項目
 
 - [.NET のアセンブリ](../../../standard/assembly/index.md)
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

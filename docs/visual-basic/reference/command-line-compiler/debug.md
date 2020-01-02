@@ -59,6 +59,6 @@ vbc -debug -out:app.exe test.vb
 
 ## <a name="see-also"></a>参照
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
 - [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

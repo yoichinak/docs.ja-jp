@@ -19,7 +19,7 @@ ms.locfileid: "74351213"
 |[Imports (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)|[Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)|[Interface](../../../visual-basic/language-reference/statements/interface-statement.md)|[Mid](../../../visual-basic/language-reference/statements/mid-statement.md)|  
 |[Module](../../../visual-basic/language-reference/statements/module-statement.md)|[Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)|[On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
 |[Option \<キーワード >](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)|[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)|  
-|[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)|[プロパティ](../../../visual-basic/language-reference/statements/property-statement.md)|||  
+|[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|||  
   
 ## <a name="see-also"></a>参照
 
