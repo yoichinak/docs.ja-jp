@@ -39,11 +39,11 @@ ms.locfileid: "74347842"
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
-- **負の数。** `Boolean` は数値型ではなく、負の値を表すことはできません。 どのような場合でも、`Boolean` を使用して数値を保持しないでください。  
+- **負の数値。** `Boolean` は数値型ではなく、負の値を表すことはできません。 どのような場合でも、`Boolean` を使用して数値を保持しないでください。  
   
-- **型文字。** `Boolean` には、リテラルの型文字または識別子の型文字がありません。  
+- **文字を入力します。** `Boolean` には、リテラルの型文字または識別子の型文字がありません。  
   
-- **Framework の型。** .NET Framework において対応する型は、<xref:System.Boolean?displayProperty=nameWithType> 構造体です。  
+- **フレームワークの種類。** .NET Framework において対応する型は、<xref:System.Boolean?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="example"></a>例  
 
