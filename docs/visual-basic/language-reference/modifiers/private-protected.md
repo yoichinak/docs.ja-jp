@@ -25,7 +25,7 @@ ms.locfileid: "74351340"
 </PropertyGroup>
 ```
 
-詳細については、[「Visual Basic 言語バージョンの設定](../../language-reference/configure-language-version.md)」を参照してください。
+詳細については、「[Visual Basic 言語バージョンの設定](../../language-reference/configure-language-version.md)」を参照してください。
 
 > [!NOTE]
 > Visual Studio で、`private protected` で F1 ヘルプを選択すると、 [private](private.md)または[protected](protected.md)のヘルプが表示されます。 IDE は、複合単語ではなくカーソルの下にある1つのトークンを選択します。
