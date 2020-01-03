@@ -65,4 +65,4 @@ End If
 - [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
 - [トラブルシューティング (データ型)](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)
