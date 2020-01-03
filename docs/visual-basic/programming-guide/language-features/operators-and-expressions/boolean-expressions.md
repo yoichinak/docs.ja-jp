@@ -22,7 +22,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350810"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolean 式 (Visual Basic)
-*ブール式*は、`True` または `False`[ブールデータ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)の値に評価される式です。 `Boolean` 式には、複数の形式を使用できます。 最も単純なのは、次の例に示すように、`Boolean` 変数の値を `Boolean` リテラルに直接比較することです。  
+*ブール式*は、`True` または `False`[Boolean データ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)の値に評価される式です。 `Boolean` 式には、複数の形式を使用できます。 最も単純なのは、次の例に示すように、`Boolean` 変数の値を `Boolean` リテラルに直接比較することです。  
   
  [!code-vb[VbVbalrOperators#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#87)]  
   
