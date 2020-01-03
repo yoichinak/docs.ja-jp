@@ -49,7 +49,7 @@ ms.locfileid: "74352646"
  2番目の呼び出しでは、コンパイラは、縮小に基づいてオーバーロードのいずれかを削除することはできません。 最初の呼び出しの場合と同じ理由で3番目のオーバーロードを削除します。これは、引数の型をより拡大して、2番目のオーバーロードを呼び出すことができるためです。 ただし、コンパイラは1番目と2番目のオーバーロード間で解決できません。 各には、もう一方の型に拡大変換する定義済みのパラメーター型が1つあります (`Short`に`Byte` ますが、`Double`には `Single` ます)。 そのため、コンパイラはオーバーロードの解決エラーを生成します。  
   
 ## <a name="overloaded-optional-and-paramarray-arguments"></a>オーバーロードされた省略可能な引数と ParamArray 引数  
- 1つのプロシージャの2つのオーバーロードが同じシグネチャを持つ場合、最後のパラメーターは[省略可能](../../../../visual-basic/language-reference/modifiers/optional.md)として宣言され、もう一方では[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)が宣言されますが、コンパイラは、そのプロシージャへの呼び出しを次のように解決します。  
+ 1 つのプロシージャの 2 つのオーバーロードが同じシグネチャを持つ場合、最後のパラメーターは [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)として宣言され、もう一方では [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)が宣言されますが、コンパイラは、そのプロシージャへの呼び出しを次のように解決します。  
   
 |呼び出しで最後の引数がとして渡された場合|コンパイラは、最後の引数をとして宣言しているオーバーロードへの呼び出しを解決します。|  
 |---|---|  

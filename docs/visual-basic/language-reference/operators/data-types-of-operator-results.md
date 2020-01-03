@@ -22,21 +22,21 @@ Visual Basic は、オペランドのデータ型に基づいて、操作の結�
 ## <a name="data-type-ranges"></a>データ型の範囲  
  関連するデータ型の範囲は、小さい方から順に、次のようになります。  
   
-- [ブール](../../../visual-basic/language-reference/data-types/boolean-data-type.md)値: 2 つの値を指定できます。  
+- [Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md): 2 種類の値  
   
-- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)、 [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) -256 可能な整数値  
+- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)、 [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) : 256 種類の整数値  
   
-- [Short](../../../visual-basic/language-reference/data-types/short-data-type.md)、 [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) -65536 (6.5... E + 4) 可能な整数値  
+- [Short](../../../visual-basic/language-reference/data-types/short-data-type.md)、 [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) : 65,536 (6.5...E+4) 種類の整数値  
   
-- [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)、 [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) -4294967296 (4.2... E + 9) 可能な整数値  
+- [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)、 [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) : 4,294,967,296 (4.2...E+9) 種類の整数値  
   
-- [Long](../../../visual-basic/language-reference/data-types/long-data-type.md)、 [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) -18446744073709551615 (1.8... E + 19) 可能な整数値  
+- [Long](../../../visual-basic/language-reference/data-types/long-data-type.md)、 [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) : 18,446,744,073,709,551,615 (1.8...E+19) 種類の整数値  
   
-- [10 進](../../../visual-basic/language-reference/data-types/decimal-data-type.md)-1.5... e + 29 可能な整数値、最大範囲 7.9... e + 28 (絶対値)  
+- [10 進](../../../visual-basic/language-reference/data-types/decimal-data-type.md) : 1.5...E+29 種類の整数値、最大範囲 7.9...E+28 (絶対値)  
   
-- [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) : 最大範囲 3.4... E + 38 (絶対値)  
+- [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) : 最大範囲 3.4...E+38 (絶対値)  
   
-- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) -最大範囲 1.7... E + 308 (絶対値)  
+- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) : 最大範囲 1.7...E+308 (絶対値)  
   
  Visual Basic のデータ型の詳細については、「[データ型](../../../visual-basic/language-reference/data-types/index.md)」を参照してください。  
   
@@ -133,7 +133,7 @@ Visual Basic は、オペランドのデータ型に基づいて、操作の結�
  `\` 演算子のいずれかのオペランドが[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)、 [Single](../../../visual-basic/language-reference/data-types/single-data-type.md)、または[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)の場合、Visual Basic は演算の前の[Long](../../../visual-basic/language-reference/data-types/long-data-type.md)への変換を試み、結果のデータ型は `Long`になります。  
   
 ## <a name="relational-and-bitwise-comparisons"></a>関係とビットごとの比較  
- リレーショナル操作 (`=`、`<>`、`<`、`>`、`<=`、`>=`) の結果のデータ型は、常に[ブールデータ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)`Boolean`です。 これは、`OrElse`オペランドの論理演算 (`And`、`AndAlso`、`Not`、`Or`、`Xor`、`Boolean`) にも当てはまります。  
+ リレーショナル操作 (`=`、`<>`、`<`、`>`、`<=`、`>=`) の結果のデータ型は、常に`Boolean` [Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)です。 これは、`OrElse`オペランドの論理演算 (`And`、`AndAlso`、`Not`、`Or`、`Xor`、`Boolean`) にも当てはまります。  
   
  ビットごとの論理演算の結果のデータ型は、オペランドのデータ型によって異なります。 `AndAlso` と `OrElse` は `Boolean`に対してのみ定義され、Visual Basic 操作を実行する前に、必要に応じて各オペランドを `Boolean` に変換します。  
   

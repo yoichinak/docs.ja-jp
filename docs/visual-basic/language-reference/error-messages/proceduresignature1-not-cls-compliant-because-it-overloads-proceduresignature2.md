@@ -26,7 +26,7 @@ ms.locfileid: "72250180"
   
  `Overloads Sub ProcessArray(arrayParam(,) As Integer)`  
   
- 2番目の宣言では、元の1次元パラメーター `arrayParam` を配列の配列に変更します。 3番目の宣言は、`arrayParam` を2次元配列 (ランク 2) に変更します。 Visual Basic では、これらの変更のいずれかによってのみオーバーロードが異なることが許可されますが、このようなオーバーロードは、[共通言語仕様](../../../standard/language-independence-and-language-independent-components.md)(CLS) に準拠していません。  
+ 2 番目の宣言では、元の 1 次元パラメーター `arrayParam` を配列の配列に変更します。 3 番目の宣言は、`arrayParam` を 2 次元配列(ランク 2)に変更します。 Visual Basic では、これらの変更のいずれかによってのみオーバーロードが異なることが許可されますが、このようなオーバーロードは、[共通言語仕様](../../../standard/language-independence-and-language-independent-components.md)(CLS)に準拠していません。  
   
  プログラミング要素に <xref:System.CLSCompliantAttribute> を適用する場合は、準拠または非準拠を示すために、属性の `isCompliant` パラメーターを `True` または `False` のどちらかに設定します。 このパラメーターには既定値がありませんので、値を指定する必要があります。  
   
