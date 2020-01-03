@@ -39,7 +39,7 @@ Imports [ aliasname = ] namespace.element
 
 |用語|定義|
 |---|---|
-|`aliasname`|任意。 完全修飾文字列ではなく、コードが `namespace` を参照できる*インポートエイリアス*または名前。 「 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
+|`aliasname`|任意。 完全修飾文字列ではなく、コードが `namespace` を参照できる*インポートエイリアス*または名前。 「[宣言された要素の名前](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
 |`namespace`|必須。 インポートされる名前空間の完全修飾名。 には、任意のレベルに入れ子になった名前空間の文字列を指定できます。|
 |`element`|任意。 名前空間で宣言されているプログラミング要素の名前。 任意のコンテナー要素を指定できます。|
 
