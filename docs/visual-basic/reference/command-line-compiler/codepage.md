@@ -29,7 +29,7 @@ ms.locfileid: "74343545"
 |`id`|必須。 コンパイラは、`id` によって指定されたコードページを使用して、ソースファイルのエンコーディングを解釈します。|  
   
 ## <a name="remarks"></a>コメント  
- 特定のエンコーディングを使用して保存されたソースコードをコンパイルするには、`-codepage` を使用して、使用するコードページを指定します。 `-codepage` オプションは、コンパイル時にすべてのソースコードファイルに適用されます。 詳細については、「 [.NET Framework の文字エンコード](../../../standard/base-types/character-encoding.md)」を参照してください。  
+ 特定のエンコーディングを使用して保存されたソースコードをコンパイルするには、`-codepage` を使用して、使用するコードページを指定します。 `-codepage` オプションは、コンパイル時にすべてのソースコードファイルに適用されます。 詳細については、「[.NET での文字エンコード](../../../standard/base-types/character-encoding.md)」を参照してください。  
   
  現在の ANSI コードページ、Unicode、または UTF-8 を使用してソースコードファイルが保存されている場合、`-codepage` オプションは必要ありません。 Visual Studio では、ユーザーが **[エンコード]** ダイアログボックスで別のエンコードを指定しない限り、既定では、すべてのソースコードファイルが現在の ANSI コードページと共に保存されます。 Visual Studio では、 **[エンコード]** ダイアログボックスを使用して、別のコードページを使用して保存されたソースコードファイルを開きます。  
   
@@ -38,4 +38,4 @@ ms.locfileid: "74343545"
   
 ## <a name="see-also"></a>参照
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
