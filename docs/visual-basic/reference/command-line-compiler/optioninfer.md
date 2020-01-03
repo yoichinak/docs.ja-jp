@@ -55,7 +55,7 @@ vbc -optioninfer+ test.vb
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Option Infer ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)
 - [ローカル型の推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [[Visual Basic の既定値] ([オプション] ダイアログ ボックス - [プロジェクト])](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
