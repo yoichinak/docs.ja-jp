@@ -45,7 +45,7 @@ ms.locfileid: "74348568"
   
  `-resource` の省略形は `-res` です。  
   
- Visual Studio IDE で `-resource` を設定する方法の詳細については、「[アプリケーションリソースの管理 (.net)](/visualstudio/ide/managing-application-resources-dotnet)」を参照してください。  
+ Visual Studio IDE で `-resource` を設定する方法の詳細については、「[アプリケーションリソースの管理 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)」を参照してください。  
   
 ## <a name="example"></a>例  
  次のコードでは、`In.vb` をコンパイルし、リソースファイル `Rf.resource`をアタッチします。  
@@ -56,8 +56,8 @@ vbc -res:rf.resource in.vb
   
 ## <a name="see-also"></a>参照
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)
 - [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
