@@ -23,13 +23,13 @@ ms.locfileid: "74331626"
 # <a name="declared-element-characteristics-visual-basic"></a>宣言された要素の特性 (Visual Basic)
 宣言された要素の*特性*は、コードと対話する方法に影響する要素の側面です。 宣言されたすべての要素には、次の1つ以上の特性が関連付けられています。  
   
-- *データ型*: 要素が保持できる値と、その値を格納する方法。 詳細については、「[データ型の概要](../../../../visual-basic/language-reference/data-types/index.md)」(データ型) を参照してください。  
+- *データ型* - 要素が保持できる値と、その値を格納する方法。 詳細については、「[データ型の概要(Visual Basic)](../../../../visual-basic/language-reference/data-types/index.md)」(データ型) を参照してください。  
   
-- *有効期間*-要素を使用できるようになるまでの実行時間。 詳細については、「[Visual Basic の有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)」を参照してください。  
+- *有効期間* - 要素を使用できるようになるまでの実行時間。 詳細については、「[Visual Basic の有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)」を参照してください。  
   
-- *スコープ*-名前を修飾せずに要素を参照できるすべてのコードのセット。 詳細については、「[方法: 変数のスコープを制御する](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)」を参照してください。  
+- *スコープ* - 名前を修飾せずに要素を参照できるすべてのコードのセット。 詳細については、「[方法: 変数のスコープを制御する](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)」を参照してください。  
   
-- *アクセスレベル*-要素を使用するためのコードのアクセス許可。 詳細については、「[方法: 変数の可用性を制御する](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)」を参照してください。  
+- *アクセスレベル* - 要素を使用するためのコードのアクセス許可。 詳細については、「[方法: 変数の可用性を制御する](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)」を参照してください。  
   
 ## <a name="characteristics-of-the-elements"></a>要素の特性  
  次の表は、宣言された要素と、それぞれに適用される特性を示しています。  
@@ -48,10 +48,10 @@ ms.locfileid: "74331626"
 |演算子|はい|いいえ|はい|はい|  
 |インターフェイス|いいえ|いいえ|はい|はい|  
 |クラス|いいえ|いいえ|はい|はい|  
-|event|いいえ|いいえ|はい|はい|  
+|イベント|いいえ|いいえ|はい|はい|  
 |デリゲート|いいえ|いいえ|はい|はい|  
   
- <sup>1</sup>スコープは、*可視性*と呼ばれることもあります。  
+ <sup>1</sup>スコープは、*参照範囲*と呼ばれることもあります。  
   
 ## <a name="see-also"></a>関連項目
 
