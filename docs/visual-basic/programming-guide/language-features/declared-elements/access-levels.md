@@ -122,7 +122,7 @@ Private Protected internalValue As Integer
 
 ## <a name="see-also"></a>関連項目
 
-- [Dim ステートメント](../../../language-rプロパティference/statements/dim-statement.md)
+- [Dim ステートメント](../../../language-reference/statements/dim-statement.md)
 - [Static](../../../language-reference/modifiers/static.md)
 - [宣言された要素の名前](declared-element-names.md)
 - [宣言された要素の参照](references-to-declared-elements.md)
