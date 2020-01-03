@@ -43,7 +43,7 @@ End Interface
 |`name`|必須。 このインターフェイスの名前。 「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
 |`Of`|省略可。 これがジェネリックインターフェイスであることを指定します。|  
 |`typelist`|[Of](../../../visual-basic/language-reference/statements/of-clause.md)キーワードを使用する場合は必須です。 このインターフェイスの型パラメーターのリスト。 必要に応じて、`In` および `Out` ジェネリック修飾子を使用して、各型パラメーターをバリアントとして宣言できます。 [型リスト](../../../visual-basic/language-reference/statements/type-list.md)を参照してください。|  
-|`Inherits`|省略可。 このインターフェイスが、別のインターフェイスまたはインターフェイスの属性とメンバーを継承することを示します。 「 [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)」を参照してください。|  
+|`Inherits`|省略可。 このインターフェイスが、別のインターフェイスまたはインターフェイスの属性とメンバーを継承することを示します。 「[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)」を参照してください。|  
 |`interfacenames`|`Inherits` ステートメントを使用する場合は必ず指定します。 このインターフェイスの派生元のインターフェイスの名前。|  
 |`modifiers`|省略可。 定義されているインターフェイスメンバーの適切な修飾子。|  
 |`Property`|省略可。 インターフェイスのメンバーであるプロパティを定義します。|  
