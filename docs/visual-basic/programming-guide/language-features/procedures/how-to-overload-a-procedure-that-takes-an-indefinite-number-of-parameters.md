@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
 ms.openlocfilehash: 047d566c13f03803d2e5c3bc6cce0db56df4a3f0
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345851"
@@ -55,7 +55,7 @@ ms.locfileid: "74345851"
   
 ## <a name="see-also"></a>参照
 
-- [手順](./index.md)
+- [Visual Basic におけるプロシージャ](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [省略可能なパラメーター](./optional-parameters.md)
 - [パラメーター配列](./parameter-arrays.md)
