@@ -80,7 +80,7 @@ Next [ element ]
 
 ループを入れ子にする場合、各ループには一意の `element` 変数が必要です。
 
-また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、「[入れ子になったコントロール構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
+また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、「[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
 
 ## <a name="exit-for-and-continue-for"></a>Exit For と Continue For
 

@@ -45,7 +45,7 @@ AddressOf procedurename
   
 ## <a name="see-also"></a>関連項目
 
-- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [デリゲート](../../../visual-basic/programming-guide/language-features/delegates/index.md)
