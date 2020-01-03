@@ -1,5 +1,5 @@
 ---
-title: ［オプション］
+title: Optional (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Optional
@@ -27,7 +27,7 @@ ms.locfileid: "74351434"
 
 `Optional` 修飾子は、次のコンテキストで使用できます。
 
-- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
 
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 
