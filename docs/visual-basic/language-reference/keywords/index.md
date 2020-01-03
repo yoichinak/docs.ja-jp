@@ -43,7 +43,7 @@ ms.locfileid: "74338791"
 |[Dim](../statements/dim-statement.md)|[DirectCast](../operators/directcast-operator.md)|[Do](../statements/do-loop-statement.md)|[Double](../data-types/double-data-type.md)|  
 |[Each](../statements/for-each-next-statement.md)|[Else](../statements/else-statement.md)|[ElseIf](../statements/if-then-else-statement.md)|[End ステートメント](../statements/end-statement.md)|  
 |[End \<キーワード>](../statements/end-keyword-statement.md)|`EndIf`|[Enum](../statements/enum-statement.md)|[Erase](../statements/erase-statement.md)|  
-|[エラー](../statements/on-error-statement.md)|[Event](../statements/event-statement.md)|[終了](../statements/exit-statement.md)|[False](../data-types/boolean-data-type.md)|  
+|[Error](../statements/on-error-statement.md)|[Event](../statements/event-statement.md)|[Exit](../statements/exit-statement.md)|[False](../data-types/boolean-data-type.md)|  
 |[Finally](../statements/try-catch-finally-statement.md)|[For (For…Next 内)](../statements/for-next-statement.md)|[For Each…Next](../statements/for-each-next-statement.md)|[Friend](../modifiers/friend.md)|  
 |[Function](../statements/function-statement.md)|[Get](../statements/get-statement.md)|[GetType](../operators/gettype-operator.md)|[GetXMLNamespace](../operators/getxmlnamespace-operator.md)|  
 |[Global](../../../visual-basic/programming-guide/program-structure/namespaces.md)|`GoSub`|[GoTo](../statements/goto-statement.md)|[!](../statements/handles-clause.md)|  
@@ -54,19 +54,19 @@ ms.locfileid: "74338791"
 |[Long](../data-types/long-data-type.md)|[Loop](../statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../operators/mod-operator.md)|  
 |[モジュール](../modifiers/module-keyword.md)|[Module ステートメント](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[MyBase](../modifiers/mustoverride.md)|  
 |[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Namespace](../statements/namespace-statement.md)|
-|[Narrowing](../modifiers/narrowing.md)|[New 制約](../statements/type-list.md)|[New 演算子](../operators/new-operator.md)|[次へ](../statements/for-next-statement.md)|
+|[Narrowing](../modifiers/narrowing.md)|[New 制約](../statements/type-list.md)|[New 演算子](../operators/new-operator.md)|[Next](../statements/for-next-statement.md)|
 |[Next (Resume 内)](../statements/resume-statement.md)|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|
-|[NotOverridable](../modifiers/notoverridable.md)|[オブジェクト](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|
-|[Operator](../statements/operator-statement.md)|[オプション](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
+|[NotOverridable](../modifiers/notoverridable.md)|[Object](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|
+|[Operator](../statements/operator-statement.md)|[Option](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
 |[OrElse](../operators/orelse-operator.md)|[Out (ジェネリック修飾子)](../modifiers/out-generic-modifier.md)|[Overloads](../modifiers/overloads.md)|[Overridable](../modifiers/overridable.md)|
 |[Overrides](../modifiers/overrides.md)|[ParamArray](../modifiers/paramarray.md)|[Partial](../modifiers/partial.md)|[Private](../modifiers/private.md)|
-|[プロパティ](../statements/property-statement.md)|[Protected](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
+|[Property](../statements/property-statement.md)|[Protected](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
 |[ReadOnly](../modifiers/readonly.md)|[ReDim](../statements/redim-statement.md)|[REM](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|
-|[Resume](../statements/resume-statement.md)|[Return](../statements/return-statement.md)|[SByte](../data-types/sbyte-data-type.md)|[選択](../statements/select-case-statement.md)|
+|[Resume](../statements/resume-statement.md)|[Return](../statements/return-statement.md)|[SByte](../data-types/sbyte-data-type.md)|[Select](../statements/select-case-statement.md)|
 [Set](../statements/set-statement.md)|[Shadows](../modifiers/shadows.md)|[Shared](../modifiers/shared.md)|[Short](../data-types/short-data-type.md)|
 |[Single](../data-types/single-data-type.md)|[Static](../modifiers/static.md)|[Step](../statements/for-next-statement.md)|[Stop](../statements/stop-statement.md)|
 |[String](../data-types/string-data-type.md)|[Structure 制約](../statements/type-list.md)|[Structure ステートメント](../statements/structure-statement.md)|[Sub](../statements/sub-statement.md)|
-|[SyncLock](../statements/synclock-statement.md)|[Then](../statements/then-statement.md)|[Throw](../statements/throw-statement.md)|[目的](../statements/for-next-statement.md)|
+|[SyncLock](../statements/synclock-statement.md)|[Then](../statements/then-statement.md)|[Throw](../statements/throw-statement.md)|[To](../statements/for-next-statement.md)|
 |[True](../data-types/boolean-data-type.md)|[Try](../statements/try-catch-finally-statement.md)|[TryCast](../operators/trycast-operator.md)|[TypeOf…Is](../operators/typeof-operator.md)|
 |[UInteger](../data-types/uinteger-data-type.md)|[ULong](../data-types/ulong-data-type.md)|[UShort](../data-types/ushort-data-type.md)|[Using](../statements/using-statement.md)|
 |`Variant`|`Wend`|[When](../statements/try-catch-finally-statement.md)|[While](../statements/while-end-while-statement.md)|
@@ -88,14 +88,14 @@ ms.locfileid: "74338791"
 
 |||||  
 |---|---|---|---|  
-|[Aggregate](../queries/aggregate-clause.md)|[Ansi](../modifiers/ansi.md)|[アセンブリ](../modifiers/assembly.md)|[Async](../modifiers/async.md)|  
+|[Aggregate](../queries/aggregate-clause.md)|[Ansi](../modifiers/ansi.md)|[Assembly](../modifiers/assembly.md)|[Async](../modifiers/async.md)|  
 |[Auto](../modifiers/auto.md)|[Await](../operators/await-operator.md)|[Binary](../statements/option-compare-statement.md)|[Compare](../statements/option-compare-statement.md)|  
-|[カスタム](../statements/event-statement.md)|[Distinct](../queries/distinct-clause.md)|[Equals](../queries/equals-clause.md)|[Explicit](../statements/option-explicit-statement.md)|  
+|[Custom](../statements/event-statement.md)|[Distinct](../queries/distinct-clause.md)|[Equals](../queries/equals-clause.md)|[Explicit](../statements/option-explicit-statement.md)|  
 |[From](../queries/from-clause.md)|[Group By](../queries/group-by-clause.md)|[Group Join](../queries/group-join-clause.md)|[Into](../statements/into-clause.md)|  
 |[IsFalse](../operators/isfalse-operator.md)|[IsTrue](../operators/istrue-operator.md)|[Iterator](../modifiers/iterator.md)|[Join](../queries/join-clause.md)|  
 |[Key](../modifiers/key.md)|[Mid](../statements/mid-statement.md)|[Off](../../../visual-basic/misc/off.md)|[Order By](../queries/order-by-clause.md)|  
 |[Preserve](../statements/redim-statement.md)|[Skip](../queries/skip-clause.md)|[Skip While](../queries/skip-while-clause.md)|[Strict](../statements/option-strict-statement.md)|  
-|[Take](../queries/take-clause.md)|[Take While](../queries/take-while-clause.md)|[テキスト](../statements/option-compare-statement.md)|[Unicode](../modifiers/unicode.md)|  
+|[Take](../queries/take-clause.md)|[Take While](../queries/take-while-clause.md)|[Text](../statements/option-compare-statement.md)|[Unicode](../modifiers/unicode.md)|  
 |[Until](../statements/do-loop-statement.md)|[Where](../queries/where-clause.md)|[Yield](../statements/yield-statement.md)|[#ExternalSource](../directives/externalsource-directive.md)|  
 |[#Region](../directives/region-directive.md)||||  
   
@@ -107,7 +107,7 @@ ms.locfileid: "74338791"
 |[Collection オブジェクトの概要](collection-object-summary.md)|コレクションに使用される言語要素の一覧を示します。|  
 |[制御フローの概要](control-flow-summary.md)|プロシージャ フローをループおよび制御するために使用されるステートメントの一覧を示します。|  
 |[変換の概要](conversion-summary.md)|数値、日付、時刻、および文字列の変換に使用される関数の一覧を示します。|  
-|[Data Types Summary](data-types-summary.md)|データ型の一覧を示します。 また、データ型間の変換およびデータ型の検証に使用される関数の一覧も示します。|  
+|[データ型の概要](data-types-summary.md)|データ型の一覧を示します。 また、データ型間の変換およびデータ型の検証に使用される関数の一覧も示します。|  
 |[日付と時刻の概要](dates-and-times-summary.md)|日付と時刻に使用される言語要素の一覧を示します。|  
 |[宣言と定数の概要](declarations-and-constants-summary.md)|変数、定数、クラス、モジュールなどのプログラミング要素を宣言するために使用されるステートメントの一覧を示します。 オブジェクト情報の取得、イベントの処理、および継承の実装に使用される言語要素の一覧も示します。|  
 |[ディレクトリとファイルの概要](directories-and-files-summary.md)|ファイル システムの制御とファイルの処理に使用される関数の一覧を示します。|  

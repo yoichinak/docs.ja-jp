@@ -64,7 +64,7 @@ End With
 
 ブロック外から `With` ステートメント ブロックに分岐することはできません。
 
-ブロックの内部にループがなければ、ステートメントは一度だけ実行されます。 さまざまな種類の制御構造を入れ子にできます。 詳細については、「[入れ子になったコントロール構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
+ブロックの内部にループがなければ、ステートメントは一度だけ実行されます。 さまざまな種類の制御構造を入れ子にできます。 詳細については、「[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
 
 > [!NOTE]
 > また、オブジェクト初期化子で `With` キーワードを使用することもできます。 詳細と例については、「[オブジェクト初期化子: 名前付きおよび匿名](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)型」と「[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。
