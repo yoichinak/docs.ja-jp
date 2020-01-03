@@ -67,4 +67,4 @@ vbc -target:library in.vb
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
 - [.NET のアセンブリ](../../../standard/assembly/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

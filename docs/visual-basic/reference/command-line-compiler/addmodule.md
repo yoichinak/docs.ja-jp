@@ -27,18 +27,16 @@ ms.locfileid: "72524482"
  必須です。 メタデータが含まれているものの、アセンブリマニフェストが含まれていないファイルのコンマ区切りのリスト。 スペースを含むファイル名は引用符 ("") で囲む必要があります。  
   
 ## <a name="remarks"></a>Remarks  
- `fileList` パラメーターによって指定されたファイルは、`-target:module` オプションを使用して作成するか、または `-target:module` に相当する別のコンパイラを使用して作成する必要があります。  
+ @No__t_0 パラメーターによって指定されたファイルは、`-target:module` オプションを使用して作成するか、または `-target:module` に相当する別のコンパイラを使用して作成する必要があります。  
   
- `-addmodule` で追加されるすべてのモジュールは、実行時に出力ファイルと同じディレクトリに存在する必要があります。 つまり、コンパイル時に任意のディレクトリにモジュールを指定できますが、モジュールは実行時にアプリケーションディレクトリに存在する必要があります。 そうでない場合は、<xref:System.TypeLoadException> エラーが発生します。  
+ @No__t_0 で追加されるすべてのモジュールは、実行時に出力ファイルと同じディレクトリに存在する必要があります。 つまり、コンパイル時に任意のディレクトリにモジュールを指定できますが、モジュールは実行時にアプリケーションディレクトリに存在する必要があります。 そうでない場合は、<xref:System.TypeLoadException> エラーが発生します。  
   
- `-target:module` 以外の [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) オプションを `-addmodule` に
-渡すファイルはプロジェクトのアセンブリの一部になります。 アセンブリは、`-addmodule` で追加されたファイルを 1 つ以上含む出力ファイルを実
-行する必要があります。
+ @No__t_2 で `-target:module` 以外の[ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)オプションを (暗黙的または明示的に) 指定すると、`-addmodule` に渡すファイルはプロジェクトのアセンブリの一部になります。 @No__t_0 で追加された1つ以上のファイルを含む出力ファイルを実行するには、アセンブリが必要です。  
   
  アセンブリを含むファイルからメタデータをインポートするには、[-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)を使用します。  
   
 > [!NOTE]
-> `-addmodule` オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
+> @No__t_0 オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
   
 ## <a name="example"></a>例  
  次のコードでは、モジュールを作成します。  
@@ -49,7 +47,7 @@ ms.locfileid: "72524482"
   
  [!code-vb[VbVbalrCompiler#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#48)]  
   
- `t1` を実行すると、`802` が出力されます。  
+ @No__t_0 を実行すると、`802` が出力されます。  
   
 ## <a name="see-also"></a>関連項目
 

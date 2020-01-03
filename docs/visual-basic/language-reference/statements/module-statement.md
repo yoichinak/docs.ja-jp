@@ -91,7 +91,7 @@ End Module
 
 - **アクセスレベル。** モジュール内では、各メンバーを独自のアクセス レベルで宣言できます。 モジュールメンバーの既定の [Public](../../../visual-basic/language-reference/modifiers/public.md) アクセスは、変数と定数を除き、既定で [Private](../../../visual-basic/language-reference/modifiers/private.md) アクセスになります。 モジュールがそのメンバーの 1 つ以上のアクセス権を持っている場合、指定されたモジュールへのアクセス レベルが優先されます。
 
-- **スコープ。** モジュールは、名前空間全体でスコープ内にあります。
+- **スコープ。 ** モジュールは、名前空間全体でスコープ内にあります。
 
   すべてのモジュールメンバーのスコープは、モジュール全体です。 すべてのメンバーに*型の上位変換*が適用されていることに注意してください。これにより、そのスコープがモジュールを含む名前空間に昇格します。 詳細については、「[型の上位変換](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)」を参照してください。
 

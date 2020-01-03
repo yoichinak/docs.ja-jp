@@ -29,7 +29,7 @@ ms.locfileid: "72004632"
 |`filename`|出力ファイルに追加する .ico ファイル。 ファイル名にスペースが含まれている場合は、ファイル名を引用符 ("") で囲みます。|  
   
 ## <a name="remarks"></a>コメント  
- Microsoft Windows リソースコンパイラ (RC) を使用して .ico ファイルを作成できます。 リソースコンパイラは、ビジュアルC++プログラムをコンパイルすると呼び出されます.ico ファイルは、.rc ファイルから作成されます。 '-win32icon' および `-win32resource` オプションは相互に排他的です。  
+ Microsoft Windows リソースコンパイラ (RC) を使用して .ico ファイルを作成できます。 リソースコンパイラは、ビジュアルC++プログラムをコンパイルすると呼び出されます.ico ファイルは、.rc ファイルから作成されます。 @No__t-0 および `-win32resource` オプションは相互に排他的です。  
   
  .NET Framework リソースファイルを参照する場合は[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)を参照し、.NET Framework リソースファイルをアタッチする場合は[-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)を参照してください。 .Res ファイルをインポートするには、「[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) 」を参照してください。  
   

@@ -38,12 +38,12 @@ ms.locfileid: "74353201"
   
 - アセンブリを正常に実行するために必要なアクセス許可。  
   
- アセンブリとアセンブリマニフェストの詳細については、「 [.net のアセンブリ](../../../standard/assembly/index.md)」を参照してください。  
+ アセンブリとアセンブリマニフェストの詳細については、「[.NET のアセンブリ](../../../standard/assembly/index.md)」を参照してください。  
   
 ### <a name="importing-and-exporting-type-libraries"></a>タイプライブラリのインポートとエクスポート  
  Visual Studio には、Tlbimp というユーティリティが含まれています。これを使用すると、タイプライブラリから .NET Framework アプリケーションに情報をインポートできます。 アセンブリからタイプライブラリを生成するには、Tlbexp.exe ユーティリティを使用します。  
   
- Tlbimp と Tlbexp.exe の詳細については、「 [tlbimp.exe (タイプライブラリインポーター)](../../../framework/tools/tlbimp-exe-type-library-importer.md) 」および「 [Tlbexp.exe (タイプライブラリエクスポーター)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)」を参照してください。  
+ Tlbimp と Tlbexp.exe の詳細については、「[tlbimp.exe (タイプライブラリインポーター)](../../../framework/tools/tlbimp-exe-type-library-importer.md) 」および「[Tlbexp.exe (タイプライブラリエクスポーター)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)」を参照してください。  
   
 ## <a name="interop-assemblies"></a>相互運用機能アセンブリ  
  相互運用機能アセンブリは、マネージコードとアンマネージコードの間を橋渡しし、COM オブジェクトメンバーを同等のマネージメンバー .NET Framework にマップする .NET Framework アセンブリです。 Visual Basic .NET によって作成された相互運用アセンブリは、相互運用性のマーシャリングなど、COM オブジェクトの操作に関する多くの詳細を処理します。  

@@ -30,7 +30,7 @@ ms.locfileid: "72581266"
 
 ## <a name="remarks"></a>Remarks
 
-`-delaysign` オプションは、 [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) または [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) と共に使用しなければ無効になります。
+@No__t_0 オプションは、 [-](../../../visual-basic/reference/command-line-compiler/keyfile.md)キーまたは[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)と共に使用しない限り、効果はありません。
 
 アセンブリに完全に署名するように指定すると、コンパイラはマニフェスト (アセンブリ メタデータ) を含むファイルをハッシュし、秘密キーでそのハッシュに署名します。 結果として得られるデジタル署名は、マニフェストを含むファイルに格納されます。 アセンブリが遅延署名されている場合、コンパイラは署名を計算して保存しませんが、後で署名を追加できるように、ファイルに領域を確保します。
 
