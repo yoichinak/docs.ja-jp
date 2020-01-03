@@ -53,7 +53,7 @@ ms.locfileid: "74345976"
 
 - 複数行のラムダ関数では、`As` 句を使用して戻り値の型を指定することも、戻り値の型が推論されるように `As` 句を省略することもできます。 複数行のラムダ関数に対して `As` 句を省略した場合、戻り値の型は、複数行のラムダ関数のすべての `Return` ステートメントから最も優先的な型になります。 最も優先される*型*は、他のすべての型の幅を広げることができる一意の型です。 この一意の型を特定できない場合、最も優先される型は、配列内の他のすべての型を絞り込むことができる一意の型になります。 これらの一意の型をどちらも特定できない場合は、 `Object`が最も優先度の高い型になります。 この場合、`Option Strict` が `On`に設定されていると、コンパイラエラーが発生します。
 
-     たとえば、`Return` ステートメントに指定された式に `Integer`、`Long`、および `Double`型の値が含まれている場合、結果の配列の型は `Double`になります。 `Integer` と `Long` はどちらも `Double` に広げ、`Double`のみです。 そのため、 `Double` が最も優先度の高い型になります。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
+     たとえば、`Return` ステートメントに指定された式に `Integer`、`Long`、、および `Double`型の値が含まれている場合、結果の配列の型は `Double`になります。 `Integer` と `Long` はどちらも `Double` に拡張され、`Double` のみになります。 そのため、`Double` が最も優先度の高い型になります。 詳細については、「[拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
 
 - 単一行関数の本体は、ステートメントではなく、値を返す式である必要があります。 単一行関数の `Return` ステートメントはありません。 単一行関数によって返される値は、関数本体の式の値です。
 
@@ -110,7 +110,7 @@ Public Class Form1
 End Class
 ```
 
-非同期メソッドを作成して使用する方法の詳細については、「 [async および Await を使用した非同期プログラミング](../../../../visual-basic/programming-guide/concepts/async/index.md)」を参照してください。
+非同期メソッドを作成して使用する方法の詳細については、「[async および Await を使用した非同期プログラミング](../../../../visual-basic/programming-guide/concepts/async/index.md)」を参照してください。
 
 ## <a name="context"></a>Context
 
@@ -136,7 +136,7 @@ End Class
 
 ## <a name="converting-to-a-delegate-type"></a>デリゲート型への変換
 
-ラムダ式は、互換性のあるデリゲート型に暗黙的に変換できます。 互換性に関する一般的な要件の詳細については、「厳密でない[デリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」を参照してください。 たとえば、次のコード例は、`Func(Of Integer, Boolean)` または一致するデリゲートシグネチャに暗黙的に変換するラムダ式を示しています。
+ラムダ式は、互換性のあるデリゲート型に暗黙的に変換できます。 互換性に関する一般的な要件の詳細については、「[厳密でないデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」を参照してください。 たとえば、次のコード例は、`Func(Of Integer, Boolean)` または一致するデリゲートシグネチャに暗黙的に変換するラムダ式を示しています。
 
 [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]
 
@@ -158,12 +158,12 @@ End Class
 
 ## <a name="see-also"></a>参照
 
-- [手順](./index.md)
+- [Visual Basic におけるプロシージャ](./index.md)
 - [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [null 許容値型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- 方法 : [Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [方法 : Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
 - [方法 : ラムダ式を作成する](./how-to-create-a-lambda-expression.md)
 - [厳密でないデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
