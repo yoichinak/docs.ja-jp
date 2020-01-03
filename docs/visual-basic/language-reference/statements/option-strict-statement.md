@@ -85,7 +85,7 @@ Option Strict { On | Off }
  `Object` 型として宣言された変数のプロパティまたはメソッドにオブジェクトを代入する場合は、そのオブジェクトは遅延バインディングされます。 詳細については、「[事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)」を参照してください。  
   
 ## <a name="implicit-object-type-errors"></a>暗黙的なオブジェクト型のエラー  
- 適切な型が宣言された変数を推論できない場合は暗黙的なオブジェクトの型エラーが発生するため、`Object` の型が推論されます。 これは主に、`Dim` 句を使用せず、`As` をオフにして、`Option Infer` ステートメントを使用して変数を宣言した場合に発生します。 詳細については、「[オプションの推定ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)」および「[Visual Basic 言語の仕様](../../../visual-basic/reference/language-specification/index.md)」を参照してください。  
+ 適切な型が宣言された変数を推論できない場合は暗黙的なオブジェクトの型エラーが発生するため、`Object` の型が推論されます。 これは主に、`Dim` 句を使用せず、`As` をオフにして、`Option Infer` ステートメントを使用して変数を宣言した場合に発生します。 詳細については、「[Option Infer ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)」および「[Visual Basic 言語仕様](../../../visual-basic/reference/language-specification/index.md)」を参照してください。  
   
  メソッドパラメーターの場合、`Option Strict` がオフの場合、`As` 句は省略可能です。 ただし、いずれかのパラメーターが `As` 句を使用する場合は、すべてのパラメーターで使用する必要があります。 `Option Strict` が on の場合は、すべてのパラメーター定義に対して `As` 句が必要です。  
   

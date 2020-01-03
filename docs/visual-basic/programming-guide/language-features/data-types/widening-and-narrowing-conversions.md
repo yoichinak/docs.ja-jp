@@ -70,7 +70,7 @@ ms.locfileid: "74348686"
   
 - 前の表の拡大変換の逆方向 (すべての型がそれ自体に拡大変換される点を除く)  
   
-- [ブール](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)型と任意の数値型の間の双方向の変換  
+- [Boolean データ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)と任意の数値型の間の双方向の変換  
   
 - 任意の数値型から任意の列挙型への変換 (`Enum`)  
   
@@ -110,7 +110,7 @@ shape = square
 ## <a name="see-also"></a>参照
 
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
 - [方法: Visual Basic でオブジェクトを別の型に変換する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)

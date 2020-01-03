@@ -16,15 +16,15 @@ ms.locfileid: "74350495"
 Visual Basic 2017 以降、Visual Basic 言語ではタプルのための組み込みサポートが提供され、タプルの作成や、タプルの要素へのアクセスが簡略化されます。 タプルは、特定の数と値のシーケンスを持つ軽量なデータ構造です。 タプルをインスタンス化する場合は、数とそれぞれの値 (または要素) のデータ型を定義します。 たとえば、2 タプル (またはペア) には 2 つの要素があります。 1 つ目は `Boolean` 値、2 番目のは `String`です。 タプルを使用すると 1 つのオブジェクトに複数の値を格納するのが簡単になるため、メソッドから複数の値を返すための気軽な方法としてよく使用されます。
 
 > [!IMPORTANT]
-> 組のサポートには <xref:System.ValueTuple> 型が必要です。 .NET Framework 4.7 がインストールされていない場合は、nuget ギャラリーから入手できる NuGet パッケージ `System.ValueTuple`を追加する必要があります。 このパッケージがないと、"定義済みの型 ' ValueTuple (,,,) ' が定義またはインポートされていません" のようなコンパイルエラーが発生することがあります。
+> タプルのサポートには <xref:System.ValueTuple> 型が必要です。.NET Framework 4.7 がインストールされていない場合は、nuget ギャラリーから入手できる NuGet パッケージ `System.ValueTuple`を追加する必要があります。このパッケージがないと、"定義済みの型 ' ValueTuple (Of,,,) ' が定義またはインポートされていません" のようなコンパイルエラーが発生することがあります。
 
 ## <a name="instantiating-and-using-a-tuple"></a>タプルのインスタンス化と使用
 
-タプルをインスタンス化するには、コンマ区切り値の im かっこを囲みます。 これらの値はそれぞれ、タプルのフィールドになります。 たとえば、次のコードでは、`Date` が最初の値、`String` が2 番目の値、3 番目の値が `Boolean` であるトリプル (または 3 タプル) を定義しています。
+タプルをインスタンス化するには、コンマ区切り値の im かっこを囲みます。これらの値はそれぞれ、タプルのフィールドになります。たとえば、次のコードでは、`Date` が最初の値、`String` が2 番目の値、3 番目の値が `Boolean` であるトリプル (または 3 タプル) を定義しています。
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#1)]
 
-タプルをインスタンス化するには、コンマ区切り値の im かっこを囲みます。 これらの値はそれぞれ、タプルのフィールドになります。 たとえば、次のコードでは、`Date` が最初の値、`String` が2 番目の値、3 番目の値が `Boolean` であるトリプル (または 3 タプル) を定義しています。
+タプルをインスタンス化するには、コンマ区切り値の im かっこを囲みます。これらの値はそれぞれ、タプルのフィールドになります。たとえば、次のコードでは、`Date` が最初の値、`String` が2 番目の値、3 番目の値が `Boolean` であるトリプル (または 3 タプル) を定義しています。
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#2)]
 
@@ -34,15 +34,15 @@ Visual Basic タプルのフィールドは読み取り/書き込み可能です
 
 ## <a name="instantiating-and-using-a-named-tuple"></a>名前付きタプルのインスタンス化と使用
 
-タプルのフィールドに既定の名前を使用するのではなく、独自の名前をタプルの要素に割り当てることで、*名前付きタプル*をインスタンス化できます。 タプルのフィールドには、割り当てられた名前*または*既定の名前を使用してアクセスできます。 次の例では、前と同じ 3 つのタプルをインスタンス化しますが、最初のフィールド `EventDate`、2 番目の `Name`、3 番目の `IsHoliday`を明示的に指定する点が異なります。 次に、フィールドの値を表示して変更し、フィールドの値を再度表示します。
+タプルのフィールドに既定の名前を使用するのではなく、独自の名前をタプルの要素に割り当てることで、*名前付きタプル*をインスタンス化できます。タプルのフィールドには、割り当てられた名前*または*既定の名前を使用してアクセスできます。次の例では、前と同じ 3 つのタプルをインスタンス化しますが、最初のフィールド `EventDate`、2 番目の `Name`、3 番目の `IsHoliday`を明示的に指定する点が異なります。次に、フィールドの値を表示して変更し、フィールドの値を再度表示します
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#4)]
 
 ## <a name="inferred-tuple-element-names"></a>推論されたタプル要素の名前
 
-Visual Basic 15.3 以降では、Visual Basic タプル要素の名前を推論できます。明示的に割り当てる必要はありません。 推論されたタプル名は、一連の変数からタプルを初期化するときに、タプル要素名を変数名と同じにする場合に便利です。
+Visual Basic 15.3 以降では、Visual Basic タプル要素の名前を推論できます。明示的に割り当てる必要はありません。推論されたタプル名は、一連の変数からタプルを初期化するときに、タプル要素名を変数名と同じにする場合に便利です。
 
-次の例では、明示的に指定された3つの要素、`state`、`stateName`、および `capital`を含む `stateInfo` 組を作成します。 要素の名前付けでは、タプルの初期化ステートメントによって、名前付きの要素が同じ名前の変数の値に割り当てられることに注意してください。
+次の例では、明示的に指定された 3 つの要素、`state`、`stateName`、および `capital`を含む `stateInfo` タプルを作成します。要素の名前付けでは、タプルの初期化ステートメントによって、名前付きの要素が同じ名前の変数の値に割り当てられることに注意してください。
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#1)]
 
@@ -72,7 +72,7 @@ Visual Basic 15.3 以降では、Visual Basic タプル要素の名前を推論�
 
 ## <a name="tuples-versus-structures"></a>タプルと構造体
 
-Visual Basic タプルは、値型であり、いずれかの種類の **ValueTuple** ジェネリック型のインスタンスです。 たとえば、前の例で定義されている `holiday` タプルは、<xref:System.ValueTuple%603> 構造のインスタンスです。 データ用の軽量コンテナーとなるように設計されています。 タプルは簡単に複数のデータ項目を含むオブジェクトを作成することを目的としているため、カスタム構造の持ついくつかの機能が不足している可能性があります。 これには次が含まれます。
+Visual Basic タプルは、値型であり、いずれかの種類の **ValueTuple** ジェネリック型のインスタンスです。たとえば、前の例で定義されている `holiday` タプルは、<xref:System.ValueTuple%603> 構造のインスタンスです。データ用の軽量コンテナーとなるように設計されています。タプルは簡単に複数のデータ項目を含むオブジェクトを作成することを目的としているため、カスタム構造の持ついくつかの機能が不足している可能性があります。これには次が含まれます。
 
 - カスタムメンバー。 タプルの独自のプロパティ、メソッド、またはイベントを定義することはできません。
 
@@ -82,14 +82,14 @@ Visual Basic タプルは、値型であり、いずれかの種類の **ValueTu
 
 カスタムメンバー、プロパティとフィールドの検証、または不変性が重要な場合は、Visual Basic [Structure](../../../language-reference/statements/structure-statement.md)ステートメントを使用してカスタム値型を定義する必要があります。
 
-Visual Basic タプルは、その **valuetuple** 型のメンバーを継承します。 フィールドに加えて、次のメソッドがあります。
+Visual Basic タプルは、その **valuetuple** 型のメンバーを継承します。フィールドに加えて、次のメソッドがあります。
 
 | メンバー | 説明 |
 | ---|---|
 | CompareTo | 現在のタプルを同じ数の要素を持つ別のタプルと比較します。 |
 | Equals | 現在のタプルが別のタプルまたはオブジェクトと等しいかどうかを判断します。 |
 | GetHashCode | 現在のインスタンスのハッシュコードを計算します。 |
-| ToString | この組の文字列表現を返します。このタプルは `(Item1, Item2...)`の形式をとります。 `Item1` と `Item2` は組のフィールドの値を表します。 |
+| ToString | このタプルの文字列表現を返します。このタプルは `(Item1, Item2...)`の形式をとります。`Item1` と `Item2` はタプルのフィールドの値を表します。|
 
 さらに、 **Valuetuple**型は <xref:System.Collections.IStructuralComparable> および <xref:System.Collections.IStructuralEquatable> インターフェイスを実装します。これにより、顧客比較子を定義できます。
 
@@ -111,13 +111,13 @@ Visual Basic は、同じ数のフィールドを持つタプル型間の割り�
 
 最初の2つの変数 `unnamed` と `anonymous`には、フィールドにセマンティック名が指定されていません。 フィールド名は、既定の `Item1` と `Item2`です。 最後の2つの変数 `named` と `differentName` には、セマンティックフィールド名があります。 この 2 つのタプルでは、フィールド名が異なっていることに注意してください。
 
-これらの4つの組のフィールドの数 ("アリティ" と呼ばれる) は同じであり、それらのフィールドの型は同じです。 このため、これらの割り当てはすべて機能します。
+これらの 4 つのタプルのフィールドの数（"アリティ" と呼ばれる）は同じであり、それらのフィールドの型は同じです。このため、これらの割り当てはすべて機能します。
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
 タプルの名前が割り当てられていないことに注意してください。 フィールドの値は、タプルのフィールドの順序に従って割り当てられます。
 
-最後に、`named` の最初のフィールドが `Integer`である場合でも、`named` タプルを `conversion` 組に割り当てることができることに注意してください。 `conversion` の最初のフィールドは `Long`です。 `Integer` を `Long` に変換することは、拡大変換であるため、この割り当ては成功します。
+最後に、`named` の最初のフィールドが `Integer`である場合でも、`named` タプルを `conversion` タプルに割り当てることができることに注意してください。`conversion` の最初のフィールドは `Long`です。`Integer` を `Long` に変換することは、拡大変換であるため、この割り当ては成功します。
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
@@ -155,19 +155,19 @@ named = differentShape
 
 ## <a name="visual-basic-tuples-and-tuples-in-the-net-framework"></a>Visual Basic のタプルと、.NET Framework 内のタプル
 
-Visual Basic タプルは、.NET Framework 4.7 で導入された、**ValueTuple**ジェネリック型の 1 つのインスタンスです。 .NET Framework には、一連の汎用的な **Tuple** クラスも含まれています。 ただし、これらのクラスは、Visual Basic タプルと、次のようなさまざまな方法での **ValueTuple** ジェネリック型とは異なります。
+Visual Basic タプルは、.NET Framework 4.7 で導入された、**ValueTuple**ジェネリック型の 1 つのインスタンスです。.NET Framework には、一連の汎用的な **Tuple** クラスも含まれています。ただし、これらのクラスは、Visual Basic タプルと、次のようなさまざまな方法での **ValueTuple** ジェネリック型とは異なります。
 
-- **タプル**クラスの要素は、`Item1`、`Item2`などという名前のプロパティです。 Visual Basic タプルと **valuetuple** 型では、tuple 要素はフィールドです。
+- **タプル**クラスの要素は、`Item1`、`Item2`などという名前のプロパティです。Visual Basic タプルと **valuetuple** 型では、tuple 要素はフィールドです。
 
-- **タプル** のインスタンスまたは **valuetuple** インスタンスの要素にわかりやすい名前を割り当てることはできません。 Visual Basic を使用すると、フィールドの意味を伝える名前を割り当てることができます。
+- **タプル** のインスタンスまたは **valuetuple** インスタンスの要素にわかりやすい名前を割り当てることはできません。Visual Basic を使用すると、フィールドの意味を伝える名前を割り当てることができます。
 
-- **タプル**インスタンスのプロパティは読み取り専用です。タプルは変更できません。 Visual Basic 組と**valuetuple**型では、タプルフィールドは読み取り/書き込み可能です。タプルは変更可能です。
+- **タプル** インスタンスのプロパティは読み取り専用です。タプルは変更できません。Visual Basic タプルと **valuetuple** 型では、タプルフィールドは読み取り/書き込み可能です。タプルは変更可能です。
 
-- ジェネリック**タプル** 型は参照型です。 これらの **タプル** 型を使用することは、オブジェクトを割り当てることを意味します。 ホット パスでは、これがアプリケーションのパフォーマンスに大きな影響を与えることがあります。 Visual Basic タプルと **Valuetuple** 型は値型です。
+- ジェネリック**タプル** 型は参照型です。これらの **タプル** 型を使用することは、オブジェクトを割り当てることを意味します。ホット パスでは、これがアプリケーションのパフォーマンスに大きな影響を与えることがあります。Visual Basic タプルと **Valuetuple** 型は値型です。
 
-<xref:System.TupleExtensions> クラスの拡張メソッドを使用すると、Visual Basic タプルと .NET **Tuple** オブジェクト間で簡単に変換できます。 **Totuple** メソッドは、Visual Basic タプルを .net **tuple** オブジェクトに変換し、 **tovaluetuple** メソッドは .net **タプル** オブジェクトを Visual Basic タプルに変換します。
+<xref:System.TupleExtensions> クラスの拡張メソッドを使用すると、Visual Basic タプルと .NET **Tuple** オブジェクト間で簡単に変換できます。**Totuple** メソッドは、Visual Basic タプルを .net **tuple** オブジェクトに変換し、 **tovaluetuple** メソッドは .net **タプル** オブジェクトを Visual Basic タプルに変換します。
 
-次の例では、タプルを作成し、それを .NET **tuple** オブジェクトに変換して、Visual Basic タプルに変換して戻します。 この例では、このタプルを元のタプルと比較して、それらが等しいことを確認します。
+次の例では、タプルを作成し、それを .NET **tuple** オブジェクトに変換して、Visual Basic タプルに変換して戻します。この例では、このタプルを元のタプルと比較して、それらが等しいことを確認します。
 
 [!code-vb[Convert](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple2.vb#1)]
 
