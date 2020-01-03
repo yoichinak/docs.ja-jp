@@ -56,6 +56,6 @@ ms.locfileid: "74354060"
 ## <a name="see-also"></a>参照
 
 - [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
-- [Module (Visual Basic)](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+-[Module <キーワード>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
 - [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [方法 : コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
