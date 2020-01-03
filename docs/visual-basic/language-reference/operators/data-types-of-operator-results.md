@@ -22,7 +22,7 @@ Visual Basic は、オペランドのデータ型に基づいて、操作の結�
 ## <a name="data-type-ranges"></a>データ型の範囲  
  関連するデータ型の範囲は、小さい方から順に、次のようになります。  
 
-- [Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md): 2 種類の値  
+- [Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md): 2 種類の値 
   
 - [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)、 [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) : 256 種類の整数値  
   
