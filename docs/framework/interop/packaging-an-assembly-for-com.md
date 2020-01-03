@@ -92,7 +92,7 @@ COM 開発者がアプリケーションに組み込むときに役立つ、マ�
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [COM への .NET Framework コンポーネントの公開](exposing-dotnet-components-to-com.md)
-- [要件 (相互運用のための .NET 型の)](../../standard/native-interop/qualify-net-types-for-interoperation.md)
+- [COM 相互運用のための .NET 型の要件](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [クラス インターフェイスの概要](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [アセンブリのセキュリティに関する考慮事項](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../tools/tlbexp-exe-type-library-exporter.md)

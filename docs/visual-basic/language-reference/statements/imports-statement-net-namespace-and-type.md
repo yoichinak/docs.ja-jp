@@ -57,14 +57,14 @@ Imports System.Collections.Generic
 
 `Imports` は、ファイルレベルでのみ使用できます。 つまり、インポートの宣言コンテキストはソースファイルである必要があり、名前空間、クラス、構造体、モジュール、インターフェイス、プロシージャ、またはブロックにすることはできません。
 
-`Imports` ステートメントでは、プロジェクトで他のプロジェクトおよびアセンブリの要素を使用できないことに注意してください。 インポートでは、参照の設定は行われません。 これにより、プロジェクトで既に使用可能な名前を修飾する必要がなくなります。 詳細については、「[宣言された要素への参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)」の「コンテナー要素のインポート」を参照してください。
+`Imports` ステートメントでは、プロジェクトで他のプロジェクトおよびアセンブリの要素を使用できないことに注意してください。 インポートでは、参照の設定は行われません。 これにより、プロジェクトで既に使用可能な名前を修飾する必要がなくなります。 詳細については、「[宣言された要素の参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)」の「コンテナー要素のインポート」を参照してください。
 
 > [!NOTE]
 > 暗黙の `Imports` ステートメントを定義するには、[[参照] ページの [プロジェクトデザイナー] (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)を使用します。 詳細については、「[方法: インポートされた名前空間を追加または削除する (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)」を参照してください。
 
 ## <a name="import-aliases"></a>インポート エイリアス
 
-*インポートエイリアス*は、名前空間または型のエイリアスを定義します。 インポートエイリアスは、1つまたは複数の名前空間で宣言されているものと同じ名前の項目を使用する必要がある場合に便利です。 詳細と例については、「[宣言された要素への参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)」の「要素名の修飾」を参照してください。
+*インポートエイリアス*は、名前空間または型のエイリアスを定義します。 インポートエイリアスは、1 つまたは複数の名前空間で宣言されているものと同じ名前の項目を使用する必要がある場合に便利です。 詳細と例については、「[宣言された要素の参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)」の「要素名の修飾」を参照してください。
 
 モジュールレベルで `aliasname`と同じ名前のメンバーを宣言することはできません。 この場合、Visual Basic コンパイラは、宣言されたメンバーに対してのみ `aliasname` を使用し、それをインポートエイリアスとして認識しなくなります。
 
