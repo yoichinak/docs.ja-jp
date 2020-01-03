@@ -61,7 +61,7 @@ Option Strict { On | Off }
 ## <a name="implicit-narrowing-conversion-errors"></a>暗黙的な縮小変換エラー  
  縮小変換する暗黙的なデータ型変換がある場合は、暗黙的な縮小変換エラーが発生します。  
   
- Visual Basic は、さまざまなデータ型を他のデータ型に変換できます。 データが失われる可能性があるのは、あるデータ型の値が、精度が低いか、容量が小さいデータ型に変換されたときです。 このような縮小変換が失敗した場合、実行時エラーが発生します。 `Option Strict` によって、これらの縮小変換のコンパイル時通知が確実に行われるため、回避できます。 詳細については、「[暗黙的な変換と明示的な変換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)」および「[拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
+ Visual Basic は、さまざまなデータ型を他のデータ型に変換できます。 データが失われる可能性があるのは、あるデータ型の値が、精度が低いか、容量が小さいデータ型に変換されたときです。 このような縮小変換が失敗した場合、実行時エラーが発生します。 `Option Strict` によって、これらの縮小変換のコンパイル時通知が確実に行われるため、回避できます。 詳細については、「[暗黙の型変換と明示的な型変換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)」および「[拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
   
  エラーを発生させる可能性のある変換には、式で発生する暗黙的な変換が含まれます。 詳細については、次のトピックを参照してください。  
   
