@@ -89,7 +89,7 @@ Dim [ WithEvents ] variablelist
 
 - `WithEvents`
 
-任意。 イベントを発生させるクラスのインスタンスを参照するオブジェクト変数であることを指定します。 「 [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)」を参照してください。
+任意。 イベントを発生させるクラスのインスタンスを参照するオブジェクト変数であることを指定します。 「[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)」を参照してください。
 
 - `variablelist`
 
@@ -150,7 +150,7 @@ Private salary As Decimal
 Static runningTotal As Integer
 ```
 
-`Option Explicit` が on (既定値) の場合、コンパイラは使用するすべての変数の宣言を必要とします。 詳細については、「 [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)」を参照してください。
+`Option Explicit` が on (既定値) の場合、コンパイラは使用するすべての変数の宣言を必要とします。 詳細については、「[Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)」を参照してください。
 
 ## <a name="specifying-an-initial-value"></a>初期値の指定
 
