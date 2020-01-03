@@ -111,6 +111,6 @@ ms.locfileid: "74349739"
 - [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- 方法 : [Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [方法 : Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
 - [Delegate ステートメント](../../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
