@@ -107,15 +107,13 @@ ms.locfileid: "74350513"
 型チェックスイッチ ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) が `On`場合、コンパイラは暗黙的な縮小変換をすべて許可しません。 これには、`String`に関係するものも含まれます。 コードでは、`CStr` や[CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)などの変換キーワードを使用して、変換を試行するように .NET Framework に指示することもできます。
 
 > [!NOTE]
-> `For Each…Next` コレクション内の要素から loop 制御変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、 [For Each ... Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) の「縮小変換」セクションを参照してください。
+> `For Each…Next` コレクション内の要素から loop コントロール変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、「」の「縮小変換」セクションを参照してください。 [次のステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)。
 
 ### <a name="narrowing-conversion-protection"></a>縮小変換保護
 
 縮小変換の欠点は、実行時にエラーが発生する可能性があることです。 たとえば、`String` 変数に "True" または "False" 以外のものが含まれている場合、その変数を `Boolean`に変換することはできません。 区切り文字が含まれている場合、任意の数値型への変換は失敗します。 `String` 変数が、変換先の型で受け入れ可能な値を常に保持していることがわかっている場合を除き、変換を試行しないでください。
 
-
-`String` から別のデータ型に変換する必要がある場合、最も安全な手順は、試行された変換を [Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) で囲むことです。これにより、実行時エラーに対処できます。
-
+`String` から別のデータ型に変換する必要がある場合、最も安全な手順は、試行された変換を [Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) で囲むことです。 これにより、実行時エラーに対処できます。
 
 ### <a name="character-arrays"></a>文字配列
 

@@ -36,7 +36,7 @@ Visual Basic は、オペランドのデータ型に基づいて、操作の結�
   
 - [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) : 最大範囲 3.4...E+38 (絶対値)  
   
-- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) : 最大範囲 1.7...E+308 (絶対値)
+- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) : 最大範囲 1.7...E+308 (絶対値)  
   
  Visual Basic のデータ型の詳細については、「[データ型](../../../visual-basic/language-reference/data-types/index.md)」を参照してください。  
   
