@@ -29,7 +29,7 @@ ms.locfileid: "72005397"
 |`numberList`|任意。 コンパイラによって抑制される警告 ID 番号のコンマ区切りの一覧。 警告 Id が指定されていない場合は、すべての警告が抑制されます。|  
   
 ## <a name="remarks"></a>コメント  
- @No__t-0 オプションを指定すると、コンパイラは警告を生成しません。 個々の警告を非表示にするには、警告 ID をコロンの後の `-nowarn` オプションに指定します。 複数の警告番号はコンマで区切ります。  
+ `-nowarn` オプションを指定すると、コンパイラは警告を生成しません。 個々の警告を非表示にするには、警告 ID をコロンの後の `-nowarn` オプションに指定します。 複数の警告番号はコンマで区切ります。  
   
  警告 id の数値部分のみを指定する必要があります。 たとえば、BC42024 を抑制する場合は、使用されていないローカル変数の警告として、`-nowarn:42024` を指定します。  
   
@@ -55,6 +55,6 @@ vbc -nowarn:42024 t2.vb
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Visual Basic での警告の構成](/visualstudio/ide/configuring-warnings-in-visual-basic)
