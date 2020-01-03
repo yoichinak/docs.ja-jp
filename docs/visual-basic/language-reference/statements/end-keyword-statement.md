@@ -58,7 +58,7 @@ End With
 |`If`|一致する `If` ステートメントによって開始された `If`...`Then``Else` ブロック定義を終了するために必要です。 参照してください.. [.そうしたら。。。Else ステートメント](if-then-else-statement.md)。|
 |`Interface`|一致する[インターフェイスステートメント](interface-statement.md)によって開始されたインターフェイス定義を終了するために必要です。|
 |`Module`|一致する[モジュールステートメント](module-statement.md)によって開始されたモジュール定義を終了するために必要です。|
-|`Namespace`|一致する[名前空間ステートメント](namespace-statement.md)で開始された名前空間定義を終了するために必要です。|
+|`Namespace`|一致する [Namespace ステートメント](namespace-statement.md)で開始された名前空間定義を終了するために必要です。|
 |`Operator`|一致する[Operator ステートメント](operator-statement.md)によって開始された演算子定義を終了するために必要です。|
 |`Property`|一致する[プロパティステートメント](property-statement.md)によって開始されたプロパティ定義を終了するために必要です。|
 |`RaiseEvent`|カスタム[イベントステートメント](event-statement.md)内の一致する `RaiseEvent` ステートメントによって開始された `RaiseEvent` アクセサーを終了するために必要です。|
