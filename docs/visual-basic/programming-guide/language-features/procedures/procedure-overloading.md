@@ -92,7 +92,7 @@ ms.locfileid: "74352598"
 
 ## <a name="see-also"></a>参照
 
-- [手順](./index.md)
+- [Visual Basic におけるプロシージャ](./index.md)
 - [方法 : プロシージャの複数のバージョンを定義する](./how-to-define-multiple-versions-of-a-procedure.md)
 - [方法 : オーバーロードされたプロシージャを呼び出す](./how-to-call-an-overloaded-procedure.md)
 - [方法 : 省略可能なパラメーターを受け取るプロシージャをオーバーロードする](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
