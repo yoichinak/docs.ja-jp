@@ -13,7 +13,7 @@ ms.locfileid: "74353738"
 
 *反復子*を使用して、リストや配列などのコレクションをステップ実行することができます。
 
-iterator メソッドまたは `get` アクセサーは、コレクションに対するカスタム イテレーションを実行します。 Iterator メソッドは [Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを使用して、各要素を1回に1つ返します。 `Yield` ステートメントに達すると、コードの現在の場所が記憶されます。 次回、反復子メソッドが呼び出されると、この位置から実行が再開されます。
+iterator メソッドまたは `get` アクセサーは、コレクションに対するカスタム イテレーションを実行します。 Iterator メソッドは [Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを使用して、各要素を 1 回に 1 つ返します。 `Yield` ステートメントに達すると、コードの現在の場所が記憶されます。 次回、反復子メソッドが呼び出されると、この位置から実行が再開されます。
 
 For Each を使用して、クライアントコードから反復子を使用します。 [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)、または LINQ クエリを使用します。
 
