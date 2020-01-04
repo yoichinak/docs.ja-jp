@@ -215,7 +215,7 @@ Await Task_MethodAsync()
 
 非同期のメソッドで [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) パラメーターを宣言することはできませんが、これらのパラメーターを持つメソッドを呼び出すことはできます。
 
-使用例を含む詳細については、「[非同期の戻り値の型 (Visual Basic)](async-return-types.md)」を参照してください。 非同期のメソッドで例外をキャッチする方法の詳細については、「[Try...Catch...Finally Statement (Try...Catch...Finally ステートメント)](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」を参照してください。
+使用例を含む詳細については、「[非同期の戻り値の型 (Visual Basic)](async-return-types.md)」を参照してください。 非同期のメソッドで例外をキャッチする方法の詳細については、「[Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」を参照してください。
 
 Windows ランタイム プログラミングの非同期 API には、タスクに類似した次のような戻り値の型の 1 つがあります。
 
@@ -224,7 +224,7 @@ Windows ランタイム プログラミングの非同期 API には、タスク
 - <xref:Windows.Foundation.IAsyncActionWithProgress%601>
 - <xref:Windows.Foundation.IAsyncOperationWithProgress%602>
 
-詳細と例については、「」[またはC# 「Visual Basic での非同期 api の呼び出し](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)」を参照してください。
+詳細と例については、「[C# または Visual Basic での非同期 API の呼び出し](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)」を参照してください。
 
 ## <a name="BKMK_NamingConvention"></a>名前付け規則
 
