@@ -1,5 +1,5 @@
 ---
-title: 文字列型 (String)
+title: String データ型 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.String
@@ -25,7 +25,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343904"
 ---
-# <a name="string-data-type-visual-basic"></a>文字列型 (String) (Visual Basic)
+# <a name="string-data-type-visual-basic"></a>String データ型 (Visual Basic)
 
 0 ~ 65535 の範囲の値を範囲とする符号なし16ビット (2 バイト) コードポイントのシーケンスを保持します。 各*コードポイント*(文字コード) は、1つの Unicode 文字を表します。 文字列には、0 ~ 約 20億 (2 ^ 31) の Unicode 文字を含めることができます。  
   
@@ -71,17 +71,17 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
  別のコンポーネントによって作成された文字列は、先頭または末尾にスペースが埋め込まれている可能性があります。 このような文字列を受け取った場合は、<xref:Microsoft.VisualBasic.Strings.Trim%2A>、<xref:Microsoft.VisualBasic.Strings.LTrim%2A>、および <xref:Microsoft.VisualBasic.Strings.RTrim%2A> の各関数を使用して、これらのスペースを削除できます。  
   
- 文字列操作の詳細については、「[文字列](../../../visual-basic/programming-guide/language-features/strings/index.md)」を参照してください。  
+ 文字列操作の詳細については、「[Visual Basic における文字列](../../../visual-basic/programming-guide/language-features/strings/index.md)」を参照してください。  
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
-- **負の数値。** `String` によって保持されている文字は符号なしであり、負の値を表すことはできないことに注意してください。 どのような場合でも、`String` を使用して数値を保持しないでください。  
+- **負の数。** `String` によって保持されている文字は符号なしであり、負の値を表すことはできないことに注意してください。 どのような場合でも、`String` を使用して数値を保持しないでください。  
   
-- **相互運用に関する考慮事項。** .NET Framework 用に作成されていないコンポーネント (たとえば、オートメーションや COM オブジェクト) とやり取りする場合は、他の環境で文字列文字のデータ幅が異なる (8 ビット) ことに注意してください。 8ビット文字の文字列引数をこのようなコンポーネントに渡す場合は、新しい Visual Basic コードで `String` するのではなく、`Byte` 要素の配列 `Byte()`として宣言します。  
+- **相互運用のための注意事項。** .NET Framework 用に作成されていないコンポーネント (たとえば、オートメーションや COM オブジェクト) とやり取りする場合は、他の環境で文字列文字のデータ幅が異なる (8 ビット) ことに注意してください。 8ビット文字の文字列引数をこのようなコンポーネントに渡す場合は、新しい Visual Basic コードで `String` するのではなく、`Byte` 要素の配列 `Byte()`として宣言します。  
   
-- **文字を入力します。** 識別子の型に `$` 識別子を追加すると、その識別子が `String` データ型に強制されます。 `String` にリテラルの型文字がありません。 ただし、コンパイラは、引用符 (`" "`) で囲まれたリテラルを `String`として扱います。  
+- **型文字。** 識別子の型に `$` 識別子を追加すると、その識別子が `String` データ型に強制されます。 `String` にリテラルの型文字がありません。 ただし、コンパイラは、引用符 (`" "`) で囲まれたリテラルを `String`として扱います。  
   
-- **フレームワークの種類。** .NET Framework 内の対応する型は、<xref:System.String?displayProperty=nameWithType> クラスです。  
+- **Framework の型。** .NET Framework 内の対応する型は、<xref:System.String?displayProperty=nameWithType> クラスです。  
   
 ## <a name="see-also"></a>関連項目
 
