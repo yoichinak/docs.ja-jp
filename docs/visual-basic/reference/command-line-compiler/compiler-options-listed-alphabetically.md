@@ -63,8 +63,8 @@ Visual Basic コマンドラインコンパイラは、Visual Studio 統合開�
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|コンパイラで構文関連のエラーと警告のコードが表示されないようにします。|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|コンパイルするソース ファイルをサブディレクトリで検索します。|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|アセンブリからメタデータをインポートします。|  
-|[/refonly](refonly-compiler-option.md)|参照アセンブリのみを出力します。|
-|[/refout](refout-compiler-option.md)|参照アセンブリの出力パスを指定します。|
+|[-refonly](refonly-compiler-option.md)|参照アセンブリのみを出力します。|
+|[-refout](refout-compiler-option.md)|参照アセンブリの出力パスを指定します。|
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|整数オーバーフローのチェックを無効にします。|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|マネージド リソースをアセンブリに埋め込みます。|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|すべての型宣言に対して名前空間を指定します。|  
