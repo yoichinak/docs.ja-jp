@@ -57,7 +57,7 @@ Visual Basic コマンドラインコンパイラは、Visual Studio 統合開�
 |[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|変数宣言でローカル型推論を使用できるようにします。|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|厳密な言語セマンティクスを適用します。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|出力ファイルを指定します。|  
-|`-parallel[+&#124;-]`|同時実行ビルドを使用する (+) かどうかを指定します。|  
+|`-parallel[+|-]`|同時実行ビルドを使用する (+) かどうかを指定します。|  
 |[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|コンパイラによる出力ファイルの対象となるプロセッサ プラットフォームを指定します。|  
 |`-preferreduilang`|出力用の言語名を指定します。|  
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|コンパイラで構文関連のエラーと警告のコードが表示されないようにします。|  
