@@ -1,5 +1,5 @@
 ---
-title: '[自動]'
+title: 'Auto (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Auto
@@ -21,14 +21,14 @@ ms.locfileid: "74351617"
   
  プロジェクトの外部で定義されたプロシージャを呼び出すと、Visual Basic コンパイラは、プロシージャを正しく呼び出すために必要な情報にアクセスできません。 この情報には、プロシージャの配置場所、識別方法、呼び出し元のシーケンスと戻り値の型、および使用する文字列文字セットが含まれます。 [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)は、外部プロシージャへの参照を作成し、この必要な情報を提供します。  
   
- `Declare` ステートメントの `charsetmodifier` 部分では、外部プロシージャの呼び出し時に文字列をマーシャリングするための文字セット情報を指定します。 また、外部ファイルで外部プロシージャ名を検索 Visual Basic 方法にも影響します。 `Auto` 修飾子は、Visual Basic が .NET Framework 規則に従って文字列をマーシャリングする必要があること、およびランタイムプラットフォームの基本文字セットを決定し、最初の検索が失敗した場合に外部プロシージャ名を変更する必要があることを指定します。 詳細については、「 [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)」の「文字セット」を参照してください。  
+ `Declare` ステートメントの `charsetmodifier` 部分では、外部プロシージャの呼び出し時に文字列をマーシャリングするための文字セット情報を指定します。 また、外部ファイルで外部プロシージャ名を検索 Visual Basic 方法にも影響します。 `Auto` 修飾子は、Visual Basic が .NET Framework 規則に従って文字列をマーシャリングする必要があること、およびランタイムプラットフォームの基本文字セットを決定し、最初の検索が失敗した場合に外部プロシージャ名を変更する必要があることを指定します。 詳細については、「[Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)」の「文字セット」を参照してください。  
   
  文字セット修飾子が指定されていない場合は、`Ansi` が既定値になります。  
   
 ## <a name="remarks"></a>コメント  
  このコンテキストでは、`Auto` 修飾子を使用できます。  
   
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
 ## <a name="smart-device-developer-notes"></a>スマートデバイスの開発者向けメモ  
  このキーワードはサポートされていません。  
