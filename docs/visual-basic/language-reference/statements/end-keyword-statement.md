@@ -49,7 +49,7 @@ End With
 |要素|説明|
 |---|---|
 |`End`|必須。 プログラミング要素の定義を終了します。|
-|`AddHandler`|カスタム[イベントステートメント](event-statement.md)内の一致する `AddHandler` ステートメントによって開始された `AddHandler` アクセサーを終了するために必要です。|
+|`AddHandler`|カスタムの [Event ステートメント](event-statement.md)で、対応する `AddHandler` ステートメントによって開始された `AddHandler` アクセサを終了する場合に必要です。|
 |`Class`|一致する[クラスステートメント](class-statement.md)によって開始されたクラス定義を終了するために必要です。|
 |`Enum`|一致する列挙[ステートメント](enum-statement.md)によって開始された列挙型定義を終了するために必要です。|
 |`Event`|一致する[イベントステートメント](event-statement.md)によって開始された `Custom` イベント定義を終了するために必要です。|  
@@ -58,7 +58,7 @@ End With
 |`If`|一致する `If` ステートメントによって開始された `If`...`Then``Else` ブロック定義を終了するために必要です。 参照してください.. [.そうしたら。。。Else ステートメント](if-then-else-statement.md)。|
 |`Interface`|一致する[インターフェイスステートメント](interface-statement.md)によって開始されたインターフェイス定義を終了するために必要です。|
 |`Module`|一致する[モジュールステートメント](module-statement.md)によって開始されたモジュール定義を終了するために必要です。|
-|`Namespace`|一致する[名前空間ステートメント](namespace-statement.md)で開始された名前空間定義を終了するために必要です。|
+|`Namespace`|一致する [Namespace ステートメント](namespace-statement.md)で開始された名前空間定義を終了するために必要です。|
 |`Operator`|一致する[Operator ステートメント](operator-statement.md)によって開始された演算子定義を終了するために必要です。|
 |`Property`|一致する[プロパティステートメント](property-statement.md)によって開始されたプロパティ定義を終了するために必要です。|
 |`RaiseEvent`|カスタム[イベントステートメント](event-statement.md)内の一致する `RaiseEvent` ステートメントによって開始された `RaiseEvent` アクセサーを終了するために必要です。|

@@ -20,7 +20,8 @@ ms.locfileid: "74331314"
 ## <a name="remarks"></a>コメント  
  `DirectCast` では、変換に Visual Basic ランタイムヘルパールーチンを使用しないため、データ型 `Object`との間で変換を行う場合は `CType` よりも多少優れたパフォーマンスが得られます。  
   
- [CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)および [TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)キーワードの使用方法と同様に、`DirectCast` キーワードを使用します。 最初の引数として式を指定し、2 番目の引数として変換する型を指定します。 `DirectCast` には、2 つの引数のデータ型間の継承または実装関係が必要です。 これは、一方の型が他の型を継承または実装する必要があることを意味します。  
+ [CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)および [TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)キーワードの使用方法と同様に、`DirectCast` キーワードを使用します。最初の引数として式を指定し、2 番目の引数として変換する型を指定します。`DirectCast` には、2 つの引数のデータ型間の継承または実装関係が必要です。これは、一方の型が他の型を継承または実装する必要があることを意味します。 
+
   
 ## <a name="errors-and-failures"></a>エラーとエラー  
  `DirectCast` は、継承または実装関係が存在しないことを検出すると、コンパイラエラーを生成します。 ただし、コンパイラエラーが発生しても、正常に変換できないことは保証されません。 目的の変換が縮小されている場合は、実行時に失敗する可能性があります。 これが発生すると、ランタイムは <xref:System.InvalidCastException> エラーをスローします。  
@@ -30,8 +31,9 @@ ms.locfileid: "74331314"
   
 |Keyword|データの種類|引数のリレーションシップ|実行時エラー|  
 |---|---|---|---|  
-|[CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)|任意のデータ型|拡大または縮小変換は、2 つのデータ型の間で定義する必要があります|<xref:System.InvalidCastException> をスロー|  
-|`DirectCast`|任意のデータ型|一方の型は、他の型を継承するか、他の型を実装する必要があります|<xref:System.InvalidCastException> をスロー|  
+|[CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)|任意のデータ型|拡大または縮小変換は、2 つのデータ型の間で定義する必要があります|<xref:System.InvalidCastException> をスロー| 
+|`DirectCast`|任意のデータ型|一方の型は、他の型を継承するか、他の型を実装する必要があります|<xref:System.InvalidCastException> をスロー| 
+
 |[TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)|参照型のみ|一方の型は、他の型を継承するか、他の型を実装する必要があります|[Nothing](../../../visual-basic/language-reference/nothing.md) を返す|  
   
 ## <a name="example"></a>例  
