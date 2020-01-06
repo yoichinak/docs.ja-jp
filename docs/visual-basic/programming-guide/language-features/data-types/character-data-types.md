@@ -45,6 +45,6 @@ Visual Basic には、印刷可能な文字と表示可能な文字を処理す�
 - [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

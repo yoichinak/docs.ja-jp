@@ -17,7 +17,7 @@ ms.locfileid: "74353201"
   
  .NET Framework アプリケーションは、最終的には COM で開発したものと置き換えます。 それまでは、Visual Studio を使用して COM オブジェクトを使用するか、作成する必要があります。 COM または*com 相互運用機能*との相互運用性により、既存の com オブジェクトを使用して、自分のペースで .NET Framework に移行することができます。  
   
- .NET Framework を使用して COM コンポーネントを作成することにより、登録を必要としない COM 相互運用機能を使用できます。 これにより、1台のコンピューターに複数のバージョンがインストールされている場合に有効にする DLL バージョンを制御できます。エンドユーザーは、XCOPY または FTP を使用して、アプリケーションを実行可能なコンピューター上の適切なディレクトリにコピーできます。 詳細については、「登録を使用しない[COM 相互運用機能](../../../framework/interop/registration-free-com-interop.md)」を参照してください。  
+ .NET Framework を使用して COM コンポーネントを作成することにより、登録を必要としない COM 相互運用機能を使用できます。 これにより、1台のコンピューターに複数のバージョンがインストールされている場合に有効にする DLL バージョンを制御できます。エンドユーザーは、XCOPY または FTP を使用して、アプリケーションを実行可能なコンピューター上の適切なディレクトリにコピーできます。 詳細については、「[登録を使用しないCOM 相互運用機能](../../../framework/interop/registration-free-com-interop.md)」を参照してください。  
   
 ## <a name="managed-code-and-data"></a>マネージコードとデータ  
  .NET Framework 用に開発されたコードは*マネージコード*と呼ばれ、CLR によって使用されるメタデータが含まれます。 .NET Framework アプリケーションで使用されるデータは*マネージデータ*と呼ばれます。これは、ランタイムがメモリの割り当てや解放、型チェックの実行などのデータ関連タスクを管理するためです。 既定では Visual Basic .NET はマネージコードとデータを使用しますが、相互運用機能アセンブリを使用して COM オブジェクトのアンマネージコードとデータにアクセスすることができます (このページで後ほど説明します)。  
@@ -38,12 +38,12 @@ ms.locfileid: "74353201"
   
 - アセンブリを正常に実行するために必要なアクセス許可。  
   
- アセンブリとアセンブリマニフェストの詳細については、「 [.net のアセンブリ](../../../standard/assembly/index.md)」を参照してください。  
+ アセンブリとアセンブリマニフェストの詳細については、「[.NET のアセンブリ](../../../standard/assembly/index.md)」を参照してください。  
   
 ### <a name="importing-and-exporting-type-libraries"></a>タイプライブラリのインポートとエクスポート  
  Visual Studio には、Tlbimp というユーティリティが含まれています。これを使用すると、タイプライブラリから .NET Framework アプリケーションに情報をインポートできます。 アセンブリからタイプライブラリを生成するには、Tlbexp.exe ユーティリティを使用します。  
   
- Tlbimp と Tlbexp.exe の詳細については、「 [tlbimp.exe (タイプライブラリインポーター)](../../../framework/tools/tlbimp-exe-type-library-importer.md) 」および「 [Tlbexp.exe (タイプライブラリエクスポーター)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)」を参照してください。  
+ Tlbimp と Tlbexp.exe の詳細については、「[tlbimp.exe (タイプライブラリインポーター)](../../../framework/tools/tlbimp-exe-type-library-importer.md) 」および「[Tlbexp.exe (タイプライブラリエクスポーター)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)」を参照してください。  
   
 ## <a name="interop-assemblies"></a>相互運用機能アセンブリ  
  相互運用機能アセンブリは、マネージコードとアンマネージコードの間を橋渡しし、COM オブジェクトメンバーを同等のマネージメンバー .NET Framework にマップする .NET Framework アセンブリです。 Visual Basic .NET によって作成された相互運用アセンブリは、相互運用性のマーシャリングなど、COM オブジェクトの操作に関する多くの詳細を処理します。  

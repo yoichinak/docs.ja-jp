@@ -37,6 +37,6 @@ ms.locfileid: "61946602"
 
 - [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [方法: 演算子を定義します。](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [方法: 変換演算子を定義します。](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [方法: 演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [方法: 変換演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)

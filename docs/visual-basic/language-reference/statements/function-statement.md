@@ -189,6 +189,7 @@ End Function
 > [!NOTE]
 > ラムダ式を使用して、Function 式をインラインで定義できます。詳細については、「[Function 式](../../../visual-basic/language-reference/operators/function-expression.md)」および「[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)」を参照してください。
 
+
 ## <a name="returning-from-a-function"></a>関数からの戻り
 
 `Function` プロシージャが呼び出し元のコードに戻ると、プロシージャを呼び出したステートメントの後のステートメントで実行が続行されます。
@@ -237,6 +238,8 @@ Visual Basic は、内部効率を向上させるために算術式を再配置�
 ## <a name="iterator-functions"></a>反復子メソッド
 
 *反復子*関数は、リストや配列などのコレクションに対してカスタムの反復処理を実行します。 Iterator 関数は [Yield](yield-statement.md)ステートメントを使用して、各要素を 1 回に 1 つ返します。[Yield](yield-statement.md)ステートメントに到達すると、コード内の現在の場所が記憶されます。次回、反復子メソッドが呼び出されると、この位置から実行が再開されます。
+
+
 
 [For Each...Next](for-each-next-statement.md)ステートメントを使用して、クライアントコードから反復子を呼び出します。
 
