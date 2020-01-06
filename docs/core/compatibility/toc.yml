@@ -5,6 +5,7 @@
 - name: ページ セレクター
   href: breaking-changes.md
 - name: バージョン別
+  expanded: true
   items:
     - name: 3.0 から 3.1 へ
       href: 3.0-3.1.md
@@ -12,7 +13,10 @@
       href: 2.2-3.1.md
     - name: 2.2 から 3.0
       href: 2.2-3.0.md
+    - name: 2.0 から 2.1
+      href: 2.0-2.1.md
 - name: 領域別
+  expanded: true
   items:
     - name: ASP.NET Core
       href: aspnetcore.md
