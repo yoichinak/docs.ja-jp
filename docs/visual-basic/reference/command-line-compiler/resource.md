@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348568"
 ---
-# <a name="-resource-visual-basic"></a>-リソース (Visual Basic)
+# <a name="-resource-visual-basic"></a>-resource (Visual Basic)
 マネージド リソースをアセンブリに埋め込みます。  
   
 ## <a name="syntax"></a>構文  
