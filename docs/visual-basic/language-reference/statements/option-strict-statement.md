@@ -79,7 +79,7 @@ Option Strict { On | Off }
   
  対応するパラメーターとは異なるデータ型の引数を持つメソッドを呼び出すと、`Option Strict` がオンになっていると、縮小変換によってコンパイル時エラーが発生します。 拡大変換または明示的な変換を使用することで、コンパイル時エラーを回避できます。  
   
- `For Each…Next` コレクション内の要素から loop コントロール変数への変換では、コンパイル時に暗黙的な縮小変換エラーが抑制されます。 これは、`Option Strict` がオンになっている場合でも発生します。 詳細については、「[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)」の「縮小変換」セクションを参照してください。
+ `For Each…Next` コレクション内の要素からループ制御変数への変換では、コンパイル時に暗黙的な縮小変換エラーが抑制されます。 これは、`Option Strict` がオンになっている場合でも発生します。 詳細については、「[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)」の「縮小変換」セクションを参照してください。
   
 ## <a name="late-binding-errors"></a>遅延バインディングエラー  
  `Object` 型として宣言された変数のプロパティまたはメソッドにオブジェクトを代入する場合は、そのオブジェクトは遅延バインディングされます。 詳細については、「[事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)」を参照してください。  
