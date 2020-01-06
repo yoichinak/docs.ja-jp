@@ -54,4 +54,4 @@ vbc -keycontainer:key1 input.vb
 - [.NET のアセンブリ](../../../standard/assembly/index.md)
 - [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

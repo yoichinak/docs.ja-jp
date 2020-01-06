@@ -27,7 +27,7 @@ ms.locfileid: "72005310"
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 任意。 変数の明示的な宣言が必要な場合は、`-optionexplicit+` を指定します。 @No__t-0 オプションは既定値で、`-optionexplicit` と同じです。 @No__t-0 オプションを指定すると、変数の暗黙的な宣言が有効になります。  
+ 省略可能。 変数の明示的な宣言が必要な場合は、`-optionexplicit+`を指定します。 @No__t-0 オプションは既定値で、`-optionexplicit` と同じです。 @No__t-0 オプションを指定すると、変数の暗黙的な宣言が有効になります。  
   
 ## <a name="remarks"></a>コメント  
  ソースコードファイルに[Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)が含まれている場合、ステートメントは `-optionexplicit` コマンドラインコンパイラ設定をオーバーライドします。  
@@ -51,6 +51,6 @@ ms.locfileid: "72005310"
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [[Visual Basic の既定値] ([オプション] ダイアログ ボックス - [プロジェクト])](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
