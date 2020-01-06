@@ -67,4 +67,4 @@ vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

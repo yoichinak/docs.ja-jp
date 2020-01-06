@@ -89,7 +89,7 @@ Dim [ WithEvents ] variablelist
 
 - `WithEvents`
 
-任意。 イベントを発生させるクラスのインスタンスを参照するオブジェクト変数であることを指定します。 「 [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)」を参照してください。
+任意。 イベントを発生させるクラスのインスタンスを参照するオブジェクト変数であることを指定します。 「[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)」を参照してください。
 
 - `variablelist`
 
@@ -103,9 +103,7 @@ Dim [ WithEvents ] variablelist
 
   |要素|説明|
   |---|---|
-
-  |`variablename`|必須。変数の名前。「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
-
+  |`variablename`|必須。 変数の名前。 「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
   |`boundslist`|任意。 配列変数の各次元の境界の一覧。|
   |`New`|任意。 `Dim` ステートメントの実行時に、クラスの新しいインスタンスを作成します。|
   |`datatype`|任意。 変数のデータ型。|
@@ -150,7 +148,7 @@ Private salary As Decimal
 Static runningTotal As Integer
 ```
 
-`Option Explicit` が on (既定値) の場合、コンパイラは使用するすべての変数の宣言を必要とします。 詳細については、「 [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)」を参照してください。
+`Option Explicit` が on (既定値) の場合、コンパイラは使用するすべての変数の宣言を必要とします。 詳細については、「[Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)」を参照してください。
 
 ## <a name="specifying-an-initial-value"></a>初期値の指定
 
