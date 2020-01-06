@@ -59,7 +59,7 @@ End Get
   
 ## <a name="behavior"></a>動作  
   
-- **プロシージャからの戻り。** `Get` プロシージャが呼び出し元のコードに戻ると、プロパティ値を要求したステートメント内で実行が続行されます。  
+- **プロシージャから戻る。** `Get` プロシージャが呼び出し元のコードに戻ると、プロパティ値を要求したステートメント内で実行が続行されます。  
   
      `Get` のプロパティプロシージャは、 [Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)を使用するか、プロパティ名に戻り値を割り当てることによって、値を返すことができます。 詳細については、「[Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)」の「戻り値」を参照してください。  
   
