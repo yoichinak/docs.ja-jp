@@ -2,12 +2,12 @@
 title: クラウドネイティブ データ パターン
 description: Azure 向けのクラウドネイティブ .NET アプリの設計 |クラウドネイティブデータパターン
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d251f3046fcd3f3a2f5d856a123a35d3f7ecff2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e90409b0b633796b452cfcfecb3896e79002d4d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841823"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337420"
 ---
 # <a name="cloud-native-data-patterns"></a>クラウドネイティブ データ パターン
 
@@ -63,13 +63,13 @@ ms.locfileid: "73841823"
 
 **図 5-8**. マイクロサービス間でのトランザクションの実装
 
-前の図では、すべての独立したマイクロサービスが分散*作成注文*トランザクションに参加していることに注意してください。 ただし、5つの各マイクロサービスのトランザクションが成功する必要があります。それ以外の場合は、すべてのマイクロサービスが操作を中止してロールバックする必要があります。 組み込みのトランザクションサポートは各マイクロサービス内で利用できますが、5つのサービスすべてにまたがる分散トランザクションはサポートされていません。
+前の図では、すべての独立したマイクロサービスが分散*作成注文*トランザクションに参加していることに注意してください。 ただし、5つの各マイクロサービスのトランザクションが成功する必要があります。それ以外の場合は、すべてのマイクロサービスを中止して、操作をロールバックする必要があります。 組み込みのトランザクションサポートは各マイクロサービス内で利用できますが、5つのサービスすべてにまたがる分散トランザクションはサポートされていません。
 
 この操作では、各マイクロサービスでデータの一貫性を維持するためにトランザクションサポートが不可欠であるため、プログラムを使用して分散トランザクションを構築する必要があります。
 
 トランザクションサポートをプログラムで追加するための一般的なパターンは、 [Saga パターン](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/)です。 ローカルトランザクションをグループ化し、それぞれを順番に呼び出すことによって実装されます。 ローカルトランザクションが失敗した場合、Saga は操作を中止し、[補正トランザクション](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)のセットを呼び出して、前のローカルトランザクションによって行われた変更を元に戻します。 図5-9 は、Saga パターンを使用した失敗したトランザクションを示しています。
 
-![Saga パターンでのロールバック](./media/saga-rollback-operation.png)
+![Saga パターンでロールバックする](./media/saga-rollback-operation.png)
 
 **図 5-9** トランザクションのロールバック
 
@@ -107,7 +107,7 @@ CQRS ([コマンドクエリ責務分離](https://docs.microsoft.com/azure/archi
 
 これらの種類のデータベースの違いを理解する方法は、 [CAP 定理](https://towardsdatascience.com/cap-theorem-and-distributed-database-management-systems-5c2be977950e)にあります。これは、状態を格納する分散システムに適用できる一連の原則です。 図5-11 は、キャップ定理の3つのプロパティを示しています。
 
-![キャップ定理](./media/cap-theorem.png)
+![CAP 定理](./media/cap-theorem.png)
 
 **図 5-11** CAP 定理
 
@@ -139,7 +139,7 @@ NoSQL データベースは、次の4つのモデルで分類できます。
 
 NoSQL データベースは、特にデータが比較的単純な場合に、大規模なデータを処理するように最適化できます。 次の場合に NoSQL データベースを検討します。
 
-- ワークロードには大規模な同時実行性が必要です。
+- ワークロードには大規模で高い同時実行性が必要です。
 - 多数のユーザーがいます。
 - データは、リレーションシップなしでのみ表現できます。
 - データを地理的に分散する必要があります。
