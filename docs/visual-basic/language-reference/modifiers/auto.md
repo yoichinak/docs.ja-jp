@@ -1,5 +1,5 @@
 ---
-title: 'Auto (Visual Basic)'
+title: '[自動]'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Auto
