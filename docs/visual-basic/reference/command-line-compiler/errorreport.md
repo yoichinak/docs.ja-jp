@@ -56,5 +56,5 @@ vbc -errorreport:prompt t2.vb
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)

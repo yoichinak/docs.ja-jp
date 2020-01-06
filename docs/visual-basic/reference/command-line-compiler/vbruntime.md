@@ -96,7 +96,7 @@ vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic コア-Visual Studio 2010 SP1 の新しいコンパイルモード](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic Core – Visual Studio 2010 SP1 の新しいコンパイルモード](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

@@ -1,5 +1,5 @@
 ---
-title: Data Types Summary
+title: データ型の概要
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data types [Visual Basic], Visual Basic
