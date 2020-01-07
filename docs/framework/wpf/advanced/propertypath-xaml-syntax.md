@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 17c8982a66960626a5d049fa2da90f5f2d995d14
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740785"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559769"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath の XAML 構文
 
@@ -113,7 +113,7 @@ XML へのデータバインドでは、<xref:System.Windows.Data.Binding>で <x
 <object Path="[index1,index2...]" .../>
 ```
 
-、または
+または
 
 ```xaml
 <object Path="propertyName[index,index2...]" .../>
@@ -137,13 +137,13 @@ XML へのデータバインドでは、<xref:System.Windows.Data.Binding>で <x
 
 特定のビジネス オブジェクトでは、正しく解析するために、プロパティ パス文字列にエスケープ シーケンスが必要な場合があります。 このような文字の多くには、通常ビジネス オブジェクトを定義するために使用される言語において、名前付けの相互作用に関する同様の問題があるため、エスケープが必要になることはほとんどありません。
 
-- インデクサー ([ ]) 内では、キャレット文字 (^) は次の文字をエスケープします。
+- インデクサー([ ]) 内部では、キャレット文字 (^) は次の文字をエスケープします。
 
-- XML 言語定義で特別な意味を持つ特定の文字を (XML エンティティを使用して) エスケープする必要があります。 文字 "&" をエスケープするには、`&` を使用します。 終了タグ ">" をエスケープするには、`>` を使用します。
+- XML 言語定義で特別な意味を持つ特定の文字を (XML エンティティを使用して) エスケープする必要があります。 「&」をエスケープするには `&` を使用します。 使用する`>`終了タグをエスケープする">"です。
 
 - マークアップ拡張機能の処理に関する WPF XAML パーサーの動作で特別な意味を持つ文字を、(バックスラッシュ `\` を使用して) エスケープする必要があります。
 
-  - バックスラッシュ (`\`) は、それ自体がエスケープ文字です。
+  - 円記号 (`\`) はエスケープ文字そのものです。
 
   - 等号 (`=`) は、プロパティ名とプロパティ値を区切ります。
 
@@ -192,13 +192,13 @@ XML へのデータバインドでは、<xref:System.Windows.Data.Binding>で <x
 
 `propertyName2` は、`propertyName` の値であるオブジェクトに存在する依存関係プロパティの名前である必要があります。 言い換えると、`propertyName2` は `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>である型の依存関係プロパティとして存在する必要があります。
 
-適用されるスタイルとテンプレートにより、アニメーションの間接的なターゲット設定が必要です。 アニメーションを対象とするには、ターゲットオブジェクトの <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> が必要です。この名前は、 [x:Name](../../xaml-services/x-name-directive.md)または <xref:System.Windows.FrameworkElement.Name%2A>によって確立されます。 テンプレート要素とスタイル要素にも名前を付けることができますが、これらの名前はスタイルとテンプレートの名前スコープ内でのみ有効です。 (テンプレートとスタイルで名前スコープがアプリケーションマークアップと共有された場合、名前を一意にすることはできません。 スタイルとテンプレートは、文字どおりインスタンス間で共有され、重複する名前が perpetuate ます。)したがって、アニメーション化する要素の個々のプロパティがスタイルまたはテンプレートからのものである場合は、スタイルテンプレートではない名前付き要素インスタンスを使用して開始し、そのプロパティに到達するようにスタイルまたはテンプレートのビジュアルツリーを対象にする必要があります。アニメーションを作成します。
+適用されるスタイルとテンプレートにより、アニメーションの間接的なターゲット設定が必要です。 アニメーションを対象とするには、ターゲットオブジェクトの <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> が必要です。この名前は、 [x:Name](../../../desktop-wpf/xaml-services/xname-directive.md)または <xref:System.Windows.FrameworkElement.Name%2A>によって確立されます。 テンプレート要素とスタイル要素にも名前を付けることができますが、これらの名前はスタイルとテンプレートの名前スコープ内でのみ有効です。 (テンプレートとスタイルで名前スコープがアプリケーションマークアップと共有された場合、名前を一意にすることはできません。 スタイルとテンプレートは、文字どおりインスタンス間で共有され、重複する名前が perpetuate ます。)したがって、アニメーション化する要素の個々のプロパティがスタイルまたはテンプレートからのものである場合は、スタイルテンプレートではない名前付き要素インスタンスを使用して開始し、そのプロパティに到達するようにスタイルまたはテンプレートのビジュアルツリーを対象にする必要があります。アニメーションを作成します。
 
 たとえば、<xref:System.Windows.Controls.Panel> の <xref:System.Windows.Controls.Panel.Background%2A> プロパティは、テーマテンプレートに由来する完全な <xref:System.Windows.Media.Brush> (実際は <xref:System.Windows.Media.SolidColorBrush>) です。 <xref:System.Windows.Media.Brush> を完全にアニメーション化するには、BrushAnimation (おそらく、<xref:System.Windows.Media.Brush> の種類ごとに1つ) が必要であり、そのような型は存在しません。 ブラシをアニメーション化するには、代わりに特定の <xref:System.Windows.Media.Brush> の種類のプロパティをアニメーション化します。 <xref:System.Windows.Media.Animation.ColorAnimation> を適用するには、<xref:System.Windows.Media.SolidColorBrush> から <xref:System.Windows.Media.SolidColorBrush.Color%2A> にアクセスする必要があります。 この例のプロパティ パスは `Background.Color` です。
 
 <a name="attachedanim"></a>
 
-### <a name="attached-properties"></a>アタッチされるプロパティ
+### <a name="attached-properties"></a>添付プロパティ
 
 ```xml
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>

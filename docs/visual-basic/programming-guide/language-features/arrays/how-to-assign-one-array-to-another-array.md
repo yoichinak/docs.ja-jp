@@ -35,7 +35,7 @@ ms.locfileid: "74351890"
 
   2つの配列のランクが等しい場合、次元は同じである必要はありません。 指定されたディメンション内の要素の数は、割り当て時に変更される可能性があります。
 
-- **要素の型。** 両方の配列に*参照型*の要素が含まれているか、両方の配列が*値の型*の要素を持っている必要があります。 詳細については、「 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。
+- **要素の型。** 両方の配列に*参照型*の要素が含まれているか、両方の配列が*値の型*の要素を持っている必要があります。 詳細については、「[値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。
 
   - 両方の配列に値型の要素がある場合、要素のデータ型はまったく同じである必要があります。 唯一の例外は、`Enum` 要素の配列を、その `Enum`の基本型の配列に割り当てることができることです。
 

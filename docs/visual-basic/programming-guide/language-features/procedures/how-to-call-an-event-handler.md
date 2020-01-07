@@ -23,11 +23,11 @@ ms.locfileid: "74340428"
 
  イベントが発生すると、Visual Basic によってイベントハンドラープロシージャが自動的に呼び出されます。 イベントにアクセスできるコードでは、 [RaiseEvent ステートメント](../../../language-reference/statements/raiseevent-statement.md)を実行することによってイベントが発生する可能性があります。
 
- 複数のイベントハンドラーを同じイベントに関連付けることができます。 場合によっては、イベントからハンドラーの関連付けを解除できます。 詳細については、「 [イベント](../events/index.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
+ 複数のイベントハンドラーを同じイベントに関連付けることができます。 場合によっては、イベントからハンドラーの関連付けを解除できます。 詳細については、「[イベント](../events/index.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
 
 ### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>ハンドルと WithEvents を使用してイベントハンドラーを呼び出すには
 
-1. イベントが[イベントステートメント](../../../language-reference/statements/event-statement.md)を使用して宣言されていることを確認します。
+1. イベントが [Event ステートメント](../../../language-reference/statements/event-statement.md)を使用して宣言されていることを確認します。
 
 2. [WithEvents](../../../language-reference/modifiers/withevents.md)キーワードを使用して、モジュールまたはクラスレベルでオブジェクト変数を宣言します。 この変数の `As` 句には、イベントを発生させるクラスを指定する必要があります。
 
@@ -55,7 +55,7 @@ ms.locfileid: "74340428"
 
 ## <a name="see-also"></a>参照
 
-- [手順](index.md)
+- [Visual Basic におけるプロシージャ](index.md)
 - [Sub プロシージャ](sub-procedures.md)
 - [Sub ステートメント](../../../language-reference/statements/sub-statement.md)
 - [AddressOf 演算子](../../../language-reference/operators/addressof-operator.md)

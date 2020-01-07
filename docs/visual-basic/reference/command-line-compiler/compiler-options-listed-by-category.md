@@ -24,7 +24,7 @@ Visual Basic コマンドラインコンパイラは、Visual Studio 統合開�
 |[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|UTF-8 エンコードを使用してコンパイラ出力を表示します。|  
 |[-verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|コンパイル中に追加の情報を出力します。|  
 |`-modulename:<string>`|ソース モジュールの名前を指定します。|  
-|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|コンパイラ出力用の言語を指定します。|
+|[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|コンパイラ出力用の言語を指定します。|
   
 ## <a name="optimization"></a>Optimization  
   
@@ -41,8 +41,8 @@ Visual Basic コマンドラインコンパイラは、Visual Studio 統合開�
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|入力が同一である場合、バイナリ コンテンツがコンパイル全体で同一のアセンブリをコンパイラに出力させます。|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|.NET Compact Framework を対象とするようにコンパイラを設定します。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|出力ファイルを指定します。|  
-|[/refonly](refonly-compiler-option.md)|参照アセンブリのみを出力します。|
-|[/refout](refout-compiler-option.md)|参照アセンブリの出力パスを指定します。|
+|[-refonly](refonly-compiler-option.md)|参照アセンブリのみを出力します。|
+|[-refout](refout-compiler-option.md)|参照アセンブリの出力パスを指定します。|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|出力の形式を指定します。|  
   
 ## <a name="net-assemblies"></a>.NET アセンブリ  
@@ -128,5 +128,5 @@ Visual Basic コマンドラインコンパイラは、Visual Studio 統合開�
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic Compiler Options Listed Alphabetically](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
+- [Visual Basic コンパイラ オプション一覧 (アルファベット順)](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

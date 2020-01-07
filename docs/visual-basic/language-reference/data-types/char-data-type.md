@@ -37,7 +37,7 @@ Unicode の最初の128コードポイント (0 ~ 127) は、標準の U.S. キ�
 
 Visual Basic は、`Char` と数値型の間で直接変換されません。 <xref:Microsoft.VisualBasic.Strings.Asc%2A> または <xref:Microsoft.VisualBasic.Strings.AscW%2A> 関数を使用すると、`Char` 値をそのコードポイントを表す `Integer` に変換できます。 <xref:Microsoft.VisualBasic.Strings.Chr%2A> または <xref:Microsoft.VisualBasic.Strings.ChrW%2A> 関数を使用すると、`Integer` 値をそのコードポイントを持つ `Char` に変換できます。
 
-型チェックスイッチ ( [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)) がオンになっている場合は、リテラル型の文字を1文字の文字列リテラルに追加して、`Char` データ型として識別する必要があります。 これを次の例に示します。 `charVar` 変数への最初の代入では、`Option Strict` がオンになっているため、コンパイラエラー [BC30512](../../misc/bc30512.md)が生成されます。 リテラルの型文字 `c` が `Char` 値としてリテラルを識別するため、2番目のが正常にコンパイルされます。
+型チェックスイッチ ([Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)) がオンになっている場合は、リテラル型の文字を1文字の文字列リテラルに追加して、`Char` データ型として識別する必要があります。 これを次の例に示します。 `charVar` 変数への最初の代入では、`Option Strict` がオンになっているため、コンパイラエラー [BC30512](../../misc/bc30512.md)が生成されます。 リテラルの型文字 `c` が `Char` 値としてリテラルを識別するため、2番目のが正常にコンパイルされます。
 
 ```vb
 Option Strict On
