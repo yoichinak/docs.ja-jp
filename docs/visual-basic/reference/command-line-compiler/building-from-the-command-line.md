@@ -29,8 +29,7 @@ Visual Basic は、Visual Studio 統合開発環境 (IDE) 内からプログラ�
 Visual Studio IDE 内からソースファイルをコンパイルするには、[**ビルド**] メニューの [**ビルド**] をクリックします。
 
 > [!TIP]
-> Visual Studio IDE を使用してプロジェクトファイルをビルドする場合、関連付けられている**vbc.exe**コマンドとそのスイッチに関する情報を出力ウィンドウに表示できます。 この情報を表示するには、[\[オプション\] ダイアログ ボックス: \[プロジェクトおよびソリューション\] > \[ビルド/実行\]](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)] の順に開き、 **MSBuild プロジェクトのビルド出力の詳細**レベルを [**標準**] または [高レベルの詳細] に設定します。 詳細については、「[方法: ビルド ログ ファイルを表示、保存、および構成する](/visualstudio/ide/how-to-view-save-and-configure-build-log-files)」を参照してください。
-
+> Visual Studio IDE を使用してプロジェクトファイルをビルドする場合、関連付けられている **vbc.exe** コマンドとそのスイッチに関する情報を出力ウィンドウに表示できます。 この情報を表示するには、[\[オプション\] ダイアログ ボックス: \[プロジェクトおよびソリューション\] > \[ビルド/実行\]](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)] の順に開き、 **MSBuild プロジェクトのビルド出力の詳細** レベルを [**標準**] または、高レベルの詳細に設定します。 詳細については、「[方法: ビルド ログ ファイルを表示、保存、および構成する](/visualstudio/ide/how-to-view-save-and-configure-build-log-files)」を参照してください。
 MSBuild を使用してコマンド プロンプトで、プロジェクト (.vbproj) ファイルをコンパイルすることができます。 詳細については、次を参照してください。[コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)と[チュートリアル:MSBuild の使用](/visualstudio/msbuild/walkthrough-using-msbuild)に関するページを参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
@@ -46,7 +45,7 @@ MS-DOS プロンプトまたは特定のサブディレクトリからコマン�
 [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md) \
 アルファベット順または目的別に構成された、コンパイラオプションの一覧を提供します。
 
-[条件付きコンパイルの概要](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
+[条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
 コードの特定のセクションをコンパイルする方法について説明します。
 
 [Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \
