@@ -32,7 +32,7 @@ ms.locfileid: "74340957"
 
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
 - <xref:System.ArgumentException>
-- [手順](./index.md)
+- [Visual Basic におけるプロシージャ](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
