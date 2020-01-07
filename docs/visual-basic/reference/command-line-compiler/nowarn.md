@@ -55,6 +55,6 @@ vbc -nowarn:42024 t2.vb
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Visual Basic での警告の構成](/visualstudio/ide/configuring-warnings-in-visual-basic)

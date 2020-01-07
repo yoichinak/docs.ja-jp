@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: b96c68c06099db2f396d16772cfaa8aee37390fe
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7071aaf88346ee217226632501ebd6c82cfc1cb8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838014"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346755"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>方法 : Windows Communication Foundation セキュリティ イベントを監査する
 Windows Communication Foundation (WCF) を使用すると、windows イベントビューアーを使用して表示できるセキュリティイベントを Windows イベントログに記録できます。 このトピックでは、セキュリティ イベントをログ出力するようにアプリケーションを設定する方法について説明します。 WCF 監査の詳細については、「[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)」を参照してください。  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) を使用すると、windows イベント
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
-     <xref:System.ServiceModel.AuditLogLocation> 列挙体には、`Application`、`Security`、`Default`の3つの値があります。 これは、イベント ビューアーを開いたとき、セキュリティ ログとアプリケーション ログのどちらが表示されるかを表します。 `Default` を指定した場合の動作は、アプリケーションが稼働するオペレーティング システムに依存します。 ログの場所を指定せずに監査機能を有効にした場合、セキュリティ ログに書き込み可能なプラットフォームであれば `Security` ログに、そうでなければ `Application` ログに出力するようになります。 既定では、セキュリティログへの書き込みをサポートしているのは [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] と Windows Vista だけです。  
+     <xref:System.ServiceModel.AuditLogLocation> 列挙体には、`Application`、`Security`、`Default`の3つの値があります。 これは、イベント ビューアーを開いたとき、セキュリティ ログとアプリケーション ログのどちらが表示されるかを表します。 `Default` を指定した場合の動作は、アプリケーションが稼働するオペレーティング システムに依存します。 ログの場所を指定せずに監査機能を有効にした場合、セキュリティ ログに書き込み可能なプラットフォームであれば `Security` ログに、そうでなければ `Application` ログに出力するようになります。 既定では、セキュリティログへの書き込みがサポートされているのは、Windows Server 2003 と Windows Vista だけです。  
   
 2. イベントの種類を監査対象として設定します。 サービス レベルのイベントとメッセージ レベルの承認イベントを同時に監査できます。 それには、次のコードに示すように、<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> プロパティまたは <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> プロパティに <xref:System.ServiceModel.AuditLevel> 列挙体のいずれかの値を設定します。  
   
@@ -78,7 +78,7 @@ Windows Communication Foundation (WCF) を使用すると、windows イベント
  [!code-csharp[AuditingSecurityEvents#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#1)]
  [!code-vb[AuditingSecurityEvents#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
   
-## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
+## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定すると、セキュリティ監査を生成する失敗が抑制されます (`false` に設定した場合は、例外がスローされます)。 ただし、次の Windows**ローカルセキュリティ設定**プロパティを有効にすると、監査イベントの生成に失敗すると、windows が直ちにシャットダウンします。  
   
  **監査: セキュリティ監査をログに記録できない場合は、直ちにシステムをシャットダウンします。**  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) を使用すると、windows イベント
   
  <xref:System.ServiceModel.AuditLogLocation> プロパティが <xref:System.ServiceModel.AuditLogLocation.Security> に設定されていて、 **[オブジェクトアクセスの監査]** が**ローカルセキュリティポリシー**で設定されていない場合、監査イベントはセキュリティログに書き込まれません。 エラーが返らない場合でも、監査エントリはセキュリティ ログに書き込まれません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>

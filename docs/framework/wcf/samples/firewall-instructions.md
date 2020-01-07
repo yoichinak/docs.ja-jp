@@ -2,12 +2,12 @@
 title: ファイアウォール手順
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 3c94f0edbb244b6c378cc32f05c34fd029d253ff
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e2c4dd8e784599a5e110e7454d9d0e709cbc5776
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837845"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544776"
 ---
 # <a name="firewall-instructions"></a>ファイアウォール手順
 Windows Communication Foundation (WCF) サンプルを機能させるには、ファイアウォールで複数のポートまたはプログラムを有効にする必要があります。 サンプルの多くは、通信する際に 8000 ～ 8003 の範囲のポートと 9000 のポートを使用します。 既定ではファイアウォールが有効なので、こうしたポートにはアクセスできません。 サンプル用にファイアウォールを有効にするには、要件とセキュリティ環境に応じて次のいずれかの手順を完了する必要があります。  
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) サンプルを機能させるには、�
   
     - Windows 7 または Windows Server 2008 r2 で、[ **Windows ファイアウォールを介したプログラムまたは機能を許可**する] をクリックします。 をクリックして**設定を変更する**、許可**別のプログラムしています**.  
   
-    - Windows Vista または [!INCLUDE[lserver](../../../../includes/lserver-md.md)]で、 **[Windows ファイアウォールによるプログラムの許可]** をクリックします。  
+    - Windows Vista または Windows Server 2008 の場合は、 **[Windows ファイアウォールによるプログラムの許可]** をクリックします。  
   
 4. **[例外]** タブで、 **[プログラムの追加]** をクリックします。  
   
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) サンプルを機能させるには、�
   
     10. **[送信の規則]** をクリックし、手順 c ~ h を繰り返します。  
   
-3. Windows Vista または [!INCLUDE[lserver](../../../../includes/lserver-md.md)]の場合は、次の手順に従います。  
+3. Windows Vista または Windows Server 2008 では、次の手順を実行します。  
   
     1. **[Windows ファイアウォールによるプログラムの許可]** をクリックします。  
   

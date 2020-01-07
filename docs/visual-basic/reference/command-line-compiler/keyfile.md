@@ -57,4 +57,4 @@ vbc -keyfile:myfile.sn input.vb
 - [.NET のアセンブリ](../../../standard/assembly/index.md)
 - [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

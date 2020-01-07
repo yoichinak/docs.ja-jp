@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 6b4a5379145ebdffde0d5b76d8c7b9ab57261007
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b6d99d90a3da232e1873ebe8433e01ceb2977de6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975789"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636433"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>パフォーマンスの最適化 : その他の推奨事項
 <a name="introduction"></a> このトピックでは、「[WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)」セクションのトピックで説明されている推奨事項を補足するパフォーマンスに関する推奨事項について取り上げます。  
@@ -64,13 +64,13 @@ ms.locfileid: "73975789"
   
 <a name="Avoid_Using_ScrollBarVisibility"></a>   
 ## <a name="avoid-using-scrollbarvisibilityauto"></a>ScrollBarVisibility=Auto は使用しない  
- 可能な限り、`HorizontalScrollBarVisibility` プロパティと `VerticalScrollBarVisibility` プロパティの <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> 値は使用しないようにしてください。 これらのプロパティは、<xref:System.Windows.Controls.RichTextBox>、<xref:System.Windows.Controls.ScrollViewer>、および <xref:System.Windows.Controls.TextBox> オブジェクトに対して定義され、<xref:System.Windows.Controls.ListBox> オブジェクトの添付プロパティとして定義されます。 代わりに、<xref:System.Windows.Controls.ScrollBarVisibility> を <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>、<xref:System.Windows.Controls.ScrollBarVisibility.Hidden>、または <xref:System.Windows.Controls.ScrollBarVisibility.Visible> に設定します。  
+ 可能な限り、`HorizontalScrollBarVisibility` プロパティと `VerticalScrollBarVisibility` プロパティの <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> 値は使用しないようにしてください。 これらのプロパティは、<xref:System.Windows.Controls.RichTextBox>、<xref:System.Windows.Controls.ScrollViewer>、および <xref:System.Windows.Controls.TextBox> オブジェクトに対して定義され、<xref:System.Windows.Controls.ListBox> オブジェクトの添付プロパティとして定義されます。 代わりに、<xref:System.Windows.Controls.ScrollBarVisibility> を <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>、<xref:System.Windows.Controls.ScrollBarVisibility.Hidden>、または <xref:System.Windows.Controls.ScrollBarVisibility.Visible>に設定します。  
   
  <xref:System.Windows.Controls.ScrollBarVisibility.Auto> 値は、スペースが制限されており、必要な場合にのみスクロールバーが表示されるケースを想定しています。 たとえば、この <xref:System.Windows.Controls.ScrollBarVisibility> 値を、数百行のテキストを含む <xref:System.Windows.Controls.TextBox> ではなく、30項目の <xref:System.Windows.Controls.ListBox> で使用すると便利な場合があります。  
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Font Cache サービスの構成による起動時間の短縮  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Font Cache サービスは、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーション間でフォント データを共有します。 このサービスがまだ実行されていない場合は、実行する最初の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションによって開始されます。 Windows Vista を使用している場合は、"Windows Presentation Foundation (WPF) フォントキャッシュ 3.0.0.0" サービスを "手動" (既定) から "自動 (遅延開始)" に設定して、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの初期起動時間を短縮することができます。  
+ Wpf フォントキャッシュサービスは、WPF アプリケーション間でフォントデータを共有します。 サービスがまだ実行されていない場合は、実行する最初の WPF アプリケーションがこのサービスを開始します。 Windows Vista を使用している場合は、"Windows Presentation Foundation (WPF) フォントキャッシュ 3.0.0.0" サービスを "手動" (既定) から "自動 (遅延開始)" に設定して、WPF アプリケーションの初期起動時間を短縮することができます。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -80,6 +80,6 @@ ms.locfileid: "73975789"
 - [2D グラフィックスとイメージング](optimizing-performance-2d-graphics-and-imaging.md)
 - [オブジェクトの動作](optimizing-performance-object-behavior.md)
 - [アプリケーション リソース](optimizing-performance-application-resources.md)
-- [[テキスト]](optimizing-performance-text.md)
+- [テキスト](optimizing-performance-text.md)
 - [データ バインディング](optimizing-performance-data-binding.md)
 - [アニメーションのヒントとテクニック](../graphics-multimedia/animation-tips-and-tricks.md)
