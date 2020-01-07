@@ -60,7 +60,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`charsetmodifier`|省略可。 文字セットとファイル検索情報を指定します。 次のいずれかになります。<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) (既定値)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|
 |`Sub`|省略可能ですが、`Sub` または `Function` のいずれかが表示されている必要があります。 外部プロシージャが値を返さないことを示します。|
 |`Function`|省略可能ですが、`Sub` または `Function` のいずれかが表示されている必要があります。 外部プロシージャが値を返すことを示します。|
-|`name`|必須。 この外部参照の名前です。 詳細については、「宣言された[要素名](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
+|`name`|必須。 この外部参照の名前です。 詳細については、「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
 |`Lib`|必須。 では、外部プロシージャを含む外部ファイル (DLL またはコードリソース) を識別する `Lib` 句が導入されています。|
 |`libname`|必須。 宣言されたプロシージャを含むファイルの名前。|
 |`Alias`|省略可。 宣言されているプロシージャが、`name`で指定された名前によってファイル内で識別されないことを示します。 Id は `aliasname`で指定します。|
@@ -78,7 +78,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 ## <a name="rules"></a>ルール
 
-- **アトリビュート.** 外部参照に属性を適用できます。 適用した属性は、プロジェクト内でのみ有効になり、外部ファイルには反映されません。
+- **属性。** 外部参照に属性を適用できます。 適用した属性は、プロジェクト内でのみ有効になり、外部ファイルには反映されません。
 
 - **ド.** 外部プロシージャは暗黙的に[Shared](../../../visual-basic/language-reference/modifiers/shared.md)されます。 外部参照を宣言するときに `Shared` キーワードを使用することはできません。また、共有ステータスを変更することもできません。
 
@@ -110,11 +110,11 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 ## <a name="behavior"></a>動作
 
-- **検索.** 外部参照は、そのクラス、構造体、またはモジュール全体でスコープ内にあります。
+- **スコープ。** 外部参照は、そのクラス、構造体、またはモジュール全体でスコープ内にあります。
 
-- **最短.** 外部参照の有効期間は、宣言されているクラス、構造体、またはモジュールと同じです。
+- **有効期間。** 外部参照の有効期間は、宣言されているクラス、構造体、またはモジュールと同じです。
 
-- **外部プロシージャを呼び出しています。** 外部プロシージャは、`Function` または `Sub` プロシージャを呼び出すのと同じ方法で、値を返す場合は式で使用するか、値を返さない場合は[Call ステートメント](../../../visual-basic/language-reference/statements/call-statement.md)で指定することによって呼び出します。
+- **外部プロシージャの呼び出し。** 外部プロシージャは、`Function` または `Sub` プロシージャを呼び出すのと同じ方法で、値を返す場合は式で使用するか、値を返さない場合は [Call ステートメント](../../../visual-basic/language-reference/statements/call-statement.md)で指定することによって呼び出します。
 
   引数は、`Declare` ステートメントの `parameterlist` で指定されたとおりに、外部プロシージャに渡すことができます。 パラメーターが外部ファイル内で最初に宣言された方法を考慮しないでください。 同様に、戻り値がある場合は、`Declare` ステートメントの `returntype` で指定されたとおりに使用します。
 
@@ -126,7 +126,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
   - Windows NT、Windows 2000、Windows XP などの Unicode プラットフォームでは、最初に名前を変更せずに外部プロシージャを検索します。 失敗した場合は、外部プロシージャ名の末尾に "W" を追加して、もう一度確認します。
 
-- **しくみ.** Visual Basic は、.NET Framework *platform invoke* (PInvoke) メカニズムを使用して、外部プロシージャを解決し、アクセスします。 `Declare` ステートメントと <xref:System.Runtime.InteropServices.DllImportAttribute> クラスは、どちらもこのメカニズムを自動的に使用します。 PInvoke に関する知識は必要ありません。 詳細については、「[チュートリアル: Windows api の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)」を参照してください。
+- **仕組み。** Visual Basic は、.NET Framework *platform invoke* (PInvoke) メカニズムを使用して、外部プロシージャを解決し、アクセスします。 `Declare` ステートメントと <xref:System.Runtime.InteropServices.DllImportAttribute> クラスは、どちらもこのメカニズムを自動的に使用します。 PInvoke に関する知識は必要ありません。 詳細については、「[チュートリアル: Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)」を参照してください。
 
 > [!IMPORTANT]
 > 外部プロシージャが共通言語ランタイム (CLR) の外部で実行されている場合は、*アンマネージコード*です。 このようなプロシージャ (Windows API 関数や COM メソッドなど) を呼び出すと、アプリケーションがセキュリティ上のリスクにさらされる可能性があります。 詳細については、「[アンマネージコードの安全なコーディングのガイドライン](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)」を参照してください。

@@ -30,7 +30,7 @@ ms.locfileid: "74347331"
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
-## <a name="avoiding-name-collisions"></a>名前の競合の回避  
+## <a name="avoiding-name-collisions"></a>名前の競合の回避
  .NET Framework 名前空間は、*名前空間の汚染*と呼ばれる問題に対処します。このような場合、クラスライブラリの開発者は、別のライブラリで類似した名前を使用することによって妨げられます。 このような既存コンポーネントとの競合は、 *名前の競合*とも呼ばれます。  
   
  たとえば、 `ListBox`という名前の新しいクラスを作成した場合、プロジェクト内ではこのクラスを修飾子を付けずに使用できます。 ただし、同じプロジェクトで .NET Framework <xref:System.Windows.Forms.ListBox> クラスを使用する場合は、参照を一意にするために完全修飾参照を使用する必要があります。 参照が一意でない場合、Visual Basic によって、名前があいまいであることを示すエラーが生成されます。 次のコード例では、これらのオブジェクトを宣言する方法を示しています。  
@@ -62,7 +62,7 @@ ms.locfileid: "74347331"
   
  完全修飾なしで `Class1` を使用しようとすると、Visual Basic `Class1` 名前があいまいであることを示すエラーが生成されます。  
   
-## <a name="namespace-level-statements"></a>名前空間レベルのステートメント  
+## <a name="namespace-level-statements"></a>Namespace Level ステートメント  
  名前空間内では、モジュール、インターフェイス、クラス、デリゲート、列挙体、構造体、他の名前空間などの項目を定義できます。 プロパティ、プロシージャ、変数、イベントなどの項目を名前空間のレベルで定義することはできません。 これらの項目は、モジュール、構造体、クラスなどのコンテナー内で宣言する必要があります。  
   
 ## <a name="global-keyword-in-fully-qualified-names"></a>完全修飾名の Global キーワード  
@@ -98,7 +98,7 @@ End Namespace
   
  `Global` を使用して、 <xref:Microsoft.VisualBasic?displayProperty=nameWithType>などの他のルート レベルの名前空間、およびプロジェクトに関連する任意の名前空間にアクセスできます。  
   
-## <a name="global-keyword-in-namespace-statements"></a>名前空間のステートメントでの Global キーワード  
+## <a name="global-keyword-in-namespace-statements"></a>Namespace ステートメントでの Global キーワード  
  また、 [Namespace ステートメント](../../../visual-basic/language-reference/statements/namespace-statement.md)で `Global` キーワードを使用することもできます。 これにより、プロジェクトのルート名前空間から名前空間を定義できます。  
   
  プロジェクト内のすべての名前空間は、プロジェクトのルート名前空間に基づいています。  Visual Studio では、プロジェクト内のすべてのコードで、既定のルート名前空間としてプロジェクト名が割り当てられます。 たとえば、プロジェクト名が `ConsoleApplication1`である場合、そのプログラミング要素は `ConsoleApplication1`名前空間に属します。 `Namespace Magnetosphere`を宣言すると、プロジェクトの `Magnetosphere` への参照は `ConsoleApplication1.Magnetosphere`にアクセスします。  

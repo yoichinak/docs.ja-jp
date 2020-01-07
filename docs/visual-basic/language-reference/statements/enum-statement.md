@@ -61,7 +61,7 @@ End Enum
 
 - `enumerationname`
 
-  必須。 列挙体の名前。 有効な名前の詳細については、「宣言された[要素名](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+  必須。 列挙体の名前。 有効な名前の詳細については、「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
 - `datatype`
 
@@ -100,7 +100,7 @@ End Enum
 
 プロシージャ以外のクラス、構造体、モジュール、またはインターフェイスレベルで宣言された列挙型は、*メンバー列挙*型です。 これは、それを宣言するクラス、構造体、モジュール、またはインターフェイスのメンバーです。
 
-メンバー列挙体には、クラス、構造体、モジュール、またはインターフェイス内のどこからでもアクセスできます。 クラス、構造体、またはモジュールの外部のコードでは、メンバーの列挙体の名前を、そのクラス、構造体、またはモジュールの名前で修飾する必要があります。 [インポート](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)ステートメントをソースファイルに追加することで、完全修飾名を使用する必要がないようにすることができます。
+メンバー列挙体には、クラス、構造体、モジュール、またはインターフェイス内のどこからでもアクセスできます。 クラス、構造体、またはモジュールの外部のコードでは、メンバーの列挙体の名前を、そのクラス、構造体、またはモジュールの名前で修飾する必要があります。 [Imports ステートメント](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)をソースファイルに追加することで、完全修飾名を使用する必要がないようにすることができます。
 
 名前空間レベルで、任意のクラス、構造体、モジュール、またはインターフェイスの外側で宣言された列挙型は、それが出現する名前空間のメンバーになります。
 
@@ -131,6 +131,7 @@ End Enum
 ## <a name="modifiers"></a>修飾子
 
 クラス、構造体、モジュール、およびインターフェイス メンバーの列挙型は、既定でパブリック アクセスに設定されています。アクセス修飾子を使用してこれらのアクセス レベルを調整できます。名前空間メンバーの列挙は、既定でフレンド アクセスに設定されています。アクセス レベルは public に調整できますが、private または protected にすることはできません。詳細については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+
 
 すべての列挙メンバーにはパブリックアクセスがあり、それらのメンバーに対してアクセス修飾子を使用することはできません。 ただし、列挙自体のアクセスレベルがより制限されている場合は、指定された列挙アクセスレベルが優先されます。
 

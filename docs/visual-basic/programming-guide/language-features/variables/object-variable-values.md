@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351798"
 ---
 # <a name="object-variable-values-visual-basic"></a>オブジェクト変数の値 (Visual Basic)
-[オブジェクトのデータ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)の変数は、任意の型のデータを参照できます。 `Object` 変数に格納した値はメモリ内の他の場所に保持されますが、変数自体はデータへのポインターを保持します。  
+[Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)の変数は、任意の型のデータを参照できます。 `Object` 変数に格納した値はメモリ内の他の場所に保持されますが、変数自体はデータへのポインターを保持します。  
   
 ## <a name="object-classifier-functions"></a>オブジェクト分類子関数  
  Visual Basic には、次の表に示すように、`Object` 変数の参照先に関する情報を返す関数が用意されています。  

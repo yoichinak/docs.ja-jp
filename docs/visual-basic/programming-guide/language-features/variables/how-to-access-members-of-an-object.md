@@ -58,7 +58,7 @@ ms.locfileid: "74348666"
 
 #### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>コンパイル時に型がわからないオブジェクトのメンバーにアクセスするには
 
-1. オブジェクトの[データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)であるオブジェクト変数を宣言します。 (変数を `Object` として宣言することは <xref:System.Object?displayProperty=nameWithType>として宣言することと同じです)。
+1. [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)であるオブジェクト変数を宣言します。 (変数を `Object` として宣言することは <xref:System.Object?displayProperty=nameWithType>として宣言することと同じです)。
 
     ```vb
     Dim someControl As Object
@@ -81,5 +81,5 @@ ms.locfileid: "74348666"
 - <xref:System.MemberAccessException>
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [オブジェクト変数の宣言](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

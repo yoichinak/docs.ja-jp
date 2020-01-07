@@ -80,13 +80,13 @@ Next [ element ]
 
 ループを入れ子にする場合、各ループには一意の `element` 変数が必要です。
 
-また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、「[入れ子になったコントロール構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
+また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、「[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
 
 ## <a name="exit-for-and-continue-for"></a>Exit For と Continue For
 
 [Exit For](../../../visual-basic/language-reference/statements/exit-statement.md)ステートメントを実行すると、`For`...`Next` が終了します ループし、`Next` ステートメントの後のステートメントに制御を転送します。
 
-`Continue For` ステートメントは、ループの次の反復処理に制御を直ちに転送します。 詳細については、「 [Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)」を参照してください。
+`Continue For` ステートメントは、ループの次の反復処理に制御を直ちに転送します。 詳細については、「[Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)」を参照してください。
 
 次の例では、`Continue For` ステートメントと `Exit For` ステートメントを使用する方法を示します。
 
@@ -100,7 +100,7 @@ Next [ element ]
 
 - 例外は、`Try`...`Catch`...`Finally`でキャッチされます。`Finally` ブロックの末尾に `Exit For` を使用することもできます。
 
-- 無限ループがあります。これは、大規模または無限の回数実行されるループです。 このような条件を検出した場合は、`Exit For` を使用してループをエスケープできます。 詳細については、「 [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)。
+- 無限ループがあります。これは、大規模または無限の回数実行されるループです。 このような条件を検出した場合は、`Exit For` を使用してループをエスケープできます。 詳細については、「[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)」を参照してください。
 
 ## <a name="iterators"></a>反復子
 
@@ -120,7 +120,7 @@ Next [ element ]
 
 コレクション内のすべての要素が `element`に連続して割り当てられると、`For Each` ループが停止し、`Next` ステートメントに続くステートメントに制御が移ります。
 
-[オプションの推論](option-infer-statement.md)が on (既定の設定) の場合、Visual Basic コンパイラは `element`のデータ型を推測できます。 Off で、`element` がループの外側で宣言されていない場合は、`For Each` ステートメントで宣言する必要があります。 `element` のデータ型を明示的に宣言するには、`As` 句を使用します。 要素のデータ型が `For Each`...`Next` コンストラクトの外側で定義されている場合を除き、そのスコープはループの本体です。 ループ内で `element` 宣言することはできません。
+[Option Infer ステートメント](option-infer-statement.md)が on (既定の設定) の場合、Visual Basic コンパイラは `element`のデータ型を推測できます。 Off で、`element` がループの外側で宣言されていない場合は、`For Each` ステートメントで宣言する必要があります。 `element` のデータ型を明示的に宣言するには、`As` 句を使用します。 要素のデータ型が `For Each`...`Next` コンストラクトの外側で定義されている場合を除き、そのスコープはループの本体です。 ループ内で `element` 宣言することはできません。
 
 必要に応じて、`Next` ステートメントで `element` を指定することもできます。 これにより、特に `For Each` ループが入れ子になっている場合に、プログラムの読みやすさが向上します。 対応する `For Each` ステートメントに表示されるものと同じ変数を指定する必要があります。
 
