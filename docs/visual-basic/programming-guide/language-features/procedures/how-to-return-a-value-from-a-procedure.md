@@ -42,11 +42,11 @@ ms.locfileid: "74346024"
   
 4. `Function` プロシージャには、`End Function` ステートメントを1つだけ含めることができます。  
   
-     詳細と例については、「 [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)」の「戻り値」を参照してください。  
+     詳細と例については、「[Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)」の「戻り値」を参照してください。  
   
 ## <a name="see-also"></a>参照
 
-- [手順](./index.md)
+- [Visual Basic におけるプロシージャ](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [Property プロシージャ](./property-procedures.md)
 - [演算子プロシージャ](./operator-procedures.md)

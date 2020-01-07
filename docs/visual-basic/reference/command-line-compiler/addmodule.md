@@ -33,7 +33,7 @@ ms.locfileid: "72524482"
   
  @No__t_2 で `-target:module` 以外の[ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)オプションを (暗黙的または明示的に) 指定すると、`-addmodule` に渡すファイルはプロジェクトのアセンブリの一部になります。 @No__t_0 で追加された1つ以上のファイルを含む出力ファイルを実行するには、アセンブリが必要です。  
   
- アセンブリを含むファイルからメタデータをインポートするには[、-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)を使用します。  
+ アセンブリを含むファイルからメタデータをインポートするには、[-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)を使用します。  
   
 > [!NOTE]
 > @No__t_0 オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  

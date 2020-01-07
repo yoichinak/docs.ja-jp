@@ -25,7 +25,7 @@ Visual Basic で定義されているその他の演算子を次に示します�
   
  [GetType 演算子](../../../visual-basic/language-reference/operators/gettype-operator.md)  
   
- [関数式](../../../visual-basic/language-reference/operators/function-expression.md)  
+ [Function 式](../../../visual-basic/language-reference/operators/function-expression.md)  
 
  [If 演算子](../../../visual-basic/language-reference/operators/if-operator.md)  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: e9a646d60bb22507f4c6bcbcdf9222fd0ed18f02
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b9216dba23f49e4d9fd99687e38f5c13addde8fb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345759"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636875"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本的なクエリ操作 (Visual Basic)
-このトピックでは、Visual Basic の [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 式、およびクエリで実行する一般的な操作の一部について簡単に説明します。 詳細については、次のトピックを参照してください。  
+このトピックでは、Visual Basic での統合言語クエリ (LINQ) 式について簡単に紹介し、クエリで実行する一般的な操作の一部について説明します。 詳細については、以下のトピックを参照してください。  
   
  [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74345759"
  [チュートリアル: Visual Basic でのクエリの作成](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
 ## <a name="specifying-the-data-source-from"></a>データソースの指定 (から)  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリでは、最初の手順として、クエリを実行するデータソースを指定します。 したがって、クエリ内の `From` 句は常に最初になります。 クエリ演算子ソースの種類に基づいて、結果を選択して整形します。  
+ LINQ クエリでは、最初の手順として、クエリを実行するデータソースを指定します。 したがって、クエリ内の `From` 句は常に最初になります。 クエリ演算子ソースの種類に基づいて、結果を選択して整形します。  
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
@@ -87,7 +87,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      [!code-vb[VbLINQBasicOps#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#6)]  
   
-     または  
+     -または-  
   
 - 結果に含める特定のフィールドを含む名前付きの型を定義し、`Select` 句でその型のインスタンスを作成および初期化します。 このオプションは、返されるコレクションの外部で個々の結果を使用する必要がある場合、またはメソッドの呼び出しでパラメーターとして渡す必要がある場合にのみ使用します。 次の例の `londonCusts5` の種類は、IEnumerable (Of NamePhone) です。  
   
@@ -124,7 +124,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  お金  
   
- Debra、  
+ Garcia、Debra  
   
  Tucker、Lance  
   
@@ -152,7 +152,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  `Group By`の詳細については、「 [Group By 句](../../../../visual-basic/language-reference/queries/group-by-clause.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

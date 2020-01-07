@@ -20,7 +20,8 @@ ms.locfileid: "74348208"
 ## <a name="remarks"></a>コメント  
  変換の試行が失敗した場合、`CType` と `DirectCast` の両方で <xref:System.InvalidCastException> エラーがスローされます。 これにより、アプリケーションのパフォーマンスが低下する可能性があります。 `TryCast` は [Nothing](../../../visual-basic/language-reference/nothing.md) を返します。そのため、考えられる例外を処理する代わりに、返された結果を `Nothing`に対してのみテストする必要があります。  
   
- `TryCast` キーワードは、[CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)と [DirectCast 演算子](../../../visual-basic/language-reference/operators/directcast-operator.md)キーワードを使用するのと同じ方法で使用します。 最初の引数として式を指定し、2 番目の引数として変換する型を指定します。 `TryCast` は、クラスやインターフェイスなどの参照型に対してのみ動作します。 2 つの型の間の継承または実装関係が必要です。 これは、一方の型が他の型を継承または実装する必要があることを意味します。  
+ `TryCast` キーワードは、[CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)と [DirectCast 演算子](../../../visual-basic/language-reference/operators/directcast-operator.md)キーワードを使用するのと同じ方法で使用します。最初の引数として式を指定し、2 番目の引数として変換する型を指定します。`TryCast` は、クラスやインターフェイスなどの参照型に対してのみ動作します。2 つの型の間の継承または実装関係が必要です。これは、一方の型が他の型を継承または実装する必要があることを意味します。  
+
   
 ## <a name="errors-and-failures"></a>エラーとエラー  
  `TryCast` は、継承または実装関係が存在しないことを検出すると、コンパイラエラーを生成します。 ただし、コンパイラエラーがないからといって、正常に変換できるとは限りません。 目的の変換が縮小されている場合は、実行時に失敗する可能性があります。 この場合、`TryCast` は [Nothing](../../../visual-basic/language-reference/nothing.md) を返します。  

@@ -72,7 +72,7 @@ Loop { While | Until } condition
   
  通常、この条件は2つの値の比較によって得られますが、[Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md) の値 (`True` または `False`) に評価される任意の式を指定できます。 これには、`Boolean`に変換されたその他のデータ型 (数値型など) の値が含まれます。  
   
- ループを入れ子にするには、別のループ内にループを挿入し `Do` ます。 また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、「[入れ子になったコントロール構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。  
+ ループを入れ子にするには、別のループ内にループを挿入し `Do` します。 また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、「[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。  
   
 > [!NOTE]
 > `Do...Loop` 構造では、より高い柔軟性が得[While...End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md) を使用すると、`condition` が `True` 停止したとき、または最初に `True`になったときにループを終了するかどうかを決定できます。 また、ループの開始時または終了時に `condition` をテストすることもできます。  

@@ -85,4 +85,4 @@ vbc -platform:x86 myFile.vb
 
 - [-target (Visual Basic)](target.md)
 - [Visual Basic のコマンド ライン コンパイラ](index.md)
-- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)
+- [コンパイルコマンドラインのサンプル](sample-compilation-command-lines.md)

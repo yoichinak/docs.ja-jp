@@ -17,7 +17,7 @@ ms.lasthandoff: 10/07/2019
 ms.locfileid: "72004693"
 ---
 # <a name="-sdkpath"></a>-sdkpath
-Mscorlib.dll と、mscorlib.dll の場所を指定します。  
+Mscorlib.dll と Microsoft.VisualBasic.dll の場所を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +46,7 @@ vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactF
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)
 - [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)

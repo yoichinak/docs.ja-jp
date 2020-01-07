@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 38bba2e9f63ab6cce0ede1a82658b6a21f5d4a4b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8eb1e6e2a9338230520ebf3aec1c9ba50aa15ed9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569391"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346195"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>アプリケーション シナリオ (WCF Data Services)
 
@@ -52,9 +52,9 @@ AJAX ベースのクライアントアプリケーションで OData フィー�
 
 - [クライアント アプリケーションでのデータ サービスの使用](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
-- [OData: URI 規則](https://go.microsoft.com/fwlink/?LinkId=185564)
+- [OData: URI 規則](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)
 
-- [OData: JavaScript Object Notation (JSON) 形式](https://go.microsoft.com/fwlink/?LinkId=185790)
+- [OData: JavaScript Object Notation (JSON) 形式](https://www.odata.org/developers/protocols/json-format/)
 
 OData を使用してクライアントとサーバー間でデータを転送するエンドツーエンドのデータソリューションを作成します。
 
@@ -98,7 +98,7 @@ Windows Presentation Framework (WPF) アプリケーションのコントロー�
 
 - [サービス操作](service-operations-wcf-data-services.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [クイック スタート](quickstart-wcf-data-services.md)
 - [リソース](wcf-data-services-resources.md)

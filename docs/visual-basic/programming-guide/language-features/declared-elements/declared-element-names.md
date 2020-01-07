@@ -1,5 +1,5 @@
 ---
-title: Declared Element Names
+title: 宣言された要素の名前 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic], case sensitivity
