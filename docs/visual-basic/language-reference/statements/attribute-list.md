@@ -24,7 +24,7 @@ ms.locfileid: "74354060"
 ## <a name="parts"></a>指定項目  
 |||
 |---|---|
-|`attributemodifier`|ソースファイルの先頭で適用される属性に必要です。 [アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)または[モジュール](../../../visual-basic/language-reference/modifiers/module-keyword.md)を指定できます。|
+|`attributemodifier`|ソースファイルの先頭で適用される属性に必要です。 [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)または[Module](../../../visual-basic/language-reference/modifiers/module-keyword.md)を指定できます。|
 |`attributename`| 必須。 属性の名前。|
 |`attributearguments`|省略可。 この属性の位置指定引数の一覧。 複数の引数は、コンマで区切ります。|
 |`attributeinitializer`|省略可。 この属性の変数またはプロパティ初期化子のリスト。 複数の初期化子は、コンマで区切られます。|
@@ -36,15 +36,15 @@ ms.locfileid: "74354060"
   
 ## <a name="rules"></a>ルール  
   
-- **場所.** 最も宣言されたプログラミング要素に属性を適用できます。 1つまたは複数の属性を適用するには、要素宣言の先頭に*属性ブロック*を配置します。 属性リストの各エントリは、適用する属性、および属性のこの呼び出しに使用する修飾子と引数を指定します。  
+- **定義する場所。** 最も宣言されたプログラミング要素に属性を適用できます。 1つまたは複数の属性を適用するには、要素宣言の先頭に*属性ブロック*を配置します。 属性リストの各エントリは、適用する属性、および属性のこの呼び出しに使用する修飾子と引数を指定します。  
   
 - **山かっこ。** 属性リストを指定する場合は、山かっこ ("`<`" および "`>`") で囲む必要があります。  
   
-- **宣言の一部。** 属性は、個別のステートメントではなく、要素宣言の一部である必要があります。 行連結シーケンス ("`_`") を使用して、宣言ステートメントを複数のソースコード行に拡張することができます。  
+- **宣言に含める。** 属性は、個別のステートメントではなく、要素宣言の一部である必要があります。 行連結シーケンス ("`_`") を使用して、宣言ステートメントを複数のソースコード行に拡張することができます。  
   
-- **ド.** ソースファイルの先頭でプログラミング要素に適用されるすべての属性に対して、属性修飾子 (`Assembly` または `Module`) が必要です。 ソースファイルの先頭にない要素に適用される属性では、属性修飾子は使用できません。  
+- **修飾子。** ソースファイルの先頭でプログラミング要素に適用されるすべての属性に対して、属性修飾子 (`Assembly` または `Module`) が必要です。 ソースファイルの先頭にない要素に適用される属性では、属性修飾子は使用できません。  
   
-- **数値.** 属性のすべての位置指定引数は、変数またはプロパティ初期化子の前に記述する必要があります。  
+- **引数。** 属性のすべての位置指定引数は、変数またはプロパティ初期化子の前に記述する必要があります。  
   
 ## <a name="example"></a>例  
  次の例では、`Function` プロシージャのスケルトン定義に <xref:System.Runtime.InteropServices.DllImportAttribute> 属性を適用します。  
@@ -55,7 +55,7 @@ ms.locfileid: "74354060"
   
 ## <a name="see-also"></a>参照
 
-- [アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)
-- [Module \<キーワード>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+-[Module <キーワード>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
 - [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [方法 : コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

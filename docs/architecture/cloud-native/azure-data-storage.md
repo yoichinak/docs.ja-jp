@@ -2,12 +2,12 @@
 title: Azure のデータストレージ
 description: Azure 向けのクラウドネイティブ .NET アプリの設計 |Azure のデータストレージ
 ms.date: 06/30/2019
-ms.openlocfilehash: 1a86cecf005c6dbdfda5cf4cacfafaad4711c076
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5ba05f53faf65334f6269af8ae2c54d81e6b0779
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841895"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337468"
 ---
 # <a name="data-storage-in-azure"></a>Azure のデータストレージ
 
@@ -63,7 +63,7 @@ Azure では、従来の Microsoft SQL Server スタックに加えて、いく�
 
 - 必要に応じて数秒以内に[スケール](https://docs.microsoft.com/azure/mysql/concepts-high-availability)します。
 
-- 保存中および移動中の機密データを保護するためにセキュリティで保護されています。
+- 保存中や転送中の機密データのセキュリティ保護。
 
 - [自動バックアップ](https://docs.microsoft.com/azure/mysql/concepts-backup)と[特定の時点への復元 (](https://docs.microsoft.com/azure/mysql/concepts-backup)最大35日間)。
 
@@ -129,11 +129,11 @@ Cosmos DB は、グローバルレベルで[アクティブ/アクティブ](htt
 
 Cosmos DB の[マルチマスター](https://docs.microsoft.com/azure/cosmos-db/how-to-multi-master)プロトコル機能を使用すると、次の機能が有効になります。
 
-- 無制限のエラスティック書き込みと読み取りのスケーラビリティ。
+- 無制限でエラスティックな書き込みと読み取りのスケーラビリティ。
 
-- 99.999% は世界中のすべての可用性を読み取り、書き込みます。
+- 全世界での 99.999% の読み取りおよび書き込みの可用性。
 
-- 99パーセンタイルでは、読み取りと書き込みが10ミリ秒未満で保証されます。
+- 99 パーセンタイルで 10 ミリ秒未満の処理性能が保証された読み取りと書き込み。
 
 内部的には、Cosmos DB は、整合性レベルが保証され、経済的にサポートされるサービスレベルアグリーメントによって、リージョン間でのデータレプリケーションを処理します。
 
@@ -141,7 +141,7 @@ Cosmos DB[マルチホーム api](https://docs.microsoft.com/azure/cosmos-db/dis
 
 ### <a name="multi-model-support"></a>マルチモデルサポート
 
-Cosmos DB は、ドキュメント、キーと値のペア、ワイド列、グラフ表現など、サポートされている多数の NoSQL モデルを使用してデータを操作できる*マルチモデルデータプラットフォーム*です。 内部的には、データは、文字列、ブール、数値などのプリミティブデータ型で構成される単純な[構造体](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs)形式で格納されます。 データベースエンジンは、要求ごとに、選択したモデル表現にデータを変換します。 独自の Cosmos DB SQL ベースの API、または図5-14 に示されている[互換性 api](https://www.wikiwand.com/en/Cosmos_DB)から選択できます。
+Cosmos DB は、ドキュメント、キーと値のペア、ワイド列、グラフ表現など、サポートされている多数の NoSQL モデルを使用してデータを操作できる*マルチモデルデータプラットフォーム*です。 内部的には、データは、文字列、ブール値、数値などのプリミティブデータ型で構成される単純な[構造体](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs)形式で格納されます。 データベースエンジンは、要求ごとに、選択したモデル表現にデータを変換します。 独自の Cosmos DB SQL ベースの API、または図5-14 に示されている[互換性 api](https://www.wikiwand.com/en/Cosmos_DB)から選択できます。
 
 ![Cosmos DB プロバイダー](./media/cosmos-db-providers.png)
 
@@ -179,7 +179,7 @@ Azure Cosmos DB は自動[パーティション分割](https://docs.microsoft.co
 
 **図 5-17**: Cosmos DB エンティティの階層
 
-図5-17 では、データベースアカウント内で Cosmos DB データベースを作成する方法を説明します。 このデータベースは、一連のコンテナーの管理単位になります。 コンテナーは、選択した API プロバイダー (前のセクションで説明したもの) に基づいて、コレクション、テーブル、またはグラフとして表現できる項目のスキーマに依存しないグループです。 アイテムは、コンテナーに追加するデータで、ドキュメント、行、ノード、またはエッジとして表されます。 既定では、コンテナーに追加したすべてのアイテムには、明示的なインデックスまたはスキーマ管理を必要とせずに、自動的にインデックスが作成されます。
+図5-17 では、データベースアカウント内で Cosmos DB データベースを作成する方法を説明します。 このデータベースは、一連のコンテナーの管理単位になります。 コンテナーは、選択した API プロバイダー (前のセクションで説明したもの) に基づいて、コレクション、テーブル、またはグラフとして表現できる項目のスキーマに依存しないグループです。 アイテムは、コンテナーに追加するデータで、ドキュメント、行、ノード、またはエッジとして表されます。 既定では、コンテナーに追加するすべての項目に自動的にインデックスが付けられ、明示的なインデックスやスキーマ管理は必要とされません。
 
 コンテナーをパーティション分割するために、項目は [論理パーティション](https://docs.microsoft.com/azure/cosmos-db/partition-data)と呼ばれる個別のサブセットに分割されます。 論理パーティションは、コンテナー内の各項目に関連付けられているパーティションキーの値に基づいて作成されます。 図5-18 は、論理パーティション内のすべての項目が同じパーティションキー値を持っていることを示しています。
 

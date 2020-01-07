@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
-ms.custom: vs-dotnet
+ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d45932f6a8822ec2aaa40cd52431d9981ab8fa1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453747"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336808"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>チュートリアル: Visual Studio 2019 で初めての WPF アプリケーションを作成する
 
@@ -41,7 +41,7 @@ ms.locfileid: "73453747"
 >
 > このページの上部にある言語セレクターを使用しC#て、と Visual Basic の間でサンプルコードのコード言語を切り替えることができます。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
 - **.Net デスクトップ開発**ワークロードがインストールされた[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 。
 
@@ -51,7 +51,7 @@ ms.locfileid: "73453747"
 
 最初の手順では、アプリケーションの定義、2つのページ、およびイメージを含むアプリケーションインフラストラクチャを作成します。
 
-1. Visual Basic または Visual C# **`ExpenseIt`** という名前の新しい WPF アプリケーションプロジェクトを作成します。
+1. Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する **`ExpenseIt`** :
 
    1. Visual Studio を開き、 **[作業の開始]** メニューの **[新しいプロジェクトの作成]** を選択します。
 
@@ -65,7 +65,7 @@ ms.locfileid: "73453747"
     
       **[新しいプロジェクトの構成]** ダイアログボックスが開きます。
 
-   4. **`ExpenseIt`** プロジェクト名を入力し、 **[作成]** を選択します。
+   4. プロジェクト名を入力 **`ExpenseIt`** 選び **作成** です。
 
       ![[新しいプロジェクトの構成] ダイアログ](./media/walkthrough-my-first-wpf-desktop-application/configure-new-project-dialog.png)
 
@@ -83,11 +83,11 @@ ms.locfileid: "73453747"
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. *Mainwindow.xaml*を開きます。
+3. *MainWindow.xaml*を開きます。
 
     この XAML ファイルは、アプリケーションのメインウィンドウであり、ページで作成されたコンテンツを表示します。 <xref:System.Windows.Window> クラスは、ウィンドウのタイトル、サイズ、アイコンなどのプロパティを定義し、終了や非表示などのイベントを処理します。
 
-4. 次の XAML に示すように、<xref:System.Windows.Window> 要素を <xref:System.Windows.Navigation.NavigationWindow>に変更します。
+4. <xref:System.Windows.Navigation.NavigationWindow>.xaml の<xref:System.Windows.Window>要素を、次に示すように変更します。
 
    ```xaml
    <NavigationWindow x:Class="ExpenseIt.MainWindow"
@@ -97,7 +97,7 @@ ms.locfileid: "73453747"
    </NavigationWindow>
    ```
 
-   このアプリは、ユーザーの入力に応じてさまざまなコンテンツに移動します。 このため、メイン <xref:System.Windows.Window> を <xref:System.Windows.Navigation.NavigationWindow>に変更する必要があります。 <xref:System.Windows.Navigation.NavigationWindow> <xref:System.Windows.Window>のすべてのプロパティを継承します。 XAML ファイルの <xref:System.Windows.Navigation.NavigationWindow> 要素は、<xref:System.Windows.Navigation.NavigationWindow> クラスのインスタンスを作成します。 詳細については、「[ナビゲーションの概要](../app-development/navigation-overview.md)」を参照してください。
+   このアプリは、ユーザーの入力に応じてさまざまなコンテンツに移動します。 そのため、メイン ウィンドウを<xref:System.Windows.Window>から<xref:System.Windows.Navigation.NavigationWindow>に変更する必要があります。 <xref:System.Windows.Navigation.NavigationWindow>  は、<xref:System.Windows.Window>のすべてのプロパティを継承しています。 XAML ファイルの <xref:System.Windows.Navigation.NavigationWindow> 要素は、<xref:System.Windows.Navigation.NavigationWindow> クラスのインスタンスを作成します。 詳細については、「[ナビゲーションの概要](../app-development/navigation-overview.md)」を参照してください。
 
 5. <xref:System.Windows.Navigation.NavigationWindow> タグの間から <xref:System.Windows.Controls.Grid> 要素を削除します。
 
@@ -129,15 +129,15 @@ ms.locfileid: "73453747"
 
 このセクションでは、アプリケーションに 2 つのページと 1 つのイメージを追加します。
 
-1. 新しいページをプロジェクトに追加し、 *`ExpenseItHome.xaml`* という名前を指定します。
+1. プロジェクトに新しいページを追加し、名前 *`ExpenseItHome.xaml`* :
 
-   1. **ソリューションエクスプローラー**で、[ **`ExpenseIt`** プロジェクト] ノードを右クリックし、[ > **ページ**の**追加**] を選択します。
+   1. **ソリューション エクスプ ローラー**を右クリックし、 **`ExpenseIt`** プロジェクト ノード**追加** > **ページ**します。
 
-   1. **[新しい項目の追加]** ダイアログでは、 **[ページ (WPF)]** テンプレートは既に選択されています。 **`ExpenseItHome`** 名を入力し、 **[追加]** を選択します。
+   1. **[新しい項目の追加]** ダイアログでは、 **[ページ (WPF)]** テンプレートは既に選択されています。 名前を入力します **`ExpenseItHome`** 、し、**追加**します。
 
     このページは、アプリケーションの起動時に表示される最初のページです。 このレポートには、の経費明細書を表示するために選択する相手の一覧が表示されます。
 
-1. *`ExpenseItHome.xaml`* を開きます。
+1. 開いている *`ExpenseItHome.xaml`* します。
 
 1. <xref:System.Windows.Controls.Page.Title%2A> を "`ExpenseIt - Home`" に設定します。
 
@@ -151,17 +151,17 @@ ms.locfileid: "73453747"
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. *Mainwindow.xaml*を開きます。
+1. *MainWindow.xaml*を開きます。
 
 1. <xref:System.Windows.Navigation.NavigationWindow> 要素に <xref:System.Windows.Navigation.NavigationWindow.Source%2A> プロパティを追加し、それを "`ExpenseItHome.xaml`" に設定します。
 
-    これにより、アプリケーションの起動時に最初に開かれるページに *`ExpenseItHome.xaml`* が設定されます。 
+    これにより設定 *`ExpenseItHome.xaml`* アプリケーションの起動時を開く最初のページになります。 
 
     Visual Basic の XAML の例:
 
     [!code-xaml[ExpenseIt#7_A](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml#7_a)]
 
-    およびのC#場合:
+    および C# の場合。
 
     [!code-xaml[ExpenseIt#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/MainWindow.xaml#7)]
 
@@ -172,11 +172,11 @@ ms.locfileid: "73453747"
 
 1. 別の新しい WPF ページをプロジェクトに追加し、次*のように*名前を指定します。
 
-   1. **ソリューションエクスプローラー**で、[ **`ExpenseIt`** プロジェクト] ノードを右クリックし、[ > **ページ**の**追加**] を選択します。
+   1. **ソリューション エクスプ ローラー**を右クリックし、 **`ExpenseIt`** プロジェクト ノード**追加** > **ページ**します。
 
    1. **[新しい項目の追加]** ダイアログで、 **[ページ (WPF)]** テンプレートを選択します。 [名前の指定] をクリック**し、[** **追加**] を選択します。
 
-    このページには、[ **`ExpenseItHome`** ] ページで選択されたユーザーの経費明細書が表示されます。
+    このページで選択されているユーザーの経費報告書が表示されます、 **`ExpenseItHome`** ページ。
 
 1. *ExpenseReportPage.xaml*を開きます。
 
@@ -196,7 +196,7 @@ ms.locfileid: "73453747"
 
     新しいページファイルを作成すると、Visual Studio によってその*分離コード*ファイルが自動的に作成されます。 これらの分離コード ファイルでは、ユーザー入力に対応するためのロジックを処理します。
 
-    **`ExpenseItHome`** のコードは次のようになります。
+    コードは、次のようになります **`ExpenseItHome`** :
 
     [!code-csharp[ExpenseIt#2_5](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml.cs#2_5)]
 
@@ -240,9 +240,9 @@ ms.locfileid: "73453747"
 > [!TIP]
 > <xref:System.Windows.Controls.Panel> 要素の詳細については、「[パネルの概要](../controls/panels-overview.md)」を参照してください。 レイアウトの詳細については、「 [layout](../advanced/layout.md)」を参照してください。
 
-このセクションでは、 *`ExpenseItHome.xaml`* の <xref:System.Windows.Controls.Grid> に列と行の定義を追加することによって、3つの行と10ピクセルの余白を含む単一列テーブルを作成します。
+このセクションで作成する単一列テーブル 10 ピクセルの余白を 3 行の列と行の定義を追加することによって、<xref:System.Windows.Controls.Grid>で *`ExpenseItHome.xaml`* します。
 
-1. *`ExpenseItHome.xaml`* で、<xref:System.Windows.Controls.Grid> 要素の <xref:System.Windows.FrameworkElement.Margin%2A> プロパティを "10, 0, 10, 10" に設定します。これは、左、上、右、下の余白に対応します。
+1. *`ExpenseItHome.xaml`* 、設定、<xref:System.Windows.FrameworkElement.Margin%2A>プロパティを<xref:System.Windows.Controls.Grid>「10,0,10,10」は、左、上、右、下の余白に対応する要素。
 
    ```xaml
    <Grid Margin="10,0,10,10">
@@ -267,7 +267,7 @@ ms.locfileid: "73453747"
 
 このセクションでは、ホームページの UI を更新して、人の一覧を表示します。ここでは、1人のユーザーを選択して経費報告書を表示します。 コントロールとは、ユーザーがアプリケーションと対話できるようにする UI オブジェクトのことです。 詳しくは、「 [コントロール](../controls/index.md)」をご覧ください。
 
-この UI を作成するには、 *`ExpenseItHome.xaml`* に次の要素を追加します。
+この UI を作成するには、次の要素を追加します *`ExpenseItHome.xaml`* :
 
 - <xref:System.Windows.Controls.ListBox> (people の一覧)。
 - (リストヘッダーの) <xref:System.Windows.Controls.Label>。
@@ -328,7 +328,7 @@ ms.locfileid: "73453747"
 
     [!code-xaml[ExpenseIt#15](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
-2. *`ExpenseItHome.xaml.vb`* または *`ExpenseItHome.xaml.cs`* を開きます。
+2. 開いている *`ExpenseItHome.xaml.vb`* または *`ExpenseItHome.xaml.cs`* します。
 
 3. 次のコードを `ExpenseItHome` クラスに追加して、ボタンクリックイベントハンドラーを追加します。 イベントハンドラーによって、[処理された**Sereportpage** ] ページが開きます。
 
@@ -337,7 +337,7 @@ ms.locfileid: "73453747"
 
 ## <a name="create-the-ui-for-expensereportpage"></a>[印刷] ページの UI を作成する
 
-[ **`ExpenseItHome`** ] ページで選択されたユーザーの経費明細書*が表示されます。* このセクションでは、[の使用]**ページ**の UI を作成します。 また、さまざまな UI 要素に背景色と塗りつぶしの色を追加します。
+*ExpenseReportPage.xaml*で選択されている個人の経費報告書が表示されます、 **`ExpenseItHome`** ページ。 このセクションでは、[の使用]**ページ**の UI を作成します。 また、さまざまな UI 要素に背景色と塗りつぶしの色を追加します。
 
 1. *ExpenseReportPage.xaml*を開きます。
 
@@ -345,7 +345,7 @@ ms.locfileid: "73453747"
 
     [!code-xaml[ExpenseIt#17](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseReportPage.xaml#17)]
 
-    この UI は *`ExpenseItHome.xaml`* に似ていますが、レポートデータが <xref:System.Windows.Controls.DataGrid>に表示される点が異なります。
+    この UI はのような *`ExpenseItHome.xaml`* でレポート データが表示される点を除いて、<xref:System.Windows.Controls.DataGrid>します。
 
 3. アプリケーションをビルドして実行します。
 
@@ -427,7 +427,7 @@ ms.locfileid: "73453747"
 
 ## <a name="connect-data-to-controls"></a>コントロールへのデータの接続
 
-次に、[ **`ExpenseItHome`** ] ページで選択されている名前を取得して、 **[ページの追加] のコンストラクター**に渡すコードを追加します。 [調整された**Sereportpage** ] は、渡された項目を使用してそのデータコンテキストを設定します。これは、"*ページ*のバインド先" に定義されているコントロールです。
+次で選択されている名前を取得するコードを追加します、 **`ExpenseItHome`** ページし、のコンス トラクターに渡す**ExpenseReportPage**します。 [調整された**Sereportpage** ] は、渡された項目を使用してそのデータコンテキストを設定します。これは、"*ページ*のバインド先" に定義されているコントロールです。
 
 1. *ExpenseReportPage.xaml.vb* または *ExpenseReportPage.xaml.cs*を開きます。
 
@@ -436,7 +436,7 @@ ms.locfileid: "73453747"
     [!code-csharp[ExpenseIt#26](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseReportPage.xaml.cs#26)]
     [!code-vb[ExpenseIt#26](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt8/ExpenseReportPage.xaml.vb#26)]
 
-3. *`ExpenseItHome.xaml.vb`* または *`ExpenseItHome.xaml.cs`* を開きます。
+3. 開いている *`ExpenseItHome.xaml.vb`* または *`ExpenseItHome.xaml.cs`* します。
 
 4. 選択したユーザーの経費報告書データを渡す新しいコンストラクターを呼び出すように、<xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントハンドラーを変更します。
 
@@ -477,7 +477,7 @@ ms.locfileid: "73453747"
 > - [WPF のグローバリゼーションとローカライズ](../advanced/wpf-globalization-and-localization-overview.md)
 > - [WPF のパフォーマンス](../advanced/optimizing-wpf-application-performance.md)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 
 このチュートリアルでは、Windows Presentation Foundation (WPF) を使用して UI を作成するためのいくつかの手法について学習しました。 これで、データバインドされた .NET アプリの構成要素についての基本的な理解ができました。 WPF のアーキテクチャおよびプログラミング モデルの詳細については、次のトピックを参照してください。
 

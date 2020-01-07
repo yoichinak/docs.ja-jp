@@ -1,5 +1,5 @@
 ---
-title: new 演算子
+title: New 演算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.new

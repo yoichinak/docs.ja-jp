@@ -2,12 +2,12 @@
 title: 'トランスポート : WSE 3.0 TCP 相互運用性'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 6541ddf322a2084601daf2f1271ac5c888073f8f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8166e1c378bc745eb8c9f37d6982642e754813cb
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423874"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544628"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>トランスポート : WSE 3.0 TCP 相互運用性
 WSE 3.0 TCP 相互運用性トランスポートサンプルは、TCP 二重セッションをカスタム Windows Communication Foundation (WCF) トランスポートとして実装する方法を示しています。 さらに、チャネル レイヤーの拡張機能を使用して、ネットワーク経由で既存の配置システムと連結する方法も示します。 次の手順は、このカスタム WCF トランスポートを構築する方法を示しています。  
@@ -157,7 +157,7 @@ Received Body: to me.
 Press enter.  
 ```  
   
- サーバー  
+ サーバー :  
   
 ```console  
 Listening for messages at soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
@@ -175,7 +175,7 @@ Symbols:
 1. このサンプルを実行するには、WSE 3.0 と WSE `TcpSyncStockService` サンプルがインストールされている必要があります。 [WSE 3.0 は MSDN から](https://go.microsoft.com/fwlink/?LinkId=95000)ダウンロードできます。  
   
 > [!NOTE]
-> [!INCLUDE[lserver](../../../../includes/lserver-md.md)] では WSE 3.0 がサポートされていないので、このオペレーティング システムでは `TcpSyncStockService` サンプルをインストールすることも、実行することもできません。  
+> WSE 3.0 は Windows Server 2008 ではサポートされていないため、このオペレーティングシステムで `TcpSyncStockService` サンプルをインストールまたは実行することはできません。  
   
 1. `TcpSyncStockService` サンプルをインストールしたら、次の手順を実行します。  
   

@@ -62,7 +62,7 @@ ms.locfileid: "74349710"
   
 ## <a name="see-also"></a>参照
 
-- [手順](./index.md)
+- [Visual Basic におけるプロシージャ](./index.md)
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [Visual Basic のプロパティと変数の違い](./differences-between-properties-and-variables.md)
