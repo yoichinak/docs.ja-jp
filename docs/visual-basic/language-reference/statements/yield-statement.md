@@ -57,7 +57,7 @@ Yield expression
  反復子関数は、匿名関数にすることができます。 詳細については、「[反復子](../../programming-guide/concepts/iterators.md)」をご覧ください。  
   
 ## <a name="exception-handling"></a>例外処理  
- `Yield` ステートメントは、Try の `Try` ブロック内にある場合があります.. [.キャッチ...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。 `Yield` ステートメントを持つ `Try` ブロックは `Catch` ブロックを持つことができ、`Finally` ブロックを持つことができます。  
+ `Yield` ステートメントは、[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)の`Try` ブロック内にある場合があります。 `Yield` ステートメントを持つ `Try` ブロックは `Catch` ブロックと、`Finally` ブロックを持つことができます。  
   
  `Yield` ステートメントを `Catch` ブロックまたは `Finally` ブロックの内部に指定することはできません。  
   

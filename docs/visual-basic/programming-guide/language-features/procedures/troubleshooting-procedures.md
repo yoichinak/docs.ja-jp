@@ -71,7 +71,7 @@ End Function
 
 オーバーロードされたバージョンのプロシージャを定義する場合は、同じ名前で、別のシグネチャを使用する必要があります。 コンパイラが同じシグネチャを持つオーバーロードから宣言を区別できない場合は、エラーが生成されます。
 
-プロシージャの*シグネチャ*は、プロシージャ名とパラメーター リストによって決まります。各オーバーロードは、他のすべてのオーバーロードと同じ名前を持つ必要がありますが、シグネチャの他のコンポーネントの少なくとも 1 つでは、それらのすべてと異なっている必要があります。詳細については、「[プロシージャのオーバーロード](./procedure-overloading.md)」を参照してください。
+プロシージャの*シグネチャ*は、プロシージャ名とパラメーター リストによって決まります。 各オーバーロードは、他のすべてのオーバーロードと同じ名前を持つ必要がありますが、シグネチャの他のコンポーネントの少なくとも 1 つでは、それらのすべてと異なっている必要があります。 詳細については、「[プロシージャのオーバーロード](./procedure-overloading.md)」を参照してください。
 
 次の項目は、パラメーターリストに関連する場合でも、プロシージャのシグネチャのコンポーネントではありません。
 
@@ -86,7 +86,7 @@ End Function
 
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>省略可能な引数と ParamArray 引数を使用したオーバーロードの解決
 
-1つ以上の[省略可能](../../../language-reference/modifiers/optional.md)なパラメーターまたは[ParamArray](../../../language-reference/modifiers/paramarray.md)パラメーターを使用してプロシージャをオーバーロードする場合は、*暗黙的なオーバーロード*の複製を避ける必要があります。 詳細については、「[プロシージャのオーバーロードに関する考慮事項](./considerations-in-overloading-procedures.md)」を参照してください。
+1 つ以上の[Optional](../../../language-reference/modifiers/optional.md)なパラメーターまたは[ParamArray](../../../language-reference/modifiers/paramarray.md)パラメーターを使用してプロシージャをオーバーロードする場合は、*暗黙的なオーバーロード*の複製を避ける必要があります。 詳細については、「[プロシージャのオーバーロードに関する考慮事項](./considerations-in-overloading-procedures.md)」を参照してください。
 
 ## <a name="calling-the-wrong-version-of-an-overloaded-procedure"></a>オーバーロードされたプロシージャの間違ったバージョンの呼び出し
 
@@ -120,11 +120,11 @@ End Function
 
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>省略可能な引数と ParamArray 引数を使用したオーバーロードの解決
 
-1つのプロシージャの2つのオーバーロードが同じシグネチャを持つ場合、最後のパラメーターは[省略可能](../../../language-reference/modifiers/optional.md)として宣言され、もう一方では[ParamArray](../../../language-reference/modifiers/paramarray.md)が適用されます。ただし、コンパイラは、最も近い一致に従って、そのプロシージャの呼び出しを解決します。 詳細については、「 [Overload Resolution](./overload-resolution.md)」を参照してください。
+1つのプロシージャの2つのオーバーロードが同じシグネチャを持つ場合、最後のパラメーターは[省略可能](../../../language-reference/modifiers/optional.md)として宣言され、もう一方では[ParamArray](../../../language-reference/modifiers/paramarray.md)が適用されます。ただし、コンパイラは、最も近い一致に従って、そのプロシージャの呼び出しを解決します。 詳細については、「[オーバーロードの解決法](./overload-resolution.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [手順](index.md)
+- [Visual Basic におけるプロシージャ](index.md)
 - [Sub プロシージャ](sub-procedures.md)
 - [Function プロシージャ](function-procedures.md)
 - [Property プロシージャ](property-procedures.md)

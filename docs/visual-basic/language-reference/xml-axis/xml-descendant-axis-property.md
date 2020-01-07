@@ -38,7 +38,8 @@ object...<descendant>
 |要素|説明|
 |----------|-----------------|
 |`prefix`|省略可。 子孫ノードの XML 名前空間プレフィックス。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間である必要があります。|
-|`name`|必須。 子孫ノードのローカル名です。 「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。|
+|`name`|必須。 子孫ノードのローカル名。 「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。|
+
 
 `>` 必須。 子孫軸プロパティの末尾を示します。
 
