@@ -38,7 +38,7 @@ ms.locfileid: "74351340"
 
 - **アクセスレベル。** クラス内のすべてのコードは、その要素にアクセスできます。 基底クラスから派生し、同じアセンブリに含まれるクラスのコードは、基底クラスのすべての `Private Protected` 要素にアクセスできます。 ただし、基底クラスから派生し、別のアセンブリに含まれているクラスのコードは、基底クラスの `Private Protected` 要素にアクセスすることはできません。
 
-- **アクセス修飾子。** アクセスレベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+- **アクセス修飾子。**アクセス レベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。アクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 `Private Protected` 修飾子は、次のコンテキストで使用できます。
 
