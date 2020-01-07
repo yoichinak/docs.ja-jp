@@ -5,19 +5,19 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: c18cce1898b8834c20d5e4af70c1b010e4b96e11
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 00427004448997aa234b335b397390f9fabe1bd5
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740900"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559912"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF における分離コードと XAML
 <a name="introduction"></a>分離コードは、マークアップで定義されたオブジェクトと結合されるコードを記述するために使用される用語です。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページがマークアップコンパイルされている場合です。 このトピックでは、分離コードの要件と、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]のコードの代替インラインコード機構について説明します。  
   
  このトピックは、次のセクションで構成されています。  
   
-- [必須コンポーネント](#Prerequisites)  
+- [必要条件](#Prerequisites)  
   
 - [分離コードと XAML 言語](#codebehind_and_the_xaml_language)  
   
@@ -28,12 +28,12 @@ ms.locfileid: "73740900"
 - [インラインコードの制限事項](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
-## <a name="prerequisites"></a>必要条件  
+## <a name="prerequisites"></a>Prerequisites  
  このトピックでは、「XAML の[概要 (WPF)」](../../../desktop-wpf/fundamentals/xaml.md)を読み、CLR とオブジェクト指向プログラミングに関する基本的な知識を持っていることを前提としています。  
   
 <a name="codebehind_and_the_xaml_language"></a>   
 ## <a name="code-behind-and-the-xaml-language"></a>分離コードと XAML 言語  
- XAML 言語には、マークアップファイル側からコードファイルをマークアップファイルに関連付けることができるようにする言語レベルの機能が含まれています。 具体的には、XAML 言語では、言語機能の[X:Class ディレクティブ](../../xaml-services/x-class-directive.md)、 [x:Subclass ディレクティブ](../../xaml-services/x-subclass-directive.md)、および[x:ClassModifier ディレクティブ](../../xaml-services/x-classmodifier-directive.md)が定義されています。 コードをどのように生成するか、およびマークアップとコードを統合する方法は、XAML 言語が指定する内容の一部ではありません。 WPF などのフレームワークによって、コードを統合する方法、アプリケーションとプログラミングモデルで XAML を使用する方法、ビルドアクションやその他のすべてのサポートが必要であるかどうかが決定されます。  
+ XAML 言語には、マークアップファイル側からコードファイルをマークアップファイルに関連付けることができるようにする言語レベルの機能が含まれています。 具体的には、XAML 言語では、言語機能の[X:Class ディレクティブ](../../../desktop-wpf/xaml-services/xclass-directive.md)、 [x:Subclass ディレクティブ](../../../desktop-wpf/xaml-services/xsubclass-directive.md)、および[x:ClassModifier ディレクティブ](../../../desktop-wpf/xaml-services/xclassmodifier-directive.md)が定義されています。 コードをどのように生成するか、およびマークアップとコードを統合する方法は、XAML 言語が指定する内容の一部ではありません。 WPF などのフレームワークによって、コードを統合する方法、アプリケーションとプログラミングモデルで XAML を使用する方法、ビルドアクションやその他のすべてのサポートが必要であるかどうかが決定されます。  
   
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
 ## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>WPF の分離コード、イベントハンドラー、および部分クラスの要件  
@@ -50,17 +50,17 @@ ms.locfileid: "73740900"
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  
- [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md)は [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]で定義されたディレクティブ要素です。 `x:Code` ディレクティブ要素には、インラインプログラミングコードを含めることができます。 インラインで定義されているコードは、同じページの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] と対話できます。 次の例は、 C#インラインコードを示しています。 コードが `x:Code` 要素内にあり、`<CDATA[`...`]]>` でコードを囲む必要があることに注意してください。 XML の内容をエスケープして、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサ ([!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] スキーマまたは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] スキーマを解釈する) が試行されないようにします。コンテンツは文字どおり XML として解釈されます。  
+ [x:Code](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)は [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]で定義されたディレクティブ要素です。 `x:Code` ディレクティブ要素には、インラインプログラミングコードを含めることができます。 インラインで定義されているコードは、同じページの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] と対話できます。 次の例は、 C#インラインコードを示しています。 コードが `x:Code` 要素の内側にあり、`<CDATA[`...`]]>` でコードを囲む必要があることに注意してください。これにより、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサ ([!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] スキーマまたは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] スキーマを解釈する) では、コンテンツを XML として解釈しようとしません。  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   
 <a name="Inline_Code_Limitations"></a>   
 ## <a name="inline-code-limitations"></a>インラインコードの制限事項  
- インラインコードの使用を回避または制限することを検討してください。 アーキテクチャとコーディングの理念に関して、マークアップと分離コードの分離を維持することで、デザイナーと開発者のロールがより明確になります。 より技術的なレベルでは、インラインコード用に記述するコードを記述するのは困難な場合があります。これは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 生成された部分クラスに常に書き込みを行い、既定の XML 名前空間マッピングのみを使用できるためです。 `using` ステートメントを追加することはできないため、作成する API 呼び出しの多くを完全に修飾する必要があります。 既定の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] マッピングには、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アセンブリに存在するほとんどの CLR 名前空間が含まれます。他の CLR 名前空間内に含まれる型およびメンバーの呼び出しを完全に修飾する必要があります。 また、インラインコードで部分クラスを超えるものを定義することはできません。また、参照するすべてのユーザーコードエンティティは、生成された部分クラス内のメンバーまたは変数として存在する必要があります。 マクロや、グローバル変数やビルド変数に対する `#ifdef` など、言語固有のプログラミング機能も使用できません。 詳細については、「 [X:Code 組み込み XAML 型](../../xaml-services/x-code-intrinsic-xaml-type.md)」を参照してください。  
+ インラインコードの使用を回避または制限することを検討してください。 アーキテクチャとコーディングの理念に関して、マークアップと分離コードの分離を維持することで、デザイナーと開発者のロールがより明確になります。 より技術的なレベルでは、インラインコード用に記述するコードを記述するのは困難な場合があります。これは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 生成された部分クラスに常に書き込みを行い、既定の XML 名前空間マッピングのみを使用できるためです。 `using` ステートメントを追加することはできないため、作成する API 呼び出しの多くを完全に修飾する必要があります。 既定の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] マッピングには、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アセンブリに存在するほとんどの CLR 名前空間が含まれます。他の CLR 名前空間内に含まれる型およびメンバーの呼び出しを完全に修飾する必要があります。 また、インラインコードで部分クラスを超えるものを定義することはできません。また、参照するすべてのユーザーコードエンティティは、生成された部分クラス内のメンバーまたは変数として存在する必要があります。 マクロや、グローバル変数やビルド変数に対する `#ifdef` など、言語固有のプログラミング機能も使用できません。 詳細については、「 [X:Code 組み込み XAML 型](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
 - [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [x:Code 組み込み XAML 型 ](../../xaml-services/x-code-intrinsic-xaml-type.md)
+- [x:Code 組み込み XAML 型 ](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)
 - [WPF アプリケーションのビルド](../app-development/building-a-wpf-application-wpf.md)
 - [XAML 構文の詳細](xaml-syntax-in-detail.md)

@@ -57,7 +57,7 @@
     - name: アンマネージ API リファレンス
       href: unmanaged-api/
     - name: XAML サービス
-      href: xaml-services/
+      href: ../desktop-wpf/xaml-services/
 - name: ツール
   href: tools/
 - name: 追加のクラス ライブラリおよび API

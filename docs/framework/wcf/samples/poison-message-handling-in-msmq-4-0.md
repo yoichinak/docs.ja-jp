@@ -2,12 +2,12 @@
 title: MSMQ 4.0 での有害メッセージ処理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: d1d23ffd600e7f770b942899ecc3b493b84c605a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 71ce6d3df69164aa0d565539bad5e843a7ed6a47
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837819"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337498"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 での有害メッセージ処理
 このサンプルでは、サービスで有害メッセージの処理を実行する方法を示します。 このサンプルは、トランザクション処理された[MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)のサンプルに基づいています。 このサンプルでは、`netMsmqBinding` を使用しています。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。
@@ -18,7 +18,7 @@ ms.locfileid: "74837819"
 
  MSMQ のバージョンによって、NetMsmqBinding がサポートする有害メッセージの検出が制限されている場合と、制限されていない場合があります。 メッセージが有害として検出されたら、いくつかの方法で処理できます。 また、MSMQ のバージョンによって、NetMsmqBinding がサポートする有害メッセージの処理が制限されている場合と、制限されていない場合があります。
 
- このサンプルでは、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] および [!INCLUDE[wxp](../../../../includes/wxp-md.md)] プラットフォームと、Windows Vista で提供される完全な有害機能について提供される、限られた有害機能について説明します。 どちらのサンプルでも、目的はキューの外にある有害メッセージを、有害メッセージ サービスによりサービスを提供可能な別のキューに移動することです。
+ このサンプルでは、Windows Server 2003 と [!INCLUDE[wxp](../../../../includes/wxp-md.md)] プラットフォームに用意されている制限付きの有害機能と、Windows Vista で提供される完全な有害機能について説明します。 どちらのサンプルでも、目的はキューの外にある有害メッセージを、有害メッセージ サービスによりサービスを提供可能な別のキューに移動することです。
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 の有害メッセージ処理サンプル
  Windows Vista では、有害メッセージを格納するために使用できる有害なサブキュー機能が MSMQ に用意されています。 このサンプルでは、Windows Vista を使用して有害なメッセージを処理するためのベストプラクティスを示します。

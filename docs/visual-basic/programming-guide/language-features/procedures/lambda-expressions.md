@@ -55,6 +55,7 @@ ms.locfileid: "74345976"
 
      たとえば、`Return` ステートメントに指定された式に `Integer`、`Long`、、および `Double`型の値が含まれている場合、結果の配列の型は `Double`になります。`Integer` と `Long` はどちらも `Double` に拡張され、`Double` のみになります。そのため、`Double` が最も優先度の高い型になります。 詳細については、「[拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。	
 
+
 - 単一行関数の本体は、ステートメントではなく、値を返す式である必要があります。 単一行関数の `Return` ステートメントはありません。 単一行関数によって返される値は、関数本体の式の値です。
 
 - 単一行のサブルーチンの本体は単一行ステートメントである必要があります。
