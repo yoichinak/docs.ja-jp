@@ -5,15 +5,15 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: a4a926d089a8bec1abaa47404f6c9112687e6df2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d23e18527fadce031f56bed3ae4c5a5c17b12e18
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350453"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636732"
 ---
 # <a name="queries-visual-basic"></a>クエリ (Visual Basic)
-Visual Basic を使用すると、コードに [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 式を作成できます。  
+Visual Basic を使用すると、コードに統合言語クエリ (LINQ) 式を作成できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
