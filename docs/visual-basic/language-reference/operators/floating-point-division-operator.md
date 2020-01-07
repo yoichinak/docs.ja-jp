@@ -53,8 +53,8 @@ expression1 / expression2
 |オペランドのデータ型|結果のデータ型|  
 |------------------------|----------------------|  
 |両方の式は整数データ型 ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)、 [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)、 [Short](../../../visual-basic/language-reference/data-types/short-data-type.md)、 [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)、 [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)、 [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)、 [Long](../../../visual-basic/language-reference/data-types/long-data-type.md)、 [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)) です。|`Double`|  
-|1つの式が [単精度浮動小数点型(Single)](../../../visual-basic/language-reference/data-types/single-data-type.md)データ型で、もう一方が [倍精度浮動小数点数型(Double)](../../../visual-basic/language-reference/data-types/double-data-type.md)ではない場合|`Single`|  
-|一方の式は Decimal データ型で、もう一方は[単](../../../visual-basic/language-reference/data-types/single-data-type.md)[精度浮動](../../../visual-basic/language-reference/data-types/double-data-type.md)[小数点](../../../visual-basic/language-reference/data-types/decimal-data-type.md)型ではありません。|`Decimal`|  
+|1つの式が [単精度浮動小数点型(Single)](../../../visual-basic/language-reference/data-types/single-data-type.md)データ型で、もう一方が [倍精度浮動小数点数型(Double)](../../../visual-basic/language-reference/data-types/double-data-type.md)ではない場合|`Single`|
+|一方の式は [10 進型(Decimal)](../../../visual-basic/language-reference/data-types/decimal-data-type.md)データ型で、もう一方は [単精度浮動小数点型(Single)](../../../visual-basic/language-reference/data-types/single-data-type.md)または [倍精度浮動小数点数型(Double)](../../../visual-basic/language-reference/data-types/double-data-type.md)の場合|`Decimal`|
 |どちらの式も [倍精度浮動小数点数型 (Double)](../../../visual-basic/language-reference/data-types/double-data-type.md)データ型の場合|`Double`|  
   
  除算を実行する前に、整数の数値式はすべて `Double`に拡張されます。 結果を整数データ型に代入すると、Visual Basic は `Double` の結果をその型に変換しようとします。 結果がその型に合わない場合、例外がスローされる可能性があります。 特に、このヘルプページの「ゼロによる除算」を参照してください。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3d3dc0011562e25854938aff857f2832a5978b49
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.openlocfilehash: 32c78cc48dcd3d9f2c6e1d338bdbdd359f69879f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283331"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344504"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>.NET で JSON をシリアル化および逆シリアル化する方法
 
@@ -377,11 +377,11 @@ JSON プロパティの名前付けポリシー:
 
 シリアル化し、JSON 出力を行うオブジェクトの例を次に示します。
 
-|プロパティ |値  |
+|property |Value  |
 |---------|---------|
-| date    | 8/1/2019 12:00:00 AM-07:00|
+| 日付    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| まとめ| null|
+| 要約| null|
 
 ```json
 {
@@ -460,7 +460,7 @@ JSON プロパティの名前付けポリシー:
 
 ## <a name="serialize-properties-of-derived-classes"></a>派生クラスのプロパティのシリアル化
 
-コンパイル時にシリアル化する型を指定する場合、ポリモーフィックシリアル化はサポートされません。 たとえば、`WeatherForecast` クラスと派生クラス `WeatherForecastWithWind`があるとします。
+コンパイル時にシリアル化する型を指定する場合、ポリモーフィックシリアル化はサポートされません。 たとえば、`WeatherForecast` クラスと派生クラス `WeatherForecastDerived`があるとします。
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -470,7 +470,7 @@ JSON プロパティの名前付けポリシー:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-このシナリオでは、`weatherForecast` オブジェクトが実際には `WeatherForecastWithWind` オブジェクトであっても、`WindSpeed` プロパティはシリアル化されません。 基本クラスのプロパティのみがシリアル化されます。
+このシナリオでは、`weatherForecast` オブジェクトが実際には `WeatherForecastDerived` オブジェクトであっても、`WindSpeed` プロパティはシリアル化されません。 基本クラスのプロパティのみがシリアル化されます。
 
 ```json
 {
@@ -571,11 +571,11 @@ Camel 形式のプロパティ名を持つ JSON の例を次に示します。 P
 
 前に示した JSON をこのサンプル型に逆シリアル化すると、余分なデータが `ExtensionData` プロパティのキーと値のペアになります。
 
-|プロパティ |値  |メモ  |
+|property |Value  |メモ  |
 |---------|---------|---------|
-| date    | 8/1/2019 12:00:00 AM-07:00||
+| 日付    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | 大文字と小文字が区別されない (JSON で`temperatureCelsius`) ため、プロパティが設定されていません。 |
-| まとめ | 高 ||
+| 要約 | 高 ||
 | ExtensionData | temperatureCelsius:25 |大文字と小文字が一致しなかったため、この JSON プロパティは余分で、ディクショナリ内のキーと値のペアになります。|
 || 使用可能な日:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |JSON からの追加のプロパティはキーと値のペアになり、値オブジェクトとして配列が使用されます。|
 | |概要語:<br>Cool<br>強風<br>Humid |JSON からの追加のプロパティはキーと値のペアになり、値オブジェクトとして配列が使用されます。|
@@ -714,7 +714,7 @@ JSON 内の Null 値は、有効な場合にのみ無視されます。 Null 非
 
 [!code-json[](~/samples/snippets/core/system-text-json/csharp/Universities.json)]
 
-## <a name="additional-resources"></a>その他のリソース
+## <a name="additional-resources"></a>その他の技術情報
 
 * [System.string の概要](system-text-json-overview.md)
 * [System.string API リファレンス](xref:System.Text.Json)
