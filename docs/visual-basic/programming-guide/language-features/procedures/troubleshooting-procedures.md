@@ -120,7 +120,7 @@ End Function
 
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>省略可能な引数と ParamArray 引数を使用したオーバーロードの解決
 
-プロシージャの 2 つのオーバーロードのシグネチャが同じで、唯一の違いが最後のパラメータの宣言 (一方が[Optional (Visual Basic)](../../../language-reference/modifiers/optional.md) で、他方は [ParamArray](../../../language-reference/modifiers/paramarray.md) ) である場合、コンパイラはそのプロシージャの呼び出しを、より厳密に一致している方に解決します。詳細については、「[オーバーロードの解決法](./overload-resolution.md)」を参照してください。
+1 つのプロシージャの 2 つのオーバーロードが同じシグネチャを持つ場合、最後のパラメーターは [Optional](../../../language-reference/modifiers/optional.md)として宣言され、もう一方では [ParamArray](../../../language-reference/modifiers/paramarray.md)が適用されます。ただし、コンパイラは、最も近い一致に従って、そのプロシージャの呼び出しを解決します。 詳細については、「[オーバーロードの解決法](./overload-resolution.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
