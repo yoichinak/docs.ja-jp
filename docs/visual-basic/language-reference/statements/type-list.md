@@ -77,7 +77,7 @@ ms.locfileid: "74352774"
 
 - **コンパイル時の代入。** ジェネリックプログラミング要素から構築された型を作成する場合は、型パラメーターごとに定義済みの型を指定します。 Visual Basic コンパイラは、ジェネリック要素内で `typename` が発生するたびに、指定された型を置き換えます。
 
-- **制約の省略。** 型パラメーターに対して制約を指定しない場合、コードは、その型パラメーターの[Object データ型](../../../visual-basic/language-reference/data-types/object-data-type.md)でサポートされている操作とメンバーに制限されます。
+- **制約の省略。** 型パラメーターに対して制約を指定しない場合、コードは、その型パラメーターの [Object データ型](../../../visual-basic/language-reference/data-types/object-data-type.md)でサポートされている操作とメンバーに制限されます。
 
 ## <a name="example"></a>例
 
