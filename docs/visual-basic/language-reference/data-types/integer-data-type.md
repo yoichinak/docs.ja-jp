@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343983"
 ---
-# <a name="integer-data-type-visual-basic"></a>Integer データ型 (Visual Basic)
+# <a name="integer-data-type-visual-basic"></a>`Integer` データ型 (Visual Basic)
 
 -2,147,483,648 から 2,147,483,647 までの符号付き 32 ビット (4 バイト) の整数を保持します。  
   
