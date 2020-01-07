@@ -8,17 +8,17 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a04e1569f77fed73a480fda3d63cabf6dbc30664
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f8b05f314be84e6104f1a9c7fe2edfdf826e51da
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460510"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559449"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource のマークアップ拡張機能
 定義されたリソースへの参照としてその値を延期することによって、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] property 属性の値を提供します。 このリソースの参照動作は、ランタイム参照に似ています。  
   
-## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法  
+## <a name="xaml-attribute-usage"></a>XAML 属性の使用  
   
 ```xml  
 <object property="{DynamicResource key}" .../>  
@@ -34,23 +34,23 @@ ms.locfileid: "73460510"
 </object>  
 ```  
   
-## <a name="xaml-values"></a>XAML 値  
+## <a name="xaml-values"></a>XAML の値  
   
 |||  
 |-|-|  
-|`key`|要求されたリソースのキー。 このキーは、リソースがマークアップで作成された場合は[X:Key ディレクティブ](../../xaml-services/x-key-directive.md)によって最初に割り当てられたか、またはリソースがコードで作成された場合に <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> を呼び出すときに `key` パラメーターとして指定されました。|  
+|`key`|要求されたリソースのキー。 このキーは、リソースがマークアップで作成された場合は[X:Key ディレクティブ](../../../desktop-wpf/xaml-services/xkey-directive.md)によって最初に割り当てられたか、またはリソースがコードで作成された場合に <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> を呼び出すときに `key` パラメーターとして指定されました。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `DynamicResource` は、初期コンパイル中に一時式を作成するため、オブジェクトを構築するために要求されたリソース値が実際に必要になるまで、リソースの参照を延期します。 これは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページが読み込まれた後に発生する可能性があります。 リソース値は、現在のページスコープから始まるすべてのアクティブなリソースディクショナリに対するキー検索に基づいて検出され、コンパイルからのプレースホルダー式の代わりに使用されます。  
   
 > [!IMPORTANT]
 > 依存関係プロパティの優先順位に関しては、`DynamicResource` 式は動的リソース参照が適用される位置と同じです。 以前にローカル値として `DynamicResource` 式を持つプロパティのローカル値を設定した場合、`DynamicResource` は完全に削除されます。 詳細については、「[依存関係プロパティ値の優先順位](dependency-property-value-precedence.md)」を参照してください。  
   
- 特定のリソースアクセスシナリオは、 [StaticResource のマークアップ拡張機能](staticresource-markup-extension.md)ではなく `DynamicResource` に特に適しています。 `DynamicResource` と `StaticResource`の相対的な利点とパフォーマンスへの影響については、「 [XAML リソース](xaml-resources.md)」を参照してください。  
+ 特定のリソースアクセスシナリオは、 [StaticResource のマークアップ拡張機能](staticresource-markup-extension.md)ではなく `DynamicResource` に特に適しています。 `DynamicResource`との相対的な利点とパフォーマンスへの影響については、「[XAML リソース](xaml-resources.md)」を参照して`StaticResource`ください。  
   
- 指定された <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> は、ページ、アプリケーション、使用可能なコントロールのテーマと外部リソース、またはシステムリソースのいずれかのレベルで、 [X:Key ディレクティブ](../../xaml-services/x-key-directive.md)によって決定される既存のリソースに対応する必要があります。その順序。 静的リソースと動的リソースのリソース検索の詳細については、「 [XAML リソース](xaml-resources.md)」を参照してください。  
+ 指定された <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> は、ページ、アプリケーション、使用可能なコントロールのテーマと外部リソース、またはシステムリソースについて、 [X:Key ディレクティブ](../../../desktop-wpf/xaml-services/xkey-directive.md)によって決定された既存のリソースに対応する必要があります。 静的リソースと動的リソースのリソース検索の詳細については、「 [XAML リソース](xaml-resources.md)」を参照してください。  
   
- リソースキーは、 [XamlName 文法](../../xaml-services/xamlname-grammar.md)で定義されている任意の文字列にすることができます。 リソースキーは、<xref:System.Type>など、他の種類のオブジェクトである場合もあります。 <xref:System.Type> キーは、テーマによってコントロールをスタイル設定する方法の基本となります。 詳細については、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。  
+ リソースキーは、 [XamlName 文法](../../../desktop-wpf/xaml-services/xamlname-grammar.md)で定義されている任意の文字列にすることができます。 リソースキーは、<xref:System.Type>など、他の種類のオブジェクトである場合もあります。 <xref:System.Type> キーは、テーマによってコントロールをスタイル設定する方法の基本となります。 詳細については、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。  
   
  <xref:System.Windows.FrameworkElement.FindResource%2A>などのリソース値を参照するための Api は、`DynamicResource`によって使用されるのと同じリソース参照ロジックに従います。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "73460510"
 
 - [XAML リソース](xaml-resources.md)
 - [リソースとコード](resources-and-code.md)
-- [x:Key ディレクティブ](../../xaml-services/x-key-directive.md)
+- [x:Key ディレクティブ](../../../desktop-wpf/xaml-services/xkey-directive.md)
 - [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [StaticResource のマークアップ拡張機能](staticresource-markup-extension.md)

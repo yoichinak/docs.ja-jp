@@ -70,6 +70,6 @@ Visual Studio で **-subsystemversion**コンパイラオプションを設定�
 
 ## <a name="see-also"></a>参照
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 
 - [MSBuild プロパティ](/visualstudio/msbuild/msbuild-properties)

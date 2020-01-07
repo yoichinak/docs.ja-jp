@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c8496d4e452da92e0ae994f0b246cc16723c06e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345065"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636576"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 言語の機能
-次のトピックでは、オブジェクト指向プログラミング言語である Visual Basic の重要なコンポーネントについて説明します。 フォームとコントロールを使用してアプリケーションのユーザー インターフェイスを作成した後、アプリケーションの動作を定義するコードを作成する必要があります。 最新のプログラミング言語と同様に、Visual Basic では、多くの一般的なプログラミング構成要素と言語要素がサポートされています。  
+次のトピックでは、オブジェクト指向プログラミング言語である Visual Basic の重要なコンポーネントについて説明します。 フォームとコントロールを使用してアプリケーションのユーザー インターフェイスを作成した後、アプリケーションの動作を定義するコードを作成する必要があります。 最新のプログラミング言語と同様に、Visual Basic では、一般的なプログラミング構造や言語要素を数多くサポートしています。  
   
  他の言語でプログラミングしたことがある場合、このセクションで説明されている内容の大半はすでに知っている可能性があります。 ほとんどのコンストラクトは他の言語の構造と似ていますが、Visual Basic のイベント駆動型の性質にはいくつかの微妙な違いがあります。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "74345065"
  インターフェイスの概要と、アプリケーションでの使用方法について説明します。  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] の機能とプログラミングの概要を説明するトピックへのリンクを示します。  
+ 統合言語クエリ (LINQ) の機能とプログラミングに関するトピックへのリンクを示します。  
   
  [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  オブジェクトとクラスの概要、使用方法、相互関係、オブジェクトとクラスによって公開されるプロパティ、メソッド、イベントについて説明します。  

@@ -5,8 +5,6 @@
 - name: はじめに
   href: getting-started/index.md
   items:
-    - name: Visual Studio における Visual Basic の互換性に影響する変更点
-      href: getting-started/breaking-changes-in-visual-studio.md
     - name: Visual Basic プログラマのための追加リソース
       href: getting-started/additional-resources.md
 - name: アプリケーションの開発
@@ -401,7 +399,7 @@
           href: language-reference/modifiers/notinheritable.md
         - name: NotOverridable
           href: language-reference/modifiers/notoverridable.md
-        - name: Optional
+        - name: 省略可能
           href: language-reference/modifiers/optional.md
         - name: Out (ジェネリック修飾子)
           href: language-reference/modifiers/out-generic-modifier.md
@@ -1285,7 +1283,7 @@
           href: language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
         - name: XML 名前空間 URI '<uri>' は 'xmlns' にのみバインドできます。
           href: language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
-- name: 辞書／辞典／その他
+- name: 関連項目
   href: reference/index.md
   items:
     - name: コマンド ライン コンパイラ
