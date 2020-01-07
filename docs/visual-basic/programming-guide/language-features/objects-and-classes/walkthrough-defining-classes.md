@@ -49,7 +49,8 @@ ms.locfileid: "74346083"
   
      [!code-vb[VbVbalrOOP#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#7)]
   
-     フィールドを `Private` として宣言することは、クラス内でのみ使用できることを意味します。 より多くのアクセスを提供する `Public` などのアクセス修飾子を使用して、クラスの外部からフィールドを使用できるようにすることができます。 詳細については、「 [Visual Basic のアクセスレベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+     フィールドを `Private` として宣言することは、クラス内でのみ使用できることを意味します。より多くのアクセスを提供する `Public` などのアクセス修飾子を使用して、クラスの外部からフィールドを使用できるようにすることができます。詳細については、「[Visual Basic でのアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。 
+
   
 7. 次のコードを追加して、クラスのプロパティを定義します。  
   
