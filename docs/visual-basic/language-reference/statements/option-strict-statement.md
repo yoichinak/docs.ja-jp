@@ -61,7 +61,7 @@ Option Strict { On | Off }
 ## <a name="implicit-narrowing-conversion-errors"></a>暗黙的な縮小変換エラー  
  縮小変換する暗黙的なデータ型変換がある場合は、暗黙的な縮小変換エラーが発生します。  
   
- Visual Basic は、さまざまなデータ型を他のデータ型に変換できます。 データが失われる可能性があるのは、あるデータ型の値が、精度が低いか、容量が小さいデータ型に変換されたときです。 このような縮小変換が失敗した場合、実行時エラーが発生します。 `Option Strict` によって、これらの縮小変換のコンパイル時通知が確実に行われるため、回避できます。 詳細については、「[暗黙的な変換と明示的な変換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)」および「拡大変換[と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
+ Visual Basic は、さまざまなデータ型を他のデータ型に変換できます。 データが失われる可能性があるのは、あるデータ型の値が、精度が低いか、容量が小さいデータ型に変換されたときです。 このような縮小変換が失敗した場合、実行時エラーが発生します。 `Option Strict` によって、これらの縮小変換のコンパイル時通知が確実に行われるため、回避できます。 詳細については、「[暗黙の型変換と明示的な型変換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)」および「[拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
   
  エラーを発生させる可能性のある変換には、式で発生する暗黙的な変換が含まれます。 詳細については、次のトピックを参照してください。  
   
@@ -79,13 +79,13 @@ Option Strict { On | Off }
   
  対応するパラメーターとは異なるデータ型の引数を持つメソッドを呼び出すと、`Option Strict` がオンになっていると、縮小変換によってコンパイル時エラーが発生します。 拡大変換または明示的な変換を使用することで、コンパイル時エラーを回避できます。  
   
- `For Each…Next` コレクション内の要素から loop コントロール変数への変換では、コンパイル時に暗黙的な縮小変換エラーが抑制されます。 これは、`Option Strict` がオンになっている場合でも発生します。 詳細については、「」の「縮小変換」セクションを参照してください。 [次のステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
+ `For Each…Next` コレクション内の要素からループ制御変数への変換では、コンパイル時に暗黙的な縮小変換エラーが抑制されます。 これは、`Option Strict` がオンになっている場合でも発生します。 詳細については、「[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)」の「縮小変換」セクションを参照してください。
   
 ## <a name="late-binding-errors"></a>遅延バインディングエラー  
  `Object` 型として宣言された変数のプロパティまたはメソッドにオブジェクトを代入する場合は、そのオブジェクトは遅延バインディングされます。 詳細については、「[事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)」を参照してください。  
   
 ## <a name="implicit-object-type-errors"></a>暗黙的なオブジェクト型のエラー  
- 適切な型が宣言された変数を推論できない場合は暗黙的なオブジェクトの型エラーが発生するため、`Object` の型が推論されます。 これは主に、`Dim` 句を使用せず、`As` をオフにして、`Option Infer` ステートメントを使用して変数を宣言した場合に発生します。 詳細については、「[オプションの推定ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)」および「 [Visual Basic 言語の仕様](../../../visual-basic/reference/language-specification/index.md)」を参照してください。  
+ 適切な型が宣言された変数を推論できない場合は暗黙的なオブジェクトの型エラーが発生するため、`Object` の型が推論されます。 これは主に、`Dim` 句を使用せず、`As` をオフにして、`Option Infer` ステートメントを使用して変数を宣言した場合に発生します。 詳細については、「[Option Infer ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)」および「[Visual Basic 言語仕様](../../../visual-basic/reference/language-specification/index.md)」を参照してください。  
   
  メソッドパラメーターの場合、`Option Strict` がオフの場合、`As` 句は省略可能です。 ただし、いずれかのパラメーターが `As` 句を使用する場合は、すべてのパラメーターで使用する必要があります。 `Option Strict` が on の場合は、すべてのパラメーター定義に対して `As` 句が必要です。  
   
@@ -98,7 +98,7 @@ Option Strict { On | Off }
 |---|---|---|---|  
 |いいえ|いいえ|`Dim qty`|`Option Strict` がオフ (既定値) の場合、変数は `Nothing` に設定されます。<br /><br /> `Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
 |いいえ|はい|`Dim qty = 5`|`Option Infer` がオン (既定値) の場合、変数は初期化子のデータ型になります。 「[ローカル型の推定](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)」を参照してください。<br /><br /> `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
-|はい|いいえ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 詳細については、「 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)」を参照してください。|  
+|はい|いいえ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 詳細については、「[Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)」を参照してください。|  
 |はい|はい|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|  
   
 ## <a name="when-an-option-strict-statement-is-not-present"></a>Option Strict ステートメントが存在しない場合  

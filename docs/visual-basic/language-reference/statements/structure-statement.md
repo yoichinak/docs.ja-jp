@@ -39,8 +39,8 @@ End Structure
 |用語|定義|
 |---|---|
 |`attributelist`|任意。 「[属性リスト](attribute-list.md)」を参照してください。|
-|`accessmodifier`|任意。 次のいずれかになります。<br /><br /> -   [パブリック](../modifiers/public.md)<br />-     [Protected](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [プライベート](../modifiers/private.md)<br />[保護されたフレンド](../modifiers/protected-friend.md)の - <br/>- [プライベート保護](../modifiers/private-protected.md) <br /><br /> 「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|
-|`Shadows`|任意。 「[シャドウ](../modifiers/shadows.md)」を参照してください。|
+|`accessmodifier`|任意。 次のいずれかになります。<br /><br /> -   [Public](../modifiers/public.md)<br />-     [Protected](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />- [Protected Friend](../modifiers/protected-friend.md)<br/>- [Private Protected](../modifiers/private-protected.md) <br /><br /> 「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|
+|`Shadows`|任意。 「[Shadows](../modifiers/shadows.md)」を参照してください。|
 |`Partial`|任意。 構造体の部分定義を示します。 「[Partial](../modifiers/partial.md)」を参照してください。|
 |`name`|必須。 この構造体の名前です。 「[宣言された要素の名前](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
 |`Of`|任意。 これがジェネリックな構造体であることを指定します。|
@@ -69,13 +69,13 @@ End Structure
   
      0 個または 1 つ以上の非共有変数または非共有の非カスタム イベントを構造体内で宣言することができます。 非共有ではあっても、定数、プロパティ、およびプロシージャだけを宣言することはできません。
 
-- **初期化。 ** 構造体の非共有データ メンバーの値を宣言の一部として初期化することはできません。 構造体のパラメーター化されたコンストラクターを使ってそのようなデータ メンバーを初期化するか、または構造体のインスタンスを作成した後にメンバーに値を割り当てる必要があります。
+- **初期化。** 構造体の非共有データ メンバーの値を宣言の一部として初期化することはできません。 構造体のパラメーター化されたコンストラクターを使ってそのようなデータ メンバーを初期化するか、または構造体のインスタンスを作成した後にメンバーに値を割り当てる必要があります。
 
 - **継承。** 構造体は、<xref:System.ValueType> 以外の型を継承できません。すべての構造体が、この型を継承します。 特に、構造体は別の構造体を継承できません。
 
      <xref:System.ValueType>を指定する場合でも、構造体の定義で[Inherits ステートメント](inherits-statement.md)を使用することはできません。
 
-- **実装。 ** 構造体が [Implements ステートメント](implements-statement.md)を使用する場合は、`interfacenames`で指定するすべてのインターフェイスで定義されているすべてのメンバーを実装する必要があります。
+- **実装。** 構造体が [Implements ステートメント](implements-statement.md)を使用する場合は、`interfacenames`で指定するすべてのインターフェイスで定義されているすべてのメンバーを実装する必要があります。
 
 - **既定のプロパティ。** 構造体では、[既定](../modifiers/default.md)の修飾子を使用して、最大で1つのプロパティを*既定のプロパティ*として指定できます。 詳細については、「[Default](../modifiers/default.md)」を参照してください。
 
@@ -83,11 +83,11 @@ End Structure
 
 - **アクセスレベル。** 構造体の内部では、各メンバーを独自のアクセス レベルで宣言できます。 すべての構造体メンバーは、既定で [Public](../modifiers/public.md)アクセスになります。 構造体そのものにこれより厳しいアクセス レベルを指定した場合は、たとえアクセス修飾子を使ってメンバーのアクセス レベルを調整していても、メンバーへのアクセスが自動的に制限されることに注意してください。
 
-- **スコープ。 ** 構造体は、そこに含まれる名前空間、クラス、構造体、またはモジュールをスコープとします。
+- **スコープ。** 構造体は、そこに含まれる名前空間、クラス、構造体、またはモジュールをスコープとします。
 
      すべての構造体メンバーのスコープは、構造体全体になります。
 
-- **有効期間。 ** 構造体に有効期間はありません。 ただし、構造体の各インスタンスには、他のインスタンスに依存しない独自の有効期間があります。
+- **有効期間。** 構造体に有効期間はありません。 ただし、構造体の各インスタンスには、他のインスタンスに依存しない独自の有効期間があります。
 
      インスタンスの有効期間は、[New 演算子](../operators/new-operator.md) 句によって作成されると開始されます。 インスタンスに含まれる変数の有効期間が終わった時点で、そのインスタンスの有効期間は終わります。
 
@@ -95,7 +95,7 @@ End Structure
 
      構造体メンバーの有効期間は、それを宣言する方法と場所で決まります。 詳細については、「[Class ステートメント](class-statement.md)」の「有効期間」を参照してください。
 
-- **修飾。 ** 構造体の外部にあるコードでは、メンバーの名前をその構造体の名前で修飾する必要があります。
+- **修飾。** 構造体の外部にあるコードでは、メンバーの名前をその構造体の名前で修飾する必要があります。
 
      入れ子構造体の内部のコードでプログラミング要素を修飾なしで参照した場合、Visual Basic はその要素をまず入れ子構造体の内部で探し、その次にコンテナー構造体の内部で探します。この手順が、最も外側のコンテナー要素にまで繰り返されます。 詳細については、「[宣言された要素の参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。
 
