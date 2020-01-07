@@ -38,5 +38,5 @@ Visual Basic のコマンドラインコンパイラは、入力ファイル、�
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

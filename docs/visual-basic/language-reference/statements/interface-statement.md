@@ -1,5 +1,5 @@
 ---
-title: Interface ステートメント
+title: Interface ステートメント (Visual Basic)
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Interface
@@ -43,7 +43,7 @@ End Interface
 |`name`|必須。 このインターフェイスの名前。 「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
 |`Of`|省略可。 これがジェネリックインターフェイスであることを指定します。|  
 |`typelist`|[Of](../../../visual-basic/language-reference/statements/of-clause.md)キーワードを使用する場合は必須です。 このインターフェイスの型パラメーターのリスト。 必要に応じて、`In` および `Out` ジェネリック修飾子を使用して、各型パラメーターをバリアントとして宣言できます。 [型リスト](../../../visual-basic/language-reference/statements/type-list.md)を参照してください。|  
-|`Inherits`|省略可。 このインターフェイスが、別のインターフェイスまたはインターフェイスの属性とメンバーを継承することを示します。 「 [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)」を参照してください。|  
+|`Inherits`|省略可。 このインターフェイスが、別のインターフェイスまたはインターフェイスの属性とメンバーを継承することを示します。 「[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)」を参照してください。|  
 |`interfacenames`|`Inherits` ステートメントを使用する場合は必ず指定します。 このインターフェイスの派生元のインターフェイスの名前。|  
 |`modifiers`|省略可。 定義されているインターフェイスメンバーの適切な修飾子。|  
 |`Property`|省略可。 インターフェイスのメンバーであるプロパティを定義します。|  
@@ -63,7 +63,7 @@ End Interface
   
  `Interface` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、インターフェイスの*宣言コンテキスト*は、ソースファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があり、プロシージャまたはブロックにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
- インターフェイスは、既定で[Friend](../../../visual-basic/language-reference/modifiers/friend.md)アクセスに設定されます。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+ インターフェイスは、既定で [Friend](../../../visual-basic/language-reference/modifiers/friend.md)アクセスに設定されます。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
 ## <a name="rules"></a>ルール  
   

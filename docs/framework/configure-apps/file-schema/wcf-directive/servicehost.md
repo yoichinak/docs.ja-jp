@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: dd3dd026749ccc299cd922b79dcae8ccbcc722d8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3c7da8d5a473b801da8c48d1cb1504b95cc6c769
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968825"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342128"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 サービス ホストの生成に使用されるファクトリを、ホストされるサービスと、.svc ファイルで提供されるホスティング コードのアクセスとコンパイルに必要なその他のプログラミング部分に関連付けます。  
@@ -26,7 +26,7 @@ CodeBehind = "CodeBehind"
   
 ## <a name="attributes"></a>属性  
   
-#### <a name="service"></a>[サービス]  
+#### <a name="service"></a>サービス  
  ホストされるサービスの CLR 型名。 これは、1 つ以上のサービス コンタクトを実装する型の修飾名にする必要があります。  
   
 #### <a name="factory"></a>ファクトリ  
@@ -36,12 +36,12 @@ CodeBehind = "CodeBehind"
  デバッグシンボルを使用して Windows Communication Foundation (WCF) サービスをコンパイルする必要があるかどうかを示します。 WCF サービスをデバッグシンボルを使用してコンパイルする必要があるかどうかを `true` します。それ以外の場合は、`false`ます。  
   
 #### <a name="language"></a>言語  
- ファイル (.svc) 内のすべてのインライン コードをコンパイルするときに使用する言語を指定します。 値は、C#、VB、JS (それぞれ、C#、Visual Basic .NET、および JScript .NET を示す) など、.NET がサポートする任意の言語を表します。 この属性は省略できます。  
+ ファイル (.svc) 内のすべてのインライン コードをコンパイルするときに使用する言語を指定します。 値は任意のを表すことができます。`C#`、`VB`、および `JS`を含む、NET でサポートされているC#言語。それぞれ、、Visual Basic、および JScript .net を参照します。 この属性は省略できます。  
   
 #### <a name="codebehind"></a>CodeBehind  
  XML Web サービスを実装するクラスが同じファイル内に存在せず、アセンブリとしてコンパイルされずに \Bin ディレクトリに置かれているとき、XML Web サービスを実装するソース ファイルを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  サービスをホストするために使用される <xref:System.ServiceModel.ServiceHost> は、Windows Communication Foundation (WCF) プログラミングモデル内の機能拡張ポイントです。 ファクトリ パターンは、ホスティング環境が直接インスタンス化できないポリモーフィック型の可能性があるため、<xref:System.ServiceModel.ServiceHost> のインスタンス化に使用されます。  
   
  既定の実装では <xref:System.ServiceModel.Activation.ServiceHostFactory> を使用して、<xref:System.ServiceModel.ServiceHost> のインスタンスを作成します。 ただし、 [\@ServiceHost](servicehost.md)ディレクティブでファクトリ実装の CLR 型名を指定することで、独自のファクトリ (派生ホストを返すもの) を指定できます。  
@@ -56,7 +56,7 @@ CodeBehind = "CodeBehind"
   
  たとえば、`MyService`に対して AJAX 対応のエンドポイントを有効にするには、次の例に示すように、 [@ServiceHost](servicehost.md)ディレクティブで、既定の <xref:System.ServiceModel.Activation.ServiceHostFactory>ではなく、`Factory` 属性の値に <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> を指定します。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
   
 ```xml  
 <% @ServiceHost
