@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: bb0bdb3c10a7df2ca954fbdb9382a25bf805068d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1c65841e4c124252cfa41bcd4d0c305a426687ee
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349739"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632351"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>方法: ラムダ式を作成する (Visual Basic)
 *ラムダ式*は、名前のない関数またはサブルーチンです。 ラムダ式は、デリゲート型が有効であればどこでも使用できます。  
@@ -65,7 +65,7 @@ ms.locfileid: "74349739"
   
      `Dim add1 = Function`   `(index As Integer)`  
   
-3. Enter キーを押します。 `End Function` ステートメントが自動的に追加されます。  
+3. ENTER キーを押します。 `End Function` ステートメントが自動的に追加されます。  
   
 4. 関数の本体内で、次のコードを追加して式を作成し、値を返します。 戻り値の型を指定するために `As` 句は使用しません。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "74349739"
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3. Enter キーを押します。 `End Sub` ステートメントが自動的に追加されます。  
+3. ENTER キーを押します。 `End Sub` ステートメントが自動的に追加されます。  
   
 4. 関数の本体内に、サブルーチンが呼び出されたときに実行する次のコードを追加します。  
   
@@ -95,16 +95,16 @@ ms.locfileid: "74349739"
   
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
  ラムダ式の一般的な用途は、型が `Delegate`パラメーターの引数として渡すことができる関数を定義することです。 次の例では、<xref:System.Diagnostics.Process.GetProcesses%2A> メソッドによって、ローカルコンピューター上で実行されているプロセスの配列が返されます。 <xref:System.Linq.Enumerable> クラスの <xref:System.Linq.Enumerable.Where%2A> メソッドには、引数として `Boolean` デリゲートが必要です。 この例のラムダ式は、この目的に使用されます。 このメソッドは、1つのスレッドのみを持ち、`filteredList`で選択されているプロセスごとに `True` を返します。  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
- 前の例は、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 構文で記述された次のコードと同じです。  
+ 前の例は、統合言語クエリ (LINQ) 構文で記述された次のコードと同じです。  
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq.Enumerable>
 - [ラムダ式](./lambda-expressions.md)

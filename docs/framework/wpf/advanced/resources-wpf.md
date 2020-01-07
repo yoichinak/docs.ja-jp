@@ -8,12 +8,12 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: 8f3ab7a11757ba1936aae6e63ace28c4b336292b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 50e21f2d23054e58079f97466aea5d2d7d9f659e
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458708"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559730"
 ---
 # <a name="resources-wpf"></a>リソース (WPF)
 リソースは、アプリケーションのさまざまな場所で再利用できるオブジェクトです。 WPF では、さまざまな種類のリソースがサポートされています。 これらのリソースには、主に、XAML リソースとリソースデータファイルという2種類のリソースがあります。 XAML リソースの例としては、ブラシやスタイルなどがあります。 リソースデータファイルは、アプリケーションで必要とされる実行可能ではないデータファイルです。  
@@ -23,14 +23,14 @@ ms.locfileid: "73458708"
  [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](../app-development/wpf-application-resource-content-and-data-files.md)  
  [WPF におけるパッケージの URI](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a>辞書／辞典／その他  
+## <a name="reference"></a>参照先  
  <xref:System.Windows.ResourceDictionary>  
   
  [StaticResource のマークアップ拡張機能](staticresource-markup-extension.md)  
   
  [DynamicResource マークアップ拡張](dynamicresource-markup-extension.md)  
   
- [x:Key ディレクティブ](../../xaml-services/x-key-directive.md)  
+ [x:Key ディレクティブ](../../../desktop-wpf/xaml-services/xkey-directive.md)  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [WPF の XAML](xaml-in-wpf.md)

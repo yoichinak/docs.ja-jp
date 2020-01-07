@@ -1,22 +1,22 @@
 ---
-title: LINQ (LINQ)
+title: LINQ ( LINQ)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: ea6754d9d93a7d400ac3494b01b850374e9ec02d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 50d6c9ffb484dfbc6d33ed1a3e9a1f03f240990b
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354181"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636537"
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic での LINQ
-このセクションでは、Visual Basic と [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] を理解して使用するのに役立つ概要、例、および背景情報を示します。  
+ここでは、Visual Basic と統合言語クエリ (LINQ) の理解と使用に役立つ概要、例、および背景情報について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] のプロバイダー、演算子、クエリ構造、および言語機能の概要について説明します。  
+ LINQ プロバイダー、演算子、クエリ構造、および言語機能の概要について説明します。  
   
  [方法: データベースの照会](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
  SQL Server データベースに接続し、LINQ を使用してクエリを実行する方法の例を示します。  
