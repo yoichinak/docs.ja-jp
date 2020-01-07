@@ -160,7 +160,7 @@ End Operator
 
 ## <a name="widening-and-narrowing-conversions"></a>拡大変換と縮小変換
 
-*拡大変換*は実行時に常に成功しますが、*縮小変換*は実行時に失敗する可能性があります。 詳細については、「[拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
+*拡大変換*は実行時に常に成功しますが、*縮小変換*は実行時に失敗する可能性があります。詳細については、「[拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
 
 `Widening`する変換プロシージャを宣言する場合、プロシージャコードでエラーが発生しないようにする必要があります。 これは、次のことを意味します。
 
