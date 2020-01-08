@@ -24,7 +24,7 @@ ms.locfileid: "74346202"
  Xml リテラル構文と XML 1.0 構文の違いの詳細については、「[XML リテラルと XML 1.0 仕様 (Visual Basic)](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。  
   
 ## <a name="simple-literals"></a>単純なリテラル  
- Visual Basic コードに [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトを作成するには、有効な XML を入力するか、貼り付けます。 XML 要素リテラルは <xref:System.Xml.Linq.XElement> オブジェクトを返します。 詳細については、「[XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)と [XML リテラルと XML 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。 次の例では、複数の子要素を持つ XML 要素を作成します。  
+ Visual Basic コードに [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトを作成するには、有効な XML を入力するか、貼り付けます。 XML 要素リテラルは <xref:System.Xml.Linq.XElement> オブジェクトを返します。 詳細については、「[XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)」と「[XML リテラルと XML 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。 次の例では、複数の子要素を持つ XML 要素を作成します。  
   
  [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
