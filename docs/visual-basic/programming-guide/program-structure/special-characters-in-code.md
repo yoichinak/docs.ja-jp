@@ -54,7 +54,7 @@ ms.locfileid: "74347268"
   
  詳細については、「[方法: コード内でステートメントを分割および結合する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)」を参照してください。  
   
- コロン (`:`) 文字は、ステートメントラベルを識別するためにも使用されます。 詳細については、「[方法: ステートメントへのラベル付け (Visual Basic)](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)」を参照してください。  
+ コロン (`:`) 文字は、ステートメントラベルを識別するためにも使用されます。 詳細については、「[方法: ステートメントへのラベル付け](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)」を参照してください。
   
 ## <a name="concatenation"></a>連結  
  *連結*には `&` 演算子を使用し、文字列を結合するにはを使用します。 数値を加算する `+` 演算子と混同しないようにしてください。 数値を操作するときに `+` 演算子を使用して連結すると、正しくない結果が得られる可能性があります。 次に例を示します。  
