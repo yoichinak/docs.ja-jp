@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 08df16be9df6d55ab9f1426e205e56d9609ce72e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f34ee198ba49a168ed8b56785bea68beee2eb214
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569223"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348119"
 ---
 # <a name="feed-customization-wcf-data-services"></a>フィードのカスタマイズ (WCF Data Services)
-WCF Data Services は、Open Data Protocol (OData) を使用してデータをフィードとして公開します。 OData は、データフィードの Atom 形式と JavaScript Object Notation (JSON) 形式の両方をサポートしています。 Atom フィードを使用する場合、OData には、エンティティやリレーションシップなどのデータをシリアル化するための標準的な方法が、HTTP メッセージの本文に含めることができる XML 形式で用意されています。 OData は、エンティティと Atom 要素に含まれるデータ間の既定のエンティティプロパティマッピングを定義します。 詳細については、「 [OData: Atom 形式](https://go.microsoft.com/fwlink/?LinkID=185794)」を参照してください。  
+WCF Data Services は、Open Data Protocol (OData) を使用してデータをフィードとして公開します。 OData は、データフィードの Atom 形式と JavaScript Object Notation (JSON) 形式の両方をサポートしています。 Atom フィードを使用する場合、OData には、エンティティやリレーションシップなどのデータをシリアル化するための標準的な方法が、HTTP メッセージの本文に含めることができる XML 形式で用意されています。 OData は、エンティティと Atom 要素に含まれるデータ間の既定のエンティティプロパティマッピングを定義します。 詳細については、「 [OData: Atom 形式](https://www.odata.org/documentation/odata-version-2-0/atom-format/)」を参照してください。  
   
  場合によっては、データ サービスから返されるプロパティのデータを、標準のフィードの形式ではなくカスタマイズした方法でシリアル化する必要があります。 OData を使用すると、データフィードのシリアル化をカスタマイズして、エンティティのプロパティを、エントリの未使用の要素や属性、またはフィード内のエントリのカスタム要素にマップすることができます。  
   
@@ -31,7 +31,7 @@ WCF Data Services は、Open Data Protocol (OData) を使用してデータを�
 > カスタム フィードを定義する場合、カスタム マッピングが定義されているすべてのエンティティ プロパティが投影に含まれることを保証する必要があります。 マップされているエンティティ プロパティがこの射影に含まれていない場合、データの損失が発生することがあります。 詳細については、「[クエリプロジェクション](query-projections-wcf-data-services.md)」を参照してください。  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Entity Framework プロバイダーを使用したフィードのカスタマイズ  
- Entity Framework プロバイダーで使用されるデータ モデルは、.edmx ファイルの XML として表現されます。 この場合、カスタム フィードを定義する属性が、データ モデルのエンティティ型とプロパティを表現する `EntityType` および `Property` 要素に追加されます。 これらのフィードのカスタマイズ属性は[\[MC-CSDL\]: 概念スキーマ定義ファイル形式](https://go.microsoft.com/fwlink/?LinkId=159072)で定義されていません。これは、Entity Framework プロバイダーがデータモデルを定義するために使用する形式です。 したがって、フィードのカスタマイズ属性を特定のスキーマ名前空間で宣言する必要があります。これは、`m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"` として定義されます。 次の XML フラグメントは、`Property`、`Products`、および `ProductName` プロパティを定義する `ReorderLevel` エンティティ型の `UnitsInStock` 要素に適用されたフィードのカスタマイズ属性を示します。  
+ Entity Framework プロバイダーで使用されるデータ モデルは、.edmx ファイルの XML として表現されます。 この場合、カスタム フィードを定義する属性が、データ モデルのエンティティ型とプロパティを表現する `EntityType` および `Property` 要素に追加されます。 これらのフィードのカスタマイズ属性は[\[MC-CSDL\]: 概念スキーマ定義ファイル形式](https://docs.microsoft.com/openspecs/windows_protocols/mc-csdl/c03ad8c3-e8b7-4306-af96-a9e52bb3df12)で定義されていません。これは、Entity Framework プロバイダーがデータモデルを定義するために使用する形式です。 したがって、フィードのカスタマイズ属性を特定のスキーマ名前空間で宣言する必要があります。これは、`m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"` として定義されます。 次の XML フラグメントは、`Property`、`Products`、および `ProductName` プロパティを定義する `ReorderLevel` エンティティ型の `UnitsInStock` 要素に適用されたフィードのカスタマイズ属性を示します。  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   
@@ -92,7 +92,7 @@ WCF Data Services は、Open Data Protocol (OData) を使用してデータを�
   
  詳細については、「[データサービスのバージョン管理](data-service-versioning-wcf-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [リフレクション プロバイダー](reflection-provider-wcf-data-services.md)
 - [Entity Framework プロバイダー](entity-framework-provider-wcf-data-services.md)

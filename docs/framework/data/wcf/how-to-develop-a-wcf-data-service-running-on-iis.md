@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 684361dbb97e70296a3061f71102662023f88d9a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5c75425783d3468ac42ef7cb32cd9c93e812192a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800517"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338348"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>方法: IIS で実行されている WCF データサービスを開発する
 
@@ -132,7 +132,7 @@ ms.locfileid: "74800517"
 
 5. 次のいずれかの手順を実行して、データモデルをデータベースに接続し、 **[次へ]** をクリックします。
 
-    - データベース接続が既に構成されていない場合は、 **[新しい接続]** をクリックして新しい接続を作成します。 詳細については、「 [How to: Create Connections to SQL Server Databases](https://go.microsoft.com/fwlink/?LinkId=123631)」を参照してください。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
+    - データベース接続が既に構成されていない場合は、 **[新しい接続]** をクリックして新しい接続を作成します。 詳細については、「 [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))」を参照してください。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
 
          \- または
 
@@ -162,6 +162,6 @@ ms.locfileid: "74800517"
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [サービスとしてのデータの公開](exposing-your-data-as-a-service-wcf-data-services.md)

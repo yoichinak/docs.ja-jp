@@ -17,21 +17,21 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d966116db09c2baef7deabf5d01138e8445098be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460915"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636264"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル
 Microsoft Windows アプリケーションは、多くの場合、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、イメージ、ビデオ、オーディオなど、実行可能ではないデータを含むファイルに依存しています。 Windows Presentation Foundation (WPF) では、これらの種類のデータファイル (アプリケーションデータファイルと呼ばれます) を構成、識別、および使用するための特別なサポートを提供しています。 このサポートの中心となるのは、次のような特定のアプリケーション データ ファイルの種類のセットです。  
   
-- **リソースファイル**: 実行可能ファイルまたはライブラリ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アセンブリのいずれかにコンパイルされるデータファイル。  
+- **リソースファイル**: 実行可能ファイルまたはライブラリ WPF アセンブリにコンパイルされるデータファイル。  
   
-- **コンテンツファイル**: 実行可能ファイル [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アセンブリに明示的に関連付けられているスタンドアロンデータファイル。  
+- **コンテンツファイル**: 実行可能な WPF アセンブリと明示的に関連付けられているスタンドアロンデータファイル。  
   
-- **起点サイトファイル**: 実行可能ファイル [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アセンブリに関連付けられていないスタンドアロンデータファイル。  
+- **起点サイトファイル**: 実行可能な WPF アセンブリと関連付けられていないスタンドアロンデータファイル。  
   
  これらの 3 種類のファイルの重要な違いは、リソース ファイルとコンテンツ ファイルはビルド時に認識されるという点です。アセンブリは、これらを明確に認識します。 ただし、起点サイトファイルの場合、アセンブリについての情報がないか、またはパッケージ URI (uniform resource identifier) 参照によって暗黙的に認識されている可能性があります。後者の場合、参照されている起点サイトファイルが実際に存在する保証はありません。  
   
@@ -55,7 +55,7 @@ Microsoft Windows アプリケーションは、多くの場合、[!INCLUDE[TLA#
 > このセクションで説明するリソースファイルは、「 [XAML リソース](../../../desktop-wpf/fundamentals/xaml-resources-define.md)」で説明されているリソースファイルとは異なり、「[アプリケーションリソースの管理 (.net)](/visualstudio/ide/managing-application-resources-dotnet)」で説明されている埋め込みリソースまたはリンクされたリソースとは異なります。  
   
 ### <a name="configuring-resource-files"></a>リソース ファイルの構成  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]では、リソースファイルは、`Resource` 項目として Microsoft build engine (MSBuild) プロジェクトに含まれるファイルです。  
+ WPF では、リソースファイルは、`Resource` 項目として Microsoft build engine (MSBuild) プロジェクトに含まれるファイルです。  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -80,7 +80,7 @@ Microsoft Windows アプリケーションは、多くの場合、[!INCLUDE[TLA#
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- <xref:System.Windows.Application.GetResourceStream%2A> を呼び出すと <xref:System.IO.Stream>にアクセスできますが、それを設定するプロパティの型に変換する追加作業を実行する必要があります。 代わりに、コードを使用して、リソースファイルを型のプロパティに直接読み込むことによって、<xref:System.IO.Stream> を開いて変換できるように [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] できます。  
+ <xref:System.Windows.Application.GetResourceStream%2A> を呼び出すと <xref:System.IO.Stream>にアクセスできますが、それを設定するプロパティの型に変換する追加作業を実行する必要があります。 代わりに、コードを使用して、リソースファイルを型のプロパティに直接読み込むことによって、WPF が <xref:System.IO.Stream> を開いて変換できるようにすることができます。  
   
  次の例は、コードを使用して <xref:System.Windows.Controls.Frame> (`pageFrame`) に <xref:System.Windows.Controls.Page> を直接読み込む方法を示しています。  
   
@@ -92,7 +92,7 @@ Microsoft Windows アプリケーションは、多くの場合、[!INCLUDE[TLA#
  [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
 ### <a name="application-code-files-as-resource-files"></a>リソース ファイルとしてのアプリケーション コード ファイル  
- Windows、ページ、フロードキュメント、リソースディクショナリなどのパック Uri を使用して、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションコードファイルの特殊なセットを参照できます。 たとえば、アプリケーションの起動時に読み込むウィンドウまたはページを参照するパック URI を使用して、<xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> プロパティを設定できます。  
+ WPF アプリケーションコードファイルの特殊なセットは、windows、ページ、フロードキュメント、リソースディクショナリなどのパック Uri を使用して参照できます。 たとえば、アプリケーションの起動時に読み込むウィンドウまたはページを参照するパック URI を使用して、<xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> プロパティを設定できます。  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
@@ -160,7 +160,7 @@ Microsoft Windows アプリケーションは、多くの場合、[!INCLUDE[TLA#
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- <xref:System.Windows.Application.GetContentStream%2A> を呼び出すと <xref:System.IO.Stream>にアクセスできますが、それを設定するプロパティの型に変換する追加作業を実行する必要があります。 代わりに、コードを使用して、リソースファイルを型のプロパティに直接読み込むことによって、<xref:System.IO.Stream> を開いて変換できるように [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] できます。  
+ <xref:System.Windows.Application.GetContentStream%2A> を呼び出すと <xref:System.IO.Stream>にアクセスできますが、それを設定するプロパティの型に変換する追加作業を実行する必要があります。 代わりに、コードを使用して、リソースファイルを型のプロパティに直接読み込むことによって、WPF が <xref:System.IO.Stream> を開いて変換できるようにすることができます。  
   
  次の例は、コードを使用して <xref:System.Windows.Controls.Frame> (`pageFrame`) に <xref:System.Windows.Controls.Page> を直接読み込む方法を示しています。  
   
@@ -173,7 +173,7 @@ Microsoft Windows アプリケーションは、多くの場合、[!INCLUDE[TLA#
   
 <a name="Site_of_Origin_Files"></a>   
 ## <a name="site-of-origin-files"></a>起点サイト ファイル  
- リソースファイルには、<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> による定義に従って、配布されるアセンブリと共に明示的な関係があります。 ただし、アセンブリとアプリケーション データ ファイル間に暗黙的な関係を持たせる、または関係を持たせない場合があります。たとえば次のような場合です。  
+ リソースファイルには、<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>による定義に従って、配布されるアセンブリと共に明示的な関係があります。 ただし、アセンブリとアプリケーション データ ファイル間に暗黙的な関係を持たせる、または関係を持たせない場合があります。たとえば次のような場合です。  
   
 - コンパイル時にファイルが存在しません。  
   
@@ -195,7 +195,7 @@ Microsoft Windows アプリケーションは、多くの場合、[!INCLUDE[TLA#
 > 起点サイトファイルは、クライアントコンピューター上の XAML ブラウザーアプリケーション (XBAP) ではキャッシュされませんが、コンテンツファイルはです。 したがって、起点サイト ファイルは明確に要求されたときにのみダウンロードされます。 XAML ブラウザーアプリケーション (XBAP) アプリケーションに大きなメディアファイルがある場合、それらを起点サイトファイルとして構成すると、最初のアプリケーションの起動にかかる時間が大幅に短縮され、ファイルは要求時にのみダウンロードされます。  
   
 ### <a name="configuring-site-of-origin-files"></a>起点サイト ファイルの構成  
- コンパイル時に起点サイトファイルが存在しないか不明な場合は、`XCopy` コマンドラインプログラムまたは Microsoft Windows を使用するなど、必要なファイルを実行時に確実に使用できるようにするために、従来の展開メカニズムを使用する必要があります。インストーラー.  
+ コンパイル時に起点サイトファイルが存在しないか不明である場合は、`XCopy` コマンドラインプログラムまたは Microsoft Windows インストーラーを使用するなど、必要なファイルを実行時に確実に使用できるようにするために、従来の展開メカニズムを使用する必要があります。  
   
  発行元のサイトに配置する必要があるファイルがコンパイル時にわかっていても、明示的な依存関係を回避したい場合は、それらのファイルを `None` 項目として MSBuild プロジェクトに追加できます。 コンテンツファイルと同様に、MSBuild `CopyToOutputDirectory` 属性を設定して、`Always` 値または `PreserveNewest` 値を指定することによって、ビルドされたアセンブリに対して相対的な場所に起点サイトファイルをコピーするように指定する必要があります。  
   
@@ -222,7 +222,7 @@ Microsoft Windows アプリケーションは、多くの場合、[!INCLUDE[TLA#
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- <xref:System.Windows.Application.GetRemoteStream%2A> を呼び出すと <xref:System.IO.Stream>にアクセスできますが、それを設定するプロパティの型に変換する追加作業を実行する必要があります。 代わりに、コードを使用して、リソースファイルを型のプロパティに直接読み込むことによって、<xref:System.IO.Stream> を開いて変換できるように [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] できます。  
+ <xref:System.Windows.Application.GetRemoteStream%2A> を呼び出すと <xref:System.IO.Stream>にアクセスできますが、それを設定するプロパティの型に変換する追加作業を実行する必要があります。 代わりに、コードを使用して、リソースファイルを型のプロパティに直接読み込むことによって、WPF が <xref:System.IO.Stream> を開いて変換できるようにすることができます。  
   
  次の例は、コードを使用して <xref:System.Windows.Controls.Frame> (`pageFrame`) に <xref:System.Windows.Controls.Page> を直接読み込む方法を示しています。  
   
