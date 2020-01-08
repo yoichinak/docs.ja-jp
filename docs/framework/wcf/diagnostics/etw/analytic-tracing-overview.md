@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: f6ffed3d9f0bf5e3dc5698d51276eb1db276993c
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: f1a24e34375e98d4bfb48c1e2fd84290e08f6eea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837494"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544750"
 ---
 # <a name="analytic-tracing-overview"></a>分析トレースの概要
 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] の分析トレースは、Event Tracing for Windows (ETW) を基盤とするトレース機能のセットです。詳細度は低いのですが、パフォーマンスに優れています。 ETW は、カーネル レベルで実行され、トレース操作のオーバーヘッドを大幅に削減します。 ユーザー モードおよびカーネル モードのイベントを効率よくバッファーし、サービスの再起動を必要とすることなく、動的にログを有効化できます。 トレース データは、生成および受信されると、イベント ログから確認できます。  
   
  ETW の詳細については、「 [etw を使用したデバッグとパフォーマンスチューニングの向上](https://go.microsoft.com/fwlink/?LinkId=164781)」を参照してください。  
   
- Windows システム、セキュリティ、およびアプリケーションのイベントログを使用してアプリケーションを分析するだけでなく、Windows Vista および [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] では、[アプリケーションとサービスログ] トップレベルノードに追加のログが導入されました。 これらの新しいログは、システム全体に影響するグローバルなイベント (セキュリティ イベント ログで記録されるようなイベントなど) ではなく、特定のアプリケーションやコンポーネントのイベントを格納することを目的としています。 [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] は、WCF トレースイベント、WCF メッセージログ、および [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] 追跡レコードのログ記録を、アプリケーションとサービスログに統合して関連付けます。  
+ Windows システム、セキュリティ、およびアプリケーションのイベントログを使用してアプリケーションを分析するだけでなく、Windows Vista および Windows Server 2008 では、[アプリケーションとサービスログ] の最上位ノードに追加のログが導入されました。 これらの新しいログは、システム全体に影響するグローバルなイベント (セキュリティ イベント ログで記録されるようなイベントなど) ではなく、特定のアプリケーションやコンポーネントのイベントを格納することを目的としています。 [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] は、WCF トレースイベント、WCF メッセージログ、および [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] 追跡レコードのログ記録を、アプリケーションとサービスログに統合して関連付けます。  
   
 ## <a name="concepts-and-capabilities"></a>概念と機能  
  WCF 分析トレースには、次の概念と機能が適用されます。  

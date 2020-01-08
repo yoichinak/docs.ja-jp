@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 8a03baffc17da07ccab14c89dc9f99be2fc5ba1a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039490"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635211"
 ---
 # <a name="namespaces-c-programming-guide"></a>名前空間 (C# プログラミング ガイド)
 
@@ -50,7 +50,7 @@ C# プログラミングでは、名前空間が 2 つの方法でよく使用�
 
 - [C# プログラミング ガイド](../index.md)
 - [名前空間の使用](using-namespaces.md)
-- [方法: My 名前空間を使用する](how-to-use-the-my-namespace.md)
+- [My 名前空間を使用する方法](how-to-use-the-my-namespace.md)
 - [識別子名](../inside-a-program/identifier-names.md)
 - [using ディレクティブ](../../language-reference/keywords/using-directive.md)
 - [::演算子](../../language-reference/operators/namespace-alias-qualifier.md)

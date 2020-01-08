@@ -58,7 +58,7 @@ Await AsyncMethodThatReturnsTask()
 
 `Await` 式またはステートメントは、自身が実行されているスレッドをブロックするのではなく、 非同期メソッドの残りの部分が待機中のタスクの継続として `Await` 式の後に登録されるようにします。 これによって、コントロールは非同期のメソッドの呼び出し元に戻されます。 タスクが完了すると、継続が呼び出され、中断したところから非同期メソッドの実行が再開されます。
 
-`Await` 式は、`Async` 修飾子で修飾されたすぐ外側のメソッドまたはラムダ式の本体でのみ使用できます。 *Await*という用語は、そのコンテキストでのみキーワードとして機能します。 他の場所では、識別子として解釈されます。 Async メソッドまたはラムダ式内では、クエリ式に `Await` 式を指定することはできません。そのためには、`catch` または `finally` ブロックを指定してください. [.キャッチ...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)ステートメント、`For` または `For Each` ループのループ制御変数式、または[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)ステートメントの本体。
+`Await` 式は、`Async` 修飾子で修飾されたすぐ外側のメソッドまたはラムダ式の本体でのみ使用できます。 *Await*という用語は、そのコンテキストでのみキーワードとして機能します。 他の場所では、識別子として解釈されます。 Async メソッドまたはラムダ式内では、クエリ式に `Await` 式を指定することはできません。そのためには、`catch` または `finally` ブロックを指定してください。[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)、`For` または `For Each` ループのループ制御変数式、または [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)ステートメントの本体。
 
 ## <a name="exceptions"></a>例外
 
@@ -70,7 +70,7 @@ Await AsyncMethodThatReturnsTask()
 
 障害の発生した状態にある単一のタスクで、複数の例外が反映される場合があります。  たとえば、タスクは <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> の呼び出しの結果になることがあります。 このようなタスクを待機すると、await 操作によって 1 つの例外のみが再スローされます。 ただし、どの例外が再スローされるかを予測することはできません。
 
-非同期メソッドのエラー処理の例については、「Try...」を参照してください。 [キャッチ...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。
+非同期メソッドのエラー処理の例については、「[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」を参照してください。
 
 ## <a name="example"></a>使用例
 

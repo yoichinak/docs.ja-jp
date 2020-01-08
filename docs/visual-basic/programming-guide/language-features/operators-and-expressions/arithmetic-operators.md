@@ -92,7 +92,8 @@ ms.locfileid: "74352658"
   
  タイプセーフなコーディング方法として、 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)を使用する方法があります。 `Option Strict On`を設定した場合、Visual Basic は*タイプセーフな*変換を自動的に実行します。 たとえば、`Double` 変数に `Integer` 変数を追加し、その値を `Double` 変数に代入しようとすると、データを失うことなく `Integer` 値を `Double` に変換できるため、操作は正常に続行されます。 一方、タイプセーフでない変換では、`Option Strict On`でコンパイラエラーが発生します。 たとえば、`Double` 変数に `Integer` 変数を追加し、その値を `Integer` 変数に代入しようとすると、コンパイラエラーが発生します。これは、`Double` 変数を型 `Integer`に暗黙的に変換できないためです。  
   
- ただし、`Option Strict Off`を設定した場合、Visual Basic は暗黙的な縮小変換を行うことができますが、予期しないデータまたは精度の損失が発生する可能性があります。 このため、実稼働コードを記述するときには `Option Strict On` を使用することをお勧めします。 詳細については、「[拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
+ ただし、`Option Strict Off`を設定した場合、Visual Basic は暗黙的な縮小変換を行うことができますが、予期しないデータまたは精度の損失が発生する可能性があります。このため、実稼働コードを記述するときには `Option Strict On` を使用することをお勧めします。詳細については、「[拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。 
+
   
 ## <a name="see-also"></a>参照
 
