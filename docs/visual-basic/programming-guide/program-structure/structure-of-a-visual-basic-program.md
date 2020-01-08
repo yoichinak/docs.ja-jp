@@ -17,7 +17,8 @@ ms.locfileid: "64624306"
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic プログラムの構造
 Visual Basic プログラムは、標準の構成ブロックから構築します。*ソリューション*は 1 つまたは複数のプロジェクトで構成されます *プロジェクト*は、1 つまたは複数のアセンブリを含めることができます。各*アセンブリ*が 1 つまたは複数のソース ファイルからコンパイルします。*ソース ファイル*は、クラス、構造体、モジュール、およびインターフェイスの定義と実装を提供し、最終的にはすべてのコードが含まれます。	  
   
- これらのビルディング ブロックの Visual Basic プログラムの詳細については、[ソリューションとプロジェクト](/visualstudio/ide/solutions-and-projects-in-visual-studio)と [.NET のアセンブリ](../../../standard/assembly/index.md)を参照してください。  
+ Visual Basic プログラムのこれらのビルディング ブロックの詳細については、[Visual Studio のソリューションおよびプロジェクト](/visualstudio/ide/solutions-and-projects-in-visual-studio)および [.NET のアセンブリ](../../../standard/assembly/index.md)を参照してください。  
+
   
 ## <a name="file-level-programming-elements"></a>ファイル レベルのプログラミング要素  
  プロジェクトまたはファイルを開始し、コード エディターを開き、既にとを正しい順序でいくつかのコードが表示されます。 作成するすべてのコードは、次のシーケンスに従う必要があります。  
@@ -36,7 +37,8 @@ Visual Basic プログラムは、標準の構成ブロックから構築しま�
  `Option` ステートメントは、構文とロジックのエラーを防ぐ、後続のコードの基盤となる規則を確立します。 [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)ことにより、すべての変数宣言なりのスペルをデバッグする時間を短縮します。 [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)別のデータ型の変数を使用するときに発生する可能性がロジックのエラーとデータの損失を最小限に抑えるのに役立ちます。 [Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)方法文字列は、相互にいずれかに基づく比較を指定します。 その`Binary`または`Text`値。  
   
 ### <a name="imports-statements"></a>Imports ステートメント  
- プロジェクトの外で定義されたインポート名に [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)を含めることができます。`Imports`ステートメントにより、コードはクラスやインポートされた名前空間内で定義されたその他の型を修飾せずに参照できるようになります。必要な分だけ`Imports`ステートメントを使用することができます。 詳細については、「[参照と Imports ステートメント](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)」を参照してください。  
+ [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)をプロジェクトの外で定義されたインポート名に含めることができます。`Imports` ステートメントにより、コードはクラスや他のインポートされた名前空間内で定義された型を修飾することなく参照できます。`Imports` ステートメントは必要な分だけ使用できます。 詳細は「[参照と Imports ステートメント](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)」を参照してください。  
+
   
 ### <a name="namespace-statements"></a>Namespace ステートメント  
  名前空間のヘルプを整理し、プログラミングの要素のグループ化とアクセスに容易にするための分類します。 使用する、 [Namespace ステートメント](../../../visual-basic/language-reference/statements/namespace-statement.md)を特定の名前空間内で、次のステートメントを分類します。 詳細については、「[Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)」を参照してください。  
