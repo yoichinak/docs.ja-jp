@@ -1,5 +1,5 @@
 ---
-title: Private (Visual Basic)
+title: Private
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Private
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 5600744aeca79a54f51a1f9ecd0ef00fed4b00fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c855c4e08b365b4cb75ab062d2ec304a79612ab
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351331"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347916"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 1つ以上の宣言されたプログラミング要素が、含まれている型の中からを含め、宣言コンテキスト内からのみアクセス可能であることを指定します。  
@@ -29,7 +29,7 @@ ms.locfileid: "74351331"
   
 ## <a name="behavior"></a>動作  
   
-- **アクセスレベル。** 宣言コンテキスト内のすべてのコードは、その `Private` 要素にアクセスできます。 これには、入れ子になったクラスや列挙体の代入式など、含まれている型内のコードが含まれます。 宣言コンテキストの外部のコードは、その `Private` 要素にアクセスできません。  
+- **アクセス レベル。** 宣言コンテキスト内のすべてのコードは、その `Private` 要素にアクセスできます。 これには、入れ子になったクラスや列挙体の代入式など、含まれている型内のコードが含まれます。 宣言コンテキストの外部のコードは、その `Private` 要素にアクセスできません。  
   
 - **アクセス修飾子。** アクセスレベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74351331"
   
  [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
  [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
@@ -65,10 +65,8 @@ ms.locfileid: "74351331"
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private Protected](./private-protected.md)
-
 - [Protected Friend](./protected-friend.md)
 - [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Visual Basic におけるプロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-
+- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

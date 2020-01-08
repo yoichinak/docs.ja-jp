@@ -61,7 +61,7 @@ End Module
 
 - **相互運用の考慮事項。** .NET Framework 用に作成されていないコンポーネント (オートメーションや COM オブジェクトなど) とのインターフェイスを使用する場合は、文字型のデータ幅が異なる (8 ビット) ことに注意してください。 このようなコンポーネントに8ビットの引数を渡す場合は、新しい Visual Basic コードで `Char` ではなく、`Byte` として宣言します。
 
-- **拡大。** `Char` データ型は、`String`に拡大変換されます。 つまり、`Char` を `String` に変換することができ、<xref:System.OverflowException?displayProperty=nameWithType>は発生しません。
+- **拡大変換。  **   `Char` データ型は、`String`に拡大変換されます。 つまり、`Char` を `String` に変換することができ、<xref:System.OverflowException?displayProperty=nameWithType>は発生しません。
 
 - **型宣言文字。** リテラル型の文字 `C` を1つの文字列リテラルに追加すると、`Char` データ型に強制されます。 `Char` に識別子の型文字がありません。
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 20e46d7ecc206abb28240075d9ec5f764ab78d01
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e6ffc649d7eb841c2d009b0ec1237975f46e2d2d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346131"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636810"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>オブジェクト初期化子: 名前付きの型と匿名型 (Visual Basic)
 オブジェクト初期化子を使用すると、単一の式を使用して複雑なオブジェクトのプロパティを指定できます。 これらの型を使用して、名前付きの型と匿名型のインスタンスを作成できます。  
@@ -105,7 +105,7 @@ ms.locfileid: "74346131"
   
  型の名前は使用できないため、`As` 句を使用して `cust13`を宣言することはできません。 その型を推論する必要があります。 遅延バインディングを使用しない場合、匿名型の使用はローカル変数に限定されます。  
   
- 匿名型は、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリに対して重要なサポートを提供します。 クエリでの匿名型の使用の詳細については、「[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」と「 [VISUAL BASIC での LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)」を参照してください。  
+ 匿名型は、LINQ クエリの重要なサポートを提供します。 クエリでの匿名型の使用の詳細については、「[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」と「 [VISUAL BASIC での LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)」を参照してください。  
   
 ### <a name="remarks-about-anonymous-types"></a>匿名型の解説  
   
@@ -127,7 +127,7 @@ ms.locfileid: "74346131"
   
      匿名型のプロパティを定義するためのオプションの詳細については、「[方法: 匿名型の宣言でプロパティの名前と型を推論](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)する」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
