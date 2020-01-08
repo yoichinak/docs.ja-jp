@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: bc3a139db80066c9cad5199c7734fe66a8639400
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8fea61c463928ee69ef5dd0dfbf107f89c5384ff
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460029"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544466"
 ---
 # <a name="binding-declarations-overview"></a>バインディング宣言の概要
 
@@ -25,7 +25,7 @@ ms.locfileid: "73460029"
 
 <a name="Prereq"></a>
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
 このトピックを読む前に、マークアップ拡張機能の概念と使用方法について理解している必要があります。 マークアップ拡張機能の詳細については、 「[マークアップ拡張機能と WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md)」を参照してください。
 
@@ -106,17 +106,17 @@ ms.locfileid: "73460029"
 
 ### <a name="escaping-mechanism"></a>エスケープのしくみ
 
-- インデクサー ([ ]) 内では、キャレット文字 (^) は次の文字をエスケープします。
+- インデクサー([ ]) 内部では、キャレット文字 (^) は次の文字をエスケープします。
 
 - XAML で <xref:System.Windows.Data.Binding.Path%2A> を設定する場合は、XML 言語定義に特に特殊な文字を使用して (XML エンティティを使用して) エスケープする必要もあります。
 
-  - 文字 "&" をエスケープするには、`&` を使用します。
+  - 「&」をエスケープするには `&amp;` を使用します。
 
-  - 終了タグ ">" をエスケープするには、`>` を使用します。
+  - 使用する`&gt;`終了タグをエスケープする">"です。
 
 - さらに、マークアップ拡張構文を使用して属性のバインディング全体を記述する場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] マークアップ拡張機能パーサーで特別な意味を持つ文字を (円記号 \\ を使用して) エスケープする必要があります。
 
-  - バックスラッシュ (\\) は、それ自体がエスケープ文字です。
+  - 円記号 (\\) はエスケープ文字そのものです。
 
   - 等号 (=) は、プロパティ名とプロパティの値を区切ります。
 
@@ -143,6 +143,6 @@ ms.locfileid: "73460029"
 ## <a name="see-also"></a>関連項目
 
 - [データ バインディングの概要](../../../desktop-wpf/data/data-binding-overview.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)
 - [データ バインディング](../advanced/optimizing-performance-data-binding.md)
 - [PropertyPath の XAML 構文](../advanced/propertypath-xaml-syntax.md)

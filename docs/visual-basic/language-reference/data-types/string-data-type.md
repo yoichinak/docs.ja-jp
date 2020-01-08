@@ -1,5 +1,5 @@
 ---
-title: 文字列型 (String)
+title: String データ型 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.String
@@ -25,7 +25,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343904"
 ---
-# <a name="string-data-type-visual-basic"></a>文字列型 (String) (Visual Basic)
+# <a name="string-data-type-visual-basic"></a>String データ型 (Visual Basic)
 
 0 ~ 65535 の範囲の値を範囲とする符号なし16ビット (2 バイト) コードポイントのシーケンスを保持します。 各*コードポイント*(文字コード) は、1つの Unicode 文字を表します。 文字列には、0 ~ 約 20億 (2 ^ 31) の Unicode 文字を含めることができます。  
   
@@ -71,7 +71,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
  別のコンポーネントによって作成された文字列は、先頭または末尾にスペースが埋め込まれている可能性があります。 このような文字列を受け取った場合は、<xref:Microsoft.VisualBasic.Strings.Trim%2A>、<xref:Microsoft.VisualBasic.Strings.LTrim%2A>、および <xref:Microsoft.VisualBasic.Strings.RTrim%2A> の各関数を使用して、これらのスペースを削除できます。  
   
- 文字列操作の詳細については、「[文字列](../../../visual-basic/programming-guide/language-features/strings/index.md)」を参照してください。  
+ 文字列操作の詳細については、「[Visual Basic における文字列](../../../visual-basic/programming-guide/language-features/strings/index.md)」を参照してください。  
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   

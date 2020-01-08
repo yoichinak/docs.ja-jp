@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 59f9edf67c03fb7d8670058eca8ea672a6f64c02
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 12568b2bb86257ed7075f2dc83b8077714a1318e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837871"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347037"
 ---
 # <a name="getting-started-sample"></a>入門サンプル
 
@@ -34,7 +34,7 @@ ms.locfileid: "74837871"
 
 クライアントには、サービス コントラクトの定義と、サービスにアクセスするためのプロキシ クラスが含まれています。 プロキシコードは、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を使用してサービスメタデータから生成されます。
 
-Windows Vista では、サービスは Windows アクティブ化サービス (WAS) でホストされます。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] と [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] では、インターネット インフォメーション サービス (IIS) と ASP.NET によってホストされます。 サービスを IIS または WAS でホストすることにより、サービスに初めてアクセスしたときにそのサービスを自動的にアクティブ化できます。
+Windows Vista では、サービスは Windows アクティブ化サービス (WAS) でホストされます。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] と Windows Server 2003 では、インターネットインフォメーションサービス (IIS) と ASP.NET によってホストされています。 サービスを IIS または WAS でホストすることにより、サービスに初めてアクセスしたときにそのサービスを自動的にアクティブ化できます。
 
 > [!NOTE]
 > IIS ではなくコンソールアプリケーションでサービスをホストするサンプルを使い始める場合は、[自己ホスト](../../../../docs/framework/wcf/samples/self-host.md)のサンプルを参照してください。
@@ -283,7 +283,7 @@ Press <ENTER> to terminate client.
 
 3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [How to: Host a WCF Service in a Managed Application](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [方法 : IIS で WCF サービスをホストする](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

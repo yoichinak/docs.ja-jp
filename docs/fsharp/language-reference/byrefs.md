@@ -2,12 +2,12 @@
 title: Byrefs
 description: 下位レベルのプログラミングに使用される、 F#の byref および byref に似た型について説明します。
 ms.date: 11/04/2019
-ms.openlocfilehash: 2c46cea2329b6817dd753e67c6702fb163ce2193
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a6d3d69c4a163be9ecef7e33c284c4a73e800405
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976825"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545137"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -104,7 +104,7 @@ let f (x: inref<SomeStruct>) = x.SomeField
 
 ### <a name="outref-semantics"></a>Outref セマンティクス
 
-`outref<'T>` の目的は、ポインターを読み取り専用にする必要があることを示すことです。 予期しない `outref<'T>` は、名前に関係なく、基になる値の読み取りを許可します。 これは、互換性のためのものです。 意味的には、`outref<'T>` は `byref<'T>`とは異なります。
+`outref<'T>` の目的は、ポインターを書き込むだけであることを示すことです。 予期しない `outref<'T>` は、名前に関係なく、基になる値の読み取りを許可します。 これは、互換性のためのものです。 意味的には、`outref<'T>` は `byref<'T>`とは異なります。
 
 ### <a name="interop-with-c"></a>C\# との相互運用
 
@@ -134,7 +134,7 @@ C#では、`ref` が返すだけでなく、`in ref` キーワードと `out ref
 2. 変更可能なフィールドを持たない構造体型の `this` ポインター。
 3. 別の `inref<_>` ポインターから派生したメモリ位置のアドレス。
 
-`inref` の暗黙的なアドレスを取得するときに、型 `SomeType` の引数を持つオーバーロードは `inref<SomeType>`型の引数を持つオーバーロードに優先されます。 (例:
+`inref` の暗黙的なアドレスを取得するときに、型 `SomeType` の引数を持つオーバーロードは `inref<SomeType>`型の引数を持つオーバーロードに優先されます。 例:
 
 ```fsharp
 type C() =
@@ -166,7 +166,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` は `Struct`を意味しません。 両方とも型に存在する必要があります。
 
-のF# "`byref`に似た" 構造体は、スタックバインド値型です。 マネージヒープに割り当てられることはありません。 `byref`のような構造体は、有効期間と非キャプチャに関する厳密なチェックセットによって適用されるため、高パフォーマンスのプログラミングに役立ちます。 規則は次のとおりです。
+のF# "`byref`に似た" 構造体は、スタックバインド値型です。 マネージヒープに割り当てられることはありません。 `byref`のような構造体は、有効期間と非キャプチャに関する厳密なチェックセットによって適用されるため、高パフォーマンスのプログラミングに役立ちます。 このコードでは、次の規則が適用されます。
 
 * これらは、関数パラメーター、メソッドパラメーター、ローカル変数、メソッドが返す値として使用できます。
 * これらは、クラスまたは通常の構造体の静的メンバーまたはインスタンスメンバーにすることはできません。
@@ -179,7 +179,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 ## <a name="byref-returns"></a>Byref の戻り値
 
-関数またはF#メンバーからの Byref 戻り値は、生成および使用できます。 `byref`を返すメソッドを使用する場合、値は暗黙的に逆参照されます。 (例:
+関数またはF#メンバーからの Byref 戻り値は、生成および使用できます。 `byref`を返すメソッドを使用する場合、値は暗黙的に逆参照されます。 例:
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =

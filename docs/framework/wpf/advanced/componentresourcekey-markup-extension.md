@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 85e6862d59284df1b51bf5ea7fbba786fe0492d7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ccc4f3154996a4e442a4092833f5c9ed9c8938a
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458966"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559462"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey マークアップ拡張機能
 外部アセンブリから読み込まれるリソースのキーを定義して参照します。 これにより、リソース検索では、アセンブリ内の明示的なリソースディクショナリやクラスではなく、アセンブリ内の対象の型を指定できます。  
@@ -42,14 +42,14 @@ ms.locfileid: "73458966"
 <object property="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}}" .../>  
 ```  
   
-## <a name="xaml-values"></a>XAML 値  
+## <a name="xaml-values"></a>XAML の値  
   
 |||  
 |-|-|  
 |`targetTypeName`|リソースアセンブリで定義されているパブリック共通言語ランタイム (CLR) 型の名前。|  
-|`targetID`|リソースのキー。 リソースが検索されると、`targetID` はリソースの[X:Key ディレクティブ](../../xaml-services/x-key-directive.md)に似ています。|  
+|`targetID`|リソースのキー。 リソースが検索されると、`targetID` はリソースの[X:Key ディレクティブ](../../../desktop-wpf/xaml-services/xkey-directive.md)に似ています。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  上記の使用状況に示されているように、{`ComponentResourceKey`} マークアップ拡張機能の使用方法は次の2つの場所にあります。  
   
 - コントロールの作成者によって提供される、テーマリソースディクショナリ内のキーの定義。  
@@ -66,7 +66,7 @@ ms.locfileid: "73458966"
   
  ここに示すコンパクトな構文は、マークアップ拡張機能の <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> コンストラクターシグネチャと位置指定パラメーターの使用に依存しています。 `targetTypeName` と `targetID` を指定する順序が重要です。 Verbose 構文は <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> パラメーターなしのコンストラクターに依存し、オブジェクト要素の真の属性構文に似た方法で <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> と <xref:System.Windows.ComponentResourceKey.ResourceId%2A> を設定します。 Verbose 構文では、プロパティが設定される順序は重要ではありません。 この2つの代替手段 (compact および verbose) の関係とメカニズムについては、「[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)」で詳しく説明されています。  
   
- 技術的には、`targetID` の値は任意のオブジェクトにすることができ、文字列である必要はありません。 ただし、WPF で最も一般的に使用されるのは、`targetID` 値を文字列であるフォームに揃え、そのような文字列を[XamlName 文法](../../xaml-services/xamlname-grammar.md)で有効にすることです。  
+ 技術的には、`targetID` の値は任意のオブジェクトにすることができ、文字列である必要はありません。 ただし、WPF で最も一般的に使用されるのは、`targetID` 値を文字列であるフォームに揃え、そのような文字列を[XamlName 文法](../../../desktop-wpf/xaml-services/xamlname-grammar.md)で有効にすることです。  
   
  `ComponentResourceKey` は、オブジェクト要素構文で使用できます。 この場合、拡張機能を正しく初期化するには、<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> プロパティと <xref:System.Windows.ComponentResourceKey.ResourceId%2A> プロパティの両方の値を指定する必要があります。  
   

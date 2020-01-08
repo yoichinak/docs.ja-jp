@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: b573137b8d96565776d4b31f7ae8e5cc0b203a21
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: aa2dd7a5c30894f85ed1d4aae0228b76ece3c005
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459460"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559873"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF における XAML とカスタム クラス
 共通言語ランタイム (CLR) フレームワークで実装されている XAML は、任意の共通言語ランタイム (CLR) 言語でカスタムクラスまたは構造体を定義し、そのクラスに XAML マークアップを使用してアクセスする機能をサポートしています。 同じマークアップファイル内で [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]定義型とカスタム型の組み合わせを使用できます。通常は、カスタム型を XAML 名前空間プレフィックスにマップします。 このトピックでは、カスタムクラスが XAML 要素として使用できるようにするために満たす必要がある要件について説明します。  
@@ -57,7 +57,7 @@ ms.locfileid: "73459460"
  属性構文が許可されていても、オブジェクト要素を含む property 要素構文が XAML で許可されていないプロパティの例は、<xref:System.Windows.Input.Cursor> 型を受け取るさまざまなプロパティです。 <xref:System.Windows.Input.Cursor> クラスには、専用の型コンバーター <xref:System.Windows.Input.CursorConverter>がありますが、パラメーターなしのコンストラクターは公開されないため、<xref:System.Windows.FrameworkElement.Cursor%2A> プロパティは、実際の <xref:System.Windows.Input.Cursor> 型が参照型である場合でも属性構文を使用してのみ設定できます。  
   
 ### <a name="per-property-type-converters"></a>プロパティごとの型コンバーター  
- また、プロパティ自体は、プロパティレベルで型コンバーターを宣言できます。 これにより、適切な型に基づいて、属性の入力文字列値を <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 操作の入力として処理することにより、プロパティの型のオブジェクトをインスタンス化する "ミニ言語" が有効になります。 これは通常、XAML でプロパティの設定を有効にする唯一の手段としてではなく、便宜的なアクセサーを提供するために行われます。 ただし、パラメーターなしのコンストラクターまたは属性付きの型コンバーターを提供しない既存の CLR 型を使用する属性には、型コンバーターを使用することもできます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API の例は、<xref:System.Globalization.CultureInfo> 型を受け取る特定のプロパティです。 この場合、以前のバージョンのフレームワークで使用されていた互換性と移行のシナリオをより適切に解決するために、既存の Microsoft .NET フレームワーク <xref:System.Globalization.CultureInfo> 型 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用されていましたが、<xref:System.Globalization.CultureInfo> の種類は必要なコンストラクターをサポートしていませんでした。XAML プロパティ値として直接使用できる型レベルの型変換。  
+ また、プロパティ自体は、プロパティレベルで型コンバーターを宣言できます。 これにより、適切な型に基づいて、属性の入力文字列値を <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 操作の入力として処理することにより、プロパティの型のオブジェクトをインスタンス化する "ミニ言語" が有効になります。 これは通常、XAML でプロパティの設定を有効にする唯一の手段としてではなく、便宜的なアクセサーを提供するために行われます。 ただし、パラメーターなしのコンストラクターまたは属性付きの型コンバーターを提供しない既存の CLR 型を使用する属性には、型コンバーターを使用することもできます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API の例は、<xref:System.Globalization.CultureInfo> 型を受け取る特定のプロパティです。 この場合、以前のバージョンのフレームワークで使用されていた互換性と移行のシナリオをより適切に解決するために、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 既存の Microsoft .NET フレームワーク <xref:System.Globalization.CultureInfo> 型が使用されていましたが、<xref:System.Globalization.CultureInfo> の種類では、必要なコンストラクターまたは型レベルの変換を XAML プロパティ値として直接使用することはできませんでした。  
   
  XAML を使用するプロパティを公開するときは常に、特にコントロールの作成者である場合は、依存関係プロパティを使用してそのプロパティをバックアップすることを強くお勧めします。 これは、<xref:System.Windows.DependencyProperty> のバックアップを使用してパフォーマンスを向上させることができるため、XAML プロセッサの既存の [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 実装を使用する場合に特に当てはまります。 依存関係プロパティは、ユーザーが XAML アクセス可能なプロパティに対して期待するプロパティのプロパティシステム機能を公開します。 これには、アニメーション、データバインディング、スタイルのサポートなどの機能が含まれます。 詳細については、「[カスタム依存関係プロパティ](custom-dependency-properties.md)」および「 [XAML 読み込みと依存関係プロパティ](xaml-loading-and-dependency-properties.md)」を参照してください。  
   
@@ -77,15 +77,15 @@ ms.locfileid: "73459460"
   
 - オブジェクト要素構文では、コレクションオブジェクトであるオブジェクトを指定する必要はありません。 コレクション型を受け取る XAML でプロパティを指定するたびに、コレクション型の存在が暗黙的になります。  
   
-- マークアップのコレクションプロパティの子要素は、コレクションのメンバーになるように処理されます。 通常、コレクションのメンバーへのコードアクセスは、`Add`などのリスト/ディクショナリメソッド、またはインデクサーを使用して実行されます。 ただし、XAML 構文ではメソッドまたはインデクサーがサポートされません (例外: XAML 2009 ではメソッドをサポートできますが、XAML 2009 を使用すると WPF の使用を制限できます。「 [xaml 2009 言語機能](../../xaml-services/xaml-2009-language-features.md)」を参照してください)。 コレクションは、要素のツリーを構築するための非常に一般的な要件であり、宣言型の XAML でこれらのコレクションを設定する方法が必要です。 したがって、コレクションプロパティの子要素は、コレクションプロパティの型の値であるコレクションに追加することで処理されます。  
+- マークアップのコレクションプロパティの子要素は、コレクションのメンバーになるように処理されます。 通常、コレクションのメンバーへのコードアクセスは、`Add`などのリスト/ディクショナリメソッド、またはインデクサーを使用して実行されます。 ただし、XAML 構文ではメソッドまたはインデクサーがサポートされません (例外: XAML 2009 ではメソッドをサポートできますが、XAML 2009 を使用すると WPF の使用を制限できます。「 [xaml 2009 言語機能](../../../desktop-wpf/xaml-services/xaml-2009-language-features.md)」を参照してください)。 コレクションは、要素のツリーを構築するための非常に一般的な要件であり、宣言型の XAML でこれらのコレクションを設定する方法が必要です。 したがって、コレクションプロパティの子要素は、コレクションプロパティの型の値であるコレクションに追加することで処理されます。  
   
  .NET Framework XAML サービスの実装であるため、WPF XAML プロセッサは、コレクションプロパティを構成するために次の定義を使用します。 プロパティのプロパティの型は、次のいずれかを実装する必要があります。  
   
-- <xref:System.Collections.IList>を実装します。  
+- <xref:System.Collections.IList> を実装します。  
   
 - <xref:System.Collections.IDictionary> または同等の汎用 (<xref:System.Collections.Generic.IDictionary%602>) を実装します。  
   
-- <xref:System.Array> から派生します (XAML の配列の詳細については、「 [X:Array Markup Extension](../../xaml-services/x-array-markup-extension.md)」を参照してください)。  
+- <xref:System.Array> から派生します (XAML の配列の詳細については、「 [X:Array Markup Extension](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)」を参照してください)。  
   
 - <xref:System.Windows.Markup.IAddChild> ([!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で定義されたインターフェイス) を実装します。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "73459460"
   
  XAML コンテンツプロパティとなるコレクションプロパティを指定できます。 この結果、そのプロパティが使用されます。これにより、オブジェクト要素には、コレクションオブジェクトの要素またはプロパティ要素タグを介在させることなく、1つまたは複数の子要素を含めることができます。 これらの要素は、XAML コンテンツプロパティの値として処理され、バッキングコレクションインスタンスに追加されます。  
   
- 一部の既存の XAML コンテンツプロパティは、`Object`のプロパティの型を使用します。 これにより、<xref:System.String> などのプリミティブ値を取得し、単一の参照オブジェクト値を取得できる XAML コンテンツプロパティが有効になります。 このモデルに従う場合は、型の決定と、可能な型の処理が型によって行われます。 <xref:System.Object> コンテンツタイプの一般的な理由は、オブジェクトコンテンツを文字列として追加する簡単な方法 (既定のプレゼンテーション処理を受け取る)、または既定以外のプレゼンテーションを指定するオブジェクトコンテンツを追加する高度な方法の両方をサポートすることです。追加データ。  
+ 一部の既存の XAML コンテンツプロパティは、`Object`のプロパティの型を使用します。 これにより、<xref:System.String> などのプリミティブ値を取得し、単一の参照オブジェクト値を取得できる XAML コンテンツプロパティが有効になります。 このモデルに従う場合は、型の決定と、可能な型の処理が型によって行われます。 <xref:System.Object> コンテンツタイプの一般的な理由は、オブジェクトコンテンツを文字列として追加する単純な方法 (既定のプレゼンテーション処理を受け取る)、または既定以外のプレゼンテーションや追加データを指定するオブジェクトの内容を追加する高度な方法の両方をサポートすることです。  
   
 <a name="Serializing"></a>   
 ## <a name="serializing-xaml"></a>XAML のシリアル化  
