@@ -7,22 +7,22 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 6e8a333fc84eb85b7a312cb87207ebc235fbfe9f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 687f61bd3ec7d10c6aa66c20cd5eb58fcc56f18a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424565"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636368"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET アプリケーションの配置をサポートするための Firefox のアドオン
 Firefox 用の Windows Presentation Foundation (WPF) プラグインと Firefox 用の .NET Framework Assistant を使用すると、XAML ブラウザーアプリケーション (Xbap)、ルース [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、ClickOnce アプリケーションが Mozilla Firefox ブラウザーで動作できるようになります。  
   
 ## <a name="wpf-plug-in-for-firefox"></a>Firefox 用 WPF プラグイン  
- Firefox 用の WPF プラグインを使用すると、Xbap およびルース [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルは、Firefox ブラウザーの最上位または HTML IFRAME に移動して実行できます。 XBAP は [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションであり、Web サーバーに発行し、サポートされているブラウザー内で起動できます。 緩い [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] は、XML ファイルのように、サポートされているブラウザーに移動して表示できる XAML のみのファイルです。  
+ Firefox 用の WPF プラグインを使用すると、Xbap およびルース [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルは、Firefox ブラウザーの最上位または HTML IFRAME に移動して実行できます。 XBAP は、Web サーバーに発行して、サポートされているブラウザー内で起動できる WPF アプリケーションです。 緩い [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] は、XML ファイルのように、サポートされているブラウザーに移動して表示できる XAML のみのファイルです。  
   
- Firefox 用の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] プラグインは、.NET Framework 3.5 と共にインストールされます。 ウィンドウ7には .NET Framework 3.5 が含まれていますが、Firefox の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] プラグインは含まれていません。 Windows 7 に Firefox 用の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] プラグインをインストールすることはできません。  
+ Firefox 用の WPF プラグインは、.NET Framework 3.5 と共にインストールされます。 ウィンドウ7には .NET Framework 3.5 が含まれていますが、Firefox 用の WPF プラグインは含まれていません。 Windows 7 で Firefox 用の WPF プラグインをインストールすることはできません。  
   
- .NET Framework 4 には、Firefox の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] プラグインは含まれていません。 ただし、.NET Framework 3.5 と .NET Framework 4 の両方がインストールされている場合、Firefox 用の WPF プラグインは .NET Framework 3.5 と共にインストールされます。 そのため .NET Framework 4 つのアプリケーションが引き続き実行されます。これは、WPF ホストが正しいバージョンのフレームワークを読み込むためです。 詳細については、「 [WPF ホスト (プレゼンテーション用のホスト .exe)](wpf-host-presentationhost-exe.md)」を参照してください。  
+ .NET Framework 4 には、Firefox 用の WPF プラグインは含まれていません。 ただし、.NET Framework 3.5 と .NET Framework 4 の両方がインストールされている場合、Firefox 用の WPF プラグインは .NET Framework 3.5 と共にインストールされます。 そのため .NET Framework 4 つのアプリケーションが引き続き実行されます。これは、WPF ホストが正しいバージョンのフレームワークを読み込むためです。 詳細については、「 [WPF ホスト (プレゼンテーション用のホスト .exe)](wpf-host-presentationhost-exe.md)」を参照してください。  
   
 ## <a name="net-framework-assistant-for-firefox"></a>.NET Framework Assistant for Firefox  
  Firefox 用の .NET Framework Assistant を使用すると、スタンドアロンの ClickOnce アプリケーションを Firefox ブラウザーから実行できます。 Firefox ブラウザーの前と後にインストールされている場合、Firefox の .NET Framework Assistant は同じように機能します。 Firefox ブラウザーが起動し .NET Framework 3.5 SP1 がインストールされると、firefox の .NET Framework Assistant が検索され、インストールされます。 ユーザーは、Firefox の .NET Framework Assistant を次のように構成できます。  

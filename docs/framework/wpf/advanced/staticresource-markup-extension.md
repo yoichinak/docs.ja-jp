@@ -8,23 +8,23 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: b15e2c0bac5610c6f1b10a640254236987c0bcf5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: aa7f69e8871295006c3c5a9c7d0a70d0ecbd6d7e
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458729"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559821"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource のマークアップ拡張機能
-既に定義されているリソースへの参照を検索することによって、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] property 属性の値を提供します。 そのリソースの参照動作は、読み込み時の参照に似ています。これにより、現在の [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページのマークアップから以前に読み込まれたリソースとその他のアプリケーションソースが検索され、そのリソース値がプロパティとして生成されます。ランタイムオブジェクトの値です。  
+既に定義されているリソースへの参照を検索することによって、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] property 属性の値を提供します。 このリソースの参照動作は、読み込み時の参照に似ています。これにより、現在の [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページのマークアップから以前に読み込まれたリソースと、そのリソース値がランタイムオブジェクトのプロパティ値として生成されます。  
   
-## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法  
+## <a name="xaml-attribute-usage"></a>XAML 属性の使用  
   
 ```xml  
 <object property="{StaticResource key}" .../>  
 ```  
   
-## <a name="xaml-object-element-usage"></a>XAML オブジェクト要素の使用方法  
+## <a name="xaml-object-element-usage"></a>XAML オブジェクト要素の使用  
   
 ```xml  
 <object>  
@@ -34,20 +34,20 @@ ms.locfileid: "73458729"
 </object>  
 ```  
   
-## <a name="xaml-values"></a>XAML 値  
+## <a name="xaml-values"></a>XAML の値  
   
 |||  
 |-|-|  
-|`key`|要求されたリソースのキー。 このキーは、リソースがマークアップで作成された場合は[X:Key ディレクティブ](../../xaml-services/x-key-directive.md)によって最初に割り当てられたか、またはリソースがコードで作成された場合に <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> を呼び出すときに `key` パラメーターとして指定されました。|  
+|`key`|要求されたリソースのキー。 このキーは、リソースがマークアップで作成された場合は[X:Key ディレクティブ](../../../desktop-wpf/xaml-services/xkey-directive.md)によって最初に割り当てられたか、またはリソースがコードで作成された場合に <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> を呼び出すときに `key` パラメーターとして指定されました。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!IMPORTANT]
 > `StaticResource` は、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイル内でさらに構文的に定義されているリソースへの前方参照を試行することはできません。 これを行おうとすると、サポートされていません。このような参照が失敗しない場合でも、前方参照を試行すると、<xref:System.Windows.ResourceDictionary> を表す内部ハッシュテーブルが検索されるときに、読み込み時間のパフォーマンスが低下します。 最良の結果を得るには、前方参照を回避できるように、リソースディクショナリの構成を調整します。 前方参照を回避できない場合は、代わりに[Dynamicresource マークアップ拡張機能](dynamicresource-markup-extension.md)を使用してください。  
   
- 指定された <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> は、既存のリソースに対応する必要があります。これは、ページ、アプリケーション、使用可能なコントロールテーマと外部リソース、またはシステムリソースの、 [X:Key ディレクティブ](../../xaml-services/x-key-directive.md)で識別されます。 リソースルックアップは、この順序で実行されます。 静的リソースと動的リソースのリソース検索動作の詳細については、「 [XAML リソース](../../../desktop-wpf/fundamentals/xaml-resources-define.md)」を参照してください。  
+ 指定された <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> は、既存のリソースに対応する必要があります。これは、ページ、アプリケーション、使用可能なコントロールテーマと外部リソース、またはシステムリソースの、 [X:Key ディレクティブ](../../../desktop-wpf/xaml-services/xkey-directive.md)で識別されます。 リソースルックアップは、この順序で実行されます。 静的リソースと動的リソースのリソース検索動作の詳細については、「 [XAML リソース](../../../desktop-wpf/fundamentals/xaml-resources-define.md)」を参照してください。  
   
- リソースキーは、 [XamlName 文法](../../xaml-services/xamlname-grammar.md)で定義されている任意の文字列にすることができます。 リソースキーは、<xref:System.Type>など、他の種類のオブジェクトにすることもできます。 <xref:System.Type> キーは、暗黙的なスタイルキーを使用して、テーマによってコントロールをスタイル設定する方法の基本となります。 詳細については、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。  
+ リソースキーは、 [XamlName 文法](../../../desktop-wpf/xaml-services/xamlname-grammar.md)で定義されている任意の文字列にすることができます。 リソースキーは、<xref:System.Type>など、他の種類のオブジェクトにすることもできます。 <xref:System.Type> キーは、暗黙的なスタイルキーを使用して、テーマによってコントロールをスタイル設定する方法の基本となります。 詳細については、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。  
   
  リソースを参照する別の宣言的な方法は、 [Dynamicresource マークアップ拡張機能](dynamicresource-markup-extension.md)です。  
   
