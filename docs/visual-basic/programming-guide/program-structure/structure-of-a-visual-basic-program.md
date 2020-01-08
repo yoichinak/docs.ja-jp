@@ -15,9 +15,10 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64624306"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic プログラムの構造
-Visual Basic プログラムは、標準の構成ブロックから構築します。 A*ソリューション*は 1 つまたは複数のプロジェクトで構成されます。 A*プロジェクト*さらに、1 つまたは複数のアセンブリを含めることができます。 各*アセンブリ*が 1 つまたは複数のソース ファイルからコンパイルします。 A*ソース ファイル*定義とクラス、構造体、モジュール、および、最終的には、すべてのコードが含まれているインターフェイスの実装を提供します。  
+Visual Basic プログラムは、標準の構成ブロックから構築します。*ソリューション*は 1 つまたは複数のプロジェクトで構成されます *プロジェクト*は、1 つまたは複数のアセンブリを含めることができます。各*アセンブリ*が 1 つまたは複数のソース ファイルからコンパイルします。*ソース ファイル*は、クラス、構造体、モジュール、およびインターフェイスの定義と実装を提供し、最終的にはすべてのコードが含まれます。	  
   
  Visual Basic プログラムのこれらのビルディング ブロックの詳細については、[Visual Studio のソリューションおよびプロジェクト](/visualstudio/ide/solutions-and-projects-in-visual-studio)および [.NET のアセンブリ](../../../standard/assembly/index.md)を参照してください。  
+
   
 ## <a name="file-level-programming-elements"></a>ファイル レベルのプログラミング要素  
  プロジェクトまたはファイルを開始し、コード エディターを開き、既にとを正しい順序でいくつかのコードが表示されます。 作成するすべてのコードは、次のシーケンスに従う必要があります。  
@@ -37,6 +38,7 @@ Visual Basic プログラムは、標準の構成ブロックから構築しま�
   
 ### <a name="imports-statements"></a>Imports ステートメント  
  [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)をプロジェクトの外で定義されたインポート名に含めることができます。`Imports` ステートメントにより、コードはクラスや他のインポートされた名前空間内で定義された型を修飾することなく参照できます。`Imports` ステートメントは必要な分だけ使用できます。 詳細は「[参照と Imports ステートメント](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)」を参照してください。  
+
   
 ### <a name="namespace-statements"></a>Namespace ステートメント  
  名前空間のヘルプを整理し、プログラミングの要素のグループ化とアクセスに容易にするための分類します。 使用する、 [Namespace ステートメント](../../../visual-basic/language-reference/statements/namespace-statement.md)を特定の名前空間内で、次のステートメントを分類します。 詳細については、「[Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)」を参照してください。  
@@ -90,7 +92,7 @@ Visual Basic プログラムは、標準の構成ブロックから構築しま�
   
 - `Function Main(ByVal cmdArgs() As String) As Integer`  
   
- この手順の最も一般的なさまざまなの`Sub Main()`します。 詳細については、次を参照してください。 [Visual basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)します。  
+ 最も一般的なプロシージャの種類は、`Sub Main()`です。詳細については、「[Visual basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)」を参照してください。
   
 ## <a name="see-also"></a>関連項目
 

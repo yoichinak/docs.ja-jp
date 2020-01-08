@@ -1,5 +1,5 @@
 ---
-title: 既定値
+title: Default (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Default

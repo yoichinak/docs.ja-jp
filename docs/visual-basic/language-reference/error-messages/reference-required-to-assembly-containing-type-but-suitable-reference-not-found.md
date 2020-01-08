@@ -1,5 +1,5 @@
 ---
-title: "参照には型 '<typename>' を含むアセンブリ '<assemblyidentity>'が必要ですが、プロジェクト '<projectname1>' と '<projectname2>'があいまいであるため、適切な参照が見つかりませんでした。"
+title: 参照には型 '<typename>' を含むアセンブリ '<assemblyidentity>'が必要ですが、プロジェクト '<projectname1>' と '<projectname2>'があいまいであるため、適切な参照が見つかりませんでした。
 ms.date: 07/20/2015
 f1_keywords:
 - bc30969

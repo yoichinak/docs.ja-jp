@@ -37,5 +37,5 @@ Visual Basic では、バージョン15.3 以降の `-refonly` スイッチが�
 ## <a name="see-also"></a>関連項目
 
 - [/refout](refout-compiler-option.md)
-- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [Visual Basic コマンドラインコンパイラ](index.md)
 - [コンパイルコマンドラインのサンプル](sample-compilation-command-lines.md)

@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK (Roslyn API)
 description: .NET Compiler Platform SDK (Roslyn API とも呼ばれます) を使用して、.NET コードを理解し、エラーを見つけて、そのエラーを修正する方法について説明します。
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a202d977237ce716e3f8c0cf906894efd02196d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706547"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346950"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
@@ -17,7 +17,7 @@ ms.locfileid: "61706547"
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>.NET Compiler Platform SDK の概念
 
-.NET Compiler Platform SDK は、コードにフォーカスされたツールとアプリケーションの作成における参入障壁を劇的に低くします。 これにより、メタプログラミング、コードの生成と変換、C# と VB 言語の対話型の使用、ドメイン固有の言語での C# と VB の埋め込みなどの領域で多くの革新の機会を生み出します。
+.NET Compiler Platform SDK は、コードにフォーカスされたツールとアプリケーションの作成における参入障壁を劇的に低くします。 これにより、メタプログラミング、コードの生成と変換、C# と Visual Basic 言語の対話型の使用、ドメイン固有の言語での C# と Visual Basic の埋め込みなどの領域で、多くのイノベーションの機会が生み出されます。
 
 .NET Compiler Platform SDK では、コードの誤りを見つける***アナライザー***と、修正する***コード修正機能***をビルドできます。 ***アナライザー***では、構文とコードの構造を理解し、修正すべき慣用・誤実装・非推奨実装を検出します。 ***コード修正機能***では、アナライザーによって検出されたコードの誤りに対処するために、1 つまたは複数の修正方法が提案されます。 通常、アナライザーと関連付けられているコード修正は、1 つのプロジェクトにまとめてパッケージ化されます。
 

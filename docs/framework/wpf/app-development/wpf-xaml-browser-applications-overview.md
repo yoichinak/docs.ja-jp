@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: fb7ad54f61d9dcfe94379aef14930a0395da5291
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a4d3b808aee14d5d2f29053b0c60798f9f626e8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424587"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636329"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML ブラウザー アプリケーションの概要
 <a name="introduction"></a>XAML ブラウザーアプリケーション (Xbap) は、Web アプリケーションとリッチクライアントアプリケーションの両方の機能を組み合わせたものです。 たとえば、Web アプリケーションと同様、Web サーバーに配置して、Internet Explorer または Firefox から開始できます。 リッチクライアントアプリケーションと同様に、Xbap は WPF の機能を利用できます。 XBAP の開発方法もリッチ クライアントの開発に似ています。 このトピックでは、XBAP 開発の概要を示し、XBAP 開発が標準的なリッチ クライアント開発と異なる点について説明します。
@@ -45,13 +45,13 @@ ms.locfileid: "73424587"
 ## <a name="deploying-an-xbap"></a>XBAP の配置
  XBAP をビルドすると、次の 3 つのファイルが生成されます。
 
-|ファイル|説明|
+|File|説明|
 |----------|-----------------|
 |実行可能ファイル (.exe)|コンパイル済みのコードが含まれます。拡張子は .exe です。|
 |アプリケーション マニフェスト (.manifest)|アプリケーションに関連付けられたメタデータが含まれます。拡張子は .manifest です。|
 |配置マニフェスト (.xbap)|このファイルには、ClickOnce がアプリケーションの配置に使用する情報が含まれており、拡張子は xbap です。|
 
- Xbap は、Microsoft インターネットインフォメーションサービス (IIS) 5.0 以降のバージョンなど、Web サーバーに展開します。 Web サーバーに .NET Framework をインストールする必要はありませんが、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Multipurpose Internet Mail Extensions (MIME) の種類とファイル名拡張子を登録する必要があります。 詳細については、[WPF アプリケーションを配置するための IIS 5.0 および IIS 6.0 の構成](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)に関するページをご覧ください。
+ Xbap は、Microsoft インターネットインフォメーションサービス (IIS) 5.0 以降のバージョンなど、Web サーバーに展開します。 Web サーバーに .NET Framework をインストールする必要はありませんが、WPF Multipurpose Internet Mail Extensions (MIME) の種類とファイル名拡張子を登録する必要があります。 詳細については、[WPF アプリケーションを配置するための IIS 5.0 および IIS 6.0 の構成](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)に関するページをご覧ください。
 
  XBAP を配置用に準備するには、.exe および関連付けられたマニフェストを Web サーバーにコピーします。 配置マニフェスト (拡張子が .xbap のファイル) を開くために、ハイパーリンクを含む HTML ページを作成します。 ユーザーが xbap ファイルへのリンクをクリックすると、アプリケーションをダウンロードして起動するメカニズムが ClickOnce によって自動的に処理されます。 次のコード例は、XBAP を指定するハイパーリンクを含む HTML ページを示しています。
 
@@ -168,7 +168,7 @@ ms.locfileid: "73424587"
 
 |セキュリティ ゾーン|動作|完全信頼を受け取るための操作|
 |-------------------|--------------|------------------------|
-|ローカル コンピューター|完全な信頼を自動的に受け取る|アクションは必要ありません。|
+|ローカル コンピューター|完全な信頼を自動的に受け取る|特に操作は必要ありません。|
 |イントラネットおよび信頼済みサイト|完全な信頼のプロンプトを表示する|プロンプトにソースが表示されるように、証明書を使用して XBAP に署名します。|
 |インターネット|"信頼されていません" というメッセージが表示され、失敗する|証明書を使用して XBAP に署名します。|
 

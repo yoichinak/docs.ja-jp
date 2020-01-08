@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740665"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636316"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF アプリケーション (WPF) のビルド
 
-Windows Presentation Foundation (WPF) アプリケーションは、.NET Framework の実行可能ファイル (.exe)、ライブラリ (.dll)、または両方の種類のアセンブリの組み合わせとしてビルドできます。 このトピックでは、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションをビルドする方法を紹介し、ビルド プロセスの主な手順について説明します。
+Windows Presentation Foundation (WPF) アプリケーションは、.NET Framework の実行可能ファイル (.exe)、ライブラリ (.dll)、または両方の種類のアセンブリの組み合わせとしてビルドできます。 このトピックでは、WPF アプリケーションをビルドする方法を紹介し、ビルドプロセスの主要な手順について説明します。
 
 <a name="Building_a_WPF_Application_using_Command_Line"></a>
 
@@ -28,13 +28,13 @@ WPF アプリケーションは、次の方法でコンパイルできます。
 
 - Microsoft Build Engine (MSBuild)。 コードと XAML ファイルに加えて、アプリケーションには MSBuild プロジェクト ファイルを含める必要があります。 詳細については、「MSBuild」を参照してください。
 
-- Visual Studio Visual Studio は、MSBuild を使用して WPF アプリケーションをコンパイルする統合開発環境であり、UI を作成するためのビジュアル デザイナーを含んでいます。 詳細については、「 [Visual studio を使用したコードの記述と管理](/visualstudio/ide/index-writing-code)」および「 [visual STUDIO での XAML のデザイン](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)」を参照してください。
+- Visual Studio: Visual Studio は、MSBuild を使用して WPF アプリケーションをコンパイルする統合開発環境であり、UI を作成するためのビジュアル デザイナーを含んでいます。 詳細については、「 [Visual studio を使用したコードの記述と管理](/visualstudio/ide/index-writing-code)」および「 [visual STUDIO での XAML のデザイン](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)」を参照してください。
 
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>
 
 ## <a name="wpf-build-pipeline"></a>WPF ビルド パイプライン
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] プロジェクトがビルドされるときには、言語固有のターゲットと [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 固有のターゲットの組み合わせが呼び出されます。 これらのターゲットを実行するプロセスはビルド パイプラインと呼ばれます。主要な手順を次の図に示します。
+WPF プロジェクトをビルドすると、言語固有のターゲットと WPF 固有のターゲットの組み合わせが呼び出されます。 これらのターゲットを実行するプロセスはビルド パイプラインと呼ばれます。主要な手順を次の図に示します。
 
 ![WPF のビルドプロセス](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")
 
@@ -48,7 +48,7 @@ WPF アプリケーションは、次の方法でコンパイルできます。
 
 - Windows SDK ディレクトリ。
 
-- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 参照アセンブリの場所。
+- WPF 参照アセンブリの場所。
 
 - アセンブリ検索パスのプロパティ。
 
@@ -58,7 +58,7 @@ MSBuild がアセンブリを検索する最初の場所は、参照アセンブ
 
 ### <a name="resolving-references"></a>参照の解決
 
-ビルド プロセスは、アプリケーション プロジェクトのビルドに必要なアセンブリを探して、バインドします。 このロジックは、`ResolveAssemblyReference` タスクに含まれます。 プロジェクト ファイル内で `Reference` として宣言されたすべてのアセンブリは、検索パスに関する情報と、すでにシステムにインストールされているアセンブリのメタデータと共にタスクに渡されます。 タスクは、アセンブリを検索し、インストールされているアセンブリのメタデータを使用して、出力マニフェストに含める必要のないコアの [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アセンブリをフィルターして除外します。 これは、ClickOnce マニフェストに冗長な情報が含まれるのを避けるために行われます。 たとえば、プレゼンテーションフレームワーク .dll は、に組み込まれているアプリケーションの代表者として、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] と、さらに、.NET Framework がインストールされているすべてのコンピューター上のすべての [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アセンブリが存在するため、マニフェスト内のすべての .NET Framework 参照アセンブリに関する情報をすべて含める必要はありません。
+ビルド プロセスは、アプリケーション プロジェクトのビルドに必要なアセンブリを探して、バインドします。 このロジックは、`ResolveAssemblyReference` タスクに含まれます。 プロジェクト ファイル内で `Reference` として宣言されたすべてのアセンブリは、検索パスに関する情報と、すでにシステムにインストールされているアセンブリのメタデータと共にタスクに渡されます。 このタスクは、アセンブリを検索し、インストールされているアセンブリのメタデータを使用して、出力マニフェストに表示する必要がないコア WPF アセンブリをフィルターで除外します。 これは、ClickOnce マニフェストに冗長な情報が含まれるのを避けるために行われます。 たとえば、プレゼンテーションフレームワーク .dll は、および WPF 用に構築されたアプリケーションの代表者と見なすことができます。また、.NET Framework がインストールされているすべてのコンピューター上のすべての WPF アセンブリが同じ場所に存在するため、すべてを含める必要はありません。マニフェスト内のすべての .NET Framework 参照アセンブリに関する情報。
 
 <a name="Markup_Compilation___Pass_1"></a>
 
@@ -142,13 +142,13 @@ End Sub
 
 これらのマニフェストファイルは、常に Xbap 用に作成されます。 インストール型アプリケーションの場合、プロジェクト ファイル内で `GenerateManifests` プロパティの値が `true` に指定されない限り、作成されません。
 
-Xbap は、一般的なインターネットゾーンのアプリケーションに割り当てられているアクセス許可に対して、<xref:System.Security.Permissions.WebBrowserPermission> と <xref:System.Security.Permissions.MediaPermission>の2つの追加のアクセス許可を取得します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ビルド システムは、これらのアクセス許可をアプリケーション マニフェストで宣言します。
+Xbap は、一般的なインターネットゾーンのアプリケーションに割り当てられているアクセス許可に対して、<xref:System.Security.Permissions.WebBrowserPermission> と <xref:System.Security.Permissions.MediaPermission>の2つの追加のアクセス許可を取得します。 WPF ビルドシステムは、アプリケーションマニフェストでこれらのアクセス許可を宣言します。
 
 <a name="Incremental_Build_Support"></a>
 
 ## <a name="incremental-build-support"></a>インクリメンタル ビルドのサポート
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ビルド システムは、インクリメンタル ビルドをサポートします。 これは、マークアップやコードに加えられた変更を検出し、変更の影響を受けるアイテムだけをコンパイルするという高度な機能です。 インクリメンタル ビルド メカニズムは、次のファイルを使用します。
+WPF ビルドシステムでは、インクリメンタルビルドがサポートされています。 これは、マークアップやコードに加えられた変更を検出し、変更の影響を受けるアイテムだけをコンパイルするという高度な機能です。 インクリメンタル ビルド メカニズムは、次のファイルを使用します。
 
 - $(*AssemblyName*)_MarkupCompiler.Cache ファイル。コンパイラの現在の状態を保持します。
 

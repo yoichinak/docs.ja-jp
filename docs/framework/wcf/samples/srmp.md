@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 0ee11b67dcd9c7251df17dc7523dc20765e157c5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 1e0290a4df688d39f84086dc4c1b41712f81076a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716689"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345142"
 ---
 # <a name="srmp"></a>SRMP
 このサンプルでは、HTTP 経由でメッセージ キュー (MSMQ) を使用して、トランザクション キューによる通信を実行する方法を示します。  
@@ -28,7 +28,7 @@ ms.locfileid: "74716689"
   
 5. HTTP が通信に使用されていることを確認するには、MSMQ を強化モードで実行します。 これにより、HTTP 以外のトランスポートを使用した場合は、コンピュータ上でホストされているすべてのキューにメッセージが到着できないようになります。  
   
-6. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] では、MSMQ を強化モードで実行するように選択した後でコンピュータを再起動する必要があります。  
+6. セキュリティが強化されたモードで実行するように MSMQ を選択した後、コンピューターは Windows Server 2003 での再起動を必要とします。  
   
 7. サービスを実行します。  
   
