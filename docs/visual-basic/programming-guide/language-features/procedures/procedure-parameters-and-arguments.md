@@ -56,7 +56,8 @@ ms.locfileid: "74352580"
 - 変換キーワードを使用して、データ型を明示的に変換します。  
   
 ### <a name="type-parameters"></a>型パラメーター  
- *ジェネリックプロシージャ*は、通常のパラメーターに加えて、1 つまたは複数の*型パラメーター*も定義します。 ジェネリックプロシージャを使用すると、呼び出し元のコードはプロシージャを呼び出すたびに異なるデータ型を渡すことができるので、データ型を個々の呼び出しの要件に合わせて調整できます。 「[Visual Basic におけるジェネリック プロシージャ](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
+ *ジェネリックプロシージャ*は、通常のパラメーターに加えて、1 つまたは複数の*型パラメーター*も定義します。 ジェネリックプロシージャを使用すると、呼び出し元のコードはプロシージャを呼び出すたびに異なるデータ型を渡すことができるので、データ型を個々の呼び出しの要件に合わせて調整できます。「[Visual Basic におけるジェネリック プロシージャ](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。 
+
   
 ## <a name="see-also"></a>参照
 

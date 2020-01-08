@@ -66,6 +66,9 @@
             - name: .NET での複数のプラットフォームでの開発
               tocHref: /dotnet/standard/cross-platform/
               topicHref: /dotnet/standard/cross-platform/index
+            - name: Microsoft.Data.Sqlite
+              tocHref: /dotnet/standard/data/sqlite/
+              topicHref: /dotnet/standard/data/sqlite/index
             - name: XML ドキュメントと XML データ
               tocHref: /dotnet/standard/data/xml/
               topicHref: /dotnet/standard/data/xml/index
@@ -173,7 +176,7 @@
             - name: アドインおよび拡張機能
               tocHref: /dotnet/framework/add-ins/
               topicHref: /dotnet/framework/add-ins/index
-            - name: 追加の API
+            - name: その他の API
               tocHref: /dotnet/framework/additional-apis/
               topicHref: /dotnet/framework/additional-apis/index
             - name: アプリケーション ドメインとアセンブリ
@@ -223,7 +226,7 @@
                     - name: Windows フォームの構成セクション
                       tocHref: /dotnet/framework/configure-apps/file-schema/winforms/
                       topicHref: /dotnet/framework/configure-apps/file-schema/winforms/index
-            - name: .NET Framework におけるデータとモデリング
+            - name: データとモデリング
               tocHref: /dotnet/framework/data/
               topicHref: /dotnet/framework/data/index
               items:
@@ -281,13 +284,13 @@
             - name: .NET ネイティブによるアプリのコンパイル
               tocHref: /dotnet/framework/net-native/
               topicHref: /dotnet/framework/net-native/index
-            - name: .NET Framework でのネットワーク プログラミング
+            - name: ネットワーク プログラミング
               tocHref: /dotnet/framework/network-programming/
               topicHref: /dotnet/framework/network-programming/index
             - name: .NET Framework のパフォーマンス
               tocHref: /dotnet/framework/performance/
               topicHref: /dotnet/framework/performance/index
-            - name: .NET Framework での動的プログラミング
+            - name: 動的プログラミング
               tocHref: /dotnet/framework/reflection-and-codedom/
               topicHref: /dotnet/framework/reflection-and-codedom/index
             - name: デスクトップ アプリのリソース
@@ -537,7 +540,7 @@
                 - name: 文字列
                   tocHref: /dotnet/csharp/programming-guide/strings/
                   topicHref: /dotnet/csharp/programming-guide/strings/index
-                - name: 種類
+                - name: 型
                   tocHref: /dotnet/csharp/programming-guide/types/
                   topicHref: /dotnet/csharp/programming-guide/types/index
                 - name: アンセーフ コードとポインター
@@ -682,7 +685,7 @@
             - name: 言語リファレンス
               tocHref: /dotnet/visual-basic/language-reference/
               topicHref: /dotnet/visual-basic/language-reference/index
-            - name: 辞書／辞典／その他
+            - name: 関連項目
               tocHref: /dotnet/visual-basic/reference/
               topicHref: /dotnet/visual-basic/reference/index
         - name: ML.NET ガイド

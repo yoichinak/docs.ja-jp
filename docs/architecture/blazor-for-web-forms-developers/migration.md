@@ -4,12 +4,12 @@ description: 既存の ASP.NET Web フォームアプリを Blazor に移行す�
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b6604e000eaf79bcd8da15d72a3d85713c620851
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 52f463c66c2980d59a93f3210b3cfd825bec33da
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73842039"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337448"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>ASP.NET Web フォームから Blazor への移行
 
@@ -38,13 +38,13 @@ ASP.NET Web Forms から Blazor へのコードベースの移行は、計画を
 
 このドキュメントの執筆時点では、サーバー側モデルは Web フォームによく似ています。 この章では、実稼働の準備として、サーバー側のホスティングモデルに焦点を当てています。
 
-## <a name="create-a-new-project"></a>新しいプロジェクトを作成する
+## <a name="create-a-new-project"></a>新しいプロジェクトの作成
 
 この最初の移行手順では、新しいプロジェクトを作成します。 このプロジェクトの種類は、.NET Core の SDK スタイルプロジェクトに基づいており、以前のプロジェクト形式で使用されていた定型句の多くが単純化されています。 詳細については、「プロジェクトの[構造](project-structure.md)」の章を参照してください。
 
 プロジェクトが作成されたら、前のプロジェクトで使用したライブラリをインストールします。 以前の Web フォームプロジェクトでは、 *app.config*ファイルを使用して必要な NuGet パッケージを一覧表示している可能性があります。 新しい SDK スタイルのプロジェクトでは、 *app.config*がプロジェクトファイル内の `<PackageReference>` 要素に置き換えられました。 この方法の利点は、すべての依存関係が推移的にインストールされることです。 必要な最上位レベルの依存関係のみが表示されます。
 
-使用している依存関係の多くは、Entity Framework 6 や log4net など、.NET Core で使用できます。 使用可能な .NET Core または .NET Standard バージョンがない場合は、.NET Framework バージョンを使用することがよくあります。 マイレージは異なる場合があります。 .NET Core で使用できない API を使用すると、ランタイムエラーが発生します。 Visual Studio は、このようなパッケージを通知します。 **ソリューションエクスプローラー**のプロジェクトの **[参照]** ノードに黄色いアイコンが表示されます。
+使用している依存関係の多くは、Entity Framework 6 や log4net など、.NET Core で使用できます。 使用可能な .NET Core または .NET Standard バージョンがない場合は、.NET Framework バージョンを使用することがよくあります。 実際のメリットはケースによって異なります。 .NET Core で使用できない API を使用すると、ランタイムエラーが発生します。 Visual Studio は、このようなパッケージを通知します。 **ソリューションエクスプローラー**のプロジェクトの **[参照]** ノードに黄色いアイコンが表示されます。
 
 Blazor ベースの eShop プロジェクトでは、インストールされているパッケージを確認できます。 以前は、*パッケージ .config*ファイルには、プロジェクトで使用されているすべてのパッケージが一覧表示されており、約50行のファイルが生成されていました。 *App.config*のスニペットは次のとおりです。
 

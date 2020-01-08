@@ -2,19 +2,19 @@
 title: 拡張メソッドを使用したリファクタリング
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: 1045a649907f877bddd0ec2d8c0e5dfa2a5d0830
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c66fb90f9949ee3e47105498b211c857d5d63804
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346504"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348015"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>拡張メソッドを使用したリファクタリング (Visual Basic)
 この例は、拡張メソッドとして実装されている純粋関数を使用して文字列の連結をリファクタリングすることによって、[段落のテキスト (Visual Basic) を取得](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)する前の例に基づいています。  
   
  前の例では、<xref:System.Linq.Enumerable.Aggregate%2A> 標準クエリ演算子を使用して、複数の文字列が 1 つの文字列に連結されていました。 ただし、拡張メソッドでこの処理を記述した方が、結果のクエリが小さく簡単になるので便利です。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
  この例では、WordprocessingML ドキュメントを処理して、段落、各段落のスタイル、および各段落のテキストを取得します。 この例は、このチュートリアルのこれまでの例に基づいています。  
   
  この例には、`StringConcatenate` メソッドの複数のオーバーロードが含まれています。  
@@ -64,7 +64,7 @@ ByVal func As Func(Of T, String), ByVal separator As String) As String
 End Function  
 ```  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
  `StringConcatenate` メソッドには 4 つのオーバーロードがあります。 あるオーバーロードは、文字列のコレクションを受け取って 1 つの文字列を返します。 別のオーバーロードは、任意の型のコレクション、および単一のコレクションを文字列に射影するデリゲートを受け取ります。 残りの 2 つのオーバーロードでは、区切り文字列を指定できます。  
   
  次のコードでは、4 つのオーバーロードがすべて使用されています。  
@@ -89,7 +89,7 @@ one:two:three:
 1:2:3:  
 ```  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
  ここで、新しい拡張メソッドを利用するように例を変更します。  
   
 ```vb  
@@ -135,7 +135,7 @@ Module Module1
         Return sb.ToString()  
     End Function  
   
-    ' Following function is required because VB does not support short circuit evaluation  
+    ' Following function is required because Visual Basic does not support short circuit evaluation  
     Private Function GetStyleOfParagraph(ByVal styleNode As XElement, _  
                                          ByVal defaultStyle As String) As String  
         If (styleNode Is Nothing) Then  
@@ -238,7 +238,7 @@ StyleName:Code >Hello World<
   
  このリファクタリングは、純粋関数へのリファクタリングの変化形であることに注意してください。 次のトピックでは、純粋関数へのリファクタリングに関する考え方について詳しく紹介します。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
  次の例は、純粋関数を使用してこのコードをリファクターする方法を示しています。  
   
 - [純粋関数によるリファクタリング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  

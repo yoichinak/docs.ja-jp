@@ -1,13 +1,13 @@
 ---
 title: Docker ベースのアプリケーションの開発プロセス
-description: Docker ベースのアプリケーションの開発のオプションに関する大まかな概要を確認します。 マルチ プラットフォームのサポート (Windows、Mac、Linux) のため、Windows 用 Visual Studio、Visual Studio for Mac、または Visual Studio Code のうち好みのものを使います。
+description: Docker ベースのアプリケーションの開発のオプションに関する概要を確認します。 マルチ プラットフォームのサポート (Windows、macOS、Linux) のため、Windows 用 Visual Studio、Visual Studio for Mac、または Visual Studio Code のうち好みのものを使います。
 ms.date: 09/27/2018
-ms.openlocfilehash: 6299d67299948dce1081a211b350e657b2c1b951
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 95e940371f4dbef3b3a8f327c13acbbc55ff29ef
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770135"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337695"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker ベースのアプリケーションの開発プロセス
 
@@ -21,9 +21,9 @@ ms.locfileid: "72770135"
 
 **Visual Studio (Windows 版)。** Visual Studio を使って Docker ベースのアプリケーションを開発する場合は、既に組み込まれている Docker 用ツールに付属する Visual Studio 2017 バージョン 15.7 以降を使うことをお勧めします。 Tools for Docker を使用して、ターゲットの Docker 環境で直接アプリケーションの開発、実行、および検証ができます。 F5 キーを押すと、Docker ホスト内で直接アプリケーション (1 つのコンテナー、または複数のコンテナー) を実行してデバックできます。または、CTRL キーを押しながら F5 キーを押すと、コンテナーを再構築しなくても、アプリケーションを編集して更新できます。 これは、Docker ベース アプリを開発する場合の最も強力な選択肢です。
 
-**Visual Studio for Mac。** これは macOS で動作する IDE であり、Xamarin Studio が進化したものです。2017 年中頃から Docker をサポートしています。 これは、強力な IDE を使用したい Mac コンピューターで作業する開発者にとって好ましい選択肢です。
+**Visual Studio for Mac。** これは macOS で動作する IDE であり、Xamarin Studio が進化したものです。2017 年中頃から Docker をサポートしています。 これは、強力な IDE を使用したい macOS コンピューターで作業する開発者にとって好ましい選択肢です。
 
-**Visual Studio Code と Docker CLI**。 任意の開発言語をサポートする軽量なクロスプラット フォーム エディターを選択すると、Microsoft Visual Studio Code (VS Code) と Docker CLI を使用することができます。 これは、Mac、Linux、および Windows のクロスプラット フォーム開発アプローチです。 さらに、Visual Studio Code は、Dockerfiles の IntelliSense などの Docker の拡張機能や、エディターから Docker コマンドを実行するショートカット タスクをサポートします。
+**Visual Studio Code と Docker CLI**。 任意の開発言語をサポートする軽量なクロスプラット フォーム エディターを選択すると、Microsoft Visual Studio Code (VS Code) と Docker CLI を使用することができます。 これは、macOS、Linux、Windows 向けのクロスプラット フォーム開発アプローチです。 さらに、Visual Studio Code は、Dockerfiles の IntelliSense などの Docker の拡張機能や、エディターから Docker コマンドを実行するショートカット タスクをサポートします。
 
 [Docker Desktop Community Edition (CE)](https://hub.docker.com/search/?type=edition&offering=community) をインストールすることで、1 つの Docker CLI を使用して Windows と Linux の両方のアプリを構築することができます。
 
