@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation の機能仕様
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802597"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345103"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation の機能仕様
 
@@ -189,7 +189,7 @@ WCF 構成スキーマは複雑であり、ユーザーはさまざまな機能�
 
 ## <a name="procedural-activities-sequence-if-foreach-switch-assign-dowhile-while"></a>手続き型アクティビティ (Sequence、If、ForEach、Switch、Assign、DoWhile、While)
 
-手続き型アクティビティは、プログラマになじみのある概念を使用してシーケンシャル制御フローをモデル化するメカニズムを提供します。 これらのアクティビティにより、従来の構造型プログラミング言語構成要素が有効になり、該当する場合には C#/VB などの一般的な手続き型言語と同等の言語が提供されます。
+手続き型アクティビティは、プログラマになじみのある概念を使用してシーケンシャル制御フローをモデル化するメカニズムを提供します。 これらのアクティビティは、従来の構造化プログラミング言語構成要素を有効にします。 C#また、必要に応じて、や Visual Basic などの一般的な手続き型言語と言語パリティを提供します。
 
 ### <a name="getting-started"></a>作業の開始
 
@@ -231,7 +231,7 @@ WCF 構成スキーマは複雑であり、ユーザーはさまざまな機能�
 
 ## <a name="error-handling-activities"></a>エラー処理アクティビティ
 
-<xref:System.Activities.Statements.TryCatch> アクティビティには、含まれるアクティビティのセットの実行中に発生する例外をキャッチするメカニズムが用意されています (C#/VB の Try/Catch コンストラクトに類似)。 <xref:System.Activities.Statements.TryCatch> はワークフロー レベルの例外処理を提供します。 ハンドルされていない例外がスローされると、ワークフローが中止され、Finally ブロックは実行されません。 この動作は C# と一貫性があります。
+<xref:System.Activities.Statements.TryCatch> アクティビティは、含まれているアクティビティのセットの実行中に発生した例外をキャッチするためのメカニズムを提供しますC# (と Visual Basic の Try/Catch コンストラクトに似ています)。 <xref:System.Activities.Statements.TryCatch> はワークフロー レベルの例外処理を提供します。 ハンドルされていない例外がスローされると、ワークフローが中止され、Finally ブロックは実行されません。 この動作は C# と一貫性があります。
 
 ### <a name="getting-started"></a>作業の開始
 
