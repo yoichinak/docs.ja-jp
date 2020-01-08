@@ -33,12 +33,12 @@ Mscorlib.dll と Microsoft.VisualBasic.dll の場所を指定します。
  このオプションを指定すると、Visual Basic のコンパイラは既定の場所以外から Mscorlib.dll および Microsoft.VisualBasic.dll の各ファイルを読み込みます。 '-sdkpath' オプションは、 [-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)と組み合わせて使用するよう設計されています。.NET Compact Framework は、これらのサポート ライブラリの別バージョンを使用して、デバイスで見つからない型や言語機能を使用することを回避します。  
   
 > [!NOTE]
-> '-sdkpath' オプションは Visual Studio の開発環境内からは利用できません。このオプションを利用できるのは、コマンド ラインからコンパイルするときだけです。 '-sdkpath' オプションは Visual Basic デバイス プロジェクトがロードされている場合に設定されます。  
+> '-sdkpath' オプションは Visual Studio の開発環境内からは利用できません。このオプションを利用できるのは、コマンド ラインからコンパイルする場合のみです。 '-sdkpath' オプションは Visual Basic デバイス プロジェクトがロードされている場合に設定されます。  
   
  '-sdkpath' コンパイラオプションを使用して、コンパイラが Visual Basic ランタイムライブラリへの参照を使用せずにコンパイルするように指定できます。 詳細については、「[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次のコードでは、C ドライブ上の .NET Compact Framework の既定のインストール ディレクトリにある Mscorlib.dll のバージョンとMicrosoft.VisualBasic.dll のバージョンを使用して、.NET Compact Framework で `Myfile.vb` をコンパイルします。通常、最近のバージョンの .NET Compact Framework を使用します。  
+ 次のコードでは、C ドライブ上の .NET Compact Framework の既定のインストール ディレクトリにある Mscorlib.dll のバージョンとMicrosoft.VisualBasic.dll のバージョンを使用して、.NET Compact Framework で `Myfile.vb` をコンパイルします。通常、最新のバージョンの .NET Compact Framework を使用します。  
   
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
