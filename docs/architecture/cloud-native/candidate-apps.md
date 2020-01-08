@@ -3,12 +3,12 @@ title: クラウドネイティブ向けアプリ候補
 description: クラウドネイティブアプローチによってメリットが得られるアプリケーションの種類について説明します
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 328af4081d830cf1a7959a37c2155090ec4da3ff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2087ef0c327a82419be95552293d1b56742b73c7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968297"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337431"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>クラウドネイティブ向けアプリ候補
 
@@ -40,7 +40,7 @@ ms.locfileid: "73968297"
 
 **図 1-10**. 従来のワークロードを移行するための戦略
 
-非常に重要ではないモノリシックアプリは、迅速なリフトアンドシフト ([クラウドインフラストラクチャ](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)対応) の移行によるメリットがあります。 ここでは、オンプレミスのワークロードは変更なしでクラウドベースの VM に再ホストされます。 このアプローチでは、 [IaaS (Infrastructure as a Service) モデル](https://azure.microsoft.com/overview/what-is-iaas/)を使用します。 Azure には、このような移動を容易にするための ([Azure Migrate](https://aka.ms/azuremigrate)、 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)、 [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/)) などのツールがいくつか含まれています。 この戦略ではコストを削減できますが、このようなアプリケーションは通常、クラウドコンピューティングのメリットをロック解除して活用するように設計されていません。
+非常に重要ではないモノリシックアプリは、迅速なリフトアンドシフト ([クラウドインフラストラクチャ](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md)対応) の移行によるメリットがあります。 ここでは、オンプレミスのワークロードは変更なしでクラウドベースの VM に再ホストされます。 このアプローチでは、 [IaaS (Infrastructure as a Service) モデル](https://azure.microsoft.com/overview/what-is-iaas/)を使用します。 Azure には、このような移動を容易にするための ([Azure Migrate](https://aka.ms/azuremigrate)、 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)、 [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/)) などのツールがいくつか含まれています。 この戦略ではコストを削減できますが、このようなアプリケーションは通常、クラウドコンピューティングのメリットをロック解除して活用するように設計されていません。
 
 ビジネスにとって重要なモノリシックアプリは、強化されたリフトアンドシフト (*クラウド最適化*) 移行によってメリットがあります。 このアプローチには、アプリケーションのコアアーキテクチャを変更せずに、キークラウドサービスを有効にするデプロイの最適化が含まれています。 たとえば、アプリケーションを[コンテナー化](https://docs.microsoft.com/virtualization/windowscontainers/about/)して、 [Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/)のようなコンテナー orchestrator にデプロイすることがあります。これについては後で説明します。 クラウドでは、アプリケーションは、データベース、メッセージキュー、監視、分散キャッシュなどの他のクラウドサービスを使用できます。
 
@@ -64,7 +64,7 @@ ms.locfileid: "73968297"
 
 適切な移行戦略は、組織の優先順位と対象とするシステムによって異なります。 多くの場合、モノリシックアプリケーションをクラウドで最適化したり、N 層アプリに粗いサービスを追加したりすると、コスト効率が向上します。 このような場合でも、Azure App Service によって提供されるもののようなクラウド PaaS 機能を十分に活用できます。
 
-## <a name="summary"></a>概要
+## <a name="summary"></a>要約
 
 この章では、クラウドネイティブコンピューティングを導入しました。 クラウドネイティブアプリケーションを駆動する主な機能と共に、定義を提供しました。 この投資と労力を正当化するアプリケーションの種類について見てきました。
 

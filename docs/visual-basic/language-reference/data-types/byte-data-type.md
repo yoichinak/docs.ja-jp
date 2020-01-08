@@ -1,5 +1,5 @@
 ---
-title: バイト型 (Byte)
+title: Byte データ型 (Visual Basic)
 ms.date: 01/31/2018
 f1_keywords:
 - vb.Byte
@@ -53,7 +53,7 @@ Dim number As Byte = &H_6A
   
 - **書式変換。** Visual Basic がファイルの読み取りまたは書き込みを行うとき、または Dll、メソッド、およびプロパティを呼び出すときに、データ形式間で自動的に変換することができます。 `Byte` の変数および配列に格納されているバイナリデータは、そのような形式の変換中に保持されます。 バイナリデータには `String` 変数を使用しないでください。 ANSI 形式と Unicode 形式の間の変換中は、その内容が破損する可能性があります。
 
-- **広げ.** `Byte` のデータ型は、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`、`Decimal`、`Single`、`Double`に拡大変換されます。 つまり、<xref:System.OverflowException?displayProperty=nameWithType> エラーが発生することなく、`Byte` をこれらの型のいずれかに変換できます。
+- **拡大変換。  **   `Byte` のデータ型は、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`、`Decimal`、`Single`、`Double`に拡大変換されます。 つまり、<xref:System.OverflowException?displayProperty=nameWithType> エラーが発生することなく、`Byte` をこれらの型のいずれかに変換できます。
   
 - **文字を入力します。** `Byte` には、リテラルの型文字または識別子の型文字がありません。
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005694"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636212"
 ---
 # <a name="controls-by-category"></a>カテゴリ別のコントロール
 Windows Presentation Foundation (WPF) コントロールは、複数のカテゴリに論理的にグループ化できます。 これらのカテゴリを使用すると、類似の使用パターンや機能を持つコントロールを見つけやすくなり、シナリオに適したコントロールを選択できます。  
@@ -100,7 +100,7 @@ Windows Presentation Foundation (WPF) コントロールは、複数のカテゴ
   
 - <xref:System.Windows.Controls.Slider>  
   
-## <a name="navigation"></a>ナビゲーション  
+## <a name="navigation"></a>Navigation  
  ナビゲーション コントロールは、対象のフレームやタブ付きのアプリケーションの外観を作成して、アプリケーションのナビゲーション操作を向上または拡張します。  
   
 - <xref:System.Windows.Controls.Frame>  
@@ -140,7 +140,7 @@ Windows Presentation Foundation (WPF) コントロールは、複数のカテゴ
 - <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>ドキュメント  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] には、ドキュメントの表示に特化したコントロールがいくつかあります。 これらのコントロールは、対象となるユーザーのシナリオに応じて、読みやすさを最適化します。  
+ WPF には、ドキュメントを表示するための特殊なコントロールがいくつか含まれています。 これらのコントロールは、対象となるユーザーのシナリオに応じて、読みやすさを最適化します。  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -152,7 +152,7 @@ Windows Presentation Foundation (WPF) コントロールは、複数のカテゴ
   
 - <xref:System.Windows.Controls.StickyNoteControl>  
   
-## <a name="input"></a>入力  
+## <a name="input"></a>[入力]  
  入力コントロールを使用すると、ユーザーはテキストや他のコンテンツを入力できます。  
   
 - <xref:System.Windows.Controls.TextBox>  
@@ -162,7 +162,7 @@ Windows Presentation Foundation (WPF) コントロールは、複数のカテゴ
 - <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>メディア  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] は、最も一般的なイメージ形式の [コーデック] と共に、オーディオ コンテンツとビデオ コンテンツのホストを統合的にサポートします。  
+ WPF には、オーディオとビデオの両方のコンテンツをホストするための統合サポートと、最も一般的なイメージ形式の [コーデック] が用意されています。  
   
 - <xref:System.Windows.Controls.Image>  
   
@@ -177,6 +177,6 @@ Windows Presentation Foundation (WPF) コントロールは、複数のカテゴ
   
 - <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [コントロール ライブラリ](control-library.md)
