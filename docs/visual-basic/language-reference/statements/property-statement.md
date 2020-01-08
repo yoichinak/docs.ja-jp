@@ -109,7 +109,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `name`
 
-  必須。 プロパティ名。 「[Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
+  必須。 プロパティ名。 「[宣言された要素の名前](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
 - `parameterlist`
 

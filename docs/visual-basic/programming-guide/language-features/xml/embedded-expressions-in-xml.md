@@ -70,7 +70,7 @@ ms.locfileid: "74332354"
   
  コンテンツが省略可能な場所では、`Nothing` を含む埋め込み式は無視されます。 これは、XML リテラルを使用する前に、要素の内容、属性値、および配列要素が `Nothing` ないことを確認する必要がないことを意味します。 要素名や属性名などの必須の値を `Nothing`することはできません。  
   
- 特定の型のリテラルで埋め込み式を使用する方法の詳細については、「 [Xml ドキュメントリテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)、 [xml 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)」を参照してください。  
+ 特定の型のリテラルで埋め込み式を使用する方法の詳細については、「[XML ドキュメントリテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)、 [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)」を参照してください。  
   
 ## <a name="scoping-rules"></a>スコープの規則  
  コンパイラは、各 XML リテラルを適切なリテラル型のコンストラクター呼び出しに変換します。 XML リテラル内のリテラルコンテンツと埋め込み式は、引数としてコンストラクターに渡されます。 これは、XML リテラルで使用できるすべての Visual Basic プログラミング要素も、その埋め込み式で使用できることを意味します。  

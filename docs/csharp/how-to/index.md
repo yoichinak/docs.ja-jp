@@ -2,26 +2,26 @@
 title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
-ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736881"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339216"
 ---
 # <a name="how-to-c"></a>方法 (C#)
 
-C# ガイドの方法に関するセクションでは、よく寄せられる質問に対する簡単な回答が見つかります。 場合によっては、記事が複数のセクションで表示されることもあります。 複数の検索パスで見つけやすいようにしました。
+C# ガイドの方法に関するセクションでは、一般的な質問に対する簡単な回答が見つかります。 場合によっては、記事が複数のセクションで表示されることもあります。 複数の検索パスで見つけやすいようにしました。
 
 ## <a name="general-c-concepts"></a>一般的な C# の概念
 
-C# の開発者には常識といえるヒントやコツがいくつかあります。
+C# の開発者には一般的な方法といえるヒントやコツがいくつかあります。
 
 - [オブジェクト初期化子を使用してオブジェクトを初期化する](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)。
 - [メソッドに構造体を渡す場合とクラスを渡す場合の違いについて理解する](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
 - [演算子のオーバーロードを使用する](../language-reference/operators/operator-overloading.md)。
 - [カスタム拡張メソッドを実装して呼び出す](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
-- C# のプログラマでも[ VB の `My` 名前空間を使用できる場合がある](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
+- C# のプログラマでも[ Visual Basic の `My` 名前空間を使用する場合がある](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
 - [拡張メソッドを使用して `enum` 型の新しいメソッドを作成する](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
 
 ### <a name="class-and-struct-members"></a>クラスと構造体のメンバー

@@ -72,7 +72,7 @@ End Property
 
 ## <a name="parameter-declaration"></a>パラメーターの宣言
 
-各パラメーターは、[Sub プロシージャ](sub-procedures.md)に対して実行するのと同じ方法で宣言します。ただし、渡すメカニズムは `ByVal`する必要があります。
+各パラメータの宣言は、[Sub プロシージャ](sub-procedures.md)の場合と同じ方法で行います。ただし、引き渡し方法は`ByVal`である必要があります。
 
 パラメーターリストの各パラメーターの構文は次のとおりです。
 

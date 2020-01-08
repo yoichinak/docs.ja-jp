@@ -14,7 +14,7 @@ ms.locfileid: "74353645"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>方法 : LINQ を使用して XML を変換する (Visual Basic)
 
-[Xml リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)を使用すると、1つのソースから xml を簡単に読み取り、新しい xml 形式に変換することができます。 LINQ クエリを利用して、変換するコンテンツを取得したり、既存のドキュメントの内容を新しい XML 形式に変更したりできます。
+[XML リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)を使用すると、1つのソースから xml を簡単に読み取り、新しい xml 形式に変換することができます。 LINQ クエリを利用して、変換するコンテンツを取得したり、既存のドキュメントの内容を新しい XML 形式に変更したりできます。
 
 このトピックの例では、XML ソースドキュメントから HTML にコンテンツを変換し、ブラウザーで表示されるようにします。
 
