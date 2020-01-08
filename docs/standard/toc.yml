@@ -135,6 +135,8 @@
   href: attributes/
 - name: フレームワーク デザインのガイドライン
   href: design-guidelines/
+- name: Microsoft.Data.Sqlite
+  href: data/sqlite/
 - name: XML ドキュメントと XML データ
   href: data/xml/
 - name: セキュリティ

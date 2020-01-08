@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: 6e8697379a6fbb5cc15b60291e5b822897c2c013
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 49e6f79c13c94a3f2f6891b259c4bb2bec54ae6f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348322"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344521"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>チュートリアル: パスワードの複雑さの検証 (Visual Basic)
 このメソッドは、強力なパスワードの特性を確認し、パスワードが失敗したことを確認する情報を含む文字列パラメーターを更新します。  
@@ -18,12 +18,12 @@ ms.locfileid: "74348322"
   
  強力なパスワードは、大文字、小文字、数字、および特殊文字を組み合わせたもので、単語ではありません。 この例では、複雑さを検証する方法を示します。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
   
 ### <a name="code"></a>コード  
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
+## <a name="compile-the-code"></a>コードのコンパイル  
  そのパスワードを含む文字列を渡して、このメソッドを呼び出します。  
   
  この例で必要な要素は次のとおりです。  
@@ -43,7 +43,7 @@ ms.locfileid: "74348322"
   
 - すべての記号がキーボードの先頭行から入力されている場合は、パスワードを許可しないでください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Text.RegularExpressions.Regex>
 - [ASP.NET Web アプリケーションのセキュリティ](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

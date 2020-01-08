@@ -30,7 +30,7 @@ ms.locfileid: "74347331"
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
-## <a name="avoiding-name-collisions"></a>名前の競合の回避  
+## <a name="avoiding-name-collisions"></a>名前の競合の回避
  .NET Framework 名前空間は、*名前空間の汚染*と呼ばれる問題に対処します。このような場合、クラスライブラリの開発者は、別のライブラリで類似した名前を使用することによって妨げられます。 このような既存コンポーネントとの競合は、 *名前の競合*とも呼ばれます。  
   
  たとえば、 `ListBox`という名前の新しいクラスを作成した場合、プロジェクト内ではこのクラスを修飾子を付けずに使用できます。 ただし、同じプロジェクトで .NET Framework <xref:System.Windows.Forms.ListBox> クラスを使用する場合は、参照を一意にするために完全修飾参照を使用する必要があります。 参照が一意でない場合、Visual Basic によって、名前があいまいであることを示すエラーが生成されます。 次のコード例では、これらのオブジェクトを宣言する方法を示しています。  

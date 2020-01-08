@@ -4,20 +4,20 @@ description: モジュール、ハンドラー、およびミドルウェアを�
 author: danroth27
 ms.author: daroth
 ms.date: 10/11/2019
-ms.openlocfilehash: b0be6109b9226bddbb9cbe4cebf114fd2b2a6114
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 3ecc109c54f88b5b06a1474f7c6e262d426a78a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "73841205"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337473"
 ---
 # <a name="modules-handlers-and-middleware"></a>モジュール、ハンドラー、ミドルウェア
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-ASP.NET Core アプリは一連のミドルウェアに基づいて構築されています。 ミドルウェアはハンドラーであり、要求と応答を処理するためにパイプラインに配置されます。 Web フォームアプリでは、HTTP ハンドラーとモジュールは同様の問題を解決します。 ASP.NET Core では、モジュール、ハンドラー、 *Global.asax.cs*、およびアプリのライフサイクルはミドルウェアに置き換えられます。 この章では、Blazor アプリのコンテキストでのミドルウェアについて説明します。
+ASP.NET Core アプリは一連の*ミドルウェア*に基づいて構築されています。 ミドルウェアは、要求と応答を処理するためにパイプラインに配置されるハンドラーです。 Web フォームアプリでは、HTTP ハンドラーとモジュールは同様の問題を解決します。 ASP.NET Core では、モジュール、ハンドラー、 *Global.asax.cs*、およびアプリのライフサイクルはミドルウェアに置き換えられます。 この章では、Blazor アプリのコンテキストでのミドルウェアについて説明します。
 
-## <a name="overview"></a>概要
+## <a name="overview"></a>の概要
 
 ASP.NET Core 要求パイプラインは、順番に呼び出される一連の要求デリゲートで構成されています。 次の図は、その概念を示しています。 実行のスレッドは黒い矢印をたどります。
 
@@ -35,7 +35,7 @@ ASP.NET 4.x には多数のモジュールが含まれています。 同様に�
 
 次の表に、ASP.NET Core の代替ミドルウェアとコンポーネントの一覧を示します。
 
-|モジュール                 |ASP.NET 4.x モジュール           |ASP.NET Core オプション|
+|Module                 |ASP.NET 4.x モジュール           |ASP.NET Core オプション|
 |-----------------------|-----------------------------|-------------------|
 |HTTP エラー            |`CustomErrorModule`          |[状態コード ページ ミドルウェア](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |既定のドキュメント       |`DefaultDocumentModule`      |[既定のファイル ミドルウェア](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
@@ -45,11 +45,11 @@ ASP.NET 4.x には多数のモジュールが含まれています。 同様に�
 |ファイルのキャッシュ           |`FileCacheModule`            |[応答キャッシュ ミドルウェア](/aspnet/core/performance/caching/middleware)|
 |HTTP キャッシュ           |`HttpCacheModule`            |[応答キャッシュ ミドルウェア](/aspnet/core/performance/caching/middleware)|
 |HTTP ログ           |`HttpLoggingModule`          |[ASP.NET Core のログ](/aspnet/core/fundamentals/logging/index)|
-|HTTP リダイレクト       |`HttpRedirectionModule`      |[URL リライト ミドルウェア](/aspnet/core/fundamentals/url-rewriting)|
+|HTTP リダイレクト       |`HttpRedirectionModule`      |[ミドルウェアの URL リライト](/aspnet/core/fundamentals/url-rewriting)|
 |ISAPI フィルター          |`IsapiFilterModule`          |[ミドルウェア](/aspnet/core/fundamentals/middleware/index)|
 |ISAPI                  |`IsapiModule`                |[ミドルウェア](/aspnet/core/fundamentals/middleware/index)|
 |要求のフィルター処理      |`RequestFilteringModule`     |[URL リライトミドルウェア IRule](/aspnet/core/fundamentals/url-rewriting#irule-based-rule)|
-|URL の書き換え&#8224;   |`RewriteModule`              |[URL リライト ミドルウェア](/aspnet/core/fundamentals/url-rewriting)|
+|URL の書き換え&#8224;   |`RewriteModule`              |[ミドルウェアの URL リライト](/aspnet/core/fundamentals/url-rewriting)|
 |静的な圧縮     |`StaticCompressionModule`    |[応答圧縮ミドルウェア](/aspnet/core/performance/response-compression)|
 |静的コンテンツ         |`StaticFileModule`           |[静的ファイル ミドルウェア](/aspnet/core/fundamentals/static-files)|
 |URL 承認      |`UrlAuthorizationModule`     |[ASP.NET Core ID](/aspnet/core/security/authentication/identity)|

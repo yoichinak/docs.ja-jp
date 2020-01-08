@@ -13,19 +13,19 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 612b99354310c18030cefce4e6f02fab8ed20f83
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837299"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636771"
 ---
 # <a name="security-wpf"></a>セキュリティ (WPF)
-<a name="introduction"></a>Windows Presentation Foundation (WPF) のスタンドアロンアプリケーションとブラウザーでホストされるアプリケーションを開発する場合は、セキュリティモデルを考慮する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] スタンドアロンアプリケーションは、Windows インストーラー (.msi)、XCopy、または ClickOnce を使用してデプロイされているかどうかにかかわらず、無制限のアクセス許可 (CAS**FullTrust**アクセス許可セット) で実行されます。 部分的に信頼されたスタンドアロンの WPF アプリケーションを ClickOnce で展開することはサポートされていません。 ただし、完全に信頼されたホストアプリケーションでは、.NET Framework アドインモデルを使用して部分信頼 <xref:System.AppDomain> を作成できます。 詳細については、「 [WPF アドインの概要](./app-development/wpf-add-ins-overview.md)」を参照してください。  
+<a name="introduction"></a>Windows Presentation Foundation (WPF) のスタンドアロンアプリケーションとブラウザーでホストされるアプリケーションを開発する場合は、セキュリティモデルを考慮する必要があります。 WPF スタンドアロンアプリケーションは、Windows インストーラー (.msi)、XCopy、または ClickOnce を使用してデプロイされているかどうかにかかわらず、無制限のアクセス許可 (CAS**FullTrust**アクセス許可セット) で実行されます。 部分的に信頼されたスタンドアロンの WPF アプリケーションを ClickOnce で展開することはサポートされていません。 ただし、完全に信頼されたホストアプリケーションでは、.NET Framework アドインモデルを使用して部分信頼 <xref:System.AppDomain> を作成できます。 詳細については、「 [WPF アドインの概要](./app-development/wpf-add-ins-overview.md)」を参照してください。  
   
- ブラウザーでホストされるアプリケーションは、Windows Internet Explorer または Firefox によってホストされ、XAML ブラウザーアプリケーション (Xbap) またはルース [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] ドキュメントのどちらかにすることができます。詳細については、「 [WPF XAML ブラウザーアプリケーションの概要](./app-development/wpf-xaml-browser-applications-overview.md)」を参照してください。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]  
+ WPF ブラウザーでホストされるアプリケーションは、Windows Internet Explorer または Firefox によってホストされ、XAML ブラウザーアプリケーション (Xbap) またはルース [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] ドキュメントのいずれかになります。詳細については、「 [WPF XAML ブラウザーアプリケーションの概要](./app-development/wpf-xaml-browser-applications-overview.md)」を参照してください。  
   
- ブラウザーでホストされるアプリケーション [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] は、既定では、既定の CAS**インターネット**ゾーンのアクセス許可セットに制限されている部分信頼セキュリティサンドボックス内で実行されます。 これにより、一般的な Web アプリケーションが分離されるのと同じ方法で、ブラウザーでホストされるアプリケーションをクライアントコンピューターから効果的に [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 分離できます。 XBAP は、デプロイメント URL およびクライアントのセキュリティ構成のセキュリティ ゾーンに基づいて、完全な信頼まで特権を昇格することができます。 詳細については、「 [WPF 部分信頼セキュリティ](wpf-partial-trust-security.md)」を参照してください。  
+ WPF ブラウザーでホストされるアプリケーションは、既定では、既定の CAS**インターネット**ゾーンのアクセス許可セットに制限されている部分信頼セキュリティサンドボックス内で実行されます。 これにより、一般的な Web アプリケーションが分離されるのと同じ方法で、WPF ブラウザーでホストされるアプリケーションがクライアントコンピューターから効果的に分離されます。 XBAP は、デプロイメント URL およびクライアントのセキュリティ構成のセキュリティ ゾーンに基づいて、完全な信頼まで特権を昇格することができます。 詳細については、「 [WPF 部分信頼セキュリティ](wpf-partial-trust-security.md)」を参照してください。  
   
  このトピックでは、Windows Presentation Foundation (WPF) のスタンドアロンアプリケーションとブラウザーでホストされるアプリケーションのセキュリティモデルについて説明します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74837299"
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>安全なナビゲーション  
- Xbap の場合、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] はアプリケーションとブラウザーという2種類のナビゲーションを区別します。  
+ Xbap の場合、WPF はアプリケーションとブラウザーという2種類のナビゲーションを区別します。  
   
  *アプリケーション ナビゲーション*は、ブラウザーによってホストされるアプリケーション内のコンテンツ項目間のナビゲーションです。 *ブラウザー ナビゲーション*は、ブラウザー自体のコンテンツとロケーション URL を変更するナビゲーションです。 アプリケーションナビゲーション (通常は XAML) とブラウザーナビゲーション (通常は HTML) の関係を次の図に示します。
   
@@ -97,7 +97,7 @@ ms.locfileid: "74837299"
   
 - ダウンロード  
   
-- [スクリプティング]  
+- スクリプト  
   
 - ユーザーの認証  
   
@@ -220,7 +220,7 @@ ms.locfileid: "74837299"
   
  ただし、APTCA アセンブリを GAC にインストールした後にセキュリティの欠陥が発生する可能性があります。 セキュリティ上の欠陥が検出されたら、アセンブリの発行者は、既存のインストールでの問題を解決し、問題発見後に発生する可能性があるインストールに備えるため、セキュリティ更新プログラムを作成できます。 更新プログラムの 1 つのオプションとして、アセンブリのアンインストールが考えられますが、その場合はこのアセンブリを使用する他の完全信頼クライアント アプリケーションを破損するおそれがあります。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] は、APTCA アセンブリをアンインストールすることなく、部分的に信頼された Xbap で APTCA アセンブリを無効にできるメカニズムを提供します。  
+ WPF には、APTCA アセンブリをアンインストールすることなく、部分的に信頼された Xbap で APTCA アセンブリを無効にできるメカニズムが用意されています。  
   
  APTCA アセンブリを無効にするには、特殊なレジストリ キーを作成する必要があります。  
   
@@ -262,16 +262,16 @@ ms.locfileid: "74837299"
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>セキュリティを向上する WPF アプリケーションを開発するためのリソース  
- セキュリティを向上させる [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの開発に役立つその他のリソースを次に示します。  
+ セキュリティを強化する WPF アプリケーションの開発に役立つその他のリソースを次に示します。  
   
 |区分|Resource|  
 |----------|--------------|  
 |マネージド コード|[patterns & practices アプリケーション セキュリティ ガイダンス インデックス](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
 |CAS|[コード アクセス セキュリティ](../misc/code-access-security.md)|  
 |ClickOnce|[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信頼セキュリティ](wpf-partial-trust-security.md)|  
+|WPF|[WPF 部分信頼セキュリティ](wpf-partial-trust-security.md)|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [WPF 部分信頼セキュリティ](wpf-partial-trust-security.md)
 - [WPF のセキュリティ方針 - プラットフォーム セキュリティ](wpf-security-strategy-platform-security.md)
