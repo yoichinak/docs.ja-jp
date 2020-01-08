@@ -23,7 +23,7 @@ ms.locfileid: "74331626"
 # <a name="declared-element-characteristics-visual-basic"></a>宣言された要素の特性 (Visual Basic)
 宣言された要素の*特性*は、コードと対話する方法に影響する要素の側面です。 宣言されたすべての要素には、次の1つ以上の特性が関連付けられています。  
   
-- *データ型* - 要素が保持できる値と、その値を格納する方法。 詳細については、「[データ型の概要(Visual Basic)](../../../../visual-basic/language-reference/data-types/index.md)」を参照してください。  
+- *データ型* - 要素が保持できる値と、その値を格納する方法。 詳細については、「[データ型の概要(Visual Basic)](../../../../visual-basic/language-reference/data-types/index.md)」を参照してください。 
   
 - *有効期間* - 要素を使用できるようになるまでの実行時間。 詳細については、「[Visual Basic の有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)」を参照してください。  
   

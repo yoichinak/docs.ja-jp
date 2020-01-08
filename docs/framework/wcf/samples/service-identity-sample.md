@@ -2,12 +2,12 @@
 title: サービス ID サンプル
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: eb2dd3c6392164905cf755075856608ec5fcaf30
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 375246127b6b39440360f48fc7b24bd0388a35e5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837793"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347922"
 ---
 # <a name="service-identity-sample"></a>サービス ID サンプル
 このサービス ID サンプルでは、サービスの ID を設定する方法を示します。 クライアントは、デザイン時にサービスのメタデータを使用して ID を取得し、実行時にそのサービス ID を認証することができます。 サービス ID の概念は、クライアントがサービス操作を呼び出す前にそのサービスを認証できるようにし、それによって認証されていない呼び出しからクライアントを保護することにあります。 セキュリティ保護されている接続では、サービスがクライアントの資格情報を認証した後にクライアントのアクセスを許可できますが、このサンプルではこのことを主眼とはしていません。 「サーバー認証を表示する[クライアント](../../../../docs/framework/wcf/samples/client.md)」のサンプルを参照してください。
@@ -117,7 +117,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 1. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] または Windows Vista では、MMC スナップインツールを使用して、id ソリューションフォルダー内の Id .pfx 証明書ファイルを LocalMachine/My (Personal) 証明書ストアにインポートします。 このファイルは、パスワードで保護されています。 インポート中に、パスワードの入力を求められます。 [パスワード] ボックスに「`xyz`」と入力します。 詳細については、「[方法: MMC スナップインを使用して証明書を表示する](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)」を参照してください。 この処理が完了したら、管理者特権を使用して Visual Studio の開発者コマンドプロンプトで Setup.exe を実行します。これにより、クライアントで使用するために、この証明書が CurrentUser/Trusted People ストアにコピーされます。
 
-2. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]で、管理者特権を使用して Visual Studio 2012 コマンドプロンプト内のサンプルのインストールフォルダーから、Setup.exe を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
+2. Windows Server 2003 で、管理者特権を使用して Visual Studio 2012 コマンドプロンプト内のサンプルのインストールフォルダーから、Setup.exe を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
 
     > [!NOTE]
     > セットアップの .bat バッチファイルは、Visual Studio 2012 のコマンドプロンプトから実行するように設計されています。 Visual Studio 2012 のコマンドプロンプト内で設定された PATH 環境変数は、セットアップの .bat スクリプトで必要な実行可能ファイルが格納されているディレクトリを指します。 サンプルの実行後は、Cleanup.bat を実行して証明書を削除してください。 他のセキュリティ サンプルでも同じ証明書を使用します。  

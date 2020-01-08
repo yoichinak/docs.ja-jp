@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 981e518a55f179c2fbf44534783c80fb230e4ecf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 64ba1261134184f22e9faf157ca70e3471e3b3cb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421122"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636251"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF ホスト (PresentationHost.exe)
-Windows Presentation Foundation (WPF) ホスト (プレゼンテーションホスト .exe) は、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションを互換性のあるブラウザー (Microsoft Internet Explorer 6 以降を含む) でホストできるようにするアプリケーションです。 既定では、Windows Presentation Foundation (WPF) ホストは、ブラウザーでホストされる [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] コンテンツのシェルおよび MIME ハンドラーとして登録されます。これには次のものが含まれます。  
+Windows Presentation Foundation (WPF) ホスト (プレゼンテーションホスト .exe) は、互換性のあるブラウザー (Microsoft Internet Explorer 6 以降を含む) で WPF アプリケーションをホストできるようにするアプリケーションです。 既定では、Windows Presentation Foundation (WPF) ホストは、ブラウザーでホストされる WPF コンテンツのシェルおよび MIME ハンドラーとして登録されます。これには次のものが含まれます。  
   
 - Loose (コンパイルされていない) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイル (.xaml)。  
   
@@ -29,18 +29,18 @@ Windows Presentation Foundation (WPF) ホスト (プレゼンテーションホ�
   
  このトピックでは、PresentationHost.exe で使用できるコマンド ライン パラメーターについて説明します。  
   
-## <a name="usage"></a>使用方法  
+## <a name="usage"></a>使用状況  
  `PresentationHost.exe [parameters] uri|filename`  
   
 ## <a name="parameters"></a>パラメーター  
   
-|パラメーター|説明|  
+|パラメータ|説明|  
 |---------------|-----------------|  
-|ファイル名|アクティブにするファイルのパス。 は URI でもかまいません。|  
+|filename|アクティブにするファイルのパス。 は URI でもかまいません。|  
 |-debug|アプリケーションをアクティブにする場合に、このアプリケーションをストアにコミットしたり、ストアから実行しません。 これは、ローカル ファイルをアクティブにする場合に限って使用できます。|  
 |-debugSecurityZoneURL \<url>|指定された URL からアプリケーションが配置されているかのように、アプリケーションをデバッグする必要があることを示すために、URL 値と共に使用されます。 これは、展開ゾーンと起点サイトの両方を決定します。|  
 |-embedding|OLE で必要になります。 `-event` パラメーターまたは `-debug` パラメーターを指定した場合、`-embedding` パラメーターは内部で設定されるため、指定する必要はありません。|  
-|-event \<eventname>|PresentationHost.exe が初期化され、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] コンテンツをホストする準備ができた時点で、この名前のイベントを開き、シグナルを送信します。 PresentationHost.exe は、イベントを開く際にエラーが発生すると (そのイベントがまだ作成されていない場合など) 終了します。|  
+|-event \<eventname>|この名前のイベントを開き、プレゼンテーションの cluster.exe が初期化され、WPF コンテンツをホストする準備ができたら、そのイベントを通知します。 PresentationHost.exe は、イベントを開く際にエラーが発生すると (そのイベントがまだ作成されていない場合など) 終了します。|  
 |-launchApplication \<url>|指定された URL からスタンドアロンの ClickOnce アプリケーションを起動します。 .NET アプリケーションに関する Internet Explorer と WinINet のセキュリティポリシーが適用されます。|  
   
 ## <a name="scenarios"></a>監視プロセス  

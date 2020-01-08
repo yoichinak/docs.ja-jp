@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 92942066b5f08ada0154781ae54b5d8494944ca1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4abcf20b851f349a2b5df78c1fe1d15f729a5462
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963473"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345003"
 ---
 # <a name="events-overview-windows-forms"></a>イベントの概要 (Windows フォーム)
 イベントとは、プログラマが応答できる、つまり、コードを使って "処理" できるアクションのことです。 イベントは、マウスのクリックやキーを押すなどのユーザー アクション、プログラム コードまたはシステムによって生成されます。
@@ -33,7 +33,7 @@ ms.locfileid: "69963473"
 
  このイベントモデルでは、*デリゲート*を使用して、イベントを処理するために使用されるメソッドにイベントをバインドします。 デリゲートを使用すると、ハンドラーのメソッドを指定することにより、イベント通知のための他のクラスを登録できます。 イベントが発生すると、デリゲートは関連付けられたメソッドを呼び出します。 デリゲートを定義する方法の詳細については、「[イベント](../../standard/events/index.md)」を参照してください。
 
- デリゲートは、単一のメソッドまたは複数のメソッドに関連付けることができます。後者は、マルチキャストと呼ばれます。 イベントのデリゲートを作成する場合、ユーザー (または Windows) は通常、マルチキャストイベントを作成します。 例外は、1 回のイベントで複数回実行されることが論理的にあり得ないような特定のプロシージャ (ダイアログ ボックスの表示など) を呼び出すイベントです。 マルチキャストデリゲートを作成する方法の詳細につい[ては、「」を参照してください。デリゲート (マルチキャストデリゲート)](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)を結合します。
+デリゲートは、単一のメソッドまたは複数のメソッドに関連付けることができます。後者は、マルチキャストと呼ばれます。 イベントのデリゲートを作成する場合、ユーザー (または Windows) は通常、マルチキャストイベントを作成します。 例外は、1 回のイベントで複数回実行されることが論理的にあり得ないような特定のプロシージャ (ダイアログ ボックスの表示など) を呼び出すイベントです。 マルチキャストデリゲートを作成する方法の詳細については、「[デリゲートを結合する方法 (マルチキャストデリゲート)](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)」を参照してください。
 
  マルチキャスト デリゲートは、関連付けられたメソッドの呼び出しリストを保持します。 マルチキャスト デリゲートでは、呼び出しリストにメソッドを追加する <xref:System.Delegate.Combine%2A> メソッド、およびリストからメソッドを削除する <xref:System.Delegate.Remove%2A> メソッドがサポートされています。
 

@@ -56,7 +56,7 @@ vbc -res:rf.resource in.vb
   
 ## <a name="see-also"></a>参照
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)
 - [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

@@ -63,7 +63,7 @@ ms.locfileid: "74354243"
     'Next
     ```
 
-3. タスクのコレクションを作成します。 次のコードは、[ メソッドによって実行されるときに、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する](../../../../visual-basic/programming-guide/concepts/linq/index.md)クエリ<xref:System.Linq.Enumerable.ToArray%2A>を定義します。 タスクは、クエリが評価されるときに開始されます。
+3. タスクのコレクションを作成します。 次のコードは、<xref:System.Linq.Enumerable.ToArray%2A> メソッドによって実行されると、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する [クエリ](../../../../visual-basic/programming-guide/concepts/linq/index.md)を定義します。 クエリが評価されると、タスクが開始されます。
 
      `SumPageSizesAsync` の宣言の後の `urlList` メソッドに、次のコードを追加します。
 
@@ -136,7 +136,7 @@ ms.locfileid: "74354243"
     'Next
     ```
 
-3. [ メソッドによって実行されるときに、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する](../../../../visual-basic/programming-guide/concepts/linq/index.md)クエリ<xref:System.Linq.Enumerable.ToArray%2A>を定義します。 タスクは、クエリが評価されるときに開始されます。
+3. <xref:System.Linq.Enumerable.ToArray%2A> メソッドによって実行されると、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する [クエリ](../../../../visual-basic/programming-guide/concepts/linq/index.md)を定義します。 クエリが評価されると、タスクが開始されます。
 
      `SumPageSizesAsync` および `client` の宣言の後の `urlList` メソッドに、次のコードを追加します。
 

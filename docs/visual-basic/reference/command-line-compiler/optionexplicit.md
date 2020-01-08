@@ -28,6 +28,7 @@ ms.locfileid: "72005310"
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
  省略可能。 変数の明示的な宣言が必要な場合は、`-optionexplicit+`を指定します。`-optionexplicit+` オプションは既定値で、`-optionexplicit`と同じです。 `-optionexplicit-`オプションを指定すると、変数の暗黙的な宣言が有効になります。  
+
   
 ## <a name="remarks"></a>コメント  
  ソースコードファイルに[Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)が含まれている場合、ステートメントは `-optionexplicit` コマンドラインコンパイラ設定をオーバーライドします。  

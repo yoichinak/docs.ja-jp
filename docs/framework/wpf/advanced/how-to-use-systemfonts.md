@@ -9,17 +9,17 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 63ba7a6fb1c8776cc35c0e6f07a6b78f5b3d93d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 157565ceb9057049aef8b2bf274847d58c6b8dc8
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459514"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559964"
 ---
 # <a name="how-to-use-systemfonts"></a>方法: SystemFonts を使用する
 この例では、ボタンのスタイル設定やカスタマイズを行うために、<xref:System.Windows.SystemFonts> クラスの静的リソースを使用する方法を示します。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
  システム リソースは、システム設定と一貫性のあるビジュアルを作成できるようにするために、いくつかのシステムによって決定される値を、リソースおよびプロパティの両方として公開します。 <xref:System.Windows.SystemFonts> は、静的なプロパティとしてのシステムフォント値と、実行時にそれらの値に動的にアクセスするために使用できるリソースキーを参照するプロパティの両方を含むクラスです。 たとえば、<xref:System.Windows.SystemFonts.CaptionFontFamily%2A> は <xref:System.Windows.SystemFonts> 値で、<xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A> は対応するリソースキーです。  
   
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]では、<xref:System.Windows.SystemFonts> のメンバーを静的プロパティまたは動的リソース参照 (キーとして静的なプロパティ値を持つ) のいずれかとして使用できます。 アプリケーションの実行時にフォント メトリックを自動的に更新する場合は、動的リソース参照を使用します。それ以外の場合は、静的な値参照を使用します。  
@@ -42,7 +42,7 @@ ms.locfileid: "73459514"
 - [システム ブラシで領域を塗りつぶす](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [SystemParameters を使用する](how-to-use-systemparameters.md)
 - [システム フォント キーを使用する](how-to-use-system-fonts-keys.md)
-- [方法トピック](resources-how-to-topics.md)
-- [x:Static のマークアップ拡張機能](../../xaml-services/x-static-markup-extension.md)
+- [方法のトピック](resources-how-to-topics.md)
+- [x:Static のマークアップ拡張機能](../../../desktop-wpf/xaml-services/xstatic-markup-extension.md)
 - [XAML リソース](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [DynamicResource マークアップ拡張](dynamicresource-markup-extension.md)
