@@ -2,19 +2,19 @@
 title: '方法: WCF URL 予約を制限付きの予約に置き換える'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 900b258a1119b069e5ef0a6ff66078281bb06f1b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3d14d76334b15bdb490184a48da11ba48b84deea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837390"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544650"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>方法: WCF URL 予約を制限付きの予約に置き換える
 URL 予約を使用すると、特定の URL または URL セットからメッセージを受信するユーザーを制限できます。 予約は、URL テンプレート、アクセス制御リスト (ACL)、およびフラグのセットで構成されます。 URL テンプレートは、予約の対象となる URL を定義します。 URL テンプレートの処理方法の詳細については、「[受信要求のルーティング](https://go.microsoft.com/fwlink/?LinkId=136764)」を参照してください。 ACL は、指定された URL からメッセージを受信できるユーザーまたはユーザー グループを制御します。 フラグは、その予約で、ユーザーまたはグループに URL を直接リッスンする権限を与えるか、リッスンを他のプロセスに委任する権限を与えるかを指定します。  
   
  既定のオペレーティングシステム構成の一部として、Windows Communication Foundation (WCF) は、ポート80のグローバルにアクセス可能な予約を作成して、すべてのユーザーが双方向通信にデュアル HTTP バインディングを使用するアプリケーションを実行できるようにします。 この予約の ACL はすべてのユーザー向けなので、管理者は URL または URL セットをリッスンする権限を明示的に許可または拒否することはできません。 このトピックでは、この予約を削除し、制限された ACL を使用する予約を再作成する方法について説明します。  
   
- Windows Vista または [!INCLUDE[lserver](../../../../includes/lserver-md.md)] では、管理者特権のコマンドプロンプトから「`netsh http show urlacl`」と入力して、すべての HTTP URL 予約を表示できます。  WCF URL 予約の例を次に示します。  
+Windows Vista または Windows Server 2008 では、`netsh http show urlacl`を入力することで、管理者特権でのコマンドプロンプトからすべての HTTP URL 予約を表示できます。 WCF URL 予約の例を次に示します。
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  

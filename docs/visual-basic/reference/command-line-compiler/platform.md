@@ -84,5 +84,5 @@ vbc -platform:x86 myFile.vb
 ## <a name="see-also"></a>参照
 
 - [-target (Visual Basic)](target.md)
-- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [Visual Basic コマンドラインコンパイラ](index.md)
 - [コンパイルコマンドラインのサンプル](sample-compilation-command-lines.md)
