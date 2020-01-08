@@ -11,14 +11,12 @@ helpviewer_keywords:
 - exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a417e964c2f44c291892f9ddec6e32438fbff9a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945432"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741346"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>.NET での例外の処理とスロー
 
@@ -69,4 +67,4 @@ ms.locfileid: "61945432"
 - [方法: finally ブロックを使用する](how-to-use-finally-blocks.md)
 - [COM 相互運用の例外の処理](handling-com-interop-exceptions.md)
 - [例外の推奨事項](best-practices-for-exceptions.md)
-- [ランタイム時の例外についてすべての開発者が知っておくべきこと](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)
+- [ランタイム時の例外についてすべての開発者が知っておくべきこと](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md)

@@ -1,6 +1,5 @@
 ---
 title: XML ドキュメント コメント - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.xml
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: 6405b094ccc50499bfeb4db4522f0ec9b01f68ad
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 07daff8b819220fad07e516281b93b24e39cba46
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523484"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711767"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML ドキュメント コメント (C# プログラミング ガイド)
 Visual C# では、ソース コード内で、コード ブロックの直前の特別なコメント フィールド (3 個のスラッシュで示す) に XML 要素を配置することで、コードのドキュメントを作成できます。例を次に示します。  
@@ -44,7 +43,7 @@ public class MyClass {}
   
 - [ドキュメント タグの区切り記号](./delimiters-for-documentation-tags.md)  
   
-- [方法: XML ドキュメント機能を使用する](./how-to-use-the-xml-documentation-features.md)  
+- [XML ドキュメント機能を使用する方法](./how-to-use-the-xml-documentation-features.md)
   
 ## <a name="related-sections"></a>関連項目  
  詳細については次を参照してください:  

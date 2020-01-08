@@ -27,7 +27,8 @@ ms.locfileid: "72005310"
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 任意。 変数の明示的な宣言が必要な場合は、`-optionexplicit+` を指定します。 @No__t-0 オプションは既定値で、`-optionexplicit` と同じです。 @No__t-0 オプションを指定すると、変数の暗黙的な宣言が有効になります。  
+ 省略可能。 変数の明示的な宣言が必要な場合は、`-optionexplicit+`を指定します。`-optionexplicit+` オプションは既定値で、`-optionexplicit`と同じです。 `-optionexplicit-`オプションを指定すると、変数の暗黙的な宣言が有効になります。  
+
   
 ## <a name="remarks"></a>コメント  
  ソースコードファイルに[Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)が含まれている場合、ステートメントは `-optionexplicit` コマンドラインコンパイラ設定をオーバーライドします。  
@@ -41,7 +42,7 @@ ms.locfileid: "72005310"
 3. **[Option Explicit]** ボックスの値を変更します。  
   
 ## <a name="example"></a>例  
- @No__t-0 を使用すると、次のコードがコンパイルされます。  
+ 次のコードは、`/optionexplicit-` が指定されている場合にコンパイルされます。
   
  [!code-vb[VbVbalrCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionExplicitOff.vb#5)]  
   

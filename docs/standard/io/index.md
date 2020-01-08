@@ -10,14 +10,12 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d59ff7f66076fc56ebb27841105fad07a7c7fee1
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3c69e0fd23b1f8bc11fe908c66ba492f31a53f30
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716269"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706596"
 ---
 # <a name="file-and-stream-io"></a>ファイルおよびストリーム入出力
 

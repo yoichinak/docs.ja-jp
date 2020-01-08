@@ -57,15 +57,15 @@ End Module
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **負の数値。** `Char` は符号なしの型であり、負の値を表すことはできません。 どのような場合でも、`Char` を使用して数値を保持しないでください。
+- **負の数。** `Char` は符号なしの型であり、負の値を表すことはできません。 どのような場合でも、`Char` を使用して数値を保持しないでください。
 
-- **相互運用に関する考慮事項。** .NET Framework 用に作成されていないコンポーネント (オートメーションや COM オブジェクトなど) とのインターフェイスを使用する場合は、文字型のデータ幅が異なる (8 ビット) ことに注意してください。 このようなコンポーネントに8ビットの引数を渡す場合は、新しい Visual Basic コードで `Char` ではなく、`Byte` として宣言します。
+- **相互運用の考慮事項。** .NET Framework 用に作成されていないコンポーネント (オートメーションや COM オブジェクトなど) とのインターフェイスを使用する場合は、文字型のデータ幅が異なる (8 ビット) ことに注意してください。このようなコンポーネントに 8 ビットの引数を渡す場合は、新しい Visual Basic コードで `Char` ではなく、`Byte` として宣言します。
 
-- **拡大変換。  **   `Char` データ型は、`String`に拡大変換されます。 つまり、`Char` を `String` に変換することができ、<xref:System.OverflowException?displayProperty=nameWithType>は発生しません。
+- **拡大変換。** `Char` データ型は、`String`に拡大変換されます。 つまり、`Char` を `String` に変換することができ、<xref:System.OverflowException?displayProperty=nameWithType>は発生しません。
 
-- **文字を入力します。** リテラル型の文字 `C` を1つの文字列リテラルに追加すると、`Char` データ型に強制されます。 `Char` に識別子の型文字がありません。
+- **型宣言文字。** リテラル型の文字 `C` を 1 つの文字列リテラルに追加すると、`Char` データ型に強制されます。 `Char` に識別子の型文字がありません。
 
-- **フレームワークの種類。** .NET Framework において対応する型は、<xref:System.Char?displayProperty=nameWithType> 構造体です。
+- **Framework の型。** .NET Framework において対応する型は、<xref:System.Char?displayProperty=nameWithType> 構造体です。
 
 ## <a name="see-also"></a>参照
 
