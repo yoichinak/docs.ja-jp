@@ -40,6 +40,7 @@ ms.locfileid: "72583076"
 
 暗黙の縮小変換で警告を生成するには、`-optionstrict:custom` を使用します。特定の警告を無視するには `-warnaserror:numberlist`、特定の警告をエラーとして扱うようにするには`-nowarn:numberlist` を使用します。
 
+
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Visual Studio IDE で-optionstrict を設定するには
 
 1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **プロジェクト** メニューの プロパティ をクリックし**ます。**

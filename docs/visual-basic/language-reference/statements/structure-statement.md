@@ -39,7 +39,7 @@ End Structure
 |用語|定義|
 |---|---|
 |`attributelist`|任意。 「[属性リスト](attribute-list.md)」を参照してください。|
-|`accessmodifier`|任意。 次のいずれかになります。<br /><br /> -   [パブリック](../modifiers/public.md)<br />-     [Protected](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [プライベート](../modifiers/private.md)<br />[保護されたフレンド](../modifiers/protected-friend.md)の - <br/>- [プライベート保護](../modifiers/private-protected.md) <br /><br /> 「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|
+|`accessmodifier`|任意。 次のいずれかになります。<br /><br /> -   [Public](../modifiers/public.md)<br />-     [Protected](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />- [Protected Friend](../modifiers/protected-friend.md)<br/>- [Private Protected](../modifiers/private-protected.md) <br /><br /> 「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|
 |`Shadows`|任意。 「[Shadows](../modifiers/shadows.md)」を参照してください。|
 |`Partial`|任意。 構造体の部分定義を示します。 「[Partial](../modifiers/partial.md)」を参照してください。|
 |`name`|必須。 この構造体の名前です。 「[宣言された要素の名前](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
@@ -63,7 +63,7 @@ End Structure
 
 ## <a name="rules"></a>ルール
 
-- **巣.** 構造体の内部に別の構造体を定義できます。 外側の構造体は、*包含構造体*と呼ばれ、内側の構造体は*入れ子構造*体と呼ばれます。 ただし、包含構造体をとおして入れ子構造体のメンバーにアクセスすることはできません。 入れ子構造体のメンバーにアクセスするには、入れ子構造体のデータ型の変数を宣言する必要があります。
+- **入れ子。** 構造体の内部に別の構造体を定義できます。 外側の構造体は、*包含構造体*と呼ばれ、内側の構造体は*入れ子構造*体と呼ばれます。 ただし、包含構造体をとおして入れ子構造体のメンバーにアクセスすることはできません。 入れ子構造体のメンバーにアクセスするには、入れ子構造体のデータ型の変数を宣言する必要があります。
 
 - **メンバー宣言。** 構造体のすべてのメンバーを宣言する必要があります。 構造体を継承することはできないため、構造体メンバーを [Protected](../modifiers/protected.md)または `Protected Friend` できません。 ただし、構造体そのものを`Protected` または `Protected Friend` にすることはできます。
   

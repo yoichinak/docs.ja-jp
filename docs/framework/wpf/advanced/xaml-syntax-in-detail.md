@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 10bd924664a469be26174fadf3892ee56aa33856
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 2c6a8662236b614545e7fb8545b7b60e1b08b6bd
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740645"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559834"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 構文の詳細
 このトピックでは、XAML 構文の要素について説明するために使用される用語を定義します。 これらの用語は、このドキュメントの残りの部分で頻繁に使用されます。 WPF ドキュメントについては、特に、xaml を使用する他のフレームワークの場合と、xaml 言語サポートによってシステム .Xaml レベルで有効になっている基本的な XAML 概念の両方で使用されます。 このトピックでは、「 [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)」で紹介した基本的な用語について説明します。  
@@ -86,7 +86,7 @@ ms.locfileid: "73740645"
  属性構文は、既存のオブジェクト要素の属性を宣言することによってプロパティの値を設定する XAML マークアップ構文です。 属性名は、関連するオブジェクト要素をバッキングするクラスのプロパティの CLR メンバー名と一致している必要があります。 属性名の後に代入演算子 (=) が付きます。 属性値は、引用符で囲まれた文字列である必要があります。  
   
 > [!NOTE]
-> 代替引用符を使用して、属性内にリテラル引用符を配置できます。 たとえば、二重引用符で囲まれた文字列を宣言する手段として単一引用符を使用できます。 単一引用符と二重引用符のどちらを使用する場合でも、属性値の文字列を開いたり閉じたりするには、一致するペアを使用する必要があります。 また、特定の XAML 構文によって課される文字制限を回避するために使用できるエスケープシーケンスやその他の手法もあります。 「 [XML 文字エンティティと XAML」を](../../xaml-services/xml-character-entities-and-xaml.md)参照してください。  
+> 代替引用符を使用して、属性内にリテラル引用符を配置できます。 たとえば、二重引用符で囲まれた文字列を宣言する手段として単一引用符を使用できます。 単一引用符と二重引用符のどちらを使用する場合でも、属性値の文字列を開いたり閉じたりするには、一致するペアを使用する必要があります。 また、特定の XAML 構文によって課される文字制限を回避するために使用できるエスケープシーケンスやその他の手法もあります。 「 [XML 文字エンティティと XAML」を](../../../desktop-wpf/xaml-services/xml-character-entities.md)参照してください。  
   
  属性構文を使用して設定するには、プロパティはパブリックである必要があり、書き込み可能である必要があります。 バッキング型システムのプロパティの値は、値型であるか、または関連するバッキング型にアクセスするときに XAML プロセッサによってインスタンス化または参照できる参照型である必要があります。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "73740645"
   
 1. XAML プロセッサで、<xref:System.Windows.Markup.MarkupExtension>から派生した中かっこ、またはオブジェクト要素が検出された場合、参照されるマークアップ拡張機能は、値を文字列として処理するのではなく、最初に評価され、マークアップ拡張機能によって返されるオブジェクトが値として使用されます。 多くの場合、マークアップ拡張機能によって返されるオブジェクトは、既存のオブジェクトへの参照、または実行時まで評価を延期する式であり、新しくインスタンス化されたオブジェクトではありません。  
   
-2. プロパティが属性付きの <xref:System.ComponentModel.TypeConverter>で宣言されている場合、またはプロパティの値の型が属性付きの <xref:System.ComponentModel.TypeConverter>で宣言されている場合、属性の文字列値は変換入力として型コンバーターに送信され、コンバーターは新しいオブジェクトを返します。instance.  
+2. プロパティが属性付きの <xref:System.ComponentModel.TypeConverter>で宣言されている場合、またはプロパティの値の型が属性付きの <xref:System.ComponentModel.TypeConverter>で宣言されている場合、属性の文字列値は変換入力として型コンバーターに送信され、コンバーターは新しいオブジェクトインスタンスを返します。  
   
 3. <xref:System.ComponentModel.TypeConverter>がない場合は、プロパティ型への直接変換が試行されます。 この最終的なレベルは、XAML 言語プリミティブ型間のパーサーネイティブ値または列挙型の名前付き定数の名前のチェック (パーサーが一致する値にアクセスする) の直接変換です。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "73740645"
   
  [!code-xaml[XAMLOvwSupport#ContextMenu](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#contextmenu)]  
   
- また、プロパティ要素内の値を内部テキストとして指定することもできます。これは、指定されているプロパティの型が <xref:System.String>などのプリミティブ値型である場合や、名前が指定されている列挙型の場合です。 これらの2つの使用方法は、これらの各ケースでより単純な属性構文を使用することもできるため、あまり一般的ではありません。 プロパティ要素に文字列を入力する場合の1つのシナリオは、XAML コンテンツプロパティではなく、UI テキストの表現に使用されるプロパティです。また、ラインフィードなどの特定の空白要素は、その UI テキストに表示される必要があります。 属性の構文では、改行を保持できませんが、有意な空白の保持がアクティブになっている限り、プロパティ要素の構文を使用できます (詳細については、「 [XAML での空白の処理](../../xaml-services/whitespace-processing-in-xaml.md)」を参照してください)。 もう1つのシナリオとして、 [X:Uid ディレクティブ](../../xaml-services/x-uid-directive.md)を property 要素に適用し、WPF 出力 BAML または他の手法でローカライズする必要がある値としてその中の値をマークすることができます。  
+ また、プロパティ要素内の値を内部テキストとして指定することもできます。これは、指定されているプロパティの型が <xref:System.String>などのプリミティブ値型である場合や、名前が指定されている列挙型の場合です。 これらの2つの使用方法は、これらの各ケースでより単純な属性構文を使用することもできるため、あまり一般的ではありません。 プロパティ要素に文字列を入力する場合の1つのシナリオは、XAML コンテンツプロパティではなく、UI テキストの表現に使用されるプロパティです。また、ラインフィードなどの特定の空白要素は、その UI テキストに表示される必要があります。 属性の構文では、改行を保持できませんが、有意な空白の保持がアクティブになっている限り、プロパティ要素の構文を使用できます (詳細については、「 [XAML での空白の処理](../../../desktop-wpf/xaml-services/white-space-processing.md)」を参照してください)。 もう1つのシナリオとして、 [X:Uid ディレクティブ](../../../desktop-wpf/xaml-services/xuid-directive.md)を property 要素に適用し、WPF 出力 BAML または他の手法でローカライズする必要がある値としてその中の値をマークすることができます。  
   
  プロパティ要素は、WPF 論理ツリーでは表されません。 プロパティ要素は、プロパティを設定するための特定の構文であり、それをバッキングするインスタンスまたはオブジェクトを持つ要素ではありません。 (論理ツリーの概念の詳細については、「 [WPF のツリー](trees-in-wpf.md)」を参照してください)。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "73740645"
   
 - 型は <xref:System.Collections.IDictionary>を実装します。  
   
-- 型は <xref:System.Array> から派生します (XAML の配列の詳細については、「 [X:Array Markup Extension](../../xaml-services/x-array-markup-extension.md)」を参照してください)。  
+- 型は <xref:System.Array> から派生します (XAML の配列の詳細については、「 [X:Array Markup Extension](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)」を参照してください)。  
   
  プロパティの型がコレクションである場合、推論されたコレクション型は、マークアップでオブジェクト要素として指定する必要はありません。 代わりに、コレクション内の項目になる要素は、property 要素の1つ以上の子要素として指定されます。 これらの各項目は、読み込み中にオブジェクトに評価され、暗黙的なコレクションの `Add` メソッドを呼び出すことによってコレクションに追加されます。 たとえば、<xref:System.Windows.Style> の <xref:System.Windows.Style.Triggers%2A> プロパティは、<xref:System.Collections.IList>を実装する特殊なコレクション型 <xref:System.Windows.TriggerCollection>を受け取ります。 マークアップで <xref:System.Windows.TriggerCollection> オブジェクト要素をインスタンス化する必要はありません。 代わりに、1つ以上の <xref:System.Windows.Trigger> 項目を `Style.Triggers` property 要素内の要素として指定します。ここで <xref:System.Windows.Trigger> (または派生クラス) は、厳密に型指定された <xref:System.Windows.TriggerCollection>の項目の種類として想定される型です。  
   
@@ -231,7 +231,7 @@ ms.locfileid: "73740645"
   
  [!code-xaml[XAMLOvwSupport#SyntaxContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
   
- マークアップには <xref:System.Windows.Controls.Panel.Children%2A> のプロパティ要素も <xref:System.Windows.Controls.UIElementCollection> の要素も必要ないことに注意してください。 これは XAML の設計機能であり、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を定義する再帰的に包含された要素は、プロパティ要素のタグを介在することなく、直接の親子要素のリレーションシップを持つ入れ子になった要素のツリーとして表現されます。コレクションオブジェクト。 実際には、マークアップでオブジェクト要素として明示的に <xref:System.Windows.Controls.UIElementCollection> を指定することはできません。 唯一の用途は暗黙のコレクションであるため、<xref:System.Windows.Controls.UIElementCollection> は、パラメーターなしのパブリックコンストラクターを公開しないため、オブジェクト要素としてインスタンス化することはできません。  
+ マークアップには <xref:System.Windows.Controls.Panel.Children%2A> のプロパティ要素も <xref:System.Windows.Controls.UIElementCollection> の要素も必要ないことに注意してください。 これは XAML の設計機能であり、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を定義する再帰的包含要素は、プロパティ要素のタグやコレクションオブジェクトを介在させることなく、直接の親子要素のリレーションシップを持つ入れ子になった要素のツリーとして表現されます。 実際には、マークアップでオブジェクト要素として明示的に <xref:System.Windows.Controls.UIElementCollection> を指定することはできません。 唯一の用途は暗黙のコレクションであるため、<xref:System.Windows.Controls.UIElementCollection> は、パラメーターなしのパブリックコンストラクターを公開しないため、オブジェクト要素としてインスタンス化することはできません。  
   
 ### <a name="mixing-property-elements-and-object-elements-in-an-object-with-a-content-property"></a>コンテンツプロパティを使用してオブジェクト内のプロパティ要素とオブジェクト要素を混在させる  
  Xaml 仕様では、オブジェクト要素内の XAML コンテンツプロパティを格納するために使用されるオブジェクト要素が連続している必要があり、混合されていない必要があることが XAML プロセッサによって宣言されています。 プロパティ要素とコンテンツの混合に対するこの制限は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の XAML プロセッサによって適用されます。  
@@ -242,7 +242,7 @@ ms.locfileid: "73740645"
   
 <a name="xaml_namespaces"></a>   
 ## <a name="xaml-namespaces"></a>XAML 名前空間  
- 前の構文の例では、既定の XAML 名前空間以外の XAML 名前空間が指定されていません。 一般的な [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでは、既定の XAML 名前空間が [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 名前空間として指定されます。 既定の XAML 名前空間以外の XAML 名前空間を指定しても、同様の構文を使用できます。 ただし、既定の XAML 名前空間内でアクセスできないクラスの名前が付いている場合は、そのクラス名の前に、対応する CLR 名前空間にマップされている XAML 名前空間のプレフィックスを付ける必要があります。 たとえば、`<custom:Example/>` は、`Example` クラスのインスタンスをインスタンス化するためのオブジェクト要素構文です。そのクラス (および場合によっては、バッキング型を含む外部アセンブリ情報) を含む CLR 名前空間は、以前ににマップされていました `custom`外線.  
+ 前の構文の例では、既定の XAML 名前空間以外の XAML 名前空間が指定されていません。 一般的な [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでは、既定の XAML 名前空間が [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 名前空間として指定されます。 既定の XAML 名前空間以外の XAML 名前空間を指定しても、同様の構文を使用できます。 ただし、既定の XAML 名前空間内でアクセスできないクラスの名前が付いている場合は、そのクラス名の前に、対応する CLR 名前空間にマップされている XAML 名前空間のプレフィックスを付ける必要があります。 たとえば `<custom:Example/>` は、`Example` クラスのインスタンスをインスタンス化するためのオブジェクト要素構文です。このクラスには、そのクラスを含む CLR 名前空間 (および場合によっては、バッキング型を含む外部アセンブリ情報) が `custom` プレフィックスにマップされています。  
   
  XAML 名前空間の詳細については、「 [WPF xaml の Xaml 名前空間と名前空間のマッピング](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)」を参照してください。  
   
@@ -254,12 +254,12 @@ ms.locfileid: "73740645"
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- ここでは、`StaticResource` マークアップ拡張機能の実装を提供する <xref:System.Windows.StaticResourceExtension> クラスを識別します。 次の文字列 `MyStyle` は、既定以外の <xref:System.Windows.StaticResourceExtension> コンストラクターの入力として使用されます。この場合、拡張文字列から取得したパラメーターは、要求された <xref:System.Windows.ResourceKey>を宣言します。 `MyStyle` は、リソースとして定義された <xref:System.Windows.Style> の[x:Key](../../xaml-services/x-key-directive.md)値である必要があります。 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)の使用法では、リソースを使用して、読み込み時に静的なリソース検索ロジックによって <xref:System.Windows.Style> プロパティ値を提供するように要求します。  
+ ここでは、`StaticResource` マークアップ拡張機能の実装を提供する <xref:System.Windows.StaticResourceExtension> クラスを識別します。 次の文字列 `MyStyle` は、既定以外の <xref:System.Windows.StaticResourceExtension> コンストラクターの入力として使用されます。この場合、拡張文字列から取得したパラメーターは、要求された <xref:System.Windows.ResourceKey>を宣言します。 `MyStyle` は、リソースとして定義された <xref:System.Windows.Style> の[x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md)値である必要があります。 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)の使用法では、リソースを使用して、読み込み時に静的なリソース検索ロジックによって <xref:System.Windows.Style> プロパティ値を提供するように要求します。  
   
- マークアップ拡張機能の詳細については、 「[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)」を参照してください。 一般的な .NET XAML 実装で有効になっているマークアップ拡張機能とその他の XAML プログラミング機能のリファレンスについては、「 [XAML 名前空間 (x:)」を参照してください。言語機能](../../xaml-services/xaml-namespace-x-language-features.md)。 WPF 固有のマークアップ拡張機能については、「 [WPF XAML 拡張](wpf-xaml-extensions.md)機能」を参照してください。  
+ マークアップ拡張機能の詳細については、 「[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)」を参照してください。 一般的な .NET XAML 実装で有効になっているマークアップ拡張機能とその他の XAML プログラミング機能のリファレンスについては、「 [XAML 名前空間 (x:)」を参照してください。言語機能](../../../desktop-wpf/xaml-services/namespace-language-features.md)。 WPF 固有のマークアップ拡張機能については、「 [WPF XAML 拡張](wpf-xaml-extensions.md)機能」を参照してください。  
   
 <a name="attached_properties"></a>   
-## <a name="attached-properties"></a>アタッチされるプロパティ  
+## <a name="attached-properties"></a>添付プロパティ  
  添付プロパティは、XAML で導入されたプログラミング概念です。プロパティは、特定の型で所有および定義できますが、任意の要素の属性またはプロパティ要素として設定できます。 添付プロパティが対象となる主なシナリオは、マークアップ構造内の子要素が、すべての要素にわたって広範囲に共有されるオブジェクトモデルを必要とせずに、親要素に情報を報告できるようにすることです。 逆に、添付プロパティは、親要素が子要素に情報を報告するために使用できます。 添付プロパティの目的と、アタッチされたプロパティを作成する方法の詳細については、「[添付プロパティの概要](attached-properties-overview.md)」を参照してください。  
   
  添付プロパティでは、 *typeName*を指定することによって、プロパティ要素の構文に似た構文を使用します、一見、。*propertyName*の組み合わせ。 次の 2 つの重要な違いがあります。  
@@ -269,7 +269,7 @@ ms.locfileid: "73740645"
 - 添付プロパティのプロパティ要素構文を使用することもできます。 ただし、プロパティ要素の一般的な構文では、指定する*typeName*は property 要素を含む object 要素です。 添付プロパティを参照している場合、 *typeName*は添付プロパティを定義するクラスであり、それを含んでいるオブジェクト要素ではありません。  
   
 <a name="attached_events"></a>   
-## <a name="attached-events"></a>アタッチされるイベント  
+## <a name="attached-events"></a>添付イベント  
  添付イベントは、XAML で導入された別のプログラミング概念であり、特定の型でイベントを定義できますが、どのオブジェクト要素にもハンドラーをアタッチできます。 WOF 実装では、添付イベントを定義する型が、サービスを定義する静的な型であることがよくあります。また、アタッチされるイベントは、サービスを公開する型のルーティングイベントエイリアスによって公開されることもあります。 添付イベントのハンドラーは、属性の構文によって指定されます。 添付イベントと同様に、 *typeName*を許可するために、添付イベントの属性構文が拡張されています。*eventname* usage。ここで、 *typeName*は添付イベントインフラストラクチャの `Add` および `Remove` イベントハンドラーアクセサーを提供するクラスであり、 *eventName*はイベント名です。  
   
 <a name="anatomy_of_a_xaml_page_root_element"></a>   
@@ -289,7 +289,7 @@ ms.locfileid: "73740645"
  以下のセクションでは、xaml プロセッサによって技術的にサポートされる XAML の使用方法について説明しますが、xaml ソースを含むアプリケーションを開発するときに、ユーザーが判読できるように、XAML ファイルに影響を与える詳細な問題やその他の問題を生成します。  
   
 ### <a name="optional-property-element-usages"></a>省略可能なプロパティ要素の使用法  
- 省略可能なプロパティ要素の使用には、XAML プロセッサによって暗黙的に考慮される要素コンテンツプロパティの明示的な書き込みが含まれます。 たとえば、<xref:System.Windows.Controls.Menu>の内容を宣言する場合、<xref:System.Windows.Controls.Menu> の <xref:System.Windows.Controls.ItemsControl.Items%2A> コレクションを `<Menu.Items>` property 要素タグとして明示的に宣言し、各 <xref:System.Windows.Controls.MenuItem> を内に配置することを選択でき `<Menu.Items>`暗黙の XAML プロセッサの動作を使用するのではなく、<xref:System.Windows.Controls.Menu> のすべての子要素が <xref:System.Windows.Controls.MenuItem> である必要があり、<xref:System.Windows.Controls.ItemsControl.Items%2A> コレクションに配置される必要があります。 場合によっては、マークアップで表されるオブジェクト構造を視覚的に明確にするために、オプションの使用方法が役立つことがあります。 場合によっては、明示的なプロパティ要素の使用によって、技術的には機能するものの、属性値内の入れ子になったマークアップ拡張機能など、視覚的にはわかりにくいマークアップを回避できます。  
+ 省略可能なプロパティ要素の使用には、XAML プロセッサによって暗黙的に考慮される要素コンテンツプロパティの明示的な書き込みが含まれます。 たとえば、<xref:System.Windows.Controls.Menu>の内容を宣言する場合、<xref:System.Windows.Controls.Menu> の <xref:System.Windows.Controls.ItemsControl.Items%2A> コレクションを `<Menu.Items>` property 要素タグとして明示的に宣言し、<xref:System.Windows.Controls.MenuItem> 内に各 `<Menu.Items>`を配置します。これは、<xref:System.Windows.Controls.Menu> のすべての子要素が <xref:System.Windows.Controls.MenuItem> である必要があり、<xref:System.Windows.Controls.ItemsControl.Items%2A> コレクションに配置されている必要があるという暗黙の XAML プロセッサ動作ではありません。 場合によっては、マークアップで表されるオブジェクト構造を視覚的に明確にするために、オプションの使用方法が役立つことがあります。 場合によっては、明示的なプロパティ要素の使用によって、技術的には機能するものの、属性値内の入れ子になったマークアップ拡張機能など、視覚的にはわかりにくいマークアップを回避できます。  
   
 ### <a name="full-typenamemembername-qualified-attributes"></a>完全な typeName. memberName 修飾属性  
  *TypeName*です。属性の*memberName*フォームは、ルーティングイベントのケースだけでなく、実際にはより汎用的に機能します。 ただし、その他の状況では、マークアップスタイルと読みやすさの理由だけで、フォームは不要であり、回避する必要があります。 次の例では、<xref:System.Windows.Controls.Control.Background%2A> 属性への3つの参照がまったく同じになります。  
@@ -316,7 +316,7 @@ ms.locfileid: "73740645"
 ## <a name="see-also"></a>関連項目
 
 - [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [XAML 名前空間 (x:) 言語機能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML 名前空間 (x:) 言語機能](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [WPF XAML 拡張機能](wpf-xaml-extensions.md)
 - [依存関係プロパティの概要](dependency-properties-overview.md)
 - [TypeConverters および XAML](typeconverters-and-xaml.md)

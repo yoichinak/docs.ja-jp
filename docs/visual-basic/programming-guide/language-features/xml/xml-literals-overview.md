@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: e5d2465d145f4059600121c6cef30bb2c74a8c1c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4eaa9399ca0038e3142886abf2161266f8c77782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346202"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636082"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML リテラルの概要 (Visual Basic)
 *Xml リテラル*を使用すると、xml を Visual Basic コードに直接組み込むことができます。 XML リテラルの構文は [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトを表し、XML 1.0 の構文に似ています。 これにより、コードが最終的な XML と同じ構造を持つため、XML 要素とドキュメントをプログラムによって簡単に作成できます。  
   
- Visual Basic は、XML リテラルを [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトにコンパイルします。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] には、XML を作成および操作するための簡単なオブジェクトモデルが用意されています。このモデルは、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]と密接に連携しています。 詳細については、「 <xref:System.Xml.Linq.XElement>」を参照してください。  
+ Visual Basic は、XML リテラルを [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトにコンパイルします。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] には、XML を作成および操作するための簡単なオブジェクトモデルが用意されています。このモデルは、統合言語クエリ (LINQ) と統合されています。 詳細については、「 <xref:System.Xml.Linq.XElement>」を参照してください。  
   
  XML リテラルに Visual Basic 式を埋め込むことができます。 実行時に、アプリケーションは、埋め込み式の値を組み込んで、各リテラルの [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトを作成します。 これにより、XML リテラル内に動的コンテンツを指定できます。 詳細については、「 [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)」を参照してください。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "74346202"
 > [!NOTE]
 > Visual Basic の XML リテラル構文は、XML 1.0 仕様の構文と同一ではありません。 詳細については、「 [Xml リテラル」と「xml 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。  
   
-## <a name="line-continuation"></a>行の連結  
+## <a name="line-continuation"></a>行継続  
  XML リテラルは、行連結文字を使用せずに、複数の行にまたがることができます (スペース-アンダースコア-入力シーケンス)。 これにより、コード内の XML リテラルを XML ドキュメントと比較しやすくなります。  
   
  コンパイラは、行連結文字を XML リテラルの一部として扱います。 そのため、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトに属している場合にのみ、スペース-アンダースコア-enter シーケンスを使用する必要があります。  
