@@ -2,12 +2,12 @@
 title: Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 95bba89546e6667cc36fa06a0090aa8e9570fc7e
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: b0f452ba7aabcaa5ea995acba1873029c67f0f5d
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960141"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544669"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 
@@ -63,7 +63,7 @@ ms.locfileid: "74960141"
     > [!NOTE]
     > この手順を完了していない場合は、ビルドの実行時に IIS でホストされているすべてのサンプルでエラーが発生します。 アクセス許可が正しく設定されていることを確認するか、SDK コマンド プロンプトと Visual Studio コマンド プロンプト (2012) を管理者として実行してください。
 
-11. コンピューター上に C:\logs ディレクトリを作成します (一部のサンプルで必要になることがあります)。 このフォルダーに対する書き込みアクセスが適切なアカウントに付与されていることを確認してください。 Windows 7、Windows Vista、および Windows Server 2008 R2 では、このアカウントは**Network Service**です。 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] では NT Authority\Network Service、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] および [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] では ASPNET です。
+11. コンピューター上に C:\logs ディレクトリを作成します (一部のサンプルで必要になることがあります)。 このフォルダーに対する書き込みアクセスが適切なアカウントに付与されていることを確認してください。 Windows 7、Windows Vista、および Windows Server 2008 R2 では、このアカウントは**Network Service**です。 Windows Server 2008 の場合、アカウントは NT Authority\Network Service です。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] および Windows Server 2003 の場合、アカウントは ASPNET です。
 
 12. Setupcerttool.bat ファイルを実行します。 このファイルは、\<InstallPath > \ WF_WCF_Samples \WCF\Setup\ フォルダーにあります。  このスクリプトでは、次のタスクが実行されます。
 
