@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d03917353a9e6879ccb3b368d7d190aeeacb702c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120156"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635237"
 ---
 # <a name="interfaces-c-programming-guide"></a>インターフェイス (C# プログラミング ガイド)
 
@@ -62,17 +62,17 @@ ms.locfileid: "73120156"
 [明示的なインターフェイスの実装](explicit-interface-implementation.md)  
  インターフェイスに固有のクラス メンバーを作成する方法について説明します。  
   
- [方法: インターフェイス メンバーを明示的に実装する](how-to-explicitly-implement-interface-members.md)  
+ [インターフェイス メンバーを明示的に実装する方法](how-to-explicitly-implement-interface-members.md)  
  インターフェイスのメンバーを明示的に実装する方法の例を示します。  
   
- [方法: 2 つのインターフェイスのメンバーを明示的に実装する](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [2 つのインターフェイスのメンバーを明示的に実装する方法](how-to-explicitly-implement-members-of-two-interfaces.md)  
  継承を持つインターフェイスのメンバーを明示的に実装する方法の例を示します。  
   
 ## <a name="BKMK_RelatedSections"></a>関連項目
 
 - [インターフェイスのプロパティ](../classes-and-structs/interface-properties.md)  
 - [インターフェイスのインデクサー](../indexers/indexers-in-interfaces.md)  
-- [方法: インターフェイス イベントを実装する](../events/how-to-implement-interface-events.md)  
+- [インターフェイス イベントを実装する方法](../events/how-to-implement-interface-events.md)
 - [クラスと構造体](../classes-and-structs/index.md)  
 - [継承](../classes-and-structs/inheritance.md)  
 - [メソッド](../classes-and-structs/methods.md)  
