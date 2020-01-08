@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3bc31391d30b0724a480152aa7f1d0dc93380b8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740680"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636407"
 ---
 # <a name="wpf-windows-overview"></a>WPF ウィンドウの概要
-ユーザーは、Windows を通じて Windows Presentation Foundation (WPF) スタンドアロンアプリケーションと対話します。 ウィンドウの主な目的は、データを視覚化してユーザーがデータと対話できるコンテンツをホストすることです。 スタンドアロンの [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは、<xref:System.Windows.Window> クラスを使用して独自のウィンドウを提供します。 このトピックでは、スタンドアロンアプリケーションでのウィンドウの作成と管理の基礎について説明する前に、<xref:System.Windows.Window> について説明します。  
+ユーザーは、Windows を通じて Windows Presentation Foundation (WPF) スタンドアロンアプリケーションと対話します。 ウィンドウの主な目的は、データを視覚化してユーザーがデータと対話できるコンテンツをホストすることです。 スタンドアロン WPF アプリケーションは、<xref:System.Windows.Window> クラスを使用して独自のウィンドウを提供します。 このトピックでは、スタンドアロンアプリケーションでのウィンドウの作成と管理の基礎について説明する前に、<xref:System.Windows.Window> について説明します。  
   
 > [!NOTE]
-> XAML ブラウザーアプリケーション (Xbap) やルース [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ページなど、ブラウザーでホストされる [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは、独自のウィンドウを提供しません。 代わりに、Windows Internet Explorer によって提供される windows でホストされます。 「 [WPF XAML ブラウザーアプリケーションの概要](wpf-xaml-browser-applications-overview.md)」を参照してください。  
+> XAML ブラウザーアプリケーション (Xbap) や疎 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ページなど、ブラウザーでホストされる WPF アプリケーションは、独自のウィンドウを提供しません。 代わりに、Windows Internet Explorer によって提供される windows でホストされます。 「 [WPF XAML ブラウザーアプリケーションの概要](wpf-xaml-browser-applications-overview.md)」を参照してください。  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>ウィンドウ クラス  
@@ -49,7 +49,7 @@ ms.locfileid: "73740680"
   
  ウィンドウは、非クライアント領域とクライアント領域の 2 つに分かれます。  
   
- ウィンドウの*非クライアント領域*は [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] によって実装され、次のような、ほとんどのウィンドウに共通のウィンドウ部分が含まれます。  
+ ウィンドウの*非クライアント領域*は WPF によって実装され、次のような、ほとんどのウィンドウに共通のウィンドウ部分が含まれています。  
   
 - 境界線。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73740680"
   
  ウィンドウの*クライアント領域*は、ウィンドウの非クライアント領域内の領域であり、開発者がメニューバー、ツールバー、コントロールなどのアプリケーション固有のコンテンツを追加するために使用されます。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]では、ウィンドウは、次の操作を実行するために使用する <xref:System.Windows.Window> クラスによってカプセル化されます。  
+ WPF では、ウィンドウは、次の操作を実行するために使用する <xref:System.Windows.Window> クラスによってカプセル化されます。  
   
 - ウィンドウを表示する。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "73740680"
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>ウィンドウの実装  
- 一般的なウィンドウの実装は、外観と動作の両方で構成されます。*外観*はウィンドウがユーザーにどのように見えるかを定義し、*動作*は、ユーザーがウィンドウを操作するときにウィンドウがどのように機能するかを定義します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]では、コードまたは [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] マークアップを使用して、ウィンドウの外観と動作を実装できます。  
+ 一般的なウィンドウの実装は、外観と動作の両方で構成されます。*外観*はウィンドウがユーザーにどのように見えるかを定義し、*動作*は、ユーザーがウィンドウを操作するときにウィンドウがどのように機能するかを定義します。 WPF では、コードまたは [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] マークアップのいずれかを使用して、ウィンドウの外観と動作を実装できます。  
   
  ただし、一般に、ウィンドウの外観は [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] マークアップを使用して実装され、その動作は分離コードを使用して実装されます。次に例を示します。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "73740680"
 </Project>  
 ```  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションのビルドの詳細については、「 [WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)」を参照してください。  
+ WPF アプリケーションのビルドの詳細については、「 [Wpf アプリケーションのビルド](building-a-wpf-application-wpf.md)」を参照してください。  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>ウィンドウの有効期間  
@@ -293,7 +293,7 @@ ms.locfileid: "73740680"
   
  また、<xref:System.Windows.Window.WindowStartupLocation%2A> プロパティに次のいずれかの <xref:System.Windows.WindowStartupLocation> 列挙値を設定して最初に表示されたときに <xref:System.Windows.Window> の初期位置を指定することもできます。  
   
-- <xref:System.Windows.WindowStartupLocation.CenterOwner> (既定値)  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner> (既定)  
   
 - <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -381,7 +381,7 @@ ms.locfileid: "73740680"
   
  ウィンドウの状態を構成するには、その <xref:System.Windows.Window.WindowState%2A> プロパティを設定します。次の <xref:System.Windows.WindowState> 列挙値のいずれかを指定できます。  
   
-- <xref:System.Windows.WindowState.Normal> (既定値)  
+- <xref:System.Windows.WindowState.Normal> (既定)  
   
 - <xref:System.Windows.WindowState.Maximized>  
   
@@ -401,7 +401,7 @@ ms.locfileid: "73740680"
 
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>サイズ変更モード  
- <xref:System.Windows.Window.WindowStyle%2A> プロパティに応じて、ユーザーがウィンドウのサイズを変更する方法 (および場合) を制御できます。 ウィンドウスタイルの選択は、ユーザーがマウスで境界線をドラッグしてウィンドウのサイズを変更できるかどうか、 **[最小化]** 、 **[最大化]** 、 **[サイズ変更]** の各ボタンが非クライアント領域に表示されるかどうか、表示されているかどうかに影響します。enabled.  
+ <xref:System.Windows.Window.WindowStyle%2A> プロパティに応じて、ユーザーがウィンドウのサイズを変更する方法 (および場合) を制御できます。 ウィンドウスタイルの選択は、ユーザーがマウスで境界線をドラッグしてウィンドウのサイズを変更できるかどうか、非クライアント領域に**最小化**、**最大化**、および**サイズ変更**の各ボタンが表示されるかどうか、また、有効になっているかどうかにかかわらず、表示されるかどうかに影響します。  
   
  <xref:System.Windows.Window.ResizeMode%2A> プロパティを設定して、ウィンドウのサイズを変更する方法を構成できます。これは、次の <xref:System.Windows.ResizeMode> 列挙値のいずれかになります。  
   
@@ -409,7 +409,7 @@ ms.locfileid: "73740680"
   
 - <xref:System.Windows.ResizeMode.CanMinimize>  
   
-- <xref:System.Windows.ResizeMode.CanResize> (既定値)  
+- <xref:System.Windows.ResizeMode.CanResize> (既定)  
   
 - <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -427,7 +427,7 @@ ms.locfileid: "73740680"
   
 - <xref:System.Windows.WindowStyle.None>  
   
-- <xref:System.Windows.WindowStyle.SingleBorderWindow> (既定値)  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow> (既定)  
   
 - <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   

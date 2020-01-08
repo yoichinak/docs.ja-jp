@@ -1,5 +1,5 @@
 ---
-title: Null 許容値型-Visual Basic
+title: null 許容値型
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Nullable
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 1fb8f8d1657b8eab6b15858c2a6607cbde82e542
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0d259e11a969f4eb7e64626a4adf498db06ece06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732938"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347835"
 ---
 # <a name="nullable-value-types-visual-basic"></a>null 許容値型 (Visual Basic)
 
@@ -66,7 +66,7 @@ Null 許容型の変数の値を取得するには、まずその <xref:System.N
 
 Null 値を許容する `Boolean` 変数がブール式で使用される場合、結果は `True`、`False`、または `Nothing`になります。 `And` と `Or`の真理テーブルを次に示します。 `b1` と `b2` は3つの値を持つことができるため、評価するのは9つの組み合わせです。
 
-|B|b2|b1 と b2|b1 または b2|
+|b|b2|b1 と b2|b1 または b2|
 |--------|--------|---------------|--------------|
 |`Nothing`|`Nothing`|`Nothing`|`Nothing`|
 |`Nothing`|`True`|`Nothing`|`True`|
@@ -110,7 +110,7 @@ Null 値を許容する `Boolean` 変数がブール式で使用される場合�
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [データの種類](index.md)
-- [値型と参照型](value-types-and-reference-types.md)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
 - [トラブルシューティング (データ型)](troubleshooting-data-types.md)
 - [TableAdapters を使用してデータセットを入力する](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
 - [If 演算子](../../../language-reference/operators/if-operator.md)

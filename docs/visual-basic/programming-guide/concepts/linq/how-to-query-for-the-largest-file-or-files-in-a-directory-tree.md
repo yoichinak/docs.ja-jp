@@ -2,12 +2,12 @@
 title: '方法: ディレクトリ ツリー内で最もサイズの大きいファイルを照会する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: 4f7dcb46670612695b5a7219b12a7f2e83746af2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 34f2cd97cafbe142c9462e8d0cf7c17f9f0d16f9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347666"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346067"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>方法: ディレクトリ ツリー内で最もサイズの大きいファイルを照会する (LINQ) (Visual Basic)
 この例では、ファイル サイズ (バイト単位) に関連した 5 つのクエリを紹介しています。  
@@ -22,7 +22,7 @@ ms.locfileid: "74347666"
   
 - 指定サイズ未満のファイルを無視しながらバイト単位のサイズに基づいてファイルをグループ化する方法。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
  以下のコードでは 5 つのクエリを使用して、バイト単位のサイズに基づいてファイルを照会し、グループ化しています。 サンプル コードを参考にして、<xref:System.IO.FileInfo> オブジェクトが備えている他のさまざまなプロパティを簡単に照会することができます。  
   
 ```vb  
@@ -115,12 +115,12 @@ End Module
   
  このクエリは、完全な <xref:System.IO.FileInfo> オブジェクトを返すために、まずデータ ソース内の各ファイルを調べ、それらのファイルを Length プロパティの値で並べ替えています。 そうすることで、長さが最大である単一のファイルまたは一連のファイルを取得することができます。 リスト内の最初の要素は、<xref:System.Linq.Enumerable.First%2A> を使用して取得します。 先頭から n 件の要素を取得するには、<xref:System.Linq.Enumerable.Take%2A> を使用します。 並べ替え順序に Descending を指定することによって、最小の要素がリストの先頭に来るようにしています。  
   
- このクエリでは、<xref:System.IO.FileInfo> の呼び出しで `GetFiles` オブジェクトが作成された後に別のスレッドでファイルが削除された場合に発生する例外の可能性に対処するために、別途設けられたメソッドを呼び出してファイル サイズ (バイト単位) を取得しています。 <xref:System.IO.FileInfo> オブジェクトの作成後であっても、例外は発生する可能性があります。<xref:System.IO.FileInfo> オブジェクトは、<xref:System.IO.FileInfo.Length%2A> プロパティが最初にアクセスされたときに最新のサイズ (バイト単位) に基づいてそのプロパティを更新しようと試みるためです。 この操作をクエリの外側の try-catch ブロックに置くことで、"副作用の原因となりうるような操作はクエリ内では行わない" という原則に従っているのです。 一般に、アプリケーションが不明な状態に陥ることのないよう、例外を処理する際には十分な注意が必要です。  
+ このクエリでは、`GetFiles` の呼び出しで <xref:System.IO.FileInfo> オブジェクトが作成された後に別のスレッドでファイルが削除された場合に発生する例外の可能性に対処するために、別途設けられたメソッドを呼び出してファイル サイズ (バイト単位) を取得しています。 <xref:System.IO.FileInfo> オブジェクトの作成後であっても、例外は発生する可能性があります。<xref:System.IO.FileInfo> オブジェクトは、<xref:System.IO.FileInfo.Length%2A> プロパティが最初にアクセスされたときに最新のサイズ (バイト単位) に基づいてそのプロパティを更新しようと試みるためです。 この操作をクエリの外側の try-catch ブロックに置くことで、"副作用の原因となりうるような操作はクエリ内では行わない" という原則に従っているのです。 一般に、アプリケーションが不明な状態に陥ることのないよう、例外を処理する際には十分な注意が必要です。  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
-VB.NET コンソールアプリケーションプロジェクトを作成します。このプロジェクトには、名前空間の `Imports` ステートメントが含まれています。
+## <a name="compile-the-code"></a>コードのコンパイル  
+System. Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソールアプリケーションプロジェクトを作成します。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

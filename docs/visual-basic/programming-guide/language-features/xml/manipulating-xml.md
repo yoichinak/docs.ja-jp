@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 2565f43c1014bf0fa9fab1618fedfd1bd6bdb7ca
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bb5aed5099d81f8c8898cd61523b90a43f27db78
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330439"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636160"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic での XML の操作
-*Xml リテラル*を使用して、文字列、ファイル、ストリームなどの外部ソースから xml を読み込むことができます。 次に、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して XML を操作し、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] を使用して XML にクエリを実行できます。  
+*Xml リテラル*を使用して、文字列、ファイル、ストリームなどの外部ソースから xml を読み込むことができます。 その後、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して XML を操作し、統合言語クエリ (LINQ) を使用して XML に対してクエリを実行できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法 : ファイル、文字列、またはストリームからの XML の読み込み](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
@@ -42,7 +42,7 @@ ms.locfileid: "74330439"
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
  Visual Basic での [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の使用方法について説明するセクションへのリンクを示します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

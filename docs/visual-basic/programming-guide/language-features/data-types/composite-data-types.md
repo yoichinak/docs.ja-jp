@@ -31,7 +31,7 @@ Visual Basic の基本データ型に加えて、さまざまな型の項目を�
   
 ## <a name="tuples"></a>タプル
 
-組は、型が事前定義されている2つ以上のフィールドを含む軽量の構造体です。 タプルは Visual Basic 2017 以降でサポートされています。 タプルは、1つのメソッド呼び出しから複数の値を返すために最も一般的に使用されます。参照によって引数を渡したり、返されたフィールドをより重いクラスまたは構造体にパッケージ化したりする必要はありません。 組の詳細については、「[組](tuples.md)」を参照してください。
+組は、型が事前定義されている 2 つ以上のフィールドを含む軽量の構造体です。 タプルは Visual Basic 2017 以降でサポートされています。 タプルは、1つのメソッド呼び出しから複数の値を返すために最も一般的に使用されます。参照によって引数を渡したり、返されたフィールドをより重いクラスまたは構造体にパッケージ化したりする必要はありません。 組の詳細については、「[タプル](tuples.md)」を参照してください。
 
 ## <a name="array-types"></a>配列型  
  すべての配列を構成する1つのデータ型はありません。 配列の特定のインスタンスのデータ型は、次のように決定されます。  
@@ -67,7 +67,7 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
 - [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [構造体](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [方法 : 変数内で複数の値を保持する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)

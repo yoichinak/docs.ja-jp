@@ -31,7 +31,7 @@ ms.locfileid: "74332967"
 ## <a name="remarks"></a>コメント  
  `-imports` オプションは、ソースファイルの現在のセットまたは参照されているアセンブリの中で定義されているすべての名前空間をインポートします。  
   
- `-imports` で指定された名前空間のメンバーは、コンパイル時にすべてのソースコードファイルで使用できます。 [Imports ステートメント (.Net 名前空間と型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)を使用して、1つのソースコードファイルで名前空間を使用します。  
+ `-imports` で指定された名前空間のメンバーは、コンパイル時にすべてのソースコードファイルで使用できます。 [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)を使用して、1 つのソースコードファイルで名前空間を使用します。  
   
 |Visual Studio 統合開発環境で/imports を設定するには|  
 |---|  
@@ -50,6 +50,6 @@ End Module
 
 ## <a name="see-also"></a>参照
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [参照と Imports ステートメント](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

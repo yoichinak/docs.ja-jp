@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 047d566c13f03803d2e5c3bc6cce0db56df4a3f0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 94f12b4cc6cb35864fefbb3b5bb1378bec5e974c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345851"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347560"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>方法: 不特定数のパラメーターを受け取るプロシージャをオーバーロードする (Visual Basic)
 プロシージャに[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)パラメーターがある場合、パラメーター配列に1次元配列を受け取るオーバーロードされたバージョンを定義することはできません。 詳細については、「[プロシージャのオーバーロードに関する考慮事項](./considerations-in-overloading-procedures.md)」の「ParamArray パラメーターの暗黙のオーバーロード」を参照してください。  
@@ -34,7 +34,7 @@ ms.locfileid: "74345851"
   
 6. 必要に応じて、`End Sub` または `End Function` ステートメントを使用して各プロシージャを終了します。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
  次の例では、 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)パラメーターを使用して定義されたプロシージャと、それと同等のオーバーロードされたプロシージャのセットを示します。  
   
  [!code-vb[VbVbcnProcedures#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#69)]  
@@ -47,13 +47,13 @@ ms.locfileid: "74345851"
   
  オーバーロードされたバージョンのコードでは、呼び出し元のコードが `ParamArray` パラメーターに対して1つ以上の値を提供したかどうかをテストする必要はありません。 Visual Basic は、呼び出し元の引数リストと一致するバージョンに制御を渡します。  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
+## <a name="compile-the-code"></a>コードのコンパイル  
  `ParamArray` パラメーターを持つプロシージャは、オーバーロードされたバージョンのセットと等価であるため、このようなプロシージャは、これらの暗黙的なオーバーロードのいずれかに対応するパラメーターリストを使用してオーバーロードすることはできません。 詳細については、「[プロシージャのオーバーロードに関する考慮事項](./considerations-in-overloading-procedures.md)」を参照してください。  
   
-## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
+## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  無限に大きくなる可能性がある配列を処理する場合、アプリケーションの内部容量がオーバーランするリスクがあります。 パラメーター配列を受け入れる場合は、渡された呼び出し元のコードが配列の長さであるかどうかをテストし、アプリケーションに対して大きすぎる場合は適切な手順を実行する必要があります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [手順](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 9f9b89e2fea0bd69cba6d50fa1d1fb9cc3927685
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b3778a170759f685db78e7dcde219138196f9eca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348613"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344200"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>方法: オブジェクト変数で参照している型を確認する (Visual Basic)
 
@@ -50,11 +50,11 @@ ms.locfileid: "74348613"
 
     互換性の基準は、指定された型がクラス、構造体、またはインターフェイスのいずれであるかによって異なります。 一般に、オブジェクトがと同じ型であるか、指定された型を継承するか、または実装する場合、型は互換性があります。 詳細については、「 [TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)」を参照してください。
 
-## <a name="compiling-the-code"></a>コードのコンパイル
+## <a name="compile-the-code"></a>コードのコンパイル
 
 指定された型を変数または式にすることはできません。 クラス、構造体、インターフェイスなど、定義された型の名前である必要があります。 これには、`Integer` や `String`などの組み込み型が含まれます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>

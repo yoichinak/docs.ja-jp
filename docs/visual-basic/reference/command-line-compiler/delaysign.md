@@ -48,7 +48,7 @@ ms.locfileid: "72581266"
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

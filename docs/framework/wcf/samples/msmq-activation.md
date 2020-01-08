@@ -2,12 +2,12 @@
 title: MSMQ アクティベーション
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: be33e3d9377c30058c7a2ee06543c11f10251ebd
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2afcfbee69f8257e4ed0b1c352ef29e4af9ddb84
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714771"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544719"
 ---
 # <a name="msmq-activation"></a>MSMQ アクティベーション
 
@@ -25,7 +25,7 @@ ms.locfileid: "74714771"
 >
 > \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
-Windows プロセス アクティブ化サービス (WAS) は [!INCLUDE[lserver](../../../../includes/lserver-md.md)] の新しいプロセス アクティブ化機構です。WAS は、以前は HTTP ベースのアプリケーションでのみ使用できた IIS のような機能を、HTTP 以外のプロトコルを使用するアプリケーションに提供します。 Windows Communication Foundation (WCF) は、リスナーアダプターインターフェイスを使用して、WCF でサポートされている HTTP 以外のプロトコル (TCP、名前付きパイプ、MSMQ など) を介して受信されるアクティブ化要求を伝達します。 HTTP 以外のプロトコルを介して要求を受信する機能は、SMSvcHost.exe で実行されるマネージド Windows サービスによってホストされます。
+Windows プロセスアクティブ化サービス (WAS) は、Windows Server 2008 用の新しいプロセスアクティブ化機構であり、以前は HTTP ベースのアプリケーションのみが http 以外のプロトコルを使用するアプリケーションに対して使用できるようになった IIS に似た機能を提供しています。 Windows Communication Foundation (WCF) は、リスナーアダプターインターフェイスを使用して、WCF でサポートされている HTTP 以外のプロトコル (TCP、名前付きパイプ、MSMQ など) を介して受信されるアクティブ化要求を伝達します。 HTTP 以外のプロトコルを介して要求を受信する機能は、SMSvcHost.exe で実行されるマネージド Windows サービスによってホストされます。
 
 Net.Msmq リスナ アダプタ サービス (NetMsmqActivator) は、キュー内のメッセージに基づいてキューに置かれたアプリケーションをアクティブ化します。
 
@@ -347,6 +347,6 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     sc sidtype netmsmqactivator unrestricted
     ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [AppFabric のホスティングと永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)

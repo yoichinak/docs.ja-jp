@@ -60,7 +60,7 @@ E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 
 ## <a name="example"></a>例
 
-次のコードは `T2.vb` をコンパイルし、構文に関連するコンパイラ診断のコードを表示しません。
+次に示すのは `T2.vb` をコンパイルし、構文関連のコンパイラ診断に対してコードを表示しない場合のコード例です。
 
 ```console
 vbc -quiet t2.vb
@@ -68,5 +68,5 @@ vbc -quiet t2.vb
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

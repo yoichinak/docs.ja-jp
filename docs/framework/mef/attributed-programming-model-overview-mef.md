@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-ms.openlocfilehash: 63fb3d627364810fac5ddb0bfd3adc3c0421c9cc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6b1093d2e821a55cc5513b077a270748a780b71
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126385"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347624"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>属性付きプログラミング モデルの概要 (MEF)
 
@@ -199,7 +199,7 @@ public class MyClass
 }
 ```
 
-`dynamic` キーワードから推論されるコントラクト型は、任意のコントラクト型と一致します。 この場合、インポートで **常に** コントラクト名を指定する必要があります (コントラクト名が指定されていない場合、インポートはエクスポートと一致しないと見なされます)。次のエクスポートはどちらも、前のインポートと一致します。
+`dynamic` キーワードから推論されるコントラクト型は、任意のコントラクト型と一致します。 この場合、インポートで コントラクト名を指定する必要があります (コントラクト名が指定されていない場合、インポートはエクスポートと一致しないと見なされます)。次のエクスポートはどちらも、前のインポートと一致します。
 
 ```vb
 <Export("TheString", GetType(IMyAddin))>
@@ -789,7 +789,7 @@ public class MyAttribute : ExportAttribute
 }
 ```
 
-このクラスは、 `MyAttribute` というコントラクト型と `IMyData` というメタデータを含む `MyMetadata`というカスタム属性を定義しています。 `MetadataAttribute` 属性でマークされているクラスのすべてのプロパティは、カスタム属性で定義されているメタデータと見なされます 次の 2 つの宣言は等価です。
+このクラスは、 `MyAttribute` というコントラクト型と `IMyAddin` というメタデータを含む `MyMetadata`というカスタム属性を定義しています。 `MetadataAttribute` 属性でマークされているクラスのすべてのプロパティは、カスタム属性で定義されているメタデータと見なされます 次の 2 つの宣言は等価です。
 
 ```vb
 <Export(GetType(IMyAddin))>

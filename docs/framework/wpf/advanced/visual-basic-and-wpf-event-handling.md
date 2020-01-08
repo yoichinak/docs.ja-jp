@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5625b63f2a2162f8f188476bfd61bde4c717f1dd
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458298"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559860"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic と WPF のイベント処理
 特に Microsoft Visual Basic .NET 言語では、言語固有の `Handles` キーワードを使用してイベントハンドラーをインスタンスに関連付けることができます。これには、イベントハンドラーを属性または <xref:System.Windows.UIElement.AddHandler%2A> メソッドを使用してアタッチする必要があります。 ただし、インスタンスにハンドラーをアタッチする `Handles` 技法にはいくつかの制限があります。これは、`Handles` 構文が [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] イベントシステムの特定のルーティングイベント機能の一部をサポートできないためです。  
   
 ## <a name="using-handles-in-a-wpf-application"></a>WPF アプリケーションでの "ハンドル" の使用  
- `Handles` を持つインスタンスおよびイベントに接続されているイベントハンドラーはすべて、インスタンスの部分クラス宣言内で定義する必要があります。これは、要素の属性値によって割り当てられるイベントハンドラーにも必要です。 `Handles` は、<xref:System.Windows.FrameworkContentElement.Name%2A> プロパティ値 (または[X:Name ディレクティブ](../../xaml-services/x-name-directive.md)が宣言されている) を持つページ上の要素に対してのみ指定できます。 これは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] の <xref:System.Windows.FrameworkContentElement.Name%2A> によって、`Handles` 構文で必要とされるインスタンス参照が作成されるためです *。* <xref:System.Windows.FrameworkContentElement.Name%2A> 参照のない `Handles` に使用できる唯一の要素は、部分クラスを定義するルート要素のインスタンスです。  
+ `Handles` を持つインスタンスおよびイベントに接続されているイベントハンドラーはすべて、インスタンスの部分クラス宣言内で定義する必要があります。これは、要素の属性値によって割り当てられるイベントハンドラーにも必要です。 `Handles` は、<xref:System.Windows.FrameworkContentElement.Name%2A> プロパティ値 (または[X:Name ディレクティブ](../../../desktop-wpf/xaml-services/xname-directive.md)が宣言されている) を持つページ上の要素に対してのみ指定できます。 これは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] の <xref:System.Windows.FrameworkContentElement.Name%2A> によって、`Handles` 構文で必要とされるインスタンス参照が作成されるためです *。* <xref:System.Windows.FrameworkContentElement.Name%2A> 参照のない `Handles` に使用できる唯一の要素は、部分クラスを定義するルート要素のインスタンスです。  
   
  インスタンスを分離することによって、複数の要素に同じハンドラーを割り当てることができます。 `Handles` の後にコンマが含まれるように*なり*ます。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73458298"
 > XAML で同じイベントに対してイベントハンドラーを指定する場合は、Visual Basic コードで `Handles` 構文を使用しないでください。 この場合、イベントハンドラーは2回呼び出されます。  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>WPF が "ハンドル" 機能を実装する方法  
- [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ページがコンパイルされると、中間ファイルによって、<xref:System.Windows.FrameworkContentElement.Name%2A> プロパティが設定されている (または[X:Name ディレクティブ](../../xaml-services/x-name-directive.md)が宣言されている) ページ上のすべての要素への `Friend` `WithEvents` 参照が宣言されます。 各名前付きインスタンスは、`Handles`によってハンドラーに割り当てることができる要素である可能性があります。  
+ [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ページがコンパイルされると、中間ファイルは、<xref:System.Windows.FrameworkContentElement.Name%2A> プロパティが設定されている (または [x:Name Directive](../../../desktop-wpf/xaml-services/xname-directive.md) が宣言されている) ページ上のすべての要素への `Friend` `WithEvents` 参照を宣言します。 各名前付きインスタンスは、`Handles`によってハンドラーに割り当てることができる要素である可能性があります。  
   
 > [!NOTE]
 > Visual Studio では、IntelliSense を使用して、ページ内の `Handles` 参照に使用できる要素の完了を確認できます。 ただし、この場合、中間ファイルがすべての `Friends` 参照を設定できるように、1つのコンパイルパスが必要になることがあります。  

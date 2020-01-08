@@ -2,12 +2,12 @@
 title: 自己ホスト型 gRPC アプリケーション-WCF 開発者向け gRPC
 description: ASP.NET Core gRPC アプリケーションを自己ホスト型サービスとして展開する。
 ms.date: 09/02/2019
-ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 00b4ad50eae629b5b36a890d1eecf7119386c74c
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967214"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545069"
 ---
 # <a name="self-hosted-grpc-applications"></a>自己ホスト型 gRPC アプリケーション
 
@@ -34,7 +34,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 次に、Visual Studio でプロジェクトを右クリックし、コンテキストメニューから [発行] を選択するか、.NET Core CLI から [*発行*] を選択して、アプリケーションを発行します。
 
-.NET Core アプリケーションを発行するときに、*フレームワークに依存*する展開と*自己完結*型の展開のどちらを作成するかを選択できます。 フレームワークに依存する展開では、.NET Core 共有ランタイムが実行されているホストにインストールされている必要があります。 自己完結型の展開は、.NET Core ランタイムとフレームワークの完全なコピーを使用して発行され、任意のホストで実行できます。 各方法の長所と短所を含む詳細については、 [.Net Core アプリケーションの展開](https://docs.microsoft.com/dotnet/core/deploying/)に関するドキュメントを参照してください。
+.NET Core アプリケーションを発行するときに、*フレームワークに依存*する展開と*自己完結*型の展開のどちらを作成するかを選択できます。 フレームワークに依存する展開では、.NET Core 共有ランタイムが実行されているホストにインストールされている必要があります。 自己完結型の展開は、.NET Core ランタイムとフレームワークの完全なコピーを使用して発行され、任意のホストで実行できます。 各方法の長所と短所を含む詳細については、 [.Net Core アプリケーションの展開](../../core/deploying/index.md)に関するドキュメントを参照してください。
 
 .NET Core 3.0 ランタイムをホストにインストールする必要がないアプリケーションの自己完結型のビルドを発行するには、`-r` (または `--runtime`) フラグを使用して、アプリケーションに含めるランタイムを指定します。
 
@@ -77,13 +77,13 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 > [!NOTE]
 > アプリケーションが Linux サービスとして実行されていない場合、`UseSystemd` 方法では何も実行されません。
 
-次に、Visual Studio からプロジェクトを右クリックし、コンテキストメニューから [*発行*] を選択して、または .NET Core CLI から次のコマンドを使用して、アプリケーション (フレームワークに依存する、または、`linux-x64`など) を発行します。
+次に、Visual Studio でプロジェクトを右クリックし、コンテキストメニューから [*発行*] を選択するか、次のコマンドを使用して .NET Core CLI から、アプリケーションを発行します (フレームワークに依存しているか、`linux-x64`)。
 
 ```console
 dotnet publish -c Release -r linux-x64 -o ./publish
 ```
 
-`publish` ディレクトリの完全な内容を、Linux ホストのインストールフォルダーにコピーします。 サービスを登録するには、"ユニットファイル" と呼ばれる特殊なファイルを `/etc/systemd/system` ディレクトリに追加する必要があります。 このフォルダーにファイルを作成するには、ルートアクセス許可が必要です。 使用する `systemd` する識別子と `.service` 拡張子をファイルに付けます。 たとえば、`/etc/systemd/system/myapp.service` のようにします。
+`publish` ディレクトリの完全な内容を、Linux ホストのインストールフォルダーにコピーします。 サービスを登録するには、"ユニットファイル" と呼ばれる特殊なファイルを `/etc/systemd/system` ディレクトリに追加する必要があります。 このフォルダーにファイルを作成するには、ルートアクセス許可が必要です。 使用する `systemd` する識別子と `.service` 拡張子をファイルに付けます。 たとえば、 `/etc/systemd/system/myapp.service`のようにします。
 
 この例に示すように、サービスファイルは INI 形式を使用します。
 
@@ -150,7 +150,7 @@ sudo journalctl -u myapp
 
 運用環境で gRPC アプリケーションを実行する場合は、信頼された証明機関 (CA) からの TLS 証明書を使用する必要があります。 この CA は、パブリック CA、または組織の内部の ca のいずれかになります。
 
-Windows ホストでは、 [X509Store クラス](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0)を使用して、セキュリティで保護された[証明書ストア](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores)から証明書を読み込むことができます。 `X509Store` クラスは、一部の Linux ホスト上の OpenSSL キーストアでも使用できます。
+Windows ホストでは、<xref:System.Security.Cryptography.X509Certificates.X509Store> クラスを使用して、セキュリティで保護された[証明書ストア](/windows/win32/seccrypto/managing-certificates-with-certificate-stores)から証明書を読み込むことができます。 `X509Store` クラスは、一部の Linux ホスト上の OpenSSL キーストアでも使用できます。
 
 証明書は、 [X509Certificate2 コンストラクター](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0)のいずれかを使用して作成することもできます。これには、ファイル (強力なパスワードで保護されたファイル `.pfx` など) から、またはセキュリティで保護されたストレージサービスから取得したバイナリデータ (たとえば、 [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)) を使用します。
 

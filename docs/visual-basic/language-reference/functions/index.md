@@ -16,7 +16,7 @@ ms.locfileid: "74837078"
 このセクションのトピックには、Visual Basic ランタイムのメンバー関数のテーブルが含まれています。  
   
 > [!NOTE]
-> 関数を作成して呼び出すこともできます。 詳細については、「[関数ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)」および「[方法 : 値を返すプロシージャを作成する](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md)」を参照してください。  
+> 関数を作成して呼び出すこともできます。 詳細については、「[Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)」および「[方法 : 値を返すプロシージャを作成する](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [変換関数](../../../visual-basic/language-reference/functions/conversion-functions.md)  

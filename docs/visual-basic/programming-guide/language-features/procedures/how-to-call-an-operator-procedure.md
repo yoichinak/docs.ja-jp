@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: a685be7cc3b346b271413e2c29faae5a839313f4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a977b17d4b2c797bbe38d289a57f3d9d31fa64fa
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340244"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345967"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>方法: 演算子プロシージャを呼び出す (Visual Basic)
 演算子プロシージャを呼び出すには、式の中で演算子記号を使用します。 変換演算子の場合は、 [CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)を呼び出して、あるデータ型から別のデータ型に値を変換します。  
@@ -41,7 +41,7 @@ ms.locfileid: "74340244"
   
 3. `CType` は変換演算子プロシージャを呼び出し、変換された値を返します。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
  次の例では、2つの <xref:System.TimeSpan> 構造体を作成し、それらをまとめて追加し、結果を3番目の <xref:System.TimeSpan> 構造体に格納します。 <xref:System.TimeSpan> 構造体は、いくつかの標準演算子をオーバーロードする演算子プロシージャを定義します。  
   
  [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
@@ -50,10 +50,10 @@ ms.locfileid: "74340244"
   
  メッセージ交換演算子プロシージャを呼び出す例については、「[方法: 演算子を定義するクラスを使用する](./how-to-use-a-class-that-defines-operators.md)」を参照してください。  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
+## <a name="compile-the-code"></a>コードのコンパイル  
  使用するクラスまたは構造体で、使用する演算子が定義されていることを確認してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [演算子プロシージャ](./operator-procedures.md)
 - [方法 : 演算子を定義する](./how-to-define-an-operator.md)
