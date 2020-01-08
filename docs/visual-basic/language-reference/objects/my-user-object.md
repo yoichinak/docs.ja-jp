@@ -21,7 +21,7 @@ ms.locfileid: "74350647"
  詳細については、「[ユーザーデータへのアクセス](../../../visual-basic/developing-apps/programming/accessing-user-data.md)」を参照してください。  
   
 ## <a name="requirements"></a>要件  
- **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>関連項目
 
