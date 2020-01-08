@@ -1,5 +1,5 @@
 ---
-title: 型リスト (Visual Basic)
+title: 型リスト
 ms.date: 07/20/2015
 f1_keywords:
 - StructureConstraint
@@ -53,14 +53,13 @@ ms.locfileid: "74352774"
 
 すべてのジェネリックプログラミング要素は、少なくとも1つの型パラメーターを受け取る必要があります。 型パラメーターは、ジェネリック型のインスタンスを作成するときにクライアントコードによって指定される特定の型 (構築された*要素*) のプレースホルダーです。 ジェネリッククラス、構造体、インターフェイス、プロシージャ、またはデリゲートを定義できます。
 
-ジェネリック型を定義する場合の詳細については、「[Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」を参照してください。型パラメーター名の詳細については、「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
-
+ジェネリック型を定義する場合の詳細については、「[Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」を参照してください。 型パラメーター名の詳細については、「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。
 
 ## <a name="rules"></a>ルール
 
-- **かっこ。 型パラメーターリストを指定する場合は、それをかっこで囲む必要があります。[また、with キーワードを](../../../visual-basic/language-reference/statements/of-clause.md)使用してリストを導入する必要があります。 `Of` は、リストの先頭に一度だけ記述します。
+- **Parentheses.** 型パラメータのリストを指定する場合は、リストをかっこで囲み、[Of](../../../visual-basic/language-reference/statements/of-clause.md) キーワードを使って特定する必要があります。 `Of` はリストの先頭に一度だけ記述します。 `Of` は、リストの先頭に一度だけ記述します。
 
-- **Constraints.** 型パラメーターに対する*制約*の一覧には、次の項目を任意の組み合わせで含めることができます。
+- **制約。** ** 型パラメータに対する制約のリストには、次の項目を任意の組み合わせで定義できます。
 
   - 任意の数のインターフェイス。 指定された型は、このリスト内のすべてのインターフェイスを実装する必要があります。
 
@@ -76,9 +75,9 @@ ms.locfileid: "74352774"
 
 ## <a name="behavior"></a>動作
 
-- **コンパイル時の置換。** ジェネリックプログラミング要素から構築された型を作成する場合は、型パラメーターごとに定義済みの型を指定します。 Visual Basic コンパイラは、ジェネリック要素内で `typename` が発生するたびに、指定された型を置き換えます。
+- **コンパイル時の代入。** ジェネリックプログラミング要素から構築された型を作成する場合は、型パラメーターごとに定義済みの型を指定します。 Visual Basic コンパイラは、ジェネリック要素内で `typename` が発生するたびに、指定された型を置き換えます。
 
-- **制約が存在しません。** 型パラメーターに対して制約を指定しない場合、コードは、その型パラメーターの[Object データ型](../../../visual-basic/language-reference/data-types/object-data-type.md)でサポートされている操作とメンバーに制限されます。
+- **制約の省略。** 型パラメーターに対して制約を指定しない場合、コードは、その型パラメーターの [Object データ型](../../../visual-basic/language-reference/data-types/object-data-type.md)でサポートされている操作とメンバーに制限されます。
 
 ## <a name="example"></a>例
 
@@ -103,7 +102,7 @@ ms.locfileid: "74352774"
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)
 - [New 演算子](../../../visual-basic/language-reference/operators/new-operator.md)
 - [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object データ型](../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)

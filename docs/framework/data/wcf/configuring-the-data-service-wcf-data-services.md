@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 80878c18143eaa603e624c8be63f11af91cfcfb6
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 6d6ce6ace41894672d285ff8f0733c1b9d52562c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569299"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346148"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>データ サービスの構成 (WCF Data Services)
 WCF Data Services を使用すると、Open Data Protocol (OData) フィードを公開するデータサービスを作成できます。 これらのフィードには、さまざまなデータ ソースからのデータが含まれることがあります。 WCF Data Services は、データプロバイダーを使用して、このデータを OData フィードとして公開します。 これらのプロバイダーには、Entity Framework プロバイダー、リフレクション プロバイダー、およびカスタム データ サービス プロバイダー インターフェイスのセットがあります。 プロバイダーの実装は、サービスのデータ モデルを定義します。 詳細については、「 [Data Services プロバイダー](data-services-providers-wcf-data-services.md)」を参照してください。  
@@ -29,15 +29,15 @@ WCF Data Services を使用すると、Open Data Protocol (OData) フィード�
   
 |メンバー|動作|  
 |------------|--------------|  
-|<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|`$count` パス セグメントおよび `$inlinecount` クエリ オプションを使用してデータ サービスに送信したカウント要求を無効にできます。 詳細については、「 [OData: URI 規則](https://go.microsoft.com/fwlink/?LinkId=185564)」を参照してください。|  
-|<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|`$select` クエリ オプションを使用してデータ サービスに送信された要求のデータ プロジェクションのサポートを無効にできます。 詳細については、「 [OData: URI 規則](https://go.microsoft.com/fwlink/?LinkId=185564)」を参照してください。|  
+|<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|`$count` パス セグメントおよび `$inlinecount` クエリ オプションを使用してデータ サービスに送信したカウント要求を無効にできます。 詳細については、「 [OData: URI 規則](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)」を参照してください。|  
+|<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|`$select` クエリ オプションを使用してデータ サービスに送信された要求のデータ プロジェクションのサポートを無効にできます。 詳細については、「 [OData: URI 規則](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)」を参照してください。|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeAccess%2A>|<xref:System.Data.Services.Providers.IDataServiceMetadataProvider> インターフェイスを使用して定義された動的メタデータ プロバイダーのメタデータでデータ型を公開します。|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeConversion%2A>|ペイロードに含まれている型を、要求で指定された実際のプロパティ型にデータ サービス ランタイムで変換するかどうかを指定できます。|  
 |<xref:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete%2A>|2 つのエンティティ間のリレーションシップ リンクを削除するときに、関連エンティティで登録済みの変更インターセプターを呼び出すかどうかを指定できます。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|単一のバッチで許可される変更セットおよびクエリ操作の数を制限できます。 詳細については、「 [OData: バッチ](https://go.microsoft.com/fwlink/?LinkId=185602)操作とバッチ[処理操作](batching-operations-wcf-data-services.md)」を参照してください。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|単一のバッチで許可される変更セットおよびクエリ操作の数を制限できます。 詳細については、「 [OData: バッチ](https://www.odata.org/documentation/odata-version-2-0/batch-processing/)操作とバッチ[処理操作](batching-operations-wcf-data-services.md)」を参照してください。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|単一の変更セットに含めることができる変更の数を制限できます。 詳細については、「[方法: データサービスの結果のページングを有効](how-to-enable-paging-of-data-service-results-wcf-data-services.md)にする」を参照してください。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|`$expand` クエリ演算子を使用して 1 つの要求に含めることのできる関連エンティティの数を制限することによって応答のサイズを制限できます。 詳細については、「 [OData: URI 規則](https://go.microsoft.com/fwlink/?LinkId=185564)」および「[遅延コンテンツの読み込み](loading-deferred-content-wcf-data-services.md)」を参照してください。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|`$expand` クエリ演算子を使用して 1 つの要求に含めることのできる関連エンティティのグラフの深度を制限することによって応答のサイズを制限できます。 詳細については、「 [OData: URI 規則](https://go.microsoft.com/fwlink/?LinkId=185564)」および「[遅延コンテンツの読み込み](loading-deferred-content-wcf-data-services.md)」を参照してください。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|`$expand` クエリ演算子を使用して 1 つの要求に含めることのできる関連エンティティの数を制限することによって応答のサイズを制限できます。 詳細については、「 [OData: URI 規則](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)」および「[遅延コンテンツの読み込み](loading-deferred-content-wcf-data-services.md)」を参照してください。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|`$expand` クエリ演算子を使用して 1 つの要求に含めることのできる関連エンティティのグラフの深度を制限することによって応答のサイズを制限できます。 詳細については、「 [OData: URI 規則](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)」および「[遅延コンテンツの読み込み](loading-deferred-content-wcf-data-services.md)」を参照してください。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|1 つの POST 要求に挿入できるエンティティの数を制限できます。|  
 |<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|データ サービスによって使用される Atom プロトコルのバージョンを定義します。 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> の値が <xref:System.Data.Services.Common.DataServiceProtocolVersion>の最大値よりも小さい値に設定されている場合、データサービスにアクセスするクライアントは WCF Data Services の最新の機能を使用できません。 詳細については、「[データサービスのバージョン管理](data-service-versioning-wcf-data-services.md)」を参照してください。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|データ フィードとして返される各エンティティ セットのエンティティの数を制限することによって応答のサイズを制限できます。|  
@@ -71,7 +71,7 @@ WCF Data Services を使用すると、Open Data Protocol (OData) フィード�
   
  <sup>1</sup>この例では、`Address` は `StreetAddress`という名前のプロパティを持つ `Customers` エンティティの複合型プロパティを表します。 Northwind データ サービスによって使用されるモデルでは、この複合型は明示的に定義されていません。 Entity Framework プロバイダーを使用してデータ モデルを定義している場合、Entity Data Model ツールを使用して、このような複合型を定義できます。 詳細については、「[方法: 複合型を作成および変更する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))」を参照してください。  
   
- <sup>2</sup>この URI は、バイナリラージオブジェクト (BLOB) を返すプロパティがメディアリンクエントリであるエンティティ (この場合は `Customers`) に属するメディアリソースとして定義されている場合にサポートされます。 詳細については、「 [Streaming Provider](streaming-provider-wcf-data-services.md)」を参照してください。  
+ <sup>2</sup>この URI は、バイナリラージオブジェクト (BLOB) を返すプロパティがメディアリンクエントリであるエンティティ (この場合は `Customers`) に属するメディアリソースとして定義されている場合にサポートされます。 詳細については、[ストリーミング プロバイダー](streaming-provider-wcf-data-services.md)を参照してください。  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>バージョン管理の要件  
@@ -83,7 +83,7 @@ WCF Data Services を使用すると、Open Data Protocol (OData) フィード�
   
  詳細については、「[データサービスのバージョン管理](data-service-versioning-wcf-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [WCF Data Services の定義](defining-wcf-data-services.md)
 - [データ サービスのホスティング](hosting-the-data-service-wcf-data-services.md)

@@ -78,7 +78,7 @@ End Operator
 
 |要素|説明|
 |----------|-----------------|
-|`ByVal`|省略可能ですが、渡すメカニズムは[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)である必要があります。|
+|`ByVal`|省略可能ですが、引渡し方法は常に [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) である必要があります。|
 |`operandname`|必須。 このオペランドを表す変数の名前。 「[宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
 |`operandtype`|`Option Strict` が `On`場合を除き、省略可能です。 このオペランドのデータ型。|
 
@@ -158,9 +158,10 @@ End Operator
 
 同様に、クラスまたは構造体の戻り値の型を使用して同じオペランドで `Or` を定義し、クラスまたは構造体に `IsTrue` を定義している場合は、`OrElse` を使用できます。
 
-## <a name="widening-and-narrowing-conversions"></a>Widening and Narrowing Conversions
+## <a name="widening-and-narrowing-conversions"></a>拡大変換と縮小変換
 
-*拡大変換*は実行時に常に成功しますが、*縮小変換*は実行時に失敗する可能性があります。 詳細については、「 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
+*拡大変換*は実行時に常に成功しますが、*縮小変換*は実行時に失敗する可能性があります。詳細については、「[拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
+
 
 `Widening`する変換プロシージャを宣言する場合、プロシージャコードでエラーが発生しないようにする必要があります。 これは、次のことを意味します。
 

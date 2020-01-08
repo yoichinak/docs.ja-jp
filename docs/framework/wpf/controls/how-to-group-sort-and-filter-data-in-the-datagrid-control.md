@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], group
 - DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
-ms.openlocfilehash: 2632566b5b55ae641d2750e903bf94cdc681f8f8
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 622b64fd7738b02cd72131e7e9fe91c04314b1d0
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460239"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559475"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>方法: DataGrid コントロールでデータをグループ化、並べ替え、およびフィルター処理する
 
@@ -42,9 +42,9 @@ ms.locfileid: "73460239"
     [!code-csharp[DataGrid_GroupSortFilter#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#101)]
     [!code-vb[DataGrid_GroupSortFilter#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#101)]
 
-2. XAML で、コレクションクラスのインスタンスを作成し、 [X:Key ディレクティブ](../../xaml-services/x-key-directive.md)を設定します。
+2. XAML で、コレクションクラスのインスタンスを作成し、 [X:Key ディレクティブ](../../../desktop-wpf/xaml-services/xkey-directive.md)を設定します。
 
-3. XAML で、<xref:System.Windows.Data.CollectionViewSource> クラスのインスタンスを作成し、 [X:Key ディレクティブ](../../xaml-services/x-key-directive.md)を設定し、コレクションクラスのインスタンスを <xref:System.Windows.Data.CollectionViewSource.Source%2A>として設定します。
+3. XAML で、<xref:System.Windows.Data.CollectionViewSource> クラスのインスタンスを作成し、 [X:Key ディレクティブ](../../../desktop-wpf/xaml-services/xkey-directive.md)を設定し、コレクションクラスのインスタンスを <xref:System.Windows.Data.CollectionViewSource.Source%2A>として設定します。
 
     [!code-xaml[DataGrid_GroupSortFilter#201](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/WindowSnips1.xaml#201)]
 
@@ -132,7 +132,7 @@ ms.locfileid: "73460239"
 
 または、フィルター処理ロジックを提供するメソッドを作成し、フィルターを適用するように <xref:System.Windows.Data.CollectionView.Filter%2A?displayProperty=nameWithType> プロパティを設定することによって、<xref:System.Windows.Controls.DataGrid> 内の項目をフィルター処理できます。 このメソッドの例については、「[ビュー内のデータをフィルター処理](../data/how-to-filter-data-in-a-view.md)する」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、<xref:System.Windows.Data.CollectionViewSource> 内の `Task` データをグループ化、並べ替え、およびフィルター処理し、<xref:System.Windows.Controls.DataGrid>でグループ化、並べ替え、およびフィルター選択された `Task` データを表示します。 <xref:System.Windows.Data.CollectionViewSource> は、<xref:System.Windows.Controls.DataGrid>の <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> として使用されます。 グループ化、並べ替え、およびフィルター処理は <xref:System.Windows.Data.CollectionViewSource> で実行され、<xref:System.Windows.Controls.DataGrid> UI に表示されます。
 

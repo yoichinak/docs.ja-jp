@@ -12,7 +12,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346181"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML リテラルと XML 1.0 仕様 (Visual Basic)
-Visual Basic の XML リテラル構文は、拡張マークアップ言語 (XML) 1.0 仕様の大部分をサポートしています。 XML 1.0 仕様の詳細については、W3C Web サイトの「[拡張マークアップ言語 (xml) 1.0](https://www.w3.org/TR/xml) 」を参照してください。  
+Visual Basic の XML リテラル構文は、拡張マークアップ言語 (XML) 1.0 仕様の大部分をサポートしています。 XML 1.0 仕様の詳細については、W3C Web サイトの「[拡張マークアップ言語 (XML) 1.0](https://www.w3.org/TR/xml) 」を参照してください。  
   
 ## <a name="what-visual-basic-does-not-support"></a>サポートされていない Visual Basic  
   

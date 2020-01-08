@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 05a39388e8aa9681af60cf86a3df8346d744b69e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 293537ad33c8e751d49d820fc57ea525e68bc203
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345312"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347774"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic における有効期間
 宣言された要素の*有効*期間は、その要素が使用可能になるまでの期間です。 変数は、有効期間が設定されている唯一の要素です。 このため、コンパイラはプロシージャのパラメーターと関数の戻り値を変数の特殊なケースとして扱います。 変数の有効期間は、値を保持できる期間を表します。 その値は有効期間を通じて変化することがありますが、常に値が保持されます。  
@@ -52,7 +52,7 @@ ms.locfileid: "74345312"
 ## <a name="containing-elements-for-static-variables"></a>静的変数の要素を含む  
  静的ローカル変数は、クラス内で、つまり、そのクラスのプロシージャ内で宣言できます。 ただし、構造体の内部で静的ローカル変数を宣言することはできません。構造体のメンバーであるか、その構造内のプロシージャのローカル変数として宣言することはできません。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
   
 ### <a name="description"></a>説明  
  次の例では、 [Static](../../../../visual-basic/language-reference/modifiers/static.md)キーワードを使用して変数を宣言しています。 ( [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)で `Static`などの修飾子が使用されている場合は、`Dim` キーワードは必要ありません)。  
@@ -65,20 +65,20 @@ ms.locfileid: "74345312"
   
  `Static`を使用せずに `applesSold` が宣言されている場合、以前に蓄積された値は `runningTotal`の呼び出し間で保持されません。 次に `runningTotal` が呼び出されたときに、`applesSold` は再作成されて0に初期化され、`runningTotal` は呼び出されたのと同じ値を返します。  
   
-### <a name="compiling-the-code"></a>コードのコンパイル  
+### <a name="compile-the-code"></a>コードのコンパイル  
  静的ローカル変数の値は、その宣言の一部として初期化できます。 `Static`する配列を宣言する場合は、そのランク (次元の数)、各次元の長さ、および個々の要素の値を初期化できます。  
   
 ### <a name="security"></a>セキュリティ  
  前の例では、モジュールレベルで `applesSold` を宣言することで、同じ有効期間を生成できます。 ただし、このように変数のスコープを変更した場合、プロシージャに排他的にアクセスすることはできなくなります。 他のプロシージャが `applesSold` にアクセスしてその値を変更する可能性があるため、実行中の合計が不安定になり、コードの保守が困難になる可能性があります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic 内のスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Visual Basic のアクセスレベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic でのアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [変数](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

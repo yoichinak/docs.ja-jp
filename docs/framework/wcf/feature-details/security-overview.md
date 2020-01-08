@@ -1,16 +1,16 @@
 ---
-title: セキュリティの概要-WCF
+title: セキュリティの概要
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: ae03684449e902c0d05744a19671169f2e0b8be2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 58057709e2d5c5e34d0aa37158ea9b033840f840
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949355"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344702"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Windows Communication Foundation セキュリティの概要
 Windows Communication Foundation (WCF) は、SOAP メッセージベースの分散プログラミングプラットフォームです。データを保護するには、クライアントとサービス間のメッセージをセキュリティで保護することが不可欠です。 WCF では、既存のセキュリティインフラストラクチャと SOAP メッセージに対して認識されているセキュリティ標準の両方に基づいて、セキュリティで保護されたメッセージを交換するための相互運用可能なプラットフォームが提供されます。  
@@ -68,7 +68,7 @@ Windows Communication Foundation (WCF) は、SOAP メッセージベースの分
 ### <a name="standards-and-interoperability"></a>標準と相互運用  
  既存の大規模展開の世界では、均一性はほとんどありません。 分散型のコンピューティングまたは通信のプラットフォームでは、さまざまなベンダーから提供される技術を相互運用する必要があります。 同様に、セキュリティも相互運用可能である必要があります。  
   
- 相互運用可能なセキュリティ システムを実現するため、Web サービス業界で活動する企業はさまざまな標準を作成してきました。 特にセキュリティについては、いくつかの注目すべき標準が提案されています。WS-SECURITY:SOAP メッセージセキュリティ (OASIS 標準の本文および以前の WS-SECURITY と呼ばれていたもので受け入れられます)、WS-TRUST、WS-I Ws-secureconversation、および Ws-securitypolicy。  
+ 相互運用可能なセキュリティ システムを実現するため、Web サービス業界で活動する企業はさまざまな標準を作成してきました。 特にセキュリティに関して、注目すべき標準がいくつか提案されています。それは、WS-Security の SOAP メッセージ セキュリティ (標準化団体の OASIS で認められ正式には WS-Security として知られる)、WS-Trust、WS-SecureConversation、および WS-SecurityPolicy です。  
   
  WCF では、さまざまな相互運用性のシナリオがサポートされています。 <xref:System.ServiceModel.BasicHttpBinding> クラスは、基本セキュリティ プロファイル (BSP) を対象とし、<xref:System.ServiceModel.WSHttpBinding> クラスは、WS-Security 1.1 や WS-SecureConversation などの最新のセキュリティ標準を対象とします。 これらの標準に準拠することで、WCF セキュリティは、Microsoft Windows 以外のオペレーティングシステムやプラットフォームでホストされている Web サービスと相互運用および統合できます。  
   
@@ -92,10 +92,10 @@ Windows Communication Foundation (WCF) は、SOAP メッセージベースの分
 ### <a name="access-control"></a>アクセス制御  
  *アクセス制御*は、承認とも呼ばれます。 *承認*により、異なるユーザーがデータを表示するための異なる特権を持つことができます。 たとえば、企業の人事ファイルには従業員の機密データが含まれているため、管理者だけが従業員データの参照を許可されます。 また、管理者は直接報告書のデータのみを参照できます。 このような場合、アクセス制御は、ロール ("manager") と管理者の特定 ID の両方に基づいて行われます (ある管理者が別の管理者の部下のレコードを参照できないようにします)。  
   
- WCF では、アクセス制御機能は、共通言語ランタイム (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute>との統合、および*id モデル*と呼ばれる一連の api によって提供されます。 アクセス制御と要求ベースの承認の詳細については、「[セキュリティの拡張](../../../../docs/framework/wcf/extending/extending-security.md)」を参照してください。  
+ WCF では、アクセス制御機能は、共通言語ランタイム (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> および*id モデル*と呼ばれる一連の api との統合によって提供されます。 アクセス制御と要求ベースの承認の詳細については、「[セキュリティの拡張](../../../../docs/framework/wcf/extending/extending-security.md)」を参照してください。  
   
 ### <a name="auditing"></a>監査  
- *監査*とは、Windows イベントログへのセキュリティイベントのログ記録です。 認証の失敗 (または成功) などのセキュリティ関連のイベントをログに記録できます。 詳細については、「[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)」を参照してください。 プログラミングの詳細につい[ては、「方法:セキュリティイベント](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)を監査します。  
+ *監査*とは、Windows イベントログへのセキュリティイベントのログ記録です。 認証の失敗 (または成功) などのセキュリティ関連のイベントをログに記録できます。 詳細については、「[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)」を参照してください。 プログラミングの詳細については、「[方法: セキュリティイベントを監査](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)する」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -103,7 +103,7 @@ Windows Communication Foundation (WCF) は、SOAP メッセージベースの分
 - [サービスのセキュリティ保護](../../../../docs/framework/wcf/securing-services.md)
 - [一般的なセキュリティ シナリオ](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [バインディングとセキュリティ](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [認証](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
 - [承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [フェデレーションと発行済みトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
