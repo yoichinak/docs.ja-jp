@@ -7,14 +7,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2fd602901955be218379386d8ed1b7c14b30078c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4503e2cff18f4aa901d20c76cfe4076a7fed3600
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974516"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715775"
 ---
 # <a name="net-framework-tools"></a>.NET Framework ツール
 

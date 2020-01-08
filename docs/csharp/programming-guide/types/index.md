@@ -1,6 +1,5 @@
 ---
 title: 型 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - value types [C#]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: bf520c57f5578f82a0d00e4c7db40e43b308eddf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345662"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711884"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 

@@ -4,13 +4,12 @@ description: Mac、Linux、および Windows でアプリとライブラリを�
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.custom: seodec18
-ms.openlocfilehash: b4d3f23f457e913f62d508d9b0f57168bc101786
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7039d5877ecbd4477d64991321a7fc46cadc2848
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343344"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714042"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>これらのチュートリアルを詳しく確認して .NET Core と .NET Core SDK ツールについて学習する
 

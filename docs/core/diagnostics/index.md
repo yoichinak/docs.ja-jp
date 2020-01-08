@@ -1,16 +1,14 @@
 ---
 title: 診断ツールの概要 - .NET Core
 description: .NET Core アプリケーションの診断に使用できるツールと手法の概要。
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 12/17/2019
 ms.topic: overview
-ms.openlocfilehash: 20374c53769bf19901b042e0909175718665b523
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0a78ec6c88f5323104277cddea4480a5e13b4e41
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341476"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715580"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core で使用できる診断ツール
 

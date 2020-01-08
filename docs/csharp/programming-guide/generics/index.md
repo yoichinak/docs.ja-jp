@@ -1,17 +1,16 @@
 ---
 title: ジェネリック - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 4ff0dd872e1b09e993c947f008c964ad204ad09a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 330aa74538ab15d1de19d80b0f57b3d0921c5c55
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039355"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712157"
 ---
 # <a name="generics-c-programming-guide"></a>ジェネリック (C# プログラミング ガイド)
 

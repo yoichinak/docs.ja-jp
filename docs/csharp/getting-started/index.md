@@ -5,13 +5,12 @@ helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
 ms.date: 04/05/2019
-ms.custom: seoapril2019
-ms.openlocfilehash: 6255720ad5a23bdee7fe46a6c4b9c76f045b2d06
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: aff810aa7ba533682f9976fbb59ef4d7ec43ca58
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342779"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713927"
 ---
 # <a name="get-started-with-c"></a>C\# 入門
 

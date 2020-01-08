@@ -2,13 +2,12 @@
 title: .NET Core アプリケーション展開
 description: .NET Core アプリケーションを展開する方法について説明します。
 ms.date: 12/03/2018
-ms.custom: seodec18
-ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089192"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740811"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core アプリケーションの展開
 
@@ -64,7 +63,7 @@ FDD および SCD の展開では別個のホスト実行可能ファイルを�
 
 - .NET Core だけでなくアプリおよびそのサードパーティの依存関係を含める必要があるので、展開パッケージは比較的大きくなります。
 
-  .NET Core 2.0 以降では、.NET Core の ["*グローバリゼーション インバリアント モード*"](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) を使用することで、Linux システムでの展開のサイズを約 28 MB 小さくすることができます。 通常、Linux 上の .NET Core は [ICU ライブラリ](http://icu-project.org)に依存してグローバリゼーションをサポートします。 インバリアント モードでは、ライブラリは展開に含まれず、すべてのカルチャが[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)のように動作します。
+  .NET Core 2.0 以降では、.NET Core の ["*グローバリゼーション インバリアント モード*"](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) を使用することで、Linux システムでの展開のサイズを約 28 MB 小さくすることができます。 通常、Linux 上の .NET Core は [ICU ライブラリ](http://icu-project.org)に依存してグローバリゼーションをサポートします。 インバリアント モードでは、ライブラリは展開に含まれず、すべてのカルチャが[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)のように動作します。
 
 - 多数の自己完結型の .NET Core アプリをシステムに展開すると、各アプリが .NET Core ファイルを複製するので、非常に多くのディスク領域を使用する可能性があります。
 
