@@ -1,5 +1,5 @@
 ---
-title: '方法: キー コンテナーに非対称キーを格納する'
+title: '方法 : キー コンテナーに非対称キーを格納する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,23 +15,21 @@ helpviewer_keywords:
 - encryption [.NET Framework], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8edb88d13732650e00292d63ad4e1975a97ac704
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 8ca4c4c5b1257411ecdf86858040bf428a9e6ce0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291632"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706059"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>方法: キー コンテナーに非対称キーを格納する
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>方法 : キー コンテナーに非対称キーを格納する
 非対称秘密キーは、ローカル コンピューターにそのまま平文として保存しないでください。 秘密キーを格納する必要がある場合は、キー コンテナーを使用することをお勧めします。 キー コンテナーの詳細については、「[コンピューター レベルおよびユーザー レベルの RSA キー コンテナーについて](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))」を参照してください。  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>非対称キーを作成し、キー コンテナーに格納するには  
   
-1. @No__t-0 クラスの新しいインスタンスを作成し、キーコンテナーを呼び出す名前を <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> フィールドに渡します。  
+1. <xref:System.Security.Cryptography.CspParameters> クラスの新しいインスタンスを作成し、キーコンテナーを呼び出す名前を <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> フィールドに渡します。  
   
-2. @No__t 0 クラス (通常は**RSACryptoServiceProvider**または**DSACryptoServiceProvider**) から派生したクラスの新しいインスタンスを作成し、以前に作成した**cspparameters**オブジェクトをそのコンストラクターに渡します。  
+2. <xref:System.Security.Cryptography.AsymmetricAlgorithm> クラス (通常は**RSACryptoServiceProvider**または**DSACryptoServiceProvider**) から派生したクラスの新しいインスタンスを作成し、以前に作成した**cspparameters**オブジェクトをそのコンストラクターに渡します。  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>キー コンテナーからキーを削除するには  
   
@@ -43,7 +41,7 @@ ms.locfileid: "72291632"
   
 4. **AsymmetricAlgorithm** から派生したクラスの **Clear** メソッドを呼び出します。 このメソッドは、クラスのすべてのリソースを解放し、キー コンテナーを消去します。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
  非対称キーを作成し、それをキー コンテナーへ格納し、後でキーを取得し、最後にキー コンテナーからキーを削除する方法の例を次に示します。  
   
  `GenKey_SaveInContainer` メソッドと `GetKeyFromContainer` メソッドのコードは類似していることに注意してください。  <xref:System.Security.Cryptography.CspParameters> オブジェクトのキー コンテナー名を指定した場合、<xref:System.Security.Cryptography.AsymmetricAlgorithm> プロパティまたは <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> プロパティを true に設定して、指定したキー コンテナーを <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> オブジェクトに渡すと、次のような処理が行われます。  指定した名前のキー コンテナーが存在しない場合、コンテナーが作成されてキーが保持されます。  指定した名前のキー コンテナーが存在する場合、そのコンテナー内のキーが現在の <xref:System.Security.Cryptography.AsymmetricAlgorithm> オブジェクトに自動的に読み込まれます。  つまり、最初に実行される `GenKey_SaveInContainer` メソッドのコードはこのキーを保持し、2 番目に実行される `GetKeyFromContainer` メソッドのコードはこのキーを読み込みます。  

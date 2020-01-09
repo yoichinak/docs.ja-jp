@@ -9,13 +9,12 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-author: KrzysztofCwalina
-ms.openlocfilehash: 967692092186b81802a7ab635ea8fe4dbacd49ed
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e3a7fa0f284ebf028a18cae37c050d7ceda9bb79
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611519"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709388"
 ---
 # <a name="exceptions-and-performance"></a>例外とパフォーマンス
 例外に関する一般的な懸念事項の1つとして、定期的に失敗するコードに例外を使用すると、実装のパフォーマンスが許容されなくなることがあります。 これは有効な問題です。 メンバーが例外をスローすると、パフォーマンスが低下することがあります。 ただし、エラーコードの使用を禁止する例外ガイドラインに厳密に準拠しながら、パフォーマンスを向上させることができます。 このセクションで説明する2つのパターンは、この方法を示しています。
@@ -25,7 +24,7 @@ ms.locfileid: "69611519"
  パフォーマンスを向上させるために、次の 2 つのセクションで説明するように、Tester-Doer パターンまたは Try-Parse パターンを使用することができます。
 
 ## <a name="tester-doer-pattern"></a>Tester-Doer パターン
- メンバーを2つに分割すると、例外スローメンバーのパフォーマンスを向上させることができます。 では、 <xref:System.Collections.Generic.ICollection%601>インターフェイスの<xref:System.Collections.Generic.ICollection%601.Add%2A>メソッドを見てみましょう。
+ メンバーを2つに分割すると、例外スローメンバーのパフォーマンスを向上させることができます。 <xref:System.Collections.Generic.ICollection%601> インターフェイスの <xref:System.Collections.Generic.ICollection%601.Add%2A> メソッドを見てみましょう。
 
 ```csharp
 ICollection<int> numbers = ...
@@ -66,15 +65,15 @@ public struct DateTime
 
  このパターンを使用する場合は、厳密な用語で try 機能を定義する必要があります。 明確に定義された try 以外の理由でメンバーが失敗した場合でも、メンバーは対応する例外をスローする必要があります。
 
- **✓ CONSIDER** 例外に関連するパフォーマンスの問題を回避するため、一般的なシナリオで例外をスローする可能性のあるメンバー向けに Try-Parse を検討します。
+ **✓ CONSIDER** Try 解析パターンが例外をスローするメンバーの共通のパフォーマンスの問題を回避するシナリオに関連する例外。
 
  **✓ DO** このパターンを実装するメソッドにプレフィックス"Try"とブール型の戻り値の型を使用します。
 
- **✓ DO** Try-Parse パターンを使用する各メンバーに対して例外をスローするメンバーを提供します。
+ **✓ DO** Try 解析パターンを使用する各メンバーに対して例外スローのメンバーを提供します。
 
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*
+ *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*
 
- *次のフレームワークの設計ガイドラインから[、ピアソン教育, inc. のアクセス許可によって再度ご説明します。Microsoft Windows 開発シリーズの一部として、Addison-Wesley](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Professional によって2008年10月22日公開された、再利用可能な .net ライブラリの Krzysztof Cwalina および Brad abrams の規則、表現、パターン。*
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
 
 ## <a name="see-also"></a>関連項目
 

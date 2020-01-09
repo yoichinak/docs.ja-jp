@@ -3,14 +3,12 @@ title: 変換での結果ツリー フラグメントの処理
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e3b99606698124455ca9b325042ffbe430915aee
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: 33d66b0a835be8bacab76ef9295ce8158385d8d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170772"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710259"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>変換での結果ツリー フラグメントの処理
 
@@ -113,7 +111,7 @@ ms.locfileid: "67170772"
 
 このスタイル シートを使用して XML を変換した結果を次に示します。
 
-## <a name="output"></a>Output
+## <a name="output"></a>出力
 
 ```xml
 <first_book xmlns:user="urn:books">Book1</first_book>

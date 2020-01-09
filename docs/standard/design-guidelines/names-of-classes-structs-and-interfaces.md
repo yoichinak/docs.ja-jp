@@ -12,13 +12,12 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-author: KrzysztofCwalina
-ms.openlocfilehash: 2ecd708ccb8eb91270e8ef9c174b8d7e599a2629
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 96d9904af0106d797c9fc5199bda76da53874451
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353703"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709245"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>クラス、構造体、およびインターフェイスの名前
 次に示す名前付けのガイドラインは、一般的な型の名前付けに適用されます。  
@@ -71,7 +70,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 ## <a name="names-of-common-types"></a>共通型の名前  
  **✓ DO** から派生または特定の .NET Framework 型を実装する型の名前を付けるときは、次の表に説明されているガイドラインに従ってください。  
   
-|基本型|派生/実装型のガイドライン|  
+|Base Type|派生/実装型のガイドライン|  
 |---------------|------------------------------------------|  
 |`System.Attribute`|**✓ DO** カスタム属性クラスの名前にサフィックス"Attribute"を追加します。|  
 |`System.Delegate`|**✓ DO** イベントで使用されるデリゲートの名前にサフィックス"EventHandler"を追加します。<br /><br /> **✓ DO** 以外のイベント ハンドラーとして使用されているデリゲートの名前に"Callback"サフィックスを追加します。<br /><br /> **X DO NOT** 「代理」サフィックスをデリゲートに追加します。|  
@@ -100,7 +99,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)

@@ -1,15 +1,13 @@
 ---
 title: パラメーターのマーシャリングのカスタマイズ - .NET
 description: .NET でパラメーターをネイティブ表現にマーシャリングする方法をカスタマイズする手順について説明します。
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 877eb00c18c9108fe6bcfb50104ff5ed813e85f3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065975"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706362"
 ---
 # <a name="customizing-parameter-marshaling"></a>パラメーターのマーシャリングのカスタマイズ
 
@@ -23,7 +21,7 @@ ms.locfileid: "65065975"
 
 これらの各形式では、null で終わる文字列をネイティブ コードに渡します。 これらはネイティブ文字列のエンコードが異なります。
 
-| `System.Runtime.InteropServices.UnmanagedType` の値 | エンコード |
+| `System.Runtime.InteropServices.UnmanagedType` 値 | Encoding |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
 | LPUTF8Str | UTF-8 | 

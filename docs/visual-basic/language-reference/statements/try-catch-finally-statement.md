@@ -20,13 +20,12 @@ helpviewer_keywords:
 - Visual Basic code, handling errors while running
 - structured exception handling, Try...Catch...Finally statements
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
-ms.custom: seodec18
-ms.openlocfilehash: eb04b6cff0847009407e38a3696e9be7c700356c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: bb6f17f7ce88caea0b9d30ec880194f2bb71c6a6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337331"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705770"
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally ステートメント (Visual Basic)
 
@@ -63,7 +62,7 @@ End Try
 |`finallyStatements`|省略可。 他のすべてのエラー処理が発生した後に実行されるステートメントです。|
 |`End Try`|`Try...Catch...Finally` 構造体を終了します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 特定の例外がコードの特定のセクションで発生することが予想される場合は、コードを `Try` ブロックに配置し、`Catch` ブロックを使用してコントロールを保持し、発生した場合は例外を処理します。
 
@@ -82,7 +81,7 @@ End Try
 `Try` ブロックのローカル変数は、個別のブロックであるため、`Catch` ブロックでは使用できません。 複数のブロックで変数を使用する場合は、`Try...Catch...Finally` 構造体の外で変数を宣言します。
 
 > [!TIP]
-> `Try…Catch…Finally` ステートメントは、IntelliSense コードスニペットとして使用できます。 コードスニペットマネージャーで、[コードパターン-If] を展開し、[ **Catch]、[プロパティ]** などをクリックして、 **[エラー処理 (例外)]** をクリックします。 詳細については、「[Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。
+> `Try…Catch…Finally` ステートメントは、IntelliSense コードスニペットとして使用できます。 コードスニペットマネージャーで、[コードパターン-If] を展開し、[ **Catch]、[プロパティ]** などをクリックして、 **[エラー処理 (例外)]** をクリックします。 詳細については、「 [Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。
 
 ## <a name="finally-block"></a>Finally ブロック
 

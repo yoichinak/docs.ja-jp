@@ -1,20 +1,17 @@
 ---
 title: .Net を使用してC# JSON をシリアル化および逆シリアル化する
-author: tdykstra
-ms.author: tdykstra
 ms.date: 09/16/2019
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: b43c3f6fd8ca56aaa99fffd40317920ee7600a2c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 6561d5e1580e1170369622ebc7bb330ff4e0964f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802714"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705783"
 ---
 # <a name="json-serialization-in-net---overview"></a>.NET での JSON のシリアル化-概要
 

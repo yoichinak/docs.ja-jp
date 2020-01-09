@@ -9,16 +9,15 @@ helpviewer_keywords:
 - global applications, naming guidelines
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-author: KrzysztofCwalina
-ms.openlocfilehash: 44627aafd9ec779625413a0862412a8f6c408109
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b64a3ef6e12f8ea1abf7efd9c22f2f4333dda5c8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756885"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709167"
 ---
 # <a name="naming-resources"></a>リソースに名前を付ける
-場合のプロパティと同様、特定のオブジェクトを使用してローカライズ可能なリソースを参照できる、ので、リソースの名前付けのガイドラインは、プロパティのガイドラインに似ています。  
+ローカライズ可能なリソースは、プロパティのように特定のオブジェクトを介して参照できるので、リソースの名前付けガイドラインはプロパティガイドラインに似ています。  
   
  **✓ DO** リソース キーで pascal 表記を使用を使用します。  
   
@@ -30,15 +29,15 @@ ms.locfileid: "61756885"
   
  **✓ DO** 例外メッセージのリソースに対して次の命名規則を使用します。  
   
- リソース識別子は、例外の種類名と例外の短い識別子にする必要があります。  
+ リソース識別子は、例外の種類の名前に例外の短い識別子を加えたものにする必要があります。  
   
  `ArgumentExceptionIllegalCharacters`  
  `ArgumentExceptionInvalidName`  
  `ArgumentExceptionFileNameIsMalformed`  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*  
   
- *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
 ## <a name="see-also"></a>関連項目
 

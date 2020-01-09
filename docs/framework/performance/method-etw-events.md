@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974912"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715995"
 ---
 # <a name="method-etw-events"></a>メソッド ETW イベント
 
@@ -35,7 +33,7 @@ ms.locfileid: "73974912"
 
 次の表に、イベント情報を示します。
 
-|event|イベント ID|説明|
+|Event|イベント ID|説明|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|メソッドが Just-In-Time 読み込み (JIT 読み込み) される時点、または NGEN イメージが読み込まれる時点で発生します。 動的メソッドとジェネリック メソッドは、メソッドの読み込みにこのバージョンを使用しません。 JIT ヘルパーがこのバージョンを使用することはありません。|
 |`MethodUnLoad_V1`|137|モジュールがアンロードされるとき、またはアプリケーション ドメインが破棄されるときに発生します。 動的メソッドがメソッドのアンロードにこのバージョンを使用することはありません。|
@@ -44,7 +42,7 @@ ms.locfileid: "73974912"
 
 次の表に、イベント データを示します。
 
-|フィールド名|データの種類|説明|
+|フィールド名|[データ型]|説明|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|メソッドの一意の識別子。 JIT ヘルパー メソッドの場合、これはメソッドの開始アドレスに設定されます。|
 |ModuleID|win:UInt64|このメソッドが属するモジュールの識別子 (JIT ヘルパーの場合は 0)。|
@@ -68,7 +66,7 @@ ms.locfileid: "73974912"
 
 次の表に、イベント情報を示します。
 
-|event|イベント ID|説明|
+|Event|イベント ID|説明|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|開始ランダウン中に列挙体の始まりの前に送信されます。|
 |`DCStartComplete_V1`|145|開始ランダウン中に列挙体の終わりに送信されます。|
@@ -77,7 +75,7 @@ ms.locfileid: "73974912"
 
 次の表に、イベント データを示します。
 
-|フィールド名|データの種類|説明|
+|フィールド名|[データ型]|説明|
 |----------------|---------------|-----------------|
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
 
@@ -94,7 +92,7 @@ ms.locfileid: "73974912"
 
 次の表に、イベント情報を示します。
 
-|event|イベント ID|説明|
+|Event|イベント ID|説明|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|メソッドが JIT 読み込みされるとき、または NGEN イメージが読み込まれるときに発生します。 動的メソッドとジェネリック メソッドは、メソッドの読み込みに常にこのバージョンを使用します。 JIT ヘルパーは常にこのバージョンを使用します。|
 |`MethodUnLoadVerbose_V1`|144|動的メソッドが破棄されるとき、またはモジュールがアンロードされるとき、あるいはアプリケーション ドメインが破棄されるときに発生します。 動的メソッドは、メソッドのアンロードに常にこのバージョンを使用します。|
@@ -103,7 +101,7 @@ ms.locfileid: "73974912"
 
 次の表に、イベント データを示します。
 
-|フィールド名|データの種類|説明|
+|フィールド名|[データ型]|説明|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|メソッドの一意の識別子。 JIT ヘルパー メソッドの場合は、メソッドの開始アドレスに設定されます。|
 |ModuleID|win:UInt64|このメソッドが属するモジュールの識別子 (JIT ヘルパーの場合は 0)。|
@@ -129,20 +127,20 @@ ms.locfileid: "73974912"
 
 次の表に、イベント情報を示します。
 
-|event|イベント ID|説明|
+|Event|イベント ID|説明|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|メソッドが JIT コンパイルされているときに発生します。|
 
 次の表に、イベント データを示します。
 
-|フィールド名|データの種類|説明|
+|フィールド名|[データ型]|説明|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|メソッドの一意の識別子。|
 |ModuleID|win:UInt64|このメソッドが属するモジュールの識別子。|
 |MethodToken|win:UInt32|動的メソッドおよび JIT ヘルパーの場合は 0。|
 |MethodILSize|win:UInt32|JIT コンパイルされているメソッドの Microsoft intermediate language (MSIL) のサイズ。|
 |MethodNameSpace|win:UnicodeString|メソッドに関連付けられた完全クラス名。|
-|MethodName|win:UnicodeString|メソッドの名前です。|
+|MethodName|win:UnicodeString|メソッドの名前。|
 |MethodSignature|win:UnicodeString|メソッドのシグネチャ (型名のコンマ区切りリスト)。|
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
 

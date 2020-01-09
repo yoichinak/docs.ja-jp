@@ -20,14 +20,12 @@ helpviewer_keywords:
 - digital signatures, verifying
 - signing XML
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: de64af1a4617af39b0ef8e054292a402d6a145e6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1de6b3f2eb30df270339910e7b8287101bde65ca
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350458"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706254"
 ---
 # <a name="cryptographic-signatures"></a>暗号署名
 
@@ -167,6 +165,6 @@ else
 
 上記のコードでは、署名が有効であれば "`The signature is valid`" を表示し、署名が無効であれば "`The signature is not valid`" を表示します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [暗号サービス](../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

@@ -9,13 +9,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-author: KrzysztofCwalina
-ms.openlocfilehash: 93554594b49b742a6a5e8461b6b16046701ec07c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: e3725cd11e170c64b6cbf7d77a7a6526603dfd95
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347847"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709115"
 ---
 # <a name="parameter-design"></a>パラメーターのデザイン
 

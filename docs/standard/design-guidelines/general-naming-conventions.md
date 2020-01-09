@@ -14,16 +14,15 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-author: KrzysztofCwalina
-ms.openlocfilehash: ae1b7ce83f6698cef470aabf07a12d89042ab8a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1b01fac7368ffeceb554c6f12aecb8f8760fa1d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026394"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709336"
 ---
 # <a name="general-naming-conventions"></a>一般的な名前付け規則
-このセクションでは、一般的な名前付け規則、単語の選択に関連する言語固有の名前を使用しないようにする方法の省略形と頭字語、および推奨事項の使用に関するガイドラインについて説明します。  
+ここでは、単語の選択に関連する一般的な名前付け規則、略語と頭字語の使用に関するガイドライン、および言語固有の名前の使用を回避するための推奨事項について説明します。  
   
 ## <a name="word-choice"></a>単語の選択  
  **✓ DO** 読みやすい識別子の名前を選択します。  
@@ -38,18 +37,18 @@ ms.locfileid: "62026394"
   
  **× DO NOT** ハンガリアン記法を使用しないでください。  
   
- **× AVOID** 広く使用されているプログラミング言語のキーワードと競合する識別子の使用を避けます。  
+ **X AVOID** 広くのキーワードと競合する識別子を使用してプログラミング言語を使用します。  
   
  共通言語仕様（CLS）に準拠している言語は、ルール4に従って、その言語のキーワードを識別子名として使用する名前付けされた項目へのアクセスを許す機構を供給しなくてはなりません。 たとえば C# の場合、@ 記号をエスケープ メカニズムとして使用します。 しかしながら、エスケープ シーケンスを使う方法は、それを使わない方法よりもずっと難しいので、共通のキーワードを避けることをお勧めします。  
   
-## <a name="using-abbreviations-and-acronyms"></a>省略形と頭字語を使用します。  
+## <a name="using-abbreviations-and-acronyms"></a>省略形と頭字語の使用  
  **× DO NOT** 識別子名の一部としての省略形または短縮形を使用ないでください。  
   
  たとえば、`GetWin` ではなく、`GetWindow` を使用します。  
   
  **X DO NOT** 広く受け入れられていない頭字語は使用しないでください。使用する場合は、必要な場合にのみにしてください。  
   
-## <a name="avoiding-language-specific-names"></a>言語固有の名前を回避します。  
+## <a name="avoiding-language-specific-names"></a>言語固有の名前の回避  
  **✓ DO** 型名に言語固有のキーワードではなく、意味的にわかりやすい名前を使用します。  
   
  たとえば、`GetInt` よりも `GetLength`を使用します。  
@@ -73,11 +72,11 @@ ms.locfileid: "62026394"
 |**bool**|**Boolean**|**bool**|**Boolean**|  
 |**char**|**Char**|**wchar_t**|**Char**|  
 |**string**|**String**|**String**|**String**|  
-|**object**|**Object**|**Object**|**Object**|  
+|**object**|**オブジェクト**|**オブジェクト**|**オブジェクト**|  
   
- **✓ DO** 名前が意味を持たず、パラメーターの型が重要ではないまれな場合は、型名を繰り返すのではなく、`value` または `item` などの共通名を使用します。  
+ **✓ DO** など、共通名を使用して`value`または`item`、まれなケース識別子は特別な意味を持たないし、パラメーターの型が重要でないときに、型名を繰り返しではなくです。  
   
-## <a name="naming-new-versions-of-existing-apis"></a>既存の Api の新しいバージョンの名前を付ける  
+## <a name="naming-new-versions-of-existing-apis"></a>既存の Api の新しいバージョンの命名  
  **✓ DO** 既存の API の新しいバージョンを作成するときに、古い API に類似している名前を使用します。  
   
  これにより、API の間の関係性を強調します。  
@@ -94,9 +93,9 @@ ms.locfileid: "62026394"
   
  **✓ DO** 32 ビット整数の代わりに 64 ビット整数 (長整数) で動作する API のバージョンを導入するときに、**「64」サフィックス**を使用します。 既存の 32 ビット API が存在する場合にのみ、この方法を実行する必要があります。64 ビット バージョンのみの新しい API には使用しないでください。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*  
   
- *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
 ## <a name="see-also"></a>関連項目
 

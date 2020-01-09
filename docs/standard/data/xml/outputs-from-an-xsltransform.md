@@ -3,14 +3,12 @@ title: XslTransform からの出力
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0a6c2ea2fe2f02dc1897cb1348f4c2585b730036
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 178b1e949868d3af893cbcb6df63590053341a3e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924965"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710493"
 ---
 # <a name="outputs-from-an-xsltransform"></a>XslTransform からの出力
 スタイル シートは、`<xsl:output>` ステートメントと `method` 属性を使って出力形式を決定できます。次の表では、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドを使用して出力を書き出し、出力形式を <xref:System.IO.Stream> または <xref:System.IO.TextWriter> として宣言した場合に出力形式がどうなるかを説明します。  
@@ -27,7 +25,7 @@ ms.locfileid: "69924965"
 |method="text"|テキスト|  
   
 > [!NOTE]
-> メモ:<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドの出力が <xref:System.Xml.XmlReader> または <xref:System.Xml.XmlWriter> である場合、`<xsl:output>` ステートメントは無視されます。  
+> メモ: `<xsl:output>` メソッドの出力が <xref:System.Xml.Xsl.XslTransform.Transform%2A> または <xref:System.Xml.XmlReader> である場合、<xref:System.Xml.XmlWriter> ステートメントは無視されます。  
   
  <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドの出力が <xref:System.IO.Stream> または <xref:System.IO.TextWriter> である場合は、次の属性がサポートされます。  
   
@@ -35,7 +33,7 @@ ms.locfileid: "69924965"
   
 - omit-xml-declaration  
   
-- スタンドアロン  
+- standalone  
   
 - doctype-public  
   

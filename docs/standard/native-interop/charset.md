@@ -1,15 +1,13 @@
 ---
 title: 文字セットとマーシャリング - .NET
 description: CharSet の値によって、.NET でデータをネイティブ コードにマーシャリングする方法がどのように変わるかについて説明します。
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: a29d53f8e422da1a78e131110972d83987c5464a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 4be4bd5a968eb5c0d6959a0f378ee1223ed906ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337919"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706388"
 ---
 # <a name="charsets-and-marshaling"></a>文字セットとマーシャリング
 

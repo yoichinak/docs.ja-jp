@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9b456dc407f634e7f40f69bbac9b6d932f1f4420
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dd3292620cafc4e5d2494b3b5e18e04691910dc4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350708"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711195"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>DOM の属性へのアクセス
 
@@ -133,7 +131,7 @@ sale item
 
 **XmlAttributeCollection** はコレクションであり、名前またはインデックスを使って反復処理ができるため、次の例では、ゼロベースのインデックスを使用してコレクションの最初の属性を選択しています。入力には、**baseuri.xml** というファイルを使用しています。
 
-### <a name="input"></a>入力
+### <a name="input"></a>[入力]
 
 ```xml
 <!-- XML fragment -->
@@ -260,6 +258,6 @@ using System.Xml;
 XmlAttribute attr = doc.DocumentElement.Attributes[0];
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
