@@ -18,7 +18,7 @@ ms.locfileid: "74350348"
 現在のプロジェクトによって参照される各 XML Web サービスの1つのインスタンスを作成してアクセスするためのプロパティを提供します。  
   
 ## <a name="remarks"></a>コメント  
- `My.WebServices` オブジェクトは、現在のプロジェクトにより参照されている各 Web サービスのインスタンスを提供します。 各インスタンスは要求に応じてインスタンス化されます。 これらの Web サービスには `My.WebServices` オブジェクトのプロパティを介してアクセスできます。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じになります。 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> から継承されたクラスはすべて Web サービスです。 プロジェクトへの Web サービスの追加については、「[アプリケーション Web サービス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)へのアクセス」を参照してください。  
+ `My.WebServices` オブジェクトは、現在のプロジェクトにより参照されている各 Web サービスのインスタンスを提供します。 各インスタンスは要求に応じてインスタンス化されます。 これらの Web サービスには `My.WebServices` オブジェクトのプロパティを介してアクセスできます。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じになります。 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> から継承されたクラスはすべて Web サービスです。 プロジェクトへの Web サービスの追加については、「[アプリケーションの Web サービスへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)」を参照してください。  
   
  `My.WebServices` オブジェクトは、現在のプロジェクトに関連付けられている Web サービスだけを公開します。 参照先の Dll で宣言されている Web サービスへのアクセスを提供しません。 DLL が提供する Web サービスにアクセスするには、Web サービスの修飾名を*DllName*の形式で使用する必要があります。*Webservicename*。 詳細については、「[アプリケーション Web サービスへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)」を参照してください。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "74350348"
  `My.WebServices` オブジェクトの各プロパティは、現在のプロジェクトによって参照される Web サービスのインスタンスへのアクセスを提供します。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じです。プロパティの型は、Web サービスの型と同じです。  
   
 > [!NOTE]
-> 名前の競合がある場合、Web サービスにアクセスするためのプロパティ名は*RootNamespace*_*名前空間*\_*ServiceName*です。 たとえば、`Service1`という名前の2つの Web サービスを考えてみます。 これらのサービスのいずれかがルート名前空間 `WindowsApplication1` であり、名前空間 `Namespace1`にある場合、`My.WebServices.WindowsApplication1_Namespace1_Service1`を使用してそのサービスにアクセスします。  
+> 名前の競合がある場合、Web サービスにアクセスするためのプロパティ名は*RootNamespace*_*Namespace*\_*ServiceName*です。 たとえば、`Service1`という名前の2つの Web サービスを考えてみます。 これらのサービスのいずれかがルート名前空間 `WindowsApplication1` であり、名前空間 `Namespace1`にある場合、`My.WebServices.WindowsApplication1_Namespace1_Service1`を使用してそのサービスにアクセスします。  
   
  `My.WebServices` オブジェクトのいずれかのプロパティに初めてアクセスすると、Web サービスの新しいインスタンスが作成され、保存されます。 そのプロパティの後続のアクセスでは、Web サービスのインスタンスが返されます。  
   
