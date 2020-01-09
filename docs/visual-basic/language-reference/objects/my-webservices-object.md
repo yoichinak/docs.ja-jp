@@ -28,7 +28,7 @@ ms.locfileid: "74350348"
  `My.WebServices` オブジェクトの各プロパティは、現在のプロジェクトによって参照される Web サービスのインスタンスへのアクセスを提供します。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じです。プロパティの型は、Web サービスの型と同じです。  
   
 > [!NOTE]
-> 名前の競合がある場合、Web サービスにアクセスするためのプロパティ名は*RootNamespace*_*Namespace*\_*ServiceName*です。 たとえば、`Service1`という名前の2つの Web サービスを考えてみます。 これらのサービスのいずれかがルート名前空間 `WindowsApplication1` であり、名前空間 `Namespace1`にある場合、`My.WebServices.WindowsApplication1_Namespace1_Service1`を使用してそのサービスにアクセスします。  
+> 名前の競合がある場合、Web サービスにアクセスするためのプロパティ名は*RootNamespace*_*名前空間*\_*ServiceName*です。 たとえば、`Service1`という名前の2つの Web サービスを考えてみます。 これらのサービスのいずれかがルート名前空間 `WindowsApplication1` であり、名前空間 `Namespace1`にある場合、`My.WebServices.WindowsApplication1_Namespace1_Service1`を使用してそのサービスにアクセスします。  
   
  `My.WebServices` オブジェクトのいずれかのプロパティに初めてアクセスすると、Web サービスの新しいインスタンスが作成され、保存されます。 そのプロパティの後続のアクセスでは、Web サービスのインスタンスが返されます。  
   
