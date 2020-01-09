@@ -371,13 +371,13 @@
           href: language-reference/modifiers/assembly.md
         - name: Async
           href: language-reference/modifiers/async.md
-        - name: 自動
+        - name: Auto
           href: language-reference/modifiers/auto.md
         - name: ByRef
           href: language-reference/modifiers/byref.md
         - name: ByVal
           href: language-reference/modifiers/byval.md
-        - name: 既定値
+        - name: Default
           href: language-reference/modifiers/default.md
         - name: Friend
           href: language-reference/modifiers/friend.md
@@ -385,7 +385,7 @@
           href: language-reference/modifiers/in-generic-modifier.md
         - name: Iterator
           href: language-reference/modifiers/iterator.md
-        - name: キー
+        - name: Key
           href: language-reference/modifiers/key.md
         - name: Module
           href: language-reference/modifiers/module-keyword.md
@@ -399,7 +399,7 @@
           href: language-reference/modifiers/notinheritable.md
         - name: NotOverridable
           href: language-reference/modifiers/notoverridable.md
-        - name: 省略可能
+        - name: Optional
           href: language-reference/modifiers/optional.md
         - name: Out (ジェネリック修飾子)
           href: language-reference/modifiers/out-generic-modifier.md
@@ -407,17 +407,17 @@
           href: language-reference/modifiers/overloads.md
         - name: Overridable
           href: language-reference/modifiers/overridable.md
-        - name: オーバーライド
+        - name: Overrides
           href: language-reference/modifiers/overrides.md
         - name: ParamArray
           href: language-reference/modifiers/paramarray.md
-        - name: 部分的
+        - name: Partial
           href: language-reference/modifiers/partial.md
         - name: Private
           href: language-reference/modifiers/private.md
         - name: Private Protected
           href: language-reference/modifiers/private-protected.md
-        - name: プロテクト
+        - name: Protected
           href: language-reference/modifiers/protected.md
         - name: Protected Friend
           href: language-reference/modifiers/protected-friend.md
@@ -429,7 +429,7 @@
           href: language-reference/modifiers/shadows.md
         - name: Shared
           href: language-reference/modifiers/shared.md
-        - name: スタティック
+        - name: Static
           href: language-reference/modifiers/static.md
         - name: Unicode
           href: language-reference/modifiers/unicode.md
