@@ -4,12 +4,12 @@ description: Blazor を使用して再利用可能な UI コンポーネント�
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b34bdf61a425807030cf7648df245cc7a01c95de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337395"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705731"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Blazor を使用して再利用可能な UI コンポーネントを構築する
 
@@ -269,7 +269,7 @@ Blazor では、`@on{event}`フォームのディレクティブ属性を使用�
 イベントが処理されると、コンポーネントは、コンポーネントの状態の変更を考慮してレンダリングされます。 非同期イベントハンドラーを使用すると、ハンドラーの実行が完了した直後にコンポーネントがレンダリングされます。 非同期 `Task` が完了すると、コンポーネントが*再び*表示されます。 この非同期実行モードでは、非同期 `Task` がまだ進行中であるときに、適切な UI を表示することができます。
 
 ```razor
-<button @onclick="Get message">Get message</button>
+<button @onclick="ShowMessage">Get message</button>
 
 @if (showMessage)
 {

@@ -26,14 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0eb88b8f46d425ae840c2bf8ed8eb479971d1cbc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974674"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708372"
 ---
 # <a name="generics-in-net"></a>.NET のジェネリック
 
@@ -142,11 +140,11 @@ ms.locfileid: "73974674"
 |[ 一般的に使用されるコレクション型](../../../docs/standard/collections/commonly-used-collection-types.md)|ジェネリック型など、.NET のコレクション型の特性と使用シナリオの概要について説明します。|  
 |[ジェネリック コレクションを使用する状況](../../../docs/standard/collections/when-to-use-generic-collections.md)|ジェネリック コレクション型を使用するケースを決定するための一般的な規則について説明します。|  
 |[方法: リフレクション出力を使用してジェネリック型を定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|ジェネリック型とジェネリック メソッドを含む動的アセンブリの生成方法について説明します。|  
-|[Visual Basic におけるジェネリック型](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|ジェネリック型の使用方法や定義方法に関するトピックなど、Visual Basic ユーザー向けにジェネリック機能について説明します。|  
+|[Generic Types in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|ジェネリック型の使用方法や定義方法に関するトピックなど、Visual Basic ユーザー向けにジェネリック機能について説明します。|  
 |[ジェネリックの概要](../../csharp/programming-guide/generics/index.md)|C# ユーザー向けにジェネリック型の定義方法や使用方法の概要について説明します。|  
 |[Visual C++ のジェネリックの概要](/cpp/windows/overview-of-generics-in-visual-cpp)|ジェネリックとテンプレートの違いなど、C++ ユーザー向けにジェネリック機能について説明します。|  
 
-## <a name="reference"></a>辞書／辞典／その他  
+## <a name="reference"></a>関連項目  
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  

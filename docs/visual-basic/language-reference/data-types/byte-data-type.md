@@ -49,15 +49,15 @@ Dim number As Byte = &H_6A
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **負の数値。** `Byte` は符号なしの型であるため、負の数を表すことはできません。 `Byte`型に評価される式に対して単項マイナス記号 (`-`) 演算子を使用すると、Visual Basic 式が最初に `Short` に変換されます。
+- **負の数。** `Byte` は符号なしの型であるため、負の数を表すことはできません。 `Byte`型に評価される式に対して単項マイナス記号 (`-`) 演算子を使用すると、Visual Basic 式が最初に `Short` に変換されます。
   
-- **書式変換。** Visual Basic がファイルの読み取りまたは書き込みを行うとき、または Dll、メソッド、およびプロパティを呼び出すときに、データ形式間で自動的に変換することができます。 `Byte` の変数および配列に格納されているバイナリデータは、そのような形式の変換中に保持されます。 バイナリデータには `String` 変数を使用しないでください。 ANSI 形式と Unicode 形式の間の変換中は、その内容が破損する可能性があります。
+- **形式の変換。** Visual Basic がファイルの読み取りまたは書き込みを行うとき、または Dll、メソッド、およびプロパティを呼び出すときに、データ形式間で自動的に変換することができます。 `Byte` の変数および配列に格納されているバイナリデータは、そのような形式の変換中に保持されます。 バイナリデータには `String` 変数を使用しないでください。 ANSI 形式と Unicode 形式の間の変換中は、その内容が破損する可能性があります。
 
-- **拡大変換。  **   `Byte` のデータ型は、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`、`Decimal`、`Single`、`Double`に拡大変換されます。 つまり、<xref:System.OverflowException?displayProperty=nameWithType> エラーが発生することなく、`Byte` をこれらの型のいずれかに変換できます。
+- **拡大変換。** `Byte` のデータ型は、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`、`Decimal`、`Single`、`Double`に拡大変換されます。 つまり、<xref:System.OverflowException?displayProperty=nameWithType> エラーが発生することなく、`Byte` をこれらの型のいずれかに変換できます。
   
-- **文字を入力します。** `Byte` には、リテラルの型文字または識別子の型文字がありません。
+- **型宣言文字。** `Byte` には、リテラルの型文字または識別子の型文字がありません。
 
-- **フレームワークの種類。** .NET Framework において対応する型は、<xref:System.Byte?displayProperty=nameWithType> 構造体です。
+- **Framework の型。** .NET Framework において対応する型は、<xref:System.Byte?displayProperty=nameWithType> 構造体です。
 
 ## <a name="example"></a>例
 

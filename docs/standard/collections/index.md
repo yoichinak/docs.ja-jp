@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bb231df9ed33b89fa15cde998379b2964cf32ff9
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 9b868bd5ed77788cd9b44c11623ae38eba58153c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204766"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711364"
 ---
 # <a name="collections-and-data-structures"></a>コレクションとデータ構造体
 多くの場合、類似するデータはコレクションとして格納および操作すると、より効率的に処理できます。 <xref:System.Array?displayProperty=nameWithType> クラスまたは <xref:System.Collections>、<xref:System.Collections.Generic>、<xref:System.Collections.Concurrent>、System.Collections.Immutable の各名前空間のクラスを使用して、コレクションの個々の要素または一定の範囲の要素を追加、削除、および変更することができます。  
@@ -86,7 +84,7 @@ ms.locfileid: "74204766"
 |System.Collections.Immutable|変更できないコレクションを導入し、コレクション型へのリンクを提供します。|  
   
 <a name="BKMK_Reference"></a>   
-## <a name="reference"></a>辞書／辞典／その他  
+## <a name="reference"></a>関連項目  
  <xref:System.Array?displayProperty=nameWithType>  
  <xref:System.Collections?displayProperty=nameWithType>  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

@@ -1,18 +1,17 @@
 ---
 title: ファイル システムとレジストリ - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file system [C#]
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-ms.openlocfilehash: 3e78d49881a4def5fe9c70ecfe890c8ffee811e8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 2540c816a102a7f11f1f103b993194cccf0f4688
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635302"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75704522"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>ファイル システムとレジストリ (C# プログラミング ガイド)
 以下のトピックでは、C# と .NET Framework を使用して、ファイル、フォルダー、レジストリに対するさまざまな基本操作を実行する方法を示します。  

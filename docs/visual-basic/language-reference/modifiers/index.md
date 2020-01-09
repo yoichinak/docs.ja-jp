@@ -51,7 +51,7 @@ ms.locfileid: "74838287"
   
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
- [オーバーロード](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
  [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
   

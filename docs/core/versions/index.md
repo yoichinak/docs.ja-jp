@@ -3,13 +3,12 @@ title: .NET Core ランタイムと SDK をバージョン管理する方法
 description: この記事では、.NET Core SDK と ランタイムをバージョン管理する方法について説明します (セマンティック バージョニングと似ています)。
 author: bleroy
 ms.date: 07/26/2018
-ms.custom: seodec18
-ms.openlocfilehash: b8cfb2d40b1ae88ef03daca6c31b283256bc6f26
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 5096ec0e4e60569b774711d95f4a69e4f8d2d2cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179955"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713963"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
 
@@ -32,7 +31,7 @@ SDK バージョン番号の 3 番目の位置には、マイナー番号とパ�
 | ランタイムおよび SDK パッチ | 2.2.1             | 2.2.102           |
 | SDK 機能変更    | 2.2.1             | 2.2.200           |
 
-(\*) 上記の表では、今後リリースされる 2.2 .NET Core Runtime が例として使用されています。 .NET Core 2.1 に対する最初の SDK が 2.1.300 であることが、履歴アーティファクトで示されていたからです。 詳細については、「[.NET Core のバージョンの選択](selection.md)」を参照してください。
+(\*) 上記の表では、2.2 .NET Core Runtime が例として使用されています。 .NET Core 2.1 に対する最初の SDK が 2.1.300 であることが、履歴アーティファクトで示されていたからです。 詳細については、「[.NET Core のバージョンの選択](selection.md)」を参照してください。
 
 注:
 
