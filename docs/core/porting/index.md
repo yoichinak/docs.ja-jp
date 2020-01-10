@@ -3,17 +3,16 @@ title: .NET Framework から .NET Core への移植
 description: 移植プロセスを理解し、.NET Framework プロジェクトを .NET Core に移植する際に役立つツールを確認します。
 author: cartermp
 ms.date: 10/22/2019
-ms.custom: seodec18
-ms.openlocfilehash: 89f00e5c6ce7f3cea7a3135c9b2856c54a70da40
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3dbd4a1f608d71f28fa507da2e11fc41226664c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038528"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714340"
 ---
 # <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移植プロセスの概要
 
-現在 .NET Framework で実行しているコードの .NET Core への移植を検討する場合があります。 この記事では、次の内容について説明します。
+現在 .NET Framework で実行しているコードの .NET Core への移植を検討する場合があります。 この記事では、次について説明します。
 
 * 移植プロセスの概要。
 * コードを .NET Core に移植するときに役立つツールの一覧。
@@ -49,4 +48,4 @@ ms.locfileid: "73038528"
 さらに、[dotnet try-convert](https://github.com/dotnet/try-convert) ツールを使って、より小規模なソリューションや個人のプロジェクトを、1 つの操作で .NET Core プロジェクトのファイル形式に移植してみることが可能です。 `dotnet try-convert` がすべてのプロジェクトに対して動作する保証はありません。また、依存していた動作に微妙な変更が生じる原因となる可能性があります。 これは、自動化できる基本的なことを自動化するための "_開始点_" として使う必要があります。 これは、プロジェクトの移行に対する保証されたソリューションではありません。
 
 >[!div class="step-by-step"]
->[[次へ]](net-framework-tech-unavailable.md)
+>[次へ](net-framework-tech-unavailable.md)

@@ -2,12 +2,12 @@
 title: Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する (第 2 版)
 description: この電子書籍では、既存のアプリケーションを Azure クラウドおよびコンテナーへとリフト アンド シフトして最新化する方法について説明します。
 ms.date: 04/28/2018
-ms.openlocfilehash: 67b1c7743697832684e96225e3d365da625ce6a3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: fa20e606c9a1364fbdf8c9a58c8703420d9e65a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73089762"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714568"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する (第 2 版)
 
@@ -25,7 +25,7 @@ All rights reserved. 本書のいかなる部分も、書面による発行者�
 
 このブックは、電子書籍の形式で、<https://dot.net/architecture> などのマイクロソフトの複数のチャネルを介して利用できます。
 
-この書籍で電子メールに関連する質問がある場合は、[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book) に電子メールをお送りください。
+この書籍に関する質問がある場合は、[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book) にメールでお問い合わせください。
 
 本書は "現状有姿" で提供され、著者の見解と意見を表しています。 URL および他の参照されているインターネットの Web サイトをはじめ、本書に記載されている見解、意見、および情報は、通知なく変更されることがあります。
 
@@ -199,7 +199,7 @@ GitHub の [EShopModernizing](https://github.com/dotnet-architecture/eShopModern
 
 ## <a name="send-your-feedback"></a>フィードバックの送信
 
-このガイドは、既存の .NET Web アプリケーションの改善と最新化のオプションについて理解できるように設計されています。 ガイドと関連するサンプル アプリケーションは進化しています。 ご意見をお待ちしております。 このガイドを改善する方法についてご意見があれば、[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book) に送信してください。
+このガイドは、既存の .NET Web アプリケーションの改善と最新化のオプションについて理解できるように設計されています。 ガイドと関連するサンプル アプリケーションは進化しています。 皆様からのご意見をお待ちしております。 このガイドを改善する方法についてご意見があれば、[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book) に送信してください。
 
 >[!div class="step-by-step"]
 >[次へ](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->

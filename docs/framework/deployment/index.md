@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975677"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716460"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework およびアプリケーションの配置
 
@@ -165,7 +163,7 @@ ms.locfileid: "73975677"
 |[ランタイムがアセンブリを検索する方法](how-the-runtime-locates-assemblies.md)|共通言語ランタイムが、バインド要求を満たすために、使用するアセンブリをどのように特定するかを説明します。|
 |[アセンブリの読み込みのベスト プラクティス](best-practices-for-assembly-loading.md)|<xref:System.InvalidCastException>、<xref:System.MissingMethodException>、およびその他のエラーの原因となることがある型 ID の問題を回避する方法について説明します。|
 |[.NET Framework 4.5 のインストール中のシステム再起動の削減](reducing-system-restarts.md)|再起動をできる限り回避する再起動マネージャーと、.NET Framework をインストールするアプリケーションがそれをどのように利用できるかを説明しています。|
-|[配置ガイド (管理者向け)](guide-for-administrators.md)|System Center Configuration Manager (SCCM) を使用したシステム管理者による .NET Framework の配置方法と、ネットワーク全体でのシステムの依存関係について説明します。|
+|[配置ガイド (管理者向け)](guide-for-administrators.md)|システム管理者が、Microsoft Endpoint Configuration Manager を使用して、ネットワーク全体に .NET Framework とその依存関係を配置する方法について説明します。|
 |[配置ガイド (開発者向け)](deployment-guide-for-developers.md)|開発者による .NET Framework とアプリケーションのユーザーのコンピューターへのインストール方法について説明します。|
 |[アプリケーション、サービス、およびコンポーネントの配置](/visualstudio/deployment/deploying-applications-services-and-components)|ClickOnce を使用したアプリケーションの発行手順や、Windows インストーラー テクノロジなど、Visual Studio の配置オプションについて説明します。|
 |[ClickOnce アプリケーションの発行](/visualstudio/deployment/publishing-clickonce-applications)|Windows フォーム アプリケーションをパッケージ化し、これを ClickOnce でネットワーク上のクライアント コンピューターに配置する方法を説明します。|
