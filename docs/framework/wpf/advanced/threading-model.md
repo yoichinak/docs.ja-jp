@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ae120311e7e58b34437de987e9f9a18e917043c0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974072"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740271"
 ---
 # <a name="threading-model"></a>スレッド モデル
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、スレッド処理の難しさから開発者を節約するように設計されています。 その結果、多くの [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 開発者は、複数のスレッドを使用するインターフェイスを作成する必要がなくなります。 マルチスレッドプログラムは複雑でデバッグが困難なため、シングルスレッドソリューションが存在する場合は回避する必要があります。
@@ -203,7 +203,7 @@ ms.locfileid: "73974072"
  `handler2` がこのイベントを処理するのにかなりの時間がかかる可能性があります。 `handler2` は、時間を返さない入れ子になったメッセージループを開始するために <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> を使用する場合があります。 このメッセージループが完了したときにイベントが処理済みとしてマークされていない `handler2` 場合は、イベントが非常に古い場合でも、ツリーに渡されます。
 
 ### <a name="reentrancy-and-locking"></a>再入とロック
- 共通言語ランタイム (CLR) のロック機構は、まったく同じように動作しません。ロックを要求するときに、スレッドが操作を完全に停止することが予想される場合があります。 実際には、スレッドは、優先度の高いメッセージを受信して処理し続けます。 これにより、デッドロックを防止し、インターフェイスの応答性を最小限にすることができますが、軽度のバグが生じる可能性があります。  ほとんどの場合、この点について知る必要はありませんが、まれな状況 (通常は [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] のウィンドウメッセージや COM STA コンポーネントが関係します) では、これについて理解しておく価値があります。
+ 共通言語ランタイム (CLR) のロック機構は、まったく同じように動作しません。ロックを要求するときに、スレッドが操作を完全に停止することが予想される場合があります。 実際には、スレッドは、優先度の高いメッセージを受信して処理し続けます。 これにより、デッドロックを防止し、インターフェイスの応答性を最小限にすることができますが、軽度のバグが生じる可能性があります。  ほとんどの場合、この点について知っておく必要はありませんが、まれな状況 (通常は Win32 ウィンドウメッセージまたは COM STA コンポーネントが関係します) では、このことを理解しておく価値があります。
 
  多くのインターフェイスは、スレッドの安全性を考慮して構築されていません。開発者は、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] が複数のスレッドによってアクセスされることがないことを前提としています。 この場合、1つのスレッドによって環境の変更が予期しない時間に行われる可能性があるため、<xref:System.Windows.Threading.DispatcherObject> 相互排他機構が解決されるという不適切な影響が生じます。 次の擬似コードを考えてみましょう。
 
