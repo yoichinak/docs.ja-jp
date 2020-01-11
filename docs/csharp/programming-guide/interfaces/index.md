@@ -1,17 +1,16 @@
 ---
 title: インターフェイス - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: d03917353a9e6879ccb3b368d7d190aeeacb702c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 3187b8b94c6e46ec13312fc31ac1ed9852199d6b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635237"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714607"
 ---
 # <a name="interfaces-c-programming-guide"></a>インターフェイス (C# プログラミング ガイド)
 
@@ -54,7 +53,7 @@ ms.locfileid: "75635237"
 - インターフェイスは、抽象メンバーのみを含む抽象基本クラスに似ています。 インターフェイスを実装するすべてのクラスまたは構造体では、そのすべてのメンバーを実装する必要があります。
 - インターフェイスを直接インスタンス化することはできません。 そのメンバーは、インターフェイスを実装する任意のクラスまたは構造体によって実装されます。
 - インターフェイスには、イベント、インデクサー、メソッド、およびプロパティを含めることができます。
-- インターフェイスには、メソッドの実装は含まれません。
+- インターフェイスにはメソッドの実装は含まれません (C# 8.0 では、インターフェイスが[メソッドの既定の実装](../../whats-new/csharp-8.md#default-interface-methods)を持つことができます)。
 - クラスまたは構造体は、複数のインターフェイスを実装できます。 クラスは、基本クラスを継承する一方で、1 つまたは複数のインターフェイスを実装できます。
 
 ## <a name="in-this-section"></a>このセクションの内容

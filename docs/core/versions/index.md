@@ -1,14 +1,13 @@
 ---
 title: .NET Core ランタイムと SDK をバージョン管理する方法
 description: この記事では、.NET Core SDK と ランタイムをバージョン管理する方法について説明します (セマンティック バージョニングと似ています)。
-author: bleroy
 ms.date: 07/26/2018
-ms.openlocfilehash: 5096ec0e4e60569b774711d95f4a69e4f8d2d2cc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713963"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777314"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
 
@@ -24,7 +23,7 @@ ms.locfileid: "75713963"
 
 SDK バージョン番号の 3 番目の位置には、マイナー番号とパッチ番号の両方が示されます。 マイナー バージョンには 100 が乗算されます。 マイナー バージョン 1、パッチ バージョン 2 の場合は、102 と表現されます。 最後の 2 桁はパッチの番号を示しています。 たとえば、.NET Core 2.2 のリリースの場合、次の表のようなリリースが作成される可能性があります。
 
-| 変更                | .NET Core ランタイム | .NET Core SDK (*) |
+| 変更                | .NET Core ランタイム | .NET Core SDK (\*) |
 |-----------------------|-------------------|-------------------|
 | 初期リリース       | 2.2.0             | 2.2.100           |
 | SDK パッチ             | 2.2.0             | 2.2.101           |

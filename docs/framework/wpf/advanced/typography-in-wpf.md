@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ba4e8ff639cdfbbec596da45a6e950fff921974
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740725"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740278"
 ---
 # <a name="typography-in-wpf"></a>WPF のタイポグラフィ
 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の主要な文字体裁の機能について説明します。 これらの機能には、テキストレンダリングの品質とパフォーマンスの向上、OpenType 文字体裁のサポート、強化されたインターナショナルテキスト、フォントサポートの強化、および新しいテキストアプリケーションプログラミングインターフェイス (Api) が含まれます。  
@@ -35,7 +35,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
  ![OpenType のスタイル代替グリフを使用するテキスト](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "OpenType のスタイル代替グリフを使用するテキスト")  
   
- 飾り付きは装飾的なグリフで、カリグラフィを連想させる、手の込んだ装飾が使用されます。 次のテキストは、Pescadero フォントの標準グリフと巻きひげグリフを示しています。  
+ スワッシュは装飾的なグリフで、カリグラフィを連想させることがよくある、手の込んだ装飾が使用されます。 次のテキストは、Pescadero フォントの標準グリフと巻きひげグリフを示しています。  
   
  ![OpenType の標準グリフとスワッシュ グリフを使用するテキスト](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "OpenType の標準グリフと飾り付きグリフを使用するテキスト")  
   
@@ -59,7 +59,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
 - システム ロケールなど、グローバル設定に左右されないフォント動作。  
   
-- <xref:System.Windows.Media.FontFamily>を定義するために、<xref:System.Windows.FontWeight>、<xref:System.Windows.FontStretch>、および <xref:System.Windows.FontStyle> の種類を分離します。 これにより、斜体と太字のブール値の組み合わせでフォント ファミリを定義する [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] プログラミングよりも優れた柔軟性が提供されます。  
+- <xref:System.Windows.Media.FontFamily>を定義するために、<xref:System.Windows.FontWeight>、<xref:System.Windows.FontStretch>、および <xref:System.Windows.FontStyle> の種類を分離します。 これにより、Win32 プログラミングよりも柔軟性が向上します。ここでは、斜体と太字のブール値の組み合わせを使用してフォントファミリを定義します。  
   
 - フォント名とは関係なく処理される書き込み方向 (横書きまたは縦書き)。  
   
@@ -142,7 +142,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
 ### <a name="advanced-text-formatting"></a>テキストの高度な書式設定  
  テキスト Api の最も高度なレベルでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] により、<xref:System.Windows.Media.TextFormatting.TextFormatter> オブジェクトと <xref:System.Windows.Media.TextFormatting> 名前空間のその他の型を使用して、カスタムテキストレイアウトを作成することができます。 <xref:System.Windows.Media.TextFormatting.TextFormatter> クラスと関連クラスを使用すると、独自の文字形式、段落スタイル、改行規則、およびその他のインターナショナルテキストのレイアウト機能をサポートするカスタムテキストレイアウトを実装できます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] テキスト レイアウト サポートに関する既定の実装のオーバーライドが必要となるケースはほとんどありません。 ただし、テキストを編集するコントロールやアプリケーションを作成する場合は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の既定の実装とは異なる実装が必要になることがあります。  
   
- 従来のテキスト API とは異なり、<xref:System.Windows.Media.TextFormatting.TextFormatter> は、一連のコールバックメソッドを使用してテキストレイアウトクライアントと対話します。 クライアントは、<xref:System.Windows.Media.TextFormatting.TextSource> クラスの実装でこれらのメソッドを提供する必要があります。 次の図は、クライアントアプリケーションと <xref:System.Windows.Media.TextFormatting.TextFormatter> の間のテキストレイアウトの相互作用を示しています。  
+ 従来のテキスト API とは異なり、<xref:System.Windows.Media.TextFormatting.TextFormatter> は、一連のコールバックメソッドを使用してテキストレイアウトクライアントと対話します。 クライアントは、<xref:System.Windows.Media.TextFormatting.TextSource> クラスの実装でこれらのメソッドを提供する必要があります。 次の図は、クライアントアプリケーションと <xref:System.Windows.Media.TextFormatting.TextFormatter>間のテキストレイアウトの相互作用を示しています。  
   
  ![テキスト レイアウト クライアントと TextFormatter のダイアグラム](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   
@@ -156,5 +156,5 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
 - [OpenType フォントの機能](opentype-font-features.md)
 - [書式設定されたテキストの描画](drawing-formatted-text.md)
 - [テキストの高度な書式設定](advanced-text-formatting.md)
-- [[テキスト]](optimizing-performance-text.md)
+- [テキスト](optimizing-performance-text.md)
 - [Microsoft の文字体裁](https://docs.microsoft.com/typography/)

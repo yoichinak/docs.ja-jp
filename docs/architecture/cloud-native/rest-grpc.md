@@ -3,12 +3,12 @@ title: REST と gRPC
 description: GRPC、クラウドネイティブアプリケーションでのその役割、および HTTP REST との違いについて説明します。
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: c77343e7a594d34cbd2c00ce11281bd6bf4000c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4c829407d494a3529d1fb9953cd3f56f73e90636
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337073"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711637"
 ---
 # <a name="rest-and-grpc"></a>REST と gRPC
 

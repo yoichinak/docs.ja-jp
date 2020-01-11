@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 04e6c6fb5dd903e0f52a29bb2c0739d899ce2bb1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 382facef15e79c4ce49fdedaeb1a072b7591e4a0
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636355"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740219"
 ---
 # <a name="wpf-architecture"></a>WPF アーキテクチャ
 このトピックでは、Windows Presentation Foundation (WPF) クラスの階層構造のガイド付きツアーを提供します。 WPF の主要なサブシステムの大部分について説明し、それらの相互作用について説明します。 また、WPF のアーキテクトによって行われたいくつかの選択肢についても詳しく説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "75636355"
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
- WPF のほとんどのオブジェクトは、同時実行とスレッド処理を行うための基本的な構成要素を提供する <xref:System.Windows.Threading.DispatcherObject>から派生します。 WPF は、ディスパッチャーによって実装されるメッセージングシステムをベースにしています。 これは、使い慣れた [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] メッセージポンプとよく似ています。実際、WPF ディスパッチャーは、クロススレッド呼び出しを実行するために User32.dll メッセージを使用します。  
+ WPF のほとんどのオブジェクトは、同時実行とスレッド処理を行うための基本的な構成要素を提供する <xref:System.Windows.Threading.DispatcherObject>から派生します。 WPF は、ディスパッチャーによって実装されるメッセージングシステムをベースにしています。 これは、使い慣れた Win32 メッセージポンプとよく似ています。実際、WPF ディスパッチャーは、クロススレッド呼び出しを実行するために User32.dll メッセージを使用します。  
   
  WPF での同時実行については、ディスパッチャーとスレッドアフィニティという2つの主要概念を理解しておく必要があります。  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 4193f92223cb9c9f924c1021b2f3e58a5e8b988d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6d4525aeea458e1ec810efa659f373a2b5f21f57
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441507"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741309"
 ---
 # <a name="ui-automation-events-for-clients"></a>クライアントの UI オートメーション イベント
 > [!NOTE]
@@ -18,12 +18,12 @@ ms.locfileid: "74441507"
   
  このトピックでは、UI オートメーション クライアントでの [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] イベントの使用方法について説明します。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] を使用すると、クライアントは対象のイベントをサブスクライブできます。 この機能により、情報、構造体または状態が変更されていないか確認するためにシステム内のすべての [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素を常にポーリングする必要がなくなるため、パフォーマンスが向上します。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] により、クライアントは対象とするイベントをサブスクライブできます。 この機能により、情報、構造体または状態が変更されていないか確認するためにシステム内のすべての [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素を常にポーリングする必要がなくなるため、パフォーマンスが向上します。  
   
  また、定義されたスコープ内のイベントだけをリッスンできるため、効率性も向上します。 たとえば、クライアントはツリー内のすべての [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要素のフォーカス変更イベントをリッスンすることも、1 つの要素とその子孫のフォーカス変更イベントだけをリッスンすることもできます。  
   
 > [!NOTE]
-> あらゆるイベントが、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] プロバイダーによって生成されるわけではないことに注意してください。 たとえば、すべてのプロパティ変更が、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] および [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] コントロールの標準プロキシ プロバイダーによるイベント生成を引き起こすわけではありません。  
+> あらゆるイベントが、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] プロバイダーによって生成されるわけではないことに注意してください。 たとえば、すべてのプロパティの変更によって、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] および Win32 コントロールの標準プロキシプロバイダーによってイベントが発生するとは限りません。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントの詳細なビューについては、「 [UI Automation イベントの概要](ui-automation-events-overview.md)」を参照してください。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74441507"
 > ウィンドウを閉じるイベントを処理するには、イベント ハンドラーに渡される引数の型を <xref:System.Windows.Automation.WindowClosedEventArgs> にキャストします。 ウィンドウの [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 要素は無効になるため、`sender` パラメーターを使用して情報を取得することはできないので、代わりに <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A> を使用します。  
   
 > [!CAUTION]
-> アプリケーションが自身の [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] からイベントを受け取る可能性がある場合、イベントのサブスクリプションまたはサブスクリプションの解除にアプリケーションの [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] スレッドを使用しないでください。 使用すると、予期しない動作を招く可能性があります。 詳細については、「 [UI Automation Threading Issues](ui-automation-threading-issues.md)」を参照してください。  
+> アプリケーションが自身の [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] からイベントを受け取る可能性がある場合、イベントのサブスクリプションまたはサブスクリプションの解除にアプリケーションの [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] スレッドを使用しないでください。 使用すると、予期しない動作を招く可能性があります。 詳細については、「 [UI オートメーション スレッド処理の問題点](ui-automation-threading-issues.md)」を参照してください。  
   
  シャットダウン時、またはアプリケーションで [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントに意味がなくなった場合、UI オートメーション クライアントが次のいずれかのメソッドを呼び出す必要があります。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "74441507"
   
  コード例については、「 [UI オートメーションイベントのサブスクライブ](subscribe-to-ui-automation-events.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [UI オートメーション イベントのサブスクライブ](subscribe-to-ui-automation-events.md)
 - [UI オートメーション イベントの概要](ui-automation-events-overview.md)
