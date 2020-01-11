@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568807"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900924"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>ストリーミング プロバイダー (WCF Data Services)
 
@@ -39,7 +39,7 @@ WCF Data Services では、ストリーミングデータプロバイダーを�
 
 5. サーバー上またはデータ ソース内のバイナリ リソースへのアクセスを有効にします。
 
-このトピックの例は、「ストリーミング[プロバイダーシリーズ: ストリーミングプロバイダーの実装 (パート 1)」 Data Services](https://go.microsoft.com/fwlink/?LinkID=198989)で詳しく説明されているストリーミングフォトサービスのサンプルに基づいています。 このサンプルサービスのソースコードは、MSDN コードギャラリーの[ストリーミングフォトデータサービスのサンプルページ](https://go.microsoft.com/fwlink/?LinkID=198988)にあります。
+このトピックの例は、「ストリーミング[プロバイダーシリーズ: ストリーミングプロバイダーの実装 (パート 1)」 Data Services](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1)で詳しく説明されているストリーミングフォトサービスのサンプルに基づいています。 Streaming Photo Data Service サンプルのソースコードは、 [GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample)で入手できます。
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>データ モデル内のメディア リンク エントリの定義
 
@@ -53,7 +53,7 @@ WCF Data Services では、ストリーミングデータプロバイダーを�
 
 また、エンティティまたはデータ モデルを定義する .edmx ファイルまたは .csdl ファイルのルートに名前空間 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` を追加する必要があります。
 
-Entity Framework プロバイダーを使用し、メディアリソースを公開するデータサービスの例については、「 [Data Services ストリーミングプロバイダーシリーズ: ストリーミングプロバイダーの実装 (パート 1)](https://go.microsoft.com/fwlink/?LinkID=198989)」を参照してください。
+Entity Framework プロバイダーを使用し、メディアリソースを公開するデータサービスの例については、「 [Data Services ストリーミングプロバイダーシリーズ: ストリーミングプロバイダーの実装 (パート 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1)」を参照してください。
 
 **リフレクション プロバイダー**
 
@@ -93,7 +93,7 @@ ASP.NET Web アプリケーションでデータサービスを作成する場�
 > [!NOTE]
 > 要求メッセージと応答メッセージの両方でバイナリデータがストリーミングされ、WCF によってバッファリングされないようにするには、<xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> 転送モードを使用する必要があります。
 
-詳細については、「[ストリーミングメッセージ転送](../../wcf/feature-details/streaming-message-transfer.md)と[トランスポートクォータ](../../wcf/feature-details/transport-quotas.md)」を参照してください。
+詳細については、「[メッセージ転送のストリーミング](../../wcf/feature-details/streaming-message-transfer.md)と[トランスポートクォータ](../../wcf/feature-details/transport-quotas.md)」を参照してください。
 
 また、既定では、インターネット インフォメーション サービス (IIS) でも要求のサイズが 4 MB に制限されます。 IIS での実行時にデータサービスが 4 MB を超えるストリームを受信できるようにするには、次の例に示すように、`<system.web />` 構成セクションで[HttpRuntime 要素 (ASP.NET Settings スキーマ)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))の `maxRequestLength` 属性も設定する必要があります。
 
@@ -137,7 +137,7 @@ WCF Data Services クライアントライブラリを使用すると、これ�
 
 詳細については、「[データサービスのバージョン管理](data-service-versioning-wcf-data-services.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Data Services プロバイダー](data-services-providers-wcf-data-services.md)
 - [カスタム データ サービス プロバイダー](custom-data-service-providers-wcf-data-services.md)

@@ -2,12 +2,12 @@
 title: Byrefs
 description: 下位レベルのプログラミングに使用される、 F#の byref および byref に似た型について説明します。
 ms.date: 11/04/2019
-ms.openlocfilehash: a6d3d69c4a163be9ecef7e33c284c4a73e800405
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 5aaee1e4eac9ce0d7e9ba89a2ab5f745d31367a0
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545137"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901307"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -175,7 +175,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 この最後の点は、 F#入力の型をパラメーター化するジェネリック関数である `|>` のように、パイプラインスタイルのプログラミングにとって非常に重要です。 この制限は、インラインであるため、将来の `|>` に対して緩和される可能性があり、その本体で非インラインジェネリック関数を呼び出すことはありません。
 
-これらのルールでは使用法が非常に厳密に制限されていますが、高パフォーマンスコンピューティングの約束を安全な方法で実現するために、これらのルールが使用されます。
+これらの規則は使用法を厳密に制限していますが、高パフォーマンスコンピューティングの約束を安全な方法で実現するために使用されます。
 
 ## <a name="byref-returns"></a>Byref の戻り値
 

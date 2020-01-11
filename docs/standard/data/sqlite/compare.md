@@ -2,12 +2,12 @@
 title: System.string との比較
 ms.date: 12/13/2019
 description: Sqlite ライブラリと system.string ライブラリの違いの一部について説明します。
-ms.openlocfilehash: dee90c132b108f2c876c0d8becc1b02035a47b61
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 076bbc6f746cf9296c96ec73047397a21a3b2558
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450280"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900711"
 ---
 # <a name="comparison-to-systemdatasqlite"></a>System.string との比較
 
@@ -63,15 +63,15 @@ Microsoft Data Sqlite には、[接続文字列](connection-strings.md)キーワ
 
 ## <a name="authorization"></a>認証
 
-Sqlite の認証コールバックを公開する API がありません。 この機能に関するフィードバックを提供するには、問題[#13835](https://github.com/aspnet/EntityFrameworkCore/issues/13835)を使用します。
+Sqlite の認証コールバックを公開する API がありません。 この機能に関するフィードバックを提供するには、問題[#13835](https://github.com/dotnet/efcore/issues/13835)を使用します。
 
 ## <a name="data-change-notifications"></a>データ変更通知
 
-Sqlite のデータ変更通知を公開する API がありません。 この機能に関するフィードバックを提供するには、問題[#13827](https://github.com/aspnet/EntityFrameworkCore/issues/13827)を使用します。
+Sqlite のデータ変更通知を公開する API がありません。 この機能に関するフィードバックを提供するには、問題[#13827](https://github.com/dotnet/efcore/issues/13827)を使用します。
 
 ## <a name="virtual-table-modules"></a>仮想テーブルモジュール
 
-Microsoft Data Sqlite には、仮想テーブルモジュールを作成するための API がありません。 この機能に関するフィードバックを提供するには、問題[#13823](https://github.com/aspnet/EntityFrameworkCore/issues/13823)を使用します。
+Microsoft Data Sqlite には、仮想テーブルモジュールを作成するための API がありません。 この機能に関するフィードバックを提供するには、問題[#13823](https://github.com/dotnet/efcore/issues/13823)を使用します。
 
 ## <a name="see-also"></a>関連項目
 
