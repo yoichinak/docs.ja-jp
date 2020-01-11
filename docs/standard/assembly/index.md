@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 8e68d2dbb13d226ba738bdf8455418c9e771d6a6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733157"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900594"
 ---
 # <a name="assemblies-in-net"></a>.NET のアセンブリ
 
@@ -104,14 +104,13 @@ C# では、1 つのアプリケーションで同じアセンブリの 2 つの
 |[動的メソッドおよびアセンブリの出力](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|動的アセンブリの作成方法。|
 |[ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|実行時に .NET Framework でアセンブリ参照がどのように解決されるか。|
 
-## <a name="reference"></a>辞書／辞典／その他
+## <a name="reference"></a>関連項目
 
 <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
 ## <a name="see-also"></a>関連項目
 
 - [.NET アセンブリ ファイルの形式](file-format.md)
-- [.NET のアセンブリ](index.md)
 - [フレンド アセンブリ](friend.md)
 - [参照アセンブリ](reference-assemblies.md)
 - [方法: アセンブリを読み込み、アンロードする](load-unload.md)

@@ -183,7 +183,7 @@
           href: diagnostics/dotnet-trace.md
     - name: .NET Core 診断チュートリアル
       items:
-        - name: メモリ リークのデバッグ
+        - name: メモリ リークをデバッグする
           href: diagnostics/debug-memory-leak.md
 - name: 単体テスト
   href: testing/index.md
@@ -339,8 +339,9 @@
     - name: XML シリアライザー ジェネレーター
       href: additional-tools/xml-serializer-generator.md
 - name: .NET Framework から移植する
-  href: porting/index.md
   items:
+    - name: 概要
+      href: porting/index.md
     - name: .NET Core で使用できない .NET Framework テクノロジ
       href: porting/net-framework-tech-unavailable.md
     - name: サード パーティの依存関係を分析する
