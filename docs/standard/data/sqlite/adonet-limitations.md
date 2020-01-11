@@ -2,12 +2,12 @@
 title: ADO.NET の制限事項
 ms.date: 12/13/2019
 description: 発生する可能性がある ADO.NET の制限事項について説明します。
-ms.openlocfilehash: b58fd3a9ea324e9c17ad21479e53e45f5982db9d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8664b73071fc859ed30080f549b05e7d6ed020f4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450340"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901261"
 ---
 # <a name="adonet-limitations"></a>ADO.NET の制限事項
 
@@ -25,13 +25,13 @@ ADO.NET には、多くの抽象化が実装されていますが、いくつか
 
 Microsoft Data Sqlite では、まだ system.string はサポートされていません。 代わりに ADO.NET トランザクションを使用してください。 詳細については、「[トランザクション](transactions.md)」を参照してください。
 
-問題[#13825](https://github.com/aspnet/EntityFrameworkCore/issues/13825)でのシステムトランザクションのサポート不足に関するフィードバックを提供します。
+問題[#13825](https://github.com/dotnet/efcore/issues/13825)でのシステムトランザクションのサポート不足に関するフィードバックを提供します。
 
 ## <a name="data-adapters"></a>データアダプター
 
 `DbDataAdapter` は、まだ Microsoft. Sqlite によって実装されていません。 つまり、ADO.NET `DataTable` `DataSet` のみを使用してデータを読み込み、更新することはできません。
 
-問題[#13838](https://github.com/aspnet/EntityFrameworkCore/issues/13838)を使用して、`DbDataAdapter`の実装に関するフィードバックを提供します。
+問題[#13838](https://github.com/dotnet/efcore/issues/13838)を使用して、`DbDataAdapter`の実装に関するフィードバックを提供します。
 
 ## <a name="output-parameters"></a>出力パラメーター
 
