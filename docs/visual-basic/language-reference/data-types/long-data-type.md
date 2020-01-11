@@ -74,7 +74,7 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 - **文字を入力します。** あるリテラルにリテラルの型文字 `L` を付けると、そのリテラルは `Long` に変換されます。 ある識別子に識別子の型文字 `&` を付けると、その識別子は整数型 (`Long`) に変換されます。
 
-- **フレームワークの種類。** .NET Framework において対応する型は、<xref:System.Int64?displayProperty=nameWithType> 構造体です。
+- **Framework のデータ型。** .NET Framework において対応する型は、<xref:System.Int64?displayProperty=nameWithType> 構造体です。
 
 ## <a name="see-also"></a>関連項目
 
