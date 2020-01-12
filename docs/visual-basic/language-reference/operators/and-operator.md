@@ -42,7 +42,7 @@ result = expression1 And expression2
 ## <a name="remarks"></a>コメント  
  ブール値の比較では、`expression1` と `expression2` の両方が `True`に評価される場合にのみ、`result` が `True` ます。 次の表は、`result` がどのように決定されるかを示しています。  
   
-|`expression1` の場合|`expression2`|`result` の値はです。|  
+|`expression1` の値|`expression2` の値|`result` の値|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`False`|  
@@ -54,7 +54,7 @@ result = expression1 And expression2
   
  `And` 演算子は、数値に適用した場合、2つの数値式で同じ位置にあるビットのビットごとの比較を実行し、次の表に従って `result` に対応するビットを設定します。  
   
-|`expression1` のビットがの場合|`expression2` のビットは|`result` のビットはです。|  
+|`expression1` のビット|`expression2` のビット|`result` のビット|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|1|  
 |1|0|0|  
