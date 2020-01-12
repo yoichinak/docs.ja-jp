@@ -3,12 +3,12 @@ title: グローバリゼーションの構成設定
 description: .NET Core アプリのグローバリゼーションの側面 (たとえば、日本語の日付の解析方法など) を構成するランタイム設定について説明します。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 0571c64eff5b38aafa37026fb2ba7f4aef778beb
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 76cd4a0a0f93f4df3ff243c6024b952576e8e6cb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74998841"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740546"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>グローバリゼーションのランタイム構成オプション
 
@@ -16,7 +16,7 @@ ms.locfileid: "74998841"
 
 - .NET Core を、カルチャ固有のデータや動作にアクセスせずにグローバリゼーション インバリアント モードで実行するか、またはカルチャ データにアクセスできるかどうかを決定します。
 - 既定:カルチャ データにアクセスしてアプリを実行します (`false`)。
-- 詳細については、「[.NET Core のグローバリゼーション インバリアント モード](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)」を参照してください。
+- 詳細については、「[.NET Core のグローバリゼーション インバリアント モード](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)」を参照してください。
 
 | | 設定の名前 | 値 |
 | - | - | - |

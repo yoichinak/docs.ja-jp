@@ -2,13 +2,12 @@
 title: .NET Core CLI の拡張モデル
 description: コマンド ライン インターフェイス (CLI) ツールを拡張する方法について説明します。
 ms.date: 04/12/2017
-ms.custom: seodec18
-ms.openlocfilehash: 400d47f9d5bca53a23d09eb4eb94519f9824b473
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 4f49735fa94b2a7ee32e0d80590f9e680edeff16
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012986"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714180"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI ツールの拡張モデル
 

@@ -4,13 +4,12 @@ description: .NET Core プロジェクトと .NET Standard プロジェクトの
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.custom: seodec18
-ms.openlocfilehash: afd6e7e25573cbb571b225c263b9bcfccfca5647
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 387d66bfeaf48359a27a532247a799c319f38caa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926384"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714291"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core と .NET Standard での単体テストのベスト プラクティス
 

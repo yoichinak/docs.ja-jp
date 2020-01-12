@@ -4,21 +4,18 @@ description: パッケージ マネージャーを使用して、.NET Core SDK �
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: 3ef639d5b76e81856ec8370d10e098c455ca8b3d
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 8781d6bd14daf975fcc602fd2924a333750d4256
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998913"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714375"
 ---
 # <a name="rhel-81-package-manager---install-net-core"></a>RHEL 8.1 パッケージ マネージャー - .NET Core をインストールする
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
 この記事では、パッケージ マネージャーを使用して RHEL 8.1 に .NET Core をインストールする方法について説明します。 .NET Core 3.1 は、RHEL 8.1 ではまだ使用できません。
-
-> [!NOTE]
-> RHEL 8.0 に .NET Core 3.0 は含まれていません。 コマンド `yum upgrade` を使用することで、RHEL 8.1 に更新できます。
 
 > [!NOTE]
 > RHEL 8.0 に .NET Core 3.0 は含まれていません。 コマンド `yum upgrade` を使用することで、RHEL 8.1 に更新できます。
@@ -40,7 +37,6 @@ scl enable dotnet-sdk-3.0 bash
 
 Subscription Manager に登録すると、ASP.NET Core ランタイムをインストールして有効にする準備が整います。 ご利用のターミナルで、次のコマンドを実行します。
 
-<!-- TODO: is this the correct value? Taken from the webpage but it doesn't have aspnet in the name -->
 ```bash
 dnf install aspnetcore-runtime-3.0
 scl enable aspnetcore-runtime-3.0 bash

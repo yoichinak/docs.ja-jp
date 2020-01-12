@@ -2,13 +2,13 @@
 title: Docker の概要
 description: この記事では、.NET Core アプリケーションのコンテキストでの Docker の基本と概要について説明します。
 ms.date: 03/20/2019
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 22c8fa4cda5cfd6564695d3b86072c64f22fa335
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.custom: mvc
+ms.openlocfilehash: 278c921de83282d61b25f4d44e91535981285e83
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087386"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715547"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET および Docker の概要
 

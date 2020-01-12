@@ -3,13 +3,12 @@ title: ランタイム パッケージ ストア
 description: .NET Core で使用されるランタイム パッケージ ストアとターゲット マニフェストの使用方法について説明します。
 author: bleroy
 ms.date: 08/12/2017
-ms.custom: seodec18
-ms.openlocfilehash: 8a8d2d3298f144347c36c640700a1e578dc14715
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: aa0fd3a0895bc79ddb80aeb599d3e3820b3be6db
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116545"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714459"
 ---
 # <a name="runtime-package-store"></a>ランタイム パッケージ ストア
 
