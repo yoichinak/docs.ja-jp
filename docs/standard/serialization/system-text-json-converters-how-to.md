@@ -1,20 +1,20 @@
 ---
 title: JSON シリアル化のカスタムコンバーターを記述する方法-.NET
-ms.date: 10/16/2019
+ms.date: 01/10/2020
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: efbaf852f07b2b59111f0e330cf52470e3eca4c3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8a2af76ca64359c12fafce6678def14d11d9f029
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705809"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904564"
 ---
-# <a name="how-to-write-custom-converters-for-json-serialization-in-net"></a>.NET で JSON シリアル化のカスタムコンバーターを記述する方法
+# <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET で JSON シリアル化 (マーシャリング) のカスタムコンバーターを記述する方法
 
 この記事では、<xref:System.Text.Json> 名前空間に用意されている JSON シリアル化クラスのカスタムコンバーターを作成する方法について説明します。 `System.Text.Json`の概要については、「 [.net で JSON をシリアル化および逆シリアル化する方法](system-text-json-how-to.md)」を参照してください。
 
@@ -23,7 +23,7 @@ ms.locfileid: "75705809"
 * 組み込みのコンバーターの既定の動作をオーバーライドする場合は。 たとえば、既定の ISO 8601-1:2019 形式ではなく、`DateTime` 値を mm/dd/yyyy 形式で表すようにすることができます。
 * カスタム値型をサポートする場合は。 たとえば、`PhoneNumber` 構造体などです。
 
-また、カスタムコンバーターを作成して、現在のリリースに含まれていない機能を使用して `System.Text.Json` を拡張することもできます。 この記事の後半では、次のシナリオについて説明します。
+また、カスタムコンバーターを作成して、現在のリリースに含まれていない機能を使用して `System.Text.Json` をカスタマイズまたは拡張することもできます。 この記事の後半では、次のシナリオについて説明します。
 
 * 推論された[型をオブジェクトのプロパティに逆シリアル](#deserialize-inferred-types-to-object-properties)化します。
 * [文字列以外のキーを使用した辞書をサポート](#support-dictionary-with-non-string-key)します。
@@ -68,9 +68,9 @@ ms.locfileid: "75705809"
 * `T` がシリアル化および逆シリアル化される型である <xref:System.Text.Json.Serialization.JsonConverter%601> から派生するクラスを作成します。
 * `Read` メソッドをオーバーライドして受信 JSON を逆シリアル化し、型 `T`に変換します。 メソッドに渡された <xref:System.Text.Json.Utf8JsonReader> を使用して、JSON を読み取ります。
 * `Write` メソッドをオーバーライドして、`T`型の受信オブジェクトをシリアル化します。 メソッドに渡された <xref:System.Text.Json.Utf8JsonWriter> を使用して JSON を記述します。
-* `CanConvert` メソッドは、必要な場合にのみオーバーライドします。 変換する型が `T`型の場合、既定の実装は `true` を返します。 したがって、型 `T` だけをサポートするコンバーターは、このメソッドをオーバーライドする必要はありません。 このメソッドをオーバーライドする必要があるコンバーターの例については、この記事で後述する「[ポリモーフィックな逆シリアル化](#support-polymorphic-deserialization)」を参照してください。
+* `CanConvert` メソッドは、必要な場合にのみオーバーライドします。 変換する型が `T`型である場合、既定の実装は `true` を返します。 したがって、型 `T` だけをサポートするコンバーターは、このメソッドをオーバーライドする必要はありません。 このメソッドをオーバーライドする必要があるコンバーターの例については、この記事で後述する「[ポリモーフィックな逆シリアル化](#support-polymorphic-deserialization)」を参照してください。
 
-[組み込みのコンバーターソースコード](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json/src/System/Text/Json/Serialization/Converters/)は、カスタムコンバーターを作成するための参照の実装として参照できます。
+[組み込みのコンバーターソースコード](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/)は、カスタムコンバーターを作成するための参照の実装として参照できます。
 
 ## <a name="steps-to-follow-the-factory-pattern"></a>ファクトリパターンに従う手順
 
@@ -179,14 +179,15 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>推論された型のオブジェクトプロパティへの逆シリアル化
 
-`Object`型のプロパティに逆シリアル化すると、`JsonElement` オブジェクトが作成されます。 その理由は、デシリアライザーは、作成する CLR 型を認識しないため、推測しようとしません。 たとえば、JSON プロパティに "true" が含まれている場合、デシリアライザーは、値が `Boolean`であることを推論しません。また、要素に "01/01/2019" がある場合、デシリアライザーは `DateTime`であることを推論しません。
+`object`型のプロパティに逆シリアル化すると、`JsonElement` オブジェクトが作成されます。 その理由は、デシリアライザーは、作成する CLR 型を認識しないため、推測しようとしません。 たとえば、JSON プロパティに "true" が含まれている場合、デシリアライザーは、値が `Boolean`であることを推論しません。また、要素に "01/01/2019" がある場合、デシリアライザーは `DateTime`であることを推論しません。
 
 型の推定は不正確になる可能性があります。 デシリアライザーが、小数点のない JSON 番号を `long`として解析する場合、値が最初に `ulong` または `BigInteger`としてシリアル化された場合、範囲外の問題が発生する可能性があります。 数値が最初に `decimal`としてシリアル化された場合、`double` として小数点がある数値を解析すると、精度が失われる可能性があります。
 
-型の推定が必要なシナリオでは、次のコードは `Object` プロパティのカスタムコンバーターを示しています。 コードは次のように変換します。
+型の推定が必要なシナリオでは、次のコードは `object` プロパティのカスタムコンバーターを示しています。 コードは次のように変換します。
 
 * `true` と `false` `Boolean`
-* `long` または `double` する数値
+* `long` に10進数を含まない数値
+* `double` に10進数が含まれる数値
 * `DateTime` する日付
 * `string` する文字列
 * 他のすべての `JsonElement`
@@ -195,9 +196,9 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 次のコードは、コンバーターを登録します。
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertInferredTypesToObject.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeInferredTypesToObject.cs?name=SnippetRegister)]
 
-`Object` プロパティを持つ型の例を次に示します。
+`object` プロパティを持つ型の例を次に示します。
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithObjectProperties)]
 
@@ -213,7 +214,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 カスタムコンバーターを使用しない場合、逆シリアル化によって各プロパティに `JsonElement` が挿入されます。
 
-`System.Text.Json.Serialization` 名前空間の[単体テストフォルダー](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/)には、オブジェクトプロパティへの逆シリアル化を処理するカスタムコンバーターの例が多数あります。
+`System.Text.Json.Serialization` 名前空間の[単体テストフォルダー](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/)には、`object` プロパティへの逆シリアル化を処理するカスタムコンバーターの例が多数あります。
 
 ### <a name="support-dictionary-with-non-string-key"></a>文字列以外のキーを使用したサポート辞書
 
@@ -225,7 +226,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 次のコードは、コンバーターを登録します。
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
 
 コンバーターは、次の `Enum`を使用する次のクラスの `TemperatureRanges` プロパティをシリアル化および逆シリアル化できます。
 
@@ -245,11 +246,11 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 }
 ```
 
-`System.Text.Json.Serialization` 名前空間の[単体テストフォルダー](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/)には、文字列キー以外のディクショナリを処理するカスタムコンバーターの例が多数あります。
+`System.Text.Json.Serialization` 名前空間の[単体テストフォルダー](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/)には、文字列キー以外のディクショナリを処理するカスタムコンバーターの例が多数あります。
 
 ### <a name="support-polymorphic-deserialization"></a>ポリモーフィック逆シリアル化のサポート
 
-[ポリモーフィックなシリアル化](system-text-json-how-to.md#serialize-properties-of-derived-classes)ではカスタムコンバーターは必要ありませんが、逆シリアル化にはカスタムコンバーターが必要です。
+組み込み機能は、[ポリモーフィックなシリアル化](system-text-json-how-to.md#serialize-properties-of-derived-classes)の範囲を制限しますが、逆シリアル化はサポートされていません。 逆シリアル化を行うには、カスタムコンバーターが必要です。
 
 たとえば、`Person` 抽象基本クラスがあり、`Employee` および `Customer` 派生クラスがあるとします。 ポリモーフィックな逆シリアル化とは、デザイン時に `Person` を逆シリアル化ターゲットとして指定できること、および JSON 内の `Customer` オブジェクトと `Employee` オブジェクトが実行時に正しく逆シリアル化されることを意味します。 逆シリアル化中に、JSON で必要な型を識別する手掛かりを見つける必要があります。 使用できる手掛かりの種類は、シナリオによって異なります。 たとえば、識別子のプロパティを使用できる場合や、特定のプロパティの有無に依存する場合があります。 `System.Text.Json` の現在のリリースでは、ポリモーフィックな逆シリアル化のシナリオを処理する方法を指定する属性が提供されないため、カスタムコンバーターが必要になります。
 
@@ -261,7 +262,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 次のコードは、コンバーターを登録します。
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertPolymorphic.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripPolymorphic.cs?name=SnippetRegister)]
 
 コンバーターは、同じコンバーターを使用して作成された JSON を逆シリアル化できます。たとえば、次のようになります。
 
@@ -282,22 +283,25 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ## <a name="other-custom-converter-samples"></a>その他のカスタムコンバーターのサンプル
 
-`System.Text.Json.Serialization` ソースコードの[単体テストフォルダー](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/)には、次のような他のカスタムコンバーターのサンプルが含まれています。
+「 [Newtonsoft. json から system.string への移行](system-text-json-migrate-from-newtonsoft-how-to.md)」の記事には、カスタムコンバーターの追加のサンプルが含まれています。
 
-* 逆シリアル化時に null を0に変換する `Int32` コンバーター
-* 逆シリアル化時に文字列と数値の両方を許可する `Int32` コンバーター
-* `Enum` コンバーター
-* 外部データを受け入れる `List<T>` コンバーター
-* コンマで区切られた数値のリストを処理する `Long[]` コンバーター 
+`System.Text.Json.Serialization` ソースコードの[単体テストフォルダー](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/)には、次のような他のカスタムコンバーターのサンプルが含まれています。
+
+* [逆シリアル化時に null を0に変換する Int32 コンバーター](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.NullValueType.cs)
+* [逆シリアル化時に文字列と数値の両方を使用できる Int32 コンバーター](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
+* [列挙型コンバーター](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
+* [外部データを受け入れる\<T > コンバーターの一覧表示](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
+* [コンマで区切られた数値のリストを処理する Long [] コンバーター](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs) 
+
+既存の組み込みコンバーターの動作を変更するコンバーターを作成する必要がある場合は、[既存のコンバーターのソースコード](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)を取得して、カスタマイズの開始点として機能させることができます。
 
 ## <a name="additional-resources"></a>その他の技術情報
 
+* [組み込みのコンバーターのソースコード](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
+* [System.string での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)
 * [System.string の概要](system-text-json-overview.md)
-* [System.string API リファレンス](xref:System.Text.Json)
 * [方法: system.string を使用する](system-text-json-how-to.md)
-* [組み込みのコンバーターのソースコード](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json/src/System/Text/Json/Serialization/Converters/)
-* `System.Text.Json` のカスタムコンバーターに関連する GitHub の問題
-  * [36639カスタムコンバーターの概要](https://github.com/dotnet/corefx/issues/36639)
-  * [38713オブジェクトへの逆シリアル化について](https://github.com/dotnet/corefx/issues/38713)
-  * [40120非文字列キー辞書について](https://github.com/dotnet/corefx/issues/40120)
-  * [37787ポリモーフィック逆シリアル化について](https://github.com/dotnet/corefx/issues/37787)
+* [Newtonsoft. Json から移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System.string API リファレンス](xref:System.Text.Json)
+* [Text. Json. Serialization API リファレンス](xref:System.Text.Json.Serialization)
+<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
