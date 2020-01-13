@@ -1,5 +1,5 @@
 ---
-title: <paramref>
+title: <paramref> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - paramref XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352280"
 ---
-# <a name="paramref-visual-basic"></a>\<paramref > (Visual Basic)
+# <a name="paramref-visual-basic"></a>\<paramref> (Visual Basic)
 単語をパラメーターとして書式設定します。  
   
 ## <a name="syntax"></a>構文  
