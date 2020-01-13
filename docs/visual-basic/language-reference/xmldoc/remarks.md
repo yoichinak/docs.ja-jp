@@ -1,5 +1,5 @@
 ---
-title: <remarks>
+title: <remarks> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <remarks> XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352260"
 ---
-# <a name="remarks-visual-basic"></a>\<解説 > (Visual Basic)
+# <a name="remarks-visual-basic"></a>\<remarks> (Visual Basic)
 メンバーの解説セクションを指定します。  
   
 ## <a name="syntax"></a>構文  
