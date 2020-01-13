@@ -1,6 +1,5 @@
 ---
 title: virtual - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - virtual_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: d5e087647adced0b41cc6e42fcf534b274c70592
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 47b77792fd3a2b2700ec0734851fdec534361596
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395150"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712872"
 ---
 # <a name="virtual-c-reference"></a>virtual (C# リファレンス)
 
@@ -28,7 +27,7 @@ public virtual double Area()
 
 仮想メンバーの実装は、派生クラスの[オーバーライド メンバー](override.md)によって変更できます。 `virtual` キーワードの使い方について詳しくは、「[Override キーワードと New キーワードによるバージョン管理](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)」および「[Override キーワードと New キーワードを使用する場合について](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)」をご覧ください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 仮想メソッドが呼び出されると、オブジェクトの実行時の型が、オーバーライドするメンバーに対してチェックされます。 いずれの派生クラスもメンバーをオーバーライドしなかった場合は、最派生クラスのオーバーライド メンバー (元のメンバーである可能性があります) が呼び出されます。
 

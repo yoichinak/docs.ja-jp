@@ -1,6 +1,5 @@
 ---
 title: if-else - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - if_CSharpKeyword
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: 18b41446eb13f4b91db86d79316a5299b0f3020a
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 98c1a8dceec3e5a47627841988e2d722c56fc36c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300477"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715260"
 ---
 # <a name="if-else-c-reference"></a>if-else (C# リファレンス)
 

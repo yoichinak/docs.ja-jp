@@ -1,6 +1,5 @@
 ---
 title: await 演算子 - C# リファレンス
-ms.custom: seodec18
 ms.date: 11/08/2019
 f1_keywords:
 - await_CSharpKeyword
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 36cb4a5def6b75281edbe878d89af0c18ab226ec
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 6dc058f3850e30d8c424d4372c47b127c7d361b6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140656"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712742"
 ---
 # <a name="await-operator-c-reference"></a>await 演算子 (C# リファレンス)
 

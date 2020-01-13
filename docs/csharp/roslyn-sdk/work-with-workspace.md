@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK ワークスペース モデルの使用
 description: この概要は、コードのワークスペースとプロジェクトを照会して操作するために使用する型を理解するためのものです。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 7d450b31cbf2c83c79552d1ace3a1ae692bfdd88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2e69129a869707eaec3516310a72f1fc918ca26
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354804"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346908"
 ---
 # <a name="work-with-a-workspace"></a>ワークスペースの使用
 
@@ -40,4 +40,4 @@ IDE のようなホスト環境では、開いているソリューションに�
 
 ## <a name="summary"></a>まとめ
 
-Roslyn では一連のコンパイラ API とワークスペース API が公開されます。これらの API は、ソース コードに関する豊富な情報を提供し、C# および Visual Basic 言語を完全に再現します。  .NET Compiler Platform SDK は、コードにフォーカスされたツールとアプリケーションの作成における参入障壁を劇的に低くします。 これにより、メタプログラミング、コードの生成と変換、C# と VB 言語の対話型の使用、ドメイン固有の言語での C# と VB の埋め込みなどの領域で多くの革新の機会を生み出します。  
+Roslyn では一連のコンパイラ API とワークスペース API が公開されます。これらの API は、ソース コードに関する豊富な情報を提供し、C# および Visual Basic 言語を完全に再現します。  .NET Compiler Platform SDK は、コードにフォーカスされたツールとアプリケーションの作成における参入障壁を劇的に低くします。 これにより、メタプログラミング、コードの生成と変換、C# と Visual Basic 言語の対話型の使用、ドメイン固有の言語での C# と Visual Basic の埋め込みなどの領域で、多くのイノベーションの機会が生み出されます。  

@@ -1,6 +1,5 @@
 ---
 title: internal - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - internal_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: f72866cafbf291310d88fc6f18a5a15dc77c621d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: db653d0ed7f4835348484242b03392a8955c6392
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422720"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713424"
 ---
 # <a name="internal-c-reference"></a>internal (C# リファレンス)
 `internal` キーワードは、型と型のメンバーを示す[アクセス修飾子](./access-modifiers.md)です。 

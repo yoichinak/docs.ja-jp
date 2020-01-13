@@ -1,6 +1,5 @@
 ---
 title: by コンテキスト キーワード - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - by
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - by keyword [C#]
 ms.assetid: efe6f0e3-be40-4df2-a144-c7db968ae052
-ms.openlocfilehash: 9f888f170f749eb5aac5cd39cd7c733920581542
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4fa32a0dbfd8210ef8537aee849a55414b107a7b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422881"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713730"
 ---
 # <a name="by-c-reference"></a>by (C# リファレンス)
 

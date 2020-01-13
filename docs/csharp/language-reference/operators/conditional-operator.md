@@ -1,6 +1,5 @@
 ---
 title: '?: 演算子 - C# リファレンス'
-ms.custom: seodec18
 ms.date: 11/20/2018
 f1_keywords:
 - ?:_CSharpKeyword
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 7397c5b2b2278f487a98b029b00924d3151913db
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 60156585dd21d5d2f9c9f3916452bb8574ddd4e4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036304"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712729"
 ---
 # <a name="-operator-c-reference"></a>?: 演算子 (C# リファレンス)
 

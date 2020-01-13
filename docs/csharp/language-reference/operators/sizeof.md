@@ -1,6 +1,5 @@
 ---
 title: sizeof 演算子 - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/25/2019
 f1_keywords:
 - sizeof_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 32103043d4c3a8b38f4c8aad80282f6c0555719f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c88f205a616587e5437bf4fc81bcbdcbbc19a9ac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038938"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712638"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof 演算子 (C# リファレンス)
 
@@ -37,7 +36,7 @@ ms.locfileid: "73038938"
 |`sizeof(decimal)`|16|
 |`sizeof(bool)`|1|
 
-`sizeof` 演算子のオペランドが[列挙](../keywords/enum.md)型の名前である場合も、unsafe コンテキストを使用する必要はありません。
+`sizeof` 演算子のオペランドが[列挙](../builtin-types/enum.md)型の名前である場合も、unsafe コンテキストを使用する必要はありません。
 
 `sizeof` 演算子の使用例を次に示します。
 

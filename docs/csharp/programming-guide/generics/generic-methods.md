@@ -1,16 +1,15 @@
 ---
 title: ジェネリック メソッド - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 600bb249d1bc1e9f68026caf6596e0a35bb97c43
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5f066ca39c97b70554886e423c37c4ee47d49158
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589701"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712196"
 ---
 # <a name="generic-methods-c-programming-guide"></a>ジェネリック メソッド (C# プログラミング ガイド)
 ジェネリック メソッドは、次のように型パラメーターで宣言されるメソッドです。  

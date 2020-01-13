@@ -1,16 +1,15 @@
 ---
 title: default 演算子 - C# リファレンス
-ms.custom: seodec18
 description: 型の既定値を生成するには、default 演算子を使います
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 6503e82a42f116a7ba8461ae060592377579f255
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039047"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712716"
 ---
 # <a name="default-operator-c-reference"></a>default 演算子 (C# リファレンス)
 

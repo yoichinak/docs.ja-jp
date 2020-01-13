@@ -1,6 +1,5 @@
 ---
 title: try-finally - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - finally
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: a8d18a6ae8b3f8f6cde76b1b296ac6a317ca1ed1
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 2c4c69b1e104aed968bc24bac690de83026643a0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168577"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713015"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (C# リファレンス)
 

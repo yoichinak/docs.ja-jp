@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 1e79de6d9e5cf973ce394bfb06871777c562c8ac
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 577ccd3bb9a20964dcdfc79ef2028854e4a55dc6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552997"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342696"
 ---
 # <a name="bool-c-reference"></a>bool (C# リファレンス)
 
@@ -29,15 +29,15 @@ ms.locfileid: "74552997"
 
 [!code-csharp-interactive[bool literals](~/samples/csharp/language-reference/builtin-types/BoolType.cs#Literals)]
 
-## <a name="conversions"></a>変換
-
-C# には、`bool` 型が関係する変換が 2 つのみ用意されています。 対応する null 許容型の `bool?` への暗黙的な変換と、`bool?` 型からの明示的な変換です。 ただし、.NET には、`bool` 型との間の変換に使用できる追加のメソッドが用意されています。 詳細については、<xref:System.Boolean?displayProperty=nameWithType> API リファレンス ページの「[ブール値との間の変換](/dotnet/api/system.boolean#converting-to-and-from-boolean-values)」セクションを参照してください。
-
 ## <a name="three-valued-boolean-logic"></a>3 値ブール型ロジック
 
 3 値ロジックをサポートする必要がある場合は、null 許容型の `bool?` を使用します。たとえば、3 値ブール型をサポートするデータベースを操作する場合などです。 `bool?` オペランドの場合、定義済みの `&` 演算子と `|` 演算子は 3 値ロジックをサポートします。 詳細については、「[Boolean logical operators (ブール論理演算子)](../operators/boolean-logical-operators.md)」記事の「[Nullable Boolean logical operators (null 許容論理演算子)](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)」セクションを参照してください。
 
 null 許容値型の詳細については、「[null 許容値型](nullable-value-types.md)」を参照してください。
+
+## <a name="conversions"></a>変換
+
+C# には、`bool` 型が関係する変換が 2 つのみ用意されています。 対応する null 許容型の `bool?` への暗黙的な変換と、`bool?` 型からの明示的な変換です。 ただし、.NET には、`bool` 型との間の変換に使用できる追加のメソッドが用意されています。 詳細については、<xref:System.Boolean?displayProperty=nameWithType> API リファレンス ページの「[ブール値との間の変換](/dotnet/api/system.boolean#converting-to-and-from-boolean-values)」セクションを参照してください。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

@@ -1,6 +1,5 @@
 ---
 title: base キーワード - C# リファレンス
-ms.custom: seodec18
 description: C# で派生クラス内から基底クラスのメンバーにアクセスするために使用する base キーワードについて説明します。
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: b882a8d1e5979ac184d184be379dd76f7bf3600f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a4686fc5d4245a50de5d77dc0e71c231772f40ef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602261"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713768"
 ---
 # <a name="base-c-reference"></a>base (C# リファレンス)
 

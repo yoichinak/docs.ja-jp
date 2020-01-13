@@ -1,16 +1,15 @@
 ---
 title: cref 属性 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: d088e1fcd0a1d1910b1284909dccf7b7d7b1d479
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 13bdfefaaa6f8daff0e7d9e30a6353af34654ba2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588169"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75697248"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 属性 (C# プログラミング ガイド)
 XML ドキュメント タグの `cref` 属性は "コード参照" を意味します。 タグの内部テキストが、型、メソッド、プロパティなど、コード要素であることを指定します。 [DocFX](https://dotnet.github.io/docfx/) や [Sandcastle](https://github.com/EWSoftware/SHFB) のようなドキュメント ツールでは `cref` 属性が使用されて、型やメンバーが文書化されるページのハイパーリンクが自動的に生成されます。  

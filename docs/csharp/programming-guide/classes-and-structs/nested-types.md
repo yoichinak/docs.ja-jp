@@ -1,16 +1,15 @@
 ---
 title: 入れ子にされた型 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/10/2017
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: de2e369702c48047835bc49b98df8f48fbd13480
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 982eeceb2088dd6e1e57fe796b38e46c0f2d4de8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596526"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705497"
 ---
 # <a name="nested-types-c-programming-guide"></a>入れ子にされた型 (C# プログラミング ガイド)
 [クラス](../../language-reference/keywords/class.md)や[構造体](../../language-reference/keywords/struct.md)の中で定義された型は、入れ子にされた型と呼ばれます。 次に例を示します。  

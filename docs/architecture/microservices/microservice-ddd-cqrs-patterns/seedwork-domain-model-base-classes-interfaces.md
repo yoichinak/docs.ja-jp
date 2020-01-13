@@ -3,10 +3,10 @@ title: Seedwork (ドメイン モデルの再利用可能な基底クラスと�
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Seedwork 概念を開始点として使用し、DDD 指向ドメイン モデルの実装を開始する。'
 ms.date: 10/08/2018
 ms.openlocfilehash: f53988b92a05fb54f3f05d9f463450d1a11a0843
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 12/25/2019
 ms.locfileid: "73737220"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (ドメイン モデルの再利用可能な基底クラスとインターフェイス)

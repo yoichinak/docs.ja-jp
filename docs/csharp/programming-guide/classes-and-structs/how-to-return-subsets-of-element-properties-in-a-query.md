@@ -1,16 +1,15 @@
 ---
 title: クエリで要素のプロパティのサブセットを返す方法 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 1266b866d671854c787d907b91f654c128681de9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 27a2626fc46307a7195040adf746d8d8757d2f82
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970458"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714854"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>クエリで要素のプロパティのサブセットを返す方法 (C# プログラミング ガイド)
 次の両方の条件に当てはまる場合は、クエリ式に匿名型を使用します。  

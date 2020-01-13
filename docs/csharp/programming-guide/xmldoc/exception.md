@@ -1,6 +1,5 @@
 ---
 title: <exception> - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - exception
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 4e4204996c006ce6e943c9a09661001b0e0c2a14
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 65c146684b7fd83a814f4b27d21efdd25c4da950
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523466"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711780"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -32,7 +31,7 @@ ms.locfileid: "72523466"
  `description`  
  例外の説明。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  \<exception> タグを使用すると、スローできる例外を指定できます。 このタブは、メソッド、プロパティ、イベント、インデクサーの定義に適用できます。  
   
  コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。  

@@ -2,12 +2,12 @@
 title: デリゲートの変性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: a65b2fb84e2eae57eecaf5307ca76fbce412d44c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: cdf7cad97ececbf4baae8328b1df55318c627cbb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772050"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345176"
 ---
 # <a name="variance-in-delegates-c"></a>デリゲートの変性 (C#)
 .NET Framework 3.5 では、C# のすべてのデリゲートで、メソッド シグネチャとデリゲート型を一致させるために変性 (共変性と反変性) のサポートが導入されました。 つまり、シグネチャが一致するメソッドだけでなく、デリゲート型で指定された型よりも強い派生型を返す (共変性) メソッドや、弱い派生型のパラメーターを受け取る (反変性) メソッドを、デリゲートに割り当てることができます。 これには、汎用デリゲートと非汎用デリゲートの両方が含まれます。  
@@ -200,4 +200,4 @@ public static void Test()
 
 - [ジェネリック](../../../../standard/generics/index.md)
 - [Func および Action 汎用デリゲートでの変性の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)
-- [方法: デリゲートを結合する (マルチキャスト デリゲート)](../../delegates/how-to-combine-delegates-multicast-delegates.md)
+- [デリゲートを結合する方法 (マルチキャスト デリゲート)](../../delegates/how-to-combine-delegates-multicast-delegates.md)

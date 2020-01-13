@@ -1,6 +1,5 @@
 ---
 title: ボックス化とボックス化解除 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.boxing
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 849983bb9cce6c9e0f41247a898747300fd29435
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4c17ba1917589dfd534b53ee3fb3efe67ddd02d7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588534"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698795"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>ボックス化とボックス化解除 (C# プログラミング ガイド)
 ボックス化とは、[値型](../../language-reference/keywords/value-types.md)から `object` 型、またはその値型によって実装されている任意のインターフェイス型へ変換するプロセスのことです。 CLR により値型がボックス化されるとき、値は <xref:System.Object?displayProperty=nameWithType> インスタンス内部にラップされ、マネージド ヒープに格納されます。 ボックス化解除すると、値型がオブジェクトから抽出されます。 ボックス化は暗黙的に行われ、ボックス化解除すると明示的になります。 ボックス化とボックス化解除の概念は、任意の型の値をオブジェクトとして扱うという C# の型システムの統一されたビューに基づいています。  
@@ -92,7 +91,7 @@ ms.locfileid: "69588534"
 int j = (short) o;  
 ```  
   
- を次のように変更します。  
+ この行を次のように変更します。  
   
 ```csharp
 int j = (int) o;  
@@ -106,7 +105,7 @@ int j = (int) o;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="related-sections"></a>関連項目  
- 詳細:  
+ 詳細情報  
   
 - [参照型](../../language-reference/keywords/reference-types.md)  
   

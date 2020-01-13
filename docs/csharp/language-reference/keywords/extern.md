@@ -1,6 +1,5 @@
 ---
 title: extern 修飾子 - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - extern_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: 5f4a4b143578603a3285b1a3bc0b1efa11840e77
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c121d810e64b5fa27f105f814253c0752e028a95
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422809"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713538"
 ---
 # <a name="extern-c-reference"></a>extern (C# リファレンス)
 

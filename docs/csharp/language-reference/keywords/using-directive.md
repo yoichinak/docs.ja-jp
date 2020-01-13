@@ -1,16 +1,15 @@
 ---
 title: using ディレクティブ - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 413d3ee6323aa601df84c0f402aaea7567a61e76
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a2028ccce47de54b59323194a0ffab3a643d878c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422287"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712976"
 ---
 # <a name="using-directive-c-reference"></a>using ディレクティブ (C# リファレンス)
 
@@ -54,7 +53,7 @@ class Program
 }
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 `using` ディレクティブのスコープは、このディレクティブが存在するファイルに限定されます。
 

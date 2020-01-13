@@ -1,6 +1,5 @@
 ---
 title: '- および -= 演算子 - C# リファレンス'
-ms.custom: seodec18
 ms.date: 05/27/2019
 f1_keywords:
 - -_CSharpKeyword
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: cf642fcac7233d27f2ed9052829c145038e93419
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 775f06b05d75078e53ab777d09713d69467ace14
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038882"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712612"
 ---
 # <a name="--and---operators-c-reference"></a>- および -= 演算子 (C# リファレンス)
 
@@ -68,7 +67,7 @@ x = x - y
 
 [!code-csharp-interactive[-= examples](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
 
-[イベント](../keywords/event.md)から登録を解除するときに、`-=` 演算子を使用して削除するイベント ハンドラー メソッドを指定することもできます。 詳細については、「[方法: イベント サブスクリプションとサブスクリプションの解除](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)」を参照してください。
+[イベント](../keywords/event.md)から登録を解除するときに、`-=` 演算子を使用して削除するイベント ハンドラー メソッドを指定することもできます。 詳細については、「[イベントのサブスクリプションとサブスクリプション解除を行う方法](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)」を参照してください。
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 

@@ -1,16 +1,15 @@
 ---
 title: out パラメーター修飾子 - C# リファレンス
-ms.custom: seodec18
 ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 81d60782cf8e16d55889fb3c7c05858070a97741
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bc3814b91ed4327f4af1a4a1bfbda632b0393bb8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602065"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713268"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out パラメーター修飾子 (C# リファレンス)
 `out` キーワードによって、参照により引数が渡されます。 仮パラメーターを引数 (変数にする必要があります) の別名にします。 つまり、パラメーターに対するすべての操作は引数に対して行われます。 これは、[ref](ref.md) キーワードと似ていますが、`ref` では、変数を初期化してから渡す必要があります。 [in](in-parameter-modifier.md) キーワードとも似ていますが、`in` では、呼び出されたメソッドで引数の値を変更することはできません。 `out` パラメーターを使用するには、メソッド定義と呼び出し元のメソッドの両方で `out` キーワードを明示的に使用する必要があります。 次に例を示します。  

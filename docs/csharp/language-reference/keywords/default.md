@@ -1,6 +1,5 @@
 ---
 title: default - C# リファレンス
-ms.custom: seodec18
 ms.date: 08/04/2017
 f1_keywords:
 - default
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
-ms.openlocfilehash: f64cab1f6666a0b6c6816eb0d6deeec21dcb454d
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: d133b0a6db1105e2cbad569ce96ceafa711b23ac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796309"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713616"
 ---
 # <a name="default-c-reference"></a>default (C# リファレンス)
 

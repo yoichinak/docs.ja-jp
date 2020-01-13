@@ -1,18 +1,17 @@
 ---
 title: インターフェイス - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - interface_CSharpKeyword
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: 058d6b96e96a3237ebac2ca079807fd154715d68
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 19ca4b8a490dc85de0d0e2be6d3ca8fa7982fc14
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608655"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713448"
 ---
 # <a name="interface-c-reference"></a>インターフェイス (C# リファレンス)
 
@@ -58,9 +57,9 @@ ms.locfileid: "69608655"
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [参照型](reference-types.md)
-- "[インターフェイス](../../programming-guide/interfaces/index.md)"
+- [インターフェイス](../../programming-guide/interfaces/index.md)
 - [プロパティの使用](../../programming-guide/classes-and-structs/using-properties.md)
 - [インデクサーの使用](../../programming-guide/indexers/using-indexers.md)
 - [class](class.md)
 - [struct](struct.md)
-- "[インターフェイス](../../programming-guide/interfaces/index.md)"
+- [インターフェイス](../../programming-guide/interfaces/index.md)

@@ -1,18 +1,17 @@
 ---
 title: メソッドのパラメーター - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#], parameters
 - method parameters [C#]
 - parameters [C#]
 ms.assetid: 680e39ff-775b-48b0-9f47-4186a5bfc4a1
-ms.openlocfilehash: 4011cbd3bc9306b64df87b1fcde48f1f41df8240
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2cc7f9178fa5c1a040be9d45ba66fac292bb0e28
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602044"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713381"
 ---
 # <a name="method-parameters-c-reference"></a>メソッドのパラメーター (C# リファレンス)
 

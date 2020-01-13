@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 27f7cf46bd3e344503f74527df34506d38ad4545
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428439"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345341"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>ビットごとの演算子とシフト演算子 (C# リファレンス)
 
@@ -172,9 +172,9 @@ x = x op y
 
 ## <a name="enumeration-logical-operators"></a>列挙論理演算子
 
-`~`、`&`、`|`、`^` の演算子は、任意の[列挙](../keywords/enum.md)型でもサポートされます。 オペランドが同じ列挙型の場合、基になっている整数型の対応する値に対して、論理演算が実行されます。 たとえば、基になる型が `U` である列挙型 `T` の任意の `x` と `y` に対して、式 `x & y` では式 `(T)((U)x & (U)y)` と同じ結果が生成されます。
+`~`、`&`、`|`、`^` の演算子は、任意の[列挙](../builtin-types/enum.md)型でもサポートされます。 オペランドが同じ列挙型の場合、基になっている整数型の対応する値に対して、論理演算が実行されます。 たとえば、基になる型が `U` である列挙型 `T` の任意の `x` と `y` に対して、式 `x & y` では式 `(T)((U)x & (U)y)` と同じ結果が生成されます。
 
-通常、ビットごとの論理演算子は、[Flags](xref:System.FlagsAttribute) 属性で定義されている列挙型で使います。 詳しくは、「[列挙型](../../programming-guide/enumeration-types.md)」記事の「[ビット フラグとしての列挙型](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags)」セクションをご覧ください。
+通常、ビットごとの論理演算子は、[Flags](xref:System.FlagsAttribute) 属性で定義されている列挙型で使います。 詳しくは、「[列挙型](../builtin-types/enum.md)」記事の「[ビット フラグとしての列挙型](../builtin-types/enum.md#enumeration-types-as-bit-flags)」セクションをご覧ください。
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
