@@ -193,7 +193,7 @@ ms.locfileid: "74349614"
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic の定数と列挙体  
 
- `Microsoft.VisualBasic` 名前空間は、Visual Basic ランタイムライブラリの一部として定数と列挙を提供します。 これらの定数値は、コード内で使用できます。 各列挙は、特定の機能のカテゴリを表します。 詳細については、「[定数と列挙型](../../visual-basic/language-reference/constants-and-enumerations.md)」を参照してください。  
+ `Microsoft.VisualBasic` 名前空間は、Visual Basic ランタイムライブラリの一部として定数と列挙を提供します。 これらの定数値は、コード内で使用できます。 各列挙は、特定の機能のカテゴリを表します。 詳細については、「[定数と列挙体](../../visual-basic/language-reference/constants-and-enumerations.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照
 
