@@ -38,4 +38,4 @@ Distinct
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)
 - [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
 - [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
-- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Where 句](../../../visual-basic/language-reference/queries/where-clause.md)
