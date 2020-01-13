@@ -11,14 +11,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043903"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715701"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows Resource Localization Editor)
 
@@ -43,7 +41,7 @@ winres /?
 |------------|-----------------|
 |**/?**|このツールのコマンド構文とオプションを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 Windows フォーム プロジェクトのフォームの UI 要素の状態は、通常、リソース ファイルに格納されます。リソース ファイルは、拡張子 .resx を持つ XML ベースのファイル、または、これに対応する、拡張子 .resources が設定された、コンパイル済みのバイナリ形式のファイルのいずれかです。 Winres.exe ツールでは、上記いずれかの形式のファイルを、Visual Studio のデザイン環境を使用しないで編集できますが、制限があります。 具体的には、以下の編集操作を行うことができます。
 
@@ -110,7 +108,7 @@ Winres.exe には、以下の機能があります。
 
 2. ローカライズするフォームの既定のリソースを開くには、 **[ファイル]** メニューの **[開く]** をクリックし、開くファイルを指定します。
 
-     または
+     \- または -
 
      Winres.exe を起動するときに、コマンド ラインで開くファイルを指定します。
 

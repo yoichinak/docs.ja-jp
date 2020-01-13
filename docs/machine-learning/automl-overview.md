@@ -1,17 +1,15 @@
 ---
 title: ML.NET による自動機械学習
 description: 自動モデル選択およびトレーニングの概要
-author: natke
 ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
-ms.author: nakersha
-ms.openlocfilehash: 263004e67bf88af4182788e8c74cb410460e9201
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c6c369dc0b0375f180d33d85ef320ddb24102f3e
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971404"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740100"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>ML.NET による自動機械学習
 

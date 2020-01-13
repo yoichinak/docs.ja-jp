@@ -6,14 +6,12 @@ helpviewer_keywords:
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cadcb5c2e85f046b5c1c561c17663b7c94829f4f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 73a0ffd4a39b144a61bf559ac424414728fb9a3f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802244"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716447"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework の初期化エラー:ユーザー エクスペリエンスの管理
 
@@ -73,7 +71,7 @@ CLR にはさまざまなシナリオ向けの一連のホストが含まれて�
 
 |CLR ホスト|説明|エラー メッセージ ポリシー|エラー メッセージを無効にできるか|
 |--------------|-----------------|--------------------------|------------------------------------|
-|マネージド EXE ホスト|マネージド EXE を起動します。|.NET Framework のバージョンが見つからない場合に表示される|×|
+|マネージド EXE ホスト|マネージド EXE を起動します。|.NET Framework のバージョンが見つからない場合に表示される|いいえ|
 |マネージド COM ホスト|マネージド COM コンポーネントをプロセスに読み込みます。|.NET Framework のバージョンが見つからない場合に表示される|はい (SEM_FAILCRITICALERRORS フラグを設定すると可能)|
 |ClickOnce ホスト|ClickOnce アプリケーションを起動します。|.NET Framework 4.5 以降で、.NET Framework のバージョンが見つからない場合に表示される|いいえ|
 |XBAP ホスト|WPF XBAP アプリケーションを起動します。|.NET Framework 4.5 以降で、.NET Framework のバージョンが見つからない場合に表示される|いいえ|
