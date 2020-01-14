@@ -81,7 +81,7 @@ ms.locfileid: "74348686"
  縮小変換は実行時に必ず成功するわけではないため、失敗したり、データ損失が発生したりする可能性があります。 変換先のデータ型が変換されている値を受け取ることができない場合、エラーが発生します。 たとえば、数値変換でオーバーフローが発生する場合があります。 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)で型チェックスイッチが `Off`に設定されていない限り、コンパイラでは、暗黙的に縮小変換を実行することはできません。  
   
 > [!NOTE]
-> `For Each…Next` コレクション内の要素から loop コントロール変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、「」の「縮小変換」セクションを参照してください。 [次のステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
+> `For Each…Next` コレクション内の要素から loop コントロール変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、「[For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)」の「縮小変換」セクションを参照してください。  
   
 ### <a name="when-to-use-narrowing-conversions"></a>縮小変換を使用する場合  
  変換元の値が変換先のデータ型に変換できることがわかっている場合は、縮小変換を使用します。エラーやデータの損失は発生しません。 たとえば、"True" または "False" のいずれかが含まれていることがわかっている `String` がある場合は、`CBool` キーワードを使用して `Boolean`に変換できます。  
