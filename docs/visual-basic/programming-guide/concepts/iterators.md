@@ -15,7 +15,7 @@ ms.locfileid: "74353738"
 
 iterator メソッドまたは `get` アクセサーは、コレクションに対するカスタム イテレーションを実行します。 Iterator メソッドは [Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを使用して、各要素を 1 回に 1 つ返します。 `Yield` ステートメントに達すると、コードの現在の場所が記憶されます。 次回、反復子メソッドが呼び出されると、この位置から実行が再開されます。
 
-[For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメントを使用するか、LINQ クエリを使用して、クライアントコードから反復子を使用します。
+For Each を使用して、クライアントコードから反復子を使用します。 [次](../../../visual-basic/language-reference/statements/for-each-next-statement.md)のステートメント、または LINQ クエリを使用します。
 
 次の例では、`For Each` ループの最初の反復子により、最初の `SomeNumbers` ステートメントに達するまで `Yield` iterator メソッドで実行が続行されます。 このイテレーションは 3 の値を返し、反復子メソッドの現在の場所が保持されます。 ループの次のイテレーションでは、iterator メソッドの実行が中断した場所から続行し、`Yield` ステートメントに達したときに再度停止します。 このイテレーションは 5 の値を返し、ここでも反復子メソッドの現在の場所が保持されます。 反復子メソッドの最後に達すると、ループが完了します。
 

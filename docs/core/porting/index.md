@@ -3,19 +3,19 @@ title: .NET Framework から .NET Core への移植
 description: 移植プロセスを理解し、.NET Framework プロジェクトを .NET Core に移植する際に役立つツールを確認します。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 3dbd4a1f608d71f28fa507da2e11fc41226664c7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b5b010acbccf134afe800aa5bb98a0ae6e9ffa25
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714340"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777353"
 ---
-# <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移植プロセスの概要
+# <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移植の概要
 
 現在 .NET Framework で実行しているコードの .NET Core への移植を検討する場合があります。 この記事では、次について説明します。
 
 * 移植プロセスの概要。
-* コードを .NET Core に移植するときに役立つツールの一覧。
+* コードを .NET Core に移植するときに役立つ場合があるツールの一覧。
 
 ## <a name="overview-of-the-porting-process"></a>移植プロセスの概要
 
@@ -43,9 +43,11 @@ ms.locfileid: "75714340"
 
 6. テスト コードを移植します。
 
-   .NET Core への移植はコードベースにとって大きな変更となるため、コードの移植時にテストを実行できるように、テストを移植することを強くお勧めします。 MSTest、xUnit、NUnit はすべて .NET Core で動作します。
+   .NET Core への移植はコードベースにとって大きな変更となるため、テスト プロジェクトを移植して、ご自分のコードの移植時にテストを実行できるようにすることを強くお勧めします。 MSTest、xUnit、NUnit はすべて .NET Core で動作します。
 
-さらに、[dotnet try-convert](https://github.com/dotnet/try-convert) ツールを使って、より小規模なソリューションや個人のプロジェクトを、1 つの操作で .NET Core プロジェクトのファイル形式に移植してみることが可能です。 `dotnet try-convert` がすべてのプロジェクトに対して動作する保証はありません。また、依存していた動作に微妙な変更が生じる原因となる可能性があります。 これは、自動化できる基本的なことを自動化するための "_開始点_" として使う必要があります。 これは、プロジェクトの移行に対する保証されたソリューションではありません。
+さらに、[dotnet try-convert](https://github.com/dotnet/try-convert) ツールを使って、より小規模なソリューションや個人のプロジェクトを、1 つの操作で .NET Core プロジェクトのファイル形式に移植してみることが可能です。 `dotnet try-convert` がすべてのプロジェクトに対して動作する保証はありません。また、これが原因となって、依存していた動作に微妙な変更が生じる可能性があります。 これは、自動化できる基本的なことを自動化するための "_開始点_" としてお使いください。 これは、プロジェクトの移行に対する保証されたソリューションではありません。
 
->[!div class="step-by-step"]
->[次へ](net-framework-tech-unavailable.md)
+## <a name="next-steps"></a>次の手順
+
+>[!div class="nextstepaction"]
+>[.NET Core で使用できないテクノロジ](net-framework-tech-unavailable.md)
