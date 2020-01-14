@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283285"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938049"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 
 Windows Communication Foundation (WCF) のセキュリティをプログラミングする場合、一般に X.509 デジタル証明書を使用して、クライアントとサーバーの認証、暗号化、およびメッセージのデジタル署名を行います。 ここでは、X.509 デジタル証明書の機能および WCF でのそれらの機能の使用方法について簡単に説明します。また、これらの概念の詳細を説明するトピックや、WCF と証明書を使用した一般的なタスクの実行方法が記載されたトピックへのリンクも示します。
 
-簡単に言うと、デジタル証明書は、"*公開キー基盤 (PKI: Public Key Infrastructure)* " の一部です。PKI は、デジタル証明書、証明機関、およびその他の登録機関から成るシステムです。登録機関では、公開キー暗号化を使用して、電子取引に関与する各当事者の有効性の検証と認証を行います。 証明機関は証明書を発行します。各証明書には、"*サブジェクト*" (証明書の発行先のエンティティ)、有効期間 (証明書が有効な場合)、発行者 (証明書を発行したエンティティ)、公開キーなどのデータが含まれた一連のフィールドがあります。 WCF では、これらの各プロパティは <xref:System.IdentityModel.Claims.Claim> (クレーム) として処理されます。各クレームは、さらに ID と権限の 2 種類に分けられます。 X.509 証明書の詳細については、「[X.509 Public Key Certificates](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)」(X.509 公開キー証明書) を参照してください。 WCF におけるクレームと承認の詳細については、「[ID モデルを使用したクレームと承認の管理](managing-claims-and-authorization-with-the-identity-model.md)」を参照してください。 PKI の実装の詳細については、「 [Windows Server 2012 R2 でのエンタープライズ pki Active Directory 証明書サービス](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/)」を参照してください。
+簡単に言うと、デジタル証明書は、"*公開キー基盤 (PKI: Public Key Infrastructure)* " の一部です。PKI は、デジタル証明書、証明機関、およびその他の登録機関から成るシステムです。登録機関では、公開キー暗号化を使用して、電子取引に関与する各当事者の有効性の検証と認証を行います。 証明機関は証明書を発行します。各証明書には、"*サブジェクト*" (証明書の発行先のエンティティ)、有効期間 (証明書が有効な場合)、発行者 (証明書を発行したエンティティ)、公開キーなどのデータが含まれた一連のフィールドがあります。 WCF では、これらの各プロパティは <xref:System.IdentityModel.Claims.Claim> (クレーム) として処理されます。各クレームは、さらに ID と権限の 2 種類に分けられます。 X.509 証明書の詳細については、「[X.509 Public Key Certificates](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)」(X.509 公開キー証明書) を参照してください。 WCF におけるクレームと承認の詳細については、「[ID モデルを使用したクレームと承認の管理](managing-claims-and-authorization-with-the-identity-model.md)」を参照してください。 PKI の実装の詳細については、「 [Windows Server 2012 R2 でのエンタープライズ pki Active Directory 証明書サービス](https://docs.microsoft.com/archive/blogs/yungchou/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2)」を参照してください。
 
 証明書の第一の機能は、他者に対して証明書の所有者の ID を認証することです。 証明書は所有者の "*公開キー*" を含んでおり、所有者が秘密キーを保持しています。 公開キーを使用して、証明書の所有者に送信されるメッセージを暗号化できます。 秘密キーにアクセスできるのは所有者だけであるため、所有者だけが暗号化されたメッセージを復号化できます。
 
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
 
 新しいサービスの作成時には、信頼されたルート証明書によって発行されていない証明書を使用できます。また、発行する証明書が、信頼されたルート証明機関ストアになくてもかまいません。 開発だけを目的としている場合は、証明書の信頼チェーンをチェックする機構を一時的に無効にできます。 これを行うには、`CertificateValidationMode` プロパティを `PeerTrust` または `PeerOrChainTrust` に設定します。 これらのモードにより、証明書を自己発行するか (ピア信頼)、信頼チェーンに含めるかを指定できます。 このプロパティは、次のどのクラスでも設定できます。
 
-|クラス|プロパティ|
+|&lt;クラス&gt; のすべてのオブジェクト|property|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -135,13 +135,13 @@ PowerShell の新しい SelfSignedCertificate コマンドレットは、x.509 �
 
 証明書が失効した場合、失効した証明書から発生した下位のチェーンも無効になり、認証手順において信頼されなくなります。 失効した証明書を検出するために、各発行者は日時が記された"*証明書失効リスト*" (CRL) を発行します。 このリストは、オンラインの失効またはオフラインの失効を使用してチェックできます。これを使用するには、`RevocationMode`、`DefaultRevocationMode`、<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>、および <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> の各クラスの <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> プロパティまたは <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> プロパティを <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 列挙値のいずれかに設定します。 すべてのプロパティの既定値は、`Online` です。
 
-(`revocationMode`[serviceBehaviors>\< の) ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[authentication>\< と (](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)[endpointBehaviors>\< の) ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[authentication>\<.の両方の ](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 属性を使用することにより、構成でモードを設定することもできます。
+([\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) の) [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) と ([\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) の) [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md).の両方の `revocationMode` 属性を使用することにより、構成でモードを設定することもできます。
 
 ## <a name="the-setcertificate-method"></a>SetCertificate メソッド
 
 WCF では、認証、暗号化、またはメッセージのデジタル署名を行うために、多くの場合、サービスまたはクライアントが使用する証明書または証明書のセットを指定する必要があります。 これは、X.509 証明書を表すさまざまなクラスの `SetCertificate` メソッドを使用することで、プログラムによって実行できます。 `SetCertificate` メソッドを使用して証明書を指定するクラスは次のとおりです。
 
-|クラス|メソッド|
+|&lt;クラス&gt; のすべてのオブジェクト|メソッド|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|
@@ -168,7 +168,7 @@ IIS と Active Directory には、証明書を Windows ユーザー アカウン
 
 Active Directory のマッピングを使用する方法の詳細については、「[Mapping Client Certificates with Directory Service Mapping](https://go.microsoft.com/fwlink/?LinkId=88918)」(ディレクトリ サービスのマッピングによるクライアント証明書のマッピング) を参照してください。
 
-この機能が有効になっている場合、<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> クラスの <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> プロパティを `true` に設定できます。 構成では、次のコードに示すように、`mapClientCertificateToWindowsAccount`[authentication>\< 要素の ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 属性を `true` に設定できます。
+この機能が有効になっている場合、<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> クラスの <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> プロパティを `true` に設定できます。 構成では、次のコードに示すように、[\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 要素の `mapClientCertificateToWindowsAccount` 属性を `true` に設定できます。
 
 ```xml
 <serviceBehaviors>
