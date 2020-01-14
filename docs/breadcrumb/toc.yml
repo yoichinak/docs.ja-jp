@@ -451,12 +451,6 @@
             - name: 新機能
               tocHref: /dotnet/csharp/whats-new/
               topicHref: /dotnet/csharp/whats-new/index
-            - name: Interactive
-              tocHref: /dotnet/csharp/interactive/
-              topicHref: /dotnet/csharp/interactive/index
-            - name: 概念
-              tocHref: /dotnet/csharp/concepts/
-              topicHref: /dotnet/csharp/concepts/index
             - name: .NET Compiler Platform SDK
               tocHref: /dotnet/csharp/roslyn-sdk/
               topicHref: /dotnet/csharp/roslyn-sdk/index
@@ -497,9 +491,6 @@
                 - name: 相互運用性
                   tocHref: /dotnet/csharp/programming-guide/interop/
                   topicHref: /dotnet/csharp/programming-guide/interop/index
-                - name: LINQ
-                  tocHref: /dotnet/csharp/programming-guide/linq/
-                  topicHref: /dotnet/csharp/programming-guide/linq/index
                 - name: Main() とコマンド ライン引数
                   tocHref: /dotnet/csharp/programming-guide/main-and-command-args/
                   topicHref: /dotnet/csharp/programming-guide/main-and-command-args/index

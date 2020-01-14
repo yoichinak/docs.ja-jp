@@ -48,7 +48,7 @@ Visual Basic には、参照型と値型という2種類の型があります。
   
  クラスは*参照型*です。 すべての配列が参照型であることに注意してください。これは、そのメンバーが値型の場合でも同様です。  
   
- 参照型はすべて、基になる .NET Framework クラスを表しているため、初期化時に [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)キーワードを使用する必要があります。 次のステートメントは、配列を初期化します。  
+ 参照型はすべて、基になる .NET Framework クラスを表しているため、初期化時に [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md) キーワードを使用する必要があります。 次のステートメントは、配列を初期化します。  
   
 ```vb  
 Dim totals() As Single = New Single(8) {}  

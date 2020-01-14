@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 4c5c7ffcab118978baf1b2f7602f39291452d1e6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ab14e6cb7d9bd4c1571040280dc35233e9b89d43
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740410"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937979"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework の新機能
 
@@ -618,7 +618,7 @@ Windows フォーム アプリケーションの場合、DPI 認識をアプリ�
 
 **読み取り専用の参照のサポート**
 
-.NET Framework 4.7.1 では、<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType> が追加されました。 この属性は、読み取り専用の ref 戻り値型またはパラメーターを持つメンバーをマークする言語コンパイラで使用します。 詳細については、「[.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)」(.NET Framework 4.7.1 ランタイムとコンパイラの機能) ブログ投稿の「Compiler - Support for ReadOnlyReferences」(コンパイラ - ReadOnlyReferences のサポート) を参照してください。 参照戻り値の詳細については、[参照戻り値と参照ローカル変数 (C# Guide)](../../csharp/programming-guide/classes-and-structs/ref-returns.md)および[参照戻り値 (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md)に関するページを参照してください。
+.NET Framework 4.7.1 では、<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType> が追加されました。 この属性は、読み取り専用の ref 戻り値型またはパラメーターを持つメンバーをマークする言語コンパイラで使用します。 詳細については、「[.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)」(.NET Framework 4.7.1 ランタイムとコンパイラの機能) ブログ投稿の「Compiler - Support for ReadOnlyReferences」(コンパイラ - ReadOnlyReferences のサポート) を参照してください。 参照戻り値の詳細については、[参照戻り値と参照ローカル変数 (C# Guide)]](../../csharp/programming-guide/classes-and-structs/ref-returns.md)および[参照戻り値 (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md)に関するページを参照してください。
 
 <a name="clr" />
 
@@ -1196,9 +1196,9 @@ WPF アプリ用の高 DPI とハイブリッド DPI 環境の最近の急激な
 
 **再ホストされた WF デザイナーにおける C# 式と IntelliSense のサポート**
 
-.NET Framework 4.5 以降では、WF によって、Visual Studio デザイナーとコード ワークフローの両方で C# 式がサポートされます。 再ホストされたワークフロー デザイナーは WF の主な機能です。これにより、ワークフロー デザイナーを Visual Studio の外部のアプリケーション (WPF など) で使用できるようになります。  Windows Workflow Foundation は、再ホストされたワークフロー デザイナーで C# 式と IntelliSense をサポートできるようにします。 詳細については、[Windows Workflow Foundation のブログ](https://blogs.msdn.microsoft.com/workflowteam/2016/07/20/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer/)を参照してください。
+.NET Framework 4.5 以降では、WF によって、Visual Studio デザイナーとコード ワークフローの両方で C# 式がサポートされます。 再ホストされたワークフロー デザイナーは WF の主な機能です。これにより、ワークフロー デザイナーを Visual Studio の外部のアプリケーション (WPF など) で使用できるようになります。  Windows Workflow Foundation は、再ホストされたワークフロー デザイナーで C# 式と IntelliSense をサポートできるようにします。 詳細については、[Windows Workflow Foundation のブログ](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer)を参照してください。
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` .NET Framework 4.6.2 より前のバージョンの .NET Framework で、お客様が Visual Studio からワークフロー プロジェクトをリビルドした場合、WF Designer IntelliSense は破損してしまいます。 プロジェクトのビルドに成功しても、デザイナーでワークフローの種類が見つからず、 **[エラー一覧]** ウィンドウにワークフローの種類が欠落していることを示す IntelliSense からの警告が表示されます。 .NET Framework 4.6.2 はこの問題に対処し、IntelliSense を使うことができるようにします。
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` .NET Framework 4.6.2 より前のバージョンの .NET Framework で、お客様が Visual Studio からワークフロー プロジェクトをリビルドした場合、WF Designer IntelliSense は破損してしまいます。 プロジェクトのビルドに成功しても、デザイナーでワークフローの種類が見つからず、**[エラー一覧]** ウィンドウにワークフローの種類が欠落していることを示す IntelliSense からの警告が表示されます。 .NET Framework 4.6.2 はこの問題に対処し、IntelliSense を使うことができるようにします。
 
 **ワークフロー追跡を有効にしたワークフロー V1 アプリケーションを FIPS モードで実行**
 
@@ -1928,7 +1928,7 @@ ASP.NET 4.5.1 の新機能については、「[ASP.NET and Web Tools for Visual
 
 - <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> クラスを Windows 8 で使用した場合の IDNA (Internationalized Domain Names in Applications) 規格の 2008 バージョンのサポート。
 
-- オペレーティング システムへの文字列比較の処理代行。.NET Framework を Windows 8 で使ったときに、Unicode 6.0 が実装されます。 他のプラットフォームで実行されている場合、.NET Framework には、Unicode 5.x. を実装する独自の文字列比較データが含まれています。 <xref:System.String> クラスおよび <xref:System.Globalization.SortVersion> クラスの「コメント」セクションを参照してください。
+- オペレーティング システムへの文字列比較の処理代行。 .NET Framework を Windows 8 で使ったときに、Unicode 6.0 が実装されます。 他のプラットフォームで実行されている場合、.NET Framework には、Unicode 5.x. を実装する独自の文字列比較データが含まれています。 <xref:System.String> クラスおよび <xref:System.Globalization.SortVersion> クラスの「コメント」セクションを参照してください。
 
 - アプリケーション ドメインごとに文字列のハッシュ コードを計算する機能。 「[\<UseRandomizedStringHashAlgorithm> 要素](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)」をご覧ください。
 
@@ -1944,7 +1944,7 @@ ASP.NET 4.5.1 の新機能については、「[ASP.NET and Web Tools for Visual
 
 - 複数のスコープ。
 
-- Windows 8.x ストア アプリを作成するときに使うことができる MEF のサブセット。 このサブセットは、[ダウンロード可能パッケージ](https://www.nuget.org/packages/Microsoft.Composition)として NuGet ギャラリーから入手できます。 パッケージをインストールするには、Visual Studio でプロジェクトを開き、 **[プロジェクト]** メニューの **[NuGet パッケージの管理]** をクリックし、`Microsoft.Composition` パッケージをオンラインで検索します。
+- Windows 8.x ストア アプリを作成するときに使うことができる MEF のサブセット。 このサブセットは、[ダウンロード可能パッケージ](https://www.nuget.org/packages/Microsoft.Composition)として NuGet ギャラリーから入手できます。 パッケージをインストールするには、Visual Studio でプロジェクトを開き、**[プロジェクト]** メニューの **[NuGet パッケージの管理]** をクリックし、`Microsoft.Composition` パッケージをオンラインで検索します。
 
 詳しくは、「[Managed Extensibility Framework (MEF)](../mef/index.md)」を参照してください。
 
@@ -2066,7 +2066,7 @@ ASP.NET 4.5 および 4.5.1 では、Web フォーム モデルのバインデ�
 
 .NET Framework 4.5 では、次に示すようないくつかの新しい機能が Windows Workflow Foundation (WF) に追加されました。
 
-- 最初に .NET Framework 4.0.1 ([.NET Framework 4 Platform Update 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)) の一部として導入された、ステート マシンのワークフロー。 この更新プログラムには、開発者がステート マシン ワークフローを作成できるようにする新しいクラスとアクティビティが複数含まれていました。 .NET Framework 4.5 では、これらのクラスとアクティビティが、次を含むように更新されました。
+- 最初に .NET Framework 4.0.1 ([.NET Framework 4 Platform Update 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)) の一部として導入された、ステート マシンのワークフロー。 この更新プログラムには、開発者がステート マシン ワークフローを作成できるようにする新しいクラスとアクティビティが複数含まれていました。 .NET Framework 4.5 では、これらのクラスとアクティビティが、次を含むように更新されました。
 
   - 状態でブレークポイントを設定する機能。
 
@@ -2084,7 +2084,7 @@ ASP.NET 4.5 および 4.5.1 では、Web フォーム モデルのバインデ�
 
   - スクロール バーを使用せずに変更されるワークフローの表示部分を変更できるようにするパン サポート。
 
-  - ツリー スタイルのアウトライン ビューでワークフローのコンポーネントを表示し、 **[ドキュメント アウトライン]** ビューでコンポーネントを選択できるようにする新しい **[ドキュメント アウトライン]** ビュー。
+  - ツリー スタイルのアウトライン ビューでワークフローのコンポーネントを表示し、**[ドキュメント アウトライン]** ビューでコンポーネントを選択できるようにする新しい **[ドキュメント アウトライン]** ビュー。
 
   - アクティビティに注釈を追加できる機能。
 
@@ -2096,7 +2096,7 @@ ASP.NET 4.5 および 4.5.1 では、Web フォーム モデルのバインデ�
 
 - 子アクティビティの永続化を防ぐ NoPersistScope コンテナー アクティビティ。
 
-- C# 式のサポート:
+- C# 式のサポート: 
 
   - Visual Basic を使用するワークフロー プロジェクトは、Visual Basic 式を使用し、C# ワークフロー プロジェクトは C# 式を使用します。
 
