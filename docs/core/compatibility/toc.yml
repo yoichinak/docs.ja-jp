@@ -16,7 +16,11 @@
     - name: 2.0 から 2.1
       href: 2.0-2.1.md
     - name: .NET Framework から .NET Core へ
-      href: fx-core.md
+      items:
+        - name: 互換性に影響する変更
+          href: fx-core.md
+        - name: 例外をスローする API
+          href: unsupported-apis.md
 - name: 領域別
   expanded: true
   items:
