@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63d8260c-fb32-4f8f-a357-768afd570f68
 topic_type:
 - apiref
-ms.openlocfilehash: 700bcc5b818c452d3642d325fb6fe19cbb162474
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 834292192aa447a113372bc8807041954b39a115
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141450"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937768"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx メソッド
 公開キーと秘密キーのペアから公開キーを取得し、ハッシュアルゴリズムと署名アルゴリズムを指定します。  
@@ -66,7 +66,7 @@ HRESULT StrongNameGetPublicKey (
  から将来使用するために予約されています。既定値は null です。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが正常に完了した場合は `S_OK`。それ以外の場合は、失敗を示す HRESULT 値 (「リストの[一般的な Hresult 値](https://go.microsoft.com/fwlink/?LinkId=213878)」を参照してください)。  
+ メソッドが正常に完了した場合は `S_OK`。それ以外の場合は、失敗を示す HRESULT 値 (「リストの[一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values)」を参照してください)。  
   
 ## <a name="remarks"></a>Remarks  
  公開キーは[Publickeyblob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)構造に含まれています。  
@@ -74,15 +74,15 @@ HRESULT StrongNameGetPublicKey (
 ## <a name="remarks"></a>Remarks  
  次の表は、`uHashAlgId` パラメーターで許容される値のセットを示しています。  
   
-|名|[値]|  
+|[名前]|Value|  
 |----------|-----------|  
-|None|0|  
+|[なし]|0|  
 |SHA-1|0x8004|  
 |SHA-256|0x800c|  
 |SHA-384|0x800d|  
 |SHA-512|0x800e|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  

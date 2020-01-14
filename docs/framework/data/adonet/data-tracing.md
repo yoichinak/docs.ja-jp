@@ -2,12 +2,12 @@
 title: ADO.NET のデータ追跡
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: be82500920ce9d5f8bc7ee979cf8ec5006f4f12b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f92a17374cf3df1281e51d54bae1a1dcf9e5ea03
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347802"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937625"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET のデータ追跡
 
@@ -33,7 +33,7 @@ ADO.NET でのマネージトレースの設定と構成の詳細については
 
 SQL Server の .NET Framework Data Provider では、データアクセスのトレース ([データアクセスのトレース](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) が更新され、クライアントイベントと接続エラーなどの診断情報を、拡張イベントログのサーバーの接続リングバッファーとアプリケーションのパフォーマンス情報から簡単に関連付けられるようになりました。 拡張イベント ログを表示する方法については、「[イベント セッション データの表示](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))」を参照してください。
 
-接続操作では、ADO.NET はクライアント接続 ID を送信します。 接続に失敗した場合は、接続リングバッファー (接続[リングバッファーを使用した SQL Server 2008 の接続のトラブルシューティング](https://blogs.msdn.microsoft.com/sql_protocols/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer/)) にアクセスし、`ClientConnectionID` フィールドを見つけて、接続エラーに関する診断情報を取得することができます。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます。 (ログイン前パケットを送信する前に接続が失敗した場合、クライアント接続 ID は生成されません)。クライアント接続 ID は16バイトの GUID です。 拡張イベント セッション内のイベントに `client_connection_id` アクションが追加された場合にも、拡張イベントのターゲット出力のクライアント接続 ID を見つけることができます。 それ以上にクライアントのドライバーの診断について支援が必要な場合は、データ アクセスのトレースを有効にし、接続コマンドを再実行して、データ アクセスのトレースの `ClientConnectionID` フィールドを確認することができます。
+接続操作では、ADO.NET はクライアント接続 ID を送信します。 接続に失敗した場合は、接続リングバッファー (接続[リングバッファーを使用した SQL Server 2008 の接続のトラブルシューティング](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) にアクセスし、`ClientConnectionID` フィールドを見つけて、接続エラーに関する診断情報を取得することができます。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます。 (ログイン前パケットを送信する前に接続が失敗した場合、クライアント接続 ID は生成されません)。クライアント接続 ID は16バイトの GUID です。 拡張イベント セッション内のイベントに `client_connection_id` アクションが追加された場合にも、拡張イベントのターゲット出力のクライアント接続 ID を見つけることができます。 それ以上にクライアントのドライバーの診断について支援が必要な場合は、データ アクセスのトレースを有効にし、接続コマンドを再実行して、データ アクセスのトレースの `ClientConnectionID` フィールドを確認することができます。
 
 `SqlConnection.ClientConnectionID` プロパティを使用して、クライアント接続 ID をプログラムによって取得できます。
 

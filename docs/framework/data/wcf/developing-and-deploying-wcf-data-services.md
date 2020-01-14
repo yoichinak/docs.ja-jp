@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d3a3539904c5d8b5db23b99ca6128bf5860a1917
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e34f7c8a0194e3901453923530a5cd07202801f6
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346103"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937456"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF Data Services の開発とデプロイ
 
@@ -70,7 +70,7 @@ Visual Studio 2015 を使用して WCF Data Service を ASP.NET アプリケー�
 
 3. **Microsoft Azure 開発環境**
 
-     Windows Azure Tools for Visual Studio には、Visual Studio で Windows Azure サービスを開発するためのツールの統合セットが含まれています。 これらのツールでは、Microsoft Azure に配置できるデータ サービスを開発し、配置前にローカル コンピューターでデータ サービスをテストすることができます。 これらのツールは、Visual Studio を使用して、Windows Azure プラットフォームで実行されるデータサービスを開発するときに使用します。 Windows Azure Tools for Visual Studio は、 [Microsoft ダウンロードセンター](https://go.microsoft.com/fwlink/?LinkID=201848)からダウンロードできます。 Windows Azure で実行されるデータサービスの開発の詳細については、「 [Windows azure での OData サービスのデプロイ](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/)」を参照してください。
+     Windows Azure Tools for Visual Studio には、Visual Studio で Windows Azure サービスを開発するためのツールの統合セットが含まれています。 これらのツールでは、Microsoft Azure に配置できるデータ サービスを開発し、配置前にローカル コンピューターでデータ サービスをテストすることができます。 これらのツールは、Visual Studio を使用して、Windows Azure プラットフォームで実行されるデータサービスを開発するときに使用します。 Windows Azure Tools for Visual Studio は、 [Microsoft ダウンロードセンター](https://go.microsoft.com/fwlink/?LinkID=201848)からダウンロードできます。 Windows Azure で実行されるデータサービスの開発の詳細については、「 [Windows azure での OData サービスのデプロイ](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)」を参照してください。
 
 ### <a name="development-tips"></a>開発のヒント
 
@@ -115,7 +115,7 @@ WCF Data Services では、データ サービスをホストするプロセス�
 
 - **Windows Azure**
 
-     Windows azure Tools for Visual Studio を使用して、データサービスを Windows Azure に配置できます。 Windows Azure Tools for Visual Studio は、 [Microsoft ダウンロードセンター](https://go.microsoft.com/fwlink/?LinkID=201848)からダウンロードできます。 Windows Azure へのデータサービスの配置の詳細については、「 [Windows azure での OData サービスのデプロイ](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/)」を参照してください。
+     Windows azure Tools for Visual Studio を使用して、データサービスを Windows Azure に配置できます。 Windows Azure Tools for Visual Studio は、 [Microsoft ダウンロードセンター](https://go.microsoft.com/fwlink/?LinkID=201848)からダウンロードできます。 Windows Azure へのデータサービスの配置の詳細については、「 [Windows azure での OData サービスのデプロイ](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)」を参照してください。
 
 ### <a name="deployment-considerations"></a>配置に関する考慮事項
 
@@ -123,7 +123,7 @@ WCF Data Services では、データ サービスをホストするプロセス�
 
 - Entity Framework プロバイダーを使用して SQL Server データベースにアクセスするデータサービスを配置する場合は、データサービスの配置にデータ構造、データ、またはその両方を伝達することが必要になる場合があります。 Visual Studio では、スクリプト (.sql ファイル) を自動的に作成してコピー先データベースで実行できます。これらのスクリプトは、ASP.NET アプリケーションの Web 配置パッケージに含めることができます。 詳細については、「[方法: Web アプリケーションプロジェクトを使用してデータベースを配置](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))する」を参照してください。 ASP.NET Web サイトでは、Visual Studio の**データベース発行ウィザード**を使用してこれを行うことができます。 詳細については、「 [SQL Database の発行](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))」を参照してください。
 
-- WCF Data Services には基本的な WCF 実装が含まれているため、windows server AppFabric を使用して、Windows Server 上で実行されている IIS に配置されたデータサービスを監視できます。 Windows Server AppFabric を使用したデータサービスの監視の詳細については、「 [Windows Server appfabric を使用した WCF Data Services の追跡](https://blogs.msdn.microsoft.com/rjacobs/2010/06/09/tracking-wcf-data-services-with-windows-server-appfabric/)」を参照してください。
+- WCF Data Services には基本的な WCF 実装が含まれているため、windows server AppFabric を使用して、Windows Server 上で実行されている IIS に配置されたデータサービスを監視できます。 Windows Server AppFabric を使用したデータサービスの監視の詳細については、「 [Windows Server appfabric を使用した WCF Data Services の追跡](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

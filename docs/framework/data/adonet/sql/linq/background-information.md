@@ -2,12 +2,12 @@
 title: 背景情報
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: deb4d59dc2fb40b63e0362a9a4ee4b84c08dce49
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: d7d00a0c64c6b25219403e8fd15eae85c09eafa0
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634730"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937542"
 ---
 # <a name="background-information"></a>背景情報
 このセクションのトピックでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の使用に関する基本事項の範囲を超えた概念と手順について説明します。  
@@ -18,7 +18,7 @@ ms.locfileid: "75634730"
   
 - [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)に参加してください。ここでは、より複雑なトピックについての専門家の詳細について説明します。  
   
-- Visual Basic とC#コード例を使用して、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] テクノロジについて詳しく説明したホワイトペーパーをご確認ください。 詳細については、「 [LINQ to SQL: リレーショナルデータ用の .Net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)」を参照してください。  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] テクノロジについて詳しく説明したホワイトペーパー Visual Basic とC#コード例を紹介します。 詳細については、「 [LINQ to SQL: リレーショナルデータ用の .Net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ADO.NET および LINQ to SQL](ado-net-and-linq-to-sql.md)  
