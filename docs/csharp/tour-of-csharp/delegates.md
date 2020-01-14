@@ -3,12 +3,12 @@ title: C# のデリゲート - C# 言語のツアー
 description: C# のデリゲートと遅延バインディングについて
 ms.date: 08/10/2016
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.openlocfilehash: 35a1e212b50e77eb43271a657c8abb21eb6cfb4a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 317d3ee6fb1350824fa9b3b4d0e3e851780ce4d4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634630"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346876"
 ---
 # <a name="delegates"></a>デリゲート
 
@@ -29,5 +29,5 @@ ms.locfileid: "65634630"
 デリゲートの興味深く有用な点は、参照するメソッドのクラスを把握せず必要ともしないことです。重要なのは、参照されるメソッドは同じパラメーターを持ち、デリゲートとして型を返すということです。
 
 >[!div class="step-by-step"]
->[前へ](enums.md)
+>[前へ](interfaces.md)
 >[次へ](attributes.md)

@@ -1,18 +1,17 @@
 ---
 title: 列挙型対応の新しいメソッドを作成する方法 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [C#]
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 02af55c851392ce5dde4c83fd32d18b927950a3f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 0d8e562342239c8ac3c53e05086ede9c234d0b63
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971032"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705653"
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>列挙型対応の新しいメソッドを作成する方法 (C# プログラミング ガイド)
 拡張メソッドを使用して、特定の列挙型に固有の機能を追加することができます。  

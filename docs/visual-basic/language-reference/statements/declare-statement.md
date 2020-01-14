@@ -78,7 +78,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 ## <a name="rules"></a>ルール
 
-- **属性。** 外部参照に属性を適用できます。 適用した属性は、プロジェクト内でのみ有効になり、外部ファイルには反映されません。
+- **アトリビュート.** 外部参照に属性を適用できます。 適用した属性は、プロジェクト内でのみ有効になり、外部ファイルには反映されません。
 
 - **ド.** 外部プロシージャは暗黙的に[Shared](../../../visual-basic/language-reference/modifiers/shared.md)されます。 外部参照を宣言するときに `Shared` キーワードを使用することはできません。また、共有ステータスを変更することもできません。
 
@@ -110,9 +110,9 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 ## <a name="behavior"></a>動作
 
-- **スコープ。** 外部参照は、そのクラス、構造体、またはモジュール全体でスコープ内にあります。
+- **検索.** 外部参照は、そのクラス、構造体、またはモジュール全体でスコープ内にあります。
 
-- **有効期間。** 外部参照の有効期間は、宣言されているクラス、構造体、またはモジュールと同じです。
+- **最短.** 外部参照の有効期間は、宣言されているクラス、構造体、またはモジュールと同じです。
 
 - **外部プロシージャの呼び出し。** 外部プロシージャは、`Function` または `Sub` プロシージャを呼び出すのと同じ方法で、値を返す場合は式で使用するか、値を返さない場合は [Call ステートメント](../../../visual-basic/language-reference/statements/call-statement.md)で指定することによって呼び出します。
 
@@ -126,7 +126,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
   - Windows NT、Windows 2000、Windows XP などの Unicode プラットフォームでは、最初に名前を変更せずに外部プロシージャを検索します。 失敗した場合は、外部プロシージャ名の末尾に "W" を追加して、もう一度確認します。
 
-- **仕組み。** Visual Basic は、.NET Framework *platform invoke* (PInvoke) メカニズムを使用して、外部プロシージャを解決し、アクセスします。 `Declare` ステートメントと <xref:System.Runtime.InteropServices.DllImportAttribute> クラスは、どちらもこのメカニズムを自動的に使用します。 PInvoke に関する知識は必要ありません。 詳細については、「[チュートリアル: Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)」を参照してください。
+- **しくみ.** Visual Basic は、.NET Framework *platform invoke* (PInvoke) メカニズムを使用して、外部プロシージャを解決し、アクセスします。 `Declare` ステートメントと <xref:System.Runtime.InteropServices.DllImportAttribute> クラスは、どちらもこのメカニズムを自動的に使用します。 PInvoke に関する知識は必要ありません。 詳細については、「[チュートリアル: Windows api の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)」を参照してください。
 
 > [!IMPORTANT]
 > 外部プロシージャが共通言語ランタイム (CLR) の外部で実行されている場合は、*アンマネージコード*です。 このようなプロシージャ (Windows API 関数や COM メソッドなど) を呼び出すと、アプリケーションがセキュリティ上のリスクにさらされる可能性があります。 詳細については、「[アンマネージコードの安全なコーディングのガイドライン](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)」を参照してください。

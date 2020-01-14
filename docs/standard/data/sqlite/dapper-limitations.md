@@ -2,12 +2,12 @@
 title: Dapper の制限事項
 ms.date: 12/13/2019
 description: Dapper を使用する際に発生する制限事項について説明します。
-ms.openlocfilehash: 90c7fb24f068d663081390bdba9b1b222b4be56e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 396507f25f591a9ab5c3bb07c0af6fd8d175e4ea
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450496"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901208"
 ---
 # <a name="dapper-limitations"></a>Dapper の制限事項
 
@@ -15,7 +15,7 @@ ms.locfileid: "75450496"
 
 ## <a name="parameters"></a>パラメーター
 
-SQLite パラメーター名では大文字と小文字が区別されます。 SQL で使用されるパラメーター名が、匿名オブジェクトのプロパティの大文字と小文字の区別と一致していることを確認します。 [#18861](https://github.com/aspnet/EntityFrameworkCore/issues/18861)問題を解決すると、このエクスペリエンスが向上します。
+SQLite パラメーター名では大文字と小文字が区別されます。 SQL で使用されるパラメーター名が、匿名オブジェクトのプロパティの大文字と小文字の区別と一致していることを確認します。 [#18861](https://github.com/dotnet/efcore/issues/18861)問題を解決すると、このエクスペリエンスが向上します。
 
 Dapper では、`@` プレフィックスを使用するパラメーターも必要です。 その他のプレフィックスは機能しません。
 

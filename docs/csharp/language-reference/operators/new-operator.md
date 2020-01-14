@@ -1,16 +1,15 @@
 ---
 title: new 演算子 - C# リファレンス
-ms.custom: seodec18
 ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: c21132a6622ce697fe3c52a461a33f548e0c8f31
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: beb55f0765e7f9090f0587f1d2a06cf03ea90ab8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036385"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712664"
 ---
 # <a name="new-operator-c-reference"></a>new 演算子 (C# リファレンス)
 

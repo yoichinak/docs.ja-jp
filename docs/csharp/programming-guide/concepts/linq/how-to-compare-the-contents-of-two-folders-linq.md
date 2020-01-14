@@ -2,12 +2,12 @@
 title: 2 つのフォルダーの内容を比較する方法 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: f64c82fcc63085c9479b0a3af91f0bdf5ee9eb95
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 9d46303068f2284415ea50c0514d76c5b2b55780
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141396"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346537"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>2 つのフォルダーの内容を比較する方法 (LINQ) (C#)
 この例では、2 つのファイル リストを比較する 3 つの方法を示します。  
@@ -68,7 +68,7 @@ namespace QueryCompareTwoDirs
             // execute until the foreach statement.  
             var queryCommonFiles = list1.Intersect(list2, myFileCompare);  
   
-            if (queryCommonFiles.Count() > 0)  
+            if (queryCommonFiles.Any())  
             {  
                 Console.WriteLine("The following files are in both folders:");  
                 foreach (var v in queryCommonFiles)  

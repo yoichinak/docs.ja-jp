@@ -10,16 +10,16 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 03fa40a895d322a8b5ad543f75424ef5b379672b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 764ea6a77ba267e691d48bc72d17c02f6b3c18ca
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568894"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900971"
 ---
 # <a name="query-projections-wcf-data-services"></a>クエリ射影 (WCF Data Services)
 
-射影では、Open Data Protocol (OData) のメカニズムを使用して、エンティティの特定のプロパティのみが応答で返されるように指定することによって、クエリによって返されるフィードのデータ量を削減します。 詳細については、「 [OData: Select システムクエリオプション ($select)](https://go.microsoft.com/fwlink/?LinkId=186076)」を参照してください。
+射影では、Open Data Protocol (OData) のメカニズムを使用して、エンティティの特定のプロパティのみが応答で返されるように指定することによって、クエリによって返されるフィードのデータ量を削減します。 詳細については、セクション4.8 を参照してください。 [URI 規則 (OData バージョン 2.0)](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)のシステムクエリオプション ($select) を選択します。
 
 このトピックでは、クエリ射影を定義する方法、エンティティ型、エンティティ型以外の要件、射影された結果に対する更新、射影された型の作成について説明すると共に、射影に関する注意事項をリストします。
 
@@ -116,6 +116,6 @@ ms.locfileid: "74568894"
 
 詳細については、「[方法: クエリ結果を射影する](how-to-project-query-results-wcf-data-services.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [データ サービスに対するクエリ](querying-the-data-service-wcf-data-services.md)

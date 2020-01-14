@@ -11,14 +11,12 @@ helpviewer_keywords:
 - streams, writing characters to strings
 - I/O [.NET Framework], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eb35c61b34fa571f35da6691ebe7fa2516eb2df1
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: b53513ef0b373cdde7703eddcd182ab7fd15cb9b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674751"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706622"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>方法: 文字列への文字の書き込み
 次のコード例では、文字列の配列から同期または非同期的に文字が書き込まれます。  

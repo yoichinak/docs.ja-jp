@@ -1,6 +1,5 @@
 ---
 title: protected キーワード - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - protected
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: f54c3f36e5aeb428815d1c49cd797e559d156ea7
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bec619d4f49bd26daa742c18c830909c14948adf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422565"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713184"
 ---
 # <a name="protected-c-reference"></a>protected (C# リファレンス)
 

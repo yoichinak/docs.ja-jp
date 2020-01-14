@@ -2,17 +2,17 @@
 title: DataContractJsonSerializer を使用したスタンドアロン JSON シリアル化
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 412da71617a8627c47e877a75770271d9a3cf180
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 39d3c0acd75ffd9a54c5e62a15487a2cd8c465cb
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976071"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904604"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>DataContractJsonSerializer を使用したスタンドアロン JSON シリアル化
 
 > [!NOTE]
-> この記事では、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>について説明します。 JSON のシリアル化と逆シリアル化を含むほとんどのシナリオでは、system.string[名前空間](../../../standard/serialization/system-text-json-overview.md)のツールを使用することをお勧めします。 
+> この記事では、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>について説明します。 JSON のシリアル化と逆シリアル化を含むほとんどのシナリオでは、Api を使用することをお勧めし[ます。](../../../standard/serialization/system-text-json-overview.md) 
 
 JSON (JavaScript Object Notation) は、ブラウザー内の Web ページで実行される JavaScript コードで使用するために特別に設計されたデータ形式です。 これは Windows Communication Foundation (WCF) で作成された ASP.NET AJAX サービスによって使用される既定のデータ形式です。
 
@@ -26,11 +26,11 @@ JSON を使用する場合、一部例外はありますが、<xref:System.Runti
 
 シリアル化および逆シリアル化の手順でマップされる場合の .NET 型と JSON/JavaScript 型の対応表を次に示します。
 
-|.NET 型|JSON/JavaScript|ノート|
+|.NET 型|JSON/JavaScript|メモ|
 |----------------|----------------------|-----------|
-|すべての数値型 (<xref:System.Int32>、<xref:System.Decimal>、<xref:System.Double> など)|数値|`Double.NaN`、`Double.PositiveInfinity`、`Double.NegativeInfinity` などの特殊な値はサポートされていないため、無効な JSON になります。|
-|<xref:System.Enum>|数値|このトピックの「列挙体と JSON」を参照してください。|
-|<xref:System.Boolean>|ブール型|--|
+|すべての数値型 (<xref:System.Int32>、<xref:System.Decimal>、<xref:System.Double> など)|Number|`Double.NaN`、`Double.PositiveInfinity`、`Double.NegativeInfinity` などの特殊な値はサポートされていないため、無効な JSON になります。|
+|<xref:System.Enum>|Number|このトピックの「列挙体と JSON」を参照してください。|
+|<xref:System.Boolean>|Boolean|--|
 |<xref:System.String>、 <xref:System.Char>|文字列型|--|
 |<xref:System.TimeSpan>では、 <xref:System.Guid>では、 <xref:System.Uri>|文字列型|JSON でのこれらの型の形式は、XML の場合と同じです (実質的には、ISO 8601 の期間形式の TimeSpan、"12345678-abcd-abcd-890AB" 形式の GUID、"http://www.example.com" のような自然文字列形式の URI)。 詳細については、「[データコントラクトスキーマのリファレンス](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)」を参照してください。|
 |<xref:System.Xml.XmlQualifiedName>|文字列型|形式は "name:namespace" です (最初のコロンの前が名前です)。 名前または名前空間が存在しない場合があります。 名前空間がない場合、コロンも省略されることがあります。|

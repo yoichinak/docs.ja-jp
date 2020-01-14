@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: e392f6b2e57bebf1ab916bc6142aebbc8f341db2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0abcc73e31eab89c422513acf778bc8bd092e788
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615309"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345554"
 ---
 # <a name="delegates-and-lambdas"></a>デリゲートとラムダ
 
@@ -155,7 +155,7 @@ public MainWindow()
 }
 ```
 
-このコンテキストでの `+=` 演算子は、[イベント](../../docs/csharp/language-reference/keywords/event.md)をサブスクライブするために使用されます。 詳細については、「[方法 :イベント サブスクリプションとサブスクリプションの解除](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)」を参照してください。
+このコンテキストでの `+=` 演算子は、[イベント](../../docs/csharp/language-reference/keywords/event.md)をサブスクライブするために使用されます。 詳細については、「[イベントのサブスクリプションとサブスクリプション解除を行う方法](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)」を参照してください。
 
 ## <a name="further-reading-and-resources"></a>参考資料とリソース
 

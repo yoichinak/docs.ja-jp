@@ -1,19 +1,19 @@
 ---
 title: .Net を使用してC# JSON をシリアル化および逆シリアル化する方法
-ms.date: 09/16/2019
+ms.date: 01/10/2020
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: a9c690e736a08c729a4099d5e7a519ed17ec282c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705796"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904655"
 ---
-# <a name="how-to-serialize-and-deserialize-json-in-net"></a>.NET で JSON をシリアル化および逆シリアル化する方法
+# <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET で JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリング解除) を行う方法
 
 この記事では、<xref:System.Text.Json> 名前空間を使用して、JavaScript Object Notation (JSON) との間でシリアル化および逆シリアル化を行う方法について説明します。
 
@@ -109,7 +109,7 @@ UTF-8 へのシリアル化は、文字列ベースのメソッドを使用す�
 * [既定のエンコーダー](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default)は、非 ascii 文字、ascii 範囲内の HTML を区別する文字、および[RFC 8259 JSON 仕様](https://tools.ietf.org/html/rfc8259#section-7)に従ってエスケープされる必要がある文字をエスケープします。
 * 既定では、JSON は縮小されています。 [JSON はかなり印刷](#serialize-to-formatted-json)できます。
 * 既定では、JSON 名の大文字と小文字の区別は .NET 名と一致します。 [JSON 名の大文字と小文字](#customize-json-names-and-values)の区別をカスタマイズできます。
-* 循環参照が検出され、例外がスローされました。 詳細については、GitHub の dotnet/corefx リポジトリの[循環参照に関する問題 38579](https://github.com/dotnet/corefx/issues/38579)を参照してください。
+* 循環参照が検出され、例外がスローされました。
 * 現在、フィールドは除外されています。
 
 サポートされている種類は次のとおりです。
@@ -118,7 +118,7 @@ UTF-8 へのシリアル化は、文字列ベースのメソッドを使用す�
 * ユーザー定義の[Plain OLD CLR オブジェクト (POCOs)](https://stackoverflow.com/questions/250001/poco-definition)。
 * 1次元配列とジャグ配列 (`ArrayName[][]`)。
 * `Dictionary<string,TValue>` `TValue` が `object`、`JsonElement`、または POCO です。
-* 次の名前空間のコレクション。 詳細については、GitHub の dotnet/corefx リポジトリの[コレクションサポートに関する問題](https://github.com/dotnet/corefx/issues/36643)を参照してください。
+* 次の名前空間のコレクション。
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
   * <xref:System.Collections.Immutable>
@@ -154,7 +154,7 @@ UTF-8 から逆シリアル化するには、次の例に示すように、`Utf8
 * 既定では、プロパティ名の照合では大文字と小文字が区別されます。 [大文字と小文字を区別](#case-insensitive-property-matching)しないように指定できます。
 * JSON に読み取り専用プロパティの値が含まれている場合、この値は無視され、例外はスローされません。
 * パラメーターなしのコンストラクターを使用しない参照型への逆シリアル化はサポートされていません。
-* 変更できないオブジェクトまたは読み取り専用プロパティへの逆シリアル化はサポートされていません。 詳細については、github の dotnet/corefx リポジトリで、[変更不可のオブジェクトのサポートに関する github の問題 38569](https://github.com/dotnet/corefx/issues/38569)を参照し、[読み取り専用プロパティのサポートに38163を発行](https://github.com/dotnet/corefx/issues/38163)してください。
+* 変更できないオブジェクトまたは読み取り専用プロパティへの逆シリアル化はサポートされていません。
 * 既定では、列挙型は数値としてサポートされています。 [列挙型名を文字列としてシリアル化](#enums-as-strings)できます。
 * フィールドはサポートされていません。
 * 既定では、JSON のコメントまたは末尾のコンマによって例外がスローされます。 [コメントと末尾のコンマを許可](#allow-comments-and-trailing-commas)できます。
@@ -458,7 +458,9 @@ JSON プロパティの名前付けポリシー:
 
 ## <a name="serialize-properties-of-derived-classes"></a>派生クラスのプロパティのシリアル化
 
-コンパイル時にシリアル化する型を指定する場合、ポリモーフィックシリアル化はサポートされません。 たとえば、`WeatherForecast` クラスと派生クラス `WeatherForecastDerived`があるとします。
+ポリモーフィックな型階層のシリアル化はサポートされていません。 たとえば、プロパティがインターフェイスまたは抽象クラスとして定義されている場合、ランタイム型に追加のプロパティがある場合でも、インターフェイスまたは抽象クラスで定義されたプロパティのみがシリアル化されます。 この動作の例外については、このセクションで説明します。
+
+たとえば、`WeatherForecast` クラスと派生クラス `WeatherForecastDerived`があるとします。
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -480,7 +482,7 @@ JSON プロパティの名前付けポリシー:
 
 この動作は、派生したランタイムによって作成された型でデータが誤って公開されるのを防ぐためのものです。
 
-派生型のプロパティをシリアル化するには、次のいずれかの方法を使用します。
+前の例で派生型のプロパティをシリアル化するには、次のいずれかの方法を使用します。
 
 * 実行時に型を指定できるようにする <xref:System.Text.Json.JsonSerializer.Serialize%2A> のオーバーロードを呼び出します。
 
@@ -494,14 +496,74 @@ JSON プロパティの名前付けポリシー:
 
 ```json
 {
+  "WindSpeed": 35,
   "Date": "2019-08-01T00:00:00-07:00",
   "TemperatureCelsius": 25,
-  "Summary": "Hot",
-  "WindSpeed": 35
+  "Summary": "Hot"
 }
 ```
 
-ポリモーフィックな逆シリアル化については、「[ポリモーフィックな逆シリアル化のサポート](system-text-json-converters-how-to.md#support-polymorphic-deserialization)」を参照してください。
+> [!IMPORTANT]
+> これらの方法では、ルートオブジェクトのプロパティではなく、シリアル化するルートオブジェクトに対してのみ、ポリモーフィックなシリアル化が提供されます。 
+
+`object`型として定義すると、下位レベルのオブジェクトのポリモーフィックなシリアル化を取得できます。 たとえば、`WeatherForecast` クラスに `PreviousForecast` という名前のプロパティがあり、`WeatherForecast` または `object`型として定義できるとします。
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPrevious)]
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPreviousAsObject)]
+
+`PreviousForecast` プロパティに `WeatherForecastDerived`のインスタンスが含まれている場合は、次のようになります。
+
+* `WeatherForecastWithPrevious` のシリアル化からの JSON 出力には `WindSpeed`**が含まれていません**。
+* `WeatherForecastWithPreviousAsObject` をシリアル化するための JSON 出力には、`WindSpeed`**が含まれて**います。
+
+`WeatherForecastWithPreviousAsObject`をシリアル化するには、ルートオブジェクトが派生型である可能性のあるものではないため、`Serialize<object>` または `GetType` を呼び出す必要はありません。 次のコード例では、`Serialize<object>` または `GetType`を呼び出しません。
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeSecondLevel)]
+
+上記のコードは、`WeatherForecastWithPreviousAsObject`を正しくシリアル化します。
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureCelsius": 25,
+  "Summary": "Hot",
+  "PreviousForecast": {
+    "WindSpeed": 35,
+    "Date": "2019-08-01T00:00:00-07:00",
+    "TemperatureCelsius": 25,
+    "Summary": "Hot"
+  }
+}
+```
+
+`object` としてプロパティを定義するのと同じアプローチが、インターフェイスで動作します。 次のインターフェイスと実装があり、実装インスタンスを含むプロパティを使用してクラスをシリアル化するとします。
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/IForecast.cs)]
+
+`Forecasts`のインスタンスをシリアル化する場合、`Tuesday` は `object`として定義されているので、`Tuesday` のみが `WindSpeed` プロパティを表示します。
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeInterface)]
+
+次の例は、上記のコードの結果として得られる JSON を示しています。
+
+```json
+{
+  "Monday": {
+    "Date": "2020-01-06T00:00:00-08:00",
+    "TemperatureCelsius": 10,
+    "Summary": "Cool"
+  },
+  "Tuesday": {
+    "Date": "2020-01-07T00:00:00-08:00",
+    "TemperatureCelsius": 11,
+    "Summary": "Rainy",
+    "WindSpeed": 10
+  }
+}
+```
+
+ポリモーフィックな**シリアル化**の詳細、および**逆シリアル**化の詳細については、「 [newtonsoft. json から system.string に移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)」を参照してください。
 
 ## <a name="allow-comments-and-trailing-commas"></a>コメントと末尾のコンマを許可する
 
@@ -626,11 +688,11 @@ JSON には `ExtensionData` プロパティ名が表示されないことに注�
 
 このオプションを使用すると、逆シリアル化後に、`WeatherForecastWithDefault` オブジェクトの `Summary` プロパティが既定値の "No summary" になります。
 
-JSON 内の Null 値は、有効な場合にのみ無視されます。 Null 非許容値型に対して Null 値を指定すると、例外が発生します。 詳細については、GitHub の dotnet/corefx リポジトリの[null 非許容値型に対する40922の問題](https://github.com/dotnet/corefx/issues/40922)を参照してください。
+JSON 内の Null 値は、有効な場合にのみ無視されます。 Null 非許容値型に対して Null 値を指定すると、例外が発生します。
 
 ## <a name="utf8jsonreader-utf8jsonwriter-and-jsondocument"></a>Utf8JsonReader、Utf8JsonWriter、JsonDocument
 
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> は、UTF-8 でエンコードされた JSON テキスト用の高パフォーマンス、低割り当て、転送のみのリーダーです。`ReadOnlySpan<byte>` から読み取られます。 `Utf8JsonReader` は、カスタムパーサーとデシリアライザーを構築するために使用できる低レベルの型です。 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> メソッドは、内部で `Utf8JsonReader` を使用します。
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> は、UTF-8 でエンコードされた JSON テキストの高パフォーマンス、低割り当て、順方向専用のリーダーであり、`ReadOnlySpan<byte>` または `ReadOnlySequence<byte>`から読み取ります。 `Utf8JsonReader` は、カスタムパーサーとデシリアライザーを構築するために使用できる低レベルの型です。 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> メソッドは、内部で `Utf8JsonReader` を使用します。
 
 <xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName> は、`String`、`Int32`、`DateTime`などの一般的な .NET 型から、UTF-8 でエンコードされた JSON テキストを書き込むための高パフォーマンスの方法です。 ライターは、カスタムシリアライザーを構築するために使用できる低レベルの型です。 <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> メソッドは、内部で `Utf8JsonWriter` を使用します。
 
@@ -699,14 +761,15 @@ JSON 内の Null 値は、有効な場合にのみ無視されます。 Null 非
 
 上のコードでは以下の操作が行われます。
 
+* JSON にオブジェクトの配列が含まれており、各オブジェクトに文字列型の "name" プロパティが含まれていると仮定します。
+* "大学" で終わるオブジェクトと "name" プロパティ値をカウントします。
 * は、ファイルが UTF-16 としてエンコードされているものと想定し、UTF-8 にトランスコードします。 UTF-8 としてエンコードされたファイルは、次のコードを使用して、`ReadOnlySpan<byte>`に直接読み取ることができます。
 
   ```csharp
   ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName); 
   ```
 
-* JSON にオブジェクトの配列が含まれており、各オブジェクトに文字列型の "name" プロパティが含まれていると仮定します。
-* オブジェクトをカウントし、"大学" で終わるプロパティ値を `name` します。
+  ファイルに UTF-8 バイト順マーク (BOM) が含まれている場合は、リーダーがテキストを受け取るため、バイトを `Utf8JsonReader`に渡す前に削除します。 それ以外の場合、BOM は無効な JSON と見なされ、リーダーは例外をスローします。
 
 上記のコードが読み取ることができる JSON のサンプルを次に示します。 結果として生成される概要メッセージは、"2 ~ 4 個の名前が ' 大学 ' で終わっています" です。
 
@@ -715,7 +778,8 @@ JSON 内の Null 値は、有効な場合にのみ無視されます。 Null 非
 ## <a name="additional-resources"></a>その他の技術情報
 
 * [System.string の概要](system-text-json-overview.md)
-* [System.string API リファレンス](xref:System.Text.Json)
-* [System.string のカスタムコンバーターを作成する](system-text-json-converters-how-to.md)
+* [カスタムコンバーターを記述する方法](system-text-json-converters-how-to.md)
+* [Newtonsoft. Json から移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)
 * [System.string での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)
-* [Dotnet/corefx リポジトリに記載されている GitHub の問題 (json 機能-doc)](https://github.com/dotnet/corefx/labels/json-functionality-doc) 
+* [System.string API リファレンス](xref:System.Text.Json)
+<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

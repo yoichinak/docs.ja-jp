@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 07729e1667f8aa3aba74576943d79eaa3bcd14d8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 90abbc9ffe5765880d18d0d29c8e13bc1330ddc3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552894"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341551"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>チュートリアル: モデル ビルダーを使用してレストランの保健衛生の重大度を分類する
 
@@ -152,4 +152,4 @@ ms.locfileid: "74552894"
 
 - [モデル ビルダーのシナリオ](../automate-training-with-model-builder.md#scenarios)
 - [多クラス分類](../resources/glossary.md#multiclass-classification)
-- [多クラス分類モデル メトリック](../resources/metrics.md#metrics-for-multi-class-classification)
+- [多クラス分類モデル メトリック](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)

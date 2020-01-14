@@ -2,21 +2,21 @@
 title: '方法: DataContractJsonSerializer を使用する'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 354f0c58a83e07ff3180977311adf85ae306dd21
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3cf8cc52587a64e7273ab9e0de0b1751d00827cf
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976870"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901211"
 ---
 # <a name="how-to-use-datacontractjsonserializer"></a>DataContractJsonSerializer の使用方法
 
 > [!NOTE]
-> この記事では、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>について説明します。 JSON のシリアル化と逆シリアル化を含むほとんどのシナリオでは、system.string[名前空間](../../../standard/serialization/system-text-json-overview.md)のツールを使用することをお勧めします。
+> この記事では、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>について説明します。 JSON のシリアル化と逆シリアル化を含むほとんどのシナリオでは、Api を使用することをお勧めし[ます。](../../../standard/serialization/system-text-json-overview.md)
 
 JSON (JavaScript Object Notation) は、クライアント ブラウザーと AJAX 対応の Web サービスとの間で、少量のデータを高速に交換できる効率的なデータ エンコード形式です。
 
-この記事では、.NET 型オブジェクトを JSON エンコードされたデータにシリアル化し、JSON 形式のデータを .NET 型のインスタンスに逆シリアル化する方法について説明します。 この例では、データコントラクトを使用して、ユーザー定義 `Person` 型のシリアル化と逆シリアル化を示し、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> を使用します。
+この記事では、.NET 型オブジェクトを JSON エンコードされたデータにシリアル化し、JSON 形式のデータを .NET 型のインスタンスに逆シリアル化する方法について説明します。 この例では、データコントラクトを使用して、ユーザー定義 `Person` 型のシリアル化と逆シリアル化を示し、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>を使用します。
 
 通常、AJAX 対応のエンドポイントで公開されるサービス操作でデータコントラクト型を使用する場合、JSON のシリアル化と逆シリアル化は、Windows Communication Foundation (WCF) によって自動的に処理されます。 ただし、場合によっては、JSON データを直接操作する必要があります。
 
@@ -88,7 +88,7 @@ JSON (JavaScript Object Notation) は、クライアント ブラウザーと AJ
     Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");
     ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```csharp
 // Create a User object and serialize it to a JSON stream.

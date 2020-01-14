@@ -13,14 +13,12 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e890e4172e645e9919ea88ec5835aaed7432c0c6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 0c3516c4abadfd22609c3568beffc14e027ef69e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835201"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706674"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>方法: 文字列からの文字の読み取り
 次のコード例は、文字列から同期的または非同期的に文字を読み取る方法を示しています。  

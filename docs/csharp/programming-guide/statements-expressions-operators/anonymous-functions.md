@@ -1,18 +1,17 @@
 ---
 title: 匿名関数 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], as anonymous functions
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: 078596dcbfd907be53cae2ab3e7dcaa9e311c3f4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: cfb0190ee263e65e8130a8925f76357a382eafa3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588819"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712001"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>匿名関数 (C# プログラミング ガイド)
 

@@ -1,5 +1,5 @@
 ---
-title: <returns>
+title: <returns> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - returns XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352242"
 ---
-# <a name="returns-visual-basic"></a>\<によって > (Visual Basic) が返されます
+# <a name="returns-visual-basic"></a>\<returns> (Visual Basic)
 プロパティまたは関数の戻り値を指定します。  
   
 ## <a name="syntax"></a>構文  

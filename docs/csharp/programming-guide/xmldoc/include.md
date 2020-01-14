@@ -1,6 +1,5 @@
 ---
 title: <include> - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 26241dab70a3b6a0cf80b374868fa759647cd8d9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 125ab9476507babae9a707a6c42d24adda632267
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588002"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696559"
 ---
 # <a name="include-c-programming-guide"></a>\<include> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -23,7 +22,7 @@ ms.locfileid: "69588002"
 <include file='filename' path='tagpath[@name="id"]' />  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>パラメーター  
  `filename`  
  文書を含む XML ファイルの名前。 ファイル名は、ソース コード ファイルの相対パスを使用して修飾することができます。 `filename` を単一引用符 (' ') で囲みます。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "69588002"
  `id`  
  コメントの前に配置するタグの ID。 ID は二重引用符 (" ") で囲みます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  \<include> タグを使用して、ソース コード内の型とメンバーを記述する別のファイル内のコメントを参照することができます。 これは文書化のコメントをソース コード ファイル内に直接配置する方法の代替です。 別のファイルにドキュメントを配置することで、ソース コードから分離して、ソースの制御をドキュメントに適用できます。 1 人のユーザーがソース コード ファイルをチェックアウトし、他のユーザーがドキュメント ファイルをチェックアウトすることができます。  
   
  \<include> タグは XML XPath 構文を使用します。 \<include> の使用をカスタマイズする方法については、XPath に関するドキュメントを参照してください。  
