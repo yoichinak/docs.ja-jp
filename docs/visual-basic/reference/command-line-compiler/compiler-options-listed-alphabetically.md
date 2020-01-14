@@ -4,19 +4,19 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: c529c03fd3856bbd3d3b26371415907c94ca8d30
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 85fb07f46c2d885491db7358f24b3b50836c2ca8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343512"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937758"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic コンパイラ オプション一覧 (アルファベット順)
 Visual Basic コマンドラインコンパイラは、Visual Studio 統合開発環境 (IDE) からプログラムをコンパイルするための代替手段として提供されています。 アルファベット順に並べ替えられた Visual Basic のコマンドラインコンパイラオプションの一覧を次に示します。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-|オプション|用途|  
+|オプション|目的|  
 |------------|-------------|  
 |[@ (応答ファイルの指定)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|応答ファイルを指定します。|  
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|コンパイラ オプションを出力します。 このコマンドは、`-help` オプションの指定と同じです。 コンパイルは発生しません。|  
@@ -57,7 +57,7 @@ Visual Basic コマンドラインコンパイラは、Visual Studio 統合開�
 |[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|変数宣言でローカル型推論を使用できるようにします。|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|厳密な言語セマンティクスを適用します。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|出力ファイルを指定します。|  
-|`-parallel[+&#124;-]`|同時実行ビルドを使用する (+) かどうかを指定します。|  
+|<code>-parallel[+&#124;-]</code>|同時実行ビルドを使用する (+) かどうかを指定します。|  
 |[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|コンパイラによる出力ファイルの対象となるプロセッサ プラットフォームを指定します。|  
 |`-preferreduilang`|出力用の言語名を指定します。|  
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|コンパイラで構文関連のエラーと警告のコードが表示されないようにします。|  
@@ -80,7 +80,7 @@ Visual Basic コマンドラインコンパイラは、Visual Studio 統合開�
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|プロジェクトのポータブル実行可能 (PE) ファイルに埋め込まれる、ユーザー定義の Win32 アプリケーション マニフェスト ファイルを識別します。|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Win32 リソースを出力ファイルに挿入します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Visual Basic コンパイラ オプション一覧 (カテゴリ別)](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

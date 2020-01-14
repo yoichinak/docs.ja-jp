@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1a839c4cd99e21bc2a3ebd90cf3302a475c02e17
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344768"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938136"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR プロファイラと Windows ストア アプリ
 
@@ -76,7 +76,7 @@ Windows RT デバイスは非常にロックダウンされています。 サ�
 
 以下のセクションで説明するいくつかのシナリオでは、Profiler UI デスクトップアプリケーションは、いくつかの新しい Windows ランタイム Api を使用する必要があります。 このドキュメントを参照して、デスクトップアプリケーションから使用できる Windows ランタイム Api と、デスクトップアプリケーションや Windows ストアアプリから呼び出されたときの動作が異なるかどうかを理解します。
 
-プロファイラーの UI がマネージコードで記述されている場合は、これらの Windows ランタイム Api を簡単に使用できるようにするために必要な手順がいくつかあります。 詳細については、「[マネージデスクトップアプリと Windows ランタイム](https://go.microsoft.com/fwlink/?LinkID=271858)」を参照してください。
+プロファイラーの UI がマネージコードで記述されている場合は、これらの Windows ランタイム Api を簡単に使用できるようにするために必要な手順がいくつかあります。 詳細については、「[マネージデスクトップアプリと Windows ランタイム](https://docs.microsoft.com/previous-versions/windows/apps/jj856306(v=win.10))」を参照してください。
 
 ## <a name="loading-the-profiler-dll"></a>プロファイラー DLL を読み込んでいます
 
@@ -378,11 +378,11 @@ WinMDs でのメタデータの変更はサポートされていません。 Win
 
 メモリプロファイルを実行する場合、通常、プロファイラー DLL は、 [Forcegc メソッド](icorprofilerinfo-forcegc-method.md)メソッドの呼び出し元となる別のスレッドを作成します。 これは新しいものではありません。 しかし、当然のことですが、Windows ストアアプリ内でガベージコレクションを実行すると、スレッドがマネージスレッドに変換される可能性があります (たとえば、そのスレッドに対してプロファイル API ThreadID が作成されます)。
 
-この結果を理解するには、CLR プロファイル API で定義されている同期呼び出しと非同期呼び出しの違いを理解しておくことが重要です。 これは、Windows ストアアプリの非同期呼び出しの概念とは大きく異なることに注意してください。 詳細については、ブログ記事「 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE がある理由](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/)」を参照してください。
+この結果を理解するには、CLR プロファイル API で定義されている同期呼び出しと非同期呼び出しの違いを理解しておくことが重要です。 これは、Windows ストアアプリの非同期呼び出しの概念とは大きく異なることに注意してください。 詳細については、ブログ記事「 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE がある理由](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence)」を参照してください。
 
 関連するポイントは、プロファイラーによって作成されたスレッドに対して行われた呼び出しが、プロファイラー DLL の[ICorProfilerCallback](icorprofilercallback-interface.md)メソッドのいずれかの実装の外部から行われた場合でも、常に同期と見なされることです。 少なくとも、の場合はとして使用されます。 これで、 [Forcegc メソッド](icorprofilerinfo-forcegc-method.md)の呼び出しにより、CLR がプロファイラーのスレッドをマネージスレッドに変換したので、そのスレッドはプロファイラーのスレッドと見なされなくなりました。 そのため、CLR では、そのスレッドに対して同期として機能する対象をより厳密に定義しています。つまり、呼び出しは、同期として限定するために、いずれかのプロファイラー DLL の[ICorProfilerCallback](icorprofilercallback-interface.md)メソッドの内部から生成される必要があります。
 
-これは実際に何を意味するのでしょうか。 ほとんどの[ICorProfilerInfo](icorprofilerinfo-interface.md)メソッドは、同期的に呼び出すだけで安全です。それ以外の場合は、すぐに失敗します。 そのため、プロファイラーによって作成されたスレッド (たとえば、 [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)、 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)、または[RequestRevert](icorprofilerinfo4-requestrevert-method.md)) で通常行われる他の呼び出しに対して、profiler DLL が[forcegc メソッド](icorprofilerinfo-forcegc-method.md)スレッドを再利用すると、問題が発生します。 [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)などの非同期セーフ関数でも、マネージスレッドから呼び出された場合、特別なルールがあります。 (詳細については、「[プロファイラースタックウォークの基礎](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/)」を参照してください)。
+これは実際に何を意味するのでしょうか。 ほとんどの[ICorProfilerInfo](icorprofilerinfo-interface.md)メソッドは、同期的に呼び出すだけで安全です。それ以外の場合は、すぐに失敗します。 そのため、プロファイラーによって作成されたスレッド (たとえば、 [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)、 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)、または[RequestRevert](icorprofilerinfo4-requestrevert-method.md)) で通常行われる他の呼び出しに対して、profiler DLL が[forcegc メソッド](icorprofilerinfo-forcegc-method.md)スレッドを再利用すると、問題が発生します。 [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)などの非同期セーフ関数でも、マネージスレッドから呼び出された場合、特別なルールがあります。 (詳細については、「[プロファイラースタックウォークの基礎](https://docs.microsoft.com/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond)」を参照してください)。
 
 したがって、 [Forcegc メソッド](icorprofilerinfo-forcegc-method.md)を呼び出すためにプロファイラー DLL によって作成されるすべてのスレッドは、gc をトリガーしてから gc コールバックに応答する目的で*のみ*使用することをお勧めします。 スタックサンプリングやデタッチなどの他のタスクを実行するために、プロファイル API を呼び出すことはできません。
 

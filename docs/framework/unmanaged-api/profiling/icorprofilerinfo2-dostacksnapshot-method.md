@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: 64bcf6ee58d743a26e31c49a425f36cc808b5080
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5d90f414a945d346ca7721745ea7d86cb24a085c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426829"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936864"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot メソッド
 指定したスレッドのスタック上のマネージフレームをウォークし、コールバックを介してプロファイラーに情報を送信します。  
@@ -64,14 +64,14 @@ HRESULT DoStackSnapshot(
  `contextSize`  
  から`context` パラメーターによって参照される `CONTEXT` 構造体のサイズ。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `thread` に null を渡すと、現在のスレッドのスナップショットが生成されます。 スナップショットは、その時点でターゲットスレッドが中断されている場合にのみ、他のスレッドで取得できます。  
   
  プロファイラーは、スタックのウォークを行うときに、`DoStackSnapshot`を呼び出します。 その呼び出しから CLR が戻る前に、スタック上でマネージフレーム (またはアンマネージフレームの実行) ごとに1回、`StackSnapshotCallback` を複数回呼び出します。 アンマネージフレームが検出されたら、それらを自分で調べる必要があります。  
   
  スタックがウォークされる順序は、フレームがスタックにプッシュされた方法と逆になります。リーフ (最後にプッシュされた) フレームは、最初にメイン (最初にプッシュされた) フレームに最後に配置されます。  
   
- プロファイラーをプログラミングしてマネージスタックをウォークする方法の詳細については、「 [.NET Framework 2.0: 基本およびそれ以降のプロファイラースタックウォーク](https://go.microsoft.com/fwlink/?LinkId=73638)」を参照してください。  
+ プロファイラーをプログラミングしてマネージスタックをウォークする方法の詳細については、「 [.NET Framework 2.0: 基本およびそれ以降のプロファイラースタックウォーク](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))」を参照してください。  
   
  次のセクションで説明するように、スタックウォークは同期または非同期にすることができます。  
   
