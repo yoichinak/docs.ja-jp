@@ -1,6 +1,5 @@
 ---
 title: get - C# リファレンス
-ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - get_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-ms.openlocfilehash: 783814a575e95fc9deb5c9cdef235a5636f5f529
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d6c0452a7890a6ade480054115c1383199a3f91c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602148"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713491"
 ---
 # <a name="get-c-reference"></a>get (C# リファレンス)
 

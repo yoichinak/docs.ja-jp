@@ -1,18 +1,17 @@
 ---
 title: value コンテキスト キーワード - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - value_CSharpKeyword
 helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
-ms.openlocfilehash: 34b192d17bd96b6b893c9f14f0d4a77274a32f78
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 84d0c51ddafb59144f4ba8c6e73412642fa8fa28
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771751"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712898"
 ---
 # <a name="value-c-reference"></a>value (C# リファレンス)
 

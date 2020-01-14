@@ -1,17 +1,16 @@
 ---
 title: 構造体 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 35b39da0b15c41b7b2c7a6567bea5dca3fb430e7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5150ff2d6edde0ac91bc6548fd499b76af614007
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970316"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705419"
 ---
 # <a name="structs-c-programming-guide"></a>構造体 (C# プログラミング ガイド)
 

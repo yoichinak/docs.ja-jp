@@ -1,17 +1,16 @@
 ---
 title: 式 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 05/11/2017
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: e08220362c0acec6060ade75131e34a6b3fb7390
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4bbee8f15c2591e8b172df9a6759449d48697804
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417694"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699094"
 ---
 # <a name="expressions-c-programming-guide"></a>式 (C# プログラミング ガイド)
 
@@ -79,7 +78,7 @@ DoWork();
 
 C# は*式形式のメンバー*をサポートしています。式形式のメンバーを使用すると、メソッド、コンストラクター、ファイナライザー、プロパティ、およびインデクサー用に簡潔な式本体の定義を指定できます。 詳細については、「[式形式のメンバー](expression-bodied-members.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
  変数、オブジェクト プロパティ、またはオブジェクトのインデクサー アクセスが式から識別されると、その項目の値が式の値として使用されます。 C# の式は、式が最終的に必要な型に評価される限り、値やオブジェクトが必要とされる任意の位置に配置できます。  
 

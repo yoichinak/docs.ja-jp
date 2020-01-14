@@ -1,5 +1,5 @@
 ---
-title: 列挙型形式文字列 - .NET
+title: 列挙型形式文字列
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-ms.openlocfilehash: 316c042b05e505b3e3e857ea41ae808a2a0282f5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c32fd9d59f61b6befe94ff9eb85b0c39ce926adb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126421"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348264"
 ---
 # <a name="enumeration-format-strings"></a>列挙型形式文字列
 

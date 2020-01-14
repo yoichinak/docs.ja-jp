@@ -36,7 +36,7 @@ From element [ As type ] In collection [ _ ]
 |`collection`|必須。 クエリ対象のコレクションを参照します。 列挙可能な型である必要があります。|  
   
 ## <a name="remarks"></a>コメント  
- `From` 句は、クエリのソースデータと、ソースコレクションの要素を参照するために使用される変数を識別するために使用されます。 これらの変数は*範囲変数*と呼ばれます。 `Aggregate` 句を使用して集計結果のみを返すクエリを識別する場合を除き、クエリには `From` 句が必要です。 詳細については、「 [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)」を参照してください。  
+ `From` 句は、クエリのソースデータと、ソースコレクションの要素を参照するために使用される変数を識別するために使用されます。 これらの変数は*範囲変数*と呼ばれます。 `Aggregate` 句を使用して集計結果のみを返すクエリを識別する場合を除き、クエリには `From` 句が必要です。 詳細については、「[Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)」を参照してください。  
   
  クエリで複数の `From` 句を指定すると、結合する複数のコレクションを識別できます。 複数のコレクションが指定されている場合は、個別に反復処理されるか、または関連付けられている場合は結合できます。 `Select` 句を使用して暗黙的にコレクションを結合することも、`Join` または `Group Join` 句を使用して明示的に結合することもできます。 別の方法として、1つの `From` 句で複数の範囲変数とコレクションを指定し、関連する範囲変数とコレクションをコンマで区切って指定することもできます。 次のコード例は、`From` 句の両方の構文オプションを示しています。  
   
@@ -76,7 +76,7 @@ From element [ As type ] In collection [ _ ]
 - [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
 - [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
-- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Where 句](../../../visual-basic/language-reference/queries/where-clause.md)
 - [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)
 - [Distinct 句](../../../visual-basic/language-reference/queries/distinct-clause.md)
 - [Join 句](../../../visual-basic/language-reference/queries/join-clause.md)

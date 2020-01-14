@@ -1,6 +1,5 @@
 ---
 title: <summary> - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <summary>
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: f0e67ca248e5c94318032c8769410d4fd4c9d3a9
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 63c65e11a274779015cf99859b7fa67bb536529d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523298"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711689"
 ---
 # <a name="summary-c-programming-guide"></a>\<summary> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -27,7 +26,7 @@ ms.locfileid: "72523298"
  `description`  
  オブジェクトの概要。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  \<summary> タグは、型または型のメンバーの説明に使用します。 型の説明に補足情報を追加するには、[\<remarks>](./remarks.md) タグを使用します。 [DocFX](https://dotnet.github.io/docfx/) や [Sandcastle](https://github.com/EWSoftware/SHFB) などのドキュメント ツールでコード要素のドキュメント ページへの内部ハイパーリンクを作成できるようにするには、[cref 属性](./cref-attribute.md)を使用します。  
   
  \<summary> タグのテキストは、IntelliSense の型に関する唯一のソースで、オブジェクト ブラウザー ウィンドウにも表示されます。  

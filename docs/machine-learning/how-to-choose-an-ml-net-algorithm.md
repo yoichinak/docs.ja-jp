@@ -1,15 +1,14 @@
 ---
 title: ML.NET アルゴリズムの選び方
 description: 機械学習モデルに適した ML.NET アルゴリズムの選び方について説明します
-author: natke
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 0721418d8b0b3c9ab645eb9885b0f4951c37762e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976697"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739994"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET アルゴリズムの選び方
 

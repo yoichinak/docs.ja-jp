@@ -1,6 +1,5 @@
 ---
 title: <list> - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - list
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: 0df6653171aa0366f555c39e4644f13b2b7384f9
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 6e6f3a3399f2bffe84b5cec733833c974a0bb51b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523432"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711754"
 ---
 # <a name="list-c-programming-guide"></a>\<list> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -43,7 +42,7 @@ ms.locfileid: "72523432"
  `description`  
  行頭文字または番号付きリストの項目、または `term` の定義です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  \< > ブロックを使用して、テーブルまたは定義の一覧の見出し行を定義します。 テーブルを定義するときにのみ、見出しの用語のエントリを指定する必要があります。  
   
  リスト内の各項目は、\<item> ブロックで指定されます。 定義リストを作成する場合は、`term` と `description` の両方を指定する必要があります。 ただし、テーブル、箇条書きリスト、または番号付きリストの場合は、`description` のエントリを指定するだけで済みます。  

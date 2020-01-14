@@ -6,14 +6,12 @@ helpviewer_keywords:
 - user-filtered exceptions
 - exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 228bae8db833abfa3c8c906d57e2177cde644548
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 5537404178b746310f720c5b0c075c77287dda4c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304610"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708454"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>ユーザー フィルター例外ハンドラーの使用
 

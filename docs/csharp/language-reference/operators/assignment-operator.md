@@ -1,18 +1,17 @@
 ---
 title: 代入演算子 - C# リファレンス
-ms.custom: seodec18
 ms.date: 09/10/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 103bc823ab6a56d53a3f2ec05b8de9295f1de400
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 19f74e6835ae555a3a38aa6ca8679948c7f290dd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039080"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712755"
 ---
 # <a name="assignment-operators-c-reference"></a>代入演算子 (C# リファレンス)
 

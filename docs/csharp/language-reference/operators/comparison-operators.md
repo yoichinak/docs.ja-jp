@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: bb28e2adba896ae85b189858283376fbe3250dce
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 86f557d0575b440455fd6363f0d0d6783a9e7acc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039065"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345327"
 ---
 # <a name="comparison-operators-c-reference"></a>比較演算子 (C# リファレンス)
 
@@ -33,7 +33,7 @@ ms.locfileid: "73039065"
 > [!NOTE]
 > `==`、`<`、`>`、`<=`、および `>=` 演算子の場合、いずれかのオペランドが数値 (<xref:System.Double.NaN?displayProperty=nameWithType> または <xref:System.Single.NaN?displayProperty=nameWithType>) でない場合、演算結果は `false` になります。 つまり、`NaN` の値は、`NaN` を含む他のどの `double` (または `float`) の値を上回ることも、下回ることも、等しいこともありません。 詳細およびサンプルについては、<xref:System.Double.NaN?displayProperty=nameWithType> または <xref:System.Single.NaN?displayProperty=nameWithType> の参照記事をご覧ください。
 
-列挙型は比較演算子もサポートします。 同じ[列挙](../keywords/enum.md)型のオペランドで、基になる整数型の対応する値が比較されます。
+列挙型は比較演算子もサポートします。 同じ[列挙](../builtin-types/enum.md)型のオペランドで、基になる整数型の対応する値が比較されます。
 
 [`==` および `!=` 演算子](equality-operators.md) では、そのオペランドが等しいかどうかが確認されます。
 

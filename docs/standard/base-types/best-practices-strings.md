@@ -18,13 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.custom: seodec18
-ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973942"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711481"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET の文字列を使用するためのベスト プラクティス
 
@@ -111,9 +110,9 @@ ms.locfileid: "73973942"
 
 - <xref:System.StringComparison> パラメーターを含まない <xref:System.String.Compare%2A?displayProperty=nameWithType> のオーバーロード。
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType> のオーバーロード。
-- 既定の <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> メソッドと、`null`<xref:System.Globalization.CultureInfo> パラメーターを持つ <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> メソッド。
+- 既定の <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> メソッドと、 <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> null `null`<xref:System.Globalization.CultureInfo> のオーバーロード。
 - 既定の <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> メソッドと、`null`<xref:System.Globalization.CultureInfo> パラメーターを持つ <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> メソッド。
-- 検索パラメーターとして <xref:System.String> を受け取る、<xref:System.StringComparison> パラメーターを持たない <xref:System.String.IndexOf%2A?displayProperty=nameWithType> のオーバーロード。
+- 検索パラメーターとして<xref:System.String.IndexOf%2A?displayProperty=nameWithType> を受け取る、 <xref:System.String> パラメーターを持たない <xref:System.StringComparison> のオーバーロード。
 - 検索パラメーターとして <xref:System.String> を受け取る、<xref:System.StringComparison> パラメーターを持たない <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> のオーバーロード。
 
 どのような場合でも、 <xref:System.StringComparison> パラメーターを持つオーバーロードを呼び出して、メソッド呼び出しの意図を明確にすることをお勧めします。
@@ -205,7 +204,7 @@ LATIN SMALL LETTER A 文字 "a" (\u0061) は、COMBINING RING ABOVE 文字 "+ " 
 |大文字と小文字が区別される内部識別子。<br /><br /> XML や HTTP などの標準の、大文字と小文字が区別される識別子。<br /><br /> 大文字と小文字が区別されるセキュリティ関連の設定。|バイトが正確に一致する非言語的識別子。|<xref:System.StringComparison.Ordinal>|
 |大文字と小文字が区別されない内部識別子。<br /><br /> XML や HTTP などの標準の、大文字と小文字が区別されない識別子。<br /><br /> ファイル パス。<br /><br /> レジストリのキーと値。<br /><br /> 環境変数。<br /><br /> リソース識別子 (ハンドル名など)。<br /><br /> 大文字と小文字が区別されないセキュリティ関連の設定。|大文字と小文字が区別されない、言語的な意味を持たない識別子 (ほとんどの Windows システム サービスで格納されるデータなど)。|<xref:System.StringComparison.OrdinalIgnoreCase>|
 |永続化される、言語的な意味を持つデータの一部。<br /><br /> 一定の並べ替え順序を必要とする言語的なデータの表示。|カルチャに依存しないが、言語的な意味を持つデータ。|<xref:System.StringComparison.InvariantCulture><br /><br /> \- または -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
-|ユーザーに表示されるデータ。<br /><br /> ほとんどのユーザー入力。|特定の言語の規則を必要とするデータ。|<xref:System.StringComparison.CurrentCulture><br /><br /> または<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
+|ユーザーに表示されるデータ。<br /><br /> ほとんどのユーザー入力。|特定の言語の規則を必要とするデータ。|<xref:System.StringComparison.CurrentCulture><br /><br /> \- または -<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
 
 ## <a name="common-string-comparison-methods-in-net"></a>.NET の一般的な文字列比較メソッド
 
@@ -273,7 +272,7 @@ LATIN SMALL LETTER A 文字 "a" (\u0061) は、COMBINING RING ABOVE 文字 "+ " 
 - 現在のカルチャを使用する、カルチャに依存した文字列比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType> プロパティによって返されます。
 - 現在のカルチャを使用する、大文字と小文字を区別しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。
 - インバリアント カルチャの単語ベースの比較規則を使用する、カルチャに依存しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType> プロパティによって返されます。
-- インバリアント カルチャの単語ベースの比較規則を使用する、大文字と小文字を区別しない、カルチャに依存しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。
+- インバリアント カルチャの単語ベースの比較規則を使用する、大文字と小文字を区別しない、カルチャに依存しない比較。 この <xref:System.StringComparer> オブジェクトは、 <xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。
 - 序数に基づく比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> プロパティによって返されます。
 - 大文字と小文字を区別しない、序数に基づく比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。
 

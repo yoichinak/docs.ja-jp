@@ -1,17 +1,16 @@
 ---
 title: 固定サイズ バッファー - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: deb057929871ffb50da466e3628c34f336ffd5ee
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: b5be6892a265f0a2b7f3109321fdcf46d4b0ea22
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552396"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711845"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定サイズ バッファー (C# プログラミング ガイド)
 
@@ -21,7 +20,7 @@ C# では、[fixed](../../language-reference/keywords/fixed-statement.md) ステ
 private fixed char name[30];
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 セーフ コードでは、配列を含む C# 構造体に配列要素が含まれません。 この場合、構造体には、配列の要素ではなく、その参照が格納されます。 [unsafe](../../language-reference/keywords/unsafe.md) のコード ブロックで使われている [struct](../../language-reference/keywords/struct.md) に、固定サイズの配列を埋め込むことができます。
 

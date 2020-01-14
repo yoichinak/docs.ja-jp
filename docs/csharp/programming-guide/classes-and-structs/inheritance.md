@@ -1,6 +1,5 @@
 ---
 title: 継承 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - abstract methods [C#]
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 3211a4741eb56ad9e138a848e52fabbc1d3daaeb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3c59741fa646111d27f6d1087a9275178c1a41a1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924466"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705549"
 ---
 # <a name="inheritance-c-programming-guide"></a>継承 (C# プログラミング ガイド)
 

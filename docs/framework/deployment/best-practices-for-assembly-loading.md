@@ -12,14 +12,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a95679f659f13956fd230f07e9401af9097a043c
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d1b6c2cd9f96a4acf48cbced48a86bc3e3409562
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182470"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716585"
 ---
 # <a name="best-practices-for-assembly-loading"></a>アセンブリの読み込みのベスト プラクティス
 ここでは、<xref:System.InvalidCastException>、<xref:System.MissingMethodException>、およびその他のエラーの原因となることがある型 ID の問題を回避する方法について説明します。 また、次の推奨事項について説明します。  
@@ -44,7 +42,7 @@ ms.locfileid: "71182470"
   
 - 読み込み元コンテキストには、ローダーによって検索されない場所から読み込まれたアセンブリが含まれます。 たとえば、アドインが、アプリケーション パスではないディレクトリにインストールされることがあります。 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>、<xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType>、<xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> は、パスを使用して読み込むメソッドの例です。  
   
-- リフレクション専用コンテキストには、<xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> メソッドと <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> メソッドを使用して読み込まれたアセンブリが含まれます。 このコンテキスト内のコードは実行できないため、ここでは説明しません。 詳細については、「[方法 :リフレクションのみのコンテキストにアセンブリを読み込む](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
+- リフレクション専用コンテキストには、<xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> メソッドと <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> メソッドを使用して読み込まれたアセンブリが含まれます。 このコンテキスト内のコードは実行できないため、ここでは説明しません。 詳細については、[リフレクションのみのコンテキストにアセンブリを読み込む](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
   
 - リフレクション出力を使用して一時動的アセンブリを出力した場合、そのアセンブリはどのコンテキストにも含まれません。 また、<xref:System.Reflection.Assembly.LoadFile%2A> メソッドを使用して読み込まれる大部分のアセンブリは、コンテキストなしで読み込まれます。バイト配列から読み込まれるアセンブリは、(ポリシーが適用された後の) アセンブリの ID がグローバル アセンブリ キャッシュ内に存在するように確立される場合を除き、コンテキストなしで読み込まれます。  
   

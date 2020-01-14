@@ -2,12 +2,12 @@
 title: HttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 description: .NET Core 2.1 以降で使用できる HttpClientFactory を使用して、`HttpClient` インスタンスを作成し、それをアプリケーションで簡単に使用できるようにする方法について説明します。
 ms.date: 08/08/2019
-ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 1a6d65509d669166e73ad907b506bae7fa26536d
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737746"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900322"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>HttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 
@@ -37,7 +37,7 @@ ms.locfileid: "73737746"
 - `HttpClientMessageHandlers` の有効期間を管理して、`HttpClient` の有効期間を自分で管理する際に発生する可能性がある上記の問題を回避します。
 
 > [!NOTE]
-> `HttpClientFactory` は、`Microsoft.Extensions.DependencyInjection` NuGet パッケージ内の依存関係挿入 (DI) の実装に緊密に関連付けられています。 その他の依存関係挿入コンテナーの使用に関する詳細については、この [GitHub のディスカッション](https://github.com/aspnet/Extensions/issues/1345)を参照してください。
+> `HttpClientFactory` は、`Microsoft.Extensions.DependencyInjection` NuGet パッケージ内の依存関係挿入 (DI) の実装に緊密に関連付けられています。 その他の依存関係挿入コンテナーの使用に関する詳細については、この [GitHub のディスカッション](https://github.com/dotnet/extensions/issues/1345)を参照してください。
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>HttpClientFactory を使用する複数の方法
 
@@ -188,14 +188,14 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 - **.NET Core で HttpClientFactory を使用する**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **`aspnet/Extensions` GitHub リポジトリ内の HttpClientFactory ソース コード**  
-  <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
+- **`dotnet/extensions` GitHub リポジトリ内の HttpClientFactory ソース コード**  
+  <https://github.com/dotnet/extensions/tree/master/src/HttpClientFactory>
 
 - **Polly (.NET の復元および一時的な障害処理ライブラリ)**  
   <http://www.thepollyproject.org/>
   
 - **依存関係挿入なしで HttpClientFactory を使用する (GitHub の問題)**  
-  <https://github.com/aspnet/Extensions/issues/1345>
+  <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]
 >[前へ](explore-custom-http-call-retries-exponential-backoff.md)

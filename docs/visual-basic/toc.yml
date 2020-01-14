@@ -399,7 +399,7 @@
           href: language-reference/modifiers/notinheritable.md
         - name: NotOverridable
           href: language-reference/modifiers/notoverridable.md
-        - name: 省略可能
+        - name: Optional
           href: language-reference/modifiers/optional.md
         - name: Out (ジェネリック修飾子)
           href: language-reference/modifiers/out-generic-modifier.md

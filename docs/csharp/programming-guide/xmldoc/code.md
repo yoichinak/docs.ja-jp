@@ -1,6 +1,5 @@
 ---
 title: <code> - C# Programming Guide
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - code
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-ms.openlocfilehash: 31143b1da423ab762ac996acb1e74bae66000c11
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: eddf00c5fd51308d6d0f618282931190b43e92b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523519"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711806"
 ---
 # <a name="code-c-programming-guide"></a>\<code> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -27,7 +26,7 @@ ms.locfileid: "72523519"
  `content`  
  コードとしてマークするテキストです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  \<code> タグを使用すると、複数行をコードとして指定できます。 説明内のテキストをコードとしてマークする場合は、[\<c](./code-inline.md) タグを使用します。  
   
  コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。  

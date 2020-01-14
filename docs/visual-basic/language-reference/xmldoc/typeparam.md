@@ -1,5 +1,5 @@
 ---
-title: <typeparam>
+title: <typeparam> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - typeparam XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352186"
 ---
-# <a name="typeparam-visual-basic"></a>\<typeparam > (Visual Basic)
+# <a name="typeparam-visual-basic"></a>\<typeparam> (Visual Basic)
 型パラメーターの名前と説明を定義します。  
   
 ## <a name="syntax"></a>構文  
