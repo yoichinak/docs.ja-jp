@@ -342,24 +342,20 @@
   items:
     - name: 概要
       href: porting/index.md
-    - name: .NET Core で使用できない .NET Framework テクノロジ
-      href: porting/net-framework-tech-unavailable.md
     - name: サード パーティの依存関係を分析する
       href: porting/third-party-deps.md
     - name: ライブラリを移植する
       href: porting/libraries.md
     - name: .NET Core のプロジェクトを整理する
       href: porting/project-structure.md
+    - name: 利用できないテクノロジ
+      href: porting/net-framework-tech-unavailable.md
     - name: ツール
       href: porting/tools.md
     - name: Windows 互換機能パックを使用する
       href: porting/windows-compat-pack.md
     - name: Windows フォーム プロジェクトを移植する
-      items:
-        - name: プロジェクトを移植する方法
-          href: porting/winforms.md
-        - name: 互換性に影響する変更
-          href: porting/winforms-breaking-changes.md
+      href: porting/winforms.md
     - name: WPF プロジェクトを移植する
       href: porting/wpf.md
 - name: 依存関係の読み込み
