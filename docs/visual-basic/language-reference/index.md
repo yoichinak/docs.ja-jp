@@ -10,12 +10,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: 7e1838fe6c9d563358757700d74cbf27228812a9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 90cd1984ceb3bdb9de62450e86184f493e7417f0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349953"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636719"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic の言語リファレンス
 
@@ -66,7 +66,7 @@ ms.locfileid: "74349953"
  Visual Basic で使用可能なプロパティについて説明します。  
   
  [クエリ](../../visual-basic/language-reference/queries/index.md)  
- コードで [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 式を使用する場合の参照情報があります。  
+ コードでの統合言語クエリ (LINQ) 式の使用に関するリファレンス情報を提供します。  
   
  [ステートメント](../../visual-basic/language-reference/statements/index.md)  
  Visual Basic で使用できる宣言および実行可能なステートメントについて説明します。  
@@ -85,8 +85,5 @@ ms.locfileid: "74349953"
   
 ## <a name="related-sections"></a>関連セクション  
 
- [Visual Basic](../../visual-basic/index.md)  
- Visual Basic 言語のすべての領域に関する包括的なヘルプを提供します。  
-  
  [Visual Basic のコマンド ライン コンパイラ](../../visual-basic/reference/command-line-compiler/index.md)  
  Visual Studio 統合開発環境 (IDE) 内からプログラムをコンパイルする代わりに、コマンドラインコンパイラを使用する方法について説明します。
