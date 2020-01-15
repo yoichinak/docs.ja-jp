@@ -2,15 +2,16 @@
 title: WCF WEB HTTP サービスのキャッシュ サポート
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 7c60deab635c29785398a1b50f9cf14c0f688420
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 5964c58ce28f67815774741815bba0fcbe3b2de7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141780"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964233"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF WEB HTTP サービスのキャッシュ サポート
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] では、WCF Web HTTP サービスの ASP.NET で既に提供されている宣言型のキャッシュ機構を使用できます。 これにより、WCF Web HTTP サービス操作からの応答をキャッシュできます。 キャッシュ用に構成されているサービスに対してユーザーが HTTP GET を送信すると、ASP.NET は、キャッシュされた応答を送り返し、サービス メソッドは呼び出されません。 キャッシュの有効期限が切れると、ユーザーが次回に HTTP GET を送信したときに、サービス メソッドが呼び出され、応答が再度キャッシュされます。 ASP.NET キャッシュの詳細については、「 [ASP.NET キャッシュの概要](https://go.microsoft.com/fwlink/?LinkId=152534)」を参照してください。  
+
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] では、WCF Web HTTP サービスの ASP.NET で既に提供されている宣言型のキャッシュ機構を使用できます。 これにより、WCF Web HTTP サービス操作からの応答をキャッシュできます。 キャッシュ用に構成されているサービスに対してユーザーが HTTP GET を送信すると、ASP.NET は、キャッシュされた応答を送り返し、サービス メソッドは呼び出されません。 キャッシュの有効期限が切れると、ユーザーが次回に HTTP GET を送信したときに、サービス メソッドが呼び出され、応答が再度キャッシュされます。 ASP.NET キャッシュの詳細については、「 [ASP.NET キャッシュの概要](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))」を参照してください。  
   
 ## <a name="basic-web-http-service-caching"></a>基本的な Web HTTP サービスのキャッシュ  
  WEB HTTP サービスのキャッシュを有効にするには、まず、<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> の <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> を <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> または <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> に設定してサービスに適用し、ASP.NET との互換性を有効にする必要があります。  
@@ -122,10 +123,10 @@ public class Service
  ここでは、キャッシュ期間が 60 秒に、`varyByParam` が none に設定されており、`sqlDependency` が、コロン区切りのデータベース名とテーブルのペアをセミコロンで区切ったリストに設定されています。 `MyTable` のデータが変更されると、キャッシュされているサービス操作への応答が削除されます。この操作が呼び出されると、新しい応答が (サービス操作の呼び出しによって) 生成され、キャッシュされて、クライアントに返されます。  
   
 > [!IMPORTANT]
-> ASP.NET が SQL database にアクセスするには、 [ASP.NET SQL Server 登録ツール](https://go.microsoft.com/fwlink/?LinkId=152536)を使用する必要があります。 また、適切なユーザー アカウントに、データベースおよびテーブルへのアクセスを許可する必要があります。 詳細については、「 [Web アプリケーションからの SQL Server へのアクセス](https://go.microsoft.com/fwlink/?LinkId=178988)」を参照してください。  
+> ASP.NET が SQL database にアクセスするには、 [ASP.NET SQL Server 登録ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229862(v=vs.90))を使用する必要があります。 また、適切なユーザー アカウントに、データベースおよびテーブルへのアクセスを許可する必要があります。 詳細については、「 [Web アプリケーションからの SQL Server へのアクセス](https://docs.microsoft.com/previous-versions/aspnet/ht43wsex(v=vs.100))」を参照してください。  
   
 ## <a name="conditional-http-get-based-caching"></a>条件付きの HTTP GET ベースのキャッシュ  
- Web HTTP シナリオでは、 [Http 仕様](https://go.microsoft.com/fwlink/?LinkId=165800)で説明されているように、インテリジェントな http キャッシュを実装するために、条件付き http GET がサービスによって使用されることがよくあります。 そのためには、サービスが ETag ヘッダーの値を HTTP 応答に設定する必要があります。 また、HTTP 要求の If-None-Match ヘッダーの値を確認して、指定されている ETag が現在の ETag と一致するかどうかを調べる必要もあります。  
+ Web HTTP シナリオでは、 [Http 仕様](https://www.w3.org/Protocols/rfc2616/rfc2616.html)で説明されているように、インテリジェントな http キャッシュを実装するために、条件付き http GET がサービスによって使用されることがよくあります。 そのためには、サービスが ETag ヘッダーの値を HTTP 応答に設定する必要があります。 また、HTTP 要求の If-None-Match ヘッダーの値を確認して、指定されている ETag が現在の ETag と一致するかどうかを調べる必要もあります。  
   
  GET および HEAD 要求の場合、<xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> は ETag 値を取得し、この値と要求内の If-None-Match ヘッダーとを比較します。 ヘッダーが存在し、一致が見つかった場合は、HTTP ステータス コード 304 (変更なし) が設定された <xref:System.ServiceModel.Web.WebFaultException> がスローされ、一致する ETag が設定されている応答に ETag ヘッダーが追加されます。  
   

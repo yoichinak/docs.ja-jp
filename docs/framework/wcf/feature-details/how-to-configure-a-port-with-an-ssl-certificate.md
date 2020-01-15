@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: d56da60f174933af789a6abd7d8aa90f3f29d9c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1ea7680d092a4270b8c0969c50db8accf7c23d49
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344628"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963307"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>方法 : SSL 証明書を使用してポートを構成する
 トランスポートセキュリティを使用する <xref:System.ServiceModel.WSHttpBinding> クラスを使用して、自己ホスト型 Windows Communication Foundation (WCF) サービスを作成する場合は、x.509 証明書を使用してポートを構成する必要もあります。 自己ホスト型サービスを作成するのでなければ、インターネット インフォメーション サービス (IIS) でサービスをホストできます。 詳細については、「 [HTTP トランスポートセキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)」を参照してください。  
   
  ポートを構成する場合に使用するツールは、コンピューターで実行されているオペレーティング システムによって異なります。  
   
- Windows Server 2003 または [!INCLUDE[wxp](../../../../includes/wxp-md.md)]を実行している場合は、Httpcfg.exe ツールを使用します。 Windows Server 2003 では、このツールはインストールされています。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]では、 [WINDOWS XP Service Pack 2 サポートツール](https://go.microsoft.com/fwlink/?LinkId=88606)からツールをダウンロードできます。 詳細については、「 [httpcfg.exe の概要](https://go.microsoft.com/fwlink/?LinkId=88605)」を参照してください。 [Windows サポートツールのドキュメント](https://go.microsoft.com/fwlink/?LinkId=94840)では、httpcfg.exe ツールの構文について説明しています。  
+ Windows Server 2003 または [!INCLUDE[wxp](../../../../includes/wxp-md.md)]を実行している場合は、Httpcfg.exe ツールを使用します。 Windows Server 2003 では、このツールはインストールされています。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]では、 [WINDOWS XP Service Pack 2 サポートツール](https://go.microsoft.com/fwlink/?LinkId=88606)からツールをダウンロードできます。 詳細については、「 [httpcfg.exe の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))」を参照してください。 [Windows サポートツールのドキュメント](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10))では、httpcfg.exe ツールの構文について説明しています。  
   
  Windows Vista を実行している場合は、既にインストールされている Netsh.exe ツールを使用します。  
   
