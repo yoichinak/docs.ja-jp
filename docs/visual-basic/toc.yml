@@ -807,7 +807,7 @@
           href: language-reference/statements/attribute-list.md
         - name: パラメーター リスト
           href: language-reference/statements/parameter-list.md
-        - name: Type List
+        - name: 型リスト
           href: language-reference/statements/type-list.md
     - name: XML のコメント用タグ
       href: language-reference/xmldoc/index.md
