@@ -3,12 +3,12 @@ title: .NET Framework から .NET Core への移植
 description: 移植プロセスを理解し、.NET Framework プロジェクトを .NET Core に移植する際に役立つツールを確認します。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: b5b010acbccf134afe800aa5bb98a0ae6e9ffa25
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: e483bb6e48dad6c3bf71bfa81e704a137fc02094
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777353"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937313"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移植の概要
 
@@ -31,7 +31,7 @@ ms.locfileid: "75777353"
 
 3. [.NET API アナライザー](../../standard/analyzers/api-analyzer.md)をプロジェクトにインストールして、一部のプラットフォームで <xref:System.PlatformNotSupportedException> をスローする API と、発生する可能性のあるその他の互換性の問題を識別します。
 
-   このツールは移植性アナライザーに似ていますが、.NET Core 上にビルドできるかどうかが分析される代わりに、実行時に <xref:System.PlatformNotSupportedException> をスローするような方法で API を使っているかどうかが分析されます。 .NET Framework 4.7.2 以上から移行する場合、これは一般的ではありませんが、確認することをお勧めします。
+   このツールは移植性アナライザーに似ていますが、.NET Core 上にコードをビルドできるかどうかが分析されるのではなく、実行時に <xref:System.PlatformNotSupportedException> をスローするような方法で API を使っているかどうかが分析されます。 .NET Framework 4.7.2 以上から移行する場合、これは一般的ではありませんが、確認することをお勧めします。 .NET Core で例外をスローする API の詳細については、「[.NET Core で常に例外をスローする API](../compatibility/unsupported-apis.md)」を参照してください。
 
 4. [Visual Studio の変換ツール](/nuget/consume-packages/migrate-packages-config-to-package-reference)を使用して、すべての `packages.config` の依存関係を [PackageReference](/nuget/consume-packages/package-references-in-project-files) 形式に変換します。
 
@@ -50,4 +50,4 @@ ms.locfileid: "75777353"
 ## <a name="next-steps"></a>次の手順
 
 >[!div class="nextstepaction"]
->[.NET Core で使用できないテクノロジ](net-framework-tech-unavailable.md)
+>[依存関係の分析](third-party-deps.md)

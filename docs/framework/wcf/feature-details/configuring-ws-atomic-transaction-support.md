@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 804e22c79c328a2ae96d8f1cb817d0aea2b0c25d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
-ms.translationtype: HT
+ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544728"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964576"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>WS-ATOMICTRANSACTION のサポートを構成する
 
@@ -25,7 +25,7 @@ WS-AT 構成ユーティリティ (wsatConfig.exe) は、WS-AT 設定の構成�
 
 コマンドラインツールの詳細については、「ws-atomictransaction[構成ユーティリティ (wsatConfig .exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)」を参照してください。
 
-[!INCLUDE[wxp](../../../../includes/wxp-md.md)] または Windows Server 2003 を実行している場合、MMC スナップインにアクセスするには、コントロールパネル]、管理ツール]、 **[コンポーネントサービス]** の順に移動し、 **[マイコンピューター]** を右クリックして、 **[プロパティ]** を選択します。 この場所では、Microsoft 分散トランザクション コーディネーター (MSDTC) を構成することもできます。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。Windows Vista または Windows Server 2008 を実行している場合は、 **[スタート]** ボタンをクリックして **[検索]** ボックスに `dcomcnfg.exe` を入力すると、MMC スナップインが表示されます。 MMC が開いているときに移動、**マイ Computer\Distributed トランザクション コーディネーター DTC**ノードを右クリックし、**プロパティ**です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。
+[!INCLUDE[wxp](../../../../includes/wxp-md.md)] または Windows Server 2003 を実行している場合、MMC スナップインにアクセスするには、コントロールパネル、管理ツール、 **[コンポーネントサービス]** の順に移動し、 **[マイコンピューター]** を右クリックして、 **[プロパティ]** を選択します。 この場所では、Microsoft 分散トランザクション コーディネーター (MSDTC) を構成することもできます。 構成に使用できるオプションは、 **[ws-at]** タブの下にグループ化されています。Windows Vista または Windows Server 2008 を実行している場合は、 **[スタート]** ボタンをクリックして **[検索]** ボックスに `dcomcnfg.exe` を入力すると、MMC スナップインが表示されます。 MMC が開いているときに移動、**マイ Computer\Distributed トランザクション コーディネーター DTC**ノードを右クリックし、**プロパティ**です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。
 
 スナップインの詳細については、「ws-atomictransaction[構成 MMC スナップ](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)イン」を参照してください。
 
@@ -59,7 +59,7 @@ WS-AT プロトコル サービスでは、管理者が、分散トランザク�
 
 この手順では、MMC 証明書スナップインを使用する必要があります。 このスナップインにアクセスするには、[スタート] ボタンをクリックして [ファイル名を指定して実行] をクリックし、入力ボックスに「mmc」と入力して [OK] をクリックします。 次に、**コンソール**1 ウィンドウで、**ファイル、追加**、削除 スナップインの順に移動し、追加 をクリックして、**使用可能なスタンドアロンスナップイン** ボックスの一覧から **証明書** を選択します。 最後に、管理する **[コンピューターアカウント]** を選択し、 **[OK]** をクリックします。 スナップインコンソールに **[証明書]** ノードが表示されます。
 
-信頼を確立するために必要な証明書は、あらかじめ用意されている必要があります。 次の手順の前に新しい証明書を作成してインストールする方法については、「[方法:開発](https://go.microsoft.com/fwlink/?LinkId=158925)中に WCF に一時的なクライアント証明書を作成してインストールします。
+信頼を確立するために必要な証明書は、あらかじめ用意されている必要があります。 次の手順の前に新しい証明書を作成してインストールする方法については、「[方法: 開発時に WCF に一時的なクライアント証明書を作成してインストール](https://docs.microsoft.com/previous-versions/msp-n-p/ff650751(v=pandp.10))する」を参照してください。
 
 1. コンピューター A で、MMC 証明書スナップインを使用して、既存の証明書 (certA) を LocalMachine\MY (Personal Node) ストアと LocalMachine\ROOT (信頼されたルート証明機関のノード) ストアにインポートします。 特定のノードに証明書をインポートするノードを右クリックし **すべてのタスク/インポート**です。
 
