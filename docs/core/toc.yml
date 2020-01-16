@@ -358,6 +358,8 @@
       href: porting/winforms.md
     - name: WPF プロジェクトを移植する
       href: porting/wpf.md
+    - name: C++/CLI プロジェクトを移植する
+      href: porting/cpp-cli.md
 - name: 依存関係の読み込み
   items:
     - name: 概要
