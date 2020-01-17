@@ -1,17 +1,20 @@
 ---
 title: .Net を使用してC# JSON をシリアル化および逆シリアル化する
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: c05783963ba521109fb542f247ec9e62fdb5c2d9
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: acb83be9b20a155b6b6a9fb5ade38e099f54e71d
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904640"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163593"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET での JSON のシリアル化と逆シリアル化 (マーシャリングとアンマーシャリング)-概要
 
@@ -24,7 +27,7 @@ ms.locfileid: "75904640"
 ## <a name="how-to-get-the-library"></a>ライブラリを取得する方法
 
 * このライブラリは、 [.Net Core 3.0](https://aka.ms/netcore3download)共有フレームワークの一部として組み込まれています。
-* その他のターゲットフレームワークの場合[は、System.string NuGet パッケージ](https://www.nuget.org/packages/System.Text.Json)をインストールします。 パッケージは次をサポートします。
+* その他のターゲットフレームワークの場合は、 [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet パッケージをインストールします。 パッケージは次をサポートします。
   * .NET Standard 2.0 以降のバージョン
   * 4\.7.2 以降のバージョンの .NET Framework
   * .NET Core 2.0、2.1、および2.2
@@ -32,9 +35,9 @@ ms.locfileid: "75904640"
 ## <a name="additional-resources"></a>その他の技術情報
 
 * [ライブラリの使用方法](system-text-json-how-to.md)
-* [Newtonsoft. Json から移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Newtonsoft.Json から移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)
 * [方法 (コンバーターを記述する)](system-text-json-converters-how-to.md)
-* [System.string のソースコード](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
-* [System.string API リファレンス](xref:System.Text.Json)
-* [Text. Json. Serialization API リファレンス](xref:System.Text.Json.Serialization)
+* [System.Text.Json ソースコード](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
+* [System.Text.Json API リファレンス](xref:System.Text.Json)
+* [System.Text.Json。シリアル化 API リファレンス](xref:System.Text.Json.Serialization)
 <!-- * [Roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

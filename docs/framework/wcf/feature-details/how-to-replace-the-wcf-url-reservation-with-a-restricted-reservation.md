@@ -2,15 +2,16 @@
 title: '方法: WCF URL 予約を制限付きの予約に置き換える'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 3d14d76334b15bdb490184a48da11ba48b84deea
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: fc50a0e31a0c323b695ada6565743fa19c1d4c2a
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544650"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212187"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>方法: WCF URL 予約を制限付きの予約に置き換える
-URL 予約を使用すると、特定の URL または URL セットからメッセージを受信するユーザーを制限できます。 予約は、URL テンプレート、アクセス制御リスト (ACL)、およびフラグのセットで構成されます。 URL テンプレートは、予約の対象となる URL を定義します。 URL テンプレートの処理方法の詳細については、「[受信要求のルーティング](https://go.microsoft.com/fwlink/?LinkId=136764)」を参照してください。 ACL は、指定された URL からメッセージを受信できるユーザーまたはユーザー グループを制御します。 フラグは、その予約で、ユーザーまたはグループに URL を直接リッスンする権限を与えるか、リッスンを他のプロセスに委任する権限を与えるかを指定します。  
+
+URL 予約を使用すると、特定の URL または URL セットからメッセージを受信するユーザーを制限できます。 予約は、URL テンプレート、アクセス制御リスト (ACL)、およびフラグのセットで構成されます。 URL テンプレートは、予約の対象となる URL を定義します。 URL テンプレートの処理方法の詳細については、「[受信要求のルーティング](/windows/win32/http/routing-incoming-requests)」を参照してください。 ACL は、指定された URL からメッセージを受信できるユーザーまたはユーザー グループを制御します。 フラグは、その予約で、ユーザーまたはグループに URL を直接リッスンする権限を与えるか、リッスンを他のプロセスに委任する権限を与えるかを指定します。  
   
  既定のオペレーティングシステム構成の一部として、Windows Communication Foundation (WCF) は、ポート80のグローバルにアクセス可能な予約を作成して、すべてのユーザーが双方向通信にデュアル HTTP バインディングを使用するアプリケーションを実行できるようにします。 この予約の ACL はすべてのユーザー向けなので、管理者は URL または URL セットをリッスンする権限を明示的に許可または拒否することはできません。 このトピックでは、この予約を削除し、制限された ACL を使用する予約を再作成する方法について説明します。  
   
@@ -24,7 +25,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
             SDDL: D:(A;;GX;;;WD)  
 ```
 
- この予約は、WCF アプリケーションが双方向通信に HTTP デュアルバインドを使用するときに使用される URL テンプレートで構成されます。 このフォームの Url は、HTTP デュアルバインドを介して通信するときに wcf サービスが WCF クライアントにメッセージを返信するために使用されます。 すべてのユーザーに対して、URL をリッスンする権限が与えられていますが、リッスンを他のプロセスに委任する権限は与えられていません。 また、ACL は SSDL (Security Descriptor Definition Language) で記述されています。 SSDL の詳細については、「 [ssdl](https://go.microsoft.com/fwlink/?LinkId=136789) 」を参照してください。  
+ この予約は、WCF アプリケーションが双方向通信に HTTP デュアルバインドを使用するときに使用される URL テンプレートで構成されます。 このフォームの Url は、HTTP デュアルバインドを介して通信するときに wcf サービスが WCF クライアントにメッセージを返信するために使用されます。 すべてのユーザーに対して、URL をリッスンする権限が与えられていますが、リッスンを他のプロセスに委任する権限は与えられていません。 また、ACL は SSDL (Security Descriptor Definition Language) で記述されています。 SSDL の詳細については、「 [ssdl](/windows/win32/secauthz/security-descriptor-definition-language) 」を参照してください。  
   
 ## <a name="to-delete-the-wcf-url-reservation"></a>WCF URL 予約を削除するには  
   

@@ -1,17 +1,20 @@
 ---
 title: .Net を使用してC# JSON をシリアル化および逆シリアル化する方法
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904655"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163203"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET で JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリング解除) を行う方法
 
@@ -563,7 +566,7 @@ JSON プロパティの名前付けポリシー:
 }
 ```
 
-ポリモーフィックな**シリアル化**の詳細、および**逆シリアル**化の詳細については、「 [newtonsoft. json から system.string に移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)」を参照してください。
+ポリモーフィックな**シリアル化**の詳細と、**逆シリアル**化の詳細については、「 [Newtonsoft.Json から System.Text.Jsonに移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)」を参照してください。
 
 ## <a name="allow-comments-and-trailing-commas"></a>コメントと末尾のコンマを許可する
 
@@ -777,9 +780,9 @@ JSON 内の Null 値は、有効な場合にのみ無視されます。 Null 非
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-* [System.string の概要](system-text-json-overview.md)
+* [System.Text.Json の概要](system-text-json-overview.md)
 * [カスタムコンバーターを記述する方法](system-text-json-converters-how-to.md)
-* [Newtonsoft. Json から移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [System.string での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)
-* [System.string API リファレンス](xref:System.Text.Json)
+* [Newtonsoft.Json から移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System.Text.Json での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)
+* [System.Text.Json API リファレンス](xref:System.Text.Json)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

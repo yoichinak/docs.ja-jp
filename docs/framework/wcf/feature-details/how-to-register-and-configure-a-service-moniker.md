@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: a73f6333a91cd8018fe8e0c34d44db87938b8058
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: c68ca0f7c95515a0552b7003454dd87804176d3d
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347092"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212215"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>方法 : サービス モニカーを登録および構成する
 型指定されたコントラクトを持つ COM アプリケーション内で Windows Communication Foundation (WCF) サービスモニカーを使用する前に、必要な属性型を COM に登録し、必要なバインドを使用して COM アプリケーションとモニカーを構成する必要があります。configuration.  
@@ -25,7 +25,7 @@ ms.locfileid: "75347092"
     [assembly: ComVisible(true)]  
     ```  
   
-3. マネージ WCF クライアントを厳密な名前付きアセンブリとしてコンパイルします。 そのためには暗号キー ペアで署名する必要があります。 詳細については、「.NET 開発者ガイド」の「[厳密な名前でのアセンブリへの署名](https://go.microsoft.com/fwlink/?LinkId=94874)」を参照してください。  
+3. マネージ WCF クライアントを厳密な名前付きアセンブリとしてコンパイルします。 そのためには暗号キー ペアで署名する必要があります。 詳しくは、「[厳密な名前でのアセンブリへの署名](../../../standard/assembly/sign-strong-name.md)」をご覧ください。  
   
 4. アセンブリ登録 (Regasm.exe) ツールに `/tlb` オプションを指定して、アセンブリで定義されている型を COM に登録します。  
   

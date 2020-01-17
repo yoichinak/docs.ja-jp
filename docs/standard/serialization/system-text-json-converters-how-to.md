@@ -1,18 +1,21 @@
 ---
 title: JSON シリアル化のカスタムコンバーターを記述する方法-.NET
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 0f8b89ec7d7b1677de085631958b888e154aa4fa
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: f72d2d83d701b20648140900d65c9098a8abb721
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116708"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76164061"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET で JSON シリアル化 (マーシャリング) のカスタムコンバーターを記述する方法
 
@@ -285,7 +288,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ## <a name="other-custom-converter-samples"></a>その他のカスタムコンバーターのサンプル
 
-「 [Newtonsoft. json から system.string への移行](system-text-json-migrate-from-newtonsoft-how-to.md)」の記事には、カスタムコンバーターの追加のサンプルが含まれています。
+[Newtonsoft.Json から System.Text.Jsonへの移行に](system-text-json-migrate-from-newtonsoft-how-to.md)関する記事には、カスタムコンバーターの追加のサンプルが含まれています。
 
 `System.Text.Json.Serialization` ソースコードの[単体テストフォルダー](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/)には、次のような他のカスタムコンバーターのサンプルが含まれています。
 
@@ -300,10 +303,10 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ## <a name="additional-resources"></a>その他の技術情報
 
 * [組み込みのコンバーターのソースコード](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
-* [System.string での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)
-* [System.string の概要](system-text-json-overview.md)
-* [方法: system.string を使用する](system-text-json-how-to.md)
-* [Newtonsoft. Json から移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [System.string API リファレンス](xref:System.Text.Json)
-* [Text. Json. Serialization API リファレンス](xref:System.Text.Json.Serialization)
+* [System.Text.Json での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)
+* [System.Text.Json の概要](system-text-json-overview.md)
+* [System.Text.Json の使用方法](system-text-json-how-to.md)
+* [Newtonsoft.Json から移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System.Text.Json API リファレンス](xref:System.Text.Json)
+* [System.Text.Json。シリアル化 API リファレンス](xref:System.Text.Json.Serialization)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
