@@ -6,30 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: a0b117949190bcaffc334c208fff6e04a6a2c5bf
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 0cf3e05a0353a17541ee890f0871d694acac09fd
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964503"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116561"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
+
 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT は .NET Framework バージョン2.0 で導入されました。 .NET Framework 4 は、次の2つのシナリオでこの HRESULT を返します。  
   
 - ハイジャックプロファイラーが任意のタイミングでスレッドのレジスタコンテキストを強制的にリセットすると、スレッドは不整合な状態にある構造体にアクセスしようとします。  
   
 - プロファイラーが、ガベージコレクションを禁止するコールバックメソッドからガベージコレクションをトリガーする情報メソッドを呼び出そうとしたとき。  
   
- これらの2つのシナリオについては、次のセクションで説明します。  
+これらの2つのシナリオについては、次のセクションで説明します。  
   
 ## <a name="hijacking-profilers"></a>プロファイラーのハイジャック  
- (このシナリオは、主にハイジャックプロファイラーの問題ですが、ハイジャックされていないプロファイラーでこの HRESULT が表示される場合もあります)。  
+
+  (このシナリオは、主にハイジャックプロファイラーの問題ですが、ハイジャックされていないプロファイラーでこの HRESULT が表示される場合もあります)。  
   
  このシナリオでは、ハイジャックプロファイラーは、スレッドがプロファイラーコードを入力したり、 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)メソッドを使用して共通言語ランタイム (CLR) を再入力したりできるように、任意のタイミングでスレッドのレジスタコンテキストを強制的にリセットします。  
   
- プロファイリング API が CLR のデータ構造をポイントするために使用する Id の多く。 多くの `ICorProfilerInfo` 呼び出しでは、これらのデータ構造から情報を読み取って戻すだけです。 ただし、CLR では、実行時にこれらの構造内の項目が変更される可能性があり、ロックを使用することもあります。 プロファイラーがスレッドをハイジャックしたときに、CLR がロックを既に保持している (または取得しようとしている) とします。 スレッドが CLR に再入力し、さらに多くのロックを取得しようとした場合、または変更処理中の構造を検査する場合、これらの構造は不整合な状態になる可能性があります。 このような状況では、デッドロックとアクセス違反が簡単に発生します。  
+ プロファイリング API が CLR のデータ構造をポイントするために使用する Id の多く。 多くの `ICorProfilerInfo` 呼び出しでは、これらのデータ構造から情報を読み取って戻すだけです。 ただし、CLR では、実行時にこれらの構造内の項目が変更される可能性があり、ロックを使用することもあります。 プロファイラーがスレッドをハイジャックしたときに、CLR がロックを既に保持している (または取得しようとしている) とします。 スレッドが CLR に再入力され、さらに多くのロックを取得しようとした場合、または変更処理中の構造を検査する場合、これらの構造は不整合な状態になる可能性があります。 このような状況では、デッドロックとアクセス違反が簡単に発生します。  
   
- 一般に、ハイジャックされていないプロファイラーが[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)メソッド内でコードを実行し、有効なパラメーターを使用して `ICorProfilerInfo` メソッドを呼び出すと、デッドロックが発生したりアクセス違反が発生したりすることはありません。 たとえば、 [ICorProfilerCallback:: ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)メソッド内で実行されるプロファイラーコードは、 [ICorProfilerInfo2:: GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)メソッドを呼び出すことによって、クラスに関する情報を要求する場合があります。 このコードでは、情報が使用できないことを示すために CORPROF_E_DATAINCOMPLETE HRESULT が返される場合があります。ただし、デッドロックが発生したり、アクセス違反が発生したりすることはありません。 `ICorProfilerInfo` のこのクラス呼び出しは、`ICorProfilerCallback` メソッドから作成されるため、同期と呼ばれます。  
+ 一般に、ハイジャックされていないプロファイラーが[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)メソッド内でコードを実行し、有効なパラメーターを使用して `ICorProfilerInfo` メソッドを呼び出すと、デッドロックが発生したりアクセス違反が発生したりすることはありません。 たとえば、 [ICorProfilerCallback:: ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)メソッド内で実行されるプロファイラーコードは、 [ICorProfilerInfo2:: GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)メソッドを呼び出すことによって、クラスに関する情報を要求する場合があります。 このコードでは、情報が使用できないことを示す CORPROF_E_DATAINCOMPLETE HRESULT が返される場合があります。 ただし、デッドロックが発生したり、アクセス違反が発生したりすることはありません。 これらの呼び出しは、`ICorProfilerCallback` メソッドから作成されるため、`ICorProfilerInfo` の呼び出しは同期と見なされます。  
   
  ただし、`ICorProfilerCallback` メソッド内に含まれていないコードを実行するマネージスレッドは、非同期呼び出しを行うと見なされます。 .NET Framework バージョン1では、非同期呼び出しで発生する可能性があることを判断するのは困難でした。 この呼び出しは、デッドロック、クラッシュ、または無効な回答を与える可能性があります。 .NET Framework バージョン2.0 では、この問題を回避するための簡単なチェックがいくつか導入されました。 .NET Framework 2.0 では、unsafe `ICorProfilerInfo` 関数を非同期的に呼び出すと、CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT で失敗します。  
   

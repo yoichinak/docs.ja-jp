@@ -10,18 +10,18 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 83f28c50c53281692e1c3c6d55cc55e8d9304ad9
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900924"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116601"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>ストリーミング プロバイダー (WCF Data Services)
 
 データ サービスは、ラージ オブジェクトのバイナリ データを公開できます。 このバイナリ データは、ビデオ ストリームとオーディオ ストリーム、画像、ドキュメント ファイル、またはその他の種類のバイナリのメディアを表すことができます。 データ モデルのエンティティに 1 つ以上のバイナリ プロパティが含まれている場合、データ サービスは、このバイナリ データを応答フィードのエントリ内に Base-64 としてエンコードして返します。 この方法で大きなバイナリデータを読み込んでシリアル化するとパフォーマンスに影響する可能性があるため、Open Data Protocol (OData) は、そのデータが属するエンティティとは独立してバイナリデータを取得するためのメカニズムを定義します。 これは、バイナリ データとエンティティを分離して 1 つ以上のデータ ストリームを生成することで実現されます。
 
-- メディア リソース - エンティティに属するバイナリ データ (ビデオ、オーディオ、画像、その他の種類のメディア リソース ストリームなど)。
+- メディアリソース-エンティティに属するバイナリデータ (ビデオ、オーディオ、画像、その他の種類のメディアリソースストリームなど)。
 
 - メディア リンク エントリ - 関連するメディア リソース ストリームへの参照を含むエンティティ。
 
@@ -88,14 +88,14 @@ WCF Data Services ランタイムに <xref:System.Data.Services.Providers.IDataS
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>ホスト環境での大きなバイナリ ストリームの有効化
 
-ASP.NET Web アプリケーションでデータサービスを作成する場合は、Windows Communication Foundation (WCF) を使用して HTTP プロトコルの実装を提供します。 既定では、WCF では HTTP メッセージのサイズは 65K バイトのみに制限されます。 また、データ サービスに対する大きなバイナリ データのストリーミングを可能にするには、大きなバイナリ ファイルを有効にして、転送にストリームを使用するように Web アプリケーションを構成する必要もあります。 そのためには、アプリケーションの Web.config ファイルの `<configuration />` 要素に次の内容を追加します。
+ASP.NET Web アプリケーションでデータサービスを作成する場合は、Windows Communication Foundation (WCF) を使用して HTTP プロトコルの実装を提供します。 既定では、WCF は HTTP メッセージのサイズを 65 KB に制限します。 また、データ サービスに対する大きなバイナリ データのストリーミングを可能にするには、大きなバイナリ ファイルを有効にして、転送にストリームを使用するように Web アプリケーションを構成する必要もあります。 そのためには、アプリケーションの Web.config ファイルの `<configuration />` 要素に次の内容を追加します。
 
 > [!NOTE]
 > 要求メッセージと応答メッセージの両方でバイナリデータがストリーミングされ、WCF によってバッファリングされないようにするには、<xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> 転送モードを使用する必要があります。
 
 詳細については、「[メッセージ転送のストリーミング](../../wcf/feature-details/streaming-message-transfer.md)と[トランスポートクォータ](../../wcf/feature-details/transport-quotas.md)」を参照してください。
 
-また、既定では、インターネット インフォメーション サービス (IIS) でも要求のサイズが 4 MB に制限されます。 IIS での実行時にデータサービスが 4 MB を超えるストリームを受信できるようにするには、次の例に示すように、`<system.web />` 構成セクションで[HttpRuntime 要素 (ASP.NET Settings スキーマ)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))の `maxRequestLength` 属性も設定する必要があります。
+既定では、インターネットインフォメーションサービス (IIS) によって、要求のサイズも 4 MB に制限されます。 IIS で実行しているときに 4 MB を超えるストリームをデータサービスで受信できるようにするには、次の例に示すように、`<system.web />` 構成セクションで[HttpRuntime 要素 (ASP.NET Settings スキーマ)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))の `maxRequestLength` 属性も設定する必要があります。
 
 ## <a name="using-data-streams-in-a-client-application"></a>クライアント アプリケーションでのデータ ストリームの使用
 
