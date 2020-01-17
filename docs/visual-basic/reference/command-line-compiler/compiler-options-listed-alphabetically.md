@@ -57,14 +57,14 @@ Visual Basic コマンドラインコンパイラは、Visual Studio 統合開�
 |[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|変数宣言でローカル型推論を使用できるようにします。|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|厳密な言語セマンティクスを適用します。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|出力ファイルを指定します。|  
-|<code>-parallel[+&#124;-]</code>|同時実行ビルドを使用する (+) かどうかを指定します。|  
+<code>-parallel[+&#124;-]</code> 
 |[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|コンパイラによる出力ファイルの対象となるプロセッサ プラットフォームを指定します。|  
 |`-preferreduilang`|出力用の言語名を指定します。|  
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|コンパイラで構文関連のエラーと警告のコードが表示されないようにします。|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|コンパイルするソース ファイルをサブディレクトリで検索します。|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|アセンブリからメタデータをインポートします。|  
-|[-refonly](refonly-compiler-option.md)|参照アセンブリのみを出力します。|
-|[-refout](refout-compiler-option.md)|参照アセンブリの出力パスを指定します。|
+|[/refonly](refonly-compiler-option.md)|参照アセンブリのみを出力します。|
+|[/refout](refout-compiler-option.md)|参照アセンブリの出力パスを指定します。|
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|整数オーバーフローのチェックを無効にします。|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|マネージド リソースをアセンブリに埋め込みます。|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|すべての型宣言に対して名前空間を指定します。|  
