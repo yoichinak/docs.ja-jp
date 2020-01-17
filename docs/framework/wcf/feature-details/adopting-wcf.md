@@ -2,14 +2,14 @@
 title: Windows Communication Foundation の採用
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: 53f51c6a93d4768d3aa158d44cb7d20f945393f5
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e4955d3a1d1c3a7c2afae5b0e1573d383e03bb33
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964259"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116665"
 ---
-# <a name="adopting-windows-communication-foundation"></a>Windows Communication Foundation の採用
+# <a name="adopt-windows-communication-foundation"></a>Windows Communication Foundation を採用する
 
 ASP.NET を使用して開発した既存のアプリケーションを引き続き維持しながら、新しい開発に Windows Communication Foundation (WCF) を使用することもできます。 WCF は、任意のシナリオで .NET Framework で構築されたアプリケーションとの通信を容易にするために最適な選択肢となることを目的としています。これは、さまざまなソフトウェア通信の問題を ASP.NET に解決するための標準ツールとして機能します。できません.
 
@@ -19,7 +19,7 @@ ASP.NET 互換モードで実行するように構成されている WCF サー�
 
 WCF クライアントでは、ASP.NET Web サービスを使用できます。 <xref:System.ServiceModel.BasicHttpBinding> で構成された WCF サービスは、ASP.NET Web サービスクライアントで使用できます。 ASP.NET Web サービスは、WCF アプリケーションと共存できます。また、WCF を使用して、既存の ASP.NET Web サービスに機能を追加することもできます。 これらの方法で WCF と ASP.NET Web サービスを一緒に使用できるようになった場合は、ASP.NET Web サービスではなく、WCF によって提供される機能が必要な場合にのみ、ASP.NET Web サービスを WCF に移行することをお勧めします。
 
-場合によっては、あるテクノロジから別のテクノロジにコードを移行する方法はほとんどありません。 以前のテクノロジでは満たされない新しい要件を満たすために新しいテクノロジを採用する場合、新たに拡張された要件を満たす新しいソリューションを設計することが正しい方法です。 新しい設計では、既存のシステムでの経験とそのシステムを設計して以来、獲得した知識を活用できます。 また、新しい設計は、新しいプラットフォーム上で古い設計を再制作するのではなく、新しいテクノロジの機能を十分に活用することができます。 新しい設計の主要な要素のプロトタイプが完成すると、既存のシステムのコードを新しいシステム内で再使用することが容易になります。
+場合によっては、あるテクノロジから別のテクノロジにコードを移行する方法はほとんどありません。 新しいテクノロジを採用する理由は、以前のテクノロジでは満たすことができない新しい要件を満たすことであり、その場合は、新しく展開された一連の要件を満たす新しいソリューションを設計することです。 新しい設計では、既存のシステムでの経験とそのシステムを設計して以来、獲得した知識を活用できます。 また、新しい設計は、新しいプラットフォーム上で古い設計を再制作するのではなく、新しいテクノロジの機能を十分に活用することができます。 新しいデザインの重要な要素をプロトタイプ作成した後は、新しい設計の既存のシステムからコードを再利用しやすくなります。
 
 ## <a name="see-also"></a>関連項目
 

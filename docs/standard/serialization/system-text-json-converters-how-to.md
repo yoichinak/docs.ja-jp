@@ -7,12 +7,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 8a2af76ca64359c12fafce6678def14d11d9f029
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 0f8b89ec7d7b1677de085631958b888e154aa4fa
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904564"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116708"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET で JSON シリアル化 (マーシャリング) のカスタムコンバーターを記述する方法
 
@@ -280,6 +280,8 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
   }
 ]
 ```
+
+前の例のコンバーターコードは、各プロパティを手動で読み取り、書き込みます。 別の方法として、`Deserialize` または `Serialize` を呼び出して、一部の作業を行うことができます。 例については、[この StackOverflow の投稿](https://stackoverflow.com/a/59744873/12509023)を参照してください。
 
 ## <a name="other-custom-converter-samples"></a>その他のカスタムコンバーターのサンプル
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 8b3ffc885691264548a19f694d159ce07aba7550
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 01f94bcfce97da8c71b1b709baa34c2b7509a5e5
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904696"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116688"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft. Json から system.string に移行する方法
 
@@ -136,17 +136,6 @@ POCOs または `Dictionary<string, object>`型のディクショナリで `obje
 ### <a name="maximum-depth"></a>最大の深さ
 
 `Newtonsoft.Json` には、既定では最大の深さが制限されていません。 <xref:System.Text.Json> の既定の制限は64であり、<xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>を設定することによって構成できます。
-
-### <a name="stack-type-handling"></a>スタック型の処理
-
-<xref:System.Text.Json>では、シリアル化されるときに、スタックの内容の順序が逆になります。 この動作は、次の型とインターフェイス、およびそれらから派生したユーザー定義型に適用されます。
-
-* <xref:System.Collections.Stack>
-* <xref:System.Collections.Generic.Stack%601>
-* <xref:System.Collections.Immutable.ImmutableStack%601>
-* <xref:System.Collections.Immutable.IImmutableStack%601>
-
-カスタムコンバーターを実装して、スタックの内容を同じ順序で保持することができます。
 
 ### <a name="omit-null-value-properties"></a>Null 値のプロパティを省略する
 
