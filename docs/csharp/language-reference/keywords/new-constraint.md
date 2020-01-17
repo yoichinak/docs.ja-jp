@@ -1,16 +1,15 @@
 ---
 title: new 制約 - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
-ms.openlocfilehash: 7c788be52010cdfadbd3c03f9e570815d25bdbef
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: cd67aeb82d736b8941b0637494089723e7815505
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401495"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713354"
 ---
 # <a name="new-constraint-c-reference"></a>new 制約 (C# リファレンス)
 

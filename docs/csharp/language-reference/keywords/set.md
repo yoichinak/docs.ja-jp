@@ -1,6 +1,5 @@
 ---
 title: set キーワード - C# リファレンス
-ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - set
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - set keyword [C#]
 ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
-ms.openlocfilehash: 0322f1bb94174dd3a0cdd2089c8626d25a80cc1c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 97b0dbf8716edc4cd465eb5ac693efa0ecaa498b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147994"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713080"
 ---
 # <a name="set-c-reference"></a>set (C# リファレンス)
 

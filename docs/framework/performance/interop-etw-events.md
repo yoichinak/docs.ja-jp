@@ -5,14 +5,12 @@ helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 80fd1f7487dbe3925b875e728eaeddac86927ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974933"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716018"
 ---
 # <a name="interop-etw-events"></a>相互運用 ETW イベント
 相互運用イベントは、Microsoft intermediate language (MSIL) のスタブ生成とキャッシュに関する情報をキャプチャします。  
@@ -27,13 +25,13 @@ ms.locfileid: "73974933"
   
  次の表に、イベント情報を示します。  
   
-|event|イベント ID|いつ発生するか|  
+|Event|イベント ID|いつ発生するか|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|MSIL スタブが生成された。|  
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データの種類|説明|  
+|フィールド名|[データ型]|説明|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|モジュールの識別子。|  
 |StubMethodID|win:UInt64|スタブのメソッド識別子。|  
@@ -57,13 +55,13 @@ ms.locfileid: "73974933"
   
  次の表に、イベント情報を示します。  
   
-|event|イベント ID|いつ発生するか|  
+|Event|イベント ID|いつ発生するか|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|MSIL のキャッシュにアクセスがあった。|  
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データの種類|説明|  
+|フィールド名|[データ型]|説明|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|モジュールの識別子。|  
 |StubMethodID|win:UInt64|スタブのメソッド識別子。|  

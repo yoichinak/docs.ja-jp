@@ -6,14 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 42e5c7018f83f3849f46f33e09e09ea1749e7c70
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0c00e4cc866c537fe26dd1ad466d6cde95bc608
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753287"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706228"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework の暗号モデル
 
@@ -55,7 +53,7 @@ ms.locfileid: "64753287"
 
 ## <a name="cryptographic-configuration"></a>暗号化の構成
 
-暗号化の構成によって、アルゴリズムの特定の実装のアルゴリズム名への解決が可能になり、.NET Framework の暗号化クラスの機能を拡張できます。 アルゴリズムの独自のハードウェアまたはソフトウェア実装を追加して、実装を任意のアルゴリズム名にマップすることができます。 構成ファイルでアルゴリズムを指定しない場合は、既定の設定が使用されます。 暗号の構成の詳細については、次を参照してください。[暗号化クラスの構成](../../../docs/framework/configure-apps/configure-cryptography-classes.md)します。
+暗号化の構成によって、アルゴリズムの特定の実装のアルゴリズム名への解決が可能になり、.NET Framework の暗号化クラスの機能を拡張できます。 アルゴリズムの独自のハードウェアまたはソフトウェア実装を追加して、実装を任意のアルゴリズム名にマップすることができます。 構成ファイルでアルゴリズムを指定しない場合は、既定の設定が使用されます。 暗号化の構成の詳細については、「[暗号化クラスの構成](../../../docs/framework/configure-apps/configure-cryptography-classes.md)」を参照してください。
 
 ## <a name="choosing-an-algorithm"></a>アルゴリズムの選択
 
@@ -63,33 +61,33 @@ ms.locfileid: "64753287"
 
 アプリケーションで推奨されるアルゴリズムの一覧を示します。
 
-- データのプライバシー : 
+- データのプライバシー :
 
   - <xref:System.Security.Cryptography.Aes>
 
-- データの整合性 : 
+- データの整合性 :
 
   - <xref:System.Security.Cryptography.HMACSHA256>
 
   - <xref:System.Security.Cryptography.HMACSHA512>
 
-- デジタル署名 : 
+- デジタル署名:
 
   - <xref:System.Security.Cryptography.ECDsa>
 
   - <xref:System.Security.Cryptography.RSA>
 
-- キー交換 : 
+- キー交換 :
 
   - <xref:System.Security.Cryptography.ECDiffieHellman>
 
   - <xref:System.Security.Cryptography.RSA>
 
-- 乱数生成 : 
+- 乱数生成 :
 
   - <xref:System.Security.Cryptography.RNGCryptoServiceProvider>
 
-- パスワードからのキー生成 :  
+- パスワードからのキー生成 :
 
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 

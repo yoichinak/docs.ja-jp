@@ -7,14 +7,12 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 56ecdc41c5b5a3f7ee272768d5c2a3745da26633
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 929ed00c44b52dd94fc9d15e564cce7eeff1619e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975512"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716187"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW キーワードおよびレベル
 Windows (ETW) イベントのイベント トレースは、カテゴリとレベルによってフィルター処理できます。 イベントの [CLR ETW キーワード](#clr-etw-keywords) は、イベントをカテゴリ別にフィルタ処理できます。これらはランタイム プロバイダーとランダウン プロバイダー用に組み合わせて使用します。 [イベント レベル](#etw-event-levels) は、フラグによって識別されます。  
@@ -36,7 +34,7 @@ Windows (ETW) イベントのイベント トレースは、カテゴリとレ�
 ### <a name="clr-etw-runtime-keywords"></a>CLR ETW ランタイム キーワード  
  CLR ETW のランタイム キーワード、その値、およびその用途を次の表に示します。  
   
-|ランタイム キーワード名|[値]|目的|  
+|ランタイム キーワード名|Value|目的|  
 |--------------------------|-----------|-------------|  
 |`GCKeyword`|0x00000001|[ガベージ コレクション イベント](garbage-collection-etw-events.md)のコレクションを有効にします。|  
 |`LoaderKeyword`|0x00000008|[ローダー イベント](loader-etw-events.md)のコレクションを有効にします。|  
@@ -59,7 +57,7 @@ Windows (ETW) イベントのイベント トレースは、カテゴリとレ�
 ### <a name="clr-etw-rundown-keywords"></a>CLR ETW ランダウン キーワード  
  CLR ETW ランダウン キーワード、その値、およびその用途を次の表に示します。  
   
-|ランダウン キーワード名|[値]|目的|  
+|ランダウン キーワード名|Value|目的|  
 |--------------------------|-----------|-------------|  
 |`LoaderRundownKeyword`|0x00000008|`StartRundownKeyword` および `EndRundownKeyword`と一緒に使用する場合のローダー イベントのコレクションを有効にします。|  
 |`JitRundownKeyword`|0x00000010|`DCStart` および `DCEnd` と一緒に使用する場合の、メソッド `StartRundownKeyword` と JIT コンパイルされたメソッドの `EndRundownKeyword`イベントのコレクションを有効にします。|  
@@ -76,24 +74,24 @@ Windows (ETW) イベントのイベント トレースは、カテゴリとレ�
   
 |キーワードとフラグ|アプリケーション ドメイン、アセンブリ、モジュールのロード/アンロード イベント|メソッドのロード/アンロード イベント (動的イベントを除く)|動的メソッドのロード/破棄イベント|  
 |------------------------|--------------------------------------------------------------|----------------------------------------------------------|-----------------------------------------|  
-|`LoaderKeyword`|イベントをロードおよびアンロードします。|なし。|なし。|  
-|`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` は何も追加しません)|なし。|イベントをロードします。|イベントをロードおよびアンロードします。|  
-|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|なし。|イベントをロードおよびアンロードします。|イベントをロードおよびアンロードします。|  
-|`NGenKeyword`|なし。|なし。|該当しない。|  
-|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|なし。|イベントをロードします。|該当しない。|  
-|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|なし。|イベントをアンロードします。|該当しない。|  
+|`LoaderKeyword`|イベントをロードおよびアンロードします。|ありません。|ありません。|  
+|`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` は何も追加しません)|ありません。|イベントをロードします。|イベントをロードおよびアンロードします。|  
+|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|ありません。|イベントをロードおよびアンロードします。|イベントをロードおよびアンロードします。|  
+|`NGenKeyword`|ありません。|ありません。|該当なし。|  
+|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|ありません。|イベントをロードします。|該当なし。|  
+|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|ありません。|イベントをアンロードします。|該当なし。|  
   
 <a name="rundown_combo"></a>   
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a>ランダウン プロバイダーのシンボル解決のキーワードの組み合わせ  
   
 |キーワードとフラグ|アプリケーション ドメイン、アセンブリ、モジュールの DCStart/DCEnd イベント|メソッドの DCStart/DCEnd イベント (イベントの動的メソッドを含む)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` イベント。|なし。|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` イベント。|なし。|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|なし。|`DCStart` イベント。|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|なし。|`DCEnd` イベント。|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|なし。|`DCStart` イベント。|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|なし。|`DCEnd` イベント。|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` イベント。|ありません。|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` イベント。|ありません。|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|ありません。|`DCStart` イベント。|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|ありません。|`DCEnd` イベント。|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|ありません。|`DCStart` イベント。|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|ありません。|`DCEnd` イベント。|  
 
 ## <a name="etw-event-levels"></a>ETW イベントのレベル  
  ETW イベントはレベルでフィルター処理することもできます。 レベルが 0x5 に設定されている場合 0x5 以下を含むすべてのレベルのイベント (キーワードによって有効になったカテゴリに属するイベント) が発生します。 レベルが 0x2 に設定されている場合、レベル 0x2 以下に属するイベントのみが発生します。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a69fb861f7c2671a5c26245aa544ee99bcbdb56b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110996"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901008"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess メソッド
 デバッガーの制御下でプロセスとそのプライマリスレッドを起動します。  
@@ -61,7 +61,7 @@ HRESULT CreateProcess (
  から呼び出しプロセスの各継承可能なハンドルが起動されたプロセスによって継承されることを示す場合は `true` に設定します。ハンドルが継承されない場合は `false` を指定します。 継承されたハンドルは、元のハンドルと同じ値とアクセス権を持ちます。  
   
  `dwCreationFlags`  
- から優先順位クラスと起動されたプロセスの動作を制御する[Win32 プロセス作成フラグ](https://go.microsoft.com/fwlink/?linkid=69981)のビットごとの組み合わせ。  
+ から優先順位クラスと起動されたプロセスの動作を制御する[Win32 プロセス作成フラグ](/windows/win32/procthread/process-creation-flags)のビットごとの組み合わせ。  
   
  `lpEnvironment`  
  から新しいプロセスの環境ブロックへのポインター。  
@@ -86,11 +86,11 @@ HRESULT CreateProcess (
   
  アンマネージ混合モードのデバッグを有効にするには&#124; 、`dwCreationFlags` を DEBUG_PROCESS DEBUG_ONLY_THIS_PROCESS に設定します。 マネージデバッグのみを使用する場合は、これらのフラグを設定しないでください。  
   
- デバッガーとデバッグするプロセス (アタッチされたプロセス) が1つのコンソールを共有し、相互運用デバッグが使用されている場合、アタッチされたプロセスがコンソールロックを保持し、デバッグイベントで停止する可能性があります。 デバッガーは、コンソールの使用をブロックします。 この問題を回避するには、`dwCreationFlags` パラメーターで CREATE_NEW_CONSOLE フラグを設定します。  
+ デバッガーとデバッグするプロセス (アタッチされたプロセス) が1つのコンソールを共有し、相互運用デバッグが使用されている場合、アタッチされたプロセスがコンソールロックを保持し、デバッグイベントで停止する可能性があります。 デバッガーは、コンソールの使用をブロックします。 この問題を回避するには、`dwCreationFlags` パラメーターに CREATE_NEW_CONSOLE フラグを設定します。  
   
  相互運用デバッグは、IA-64 ベースおよび AMD64 ベースのプラットフォームなど、Win9x および x86 以外のプラットフォームではサポートされていません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

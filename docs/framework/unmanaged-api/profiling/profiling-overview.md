@@ -1,5 +1,5 @@
 ---
-title: プロファイリングの概要
+title: プロファイルの概要
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed code, profiling API support
@@ -27,14 +27,14 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: 08015e2e5918ca64f601ec912a906cfb6319ed6c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a13470b970b35a2f6f088fd305ba455167c8e107
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427097"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937815"
 ---
-# <a name="profiling-overview"></a>プロファイリングの概要
+# <a name="profiling-overview"></a>プロファイルの概要
 
 プロファイラーは、別のアプリケーションの実行を監視するツールです。 共通言語ランタイム (CLR: Common Language Runtime) プロファイラーは、プロファイル API を使用して CLR とのメッセージの送受信を行う関数で構成されるダイナミック リンク ライブラリ (DLL: Dynamic Link Library) です。 プロファイラー DLL は、実行時に CLR によって読み込まれます。
 
@@ -61,7 +61,7 @@ CLR アプリケーションのプロファイリングには、通常のコン�
 
 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)と[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)は、通知インターフェイスと見なすことができます。 これらのインターフェイスは、 [Classloadstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)、 [Classloadstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)、 [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)などのメソッドで構成されています。 クラスのロードまたはアンロード、関数のコンパイルなどを行うたびに、プロファイラーの `ICorProfilerCallback` インターフェイスまたは `ICorProfilerCallback2` インターフェイスの対応するメソッドが呼び出されます。
 
-たとえば、プロファイラーは、次の2つの通知関数によってコードのパフォーマンスを測定できます。[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)と[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)。 この場合は、各通知のタイムスタンプを記録し、結果を累積して、アプリケーションの実行時に CPU またはウォール クロック時間を最も多く使用した関数を示す一覧を出力します。
+たとえば、プロファイラーでは、 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)と[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)という2つの通知関数によってコードのパフォーマンスを測定できます。 この場合は、各通知のタイムスタンプを記録し、結果を累積して、アプリケーションの実行時に CPU またはウォール クロック時間を最も多く使用した関数を示す一覧を出力します。
 
 ### <a name="the-information-retrieval-interfaces"></a>情報取得インターフェイス
 
@@ -107,7 +107,7 @@ API は、CPU とメモリの消費に関しては効率的です。 プロフ�
 
 プロファイル API は、サンプリング プロファイラーと非サンプリング プロファイラーの両方に役立ちます。 *サンプリングプロファイラー*は、プロファイルを通常のクロックティック (たとえば、5ミリ秒) で検査します。 *非サンプリングプロファイラー*は、イベントの原因となったスレッドと同期的にイベントを通知します。
 
-### <a name="unsupported-functionality"></a>サポートされない機能
+### <a name="unsupported-functionality"></a>サポートされていない機能
 
 プロファイル API は、以下の機能をサポートしていません。
 
@@ -175,7 +175,7 @@ CLR プロファイラーがマネージド コードを安全に呼び出すこ
 
 スタック スナップショットは、ある特定の時点でのスレッドのスタックのトレースです。 プロファイル API はスタックでのマネージド関数のトレースをサポートしますが、アンマネージド 関数のトレースはプロファイラー独自のスタック ウォーカーで処理する必要があります。
 
-プロファイラーをプログラミングしてマネージスタックをウォークする方法の詳細については、このドキュメントセットの「 [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)メソッド」を参照し、.NET Framework 2.0 でプロファイラースタックウォークを [してください。基本および](https://go.microsoft.com/fwlink/?LinkId=73638)を超えています。
+プロファイラーをプログラミングしてマネージスタックをウォークする方法の詳細については、このドキュメントセットの[ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)メソッドと、 [.NET Framework 2.0: 基本以上のプロファイラースタックウォークに](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))関する説明を参照してください。
 
 ### <a name="shadow-stack"></a>シャドウ スタック
 
@@ -189,7 +189,7 @@ CLR プロファイラーがマネージド コードを安全に呼び出すこ
 
 ## <a name="related-topics"></a>関連トピック
 
-|Title|説明|
+|[タイトル]|説明|
 |-----------|-----------------|
 |[プロファイル環境の設定](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|プロファイラーを初期化し、イベント通知を設定して、Windows サービスをプロファイリングする方法について説明します。|
 |[プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|プロファイル API で使用されるアンマネージ インターフェイスについて説明します。|

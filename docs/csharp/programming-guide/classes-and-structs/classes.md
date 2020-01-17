@@ -1,18 +1,17 @@
 ---
 title: クラス - C# プログラミング ガイド
-ms.custom: seodec18
 description: クラスの型と、クラスの型を作成する方法について説明します
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 832095e1d9712c85ad588836e8eba8f523719021
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597174"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714973"
 ---
 # <a name="classes-c-programming-guide"></a>クラス (C# プログラミング ガイド)
 

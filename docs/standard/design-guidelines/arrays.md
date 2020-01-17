@@ -7,26 +7,25 @@ helpviewer_keywords:
 - arrays [.NET Framework], usage guidelines
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
-author: KrzysztofCwalina
-ms.openlocfilehash: dd30cdee0440553a9f955f0b3f4ee420e938b9ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac4b073d2d3291922498a0e56c7e81f7e7868c65
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864118"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709570"
 ---
 # <a name="arrays"></a>配列
-**✓ DO** パブリック Api で配列にコレクションの使用を優先します。 [コレクション](../../../docs/standard/design-guidelines/guidelines-for-collections.md)セクション コレクションと配列の間で選択する方法について詳しく説明します。  
+**✓ DO** パブリック Api で配列にコレクションの使用を優先します。 コレクション[セクションで](../../../docs/standard/design-guidelines/guidelines-for-collections.md)は、コレクションと配列のどちらかを選択する方法について詳しく説明します。  
   
- **X DO NOT** 読み取り専用配列フィールドを使用します。 フィールド自体は読み取り専用と、変更できない配列内の要素を変更することができます。  
+ **X DO NOT** 読み取り専用配列フィールドを使用します。 フィールド自体は読み取り専用であり、変更することはできませんが、配列内の要素は変更できます。  
   
  **✓ CONSIDER** 多次元配列ではなくジャグ配列を使用します。  
   
- ジャグ配列は、要素も配列を含む配列です。 配列の要素を構成するには、多次元配列と比較データ (スパース マトリックスなど) のいくつかのセットに対して無駄な小さい領域に、さまざまなサイズを指定できます。 さらに、いくつかのシナリオで実行時パフォーマンスの向上を発生する可能性がありますので、CLR は、ジャグ配列のインデックス操作を最適化します。  
+ ジャグ配列は、配列でもある要素を含む配列です。 要素を構成する配列は、さまざまなサイズになることがあり、一部のデータセット (スパースマトリックスなど) では、多次元配列と比較して無駄になる領域が少なくなります。 さらに、CLR はジャグ配列に対するインデックス操作を最適化するため、一部のシナリオでは実行時のパフォーマンスが向上する可能性があります。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*  
   
- *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
 ## <a name="see-also"></a>関連項目
 

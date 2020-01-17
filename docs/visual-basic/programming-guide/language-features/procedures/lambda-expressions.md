@@ -53,7 +53,8 @@ ms.locfileid: "74345976"
 
 - 複数行のラムダ関数では、`As` 句を使用して戻り値の型を指定することも、戻り値の型が推論されるように `As` 句を省略することもできます。 複数行のラムダ関数に対して `As` 句を省略した場合、戻り値の型は、複数行のラムダ関数のすべての `Return` ステートメントから最も優先的な型になります。 最も優先される*型*は、他のすべての型の幅を広げることができる一意の型です。 この一意の型を特定できない場合、最も優先される型は、配列内の他のすべての型を絞り込むことができる一意の型になります。 これらの一意の型をどちらも特定できない場合は、 `Object`が最も優先度の高い型になります。 この場合、`Option Strict` が `On`に設定されていると、コンパイラエラーが発生します。
 
-     たとえば、`Return` ステートメントに指定された式に `Integer`、`Long`、、および `Double`型の値が含まれている場合、結果の配列の型は `Double`になります。 `Integer` と `Long` はどちらも `Double` に拡張され、`Double` のみになります。 そのため、`Double` が最も優先度の高い型になります。 詳細については、「[拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
+     たとえば、`Return` ステートメントに指定された式に `Integer`、`Long`、、および `Double`型の値が含まれている場合、結果の配列の型は `Double`になります。`Integer` と `Long` はどちらも `Double` に拡張され、`Double` のみになります。そのため、`Double` が最も優先度の高い型になります。 詳細については、「[拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。	
+
 
 - 単一行関数の本体は、ステートメントではなく、値を返す式である必要があります。 単一行関数の `Return` ステートメントはありません。 単一行関数によって返される値は、関数本体の式の値です。
 

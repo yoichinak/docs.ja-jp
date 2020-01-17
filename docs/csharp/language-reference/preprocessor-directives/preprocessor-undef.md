@@ -1,18 +1,17 @@
 ---
 title: '#undef - C# リファレンス'
-ms.custom: seodec18
 ms.date: 06/30/2018
 f1_keywords:
 - '#undef'
 helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
-ms.openlocfilehash: fdf22e90be766e87e823a7f8cc27ea00c17d2bb5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 21923412aa178c3b86e94a54bd911130e48e4deb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605590"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712443"
 ---
 # <a name="undef-c-reference"></a>#undef (C# リファレンス)
 `#undef` を使用すると、シンボルを未定義にすることができます。未定義のシンボルを [#if](./preprocessor-if.md) ディレクティブで式として使用すると、その式は `false` と評価されます。  

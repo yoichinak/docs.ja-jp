@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-ms.openlocfilehash: 80643187045e7e96b9c18169c5e71287713d711f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d505b917c343c40c7fa2a7aecf3466578ae0a8d
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73106238"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936637"
 ---
 # <a name="runtime_info_flags-enumeration"></a>RUNTIME_INFO_FLAGS 列挙型
 共通言語ランタイム (CLR) に関する情報を返す必要があるかどうかを示す値を格納します。  
@@ -48,7 +48,7 @@ typedef enum {
 |`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|ディレクトリ情報を含めないことを示します。|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|バージョン情報を含めないことを示します。|  
 |`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|エラーが発生したときにエラーダイアログボックスを表示しないことを示します。|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|SEM_FAILCRITICALERRORS フラグを使用して[SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242)関数を呼び出すことによる影響をオーバーライドする必要があることを示します。 つまり、エラーが発生すると、抑制されるのではなく、インストールのダイアログボックスが表示されます。|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|SEM_FAILCRITICALERRORS フラグを使用して[SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)関数を呼び出した場合の効果をオーバーライドする必要があることを示します。 つまり、エラーが発生すると、抑制されるのではなく、インストールのダイアログボックスが表示されます。|  
 |`RUNTIME_INFO_REQUEST_AMD64`|AMD-64 互換バージョンのランタイムに関する情報の要求を示します。|  
 |`RUNTIME_INFO_REQUEST_IA64`|IA-64 互換バージョンのランタイムに関する情報の要求を示します。|  
 |`RUNTIME_INFO_REQUEST_X86`|ランタイムの x86 互換バージョンに関する情報の要求を示します。|  
@@ -63,7 +63,7 @@ typedef enum {
   
 - RUNTIME_INFO_REQUEST_X86  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  

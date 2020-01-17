@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 31f277d11cba8191c326d56f017b8acc6503c6b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ac7e1b68f3f43a0c84c7330666825207e5b90004
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968710"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711052"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>文字列の .NET Framework データ型への変換
 文字列を .NET Framework データ型に変換するには、アプリケーションの要件に適合する **XmlConvert** メソッドを使用します。 **XmlConvert** クラスで利用可能なすべての変換メソッドの一覧については、「<xref:System.Xml.XmlConvert>」を参照してください。  
@@ -24,7 +22,7 @@ ms.locfileid: "69968710"
   
 |.NET Framework 型|返される文字列|  
 |-------------------------|---------------------|  
-|ブール型|"true"、"false"|  
+|Boolean|"true"、"false"|  
 |Single.PositiveInfinity|"INF"|  
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
@@ -35,7 +33,7 @@ ms.locfileid: "69968710"
 > [!NOTE]
 > 表中の .NET Framework 型を **ToString** メソッドを使用して文字列に変換したときに返される文字列は基本型ではなく、XML スキーマ (XSD) 文字列型です。  
   
- **DateTime** 値型と **Timespan** 値型の違いは、**DateTime** が瞬間を表すのに対して、**TimeSpan** が時間間隔を表すことです。 **DateTime** および **Timespan** の形式は、XML スキーマ (XSD) のデータ型仕様で指定されています。 次に例を示します。  
+ **DateTime** 値型と **Timespan** 値型の違いは、**DateTime** が瞬間を表すのに対して、**TimeSpan** が時間間隔を表すことです。 **DateTime** および **Timespan** の形式は、XML スキーマ (XSD) のデータ型仕様で指定されています。 例:  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -51,7 +49,7 @@ writer.WriteElementString("Date", XmlConvert.ToString(date));
   
  **出力**  
   
- `<Date>2001-08-04T00:00:00</Date>`。  
+ `<Date>2001-08-04T00:00:00</Date>`.  
   
  整数を文字列に変換するコードを次に示します。  
   
@@ -78,9 +76,9 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
 |有効な文字列入力パラメーター|出力される .NET Framework 型|  
 |----------------------------------|--------------------------------|  
-|"true"|Boolean.True|  
+|"TRUE"|Boolean.True|  
 |"1"|Boolean.True|  
-|"false"|Boolean.False|  
+|"FALSE"|Boolean.False|  
 |"0"|Boolean.False|  
   
  たとえば、次のような XML があるとします。  

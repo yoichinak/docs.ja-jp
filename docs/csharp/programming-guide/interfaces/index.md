@@ -1,17 +1,16 @@
 ---
 title: インターフェイス - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 43e37dc4b0977542add05c8cc13e2d7fa47b19bf
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120156"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937498"
 ---
 # <a name="interfaces-c-programming-guide"></a>インターフェイス (C# プログラミング ガイド)
 
@@ -23,7 +22,7 @@ ms.locfileid: "73120156"
   
  [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
-構造体の名前を、有効な C# の[識別子名](../inside-a-program/identifier-names.md)にする必要があります。 慣例により、インターフェイス名は大文字の `I` で始めます。
+インターフェイスの名前を、有効な C# の[識別子名](../inside-a-program/identifier-names.md)にする必要があります。 慣例により、インターフェイス名は大文字の `I` で始めます。
 
 <xref:System.IEquatable%601> インターフェイスを実装するすべてのクラスまたは構造体は、インターフェイスで指定されたシグネチャに一致する <xref:System.IEquatable%601.Equals%2A> メソッドの定義を含む必要があります。 したがって、`IEquatable<T>` を実装するクラスが `Equals` メソッドを含むと想定したうえで、これを使用してクラスの 1 つのインスタンスが同じクラスの別のインスタンスと等しいかどうかを判定できます。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "73120156"
 - インターフェイスは、抽象メンバーのみを含む抽象基本クラスに似ています。 インターフェイスを実装するすべてのクラスまたは構造体では、そのすべてのメンバーを実装する必要があります。
 - インターフェイスを直接インスタンス化することはできません。 そのメンバーは、インターフェイスを実装する任意のクラスまたは構造体によって実装されます。
 - インターフェイスには、イベント、インデクサー、メソッド、およびプロパティを含めることができます。
-- インターフェイスには、メソッドの実装は含まれません。
+- インターフェイスにはメソッドの実装は含まれません (C# 8.0 では、インターフェイスが[メソッドの既定の実装](../../whats-new/csharp-8.md#default-interface-methods)を持つことができます)。
 - クラスまたは構造体は、複数のインターフェイスを実装できます。 クラスは、基本クラスを継承する一方で、1 つまたは複数のインターフェイスを実装できます。
 
 ## <a name="in-this-section"></a>このセクションの内容
@@ -62,17 +61,17 @@ ms.locfileid: "73120156"
 [明示的なインターフェイスの実装](explicit-interface-implementation.md)  
  インターフェイスに固有のクラス メンバーを作成する方法について説明します。  
   
- [方法: インターフェイス メンバーを明示的に実装する](how-to-explicitly-implement-interface-members.md)  
+ [インターフェイス メンバーを明示的に実装する方法](how-to-explicitly-implement-interface-members.md)  
  インターフェイスのメンバーを明示的に実装する方法の例を示します。  
   
- [方法: 2 つのインターフェイスのメンバーを明示的に実装する](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [2 つのインターフェイスのメンバーを明示的に実装する方法](how-to-explicitly-implement-members-of-two-interfaces.md)  
  継承を持つインターフェイスのメンバーを明示的に実装する方法の例を示します。  
   
 ## <a name="BKMK_RelatedSections"></a>関連項目
 
 - [インターフェイスのプロパティ](../classes-and-structs/interface-properties.md)  
 - [インターフェイスのインデクサー](../indexers/indexers-in-interfaces.md)  
-- [方法: インターフェイス イベントを実装する](../events/how-to-implement-interface-events.md)  
+- [インターフェイス イベントを実装する方法](../events/how-to-implement-interface-events.md)
 - [クラスと構造体](../classes-and-structs/index.md)  
 - [継承](../classes-and-structs/inheritance.md)  
 - [メソッド](../classes-and-structs/methods.md)  

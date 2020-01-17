@@ -1,5 +1,5 @@
 ---
-title: <remarks>
+title: <remarks> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <remarks> XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352260"
 ---
-# <a name="remarks-visual-basic"></a>\<解説 > (Visual Basic)
+# <a name="remarks-visual-basic"></a>\<remarks> (Visual Basic)
 メンバーの解説セクションを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,7 +26,7 @@ ms.locfileid: "74352260"
  メンバーの説明。  
   
 ## <a name="remarks"></a>コメント  
- `<remarks>` タグを使用して、 [\<概要 >](../../../visual-basic/language-reference/xmldoc/summary.md)で指定された情報を補足する、型に関する情報を追加します。  
+ `<remarks>` タグを使用して、 [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md)で指定された情報を補足する、型に関する情報を追加します。  
   
  この情報はオブジェクトブラウザーに表示されます。 オブジェクトブラウザーの詳細については、「[コードの構造の表示](/visualstudio/ide/viewing-the-structure-of-code)」を参照してください。  
   

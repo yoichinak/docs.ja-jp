@@ -15,14 +15,12 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting stores
 - data storage using isolated storage, deleting stores
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a935ec663dd178d35aff745e907d2aae48e5b65c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b1e8e651fd8e18c79dd629c154fb6c4d74243e3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622594"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75707828"
 ---
 # <a name="how-to-delete-stores-in-isolated-storage"></a>方法: 分離ストレージでストアを削除する
 分離ストレージ ファイルを削除するため、 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> クラスは 2 つのメソッドを提供します。  

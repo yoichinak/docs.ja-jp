@@ -5,14 +5,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6906ccf5b639d6b90b921b5d471aa723aeb4da78
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cc4f9c38138a37b6068d33ffa4229a955db08c07
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052167"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716548"
 ---
 # <a name="deploying-the-net-framework"></a>.NET Framework の配置
 .NET Framework ドキュメントのこのセクションでは、アプリケーションとともに .NET Framework をインストールする開発者、およびネットワーク上で .NET Framework を展開する管理者に対して情報を提供します。 また、アクティベーション、配置に伴う再起動の問題、.NET Framework のインストールの進捗を監視する方法についても説明します。  
@@ -22,7 +20,7 @@ ms.locfileid: "71052167"
  開発者による .NET Framework とアプリケーションのユーザーのコンピューターへのインストール方法について説明します。  
   
  [配置ガイド (管理者向け)](guide-for-administrators.md)  
- System Center Configuration Manager (SCCM) を使用したシステム管理者による .NET Framework の配置方法と、ネットワーク全体でのシステムの依存関係について説明します。  
+ システム管理者が、Microsoft Endpoint Configuration Manager を使用して、ネットワーク全体に .NET Framework とその依存関係を配置する方法について説明します。  
   
  [.NET Framework 4.5 のインストール中のシステム再起動の削減](reducing-system-restarts.md)  
  再起動をできる限り回避する再起動マネージャーと、.NET Framework をインストールするアプリケーションがそれをどのように利用できるかを説明しています。  

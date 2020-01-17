@@ -21,8 +21,8 @@ Visual Basic は、オペランドのデータ型に基づいて、操作の結�
   
 ## <a name="data-type-ranges"></a>データ型の範囲  
  関連するデータ型の範囲は、小さい方から順に、次のようになります。  
-
-- [Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md): 2 種類の値 
+  
+- [Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md): 2 種類の値  
   
 - [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)、 [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) : 256 種類の整数値  
   
@@ -133,7 +133,7 @@ Visual Basic は、オペランドのデータ型に基づいて、操作の結�
  `\` 演算子のいずれかのオペランドが[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)、 [Single](../../../visual-basic/language-reference/data-types/single-data-type.md)、または[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)の場合、Visual Basic は演算の前の[Long](../../../visual-basic/language-reference/data-types/long-data-type.md)への変換を試み、結果のデータ型は `Long`になります。  
   
 ## <a name="relational-and-bitwise-comparisons"></a>関係とビットごとの比較  
- リレーショナル操作 (`=`、`<>`、`<`、`>`、`<=`、`>=`) の結果のデータ型は、常に`Boolean` [Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)です。 これは、`OrElse`オペランドの論理演算 (`And`、`AndAlso`、`Not`、`Or`、`Xor`、`Boolean`)にも当てはまります。  
+ リレーショナル操作 (`=`、`<>`、`<`、`>`、`<=`、`>=`) の結果のデータ型は、常に`Boolean` [Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)です。 これは、`OrElse`オペランドの論理演算 (`And`、`AndAlso`、`Not`、`Or`、`Xor`、`Boolean`) にも当てはまります。  
   
  ビットごとの論理演算の結果のデータ型は、オペランドのデータ型によって異なります。 `AndAlso` と `OrElse` は `Boolean`に対してのみ定義され、Visual Basic 操作を実行する前に、必要に応じて各オペランドを `Boolean` に変換します。  
   

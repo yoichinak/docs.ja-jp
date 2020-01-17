@@ -2,12 +2,12 @@
 title: 破壊的変更の種類 - .NET Core
 description: .NET Core が .NET のバージョン間で開発者向けの互換性をどのように維持しようとしているか、およびどのような変更が重大な変更と見なされるかについて説明します。
 ms.date: 06/10/2019
-ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a84468c0c0e04f367dc7e89ce806ac01b2b49b48
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567720"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740898"
 ---
 # <a name="changes-that-affect-compatibility"></a>互換性に影響を与える変更点
 
@@ -19,7 +19,7 @@ ms.locfileid: "74567720"
 
 .NET 実装間の互換性と共に、開発者は .NET Core バージョン間の高いレベルの互換性を期待しています。 特に、以前のバージョンの .NET Core 用に書かれたコードは、新しいバージョンの .NET Core でもシームレスに動作するはずです。 実際、多くの開発者は、新しくリリースされたバージョンの .NET Core にある新しい API が、それらの API が導入されたプレリリース バージョンとも互換性があると期待します。
 
-この記事では、互換性の変更 (つまり破壊的変更) のカテゴリと、.NET チームがこれらの各カテゴリの変更をどのように評価するかについて説明します。 既存の API の動作を変更する [dotnet/corefx](https://github.com/dotnet/corefx) GitHub リポジトリで、pull request を開く開発者の場合、考えられる破壊的変更に .NET チームがどのように対処しているかを理解することは特に役立ちます。
+この記事では、互換性の変更 (つまり破壊的変更) のカテゴリと、.NET チームがこれらの各カテゴリの変更をどのように評価するかについて説明します。 既存の API の動作を変更する [dotnet/runtime](https://github.com/dotnet/runtime) GitHub リポジトリに pull request を開く開発者に対しては、考えられる破壊的変更に .NET チームがどのように対処しているかを理解することは特に役立ちます。
 
 > [!NOTE]
 > バイナリ互換性や下位互換性などの互換性カテゴリの定義については、「[Breaking change categories (破壊的変更のカテゴリ)](categories.md)」を参照してください。
@@ -77,11 +77,11 @@ ms.locfileid: "74567720"
 
   インターフェイス削除の規則には 1 つの例外があります。削除したインターフェイスから派生するインターフェイスの実装を追加することができます。 たとえば、型またはインターフェイスが <xref:System.ComponentModel.IComponent> を実装し、それが <xref:System.IDisposable> を実装している場合は、<xref:System.IDisposable> を削除できます。
 
-- **❌ `readonly struct` 型を[構造体](../../csharp/language-reference/keywords/struct.md)型に変更する**
+- **❌`readonly struct` 型を[構造体](../../csharp/language-reference/keywords/struct.md)型に変更する**
 
   `struct` 型から `readonly struct` 型への変更は許可されていることに注意してください。
 
-- **❌ [構造体](../../csharp/language-reference/keywords/struct.md)型を `ref struct` 型に、またはその逆に変更する**
+- **❌[構造体](../../csharp/language-reference/keywords/struct.md)型を `ref struct` 型に、またはその逆に変更する**
 
 - **❌ 型の可視性を下げる**
 
@@ -133,7 +133,7 @@ ms.locfileid: "74567720"
 
 - **❌ パラメーターの順序の追加、削除、または変更**
 
-- **❌ [in](../../csharp/language-reference/keywords/in.md)、[out](../../csharp/language-reference/keywords/out.md)、または [ref](../../csharp/language-reference/keywords/ref.md) キーワードをパラメーターに追加または削除する**
+- **❌[in](../../csharp/language-reference/keywords/in.md)、[out](../../csharp/language-reference/keywords/out.md)、または [ref](../../csharp/language-reference/keywords/ref.md) キーワードをパラメーターに追加または削除する**
 
 - **❌ パラメーター名を変更する (大文字と小文字の変更も含む)**
 
@@ -143,7 +143,7 @@ ms.locfileid: "74567720"
 
   - 開発者が[名前付き引数](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)を使用すると、[ソースの互換性](categories.md#source-compatibility)がなくなります。
 
-- **❌ `ref` の戻り値から `ref readonly` の戻り値に変更する**
+- **❌`ref` の戻り値から `ref readonly` の戻り値に変更する**
 
 - **❌ 仮想メソッドまたはインターフェイス上で戻り値を `ref readonly` から `ref` に変更する**
 
@@ -178,7 +178,7 @@ ms.locfileid: "74567720"
 
 - **❌ メンバーの可視性を下げる**
 
-   これには、"*アクセス可能な*" (パブリックまたは保護された) コンストラクターを持ち、型が[シールド](../../csharp/language-reference/keywords/sealed.md)では "*ない*" 場合に、[保護された](../../csharp/language-reference/keywords/protected.md)メンバーの可視性を下げることも含まれます。 そうでない場合は、保護されたメンバーの可視性を下げることができます。
+   これには、"*アクセス可能な*" (パブリックまたは保護された) コンストラクターがあり、型が[シールド](../../csharp/language-reference/keywords/sealed.md)では "*ない*" 場合に、[保護された](../../csharp/language-reference/keywords/protected.md)メンバーの可視性を下げることも含まれます。 そうでない場合は、保護されたメンバーの可視性を下げることができます。
 
    メンバーの可視性を上げることは許可されていることに注意してください。
 
@@ -264,7 +264,7 @@ ms.locfileid: "74567720"
 
 - **✔️ 観測可能 "*ではない*" 属性の値を変更する**
 
-- **❌ *観測可能*である属性の値を変更する**
+- **❌*観測可能*である属性の値を変更する**
 
 - **❓ 属性を削除する**
 
@@ -296,13 +296,13 @@ ms.locfileid: "74567720"
 
 - **❌ 同期 API から非同期に変更する (およびその逆)**
 
-## <a name="code-changes"></a>コードの変更
+## <a name="code-changes"></a>コード変更
 
 - **✔️ パラメーターに [params](../../csharp/language-reference/keywords/params.md) を追加する**
 
-- **❌ [構造体](../../csharp/language-reference/keywords/struct.md)を[クラス](../../csharp/language-reference/keywords/class.md)に変更する (およびその逆)**
+- **❌[構造体](../../csharp/language-reference/keywords/struct.md)を[クラス](../../csharp/language-reference/keywords/class.md)に変更する (およびその逆)**
 
-- **❌ [チェック済み](../../csharp/language-reference/keywords/virtual.md)キーワードをコード ブロックに追加する**
+- **❌[チェック済み](../../csharp/language-reference/keywords/virtual.md)キーワードをコード ブロックに追加する**
 
    この変更により、以前に実行されたコードから <xref:System.OverflowException> がスローされることがあるため、許容されません。
 

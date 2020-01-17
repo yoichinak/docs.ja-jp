@@ -1,6 +1,5 @@
 ---
 title: lock ステートメント - C# リファレンス
-ms.custom: seodec18
 description: C# lock ステートメントを使用し、共有リソースへのスレッド アクセスを同期します
 ms.date: 10/01/2018
 f1_keywords:
@@ -9,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 70fcd8041946f2b1db3b37de79318b87771ee676
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168776"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713388"
 ---
 # <a name="lock-statement-c-reference"></a>lock ステートメント (C# リファレンス)
 
@@ -49,7 +48,7 @@ finally
 
 `lock` ステートメントの本文で [await](../operators/await.md) 演算子を使用することはできません。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 共有リソースへのスレッド アクセスを同期する場合、専用オブジェクト インスタンス (`private readonly object balanceLock = new object();` など) またはコードの関連のない部分によってロック オブジェクトとして使用される可能性がない別のインスタンスをロックします。 異なる共有リソースに対して同じロック オブジェクト インスタンスを使用することは避けてください。デッドロックやロックの競合が発生する可能性があります。 特に、以下をロック オブジェクトとして使用しないでください。
 

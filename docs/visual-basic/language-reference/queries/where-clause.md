@@ -1,5 +1,5 @@
 ---
-title: WHERE 句
+title: Where 句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryWhere
@@ -31,9 +31,9 @@ Where condition
 ## <a name="remarks"></a>コメント  
  `Where` 句を使用すると、特定の条件を満たす要素のみを選択してクエリデータをフィルター処理できます。 `Where` 句が `True` と評価される値を持つ要素がクエリ結果に含まれます。その他の要素は除外されます。 `Where` 句で使用される式は、値が0の場合に `False` に評価される整数など、`Boolean` または `Boolean`に相当するものに評価される必要があります。 `And`、`Or`、`AndAlso`、`OrElse`、`Is`、`IsNot`などの論理演算子を使用して、`Where` 句で複数の式を組み合わせることができます。  
   
- 既定では、クエリ式は、アクセスされるまで評価されません。たとえば、データバインドされている場合や、`For` ループ内で反復処理される場合です。 その結果、`Where` 句は、クエリがアクセスされるまで評価されません。 `Where` 句で使用されているクエリの外部の値がある場合は、クエリの実行時に `Where` 句で適切な値が使用されていることを確認してください。 クエリ実行の詳細については、「初めての[LINQ クエリの作成](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)」を参照してください。  
+ 既定では、クエリ式は、アクセスされるまで評価されません。たとえば、データバインドされている場合や、`For` ループ内で反復処理される場合です。 その結果、`Where` 句は、クエリがアクセスされるまで評価されません。 `Where` 句で使用されているクエリの外部の値がある場合は、クエリの実行時に `Where` 句で適切な値が使用されていることを確認してください。 クエリ実行の詳細については、「[初めての LINQ クエリの作成](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)」を参照してください。  
   
- `Where` 句内で関数を呼び出して、コレクション内の現在の要素の値に対して計算または操作を実行することができます。 `Where` 句で関数を呼び出すと、クエリがアクセス時ではなく定義された直後に実行される可能性があります。 クエリ実行の詳細については、「初めての[LINQ クエリの作成](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)」を参照してください。  
+ `Where` 句内で関数を呼び出して、コレクション内の現在の要素の値に対して計算または操作を実行することができます。 `Where` 句で関数を呼び出すと、クエリがアクセス時ではなく定義された直後に実行される可能性があります。 クエリ実行の詳細については、「[初めての LINQ クエリの作成](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次のクエリ式では、`From` 句を使用して、`customers` コレクション内の各 `Customer` オブジェクトに対して `cust` 範囲変数を宣言します。 `Where` 句では、範囲変数を使用して、指定された地域の顧客に出力を制限します。 `For Each` ループでは、クエリ結果に各顧客の会社名が表示されます。  

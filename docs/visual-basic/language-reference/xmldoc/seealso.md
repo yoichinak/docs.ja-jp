@@ -1,5 +1,5 @@
 ---
-title: <seealso>
+title: <seealso> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <seealso> XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352214"
 ---
-# <a name="seealso-visual-basic"></a>\<seealso > (Visual Basic)
+# <a name="seealso-visual-basic"></a>\<seealso> (Visual Basic)
 「関連項目」セクションに表示されるリンクを指定します。  
   
 ## <a name="syntax"></a>構文  

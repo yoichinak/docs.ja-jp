@@ -1,6 +1,5 @@
 ---
 title: orderby 句 - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - orderby
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: 09a745fe3da3a5acb71972b9cf56391774c7016a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d88b2b40f63f0616cfd54e8abb62f1bc2183f776
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422651"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713294"
 ---
 # <a name="orderby-clause-c-reference"></a>orderby 句 (C# リファレンス)
 
@@ -32,7 +31,7 @@ ms.locfileid: "73422651"
 
 [!code-csharp[cscsrefQueryKeywords#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Orderby.cs#22)]
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 コンパイル時に、`orderby` 句は <xref:System.Linq.Enumerable.OrderBy%2A> メソッドの呼び出しに変換されます。 `orderby` 句内の複数のキーは、<xref:System.Linq.Enumerable.ThenBy%2A> メソッドの呼び出しに変換されます。
 

@@ -1,5 +1,5 @@
 ---
-title: 標準の日時形式文字列
+title: 標準の日時書式指定文字列
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: b67b00fdb4a5c484c112cc2f3321ce2268d4dad7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 883902142a91e275ab64ad5d12c197c665bd9b36
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121721"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346658"
 ---
-# <a name="standard-date-and-time-format-strings"></a>標準の日時形式文字列
+# <a name="standard-date-and-time-format-strings"></a>標準の日時書式指定文字列
 
 標準の日時書式指定文字列は、単一の書式指定子を使用して日付と時刻の値のテキスト表現を定義します。 空白を含む複数の文字で構成される日時書式指定文字列は、カスタム日時書式指定文字列として解釈されます。詳細については、「[カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)」をご覧ください。 標準またはカスタムの書式指定文字列には、次の 2 とおりの使用方法があります。
 
@@ -85,7 +85,7 @@ ms.locfileid: "73121721"
 
 |標準書式指定文字列|DateTimeFormatInfo.InvariantInfo プロパティによる定義|カスタム書式指定文字列|
 |----------------------------|----------------------------------------------------------|--------------------------|
-|"O" または "o"|なし|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|
+|"O" または "o"|None|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|
 |"R" または "r"|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|ddd, dd MMM yyyy HH':'mm':'ss 'GMT'|
 |"s"|<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A>|yyyy'-'MM'-'dd'T'HH':'mm':'ss|
 |"u"|<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>|yyyy'-'MM'-'dd HH':'mm':'ss'Z'|

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 8de96aa3877b2ca414c87958dad480503f57ccb7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5c0c92f40ae60785f780cb573bb7faa77a31f273
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433939"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741781"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI オートメーション クライアントにおけるキャッシュ
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "74433939"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]では、キャッシュとはデータをプリフェッチすることを意味します。 そのデータには、さらにプロセス間通信を行わずにアクセスできます。 キャッシュは通常、UI オートメーション クライアント アプリケーションによって使用され、プロパティとコントロール パターンを一括で取得します。 それから、必要に応じて情報がキャッシュから取得されます。 アプリケーションはキャッシュを定期的に更新します。通常は、 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] で何かが変更されたことを示すイベントへの応答として更新を行います。  
   
- キャッシュの利点は、Windows Presentation Foundation (WPF) コントロールと、サーバー側の UI オートメーションプロバイダーを持つカスタムコントロールで最も顕著になります。 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] コントロールの既定のプロバイダーなど、クライアント側プロバイダーにアクセスするときは、メリットは小さくなります。  
+ キャッシュの利点は、Windows Presentation Foundation (WPF) コントロールと、サーバー側の UI オートメーションプロバイダーを持つカスタムコントロールで最も顕著になります。 Win32 コントロールの既定のプロバイダーなど、クライアント側プロバイダーにアクセスする場合の利点はあまりありません。  
   
  キャッシュはアプリケーションが <xref:System.Windows.Automation.CacheRequest> をアクティブにしたときに発生し、 <xref:System.Windows.Automation.AutomationElement>や <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>など、 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>を返すメソッドやプロパティを使用します。 <xref:System.Windows.Automation.TreeWalker> クラスのメソッドは例外で、 <xref:System.Windows.Automation.CacheRequest> がパラメーターとして指定された場合 (たとえば、 <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>) にのみ、キャッシュが行われます。  
   
@@ -101,8 +101,8 @@ ms.locfileid: "74433939"
   
  キャッシュを更新しても、既存の <xref:System.Windows.Automation.AutomationElement> の参照のプロパティはいずれも変更されません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
+- [クライアントの UI オートメーション イベント](ui-automation-events-for-clients.md)
 - [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)
 - [FetchTimer サンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

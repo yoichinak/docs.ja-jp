@@ -2,12 +2,12 @@
 title: 例外とエラーの処理
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: c28b4420be82562a30873b65113811da06cee761
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2886463510a2237834529e1ec61c73ec7251e621
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975472"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937717"
 ---
 # <a name="handling-exceptions-and-faults"></a>例外とエラーの処理
 例外は、サービスまたはクライアント実装内でエラーをローカルに伝達するために使用されます。 一方、エラーは、サーバーからクライアントまたはクライアントからサーバーのように、サービス境界を越えてエラーを伝達するために使用されます。 このようなエラーに加え、多くの場合、トランスポート チャネルはトランスポート固有の機構を使用して、トランスポート レベルのエラーを伝達します。 たとえば、HTTP トランスポートは、404 などのステータス コードを使用して、存在しないエンドポイントの URL (エラーを返信するエンドポイントが存在しないこと) を伝達します。 このドキュメントは、カスタム チャネル作成者にガイダンスを示す 3 つのセクションで構成されています。 最初のセクションでは、例外を定義しスローする状況と方法に関するガイダンスを示します。 2 番目のセクションでは、エラーの生成と使用に関するガイダンスを示します。 3 番目のセクションでは、実行中のアプリケーションのトラブルシューティングを行う際に、カスタム チャネルのユーザーにとって役立つトレース情報を提供する方法について説明します。  
@@ -18,11 +18,11 @@ ms.locfileid: "73975472"
 ### <a name="exception-types"></a>例外の種類  
  チャネルがスローするすべての例外は、<xref:System.TimeoutException?displayProperty=nameWithType>、<xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>、または <xref:System.ServiceModel.CommunicationException> から派生した種類のいずれかである必要があります (<xref:System.ObjectDisposedException> のような例外をスローすることもできますが、これは呼び出し元のコードがチャネルを誤用したことを示す場合だけです。 チャネルが正しく使用されている場合は、指定された例外のみをスローする必要があります)。WCF には <xref:System.ServiceModel.CommunicationException> から派生する7つの例外の種類が用意されており、チャネルで使用するように設計されています。 <xref:System.ServiceModel.CommunicationException> から派生した例外には、システムのその他の部分で使用するように設計されているものもあります。 これらの例外の種類を以下に示します。  
   
-|例外の種類|説明|内部例外の内容|回復方法|  
+|例外の種類|説明|内部例外の内容|回復戦略|  
 |--------------------|-------------|-----------------------------|-----------------------|  
-|<xref:System.ServiceModel.AddressAlreadyInUseException>|リッスン用に指定されたエンドポイント アドレスは既に使用されています。|エラーの詳細情報が得られるようであれば、この例外の原因となったトランスポート エラーについての情報を提供します。 たとえば、 <xref:System.IO.PipeException>、<xref:System.Net.HttpListenerException> または <xref:System.Net.Sockets.SocketException>|別のアドレスで実行してください。|  
+|<xref:System.ServiceModel.AddressAlreadyInUseException>|リッスン用に指定されたエンドポイント アドレスは既に使用されています。|エラーの詳細情報が得られるようであれば、この例外の原因となったトランスポート エラーについての情報を提供します。 たとえば、Windows 認証を使用する HTTP アダプタでメッセージが受信された場合、送信者の SSID は domain\username になります。 <xref:System.IO.PipeException>、<xref:System.Net.HttpListenerException>、または <xref:System.Net.Sockets.SocketException>。|別のアドレスで実行してください。|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|このプロセスは、リッスン用に指定されたエンドポイント アドレスへのアクセスを許可されていません。|エラーの詳細情報が得られるようであれば、この例外の原因となったトランスポート エラーについての情報を提供します。 例 : <xref:System.IO.PipeException> または <xref:System.Net.HttpListenerException>|別の資格情報を使用して試行します。|  
-|<xref:System.ServiceModel.CommunicationObjectFaultedException>|使用されている <xref:System.ServiceModel.ICommunicationObject> が Faulted 状態です (詳細については、「[状態の変更につい](understanding-state-changes.md)て」を参照してください)。 複数の呼び出しが保留になっているオブジェクトが Faulted 状態に遷移した場合、エラーに関連する例外をスローする呼び出しは 1 つだけであり、それ以外の呼び出しは <xref:System.ServiceModel.CommunicationObjectFaultedException> をスローします。 通常、この例外がスローされるのは、アプリケーションが何らかの例外を認識しておらず、おそらく最初の例外をキャッチしたスレッド以外のスレッドで、既に Faulted 状態のオブジェクトを使用しようとしたためです。|詳細情報を使用できる場合は、内部例外についての詳細を示します。|新規オブジェクトを作成します。 <xref:System.ServiceModel.ICommunicationObject> にエラーが発生した第一の原因によっては、回復するために他の作業が必要になることがあります。|  
+|<xref:System.ServiceModel.CommunicationObjectFaultedException>|使用されているは、Faulted状態です(詳細については、「[状態の変更について](understanding-state-changes.md)」を参照してください<xref:System.ServiceModel.ICommunicationObject> )。 複数の呼び出しが保留になっているオブジェクトが Faulted 状態に遷移した場合、エラーに関連する例外をスローする呼び出しは 1 つだけであり、それ以外の呼び出しは <xref:System.ServiceModel.CommunicationObjectFaultedException> をスローします。 通常、この例外がスローされるのは、アプリケーションが何らかの例外を認識しておらず、おそらく最初の例外をキャッチしたスレッド以外のスレッドで、既に Faulted 状態のオブジェクトを使用しようとしたためです。|詳細情報を使用できる場合は、内部例外についての詳細を示します。|新規オブジェクトを作成します。 <xref:System.ServiceModel.ICommunicationObject> にエラーが発生した第一の原因によっては、回復するために他の作業が必要になることがあります。|  
 |<xref:System.ServiceModel.CommunicationObjectAbortedException>|使用されている <xref:System.ServiceModel.ICommunicationObject> が中止されました (詳細については、「[状態の変更につい](understanding-state-changes.md)て」を参照してください)。 <xref:System.ServiceModel.CommunicationObjectFaultedException> と同様に、この例外は、アプリケーションがおそらく別のスレッドからオブジェクトに対して <xref:System.ServiceModel.ICommunicationObject.Abort%2A> を呼び出したときに、オブジェクトが既に Aborted 状態であるため、使用できなくなっていることを示しています。|詳細情報を使用できる場合は、内部例外についての詳細を示します。|新規オブジェクトを作成します。 <xref:System.ServiceModel.ICommunicationObject> が中止された第一の原因によっては、回復するために他の作業が必要になることがあります。|  
 |<xref:System.ServiceModel.EndpointNotFoundException>|対象のリモート エンドポイントがリッスンしていません。 これは、エンドポイント アドレスの一部に誤りがある、エンドポイント アドレスの一部を解決できない、またはエンドポイントがダウンしていることが原因として考えられます (DNS エラー、キュー マネージャーを使用できない、サービスが実行されていないなど)。|この内部例外では、一般に、基になるトランスポートの詳細が示されます。|別のアドレスで実行してください。 また、サービスがダウンしている場合は、送信元がしばらく待機し、再試行することもできます。|  
 |<xref:System.ServiceModel.ProtocolException>|エンドポイントのポリシーで示されている通信プロトコルがエンドポイント間で一致していません (フレーム コンテンツの種類の不一致や、最大メッセージ サイズの超過など)。|詳細情報を使用できる場合は、特定のプロトコル エラーの詳細を示します。 たとえば、MaxReceivedMessageSize を超えていることがエラーの原因である場合、<xref:System.ServiceModel.QuotaExceededException> が内部例外です。|回復 : 受信したプロトコル設定が送信側と一致していることを確認します。 この方法の 1 つとして、サービス エンドポイントのメタデータ (ポリシー) を再度インポートし、生成されたバインディングを使用してチャネルを再作成します。|  
@@ -68,11 +68,11 @@ public abstract class MessageFault
 }  
 ```  
   
- `Code` プロパティは、`env:Code` (または SOAP 1.1 の `faultCode`) に対応し、エラーの種類を識別します。 SOAP 1.2 では、`faultCode` の 5 つの許容値 (Sender や Receiver など) が定義されており、サブコード値を格納できる `Subcode` 要素も定義されています (使用可能なエラーコードとその意味の一覧については、「 [SOAP 1.2 の仕様](https://go.microsoft.com/fwlink/?LinkId=95176)」を参照してください)。SOAP 1.1 のメカニズムは少し異なります。たとえば、クライアントとサーバーの4つの `faultCode` 値を定義します。これは、まったく新しい値を定義するかドット表記を使用して、クライアント認証など、より具体的な `faultCodes`を作成することによって拡張できます。  
+ `Code` プロパティは、`env:Code` (または SOAP 1.1 の `faultCode`) に対応し、エラーの種類を識別します。 SOAP 1.2 では、`faultCode` の 5 つの許容値 (Sender や Receiver など) が定義されており、サブコード値を格納できる `Subcode` 要素も定義されています (使用可能なエラーコードとその意味の一覧については、「 [SOAP 1.2 の仕様](https://www.w3.org/TR/soap12-part1/#tabsoapfaultcodes)」を参照してください)。SOAP 1.1 のメカニズムは少し異なります。たとえば、クライアントとサーバーの4つの `faultCode` 値を定義します。これは、まったく新しい値を定義するかドット表記を使用して、クライアント認証など、より具体的な `faultCodes`を作成することによって拡張できます。  
   
  MessageFault を使用してエラーをプログラミングする場合、FaultCode.Name と FaultCode.Namespace は、SOAP 1.2 の `env:Code` または SOAP 1.1 の `faultCode` の名前と名前空間に割り当てられます。 FaultCode.SubCode は、SOAP 1.2 では `env:Subcode` に割り当てられ、SOAP 1.1 では null になります。  
   
- エラーをプログラムによって区別する場合は、新しいエラー サブコード (SOAP 1.1 を使用する場合は新しいエラー コード) を作成します。 これは、新しい例外の種類を作成することに似ています。 SOAP 1.1 エラー コードではドット表記を使用しないようにすることをお勧めします ( [Ws-i Basic Profile](https://go.microsoft.com/fwlink/?LinkId=95177)では、エラーコードドット表記の使用が推奨されていません)。  
+ エラーをプログラムによって区別する場合は、新しいエラー サブコード (SOAP 1.1 を使用する場合は新しいエラー コード) を作成します。 これは、新しい例外の種類を作成することに似ています。 SOAP 1.1 エラー コードではドット表記を使用しないようにすることをお勧めします ( [Ws-i Basic Profile](http://www.ws-i.org/Profiles/BasicProfile-1.1-2004-08-24.html#SOAP_Custom_Fault_Codes)では、エラーコードドット表記の使用が推奨されていません)。  
   
 ```csharp
 public class FaultCode  

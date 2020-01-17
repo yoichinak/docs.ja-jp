@@ -3,13 +3,12 @@ title: ソースから .NET Core をビルドする
 description: ソース コードから .NET Core と .NET Core CLI をビルドする方法を説明します。
 author: bleroy
 ms.date: 06/28/2017
-ms.custom: seodec18
-ms.openlocfilehash: dcd7c909325eec5a79db74098d7ac880000eafa1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: fe5431667d861d830c2ec56252e6e3e2ca08a866
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105392"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740916"
 ---
 # <a name="build-net-core-from-source"></a>ソースから .NET Core をビルドする
 
@@ -18,7 +17,7 @@ ms.locfileid: "70105392"
 
 ## <a name="build-the-clr-from-source"></a>ソースから CLR をビルドする
 
-.NET CoreCLR のソース コードは、GitHub の [dotnet/coreclr](https://github.com/dotnet/coreclr/) リポジトリにあります。
+.NET CoreCLR のソース コードは、GitHub の [dotnet/runtime](https://github.com/dotnet/runtime/) リポジトリにあります。
 
 ビルドは、現在、次の前提条件に依存しています。
 
@@ -27,7 +26,7 @@ ms.locfileid: "70105392"
 - [Python](https://www.python.org/)
 - C++ コンパイラ。
 
-これらの前提条件をインストールしたら、[dotnet/coreclr リポジトリ](https://github.com/dotnet/coreclr/)の下部にあるビルド スクリプト (Windows の場合は `build.cmd`、Linux と macOS の場合は `build.sh`) を呼び出して、CLR をビルドできます。
+これらの前提条件をインストールしたら、[dotnet/runtime](https://github.com/dotnet/runtime/) リポジトリの下部にあるビルド スクリプト (Windows の場合は `build.cmd`、Linux と macOS の場合は `build.sh`) を呼び出して、CLR をビルドできます。
 
 コンポーネントのインストールは、オペレーティング システム (OS) によって異なります。 以下の特定の OS のビルド手順を参照してください。
 
@@ -43,7 +42,7 @@ OS 間でのクロス ビルドはありません (X64 にビルドされる ARM
 ビルドには、次の主な 2 つの `buildTypes` があります。
 
 - デバッグ (既定) - 最小限の最適化と追加のランタイム チェック (アサート) を実行してランタイムをコンパイルします。 最適化レベルを抑えるとともに追加のチェックを行うため、ランタイム実行の速度は低下しますが、デバッグには有用です。 この設定は、開発環境およびテスト環境で推奨されます。
-- リリース - 追加のランタイム チェックは実行せず、完全な最適化を行いランタイムをコンパイルします。 実行時間を大きく短縮できますが、ビルドにかかる時間が増大するとともに、デバッグが困難になる可能性があります。 このビルドの種類を選択するには、`release` をビルド スクリプトに渡します。
+- リリース - 追加のランタイム チェックは実行せず、完全な最適化を行いランタイムをコンパイルします。 これにより、実行時のパフォーマンスが大幅に向上しますが、ビルドにかかる時間が少し長くなり、デバッグが困難になる可能性があります。 このビルドの種類を選択するには、`release` をビルド スクリプトに渡します。
 
 さらに、既定では、ビルドでランタイムの実行可能ファイルの作成だけでなく、すべてのテストのビルドも行われます。
 かなり多くのテストがあり、単に変更を試みる場合には必要のない非常に長い時間を要します。
@@ -72,13 +71,13 @@ OS 間でのクロス ビルドはありません (X64 にビルドされる ARM
 新しいランタイムを使用する場合、次の 2 つの基本的な方法があります。
 
  1. **dotnet.exe と NuGet を使用して、アプリケーションを作成します**。
-    作成した NuGet パッケージと 'dotnet' コマンド ライン インターフェイス (CLI) を使用して、新しいランタイムを使用するプログラムを作成する手順については、「[ビルドの使用](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md)」を参照してください。 この方法では、ランタイム開発者以外が新しいランタイムを使用する可能性があります。
+    作成した NuGet パッケージと 'dotnet' コマンド ライン インターフェイス (CLI) を使用して、新しいランタイムを使用するプログラムを作成する手順については、「[ビルドの使用](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-your-build.md)」を参照してください。 この方法では、ランタイム開発者以外が新しいランタイムを使用する可能性があります。
 
  2. **corerun.exe を使用し、解凍した DLL を使用してアプリケーションを実行します**。
     このリポジトリでは、NuGet に依存しない corerun.exe という単純なホストの定義も行います。
     実際に使用する必要な DLL を取得する場所をホストに指示する必要があり、これらの DLL は手動で収集する必要があります。
-    この方法は、[dotnet/coreclr リポジトリ](https://github.com/dotnet/coreclr)のすべてのテストで使用され、事前の単体テストなどの、クイック ローカル "編集-コンパイル-デバッグ" ループに役立ちます。
-    この方法の使用の詳細については、「[Executing .NET Core Apps with CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md)」 (CoreRun.exe を使用する .NET Core アプリの実行) を参照してください。
+    この手法は、[dotnet/runtime](https://github.com/dotnet/runtime) リポジトリ内のすべてのテストで使用されており、ローカルでの簡単な "編集-コンパイル-デバッグ" ループに便利です (予備の単体テストなど)。
+    この方法の使用の詳細については、「[Executing .NET Core Apps with CoreRun.exe](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-corerun.md)」 (CoreRun.exe を使用する .NET Core アプリの実行) を参照してください。
 
 ## <a name="build-the-cli-from-source"></a>ソースから CLI をビルドする
 
@@ -101,6 +100,6 @@ OS 間でのクロス ビルドはありません (X64 にビルドされる ARM
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Core 共通言語ランタイム (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [.NET ランタイム](https://github.com/dotnet/runtime/blob/master/README.md)
 - [.NET Core CLI 開発者ガイド](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
 - [.NET Core の配布パッケージ](./distribution-packaging.md)

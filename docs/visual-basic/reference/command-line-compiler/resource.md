@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348568"
 ---
-# <a name="-resource-visual-basic"></a>-リソース (Visual Basic)
+# <a name="-resource-visual-basic"></a>-resource (Visual Basic)
 マネージド リソースをアセンブリに埋め込みます。  
   
 ## <a name="syntax"></a>構文  
@@ -56,7 +56,7 @@ vbc -res:rf.resource in.vb
   
 ## <a name="see-also"></a>参照
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)
 - [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

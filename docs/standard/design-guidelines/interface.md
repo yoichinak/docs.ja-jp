@@ -7,20 +7,19 @@ helpviewer_keywords:
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-author: KrzysztofCwalina
-ms.openlocfilehash: 1f982aa37f92b7270725574d949989ca120297d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06b2e0d281314f3bd6346a7dbbd8bb56928fe58b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026368"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709297"
 ---
 # <a name="interface-design"></a>インターフェイスのデザイン
-ほとんどの Api は、クラスと構造体を使用して最適なモデル化、インターフェイスがより適切なまたは唯一のオプションの場合は。  
+ほとんどの Api はクラスと構造体を使用してモデル化されていますが、インターフェイスがより適している場合や、唯一のオプションである場合もあります。  
   
- CLR は多重継承をサポートしていません (つまり、CLR クラスから継承できません 1 つ以上の基底クラス) が、基本クラスから継承するだけでなく、1 つまたは複数のインターフェイスを実装する型。 そのため、インターフェイスは、多重継承の効果を実現するためによく使用されます。 たとえば、<xref:System.IDisposable>は参加する継承階層の独立した disposability をサポートする型を許可するインターフェイスです。  
+ CLR は複数の継承をサポートしていません (つまり、CLR クラスは複数の基底クラスから継承することはできません) が、基底クラスから継承するだけでなく、1つまたは複数のインターフェイスを実装することもできます。 したがって、多くの場合、インターフェイスは、多重継承の効果を実現するために使用されます。 たとえば、<xref:System.IDisposable> は、参加する他の継承階層に依存しない disposability を型がサポートできるようにするインターフェイスです。  
   
- 他のどの定義で、インターフェイスは、適切な状況がいくつかの値の型を含む複数の種類でサポートされる共通のインターフェイスを作成します。 値の型が以外の型から継承できません<xref:System.ValueType>、共通の基本型を提供するために、唯一のオプションは、インターフェイスを使用して、インターフェイスを実装できます。  
+ インターフェイスを定義する他の状況としては、いくつかの値型を含む、複数の型でサポートできる共通インターフェイスを作成することがあります。 値型は、<xref:System.ValueType>以外の型から継承することはできませんが、インターフェイスを実装することはできます。そのため、共通の基本型を指定するための唯一のオプションはインターフェイスを使用することです。  
   
  **✓ DO** いくつかの一般的な API 値の型を含む型のセットでサポートする必要がある場合は、インターフェイスを定義します。  
   
@@ -28,25 +27,25 @@ ms.locfileid: "62026368"
   
  **X AVOID** マーカー インターフェイス (メンバーを持たないインターフェイス) を使用します。  
   
- 特定の特性 (マーカー) を持つものとしてマークする必要がある場合は、一般に、インターフェイスではなく、カスタム属性を使用します。  
+ クラスを特定の特性 (マーカー) としてマークする必要がある場合は、一般に、インターフェイスではなくカスタム属性を使用します。  
   
  **✓ DO** インターフェイスの実装は、少なくとも 1 つの型を提供します。  
   
- インターフェイスのデザインを検証するには、この支援を行っています。 たとえば、<xref:System.Collections.Generic.List%601>の実装には、<xref:System.Collections.Generic.IList%601>インターフェイス。  
+ これにより、インターフェイスの設計を検証できます。 たとえば、<xref:System.Collections.Generic.List%601> は <xref:System.Collections.Generic.IList%601> インターフェイスの実装です。  
   
  **✓ DO** を定義する各インターフェイスを使用するには、少なくとも 1 つの API を提供 (パラメーターまたはプロパティとして、インターフェイス メソッドは、インターフェイスとして型指定された)。  
   
- インターフェイスのデザインを検証するには、この支援を行っています。 たとえば、<xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>消費、<xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>インターフェイス。  
+ これにより、インターフェイスの設計を検証できます。 たとえば、<xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> は <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> インターフェイスを使用します。  
   
  **X DO NOT** 以前に出荷されたインターフェイスにメンバーを追加します。  
   
- そうと、インターフェイスの実装ができなくなります。 バージョン管理の問題を回避するために、新しいインターフェイスを作成する必要があります。  
+ これにより、インターフェイスの実装が中断されます。 バージョン管理の問題を回避するために、新しいインターフェイスを作成する必要があります。  
   
- 除くこれらのガイドライン」に説明されている場合、マネージ コードの再利用可能なライブラリのデザインのインターフェイスではなく、クラスを選択してください、一般に。  
+ これらのガイドラインで説明されている状況を除き、一般に、マネージコードの再利用可能なライブラリの設計では、インターフェイスではなくクラスを選択する必要があります。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*  
   
- *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
 ## <a name="see-also"></a>関連項目
 

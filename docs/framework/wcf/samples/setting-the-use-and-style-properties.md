@@ -1,13 +1,13 @@
 ---
-title: 使用とスタイルのプロパティの設定-WCF サンプル
+title: 使用とスタイルのプロパティのサンプルの設定
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: f92b25144759692c54aa7a1730a9bb85cab4f15f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 36111aa05680fb8b369cde6b42d22c9c3b8474ad
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714439"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345129"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Use および Style プロパティの設定
 

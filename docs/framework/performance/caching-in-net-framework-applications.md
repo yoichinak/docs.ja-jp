@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 2a0d138151722a76133da45c166c51d7f3bb0a31
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8fe2a386da8cdb4bb075b67a5e52c840a7b66c77
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428191"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935289"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework アプリケーションでのキャッシュ
 キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。  
@@ -69,13 +69,13 @@ ms.locfileid: "74428191"
   
 - <xref:System.Runtime.Caching.ObjectCache> クラスから派生したカスタム クラスを作成し、派生クラスでカスタム キャッシュ実装を提供します。  
   
-- <xref:System.Runtime.Caching.MemoryCache> クラスから派生したクラスを作成し、派生クラスをカスタマイズまたは拡張します。 この実行方法の例については、「[Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application](https://blogs.msdn.microsoft.com/aspnetue/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application/)」(ASP.NET アプリケーションで複数のキャッシュ オブジェクトを使用してアプリケーション データをキャッシュする) を参照してください。  
+- <xref:System.Runtime.Caching.MemoryCache> クラスから派生したクラスを作成し、派生クラスをカスタマイズまたは拡張します。 この実行方法の例については、「[Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application](https://docs.microsoft.com/archive/blogs/aspnetue/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application)」(ASP.NET アプリケーションで複数のキャッシュ オブジェクトを使用してアプリケーション データをキャッシュする) を参照してください。  
   
 - <xref:System.Web.Caching.OutputCacheProvider> クラスから派生したクラスを作成し、そのカスタム出力キャッシュ プロバイダーを使用するようにアプリケーションを構成します。  
   
  詳細については、Scott Guthrie のブログのエントリ「[Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://weblogs.asp.net/scottgu/extensible-output-caching-with-asp-net-4-vs-2010-and-net-4-0-series)」(ASP.NET 4 を使用した拡張可能な出力キャッシュ (VS 2010 および .NET 4.0 シリーズ)) を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>

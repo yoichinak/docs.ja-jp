@@ -1,6 +1,5 @@
 ---
 title: async - C# リファレンス
-ms.custom: seodec18
 ms.date: 05/22/2017
 f1_keywords:
 - async_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: ab9c1be484d9cc77324e3105124a1b1f2257251d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 3d3f045eed3bad3624ed4994aebb862c52a4e196
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925357"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713780"
 ---
 # <a name="async-c-reference"></a>async (C# リファレンス)
 

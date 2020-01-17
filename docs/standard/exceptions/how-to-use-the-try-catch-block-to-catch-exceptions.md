@@ -11,14 +11,12 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eaa389f461e70aae41f2e09437fd725a3bcefa5e
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5a9218d394b76e897f4263708a10f1bc895ad4e1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696727"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708467"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Try ブロックと Catch ブロックを使用して例外をキャッチする方法
 

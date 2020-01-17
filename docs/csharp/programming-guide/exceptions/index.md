@@ -1,18 +1,17 @@
 ---
 title: 例外と例外処理 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#]
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 3506406a441cb2028c00d5b8ed87b57cc6dff38b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f5d709a35e160a8b03ac59e52f7bcb46196a3ce4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423254"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705289"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外と例外処理 (C# プログラミング ガイド)
 
@@ -47,9 +46,9 @@ C# 言語の例外処理機能は、プログラムの実行時に発生する�
 - [例外処理](exception-handling.md)
 - [例外の作成とスロー](creating-and-throwing-exceptions.md)
 - [コンパイラにより生成された例外](compiler-generated-exceptions.md)
-- [方法: try-catch を使用して例外を処理する (C# プログラミング ガイド)](how-to-handle-an-exception-using-try-catch.md)
-- [方法: finally を使用してクリーンアップ コードを実行する](how-to-execute-cleanup-code-using-finally.md)
-- [方法: CLS 準拠ではない例外をキャッチする](how-to-catch-a-non-cls-exception.md)
+- [try/catch を使用して例外を処理する方法 (C# プログラミング ガイド)](how-to-handle-an-exception-using-try-catch.md)
+- [finally を使用してクリーンアップ コードを実行する方法](how-to-execute-cleanup-code-using-finally.md)
+- [CLS に準拠していない例外をキャッチする方法](how-to-catch-a-non-cls-exception.md)
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

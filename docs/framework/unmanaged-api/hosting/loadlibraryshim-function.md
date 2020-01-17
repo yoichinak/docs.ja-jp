@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 30931874-4d0e-4df1-b3d1-e425b50655d1
 topic_type:
 - apiref
-ms.openlocfilehash: 1759ee2ecf08322b745a4f80a62b24596c4504cb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11bb220068e978dc130701e3b28ab3f421be7337
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123251"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937649"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 関数
 再頒布可能パッケージ .NET Framework に含まれている、指定したバージョンの DLL を読み込みます。  
@@ -43,7 +43,7 @@ HRESULT LoadLibraryShim (
  から.NET Framework ライブラリから読み込む DLL の名前を表す、0で終わる文字列です。  
   
  `szVersion`  
- から読み込む DLL のバージョンを表す、0で終わる文字列。 `szVersion` が null の場合、読み込まれるように選択されたバージョンは、指定された DLL のバージョン4より小さい最新バージョンです。 つまり、バージョン4以降のすべてのバージョンは、`szVersion` が null の場合は無視され、バージョン4より前のバージョンがインストールされていない場合は、DLL の読み込みに失敗します。 これは、.NET Framework 4 のインストールが、既存のアプリケーションまたはコンポーネントに影響しないようにするためです。 CLR チームブログの「[インプロセス SxS And Migration クイックスタート](https://go.microsoft.com/fwlink/?LinkId=200329)」のエントリを参照してください。  
+ から読み込む DLL のバージョンを表す、0で終わる文字列。 `szVersion` が null の場合、読み込まれるように選択されたバージョンは、指定された DLL のバージョン4より小さい最新バージョンです。 つまり、バージョン4以降のすべてのバージョンは、`szVersion` が null の場合は無視され、バージョン4より前のバージョンがインストールされていない場合は、DLL の読み込みに失敗します。 これは、.NET Framework 4 のインストールが、既存のアプリケーションまたはコンポーネントに影響しないようにするためです。 CLR チームブログの「[インプロセス SxS And Migration クイックスタート](https://devblogs.microsoft.com/dotnet/in-proc-sxs-and-migration-quick-start/)」のエントリを参照してください。  
   
  `pvReserved`  
  将来使用するために予約されています。  
@@ -56,7 +56,7 @@ HRESULT LoadLibraryShim (
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
-|S_OK|メソッドは正常に完了しました。|  
+|S_OK|メソッドは正常に終了しました。|  
 |CLR_E_SHIM_RUNTIMELOAD|`szDllName` を読み込むには、共通言語ランタイム (CLR) を読み込む必要があり、必要なバージョンの CLR を読み込むことができません。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -65,7 +65,7 @@ HRESULT LoadLibraryShim (
 > [!NOTE]
 > .NET Framework バージョン2.0 以降では、Fusion .dll を読み込むと CLR が読み込まれます。 これは、Fusion の関数が、ランタイムによって実装されているラッパーであるためです。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  

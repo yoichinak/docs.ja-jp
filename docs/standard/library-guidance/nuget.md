@@ -1,15 +1,13 @@
 ---
 title: NuGet および .NET ライブラリ
 description: .NET ライブラリ対応の NuGet によるパッケージ化のベスト プラクティスの推奨事項
-author: jamesnk
-ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9288bf440692302c3a0b1954236540af6363f367
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 71c380f6062c09a8951769009b29b567fddfddfc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775312"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706479"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -69,7 +67,7 @@ NuGet パッケージは、多数の[メタデータ プロパティ](/nuget/ref
 
 **✔️ 実行** 64 x 64 のパッケージ アイコン イメージを使用し、最善の表示結果を透明な背景にする。
 
-**✔️ 検討** [ソース リンク](./sourcelink.md)を設定して、お使いのアセンブリと NuGet パッケージにソース管理のメタデータを追加する。
+**✔️ 検討**[ソース リンク](./sourcelink.md)を設定して、お使いのアセンブリと NuGet パッケージにソース管理のメタデータを追加する。
 
 > ソース リンクによってメタデータの `RepositoryUrl` と `RepositoryType` が NuGet パッケージに自動的に追加されます。 また、ソース リンクによって、パッケージの作成元のソース コードに関する情報が追加されます。 たとえば、Git リポジトリから作成されたパッケージでは、コミット ハッシュがメタデータとして追加されます。
 

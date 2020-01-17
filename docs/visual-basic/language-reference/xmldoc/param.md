@@ -33,7 +33,7 @@ ms.locfileid: "74352297"
   
  `<param>` タグのテキストは次の場所に表示されます。  
   
-- IntelliSense のパラメーター情報。 詳細については、「 [Using IntelliSense](/visualstudio/ide/using-intellisense)」を参照してください。  
+- IntelliSense のパラメーター情報。 詳細については、「[IntelliSense を使用する](/visualstudio/ide/using-intellisense)」を参照してください。  
   
 - オブジェクト ブラウザー。 詳細については、「[コードの構造の表示](/visualstudio/ide/viewing-the-structure-of-code)」を参照してください。  
   

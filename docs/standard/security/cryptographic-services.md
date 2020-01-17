@@ -1,5 +1,5 @@
 ---
-title: 暗号化サービス
+title: Cryptographic Services
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -24,16 +24,14 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6f0e268995449bc27b93c92ac8654c09fca9cd14
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 66af8126ab61d37065b9a328d5e088ed7bf4cbef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975826"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709206"
 ---
-# <a name="cryptographic-services"></a>暗号化サービス
+# <a name="cryptographic-services"></a>Cryptographic Services
 
 インターネットなどの公衆ネットワークには、エンティティ間の通信を保護する手段が用意されていません。 公衆ネットワークを経由した通信は、不当な第三者によって読み取られたり、さらには変更されたりするおそれがあります。 暗号化を使用すると、データが表示されないように保護し、データが変更されたかどうかを検出する方法を提供し、通常は安全でないチャネル上に安全な通信手段を確立できます。 たとえば、暗号化アルゴリズムを使用してデータを暗号化し、暗号化された状態で送信できます。送信先の相手は、後でこのデータを復号化できます。 暗号化されたデータを第三者が傍受したとしても、復号化するのは困難です。
 
@@ -59,7 +57,7 @@ ms.locfileid: "73975826"
 
 これらの目標を達成するために、暗号プリミティブと呼ばれるアルゴリズムと手法の組み合わせを使用して暗号スキームを作成します。 暗号プリミティブとその用途の一覧を次の表に示します。
 
-|暗号プリミティブ|上限のファイル数を変更するには、|
+|暗号プリミティブ|[使用]|
 |-----------------------------|---------|
 |共有キー暗号方式 (対称暗号化方式)|データに対して変換処理を実行し、データが第三者に読み取られるのを防ぎます。 このタイプの暗号方式では、単一の共有キーを使用してデータの暗号化と復号化が行われます。|
 |公開キー暗号方式 (非対称暗号化方式)|データに対して変換処理を実行し、データが第三者に読み取られるのを防ぎます。 このタイプの暗号方式では、公開キーと秘密キーのペアを使用してデータの暗号化と復号化が行われます。|
@@ -270,7 +268,7 @@ CNG のクラスには、ネイティブ CNG 関数を扱うマネージド ラ�
 
 ## <a name="related-topics"></a>関連トピック
 
-|Title|説明|
+|[タイトル]|説明|
 |-----------|-----------------|
 |[暗号モデル](../../../docs/standard/security/cryptography-model.md)|基底クラス ライブラリに暗号化がどのように実装されているかについて説明します。|
 |[チュートリアル: 暗号化アプリケーションの作成](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|基本的な暗号化タスクと復号化タスクについて説明します。|

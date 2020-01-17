@@ -1,6 +1,5 @@
 ---
 title: volatile - C# リファレンス
-ms.custom: seodec18
 ms.date: 10/24/2018
 f1_keywords:
 - volatile_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: e72173ba1b91f03ccb1c15ca6451ac997666bc7f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c7a6c442c33ac2b41f652805837f455a957819de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422126"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712846"
 ---
 # <a name="volatile-c-reference"></a>volatile (C# リファレンス)
 

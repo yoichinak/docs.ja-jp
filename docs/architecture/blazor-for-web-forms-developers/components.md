@@ -4,12 +4,12 @@ description: Blazor を使用して再利用可能な UI コンポーネント�
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 79919b183a4eb759f0b27c97500ee71c9378770b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b34bdf61a425807030cf7648df245cc7a01c95de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841961"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705731"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Blazor を使用して再利用可能な UI コンポーネントを構築する
 
@@ -62,8 +62,8 @@ Razor では、レンダリングロジックでC#制御フローを簡単に使
 
 Razor ディレクティブは、ASP.NET Web フォームのディレクティブと同様に、Razor コンポーネントのコンパイル方法の多くの側面を制御します。 コンポーネントの例を次に示します。
 
-- Namespace
-- 基底クラス
+- 名前空間
+- [基底クラス]
 - 実装されたインターフェイス
 - ジェネリックパラメーター
 - インポートされた名前空間
@@ -77,17 +77,17 @@ Razor ディレクティブは `@` 文字で始まり、通常、ファイルの
 
 次の表は、Blazor で使用されるさまざまな Razor ディレクティブとそれらの ASP.NET Web フォームに相当するものをまとめたものです (存在する場合)。
 
-|Directive    |説明|例|同等の Web フォーム|
+|Directive    |説明|使用例|同等の Web フォーム|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |コンポーネントにクラスレベルの属性を追加します。|`@attribute [Authorize]`|なし|
+|`@attribute` |コンポーネントにクラスレベルの属性を追加します。|`@attribute [Authorize]`|[なし]|
 |`@code`      |コンポーネントにクラスメンバーを追加します。|`@code { ... }`|`<script runat="server">...</script>`|
-|`@implements`|指定したインターフェイスを実装します。|`@implements IDisposable`|分離コードを使用する|
+|`@implements`|指定したインターフェイスを実装します。|`@implements IDisposable`|コードビハインドを使用する|
 |`@inherits`  |指定した基底クラスから継承します。|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |コンポーネントにサービスを挿入します。|`@inject IJSRuntime JS`|なし|
+|`@inject`    |コンポーネントにサービスを挿入します。|`@inject IJSRuntime JS`|[なし]|
 |`@layout`    |コンポーネントのレイアウトコンポーネントを指定します。|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |コンポーネントの名前空間を設定します。|`@namespace MyNamespace`|なし|
+|`@namespace` |コンポーネントの名前空間を設定します。|`@namespace MyNamespace`|[なし]|
 |`@page`      |コンポーネントのルートを指定します。|`@page "/product/{id}"`|`<%@ Page %>`|
-|`@typeparam` |コンポーネントのジェネリック型パラメーターを指定します。|`@typeparam TItem`|分離コードを使用する|
+|`@typeparam` |コンポーネントのジェネリック型パラメーターを指定します。|`@typeparam TItem`|コードビハインドを使用する|
 |`@using`     |スコープに取り込む名前空間を指定します|`@using MyComponentNamespace`|*Web.config に名前*空間を追加する|
 
 また、Razor コンポーネントでは、要素に対して*ディレクティブ属性*を広範に使用して、コンポーネントのコンパイル (イベント処理、データバインディング、コンポーネント & 要素参照など) のさまざまな側面を制御します。 ディレクティブ属性は、かっこ内の値が省略可能である一般的なジェネリック構文に従います。
@@ -98,7 +98,7 @@ Razor ディレクティブは `@` 文字で始まり、通常、ファイルの
 
 次の表は、Blazor で使用される Razor ディレクティブのさまざまな属性をまとめたものです。
 
-|属性    |説明|例|
+|属性    |説明|使用例|
 |-------------|-----------|-------|
 |`@attributes`|属性のディクショナリをレンダリングします|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |双方向のデータバインディングを作成します。    |`<input @bind="username" @bind:event="oninput" />`|
@@ -110,10 +110,10 @@ Blazor (`@onclick`、`@bind`、`@ref`など) で使用されるさまざまな�
 
 *.Aspx*および *.ascx*ファイルで使用される構文の多くには、Razor の並列構文があります。 次に、ASP.NET Web フォームと Razor の構文を簡単に比較します。
 
-|機能                      |Web フォーム           |構文               |Razor         |構文 |
+|特性                      |Web フォーム           |構文               |Razor         |構文 |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |ディレクティブ                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
-|コードブロック                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
+|コード ブロック                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
 |式<br>(HTML エンコード)|`<%: %>`            |`<%:DateTime.Now %>` |暗黙的: `@`<br>Explicit: `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
 |コメント                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |データ バインディング                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
@@ -131,7 +131,7 @@ Razor コンポーネントクラスにメンバーを追加するには、`@cod
 }
 ```
 
-Razor はにC#基づいているため、 C#プロジェクト ( *.csproj*) 内からコンパイルする必要があります。 VB プロジェクト ( *.vbproj*) から*razor*ファイルをコンパイルすることはできません。 Blazor プロジェクトから VB プロジェクトを参照することもできます。 逆も同様です。
+Razor はにC#基づいているため、 C#プロジェクト ( *.csproj*) 内からコンパイルする必要があります。 Visual Basic プロジェクト ( *.vbproj*) から*razor*ファイルをコンパイルすることはできません。 Blazor プロジェクトから Visual Basic プロジェクトを参照することもできます。 逆も同様です。
 
 完全 Razor 構文リファレンスについては、「 [ASP.NET Core の Razor 構文リファレンス](/aspnet/core/mvc/views/razor)」を参照してください。
 
@@ -269,7 +269,7 @@ Blazor では、`@on{event}`フォームのディレクティブ属性を使用�
 イベントが処理されると、コンポーネントは、コンポーネントの状態の変更を考慮してレンダリングされます。 非同期イベントハンドラーを使用すると、ハンドラーの実行が完了した直後にコンポーネントがレンダリングされます。 非同期 `Task` が完了すると、コンポーネントが*再び*表示されます。 この非同期実行モードでは、非同期 `Task` がまだ進行中であるときに、適切な UI を表示することができます。
 
 ```razor
-<button @onclick="Get message">Get message</button>
+<button @onclick="ShowMessage">Get message</button>
 
 @if (showMessage)
 {
@@ -639,7 +639,7 @@ public class CounterBase : ComponentBase
 
 基底クラスのコンポーネントのメンバーの可視性は、コンポーネントクラスに表示される `protected` または `public` である必要があります。
 
-## <a name="additional-resources"></a>その他のリソース
+## <a name="additional-resources"></a>その他の技術情報
 
 前のは、Blazor コンポーネントのすべての側面を網羅するものではありません。 [ASP.NET Core Razor コンポーネントを作成して使用](/aspnet/core/blazor/components)する方法の詳細については、Blazor のドキュメントを参照してください。
 

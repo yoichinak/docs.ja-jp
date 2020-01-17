@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-author: KrzysztofCwalina
-ms.openlocfilehash: 28b00f5911bb47536ec44b96f284e47b6c671149
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: e3725cd11e170c64b6cbf7d77a7a6526603dfd95
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353746"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709115"
 ---
 # <a name="parameter-design"></a>パラメーターのデザイン
+
 このセクションでは、引数をチェックするためのガイドラインを含むセクションなど、パラメーターの設計に関する広範なガイドラインを示します。 また、「[パラメーターの名前付け](../../../docs/standard/design-guidelines/naming-parameters.md)」で説明されているガイドラインを参照してください。  
   
  **✓ DO** メンバーで必要な機能を提供する少なくとも派生パラメーター型を使用します。  
@@ -40,7 +40,7 @@ ms.locfileid: "71353746"
   
  これにより、メソッド間の関係がより適切に伝えられます。  
   
-### <a name="choosing-between-enum-and-boolean-parameters"></a>列挙型パラメーターとブール型パラメーターの選択  
+### <a name="choose-between-enum-and-boolean-parameters"></a>列挙型とブール型のパラメーターを選択する  
  **✓ DO** メンバーが 2 つ以上のブール型パラメーターを持っている場合は、列挙型を使用します。  
   
  **X DO NOT** ブール値を使用してない場合は、絶対に 3 つ以上の値が必要な表示できなくなります。  
@@ -49,7 +49,7 @@ ms.locfileid: "71353746"
   
  **✓ CONSIDER** は本当に 2 つの状態の値であり、のみを使用してブール型プロパティを初期化するコンス トラクターのパラメーターのブール値を使用します。  
   
-### <a name="validating-arguments"></a>引数の検証  
+### <a name="validate-arguments"></a>引数の検証  
  **✓ DO** パブリック、プロテクト、または明示的に実装されたメンバーに渡される引数を検証します。 検証が失敗した場合は、<xref:System.ArgumentException?displayProperty=nameWithType>、またはそのサブクラスの1つをスローします。  
   
  実際の検証は、必ずしもパブリックメンバーまたはプロテクトメンバーに対して行われる必要がないことに注意してください。 これは、一部のプライベートまたは内部ルーチンの下位レベルで発生する可能性があります。 主な点は、エンドユーザーに公開されているすべての領域が、引数をチェックすることです。  
@@ -66,10 +66,10 @@ ms.locfileid: "71353746"
   
  メンバーがセキュリティに依存している場合は、コピーを作成して、引数を検証して処理することをお勧めします。  
   
-### <a name="parameter-passing"></a>パラメーターの引き渡し  
+### <a name="pass-parameters"></a>パラメーターを渡す  
  フレームワークデザイナーの観点から見ると、パラメーターの主なグループには、値渡しパラメーター、`ref` パラメーター、`out` パラメーターの3つがあります。  
   
- 値渡しのパラメーターを通じて引数が渡されると、メンバーは渡された実際の引数のコピーを受け取ります。 引数が値型の場合は、引数のコピーがスタックに格納されます。 引数が参照型の場合は、参照のコピーがスタックに配置されます。 C#、VB.NET、 C++など、最も一般的な CLR 言語は、既定で値渡しでパラメーターを渡します。  
+ 値渡しのパラメーターを通じて引数が渡されると、メンバーは渡された実際の引数のコピーを受け取ります。 引数が値型の場合は、引数のコピーがスタックに格納されます。 引数が参照型の場合は、参照のコピーがスタックに配置されます。 C#、Visual Basic、 C++など、最も一般的な CLR 言語は、既定で値渡しでパラメーターを渡します。  
   
  引数が `ref` パラメーターを通じて渡されると、メンバーは渡された実際の引数への参照を受け取ります。 引数が値型の場合は、引数への参照がスタックに格納されます。 引数が参照型の場合は、参照への参照がスタックに配置されます。 `Ref` パラメーターを使用して、呼び出し元によって渡される引数をメンバーが変更できるようにすることができます。  
   
@@ -140,7 +140,7 @@ public class String {
   
  などの一部の CLR 言語C++では、`varargs` メソッドと呼ばれる変数パラメーターリストを渡すための代替規則がサポートされています。 この規則は、CLS に準拠していないため、フレームワークでは使用しないでください。  
   
-### <a name="pointer-parameters"></a>ポインター パラメーター  
+### <a name="pointer-parameters"></a>ポインターパラメーター  
  一般に、適切にデザインされたマネージコードフレームワークの公開領域にポインターを表示することはできません。 ほとんどの場合、ポインターはカプセル化する必要があります。 ただし、相互運用性の理由からポインターが必要になる場合もあれば、ポインターを使用することが適切な場合もあります。  
   
  **✓ DO** ポインターが CLS 準拠ではないために、ポインター引数を受け取り、メンバーの代替を提供します。  
@@ -155,7 +155,7 @@ public class String {
   
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

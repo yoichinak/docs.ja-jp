@@ -9,6 +9,8 @@
           href: system-text-json-how-to.md
         - name: カスタム コンバーターを記述する方法
           href: system-text-json-converters-how-to.md
+        - name: Newtonsoft. Json から移行する方法
+          href: system-text-json-migrate-from-newtonsoft-how-to.md
     - name: バイナリ シリアル化
       href: binary-serialization.md
       items:

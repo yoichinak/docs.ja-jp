@@ -11,29 +11,29 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 8c201abef924766d52b1adb084970a24ebea2b50
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e839271ac254a5e96f8c99f59397016fb99540aa
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350564"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636914"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>クエリ操作での型の関係 (Visual Basic)
 
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] クエリ操作で使用される変数は厳密に型指定され、相互に互換性がある必要があります。 厳密な型指定は、データソース、クエリ自体、およびクエリの実行で使用されます。 次の図は、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを記述するために使用される用語を示しています。 クエリの各部分の詳細については、「[クエリの基本操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)」を参照してください。
+統合言語クエリ (LINQ) のクエリ操作で使用される変数は厳密に型指定されており、相互に互換性がある必要があります。 厳密な型指定は、データソース、クエリ自体、およびクエリの実行で使用されます。 次の図は、LINQ クエリの記述に使用される用語を示しています。 クエリの各部分の詳細については、「[クエリの基本操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)」を参照してください。
 
 ![要素が強調表示されている擬似コードクエリを示すスクリーンショット。](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
 クエリ内の範囲変数の型は、データソース内の要素の型と互換性がある必要があります。 クエリ変数の型は、`Select` 句で定義されている sequence 要素と互換性がある必要があります。 最後に、シーケンス要素の型も、クエリを実行する `For Each` ステートメントで使用されるループコントロール変数の型と互換性がある必要があります。 この厳密な型指定により、コンパイル時に型エラーの識別が容易になります。
 
-Visual Basic は、*暗黙的*な型指定とも呼ばれるローカル型推論を実装することによって、厳密な型指定を容易にします。 この機能は、前の例で使用されており、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] のサンプルとドキュメント全体で使用されています。 Visual Basic では、ローカル型の推論は、`As` 句を指定せずに `Dim` ステートメントを使用するだけで行われます。 次の例では、`city` が文字列として厳密に型指定されています。
+Visual Basic は、*暗黙的*な型指定とも呼ばれるローカル型推論を実装することによって、厳密な型指定を容易にします。 この機能は、前の例で使用されており、LINQ のサンプルとドキュメント全体で使用されています。 Visual Basic では、ローカル型の推論は、`As` 句を指定せずに `Dim` ステートメントを使用するだけで行われます。 次の例では、`city` が文字列として厳密に型指定されています。
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
 > [!NOTE]
 > ローカル型の推論は、`Option Infer` が `On`に設定されている場合にのみ機能します。 詳細については、「 [Option 推論ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)」を参照してください。
 
-ただし、クエリでローカル型の推論を使用する場合でも、データソース内の変数、クエリ変数、およびクエリ実行ループの間に同じ型のリレーションシップが存在します。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] のクエリを記述する場合や、ドキュメントのサンプルやコード例を使用する場合は、これらの型の関係を基本的に理解しておくと便利です。
+ただし、クエリでローカル型の推論を使用する場合でも、データソース内の変数、クエリ変数、およびクエリ実行ループの間に同じ型のリレーションシップが存在します。 LINQ クエリを記述するとき、またはドキュメントのサンプルとコード例を使用するときに、これらの型の関係を基本的に理解しておくと便利です。
 
 データソースから返される型と一致しない範囲変数には、明示的な型を指定する必要がある場合があります。 `As` 句を使用して、範囲変数の型を指定できます。 ただし、変換が[縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)であり、`Option Strict` が `On`に設定されている場合、エラーが発生します。 したがって、データソースから取得した値に対して変換を実行することをお勧めします。 <xref:System.Linq.Enumerable.Cast%2A> メソッドを使用して、データソースの値を明示的な範囲変数型に変換できます。 また、`Select` 句で選択した値を、範囲変数の型とは異なる明示的な型にキャストすることもできます。 これらの点を次のコードに示します。
 
@@ -41,7 +41,7 @@ Visual Basic は、*暗黙的*な型指定とも呼ばれるローカル型推�
 
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>ソースデータの要素全体を返すクエリ
 
-次の例は、ソースデータから選択された一連の要素を返す [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ操作を示しています。 Source、`names`には文字列の配列が含まれており、クエリ出力は、文字 M で始まる文字列を含むシーケンスです。
+次の例は、ソースデータから選択された一連の要素を返す LINQ クエリ操作を示しています。 Source、`names`には文字列の配列が含まれており、クエリ出力は、文字 M で始まる文字列を含むシーケンスです。
 
 [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]
 
@@ -120,7 +120,7 @@ Next
 
 3. `For Each` ループ内の反復変数の型は、手順 2. で作成した匿名型です。 型には使用可能な名前がないため、ループ反復変数の型を暗黙的に決定する必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

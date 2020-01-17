@@ -12,14 +12,12 @@ helpviewer_keywords:
 - exceptions, throwing
 - implicitly throwing exceptions
 ms.assetid: 72bdd157-caa9-4478-9ee3-cb4500b84528
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a71cefc0a6483dbbe6513a64d8111a07a2e5af42
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 750da20b8c1c40901cc363ac0eff8af888821ce9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696741"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708863"
 ---
 # <a name="how-to-explicitly-throw-exceptions"></a>例外を明示的にスローする方法
 

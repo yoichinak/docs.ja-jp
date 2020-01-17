@@ -12,13 +12,12 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-author: KrzysztofCwalina
-ms.openlocfilehash: 5041368ca1a440698c399c935ac72aba2002c3ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34ab2589364e244fed1c64c1703205fb4b0832e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615267"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709518"
 ---
 # <a name="choosing-between-class-and-struct"></a>クラスまたは構造体の選択
 すべてのフレームワーク設計者が直面する基本的な設計上の決定の 1 つが、ある型をクラス (参照型) として設計するか、構造体 (値型) として設計するかという点です。 この決定を下すためには、参照型と値の型の動作の違いをよく理解しておく必要があります。  
@@ -35,7 +34,7 @@ ms.locfileid: "64615267"
   
  一般に、フレームワーク内の型の大部分は、クラスであるべきです。 ただし、状況によっては値型の特性により構造体を使用する方が適切な場合もあります。  
   
- **✓** ある型のインスタンスは小さく、一般的に有効期間が短いかその他のオブジェクトに埋め込まれるのであれば、クラスの代わりに構造体を定義することを**考慮してください。  
+ **✓ CONSIDER** 型のインスタンスは小さく、一般的な有効期間が短いまたはその他のオブジェクトに埋め込まれている一般的な場合は、クラスの代わりに構造体を定義することです。  
   
  **X** 次の条件をすべて満たさない限り、構造体を**定義しないでください。  
   
@@ -49,9 +48,9 @@ ms.locfileid: "64615267"
   
  他のすべてのケースでは、クラスとして、型を定義する必要があります。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*  
   
- *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
 ## <a name="see-also"></a>関連項目
 

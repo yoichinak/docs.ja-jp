@@ -8,32 +8,31 @@ helpviewer_keywords:
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-author: KrzysztofCwalina
-ms.openlocfilehash: 1aeef9e1be6e5fe747f440a8cb7f21095cb22f49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eebccba0b923b04333f289a85330d190c31013ab
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945497"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709258"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>アセンブリと DLL の名前
-アセンブリは、展開およびマネージ コード アプリケーションの id の単位です。 アセンブリは、1 つまたは複数のファイルにまたがることができます、通常このアセンブリは DLL と 1 対 1 をマップします。 そのため、このセクションでは、のみ DLL の名前付け規則、アセンブリの名前付け規則にマップできますがについて説明します。  
+アセンブリは、マネージコードプログラムの配置と id の単位です。 アセンブリは1つ以上のファイルにまたがることができますが、通常、アセンブリは1対1のを DLL とマップします。 したがって、このセクションでは DLL の名前付け規則についてのみ説明し、次にアセンブリの名前付け規則にマップできます。  
   
  **✓ DO** アセンブリ System.Data などの機能の大きなチャンクを提案する Dll の名前を選択します。  
   
- アセンブリと DLL の名前が名前空間の名前に対応する必要はありませんが、アセンブリの名前を付けるときは、名前空間の名前を次に適切です。 適切な経験則では、アセンブリに含まれている名前空間の共通のプレフィックスに基づいた DLL の名前です。 たとえば、2 つの名前空間を持つアセンブリ`MyCompany.MyTechnology.FirstFeature`と`MyCompany.MyTechnology.SecondFeature`、呼び出すことができます`MyCompany.MyTechnology.dll`します。  
+ アセンブリ名と DLL 名は、名前空間名に対応する必要はありませんが、アセンブリに名前を付けるときは、名前空間名に従うことをお勧めします。 経験則として、アセンブリに含まれる名前空間の共通のプレフィックスに基づいて DLL の名前を指定することをお勧めします。 たとえば、`MyCompany.MyTechnology.FirstFeature` と `MyCompany.MyTechnology.SecondFeature`の2つの名前空間を持つアセンブリを `MyCompany.MyTechnology.dll`と呼び出すことができます。  
   
  **✓ CONSIDER** Dll を次のパターンに従って名前付け。  
   
  `<Company>.<Component>.dll`  
   
- 場所`<Component>`ドットで区切られた 1 つ以上の句が含まれています。 例:  
+ ここで、`<Component>` には1つ以上のドット区切り句が含まれています。 例:  
   
- `Litware.Controls.dll`。  
+ `Litware.Controls.dll`.  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*  
   
- *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
+ *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*  
   
 ## <a name="see-also"></a>関連項目
 

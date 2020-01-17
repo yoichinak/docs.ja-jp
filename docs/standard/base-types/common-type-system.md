@@ -16,13 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.custom: seodec18
-ms.openlocfilehash: 5590bb07c3927ba50000d7f9d99f11e30373343d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5223c9b2031b1e25ec2f84326c811da1a78ddc15
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105708"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711416"
 ---
 # <a name="common-type-system"></a>共通型システム
 共通型システム (CTS: Common Type System) は、共通言語ランタイムにおける型の宣言、使用、および管理の方法を定義しており、ランタイムによる言語間統合のサポートにおいても重要な役割を果たします。 共通型システムには次のような機能があります。  

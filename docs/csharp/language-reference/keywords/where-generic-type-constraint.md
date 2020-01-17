@@ -1,18 +1,17 @@
 ---
 title: where (ジェネリック型制約) - C# リファレンス
-ms.custom: seodec18
 ms.date: 04/12/2018
 f1_keywords:
 - whereconstraint
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 24ae6e285b8b4270188462b05f39c6142c6901ae
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 19bf7682916336173ed93619fb6f0ff1242a1b30
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972725"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712807"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (ジェネリック型制約) (C# リファレンス)
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: bd79d95a18fb1935d97fff2d1b2c7767752b9765
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d186670489ada51fced67ff9adeb73b14909b664
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351718"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716683"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 
@@ -23,13 +23,13 @@ ms.locfileid: "74351718"
 -target:{exe | library | module | winexe | appcontainerexe | winmdobj}
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 次の表は、`-target` オプションの効果をまとめたものです。
 
 |**オプション**|**Behavior**|
 |----------------|------------------|
-|`-target:exe`|コンパイラによって実行可能なコンソールアプリケーションが作成されます。<br /><br /> これは、`-target` オプションが指定されていない場合の既定のオプションです。 実行可能ファイルは .exe 拡張子を使用して作成されます。<br /><br /> `/out` オプションで特に指定しない限り、出力ファイル名は、`Sub Main` プロシージャを含む入力ファイルの名前になります。<br /><br /> .Exe ファイルにコンパイルされるソースコードファイルには、1つの `Sub Main` プロシージャのみが必要です。 `-main` コンパイラオプションを使用して、`Sub Main` プロシージャを含むクラスを指定します。|
+|`-target:exe`|コンパイラによって実行可能なコンソールアプリケーションが作成されます。<br /><br /> これは、`-target` オプションが指定されていない場合の既定のオプションです。 実行可能ファイルは .exe 拡張子を使用して作成されます。<br /><br /> `-out` オプションで特に指定しない限り、出力ファイル名は、`Sub Main` プロシージャを含む入力ファイルの名前になります。<br /><br /> .Exe ファイルにコンパイルされるソースコードファイルには、1つの `Sub Main` プロシージャのみが必要です。 `-main` コンパイラオプションを使用して、`Sub Main` プロシージャを含むクラスを指定します。|
 |`-target:library`|コンパイラによってダイナミックリンクライブラリ (DLL) が作成されます。<br /><br /> ダイナミックリンクライブラリファイルは、.dll 拡張子を使用して作成されます。<br /><br /> `-out` オプションで特に指定しない限り、出力ファイル名は最初の入力ファイルの名前になります。<br /><br /> DLL をビルドする場合、`Sub Main` プロシージャは必要ありません。|
 |`-target:module`|アセンブリに追加できるモジュールをコンパイラによって生成します。<br /><br /> 出力ファイルは、.netmodule の拡張子を使用して作成されます。<br /><br /> .NET 共通言語ランタイムは、アセンブリのないファイルを読み込むことができません。 ただし、このようなファイルは、`-reference`を使用してアセンブリのアセンブリマニフェストに組み込むことができます。<br /><br /> あるモジュールのコードが別のモジュールの内部型を参照する場合は、`-reference`を使用して、両方のモジュールをアセンブリマニフェストに組み込む必要があります。<br /><br /> [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)オプションは、モジュールからメタデータをインポートします。|
 |`-target:winexe`|コンパイラによって、実行可能な Windows ベースのアプリケーションが作成されます。<br /><br /> 実行可能ファイルは .exe 拡張子を使用して作成されます。 Windows ベースのアプリケーションは、.NET Framework クラスライブラリまたは Windows Api のいずれかからユーザーインターフェイスを提供するアプリケーションです。<br /><br /> `-out` オプションで特に指定しない限り、出力ファイル名は、`Sub Main` プロシージャを含む入力ファイルの名前になります。<br /><br /> .Exe ファイルにコンパイルされるソースコードファイルには、1つの `Sub Main` プロシージャのみが必要です。 コードに `Sub Main` プロシージャを持つクラスが複数ある場合は、`-main` コンパイラオプションを使用して、`Sub Main` プロシージャを含むクラスを指定します。|
@@ -50,7 +50,7 @@ Vbc.exe の各インスタンスは、最大で1つの出力ファイルを生�
 
 3. **[アプリケーションの種類]** ボックスの値を変更します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次のコードは `in.vb`をコンパイルし、`in.dll`を作成します。
 
@@ -67,4 +67,4 @@ vbc -target:library in.vb
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
 - [.NET のアセンブリ](../../../standard/assembly/index.md)
-- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

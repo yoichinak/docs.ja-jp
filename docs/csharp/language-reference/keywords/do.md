@@ -1,6 +1,5 @@
 ---
 title: do - C# リファレンス
-ms.custom: seodec18
 ms.date: 05/28/2018
 f1_keywords:
 - do_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 5612cfb2462117ac431de9c702cd8137f495e5dc
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 38224ce70c19ff67ad80b99d3da52155849f1341
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74551809"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713597"
 ---
 # <a name="do-c-reference"></a>do (C# リファレンス)
 

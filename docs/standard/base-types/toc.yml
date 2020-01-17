@@ -38,10 +38,6 @@
               href: how-to-define-and-use-custom-numeric-format-providers.md
             - name: '方法: 日付と時刻の値をラウンドトリップさせる'
               href: how-to-round-trip-date-and-time-values.md
-            - name: '方法: Web コントロールでの数値のユーザー入力を数値に変換する'
-              href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
-            - name: '方法: ローカライズされた日付/時刻情報を Web ユーザーに表示する'
-              href: how-to-display-localized-date-and-time-information-to-web-users.md
             - name: '方法: 日付および時刻の値のミリ秒部分を表示する'
               href: how-to-display-milliseconds-in-date-and-time-values.md
             - name: '方法: グレゴリオ暦以外の暦の日付を表示する'

@@ -2,13 +2,12 @@
 title: DNX から .NET Core CLI への移行
 description: DNX ツールの使用から .NET Core CLI ツールの使用に移行します。
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 91a43ffda31b34332d2e545a90c857221aa162c4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160837"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715520"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>DNX から .NET Core CLI への移行 (project.json)
 
@@ -117,8 +116,8 @@ CLI と DNX は両方とも、`project.json` ファイルに基づいた同じ�
 
 目的の移植性の種類に対して呼び出しを行ったら、対象となるフレームワークを変更する必要があります。 .NET Core 用のアプリケーションを作成していた場合、対象となるフレームワークとして `dnxcore50` を使用していた可能性が最も高くなります。 CLI の場合、新しい [.NET Standard](../../standard/net-standard.md) によってもたらされた変更点があるので、フレームワークを次のいずれかに設定する必要があります。
 
-1. `netcoreapp1.0` - .NET Core でアプリケーションを作成する場合 (ASP.NET Core アプリケーションを含む)
-2. `netstandard1.6` - .NET Core 用のクラス ライブラリを作成する場合
+1. `netcoreapp1.0`- .NET Core でアプリケーションを作成する場合 (ASP.NET Core アプリケーションを含む)
+2. `netstandard1.6`- .NET Core 用のクラス ライブラリを作成する場合
 
 その他の `dnx` の対象 (`dnx451` など) を使用する場合も、それらを変更する必要があります。 `dnx451` は、`net451` に変更する必要があります。
 詳細については、「[.NET Standard](../../standard/net-standard.md)」のトピックをご覧ください。

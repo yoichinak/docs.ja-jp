@@ -107,7 +107,7 @@ ms.locfileid: "74350513"
 型チェックスイッチ ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) が `On`場合、コンパイラは暗黙的な縮小変換をすべて許可しません。 これには、`String`に関係するものも含まれます。 コードでは、`CStr` や[CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)などの変換キーワードを使用して、変換を試行するように .NET Framework に指示することもできます。
 
 > [!NOTE]
-> `For Each…Next` コレクション内の要素から loop コントロール変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、「」の「縮小変換」セクションを参照してください。 [次のステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)。
+> `For Each…Next` コレクション内の要素から loop 制御変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、 [For Each ... Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) の「縮小変換」セクションを参照してください。
 
 ### <a name="narrowing-conversion-protection"></a>縮小変換保護
 

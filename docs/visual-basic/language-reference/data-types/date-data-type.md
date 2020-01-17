@@ -68,11 +68,11 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **相互運用に関する考慮事項。** オートメーションまたは COM オブジェクトのように、.NET Framework 向けに作成されていないコンポーネントとやり取りする場合、他の環境の日付/時刻の型は Visual Basic の `Date` 型と互換性がないことに注意してください。 そのようなコンポーネントに日付/時刻の引数を渡す場合は、新しい Visual Basic のコードで、`Double` 型ではなく `Date` 型として宣言し、<xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> および <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType> の変換メソッドを使用します。
+- **相互運用の考慮事項。** オートメーションまたは COM オブジェクトのように、.NET Framework 向けに作成されていないコンポーネントとやり取りする場合、他の環境の日付/時刻の型は Visual Basic の `Date` 型と互換性がないことに注意してください。そのようなコンポーネントに日付/時刻の引数を渡す場合は、新しい Visual Basic のコードで、`Double` 型ではなく `Date` 型として宣言し、<xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> および <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType> の変換メソッドを使用します。
 
-- **文字を入力します。** `Date` には、リテラルの型文字または識別子の型文字がありません。 ただし、コンパイラでは、シャープ記号 (`# #`) で囲まれたリテラルは、日付型 (`Date`) として処理されます。
+- **型宣言文字。** `Date` には、リテラルの型文字または識別子の型文字がありません。 ただし、コンパイラでは、シャープ記号 (`# #`) で囲まれたリテラルは、日付型 (`Date`) として処理されます。
 
-- **フレームワークの種類。** .NET Framework において対応する型は、<xref:System.DateTime?displayProperty=nameWithType> 構造体です。
+- **Framework のデータ型。** .NET Framework において対応する型は、<xref:System.DateTime?displayProperty=nameWithType> 構造体です。
 
 ## <a name="example"></a>例
 
@@ -86,8 +86,8 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [Standard Date and Time Format Strings](../../../standard/base-types/standard-date-and-time-format-strings.md)
-- [Custom Date and Time Format Strings](../../../standard/base-types/custom-date-and-time-format-strings.md)
+- [標準の日時形式文字列](../../../standard/base-types/standard-date-and-time-format-strings.md)
+- [カスタム日時形式文字列](../../../standard/base-types/custom-date-and-time-format-strings.md)
 - [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

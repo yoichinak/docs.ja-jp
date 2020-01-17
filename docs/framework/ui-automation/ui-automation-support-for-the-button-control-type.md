@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Button control type
 - Button control type
 ms.assetid: 057c983a-da83-4c50-86c7-26fe381076a6
-ms.openlocfilehash: d9eef575efb5309fe3df20e2f0ab3e0347105e55
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5087e02db3a5a44ab2e2b97523e793e397a0a914
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441205"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741295"
 ---
 # <a name="ui-automation-support-for-the-button-control-type"></a>UI オートメーションによる Button コントロール型のサポート
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74441205"
   
  ボタンとは、ユーザーが操作を実行するために対話するオブジェクトのことです。その例には、ダイアログ ボックスにある **[OK]** ボタンや **[キャンセル]** ボタンなどがあります。 ボタン コントロールは、ユーザーがコマンドを完了できるよう、単一のコマンドにマップされて公開されることから、単純なコントロールです。  
   
- 以降のセクションで、Button コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要件は、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]、または [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]であるかに関わらず、すべてのボタン コントロールに適用されます。  
+ 以降のセクションで、Button コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の要件は、[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]のいずれの場合でも、すべてのボタンコントロールに適用されます。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  
@@ -29,53 +29,53 @@ ms.locfileid: "74441205"
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
-|ボタン<br /><br /> -Image (0 以上)<br />-Text (0 以上)|ボタン|  
+|Button<br /><br /> -Image (0 以上)<br />-Text (0 以上)|Button|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、Button コントロール型を実装するコントロール (ボタン コントロールなど) に特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプロパティの詳細については、「[クライアントの UI オートメーションのプロパティ](ui-automation-properties-for-clients.md)」を参照してください。  
+ 次の表に、Button コントロール型を実装するコントロール (ボタン コントロールなど) に特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティの詳細については[クライアントの UI オートメーション プロパティ](ui-automation-properties-for-clients.md)をご覧ください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|値|説明|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|Value|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|「ノート」を参照。|ボタン コントロールは、通常、そのコントロールが表す操作をエンド ユーザーがキーボードから素早く実行できるように、アクセラレータ キーをサポートする必要があります。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|「ノート」を参照。|このプロパティの値は、アプリケーションのすべてのコントロールで一意である必要があります。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|「ノート」を参照。|コントロール全体を格納する最も外側の四角形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|「ノート」を参照。|四角形領域が存在する場合にサポートされます。 四角形領域の内側にクリック不可能な点が存在し、特別なヒット テストを実行する場合は、クリック可能な点をオーバーライドして提供します。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ボタン|この値は、すべての UI フレームワークで同じです。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|「ノート」を参照。|ヘルプ テキストで、ボタンをアクティブにした場合の最終結果を説明できます。 これは一般に、ツールヒントに表示する情報と同じような情報です。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|「ノート」を参照してください。|ボタン コントロールは、通常、そのコントロールが表す操作をエンド ユーザーがキーボードから素早く実行できるように、アクセラレータ キーをサポートする必要があります。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|「ノート」を参照してください。|このプロパティの値は、アプリケーション内のすべてのコントロールで一意である必要があります。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|「ノート」を参照してください。|コントロール全体を格納する最も外側の四角形。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|「ノート」を参照してください。|四角形領域が存在する場合にサポートされます。 四角形領域内にクリック不可能な点が存在し、特別なヒット テストを実行する場合は、オーバーライドしてクリック可能な点を提供します。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Button|この値は、すべての UI フレームワークで同じです。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|「ノート」を参照してください。|ヘルプ テキストで、ボタンをアクティブにした場合の最終結果を説明できます。 これは一般に、ツールヒントに表示する情報と同じような情報です。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Button コントロールは、常にコンテンツである必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Button コントロールは、常にコントロールである必要があります。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|「ノート」を参照。|コントロールがキーボード フォーカスを受け取ることができる場合は、このプロパティをサポートする必要があります。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|「ノート」を参照してください。|コントロールがキーボード フォーカスを受け取ることができる場合は、このプロパティをサポートする必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|ボタン コントロールは、そのコンテンツで自己ラベル付けを行います。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「ボタン」|Button コントロール型に対応する、ローカライズされた文字列。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|「ノート」を参照。|ボタン コントロールの名前は、そのコントロールのラベル付けに使用されるテキストです。 ボタンのラベル付けにイメージを使用する場合は、必ずボタンの Name プロパティに代替テキストを指定する必要があります。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|「ノート」を参照してください。|ボタン コントロールの名前は、そのコントロールのラベル付けに使用されるテキストです。 ボタンのラベル付けにイメージを使用する場合は、必ずボタンの Name プロパティに代替テキストを指定する必要があります。|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>必須の UI オートメーション コントロール パターン  
  次の表に、すべてのボタン コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターンを示します。 コントロール パターンの詳細については、「 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)」を参照してください。  
   
-|コントロール パターン|サポート|説明|  
+|コントロール パターン|でのサポート|メモ|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|「ノート」を参照。|すべてのボタンは、Invoke コントロール パターンまたは Toggle コントロール パターンをサポートする必要があります。 Invoke は、ボタンがユーザーの要求時にコマンドを実行する場合にサポートされます。 このコマンドは、切り取り、コピー、貼り付け、削除などの単一の操作にマップされます。|  
-|<xref:System.Windows.Automation.Provider.IToggleProvider>|「ノート」を参照。|すべてのボタンは、Invoke コントロール パターンまたは Toggle コントロール パターンをサポートする必要があります。 Toggle は、ボタンが最大 3 つの一連の状態を循環できる場合にサポートされます。 通常は、特定の機能のオン/オフの切り替えと見なされます。|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|「ノート」を参照。|ボタンが分割ボタンの子としてホストされる場合、子ボタンは Invoke または Toggle パターンの代わりに ExpandCollapse パターンをサポートすることができます。 ExpandCollapse パターンは、ボタン要素に関連付けられたメニューやその他のサブ構造を開く、または閉じるために使用できます。|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|「ノート」を参照してください。|すべてのボタンは、Invoke コントロール パターンまたは Toggle コントロール パターンをサポートする必要があります。 Invoke は、ボタンがユーザーの要求時にコマンドを実行する場合にサポートされます。 このコマンドは、切り取り、コピー、貼り付け、削除などの単一の操作にマップされます。|  
+|<xref:System.Windows.Automation.Provider.IToggleProvider>|「ノート」を参照してください。|すべてのボタンは、Invoke コントロール パターンまたは Toggle コントロール パターンをサポートする必要があります。 Toggle は、ボタンが最大 3 つの一連の状態を循環できる場合にサポートされます。 通常は、特定の機能のオン/オフの切り替えと見なされます。|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|「ノート」を参照してください。|ボタンが分割ボタンの子としてホストされる場合、子ボタンは Invoke または Toggle パターンの代わりに ExpandCollapse パターンをサポートすることができます。 ExpandCollapse パターンは、ボタン要素に関連付けられたメニューやその他のサブ構造を開く、または閉じるために使用できます。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
  次の表に、すべてのボタン コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントの詳細については、「 [UI Automation Events Overview](ui-automation-events-overview.md)」を参照してください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|説明|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|でのサポート|メモ|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必須|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|必須|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> プロパティ変更イベント。|必須|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> プロパティ変更イベント。|必須|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> プロパティ変更イベント。|必須|なし|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必須|なし|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必須|[なし]|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|必須|[なし]|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> プロパティ変更イベント。|必須|[なし]|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> プロパティ変更イベント。|必須|[なし]|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> プロパティ変更イベント。|必須|[なし]|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必須|[なし]|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|状況に依存|コントロールが Invoke コントロール パターンをサポートする場合は、このイベントをサポートする必要があります。|  
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> プロパティ変更イベント。|状況に依存|コントロールが Toggle コントロール パターンをサポートする場合は、このイベントをサポートする必要があります。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Automation.ControlType.Button>
 - [UI オートメーション コントロール型の概要](ui-automation-control-types-overview.md)

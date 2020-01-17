@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d08399933f37c4110639bf1f4a81f222dd597b4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5cd733d557dabe66145fdbb848c473411d63c62b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910317"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709622"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>スタイル シート パラメーターと拡張オブジェクト用の XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> クラスには、XSLT (Extensible Stylesheet Language for Transformations) パラメーターと XSLT 拡張オブジェクトが含まれています。 これらのパラメーターと拡張オブジェクトは、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡すことで、スタイル シートから呼び出せるようになります。  
@@ -40,9 +38,9 @@ ms.locfileid: "69910317"
   
 |W3C 型|対応する .NET Framework クラス (型)|XPath 型または XSLT 型|  
 |--------------|----------------------------------------------|-----------------------------|  
-|String|System.String|XPath|  
-|ブール型|System.Boolean|XPath|  
-|数値|System.Double|XPath|  
+|文字列型|System.String|XPath|  
+|Boolean|System.Boolean|XPath|  
+|Number|System.Double|XPath|  
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -56,7 +54,7 @@ ms.locfileid: "69910317"
   
 3. <xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。  
   
-### <a name="example"></a>例  
+### <a name="example"></a>使用例  
  算出された割引日を保持するパラメーターを <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用して作成する例を次に示します。 割引日は、発注日から 20 日後として算出されます。  
   
 ```vb  
@@ -139,7 +137,7 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a>入力  
+### <a name="input"></a>[入力]  
  order.xml  
   
 ```xml  
@@ -171,7 +169,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>Output  
+### <a name="output"></a>出力  
   
 ```xml  
 <order>  
@@ -197,7 +195,7 @@ public class Sample
   
 3. <xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。  
   
-### <a name="example"></a>例  
+### <a name="example"></a>使用例  
  半径が指定された円の円周を算出する例を次に示します。  
   
 ```vb  
@@ -307,7 +305,7 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a>入力  
+### <a name="input"></a>[入力]  
  number.xml  
   
 ```xml  
@@ -343,7 +341,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>Output  
+### <a name="output"></a>出力  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

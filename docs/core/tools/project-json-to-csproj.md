@@ -3,13 +3,12 @@ title: project.json と csproj の比較
 description: 「project.json 要素と csproj 要素の間のマッピング」を参照してください。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.custom: seodec18
-ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747412"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714134"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json プロパティと csproj プロパティの間のマッピング
 
@@ -340,7 +339,7 @@ MSBuild では、ビルド中、すべてのプロジェクトが*移植可能*�
 
 詳細については、「[自己完結型の展開 (SCD)](../deploying/index.md#self-contained-deployments-scd)」を参照してください。
 
-## <a name="tools"></a>ツール
+## <a name="tools"></a>tools
 
 ```json
 {
@@ -570,7 +569,7 @@ MSBuild でこれに相当するものは[ターゲット](/visualstudio/msbuild
 }
 ```
 
-csproj ではサポートされていません。 代わりに、*.nuspec* ファイルにコンテンツ ファイルを追加する必要があります。
+csproj ではサポートされていません。 代わりに、 *.nuspec* ファイルにコンテンツ ファイルを追加する必要があります。
 詳細については、「[Including content files](/nuget/schema/nuspec#including-content-files)」 (コンテンツ ファイルを追加する) を参照してください。
 
 ## <a name="files"></a>ファイル

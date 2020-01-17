@@ -1,6 +1,5 @@
 ---
 title: 型 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - value types [C#]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 27560449daa18741a53e3affa33e08afa40d006a
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552493"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711884"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 
@@ -68,7 +67,7 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
 
 ## <a name="custom-types"></a>カスタム型
 
-独自のカスタム型を作成するには、[struct](../../language-reference/keywords/struct.md)、[class](../../language-reference/keywords/class.md)、[interface](../../language-reference/keywords/interface.md)、および [enum](../../language-reference/keywords/enum.md) の各構造体を使用します。 .NET クラス ライブラリ自体が、マイクロソフトによって提供された、ユーザーが独自のアプリケーションで使用できるカスタムの型のコレクションです。 既定では、クラス ライブラリで最も頻繁に使用される型は任意の C# プログラムで使用可能になっています。 その他の型は、その型が定義されているアセンブリへのプロジェクト参照を明示的に追加した場合にのみ使用可能になります。 コンパイラがアセンブリを参照できるようになると、そのアセンブリ内で宣言されている型の変数 (および定数) をソース コード内で宣言できるようになります。 詳細については、「[.NET クラス ライブラリの概要](../../../standard/class-library-overview.md)」を参照してください。
+独自のカスタム型を作成するには、[struct](../../language-reference/keywords/struct.md)、[class](../../language-reference/keywords/class.md)、[interface](../../language-reference/keywords/interface.md)、および [enum](../../language-reference/builtin-types/enum.md) の各構造体を使用します。 .NET クラス ライブラリ自体が、マイクロソフトによって提供された、ユーザーが独自のアプリケーションで使用できるカスタムの型のコレクションです。 既定では、クラス ライブラリで最も頻繁に使用される型は任意の C# プログラムで使用可能になっています。 その他の型は、その型が定義されているアセンブリへのプロジェクト参照を明示的に追加した場合にのみ使用可能になります。 コンパイラがアセンブリを参照できるようになると、そのアセンブリ内で宣言されている型の変数 (および定数) をソース コード内で宣言できるようになります。 詳細については、「[.NET クラス ライブラリの概要](../../../standard/class-library-overview.md)」を参照してください。
 
 ## <a name="the-common-type-system"></a>共通型システム
 
@@ -91,7 +90,7 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
 
 値型は、<xref:System.ValueType?displayProperty=nameWithType> の派生型である <xref:System.Object?displayProperty=nameWithType> から派生します。 <xref:System.ValueType?displayProperty=nameWithType> から派生した型は、CLR では特殊な動作をします。 値型の変数は、その値を直接含みます。つまり、変数がどのようなコンテキストで宣言されたとしても、必ずメモリがインラインで割り当てられます。 値型の変数には、独立したヒープ割り当てやガベージ コレクションのオーバーヘッドはありません。
 
-値型には、[構造体](../../language-reference/keywords/struct.md)と[列挙体](../../language-reference/keywords/enum.md)の 2 つのカテゴリがあります。
+値型には、[構造体](../../language-reference/keywords/struct.md)と[列挙体](../../language-reference/builtin-types/enum.md)の 2 つのカテゴリがあります。
 
 組み込みの数値型は構造体であり、次のようにしてアクセスできるプロパティとメソッドを持ちます。
 
@@ -116,13 +115,13 @@ char c = 'Z';
 
 構造体の詳細については、「[Structs](../classes-and-structs/structs.md)」を参照してください。 .NET における値型の詳細については、「[値型](../../language-reference/keywords/value-types.md)」を参照してください。
 
-別の種類の値型として、[列挙体](../../language-reference/keywords/enum.md)があります。 列挙体は、一連の名前付き整数定数を定義します。 たとえば、.NET クラス ライブラリの <xref:System.IO.FileMode?displayProperty=nameWithType> 列挙体には、ファイルを開く方法を指定する一連の名前付き整数定数が格納されています。 これは、次の例のように定義されます。
+別の種類の値型として、[列挙体](../../language-reference/builtin-types/enum.md)があります。 列挙体は、一連の名前付き整数定数を定義します。 たとえば、.NET クラス ライブラリの <xref:System.IO.FileMode?displayProperty=nameWithType> 列挙体には、ファイルを開く方法を指定する一連の名前付き整数定数が格納されています。 これは、次の例のように定義されます。
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
-定数 `System.IO.FileMode.Create` は、2 という値を持ちます。 しかし、人間がソース コードを読む場合は名前があるとわかりやすいため、このような場合は、リテラルの数値の定数を使用するよりも、列挙体を使用する方がよいと言えます。 詳細については、<xref:System.IO.FileMode?displayProperty=nameWithType> を参照してください。
+定数 `System.IO.FileMode.Create` は、2 という値を持ちます。 しかし、人間がソース コードを読む場合は名前があるとわかりやすいため、このような場合は、リテラルの数値の定数を使用するよりも、列挙体を使用する方がよいと言えます。 詳細については、「<xref:System.IO.FileMode?displayProperty=nameWithType>」を参照してください。
 
-すべての列挙体は、<xref:System.Enum?displayProperty=nameWithType> の派生型である <xref:System.ValueType?displayProperty=nameWithType> から派生します。 構造体に適用されるすべての規則が、列挙体にも適用されます。 詳細については、「[ 列挙型](../enumeration-types.md)」を参照してください。
+すべての列挙体は、<xref:System.Enum?displayProperty=nameWithType> の派生型である <xref:System.ValueType?displayProperty=nameWithType> から派生します。 構造体に適用されるすべての規則が、列挙体にも適用されます。 詳細については、「[列挙型](../../language-reference/builtin-types/enum.md)」を参照してください。
 
 ### <a name="reference-types"></a>参照型
 

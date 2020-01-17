@@ -5,14 +5,12 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8f1c92154fe62b1b6ba6981606680daf37d087f4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e1deb17dfdfea4c8b66eb8d836a10bf888727e1a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974862"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715900"
 ---
 # <a name="thread-pool-etw-events"></a>スレッド プール ETW イベント
 これらのイベントは、ワーカー スレッドと I/O スレッドに関する情報を収集します。  
@@ -35,7 +33,7 @@ ms.locfileid: "73974862"
   
  次の表に、イベント情報を示します。  
   
-|event|イベント ID|いつ発生するか|  
+|Event|イベント ID|いつ発生するか|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|ワーカー スレッドが作成された。|  
 |`ThreadPoolWorkerThreadStop`|51|ワーカー スレッドが停止された。|  
@@ -44,7 +42,7 @@ ms.locfileid: "73974862"
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データの種類|説明|  
+|フィールド名|[データ型]|説明|  
 |----------------|---------------|-----------------|  
 |ActiveWorkerThreadCount|win:UInt32|作業の処理に使用可能なワーカー スレッド (既に作業の処理中のもの含む) の数。|  
 |RetiredWorkerThreadCount|win:UInt32|作業の処理に使用できないものの、後にさらに多くのスレッドが必要になった場合に備えて予約されているワーカー スレッドの数。|  
@@ -62,13 +60,13 @@ ms.locfileid: "73974862"
   
  次の表に、イベント情報を示します。  
   
-|event|イベント ID|説明|  
+|Event|イベント ID|説明|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|1 つのサンプルの情報のコレクションを参照します。つまり、特定のコンカレンシー レベルの特定の時刻におけるスループットの測定値です。|  
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データの種類|説明|  
+|フィールド名|[データ型]|説明|  
 |----------------|---------------|-----------------|  
 |スループット|win:Double|時間の単位あたりの入力候補の数です。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
@@ -82,13 +80,13 @@ ms.locfileid: "73974862"
   
  次の表に、イベント情報を示します。  
   
-|event|イベント ID|説明|  
+|Event|イベント ID|説明|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|スレッドの挿入 (山登り法) アルゴリズムが、コンカレンシー レベルに変更があったと判断した場合に、コントロールの変更を記録します。|  
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データの種類|説明|  
+|フィールド名|[データ型]|説明|  
 |----------------|---------------|-----------------|  
 |AverageThroughput|win:Double|計測のサンプルの平均のスループット。|  
 |NewWorkerThreadCount|win:UInt32|新しいアクティブなワーカー スレッド数。|  
@@ -104,20 +102,20 @@ ms.locfileid: "73974862"
   
  次の表に、イベント情報を示します。  
   
-|event|イベント ID|説明|  
+|Event|イベント ID|説明|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|スレッド プールに関するデータを収集します。|  
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データの種類|説明|  
+|フィールド名|[データ型]|説明|  
 |----------------|---------------|-----------------|  
-|存続期間|win:Double|これらの統計情報が収集される時間数 (秒)。|  
+|継続期間|win:Double|これらの統計情報が収集される時間数 (秒)。|  
 |スループット|win:Double|この間隔中の 1 秒あたりの入力候補の平均数。|  
-|ThreadWave|win:Double|内部使用のために予約されています。|  
-|ThroughputWave|win:Double|内部使用のために予約されています。|  
-|ThroughputErrorEstimate|win:Double|内部使用のために予約されています。|  
-|AverageThroughputErrorEstimate|win:Double|内部使用のために予約されています。|  
+|ThreadWave|win:Double|内部使用のために予約済みです。|  
+|ThroughputWave|win:Double|内部使用のために予約済みです。|  
+|ThroughputErrorEstimate|win:Double|内部使用のために予約済みです。|  
+|AverageThroughputErrorEstimate|win:Double|内部使用のために予約済みです。|  
 |ThroughputRatio|win:Double|この間隔中にアクティブなワーカー スレッドの数の変動によって引き起こされる、スループットの相対的な向上。|  
 |信頼度|win:Double|ThroughputRatio フィールドの有効性の測定結果。|  
 |NewcontrolSetting|win:Double|アクティブなスレッド数の将来のバリエーションのベースラインとして使用するアクティブなワーカー スレッドの数。|  
@@ -136,15 +134,15 @@ ms.locfileid: "73974862"
   
  次の表に、イベント情報を示します。  
   
-|event|イベント ID|いつ発生するか|  
+|Event|イベント ID|いつ発生するか|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|I/O スレッドがスレッド プールに作成された。|  
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データの種類|説明|  
+|フィールド名|[データ型]|説明|  
 |----------------|---------------|-----------------|  
-|カウント|win:UInt64|新しく作成されたスレッドを含む、I/O のスレッドの数です。|  
+|[カウント]|win:UInt64|新しく作成されたスレッドを含む、I/O のスレッドの数です。|  
 |NumRetired|win:UInt64|提供終了になったワーカー スレッドの数。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
@@ -157,15 +155,15 @@ ms.locfileid: "73974862"
   
  次の表に、イベント情報を示します。  
   
-|event|イベント ID|いつ発生するか|  
+|Event|イベント ID|いつ発生するか|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|I/O スレッドが、提供終了の候補になる。|  
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データの種類|説明|  
+|フィールド名|[データ型]|説明|  
 |----------------|---------------|-----------------|  
-|カウント|win:UInt64|スレッド プールに残っている I/O スレッドの数。|  
+|[カウント]|win:UInt64|スレッド プールに残っている I/O スレッドの数。|  
 |NumRetired|win:UInt64|提供終了になった I/O スレッドの数。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
@@ -178,15 +176,15 @@ ms.locfileid: "73974862"
   
  次の表に、イベント情報を示します。  
   
-|event|イベント ID|いつ発生するか|  
+|Event|イベント ID|いつ発生するか|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|スレッドが提供終了の候補になってから待機期間内に I/O が到着したため I/O スレッドが提供終了解除された。|  
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データの種類|説明|  
+|フィールド名|[データ型]|説明|  
 |----------------|---------------|-----------------|  
-|カウント|win:UInt64|これを含む、スレッド プール内の I/O スレッドの数。|  
+|[カウント]|win:UInt64|これを含む、スレッド プール内の I/O スレッドの数。|  
 |NumRetired|win:UInt64|提供終了になった I/O スレッドの数。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
@@ -199,15 +197,15 @@ ms.locfileid: "73974862"
   
  次の表に、イベント情報を示します。  
   
-|event|イベント ID|いつ発生するか|  
+|Event|イベント ID|いつ発生するか|  
 |-----------|--------------|-----------------|  
 |`IOThreadTerminate`|45|I/O スレッドがスレッド プールに作成された。|  
   
  次の表に、イベント データを示します。  
   
-|フィールド名|データの種類|説明|  
+|フィールド名|[データ型]|説明|  
 |----------------|---------------|-----------------|  
-|カウント|win:UInt64|スレッド プールに残っている I/O スレッドの数。|  
+|[カウント]|win:UInt64|スレッド プールに残っている I/O スレッドの数。|  
 |NumRetired|win:UInt64|提供終了になった I/O スレッドの数。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   

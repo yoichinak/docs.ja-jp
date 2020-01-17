@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: cea6809ebf9a4ae516d59bd99bf8126d2e874788
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: b43da2723fb618bc44a14e8102c8d59e6ecc0c11
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459567"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559847"
 ---
 # <a name="xaml-in-wpf"></a>WPF の XAML
 
@@ -28,14 +28,14 @@ ms.locfileid: "73459567"
 [XAML 名前空間および WPF XAML の名前空間の割り当て](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
 [WPF XAML 名前スコープ](wpf-xaml-namescopes.md)  
 [インライン スタイルおよびテンプレート](inline-styles-and-templates.md)  
-[XAML での空白の処理](../../xaml-services/whitespace-processing-in-xaml.md)  
+[XAML での空白の処理](../../../desktop-wpf/xaml-services/white-space-processing.md)  
 [TypeConverters および XAML](typeconverters-and-xaml.md)  
-[XML 文字エンティティと XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
-[XAML 名前空間 (x:) 言語機能](../../xaml-services/xaml-namespace-x-language-features.md)  
+[XML 文字エンティティと XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md)  
+[XAML 名前空間 (x:)言語機能](../../../desktop-wpf/xaml-services/namespace-language-features.md)  
 [WPF XAML 拡張機能](wpf-xaml-extensions.md)  
-[マークアップの互換性 (mc:) 言語機能](markup-compatibility-mc-language-features.md)  
+[マークアップの互換性 (mc:)言語機能](markup-compatibility-mc-language-features.md)  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
 
 [WPF アーキテクチャ](wpf-architecture.md)  
 [基本要素](base-elements.md)  

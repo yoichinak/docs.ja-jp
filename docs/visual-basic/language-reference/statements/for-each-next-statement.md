@@ -148,11 +148,11 @@ Next [ element ]
 
 Visual Basic が `Next` ステートメントを検出するたびに、`For Each` ステートメントに戻ります。 この場合も、`MoveNext` と `Current` を呼び出して次の要素を返します。もう一度、ブロックを実行するか、結果に応じてループを停止します。 このプロセスは、次の要素が存在しないこと、または `Exit For` ステートメントが発生したことが `MoveNext` によって示されるまで続行されます。
 
-**コレクションを変更しています。** <xref:System.Collections.IEnumerable.GetEnumerator%2A> によって返される列挙子オブジェクトは、要素の追加、削除、置換、または並べ替えを行うことによって、コレクションを変更することはできません。 `For Each`...`Next` ループを開始した後にコレクションを変更した場合、列挙子オブジェクトは無効になり、次に要素にアクセスしようとすると <xref:System.InvalidOperationException> 例外が発生します。
+**コレクションの変更。** <xref:System.Collections.IEnumerable.GetEnumerator%2A> によって返される列挙子オブジェクトは、要素の追加、削除、置換、または並べ替えを行うことによって、コレクションを変更することはできません。 `For Each`...`Next` ループを開始した後にコレクションを変更した場合、列挙子オブジェクトは無効になり、次に要素にアクセスしようとすると <xref:System.InvalidOperationException> 例外が発生します。
 
 ただし、この変更のブロックは Visual Basic によって決定されるのではなく、<xref:System.Collections.IEnumerable> インターフェイスの実装によって決まります。 反復処理中に変更を許可する方法で `IEnumerable` を実装することができます。 このような動的な変更を検討している場合は、使用しているコレクションの `IEnumerable` 実装の特性を理解していることを確認してください。
 
-**コレクション要素を変更しています。** 列挙子オブジェクトの <xref:System.Collections.IEnumerator.Current%2A> プロパティは[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)であり、各コレクション要素のローカルコピーを返します。 つまり、`For Each`...`Next` ループで要素自体を変更することはできません。 行った変更は、`Current` からのローカルコピーにのみ適用され、基になるコレクションには反映されません。 ただし、要素が参照型の場合は、その要素が指すインスタンスのメンバーを変更できます。 次の例では、各 `thisControl` 要素の `BackColor` メンバーを変更します。 ただし、`thisControl` 自体を変更することはできません。
+**コレクション要素の変更。** 列挙子オブジェクトの <xref:System.Collections.IEnumerator.Current%2A> プロパティは[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)であり、各コレクション要素のローカルコピーを返します。 つまり、`For Each`...`Next` ループで要素自体を変更することはできません。 行った変更は、`Current` からのローカルコピーにのみ適用され、基になるコレクションには反映されません。 ただし、要素が参照型の場合は、その要素が指すインスタンスのメンバーを変更できます。 次の例では、各 `thisControl` 要素の `BackColor` メンバーを変更します。 ただし、`thisControl` 自体を変更することはできません。
 
 ```vb
 Sub LightBlueBackground(thisForm As System.Windows.Forms.Form)
@@ -164,7 +164,7 @@ End Sub
 
 前の例では、各 `thisControl` 要素の `BackColor` メンバーを変更できますが、`thisControl` 自体を変更することはできません。
 
-**配列を走査しています。** <xref:System.Array> クラスは <xref:System.Collections.IEnumerable> インターフェイスを実装するため、すべての配列は <xref:System.Array.GetEnumerator%2A> メソッドを公開します。 これは、`For Each`...`Next` ループで配列を反復処理できることを意味します。 ただし、読み取ることができるのは配列要素だけです。 変更することはできません。
+**配列の反復処理。** <xref:System.Array> クラスは <xref:System.Collections.IEnumerable> インターフェイスを実装するため、すべての配列は <xref:System.Array.GetEnumerator%2A> メソッドを公開します。 これは、`For Each`...`Next` ループで配列を反復処理できることを意味します。 ただし、読み取ることができるのは配列要素だけです。 変更することはできません。
 
 ## <a name="example"></a>例
 
