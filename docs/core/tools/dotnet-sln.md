@@ -2,12 +2,12 @@
 title: dotnet sln コマンド
 description: dotnet-sln コマンドは、ソリューション ファイルでプロジェクトを追加、削除、一覧表示するための便利なオプションを提供します。
 ms.date: 10/29/2019
-ms.openlocfilehash: 18702c7638798117bd04d5c6a829d64cc6bf18a8
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c0badfeba1438a795106691a86c09a8b1675829b
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191822"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937248"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -17,7 +17,7 @@ ms.locfileid: "73191822"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet sln` - .NET Core ソリューション ファイルを変更します。
 
@@ -137,38 +137,38 @@ dotnet sln list [-h|--help]
 
 ## <a name="examples"></a>使用例
 
-ソリューションに 1 つの C# プロジェクトを追加する:
+- ソリューションに 1 つの C# プロジェクトを追加する:
 
-```dotnetcli
-dotnet sln todo.sln add todo-app/todo-app.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj
+  ```
 
-ソリューションから 1 つの C# プロジェクトを削除する:
+- ソリューションから 1 つの C# プロジェクトを削除する:
 
-```dotnetcli
-dotnet sln todo.sln remove todo-app/todo-app.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove todo-app/todo-app.csproj
+  ```
 
-ソリューションに複数の C# プロジェクトを追加する:
+- ソリューションに複数の C# プロジェクトを追加する:
 
-```dotnetcli
-dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
+  ```
 
-ソリューションから複数の C# プロジェクトを削除する:
+- ソリューションから複数の C# プロジェクトを削除する:
 
-```dotnetcli
-dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
+  ```
 
-glob パターンを使用して、ソリューションに複数の C# プロジェクトを追加する (Unix/Linux のみ):
+- glob パターンを使用して、ソリューションに複数の C# プロジェクトを追加する (Unix/Linux のみ):
 
-```dotnetcli
-dotnet sln todo.sln add **/*.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add **/*.csproj
+  ```
 
-glob パターンを使用して、ソリューションから複数の C# プロジェクトを削除する (Unix/Linux のみ):
+- glob パターンを使用して、ソリューションから複数の C# プロジェクトを削除する (Unix/Linux のみ):
 
-```dotnetcli
-dotnet sln todo.sln remove **/*.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove **/*.csproj
+  ```
