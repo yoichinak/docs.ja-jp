@@ -247,7 +247,7 @@ OS は、ランタイム環境の一部ですが、.NET ランタイムの一部
 
 ".NET スタック" は、.NET Standard および .NET のすべての実装を指します。 ".NET スタック" という語句が .NET の 1 つの実装を示すこともあります。 
 
-## <a name="target-framework"></a>対象フレーム
+## <a name="target-framework"></a>ターゲット フレームワーク
 
 .NET アプリまたはライブラリが依存する API のコレクション。
 
