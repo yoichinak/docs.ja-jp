@@ -7,12 +7,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 9363cff913027d491f7df0e0d0dac61638d6f802
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 74e9909fda83c781b5a15727f79ff755e7682b0f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715134"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963123"
 ---
 # <a name="struct-c-reference"></a>struct (C# リファレンス)
 
@@ -50,7 +50,6 @@ public struct Book
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [既定値の一覧表](default-values-table.md)
 - [組み込み型の一覧表](built-in-types-table.md)
 - [型](/dotnet/csharp/language-reference/keywords)
 - [値型](value-types.md)

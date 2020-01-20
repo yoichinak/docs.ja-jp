@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: d85b11204eb1f1de3a95efc67054cdffc4c219e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714663"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964743"
 ---
 # <a name="using-structs-c-programming-guide"></a>構造体の使用 (C# プログラミング ガイド)
 
@@ -21,7 +21,7 @@ ms.locfileid: "75714663"
 
 [new](../../language-reference/operators/new-operator.md) 演算子を使用して struct オブジェクトを作成すると、[コンストラクター シグネチャ](constructors.md#constructor-syntax)に基づき、オブジェクトが作成されて適切なコンストラクターが呼び出されます。 クラスとは異なり、構造体は `new` 演算子を使用せずにインスタンス化できます。 このような場合、コンストラクターの呼び出しが行われないため、割り当てがより効率的になります。 ただし、各フィールドは未割り当てのままになり、すべてのフィールドが初期化されるまではオブジェクトを使用できません。 たとえば、プロパティから値を取得または設定することができません。
 
-パラメーターなしのコンストラクターを使用して構造体オブジェクトを初期化する場合、その[既定値](../../language-reference/keywords/default-values-table.md)に基づいてすべてのメンバーが割り当てられます。
+パラメーターなしのコンストラクターを使用して構造体オブジェクトを初期化する場合、その[既定値](../../language-reference/builtin-types/default-values.md)に基づいてすべてのメンバーが割り当てられます。
 
 構造体のパラメーターを使用してコンストラクターを記述するとき、すべてのメンバーを明示的に初期化する必要があります。それ以外の場合、1 つまたは複数のメンバーが未割り当てのままとなり、構造体を使用できず、コンパイラ エラー [CS0171](../../misc/cs0171.md) が生成されます。
 
