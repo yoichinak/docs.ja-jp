@@ -17,13 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.custom: seodec18
-ms.openlocfilehash: 6504430f94f800bb9f41761ad64c65fefecb68d6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a11e3501aa57fc81a28d27d1280d299f99e1dea1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968251"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711520"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正規表現におけるバックトラッキング
 バックトラッキングは、正規表現パターンに省略可能な[量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)または[代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)が含まれている場合に発生します。この場合、正規表現エンジンは、一致の検索を継続するために、以前に保存した状態に戻ります。 バックトラッキングは、正規表現を強力にするための中心的な機能で、これにより、非常に複雑なパターンを照合できる強力かつ柔軟な正規表現を作成できるようになります。 その一方で、バックトラッキングにはマイナス面もあり、 多くの場合、正規表現エンジンのパフォーマンスを左右する最大の要因になります。 さいわい、正規表現エンジンの動作とバックトラッキングの使用方法は開発者が制御できます。 ここでは、バックトラッキングの動作のしくみと、バックトラッキングを制御する方法について説明します。  
@@ -130,7 +129,7 @@ ms.locfileid: "73968251"
 ### <a name="lookbehind-assertions"></a>後読みアサーション  
  .NET には、入力文字列の前の文字と一致する 2 つの言語要素 `(?<=`*subexpression*`)` と `(?<!`*subexpression*`)` が含まれています。 これらの言語要素は、どちらもゼロ幅アサーションです。つまり、現在の文字の直前にある文字が *subexpression*に一致するかどうかを、前進もバックトラッキングもせずに確認します。  
   
- `(?<=` *subexpression* `)` は肯定後読みアサーションで、現在の位置の前にある文字が *subexpression*に一致する必要があります。 `(?<!`*subexpression*`)` は否定後読みアサーションで、現在の位置の前にある文字が *subexpression*に一致しない必要があります。 否定と肯定のどちらの後読みアサーションも、 *subexpression* が前の部分式のサブセットである場合に特に役立ちます。  
+ `(?<=` *subexpression* `)` は肯定後読みアサーションで、現在の位置の前にある文字が *subexpression* に一致する必要があります。 `(?<!`*subexpression*`)` は否定後読みアサーションで、現在の位置の前にある文字が *subexpression*に一致しない必要があります。 否定と肯定のどちらの後読みアサーションも、 *subexpression* が前の部分式のサブセットである場合に特に役立ちます。  
   
  次の例では、メール アドレスのユーザー名を検証する 2 つの同等の正規表現パターンが使われています。 1 つ目のパターンでは、過度なバックトラッキングのためにパフォーマンスが低下します。 2 つ目のパターンでは、1 つ目の正規表現に変更を加えて、入れ子になった量指定子を肯定後読みアサーションに置き換えています。 この例の出力には、 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> メソッドの実行時間が表示されます。  
   
@@ -161,7 +160,7 @@ ms.locfileid: "73968251"
 ### <a name="lookahead-assertions"></a>先読みアサーション  
  .NET には、入力文字列の次の文字と一致する 2 つの言語要素 `(?=`*subexpression*`)` と `(?!`*subexpression*`)` が含まれています。 これらの言語要素は、どちらもゼロ幅アサーションです。つまり、現在の文字の直後にある文字が *subexpression*に一致するかどうかを、前進もバックトラッキングもせずに確認します。  
   
- `(?=` *subexpression* `)` は肯定先読みアサーションで、現在の位置の後にある文字が *subexpression*に一致する必要があります。 `(?!`*subexpression*`)` は否定先読みアサーションで、現在の位置の後にある文字が *subexpression*に一致しない必要があります。 肯定と否定のどちらの先読みアサーションも、 *subexpression* が次の部分式のサブセットである場合に特に役立ちます。  
+ `(?=` *subexpression* `)` は肯定先読みアサーションで、現在の位置の後にある文字が *subexpression* に一致する必要があります。 `(?!`*subexpression*`)` は否定先読みアサーションで、現在の位置の後にある文字が *subexpression*に一致しない必要があります。 肯定と否定のどちらの先読みアサーションも、 *subexpression* が次の部分式のサブセットである場合に特に役立ちます。  
   
  次の例では、完全修飾型名を検証する 2 つの同等の正規表現パターンが使用されています。 1 つ目のパターンでは、過度なバックトラッキングのためにパフォーマンスが低下します。 2 つ目のパターンでは、1 つ目の正規表現に変更を加えて、入れ子になった量指定子を肯定先読みアサーションに置き換えています。 この例の出力には、 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> メソッドの実行時間が表示されます。  
   

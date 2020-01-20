@@ -3,12 +3,12 @@ title: セマンティック解析の概要
 description: このチュートリアルでは、.NET コンパイラ SDK を使用したセマンティック解析の概要を説明します。
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 80a814054ab95a5b6585289e8580a725b18ca44e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7bf2f40ea0bc059d9c517780016ca5deb805ceb6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252945"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346978"
 ---
 # <a name="get-started-with-semantic-analysis"></a>セマンティック解析の概要
 
@@ -22,7 +22,7 @@ ms.locfileid: "70252945"
 
 ## <a name="understanding-compilations-and-symbols"></a>コンパイルとシンボルについて
 
-.NET コンパイラ SDK での作業が増えると、構文 API とセマンティック API の違いに詳しくなります。 **構文 API** では、プログラムの_構造_を見ることができます。 ただし、多くの場合、プログラムの意味論または_意味_に関する豊富な情報が必要になります。 VB または C# の緩いコード ファイルまたはスニペットは分離して構文的に解析できますが、孤立状態では、"この変数の型は何ですか" のような質問を問うことに意味がありません。 型名の意味は、アセンブリ参照、名前空間インポート、その他のコード ファイルに依存することがあります。 このような問いには、**セマンティック API** で、具体的には <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> クラスで答えられます。
+.NET コンパイラ SDK での作業が増えると、構文 API とセマンティック API の違いに詳しくなります。 **構文 API** では、プログラムの_構造_を見ることができます。 ただし、多くの場合、プログラムの意味論または_意味_に関する豊富な情報が必要になります。 Visual Basic または C# の緩いコード ファイルまたはスニペットは分離して構文的に解析できますが、孤立状態では、"この変数の型は何ですか" のような質問を問うことに意味がありません。 型名の意味は、アセンブリ参照、名前空間インポート、その他のコード ファイルに依存することがあります。 このような問いには、**セマンティック API** で、具体的には <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> クラスで答えられます。
 
 <xref:Microsoft.CodeAnalysis.Compilation> のインスタンスはコンパイラで見られるように 1 つのプロジェクトに類似し、Visual Basic または C# のプログラムをコンパイルするために必要なすべてを表します。 **コンパイル**には、コンパイルするソース ファイルのセット、アセンブリ参照、コンパイラ オプションが含まれます。 この文脈のその他すべての情報を利用し、コードの意味を推論できます。 <xref:Microsoft.CodeAnalysis.Compilation> では、型、名前空間、メンバー、名前やその他の式が参照する変数などのエンティティである**シンボル**を見つけることができます。 名前や式を**シンボル**と関連付けるプロセスを**バインド**と呼んでいます。
 

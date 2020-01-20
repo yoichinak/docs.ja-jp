@@ -12,13 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.custom: seodec18
-ms.openlocfilehash: dbfa61077cbfdd7da104dc12f304a4096b3c032d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd9d3f69f8135b608ced91c34f747600352bafe1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120613"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711455"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正規表現での文字クラス
 
@@ -440,7 +439,7 @@ ms.locfileid: "73120613"
 |0250 ～ 02AF|`IsIPAExtensions`|  
 |02B0 ～ 02FF|`IsSpacingModifierLetters`|  
 |0300 ～ 036F|`IsCombiningDiacriticalMarks`|  
-|0370 ～ 03FF|`IsGreek`<br /><br /> または<br /><br /> `IsGreekandCoptic`|  
+|0370 ～ 03FF|`IsGreek`<br /><br /> \- または -<br /><br /> `IsGreekandCoptic`|  
 |0400 ～ 04FF|`IsCyrillic`|  
 |0500 ～ 052F|`IsCyrillicSupplement`|  
 |0530 ～ 058F|`IsArmenian`|  
@@ -484,7 +483,7 @@ ms.locfileid: "73120613"
 |2000 ～ 206F|`IsGeneralPunctuation`|  
 |2070 ～ 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 ～ 20CF|`IsCurrencySymbols`|  
-|20D0 ～ 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> または<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 ～ 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> \- または -<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 ～ 214F|`IsLetterlikeSymbols`|  
 |2150 ～ 218F|`IsNumberForms`|  
 |2190 ～ 21FF|`IsArrows`|  

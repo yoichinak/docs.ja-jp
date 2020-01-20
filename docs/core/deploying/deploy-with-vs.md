@@ -5,13 +5,13 @@ ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f80b483fedc600a1e1a48d36ce9b7b95c6de9f27
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.custom: vs-dotnet
+ms.openlocfilehash: 6116b2322ed2071b78bcd77de7c38ad07c327aa6
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428898"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740840"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio を使用して .NET Core アプリを展開する
 
@@ -75,7 +75,7 @@ Visual Studio を使用して、.NET Core アプリケーションを開発す�
 
 1. `Newtonsoft.Json` が既にシステムにインストールされている場合、 **[ソリューション パッケージの管理]** タブの右のウィンドウからプロジェクトを選択し、プロジェクトに追加します。
 
-サードパーティの依存関係を含む、フレームワークに依存する展開は、サードパーティの依存関係と同じ移植性を持つことに注意してください。 たとえば、サードパーティ ライブラリが macOS のみをサポートする場合、そのアプリを Windows システムに移植することはできません。 この状況は、サードパーティの依存関係自体がネイティブ コードに依存する場合に生じる可能性があります。 このよい例は、[libuv](https://github.com/libuv/libuv) に対してネイティブの依存関係が必要な [Kestrel サーバー](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)です。 このようなサードパーティの依存関係を含むアプリケーションに対して FDD が作成されると、発行された出力には、ネイティブの依存関係がサポートする (そして、その NuGet パッケージ内に存在する) 各[ランタイム識別子 (RID)](../rid-catalog.md) のフォルダーが含まれます。
+サードパーティの依存関係を含む、フレームワークに依存する展開は、サードパーティの依存関係と同じ移植性を持ちます。 たとえば、サードパーティ ライブラリが macOS のみをサポートする場合、そのアプリを Windows システムに移植することはできません。 この状況は、サードパーティの依存関係自体がネイティブ コードに依存する場合に生じる可能性があります。 このよい例は、[libuv](https://github.com/libuv/libuv) に対してネイティブの依存関係が必要な [Kestrel サーバー](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)です。 このようなサードパーティの依存関係を含むアプリケーションに対して FDD が作成されると、発行された出力には、ネイティブの依存関係がサポートする (そして、その NuGet パッケージ内に存在する) 各[ランタイム識別子 (RID)](../rid-catalog.md) のフォルダーが含まれます。
 
 ## <a name="simpleSelf"></a> サードパーティの依存関係を含まない、自己完結型の展開
 
@@ -94,7 +94,7 @@ Visual Studio を使用して、.NET Core アプリケーションを開発す�
 
 1. グローバリゼーション インバリアント モードを使用するかどうかを決定します。
 
-   特にアプリの対象が Linux の場合、[グローバリゼーション インバリアント モード](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)を活用することで展開の合計サイズを減らすことができます。 グローバリゼーション インバリアント モードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。
+   特にアプリの対象が Linux の場合、[グローバリゼーション インバリアント モード](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)を活用することで展開の合計サイズを減らすことができます。 グローバリゼーション インバリアント モードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。
 
    インバリアント モードを有効にするには、**ソリューション エクスプローラー**で (ソリューションではなく) プロジェクトを右クリックし、 **[SCD.csproj の編集]** または **[SCD.vbproj の編集]** を選択します。 次の強調表示された行をファイルに追加します。
 
@@ -120,7 +120,7 @@ Visual Studio でアプリを発行するには、次の操作を行います。
 
    1. **ソリューション エクスプローラー**で (ソリューションではなく) プロジェクトを右クリックし、 **[Edit SCD.csproj]\(SCD.csproj の編集\)** を選択します。
 
-   1. *csproj* ファイルの `<PropertyGroup>` セクションに、アプリの対象のプラットフォームを定義する `<RuntimeIdentifiers>` タグを作成し、対象とするプラットフォームごとにランタイム識別子 (RID) を指定します。 なお、RID の分離にはセミコロンを追加する必要があることに注意してください。 ランタイム識別子の一覧については、「[ランタイム識別子のカタログ](../rid-catalog.md)」 (ランタイム識別子のカタログ) を参照してください。
+   1. *csproj* ファイルの `<PropertyGroup>` セクションに、アプリの対象のプラットフォームを定義する `<RuntimeIdentifiers>` タグを作成し、対象とするプラットフォームごとにランタイム識別子 (RID) を指定します。 なお、RID を分離するにはセミコロンを追加する必要があります。 ランタイム識別子の一覧については、「[ランタイム識別子のカタログ](../rid-catalog.md)」 (ランタイム識別子のカタログ) を参照してください。
 
    たとえば、次の例は、アプリが 64 ビット Windows 10 オペレーティング システムおよび 64 ビット OS X バージョン 10.11 オペレーティング システムで実行されることを示します。
 
@@ -130,7 +130,7 @@ Visual Studio でアプリを発行するには、次の操作を行います。
    </PropertyGroup>
    ```
 
-   なお、`<RuntimeIdentifiers>` 要素は、*csproj* ファイルの任意の `<PropertyGroup>` に入れることが可能です。 *csproj* ファイルの完全なサンプルは、このセクションの後の部分で示しています。
+   `<RuntimeIdentifiers>` 要素は、*csproj* ファイルの任意の `<PropertyGroup>` に入れることが可能です。 *csproj* ファイルの完全なサンプルは、このセクションの後の部分で示しています。
 
 1. アプリケーションを発行します。
 
@@ -194,7 +194,7 @@ Visual Studio でアプリを発行するには、次の操作を行います。
 
    発行先のプラットフォームが 1 つだけの場合、 **[フォルダーを選択してください]** テキスト ボックスで既定値をそのまま選択しても問題ありません。これでアプリケーションのフレームワーク依存展開が *\<project-directory>\bin\Release\netcoreapp2.1\publish* ディレクトリに発行されます。
 
-   発行先のプラットフォームが複数になる場合、ターゲット プラットフォームを識別する文字列を追加します。 たとえば、文字列 "linux" をファイル パスに追加する場合、Visual Studio によって、アプリケーションのフレームワーク依存展開が *\<project-directory>\bin\Release\netcoreapp2.1\publish\linux* ディクショナリに発行されます。
+   発行先のプラットフォームが複数になる場合、ターゲット プラットフォームを識別する文字列を追加します。 たとえば、文字列 "linux" をファイル パスに追加する場合、Visual Studio によって、アプリケーションのフレームワーク依存展開が *\<project-directory>\bin\Release\netcoreapp2.1\publish\linux* ディレクトリに発行されます。
 
 1. **[発行]** ボタンの隣にあるドロップダウン リスト アイコンを選択し、 **[プロファイルの作成]** を選択してプロファイルを作成します。 次に、 **[プロファイルの作成]** ボタンを選択し、プロファイルを作成します。
 
