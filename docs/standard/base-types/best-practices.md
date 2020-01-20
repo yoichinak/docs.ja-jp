@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 158964d1e04091faaa9b3acf82bf4ce2b5aba797
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cb1764d1a6f363f3011268eae5fbcb2c76d9cc89
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711494"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937999"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET の正規表現に関するベスト プラクティス
 
@@ -62,7 +62,7 @@ ms.locfileid: "75711494"
 .NET の正規表現オブジェクト モデルの中核となるのは、正規表現エンジンを表す <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> クラスです。 <xref:System.Text.RegularExpressions.Regex> エンジンの使用方法は、多くの場合、正規表現のパフォーマンスを左右する最大の要因になります。 正規表現を定義するときには、正規表現エンジンと正規表現パターンを密に結合する必要があります。 この結合のプロセスは、正規表現パターンをコンストラクターに渡して <xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化する場合も、分析する文字列と共に正規表現パターンを渡して静的メソッドを呼び出す場合も、必然的にコストが高くなります。
 
 > [!NOTE]
-> 解釈される正規表現とコンパイルされる正規表現を使用する場合のパフォーマンスへの暗黙的な影響に関する詳細な議論については、「[Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)」(正規表現のパフォーマンスの最適化、パート II: バックトラッキングの管理) を BCL チームのブログ上で参照してください。
+> 解釈される正規表現とコンパイルされる正規表現を使用する場合のパフォーマンスへの暗黙的な影響に関する詳細な議論については、「[Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)」(正規表現のパフォーマンスの最適化、パート II: バックトラッキングの管理) を BCL チームのブログ上で参照してください。
 
 正規表現エンジンを特定の正規表現パターンと結合し、そのエンジンを使用してテキストを照合するには、次のようにいくつかの方法があります。
 
@@ -161,7 +161,7 @@ ms.locfileid: "75711494"
 通常、正規表現エンジンは入力文字列内を直線的に進んで、入力文字列を正規表現パターンと比較します。 しかし、正規表現パターン内で不定量指定子 (`*`、`+`、`?` など) が使用されていると、パターン全体に対する一致を検索するために、それまでに見つかった部分的な一致を放棄して、以前に保存した状態に戻る場合があります。 このプロセスをバックトラッキングと呼びます。
 
 > [!NOTE]
-> バックトラッキングの詳細については、「[正規表現の動作の詳細](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)」と「[バックトラッキング](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)」を参照してください。 バックトラッキングに関する詳細な議論については、「[Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)」(正規表現のパフォーマンスの最適化、パート II: バックトラッキングの管理) を BCL チームのブログ上で参照してください。
+> バックトラッキングの詳細については、「[正規表現の動作の詳細](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)」と「[バックトラッキング](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)」を参照してください。 バックトラッキングに関する詳細な議論については、「[Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)」(正規表現のパフォーマンスの最適化、パート II: バックトラッキングの管理) を BCL チームのブログ上で参照してください。
 
 バックトラッキングのサポートにより、正規表現はより強力かつ柔軟になります。 同時に、正規表現エンジンの動作を正規表現の開発者が制御することにもなります。 この責任を認識していない開発者によるバックトラッキングの誤用や過度なバックトラッキングへの依存が、多くの場合、正規表現のパフォーマンスを低下させる最大の要因になっています。 最悪のシナリオでは、入力文字列が 1 文字増えるたびに実行時間が倍増することもあります。 実際、バックトラッキングを過度に使用すると、入力が正規表現パターンにほぼ一致する場合に、プログラム的に無限ループと同等の状態に陥りやすくなります。そのような状態では、正規表現エンジンによる比較的短い入力文字列の処理に何時間も何日もかかることがあります。
 
