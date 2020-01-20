@@ -1,6 +1,5 @@
 ---
 title: 数値結果テーブルの書式設定 - C# リファレンス
-ms.custom: seodec18
 description: C# の標準の数値書式指定文字列について説明します
 ms.date: 09/20/2018
 helpviewer_keywords:
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: eb93f0a4f3c66e9f7b295366a77b9fb099fc3a1e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422755"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713508"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>数値結果テーブルの書式設定 (C# リファレンス)
 
@@ -21,7 +20,7 @@ ms.locfileid: "73422755"
 
 |書式指定子|説明|使用例|結果|  
 |----------------------|-----------------|--------------|------------|  
-|C または c|通貨|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
+|C または c|通貨|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|\\$2.50<br /><br /> (\\$2.50)|  
 |D または d|Decimal (10 進数型)|`string s = $"{25:D5}";`|00025|  
 |E または e|指数|`string s = $"{250000:E2}";`|2.50E+005|  
 |F または f|固定小数点|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
@@ -31,7 +30,7 @@ ms.locfileid: "73422755"
 |R または r|ラウンドトリップ|`string s = $"{2.5:R}";`|2.5|  
 |X または x|16 進数|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 書式指定子を使用して、書式設定文字列を作成します。 書式設定文字列は `Axx` 形式になります。
 

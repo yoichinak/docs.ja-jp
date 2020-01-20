@@ -1,19 +1,18 @@
 ---
-title: '方法: ポインターを使用してバイトの配列をコピーする - C# プログラミング ガイド'
-ms.custom: seodec18
+title: ポインターを使用してバイトの配列をコピーする方法 - C# プログラミング ガイド
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: d174f51fa1709a70b98473a4dbbad89b9c62c22a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4929699c2d1e07b16d4694cff79f9b1394b1de38
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640304"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698457"
 ---
-# <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>方法: ポインターを使用してバイトの配列をコピーする (C# プログラミング ガイド)
+# <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>ポインターを使用してバイトの配列をコピーする方法 (C# プログラミング ガイド)
 
 次の例では、ポインターを使って 1 つの配列から別の配列にバイトをコピーします。
 

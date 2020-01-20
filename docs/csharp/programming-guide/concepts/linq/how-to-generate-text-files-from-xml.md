@@ -1,15 +1,15 @@
 ---
-title: '方法: XML からテキスト ファイルを生成する (C#)'
+title: XML からテキスト ファイルを生成する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 8e36bbda60bea207707dcf869afc059e645ec8ad
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9ca76cf955e07bdcc8e095b30f6fadc74edba739
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418305"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345929"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a>方法: XML からテキスト ファイルを生成する (C#)
+# <a name="how-to-generate-text-files-from-xml-c"></a>XML からテキスト ファイルを生成する方法 (C#)
 この例では、XML ファイルからコンマ区切り (CSV) ファイルを生成する方法について説明します。  
   
 ## <a name="example"></a>例  

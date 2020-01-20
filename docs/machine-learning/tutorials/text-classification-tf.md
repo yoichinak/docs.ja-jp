@@ -4,14 +4,12 @@ description: このチュートリアルでは、事前トレーニング済み�
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.author: nakersha
-author: natke
-ms.openlocfilehash: 8c3544b60b1fba1d419ca091b0a1d85fbbdbe2d6
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 0e80cdc6bb7dcc62a57466e909451da972c92db8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204923"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738697"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>チュートリアル: ML.NET で事前トレーニング済みの TensorFlow モデルを使用して映画レビューのセンチメントを分析する
 
@@ -81,14 +79,14 @@ ms.locfileid: "74204923"
 
 最初にテキストを別々の単語に分割し、指定されたマッピング ファイルを使用して各単語を整数のエンコードにマップします。 この変換の結果、文章内の単語数に応じた長さの可変長の整数配列になります。
 
-|プロパティ| [値]|型|
+|プロパティ| [値]|種類|
 |-------------|-----------------------|------|
 |ReviewText|この映画は本当に良い|string|
 |VariableLengthFeatures|14、22、9、66、78、... |int[]|
 
 可変長フィーチャーの配列は、固定長が 600 に変更されます。 これは、TensorFlow モデルで想定される長さです。
 
-|プロパティ| [値]|型|
+|プロパティ| [値]|種類|
 |-------------|-----------------------|------|
 |ReviewText|この映画は本当に良い|string|
 |VariableLengthFeatures|14、22、9、66、78、... |int[]|
@@ -135,7 +133,7 @@ ms.locfileid: "74204923"
     |単語     |インデックス    |
     |---------|---------|
     |子供向け     |  362    |
-    |want     |  181    |
+    |必要     |  181    |
     |不適切    |  355    |
     |効果  |  302    |
     |感覚  |  547    |
@@ -226,7 +224,7 @@ ms.locfileid: "74204923"
 
 1. [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 関数では、データの単一行に対して予測を行います。
 
-    |プロパティ| [値]|型|
+    |プロパティ| [値]|種類|
     |-------------|-----------------------|------|
     |予測|[0.5459937, 0.454006255]|float[]|
 

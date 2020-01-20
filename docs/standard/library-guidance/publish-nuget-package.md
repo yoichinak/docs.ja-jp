@@ -1,15 +1,13 @@
 ---
 title: NuGet パッケージの公開
 description: .NET ライブラリを NuGet に公開するためのベスト プラクティスの推奨事項。
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 9c8442b52ed2c54d2fb3368a2e886c5fc2b19148
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e567fe3f7e00bf322cdd50786e50128961107469
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640765"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706466"
 ---
 # <a name="publishing-a-nuget-package"></a>NuGet パッケージの公開
 
@@ -32,9 +30,9 @@ NuGet パッケージは、パッケージ リポジトリから公開され、�
 
 ## <a name="nugetorg-security"></a>NuGet.org のセキュリティ
 
-悪意のあるユーザーが自分の NuGet アカウントにアクセスし、悪意のあるバージョンのライブラリをアップロードできないことが重要です。 NuGet.org には、パッケージを公開する際の 2 要素認証と電子メールの通知が用意されています。 NuGet.org にログインした後、**[Account settings]\(アカウント設定\)** ページでこれらの機能を有効にします。
+悪意のあるユーザーが自分の NuGet アカウントにアクセスし、悪意のあるバージョンのライブラリをアップロードできないことが重要です。 NuGet.org には、パッケージを公開する際の 2 要素認証と電子メールの通知が用意されています。 NuGet.org にログインした後、 **[Account settings]\(アカウント設定\)** ページでこれらの機能を有効にします。
 
-![alt テキスト](./media/publish-nuget-package/nuget-2fa.png "NuGet アカウントのセキュリティ")
+![代替テキスト](./media/publish-nuget-package/nuget-2fa.png "NuGet アカウントのセキュリティ")
 
 **✔️ 実行** Microsoft アカウントを使用して NuGet にサインインします。
 

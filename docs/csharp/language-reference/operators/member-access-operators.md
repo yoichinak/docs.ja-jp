@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e69cc5a9634f0b5232562782557645894f94ce2e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039000"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345300"
 ---
 # <a name="member-access-operators-c-reference"></a>メンバー アクセス演算子 (C# リファレンス)
 
@@ -109,7 +109,13 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null 条件演算子 ?. および ?[]
 
-C# 6 以降で使用できる Null 条件付き演算子は、そのオペランドが null 以外と評価された場合にのみ、オペランドにメンバー アクセス操作 (`?.`) または要素アクセス操作 (`?[]`) を適用します。 オペランドが `null` と評価された場合、演算子を適用した結果は `null` です。 Null 条件メンバー アクセス演算子 `?.` は Elvis 演算子とも呼ばれます。
+C# 6 以降で使用できる Null 条件付き演算子は、そのオペランドが null 以外と評価された場合にのみ、オペランドに[メンバー アクセス](#member-access-operator-)操作 (`?.`) または[要素アクセス](#indexer-operator-)操作 (`?[]`) を適用し、それ以外の場合は、`null` を返します。 つまり、以下のようになります。
+
+- `a` が `null` と評価された場合、`a?.x` または `a?[x]` の結果は `null` です。
+- `a` が null 以外と評価された場合、`a?.x` または `a?[x]` の結果は、`a.x` または `a[x]` の結果とそれぞれ同じです。
+
+  > [!NOTE]
+  > `a.x` または `a[x]` が例外をスローした場合は、`a?.x` または `a?[x]` が、null 以外の `a` に対して同じ例外をスローします。 たとえば、`a` が null 以外の配列インスタンスで、`x` が `a`の範囲外にある場合、`a?[x]` は <xref:System.IndexOutOfRangeException> をスローします。
 
 Null 条件演算子はショートサーキットです。 つまり、条件付きのメンバーまたは要素アクセス操作のチェーン内にある 1 つの操作から `null` が返された場合、残りのチェーンは実行されません。 次の例では、`A` が `null` と評価されると `B` は評価されず、`A` または `B` が `null` と評価されると `C` は評価されません。
 
@@ -123,6 +129,8 @@ A?.B?[C];
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
 前の例では、null 条件演算の結果が `null` の場合に評価する代替の式を指定するために、[null 合体演算子 `??`](null-coalescing-operator.md) も使用しています。
+
+Null 条件メンバー アクセス演算子 `?.` は Elvis 演算子とも呼ばれます。
 
 ### <a name="thread-safe-delegate-invocation"></a>スレッドセーフなデリゲートの呼び出し
 
@@ -168,7 +176,7 @@ if (handler != null)
 
 さらに、`^` 演算子を[範囲演算子 ](#range-operator-) と組み合わせて使用してインデックスの範囲を作成することもできます。 詳細については、「[インデックスと範囲](../../tutorials/ranges-indexes.md)」を参照してください。
 
-## <a name="range-operator-"></a>範囲演算子 ..
+## <a name="range-operator-"></a>範囲演算子 .
 
 `..` 演算子は C# 8.0 以降で使用することができ、インデックスの範囲の先頭と末尾をオペランドとして指定します。 左側のオペランドは "*包含的*" で、範囲の先頭を含みます。 右側のオペランドは "*排他的*" で、範囲の末尾を含みません。 次の例で示すように、どちらのオペランドであっても、シーケンスの先頭または末尾からのインデックスとすることができます。
 

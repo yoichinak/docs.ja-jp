@@ -5,13 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.custom: seodec18
-ms.openlocfilehash: 86145e8971d9a59fba17368d9530f40d86bf2858
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 38d7c856e9a536db9ef26349175ad440a49f5fe2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037687"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713950"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 
@@ -219,7 +218,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 非同期プログラミングはそれほど難しくありませんが、留意することで予期しない動作を防ぐことができる細かい事柄がいくつかあります。
 
-* `async` **メソッドの本体に** `await` **キーワードが含まれないと、何も行われません**
+* `async` **メソッドの本体に** `await` **キーワードが含まれないと、何も行われません。**
 
 これは、忘れてはならない重要なことです。  `await` が `async` メソッドの本体で使われていない場合、C# コンパイラは警告を生成しますが、コードは通常のメソッドと同様にコンパイルされて実行されます。  また、非同期メソッドに対して C# コンパイラが生成するステート マシンは何も行わないので、非常に非効率的であることにも注意してください。
 
@@ -227,7 +226,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 これは、同期メソッドと非同期メソッドの区別をより簡単にするために、.NET で使われる規則です。 コードによって明示的に呼び出されない一部のメソッド (イベント ハンドラーや Web コントローラー メソッドなど) には必ずしも当てはまらないことに注意してください。 そのようなメソッドはコードでは明示的に呼び出されないため、明示的な命名はそれほど重要ではありません。
 
-* `async void` **はイベント ハンドラーに対してのみ使う必要があります**
+* `async void` **はイベント ハンドラーに対してのみ使う必要があります。**
 
 イベントには戻り値の型がないため、`async void` は非同期イベント ハンドラーの動作を可能にする唯一の方法です (したがって、`Task` と `Task<T>` を使うことはできません)。 `async void` のその他の使用はすべて TAP モデルに従わないので、使うのが難しい場合があります。以下はその例です。
 

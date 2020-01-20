@@ -1,19 +1,18 @@
 ---
-title: '方法: インターフェイス イベントを実装する - C# プログラミング ガイド'
-ms.custom: seodec18
+title: インターフェイス イベントを実装する方法 - C# プログラミング ガイド
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 574ea9927a22c24c356d84652fd29692c519247b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b84b96245310bce557bcd3865e41cf152e7ae9df
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590508"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712339"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>方法: インターフェイス イベントを実装する (C# プログラミング ガイド)
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>インターフェイス イベントを実装する方法 (C# プログラミング ガイド)
 [インターフェイス](../../language-reference/keywords/interface.md)では[イベント](../../language-reference/keywords/event.md)を宣言できます。 次の例では、クラス内にインターフェイス イベントを実装する方法について説明します。 基本的な原則は、インターフェイスのメソッドやプロパティを実装する場合と同じです。  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>クラス内でインターフェイス イベントを実装するには  
@@ -64,4 +63,4 @@ namespace ImplementInterfaceEvents
 - [イベント](./index.md)
 - [デリゲート](../delegates/index.md)
 - [明示的なインターフェイスの実装](../interfaces/explicit-interface-implementation.md)
-- [方法: 派生クラスから基本クラス イベントを発生させる](./how-to-raise-base-class-events-in-derived-classes.md)
+- [派生クラスから基本クラス イベントを発生させる方法](./how-to-raise-base-class-events-in-derived-classes.md)

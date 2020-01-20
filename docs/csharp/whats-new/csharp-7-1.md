@@ -2,12 +2,12 @@
 title: C# 7.1 の新機能
 description: C# 7.1 の新機能の概要。
 ms.date: 04/09/2019
-ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105546"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714590"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 の新機能
 
@@ -17,7 +17,7 @@ C# 7.1 では、[言語バージョン選択](../language-reference/configure-la
 
 このリリースの新しい言語機能は次のとおりです。
 
-- [`async` `Main` メソッド](#async-main)
+- [`async` `Main`メソッド](#async-main)
   - アプリケーションのエントリ ポイントに `async` 修飾子を設定できます。
 - [`default` リテラル式](#default-literal-expressions)
   - ターゲットの種類を推論できるとき、既定の値式で既定のリテラル式を使用できます。

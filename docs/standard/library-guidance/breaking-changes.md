@@ -1,15 +1,13 @@
 ---
 title: 破壊的変更と .NET ライブラリ
 description: .NET ライブラリを作成するとき、破壊的変更を進行させるためのベストプラクティス推奨事項。
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6881b8737d9dd3fa7fa71f099fa1dc97b747033d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104659"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740981"
 ---
 # <a name="breaking-changes"></a>互換性に影響する変更
 
@@ -68,7 +66,7 @@ public class Task
 
 **❌ してはいけないこと**: アセンブリ名を変更する。
 
-**❌ してはいけないこと**: 厳密な名前付けキーを追加、削除、変更する。
+厳密な名前付けキーを追加、削除、または変更 **❌ しないでください**。
 
 **✔️ 検討すること**: インターフェイスではなく、抽象基本クラスを使用する。
 
@@ -102,7 +100,7 @@ public class Document
 
 - [C# 開発者向けのバージョンと更新に関する考慮事項](../../csharp/whats-new/version-update-considerations.md)
 - [API の決定版ガイド - .NET の破壊的変更](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-- [CoreFX 破壊的変更ルール](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
+- [.NET 破壊的変更ルール](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[前へ](versioning.md)

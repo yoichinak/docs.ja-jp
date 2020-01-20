@@ -1,5 +1,5 @@
 ---
-title: 軽減策:DataContractJsonSerializer での制御文字のシリアル化
+title: DataContractJsonSerializer での制御文字のシリアル化
 ms.date: 04/07/2017
 helpviewer_keywords:
 - .NET Framework 4.7 retargeting changes
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataContractJsonSerializer changes
 - serialization changes
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
-ms.openlocfilehash: faa7a32766a3ea1ef9cddcdb8af8fd0dd5a6f287
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 209f7827e61ef72de1d64fad46dc9f241fa6edef
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457813"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346569"
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>軽減策:DataContractJsonSerializer での制御文字のシリアル化
 

@@ -2,12 +2,12 @@
 title: セット操作 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 22079b1d41533803f694af210f98bc9fb8a5b322
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 170316b36705eaed51a9a17f8f79333a29e8c315
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711867"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346513"
 ---
 # <a name="set-operations-c"></a>セット操作 (C#)
 LINQ のセット操作は、同一または別個のコレクション (またはセット) に等しい要素があるかどうかに基づいて、結果を生成するクエリ操作です。  
@@ -58,4 +58,4 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)
 - [文字列コレクションを結合および比較する方法 (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)
-- [方法: 2 つのリストの差集合を見つける (LINQ) (C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)
+- [2 つのリストの差集合を見つける方法 (LINQ) (C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)

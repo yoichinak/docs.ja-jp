@@ -17,16 +17,16 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972093"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346628"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 書式指定文字列
 
-標準の <xref:System.TimeSpan> 書式指定文字列では、単一の書式指定子の使用により、書式設定操作によって生成される <xref:System.TimeSpan> 値のテキスト表現が定義されます。 空白を含む複数の文字で構成される書式指定文字列は、カスタムの <xref:System.TimeSpan> 書式指定文字列として解釈されます。 詳細については、「[カスタム TimeSpan 書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)」をご覧ください。  
+標準の <xref:System.TimeSpan> 書式指定文字列では、単一の書式指定子の使用により、書式設定操作によって生成される <xref:System.TimeSpan> 値のテキスト表現が定義されます。 空白を含む複数の文字で構成される書式指定文字列は、カスタムの <xref:System.TimeSpan> 書式指定文字列として解釈されます。 詳細については、「[カスタム TimeSpan 書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)」を参照してください。  
   
  <xref:System.TimeSpan> 値の文字列形式は、<xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> メソッドのオーバーロードの呼び出しと、<xref:System.String.Format%2A?displayProperty=nameWithType> などの複合書式指定をサポートするメソッドによって生成されます。 詳細については、「[型の書式設定](../../../docs/standard/base-types/formatting-types.md)」と「[複合書式指定](../../../docs/standard/base-types/composite-formatting.md)」をご覧ください。 次の例では、書式設定操作で標準書式指定文字列を使用する方法を示しています。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "73972093"
   
 標準の時間間隔書式指定子を次の表に示します。  
   
-|書式指定子|name|説明|使用例|  
+|書式指定子|名前|説明|使用例|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|固定 (不変) 書式|この指定子はカルチャに依存しません。 `[-][d'.']hh':'mm':'ss['.'fffffff]` の書式を使用します。<br /><br /> ("t" と "T" の各書式指定文字列によって生成される結果は同じになります。)<br /><br /> 詳細情報:[固定の ("c") 書式指定子](#the-constant-c-format-specifier)。|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|一般の短い書式|この指定子は必要なものだけを出力します。 カルチャに依存し、`[-][d':']h':'mm':'ss[.FFFFFFF]` の書式になります。<br /><br /> 詳細情報:[一般の短い ("g") 書式指定子](#the-general-short-g-format-specifier)。|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  

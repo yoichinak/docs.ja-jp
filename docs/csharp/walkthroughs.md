@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 11a58ddf246c77cf4372e940b184413054b10778
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204593"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634925"
 ---
 # <a name="c-walkthroughs"></a>C# チュートリアル
 チュートリアルでは、製品や特定の機能領域について学習を開始するのに適した一般的なシナリオについて詳細な手順を示します。  
@@ -48,7 +48,7 @@ ms.locfileid: "74204593"
  `TabControl` でのタブの追加や削除、コントロールの親コントロールへのドッキング、`SplitContainer` コントロールの方向の変更など、よく実行されるタスクの例を示します。  
   
  [C# でのクエリの作成 (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式の記述に使用される C# 言語機能を示します。  
+ LINQ クエリ式の記述に使用される C# 言語機能を示します。  
   
  [データの操作 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  データベース内のデータの追加、変更、および削除の [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] のシナリオについて説明します。  

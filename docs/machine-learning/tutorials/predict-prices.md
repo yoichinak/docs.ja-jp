@@ -3,13 +3,13 @@ title: 'チュートリアル: 回帰を使用して価格を予測する'
 description: このチュートリアルでは、ML.NET を使用して、料金 (具体的にはニューヨーク市のタクシー運賃) を予測する回帰モデルを構築する方法を示します。
 ms.date: 09/30/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: a7a7a246f3153889343589a7b32c183ca30df5a3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: e4014dbdfb81af65c35d2f7693ef2c57885303ff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459165"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711624"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>チュートリアル: ML.NET で回帰を使用して価格を予測する
 
@@ -37,7 +37,7 @@ ms.locfileid: "73459165"
 
 1. **Microsoft.ML** NuGet パッケージをインストールします。
 
-    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。 **[参照]** タブを選択し、「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.FastTree** Nuget パッケージに対して同じことを行います。
+    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。 **[参照]** タブを選択し、「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.FastTree** NuGet パッケージに対して同じことを行います。
 
 ## <a name="prepare-and-understand-the-data"></a>データを準備して理解する
 
@@ -130,7 +130,7 @@ ML.NET では、数値またはテキストの表形式データを記述する�
 
 [!code-csharp[LoadTrainData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
 
-タクシー運賃を予測したいので、`FareAmount` 列が予測する `Label` です (モデルの出力)。`CopyColumnsEstimator` 変換クラスを使って `FareAmount` をコピーし、次のコードを追加します。
+タクシー運賃を予測したいので、`FareAmount` 列は、予測する `Label` です (モデルの出力)。 `CopyColumnsEstimator` 変換クラスを使って `FareAmount` をコピーし、次のコードを追加します。
 
 [!code-csharp[CopyColumnsEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
@@ -215,7 +215,7 @@ Console.WriteLine($"*------------------------------------------------");
 
 [!code-csharp[DisplayRSquared](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#18 "Display the RSquared metric.")]
 
-[RMS](../resources/glossary.md##root-of-mean-squared-error-rmse) は回帰モデルの評価メトリックの 1 つです。 RMS が低いほど、優れたモデルになります。 `Evaluate` メソッドに次のコードを追加することで、RMS 値を表示します。
+[RMS](../resources/glossary.md#root-of-mean-squared-error-rmse) は回帰モデルの評価メトリックの 1 つです。 RMS が低いほど、優れたモデルになります。 `Evaluate` メソッドに次のコードを追加することで、RMS 値を表示します。
 
 [!code-csharp[DisplayRMS](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#19 "Display the RMS metric.")]
 

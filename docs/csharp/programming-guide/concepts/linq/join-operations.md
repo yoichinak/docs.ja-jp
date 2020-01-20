@@ -2,12 +2,12 @@
 title: 結合操作 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 456894dd07f512d7e694ad0056b1e861dc3012c5
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 86d85c7de16887fbe3001dc548d940d9c114e634
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423393"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635601"
 ---
 # <a name="join-operations-c"></a>結合操作 (C#)
 2 つのデータ ソースの "*結合*" とは、あるデータ ソースのオブジェクトを、共通の属性を共有する別のデータ ソースのオブジェクトと関連付けることです。  
@@ -34,11 +34,11 @@ ms.locfileid: "73423393"
 - [匿名型](../../classes-and-structs/anonymous-types.md)
 - [結合およびクロス積クエリの作成](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
 - [join 句](../../../language-reference/keywords/join-clause.md)
-- [方法: 複合キーを使用した結合](../../../linq/join-by-using-composite-keys.md)
-- [方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
-- [方法: Join 句の結果の順序指定](../../../linq/order-the-results-of-a-join-clause.md)
-- [方法: カスタム結合操作の実行](../../../linq/perform-custom-join-operations.md)
-- [方法: グループ結合の実行](../../../linq/perform-grouped-joins.md)
-- [方法: 内部結合の実行](../../../linq/perform-inner-joins.md)
-- [方法: 左外部結合の実行](../../../linq/perform-left-outer-joins.md)
-- [方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [複合キーを使用した結合](../../../linq/join-by-using-composite-keys.md)
+- [異種ファイルのコンテンツを結合する方法 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
+- [join 句の結果の順序指定](../../../linq/order-the-results-of-a-join-clause.md)
+- [カスタム結合操作の実行](../../../linq/perform-custom-join-operations.md)
+- [グループ化結合の実行](../../../linq/perform-grouped-joins.md)
+- [内部結合の実行](../../../linq/perform-inner-joins.md)
+- [左外部結合の実行](../../../linq/perform-left-outer-joins.md)
+- [複数のソースからオブジェクト コレクションにデータを設定する方法 (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974759"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900579"
 ---
 # <a name="garbage-collection-and-performance"></a>ガベージ コレクションとパフォーマンス
 
@@ -73,7 +73,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="Issue_OOM"></a>
 
-### <a name="issue-an-out-of-memory-exception-is-thrown"></a>問題: メモリ不足の例外がスローされる
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a>問題:メモリ不足の例外がスローされる
 
 <xref:System.OutOfMemoryException> マネージド例外がスローされる正当な状況としては、次の 2 つがあります。
 
@@ -97,7 +97,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="Issue_TooMuchMemory"></a>
 
-### <a name="issue-the-process-uses-too-much-memory"></a>問題: プロセスによるメモリ使用量が多すぎる
+### <a name="issue-the-process-uses-too-much-memory"></a>問題:プロセスによるメモリ使用量が多すぎる
 
 一般的な前提として、メモリ使用量が多すぎる場合については、Windows タスク マネージャーの **[パフォーマンス]** タブのメモリ使用量の表示で確認できます。 ただし、この表示はワーキング セットに関するもので、仮想メモリの使用量に関する情報ではありません。
 
@@ -111,7 +111,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="Issue_NotFastEnough"></a>
 
-### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>問題: ガベージ コレクターによるオブジェクトの解放に時間がかかる
+### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>問題:ガベージ コレクターによるオブジェクトの解放に時間がかかる
 
 ガベージ コレクションでオブジェクトが通常どおりに解放されていないように見える場合は、それらのオブジェクトに対する強い参照がないかどうかを確認する必要があります。
 
@@ -123,7 +123,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="Issue_Fragmentation"></a>
 
-### <a name="issue-the-managed-heap-is-too-fragmented"></a>問題: マネージド ヒープが過度に断片化される
+### <a name="issue-the-managed-heap-is-too-fragmented"></a>問題:マネージド ヒープが過度に断片化される
 
 断片化レベルは、ジェネレーションに割り当てられたメモリの合計に占める空き領域の割合として計算されます。 ジェネレーション 2 の場合、許容される断片化レベルは 20% 以下です。 ジェネレーション 2 は非常に大きくなる可能性があるため、断片化の割合の方が絶対値より重要になります。
 
@@ -153,7 +153,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="Issue_LongPauses"></a>
 
-### <a name="issue-garbage-collection-pauses-are-too-long"></a>問題: ガベージ コレクションの一時停止が長すぎる
+### <a name="issue-garbage-collection-pauses-are-too-long"></a>問題:ガベージ コレクションの一時停止が長すぎる
 
 ガベージ コレクションはソフト リアルタイムで動作するため、アプリケーションはある程度の一時停止に耐えられなければなりません。 ソフト リアルタイムの基準では、95% の操作が時間どおりに完了する必要があります。
 
@@ -171,13 +171,13 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
 <a name="Issue_Gen0"></a>
 
-### <a name="issue-generation-0-is-too-big"></a>問題: ジェネレーション 0 が大きすぎる
+### <a name="issue-generation-0-is-too-big"></a>問題:ジェネレーション 0 が大きすぎる
 
 64 ビット システムでは、ジェネレーション 0 のオブジェクトの数が増える傾向があります。ワークステーションのガベージ コレクションではなくサーバーのガベージ コレクションを使用している場合は特にその傾向が強くなります。 それらの環境では、ジェネレーション 0 のガベージ コレクションをトリガーするしきい値が高いので、ジェネレーション 0 のコレクションが非常に大きくなる可能性があるためです。 アプリケーションで、ガベージ コレクションがトリガーされる前により多くのメモリを割り当てると、パフォーマンスが向上します。
 
 <a name="Issue_HighCPU"></a>
 
-### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>問題: ガベージ コレクションの実行時の CPU 使用率が高すぎる
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>問題:ガベージ コレクションの実行時の CPU 使用率が高すぎる
 
 ガベージ コレクションの実行時には CPU 使用率が高くなります。 ガベージ コレクションに大量の処理時間が費やされている場合は、コレクションの発生頻度が高すぎるか、コレクションの継続時間が長すぎます。 マネージド ヒープに対するオブジェクトの割り当ての速度を上げるとガベージ コレクションの発生頻度が高くなります。 割り当ての速度を下げるとガベージ コレクションの発生頻度が低くなります。
 
@@ -327,7 +327,7 @@ ETW イベント ログは効率的であり、ガベージ コレクション�
 
   この例では、最も大きな空き領域のサイズは約 24000 KB (16 進形式では 3A980) です。 これは、ガベージ コレクターのセグメントに必要なサイズよりはるかに小さいサイズです。
 
-  または
+  \- または -
 
 - **vmstat** コマンドを使用します。
 

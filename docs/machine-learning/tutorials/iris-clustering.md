@@ -4,13 +4,13 @@ description: クラスタリングのシナリオで ML.NET を使用する方�
 author: pkulikov
 ms.date: 11/15/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: a7199ce2e5217eaadfa10893eb1fbb3417e9be20
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: cc3a1ae984289eb01ad8fdee9741f3f9788196c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204835"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716231"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>チュートリアル: ML.NET でクラスタリングを使用してあやめの花を分類する
 
@@ -118,9 +118,9 @@ ms.locfileid: "74204835"
 
 <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> クラスは機械学習環境を表し、ログ記録のメカニズムとデータの読み込みのエントリ ポイント、モデルのトレーニング、予測、およびその他のタスクを提供します。 これは、概念的には Entity Framework での `DbContext` の使用に相当します。
 
-## <a name="setup-data-loading"></a>データの読み込みのセットアップ
+## <a name="set-up-data-loading"></a>データの読み込みの設定
 
-`Main` メソッドに次のコードを追加して、データを読み込む方法をセットアップします。
+`Main` メソッドに次のコードを追加して、データを読み込む方法を設定します。
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 

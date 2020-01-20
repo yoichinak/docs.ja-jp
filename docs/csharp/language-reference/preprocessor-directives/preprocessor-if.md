@@ -1,22 +1,21 @@
 ---
 title: '#if プリプロセッサ ディレクティブ - C# リファレンス'
-ms.custom: seodec18
 ms.date: 10/27/2019
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: e467a890e971e6c6f2c681ee503d7c7ead19a1e4
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552443"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899851"
 ---
 # <a name="if-c-reference"></a>#if (C# リファレンス)
 
-C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](preprocessor-endif.md) ディレクティブが検出されると、これらのディレクティブ間のコードがコンパイルされます (指定されたシンボルが定義されている場合に限る)。 C および C++ とは異なり、シンボルに数値を割り当てることはできません。 C# の #if ステートメントはブール値で、シンボルが定義されているかどうかのみをテストします。 次に例を示します。
+C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](preprocessor-endif.md) ディレクティブが検出されると、これらのディレクティブ間のコードがコンパイルされます (指定されたシンボルが定義されている場合に限る)。 C および C++ とは異なり、シンボルに数値を割り当てることはできません。 C# の `#if` ステートメントはブール値で、シンボルが定義されているかどうかのみをテストします。 次に例を示します。
 
 ```csharp
 #if DEBUG
@@ -24,9 +23,9 @@ C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](prep
 #endif
 ```
 
-演算子 [==](../operators/equality-operators.md#equality-operator-) (等式) および [!=](../operators/equality-operators.md#inequality-operator-) (不等式) は、[bool](../builtin-types/bool.md) 値 `true` または `false` をテストするためにのみ使用できます。 true は、シンボルが定義されていることを意味します。 ステートメント `#if DEBUG` と `#if (DEBUG == true)` の意味は同じです。 [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (かつ)、[&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (または)、および [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (not) の各演算子を使用すると、複数のシンボルが定義されているかどうかを評価できます。 シンボルと演算子は、かっこを使用してグループ化できます。
+演算子 [==](../operators/equality-operators.md#equality-operator-) (等式) および [!=](../operators/equality-operators.md#inequality-operator-) (不等式) は、[bool](../builtin-types/bool.md) 値 `true` または `false` をテストするためにのみ使用できます。 `true` は、シンボルが定義されていることを意味します。 ステートメント `#if DEBUG` と `#if (DEBUG == true)` の意味は同じです。 [&& (かつ)](../operators/boolean-logical-operators.md#conditional-logical-and-operator-)、[&#124;&#124; (または)](../operators/boolean-logical-operators.md#conditional-logical-or-operator-)、[! (not)](../operators/boolean-logical-operators.md#logical-negation-operator-) の各演算子を使用すると、複数のシンボルが定義されているかどうかを評価できます。 シンボルと演算子は、かっこを使用してグループ化できます。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 `#if` と [#else](preprocessor-else.md)、[#elif](preprocessor-elif.md)、[#endif](preprocessor-endif.md)、[#define](preprocessor-define.md)、[#undef](preprocessor-undef.md) の各ディレクティブを組み合わせると、1 つ以上のシンボルが存在するかどうかに応じてコードを含めたり除外したりできます。 これは、デバッグ ビルドのコードをコンパイルする場合や、特定の構成でコンパイルを行う場合に役立ちます。
 

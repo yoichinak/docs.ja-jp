@@ -1,15 +1,13 @@
 ---
 title: .NET ライブラリのクロス プラットフォーム ターゲット
 description: クロス プラットフォームの .NET ライブラリを作成する際のベスト プラクティスの推奨事項。
-author: jamesnk
-ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 6bd310f2e4b7a9bd7bb550ed9c7da9ebabdf64ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 08/12/2019
+ms.openlocfilehash: 45eb67837c924558ec51381dd924abf9fd0fa315
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129715"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706518"
 ---
 # <a name="cross-platform-targeting"></a>クロス プラットフォーム ターゲット
 
@@ -33,7 +31,7 @@ ms.locfileid: "53129715"
 
 > ほとんどの汎用ライブラリでは、.NET Standard 2.0 外の API は必要ありません。 .NET Standard 2.0 はすべての最新のプラットフォームでサポートされており、1 つのターゲットで複数のプラットフォームをサポートする場合に推奨される方法です。
 
-**❌ してはいけないこと**: `netstandard1.x` ターゲットを含める。
+**❌ 避けること**: `netstandard1.x` ターゲットを含める。
 
 > .NET Standard 1.x は、NuGet の細かいパッケージ セットとして配布されます。大きなパッケージの依存関係グラフが作成されるため、開発者は構築時に多くのパッケージをダウンロードすることになります。 .NET Framework 4.6.1、UWP および Xamarin など、最新の .NET プラットフォームではすべて、.NET Standard 2.0 がサポートされます。 特に古いプラットフォームをターゲットにする必要がある場合は、.NET Standard 1.x のみをターゲットにしてください。
 
@@ -59,11 +57,42 @@ ms.locfileid: "53129715"
 >
 > これを行うときに、.NET Standard のサポートを放棄しないでください。 代わりに、実装から分離させて、機能 API を提供します。 これにより、ライブラリを任意の場所で使用でき、ランタイムの機能を際立たせることができます。
 
-**❌ してはいけないこと**: すべてのターゲットでソース コードが同じである場合に、マルチ ターゲットを行う、または .NET Standard をターゲットにする。
+```csharp
+public static class GpsLocation
+{
+    // This project uses multi-targeting to expose device-specific APIs to .NET Standard.
+    public static async Task<(double latitude, double longitude)> GetCoordinatesAsync()
+    {
+#if NET461
+        return CallDotNetFramworkApi();
+#elif WINDOWS_UWP
+        return CallUwpApi();
+#else
+        throw new PlatformNotSupportedException();
+#endif
+    }
+
+    // Allows callers to check without having to catch PlatformNotSupportedException
+    // or replicating the OS check.
+    public static bool IsSupported
+    {
+        get
+        {
+#if NET461 || WINDOWS_UWP
+            return true;
+#else
+            return false;
+#endif
+        }
+    }
+}
+```
+
+**❌ 避けること**: すべてのターゲットでソース コードが同じである場合に、マルチ ターゲットを行う、または .NET Standard をターゲットにする。
 
 > .NET Standard アセンブリは、NuGet によって自動的に使用されます。 個々の .NET 実装をターゲットにすると、`*.nupkg` サイズが増えるだけで、利点はありません。
 
-**✔️ 検討すること**: `netstandard2.0` ターゲットを提供する際に、`net461` のターゲットを追加する。 
+**✔️ 検討すること**: `netstandard2.0` ターゲットを提供する際に、`net461` のターゲットを追加する。
 
 > .NET Framework から .NET Standard 2.0 を使用する場合、いくつかの問題がありますが、.NET Framework 4.7.2 で対処されました。 .NET Framework 4.6.1 から 4.7.1 を引き続き使用している開発者に、.NET Framework 4.6.1 用にビルドされているバイナリを提供することで、その開発者のエクスペリエンスを向上させることができます。
 

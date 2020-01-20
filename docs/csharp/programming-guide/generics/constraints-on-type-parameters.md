@@ -1,18 +1,17 @@
 ---
 title: 型パラメーターの制約 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: d05307735506db0f0e4abab067334e4f0466ee6a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3ce68ecc1f0740fdb43ccf22b636dcd4bc05ea0a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204638"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712235"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型パラメーターの制約 (C# プログラミング ガイド)
 
@@ -25,8 +24,8 @@ ms.locfileid: "74204638"
 |`where T : notnull`|この型引数は null 非許容型である必要があります。 引数は、C# 8.0 以降では null 非許容参照型、または null 非許容値型にできます。 この制約は、任意のクラス、インターフェイス、デリゲート、または配列型にも適用されます。|
 |`where T : unmanaged`|この型引数は null 非許容で[アンマネージド型](../../language-reference/builtin-types/unmanaged-types.md)である必要があります。 `unmanaged` 制約は `struct` 制約を意味し、`struct` 制約とも `new()` 制約とも組み合わせることはできません。|
 |`where T : new()`|この型引数には、パラメーターなしのパブリック コンストラクターが必要です。 `new()` 制約を別の制約と併用する場合、この制約を最後に指定する必要があります。 `new()` 制約は、`struct` や `unmanaged` 制約と組み合わせることはできません。|
-|`where T :` *\<基底クラス名>*|この型引数は、指定された基底クラスであるか、そのクラスから派生している必要があります。|
-|`where T :` *\<インターフェイス名>*|この型引数は、指定されたインターフェイスであるか、そのインターフェイスを実装している必要があります。 複数のインターフェイス制約を指定することができます。 制約のインターフェイスを汎用的にすることもできます。|
+|`where T :` *\<base class name>*|この型引数は、指定された基底クラスであるか、そのクラスから派生している必要があります。|
+|`where T :` *\<interface name>*|この型引数は、指定されたインターフェイスであるか、そのインターフェイスを実装している必要があります。 複数のインターフェイス制約を指定することができます。 制約のインターフェイスを汎用的にすることもできます。|
 |`where T : U`|T に指定する型引数は、U に指定された引数であるか、その引数から派生している必要があります。|
 
 ## <a name="why-use-constraints"></a>制約を使用する理由
@@ -107,15 +106,15 @@ C# 7.3 以降、`unmanaged` 制約を指定して、型パラメーターが nul
 
 C# 7.3 以降、基底クラスの制約として <xref:System.Enum?displayProperty=nameWithType> 型を指定することもできます。 CLR では常にこの制約を許可していますが、C# 言語では許可されていません。 `System.Enum` を使用するジェネリックは、`System.Enum` の静的メソッドの使用から結果をキャッシュするために、タイプ セーフのプログラミングを提供します。 次の例では、列挙型の有効な値をすべて見つけて、それらの値をその文字列表記にマップするディクショナリをビルドします。
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
+[!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
-使用されるメソッドではリフレクションを使用します。これは、パフォーマンスに影響があります。 このメソッドを呼び出して、リフレクションを必要とする呼び出しを繰り返すことなく、キャッシュおよび再利用されるコレクションをビルドできます。
+メソッドはリフレクションを使用していました。これはパフォーマンスに影響します。 このメソッドを呼び出して、リフレクションを必要とする呼び出しを繰り返すことなく、キャッシュおよび再利用されるコレクションをビルドできます。
 
 次の例で示すように、このメソッドを使用して、列挙を作成し、その値と名前のディクショナリをビルドできます。
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
+[!code-csharp[enum definition](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
+[!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
 ## <a name="see-also"></a>関連項目
 

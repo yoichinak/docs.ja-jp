@@ -1,15 +1,15 @@
 ---
-title: null 許容参照型を使用して設計する
-description: この高度なチュートリアルでは、null 許容参照型の概要について説明します。 参照値で null がいつ許容されるかに関する設計意図を表すことで、コンパイラで null が許容されるようにします。
+title: null 許容参照型にアップグレードする
+description: この高度なチュートリアルでは、null 許容参照型を使用して既存のコードを移行する方法を示します。
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969344"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740468"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>チュートリアル: null 許容参照型で既存のコードを移行する
 
@@ -83,7 +83,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-上記のコード ブロックでは多くのことが行われています。 このアプリケーションでは、[AutoMapper](https://automapper.org/) NuGet パッケージを使用して、`ISyndicationItem` からニュース項目を作成しています。 ニュース記事の項目が構築され、その 1 つのステートメントでプロパティが設定されることはわかっています。 つまり、`NewsStoryViewModel` の設計では、これらのプロパティが `null` 値になってはならないことが示されています。 これらのプロパティは、**null 非許容参照型**にする必要があります。 それが、元の設計意図を最も適切に表しています。 実際、すべての `NewsStoryViewModel` は、null 以外の値で正しくインスタンス化されて "*います*"。 これにより、次の初期化コードが有効な修正になります。
+上記のコード ブロックでは多くのことが行われています。 このアプリケーションでは、[AutoMapper](https://automapper.org/) NuGet パッケージを使用して、`ISyndicationItem` からニュース項目を作成しています。 ニュース記事の項目が構築され、その 1 つのステートメントでプロパティが設定されることはわかっています。 つまり、`NewsStoryViewModel` の設計では、これらのプロパティが `null` 値になってはならないことが示されています。 これらのプロパティは、**null 非許容参照型**にする必要があります。 それが、元の設計意図を最も適切に表しています。 実際、`NewsStoryViewModel` は、null 値以外で正しくインスタンス化されて "*います*"。 これにより、次の初期化コードが有効な修正になります。
 
 ```csharp
 public class NewsStoryViewModel
@@ -167,4 +167,4 @@ public class NewsStoryViewModel
 
 最初のテスト コンパイルで明らかになった警告を修正したので、今度は両方のプロジェクトで null 許容注釈コンテキストを有効にできます。 プロジェクトをリビルドします。コンパイラで警告は報告されません。 [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished) GitHub リポジトリで、完成したプロジェクトのコードを入手できます。
 
-null 許容参照型をサポートする新しい機能を使用すると、コードでの `null` 値の処理方法に関する潜在的なエラーを発見して修正するのに役立ちます。 null 許容注釈コンテキストを有効にすると、null にできない変数と、null 値を含むことができる変数に関する、設計の意図を表すことができます。 これらの機能を使用すると、設計意図を簡単に宣言できるようになります。 同様に、null 許容警告コンテキストでは、その意図に違反しているときに警告を発行するようコンパイラに指示されます。 それらの警告を参考にすると、より回復性が高く、実行中に `NullReferenceException` がスローされる可能性が低くなるように、コードを更新できます。 コードの局所的な領域に注目して移行を行うことができ、それ以外のコードベースは変更されないように、これらのコンテキストの範囲を制御できます。 実際には、この移行タスクを、クラスに対する定期的なメンテナンスの一部にすることができます。 このチュートリアルでは、null 許容参照型を使用するようにアプリケーションを移行するプロセスを示しました。 このプロセスのさらに大きな実際の例については、[Jon Skeet](https://github.com/jskeet) が [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits) に null 許容参照型を組み込むために行った PR を調べてください。
+null 許容参照型をサポートする新しい機能を使用すると、コードでの `null` 値の処理方法に関する潜在的なエラーを発見して修正するのに役立ちます。 null 許容注釈コンテキストを有効にすると、null にできない変数と、null 値を含むことができる変数に関する、設計の意図を表すことができます。 これらの機能を使用すると、設計意図を簡単に宣言できるようになります。 同様に、null 許容警告コンテキストでは、その意図に違反しているときに警告を発行するようコンパイラに指示されます。 それらの警告を参考にすると、より回復性が高く、実行中に `NullReferenceException` がスローされる可能性が低くなるように、コードを更新できます。 コードの局所的な領域に注目して移行を行うことができ、それ以外のコードベースは変更されないように、これらのコンテキストの範囲を制御できます。 実際には、この移行タスクを、クラスに対する定期的なメンテナンスの一部にすることができます。 このチュートリアルでは、null 許容参照型を使用するようにアプリケーションを移行するプロセスを示しました。 このプロセスのさらに大きな実際の例については、[Jon Skeet](https://github.com/jskeet) が [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits) に null 許容参照型を組み込むために行った PR を調べてください。 また、[Entity Framework Core の null 許容参照型の使用](/ef/core/miscellaneous/nullable-reference-types)に関するページで、Entity Framework Core で null 許容参照型を使用する手法を確認することもできます。

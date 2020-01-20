@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: dfd494ceb631a8f86cc3a249e5168c1f413e7e4f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c2b674ba17360c6ee9d2b21683560e840063f17d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972912"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636056"
 ---
 # <a name="command-line-build-with-cscexe"></a>csc.exe を使用したコマンド ラインからのビルド
 
@@ -103,5 +103,5 @@ C# コンパイラを起動してもオブジェクト ( *.obj*) ファイルは
 - [カテゴリ別の C# コンパイラ オプションの一覧](./listed-by-category.md)
 - [Main() とコマンドライン引数](../../programming-guide/main-and-command-args/index.md)
 - [コマンド ライン引数](../../programming-guide/main-and-command-args/command-line-arguments.md)
-- [方法: コマンド ライン引数の表示に関するページ](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [コマンド ライン引数を表示する方法](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 - [Main() の戻り値](../../programming-guide/main-and-command-args/main-return-values.md)

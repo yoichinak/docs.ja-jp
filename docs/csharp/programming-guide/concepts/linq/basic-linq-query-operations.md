@@ -17,15 +17,15 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 91c038303c1ad7c2530964d3102aae49090c4c2a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418723"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635939"
 ---
 # <a name="basic-linq-query-operations-c"></a>LINQ クエリの基本操作 (C#)
-このトピックでは、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式とクエリで実行する一般的な操作について、簡単に説明します。 詳細については、以下のトピックを参照してください。  
+このトピックでは、LINQ クエリ式とクエリで実行する一般的な操作について、簡単に説明します。 詳細については、以下のトピックを参照してください。  
   
  [LINQ クエリ式](../../../linq/index.md)  
   
@@ -34,17 +34,17 @@ ms.locfileid: "73418723"
  [チュートリアル: C# でのクエリの作成](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
-> 既に SQL や XQuery などのクエリ言語に精通している場合は、このトピックの大部分を省略できます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式における句の順序について理解するには、次のセクションの "`from` 句" を参照してください。  
+> 既に SQL や XQuery などのクエリ言語に精通している場合は、このトピックの大部分を省略できます。 LINQ クエリ式における句の順序について理解するには、次のセクションの "`from` 句" を参照してください。  
   
 ## <a name="obtaining-a-data-source"></a>データ ソースの取得  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリで必要な最初の手順は、データ ソースを指定することです。 ほとんどのプログラミング言語と同じように、C# でも、変数を使用する前に宣言しておく必要があります。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリでは、データ ソース (`customers`) および*範囲変数*(`cust`)を導入するために `from` 句が最初に使用されます。  
+ LINQ クエリで必要な最初の手順は、データ ソースを指定することです。 ほとんどのプログラミング言語と同じように、C# でも、変数を使用する前に宣言しておく必要があります。 LINQ クエリでは、データ ソース (`customers`) および "*範囲変数*" (`cust`) を導入するために `from` 句が最初に使用されます。  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
  範囲変数は、`foreach`ループの反復変数と似ていますが、クエリ式では実際の反復は発生しません。 クエリが実行されると、範囲変数は `customers` の連続する各要素への参照として機能します。 `cust` の型はコンパイラで推論できるため、明示的に指定する必要はありません。 追加の範囲変数は、`let` 句で導入できます。 詳しくは、「[let 句](../../../language-reference/keywords/let-clause.md)」をご覧ください。  
   
 > [!NOTE]
-> <xref:System.Collections.ArrayList> などの非ジェネリック データ ソースの場合は、範囲変数を明示的に型指定する必要があります。 詳細については、[LINQ を使用して ArrayList を照会する (C#)](./how-to-query-an-arraylist-with-linq.md)」と「[from 句](../../../language-reference/keywords/from-clause.md)」をご覧ください。  
+> <xref:System.Collections.ArrayList> などの非ジェネリック データ ソースの場合は、範囲変数を明示的に型指定する必要があります。 詳細については、「[LINQ を使用して ArrayList にクエリを実行する方法 (C#)](./how-to-query-an-arraylist-with-linq.md)」および「[from 句](../../../language-reference/keywords/from-clause.md)」を参照してください。  
   
 ## <a name="filtering"></a>フィルター処理  
  最も一般的なクエリ操作は、ブール式の形式でフィルターを適用することです。 クエリにフィルターを使用すると、式の条件に該当する要素だけがクエリから返されます。 結果は、`where` 句を使って生成されます。 フィルターは、実質的にはソース シーケンスから除外する要素を指定します。 次の例では、住所がロンドンにある `customers` だけが返されます。  
@@ -84,11 +84,11 @@ ms.locfileid: "73418723"
  詳しくは、「[group 句](../../../language-reference/keywords/group-clause.md)」をご覧ください。  
   
 ## <a name="joining"></a>結合  
- 結合操作は、データ ソースで明示的にモデル化されていないシーケンス間に関連付けを作成します。 たとえば、結合を実行して、住所地が同じすべての顧客と販売業者を検索することができます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] では、`join` 句はデータベース テーブルを直接の対象とするのではなく、オブジェクトのコレクションを対象として機能します。  
+ 結合操作は、データ ソースで明示的にモデル化されていないシーケンス間に関連付けを作成します。 たとえば、結合を実行して、住所地が同じすべての顧客と販売業者を検索することができます。 LINQ では、`join` 句はデータベース テーブルを直接の対象とするのではなく、オブジェクトのコレクションを対象として機能します。  
   
  [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
   
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] では、SQL ほど頻繁に `join` を使用する必要はありません。これは、オブジェクト モデルでは、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] の外部キーが項目のコレクションを保持するプロパティとして表されるためです。 たとえば、`Customer` オブジェクトには `Order` オブジェクトのコレクションが含まれます。 結合を実行しなくても、ドット表記を使用して注文にアクセスできます。  
+ LINQ では、SQL ほど頻繁に `join` を使用する必要はありません。これは、オブジェクト モデルでは、LINQ の外部キーが項目のコレクションを保持するプロパティとして表されるためです。 たとえば、`Customer` オブジェクトには `Order` オブジェクトのコレクションが含まれます。 結合を実行しなくても、ドット表記を使用して注文にアクセスできます。  
   
 ```csharp
 from order in Customer.Orders...  
@@ -97,7 +97,7 @@ from order in Customer.Orders...
  詳細については、「[join 句](../../../language-reference/keywords/join-clause.md)」を参照してください。  
   
 ## <a name="selecting-projections"></a>選択 (投影)  
- `select` 句はクエリの結果を生成し、返される各要素の "シェイプ" つまり型を指定します。 たとえば、完全な `Customer` オブジェクト、１ つのメンバーのみ、メンバーのサブセット、または計算や新しいオブジェクトの作成に基づいた、まったく異なる種類の結果のいずれで結果が構成されるかを指定できます。 `select` 句でソース要素のコピー以外のものを生成する場合、その操作は*投影*と呼ばれます。 投影を使用したデータの変換は、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式の強力な機能です。 詳細については、「[LINQ によるデータ変換 (C#)](./data-transformations-with-linq.md)」と「[select 句](../../../language-reference/keywords/select-clause.md)」を参照してください。  
+ `select` 句はクエリの結果を生成し、返される各要素の "シェイプ" つまり型を指定します。 たとえば、完全な `Customer` オブジェクト、１ つのメンバーのみ、メンバーのサブセット、または計算や新しいオブジェクトの作成に基づいた、まったく異なる種類の結果のいずれで結果が構成されるかを指定できます。 `select` 句でソース要素のコピー以外のものを生成する場合、その操作は*投影*と呼ばれます。 投影を使用したデータの変換は、LINQ クエリ式の強力な機能です。 詳細については、「[LINQ によるデータ変換 (C#)](./data-transformations-with-linq.md)」と「[select 句](../../../language-reference/keywords/select-clause.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

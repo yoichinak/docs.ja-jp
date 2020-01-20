@@ -1,15 +1,15 @@
 ---
-title: 方法:XML ファイルにオブジェクト データを書き込む (C#)
+title: XML ファイルにオブジェクト データを書き込む方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 5da79d68bf7e1c955cb6edededb3914bd9c898e5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 475e9398f20a2a4db9fb537d0b8d44f0273e980b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590690"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346442"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-c"></a>方法:XML ファイルにオブジェクト データを書き込む (C#)
+# <a name="how-to-write-object-data-to-an-xml-file-c"></a>XML ファイルにオブジェクト データを書き込む方法 (C#)
 <xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、クラスから XML ファイルにオブジェクトを書き込む例を次に示します。  
   
 ## <a name="example"></a>例  
@@ -64,5 +64,5 @@ public class XMLWrite
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.StreamWriter>
-- [方法: XML ファイルからオブジェクト データを読み込む (C#)](./how-to-read-object-data-from-an-xml-file.md)
+- [XML ファイルからオブジェクト データを読み取る方法 (C#)](./how-to-read-object-data-from-an-xml-file.md)
 - [シリアル化 (C#)](./index.md)

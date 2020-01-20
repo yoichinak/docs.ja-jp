@@ -1,15 +1,15 @@
 ---
-title: '方法: 複数のキーに基づいて要素を並べ替える (C#)'
+title: 複数のキーに基づいて要素を並べ替える方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 13444214efb2d7c4bcfec712d565d114abced204
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ddfeab4bf9b67231296ca90df1244a3b8a441440
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253316"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347381"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a>方法: 複数のキーに基づいて要素を並べ替える (C#)
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a>複数のキーに基づいて要素を並べ替える方法 (C#)
 
 このトピックでは、複数のキーに基づく並べ替えの方法について説明します。
 

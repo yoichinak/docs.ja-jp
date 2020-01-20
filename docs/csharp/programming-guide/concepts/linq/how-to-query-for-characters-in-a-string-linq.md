@@ -1,15 +1,15 @@
 ---
-title: '方法: 文字列内の文字をクエリする (LINQ) (C#)'
+title: 文字列内の文字を照会する方法 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: bc72c4370ff408a60f48aa020a16dae7f48f702a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: d85e488a38a6167505732103b4c540cade6ea9bc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140962"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345679"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>方法: 文字列内の文字をクエリする (LINQ) (C#)
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>文字列内の文字を照会する方法 (LINQ) (C#)
 <xref:System.String> クラスはジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装しているため、任意の文字列を文字のシーケンスとしてクエリできます。 ただし、これは LINQ の一般的な使用方法ではありません。 複雑なパターン一致操作には、<xref:System.Text.RegularExpressions.Regex> クラスを使用してください。  
   
 ## <a name="example"></a>例  

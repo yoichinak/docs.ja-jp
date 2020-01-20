@@ -1,15 +1,15 @@
 ---
-title: 方法:リフレクションを使用してアセンブリのメタデータをクエリする (LINQ) (C#)
+title: リフレクションを使用してアセンブリのメタデータにクエリを実行する方法 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: fb0fb118eaabbd9d66c5c4a445b0393a69dd2355
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 65f27ae17d77553bfd7a78c1310febd337a55a6e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592912"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345685"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>方法:リフレクションを使用してアセンブリのメタデータをクエリする (LINQ) (C#)
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>リフレクションを使用してアセンブリのメタデータにクエリを実行する方法 (LINQ) (C#)
 
 .NET Framework クラス ライブラリのリフレクション API を使用すると、.NET アセンブリ内のメタデータを調べ、そのアセンブリ内にある型、型メンバー、パラメーターなどのコレクションを作成できます。 これらのコレクションは、ジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスをサポートするため、LINQ を使用して照会できます。  
   

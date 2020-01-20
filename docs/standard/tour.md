@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 274fea83c474d4b67aab919b604eda893d8204d7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552865"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337581"
 ---
 # <a name="tour-of-net"></a>.NET のツアー
 
@@ -27,13 +27,13 @@ ms.locfileid: "74552865"
 
 .NET は複数のプログラミング言語をサポートしています。 .NET 実装では、[共通言語基盤 (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/) が実装されています。CLI では特に、言語に依存しないランタイムと言語の相互運用性が指定されています。 つまり、任意の .NET 言語を選んで、.NET でアプリとサービスを作成します。
 
-Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#、F#、Visual Basic (VB) の 3 つです。 
+Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#、F#、Visual Basic の 3 つです。 
 
 * C# はシンプル、強力、タイプセーフ、そしてオブジェクト指向でありながらも、C スタイル言語の表現力と簡潔さが維持されています。 C や類似の言語を使い慣れている人であれば、ほとんど問題なく C# に適応できます。 C# について詳しくは、「[C# ガイド](../csharp/index.yml)」 (C# ガイド) をご覧ください。
 
 * F# はクロスプラットフォームの関数型プログラミング言語ですが、従来のオブジェクト指向および命令型プログラミングもサポートしています。 F# について詳しくは、「[F# ガイド](../fsharp/index.yml)」 (F# ガイド) をご覧ください。
 
-* Visual Basic は、学習しやすい言語で、.NET 上で実行されるさまざまなアプリの構築に使用します。 .NET 言語の中で VB の構文は通常の人間の言語に最も近いため、ソフトウェア開発の経験のないユーザーでも使いやすい言語です。
+* Visual Basic は、学習しやすい言語で、.NET 上で実行されるさまざまなアプリの構築に使用します。 .NET 言語の中で Visual Basic の構文は通常の人間の言語に最も近いため、ソフトウェア開発の経験のないユーザーでも使いやすい言語です。
 
 ## <a name="automatic-memory-management"></a>自動メモリ管理
 
@@ -47,7 +47,7 @@ Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#�
 
 ガベージ コレクターは、"*メモリの安全性*" の確保に役立つサービスの 1 つです。 割り当てられているメモリのみにプログラムがアクセスする場合、そのプログラムはメモリ セーフです。 たとえば、ランタイムでは、配列の範囲を超えた割り当てられていないメモリにアプリがアクセスしていないことを確認します。
 
-次の例では、メモリの安全性を確保するため、ランタイムにより `InvalidIndexException` 例外がスローされます。
+次の例では、メモリの安全性を確保するため、ランタイムにより <xref:System.IndexOutOfRangeException> 例外がスローされます。
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
@@ -65,7 +65,7 @@ Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#�
 
 * C# の場合は、「[using ステートメント (C# リファレンス)](../csharp/language-reference/keywords/using-statement.md)」を参照してください。
 * F# の場合は、「[リソースの管理:use キーワード](../fsharp/language-reference/resource-management-the-use-keyword.md)」を参照してください。
-* VB の場合は、「[Using ステートメント (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md)」を参照してください。
+* Visual Basic の場合は、「[Using ステートメント (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md)」を参照してください。
 
 ## <a name="type-safety"></a>タイプ セーフ
 
@@ -79,11 +79,11 @@ Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#�
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#、VB、F# では、ローカルな "*型推論*" をサポートします。 型推論は、コンパイラが右側にある式から左側にある式の型を推論するという意味です。 タイプ セーフの破損、または回避を意味するわけではありません。 結果の型には、推論されるすべてを含む厳密な型が含まれます。 前の例の `dog` を書き換えて型の推論を導入し、残りの部分はそのままとします。
+C#、Visual Basic、F# は、ローカルな*型推論*をサポートします。 型推論は、コンパイラが右側にある式から左側にある式の型を推論するという意味です。 タイプ セーフの破損、または回避を意味するわけではありません。 結果の型には、推論されるすべてを含む厳密な型が含まれます。 前の例の `dog` を書き換えて型の推論を導入し、残りの部分はそのままとします。
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-F# は、C# や VB のメソッド ローカル型推論よりさらに進んだ型推論機能を備えています。 詳しくは、「[型の推定](../fsharp/language-reference/type-inference.md)」 (型推論) をご覧ください。
+F# は、C# や Visual Basic のメソッド ローカルな型推論よりさらに進んだ型推論機能を備えています。 詳しくは、「[型の推定](../fsharp/language-reference/type-inference.md)」 (型推論) をご覧ください。
 
 ## <a name="delegates-and-lambdas"></a>デリゲートとラムダ
 
@@ -97,7 +97,7 @@ F# は、C# や VB のメソッド ローカル型推論よりさらに進んだ
 
 ジェネリックを使用することで、プログラマーがクラスを設計する際に "*型パラメーター*" を導入することができ、これによってクライアント コード (その型のユーザー) が型パラメーターの代わりに使用する正確な型を指定できるようになります。
 
-ジェネリックは、プログラマが汎用的なデータ構造を実装するために追加されました。 それ以前は、`List` などの型をジェネリックにするには、`object` 型の要素を使用する必要がありました。 これにより、軽微なランタイム エラーの可能性があることは言うまでもなく、パフォーマンスやセマンティックのさまざまな問題が発生することがありました。 セマンティックに関して特に問題だったのは、データ構造にたとえば整数と文字列の両方が含まれる場合にリストのメンバーを操作すると `InvalidCastException` がスローされるということです。
+ジェネリックは、プログラマが汎用的なデータ構造を実装するために追加されました。 それ以前は、`List` などの型をジェネリックにするには、`object` 型の要素を使用する必要がありました。 これにより、軽微なランタイム エラーの可能性があることは言うまでもなく、パフォーマンスやセマンティックのさまざまな問題が発生することがありました。 一般的なランタイム エラーは、たとえば、データ構造に整数と文字列の両方が含まれる場合に、リストのメンバーの処理中に <xref:System.InvalidCastException> がスローされるということです。
 
 以下のサンプルに、<xref:System.Collections.Generic.List%601> 型のインスタンスを使用して実行される基本的なプログラムを示します。
 
@@ -113,7 +113,7 @@ F# は、C# や VB のメソッド ローカル型推論よりさらに進んだ
 
 ## <a name="language-integrated-query-linq"></a>統合言語クエリ (LINQ)
 
-LINQ は、データ操作のための単純な宣言型コードを記述できる、C# および VB の強力な一連の機能です。 データは (メモリ内オブジェクト、SQL データベース、XML ドキュメントなどの) さまざまな形式にすることができますが、記述する LINQ コードは通常、どのデータ ソースでも違いがないように見えます。
+LINQ は、データ操作のための単純な宣言型コードを記述できる、C# および Visual Basic の強力な一連の機能です。 データは (メモリ内オブジェクト、SQL データベース、XML ドキュメントなどの) さまざまな形式にすることができますが、記述する LINQ コードは通常、どのデータ ソースでも違いがないように見えます。
 
 詳細および一部のサンプルを確認するには、トピック「[LINQ (統合言語クエリ)](using-linq.md)」を参照してください。
 

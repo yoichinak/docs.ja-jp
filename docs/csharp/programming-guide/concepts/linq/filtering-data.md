@@ -2,12 +2,12 @@
 title: データのフィルター処理 (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: eb448c1c2ea6d9b3fcf0120043cafebc01cd3805
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 74399244990f8ff2deaa1d10576ea94a57c16bee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418472"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346991"
 ---
 # <a name="filtering-data-c"></a>データのフィルター処理 (C#)
 フィルター処理とは、特定の条件を満たす要素のみが含まれるように結果セットを限定する操作のことです。 選択とも呼ばれます。  
@@ -50,7 +50,7 @@ foreach (string str in query)
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)
 - [where 句](../../../language-reference/keywords/where-clause.md)
-- [方法: 実行時に述語フィルターを動的に指定する](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
-- [方法: リフレクションを使用してアセンブリのメタデータを照会する (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [方法: 指定された属性または名前のファイルをクエリする (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [実行時における述語フィルターの動的指定](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
+- [リフレクションを使用してアセンブリのメタデータにクエリを実行する方法 (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [指定された属性または名前のファイルを照会する方法 (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [任意のワードまたはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する方法 (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

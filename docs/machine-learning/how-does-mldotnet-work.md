@@ -4,14 +4,12 @@ description: ML.NET を使用すると、オンラインまたはオフライン
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.author: nakersha
-author: natke
-ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976740"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740082"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET の概要とそのしくみ
 
@@ -32,7 +30,7 @@ ML.NET で行うことができる予測の種類の例を次に示します。
 |異常検出|不正な銀行取引を検出する |
 |推奨事項|以前の購入に基づいてオンラインの買い物客が購入する可能性がある商品を提案する|
 |時系列/シーケンシャル データ|天気/製品売上を予測する|
-|画像の分類|病状を医療画像で分類する|
+|イメージ分類|病状を医療画像で分類する|
 
 ## <a name="hello-mlnet-world"></a>ML.NET の基本
 
@@ -214,7 +212,7 @@ ML.NET アプリケーションは <xref:Microsoft.ML.MLContext> オブジェク
 
 `Fit()` を呼び出すと、入力トレーニング データを使用してモデルのパラメーターが推定されます。 これはモデルのトレーニングと呼ばれます。 前述の線形回帰モデルには、**バイアス**と**重み**という 2 つのモデル パラメーターがあったことを思い出してください。 `Fit()` の呼び出しの後は、パラメーターの値がわかっています。 ほとんどのモデルには、これよりもさらに多くのパラメーターがあります。
 
-モデルのトレーニングの詳細については、[モデルのトレーニング方法](./how-to-guides/train-machine-learning-model-ml-net.md)に関する記事を参照してください。
+モデルのトレーニングの詳細については、[モデルのトレーニング方法](./how-to-guides/train-machine-learning-model-ml-net.md)に関するページをご覧ください。
 
 結果のモデル オブジェクトには <xref:Microsoft.ML.ITransformer> インターフェイスが実装されます。 つまり、このモデルによって入力データは予測に変換されます。
 
@@ -242,7 +240,7 @@ ML.NET 機械学習パイプラインの中心には [DataView](xref:Microsoft.M
 
 パイプライン内の 1 つの変換からの出力スキーマが次の変換の入力スキーマと一致しない場合、ML.NET から例外がスローされます。
 
-データ ビュー オブジェクトには列と行があります。 各列には、名前、型、および長さがあります。 例: 住宅価格例の入力列は **Size** と **Price** です。 これらはどちらも型であり、ベクターではなくスカラーの数量です。
+データ ビュー オブジェクトには列と行があります。 各列には、名前、型、および長さがあります。 たとえば、住宅価格例の入力列は **Size** と **Price** です。 これらはどちらも型であり、ベクターではなくスカラーの数量です。
 
    ![住宅価格の予測データを含む ML.NET データ ビューの例](./media/ml-net-dataview.png)
 

@@ -1,19 +1,18 @@
 ---
-title: '方法: ディレクトリ ツリーを反復処理する - C# プログラミング ガイド'
-ms.custom: seodec18
+title: ディレクトリ ツリーを反復処理する方法 - C# プログラミング ガイド
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: ec48b9ff5a9ebe352bf0361b9e52ee0fb48576a8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923980"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712261"
 ---
-# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>方法: ディレクトリ ツリーを反復処理する (C# プログラミング ガイド)
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>ディレクトリ ツリーを反復処理する方法 (C# プログラミング ガイド)
 "ディレクトリ ツリーを反復処理する" とは、指定したルート フォルダー以下の入れ子になっている各サブディレクトリ内の各ファイルにアクセスすることです。 必ずしもファイルを 1 つ 1 つ開く必要はありません。 ファイルまたはサブディレクトリの名前だけを `string` として取得することも、その他の情報を <xref:System.IO.FileInfo?displayProperty=nameWithType> または <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> オブジェクトの形式で取得することもできます。  
   
 > [!NOTE]

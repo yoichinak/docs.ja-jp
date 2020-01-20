@@ -1,15 +1,15 @@
 ---
-title: 方法:XML ファイルからオブジェクト データを読み込む (C#)
+title: XML ファイルからオブジェクト データを読み取る方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 1d6ec71b9e408e1536063fc3d8f1badc0f38551e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2da5919c11ed2d6e43f4f9fc406f43e3ed48060f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590743"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346428"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-c"></a>方法:XML ファイルからオブジェクト データを読み込む (C#)
+# <a name="how-to-read-object-data-from-an-xml-file-c"></a>XML ファイルからオブジェクト データを読み取る方法 (C#)
 次の例では、<xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、XML ファイルに以前に書き込まれたオブジェクト データを読み込みます。  
   
 ## <a name="example"></a>例  
@@ -43,7 +43,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- ファイル名 "c:\temp\SerializationOverview.xml" を、シリアル化されたデータを含むファイルの名前に置き換えます。 データのシリアル化の詳細については、「[方法:XML ファイルにオブジェクト データを書き込む (C#)](./how-to-write-object-data-to-an-xml-file.md)」を参照してください。  
+ファイル名 "c:\temp\SerializationOverview.xml" を、シリアル化されたデータを含むファイルの名前に置き換えます。 データのシリアル化の詳細については、「[XML ファイルにオブジェクト データを書き込む方法 (C#)](./how-to-write-object-data-to-an-xml-file.md)」を参照してください。
   
  クラスには、パラメーターのないパブリック コンストラクターが必要です。  
   
@@ -64,6 +64,6 @@ public void ReadXML()
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.StreamWriter>
-- [方法: XML ファイルにオブジェクト データを書き込む (C#)](./how-to-write-object-data-to-an-xml-file.md)
+- [XML ファイルにオブジェクト データを書き込む方法 (C#)](./how-to-write-object-data-to-an-xml-file.md)
 - [シリアル化 (C#)](./index.md)
 - [C# プログラミング ガイド](../../index.md)

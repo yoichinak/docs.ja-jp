@@ -1,18 +1,17 @@
 ---
-title: '方法: インターフェイス メンバーを明示的に実装する - C# プログラミング ガイド'
-ms.custom: seodec18
+title: インターフェイス メンバーを明示的に実装する方法 - C# プログラミング ガイド
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: 5ef8b42fe5ca07548d52b88720ea4845d2408bb1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d006db2a7501a3273f5cd11e82bc589b21e1ce9f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589210"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712092"
 ---
-# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>方法: インターフェイス メンバーを明示的に実装する (C# プログラミング ガイド)
+# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>インターフェイス メンバーを明示的に実装する方法 (C# プログラミング ガイド)
 この例では[インターフェイス](../../language-reference/keywords/interface.md)、`IDimensions`、およびクラス `Box` を宣言します。これは、インターフェイス メンバーの `getLength` と `getWidth` を明示的に実装します。 メンバーには、インターフェイス インスタンス `dimensions` を介してアクセスします。  
   
 ## <a name="example"></a>例  
@@ -32,5 +31,5 @@ ms.locfileid: "69589210"
 
 - [C# プログラミング ガイド](../index.md)
 - [クラスと構造体](../classes-and-structs/index.md)
-- "[インターフェイス](./index.md)"
-- [方法: 2 つのインターフェイスのメンバーを明示的に実装する](./how-to-explicitly-implement-members-of-two-interfaces.md)
+- [インターフェイス](./index.md)
+- [2 つのインターフェイスのメンバーを明示的に実装する方法](./how-to-explicitly-implement-members-of-two-interfaces.md)

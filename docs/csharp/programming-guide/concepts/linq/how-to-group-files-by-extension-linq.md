@@ -1,15 +1,15 @@
 ---
-title: '方法: 拡張子別にファイルをグループ化する (LINQ) (C#)'
+title: 拡張子別にファイルをグループ化する方法 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: aa3e428a4655bfcc0707e111da3ca6206a2b9596
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d12b40c7dba7bd3e10f30ddfd394b25c36794428
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593248"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345899"
 ---
-# <a name="how-to-group-files-by-extension-linq-c"></a>方法: 拡張子別にファイルをグループ化する (LINQ) (C#)
+# <a name="how-to-group-files-by-extension-linq-c"></a>拡張子別にファイルをグループ化する方法 (LINQ) (C#)
 この例では、LINQ を使用して、ファイルまたはフォルダーの一覧に対して、高度なグループ化および並べ替えを実行する方法を示します。 また、<xref:System.Linq.Enumerable.Skip%2A> メソッドと <xref:System.Linq.Enumerable.Take%2A> メソッドを使用して、出力をページごとにコンソール ウィンドウに表示する方法も示します。  
   
 ## <a name="example"></a>例  

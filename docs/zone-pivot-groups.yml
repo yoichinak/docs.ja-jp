@@ -1,0 +1,18 @@
+### YamlMime:Yaml
+ms.openlocfilehash: 382ea9e028c8683ca1a71c7e9a99ddb342b29df9
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75630634"
+groups:
+- id: operating-systems-set-one
+  title: オペレーティング システム
+  prompt: オペレーティング システムの選択
+  pivots:
+  - id: os-windows
+    title: Windows
+  - id: os-linux
+    title: Linux
+  - id: os-macos
+    title: macOS

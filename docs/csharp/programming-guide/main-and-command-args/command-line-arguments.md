@@ -1,16 +1,15 @@
 ---
 title: コマンド ライン引数 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: f74f374f13aef5135b81d59f94bc2c6913766763
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e73eeeeb0e613d45b2ce31e744803bb75ba2a3c2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039310"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700641"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>コマンド ライン引数 (C# プログラミング ガイド)
 
@@ -79,6 +78,6 @@ long num = Convert.ToInt64(s);
 - <xref:System.Environment?displayProperty=nameWithType>
 - [C# プログラミング ガイド](../index.md)
 - [Main() とコマンドライン引数](index.md)
-- [方法: コマンド ライン引数を表示する](how-to-display-command-line-arguments.md)
+- [コマンド ライン引数を表示する方法](how-to-display-command-line-arguments.md)
 - [Main() の戻り値](main-return-values.md)
 - [クラス](../classes-and-structs/classes.md)

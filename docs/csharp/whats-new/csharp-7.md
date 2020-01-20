@@ -3,12 +3,12 @@ title: C# 7.0 の新機能 - C# ガイド
 description: C# 言語のバージョン 7.0 での新機能の概要を説明します。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0f26a9647503ebb667d961fefaa05a25a71ec6f5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 73563a04dea04c942a6326d6a04ddd54bb80b0ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926571"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694583"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 の新機能
 
@@ -211,7 +211,7 @@ ref ローカル変数および ref 戻り値の追加により、値のコピ�
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> ローカル関数によってサポートされる設計の中には、"*ラムダ式*" を使用して実現できるものもあります。 興味のある方は、[その違いの詳細を確認してください](../local-functions-vs-lambdas.md)。
+> ローカル関数によってサポートされる設計の中には、"*ラムダ式*" を使用して実現できるものもあります。 詳細については、[ローカル関数とラムダ式](../local-functions-vs-lambdas.md)に関するページをご覧ください。
 
 ## <a name="more-expression-bodied-members"></a>式形式のメンバーの追加
 

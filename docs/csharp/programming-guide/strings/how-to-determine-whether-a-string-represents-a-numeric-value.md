@@ -1,20 +1,19 @@
 ---
-title: '方法: 文字列が数値を表しているかどうかを確認する - C# プログラミング ガイド'
-ms.custom: seodec18
+title: 文字列が数値を表しているかどうかを確認する方法 - C# プログラミング ガイド
 ms.date: 07/20/2015
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 8fc5051893882a6dbdbb4c9097949794d4430a93
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bd89024a0a9bd62927d2d5e0eda248b57bb7d21d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252950"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711923"
 ---
-# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>方法: 文字列が数値を表しているかどうかを確認する (C# プログラミング ガイド)
+# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>文字列が数値を表しているかどうかを確認する方法 (C# プログラミング ガイド)
 文字列が指定された数値型の有効な表現であるかどうかを確認するには、静的 `TryParse` メソッドを使用します。このメソッドには、すべてのプリミティブ数値型が実装されており、また <xref:System.DateTime>、<xref:System.Net.IPAddress> などの型も実装されています。 次の例では、"108" が有効な [int](../../language-reference/builtin-types/integral-numeric-types.md) かどうかを確認する方法を示します。  
   
 ```csharp  
@@ -41,8 +40,8 @@ bool result = int.TryParse(s, out i); //i now = 108
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: バイト配列を int に変換する](../types/how-to-convert-a-byte-array-to-an-int.md)
-- [方法: 文字列を数値に変換する](../types/how-to-convert-a-string-to-a-number.md)
-- [方法: 16 進文字列と数値型の間で変換する](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
+- [バイト配列を int に変換する方法](../types/how-to-convert-a-byte-array-to-an-int.md)
+- [文字列を数値に変換する方法](../types/how-to-convert-a-string-to-a-number.md)
+- [16 進文字列と数値型の間で変換する方法](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
 - [数値文字列の解析](../../../standard/base-types/parsing-numeric.md)
 - [型の書式設定](../../../standard/base-types/formatting-types.md)

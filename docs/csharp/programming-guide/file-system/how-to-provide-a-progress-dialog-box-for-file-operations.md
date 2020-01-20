@@ -1,18 +1,17 @@
 ---
-title: '方法: ファイル操作の [進行状況] ダイアログ ボックスを表示する - C# プログラミング ガイド'
-ms.custom: seodec18
+title: ファイル操作の [進行状況] ダイアログ ボックスを表示する方法 - C# プログラミング ガイド
 ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: 028e779f3cd8a17f162a79791b0c84abae14cf44
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 30ab84054d26f5b32a3f042a8d35d5ef1211d928
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590051"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705133"
 ---
-# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>方法: ファイル操作の [進行状況] ダイアログ ボックスを表示する (C# プログラミング ガイド)
+# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>ファイル操作の [進行状況] ダイアログ ボックスを表示する方法 (C# プログラミング ガイド)
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> 名前空間の <xref:Microsoft.VisualBasic?displayProperty=nameWithType> メソッドを使用すると、Windows でのファイル操作に関する進行状況を示す標準ダイアログ ボックスを提供できます。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  

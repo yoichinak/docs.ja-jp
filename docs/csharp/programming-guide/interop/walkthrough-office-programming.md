@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: d4a2562324259bda0bab523849449d584736b2ae
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423194"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635354"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>チュートリアル: Office のプログラミング (C# および Visual Basic)
 
@@ -106,7 +106,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
          独自のインデックス付きプロパティを作成することはできません。 この機能では、既存のインデックス付きプロパティの使用のみがサポートされます。
 
-         詳細については、[COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する](./how-to-use-indexed-properties-in-com-interop-rogramming.md)」を参照してください。
+         詳細については、「[COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する方法](./how-to-use-indexed-properties-in-com-interop-rogramming.md)」を参照してください。
 
 2. 次のコードを `DisplayInExcel` の末尾に追加して、コンテンツに合わせて列の幅を調整します。
 
@@ -203,7 +203,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 - [dynamic 型の使用](../types/using-type-dynamic.md)
 - [ラムダ式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [ラムダ式 (C#)](../statements-expressions-operators/lambda-expressions.md)
-- [方法: COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する方法](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [チュートリアル: マネージド アセンブリからの型の埋め込み](../../../standard/assembly/embed-types-visual-studio.md)
 - [チュートリアル: 初めての Excel 用 VSTO アドインの作成](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
